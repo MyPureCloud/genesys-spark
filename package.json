@@ -1,7 +1,7 @@
 {
-  "name": "my-component",
+  "name": "genesys-webcomponent",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Common webcomponents",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
