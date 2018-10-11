@@ -27,7 +27,7 @@ Each Common UI Component should have thorough Storybook documentation with
 clear examples of its usage and feature.
 
 ### Testing
-All components should be thouroughly unit tested.
+All components should be thoroughly unit tested.
 
 
 ## Accessibility and Localization
