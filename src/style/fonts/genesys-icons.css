@@ -1,0 +1,3196 @@
+@font-face {
+  font-family: "genesys-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./genesys-icons.eot");
+  src:
+    url("./genesys-icons.eot?#iefix") format("embedded-opentype"),
+    url("./genesys-icons.woff") format("woff"),
+    url("./genesys-icons.ttf") format("truetype"),
+    url("./genesys-icons.svg?") format("svg");
+}
+
+[class^="genesys-icon-"]:before,
+[class*="genesys-icon-"]:before {
+  display: inline-block;
+  font-family: "genesys-icons";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.genesys-icon-24-control-pause-solid,
+.genesys-icon-24-control-pause,
+.genesys-icon-24-control-play-solid,
+.genesys-icon-24-control-play,
+.genesys-icon-24-control-stop,
+.genesys-icon-24-graph-bar,
+.genesys-icon-24-graph-edit,
+.genesys-icon-24-graph-grid-cell,
+.genesys-icon-24-graph-grid,
+.genesys-icon-24-graph-line,
+.genesys-icon-24-graph-stack,
+.genesys-icon-48-adjacent,
+.genesys-icon-48-all,
+.genesys-icon-48-control-pause,
+.genesys-icon-48-control-play,
+.genesys-icon-48-incoming,
+.genesys-icon-48-outgoing,
+.genesys-icon-access,
+.genesys-icon-actionable-disable,
+.genesys-icon-actionable-notset,
+.genesys-icon-actionable,
+.genesys-icon-add-bold,
+.genesys-icon-add,
+.genesys-icon-adjust,
+.genesys-icon-agent-add,
+.genesys-icon-agent-edit,
+.genesys-icon-agent-group,
+.genesys-icon-agent-like,
+.genesys-icon-agent-offline,
+.genesys-icon-agent-ready-partial,
+.genesys-icon-agent-ready,
+.genesys-icon-agent-search,
+.genesys-icon-agent-time,
+.genesys-icon-agent-unavailable,
+.genesys-icon-agent,
+.genesys-icon-aix,
+.genesys-icon-alert-checkmark,
+.genesys-icon-alert-circle,
+.genesys-icon-alert-info,
+.genesys-icon-alert-octo,
+.genesys-icon-alert-triangle,
+.genesys-icon-app-all,
+.genesys-icon-app-chart,
+.genesys-icon-app-generic,
+.genesys-icon-app-layout,
+.genesys-icon-app-table,
+.genesys-icon-archive,
+.genesys-icon-arrow-accordion,
+.genesys-icon-arrow-disclosure,
+.genesys-icon-arrow-down,
+.genesys-icon-arrow-left-dbl,
+.genesys-icon-arrow-left,
+.genesys-icon-arrow-popover,
+.genesys-icon-arrow-right-dbl,
+.genesys-icon-arrow-right,
+.genesys-icon-arrow-solid-down,
+.genesys-icon-arrow-solid-left,
+.genesys-icon-arrow-solid-right,
+.genesys-icon-arrow-solid-up,
+.genesys-icon-arrow-up,
+.genesys-icon-attach,
+.genesys-icon-audio-disable,
+.genesys-icon-audio-music,
+.genesys-icon-audio-no,
+.genesys-icon-audio-rec-disable,
+.genesys-icon-audio-rec,
+.genesys-icon-audio-voice-disable,
+.genesys-icon-audio-voice,
+.genesys-icon-audio-yes,
+.genesys-icon-autoscroll-off,
+.genesys-icon-bar-graph-variable-1,
+.genesys-icon-bar-graph-variable-2,
+.genesys-icon-bell,
+.genesys-icon-bezier,
+.genesys-icon-biz-attribute-disable,
+.genesys-icon-biz-attribute,
+.genesys-icon-blocks,
+.genesys-icon-book-address,
+.genesys-icon-book-open-details,
+.genesys-icon-break,
+.genesys-icon-briefcase,
+.genesys-icon-budget,
+.genesys-icon-bug,
+.genesys-icon-calculator,
+.genesys-icon-calendar-day,
+.genesys-icon-calendar-generic,
+.genesys-icon-calendar-media-voice,
+.genesys-icon-calendar-month-highlight,
+.genesys-icon-calendar-month,
+.genesys-icon-camera,
+.genesys-icon-campaign-disable,
+.genesys-icon-campaign-done,
+.genesys-icon-campaign-schedule,
+.genesys-icon-campaign-stop,
+.genesys-icon-campaign,
+.genesys-icon-cart,
+.genesys-icon-cells,
+.genesys-icon-certificate,
+.genesys-icon-chat-add,
+.genesys-icon-chat-disable,
+.genesys-icon-chat-edit-disable,
+.genesys-icon-chat-edit,
+.genesys-icon-chat-end,
+.genesys-icon-chat-forward,
+.genesys-icon-chat-frown,
+.genesys-icon-chat-multi,
+.genesys-icon-chat-oval-close,
+.genesys-icon-chat-oval-multi,
+.genesys-icon-chat-oval-transfer,
+.genesys-icon-chat-oval,
+.genesys-icon-chat-smile,
+.genesys-icon-chat-video,
+.genesys-icon-chat,
+.genesys-icon-checkbox-tick-lock,
+.genesys-icon-checkbox-tick,
+.genesys-icon-checkbox,
+.genesys-icon-checklist-tick-lock,
+.genesys-icon-checkmark-bold,
+.genesys-icon-chevron-left,
+.genesys-icon-chevron-right,
+.genesys-icon-chevron-small-left,
+.genesys-icon-chevron-small-right,
+.genesys-icon-circle-add,
+.genesys-icon-circle-arrow-down,
+.genesys-icon-circle-arrow-left,
+.genesys-icon-circle-arrow-right,
+.genesys-icon-circle-arrow-up,
+.genesys-icon-circle-close,
+.genesys-icon-circle-expand-down,
+.genesys-icon-circle-expand-left,
+.genesys-icon-circle-expand-right,
+.genesys-icon-circle-expand-up,
+.genesys-icon-cleanup,
+.genesys-icon-clip-approve,
+.genesys-icon-clip-exchange,
+.genesys-icon-clip-list,
+.genesys-icon-clipboard,
+.genesys-icon-clock-b,
+.genesys-icon-clock-stopwatch,
+.genesys-icon-clock-timezone,
+.genesys-icon-clock,
+.genesys-icon-clone,
+.genesys-icon-close-bold,
+.genesys-icon-close,
+.genesys-icon-cloud-a,
+.genesys-icon-cloud-b,
+.genesys-icon-cm-96-cloud,
+.genesys-icon-cm-96-desktop,
+.genesys-icon-cm-96-network,
+.genesys-icon-cm-96-outbound,
+.genesys-icon-cm-96-server-add,
+.genesys-icon-cm-96-server,
+.genesys-icon-cm-96-tenant,
+.genesys-icon-cm-96-user,
+.genesys-icon-cm-96-voice,
+.genesys-icon-cobrowse-chat,
+.genesys-icon-cobrowse-disable,
+.genesys-icon-cobrowse-end,
+.genesys-icon-cobrowse,
+.genesys-icon-code,
+.genesys-icon-collapse,
+.genesys-icon-column-direction-active,
+.genesys-icon-column-direction,
+.genesys-icon-comment-corner,
+.genesys-icon-configuration-disable,
+.genesys-icon-configuration,
+.genesys-icon-contact-add,
+.genesys-icon-contact-assign,
+.genesys-icon-contact-delete,
+.genesys-icon-contact-id-fetch,
+.genesys-icon-contact-id,
+.genesys-icon-contact-switch,
+.genesys-icon-contract-a,
+.genesys-icon-contract-b,
+.genesys-icon-contract-c,
+.genesys-icon-contract-d,
+.genesys-icon-control-backward,
+.genesys-icon-control-forward,
+.genesys-icon-control-left,
+.genesys-icon-control-right,
+.genesys-icon-control-skip-left,
+.genesys-icon-control-skip-next,
+.genesys-icon-control-skip-previous,
+.genesys-icon-control-skip-right,
+.genesys-icon-control-stop,
+.genesys-icon-copy,
+.genesys-icon-credit-card,
+.genesys-icon-cs-mobile,
+.genesys-icon-cs-social,
+.genesys-icon-cs-web,
+.genesys-icon-currency-dollar-sign,
+.genesys-icon-cut,
+.genesys-icon-cx-24-flat-agent,
+.genesys-icon-cx-24-flat-avatar,
+.genesys-icon-cx-24-flat-cal,
+.genesys-icon-cx-24-flat-chat,
+.genesys-icon-cx-24-flat-cobrowse,
+.genesys-icon-cx-24-flat-consult,
+.genesys-icon-cx-24-flat-inbound,
+.genesys-icon-cx-24-flat-lock,
+.genesys-icon-cx-24-flat-mail,
+.genesys-icon-cx-24-flat-offer,
+.genesys-icon-cx-24-flat-outbound,
+.genesys-icon-cx-24-flat-pref,
+.genesys-icon-cx-24-flat-search,
+.genesys-icon-cx-24-flat-survey,
+.genesys-icon-cx-24-flat-vid,
+.genesys-icon-cx-24-flat-vm,
+.genesys-icon-dash,
+.genesys-icon-dashtab-dash,
+.genesys-icon-dashtab-settings,
+.genesys-icon-dashtab-xwidget,
+.genesys-icon-dialpad,
+.genesys-icon-disclosure-left,
+.genesys-icon-doc-add,
+.genesys-icon-doc-alert-b,
+.genesys-icon-doc-all-save,
+.genesys-icon-doc-all,
+.genesys-icon-doc-detail-add,
+.genesys-icon-doc-detail,
+.genesys-icon-doc-form-b,
+.genesys-icon-doc-forward,
+.genesys-icon-doc-generic-b,
+.genesys-icon-doc-generic,
+.genesys-icon-doc-list-b,
+.genesys-icon-doc-list,
+.genesys-icon-doc-no,
+.genesys-icon-doc-phone-call,
+.genesys-icon-doc-report-b,
+.genesys-icon-doc-save,
+.genesys-icon-doc-segmentation-b,
+.genesys-icon-doc-yes-b,
+.genesys-icon-doc-yes,
+.genesys-icon-document-scenario,
+.genesys-icon-double-down,
+.genesys-icon-double-up,
+.genesys-icon-download,
+.genesys-icon-drag-out,
+.genesys-icon-dropdown-arrow,
+.genesys-icon-email-delete,
+.genesys-icon-email-forward,
+.genesys-icon-email-move-to-folder,
+.genesys-icon-email-reply-all,
+.genesys-icon-email-reply,
+.genesys-icon-email-resend,
+.genesys-icon-email-send,
+.genesys-icon-email-transfer,
+.genesys-icon-email,
+.genesys-icon-enterprise-extension,
+.genesys-icon-error-bold,
+.genesys-icon-escalate-from,
+.genesys-icon-escalate-to,
+.genesys-icon-escalate,
+.genesys-icon-event-cluster-mini,
+.genesys-icon-event-cluster,
+.genesys-icon-expand-down,
+.genesys-icon-expand-left,
+.genesys-icon-expand-right,
+.genesys-icon-expand-up,
+.genesys-icon-expand,
+.genesys-icon-export,
+.genesys-icon-face-happy,
+.genesys-icon-face-neutral,
+.genesys-icon-face-sad,
+.genesys-icon-face-solid-happy,
+.genesys-icon-face-solid-sad,
+.genesys-icon-face-unknown,
+.genesys-icon-facebook-square,
+.genesys-icon-file-folder-drawer,
+.genesys-icon-files,
+.genesys-icon-film-broadcast,
+.genesys-icon-film,
+.genesys-icon-filter,
+.genesys-icon-folder-add,
+.genesys-icon-folder-disabled,
+.genesys-icon-folder-media,
+.genesys-icon-folder-move,
+.genesys-icon-folder-open-in,
+.genesys-icon-folder-open-out,
+.genesys-icon-folder-open,
+.genesys-icon-folder-progress,
+.genesys-icon-folder,
+.genesys-icon-follow-disable,
+.genesys-icon-follow,
+.genesys-icon-font-bold,
+.genesys-icon-font-decrease,
+.genesys-icon-font-increase,
+.genesys-icon-font-italic,
+.genesys-icon-font-style,
+.genesys-icon-font-underline,
+.genesys-icon-full-screen,
+.genesys-icon-gear-add,
+.genesys-icon-gear-remove,
+.genesys-icon-generic-disable,
+.genesys-icon-generic-laptop,
+.genesys-icon-generic-mobile-phone,
+.genesys-icon-generic-pc,
+.genesys-icon-generic-tablet,
+.genesys-icon-generic,
+.genesys-icon-globe,
+.genesys-icon-google-plus-circle,
+.genesys-icon-grab-vertical,
+.genesys-icon-grab,
+.genesys-icon-graph-bar,
+.genesys-icon-graph-barline,
+.genesys-icon-graph-chart,
+.genesys-icon-graph-column,
+.genesys-icon-graph-edit,
+.genesys-icon-graph-grid,
+.genesys-icon-graph-line,
+.genesys-icon-graph-spark,
+.genesys-icon-graph-stack,
+.genesys-icon-grip-horizontal,
+.genesys-icon-grip-vertical,
+.genesys-icon-group,
+.genesys-icon-help,
+.genesys-icon-home,
+.genesys-icon-host,
+.genesys-icon-hp,
+.genesys-icon-import,
+.genesys-icon-in-small,
+.genesys-icon-in,
+.genesys-icon-inbound,
+.genesys-icon-insert-block-left,
+.genesys-icon-insert-block-right,
+.genesys-icon-inspect-chat-disable,
+.genesys-icon-inspect-chat,
+.genesys-icon-inspect-disable,
+.genesys-icon-inspect-phone-disable,
+.genesys-icon-inspect-phone,
+.genesys-icon-inspect-star,
+.genesys-icon-inspect,
+.genesys-icon-ivr-disable,
+.genesys-icon-ivr,
+.genesys-icon-iw-active-circle-callback,
+.genesys-icon-iw-active-circle-campaign,
+.genesys-icon-iw-active-circle-chat-round,
+.genesys-icon-iw-active-circle-chat-square,
+.genesys-icon-iw-active-circle-doc,
+.genesys-icon-iw-active-circle-email,
+.genesys-icon-iw-active-circle-facebook,
+.genesys-icon-iw-active-circle-globe,
+.genesys-icon-iw-active-circle-media,
+.genesys-icon-iw-active-circle-phone-cancel,
+.genesys-icon-iw-active-circle-phone-conf-susp,
+.genesys-icon-iw-active-circle-phone-conf,
+.genesys-icon-iw-active-circle-phone-dial,
+.genesys-icon-iw-active-circle-phone-pause,
+.genesys-icon-iw-active-circle-phone-play,
+.genesys-icon-iw-active-circle-phone-susp,
+.genesys-icon-iw-active-circle-phone-voice,
+.genesys-icon-iw-active-circle-question,
+.genesys-icon-iw-active-circle-rss,
+.genesys-icon-iw-active-circle-twitter,
+.genesys-icon-iw-active-circle-voice-chat,
+.genesys-icon-iw-active-circle-voice,
+.genesys-icon-iw-active-square-view,
+.genesys-icon-iw-arrow-outline-in,
+.genesys-icon-iw-circle-no-add,
+.genesys-icon-iw-circle-no-chevron-down,
+.genesys-icon-iw-circle-no-chevron-up,
+.genesys-icon-iw-circle-yes-add,
+.genesys-icon-iw-circle-yes-chevron-down,
+.genesys-icon-iw-circle-yes-chevron-up,
+.genesys-icon-iw-control-circle-back,
+.genesys-icon-iw-control-circle-fwd,
+.genesys-icon-iw-control-circle-home,
+.genesys-icon-iw-control-circle-play,
+.genesys-icon-iw-control-circle-stop,
+.genesys-icon-iw-done-and-stop,
+.genesys-icon-iw-history,
+.genesys-icon-iw-in-progress,
+.genesys-icon-iw-inspect-email,
+.genesys-icon-iw-inspect-voice-cancel,
+.genesys-icon-iw-inspect-voice,
+.genesys-icon-iw-monitor-chat,
+.genesys-icon-iw-monitor-voice,
+.genesys-icon-iw-queue,
+.genesys-icon-iw-routing-point,
+.genesys-icon-iw-save-as,
+.genesys-icon-iw-save,
+.genesys-icon-iw-square-facebook-email,
+.genesys-icon-iw-square-facebook-no,
+.genesys-icon-iw-square-facebook-transfer,
+.genesys-icon-iw-square-facebook-workbin,
+.genesys-icon-iw-square-rss-transfer,
+.genesys-icon-iw-square-rss-workbin,
+.genesys-icon-iw-square-twitter-follow,
+.genesys-icon-iw-square-twitter-no,
+.genesys-icon-iw-square-twitter-transfer,
+.genesys-icon-iw-square-twitter-workbin,
+.genesys-icon-iw-video-suspend,
+.genesys-icon-iw-video-thumb-cancel,
+.genesys-icon-iw-video-thumb-show,
+.genesys-icon-iw-video-thumb-swap,
+.genesys-icon-iw-voice-inspect-cancel,
+.genesys-icon-iw-voice-inspect,
+.genesys-icon-key-dot-dashed,
+.genesys-icon-link,
+.genesys-icon-linkedin-square,
+.genesys-icon-linux,
+.genesys-icon-list-bullets,
+.genesys-icon-list-numbers,
+.genesys-icon-locked,
+.genesys-icon-login-checkmark,
+.genesys-icon-login-error,
+.genesys-icon-login-info,
+.genesys-icon-lunch,
+.genesys-icon-measure-growing,
+.genesys-icon-measure-point-in-time,
+.genesys-icon-measure-sliding,
+.genesys-icon-measure-today,
+.genesys-icon-menu-hamburger,
+.genesys-icon-merge,
+.genesys-icon-mini-close,
+.genesys-icon-minimize,
+.genesys-icon-moon-default,
+.genesys-icon-more,
+.genesys-icon-ms,
+.genesys-icon-multiples,
+.genesys-icon-network,
+.genesys-icon-note-add,
+.genesys-icon-note,
+.genesys-icon-notebook,
+.genesys-icon-number-sign,
+.genesys-icon-out-small,
+.genesys-icon-out,
+.genesys-icon-outbound,
+.genesys-icon-page-multi,
+.genesys-icon-page-search,
+.genesys-icon-page-single,
+.genesys-icon-palette,
+.genesys-icon-parameter-group,
+.genesys-icon-parameter,
+.genesys-icon-paste,
+.genesys-icon-pc-mobile-phone,
+.genesys-icon-pencil,
+.genesys-icon-people-chat,
+.genesys-icon-people,
+.genesys-icon-person,
+.genesys-icon-phone-add,
+.genesys-icon-phone-bell,
+.genesys-icon-phone-chat-media,
+.genesys-icon-phone-conference,
+.genesys-icon-phone-decline,
+.genesys-icon-phone-dial,
+.genesys-icon-phone-disabled,
+.genesys-icon-phone-forward,
+.genesys-icon-phone-hold,
+.genesys-icon-phone-incoming,
+.genesys-icon-phone-pause,
+.genesys-icon-phone-rec-pause,
+.genesys-icon-phone-rec-resume,
+.genesys-icon-phone-rec-stop,
+.genesys-icon-phone-rec,
+.genesys-icon-phone-voice-retrieve,
+.genesys-icon-phone-voice,
+.genesys-icon-phone,
+.genesys-icon-phones,
+.genesys-icon-picture,
+.genesys-icon-pie-chart,
+.genesys-icon-pin-alert,
+.genesys-icon-pin-check,
+.genesys-icon-pin-sold-remove,
+.genesys-icon-pin-solid-add,
+.genesys-icon-pin-solid,
+.genesys-icon-pin-text,
+.genesys-icon-pin-time,
+.genesys-icon-pin-zoom-in,
+.genesys-icon-pin-zoom-out,
+.genesys-icon-pin,
+.genesys-icon-pinned,
+.genesys-icon-pinterest-circle,
+.genesys-icon-play-list,
+.genesys-icon-printer,
+.genesys-icon-progress-bar,
+.genesys-icon-quotes,
+.genesys-icon-radio-active,
+.genesys-icon-radio,
+.genesys-icon-rebuild,
+.genesys-icon-redo,
+.genesys-icon-refresh-with-feedback,
+.genesys-icon-refresh,
+.genesys-icon-reload,
+.genesys-icon-remember,
+.genesys-icon-reset,
+.genesys-icon-rewind-five-seconds,
+.genesys-icon-routing,
+.genesys-icon-rss-square,
+.genesys-icon-rss,
+.genesys-icon-screen-rec-pause,
+.genesys-icon-screen-rec-record,
+.genesys-icon-screen-rec-resume,
+.genesys-icon-screen-rec-stop,
+.genesys-icon-scrubber,
+.genesys-icon-search-next,
+.genesys-icon-search-previous,
+.genesys-icon-search,
+.genesys-icon-searched-term,
+.genesys-icon-secure,
+.genesys-icon-segmentation,
+.genesys-icon-select-no,
+.genesys-icon-select-yes,
+.genesys-icon-select,
+.genesys-icon-server-add,
+.genesys-icon-server,
+.genesys-icon-settings-gear,
+.genesys-icon-settings-gears,
+.genesys-icon-settings-sliders,
+.genesys-icon-share,
+.genesys-icon-sharethis,
+.genesys-icon-shrinkage,
+.genesys-icon-shuffle,
+.genesys-icon-site-disable,
+.genesys-icon-site,
+.genesys-icon-skills,
+.genesys-icon-slide-back,
+.genesys-icon-slide-fwd,
+.genesys-icon-small-checkmark,
+.genesys-icon-small-close,
+.genesys-icon-small-plus,
+.genesys-icon-sms-cancel,
+.genesys-icon-sms-message,
+.genesys-icon-sms-reply,
+.genesys-icon-sms-transfer,
+.genesys-icon-solaris,
+.genesys-icon-sort-left-right,
+.genesys-icon-sort-up-down,
+.genesys-icon-special-g-brandmark,
+.genesys-icon-stamp,
+.genesys-icon-star-edit,
+.genesys-icon-star-outline,
+.genesys-icon-stars-add,
+.genesys-icon-stars-lock,
+.genesys-icon-stars-remove,
+.genesys-icon-stars,
+.genesys-icon-status-aftercallwork,
+.genesys-icon-status-available-no,
+.genesys-icon-status-available-yes,
+.genesys-icon-status-bad,
+.genesys-icon-status-call-dialing,
+.genesys-icon-status-call-inbound,
+.genesys-icon-status-call-internal,
+.genesys-icon-status-call-outbound,
+.genesys-icon-status-call-ringing,
+.genesys-icon-status-chat,
+.genesys-icon-status-email,
+.genesys-icon-status-good,
+.genesys-icon-status-hook-off,
+.genesys-icon-status-hook-on,
+.genesys-icon-status-interaction,
+.genesys-icon-status-logged-off,
+.genesys-icon-status-logged-on,
+.genesys-icon-status-monitored-no,
+.genesys-icon-status-monitored-yes,
+.genesys-icon-status-onhold,
+.genesys-icon-status-queue-empty,
+.genesys-icon-status-queue-full,
+.genesys-icon-status-queue-part-full,
+.genesys-icon-status-ready-blocked,
+.genesys-icon-status-ready-no,
+.genesys-icon-status-ready-partial,
+.genesys-icon-status-ready-yes,
+.genesys-icon-status-unknown,
+.genesys-icon-sun-default,
+.genesys-icon-superviser-chat-cancel,
+.genesys-icon-supervisor-cancel,
+.genesys-icon-supervisor-chat,
+.genesys-icon-supervisor-voice-cancel,
+.genesys-icon-supervisor-voice,
+.genesys-icon-supervisor,
+.genesys-icon-swap,
+.genesys-icon-switch-disable,
+.genesys-icon-switch,
+.genesys-icon-symbol-man,
+.genesys-icon-symbol-woman,
+.genesys-icon-tag-stat-add,
+.genesys-icon-tag-stat-remove,
+.genesys-icon-tag,
+.genesys-icon-target,
+.genesys-icon-team-communicator,
+.genesys-icon-tenant-disable,
+.genesys-icon-tenant,
+.genesys-icon-text-centered,
+.genesys-icon-text-detail,
+.genesys-icon-text-generic,
+.genesys-icon-text-indent-left,
+.genesys-icon-text-indent-right,
+.genesys-icon-text-justify-center,
+.genesys-icon-text-justify-full,
+.genesys-icon-text-justify-left,
+.genesys-icon-text-justify-right,
+.genesys-icon-text-spelling,
+.genesys-icon-thumbs-down,
+.genesys-icon-thumbs-up,
+.genesys-icon-tick,
+.genesys-icon-timeline,
+.genesys-icon-toggle-off,
+.genesys-icon-toggle-on,
+.genesys-icon-toggle,
+.genesys-icon-training,
+.genesys-icon-transfer,
+.genesys-icon-trash,
+.genesys-icon-tree-branch,
+.genesys-icon-twitter-square,
+.genesys-icon-twitter,
+.genesys-icon-undo,
+.genesys-icon-unlocked,
+.genesys-icon-unmerge,
+.genesys-icon-upload,
+.genesys-icon-video-add,
+.genesys-icon-video-disable,
+.genesys-icon-video-end,
+.genesys-icon-video-forward,
+.genesys-icon-video-pause,
+.genesys-icon-video-voice,
+.genesys-icon-video,
+.genesys-icon-videocam-1-disable,
+.genesys-icon-videocam-1,
+.genesys-icon-videocam-2-disable,
+.genesys-icon-videocam-2,
+.genesys-icon-view-details-bottom,
+.genesys-icon-view-details-right,
+.genesys-icon-view-grid,
+.genesys-icon-view-list,
+.genesys-icon-view-lists,
+.genesys-icon-view-stacked,
+.genesys-icon-view-tree,
+.genesys-icon-voicemail,
+.genesys-icon-window-contract,
+.genesys-icon-window-expand,
+.genesys-icon-zoom-in,
+.genesys-icon-zoom-out:before {
+  display: inline-block;
+  font-family: "genesys-icons";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+.genesys-icon-24-control-pause-solid:before {
+    content: "\e001";
+}
+
+.genesys-icon-24-control-pause:before {
+    content: "\e002";
+}
+
+.genesys-icon-24-control-play-solid:before {
+    content: "\e003";
+}
+
+.genesys-icon-24-control-play:before {
+    content: "\e004";
+}
+
+.genesys-icon-24-control-stop:before {
+    content: "\e005";
+}
+
+.genesys-icon-24-graph-bar:before {
+    content: "\e006";
+}
+
+.genesys-icon-24-graph-edit:before {
+    content: "\e007";
+}
+
+.genesys-icon-24-graph-grid-cell:before {
+    content: "\e008";
+}
+
+.genesys-icon-24-graph-grid:before {
+    content: "\e009";
+}
+
+.genesys-icon-24-graph-line:before {
+    content: "\e00a";
+}
+
+.genesys-icon-24-graph-stack:before {
+    content: "\e00b";
+}
+
+.genesys-icon-48-adjacent:before {
+    content: "\e00c";
+}
+
+.genesys-icon-48-all:before {
+    content: "\e00d";
+}
+
+.genesys-icon-48-control-pause:before {
+    content: "\e00e";
+}
+
+.genesys-icon-48-control-play:before {
+    content: "\e00f";
+}
+
+.genesys-icon-48-incoming:before {
+    content: "\e010";
+}
+
+.genesys-icon-48-outgoing:before {
+    content: "\e011";
+}
+
+.genesys-icon-access:before {
+    content: "\e012";
+}
+
+.genesys-icon-actionable-disable:before {
+    content: "\e013";
+}
+
+.genesys-icon-actionable-notset:before {
+    content: "\e014";
+}
+
+.genesys-icon-actionable:before {
+    content: "\e015";
+}
+
+.genesys-icon-add-bold:before {
+    content: "\e016";
+}
+
+.genesys-icon-add:before {
+    content: "\e017";
+}
+
+.genesys-icon-adjust:before {
+    content: "\e018";
+}
+
+.genesys-icon-agent-add:before {
+    content: "\e019";
+}
+
+.genesys-icon-agent-edit:before {
+    content: "\e01a";
+}
+
+.genesys-icon-agent-group:before {
+    content: "\e01b";
+}
+
+.genesys-icon-agent-like:before {
+    content: "\e01c";
+}
+
+.genesys-icon-agent-offline:before {
+    content: "\e01d";
+}
+
+.genesys-icon-agent-ready-partial:before {
+    content: "\e01e";
+}
+
+.genesys-icon-agent-ready:before {
+    content: "\e01f";
+}
+
+.genesys-icon-agent-search:before {
+    content: "\e020";
+}
+
+.genesys-icon-agent-time:before {
+    content: "\e021";
+}
+
+.genesys-icon-agent-unavailable:before {
+    content: "\e022";
+}
+
+.genesys-icon-agent:before {
+    content: "\e023";
+}
+
+.genesys-icon-aix:before {
+    content: "\e024";
+}
+
+.genesys-icon-alert-checkmark:before {
+    content: "\e025";
+}
+
+.genesys-icon-alert-circle:before {
+    content: "\e026";
+}
+
+.genesys-icon-alert-info:before {
+    content: "\e027";
+}
+
+.genesys-icon-alert-octo:before {
+    content: "\e028";
+}
+
+.genesys-icon-alert-triangle:before {
+    content: "\e029";
+}
+
+.genesys-icon-app-all:before {
+    content: "\e02a";
+}
+
+.genesys-icon-app-chart:before {
+    content: "\e02b";
+}
+
+.genesys-icon-app-generic:before {
+    content: "\e02c";
+}
+
+.genesys-icon-app-layout:before {
+    content: "\e02d";
+}
+
+.genesys-icon-app-table:before {
+    content: "\e02e";
+}
+
+.genesys-icon-archive:before {
+    content: "\e02f";
+}
+
+.genesys-icon-arrow-accordion:before {
+    content: "\e030";
+}
+
+.genesys-icon-arrow-disclosure:before {
+    content: "\e031";
+}
+
+.genesys-icon-arrow-down:before {
+    content: "\e032";
+}
+
+.genesys-icon-arrow-left-dbl:before {
+    content: "\e033";
+}
+
+.genesys-icon-arrow-left:before {
+    content: "\e034";
+}
+
+.genesys-icon-arrow-popover:before {
+    content: "\e035";
+}
+
+.genesys-icon-arrow-right-dbl:before {
+    content: "\e036";
+}
+
+.genesys-icon-arrow-right:before {
+    content: "\e037";
+}
+
+.genesys-icon-arrow-solid-down:before {
+    content: "\e038";
+}
+
+.genesys-icon-arrow-solid-left:before {
+    content: "\e039";
+}
+
+.genesys-icon-arrow-solid-right:before {
+    content: "\e03a";
+}
+
+.genesys-icon-arrow-solid-up:before {
+    content: "\e03b";
+}
+
+.genesys-icon-arrow-up:before {
+    content: "\e03c";
+}
+
+.genesys-icon-attach:before {
+    content: "\e03d";
+}
+
+.genesys-icon-audio-disable:before {
+    content: "\e03e";
+}
+
+.genesys-icon-audio-music:before {
+    content: "\e03f";
+}
+
+.genesys-icon-audio-no:before {
+    content: "\e040";
+}
+
+.genesys-icon-audio-rec-disable:before {
+    content: "\e041";
+}
+
+.genesys-icon-audio-rec:before {
+    content: "\e042";
+}
+
+.genesys-icon-audio-voice-disable:before {
+    content: "\e043";
+}
+
+.genesys-icon-audio-voice:before {
+    content: "\e044";
+}
+
+.genesys-icon-audio-yes:before {
+    content: "\e045";
+}
+
+.genesys-icon-autoscroll-off:before {
+    content: "\e046";
+}
+
+.genesys-icon-bar-graph-variable-1:before {
+    content: "\e047";
+}
+
+.genesys-icon-bar-graph-variable-2:before {
+    content: "\e048";
+}
+
+.genesys-icon-bell:before {
+    content: "\e049";
+}
+
+.genesys-icon-bezier:before {
+    content: "\e04a";
+}
+
+.genesys-icon-biz-attribute-disable:before {
+    content: "\e04b";
+}
+
+.genesys-icon-biz-attribute:before {
+    content: "\e04c";
+}
+
+.genesys-icon-blocks:before {
+    content: "\e04d";
+}
+
+.genesys-icon-book-address:before {
+    content: "\e04e";
+}
+
+.genesys-icon-book-open-details:before {
+    content: "\e04f";
+}
+
+.genesys-icon-break:before {
+    content: "\e050";
+}
+
+.genesys-icon-briefcase:before {
+    content: "\e051";
+}
+
+.genesys-icon-budget:before {
+    content: "\e052";
+}
+
+.genesys-icon-bug:before {
+    content: "\e053";
+}
+
+.genesys-icon-calculator:before {
+    content: "\e054";
+}
+
+.genesys-icon-calendar-day:before {
+    content: "\e055";
+}
+
+.genesys-icon-calendar-generic:before {
+    content: "\e056";
+}
+
+.genesys-icon-calendar-media-voice:before {
+    content: "\e057";
+}
+
+.genesys-icon-calendar-month-highlight:before {
+    content: "\e058";
+}
+
+.genesys-icon-calendar-month:before {
+    content: "\e059";
+}
+
+.genesys-icon-camera:before {
+    content: "\e05a";
+}
+
+.genesys-icon-campaign-disable:before {
+    content: "\e05b";
+}
+
+.genesys-icon-campaign-done:before {
+    content: "\e05c";
+}
+
+.genesys-icon-campaign-schedule:before {
+    content: "\e05d";
+}
+
+.genesys-icon-campaign-stop:before {
+    content: "\e05e";
+}
+
+.genesys-icon-campaign:before {
+    content: "\e05f";
+}
+
+.genesys-icon-cart:before {
+    content: "\e060";
+}
+
+.genesys-icon-cells:before {
+    content: "\e061";
+}
+
+.genesys-icon-certificate:before {
+    content: "\e062";
+}
+
+.genesys-icon-chat-add:before {
+    content: "\e063";
+}
+
+.genesys-icon-chat-disable:before {
+    content: "\e064";
+}
+
+.genesys-icon-chat-edit-disable:before {
+    content: "\e065";
+}
+
+.genesys-icon-chat-edit:before {
+    content: "\e066";
+}
+
+.genesys-icon-chat-end:before {
+    content: "\e067";
+}
+
+.genesys-icon-chat-forward:before {
+    content: "\e068";
+}
+
+.genesys-icon-chat-frown:before {
+    content: "\e069";
+}
+
+.genesys-icon-chat-multi:before {
+    content: "\e06a";
+}
+
+.genesys-icon-chat-oval-close:before {
+    content: "\e06b";
+}
+
+.genesys-icon-chat-oval-multi:before {
+    content: "\e06c";
+}
+
+.genesys-icon-chat-oval-transfer:before {
+    content: "\e06d";
+}
+
+.genesys-icon-chat-oval:before {
+    content: "\e06e";
+}
+
+.genesys-icon-chat-smile:before {
+    content: "\e06f";
+}
+
+.genesys-icon-chat-video:before {
+    content: "\e070";
+}
+
+.genesys-icon-chat:before {
+    content: "\e071";
+}
+
+.genesys-icon-checkbox-tick-lock:before {
+    content: "\e072";
+}
+
+.genesys-icon-checkbox-tick:before {
+    content: "\e073";
+}
+
+.genesys-icon-checkbox:before {
+    content: "\e074";
+}
+
+.genesys-icon-checklist-tick-lock:before {
+    content: "\e075";
+}
+
+.genesys-icon-checkmark-bold:before {
+    content: "\e076";
+}
+
+.genesys-icon-chevron-left:before {
+    content: "\e077";
+}
+
+.genesys-icon-chevron-right:before {
+    content: "\e078";
+}
+
+.genesys-icon-chevron-small-left:before {
+    content: "\e079";
+}
+
+.genesys-icon-chevron-small-right:before {
+    content: "\e07a";
+}
+
+.genesys-icon-circle-add:before {
+    content: "\e07b";
+}
+
+.genesys-icon-circle-arrow-down:before {
+    content: "\e07c";
+}
+
+.genesys-icon-circle-arrow-left:before {
+    content: "\e07d";
+}
+
+.genesys-icon-circle-arrow-right:before {
+    content: "\e07e";
+}
+
+.genesys-icon-circle-arrow-up:before {
+    content: "\e07f";
+}
+
+.genesys-icon-circle-close:before {
+    content: "\e080";
+}
+
+.genesys-icon-circle-expand-down:before {
+    content: "\e081";
+}
+
+.genesys-icon-circle-expand-left:before {
+    content: "\e082";
+}
+
+.genesys-icon-circle-expand-right:before {
+    content: "\e083";
+}
+
+.genesys-icon-circle-expand-up:before {
+    content: "\e084";
+}
+
+.genesys-icon-cleanup:before {
+    content: "\e085";
+}
+
+.genesys-icon-clip-approve:before {
+    content: "\e086";
+}
+
+.genesys-icon-clip-exchange:before {
+    content: "\e087";
+}
+
+.genesys-icon-clip-list:before {
+    content: "\e088";
+}
+
+.genesys-icon-clipboard:before {
+    content: "\e089";
+}
+
+.genesys-icon-clock-b:before {
+    content: "\e08a";
+}
+
+.genesys-icon-clock-stopwatch:before {
+    content: "\e08b";
+}
+
+.genesys-icon-clock-timezone:before {
+    content: "\e08c";
+}
+
+.genesys-icon-clock:before {
+    content: "\e08d";
+}
+
+.genesys-icon-clone:before {
+    content: "\e08e";
+}
+
+.genesys-icon-close-bold:before {
+    content: "\e08f";
+}
+
+.genesys-icon-close:before {
+    content: "\e090";
+}
+
+.genesys-icon-cloud-a:before {
+    content: "\e091";
+}
+
+.genesys-icon-cloud-b:before {
+    content: "\e092";
+}
+
+.genesys-icon-cm-96-cloud:before {
+    content: "\e093";
+}
+
+.genesys-icon-cm-96-desktop:before {
+    content: "\e094";
+}
+
+.genesys-icon-cm-96-network:before {
+    content: "\e095";
+}
+
+.genesys-icon-cm-96-outbound:before {
+    content: "\e096";
+}
+
+.genesys-icon-cm-96-server-add:before {
+    content: "\e097";
+}
+
+.genesys-icon-cm-96-server:before {
+    content: "\e098";
+}
+
+.genesys-icon-cm-96-tenant:before {
+    content: "\e099";
+}
+
+.genesys-icon-cm-96-user:before {
+    content: "\e09a";
+}
+
+.genesys-icon-cm-96-voice:before {
+    content: "\e09b";
+}
+
+.genesys-icon-cobrowse-chat:before {
+    content: "\e09c";
+}
+
+.genesys-icon-cobrowse-disable:before {
+    content: "\e09d";
+}
+
+.genesys-icon-cobrowse-end:before {
+    content: "\e09e";
+}
+
+.genesys-icon-cobrowse:before {
+    content: "\e09f";
+}
+
+.genesys-icon-code:before {
+    content: "\e0a0";
+}
+
+.genesys-icon-collapse:before {
+    content: "\e0a1";
+}
+
+.genesys-icon-column-direction-active:before {
+    content: "\e0a2";
+}
+
+.genesys-icon-column-direction:before {
+    content: "\e0a3";
+}
+
+.genesys-icon-comment-corner:before {
+    content: "\e0a4";
+}
+
+.genesys-icon-configuration-disable:before {
+    content: "\e0a5";
+}
+
+.genesys-icon-configuration:before {
+    content: "\e0a6";
+}
+
+.genesys-icon-contact-add:before {
+    content: "\e0a7";
+}
+
+.genesys-icon-contact-assign:before {
+    content: "\e0a8";
+}
+
+.genesys-icon-contact-delete:before {
+    content: "\e0a9";
+}
+
+.genesys-icon-contact-id-fetch:before {
+    content: "\e0aa";
+}
+
+.genesys-icon-contact-id:before {
+    content: "\e0ab";
+}
+
+.genesys-icon-contact-switch:before {
+    content: "\e0ac";
+}
+
+.genesys-icon-contract-a:before {
+    content: "\e0ad";
+}
+
+.genesys-icon-contract-b:before {
+    content: "\e0ae";
+}
+
+.genesys-icon-contract-c:before {
+    content: "\e0af";
+}
+
+.genesys-icon-contract-d:before {
+    content: "\e0b0";
+}
+
+.genesys-icon-control-backward:before {
+    content: "\e0b1";
+}
+
+.genesys-icon-control-forward:before {
+    content: "\e0b2";
+}
+
+.genesys-icon-control-left:before {
+    content: "\e0b3";
+}
+
+.genesys-icon-control-right:before {
+    content: "\e0b4";
+}
+
+.genesys-icon-control-skip-left:before {
+    content: "\e0b5";
+}
+
+.genesys-icon-control-skip-next:before {
+    content: "\e0b6";
+}
+
+.genesys-icon-control-skip-previous:before {
+    content: "\e0b7";
+}
+
+.genesys-icon-control-skip-right:before {
+    content: "\e0b8";
+}
+
+.genesys-icon-control-stop:before {
+    content: "\e0b9";
+}
+
+.genesys-icon-copy:before {
+    content: "\e0ba";
+}
+
+.genesys-icon-credit-card:before {
+    content: "\e0bb";
+}
+
+.genesys-icon-cs-mobile:before {
+    content: "\e0bc";
+}
+
+.genesys-icon-cs-social:before {
+    content: "\e0bd";
+}
+
+.genesys-icon-cs-web:before {
+    content: "\e0be";
+}
+
+.genesys-icon-currency-dollar-sign:before {
+    content: "\e0bf";
+}
+
+.genesys-icon-cut:before {
+    content: "\e0c0";
+}
+
+.genesys-icon-cx-24-flat-agent:before {
+    content: "\e0c1";
+}
+
+.genesys-icon-cx-24-flat-avatar:before {
+    content: "\e0c2";
+}
+
+.genesys-icon-cx-24-flat-cal:before {
+    content: "\e0c3";
+}
+
+.genesys-icon-cx-24-flat-chat:before {
+    content: "\e0c4";
+}
+
+.genesys-icon-cx-24-flat-cobrowse:before {
+    content: "\e0c5";
+}
+
+.genesys-icon-cx-24-flat-consult:before {
+    content: "\e0c6";
+}
+
+.genesys-icon-cx-24-flat-inbound:before {
+    content: "\e0c7";
+}
+
+.genesys-icon-cx-24-flat-lock:before {
+    content: "\e0c8";
+}
+
+.genesys-icon-cx-24-flat-mail:before {
+    content: "\e0c9";
+}
+
+.genesys-icon-cx-24-flat-offer:before {
+    content: "\e0ca";
+}
+
+.genesys-icon-cx-24-flat-outbound:before {
+    content: "\e0cb";
+}
+
+.genesys-icon-cx-24-flat-pref:before {
+    content: "\e0cc";
+}
+
+.genesys-icon-cx-24-flat-search:before {
+    content: "\e0cd";
+}
+
+.genesys-icon-cx-24-flat-survey:before {
+    content: "\e0ce";
+}
+
+.genesys-icon-cx-24-flat-vid:before {
+    content: "\e0cf";
+}
+
+.genesys-icon-cx-24-flat-vm:before {
+    content: "\e0d0";
+}
+
+.genesys-icon-dash:before {
+    content: "\e0d1";
+}
+
+.genesys-icon-dashtab-dash:before {
+    content: "\e0d2";
+}
+
+.genesys-icon-dashtab-settings:before {
+    content: "\e0d3";
+}
+
+.genesys-icon-dashtab-xwidget:before {
+    content: "\e0d4";
+}
+
+.genesys-icon-dialpad:before {
+    content: "\e0d5";
+}
+
+.genesys-icon-disclosure-left:before {
+    content: "\e0d6";
+}
+
+.genesys-icon-doc-add:before {
+    content: "\e0d7";
+}
+
+.genesys-icon-doc-alert-b:before {
+    content: "\e0d8";
+}
+
+.genesys-icon-doc-all-save:before {
+    content: "\e0d9";
+}
+
+.genesys-icon-doc-all:before {
+    content: "\e0da";
+}
+
+.genesys-icon-doc-detail-add:before {
+    content: "\e0db";
+}
+
+.genesys-icon-doc-detail:before {
+    content: "\e0dc";
+}
+
+.genesys-icon-doc-form-b:before {
+    content: "\e0dd";
+}
+
+.genesys-icon-doc-forward:before {
+    content: "\e0de";
+}
+
+.genesys-icon-doc-generic-b:before {
+    content: "\e0df";
+}
+
+.genesys-icon-doc-generic:before {
+    content: "\e0e0";
+}
+
+.genesys-icon-doc-list-b:before {
+    content: "\e0e1";
+}
+
+.genesys-icon-doc-list:before {
+    content: "\e0e2";
+}
+
+.genesys-icon-doc-no:before {
+    content: "\e0e3";
+}
+
+.genesys-icon-doc-phone-call:before {
+    content: "\e0e4";
+}
+
+.genesys-icon-doc-report-b:before {
+    content: "\e0e5";
+}
+
+.genesys-icon-doc-save:before {
+    content: "\e0e6";
+}
+
+.genesys-icon-doc-segmentation-b:before {
+    content: "\e0e7";
+}
+
+.genesys-icon-doc-yes-b:before {
+    content: "\e0e8";
+}
+
+.genesys-icon-doc-yes:before {
+    content: "\e0e9";
+}
+
+.genesys-icon-document-scenario:before {
+    content: "\e0ea";
+}
+
+.genesys-icon-double-down:before {
+    content: "\e0eb";
+}
+
+.genesys-icon-double-up:before {
+    content: "\e0ec";
+}
+
+.genesys-icon-download:before {
+    content: "\e0ed";
+}
+
+.genesys-icon-drag-out:before {
+    content: "\e0ee";
+}
+
+.genesys-icon-dropdown-arrow:before {
+    content: "\e0ef";
+}
+
+.genesys-icon-email-delete:before {
+    content: "\e0f0";
+}
+
+.genesys-icon-email-forward:before {
+    content: "\e0f1";
+}
+
+.genesys-icon-email-move-to-folder:before {
+    content: "\e0f2";
+}
+
+.genesys-icon-email-reply-all:before {
+    content: "\e0f3";
+}
+
+.genesys-icon-email-reply:before {
+    content: "\e0f4";
+}
+
+.genesys-icon-email-resend:before {
+    content: "\e0f5";
+}
+
+.genesys-icon-email-send:before {
+    content: "\e0f6";
+}
+
+.genesys-icon-email-transfer:before {
+    content: "\e0f7";
+}
+
+.genesys-icon-email:before {
+    content: "\e0f8";
+}
+
+.genesys-icon-enterprise-extension:before {
+    content: "\e0f9";
+}
+
+.genesys-icon-error-bold:before {
+    content: "\e0fa";
+}
+
+.genesys-icon-escalate-from:before {
+    content: "\e0fb";
+}
+
+.genesys-icon-escalate-to:before {
+    content: "\e0fc";
+}
+
+.genesys-icon-escalate:before {
+    content: "\e0fd";
+}
+
+.genesys-icon-event-cluster-mini:before {
+    content: "\e0fe";
+}
+
+.genesys-icon-event-cluster:before {
+    content: "\e0ff";
+}
+
+.genesys-icon-expand-down:before {
+    content: "\e100";
+}
+
+.genesys-icon-expand-left:before {
+    content: "\e101";
+}
+
+.genesys-icon-expand-right:before {
+    content: "\e102";
+}
+
+.genesys-icon-expand-up:before {
+    content: "\e103";
+}
+
+.genesys-icon-expand:before {
+    content: "\e104";
+}
+
+.genesys-icon-export:before {
+    content: "\e105";
+}
+
+.genesys-icon-face-happy:before {
+    content: "\e106";
+}
+
+.genesys-icon-face-neutral:before {
+    content: "\e107";
+}
+
+.genesys-icon-face-sad:before {
+    content: "\e108";
+}
+
+.genesys-icon-face-solid-happy:before {
+    content: "\e109";
+}
+
+.genesys-icon-face-solid-sad:before {
+    content: "\e10a";
+}
+
+.genesys-icon-face-unknown:before {
+    content: "\e10b";
+}
+
+.genesys-icon-facebook-square:before {
+    content: "\e10c";
+}
+
+.genesys-icon-file-folder-drawer:before {
+    content: "\e10d";
+}
+
+.genesys-icon-files:before {
+    content: "\e10e";
+}
+
+.genesys-icon-film-broadcast:before {
+    content: "\e10f";
+}
+
+.genesys-icon-film:before {
+    content: "\e110";
+}
+
+.genesys-icon-filter:before {
+    content: "\e111";
+}
+
+.genesys-icon-folder-add:before {
+    content: "\e112";
+}
+
+.genesys-icon-folder-disabled:before {
+    content: "\e113";
+}
+
+.genesys-icon-folder-media:before {
+    content: "\e114";
+}
+
+.genesys-icon-folder-move:before {
+    content: "\e115";
+}
+
+.genesys-icon-folder-open-in:before {
+    content: "\e116";
+}
+
+.genesys-icon-folder-open-out:before {
+    content: "\e117";
+}
+
+.genesys-icon-folder-open:before {
+    content: "\e118";
+}
+
+.genesys-icon-folder-progress:before {
+    content: "\e119";
+}
+
+.genesys-icon-folder:before {
+    content: "\e11a";
+}
+
+.genesys-icon-follow-disable:before {
+    content: "\e11b";
+}
+
+.genesys-icon-follow:before {
+    content: "\e11c";
+}
+
+.genesys-icon-font-bold:before {
+    content: "\e11d";
+}
+
+.genesys-icon-font-decrease:before {
+    content: "\e11e";
+}
+
+.genesys-icon-font-increase:before {
+    content: "\e11f";
+}
+
+.genesys-icon-font-italic:before {
+    content: "\e120";
+}
+
+.genesys-icon-font-style:before {
+    content: "\e121";
+}
+
+.genesys-icon-font-underline:before {
+    content: "\e122";
+}
+
+.genesys-icon-full-screen:before {
+    content: "\e123";
+}
+
+.genesys-icon-gear-add:before {
+    content: "\e124";
+}
+
+.genesys-icon-gear-remove:before {
+    content: "\e125";
+}
+
+.genesys-icon-generic-disable:before {
+    content: "\e126";
+}
+
+.genesys-icon-generic-laptop:before {
+    content: "\e127";
+}
+
+.genesys-icon-generic-mobile-phone:before {
+    content: "\e128";
+}
+
+.genesys-icon-generic-pc:before {
+    content: "\e129";
+}
+
+.genesys-icon-generic-tablet:before {
+    content: "\e12a";
+}
+
+.genesys-icon-generic:before {
+    content: "\e12b";
+}
+
+.genesys-icon-globe:before {
+    content: "\e12c";
+}
+
+.genesys-icon-google-plus-circle:before {
+    content: "\e12d";
+}
+
+.genesys-icon-grab-vertical:before {
+    content: "\e12e";
+}
+
+.genesys-icon-grab:before {
+    content: "\e12f";
+}
+
+.genesys-icon-graph-bar:before {
+    content: "\e130";
+}
+
+.genesys-icon-graph-barline:before {
+    content: "\e131";
+}
+
+.genesys-icon-graph-chart:before {
+    content: "\e132";
+}
+
+.genesys-icon-graph-column:before {
+    content: "\e133";
+}
+
+.genesys-icon-graph-edit:before {
+    content: "\e134";
+}
+
+.genesys-icon-graph-grid:before {
+    content: "\e135";
+}
+
+.genesys-icon-graph-line:before {
+    content: "\e136";
+}
+
+.genesys-icon-graph-spark:before {
+    content: "\e137";
+}
+
+.genesys-icon-graph-stack:before {
+    content: "\e138";
+}
+
+.genesys-icon-grip-horizontal:before {
+    content: "\e139";
+}
+
+.genesys-icon-grip-vertical:before {
+    content: "\e13a";
+}
+
+.genesys-icon-group:before {
+    content: "\e13b";
+}
+
+.genesys-icon-help:before {
+    content: "\e13c";
+}
+
+.genesys-icon-home:before {
+    content: "\e13d";
+}
+
+.genesys-icon-host:before {
+    content: "\e13e";
+}
+
+.genesys-icon-hp:before {
+    content: "\e13f";
+}
+
+.genesys-icon-import:before {
+    content: "\e140";
+}
+
+.genesys-icon-in-small:before {
+    content: "\e141";
+}
+
+.genesys-icon-in:before {
+    content: "\e142";
+}
+
+.genesys-icon-inbound:before {
+    content: "\e143";
+}
+
+.genesys-icon-insert-block-left:before {
+    content: "\e144";
+}
+
+.genesys-icon-insert-block-right:before {
+    content: "\e145";
+}
+
+.genesys-icon-inspect-chat-disable:before {
+    content: "\e146";
+}
+
+.genesys-icon-inspect-chat:before {
+    content: "\e147";
+}
+
+.genesys-icon-inspect-disable:before {
+    content: "\e148";
+}
+
+.genesys-icon-inspect-phone-disable:before {
+    content: "\e149";
+}
+
+.genesys-icon-inspect-phone:before {
+    content: "\e14a";
+}
+
+.genesys-icon-inspect-star:before {
+    content: "\e14b";
+}
+
+.genesys-icon-inspect:before {
+    content: "\e14c";
+}
+
+.genesys-icon-ivr-disable:before {
+    content: "\e14d";
+}
+
+.genesys-icon-ivr:before {
+    content: "\e14e";
+}
+
+.genesys-icon-iw-active-circle-callback:before {
+    content: "\e14f";
+}
+
+.genesys-icon-iw-active-circle-campaign:before {
+    content: "\e150";
+}
+
+.genesys-icon-iw-active-circle-chat-round:before {
+    content: "\e151";
+}
+
+.genesys-icon-iw-active-circle-chat-square:before {
+    content: "\e152";
+}
+
+.genesys-icon-iw-active-circle-doc:before {
+    content: "\e153";
+}
+
+.genesys-icon-iw-active-circle-email:before {
+    content: "\e154";
+}
+
+.genesys-icon-iw-active-circle-facebook:before {
+    content: "\e155";
+}
+
+.genesys-icon-iw-active-circle-globe:before {
+    content: "\e156";
+}
+
+.genesys-icon-iw-active-circle-media:before {
+    content: "\e157";
+}
+
+.genesys-icon-iw-active-circle-phone-cancel:before {
+    content: "\e158";
+}
+
+.genesys-icon-iw-active-circle-phone-conf-susp:before {
+    content: "\e159";
+}
+
+.genesys-icon-iw-active-circle-phone-conf:before {
+    content: "\e15a";
+}
+
+.genesys-icon-iw-active-circle-phone-dial:before {
+    content: "\e15b";
+}
+
+.genesys-icon-iw-active-circle-phone-pause:before {
+    content: "\e15c";
+}
+
+.genesys-icon-iw-active-circle-phone-play:before {
+    content: "\e15d";
+}
+
+.genesys-icon-iw-active-circle-phone-susp:before {
+    content: "\e15e";
+}
+
+.genesys-icon-iw-active-circle-phone-voice:before {
+    content: "\e15f";
+}
+
+.genesys-icon-iw-active-circle-question:before {
+    content: "\e160";
+}
+
+.genesys-icon-iw-active-circle-rss:before {
+    content: "\e161";
+}
+
+.genesys-icon-iw-active-circle-twitter:before {
+    content: "\e162";
+}
+
+.genesys-icon-iw-active-circle-voice-chat:before {
+    content: "\e163";
+}
+
+.genesys-icon-iw-active-circle-voice:before {
+    content: "\e164";
+}
+
+.genesys-icon-iw-active-square-view:before {
+    content: "\e165";
+}
+
+.genesys-icon-iw-arrow-outline-in:before {
+    content: "\e166";
+}
+
+.genesys-icon-iw-circle-no-add:before {
+    content: "\e167";
+}
+
+.genesys-icon-iw-circle-no-chevron-down:before {
+    content: "\e168";
+}
+
+.genesys-icon-iw-circle-no-chevron-up:before {
+    content: "\e169";
+}
+
+.genesys-icon-iw-circle-yes-add:before {
+    content: "\e16a";
+}
+
+.genesys-icon-iw-circle-yes-chevron-down:before {
+    content: "\e16b";
+}
+
+.genesys-icon-iw-circle-yes-chevron-up:before {
+    content: "\e16c";
+}
+
+.genesys-icon-iw-control-circle-back:before {
+    content: "\e16d";
+}
+
+.genesys-icon-iw-control-circle-fwd:before {
+    content: "\e16e";
+}
+
+.genesys-icon-iw-control-circle-home:before {
+    content: "\e16f";
+}
+
+.genesys-icon-iw-control-circle-play:before {
+    content: "\e170";
+}
+
+.genesys-icon-iw-control-circle-stop:before {
+    content: "\e171";
+}
+
+.genesys-icon-iw-done-and-stop:before {
+    content: "\e172";
+}
+
+.genesys-icon-iw-history:before {
+    content: "\e173";
+}
+
+.genesys-icon-iw-in-progress:before {
+    content: "\e174";
+}
+
+.genesys-icon-iw-inspect-email:before {
+    content: "\e175";
+}
+
+.genesys-icon-iw-inspect-voice-cancel:before {
+    content: "\e176";
+}
+
+.genesys-icon-iw-inspect-voice:before {
+    content: "\e177";
+}
+
+.genesys-icon-iw-monitor-chat:before {
+    content: "\e178";
+}
+
+.genesys-icon-iw-monitor-voice:before {
+    content: "\e179";
+}
+
+.genesys-icon-iw-queue:before {
+    content: "\e17a";
+}
+
+.genesys-icon-iw-routing-point:before {
+    content: "\e17b";
+}
+
+.genesys-icon-iw-save-as:before {
+    content: "\e17c";
+}
+
+.genesys-icon-iw-save:before {
+    content: "\e17d";
+}
+
+.genesys-icon-iw-square-facebook-email:before {
+    content: "\e17e";
+}
+
+.genesys-icon-iw-square-facebook-no:before {
+    content: "\e17f";
+}
+
+.genesys-icon-iw-square-facebook-transfer:before {
+    content: "\e180";
+}
+
+.genesys-icon-iw-square-facebook-workbin:before {
+    content: "\e181";
+}
+
+.genesys-icon-iw-square-rss-transfer:before {
+    content: "\e182";
+}
+
+.genesys-icon-iw-square-rss-workbin:before {
+    content: "\e183";
+}
+
+.genesys-icon-iw-square-twitter-follow:before {
+    content: "\e184";
+}
+
+.genesys-icon-iw-square-twitter-no:before {
+    content: "\e185";
+}
+
+.genesys-icon-iw-square-twitter-transfer:before {
+    content: "\e186";
+}
+
+.genesys-icon-iw-square-twitter-workbin:before {
+    content: "\e187";
+}
+
+.genesys-icon-iw-video-suspend:before {
+    content: "\e188";
+}
+
+.genesys-icon-iw-video-thumb-cancel:before {
+    content: "\e189";
+}
+
+.genesys-icon-iw-video-thumb-show:before {
+    content: "\e18a";
+}
+
+.genesys-icon-iw-video-thumb-swap:before {
+    content: "\e18b";
+}
+
+.genesys-icon-iw-voice-inspect-cancel:before {
+    content: "\e18c";
+}
+
+.genesys-icon-iw-voice-inspect:before {
+    content: "\e18d";
+}
+
+.genesys-icon-key-dot-dashed:before {
+    content: "\e18e";
+}
+
+.genesys-icon-link:before {
+    content: "\e18f";
+}
+
+.genesys-icon-linkedin-square:before {
+    content: "\e190";
+}
+
+.genesys-icon-linux:before {
+    content: "\e191";
+}
+
+.genesys-icon-list-bullets:before {
+    content: "\e192";
+}
+
+.genesys-icon-list-numbers:before {
+    content: "\e193";
+}
+
+.genesys-icon-locked:before {
+    content: "\e194";
+}
+
+.genesys-icon-login-checkmark:before {
+    content: "\e195";
+}
+
+.genesys-icon-login-error:before {
+    content: "\e196";
+}
+
+.genesys-icon-login-info:before {
+    content: "\e197";
+}
+
+.genesys-icon-lunch:before {
+    content: "\e198";
+}
+
+.genesys-icon-measure-growing:before {
+    content: "\e199";
+}
+
+.genesys-icon-measure-point-in-time:before {
+    content: "\e19a";
+}
+
+.genesys-icon-measure-sliding:before {
+    content: "\e19b";
+}
+
+.genesys-icon-measure-today:before {
+    content: "\e19c";
+}
+
+.genesys-icon-menu-hamburger:before {
+    content: "\e19d";
+}
+
+.genesys-icon-merge:before {
+    content: "\e19e";
+}
+
+.genesys-icon-mini-close:before {
+    content: "\e19f";
+}
+
+.genesys-icon-minimize:before {
+    content: "\e1a0";
+}
+
+.genesys-icon-moon-default:before {
+    content: "\e1a1";
+}
+
+.genesys-icon-more:before {
+    content: "\e1a2";
+}
+
+.genesys-icon-ms:before {
+    content: "\e1a3";
+}
+
+.genesys-icon-multiples:before {
+    content: "\e1a4";
+}
+
+.genesys-icon-network:before {
+    content: "\e1a5";
+}
+
+.genesys-icon-note-add:before {
+    content: "\e1a6";
+}
+
+.genesys-icon-note:before {
+    content: "\e1a7";
+}
+
+.genesys-icon-notebook:before {
+    content: "\e1a8";
+}
+
+.genesys-icon-number-sign:before {
+    content: "\e1a9";
+}
+
+.genesys-icon-out-small:before {
+    content: "\e1aa";
+}
+
+.genesys-icon-out:before {
+    content: "\e1ab";
+}
+
+.genesys-icon-outbound:before {
+    content: "\e1ac";
+}
+
+.genesys-icon-page-multi:before {
+    content: "\e1ad";
+}
+
+.genesys-icon-page-search:before {
+    content: "\e1ae";
+}
+
+.genesys-icon-page-single:before {
+    content: "\e1af";
+}
+
+.genesys-icon-palette:before {
+    content: "\e1b0";
+}
+
+.genesys-icon-parameter-group:before {
+    content: "\e1b1";
+}
+
+.genesys-icon-parameter:before {
+    content: "\e1b2";
+}
+
+.genesys-icon-paste:before {
+    content: "\e1b3";
+}
+
+.genesys-icon-pc-mobile-phone:before {
+    content: "\e1b4";
+}
+
+.genesys-icon-pencil:before {
+    content: "\e1b5";
+}
+
+.genesys-icon-people-chat:before {
+    content: "\e1b6";
+}
+
+.genesys-icon-people:before {
+    content: "\e1b7";
+}
+
+.genesys-icon-person:before {
+    content: "\e1b8";
+}
+
+.genesys-icon-phone-add:before {
+    content: "\e1b9";
+}
+
+.genesys-icon-phone-bell:before {
+    content: "\e1ba";
+}
+
+.genesys-icon-phone-chat-media:before {
+    content: "\e1bb";
+}
+
+.genesys-icon-phone-conference:before {
+    content: "\e1bc";
+}
+
+.genesys-icon-phone-decline:before {
+    content: "\e1bd";
+}
+
+.genesys-icon-phone-dial:before {
+    content: "\e1be";
+}
+
+.genesys-icon-phone-disabled:before {
+    content: "\e1bf";
+}
+
+.genesys-icon-phone-forward:before {
+    content: "\e1c0";
+}
+
+.genesys-icon-phone-hold:before {
+    content: "\e1c1";
+}
+
+.genesys-icon-phone-incoming:before {
+    content: "\e1c2";
+}
+
+.genesys-icon-phone-pause:before {
+    content: "\e1c3";
+}
+
+.genesys-icon-phone-rec-pause:before {
+    content: "\e1c4";
+}
+
+.genesys-icon-phone-rec-resume:before {
+    content: "\e1c5";
+}
+
+.genesys-icon-phone-rec-stop:before {
+    content: "\e1c6";
+}
+
+.genesys-icon-phone-rec:before {
+    content: "\e1c7";
+}
+
+.genesys-icon-phone-voice-retrieve:before {
+    content: "\e1c8";
+}
+
+.genesys-icon-phone-voice:before {
+    content: "\e1c9";
+}
+
+.genesys-icon-phone:before {
+    content: "\e1ca";
+}
+
+.genesys-icon-phones:before {
+    content: "\e1cb";
+}
+
+.genesys-icon-picture:before {
+    content: "\e1cc";
+}
+
+.genesys-icon-pie-chart:before {
+    content: "\e1cd";
+}
+
+.genesys-icon-pin-alert:before {
+    content: "\e1ce";
+}
+
+.genesys-icon-pin-check:before {
+    content: "\e1cf";
+}
+
+.genesys-icon-pin-sold-remove:before {
+    content: "\e1d0";
+}
+
+.genesys-icon-pin-solid-add:before {
+    content: "\e1d1";
+}
+
+.genesys-icon-pin-solid:before {
+    content: "\e1d2";
+}
+
+.genesys-icon-pin-text:before {
+    content: "\e1d3";
+}
+
+.genesys-icon-pin-time:before {
+    content: "\e1d4";
+}
+
+.genesys-icon-pin-zoom-in:before {
+    content: "\e1d5";
+}
+
+.genesys-icon-pin-zoom-out:before {
+    content: "\e1d6";
+}
+
+.genesys-icon-pin:before {
+    content: "\e1d7";
+}
+
+.genesys-icon-pinned:before {
+    content: "\e1d8";
+}
+
+.genesys-icon-pinterest-circle:before {
+    content: "\e1d9";
+}
+
+.genesys-icon-play-list:before {
+    content: "\e1da";
+}
+
+.genesys-icon-printer:before {
+    content: "\e1db";
+}
+
+.genesys-icon-progress-bar:before {
+    content: "\e1dc";
+}
+
+.genesys-icon-quotes:before {
+    content: "\e1dd";
+}
+
+.genesys-icon-radio-active:before {
+    content: "\e1de";
+}
+
+.genesys-icon-radio:before {
+    content: "\e1df";
+}
+
+.genesys-icon-rebuild:before {
+    content: "\e1e0";
+}
+
+.genesys-icon-redo:before {
+    content: "\e1e1";
+}
+
+.genesys-icon-refresh-with-feedback:before {
+    content: "\e1e2";
+}
+
+.genesys-icon-refresh:before {
+    content: "\e1e3";
+}
+
+.genesys-icon-reload:before {
+    content: "\e1e4";
+}
+
+.genesys-icon-remember:before {
+    content: "\e1e5";
+}
+
+.genesys-icon-reset:before {
+    content: "\e1e6";
+}
+
+.genesys-icon-rewind-five-seconds:before {
+    content: "\e1e7";
+}
+
+.genesys-icon-routing:before {
+    content: "\e1e8";
+}
+
+.genesys-icon-rss-square:before {
+    content: "\e1e9";
+}
+
+.genesys-icon-rss:before {
+    content: "\e1ea";
+}
+
+.genesys-icon-screen-rec-pause:before {
+    content: "\e1eb";
+}
+
+.genesys-icon-screen-rec-record:before {
+    content: "\e1ec";
+}
+
+.genesys-icon-screen-rec-resume:before {
+    content: "\e1ed";
+}
+
+.genesys-icon-screen-rec-stop:before {
+    content: "\e1ee";
+}
+
+.genesys-icon-scrubber:before {
+    content: "\e1ef";
+}
+
+.genesys-icon-search-next:before {
+    content: "\e1f0";
+}
+
+.genesys-icon-search-previous:before {
+    content: "\e1f1";
+}
+
+.genesys-icon-search:before {
+    content: "\e1f2";
+}
+
+.genesys-icon-searched-term:before {
+    content: "\e1f3";
+}
+
+.genesys-icon-secure:before {
+    content: "\e1f4";
+}
+
+.genesys-icon-segmentation:before {
+    content: "\e1f5";
+}
+
+.genesys-icon-select-no:before {
+    content: "\e1f6";
+}
+
+.genesys-icon-select-yes:before {
+    content: "\e1f7";
+}
+
+.genesys-icon-select:before {
+    content: "\e1f8";
+}
+
+.genesys-icon-server-add:before {
+    content: "\e1f9";
+}
+
+.genesys-icon-server:before {
+    content: "\e1fa";
+}
+
+.genesys-icon-settings-gear:before {
+    content: "\e1fb";
+}
+
+.genesys-icon-settings-gears:before {
+    content: "\e1fc";
+}
+
+.genesys-icon-settings-sliders:before {
+    content: "\e1fd";
+}
+
+.genesys-icon-share:before {
+    content: "\e1fe";
+}
+
+.genesys-icon-sharethis:before {
+    content: "\e1ff";
+}
+
+.genesys-icon-shrinkage:before {
+    content: "\e200";
+}
+
+.genesys-icon-shuffle:before {
+    content: "\e201";
+}
+
+.genesys-icon-site-disable:before {
+    content: "\e202";
+}
+
+.genesys-icon-site:before {
+    content: "\e203";
+}
+
+.genesys-icon-skills:before {
+    content: "\e204";
+}
+
+.genesys-icon-slide-back:before {
+    content: "\e205";
+}
+
+.genesys-icon-slide-fwd:before {
+    content: "\e206";
+}
+
+.genesys-icon-small-checkmark:before {
+    content: "\e207";
+}
+
+.genesys-icon-small-close:before {
+    content: "\e208";
+}
+
+.genesys-icon-small-plus:before {
+    content: "\e209";
+}
+
+.genesys-icon-sms-cancel:before {
+    content: "\e20a";
+}
+
+.genesys-icon-sms-message:before {
+    content: "\e20b";
+}
+
+.genesys-icon-sms-reply:before {
+    content: "\e20c";
+}
+
+.genesys-icon-sms-transfer:before {
+    content: "\e20d";
+}
+
+.genesys-icon-solaris:before {
+    content: "\e20e";
+}
+
+.genesys-icon-sort-left-right:before {
+    content: "\e20f";
+}
+
+.genesys-icon-sort-up-down:before {
+    content: "\e210";
+}
+
+.genesys-icon-special-g-brandmark:before {
+    content: "\e211";
+}
+
+.genesys-icon-stamp:before {
+    content: "\e212";
+}
+
+.genesys-icon-star-edit:before {
+    content: "\e213";
+}
+
+.genesys-icon-star-outline:before {
+    content: "\e214";
+}
+
+.genesys-icon-stars-add:before {
+    content: "\e215";
+}
+
+.genesys-icon-stars-lock:before {
+    content: "\e216";
+}
+
+.genesys-icon-stars-remove:before {
+    content: "\e217";
+}
+
+.genesys-icon-stars:before {
+    content: "\e218";
+}
+
+.genesys-icon-status-aftercallwork:before {
+    content: "\e219";
+}
+
+.genesys-icon-status-available-no:before {
+    content: "\e21a";
+}
+
+.genesys-icon-status-available-yes:before {
+    content: "\e21b";
+}
+
+.genesys-icon-status-bad:before {
+    content: "\e21c";
+}
+
+.genesys-icon-status-call-dialing:before {
+    content: "\e21d";
+}
+
+.genesys-icon-status-call-inbound:before {
+    content: "\e21e";
+}
+
+.genesys-icon-status-call-internal:before {
+    content: "\e21f";
+}
+
+.genesys-icon-status-call-outbound:before {
+    content: "\e220";
+}
+
+.genesys-icon-status-call-ringing:before {
+    content: "\e221";
+}
+
+.genesys-icon-status-chat:before {
+    content: "\e222";
+}
+
+.genesys-icon-status-email:before {
+    content: "\e223";
+}
+
+.genesys-icon-status-good:before {
+    content: "\e224";
+}
+
+.genesys-icon-status-hook-off:before {
+    content: "\e225";
+}
+
+.genesys-icon-status-hook-on:before {
+    content: "\e226";
+}
+
+.genesys-icon-status-interaction:before {
+    content: "\e227";
+}
+
+.genesys-icon-status-logged-off:before {
+    content: "\e228";
+}
+
+.genesys-icon-status-logged-on:before {
+    content: "\e229";
+}
+
+.genesys-icon-status-monitored-no:before {
+    content: "\e22a";
+}
+
+.genesys-icon-status-monitored-yes:before {
+    content: "\e22b";
+}
+
+.genesys-icon-status-onhold:before {
+    content: "\e22c";
+}
+
+.genesys-icon-status-queue-empty:before {
+    content: "\e22d";
+}
+
+.genesys-icon-status-queue-full:before {
+    content: "\e22e";
+}
+
+.genesys-icon-status-queue-part-full:before {
+    content: "\e22f";
+}
+
+.genesys-icon-status-ready-blocked:before {
+    content: "\e230";
+}
+
+.genesys-icon-status-ready-no:before {
+    content: "\e231";
+}
+
+.genesys-icon-status-ready-partial:before {
+    content: "\e232";
+}
+
+.genesys-icon-status-ready-yes:before {
+    content: "\e233";
+}
+
+.genesys-icon-status-unknown:before {
+    content: "\e234";
+}
+
+.genesys-icon-sun-default:before {
+    content: "\e235";
+}
+
+.genesys-icon-superviser-chat-cancel:before {
+    content: "\e236";
+}
+
+.genesys-icon-supervisor-cancel:before {
+    content: "\e237";
+}
+
+.genesys-icon-supervisor-chat:before {
+    content: "\e238";
+}
+
+.genesys-icon-supervisor-voice-cancel:before {
+    content: "\e239";
+}
+
+.genesys-icon-supervisor-voice:before {
+    content: "\e23a";
+}
+
+.genesys-icon-supervisor:before {
+    content: "\e23b";
+}
+
+.genesys-icon-swap:before {
+    content: "\e23c";
+}
+
+.genesys-icon-switch-disable:before {
+    content: "\e23d";
+}
+
+.genesys-icon-switch:before {
+    content: "\e23e";
+}
+
+.genesys-icon-symbol-man:before {
+    content: "\e23f";
+}
+
+.genesys-icon-symbol-woman:before {
+    content: "\e240";
+}
+
+.genesys-icon-tag-stat-add:before {
+    content: "\e241";
+}
+
+.genesys-icon-tag-stat-remove:before {
+    content: "\e242";
+}
+
+.genesys-icon-tag:before {
+    content: "\e243";
+}
+
+.genesys-icon-target:before {
+    content: "\e244";
+}
+
+.genesys-icon-team-communicator:before {
+    content: "\e245";
+}
+
+.genesys-icon-tenant-disable:before {
+    content: "\e246";
+}
+
+.genesys-icon-tenant:before {
+    content: "\e247";
+}
+
+.genesys-icon-text-centered:before {
+    content: "\e248";
+}
+
+.genesys-icon-text-detail:before {
+    content: "\e249";
+}
+
+.genesys-icon-text-generic:before {
+    content: "\e24a";
+}
+
+.genesys-icon-text-indent-left:before {
+    content: "\e24b";
+}
+
+.genesys-icon-text-indent-right:before {
+    content: "\e24c";
+}
+
+.genesys-icon-text-justify-center:before {
+    content: "\e24d";
+}
+
+.genesys-icon-text-justify-full:before {
+    content: "\e24e";
+}
+
+.genesys-icon-text-justify-left:before {
+    content: "\e24f";
+}
+
+.genesys-icon-text-justify-right:before {
+    content: "\e250";
+}
+
+.genesys-icon-text-spelling:before {
+    content: "\e251";
+}
+
+.genesys-icon-thumbs-down:before {
+    content: "\e252";
+}
+
+.genesys-icon-thumbs-up:before {
+    content: "\e253";
+}
+
+.genesys-icon-tick:before {
+    content: "\e254";
+}
+
+.genesys-icon-timeline:before {
+    content: "\e255";
+}
+
+.genesys-icon-toggle-off:before {
+    content: "\e256";
+}
+
+.genesys-icon-toggle-on:before {
+    content: "\e257";
+}
+
+.genesys-icon-toggle:before {
+    content: "\e258";
+}
+
+.genesys-icon-training:before {
+    content: "\e259";
+}
+
+.genesys-icon-transfer:before {
+    content: "\e25a";
+}
+
+.genesys-icon-trash:before {
+    content: "\e25b";
+}
+
+.genesys-icon-tree-branch:before {
+    content: "\e25c";
+}
+
+.genesys-icon-twitter-square:before {
+    content: "\e25d";
+}
+
+.genesys-icon-twitter:before {
+    content: "\e25e";
+}
+
+.genesys-icon-undo:before {
+    content: "\e25f";
+}
+
+.genesys-icon-unlocked:before {
+    content: "\e260";
+}
+
+.genesys-icon-unmerge:before {
+    content: "\e261";
+}
+
+.genesys-icon-upload:before {
+    content: "\e262";
+}
+
+.genesys-icon-video-add:before {
+    content: "\e263";
+}
+
+.genesys-icon-video-disable:before {
+    content: "\e264";
+}
+
+.genesys-icon-video-end:before {
+    content: "\e265";
+}
+
+.genesys-icon-video-forward:before {
+    content: "\e266";
+}
+
+.genesys-icon-video-pause:before {
+    content: "\e267";
+}
+
+.genesys-icon-video-voice:before {
+    content: "\e268";
+}
+
+.genesys-icon-video:before {
+    content: "\e269";
+}
+
+.genesys-icon-videocam-1-disable:before {
+    content: "\e26a";
+}
+
+.genesys-icon-videocam-1:before {
+    content: "\e26b";
+}
+
+.genesys-icon-videocam-2-disable:before {
+    content: "\e26c";
+}
+
+.genesys-icon-videocam-2:before {
+    content: "\e26d";
+}
+
+.genesys-icon-view-details-bottom:before {
+    content: "\e26e";
+}
+
+.genesys-icon-view-details-right:before {
+    content: "\e26f";
+}
+
+.genesys-icon-view-grid:before {
+    content: "\e270";
+}
+
+.genesys-icon-view-list:before {
+    content: "\e271";
+}
+
+.genesys-icon-view-lists:before {
+    content: "\e272";
+}
+
+.genesys-icon-view-stacked:before {
+    content: "\e273";
+}
+
+.genesys-icon-view-tree:before {
+    content: "\e274";
+}
+
+.genesys-icon-voicemail:before {
+    content: "\e275";
+}
+
+.genesys-icon-window-contract:before {
+    content: "\e276";
+}
+
+.genesys-icon-window-expand:before {
+    content: "\e277";
+}
+
+.genesys-icon-zoom-in:before {
+    content: "\e278";
+}
+
+.genesys-icon-zoom-out:before {
+    content: "\e279";
+}
