@@ -23,7 +23,7 @@ TypeScript where possible over JavaScript and should have a strong suite of
 tests.
 
 ### Documentation
-Each Common UI Component should have thourough Storybook documentation with
+Each Common UI Component should have thorough Storybook documentation with
 clear examples of its usage and feature.
 
 ### Testing
@@ -31,10 +31,10 @@ All components should be thouroughly unit tested.
 
 
 ## Accessibility and Localization
-All components should be localizable and designed/implemented with
-accessibility in mind. You can look at the
-[Genesys Accessibility Best Practices](https://intranet.genesys.com/pages/viewpage.action?spaceKey=RDA&title=Accessibility)
-for more information.
+All components should be localizable and compliant with the
+Web Content Accessibility Guidelines (WCAG) 2.0.
+More information on these can be found on this page:
+[Common UI Application Accessibility Guidelines](https://intranet.genesys.com/pages/viewpage.action?spaceKey=CMC&title=Common+UI+Application+Accessibility++Guidelines)
 
 
 ## Submission Guidelines
