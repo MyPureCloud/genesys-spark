@@ -40,15 +40,3 @@ $genesys-neutral-2:         #75A8FF;
 $genesys-panel:             #393E45;
 $genesys-off-white-2:       #F8F8F8;
 $genesys-dark-background:   #3C474D;
-
-html {
-    font-family: Roboto, Tahoma, Verdana;
-    font-size: 12px;
-    background: $genesys-off-white;
-    color: $genesys-grey-2;
-    height: 100%;
-    &.genesys-dark-theme {
-        background: $genesys-dark-background;
-        color: $genesys-off-white;
-    }
-}
