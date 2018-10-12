@@ -12,64 +12,14 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface GenesysTest {
-    /**
-    * Indicate the firt
-    */
-    'first': string;
-    /**
-    * Indicate the last
-    */
-    'last': string;
-    /**
-    * Indicate the firt
-    */
-    'middle': string;
-  }
-  interface GenesysTestAttributes extends StencilHTMLAttributes {
-    /**
-    * Indicate the firt
-    */
-    'first'?: string;
-    /**
-    * Indicate the last
-    */
-    'last'?: string;
-    /**
-    * Indicate the firt
-    */
-    'middle'?: string;
-    /**
-    * Triggered 2s after the component is loaded.
-    */
-    'onCustom'?: (event: CustomEvent) => void;
-  }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'GenesysTest': Components.GenesysTest;
   }
-
+  
   interface StencilIntrinsicElements {
-    'genesys-test': Components.GenesysTestAttributes;
   }
-
-
-  interface HTMLGenesysTestElement extends Components.GenesysTest, HTMLStencilElement {}
-  var HTMLGenesysTestElement: {
-    prototype: HTMLGenesysTestElement;
-    new (): HTMLGenesysTestElement;
-  };
-
-  interface HTMLElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement
-  }
-
-  interface ElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement;
-  }
-
 
   export namespace JSX {
     export interface Element {}
