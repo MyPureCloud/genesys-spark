@@ -62,7 +62,7 @@ declare global {
   interface StencilElementInterfaces {
     'GenesysButton': Components.GenesysButton;
   }
-
+  
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
   }
@@ -81,7 +81,6 @@ declare global {
   interface ElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement;
   }
-
 
   export namespace JSX {
     export interface Element {}
