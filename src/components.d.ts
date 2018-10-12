@@ -103,7 +103,7 @@ declare global {
     'GenesysButton': Components.GenesysButton;
     'GenesysToggle': Components.GenesysToggle;
   }
-
+  
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
   }
@@ -138,7 +138,6 @@ declare global {
   interface ElementTagNameMap {
     'genesys-toggle': HTMLGenesysToggleElement;
   }
-
 
   export namespace JSX {
     export interface Element {}
