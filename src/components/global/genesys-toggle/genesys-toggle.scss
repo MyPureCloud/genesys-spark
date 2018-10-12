@@ -1,0 +1,135 @@
+// Variables part
+$box-shadow-checked:  $genesys-blue;
+$box-shadow:          $genesys-border-strong;
+$background:          $genesys-icons;
+$background-before:   $genesys-off-white;
+$background-checked:  $genesys-dark-blue;
+$box-shadow-focus:    $genesys-dark-blue;
+
+$background-dark-theme:         #555D66;
+$background-hover-dark-theme:   #76818f;
+$background-checked-dark-theme: #3476f5;
+$box-shadow-focus-dark-theme:   #3476f5;
+
+// Component main style
+genesys-toggle {
+  /* The switch - the box around the slider */
+  &[disabled] > * {
+    opacity: 0.5;
+  }
+  &:not([disabled]) * {
+    cursor: pointer;
+  }
+  &:hover:not([disabled]) {
+    .genesys-checked {
+      .genesys-slider {
+        box-shadow: 0px 0px 3px 0 $box-shadow-checked;
+      }
+    }
+    div:not(.genesys-checked) {
+      .genesys-slider {
+        box-shadow: 0px 0px 3px 0 $box-shadow;
+      }
+    }
+  }
+
+  .genesys-switch {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+  }
+
+  /* Hide default HTML checkbox */
+  .genesys-switch input {
+    display: none;
+  }
+
+  /* The slider */
+  .genesys-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $background;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .genesys-slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 2px;
+    bottom: 1px;
+    background-color: $background-before;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .genesys-slider {
+    background-color: $background-checked;
+  }
+
+  input:focus + .genesys-slider {
+    box-shadow: 0 0 1px $box-shadow-focus;
+  }
+
+  input:checked + .genesys-slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+  }
+
+  /* Rounded sliders */
+  .genesys-slider.genesys-round {
+    border-radius: 34px;
+  }
+
+  .genesys-slider.genesys-round:before {
+    border-radius: 50%;
+  }
+
+  > div {
+    &.genesys-checked > span {
+      font-weight: bold;
+    }
+    > span {
+      vertical-align: top;
+      margin-left: 6px;
+      cursor: pointer;
+    }
+  }
+}
+
+// Theming
+%genesys-toggle-dark-theme {
+  .genesys-slider {
+    background-color: $background-dark-theme;
+  }
+  &:hover:not([disabled]) {
+    .genesys-slider {
+      box-shadow: none !important;
+      background-color: $background-hover-dark-theme;
+    }
+    input:checked + .genesys-slider {
+      background-color: $background-checked-dark-theme;
+    }
+
+    input:focus + .genesys-slider {
+      box-shadow: 0 0 1px $box-shadow-focus-dark-theme;
+    }
+  }
+}
+
+.genesys-dark-theme {
+  genesys-toggle {
+    @extend %genesys-toggle-dark-theme;
+  }
+}
+
+genesys-toggle.genesys-dark-theme {
+  @extend %genesys-toggle-dark-theme;
+}
