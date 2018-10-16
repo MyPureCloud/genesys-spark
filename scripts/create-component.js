@@ -18,6 +18,7 @@ createComponentRepository = (componentName, dir) => {
     if (!fs.existsSync(target)) {
         fs.mkdirSync(target)
         fs.mkdirSync(target + '/stories')
+        fs.mkdirSync(target + '/tests')
     } else {
         console.log('\x1b[41m%s\x1b[0m', 'Repository already exist')
     }
@@ -40,8 +41,8 @@ createComponentStencilFiles = (componentName, componentType, dir) => {
 
     fs.writeFileSync(path.resolve(dir, componentName + '/' + componentName + '.tsx'), Handlebars.compile(tsxTpl)(data))
     fs.writeFileSync(path.resolve(dir, componentName + '/' + componentName + '.scss'), Handlebars.compile(scssTpl)(data))
-    fs.writeFileSync(path.resolve(dir, componentName + '/' + componentName + '.spec.ts'), Handlebars.compile(specTpl)(data))
-    fs.writeFileSync(path.resolve(dir, componentName + '/' + componentName + '.e2e.ts'), Handlebars.compile(e2eTpl)(data))
+    fs.writeFileSync(path.resolve(dir, componentName + '/tests/' + componentName + '.spec.ts'), Handlebars.compile(specTpl)(data))
+    fs.writeFileSync(path.resolve(dir, componentName + '/tests/' + componentName + '.e2e.ts'), Handlebars.compile(e2eTpl)(data))
     fs.writeFileSync(path.resolve(dir, componentName + '/README.md'), Handlebars.compile(mdTpl)(data))
     fs.writeFileSync(path.resolve(dir, componentName + '/stories/story.tsx'), Handlebars.compile(storyTpl)(data))
 }
