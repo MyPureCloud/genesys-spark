@@ -12,62 +12,38 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface GenesysTest {
-    /**
-    * Indicate the firt
-    */
-    'first': string;
-    /**
-    * Indicate the last
-    */
-    'last': string;
-    /**
-    * Indicate the firt
-    */
-    'middle': string;
+  interface GenesysPagination {
+    'currentPage': number;
+    'totalPages': number;
   }
-  interface GenesysTestAttributes extends StencilHTMLAttributes {
-    /**
-    * Indicate the firt
-    */
-    'first'?: string;
-    /**
-    * Indicate the last
-    */
-    'last'?: string;
-    /**
-    * Indicate the firt
-    */
-    'middle'?: string;
-    /**
-    * Triggered 2s after the component is loaded.
-    */
-    'onCustom'?: (event: CustomEvent) => void;
+  interface GenesysPaginationAttributes extends StencilHTMLAttributes {
+    'currentPage'?: number;
+    'totalPages'?: number;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'GenesysTest': Components.GenesysTest;
+    'GenesysPagination': Components.GenesysPagination;
   }
 
   interface StencilIntrinsicElements {
-    'genesys-test': Components.GenesysTestAttributes;
+    'genesys-pagination': Components.GenesysPaginationAttributes;
   }
 
 
-  interface HTMLGenesysTestElement extends Components.GenesysTest, HTMLStencilElement {}
-  var HTMLGenesysTestElement: {
-    prototype: HTMLGenesysTestElement;
-    new (): HTMLGenesysTestElement;
+  interface HTMLGenesysPaginationElement extends Components.GenesysPagination, HTMLStencilElement {}
+  var HTMLGenesysPaginationElement: {
+    prototype: HTMLGenesysPaginationElement;
+    new (): HTMLGenesysPaginationElement;
   };
 
   interface HTMLElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement
+    'genesys-pagination': HTMLGenesysPaginationElement
   }
 
   interface ElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement;
+    'genesys-pagination': HTMLGenesysPaginationElement;
   }
 
 
