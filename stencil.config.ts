@@ -1,4 +1,4 @@
-import { sass } from '@stencil/sass';
+import { less } from '@stencil/less';
 
 exports.config = {
   namespace: 'genesys-webcomponents',
@@ -7,6 +7,10 @@ exports.config = {
     {
       src: 'style/fonts',
       dest: 'fonts'
+    },
+    {
+      src: 'style/icons',
+      dest: 'icons'
     }
   ],
   outputTargets: [
@@ -19,9 +23,12 @@ exports.config = {
     }
   ],
   plugins: [
-    sass({
+    less({
       injectGlobalPaths: [
-        'src/style/variables.scss'
+        'src/style/variables.less',
+        'src/style/mixins.less',
+        'src/style/fonts/fonts.less',
+        'src/style/icons/icons.less'
       ]
     })
   ]
