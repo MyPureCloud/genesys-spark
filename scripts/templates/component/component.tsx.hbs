@@ -4,21 +4,22 @@ import { Event, EventEmitter, Component, Prop } from '@stencil/core';
   tag: '{{componentName}}',
   styleUrl: '{{componentName}}.scss'
 })
-
 export class {{componentClassName}} {
-
   /**
-  * Indicate the firt
-  **/
-  @Prop() first: string;
+   * Indicate the firt
+   **/
+  @Prop()
+  first: string;
   /**
-  * Indicate the firt
-  **/
-  @Prop() middle: string;
+   * Indicate the firt
+   **/
+  @Prop()
+  middle: string;
   /**
-  * Indicate the last
-  **/
-  @Prop() last: string;
+   * Indicate the last
+   **/
+  @Prop()
+  last: string;
 
   /**
    * Triggered 2s after the component is loaded.
