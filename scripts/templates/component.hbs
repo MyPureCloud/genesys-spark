@@ -1,0 +1,37 @@
+{{mdSource}}
+
+## API
+
+{{#if props}}
+
+### Attributes
+
+Name | Description | Default
+--- | --- | ---
+{{#each props}}
+{{this.name}} `{{this.type}}` | {{this.description}} | `{{this.defaultValue}}`
+{{/each}}
+
+{{/if}}
+{{#if methods}}
+
+### Methods
+
+Name | Description | Params
+--- | --- | ---
+{{#each methods}}
+{{this.name}} | {{this.description}} | <ul>{{#each this.params}}<li>{{this.name}}</li>{{/each}}</ul>
+{{/each}}
+
+{{/if}}
+{{#if events}}
+
+### Events
+
+Name | Description | Detail
+--- | --- | ---
+{{#each events}}
+{{this.name}} | {{this.description}} | {{this.detail}}
+{{/each}}
+
+{{/if}}
