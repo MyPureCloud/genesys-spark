@@ -25,7 +25,7 @@
   "dependencies": {},
   "devDependencies": {
     "@stencil/core": "~0.13.2",
-    "@stencil/sass": "^0.1.1",
+    "@stencil/less": "^0.1.0",
     "@stencil/utils": "0.0.5",
     "@storybook/addon-actions": "4.0.0-alpha.21",
     "@storybook/addon-backgrounds": "4.0.0-alpha.21",

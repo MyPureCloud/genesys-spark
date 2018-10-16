@@ -12,7 +12,7 @@ const RICH__PATH = path.resolve(srcPath, 'rich')
 const FEATURE_PATH = path.resolve(srcPath, 'feature')
 
 
-// Creation functions 
+// Creation functions
 createComponentRepository = (componentName, dir) => {
     const target = path.resolve(dir, componentName)
     if (!fs.existsSync(target)) {
@@ -26,7 +26,7 @@ createComponentRepository = (componentName, dir) => {
 
 createComponentStencilFiles = (componentName, componentType, dir) => {
     const tsxTpl = fs.readFileSync(path.resolve(tplPath, 'component.tsx.hbs'), 'utf8')
-    const scssTpl = fs.readFileSync(path.resolve(tplPath, 'component.scss.hbs'), 'utf8')
+    const lessTpl = fs.readFileSync(path.resolve(tplPath, 'component.less.hbs'), 'utf8')
     const mdTpl = fs.readFileSync(path.resolve(tplPath, 'README.md.hbs'), 'utf8')
     const storyTpl = fs.readFileSync(path.resolve(tplPath, 'story.tsx.hbs'), 'utf8')
     const specTpl = fs.readFileSync(path.resolve(tplPath, 'component.spec.ts.hbs'), 'utf8')
@@ -40,7 +40,7 @@ createComponentStencilFiles = (componentName, componentType, dir) => {
     }
 
     fs.writeFileSync(path.resolve(dir, componentName + '/' + componentName + '.tsx'), Handlebars.compile(tsxTpl)(data))
-    fs.writeFileSync(path.resolve(dir, componentName + '/' + componentName + '.scss'), Handlebars.compile(scssTpl)(data))
+    fs.writeFileSync(path.resolve(dir, componentName + '/' + componentName + '.less'), Handlebars.compile(lessTpl)(data))
     fs.writeFileSync(path.resolve(dir, componentName + '/tests/' + componentName + '.spec.ts'), Handlebars.compile(specTpl)(data))
     fs.writeFileSync(path.resolve(dir, componentName + '/tests/' + componentName + '.e2e.ts'), Handlebars.compile(e2eTpl)(data))
     fs.writeFileSync(path.resolve(dir, componentName + '/README.md'), Handlebars.compile(mdTpl)(data))
@@ -98,7 +98,7 @@ inquirer
     const componentType = answers.componentType + 's'
     let dir = srcPath
     switch (componentType) {
-        case 'Components': 
+        case 'Components':
             dir = GLOBAL_PATH
         break
         case 'Rich Components':

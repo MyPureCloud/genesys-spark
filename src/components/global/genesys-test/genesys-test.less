@@ -1,0 +1,22 @@
+// Variables part
+
+genesys-test {
+    .stuff {
+        color:@genesys-warm-red;
+        font-family: @genesys-italic-font;
+    }
+}
+
+// Theming
+.genesys-test-dark-theme {
+    color: @genesys-off-white;
+};
+
+.genesys-dark-theme {
+    genesys-test {
+        &:extend(.genesys-test-dark-theme);
+    }
+}
+.genesys-test.genesys-dark-theme {
+    &:extend(.genesys-test-dark-theme);
+}

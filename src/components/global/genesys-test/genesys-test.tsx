@@ -1,11 +1,11 @@
 import { Event, EventEmitter, Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: '{{componentName}}',
-  styleUrl: '{{componentName}}.less'
+  tag: 'genesys-test',
+  styleUrl: 'genesys-test.less'
 })
 
-export class {{componentClassName}} {
+export class GenesysTest {
 
   /**
   * Indicate the firt
@@ -44,6 +44,6 @@ export class {{componentClassName}} {
   }
 
   render() {
-    return <div>Hello, World! I'm {this.format()}</div>;
+    return (<div class="stuff large-title">Hello, World! I'm {this.format()}</div>);
   }
 }
