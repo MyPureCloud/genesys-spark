@@ -20,7 +20,11 @@
     "storybook": "./node_modules/.bin/build-storybook -c .storybook -o .out",
     "storybook.dev": "./node_modules/.bin/start-storybook -p 9001 -c .storybook -s ./www,./src/style",
     "create-component": "node scripts/create-component.js && npm run docs",
-    "dev": "./node_modules/.bin/concurrently  \"npm run storybook.dev\" \"npm run stencil.dev\""
+    "dev": "./node_modules/.bin/concurrently  \"npm run storybook.dev\" \"npm run stencil.dev\"",
+    "format": "prettier ./src/**/*.ts ./src/**/*.tsx",
+    "format:fix": "format --write",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "lint --fix"
   },
   "dependencies": {},
   "devDependencies": {
@@ -52,8 +56,11 @@
     "moment": "^2.22.2",
     "pixelmatch": "4.0.2",
     "polymer-webpack-loader": "^2.0.3",
+    "prettier": "^1.14.3",
     "puppeteer": "1.7.0",
     "storybook-readme": "^4.0.0-beta1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
     "typedoc": "^0.13.0",
     "webpack": "^4.17.1",
     "webpack-dev-server": "^3.1.6"
