@@ -1,4 +1,4 @@
-import { GenesysToggle } from './genesys-toggle';
+import { GenesysToggle } from '../genesys-toggle';
 
 describe('genesys-toggle', () => {
   it('builds', () => {
