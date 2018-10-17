@@ -14,6 +14,18 @@ export class GenesysPagination {
   @Event()
   pageChanged: EventEmitter<number>;
 
+  firstPage(): void {
+    if (this.currentPage === 1) return;
+    this.currentPage = 1;
+    this.pageChanged.emit(this.currentPage);
+  }
+
+  lastPage(): void {
+    if (this.currentPage === this.totalPages) return;
+    this.currentPage = this.totalPages;
+    this.pageChanged.emit(this.currentPage);
+  }
+
   nextPage(): void {
     if (this.currentPage >= this.totalPages) return;
     this.currentPage++;

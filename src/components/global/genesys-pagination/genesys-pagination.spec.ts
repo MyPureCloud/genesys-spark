@@ -46,10 +46,14 @@ describe('genesys-pagination', () => {
       it('should not increment past the last page', () => {
         expect(component.currentPage).toEqual(5);
       });
+
+      it('should not emit a page changed event', () => {
+        expect(pageChangedSpy).not.toHaveBeenCalled();
+      });
     });
   });
 
-  describe('nextPage', () => {
+  describe('previousPage', () => {
     beforeEach(() => {
       component = new GenesysPagination();
 
@@ -86,6 +90,92 @@ describe('genesys-pagination', () => {
 
       it('should not decrement past the first page', () => {
         expect(component.currentPage).toEqual(1);
+      });
+
+      it('should not emit a page changed event', () => {
+        expect(pageChangedSpy).not.toHaveBeenCalled();
+      });
+    });
+  });
+
+  describe('firstPage', () => {
+    beforeEach(() => {
+      component = new GenesysPagination();
+
+      pageChangedSpy = jest.fn();
+      component.pageChanged = {
+        emit: pageChangedSpy
+      };
+    });
+
+    describe('successful changes', () => {
+      beforeEach(() => {
+        component.currentPage = 3;
+        component.totalPages = 5;
+
+        component.firstPage();
+      });
+
+      it('should change to the first page', () => {
+        expect(component.currentPage).toEqual(1);
+      });
+
+      it('should emit a page changed event', () => {
+        expect(pageChangedSpy).toHaveBeenCalledWith(1);
+      });
+    });
+
+    describe('unsuccessful changes', () => {
+      beforeEach(() => {
+        component.currentPage = 1;
+        component.totalPages = 5;
+
+        component.firstPage();
+      });
+
+      it('should not emit a page changed event', () => {
+        expect(pageChangedSpy).not.toHaveBeenCalled();
+      });
+    });
+  });
+
+  describe('lastPage', () => {
+    beforeEach(() => {
+      component = new GenesysPagination();
+
+      pageChangedSpy = jest.fn();
+      component.pageChanged = {
+        emit: pageChangedSpy
+      };
+    });
+
+    describe('successful changes', () => {
+      beforeEach(() => {
+        component.currentPage = 3;
+        component.totalPages = 5;
+
+        component.lastPage();
+      });
+
+      it('should change to the first page', () => {
+        expect(component.currentPage).toEqual(5);
+      });
+
+      it('should emit a page changed event', () => {
+        expect(pageChangedSpy).toHaveBeenCalledWith(5);
+      });
+    });
+
+    describe('unsuccessful changes', () => {
+      beforeEach(() => {
+        component.currentPage = 5;
+        component.totalPages = 5;
+
+        component.lastPage();
+      });
+
+      it('should not emit a page changed event', () => {
+        expect(pageChangedSpy).not.toHaveBeenCalled();
       });
     });
   });
