@@ -48,6 +48,38 @@ export class GenesysPagination {
   }
 
   render() {
-    return <div>Hello, World!</div>;
+    return (
+      <div class="gux-pagination">
+        <div class="pagination-items-count">
+          {/* TODO: Implement the item count */}
+          <span>1 - 25 of 9000</span>
+        </div>
+
+        <div class="pagination-items-per-page">
+          {/* TODO: Implement items per page dropdown */}
+          <span>
+            <select>
+              <option>25</option>
+              <option>50</option>
+              <option>75</option>
+              <option>100</option>
+            </select>
+          </span>
+        </div>
+
+        <div class="pagination-buttons">
+          <button class="first-page-button">{'<<'}</button>
+          <button class="next-page-button">{'<'}</button>
+
+          <span>
+            Page <input type="text" value={this.currentPage} /> of{' '}
+            {this.totalPages}
+          </span>
+
+          <button class="previous-page-button">{'>'}</button>
+          <button class="last-page-button">{'>>'}</button>
+        </div>
+      </div>
+    );
   }
 }
