@@ -1,4 +1,4 @@
-import { Event, EventEmitter, Component, Prop } from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'genesys-pagination',
