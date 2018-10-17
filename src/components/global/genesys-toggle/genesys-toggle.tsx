@@ -1,4 +1,6 @@
-import { Event, EventEmitter, Component, Prop, Listen, Element } from '@stencil/core';
+import { Event, EventEmitter, Component, Prop, Element } from '@stencil/core';
+const ENTER = 13;
+const SPACE = 32;
 
 @Component({
   tag: 'genesys-toggle',
@@ -30,7 +32,6 @@ export class GenesysToggle {
   **/
   @Prop({mutable: true, reflectToAttr: true}) uncheckedLabel: string
 
-
   /**
    * Triggered when the state of the component changed.
    * @return the checked boolean value
@@ -43,20 +44,6 @@ export class GenesysToggle {
     this.check.emit(this.checked)
   }
 
-  @Listen('keydown.enter')
-  handleEnter() {
-    if (!this.disabled) {
-      this.checkboxElement.click()
-    }
-  }
-
-  @Listen('keydown.space')
-  handleSpace() {
-    if (!this.disabled) {
-      this.checkboxElement.click()
-    }
-  }
-
   componentDidLoad () {
     this.checkboxElement = this.root.querySelector('input')
   }
@@ -67,16 +54,41 @@ export class GenesysToggle {
     }
   }
 
+  onKeyDown (event: KeyboardEvent) {
+    if (event.keyCode === SPACE || event.keyCode === ENTER) {
+      this.toggle();
+    }
+  }
+
+  getAriaLabel () {
+    let label = this.checked ? this.checkedLabel : this.uncheckedLabel;
+    if (!label) {
+      label = this.root.getAttribute('aria-label') || this.root.title
+    }
+    return label
+  }
+
   render() {
     return (
-      <div class={this.checked ? 'genesys-checked' : ''}>
-        <label class="genesys-switch" tabindex='0'>
-          <input type="checkbox" checked={this.checked} onInput={(e) => this.emitInput(e)} disabled={this.disabled} />
+      <div class={this.checked ? 'genesys-checked' : ''} 
+            tabindex={this.disabled ? '' : '0'}
+            role='checkbox'
+            aria-checked={this.checked + ''}
+            aria-label={this.getAriaLabel()} 
+            onClick={()=> this.toggle()} 
+            onKeyDown={(e) => this.onKeyDown(e)}>
+
+        <div class="genesys-switch" 
+              role='presentation'>
+          <input type="checkbox" 
+                  checked={this.checked} 
+                  onInput={(e) => this.emitInput(e)} 
+                  disabled={this.disabled} />
           <span class="genesys-slider genesys-round"></span>
-        </label>
+        </div>
         { 
           this.uncheckedLabel && this.checkedLabel ?
-          <span onClick={() => this.toggle()}>{this.checked ? this.checkedLabel : this.uncheckedLabel}</span>
+          <span>{this.checked ? this.checkedLabel : this.uncheckedLabel}</span>
           : ''
         }
       </div>

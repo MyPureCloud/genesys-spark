@@ -4,31 +4,70 @@ $box-shadow:          $genesys-border-strong;
 $background:          $genesys-icons;
 $background-before:   $genesys-off-white;
 $background-checked:  $genesys-dark-blue;
-$box-shadow-focus:    $genesys-dark-blue;
+$box-shadow-focus:    $genesys-blue;
 
-$background-dark-theme:         #555D66;
-$background-hover-dark-theme:   #76818f;
-$background-checked-dark-theme: #3476f5;
-$box-shadow-focus-dark-theme:   #3476f5;
+$background-dark-theme:               #555D66;
+$background-checked-dark-theme:       $genesys-dark-blue;
+$background-hover-dark-theme:         #76818f;
+$background-checked-hover-dark-theme: #3476f5;
+$box-shadow-focus-dark-theme:         $genesys-blue;
 
 // Component main style
 genesys-toggle {
   /* The switch - the box around the slider */
+  display: inline-block;
+  height: 16px;
+
   &[disabled] > * {
     opacity: 0.5;
   }
+
+  > div {
+    height: 16px;
+    &.genesys-checked > span {
+      font-weight: bold;
+    }
+    > span {
+      vertical-align: top;
+      margin-left: 6px;
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+      .genesys-slider:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: -2px;
+          bottom: -2px;
+          left: -2px;
+          right: -2px;
+          border-radius: 34px;
+          border: 2px solid #ccc ;
+      }
+    }
+  }
+
   &:not([disabled]) * {
     cursor: pointer;
   }
-  &:hover:not([disabled]) {
-    .genesys-checked {
-      .genesys-slider {
-        box-shadow: 0px 0px 3px 0 $box-shadow-checked;
+
+  &:not([disabled]) > div {
+    &:hover {
+      &.genesys-checked {
+        .genesys-slider {
+          box-shadow: 0px 0px 3px 0 $box-shadow-checked;
+        }
+      }
+      &:not(.genesys-checked) {
+        .genesys-slider {
+          box-shadow: 0px 0px 3px 0 $box-shadow;
+        }
       }
     }
-    div:not(.genesys-checked) {
-      .genesys-slider {
-        box-shadow: 0px 0px 3px 0 $box-shadow;
+    &:focus {
+      .genesys-slider:after {
+        border-color: $box-shadow-focus;
       }
     }
   }
@@ -73,10 +112,6 @@ genesys-toggle {
     background-color: $background-checked;
   }
 
-  input:focus + .genesys-slider {
-    box-shadow: 0 0 1px $box-shadow-focus;
-  }
-
   input:checked + .genesys-slider:before {
     -webkit-transform: translateX(14px);
     -ms-transform: translateX(14px);
@@ -91,35 +126,40 @@ genesys-toggle {
   .genesys-slider.genesys-round:before {
     border-radius: 50%;
   }
-
-  > div {
-    &.genesys-checked > span {
-      font-weight: bold;
-    }
-    > span {
-      vertical-align: top;
-      margin-left: 6px;
-      cursor: pointer;
-    }
-  }
 }
 
 // Theming
 %genesys-toggle-dark-theme {
-  .genesys-slider {
-    background-color: $background-dark-theme;
-  }
-  &:hover:not([disabled]) {
+  > div {
     .genesys-slider {
-      box-shadow: none !important;
-      background-color: $background-hover-dark-theme;
+      background-color: $background-dark-theme;
     }
-    input:checked + .genesys-slider {
-      background-color: $background-checked-dark-theme;
+    &.genesys-checked {
+      .genesys-slider {
+        background-color: $background-checked-dark-theme;
+      }
     }
+  }
 
-    input:focus + .genesys-slider {
-      box-shadow: 0 0 1px $box-shadow-focus-dark-theme;
+  &:not([disabled]) > div {
+    &:hover {
+      &.genesys-checked {
+        .genesys-slider {
+          background: $background-checked-hover-dark-theme;
+          box-shadow: none;
+        }
+      }
+      &:not(.genesys-checked) {
+        .genesys-slider {
+          background-color: $background-hover-dark-theme;
+          box-shadow: none;
+        }
+      }
+    }
+    &:focus {
+      .genesys-slider:after {
+        border-color: $box-shadow-focus-dark-theme;
+      }
     }
   }
 }

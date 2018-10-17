@@ -10,7 +10,7 @@ storiesOf('Genesys Components', module)
 .add(
     'Genesys Toggle',
     withReadme(README, () => {
-      const el = document.createElement('genesys-toggle'); 
+      const el = document.createElement('genesys-toggle');
       el.checked = boolean('checked', false);
       el.disabled = boolean('disabled', false);
       el.checkedLabel = text('checkedLabel', 'on');
