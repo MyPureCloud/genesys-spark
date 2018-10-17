@@ -179,4 +179,54 @@ describe('genesys-pagination', () => {
       });
     });
   });
+
+  describe('setPage', () => {
+    beforeEach(() => {
+      component = new GenesysPagination();
+
+      pageChangedSpy = jest.fn();
+      component.pageChanged = {
+        emit: pageChangedSpy
+      };
+    });
+
+    describe('successful changes', () => {
+      beforeEach(() => {
+        component.currentPage = 3;
+        component.totalPages = 5;
+
+        component.setPage(2);
+      });
+
+      it('should set the current page property', () => {
+        expect(component.currentPage).toBe(2);
+      });
+    });
+
+    describe('when attempting to set the page before the first page', () => {
+      beforeEach(() => {
+        component.currentPage = 3;
+        component.totalPages = 5;
+
+        component.setPage(-1);
+      });
+
+      it('should set the property to the first page', () => {
+        expect(component.currentPage).toBe(1);
+      });
+    });
+
+    describe('when attempting to set the page past the last page', () => {
+      beforeEach(() => {
+        component.currentPage = 3;
+        component.totalPages = 5;
+
+        component.setPage(6);
+      });
+
+      it('should set the property to the last page', () => {
+        expect(component.currentPage).toBe(5);
+      });
+    });
+  });
 });
