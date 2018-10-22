@@ -12,62 +12,94 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface GenesysTest {
+  interface GenesysRating {
     /**
-    * Indicate the firt
+    * Determines if half ratings are allowed
     */
-    'first': string;
+    'allowHalfRatings': boolean;
     /**
-    * Indicate the last
+    * Determines if the user can set a rating
     */
-    'last': string;
+    'disabled': boolean;
     /**
-    * Indicate the firt
+    * The labels for each stars
     */
-    'middle': string;
+    'labels': string[];
+    /**
+    * The maximum rating possible
+    */
+    'maxRating': number;
+    /**
+    * The rating
+    */
+    'rating': number;
+    /**
+    * The polygon points to create the svg. By default this is a star!
+    */
+    'svgPoints': string;
+    /**
+    * The view box for the SVG
+    */
+    'svgViewBox': string;
   }
-  interface GenesysTestAttributes extends StencilHTMLAttributes {
+  interface GenesysRatingAttributes extends StencilHTMLAttributes {
     /**
-    * Indicate the firt
+    * Determines if half ratings are allowed
     */
-    'first'?: string;
+    'allowHalfRatings'?: boolean;
     /**
-    * Indicate the last
+    * Determines if the user can set a rating
     */
-    'last'?: string;
+    'disabled'?: boolean;
     /**
-    * Indicate the firt
+    * The labels for each stars
     */
-    'middle'?: string;
+    'labels'?: string[];
     /**
-    * Triggered 2s after the component is loaded.
+    * The maximum rating possible
     */
-    'onCustom'?: (event: CustomEvent) => void;
+    'maxRating'?: number;
+    /**
+    * Triggered when the value changed
+    */
+    'onUpdate'?: (event: CustomEvent) => void;
+    /**
+    * The rating
+    */
+    'rating'?: number;
+    /**
+    * The polygon points to create the svg. By default this is a star!
+    */
+    'svgPoints'?: string;
+    /**
+    * The view box for the SVG
+    */
+    'svgViewBox'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'GenesysTest': Components.GenesysTest;
+    'GenesysRating': Components.GenesysRating;
   }
 
   interface StencilIntrinsicElements {
-    'genesys-test': Components.GenesysTestAttributes;
+    'genesys-rating': Components.GenesysRatingAttributes;
   }
 
 
-  interface HTMLGenesysTestElement extends Components.GenesysTest, HTMLStencilElement {}
-  var HTMLGenesysTestElement: {
-    prototype: HTMLGenesysTestElement;
-    new (): HTMLGenesysTestElement;
+  interface HTMLGenesysRatingElement extends Components.GenesysRating, HTMLStencilElement {}
+  var HTMLGenesysRatingElement: {
+    prototype: HTMLGenesysRatingElement;
+    new (): HTMLGenesysRatingElement;
   };
 
   interface HTMLElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement
+    'genesys-rating': HTMLGenesysRatingElement
   }
 
   interface ElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement;
+    'genesys-rating': HTMLGenesysRatingElement;
   }
 
 
