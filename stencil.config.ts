@@ -1,11 +1,15 @@
 import { Config } from '@stencil/core';
-import { sass } from '@stencil/sass';
+import { less } from '@stencil/less';
 
 export const config: Config = {
   copy: [
     {
-      dest: 'fonts',
-      src: 'style/fonts'
+      src: 'style/fonts',
+      dest: 'fonts'
+    },
+    {
+      src: 'style/icons',
+      dest: 'icons'
     }
   ],
   excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**'],
@@ -19,9 +23,12 @@ export const config: Config = {
     }
   ],
   plugins: [
-    sass({
+    less({
       injectGlobalPaths: [
-        'src/style/variables.scss'
+        'src/style/variables.less',
+        'src/style/mixins.less',
+        'src/style/fonts/fonts.less',
+        'src/style/icons/icons.less'
       ]
     })
   ],
