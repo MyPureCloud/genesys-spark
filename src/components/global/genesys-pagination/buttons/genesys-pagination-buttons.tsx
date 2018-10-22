@@ -6,7 +6,7 @@ import { Pager } from '../pager';
   styleUrl: 'genesys-pagination-buttons.scss'
 })
 export class GenesysPaginationButtons implements Pager {
-  @Prop()
+  @Prop({ mutable: true })
   currentPage: number;
 
   @Prop()
@@ -51,16 +51,27 @@ export class GenesysPaginationButtons implements Pager {
   render() {
     return (
       <div class="pagination-buttons">
-        <button class="first-page-button">{'<<'}</button>
-        <button class="next-page-button">{'<'}</button>
+        <button class="first-page-button" onClick={() => this.firstPage()}>
+          {'<<'}
+        </button>
+        <button class="next-page-button" onClick={() => this.nextPage()}>
+          {'<'}
+        </button>
 
         <span>
           Page <input type="text" value={this.currentPage} />
           {` of ${this.totalPages}`}
         </span>
 
-        <button class="previous-page-button">{'>'}</button>
-        <button class="last-page-button">{'>>'}</button>
+        <button
+          class="previous-page-button"
+          onClick={() => this.previousPage()}
+        >
+          {'>'}
+        </button>
+        <button class="last-page-button" onClick={() => this.lastPage()}>
+          {'>>'}
+        </button>
       </div>
     );
   }

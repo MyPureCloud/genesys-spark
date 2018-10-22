@@ -5,7 +5,7 @@ import { Component, Prop } from '@stencil/core';
   styleUrl: 'genesys-pagination.scss'
 })
 export class GenesysPagination {
-  @Prop()
+  @Prop({ mutable: true })
   currentPage: number = 1;
 
   @Prop()
