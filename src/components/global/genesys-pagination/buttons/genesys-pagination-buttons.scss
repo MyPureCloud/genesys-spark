@@ -1,0 +1,16 @@
+.gux-pagination-buttons {
+}
+
+%genesys-pagination-dark-theme {
+  color: $genesys-off-white;
+}
+
+.genesys-dark-theme {
+  genesys-pagination {
+    @extend %genesys-pagination-dark-theme;
+  }
+}
+
+genesys-pagination.genesys-dark-theme {
+  @extend %genesys-pagination-dark-theme;
+}

@@ -10,7 +10,7 @@ storiesOf('Genesys Components', module)
     'Genesys Pagination',
     withReadme(README, () => {
       const component = document.createElement('genesys-pagination');
-      component.totalPages = number('totalPages', 10);
+      component.totalItems = number('totalItems', 270);
       component.currentPage = number('currentPage', 4);
 
       document.getElementsByTagName('html')[0].className =

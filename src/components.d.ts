@@ -12,26 +12,45 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface GenesysPagination {
+  interface GenesysPaginationButtons {
     'currentPage': number;
     'totalPages': number;
   }
-  interface GenesysPaginationAttributes extends StencilHTMLAttributes {
+  interface GenesysPaginationButtonsAttributes extends StencilHTMLAttributes {
     'currentPage'?: number;
     'onPageChanged'?: (event: CustomEvent<number>) => void;
     'totalPages'?: number;
+  }
+
+  interface GenesysPagination {
+    'currentPage': number;
+    'itemsPerPage': number;
+    'totalItems': number;
+  }
+  interface GenesysPaginationAttributes extends StencilHTMLAttributes {
+    'currentPage'?: number;
+    'itemsPerPage'?: number;
+    'totalItems'?: number;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
+    'GenesysPaginationButtons': Components.GenesysPaginationButtons;
     'GenesysPagination': Components.GenesysPagination;
   }
 
   interface StencilIntrinsicElements {
+    'genesys-pagination-buttons': Components.GenesysPaginationButtonsAttributes;
     'genesys-pagination': Components.GenesysPaginationAttributes;
   }
 
+
+  interface HTMLGenesysPaginationButtonsElement extends Components.GenesysPaginationButtons, HTMLStencilElement {}
+  var HTMLGenesysPaginationButtonsElement: {
+    prototype: HTMLGenesysPaginationButtonsElement;
+    new (): HTMLGenesysPaginationButtonsElement;
+  };
 
   interface HTMLGenesysPaginationElement extends Components.GenesysPagination, HTMLStencilElement {}
   var HTMLGenesysPaginationElement: {
@@ -40,10 +59,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'genesys-pagination-buttons': HTMLGenesysPaginationButtonsElement
     'genesys-pagination': HTMLGenesysPaginationElement
   }
 
   interface ElementTagNameMap {
+    'genesys-pagination-buttons': HTMLGenesysPaginationButtonsElement;
     'genesys-pagination': HTMLGenesysPaginationElement;
   }
 

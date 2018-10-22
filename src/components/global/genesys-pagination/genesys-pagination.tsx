@@ -1,4 +1,4 @@
-import { Component, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'genesys-pagination',
@@ -6,45 +6,18 @@ import { Component, Prop, Event, EventEmitter } from '@stencil/core';
 })
 export class GenesysPagination {
   @Prop()
-  currentPage: number;
+  currentPage: number = 1;
 
   @Prop()
-  totalPages: number;
+  totalItems: number;
 
-  @Event()
-  pageChanged: EventEmitter<number>;
+  @Prop()
+  itemsPerPage: number;
 
-  setPage(page: number): void {
-    if (page > this.totalPages) {
-      this.setPage(this.totalPages);
-      return;
-    }
+  itemsPerPageOptions: number[] = [25, 50, 100];
 
-    if (page < 1) {
-      this.setPage(1);
-      return;
-    }
-
-    if (this.currentPage === page) return;
-
-    this.currentPage = page;
-    this.pageChanged.emit(this.currentPage);
-  }
-
-  firstPage(): void {
-    this.setPage(1);
-  }
-
-  lastPage(): void {
-    this.setPage(this.totalPages);
-  }
-
-  nextPage(): void {
-    this.setPage(this.currentPage + 1);
-  }
-
-  previousPage(): any {
-    this.setPage(this.currentPage - 1);
+  get totalPages(): number {
+    return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
   render() {
@@ -60,25 +33,16 @@ export class GenesysPagination {
           <span>
             <select>
               <option>25</option>
-              <option>50</option>
-              <option>75</option>
-              <option>100</option>
             </select>
           </span>
         </div>
 
-        <div class="pagination-buttons">
-          <button class="first-page-button">{'<<'}</button>
-          <button class="next-page-button">{'<'}</button>
-
-          <span>
-            Page <input type="text" value={this.currentPage} /> of{' '}
-            {this.totalPages}
-          </span>
-
-          <button class="previous-page-button">{'>'}</button>
-          <button class="last-page-button">{'>>'}</button>
-        </div>
+        <genesys-pagination-buttons
+          class="pagination-buttons"
+          currentPage={this.currentPage}
+          totalPages={this.totalPages}
+          onPageChanged={ev => (this.currentPage = ev.detail)}
+        />
       </div>
     );
   }
