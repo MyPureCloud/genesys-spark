@@ -183,6 +183,7 @@ export class GenesysRating {
     return (
       <div class='genesys-rating' 
             role="radiogroup" 
+            onKeyDown={(e) => this.onKeyDown(e)}
             aria-label={this.ariaLabel}
             >
         {this.ratingItems.map( (ratingItem, i) =>
