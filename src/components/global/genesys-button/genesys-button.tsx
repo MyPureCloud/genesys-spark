@@ -1,4 +1,4 @@
-import { Element, Component, Prop, State } from '@stencil/core';
+import { Component, Element, Prop, State } from '@stencil/core';
 
 @Component({
   styleUrl: 'genesys-button.scss',
@@ -18,6 +18,7 @@ export class GenesysButton {
   @Prop() 
   type: string = 'secondary';
 
+  
   @State()
   title: string;
 
@@ -29,7 +30,7 @@ export class GenesysButton {
   }
 
   componentDidLoad () {
-    this.title = this.root.title
+    this.title = this.root.title;
   }
 
   render() {
@@ -37,7 +38,7 @@ export class GenesysButton {
       <button title={this.title} 
               disabled={this.disabled} 
               class={'genesys-' + this.getType()}>
-        <slot name='inner'>{this.title}</slot>
+        <slot></slot>
       </button>
     );
   }
