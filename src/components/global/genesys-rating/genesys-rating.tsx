@@ -162,6 +162,8 @@ export class GenesysRating {
         this.updateRating(0);
         break;
     }
+    // simulate click to be consistent with https://www.quirksmode.org/dom/events/click.html
+    this.root.click();
     // to prevent scroll
     event.stopPropagation();
     event.preventDefault();
@@ -181,7 +183,6 @@ export class GenesysRating {
     return (
       <div class='genesys-rating' 
             role="radiogroup" 
-            onKeyDown={(e) => this.onKeyDown(e)}
             aria-label={this.ariaLabel}
             >
         {this.ratingItems.map( (ratingItem, i) =>
@@ -192,6 +193,7 @@ export class GenesysRating {
               aria-label={ratingItem.label}
               tabindex={(this.rating - 1) === i || (this.rating - 1) === i - 0.5 || (this.rating === 0 && this.rating === i) ? '0' : '-1'}
               onClick={() => this.onClick(i)}
+              onKeyDown={(e) => this.onKeyDown(e)}
               >
             <svg
               role="presentation"
