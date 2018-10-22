@@ -1,11 +1,10 @@
-import { Component, Prop, Event, EventEmitter } from '@stencil/core';
-import { Pager } from '../pager';
+import { Component, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'genesys-pagination-buttons',
-  styleUrl: 'genesys-pagination-buttons.scss'
+  styleUrl: 'genesys-pagination-buttons.less',
+  tag: 'genesys-pagination-buttons'
 })
-export class GenesysPaginationButtons implements Pager {
+export class GenesysPaginationButtons {
   @Prop({ mutable: true })
   currentPage: number;
 
@@ -26,7 +25,9 @@ export class GenesysPaginationButtons implements Pager {
       return;
     }
 
-    if (this.currentPage === page) return;
+    if (this.currentPage === page) {
+      return;
+    }
 
     this.currentPage = page;
     this.pageChanged.emit(this.currentPage);

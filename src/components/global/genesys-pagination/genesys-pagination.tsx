@@ -1,8 +1,8 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'genesys-pagination',
-  styleUrl: 'genesys-pagination.scss'
+  styleUrl: 'genesys-pagination.less',
+  tag: 'genesys-pagination'
 })
 export class GenesysPagination {
   @Prop({ mutable: true })

@@ -1,6 +1,6 @@
+import { number, select, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { withReadme } from 'storybook-readme';
-import { withKnobs, number, select } from '@storybook/addon-knobs/polymer';
 
 import README from 'MD/genesys-pagination/README.md';
 

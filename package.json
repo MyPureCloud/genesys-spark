@@ -24,9 +24,9 @@
     "create-component": "node scripts/create-component.js && npm run docs",
     "dev": "./node_modules/.bin/concurrently  \"npm run storybook.dev\" \"npm run stencil.dev\"",
     "format": "prettier ./src/**/*.ts ./src/**/*.tsx",
-    "format.fix": "npm run format --write",
+    "format.fix": "prettier ./src/**/*.ts ./src/**/*.tsx --write",
     "lint": "tslint --project tsconfig.json",
-    "lint.fix": "npm run lint --fix"
+    "lint.fix": "tslint --fix --project tsconfig.json"
   },
   "dependencies": {},
   "devDependencies": {
