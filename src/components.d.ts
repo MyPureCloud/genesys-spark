@@ -12,62 +12,50 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface GenesysTest {
+  interface GenesysButton {
     /**
-    * Indicate the firt
+    * Indicate if the button is disabled or not
     */
-    'first': string;
+    'disabled': boolean;
     /**
-    * Indicate the last
+    * The component type (secondary or primary).
     */
-    'last': string;
-    /**
-    * Indicate the firt
-    */
-    'middle': string;
+    'type': string;
   }
-  interface GenesysTestAttributes extends StencilHTMLAttributes {
+  interface GenesysButtonAttributes extends StencilHTMLAttributes {
     /**
-    * Indicate the firt
+    * Indicate if the button is disabled or not
     */
-    'first'?: string;
+    'disabled'?: boolean;
     /**
-    * Indicate the last
+    * The component type (secondary or primary).
     */
-    'last'?: string;
-    /**
-    * Indicate the firt
-    */
-    'middle'?: string;
-    /**
-    * Triggered 2s after the component is loaded.
-    */
-    'onCustom'?: (event: CustomEvent) => void;
+    'type'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'GenesysTest': Components.GenesysTest;
+    'GenesysButton': Components.GenesysButton;
   }
 
   interface StencilIntrinsicElements {
-    'genesys-test': Components.GenesysTestAttributes;
+    'genesys-button': Components.GenesysButtonAttributes;
   }
 
 
-  interface HTMLGenesysTestElement extends Components.GenesysTest, HTMLStencilElement {}
-  var HTMLGenesysTestElement: {
-    prototype: HTMLGenesysTestElement;
-    new (): HTMLGenesysTestElement;
+  interface HTMLGenesysButtonElement extends Components.GenesysButton, HTMLStencilElement {}
+  var HTMLGenesysButtonElement: {
+    prototype: HTMLGenesysButtonElement;
+    new (): HTMLGenesysButtonElement;
   };
 
   interface HTMLElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement
+    'genesys-button': HTMLGenesysButtonElement
   }
 
   interface ElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement;
+    'genesys-button': HTMLGenesysButtonElement;
   }
 
 
