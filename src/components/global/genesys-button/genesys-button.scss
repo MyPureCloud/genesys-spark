@@ -74,7 +74,6 @@ genesys-button {
 // Theming
 %genesys-button-dark-theme {
     > button {
-        border: 1px solid #222529;
         &.genesys-primary {
             background-color: $primary-dark-background-color;
             border: 1px solid $primary-dark-border-color;
