@@ -1,8 +1,7 @@
+import { Config } from '@stencil/core';
 import { less } from '@stencil/less';
 
-exports.config = {
-  namespace: 'genesys-webcomponents',
-  excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**'],
+export const config: Config = {
   copy: [
     {
       src: 'style/fonts',
@@ -13,13 +12,14 @@ exports.config = {
       dest: 'icons'
     }
   ],
+  excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**'],
+  namespace: 'genesys-webcomponents',
   outputTargets: [
     {
       type: 'dist'
     },
     {
-      type: 'www',
-      serviceWorker: false
+      type: 'www'
     }
   ],
   plugins: [
@@ -31,7 +31,12 @@ exports.config = {
         'src/style/icons/icons.less'
       ]
     })
-  ]
+  ],
+  testing: {
+    "collectCoverage": true,
+    "coverageDirectory": ".coverage",
+    "coverageReporters": ["json", "lcov", "text", "clover"]
+  }
 }
 
 exports.devServer = {

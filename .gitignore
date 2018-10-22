@@ -16,6 +16,7 @@ log.txt
 .idea/
 .vscode/
 .versions/
+.coverage/
 node_modules/
 $RECYCLE.BIN/
 

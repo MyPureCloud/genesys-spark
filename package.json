@@ -14,6 +14,8 @@
     "stencil": "stencil build",
     "stencil.dev": "stencil build --dev --watch --serve --no-open",
     "test.unit": "stencil test --spec",
+    "test.e2e": "stencil test --e2e",
+    "test.screenshot": "stencil test --e2e --screenshot",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "docs": "./node_modules/.bin/typedoc --tsconfig tsconfig.json && node scripts/generate-doc.js",
@@ -22,9 +24,9 @@
     "create-component": "node scripts/create-component.js && npm run docs",
     "dev": "./node_modules/.bin/concurrently  \"npm run storybook.dev\" \"npm run stencil.dev\"",
     "format": "prettier ./src/**/*.ts ./src/**/*.tsx",
-    "format:fix": "format --write",
+    "format.fix": "npm run format --write",
     "lint": "tslint --project tsconfig.json",
-    "lint:fix": "lint --fix"
+    "lint.fix": "npm run lint --fix"
   },
   "dependencies": {},
   "devDependencies": {
@@ -64,20 +66,6 @@
     "typedoc": "^0.13.0",
     "webpack": "^4.17.1",
     "webpack-dev-server": "^3.1.6"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "transform": {
-      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "jsx"
-    ]
   },
   "repository": {
     "type": "git",
