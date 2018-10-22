@@ -1,21 +1,21 @@
+import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
-exports.config = {
-  namespace: 'genesys-webcomponents',
-  excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**'],
+export const config: Config = {
   copy: [
     {
-      src: 'style/fonts',
-      dest: 'fonts'
+      dest: 'fonts',
+      src: 'style/fonts'
     }
   ],
+  excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**'],
+  namespace: 'genesys-webcomponents',
   outputTargets: [
     {
       type: 'dist'
     },
     {
-      type: 'www',
-      serviceWorker: false
+      type: 'www'
     }
   ],
   plugins: [
@@ -24,7 +24,12 @@ exports.config = {
         'src/style/variables.scss'
       ]
     })
-  ]
+  ],
+  testing: {
+    "collectCoverage": true,
+    "coverageDirectory": ".coverage",
+    "coverageReporters": ["json", "lcov", "text", "clover"]
+  }
 }
 
 exports.devServer = {
