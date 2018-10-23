@@ -8,6 +8,9 @@
 import '@stencil/core';
 
 
+import {
+  IListItem,
+} from './components/global/genesys-list/genesys-list-interfaces';
 
 
 export namespace Components {
@@ -97,17 +100,64 @@ export namespace Components {
     */
     'uncheckedLabel'?: string;
   }
+  interface GenesysList {
+    /**
+    * The list. each item should contain a text and a type  an item could have the poperty isDisabled
+    */
+    'items': IListItem[];
+  }
+  interface GenesysListAttributes extends StencilHTMLAttributes {
+    /**
+    * The list. each item should contain a text and a type  an item could have the poperty isDisabled
+    */
+    'items'?: IListItem[];
+  }
+
+  interface GenesysActionButton {
+    'accent': string;
+    'isOpen': boolean;
+    /**
+    * The list. each item should contain a text and a type  an item could have the poperty isDisabled
+    */
+    'items': IListItem[];
+    'text': string;
+  }
+  interface GenesysActionButtonAttributes extends StencilHTMLAttributes {
+    'accent'?: string;
+    'isOpen'?: boolean;
+    /**
+    * The list. each item should contain a text and a type  an item could have the poperty isDisabled
+    */
+    'items'?: IListItem[];
+    /**
+    * Triggered when the action button is clicked
+    */
+    'onActionClick'?: (event: CustomEvent) => void;
+    /**
+    * Triggered when the menu is close
+    */
+    'onClose'?: (event: CustomEvent) => void;
+    /**
+    * Triggered when the menu is open
+    */
+    'onOpen'?: (event: CustomEvent) => void;
+    'text'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'GenesysButton': Components.GenesysButton;
     'GenesysToggle': Components.GenesysToggle;
+    'GenesysList': Components.GenesysList;
+    'GenesysActionButton': Components.GenesysActionButton;
   }
 
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
     'genesys-toggle': Components.GenesysToggleAttributes;
+    'genesys-list': Components.GenesysListAttributes;
+    'genesys-action-button': Components.GenesysActionButtonAttributes;
   }
 
 
@@ -121,16 +171,31 @@ declare global {
   var HTMLGenesysToggleElement: {
     prototype: HTMLGenesysToggleElement;
     new (): HTMLGenesysToggleElement;
+  }
+  interface HTMLGenesysListElement extends Components.GenesysList, HTMLStencilElement {}
+  var HTMLGenesysListElement: {
+    prototype: HTMLGenesysListElement;
+    new (): HTMLGenesysListElement;
+  };
+
+  interface HTMLGenesysActionButtonElement extends Components.GenesysActionButton, HTMLStencilElement {}
+  var HTMLGenesysActionButtonElement: {
+    prototype: HTMLGenesysActionButtonElement;
+    new (): HTMLGenesysActionButtonElement;
   };
 
   interface HTMLElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement
     'genesys-toggle': HTMLGenesysToggleElement
+    'genesys-list': HTMLGenesysListElement
+    'genesys-action-button': HTMLGenesysActionButtonElement
   }
 
   interface ElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement;
     'genesys-toggle': HTMLGenesysToggleElement;
+    'genesys-list': HTMLGenesysListElement;
+    'genesys-action-button': HTMLGenesysActionButtonElement;
   }
 
 
