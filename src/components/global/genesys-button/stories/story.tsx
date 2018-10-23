@@ -13,7 +13,7 @@ storiesOf('Genesys Components', module)
       el.disabled = boolean('disabled', false);
       el.innerText='Blop';
       el.title = text('title', 'Blop');
-      el.type = select('type', ['primary', 'secondary'], 'secondary');
+      el.accent = select('accent', ['primary', 'secondary'], 'secondary');
       document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })

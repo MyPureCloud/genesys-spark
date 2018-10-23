@@ -14,23 +14,23 @@ export namespace Components {
 
   interface GenesysButton {
     /**
+    * The component accent (secondary or primary).
+    */
+    'accent': string;
+    /**
     * Indicate if the button is disabled or not
     */
     'disabled': boolean;
-    /**
-    * The component type (secondary or primary).
-    */
-    'type': string;
   }
   interface GenesysButtonAttributes extends StencilHTMLAttributes {
+    /**
+    * The component accent (secondary or primary).
+    */
+    'accent'?: string;
     /**
     * Indicate if the button is disabled or not
     */
     'disabled'?: boolean;
-    /**
-    * The component type (secondary or primary).
-    */
-    'type'?: string;
   }
 }
 
