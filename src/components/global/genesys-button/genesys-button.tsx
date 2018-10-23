@@ -1,7 +1,7 @@
 import { Component, Element, Prop, State } from '@stencil/core';
 
 @Component({
-  styleUrl: 'genesys-button.scss',
+  styleUrl: 'genesys-button.less',
   tag: 'genesys-button'
 })
 export class GenesysButton {

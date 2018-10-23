@@ -1,23 +1,23 @@
 // Variables part
-$primary-background-color: $genesys-dark-blue;
-$primary-border-color: #2455A3;
-$primary-color: $genesys-off-white;
-$primary-active-background-color: #275AAD;
+@primary-background-color: @genesys-dark-blue;
+@primary-border-color: #2455A3;
+@primary-color: @genesys-off-white;
+@primary-active-background-color: #275AAD;
 
-$primary-dark-background-color: $genesys-dark-blue;
-$primary-dark-border-color: $genesys-grey-1;
-$primary-dark-color: $genesys-off-white;
-$primary-dark-hover-background-color: #3476F5;
+@primary-dark-background-color: @genesys-dark-blue;
+@primary-dark-border-color: @genesys-grey-1;
+@primary-dark-color: @genesys-off-white;
+@primary-dark-hover-background-color: #3476F5;
 
-$secondary-background-color: $genesys-border;
-$secondary-border-color: #D5DCE0;
-$secondary-color: $genesys-grey-2;
-$secondary-active-background-color: #DCE1E5;
+@secondary-background-color: @genesys-border;
+@secondary-border-color: #D5DCE0;
+@secondary-color: @genesys-grey-2;
+@secondary-active-background-color: #DCE1E5;
 
-$secondary-dark-background-color: #555D66;
-$secondary-dark-border-color: $genesys-grey-1;
-$secondary-dark-color: $genesys-off-white;
-$secondary-dark-hover-background-color: #76818F;
+@secondary-dark-background-color: #555D66;
+@secondary-dark-border-color: @genesys-grey-1;
+@secondary-dark-color: @genesys-off-white;
+@secondary-dark-hover-background-color: #76818F;
 
 
 genesys-button {
@@ -41,28 +41,28 @@ genesys-button {
             outline: none;
         }
         &.genesys-primary {
-            background-color: $primary-background-color;
-            border: 1px solid $primary-border-color;
-            color: $primary-color;
+            background-color: @primary-background-color;
+            border: 1px solid @primary-border-color;
+            color: @primary-color;
             &:hover {
                 box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.48);
             }
             &:active {
-                background-color: $primary-active-background-color;
+                background-color: @primary-active-background-color;
             }
             &:focus {
                 box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
             }
         }
         &.genesys-secondary {
-            background-color: $secondary-background-color;
-            border: 1px solid $secondary-border-color;
-            color: $secondary-color;
+            background-color: @secondary-background-color;
+            border: 1px solid @secondary-border-color;
+            color: @secondary-color;
             &:hover {
                 box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.24);
             }
             &:active {
-                background-color: $secondary-active-background-color;
+                background-color: @secondary-active-background-color;
             }
             &:focus {
                 box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
@@ -72,14 +72,14 @@ genesys-button {
 }
 
 // Theming
-%genesys-button-dark-theme {
+.genesys-button-dark-theme {
     > button {
         &.genesys-primary {
-            background-color: $primary-dark-background-color;
-            border: 1px solid $primary-dark-border-color;
-            color: $primary-dark-color;
+            background-color: @primary-dark-background-color;
+            border: 1px solid @primary-dark-border-color;
+            color: @primary-dark-color;
             &:hover {
-                background-color: $primary-dark-hover-background-color;
+                background-color: @primary-dark-hover-background-color;
             }
             &:active {
                 box-shadow: 0 0 0 3px rgba(117, 168, 255, 1);
@@ -89,11 +89,11 @@ genesys-button {
             }
         }
         &.genesys-secondary {
-            background-color: $secondary-dark-background-color;
-            border: 1px solid $secondary-dark-border-color;
-            color: $secondary-dark-color;
+            background-color: @secondary-dark-background-color;
+            border: 1px solid @secondary-dark-border-color;
+            color: @secondary-dark-color;
             &:hover {
-                background-color: $secondary-dark-hover-background-color;
+                background-color: @secondary-dark-hover-background-color;
             }
             &:active {
                 box-shadow: 0 0 0 3px rgba(117, 168, 255, 1);
@@ -107,9 +107,9 @@ genesys-button {
 
 .genesys-dark-theme {
     genesys-button {
-        @extend %genesys-button-dark-theme;
+        &:extend(.genesys-button-dark-theme);
     }
 }
 genesys-button.genesys-dark-theme {
-    @extend %genesys-button-dark-theme;
+    &:extend(.genesys-button-dark-theme);
 }
