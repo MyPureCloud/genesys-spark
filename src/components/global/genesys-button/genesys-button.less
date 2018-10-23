@@ -68,6 +68,20 @@ genesys-button {
                 box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
             }
         }
+        .left-icon {
+            line-height: 30px;
+            height: 30px;
+            &.margin {
+                margin-right: 5px;
+            }
+        }
+        .right-icon {
+            line-height: 30px;
+            height: 30px;
+            &.margin {
+                margin-left: 5px;
+            }
+        }
     }
 }
 
@@ -107,9 +121,9 @@ genesys-button {
 
 .genesys-dark-theme {
     genesys-button {
-        &:extend(.genesys-button-dark-theme);
+        .genesys-button-dark-theme;
     }
 }
 genesys-button.genesys-dark-theme {
-    &:extend(.genesys-button-dark-theme);
+    .genesys-button-dark-theme;
 }

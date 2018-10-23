@@ -21,6 +21,18 @@ export namespace Components {
     * Indicate if the button is disabled or not
     */
     'disabled': boolean;
+    /**
+    * The component left icon.
+    */
+    'leftIcon': string;
+    /**
+    * The component right icon.
+    */
+    'rightIcon': string;
+    /**
+    * The component text.
+    */
+    'text': string;
   }
   interface GenesysButtonAttributes extends StencilHTMLAttributes {
     /**
@@ -31,6 +43,18 @@ export namespace Components {
     * Indicate if the button is disabled or not
     */
     'disabled'?: boolean;
+    /**
+    * The component left icon.
+    */
+    'leftIcon'?: string;
+    /**
+    * The component right icon.
+    */
+    'rightIcon'?: string;
+    /**
+    * The component text.
+    */
+    'text'?: string;
   }
 }
 

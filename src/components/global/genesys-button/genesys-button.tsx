@@ -9,18 +9,30 @@ export class GenesysButton {
   /**
    * Indicate if the button is disabled or not
    */
-  @Prop()
-  disabled: boolean = false;
+  @Prop() disabled: boolean = false;
 
   /**
    * The component accent (secondary or primary).
    */
-  @Prop() 
-  accent: string = 'secondary';
+  @Prop() accent: string = 'secondary';
 
-  
-  @State()
-  title: string;
+  /**
+   * The component text.
+   */
+  @Prop() text: string = '';
+
+  /**
+   * The component left icon.
+   */
+  @Prop() leftIcon: string = '';
+
+  /**
+   * The component right icon.
+   */
+  @Prop() rightIcon: string = '';
+
+
+  @State() title: string;
 
   /**
    * This function is to check color and return a default one
@@ -33,12 +45,22 @@ export class GenesysButton {
     this.title = this.root.title;
   }
 
+  formatIcon(iconName: string) {
+    return iconName.indexOf('genesys-icon') === 0 ? iconName : 'genesys-icon-'+ iconName
+  }
+
   render() {
     return (
       <button title={this.title} 
               disabled={this.disabled} 
               class={'genesys-' + this.getAccent()}>
-        <slot></slot>
+        {this.leftIcon ? 
+          <span class={this.formatIcon(this.leftIcon) + ' left-icon' + (this.text ? ' margin' : '')}></span> : ''
+        }
+        {this.text}
+        {this.rightIcon ? 
+          <span class={this.formatIcon(this.rightIcon) + ' right-icon' + (this.text ? ' margin' : '')}></span> : ''
+        }
       </button>
     );
   }

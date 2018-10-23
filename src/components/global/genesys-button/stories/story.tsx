@@ -11,8 +11,10 @@ storiesOf('Genesys Components', module)
     withReadme(README, () => {
       const el = document.createElement('genesys-button');
       el.disabled = boolean('disabled', false);
-      el.innerText='Blop';
       el.title = text('title', 'Blop');
+      el.text = text('text', 'Blop');
+      el.leftIcon = text('leftIcon', '');
+      el.rightIcon = text('rightIcon', '');
       el.accent = select('accent', ['primary', 'secondary'], 'secondary');
       document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
