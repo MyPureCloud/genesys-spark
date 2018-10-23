@@ -1,0 +1,48 @@
+// Variables part
+@menu-background-color: @genesys-off-white;
+@menu-border-color: #DAE1EB;
+@menu-shadow: rgba(34, 37, 41, 0.24);
+@divider-color: #C3CAD4;
+
+genesys-list {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 8px 0;
+        background: @menu-background-color;
+        border: 1px solid @menu-border-color;
+        box-shadow: 0px 0 2px 0px @menu-shadow;
+        > li {    
+            position: relative;
+            height: 32px;
+            line-height: 32px;
+            padding: 0px 16px;
+            display: flex;
+            cursor: pointer;
+            &:hover, &:focus {
+                background: @genesys-dark-blue;
+                color: @genesys-off-white;
+            }
+            &.divider {
+                height: 1px;
+                background-color: @divider-color;
+                margin: 5px 12px;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+// Theming
+.genesys-list-dark-theme {
+    color: @genesys-grey-2;
+};
+
+.genesys-dark-theme {
+    genesys-list {
+        &:extend(.genesys-list-dark-theme);
+    }
+}
+genesys-list.genesys-dark-theme {
+    &:extend(.genesys-list-dark-theme);
+}
