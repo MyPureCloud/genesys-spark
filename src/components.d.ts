@@ -12,62 +12,74 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface GenesysTest {
+  interface GenesysButton {
     /**
-    * Indicate the firt
+    * The component accent (secondary or primary).
     */
-    'first': string;
+    'accent': string;
     /**
-    * Indicate the last
+    * Indicate if the button is disabled or not
     */
-    'last': string;
+    'disabled': boolean;
     /**
-    * Indicate the firt
+    * The component left icon.
     */
-    'middle': string;
+    'leftIcon': string;
+    /**
+    * The component right icon.
+    */
+    'rightIcon': string;
+    /**
+    * The component text.
+    */
+    'text': string;
   }
-  interface GenesysTestAttributes extends StencilHTMLAttributes {
+  interface GenesysButtonAttributes extends StencilHTMLAttributes {
     /**
-    * Indicate the firt
+    * The component accent (secondary or primary).
     */
-    'first'?: string;
+    'accent'?: string;
     /**
-    * Indicate the last
+    * Indicate if the button is disabled or not
     */
-    'last'?: string;
+    'disabled'?: boolean;
     /**
-    * Indicate the firt
+    * The component left icon.
     */
-    'middle'?: string;
+    'leftIcon'?: string;
     /**
-    * Triggered 2s after the component is loaded.
+    * The component right icon.
     */
-    'onCustom'?: (event: CustomEvent) => void;
+    'rightIcon'?: string;
+    /**
+    * The component text.
+    */
+    'text'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'GenesysTest': Components.GenesysTest;
+    'GenesysButton': Components.GenesysButton;
   }
 
   interface StencilIntrinsicElements {
-    'genesys-test': Components.GenesysTestAttributes;
+    'genesys-button': Components.GenesysButtonAttributes;
   }
 
 
-  interface HTMLGenesysTestElement extends Components.GenesysTest, HTMLStencilElement {}
-  var HTMLGenesysTestElement: {
-    prototype: HTMLGenesysTestElement;
-    new (): HTMLGenesysTestElement;
+  interface HTMLGenesysButtonElement extends Components.GenesysButton, HTMLStencilElement {}
+  var HTMLGenesysButtonElement: {
+    prototype: HTMLGenesysButtonElement;
+    new (): HTMLGenesysButtonElement;
   };
 
   interface HTMLElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement
+    'genesys-button': HTMLGenesysButtonElement
   }
 
   interface ElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement;
+    'genesys-button': HTMLGenesysButtonElement;
   }
 
 
