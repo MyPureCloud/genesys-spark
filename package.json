@@ -32,6 +32,7 @@
     "@stencil/core": "~0.13.2",
     "@stencil/less": "^0.1.0",
     "@stencil/utils": "0.0.5",
+    "@stencil/webpack": "0.0.6",
     "@storybook/addon-actions": "4.0.0-alpha.21",
     "@storybook/addon-backgrounds": "4.0.0-alpha.21",
     "@storybook/addon-knobs": "4.0.0-alpha.21",

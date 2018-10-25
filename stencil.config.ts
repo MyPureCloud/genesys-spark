@@ -1,6 +1,11 @@
 import { Config } from '@stencil/core';
+import { OutputTargetDist } from '@stencil/core/dist/declarations';
 import { less } from '@stencil/less';
 
+const distTarget: OutputTargetDist = {
+  dir: 'www/static',
+  type: 'dist'
+}
 export const config: Config = {
   copy: [
     {
@@ -15,8 +20,9 @@ export const config: Config = {
   excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**'],
   namespace: 'genesys-webcomponents',
   outputTargets: [
+    distTarget,
     {
-      type: 'dist'
+      type: 'dist',
     },
     {
       type: 'www'
