@@ -1,3 +1,4 @@
+import { EventSpy } from '@stencil/core/dist/declarations';
 import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
 
 describe('genesys-pagination-items-per-page', () => {
@@ -27,6 +28,9 @@ describe('genesys-pagination-items-per-page', () => {
 
     await component.selectOption('50');
     expect(await select.getProperty('value')).toEqual('50');
+    expect(await component.itemsPerPageChangedSpy).toHaveReceivedEventDetail(
+      50
+    );
   });
 });
 
@@ -40,7 +44,11 @@ const buildComponent = async (props: string) => {
 };
 
 class ItemsPerPageComponent {
-  constructor(public page: E2EPage) {}
+  itemsPerPageChangedSpy: Promise<EventSpy>;
+
+  constructor(public page: E2EPage) {
+    this.itemsPerPageChangedSpy = this.page.spyOnEvent('itemsPerPageChanged');
+  }
 
   get root(): Promise<E2EElement> {
     return this.page.find('genesys-pagination-items-per-page');
