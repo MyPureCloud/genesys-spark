@@ -23,19 +23,7 @@ export class GenesysPagination {
   render() {
     return (
       <div class="gux-pagination">
-        <div class="pagination-items-count">
-          {/* TODO: Implement the item count */}
-          <span>1 - 25 of 9000</span>
-        </div>
-
-        <div class="pagination-items-per-page">
-          {/* TODO: Implement items per page dropdown */}
-          <span>
-            <select>
-              <option>25</option>
-            </select>
-          </span>
-        </div>
+        <genesys-pagination-item-counts />
 
         <genesys-pagination-buttons
           class="pagination-buttons"

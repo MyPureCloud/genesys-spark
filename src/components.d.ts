@@ -78,8 +78,16 @@ export namespace Components {
     'totalItems'?: number;
   }
 
-  interface GenesysPaginationItemCounts {}
-  interface GenesysPaginationItemCountsAttributes extends StencilHTMLAttributes {}
+  interface GenesysPaginationItemCounts {
+    'currentPage': number;
+    'itemsPerPage': number;
+    'totalItems': number;
+  }
+  interface GenesysPaginationItemCountsAttributes extends StencilHTMLAttributes {
+    'currentPage'?: number;
+    'itemsPerPage'?: number;
+    'totalItems'?: number;
+  }
 
   interface GenesysToggle {
     /**
