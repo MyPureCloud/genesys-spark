@@ -63,7 +63,7 @@ export namespace Components {
   }
   interface GenesysPaginationButtonsAttributes extends StencilHTMLAttributes {
     'currentPage'?: number;
-    'onPageChanged'?: (event: CustomEvent<number>) => void;
+    'onCurrentPageChanged'?: (event: CustomEvent<number>) => void;
     'totalPages'?: number;
   }
 
@@ -75,6 +75,7 @@ export namespace Components {
   interface GenesysPaginationAttributes extends StencilHTMLAttributes {
     'currentPage'?: number;
     'itemsPerPage'?: number;
+    'onPageChanged'?: (event: CustomEvent<number>) => void;
     'totalItems'?: number;
   }
 

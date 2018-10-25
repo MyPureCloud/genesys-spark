@@ -24,19 +24,20 @@ describe('genesys-pagination-buttons', () => {
     const previousPageButton = await page.find('.previous-page-button');
 
     const currentPageInput = await page.find('input');
-
     expect(await currentPageInput.getProperty('value')).toBe('2');
+
+    const pageChangedSpy = await page.spyOnEvent('currentPageChanged');
 
     await lastPageButton.click();
-    expect(await currentPageInput.getProperty('value')).toBe('10');
+    expect(pageChangedSpy.lastEvent.detail).toBe(10);
 
     await firstPageButton.click();
-    expect(await currentPageInput.getProperty('value')).toBe('1');
+    expect(pageChangedSpy.lastEvent.detail).toBe(1);
 
     await nextPageButton.click();
-    expect(await currentPageInput.getProperty('value')).toBe('2');
+    expect(pageChangedSpy.lastEvent.detail).toBe(3);
 
     await previousPageButton.click();
-    expect(await currentPageInput.getProperty('value')).toBe('1');
+    expect(pageChangedSpy.lastEvent.detail).toBe(1);
   });
 });
