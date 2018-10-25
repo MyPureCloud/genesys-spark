@@ -20,6 +20,7 @@ export const config: Config = {
   excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**', '**/**.md'],
   namespace: 'genesys-webcomponents',
   outputTargets: [
+    distTarget,
     {
       type: 'dist',
     },
