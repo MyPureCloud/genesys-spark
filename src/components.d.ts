@@ -114,16 +114,31 @@ export namespace Components {
   }
 
   interface GenesysActionButton {
+    /**
+    * The component accent (secondary or primary).
+    */
     'accent': string;
+    /**
+    * It is used to open or not the list.
+    */
     'isOpen': boolean;
     /**
     * The list. each item should contain a text and a type  an item could have the poperty isDisabled
     */
     'items': IListItem[];
+    /**
+    * The component text.
+    */
     'text': string;
   }
   interface GenesysActionButtonAttributes extends StencilHTMLAttributes {
+    /**
+    * The component accent (secondary or primary).
+    */
     'accent'?: string;
+    /**
+    * It is used to open or not the list.
+    */
     'isOpen'?: boolean;
     /**
     * The list. each item should contain a text and a type  an item could have the poperty isDisabled
@@ -141,6 +156,9 @@ export namespace Components {
     * Triggered when the menu is open
     */
     'onOpen'?: (event: CustomEvent) => void;
+    /**
+    * The component text.
+    */
     'text'?: string;
   }
 }
