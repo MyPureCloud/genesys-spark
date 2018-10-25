@@ -28,8 +28,20 @@ export class GenesysActionButton {
    * an item could have the poperty isDisabled
    */
   @Prop() items: IListItem[] = []
+
+  /**
+   * The component text.
+   */
   @Prop() text: string
+
+  /**
+   * The component accent (secondary or primary).
+   */
   @Prop() accent: string = 'secondary'
+
+  /**
+   * It is used to open or not the list.
+   */
   @Prop({mutable: true}) isOpen: boolean = false
 
   @Element() root: HTMLStencilElement
