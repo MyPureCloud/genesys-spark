@@ -1,6 +1,23 @@
 # genesys-button
+<<<<<<< HEAD
 This custom component is a simple button having some styling on it.
 You can choose between two type (secondary and primary).
+=======
+
+
+
+
+
+This custom component is a simple button having some styling on it.
+
+
+You can choose between two type (secondary and primary).
+
+
+
+
+
+>>>>>>> update button component
 <!-- Auto Generated Below -->
 
 
