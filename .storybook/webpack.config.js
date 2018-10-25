@@ -4,11 +4,6 @@ const ROOT_PATH = path.resolve(process.cwd());
 
 module.exports = (baseConfig, env, defaultConfig) => {
 
-  defaultConfig.resolve.alias = {
-    ...defaultConfig.resolve.alias,
-    "MD": path.resolve(__dirname, "../.docs")
-  };
-
   defaultConfig.module.rules.push({
     resourceQuery: /blockType=docs/,
     use: [
