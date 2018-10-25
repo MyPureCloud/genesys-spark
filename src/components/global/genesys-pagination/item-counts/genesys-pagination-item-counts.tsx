@@ -19,7 +19,10 @@ export class GenesysPaginationItemCounts {
   }
 
   get lastItem(): number {
-    return this.firstItem + this.itemsPerPage - 1;
+    const calculatedLastItem = this.firstItem + this.itemsPerPage - 1;
+    return calculatedLastItem < this.totalItems
+      ? calculatedLastItem
+      : this.totalItems;
   }
 
   render() {

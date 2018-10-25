@@ -5,6 +5,7 @@ describe('genesys-pagination-item-counts', () => {
 
   beforeEach(() => {
     component = new GenesysPaginationItemCounts();
+    component.totalItems = 152;
   });
 
   it('builds with sensible defaults', () => {
@@ -56,6 +57,12 @@ describe('genesys-pagination-item-counts', () => {
       component.currentPage = 5;
       component.itemsPerPage = 10;
       expect(component.lastItem).toBe(50);
+    });
+
+    it('should never exceed the totalItems count', () => {
+      component.currentPage = 1;
+      component.itemsPerPage = 200;
+      expect(component.lastItem).toBe(152);
     });
   });
 });
