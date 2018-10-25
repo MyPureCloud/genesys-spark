@@ -12,7 +12,6 @@ import '@stencil/core';
 
 export namespace Components {
 
-<<<<<<< HEAD
   interface GenesysButton {
     /**
     * The component accent (secondary or primary).
@@ -56,45 +55,11 @@ export namespace Components {
     * The component text.
     */
     'text'?: string;
-=======
-  interface GenesysTest {
-    /**
-    * Indicate the firt
-    */
-    'first': string;
-    /**
-    * Indicate the last
-    */
-    'last': string;
-    /**
-    * Indicate the firt
-    */
-    'middle': string;
-  }
-  interface GenesysTestAttributes extends StencilHTMLAttributes {
-    /**
-    * Indicate the firt
-    */
-    'first'?: string;
-    /**
-    * Indicate the last
-    */
-    'last'?: string;
-    /**
-    * Indicate the firt
-    */
-    'middle'?: string;
-    /**
-    * Triggered 2s after the component is loaded.
-    */
-    'onCustom'?: (event: CustomEvent) => void;
->>>>>>> put back components as needed to be generated.
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-<<<<<<< HEAD
     'GenesysButton': Components.GenesysButton;
   }
 
@@ -115,28 +80,6 @@ declare global {
 
   interface ElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement;
-=======
-    'GenesysTest': Components.GenesysTest;
-  }
-
-  interface StencilIntrinsicElements {
-    'genesys-test': Components.GenesysTestAttributes;
-  }
-
-
-  interface HTMLGenesysTestElement extends Components.GenesysTest, HTMLStencilElement {}
-  var HTMLGenesysTestElement: {
-    prototype: HTMLGenesysTestElement;
-    new (): HTMLGenesysTestElement;
-  };
-
-  interface HTMLElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement
-  }
-
-  interface ElementTagNameMap {
-    'genesys-test': HTMLGenesysTestElement;
->>>>>>> put back components as needed to be generated.
   }
 
 
