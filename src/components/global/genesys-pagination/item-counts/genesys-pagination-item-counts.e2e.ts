@@ -1,4 +1,4 @@
-import { newE2EPage, E2EPage } from '@stencil/core/testing';
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
 
 describe('genesys-pagination-item-counts', () => {
   let page: E2EPage;
@@ -17,7 +17,7 @@ describe('genesys-pagination-item-counts', () => {
   describe('when using the default items per page options', () => {
     it('should display the proper item counts', async () => {
       await page.setContent(
-        '<genesys-pagination-item-counts total-items="127" current-page="5" ></genesys-pagination-item-counts>'
+        '<genesys-pagination-item-counts total-items="127" current-page="5"></genesys-pagination-item-counts>'
       );
 
       const itemCounts = await page.find('.pagination-item-counts-display');

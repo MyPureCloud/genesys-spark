@@ -3,7 +3,9 @@ import { GenesysPaginationItemCounts } from './genesys-pagination-item-counts';
 describe('genesys-pagination-item-counts', () => {
   let component: GenesysPaginationItemCounts;
 
-  beforeEach(() => (component = new GenesysPaginationItemCounts()));
+  beforeEach(() => {
+    component = new GenesysPaginationItemCounts();
+  });
 
   it('builds with sensible defaults', () => {
     expect(component).toBeTruthy();
