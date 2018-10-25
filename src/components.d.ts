@@ -8,8 +8,6 @@
 import '@stencil/core';
 
 
-
-
 export namespace Components {
 
   interface GenesysButton {
