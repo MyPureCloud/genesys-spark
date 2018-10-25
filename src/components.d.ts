@@ -12,6 +12,51 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface GenesysButton {
+    /**
+    * The component accent (secondary or primary).
+    */
+    'accent': string;
+    /**
+    * Indicate if the button is disabled or not
+    */
+    'disabled': boolean;
+    /**
+    * The component left icon.
+    */
+    'leftIcon': string;
+    /**
+    * The component right icon.
+    */
+    'rightIcon': string;
+    /**
+    * The component text.
+    */
+    'text': string;
+  }
+  interface GenesysButtonAttributes extends StencilHTMLAttributes {
+    /**
+    * The component accent (secondary or primary).
+    */
+    'accent'?: string;
+    /**
+    * Indicate if the button is disabled or not
+    */
+    'disabled'?: boolean;
+    /**
+    * The component left icon.
+    */
+    'leftIcon'?: string;
+    /**
+    * The component right icon.
+    */
+    'rightIcon'?: string;
+    /**
+    * The component text.
+    */
+    'text'?: string;
+  }
+
   interface GenesysPaginationButtons {
     'currentPage': number;
     'totalPages': number;
@@ -36,15 +81,23 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'GenesysButton': Components.GenesysButton;
     'GenesysPaginationButtons': Components.GenesysPaginationButtons;
     'GenesysPagination': Components.GenesysPagination;
   }
 
   interface StencilIntrinsicElements {
+    'genesys-button': Components.GenesysButtonAttributes;
     'genesys-pagination-buttons': Components.GenesysPaginationButtonsAttributes;
     'genesys-pagination': Components.GenesysPaginationAttributes;
   }
 
+
+  interface HTMLGenesysButtonElement extends Components.GenesysButton, HTMLStencilElement {}
+  var HTMLGenesysButtonElement: {
+    prototype: HTMLGenesysButtonElement;
+    new (): HTMLGenesysButtonElement;
+  };
 
   interface HTMLGenesysPaginationButtonsElement extends Components.GenesysPaginationButtons, HTMLStencilElement {}
   var HTMLGenesysPaginationButtonsElement: {
@@ -59,11 +112,13 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'genesys-button': HTMLGenesysButtonElement
     'genesys-pagination-buttons': HTMLGenesysPaginationButtonsElement
     'genesys-pagination': HTMLGenesysPaginationElement
   }
 
   interface ElementTagNameMap {
+    'genesys-button': HTMLGenesysButtonElement;
     'genesys-pagination-buttons': HTMLGenesysPaginationButtonsElement;
     'genesys-pagination': HTMLGenesysPaginationElement;
   }
