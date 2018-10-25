@@ -1,6 +1,6 @@
 import { GenesysPaginationButtons } from './genesys-pagination-buttons';
 
-describe('genesys-pagination', () => {
+describe('genesys-pagination-buttons', () => {
   let component: GenesysPaginationButtons;
   let pageChangedSpy;
 

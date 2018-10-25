@@ -78,6 +78,9 @@ export namespace Components {
     'totalItems'?: number;
   }
 
+  interface GenesysPaginationItemCounts {}
+  interface GenesysPaginationItemCountsAttributes extends StencilHTMLAttributes {}
+
   interface GenesysToggle {
     /**
     * Indicate if the toggle is checked or not
@@ -125,6 +128,7 @@ declare global {
     'GenesysButton': Components.GenesysButton;
     'GenesysPaginationButtons': Components.GenesysPaginationButtons;
     'GenesysPagination': Components.GenesysPagination;
+    'GenesysPaginationItemCounts': Components.GenesysPaginationItemCounts;
     'GenesysToggle': Components.GenesysToggle;
   }
 
@@ -132,6 +136,7 @@ declare global {
     'genesys-button': Components.GenesysButtonAttributes;
     'genesys-pagination-buttons': Components.GenesysPaginationButtonsAttributes;
     'genesys-pagination': Components.GenesysPaginationAttributes;
+    'genesys-pagination-item-counts': Components.GenesysPaginationItemCountsAttributes;
     'genesys-toggle': Components.GenesysToggleAttributes;
   }
 
@@ -154,6 +159,12 @@ declare global {
     new (): HTMLGenesysPaginationElement;
   };
 
+  interface HTMLGenesysPaginationItemCountsElement extends Components.GenesysPaginationItemCounts, HTMLStencilElement {}
+  var HTMLGenesysPaginationItemCountsElement: {
+    prototype: HTMLGenesysPaginationItemCountsElement;
+    new (): HTMLGenesysPaginationItemCountsElement;
+  };
+
   interface HTMLGenesysToggleElement extends Components.GenesysToggle, HTMLStencilElement {}
   var HTMLGenesysToggleElement: {
     prototype: HTMLGenesysToggleElement;
@@ -164,6 +175,7 @@ declare global {
     'genesys-button': HTMLGenesysButtonElement
     'genesys-pagination-buttons': HTMLGenesysPaginationButtonsElement
     'genesys-pagination': HTMLGenesysPaginationElement
+    'genesys-pagination-item-counts': HTMLGenesysPaginationItemCountsElement
     'genesys-toggle': HTMLGenesysToggleElement
   }
 
@@ -171,6 +183,7 @@ declare global {
     'genesys-button': HTMLGenesysButtonElement;
     'genesys-pagination-buttons': HTMLGenesysPaginationButtonsElement;
     'genesys-pagination': HTMLGenesysPaginationElement;
+    'genesys-pagination-item-counts': HTMLGenesysPaginationItemCountsElement;
     'genesys-toggle': HTMLGenesysToggleElement;
   }
 
