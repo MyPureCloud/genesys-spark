@@ -17,7 +17,7 @@ export const config: Config = {
       dest: 'icons'
     }
   ],
-  excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**'],
+  excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**', '**/**.md'],
   namespace: 'genesys-webcomponents',
   outputTargets: [
     distTarget,
