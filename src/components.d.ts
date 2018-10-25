@@ -56,6 +56,7 @@ export namespace Components {
     */
     'text'?: string;
   }
+
   interface GenesysToggle {
     /**
     * Indicate if the toggle is checked or not
@@ -106,6 +107,7 @@ declare global {
 
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
+    'genesys-toggle': Components.GenesysToggleAttributes;
   }
 
 
@@ -115,16 +117,6 @@ declare global {
     new (): HTMLGenesysButtonElement;
   };
 
-  interface HTMLElementTagNameMap {
-    'genesys-button': HTMLGenesysButtonElement
-  }
-
-  interface ElementTagNameMap {
-    'genesys-button': HTMLGenesysButtonElement;
-    'genesys-toggle': Components.GenesysToggleAttributes;
-  }
-
-
   interface HTMLGenesysToggleElement extends Components.GenesysToggle, HTMLStencilElement {}
   var HTMLGenesysToggleElement: {
     prototype: HTMLGenesysToggleElement;
@@ -132,14 +124,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'genesys-button': HTMLGenesysButtonElement
     'genesys-toggle': HTMLGenesysToggleElement
   }
 
   interface ElementTagNameMap {
-    'genesys-toggle': HTMLGenesysToggleElement;
-  }
-
-  interface ElementTagNameMap {
+    'genesys-button': HTMLGenesysButtonElement;
     'genesys-toggle': HTMLGenesysToggleElement;
   }
 

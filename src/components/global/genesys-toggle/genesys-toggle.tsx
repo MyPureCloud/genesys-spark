@@ -1,10 +1,10 @@
-import { Event, EventEmitter, Component, Prop, Element } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Prop } from '@stencil/core';
 const ENTER = 13;
 const SPACE = 32;
 
 @Component({
-  tag: 'genesys-toggle',
-  styleUrl: 'genesys-toggle.scss'
+  styleUrl: 'genesys-toggle.less',
+  tag: 'genesys-toggle'
 })
 
 export class GenesysToggle {
@@ -13,23 +13,23 @@ export class GenesysToggle {
   checkboxElement: HTMLInputElement
 
   /**
-  * Indicate if the toggle is checked or not
-  **/
+   * Indicate if the toggle is checked or not
+   */
   @Prop({mutable: true, reflectToAttr: true}) checked: boolean
 
   /**
-  * Indicate if the toggle is disabled or not
-  **/
+   * Indicate if the toggle is disabled or not
+   */
   @Prop({mutable: true, reflectToAttr: true}) disabled: boolean
 
   /**
-  * Indicate the checked label
-  **/
+   * Indicate the checked label
+   */
   @Prop({mutable: true, reflectToAttr: true}) checkedLabel: string
 
   /**
-  * Indicate the unchecked label
-  **/
+   * Indicate the unchecked label
+   */
   @Prop({mutable: true, reflectToAttr: true}) uncheckedLabel: string
 
   /**
