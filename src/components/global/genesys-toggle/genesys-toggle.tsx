@@ -20,17 +20,17 @@ export class GenesysToggle {
   /**
    * Indicate if the toggle is disabled or not
    */
-  @Prop({mutable: true, reflectToAttr: true}) disabled: boolean
+  @Prop() disabled: boolean
 
   /**
    * Indicate the checked label
    */
-  @Prop({mutable: true, reflectToAttr: true}) checkedLabel: string
+  @Prop() checkedLabel: string
 
   /**
    * Indicate the unchecked label
    */
-  @Prop({mutable: true, reflectToAttr: true}) uncheckedLabel: string
+  @Prop() uncheckedLabel: string
 
   /**
    * Triggered when the state of the component changed.
@@ -42,10 +42,6 @@ export class GenesysToggle {
     event.stopPropagation()
     this.checked = event.target.checked
     this.check.emit(this.checked)
-  }
-
-  componentDidLoad () {
-    this.checkboxElement = this.root.querySelector('input')
   }
 
   toggle () {
@@ -81,6 +77,7 @@ export class GenesysToggle {
         <div class="genesys-switch" 
               role='presentation'>
           <input type="checkbox" 
+                  ref={el => this.checkboxElement = el}
                   checked={this.checked} 
                   onInput={(e) => this.emitInput(e)} 
                   disabled={this.disabled} />
