@@ -23,7 +23,7 @@ export class GenesysRating {
   /**
    * Determines if the user can set a rating
    */
-  @Prop() disabled: boolean = false;
+  @Prop({reflectToAttr: true}) disabled: boolean = false;
 
   /**
    * The rating
