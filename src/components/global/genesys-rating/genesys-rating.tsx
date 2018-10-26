@@ -12,7 +12,7 @@ enum KeyCode {
 }
 
 @Component({
-  styleUrl: 'genesys-rating.scss',
+  styleUrl: 'genesys-rating.less',
   tag: 'genesys-rating'
 })
 
@@ -23,7 +23,7 @@ export class GenesysRating {
   /**
    * Determines if the user can set a rating
    */
-  @Prop({mutable: true, reflectToAttr: true}) disabled: boolean = false;
+  @Prop() disabled: boolean = false;
 
   /**
    * The rating
@@ -33,12 +33,12 @@ export class GenesysRating {
   /**
    * The maximum rating possible
    */
-  @Prop({mutable: true, reflectToAttr: true}) maxRating: number = 5;
+  @Prop() maxRating: number = 5;
 
   /**
    * Determines if half ratings are allowed
    */
-  @Prop({mutable: true, reflectToAttr: true}) allowHalfRatings: boolean = false;
+  @Prop() allowHalfRatings: boolean = false;
 
   /**
    * The labels for each stars

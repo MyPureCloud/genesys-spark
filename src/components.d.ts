@@ -56,6 +56,7 @@ export namespace Components {
     */
     'text'?: string;
   }
+
   interface GenesysRating {
     /**
     * Determines if half ratings are allowed
@@ -125,10 +126,12 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'GenesysButton': Components.GenesysButton;
+    'GenesysRating': Components.GenesysRating;
   }
 
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
+    'genesys-rating': Components.GenesysRatingAttributes;
   }
 
 
@@ -138,20 +141,6 @@ declare global {
     new (): HTMLGenesysButtonElement;
   };
 
-  interface HTMLElementTagNameMap {
-    'genesys-button': HTMLGenesysButtonElement
-  }
-
-  interface ElementTagNameMap {
-    'genesys-button': HTMLGenesysButtonElement;
-    'GenesysRating': Components.GenesysRating;
-  }
-
-  interface StencilIntrinsicElements {
-    'genesys-rating': Components.GenesysRatingAttributes;
-  }
-
-
   interface HTMLGenesysRatingElement extends Components.GenesysRating, HTMLStencilElement {}
   var HTMLGenesysRatingElement: {
     prototype: HTMLGenesysRatingElement;
@@ -159,10 +148,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'genesys-button': HTMLGenesysButtonElement
     'genesys-rating': HTMLGenesysRatingElement
   }
 
   interface ElementTagNameMap {
+    'genesys-button': HTMLGenesysButtonElement;
     'genesys-rating': HTMLGenesysRatingElement;
   }
 

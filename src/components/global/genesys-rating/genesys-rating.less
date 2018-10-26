@@ -12,7 +12,7 @@ genesys-rating {
                 outline: none;
                 svg {
                     .genesys-rating-item-shape-default {
-                        stroke: $genesys-grey-2;
+                        stroke: @genesys-grey-2;
                     }
                 }
             }
@@ -23,13 +23,13 @@ genesys-rating {
         width: 24px;
         cursor: pointer;
         .genesys-rating-item-shape-default {
-            stroke: $genesys-icons;
+            stroke: @genesys-icons;
             &.genesys-rating-item-shape-fill-percent-50 {
-                stroke: $genesys-grey-2;
+                stroke: @genesys-grey-2;
             }
             &.genesys-rating-item-shape-fill-percent-100 {
-                fill: $genesys-grey-2;
-                stroke: $genesys-grey-2;
+                fill: @genesys-grey-2;
+                stroke: @genesys-grey-2;
             }
         }
         linearGradient {
@@ -37,24 +37,24 @@ genesys-rating {
                 stop-color: transparent;
             }
             stop:first-child {
-                stop-color: $genesys-grey-2;
+                stop-color: @genesys-grey-2;
             }
         }
     }
 }
 
 // Theming
-%genesys-rating-dark-theme {
+.genesys-rating-dark-theme {
     .genesys-rating-item-shape-default {
         &:hover {
-            stroke: $genesys-blue;     
+            stroke: @genesys-blue;     
         }
         &.genesys-rating-item-shape-fill-percent-50 {
-            stroke: $genesys-blue;
+            stroke: @genesys-blue;
         }
         &.genesys-rating-item-shape-fill-percent-100 {
-            fill: $genesys-blue;
-            stroke: $genesys-blue;
+            fill: @genesys-blue;
+            stroke: @genesys-blue;
         }
     }
 
@@ -64,7 +64,7 @@ genesys-rating {
             &:focus {
                 svg {
                     .genesys-rating-item-shape-default {
-                        stroke: $genesys-blue;
+                        stroke: @genesys-blue;
                     }
                 }
             }
@@ -77,7 +77,7 @@ genesys-rating {
                 stop-color: transparent;
             }
             stop:first-child {
-                stop-color: $genesys-blue;
+                stop-color: @genesys-blue;
             }
         }
     }
@@ -85,9 +85,9 @@ genesys-rating {
 
 .genesys-dark-theme {
     genesys-rating {
-        @extend %genesys-rating-dark-theme;
+        .genesys-rating-dark-theme;
     }
 }
 genesys-rating.genesys-dark-theme {
-    @extend %genesys-rating-dark-theme;
+    .genesys-rating-dark-theme;
 }
