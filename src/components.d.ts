@@ -167,11 +167,13 @@ declare global {
   interface StencilElementInterfaces {
     'GenesysButton': Components.GenesysButton;
     'GenesysToggle': Components.GenesysToggle;
+    'GenesysRating': Components.GenesysRating;
   }
 
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
     'genesys-toggle': Components.GenesysToggleAttributes;
+    'genesys-rating': Components.GenesysRatingAttributes;
   }
 
 
@@ -210,10 +212,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'genesys-button': HTMLGenesysButtonElement
     'genesys-rating': HTMLGenesysRatingElement
   }
 
   interface ElementTagNameMap {
+    'genesys-button': HTMLGenesysButtonElement;
     'genesys-rating': HTMLGenesysRatingElement;
   }
 
