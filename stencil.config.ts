@@ -9,24 +9,24 @@ const distTarget: OutputTargetDist = {
 export const config: Config = {
   copy: [
     {
-      src: 'style/fonts',
-      dest: 'fonts'
+      dest: 'fonts',
+      src: 'style/fonts'
     },
     {
-      src: 'style/icons',
-      dest: 'icons'
+      dest: 'icons',
+      src: 'style/icons'
     }
   ],
   excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**', '**/**.md'],
   namespace: 'genesys-webcomponents',
   outputTargets: [
-    distTarget,
     {
       type: 'dist',
     },
     {
       type: 'www'
-    }
+    },
+    distTarget
   ],
   plugins: [
     less({
