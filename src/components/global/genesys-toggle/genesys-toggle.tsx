@@ -20,7 +20,7 @@ export class GenesysToggle {
   /**
    * Indicate if the toggle is disabled or not
    */
-  @Prop() disabled: boolean
+  @Prop({reflectToAttr: true}) disabled: boolean
 
   /**
    * Indicate the checked label
