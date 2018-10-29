@@ -5,7 +5,7 @@ import { withReadme  } from 'storybook-readme';
 
 import README from 'MD/genesys-action-button/README.md';
 
-storiesOf('Genesys Rich Components', module)
+storiesOf('Genesys Components', module)
 .addDecorator(withKnobs)
 .add(
     'Genesys Action Button',
@@ -14,7 +14,10 @@ storiesOf('Genesys Rich Components', module)
       el.text = text('text', 'Blop');
       el.items = object('items', [
         {'text': 'test', 'callback': (i) => {alert('test:'+ JSON.stringify(i));}},
-        {'text': 'test2'}
+        {'text': 'divider', 'type': 'divider'},
+        {'text': 'test2', 'callback': (i) => {alert('test:'+ JSON.stringify(i));}},
+        {'text': 'test3', 'isDisabled': true},
+        {'text': 'test3'}
       ]);
       el.addEventListener('open', e => action('open')());
       el.addEventListener('close', e => action('close')());
