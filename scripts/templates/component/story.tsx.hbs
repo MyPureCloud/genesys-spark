@@ -1,6 +1,7 @@
 import { action } from '@storybook/addon-actions';
 import { select, text, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
+import { html, render } from 'lit-html';
 import { withReadme  } from 'storybook-readme';
 
 import README from 'MD/{{componentName}}/README.md';
@@ -10,11 +11,23 @@ storiesOf('Genesys {{componentType}}', module)
 .add(
     '{{componentStoryName}}',
     withReadme(README, () => {
-      const el = document.createElement('{{componentName}}'); 
-      el.first = text('first', 'Blop');
-      el.last = text('last', 'Blop');
-      el.middle = text('middle', 'Blop');
-      el.addEventListener('custom', e => action('custom')(e.detail));
+      const el = document.createElement('div'); 
+      render(html`
+        <h2>Basic samples<h2>
+        <{{componentName}}></{{componentName}}>
+        <h2>Interactive sample<h2>
+        <{{componentName}}
+          id='interactive'
+          first=${text('first', 'blob')}
+          last=${text('last', 'Blop')}
+          middle=${text('middle', 'Blop')}
+        >
+        </{{componentName}}>
+      `, el);
+      setTimeout(() => {
+        const it = document.getElementById('interactive');
+        it.addEventListener('custom', e => action('custom')(e.detail));
+      }, 100);
       document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
