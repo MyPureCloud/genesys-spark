@@ -1,4 +1,5 @@
 import { Component, Element, Event, EventEmitter, Listen, Prop, Watch } from '@stencil/core'
+import { KeyCode } from '../../../common-enum'
 import { IListItem } from '../../global/genesys-list/genesys-list-interfaces'
 
 @Component({
@@ -6,6 +7,8 @@ import { IListItem } from '../../global/genesys-list/genesys-list-interfaces'
   tag: 'genesys-action-button'
 })
 export class GenesysActionButton {
+  listElement: HTMLElement
+  dropdownButton: HTMLElement
 
   /**
    * Triggered when the menu is open
@@ -75,6 +78,18 @@ export class GenesysActionButton {
     }
   }
 
+  onKeyDownEvent (event: KeyboardEvent) {
+    const key = event.keyCode;
+    if (key === KeyCode.Esc) {
+      this.isOpen = false;
+      this.dropdownButton.focus();
+    }
+    if (key === KeyCode.Down && !this.listElement.contains(event.target as Node)) {
+      this.isOpen = true;
+      this.listElement.focus();
+    }
+  }
+
   render() {
     return (
       <div class={'genesys-action-button' + (this.isOpen ? ' open': '')}>
@@ -85,11 +100,15 @@ export class GenesysActionButton {
           class='genesys-action'/>
         <genesys-button 
           accent={this.accent} 
-          onClick={() => this.toggle()} 
+          ref={el => this.dropdownButton = el}
+          onClick={() => this.toggle()}
+          onKeyDown={(e) => this.onKeyDownEvent(e)}
           leftIcon='dropdown-arrow' 
           class='genesys-dropdown' />
         <genesys-list 
+          ref={el => this.listElement = el}
           items={this.items} 
+          onKeyDown={(e) => this.onKeyDownEvent(e)}
           onClick={() => this.toggle()}/>
       </div>
     );
