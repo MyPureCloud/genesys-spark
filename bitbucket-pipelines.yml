@@ -3,7 +3,7 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: timbru31/node-chrome
+image: node:8.12.11
 pipelines:
   default:
     - step:
@@ -13,5 +13,5 @@ pipelines:
          - npm -v
          - npm install
          - npm run build
-         - npm run test
+         - npm run test.unit
          - echo "Fanfare!"
