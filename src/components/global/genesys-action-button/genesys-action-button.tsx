@@ -1,6 +1,6 @@
 import { Component, Element, Event, EventEmitter, Listen, Prop, Watch } from '@stencil/core'
-import { KeyCode } from '../../../common-enums'
-import { IListItem } from '../../../common-interfaces'
+import { KeyCode } from '../../../common-enum'
+import { IListItem } from '../../global/genesys-list/genesys-list-interfaces'
 
 @Component({
   styleUrl: 'genesys-action-button.less',
@@ -53,13 +53,6 @@ export class GenesysActionButton {
     this.isOpen = !this.isOpen
   }
 
-  @Listen('focusout') 
-  handleFocusOut(e: FocusEvent) {
-    if (!this.root.contains(e.relatedTarget as Node)) {
-      this.isOpen = false;
-    }
-  }
-
   @Listen('body:keydown')
   handleKeyDown(e) {
     if (this.root.contains(e.target)) {
@@ -89,15 +82,11 @@ export class GenesysActionButton {
     const key = event.keyCode;
     if (key === KeyCode.Esc) {
       this.isOpen = false;
-      const e = this.dropdownButton.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]') as HTMLElement;
-      e.focus();
+      this.dropdownButton.focus();
     }
     if (key === KeyCode.Down && !this.listElement.contains(event.target as Node)) {
       this.isOpen = true;
-      setTimeout(() => {
-        const e = this.listElement.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]') as HTMLElement;
-        e.focus();
-      });
+      this.listElement.focus();
     }
   }
 

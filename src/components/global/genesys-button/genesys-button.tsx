@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State } from '@stencil/core';
+import { Component, Element, Method, Prop, State } from '@stencil/core';
 
 @Component({
   styleUrl: 'genesys-button.less',
@@ -56,6 +56,11 @@ export class GenesysButton {
     return iconName.indexOf('genesys-icon') === 0
       ? iconName
       : 'genesys-icon-' + iconName;
+  }
+
+  @Method()
+  focus() {
+   this.button.focus();
   }
 
   render() {
