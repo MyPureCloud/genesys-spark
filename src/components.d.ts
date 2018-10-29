@@ -15,104 +15,6 @@ import {
 
 export namespace Components {
 
-  interface GenesysButton {
-    /**
-    * The component accent (secondary or primary).
-    */
-    'accent': string;
-    /**
-    * Indicate if the button is disabled or not
-    */
-    'disabled': boolean;
-    /**
-    * The component left icon.
-    */
-    'leftIcon': string;
-    /**
-    * The component right icon.
-    */
-    'rightIcon': string;
-    /**
-    * The component text.
-    */
-    'text': string;
-  }
-  interface GenesysButtonAttributes extends StencilHTMLAttributes {
-    /**
-    * The component accent (secondary or primary).
-    */
-    'accent'?: string;
-    /**
-    * Indicate if the button is disabled or not
-    */
-    'disabled'?: boolean;
-    /**
-    * The component left icon.
-    */
-    'leftIcon'?: string;
-    /**
-    * The component right icon.
-    */
-    'rightIcon'?: string;
-    /**
-    * The component text.
-    */
-    'text'?: string;
-  }
-
-  interface GenesysToggle {
-    /**
-    * Indicate if the toggle is checked or not
-    */
-    'checked': boolean;
-    /**
-    * Indicate the checked label
-    */
-    'checkedLabel': string;
-    /**
-    * Indicate if the toggle is disabled or not
-    */
-    'disabled': boolean;
-    /**
-    * Indicate the unchecked label
-    */
-    'uncheckedLabel': string;
-  }
-  interface GenesysToggleAttributes extends StencilHTMLAttributes {
-    /**
-    * Indicate if the toggle is checked or not
-    */
-    'checked'?: boolean;
-    /**
-    * Indicate the checked label
-    */
-    'checkedLabel'?: string;
-    /**
-    * Indicate if the toggle is disabled or not
-    */
-    'disabled'?: boolean;
-    /**
-    * Triggered when the state of the component changed.
-    */
-    'onCheck'?: (event: CustomEvent) => void;
-    /**
-    * Indicate the unchecked label
-    */
-    'uncheckedLabel'?: string;
-  }
-  interface GenesysList {
-    /**
-    * The list. each item should contain a text and a type  an item could have the poperty isDisabled
-    */
-    'items': IListItem[];
-  }
-  interface GenesysListAttributes extends StencilHTMLAttributes {
-    /**
-    * The list. each item should contain a text and a type  an item could have the poperty isDisabled
-    */
-    'items'?: IListItem[];
-  }
-
   interface GenesysActionButton {
     /**
     * The component accent (secondary or primary).
@@ -161,40 +63,124 @@ export namespace Components {
     */
     'text'?: string;
   }
+
+  interface GenesysButton {
+    /**
+    * The component accent (secondary or primary).
+    */
+    'accent': string;
+    /**
+    * Indicate if the button is disabled or not
+    */
+    'disabled': boolean;
+    'focus': () => void;
+    /**
+    * The component left icon.
+    */
+    'leftIcon': string;
+    /**
+    * The component right icon.
+    */
+    'rightIcon': string;
+    /**
+    * The component text.
+    */
+    'text': string;
+  }
+  interface GenesysButtonAttributes extends StencilHTMLAttributes {
+    /**
+    * The component accent (secondary or primary).
+    */
+    'accent'?: string;
+    /**
+    * Indicate if the button is disabled or not
+    */
+    'disabled'?: boolean;
+    /**
+    * The component left icon.
+    */
+    'leftIcon'?: string;
+    /**
+    * The component right icon.
+    */
+    'rightIcon'?: string;
+    /**
+    * The component text.
+    */
+    'text'?: string;
+  }
+
+  interface GenesysList {
+    'focus': () => void;
+    /**
+    * The list. each item should contain a text and a type  an item could have the poperty isDisabled
+    */
+    'items': IListItem[];
+  }
+  interface GenesysListAttributes extends StencilHTMLAttributes {
+    /**
+    * The list. each item should contain a text and a type  an item could have the poperty isDisabled
+    */
+    'items'?: IListItem[];
+  }
+
+  interface GenesysToggle {
+    /**
+    * Indicate if the toggle is checked or not
+    */
+    'checked': boolean;
+    /**
+    * Indicate the checked label
+    */
+    'checkedLabel': string;
+    /**
+    * Indicate if the toggle is disabled or not
+    */
+    'disabled': boolean;
+    /**
+    * Indicate the unchecked label
+    */
+    'uncheckedLabel': string;
+  }
+  interface GenesysToggleAttributes extends StencilHTMLAttributes {
+    /**
+    * Indicate if the toggle is checked or not
+    */
+    'checked'?: boolean;
+    /**
+    * Indicate the checked label
+    */
+    'checkedLabel'?: string;
+    /**
+    * Indicate if the toggle is disabled or not
+    */
+    'disabled'?: boolean;
+    /**
+    * Triggered when the state of the component changed.
+    */
+    'onCheck'?: (event: CustomEvent) => void;
+    /**
+    * Indicate the unchecked label
+    */
+    'uncheckedLabel'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'GenesysButton': Components.GenesysButton;
-    'GenesysToggle': Components.GenesysToggle;
-    'GenesysList': Components.GenesysList;
     'GenesysActionButton': Components.GenesysActionButton;
+    'GenesysButton': Components.GenesysButton;
+    'GenesysList': Components.GenesysList;
+    'GenesysToggle': Components.GenesysToggle;
   }
 
   interface StencilIntrinsicElements {
-    'genesys-button': Components.GenesysButtonAttributes;
-    'genesys-toggle': Components.GenesysToggleAttributes;
-    'genesys-list': Components.GenesysListAttributes;
     'genesys-action-button': Components.GenesysActionButtonAttributes;
+    'genesys-button': Components.GenesysButtonAttributes;
+    'genesys-list': Components.GenesysListAttributes;
+    'genesys-toggle': Components.GenesysToggleAttributes;
   }
 
-
-  interface HTMLGenesysButtonElement extends Components.GenesysButton, HTMLStencilElement {}
-  var HTMLGenesysButtonElement: {
-    prototype: HTMLGenesysButtonElement;
-    new (): HTMLGenesysButtonElement;
-  };
-
-  interface HTMLGenesysToggleElement extends Components.GenesysToggle, HTMLStencilElement {}
-  var HTMLGenesysToggleElement: {
-    prototype: HTMLGenesysToggleElement;
-    new (): HTMLGenesysToggleElement;
-  }
-  interface HTMLGenesysListElement extends Components.GenesysList, HTMLStencilElement {}
-  var HTMLGenesysListElement: {
-    prototype: HTMLGenesysListElement;
-    new (): HTMLGenesysListElement;
-  };
 
   interface HTMLGenesysActionButtonElement extends Components.GenesysActionButton, HTMLStencilElement {}
   var HTMLGenesysActionButtonElement: {
@@ -202,18 +188,36 @@ declare global {
     new (): HTMLGenesysActionButtonElement;
   };
 
+  interface HTMLGenesysButtonElement extends Components.GenesysButton, HTMLStencilElement {}
+  var HTMLGenesysButtonElement: {
+    prototype: HTMLGenesysButtonElement;
+    new (): HTMLGenesysButtonElement;
+  };
+
+  interface HTMLGenesysListElement extends Components.GenesysList, HTMLStencilElement {}
+  var HTMLGenesysListElement: {
+    prototype: HTMLGenesysListElement;
+    new (): HTMLGenesysListElement;
+  };
+
+  interface HTMLGenesysToggleElement extends Components.GenesysToggle, HTMLStencilElement {}
+  var HTMLGenesysToggleElement: {
+    prototype: HTMLGenesysToggleElement;
+    new (): HTMLGenesysToggleElement;
+  };
+
   interface HTMLElementTagNameMap {
-    'genesys-button': HTMLGenesysButtonElement
-    'genesys-toggle': HTMLGenesysToggleElement
-    'genesys-list': HTMLGenesysListElement
     'genesys-action-button': HTMLGenesysActionButtonElement
+    'genesys-button': HTMLGenesysButtonElement
+    'genesys-list': HTMLGenesysListElement
+    'genesys-toggle': HTMLGenesysToggleElement
   }
 
   interface ElementTagNameMap {
-    'genesys-button': HTMLGenesysButtonElement;
-    'genesys-toggle': HTMLGenesysToggleElement;
-    'genesys-list': HTMLGenesysListElement;
     'genesys-action-button': HTMLGenesysActionButtonElement;
+    'genesys-button': HTMLGenesysButtonElement;
+    'genesys-list': HTMLGenesysListElement;
+    'genesys-toggle': HTMLGenesysToggleElement;
   }
 
 

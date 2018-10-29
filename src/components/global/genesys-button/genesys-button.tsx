@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State } from '@stencil/core';
+import { Component, Element, Method, Prop, State } from '@stencil/core';
 
 @Component({
   styleUrl: 'genesys-button.less',
@@ -7,6 +7,7 @@ import { Component, Element, Prop, State } from '@stencil/core';
 export class GenesysButton {
   @Element()
   root: HTMLStencilElement;
+  button: HTMLButtonElement
   /**
    * Indicate if the button is disabled or not
    */
@@ -57,10 +58,16 @@ export class GenesysButton {
       : 'genesys-icon-' + iconName;
   }
 
+  @Method()
+  focus() {
+   this.button.focus();
+  }
+
   render() {
     return (
       <button
         title={this.title}
+        ref={el => this.button = el}
         disabled={this.disabled}
         class={'genesys-' + this.getAccent()}
       >

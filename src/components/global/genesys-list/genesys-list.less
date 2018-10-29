@@ -19,9 +19,16 @@ genesys-list {
             padding: 0px 16px;
             display: flex;
             cursor: pointer;
-            &:hover, &:focus {
-                background: @genesys-dark-blue;
-                color: @genesys-off-white;
+            &:not(.disabled) {
+                &:hover, &:focus {
+                    background: @genesys-dark-blue;
+                    color: @genesys-off-white;
+                }
+            }
+            &.disabled {
+                opacity: 0.5;
+                pointer-events: none;
+                cursor: default;
             }
             &.divider {
                 height: 1px;
