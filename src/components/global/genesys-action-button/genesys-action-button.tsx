@@ -1,6 +1,6 @@
 import { Component, Element, Event, EventEmitter, Listen, Prop, Watch } from '@stencil/core'
-import { KeyCode } from '../../../common-enum'
-import { IListItem } from '../../global/genesys-list/genesys-list-interfaces'
+import { KeyCode } from '../../../common-enums'
+import { IListItem } from '../../../common-interfaces'
 
 @Component({
   styleUrl: 'genesys-action-button.less',
@@ -82,11 +82,13 @@ export class GenesysActionButton {
     const key = event.keyCode;
     if (key === KeyCode.Esc) {
       this.isOpen = false;
-      this.dropdownButton.focus();
+      const e = this.dropdownButton.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]') as HTMLElement;
+      e.focus();
     }
     if (key === KeyCode.Down && !this.listElement.contains(event.target as Node)) {
       this.isOpen = true;
-      this.listElement.focus();
+      const e = this.listElement.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]') as HTMLElement;
+      e.focus();
     }
   }
 
