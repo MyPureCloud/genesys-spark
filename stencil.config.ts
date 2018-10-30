@@ -21,7 +21,8 @@ export const config: Config = {
   namespace: 'genesys-webcomponents',
   outputTargets: [
     {
-      type: 'dist',
+      dir: 'build/dist',
+      type: 'dist'
     },
     {
       type: 'www'
@@ -40,8 +41,16 @@ export const config: Config = {
   ],
   testing: {
     "collectCoverage": true,
-    "coverageDirectory": ".coverage",
-    "coverageReporters": ["json", "lcov", "text", "clover"]
+    "coverageDirectory": "build/test-reports/coverage",
+    "coverageReporters": ["json", "lcov", "text", "clover"],
+    "reporters": [ 
+      "default",
+      [ "jest-junit", 
+        {
+          "outputDirectory": "build/test-reports"
+        } 
+      ]
+    ]
   }
 }
 
