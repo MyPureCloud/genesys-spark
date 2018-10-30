@@ -32,6 +32,7 @@ export class GenesysPaginationButtons {
         <span>
           Page{' '}
           <input
+            class="pagination-current-page-input"
             type="text"
             value={this.currentPage}
             ref={ref => (this.inputRef = ref)}

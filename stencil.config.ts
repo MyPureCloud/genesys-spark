@@ -33,13 +33,13 @@ export const config: Config = {
     })
   ],
   testing: {
-    "collectCoverage": true,
-    "coverageDirectory": ".coverage",
-    "coverageReporters": ["json", "lcov", "text", "clover"]
+    collectCoverage: false,
+    coverageDirectory: '.coverage',
+    coverageReporters: ['json', 'lcov', 'text', 'clover']
   }
-}
+};
 
 exports.devServer = {
   root: 'www',
   watchGlob: '**/**'
-}
+};

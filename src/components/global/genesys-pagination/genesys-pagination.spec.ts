@@ -57,14 +57,30 @@ describe('genesys-pagination', () => {
     });
   });
 
-  describe('totalPages', () => {
+  describe('when calculating the total pages', () => {
     beforeEach(() => {
       component.totalItems = 25;
       component.itemsPerPage = 7;
     });
 
-    it('should calculate the total pages', () => {
-      expect(component.totalPages).toBe(4);
+    it('should take into count both total items and items per page', () => {
+      expect(component.calculatTotalPages()).toBe(4);
+    });
+  });
+
+  describe('when increasing the items per page', () => {
+    beforeEach(() => {
+      component.totalItems = 40;
+      component.itemsPerPage = 25;
+      component.currentPage = 2;
+
+      // the content now all fits on one page
+      component.itemsPerPage = 50;
+      component.componentDidUpdate();
+    });
+
+    it('should not allow current page to remain beyond the new last page', () => {
+      expect(component.currentPage).toBe(1);
     });
   });
 });

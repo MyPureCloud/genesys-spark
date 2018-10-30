@@ -68,6 +68,7 @@ export namespace Components {
   }
 
   interface GenesysPagination {
+    'calculatTotalPages': () => number;
     'currentPage': number;
     'itemsPerPage': number;
     'totalItems': number;

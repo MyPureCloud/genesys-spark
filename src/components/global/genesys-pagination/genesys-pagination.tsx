@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop, Method } from '@stencil/core';
 
 @Component({
   styleUrl: 'genesys-pagination.less',
@@ -11,7 +11,7 @@ export class GenesysPagination {
   @Prop()
   totalItems: number;
 
-  @Prop()
+  @Prop({ mutable: true })
   itemsPerPage: number = 25;
 
   itemsPerPageOptions: number[] = [25, 50, 100];
@@ -19,13 +19,15 @@ export class GenesysPagination {
   @Event()
   pageChanged: EventEmitter<number>;
 
-  get totalPages(): number {
+  @Method()
+  calculatTotalPages(): number {
     return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
   setPage(page: number): void {
-    if (page > this.totalPages) {
-      this.setPage(this.totalPages);
+    const totalPages = this.calculatTotalPages();
+    if (page > totalPages) {
+      this.setPage(totalPages);
       return;
     }
 
@@ -42,16 +44,32 @@ export class GenesysPagination {
     this.pageChanged.emit(this.currentPage);
   }
 
+  componentDidUpdate() {
+    const totalPages = this.calculatTotalPages();
+    if (this.currentPage > totalPages) {
+      this.currentPage = totalPages;
+    }
+  }
+
   render() {
     return (
       <div class="gux-pagination">
-        <genesys-pagination-item-counts />
-        <genesys-pagination-items-per-page />
+        <genesys-pagination-item-counts
+          totalItems={this.totalItems}
+          currentPage={this.currentPage}
+          itemsPerPage={this.itemsPerPage}
+        />
+
+        <genesys-pagination-items-per-page
+          onItemsPerPageChanged={ev => {
+            this.itemsPerPage = ev.detail;
+          }}
+        />
 
         <genesys-pagination-buttons
           class="pagination-buttons"
           currentPage={this.currentPage}
-          totalPages={this.totalPages}
+          totalPages={this.calculatTotalPages()}
           onCurrentPageChanged={ev => this.setPage(ev.detail)}
         />
       </div>
