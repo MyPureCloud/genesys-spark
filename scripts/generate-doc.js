@@ -22,11 +22,13 @@ generateComponentsDocumentation = () => {
   for (var i = 0; i < doc.children.length; i++) {
     var componentType = doc.children[i].name.indexOf('rich') === 1 ? 'rich' : doc.children[i].name.indexOf('feature') === 1 ? 'feature' : 'global'
     var data = {
-      name: doc.children[i].name.replace('global/', '').replace('feature/', '').replace('rich/', '').replace(/'/g, '').replace(/"/g, '').split('/')[0],
+      name: doc.children[i].name,
       props: [],
       methods: [],
       events: []
     }
+    data.name = data.name.replace(/'/g, '').replace(/"/g, '').split('/');
+    data.name = data.name[data.name.length - 1];
     if (!doc.children[i].children) {
       continue
     }

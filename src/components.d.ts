@@ -161,6 +161,91 @@ export namespace Components {
     */
     'svgViewBox'?: string;
   }
+
+  interface GenesysTextField {
+    /**
+    * Clears the input.
+    */
+    'clear': () => void;
+    /**
+    * Timeout between input and validation.
+    */
+    'debounceTimeout': number;
+    /**
+    * Disable the input and prevent interactions.
+    */
+    'disabled': boolean;
+    /**
+    * The input placeholder.
+    */
+    'placeholder': string;
+    /**
+    * Set the input as required.
+    */
+    'required': boolean;
+    /**
+    * The input type.
+    */
+    'type': string;
+    /**
+    * Shows/Hides the update indicator.
+    */
+    'updateIndicator': boolean;
+    /**
+    * The input validation.
+    */
+    'validation': any | `(newValue: string) => boolean` | RegExp;
+    /**
+    * The message displayed on validation failure.
+    */
+    'validationMessage': string;
+    /**
+    * Indicate the input value
+    */
+    'value': string;
+  }
+  interface GenesysTextFieldAttributes extends StencilHTMLAttributes {
+    /**
+    * Timeout between input and validation.
+    */
+    'debounceTimeout'?: number;
+    /**
+    * Disable the input and prevent interactions.
+    */
+    'disabled'?: boolean;
+    /**
+    * Triggered when user inputs.
+    */
+    'onInput'?: (event: CustomEvent) => void;
+    /**
+    * The input placeholder.
+    */
+    'placeholder'?: string;
+    /**
+    * Set the input as required.
+    */
+    'required'?: boolean;
+    /**
+    * The input type.
+    */
+    'type'?: string;
+    /**
+    * Shows/Hides the update indicator.
+    */
+    'updateIndicator'?: boolean;
+    /**
+    * The input validation.
+    */
+    'validation'?: any | `(newValue: string) => boolean` | RegExp;
+    /**
+    * The message displayed on validation failure.
+    */
+    'validationMessage'?: string;
+    /**
+    * Indicate the input value
+    */
+    'value'?: string;
+  }
 }
 
 declare global {
@@ -168,12 +253,14 @@ declare global {
     'GenesysButton': Components.GenesysButton;
     'GenesysToggle': Components.GenesysToggle;
     'GenesysRating': Components.GenesysRating;
+    'GenesysTextField': Components.GenesysTextField;
   }
 
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
     'genesys-toggle': Components.GenesysToggleAttributes;
     'genesys-rating': Components.GenesysRatingAttributes;
+    'genesys-text-field': Components.GenesysTextFieldAttributes;
   }
 
 
@@ -211,14 +298,22 @@ declare global {
     new (): HTMLGenesysRatingElement;
   };
 
+  interface HTMLGenesysTextFieldElement extends Components.GenesysTextField, HTMLStencilElement {}
+  var HTMLGenesysTextFieldElement: {
+    prototype: HTMLGenesysTextFieldElement;
+    new (): HTMLGenesysTextFieldElement;
+  };
+
   interface HTMLElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement
     'genesys-rating': HTMLGenesysRatingElement
+    'genesys-text-field': HTMLGenesysTextFieldElement
   }
 
   interface ElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement;
     'genesys-rating': HTMLGenesysRatingElement;
+    'genesys-text-field': HTMLGenesysTextFieldElement;
   }
 
 
