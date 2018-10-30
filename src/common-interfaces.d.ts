@@ -1,4 +1,4 @@
-import {ListTypeEnum} from './genesys-list-enums'
+import {ListTypeEnum} from './common-enums'
 
 export interface IListItem {
     type?:ListTypeEnum;

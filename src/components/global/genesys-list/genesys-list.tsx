@@ -1,14 +1,14 @@
-import { Component, Method, Prop } from '@stencil/core'
-import { KeyCode } from '../../../common-enum'
-import { ListTypeEnum } from './genesys-list-enums'
-import { IListItem } from './genesys-list-interfaces'
-
+import { Component, Element, Listen, Prop } from '@stencil/core'
+import { KeyCode, ListTypeEnum } from '../../../common-enums'
+import { IListItem } from '../../../common-interfaces'
 
 @Component({
   styleUrl: 'genesys-list.less',
   tag: 'genesys-list'
 })
 export class GenesysList {
+  @Element()
+  root: HTMLStencilElement;
 
   /**
    * The list.
@@ -23,8 +23,11 @@ export class GenesysList {
     }
   }
 
-  @Method()
-  focus() {
+  @Listen('focusin')
+  onFocus(e :FocusEvent) {
+    if (this.root.contains(e.relatedTarget as Node)) {
+      return;
+    }
     this.items.forEach((i) => {
       if (i.el) {
         i.el.setAttribute('tabindex', '-1');
@@ -57,34 +60,31 @@ export class GenesysList {
         break;
       case KeyCode.Up:
         if (currentIndex) {
-          item.el.setAttribute('tabindex', '-1');
           const i = this.items.indexOf(filteredList[currentIndex - 1]);
           el = this.items[i].el;
         }
         break;
       case KeyCode.Home:
         if (currentIndex) {
-          item.el.setAttribute('tabindex', '-1');
           const i = this.items.indexOf(filteredList[0]);
           el = this.items[i].el;
         }
         break;
       case KeyCode.Down:
         if (currentIndex !== filteredList.length - 1) {
-          item.el.setAttribute('tabindex', '-1');
           const i = this.items.indexOf(filteredList[currentIndex + 1]);
           el = this.items[i].el;
         }
         break;
       case KeyCode.End:
         if (currentIndex !== filteredList.length - 1) {
-          item.el.setAttribute('tabindex', '-1');
           const i = this.items.indexOf(filteredList[filteredList.length - 1]);
           el = this.items[i].el;
         }
         break;
     }
     if (el) {
+      item.el.setAttribute('tabindex', '-1');
       el.setAttribute('tabindex', '0');
       el.focus();
     }
