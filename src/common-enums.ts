@@ -9,3 +9,9 @@ export enum KeyCode {
   End = 35,
   Esc = 27
 }
+
+export enum ListTypeEnum {
+  Divider = 'divider',
+  Item = 'item',
+  Header = 'header'
+}

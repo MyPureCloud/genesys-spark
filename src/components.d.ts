@@ -10,7 +10,7 @@ import '@stencil/core';
 
 import {
   IListItem,
-} from './components/global/genesys-list/genesys-list-interfaces';
+} from './common-interfaces';
 
 
 export namespace Components {
@@ -73,7 +73,6 @@ export namespace Components {
     * Indicate if the button is disabled or not
     */
     'disabled': boolean;
-    'focus': () => void;
     /**
     * The component left icon.
     */
@@ -111,7 +110,6 @@ export namespace Components {
   }
 
   interface GenesysList {
-    'focus': () => void;
     /**
     * The list. each item should contain a text and a type  an item could have the poperty isDisabled
     */
@@ -122,6 +120,91 @@ export namespace Components {
     * The list. each item should contain a text and a type  an item could have the poperty isDisabled
     */
     'items'?: IListItem[];
+  }
+
+  interface GenesysTextField {
+    /**
+    * Clears the input.
+    */
+    'clear': () => void;
+    /**
+    * Timeout between input and validation.
+    */
+    'debounceTimeout': number;
+    /**
+    * Disable the input and prevent interactions.
+    */
+    'disabled': boolean;
+    /**
+    * The input placeholder.
+    */
+    'placeholder': string;
+    /**
+    * Set the input as required.
+    */
+    'required': boolean;
+    /**
+    * The input type.
+    */
+    'type': string;
+    /**
+    * Shows/Hides the update indicator.
+    */
+    'updateIndicator': boolean;
+    /**
+    * The input validation.
+    */
+    'validation': any | `(newValue: string) => boolean` | RegExp;
+    /**
+    * The message displayed on validation failure.
+    */
+    'validationMessage': string;
+    /**
+    * Indicate the input value
+    */
+    'value': string;
+  }
+  interface GenesysTextFieldAttributes extends StencilHTMLAttributes {
+    /**
+    * Timeout between input and validation.
+    */
+    'debounceTimeout'?: number;
+    /**
+    * Disable the input and prevent interactions.
+    */
+    'disabled'?: boolean;
+    /**
+    * Triggered when user inputs.
+    */
+    'onInput'?: (event: CustomEvent) => void;
+    /**
+    * The input placeholder.
+    */
+    'placeholder'?: string;
+    /**
+    * Set the input as required.
+    */
+    'required'?: boolean;
+    /**
+    * The input type.
+    */
+    'type'?: string;
+    /**
+    * Shows/Hides the update indicator.
+    */
+    'updateIndicator'?: boolean;
+    /**
+    * The input validation.
+    */
+    'validation'?: any | `(newValue: string) => boolean` | RegExp;
+    /**
+    * The message displayed on validation failure.
+    */
+    'validationMessage'?: string;
+    /**
+    * Indicate the input value
+    */
+    'value'?: string;
   }
 
   interface GenesysToggle {
@@ -171,6 +254,7 @@ declare global {
     'GenesysActionButton': Components.GenesysActionButton;
     'GenesysButton': Components.GenesysButton;
     'GenesysList': Components.GenesysList;
+    'GenesysTextField': Components.GenesysTextField;
     'GenesysToggle': Components.GenesysToggle;
   }
 
@@ -178,6 +262,7 @@ declare global {
     'genesys-action-button': Components.GenesysActionButtonAttributes;
     'genesys-button': Components.GenesysButtonAttributes;
     'genesys-list': Components.GenesysListAttributes;
+    'genesys-text-field': Components.GenesysTextFieldAttributes;
     'genesys-toggle': Components.GenesysToggleAttributes;
   }
 
@@ -200,6 +285,12 @@ declare global {
     new (): HTMLGenesysListElement;
   };
 
+  interface HTMLGenesysTextFieldElement extends Components.GenesysTextField, HTMLStencilElement {}
+  var HTMLGenesysTextFieldElement: {
+    prototype: HTMLGenesysTextFieldElement;
+    new (): HTMLGenesysTextFieldElement;
+  };
+
   interface HTMLGenesysToggleElement extends Components.GenesysToggle, HTMLStencilElement {}
   var HTMLGenesysToggleElement: {
     prototype: HTMLGenesysToggleElement;
@@ -210,6 +301,7 @@ declare global {
     'genesys-action-button': HTMLGenesysActionButtonElement
     'genesys-button': HTMLGenesysButtonElement
     'genesys-list': HTMLGenesysListElement
+    'genesys-text-field': HTMLGenesysTextFieldElement
     'genesys-toggle': HTMLGenesysToggleElement
   }
 
@@ -217,6 +309,7 @@ declare global {
     'genesys-action-button': HTMLGenesysActionButtonElement;
     'genesys-button': HTMLGenesysButtonElement;
     'genesys-list': HTMLGenesysListElement;
+    'genesys-text-field': HTMLGenesysTextFieldElement;
     'genesys-toggle': HTMLGenesysToggleElement;
   }
 
