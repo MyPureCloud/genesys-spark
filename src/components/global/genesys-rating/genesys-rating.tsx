@@ -1,5 +1,5 @@
 import { Component, Element, Event, EventEmitter, Prop, State } from '@stencil/core';
-import { KeyCode } from '../../../common-enum';
+import { KeyCode } from '../../../common-enums';
 
 @Component({
   styleUrl: 'genesys-rating.less',
@@ -120,6 +120,9 @@ export class GenesysRating {
       if (this.rating === newRating) {
         newRating += 0.5;
       }
+    }
+    if (this.rating >= newRating) {
+      newRating = 0;
     }
     this.updateRating( newRating );
   }
