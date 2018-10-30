@@ -1,0 +1,17 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:8.12.0
+pipelines:
+  default:
+    - step:
+       script:
+         - echo "-- Genesys WebComponents --"
+         - node -v
+         - npm -v
+         - npm install
+         - npm run build
+         - npm run test.unit
+         - echo "Fanfare!"

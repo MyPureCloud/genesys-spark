@@ -22,6 +22,5 @@ describe('genesys-button', () => {
       component.accent = 'sss';
       expect(component.getAccent()).toEqual('secondary');
     });
-
   });
 });

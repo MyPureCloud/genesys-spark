@@ -77,6 +77,47 @@ export namespace Components {
     'itemsPerPage'?: number;
     'totalItems'?: number;
   }
+
+  interface GenesysToggle {
+    /**
+    * Indicate if the toggle is checked or not
+    */
+    'checked': boolean;
+    /**
+    * Indicate the checked label
+    */
+    'checkedLabel': string;
+    /**
+    * Indicate if the toggle is disabled or not
+    */
+    'disabled': boolean;
+    /**
+    * Indicate the unchecked label
+    */
+    'uncheckedLabel': string;
+  }
+  interface GenesysToggleAttributes extends StencilHTMLAttributes {
+    /**
+    * Indicate if the toggle is checked or not
+    */
+    'checked'?: boolean;
+    /**
+    * Indicate the checked label
+    */
+    'checkedLabel'?: string;
+    /**
+    * Indicate if the toggle is disabled or not
+    */
+    'disabled'?: boolean;
+    /**
+    * Triggered when the state of the component changed.
+    */
+    'onCheck'?: (event: CustomEvent) => void;
+    /**
+    * Indicate the unchecked label
+    */
+    'uncheckedLabel'?: string;
+  }
 }
 
 declare global {
@@ -84,12 +125,14 @@ declare global {
     'GenesysButton': Components.GenesysButton;
     'GenesysPaginationButtons': Components.GenesysPaginationButtons;
     'GenesysPagination': Components.GenesysPagination;
+    'GenesysToggle': Components.GenesysToggle;
   }
 
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
     'genesys-pagination-buttons': Components.GenesysPaginationButtonsAttributes;
     'genesys-pagination': Components.GenesysPaginationAttributes;
+    'genesys-toggle': Components.GenesysToggleAttributes;
   }
 
 
@@ -111,16 +154,24 @@ declare global {
     new (): HTMLGenesysPaginationElement;
   };
 
+  interface HTMLGenesysToggleElement extends Components.GenesysToggle, HTMLStencilElement {}
+  var HTMLGenesysToggleElement: {
+    prototype: HTMLGenesysToggleElement;
+    new (): HTMLGenesysToggleElement;
+  };
+
   interface HTMLElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement
     'genesys-pagination-buttons': HTMLGenesysPaginationButtonsElement
     'genesys-pagination': HTMLGenesysPaginationElement
+    'genesys-toggle': HTMLGenesysToggleElement
   }
 
   interface ElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement;
     'genesys-pagination-buttons': HTMLGenesysPaginationButtonsElement;
     'genesys-pagination': HTMLGenesysPaginationElement;
+    'genesys-toggle': HTMLGenesysToggleElement;
   }
 
 
