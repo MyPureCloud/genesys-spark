@@ -114,15 +114,18 @@ export class GenesysRating {
     if (this.disabled) {
       return;
     }
-    newRating += 1;
     if (this.allowHalfRatings) {
-      newRating -= 0.5;
+      newRating += 0.5;
       if (this.rating === newRating) {
         newRating += 0.5;
+      } else if (this.rating === (newRating + 0.5)) {
+        newRating = 0;
       }
-    }
-    if (this.rating >= newRating) {
-      newRating = 0;
+    } else {
+      newRating += 1;
+      if (this.rating === newRating) {
+        newRating = 0;
+      }
     }
     this.updateRating( newRating );
   }
