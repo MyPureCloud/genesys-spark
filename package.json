@@ -7,12 +7,12 @@
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
-    "build/dist/"
+    "dist/"
   ],
   "scripts": {
     "build": "npm run stencil build && npm run storybook",
-    "stencil": "stencil build --docs",
-    "stencil.dev": "stencil build --dev --watch --serve --no-open --docs",
+    "stencil": "stencil build --docs --prod",
+    "stencil.dev": "stencil build --dev --watch --es5 --docs",
     "test.unit": "stencil test --spec",
     "test.e2e": "stencil test --e2e",
     "test.screenshot": "stencil test --e2e --screenshot",

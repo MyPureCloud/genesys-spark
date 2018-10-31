@@ -21,11 +21,8 @@ export const config: Config = {
   namespace: 'genesys-webcomponents',
   outputTargets: [
     {
-      dir: 'build/dist',
+      dir: 'dist',
       type: 'dist'
-    },
-    {
-      type: 'www'
     },
     distTarget
   ],
@@ -52,9 +49,4 @@ export const config: Config = {
       ]
     ]
   }
-}
-
-exports.devServer = {
-  root: 'www',
-  watchGlob: '**/**'
 }
