@@ -37,7 +37,7 @@ export const config: Config = {
     })
   ],
   testing: {
-    "browserArgs": ["no-sandbox"],
+    "browserArgs": ["--no-sandbox"],
     "browserHeadless": true,
     "collectCoverage": true,
     "coverageDirectory": "build/test-reports/coverage",
