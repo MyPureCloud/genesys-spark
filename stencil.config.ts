@@ -37,6 +37,8 @@ export const config: Config = {
     })
   ],
   testing: {
+    "browserArgs": ["no-sandbox"],
+    "browserHeadless": true,
     "collectCoverage": true,
     "coverageDirectory": "build/test-reports/coverage",
     "coverageReporters": ["json", "lcov", "text", "clover"],
