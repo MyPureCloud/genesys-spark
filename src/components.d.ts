@@ -57,46 +57,6 @@ export namespace Components {
     'text'?: string;
   }
 
-  interface GenesysToggle {
-    /**
-    * Indicate if the toggle is checked or not
-    */
-    'checked': boolean;
-    /**
-    * Indicate the checked label
-    */
-    'checkedLabel': string;
-    /**
-    * Indicate if the toggle is disabled or not
-    */
-    'disabled': boolean;
-    /**
-    * Indicate the unchecked label
-    */
-    'uncheckedLabel': string;
-  }
-  interface GenesysToggleAttributes extends StencilHTMLAttributes {
-    /**
-    * Indicate if the toggle is checked or not
-    */
-    'checked'?: boolean;
-    /**
-    * Indicate the checked label
-    */
-    'checkedLabel'?: string;
-    /**
-    * Indicate if the toggle is disabled or not
-    */
-    'disabled'?: boolean;
-    /**
-    * Triggered when the state of the component changed.
-    */
-    'onCheck'?: (event: CustomEvent) => void;
-    /**
-    * Indicate the unchecked label
-    */
-    'uncheckedLabel'?: string;
-  }
   interface GenesysRating {
     /**
     * Determines if half ratings are allowed
@@ -162,105 +122,59 @@ export namespace Components {
     'svgViewBox'?: string;
   }
 
-  interface GenesysTextField {
+  interface GenesysToggle {
     /**
-    * Clears the input.
+    * Indicate if the toggle is checked or not
     */
-    'clear': () => void;
+    'checked': boolean;
     /**
-    * Timeout between input and validation.
+    * Indicate the checked label
     */
-    'debounceTimeout': number;
+    'checkedLabel': string;
     /**
-    * Disable the input and prevent interactions.
+    * Indicate if the toggle is disabled or not
     */
     'disabled': boolean;
     /**
-    * The input placeholder.
+    * Indicate the unchecked label
     */
-    'placeholder': string;
-    /**
-    * Set the input as required.
-    */
-    'required': boolean;
-    /**
-    * The input type.
-    */
-    'type': string;
-    /**
-    * Shows/Hides the update indicator.
-    */
-    'updateIndicator': boolean;
-    /**
-    * The input validation.
-    */
-    'validation': any | `(newValue: string) => boolean` | RegExp;
-    /**
-    * The message displayed on validation failure.
-    */
-    'validationMessage': string;
-    /**
-    * Indicate the input value
-    */
-    'value': string;
+    'uncheckedLabel': string;
   }
-  interface GenesysTextFieldAttributes extends StencilHTMLAttributes {
+  interface GenesysToggleAttributes extends StencilHTMLAttributes {
     /**
-    * Timeout between input and validation.
+    * Indicate if the toggle is checked or not
     */
-    'debounceTimeout'?: number;
+    'checked'?: boolean;
     /**
-    * Disable the input and prevent interactions.
+    * Indicate the checked label
+    */
+    'checkedLabel'?: string;
+    /**
+    * Indicate if the toggle is disabled or not
     */
     'disabled'?: boolean;
     /**
-    * Triggered when user inputs.
+    * Triggered when the state of the component changed.
     */
-    'onInput'?: (event: CustomEvent) => void;
+    'onCheck'?: (event: CustomEvent) => void;
     /**
-    * The input placeholder.
+    * Indicate the unchecked label
     */
-    'placeholder'?: string;
-    /**
-    * Set the input as required.
-    */
-    'required'?: boolean;
-    /**
-    * The input type.
-    */
-    'type'?: string;
-    /**
-    * Shows/Hides the update indicator.
-    */
-    'updateIndicator'?: boolean;
-    /**
-    * The input validation.
-    */
-    'validation'?: any | `(newValue: string) => boolean` | RegExp;
-    /**
-    * The message displayed on validation failure.
-    */
-    'validationMessage'?: string;
-    /**
-    * Indicate the input value
-    */
-    'value'?: string;
+    'uncheckedLabel'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'GenesysButton': Components.GenesysButton;
-    'GenesysToggle': Components.GenesysToggle;
     'GenesysRating': Components.GenesysRating;
-    'GenesysTextField': Components.GenesysTextField;
+    'GenesysToggle': Components.GenesysToggle;
   }
 
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
-    'genesys-toggle': Components.GenesysToggleAttributes;
     'genesys-rating': Components.GenesysRatingAttributes;
-    'genesys-text-field': Components.GenesysTextFieldAttributes;
+    'genesys-toggle': Components.GenesysToggleAttributes;
   }
 
 
@@ -268,6 +182,12 @@ declare global {
   var HTMLGenesysButtonElement: {
     prototype: HTMLGenesysButtonElement;
     new (): HTMLGenesysButtonElement;
+  };
+
+  interface HTMLGenesysRatingElement extends Components.GenesysRating, HTMLStencilElement {}
+  var HTMLGenesysRatingElement: {
+    prototype: HTMLGenesysRatingElement;
+    new (): HTMLGenesysRatingElement;
   };
 
   interface HTMLGenesysToggleElement extends Components.GenesysToggle, HTMLStencilElement {}
@@ -278,42 +198,14 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement
+    'genesys-rating': HTMLGenesysRatingElement
     'genesys-toggle': HTMLGenesysToggleElement
   }
 
   interface ElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement;
-    'genesys-toggle': HTMLGenesysToggleElement;
-    'GenesysRating': Components.GenesysRating;
-  }
-
-  interface StencilIntrinsicElements {
-    'genesys-rating': Components.GenesysRatingAttributes;
-  }
-
-
-  interface HTMLGenesysRatingElement extends Components.GenesysRating, HTMLStencilElement {}
-  var HTMLGenesysRatingElement: {
-    prototype: HTMLGenesysRatingElement;
-    new (): HTMLGenesysRatingElement;
-  };
-
-  interface HTMLGenesysTextFieldElement extends Components.GenesysTextField, HTMLStencilElement {}
-  var HTMLGenesysTextFieldElement: {
-    prototype: HTMLGenesysTextFieldElement;
-    new (): HTMLGenesysTextFieldElement;
-  };
-
-  interface HTMLElementTagNameMap {
-    'genesys-button': HTMLGenesysButtonElement
-    'genesys-rating': HTMLGenesysRatingElement
-    'genesys-text-field': HTMLGenesysTextFieldElement
-  }
-
-  interface ElementTagNameMap {
-    'genesys-button': HTMLGenesysButtonElement;
     'genesys-rating': HTMLGenesysRatingElement;
-    'genesys-text-field': HTMLGenesysTextFieldElement;
+    'genesys-toggle': HTMLGenesysToggleElement;
   }
 
 
