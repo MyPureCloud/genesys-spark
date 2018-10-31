@@ -101,6 +101,71 @@ export namespace Components {
     'onItemsPerPageChanged'?: (event: CustomEvent<number>) => void;
   }
 
+  interface GenesysRating {
+    /**
+    * Determines if half ratings are allowed
+    */
+    'allowHalfRatings': boolean;
+    /**
+    * Determines if the user can set a rating
+    */
+    'disabled': boolean;
+    /**
+    * The labels for each stars
+    */
+    'labels': string[];
+    /**
+    * The maximum rating possible
+    */
+    'maxRating': number;
+    /**
+    * The rating
+    */
+    'rating': number;
+    /**
+    * The polygon points to create the svg. By default this is a star!
+    */
+    'svgPoints': string;
+    /**
+    * The view box for the SVG
+    */
+    'svgViewBox': string;
+  }
+  interface GenesysRatingAttributes extends StencilHTMLAttributes {
+    /**
+    * Determines if half ratings are allowed
+    */
+    'allowHalfRatings'?: boolean;
+    /**
+    * Determines if the user can set a rating
+    */
+    'disabled'?: boolean;
+    /**
+    * The labels for each stars
+    */
+    'labels'?: string[];
+    /**
+    * The maximum rating possible
+    */
+    'maxRating'?: number;
+    /**
+    * Triggered when the value changed
+    */
+    'onUpdate'?: (event: CustomEvent) => void;
+    /**
+    * The rating
+    */
+    'rating'?: number;
+    /**
+    * The polygon points to create the svg. By default this is a star!
+    */
+    'svgPoints'?: string;
+    /**
+    * The view box for the SVG
+    */
+    'svgViewBox'?: string;
+  }
+
   interface GenesysToggle {
     /**
     * Indicate if the toggle is checked or not
@@ -150,6 +215,7 @@ declare global {
     'GenesysPagination': Components.GenesysPagination;
     'GenesysPaginationItemCounts': Components.GenesysPaginationItemCounts;
     'GenesysPaginationItemsPerPage': Components.GenesysPaginationItemsPerPage;
+    'GenesysRating': Components.GenesysRating;
     'GenesysToggle': Components.GenesysToggle;
   }
 
@@ -159,6 +225,7 @@ declare global {
     'genesys-pagination': Components.GenesysPaginationAttributes;
     'genesys-pagination-item-counts': Components.GenesysPaginationItemCountsAttributes;
     'genesys-pagination-items-per-page': Components.GenesysPaginationItemsPerPageAttributes;
+    'genesys-rating': Components.GenesysRatingAttributes;
     'genesys-toggle': Components.GenesysToggleAttributes;
   }
 
@@ -193,6 +260,12 @@ declare global {
     new (): HTMLGenesysPaginationItemsPerPageElement;
   };
 
+  interface HTMLGenesysRatingElement extends Components.GenesysRating, HTMLStencilElement {}
+  var HTMLGenesysRatingElement: {
+    prototype: HTMLGenesysRatingElement;
+    new (): HTMLGenesysRatingElement;
+  };
+
   interface HTMLGenesysToggleElement extends Components.GenesysToggle, HTMLStencilElement {}
   var HTMLGenesysToggleElement: {
     prototype: HTMLGenesysToggleElement;
@@ -205,6 +278,7 @@ declare global {
     'genesys-pagination': HTMLGenesysPaginationElement
     'genesys-pagination-item-counts': HTMLGenesysPaginationItemCountsElement
     'genesys-pagination-items-per-page': HTMLGenesysPaginationItemsPerPageElement
+    'genesys-rating': HTMLGenesysRatingElement
     'genesys-toggle': HTMLGenesysToggleElement
   }
 
@@ -214,6 +288,7 @@ declare global {
     'genesys-pagination': HTMLGenesysPaginationElement;
     'genesys-pagination-item-counts': HTMLGenesysPaginationItemCountsElement;
     'genesys-pagination-items-per-page': HTMLGenesysPaginationItemsPerPageElement;
+    'genesys-rating': HTMLGenesysRatingElement;
     'genesys-toggle': HTMLGenesysToggleElement;
   }
 
