@@ -57,6 +57,71 @@ export namespace Components {
     'text'?: string;
   }
 
+  interface GenesysRating {
+    /**
+    * Determines if half ratings are allowed
+    */
+    'allowHalfRatings': boolean;
+    /**
+    * Determines if the user can set a rating
+    */
+    'disabled': boolean;
+    /**
+    * The labels for each stars
+    */
+    'labels': string[];
+    /**
+    * The maximum rating possible
+    */
+    'maxRating': number;
+    /**
+    * The rating
+    */
+    'rating': number;
+    /**
+    * The polygon points to create the svg. By default this is a star!
+    */
+    'svgPoints': string;
+    /**
+    * The view box for the SVG
+    */
+    'svgViewBox': string;
+  }
+  interface GenesysRatingAttributes extends StencilHTMLAttributes {
+    /**
+    * Determines if half ratings are allowed
+    */
+    'allowHalfRatings'?: boolean;
+    /**
+    * Determines if the user can set a rating
+    */
+    'disabled'?: boolean;
+    /**
+    * The labels for each stars
+    */
+    'labels'?: string[];
+    /**
+    * The maximum rating possible
+    */
+    'maxRating'?: number;
+    /**
+    * Triggered when the value changed
+    */
+    'onUpdate'?: (event: CustomEvent) => void;
+    /**
+    * The rating
+    */
+    'rating'?: number;
+    /**
+    * The polygon points to create the svg. By default this is a star!
+    */
+    'svgPoints'?: string;
+    /**
+    * The view box for the SVG
+    */
+    'svgViewBox'?: string;
+  }
+
   interface GenesysToggle {
     /**
     * Indicate if the toggle is checked or not
@@ -102,11 +167,13 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'GenesysButton': Components.GenesysButton;
+    'GenesysRating': Components.GenesysRating;
     'GenesysToggle': Components.GenesysToggle;
   }
 
   interface StencilIntrinsicElements {
     'genesys-button': Components.GenesysButtonAttributes;
+    'genesys-rating': Components.GenesysRatingAttributes;
     'genesys-toggle': Components.GenesysToggleAttributes;
   }
 
@@ -117,6 +184,12 @@ declare global {
     new (): HTMLGenesysButtonElement;
   };
 
+  interface HTMLGenesysRatingElement extends Components.GenesysRating, HTMLStencilElement {}
+  var HTMLGenesysRatingElement: {
+    prototype: HTMLGenesysRatingElement;
+    new (): HTMLGenesysRatingElement;
+  };
+
   interface HTMLGenesysToggleElement extends Components.GenesysToggle, HTMLStencilElement {}
   var HTMLGenesysToggleElement: {
     prototype: HTMLGenesysToggleElement;
@@ -125,11 +198,13 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement
+    'genesys-rating': HTMLGenesysRatingElement
     'genesys-toggle': HTMLGenesysToggleElement
   }
 
   interface ElementTagNameMap {
     'genesys-button': HTMLGenesysButtonElement;
+    'genesys-rating': HTMLGenesysRatingElement;
     'genesys-toggle': HTMLGenesysToggleElement;
   }
 
