@@ -12,7 +12,7 @@
   "scripts": {
     "build": "npm run stencil build && npm run storybook",
     "stencil": "stencil build --docs",
-    "stencil.dev": "stencil build --docs --dev --watch --serve --no-open",
+    "stencil.dev": "stencil build --dev --watch --serve --no-open --docs",
     "test.unit": "stencil test --spec",
     "test.e2e": "stencil test --e2e",
     "test.screenshot": "stencil test --e2e --screenshot",
@@ -20,7 +20,7 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "storybook": "./node_modules/.bin/build-storybook -c .storybook -o .out",
     "storybook.dev": "./node_modules/.bin/start-storybook -p 9001 -c .storybook -s ./www,./src/style",
-    "create-component": "node scripts/create-component.js && npm run docs",
+    "create-component": "node scripts/create-component.js",
     "dev": "./node_modules/.bin/concurrently  \"npm run storybook.dev\" \"npm run stencil.dev\"",
     "format": "prettier ./src/**/*.ts ./src/**/*.tsx",
     "format.fix": "npm run format -- --write",
