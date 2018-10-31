@@ -33,7 +33,7 @@ export const config: Config = {
     })
   ],
   testing: {
-    collectCoverage: false,
+    collectCoverage: true,
     coverageDirectory: '.coverage',
     coverageReporters: ['json', 'lcov', 'text', 'clover']
   }
