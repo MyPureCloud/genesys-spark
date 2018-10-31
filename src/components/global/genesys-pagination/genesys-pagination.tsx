@@ -14,10 +14,14 @@ export class GenesysPagination {
   @Prop({ mutable: true })
   itemsPerPage: number = 25;
 
+  @Prop()
   itemsPerPageOptions: number[] = [25, 50, 100];
 
   @Event()
   pageChanged: EventEmitter<number>;
+
+  @Event()
+  itemsPerPageChanged: EventEmitter<number>;
 
   @Method()
   calculatTotalPages(): number {
