@@ -53,6 +53,13 @@ export class GenesysActionButton {
     this.isOpen = !this.isOpen
   }
 
+  @Listen('focusout') 
+  handleFocusOut(e: FocusEvent) {
+    if (!this.root.contains(e.relatedTarget as Node)) {
+      this.isOpen = false;
+    }
+  }
+
   @Listen('body:keydown')
   handleKeyDown(e) {
     if (this.root.contains(e.target)) {
@@ -87,8 +94,10 @@ export class GenesysActionButton {
     }
     if (key === KeyCode.Down && !this.listElement.contains(event.target as Node)) {
       this.isOpen = true;
-      const e = this.listElement.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]') as HTMLElement;
-      e.focus();
+      setTimeout(() => {
+        const e = this.listElement.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]') as HTMLElement;
+        e.focus();
+      });
     }
   }
 
