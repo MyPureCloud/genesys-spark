@@ -25,5 +25,5 @@ pipelines:
          - npm -v
          - npm install
          - npm run build
-         - npm run test.unit
+         - npm run test
          - echo "Fanfare!"
