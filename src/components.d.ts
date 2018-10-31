@@ -71,11 +71,14 @@ export namespace Components {
     'calculatTotalPages': () => number;
     'currentPage': number;
     'itemsPerPage': number;
+    'itemsPerPageOptions': number[];
     'totalItems': number;
   }
   interface GenesysPaginationAttributes extends StencilHTMLAttributes {
     'currentPage'?: number;
     'itemsPerPage'?: number;
+    'itemsPerPageOptions'?: number[];
+    'onItemsPerPageChanged'?: (event: CustomEvent<number>) => void;
     'onPageChanged'?: (event: CustomEvent<number>) => void;
     'totalItems'?: number;
   }
