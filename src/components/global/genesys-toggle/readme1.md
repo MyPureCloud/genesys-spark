@@ -6,3 +6,5 @@ You can use keyboard to change the state of the component.
 Space key and enter key are binded.
 This component supports dark theme mode also.
 A check event is triggered when the state of the component changed.
+
+<!-- Auto Generated Below -->

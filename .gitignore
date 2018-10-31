@@ -19,6 +19,7 @@ log.txt
 .vscode/
 .versions/
 .coverage/
+components.d.ts
 node_modules/
 $RECYCLE.BIN/
 
