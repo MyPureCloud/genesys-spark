@@ -1,0 +1,45 @@
+# genesys-text-field
+
+
+<!-- Auto Generated Below -->
+
+
+## Properties
+
+| Property           | Attribute            | Description                                  | Type      |
+| ------------------ | -------------------- | -------------------------------------------- | --------- |
+| `debounceTimeout`  | `debounce-timeout`   | Timeout between input and validation.        | `number`  |
+| `disabled`         | `disabled`           | Disable the input and prevent interactions.  | `boolean` |
+| `errorMessageType` | `error-message-type` | The message type (warning or error)          | `string`  |
+| `errorMessage`     | `error-message`      | The message displayed on validation failure. | `string`  |
+| `label`            | `label`              | The input label.                             | `string`  |
+| `placeholder`      | `placeholder`        | The input placeholder.                       | `string`  |
+| `type`             | `type`               | The input type.                              | `string`  |
+| `updateIndicator`  | `update-indicator`   | Shows/Hides the update indicator.            | `boolean` |
+| `validation`       | --                   | The input validation.                        | `any`     |
+| `value`            | `value`              | Indicate the input value                     | `string`  |
+
+
+## Events
+
+| Event   | Detail | Description                 |
+| ------- | ------ | --------------------------- |
+| `input` |        | Triggered when user inputs. |
+
+
+## Methods
+
+### `clear() => void`
+
+Clears the input.
+
+#### Returns
+
+Type: `void`
+
+
+
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*
