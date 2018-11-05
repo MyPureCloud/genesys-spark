@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { select, text, withKnobs } from '@storybook/addon-knobs/polymer';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
 import { withReadme  } from 'storybook-readme';
@@ -34,6 +34,7 @@ storiesOf('Genesys Components', module)
           label=${text('label', 'label')}
           error-message=${text('error-message', '')}
           error-message-type=${text('error-message-type', 'error')}
+          update-indicator=${boolean('update-indicator', true)}
           value=${text('value', 'value')}
         >
         </genesys-text-field>

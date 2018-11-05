@@ -86,6 +86,7 @@ export class GenesysTextField {
   @State()
   internalErrorMessage: string;
 
+  id: string;
   timeout: NodeJS.Timer;
 
   /**
@@ -101,16 +102,17 @@ export class GenesysTextField {
     this.input.emit(event.target.value);
   }
 
-  clearValidation() {
-    clearTimeout(this.timeout);
+  createId () {
+    const s4 = () =>
+      Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
   }
 
   @Watch('value')
   watchValue(newValue: string) {
-    if (!this.validation) {
-      return;
-    }
-    this.clearValidation();
+    clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
       switch (true) {
         case this.validation && typeof this.validation === 'object':
@@ -144,16 +146,10 @@ export class GenesysTextField {
         this.classList.splice(this.classList.indexOf(Types[type]), 1);
       }
     }
+    this.classList.splice(this.classList.indexOf('updated'), 1);
     if (this.updateIndicator && isUpdated) {
-      if (this.classList.indexOf('updated') === -1) {
-        this.classList = [...this.classList, 'updated'];
-      }
-    } else {
-      if (this.classList.indexOf('updated') !== -1) {
-        this.classList.splice(this.classList.indexOf('updated'), 1);
-      }
+      this.classList = [...this.classList, 'updated'];
     }
-
     if (this.label && this.label.length < 10) {
       this.classList = [...this.classList, 'flex'];
     }
@@ -165,6 +161,7 @@ export class GenesysTextField {
 
   componentDidLoad() {
     this.internalErrorMessage = this.errorMessage;
+    this.id = this.createId();
     this.updateClassList(false);
   }
 
@@ -198,11 +195,13 @@ export class GenesysTextField {
     return (
       <div class={this.classList.join(' ')}>
         <div class="genesys-text-field">
-          <label>{this.label}</label>
+          <label id={this.id}>{this.label}</label>
           <div class="genesys-field">
             <input
+              aria-labelledby={this.id}
               type={this.type}
               value={this.value}
+              title={this.placeholder || this.label}
               ref={el => (this.inputElement = el)}
               disabled={this.disabled}
               placeholder={this.placeholder}
