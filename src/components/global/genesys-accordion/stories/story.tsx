@@ -14,11 +14,12 @@ storiesOf('Genesys Components', module)
       const el = document.createElement('div');
       render(html`
         <genesys-accordion id='interactive'>
-          <div slot="first">
+          <div slot="First Section">
             <span>I'm a span in a div.</span>
+            <button>I'm the button.</button>
           </div>
-          <p slot="second">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <span slot="third">I'm a span.</span>
+          <p slot="Second Section">I'm a p.</p>
+          <span slot="Third Section">I'm a span.</span>
           <h1>I'm an h1, but i'm not a slot.</h1>
         </genesys-accordion>
       `, el);
