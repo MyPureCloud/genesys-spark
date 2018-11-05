@@ -1,0 +1,110 @@
+// Variables part
+
+genesys-accordion {
+  ul.genesys-accordion {
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: @genesys-off-white-bg;
+    .section {
+      color: @genesys-grey-type;
+      .header {
+        border-top: 1px solid @genesys-border;
+        height: 40px;
+        line-height: 40px;
+        font-weight: bold;
+        padding-left: 16px;
+        cursor: pointer;
+        button {
+          color: @genesys-grey-type;
+          cursor: pointer;
+          float: right;
+          padding: 0 12px;
+          height: 39px;
+          border: none;
+          background: none;
+          display: block;
+          outline: none;
+          font-size: 16px;
+        }
+        &:hover {
+          button {
+            color: @genesys-dark-blue;
+          }
+        }
+      }
+      .content {
+        display: none;
+        padding: 16px;
+      }
+      &.opened {
+        .header {
+          border-bottom: 1px solid @genesys-border;
+          button {
+            transform: rotate(180deg);
+          }
+        }
+        .content {
+          display: block;
+        }
+      }
+      &:last-of-type {
+        &.opened {
+          .header {
+            border-bottom: 1px solid @genesys-border;
+          }
+        }
+        .content {
+          border-bottom: 1px solid @genesys-border;
+        }
+      }
+    }
+  }
+}
+
+// Theming
+.genesys-accordion-dark-theme {
+  ul.genesys-accordion {
+    background-color: @genesys-panel;
+    .section {
+      color: @genesys-off-white-type;
+      .header {
+        border-top: 1px solid @genesys-grey-1;
+        button {
+          color: @genesys-off-white-type;
+        }
+        &:hover {
+          button {
+            color: @genesys-blue;
+          }
+        }
+      }
+      &.opened {
+        .header {
+          border-bottom: 1px solid @genesys-grey-1;
+          button {
+            color: @genesys-off-white-type;
+          }
+        }
+      }
+      &:last-of-type {
+        .header {
+          border-bottom: 1px solid @genesys-grey-1;
+        }
+        .content {
+          border-bottom: 1px solid @genesys-grey-1;
+        }
+      }
+    }
+  }
+};
+
+.genesys-dark-theme {
+  genesys-accordion {
+    .genesys-accordion-dark-theme;
+  }
+}
+.genesys-accordion.genesys-dark-theme {
+  .genesys-accordion-dark-theme;
+}
