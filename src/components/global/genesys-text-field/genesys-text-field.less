@@ -1,0 +1,161 @@
+// Variables part
+@backgroundColor: @genesys-off-white;
+@textcolor: @genesys-grey-2;
+@border: @genesys-border-alt;
+@placeholder: @genesys-pale-gray-2;
+@iconColor: #B1BECC;
+
+@darkBackgroundColor: @genesys-grey-2;
+@darkTextcolor: @genesys-off-white;
+@darkBorder: @genesys-grey-1;
+@darkPlaceholder: @genesys-pale-gray-2;
+@darkIconColor: #B1BECC;
+
+@focusOutline: fade(@genesys-blue, 50%);
+@alertColor: @genesys-alert;
+
+genesys-text-field {
+  display: block;
+  > div {
+    margin: 4px 0;
+    &.error, &.warning {
+      input {
+        border-color: @alertColor;
+        outline: 0;
+        &:focus,
+        &:hover {
+          border-color: @alertColor;
+          outline: 0;
+        }
+      }
+      .genesys-error {
+        color: @alertColor;
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+    &.warning {
+      .genesys-error {
+        i {
+          color: @genesys-warning;
+        }
+      }
+    }
+    &.updated {
+      &::before {
+        content: '';
+        border-left: 0px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid @alertColor;
+        position: absolute;
+        z-index: 10;
+      }
+    }
+    &.flex .genesys-text-field {
+      display: flex;
+    }
+  }
+  .genesys-text-field {
+    label {
+      margin-right: 8px;
+      height: 32px;
+      line-height: 30px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    > div.genesys-field {
+      position: relative;
+      flex: 1;
+      height: 32px;
+    }
+  }
+  .genesys-field {
+    position: relative;
+    input {
+      height: 32px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 4px 25px 4px 12px;
+      background-color: @backgroundColor;
+      background-image: none;
+      border: 1px solid @border;
+      border-radius: 2px;
+      font-size: 12px;
+      cursor: pointer;
+      line-height: 1.66666667;
+      color: @textcolor;
+      &::placeholder {
+        color: @placeholder;
+      }
+      &::-webkit-input-placeholder {
+        color: @placeholder;
+      }
+      &::-ms-input-placeholder {
+        color: @placeholder;
+      }
+      &::-moz-placeholder {
+        color: @placeholder;
+      }
+      &:focus {
+        outline: 2px solid @focusOutline;
+      }
+    }
+    button {
+      color: @iconColor;
+      position: absolute;
+      top: 1px;
+      right: 3px;
+      bottom: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+      display: block;
+      outline: none;
+      overflow: hidden;
+    }
+  }
+}
+
+// Theming
+.genesys-text-field-dark-theme {
+  .genesys-field {
+    input {
+      background-color: @darkBackgroundColor;
+      border: 1px solid @darkBorder;
+      color: @darkTextcolor;
+      &::placeholder {
+        color: @darkPlaceholder;
+      }
+      &::-webkit-input-placeholder {
+        color: @darkPlaceholder;
+      }
+      &::-ms-input-placeholder {
+        color: @darkPlaceholder;
+      }
+      &::-moz-placeholder {
+        color: @darkPlaceholder;
+      }
+    }
+
+    button {
+      color: @darkIconColor;
+    }
+  }
+
+  &:not([disabled]):hover,
+  &:not([disabled]):focus {
+    button {
+      opacity: 1;
+    }
+  }
+}
+
+.genesys-dark-theme {
+  genesys-text-field {
+    .genesys-text-field-dark-theme;
+  }
+}
+.genesys-text-field.genesys-dark-theme {
+  .genesys-text-field-dark-theme;
+}
