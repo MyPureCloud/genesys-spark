@@ -10,7 +10,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run stencil build && npm run storybook",
+    "build": "npm run stencil && npm run storybook",
     "stencil": "stencil build --docs --prod",
     "stencil.dev": "stencil build --dev --watch --es5 --docs",
     "test.unit": "stencil test --spec",

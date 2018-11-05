@@ -22,9 +22,9 @@ SVG used for the star is also a prop. You can specify a custom svg view box and 
 
 ## Events
 
-| Event    | Description                      |
-| -------- | -------------------------------- |
-| `update` | Triggered when the value changed |
+| Event    | Detail | Description                      |
+| -------- | ------ | -------------------------------- |
+| `update` |        | Triggered when the value changed |
 
 
 ----------------------------------------------

@@ -22,9 +22,9 @@ A check event is triggered when the state of the component changed.
 
 ## Events
 
-| Event   | Description                                        |
-| ------- | -------------------------------------------------- |
-| `check` | Triggered when the state of the component changed. |
+| Event   | Detail | Description                                        |
+| ------- | ------ | -------------------------------------------------- |
+| `check` |        | Triggered when the state of the component changed. |
 
 
 ----------------------------------------------
