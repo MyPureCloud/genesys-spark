@@ -1,3 +1,4 @@
+build/
 dist/
 www/
 .docs/
@@ -12,11 +13,13 @@ log.txt
 *.sublime-project
 *.sublime-workspace
 
+.out/
 .stencil/
 .idea/
 .vscode/
 .versions/
 .coverage/
+components.d.ts
 node_modules/
 $RECYCLE.BIN/
 

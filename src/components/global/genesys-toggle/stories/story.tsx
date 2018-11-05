@@ -1,9 +1,9 @@
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
-import {action} from '@storybook/addon-actions';
 import { withReadme  } from 'storybook-readme';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs/polymer';
 
-import README from 'MD/genesys-toggle/README.md';
+import README from '../readme.md';
 
 storiesOf('Genesys Components', module)
 .addDecorator(withKnobs)

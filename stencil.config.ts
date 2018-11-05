@@ -1,26 +1,30 @@
 import { Config } from '@stencil/core';
+import { OutputTargetDist } from '@stencil/core/dist/declarations';
 import { less } from '@stencil/less';
 
+const distTarget: OutputTargetDist = {
+  dir: 'www/static',
+  type: 'dist'
+}
 export const config: Config = {
   copy: [
     {
-      src: 'style/fonts',
-      dest: 'fonts'
+      dest: 'fonts',
+      src: 'style/fonts'
     },
     {
-      src: 'style/icons',
-      dest: 'icons'
+      dest: 'icons',
+      src: 'style/icons'
     }
   ],
-  excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**'],
+  excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**', '**/**.md'],
   namespace: 'genesys-webcomponents',
   outputTargets: [
     {
+      dir: 'dist',
       type: 'dist'
     },
-    {
-      type: 'www'
-    }
+    distTarget
   ],
   plugins: [
     less({
@@ -33,13 +37,18 @@ export const config: Config = {
     })
   ],
   testing: {
+    "browserArgs": ["--no-sandbox"],
+    "browserHeadless": true,
     "collectCoverage": true,
-    "coverageDirectory": ".coverage",
-    "coverageReporters": ["json", "lcov", "text", "clover"]
+    "coverageDirectory": "build/test-reports/coverage",
+    "coverageReporters": ["json", "lcov", "text", "clover"],
+    "reporters": [ 
+      "default",
+      [ "jest-junit", 
+        {
+          "outputDirectory": "build/test-reports"
+        } 
+      ]
+    ]
   }
-}
-
-exports.devServer = {
-  root: 'www',
-  watchGlob: '**/**'
 }

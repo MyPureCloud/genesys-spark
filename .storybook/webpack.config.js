@@ -1,13 +1,8 @@
 // load the default config generator.
 const path = require('path');
-const ROOT_PATH = path.resolve(process.cwd());
+const stencil = require('@stencil/webpack');
 
 module.exports = (baseConfig, env, defaultConfig) => {
-
-  defaultConfig.resolve.alias = {
-    ...defaultConfig.resolve.alias,
-    "MD": path.resolve(__dirname, "../.docs")
-  };
 
   defaultConfig.module.rules.push({
     resourceQuery: /blockType=docs/,
@@ -18,5 +13,17 @@ module.exports = (baseConfig, env, defaultConfig) => {
     ]
   });
 
+  defaultConfig.resolve = {
+      ...defaultConfig.resolve,
+      alias: {'genesys-webcomponents': '../www/static/genesys-webcomponents'}
+  }
+  
+  defaultConfig.plugins.push(
+    new stencil.StencilPlugin({
+      collections: [
+        './dist/genesys-webcomponents'
+      ]
+    })
+  )
   return defaultConfig;
 };

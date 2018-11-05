@@ -43,7 +43,7 @@ createComponentStencilFiles = (componentName, componentType, dir) => {
     fs.writeFileSync(path.resolve(dir, componentName + '/' + componentName + '.less'), Handlebars.compile(lessTpl)(data))
     fs.writeFileSync(path.resolve(dir, componentName + '/tests/' + componentName + '.spec.ts'), Handlebars.compile(specTpl)(data))
     fs.writeFileSync(path.resolve(dir, componentName + '/tests/' + componentName + '.e2e.ts'), Handlebars.compile(e2eTpl)(data))
-    fs.writeFileSync(path.resolve(dir, componentName + '/README.md'), Handlebars.compile(mdTpl)(data))
+    fs.writeFileSync(path.resolve(dir, componentName + '/readme.md'), Handlebars.compile(mdTpl)(data))
     fs.writeFileSync(path.resolve(dir, componentName + '/stories/story.tsx'), Handlebars.compile(storyTpl)(data))
 }
 
