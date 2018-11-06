@@ -26,9 +26,9 @@ export class GenesysPaginationItemsPerPage {
             this.itemsPerPageChanged.emit(parseInt(this.select.value, 10))
           }
         >
-          <option>25</option>
-          <option>50</option>
-          <option>100</option>
+          {(this.itemsPerPageOptions || []).map(opt => (
+            <option selected={opt === this.itemsPerPage}>{opt}</option>
+          ))}
         </select>
       </div>
     );

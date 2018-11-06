@@ -49,7 +49,7 @@ storiesOf('Pagination', module)
       const component = createComponent();
       component.totalItems = number('totalItems', 250);
       component.currentPage = number('currentPage', 3);
-      component.itemsPerPage = number('itemsPerPage', 50);
+      component.itemsPerPage = number('itemsPerPage', 20);
       component.itemsPerPageOptions = array('itemsPerPage', [10, 20]);
 
       return component;

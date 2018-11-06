@@ -32,6 +32,24 @@ describe('genesys-pagination-items-per-page', () => {
       50
     );
   });
+
+  it('should respect the items-per-page settings', async () => {
+    const component = await buildComponent(
+      'items-per-page="40" items-per-page-options="[20, 30, 40]"'
+    );
+
+    // TODO: I think iPPO isn't properly being coerced into an array, so the
+    // property is actually just being set as the string value
+
+    const select = await component.select;
+    expect(await select.getProperty('value')).toEqual('40');
+
+    const selectOptions = await component.selectOptions;
+    expect(selectOptions.length).toBe(3);
+    expect(await selectOptions[0].textContent).toEqual('20');
+    expect(await selectOptions[1].textContent).toEqual('30');
+    expect(await selectOptions[2].textContent).toEqual('40');
+  });
 });
 
 const buildComponent = async (props: string) => {

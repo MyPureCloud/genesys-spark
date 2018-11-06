@@ -64,11 +64,17 @@ export class GenesysPagination {
           itemsPerPage={this.itemsPerPage}
         />
 
-        <genesys-pagination-items-per-page
-          onItemsPerPageChanged={ev => {
-            this.itemsPerPage = ev.detail;
-          }}
-        />
+        {!this.itemsPerPageOptions ? (
+          <div />
+        ) : (
+          <genesys-pagination-items-per-page
+            itemsPerPage={this.itemsPerPage}
+            itemsPerPageOptions={this.itemsPerPageOptions}
+            onItemsPerPageChanged={ev => {
+              this.itemsPerPage = ev.detail;
+            }}
+          />
+        )}
 
         <genesys-pagination-buttons
           class="pagination-buttons"
