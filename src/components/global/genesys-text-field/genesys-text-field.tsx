@@ -60,7 +60,7 @@ export class GenesysTextField {
    * The message displayed on validation failure.
    */
   @Prop({ mutable: true })
-  errorMessage: string;
+  errorMessage: string = '';
 
   /**
    * The message type (warning or error)
@@ -114,39 +114,50 @@ export class GenesysTextField {
   watchValue(newValue: string) {
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
-      switch (true) {
-        case this.validation && typeof this.validation === 'object':
-          if (!this.validation.test(newValue)) {
-            this.errorMessageType = Types.Error;
-            this.errorMessage = this.internalErrorMessage;
-          } else {
-            this.errorMessage = ''
-          }
-          break;
-        case this.validation && typeof this.validation === 'function':
-          const validation = this.validation(newValue);
-          if (validation) {
-            if (validation.error) {
-              this.errorMessageType = Types.Error;
-              this.errorMessage = validation.error;
-            } else if (validation.warning) {
-              this.errorMessageType = Types.Warning;
-              this.errorMessage = validation.warning;
-            }
-          }
-          break;
-      }
-      this.updateClassList(true);
+      this._testValue(newValue); 
     }, this.debounceTimeout);
   }
 
-  updateClassList(isUpdated) {
-    for (const type in Types) {
-      if (this.classList.indexOf(Types[type]) !== -1) {
-        this.classList.splice(this.classList.indexOf(Types[type]), 1);
-      }
+  _testValue(value: string) {
+    if (!this.validation) {
+      this.updateClassList(true);
+      return;
     }
-    this.classList.splice(this.classList.indexOf('updated'), 1);
+    switch (typeof this.validation) {
+      case 'object':
+        if (!this.validation.test) {
+          break;
+        }
+        if (!this.validation.test(value)) {
+          this.errorMessageType = Types.Error;
+          this.errorMessage = this.internalErrorMessage;
+        } else {
+          this.errorMessage = '';
+        }
+        break;
+      case 'function':
+        const validation = this.validation(value);
+        if (validation) {
+          if (validation.warning) {
+            this.errorMessageType = Types.Warning;
+            this.errorMessage = validation.warning;
+          } else if (validation.error) {
+            this.errorMessageType = Types.Error;
+            this.errorMessage = validation.error;
+          } else {
+            this.errorMessage = '';
+          }
+        } else {
+          this.errorMessageType = Types.Error;
+          this.errorMessage = this.internalErrorMessage;
+        }
+        break;
+    }
+    this.updateClassList(true);
+  }
+
+  updateClassList(isUpdated) {
+    this.classList = [];
     if (this.updateIndicator && isUpdated) {
       this.classList = [...this.classList, 'updated'];
     }
@@ -163,6 +174,7 @@ export class GenesysTextField {
     this.internalErrorMessage = this.errorMessage;
     this.id = this.createId();
     this.updateClassList(false);
+    this._testValue(this.value); 
   }
 
   getIconByMessageType(type) {

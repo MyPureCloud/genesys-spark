@@ -4,8 +4,14 @@ This component is an html input component having update indicator or error/warni
 You can specify a validation function to add this test on input. You can do it by yourself using the input event and
 changing error-message attribute.
 
-<!-- Auto Generated Below -->
+## Example usage
 
+``` html
+<genesys-text-field>
+</genesys-text-field>
+```
+
+<!-- Auto Generated Below -->
 
 ## Properties
 
