@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { select, array, withKnobs } from '@storybook/addon-knobs/polymer';
+import { select, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
 import { withReadme  } from 'storybook-readme';

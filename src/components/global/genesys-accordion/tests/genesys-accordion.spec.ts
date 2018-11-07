@@ -5,10 +5,27 @@ describe('genesys-accordion', () => {
     expect(new GenesysAccordion()).toBeTruthy();
   });
 
-  describe('formatting', () => {
-    it('returns empty string for no names defined', () => {
-      const component = new GenesysAccordion();
+  describe('rendering', () => {
+    let component;
+    beforeEach(async () => {
+      component = new GenesysAccordion();
+    });
+    it('should have default values', () => {
       expect(component.sections).toEqual([]);
+    });
+
+    describe('methods', () => {
+      beforeEach(async () => {
+        component.sections = ['First', 'Second', 'Third'];
+      });
+      it('getPreviousSlot', () => {
+        expect(component.getPreviousSlot('First')).toEqual('Third');
+        expect(component.getPreviousSlot('Second')).toEqual('First');
+      });
+      it('getNextSlot', () => {
+        expect(component.getNextSlot('First')).toEqual('Second');
+        expect(component.getNextSlot('Third')).toEqual('First');
+      });
     });
   });
 });

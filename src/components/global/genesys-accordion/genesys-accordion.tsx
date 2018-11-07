@@ -108,7 +108,7 @@ export class GenesysAccordion {
           onKeyDown={(e) => this.onKeyDown(e, slot)}>
           <div class="header" onClick={() => this.toggle(slot)}>
             <span>{slot}</span>
-            <button type="button" class="genesys-icon-dropdown-arrow" tabindex="-1"></button>
+            <button aria-hidden="true" type="button" class="genesys-icon-dropdown-arrow" tabindex="-1"></button>
           </div>
           <div class="content"><slot name={slot}/></div>
         </li>
