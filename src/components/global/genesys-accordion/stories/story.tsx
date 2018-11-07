@@ -1,4 +1,3 @@
-import { action } from '@storybook/addon-actions';
 import { select, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
@@ -23,10 +22,6 @@ storiesOf('Genesys Components', module)
           <h1>I'm an h1, but i'm not a slot.</h1>
         </genesys-accordion>
       `, el);
-      setTimeout(() => {
-        const it = document.getElementById('interactive');
-        it.addEventListener('custom', e => action('custom')(e.detail));
-      }, 100);
       document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
