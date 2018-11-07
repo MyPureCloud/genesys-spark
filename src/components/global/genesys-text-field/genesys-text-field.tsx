@@ -21,12 +21,6 @@ export class GenesysTextField {
   inputElement: HTMLInputElement;
 
   /**
-   * The input type.
-   */
-  @Prop()
-  type: string = 'text';
-
-  /**
    * Indicate the input value
    */
   @Prop({ mutable: true, reflectToAttr: true })
@@ -196,7 +190,7 @@ export class GenesysTextField {
           <div class="genesys-field">
             <input
               aria-label={this.label}
-              type={this.type}
+              type='text'
               value={this.value}
               ref={el => (this.inputElement = el)}
               disabled={this.disabled}

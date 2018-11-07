@@ -24,7 +24,6 @@ changing error-message attribute.
 | `errorMessage`     | `error-message`      | The message displayed on validation failure. | `string`  |
 | `label`            | `label`              | The input label.                             | `string`  |
 | `placeholder`      | `placeholder`        | The input placeholder.                       | `string`  |
-| `type`             | `type`               | The input type.                              | `string`  |
 | `updateIndicator`  | `update-indicator`   | Shows/Hides the update indicator.            | `boolean` |
 | `validation`       | --                   | The input validation.                        | `any`     |
 | `value`            | `value`              | Indicate the input value                     | `string`  |
