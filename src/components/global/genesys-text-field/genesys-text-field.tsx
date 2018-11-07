@@ -86,7 +86,7 @@ export class GenesysTextField {
   @State()
   internalErrorMessage: string;
   firstValue: string;
-  timeout: NodeJS.Timer;
+  timeout: any;
 
   /**
    * Triggered when user inputs.
@@ -103,8 +103,8 @@ export class GenesysTextField {
 
   @Watch('value')
   watchValue(newValue: string) {
-    clearTimeout(this.timeout);
-    this.timeout = setTimeout(() => {
+    window.clearTimeout(this.timeout);
+    this.timeout = window.setTimeout(() => {
       this._testValue(newValue); 
     }, this.debounceTimeout);
   }
