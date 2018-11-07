@@ -1,4 +1,11 @@
-import { Component, Event, EventEmitter, Prop, Method } from '@stencil/core';
+import {
+  Component,
+  Event,
+  EventEmitter,
+  Prop,
+  Method,
+  State
+} from '@stencil/core';
 
 @Component({
   styleUrl: 'genesys-pagination.less',
@@ -11,10 +18,10 @@ export class GenesysPagination {
   @Prop()
   totalItems: number;
 
-  @Prop({ mutable: true })
+  @State()
   itemsPerPage: number = 25;
 
-  @Prop()
+  @State()
   itemsPerPageOptions: number[] = [25, 50, 100];
 
   @Event()
@@ -22,12 +29,21 @@ export class GenesysPagination {
 
   @Event()
   itemsPerPageChanged: EventEmitter<number>;
+  itemsPerPageComponent: HTMLGenesysPaginationItemsPerPageElement;
 
-  @Method()
   calculatTotalPages(): number {
     return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
+  @Method()
+  setItemsPerPage(value: number, options: number[] = undefined): void {
+    this.itemsPerPageOptions = options;
+    this.itemsPerPage = value;
+
+    this.itemsPerPageComponent.setItemsPerPage(value, options);
+  }
+
+  @Method()
   setPage(page: number): void {
     const totalPages = this.calculatTotalPages();
     if (page > totalPages) {
@@ -48,7 +64,7 @@ export class GenesysPagination {
     this.pageChanged.emit(this.currentPage);
   }
 
-  componentDidUpdate() {
+  componentWillUpdate() {
     const totalPages = this.calculatTotalPages();
     if (this.currentPage > totalPages) {
       this.currentPage = totalPages;
@@ -64,12 +80,13 @@ export class GenesysPagination {
           itemsPerPage={this.itemsPerPage}
         />
 
-        {!this.itemsPerPageOptions ? (
+        {!this.itemsPerPageOptions || !this.itemsPerPageOptions.length ? (
           <div />
         ) : (
           <genesys-pagination-items-per-page
-            itemsPerPage={this.itemsPerPage}
-            itemsPerPageOptions={this.itemsPerPageOptions}
+            ref={ref =>
+              (this.itemsPerPageComponent = ref as HTMLGenesysPaginationItemsPerPageElement)
+            }
             onItemsPerPageChanged={ev => {
               this.itemsPerPage = ev.detail;
             }}

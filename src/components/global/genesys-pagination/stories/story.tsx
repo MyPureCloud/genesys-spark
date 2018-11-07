@@ -1,9 +1,9 @@
 import { action } from '@storybook/addon-actions';
-import { array, number, withKnobs } from '@storybook/addon-knobs/polymer';
+import { array, number, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/polymer';
 import { withReadme } from 'storybook-readme';
 
-import README from 'MD/genesys-pagination/README.md';
+import readme from '../readme.md';
 
 const createWrapper = story => {
   const wrapper = document.createElement('div');
@@ -36,7 +36,7 @@ storiesOf('Pagination', module)
   .addDecorator(createActionLoggers)
   .add(
     'Simple',
-    withReadme(README, () => {
+    withReadme(readme, () => {
       const component = createComponent();
       component.totalItems = number('totalItems', 250);
 
@@ -45,24 +45,36 @@ storiesOf('Pagination', module)
   )
   .add(
     'Complex',
-    withReadme(README, () => {
+    withReadme(readme, () => {
       const component = createComponent();
       component.totalItems = number('totalItems', 250);
       component.currentPage = number('currentPage', 3);
-      component.itemsPerPage = number('itemsPerPage', 20);
-      component.itemsPerPageOptions = array('itemsPerPage', [10, 20]);
+
+      const itemsPerPage = number('setItemsPerPage(value)', 20);
+      const itemsPerPageOptions = array('setItemsPerPage(options)', [
+        10,
+        20
+      ]).map(i => parseInt(i, 10));
+
+      component.componentOnReady().then(() => {
+        component.setItemsPerPage(itemsPerPage, itemsPerPageOptions);
+      });
 
       return component;
     })
   )
   .add(
-    'Preset Items Per Page',
-    withReadme(README, () => {
+    'No Items Per Page options',
+    withReadme(readme, () => {
       const component = createComponent();
       component.totalItems = number('totalItems', 250);
       component.currentPage = number('currentPage', 3);
-      component.itemsPerPage = number('itemsPerPage', 50);
-      component.itemsPerPageOptions = null;
+
+      const itemsPerPage = number('setItemsPerPage(value)', 20);
+
+      component.componentOnReady().then(() => {
+        component.setItemsPerPage(itemsPerPage, []);
+      });
 
       return component;
     })

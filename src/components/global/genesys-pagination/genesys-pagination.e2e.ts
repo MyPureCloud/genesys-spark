@@ -74,4 +74,16 @@ describe('genesys-pagination', () => {
 
     expect(await currentPageInput.getProperty('value')).toBe('1');
   });
+
+  it('should hide the items per page dropdown if there are no items per page options', async () => {
+    const page = await newE2EPage();
+    await page.setContent('<genesys-pagination></genesys-paginiation>');
+
+    const component = await page.find('genesys-pagination');
+    await component.callMethod('setItemsPerPage', 30, []);
+    await page.waitForChanges();
+
+    const currentPageInput = await page.find('.pagination-items-per-page');
+    expect(currentPageInput).toBeFalsy();
+  });
 });

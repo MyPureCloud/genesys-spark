@@ -1,5 +1,6 @@
 import { EventSpy } from '@stencil/core/dist/declarations';
 import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
+import { GenesysPaginationItemsPerPage } from './genesys-pagination-items-per-page';
 
 describe('genesys-pagination-items-per-page', () => {
   it('renders', async () => {
@@ -34,12 +35,10 @@ describe('genesys-pagination-items-per-page', () => {
   });
 
   it('should respect the items-per-page settings', async () => {
-    const component = await buildComponent(
-      'items-per-page="40" items-per-page-options="[20, 30, 40]"'
-    );
+    const component = await buildComponent('');
 
-    // TODO: I think iPPO isn't properly being coerced into an array, so the
-    // property is actually just being set as the string value
+    await component.setItemsPerPage(40, [20, 30, 40]);
+    await component.page.waitForChanges();
 
     const select = await component.select;
     expect(await select.getProperty('value')).toEqual('40');
@@ -82,5 +81,10 @@ class ItemsPerPageComponent {
 
   async selectOption(value: string): Promise<void> {
     await this.page.select('select', value);
+  }
+
+  async setItemsPerPage(value: number, options: number[] = undefined): Promise<void> {
+    const root = await this.root;
+    await root.callMethod('setItemsPerPage', value, options);
   }
 }
