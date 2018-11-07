@@ -24,24 +24,12 @@ describe('genesys-text-field', () => {
       expect(component.classList.length).toBe(2);
     })
   });
-  describe('createId', () => {
-    it('should create an unique id', () => {
-      const component = new GenesysTextField();
-      const id1 = component.createId();
-      const id2 = component.createId();
-      expect(id1).not.toBeNull();
-      expect(id1.split('-').length).toBe(5);
-      expect(id2).not.toEqual(id1);
-    });
-  });
   describe('componentDidLoad', () => {
-    it('should create set id and internalErrorMessage', () => {
+    it('should create set internalErrorMessage', () => {
       const component = new GenesysTextField();
       component.errorMessage = 'error';
       component.componentDidLoad();
       expect(component.internalErrorMessage).toBe('error');
-      expect(component.id).toBeDefined();
-      expect(component.id.split('-').length).toBe(5);
     });
   });
   describe('getIconByMessageType', () => {

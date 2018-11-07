@@ -85,8 +85,7 @@ export class GenesysTextField {
 
   @State()
   internalErrorMessage: string;
-
-  id: string;
+  firstValue: string;
   timeout: NodeJS.Timer;
 
   /**
@@ -102,14 +101,6 @@ export class GenesysTextField {
     this.input.emit(event.target.value);
   }
 
-  createId () {
-    const s4 = () =>
-      Math.floor((1 + Math.random()) * 0x10000)
-        .toString(16)
-        .substring(1);
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
-  }
-
   @Watch('value')
   watchValue(newValue: string) {
     clearTimeout(this.timeout);
@@ -120,23 +111,18 @@ export class GenesysTextField {
 
   _testValue(value: string) {
     if (!this.validation) {
-      this.updateClassList(true);
+      this.updateClassList();
       return;
     }
-    switch (typeof this.validation) {
-      case 'object':
-        if (!this.validation.test) {
-          break;
-        }
-        if (!this.validation.test(value)) {
-          this.errorMessageType = Types.Error;
-          this.errorMessage = this.internalErrorMessage;
-        } else {
-          this.errorMessage = '';
-        }
-        break;
-      case 'function':
-        const validation = this.validation(value);
+    if (this.validation instanceof RegExp) {
+      if (!this.validation.test(value)) {
+        this.errorMessageType = Types.Error;
+        this.errorMessage = this.internalErrorMessage;
+      } else {
+        this.errorMessage = '';
+      }
+    } else if (typeof this.validation === 'function') {
+      const validation = this.validation(value);
         if (validation) {
           if (validation.warning) {
             this.errorMessageType = Types.Warning;
@@ -151,13 +137,13 @@ export class GenesysTextField {
           this.errorMessageType = Types.Error;
           this.errorMessage = this.internalErrorMessage;
         }
-        break;
     }
-    this.updateClassList(true);
+    this.updateClassList();
   }
 
-  updateClassList(isUpdated) {
+  updateClassList() {
     this.classList = [];
+    const isUpdated = this.value !== this.firstValue;
     if (this.updateIndicator && isUpdated) {
       this.classList = [...this.classList, 'updated'];
     }
@@ -172,8 +158,7 @@ export class GenesysTextField {
 
   componentDidLoad() {
     this.internalErrorMessage = this.errorMessage;
-    this.id = this.createId();
-    this.updateClassList(false);
+    this.firstValue = this.value;
     this._testValue(this.value); 
   }
 
@@ -190,7 +175,7 @@ export class GenesysTextField {
   _clear(event) {
     this.clear();
     this.emitInput(event);
-    this.updateClassList(false);
+    this.updateClassList();
   }
 
   /**
@@ -207,13 +192,12 @@ export class GenesysTextField {
     return (
       <div class={this.classList.join(' ')}>
         <div class="genesys-text-field">
-          <label id={this.id}>{this.label}</label>
+          <label>{this.label}</label>
           <div class="genesys-field">
             <input
-              aria-labelledby={this.id}
+              aria-label={this.label}
               type={this.type}
               value={this.value}
-              title={this.placeholder || this.label}
               ref={el => (this.inputElement = el)}
               disabled={this.disabled}
               placeholder={this.placeholder}

@@ -1,18 +1,18 @@
 // Variables part
-@backgroundColor: @genesys-off-white;
-@textcolor: @genesys-grey-2;
+@background-color: @genesys-off-white;
+@text-color: @genesys-grey-2;
 @border: @genesys-border-alt;
 @placeholder: @genesys-pale-gray-2;
-@iconColor: #B1BECC;
+@icon-color: #B1BECC;
 
-@darkBackgroundColor: @genesys-grey-2;
-@darkTextcolor: @genesys-off-white;
-@darkBorder: @genesys-grey-1;
-@darkPlaceholder: @genesys-pale-gray-2;
-@darkIconColor: #B1BECC;
+@dark-background-color: @genesys-grey-2;
+@dark-text-color: @genesys-off-white;
+@dark-border: @genesys-grey-1;
+@dark-placeholder: @genesys-pale-gray-2;
+@dark-icon-color: #B1BECC;
 
-@focusOutline: fade(@genesys-blue, 50%);
-@alertColor: @genesys-alert;
+@focus-outline: fade(@genesys-blue, 50%);
+@alert-color: @genesys-alert;
 
 genesys-text-field {
   display: block;
@@ -20,16 +20,16 @@ genesys-text-field {
     margin: 4px 0;
     &.error, &.warning {
       input {
-        border-color: @alertColor;
+        border-color: @alert-color;
         outline: 0;
         &:focus,
         &:hover {
-          border-color: @alertColor;
+          border-color: @alert-color;
           outline: 0;
         }
       }
       .genesys-error {
-        color: @alertColor;
+        color: @alert-color;
         i {
           margin-right: 4px;
         }
@@ -47,7 +47,7 @@ genesys-text-field {
         content: '';
         border-left: 0px solid transparent;
         border-right: 7px solid transparent;
-        border-top: 7px solid @alertColor;
+        border-top: 7px solid @alert-color;
         position: absolute;
         z-index: 10;
       }
@@ -77,14 +77,14 @@ genesys-text-field {
       width: 100%;
       box-sizing: border-box;
       padding: 4px 25px 4px 12px;
-      background-color: @backgroundColor;
+      background-color: @background-color;
       background-image: none;
       border: 1px solid @border;
       border-radius: 2px;
       font-size: 12px;
       cursor: pointer;
       line-height: 1.66666667;
-      color: @textcolor;
+      color: @text-color;
       &::placeholder {
         color: @placeholder;
       }
@@ -98,11 +98,11 @@ genesys-text-field {
         color: @placeholder;
       }
       &:focus {
-        outline: 2px solid @focusOutline;
+        outline: 2px solid @focus-outline;
       }
     }
     button {
-      color: @iconColor;
+      color: @icon-color;
       position: absolute;
       top: 1px;
       right: 3px;
@@ -121,25 +121,25 @@ genesys-text-field {
 .genesys-text-field-dark-theme {
   .genesys-field {
     input {
-      background-color: @darkBackgroundColor;
-      border: 1px solid @darkBorder;
-      color: @darkTextcolor;
+      background-color: @dark-background-color;
+      border: 1px solid @dark-border;
+      color: @dark-text-color;
       &::placeholder {
-        color: @darkPlaceholder;
+        color: @dark-placeholder;
       }
       &::-webkit-input-placeholder {
-        color: @darkPlaceholder;
+        color: @dark-placeholder;
       }
       &::-ms-input-placeholder {
-        color: @darkPlaceholder;
+        color: @dark-placeholder;
       }
       &::-moz-placeholder {
-        color: @darkPlaceholder;
+        color: @dark-placeholder;
       }
     }
 
     button {
-      color: @darkIconColor;
+      color: @dark-icon-color;
     }
   }
 
