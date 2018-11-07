@@ -62,7 +62,7 @@
     "polymer-webpack-loader": "^2.0.3",
     "prettier": "^1.14.3",
     "puppeteer": "1.8.0",
-    "storybook-readme": "^4.0.0-beta1",
+    "storybook-readme": "^4.0.2",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "typedoc": "^0.13.0",
