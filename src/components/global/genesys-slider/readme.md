@@ -17,9 +17,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Events
 
-| Event    | Detail | Description                                 |
-| -------- | ------ | ------------------------------------------- |
-| `update` |        | Triggered 2s after the component is loaded. |
+| Event    | Detail | Description                         |
+| -------- | ------ | ----------------------------------- |
+| `update` |        | Triggered when the value is changed |
 
 
 ----------------------------------------------

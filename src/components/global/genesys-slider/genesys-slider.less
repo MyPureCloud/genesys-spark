@@ -1,13 +1,38 @@
 // Variables part
 
 genesys-slider {
+  .range-tooltip {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+}
+.range-tooltip:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #999999;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -1px;
+}
 
+input:active {
+  + .range-tooltip {
+    display: block;
+  }
+}
 }
 
 // Theming
 .genesys-slider-dark-theme {
     color: @genesys-off-white;
-};
+}
 
 .genesys-dark-theme {
     genesys-slider {

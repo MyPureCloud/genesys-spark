@@ -1,4 +1,4 @@
-import { Event, EventEmitter, Component, Prop } from '@stencil/core';
+import { Event, EventEmitter, Component, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'genesys-slider',
@@ -16,15 +16,20 @@ export class GenesysSlider {
   /**
    * Indocates the value of the slider
    **/
-  @Prop({ mutable: true, reflectToAttr: true }) value: number = this.min;
+  @Prop({ mutable: true, reflectToAttr: true }) value: number;
   /**
    * Indicate if the input box
    **/
   @Prop() displayTextBox: boolean = false;
 
+  @State() placement: {};
+
+  sliderInput: HTMLInputElement;
+  sliderTooltip: HTMLElement;
+
   /**
-   * Triggered 2s after the component is loaded.
-   * @return the current fullname
+   * Triggered when the value is changed
+   * @return the current value
    */
   @Event() update: EventEmitter;
 
@@ -34,7 +39,22 @@ export class GenesysSlider {
     this.value = newValue;
     if (!upToDate) {
       this.update.emit(this.value);
+      this.updateTooltipPosition();
     }
+  }
+
+  /**
+   * Once the component is loaded do the setup
+   */
+  componentDidLoad () {
+    this.updateTooltipPosition();
+  }
+
+  updateTooltipPosition() {
+    const width = this.sliderInput.offsetWidth;
+    const placementPercentage = (this.sliderInput.valueAsNumber - this.min)/(this.max - this.min);
+    const newPlacement = width * placementPercentage;
+    this.sliderTooltip.style.left = String(newPlacement) + 'px';
   }
 
   render() {
@@ -44,12 +64,25 @@ export class GenesysSlider {
         min={this.min}
         max={this.max}
         value={this.value}
-        onChange={(event: UIEvent) => this.updateValue(event)}>
+        aria-describedby="range-tooltip"
+        ref={el => this.sliderInput = el}
+        onChange={(e: UIEvent) => this.updateValue(e)}>
       </input>
       {this.displayTextBox ? (
-        <input type="text" value={this.value}></input>
+        <input
+          type="text"
+          value={this.value}
+          onChange={(e: UIEvent) => this.updateValue(e)}>
+        </input>
       ) : (
-        '')}
+        <div
+          id="range-tooltip"
+          class="range-tooltip"
+          role="tooltip"
+          ref={el => this.sliderTooltip = el}>
+          {this.value}
+        </div>
+        )}
     </div>);
   }
 }
