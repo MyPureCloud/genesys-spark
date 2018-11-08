@@ -158,6 +158,7 @@ export class GenesysTextField {
 
   _clear(event) {
     this.clear();
+    this.inputElement.focus();
     this.emitInput(event);
     this.updateClassList();
   }
@@ -169,7 +170,6 @@ export class GenesysTextField {
   clear() {
     this.value = '';
     this.inputElement.value = '';
-    this.inputElement.focus();
   }
 
   render() {
