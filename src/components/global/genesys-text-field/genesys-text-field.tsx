@@ -63,12 +63,6 @@ export class GenesysTextField {
   errorMessageType: string = Types.Error;
 
   /**
-   * Shows/Hides the update indicator.
-   */
-  @Prop()
-  updateIndicator: boolean = false;
-
-  /**
    * Timeout between input and validation.
    */
   @Prop()
@@ -137,10 +131,6 @@ export class GenesysTextField {
 
   updateClassList() {
     this.classList = [];
-    const isUpdated = this.value !== this.firstValue;
-    if (this.updateIndicator && isUpdated) {
-      this.classList = [...this.classList, 'updated'];
-    }
     if (this.label && this.label.length < 10) {
       this.classList = [...this.classList, 'flex'];
     }
