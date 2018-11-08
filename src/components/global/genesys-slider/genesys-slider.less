@@ -1,28 +1,54 @@
 // Variables part
-
 genesys-slider {
-  .range-tooltip {
-  position: absolute;
-  width: 40px;
-  height: 30px;
-  text-align: center;
-  border-radius: 10px;
-  display: none;
-}
-.range-tooltip:after {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 10px solid #999999;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  margin-top: -1px;
+
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
-input:active {
+.range-input {
+  -webkit-appearance: none;
+  height: 2px;
+  background-color: #E0E0E0;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 12px;
+      width: 12px;
+      background-color: transparent;
+    }
+}
+
+.mask {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  top: 8px;
+  height: 2px;
+  width: 0px;
+  margin: 2px;
+  background-color: #2A60C8;
+
+  &:after {
+    display: block;
+    z-index: -1;
+    position: absolute;
+    align-self: center;
+    top: -5px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #2A60C8;
+    content: '';
+  }
+}
+
+.range-tooltip {
+  display: none;
+  position: absolute;
+}
+
+.range-input:active {
   + .range-tooltip {
     display: block;
   }

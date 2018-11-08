@@ -25,6 +25,7 @@ export class GenesysSlider {
   @State() placement: {};
 
   sliderInput: HTMLInputElement;
+  sliderMask: HTMLElement;
   sliderTooltip: HTMLElement;
 
   /**
@@ -39,7 +40,7 @@ export class GenesysSlider {
     this.value = newValue;
     if (!upToDate) {
       this.update.emit(this.value);
-      this.updateTooltipPosition();
+      this.updatePosition();
     }
   }
 
@@ -47,27 +48,33 @@ export class GenesysSlider {
    * Once the component is loaded do the setup
    */
   componentDidLoad () {
-    this.updateTooltipPosition();
+    this.updatePosition();
   }
 
-  updateTooltipPosition() {
+  updatePosition() {
     const width = this.sliderInput.offsetWidth;
     const placementPercentage = (this.sliderInput.valueAsNumber - this.min)/(this.max - this.min);
-    const newPlacement = width * placementPercentage;
-    this.sliderTooltip.style.left = String(newPlacement) + 'px';
+    const newPlacement = (width * placementPercentage + -1.3) + 'px';
+    this.sliderTooltip.style.left = newPlacement;
+    this.sliderMask.style.width = newPlacement;
   }
 
   render() {
-    return (<div>
+    return (<div class="container">
       <input
         type="range"
+        class="range-input"
         min={this.min}
         max={this.max}
         value={this.value}
         aria-describedby="range-tooltip"
         ref={el => this.sliderInput = el}
-        onChange={(e: UIEvent) => this.updateValue(e)}>
+        onInput={(e: UIEvent) => this.updateValue(e)}>
       </input>
+      <div
+        class="mask"
+        ref={el => this.sliderMask = el}>
+      </div>
       {this.displayTextBox ? (
         <input
           type="text"
