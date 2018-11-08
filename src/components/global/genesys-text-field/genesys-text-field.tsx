@@ -99,7 +99,6 @@ export class GenesysTextField {
 
   _testValue(value: string) {
     if (!this.validation) {
-      this.updateClassList();
       return;
     }
     if (this.validation instanceof RegExp) {
@@ -126,18 +125,18 @@ export class GenesysTextField {
           this.errorMessage = this.internalErrorMessage;
         }
     }
-    this.updateClassList();
   }
 
-  updateClassList() {
-    this.classList = [];
+  getClassList () :string {
+    let classList = [];
     if (this.label && this.label.length < 10) {
-      this.classList = [...this.classList, 'flex'];
+      classList = [...classList, 'flex'];
     }
 
-    if (this.errorMessage && !this.validation) {
-      this.classList = [...this.classList, this.errorMessageType];
+    if (this.errorMessage) {
+      classList = [...classList, this.errorMessageType];
     }
+    return classList.join(' ');
   }
 
   componentDidLoad() {
@@ -147,20 +146,13 @@ export class GenesysTextField {
   }
 
   getIconByMessageType(type) {
-    switch (type) {
-      case 'warning':
-        return 'genesys-icon-alert-triangle';
-      default:
-      case 'error':
-        return 'genesys-icon-alert-octo';
-    }
+    return (type === 'warning' ? 'genesys-icon-alert-triangle' : 'genesys-icon-alert-octo');
   }
 
   _clear(event) {
     this.clear();
     this.inputElement.focus();
     this.emitInput(event);
-    this.updateClassList();
   }
 
   /**
@@ -174,7 +166,7 @@ export class GenesysTextField {
 
   render() {
     return (
-      <div class={this.classList.join(' ')}>
+      <div class={this.getClassList()}>
         <div class="genesys-text-field">
           <label>{this.label}</label>
           <div class="genesys-field">

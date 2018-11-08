@@ -9,19 +9,15 @@ describe('genesys-text-field', () => {
     component.errorMessage = 'error';
     expect(component.render()).toBeTruthy();
   });
-  describe('updateClassList', () => {
+  describe('getClassList', () => {
     it('should correctly set the list', () => {
       const component = new GenesysTextField();
-      expect(component.classList.length).toBe(0);
-      component.updateClassList(false);
-      expect(component.classList.length).toBe(0);
+      expect(component.getClassList().length).toBe(0);
       component.errorMessageType = 'error';
       component.errorMessage = 'an error occured';
-      component.updateClassList(true);
-      expect(component.classList.length).toBe(1);
+      expect(component.getClassList().split(' ').length).toBe(1);
       component.label = 'label';
-      component.updateClassList(true);
-      expect(component.classList.length).toBe(2);
+      expect(component.getClassList().split(' ').length).toBe(2);
     })
   });
   describe('componentDidLoad', () => {
@@ -54,53 +50,40 @@ describe('genesys-text-field', () => {
   describe('_testValue', () => {
     it('should do nothing if no validation prop has been set', () => {
       const component = new GenesysTextField();
-      const myMock = jest.fn();
-      component.updateClassList = myMock;
       component._testValue('test');
       expect(component.errorMessage).toBe('');
       expect(component.errorMessageType).toBe('error');
-      expect(myMock.mock.calls.length).toBe(1);
     });
     it('should correctly call validation regexp', () => {
       const component = new GenesysTextField();
-      const myMock = jest.fn();
-      component.updateClassList = myMock;
       component.validation = new RegExp('[aA-zZ]+');
       component.internalErrorMessage = 'error Message';
       component._testValue('test');
       expect(component.errorMessage).toBe('');
       expect(component.errorMessageType).toBe('error');
-      expect(myMock.mock.calls.length).toBe(1);
       component._testValue(' ');
       expect(component.errorMessage).toBe('error Message');
       expect(component.errorMessageType).toBe('error');
-      expect(myMock.mock.calls.length).toBe(2);
     });
     it('should correctly call validation function', () => {
       const component = new GenesysTextField();
-      const myMock = jest.fn();
-      component.updateClassList = myMock;
       component.validation = () => false;
       component.internalErrorMessage = 'error Message';
       component._testValue('test');
       expect(component.errorMessage).toBe('error Message');
       expect(component.errorMessageType).toBe('error');
-      expect(myMock.mock.calls.length).toBe(1);
       component.validation = () => ({});
       component._testValue('test');
       expect(component.errorMessage).toBe('');
       expect(component.errorMessageType).toBe('error');
-      expect(myMock.mock.calls.length).toBe(2);
       component.validation = () => ({error: 'blop'});
       component._testValue('test');
       expect(component.errorMessage).toBe('blop');
       expect(component.errorMessageType).toBe('error');
-      expect(myMock.mock.calls.length).toBe(3);
       component.validation = () => ({warning: 'blop'});
       component._testValue('test');
       expect(component.errorMessage).toBe('blop');
       expect(component.errorMessageType).toBe('warning');
-      expect(myMock.mock.calls.length).toBe(4);
     });
   });
 });
