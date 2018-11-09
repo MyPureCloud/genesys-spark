@@ -23,6 +23,11 @@ genesys-slider {
       height: 12px;
       width: 12px;
       background-color: transparent;
+
+      &:active {
+        height: 20px;
+        width: 20px;
+      }
     }
 
     /** Forefox */
@@ -39,6 +44,15 @@ genesys-slider {
       width: 12px;
       border: none;
       background-color: transparent;
+    }
+}
+
+.range-input:active + .mask {
+    min-width: 16px;
+
+    &:after {
+      height: 16px;
+      width: 16px;
     }
 }
 
