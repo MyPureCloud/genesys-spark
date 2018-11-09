@@ -9,6 +9,7 @@ genesys-slider {
 .range-input {
   -webkit-appearance: none;
   height: 2px;
+  padding: 0px;
   background-color: #E0E0E0;
 
   &:focus {
@@ -47,9 +48,9 @@ genesys-slider {
   justify-content: flex-end;
   position: absolute;
   top: 8px;
+  left: 16px;
   height: 2px;
   width: 12px;
-  margin: 2px;
   background-color: #2A60C8;
 
   &:after {
@@ -73,6 +74,13 @@ genesys-slider {
 .range-input:active {
   + .range-tooltip {
     display: block;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .mask {
+    top: 10px;
+    left: 10px;
   }
 }
 }
