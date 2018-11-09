@@ -60,16 +60,9 @@ export class GenesysActionButton {
     }
   }
 
+  @Listen('body:click')
   @Listen('body:keydown')
   handleKeyDown(e) {
-    if (this.root.contains(e.target)) {
-      return
-    }
-    this.isOpen = false
-  }
-
-  @Listen('body:click')
-  handleClick(e) {
     if (this.root.contains(e.target)) {
       return
     }
@@ -89,13 +82,13 @@ export class GenesysActionButton {
     const key = event.keyCode;
     if (key === KeyCode.Esc) {
       this.isOpen = false;
-      const e = this.dropdownButton.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]') as HTMLElement;
+      const e = this.dropdownButton.querySelector('[tabindex]:not([tabindex="-1"]') as HTMLElement;
       e.focus();
     }
     if (key === KeyCode.Down && !this.listElement.contains(event.target as Node)) {
       this.isOpen = true;
       setTimeout(() => {
-        const e = this.listElement.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]') as HTMLElement;
+        const e = this.listElement.querySelector('[tabindex]:not([tabindex="-1"]') as HTMLElement;
         e.focus();
       });
     }
