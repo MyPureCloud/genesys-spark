@@ -12,6 +12,7 @@
 @dark-icon-color: #B1BECC;
 
 @focus-outline: fade(@genesys-blue, 50%);
+@focus-border: @genesys-dark-blue;
 @alert-color: @genesys-alert;
 
 genesys-text-field {
@@ -42,11 +43,23 @@ genesys-text-field {
         }
       }
     }
-    &.flex .genesys-text-field {
-      display: flex;
+    &.flex {
+      display: grid;
+      width: 100%;
+      grid-auto-columns: min-content auto;
+      label {
+        grid-column: 1 e("/") 2;
+        grid-row: 1 e("/") 2;
+      }
+      .genesys-field {
+        grid-column: 2 e("/") 2;
+        grid-row: 1 e("/") 2;
+      }
+      .genesys-error {
+        grid-column: 2 e("/") 2;
+        grid-row: 2 e("/") 2;
+      }
     }
-  }
-  .genesys-text-field {
     label {
       margin-right: 8px;
       height: 32px;
@@ -56,9 +69,9 @@ genesys-text-field {
     }
     > div.genesys-field {
       position: relative;
-      flex: 1;
       height: 32px;
     }
+
   }
   .genesys-field {
     position: relative;
@@ -88,6 +101,7 @@ genesys-text-field {
         color: @placeholder;
       }
       &:focus {
+        border: 1px solid @focus-border;
         outline: 2px solid @focus-outline;
       }
     }

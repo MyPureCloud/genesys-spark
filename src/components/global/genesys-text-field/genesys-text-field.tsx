@@ -167,26 +167,24 @@ export class GenesysTextField {
   render() {
     return (
       <div class={this.getClassList()}>
-        <div class="genesys-text-field">
-          <label>{this.label}</label>
-          <div class="genesys-field">
-            <input
-              aria-label={this.label}
-              type='text'
-              value={this.value}
-              ref={el => (this.inputElement = el)}
-              disabled={this.disabled}
-              placeholder={this.placeholder}
-              onInput={e => this.emitInput(e)}
+        <label>{this.label}</label>
+        <div class="genesys-field">
+          <input
+            aria-label={this.label}
+            type='text'
+            value={this.value}
+            ref={el => (this.inputElement = el)}
+            disabled={this.disabled}
+            placeholder={this.placeholder}
+            onInput={e => this.emitInput(e)}
+          />
+          {this.value && (
+            <button
+              type="button"
+              class="genesys-icon-close"
+              onClick={e => this._clear(e)}
             />
-            {this.value && (
-              <button
-                type="button"
-                class="genesys-icon-close"
-                onClick={e => this._clear(e)}
-              />
-            )}
-          </div>
+          )}
         </div>
         {this.errorMessage && (
           <div class="genesys-error">
