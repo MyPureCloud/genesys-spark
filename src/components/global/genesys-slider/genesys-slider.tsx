@@ -22,6 +22,8 @@ export class GenesysSlider {
    **/
   @Prop() displayTextBox: boolean = false;
 
+  @State() offset: number = -1.3;
+
   @State() placement: {};
 
   sliderInput: HTMLInputElement;
@@ -54,9 +56,10 @@ export class GenesysSlider {
   updatePosition() {
     const width = this.sliderInput.offsetWidth;
     const placementPercentage = (this.sliderInput.valueAsNumber - this.min)/(this.max - this.min);
-    const newPlacement = (width * placementPercentage + -1.3) + 'px';
-    this.sliderTooltip.style.left = newPlacement;
-    this.sliderMask.style.width = newPlacement;
+    const thumbOffset = 12 * (placementPercentage - 0.5) * -1 + 6;
+    const newPosition = (placementPercentage * width) + thumbOffset;
+    this.sliderTooltip.style.left = newPosition + 'px';
+    this.sliderMask.style.width = newPosition + 'px';
   }
 
   render() {

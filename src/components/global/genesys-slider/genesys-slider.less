@@ -10,10 +10,33 @@ genesys-slider {
   -webkit-appearance: none;
   height: 2px;
   background-color: #E0E0E0;
+
+  &:focus {
+    outline: none;
+  }
+
+    /** Chrome & Safari */
+
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       height: 12px;
       width: 12px;
+      background-color: transparent;
+    }
+
+    /** Forefox */
+    &::-moz-range-thumb {
+      height: 12px;
+      width: 12px;
+      border: none;
+      background-color: transparent;
+    }
+
+    /** IE */
+    &::-ms-thumb {
+      height: 12px;
+      width: 12px;
+      border: none;
       background-color: transparent;
     }
 }
@@ -25,14 +48,13 @@ genesys-slider {
   position: absolute;
   top: 8px;
   height: 2px;
-  width: 0px;
+  width: 12px;
   margin: 2px;
   background-color: #2A60C8;
 
   &:after {
     display: block;
     z-index: -1;
-    position: absolute;
     align-self: center;
     top: -5px;
     height: 12px;
