@@ -6,9 +6,9 @@
 
 ## Properties
 
-| Property | Attribute | Description                                                                                     | Type          |
-| -------- | --------- | ----------------------------------------------------------------------------------------------- | ------------- |
-| `items`  | --        | The list. each item should contain a text and a type  an item could have the poperty isDisabled | `IListItem[]` |
+| Property | Attribute | Description                                                                                    | Type          |
+| -------- | --------- | ---------------------------------------------------------------------------------------------- | ------------- |
+| `items`  | --        | The list. each item should contain a text and a type an item could have the poperty isDisabled | `IListItem[]` |
 
 
 ----------------------------------------------

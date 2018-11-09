@@ -6,12 +6,12 @@
 
 ## Properties
 
-| Property | Attribute | Description                                                                                     | Type          |
-| -------- | --------- | ----------------------------------------------------------------------------------------------- | ------------- |
-| `accent` | `accent`  | The component accent (secondary or primary).                                                    | `string`      |
-| `isOpen` | `is-open` | It is used to open or not the list.                                                             | `boolean`     |
-| `items`  | --        | The list. each item should contain a text and a type  an item could have the poperty isDisabled | `IListItem[]` |
-| `text`   | `text`    | The component text.                                                                             | `string`      |
+| Property | Attribute | Description                                                                                    | Type          |
+| -------- | --------- | ---------------------------------------------------------------------------------------------- | ------------- |
+| `accent` | `accent`  | The component accent (secondary or primary).                                                   | `string`      |
+| `isOpen` | `is-open` | It is used to open or not the list.                                                            | `boolean`     |
+| `items`  | --        | The list. each item should contain a text and a type an item could have the poperty isDisabled | `IListItem[]` |
+| `text`   | `text`    | The component text.                                                                            | `string`      |
 
 
 ## Events

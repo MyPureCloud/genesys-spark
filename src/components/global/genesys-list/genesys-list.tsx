@@ -1,6 +1,6 @@
-import { Component, Element, Listen, Prop } from '@stencil/core'
-import { KeyCode, ListTypeEnum } from '../../../common-enums'
-import { IListItem } from '../../../common-interfaces'
+import { Component, Element, Listen, Prop } from '@stencil/core';
+import { KeyCode, ListTypeEnum } from '../../../common-enums';
+import { IListItem } from '../../../common-interfaces';
 
 @Component({
   styleUrl: 'genesys-list.less',
@@ -12,43 +12,57 @@ export class GenesysList {
 
   /**
    * The list.
-   * each item should contain a text and a type 
+   * each item should contain a text and a type
    * an item could have the poperty isDisabled
    */
-  @Prop() items: IListItem[] = []
-    
+  @Prop()
+  items: IListItem[] = [];
+
   onItemClicked(item: IListItem) {
     if (item.callback) {
-      item.callback(item)
+      item.callback(item);
     }
   }
 
   @Listen('focusin')
-  onFocus(e :FocusEvent) {
+  onFocus(e: FocusEvent) {
     if (this.root.contains(e.relatedTarget as Node)) {
       return;
     }
-    this.items.forEach((i) => {
+    this.items.forEach(i => {
       if (i.el) {
         i.el.setAttribute('tabindex', '-1');
       }
     });
-    const firstFocusable = this.items.find((item) => {
-      return item.el && !item.isDisabled && (!item.type || item.type === ListTypeEnum.Item);
+    const firstFocusable = this.items.find(item => {
+      return (
+        item.el &&
+        !item.isDisabled &&
+        (!item.type || item.type === ListTypeEnum.Item)
+      );
     });
-    firstFocusable.el.setAttribute('tabindex', '0')
+    firstFocusable.el.setAttribute('tabindex', '0');
     if (firstFocusable) {
       firstFocusable.el.focus();
     }
   }
 
   onKeyDown(event: KeyboardEvent, item: IListItem) {
-    const validKeys = [KeyCode.Up, KeyCode.Down, KeyCode.End, KeyCode.Home, KeyCode.Enter, KeyCode.Space];
+    const validKeys = [
+      KeyCode.Up,
+      KeyCode.Down,
+      KeyCode.End,
+      KeyCode.Home,
+      KeyCode.Enter,
+      KeyCode.Space
+    ];
     const key = event.keyCode;
-    if (validKeys.indexOf(event.keyCode) === -1) { return; }
-    const filteredList = this.items.filter((i) => {
+    if (validKeys.indexOf(event.keyCode) === -1) {
+      return;
+    }
+    const filteredList = this.items.filter(i => {
       return i.el && !i.isDisabled && (!i.type || i.type === ListTypeEnum.Item);
-    })
+    });
     const currentIndex = filteredList.indexOf(item);
     let el = null;
     switch (key) {
@@ -91,30 +105,35 @@ export class GenesysList {
   /**
    * Once the component is loaded set the tabindex
    */
-  componentDidLoad () {
-    const firstFocusable = this.items.find((item) => {
-      return item.el && !item.isDisabled && (!item.type || item.type === ListTypeEnum.Item);
+  componentDidLoad() {
+    const firstFocusable = this.items.find(item => {
+      return (
+        item.el &&
+        !item.isDisabled &&
+        (!item.type || item.type === ListTypeEnum.Item)
+      );
     });
-    firstFocusable.el.setAttribute('tabindex', '0')
+    firstFocusable.el.setAttribute('tabindex', '0');
   }
 
   render() {
     return (
       <ul>
-        {this.items.map((item) =>
-          item.type === ListTypeEnum.Divider ?
-          <li class='divider' role='presentation'
-              tabIndex={-1}
+        {this.items.map(
+          item =>
+            item.type === ListTypeEnum.Divider ? (
+              <li class="divider" role="presentation" tabIndex={-1} />
+            ) : (
+              <li
+                class={item.isDisabled ? 'disabled' : ''}
+                tabIndex={-1}
+                ref={el => (item.el = el)}
+                onClick={() => this.onItemClicked(item)}
+                onKeyDown={e => this.onKeyDown(e, item)}
               >
-          </li>
-          : 
-          <li class={item.isDisabled ? 'disabled' : '' } 
-              tabIndex={-1} 
-              ref={el => item.el = el}
-              onClick={() => this.onItemClicked(item)}
-              onKeyDown={(e) => this.onKeyDown(e, item)}>
-            {item.text}
-          </li>
+                {item.text}
+              </li>
+            )
         )}
       </ul>
     );
