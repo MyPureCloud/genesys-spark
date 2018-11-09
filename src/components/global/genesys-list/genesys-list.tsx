@@ -43,11 +43,9 @@ export class GenesysList {
   }
 
   onKeyDown(event: KeyboardEvent, item: IListItem) {
-    const regxp = new RegExp(`|${KeyCode.Up}||${KeyCode.Down}|${KeyCode.End}|${KeyCode.Home}|${KeyCode.Enter}|${KeyCode.Space}`);
+    const validKeys = [KeyCode.Up, KeyCode.Down, KeyCode.End, KeyCode.Home, KeyCode.Enter, KeyCode.Space];
     const key = event.keyCode;
-    if (!regxp.test(''+ key) || !item.el) {
-      return;
-    }
+    if (validKeys.indexOf(event.keyCode) === -1) { return; }
     const filteredList = this.items.filter((i) => {
       return i.el && !i.isDisabled && (!i.type || i.type === ListTypeEnum.Item);
     })
