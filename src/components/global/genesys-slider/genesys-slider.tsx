@@ -1,4 +1,4 @@
-import { Event, EventEmitter, Component, Prop, State} from '@stencil/core';
+import { Event, EventEmitter, Component, Prop} from '@stencil/core';
 
 @Component({
   tag: 'genesys-slider',
@@ -8,7 +8,7 @@ export class GenesysSlider {
   /**
    * Indicates the minimum value for the slider
    **/
-  @Prop() min: number = 0;
+  @Prop({ mutable: true}) min: number = 0;
   /**
    * Indicates the maximum value for the slider
    **/
@@ -21,8 +21,10 @@ export class GenesysSlider {
    * Indicate if the input box
    **/
   @Prop() displayTextBox: boolean = false;
-
-  @State() displayValue: string = '0%'
+  /**
+   * Indicate if the value is a percentage
+   **/
+  @Prop() isPercentage: boolean = false;
 
   sliderInput: HTMLInputElement;
   sliderMask: HTMLElement;
@@ -35,10 +37,11 @@ export class GenesysSlider {
   @Event() update: EventEmitter;
 
   updateValue (event) {
-    const newValue = event.target.valueAsNumber;
+    const regex = new RegExp('([0-9]+)%*');
+    const result = regex.exec(event.target.value);
+    const newValue = result && result[1] ? +result[1] : this.min;
     const upToDate = this.value === newValue;
     this.value = newValue;
-    this.displayValue = newValue + '%';
     if (!upToDate) {
       this.update.emit(this.value);
       this.updatePosition();
@@ -49,12 +52,16 @@ export class GenesysSlider {
    * Once the component is loaded do the setup
    */
   componentDidLoad () {
+    if (this.value < this.min || this.value > this.max) {
+      this.value = this.min;
+    }
+    this.min = this.min > this.max ? this.max : this.min;
     this.updatePosition();
   }
 
   updatePosition() {
     const width = this.sliderInput.offsetWidth;
-    const placementPercentage = (this.sliderInput.valueAsNumber - this.min)/(this.max - this.min);
+    const placementPercentage = (this.value - this.min)/(this.max - this.min);
     if (this.sliderTooltip) {
       var thumbOffset = 16 * (placementPercentage - 0.5) * -1 + 6;
       var newPosition = (placementPercentage * width) + thumbOffset - 10;
@@ -85,7 +92,7 @@ export class GenesysSlider {
         <input
           type="text"
           class="text-input small-body"
-          value={this.displayValue}
+          value={this.isPercentage ? this.value + '%' : this.value}
           onChange={(e: UIEvent) => this.updateValue(e)}>
         </input>
       ) : (
@@ -94,7 +101,7 @@ export class GenesysSlider {
           class="range-tooltip small-body"
           role="tooltip"
           ref={el => this.sliderTooltip = el}>
-          {this.displayValue}
+          {this.isPercentage ? this.value + '%' : this.value}
         </div>
         )}
     </div>);

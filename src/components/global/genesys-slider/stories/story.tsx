@@ -14,6 +14,7 @@ storiesOf('Genesys Components', module)
       el.displayTextBox = boolean('displayTextBox', true);
       el.min = number('min', 0);
       el.max = number('max', 10);
+      el.isPercentage = boolean('isPercentage', true);
       document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
