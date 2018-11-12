@@ -3,6 +3,7 @@
 genesys-tooltip {
   div.genesys-tooltip {
     position: absolute;
+    white-space: nowrap;
     background-color: @genesys-off-white-bg;
     height: 32px;
     line-height: 32px;
@@ -11,15 +12,20 @@ genesys-tooltip {
     border: 1px solid @genesys-border-alt;
     box-shadow: 0 0 2px 0 fade(@genesys-grey-1, 24);
     opacity: 0;
+    z-index: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    pointer-events: none;
 
     &.shown {
       opacity: 1;
     }
 
-    transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -webkit-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
   }
 }
 

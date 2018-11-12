@@ -1,16 +1,21 @@
 # genesys-tooltip
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+This custom component is a simple tooltip.
+
+When hovering a node, the tooltip will be shown below.
+
+If there is not enough space on the bottom, or right of the component, the tooltip position will be adjusted.
 
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-| Property | Attribute | Description       | Type     |
-| -------- | --------- | ----------------- | -------- |
-| `parent` | `parent`  | Element selector. | `string` |
-| `text`   | `text`    | Tooltip text.     | `string` |
+| Property  | Attribute | Description                           | Type     |
+| --------- | --------- | ------------------------------------- | -------- |
+| `parent`  | `parent`  | Element selector.                     | `string` |
+| `text`    | `text`    | Tooltip text.                         | `string` |
+| `timeout` | `timeout` | Delay before hide. (Set to 0 to none) | `number` |
 
 
 ## Methods
