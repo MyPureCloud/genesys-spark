@@ -28,9 +28,7 @@ describe('genesys-accordion', () => {
     `);
     element = await page.find('genesys-accordion');
     const sections = await element.findAll('genesys-accordion li');
-    sections.map((section, index) => {
-      expect(section.className).toEqual('section ' + slots[index]);
-    });
+    expect(sections.length).toEqual(slots.length);
   });
   it('opens, closes section', async () => {
     await page.setContent(`
@@ -44,12 +42,12 @@ describe('genesys-accordion', () => {
     element = await page.find('genesys-accordion');
     const section = await element.find('genesys-accordion li');
     const header = await section.find('.header');
-    expect(section.className).toEqual('section First');
+    expect(section.className).toEqual('section');
     header.click();
     await page.waitForChanges();
-    expect(section.className).toEqual('section First opened');
+    expect(section.className).toEqual('section opened');
     header.click();
     await page.waitForChanges();
-    expect(section.className).toEqual('section First');
+    expect(section.className).toEqual('section');
   });
 });
