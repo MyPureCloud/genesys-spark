@@ -1,3 +1,4 @@
+import { checkA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import {
   object,
@@ -12,6 +13,7 @@ import README from '../readme.md';
 
 storiesOf('Genesys Components', module)
   .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
   .add(
     'Genesys Action Button',
     withReadme(README, () => {
