@@ -1,16 +1,20 @@
 // Variables part
+@slider-fill:     @genesys-dark-blue;
+@slider-border:   #E0E0E0;
+
 genesys-slider {
 
 .container {
   display: flex;
   flex-direction: row;
+  margin-top: 35px;
 }
 
 .range-input {
   -webkit-appearance: none;
   height: 2px;
   padding: 0px;
-  background-color: #E0E0E0;
+  background-color: @slider-border;
 
   &:focus {
     outline: none;
@@ -61,11 +65,11 @@ genesys-slider {
   flex-direction: row;
   justify-content: flex-end;
   position: absolute;
-  top: 8px;
+  top: 35px;
   left: 16px;
   height: 2px;
   width: 12px;
-  background-color: #2A60C8;
+  background-color: @slider-fill;
 
   &:after {
     display: block;
@@ -75,7 +79,7 @@ genesys-slider {
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    background-color: #2A60C8;
+    background-color: @slider-fill;
     content: '';
   }
 }
@@ -83,17 +87,46 @@ genesys-slider {
 .range-tooltip {
   display: none;
   position: absolute;
+  top: 3px;
+  height: 18px;
+  width: 26px;
+  border: 1px solid @slider-border;
+  box-shadow: 0 0 2px @slider-border;
+  border-radius: 2px;
+  text-align: center;
+
+    &::after, &::before {
+  	top: 100%;
+  	left: 50%;
+  	border: solid transparent;
+  	content: " ";
+  	height: 0;
+  	width: 0;
+  	position: absolute;
+  	pointer-events: none;
+  }
+
+  &::after {
+    border-top-color: white;
+  	border-width: 4px;
+  	margin-left: -4px;
+  }
+  &::before {
+  	border-top-color: @slider-border;
+  	border-width: 6px;
+  	margin-left: -6px;
+  }
 }
 
 .range-input:active {
-  + .range-tooltip {
+  ~ .range-tooltip {
     display: block;
   }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   .mask {
-    top: 10px;
+    top: 37px;
     left: 10px;
   }
 }

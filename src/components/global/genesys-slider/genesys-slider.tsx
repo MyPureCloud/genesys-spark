@@ -1,4 +1,4 @@
-import { Event, EventEmitter, Component, Prop, State } from '@stencil/core';
+import { Event, EventEmitter, Component, Prop} from '@stencil/core';
 
 @Component({
   tag: 'genesys-slider',
@@ -21,10 +21,6 @@ export class GenesysSlider {
    * Indicate if the input box
    **/
   @Prop() displayTextBox: boolean = false;
-
-  @State() offset: number = -1.3;
-
-  @State() placement: {};
 
   sliderInput: HTMLInputElement;
   sliderMask: HTMLElement;
@@ -56,9 +52,11 @@ export class GenesysSlider {
   updatePosition() {
     const width = this.sliderInput.offsetWidth;
     const placementPercentage = (this.sliderInput.valueAsNumber - this.min)/(this.max - this.min);
-    const thumbOffset = 12 * (placementPercentage - 0.5) * -1 + 6;
-    const newPosition = (placementPercentage * width) + thumbOffset;
+    var thumbOffset = 16 * (placementPercentage - 0.5) * -1 + 6;
+    var newPosition = (placementPercentage * width) + thumbOffset - 10;
     this.sliderTooltip.style.left = newPosition + 'px';
+    thumbOffset = 12 * (placementPercentage - 0.5) * -1 + 6;
+    newPosition = (placementPercentage * width) + thumbOffset;
     this.sliderMask.style.width = newPosition + 'px';
   }
 
