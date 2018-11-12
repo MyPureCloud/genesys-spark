@@ -1,4 +1,4 @@
-import { Event, EventEmitter, Component, Prop} from '@stencil/core';
+import { Event, EventEmitter, Component, Prop, State} from '@stencil/core';
 
 @Component({
   tag: 'genesys-slider',
@@ -16,11 +16,13 @@ export class GenesysSlider {
   /**
    * Indocates the value of the slider
    **/
-  @Prop({ mutable: true, reflectToAttr: true }) value: number;
+  @Prop({ mutable: true, reflectToAttr: true }) value: number = 0;
   /**
    * Indicate if the input box
    **/
   @Prop() displayTextBox: boolean = false;
+
+  @State() displayValue: string = '0%'
 
   sliderInput: HTMLInputElement;
   sliderMask: HTMLElement;
@@ -36,6 +38,7 @@ export class GenesysSlider {
     const newValue = event.target.valueAsNumber;
     const upToDate = this.value === newValue;
     this.value = newValue;
+    this.displayValue = newValue + '%';
     if (!upToDate) {
       this.update.emit(this.value);
       this.updatePosition();
@@ -52,9 +55,11 @@ export class GenesysSlider {
   updatePosition() {
     const width = this.sliderInput.offsetWidth;
     const placementPercentage = (this.sliderInput.valueAsNumber - this.min)/(this.max - this.min);
-    var thumbOffset = 16 * (placementPercentage - 0.5) * -1 + 6;
-    var newPosition = (placementPercentage * width) + thumbOffset - 10;
-    this.sliderTooltip.style.left = newPosition + 'px';
+    if (this.sliderTooltip) {
+      var thumbOffset = 16 * (placementPercentage - 0.5) * -1 + 6;
+      var newPosition = (placementPercentage * width) + thumbOffset - 10;
+      this.sliderTooltip.style.left = newPosition + 'px';
+    }
     thumbOffset = 12 * (placementPercentage - 0.5) * -1 + 6;
     newPosition = (placementPercentage * width) + thumbOffset;
     this.sliderMask.style.width = newPosition + 'px';
@@ -79,16 +84,17 @@ export class GenesysSlider {
       {this.displayTextBox ? (
         <input
           type="text"
-          value={this.value}
+          class="text-input small-body"
+          value={this.displayValue}
           onChange={(e: UIEvent) => this.updateValue(e)}>
         </input>
       ) : (
         <div
           id="range-tooltip"
-          class="range-tooltip"
+          class="range-tooltip small-body"
           role="tooltip"
           ref={el => this.sliderTooltip = el}>
-          {this.value}
+          {this.displayValue}
         </div>
         )}
     </div>);

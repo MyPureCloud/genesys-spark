@@ -11,7 +11,7 @@ storiesOf('Genesys Components', module)
     'Genesys Slider',
     withReadme(README, () => {
       const el = document.createElement('genesys-slider');
-      el.displayTextBox = boolean('displayTextBox', false);
+      el.displayTextBox = boolean('displayTextBox', true);
       el.min = number('min', 0);
       el.max = number('max', 10);
       document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
