@@ -15,7 +15,7 @@ module.exports = (baseConfig, env, defaultConfig) => {
 
   defaultConfig.resolve = {
       ...defaultConfig.resolve,
-      alias: {'genesys-webcomponents': '../www/static/genesys-webcomponents'}
+      alias: {'genesys-webcomponents': path.resolve(__dirname, '../www/static/genesys-webcomponents')}
   }
   
   defaultConfig.plugins.push(
