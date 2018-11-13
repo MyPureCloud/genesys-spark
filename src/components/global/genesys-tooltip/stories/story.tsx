@@ -17,13 +17,13 @@ storiesOf('Genesys Components', module)
         <div style="position:absolute;top:0;bottom:0;left:0;right:0;display:flex;flex-direction:column">
           <div style="display:flex;justify-content:space-between">
             <div>
-              <button>Top left</button>
+              <genesys-button text="Top left"></genesys-button>
               <genesys-tooltip
                 text='Top left tooltip that goes on bottom, and fixed on the left'>
               </genesys-tooltip>
             </div>
             <div>
-              <button>Right button</button>
+              <genesys-button text="Right button"></genesys-button>
               <genesys-tooltip
                 text='Top right tooltip that goes on bottom, and fixed on the right'>
               </genesys-tooltip>
@@ -31,20 +31,20 @@ storiesOf('Genesys Components', module)
           </div>
           <div style="display:flex;flex-grow:1">
             <div style="margin:auto">
-              <button id="center-button">Center button</button>
-              <button id="center-button-show">Show</button>
-              <button id="center-button-hide">Hide</button>
+              <genesys-button id="center-button" text="Center button" accent="primary"></genesys-button>
+              <genesys-button id="center-button-show" text="Show"></genesys-button>
+              <genesys-button id="center-button-hide" text="Hide"></genesys-button>
             </div>
           </div>
           <div style="display:flex;justify-content:space-between">
             <div>
-              <button>Bottom left button</button>
+              <genesys-button text="Bottom left button"></genesys-button>
               <genesys-tooltip
                 text='Bottom left tooltip that goes on top, and fixed on the left'>
               </genesys-tooltip>
             </div>
             <div>
-              <button>Bottom right button</button>
+              <genesys-button text="Bottom right button"></genesys-button>
               <genesys-tooltip
                 text='Bottom right tooltip that goes on top, and fixed on the right'>
               </genesys-tooltip>

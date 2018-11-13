@@ -102,6 +102,7 @@ export class GenesysTooltip {
 
   componentDidLoad () {
     this.parentNode = document.getElementById(this.parent) || this.root.parentElement;
+    this.setPosition();
 
     this.mouseoverHandler = () => {
       this.show();
