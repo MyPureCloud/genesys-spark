@@ -15,6 +15,7 @@ describe('genesys-slider', () => {
     await page.setContent('<genesys-slider></genesys-slider>');
     const component = await page.find('genesys-slider');
     const input = await page.find('genesys-slider input');
+    expect(input).toHaveClass('range-input');
     expect(input.getAttribute('value')).toEqual(0);
     component.setProperty('value', 5);
     expect(input.getAttribute('value')).toEqual(5);

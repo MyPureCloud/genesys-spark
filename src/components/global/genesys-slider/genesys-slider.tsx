@@ -85,7 +85,9 @@ export class GenesysSlider {
         min={this.min}
         max={this.max}
         value={this.value}
-        aria-describedby="range-tooltip"
+        aria-valuemin={this.min}
+        aria-valuemax={this.max}
+        aria-valuenow={this.value}
         ref={el => this.sliderInput = el}
         onInput={(e: UIEvent) => this.updateValue(e)}>
       </input>
