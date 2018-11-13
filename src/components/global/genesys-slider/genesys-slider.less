@@ -1,12 +1,10 @@
 // Variables part
-@slider-fill:       @genesys-dark-blue;
-@slider-border:     #E0E0E0;
-
-@slider-dark:       @genesys-off-white;
-@slider-fill-dark:  @genesys-blue;
+@slider-fill: @genesys-dark-blue;
+@slider-border: #E0E0E0;
+@slider-dark: @genesys-off-white;
+@slider-fill-dark: @genesys-blue;
 
 genesys-slider {
-
   .container {
     display: flex;
     flex-direction: row;
@@ -20,63 +18,59 @@ genesys-slider {
     align-self: center;
     flex-grow: 2;
     height: 2px;
-    padding: 0px;
+    padding: 0;
     margin-right: 20px;
     background-color: @slider-border;
 
     &:focus {
       outline: none;
     }
+    /** Chrome & Safari */
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 16px;
+      width: 16px;
+      background-color: transparent;
+      cursor: pointer;
 
-      /** Chrome & Safari */
-
-      &::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        height: 16px;
-        width: 16px;
-        background-color: transparent;
-        cursor: pointer;
-
-        &:active {
-          height: 20px;
-          width: 20px;
-        }
+      &:active {
+        height: 20px;
+        width: 20px;
       }
+    }
+    /** Forefox */
+    &::-moz-range-track {
+      height: 2px;
+    }
 
-      /** Forefox */
-      &::-moz-range-track {
-        height: 2px;
-      }
+    &::-moz-range-thumb {
+      height: 16px;
+      width: 16px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    /** IE */
+    &::-ms-track {
+      height: 2px;
+    }
 
-      &::-moz-range-thumb {
-        height: 16px;
-        width: 16px;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-      }
-
-      /** IE */
-      &::-ms-track {
-        height: 2px;
-      }
-
-      &::-ms-thumb {
-        height: 16px;
-        width: 16px;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-      }
+    &::-ms-thumb {
+      height: 16px;
+      width: 16px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
   }
 
-  .range-input:active + .mask {
-      min-width: 18px;
+  .range-input:active+.mask {
+    min-width: 18px;
 
-      &:after {
-        height: 18px;
-        width: 18px;
-      }
+    &:after {
+      height: 18px;
+      width: 18px;
+    }
   }
 
   .mask {
@@ -102,7 +96,6 @@ genesys-slider {
       content: '';
     }
   }
-
   /** Chrome **/
   @media screen and (-webkit-min-device-pixel-ratio:0) {
     .mask {
@@ -116,32 +109,34 @@ genesys-slider {
     position: absolute;
     top: 3px;
     height: 32px;
-    width:50px;
+    width: 50px;
     border: 1px solid @slider-border;
     box-shadow: 0 0 2px @slider-border;
     border-radius: 2px;
     text-align: center;
 
-      &::after, &::before {
-    	top: 100%;
-    	left: 50%;
-    	border: solid transparent;
-    	content: " ";
-    	height: 0;
-    	width: 0;
-    	position: absolute;
-    	pointer-events: none;
+    &::after,
+    &::before {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
     }
 
     &::after {
       border-top-color: white;
-    	border-width: 4px;
-    	margin-left: -4px;
+      border-width: 4px;
+      margin-left: -4px;
     }
+
     &::before {
-    	border-top-color: @slider-border;
-    	border-width: 6px;
-    	margin-left: -6px;
+      border-top-color: @slider-border;
+      border-width: 6px;
+      margin-left: -6px;
     }
 
     .tooltip-value {
@@ -150,17 +145,15 @@ genesys-slider {
   }
 
   .range-input:active {
-    ~ .range-tooltip {
+    ~.range-tooltip {
       display: flex;
       justify-content: center;
     }
   }
 
-
-
   .text-input {
     height: 32px;
-    width:50px;
+    width: 50px;
     margin: 4px 0;
     border: 1px solid @genesys-border-alt;
     border-radius: 2px;
@@ -177,32 +170,33 @@ genesys-slider {
     }
   }
 }
-
 // Theming
+
 .genesys-slider-dark-theme {
-    .range-input {
-      background-color: @slider-dark;
-    }
+  .range-input {
+    background-color: @slider-dark;
+  }
 
-    .mask {
+  .mask {
+    background-color: @slider-fill-dark;
+
+    &::after {
       background-color: @slider-fill-dark;
-
-      &::after {
-        background-color: @slider-fill-dark;
-      }
     }
+  }
 
-    .range-tooltip {
-      color: @genesys-grey-type;
-      background-color: @slider-dark;
-    }
+  .range-tooltip {
+    color: @genesys-grey-type;
+    background-color: @slider-dark;
+  }
 }
 
- .genesys-dark-theme {
-    genesys-slider {
-      .genesys-slider-dark-theme;
-    }
-}
-.genesys-slider.genesys-dark-theme {
+.genesys-dark-theme {
+  genesys-slider {
     .genesys-slider-dark-theme;
+  }
+}
+
+.genesys-slider.genesys-dark-theme {
+  .genesys-slider-dark-theme;
 }
