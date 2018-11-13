@@ -34,6 +34,7 @@ storiesOf('Genesys Components', module)
           id='interactive'
           toast-title=${text('toastTitle', 'The Title')}
           message=${text('message', 'message')}
+          subject=${text('subject', '')}
           icon=${text('icon', 'chat')}
         >
         </genesys-action-toast>

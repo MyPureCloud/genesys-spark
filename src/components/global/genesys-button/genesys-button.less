@@ -22,51 +22,23 @@
 
 genesys-button {
     display: inline-block;
+    min-width: 32px;
+    max-width: 96px;
     > button {
         &[disabled] {
             opacity: 0.5;
             pointer-events: none;
             cursor: default;
         }
-        min-width: 32px;
-        max-width: 96px;
+        width: 100%;
         padding: 0 16px;
         height: 32px;
-        line-height: 32px;
         border-radius: 2px;
         cursor: pointer;
         overflow: hidden;
         text-overflow: ellipsis;
         &:focus {
             outline: none;
-        }
-        &.genesys-primary {
-            background-color: @primary-background-color;
-            border: 1px solid @primary-border-color;
-            color: @primary-color;
-            &:hover {
-                box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.48);
-            }
-            &:active {
-                background-color: @primary-active-background-color;
-            }
-            &:focus {
-                box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
-            }
-        }
-        &.genesys-secondary {
-            background-color: @secondary-background-color;
-            border: 1px solid @secondary-border-color;
-            color: @secondary-color;
-            &:hover {
-                box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.24);
-            }
-            &:active {
-                background-color: @secondary-active-background-color;
-            }
-            &:focus {
-                box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
-            }
         }
         .left-icon {
             line-height: 30px;
@@ -86,6 +58,8 @@ genesys-button {
 }
 
 // Theming
+
+// Dark
 .genesys-button-dark-theme {
     > button {
         &.genesys-primary {
@@ -119,6 +93,39 @@ genesys-button {
     }
 };
 
+.genesys-button-light-theme {
+    > button {
+        &.genesys-primary {
+            background-color: @primary-background-color;
+            border: 1px solid @primary-border-color;
+            color: @primary-color;
+            &:hover {
+                box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.48);
+            }
+            &:active {
+                background-color: @primary-active-background-color;
+            }
+            &:focus {
+                box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+            }
+        }
+        &.genesys-secondary {
+            background-color: @secondary-background-color;
+            border: 1px solid @secondary-border-color;
+            color: @secondary-color;
+            &:hover {
+                box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.24);
+            }
+            &:active {
+                background-color: @secondary-active-background-color;
+            }
+            &:focus {
+                box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+            }
+        }
+    }
+};
+
 .genesys-dark-theme {
     genesys-button {
         .genesys-button-dark-theme;
@@ -126,4 +133,19 @@ genesys-button {
 }
 genesys-button.genesys-dark-theme {
     .genesys-button-dark-theme;
+}
+
+// Light
+.genesys-light-theme {
+    genesys-button {
+        .genesys-button-light-theme;
+    }
+}
+genesys-button.genesys-light-theme {
+    .genesys-button-light-theme;
+}
+
+// Default Theme
+genesys-button {
+    .genesys-button-light-theme;
 }
