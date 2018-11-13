@@ -55,7 +55,7 @@ storiesOf('Genesys Components', module)
         <genesys-tooltip
           id="interactive"
           text=${text('text', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo molestias facere ab deserunt dolores, recusandae non consequuntur quia perferendis officia vero maiores voluptatem temporibus veritatis, fugit nihil, id nobis at.')}
-          parent=${text('parent', '#center-button')}
+          parent=${text('parent', 'center-button')}
           timeout=${number('timeout', 0)}>
         </genesys-tooltip>
       `, el);

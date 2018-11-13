@@ -6,6 +6,25 @@ When hovering a node, the tooltip will be shown below.
 
 If there is not enough space on the bottom, or right of the component, the tooltip position will be adjusted.
 
+## Example usage:
+
+``` html
+<!-- First option (With parent element) -->
+<div class="container">
+  <button>Button</button>
+  <genesys-tooltip
+    text='My great tooltip'>
+  </genesys-tooltip>
+</div>
+
+<!-- Second option (By selector) -->
+<genesys-tooltip
+  id="interactive"
+  text="My awesome tooltip"
+  parent=".container">
+</genesys-tooltip>
+```
+
 <!-- Auto Generated Below -->
 
 

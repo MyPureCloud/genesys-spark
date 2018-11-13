@@ -8,7 +8,7 @@ export class GenesysTooltip {
   @Element() root: HTMLStencilElement;
 
   /**
-   * Element selector.
+   * Element's id.
    */
   @Prop()
   parent: string;
@@ -101,8 +101,7 @@ export class GenesysTooltip {
   }
 
   componentDidLoad () {
-    this.parentNode = document.querySelector(this.parent) || this.root.parentElement;
-    this.setPosition();
+    this.parentNode = document.getElementById(this.parent) || this.root.parentElement;
 
     this.mouseoverHandler = () => {
       this.show();
