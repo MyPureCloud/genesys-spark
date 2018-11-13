@@ -19,15 +19,10 @@ export class GenesysPaginationButtons {
   render() {
     return (
       <div class="pagination-buttons">
-        <button class="first-page-button" onClick={() => this.setPage(1)}>
-          {'<<'}
-        </button>
-        <button
-          class="previous-page-button"
-          onClick={() => this.setPage(this.currentPage - 1)}
-        >
-          {'<'}
-        </button>
+        <genesys-button class="first-page-button" onClick={() => this.setPage(1)} leftIcon="genesys-icon-arrow-left-dbl">
+        </genesys-button>
+        <genesys-button class="previous-page-button" onClick={() => this.setPage(this.currentPage - 1)} leftIcon="genesys-icon-chevron-small-left">
+        </genesys-button>
 
         <span>
           Page{' '}
@@ -41,18 +36,10 @@ export class GenesysPaginationButtons {
           {` of ${this.totalPages}`}
         </span>
 
-        <button
-          class="next-page-button"
-          onClick={() => this.setPage(this.currentPage + 1)}
-        >
-          {'>'}
-        </button>
-        <button
-          class="last-page-button"
-          onClick={() => this.setPage(this.totalPages)}
-        >
-          {'>>'}
-        </button>
+        <genesys-button class="next-page-button" onClick={() => this.setPage(this.currentPage + 1)} leftIcon="genesys-icon-chevron-small-right">
+        </genesys-button>
+        <genesys-button class="last-page-button" onClick={() => this.setPage(this.totalPages)} leftIcon="genesys-icon-arrow-right-dbl">
+        </genesys-button>
       </div>
     );
   }
