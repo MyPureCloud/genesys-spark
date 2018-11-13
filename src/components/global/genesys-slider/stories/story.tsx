@@ -15,6 +15,7 @@ storiesOf('Genesys Components', module)
       el.min = number('min', 0);
       el.max = number('max', 10);
       el.isPercentage = boolean('isPercentage', true);
+      el.addEventListener('update', e => action('update')(e.detail))
       document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })

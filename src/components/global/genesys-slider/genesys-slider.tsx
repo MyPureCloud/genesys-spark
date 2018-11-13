@@ -1,4 +1,4 @@
-import { Event, EventEmitter, Component, Prop} from '@stencil/core';
+import { Event, EventEmitter, Component, Prop, State} from '@stencil/core';
 
 @Component({
   tag: 'genesys-slider',
@@ -59,6 +59,9 @@ export class GenesysSlider {
     this.updatePosition();
   }
 
+  /**
+  * When position is changed, via slider or text box, update position
+  */
   updatePosition() {
     const width = this.sliderInput.offsetWidth;
     const placementPercentage = (this.value - this.min)/(this.max - this.min);
