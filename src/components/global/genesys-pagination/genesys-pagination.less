@@ -1,11 +1,12 @@
+@import "./pagination-variables.less";
+
 .gux-pagination {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  .pagination-items-count,
-  .pagination-items-per-page,
-  .pagination-buttons {
-    display: inline-block;
+  genesys-pagination-item-counts {
+    margin-right: @genesys-pagination-text-margin;
   }
 
   .pagination-buttons {

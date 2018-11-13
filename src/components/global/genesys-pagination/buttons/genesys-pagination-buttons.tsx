@@ -24,7 +24,7 @@ export class GenesysPaginationButtons {
         <genesys-button class="previous-page-button" onClick={() => this.setPage(this.currentPage - 1)} leftIcon="genesys-icon-chevron-small-left">
         </genesys-button>
 
-        <span>
+        <span class="genesys-pagination-current-page-text">
           Page{' '}
           <input
             class="pagination-current-page-input"
