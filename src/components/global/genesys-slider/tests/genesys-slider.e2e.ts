@@ -9,15 +9,17 @@ describe('genesys-slider', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('renders changes when value is changed', async () => {
+  it('renders changes when value is incremented', async () => {
     const page = await newE2EPage();
 
     await page.setContent('<genesys-slider></genesys-slider>');
     const component = await page.find('genesys-slider');
     const input = await page.find('genesys-slider input');
     expect(input).toHaveClass('range-input');
-    expect(input.getAttribute('value')).toEqual(0);
-    component.setProperty('value', 5);
-    expect(input.getAttribute('value')).toEqual(5);
+    var val = await input.getProperty('value');
+    expect(val).toBe('0');
+    await input.press('ArrowRight');
+    val = await input.getProperty('value');
+    expect(val).toBe('1');
   });
 });

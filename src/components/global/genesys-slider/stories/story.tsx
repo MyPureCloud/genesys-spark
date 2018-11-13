@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs/polymer';
+import { boolean, number, select, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { withReadme  } from 'storybook-readme';
 
