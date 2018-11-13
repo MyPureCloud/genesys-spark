@@ -67,8 +67,8 @@ export class GenesysSlider {
     const width = this.sliderInput.offsetWidth;
     const placementPercentage = (this.value - this.min)/(this.max - this.min);
     if (this.sliderTooltip) {
-      var thumbOffset = -16 * (placementPercentage - 0.5) + 6;
-      var newPosition = (placementPercentage * width) + thumbOffset - 10;
+      var thumbOffset = -18 * (placementPercentage - 0.5) + 6;
+      var newPosition = (placementPercentage * width) + thumbOffset - 25;
       this.sliderTooltip.style.left = newPosition + 'px';
     }
     thumbOffset = -12 * (placementPercentage - 0.5) + 6;
@@ -81,6 +81,7 @@ export class GenesysSlider {
     return (<div class="container">
       <input
         type="range"
+        role="slider"
         class="range-input"
         min={this.min}
         max={this.max}
@@ -104,11 +105,12 @@ export class GenesysSlider {
         </input>
       ) : (
         <div
-          id="range-tooltip"
           class="range-tooltip small-body"
-          role="tooltip"
           ref={el => this.sliderTooltip = el}>
-          {value}
+          <div
+             class="tooltip-value">
+             {value}
+         </div>
         </div>
         )}
     </div>);
