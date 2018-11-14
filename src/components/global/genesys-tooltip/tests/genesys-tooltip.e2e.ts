@@ -13,26 +13,23 @@ describe('genesys-tooltip', () => {
   });
   it('shows/hides the tooltip', async () => {
     await page.setContent(`
-    <div id="parent">
+    <div>
       <button>Button</button>
       <genesys-tooltip
-        parent="parent"
-        text='Tooltip content'>
+        for="for"
+        text='Tooltip content'
+        delay='0'>
       </genesys-tooltip>
     </div>
-    <div id="dummy"></div>
     `);
-    const parent = await page.find('#parent');
-    const dummy = await page.find('#dummy');
-    element = await page.find('genesys-tooltip div.genesys-tooltip');
-    expect(element.classList.contains('shown')).toEqual(false);
-    parent.hover();
-    setTimeout(() => {
-      expect(element.classList.contains('shown')).toEqual(true);
-      dummy.hover();
-      setTimeout(() => {
-        expect(element.classList.contains('shown')).toEqual(false);
-      }, 1300);
-    }, 300);
+    element = await page.find('genesys-tooltip');
+    const shownSpy = await element.spyOnEvent('shown');
+    const hiddenSpy = await element.spyOnEvent('hidden');
+    element.callMethod('show');
+    await page.waitForChanges();
+    expect(shownSpy).toHaveReceivedEvent();
+    await element.callMethod('hide');
+    page.waitForChanges();
+    expect(hiddenSpy).toHaveReceivedEvent();
   });
 });

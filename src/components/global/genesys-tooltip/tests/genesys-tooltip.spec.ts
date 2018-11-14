@@ -1,4 +1,5 @@
 import { GenesysTooltip } from '../genesys-tooltip';
+import * as Utils from '../../../../common-utils';
 
 describe('genesys-tooltip', () => {
   let component;
@@ -11,9 +12,9 @@ describe('genesys-tooltip', () => {
 
   describe('methods', () => {
     it('resize', () => {
-      spyOn(component, 'setPosition');
+      spyOn(Utils, 'getPositionRelativeToTarget');
       component.resize();
-      expect(component.setPosition).toHaveBeenCalled();
+      expect(Utils.getPositionRelativeToTarget).toHaveBeenCalled();
     });
   });
 });

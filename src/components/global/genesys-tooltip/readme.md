@@ -9,19 +9,20 @@ If there is not enough space on the bottom, or right of the component, the toolt
 ## Example usage:
 
 ``` html
-<!-- First option (With parent element) -->
-<div class="container">
+<!-- First option (With parentElement) -->
+<div id="container">
   <button>Button</button>
   <genesys-tooltip
     text='My great tooltip'>
   </genesys-tooltip>
 </div>
 
-<!-- Second option (By selector) -->
+<!-- Second option (With parent id in for attribute) -->
 <genesys-tooltip
   id="interactive"
   text="My awesome tooltip"
-  parent=".container">
+  for="container"
+  delay="500">
 </genesys-tooltip>
 ```
 
@@ -30,11 +31,20 @@ If there is not enough space on the bottom, or right of the component, the toolt
 
 ## Properties
 
-| Property  | Attribute | Description                           | Type     |
-| --------- | --------- | ------------------------------------- | -------- |
-| `parent`  | `parent`  | Element selector.                     | `string` |
-| `text`    | `text`    | Tooltip text.                         | `string` |
-| `timeout` | `timeout` | Delay before hide. (Set to 0 to none) | `number` |
+| Property  | Attribute  | Description                           | Type      |
+| --------- | ---------- | ------------------------------------- | --------- |
+| `delay`   | `delay`    | Delay before hide. (Set to 0 to none) | `number`  |
+| `for`     | `for`      | Element's id.                         | `string`  |
+| `isShown` | `is-shown` | Tooltip current state.                | `boolean` |
+| `text`    | `text`     | Tooltip text.                         | `string`  |
+
+
+## Events
+
+| Event    | Detail | Description                          |
+| -------- | ------ | ------------------------------------ |
+| `hidden` |        | Triggered when the tooltip is hidden |
+| `shown`  |        | Triggered when the tooltip is shown  |
 
 
 ## Methods

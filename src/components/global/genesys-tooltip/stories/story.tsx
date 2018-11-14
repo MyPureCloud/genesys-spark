@@ -1,4 +1,5 @@
 import { checkA11y } from '@storybook/addon-a11y';
+import { action } from '@storybook/addon-actions';
 import { number, select, text, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
@@ -55,12 +56,14 @@ storiesOf('Genesys Components', module)
         <genesys-tooltip
           id="interactive"
           text=${text('text', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo molestias facere ab deserunt dolores, recusandae non consequuntur quia perferendis officia vero maiores voluptatem temporibus veritatis, fugit nihil, id nobis at.')}
-          parent=${text('parent', 'center-button')}
-          timeout=${number('timeout', 0)}>
+          for=${text('for', 'center-button')}
+          delay=${number('delay', 0)}>
         </genesys-tooltip>
       `, el);
       setTimeout(() => {
         const centerTooltip = document.getElementById('interactive');
+        centerTooltip.addEventListener('shown', e => action('shown')(e));
+        centerTooltip.addEventListener('hidden', e => action('hidden')(e));
         const showTooltip = document.getElementById('center-button-show');
         showTooltip.addEventListener('click', () => {
           centerTooltip.show();

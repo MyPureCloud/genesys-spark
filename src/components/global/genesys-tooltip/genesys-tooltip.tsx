@@ -1,4 +1,5 @@
-import { Component, Element, Listen, Method, Prop, State } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Listen, Method, Prop, State } from '@stencil/core';
+import { getPositionRelativeToTarget } from '../../../common-utils';
 
 @Component({
   styleUrl: 'genesys-tooltip.less',
@@ -11,7 +12,7 @@ export class GenesysTooltip {
    * Element's id.
    */
   @Prop()
-  parent: string;
+  for: string;
   /**
    * Tooltip text.
    */
@@ -21,24 +22,43 @@ export class GenesysTooltip {
    * Delay before hide. (Set to 0 to none)
    */
   @Prop()
-  timeout: number = 1000;
+  delay: number = 1000;
+  /**
+   * Tooltip current state.
+   */
+  @Prop({ mutable: true, reflectToAttr: true })
+  isShown: boolean = false;
 
   @State()
-  top: string;
-  @State()
-  right: string;
-  @State()
-  bottom: string;
-  @State()
-  left: string;
-  @State()
-  width: string;
+  tooltipRect: { [s: string]: number; };
 
-  parentNode: HTMLElement;
+  forNode: HTMLElement;
   tooltipEl: HTMLElement;
 
-  mouseoverHandler: () => void;
-  mouseoutHandler: () => void;
+  positionOptions = {
+    offsetY: 24
+  };
+
+  mouseenterHandler: () => void;
+  mouseleaveHandler: () => void;
+  delayTimeout: NodeJS.Timer;
+
+  /**
+   * Triggered when the tooltip is shown
+   */
+  @Event() shown: EventEmitter;
+  /**
+   * Triggered when the tooltip is hidden
+   */
+  @Event() hidden: EventEmitter;
+
+  emitEvent () {
+    if (this.isShown) {
+      this.shown.emit();
+    } else {
+      this.hidden.emit();
+    }
+  }
 
   /**
    * Shows the tooltip.
@@ -46,8 +66,11 @@ export class GenesysTooltip {
    */
   @Method()
   show () {
-    this.setPosition();
-    this.tooltipEl.classList.add('shown');
+    this.delayTimeout = setTimeout(() => {
+      this.tooltipRect = getPositionRelativeToTarget(this.tooltipEl, this.forNode, this.positionOptions);
+      this.isShown = true;
+      this.emitEvent();
+    }, this.delay);
   }
 
   /**
@@ -55,78 +78,50 @@ export class GenesysTooltip {
    */
   @Method()
   hide () {
-    setTimeout(() => {
-      this.tooltipEl.classList.remove('shown');
-    }, this.timeout);
+    clearTimeout(this.delayTimeout);
+    this.isShown = false;
+    this.emitEvent();
   }
 
   @Listen('window:resize')
   resize () {
-    this.setPosition();
+    this.tooltipRect = getPositionRelativeToTarget(this.tooltipEl, this.forNode, this.positionOptions);
+  }
+
+  get computedClass () {
+    return `genesys-tooltip ${this.isShown ? 'shown' : ''}`;
   }
 
   get computedStyle () {
     return {
-      top: this.top,
-      right: this.right,
-      bottom: this.bottom,
-      left: this.left,
-      width: this.width
-    }
-  }
-
-  setPosition () {
-    const parentRect = this.parentNode.getBoundingClientRect();
-    const tooltipRect = this.tooltipEl.getBoundingClientRect();
-    this.top = '';
-    this.right = '';
-    this.bottom = '';
-    this.left = '';
-    this.width = '';
-    // Top behavior
-    if ((parentRect.bottom + tooltipRect.height + 24) >= window.innerHeight) {
-      this.bottom = `${window.innerHeight - parentRect.top + 24}px`;
-    } else {
-      this.top = `${parentRect.top + parentRect.height + 24}px`;
-    }
-    // Left behavior
-    if (window.innerWidth <= tooltipRect.width) {
-      this.left = `0px`;
-      this.width = `${window.innerWidth}px`;
-    } else if ((parentRect.left + tooltipRect.width) >= window.innerWidth) {
-      this.right = `${window.innerWidth - parentRect.right}px`;
-    } else {
-      this.left = `${parentRect.left}px`;
-    }
+      top: this.tooltipRect ? (this.tooltipRect.top + 'px') : '',
+      right: this.tooltipRect ? (this.tooltipRect.right + 'px') : '',
+      bottom: this.tooltipRect ? (this.tooltipRect.bottom + 'px') : '',
+      left: this.tooltipRect ? (this.tooltipRect.left + 'px') : '',
+      width: this.tooltipRect ? (this.tooltipRect.width + 'px') : '',
+      height: this.tooltipRect ? (this.tooltipRect.height + 'px') : ''
+    };
   }
 
   componentDidLoad () {
-    this.parentNode = document.getElementById(this.parent) || this.root.parentElement;
-    this.setPosition();
+    this.forNode = document.getElementById(this.for) || this.root.parentElement;
+    this.tooltipRect = getPositionRelativeToTarget(this.tooltipEl, this.forNode, this.positionOptions);
 
-    this.mouseoverHandler = () => {
-      this.show();
-    };
-    this.parentNode.addEventListener('mouseover', this.mouseoverHandler);
+    this.mouseenterHandler = () => { this.show(); };
+    this.mouseleaveHandler = () => { this.hide(); };
 
-    if (this.timeout !== 0) {
-      this.mouseoutHandler = () => {
-        this.hide();
-      };
-      this.parentNode.addEventListener('mouseout', this.mouseoutHandler);
-    }
+    this.forNode.addEventListener('mouseenter', this.mouseenterHandler);
+    this.forNode.addEventListener('mouseleave', this.mouseleaveHandler);
   }
 
   componentDidUnload () {
-    this.parentNode.removeEventListener('mouseover', this.mouseoverHandler);
-    if (this.timeout !== 0) {
-      this.parentNode.removeEventListener('mouseout', this.mouseoutHandler);
-    }
+    this.forNode.removeEventListener('mouseenter', this.mouseenterHandler);
+    this.forNode.removeEventListener('mouseleave', this.mouseleaveHandler);
   }
 
   render() {
     return (
-      <div class="genesys-tooltip" ref={el => this.tooltipEl = el} style={this.computedStyle}>{this.text}</div>
+      <div class={this.computedClass} ref={el => this.tooltipEl = el} style={this.computedStyle}>{this.text}</div>
     );
   }
 }
