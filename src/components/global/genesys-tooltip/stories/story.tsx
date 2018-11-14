@@ -1,6 +1,6 @@
 import { checkA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-import { number, select, text, withKnobs } from '@storybook/addon-knobs/polymer';
+import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
 import { withReadme  } from 'storybook-readme';
@@ -57,7 +57,8 @@ storiesOf('Genesys Components', module)
           id="interactive"
           text=${text('text', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo molestias facere ab deserunt dolores, recusandae non consequuntur quia perferendis officia vero maiores voluptatem temporibus veritatis, fugit nihil, id nobis at.')}
           for=${text('for', 'center-button')}
-          delay=${number('delay', 0)}>
+          delay=${number('delay', 0)},
+          is-shown=${boolean('isShown', true)}>
         </genesys-tooltip>
       `, el);
       setTimeout(() => {

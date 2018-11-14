@@ -94,12 +94,12 @@ export class GenesysTooltip {
 
   get computedStyle () {
     return {
-      top: this.tooltipRect ? (this.tooltipRect.top + 'px') : '',
-      right: this.tooltipRect ? (this.tooltipRect.right + 'px') : '',
-      bottom: this.tooltipRect ? (this.tooltipRect.bottom + 'px') : '',
-      left: this.tooltipRect ? (this.tooltipRect.left + 'px') : '',
-      width: this.tooltipRect ? (this.tooltipRect.width + 'px') : '',
-      height: this.tooltipRect ? (this.tooltipRect.height + 'px') : ''
+      top: (this.tooltipRect && this.tooltipRect.hasOwnProperty('top')) ? (this.tooltipRect.top + 'px') : '',
+      right: (this.tooltipRect && this.tooltipRect.hasOwnProperty('right')) ? (this.tooltipRect.right + 'px') : '',
+      bottom: (this.tooltipRect && this.tooltipRect.hasOwnProperty('bottom')) ? (this.tooltipRect.bottom + 'px') : '',
+      left: (this.tooltipRect && this.tooltipRect.hasOwnProperty('left')) ? (this.tooltipRect.left + 'px') : '',
+      width: (this.tooltipRect && this.tooltipRect.hasOwnProperty('width')) ? (this.tooltipRect.width + 'px') : '',
+      height: (this.tooltipRect && this.tooltipRect.hasOwnProperty('height')) ? (this.tooltipRect.height + 'px') : ''
     };
   }
 

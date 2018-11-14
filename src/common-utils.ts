@@ -9,7 +9,7 @@ export function getPositionRelativeToTarget (element: HTMLElement, target: HTMLE
   // Top behavior
   if (window.innerHeight <= elementRect.height) {
     resultRect.top = offsetY;
-    resultRect.height = window.innerHeight - (offsetY * 2);
+    resultRect.bottom = offsetY;
   } if ((targetRect.bottom + elementRect.height + offsetY) >= window.innerHeight) {
     resultRect.bottom = window.innerHeight - targetRect.top + offsetY;
   } else {
@@ -18,7 +18,7 @@ export function getPositionRelativeToTarget (element: HTMLElement, target: HTMLE
   // Left behavior
   if (window.innerWidth <= elementRect.width) {
     resultRect.left = offsetX;
-    resultRect.width = window.innerWidth - (offsetX * 2);
+    resultRect.right = offsetX;
   } else if ((targetRect.left + elementRect.width + offsetX) >= window.innerWidth) {
     resultRect.right = window.innerWidth - targetRect.right + offsetX;
   } else {
