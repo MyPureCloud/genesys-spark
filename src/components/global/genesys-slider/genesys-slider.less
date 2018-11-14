@@ -17,15 +17,22 @@ genesys-slider {
     -webkit-appearance: none;
     align-self: center;
     flex-grow: 2;
-    height: 2px;
+    height: 18px;
+    width: 100%;
     padding: 0;
     margin-right: 20px;
-    background-color: @slider-border;
+    background-color: transparent;
 
     &:focus {
       outline: none;
     }
     /** Chrome & Safari */
+    &::-webkit-slider-runnable-track {
+      height: 2px;
+      width: 100%;
+      background-color: @slider-border;
+    }
+
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       height: 16px;
@@ -53,6 +60,9 @@ genesys-slider {
     /** IE */
     &::-ms-track {
       height: 2px;
+      width: 100%;
+      border: none;
+      background-color: @slider-border;
     }
 
     &::-ms-thumb {
@@ -77,6 +87,7 @@ genesys-slider {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-self: center;
     position: absolute;
     top: 52px;
     left: 16px;
