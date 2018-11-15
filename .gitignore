@@ -2,6 +2,7 @@ build/
 dist/
 www/
 .docs/
+.npmrc
 
 *~
 *.sw[mnpcod]
