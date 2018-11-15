@@ -30,7 +30,21 @@ storiesOf('Genesys Components', module)
               </genesys-tooltip>
             </div>
           </div>
-          <div style="display:flex;flex-grow:1">
+          <div style="display:flex;flex-grow:1;flex-direction:column">
+            <div id="scroll" style="margin-top:150px;height:300px;overflow-y:scroll;overflow-x:hidden;border:2px dashed grey">
+              <div id="scroll2" style="margin:100px -2px;height:150px;overflow-y:scroll;border:2px dashed grey">
+                <div style="height:200px;text-align:center">
+                  <div style="display:inline-block;margin-top:84px;">
+                    <genesys-button text="Scroll button"></genesys-button>
+                    <genesys-tooltip
+                      text='Tooltip should move on scroll'
+                      delay='0'
+                      is-shown='true'>
+                    </genesys-tooltip>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div style="margin:auto">
               <genesys-button id="center-button" text="Center button" accent="primary"></genesys-button>
               <genesys-button id="center-button-show" text="Show"></genesys-button>

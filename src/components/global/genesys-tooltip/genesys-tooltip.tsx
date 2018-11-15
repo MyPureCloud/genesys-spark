@@ -41,6 +41,8 @@ export class GenesysTooltip {
 
   mouseenterHandler: () => void;
   mouseleaveHandler: () => void;
+  scrollHandler: () => void;
+
   delayTimeout: NodeJS.Timer;
 
   /**
@@ -105,18 +107,26 @@ export class GenesysTooltip {
 
   componentDidLoad () {
     this.forNode = document.getElementById(this.for) || this.root.parentElement;
+
     this.tooltipRect = getPositionRelativeToTarget(this.tooltipEl, this.forNode, this.positionOptions);
 
     this.mouseenterHandler = () => { this.show(); };
     this.mouseleaveHandler = () => { this.hide(); };
+    this.scrollHandler = () => {
+      this.tooltipRect = getPositionRelativeToTarget(this.tooltipEl, this.forNode, this.positionOptions);
+    };
 
     this.forNode.addEventListener('mouseenter', this.mouseenterHandler);
     this.forNode.addEventListener('mouseleave', this.mouseleaveHandler);
+
+    window.addEventListener('scroll', this.scrollHandler, true);
   }
 
   componentDidUnload () {
     this.forNode.removeEventListener('mouseenter', this.mouseenterHandler);
     this.forNode.removeEventListener('mouseleave', this.mouseleaveHandler);
+
+    window.removeEventListener('scroll', this.scrollHandler, true);
   }
 
   render() {
