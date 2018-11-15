@@ -45,6 +45,12 @@ export class GenesysTextField {
   label: string;
 
   /**
+   * The input label position (can be left or right) if not defined the position depends of the label width.
+   */
+  @Prop()
+  labelPosition: string;
+
+  /**
    * The input validation.
    */
   @Prop()
@@ -129,7 +135,11 @@ export class GenesysTextField {
 
   getClassList () :string {
     let classList = [];
-    if (this.label && this.label.length < 10) {
+    if (['left', 'top'].includes(this.labelPosition)) {
+      if (this.labelPosition === 'left') {
+        classList = [...classList, 'flex'];
+      }
+    } else if (this.label && this.label.length < 10) {
       classList = [...classList, 'flex'];
     }
 
