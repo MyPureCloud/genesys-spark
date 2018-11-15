@@ -13,9 +13,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | `icon`           | `icon`             | The icon name of the title.        | `string` |
 | `idToast`        | `id-toast`         | The id of the title.               | `string` |
 | `keyValues`      | --                 | The key values of the toast.       | `any`    |
-| `leftButton`     | --                 |                                    | `any`    |
+| `leftButton`     | --                 | The left button.                   | `any`    |
 | `message`        | `message`          | The message of the toast.          | `string` |
-| `rightButton`    | --                 |                                    | `any`    |
+| `rightButton`    | --                 | The right button.                  | `any`    |
 | `subject`        | `subject`          | The subject of the toast.          | `string` |
 | `toastTitle`     | `toast-title`      | The toast title.                   | `string` |
 | `topBorderColor` | `top-border-color` | The top border color of the toast. | `string` |

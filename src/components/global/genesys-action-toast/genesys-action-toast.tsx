@@ -1,4 +1,4 @@
-import { Event, EventEmitter, Component, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'genesys-action-toast.less',
@@ -10,55 +10,51 @@ export class GenesysActionToast {
   /**
    * The toast title.
    */
-
   @Prop()
   toastTitle: string;
   /**
    * The id of the title.
    */
-
   @Prop()
   idToast: string;
   /**
    * The icon name of the title.
    */
-
   @Prop()
   icon: string;
   /**
    * The icon uri of the title.
    */
-
   @Prop()
   iconUri: string;
   /**
    * The message of the toast.
    */
-
   @Prop()
   message: string;
   /**
    * The top border color of the toast.
    */
-
   @Prop()
   topBorderColor: string;
   /**
    * The subject of the toast.
    */
-
   @Prop()
   subject: string;
   /**
    * The key values of the toast.
    */
-
   @Prop()
   keyValues: any = {};
-
+  /**
+   * The left button.
+   */
   @Prop()
   leftButton: any;
-
+  /**
+   * The right button.
+   */
   @Prop()
   rightButton: any;
 
