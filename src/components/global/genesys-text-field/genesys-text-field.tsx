@@ -74,6 +74,12 @@ export class GenesysTextField {
   @Prop()
   debounceTimeout: number = 500;
 
+  /**
+   * The label for the erase button
+   */
+  @Prop()
+  eraseLabel: string = ''
+
   @State()
   classList: string[] = [];
 
@@ -192,6 +198,7 @@ export class GenesysTextField {
             <button
               type="button"
               class="genesys-icon-close"
+              title={this.eraseLabel}
               onClick={e => this._clear(e)}
             />
           )}

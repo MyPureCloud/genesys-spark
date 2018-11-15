@@ -20,6 +20,7 @@ changing error-message attribute.
 | ------------------ | -------------------- | ------------------------------------------------------------------------------------------------------- | --------- |
 | `debounceTimeout`  | `debounce-timeout`   | Timeout between input and validation.                                                                   | `number`  |
 | `disabled`         | `disabled`           | Disable the input and prevent interactions.                                                             | `boolean` |
+| `eraseLabel`       | `erase-label`        | The label for the erase button                                                                          | `string`  |
 | `errorMessageType` | `error-message-type` | The message type (warning or error)                                                                     | `string`  |
 | `errorMessage`     | `error-message`      | The message displayed on validation failure.                                                            | `string`  |
 | `labelPosition`    | `label-position`     | The input label position (can be left or right) if not defined the position depends of the label width. | `string`  |

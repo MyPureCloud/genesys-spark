@@ -14,6 +14,7 @@
 @focus-outline: fade(@genesys-blue, 50%);
 @focus-border: @genesys-dark-blue;
 @alert-color: @genesys-alert;
+@alert-color-dark: @genesys-alert-2;
 
 genesys-text-field {
   display: block;
@@ -123,6 +124,32 @@ genesys-text-field {
 
 // Theming
 .genesys-text-field-dark-theme {
+  > div {
+    &.error, &.warning {
+      input {
+        border-color: @alert-color-dark;
+        outline: 0;
+        &:focus,
+        &:hover {
+          border-color: @alert-color-dark;
+          outline: 0;
+        }
+      }
+      .genesys-error {
+        color: @alert-color-dark;
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+    &.warning {
+      .genesys-error {
+        i {
+          color: @genesys-warning;
+        }
+      }
+    }
+  }
   .genesys-field {
     input {
       background-color: @dark-background-color;
@@ -139,6 +166,11 @@ genesys-text-field {
       }
       &::-moz-placeholder {
         color: @dark-placeholder;
+      }
+      &:focus {
+        border: 1px solid @genesys-blue;
+        outline: 3px @genesys-blue;
+        box-shadow: none;
       }
     }
 

@@ -32,6 +32,7 @@ storiesOf('Genesys Components', module)
           id='interactive'
           placeholder=${text('placeholder', 'placeholder')}
           label=${text('label', 'label')}
+          erase-label=${text('erase-label', 'erase')}
           label-position=${text('label-position', '')}
           error-message=${text('error-message', '')}
           error-message-type=${text('error-message-type', 'error')}
