@@ -5,19 +5,15 @@ genesys-accordion {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: @genesys-off-white-bg;
     .section {
-      color: @genesys-grey-type;
       .header {
         box-sizing: border-box;
-        border-top: 1px solid @genesys-border;
         height: 40px;
         line-height: 40px;
         font-weight: bold;
         padding-left: 16px;
         cursor: pointer;
         button {
-          color: @genesys-grey-type;
           cursor: pointer;
           float: right;
           padding: 0 12px;
@@ -28,11 +24,6 @@ genesys-accordion {
           outline: none;
           font-size: 16px;
         }
-        &:hover {
-          button {
-            color: @genesys-dark-blue;
-          }
-        }
       }
       .content {
         box-sizing: border-box;
@@ -41,13 +32,39 @@ genesys-accordion {
       }
       &.opened {
         .header {
-          border-bottom: 1px solid @genesys-border;
           button {
             transform: rotate(180deg);
           }
         }
         .content {
           display: block;
+        }
+      }
+    }
+  }
+}
+
+// Theming
+// Light
+.genesys-accordion-light-theme {
+  ul.genesys-accordion {
+    background-color: @genesys-off-white-bg;
+    .section {
+      color: @genesys-grey-type;
+      .header {
+        border-top: 1px solid @genesys-border;
+        button {
+          color: @genesys-grey-type;
+        }
+        &:hover {
+          button {
+            color: @genesys-dark-blue;
+          }
+        }
+      }
+      &.opened {
+        .header {
+          border-bottom: 1px solid @genesys-border;
         }
       }
       &:last-of-type {
@@ -61,8 +78,15 @@ genesys-accordion {
     }
   }
 }
-
-// Theming
+.genesys-light-theme {
+  genesys-accordion {
+    .genesys-accordion-light-theme;
+  }
+}
+genesys-accordion.genesys-light-theme {
+  .genesys-accordion-light-theme;
+}
+// Dark
 .genesys-accordion-dark-theme {
   ul.genesys-accordion {
     background-color: @genesys-panel;
@@ -82,9 +106,6 @@ genesys-accordion {
       &.opened {
         .header {
           border-bottom: 1px solid @genesys-grey-1;
-          button {
-            color: @genesys-off-white-type;
-          }
         }
       }
       &:last-of-type {
@@ -97,13 +118,16 @@ genesys-accordion {
       }
     }
   }
-};
-
+}
 .genesys-dark-theme {
   genesys-accordion {
     .genesys-accordion-dark-theme;
   }
 }
-.genesys-accordion.genesys-dark-theme {
+genesys-accordion.genesys-dark-theme {
   .genesys-accordion-dark-theme;
+}
+// Default
+genesys-accordion {
+  .genesys-accordion-light-theme;
 }
