@@ -9,11 +9,11 @@ const distTarget: OutputTargetDist = {
 export const config: Config = {
   copy: [
     {
-      dest: 'fonts',
+      dest: '../fonts',
       src: 'style/fonts'
     },
     {
-      dest: 'icons',
+      dest: '../icons',
       src: 'style/icons'
     }
   ],
@@ -30,9 +30,7 @@ export const config: Config = {
     less({
       injectGlobalPaths: [
         'src/style/variables.less',
-        'src/style/mixins.less',
-        'src/style/fonts/fonts.less',
-        'src/style/icons/icons.less'
+        'src/style/mixins.less'
       ]
     })
   ],
