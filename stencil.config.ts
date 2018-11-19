@@ -41,7 +41,7 @@ export const config: Config = {
     "browserHeadless": true,
     "collectCoverage": true,
     "coverageDirectory": "build/test-reports/coverage",
-    "coverageReporters": ["json", "lcov", "text", "clover"],
+    "coverageReporters": ["json", "lcov", "text", "clover", "text-summary"],
     "reporters": [ 
       "default",
       [ "jest-junit", 
