@@ -5,12 +5,11 @@ genesys-tooltip {
     position: absolute;
     white-space: nowrap;
     background-color: @genesys-off-white-bg;
+    color: @genesys-grey-2;
     height: 32px;
     line-height: 32px;
     font-size: 12px;
     padding: 0 8px;
-    border: 1px solid @genesys-border-alt;
-    box-shadow: 0 0 2px 0 fade(@genesys-grey-1, 24);
     opacity: 0;
     z-index: 1;
     overflow: hidden;
@@ -30,19 +29,37 @@ genesys-tooltip {
 }
 
 // Theming
+// Light
+.genesys-tooltip-light-theme {
+  div.genesys-tooltip {
+    border: 1px solid @genesys-border-alt;
+    box-shadow: 0 0 2px 0 fade(@genesys-grey-1, 24);
+  }
+}
+.genesys-light-theme {
+  genesys-tooltip {
+      .genesys-tooltip-light-theme;
+  }
+}
+genesys-tooltip.genesys-light-theme {
+  .genesys-tooltip-light-theme;
+}
+// Dark
 .genesys-tooltip-dark-theme {
   div.genesys-tooltip {
-    color: @genesys-grey-2;
     border: 1px solid @genesys-border-dark;
     box-shadow: 0 0 2px 0 fade(@genesys-grey-1, 100);
   }
-};
-
+}
 .genesys-dark-theme {
   genesys-tooltip {
     .genesys-tooltip-dark-theme;
   }
 }
-.genesys-tooltip.genesys-dark-theme {
+genesys-tooltip.genesys-dark-theme {
   .genesys-tooltip-dark-theme;
+}
+// Default
+genesys-tooltip {
+  .genesys-tooltip-light-theme;
 }
