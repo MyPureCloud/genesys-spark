@@ -45,7 +45,7 @@ export class GenesysTextField {
   label: string;
 
   /**
-   * The input label position (can be left or right) if not defined the position depends of the label width.
+   * The input label position (can be left or top) if not defined the position depends of the label width.
    */
   @Prop()
   labelPosition: string;
