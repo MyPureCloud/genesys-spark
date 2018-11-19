@@ -8,5 +8,4 @@ describe('genesys-action-toast', () => {
     const element = await page.find('genesys-action-toast');
     expect(element).toHaveClass('hydrated');
   });
-
 });
