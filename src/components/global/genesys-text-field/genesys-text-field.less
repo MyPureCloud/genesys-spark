@@ -123,6 +123,8 @@ genesys-text-field {
 }
 
 // Theming
+
+// Dark
 .genesys-text-field-dark-theme {
   > div {
     &.error, &.warning {
@@ -194,4 +196,69 @@ genesys-text-field {
 }
 .genesys-text-field.genesys-dark-theme {
   .genesys-text-field-dark-theme;
+}
+
+// Light
+.genesys-text-field-light-theme {
+  > div {
+    &.error, &.warning {
+      input {
+        border-color: @alert-color;
+        &:focus,
+        &:hover {
+          border-color: @alert-color;
+        }
+      }
+      .genesys-error {
+        color: @alert-color;
+      }
+    }
+    &.warning {
+      .genesys-error {
+        i {
+          color: @genesys-warning;
+        }
+      }
+    }
+  }
+  .genesys-field {
+    input {
+      background-color: @background-color;
+      border: 1px solid @border;
+      color: @text-color;
+      &::placeholder {
+        color: @placeholder;
+      }
+      &::-webkit-input-placeholder {
+        color: @placeholder;
+      }
+      &::-ms-input-placeholder {
+        color: @placeholder;
+      }
+      &::-moz-placeholder {
+        color: @placeholder;
+      }
+      &:focus {
+        border: 1px solid @focus-border;
+        box-shadow: 0px 0px 4px @focus-outline;
+      }
+    }
+    button {
+      color: @icon-color;
+    }
+  }
+}
+
+.genesys-light-theme {
+  genesys-text-field {
+      .genesys-text-field-light-theme;
+  }
+}
+genesys-text-field.genesys-light-theme {
+  .genesys-text-field-light-theme;
+}
+
+// Default Theme
+genesys-text-field {
+  .genesys-text-field-light-theme
 }
