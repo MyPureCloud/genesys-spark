@@ -58,7 +58,7 @@ export class GenesysActionToast {
   @Prop()
   rightButton: any;
 
-  defaultButtonCallback(button) {
+  onButtonClickHandler(button) {
     if (button.callback) {
       button.callback(this.idToast, this);
     }
@@ -110,7 +110,7 @@ export class GenesysActionToast {
               accent=""
               disabled={this.leftButton.disabled}
               title={this.leftButton.title ? this.leftButton.title : ''}
-              onClick={() => this.defaultButtonCallback(this.leftButton)}
+              onClick={() => this.onButtonClickHandler(this.leftButton)}
               class="left-button"
             />
           )}
@@ -122,7 +122,7 @@ export class GenesysActionToast {
               accent="primary"
               disabled={this.rightButton.disabled}
               title={this.rightButton.title ? this.rightButton.title : ''}
-              onClick={() => this.defaultButtonCallback(this.rightButton)}
+              onClick={() => this.onButtonClickHandler(this.rightButton)}
               class="right-button"
             />
           )}
