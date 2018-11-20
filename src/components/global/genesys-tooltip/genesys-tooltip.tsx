@@ -90,7 +90,7 @@ export class GenesysTooltip {
   }
 
   @Listen('window:resize,window:scroll', { capture: true })
-  scroll () {
+  onWindowEvent () {
     this.tooltipRect = getPositionRelativeToTarget(this.tooltipEl, this.forNode, this.positionOptions);
   }
 

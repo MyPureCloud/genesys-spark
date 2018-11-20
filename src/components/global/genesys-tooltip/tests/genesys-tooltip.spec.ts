@@ -13,7 +13,7 @@ describe('genesys-tooltip', () => {
   describe('methods', () => {
     it('resize', () => {
       spyOn(Utils, 'getPositionRelativeToTarget');
-      component.resize();
+      component.onWindowEvent();
       expect(Utils.getPositionRelativeToTarget).toHaveBeenCalled();
     });
   });
