@@ -36,8 +36,12 @@ export class GenesysTooltip {
   tooltipEl: HTMLElement;
 
   positionOptions = {
-    offsetY: 24
+    offsetX: 0,
+    offsetY: 24,
+    width: undefined
   };
+
+  initialWidth: number;
 
   mouseenterHandler: () => void;
   mouseleaveHandler: () => void;
@@ -85,8 +89,8 @@ export class GenesysTooltip {
     this.emitEvent();
   }
 
-  @Listen('window:resize')
-  resize () {
+  @Listen('window:resize,window:scroll', { capture: true })
+  scroll () {
     this.tooltipRect = getPositionRelativeToTarget(this.tooltipEl, this.forNode, this.positionOptions);
   }
 
@@ -99,9 +103,7 @@ export class GenesysTooltip {
       top: (this.tooltipRect && this.tooltipRect.hasOwnProperty('top')) ? (this.tooltipRect.top + 'px') : '',
       right: (this.tooltipRect && this.tooltipRect.hasOwnProperty('right')) ? (this.tooltipRect.right + 'px') : '',
       bottom: (this.tooltipRect && this.tooltipRect.hasOwnProperty('bottom')) ? (this.tooltipRect.bottom + 'px') : '',
-      left: (this.tooltipRect && this.tooltipRect.hasOwnProperty('left')) ? (this.tooltipRect.left + 'px') : '',
-      width: (this.tooltipRect && this.tooltipRect.hasOwnProperty('width')) ? (this.tooltipRect.width + 'px') : '',
-      height: (this.tooltipRect && this.tooltipRect.hasOwnProperty('height')) ? (this.tooltipRect.height + 'px') : ''
+      left: (this.tooltipRect && this.tooltipRect.hasOwnProperty('left')) ? (this.tooltipRect.left + 'px') : ''
     };
   }
 
@@ -112,21 +114,16 @@ export class GenesysTooltip {
 
     this.mouseenterHandler = () => { this.show(); };
     this.mouseleaveHandler = () => { this.hide(); };
-    this.scrollHandler = () => {
-      this.tooltipRect = getPositionRelativeToTarget(this.tooltipEl, this.forNode, this.positionOptions);
-    };
 
     this.forNode.addEventListener('mouseenter', this.mouseenterHandler);
     this.forNode.addEventListener('mouseleave', this.mouseleaveHandler);
 
-    window.addEventListener('scroll', this.scrollHandler, true);
+    this.positionOptions.width = this.tooltipEl.getBoundingClientRect().width + 6;
   }
 
   componentDidUnload () {
     this.forNode.removeEventListener('mouseenter', this.mouseenterHandler);
     this.forNode.removeEventListener('mouseleave', this.mouseleaveHandler);
-
-    window.removeEventListener('scroll', this.scrollHandler, true);
   }
 
   render() {

@@ -5,24 +5,34 @@ export function getPositionRelativeToTarget (element: HTMLElement, target: HTMLE
 
   const offsetX = (options && options.offsetX) ? options.offsetX : 0;
   const offsetY = (options && options.offsetY) ? options.offsetY : 0;
+  let width = elementRect.width;
+  width = (options && options.width) ? options.width : width;
+  let height = elementRect.height;
+  height = (options && options.height) ? options.height : height;
 
   // Top behavior
-  if (window.innerHeight <= elementRect.height) {
+  if ((window.innerHeight - targetRect.top) > (height + offsetY)) {
+    resultRect.top = targetRect.bottom + offsetY;
+  } else if (targetRect.bottom > (height + offsetY)) {
+    resultRect.bottom = window.innerHeight - (targetRect.top - offsetY);
+  } else if (window.innerHeight > (height + (offsetY * 2))) {
+    resultRect.top = (window.innerHeight - (height + (offsetY * 2))) / 2;
+    resultRect.bottom = (window.innerHeight - (height + (offsetY * 2))) / 2;
+  } else {
     resultRect.top = offsetY;
     resultRect.bottom = offsetY;
-  } if ((targetRect.bottom + elementRect.height + offsetY) >= window.innerHeight) {
-    resultRect.bottom = window.innerHeight - targetRect.top + offsetY;
-  } else {
-    resultRect.top = targetRect.top + targetRect.height + offsetY;
   }
   // Left behavior
-  if (window.innerWidth <= elementRect.width) {
+  if ((window.innerWidth - targetRect.left) > (width + offsetX)) {
+    resultRect.left = targetRect.left + offsetX;
+  } else if (targetRect.right > (width + offsetX)) {
+    resultRect.right = window.innerWidth - (targetRect.right + offsetX);
+  } else if (window.innerWidth > (width + (offsetX * 2))) {
+    resultRect.left = (window.innerWidth - (width + (offsetX * 2))) / 2;
+    resultRect.right = (window.innerWidth - (width + (offsetX * 2))) / 2;
+  } else {
     resultRect.left = offsetX;
     resultRect.right = offsetX;
-  } else if ((targetRect.left + elementRect.width + offsetX) >= window.innerWidth) {
-    resultRect.right = window.innerWidth - targetRect.right + offsetX;
-  } else {
-    resultRect.left = targetRect.left + offsetX;
   }
   return resultRect;
 };
