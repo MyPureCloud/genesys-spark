@@ -11,7 +11,7 @@ storiesOf('Genesys Components', module)
 .add(
     'Genesys Text Field',
     withReadme(README, () => {
-      const el = document.createElement('div'); 
+      const el = document.createElement('div');
       render(html`
         <h2>Basic samples</h2>
         <i>Unpopulated</i><br/><br/>
@@ -42,7 +42,8 @@ storiesOf('Genesys Components', module)
       `, el);
       setTimeout(() => {
         const it = document.getElementById('interactive');
-        it.addEventListener('custom', e => action('custom')(e.detail));
+        it.addEventListener('input', e => action('input')(e.detail));
+        it.addEventListener('focus', e => action('focus')(e.detail));
       }, 100);
       document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;

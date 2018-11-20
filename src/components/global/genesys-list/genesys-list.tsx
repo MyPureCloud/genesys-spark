@@ -1,4 +1,4 @@
-import { Component, Element, Listen, Prop } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Listen, Method, Prop } from '@stencil/core';
 import { KeyCode, ListTypeEnum } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 
@@ -13,14 +13,42 @@ export class GenesysList {
   /**
    * The list.
    * each item should contain a text and a type
-   * an item could have the poperty isDisabled
+   * an item could have the property isDisabled
    */
   @Prop()
   items: IListItem[] = [];
 
   onItemClicked(item: IListItem) {
+    this.emitChange(item);
     if (item.callback) {
       item.callback(item);
+    }
+  }
+
+  /**
+   * Triggered when user selects an item.
+   * @return The selected value
+   */
+  @Event()
+  change: EventEmitter;
+  emitChange(item) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.change.emit(item);
+  }
+
+  @Method()
+  focusFirstFocusable () {
+    const firstFocusable = this.items.find(item => {
+      return (
+        item.el &&
+        !item.isDisabled &&
+        (!item.type || item.type === ListTypeEnum.Item)
+      );
+    });
+    firstFocusable.el.setAttribute('tabindex', '0');
+    if (firstFocusable) {
+      firstFocusable.el.focus();
     }
   }
 
@@ -34,17 +62,7 @@ export class GenesysList {
         i.el.setAttribute('tabindex', '-1');
       }
     });
-    const firstFocusable = this.items.find(item => {
-      return (
-        item.el &&
-        !item.isDisabled &&
-        (!item.type || item.type === ListTypeEnum.Item)
-      );
-    });
-    firstFocusable.el.setAttribute('tabindex', '0');
-    if (firstFocusable) {
-      firstFocusable.el.focus();
-    }
+    this.focusFirstFocusable();
   }
 
   onKeyDown(event: KeyboardEvent, item: IListItem) {

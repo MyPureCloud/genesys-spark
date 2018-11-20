@@ -1,5 +1,6 @@
 import {
   Component,
+  Element,
   Event,
   EventEmitter,
   Method,
@@ -18,6 +19,9 @@ enum Types {
   tag: 'genesys-text-field'
 })
 export class GenesysTextField {
+  @Element()
+  root: HTMLStencilElement;
+
   inputElement: HTMLInputElement;
 
   /**
@@ -88,6 +92,10 @@ export class GenesysTextField {
   firstValue: string;
   timeout: any;
 
+  emitFocusEvent (event) {
+    this.root.dispatchEvent(new FocusEvent(event.type, event));
+  }
+
   /**
    * Triggered when user inputs.
    * @return The input value
@@ -105,7 +113,7 @@ export class GenesysTextField {
   watchValue(newValue: string) {
     window.clearTimeout(this.timeout);
     this.timeout = window.setTimeout(() => {
-      this._testValue(newValue); 
+      this._testValue(newValue);
     }, this.debounceTimeout);
   }
 
@@ -158,7 +166,7 @@ export class GenesysTextField {
   componentDidLoad() {
     this.internalErrorMessage = this.errorMessage;
     this.firstValue = this.value;
-    this._testValue(this.value); 
+    this._testValue(this.value);
   }
 
   getIconByMessageType(type) {
@@ -183,7 +191,7 @@ export class GenesysTextField {
   render() {
     return (
       <div class={this.getClassList()}>
-        <label>{this.label}</label>
+        {this.label && <label>{this.label}</label>}
         <div class="genesys-field">
           <input
             aria-label={this.label}
@@ -192,7 +200,9 @@ export class GenesysTextField {
             ref={el => (this.inputElement = el)}
             disabled={this.disabled}
             placeholder={this.placeholder}
-            onInput={e => this.emitInput(e)}
+            onInput={(e) => this.emitInput(e)}
+            onFocus={(e) => this.emitFocusEvent(e)}
+            onBlur={(e) => this.emitFocusEvent(e)}
           />
           {this.value && (
             <button

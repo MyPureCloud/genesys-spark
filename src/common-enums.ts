@@ -7,7 +7,8 @@ export enum KeyCode {
   Space = 32,
   Home = 36,
   End = 35,
-  Esc = 27
+  Esc = 27,
+  Tab = 9
 }
 
 export enum ListTypeEnum {

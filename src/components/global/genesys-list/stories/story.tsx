@@ -1,6 +1,5 @@
 import { action } from '@storybook/addon-actions';
 import {
-  array,
   object,
   select,
   withKnobs
@@ -26,9 +25,10 @@ storiesOf('Genesys Components', module)
         { type: 'divider' },
         { text: 'test2' }
       ]);
-      el.addEventListener('custom', e => action('custom')(e.detail));
-      document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+      setTimeout(() => {
+        el.addEventListener('change', e => action('change')(e.detail));
+      }, 100);
+      document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );

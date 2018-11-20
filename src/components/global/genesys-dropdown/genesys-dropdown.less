@@ -1,0 +1,66 @@
+// Variables part
+
+// Style
+genesys-dropdown {
+  > div.genesys-dropdown {
+    margin: 4px 0;
+    .header {
+      position: relative;
+      genesys-text-field {
+        input {
+          cursor: pointer;
+        }
+      }
+      button.genesys-icon-dropdown-arrow {
+        position: absolute;
+        top: 1px;
+        right: 3px;
+        bottom: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: block;
+        outline: none;
+        overflow: hidden;
+        font-size: 16px;
+        pointer-events: none;
+      }
+    }
+    genesys-list {
+      display: none;
+      margin: -4px 1px 0px 1px;
+      &.opened {
+        display: block;
+      }
+    }
+  }
+}
+// Theming
+// Light
+.genesys-dropdown-light-theme {
+  color: @genesys-grey-2;
+};
+.genesys-light-theme {
+  genesys-dropdown {
+      .genesys-dropdown-light-theme;
+  }
+}
+.genesys-dropdown.genesys-light-theme {
+  .genesys-dropdown-light-theme;
+}
+// Dark
+.genesys-dropdown-dark-theme {
+  color: @genesys-off-white;
+};
+.genesys-dark-theme {
+  genesys-dropdown {
+    .genesys-dropdown-dark-theme;
+  }
+}
+.genesys-dropdown.genesys-dark-theme {
+  .genesys-dropdown-dark-theme;
+}
+// Default Theme
+genesys-dropdown {
+  .genesys-dropdown-light-theme;
+}
