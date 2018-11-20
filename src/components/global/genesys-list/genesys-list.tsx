@@ -22,11 +22,17 @@ export class GenesysList {
     if (item.callback) {
       item.callback(item);
     }
+    item.el.setAttribute('tabindex', '0');
+    this.items.forEach(i => {
+      if (i.el && i !== item) {
+        i.el.setAttribute('tabindex', '-1');
+      }
+    });
   }
 
   @Listen('focusin')
   onFocus(e: FocusEvent) {
-    if (this.root.contains(e.relatedTarget as Node)) {
+    if (!e.relatedTarget || this.root.contains(e.relatedTarget as Node)) {
       return;
     }
     this.items.forEach(i => {

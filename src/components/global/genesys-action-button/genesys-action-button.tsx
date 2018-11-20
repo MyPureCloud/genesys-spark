@@ -94,6 +94,11 @@ export class GenesysActionButton {
     }
   }
 
+  onActionClick() {
+    this.toggle();
+    this.actionClick.emit();
+  }
+
   onKeyDownEvent(event: KeyboardEvent) {
     const key = event.keyCode;
     if (key === KeyCode.Esc) {
@@ -123,7 +128,7 @@ export class GenesysActionButton {
         <genesys-button
           accent={this.accent}
           text={this.text}
-          onClick={() => this.actionClick.emit()}
+          onClick={() => this.onActionClick()}
           class="genesys-action"
         />
         <genesys-button
