@@ -1,18 +1,24 @@
 import { action } from '@storybook/addon-actions';
-import { select, text, withKnobs } from '@storybook/addon-knobs/polymer';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs
+} from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
-import { withReadme  } from 'storybook-readme';
+import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
 storiesOf('Genesys Components', module)
-.addDecorator(withKnobs)
-.add(
+  .addDecorator(withKnobs)
+  .add(
     'Genesys Text Field',
     withReadme(README, () => {
       const el = document.createElement('div');
-      render(html`
+      render(
+        html`
         <h2>Basic samples</h2>
         <i>Unpopulated</i><br/><br/>
         <genesys-text-field label='Name'></genesys-text-field>
@@ -37,15 +43,20 @@ storiesOf('Genesys Components', module)
           error-message=${text('error-message', '')}
           error-message-type=${text('error-message-type', 'error')}
           value=${text('value', 'value')}
+          disabled=${boolean('disabled', false)}
+          readonly=${boolean('readOnly', false)}
         >
         </genesys-text-field>
-      `, el);
+      `,
+        el
+      );
       setTimeout(() => {
         const it = document.getElementById('interactive');
         it.addEventListener('input', e => action('input')(e.detail));
         it.addEventListener('focus', e => action('focus')(e.detail));
       }, 100);
-      document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+      document.getElementsByTagName('html')[0].className =
+        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
-);
+  );

@@ -33,12 +33,20 @@ describe('genesys-accordion', () => {
       expect(section).toEqual(firstSection);
     });
     it('getPreviousSlot', () => {
-      expect(component.getPreviousSlot(firstSection.slotName)).toEqual(thirdSection.slotRef);
-      expect(component.getPreviousSlot(thirdSection.slotName)).toEqual(secondSection.slotRef);
+      expect(component.getPreviousSlot(firstSection.slotName)).toEqual(
+        thirdSection.slotRef
+      );
+      expect(component.getPreviousSlot(thirdSection.slotName)).toEqual(
+        secondSection.slotRef
+      );
     });
     it('getNextSlot', () => {
-      expect(component.getNextSlot(thirdSection.slotName)).toEqual(firstSection.slotRef);
-      expect(component.getNextSlot(firstSection.slotName)).toEqual(secondSection.slotRef);
+      expect(component.getNextSlot(thirdSection.slotName)).toEqual(
+        firstSection.slotRef
+      );
+      expect(component.getNextSlot(firstSection.slotName)).toEqual(
+        secondSection.slotRef
+      );
     });
   });
 });

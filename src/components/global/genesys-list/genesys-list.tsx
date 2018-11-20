@@ -23,22 +23,24 @@ export class GenesysList {
     if (item.callback) {
       item.callback(item);
     }
+    item.el.setAttribute('tabindex', '0');
+    this.items.forEach(i => {
+      if (i.el && i !== item) {
+        i.el.setAttribute('tabindex', '-1');
+      }
+    });
   }
 
-  /**
-   * Triggered when user selects an item.
-   * @return The selected value
-   */
-  @Event()
-  change: EventEmitter;
-  emitChange(item) {
-    event.preventDefault();
-    event.stopPropagation();
-    this.change.emit(item);
-  }
-
-  @Method()
-  focusFirstFocusable () {
+  @Listen('focusin')
+  onFocus(e: FocusEvent) {
+    if (!e.relatedTarget || this.root.contains(e.relatedTarget as Node)) {
+      return;
+    }
+    this.items.forEach(i => {
+      if (i.el) {
+        i.el.setAttribute('tabindex', '-1');
+      }
+    });
     const firstFocusable = this.items.find(item => {
       return (
         item.el &&

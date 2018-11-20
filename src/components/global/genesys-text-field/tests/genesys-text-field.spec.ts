@@ -18,7 +18,7 @@ describe('genesys-text-field', () => {
       expect(component.getClassList().split(' ').length).toBe(1);
       component.label = 'label';
       expect(component.getClassList().split(' ').length).toBe(2);
-    })
+    });
   });
   describe('componentDidLoad', () => {
     it('should create set internalErrorMessage', () => {
@@ -33,15 +33,21 @@ describe('genesys-text-field', () => {
       const component = new GenesysTextField();
       component.errorMessage = 'error';
       component.componentDidLoad();
-      expect(component.getIconByMessageType('sss')).toBe('genesys-icon-alert-octo');
-      expect(component.getIconByMessageType('warning')).toBe('genesys-icon-alert-triangle');
-      expect(component.getIconByMessageType('error')).toBe('genesys-icon-alert-octo');
+      expect(component.getIconByMessageType('sss')).toBe(
+        'genesys-icon-alert-octo'
+      );
+      expect(component.getIconByMessageType('warning')).toBe(
+        'genesys-icon-alert-triangle'
+      );
+      expect(component.getIconByMessageType('error')).toBe(
+        'genesys-icon-alert-octo'
+      );
     });
   });
   describe('clear', () => {
     it('should clear value', () => {
       const component = new GenesysTextField();
-      component.inputElement = {value: 'test', focus: () => 'test'};
+      component.inputElement = { value: 'test', focus: () => 'test' };
       component.value = 'value';
       component.clear();
       expect(component.value).toBe('');
@@ -76,11 +82,11 @@ describe('genesys-text-field', () => {
       component._testValue('test');
       expect(component.errorMessage).toBe('');
       expect(component.errorMessageType).toBe('error');
-      component.validation = () => ({error: 'blop'});
+      component.validation = () => ({ error: 'blop' });
       component._testValue('test');
       expect(component.errorMessage).toBe('blop');
       expect(component.errorMessageType).toBe('error');
-      component.validation = () => ({warning: 'blop'});
+      component.validation = () => ({ warning: 'blop' });
       component._testValue('test');
       expect(component.errorMessage).toBe('blop');
       expect(component.errorMessageType).toBe('warning');

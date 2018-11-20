@@ -20,6 +20,11 @@ genesys-text-field {
   display: block;
   > div {
     margin: 4px 0;
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
+    }
     &.error, &.warning {
       input {
         border-color: @alert-color;
