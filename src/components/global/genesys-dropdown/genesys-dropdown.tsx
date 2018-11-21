@@ -72,7 +72,7 @@ export class GenesysDropdown {
         break;
       case KeyCode.Down:
         if (this.inputIsFocused) {
-          this.listElement.focusFirstFocusable();
+          this.listElement.focus();
         }
         break;
       case KeyCode.End:
@@ -84,9 +84,9 @@ export class GenesysDropdown {
   _focusHandler () {
     this.inputIsFocused = true;
     this.opened = true;
-    if (!this.filterable) {
-      this.listElement.focusFirstFocusable();
-    }
+    // if (!this.filterable) {
+    //   this.listElement.focus();
+    // }
   }
   _blurHandler () {
     this.inputIsFocused = false;
@@ -121,7 +121,7 @@ export class GenesysDropdown {
         </div>
         <genesys-list
           ref={el => (this.listElement = el as HTMLGenesysListElement)}
-          onChange={(e) => { this.setValue(e.detail.text) }}
+          // onChange={(e) => { this.setValue(e.detail.text) }}
           class={this.opened ? "opened" : ""}
           items={this.items}>
         </genesys-list>
