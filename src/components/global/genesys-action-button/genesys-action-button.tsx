@@ -99,7 +99,7 @@ export class GenesysActionButton {
     this.actionClick.emit();
   }
 
-  onKeyDownEvent(event: KeyboardEvent) {
+  onKeyUpEvent(event: KeyboardEvent) {
     const key = event.keyCode;
     if (key === KeyCode.Esc) {
       this.isOpen = false;
@@ -113,12 +113,7 @@ export class GenesysActionButton {
       !this.listElement.contains(event.target as Node)
     ) {
       this.isOpen = true;
-      setTimeout(() => {
-        const e = this.listElement.querySelector(
-          '[tabindex]:not([tabindex="-1"]'
-        ) as HTMLElement;
-        e.focus();
-      });
+      this.listElement.focus();
     }
   }
 
@@ -135,14 +130,14 @@ export class GenesysActionButton {
           accent={this.accent}
           ref={el => (this.dropdownButton = el)}
           onClick={() => this.toggle()}
-          onKeyDown={e => this.onKeyDownEvent(e)}
+          onKeyUp={e => this.onKeyUpEvent(e)}
           leftIcon="dropdown-arrow"
           class="genesys-dropdown"
         />
         <genesys-list
           ref={el => (this.listElement = el)}
           items={this.items}
-          onKeyDown={e => this.onKeyDownEvent(e)}
+          onKeyUp={e => this.onKeyUpEvent(e)}
           onClick={() => this.toggle()}
         />
       </div>
