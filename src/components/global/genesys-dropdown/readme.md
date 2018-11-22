@@ -9,6 +9,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 | Property      | Attribute     | Description                                                                                     | Type          |
 | ------------- | ------------- | ----------------------------------------------------------------------------------------------- | ------------- |
+| `disabled`    | `disabled`    | Disable the input and prevent interactions.                                                     | `boolean`     |
 | `filterable`  | `filterable`  | Whether the user can filter or not.                                                             | `boolean`     |
 | `items`       | --            | The list. each item should contain a text and a type an item could have the property isDisabled | `IListItem[]` |
 | `label`       | `label`       | The dropdown label.                                                                             | `string`      |

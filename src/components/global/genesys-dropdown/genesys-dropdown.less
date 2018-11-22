@@ -2,13 +2,22 @@
 
 // Style
 genesys-dropdown {
-  > div.genesys-dropdown {
+  div.genesys-dropdown {
     margin: 4px 0;
     .header {
       position: relative;
+      .ghost {
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 5px 26px 5px 13px;
+        line-height: 1.66666667;
+      }
       genesys-text-field {
         input {
           cursor: pointer;
+          background-color: transparent;
         }
       }
       button.genesys-icon-dropdown-arrow {
@@ -38,11 +47,18 @@ genesys-dropdown {
 // Theming
 // Light
 .genesys-dropdown-light-theme {
-  color: @genesys-grey-2;
+  div.genesys-dropdown {
+    .header {
+      .ghost {
+        background-color: @genesys-off-white-bg;
+        color: @genesys-icons;
+      }
+    }
+  }
 };
 .genesys-light-theme {
   genesys-dropdown {
-      .genesys-dropdown-light-theme;
+    .genesys-dropdown-light-theme;
   }
 }
 .genesys-dropdown.genesys-light-theme {

@@ -15,11 +15,12 @@ storiesOf('Genesys Components', module)
     withReadme(README, () => {
       const el = document.createElement('genesys-dropdown');
       el.items = object('items', [
+        { text: 'Belgium' },
         { text: 'Brazil' },
-        { text: 'France' },
-        { text: 'Belgium' }
+        { text: 'France' }
       ]);
-      el.filterable = boolean('filterable', false);
+      el.disabled = boolean('disabled', false);
+      el.filterable = boolean('filterable', true);
       el.value = text('value', '');
       el.label = text('label', '');
       el.placeholder = text('placeholder', 'Select...');

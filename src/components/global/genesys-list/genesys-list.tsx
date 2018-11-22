@@ -1,4 +1,4 @@
-import { Component, Element, Method, Prop } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Method, Prop } from '@stencil/core';
 import { KeyCode, ListTypeEnum } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 @Component({
@@ -16,7 +16,7 @@ export class GenesysList {
   @Prop()
   items: IListItem[] = [];
   onItemClicked(item: IListItem) {
-    this.emitChange(item);
+    this.emitChange(item.text);
     if (item.callback) {
       item.callback(item);
     }
@@ -27,6 +27,13 @@ export class GenesysList {
       }
     });
   }
+
+  @Event()
+  change: EventEmitter;
+  emitChange(value: string) {
+    this.change.emit(value);
+  }
+
   @Method()
   focus() {
     this.items.forEach(i => {
@@ -45,19 +52,6 @@ export class GenesysList {
     if (firstFocusable) {
       firstFocusable.el.focus();
     }
-  }
-
-  @Listen('focusin')
-  onFocus(e: FocusEvent) {
-    if (this.root.contains(e.relatedTarget as Node)) {
-      return;
-    }
-    this.items.forEach(i => {
-      if (i.el) {
-        i.el.setAttribute('tabindex', '-1');
-      }
-    });
-    this.focusFirstFocusable();
   }
 
   onKeyDown(event: KeyboardEvent, item: IListItem) {
@@ -114,6 +108,7 @@ export class GenesysList {
       el.focus();
     }
   }
+
   /**
    * Once the component is loaded set the tabindex
    */

@@ -12,6 +12,12 @@ export class GenesysDropdown {
   textFieldElement: HTMLGenesysTextFieldElement;
   listElement: HTMLGenesysListElement;
 
+
+  /**
+   * Disable the input and prevent interactions.
+   */
+  @Prop()
+  disabled: boolean = false;
   /**
    * Indicate the dropdown input value
    */
@@ -81,24 +87,45 @@ export class GenesysDropdown {
     }
   }
 
+  _clickHandler () {
+    if (!this.disabled) {
+      this.opened = !this.opened
+    }
+  }
   _focusHandler () {
     this.inputIsFocused = true;
     this.opened = true;
-    // if (!this.filterable) {
-    //   this.listElement.focus();
-    // }
   }
   _blurHandler () {
     this.inputIsFocused = false;
   }
-
   _inputHandler (event: CustomEvent) {
     this.value = event.detail;
+  }
+
+  _showDropdownIcon () {
+    return (this.filterable ? (!this.value) : (true));
+  }
+
+  get filteredItems () {
+    return this.items.filter((item) => {
+      if (!this.filterable || item.text.startsWith(this.value)) {
+        return item;
+      }
+    });
+  }
+
+  get ghost () {
+    if (!this.value) {
+      return ((this.filterable && this.inputIsFocused) ? this.filteredItems[0].text : this.placeholder);
+    } else {
+      return '';
+    }
+  }
+
+  componentDidLoad () {
     if (!this.filterable) {
-      // Cancel event
-      this.value = '';
-      event.preventDefault();
-      event.stopPropagation();
+      this.textFieldElement.readonly = true;
     }
   }
 
@@ -107,23 +134,24 @@ export class GenesysDropdown {
       <div class="genesys-dropdown"
       onKeyDown={(e) => this.onKeyDown(e)}>
         <div class="header">
+          <span class="ghost" aria-hidden="true" tabindex="-1">{this.ghost}</span>
           <genesys-text-field
             ref={el => (this.textFieldElement = el as HTMLGenesysTextFieldElement)}
-            onMouseDown={() => { this.opened = !this.opened }}
+            onMouseDown={() => { this._clickHandler() }}
             onFocus={() => { this._focusHandler() }}
             onBlur={() => { this._blurHandler() }}
             onInput={(e) => { this._inputHandler(e) }}
             value={this.value}
             label={this.label}
-            placeholder={this.placeholder}>
+            disabled={this.disabled}>
           </genesys-text-field>
-          {!this.value && <button aria-hidden="true" tabindex="-1" type="button" class="genesys-icon-dropdown-arrow"/>}
+          {this._showDropdownIcon() && <button aria-hidden="true" tabindex="-1" type="button" class="genesys-icon-dropdown-arrow"/>}
         </div>
         <genesys-list
           ref={el => (this.listElement = el as HTMLGenesysListElement)}
-          // onChange={(e) => { this.setValue(e.detail.text) }}
+          onChange={(e) => { this.setValue(e.detail) }}
           class={this.opened ? "opened" : ""}
-          items={this.items}>
+          items={this.filteredItems}>
         </genesys-list>
       </div>
     );
