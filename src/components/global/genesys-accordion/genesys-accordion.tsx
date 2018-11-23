@@ -1,7 +1,7 @@
 import { Component, Element, Method } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 
-interface Section {
+interface ISection {
   slotName: string,
   slotRef: HTMLElement
 }
@@ -14,11 +14,11 @@ export class GenesysAccordion {
   @Element()
   root: HTMLStencilElement;
 
-  sections: Section[] = [];
+  sections: ISection[] = [];
 
-  initializeSections () {
+  initializeSections() {
     const children = Array.from(this.root.children);
-    children.map((element) => {
+    children.map(element => {
       const slot = element.getAttribute('slot');
       if (slot) {
         this.sections.push({
@@ -31,7 +31,7 @@ export class GenesysAccordion {
     });
   }
 
-  componentWillLoad () {
+  componentWillLoad() {
     this.initializeSections();
   }
 
@@ -40,7 +40,7 @@ export class GenesysAccordion {
    * @param slot The slot name
    */
   @Method()
-  open (slot: string) {
+  open(slot: string) {
     const section = this.getSectionByName(slot);
     if (section) {
       section.slotRef.classList.add('opened');
@@ -51,7 +51,7 @@ export class GenesysAccordion {
    * @param slot The slot name
    */
   @Method()
-  close (slot: string) {
+  close(slot: string) {
     const section = this.getSectionByName(slot);
     if (section) {
       section.slotRef.classList.remove('opened');
@@ -62,24 +62,28 @@ export class GenesysAccordion {
    * @param slot The slot name
    */
   @Method()
-  toggle (slot: string) {
+  toggle(slot: string) {
     const section = this.getSectionByName(slot);
     if (section) {
       section.slotRef.classList.toggle('opened');
     }
   }
 
-  getSectionByName (slot: string): Section {
-    const slotIndex = this.sections.map((section) => {
-      return section.slotName;
-    }).indexOf(slot);
+  getSectionByName(slot: string): ISection {
+    const slotIndex = this.sections
+      .map(section => {
+        return section.slotName;
+      })
+      .indexOf(slot);
     return this.sections[slotIndex];
   }
 
-  getPreviousSlot (slot: string): HTMLElement {
-    const currentIndex = this.sections.map((section) => {
-      return section.slotName;
-    }).indexOf(slot);
+  getPreviousSlot(slot: string): HTMLElement {
+    const currentIndex = this.sections
+      .map(section => {
+        return section.slotName;
+      })
+      .indexOf(slot);
     if (currentIndex <= 0) {
       return this.sections[this.sections.length - 1].slotRef;
     } else {
@@ -87,18 +91,20 @@ export class GenesysAccordion {
     }
   }
 
-  getNextSlot (slot: string): HTMLElement {
-    const currentIndex = this.sections.map((section) => {
-      return section.slotName;
-    }).indexOf(slot);
-    if (currentIndex >= (this.sections.length - 1)) {
+  getNextSlot(slot: string): HTMLElement {
+    const currentIndex = this.sections
+      .map(section => {
+        return section.slotName;
+      })
+      .indexOf(slot);
+    if (currentIndex >= this.sections.length - 1) {
       return this.sections[0].slotRef;
     } else {
       return this.sections[currentIndex + 1].slotRef;
     }
   }
 
-  onKeyDown (event: KeyboardEvent, slotName: string) {
+  onKeyDown(event: KeyboardEvent, slotName: string) {
     switch (event.keyCode) {
       case KeyCode.Enter:
       case KeyCode.Space:
@@ -126,19 +132,27 @@ export class GenesysAccordion {
   render() {
     return (
       <ul class="genesys-accordion">
-      {this.sections.map((slot) =>
-        <li
-          class="section"
-          ref={el => slot.slotRef = el}
-          tabindex="0"
-          onKeyDown={(e) => this.onKeyDown(e, slot.slotName)}>
-          <div class="header" onClick={() => this.toggle(slot.slotName)}>
-            <span>{slot.slotName}</span>
-            <button aria-hidden="true" type="button" class="genesys-icon-dropdown-arrow" tabindex="-1"></button>
-          </div>
-          <div class="content"><slot name={slot.slotName}/></div>
-        </li>
-      )}
+        {this.sections.map(slot => (
+          <li
+            class="section"
+            ref={el => (slot.slotRef = el)}
+            tabindex="0"
+            onKeyDown={e => this.onKeyDown(e, slot.slotName)}
+          >
+            <div class="header" onClick={() => this.toggle(slot.slotName)}>
+              <span>{slot.slotName}</span>
+              <button
+                aria-hidden="true"
+                type="button"
+                class="genesys-icon-dropdown-arrow"
+                tabindex="-1"
+              />
+            </div>
+            <div class="content">
+              <slot name={slot.slotName} />
+            </div>
+          </li>
+        ))}
       </ul>
     );
   }

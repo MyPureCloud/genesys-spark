@@ -15,7 +15,7 @@ import { IListItem } from '../../../common-interfaces';
   tag: 'genesys-action-button'
 })
 export class GenesysActionButton {
-  listElement: HTMLElement;
+  listElement: HTMLGenesysListElement;
   dropdownButton: HTMLElement;
 
   /**
@@ -94,26 +94,26 @@ export class GenesysActionButton {
     }
   }
 
-  onKeyDownEvent(event: KeyboardEvent) {
+  onActionClick() {
+    this.toggle();
+    this.actionClick.emit();
+  }
+
+  onKeyUpEvent(event: KeyboardEvent) {
     const key = event.keyCode;
     if (key === KeyCode.Esc) {
       this.isOpen = false;
       const e = this.dropdownButton.querySelector(
-        '[tabindex]:not([tabindex="-1"]'
+        'button'
       ) as HTMLElement;
       e.focus();
     }
     if (
       key === KeyCode.Down &&
-      !this.listElement.contains(event.target as Node)
+      !(this.listElement as any as HTMLElement).contains(event.target as Node)
     ) {
       this.isOpen = true;
-      setTimeout(() => {
-        const e = this.listElement.querySelector(
-          '[tabindex]:not([tabindex="-1"]'
-        ) as HTMLElement;
-        e.focus();
-      });
+      (this.listElement).setFocusOnFirstItem();
     }
   }
 
@@ -123,21 +123,21 @@ export class GenesysActionButton {
         <genesys-button
           accent={this.accent}
           text={this.text}
-          onClick={() => this.actionClick.emit()}
+          onClick={() => this.onActionClick()}
           class="genesys-action"
         />
         <genesys-button
           accent={this.accent}
           ref={el => (this.dropdownButton = el)}
           onClick={() => this.toggle()}
-          onKeyDown={e => this.onKeyDownEvent(e)}
+          onKeyUp={e => this.onKeyUpEvent(e)}
           leftIcon="dropdown-arrow"
           class="genesys-dropdown"
         />
         <genesys-list
-          ref={el => (this.listElement = el)}
+          ref={el => (this.listElement = (el as HTMLGenesysListElement))}
           items={this.items}
-          onKeyDown={e => this.onKeyDownEvent(e)}
+          onKeyUp={e => this.onKeyUpEvent(e)}
           onClick={() => this.toggle()}
         />
       </div>

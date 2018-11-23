@@ -1,7 +1,6 @@
-import { Component, Element, Listen, Prop } from '@stencil/core';
+import { Component, Element, Method, Prop } from '@stencil/core';
 import { KeyCode, ListTypeEnum } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
-
 @Component({
   styleUrl: 'genesys-list.less',
   tag: 'genesys-list'
@@ -9,7 +8,6 @@ import { IListItem } from '../../../common-interfaces';
 export class GenesysList {
   @Element()
   root: HTMLStencilElement;
-
   /**
    * The list.
    * each item should contain a text and a type
@@ -17,18 +15,19 @@ export class GenesysList {
    */
   @Prop()
   items: IListItem[] = [];
-
   onItemClicked(item: IListItem) {
     if (item.callback) {
       item.callback(item);
     }
+    item.el.setAttribute('tabindex', '0');
+    this.items.forEach(i => {
+      if (i.el && i !== item) {
+        i.el.setAttribute('tabindex', '-1');
+      }
+    });
   }
-
-  @Listen('focusin')
-  onFocus(e: FocusEvent) {
-    if (this.root.contains(e.relatedTarget as Node)) {
-      return;
-    }
+  @Method()
+  setFocusOnFirstItem() {
     this.items.forEach(i => {
       if (i.el) {
         i.el.setAttribute('tabindex', '-1');
@@ -101,7 +100,6 @@ export class GenesysList {
       el.focus();
     }
   }
-
   /**
    * Once the component is loaded set the tabindex
    */
@@ -115,7 +113,6 @@ export class GenesysList {
     });
     firstFocusable.el.setAttribute('tabindex', '0');
   }
-
   render() {
     return (
       <ul>

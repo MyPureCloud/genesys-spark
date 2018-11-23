@@ -33,6 +33,12 @@ export class GenesysTextField {
   disabled: boolean = false;
 
   /**
+   * Set the input in readonly mode
+   */
+  @Prop()
+  readonly: boolean = false;
+
+  /**
    * The input placeholder.
    */
   @Prop()
@@ -78,7 +84,7 @@ export class GenesysTextField {
    * The label for the erase button
    */
   @Prop()
-  eraseLabel: string = ''
+  eraseLabel: string = '';
 
   @State()
   classList: string[] = [];
@@ -105,7 +111,7 @@ export class GenesysTextField {
   watchValue(newValue: string) {
     window.clearTimeout(this.timeout);
     this.timeout = window.setTimeout(() => {
-      this._testValue(newValue); 
+      this._testValue(newValue);
     }, this.debounceTimeout);
   }
 
@@ -122,24 +128,24 @@ export class GenesysTextField {
       }
     } else if (typeof this.validation === 'function') {
       const validation = this.validation(value);
-        if (validation) {
-          if (validation.warning) {
-            this.errorMessageType = Types.Warning;
-            this.errorMessage = validation.warning;
-          } else if (validation.error) {
-            this.errorMessageType = Types.Error;
-            this.errorMessage = validation.error;
-          } else {
-            this.errorMessage = '';
-          }
-        } else {
+      if (validation) {
+        if (validation.warning) {
+          this.errorMessageType = Types.Warning;
+          this.errorMessage = validation.warning;
+        } else if (validation.error) {
           this.errorMessageType = Types.Error;
-          this.errorMessage = this.internalErrorMessage;
+          this.errorMessage = validation.error;
+        } else {
+          this.errorMessage = '';
         }
+      } else {
+        this.errorMessageType = Types.Error;
+        this.errorMessage = this.internalErrorMessage;
+      }
     }
   }
 
-  getClassList () :string {
+  getClassList(): string {
     let classList = [];
     if (['left', 'top'].includes(this.labelPosition)) {
       if (this.labelPosition === 'left') {
@@ -152,17 +158,22 @@ export class GenesysTextField {
     if (this.errorMessage) {
       classList = [...classList, this.errorMessageType];
     }
+    if (this.disabled) {
+      classList = [...classList, 'disabled'];
+    }
     return classList.join(' ');
   }
 
   componentDidLoad() {
     this.internalErrorMessage = this.errorMessage;
     this.firstValue = this.value;
-    this._testValue(this.value); 
+    this._testValue(this.value);
   }
 
   getIconByMessageType(type) {
-    return (type === 'warning' ? 'genesys-icon-alert-triangle' : 'genesys-icon-alert-octo');
+    return type === 'warning'
+      ? 'genesys-icon-alert-triangle'
+      : 'genesys-icon-alert-octo';
   }
 
   _clear(event) {
@@ -176,6 +187,9 @@ export class GenesysTextField {
    */
   @Method()
   clear() {
+    if (this.disabled) {
+      return;
+    }
     this.value = '';
     this.inputElement.value = '';
   }
@@ -187,21 +201,23 @@ export class GenesysTextField {
         <div class="genesys-field">
           <input
             aria-label={this.label}
-            type='text'
+            type="text"
             value={this.value}
             ref={el => (this.inputElement = el)}
             disabled={this.disabled}
+            readonly={this.readonly}
             placeholder={this.placeholder}
             onInput={e => this.emitInput(e)}
           />
-          {this.value && (
-            <button
-              type="button"
-              class="genesys-icon-close"
-              title={this.eraseLabel}
-              onClick={e => this._clear(e)}
-            />
-          )}
+          {this.value &&
+            !this.readonly && (
+              <button
+                type="button"
+                class="genesys-icon-close"
+                title={this.eraseLabel}
+                onClick={e => this._clear(e)}
+              />
+            )}
         </div>
         {this.errorMessage && (
           <div class="genesys-error">
