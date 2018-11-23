@@ -13,7 +13,7 @@
 
 ## Methods
 
-### `focus() => void`
+### `setFocusOnFirstItem() => void`
 
 
 
