@@ -15,6 +15,13 @@ export class GenesysList {
    */
   @Prop()
   items: IListItem[] = [];
+
+  /**
+   * Highlights to bold.
+   */
+  @Prop()
+  highlight: string = '';
+
   onItemClicked(item: IListItem) {
     this.emitChange(item.text);
     if (item.callback) {
@@ -32,6 +39,14 @@ export class GenesysList {
   change: EventEmitter;
   emitChange(value: string) {
     this.change.emit(value);
+  }
+
+  _computedText (text: string) {
+    if (this.highlight && text.startsWith(this.highlight)) {
+      return <span><strong>{this.highlight}</strong>{text.replace(this.highlight, '')}</span>;
+    } else {
+      return text;
+    }
   }
 
   @Method()
@@ -109,6 +124,10 @@ export class GenesysList {
     }
   }
 
+  emitFocusEvent (event, item) {
+    this.root.dispatchEvent(new CustomEvent(event.type, { ...event, detail: item}));
+  }
+
   /**
    * Once the component is loaded set the tabindex
    */
@@ -136,8 +155,9 @@ export class GenesysList {
                 ref={el => (item.el = el)}
                 onClick={() => this.onItemClicked(item)}
                 onKeyDown={e => this.onKeyDown(e, item)}
+                onFocus={(e) => this.emitFocusEvent(e, item)}
               >
-                {item.text}
+                {this._computedText(item.text)}
               </li>
             )
         )}

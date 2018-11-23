@@ -51,6 +51,9 @@ export class GenesysDropdown {
 
   inputIsFocused: boolean = false;
 
+  @State()
+  forcedGhostValue: string;
+
   @Listen('focusout')
   onFocusOut (e: FocusEvent) {
     if (!this.root.contains(e.relatedTarget as Node)) {
@@ -96,8 +99,12 @@ export class GenesysDropdown {
     this.inputIsFocused = true;
     this.opened = true;
   }
+  _focusListItemHandler (item: IListItem) {
+    this.forcedGhostValue = item.text;
+  }
   _blurHandler () {
     this.inputIsFocused = false;
+    this.forcedGhostValue = '';
   }
   _inputHandler (event: CustomEvent) {
     this.value = event.detail;
@@ -116,11 +123,9 @@ export class GenesysDropdown {
   }
 
   get ghost () {
-    if (!this.value) {
-      return ((this.filterable && this.inputIsFocused) ? this.filteredItems[0].text : this.placeholder);
-    } else {
-      return '';
-    }
+    const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : this.filteredItems[0].text;
+    const placeholder = (!this.opened && !this.value) ? this.placeholder : '';
+    return (this.opened && this.filterable) ? ghost : placeholder;
   }
 
   componentDidLoad () {
@@ -150,8 +155,10 @@ export class GenesysDropdown {
         <genesys-list
           ref={el => (this.listElement = el as HTMLGenesysListElement)}
           onChange={(e) => { this.setValue(e.detail) }}
+          onFocus={(e) => { this._focusListItemHandler(e.detail as IListItem) }}
           class={this.opened ? "opened" : ""}
-          items={this.filteredItems}>
+          items={this.filteredItems}
+          highlight={this.value}>
         </genesys-list>
       </div>
     );
