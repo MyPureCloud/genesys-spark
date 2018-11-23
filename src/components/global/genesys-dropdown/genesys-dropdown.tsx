@@ -69,23 +69,10 @@ export class GenesysDropdown {
 
   onKeyDown(event: KeyboardEvent) {
     switch (event.keyCode) {
-      case KeyCode.Enter:
-      case KeyCode.Space:
-        //
-        break;
-      case KeyCode.Up:
-        //
-        break;
-      case KeyCode.Home:
-        //
-        break;
       case KeyCode.Down:
         if (this.inputIsFocused) {
-          this.listElement.focus();
+          this.listElement.setFocusOnFirstItem();
         }
-        break;
-      case KeyCode.End:
-        //
         break;
     }
   }
