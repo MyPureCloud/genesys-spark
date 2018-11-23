@@ -50,7 +50,7 @@ export class GenesysList {
   }
 
   @Method()
-  focus() {
+  setFocusOnFirstItem() {
     this.items.forEach(i => {
       if (i.el) {
         i.el.setAttribute('tabindex', '-1');
