@@ -7,6 +7,7 @@ genesys-notification-toast {
     width: 336px;
     height: 78px;
     position: relative;
+    border: 1px solid;
     .content-wrapper {
       flex: 1;
       overflow: hidden;
@@ -52,6 +53,7 @@ genesys-notification-toast {
     > div {
         background: @genesys-off-white;
         color: @genesys-grey-2;
+        border-color: @genesys-border;
         .message {
           color: @genesys-pale-gray;
         }
@@ -89,6 +91,7 @@ genesys-notification-toast.genesys-dark-theme {
   > div {
     background: @genesys-panel;
     color: @genesys-off-white;
+    border-color: @genesys-grey-2;
     .message {
       color: @genesys-pale-gray-2;
     }
