@@ -34,9 +34,7 @@ export class GenesysDropdown {
   @Prop()
   label: string;
   /**
-   * The list.
-   * each item should contain a text and a type
-   * an item could have the property isDisabled
+   * The list items, an item contains a `text` and can be disabled.
    */
   @Prop()
   items: IListItem[] = [];
@@ -49,22 +47,16 @@ export class GenesysDropdown {
   @State()
   opened: boolean;
 
-  inputIsFocused: boolean = false;
-
   @State()
   forcedGhostValue: string;
 
+  inputIsFocused: boolean = false;
+
   @Listen('focusout')
   onFocusOut (e: FocusEvent) {
-    if (!this.root.contains(e.relatedTarget as Node)) {
+    if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
       this.opened = false;
-      return;
     }
-  }
-
-  setValue (text) {
-    this.value = text;
-    this.opened = false;
   }
 
   onKeyDown(event: KeyboardEvent) {
@@ -77,6 +69,10 @@ export class GenesysDropdown {
     }
   }
 
+  setValue (text) {
+    this.value = text;
+    this.opened = false;
+  }
   _clickHandler () {
     if (!this.disabled) {
       this.opened = !this.opened

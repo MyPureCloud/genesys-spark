@@ -17,7 +17,8 @@ storiesOf('Genesys Components', module)
       el.items = object('items', [
         { text: 'Belgium' },
         { text: 'Brazil' },
-        { text: 'France' }
+        { text: 'France' },
+        { text: 'Spain', isDisabled: true }
       ]);
       el.disabled = boolean('disabled', false);
       el.filterable = boolean('filterable', true);

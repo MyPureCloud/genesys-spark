@@ -23,7 +23,8 @@ storiesOf('Genesys Components', module)
           }
         },
         { type: 'divider' },
-        { text: 'test2' }
+        { text: 'test2' },
+        { text: 'test3', isDisabled: true }
       ]);
       setTimeout(() => {
         el.addEventListener('change', e => action('change')(e.detail));

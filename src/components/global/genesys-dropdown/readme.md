@@ -7,14 +7,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property      | Attribute     | Description                                                                                     | Type          |
-| ------------- | ------------- | ----------------------------------------------------------------------------------------------- | ------------- |
-| `disabled`    | `disabled`    | Disable the input and prevent interactions.                                                     | `boolean`     |
-| `filterable`  | `filterable`  | Whether the user can filter or not.                                                             | `boolean`     |
-| `items`       | --            | The list. each item should contain a text and a type an item could have the property isDisabled | `IListItem[]` |
-| `label`       | `label`       | The dropdown label.                                                                             | `string`      |
-| `placeholder` | `placeholder` | The dropdown placeholder.                                                                       | `string`      |
-| `value`       | `value`       | Indicate the dropdown input value                                                               | `string`      |
+| Property      | Attribute     | Description                                                    | Type          |
+| ------------- | ------------- | -------------------------------------------------------------- | ------------- |
+| `disabled`    | `disabled`    | Disable the input and prevent interactions.                    | `boolean`     |
+| `filterable`  | `filterable`  | Whether the user can filter or not.                            | `boolean`     |
+| `items`       | --            | The list items, an item contains a `text` and can be disabled. | `IListItem[]` |
+| `label`       | `label`       | The dropdown label.                                            | `string`      |
+| `placeholder` | `placeholder` | The dropdown placeholder.                                      | `string`      |
+| `value`       | `value`       | Indicate the dropdown input value                              | `string`      |
 
 
 ----------------------------------------------
