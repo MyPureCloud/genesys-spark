@@ -13,11 +13,39 @@ module.exports = (baseConfig, env, defaultConfig) => {
     ]
   });
 
+  defaultConfig.module.rules.push({
+    test: /\.js$/,
+    exclude: /(react-split-pane|@ndelangen)/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['env', 'react']
+      }
+    }
+  });
+
+  defaultConfig.module.rules.push({
+    test: /\.tsx$/,
+    exclude: /node_modules/,
+    use: [
+    {
+      loader: 'babel-loader',
+      options: {
+        presets: ['env']
+      }
+    },
+      {
+      loader: 'ts-loader',
+      options: {transpileOnly: true}
+      }
+    ]
+  });
+
   defaultConfig.resolve = {
       ...defaultConfig.resolve,
       alias: {'genesys-webcomponents': path.resolve(__dirname, '../www/static/genesys-webcomponents')}
   }
-  
+
   defaultConfig.plugins.push(
     new stencil.StencilPlugin({
       collections: [
