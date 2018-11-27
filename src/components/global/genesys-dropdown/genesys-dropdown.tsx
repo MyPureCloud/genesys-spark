@@ -98,16 +98,20 @@ export class GenesysDropdown {
   }
 
   get filteredItems () {
-    return this.items.filter((item) => {
-      if (!this.filterable || item.text.startsWith(this.value)) {
-        return item;
-      }
-    });
+    if (this.filterable) {
+      const arr = this.items.filter((item) => {
+        return item.text.startsWith(this.value);
+      });
+      return arr;
+    } else {
+      return this.items;
+    }
   }
 
   get ghost () {
-    const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : this.filteredItems[0].text;
-    const placeholder = (!this.opened && !this.value) ? this.placeholder : '';
+    const firstFilteredItem = (this.filteredItems.length) ? this.filteredItems[0].text : '';
+    const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : firstFilteredItem;
+    const placeholder = (!this.value) ? this.placeholder : '';
     return (this.opened && this.filterable) ? ghost : placeholder;
   }
 
