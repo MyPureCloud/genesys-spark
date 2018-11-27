@@ -39,7 +39,11 @@ storiesOf('Genesys Components', module)
           id='interactive'
           toast-title=${text('toastTitle', 'title')}
           icon=${text('icon', 'alert-octo')}
-          accent=${text('accent', 'neutral')}
+          accent=${select(
+            'accent',
+            ['neutral', 'positive', 'alert', 'warning'],
+            'neutral'
+          )}
           message=${text('message', 'message')}
           close-label=${text('closeLabel', 'close')}
         >
