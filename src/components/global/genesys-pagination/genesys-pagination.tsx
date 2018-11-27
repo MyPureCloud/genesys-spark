@@ -2,8 +2,8 @@ import {
   Component,
   Event,
   EventEmitter,
-  Prop,
   Method,
+  Prop,
   State
 } from '@stencil/core';
 
@@ -36,7 +36,7 @@ export class GenesysPagination {
   }
 
   @Method()
-  setItemsPerPage(value: number, options: number[] = undefined): void {
+  setItemsPerPage(value: number, options?: number[]): void {
     this.itemsPerPageOptions = options;
     this.itemsPerPage = value;
 

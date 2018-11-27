@@ -1,6 +1,5 @@
 import { EventSpy } from '@stencil/core/dist/declarations';
 import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
-import { GenesysPaginationItemsPerPage } from './genesys-pagination-items-per-page';
 
 describe('genesys-pagination-items-per-page', () => {
   it('renders', async () => {
@@ -83,7 +82,10 @@ class ItemsPerPageComponent {
     await this.page.select('select', value);
   }
 
-  async setItemsPerPage(value: number, options: number[] = undefined): Promise<void> {
+  async setItemsPerPage(
+    value: number,
+    options?: number[]
+  ): Promise<void> {
     const root = await this.root;
     await root.callMethod('setItemsPerPage', value, options);
   }
