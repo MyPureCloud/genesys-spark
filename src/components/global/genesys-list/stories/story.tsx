@@ -18,10 +18,10 @@ storiesOf('Genesys Components', module)
       const el = document.createElement('genesys-list');
       el.items = object('items', [
         {
-          text: 'test',
           callback: i => {
             alert('test:' + JSON.stringify(i));
-          }
+          },
+          text: 'test'
         },
         { type: 'divider' },
         { text: 'test2' }

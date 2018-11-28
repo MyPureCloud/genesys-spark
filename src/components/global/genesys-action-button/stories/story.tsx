@@ -21,17 +21,17 @@ storiesOf('Genesys Components', module)
       el.text = text('text', 'Blop');
       el.items = object('items', [
         {
-          text: 'test',
           callback: i => {
             alert('test:' + JSON.stringify(i));
-          }
+          },
+          text: 'test'
         },
         { text: 'divider', type: 'divider' },
         {
-          text: 'test2',
           callback: i => {
             alert('test:' + JSON.stringify(i));
-          }
+          },
+          text: 'test2'
         },
         { text: 'test3', isDisabled: true },
         { text: 'test3' }
