@@ -52,26 +52,6 @@ genesys-toggle {
     cursor: pointer;
   }
 
-  &:not([disabled]) > div {
-    &:hover {
-      &.genesys-checked {
-        .genesys-slider {
-          box-shadow: 0px 0px 3px 0 @box-shadow-checked;
-        }
-      }
-      &:not(.genesys-checked) {
-        .genesys-slider {
-          box-shadow: 0px 0px 3px 0 @box-shadow;
-        }
-      }
-    }
-    &:focus {
-      .genesys-slider:after {
-        border-color: @box-shadow-focus;
-      }
-    }
-  }
-
   .genesys-switch {
     position: relative;
     display: inline-block;
@@ -91,7 +71,6 @@ genesys-toggle {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: @background;
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -129,6 +108,8 @@ genesys-toggle {
 }
 
 // Theming
+
+// Dark
 .genesys-toggle-dark-theme {
   > div {
     .genesys-slider {
@@ -166,10 +147,59 @@ genesys-toggle {
 
 .genesys-dark-theme {
   genesys-toggle {
-    .genesys-toggle-dark-theme;
+    .genesys-toggle-dark-theme();
   }
 }
 
 genesys-toggle.genesys-dark-theme {
-  .genesys-toggle-dark-theme;
+  .genesys-toggle-dark-theme();
+}
+
+// Light
+.genesys-toggle-light-theme {
+  > div {
+    .genesys-slider {
+      background-color: @background;
+    }
+    &.genesys-checked {
+      .genesys-slider {
+        background-color: @background-checked-dark-theme;
+      }
+    }
+  }
+
+  &:not([disabled]) > div {
+    &:hover {
+      &.genesys-checked {
+        .genesys-slider {
+          box-shadow: 0px 0px 3px 0 @box-shadow-checked;
+        }
+      }
+      &:not(.genesys-checked) {
+        .genesys-slider {
+          box-shadow: 0px 0px 3px 0 @box-shadow;
+        }
+      }
+    }
+    &:focus {
+      .genesys-slider:after {
+        border-color: @box-shadow-focus;
+      }
+    }
+  }
+}
+
+.genesys-light-theme {
+  genesys-toggle {
+    .genesys-toggle-light-theme();
+  }
+}
+
+genesys-toggle.genesys-light-theme {
+  .genesys-toggle-light-theme();
+}
+
+// Default Theme
+genesys-toggle {
+  .genesys-toggle-light-theme();
 }

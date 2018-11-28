@@ -24,7 +24,7 @@
     "dev": "./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run storybook.dev\"",
     "format": "prettier ./src/**/*.ts ./src/**/*.tsx",
     "format.fix": "npm run format -- --write",
-    "lint": "tslint --project tsconfig.json",
+    "lint": "tslint --project .",
     "lint.fix": "npm run lint -- --fix"
   },
   "dependencies": {},

@@ -1,19 +1,43 @@
 // Variables part
 
+// Style
 {{componentName}} {
 
 }
 
 // Theming
+
+// Dark
 .{{componentName}}-dark-theme {
     color: @genesys-off-white;
 };
 
 .{{componentPrefix}}dark-theme {
     {{componentName}} {
-        .{{componentName}}-dark-theme;
+        .{{componentName}}-dark-theme();
     }
 }
-.{{componentName}}.{{componentPrefix}}dark-theme {
-    .{{componentName}}-dark-theme;
+
+{{componentName}}.{{componentPrefix}}dark-theme {
+    .{{componentName}}-dark-theme();
+}
+
+// Light
+.{{componentName}}-light-theme {
+    color: @genesys-grey-2;
+};
+
+.{{componentPrefix}}light-theme {
+    {{componentName}} {
+        .{{componentName}}-light-theme();
+    }
+}
+
+{{componentName}}.{{componentPrefix}}light-theme {
+    .{{componentName}}-light-theme();
+}
+
+// Default Theme
+{{componentName}} {
+    .{{componentName}}-light-theme(); 
 }
