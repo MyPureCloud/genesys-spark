@@ -14,12 +14,12 @@
 
 .{{componentPrefix}}dark-theme {
     {{componentName}} {
-        .{{componentName}}-dark-theme;
+        .{{componentName}}-dark-theme();
     }
 }
 
-.{{componentName}}.{{componentPrefix}}dark-theme {
-    .{{componentName}}-dark-theme;
+{{componentName}}.{{componentPrefix}}dark-theme {
+    .{{componentName}}-dark-theme();
 }
 
 // Light
@@ -29,15 +29,15 @@
 
 .{{componentPrefix}}light-theme {
     {{componentName}} {
-        .{{componentName}}-light-theme;
+        .{{componentName}}-light-theme();
     }
 }
 
-.{{componentName}}.{{componentPrefix}}light-theme {
-    .{{componentName}}-light-theme;
+{{componentName}}.{{componentPrefix}}light-theme {
+    .{{componentName}}-light-theme();
 }
 
 // Default Theme
 {{componentName}} {
-    .{{componentName}}-light-theme; 
+    .{{componentName}}-light-theme(); 
 }
