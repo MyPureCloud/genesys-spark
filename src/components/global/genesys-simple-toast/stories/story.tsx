@@ -53,7 +53,7 @@ storiesOf('Genesys Components', module)
       );
       setTimeout(() => {
         const it = document.getElementById('interactive');
-        it.addEventListener('custom', e => action('custom')(e.detail));
+        it.addEventListener('closeClick', e => action('closeClick')(e.detail));
       }, 100);
       document.getElementsByTagName('html')[0].className =
         'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';

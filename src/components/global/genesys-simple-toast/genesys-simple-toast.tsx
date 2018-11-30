@@ -6,7 +6,7 @@ import { Component, Event, EventEmitter, Prop } from '@stencil/core';
 })
 export class GenesysSimpleToast {
   @Event()
-  buttonClick: EventEmitter;
+  closeClick: EventEmitter;
 
   /**
    * The component accent (alert warning positive or neutral).
@@ -41,8 +41,8 @@ export class GenesysSimpleToast {
   @Prop()
   closeLabel: string = '';
 
-  onButtonClickHandler(e) {
-    this.buttonClick.emit({ idToast: this.idToast, originalEvent: e });
+  onCloseButtonClickHandler(e) {
+    this.closeClick.emit({ idToast: this.idToast, originalEvent: e });
   }
 
   /**
@@ -75,7 +75,7 @@ export class GenesysSimpleToast {
         </div>
         <div class="close-icon-wrapper">
           <button
-            onClick={e => this.onButtonClickHandler(e)}
+            onClick={e => this.onCloseButtonClickHandler(e)}
             title={this.closeLabel}
           >
             <i class="genesys-icon-close" />
