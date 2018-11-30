@@ -11,13 +11,41 @@ module.exports = (baseConfig, env, defaultConfig) => {
       'html-loader',
       'markdown-loader',
     ]
+  }, {
+    test: /\.js$/,
+    //It is necessary to include lit-html to combat transpilation errors
+    exclude: /node_modules[\\|\/](?!lit-html)/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['env']
+      }
+    }
+  }, {
+    test: /\.tsx$/,
+    exclude: /node_modules/,
+    use: [{
+        loader: 'babel-loader',
+        options: {
+          presets: ['env']
+        }
+      },
+      {
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true
+        }
+      }
+    ]
   });
 
   defaultConfig.resolve = {
-      ...defaultConfig.resolve,
-      alias: {'genesys-webcomponents': path.resolve(__dirname, '../www/static/genesys-webcomponents')}
+    ...defaultConfig.resolve,
+    alias: {
+      'genesys-webcomponents': path.resolve(__dirname, '../www/static/genesys-webcomponents')
+    }
   }
-  
+
   defaultConfig.plugins.push(
     new stencil.StencilPlugin({
       collections: [
