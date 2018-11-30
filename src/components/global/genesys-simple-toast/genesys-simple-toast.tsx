@@ -54,15 +54,9 @@ export class GenesysSimpleToast {
     return allowed.includes(accent) ? accent : 'neutral';
   }
 
-  getIconClass(iconName: string): string {
-    return iconName.indexOf('genesys-icon') === 0
-      ? iconName + ' ' + this.getAccent()
-      : 'genesys-icon-' + iconName + ' ' + this.getAccent();
-  }
-
   getIcon() {
     return this.icon ? (
-      <i class={this.getIconClass(this.icon)} />
+      <i class={this.icon} />
     ) : this.iconUri ? (
       <img src={this.iconUri} />
     ) : (
@@ -73,7 +67,7 @@ export class GenesysSimpleToast {
   render() {
     return (
       <div class="genesys-simple-toast">
-        <div class="icon-wrapper ">{this.getIcon()}</div>
+        <div class={"icon-wrapper " + this.getAccent()}>{this.getIcon()}</div>
         <div class="content-wrapper">
           <div class="message" title={this.message}>
             {this.message}
