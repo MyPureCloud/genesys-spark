@@ -14,7 +14,7 @@ module.exports = (baseConfig, env, defaultConfig) => {
   }, {
     test: /\.js$/,
     //It is necessary to include lit-html to combat transpilation errors
-    exclude: /node_modules\/(?!lit-html)/,
+    exclude: /node_modules[\\|\/](?!lit-html)/,
     use: {
       loader: 'babel-loader',
       options: {
