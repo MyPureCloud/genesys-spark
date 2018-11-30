@@ -18,13 +18,6 @@ describe('genesys-notification-toast', () => {
       expect(component.getAccent()).toBe('positive');
     });
   });
-  describe('getIconClass', () => {
-    it('should return icon and accent classname', () => {
-      const component = new GenesysNotificationToast();
-      expect(component.getIconClass('test')).toBe('genesys-icon-test neutral');
-      expect(component.getIconClass('genesys-icon-test')).toBe('genesys-icon-test neutral');
-    });
-  });
   describe('getIcon', () => {
     it('should return icon and accent classname', () => {
       const component = new GenesysNotificationToast();
@@ -33,6 +26,9 @@ describe('genesys-notification-toast', () => {
       // testing JSX
       expect((component.getIcon() as any).vtag).toBe('img');
       expect((component.getIcon() as any).vattrs.src).toBe('test');
+      component.icon = 'test';
+      expect((component.getIcon() as any).vtag).toBe('i');
+      expect((component.getIcon() as any).vattrs.class).toBe('test');
     });
   });
   

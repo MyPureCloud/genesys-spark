@@ -20,7 +20,7 @@ storiesOf('Genesys Components', module)
         <br/><i>For Light Theme</i><br/><br/>
         <genesys-notification-toast
           toast-title='Holiday approved'
-          icon='calendar-generic'
+          icon='genesys-icon-calendar-generic'
           accent='neutral'
           message='Family vacation on 06/24/16 approved'
         >
@@ -29,7 +29,7 @@ storiesOf('Genesys Components', module)
         <genesys-notification-toast
           class='genesys-dark-theme'
           toast-title='Holiday approved'
-          icon='calendar-generic'
+          icon='genesys-icon-calendar-generic'
           accent='neutral'
           message='Family vacation on 06/24/16 approved'
         >
@@ -38,7 +38,7 @@ storiesOf('Genesys Components', module)
         <genesys-notification-toast
           id='interactive'
           toast-title=${text('toastTitle', 'title')}
-          icon=${text('icon', 'alert-octo')}
+          icon=${text('icon', 'genesys-icon-alert-octo')}
           accent=${select(
             'accent',
             ['neutral', 'positive', 'alert', 'warning'],

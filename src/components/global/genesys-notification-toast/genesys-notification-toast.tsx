@@ -15,11 +15,6 @@ export class GenesysNotificationToast {
   accent: string = 'neutral';
 
   /**
-   * The subject of the toast.
-   */
-  @Prop()
-  subject: string;
-  /**
    * The toast title.
    */
   @Prop()
@@ -64,15 +59,9 @@ export class GenesysNotificationToast {
     return allowed.includes(accent) ? accent : 'neutral';
   }
 
-  getIconClass(iconName: string): string {
-    return iconName.indexOf('genesys-icon') === 0
-      ? iconName + ' ' + this.getAccent()
-      : 'genesys-icon-' + iconName + ' ' + this.getAccent();
-  }
-
   getIcon() {
     return this.icon ? (
-      <i class={this.getIconClass(this.icon)} />
+      <i class={this.icon} />
     ) : this.iconUri ? (
       <img src={this.iconUri} />
     ) : (
@@ -83,7 +72,7 @@ export class GenesysNotificationToast {
   render() {
     return (
       <div class="genesys-notification-toast">
-        <div class="icon-wrapper ">
+        <div class={"icon-wrapper " + this.getAccent()}>
           {this.getIcon()}
         </div>
         <div class="content-wrapper">

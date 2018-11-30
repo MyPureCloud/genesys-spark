@@ -15,7 +15,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | `icon`       | `icon`        | The icon name of the title.                               | `string` |
 | `idToast`    | `id-toast`    | The id of the title.                                      | `string` |
 | `message`    | `message`     | The message of the toast.                                 | `string` |
-| `subject`    | `subject`     | The subject of the toast.                                 | `string` |
 | `toastTitle` | `toast-title` | The toast title.                                          | `string` |
 
 
