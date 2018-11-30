@@ -26,7 +26,7 @@ storiesOf('Genesys Components', module)
          id='simple'
          toast-title='The Title'
          message='the message'
-         icon='chat'
+         icon='genesys-icon-chat'
         >
         </genesys-action-toast>
         <h2>Interactive sample</h2>
@@ -35,7 +35,7 @@ storiesOf('Genesys Components', module)
           toast-title=${text('toastTitle', 'The Title')}
           message=${text('message', 'message')}
           subject=${text('subject', '')}
-          icon=${text('icon', 'chat')}
+          icon=${text('icon', 'genesys-icon-chat')}
         >
         </genesys-action-toast>
       `,
@@ -45,27 +45,27 @@ storiesOf('Genesys Components', module)
         const it = document.getElementById('interactive');
         it.addEventListener('custom', e => action('custom')(e.detail));
         const simple = document.getElementById('simple');
-        simple.rightButton = {
+        simple.primaryButton = {
           text: 'Accept',
           title: 'Ok',
           callback: () => {
             action('callback called')('Ok');
           }
         };
-        simple.leftButton = {
+        simple.secondaryButton = {
           text: 'Reject',
           callback: () => {
             action('callback called')('Cancel');
           }
         };
-        it.rightButton = object('rightButton', {
+        it.primaryButton = object('rightButton', {
           text: 'Accept',
           title: 'Ok',
           callback: () => {
             action('callback called')('Ok');
           }
         });
-        it.leftButton = object('leftButton', {
+        it.secondaryButton = object('leftButton', {
           text: 'Reject',
           title: 'Reject',
           callback: () => {

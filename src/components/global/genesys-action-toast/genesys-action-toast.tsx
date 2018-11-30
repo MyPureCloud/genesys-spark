@@ -46,17 +46,17 @@ export class GenesysActionToast {
    * The key values of the toast.
    */
   @Prop()
-  keyValues: any = {};
+  keyValues: { [key: string]: string; } = {};
   /**
    * The left button.
    */
   @Prop()
-  leftButton: any;
+  secondaryButton: any;
   /**
    * The right button.
    */
   @Prop()
-  rightButton: any;
+  primaryButton: any;
 
   onButtonClickHandler(button) {
     if (button.callback) {
@@ -65,23 +65,13 @@ export class GenesysActionToast {
     this.buttonClick.emit({ idToast: this.idToast, button });
   }
 
-  getStyle() {
-    return { 'background-color': this.topBorderColor };
-  }
-
-  formatIcon(iconName: string) {
-    return iconName.indexOf('genesys-icon') === 0
-      ? iconName
-      : 'genesys-icon-' + iconName;
-  }
-
   render() {
     return (
       <div class="genesys-action-toast">
-        <div class="top-border" style={this.getStyle()} />
+        <div class="top-border" style={{ 'background-color': this.topBorderColor }} />
         <div class="header">
           {this.icon ? (
-            <i class={this.formatIcon(this.icon)} />
+            <i class={this.icon} />
           ) : this.iconUri ? (
             <img src={this.iconUri} />
           ) : (
@@ -102,27 +92,27 @@ export class GenesysActionToast {
           <div class="message">{this.message}</div>
         </div>
         <div class="buttons">
-          {this.leftButton && (
+          {this.secondaryButton && (
             <genesys-button
-              text={this.leftButton.text}
-              left-icon={this.leftButton.leftIcon}
-              right-icon={this.leftButton.rightIcon}
+              text={this.secondaryButton.text}
+              left-icon={this.secondaryButton.leftIcon}
+              right-icon={this.secondaryButton.rightIcon}
               accent=""
-              disabled={this.leftButton.disabled}
-              title={this.leftButton.title ? this.leftButton.title : ''}
-              onClick={() => this.onButtonClickHandler(this.leftButton)}
+              disabled={this.secondaryButton.disabled}
+              title={this.secondaryButton.title ? this.secondaryButton.title : ''}
+              onClick={() => this.onButtonClickHandler(this.secondaryButton)}
               class="left-button"
             />
           )}
-          {this.rightButton && (
+          {this.primaryButton && (
             <genesys-button
-              text={this.rightButton.text}
-              left-icon={this.rightButton.leftIcon}
-              right-icon={this.rightButton.rightIcon}
+              text={this.primaryButton.text}
+              left-icon={this.primaryButton.leftIcon}
+              right-icon={this.primaryButton.rightIcon}
               accent="primary"
-              disabled={this.rightButton.disabled}
-              title={this.rightButton.title ? this.rightButton.title : ''}
-              onClick={() => this.onButtonClickHandler(this.rightButton)}
+              disabled={this.primaryButton.disabled}
+              title={this.primaryButton.title ? this.primaryButton.title : ''}
+              onClick={() => this.onButtonClickHandler(this.primaryButton)}
               class="right-button"
             />
           )}
