@@ -94,15 +94,13 @@ export class GenesysSlider {
           min={this.min}
           max={this.max}
           value={this.value}
-          aria-valuemin={this.min}
-          aria-valuemax={this.max}
-          aria-valuenow={this.value}
           ref={el => (this.sliderInput = el)}
           onInput={(e: UIEvent) => this.updateValue(e)}
         />
         <div class="mask" ref={el => (this.sliderMask = el)} />
         {this.displayTextBox ? (
           <genesys-text-field
+            label="slider value"
             value={value}
             ref={el => (this.sliderTextbox = el)}
           />
