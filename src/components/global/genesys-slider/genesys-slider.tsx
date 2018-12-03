@@ -1,4 +1,4 @@
-import { Event, EventEmitter, Component, Prop, Listen } from '@stencil/core';
+import { Event, EventEmitter, Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'genesys-slider',
@@ -33,6 +33,7 @@ export class GenesysSlider {
 
   sliderInput: HTMLInputElement;
   sliderMask: HTMLElement;
+  sliderTextbox: HTMLElement;
   sliderTooltip: HTMLElement;
 
   /**
@@ -41,10 +42,9 @@ export class GenesysSlider {
    */
   @Event()
   update: EventEmitter;
-
-  updateValue(value) {
+  updateValue(event) {
     const regex = new RegExp('([0-9]+)%*');
-    const result = regex.exec(value);
+    const result = regex.exec(event.target.value);
     var newValue = result && result[1] ? +result[1] : this.min;
     if (newValue < this.min) {
       newValue = this.min;
@@ -59,20 +59,11 @@ export class GenesysSlider {
     }
   }
 
-  @Listen('input')
-  updateInputValue(value) {
-    this.extractValue(value);
-  }
-
-  extractValue(event) {
-    const value = event.target.value;
-    this.updateValue(value);
-  }
-
   /**
    * Once the component is loaded do the setup
    */
   componentDidLoad() {
+    this.sliderTextbox.addEventListener('change', this.updateValue.bind(this));
     this.updatePosition();
   }
 
@@ -107,11 +98,14 @@ export class GenesysSlider {
           aria-valuemax={this.max}
           aria-valuenow={this.value}
           ref={el => (this.sliderInput = el)}
-          onInput={(e: UIEvent) => this.extractValue(e)}
+          onInput={(e: UIEvent) => this.updateValue(e)}
         />
         <div class="mask" ref={el => (this.sliderMask = el)} />
         {this.displayTextBox ? (
-          <genesys-text-field placeholder={value} />
+          <genesys-text-field
+            value={value}
+            ref={el => (this.sliderTextbox = el)}
+          />
         ) : (
           <div
             class="range-tooltip small-body"
