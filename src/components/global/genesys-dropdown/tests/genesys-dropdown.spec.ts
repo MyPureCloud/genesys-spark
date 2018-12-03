@@ -30,7 +30,6 @@ describe('genesys-dropdown', () => {
     it('_focusHandler', () => {
       component._focusHandler();
       expect(component.inputIsFocused).toEqual(true);
-      expect(component.opened).toEqual(true);
     });
     it('_focusListItemHandler', () => {
       const value = 'dummy';

@@ -15,7 +15,6 @@ export class GenesysList {
    */
   @Prop()
   items: IListItem[] = [];
-
   /**
    * Highlights to bold.
    */
@@ -64,9 +63,7 @@ export class GenesysList {
       );
     });
     firstFocusable.el.setAttribute('tabindex', '0');
-    if (firstFocusable) {
-      firstFocusable.el.focus();
-    }
+    if (firstFocusable) { firstFocusable.el.focus(); }
   }
 
   onKeyDown(event: KeyboardEvent, item: IListItem) {
@@ -128,10 +125,7 @@ export class GenesysList {
     this.root.dispatchEvent(new CustomEvent(event.type, { ...event, detail: item}));
   }
 
-  /**
-   * Once the component is loaded set the tabindex
-   */
-  componentDidLoad() {
+  setFirstTabIndex () {
     const firstFocusable = this.items.find(item => {
       return (
         item.el &&
@@ -139,8 +133,22 @@ export class GenesysList {
         (!item.type || item.type === ListTypeEnum.Item)
       );
     });
-    firstFocusable.el.setAttribute('tabindex', '0');
+    if (firstFocusable) { firstFocusable.el.setAttribute('tabindex', '0'); }
   }
+
+  /**
+   * Once the component is loaded
+   */
+  componentDidLoad() {
+    this.setFirstTabIndex();
+  }
+  /**
+   * Once the component is updated
+   */
+  componentDidUpdate () {
+    this.setFirstTabIndex();
+  }
+
   render() {
     return (
       <ul>

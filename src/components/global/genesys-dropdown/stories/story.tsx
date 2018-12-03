@@ -13,20 +13,39 @@ storiesOf('Genesys Components', module)
 .add(
     'Genesys Dropdown',
     withReadme(README, () => {
-      const el = document.createElement('genesys-dropdown');
-      el.items = object('items', [
-        { text: 'Belgium' },
-        { text: 'Brazil' },
-        { text: 'France' },
-        { text: 'Spain', isDisabled: true }
-      ]);
-      el.disabled = boolean('disabled', false);
-      el.filterable = boolean('filterable', true);
-      el.value = text('value', '');
-      el.label = text('label', '');
-      el.placeholder = text('placeholder', 'Select...');
+      const el = `
+        <genesys-dropdown
+          mode="${select('mode', ['default', 'page', 'palette'], 'default')}"
+          disabled="${boolean('disabled', false)}"
+          filterable="${boolean('filterable', false)}"
+          value="${text('value', '')}"
+          label="${text('label', 'Interactive Select')}"
+          placeholder="${text('placeholder', 'Select...')}">
+        </genesys-dropdown>
+        <genesys-dropdown
+          mode="page"
+          filterable="false"
+          label="Page Title Select"
+          placeholder="Select...">
+        </genesys-dropdown>
+        <genesys-dropdown
+          mode="palette"
+          filterable="false"
+          label="Palette Select'"
+          placeholder="Select...">
+        </genesys-dropdown>
+      `;
       setTimeout(() => {
-        el.addEventListener('change', e => action('change')(e.detail));
+        const its = Array.from(document.getElementsByTagName('genesys-dropdown'));
+        its.map(it => {
+          it.items = [
+            { text: 'Belgium' },
+            { text: 'Brazil' },
+            { text: 'France' },
+            { text: 'Spain', isDisabled: true }
+          ];
+          it.addEventListener('change', e => action('change')(e.detail));
+        });
       }, 100);
       document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
