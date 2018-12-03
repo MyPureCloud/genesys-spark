@@ -19,7 +19,7 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "storybook": "./node_modules/.bin/build-storybook -c .storybook -o .out",
-    "storybook.dev": "./node_modules/.bin/start-storybook -p 9001 -c .storybook -s ./www,./src/style",
+    "storybook.dev": "./node_modules/.bin/start-storybook -p 9001 -c .storybook -s ./www,./src/style,./dist",
     "create-component": "node scripts/create-component.js",
     "dev": "./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run storybook.dev\"",
     "format": "prettier ./src/**/*.ts ./src/**/*.tsx",
