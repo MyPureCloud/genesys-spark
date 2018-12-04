@@ -45,7 +45,6 @@ storiesOf('Genesys Components', module)
             'neutral'
           )}
           message=${text('message', 'message')}
-          close-label=${text('closeLabel', 'close')}
         >
         </genesys-notification-toast>
       `,

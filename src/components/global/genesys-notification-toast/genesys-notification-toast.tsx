@@ -41,10 +41,12 @@ export class GenesysNotificationToast {
   message: string;
 
   /**
-   * The label for the close button
+   * Indicate the localisation strings
    */
   @Prop()
-  closeLabel: string = '';
+  i18n: { [key: string]: string; } = {
+    'close': 'close'
+  };
 
   onCloseButtonClickHandler(e) {
     this.closeClick.emit({ idToast: this.idToast, originalEvent: e });
@@ -86,7 +88,7 @@ export class GenesysNotificationToast {
         <div class="close-icon-wrapper">
           <button
             onClick={e => this.onCloseButtonClickHandler(e)}
-            title={this.closeLabel}
+            title={this.i18n.close}
           >
             <i class="genesys-icon-close" />
           </button>
