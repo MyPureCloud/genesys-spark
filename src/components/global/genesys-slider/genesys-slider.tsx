@@ -71,46 +71,48 @@ export class GenesysSlider {
    * When position is changed, via slider or text box, update position
    */
   updatePosition() {
-    const width = this.sliderInput.offsetWidth;
-    const placementPercentage = (this.value - this.min) / (this.max - this.min);
+    const placementPercentage =
+      ((this.value - this.min) / (this.max - this.min)) * 100;
     if (this.sliderTooltip) {
-      var thumbOffset = -18 * (placementPercentage - 0.5) + 6;
-      var newPosition = placementPercentage * width + thumbOffset - 25;
-      this.sliderTooltip.style.left = `${newPosition}px`;
+      this.sliderTooltip.style.left = `${placementPercentage}%`;
     }
-    thumbOffset = -12 * (placementPercentage - 0.5) + 6;
-    newPosition = placementPercentage * width + thumbOffset;
-    this.sliderMask.style.width = `${newPosition}px`;
+    this.sliderMask.style.width = `${placementPercentage}%`;
   }
 
+  //pull complicated bits of template into helper functions
   render() {
-    const value = this.isPercentage ? `${this.value}%` : `${this.value}`;
+    const value: string = this.isPercentage
+      ? `${this.value}%`
+      : `${this.value}`;
     return (
-      <div class="container">
-        <input
-          type="range"
-          role="slider"
-          class="range-input"
-          min={this.min}
-          max={this.max}
-          value={this.value}
-          ref={el => (this.sliderInput = el)}
-          onInput={(e: UIEvent) => this.updateValue(e)}
-        />
-        <div class="mask" ref={el => (this.sliderMask = el)} />
-        {this.displayTextBox ? (
+      <div class="slider-component-container">
+        <div class="slider-container">
+          <input
+            type="range"
+            role="slider"
+            class="range-input"
+            min={this.min}
+            max={this.max}
+            value={this.value}
+            ref={el => (this.sliderInput = el)}
+            onInput={(e: UIEvent) => this.updateValue(e)}
+          />
+          <div class="mask" ref={el => (this.sliderMask = el)} />
+          {!this.displayTextBox && (
+            <div
+              class="range-tooltip small-body"
+              ref={el => (this.sliderTooltip = el)}
+            >
+              <div class="tooltip-value">{value}</div>
+            </div>
+          )}
+        </div>
+        {this.displayTextBox && (
           <genesys-text-field
             label="slider value"
             value={value}
             ref={el => (this.sliderTextbox = el)}
           />
-        ) : (
-          <div
-            class="range-tooltip small-body"
-            ref={el => (this.sliderTooltip = el)}
-          >
-            <div class="tooltip-value">{value}</div>
-          </div>
         )}
       </div>
     );
