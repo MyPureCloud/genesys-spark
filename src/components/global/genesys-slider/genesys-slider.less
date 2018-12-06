@@ -4,13 +4,35 @@
 @slider-dark: @genesys-off-white;
 @slider-fill-dark: @genesys-blue;
 
+.track {
+  margin: 0;
+  padding: 0;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.thumb {
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    height: 18px;
+    width: 18px;
+  }
+}
+
 genesys-slider {
+  width: inherit;
+
   .slider-component-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
     height: 60px;
-    margin-top: 23px;
+    padding: 25px;
     align-items: center;
   }
 
@@ -37,55 +59,29 @@ genesys-slider {
     }
     /** Chrome & Safari */
     &::-webkit-slider-runnable-track {
-      margin: 0;
-      padding: 0;
-      height: 2px;
-      width: 100%;
-      z-index: 1;
-      background-color: transparent;
+      -webkit-appearance: none;
+      .track();
     }
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
-      height: 16px;
-      width: 16px;
-      background-color: transparent;
-      cursor: pointer;
-
-      &:active {
-        height: 20px;
-        width: 20px;
-      }
+      .thumb();
     }
     /** Forefox */
     &::-moz-range-track {
-      margin: 0;
-      padding: 0;
-      height: 2px;
-      background-color: transparent;
+      .track();
     }
 
     &::-moz-range-thumb {
-      height: 16px;
-      width: 16px;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
+      .thumb();
     }
     /** IE */
     &::-ms-track {
-      height: 2px;
-      width: 100%;
-      border: none;
-      background-color: transparent;
+      .track();
     }
 
     &::-ms-thumb {
-      height: 16px;
-      width: 16px;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
+      .thumb();
     }
   }
 
@@ -144,8 +140,7 @@ genesys-slider {
     box-shadow: 0 0 2px @slider-border;
     border-radius: 2px;
     justify-content: center;
-    text-align: center;
-    margin-left: -25px;
+    margin-left: -31px;
 
     &::after,
     &::before {
@@ -197,7 +192,7 @@ genesys-slider {
 // Theming
 
 .genesys-slider-dark-theme {
-  .range-input {
+  .mask-track {
     background-color: @slider-dark;
   }
 
@@ -212,6 +207,14 @@ genesys-slider {
   .range-tooltip {
     color: @genesys-grey-type;
     background-color: @slider-dark;
+  }
+
+  genesys-text-field {
+    .genesys-field input {
+      background-color: @slider-dark;
+      color: @genesys-grey-type;
+      border: none;
+    }
   }
 }
 

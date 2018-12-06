@@ -63,7 +63,12 @@ export class GenesysSlider {
    * Once the component is loaded do the setup
    */
   componentDidLoad() {
-    this.sliderTextbox.addEventListener('change', this.updateValue.bind(this));
+    if (this.sliderTextbox) {
+      this.sliderTextbox.addEventListener(
+        'change',
+        this.updateValue.bind(this)
+      );
+    }
     this.updatePosition();
   }
 
@@ -74,7 +79,11 @@ export class GenesysSlider {
     const placementPercentage =
       ((this.value - this.min) / (this.max - this.min)) * 100;
     if (this.sliderTooltip) {
-      this.sliderTooltip.style.left = `${placementPercentage}%`;
+      const requireMinPlacement =
+        (this.sliderInput.offsetWidth / 100) * placementPercentage < 12;
+      this.sliderTooltip.style.left = requireMinPlacement
+        ? '12px'
+        : `${placementPercentage}%`;
     }
     this.sliderMask.style.width = `${placementPercentage}%`;
   }
