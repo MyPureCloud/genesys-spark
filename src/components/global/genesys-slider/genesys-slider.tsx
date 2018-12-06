@@ -97,7 +97,10 @@ export class GenesysSlider {
             ref={el => (this.sliderInput = el)}
             onInput={(e: UIEvent) => this.updateValue(e)}
           />
-          <div class="mask" ref={el => (this.sliderMask = el)} />
+          <div class="mask">
+            <div class="mask-slider" ref={el => (this.sliderMask = el)} />
+            <div class="mask-track" />
+          </div>
           {!this.displayTextBox && (
             <div
               class="range-tooltip small-body"

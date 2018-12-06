@@ -15,15 +15,17 @@ genesys-slider {
   }
 
   .slider-container {
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
+    height: 18px;
     width: 100%;
   }
 
   .range-input {
     -webkit-appearance: none;
     position: absolute;
-    top: -7px;
+    top: 0px;
     height: 18px;
     width: 100%;
     padding: 0;
@@ -35,10 +37,12 @@ genesys-slider {
     }
     /** Chrome & Safari */
     &::-webkit-slider-runnable-track {
+      margin: 0;
+      padding: 0;
       height: 2px;
       width: 100%;
-      z-index: -1;
-      background-color: @slider-border;
+      z-index: 1;
+      background-color: transparent;
     }
 
     &::-webkit-slider-thumb {
@@ -55,7 +59,10 @@ genesys-slider {
     }
     /** Forefox */
     &::-moz-range-track {
+      margin: 0;
+      padding: 0;
       height: 2px;
+      background-color: transparent;
     }
 
     &::-moz-range-thumb {
@@ -70,7 +77,7 @@ genesys-slider {
       height: 2px;
       width: 100%;
       border: none;
-      background-color: @slider-border;
+      background-color: transparent;
     }
 
     &::-ms-thumb {
@@ -83,34 +90,47 @@ genesys-slider {
   }
 
   .range-input:active + .mask {
-    min-width: 18px;
+    .mask-slider {
+      min-width: 18px;
 
-    &:after {
-      height: 18px;
-      width: 18px;
+      &:after {
+        height: 18px;
+        width: 18px;
+      }
     }
   }
 
   .mask {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-self: center;
-    height: 2px;
-    width: 0px;
-    min-width: 12px;
-    background-color: @slider-fill;
+    width: 100%;
+    z-index: -1;
 
-    &:after {
-      display: block;
-      z-index: -1;
+    .mask-slider {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
       align-self: center;
-      top: -5px;
-      height: 12px;
-      width: 12px;
-      border-radius: 50%;
+      height: 2px;
+      width: 0px;
+      min-width: 12px;
       background-color: @slider-fill;
-      content: '';
+
+      &:after {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: @slider-fill;
+        content: '';
+      }
+    }
+
+    .mask-track {
+      position: absolute;
+      z-index: -1;
+      top: 8px;
+      height: 2px;
+      width: 100%;
+      background-color: @slider-border;
     }
   }
 
@@ -181,7 +201,7 @@ genesys-slider {
     background-color: @slider-dark;
   }
 
-  .mask {
+  .mask-slider {
     background-color: @slider-fill-dark;
 
     &::after {
