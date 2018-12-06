@@ -75,9 +75,18 @@ export class GenesysDropdown {
         if (this.inputIsFocused) {
           this.opened = true;
           this.listElement.setFocusOnFirstItem();
-          setTimeout(() => { this.listElement.setFocusOnFirstItem(); }, 0);
         }
         break;
+      case KeyCode.Enter:
+      case KeyCode.Space:
+        break;
+      default:
+        if (!this.filterable) {
+          const arr = this.items.filter((item) => {
+            return item.text.startsWith(event.key);
+          });
+          if (arr[0]) { arr[0].el.focus(); }
+        }
     }
   }
 
@@ -140,7 +149,7 @@ export class GenesysDropdown {
 
   render() {
     return (
-      <div class={`genesys-dropdown ${this.mode} ${this.labelPosition} ${this.opened ? 'active' : ''}`}
+      <div class={`genesys-dropdown ${this.mode} ${this.mode} ${this.disabled ? 'disabled' : ''} ${this.opened ? 'active' : ''}`}
         onKeyDown={(e) => this.onKeyDown(e)}>
         {this.label && <label>{this.label}</label>}
         <div class="select-field">

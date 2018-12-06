@@ -5,6 +5,11 @@ genesys-dropdown {
   div.genesys-dropdown {
     position: relative;
     margin: 4px 0;
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
+    }
     &.left {
       display: flex;
     }
@@ -147,12 +152,16 @@ genesys-dropdown {
           background-color: @genesys-off-white-bg;
         }
         genesys-text-field {
-          border-bottom: 1px solid @genesys-border;
+          input {
+            border-bottom: 1px solid @genesys-border;
+          }
         }
       }
       &.active {
         genesys-text-field {
-          border-bottom: 1px solid @genesys-blue;
+          input {
+            border-bottom: 1px solid @genesys-blue;
+          }
         }
       }
     }
@@ -162,12 +171,16 @@ genesys-dropdown {
           background-color: @genesys-off-white-bg;
         }
         genesys-text-field {
-          border-bottom: 1px solid @genesys-border;
+          input {
+            border-bottom: 1px solid @genesys-border;
+          }
         }
       }
       &.active {
         genesys-text-field {
-          border-bottom: 1px solid @genesys-blue;
+          input {
+            border-bottom: 1px solid @genesys-blue;
+          }
         }
       }
     }
