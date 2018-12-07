@@ -131,7 +131,7 @@ genesys-slider {
   }
 
   .range-tooltip {
-    display: flex;
+    display: none;
     position: absolute;
     top: -50px;
     height: 32px;
@@ -169,6 +169,10 @@ genesys-slider {
     .tooltip-value {
       align-self: center;
     }
+  }
+
+  .range-input:hover ~ .range-tooltip {
+    display: flex;
   }
 
   genesys-text-field {
