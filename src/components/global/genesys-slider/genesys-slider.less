@@ -77,11 +77,19 @@ genesys-slider {
     }
     /** IE */
     &::-ms-track {
+      border: none;
+      color: transparent;
       .track();
     }
 
     &::-ms-thumb {
       .thumb();
+    }
+
+    &::-ms-fill-lower,
+    &::-ms-fill-upper,
+    &::-ms-tooltip {
+      display: none;
     }
   }
 
@@ -120,13 +128,18 @@ genesys-slider {
       }
     }
 
-    .mask-track {
-      position: absolute;
+    .mask-track-container {
+      position: relative;
       z-index: -1;
-      top: 8px;
-      height: 2px;
-      width: 100%;
-      background-color: @slider-border;
+
+      .mask-track {
+        position: absolute;
+        top: -2px;
+        z-index: -1;
+        height: 2px;
+        width: 100%;
+        background-color: @slider-border;
+      }
     }
   }
 

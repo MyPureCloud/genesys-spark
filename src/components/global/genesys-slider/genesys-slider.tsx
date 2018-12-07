@@ -43,6 +43,7 @@ export class GenesysSlider {
   @Event()
   update: EventEmitter;
   updateValue(event) {
+    console.log('here', event);
     const regex = new RegExp('([0-9]+)%*');
     const result = regex.exec(event.target.value);
     var newValue = result && result[1] ? +result[1] : this.min;
@@ -104,11 +105,15 @@ export class GenesysSlider {
             max={this.max}
             value={this.value}
             ref={el => (this.sliderInput = el)}
+            //onChange event required because IE11 doesn't support onInput for range inputs
+            onChange={(e: UIEvent) => this.updateValue(e)}
             onInput={(e: UIEvent) => this.updateValue(e)}
           />
           <div class="mask">
             <div class="mask-slider" ref={el => (this.sliderMask = el)} />
-            <div class="mask-track" />
+            <div class="mask-track-container">
+              <div class="mask-track" />
+            </div>
           </div>
           {!this.displayTextBox && (
             <div
