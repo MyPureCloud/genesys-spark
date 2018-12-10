@@ -1,0 +1,43 @@
+// Variables part
+
+// Style
+genesys-disclosure-button {
+
+}
+
+// Theming
+
+// Dark
+.genesys-disclosure-button-dark-theme {
+    color: @genesys-off-white;
+};
+
+.genesys-dark-theme {
+    genesys-disclosure-button {
+        .genesys-disclosure-button-dark-theme();
+    }
+}
+
+genesys-disclosure-button.genesys-dark-theme {
+    .genesys-disclosure-button-dark-theme();
+}
+
+// Light
+.genesys-disclosure-button-light-theme {
+    color: @genesys-grey-2;
+};
+
+.genesys-light-theme {
+    genesys-disclosure-button {
+        .genesys-disclosure-button-light-theme();
+    }
+}
+
+genesys-disclosure-button.genesys-light-theme {
+    .genesys-disclosure-button-light-theme();
+}
+
+// Default Theme
+genesys-disclosure-button {
+    .genesys-disclosure-button-light-theme(); 
+}
