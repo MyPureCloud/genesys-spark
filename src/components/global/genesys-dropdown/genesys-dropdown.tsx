@@ -65,6 +65,7 @@ export class GenesysDropdown {
   onFocusOut (e: FocusEvent) {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
       this.opened = false;
+      this.forcedGhostValue = '';
     }
   }
 
@@ -74,7 +75,7 @@ export class GenesysDropdown {
       case KeyCode.Down:
         if (this.inputIsFocused) {
           this.opened = true;
-          this.listElement.setFocusOnFirstItem();
+          setTimeout (() => { this.listElement.setFocusOnFirstItem() });
         }
         break;
       case KeyCode.Enter:
@@ -103,7 +104,7 @@ export class GenesysDropdown {
     this.inputIsFocused = true;
   }
   _focusListItemHandler (item: IListItem) {
-    this.forcedGhostValue = item.text;
+    this.forcedGhostValue = this.value + item.text.substring(this.value.length);
   }
   _blurHandler () {
     this.inputIsFocused = false;
@@ -111,6 +112,7 @@ export class GenesysDropdown {
   }
   _inputHandler (event: CustomEvent) {
     this.value = event.detail;
+    this.opened = true;
   }
 
   _showDropdownIcon () {
@@ -120,7 +122,7 @@ export class GenesysDropdown {
   get filteredItems () {
     if (this.filterable) {
       const arr = this.items.filter((item) => {
-        return item.text.startsWith(this.value);
+        return item.text.toLowerCase().startsWith(this.value.toLowerCase());
       });
       return arr;
     } else {
@@ -130,7 +132,10 @@ export class GenesysDropdown {
 
   get ghost () {
     const firstFilteredItem = (this.filteredItems.length) ? this.filteredItems[0].text : '';
-    const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : firstFilteredItem;
+    const debug = this.value + firstFilteredItem.substring(this.value.length);
+    const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : debug;
+    // const firstFilteredItem = (this.filteredItems.length) ? this.filteredItems[0].text : '';
+    // const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : firstFilteredItem;
     const placeholder = (!this.value) ? this.placeholder : '';
     return (this.opened && this.filterable) ? ghost : placeholder;
   }
@@ -153,7 +158,7 @@ export class GenesysDropdown {
         onKeyDown={(e) => this.onKeyDown(e)}>
         {this.label && <label>{this.label}</label>}
         <div class="select-field">
-          <span class="ghost" aria-hidden="true" tabindex="-1">{this.ghost}</span>
+          <span class="ghost" aria-hidden="true">{this.ghost}</span>
           <genesys-text-field
             ref={el => (this.textFieldElement = el as HTMLGenesysTextFieldElement)}
             onMouseDown={() => { this._clickHandler() }}
