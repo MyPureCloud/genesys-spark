@@ -12,9 +12,15 @@ import {
   tag: 'genesys-pagination'
 })
 export class GenesysPagination {
+  /**
+   * The currently select page. Changes are watched by the component.
+   */
   @Prop({ mutable: true })
   currentPage: number = 1;
 
+  /**
+   * The total number of items in the data set. Used to calculate total page count
+   */
   @Prop()
   totalItems: number;
 
@@ -24,9 +30,15 @@ export class GenesysPagination {
   @State()
   itemsPerPageOptions: number[] = [25, 50, 100];
 
+  /**
+   * Fired when the current page property changes.
+   */
   @Event()
   pageChanged: EventEmitter<number>;
 
+  /**
+   * Fired when user selects a new number of items per page.
+   */
   @Event()
   itemsPerPageChanged: EventEmitter<number>;
   itemsPerPageComponent: HTMLGenesysPaginationItemsPerPageElement;
@@ -35,6 +47,15 @@ export class GenesysPagination {
     return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
+  /**
+   * Sets the number of items to display on a single page, and optionally the list
+   * of items that the user can choose from in the dropdown.
+   *
+   * If options are omitted, the user selection dropdown won't be displayed.
+   *
+   * @param value The number of items to show per page.
+   * @param options The values the user can choose from.
+   */
   @Method()
   setItemsPerPage(value: number, options?: number[]): void {
     this.itemsPerPageOptions = options;
