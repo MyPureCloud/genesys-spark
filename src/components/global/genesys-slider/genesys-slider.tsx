@@ -89,7 +89,6 @@ export class GenesysSlider {
     this.sliderMask.style.width = `${placementPercentage}%`;
   }
 
-  //pull complicated bits of template into helper functions
   render() {
     const value: string = this.isPercentage
       ? `${this.value}%`
