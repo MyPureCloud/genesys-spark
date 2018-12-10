@@ -1,5 +1,4 @@
 import { Component, Element, Prop } from '@stencil/core';
-import { buildI18nForComponent } from '../../../i18n';
 
 @Component({
   styleUrl: 'genesys-pagination-item-counts.less',
@@ -10,6 +9,9 @@ export class GenesysPaginationItemCounts {
   element: HTMLElement;
 
   @Prop()
+  i18n: (resourceKey: string, context?: any) => string;
+
+  @Prop()
   totalItems: number;
 
   @Prop()
@@ -17,12 +19,6 @@ export class GenesysPaginationItemCounts {
 
   @Prop()
   itemsPerPage: number = 25;
-
-  i18n: (resourceName: string, ...formatArgs: any[]) => string;
-
-  async componentWillLoad() {
-    this.i18n = await buildI18nForComponent(this.element, 'genesys-pagination');
-  }
 
   get firstItem(): number {
     return (this.currentPage - 1) * this.itemsPerPage + 1;
@@ -39,12 +35,11 @@ export class GenesysPaginationItemCounts {
     return (
       <div class="pagination-item-counts">
         <span class="pagination-item-counts-display">
-          {this.i18n(
-            'itemCountDisplay',
-            this.firstItem,
-            this.lastItem,
-            this.totalItems
-          )}
+          {this.i18n('itemCountDisplay', {
+            firstItem: this.firstItem,
+            lastItem: this.lastItem,
+            totalItems: this.totalItems
+          })}
         </span>
       </div>
     );

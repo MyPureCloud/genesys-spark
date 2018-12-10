@@ -1,6 +1,7 @@
 import { Config } from '@stencil/core';
 import { OutputTargetDist } from '@stencil/core/dist/declarations';
 import { less } from '@stencil/less';
+import copy from 'rollup-plugin-copy-glob';
 
 const distTarget: OutputTargetDist = {
   dir: 'www/static',
@@ -18,7 +19,7 @@ export const config: Config = {
     },
     {
       dest: '../i18n',
-      src: './components/**/*.i18n.*.json'
+      src: '../build/i18n'
     }
   ],
   excludeSrc: [
@@ -39,6 +40,10 @@ export const config: Config = {
   plugins: [
     less({
       injectGlobalPaths: ['src/style/variables.less', 'src/style/mixins.less']
+    }),
+    copy([{ files: 'build/i18n/*', dest: 'dist/i18n' }], {
+      verbose: true,
+      watch: true
     })
   ],
   testing: {

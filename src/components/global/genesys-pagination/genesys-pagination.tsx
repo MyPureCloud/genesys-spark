@@ -1,17 +1,23 @@
 import {
   Component,
+  Element,
   Event,
   EventEmitter,
   Method,
   Prop,
   State
 } from '@stencil/core';
+import { buildI18nForComponent } from '../../i18n';
+import paginationResources from './genesys-pagination.i18n.json';
 
 @Component({
   styleUrl: 'genesys-pagination.less',
   tag: 'genesys-pagination'
 })
 export class GenesysPagination {
+  @Element()
+  element: HTMLElement;
+
   @Prop({ mutable: true })
   currentPage: number = 1;
 
@@ -30,6 +36,12 @@ export class GenesysPagination {
   @Event()
   itemsPerPageChanged: EventEmitter<number>;
   itemsPerPageComponent: HTMLGenesysPaginationItemsPerPageElement;
+
+  private i18n: (resourceKey: string, context?: any) => string;
+
+  async componentWillLoad() {
+    this.i18n = await buildI18nForComponent(this.element, paginationResources);
+  }
 
   calculatTotalPages(): number {
     return Math.ceil(this.totalItems / this.itemsPerPage);
@@ -78,6 +90,7 @@ export class GenesysPagination {
           totalItems={this.totalItems}
           currentPage={this.currentPage}
           itemsPerPage={this.itemsPerPage}
+          i18n={this.i18n}
         />
 
         {!this.itemsPerPageOptions || !this.itemsPerPageOptions.length ? (
@@ -90,6 +103,7 @@ export class GenesysPagination {
             onItemsPerPageChanged={ev => {
               this.itemsPerPage = ev.detail;
             }}
+            i18n={this.i18n}
           />
         )}
 

@@ -44,6 +44,26 @@ storiesOf('Pagination', module)
     })
   )
   .add(
+    'Simple (es)',
+    withReadme(readme, () => {
+      const component = createComponent();
+      component.setAttribute('lang', 'es');
+      component.totalItems = number('totalItems', 250);
+
+      return component;
+    })
+  )
+  .add(
+    'Simple (de)',
+    withReadme(readme, () => {
+      const component = createComponent();
+      component.setAttribute('lang', 'de');
+      component.totalItems = number('totalItems', 250);
+
+      return component;
+    })
+  )
+  .add(
     'Complex',
     withReadme(readme, () => {
       const component = createComponent();

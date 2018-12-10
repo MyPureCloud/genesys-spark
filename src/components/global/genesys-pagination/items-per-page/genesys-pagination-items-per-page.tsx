@@ -1,10 +1,20 @@
-import { Component, Event, EventEmitter, Method, State } from '@stencil/core';
+import {
+  Component,
+  Event,
+  EventEmitter,
+  Method,
+  Prop,
+  State
+} from '@stencil/core';
 
 @Component({
   styleUrl: 'genesys-pagination-items-per-page.less',
   tag: 'genesys-pagination-items-per-page'
 })
 export class GenesysPaginationItemsPerPage {
+  @Prop()
+  i18n: (resourceKey: string, context?: any) => string;
+
   @State()
   itemsPerPage: number = 25;
   @State()
@@ -35,7 +45,7 @@ export class GenesysPaginationItemsPerPage {
             <option selected={opt === this.itemsPerPage}>{opt}</option>
           ))}
         </select>
-        <span>per page</span>
+        <span>{this.i18n('perPage')}</span>
       </div>
     );
   }
