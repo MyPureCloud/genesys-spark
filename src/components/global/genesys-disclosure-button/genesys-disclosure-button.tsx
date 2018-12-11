@@ -1,4 +1,4 @@
-import { Event, EventEmitter, Component, Prop } from '@stencil/core';
+import { Event, EventEmitter, Component, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'genesys-disclosure-button',
@@ -6,45 +6,36 @@ import { Event, EventEmitter, Component, Prop } from '@stencil/core';
 })
 export class GenesysDisclosureButton {
   /**
-   * Indicate the firt
+   * Indicates the position of the button panel (right or left)
    **/
   @Prop()
-  first: string;
-  /**
-   * Indicate the firt
-   **/
-  @Prop()
-  middle: string;
-  /**
-   * Indicate the last
-   **/
-  @Prop()
-  last: string;
+  position: string = 'right';
 
   /**
-   * Triggered 2s after the component is loaded.
-   * @return the current fullname
+   * Denotes state of discloseure panel
+   **/
+  @State()
+  isPanelActive: boolean = false;
+
+  /**
+   * Return the state of the components panel on state chenge
+   * @return the panel state
    */
-  @Event() custom: EventEmitter;
-  emitEvent () {
-    this.custom.emit(this.format());
-  }
-
-  componentDidLoad () {
-    setTimeout(() => {
-      this.emitEvent();
-    }, 2000);
-  }
-
-  format(): string {
-    return (
-      (this.first || '') +
-      (this.middle ? ` ${this.middle}` : '') +
-      (this.last ? ` ${this.last}` : '')
-    );
+  @Event()
+  active: EventEmitter;
+  togglePanel() {
+    this.isPanelActive = !this.isPanelActive;
+    this.active.emit(this.isPanelActive);
   }
 
   render() {
-    return <div>Hello, World! I'm {this.format()}</div>;
+    return (
+      <div class="disclosure-button-container">
+        <button onClick={() => this.togglePanel()}>'>'</button>
+        <div class="disclosure-panel">
+          <slot name="panel-content" />
+        </div>
+      </div>
+    );
   }
 }

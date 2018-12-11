@@ -7,18 +7,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property | Attribute | Description       | Type     |
-| -------- | --------- | ----------------- | -------- |
-| `first`  | `first`   | Indicate the firt | `string` |
-| `last`   | `last`    | Indicate the last | `string` |
-| `middle` | `middle`  | Indicate the firt | `string` |
+| Property   | Attribute  | Description                                                | Type     |
+| ---------- | ---------- | ---------------------------------------------------------- | -------- |
+| `position` | `position` | Indicates the position of the button panel (right or left) | `string` |
 
 
 ## Events
 
-| Event    | Detail | Description                                 |
-| -------- | ------ | ------------------------------------------- |
-| `custom` |        | Triggered 2s after the component is loaded. |
+| Event    | Detail | Description                                              |
+| -------- | ------ | -------------------------------------------------------- |
+| `active` |        | Return the state of the components panel on state chenge |
 
 
 ----------------------------------------------
