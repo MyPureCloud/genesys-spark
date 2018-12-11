@@ -2,42 +2,62 @@
 
 // Style
 genesys-disclosure-button {
+  height: 100%;
 
+  .disclosure-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+
+    &.right {
+      justify-content: flex-end;
+    }
+  }
+
+  .disclosure-panel {
+    width: 30%;
+    order: -1;
+
+    &.right {
+      order: 1;
+    }
+  }
 }
 
 // Theming
 
 // Dark
 .genesys-disclosure-button-dark-theme {
-    color: @genesys-off-white;
-};
+  color: @genesys-off-white;
+}
 
 .genesys-dark-theme {
-    genesys-disclosure-button {
-        .genesys-disclosure-button-dark-theme();
-    }
+  genesys-disclosure-button {
+    .genesys-disclosure-button-dark-theme();
+  }
 }
 
 genesys-disclosure-button.genesys-dark-theme {
-    .genesys-disclosure-button-dark-theme();
+  .genesys-disclosure-button-dark-theme();
 }
 
 // Light
 .genesys-disclosure-button-light-theme {
-    color: @genesys-grey-2;
-};
+  color: @genesys-grey-2;
+}
 
 .genesys-light-theme {
-    genesys-disclosure-button {
-        .genesys-disclosure-button-light-theme();
-    }
+  genesys-disclosure-button {
+    .genesys-disclosure-button-light-theme();
+  }
 }
 
 genesys-disclosure-button.genesys-light-theme {
-    .genesys-disclosure-button-light-theme();
+  .genesys-disclosure-button-light-theme();
 }
 
 // Default Theme
 genesys-disclosure-button {
-    .genesys-disclosure-button-light-theme(); 
+  .genesys-disclosure-button-light-theme();
 }

@@ -16,7 +16,9 @@ storiesOf('Genesys Components', module)
       const el = document.createElement('div');
       render(
         html`
-        <genesys-disclosure-button id='interactive'></genesys-disclosure-button>
+        <div style='position:absolute;top:0;bottom:0;left:0;right:0;'>
+          <genesys-disclosure-button id='interactive'></genesys-disclosure-button>
+        </div>
       `,
         el
       );
