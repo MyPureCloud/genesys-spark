@@ -1,4 +1,5 @@
 import { Component, Event, EventEmitter, Prop } from '@stencil/core';
+import { GenesysTextField } from '../../genesys-text-field/genesys-text-field';
 
 @Component({
   styleUrl: 'genesys-pagination-buttons.less',
@@ -14,7 +15,7 @@ export class GenesysPaginationButtons {
   @Event()
   currentPageChanged: EventEmitter<number>;
 
-  private inputRef: HTMLInputElement;
+  private inputRef: GenesysTextField;
 
   render() {
     return (
@@ -32,12 +33,12 @@ export class GenesysPaginationButtons {
 
         <span class="genesys-pagination-current-page-text">
           Page{' '}
-          <input
+          <genesys-text-field
             class="pagination-current-page-input"
-            type="text"
-            value={this.currentPage}
-            ref={ref => (this.inputRef = ref)}
+            value={this.currentPage + ''}
+            ref={ref => (this.inputRef = ref as any)}
             onChange={() => this.setPage(this.inputRef.value)}
+            useClearButton={false}
           />
           {` of ${this.totalPages}`}
         </span>

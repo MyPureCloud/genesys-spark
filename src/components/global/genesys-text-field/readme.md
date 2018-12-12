@@ -27,6 +27,7 @@ changing error-message attribute.
 | `label`            | `label`              | The input label.                                                                                      | `string`  |
 | `placeholder`      | `placeholder`        | The input placeholder.                                                                                | `string`  |
 | `readonly`         | `readonly`           | Set the input in readonly mode                                                                        | `boolean` |
+| `useClearButton`   | `use-clear-button`   | Determines whether or not the 'x' clear button is displayed when the input contains text.             | `boolean` |
 | `validation`       | --                   | The input validation.                                                                                 | `any`     |
 | `value`            | `value`              | Indicate the input value                                                                              | `string`  |
 
