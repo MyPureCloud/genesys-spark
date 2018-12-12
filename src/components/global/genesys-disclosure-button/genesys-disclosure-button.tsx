@@ -18,7 +18,7 @@ export class GenesysDisclosureButton {
   isPanelActive: boolean = false;
 
   @State()
-  buttonText: string = '>';
+  buttonImg: string = 'genesys-icon-expand-right';
 
   /**
    * Return the state of the components panel on state chenge
@@ -30,25 +30,33 @@ export class GenesysDisclosureButton {
   togglePanel() {
     this.isPanelActive = !this.isPanelActive;
     if (this.position === 'right') {
-      this.buttonText = this.isPanelActive ? '>' : '<';
+      this.buttonImg = this.isPanelActive
+        ? 'genesys-icon-expand-right'
+        : 'genesys-icon-expand-left';
     } else {
-      this.buttonText = this.isPanelActive ? '<' : '>';
+      this.buttonImg = this.isPanelActive
+        ? 'genesys-icon-expand-left'
+        : 'genesys-icon-expand-right';
     }
     this.active.emit(this.isPanelActive);
   }
 
   componentDidLoad() {
     if (this.position === 'right') {
-      this.buttonText = this.isPanelActive ? '>' : '<';
+      this.buttonImg = this.isPanelActive
+        ? 'genesys-icon-expand-right'
+        : 'genesys-icon-expand-left';
     } else {
-      this.buttonText = this.isPanelActive ? '<' : '>';
+      this.buttonImg = this.isPanelActive
+        ? 'genesys-icon-expand-left'
+        : 'genesys-icon-expand-right';
     }
   }
 
   render() {
     return (
       <div class={`disclosure-button-container ${this.position}`}>
-        <button onClick={() => this.togglePanel()}>{this.buttonText}</button>
+        <button class={this.buttonImg} onClick={() => this.togglePanel()} />
         {this.isPanelActive && (
           <div class={`disclosure-panel ${this.position}`}>
             <slot name="panel-content" />
