@@ -19,7 +19,10 @@ genesys-disclosure-button {
       margin: 0;
       width: 16px;
       background: transparent;
-      border: 1px solid @genesys-border;
+      border-right: 1px solid @genesys-border;
+      border-left: 1px solid @genesys-border;
+      border-top: none;
+      border-bottom: none;
 
       &::before {
         height: 16px;
@@ -34,11 +37,16 @@ genesys-disclosure-button {
   }
 
   .disclosure-panel {
-    width: 30%;
+    display: none;
+    width: 100%;
     order: -1;
 
     &.right {
       order: 1;
+    }
+
+    &.active {
+      display: block;
     }
   }
 }

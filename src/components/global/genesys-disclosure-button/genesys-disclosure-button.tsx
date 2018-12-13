@@ -17,7 +17,6 @@ export class GenesysDisclosureButton {
   @State()
   isPanelActive: boolean = false;
 
-  @State()
   buttonImg: string = 'genesys-icon-expand-right';
 
   /**
@@ -29,19 +28,11 @@ export class GenesysDisclosureButton {
 
   togglePanel() {
     this.isPanelActive = !this.isPanelActive;
-    if (this.position === 'right') {
-      this.buttonImg = this.isPanelActive
-        ? 'genesys-icon-expand-right'
-        : 'genesys-icon-expand-left';
-    } else {
-      this.buttonImg = this.isPanelActive
-        ? 'genesys-icon-expand-left'
-        : 'genesys-icon-expand-right';
-    }
+    this.setButtonImg();
     this.active.emit(this.isPanelActive);
   }
 
-  componentDidLoad() {
+  setButtonImg() {
     if (this.position === 'right') {
       this.buttonImg = this.isPanelActive
         ? 'genesys-icon-expand-right'
@@ -53,15 +44,18 @@ export class GenesysDisclosureButton {
     }
   }
 
+  componentDidLoad() {
+    this.setButtonImg();
+  }
+
   render() {
+    const activeClass = this.isPanelActive ? 'active' : '';
     return (
       <div class={`disclosure-button-container ${this.position}`}>
         <button class={this.buttonImg} onClick={() => this.togglePanel()} />
-        {this.isPanelActive && (
-          <div class={`disclosure-panel ${this.position}`}>
-            <slot name="panel-content" />
-          </div>
-        )}
+        <div class={`disclosure-panel ${this.position} ${activeClass}`}>
+          <slot name="panel-content" />
+        </div>
       </div>
     );
   }
