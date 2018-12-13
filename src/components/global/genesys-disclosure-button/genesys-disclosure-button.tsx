@@ -25,11 +25,14 @@ export class GenesysDisclosureButton {
    */
   @Event()
   active: EventEmitter;
+  changeState() {
+    this.togglePanel();
+    this.active.emit(this.isPanelActive);
+  }
 
   togglePanel() {
     this.isPanelActive = !this.isPanelActive;
     this.setButtonImg();
-    this.active.emit(this.isPanelActive);
   }
 
   setButtonImg() {
@@ -52,7 +55,10 @@ export class GenesysDisclosureButton {
     const activeClass = this.isPanelActive ? 'active' : '';
     return (
       <div class={`disclosure-button-container ${this.position}`}>
-        <button class={this.buttonImg} onClick={() => this.togglePanel()} />
+        <button
+          class={`disclosure-button ${this.buttonImg}`}
+          onClick={() => this.changeState()}
+        />
         <div class={`disclosure-panel ${this.position} ${activeClass}`}>
           <slot name="panel-content" />
         </div>
