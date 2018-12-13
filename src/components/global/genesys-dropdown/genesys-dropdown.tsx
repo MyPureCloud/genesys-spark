@@ -116,7 +116,11 @@ export class GenesysDropdown {
   }
 
   _showDropdownIcon () {
-    return (this.filterable ? (!this.value) : (true));
+    const match = this.items.filter((item) => {
+      return item.text === this.value;
+    });
+    const filterableBehavior = (!this.value || !!match.length);
+    return (this.filterable ? filterableBehavior : (true));
   }
 
   get filteredItems () {
@@ -132,10 +136,8 @@ export class GenesysDropdown {
 
   get ghost () {
     const firstFilteredItem = (this.filteredItems.length) ? this.filteredItems[0].text : '';
-    const debug = this.value + firstFilteredItem.substring(this.value.length);
-    const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : debug;
-    // const firstFilteredItem = (this.filteredItems.length) ? this.filteredItems[0].text : '';
-    // const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : firstFilteredItem;
+    const valueGhost = this.value + firstFilteredItem.substring(this.value.length);
+    const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : valueGhost;
     const placeholder = (!this.value) ? this.placeholder : '';
     return (this.opened && this.filterable) ? ghost : placeholder;
   }
@@ -166,7 +168,9 @@ export class GenesysDropdown {
             onBlur={() => { this._blurHandler() }}
             onInput={(e) => { this._inputHandler(e) }}
             value={this.value}
-            disabled={this.disabled}>
+            disabled={this.disabled}
+            class={this._showDropdownIcon() ? 'unclearable' : ''}
+            >
           </genesys-text-field>
           {this._showDropdownIcon() && <button aria-hidden="true" tabindex="-1" type="button" class="genesys-icon-dropdown-arrow"/>}
         </div>
