@@ -19,8 +19,8 @@ genesys-disclosure-button {
       margin: 0;
       width: 16px;
       background: transparent;
-      border-right: 1px solid @genesys-border;
-      border-left: 1px solid @genesys-border;
+      border-right: 1px solid;
+      border-left: 1px solid;
       border-top: none;
       border-bottom: none;
 
@@ -56,6 +56,11 @@ genesys-disclosure-button {
 // Dark
 .genesys-disclosure-button-dark-theme {
   color: @genesys-off-white;
+
+  .disclosure-button-container button {
+    border-color: @genesys-grey-1;
+    color: @genesys-off-white;
+  }
 }
 
 .genesys-dark-theme {
@@ -71,6 +76,11 @@ genesys-disclosure-button.genesys-dark-theme {
 // Light
 .genesys-disclosure-button-light-theme {
   color: @genesys-grey-2;
+
+  .disclosure-button-container button {
+    border-color: @genesys-border;
+    color: @genesys-grey-2;
+  }
 }
 
 .genesys-light-theme {

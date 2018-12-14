@@ -16,7 +16,7 @@ storiesOf('Genesys Components', module)
       const el = document.createElement('div');
       render(
         html`
-        <div style='position:absolute;top:0;bottom:0;left:0;right:0;'>
+        <div style='position:absolute;top:0;bottom:0;left:0;right:0;padding-right:8px;padding-left:8px;'>
         <h2>Basic samples</h2>
         <i>Position right</i><br/><br/>
           <div style='height:100px; width: 100%;'>
@@ -32,7 +32,10 @@ storiesOf('Genesys Components', module)
           </div>
             <h2>Interactive sample</h2>
           <div style='height: 100px; width: 100%;'>
-            <genesys-disclosure-button id='interactive'>
+            <genesys-disclosure-button id='interactive' position = ${text(
+              'position',
+              'position'
+            )}>
               <p slot='panel-content'>This panel will contain your custom content by placing it in a <div slot='panel-content></div>'</p>
             </genesys-disclosure-button>
           </div>

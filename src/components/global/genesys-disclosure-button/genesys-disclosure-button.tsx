@@ -17,6 +17,10 @@ export class GenesysDisclosureButton {
   @State()
   isPanelActive: boolean = false;
 
+  /**
+   * Indicated image used by button
+   **/
+  @State()
   buttonImg: string = 'genesys-icon-expand-right';
 
   /**
