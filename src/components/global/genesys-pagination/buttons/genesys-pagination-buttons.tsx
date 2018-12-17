@@ -12,6 +12,14 @@ export class GenesysPaginationButtons {
   @Prop()
   totalPages: number;
 
+  get onFirstPage(): boolean {
+    return this.currentPage <= 1;
+  }
+
+  get onLastPage(): boolean {
+    return this.currentPage >= this.totalPages;
+  }
+
   @Event()
   currentPageChanged: EventEmitter<number>;
 
@@ -23,13 +31,15 @@ export class GenesysPaginationButtons {
         <div class="back-buttons">
           <genesys-button
             class="first-page-button"
-            onClick={() => this.setPage(1)}
+            onClick={() => this.currentPageChanged.emit(1)}
             leftIcon="genesys-icon-arrow-left-dbl"
+            disabled={this.onFirstPage}
           />
           <genesys-button
             class="previous-page-button"
-            onClick={() => this.setPage(this.currentPage - 1)}
+            onClick={() => this.currentPageChanged.emit(this.currentPage - 1)}
             leftIcon="genesys-icon-chevron-small-left"
+            disabled={this.onFirstPage}
           />
         </div>
         <span class="genesys-pagination-current-page-text">
@@ -38,7 +48,7 @@ export class GenesysPaginationButtons {
             class="pagination-current-page-input"
             value={this.currentPage + ''}
             ref={ref => (this.textFieldRef = ref as any)}
-            onChange={() => this.setPage(this.textFieldRef.value)}
+            onChange={() => this.setPageFromInput(this.textFieldRef.value)}
             useClearButton={false}
           />
           {` of ${this.totalPages}`}
@@ -47,30 +57,28 @@ export class GenesysPaginationButtons {
         <div class="forward-buttons">
           <genesys-button
             class="next-page-button"
-            onClick={() => this.setPage(this.currentPage + 1)}
+            onClick={() => this.currentPageChanged.emit(this.currentPage + 1)}
             leftIcon="genesys-icon-chevron-small-right"
+            disabled={this.onLastPage}
           />
           <genesys-button
             class="last-page-button"
-            onClick={() => this.setPage(this.totalPages)}
+            onClick={() => this.currentPageChanged.emit(this.totalPages)}
             leftIcon="genesys-icon-arrow-right-dbl"
+            disabled={this.onLastPage}
           />
         </div>
       </div>
     );
   }
 
-  private setPage(page: number | string) {
-    if (typeof page === 'string') {
-      page = parseInt(page, 10);
-    }
+  private setPageFromInput(value: string) {
+    const page = parseInt(value, 10);
 
     if (!page || isNaN(page)) {
-      page = this.currentPage;
+      this.textFieldRef.value = this.currentPage + '';
     } else {
       this.currentPageChanged.emit(page);
     }
-
-    this.textFieldRef.value = page + '';
   }
 }
