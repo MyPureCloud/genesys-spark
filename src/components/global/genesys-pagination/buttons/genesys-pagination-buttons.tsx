@@ -63,10 +63,11 @@ export class GenesysPaginationButtons {
     }
 
     if (!page || isNaN(page)) {
-      this.textFieldRef.value = this.currentPage + '';
-      return;
+      page = this.currentPage;
+    } else {
+      this.currentPageChanged.emit(page);
     }
 
-    this.currentPageChanged.emit(page);
+    this.textFieldRef.value = page + '';
   }
 }
