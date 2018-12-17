@@ -72,6 +72,10 @@ genesys-text-field {
       line-height: 30px;
       font-weight: bold;
       display: inline-block;
+
+      &:empty {
+        display: none;
+      }
     }
     > div.genesys-field {
       position: relative;
