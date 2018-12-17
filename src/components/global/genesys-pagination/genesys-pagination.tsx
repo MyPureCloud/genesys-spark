@@ -94,7 +94,7 @@ export class GenesysPagination {
 
   render() {
     return (
-      <div class="gux-pagination">
+      <div class="genesys-pagination">
         <genesys-pagination-item-counts
           totalItems={this.totalItems}
           currentPage={this.currentPage}

@@ -1,21 +1,35 @@
-@import "../pagination-variables.less";
+@import '../pagination-variables.less';
 
 genesys-pagination-buttons {
-    genesys-button + genesys-button {
-      margin-left: @genesys-pagination-button-margin;
-    }
+  genesys-button {
+    margin-left: @genesys-pagination-button-margin;
+  }
 
-    genesys-text-field {
-      display: inline-block;
+  .forward-buttons,
+  .back-buttons {
+    display: inline-block;
+  }
 
-      margin-left: @genesys-pagination-input-margin;
-      margin-right: @genesys-pagination-input-margin;
+  genesys-text-field {
+    display: inline-block;
 
-      width: 48px;
-    }
+    margin-left: @genesys-pagination-input-margin;
+    margin-right: @genesys-pagination-input-margin -
+      @genesys-pagination-button-margin;
 
+    width: 48px;
+  }
+
+  .genesys-pagination-current-page-text {
+    margin-left: @genesys-pagination-text-margin;
+    margin-right: @genesys-pagination-text-margin;
+  }
+}
+
+@media (max-width: @genesys-pagination-screen-md) {
+  genesys-pagination-buttons {
     .genesys-pagination-current-page-text {
-      margin-left: @genesys-pagination-text-margin;
-      margin-right: @genesys-pagination-text-margin;
+      display: none;
     }
+  }
 }

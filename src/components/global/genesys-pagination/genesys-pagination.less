@@ -1,6 +1,6 @@
-@import "./pagination-variables.less";
+@import './pagination-variables.less';
 
-.gux-pagination {
+genesys-pagination > .genesys-pagination {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,5 +11,29 @@
 
   .pagination-buttons {
     margin-left: auto;
+  }
+}
+
+@media (max-width: @genesys-pagination-screen-md) {
+  genesys-pagination > .genesys-pagination {
+    genesys-pagination-items-per-page {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: @genesys-pagination-screen-sm) {
+  genesys-pagination > .genesys-pagination {
+    display: block;
+
+    genesys-pagination-item-counts,
+    .pagination-buttons {
+      margin: 0;
+      text-align: center;
+    }
+
+    .pagination-buttons {
+      margin-top: @genesys-pagination-button-margin;
+    }
   }
 }
