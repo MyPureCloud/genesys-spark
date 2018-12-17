@@ -5,15 +5,6 @@ import { withReadme } from 'storybook-readme';
 
 import readme from '../readme.md';
 
-const createWrapper = story => {
-  const wrapper = document.createElement('div');
-  wrapper.setAttribute('style', 'padding: 24px');
-
-  wrapper.appendChild(story());
-
-  return wrapper;
-};
-
 const createComponent = () => document.createElement('genesys-pagination');
 
 const createActionLoggers = story => {
@@ -32,7 +23,6 @@ const createActionLoggers = story => {
 
 storiesOf('Pagination', module)
   .addDecorator(withKnobs)
-  .addDecorator(createWrapper)
   .addDecorator(createActionLoggers)
   .add(
     'Simple',
