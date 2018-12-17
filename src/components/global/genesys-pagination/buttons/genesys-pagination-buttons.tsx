@@ -15,7 +15,7 @@ export class GenesysPaginationButtons {
   @Event()
   currentPageChanged: EventEmitter<number>;
 
-  private inputRef: GenesysTextField;
+  private textFieldRef: GenesysTextField;
 
   render() {
     return (
@@ -36,8 +36,8 @@ export class GenesysPaginationButtons {
           <genesys-text-field
             class="pagination-current-page-input"
             value={this.currentPage + ''}
-            ref={ref => (this.inputRef = ref as any)}
-            onChange={() => this.setPage(this.inputRef.value)}
+            ref={ref => (this.textFieldRef = ref as any)}
+            onChange={() => this.setPage(this.textFieldRef.value)}
             useClearButton={false}
           />
           {` of ${this.totalPages}`}
@@ -60,6 +60,11 @@ export class GenesysPaginationButtons {
   private setPage(page: number | string) {
     if (typeof page === 'string') {
       page = parseInt(page, 10);
+    }
+
+    if (!page || isNaN(page)) {
+      this.textFieldRef.value = this.currentPage + '';
+      return;
     }
 
     this.currentPageChanged.emit(page);
