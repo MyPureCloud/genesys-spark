@@ -12,6 +12,12 @@ export class GenesysDisclosureButton {
   position: string = 'left';
 
   /**
+   * Indicates the label for the disclosure button
+   **/
+  @Prop()
+  label: string = 'open';
+
+  /**
    * Denotes state of discloseure panel
    **/
   @State()
@@ -61,6 +67,7 @@ export class GenesysDisclosureButton {
       <div class={`disclosure-button-container ${this.position}`}>
         <button
           class={`disclosure-button ${this.buttonImg}`}
+          aria-label={this.label}
           onClick={() => this.changeState()}
         />
         <div class={`disclosure-panel ${this.position} ${activeClass}`}>

@@ -9,6 +9,7 @@ This is a UI button component that is used to open or dismiss an associated pane
 
 | Property   | Attribute  | Description                                                | Type     |
 | ---------- | ---------- | ---------------------------------------------------------- | -------- |
+| `label`    | `label`    | Indicates the label for the disclosure button              | `string` |
 | `position` | `position` | Indicates the position of the button panel (right or left) | `string` |
 
 
