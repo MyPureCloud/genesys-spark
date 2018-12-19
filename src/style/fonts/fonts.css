@@ -23,6 +23,6 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: url("./fonts/Roboto-Bold.eot");
+  src: url("./Roboto-Bold.eot");
   src: url("./Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("./Roboto-Bold.woff") format("woff");
 }
