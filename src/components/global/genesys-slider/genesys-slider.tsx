@@ -81,7 +81,7 @@ export class GenesysSlider {
       ((this.value - this.min) / (this.max - this.min)) * 100;
     if (this.sliderTooltip) {
       const requireMinPlacement =
-        ((this.sliderInput.offsetWidth - 12) / 100) * placementPercentage < 12;
+        (this.sliderInput.offsetWidth / 100) * placementPercentage < 12;
       this.sliderTooltip.style.left = requireMinPlacement
         ? '12px'
         : `${placementPercentage}%`;
