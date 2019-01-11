@@ -13,13 +13,16 @@
 }
 
 .thumb {
-  height: 16px;
-  width: 16px;
-  background-color: transparent;
+  height: 12px;
+  width: 12px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background-color: @slider-fill;
   border: none;
   cursor: pointer;
 
   &:active {
+    margin-top: -7px;
     height: 18px;
     width: 18px;
   }
@@ -95,10 +98,12 @@ genesys-slider {
     .mask-slider {
       min-width: 18px;
 
+      /*
       &:after {
         height: 18px;
         width: 18px;
       }
+      */
     }
   }
 
@@ -117,6 +122,7 @@ genesys-slider {
       min-width: 12px;
       background-color: @slider-fill;
 
+      /*
       &:after {
         height: 12px;
         width: 12px;
@@ -124,6 +130,7 @@ genesys-slider {
         background-color: @slider-fill;
         content: '';
       }
+      */
     }
 
     .mask-track-container {
