@@ -16,12 +16,12 @@ export class GenesysSlider {
   @Prop()
   max: number = 100;
   /**
-   * Indocates the value of the slider
+   * Indicates the value of the slider
    **/
   @Prop({ mutable: true, reflectToAttr: true })
   value: number = 0;
   /**
-   * Indicate if the input box
+   * Indicates if the input box will be displayed
    **/
   @Prop()
   displayTextBox: boolean = false;
@@ -36,6 +36,8 @@ export class GenesysSlider {
   sliderTextbox: HTMLElement;
   sliderTooltip: HTMLElement;
 
+  inputRegex = new RegExp('([0-9]+)%?');
+
   /**
    * Triggered when the value is changed
    * @return the current value
@@ -44,8 +46,7 @@ export class GenesysSlider {
   update: EventEmitter;
   updateValue(event) {
     console.log('here', event);
-    const regex = new RegExp('([0-9]+)%*');
-    const result = regex.exec(event.target.value);
+    const result = this.inputRegex.exec(event.target.value);
     var newValue = result && result[1] ? +result[1] : this.min;
     if (newValue < this.min) {
       newValue = this.min;

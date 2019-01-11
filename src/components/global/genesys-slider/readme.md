@@ -9,13 +9,13 @@ The scroll bar users to increase or decrease the rating using arrow keys located
 
 ## Properties
 
-| Property         | Attribute          | Description                                | Type      |
-| ---------------- | ------------------ | ------------------------------------------ | --------- |
-| `displayTextBox` | `display-text-box` | Indicate if the input box                  | `boolean` |
-| `isPercentage`   | `is-percentage`    | Indicate if the value is a percentage      | `boolean` |
-| `max`            | `max`              | Indicates the maximum value for the slider | `number`  |
-| `min`            | `min`              | Indicates the minimum value for the slider | `number`  |
-| `value`          | `value`            | Indocates the value of the slider          | `number`  |
+| Property         | Attribute          | Description                                  | Type      |
+| ---------------- | ------------------ | -------------------------------------------- | --------- |
+| `displayTextBox` | `display-text-box` | Indicates if the input box will be displayed | `boolean` |
+| `isPercentage`   | `is-percentage`    | Indicate if the value is a percentage        | `boolean` |
+| `max`            | `max`              | Indicates the maximum value for the slider   | `number`  |
+| `min`            | `min`              | Indicates the minimum value for the slider   | `number`  |
+| `value`          | `value`            | Indicates the value of the slider            | `number`  |
 
 
 ## Events
