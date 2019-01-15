@@ -16,7 +16,7 @@ storiesOf('Genesys Components', module)
   .add(
     'Genesys Button',
     withReadme(README, () => {
-      const el = document.createElement('genesys-button');
+      const el = document.createElement('gux-button');
       el.disabled = boolean('disabled', false);
       el.title = text('title', 'Blop');
       el.text = text('text', 'Blop');
@@ -24,7 +24,7 @@ storiesOf('Genesys Components', module)
       el.rightIcon = text('rightIcon', '');
       el.accent = select('accent', ['primary', 'secondary'], 'secondary');
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );

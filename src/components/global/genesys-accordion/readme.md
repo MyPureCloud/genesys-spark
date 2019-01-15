@@ -1,4 +1,4 @@
-# genesys-accordion
+# gux-accordion
 
 This custom component is a simple menu containing a list of slots.
 
@@ -11,7 +11,7 @@ Other nodes will be removed from DOM.
 ## Example usage:
 
 ``` html
-<genesys-accordion>
+<gux-accordion>
   <div slot="First Section">
     <span>I'm a span in a div.</span>
     <button>I'm the button.</button>
@@ -19,7 +19,7 @@ Other nodes will be removed from DOM.
   <p slot="Second Section">I'm a p.</p>
   <span slot="Third Section">I'm a span.</span>
   <h1>I'm an h1, but i'm not a slot.</h1>
-</genesys-accordion>
+</gux-accordion>
 ```
 
 <!-- Auto Generated Below -->

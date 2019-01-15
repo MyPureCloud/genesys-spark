@@ -1,4 +1,4 @@
-# genesys-action-button
+# gux-action-button
 
 
 <!-- Auto Generated Below -->

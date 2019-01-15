@@ -15,7 +15,7 @@ storiesOf('Genesys Components', module)
   .add(
     'Genesys List',
     withReadme(README, () => {
-      const el = document.createElement('genesys-list');
+      const el = document.createElement('gux-list');
       el.items = object('items', [
         {
           callback: i => {
@@ -28,7 +28,7 @@ storiesOf('Genesys Components', module)
       ]);
       el.addEventListener('custom', e => action('custom')(e.detail));
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );

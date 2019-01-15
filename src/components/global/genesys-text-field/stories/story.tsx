@@ -21,20 +21,20 @@ storiesOf('Genesys Components', module)
         html`
         <h2>Basic samples</h2>
         <i>Unpopulated</i><br/><br/>
-        <genesys-text-field label='Name'></genesys-text-field>
+        <gux-text-field label='Name'></gux-text-field>
 
-        <genesys-text-field label='Longer name above'></genesys-text-field>
+        <gux-text-field label='Longer name above'></gux-text-field>
         <br/><i>Ghost text</i><br/><br/>
-        <genesys-text-field label='Name' placeholder='Type here'></genesys-text-field>
-        <genesys-text-field label='Longer name above' placeholder='Type here'></genesys-text-field>
+        <gux-text-field label='Name' placeholder='Type here'></gux-text-field>
+        <gux-text-field label='Longer name above' placeholder='Type here'></gux-text-field>
         <br/><i>Populated</i><br/><br/>
-        <genesys-text-field label='Name' placeholder='Type here' value='blop blop'></genesys-text-field>
-        <genesys-text-field label='Longer name above' placeholder='Type here' value='blop blop'></genesys-text-field>
+        <gux-text-field label='Name' placeholder='Type here' value='blop blop'></gux-text-field>
+        <gux-text-field label='Longer name above' placeholder='Type here' value='blop blop'></gux-text-field>
         <br/><i>Error</i><br/><br/>
-        <genesys-text-field error-message='Error message here' label='Name'></genesys-text-field>
-        <genesys-text-field error-message='Error message here' label='Longer name above'></genesys-text-field>
+        <gux-text-field error-message='Error message here' label='Name'></gux-text-field>
+        <gux-text-field error-message='Error message here' label='Longer name above'></gux-text-field>
         <br/><br/><h2>Interactive sample</h2>
-        <genesys-text-field
+        <gux-text-field
           id='interactive'
           placeholder=${text('placeholder', 'placeholder')}
           label=${text('label', 'label')}
@@ -46,7 +46,7 @@ storiesOf('Genesys Components', module)
           disabled=${boolean('disabled', false)}
           readonly=${boolean('readOnly', false)}
         >
-        </genesys-text-field>
+        </gux-text-field>
       `,
         el
       );
@@ -55,7 +55,7 @@ storiesOf('Genesys Components', module)
         it.addEventListener('custom', e => action('custom')(e.detail));
       }, 100);
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );

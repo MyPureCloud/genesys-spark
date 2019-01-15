@@ -1,4 +1,4 @@
-# genesys-rating
+# gux-rating
 
 This component represents a simple rating component.
 You can allow the half rating by using the props allowHalfRatings.

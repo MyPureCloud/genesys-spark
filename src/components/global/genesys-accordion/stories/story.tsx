@@ -13,7 +13,7 @@ storiesOf('Genesys Components', module)
       const el = document.createElement('div');
       render(
         html`
-        <genesys-accordion id='interactive'>
+        <gux-accordion id='interactive'>
           <div slot="First Section">
             <span>I'm a span in a div.</span>
             <button>I'm the button.</button>
@@ -21,12 +21,12 @@ storiesOf('Genesys Components', module)
           <p slot="Second Section">I'm a p.</p>
           <span slot="Third Section">I'm a span.</span>
           <h1>I'm an h1, but i'm not a slot.</h1>
-        </genesys-accordion>
+        </gux-accordion>
       `,
         el
       );
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );

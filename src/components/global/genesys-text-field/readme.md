@@ -1,4 +1,4 @@
-# genesys-text-field
+# gux-text-field
 
 This component is an html input component having update indicator or error/warning message on it.
 You can specify a validation function to add this test on input. You can do it by yourself using the input event and
@@ -7,8 +7,8 @@ changing error-message attribute.
 ## Example usage
 
 ``` html
-<genesys-text-field>
-</genesys-text-field>
+<gux-text-field>
+</gux-text-field>
 ```
 
 <!-- Auto Generated Below -->

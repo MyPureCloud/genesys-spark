@@ -1,4 +1,4 @@
-# genesys-tooltip
+# gux-tooltip
 
 This custom component is a simple tooltip.
 
@@ -12,18 +12,18 @@ If there is not enough space on the bottom, or right of the component, the toolt
 <!-- First option (With parentElement) -->
 <div id="container">
   <button>Button</button>
-  <genesys-tooltip
+  <gux-tooltip
     text='My great tooltip'>
-  </genesys-tooltip>
+  </gux-tooltip>
 </div>
 
 <!-- Second option (With parent id in for attribute) -->
-<genesys-tooltip
+<gux-tooltip
   id="interactive"
   text="My awesome tooltip"
   for="container"
   delay="500">
-</genesys-tooltip>
+</gux-tooltip>
 ```
 
 <!-- Auto Generated Below -->

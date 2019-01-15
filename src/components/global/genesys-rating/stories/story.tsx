@@ -19,7 +19,7 @@ storiesOf('Genesys Components', module)
   .add(
     'Genesys Rating',
     withReadme(README, () => {
-      const el = document.createElement('genesys-rating');
+      const el = document.createElement('gux-rating');
       el.setAttribute('aria-label', text('aria-label', 'label'));
       el.disabled = boolean('disabled', false);
       el.rating = number('rating', 0);
@@ -28,7 +28,7 @@ storiesOf('Genesys Components', module)
       el.labels = array('labels', []);
       el.addEventListener('update', e => action('update')(e.detail));
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );

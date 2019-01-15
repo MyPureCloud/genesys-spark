@@ -1,4 +1,4 @@
-# genesys-toggle
+# gux-toggle
 
 This is a basic toggle using a html checkbox component in it.
 If the checkedLabel and uncheckedLabel are specified, label apears on the right of the component.

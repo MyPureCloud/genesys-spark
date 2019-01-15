@@ -18,24 +18,24 @@ storiesOf('Genesys Components', module)
         html`
         <h2>Basic samples</h2>
         <br/><i>For Light Theme</i><br/><br/>
-        <genesys-notification-toast
+        <gux-notification-toast
           toast-title='Holiday approved'
           icon='genesys-icon-calendar-generic'
           accent='neutral'
           message='Family vacation on 06/24/16 approved'
         >
-        </genesys-notification-toast>
+        </gux-notification-toast>
         <br/><i>For Dark Theme</i><br/><br/>
-        <genesys-notification-toast
-          class='genesys-dark-theme'
+        <gux-notification-toast
+          class='gux-dark-theme'
           toast-title='Holiday approved'
           icon='genesys-icon-calendar-generic'
           accent='neutral'
           message='Family vacation on 06/24/16 approved'
         >
-        </genesys-notification-toast>
+        </gux-notification-toast>
         <h2>Interactive sample</h2>
-        <genesys-notification-toast
+        <gux-notification-toast
           id='interactive'
           toast-title=${text('toastTitle', 'title')}
           icon=${text('icon', 'genesys-icon-alert-octo')}
@@ -46,7 +46,7 @@ storiesOf('Genesys Components', module)
           )}
           message=${text('message', 'message')}
         >
-        </genesys-notification-toast>
+        </gux-notification-toast>
       `,
         el
       );
@@ -55,7 +55,7 @@ storiesOf('Genesys Components', module)
         it.addEventListener('closeClick', e => action('closeClick')(e.detail));
       }, 100);
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );

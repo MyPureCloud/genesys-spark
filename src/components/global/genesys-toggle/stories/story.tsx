@@ -17,14 +17,14 @@ storiesOf('Genesys Components', module)
   .add(
     'Genesys Toggle',
     withReadme(README, () => {
-      const el = document.createElement('genesys-toggle');
+      const el = document.createElement('gux-toggle');
       el.checked = boolean('checked', false);
       el.disabled = boolean('disabled', false);
       el.checkedLabel = text('checkedLabel', 'on');
       el.uncheckedLabel = text('uncheckedLabel', 'off');
       el.addEventListener('check', e => action('check')(e.detail));
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );

@@ -18,16 +18,16 @@ storiesOf('Genesys Components', module)
         <div style="position:absolute;top:0;bottom:0;left:0;right:0;display:flex;flex-direction:column">
           <div style="display:flex;justify-content:space-between">
             <div>
-              <genesys-button text="Top Left"></genesys-button>
-              <genesys-tooltip
+              <gux-button text="Top Left"></gux-button>
+              <gux-tooltip
                 text='Top left tooltip that goes on bottom, and fixed on the left'>
-              </genesys-tooltip>
+              </gux-tooltip>
             </div>
             <div>
-              <genesys-button text="Top Right"></genesys-button>
-              <genesys-tooltip
+              <gux-button text="Top Right"></gux-button>
+              <gux-tooltip
                 text='Top right tooltip that goes on bottom, and fixed on the right'>
-              </genesys-tooltip>
+              </gux-tooltip>
             </div>
           </div>
           <div style="display:flex;flex-grow:1;flex-direction:column">
@@ -35,45 +35,45 @@ storiesOf('Genesys Components', module)
               <div id="scroll2" style="margin:100px -2px;height:150px;overflow-y:scroll;border:2px dashed grey">
                 <div style="height:200px;text-align:center">
                   <div style="display:inline-block;margin-top:84px;">
-                    <genesys-button text="Scroll"></genesys-button>
-                    <genesys-tooltip
+                    <gux-button text="Scroll"></gux-button>
+                    <gux-tooltip
                       text='Tooltip should move on scroll'
                       delay='0'
                       is-shown='true'>
-                    </genesys-tooltip>
+                    </gux-tooltip>
                   </div>
                 </div>
               </div>
             </div>
             <div style="margin:auto">
-              <genesys-button id="center-button" text="Interactive" accent="primary"></genesys-button>
-              <genesys-button id="center-button-show" text="Show"></genesys-button>
-              <genesys-button id="center-button-hide" text="Hide"></genesys-button>
+              <gux-button id="center-button" text="Interactive" accent="primary"></gux-button>
+              <gux-button id="center-button-show" text="Show"></gux-button>
+              <gux-button id="center-button-hide" text="Hide"></gux-button>
             </div>
           </div>
           <div style="display:flex;justify-content:space-between">
             <div>
-              <genesys-button text="Bottom Left"></genesys-button>
-              <genesys-tooltip
+              <gux-button text="Bottom Left"></gux-button>
+              <gux-tooltip
                 text='Bottom left tooltip that goes on top, and fixed on the left'>
-              </genesys-tooltip>
+              </gux-tooltip>
             </div>
             <div>
-              <genesys-button text="Bottom Right"></genesys-button>
-              <genesys-tooltip
+              <gux-button text="Bottom Right"></gux-button>
+              <gux-tooltip
                 text='Bottom right tooltip that goes on top, and fixed on the right'>
-              </genesys-tooltip>
+              </gux-tooltip>
             </div>
           </div>
         </div>
 
-        <genesys-tooltip
+        <gux-tooltip
           id="interactive"
           text=${text('text', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo molestias facere ab deserunt dolores, recusandae non consequuntur quia perferendis officia vero maiores voluptatem temporibus veritatis, fugit nihil, id nobis at.')}
           for=${text('for', 'center-button')}
           delay=${number('delay', 0)},
           is-shown=${boolean('isShown', true)}>
-        </genesys-tooltip>
+        </gux-tooltip>
       `, el);
       setTimeout(() => {
         const centerTooltip = document.getElementById('interactive');
@@ -88,7 +88,7 @@ storiesOf('Genesys Components', module)
           centerTooltip.hide();
         });
       }, 100);
-      document.getElementsByTagName('html')[0].className = 'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+      document.getElementsByTagName('html')[0].className = 'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
 );

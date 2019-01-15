@@ -22,22 +22,22 @@ storiesOf('Genesys Components', module)
       render(
         html`
         <h2>Basic samples</h2>
-        <genesys-action-toast
+        <gux-action-toast
          id='simple'
          toast-title='The Title'
          message='the message'
          icon='genesys-icon-chat'
         >
-        </genesys-action-toast>
+        </gux-action-toast>
         <h2>Interactive sample</h2>
-        <genesys-action-toast
+        <gux-action-toast
           id='interactive'
           toast-title=${text('toastTitle', 'The Title')}
           message=${text('message', 'message')}
           subject=${text('subject', '')}
           icon=${text('icon', 'genesys-icon-chat')}
         >
-        </genesys-action-toast>
+        </gux-action-toast>
       `,
         el
       );
@@ -85,7 +85,7 @@ storiesOf('Genesys Components', module)
         };
       }, 100);
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );
