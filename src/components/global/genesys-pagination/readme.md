@@ -14,10 +14,11 @@ the newly selected page.
 
 ## Properties
 
-| Property      | Attribute      | Description                                                                   | Type     |
-| ------------- | -------------- | ----------------------------------------------------------------------------- | -------- |
-| `currentPage` | `current-page` | The currently select page. Changes are watched by the component.              | `number` |
-| `totalItems`  | `total-items`  | The total number of items in the data set. Used to calculate total page count | `number` |
+| Property         | Attribute         | Description                                                                                                                                                                | Type     |
+| ---------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| `currentPage`    | `current-page`    | The currently select page. Changes are watched by the component.                                                                                                           | `number` |
+| `paginationSize` | `pagination-size` | The responsive size of the control to use: "small", "medium", or "large". See the exported recommendedBreakpoints for the pixel widths that are recommended for each size. | `string` |
+| `totalItems`     | `total-items`     | The total number of items in the data set. Used to calculate total page count                                                                                              | `number` |
 
 
 ## Events

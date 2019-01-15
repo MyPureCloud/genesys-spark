@@ -24,10 +24,9 @@ genesys-pagination-buttons {
     margin-left: @genesys-pagination-text-margin;
     margin-right: @genesys-pagination-text-margin;
   }
-}
 
-@media (max-width: @genesys-pagination-screen-md) {
-  genesys-pagination-buttons {
+  &.genesys-pagination-size-medium,
+  &.genesys-pagination-size-small {
     .genesys-pagination-current-page-text {
       display: none;
     }

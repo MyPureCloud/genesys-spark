@@ -6,6 +6,7 @@ import {
   Prop,
   State
 } from '@stencil/core';
+import { GenesysPaginationSize } from './genesys-pagination-size';
 
 @Component({
   styleUrl: 'genesys-pagination.less',
@@ -23,6 +24,14 @@ export class GenesysPagination {
    */
   @Prop()
   totalItems: number;
+
+  /**
+   * The responsive size of the control to use: "small", "medium", or "large". See
+   * the exported recommendedBreakpoints for the pixel widths that are recommended
+   * for each size.
+   */
+  @Prop()
+  paginationSize: GenesysPaginationSize | string = GenesysPaginationSize.Large;
 
   @State()
   itemsPerPage: number = 25;
@@ -94,7 +103,11 @@ export class GenesysPagination {
 
   render() {
     return (
-      <div class="genesys-pagination">
+      <div
+        class={`genesys-pagination genesys-pagination-size-${
+          this.paginationSize
+        }`}
+      >
         <genesys-pagination-item-counts
           totalItems={this.totalItems}
           currentPage={this.currentPage}
@@ -115,7 +128,9 @@ export class GenesysPagination {
         )}
 
         <genesys-pagination-buttons
-          class="pagination-buttons"
+          class={`pagination-buttons genesys-pagination-size-${
+            this.paginationSize
+          }`}
           currentPage={this.currentPage}
           totalPages={this.calculatTotalPages()}
           onCurrentPageChanged={ev => this.setPage(ev.detail)}
