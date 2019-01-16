@@ -8,8 +8,8 @@ import {
   State
 } from '@stencil/core';
 import { buildI18nForComponent } from '../../i18n';
-import paginationResources from './genesys-pagination.i18n.json';
 import { GenesysPaginationSize } from './genesys-pagination-size';
+import paginationResources from './genesys-pagination.i18n.json';
 
 @Component({
   styleUrl: 'genesys-pagination.less',
