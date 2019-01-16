@@ -35,11 +35,12 @@ export class GenesysPaginationItemCounts {
     return (
       <div class="pagination-item-counts">
         <span class="pagination-item-counts-display">
-          {this.i18n('itemCountDisplay', {
-            firstItem: this.firstItem,
-            lastItem: this.lastItem,
-            totalItems: this.totalItems
-          })}
+          {this.i18n &&
+            this.i18n('itemCountDisplay', {
+              firstItem: this.firstItem,
+              lastItem: this.lastItem,
+              totalItems: this.totalItems
+            })}
         </span>
       </div>
     );

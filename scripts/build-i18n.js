@@ -37,7 +37,7 @@ glob('src/components/**/*.i18n.*.json', (err, files) => {
   });
 
   if (!fs.existsSync(outputFolder)) {
-    fs.mkdirSync(outputFolder);
+    fs.mkdirSync(outputFolder, { recursive: true });
   }
 
   Object.keys(languages).forEach(lang => {

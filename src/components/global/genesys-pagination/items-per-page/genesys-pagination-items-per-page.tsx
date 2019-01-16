@@ -45,7 +45,7 @@ export class GenesysPaginationItemsPerPage {
             <option selected={opt === this.itemsPerPage}>{opt}</option>
           ))}
         </select>
-        <span>{this.i18n('perPage')}</span>
+        <span>{this.i18n && this.i18n('perPage')}</span>
       </div>
     );
   }
