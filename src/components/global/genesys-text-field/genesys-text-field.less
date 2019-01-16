@@ -72,6 +72,10 @@ genesys-text-field {
       line-height: 30px;
       font-weight: bold;
       display: inline-block;
+
+      &:empty {
+        display: none;
+      }
     }
     > div.genesys-field {
       position: relative;
@@ -85,7 +89,7 @@ genesys-text-field {
       height: 32px;
       width: 100%;
       box-sizing: border-box;
-      padding: 4px 25px 4px 12px;
+      padding: 4px 12px 4px 12px;
       background-color: @background-color;
       background-image: none;
       border: 1px solid @border;
@@ -109,6 +113,10 @@ genesys-text-field {
         border: 1px solid @focus-border;
         outline: none;
         box-shadow: 0px 0px 4px @focus-outline;
+      }
+
+      .text-clearable {
+        padding-right: 25px;
       }
     }
     button {

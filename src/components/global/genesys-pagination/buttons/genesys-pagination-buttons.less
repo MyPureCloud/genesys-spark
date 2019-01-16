@@ -1,18 +1,34 @@
-@import "../pagination-variables.less";
+@import '../pagination-variables.less';
 
 genesys-pagination-buttons {
-    genesys-button + genesys-button {
-        margin-left: @genesys-pagination-button-margin;
-    }
+  genesys-button {
+    margin-left: @genesys-pagination-button-margin;
+  }
 
-    // TODO: Replace with genesys-input selector when the element is swapped out
-    input {
-        margin-left: @genesys-pagination-input-margin;
-        margin-right: @genesys-pagination-input-margin;
-    }
+  .forward-buttons,
+  .back-buttons {
+    display: inline-block;
+  }
 
+  genesys-text-field {
+    display: inline-block;
+
+    margin-left: @genesys-pagination-input-margin;
+    margin-right: @genesys-pagination-input-margin -
+      @genesys-pagination-button-margin;
+
+    width: 48px;
+  }
+
+  .genesys-pagination-current-page-text {
+    margin-left: @genesys-pagination-text-margin;
+    margin-right: @genesys-pagination-text-margin;
+  }
+
+  &.genesys-pagination-size-medium,
+  &.genesys-pagination-size-small {
     .genesys-pagination-current-page-text {
-        margin-left: @genesys-pagination-text-margin;
-        margin-right: @genesys-pagination-text-margin;
+      display: none;
     }
+  }
 }

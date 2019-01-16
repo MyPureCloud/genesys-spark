@@ -8,34 +8,66 @@ and/or initial starting page).
 When a user changes pages, the component will emit a `pageChanged` event with
 the newly selected page.
 
-## Props
 
-| Property      | Attribute      | Description                                                                    | Type     |
-| :------------ | :------------- | :----------------------------------------------------------------------------- | :------- |
-| `currentPage` | `current-page` | The currently select page. Changes are watched by the component.               | `Number` |
-| `totalItems`  | `total-items`  | The total number of items in the data set. Used to calculate total page count. | `Number` |
+<!-- Auto Generated Below -->
+
+
+## Properties
+
+| Property         | Attribute         | Description                                                                                                                                                                | Type     |
+| ---------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| `currentPage`    | `current-page`    | The currently select page. Changes are watched by the component.                                                                                                           | `number` |
+| `paginationSize` | `pagination-size` | The responsive size of the control to use: "small", "medium", or "large". See the exported recommendedBreakpoints for the pixel widths that are recommended for each size. | `string` |
+| `totalItems`     | `total-items`     | The total number of items in the data set. Used to calculate total page count                                                                                              | `number` |
+
 
 ## Events
 
-| Event                 | Description                                             | Type     |
-| :-------------------- | :------------------------------------------------------ | :------- |
-| `pageChanged`         | Fired when the current page property changes.           | `Number` |
-| `itemsPerPageChanged` | Fired when user selects a new number of items per page. | `Number` |
+| Event                 | Detail | Description                                             |
+| --------------------- | ------ | ------------------------------------------------------- |
+| `itemsPerPageChanged` | number | Fired when user selects a new number of items per page. |
+| `pageChanged`         | number | Fired when the current page property changes.           |
+
 
 ## Methods
 
-### `setItemsPerPage(value: number, options: number[] | undefined) => void`
+### `setItemsPerPage(value: number, options?: number[]) => void`
 
 Sets the number of items to display on a single page, and optionally the list
 of items that the user can choose from in the dropdown.
 
+If options are omitted, the user selection dropdown won't be displayed.
+
 #### Parameters
 
-| Name      | Type                   | Description                                                                                |
-| :-------- | :--------------------- | :----------------------------------------------------------------------------------------- |
-| `value`   | `number`               | The new number of items to display per page.                                               |
-| `options` | `number[] | undefined` | If provided, this will overwrite the user's options for changing the items per page value. |
+| Name      | Type       | Description                           |
+| --------- | ---------- | ------------------------------------- |
+| `value`   | `number`   | The number of items to show per page. |
+| `options` | `number[]` | The values the user can choose from.  |
 
 #### Returns
 
 Type: `void`
+
+
+
+### `setPage(page: number) => void`
+
+
+
+#### Parameters
+
+| Name   | Type     | Description |
+| ------ | -------- | ----------- |
+| `page` | `number` |             |
+
+#### Returns
+
+Type: `void`
+
+
+
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

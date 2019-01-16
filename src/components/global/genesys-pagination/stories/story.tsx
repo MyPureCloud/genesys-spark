@@ -5,15 +5,6 @@ import { withReadme } from 'storybook-readme';
 
 import readme from '../readme.md';
 
-const createWrapper = story => {
-  const wrapper = document.createElement('div');
-  wrapper.setAttribute('style', 'padding: 24px');
-
-  wrapper.appendChild(story());
-
-  return wrapper;
-};
-
 const createComponent = () => document.createElement('genesys-pagination');
 
 const createActionLoggers = story => {
@@ -32,7 +23,6 @@ const createActionLoggers = story => {
 
 storiesOf('Pagination', module)
   .addDecorator(withKnobs)
-  .addDecorator(createWrapper)
   .addDecorator(createActionLoggers)
   .add(
     'Simple',
@@ -97,5 +87,48 @@ storiesOf('Pagination', module)
       });
 
       return component;
+    })
+  )
+  .add(
+    'Responsive Sizing',
+    withReadme(readme, () => {
+      const component = createComponent();
+      component.totalItems = 250;
+      component.currentPage = 3;
+
+      const containerSize = number('containerSize', 600, {
+        max: 800,
+        min: 250,
+        range: true,
+        step: 10
+      });
+
+      if (containerSize >= 600) {
+        component.paginationSize = 'large';
+      } else if (containerSize >= 350) {
+        component.paginationSize = 'medium';
+      } else {
+        component.paginationSize = 'small';
+      }
+
+      // TODO: When .ts file imports are fixed (https://inindca.atlassian.net/browse/COMUI-66), this should be
+      // used instead of the hardcoded values.  The '| string' typing on the prop can probably be dropped
+      // as well.
+      // if (containerSize > recommendedBreakpoints.Medium) {
+      //   component.paginationSize = GenesysPaginationSize.Large;
+      // } else if (containerSize > recommendedBreakpoints.Small) {
+      //   component.paginationSize = GenesysPaginationSize.Medium;
+      // } else {
+      //   component.paginationSize = GenesysPaginationSize.Small;
+      // }
+
+      const container = document.createElement('div');
+      container.setAttribute(
+        'style',
+        `border: 2px dotted; width: ${containerSize}px; padding: 4px 8px`
+      );
+      container.appendChild(component);
+
+      return container;
     })
   );

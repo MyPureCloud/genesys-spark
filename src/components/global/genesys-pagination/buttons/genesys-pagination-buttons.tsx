@@ -1,4 +1,5 @@
 import { Component, Event, EventEmitter, Prop } from '@stencil/core';
+import { GenesysTextField } from '../../genesys-text-field/genesys-text-field';
 
 @Component({
   styleUrl: 'genesys-pagination-buttons.less',
@@ -11,56 +12,73 @@ export class GenesysPaginationButtons {
   @Prop()
   totalPages: number;
 
+  get onFirstPage(): boolean {
+    return this.currentPage <= 1;
+  }
+
+  get onLastPage(): boolean {
+    return this.currentPage >= this.totalPages;
+  }
+
   @Event()
   currentPageChanged: EventEmitter<number>;
 
-  private inputRef: HTMLInputElement;
+  private textFieldRef: GenesysTextField;
 
   render() {
     return (
       <div class="pagination-buttons">
-        <genesys-button
-          class="first-page-button"
-          onClick={() => this.setPage(1)}
-          leftIcon="genesys-icon-arrow-left-dbl"
-        />
-        <genesys-button
-          class="previous-page-button"
-          onClick={() => this.setPage(this.currentPage - 1)}
-          leftIcon="genesys-icon-chevron-small-left"
-        />
-
+        <div class="back-buttons">
+          <genesys-button
+            class="first-page-button"
+            onClick={() => this.currentPageChanged.emit(1)}
+            leftIcon="genesys-icon-arrow-left-dbl"
+            disabled={this.onFirstPage}
+          />
+          <genesys-button
+            class="previous-page-button"
+            onClick={() => this.currentPageChanged.emit(this.currentPage - 1)}
+            leftIcon="genesys-icon-chevron-small-left"
+            disabled={this.onFirstPage}
+          />
+        </div>
         <span class="genesys-pagination-current-page-text">
           Page{' '}
-          <input
+          <genesys-text-field
             class="pagination-current-page-input"
-            type="text"
-            value={this.currentPage}
-            ref={ref => (this.inputRef = ref)}
-            onChange={() => this.setPage(this.inputRef.value)}
+            value={this.currentPage + ''}
+            ref={ref => (this.textFieldRef = ref as any)}
+            onChange={() => this.setPageFromInput(this.textFieldRef.value)}
+            useClearButton={false}
           />
           {` of ${this.totalPages}`}
         </span>
 
-        <genesys-button
-          class="next-page-button"
-          onClick={() => this.setPage(this.currentPage + 1)}
-          leftIcon="genesys-icon-chevron-small-right"
-        />
-        <genesys-button
-          class="last-page-button"
-          onClick={() => this.setPage(this.totalPages)}
-          leftIcon="genesys-icon-arrow-right-dbl"
-        />
+        <div class="forward-buttons">
+          <genesys-button
+            class="next-page-button"
+            onClick={() => this.currentPageChanged.emit(this.currentPage + 1)}
+            leftIcon="genesys-icon-chevron-small-right"
+            disabled={this.onLastPage}
+          />
+          <genesys-button
+            class="last-page-button"
+            onClick={() => this.currentPageChanged.emit(this.totalPages)}
+            leftIcon="genesys-icon-arrow-right-dbl"
+            disabled={this.onLastPage}
+          />
+        </div>
       </div>
     );
   }
 
-  private setPage(page: number | string) {
-    if (typeof page === 'string') {
-      page = parseInt(page, 10);
-    }
+  private setPageFromInput(value: string) {
+    const page = parseInt(value, 10);
 
-    this.currentPageChanged.emit(page);
+    if (!page || isNaN(page)) {
+      this.textFieldRef.value = this.currentPage + '';
+    } else {
+      this.currentPageChanged.emit(page);
+    }
   }
 }

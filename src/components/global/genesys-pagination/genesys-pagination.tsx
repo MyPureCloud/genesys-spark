@@ -9,6 +9,7 @@ import {
 } from '@stencil/core';
 import { buildI18nForComponent } from '../../i18n';
 import paginationResources from './genesys-pagination.i18n.json';
+import { GenesysPaginationSize } from './genesys-pagination-size';
 
 @Component({
   styleUrl: 'genesys-pagination.less',
@@ -18,11 +19,25 @@ export class GenesysPagination {
   @Element()
   element: HTMLElement;
 
+  /**
+   * The currently select page. Changes are watched by the component.
+   */
   @Prop({ mutable: true })
   currentPage: number = 1;
 
+  /**
+   * The total number of items in the data set. Used to calculate total page count
+   */
   @Prop()
   totalItems: number;
+
+  /**
+   * The responsive size of the control to use: "small", "medium", or "large". See
+   * the exported recommendedBreakpoints for the pixel widths that are recommended
+   * for each size.
+   */
+  @Prop()
+  paginationSize: GenesysPaginationSize | string = GenesysPaginationSize.Large;
 
   @State()
   itemsPerPage: number = 25;
@@ -30,9 +45,15 @@ export class GenesysPagination {
   @State()
   itemsPerPageOptions: number[] = [25, 50, 100];
 
+  /**
+   * Fired when the current page property changes.
+   */
   @Event()
   pageChanged: EventEmitter<number>;
 
+  /**
+   * Fired when user selects a new number of items per page.
+   */
   @Event()
   itemsPerPageChanged: EventEmitter<number>;
   itemsPerPageComponent: HTMLGenesysPaginationItemsPerPageElement;
@@ -47,6 +68,15 @@ export class GenesysPagination {
     return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
+  /**
+   * Sets the number of items to display on a single page, and optionally the list
+   * of items that the user can choose from in the dropdown.
+   *
+   * If options are omitted, the user selection dropdown won't be displayed.
+   *
+   * @param value The number of items to show per page.
+   * @param options The values the user can choose from.
+   */
   @Method()
   setItemsPerPage(value: number, options?: number[]): void {
     this.itemsPerPageOptions = options;
@@ -85,7 +115,11 @@ export class GenesysPagination {
 
   render() {
     return (
-      <div class="gux-pagination">
+      <div
+        class={`genesys-pagination genesys-pagination-size-${
+          this.paginationSize
+        }`}
+      >
         <genesys-pagination-item-counts
           totalItems={this.totalItems}
           currentPage={this.currentPage}
@@ -108,7 +142,9 @@ export class GenesysPagination {
         )}
 
         <genesys-pagination-buttons
-          class="pagination-buttons"
+          class={`pagination-buttons genesys-pagination-size-${
+            this.paginationSize
+          }`}
           currentPage={this.currentPage}
           totalPages={this.calculatTotalPages()}
           onCurrentPageChanged={ev => this.setPage(ev.detail)}
