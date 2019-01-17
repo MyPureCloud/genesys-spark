@@ -16,6 +16,11 @@ export class GenesysSlider {
   @Prop()
   max: number = 100;
   /**
+   * Inicates the step value of the slider
+   **/
+  @Prop()
+  step: number = 1.5;
+  /**
    * Indicates the value of the slider
    **/
   @Prop({ mutable: true, reflectToAttr: true })
@@ -24,7 +29,7 @@ export class GenesysSlider {
    * Indicates if the input box will be displayed
    **/
   @Prop()
-  displayTextBox: boolean = false;
+  displayTextBox: boolean = true;
   /**
    * Indicate if the value is a percentage
    **/
@@ -36,7 +41,7 @@ export class GenesysSlider {
   sliderTextbox: HTMLElement;
   sliderTooltip: HTMLElement;
 
-  inputRegex = new RegExp('([0-9]+)%?');
+  inputRegex = new RegExp('([0-9]+.?[0-9]*)%?');
 
   /**
    * Triggered when the value is changed
@@ -45,7 +50,6 @@ export class GenesysSlider {
   @Event()
   update: EventEmitter;
   updateValue(event) {
-    console.log('here', event);
     const result = this.inputRegex.exec(event.target.value);
     var newValue = result && result[1] ? +result[1] : this.min;
     if (newValue < this.min) {
@@ -54,7 +58,8 @@ export class GenesysSlider {
       newValue = this.max;
     }
     const upToDate = this.value === newValue;
-    this.value = newValue;
+    const stepOffset = Math.round(newValue / this.step);
+    this.value = newValue % this.step !== 0 ? this.step * stepOffset : newValue;
     if (!upToDate) {
       this.update.emit(this.value);
       this.updatePosition();
@@ -70,6 +75,10 @@ export class GenesysSlider {
         'change',
         this.updateValue.bind(this)
       );
+    }
+    const stepOffset = Math.round(this.value / this.step);
+    if (this.value % this.step !== 0) {
+      this.value = this.step * stepOffset;
     }
     this.updatePosition();
   }
@@ -103,6 +112,7 @@ export class GenesysSlider {
             class="range-input"
             min={this.min}
             max={this.max}
+            step={this.step}
             value={this.value}
             ref={el => (this.sliderInput = el)}
             //onChange event required because IE11 doesn't support onInput for range inputs

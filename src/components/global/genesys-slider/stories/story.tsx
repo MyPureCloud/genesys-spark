@@ -24,6 +24,7 @@ storiesOf('Genesys Components', module)
           id="interactive"
           min=${number('min', 0)}
           max=${number('max', 10)}
+          step=${number('step', 1)}
           value=${number('value', 3)}
           isPercentage=${boolean('isPercentage', true)}
           displayTextBox=${boolean('displayTextBox', true)}
