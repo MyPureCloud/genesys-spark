@@ -16,6 +16,11 @@ export class GenesysSlider {
   @Prop()
   max: number = 100;
   /**
+   * Inicates the step value of the slider
+   **/
+  @Prop()
+  step: number = 1.5;
+  /**
    * Indicates the value of the slider
    **/
   @Prop({ mutable: true, reflectToAttr: true })
@@ -103,6 +108,7 @@ export class GenesysSlider {
             class="range-input"
             min={this.min}
             max={this.max}
+            step={this.step}
             value={this.value}
             ref={el => (this.sliderInput = el)}
             //onChange event required because IE11 doesn't support onInput for range inputs
