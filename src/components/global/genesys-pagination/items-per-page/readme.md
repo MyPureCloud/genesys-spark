@@ -6,6 +6,13 @@ An internal component used by the genesys-pagination component.
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type                                             |
+| -------- | --------- | ----------- | ------------------------------------------------ |
+| `i18n`   | --        |             | `(resourceKey: string, context?: any) => string` |
+
+
 ## Events
 
 | Event                 | Detail | Description |
