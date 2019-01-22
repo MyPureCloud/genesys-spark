@@ -84,11 +84,11 @@ storiesOf('Pagination', module)
       });
 
       if (containerSize >= 600) {
-        component.paginationSize = 'large';
+        component.layout = 'large';
       } else if (containerSize >= 350) {
-        component.paginationSize = 'medium';
+        component.layout = 'medium';
       } else {
-        component.paginationSize = 'small';
+        component.layout = 'small';
       }
 
       // TODO: When .ts file imports are fixed (https://inindca.atlassian.net/browse/COMUI-66), this should be
