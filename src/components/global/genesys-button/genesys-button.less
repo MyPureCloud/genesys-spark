@@ -41,16 +41,41 @@ genesys-button {
         &:focus {
             outline: none;
         }
-        .left-icon {
-            line-height: 30px;
-            height: 30px;
-            &.margin {
-                margin-right: 5px;
+        &.genesys-primary {
+            background-color: @primary-background-color;
+            border: 1px solid @primary-border-color;
+            color: @primary-color;
+            &:hover {
+                box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.48);
+            }
+            &:active {
+                background-color: @primary-active-background-color;
+            }
+            &:focus {
+                box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
             }
         }
+        &.genesys-secondary {
+            background-color: @secondary-background-color;
+            border: 1px solid @secondary-border-color;
+            color: @secondary-color;
+            &:hover {
+                box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.24);
+            }
+            &:active {
+                background-color: @secondary-active-background-color;
+            }
+            &:focus {
+                box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+            }
+        }
+
+        .left-icon,
         .right-icon {
+            font-size: @genesys-icon-size-default;
             line-height: 30px;
             height: 30px;
+
             &.margin {
                 margin-left: 5px;
             }

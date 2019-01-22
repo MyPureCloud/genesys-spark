@@ -86,6 +86,13 @@ export class GenesysTextField {
   @Prop()
   eraseLabel: string = '';
 
+  /**
+   * Determines whether or not the 'x' clear button is displayed when the input
+   * contains text.
+   */
+  @Prop()
+  useClearButton: boolean = true;
+
   @State()
   classList: string[] = [];
 
@@ -93,6 +100,10 @@ export class GenesysTextField {
   internalErrorMessage: string;
   firstValue: string;
   timeout: any;
+
+  get showClearButton(): boolean {
+    return this.useClearButton && this.value && !this.readonly;
+  }
 
   /**
    * Triggered when user inputs.
@@ -208,9 +219,9 @@ export class GenesysTextField {
             readonly={this.readonly}
             placeholder={this.placeholder}
             onInput={e => this.emitInput(e)}
+            class={this.showClearButton ? 'text-clearable' : ''}
           />
-          {this.value &&
-            !this.readonly && (
+          {this.showClearButton && (
               <button
                 type="button"
                 class="genesys-icon-close"
