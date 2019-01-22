@@ -1,5 +1,5 @@
-import { GenesysTooltip } from '../genesys-tooltip';
 import * as Utils from '../../../../common-utils';
+import { GenesysTooltip } from '../genesys-tooltip';
 
 describe('genesys-tooltip', () => {
   let component;

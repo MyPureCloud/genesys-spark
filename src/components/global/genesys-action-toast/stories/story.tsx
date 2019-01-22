@@ -46,31 +46,31 @@ storiesOf('Genesys Components', module)
         it.addEventListener('custom', e => action('custom')(e.detail));
         const simple = document.getElementById('simple');
         simple.primaryButton = {
-          text: 'Accept',
-          title: 'Ok',
           callback: () => {
             action('callback called')('Ok');
-          }
+          },
+          text: 'Accept',
+          title: 'Ok'
         };
         simple.secondaryButton = {
-          text: 'Reject',
           callback: () => {
             action('callback called')('Cancel');
-          }
+          },
+          text: 'Reject'
         };
         it.primaryButton = object('rightButton', {
-          text: 'Accept',
-          title: 'Ok',
           callback: () => {
             action('callback called')('Ok');
-          }
+          },
+          text: 'Accept',
+          title: 'Ok'
         });
         it.secondaryButton = object('leftButton', {
-          text: 'Reject',
-          title: 'Reject',
           callback: () => {
             action('callback called')('Reject');
-          }
+          },
+          text: 'Reject',
+          title: 'Reject'
         });
         it.keyValues = object('keyValues', {
           name: 'value1',
@@ -78,10 +78,10 @@ storiesOf('Genesys Components', module)
         });
 
         simple.keyValues = {
-          name: 'value1',
-          topic: 'value2',
           LonglonglongLonglonglongLonglonglongLonglonglongLonglonglong:
-            'LonglonglongLonglonglongLonglonglongLonglonglongLonglonglong'
+            'LonglonglongLonglonglongLonglonglongLonglonglongLonglonglong',
+          name: 'value1',
+          topic: 'value2'
         };
       }, 100);
       document.getElementsByTagName('html')[0].className =
