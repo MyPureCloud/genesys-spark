@@ -70,12 +70,6 @@ export class GenesysSlider {
    * Once the component is loaded do the setup
    */
   componentDidLoad() {
-    if (this.sliderTextbox) {
-      this.sliderTextbox.addEventListener(
-        'change',
-        this.updateValue.bind(this)
-      );
-    }
     const stepOffset = Math.round(this.value / this.step);
     if (this.value % this.step !== 0) {
       this.value = this.step * stepOffset;
@@ -138,6 +132,7 @@ export class GenesysSlider {
           <genesys-text-field
             label="slider value"
             value={value}
+            onChange={(e: UIEvent) => this.updateValue(e)}
             ref={el => (this.sliderTextbox = el)}
           />
         )}
