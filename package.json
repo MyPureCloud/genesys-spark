@@ -1,5 +1,5 @@
 {
-  "name": "genesys-webcomponents",
+  "name": "@genesys/common-webcomponents",
   "version": "0.0.1",
   "description": "Common webcomponents",
   "module": "dist/esm/index.js",

@@ -34,26 +34,6 @@ storiesOf('Pagination', module)
     })
   )
   .add(
-    'Simple (es)',
-    withReadme(readme, () => {
-      const component = createComponent();
-      component.setAttribute('lang', 'es');
-      component.totalItems = number('totalItems', 250);
-
-      return component;
-    })
-  )
-  .add(
-    'Simple (de)',
-    withReadme(readme, () => {
-      const component = createComponent();
-      component.setAttribute('lang', 'de');
-      component.totalItems = number('totalItems', 250);
-
-      return component;
-    })
-  )
-  .add(
     'Complex',
     withReadme(readme, () => {
       const component = createComponent();
@@ -104,11 +84,11 @@ storiesOf('Pagination', module)
       });
 
       if (containerSize >= 600) {
-        component.paginationSize = 'large';
+        component.layout = 'large';
       } else if (containerSize >= 350) {
-        component.paginationSize = 'medium';
+        component.layout = 'medium';
       } else {
-        component.paginationSize = 'small';
+        component.layout = 'small';
       }
 
       // TODO: When .ts file imports are fixed (https://inindca.atlassian.net/browse/COMUI-66), this should be

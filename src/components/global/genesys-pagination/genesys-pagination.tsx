@@ -7,9 +7,11 @@ import {
   Prop,
   State
 } from '@stencil/core';
+
 import { buildI18nForComponent } from '../../i18n';
-import { GenesysPaginationSize } from './genesys-pagination-size';
 import paginationResources from './genesys-pagination.i18n.json';
+
+import { GenesysPaginationLayout } from './genesys-pagination-layout';
 
 @Component({
   styleUrl: 'genesys-pagination.less',
@@ -37,7 +39,7 @@ export class GenesysPagination {
    * for each size.
    */
   @Prop()
-  paginationSize: GenesysPaginationSize | string = GenesysPaginationSize.Large;
+  layout: GenesysPaginationLayout | string = GenesysPaginationLayout.Large;
 
   @State()
   itemsPerPage: number = 25;
@@ -116,9 +118,7 @@ export class GenesysPagination {
   render() {
     return (
       <div
-        class={`genesys-pagination genesys-pagination-size-${
-          this.paginationSize
-        }`}
+        class={`genesys-pagination genesys-pagination-layout-${this.layout}`}
       >
         <genesys-pagination-item-counts
           totalItems={this.totalItems}
@@ -142,9 +142,7 @@ export class GenesysPagination {
         )}
 
         <genesys-pagination-buttons
-          class={`pagination-buttons genesys-pagination-size-${
-            this.paginationSize
-          }`}
+          class={`pagination-buttons genesys-pagination-layout-${this.layout}`}
           currentPage={this.currentPage}
           totalPages={this.calculatTotalPages()}
           onCurrentPageChanged={ev => this.setPage(ev.detail)}
