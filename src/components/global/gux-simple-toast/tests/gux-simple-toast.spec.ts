@@ -1,18 +1,18 @@
-import { GenesysSimpleToast } from '../gux-simple-toast';
+import { GuxSimpleToast } from '../gux-simple-toast';
 
 describe('gux-simple-toast', () => {
   it('builds', () => {
-    expect(new GenesysSimpleToast()).toBeTruthy();
+    expect(new GuxSimpleToast()).toBeTruthy();
   });
   describe('getAccent', () => {
     it('should return neutral if props/attr is not set correctly', () => {
-      const component = new GenesysSimpleToast();
+      const component = new GuxSimpleToast();
       expect(component.getAccent()).toBe('neutral');
       component.accent = 'aaaaaa';
       expect(component.getAccent()).toBe('neutral');
     });
     it('should return accent in lowercase if props/attr is set correctly', () => {
-      const component = new GenesysSimpleToast();
+      const component = new GuxSimpleToast();
       expect(component.getAccent()).toBe('neutral');
       component.accent = 'PoSitive';
       expect(component.getAccent()).toBe('positive');
@@ -20,7 +20,7 @@ describe('gux-simple-toast', () => {
   });
   describe('getIcon', () => {
     it('should return icon and accent classname', () => {
-      const component = new GenesysSimpleToast();
+      const component = new GuxSimpleToast();
       expect(component.getIcon()).toBe('');
       component.iconUri = 'test';
       // testing JSX

@@ -4,7 +4,7 @@ import { Component, Event, EventEmitter, Prop } from '@stencil/core';
   styleUrl: 'gux-action-toast.less',
   tag: 'gux-action-toast'
 })
-export class GenesysActionToast {
+export class GuxActionToast {
   @Event()
   buttonClick: EventEmitter;
   /**

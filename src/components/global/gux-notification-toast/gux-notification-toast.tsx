@@ -4,7 +4,7 @@ import { Component, Event, EventEmitter, Prop } from '@stencil/core';
   styleUrl: 'gux-notification-toast.less',
   tag: 'gux-notification-toast'
 })
-export class GenesysNotificationToast {
+export class GuxNotificationToast {
   @Event()
   closeClick: EventEmitter;
 

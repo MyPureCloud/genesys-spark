@@ -1,7 +1,7 @@
-import { GenesysActionToast } from '../gux-action-toast';
+import { GuxActionToast } from '../gux-action-toast';
 
 describe('gux-action-toast', () => {
   it('builds', () => {
-    expect(new GenesysActionToast()).toBeTruthy();
+    expect(new GuxActionToast()).toBeTruthy();
   });
 });
