@@ -29,13 +29,13 @@ export class GuxPaginationButtons {
     return (
       <div class="pagination-buttons">
         <div class="back-buttons">
-          <genesys-button
+          <gux-button
             class="first-page-button"
             onClick={() => this.currentPageChanged.emit(1)}
             leftIcon="genesys-icon-arrow-left-dbl"
             disabled={this.onFirstPage}
           />
-          <genesys-button
+          <gux-button
             class="previous-page-button"
             onClick={() => this.currentPageChanged.emit(this.currentPage - 1)}
             leftIcon="genesys-icon-chevron-small-left"
@@ -55,13 +55,13 @@ export class GuxPaginationButtons {
         </span>
 
         <div class="forward-buttons">
-          <genesys-button
+          <gux-button
             class="next-page-button"
             onClick={() => this.currentPageChanged.emit(this.currentPage + 1)}
             leftIcon="genesys-icon-chevron-small-right"
             disabled={this.onLastPage}
           />
-          <genesys-button
+          <gux-button
             class="last-page-button"
             onClick={() => this.currentPageChanged.emit(this.totalPages)}
             leftIcon="genesys-icon-arrow-right-dbl"

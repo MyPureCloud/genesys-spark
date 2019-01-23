@@ -4,7 +4,7 @@ import { Component, Element, Prop, State } from '@stencil/core';
   styleUrl: 'gux-button.less',
   tag: 'gux-button'
 })
-export class GenesysButton {
+export class GuxButton {
   @Element()
   root: HTMLStencilElement;
   button: HTMLButtonElement;
