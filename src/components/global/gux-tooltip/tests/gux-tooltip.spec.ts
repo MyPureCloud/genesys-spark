@@ -1,5 +1,5 @@
-import { GuxTooltip } from '../gux-tooltip';
 import * as Utils from '../../../../common-utils';
+import { GuxTooltip } from '../gux-tooltip';
 
 describe('gux-tooltip', () => {
   let component;
