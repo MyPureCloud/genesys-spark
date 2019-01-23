@@ -1,4 +1,4 @@
-export enum GenesysPaginationLayout {
+export enum GuxPaginationLayout {
   Small = 'small',
   Medium = 'medium',
   Large = 'large'

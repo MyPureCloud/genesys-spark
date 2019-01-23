@@ -5,7 +5,7 @@ import { withReadme } from 'storybook-readme';
 
 import readme from '../readme.md';
 
-const createComponent = () => document.createElement('genesys-pagination');
+const createComponent = () => document.createElement('gux-pagination');
 
 const createActionLoggers = story => {
   const component = story();
@@ -95,11 +95,11 @@ storiesOf('Pagination', module)
       // used instead of the hardcoded values.  The '| string' typing on the prop can probably be dropped
       // as well.
       // if (containerSize > recommendedBreakpoints.Medium) {
-      //   component.paginationSize = GenesysPaginationSize.Large;
+      //   component.paginationSize = GuxPaginationSize.Large;
       // } else if (containerSize > recommendedBreakpoints.Small) {
-      //   component.paginationSize = GenesysPaginationSize.Medium;
+      //   component.paginationSize = GuxPaginationSize.Medium;
       // } else {
-      //   component.paginationSize = GenesysPaginationSize.Small;
+      //   component.paginationSize = GuxPaginationSize.Small;
       // }
 
       const container = document.createElement('div');

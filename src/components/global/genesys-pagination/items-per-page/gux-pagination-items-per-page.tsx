@@ -1,10 +1,10 @@
 import { Component, Event, EventEmitter, Method, State } from '@stencil/core';
 
 @Component({
-  styleUrl: 'genesys-pagination-items-per-page.less',
-  tag: 'genesys-pagination-items-per-page'
+  styleUrl: 'gux-pagination-items-per-page.less',
+  tag: 'gux-pagination-items-per-page'
 })
-export class GenesysPaginationItemsPerPage {
+export class GuxPaginationItemsPerPage {
   @State()
   itemsPerPage: number = 25;
   @State()

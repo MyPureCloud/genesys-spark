@@ -1,25 +1,25 @@
 // Variables part
-@primary-background-color: @genesys-dark-blue;
+@primary-background-color: @gux-dark-blue;
 @primary-border-color: #2455a3;
-@primary-color: @genesys-off-white;
+@primary-color: @gux-off-white;
 @primary-active-background-color: #275aad;
 
-@primary-dark-background-color: @genesys-dark-blue;
-@primary-dark-border-color: @genesys-grey-1;
-@primary-dark-color: @genesys-off-white;
+@primary-dark-background-color: @gux-dark-blue;
+@primary-dark-border-color: @gux-grey-1;
+@primary-dark-color: @gux-off-white;
 @primary-dark-hover-background-color: #3476f5;
 
-@secondary-background-color: @genesys-border;
+@secondary-background-color: @gux-border;
 @secondary-border-color: #d5dce0;
-@secondary-color: @genesys-grey-2;
+@secondary-color: @gux-grey-2;
 @secondary-active-background-color: #dce1e5;
 
 @secondary-dark-background-color: #555d66;
-@secondary-dark-border-color: @genesys-grey-1;
-@secondary-dark-color: @genesys-off-white;
+@secondary-dark-border-color: @gux-grey-1;
+@secondary-dark-color: @gux-off-white;
 @secondary-dark-hover-background-color: #76818f;
 
-genesys-button {
+gux-button {
   display: inline-block;
   min-width: 32px;
   max-width: 96px;
@@ -40,7 +40,7 @@ genesys-button {
     &:focus {
       outline: none;
     }
-    &.genesys-primary {
+    &.gux-primary {
       background-color: @primary-background-color;
       border: 1px solid @primary-border-color;
       color: @primary-color;
@@ -54,7 +54,7 @@ genesys-button {
         box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
       }
     }
-    &.genesys-secondary {
+    &.gux-secondary {
       background-color: @secondary-background-color;
       border: 1px solid @secondary-border-color;
       color: @secondary-color;
@@ -85,9 +85,9 @@ genesys-button {
 // Theming
 
 // Dark
-.genesys-button-dark-theme {
+.gux-button-dark-theme {
   > button {
-    &.genesys-primary {
+    &.gux-primary {
       background-color: @primary-dark-background-color;
       border: 1px solid @primary-dark-border-color;
       color: @primary-dark-color;
@@ -101,7 +101,7 @@ genesys-button {
         box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
       }
     }
-    &.genesys-secondary {
+    &.gux-secondary {
       background-color: @secondary-dark-background-color;
       border: 1px solid @secondary-dark-border-color;
       color: @secondary-dark-color;
@@ -118,9 +118,9 @@ genesys-button {
   }
 }
 
-.genesys-button-light-theme {
+.gux-button-light-theme {
   > button {
-    &.genesys-primary {
+    &.gux-primary {
       background-color: @primary-background-color;
       border: 1px solid @primary-border-color;
       color: @primary-color;
@@ -134,7 +134,7 @@ genesys-button {
         box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
       }
     }
-    &.genesys-secondary {
+    &.gux-secondary {
       background-color: @secondary-background-color;
       border: 1px solid @secondary-border-color;
       color: @secondary-color;
@@ -151,26 +151,26 @@ genesys-button {
   }
 }
 
-.genesys-dark-theme {
-  genesys-button {
-    .genesys-button-dark-theme();
+.gux-dark-theme {
+  gux-button {
+    .gux-button-dark-theme();
   }
 }
-genesys-button.genesys-dark-theme {
-  .genesys-button-dark-theme();
+gux-button.gux-dark-theme {
+  .gux-button-dark-theme();
 }
 
 // Light
-.genesys-light-theme {
-  genesys-button {
-    .genesys-button-light-theme();
+.gux-light-theme {
+  gux-button {
+    .gux-button-light-theme();
   }
 }
-genesys-button.genesys-light-theme {
-  .genesys-button-light-theme();
+gux-button.gux-light-theme {
+  .gux-button-light-theme();
 }
 
 // Default Theme
-genesys-button {
-  .genesys-button-light-theme();
+gux-button {
+  .gux-button-light-theme();
 }

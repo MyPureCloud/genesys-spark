@@ -6,13 +6,13 @@ import {
   Prop,
   State
 } from '@stencil/core';
-import { GenesysPaginationLayout } from './genesys-pagination-layout';
+import { GuxPaginationLayout } from './gux-pagination-layout';
 
 @Component({
-  styleUrl: 'genesys-pagination.less',
-  tag: 'genesys-pagination'
+  styleUrl: 'gux-pagination.less',
+  tag: 'gux-pagination'
 })
-export class GenesysPagination {
+export class GuxPagination {
   /**
    * The currently select page. Changes are watched by the component.
    */
@@ -31,7 +31,7 @@ export class GenesysPagination {
    * for each size.
    */
   @Prop()
-  layout: GenesysPaginationLayout | string = GenesysPaginationLayout.Large;
+  layout: GuxPaginationLayout | string = GuxPaginationLayout.Large;
 
   @State()
   itemsPerPage: number = 25;
@@ -50,7 +50,7 @@ export class GenesysPagination {
    */
   @Event()
   itemsPerPageChanged: EventEmitter<number>;
-  itemsPerPageComponent: HTMLGenesysPaginationItemsPerPageElement;
+  itemsPerPageComponent: HTMLGuxPaginationItemsPerPageElement;
 
   calculatTotalPages(): number {
     return Math.ceil(this.totalItems / this.itemsPerPage);
@@ -103,10 +103,8 @@ export class GenesysPagination {
 
   render() {
     return (
-      <div
-        class={`genesys-pagination genesys-pagination-layout-${this.layout}`}
-      >
-        <genesys-pagination-item-counts
+      <div class={`gux-pagination gux-pagination-layout-${this.layout}`}>
+        <gux-pagination-item-counts
           totalItems={this.totalItems}
           currentPage={this.currentPage}
           itemsPerPage={this.itemsPerPage}
@@ -115,9 +113,9 @@ export class GenesysPagination {
         {!this.itemsPerPageOptions || !this.itemsPerPageOptions.length ? (
           <div />
         ) : (
-          <genesys-pagination-items-per-page
+          <gux-pagination-items-per-page
             ref={ref =>
-              (this.itemsPerPageComponent = ref as HTMLGenesysPaginationItemsPerPageElement)
+              (this.itemsPerPageComponent = ref as HTMLGuxPaginationItemsPerPageElement)
             }
             onItemsPerPageChanged={ev => {
               this.itemsPerPage = ev.detail;
@@ -125,8 +123,8 @@ export class GenesysPagination {
           />
         )}
 
-        <genesys-pagination-buttons
-          class={`pagination-buttons genesys-pagination-layout-${this.layout}`}
+        <gux-pagination-buttons
+          class={`pagination-buttons gux-pagination-layout-${this.layout}`}
           currentPage={this.currentPage}
           totalPages={this.calculatTotalPages()}
           onCurrentPageChanged={ev => this.setPage(ev.detail)}

@@ -1,18 +1,18 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('genesys-pagination', () => {
+describe('gux-pagination', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<genesys-pagination></genesys-pagination>');
-    const element = await page.find('genesys-pagination');
+    await page.setContent('<gux-pagination></gux-pagination>');
+    const element = await page.find('gux-pagination');
     expect(element).toHaveClass('hydrated');
   });
 
   it('should update the display when paging back and forth', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<genesys-pagination total-items="152" current-page="2"></genesys-paginiation>'
+      '<gux-pagination total-items="152" current-page="2"></genesys-paginiation>'
     );
 
     const firstPageButton = await page.find('.first-page-button');
@@ -45,7 +45,7 @@ describe('genesys-pagination', () => {
   it('should update the item counts when selecting a new items per page', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<genesys-pagination total-items="75" current-page="2"></genesys-paginiation>'
+      '<gux-pagination total-items="75" current-page="2"></genesys-paginiation>'
     );
 
     const display = await page.find('.pagination-item-counts-display');
@@ -60,7 +60,7 @@ describe('genesys-pagination', () => {
   it('should update the current page if the new items per page selection make current page invalid', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<genesys-pagination total-items="75" current-page="2"></genesys-paginiation>'
+      '<gux-pagination total-items="75" current-page="2"></genesys-paginiation>'
     );
 
     const itemCountDisplay = await page.find('.pagination-item-counts-display');
@@ -77,9 +77,9 @@ describe('genesys-pagination', () => {
 
   it('should hide the items per page dropdown if there are no items per page options', async () => {
     const page = await newE2EPage();
-    await page.setContent('<genesys-pagination></genesys-paginiation>');
+    await page.setContent('<gux-pagination></genesys-paginiation>');
 
-    const component = await page.find('genesys-pagination');
+    const component = await page.find('gux-pagination');
     await component.callMethod('setItemsPerPage', 30, []);
     await page.waitForChanges();
 

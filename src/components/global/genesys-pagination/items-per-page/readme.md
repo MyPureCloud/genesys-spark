@@ -1,6 +1,6 @@
-# genesys-pagination-items-per-page
+# gux-pagination-items-per-page
 
-An internal component used by the genesys-pagination component.
+An internal component used by the gux-pagination component.
 
 
 <!-- Auto Generated Below -->

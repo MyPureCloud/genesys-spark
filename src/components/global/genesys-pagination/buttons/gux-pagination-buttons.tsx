@@ -1,11 +1,11 @@
 import { Component, Event, EventEmitter, Prop } from '@stencil/core';
-import { GenesysTextField } from '../../genesys-text-field/genesys-text-field';
+import { GenesysTextField } from '../../gux-text-field/gux-text-field';
 
 @Component({
-  styleUrl: 'genesys-pagination-buttons.less',
-  tag: 'genesys-pagination-buttons'
+  styleUrl: 'gux-pagination-buttons.less',
+  tag: 'gux-pagination-buttons'
 })
-export class GenesysPaginationButtons {
+export class GuxPaginationButtons {
   @Prop({ mutable: true })
   currentPage: number;
 
@@ -42,9 +42,9 @@ export class GenesysPaginationButtons {
             disabled={this.onFirstPage}
           />
         </div>
-        <span class="genesys-pagination-current-page-text">
+        <span class="gux-pagination-current-page-text">
           Page{' '}
-          <genesys-text-field
+          <gux-text-field
             class="pagination-current-page-input"
             value={this.currentPage + ''}
             ref={ref => (this.textFieldRef = ref as any)}

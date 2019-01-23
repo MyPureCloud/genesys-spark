@@ -1,7 +1,7 @@
 import { EventSpy } from '@stencil/core/dist/declarations';
 import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
 
-describe('genesys-pagination-items-per-page', () => {
+describe('gux-pagination-items-per-page', () => {
   it('renders', async () => {
     const component = await buildComponent('');
     expect(await component.root).toHaveClass('hydrated');
@@ -53,7 +53,7 @@ describe('genesys-pagination-items-per-page', () => {
 const buildComponent = async (props: string) => {
   const page = await newE2EPage();
   await page.setContent(
-    `<genesys-pagination-items-per-page ${props}></genesys-pagination-items-per-page>`
+    `<gux-pagination-items-per-page ${props}></gux-pagination-items-per-page>`
   );
 
   return new ItemsPerPageComponent(page);
@@ -67,7 +67,7 @@ class ItemsPerPageComponent {
   }
 
   get root(): Promise<E2EElement> {
-    return this.page.find('genesys-pagination-items-per-page');
+    return this.page.find('gux-pagination-items-per-page');
   }
 
   get select(): Promise<E2EElement> {

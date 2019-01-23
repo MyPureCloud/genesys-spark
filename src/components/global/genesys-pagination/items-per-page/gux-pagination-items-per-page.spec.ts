@@ -1,11 +1,11 @@
-import { GenesysPaginationItemsPerPage } from './genesys-pagination-items-per-page';
+import { GuxPaginationItemsPerPage } from './gux-pagination-items-per-page';
 
-describe('genesys-pagination-item-counts', () => {
-  let component: GenesysPaginationItemsPerPage;
+describe('gux-pagination-item-counts', () => {
+  let component: GuxPaginationItemsPerPage;
   let itemsPerPageChangedSpy: jest.Mock;
 
   beforeEach(() => {
-    component = new GenesysPaginationItemsPerPage();
+    component = new GuxPaginationItemsPerPage();
 
     itemsPerPageChangedSpy = jest.fn();
     component.itemsPerPageChanged = {

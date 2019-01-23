@@ -1,13 +1,13 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('genesys-pagination-buttons', () => {
+describe('gux-pagination-buttons', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<genesys-pagination-buttons></genesys-pagination-buttons>'
+      '<gux-pagination-buttons></gux-pagination-buttons>'
     );
-    const element = await page.find('genesys-pagination-buttons');
+    const element = await page.find('gux-pagination-buttons');
     expect(element).toHaveClass('hydrated');
   });
 
@@ -15,7 +15,7 @@ describe('genesys-pagination-buttons', () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<genesys-pagination-buttons total-pages="10" current-page="2"></genesys-pagination-buttons>'
+      '<gux-pagination-buttons total-pages="10" current-page="2"></gux-pagination-buttons>'
     );
 
     const firstPageButton = await page.find('.first-page-button');

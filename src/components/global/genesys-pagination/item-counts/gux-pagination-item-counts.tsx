@@ -1,10 +1,10 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  styleUrl: 'genesys-pagination-item-counts.less',
-  tag: 'genesys-pagination-item-counts'
+  styleUrl: 'gux-pagination-item-counts.less',
+  tag: 'gux-pagination-item-counts'
 })
-export class GenesysPaginationItemCounts {
+export class GuxPaginationItemCounts {
   @Prop()
   totalItems: number;
 

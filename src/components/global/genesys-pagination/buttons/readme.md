@@ -1,6 +1,6 @@
-# genesys-pagination-buttons
+# gux-pagination-buttons
 
-An internal component used by the genesys-pagination component.
+An internal component used by the gux-pagination component.
 
 
 <!-- Auto Generated Below -->

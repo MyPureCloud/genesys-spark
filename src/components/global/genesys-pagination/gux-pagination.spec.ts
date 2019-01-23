@@ -1,10 +1,10 @@
-import { GenesysPagination } from './genesys-pagination';
+import { GuxPagination } from './gux-pagination';
 
-describe('genesys-pagination', () => {
-  let component: GenesysPagination;
+describe('gux-pagination', () => {
+  let component: GuxPagination;
 
   beforeEach(() => {
-    component = new GenesysPagination();
+    component = new GuxPagination();
 
     component.pageChanged = {
       emit: jest.fn()

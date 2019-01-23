@@ -1,10 +1,10 @@
-import { GenesysPaginationItemCounts } from './genesys-pagination-item-counts';
+import { GuxPaginationItemCounts } from './gux-pagination-item-counts';
 
-describe('genesys-pagination-item-counts', () => {
-  let component: GenesysPaginationItemCounts;
+describe('gux-pagination-item-counts', () => {
+  let component: GuxPaginationItemCounts;
 
   beforeEach(() => {
-    component = new GenesysPaginationItemCounts();
+    component = new GuxPaginationItemCounts();
     component.totalItems = 152;
   });
 
