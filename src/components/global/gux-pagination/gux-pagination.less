@@ -1,0 +1,36 @@
+@import './pagination-variables.less';
+
+gux-pagination > .gux-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gux-pagination-item-counts {
+    margin-right: @gux-pagination-text-margin;
+  }
+
+  .pagination-buttons {
+    margin-left: auto;
+  }
+
+  &.gux-pagination-layout-medium,
+  &.gux-pagination-layout-small {
+    gux-pagination-items-per-page {
+      display: none;
+    }
+  }
+
+  &.gux-pagination-layout-small {
+    display: block;
+
+    gux-pagination-item-counts,
+    .pagination-buttons {
+      margin: 0;
+      text-align: center;
+    }
+
+    .pagination-buttons {
+      margin-top: @gux-pagination-button-margin;
+    }
+  }
+}
