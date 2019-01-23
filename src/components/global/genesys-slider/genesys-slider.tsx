@@ -51,12 +51,8 @@ export class GenesysSlider {
   update: EventEmitter;
   updateValue(event) {
     const result = this.inputRegex.exec(event.target.value);
-    var newValue = result && result[1] ? +result[1] : this.min;
-    if (newValue < this.min) {
-      newValue = this.min;
-    } else if (newValue > this.max) {
-      newValue = this.max;
-    }
+    const resultValue = result && result[1] ? +result[1] : this.min;
+    const newValue = Math.min(Math.max(resultValue, this.min), this.max);
     const upToDate = this.value === newValue;
     const stepOffset = Math.round(newValue / this.step);
     this.value = newValue % this.step !== 0 ? this.step * stepOffset : newValue;
