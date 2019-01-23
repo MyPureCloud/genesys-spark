@@ -14,7 +14,7 @@ import { IListItem } from '../../../common-interfaces';
   styleUrl: 'gux-action-button.less',
   tag: 'gux-action-button'
 })
-export class GenesysActionButton {
+export class GuxActionButton {
   listElement: HTMLGuxListElement;
   dropdownButton: HTMLElement;
 

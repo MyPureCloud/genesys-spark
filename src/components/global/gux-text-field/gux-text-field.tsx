@@ -17,7 +17,7 @@ enum Types {
   styleUrl: 'gux-text-field.less',
   tag: 'gux-text-field'
 })
-export class GenesysTextField {
+export class GuxTextField {
   inputElement: HTMLInputElement;
 
   /**
@@ -222,13 +222,13 @@ export class GenesysTextField {
             class={this.showClearButton ? 'text-clearable' : ''}
           />
           {this.showClearButton && (
-              <button
-                type="button"
-                class="genesys-icon-close"
-                title={this.eraseLabel}
-                onClick={e => this._clear(e)}
-              />
-            )}
+            <button
+              type="button"
+              class="genesys-icon-close"
+              title={this.eraseLabel}
+              onClick={e => this._clear(e)}
+            />
+          )}
         </div>
         {this.errorMessage && (
           <div class="gux-error">

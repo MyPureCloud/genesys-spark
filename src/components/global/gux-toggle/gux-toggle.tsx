@@ -6,7 +6,7 @@ const SPACE = 32;
   styleUrl: 'gux-toggle.less',
   tag: 'gux-toggle'
 })
-export class GenesysToggle {
+export class GuxToggle {
   @Element()
   root: HTMLStencilElement;
   checkboxElement: HTMLInputElement;

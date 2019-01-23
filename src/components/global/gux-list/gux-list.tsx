@@ -5,7 +5,7 @@ import { IListItem } from '../../../common-interfaces';
   styleUrl: 'gux-list.less',
   tag: 'gux-list'
 })
-export class GenesysList {
+export class GuxList {
   @Element()
   root: HTMLStencilElement;
   /**

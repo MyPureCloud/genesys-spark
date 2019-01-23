@@ -1,5 +1,5 @@
 import { Component, Event, EventEmitter, Prop } from '@stencil/core';
-import { GenesysTextField } from '../../gux-text-field/gux-text-field';
+import { GuxTextField } from '../../gux-text-field/gux-text-field';
 
 @Component({
   styleUrl: 'gux-pagination-buttons.less',
@@ -23,7 +23,7 @@ export class GuxPaginationButtons {
   @Event()
   currentPageChanged: EventEmitter<number>;
 
-  private textFieldRef: GenesysTextField;
+  private textFieldRef: GuxTextField;
 
   render() {
     return (

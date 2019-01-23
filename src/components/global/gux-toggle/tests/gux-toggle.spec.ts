@@ -1,7 +1,7 @@
-import { GenesysToggle } from '../gux-toggle';
+import { GuxToggle } from '../gux-toggle';
 
 describe('gux-toggle', () => {
   it('builds', () => {
-    expect(new GenesysToggle()).toBeTruthy();
+    expect(new GuxToggle()).toBeTruthy();
   });
 });

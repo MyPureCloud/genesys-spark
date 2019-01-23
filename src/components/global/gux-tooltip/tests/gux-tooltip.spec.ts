@@ -1,10 +1,10 @@
-import { GenesysTooltip } from '../gux-tooltip';
+import { GuxTooltip } from '../gux-tooltip';
 import * as Utils from '../../../../common-utils';
 
 describe('gux-tooltip', () => {
   let component;
   beforeEach(async () => {
-    component = new GenesysTooltip();
+    component = new GuxTooltip();
   });
   it('builds', () => {
     expect(component).toBeTruthy();

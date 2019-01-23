@@ -10,7 +10,7 @@ interface ISection {
   styleUrl: 'gux-accordion.less',
   tag: 'gux-accordion'
 })
-export class GenesysAccordion {
+export class GuxAccordion {
   @Element()
   root: HTMLStencilElement;
 

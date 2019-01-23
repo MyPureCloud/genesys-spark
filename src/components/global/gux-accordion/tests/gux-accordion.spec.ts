@@ -1,9 +1,9 @@
-import { GenesysAccordion } from '../gux-accordion';
+import { GuxAccordion } from '../gux-accordion';
 
 describe('gux-accordion', () => {
   let component;
   beforeEach(async () => {
-    component = new GenesysAccordion();
+    component = new GuxAccordion();
   });
   it('builds', () => {
     expect(component).toBeTruthy();

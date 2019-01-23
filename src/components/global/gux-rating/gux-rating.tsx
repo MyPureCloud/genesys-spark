@@ -12,7 +12,7 @@ import { KeyCode } from '../../../common-enums';
   styleUrl: 'gux-rating.less',
   tag: 'gux-rating'
 })
-export class GenesysRating {
+export class GuxRating {
   @Element()
   root: HTMLStencilElement;
 

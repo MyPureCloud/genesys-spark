@@ -1,7 +1,7 @@
-import { GenesysRating } from '../gux-rating';
+import { GuxRating } from '../gux-rating';
 
 describe('gux-rating', () => {
   it('builds', () => {
-    expect(new GenesysRating()).toBeTruthy();
+    expect(new GuxRating()).toBeTruthy();
   });
 });

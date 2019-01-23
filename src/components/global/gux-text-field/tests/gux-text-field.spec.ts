@@ -1,8 +1,8 @@
-import { GenesysTextField } from '../gux-text-field';
+import { GuxTextField } from '../gux-text-field';
 
 describe('gux-text-field', () => {
   it('builds', () => {
-    const component = new GenesysTextField();
+    const component = new GuxTextField();
     expect(component).toBeTruthy();
     expect(component.render()).toBeTruthy();
     component.value = 'value';
@@ -11,7 +11,7 @@ describe('gux-text-field', () => {
   });
   describe('getClassList', () => {
     it('should correctly set the list', () => {
-      const component = new GenesysTextField();
+      const component = new GuxTextField();
       expect(component.getClassList().length).toBe(0);
       component.errorMessageType = 'error';
       component.errorMessage = 'an error occured';
@@ -22,7 +22,7 @@ describe('gux-text-field', () => {
   });
   describe('componentDidLoad', () => {
     it('should create set internalErrorMessage', () => {
-      const component = new GenesysTextField();
+      const component = new GuxTextField();
       component.errorMessage = 'error';
       component.componentDidLoad();
       expect(component.internalErrorMessage).toBe('error');
@@ -30,7 +30,7 @@ describe('gux-text-field', () => {
   });
   describe('getIconByMessageType', () => {
     it('should return the correct message type', () => {
-      const component = new GenesysTextField();
+      const component = new GuxTextField();
       component.errorMessage = 'error';
       component.componentDidLoad();
       expect(component.getIconByMessageType('sss')).toBe(
@@ -46,7 +46,7 @@ describe('gux-text-field', () => {
   });
   describe('clear', () => {
     it('should clear value', () => {
-      const component = new GenesysTextField();
+      const component = new GuxTextField();
       component.inputElement = { value: 'test', focus: () => 'test' };
       component.value = 'value';
       component.clear();
@@ -55,13 +55,13 @@ describe('gux-text-field', () => {
   });
   describe('_testValue', () => {
     it('should do nothing if no validation prop has been set', () => {
-      const component = new GenesysTextField();
+      const component = new GuxTextField();
       component._testValue('test');
       expect(component.errorMessage).toBe('');
       expect(component.errorMessageType).toBe('error');
     });
     it('should correctly call validation regexp', () => {
-      const component = new GenesysTextField();
+      const component = new GuxTextField();
       component.validation = new RegExp('[aA-zZ]+');
       component.internalErrorMessage = 'error Message';
       component._testValue('test');
@@ -72,7 +72,7 @@ describe('gux-text-field', () => {
       expect(component.errorMessageType).toBe('error');
     });
     it('should correctly call validation function', () => {
-      const component = new GenesysTextField();
+      const component = new GuxTextField();
       component.validation = () => false;
       component.internalErrorMessage = 'error Message';
       component._testValue('test');

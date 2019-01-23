@@ -1,7 +1,7 @@
-import { GenesysList } from '../gux-list';
+import { GuxList } from '../gux-list';
 
 describe('gux-list', () => {
   it('builds', () => {
-    expect(new GenesysList()).toBeTruthy();
+    expect(new GuxList()).toBeTruthy();
   });
 });
