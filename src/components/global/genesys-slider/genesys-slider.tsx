@@ -19,7 +19,7 @@ export class GenesysSlider {
    * Inicates the step value of the slider
    **/
   @Prop()
-  step: number = 1.5;
+  step: number = 1;
   /**
    * Indicates the value of the slider
    **/
