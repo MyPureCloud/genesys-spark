@@ -6,6 +6,9 @@ import { Component, Prop } from '@stencil/core';
 })
 export class GuxPaginationItemCounts {
   @Prop()
+  i18n: (resourceKey: string, context?: any) => string;
+
+  @Prop()
   totalItems: number;
 
   @Prop()
@@ -29,7 +32,12 @@ export class GuxPaginationItemCounts {
     return (
       <div class="pagination-item-counts">
         <span class="pagination-item-counts-display">
-          {this.firstItem} - {this.lastItem} of {this.totalItems}
+          {this.i18n &&
+            this.i18n('itemCountDisplay', {
+              firstItem: this.firstItem,
+              lastItem: this.lastItem,
+              totalItems: this.totalItems
+            })}
         </span>
       </div>
     );

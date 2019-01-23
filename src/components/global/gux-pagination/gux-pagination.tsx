@@ -1,5 +1,6 @@
 import {
   Component,
+  Element,
   Event,
   EventEmitter,
   Method,
@@ -8,11 +9,17 @@ import {
 } from '@stencil/core';
 import { GuxPaginationLayout } from './gux-pagination-layout';
 
+import { buildI18nForComponent } from '../../i18n';
+import paginationResources from './gux-pagination.i18n.json';
+
 @Component({
   styleUrl: 'gux-pagination.less',
   tag: 'gux-pagination'
 })
 export class GuxPagination {
+  @Element()
+  element: HTMLElement;
+
   /**
    * The currently select page. Changes are watched by the component.
    */
@@ -51,6 +58,12 @@ export class GuxPagination {
   @Event()
   itemsPerPageChanged: EventEmitter<number>;
   itemsPerPageComponent: HTMLGuxPaginationItemsPerPageElement;
+
+  private i18n: (resourceKey: string, context?: any) => string;
+
+  async componentWillLoad() {
+    this.i18n = await buildI18nForComponent(this.element, paginationResources);
+  }
 
   calculatTotalPages(): number {
     return Math.ceil(this.totalItems / this.itemsPerPage);
@@ -108,6 +121,7 @@ export class GuxPagination {
           totalItems={this.totalItems}
           currentPage={this.currentPage}
           itemsPerPage={this.itemsPerPage}
+          i18n={this.i18n}
         />
 
         {!this.itemsPerPageOptions || !this.itemsPerPageOptions.length ? (
@@ -120,6 +134,7 @@ export class GuxPagination {
             onItemsPerPageChanged={ev => {
               this.itemsPerPage = ev.detail;
             }}
+            i18n={this.i18n}
           />
         )}
 

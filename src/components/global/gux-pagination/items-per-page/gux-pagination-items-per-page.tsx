@@ -1,10 +1,20 @@
-import { Component, Event, EventEmitter, Method, State } from '@stencil/core';
+import {
+  Component,
+  Event,
+  EventEmitter,
+  Method,
+  Prop,
+  State
+} from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-pagination-items-per-page.less',
   tag: 'gux-pagination-items-per-page'
 })
 export class GuxPaginationItemsPerPage {
+  @Prop()
+  i18n: (resourceKey: string, context?: any) => string;
+
   @State()
   itemsPerPage: number = 25;
   @State()
@@ -35,7 +45,7 @@ export class GuxPaginationItemsPerPage {
             <option selected={opt === this.itemsPerPage}>{opt}</option>
           ))}
         </select>
-        <span>per page</span>
+        <span>{this.i18n && this.i18n('perPage')}</span>
       </div>
     );
   }
