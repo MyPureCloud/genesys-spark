@@ -40,12 +40,12 @@ export const config: Config = {
     "collectCoverage": true,
     "coverageDirectory": "build/test-reports/coverage",
     "coverageReporters": ["json", "lcov", "text", "clover", "text-summary"],
-    "reporters": [ 
+    "reporters": [
       "default",
-      [ "jest-junit", 
+      ["jest-junit",
         {
           "outputDirectory": "build/test-reports"
-        } 
+        }
       ]
     ]
   }
