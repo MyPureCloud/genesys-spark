@@ -1,8 +1,8 @@
 // Variables part
-@slider-fill: @genesys-dark-blue;
+@slider-fill: @gux-dark-blue;
 @slider-border: #e0e0e0;
-@slider-dark: @genesys-off-white;
-@slider-fill-dark: @genesys-blue;
+@slider-dark: @gux-off-white;
+@slider-fill-dark: @gux-blue;
 
 .track {
   height: 2px;
@@ -25,7 +25,7 @@
   }
 }
 
-genesys-slider {
+gux-slider {
   width: inherit;
 
   .slider-component-container {
@@ -193,7 +193,7 @@ genesys-slider {
     display: flex;
   }
 
-  genesys-text-field {
+  gux-text-field {
     align-self: center;
     width: 80px;
     margin-left: 14px;
@@ -202,7 +202,7 @@ genesys-slider {
       display: none;
     }
 
-    .genesys-field input {
+    .gux-field input {
       padding-right: 12px;
     }
 
@@ -213,7 +213,7 @@ genesys-slider {
 }
 // Theming
 
-.genesys-slider-dark-theme {
+.gux-slider-dark-theme {
   .mask-track {
     background-color: @slider-dark;
   }
@@ -227,25 +227,25 @@ genesys-slider {
   }
 
   .range-tooltip {
-    color: @genesys-grey-type;
+    color: @gux-grey-type;
     background-color: @slider-dark;
   }
 
-  genesys-text-field {
-    .genesys-field input {
+  gux-text-field {
+    .gux-field input {
       background-color: @slider-dark;
-      color: @genesys-grey-type;
+      color: @gux-grey-type;
       border: none;
     }
   }
 }
 
-.genesys-dark-theme {
-  genesys-slider {
-    .genesys-slider-dark-theme;
+.gux-dark-theme {
+  gux-slider {
+    .gux-slider-dark-theme;
   }
 }
 
-.genesys-slider.genesys-dark-theme {
-  .genesys-slider-dark-theme;
+.gux-slider.gux-dark-theme {
+  .gux-slider-dark-theme;
 }

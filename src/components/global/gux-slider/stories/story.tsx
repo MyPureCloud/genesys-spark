@@ -20,7 +20,7 @@ storiesOf('Genesys Components', module)
       render(
         html`
       <div style="padding:50px 25px 0px 25px;">
-        <genesys-slider
+        <gux-slider
           id="interactive"
           min=${number('min', 0)}
           max=${number('max', 10)}
@@ -29,7 +29,7 @@ storiesOf('Genesys Components', module)
           isPercentage=${boolean('isPercentage', true)}
           displayTextBox=${boolean('displayTextBox', true)}
           >
-        </genesys-slider>
+        </gux-slider>
       </div>`,
         el
       );

@@ -1,38 +1,38 @@
-import { Event, EventEmitter, Component, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'genesys-slider',
-  styleUrl: 'genesys-slider.less'
+  styleUrl: 'gux-slider.less',
+  tag: 'gux-slider'
 })
-export class GenesysSlider {
+export class GuxSlider {
   /**
    * Indicates the minimum value for the slider
-   **/
+   */
   @Prop({ mutable: true })
   min: number = 0;
   /**
    * Indicates the maximum value for the slider
-   **/
+   */
   @Prop()
   max: number = 100;
   /**
    * Inicates the step value of the slider
-   **/
+   */
   @Prop()
   step: number = 1;
   /**
    * Indicates the value of the slider
-   **/
+   */
   @Prop({ mutable: true, reflectToAttr: true })
   value: number = 0;
   /**
    * Indicates if the input box will be displayed
-   **/
+   */
   @Prop()
   displayTextBox: boolean = true;
   /**
    * Indicate if the value is a percentage
-   **/
+   */
   @Prop()
   isPercentage: boolean = false;
 
@@ -105,7 +105,7 @@ export class GenesysSlider {
             step={this.step}
             value={this.value}
             ref={el => (this.sliderInput = el)}
-            //onChange event required because IE11 doesn't support onInput for range inputs
+            // onChange event required because IE11 doesn't support onInput for range inputs
             onChange={(e: UIEvent) => this.updateValue(e)}
             onInput={(e: UIEvent) => this.updateValue(e)}
           />
@@ -125,7 +125,7 @@ export class GenesysSlider {
           )}
         </div>
         {this.displayTextBox && (
-          <genesys-text-field
+          <gux-text-field
             label="slider value"
             value={value}
             onChange={(e: UIEvent) => this.updateValue(e)}

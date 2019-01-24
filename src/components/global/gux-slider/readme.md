@@ -1,4 +1,4 @@
-# genesys-slider
+# gux-slider
 
 This is a basic slider component that allows users to select from values on a numerical scale, percentages may also be used.
 

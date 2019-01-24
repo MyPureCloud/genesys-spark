@@ -1,22 +1,22 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('genesys-slider', () => {
+describe('gux-slider', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<genesys-slider></genesys-slider>');
-    const element = await page.find('genesys-slider');
+    await page.setContent('<gux-slider></gux-slider>');
+    const element = await page.find('gux-slider');
     expect(element).toHaveClass('hydrated');
   });
 
   it('renders changes when value is incremented', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<genesys-slider></genesys-slider>');
-    const component = await page.find('genesys-slider');
-    const input = await page.find('genesys-slider input');
+    await page.setContent('<gux-slider></gux-slider>');
+    const component = await page.find('gux-slider');
+    const input = await page.find('gux-slider input');
     expect(input).toHaveClass('range-input');
-    var val = await input.getProperty('value');
+    let val = await input.getProperty('value');
     expect(val).toBe('0');
     await input.press('ArrowRight');
     val = await input.getProperty('value');
@@ -26,11 +26,11 @@ describe('genesys-slider', () => {
   it('renders changes when value is incremented using step property', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<genesys-slider step=1.5></genesys-slider>');
-    const component = await page.find('genesys-slider');
-    const input = await page.find('genesys-slider input');
+    await page.setContent('<gux-slider step=1.5></gux-slider>');
+    const component = await page.find('gux-slider');
+    const input = await page.find('gux-slider input');
     expect(input).toHaveClass('range-input');
-    var val = await input.getProperty('value');
+    let val = await input.getProperty('value');
     expect(val).toBe('0');
     await input.press('ArrowRight');
     val = await input.getProperty('value');
