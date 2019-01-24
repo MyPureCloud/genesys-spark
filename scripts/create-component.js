@@ -6,7 +6,7 @@ const Handlebars    = require ('handlebars')
 const srcPath       = path.resolve(__dirname, '../src/components')
 const tplPath       = path.resolve(__dirname, 'templates/component')
 
-const prefix = 'genesys-'
+const prefix = 'gux-'
 const GLOBAL_PATH = path.resolve(srcPath, 'global')
 const RICH__PATH = path.resolve(srcPath, 'rich')
 const FEATURE_PATH = path.resolve(srcPath, 'feature')

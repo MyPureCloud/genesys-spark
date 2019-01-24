@@ -1,0 +1,74 @@
+// Variables part
+
+gux-action-button {
+  display: inline-block;
+  min-width: 128px;
+  .gux-dropdown {
+    margin-left: -2px;
+    button {
+      width: 32px;
+      min-width: 0px;
+      padding: 0;
+    }
+  }
+  .gux-action {
+    button {
+      max-width: none;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .gux-action-button {
+    display: flex;
+    position: relative;
+    .gux-action {
+      flex: 1;
+    }
+    gux-list {
+      display: none;
+      width: 100%;
+      position: absolute;
+      z-index: 1000;
+      top: 32px;
+    }
+    &.open {
+      gux-list {
+        display: block;
+      }
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-action-button-dark-theme {
+  color: @gux-off-white;
+}
+
+.gux-dark-theme {
+  gux-action-button {
+    .gux-action-button-dark-theme();
+  }
+}
+gux-action-button.gux-dark-theme {
+  .gux-action-button-dark-theme();
+}
+
+// Light
+.gux-action-button-light-theme {
+}
+
+.gux-light-theme {
+  gux-action-button {
+    .gux-action-button-light-theme();
+  }
+}
+gux-action-button.gux-light-theme {
+  .gux-action-button-light-theme();
+}
+
+// Default Theme
+gux-action-button {
+  .gux-action-button-light-theme();
+}

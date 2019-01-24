@@ -1,23 +1,23 @@
-import { Event, EventEmitter, Component, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
-  tag: '{{componentName}}',
-  styleUrl: '{{componentName}}.less'
+  styleUrl: '{{componentName}}.less',
+  tag: '{{componentName}}'
 })
 export class {{componentClassName}} {
   /**
-   * Indicate the firt
-   **/
+   * Indicate the first
+   */
   @Prop()
   first: string;
   /**
-   * Indicate the firt
-   **/
+   * Indicate the middle
+   */
   @Prop()
   middle: string;
   /**
    * Indicate the last
-   **/
+   */
   @Prop()
   last: string;
 
