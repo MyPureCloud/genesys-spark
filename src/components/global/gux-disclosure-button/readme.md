@@ -1,4 +1,4 @@
-# genesys-disclosure-button
+# gux-disclosure-button
 
 This is a UI button component that is used to open or dismiss an associated panel.
 

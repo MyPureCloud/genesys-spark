@@ -1,13 +1,13 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('genesys-disclosure-button', () => {
+describe('gux-disclosure-button', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<genesys-disclosure-button></genesys-disclosure-button>'
+      '<gux-disclosure-button></gux-disclosure-button>'
     );
-    const element = await page.find('genesys-disclosure-button');
+    const element = await page.find('gux-disclosure-button');
     expect(element).toHaveClass('hydrated');
   });
 
@@ -15,9 +15,9 @@ describe('genesys-disclosure-button', () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<genesys-disclosure-button></genesys-disclosure-button>'
+      '<gux-disclosure-button></gux-disclosure-button>'
     );
-    const component = await page.find('genesys-disclosure-button');
+    const component = await page.find('gux-disclosure-button');
     const button = await page.find('.disclosure-button');
     const panel = await page.find('.disclosure-panel');
     await button.click();

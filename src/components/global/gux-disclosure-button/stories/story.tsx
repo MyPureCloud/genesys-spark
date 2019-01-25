@@ -20,23 +20,23 @@ storiesOf('Genesys Components', module)
         <h2>Basic samples</h2>
         <i>Position right</i><br/><br/>
           <div style='height:100px; width: 100%;'>
-            <genesys-disclosure-button position='right'>
+            <gux-disclosure-button position='right'>
               <p slot='panel-content'>This panel opens up from the right side.</p>
-            </genesys-disclosure-button>
+            </gux-disclosure-button>
           </div>
           <br/><i>Position left</i><br/><br/>
           <div style='height: 100px; width: 100%;'>
-            <genesys-disclosure-button>
+            <gux-disclosure-button>
               <p slot='panel-content'>This panel opens up from the left side.</p>
-            </genesys-disclosure-button>
+            </gux-disclosure-button>
           </div>
             <h2>Interactive sample</h2>
           <div style='height: 100px; width: 100%;'>
-            <genesys-disclosure-button id='interactive'
-            position = ${text('position', 'left')} 
+            <gux-disclosure-button id='interactive'
+            position = ${text('position', 'left')}
             label = ${text('label', 'open')}>
               <p slot='panel-content'>This panel will contain your custom content by placing it in a <div slot='panel-content></div>'</p>
-            </genesys-disclosure-button>
+            </gux-disclosure-button>
           </div>
         </div>
       `,
@@ -47,7 +47,7 @@ storiesOf('Genesys Components', module)
         it.addEventListener('active', e => action('active')(e.detail));
       }, 100);
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );

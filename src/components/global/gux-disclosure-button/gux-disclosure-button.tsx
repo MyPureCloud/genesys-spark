@@ -1,31 +1,31 @@
-import { Event, EventEmitter, Component, Prop, State } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop, State } from '@stencil/core';
 
 @Component({
-  tag: 'genesys-disclosure-button',
-  styleUrl: 'genesys-disclosure-button.less'
+  styleUrl: 'gux-disclosure-button.less',
+  tag: 'gux-disclosure-button'
 })
-export class GenesysDisclosureButton {
+export class GuxDisclosureButton {
   /**
    * Indicates the position of the button panel (right or left)
-   **/
+   */
   @Prop()
   position: string = 'left';
 
   /**
    * Indicates the label for the disclosure button
-   **/
+   */
   @Prop()
   label: string = 'open';
 
   /**
    * Denotes state of discloseure panel
-   **/
+   */
   @State()
   isPanelActive: boolean = false;
 
   /**
    * Indicated image used by button
-   **/
+   */
   @State()
   buttonImg: string = 'genesys-icon-expand-right';
 
