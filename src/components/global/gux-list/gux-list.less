@@ -1,0 +1,99 @@
+// Variables part
+@menu-background-color: @gux-off-white;
+@menu-border-color: #dae1eb;
+@menu-shadow: rgba(34, 37, 41, 0.24);
+@divider-color: #c3cad4;
+
+gux-list {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    > li {
+      position: relative;
+      height: 32px;
+      line-height: 32px;
+      padding: 0px 16px;
+      display: flex;
+      cursor: pointer;
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+      }
+      &.divider {
+        height: 1px;
+        margin: 5px 12px;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-list-dark-theme {
+  color: @gux-grey-2;
+  ul {
+    background: @menu-background-color;
+    border-color: 1px solid @menu-border-color;
+    box-shadow: 0px 0 2px 0px @menu-shadow;
+    > li {
+      &:not(.disabled) {
+        &:hover,
+        &:focus {
+          background: @gux-dark-blue;
+          color: @gux-off-white;
+        }
+      }
+      &.divider {
+        background-color: @divider-color;
+      }
+    }
+  }
+}
+
+.gux-dark-theme {
+  gux-list {
+    .gux-list-dark-theme();
+  }
+}
+gux-list.gux-dark-theme {
+  .gux-list-dark-theme();
+}
+
+// Light
+.gux-list-light-theme {
+  ul {
+    background: @menu-background-color;
+    border-color: 1px solid @menu-border-color;
+    box-shadow: 0px 0 2px 0px @menu-shadow;
+    > li {
+      &:not(.disabled) {
+        &:hover,
+        &:focus {
+          background: @gux-dark-blue;
+          color: @gux-off-white;
+        }
+      }
+      &.divider {
+        background-color: @divider-color;
+      }
+    }
+  }
+}
+
+.gux-light-theme {
+  gux-list {
+    .gux-list-light-theme();
+  }
+}
+gux-list.gux-light-theme {
+  .gux-list-light-theme();
+}
+
+// Default Theme
+gux-list {
+  .gux-list-light-theme();
+}

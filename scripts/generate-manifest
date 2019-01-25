@@ -1,0 +1,35 @@
+#! /usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+
+const deployVersion = require('../package.json').version;
+const manifestPath = path.join(__dirname,'../manifest.json');
+
+
+const buildDate = new Date();
+
+let manifest = {
+  name: 'common-ui-docs/genesys-webcomponents',
+  version: deployVersion,
+  build: `${process.env.BUILD_NUMBER}`,
+  buildDate: buildDate.toISOString(),
+  indexFiles: [
+    {
+      file: 'index.html'
+    },
+    {
+      file: 'iframe.html'
+    },
+    {
+      file: 'versions.json'
+    }
+  ]
+}
+
+let manifestJson = JSON.stringify(manifest, null, 2);
+
+console.log('Generated Manifest: ', manifestJson);
+
+fs.writeFileSync(manifestPath, manifestJson, {encoding: 'utf8'});

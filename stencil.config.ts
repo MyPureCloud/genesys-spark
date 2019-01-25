@@ -5,7 +5,7 @@ import { less } from '@stencil/less';
 const distTarget: OutputTargetDist = {
   dir: 'www/static',
   type: 'dist'
-}
+};
 export const config: Config = {
   copy: [
     {
@@ -15,9 +15,19 @@ export const config: Config = {
     {
       dest: '../icons',
       src: 'style/icons'
+    },
+    {
+      dest: '../i18n',
+      src: '../build/i18n'
     }
   ],
-  excludeSrc: ['**/test/**', '**/*.spec.*', '**/*.e2e.*', '**/stories/**', '**/**.md'],
+  excludeSrc: [
+    '**/test/**',
+    '**/*.spec.*',
+    '**/*.e2e.*',
+    '**/stories/**',
+    '**/**.md'
+  ],
   namespace: 'genesys-webcomponents',
   outputTargets: [
     {
@@ -28,25 +38,23 @@ export const config: Config = {
   ],
   plugins: [
     less({
-      injectGlobalPaths: [
-        'src/style/variables.less',
-        'src/style/mixins.less'
-      ]
+      injectGlobalPaths: ['src/style/variables.less', 'src/style/mixins.less']
     })
   ],
   testing: {
-    "browserArgs": ["--no-sandbox"],
-    "browserHeadless": true,
-    "collectCoverage": true,
-    "coverageDirectory": "build/test-reports/coverage",
-    "coverageReporters": ["json", "lcov", "text", "clover", "text-summary"],
-    "reporters": [ 
-      "default",
-      [ "jest-junit", 
+    browserArgs: ['--no-sandbox'],
+    browserHeadless: true,
+    collectCoverage: true,
+    coverageDirectory: 'build/test-reports/coverage',
+    coverageReporters: ['json', 'lcov', 'text', 'clover', 'text-summary'],
+    reporters: [
+      'default',
+      [
+        'jest-junit',
         {
-          "outputDirectory": "build/test-reports"
-        } 
+          outputDirectory: 'build/test-reports'
+        }
       ]
     ]
   }
-}
+};
