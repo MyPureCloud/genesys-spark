@@ -21,6 +21,12 @@ export class GuxList {
   @Prop()
   highlight: string = '';
 
+  @Event()
+  change: EventEmitter;
+  emitChange(value: string) {
+    this.change.emit(value);
+  }
+
   onItemClicked(item: IListItem) {
     this.emitChange(item.text);
     if (item.callback) {
@@ -32,12 +38,6 @@ export class GuxList {
         i.el.setAttribute('tabindex', '-1');
       }
     });
-  }
-
-  @Event()
-  change: EventEmitter;
-  emitChange(value: string) {
-    this.change.emit(value);
   }
 
   _computedText (text: string) {

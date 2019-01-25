@@ -1,6 +1,6 @@
 import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing'
 
-describe('genesys-dropdown', () => {
+describe('gux-dropdown', () => {
   let page: E2EPage;
   let element: E2EElement;
   beforeEach(async () => {
@@ -8,9 +8,9 @@ describe('genesys-dropdown', () => {
   });
   it('renders', async () => {
     await page.setContent(`
-    <genesys-dropdown></genesys-dropdown>
+    <gux-dropdown></gux-dropdown>
     `);
-    element = await page.find('genesys-dropdown');
+    element = await page.find('gux-dropdown');
     expect(element).toHaveClass('hydrated');
   });
 });

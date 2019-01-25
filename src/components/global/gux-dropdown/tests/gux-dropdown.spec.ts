@@ -1,6 +1,6 @@
-import { GenesysDropdown } from '../genesys-dropdown';
+import { GuxDropdown } from '../gux-dropdown';
 
-describe('genesys-dropdown', () => {
+describe('gux-dropdown', () => {
   let component;
   const items = [
     { text: 'Belgium' },
@@ -8,7 +8,7 @@ describe('genesys-dropdown', () => {
   ];
   const thirdItem = { text: 'France' };
   beforeEach(async () => {
-    component = new GenesysDropdown();
+    component = new GuxDropdown();
     component.items = [...items, thirdItem];
   });
   it('builds', () => {

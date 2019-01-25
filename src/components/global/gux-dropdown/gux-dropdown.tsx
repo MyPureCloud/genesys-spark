@@ -3,14 +3,14 @@ import { KeyCode } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 
 @Component({
-  tag: 'genesys-dropdown',
-  styleUrl: 'genesys-dropdown.less'
+  styleUrl: 'gux-dropdown.less',
+  tag: 'gux-dropdown'
 })
-export class GenesysDropdown {
+export class GuxDropdown {
   @Element()
   root: HTMLStencilElement;
-  textFieldElement: HTMLGenesysTextFieldElement;
-  listElement: HTMLGenesysListElement;
+  textFieldElement: HTMLGuxTextFieldElement;
+  listElement: HTMLGuxListElement;
 
   /**
    * Sets the select mode (default, page or palette).
@@ -156,13 +156,13 @@ export class GenesysDropdown {
 
   render() {
     return (
-      <div class={`genesys-dropdown ${this.mode} ${this.mode} ${this.disabled ? 'disabled' : ''} ${this.opened ? 'active' : ''}`}
+      <div class={`gux-dropdown ${this.mode} ${this.mode} ${this.disabled ? 'disabled' : ''} ${this.opened ? 'active' : ''}`}
         onKeyDown={(e) => this.onKeyDown(e)}>
         {this.label && <label>{this.label}</label>}
         <div class="select-field">
           <span class="ghost" aria-hidden="true">{this.ghost}</span>
-          <genesys-text-field
-            ref={el => (this.textFieldElement = el as HTMLGenesysTextFieldElement)}
+          <gux-text-field
+            ref={el => (this.textFieldElement = el as HTMLGuxTextFieldElement)}
             onMouseDown={() => { this._clickHandler() }}
             onFocus={() => { this._focusHandler() }}
             onBlur={() => { this._blurHandler() }}
@@ -171,17 +171,17 @@ export class GenesysDropdown {
             disabled={this.disabled}
             class={this._showDropdownIcon() ? 'unclearable' : ''}
             >
-          </genesys-text-field>
+          </gux-text-field>
           {this._showDropdownIcon() && <button aria-hidden="true" tabindex="-1" type="button" class="genesys-icon-dropdown-arrow"/>}
         </div>
-        <genesys-list
-          ref={el => (this.listElement = el as HTMLGenesysListElement)}
+        <gux-list
+          ref={el => (this.listElement = el as HTMLGuxListElement)}
           onChange={(e) => { this.setValue(e.detail) }}
           onFocus={(e) => { this._focusListItemHandler(e.detail as IListItem) }}
           class={this.opened ? "opened" : ""}
           items={this.filteredItems}
           highlight={this.value}>
-        </genesys-list>
+        </gux-list>
       </div>
     );
   }

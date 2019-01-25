@@ -1,8 +1,8 @@
 // Variables part
 
 // Style
-genesys-dropdown {
-  div.genesys-dropdown {
+gux-dropdown {
+  div.gux-dropdown {
     position: relative;
     margin: 4px 0;
     &.disabled {
@@ -35,9 +35,8 @@ genesys-dropdown {
         border-radius: 2px;
         font-size: 12px;
         line-height: 1.66666667;
-        color: @genesys-icons;
       }
-      genesys-text-field {
+      gux-text-field {
         > div {
           margin: 0;
         }
@@ -71,7 +70,7 @@ genesys-dropdown {
         }
       }
     }
-    genesys-list {
+    gux-list {
       display: none;
       position: absolute;
       width: 100%;
@@ -89,8 +88,8 @@ genesys-dropdown {
           padding: 2px 25px 4px 11px;
         }
         height: 48px;
-        genesys-text-field {
-          div.genesys-field {
+        gux-text-field {
+          div.gux-field {
             height: 48px;
           }
           input {
@@ -102,7 +101,7 @@ genesys-dropdown {
             &:focus {
               box-shadow: none;
               border: none;
-              border-bottom: 2px solid fade(@genesys-blue, 50%);
+              border-bottom: 2px solid fade(@gux-blue, 50%);
             }
           }
         }
@@ -117,8 +116,8 @@ genesys-dropdown {
           padding: 9px 25px 4px 11px;
         }
         height: 52px;
-        genesys-text-field {
-          div.genesys-field {
+        gux-text-field {
+          div.gux-field {
             height: 52px;
           }
           input {
@@ -130,12 +129,12 @@ genesys-dropdown {
             &:focus {
               box-shadow: none;
               border: none;
-              border-bottom: 2px solid fade(@genesys-blue, 50%);
+              border-bottom: 2px solid fade(@gux-blue, 50%);
             }
           }
         }
       }
-      genesys-list {
+      gux-list {
         width: calc(100% - 16px);
         margin: 0 8px;
       }
@@ -144,28 +143,30 @@ genesys-dropdown {
 }
 // Theming
 // Light
-.genesys-dropdown-light-theme {
-  div.genesys-dropdown {
+.gux-dropdown-light-theme {
+  div.gux-dropdown {
     .select-field {
       .ghost {
-        background-color: @genesys-off-white-bg-3;
+        background-color: @gux-off-white-bg;
+        color: @gux-grey-bg-3;
       }
     }
     &.page {
       .select-field {
         .ghost {
-          background-color: @genesys-off-white-bg;
+          background-color: @gux-off-white-bg;
+          color: @gux-grey-bg-3;
         }
-        genesys-text-field {
+        gux-text-field {
           input {
-            border-bottom: 1px solid @genesys-border;
+            border-bottom: 1px solid @gux-border;
           }
         }
       }
       &.active {
-        genesys-text-field {
+        gux-text-field {
           input {
-            border-bottom: 1px solid @genesys-blue;
+            border-bottom: 1px solid @gux-blue;
           }
         }
       }
@@ -173,85 +174,87 @@ genesys-dropdown {
     &.palette {
       .select-field {
         .ghost {
-          background-color: @genesys-off-white-bg;
+          background-color: @gux-off-white-bg;
+          color: @gux-grey-bg-3;
         }
-        genesys-text-field {
+        gux-text-field {
           input {
-            border-bottom: 1px solid @genesys-border;
+            border-bottom: 1px solid @gux-border;
           }
         }
       }
       &.active {
-        genesys-text-field {
+        gux-text-field {
           input {
-            border-bottom: 1px solid @genesys-blue;
+            border-bottom: 1px solid @gux-blue;
           }
         }
       }
     }
   }
 };
-.genesys-light-theme {
-  genesys-dropdown {
-    .genesys-dropdown-light-theme;
+.gux-light-theme {
+  gux-dropdown {
+    .gux-dropdown-light-theme;
   }
 }
-.genesys-dropdown.genesys-light-theme {
-  .genesys-dropdown-light-theme;
+.gux-dropdown.gux-light-theme {
+  .gux-dropdown-light-theme;
 }
 // Dark
-.genesys-dropdown-dark-theme {
-  color: @genesys-off-white;
-  div.genesys-dropdown {
+.gux-dropdown-dark-theme {
+  color: @gux-off-white;
+  div.gux-dropdown {
     .select-field {
       .ghost {
-        background-color: @genesys-grey-bg-3;
+        background-color: @gux-border-dark;
+        color: @gux-grey-bg-3;
       }
       button.genesys-icon-dropdown-arrow {
-        color: @genesys-off-white;
+        color: @gux-off-white;
       }
     }
     &.page {
       .select-field {
         .ghost {
-          background-color: @genesys-charocal;
+          background-color: @gux-charocal;
         }
-        genesys-text-field {
-          border-bottom: 1px solid @genesys-grey-1;
+        gux-text-field {
+          border-bottom: 1px solid @gux-grey-1;
         }
       }
       &.active {
-        genesys-text-field {
-          border-bottom: 1px solid @genesys-blue;
+        gux-text-field {
+          border-bottom: 1px solid @gux-blue;
         }
       }
     }
     &.palette {
       .select-field {
         .ghost {
-          background-color: @genesys-charocal;
+          background-color: @gux-charocal;
         }
-        genesys-text-field {
-          border-bottom: 1px solid @genesys-grey-1;
+        gux-text-field {
+          border-bottom: 1px solid @gux-grey-1;
         }
       }
       &.active {
-        genesys-text-field {
-          border-bottom: 1px solid @genesys-blue;
+        gux-text-field {
+          border-bottom: 1px solid @gux-blue;
         }
       }
     }
   }
 };
-.genesys-dark-theme {
-  genesys-dropdown {
-    .genesys-dropdown-dark-theme;
+.gux-dark-theme {
+  gux-dropdown {
+    .gux-dropdown-dark-theme;
   }
 }
-.genesys-dropdown.genesys-dark-theme {
-  .genesys-dropdown-dark-theme;
+.gux-dropdown.gux-dark-theme {
+  .gux-dropdown-dark-theme;
 }
 // Default Theme
-genesys-dropdown {
-  .genesys-dropdown-light-theme;
+gux-dropdown {
+  .gux-dropdown-light-theme;
 }

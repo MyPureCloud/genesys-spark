@@ -105,8 +105,8 @@ export class GuxTextField {
   firstValue: string;
   timeout: any;
 
-  emitFocusEvent (event) {
-    this.root.dispatchEvent(new FocusEvent(event.type, event));
+  get showClearButton(): boolean {
+    return this.useClearButton && this.value && !this.readonly;
   }
 
   /**
@@ -120,6 +120,10 @@ export class GuxTextField {
     event.stopPropagation();
     this.value = event.target.value;
     this.input.emit(event.target.value);
+  }
+
+  emitFocusEvent (event) {
+    this.root.dispatchEvent(new FocusEvent(event.type, event));
   }
 
   @Watch('value')
