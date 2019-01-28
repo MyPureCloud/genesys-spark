@@ -26,8 +26,6 @@ storiesOf('Genesys Components', module)
           max=${number('max', 10)}
           step=${number('step', 1)}
           value=${number('value', 3)}
-          isPercentage=${boolean('isPercentage', true)}
-          displayTextBox=${boolean('displayTextBox', true)}
           >
         </gux-slider>
       </div>`,
@@ -35,6 +33,8 @@ storiesOf('Genesys Components', module)
       );
       setTimeout(() => {
         const slider = document.getElementById('interactive');
+        slider.isPercentage = boolean('isPercentage', true);
+        slider.displayTextBox = boolean('displayTextBox', true);
         slider.addEventListener('update', e => action('update')(e.detail));
       }, 100);
       document.getElementsByTagName('html')[0].className =
