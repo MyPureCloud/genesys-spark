@@ -214,16 +214,33 @@ gux-slider {
 // Theming
 
 .gux-slider-dark-theme {
+  .range-input {
+    &::-webkit-slider-thumb {
+      background-color: @slider-fill-dark;
+    }
+
+    &::-moz-range-thumb {
+      background-color: @slider-fill-dark;
+    }
+
+    &::-ms-thumb {
+      background-color: @slider-fill-dark;
+    }
+
+    &::-ms-fill-lower {
+      background: @slider-fill-dark;
+    }
+
+    &::-ms-fill-upper {
+      background: @slider-dark;
+    }
+  }
   .mask-track {
     background-color: @slider-dark;
   }
 
   .mask-slider {
     background-color: @slider-fill-dark;
-
-    &::after {
-      background-color: @slider-fill-dark;
-    }
   }
 
   .range-tooltip {

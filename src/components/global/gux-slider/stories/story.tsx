@@ -38,7 +38,7 @@ storiesOf('Genesys Components', module)
         slider.addEventListener('update', e => action('update')(e.detail));
       }, 100);
       document.getElementsByTagName('html')[0].className =
-        'genesys-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;
     })
   );
