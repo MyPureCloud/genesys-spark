@@ -52,7 +52,8 @@ storiesOf('Genesys Components', module)
       );
       setTimeout(() => {
         const it = document.getElementById('interactive');
-        it.addEventListener('custom', e => action('custom')(e.detail));
+        it.addEventListener('input', e => action('input')(e.detail));
+        it.addEventListener('focus', e => action('focus')(e.detail));
       }, 100);
       document.getElementsByTagName('html')[0].className =
         'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';

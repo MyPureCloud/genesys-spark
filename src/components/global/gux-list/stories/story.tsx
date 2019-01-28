@@ -1,6 +1,5 @@
 import { action } from '@storybook/addon-actions';
 import {
-  array,
   object,
   select,
   withKnobs
@@ -24,7 +23,8 @@ storiesOf('Genesys Components', module)
           text: 'test'
         },
         { type: 'divider' },
-        { text: 'test2' }
+        { text: 'test2' },
+        { text: 'test3', isDisabled: true }
       ]);
       el.addEventListener('custom', e => action('custom')(e.detail));
       document.getElementsByTagName('html')[0].className =

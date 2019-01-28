@@ -1,5 +1,6 @@
 import {
   Component,
+  Element,
   Event,
   EventEmitter,
   Method,
@@ -18,6 +19,9 @@ enum Types {
   tag: 'gux-text-field'
 })
 export class GuxTextField {
+  @Element()
+  root: HTMLStencilElement;
+
   inputElement: HTMLInputElement;
 
   /**
@@ -118,6 +122,10 @@ export class GuxTextField {
     this.input.emit(event.target.value);
   }
 
+  emitFocusEvent (event) {
+    this.root.dispatchEvent(new FocusEvent(event.type, event));
+  }
+
   @Watch('value')
   watchValue(newValue: string) {
     window.clearTimeout(this.timeout);
@@ -208,7 +216,7 @@ export class GuxTextField {
   render() {
     return (
       <div class={this.getClassList()}>
-        <label>{this.label}</label>
+        {this.label && <label>{this.label}</label>}
         <div class="gux-field">
           <input
             aria-label={this.label}
@@ -218,8 +226,9 @@ export class GuxTextField {
             disabled={this.disabled}
             readonly={this.readonly}
             placeholder={this.placeholder}
-            onInput={e => this.emitInput(e)}
-            class={this.showClearButton ? 'text-clearable' : ''}
+            onInput={(e) => this.emitInput(e)}
+            onFocus={(e) => this.emitFocusEvent(e)}
+            onBlur={(e) => this.emitFocusEvent(e)}
           />
           {this.showClearButton && (
             <button

@@ -1,0 +1,260 @@
+// Variables part
+
+// Style
+gux-dropdown {
+  div.gux-dropdown {
+    position: relative;
+    margin: 4px 0;
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
+    }
+    &.left {
+      display: flex;
+    }
+    label {
+      margin-right: 8px;
+      height: 32px;
+      line-height: 30px;
+      font-weight: bold;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .select-field {
+      position: relative;
+      height: 32px;
+      width: 100%;
+      .ghost {
+        position: absolute;
+        height: 32px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 25px 4px 12px;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 1.66666667;
+      }
+      gux-text-field {
+        > div {
+          margin: 0;
+        }
+        input {
+          cursor: pointer;
+          background-color: transparent;
+        }
+        &.unclearable {
+          button {
+            display: none;
+          }
+        }
+      }
+      button.genesys-icon-dropdown-arrow {
+        position: absolute;
+        top: 1px;
+        right: 3px;
+        bottom: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: block;
+        outline: none;
+        overflow: hidden;
+        font-size: 16px;
+        pointer-events: none;
+      }
+      &.top {
+        .ghost {
+          margin-top: 32px;
+        }
+      }
+    }
+    gux-list {
+      display: none;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      &.opened {
+        display: block;
+      }
+    }
+    &.page {
+      .select-field {
+        .ghost {
+          .large-title();
+          line-height: 1.66666667;
+          height: 48px;
+          padding: 2px 25px 4px 11px;
+        }
+        height: 48px;
+        gux-text-field {
+          div.gux-field {
+            height: 48px;
+          }
+          input {
+            .large-title();
+            line-height: 1.66666667;
+            height: 48px;
+            border: none;
+            border-bottom: 2px solid transparent;
+            &:focus {
+              box-shadow: none;
+              border: none;
+              border-bottom: 2px solid fade(@gux-blue, 50%);
+            }
+          }
+        }
+      }
+    }
+    &.palette {
+      .select-field {
+        .ghost {
+          .small-title();
+          line-height: 1.66666667;
+          height: 52px;
+          padding: 9px 25px 4px 11px;
+        }
+        height: 52px;
+        gux-text-field {
+          div.gux-field {
+            height: 52px;
+          }
+          input {
+            .small-title();
+            line-height: 1.66666667;
+            height: 52px;
+            border: none;
+            border-bottom: 2px solid transparent;
+            &:focus {
+              box-shadow: none;
+              border: none;
+              border-bottom: 2px solid fade(@gux-blue, 50%);
+            }
+          }
+        }
+      }
+      gux-list {
+        width: calc(100% - 16px);
+        margin: 0 8px;
+      }
+    }
+  }
+}
+// Theming
+// Light
+.gux-dropdown-light-theme {
+  div.gux-dropdown {
+    .select-field {
+      .ghost {
+        background-color: @gux-off-white-bg;
+        color: @gux-grey-bg-3;
+      }
+    }
+    &.page {
+      .select-field {
+        .ghost {
+          background-color: @gux-off-white-bg;
+          color: @gux-grey-bg-3;
+        }
+        gux-text-field {
+          input {
+            border-bottom: 1px solid @gux-border;
+          }
+        }
+      }
+      &.active {
+        gux-text-field {
+          input {
+            border-bottom: 1px solid @gux-blue;
+          }
+        }
+      }
+    }
+    &.palette {
+      .select-field {
+        .ghost {
+          background-color: @gux-off-white-bg;
+          color: @gux-grey-bg-3;
+        }
+        gux-text-field {
+          input {
+            border-bottom: 1px solid @gux-border;
+          }
+        }
+      }
+      &.active {
+        gux-text-field {
+          input {
+            border-bottom: 1px solid @gux-blue;
+          }
+        }
+      }
+    }
+  }
+};
+.gux-light-theme {
+  gux-dropdown {
+    .gux-dropdown-light-theme;
+  }
+}
+.gux-dropdown.gux-light-theme {
+  .gux-dropdown-light-theme;
+}
+// Dark
+.gux-dropdown-dark-theme {
+  color: @gux-off-white;
+  div.gux-dropdown {
+    .select-field {
+      .ghost {
+        background-color: @gux-border-dark;
+        color: @gux-grey-bg-3;
+      }
+      button.genesys-icon-dropdown-arrow {
+        color: @gux-off-white;
+      }
+    }
+    &.page {
+      .select-field {
+        .ghost {
+          background-color: @gux-charocal;
+        }
+        gux-text-field {
+          border-bottom: 1px solid @gux-grey-1;
+        }
+      }
+      &.active {
+        gux-text-field {
+          border-bottom: 1px solid @gux-blue;
+        }
+      }
+    }
+    &.palette {
+      .select-field {
+        .ghost {
+          background-color: @gux-charocal;
+        }
+        gux-text-field {
+          border-bottom: 1px solid @gux-grey-1;
+        }
+      }
+      &.active {
+        gux-text-field {
+          border-bottom: 1px solid @gux-blue;
+        }
+      }
+    }
+  }
+};
+.gux-dark-theme {
+  gux-dropdown {
+    .gux-dropdown-dark-theme;
+  }
+}
+.gux-dropdown.gux-dark-theme {
+  .gux-dropdown-dark-theme;
+}
+// Default Theme
+gux-dropdown {
+  .gux-dropdown-light-theme;
+}
