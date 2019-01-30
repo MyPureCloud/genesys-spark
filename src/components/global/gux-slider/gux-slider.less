@@ -39,6 +39,7 @@ gux-slider {
     align-items: center;
     position: relative;
     width: 100%;
+    height: 18px;
   }
 
   .range-input {
@@ -116,7 +117,7 @@ gux-slider {
 
   .mask {
     position: absolute;
-    top: 5px;
+    top: 8px;
     left: 0px;
     width: 100%;
     z-index: -1;
@@ -148,17 +149,32 @@ gux-slider {
     }
   }
 
-  .range-tooltip {
-    display: none;
+  .range-tooltip-container {
     position: absolute;
     top: -50px;
+    height: 32px;
+    width: 100%;
+
+    &.hidden {
+      visibility: hidden;
+
+      .range-tooltip {
+        visibility: hidden;
+      }
+    }
+  }
+
+  .range-tooltip {
+    display: flex;
+    position: absolute;
     height: 32px;
     width: 50px;
     border: 1px solid @slider-border;
     box-shadow: 0 0 2px @slider-border;
     border-radius: 2px;
     justify-content: center;
-    margin-left: -31px;
+    align-items: center;
+    margin-left: -20px;
 
     &::after,
     &::before {
@@ -189,7 +205,7 @@ gux-slider {
     }
   }
 
-  .range-input:hover ~ .range-tooltip {
+  .range-input:hover ~ .range-tooltip-container {
     display: flex;
   }
 

@@ -38,8 +38,8 @@ export class GuxSlider {
 
   sliderInput: HTMLInputElement;
   sliderMask: HTMLElement;
-  sliderTextbox: HTMLElement;
   sliderTooltip: HTMLElement;
+  sliderTooltipContainer: HTMLElement;
 
   inputRegex = new RegExp('([0-9]+.?[0-9]*)%?');
 
@@ -80,11 +80,10 @@ export class GuxSlider {
     const placementPercentage =
       ((this.value - this.min) / (this.max - this.min)) * 100;
     if (this.sliderTooltip) {
-      const requireMinPlacement =
-        (this.sliderInput.offsetWidth / 100) * placementPercentage < 12;
-      this.sliderTooltip.style.left = requireMinPlacement
-        ? '12px'
-        : `${placementPercentage}%`;
+      const width = this.sliderTooltipContainer.offsetWidth;
+      const offset =
+        placementPercentage - (placementPercentage / 8 / width) * 100;
+      this.sliderTooltip.style.left = `${offset}%`;
     }
     this.sliderMask.style.width = `${placementPercentage}%`;
   }
@@ -115,21 +114,25 @@ export class GuxSlider {
               <div class="mask-track" />
             </div>
           </div>
-          {!this.displayTextBox && (
+          <div
+            class={
+              'range-tooltip-container' + (this.displayTextBox ? ' hidden' : '')
+            }
+            ref={el => (this.sliderTooltipContainer = el)}
+          >
             <div
               class="range-tooltip small-body"
               ref={el => (this.sliderTooltip = el)}
             >
-              <div class="tooltip-value">{value}</div>
+              {value}
             </div>
-          )}
+          </div>
         </div>
         {this.displayTextBox && (
           <gux-text-field
             label="slider value"
             value={value}
             onChange={(e: UIEvent) => this.updateValue(e)}
-            ref={el => (this.sliderTextbox = el)}
           />
         )}
       </div>
