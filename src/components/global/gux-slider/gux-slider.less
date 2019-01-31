@@ -150,21 +150,15 @@ gux-slider {
   }
 
   .range-tooltip-container {
+    visibility: hidden;
     position: absolute;
     top: -50px;
     height: 32px;
     width: 100%;
-
-    &.hidden {
-      visibility: hidden;
-
-      .range-tooltip {
-        visibility: hidden;
-      }
-    }
   }
 
   .range-tooltip {
+    visibility: hidden;
     display: flex;
     position: absolute;
     height: 32px;
@@ -205,8 +199,11 @@ gux-slider {
     }
   }
 
-  .range-input:hover ~ .range-tooltip-container {
-    display: flex;
+  .range-input:hover ~ .range-tooltip-container:not(.hidden) {
+    visibility: visible;
+    .range-tooltip {
+      visibility: visible;
+    }
   }
 
   gux-text-field {
