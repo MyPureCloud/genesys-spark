@@ -199,7 +199,8 @@ gux-slider {
     }
   }
 
-  .range-input:hover ~ .range-tooltip-container:not(.hidden) {
+  .range-input:hover ~ .range-tooltip-container:not(.hidden),
+  .range-input:active ~ .range-tooltip-container:not(.hidden) {
     visibility: visible;
     .range-tooltip {
       visibility: visible;
