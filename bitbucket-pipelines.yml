@@ -11,7 +11,7 @@ pipelines:
          - echo "-- Genesys WebComponents --"
          - node -v
          - npm -v
-         - npm ci
+         - npm install
          - npm run build
          - npm run lint
          - npm run test
