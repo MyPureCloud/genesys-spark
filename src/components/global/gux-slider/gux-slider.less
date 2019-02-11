@@ -32,6 +32,7 @@ gux-slider {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 40px;
   }
 
   .slider-container {
@@ -70,9 +71,10 @@ gux-slider {
       margin-top: -5px;
 
       &:active {
-        margin-top: -7px;
+        margin-top: -8px;
       }
     }
+
     /** Forefox */
     &::-moz-range-track {
       .track();
@@ -80,12 +82,8 @@ gux-slider {
 
     &::-moz-range-thumb {
       .thumb();
-      margin-top: -5px;
-
-      &:active {
-        margin-top: -7px;
-      }
     }
+
     /** IE */
     &::-ms-track {
       border: none;
