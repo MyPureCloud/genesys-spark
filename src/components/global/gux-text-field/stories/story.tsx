@@ -33,10 +33,12 @@ storiesOf('Genesys Components', module)
         <br/><i>Error</i><br/><br/>
         <gux-text-field error-message='Error message here' label='Name'></gux-text-field>
         <gux-text-field error-message='Error message here' label='Longer name above'></gux-text-field>
+        <gux-text-field label='Edit login password' type='password' placeholder='Enter password here'></gux-text-field>
         <br/><br/><h2>Interactive sample</h2>
         <gux-text-field
           id='interactive'
           placeholder=${text('placeholder', 'placeholder')}
+          type=${text('type', 'text')}
           label=${text('label', 'label')}
           erase-label=${text('erase-label', 'erase')}
           label-position=${text('label-position', '')}
