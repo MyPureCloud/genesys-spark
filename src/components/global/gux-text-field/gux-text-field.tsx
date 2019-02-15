@@ -34,7 +34,7 @@ export class GuxTextField {
    * Indicate the input type
    */
   @Prop()
-  type: string = '';
+  type: 'text' | 'email' | 'password' | 'number' = 'text';
 
   /**
    * Disable the input and prevent interactions.
@@ -255,3 +255,4 @@ export class GuxTextField {
     );
   }
 }
+
