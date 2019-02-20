@@ -1,4 +1,5 @@
 import { newE2EPage } from '@stencil/core/testing';
+import { E2EGuxDropdown } from '../gux-dropdown/gux-dropdown.e2eelement';
 
 describe('gux-pagination', () => {
   it('renders', async () => {
@@ -50,7 +51,8 @@ describe('gux-pagination', () => {
 
     const display = await page.find('.pagination-item-counts-display');
 
-    await page.select('.pagination-items-per-page', '50');
+    const dropdown = new E2EGuxDropdown(page, '.pagination-items-per-page');
+    await dropdown.select('50');
     await page.waitForChanges();
 
     const text = (await display.textContent).trim();
@@ -66,7 +68,8 @@ describe('gux-pagination', () => {
     const itemCountDisplay = await page.find('.pagination-item-counts-display');
     const currentPageInput = await page.find('.pagination-current-page-input');
 
-    await page.select('.pagination-items-per-page', '100');
+    const dropdown = new E2EGuxDropdown(page, '.pagination-items-per-page');
+    await dropdown.select('100');
     await page.waitForChanges();
 
     const text = (await itemCountDisplay.textContent).trim();
