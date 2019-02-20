@@ -11,6 +11,19 @@
     display: inline-block;
     cursor: pointer;
 
+    .switch-button {
+      border: none;
+      background: transparent;
+      padding: 0;
+
+      .display-text {
+        font-size: 12px;
+        padding: 8px 0;
+        margin: 0 8px;
+      }
+
+    }
+
     &:first-child {
       .display-text {
         margin-left: 0;
@@ -23,11 +36,6 @@
       }
     }
 
-    .display-text {
-      font-size: 12px;
-      padding: 8px 0;
-      margin: 0 8px;
-    }
 
     &.selected {
       .display-text {

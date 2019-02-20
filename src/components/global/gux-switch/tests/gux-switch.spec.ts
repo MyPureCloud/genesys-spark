@@ -28,7 +28,6 @@ describe('gux-switch', () => {
     ];
   });
 
-
   it('builds', () => {
     expect(new GuxSwitch()).toBeTruthy();
   });
@@ -44,7 +43,9 @@ describe('gux-switch', () => {
       component.selectSwitchAtIndex(2);
 
       expect(component.selectedValue).toEqual(component.items[2].value);
-      expect(component.selectionChanged.emit).toHaveBeenCalledWith(component.items[2].value);
+      expect(component.selectionChanged.emit).toHaveBeenCalledWith(
+        component.items[2].value
+      );
     });
   });
 
@@ -62,7 +63,9 @@ describe('gux-switch', () => {
       component.onKeyDownAtIndex(2, event);
 
       expect(component.selectedValue).toEqual(component.items[2].value);
-      expect(component.selectionChanged.emit).toHaveBeenCalledWith(component.items[2].value);
+      expect(component.selectionChanged.emit).toHaveBeenCalledWith(
+        component.items[2].value
+      );
     });
 
     it('should set the `selectedValue` property on keypress only if the key is space', () => {
@@ -78,7 +81,9 @@ describe('gux-switch', () => {
       component.onKeyDownAtIndex(2, event);
 
       expect(component.selectedValue).toEqual(component.items[2].value);
-      expect(component.selectionChanged.emit).toHaveBeenCalledWith(component.items[2].value);
+      expect(component.selectionChanged.emit).toHaveBeenCalledWith(
+        component.items[2].value
+      );
     });
 
     it('should not change the `selectedValue` property on keypress it is not enter/space', () => {
@@ -126,7 +131,9 @@ describe('gux-switch', () => {
         isDisabled: false,
         value: 'val'
       };
-      expect(component.classForSwtichItemAtIndex(item)).toEqual('gux-switch small');
+      expect(component.classForSwtichItemAtIndex(item)).toEqual(
+        'gux-switch small'
+      );
     });
 
     it('should return the correct class string for a medium switch that is disabled', () => {
@@ -137,7 +144,9 @@ describe('gux-switch', () => {
         isDisabled: true,
         value: 'val'
       };
-      expect(component.classForSwtichItemAtIndex(item)).toEqual('gux-switch medium disabled');
+      expect(component.classForSwtichItemAtIndex(item)).toEqual(
+        'gux-switch medium disabled'
+      );
     });
 
     it('should return the correct class string for a medium switch that is selected', () => {
@@ -148,8 +157,9 @@ describe('gux-switch', () => {
         isDisabled: false,
         value: 'test'
       };
-      expect(component.classForSwtichItemAtIndex(item)).toEqual('gux-switch large selected');
+      expect(component.classForSwtichItemAtIndex(item)).toEqual(
+        'gux-switch large selected'
+      );
     });
   });
-
 });

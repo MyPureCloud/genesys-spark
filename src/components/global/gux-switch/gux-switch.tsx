@@ -51,17 +51,22 @@ export class GuxSwitch {
 
   listElementForSwtichItemAtIndex(item: ISwitchItem, index: number): JSXElements.LiHTMLAttributes<HTMLElement> {
     if(item.isDisabled) {
-      return (<li class={this.classForSwtichItemAtIndex(item)} aria-disabled={item.isDisabled}>
-        <div class="display-text">{item.displayName}</div>
+      return (<li class={this.classForSwtichItemAtIndex(item)}>
+        <button
+          class="switch-button"
+          disabled={item.isDisabled}>
+          <div class="display-text">{item.displayName}</div>
+        </button>
       </li>)
     }
-    return (<li
-      tabindex="0"
-      aria-disabled={item.isDisabled}
-      onKeyDown={(ev) => this.onKeyDownAtIndex(index, ev)}
-      onClick={() => this.selectSwitchAtIndex(index)}
-      class={this.classForSwtichItemAtIndex(item)}>
-      <div class="display-text">{item.displayName}</div>
+    return (<li class={this.classForSwtichItemAtIndex(item)}>
+      <button
+        class="switch-button"
+        disabled={item.isDisabled}
+        onKeyDown={(ev) => this.onKeyDownAtIndex(index, ev)}
+        onClick={() => this.selectSwitchAtIndex(index)}>
+        <div class="display-text">{item.displayName}</div>
+      </button>
     </li>)
   }
 
