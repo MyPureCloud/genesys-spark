@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "0.0.7",
+  "version": "0.0.32",
   "description": "Common webcomponents",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -82,5 +82,8 @@
   "repository": {
     "type": "git",
     "url": "git+bitbucket.org:inindca/genesys-webcomponents.git"
+  },
+  "optionalDependencies": {
+    "@purecloud/web-app-deploy": "^5.0.21"
   }
 }

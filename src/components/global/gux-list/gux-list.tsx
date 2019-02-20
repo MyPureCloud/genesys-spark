@@ -1,4 +1,4 @@
-import { Component, Element, Method, Prop } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Method, Prop } from '@stencil/core';
 import { KeyCode, ListTypeEnum } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 @Component({
@@ -11,11 +11,24 @@ export class GuxList {
   /**
    * The list.
    * each item should contain a text and a type
-   * an item could have the poperty isDisabled
+   * an item could have the property isDisabled
    */
   @Prop()
   items: IListItem[] = [];
+  /**
+   * Highlights to bold.
+   */
+  @Prop()
+  highlight: string = '';
+
+  @Event()
+  change: EventEmitter;
+  emitChange(value: string) {
+    this.change.emit(value);
+  }
+
   onItemClicked(item: IListItem) {
+    this.emitChange(item.text);
     if (item.callback) {
       item.callback(item);
     }
@@ -26,6 +39,15 @@ export class GuxList {
       }
     });
   }
+
+  _computedText (text: string) {
+    if (this.highlight && text.startsWith(this.highlight)) {
+      return <span><strong>{this.highlight}</strong>{text.replace(this.highlight, '')}</span>;
+    } else {
+      return text;
+    }
+  }
+
   @Method()
   setFocusOnFirstItem() {
     this.items.forEach(i => {
@@ -41,9 +63,7 @@ export class GuxList {
       );
     });
     firstFocusable.el.setAttribute('tabindex', '0');
-    if (firstFocusable) {
-      firstFocusable.el.focus();
-    }
+    if (firstFocusable) { firstFocusable.el.focus(); }
   }
 
   onKeyDown(event: KeyboardEvent, item: IListItem) {
@@ -100,10 +120,12 @@ export class GuxList {
       el.focus();
     }
   }
-  /**
-   * Once the component is loaded set the tabindex
-   */
-  componentDidLoad() {
+
+  emitFocusEvent (event, item) {
+    this.root.dispatchEvent(new CustomEvent(event.type, { ...event, detail: item}));
+  }
+
+  setFirstTabIndex () {
     const firstFocusable = this.items.find(item => {
       return (
         item.el &&
@@ -111,8 +133,22 @@ export class GuxList {
         (!item.type || item.type === ListTypeEnum.Item)
       );
     });
-    firstFocusable.el.setAttribute('tabindex', '0');
+    if (firstFocusable) { firstFocusable.el.setAttribute('tabindex', '0'); }
   }
+
+  /**
+   * Once the component is loaded
+   */
+  componentDidLoad() {
+    this.setFirstTabIndex();
+  }
+  /**
+   * Once the component is updated
+   */
+  componentDidUpdate () {
+    this.setFirstTabIndex();
+  }
+
   render() {
     return (
       <ul>
@@ -127,8 +163,9 @@ export class GuxList {
                 ref={el => (item.el = el)}
                 onClick={() => this.onItemClicked(item)}
                 onKeyDown={e => this.onKeyDown(e, item)}
+                onFocus={(e) => this.emitFocusEvent(e, item)}
               >
-                {item.text}
+                {this._computedText(item.text)}
               </li>
             )
         )}
