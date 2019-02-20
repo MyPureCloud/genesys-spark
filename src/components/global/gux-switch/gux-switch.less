@@ -9,7 +9,6 @@
     border: none;
     box-shadow: inset 0px -1px 0px 0px @gux-border;
     display: inline-block;
-    cursor: pointer;
 
     .switch-button {
       border: none;
@@ -22,6 +21,10 @@
         margin: 0 8px;
       }
 
+      &:hover, &:active {
+        cursor: pointer;
+        color: @gux-dark-blue;
+      }
     }
 
     &:first-child {
@@ -77,12 +80,23 @@
 
 // Dark
 .gux-switch-dark-theme {
-  .display-text  {
-    color: @gux-off-white;
-  }
 
   .gux-switch {
     box-shadow: inset 0px -1px 0px 0px @gux-grey-1;
+
+    .switch-button {
+      .display-text  {
+        color: @gux-off-white;
+      }
+
+      &:hover, &:active {
+        cursor: pointer;
+
+        .display-text  {
+          color: @gux-dark-blue;
+        }
+      }
+    }
 
     &.selected {
       .display-text {
@@ -97,9 +111,6 @@
       }
     }
 
-    &:hover, &:active {
-      color: @gux-dark-blue;
-    }
   }
 };
 
