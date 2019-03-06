@@ -31,6 +31,12 @@ export class GuxTextField {
   value: string = '';
 
   /**
+   * Indicate the input type
+   */
+  @Prop()
+  type: 'text' | 'email' | 'password' | 'number' = 'text';
+
+  /**
    * Disable the input and prevent interactions.
    */
   @Prop()
@@ -220,7 +226,7 @@ export class GuxTextField {
         <div class="gux-field">
           <input
             aria-label={this.label}
-            type="text"
+            type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
             disabled={this.disabled}
@@ -249,3 +255,4 @@ export class GuxTextField {
     );
   }
 }
+
