@@ -1,4 +1,4 @@
-import { select, withKnobs } from '@storybook/addon-knobs/polymer';
+import { select } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
 import { withReadme } from 'storybook-readme';
@@ -6,7 +6,6 @@ import { withReadme } from 'storybook-readme';
 import README from '../readme.md';
 
 storiesOf('Genesys Components', module)
-  .addDecorator(withKnobs)
   .add(
     'Genesys Accordion',
     withReadme(README, () => {

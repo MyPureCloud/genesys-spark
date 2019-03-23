@@ -9,21 +9,21 @@ The scroll bar users to increase or decrease the rating using arrow keys located
 
 ## Properties
 
-| Property         | Attribute          | Description                                  | Type      |
-| ---------------- | ------------------ | -------------------------------------------- | --------- |
-| `displayTextBox` | `display-text-box` | Indicates if the input box will be displayed | `boolean` |
-| `isPercentage`   | `is-percentage`    | Indicate if the value is a percentage        | `boolean` |
-| `max`            | `max`              | Indicates the maximum value for the slider   | `number`  |
-| `min`            | `min`              | Indicates the minimum value for the slider   | `number`  |
-| `step`           | `step`             | Inicates the step value of the slider        | `number`  |
-| `value`          | `value`            | Indicates the value of the slider            | `number`  |
+| Property         | Attribute          | Description                                  | Type      | Default |
+| ---------------- | ------------------ | -------------------------------------------- | --------- | ------- |
+| `displayTextBox` | `display-text-box` | Indicates if the input box will be displayed | `boolean` | `true`  |
+| `isPercentage`   | `is-percentage`    | Indicate if the value is a percentage        | `boolean` | `false` |
+| `max`            | `max`              | Indicates the maximum value for the slider   | `number`  | `100`   |
+| `min`            | `min`              | Indicates the minimum value for the slider   | `number`  | `0`     |
+| `step`           | `step`             | Inicates the step value of the slider        | `number`  | `1`     |
+| `value`          | `value`            | Indicates the value of the slider            | `number`  | `0`     |
 
 
 ## Events
 
-| Event    | Detail | Description                         |
-| -------- | ------ | ----------------------------------- |
-| `update` |        | Triggered when the value is changed |
+| Event    | Description                         | Type                |
+| -------- | ----------------------------------- | ------------------- |
+| `update` | Triggered when the value is changed | `CustomEvent<void>` |
 
 
 ----------------------------------------------

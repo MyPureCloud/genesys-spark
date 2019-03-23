@@ -12,19 +12,19 @@ A check event is triggered when the state of the component changed.
 
 ## Properties
 
-| Property         | Attribute         | Description                               | Type      |
-| ---------------- | ----------------- | ----------------------------------------- | --------- |
-| `checkedLabel`   | `checked-label`   | Indicate the checked label                | `string`  |
-| `checked`        | `checked`         | Indicate if the toggle is checked or not  | `boolean` |
-| `disabled`       | `disabled`        | Indicate if the toggle is disabled or not | `boolean` |
-| `uncheckedLabel` | `unchecked-label` | Indicate the unchecked label              | `string`  |
+| Property         | Attribute         | Description                               | Type      | Default     |
+| ---------------- | ----------------- | ----------------------------------------- | --------- | ----------- |
+| `checked`        | `checked`         | Indicate if the toggle is checked or not  | `boolean` | `undefined` |
+| `checkedLabel`   | `checked-label`   | Indicate the checked label                | `string`  | `undefined` |
+| `disabled`       | `disabled`        | Indicate if the toggle is disabled or not | `boolean` | `undefined` |
+| `uncheckedLabel` | `unchecked-label` | Indicate the unchecked label              | `string`  | `undefined` |
 
 
 ## Events
 
-| Event   | Detail | Description                                        |
-| ------- | ------ | -------------------------------------------------- |
-| `check` |        | Triggered when the state of the component changed. |
+| Event   | Description                                        | Type                |
+| ------- | -------------------------------------------------- | ------------------- |
+| `check` | Triggered when the state of the component changed. | `CustomEvent<void>` |
 
 
 ----------------------------------------------

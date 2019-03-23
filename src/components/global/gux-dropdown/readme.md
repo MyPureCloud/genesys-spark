@@ -7,16 +7,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property        | Attribute        | Description                                                                                           | Type          |
-| --------------- | ---------------- | ----------------------------------------------------------------------------------------------------- | ------------- |
-| `disabled`      | `disabled`       | Disable the input and prevent interactions.                                                           | `boolean`     |
-| `filterable`    | `filterable`     | Whether the user can filter or not.                                                                   | `boolean`     |
-| `items`         | --               | The list items, an item contains a `text` and can be disabled.                                        | `IListItem[]` |
-| `labelPosition` | `label-position` | The input label position (can be left or top) if not defined the position depends of the label width. | `string`      |
-| `label`         | `label`          | The dropdown label.                                                                                   | `string`      |
-| `mode`          | `mode`           | Sets the select mode (default, page or palette).                                                      | `string`      |
-| `placeholder`   | `placeholder`    | The dropdown placeholder.                                                                             | `string`      |
-| `value`         | `value`          | Indicate the dropdown input value                                                                     | `string`      |
+| Property        | Attribute        | Description                                                                                           | Type          | Default     |
+| --------------- | ---------------- | ----------------------------------------------------------------------------------------------------- | ------------- | ----------- |
+| `disabled`      | `disabled`       | Disable the input and prevent interactions.                                                           | `boolean`     | `false`     |
+| `filterable`    | `filterable`     | Whether the user can filter or not.                                                                   | `boolean`     | `undefined` |
+| `items`         | --               | The list items, an item contains a `text` and can be disabled.                                        | `IListItem[]` | `[]`        |
+| `label`         | `label`          | The dropdown label.                                                                                   | `string`      | `undefined` |
+| `labelPosition` | `label-position` | The input label position (can be left or top) if not defined the position depends of the label width. | `string`      | `'left'`    |
+| `mode`          | `mode`           | Sets the select mode (default, page or palette).                                                      | `string`      | `'default'` |
+| `placeholder`   | `placeholder`    | The dropdown placeholder.                                                                             | `string`      | `undefined` |
+| `value`         | `value`          | Indicate the dropdown input value                                                                     | `string`      | `''`        |
 
 
 ----------------------------------------------

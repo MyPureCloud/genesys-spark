@@ -32,23 +32,22 @@
     "intl-messageformat": "^2.2.0"
   },
   "devDependencies": {
-    "@stencil/core": "^0.15.2",
+    "@stencil/core": "^0.18.1",
     "@stencil/less": "^0.1.0",
     "@stencil/utils": "0.0.5",
     "@stencil/webpack": "0.0.6",
-    "@storybook/addon-a11y": "^4.0.4",
-    "@storybook/addon-actions": "4.0.0-alpha.21",
-    "@storybook/addon-backgrounds": "4.0.0-alpha.21",
-    "@storybook/addon-knobs": "4.0.0-alpha.21",
-    "@storybook/addon-links": "4.0.0-alpha.21",
-    "@storybook/addon-notes": "4.0.0-alpha.21",
-    "@storybook/addon-options": "4.0.0-alpha.21",
-    "@storybook/addon-storysource": "4.0.0-alpha.21",
-    "@storybook/addon-viewport": "4.0.0-alpha.21",
-    "@storybook/addons": "4.0.0-alpha.21",
-    "@storybook/cli": "^3.4.10",
-    "@storybook/html": "^4.0.0-alpha.11",
-    "@storybook/polymer": "4.0.0-alpha.21",
+    "@storybook/addon-a11y": "^5.0.3",
+    "@storybook/addon-actions": "5.0.3",
+    "@storybook/addon-backgrounds": "5.0.3",
+    "@storybook/addon-knobs": "5.0.3",
+    "@storybook/addon-links": "5.0.3",
+    "@storybook/addon-notes": "5.0.3",
+    "@storybook/addon-storysource": "5.0.3",
+    "@storybook/addon-viewport": "5.0.3",
+    "@storybook/addons": "5.0.3",
+    "@storybook/cli": "^5.0.3",
+    "@storybook/html": "^5.0.3",
+    "@storybook/polymer": "5.0.3",
     "@types/jest": "23.3.5",
     "@types/puppeteer": "1.6.4",
     "babel-core": "6.26.3",
@@ -70,7 +69,7 @@
     "polymer-webpack-loader": "^2.0.3",
     "prettier": "^1.14.3",
     "puppeteer": "1.8.0",
-    "storybook-readme": "^4.0.2",
+    "storybook-readme": "^5.0.1",
     "ts-loader": "^5.3.0",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.15.0",
@@ -84,6 +83,6 @@
     "url": "git+bitbucket.org:inindca/genesys-webcomponents.git"
   },
   "optionalDependencies": {
-    "@purecloud/web-app-deploy": "^5.0.21"
+    "@purecloud/web-app-deploy": "^5.2.4"
   }
 }

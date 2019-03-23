@@ -8,16 +8,16 @@ An internal component used by the gux-pagination component.
 
 ## Properties
 
-| Property | Attribute | Description | Type                                             |
-| -------- | --------- | ----------- | ------------------------------------------------ |
-| `i18n`   | --        |             | `(resourceKey: string, context?: any) => string` |
+| Property | Attribute | Description | Type                                             | Default     |
+| -------- | --------- | ----------- | ------------------------------------------------ | ----------- |
+| `i18n`   | --        |             | `(resourceKey: string, context?: any) => string` | `undefined` |
 
 
 ## Events
 
-| Event                 | Detail | Description |
-| --------------------- | ------ | ----------- |
-| `itemsPerPageChanged` | number |             |
+| Event                 | Description | Type                  |
+| --------------------- | ----------- | --------------------- |
+| `itemsPerPageChanged` |             | `CustomEvent<number>` |
 
 
 ## Methods

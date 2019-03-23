@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { array, number, withKnobs } from '@storybook/addon-knobs';
+import { array, number } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/polymer';
 import { withReadme } from 'storybook-readme';
 
@@ -22,7 +22,6 @@ const createActionLoggers = story => {
 };
 
 storiesOf('Pagination', module)
-  .addDecorator(withKnobs)
   .addDecorator(createActionLoggers)
   .add(
     'Simple',

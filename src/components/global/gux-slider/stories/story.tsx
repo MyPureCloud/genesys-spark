@@ -2,8 +2,7 @@ import { action } from '@storybook/addon-actions';
 import {
   boolean,
   number,
-  select,
-  withKnobs
+  select
 } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
@@ -12,7 +11,6 @@ import { withReadme } from 'storybook-readme';
 import README from '../readme.md';
 
 storiesOf('Genesys Components', module)
-  .addDecorator(withKnobs)
   .add(
     'Genesys Slider',
     withReadme(README, () => {

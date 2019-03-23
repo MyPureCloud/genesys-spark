@@ -8,17 +8,17 @@ An internal component used by the gux-pagination component.
 
 ## Properties
 
-| Property      | Attribute      | Description | Type     |
-| ------------- | -------------- | ----------- | -------- |
-| `currentPage` | `current-page` |             | `number` |
-| `totalPages`  | `total-pages`  |             | `number` |
+| Property      | Attribute      | Description | Type     | Default     |
+| ------------- | -------------- | ----------- | -------- | ----------- |
+| `currentPage` | `current-page` |             | `number` | `undefined` |
+| `totalPages`  | `total-pages`  |             | `number` | `undefined` |
 
 
 ## Events
 
-| Event                | Detail | Description |
-| -------------------- | ------ | ----------- |
-| `currentPageChanged` | number |             |
+| Event                | Description | Type                  |
+| -------------------- | ----------- | --------------------- |
+| `currentPageChanged` |             | `CustomEvent<number>` |
 
 
 ----------------------------------------------
