@@ -6,17 +6,17 @@
 
 ## Properties
 
-| Property    | Attribute   | Description                                                                                     | Type          |
-| ----------- | ----------- | ----------------------------------------------------------------------------------------------- | ------------- |
-| `highlight` | `highlight` | Highlights to bold.                                                                             | `string`      |
-| `items`     | --          | The list. each item should contain a text and a type an item could have the property isDisabled | `IListItem[]` |
+| Property    | Attribute   | Description                                                                                     | Type          | Default |
+| ----------- | ----------- | ----------------------------------------------------------------------------------------------- | ------------- | ------- |
+| `highlight` | `highlight` | Highlights to bold.                                                                             | `string`      | `''`    |
+| `items`     | --          | The list. each item should contain a text and a type an item could have the property isDisabled | `IListItem[]` | `[]`    |
 
 
 ## Events
 
-| Event    | Detail | Description |
-| -------- | ------ | ----------- |
-| `change` |        |             |
+| Event    | Description | Type                |
+| -------- | ----------- | ------------------- |
+| `change` |             | `CustomEvent<void>` |
 
 
 ## Methods

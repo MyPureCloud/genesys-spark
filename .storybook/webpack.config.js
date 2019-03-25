@@ -2,15 +2,15 @@
 const path = require('path');
 const stencil = require('@stencil/webpack');
 
-module.exports = (baseConfig, env, defaultConfig) => {
-  if (env == 'PRODUCTION') {
-    defaultConfig.output = {
-      ...defaultConfig.output,
+module.exports = ({ config, mode }) => {
+  if (mode == 'PRODUCTION') {
+    config.output = {
+      ...config.output,
       publicPath: process.env.CDN_URL || ''
     };
   }
 
-  defaultConfig.module.rules.push(
+  config.module.rules.push(
     {
       resourceQuery: /blockType=docs/,
       use: [
@@ -63,8 +63,8 @@ module.exports = (baseConfig, env, defaultConfig) => {
     }
   );
 
-  defaultConfig.resolve = {
-    ...defaultConfig.resolve,
+  config.resolve = {
+    ...config.resolve,
     alias: {
       'genesys-webcomponents': path.resolve(
         __dirname,
@@ -75,5 +75,5 @@ module.exports = (baseConfig, env, defaultConfig) => {
     }
   };
 
-  return defaultConfig;
+  return config;
 };

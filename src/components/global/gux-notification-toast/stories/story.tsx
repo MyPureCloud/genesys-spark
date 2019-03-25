@@ -1,6 +1,5 @@
-import { checkA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-import { select, text, withKnobs } from '@storybook/addon-knobs/polymer';
+import { select, text } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
 import { withReadme } from 'storybook-readme';
@@ -8,8 +7,6 @@ import { withReadme } from 'storybook-readme';
 import README from '../readme.md';
 
 storiesOf('Genesys Components', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
   .add(
     'Genesys Notification Toast',
     withReadme(README, () => {

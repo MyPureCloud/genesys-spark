@@ -7,18 +7,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property        | Attribute        | Description                                        | Type                             |
-| --------------- | ---------------- | -------------------------------------------------- | -------------------------------- |
-| `items`         | --               | The names and values of the switch buttons         | `ISwitchItem[]`                  |
-| `layout`        | `layout`         | The allowed sizes                                  | `"large" \| "medium" \| "small"` |
-| `selectedValue` | `selected-value` | Used to keep track of the currently selected value | `string`                         |
+| Property        | Attribute        | Description                                        | Type                             | Default     |
+| --------------- | ---------------- | -------------------------------------------------- | -------------------------------- | ----------- |
+| `items`         | --               | The names and values of the switch buttons         | `ISwitchItem[]`                  | `undefined` |
+| `layout`        | `layout`         | The allowed sizes                                  | `"large" \| "medium" \| "small"` | `'medium'`  |
+| `selectedValue` | `selected-value` | Used to keep track of the currently selected value | `string`                         | `undefined` |
 
 
 ## Events
 
-| Event              | Detail | Description                         |
-| ------------------ | ------ | ----------------------------------- |
-| `selectionChanged` |        | Triggers when a switch is selected. |
+| Event              | Description                         | Type                |
+| ------------------ | ----------------------------------- | ------------------- |
+| `selectionChanged` | Triggers when a switch is selected. | `CustomEvent<void>` |
 
 
 ----------------------------------------------

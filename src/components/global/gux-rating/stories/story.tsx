@@ -1,12 +1,10 @@
-import { checkA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import {
   array,
   boolean,
   number,
   select,
-  text,
-  withKnobs
+  text
 } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { withReadme } from 'storybook-readme';
@@ -14,8 +12,6 @@ import { withReadme } from 'storybook-readme';
 import README from '../readme.md';
 
 storiesOf('Genesys Components', module)
-  .addDecorator(withKnobs)
-  .addDecorator(checkA11y)
   .add(
     'Genesys Rating',
     withReadme(README, () => {

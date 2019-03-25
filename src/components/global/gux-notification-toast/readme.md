@@ -7,22 +7,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property     | Attribute     | Description                                               | Type                         |
-| ------------ | ------------- | --------------------------------------------------------- | ---------------------------- |
-| `accent`     | `accent`      | The component accent (alert warning positive or neutral). | `string`                     |
-| `i18n`       | --            | Indicate the localisation strings                         | `{ [key: string]: string; }` |
-| `iconUri`    | `icon-uri`    | The icon uri of the title.                                | `string`                     |
-| `icon`       | `icon`        | The icon name of the title.                               | `string`                     |
-| `idToast`    | `id-toast`    | The id of the title.                                      | `string`                     |
-| `message`    | `message`     | The message of the toast.                                 | `string`                     |
-| `toastTitle` | `toast-title` | The toast title.                                          | `string`                     |
+| Property     | Attribute     | Description                                               | Type                         | Default                    |
+| ------------ | ------------- | --------------------------------------------------------- | ---------------------------- | -------------------------- |
+| `accent`     | `accent`      | The component accent (alert warning positive or neutral). | `string`                     | `'neutral'`                |
+| `i18n`       | --            | Indicate the localisation strings                         | `{ [key: string]: string; }` | `{     close: 'close'   }` |
+| `icon`       | `icon`        | The icon name of the title.                               | `string`                     | `undefined`                |
+| `iconUri`    | `icon-uri`    | The icon uri of the title.                                | `string`                     | `undefined`                |
+| `idToast`    | `id-toast`    | The id of the title.                                      | `string`                     | `undefined`                |
+| `message`    | `message`     | The message of the toast.                                 | `string`                     | `undefined`                |
+| `toastTitle` | `toast-title` | The toast title.                                          | `string`                     | `undefined`                |
 
 
 ## Events
 
-| Event        | Detail | Description |
-| ------------ | ------ | ----------- |
-| `closeClick` |        |             |
+| Event        | Description | Type                |
+| ------------ | ----------- | ------------------- |
+| `closeClick` |             | `CustomEvent<void>` |
 
 
 ----------------------------------------------

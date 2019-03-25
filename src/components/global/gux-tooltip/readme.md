@@ -31,20 +31,20 @@ If there is not enough space on the bottom, or right of the component, the toolt
 
 ## Properties
 
-| Property  | Attribute  | Description                           | Type      |
-| --------- | ---------- | ------------------------------------- | --------- |
-| `delay`   | `delay`    | Delay before hide. (Set to 0 to none) | `number`  |
-| `for`     | `for`      | Element's id.                         | `string`  |
-| `isShown` | `is-shown` | Tooltip current state.                | `boolean` |
-| `text`    | `text`     | Tooltip text.                         | `string`  |
+| Property  | Attribute  | Description                           | Type      | Default     |
+| --------- | ---------- | ------------------------------------- | --------- | ----------- |
+| `delay`   | `delay`    | Delay before hide. (Set to 0 to none) | `number`  | `1000`      |
+| `for`     | `for`      | Element's id.                         | `string`  | `undefined` |
+| `isShown` | `is-shown` | Tooltip current state.                | `boolean` | `false`     |
+| `text`    | `text`     | Tooltip text.                         | `string`  | `undefined` |
 
 
 ## Events
 
-| Event    | Detail | Description                          |
-| -------- | ------ | ------------------------------------ |
-| `hidden` |        | Triggered when the tooltip is hidden |
-| `shown`  |        | Triggered when the tooltip is shown  |
+| Event    | Description                          | Type                |
+| -------- | ------------------------------------ | ------------------- |
+| `hidden` | Triggered when the tooltip is hidden | `CustomEvent<void>` |
+| `shown`  | Triggered when the tooltip is shown  | `CustomEvent<void>` |
 
 
 ## Methods

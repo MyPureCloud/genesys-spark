@@ -8,12 +8,12 @@ An internal component used by the gux-pagination component.
 
 ## Properties
 
-| Property       | Attribute        | Description | Type                                             |
-| -------------- | ---------------- | ----------- | ------------------------------------------------ |
-| `currentPage`  | `current-page`   |             | `number`                                         |
-| `i18n`         | --               |             | `(resourceKey: string, context?: any) => string` |
-| `itemsPerPage` | `items-per-page` |             | `number`                                         |
-| `totalItems`   | `total-items`    |             | `number`                                         |
+| Property       | Attribute        | Description | Type                                             | Default     |
+| -------------- | ---------------- | ----------- | ------------------------------------------------ | ----------- |
+| `currentPage`  | `current-page`   |             | `number`                                         | `1`         |
+| `i18n`         | --               |             | `(resourceKey: string, context?: any) => string` | `undefined` |
+| `itemsPerPage` | `items-per-page` |             | `number`                                         | `25`        |
+| `totalItems`   | `total-items`    |             | `number`                                         | `undefined` |
 
 
 ----------------------------------------------

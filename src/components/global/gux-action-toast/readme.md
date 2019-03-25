@@ -7,25 +7,25 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property          | Attribute          | Description                        | Type                         |
-| ----------------- | ------------------ | ---------------------------------- | ---------------------------- |
-| `iconUri`         | `icon-uri`         | The icon uri of the title.         | `string`                     |
-| `icon`            | `icon`             | The icon name of the title.        | `string`                     |
-| `idToast`         | `id-toast`         | The id of the title.               | `string`                     |
-| `keyValues`       | --                 | The key values of the toast.       | `{ [key: string]: string; }` |
-| `message`         | `message`          | The message of the toast.          | `string`                     |
-| `primaryButton`   | --                 | The right button.                  | `any`                        |
-| `secondaryButton` | --                 | The left button.                   | `any`                        |
-| `subject`         | `subject`          | The subject of the toast.          | `string`                     |
-| `toastTitle`      | `toast-title`      | The toast title.                   | `string`                     |
-| `topBorderColor`  | `top-border-color` | The top border color of the toast. | `string`                     |
+| Property          | Attribute          | Description                        | Type                         | Default     |
+| ----------------- | ------------------ | ---------------------------------- | ---------------------------- | ----------- |
+| `icon`            | `icon`             | The icon name of the title.        | `string`                     | `undefined` |
+| `iconUri`         | `icon-uri`         | The icon uri of the title.         | `string`                     | `undefined` |
+| `idToast`         | `id-toast`         | The id of the title.               | `string`                     | `undefined` |
+| `keyValues`       | --                 | The key values of the toast.       | `{ [key: string]: string; }` | `{}`        |
+| `message`         | `message`          | The message of the toast.          | `string`                     | `undefined` |
+| `primaryButton`   | `primary-button`   | The right button.                  | `any`                        | `undefined` |
+| `secondaryButton` | `secondary-button` | The left button.                   | `any`                        | `undefined` |
+| `subject`         | `subject`          | The subject of the toast.          | `string`                     | `undefined` |
+| `toastTitle`      | `toast-title`      | The toast title.                   | `string`                     | `undefined` |
+| `topBorderColor`  | `top-border-color` | The top border color of the toast. | `string`                     | `undefined` |
 
 
 ## Events
 
-| Event         | Detail | Description |
-| ------------- | ------ | ----------- |
-| `buttonClick` |        |             |
+| Event         | Description | Type                |
+| ------------- | ----------- | ------------------- |
+| `buttonClick` |             | `CustomEvent<void>` |
 
 
 ----------------------------------------------
