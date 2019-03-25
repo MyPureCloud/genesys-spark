@@ -1,0 +1,74 @@
+// Variables part
+
+// Style
+gux-radial-progress {
+  > div {
+    display: block;
+
+    .svgContainer {
+      display: block;
+    }
+
+    .dynamicCircle {
+      stroke-dasharray: 163.28;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      fill: none;
+      stroke: #75A8FF;
+      stroke-width: 5;
+    }
+    .staticCircle {
+      fill: none;
+      stroke: #deeaff;
+      stroke-width: 5;
+    }
+    .percentage {
+      text-anchor: middle;
+      dominant-baseline: central;
+      fill: #444A52;
+      font-size: 12px;
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-radial-progress-dark-theme {
+    color: @gux-off-white;
+    > div {
+      .percentage {
+        fill: #fdfdfd;
+      }
+    }
+};
+
+.gux-dark-theme {
+    gux-radial-progress {
+        .gux-radial-progress-dark-theme();
+    }
+}
+
+gux-radial-progress.gux-dark-theme {
+    .gux-radial-progress-dark-theme();
+}
+
+// Light
+.gux-radial-progress-light-theme {
+    color: @gux-grey-2;
+};
+
+.gux-light-theme {
+    gux-radial-progress {
+        .gux-radial-progress-light-theme();
+    }
+}
+
+gux-radial-progress.gux-light-theme {
+    .gux-radial-progress-light-theme();
+}
+
+// Default Theme
+gux-radial-progress {
+    .gux-radial-progress-light-theme();
+}
