@@ -1,3 +1,8 @@
+@Library('pipeline-library@master')
+import com.genesys.jenkins.Service
+
+def notifications = null
+
 pipeline {
   agent { label 'infra_mesos' }
 
@@ -5,6 +10,7 @@ pipeline {
     NPM_UTIL_PATH = "npm-utils"
     REPO_DIR = "repo"
     SHORT_BRANCH = env.GIT_BRANCH.replaceFirst(/^origin\//, '');
+    PURECLOUD_GROUP_ID = "5bfdb425daf49519da93ac4c"
   }
 
   tools {
@@ -12,6 +18,21 @@ pipeline {
   }
 
   stages {
+    stage('Import notifications lib') {
+      steps {
+        script {
+          // clone pipelines repo
+          dir('pipelines') {
+            git branch: 'master',
+                url: 'git@bitbucket.org:inindca/pipeline-library.git',
+                changelog: false
+
+            notifications = load 'src/com/genesys/jenkins/Notifications.groovy'
+          }
+        }
+      }
+    }
+
     stage('Prep') {
       steps {
         deleteDir()
@@ -33,6 +54,7 @@ pipeline {
             sh './scripts/generate-manifest'
             sh '''
               npm ci
+              mkdir -p build/i18n
               export CDN_URL=$(./node_modules/.bin/cdn --ecosystem gmsc --manifest manifest.json)
               npm run build
             '''
@@ -77,6 +99,20 @@ pipeline {
         }
       }
     }
-
   }
+
+  post {
+    fixed {
+      script {
+        notifications.emailResults("darragh.kirwan@genesys.com")
+      }
+    }
+
+    failure {
+      script {
+        notifications.emailResults("darragh.kirwan@genesys.com")
+      }
+    }
+  }
+
 }
