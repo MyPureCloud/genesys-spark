@@ -2,14 +2,7 @@
 import com.genesys.jenkins.Service
 
 def notifications = null
-String[] mailingList = [
-  "Jeremie.Pichon@genesys.com",
-  "Jarrod.Stormo@genesys.com",
-  "Matthew.Cheely@genesys.com",
-  "Keri.Lawrence@genesys.com",
-  "Chris.Covert@genesys.com",
-  "darragh.kirwan@genesys.com",
-]
+String teamEmailAddress = "CommonUIDevelopment@genesys.com"
 
 pipeline {
   agent { label 'infra_mesos' }
@@ -18,7 +11,6 @@ pipeline {
     NPM_UTIL_PATH = "npm-utils"
     REPO_DIR = "repo"
     SHORT_BRANCH = env.GIT_BRANCH.replaceFirst(/^origin\//, '');
-    PURECLOUD_GROUP_ID = "5bfdb425daf49519da93ac4c"
   }
 
   tools {
@@ -62,7 +54,6 @@ pipeline {
             sh './scripts/generate-manifest'
             sh '''
               npm ci
-              mkdir -p build/i18n
               export CDN_URL=$(./node_modules/.bin/cdn --ecosystem gmsc --manifest manifest.json)
               npm run build
             '''
@@ -112,13 +103,13 @@ pipeline {
   post {
     fixed {
       script {
-        notifications.emailResults(mailingList.join(" "))
+        notifications.emailResults("commonuidevelopment@genesys.com darragh.kirwan@genesys.com")
       }
     }
 
     failure {
       script {
-        notifications.emailResults(mailingList.join(" "))
+        notifications.emailResults("commonuidevelopment@genesys.com darragh.kirwan@genesys.com")
       }
     }
   }
