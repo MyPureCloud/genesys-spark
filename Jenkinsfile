@@ -2,7 +2,14 @@
 import com.genesys.jenkins.Service
 
 def notifications = null
-String teamEmailAddress = "CommonUIDevelopment@genesys.com"
+String[] mailingList = [
+  "Jeremie.Pichon@genesys.com",
+  "Jarrod.Stormo@genesys.com",
+  "Matthew.Cheely@genesys.com",
+  "Keri.Lawrence@genesys.com",
+  "Chris.Covert@genesys.com",
+  "Darragh.Kirwan@genesys.com"
+]
 
 pipeline {
   agent { label 'infra_mesos' }
@@ -103,13 +110,13 @@ pipeline {
   post {
     fixed {
       script {
-        notifications.emailResults("commonuidevelopment@genesys.com darragh.kirwan@genesys.com")
+        notifications.emailResults(mailingList.join(" "))
       }
     }
 
     failure {
       script {
-        notifications.emailResults("commonuidevelopment@genesys.com darragh.kirwan@genesys.com")
+        notifications.emailResults(mailingList.join(" "))
       }
     }
   }
