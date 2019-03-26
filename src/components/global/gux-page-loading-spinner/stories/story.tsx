@@ -9,9 +9,9 @@ storiesOf('Genesys Components', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .add(
-    'Genesys Loading Spinner',
+    'Genesys Page Loading Spinner',
     withReadme(README, () => {
-      const el = document.createElement('gux-loading-spinner');
+      const el = document.createElement('gux-page-loading-spinner');
       document.getElementsByTagName('html')[0].className =
         'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
       return el;

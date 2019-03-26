@@ -15,13 +15,13 @@ storiesOf('Genesys Components', module)
       const el = document.createElement('div');
       const component = document.createElement('gux-radial-progress');
       let percentage = 0;
-      component.percentage = percentage;
+      component.value = percentage;
       const timer = () => {
         if (percentage >= 100) {
           return;
         }
         percentage += 1;
-        component.percentage = percentage;
+        component.value = percentage;
         setTimeout(timer, 30);
       }
       timer();
@@ -32,7 +32,8 @@ storiesOf('Genesys Components', module)
         <gux-radial-progress></gux-radial-progress>
         <h2>Interactive sample</h2>
         <gux-radial-progress
-          percentage=${number('percentage', 0, { min: 0, max: 100 })}
+          value=${number('value', 0, { min: 0, max: 100 })}
+          max=${number('max', 100)}
         >
         </gux-radial-progress>
       `, el);

@@ -1,4 +1,4 @@
-# gux-spinner
+# gux-page-loading-spinner
 
 A simple loading spinner for loading pages. 
 

@@ -10,9 +10,10 @@ Otherwise, if the progress is unknown, and no percentage is provided, it instead
 
 ## Properties
 
-| Property     | Attribute    | Description                                                | Type     | Default     |
-| ------------ | ------------ | ---------------------------------------------------------- | -------- | ----------- |
-| `percentage` | `percentage` | Indicates the percentage displayed in the progress spinner | `number` | `undefined` |
+| Property | Attribute | Description                                                         | Type     | Default     |
+| -------- | --------- | ------------------------------------------------------------------- | -------- | ----------- |
+| `max`    | `max`     | The max value of the progress spinner                               | `number` | `100`       |
+| `value`  | `value`   | The progress made in the progress spinner compared to the max value | `number` | `undefined` |
 
 
 ----------------------------------------------
