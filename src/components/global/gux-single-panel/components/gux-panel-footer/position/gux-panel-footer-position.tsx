@@ -17,7 +17,7 @@ export class GuxPanelFooterPosition {
   position: position = 'left';
 
   componentWillLoad() {
-    this.root.className = this.position;
+    this.root.className = `gux-panel-footer-position-${this.position}`;
   }
 
   render() {
