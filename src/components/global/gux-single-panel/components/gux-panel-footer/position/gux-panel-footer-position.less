@@ -1,0 +1,80 @@
+// Variables part
+
+// Style
+gux-panel-footer-position {
+  &.left {
+    & button:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &.middle {
+    margin-left: auto;
+    margin-right: auto;
+
+    & button {
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+    & button:first-child {
+      margin-left: 0;
+      margin-right: 4px;
+    }
+
+    & button:last-child {
+      margin-left: 4px;
+      margin-right: 0;
+    }
+
+    & button:only-child {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &.right {
+    margin-left: auto;
+    & button:not(:first-child) {
+      margin-left: 8px;
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-panel-footer-position-dark-theme {
+  color: @gux-off-white;
+  border-color: @gux-grey-1;
+};
+
+.gux-dark-theme {
+    gux-panel-footer-position {
+        .gux-panel-footer-position-dark-theme();
+    }
+}
+
+gux-panel-footer-position.gux-dark-theme {
+    .gux-panel-footer-position-dark-theme();
+}
+
+// Light
+.gux-panel-footer-position-light-theme {
+    color: @gux-grey-2;
+};
+
+.gux-light-theme {
+    gux-panel-footer-position {
+        .gux-panel-footer-position-light-theme();
+    }
+}
+
+gux-panel-footer-position.gux-light-theme {
+    .gux-panel-footer-position-light-theme();
+}
+
+// Default Theme
+gux-panel-footer-position {
+    .gux-panel-footer-position-light-theme();
+}
