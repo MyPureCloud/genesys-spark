@@ -21,4 +21,12 @@ describe('gux-radial-progress', () => {
     await page.waitForChanges();
     expect(element.textContent).toEqual(`30%`);
   });
+
+  it('renders a spinner if no percentage', async () => {
+    const page = await newE2EPage();
+
+    await page.setContent('<gux-radial-progress></gux-radial-progress>');
+    const element = await page.find('.gux-spinner');
+    expect(element).toBeTruthy();
+  });
 });

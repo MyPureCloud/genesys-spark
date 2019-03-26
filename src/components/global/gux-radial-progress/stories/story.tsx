@@ -26,8 +26,10 @@ storiesOf('Genesys Components', module)
       }
       timer();
       render(html`
-        <h2>Basic samples</h2>
+        <h2>Basic sample</h2>
         ${component}
+        <h2>No Percentage sample</h2>
+        <gux-radial-progress></gux-radial-progress>
         <h2>Interactive sample</h2>
         <gux-radial-progress
           percentage=${number('percentage', 0, { min: 0, max: 100 })}

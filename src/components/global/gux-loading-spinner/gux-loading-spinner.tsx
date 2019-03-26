@@ -8,9 +8,7 @@ export class GuxLoadingSpinner {
 
   render() {
     return (
-      <div>
-        <div class="shapeshifter play"/>
-      </div>
+      <div class="loading-spinner gux-loading-animation"/>
     );
   }
 }
