@@ -1,3 +1,16 @@
+@Library('pipeline-library@master')
+import com.genesys.jenkins.Service
+
+def notifications = null
+String[] mailingList = [
+  "Jeremie.Pichon@genesys.com",
+  "Jarrod.Stormo@genesys.com",
+  "Matthew.Cheely@genesys.com",
+  "Keri.Lawrence@genesys.com",
+  "Chris.Covert@genesys.com",
+  "Darragh.Kirwan@genesys.com"
+]
+
 pipeline {
   agent { label 'infra_mesos' }
 
@@ -12,6 +25,21 @@ pipeline {
   }
 
   stages {
+    stage('Import notifications lib') {
+      steps {
+        script {
+          // clone pipelines repo
+          dir('pipelines') {
+            git branch: 'master',
+                url: 'git@bitbucket.org:inindca/pipeline-library.git',
+                changelog: false
+
+            notifications = load 'src/com/genesys/jenkins/Notifications.groovy'
+          }
+        }
+      }
+    }
+
     stage('Prep') {
       steps {
         deleteDir()
@@ -77,6 +105,20 @@ pipeline {
         }
       }
     }
-
   }
+
+  post {
+    fixed {
+      script {
+        notifications.emailResults(mailingList.join(" "))
+      }
+    }
+
+    failure {
+      script {
+        notifications.emailResults(mailingList.join(" "))
+      }
+    }
+  }
+
 }
