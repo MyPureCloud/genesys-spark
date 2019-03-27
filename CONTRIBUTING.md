@@ -22,15 +22,18 @@
 - Make sure any text generated within your component uses the `i18n` localization tools for string replacement.
 - Each Component should have thorough Storybook documentation with clear examples of its usage and feature.
 - Format your code based on the `.prettierrc.json` settings (configuring auto-format with [Prettier](prettier.io) is highly recommended).
+- This repo uses [Conventional Commits](https://www.conventionalcommits.org/). You can use `npm run commit` to open a cli prompt which will format commits automatically. Specify an appropriate type, and scope for the commit. e.g `ci(bitbucket): ..., feat(gux-accordian):`
 
 ### During Review
 
-- Make sure you've properly bumped the version in package.json
-    - API breaking changes or design overhauls that could impact surrounding layout should be a major bump (try to avoid these)
-    - Addition of features or components should be a minor version bump
-    - Fixes and other changes that don't impact the API should be a minor bump (the build can do this automatically)
 - Open a Pull Request on the repo. Please do not remove any of the default reviewers.
 - All submissions should be reviewed by at least 1 Common UI team member from each of Pure Cloud, Pure Connect, and Pure Engage.
-- Tests and tslint must be passing
+- Tests, tslint and commitlint must be passing
 - Review should be thorough - problems in these components will have a widespread impact.
 - If your review is completed and you don't have merge rights for master, reach out to the [Common UI Dev Team](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b) and one of us will get it merged.
+
+### Versioning
+
+- Package version is determined at publish time through the commit types specified.
+- The package will be bumped, a changelog file will be generated, the changes will be commited, and a version tag will be added
+- The package will then be published to NPM, and pushed to bitbucket
