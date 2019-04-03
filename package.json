@@ -71,6 +71,7 @@
     "jest-cli": "23.6.0",
     "jest-environment-node": "23.4.0",
     "jest-junit": "^5.2.0",
+    "lint-staged": "^8.1.5",
     "lit-html": "^0.10.2",
     "markdown-loader": "^4.0.0",
     "moment": "^2.22.2",
@@ -107,7 +108,11 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": ["prettier --write", "git add"]
   }
 }
