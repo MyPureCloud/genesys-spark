@@ -27,14 +27,6 @@ describe('gux-radio-group', () => {
 
     expect(await radio1.getProperty('checked')).toEqual(false);
 
-    // await label1.click();
-    // console.log(await page.evaluate(() =>{
-    //   const el = document.querySelector('#r1').querySelector('input');
-    //   el.click()
-
-    //   return el.tagName;
-    // }));
-
     await label1.click();
     await page.waitForChanges();
     await(page.waitFor(1000))

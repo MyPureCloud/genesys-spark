@@ -101,7 +101,6 @@ export class GuxRadio {
           onChange={e => this.onChecked(e)}
           onInput={e => this.onChecked(e)}
           disabled={this.disabled}
-          // aria-labelledby={`gux-radio-label-${this.id}`}
           {...{ checked: this.checked ? true : undefined }}
         />
         <label
@@ -120,8 +119,6 @@ export class GuxRadio {
       'aria-disabled': this.disabled + '',
       'aria-labelledby': `gux-radio-label-${this.id}`,
       role: 'radio'
-      // TODO: Should we include an optional header/label?
-      // 'aria-labelledby': this.labelId
     };
   }
 
