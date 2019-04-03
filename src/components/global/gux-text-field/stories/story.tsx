@@ -10,9 +10,9 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
   .add(
-    'Genesys Text Field',
+    'Text Field',
     withReadme(README, () => {
       const el = document.createElement('div');
       render(

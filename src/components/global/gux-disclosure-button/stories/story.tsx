@@ -6,9 +6,9 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
   .add(
-    'Genesys Disclosure Button',
+    'Disclosure Button',
     withReadme(README, () => {
       const el = document.createElement('div');
       render(

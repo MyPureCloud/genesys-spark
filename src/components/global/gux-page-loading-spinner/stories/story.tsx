@@ -5,11 +5,11 @@ import { withReadme  } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .add(
-    'Genesys Page Loading Spinner',
+    'Page Loading Spinner',
     withReadme(README, () => {
       const el = document.createElement('gux-page-loading-spinner');
       document.getElementsByTagName('html')[0].className =
