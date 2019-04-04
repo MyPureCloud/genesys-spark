@@ -34,7 +34,6 @@ describe('gux-radio-group', () => {
     expect(await radio1.getProperty('checked')).toEqual(true);
 
     await label2.click();
-    console.log(await page.evaluate(() => document.querySelector('#r1').querySelector('input').checked))
     await page.waitForChanges();
     await(page.waitFor(1000))
     expect(await radio1.getProperty('checked')).toEqual(false);
