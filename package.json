@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "0.1.0",
+  "version": "0.6.0",
   "description": "Common webcomponents",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -59,6 +59,7 @@
     "babel-core": "6.26.3",
     "babel-loader": "7.1.5",
     "babel-preset-env": "1.7.0",
+    "cheerio": "^1.0.0-rc.3",
     "commitizen": "^3.0.7",
     "concurrently": "^4.0.1",
     "cz-conventional-changelog": "^2.1.0",
@@ -94,7 +95,7 @@
     "url": "git+bitbucket.org:inindca/genesys-webcomponents.git"
   },
   "optionalDependencies": {
-    "@purecloud/web-app-deploy": "^5.2.4"
+    "@purecloud/web-app-deploy": "^5.2.5"
   },
   "config": {
     "commitizen": {
