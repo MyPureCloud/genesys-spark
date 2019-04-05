@@ -16,10 +16,11 @@
 
 ### While Working
 
+- Components should follow our best practices for [Component Design](./COMPONENT_DESIGN.md)
 - Components should be implemented in TypeScript, with Stencil (if you think you need to deviate from this, talk to the common UI dev team first)
 - Make sure to create unit tests for your component
 - Be sure your component will meet the [Common UI Application Accessibility Guidelines](https://intranet.genesys.com/pages/viewpage.action?spaceKey=CMC&title=Common+UI+Application+Accessibility++Guidelines)
-- Make sure any text generated within your component uses the `i18n` localization tools for string replacement.
+- Make sure any text generated within your component uses the `i18n` [localization tools](https://bitbucket.org/inindca/genesys-webcomponents/wiki/Localization) for string replacement.
 - Each Component should have thorough Storybook documentation with clear examples of its usage and feature.
 - Format your code based on the `.prettierrc.json` settings (configuring auto-format with [Prettier](prettier.io) is highly recommended).
 - This repo uses [Conventional Commits](https://www.conventionalcommits.org/). You can use `npm run commit` to open a cli prompt which will format commits automatically. Specify an appropriate type, and scope for the commit. e.g `ci(bitbucket): ..., feat(gux-accordian):`
