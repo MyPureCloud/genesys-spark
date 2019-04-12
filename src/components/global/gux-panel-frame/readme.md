@@ -1,6 +1,6 @@
-# gux-panel-footer
+# gux-panel-frame
 
-The footer of a single panel, also comes with Positioning Components. Generally contains buttons.
+The frame of a single panel. Also contains the panel header, body and footer.
 
 <!-- Auto Generated Below -->
 
