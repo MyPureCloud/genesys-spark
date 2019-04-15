@@ -5,9 +5,9 @@ import { html, render } from 'lit-html';
 import { withReadme } from 'storybook-readme';
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
   .add(
-    'Genesys Switch',
+    'Switch',
     withReadme(README, () => {
       const el = document.createElement('div');
       const items = object('items', [

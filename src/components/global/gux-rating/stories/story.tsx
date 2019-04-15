@@ -11,9 +11,9 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
   .add(
-    'Genesys Rating',
+    'Rating',
     withReadme(README, () => {
       const el = document.createElement('gux-rating');
       el.setAttribute('aria-label', text('aria-label', 'label'));
