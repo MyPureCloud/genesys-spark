@@ -7,17 +7,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property  | Attribute | Description                                                                                                          | Type      | Default     |
-| --------- | --------- | -------------------------------------------------------------------------------------------------------------------- | --------- | ----------- |
-| `checked` | `checked` | Whether or not the checkbox is checked.  A value of undefined will display and indeterminate or 'mixed' check style. | `boolean` | `undefined` |
-| `label`   | `label`   |                                                                                                                      | `string`  | `undefined` |
+| Property        | Attribute       | Description                                                                                                 | Type      | Default     |
+| --------------- | --------------- | ----------------------------------------------------------------------------------------------------------- | --------- | ----------- |
+| `checked`       | `checked`       | Whether or not the checkbox is checked.  Ignored when in an `indeterminate` state.                          | `boolean` | `undefined` |
+| `disabled`      | `disabled`      | Whether of not the checkbox input is disabled.                                                              | `boolean` | `undefined` |
+| `indeterminate` | `indeterminate` | If true, the checkbox will be displayed in an indeterminate state, and the `checked` value will be ignored. | `boolean` | `undefined` |
+| `label`         | `label`         |                                                                                                             | `string`  | `undefined` |
 
 
 ## Events
 
-| Event            | Description | Type                   |
-| ---------------- | ----------- | ---------------------- |
-| `checkedChanged` |             | `CustomEvent<boolean>` |
+| Event   | Description                           | Type                   |
+| ------- | ------------------------------------- | ---------------------- |
+| `check` | Emits when the checked state changes. | `CustomEvent<boolean>` |
 
 
 ----------------------------------------------

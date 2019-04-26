@@ -1,10 +1,11 @@
 import { checkA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-import { select, text, withKnobs } from '@storybook/addon-knobs/polymer';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
+import { GuxCheckbox } from '../gux-checkbox';
 
 const createCheckbox = (
   label: string,
@@ -33,23 +34,32 @@ storiesOf('Genesys Components', module)
     'Genesys Checkbox',
     withReadme(README, () => {
       const container = document.createElement('div');
-      container.appendChild(createCheckbox('Check me out!', false));
-      container.appendChild(createCheckbox('I can be initially checked', true));
-      container.appendChild(
-        createCheckbox('Or even display an indeterminate value', undefined)
-      );
+      container.innerHTML = `<style>gux-checkbox { padding: 4px; }</style>
+          <h4 id="food-header">Simple Checkboxes</h4>
 
-      container.appendChild(
-        createCheckbox(
-          text('label', 'Play around with my knobs'),
-          select('checked', {
-            undefined: 'undefined',
-            // tslint:disable-next-line:object-literal-sort-keys
-            true: true,
-            // tslint:disable-next-line:object-literal-sort-keys
-            false: false
-          })
-        )
+          <gux-checkbox id="pizza-checkbox" label="Pizza"></gux-checkbox>
+          <gux-checkbox id="pasta-checkbox" label="Pasta" checked></gux-checkbox>
+          <gux-checkbox id="burger-checkbox" label="Hamburger" indeterminate></gux-checkbox>
+          <gux-checkbox id="sandwich-checkbox" label="Sandwich" disabled="true"></gux-checkbox>
+      `;
+
+      const cb = container.querySelector('#sandwich-checkbox') as any as GuxCheckbox;
+      cb.label = text('label', 'Sandwich');
+      cb.checked = boolean('checked')
+      cb.indeterminate = boolean('indeterminate')
+      cb.disabled = boolean('disabled', true);
+
+      [
+        '#pizza-checkbox',
+        '#pasta-checkbox',
+        '#burger-checkbox',
+        '#sandwich-checkbox'
+      ].forEach(r =>
+        container
+          .querySelector(r)
+          .addEventListener('check', (e: any) =>
+            action(`${e.target.id}.checked`)(e.detail)
+          )
       );
 
       document.getElementsByTagName('html')[0].className =

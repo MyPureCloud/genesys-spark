@@ -1,18 +1,12 @@
-import {
-  Component,
-  Event,
-  EventEmitter,
-  Prop,
-  State
-} from '@stencil/core';
+import { Component, Event, EventEmitter, Prop, State } from '@stencil/core';
 
 let nextCheckboxId = 1;
-const classForCheckedState = (state: boolean | undefined) => {
-  if (state === undefined) {
+const classForCheckedState = (checked: boolean, indeterminate: boolean) => {
+  if (indeterminate) {
     return 'gux-mixed';
   }
 
-  return state ? 'gux-checked' : 'gux-unchecked';
+  return checked ? 'gux-checked' : 'gux-unchecked';
 };
 
 @Component({
@@ -21,34 +15,45 @@ const classForCheckedState = (state: boolean | undefined) => {
 })
 export class GuxCheckbox {
   /**
-   * Whether or not the checkbox is checked.  A value of undefined will display
-   * and indeterminate or 'mixed' check style.
+   * Whether or not the checkbox is checked.  Ignored when in an `indeterminate` state.
    */
   @Prop({
     mutable: true
   })
-  checked: boolean | undefined;
+  checked: boolean;
+
+  /**
+   * If true, the checkbox will be displayed in an indeterminate state, and the `checked`
+   * value will be ignored.
+   */
+  @Prop({
+    mutable: true
+  })
+  indeterminate: boolean;
 
   @Prop()
   label: string;
 
+  /** Whether of not the checkbox input is disabled. */
+  @Prop()
+  disabled: boolean;
+
   @State()
   id: number;
 
+  /** Emits when the checked state changes. */
   @Event()
-  checkedChanged: EventEmitter<boolean>;
+  check!: EventEmitter<boolean>;
 
   componentWillLoad() {
     this.id = nextCheckboxId++;
   }
 
   setChecked(checked: boolean) {
-    this.checked = checked;
-    this.checkedChanged.emit(checked);
-  }
+    this.checked = this.indeterminate ? true : checked;
+    this.indeterminate = false;
 
-  get checkedAttribute() {
-    return this.checked ? { checked: true } : {};
+    this.check.emit(checked);
   }
 
   render() {
@@ -57,14 +62,15 @@ export class GuxCheckbox {
         <input
           id={`gux-checkbox-${this.id}`}
           type="checkbox"
+          checked={this.checked}
+          disabled={this.disabled}
           onChange={e =>
             this.setChecked((e.target as HTMLInputElement).checked)
           }
-          {...this.checkedAttribute}
         />
         <label
           htmlFor={`gux-checkbox-${this.id}`}
-          class={classForCheckedState(this.checked)}
+          class={classForCheckedState(this.checked, this.indeterminate)}
         >
           {this.label}
         </label>
