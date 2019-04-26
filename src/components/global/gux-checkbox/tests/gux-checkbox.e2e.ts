@@ -16,7 +16,7 @@ describe('gux-checkbox', () => {
     const component = await page.find('gux-checkbox');
     const label = await component.find('label');
 
-    expect(label.className).toContain('gux-mixed');
+    expect(label.className).toContain('gux-unchecked');
 
     await component.setAttribute('checked', 'true');
     await page.waitForChanges();
@@ -26,11 +26,7 @@ describe('gux-checkbox', () => {
     await page.waitForChanges();
     expect(label.className).toContain('gux-unchecked');
 
-    page.evaluate(() => {
-      const cb = document.querySelector('gux-checkbox');
-      cb.checked = undefined;
-    });
-
+    await component.setAttribute('indeterminate', 'true');
     await page.waitForChanges();
     expect(label.className).toContain('gux-mixed');
   });
@@ -38,7 +34,7 @@ describe('gux-checkbox', () => {
   it('switches between the three states when clicked', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-checkbox label="test"></gux-checkbox>');
+    await page.setContent('<gux-checkbox label="test" indeterminate></gux-checkbox>');
     const component = await page.find('gux-checkbox');
     const label = await component.find('label');
 
