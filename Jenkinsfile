@@ -21,7 +21,7 @@ pipeline {
   }
 
   tools {
-    nodejs 'NodeJS 10.15.1'
+    nodejs 'NodeJS 10.15.3'
   }
 
   stages {
@@ -45,8 +45,10 @@ pipeline {
         deleteDir()
         sh "git clone --single-branch -b master --depth=1 git@bitbucket.org:inindca/npm-utils.git ${env.NPM_UTIL_PATH}"
         dir(env.REPO_DIR) {
-          echo "Building Branch: ${env.GIT_BRANCH}"
+          echo "Building branch: ${env.GIT_BRANCH}"
           checkout scm
+          // Make a local branch so we can work with history and push (there's probably a better way to do this)
+          sh "git checkout -b ${env.SHORT_BRANCH}"
           sh "${env.WORKSPACE}/${env.NPM_UTIL_PATH}/scripts/jenkins-create-npmrc.sh"
         }
       }
@@ -56,13 +58,16 @@ pipeline {
       stage('Build') {
         steps {
           dir(env.REPO_DIR) {
-            // Check to see if we need to bump the version for release
-            sh "${env.WORKSPACE}/${env.NPM_UTIL_PATH}/scripts/auto-version-bump.sh"
+            sh 'npm ci'
+            // Bump the version for release, update changelog
+            sh 'npm run release'
+            // Generate manifest file with deployment metadata
             sh './scripts/generate-manifest'
+            // Generate the CDN_URL for use in the docs and build everything.
             sh '''
-              npm ci
-              export CDN_URL=$(./node_modules/.bin/cdn --ecosystem gmsc --manifest manifest.json)
+              export CDN_URL=$(./node_modules/.bin/cdn --ecosystem pc --manifest manifest.json)
               npm run build
+              node ./scripts/fix-doc-urls
             '''
           }
         }
@@ -72,8 +77,6 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           sh "npm publish"
-          // Make a local branch so we can push back to the origin branch.
-          sh "git checkout -b ${env.SHORT_BRANCH}"
           sh "git push --tags -u origin ${env.SHORT_BRANCH}"
         }
       }
@@ -85,7 +88,7 @@ pipeline {
           sh './scripts/generate-versions-file'
           sh '''
             ./node_modules/.bin/upload \
-                --ecosystem gmsc \
+                --ecosystem pc \
                 --manifest manifest.json \
                 --source-dir ./.out
           '''
@@ -98,7 +101,7 @@ pipeline {
         dir (env.REPO_DIR) {
           sh '''
             ./node_modules/.bin/deploy \
-                --ecosystem gmsc \
+                --ecosystem pc \
                 --manifest manifest.json \
                 --dest-env dev
           '''
