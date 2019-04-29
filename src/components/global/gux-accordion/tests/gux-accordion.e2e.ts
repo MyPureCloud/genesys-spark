@@ -43,10 +43,10 @@ describe('gux-accordion', () => {
     const section = await element.find('gux-accordion li');
     const header = await section.find('.header');
     expect(section.className).toEqual('section');
-    header.click();
+    await header.click();
     await page.waitForChanges();
     expect(section.className).toEqual('section opened');
-    header.click();
+    await header.click();
     await page.waitForChanges();
     expect(section.className).toEqual('section');
   });
