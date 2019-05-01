@@ -34,7 +34,7 @@ describe('gux-checkbox', () => {
   it('switches between the three states when clicked', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-checkbox label="test" indeterminate></gux-checkbox>');
+    await page.setContent('<gux-checkbox indeterminate>test</gux-checkbox>');
     const component = await page.find('gux-checkbox');
     const label = await component.find('label');
 
@@ -57,7 +57,7 @@ describe('gux-checkbox', () => {
   it('should render the assigned label', async () =>{
     const page = await newE2EPage();
 
-    await page.setContent('<gux-checkbox label="my label is so cool"></gux-checkbox>');
+    await page.setContent('<gux-checkbox>my label is so cool</gux-checkbox>');
     const component = await page.find('gux-checkbox');
     const label = await component.find('label');
 
