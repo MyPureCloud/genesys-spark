@@ -1,6 +1,14 @@
-# gux-checkbox
+# gux-radio
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+A radio button component, intended to be used in conjunction with the `gux-radio-group` component.  Labels should be provided through the component's main slot.
+
+## Example Usage
+
+See documentation for the `gux-radio-group` documentation for a more thourough example.
+
+```
+<gux-radio value="pizza">I like pizza!</gux-radio>
+```
 
 <!-- Auto Generated Below -->
 
@@ -11,7 +19,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | ---------- | ---------- | ------------------------------------------------------------------------------------------------------ | --------- | ----------- |
 | `checked`  | `checked`  | Whether or not this radio is checked.                                                                  | `boolean` | `false`     |
 | `disabled` | `disabled` | Whether or not the radio is disabled.                                                                  | `boolean` | `false`     |
-| `label`    | `label`    | The message to label this radio with.                                                                  | `string`  | `undefined` |
 | `name`     | `name`     | The radio group name for this radio button.  Automatically inherited/overwritten by a gux-radio-group. | `string`  | `undefined` |
 | `value`    | `value`    | The form value to use for the radio button.                                                            | `string`  | `undefined` |
 

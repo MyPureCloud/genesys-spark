@@ -1,6 +1,27 @@
 # gux-checkbox
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+This component represents a checkbox with three possible states: `unchecked`, `checked`, and `indeterminate`.  The third state, `indeterminate`, is intended to represent when a checkboxes state is 'mixed', often when a checkbox has child items.
+
+## Usage Examples
+
+### Standard Checkboxes
+
+```
+<gux-checkbox checked>An unchecked checkbox</gux-checkbox>
+<gux-checkbox checked>A checked checkbox</gux-checkbox>
+```
+
+### Indeterminate Checkboxes
+
+```
+<gux-checkbox class="parent" indeterminate>
+
+<!-- NOTE: The gux-checkboxes don't actually interact with eachother, so you need to add your own logic to update the state of the parent checkbox>
+<div class="children">
+  <gux-checkbox checked>An unchecked checkbox</gux-checkbox>
+  <gux-checkbox checked>A checked checkbox</gux-checkbox>
+</div>
+```
 
 <!-- Auto Generated Below -->
 
@@ -12,7 +33,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | `checked`       | `checked`       | Whether or not the checkbox is checked.  Ignored when in an `indeterminate` state.                          | `boolean` | `undefined` |
 | `disabled`      | `disabled`      | Whether of not the checkbox input is disabled.                                                              | `boolean` | `undefined` |
 | `indeterminate` | `indeterminate` | If true, the checkbox will be displayed in an indeterminate state, and the `checked` value will be ignored. | `boolean` | `undefined` |
-| `label`         | `label`         |                                                                                                             | `string`  | `undefined` |
 
 
 ## Events
