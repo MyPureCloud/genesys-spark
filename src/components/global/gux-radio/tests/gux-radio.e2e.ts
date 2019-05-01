@@ -12,7 +12,7 @@ describe('gux-radio', () => {
   it('switches between states when clicking different radios', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-radio label="test label"></gux-radio>');
+    await page.setContent('<gux-radio>test label</gux-radio>');
 
     const radio = await page.find('gux-radio');
     const input = await radio.find('input');
@@ -28,7 +28,7 @@ describe('gux-radio', () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<gux-radio label="my label is so cool"></gux-radio>'
+      '<gux-radio>my label is so cool</gux-radio>'
     );
     const component = await page.find('gux-radio');
     const label = await component.find('label');

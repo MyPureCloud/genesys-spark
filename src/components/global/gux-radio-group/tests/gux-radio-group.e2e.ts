@@ -14,8 +14,8 @@ describe('gux-radio-group', () => {
 
     await page.setContent(`
       <gux-radio-group name="test-group">
-        <gux-radio id="r1" label="radio 1" value="first"></gux-radio>
-        <gux-radio id="r2" label="radio 2" value="second"></gux-radio>
+        <gux-radio id="r1" value="first">radio 1</gux-radio>
+        <gux-radio id="r2" value="second">radio 2</gux-radio>
       </gux-radio-group>
       `);
 
@@ -39,19 +39,19 @@ describe('gux-radio-group', () => {
     expect(await radio1.getProperty('checked')).toEqual(false);
   });
 
-  // it('should propagate its name to child radios', async () => {
-  //   const page = await newE2EPage();
+  it('should propagate its name to child radios', async () => {
+    const page = await newE2EPage();
 
-  //   await page.setContent(`
-  //     <gux-radio-group name="group-name">
-  //       <gux-radio id="r1" label="radio 1"></gux-radio>
-  //       <gux-radio id="r2" label="radio 2" name="not-group-name"></gux-radio>
-  //     </gux-radio-group>
-  //     `);
+    await page.setContent(`
+      <gux-radio-group name="group-name">
+        <gux-radio id="r1">radio 1</gux-radio>
+        <gux-radio id="r2" name="not-group-name">radio 2</gux-radio>
+      </gux-radio-group>
+      `);
 
-  //   const radio1 = await page.find('#r1');
-  //   const radio2 = await page.find('#r2');
-  //   expect(await radio1.getProperty('name')).toEqual('group-name');
-  //   expect(await radio2.getProperty('name')).toEqual('group-name');
-  // });
+    const radio1 = await page.find('#r1');
+    const radio2 = await page.find('#r2');
+    expect(await radio1.getProperty('name')).toEqual('group-name');
+    expect(await radio2.getProperty('name')).toEqual('group-name');
+  });
 });
