@@ -8,9 +8,9 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
   .add(
-    'Genesys List',
+    'List',
     withReadme(README, () => {
       const el = document.createElement('gux-list');
       el.items = object('items', [

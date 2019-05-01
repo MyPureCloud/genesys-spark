@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "0.1.0",
+  "version": "0.7.0",
   "description": "Common webcomponents",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -29,7 +29,7 @@
     "lint": "npm run lint.commit && npm run lint.ts",
     "lint.fix": "npm run lint.ts -- --fix",
     "lint.ts": "tslint --project .",
-    "lint.commit": "commitlint -f 57e9a8f26bc4d7e9aec078097cb402eb129a0953",
+    "lint.commit": "commitlint -f d3ce2e89721467e25922f923863ea3da9579bc73",
     "i18n": "node scripts/build-i18n.js"
   },
   "dependencies": {
@@ -59,17 +59,20 @@
     "babel-core": "6.26.3",
     "babel-loader": "7.1.5",
     "babel-preset-env": "1.7.0",
+    "cheerio": "^1.0.0-rc.3",
     "commitizen": "^3.0.7",
     "concurrently": "^4.0.1",
     "cz-conventional-changelog": "^2.1.0",
     "glob": "^7.1.3",
     "handlebars": "^4.0.11",
     "html-loader": "^0.5.5",
+    "husky": "^1.3.1",
     "inquirer": "^6.2.0",
     "jest": "23.6.0",
     "jest-cli": "23.6.0",
     "jest-environment-node": "23.4.0",
     "jest-junit": "^5.2.0",
+    "lint-staged": "^8.1.5",
     "lit-html": "^0.10.2",
     "markdown-loader": "^4.0.0",
     "moment": "^2.22.2",
@@ -92,7 +95,7 @@
     "url": "git+bitbucket.org:inindca/genesys-webcomponents.git"
   },
   "optionalDependencies": {
-    "@purecloud/web-app-deploy": "^5.2.4"
+    "@purecloud/web-app-deploy": "^5.2.5"
   },
   "config": {
     "commitizen": {
@@ -102,6 +105,18 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
     ]
   }
 }

@@ -9,9 +9,9 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
   .add(
-    'Genesys Toggle',
+    'Toggle',
     withReadme(README, () => {
       const el = document.createElement('gux-toggle');
       el.checked = boolean('checked', false);

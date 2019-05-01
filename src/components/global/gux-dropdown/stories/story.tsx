@@ -5,9 +5,9 @@ import { withReadme  } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
 .add(
-    'Genesys Dropdown',
+    'Dropdown',
     withReadme(README, () => {
       const el = `
         <gux-dropdown
