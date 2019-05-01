@@ -34,12 +34,6 @@ export class GuxRadio {
   checked: boolean = false;
 
   /**
-   * The message to label this radio with.
-   */
-  @Prop()
-  label?: string;
-
-  /**
    * Whether or not the radio is disabled.
    */
   @Prop()
@@ -107,7 +101,7 @@ export class GuxRadio {
           id={`gux-radio-label-${this.id}`}
           htmlFor={`gux-radio-${this.id}`}
         >
-          {this.label}
+          <slot />
         </label>
       </div>
     );

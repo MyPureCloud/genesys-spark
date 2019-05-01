@@ -18,10 +18,10 @@ storiesOf('Genesys Components', module)
         <gux-radio-group name="food-selection" aria-labelledby="food-header">
           <h4 id="food-header">Simple Radios</h4>
 
-          <gux-radio id="pizza-radio" label="Pizza" value="pizza"></gux-radio>
-          <gux-radio id="pasta-radio" label="Pasta" value="pasta"></gux-radio>
-          <gux-radio id="burger-radio" label="Hamburger" value="burger"></gux-radio>
-          <gux-radio id="sandwich-radio" label="Sandwich" value="sandwich" disabled="true"></gux-radio>
+          <gux-radio id="pizza-radio" value="pizza">Pizza</gux-radio>
+          <gux-radio id="pasta-radio" value="pasta">Pasta</gux-radio>
+          <gux-radio id="burger-radio" value="burger">Hamburger</gux-radio>
+          <gux-radio id="sandwich-radio" value="sandwich" disabled="true">Sandwich</gux-radio>
         </gux-radio-group>
       `;
 
