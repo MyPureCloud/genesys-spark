@@ -23,10 +23,10 @@ storiesOf('Genesys Components', module)
       container.innerHTML = `<style>gux-checkbox { padding: 4px; }</style>
           <h4 id="food-header">Simple Checkboxes</h4>
 
-          <gux-checkbox id="pizza-checkbox" label="Pizza"></gux-checkbox>
-          <gux-checkbox id="pasta-checkbox" label="Pasta" checked></gux-checkbox>
-          <gux-checkbox id="burger-checkbox" label="Hamburger" indeterminate></gux-checkbox>
-          <gux-checkbox id="sandwich-checkbox" label="Sandwich" disabled="true"></gux-checkbox>
+          <gux-checkbox id="pizza-checkbox">Pizza</gux-checkbox>
+          <gux-checkbox id="pasta-checkbox" checked>Pasta</gux-checkbox>
+          <gux-checkbox id="burger-checkbox" indeterminate>Hamburger</gux-checkbox>
+          <gux-checkbox id="sandwich-checkbox" disabled="true">Sandwich</gux-checkbox>
       `;
 
       const cb = (container.querySelector(

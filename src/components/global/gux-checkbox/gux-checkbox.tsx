@@ -31,9 +31,6 @@ export class GuxCheckbox {
   })
   indeterminate: boolean;
 
-  @Prop()
-  label: string;
-
   /** Whether of not the checkbox input is disabled. */
   @Prop()
   disabled: boolean;
@@ -72,7 +69,7 @@ export class GuxCheckbox {
           htmlFor={`gux-checkbox-${this.id}`}
           class={classForCheckedState(this.checked, this.indeterminate)}
         >
-          {this.label}
+          <slot />
         </label>
       </div>
     );
