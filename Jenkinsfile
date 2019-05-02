@@ -77,7 +77,9 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           sh "npm publish"
-          sh "git push --tags -u origin ${env.SHORT_BRANCH}"
+          sshagent(credentials: ['7c2a5698-a932-447a-9727-6852d0994ea0']) {
+            sh "git push --tags -u origin ${env.SHORT_BRANCH}"
+          }
         }
       }
     }
