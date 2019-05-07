@@ -1,0 +1,150 @@
+// Variables part
+
+// Style
+gux-calendar {
+  display: inline-block;
+  margin-top: -4px;
+  div.gux-calendar {
+    .header {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height: 16px;
+      padding: 16px;
+      button {
+        position: absolute;
+        cursor: pointer;
+        border: none;
+        background: none;
+        outline: none;
+        &.genesys-icon-chevron-left {
+          left: 18px;
+        }
+        &.genesys-icon-chevron-right {
+          right: 18px;
+        }
+      }
+      .month-list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        label {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .content {
+      display: flex;
+      padding: 16px 19px 20px 19px;
+      table {
+        height: 100%;
+        table-layout: fixed;
+        text-align: left;
+        border-spacing: 0;
+        width: 168px;
+        &:not(:last-child) {
+          padding-right: 24px;
+        }
+        tr {
+          height: 24px;
+          &:empty {
+            display: none;
+          }
+          th {
+            text-align: center;
+            width: 24px;
+            margin: 0;
+          }
+          td {
+            text-align: center;
+            width: 24px;
+            margin: 0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Theming
+
+// Light
+.gux-calendar-light-theme {
+  div.gux-calendar {
+    border: 1px solid @gux-border-alt;
+    .header {
+      background-color: @gux-dark-blue;
+      color: @gux-off-white;
+      button {
+        color: @gux-off-white;
+        &:focus {
+          outline: @gux-blue auto 5px;
+        }
+      }
+    }
+    .content {
+      background-color: @gux-off-white;
+      color: @gux-grey-2;
+      table {
+        tr {
+          td {
+            &:hover {
+              background-color: @gux-dark-blue;
+              color: @gux-off-white;
+            }
+            &.not-in-month {
+              color: @gux-pale-gray-2;
+              &:hover {
+                background-color: @gux-border-alt;
+                color: @gux-grey-2;
+              }
+              &.hidden {
+                visibility: hidden;
+              }
+            }
+            &.hovered {
+              background-color: @gux-light-blue;
+            }
+            &.selected {
+              background-color: @gux-dark-blue;
+              color: @gux-off-white;
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
+.gux-light-theme {
+  gux-calendar {
+    .gux-calendar-light-theme();
+  }
+}
+
+// Dark
+.gux-calendar-dark-theme {
+  // Same as light
+  .gux-calendar-light-theme();
+};
+
+.gux-dark-theme {
+  gux-calendar {
+    .gux-calendar-dark-theme();
+  }
+}
+
+gux-calendar.gux-dark-theme {
+  .gux-calendar-dark-theme();
+}
+
+gux-calendar.gux-light-theme {
+  .gux-calendar-light-theme();
+}
+
+// Default Theme
+gux-calendar {
+  .gux-calendar-light-theme();
+}
