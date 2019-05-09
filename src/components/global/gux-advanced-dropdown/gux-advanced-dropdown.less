@@ -1,0 +1,43 @@
+// Variables part
+
+// Style
+gux-advanced-dropdown {
+
+}
+
+// Theming
+
+// Dark
+.gux-advanced-dropdown-dark-theme {
+    color: @gux-off-white;
+};
+
+.gux-dark-theme {
+    gux-advanced-dropdown {
+        .gux-advanced-dropdown-dark-theme();
+    }
+}
+
+gux-advanced-dropdown.gux-dark-theme {
+    .gux-advanced-dropdown-dark-theme();
+}
+
+// Light
+.gux-advanced-dropdown-light-theme {
+    color: @gux-grey-2;
+};
+
+.gux-light-theme {
+    gux-advanced-dropdown {
+        .gux-advanced-dropdown-light-theme();
+    }
+}
+
+gux-advanced-dropdown.gux-light-theme {
+    .gux-advanced-dropdown-light-theme();
+}
+
+// Default Theme
+gux-advanced-dropdown {
+    .gux-advanced-dropdown-light-theme();
+}
