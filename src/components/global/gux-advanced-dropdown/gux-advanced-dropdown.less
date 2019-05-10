@@ -1,43 +1,169 @@
 // Variables part
+@background-color: @gux-off-white;
+@text-color: @gux-grey-2;
+@placeholder: @gux-pale-gray-2;
+@border: @gux-border-alt;
+
+@focus-outline: fade(@gux-blue, 50%);
+@focus-border: @gux-dark-blue;
 
 // Style
 gux-advanced-dropdown {
+  div.gux-dropdown {
+    position: relative;
+    margin: 4px 0;
 
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    label {
+      margin-right: 8px;
+      height: 32px;
+      line-height: 30px;
+      font-weight: bold;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .select-field {
+      position: relative;
+      height: 32px;
+      width: 100%;
+
+      a.select-input {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 4px 12px 4px 12px;
+        background-color: @background-color;
+        cursor: pointer;
+
+        border: 1px solid @border;
+        border-radius: 2px;
+
+        .select-placeholder,
+        .select-value {
+          line-height: 20px;
+        }
+
+        .select-placeholder {
+          color: @placeholder;
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 0px 3px fade(@gux-blue, 50%);
+        }
+      }
+
+      button.genesys-icon-dropdown-arrow {
+        position: absolute;
+        top: 1px;
+        right: 3px;
+        bottom: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: block;
+        outline: none;
+        overflow: hidden;
+        font-size: 16px;
+        pointer-events: none;
+      }
+    }
+
+    &.active .select-field .select-input {
+      border: 1px solid @focus-border;
+      outline: none;
+      box-shadow: 0px 0px 4px @focus-outline;
+
+      &:focus {
+        box-shadow: 0px 0px 4px @focus-outline;
+      }
+    }
+
+    .search {
+      position: relative;
+
+      i.genesys-icon-search {
+        position: absolute;
+        line-height: 32px;
+        top: 0;
+        bottom: 0;
+        right: 3px;
+        cursor: pointer;
+        display: block;
+        outline: none;
+        overflow: hidden;
+        font-size: 16px;
+        pointer-events: none;
+      }
+    }
+
+    .advanced-dropdown-menu {
+      display: none;
+      border: 1px solid @gux-border-alt;
+      box-shadow: 0 0 2px 0 fade(@gux-grey-1, 24%);
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      background: @gux-off-white;
+
+      .dropdown-menu-container {
+        padding: 16px;
+      }
+
+      ul {
+        border: 1px solid @gux-border;
+        box-shadow: none;
+      }
+
+      &.opened {
+        display: block;
+      }
+    }
+  }
 }
 
 // Theming
 
 // Dark
 .gux-advanced-dropdown-dark-theme {
-    color: @gux-off-white;
-};
+  color: @gux-off-white;
+}
+
+;
 
 .gux-dark-theme {
-    gux-advanced-dropdown {
-        .gux-advanced-dropdown-dark-theme();
-    }
+  gux-advanced-dropdown {
+    .gux-advanced-dropdown-dark-theme();
+  }
 }
 
 gux-advanced-dropdown.gux-dark-theme {
-    .gux-advanced-dropdown-dark-theme();
+  .gux-advanced-dropdown-dark-theme();
 }
 
 // Light
 .gux-advanced-dropdown-light-theme {
-    color: @gux-grey-2;
-};
+  color: @gux-grey-2;
+}
 
 .gux-light-theme {
-    gux-advanced-dropdown {
-        .gux-advanced-dropdown-light-theme();
-    }
+  gux-advanced-dropdown {
+    .gux-advanced-dropdown-light-theme();
+  }
 }
 
 gux-advanced-dropdown.gux-light-theme {
-    .gux-advanced-dropdown-light-theme();
+  .gux-advanced-dropdown-light-theme();
 }
 
 // Default Theme
 gux-advanced-dropdown {
-    .gux-advanced-dropdown-light-theme();
+  .gux-advanced-dropdown-light-theme();
 }
