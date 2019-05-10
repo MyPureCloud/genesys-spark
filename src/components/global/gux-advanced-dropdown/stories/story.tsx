@@ -1,33 +1,38 @@
 import { action } from '@storybook/addon-actions';
-import { select, text } from '@storybook/addon-knobs/polymer';
+import { boolean, select, text } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
 import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module).add(
-  'Gux Advanced Dropdown',
+storiesOf('Basic Components', module).add(
+  'Advanced Dropdown',
   withReadme(README, () => {
     const el = document.createElement('div');
     render(
       html`
-        <h2>Basic samples</h2>
-        <gux-advanced-dropdown></gux-advanced-dropdown>
-        <h2>Interactive sample</h2>
         <gux-advanced-dropdown
-          id='interactive'
-          first=${text('first', 'blob')}
-          last=${text('last', 'Blop')}
-          middle=${text('middle', 'Blop')}
-        >
+          disabled="${boolean('disabled', false)}"
+          label="${text('label', 'Interactive Select')}"
+          placeholder="${text('placeholder', 'Select...')}">
         </gux-advanced-dropdown>
+        <h2>Foobar</h2>
       `,
       el
     );
     setTimeout(() => {
-      const it = document.getElementById('interactive');
-      it.addEventListener('custom', e => action('custom')(e.detail));
+      const its = Array.from(
+        document.getElementsByTagName('gux-advanced-dropdown')
+      );
+      its.map(it => {
+        it.items = [
+          { text: 'Belgium' },
+          { text: 'Brazil' },
+          { text: 'France' },
+          { text: 'Spain', isDisabled: true }
+        ];
+      });
     }, 100);
     document.getElementsByTagName('html')[0].className =
       'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
