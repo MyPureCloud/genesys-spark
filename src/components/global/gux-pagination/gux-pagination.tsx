@@ -4,8 +4,7 @@ import {
   Event,
   EventEmitter,
   Method,
-  Prop,
-  State
+  Prop
 } from '@stencil/core';
 import { GuxPaginationLayout } from './gux-pagination-layout';
 
@@ -40,10 +39,10 @@ export class GuxPagination {
   @Prop()
   layout: GuxPaginationLayout | string = GuxPaginationLayout.Large;
 
-  @State()
+  @Prop({ mutable: true })
   itemsPerPage: number = 25;
 
-  @State()
+  @Prop({ mutable: true })
   itemsPerPageOptions: number[] = [25, 50, 100];
 
   /**
@@ -134,6 +133,8 @@ export class GuxPagination {
             onItemsPerPageChanged={ev => {
               this.itemsPerPage = ev.detail;
             }}
+            itemsPerPage={this.itemsPerPage}
+            itemsPerPageOptions={this.itemsPerPageOptions}
             i18n={this.i18n}
           />
         )}

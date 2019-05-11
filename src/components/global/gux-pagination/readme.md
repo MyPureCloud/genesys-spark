@@ -14,11 +14,13 @@ the newly selected page.
 
 ## Properties
 
-| Property      | Attribute      | Description                                                                                                                                                                | Type     | Default                     |
-| ------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------- |
-| `currentPage` | `current-page` | The currently select page. Changes are watched by the component.                                                                                                           | `number` | `1`                         |
-| `layout`      | `layout`       | The responsive size of the control to use: "small", "medium", or "large". See the exported recommendedBreakpoints for the pixel widths that are recommended for each size. | `string` | `GuxPaginationLayout.Large` |
-| `totalItems`  | `total-items`  | The total number of items in the data set. Used to calculate total page count                                                                                              | `number` | `undefined`                 |
+| Property              | Attribute        | Description                                                                                                                                                                | Type       | Default                     |
+| --------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------------------- |
+| `currentPage`         | `current-page`   | The currently select page. Changes are watched by the component.                                                                                                           | `number`   | `1`                         |
+| `itemsPerPage`        | `items-per-page` |                                                                                                                                                                            | `number`   | `25`                        |
+| `itemsPerPageOptions` | --               |                                                                                                                                                                            | `number[]` | `[25, 50, 100]`             |
+| `layout`              | `layout`         | The responsive size of the control to use: "small", "medium", or "large". See the exported recommendedBreakpoints for the pixel widths that are recommended for each size. | `string`   | `GuxPaginationLayout.Large` |
+| `totalItems`          | `total-items`    | The total number of items in the data set. Used to calculate total page count                                                                                              | `number`   | `undefined`                 |
 
 
 ## Events
