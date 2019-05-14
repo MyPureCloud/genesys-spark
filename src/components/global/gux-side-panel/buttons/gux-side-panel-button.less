@@ -1,0 +1,90 @@
+
+gux-side-panel-button {
+  &:first-child {
+    button {
+      border-top: 1px solid @gux-border;
+    }
+  }
+
+  button {
+    width: 48px;
+    height: 48px;
+    border: 1px solid @gux-border;
+    border-top-color: transparent;
+    color: @gux-grey-2;
+    cursor: pointer;
+    background-color: @gux-off-white;
+
+    &.selected {
+      background-color: @gux-dark-blue;
+      color: @gux-off-white;
+      border: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: @gux-blue;
+    }
+
+    &:focus{
+      outline: none;
+    }
+
+    i {
+      font-size: 24px;
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-side-panel-button-dark-theme {
+  button {
+    color: @gux-off-white;
+    background-color: @gux-charocal;
+    border-color: @gux-grey-1;
+
+    &.selected {
+      background-color: @gux-dark-blue;
+      border: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: @gux-blue;
+    }
+  }
+};
+
+.gux-dark-theme {
+    gux-side-panel-button {
+        .gux-side-panel-button-dark-theme();
+    }
+}
+
+gux-side-panel-button.gux-dark-theme {
+    .gux-side-panel-button-dark-theme();
+}
+
+// Light
+.gux-side-panel-button-light-theme {
+    color: @gux-grey-2;
+};
+
+.gux-light-theme {
+    gux-side-panel-button {
+        .gux-side-panel-button-light-theme();
+    }
+}
+
+gux-side-panel-button.gux-light-theme {
+    .gux-side-panel-button-light-theme();
+}
+
+// Default Theme
+gux-side-panel-button {
+    .gux-side-panel-button-light-theme();
+}

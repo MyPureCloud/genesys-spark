@@ -1,0 +1,81 @@
+// Variables part
+
+// Style
+gux-side-panel {
+  aside {
+    height: 100%;
+    background-color: @gux-off-white;
+    color: @gux-grey-2;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    width: 48px;
+
+    &.left {
+      flex-direction: row;
+
+      .panel-content {
+        left: 48px;
+      }
+    }
+
+    &.right {
+      .panel-content {
+        right: 48px;
+      }
+    }
+
+    .panel-icons {
+      gux-side-panel-button {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .panel-content {
+      position: absolute;
+      width: 280px;
+
+      &.closed {
+        display: none;
+      }
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-side-panel-dark-theme {
+    color: @gux-off-white;
+};
+
+.gux-dark-theme {
+    gux-side-panel {
+        .gux-side-panel-dark-theme();
+    }
+}
+
+gux-side-panel.gux-dark-theme {
+    .gux-side-panel-dark-theme();
+}
+
+// Light
+.gux-side-panel-light-theme {
+    color: @gux-grey-2;
+};
+
+.gux-light-theme {
+    gux-side-panel {
+        .gux-side-panel-light-theme();
+    }
+}
+
+gux-side-panel.gux-light-theme {
+    .gux-side-panel-light-theme();
+}
+
+// Default Theme
+gux-side-panel {
+    .gux-side-panel-light-theme();
+}
