@@ -27,6 +27,7 @@ changing error-message attribute.
 | `labelPosition`    | `label-position`     | The input label position (can be left or top) if not defined the position depends of the label width. | `string`                                      | `undefined`   |
 | `placeholder`      | `placeholder`        | The input placeholder.                                                                                | `string`                                      | `undefined`   |
 | `readonly`         | `readonly`           | Set the input in readonly mode                                                                        | `boolean`                                     | `false`       |
+| `srLabel`          | `sr-label`           | The label to use for screen readers if not using a visible label.                                     | `string`                                      | `undefined`   |
 | `type`             | `type`               | Indicate the input type                                                                               | `"email" \| "number" \| "password" \| "text"` | `'text'`      |
 | `useClearButton`   | `use-clear-button`   | Determines whether or not the 'x' clear button is displayed when the input contains text.             | `boolean`                                     | `true`        |
 | `validation`       | `validation`         | The input validation.                                                                                 | `any`                                         | `null`        |

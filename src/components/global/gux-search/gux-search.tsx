@@ -4,8 +4,8 @@ import {
   Event,
   EventEmitter,
   Prop,
-  Watch,
-  State
+  State,
+  Watch
 } from '@stencil/core';
 
 @Component({
@@ -21,6 +21,18 @@ export class GuxSearch {
    */
   @Prop({ mutable: true, reflectToAttr: true })
   value: string = '';
+
+  /**
+   * The input label.
+   */
+  @Prop()
+  label: string;
+
+  /**
+   * The input label position (can be left or top) if not defined the position depends of the label width.
+   */
+  @Prop()
+  labelPosition: string;
 
   /**
    * Disable the input and prevent interactions.
@@ -78,16 +90,18 @@ export class GuxSearch {
 
   render() {
     return (
-      <div>
-        <div class="search-input">
+      <div class={this.getClassList()}>
+        {this.label && <label>{this.label}</label>}
+        <div class="gux-search-input">
           <gux-text-field
             value={this.value}
+            srLabel={this.label}
             disabled={this.disabled}
             placeholder={this.placeholder}
             onInput={e => this._onInput(e)}
             onKeyDown={e => this._onKeyDown(e)}
           />
-          <div class="search-icon">
+          <div class="gux-search-icon">
             <i class="genesys-icon-search" />
           </div>
         </div>
@@ -108,5 +122,21 @@ export class GuxSearch {
 
   private _emitSearch() {
     this.search.emit(this.value);
+  }
+
+  private getClassList(): string {
+    let classList = [];
+    if (['left', 'top'].includes(this.labelPosition)) {
+      if (this.labelPosition === 'left') {
+        classList = [...classList, 'flex'];
+      }
+    } else if (this.label && this.label.length < 10) {
+      classList = [...classList, 'flex'];
+    }
+
+    if (this.disabled) {
+      classList = [...classList, 'disabled'];
+    }
+    return classList.join(' ');
   }
 }

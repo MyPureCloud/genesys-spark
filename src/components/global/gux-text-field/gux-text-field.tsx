@@ -61,6 +61,12 @@ export class GuxTextField {
   label: string;
 
   /**
+   * The label to use for screen readers if not using a visible label.
+   */
+  @Prop()
+  srLabel: string;
+
+  /**
    * The input label position (can be left or top) if not defined the position depends of the label width.
    */
   @Prop()
@@ -128,7 +134,7 @@ export class GuxTextField {
     this.input.emit(event.target.value);
   }
 
-  emitFocusEvent (event) {
+  emitFocusEvent(event) {
     this.root.dispatchEvent(new FocusEvent(event.type, event));
   }
 
@@ -225,16 +231,16 @@ export class GuxTextField {
         {this.label && <label>{this.label}</label>}
         <div class="gux-field">
           <input
-            aria-label={this.label}
+            aria-label={this.label || this.srLabel}
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
             disabled={this.disabled}
             readonly={this.readonly}
             placeholder={this.placeholder}
-            onInput={(e) => this.emitInput(e)}
-            onFocus={(e) => this.emitFocusEvent(e)}
-            onBlur={(e) => this.emitFocusEvent(e)}
+            onInput={e => this.emitInput(e)}
+            onFocus={e => this.emitFocusEvent(e)}
+            onBlur={e => this.emitFocusEvent(e)}
           />
           {this.showClearButton && (
             <button
@@ -255,4 +261,3 @@ export class GuxTextField {
     );
   }
 }
-

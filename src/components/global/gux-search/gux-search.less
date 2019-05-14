@@ -3,16 +3,54 @@
 
 // Style
 gux-search {
-    
-    .search-input {
-        position: relative;
+    > div {
+        margin: 4px 0;
 
-        gux-text-field input {
-            padding-left: 28px;
+        &.flex {
+            display: grid;
+            width: 100%;
+            grid-auto-columns: min-content auto;
+
+            label {
+                grid-column: 1 e("/") 2;
+                grid-row: 1 e("/") 2;
+            }
+
+            .gux-search-input {
+                grid-column: 2 e("/") 2;
+                grid-row: 1 e("/") 2;
+            }
         }
     }
 
-    .search-icon {
+    label {
+        margin-right: 8px;
+        height: 32px;
+        line-height: 30px;
+        font-weight: bold;
+        display: inline-block;
+  
+        &:empty {
+          display: none;
+        }
+      }
+
+    .gux-search-input {
+        position: relative;
+
+
+        gux-text-field {
+            & > div {
+                margin: 0px;
+            }
+
+            input {
+                padding-left: 28px;
+            }
+        }
+    }
+
+    .gux-search-icon {
         position: absolute;
         top: 0;
         left: 8px;

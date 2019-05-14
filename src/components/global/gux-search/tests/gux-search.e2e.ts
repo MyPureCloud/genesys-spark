@@ -84,7 +84,7 @@ describe('gux-search', () => {
 
       const searchSpy = await element.spyOnEvent('search');
       await input.press('KeyT');
-      expect(searchSpy).toHaveReceivedEvent();
+      expect(searchSpy).toHaveReceivedEventDetail('t');
     });
   });
 });
