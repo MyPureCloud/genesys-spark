@@ -58,14 +58,15 @@ export class GuxSearch {
     );
   }
 
-  private _onInput(event: any) {
-    this.input.emit(event);
-  }
-
   private _onKeyDown(event: KeyboardEvent) {
     if (event.key === 'Enter') {
       this._emitSearch();
     }
+  }
+
+  private _onInput(event: any) {
+    this.value = event.target.value;
+    this.input.emit(event);
   }
 
   private _emitSearch() {

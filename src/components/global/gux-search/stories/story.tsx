@@ -30,7 +30,9 @@ storiesOf('Basic Components', module).add(
 
     setTimeout(() => {
       const it = document.getElementById('interactive');
-      it.addEventListener('search', e => action('search')(e));
+      it.addEventListener('search', (e: CustomEvent) =>
+        action('search')(e.detail)
+      );
     }, 100);
 
     document.getElementsByTagName('html')[0].className =
