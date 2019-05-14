@@ -15,17 +15,19 @@ gux-side-panel {
       flex-direction: row;
 
       .panel-content {
-        left: 48px;
+        left: 49px;
       }
     }
 
     &.right {
       .panel-content {
-        right: 48px;
+        right: 49px;
       }
     }
 
     .panel-icons {
+      border: 1px solid @gux-border;
+
       gux-side-panel-button {
         display: flex;
         flex-direction: column;
@@ -35,6 +37,11 @@ gux-side-panel {
     .panel-content {
       position: absolute;
       width: 280px;
+      height: 100%;
+
+      [slot="side-panel-content"] {
+        height: 100%;
+      }
 
       &.closed {
         display: none;

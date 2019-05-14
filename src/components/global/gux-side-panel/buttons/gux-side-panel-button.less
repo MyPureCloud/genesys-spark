@@ -1,16 +1,11 @@
 
 gux-side-panel-button {
-  &:first-child {
-    button {
-      border-top: 1px solid @gux-border;
-    }
-  }
 
   button {
     width: 48px;
     height: 48px;
-    border: 1px solid @gux-border;
-    border-top-color: transparent;
+    border: none;
+    border-bottom: 1px solid @gux-border;
     color: @gux-grey-2;
     cursor: pointer;
     background-color: @gux-off-white;
@@ -24,7 +19,11 @@ gux-side-panel-button {
     &:hover,
     &:active,
     &:focus {
-      border-color: @gux-blue;
+      color: @gux-dark-blue;
+
+      &.selected {
+        color: @gux-off-white;
+      }
     }
 
     &:focus{

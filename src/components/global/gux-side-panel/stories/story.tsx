@@ -4,10 +4,11 @@ import { html, render } from 'lit-html';
 import { withReadme } from 'storybook-readme';
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module).add(
-  'Gux Side Panel',
+storiesOf('Basic Components', module).add(
+  'Side Panel',
   withReadme(README, () => {
     const el = document.createElement('div');
+    el.style.height = 'calc(100vh - 16px)';
     render(
       html`
         <gux-side-panel position="left">
@@ -83,7 +84,7 @@ storiesOf('Genesys Components', module).add(
       }
 
       function getPanelContentForSelectedButton(buttonId) {
-        return `<gux-panel-frame>
+        return `<gux-panel-frame style="height:100%;">
               <div slot="header">
                 <div style="display: flex; justify-content: flex-end; align-items: center">
                   <h2 id="content-title" style="margin-right: auto">Content header</h2>

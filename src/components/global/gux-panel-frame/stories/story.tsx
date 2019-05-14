@@ -1,16 +1,16 @@
 import { select } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
-import { withReadme  } from 'storybook-readme';
+import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
-.add(
-    'Genesys Panel Frame',
-    withReadme(README, () => {
-      const el = document.createElement('div');
-      render(html`
+storiesOf('Basic Components', module).add(
+  'Panel Frame',
+  withReadme(README, () => {
+    const el = document.createElement('div');
+    render(
+      html`
         <style>
           gux-panel-frame > div { width: 300px }
         </style>
@@ -35,9 +35,11 @@ storiesOf('Genesys Components', module)
             </div>
           </div>
         </gux-panel-frame>
-      `, el);
-      document.getElementsByTagName('html')[0].className =
-        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
-      return el;
-    })
+      `,
+      el
+    );
+    document.getElementsByTagName('html')[0].className =
+      'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+    return el;
+  })
 );
