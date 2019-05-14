@@ -47,12 +47,9 @@ gux-radio {
     background-image: @gux-icon-radio-checked;
   }
 
-  input:disabled ~ label::after {
-    opacity: 0.5;
-  }
-
   input:disabled ~ label::after,
   input:disabled ~ label {
+    opacity: 0.5;
     cursor: not-allowed;
   }
 
