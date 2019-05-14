@@ -50,6 +50,12 @@ gux-radio {
   input:disabled ~ label::after {
     opacity: 0.5;
   }
+
+  input:disabled ~ label::after,
+  input:disabled ~ label {
+    cursor: not-allowed;
+  }
+
 }
 
 .gux-radio-dark-theme {
