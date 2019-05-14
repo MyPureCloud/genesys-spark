@@ -1,4 +1,12 @@
-import { Component, Element, Event, EventEmitter, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  Prop,
+  Watch,
+  State
+} from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-search.less',
@@ -27,6 +35,20 @@ export class GuxSearch {
   placeholder: string;
 
   /**
+   * Operate the search control using dynamic searching
+   * as the input value is updated.  Searches debounced
+   * to execute every searchTimeout.
+   */
+  @Prop()
+  dynamicSearch: boolean = false;
+
+  /**
+   * Timeout between input and search.
+   */
+  @Prop()
+  searchTimeout: number = 500;
+
+  /**
    * Triggered when a search is requested.
    */
   @Event()
@@ -38,6 +60,21 @@ export class GuxSearch {
    */
   @Event()
   input: EventEmitter;
+
+  @State()
+  timeout: number;
+
+  @Watch('value')
+  watchValue() {
+    if (!this.dynamicSearch) {
+      return;
+    }
+
+    window.clearTimeout(this.timeout);
+    this.timeout = window.setTimeout(() => {
+      this._emitSearch();
+    }, this.searchTimeout);
+  }
 
   render() {
     return (

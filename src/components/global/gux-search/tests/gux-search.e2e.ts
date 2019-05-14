@@ -54,7 +54,7 @@ describe('gux-search', () => {
   });
 
   describe('search request', () => {
-    it('sho', async () => {
+    it('should emit search event on Enter', async () => {
       const page = await newE2EPage();
 
       await page.setContent('<gux-search></gux-search>');
@@ -69,6 +69,22 @@ describe('gux-search', () => {
 
       await input.press('Enter');
       expect(searchSpy).toHaveReceivedEventDetail('test');
+    });
+  });
+
+  describe('dynamic search', () => {
+    it('should emit search event after delay', async () => {
+      const page = await newE2EPage();
+
+      await page.setContent(
+        '<gux-search dynamic-search="true" search-timeout="0"></gux-search>'
+      );
+      const element = await page.find('gux-search');
+      const input = await element.find('input');
+
+      const searchSpy = await element.spyOnEvent('search');
+      await input.press('KeyT');
+      expect(searchSpy).toHaveReceivedEvent();
     });
   });
 });

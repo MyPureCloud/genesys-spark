@@ -15,13 +15,20 @@ storiesOf('Basic Components', module).add(
         <h2>Basic samples</h2>
         <gux-search label="Search"></gux-search>
         <gux-search placeholder="Search"></gux-search>
-        <gux-searchplaceholder="Search" value="Genesys"></gux-search>
+        <gux-search placeholder="Search" value="Genesys"></gux-search>
+        <h3>Dynamic Searching</h3>
+        <gux-search 
+          id="dynamicSearch"
+          placeholder="Search"
+          dynamic-search="true">
+        </gux-search>
         <h2>Interactive sample</h2>
         <gux-search
-          id='interactive'
+          id="interactive"
           placeholder=${text('placeholder', 'placeholder')}
           value=${text('value', 'value')}
           disabled=${boolean('disabled', false)}
+          dynamic-search=${boolean('dynamic-search', false)}
         >
         </gux-search>
       `,
@@ -32,6 +39,11 @@ storiesOf('Basic Components', module).add(
       const it = document.getElementById('interactive');
       it.addEventListener('search', (e: CustomEvent) =>
         action('search')(e.detail)
+      );
+
+      const dynamicSearch = document.getElementById('dynamicSearch');
+      dynamicSearch.addEventListener('search', (e: CustomEvent) =>
+        action('dynamic-search')(e.detail)
       );
     }, 100);
 
