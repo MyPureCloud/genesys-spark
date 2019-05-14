@@ -47,26 +47,6 @@ storiesOf('Pagination', module)
     })
   )
   .add(
-    'Structural',
-    withReadme(readme, () => {
-      const component = createComponent();
-      component.totalItems = number('totalItems', 250);
-      component.currentPage = number('currentPage', 3);
-
-      const childPageSizeOptionNodes = [5, 10, 15].map(pageSize => {
-        const pageSizeOptionNode = document.createElement(
-          'gux-pagination-page-size-option'
-        );
-        pageSizeOptionNode.setAttribute('value', String(pageSize));
-        return pageSizeOptionNode;
-      });
-
-      component.append(...childPageSizeOptionNodes);
-
-      return component;
-    })
-  )
-  .add(
     'No Items Per Page options',
     withReadme(readme, () => {
       const component = createComponent();

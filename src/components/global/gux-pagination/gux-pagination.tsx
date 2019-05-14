@@ -11,6 +11,8 @@ import { GuxPaginationLayout } from './gux-pagination-layout';
 import { buildI18nForComponent } from '../../i18n';
 import paginationResources from './gux-pagination.i18n.json';
 
+const DEFAULT_ITEMS_PER_PAGE_OPTIONS = [25, 50, 100];
+
 @Component({
   styleUrl: 'gux-pagination.less',
   tag: 'gux-pagination'
@@ -43,7 +45,7 @@ export class GuxPagination {
   itemsPerPage: number = 25;
 
   @Prop({ mutable: true })
-  itemsPerPageOptions: number[] = [25, 50, 100];
+  itemsPerPageOptions: number[] = DEFAULT_ITEMS_PER_PAGE_OPTIONS;
 
   /**
    * Fired when the current page property changes.
@@ -60,17 +62,31 @@ export class GuxPagination {
 
   private i18n: (resourceKey: string, context?: any) => string;
 
+  coerceItemsPerPageOptions() {
+    // Make sure these props are coerced to their proper type if passed as string literals by a static HTML parent
+    if (typeof this.itemsPerPageOptions === 'string') {
+      try {
+        const itemsPerPageOptions = JSON.parse(this.itemsPerPageOptions)
+
+          // Coerce to numbers
+          .map(option => Number(option))
+
+          // Filter out NaN and 0
+          .filter(option => !!option);
+        this.itemsPerPageOptions = itemsPerPageOptions;
+      } catch (e) {
+        console.error(
+          'Could not parse argument `itemsPerPageOptions` make sure you provided an array of numbers'
+        );
+        console.error(e);
+        this.itemsPerPageOptions = DEFAULT_ITEMS_PER_PAGE_OPTIONS;
+      }
+    }
+  }
+
   async componentWillLoad() {
     this.i18n = await buildI18nForComponent(this.element, paginationResources);
-
-    const pageSizeOptionsFromChildren = Array.from(this.element.children)
-      .filter(child => child.tagName === 'GUX-PAGINATION-PAGE-SIZE-OPTION')
-      .map(child => child.getAttribute('value'))
-      .map(valueString => Number(valueString));
-
-    if (pageSizeOptionsFromChildren.length) {
-      this.itemsPerPageOptions = pageSizeOptionsFromChildren;
-    }
+    this.coerceItemsPerPageOptions();
   }
 
   calculatTotalPages(): number {
@@ -118,14 +134,7 @@ export class GuxPagination {
   componentWillUpdate() {
     const totalPages = this.calculatTotalPages();
 
-    // Make sure these props are coerced to their proper type if passed as string literals by a static HTML parent
-    if (typeof this.itemsPerPageOptions === 'string') {
-      const itemsPerPageOptions = JSON.parse(this.itemsPerPageOptions);
-      this.itemsPerPageOptions = itemsPerPageOptions;
-    }
-    if (typeof this.itemsPerPage === 'string') {
-      this.itemsPerPage = Number(this.itemsPerPage);
-    }
+    this.coerceItemsPerPageOptions();
 
     if (this.currentPage > totalPages) {
       this.currentPage = totalPages;
