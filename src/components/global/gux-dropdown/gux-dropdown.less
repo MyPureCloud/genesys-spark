@@ -1,4 +1,18 @@
 // Variables part
+@background-color: #F9FAFB;
+@background-color-dark-theme: #555d66;
+
+@text-color: @gux-grey-2;
+@text-color-dark-theme: @gux-off-white;
+
+@placeholder: @gux-pale-gray-2;
+
+@border-color: @gux-border-alt;
+@border-color-dark-theme: @gux-grey-1;
+
+@focus-outline: fade(@gux-blue, 50%);
+@focus-outline-dark-theme: @gux-blue;
+@active-border: @gux-dark-blue;
 
 // Style
 gux-dropdown {
@@ -13,6 +27,7 @@ gux-dropdown {
     &.left {
       display: flex;
     }
+
     label {
       margin-right: 8px;
       height: 32px;
@@ -21,10 +36,12 @@ gux-dropdown {
       display: inline-block;
       white-space: nowrap;
     }
+
     .select-field {
       position: relative;
       height: 32px;
       width: 100%;
+
       .ghost {
         position: absolute;
         height: 32px;
@@ -36,20 +53,24 @@ gux-dropdown {
         font-size: 12px;
         line-height: 1.66666667;
       }
+
       gux-text-field {
         > div {
           margin: 0;
         }
+
         input {
           cursor: pointer;
           background-color: transparent;
         }
+
         &.unclearable {
           button {
             display: none;
           }
         }
       }
+
       button.genesys-icon-dropdown-arrow {
         position: absolute;
         top: 1px;
@@ -70,6 +91,7 @@ gux-dropdown {
         }
       }
     }
+
     gux-list {
       display: none;
       position: absolute;
@@ -79,6 +101,7 @@ gux-dropdown {
         display: block;
       }
     }
+
     &.page {
       .select-field {
         .ghost {
@@ -104,6 +127,12 @@ gux-dropdown {
               border-bottom: 2px solid fade(@gux-blue, 50%);
             }
           }
+        }
+      }
+
+      &.active {
+        .select-field gux-text-field input:focus  {
+          border-bottom: 1px solid @gux-dark-blue;
         }
       }
     }
@@ -134,10 +163,18 @@ gux-dropdown {
           }
         }
       }
+
+      &.active {
+        .select-field gux-text-field input:focus  {
+          border-bottom: 1px solid @gux-dark-blue;
+        }
+      }
+
       gux-list {
         width: calc(100% - 16px);
         margin: 0 8px;
       }
+      
     }
   }
 }
@@ -147,27 +184,50 @@ gux-dropdown {
   div.gux-dropdown {
     .select-field {
       .ghost {
-        background-color: @gux-off-white-bg;
-        color: @gux-grey-bg-3;
+        background-color: @background-color;
+        color: @placeholder;
+      }
+
+      gux-text-field input {
+        border-color: @border-color;
+        color: @text-color;
+
+        &:focus {
+          box-shadow: 0px 0px 0px 3px @focus-outline;
+        }
+      }
+
+      button.genesys-icon-dropdown-arrow {
+        color: @text-color;
       }
     }
+
+    &.default.active {
+      .select-field {
+        .gux-field {
+          input:focus {
+            border: 1px solid @active-border;
+            box-shadow: 0px 0px 4px @focus-outline;
+          }
+        }
+      }
+    }
+
     &.page {
       .select-field {
         .ghost {
           background-color: @gux-off-white-bg;
           color: @gux-grey-bg-3;
         }
-        gux-text-field {
-          input {
-            border-bottom: 1px solid @gux-border;
-          }
+
+        gux-text-field input {
+          border-bottom: 1px solid @gux-border;
         }
       }
+
       &.active {
-        gux-text-field {
-          input {
-            border-bottom: 1px solid @gux-blue;
-          }
+        gux-text-field input {
+          border-bottom: 1px solid @gux-blue;
         }
       }
     }
@@ -192,7 +252,8 @@ gux-dropdown {
       }
     }
   }
-};
+}
+
 .gux-light-theme {
   gux-dropdown {
     .gux-dropdown-light-theme;
@@ -201,30 +262,65 @@ gux-dropdown {
 .gux-dropdown.gux-light-theme {
   .gux-dropdown-light-theme;
 }
+
 // Dark
 .gux-dropdown-dark-theme {
   color: @gux-off-white;
   div.gux-dropdown {
     .select-field {
       .ghost {
-        background-color: @gux-border-dark;
-        color: @gux-grey-bg-3;
+        background-color: @background-color-dark-theme;
+        color: @gux-pale-gray-2;
       }
+
+      gux-text-field input {
+        border-color: @border-color-dark-theme;
+        color: @text-color-dark-theme;
+      }
+
       button.genesys-icon-dropdown-arrow {
-        color: @gux-off-white;
+        color: @text-color-dark-theme;
       }
     }
+
+    &.default {
+      .select-field {
+        gux-text-field input {
+          &:focus {
+            box-shadow: 0px 0px 1px 3px @focus-outline-dark-theme;
+          }
+        }
+      }
+
+      &.active {
+        .select-field {
+          .gux-field {
+            input:focus {
+              border-color: @border-color-dark-theme;
+              box-shadow: 0px 0px 1px 3px @focus-outline-dark-theme;
+            }
+          }
+        }
+      }
+    }
+
     &.page {
       .select-field {
         .ghost {
           background-color: @gux-charocal;
         }
-        gux-text-field {
-          border-bottom: 1px solid @gux-grey-1;
+
+        gux-text-field input {
+          border-color: @gux-grey-1;
+
+          &:focus {
+            border-color: fade(@gux-blue, 50%);
+          }
         }
       }
+
       &.active {
-        gux-text-field {
+        gux-text-field input:focus {
           border-bottom: 1px solid @gux-blue;
         }
       }
@@ -234,12 +330,18 @@ gux-dropdown {
         .ghost {
           background-color: @gux-charocal;
         }
-        gux-text-field {
-          border-bottom: 1px solid @gux-grey-1;
+
+        gux-text-field input {
+          border-color: @gux-grey-1;
+
+          &:focus {
+            border-color: fade(@gux-blue, 50%);
+          }
         }
       }
+
       &.active {
-        gux-text-field {
+        gux-text-field input:focus {
           border-bottom: 1px solid @gux-blue;
         }
       }

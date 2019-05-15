@@ -9,6 +9,7 @@ import { IListItem } from '../../../common-interfaces';
 export class GuxAdvancedDropdown {
   @Element()
   root: HTMLStencilElement;
+  searchElement: HTMLGuxSearchElement;
 
   /**
    * The list items, an item contains a `text` and can be disabled.
@@ -36,11 +37,7 @@ export class GuxAdvancedDropdown {
 
   @State()
   opened: boolean;
-
-  @State()
   value: string;
-
-  @State()
   searchInput: string = '';
 
   @Listen('focusout')
@@ -58,9 +55,9 @@ export class GuxAdvancedDropdown {
         }`}
       >
         {this.label && <label>{this.label}</label>}
-        <div class="select-field">
+        <div class="gux-select-field">
           <a
-            class="select-input"
+            class="gux-select-input"
             tabindex="0"
             onMouseDown={() => {
               this._clickHandler();
@@ -82,14 +79,12 @@ export class GuxAdvancedDropdown {
         </div>
         <div class={`advanced-dropdown-menu ${this.opened ? 'opened' : ''}`}>
           <div class="dropdown-menu-container">
-            <div class="search">
-              <gux-text-field
-                onInput={e => {
-                  this._inputHandler(e);
-                }}
-              />
-              <i aria-hidden="true" class="genesys-icon-search" />
-            </div>
+            <gux-search
+              ref={el => (this.searchElement = el as HTMLGuxSearchElement)}
+              class="gux-light-theme"
+              dynamic-search="true"
+              onSearch={e => this._inputHandler(e)}
+            />
             <gux-list
               onChange={e => {
                 this._setValue(e.detail);
@@ -113,6 +108,9 @@ export class GuxAdvancedDropdown {
       return;
     }
     this.opened = !this.opened;
+    if (this.opened) {
+      this.changeFocusToSearch();
+    }
   }
 
   private _onKeyDown(event: KeyboardEvent) {
@@ -121,9 +119,16 @@ export class GuxAdvancedDropdown {
       case KeyCode.Down:
       case KeyCode.Space:
         this.opened = true;
+        this.changeFocusToSearch();
         break;
       default:
     }
+  }
+
+  private changeFocusToSearch() {
+    setTimeout(() => {
+      // this.searchElement.setInputFocus();
+    });
   }
 
   private _inputHandler(event: CustomEvent) {
