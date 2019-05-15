@@ -6,11 +6,11 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .add(
-    'Genesys Radios',
+    'Radios',
     withReadme(README, () => {
       const container = document.createElement('div');
 
