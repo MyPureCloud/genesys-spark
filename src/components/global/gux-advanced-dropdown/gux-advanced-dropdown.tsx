@@ -37,7 +37,11 @@ export class GuxAdvancedDropdown {
 
   @State()
   opened: boolean;
+
+  @State()
   value: string;
+
+  @State()
   searchInput: string = '';
 
   @Listen('focusout')
