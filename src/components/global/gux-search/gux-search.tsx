@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  Method,
   Prop,
   State,
   Watch
@@ -14,7 +15,8 @@ import {
 })
 export class GuxSearch {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxSearchElement;
+  textElement: HTMLGuxTextFieldElement;
 
   /**
    * Indicate the input search value
@@ -88,12 +90,18 @@ export class GuxSearch {
     }, this.searchTimeout);
   }
 
+  @Method()
+  setInputFocus() {
+    this.textElement.setInputFocus();
+  }
+
   render() {
     return (
       <div class={this.getClassList()}>
         {this.label && <label>{this.label}</label>}
         <div class="gux-search-input">
           <gux-text-field
+            ref={el => (this.textElement = el as HTMLGuxTextFieldElement)}
             value={this.value}
             srLabel={this.label}
             disabled={this.disabled}

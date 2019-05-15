@@ -27,6 +27,19 @@ performs a search request when the 'return' key is pressed.
 | `search` | Triggered when a search is requested.                 | `CustomEvent<void>` |
 
 
+## Methods
+
+### `setInputFocus() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

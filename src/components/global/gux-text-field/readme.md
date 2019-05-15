@@ -53,6 +53,16 @@ Type: `void`
 
 
 
+### `setInputFocus() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
 
 ----------------------------------------------
 

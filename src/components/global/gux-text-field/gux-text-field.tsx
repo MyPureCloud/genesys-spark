@@ -213,6 +213,11 @@ export class GuxTextField {
     this.emitInput(event);
   }
 
+  @Method()
+  setInputFocus() {
+    this.inputElement.focus();
+  }
+
   /**
    * Clears the input.
    */

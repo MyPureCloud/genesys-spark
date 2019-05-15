@@ -127,7 +127,7 @@ export class GuxAdvancedDropdown {
 
   private changeFocusToSearch() {
     setTimeout(() => {
-      // this.searchElement.setInputFocus();
+      this.searchElement.setInputFocus();
     });
   }
 
