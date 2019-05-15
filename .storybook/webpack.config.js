@@ -10,11 +10,7 @@ const babelLoader = {
         'env',
         {
           targets: {
-            chrome: 62,
-            edge: 40,
-            firefox: 56,
-            ie: 11,
-            safari: 11
+            browsers: 'last 2 versions, not dead'
           }
         }
       ]
