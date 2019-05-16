@@ -11,8 +11,6 @@ import { GuxPaginationLayout } from './gux-pagination-layout';
 import { buildI18nForComponent } from '../../i18n';
 import paginationResources from './gux-pagination.i18n.json';
 
-const DEFAULT_ITEMS_PER_PAGE_OPTIONS = [25, 50, 100];
-
 @Component({
   styleUrl: 'gux-pagination.less',
   tag: 'gux-pagination'
@@ -45,7 +43,7 @@ export class GuxPagination {
   itemsPerPage: number = 25;
 
   @Prop({ mutable: true })
-  itemsPerPageOptions: number[] = DEFAULT_ITEMS_PER_PAGE_OPTIONS;
+  itemsPerPageOptions: number[] = [25, 50, 100];
 
   /**
    * Fired when the current page property changes.
@@ -79,7 +77,7 @@ export class GuxPagination {
           'Could not parse argument `itemsPerPageOptions` make sure you provided an array of numbers'
         );
         console.error(e);
-        this.itemsPerPageOptions = DEFAULT_ITEMS_PER_PAGE_OPTIONS;
+        this.itemsPerPageOptions = [25, 50, 100];
       }
     }
   }
