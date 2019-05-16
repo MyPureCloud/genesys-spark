@@ -4,7 +4,6 @@ import {
   EventEmitter,
   Method,
   Prop,
-  State,
   Watch
 } from '@stencil/core';
 import { GuxDropdown } from '../../gux-dropdown/gux-dropdown';
@@ -17,9 +16,10 @@ export class GuxPaginationItemsPerPage {
   @Prop()
   i18n: (resourceKey: string, context?: any) => string;
 
-  @State()
+  @Prop({ mutable: true })
   itemsPerPage: number = 25;
-  @State()
+
+  @Prop({ mutable: true })
   itemsPerPageOptions: number[] = [25, 50, 100];
 
   @Event()
