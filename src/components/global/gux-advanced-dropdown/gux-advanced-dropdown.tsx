@@ -1,6 +1,12 @@
-import { Component, Element, Listen, Prop, State } from '@stencil/core';
-import { KeyCode } from '../../../common-enums';
-import { IListItem } from '../../../common-interfaces';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  Listen,
+  Prop,
+  State
+} from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
@@ -12,67 +18,75 @@ export class GuxAdvancedDropdown {
   searchElement: HTMLGuxSearchElement;
 
   /**
-   * The list items, an item contains a `text` and can be disabled.
-   */
-  @Prop()
-  items: IListItem[] = [];
-
-  /**
    * Disable the input and prevent interactions.
    */
   @Prop()
   disabled: boolean = false;
 
   /**
-   * The dropdown label.
+   * The dropdown's label.
    */
   @Prop()
   label: string;
 
   /**
-   * The dropdown placeholder.
+   * The dropdown's placeholder.
    */
   @Prop()
   placeholder: string;
 
+  @Event()
+  input: EventEmitter;
+
   @State()
   opened: boolean;
-
-  @State()
   value: string;
-
-  @State()
-  searchInput: string = '';
+  currentlySelectedOption: HTMLGuxDropdownOptionElement;
+  selectionOptions: HTMLGuxDropdownOptionElement[];
 
   @Listen('focusout')
   onFocusOut(e: FocusEvent) {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
-      this.opened = false;
+      this._closeDropdown();
+    }
+  }
+
+  componentDidLoad() {
+    this.selectionOptions = this._getSelectionOptions();
+    for (const option of this.selectionOptions) {
+      option.addEventListener('selectedChanged', () => {
+        this.value = option.getDisplayedValue();
+        this.input.emit(option.value);
+        this._closeDropdown();
+
+        if (this.currentlySelectedOption) {
+          this.currentlySelectedOption.selected = false;
+        }
+        this.currentlySelectedOption = option;
+      });
     }
   }
 
   render() {
     return (
       <div
-        class={`gux-dropdown ${this.disabled ? 'disabled' : ''} ${
-          this.opened ? 'active' : ''
-        }`}
+        class={`gux-dropdown 
+        ${this.disabled ? 'disabled' : ''}
+        ${this.opened ? 'active' : ''}`}
       >
         {this.label && <label>{this.label}</label>}
         <div class="gux-select-field">
           <a
             class="gux-select-input"
             tabindex="0"
-            onMouseDown={() => {
-              this._clickHandler();
-            }}
-            onKeyDown={e => this._onKeyDown(e)}
+            onMouseDown={() => this._inputMouseDown()}
+            onKeyDown={e => this._inputKeyDown(e)}
           >
             {this.placeholder &&
               !this.value && (
-                <span class="select-placeholder">{this.placeholder}</span>
+                <span class="gux-select-placeholder">{this.placeholder}</span>
               )}
-            {this.value && <span class="select-value">{this.value}</span>}
+            {this.value && <span class="gux-select-value">{this.value}</span>}
           </a>
           <button
             aria-hidden="true"
@@ -81,69 +95,86 @@ export class GuxAdvancedDropdown {
             class="genesys-icon-dropdown-arrow"
           />
         </div>
-        <div class={`advanced-dropdown-menu ${this.opened ? 'opened' : ''}`}>
-          <div class="dropdown-menu-container">
+        <div
+          class={`gux-advanced-dropdown-menu ${this.opened ? 'opened' : ''}`}
+        >
+          <div class="gux-dropdown-menu-container">
             <gux-search
               ref={el => (this.searchElement = el as HTMLGuxSearchElement)}
               class="gux-light-theme"
               dynamic-search="true"
-              onSearch={e => this._inputHandler(e)}
+              onInput={e => e.stopPropagation()}
+              onSearch={e => this._searchRequested(e)}
             />
-            <gux-list
-              onChange={e => {
-                this._setValue(e.detail);
-              }}
-              items={this.filteredItems}
-              highlight={this.searchInput}
-            />
+            <div class="gux-dropdown-options">
+              <slot />
+            </div>
           </div>
         </div>
       </div>
     );
   }
 
-  private _setValue(text: string) {
-    this.value = text;
-    this.opened = false;
+  private _getSelectionOptions(): HTMLGuxDropdownOptionElement[] {
+    const result: HTMLGuxDropdownOptionElement[] = [];
+    const options: HTMLElement = this.root.getElementsByClassName(
+      'gux-dropdown-options'
+    )[0] as HTMLElement;
+
+    // Hack around TSX not supporting for..of on HTMLCollection, this
+    // needs to be tested in IE11
+    const childrenElements: any = options.children;
+    for (const child of childrenElements) {
+      if (child.matches('gux-dropdown-option')) {
+        result.push(child as HTMLGuxDropdownOptionElement);
+      }
+    }
+
+    return result;
   }
 
-  private _clickHandler() {
+  private _inputMouseDown() {
     if (this.disabled) {
       return;
     }
-    this.opened = !this.opened;
+
     if (this.opened) {
-      this.changeFocusToSearch();
+      this._closeDropdown();
+    } else {
+      this._openDropdown();
     }
   }
 
-  private _onKeyDown(event: KeyboardEvent) {
-    switch (event.keyCode) {
-      case KeyCode.Up:
-      case KeyCode.Down:
-      case KeyCode.Space:
-        this.opened = true;
-        this.changeFocusToSearch();
+  private _inputKeyDown(event: KeyboardEvent) {
+    switch (event.key) {
+      case 'ArrowUp':
+      case 'ArrowDown':
+      case ' ':
+        this._openDropdown();
         break;
       default:
     }
   }
 
-  private changeFocusToSearch() {
+  private _searchRequested(event: CustomEvent) {
+    for (const option of this.selectionOptions) {
+      option.filtered = option.filter(event.detail);
+    }
+  }
+
+  private _changeFocusToSearch() {
     setTimeout(() => {
       this.searchElement.setInputFocus();
     });
   }
 
-  private _inputHandler(event: CustomEvent) {
-    this.searchInput = event.detail;
+  private _openDropdown() {
+    this.opened = true;
+    this._changeFocusToSearch();
   }
 
-  private get filteredItems() {
-    const arr = this.items.filter(item => {
-      return item.text.toLowerCase().startsWith(this.searchInput.toLowerCase());
-    });
-
-    return arr;
+  private _closeDropdown() {
+    this.opened = false;
+    this.searchElement.value = '';
   }
 }

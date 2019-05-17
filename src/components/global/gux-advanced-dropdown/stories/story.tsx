@@ -12,28 +12,31 @@ storiesOf('Basic Components', module).add(
     const el = document.createElement('div');
     render(
       html`
+        <h2>Select One</h2>
         <gux-advanced-dropdown
-          disabled="${boolean('disabled', false)}"
-          label="${text('label', 'Interactive Select')}"
-          placeholder="${text('placeholder', 'Select...')}">
+          id="select-one"
+          label="Selection One option"
+          placeholder="[None]">
+          <gux-dropdown-option value="en-US">American English</gux-dropdown-option>
+          <gux-dropdown-option value="es">Latin American Spanish</gux-dropdown-option>
+          <gux-dropdown-option value="es-ES">European Spanish</gux-dropdown-option>
+          <gux-dropdown-option value="en-UK" >UK English</gux-dropdown-option>
+          <gux-dropdown-option value="fr-CA">Canadian French</gux-dropdown-option>
+          <gux-dropdown-option value="fr">European French</gux-dropdown-option>
+          <gux-dropdown-option value="nl">Dutch</gux-dropdown-option>
         </gux-advanced-dropdown>
-        <h2>Foobar</h2>
       `,
       el
     );
+
     setTimeout(() => {
-      const its = Array.from(
-        document.getElementsByTagName('gux-advanced-dropdown')
-      );
-      its.map(it => {
-        it.items = [
-          { text: 'Belgium' },
-          { text: 'Brazil' },
-          { text: 'France' },
-          { text: 'Spain', isDisabled: true }
-        ];
-      });
+      document
+        .getElementById('select-one')
+        .addEventListener('input', (value: CustomEvent) => {
+          action('select-one')(value.detail);
+        });
     }, 100);
+
     document.getElementsByTagName('html')[0].className =
       'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
     return el;

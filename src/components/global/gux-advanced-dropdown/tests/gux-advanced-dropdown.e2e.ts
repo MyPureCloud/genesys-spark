@@ -8,4 +8,8 @@ describe('gux-advanced-dropdown', () => {
     const element = await page.find('gux-advanced-dropdown');
     expect(element).toHaveClass('hydrated');
   });
+
+  it('focuses search field when opening dropdown', async () => {
+    const page = await newE2EPage();
+  });
 });

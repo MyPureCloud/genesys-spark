@@ -16,6 +16,10 @@
 
 @menu-shadow: rgba(34, 37, 41, 0.24);
 
+@menu-background-color: @gux-off-white;
+@menu-border-color: #dae1eb;
+@divider-color: #c3cad4;
+
 // Style
 gux-advanced-dropdown {
   div.gux-dropdown {
@@ -56,12 +60,12 @@ gux-advanced-dropdown {
         border: 1px solid @border-color;
         border-radius: 2px;
 
-        .select-placeholder,
-        .select-value {
+        .gux-select-placeholder,
+        .gux-select-value {
           line-height: 20px;
         }
 
-        .select-placeholder {
+        .gux-select-placeholder {
           color: @placeholder;
         }
 
@@ -115,7 +119,7 @@ gux-advanced-dropdown {
       }
     }
 
-    .advanced-dropdown-menu {
+    .gux-advanced-dropdown-menu {
       display: none;
       box-shadow: 0px 0 2px 0px @menu-shadow;
       position: absolute;
@@ -123,17 +127,49 @@ gux-advanced-dropdown {
       z-index: 1;
       background: @gux-off-white;
 
-      .dropdown-menu-container {
+      .gux-dropdown-menu-container {
         padding: 16px;
-      }
-
-      ul {
-        border: 1px solid @gux-border;
-        box-shadow: none;
       }
 
       &.opened {
         display: block;
+      }
+    }
+
+    .gux-dropdown-options {
+      margin: 0;
+      padding: 8px 0;
+      background: @menu-background-color;
+      border: 1px solid @menu-border-color;
+      box-shadow: none;
+      color: @text-color;
+
+      > * {
+        position: relative;
+        height: 32px;
+        line-height: 32px;
+        padding: 0px 16px;
+        display: flex;
+        cursor: pointer;
+
+        &.disabled {
+          opacity: 0.5;
+          pointer-events: none;
+          cursor: default;
+        }
+
+        &[filtered] {
+          display: none;
+        }
+
+        &:not(.disabled) {
+          &[selected],
+          &:hover,
+          &:focus {
+            background: @gux-dark-blue;
+            color: @gux-off-white;
+          }
+        }
       }
     }
   }
@@ -203,7 +239,6 @@ gux-advanced-dropdown.gux-dark-theme {
       }
     }
   }
-  
 }
 
 .gux-light-theme {

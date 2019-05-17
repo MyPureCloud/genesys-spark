@@ -7,12 +7,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property      | Attribute     | Description                                                    | Type          | Default     |
-| ------------- | ------------- | -------------------------------------------------------------- | ------------- | ----------- |
-| `disabled`    | `disabled`    | Disable the input and prevent interactions.                    | `boolean`     | `false`     |
-| `items`       | --            | The list items, an item contains a `text` and can be disabled. | `IListItem[]` | `[]`        |
-| `label`       | `label`       | The dropdown label.                                            | `string`      | `undefined` |
-| `placeholder` | `placeholder` | The dropdown placeholder.                                      | `string`      | `undefined` |
+| Property      | Attribute     | Description                                 | Type      | Default     |
+| ------------- | ------------- | ------------------------------------------- | --------- | ----------- |
+| `disabled`    | `disabled`    | Disable the input and prevent interactions. | `boolean` | `false`     |
+| `label`       | `label`       | The dropdown's label.                       | `string`  | `undefined` |
+| `placeholder` | `placeholder` | The dropdown's placeholder.                 | `string`  | `undefined` |
+
+
+## Events
+
+| Event   | Description | Type                |
+| ------- | ----------- | ------------------- |
+| `input` |             | `CustomEvent<void>` |
 
 
 ----------------------------------------------
