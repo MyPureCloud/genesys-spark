@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs/polymer';
+import { boolean, select } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
 import { withReadme } from 'storybook-readme';
@@ -14,6 +14,7 @@ storiesOf('Basic Components', module).add(
       html`
         <h2>Select One</h2>
         <gux-advanced-dropdown
+          disabled=${boolean('disabled', false)}
           id="select-one"
           label="Selection One option"
           placeholder="[None]">
@@ -30,11 +31,10 @@ storiesOf('Basic Components', module).add(
     );
 
     setTimeout(() => {
-      document
-        .getElementById('select-one')
-        .addEventListener('input', (value: CustomEvent) => {
-          action('select-one')(value.detail);
-        });
+      const selectOne = document.getElementById('select-one');
+      selectOne.addEventListener('input', (value: CustomEvent) => {
+        action('select-one')(value.detail);
+      });
     }, 100);
 
     document.getElementsByTagName('html')[0].className =

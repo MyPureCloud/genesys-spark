@@ -16,6 +16,7 @@ export class GuxAdvancedDropdown {
   @Element()
   root: HTMLStencilElement;
   searchElement: HTMLGuxSearchElement;
+  inputBox: HTMLElement;
 
   /**
    * Disable the input and prevent interactions.
@@ -47,7 +48,7 @@ export class GuxAdvancedDropdown {
   @Listen('focusout')
   onFocusOut(e: FocusEvent) {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
-      this._closeDropdown();
+      this._closeDropdown(false);
     }
   }
 
@@ -58,10 +59,10 @@ export class GuxAdvancedDropdown {
         this.currentlySelectedOption = option;
       }
 
-      option.addEventListener('selectedChanged', () => {
-        this.value = option.getDisplayedValue();
+      option.addEventListener('selectedChanged', async () => {
+        this.value = await option.getDisplayedValue();
         this.input.emit(option.value);
-        this._closeDropdown();
+        this._closeDropdown(true);
 
         if (this.currentlySelectedOption) {
           this.currentlySelectedOption.selected = false;
@@ -81,6 +82,7 @@ export class GuxAdvancedDropdown {
         {this.label && <label>{this.label}</label>}
         <div class="gux-select-field">
           <a
+            ref={el => (this.inputBox = el)}
             class="gux-select-input"
             tabindex="0"
             onMouseDown={() => this._inputMouseDown()}
@@ -110,7 +112,10 @@ export class GuxAdvancedDropdown {
               onInput={e => e.stopPropagation()}
               onSearch={e => this._searchRequested(e)}
             />
-            <div class="gux-dropdown-options">
+            <div
+              class="gux-dropdown-options"
+              onKeyDown={e => this._optionsKeyDown(e)}
+            >
               <slot />
             </div>
           </div>
@@ -143,9 +148,47 @@ export class GuxAdvancedDropdown {
     }
 
     if (this.opened) {
-      this._closeDropdown();
+      this._closeDropdown(true);
     } else {
       this._openDropdown();
+    }
+  }
+
+  private getFocusIndex(): number {
+    return this.selectionOptions.findIndex(option => {
+      return option.matches(':focus');
+    });
+  }
+
+  private _optionsKeyDown(event: KeyboardEvent) {
+    switch (event.key) {
+      case 'ArrowUp': {
+        const focusIndex = this.getFocusIndex();
+        if (focusIndex > 0) {
+          this.selectionOptions[focusIndex - 1].focus();
+        }
+        break;
+      }
+      case 'ArrowDown': {
+        const focusIndex = this.getFocusIndex();
+        if (focusIndex < this.selectionOptions.length - 1) {
+          this.selectionOptions[focusIndex + 1].focus();
+        }
+        break;
+      }
+      case 'Home':
+        if (!this.selectionOptions.length) {
+          return;
+        }
+        this.selectionOptions[0].focus();
+        break;
+      case 'End':
+        if (!this.selectionOptions.length) {
+          return;
+        }
+        this.selectionOptions[this.selectionOptions.length - 1].focus();
+        break;
+      default:
     }
   }
 
@@ -162,7 +205,9 @@ export class GuxAdvancedDropdown {
 
   private _searchRequested(event: CustomEvent) {
     for (const option of this.selectionOptions) {
-      option.filtered = option.filter(event.detail);
+      option.filter(event.detail).then(isFiltered => {
+        option.filtered = isFiltered;
+      });
     }
   }
 
@@ -177,8 +222,12 @@ export class GuxAdvancedDropdown {
     this._changeFocusToSearch();
   }
 
-  private _closeDropdown() {
+  private _closeDropdown(focus: boolean) {
     this.opened = false;
     this.searchElement.value = '';
+
+    if (focus) {
+      this.inputBox.focus();
+    }
   }
 }

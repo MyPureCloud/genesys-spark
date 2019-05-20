@@ -64,8 +64,8 @@ export class GuxDropdownOption {
    * Gets the value rendered by the drop down item.
    */
   @Method()
-  getDisplayedValue(): string {
-    return this.text;
+  getDisplayedValue(): Promise<string> {
+    return Promise.resolve(this.text);
   }
 
   /**
@@ -74,27 +74,38 @@ export class GuxDropdownOption {
    * @param searchInput The input string being searched for.
    */
   @Method()
-  filter(searchInput: string): boolean {
+  filter(searchInput: string): Promise<boolean> {
     this.highlight = searchInput;
     this.highlightIndex = -1;
 
     if (!searchInput) {
-      return false;
+      return Promise.resolve(false);
     }
 
     const regex = new RegExp(escapeRegex(searchInput), 'gi');
-    const regexResult = regex.exec(this.getDisplayedValue());
+
+    const regexResult = regex.exec(this.text);
     const filter = regexResult === null;
     if (!filter) {
       this.highlightIndex = regexResult.index;
     }
 
-    return filter;
+    return Promise.resolve(filter);
   }
 
   componentDidLoad() {
     this.root.onclick = () => {
       this._onItemClicked();
+    };
+
+    this.root.onkeydown = (e: KeyboardEvent) => {
+      switch (e.key) {
+        case ' ':
+        case 'Enter':
+          this.selected = true;
+          this.selectedChanged.emit(this.value);
+          break;
+      }
     };
   }
 
