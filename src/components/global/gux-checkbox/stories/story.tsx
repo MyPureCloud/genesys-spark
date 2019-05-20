@@ -13,11 +13,11 @@ import { GuxCheckbox } from '../gux-checkbox';
 
 import README from '../readme.md';
 
-storiesOf('Genesys Components', module)
+storiesOf('Basic Components', module)
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .add(
-    'Genesys Checkbox',
+    'Checkboxes',
     withReadme(README, () => {
       const container = document.createElement('div');
       container.innerHTML = `<style>gux-checkbox { padding: 4px; }</style>

@@ -4,8 +4,7 @@ import {
   Event,
   EventEmitter,
   Method,
-  Prop,
-  State
+  Prop
 } from '@stencil/core';
 import { GuxPaginationLayout } from './gux-pagination-layout';
 
@@ -40,10 +39,10 @@ export class GuxPagination {
   @Prop()
   layout: GuxPaginationLayout | string = GuxPaginationLayout.Large;
 
-  @State()
+  @Prop({ mutable: true })
   itemsPerPage: number = 25;
 
-  @State()
+  @Prop({ mutable: true })
   itemsPerPageOptions: number[] = [25, 50, 100];
 
   /**
@@ -61,8 +60,31 @@ export class GuxPagination {
 
   private i18n: (resourceKey: string, context?: any) => string;
 
+  coerceItemsPerPageOptions() {
+    // Make sure these props are coerced to their proper type if passed as string literals by a static HTML parent
+    if (typeof this.itemsPerPageOptions === 'string') {
+      try {
+        const itemsPerPageOptions = JSON.parse(this.itemsPerPageOptions)
+
+          // Coerce to numbers
+          .map(option => Number(option))
+
+          // Filter out NaN and 0
+          .filter(option => !!option);
+        this.itemsPerPageOptions = itemsPerPageOptions;
+      } catch (e) {
+        console.error(
+          'Could not parse argument `itemsPerPageOptions` make sure you provided an array of numbers'
+        );
+        console.error(e);
+        this.itemsPerPageOptions = [25, 50, 100];
+      }
+    }
+  }
+
   async componentWillLoad() {
     this.i18n = await buildI18nForComponent(this.element, paginationResources);
+    this.coerceItemsPerPageOptions();
   }
 
   calculatTotalPages(): number {
@@ -109,6 +131,9 @@ export class GuxPagination {
 
   componentWillUpdate() {
     const totalPages = this.calculatTotalPages();
+
+    this.coerceItemsPerPageOptions();
+
     if (this.currentPage > totalPages) {
       this.currentPage = totalPages;
     }
@@ -134,6 +159,8 @@ export class GuxPagination {
             onItemsPerPageChanged={ev => {
               this.itemsPerPage = ev.detail;
             }}
+            itemsPerPage={this.itemsPerPage}
+            itemsPerPageOptions={this.itemsPerPageOptions}
             i18n={this.i18n}
           />
         )}

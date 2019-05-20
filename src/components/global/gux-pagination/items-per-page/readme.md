@@ -8,9 +8,11 @@ An internal component used by the gux-pagination component.
 
 ## Properties
 
-| Property | Attribute | Description | Type                                             | Default     |
-| -------- | --------- | ----------- | ------------------------------------------------ | ----------- |
-| `i18n`   | --        |             | `(resourceKey: string, context?: any) => string` | `undefined` |
+| Property              | Attribute        | Description | Type                                             | Default         |
+| --------------------- | ---------------- | ----------- | ------------------------------------------------ | --------------- |
+| `i18n`                | --               |             | `(resourceKey: string, context?: any) => string` | `undefined`     |
+| `itemsPerPage`        | `items-per-page` |             | `number`                                         | `25`            |
+| `itemsPerPageOptions` | --               |             | `number[]`                                       | `[25, 50, 100]` |
 
 
 ## Events
