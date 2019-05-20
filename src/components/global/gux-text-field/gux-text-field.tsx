@@ -70,7 +70,7 @@ export class GuxTextField {
    * The input label position (can be left or top) if not defined the position depends of the label width.
    */
   @Prop()
-  labelPosition: 'left' | 'top' = 'left';
+  labelPosition: 'left' | 'top';
 
   /**
    * The input validation.
