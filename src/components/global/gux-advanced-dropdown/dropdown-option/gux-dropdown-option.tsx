@@ -78,7 +78,7 @@ export class GuxDropdownOption {
    * @param searchInput The input string being searched for.
    */
   @Method()
-  isSearchMatch(searchInput: string): Promise<boolean> {
+  shouldFilter(searchInput: string): Promise<boolean> {
     this.highlight = searchInput;
     this.highlightIndex = -1;
 

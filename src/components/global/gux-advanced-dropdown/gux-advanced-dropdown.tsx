@@ -227,7 +227,7 @@ export class GuxAdvancedDropdown {
 
   private searchRequested(event: CustomEvent) {
     for (const option of this.selectionOptions) {
-      option.isSearchMatch(event.detail).then(isFiltered => {
+      option.shouldFilter(event.detail).then(isFiltered => {
         option.filtered = isFiltered;
       });
     }
