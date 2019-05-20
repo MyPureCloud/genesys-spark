@@ -2,6 +2,22 @@
 const path = require('path');
 const stencil = require('@stencil/webpack');
 
+const babelLoader = {
+  loader: 'babel-loader',
+  options: {
+    presets: [
+      [
+        'env',
+        {
+          targets: {
+            browsers: 'last 2 versions, not dead'
+          }
+        }
+      ]
+    ]
+  }
+};
+
 module.exports = ({ config, mode }) => {
   if (mode == 'PRODUCTION') {
     config.output = {
@@ -12,47 +28,16 @@ module.exports = ({ config, mode }) => {
 
   config.module.rules.push(
     {
-      resourceQuery: /blockType=docs/,
-      use: [
-        'storybook-readme/env/vue/docs-loader',
-        'html-loader',
-        'markdown-loader'
-      ]
-    },
-    {
       test: /\.js$/,
       //It is necessary to include lit-html to combat transpilation errors
       exclude: /node_modules[\\|\/](?!lit-html)/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            [
-              'env',
-              {
-                targets: {
-                  chrome: 62,
-                  edge: 40,
-                  firefox: 56,
-                  ie: 11,
-                  safari: 11
-                }
-              }
-            ]
-          ]
-        }
-      }
+      use: babelLoader
     },
     {
       test: /\.tsx$/,
       exclude: /node_modules/,
       use: [
-        {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
-        },
+        babelLoader,
         {
           loader: 'ts-loader',
           options: {
