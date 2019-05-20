@@ -24,7 +24,7 @@ changing error-message attribute.
 | `errorMessage`     | `error-message`      | The message displayed on validation failure.                                                          | `string`                                      | `''`          |
 | `errorMessageType` | `error-message-type` | The message type (warning or error)                                                                   | `string`                                      | `Types.Error` |
 | `label`            | `label`              | The input label.                                                                                      | `string`                                      | `undefined`   |
-| `labelPosition`    | `label-position`     | The input label position (can be left or top) if not defined the position depends of the label width. | `string`                                      | `undefined`   |
+| `labelPosition`    | `label-position`     | The input label position (can be left or top) if not defined the position depends of the label width. | `"left" \| "top"`                             | `'left'`      |
 | `placeholder`      | `placeholder`        | The input placeholder.                                                                                | `string`                                      | `undefined`   |
 | `readonly`         | `readonly`           | Set the input in readonly mode                                                                        | `boolean`                                     | `false`       |
 | `srLabel`          | `sr-label`           | The label to use for screen readers if not using a visible label.                                     | `string`                                      | `undefined`   |

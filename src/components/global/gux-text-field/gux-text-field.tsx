@@ -70,7 +70,7 @@ export class GuxTextField {
    * The input label position (can be left or top) if not defined the position depends of the label width.
    */
   @Prop()
-  labelPosition: string;
+  labelPosition: 'left' | 'top' = 'left';
 
   /**
    * The input validation.
@@ -231,7 +231,7 @@ export class GuxTextField {
         {this.label && <label>{this.label}</label>}
         <div class="gux-field">
           <input
-            aria-label={this.label || this.srLabel}
+            aria-label={this.srLabel || this.label}
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
