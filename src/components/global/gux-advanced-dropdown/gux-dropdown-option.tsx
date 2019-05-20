@@ -4,7 +4,8 @@ import {
   Event,
   EventEmitter,
   Method,
-  Prop
+  Prop,
+  State
 } from '@stencil/core';
 
 function escapeRegex(input) {
@@ -17,7 +18,6 @@ function escapeRegex(input) {
 export class GuxDropdownOption {
   @Element()
   root: HTMLGuxDropdownOptionElement;
-  slot: HTMLElement;
 
   /**
    * The content of this attribute represents the value to be submitted on 'input' changes,
@@ -47,6 +47,13 @@ export class GuxDropdownOption {
   @Prop({ mutable: true, reflectToAttr: true })
   selected: boolean;
 
+  @Prop()
+  text: string;
+
+  @State()
+  highlight: string;
+  highlightIndex: number;
+
   /**
    * Occurs when the item has been selected.
    */
@@ -58,7 +65,7 @@ export class GuxDropdownOption {
    */
   @Method()
   getDisplayedValue(): string {
-    return this.slot.innerText;
+    return this.text;
   }
 
   /**
@@ -68,12 +75,21 @@ export class GuxDropdownOption {
    */
   @Method()
   filter(searchInput: string): boolean {
+    this.highlight = searchInput;
+    this.highlightIndex = -1;
+
     if (!searchInput) {
       return false;
     }
 
     const regex = new RegExp(escapeRegex(searchInput), 'gi');
-    return !regex.test(this.getDisplayedValue());
+    const regexResult = regex.exec(this.getDisplayedValue());
+    const filter = regexResult === null;
+    if (!filter) {
+      this.highlightIndex = regexResult.index;
+    }
+
+    return filter;
   }
 
   componentDidLoad() {
@@ -89,10 +105,31 @@ export class GuxDropdownOption {
   }
 
   render() {
+    return <div>{this._computedText()}</div>;
+  }
+
+  private _computedText() {
+    if (!this.highlight || !this.text) {
+      return <span>{this.text}</span>;
+    }
+
+    if (this.highlightIndex < 0) {
+      return <span>{this.text}</span>;
+    }
+
+    const preface = this.text.substring(0, this.highlightIndex);
+    const actualHighlight = this.text.substring(
+      this.highlightIndex,
+      this.highlightIndex + this.highlight.length
+    );
+    const suffix = this.text.substring(preface.length + this.highlight.length);
+
     return (
-      <div ref={elm => (this.slot = elm)}>
-        <slot />
-      </div>
+      <span>
+        {preface}
+        <strong>{actualHighlight}</strong>
+        {suffix}
+      </span>
     );
   }
 

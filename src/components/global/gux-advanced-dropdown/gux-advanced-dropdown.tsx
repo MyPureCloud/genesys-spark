@@ -54,6 +54,10 @@ export class GuxAdvancedDropdown {
   componentDidLoad() {
     this.selectionOptions = this._getSelectionOptions();
     for (const option of this.selectionOptions) {
+      if (option.selected) {
+        this.currentlySelectedOption = option;
+      }
+
       option.addEventListener('selectedChanged', () => {
         this.value = option.getDisplayedValue();
         this.input.emit(option.value);

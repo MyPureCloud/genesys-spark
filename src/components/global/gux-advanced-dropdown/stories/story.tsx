@@ -17,13 +17,13 @@ storiesOf('Basic Components', module).add(
           id="select-one"
           label="Selection One option"
           placeholder="[None]">
-          <gux-dropdown-option value="en-US">American English</gux-dropdown-option>
-          <gux-dropdown-option value="es">Latin American Spanish</gux-dropdown-option>
-          <gux-dropdown-option value="es-ES">European Spanish</gux-dropdown-option>
-          <gux-dropdown-option value="en-UK" >UK English</gux-dropdown-option>
-          <gux-dropdown-option value="fr-CA">Canadian French</gux-dropdown-option>
-          <gux-dropdown-option value="fr">European French</gux-dropdown-option>
-          <gux-dropdown-option value="nl">Dutch</gux-dropdown-option>
+          <gux-dropdown-option selected value="en-US" text="American English"></gux-dropdown-option>
+          <gux-dropdown-option value="es" text="Latin American Spanish"></gux-dropdown-option>
+          <gux-dropdown-option value="es-ES" text="European Spanish"></gux-dropdown-option>
+          <gux-dropdown-option value="en-UK" text="UK English"></gux-dropdown-option>
+          <gux-dropdown-option value="fr-CA" text="Canadian French"></gux-dropdown-option>
+          <gux-dropdown-option value="fr" text="European French"></gux-dropdown-option>
+          <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
         </gux-advanced-dropdown>
       `,
       el

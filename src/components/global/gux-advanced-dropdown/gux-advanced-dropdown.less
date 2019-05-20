@@ -144,13 +144,21 @@ gux-advanced-dropdown {
       box-shadow: none;
       color: @text-color;
 
-      > * {
+      > gux-dropdown-option {
         position: relative;
         height: 32px;
         line-height: 32px;
         padding: 0px 16px;
         display: flex;
         cursor: pointer;
+
+        > div {
+          position: relative;
+
+          .ghost {
+            position: absolute;
+          }
+        }
 
         &.disabled {
           opacity: 0.5;
@@ -163,7 +171,11 @@ gux-advanced-dropdown {
         }
 
         &:not(.disabled) {
-          &[selected],
+          &[selected] {
+            background: @gux-light-blue;
+            color: @text-color;
+          }
+
           &:hover,
           &:focus {
             background: @gux-dark-blue;
