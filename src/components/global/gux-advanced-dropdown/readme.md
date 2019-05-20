@@ -16,9 +16,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Events
 
-| Event   | Description | Type                |
-| ------- | ----------- | ------------------- |
-| `input` |             | `CustomEvent<void>` |
+| Event   | Description                                            | Type                  |
+| ------- | ------------------------------------------------------ | --------------------- |
+| `input` | Fires when the value of the advanced dropdown changes. | `CustomEvent<string>` |
+
+
+## Methods
+
+### `getSelectedValues() => Promise<string[]>`
+
+Returns the currently selected values
+
+#### Returns
+
+Type: `Promise<string[]>`
+
+
 
 
 ----------------------------------------------

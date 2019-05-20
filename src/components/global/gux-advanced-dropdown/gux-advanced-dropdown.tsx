@@ -4,8 +4,10 @@ import {
   Event,
   EventEmitter,
   Listen,
+  Method,
   Prop,
-  State
+  State,
+  Watch
 } from '@stencil/core';
 
 @Component({
@@ -36,8 +38,11 @@ export class GuxAdvancedDropdown {
   @Prop()
   placeholder: string;
 
+  /**
+   * Fires when the value of the advanced dropdown changes.
+   */
   @Event()
-  input: EventEmitter;
+  input: EventEmitter<string>;
 
   @State()
   opened: boolean;
@@ -45,15 +50,32 @@ export class GuxAdvancedDropdown {
   currentlySelectedOption: HTMLGuxDropdownOptionElement;
   selectionOptions: HTMLGuxDropdownOptionElement[];
 
+  @Watch('disabled')
+  watchValue(newValue: boolean) {
+    if (this.opened && newValue) {
+      this.closeDropdown(false);
+    }
+  }
+
+  /**
+   * Returns the currently selected values
+   */
+  @Method()
+  getSelectedValues(): Promise<string[]> {
+    // Once multi-select gets added there will
+    // be multiple values selectable.
+    return Promise.resolve([this.value]);
+  }
+
   @Listen('focusout')
   onFocusOut(e: FocusEvent) {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
-      this._closeDropdown(false);
+      this.closeDropdown(false);
     }
   }
 
   componentDidLoad() {
-    this.selectionOptions = this._getSelectionOptions();
+    this.selectionOptions = this.getSelectionOptions();
     for (const option of this.selectionOptions) {
       if (option.selected) {
         this.currentlySelectedOption = option;
@@ -62,7 +84,7 @@ export class GuxAdvancedDropdown {
       option.addEventListener('selectedChanged', async () => {
         this.value = await option.getDisplayedValue();
         this.input.emit(option.value);
-        this._closeDropdown(true);
+        this.closeDropdown(true);
 
         if (this.currentlySelectedOption) {
           this.currentlySelectedOption.selected = false;
@@ -85,8 +107,8 @@ export class GuxAdvancedDropdown {
             ref={el => (this.inputBox = el)}
             class="gux-select-input"
             tabindex="0"
-            onMouseDown={() => this._inputMouseDown()}
-            onKeyDown={e => this._inputKeyDown(e)}
+            onMouseDown={() => this.inputMouseDown()}
+            onKeyDown={e => this.inputKeyDown(e)}
           >
             {this.placeholder &&
               !this.value && (
@@ -110,11 +132,11 @@ export class GuxAdvancedDropdown {
               class="gux-light-theme"
               dynamic-search="true"
               onInput={e => e.stopPropagation()}
-              onSearch={e => this._searchRequested(e)}
+              onSearch={e => this.searchRequested(e)}
             />
             <div
               class="gux-dropdown-options"
-              onKeyDown={e => this._optionsKeyDown(e)}
+              onKeyDown={e => this.optionsKeyDown(e)}
             >
               <slot />
             </div>
@@ -124,7 +146,7 @@ export class GuxAdvancedDropdown {
     );
   }
 
-  private _getSelectionOptions(): HTMLGuxDropdownOptionElement[] {
+  private getSelectionOptions(): HTMLGuxDropdownOptionElement[] {
     const result: HTMLGuxDropdownOptionElement[] = [];
     const options: HTMLElement = this.root.getElementsByClassName(
       'gux-dropdown-options'
@@ -142,15 +164,15 @@ export class GuxAdvancedDropdown {
     return result;
   }
 
-  private _inputMouseDown() {
+  private inputMouseDown() {
     if (this.disabled) {
       return;
     }
 
     if (this.opened) {
-      this._closeDropdown(true);
+      this.closeDropdown(true);
     } else {
-      this._openDropdown();
+      this.openDropdown();
     }
   }
 
@@ -160,7 +182,7 @@ export class GuxAdvancedDropdown {
     });
   }
 
-  private _optionsKeyDown(event: KeyboardEvent) {
+  private optionsKeyDown(event: KeyboardEvent) {
     switch (event.key) {
       case 'ArrowUp': {
         const focusIndex = this.getFocusIndex();
@@ -192,37 +214,37 @@ export class GuxAdvancedDropdown {
     }
   }
 
-  private _inputKeyDown(event: KeyboardEvent) {
+  private inputKeyDown(event: KeyboardEvent) {
     switch (event.key) {
       case 'ArrowUp':
       case 'ArrowDown':
       case ' ':
-        this._openDropdown();
+        this.openDropdown();
         break;
       default:
     }
   }
 
-  private _searchRequested(event: CustomEvent) {
+  private searchRequested(event: CustomEvent) {
     for (const option of this.selectionOptions) {
-      option.filter(event.detail).then(isFiltered => {
+      option.isSearchMatch(event.detail).then(isFiltered => {
         option.filtered = isFiltered;
       });
     }
   }
 
-  private _changeFocusToSearch() {
+  private changeFocusToSearch() {
     setTimeout(() => {
       this.searchElement.setInputFocus();
     });
   }
 
-  private _openDropdown() {
+  private openDropdown() {
     this.opened = true;
-    this._changeFocusToSearch();
+    this.changeFocusToSearch();
   }
 
-  private _closeDropdown(focus: boolean) {
+  private closeDropdown(focus: boolean) {
     this.opened = false;
     this.searchElement.value = '';
 

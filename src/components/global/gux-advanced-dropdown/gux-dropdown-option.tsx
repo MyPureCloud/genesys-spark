@@ -8,8 +8,10 @@ import {
   State
 } from '@stencil/core';
 
+// RegExp escape string from http://stackoverflow.com/a/3561711/23528
+const escapeRegexStr = /[-/\\^$*+?.()|[\]{}]/g;
 function escapeRegex(input) {
-  return input.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+  return input.replace(escapeRegexStr, '\\$&');
 }
 
 @Component({
@@ -37,6 +39,8 @@ export class GuxDropdownOption {
   /**
    * If this Boolean attribute is set, the option is not visible to the select control.
    * This does not mean that it clears the selection if it was previously selected.
+   *
+   * Should only be used by internal users.
    */
   @Prop({ mutable: true, reflectToAttr: true })
   filtered: boolean;
@@ -58,7 +62,7 @@ export class GuxDropdownOption {
    * Occurs when the item has been selected.
    */
   @Event()
-  selectedChanged: EventEmitter;
+  selectedChanged: EventEmitter<string>;
 
   /**
    * Gets the value rendered by the drop down item.
@@ -74,7 +78,7 @@ export class GuxDropdownOption {
    * @param searchInput The input string being searched for.
    */
   @Method()
-  filter(searchInput: string): Promise<boolean> {
+  isSearchMatch(searchInput: string): Promise<boolean> {
     this.highlight = searchInput;
     this.highlightIndex = -1;
 
@@ -95,7 +99,7 @@ export class GuxDropdownOption {
 
   componentDidLoad() {
     this.root.onclick = () => {
-      this._onItemClicked();
+      this.onItemClicked();
     };
 
     this.root.onkeydown = (e: KeyboardEvent) => {
@@ -116,10 +120,10 @@ export class GuxDropdownOption {
   }
 
   render() {
-    return <div>{this._computedText()}</div>;
+    return <div>{this.textWithHighlights()}</div>;
   }
 
-  private _computedText() {
+  private textWithHighlights() {
     if (!this.highlight || !this.text) {
       return <span>{this.text}</span>;
     }
@@ -144,7 +148,7 @@ export class GuxDropdownOption {
     );
   }
 
-  private _onItemClicked() {
+  private onItemClicked() {
     this.selected = true;
     this.selectedChanged.emit(this.value);
   }
