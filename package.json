@@ -23,7 +23,7 @@
     "storybook": "./node_modules/.bin/build-storybook -c .storybook -s ./www,./src/style,./dist -o .out",
     "storybook.dev": "./node_modules/.bin/start-storybook -p 9001 -c .storybook -s ./www,./src/style,./dist",
     "create-component": "node scripts/create-component.js",
-    "dev": "stencil build --dev --es5 && ./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run storybook.dev\"",
+    "dev": "stencil build --dev && ./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run storybook.dev\"",
     "format": "prettier ./src/**/*.ts ./src/**/*.tsx",
     "format.fix": "npm run format -- --write",
     "lint": "npm run lint.commit && npm run lint.ts",
