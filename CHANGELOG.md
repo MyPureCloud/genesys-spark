@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.17.0"></a>
+# 0.17.0 (2019-05-23)
+
+
+### Bug Fixes
+
+* **e2e:** remove console.log ([5083c9f](http://inindca/genesys-webcomponents/commits/5083c9f))
+* **gux-checkbox:** add missing hover effects ([cd8814c](http://inindca/genesys-webcomponents/commits/cd8814c))
+* **gux-checkbox:** improve indeterminate behavior and checkbox story ([3083057](http://inindca/genesys-webcomponents/commits/3083057))
+* **gux-checkbox:** linting issues ([3a7212a](http://inindca/genesys-webcomponents/commits/3a7212a))
+* **gux-checkbox:** use `cursor: not-allowed` when disabled ([f037996](http://inindca/genesys-webcomponents/commits/f037996))
+* **gux-radio:** add missing hover effects ([8787386](http://inindca/genesys-webcomponents/commits/8787386))
+* **gux-radio:** disabled radios are 0.5 opacity ([6e0e862](http://inindca/genesys-webcomponents/commits/6e0e862))
+* **gux-radio:** use `cursor: not-allowed` when disabled ([552b2cd](http://inindca/genesys-webcomponents/commits/552b2cd))
+* **switch component:** add padding above css selector ([1056911](http://inindca/genesys-webcomponents/commits/1056911))
+* **switch component:** fix blue outline on active switch ([ebab282](http://inindca/genesys-webcomponents/commits/ebab282))
+
+
+### Features
+
+* **color-picker:** add color picker components ([2f7c6d7](http://inindca/genesys-webcomponents/commits/2f7c6d7))
+* **comui-21:** add spinners and radial progress ([d7b9fc2](http://inindca/genesys-webcomponents/commits/d7b9fc2))
+* **gux-checkbox:** initial checkbox implementation ([eb001f3](http://inindca/genesys-webcomponents/commits/eb001f3))
+* **gux-checkbox:** use slots for labels ([bc6d14b](http://inindca/genesys-webcomponents/commits/bc6d14b))
+* **gux-radio:** initial radio button implementation ([abab6d8](http://inindca/genesys-webcomponents/commits/abab6d8))
+* **gux-radio:** use slots for labels ([49c474e](http://inindca/genesys-webcomponents/commits/49c474e))
+* **Jenkinsfile:** add notification for failed/fixed builds ([623f72d](http://inindca/genesys-webcomponents/commits/623f72d))
+* **pagination:** allows for declarative syntax in pagiation ([91e96f2](http://inindca/genesys-webcomponents/commits/91e96f2))
+* **pagination:** declarative syntax in pagination ([d9e0259](http://inindca/genesys-webcomponents/commits/d9e0259))
+* **pagination:** declarative syntax in pagination ([d656911](http://inindca/genesys-webcomponents/commits/d656911))
+* **pagination:** declarative syntax in pagination ([4cf9343](http://inindca/genesys-webcomponents/commits/4cf9343))
+
+
+
 <a name="0.16.0"></a>
 # 0.16.0 (2019-05-20)
 
