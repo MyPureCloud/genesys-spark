@@ -53,10 +53,10 @@ module.exports = ({ config, mode }) => {
     alias: {
       'genesys-webcomponents': path.resolve(
         __dirname,
-        '../www/static/genesys-webcomponents'
+        '../dist/genesys-webcomponents'
       ),
-      'fonts.css': path.resolve(__dirname, '../www/static/fonts/fonts.css'),
-      'icons.css': path.resolve(__dirname, '../www/static/icons/icons.css')
+      'fonts.css': path.resolve(__dirname, '../dist/fonts/fonts.css'),
+      'icons.css': path.resolve(__dirname, '../dist/icons/icons.css')
     }
   };
 
