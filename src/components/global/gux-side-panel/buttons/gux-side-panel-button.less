@@ -13,7 +13,6 @@ gux-side-panel-button {
     &.selected {
       background-color: @gux-dark-blue;
       color: @gux-off-white;
-      border: none;
     }
 
     &:hover,
@@ -47,13 +46,16 @@ gux-side-panel-button {
 
     &.selected {
       background-color: @gux-dark-blue;
-      border: none;
     }
 
     &:hover,
     &:active,
     &:focus {
-      border-color: @gux-blue;
+      color: @gux-blue;
+
+      &.selected {
+        color: @gux-off-white;
+      }
     }
   }
 };

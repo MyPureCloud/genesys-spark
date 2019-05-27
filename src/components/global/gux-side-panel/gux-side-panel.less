@@ -9,7 +9,7 @@ gux-side-panel {
     display: flex;
     flex-direction: row-reverse;
     position: relative;
-    width: 48px;
+    width: 49px;
 
     &.left {
       flex-direction: row;
@@ -55,6 +55,14 @@ gux-side-panel {
 // Dark
 .gux-side-panel-dark-theme {
     color: @gux-off-white;
+
+    aside {
+      background-color: @gux-charocal;
+
+      .panel-icons {
+        border-color: @gux-grey-1;
+      }
+    }
 };
 
 .gux-dark-theme {

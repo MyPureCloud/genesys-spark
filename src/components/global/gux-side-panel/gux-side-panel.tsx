@@ -15,7 +15,7 @@ export class GuxSidePanel {
   position: 'left' | 'right' = 'left';
 
   get containerClass(): string {
-    return `panel-icons ${this.position} ${this.isOpen ? 'open' : 'closed'}`;
+    return `${this.position} ${this.isOpen ? 'open' : 'closed'}`;
   }
 
   get contentClass(): string {
