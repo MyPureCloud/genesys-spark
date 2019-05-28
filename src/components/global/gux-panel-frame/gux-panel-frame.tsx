@@ -21,7 +21,7 @@ export class GuxPanelFrame {
     const children = Array.from(this.root.children);
     children.map(element => {
       const slot = element.getAttribute('slot');
-      switch(slot) {
+      switch (slot) {
         case 'header':
           this.hasHeader = true;
           break;
@@ -41,22 +41,22 @@ export class GuxPanelFrame {
 
   render() {
     return (
-      <div>
-        {this.hasHeader &&
+      <div class="panel-container">
+        {this.hasHeader && (
           <div class="gux-panel-header">
-            <slot name="header"/>
+            <slot name="header" />
           </div>
-        }
-        {this.hasBody &&
+        )}
+        {this.hasBody && (
           <div class="gux-panel-body">
-            <slot name="body"/>
+            <slot name="body" />
           </div>
-        }
-        {this.hasFooter &&
+        )}
+        {this.hasFooter && (
           <div class="gux-panel-footer">
-            <slot name="footer"/>
+            <slot name="footer" />
           </div>
-        }
+        )}
       </div>
     );
   }
