@@ -16,6 +16,9 @@ gux-datepicker {
       width: 200px;
       gux-text-field {
         position: relative;
+        input::-ms-clear {
+          display: none;
+        }
         &.gux-to-date {
           margin-left: 10px;
         }

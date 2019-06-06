@@ -7,15 +7,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property         | Attribute           | Description                                         | Type     | Default                                                               |
-| ---------------- | ------------------- | --------------------------------------------------- | -------- | --------------------------------------------------------------------- |
-| `firstDayOfWeek` | `first-day-of-week` | The calendar first week day (default to 0 (sunday)) | `number` | `0`                                                                   |
-| `fromValue`      | --                  | The calendar current from range value               | `Date`   | `new Date()`                                                          |
-| `locale`         | `locale`            | The calendar locale (default to browser locale)     | `string` | `(navigator.languages) ? navigator.languages[0] : navigator.language` |
-| `mode`           | `mode`              | The calendar mode (can be single or range)          | `string` | `CalendarModes.Single`                                                |
-| `numberOfMonths` | `number-of-months`  | The calendar number of months displayed             | `number` | `1`                                                                   |
-| `toValue`        | --                  | The calendar current to range value                 | `Date`   | `new Date()`                                                          |
-| `value`          | --                  | The calendar current selected date                  | `Date`   | `new Date()`                                                          |
+| Property         | Attribute           | Description                                         | Type     | Default                                                                     |
+| ---------------- | ------------------- | --------------------------------------------------- | -------- | --------------------------------------------------------------------------- |
+| `firstDayOfWeek` | `first-day-of-week` | The calendar first week day (default to 0 (sunday)) | `number` | `0`                                                                         |
+| `fromValue`      | --                  | The calendar current from range value               | `Date`   | `new Date()`                                                                |
+| `locale`         | `locale`            | The calendar locale (default to browser locale)     | `string` | `navigator.languages     ? navigator.languages[0]     : navigator.language` |
+| `mode`           | `mode`              | The calendar mode (can be single or range)          | `string` | `CalendarModes.Single`                                                      |
+| `numberOfMonths` | `number-of-months`  | The calendar number of months displayed             | `number` | `1`                                                                         |
+| `toValue`        | --                  | The calendar current to range value                 | `Date`   | `new Date()`                                                                |
+| `value`          | --                  | The calendar current selected date                  | `Date`   | `new Date()`                                                                |
 
 
 ## Events

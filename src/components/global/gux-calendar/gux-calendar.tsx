@@ -473,7 +473,7 @@ export class GuxCalendar {
             type="button"
             class="genesys-icon-chevron-left"
             onClick={() => this.incrementPreviewDateByMonth(-1)}
-            tabindex="0"
+            tabindex="-1"
             aria-hidden="true"
           />
           {this.renderMonthHeader()}
@@ -481,7 +481,7 @@ export class GuxCalendar {
             type="button"
             class="genesys-icon-chevron-right"
             onClick={() => this.incrementPreviewDateByMonth(1)}
-            tabindex="0"
+            tabindex="-1"
             aria-hidden="true"
           />
         </div>

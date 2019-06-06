@@ -87,6 +87,10 @@ export class GuxDatepicker {
   focusingRange: boolean = false;
   focusedField: HTMLInputElement;
 
+  isSelectingRange: boolean = false;
+  lastSelection: number = 0;
+  lastYear: number = new Date().getFullYear();
+
   i18n: (resourceKey: string, context?: any) => string;
 
   /**
@@ -104,42 +108,6 @@ export class GuxDatepicker {
       return [labels[0] || this.i18n('start'), labels[1] || this.i18n('end')];
     } else {
       return [labels[0]];
-    }
-  }
-
-  @Listen('mousedown')
-  onMouseDown(e: Event) {
-    if (
-      e.target === this.fieldDatepickerElement ||
-      !this.root.contains(e.target as Node)
-    ) {
-      this.active = false;
-    } else if (
-      e.target === this.inputElement ||
-      e.target === this.toInputElement
-    ) {
-      this.focusingRange = true;
-      this.focusedField = e.target as HTMLInputElement;
-    }
-  }
-
-  @Listen('focusin')
-  onFocusIn(e: FocusEvent) {
-    if (e.target === this.inputElement || e.target === this.toInputElement) {
-      this.focusingRange = true;
-      this.focusedField = e.target as HTMLInputElement;
-      this.active = true;
-    }
-  }
-
-  @Listen('focusout')
-  onFocusOut(e: FocusEvent) {
-    if (!this.calendarElement.contains(e.relatedTarget as Node)) {
-      this.replaceUndefinedChars();
-      this.setValue();
-    }
-    if (!this.root.contains(e.relatedTarget as Node)) {
-      this.active = false;
     }
   }
 
@@ -161,7 +129,11 @@ export class GuxDatepicker {
     const year = dateItems[formatItems.indexOf(this.yearFormat)];
     const month = parseInt(dateItems[formatItems.indexOf('mm')], 10) - 1;
     const date = new Date(year, month, dateItems[formatItems.indexOf('dd')]);
-    if (this.yearFormat === 'yy' && date.getFullYear() < 1970) {
+    if (
+      this.yearFormat === 'yy' &&
+      date.getFullYear() < 1970 &&
+      this.lastYear > 1970
+    ) {
       date.setFullYear(date.getFullYear() + 100);
     }
     return date;
@@ -217,12 +189,10 @@ export class GuxDatepicker {
     }
   }
 
+  @Listen('keydown', { passive: false })
   onKeyDown(e: KeyboardEvent) {
-    if (
-      document.activeElement === this.inputElement ||
-      document.activeElement === this.toInputElement
-    ) {
-      this.focusedField = document.activeElement as HTMLInputElement;
+    if (e.target === this.inputElement || e.target === this.toInputElement) {
+      this.focusedField = e.target as HTMLInputElement;
       switch (e.keyCode) {
         case KeyCode.Enter:
           this.focusedField.blur();
@@ -233,26 +203,27 @@ export class GuxDatepicker {
           this.calendarElement.focusPreviewDate();
           break;
         case KeyCode.Down:
-          this.increment(e, -1);
-          // this.value = new Date(this.value.getFullYear(), this.value.getMonth(), this.value.getDate());
-          this.updateDate();
+          e.preventDefault();
+          this.increment(-1);
           if (this.mode === CalendarModes.Range) {
             this.calendarElement.setValue([this.value, this.toValue]);
           } else {
             this.calendarElement.setValue(this.value);
           }
+          this.setRange();
           break;
         case KeyCode.Up:
-          this.increment(e, 1);
-          // this.value = new Date(this.value.getFullYear(), this.value.getMonth(), this.value.getDate());
-          this.updateDate();
+          e.preventDefault();
+          this.increment(1);
           if (this.mode === CalendarModes.Range) {
             this.calendarElement.setValue([this.value, this.toValue]);
           } else {
             this.calendarElement.setValue(this.value);
           }
+          this.setRange();
           break;
         case KeyCode.Left:
+          e.preventDefault();
           this.setSelectionRange(
             this.format.indexOf(
               this.getPreviousSep(this.format[this.selectionRange[0]])
@@ -263,6 +234,7 @@ export class GuxDatepicker {
           this.setValue();
           break;
         case KeyCode.Right:
+          e.preventDefault();
           this.setSelectionRange(
             this.format.indexOf(
               this.getNextSep(this.format[this.selectionRange[0]])
@@ -308,6 +280,54 @@ export class GuxDatepicker {
           break;
       }
     }
+  }
+
+  @Listen('focusin')
+  onFocusIn(e: FocusEvent) {
+    if (e.target === this.inputElement || e.target === this.toInputElement) {
+      if (!this.isSelectingRange) {
+        this.focusedField = e.target as HTMLInputElement;
+        this.setRangeTmp();
+      }
+    }
+  }
+
+  @Listen('focusout')
+  onFocusOut(e: FocusEvent) {
+    if (!this.calendarElement.contains(e.relatedTarget as Node)) {
+      this.replaceUndefinedChars();
+      this.setValue();
+    }
+    if (!this.root.contains(e.relatedTarget as Node)) {
+      this.active = false;
+    }
+  }
+
+  @Listen('mousedown')
+  onMouseDown(e: MouseEvent) {
+    if (e.target === this.inputElement || e.target === this.toInputElement) {
+      this.isSelectingRange = true;
+    }
+  }
+
+  @Listen('mouseup', { passive: false })
+  onMouseUp(e: MouseEvent) {
+    e.preventDefault();
+    if (
+      this.isSelectingRange &&
+      (e.target === this.inputElement || e.target === this.toInputElement)
+    ) {
+      this.focusedField = e.target as HTMLInputElement;
+      this.lastSelection = this.focusedField.selectionStart;
+      this.setRangeTmp();
+    }
+  }
+
+  setRangeTmp() {
+    this.active = true;
+    this.isSelectingRange = false;
+    this.setSelectionRange(this.lastSelection);
+    this.setRange();
   }
 
   typeYearValue(selection: string, key: string) {
@@ -420,15 +440,6 @@ export class GuxDatepicker {
     }
   }
 
-  @Listen('document:selectionchange')
-  selectionHandler() {
-    if (this.focusingRange) {
-      this.setSelectionRange(this.focusedField.selectionStart);
-      this.focusingRange = false;
-    }
-    this.setRange();
-  }
-
   setSelectionRange(index: number) {
     let sep = this.format[index];
     if (!sep || sep === '/') {
@@ -440,25 +451,30 @@ export class GuxDatepicker {
     return sep;
   }
 
-  increment(e: KeyboardEvent, value: number) {
-    e.preventDefault();
+  increment(value: number) {
+    let selectionText = document.getSelection().toString();
     const type = this.setSelectionRange(this.focusedField.selectionStart);
     const refValue =
       this.focusedField === this.inputElement ? this.value : this.toValue;
     switch (type) {
       case 'd':
-        this.incrementDay(value, refValue);
+        selectionText = this.incrementDay(value, refValue);
         break;
       case 'm':
-        this.incrementMonth(value, refValue);
+        selectionText = this.incrementMonth(value, refValue);
         break;
       case 'y':
-        this.incrementYear(value, refValue);
+        selectionText = this.incrementYear(value, refValue);
         break;
     }
+    this.focusedField.value =
+      this.focusedField.value.substr(0, this.selectionRange[0]) +
+      selectionText +
+      this.focusedField.value.substr(this.selectionRange[1]);
+    this.setValue();
   }
 
-  incrementDay(value: number, ref: Date) {
+  incrementDay(value: number, ref: Date): string {
     const newDay = new Date(ref.valueOf());
     newDay.setDate(newDay.getDate() + value);
     if (value < 0) {
@@ -470,14 +486,9 @@ export class GuxDatepicker {
         newDay.setMonth(newDay.getMonth() - 1);
       }
     }
-    // Has to be done because the ref doesn't update the value
-    if (this.focusedField === this.inputElement) {
-      this.value = newDay;
-    } else {
-      this.toValue = newDay;
-    }
+    return `0${newDay.getDate().toString()}`.slice(-2);
   }
-  incrementMonth(value: number, ref: Date) {
+  incrementMonth(value: number, ref: Date): string {
     const newMonth = new Date(ref.valueOf());
     newMonth.setMonth(newMonth.getMonth() + value);
     if (value < 0) {
@@ -489,15 +500,20 @@ export class GuxDatepicker {
         newMonth.setFullYear(newMonth.getFullYear() - 1);
       }
     }
-    // Has to be done because the ref doesn't update the value
-    if (this.focusedField === this.inputElement) {
-      this.value = newMonth;
-    } else {
-      this.toValue = newMonth;
-    }
+    return `0${(newMonth.getMonth() + 1).toString()}`.slice(-2);
   }
-  incrementYear(value: number, ref: Date) {
-    ref.setFullYear(ref.getFullYear() + value);
+  incrementYear(value: number, ref: Date): string {
+    const newYear = new Date(ref.valueOf());
+    newYear.setFullYear(ref.getFullYear() + value);
+    this.lastYear = newYear.getFullYear();
+    if (this.yearFormat === 'yyyy') {
+      return newYear.getFullYear().toString();
+    } else {
+      return newYear
+        .getFullYear()
+        .toString()
+        .slice(-2);
+    }
   }
 
   async componentWillLoad() {
@@ -529,9 +545,9 @@ export class GuxDatepicker {
           ref={(el: HTMLDivElement) => (this.fieldDatepickerElement = el)}
         >
           <gux-text-field
+            type="text"
             ref={(el: HTMLGuxTextFieldElement) => (this.textFieldElement = el)}
             value={this.formatedValue}
-            onKeyDown={e => this.onKeyDown(e)}
             label={this.calendarLabels[0]}
           >
             <button
@@ -551,12 +567,12 @@ export class GuxDatepicker {
             ref={(el: HTMLDivElement) => (this.fieldDatepickerElement = el)}
           >
             <gux-text-field
+              type="text"
               class="gux-to-date"
               ref={(el: HTMLGuxTextFieldElement) =>
                 (this.toTextFieldElement = el)
               }
               value={this.toFormatedValue}
-              onKeyDown={(e: KeyboardEvent) => this.onKeyDown(e)}
               label={this.calendarLabels[1]}
             >
               <button
