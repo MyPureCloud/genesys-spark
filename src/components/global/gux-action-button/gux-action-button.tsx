@@ -51,6 +51,12 @@ export class GuxActionButton {
   text: string;
 
   /**
+   * The component disabled.
+   */
+  @Prop()
+  disabled: boolean = false;
+
+  /**
    * The component accent (secondary or primary).
    */
   @Prop()
@@ -121,11 +127,13 @@ export class GuxActionButton {
         <gux-button
           accent={this.accent}
           text={this.text}
+          disabled={this.disabled}
           onClick={() => this.onActionClick()}
           class="gux-action"
         />
         <gux-button
           accent={this.accent}
+          disabled={this.disabled}
           ref={el => (this.dropdownButton = el)}
           onClick={() => this.toggle()}
           onKeyUp={e => this.onKeyUpEvent(e)}
