@@ -17,6 +17,13 @@ You can choose between two type (secondary and primary).
 | `text`      | `text`       | The component text.                          | `string`  | `''`          |
 
 
+## Events
+
+| Event         | Description                                 | Type                |
+| ------------- | ------------------------------------------- | ------------------- |
+| `actionClick` | Triggered when the action button is clicked | `CustomEvent<void>` |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

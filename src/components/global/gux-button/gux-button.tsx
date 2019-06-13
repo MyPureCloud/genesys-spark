@@ -1,4 +1,11 @@
-import { Component, Element, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  Prop,
+  State
+} from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-button.less',
@@ -8,6 +15,12 @@ export class GuxButton {
   @Element()
   root: HTMLStencilElement;
   button: HTMLButtonElement;
+  /**
+   * Triggered when the action button is clicked
+   */
+  @Event()
+  actionClick: EventEmitter;
+
   /**
    * Indicate if the button is disabled or not
    */
@@ -58,6 +71,15 @@ export class GuxButton {
       : 'genesys-icon-' + iconName;
   }
 
+  onActionClick(event) {
+    if (this.disabled) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+    this.actionClick.emit(event);
+  }
+
   render() {
     return (
       <button
@@ -65,6 +87,7 @@ export class GuxButton {
         ref={el => (this.button = el)}
         disabled={this.disabled}
         class={'gux-' + this.getAccent()}
+        onClick={e => this.onActionClick(e)}
       >
         {this.leftIcon ? (
           <span
