@@ -15,7 +15,7 @@ storiesOf('Basic Components', module).add(
     el.leftIcon = text('leftIcon', '');
     el.rightIcon = text('rightIcon', '');
     el.accent = select('accent', ['primary', 'secondary'], 'secondary');
-    el.addEventListener('actionClick', () => action('actionClick')());
+    el.addEventListener('click', e => action('click')(e)); // native event
     document.getElementsByTagName('html')[0].className =
       'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
     return el;
