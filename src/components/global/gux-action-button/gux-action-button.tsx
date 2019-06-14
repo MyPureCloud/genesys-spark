@@ -51,7 +51,7 @@ export class GuxActionButton {
   text: string;
 
   /**
-   * The component disabled.
+   * Disables the action button.
    */
   @Prop()
   disabled: boolean = false;
