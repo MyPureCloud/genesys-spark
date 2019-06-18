@@ -12,19 +12,27 @@ storiesOf('Basic Components', module).add(
     render(
       html`
         <style>
-          gux-panel-frame > div { width: 300px }
+          gux-panel-frame > div {
+            width: 300px;
+          }
         </style>
         <gux-panel-frame>
           <div slot="header">
-            <div style="display: flex; justify-content: flex-end; align-items: center">
+            <div
+              style="display: flex; justify-content: flex-end; align-items: center"
+            >
               <h2 style="margin-right: auto">Find Events</h2>
             </div>
           </div>
           <div slot="body">
             <div style="display: flex; flex-direction: column">
-              <gux-text-field label="Event Name"></gux-text-field>
+              <gux-text-label label="Event Name">
+                <gux-text-field></gux-text-field>
+              </gux-text-label>
               <gux-rating></gux-rating>
-              <gux-text-field label="Comment"></gux-text-field>
+              <gux-text-label label="Comment">
+                <gux-text-field></gux-text-field>
+              </gux-text-label>
               <gux-toggle></gux-toggle>
             </div>
           </div>

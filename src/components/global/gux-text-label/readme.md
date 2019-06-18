@@ -10,7 +10,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | Property   | Attribute  | Description | Type                         | Default      |
 | ---------- | ---------- | ----------- | ---------------------------- | ------------ |
 | `label`    | `label`    |             | `string`                     | `undefined`  |
-| `position` | `position` |             | `"horizontal" \| "vertical"` | `"vertical"` |
+| `position` | `position` |             | `"horizontal" \| "vertical"` | `'vertical'` |
 
 
 ----------------------------------------------

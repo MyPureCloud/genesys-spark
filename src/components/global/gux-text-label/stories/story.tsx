@@ -17,9 +17,27 @@ storiesOf('Basic Components', module).add(
         >
           <gux-text-field></gux-text-field>
         </gux-text-label>
+
+        <gux-text-label
+          label="Drop-down"
+          position=${select('position', ['vertical', 'horizontal'], 'vertical')}
+        >
+          <gux-dropdown></gux-dropdown>
+        </gux-text-label>
       `,
       el
     );
+    setTimeout(() => {
+      const its = Array.from(document.getElementsByTagName('gux-dropdown'));
+      its.map(it => {
+        it.items = [
+          { text: 'Belgium' },
+          { text: 'Brazil' },
+          { text: 'France' },
+          { text: 'Spain', isDisabled: true }
+        ];
+      });
+    }, 100);
     document.getElementsByTagName('html')[0].className =
       'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
     return el;

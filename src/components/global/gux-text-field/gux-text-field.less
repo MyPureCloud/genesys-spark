@@ -49,34 +49,6 @@ gux-text-field {
         }
       }
     }
-    &.flex {
-      display: grid;
-      width: 100%;
-      grid-auto-columns: min-content auto;
-      label {
-        grid-column: 1 e("/") 2;
-        grid-row: 1 e("/") 2;
-      }
-      .gux-field {
-        grid-column: 2 e("/") 2;
-        grid-row: 1 e("/") 2;
-      }
-      .gux-error {
-        grid-column: 2 e("/") 2;
-        grid-row: 2 e("/") 2;
-      }
-    }
-    label {
-      margin-right: 8px;
-      height: 32px;
-      line-height: 30px;
-      font-weight: bold;
-      display: inline-block;
-
-      &:empty {
-        display: none;
-      }
-    }
     > div.gux-field {
       position: relative;
       height: 32px;
