@@ -31,6 +31,12 @@ export class GuxTextField {
   value: string = '';
 
   /**
+   * Provides a screen reader value (e.g. aria-label) for this control.
+   */
+  @Prop()
+  srLabel: string;
+
+  /**
    * Indicate the input type
    */
   @Prop()
@@ -207,6 +213,7 @@ export class GuxTextField {
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
+            aria-label={this.srLabel}
             disabled={this.disabled}
             readonly={this.readonly}
             placeholder={this.placeholder}

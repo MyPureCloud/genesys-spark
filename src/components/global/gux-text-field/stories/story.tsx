@@ -12,7 +12,7 @@ storiesOf('Basic Components', module).add(
     const el = document.createElement('div');
     render(
       html`
-        <h2>Basic samples</h2>
+        <h3>Basic samples</h3>
         <h4>Unpopulated</h4>
         <gux-text-field></gux-text-field>
         <h4>Ghost text</h4>
@@ -29,7 +29,7 @@ storiesOf('Basic Components', module).add(
           type="password"
           placeholder="Enter password here"
         ></gux-text-field>
-        <h2>Interactive sample</h2>
+        <h3>Interactive sample</h3>
         <gux-text-field
           id="interactive"
           placeholder=${text('placeholder', 'placeholder')}
