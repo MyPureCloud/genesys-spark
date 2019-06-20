@@ -31,14 +31,17 @@ describe('gux-text-label', () => {
     expect(element).toEqualText('Test Item');
   });
 
-  it('provides an aria-label to labeled content', async () => {
+  it('provides an aria-labelledby on its content', async () => {
     const page = await newE2EPage();
 
     await page.setContent(
       '<gux-text-label label="Test Item"><gux-text-field></gux-text-field></gux-text-label>'
     );
-    const element = await page.find('gux-text-label gux-text-field');
-    const label = element.getAttribute('sr-label');
-    expect(label).toEqual('Test Item');
+    const textLabel = await page.find('gux-text-label label');
+    const labelId = textLabel.id;
+
+    const textField = await page.find('gux-text-label gux-text-field input');
+    const label = textField.getAttribute('aria-labelledby');
+    expect(label).toEqual(labelId);
   });
 });

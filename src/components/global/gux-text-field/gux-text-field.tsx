@@ -31,12 +31,6 @@ export class GuxTextField {
   value: string = '';
 
   /**
-   * Provides a screen reader value (e.g. aria-label) for this control.
-   */
-  @Prop()
-  srLabel: string;
-
-  /**
    * Indicate the input type
    */
   @Prop()
@@ -96,6 +90,9 @@ export class GuxTextField {
    */
   @Prop()
   useClearButton: boolean = true;
+
+  @State()
+  srLabel: string;
 
   @State()
   classList: string[] = [];
@@ -205,6 +202,11 @@ export class GuxTextField {
     this.inputElement.value = '';
   }
 
+  @Method()
+  async setLabeledBy(id: string) {
+    this.srLabel = id;
+  }
+
   render() {
     return (
       <div class={this.getClassList()}>
@@ -213,7 +215,7 @@ export class GuxTextField {
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
-            aria-label={this.srLabel}
+            aria-labelledby={this.srLabel}
             disabled={this.disabled}
             readonly={this.readonly}
             placeholder={this.placeholder}

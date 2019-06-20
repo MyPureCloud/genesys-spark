@@ -1,4 +1,4 @@
-import { Component, Element, Listen, Prop, State } from '@stencil/core';
+import { Component, Element, Listen, Method, Prop, State } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 
@@ -49,6 +49,9 @@ export class GuxDropdown {
   @State()
   forcedGhostValue: string;
 
+  @State()
+  srLabeledBy: string;
+
   inputIsFocused: boolean = false;
 
   @Listen('focusout')
@@ -57,6 +60,11 @@ export class GuxDropdown {
       this.opened = false;
       this.forcedGhostValue = '';
     }
+  }
+
+  @Method()
+  async setLabeledBy(labeledBy: string) {
+    this.textFieldElement.setLabeledBy(labeledBy);
   }
 
   onKeyDown(event: KeyboardEvent) {
