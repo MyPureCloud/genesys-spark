@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>gux-modal</title>
+    <link rel="stylesheet" type="text/css" href="../styles/component-viewer.less">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/monaco-editor/min/vs/editor/editor.main.css" />
+</head>
+<body>
+
+<script src="../index.js"></script>
+<script>
+webcomponentsDocsMain(`
+<gux-button id="open-modal" text="Open" accent="primary"></gux-button>
+<gux-modal
+    id="modal-example"
+    size="small"
+    modalTitle="Modal Header">
+
+    <div slot="modal-content">This contains the modal content.</div>
+    <div slot="additional-buttons">
+        <gux-button title='Button' text='Text' accent='primary'></gux-button>
+    </div>
+</gux-modal>
+`, function () {
+    let button = document.getElementById('open-modal');
+    let modal = document.getElementById('modal-example');
+    if (button && modal) {
+        button.addEventListener('click', () => modal.active = true);
+    }
+});
+</script>
+
+</body>
+</html>

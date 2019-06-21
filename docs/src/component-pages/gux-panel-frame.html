@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>gux-page-loading-spinner</title>
+    <link rel="stylesheet" type="text/css" href="../styles/component-viewer.less">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/monaco-editor/min/vs/editor/editor.main.css" />
+</head>
+<body>
+
+<script src="../index.js"></script>
+<script>
+webcomponentsDocsMain(`
+<gux-panel-frame>
+    <div slot="header">
+        <div style="display: flex; justify-content: flex-end; align-items: center">
+            <h2 style="margin-right: auto">Find Events</h2>
+        </div>
+    </div>
+    <div slot="body">
+        <div style="display: flex; flex-direction: column">
+            <gux-text-label label="Event Name">
+                <gux-text-field></gux-text-field>
+            </gux-text-label>
+            <gux-rating></gux-rating>
+            <gux-text-label label="Comment">
+                <gux-text-field></gux-text-field>
+            </gux-text-label>
+            <gux-toggle></gux-toggle>
+        </div>
+    </div>
+    <div slot="footer">
+        <div style="display: flex; justify-content: space-between">
+            <gux-button text="Close"></gux-button>
+            <gux-button text="Accept" accent="primary"></gux-button>
+        </div>
+    </div>
+</gux-panel-frame>
+`);
+</script>
+
+</body>
+</html>
