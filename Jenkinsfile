@@ -13,6 +13,9 @@ String[] mailingList = [
 
 pipeline {
   agent { label 'infra_mesos' }
+  options {
+    disableConcurrentBuilds()
+  }
 
   environment {
     NPM_UTIL_PATH = "npm-utils"
