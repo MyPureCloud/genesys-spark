@@ -1,4 +1,11 @@
-import { Component, Element, Event, EventEmitter, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  h,
+  Prop
+} from '@stencil/core';
 const ENTER = 13;
 const SPACE = 32;
 
@@ -8,7 +15,7 @@ const SPACE = 32;
 })
 export class GuxToggle {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxToggleElement;
   checkboxElement: HTMLInputElement;
 
   /**

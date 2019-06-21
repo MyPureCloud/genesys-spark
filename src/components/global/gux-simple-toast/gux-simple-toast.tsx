@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-simple-toast.less',
@@ -55,13 +55,12 @@ export class GuxSimpleToast {
   }
 
   getIcon() {
-    return this.icon ? (
-      <i class={this.icon} />
-    ) : this.iconUri ? (
-      <img src={this.iconUri} />
-    ) : (
-      ''
-    );
+    if (this.icon) {
+      return <i class={this.icon} />;
+    } else if (this.iconUri) {
+      return <img src={this.iconUri} />;
+    }
+    return '';
   }
 
   render() {

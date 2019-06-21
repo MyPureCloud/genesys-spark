@@ -35,23 +35,40 @@ changing error-message attribute.
 
 ## Events
 
-| Event   | Description                 | Type                |
-| ------- | --------------------------- | ------------------- |
-| `input` | Triggered when user inputs. | `CustomEvent<void>` |
+| Event   | Description                 | Type               |
+| ------- | --------------------------- | ------------------ |
+| `input` | Triggered when user inputs. | `CustomEvent<any>` |
 
 
 ## Methods
 
-### `clear() => void`
+### `clear() => Promise<void>`
 
 Clears the input.
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Used by
+
+ - [gux-dropdown](../gux-dropdown)
+ - [gux-pagination-buttons](../gux-pagination/buttons)
+ - [gux-slider](../gux-slider)
+
+### Graph
+```mermaid
+graph TD;
+  gux-dropdown --> gux-text-field
+  gux-pagination-buttons --> gux-text-field
+  gux-slider --> gux-text-field
+  style gux-text-field fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

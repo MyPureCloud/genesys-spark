@@ -4,6 +4,7 @@ describe('gux-simple-toast', () => {
   it('builds', () => {
     expect(new GuxSimpleToast()).toBeTruthy();
   });
+
   describe('getAccent', () => {
     it('should return neutral if props/attr is not set correctly', () => {
       const component = new GuxSimpleToast();
@@ -18,18 +19,19 @@ describe('gux-simple-toast', () => {
       expect(component.getAccent()).toBe('positive');
     });
   });
+
   describe('getIcon', () => {
     it('should return icon and accent classname', () => {
       const component = new GuxSimpleToast();
       expect(component.getIcon()).toBe('');
       component.iconUri = 'test';
       // testing JSX
-      expect((component.getIcon() as any).vtag).toBe('img');
-      expect((component.getIcon() as any).vattrs.src).toBe('test');
+      expect((component.getIcon() as any).$tag$).toBe('img');
+      expect((component.getIcon() as any).$attrs$.src).toBe('test');
       component.icon = 'test';
       // testing JSX
-      expect((component.getIcon() as any).vtag).toBe('i');
-      expect((component.getIcon() as any).vattrs.class).toBe('test');
+      expect((component.getIcon() as any).$tag$).toBe('i');
+      expect((component.getIcon() as any).$attrs$.class).toBe('test');
     });
   });
 });

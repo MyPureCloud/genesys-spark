@@ -1,4 +1,12 @@
-import { Component, Event, EventEmitter, Prop, State, Watch } from '@stencil/core';
+import {
+  Component,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 import { defaultColors } from './colors';
 
 @Component({
@@ -34,7 +42,7 @@ export class GuxColorSelect {
     this.activeColor = this.value;
   }
 
-  onSelectColorHandler (e: MouseEvent & { target: HTMLInputElement }) {
+  onSelectColorHandler(e: MouseEvent & { target: HTMLInputElement }) {
     this.activeColor = e.target.value;
     this.input.emit(e.target.value);
   }
@@ -52,7 +60,7 @@ export class GuxColorSelect {
         active={this.activeColor === color}
         onTileClick={ev => this.onSelectColorHandler(ev.detail)}
       />
-    ))
+    ));
   }
 
   renderCustomTiles() {
@@ -63,15 +71,18 @@ export class GuxColorSelect {
         active={this.activeColor === color}
         onTileClick={ev => this.onSelectColorHandler(ev.detail)}
       />
-    ))
+    ));
   }
 
   renderBlankTiles() {
     const maxNumberOfTiles = 20;
     const blankTiles = [];
-    const blankTilesLength = maxNumberOfTiles - defaultColors.length - this.customColors.length;
+    const blankTilesLength =
+      maxNumberOfTiles - defaultColors.length - this.customColors.length;
     for (let i = 0; i < blankTilesLength; i += 1) {
-      blankTiles.push(<gux-color-tile key={`blank-tile-${i}`} aria-hidden="true"/>)
+      blankTiles.push(
+        <gux-color-tile key={`blank-tile-${i}`} aria-hidden="true" />
+      );
     }
     return blankTiles;
   }

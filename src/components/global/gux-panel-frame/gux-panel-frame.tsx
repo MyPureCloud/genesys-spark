@@ -1,4 +1,4 @@
-import { Component, Element, State } from '@stencil/core';
+import { Component, Element, h, State } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-panel-frame.less',
@@ -6,7 +6,7 @@ import { Component, Element, State } from '@stencil/core';
 })
 export class GuxPanelFrame {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxPanelFrameElement;
 
   @State()
   hasHeader: boolean = false;

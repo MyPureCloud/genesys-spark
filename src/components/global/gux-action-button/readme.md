@@ -17,12 +17,27 @@
 
 ## Events
 
-| Event         | Description                                 | Type                |
-| ------------- | ------------------------------------------- | ------------------- |
-| `actionClick` | Triggered when the action button is clicked | `CustomEvent<void>` |
-| `close`       | Triggered when the menu is close            | `CustomEvent<void>` |
-| `open`        | Triggered when the menu is open             | `CustomEvent<void>` |
+| Event         | Description                                 | Type               |
+| ------------- | ------------------------------------------- | ------------------ |
+| `actionClick` | Triggered when the action button is clicked | `CustomEvent<any>` |
+| `close`       | Triggered when the menu is close            | `CustomEvent<any>` |
+| `open`        | Triggered when the menu is open             | `CustomEvent<any>` |
 
+
+## Dependencies
+
+### Depends on
+
+- [gux-button](../gux-button)
+- [gux-list](../gux-list)
+
+### Graph
+```mermaid
+graph TD;
+  gux-action-button --> gux-button
+  gux-action-button --> gux-list
+  style gux-action-button fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

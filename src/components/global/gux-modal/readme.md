@@ -16,16 +16,29 @@ This is a basic modal component in which a user can customize the content using 
 
 ## Methods
 
-### `closeModal() => void`
+### `closeModal() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Depends on
+
+- [gux-button](../gux-button)
+
+### Graph
+```mermaid
+graph TD;
+  gux-modal --> gux-button
+  style gux-modal fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

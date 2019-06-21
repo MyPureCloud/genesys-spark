@@ -1,4 +1,4 @@
-import { Component, Method, Prop } from '@stencil/core';
+import { Component, h, Method, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-modal.less',
@@ -24,7 +24,7 @@ export class GuxModal {
   active: boolean = false;
 
   @Method()
-  closeModal() {
+  async closeModal() {
     this.active = false;
   }
 
