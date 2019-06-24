@@ -9,18 +9,16 @@ describe('gux-modal', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('active modal is hidden when close icon is selected', async () => {
+  it('Should trigger close event on modal cancel button click', async () => {
     const page = await newE2EPage();
 
     await page.setContent('<gux-modal></gux-modal>');
     const component = await page.find('gux-modal');
-    const modal = await page.find('.modal');
+    const onClose = await component.spyOnEvent('close');
     component.setProperty('active', true);
     await page.waitForChanges();
-    expect(modal).toHaveClass('modal');
-    expect(modal).toHaveClass('active');
     const button = await page.find('.cancel-button');
     await button.click();
-    expect(modal).toHaveClass('hidden');
+    expect(onClose).toHaveReceivedEventTimes(1);
   });
 });

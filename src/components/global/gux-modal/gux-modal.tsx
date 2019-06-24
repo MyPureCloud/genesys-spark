@@ -1,10 +1,16 @@
-import { Component, Method, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-modal.less',
   tag: 'gux-modal'
 })
 export class GuxModal {
+  /**
+   * Triggered when any of the the cancel buttons get clicked
+   */
+  @Event()
+  close: EventEmitter;
+
   /**
    * Indicates the size of the modal (small, medium or large)
    */
@@ -17,21 +23,13 @@ export class GuxModal {
   @Prop()
   modalTitle: string = 'Modal Header';
 
-  /**
-   * Indicates if modal is currently displayed
-   */
-  @Prop({ mutable: true })
-  active: boolean = false;
-
-  @Method()
   closeModal() {
-    this.active = false;
+    this.close.emit();
   }
 
   render() {
-    const activeClass = this.active ? 'active' : 'hidden';
     return (
-      <div class={`modal ${activeClass}`}>
+      <div class="modal">
         <div class={`modal-container ${this.size}`}>
           <button
             class="cancel-button genesys-icon-close"
