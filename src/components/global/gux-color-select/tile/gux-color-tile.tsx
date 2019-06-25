@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-color-tile.less',
@@ -28,13 +28,15 @@ export class GuxColorTile {
   };
 
   render() {
-    return <button
-      value={this.value}
-      class={this.active ? 'gux-color-tile-active' : ''}
-      disabled={!this.value}
-      style={this.value && { 'background-color': this.value }}
-      onClick={this.onTileClickHandler}
-      title={this.value}
-    />;
+    return (
+      <button
+        value={this.value}
+        class={this.active ? 'gux-color-tile-active' : ''}
+        disabled={!this.value}
+        style={this.value && { 'background-color': this.value }}
+        onClick={this.onTileClickHandler}
+        title={this.value}
+      />
+    );
   }
 }

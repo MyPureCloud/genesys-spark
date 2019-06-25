@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State } from '@stencil/core';
+import { Component, Element, h, Prop, State } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-button.less',
@@ -6,7 +6,7 @@ import { Component, Element, Prop, State } from '@stencil/core';
 })
 export class GuxButton {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxButtonElement;
   button: HTMLButtonElement;
 
   /**

@@ -33,42 +33,51 @@ the newly selected page.
 
 ## Methods
 
-### `setItemsPerPage(value: number, options?: number[]) => void`
+### `setItemsPerPage(value: number, options?: number[]) => Promise<void>`
 
 Sets the number of items to display on a single page, and optionally the list
 of items that the user can choose from in the dropdown.
 
 If options are omitted, the user selection dropdown won't be displayed.
 
-#### Parameters
+#### Returns
 
-| Name      | Type       | Description                           |
-| --------- | ---------- | ------------------------------------- |
-| `value`   | `number`   | The number of items to show per page. |
-| `options` | `number[]` | The values the user can choose from.  |
+Type: `Promise<void>`
+
+
+
+### `setPage(page: number) => Promise<void>`
+
+
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
-### `setPage(page: number) => void`
 
+## Dependencies
 
+### Depends on
 
-#### Parameters
+- [gux-pagination-item-counts](item-counts)
+- [gux-pagination-items-per-page](items-per-page)
+- [gux-pagination-buttons](buttons)
 
-| Name   | Type     | Description |
-| ------ | -------- | ----------- |
-| `page` | `number` |             |
-
-#### Returns
-
-Type: `void`
-
-
-
+### Graph
+```mermaid
+graph TD;
+  gux-pagination --> gux-pagination-item-counts
+  gux-pagination --> gux-pagination-items-per-page
+  gux-pagination --> gux-pagination-buttons
+  gux-pagination-items-per-page --> gux-dropdown
+  gux-dropdown --> gux-text-field
+  gux-dropdown --> gux-list
+  gux-pagination-buttons --> gux-button
+  gux-pagination-buttons --> gux-text-field
+  style gux-pagination fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

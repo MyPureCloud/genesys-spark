@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  h,
   Method,
   Prop,
   State,
@@ -20,7 +21,7 @@ enum Types {
 })
 export class GuxTextField {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxTextFieldElement;
 
   inputElement: HTMLInputElement;
 
@@ -128,7 +129,7 @@ export class GuxTextField {
     this.input.emit(event.target.value);
   }
 
-  emitFocusEvent (event) {
+  emitFocusEvent(event) {
     this.root.dispatchEvent(new FocusEvent(event.type, event));
   }
 
@@ -211,7 +212,7 @@ export class GuxTextField {
    * Clears the input.
    */
   @Method()
-  clear() {
+  async clear() {
     if (this.disabled) {
       return;
     }
@@ -232,9 +233,9 @@ export class GuxTextField {
             disabled={this.disabled}
             readonly={this.readonly}
             placeholder={this.placeholder}
-            onInput={(e) => this.emitInput(e)}
-            onFocus={(e) => this.emitFocusEvent(e)}
-            onBlur={(e) => this.emitFocusEvent(e)}
+            onInput={e => this.emitInput(e)}
+            onFocus={e => this.emitFocusEvent(e)}
+            onBlur={e => this.emitFocusEvent(e)}
           />
           {this.showClearButton && (
             <button
@@ -255,4 +256,3 @@ export class GuxTextField {
     );
   }
 }
-

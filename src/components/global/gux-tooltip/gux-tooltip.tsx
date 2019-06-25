@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  h,
   Listen,
   Method,
   Prop,
@@ -16,7 +17,7 @@ import { getPositionRelativeToTarget } from '../../../common-utils';
 })
 export class GuxTooltip {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxTooltipElement;
 
   /**
    * Element's id.
@@ -83,7 +84,7 @@ export class GuxTooltip {
    * @param duration Time before
    */
   @Method()
-  show() {
+  async show() {
     this.delayTimeout = setTimeout(() => {
       this.tooltipRect = getPositionRelativeToTarget(
         this.tooltipEl,
@@ -99,13 +100,14 @@ export class GuxTooltip {
    * Hides the tooltip.
    */
   @Method()
-  hide() {
+  async hide() {
     clearTimeout(this.delayTimeout);
     this.isShown = false;
     this.emitEvent();
   }
 
-  @Listen('window:resize,window:scroll', { capture: true })
+  @Listen('resize', { capture: true })
+  @Listen('scroll', { capture: true })
   onWindowEvent() {
     this.tooltipRect = getPositionRelativeToTarget(
       this.tooltipEl,

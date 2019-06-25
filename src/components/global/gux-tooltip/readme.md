@@ -41,31 +41,31 @@ If there is not enough space on the bottom, or right of the component, the toolt
 
 ## Events
 
-| Event    | Description                          | Type                |
-| -------- | ------------------------------------ | ------------------- |
-| `hidden` | Triggered when the tooltip is hidden | `CustomEvent<void>` |
-| `shown`  | Triggered when the tooltip is shown  | `CustomEvent<void>` |
+| Event    | Description                          | Type               |
+| -------- | ------------------------------------ | ------------------ |
+| `hidden` | Triggered when the tooltip is hidden | `CustomEvent<any>` |
+| `shown`  | Triggered when the tooltip is shown  | `CustomEvent<any>` |
 
 
 ## Methods
 
-### `hide() => void`
+### `hide() => Promise<void>`
 
 Hides the tooltip.
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
-### `show() => void`
+### `show() => Promise<void>`
 
 Shows the tooltip.
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 

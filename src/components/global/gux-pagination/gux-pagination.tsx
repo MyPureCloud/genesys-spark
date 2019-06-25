@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  h,
   Method,
   Prop
 } from '@stencil/core';
@@ -101,7 +102,7 @@ export class GuxPagination {
    * @param options The values the user can choose from.
    */
   @Method()
-  setItemsPerPage(value: number, options?: number[]): void {
+  async setItemsPerPage(value: number, options?: number[]): Promise<void> {
     this.itemsPerPageOptions = options;
     this.itemsPerPage = value;
 
@@ -109,7 +110,7 @@ export class GuxPagination {
   }
 
   @Method()
-  setPage(page: number): void {
+  async setPage(page: number): Promise<void> {
     const totalPages = this.calculatTotalPages();
     if (page > totalPages) {
       this.setPage(totalPages);

@@ -1,13 +1,22 @@
-import { Component, Element, Event, EventEmitter, Method, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  h,
+  Method,
+  Prop
+} from '@stencil/core';
 import { KeyCode, ListTypeEnum } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
+
 @Component({
   styleUrl: 'gux-list.less',
   tag: 'gux-list'
 })
 export class GuxList {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxListElement;
   /**
    * The list.
    * each item should contain a text and a type
@@ -40,16 +49,21 @@ export class GuxList {
     });
   }
 
-  _computedText (text: string) {
+  _computedText(text: string) {
     if (this.highlight && text.startsWith(this.highlight)) {
-      return <span><strong>{this.highlight}</strong>{text.replace(this.highlight, '')}</span>;
+      return (
+        <span>
+          <strong>{this.highlight}</strong>
+          {text.replace(this.highlight, '')}
+        </span>
+      );
     } else {
       return text;
     }
   }
 
   @Method()
-  setFocusOnFirstItem() {
+  async setFocusOnFirstItem() {
     this.items.forEach(i => {
       if (i.el) {
         i.el.setAttribute('tabindex', '-1');
@@ -63,7 +77,9 @@ export class GuxList {
       );
     });
     firstFocusable.el.setAttribute('tabindex', '0');
-    if (firstFocusable) { firstFocusable.el.focus(); }
+    if (firstFocusable) {
+      firstFocusable.el.focus();
+    }
   }
 
   onKeyDown(event: KeyboardEvent, item: IListItem) {
@@ -121,11 +137,13 @@ export class GuxList {
     }
   }
 
-  emitFocusEvent (event, item) {
-    this.root.dispatchEvent(new CustomEvent(event.type, { ...event, detail: item}));
+  emitFocusEvent(event, item) {
+    this.root.dispatchEvent(
+      new CustomEvent(event.type, { ...event, detail: item })
+    );
   }
 
-  setFirstTabIndex () {
+  setFirstTabIndex() {
     const firstFocusable = this.items.find(item => {
       return (
         item.el &&
@@ -133,7 +151,9 @@ export class GuxList {
         (!item.type || item.type === ListTypeEnum.Item)
       );
     });
-    if (firstFocusable) { firstFocusable.el.setAttribute('tabindex', '0'); }
+    if (firstFocusable) {
+      firstFocusable.el.setAttribute('tabindex', '0');
+    }
   }
 
   /**
@@ -145,29 +165,28 @@ export class GuxList {
   /**
    * Once the component is updated
    */
-  componentDidUpdate () {
+  componentDidUpdate() {
     this.setFirstTabIndex();
   }
 
   render() {
     return (
       <ul>
-        {this.items.map(
-          item =>
-            item.type === ListTypeEnum.Divider ? (
-              <li class="divider" role="presentation" tabIndex={-1} />
-            ) : (
-              <li
-                class={item.isDisabled ? 'disabled' : ''}
-                tabIndex={-1}
-                ref={el => (item.el = el)}
-                onClick={() => this.onItemClicked(item)}
-                onKeyDown={e => this.onKeyDown(e, item)}
-                onFocus={(e) => this.emitFocusEvent(e, item)}
-              >
-                {this._computedText(item.text)}
-              </li>
-            )
+        {this.items.map(item =>
+          item.type === ListTypeEnum.Divider ? (
+            <li class="divider" role="presentation" tabIndex={-1} />
+          ) : (
+            <li
+              class={item.isDisabled ? 'disabled' : ''}
+              tabIndex={-1}
+              ref={el => (item.el = el)}
+              onClick={() => this.onItemClicked(item)}
+              onKeyDown={e => this.onKeyDown(e, item)}
+              onFocus={e => this.emitFocusEvent(e, item)}
+            >
+              {this._computedText(item.text)}
+            </li>
+          )
         )}
       </ul>
     );

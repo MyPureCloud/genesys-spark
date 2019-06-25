@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  h,
   Listen,
   Prop,
   State,
@@ -15,7 +16,7 @@ import {
 })
 export class GuxColorPicker {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxColorPickerElement;
 
   /**
    * Indicates the custom Colors displayed in the color matrix dropdown
