@@ -23,12 +23,12 @@ gux-button {
   display: inline-block;
   min-width: 32px;
   max-width: 96px;
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+  }
   > button {
-    &[disabled] {
-      opacity: 0.5;
-      pointer-events: none;
-      cursor: default;
-    }
     width: 100%;
     padding: 0 16px;
     height: 32px;

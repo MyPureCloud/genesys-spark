@@ -1,0 +1,96 @@
+// Variables part
+
+// Style
+gux-side-panel {
+  aside {
+    height: 100%;
+    background-color: @gux-off-white;
+    color: @gux-grey-2;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    width: 49px;
+
+    &.left {
+      flex-direction: row;
+
+      .panel-content {
+        left: 49px;
+      }
+    }
+
+    &.right {
+      .panel-content {
+        right: 49px;
+      }
+    }
+
+    .panel-icons {
+      border: 1px solid @gux-border;
+
+      gux-side-panel-button {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .panel-content {
+      position: absolute;
+      width: 280px;
+      height: 100%;
+
+      [slot="side-panel-content"] {
+        height: 100%;
+      }
+
+      &.closed {
+        display: none;
+      }
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-side-panel-dark-theme {
+    color: @gux-off-white;
+
+    aside {
+      background-color: @gux-charcoal;
+
+      .panel-icons {
+        border-color: @gux-grey-1;
+      }
+    }
+};
+
+.gux-dark-theme {
+    gux-side-panel {
+        .gux-side-panel-dark-theme();
+    }
+}
+
+gux-side-panel.gux-dark-theme {
+    .gux-side-panel-dark-theme();
+}
+
+// Light
+.gux-side-panel-light-theme {
+    color: @gux-grey-2;
+};
+
+.gux-light-theme {
+    gux-side-panel {
+        .gux-side-panel-light-theme();
+    }
+}
+
+gux-side-panel.gux-light-theme {
+    .gux-side-panel-light-theme();
+}
+
+// Default Theme
+gux-side-panel {
+    .gux-side-panel-light-theme();
+}

@@ -8,10 +8,11 @@ export class GuxButton {
   @Element()
   root: HTMLStencilElement;
   button: HTMLButtonElement;
+
   /**
    * Indicate if the button is disabled or not
    */
-  @Prop()
+  @Prop({ reflectToAttr: true })
   disabled: boolean = false;
 
   /**
