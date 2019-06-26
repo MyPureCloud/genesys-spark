@@ -25,7 +25,6 @@ changing error-message attribute.
 | `errorMessageType` | `error-message-type` | The message type (warning or error)                                                       | `string`                                      | `Types.Error` |
 | `placeholder`      | `placeholder`        | The input placeholder.                                                                    | `string`                                      | `undefined`   |
 | `readonly`         | `readonly`           | Set the input in readonly mode                                                            | `boolean`                                     | `false`       |
-| `srLabel`          | `sr-label`           | Provides a screen reader value (e.g. aria-label) for this control.                        | `string`                                      | `undefined`   |
 | `type`             | `type`               | Indicate the input type                                                                   | `"email" \| "number" \| "password" \| "text"` | `'text'`      |
 | `useClearButton`   | `use-clear-button`   | Determines whether or not the 'x' clear button is displayed when the input contains text. | `boolean`                                     | `true`        |
 | `validation`       | `validation`         | The input validation.                                                                     | `any`                                         | `null`        |
@@ -48,6 +47,22 @@ Clears the input.
 #### Returns
 
 Type: `void`
+
+
+
+### `setLabeledBy(id: string) => Promise<void>`
+
+
+
+#### Parameters
+
+| Name | Type     | Description |
+| ---- | -------- | ----------- |
+| `id` | `string` |             |
+
+#### Returns
+
+Type: `Promise<void>`
 
 
 
