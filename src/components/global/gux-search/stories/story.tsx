@@ -13,19 +13,20 @@ storiesOf('Basic Components', module).add(
     render(
       html`
         <h2>Basic samples</h2>
-        <gux-search label="Search" label-position="top"></gux-search>
-        <gux-search label="Search with placeholder" placeholder="Search"></gux-search>
-        <gux-search label="Search with pre-defined value" placeholder="Search" value="Genesys"></gux-search>
-        <gux-search 
-          id="dynamicSearch"
-          label="Dynamic search (doesn't require enter)"
-          placeholder="Search"
-          dynamic-search="true">
-        </gux-search>
+        <gux-search></gux-search>
+        <gux-search placeholder="Search"></gux-search>
+        <gux-search placeholder="Search" value="Genesys"></gux-search>
+        <gux-text-label label="Dynamic search (doesn't require enter)">
+          <gux-search
+            id="dynamicSearch"
+            placeholder="Search"
+            dynamic-search="true"
+          >
+          </gux-search>
+        </gux-text-label>
         <h2>Interactive sample</h2>
         <gux-search
           id="interactive"
-          label=${text('label', 'Search')}
           placeholder=${text('placeholder', 'placeholder')}
           value=${text('value', 'value')}
           disabled=${boolean('disabled', false)}

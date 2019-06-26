@@ -34,6 +34,13 @@ storiesOf('Basic Components', module).add(
         >
           <gux-dropdown></gux-dropdown>
         </gux-text-label>
+
+        <gux-text-label
+          label="Search"
+          position=${select('position', ['vertical', 'horizontal'], 'vertical')}
+        >
+          <gux-search></gux-search>
+        </gux-text-label>
       `,
       el
     );

@@ -25,18 +25,6 @@ export class GuxSearch {
   value: string = '';
 
   /**
-   * The input label.
-   */
-  @Prop()
-  label: string;
-
-  /**
-   * The input label position (can be left or top) if not defined the position depends of the label width.
-   */
-  @Prop()
-  labelPosition: 'left' | 'top';
-
-  /**
    * Disable the input and prevent interactions.
    */
   @Prop()
@@ -132,14 +120,6 @@ export class GuxSearch {
 
   private getClassList(): string {
     let classList = [];
-    if (['left', 'top'].includes(this.labelPosition)) {
-      if (this.labelPosition === 'left') {
-        classList = [...classList, 'flex'];
-      }
-    } else if (this.label && this.label.length < 10) {
-      classList = [...classList, 'flex'];
-    }
-
     if (this.disabled) {
       classList = [...classList, 'disabled'];
     }

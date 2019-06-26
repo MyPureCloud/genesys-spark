@@ -5,35 +5,7 @@
 gux-search {
     > div {
         margin: 4px 0;
-
-        &.flex {
-            display: grid;
-            width: 100%;
-            grid-auto-columns: min-content auto;
-
-            label {
-                grid-column: 1 e("/") 2;
-                grid-row: 1 e("/") 2;
-            }
-
-            .gux-search-input {
-                grid-column: 2 e("/") 2;
-                grid-row: 1 e("/") 2;
-            }
-        }
     }
-
-    label {
-        margin-right: 8px;
-        height: 32px;
-        line-height: 30px;
-        font-weight: bold;
-        display: inline-block;
-  
-        &:empty {
-          display: none;
-        }
-      }
 
     .gux-search-input {
         position: relative;
