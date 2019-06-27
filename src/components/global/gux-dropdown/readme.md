@@ -17,6 +17,25 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | `value`       | `value`       | Indicate the dropdown input value                              | `string`      | `''`        |
 
 
+## Methods
+
+### `setLabeledBy(labeledBy: string) => Promise<void>`
+
+
+
+#### Parameters
+
+| Name        | Type     | Description |
+| ----------- | -------- | ----------- |
+| `labeledBy` | `string` |             |
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
