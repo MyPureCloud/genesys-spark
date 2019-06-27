@@ -1,11 +1,6 @@
 import { checkA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-import {
-  boolean,
-  select,
-  text,
-  withKnobs
-} from '@storybook/addon-knobs/polymer';
+import { select, text, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
 import { withReadme } from 'storybook-readme';
@@ -27,6 +22,7 @@ storiesOf('Basic Components', module)
           id="interactive"
           size=${select('size', ['small', 'medium', 'large'], 'small')}
           modalTitle=${text('modalTitle', 'Modal Header')}
+          class=${select('class', ['', 'hidden'], 'hidden')}
         >
           <div slot="modal-content">This contains the modal content.</div>
           <div slot="additional-buttons">
@@ -37,11 +33,13 @@ storiesOf('Basic Components', module)
       );
       setTimeout(() => {
         const it = document.getElementById('interactive');
-        it.active = boolean('active', false);
-        it.addEventListener('active', e => action('active')(e.detail));
         const interactiveButton = document.getElementById('interactive-button');
         interactiveButton.addEventListener('click', () => {
-          it.active = true;
+          it.classList.remove('hidden');
+        });
+        it.addEventListener('close', () => {
+          it.classList.add('hidden');
+          action('close')();
         });
       }, 100);
       document.getElementsByTagName('html')[0].className =

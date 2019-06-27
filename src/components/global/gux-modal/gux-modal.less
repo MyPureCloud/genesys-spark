@@ -2,8 +2,12 @@
 
 // Style
 gux-modal {
-  .modal {
+  &.hidden{
     display: none;
+  }
+
+  .modal {
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -12,11 +16,6 @@ gux-modal {
     right: 0;
     left: 0;
     background: rgba(34, 37, 41, 0.8);
-
-    &.active {
-      display: flex;
-      z-index: inherit;
-    }
   }
 
   .modal-container {
