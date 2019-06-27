@@ -16,6 +16,19 @@ An internal component used by the gux-pagination component.
 | `totalItems`   | `total-items`    |             | `number`                                         | `undefined` |
 
 
+## Dependencies
+
+### Used by
+
+ - [gux-pagination](..)
+
+### Graph
+```mermaid
+graph TD;
+  gux-pagination --> gux-pagination-item-counts
+  style gux-pagination-item-counts fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

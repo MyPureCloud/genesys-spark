@@ -8,11 +8,11 @@ An internal component used by the gux-pagination component.
 
 ## Properties
 
-| Property              | Attribute        | Description | Type                                             | Default         |
-| --------------------- | ---------------- | ----------- | ------------------------------------------------ | --------------- |
-| `i18n`                | --               |             | `(resourceKey: string, context?: any) => string` | `undefined`     |
-| `itemsPerPage`        | `items-per-page` |             | `number`                                         | `25`            |
-| `itemsPerPageOptions` | --               |             | `number[]`                                       | `[25, 50, 100]` |
+| Property              | Attribute        | Description | Type                                             | Default             |
+| --------------------- | ---------------- | ----------- | ------------------------------------------------ | ------------------- |
+| `i18n`                | --               |             | `(resourceKey: string, context?: any) => string` | `undefined`         |
+| `itemsPerPage`        | `items-per-page` |             | `number`                                         | `25`                |
+| `itemsPerPageOptions` | --               |             | `number[]`                                       | `[25, 50, 75, 100]` |
 
 
 ## Events
@@ -24,23 +24,36 @@ An internal component used by the gux-pagination component.
 
 ## Methods
 
-### `setItemsPerPage(value: number, options: number[]) => void`
+### `setItemsPerPage(value: number, options: number[]) => Promise<void>`
 
 
-
-#### Parameters
-
-| Name      | Type       | Description |
-| --------- | ---------- | ----------- |
-| `value`   | `number`   |             |
-| `options` | `number[]` |             |
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Used by
+
+ - [gux-pagination](..)
+
+### Depends on
+
+- [gux-dropdown](../../gux-dropdown)
+
+### Graph
+```mermaid
+graph TD;
+  gux-pagination-items-per-page --> gux-dropdown
+  gux-dropdown --> gux-text-field
+  gux-dropdown --> gux-list
+  gux-pagination --> gux-pagination-items-per-page
+  style gux-pagination-items-per-page fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

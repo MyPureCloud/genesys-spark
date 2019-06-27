@@ -11,6 +11,18 @@ String[] mailingList = [
   "Darragh.Kirwan@genesys.com"
 ]
 
+def isAlpha() {
+  return env.SHORT_BRANCH.startsWith('alpha/');
+}
+
+def isRelease() {
+  return env.SHORT_BRANCH.equals('master');
+}
+
+def shouldPublish() {
+  return isAlpha() || isRelease();
+}
+
 pipeline {
   agent { label 'infra_mesos' }
   options {
@@ -46,6 +58,7 @@ pipeline {
     stage('Prep') {
       steps {
         deleteDir()
+        sh "env"
         sh "git clone --single-branch -b master --depth=1 git@bitbucket.org:inindca/npm-utils.git ${env.NPM_UTIL_PATH}"
         dir(env.REPO_DIR) {
           echo "Building branch: ${env.GIT_BRANCH}"
@@ -53,42 +66,83 @@ pipeline {
           // Make a local branch so we can work with history and push (there's probably a better way to do this)
           sh "git checkout -b ${env.SHORT_BRANCH}"
           sh "${env.WORKSPACE}/${env.NPM_UTIL_PATH}/scripts/jenkins-create-npmrc.sh"
+          sh "npm ci"
         }
       }
     }
 
-
-      stage('Build') {
-        steps {
-          dir(env.REPO_DIR) {
-            sh 'npm ci'
-            // Bump the version for release, update changelog
-            sh 'npm run release'
-            // Generate manifest file with deployment metadata
-            sh './scripts/generate-manifest'
-            // Generate the CDN_URL for use in the docs and build everything.
-            sh '''
-              export CDN_URL=$(./node_modules/.bin/cdn --ecosystem pc --manifest manifest.json)
-              npm run build
-              node ./scripts/fix-doc-urls
-            '''
-          }
-        }
-      }
-
-    stage('Publish Library') {
+    stage('Check') {
       steps {
         dir(env.REPO_DIR) {
-          sh "npm publish"
-          sshagent(credentials: ['7c2a5698-a932-447a-9727-6852d0994ea0']) {
-            sh "git push --tags -u origin ${env.SHORT_BRANCH}"
+          sh "npm run test.unit"
+        }
+      }
+    }
+
+    stage('Bump Version') {
+      when {
+        expression { shouldPublish() }
+      }
+      steps {
+        dir(env.REPO_DIR) {
+          script {
+            if ( isAlpha() ) {
+              sh "npm run release -- --prerelease alpha"
+            } else {
+              sh "npm run release"
+            }
           }
         }
       }
     }
 
-    stage('Upload Docs') {
+    stage('Build') {
       steps {
+        dir(env.REPO_DIR) {
+          // Generate manifest file with deployment metadata
+          sh './scripts/generate-manifest'
+          // Generate the CDN_URL for use in the docs and build everything.
+          sh '''
+            export CDN_URL=$(./node_modules/.bin/cdn --ecosystem pc --manifest manifest.json)
+            npm run build
+            node ./scripts/fix-doc-urls
+          '''
+        }
+      }
+    }
+
+
+    stage('Publish Library') {
+      when {
+        expression { shouldPublish()  }
+      }
+      steps {
+        dir(env.REPO_DIR) {
+          script {
+            if ( isAlpha() ) {
+              sh "npm publish --tag alpha"
+              sshagent(credentials: ['7c2a5698-a932-447a-9727-6852d0994ea0']) {
+                sh "git push --follow-tags -u origin ${env.SHORT_BRANCH}"
+              }
+            } else {
+              sh "echo regular publish"
+              sh "npm publish"
+              sshagent(credentials: ['7c2a5698-a932-447a-9727-6852d0994ea0']) {
+                sh "git push --folow-tags -u origin ${env.SHORT_BRANCH}"
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    stage('Upload Docs') {
+      when {
+        expression { isRelease() }
+      }
+      steps {
+        sh "echo Uploading release!"
         dir (env.REPO_DIR) {
           sh './scripts/generate-versions-file'
           sh '''
@@ -101,7 +155,11 @@ pipeline {
       }
     }
 
+
     stage('Deploy Docs') {
+      when {
+        expression { isRelease() }
+      }
       steps {
         dir (env.REPO_DIR) {
           sh '''

@@ -16,9 +16,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Events
 
-| Event              | Description                         | Type                |
-| ------------------ | ----------------------------------- | ------------------- |
-| `selectionChanged` | Triggers when a switch is selected. | `CustomEvent<void>` |
+| Event              | Description                         | Type               |
+| ------------------ | ----------------------------------- | ------------------ |
+| `selectionChanged` | Triggers when a switch is selected. | `CustomEvent<any>` |
 
 
 ----------------------------------------------

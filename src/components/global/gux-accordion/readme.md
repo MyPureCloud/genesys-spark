@@ -27,51 +27,33 @@ Other nodes will be removed from DOM.
 
 ## Methods
 
-### `close(slot: string) => void`
+### `close(slot: string) => Promise<void>`
 
 Closes a section.
 
-#### Parameters
-
-| Name   | Type     | Description   |
-| ------ | -------- | ------------- |
-| `slot` | `string` | The slot name |
-
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
-### `open(slot: string) => void`
+### `open(slot: string) => Promise<void>`
 
 Opens a section.
 
-#### Parameters
-
-| Name   | Type     | Description   |
-| ------ | -------- | ------------- |
-| `slot` | `string` | The slot name |
-
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
-### `toggle(slot: string) => void`
+### `toggle(slot: string) => Promise<void>`
 
 Toggles a section.
 
-#### Parameters
-
-| Name   | Type     | Description   |
-| ------ | -------- | ------------- |
-| `slot` | `string` | The slot name |
-
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 

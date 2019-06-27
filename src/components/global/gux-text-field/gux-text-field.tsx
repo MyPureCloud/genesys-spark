@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  h,
   Method,
   Prop,
   State,
@@ -20,7 +21,7 @@ enum Types {
 })
 export class GuxTextField {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxTextFieldElement;
 
   inputElement: HTMLInputElement;
 
@@ -194,7 +195,7 @@ export class GuxTextField {
    * Clears the input.
    */
   @Method()
-  clear() {
+  async clear() {
     if (this.disabled) {
       return;
     }

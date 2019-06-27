@@ -25,7 +25,6 @@ changing error-message attribute.
 | `errorMessageType` | `error-message-type` | The message type (warning or error)                                                       | `string`                                      | `Types.Error` |
 | `placeholder`      | `placeholder`        | The input placeholder.                                                                    | `string`                                      | `undefined`   |
 | `readonly`         | `readonly`           | Set the input in readonly mode                                                            | `boolean`                                     | `false`       |
-| `srLabel`          | `sr-label`           | Provides a screen reader value (e.g. aria-label) for this control.                        | `string`                                      | `undefined`   |
 | `type`             | `type`               | Indicate the input type                                                                   | `"email" \| "number" \| "password" \| "text"` | `'text'`      |
 | `useClearButton`   | `use-clear-button`   | Determines whether or not the 'x' clear button is displayed when the input contains text. | `boolean`                                     | `true`        |
 | `validation`       | `validation`         | The input validation.                                                                     | `any`                                         | `null`        |
@@ -34,23 +33,50 @@ changing error-message attribute.
 
 ## Events
 
-| Event   | Description                 | Type                |
-| ------- | --------------------------- | ------------------- |
-| `input` | Triggered when user inputs. | `CustomEvent<void>` |
+| Event   | Description                 | Type               |
+| ------- | --------------------------- | ------------------ |
+| `input` | Triggered when user inputs. | `CustomEvent<any>` |
 
 
 ## Methods
 
-### `clear() => void`
+### `clear() => Promise<void>`
 
 Clears the input.
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+### `setLabeledBy(id: string) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
+## Dependencies
+
+### Used by
+
+ - [gux-dropdown](../gux-dropdown)
+ - [gux-pagination-buttons](../gux-pagination/buttons)
+ - [gux-slider](../gux-slider)
+
+### Graph
+```mermaid
+graph TD;
+  gux-dropdown --> gux-text-field
+  gux-pagination-buttons --> gux-text-field
+  gux-slider --> gux-text-field
+  style gux-text-field fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

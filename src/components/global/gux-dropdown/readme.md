@@ -17,6 +17,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | `value`       | `value`       | Indicate the dropdown input value                              | `string`      | `''`        |
 
 
+## Methods
+
+### `setLabeledBy(labeledBy: string) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
+## Dependencies
+
+### Used by
+
+ - [gux-pagination-items-per-page](../gux-pagination/items-per-page)
+
+### Depends on
+
+- [gux-text-field](../gux-text-field)
+- [gux-list](../gux-list)
+
+### Graph
+```mermaid
+graph TD;
+  gux-dropdown --> gux-text-field
+  gux-dropdown --> gux-list
+  gux-pagination-items-per-page --> gux-dropdown
+  style gux-dropdown fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

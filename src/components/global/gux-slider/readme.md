@@ -21,10 +21,25 @@ The scroll bar users to increase or decrease the rating using arrow keys located
 
 ## Events
 
-| Event    | Description                         | Type                |
-| -------- | ----------------------------------- | ------------------- |
-| `update` | Triggered when the value is changed | `CustomEvent<void>` |
+| Event    | Description                         | Type               |
+| -------- | ----------------------------------- | ------------------ |
+| `update` | Triggered when the value is changed | `CustomEvent<any>` |
 
+
+## Dependencies
+
+### Depends on
+
+- [gux-text-label](../gux-text-label)
+- [gux-text-field](../gux-text-field)
+
+### Graph
+```mermaid
+graph TD;
+  gux-slider --> gux-text-label
+  gux-slider --> gux-text-field
+  style gux-slider fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

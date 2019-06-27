@@ -15,10 +15,23 @@ Displays a simple color tile for the color select component.
 
 ## Events
 
-| Event       | Description                       | Type                |
-| ----------- | --------------------------------- | ------------------- |
-| `tileClick` | Triggers when the tile is clicked | `CustomEvent<void>` |
+| Event       | Description                       | Type               |
+| ----------- | --------------------------------- | ------------------ |
+| `tileClick` | Triggers when the tile is clicked | `CustomEvent<any>` |
 
+
+## Dependencies
+
+### Used by
+
+ - [gux-color-select](..)
+
+### Graph
+```mermaid
+graph TD;
+  gux-color-select --> gux-color-tile
+  style gux-color-tile fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

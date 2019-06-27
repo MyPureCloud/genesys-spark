@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  h,
   Prop,
   State
 } from '@stencil/core';
@@ -14,7 +15,7 @@ import { KeyCode } from '../../../common-enums';
 })
 export class GuxRating {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxRatingElement;
 
   /**
    * Determines if the user can set a rating
@@ -209,8 +210,8 @@ export class GuxRating {
               this.rating - 1 === i
                 ? 'true'
                 : this.rating - 1 === i - 0.5
-                  ? 'mixed'
-                  : 'false'
+                ? 'mixed'
+                : 'false'
             }
             title={ratingItem.label}
             aria-label={ratingItem.label}

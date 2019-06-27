@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  h,
   Listen,
   Prop,
   Watch
@@ -69,7 +70,7 @@ export class GuxActionButton {
   isOpen: boolean = false;
 
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxActionButtonElement;
 
   toggle() {
     this.isOpen = !this.isOpen;
@@ -82,8 +83,8 @@ export class GuxActionButton {
     }
   }
 
-  @Listen('body:click')
-  @Listen('body:keydown')
+  @Listen('click')
+  @Listen('keydown')
   handleKeyDown(e) {
     if (this.root.contains(e.target)) {
       return;

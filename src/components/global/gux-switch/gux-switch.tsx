@@ -1,4 +1,5 @@
-import { Component, Event, EventEmitter, JSXElements, Prop } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import { JSXBase } from '@stencil/core/internal';
 import { KeyCode } from '../../../common-enums';
 import { AllowedLayouts, ISwitchItem } from './gux-switch.constants';
 
@@ -46,33 +47,46 @@ export class GuxSwitch {
   }
 
   classForSwtichItemAtIndex(item: ISwitchItem): string {
-    return `gux-switch ${this.layout}${item.value === this.selectedValue ? ' selected' : ''}${item.isDisabled ? ' disabled' : ''}`;
+    return `gux-switch ${this.layout}${
+      item.value === this.selectedValue ? ' selected' : ''
+    }${item.isDisabled ? ' disabled' : ''}`;
   }
 
-  listElementForSwtichItemAtIndex(item: ISwitchItem, index: number): JSXElements.LiHTMLAttributes<HTMLElement> {
-    if(item.isDisabled) {
-      return (<li class={this.classForSwtichItemAtIndex(item)}>
+  listElementForSwtichItemAtIndex(
+    item: ISwitchItem,
+    index: number
+  ): JSXBase.LiHTMLAttributes<HTMLLIElement> {
+    if (item.isDisabled) {
+      return (
+        <li class={this.classForSwtichItemAtIndex(item)}>
+          <button class="switch-button" disabled={item.isDisabled}>
+            <div class="display-text">{item.displayName}</div>
+          </button>
+        </li>
+      );
+    }
+    return (
+      <li class={this.classForSwtichItemAtIndex(item)}>
         <button
           class="switch-button"
-          disabled={item.isDisabled}>
+          disabled={item.isDisabled}
+          onKeyDown={ev => this.onKeyDownAtIndex(index, ev)}
+          onClick={() => this.selectSwitchAtIndex(index)}
+        >
           <div class="display-text">{item.displayName}</div>
         </button>
-      </li>)
-    }
-    return (<li class={this.classForSwtichItemAtIndex(item)}>
-      <button
-        class="switch-button"
-        disabled={item.isDisabled}
-        onKeyDown={(ev) => this.onKeyDownAtIndex(index, ev)}
-        onClick={() => this.selectSwitchAtIndex(index)}>
-        <div class="display-text">{item.displayName}</div>
-      </button>
-    </li>)
+      </li>
+    );
   }
 
   render() {
-    return <ul class="gux-switch-group">
-      {this.items && this.items.map((item, index) => this.listElementForSwtichItemAtIndex(item, index))}
-    </ul>;
+    return (
+      <ul class="gux-switch-group">
+        {this.items &&
+          this.items.map((item, index) =>
+            this.listElementForSwtichItemAtIndex(item, index)
+          )}
+      </ul>
+    );
   }
 }

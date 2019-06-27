@@ -23,10 +23,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Events
 
-| Event         | Description | Type                |
-| ------------- | ----------- | ------------------- |
-| `buttonClick` |             | `CustomEvent<void>` |
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `buttonClick` |             | `CustomEvent<any>` |
 
+
+## Dependencies
+
+### Depends on
+
+- [gux-button](../gux-button)
+
+### Graph
+```mermaid
+graph TD;
+  gux-action-toast --> gux-button
+  style gux-action-toast fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

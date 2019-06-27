@@ -1,4 +1,12 @@
-import { Component, Element, Listen, Method, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Listen,
+  Method,
+  Prop,
+  State
+} from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 
@@ -8,7 +16,7 @@ import { IListItem } from '../../../common-interfaces';
 })
 export class GuxDropdown {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxDropdownElement;
   textFieldElement: HTMLGuxTextFieldElement;
   listElement: HTMLGuxListElement;
 

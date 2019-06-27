@@ -1,4 +1,4 @@
-import { Component, Element, Method } from '@stencil/core';
+import { Component, Element, h, Method } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 
 interface ISection {
@@ -12,7 +12,7 @@ interface ISection {
 })
 export class GuxAccordion {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxAccordionElement;
 
   sections: ISection[] = [];
 
@@ -40,7 +40,7 @@ export class GuxAccordion {
    * @param slot The slot name
    */
   @Method()
-  open(slot: string) {
+  async open(slot: string) {
     const section = this.getSectionByName(slot);
     if (section) {
       section.slotRef.classList.add('opened');
@@ -51,7 +51,7 @@ export class GuxAccordion {
    * @param slot The slot name
    */
   @Method()
-  close(slot: string) {
+  async close(slot: string) {
     const section = this.getSectionByName(slot);
     if (section) {
       section.slotRef.classList.remove('opened');
@@ -62,7 +62,7 @@ export class GuxAccordion {
    * @param slot The slot name
    */
   @Method()
-  toggle(slot: string) {
+  async toggle(slot: string) {
     const section = this.getSectionByName(slot);
     if (section) {
       section.slotRef.classList.toggle('opened');

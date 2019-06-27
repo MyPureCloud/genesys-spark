@@ -2,6 +2,7 @@ import {
   Component,
   Event,
   EventEmitter,
+  h,
   Method,
   Prop,
   Watch
@@ -20,7 +21,7 @@ export class GuxPaginationItemsPerPage {
   itemsPerPage: number = 25;
 
   @Prop({ mutable: true })
-  itemsPerPageOptions: number[] = [25, 50, 100];
+  itemsPerPageOptions: number[] = [25, 50, 75, 100];
 
   @Event()
   itemsPerPageChanged: EventEmitter<number>;
@@ -28,7 +29,7 @@ export class GuxPaginationItemsPerPage {
   private dropdown: GuxDropdown;
 
   @Method()
-  setItemsPerPage(value: number, options: number[]): void {
+  async setItemsPerPage(value: number, options: number[]): Promise<void> {
     this.itemsPerPageOptions = options;
     this.itemsPerPage = value;
   }
