@@ -85,7 +85,7 @@
     "pixelmatch": "4.0.2",
     "polymer-webpack-loader": "^2.0.3",
     "prettier": "^1.17.1",
-    "puppeteer": "^1.17.0",
+    "puppeteer": "1.17.0",
     "standard-version": "^5.0.2",
     "storybook-readme": "^5.0.3",
     "ts-loader": "^5.4.5",

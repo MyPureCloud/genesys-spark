@@ -22,25 +22,36 @@ describe('gux-pagination', () => {
     const previousPageButton = await page.find('.previous-page-button');
 
     const display = await page.find('.pagination-item-counts-display');
+    const itemCountDisplay = await page.find('.total-item-count');
 
     let text = (await display.textContent).trim();
-    expect(text).toBe('26 - 50 of 152');
+    let itemTotalText = (await itemCountDisplay.textContent).trim();
+    expect(text).toBe('26 - 50');
+    expect(itemTotalText).toBe('of 152');
 
     await firstPageButton.click();
     text = (await display.textContent).trim();
-    expect(text).toBe('1 - 25 of 152');
+    itemTotalText = (await itemCountDisplay.textContent).trim();
+    expect(text).toBe('1 - 25');
+    expect(itemTotalText).toBe('of 152');
 
     await nextPageButton.click();
     text = (await display.textContent).trim();
-    expect(text).toBe('26 - 50 of 152');
+    itemTotalText = (await itemCountDisplay.textContent).trim();
+    expect(text).toBe('26 - 50');
+    expect(itemTotalText).toBe('of 152');
 
     await lastPageButton.click();
     text = (await display.textContent).trim();
-    expect(text).toBe('151 - 152 of 152');
+    itemTotalText = (await itemCountDisplay.textContent).trim();
+    expect(text).toBe('151 - 152');
+    expect(itemTotalText).toBe('of 152');
 
     await previousPageButton.click();
     text = (await display.textContent).trim();
-    expect(text).toBe('126 - 150 of 152');
+    itemTotalText = (await itemCountDisplay.textContent).trim();
+    expect(text).toBe('126 - 150');
+    expect(itemTotalText).toBe('of 152');
   });
 
   it('should update the item counts when selecting a new items per page', async () => {
@@ -56,7 +67,11 @@ describe('gux-pagination', () => {
     await page.waitForChanges();
 
     const text = (await display.textContent).trim();
-    expect(text).toBe('51 - 75 of 75');
+    const itemCountDisplay = await page.find('.total-item-count');
+    const itemTotalText = (await itemCountDisplay.textContent).trim();
+
+    expect(text).toBe('51 - 75');
+    expect(itemTotalText).toBe('of 75');
   });
 
   it('should update the current page if the new items per page selection make current page invalid', async () => {
@@ -73,7 +88,11 @@ describe('gux-pagination', () => {
     await page.waitForChanges();
 
     const text = (await itemCountDisplay.textContent).trim();
-    expect(text).toBe('1 - 75 of 75');
+    const itemTotalDisplay = await page.find('.total-item-count');
+    const itemTotalText = (await itemTotalDisplay.textContent).trim();
+
+    expect(text).toBe('1 - 75');
+    expect(itemTotalText).toBe('of 75');
 
     expect(await currentPageInput.getProperty('value')).toBe('1');
   });

@@ -21,7 +21,7 @@ export class GuxPaginationItemsPerPage {
   itemsPerPage: number = 25;
 
   @Prop({ mutable: true })
-  itemsPerPageOptions: number[] = [25, 50, 100];
+  itemsPerPageOptions: number[] = [25, 50, 75, 100];
 
   @Event()
   itemsPerPageChanged: EventEmitter<number>;

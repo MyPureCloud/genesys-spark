@@ -56,18 +56,6 @@ export class GuxTextField {
   placeholder: string;
 
   /**
-   * The input label.
-   */
-  @Prop()
-  label: string;
-
-  /**
-   * The input label position (can be left or top) if not defined the position depends of the label width.
-   */
-  @Prop()
-  labelPosition: string;
-
-  /**
    * The input validation.
    */
   @Prop()
@@ -103,6 +91,9 @@ export class GuxTextField {
    */
   @Prop()
   useClearButton: boolean = true;
+
+  @State()
+  srLabel: string;
 
   @State()
   classList: string[] = [];
@@ -173,14 +164,6 @@ export class GuxTextField {
 
   getClassList(): string {
     let classList = [];
-    if (['left', 'top'].includes(this.labelPosition)) {
-      if (this.labelPosition === 'left') {
-        classList = [...classList, 'flex'];
-      }
-    } else if (this.label && this.label.length < 10) {
-      classList = [...classList, 'flex'];
-    }
-
     if (this.errorMessage) {
       classList = [...classList, this.errorMessageType];
     }
@@ -220,16 +203,20 @@ export class GuxTextField {
     this.inputElement.value = '';
   }
 
+  @Method()
+  async setLabeledBy(id: string) {
+    this.srLabel = id;
+  }
+
   render() {
     return (
       <div class={this.getClassList()}>
-        {this.label && <label>{this.label}</label>}
         <div class="gux-field">
           <input
-            aria-label={this.label}
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
+            aria-labelledby={this.srLabel}
             disabled={this.disabled}
             readonly={this.readonly}
             placeholder={this.placeholder}

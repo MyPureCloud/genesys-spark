@@ -1,4 +1,12 @@
-import { Component, Element, h, Listen, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Listen,
+  Method,
+  Prop,
+  State
+} from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 
@@ -33,16 +41,6 @@ export class GuxDropdown {
   @Prop()
   placeholder: string;
   /**
-   * The dropdown label.
-   */
-  @Prop()
-  label: string;
-  /**
-   * The input label position (can be left or top) if not defined the position depends of the label width.
-   */
-  @Prop({ reflectToAttr: true, mutable: true })
-  labelPosition: string = 'left';
-  /**
    * The list items, an item contains a `text` and can be disabled.
    */
   @Prop()
@@ -59,6 +57,9 @@ export class GuxDropdown {
   @State()
   forcedGhostValue: string;
 
+  @State()
+  srLabeledBy: string;
+
   inputIsFocused: boolean = false;
 
   @Listen('focusout')
@@ -67,6 +68,11 @@ export class GuxDropdown {
       this.opened = false;
       this.forcedGhostValue = '';
     }
+  }
+
+  @Method()
+  async setLabeledBy(labeledBy: string) {
+    this.textFieldElement.setLabeledBy(labeledBy);
   }
 
   onKeyDown(event: KeyboardEvent) {
@@ -149,12 +155,6 @@ export class GuxDropdown {
     return this.opened && this.filterable ? ghost : placeholder;
   }
 
-  componentWillLoad() {
-    if (this.label && this.label.length > 10) {
-      this.labelPosition = 'top';
-    }
-  }
-
   componentDidLoad() {
     if (!this.filterable) {
       this.textFieldElement.readonly = true;
@@ -169,7 +169,6 @@ export class GuxDropdown {
         } ${this.opened ? 'active' : ''}`}
         onKeyDown={e => this.onKeyDown(e)}
       >
-        {this.label && <label>{this.label}</label>}
         <div class="select-field">
           <span class="ghost" aria-hidden="true">
             {this.ghost}

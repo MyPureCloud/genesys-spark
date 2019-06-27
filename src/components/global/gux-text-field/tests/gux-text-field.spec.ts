@@ -16,8 +16,6 @@ describe('gux-text-field', () => {
       component.errorMessageType = 'error';
       component.errorMessage = 'an error occured';
       expect(component.getClassList().split(' ').length).toBe(1);
-      component.label = 'label';
-      expect(component.getClassList().split(' ').length).toBe(2);
     });
   });
   describe('componentDidLoad', () => {
