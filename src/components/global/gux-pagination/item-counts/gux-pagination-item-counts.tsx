@@ -30,12 +30,18 @@ export class GuxPaginationItemCounts {
 
   render() {
     return (
-      <div class="pagination-item-counts">
-        <span class="pagination-item-counts-display">
+      <div class="gux-pagination-item-counts">
+        <span class="pagination-item-counts-display displayed-item-count">
           {this.i18n &&
             this.i18n('itemCountDisplay', {
               firstItem: this.firstItem,
-              lastItem: this.lastItem,
+              lastItem: this.lastItem
+            })}
+        </span>
+        <span />
+        <span class="pagination-item-counts-display total-item-count">
+          {this.i18n &&
+            this.i18n('totalItems', {
               totalItems: this.totalItems
             })}
         </span>

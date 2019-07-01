@@ -14,13 +14,13 @@ storiesOf('Basic Components', module).add(
       html`
         <gux-text-label
           label="${text('label', 'Form Input')}"
-          position=${select('position', ['vertical', 'horizontal'], 'vertical')}
+          position=${select('position', ['above', 'beside'], 'above')}
         >
           <gux-text-field></gux-text-field>
         </gux-text-label>
 
         <gux-text-label
-          position=${select('position', ['vertical', 'horizontal'], 'vertical')}
+          position=${select('position', ['above', 'beside'], 'above')}
         >
           <div slot="label">
             <i class="genesys-icon-gear-add"></i>${text('label', 'Form Input')}
@@ -30,7 +30,7 @@ storiesOf('Basic Components', module).add(
 
         <gux-text-label
           label="Country"
-          position=${select('position', ['vertical', 'horizontal'], 'vertical')}
+          position=${select('position', ['above', 'beside'], 'above')}
         >
           <gux-dropdown></gux-dropdown>
         </gux-text-label>
