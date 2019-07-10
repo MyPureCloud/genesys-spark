@@ -50,6 +50,16 @@ Type: `void`
 
 
 
+### `setInputFocus() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 ### `setLabeledBy(id: string) => Promise<void>`
 
 

@@ -83,6 +83,11 @@ export class GuxSearch {
     this.textFieldElement.setLabeledBy(labeledBy);
   }
 
+  @Method()
+  async setInputFocus() {
+    this.textFieldElement.setInputFocus();
+  }
+
   render() {
     return (
       <div class={this.getClassList()}>

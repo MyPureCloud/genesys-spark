@@ -207,6 +207,11 @@ export class GuxTextField {
     this.srLabel = id;
   }
 
+  @Method()
+  async setInputFocus() {
+    this.inputElement.focus();
+  }
+
   render() {
     return (
       <div class={this.getClassList()}>

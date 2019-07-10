@@ -27,6 +27,16 @@ performs a search request when the 'return' key is pressed.
 
 ## Methods
 
+### `setInputFocus() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 ### `setLabeledBy(labeledBy: string) => Promise<void>`
 
 
