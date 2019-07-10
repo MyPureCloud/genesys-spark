@@ -10,7 +10,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | Property      | Attribute     | Description                                 | Type      | Default     |
 | ------------- | ------------- | ------------------------------------------- | --------- | ----------- |
 | `disabled`    | `disabled`    | Disable the input and prevent interactions. | `boolean` | `false`     |
-| `label`       | `label`       | The dropdown's label.                       | `string`  | `undefined` |
 | `placeholder` | `placeholder` | The dropdown's placeholder.                 | `string`  | `undefined` |
 
 
@@ -25,11 +24,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### `getSelectedValues() => Promise<string[]>`
 
-Returns the currently selected values
+Gets the currently selected values.
 
 #### Returns
 
 Type: `Promise<string[]>`
+
+The array of selected values.
+
+### `setLabeledBy(id: string) => Promise<void>`
+
+
+
+#### Parameters
+
+| Name | Type     | Description |
+| ---- | -------- | ----------- |
+| `id` | `string` |             |
+
+#### Returns
+
+Type: `Promise<void>`
 
 
 

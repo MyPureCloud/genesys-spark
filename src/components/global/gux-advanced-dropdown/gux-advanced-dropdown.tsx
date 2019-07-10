@@ -27,12 +27,6 @@ export class GuxAdvancedDropdown {
   disabled: boolean = false;
 
   /**
-   * The dropdown's label.
-   */
-  @Prop()
-  label: string;
-
-  /**
    * The dropdown's placeholder.
    */
   @Prop()
@@ -43,6 +37,9 @@ export class GuxAdvancedDropdown {
    */
   @Event()
   input: EventEmitter<string>;
+
+  @State()
+  srLabel: string;
 
   @State()
   opened: boolean;
@@ -58,13 +55,20 @@ export class GuxAdvancedDropdown {
   }
 
   /**
-   * Returns the currently selected values
+   * Gets the currently selected values.
+   *
+   * @returns The array of selected values.
    */
   @Method()
   getSelectedValues(): Promise<string[]> {
     // Once multi-select gets added there will
     // be multiple values selectable.
     return Promise.resolve([this.value]);
+  }
+
+  @Method()
+  async setLabeledBy(id: string) {
+    this.srLabel = id;
   }
 
   @Listen('focusout')
@@ -101,11 +105,11 @@ export class GuxAdvancedDropdown {
         ${this.disabled ? 'disabled' : ''}
         ${this.opened ? 'active' : ''}`}
       >
-        {this.label && <label>{this.label}</label>}
         <div class="gux-select-field">
           <a
             ref={el => (this.inputBox = el)}
             class="gux-select-input"
+            aria-labelledby={this.srLabel}
             tabindex="0"
             onMouseDown={() => this.inputMouseDown()}
             onKeyDown={e => this.inputKeyDown(e)}

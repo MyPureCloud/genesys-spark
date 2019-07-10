@@ -29,7 +29,7 @@ performs a search request when the 'return' key is pressed.
 
 ### `setInputFocus() => Promise<void>`
 
-
+Sets the input focus to the search input.
 
 #### Returns
 
@@ -39,7 +39,7 @@ Type: `Promise<void>`
 
 ### `setLabeledBy(labeledBy: string) => Promise<void>`
 
-
+Provides an aria-labeledby element for this component.
 
 #### Parameters
 

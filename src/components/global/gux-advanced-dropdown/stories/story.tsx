@@ -16,7 +16,6 @@ storiesOf('Basic Components', module).add(
         <gux-advanced-dropdown
           disabled=${boolean('disabled', false)}
           id="select-one"
-          label="Selection One option"
           placeholder="[None]"
         >
           <gux-dropdown-option

@@ -78,11 +78,17 @@ export class GuxSearch {
     }, this.searchTimeout);
   }
 
+  /**
+   * Provides an aria-labeledby element for this component.
+   */
   @Method()
   async setLabeledBy(labeledBy: string) {
     this.textFieldElement.setLabeledBy(labeledBy);
   }
 
+  /**
+   * Sets the input focus to the search input.
+   */
   @Method()
   async setInputFocus() {
     this.textFieldElement.setInputFocus();

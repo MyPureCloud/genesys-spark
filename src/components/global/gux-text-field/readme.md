@@ -52,7 +52,7 @@ Type: `void`
 
 ### `setInputFocus() => Promise<void>`
 
-
+Sets the input focus to the text input.
 
 #### Returns
 
@@ -62,7 +62,7 @@ Type: `Promise<void>`
 
 ### `setLabeledBy(id: string) => Promise<void>`
 
-
+Provides an aria-labeledby element for this component.
 
 #### Parameters
 

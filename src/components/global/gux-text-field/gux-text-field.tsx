@@ -202,11 +202,17 @@ export class GuxTextField {
     this.inputElement.value = '';
   }
 
+  /**
+   * Provides an aria-labeledby element for this component.
+   */
   @Method()
   async setLabeledBy(id: string) {
     this.srLabel = id;
   }
 
+  /**
+   * Sets the input focus to the text input.
+   */
   @Method()
   async setInputFocus() {
     this.inputElement.focus();
