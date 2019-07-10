@@ -175,7 +175,7 @@ export class GuxAdvancedDropdown {
     if (this.opened) {
       this.closeDropdown(true);
     } else {
-      this.openDropdown();
+      this.openDropdown(false);
     }
   }
 
@@ -222,7 +222,7 @@ export class GuxAdvancedDropdown {
       case 'ArrowUp':
       case 'ArrowDown':
       case ' ':
-        this.openDropdown();
+        this.openDropdown(true);
         break;
       default:
     }
@@ -242,9 +242,12 @@ export class GuxAdvancedDropdown {
     });
   }
 
-  private openDropdown() {
+  private openDropdown(focusSearch: boolean) {
     this.opened = true;
-    this.changeFocusToSearch();
+
+    if (focusSearch) {
+      this.changeFocusToSearch();
+    }
   }
 
   private closeDropdown(focus: boolean) {
