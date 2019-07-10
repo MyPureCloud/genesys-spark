@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "1.1.0-alpha.1",
+  "version": "1.1.0-alpha.2",
   "description": "Common webcomponents",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
