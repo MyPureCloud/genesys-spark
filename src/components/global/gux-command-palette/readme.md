@@ -43,13 +43,11 @@ Type: `Promise<void>`
 
 - [gux-text-field](../gux-text-field)
 - [gux-list](../gux-list)
-- [gux-list](../gux-list)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-command-palette --> gux-text-field
-  gux-command-palette --> gux-list
   gux-command-palette --> gux-list
   style gux-command-palette fill:#f9f,stroke:#333,stroke-width:4px
 ```

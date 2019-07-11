@@ -1,7 +1,9 @@
-import { Component, h, Method, Prop, State } from '@stencil/core';
+import { Component, Element, h, Method, Prop, State } from '@stencil/core';
 import { ActionTypeEnum, ListTypeEnum } from '../../../common-enums';
 import { ICommand, IListItem } from '../../../common-interfaces';
+import { buildI18nForComponent } from '../../i18n';
 import { GuxList } from '../gux-list/gux-list';
+import paletteResources from './gux-command-palette.i18n.json';
 
 function getCommandText(command: ICommand): string {
   if (!command.details) {
@@ -11,24 +13,14 @@ function getCommandText(command: ICommand): string {
   return `${command.text}: ${command.details}`;
 }
 
-function createList(
-  items: ICommand[],
-  filter: string,
-  header?: string
-): GuxList {
-  return (
-    <gux-list
-      items={this.transformCommands(items, header)}
-      highlight={filter}
-    />
-  );
-}
-
 @Component({
   styleUrl: 'gux-command-palette.less',
   tag: 'gux-command-palette'
 })
 export class GuxCommandPalette {
+  @Element()
+  element: HTMLElement;
+
   /**
    * The full command list.
    */
@@ -54,6 +46,12 @@ export class GuxCommandPalette {
 
   private input: HTMLElement;
 
+  private i18n: (resourceKey: string, context?: any) => string;
+
+  async componentWillLoad() {
+    this.i18n = await buildI18nForComponent(this.element, paletteResources);
+  }
+
   render() {
     return (
       <div class={`gux-command-palette ${this.visible ? '' : 'hidden'}`}>
@@ -77,14 +75,18 @@ export class GuxCommandPalette {
     let commonList: GuxList;
 
     if (commonItems.length) {
-      commonList = createList(commonItems, this.filterValue, 'Common Searches');
+      commonList = this.createList(
+        commonItems,
+        this.filterValue,
+        this.i18n('commonSearch')
+      );
     }
 
     if (recentItems.length) {
-      recentList = createList(
+      recentList = this.createList(
         commonItems,
         this.filterValue,
-        'Recently Searched'
+        this.i18n('recentSearch')
       );
     }
 
@@ -220,5 +222,18 @@ export class GuxCommandPalette {
       this.close();
       setTimeout(callback);
     };
+  }
+
+  private createList(
+    items: ICommand[],
+    filter: string,
+    header?: string
+  ): GuxList {
+    return (
+      <gux-list
+        items={this.transformCommands(items, header)}
+        highlight={filter}
+      />
+    );
   }
 }
