@@ -7,11 +7,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property      | Attribute      | Description                                                   | Type         | Default     |
-| ------------- | -------------- | ------------------------------------------------------------- | ------------ | ----------- |
-| `allItems`    | --             | The full command list.                                        | `ICommand[]` | `[]`        |
-| `filterValue` | `filter-value` |                                                               | `string`     | `undefined` |
-| `recentItems` | --             | The recent list. The user specific list of recent activities. | `ICommand[]` | `[]`        |
+| Property      | Attribute      | Description                      | Type         | Default     |
+| ------------- | -------------- | -------------------------------- | ------------ | ----------- |
+| `filterValue` | `filter-value` | The current search value.        | `string`     | `undefined` |
+| `items`       | --             | The full command list.           | `ICommand[]` | `[]`        |
+| `visible`     | `visible`      | If the command palette is shown. | `boolean`    | `false`     |
+
+
+## Methods
+
+### `close() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `open() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies
@@ -20,11 +43,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 - [gux-text-field](../gux-text-field)
 - [gux-list](../gux-list)
+- [gux-list](../gux-list)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-command-palette --> gux-text-field
+  gux-command-palette --> gux-list
   gux-command-palette --> gux-list
   style gux-command-palette fill:#f9f,stroke:#333,stroke-width:4px
 ```
