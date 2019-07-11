@@ -26,7 +26,7 @@ export class GuxCommandPalette {
   /**
    * test
    */
-  private filteredItems: IListItem[] = [];
+  filteredItems: IListItem[] = [];
 
   render() {
     return (
