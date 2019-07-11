@@ -13,11 +13,23 @@ storiesOf('Basic Components', module).add(
       html`
         <gux-side-panel position="left">
           <div slot="side-panel-icons">
-            <gux-side-panel-button id="settings-button" icon="genesys-icon-settings-gear" alt-text="settings gear">
+            <gux-side-panel-button
+              id="settings-button"
+              icon="genesys-icon-settings-gear"
+              alt-text="settings gear"
+            >
             </gux-side-panel-button>
-            <gux-side-panel-button id="filter-button" icon="genesys-icon-filter" alt-text="filter">
+            <gux-side-panel-button
+              id="filter-button"
+              icon="genesys-icon-filter"
+              alt-text="filter"
+            >
             </gux-side-panel-button>
-            <gux-side-panel-button id="graph-button" icon="genesys-icon-24-graph-bar" alt-text="graph bar">
+            <gux-side-panel-button
+              id="graph-button"
+              icon="genesys-icon-24-graph-bar"
+              alt-text="graph bar"
+            >
             </gux-side-panel-button>
           </div>
 

@@ -7,4 +7,3 @@ export interface IListItem {
   isDisabled?: boolean;
   callback?: any;
 }
-
