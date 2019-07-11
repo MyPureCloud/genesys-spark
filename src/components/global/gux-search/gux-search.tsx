@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  h,
   Method,
   Prop,
   State,
@@ -15,7 +16,7 @@ import {
 })
 export class GuxSearch {
   @Element()
-  root: HTMLStencilElement;
+  root: HTMLGuxSearchElement;
   textFieldElement: HTMLGuxTextFieldElement;
 
   /**

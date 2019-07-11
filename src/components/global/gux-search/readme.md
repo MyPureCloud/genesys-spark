@@ -19,10 +19,10 @@ performs a search request when the 'return' key is pressed.
 
 ## Events
 
-| Event    | Description                                           | Type                |
-| -------- | ----------------------------------------------------- | ------------------- |
-| `input`  | Triggered when the user inputs data into the control. | `CustomEvent<void>` |
-| `search` | Triggered when a search is requested.                 | `CustomEvent<void>` |
+| Event    | Description                                           | Type               |
+| -------- | ----------------------------------------------------- | ------------------ |
+| `input`  | Triggered when the user inputs data into the control. | `CustomEvent<any>` |
+| `search` | Triggered when a search is requested.                 | `CustomEvent<any>` |
 
 
 ## Methods
@@ -31,18 +31,25 @@ performs a search request when the 'return' key is pressed.
 
 
 
-#### Parameters
-
-| Name        | Type     | Description |
-| ----------- | -------- | ----------- |
-| `labeledBy` | `string` |             |
-
 #### Returns
 
 Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Depends on
+
+- [gux-text-field](../gux-text-field)
+
+### Graph
+```mermaid
+graph TD;
+  gux-search --> gux-text-field
+  style gux-search fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

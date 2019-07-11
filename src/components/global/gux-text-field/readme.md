@@ -67,6 +67,7 @@ Type: `Promise<void>`
 
  - [gux-dropdown](../gux-dropdown)
  - [gux-pagination-buttons](../gux-pagination/buttons)
+ - [gux-search](../gux-search)
  - [gux-slider](../gux-slider)
 
 ### Graph
@@ -74,6 +75,7 @@ Type: `Promise<void>`
 graph TD;
   gux-dropdown --> gux-text-field
   gux-pagination-buttons --> gux-text-field
+  gux-search --> gux-text-field
   gux-slider --> gux-text-field
   style gux-text-field fill:#f9f,stroke:#333,stroke-width:4px
 ```
