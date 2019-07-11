@@ -169,25 +169,47 @@ export class GuxList {
     this.setFirstTabIndex();
   }
 
+  renderItemText(item: IListItem): any {
+    if (!item.description) {
+      return this._computedText(item.text);
+    }
+
+    return (
+      <div class="item-with-description">
+        <span>{this._computedText(item.text)}</span>{' '}
+        <span>{item.description}</span>
+      </div>
+    );
+  }
+
   render() {
     return (
       <ul>
-        {this.items.map(item =>
-          item.type === ListTypeEnum.Divider ? (
-            <li class="divider" role="presentation" tabIndex={-1} />
-          ) : (
-            <li
-              class={item.isDisabled ? 'disabled' : ''}
-              tabIndex={-1}
-              ref={el => (item.el = el)}
-              onClick={() => this.onItemClicked(item)}
-              onKeyDown={e => this.onKeyDown(e, item)}
-              onFocus={e => this.emitFocusEvent(e, item)}
-            >
-              {this._computedText(item.text)}
-            </li>
-          )
-        )}
+        {this.items.map(item => {
+          switch (item.type) {
+            case ListTypeEnum.Divider:
+              return <li class="divider" role="presentation" tabIndex={-1} />;
+            case ListTypeEnum.Header:
+              return (
+                <li tabIndex={-1} class="header">
+                  <strong>{item.text}</strong>
+                </li>
+              );
+            default:
+              return (
+                <li
+                  class={item.isDisabled ? 'disabled' : ''}
+                  tabIndex={-1}
+                  ref={el => (item.el = el)}
+                  onClick={() => this.onItemClicked(item)}
+                  onKeyDown={e => this.onKeyDown(e, item)}
+                  onFocus={e => this.emitFocusEvent(e, item)}
+                >
+                  {this.renderItemText(item)}
+                </li>
+              );
+          }
+        })}
       </ul>
     );
   }

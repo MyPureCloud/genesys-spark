@@ -13,35 +13,11 @@ This is a basic modal component in which a user can customize the content using 
 | `size`       | `size`        | Indicates the size of the modal (small, medium or large) | `"large" \| "medium" \| "small"` | `undefined`      |
 
 
-<<<<<<< HEAD
 ## Events
-||||||| merged common ancestors
-## Methods
 
-### `closeModal() => void`
-
-
-
-#### Returns
-
-Type: `void`
-
-=======
-## Methods
-
-### `closeModal() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
->>>>>>> alpha/1.0.0
-
-| Event   | Description                                              | Type                |
-| ------- | -------------------------------------------------------- | ------------------- |
-| `close` | Triggered when any of the the cancel buttons get clicked | `CustomEvent<void>` |
+| Event   | Description                                              | Type               |
+| ------- | -------------------------------------------------------- | ------------------ |
+| `close` | Triggered when any of the the cancel buttons get clicked | `CustomEvent<any>` |
 
 
 ## Dependencies

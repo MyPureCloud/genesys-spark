@@ -26,6 +26,20 @@ gux-list {
         margin: 5px 12px;
         pointer-events: none;
       }
+
+      &.header {
+        pointer-events: none;
+      }
+
+      .item-with-description {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        * {
+          flex: 0 0 auto;
+        }
+      }
     }
   }
 }

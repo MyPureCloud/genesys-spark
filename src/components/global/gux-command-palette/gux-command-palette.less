@@ -1,0 +1,66 @@
+// Variables part
+@palette-background-color: @gux-off-white;
+@palette-border-color: #dae1eb;
+@palette-shadow: rgba(34, 37, 41, 0.24);
+
+// Style
+gux-command-palette .gux-command-palette {
+    background: @palette-background-color;
+    border-color: 1px solid @palette-border-color;
+    box-shadow: 0px 0 2px 0px @palette-shadow;
+    
+    padding: 12px;
+
+    gux-text-field, gux-list > ul {
+        margin-bottom: 12px;
+    }
+
+    gux-list + gux-list > ul {
+        margin-bottom: 0;
+    }
+
+    gux-list .shortcut-list-item {
+        display: flex;
+        
+        * {
+            flex: 1 1 aut0;
+        }
+    }
+}
+
+// Theming
+
+// Dark
+.gux-command-palette-dark-theme {
+    color: @gux-off-white;
+};
+
+.gux-dark-theme {
+    gux-command-palette {
+        .gux-command-palette-dark-theme();
+    }
+}
+
+gux-command-palette.gux-dark-theme {
+    .gux-command-palette-dark-theme();
+}
+
+// Light
+.gux-command-palette-light-theme {
+    color: @gux-grey-2;
+};
+
+.gux-light-theme {
+    gux-command-palette {
+        .gux-command-palette-light-theme();
+    }
+}
+
+gux-command-palette.gux-light-theme {
+    .gux-command-palette-light-theme();
+}
+
+// Default Theme
+gux-command-palette {
+    .gux-command-palette-light-theme();
+}
