@@ -6,45 +6,31 @@
 
 ## Properties
 
-| Property    | Attribute   | Description                                                                                     | Type          | Default |
-| ----------- | ----------- | ----------------------------------------------------------------------------------------------- | ------------- | ------- |
-| `highlight` | `highlight` | Highlights to bold.                                                                             | `string`      | `''`    |
-| `items`     | --          | The list. each item should contain a text and a type an item could have the property isDisabled | `IListItem[]` | `[]`    |
+| Property    | Attribute   | Description | Type      | Default     |
+| ----------- | ----------- | ----------- | --------- | ----------- |
+| `disabled`  | `disabled`  |             | `boolean` | `false`     |
+| `highlight` | `highlight` |             | `string`  | `undefined` |
+| `value`     | `value`     |             | `string`  | `undefined` |
 
 
 ## Events
 
-| Event    | Description | Type               |
-| -------- | ----------- | ------------------ |
-| `change` |             | `CustomEvent<any>` |
-
-
-## Methods
-
-### `setFocusOnFirstItem() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| Event    | Description | Type                       |
+| -------- | ----------- | -------------------------- |
+| `action` |             | `CustomEvent<HTMLElement>` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [gux-action-button](../gux-action-button)
  - [gux-dropdown](../gux-dropdown)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-action-button --> gux-list
-  gux-dropdown --> gux-list
-  style gux-list fill:#f9f,stroke:#333,stroke-width:4px
+  gux-dropdown --> gux-list-item
+  style gux-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

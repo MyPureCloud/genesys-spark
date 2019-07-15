@@ -6,13 +6,12 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                                                                    | Type          | Default       |
-| ---------- | ---------- | ---------------------------------------------------------------------------------------------- | ------------- | ------------- |
-| `accent`   | `accent`   | The component accent (secondary or primary).                                                   | `string`      | `'secondary'` |
-| `disabled` | `disabled` | Disables the action button.                                                                    | `boolean`     | `false`       |
-| `isOpen`   | `is-open`  | It is used to open or not the list.                                                            | `boolean`     | `false`       |
-| `items`    | --         | The list. each item should contain a text and a type an item could have the poperty isDisabled | `IListItem[]` | `[]`          |
-| `text`     | `text`     | The component text.                                                                            | `string`      | `undefined`   |
+| Property   | Attribute  | Description                                  | Type      | Default       |
+| ---------- | ---------- | -------------------------------------------- | --------- | ------------- |
+| `accent`   | `accent`   | The component accent (secondary or primary). | `string`  | `'secondary'` |
+| `disabled` | `disabled` | Disables the action button.                  | `boolean` | `false`       |
+| `isOpen`   | `is-open`  | It is used to open or not the list.          | `boolean` | `false`       |
+| `text`     | `text`     | The component text.                          | `string`  | `undefined`   |
 
 
 ## Events

@@ -113,8 +113,8 @@ export class GuxDropdown {
   _focusHandler() {
     this.inputIsFocused = true;
   }
-  _focusListItemHandler(item: IListItem) {
-    this.forcedGhostValue = this.value + item.text.substring(this.value.length);
+  _focusListItemHandler(text: string) {
+    this.forcedGhostValue = this.value + text.substring(this.value.length);
   }
   _blurHandler() {
     this.inputIsFocused = false;
@@ -202,16 +202,26 @@ export class GuxDropdown {
         </div>
         <gux-list
           ref={el => (this.listElement = el as HTMLGuxListElement)}
-          onChange={e => {
-            this.setValue(e.detail);
-          }}
-          onFocus={e => {
-            this._focusListItemHandler(e.detail as IListItem);
-          }}
           class={this.opened ? 'opened' : ''}
-          items={this.filteredItems}
-          highlight={this.value}
-        />
+        >
+          {this.items.map(item => {
+            return (
+              <gux-list-item
+                value={item.text}
+                onAction={() => {
+                  this.setValue(item.text);
+                  if (item.callback) {
+                    item.callback();
+                  }
+                }}
+                highlight={this.value}
+                onFocus={() => {
+                  this._focusListItemHandler(item.text);
+                }}
+              />
+            );
+          })}
+        </gux-list>
       </div>
     );
   }

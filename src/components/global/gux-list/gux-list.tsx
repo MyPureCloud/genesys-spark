@@ -7,7 +7,7 @@ import {
   Method,
   Prop
 } from '@stencil/core';
-import { KeyCode, ListTypeEnum } from '../../../common-enums';
+import { KeyCode } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 
 @Component({
@@ -17,6 +17,7 @@ import { IListItem } from '../../../common-interfaces';
 export class GuxList {
   @Element()
   root: HTMLGuxListElement;
+
   /**
    * The list.
    * each item should contain a text and a type
@@ -36,104 +37,90 @@ export class GuxList {
     this.change.emit(value);
   }
 
-  onItemClicked(item: IListItem) {
-    this.emitChange(item.text);
-    if (item.callback) {
-      item.callback(item);
-    }
-    item.el.setAttribute('tabindex', '0');
-    this.items.forEach(i => {
-      if (i.el && i !== item) {
-        i.el.setAttribute('tabindex', '-1');
-      }
-    });
-  }
-
-  _computedText(text: string) {
-    if (this.highlight && text.startsWith(this.highlight)) {
-      return (
-        <span>
-          <strong>{this.highlight}</strong>
-          {text.replace(this.highlight, '')}
-        </span>
-      );
-    } else {
-      return text;
-    }
-  }
-
   @Method()
   async setFocusOnFirstItem() {
-    this.items.forEach(i => {
-      if (i.el) {
-        i.el.setAttribute('tabindex', '-1');
+    const items = this.root.querySelectorAll(
+      '[role="listitem"]:not(.divider):not(.disabled), li:not(.divider):not(.disabled)'
+    );
+
+    items.forEach((element, index) => {
+      if (index !== 0) {
+        element.classList.remove('selected');
+        element.setAttribute('tabindex', '-1');
+      } else {
+        element.classList.add('selected');
+        element.setAttribute('tabindex', '0');
+        (element as HTMLElement).focus();
       }
     });
-    const firstFocusable = this.items.find(item => {
-      return (
-        item.el &&
-        !item.isDisabled &&
-        (!item.type || item.type === ListTypeEnum.Item)
-      );
-    });
-    firstFocusable.el.setAttribute('tabindex', '0');
-    if (firstFocusable) {
-      firstFocusable.el.focus();
-    }
   }
 
-  onKeyDown(event: KeyboardEvent, item: IListItem) {
+  onKeyDown(event: KeyboardEvent) {
     const validKeys = [
       KeyCode.Up,
       KeyCode.Down,
       KeyCode.End,
       KeyCode.Home,
-      KeyCode.Enter,
-      KeyCode.Space
+      KeyCode.Space,
+      KeyCode.Enter
     ];
     const key = event.keyCode;
-    if (validKeys.indexOf(event.keyCode) === -1) {
+    if (validKeys.indexOf(key) === -1) {
       return;
     }
-    const filteredList = this.items.filter(i => {
-      return i.el && !i.isDisabled && (!i.type || i.type === ListTypeEnum.Item);
+
+    const filteredList = this.root.querySelectorAll(
+      '[role="listitem"]:not(.divider):not(.disabled), li:not(.divider):not(.disabled)'
+    );
+    let currentIndex = -1;
+    let currentElement = null;
+
+    filteredList.forEach((element, index) => {
+      if (element.classList.contains('selected')) {
+        currentIndex = index;
+        currentElement = element;
+      }
     });
-    const currentIndex = filteredList.indexOf(item);
-    let el = null;
+
+    let newIndex = -1;
     switch (key) {
       case KeyCode.Enter:
       case KeyCode.Space:
-        item.el.click();
+        currentElement.click();
         break;
       case KeyCode.Up:
         if (currentIndex) {
-          const i = this.items.indexOf(filteredList[currentIndex - 1]);
-          el = this.items[i].el;
+          newIndex = currentIndex - 1;
         }
         break;
       case KeyCode.Home:
         if (currentIndex) {
-          const i = this.items.indexOf(filteredList[0]);
-          el = this.items[i].el;
+          newIndex = 0;
         }
         break;
       case KeyCode.Down:
         if (currentIndex !== filteredList.length - 1) {
-          const i = this.items.indexOf(filteredList[currentIndex + 1]);
-          el = this.items[i].el;
+          newIndex = currentIndex + 1;
         }
         break;
       case KeyCode.End:
         if (currentIndex !== filteredList.length - 1) {
-          const i = this.items.indexOf(filteredList[filteredList.length - 1]);
-          el = this.items[i].el;
+          newIndex = filteredList.length - 1;
         }
         break;
     }
-    if (el) {
-      item.el.setAttribute('tabindex', '-1');
-      el.setAttribute('tabindex', '0');
-      el.focus();
+
+    if (newIndex !== -1) {
+      filteredList.forEach((element, index) => {
+        if (index !== newIndex) {
+          element.classList.remove('selected');
+          element.setAttribute('tabindex', '-1');
+        } else {
+          element.classList.add('selected');
+          element.setAttribute('tabindex', '0');
+          (element as HTMLElement).focus();
+        }
+      });
     }
   }
 
@@ -144,15 +131,13 @@ export class GuxList {
   }
 
   setFirstTabIndex() {
-    const firstFocusable = this.items.find(item => {
-      return (
-        item.el &&
-        !item.isDisabled &&
-        (!item.type || item.type === ListTypeEnum.Item)
-      );
-    });
+    const firstFocusable = this.root.querySelector(
+      '[role="listitem"]:not(.divider):not(.disabled), li:not(.divider):not(.disabled)'
+    );
     if (firstFocusable) {
-      firstFocusable.el.setAttribute('tabindex', '0');
+      firstFocusable.classList.add('selected');
+      firstFocusable.setAttribute('tabindex', '0');
+      (firstFocusable as HTMLElement).focus();
     }
   }
 
@@ -171,24 +156,9 @@ export class GuxList {
 
   render() {
     return (
-      <ul>
-        {this.items.map(item =>
-          item.type === ListTypeEnum.Divider ? (
-            <li class="divider" role="presentation" tabIndex={-1} />
-          ) : (
-            <li
-              class={item.isDisabled ? 'disabled' : ''}
-              tabIndex={-1}
-              ref={el => (item.el = el)}
-              onClick={() => this.onItemClicked(item)}
-              onKeyDown={e => this.onKeyDown(e, item)}
-              onFocus={e => this.emitFocusEvent(e, item)}
-            >
-              {this._computedText(item.text)}
-            </li>
-          )
-        )}
-      </ul>
+      <div role="list" tabindex={0} onKeyDown={e => this.onKeyDown(e)}>
+        <slot />
+      </div>
     );
   }
 }

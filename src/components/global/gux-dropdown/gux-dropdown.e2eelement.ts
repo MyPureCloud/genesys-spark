@@ -11,12 +11,12 @@ export class E2EGuxDropdown {
     return this.element.then(el => el.find('input'));
   }
 
-  get listElement() : Promise<E2EElement> {
+  get listElement(): Promise<E2EElement> {
     return this.element.then(el => el.find('gux-list'));
   }
 
-  get listItems() : Promise<E2EElement[]> {
-    return this.element.then(el => el.findAll('li'));
+  get listItems(): Promise<E2EElement[]> {
+    return this.element.then(el => el.findAll('.list-item'));
   }
 
   get currentValue(): Promise<string> {
