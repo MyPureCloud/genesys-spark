@@ -1,6 +1,8 @@
 import {
   Component,
   Element,
+  Event,
+  EventEmitter,
   h,
   Listen,
   Method,
@@ -62,6 +64,12 @@ export class GuxDropdown {
 
   inputIsFocused: boolean = false;
 
+  @Event()
+  change: EventEmitter<string>;
+  emitChange(value: string) {
+    this.change.emit(value);
+  }
+
   @Listen('focusout')
   onFocusOut(e: FocusEvent) {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
@@ -104,6 +112,7 @@ export class GuxDropdown {
   setValue(text) {
     this.value = text;
     this.opened = false;
+    this.emitChange(this.value);
   }
   _clickHandler() {
     if (!this.disabled) {
@@ -208,7 +217,7 @@ export class GuxDropdown {
             return (
               <gux-list-item
                 value={item.text}
-                onAction={() => {
+                onChange={() => {
                   this.setValue(item.text);
                   if (item.callback) {
                     item.callback();

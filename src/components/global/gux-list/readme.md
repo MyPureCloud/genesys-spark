@@ -15,9 +15,9 @@
 
 ## Events
 
-| Event    | Description | Type                       |
-| -------- | ----------- | -------------------------- |
-| `action` |             | `CustomEvent<HTMLElement>` |
+| Event    | Description | Type                  |
+| -------- | ----------- | --------------------- |
+| `change` |             | `CustomEvent<string>` |
 
 
 ## Dependencies

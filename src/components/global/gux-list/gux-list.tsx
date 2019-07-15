@@ -1,12 +1,4 @@
-import {
-  Component,
-  Element,
-  Event,
-  EventEmitter,
-  h,
-  Method,
-  Prop
-} from '@stencil/core';
+import { Component, Element, h, Method, Prop } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 
@@ -30,12 +22,6 @@ export class GuxList {
    */
   @Prop()
   highlight: string = '';
-
-  @Event()
-  change: EventEmitter;
-  emitChange(value: string) {
-    this.change.emit(value);
-  }
 
   @Method()
   async setFocusOnFirstItem() {

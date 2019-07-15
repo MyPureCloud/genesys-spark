@@ -17,6 +17,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | `value`       | `value`       | Indicate the dropdown input value                              | `string`      | `''`        |
 
 
+## Events
+
+| Event    | Description | Type                  |
+| -------- | ----------- | --------------------- |
+| `change` |             | `CustomEvent<string>` |
+
+
 ## Methods
 
 ### `setLabeledBy(labeledBy: string) => Promise<void>`
