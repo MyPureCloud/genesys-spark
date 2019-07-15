@@ -8,26 +8,6 @@ import README from '../readme.md';
 storiesOf('Basic Components', module).add(
   'Action Button',
   withReadme(README, () => {
-    /*const el = document.createElement('gux-action-button');
-    el.text = text('text', 'Blop');
-    el.disabled = boolean('disabled', false);
-    el.items = object('items', [
-      {
-        callback: i => {
-          alert('test:' + JSON.stringify(i));
-        },
-        text: 'test'
-      },
-      { text: 'divider', type: 'divider' },
-      {
-        callback: i => {
-          alert('test:' + JSON.stringify(i));
-        },
-        text: 'test2'
-      },
-      { text: 'test3', isDisabled: true },
-      { text: 'test3' }
-    ]);*/
     const el = document.createElement('div');
     el.innerHTML = `
           <gux-action-button text="Blop">

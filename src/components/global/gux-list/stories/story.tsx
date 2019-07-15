@@ -8,20 +8,6 @@ import README from '../readme.md';
 storiesOf('Basic Components', module).add(
   'List',
   withReadme(README, () => {
-    /*const el = document.createElement('gux-list');
-      el.items = object('items', [
-        {
-          callback: i => {
-            alert('test:' + JSON.stringify(i));
-          },
-          text: 'test'
-        },
-        { type: 'divider' },
-        { text: 'test2' },
-        { text: 'test3', isDisabled: true }
-      ]);
-      el.addEventListener('custom', e => action('custom')(e.detail));*/
-
     const el = document.createElement('div');
     el.innerHTML = `
           <gux-list>
