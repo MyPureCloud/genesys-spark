@@ -3,8 +3,8 @@ import {
   Element,
   Event,
   EventEmitter,
-  Listen,
   h,
+  Listen,
   Method,
   Prop
 } from '@stencil/core';
