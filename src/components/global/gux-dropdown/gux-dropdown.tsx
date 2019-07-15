@@ -217,7 +217,7 @@ export class GuxDropdown {
             return (
               <gux-list-item
                 value={item.text}
-                onChange={() => {
+                onAction={() => {
                   this.setValue(item.text);
                   if (item.callback) {
                     item.callback();

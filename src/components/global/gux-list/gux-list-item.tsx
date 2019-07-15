@@ -25,9 +25,9 @@ export class GuxListItem {
   highlight: string;
 
   @Event()
-  change: EventEmitter<string>;
-  emitChange(value: string) {
-    this.change.emit(value);
+  action: EventEmitter<HTMLElement>;
+  emitAction(value: HTMLElement) {
+    this.action.emit(value);
   }
 
   render() {
@@ -59,6 +59,6 @@ export class GuxListItem {
   }
 
   private onItemClicked(): void {
-    this.emitChange(this.value);
+    this.emitAction(this.root);
   }
 }

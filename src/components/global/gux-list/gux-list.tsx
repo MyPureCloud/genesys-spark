@@ -1,6 +1,14 @@
-import { Component, Element, h, Method, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  Listen,
+  h,
+  Method,
+  Prop
+} from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
-import { IListItem } from '../../../common-interfaces';
 
 @Component({
   styleUrl: 'gux-list.less',
@@ -10,18 +18,24 @@ export class GuxList {
   @Element()
   root: HTMLGuxListElement;
 
-  /**
-   * The list.
-   * each item should contain a text and a type
-   * an item could have the property isDisabled
-   */
   @Prop()
-  items: IListItem[] = [];
-  /**
-   * Highlights to bold.
-   */
-  @Prop()
-  highlight: string = '';
+  value: HTMLElement;
+
+  @Listen('action')
+  itemClicked(ev: CustomEvent<HTMLElement>) {
+    if (!ev.detail) {
+      return;
+    }
+
+    this.value = ev.detail;
+    this.emitChanged(this.value);
+  }
+
+  @Event()
+  changed: EventEmitter<HTMLElement>;
+  emitChanged(value: HTMLElement) {
+    this.changed.emit(value);
+  }
 
   @Method()
   async setFocusOnFirstItem() {
