@@ -55,7 +55,7 @@ export class GuxCommandPalette {
   render() {
     return (
       <div class={`gux-command-palette ${this.visible ? '' : 'hidden'}`}>
-        <gux-text-field
+        <gux-search
           use-clear-button
           onInput={(e: any) => {
             this.handleInput(e);

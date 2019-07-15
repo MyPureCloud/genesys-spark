@@ -41,14 +41,15 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-text-field](../gux-text-field)
+- [gux-search](../gux-search)
 - [gux-list](../gux-list)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-command-palette --> gux-text-field
+  gux-command-palette --> gux-search
   gux-command-palette --> gux-list
+  gux-search --> gux-text-field
   style gux-command-palette fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

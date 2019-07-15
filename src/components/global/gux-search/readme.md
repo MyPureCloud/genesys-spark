@@ -40,6 +40,10 @@ Type: `Promise<void>`
 
 ## Dependencies
 
+### Used by
+
+ - [gux-command-palette](../gux-command-palette)
+
 ### Depends on
 
 - [gux-text-field](../gux-text-field)
@@ -48,6 +52,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-search --> gux-text-field
+  gux-command-palette --> gux-search
   style gux-search fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

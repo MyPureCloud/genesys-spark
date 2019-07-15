@@ -65,7 +65,6 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-command-palette](../gux-command-palette)
  - [gux-dropdown](../gux-dropdown)
  - [gux-pagination-buttons](../gux-pagination/buttons)
  - [gux-search](../gux-search)
@@ -74,7 +73,6 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-command-palette --> gux-text-field
   gux-dropdown --> gux-text-field
   gux-pagination-buttons --> gux-text-field
   gux-search --> gux-text-field
