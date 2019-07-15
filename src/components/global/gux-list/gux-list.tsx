@@ -21,6 +21,12 @@ export class GuxList {
   @Prop()
   value: HTMLElement;
 
+  @Event()
+  changed: EventEmitter<HTMLElement>;
+  emitChanged(value: HTMLElement) {
+    this.changed.emit(value);
+  }
+
   @Listen('action')
   itemClicked(ev: CustomEvent<HTMLElement>) {
     if (!ev.detail) {
@@ -29,12 +35,6 @@ export class GuxList {
 
     this.value = ev.detail;
     this.emitChanged(this.value);
-  }
-
-  @Event()
-  changed: EventEmitter<HTMLElement>;
-  emitChanged(value: HTMLElement) {
-    this.changed.emit(value);
   }
 
   @Method()
