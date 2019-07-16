@@ -6,18 +6,18 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type      | Default     |
-| ----------- | ----------- | ----------- | --------- | ----------- |
-| `disabled`  | `disabled`  |             | `boolean` | `false`     |
-| `highlight` | `highlight` |             | `string`  | `undefined` |
-| `value`     | `value`     |             | `string`  | `undefined` |
+| Property    | Attribute   | Description             | Type      | Default     |
+| ----------- | ----------- | ----------------------- | --------- | ----------- |
+| `disabled`  | `disabled`  | Disables the list item. | `boolean` | `false`     |
+| `highlight` | `highlight` | The highlighted text.   | `string`  | `undefined` |
+| `value`     | `value`     | The value to display.   | `string`  | `undefined` |
 
 
 ## Events
 
-| Event    | Description | Type                       |
-| -------- | ----------- | -------------------------- |
-| `action` |             | `CustomEvent<HTMLElement>` |
+| Event    | Description                                   | Type                       |
+| -------- | --------------------------------------------- | -------------------------- |
+| `action` | Emits when the list item action is triggered. | `CustomEvent<HTMLElement>` |
 
 
 ## Dependencies

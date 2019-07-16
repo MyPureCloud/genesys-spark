@@ -6,6 +6,7 @@ import {
   h,
   Prop
 } from '@stencil/core';
+import { KeyCode } from '../../../common-enums';
 
 @Component({
   styleUrl: 'gux-list-item.less',
@@ -15,15 +16,27 @@ export class GuxListItem {
   @Element()
   root: HTMLElement;
 
+  /**
+   * Disables the list item.
+   */
   @Prop()
   disabled: boolean = false;
 
+  /**
+   * The value to display.
+   */
   @Prop()
   value: string;
 
+  /**
+   * The highlighted text.
+   */
   @Prop()
   highlight: string;
 
+  /**
+   * Emits when the list item action is triggered.
+   */
   @Event()
   action: EventEmitter<HTMLElement>;
   emitAction(value: HTMLElement) {
@@ -38,6 +51,7 @@ export class GuxListItem {
         onClick={() => {
           this.onItemClicked();
         }}
+        onKeyDown={this.handleKeyDown.bind(this)}
         tabIndex={-1}
       >
         {this.renderItemText()}
@@ -45,7 +59,7 @@ export class GuxListItem {
     );
   }
 
-  private renderItemText(): string {
+  private renderItemText(): string | HTMLElement {
     if (this.highlight && this.value.startsWith(this.highlight)) {
       return (
         <span>
@@ -55,6 +69,12 @@ export class GuxListItem {
       );
     } else {
       return this.value;
+    }
+  }
+
+  private handleKeyDown(event: KeyboardEvent): void {
+    if (event.keyCode === KeyCode.Enter || event.keyCode === KeyCode.Space) {
+      this.onItemClicked();
     }
   }
 

@@ -18,9 +18,15 @@ export class GuxList {
   @Element()
   root: HTMLGuxListElement;
 
+  /**
+   * The current selection in the list.
+   */
   @Prop()
   value: HTMLElement;
 
+  /**
+   * Triggered when the list's selection is changed.
+   */
   @Event()
   changed: EventEmitter<HTMLElement>;
   emitChanged(value: HTMLElement) {
@@ -38,12 +44,12 @@ export class GuxList {
   }
 
   @Method()
-  async setFocusOnFirstItem() {
+  async setFocusOnFirstItem(): Promise<void> {
     const items = this.root.querySelectorAll(
       '[role="listitem"]:not(.divider):not(.disabled), li:not(.divider):not(.disabled)'
     );
 
-    items.forEach((element, index) => {
+    items.forEach((element: HTMLElement, index: number) => {
       if (index !== 0) {
         element.classList.remove('selected');
         element.setAttribute('tabindex', '-1');
@@ -55,15 +61,8 @@ export class GuxList {
     });
   }
 
-  onKeyDown(event: KeyboardEvent) {
-    const validKeys = [
-      KeyCode.Up,
-      KeyCode.Down,
-      KeyCode.End,
-      KeyCode.Home,
-      KeyCode.Space,
-      KeyCode.Enter
-    ];
+  onKeyDown(event: KeyboardEvent): void {
+    const validKeys = [KeyCode.Up, KeyCode.Down, KeyCode.End, KeyCode.Home];
     const key = event.keyCode;
     if (validKeys.indexOf(key) === -1) {
       return;
@@ -73,21 +72,15 @@ export class GuxList {
       '[role="listitem"]:not(.divider):not(.disabled), li:not(.divider):not(.disabled)'
     );
     let currentIndex = -1;
-    let currentElement = null;
 
-    filteredList.forEach((element, index) => {
-      if (element.classList.contains('selected')) {
+    filteredList.forEach((element: HTMLElement, index: number) => {
+      if (element.tabIndex === 0) {
         currentIndex = index;
-        currentElement = element;
       }
     });
 
     let newIndex = -1;
     switch (key) {
-      case KeyCode.Enter:
-      case KeyCode.Space:
-        currentElement.click();
-        break;
       case KeyCode.Up:
         if (currentIndex) {
           newIndex = currentIndex - 1;
@@ -111,31 +104,28 @@ export class GuxList {
     }
 
     if (newIndex !== -1) {
-      filteredList.forEach((element, index) => {
+      filteredList.forEach((element: HTMLElement, index: number) => {
         if (index !== newIndex) {
-          element.classList.remove('selected');
           element.setAttribute('tabindex', '-1');
         } else {
-          element.classList.add('selected');
           element.setAttribute('tabindex', '0');
-          (element as HTMLElement).focus();
+          element.focus();
         }
       });
     }
   }
 
-  emitFocusEvent(event, item) {
+  emitFocusEvent(event, item): void {
     this.root.dispatchEvent(
       new CustomEvent(event.type, { ...event, detail: item })
     );
   }
 
-  setFirstTabIndex() {
+  setFirstTabIndex(): void {
     const firstFocusable = this.root.querySelector(
       '[role="listitem"]:not(.divider):not(.disabled), li:not(.divider):not(.disabled)'
     );
     if (firstFocusable) {
-      firstFocusable.classList.add('selected');
       firstFocusable.setAttribute('tabindex', '0');
       (firstFocusable as HTMLElement).focus();
     }

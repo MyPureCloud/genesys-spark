@@ -22,7 +22,7 @@ gux-list-item {
   .gux-list-item-dark-theme {
     .list-item {
       &:not(.disabled) {
-        &.selected {
+        &:focus, &:active {
           background: @gux-dark-blue;
           color: @gux-off-white;
         }
@@ -43,7 +43,7 @@ gux-list-item {
   .gux-list-item-light-theme {
     .list-item {
       &:not(.disabled) {
-        &.selected {
+        &:focus, &:active {
           background: @gux-dark-blue;
           color: @gux-off-white;
         }
