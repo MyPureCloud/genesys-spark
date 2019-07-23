@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 
-const validChildren = 'gux-list-item:not(.disabled)';
+const validChildren = 'gux-list-item:not([disabled])';
 
 @Component({
   styleUrl: 'gux-list.less',
@@ -63,10 +63,10 @@ export class GuxList {
 
   @Method()
   async setFocusOnFirstItem(): Promise<void> {
-    this.setFirstTabIndex();
+    this.focusFirstItem();
   }
 
-  setFirstTabIndex(): void {
+  focusFirstItem(): void {
     const items = this.root.querySelectorAll(validChildren);
 
     items.forEach((element: HTMLGuxListItemElement, index: number) => {
@@ -86,7 +86,7 @@ export class GuxList {
    * Once the component is loaded
    */
   componentDidLoad() {
-    this.setFirstTabIndex();
+    this.focusFirstItem();
     this.performHighlight(this.highlight);
   }
 

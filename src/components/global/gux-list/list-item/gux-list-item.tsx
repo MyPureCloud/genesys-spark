@@ -4,10 +4,10 @@ import {
   Event,
   EventEmitter,
   h,
+  Host,
   Listen,
   Prop
 } from '@stencil/core';
-import { Watch } from '@stencil/core';
 import { KeyCode } from '../../../../common-enums';
 
 @Component({
@@ -17,12 +17,6 @@ import { KeyCode } from '../../../../common-enums';
 export class GuxListItem {
   @Element()
   root: HTMLElement;
-
-  /**
-   * Disables the list item.
-   */
-  @Prop()
-  disabled: boolean = false;
 
   /**
    * The value to display.
@@ -42,15 +36,6 @@ export class GuxListItem {
   @Event()
   action: EventEmitter<any>;
 
-  @Watch('disabled')
-  disabledChanged(newValue: boolean): void {
-    if (newValue) {
-      this.root.classList.add('disabled');
-    } else {
-      this.root.classList.remove('disabled');
-    }
-  }
-
   @Listen('click')
   handleClick() {
     this.onItemClicked();
@@ -65,26 +50,12 @@ export class GuxListItem {
 
   render() {
     return (
-      <span class="list-item">
-        {this.text && <gux-text-highlight text={this.text} />}
-        <slot />
-      </span>
+      <Host role="listitem">
+        <span class="list-item">
+          <slot>{this.text && <gux-text-highlight text={this.text} />}</slot>
+        </span>
+      </Host>
     );
-  }
-
-  /**
-   * Once the component is loaded
-   */
-  componentDidLoad() {
-    this.root.setAttribute('role', 'listitem');
-    this.disabledChanged(this.disabled);
-  }
-  /**
-   * Once the component is updated
-   */
-  componentDidUpdate() {
-    this.root.setAttribute('role', 'listitem');
-    this.disabledChanged(this.disabled);
   }
 
   private onItemClicked(): void {

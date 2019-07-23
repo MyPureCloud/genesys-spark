@@ -17,11 +17,10 @@ Example of a custom list item with highlighting
 
 ## Properties
 
-| Property   | Attribute  | Description                          | Type      | Default     |
-| ---------- | ---------- | ------------------------------------ | --------- | ----------- |
-| `disabled` | `disabled` | Disables the list item.              | `boolean` | `false`     |
-| `text`     | `text`     | The value to display.                | `string`  | `undefined` |
-| `value`    | `value`    | The value associated with this item. | `any`     | `undefined` |
+| Property | Attribute | Description                          | Type     | Default     |
+| -------- | --------- | ------------------------------------ | -------- | ----------- |
+| `text`   | `text`    | The value to display.                | `string` | `undefined` |
+| `value`  | `value`   | The value associated with this item. | `any`    | `undefined` |
 
 
 ## Events

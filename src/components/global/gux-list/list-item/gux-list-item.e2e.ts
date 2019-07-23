@@ -9,17 +9,6 @@ describe('gux-list-item', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('should disable when disabled is set.', async () => {
-    const page = await newE2EPage();
-    await page.setContent(
-      '<gux-list-item text="testing" value="testing" disabled="true"/>'
-    );
-
-    const component = await page.find('gux-list-item');
-
-    expect(component).toHaveClass('disabled');
-  });
-
   it('should have the correct display', async () => {
     const page = await newE2EPage();
     await page.setContent('<gux-list-item text="testing" value="testing"/>');
@@ -27,7 +16,6 @@ describe('gux-list-item', () => {
     const component = await page.find('gux-list-item');
 
     expect(component.getAttribute('role')).toBe('listitem');
-    expect(component).not.toHaveClass('disabled');
     expect(component.innerText).toBe('testing');
   });
 

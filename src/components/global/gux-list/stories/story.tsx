@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import { select, text } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { withReadme } from 'storybook-readme';
@@ -28,12 +29,12 @@ storiesOf('Basic Components', module).add(
       });
 
       document.getElementById('listItem1').addEventListener('action', i => {
-        alert(`test: ${i.detail}`);
+        action('action')(`test: ${i.detail}`);
       });
       document
         .getElementById('customListItem')
         .addEventListener('action', i => {
-          alert(`Custom: ${i.detail}`);
+          action('action')(`Custom: ${i.detail}`);
         });
     });
 
