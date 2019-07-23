@@ -1,6 +1,5 @@
 import {
   Component,
-  Element,
   Event,
   EventEmitter,
   h,
@@ -15,9 +14,6 @@ import { KeyCode } from '../../../../common-enums';
   tag: 'gux-list-item'
 })
 export class GuxListItem {
-  @Element()
-  root: HTMLElement;
-
   /**
    * The value to display.
    */
