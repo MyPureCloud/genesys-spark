@@ -6,9 +6,12 @@ import {
   h,
   Listen,
   Method,
-  Prop
+  Prop,
+  Watch
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
+
+const validChildren = 'gux-list-item:not(.disabled)';
 
 @Component({
   styleUrl: 'gux-list.less',
@@ -22,55 +25,87 @@ export class GuxList {
    * The current selection in the list.
    */
   @Prop()
-  value: HTMLElement;
+  value: any;
+
+  /**
+   * The highlight value
+   */
+  @Prop()
+  highlight: string;
 
   /**
    * Triggered when the list's selection is changed.
    */
   @Event()
-  changed: EventEmitter<HTMLElement>;
-  emitChanged(value: HTMLElement) {
+  changed: EventEmitter<any>;
+  emitChanged(value: any) {
     this.changed.emit(value);
   }
 
-  @Listen('action')
-  itemClicked(ev: CustomEvent<HTMLElement>) {
+  @Listen('selected')
+  itemSelected(ev: CustomEvent<any>) {
     if (!ev.detail) {
       return;
     }
 
     this.value = ev.detail;
-    this.emitChanged(this.value);
+  }
+
+  @Watch('highlight')
+  highlightHandler(newValue: string): void {
+    this.performHighlight(newValue);
+  }
+
+  @Watch('value')
+  valueHandler(newValue) {
+    this.emitChanged(newValue);
   }
 
   @Method()
   async setFocusOnFirstItem(): Promise<void> {
-    const items = this.root.querySelectorAll(
-      '[role="listitem"]:not(.divider):not(.disabled), li:not(.divider):not(.disabled)'
-    );
+    this.setFirstTabIndex();
+  }
 
-    items.forEach((element: HTMLElement, index: number) => {
+  setFirstTabIndex(): void {
+    const items = this.root.querySelectorAll(validChildren);
+
+    items.forEach((element: HTMLGuxListItemElement, index: number) => {
       if (index !== 0) {
-        element.classList.remove('selected');
         element.setAttribute('tabindex', '-1');
       } else {
-        element.classList.add('selected');
         element.setAttribute('tabindex', '0');
-        (element as HTMLElement).focus();
+        element.focus();
+        setTimeout(() => {
+          this.value = element.value;
+        });
       }
     });
   }
 
-  onKeyDown(event: KeyboardEvent): void {
+  /**
+   * Once the component is loaded
+   */
+  componentDidLoad() {
+    this.setFirstTabIndex();
+    this.performHighlight(this.highlight);
+  }
+
+  render() {
+    return (
+      <div role="list" tabindex={0} onKeyDown={e => this.onKeyDown(e)}>
+        <slot />
+      </div>
+    );
+  }
+
+  private onKeyDown(event: KeyboardEvent): void {
     const validKeys = [KeyCode.Up, KeyCode.Down, KeyCode.End, KeyCode.Home];
     const key = event.keyCode;
     if (validKeys.indexOf(key) === -1) {
       return;
     }
 
-    const filteredList = this.root.querySelectorAll(
-      '[role="listitem"]:not(.divider):not(.disabled), li:not(.divider):not(.disabled)'
-    );
+    const filteredList = this.root.querySelectorAll(validChildren);
     let currentIndex = -1;
 
     filteredList.forEach((element: HTMLElement, index: number) => {
@@ -104,51 +139,29 @@ export class GuxList {
     }
 
     if (newIndex !== -1) {
-      filteredList.forEach((element: HTMLElement, index: number) => {
+      filteredList.forEach((element: HTMLGuxListItemElement, index: number) => {
         if (index !== newIndex) {
           element.setAttribute('tabindex', '-1');
         } else {
           element.setAttribute('tabindex', '0');
           element.focus();
+          setTimeout(() => {
+            this.value = element.value;
+          });
         }
       });
     }
   }
 
-  emitFocusEvent(event, item): void {
-    this.root.dispatchEvent(
-      new CustomEvent(event.type, { ...event, detail: item })
-    );
-  }
+  private performHighlight(value: string): void {
+    const items = this.root.querySelectorAll('gux-text-highlight');
 
-  setFirstTabIndex(): void {
-    const firstFocusable = this.root.querySelector(
-      '[role="listitem"]:not(.divider):not(.disabled), li:not(.divider):not(.disabled)'
-    );
-    if (firstFocusable) {
-      firstFocusable.setAttribute('tabindex', '0');
-      (firstFocusable as HTMLElement).focus();
+    if (!items) {
+      return;
     }
-  }
 
-  /**
-   * Once the component is loaded
-   */
-  componentDidLoad() {
-    this.setFirstTabIndex();
-  }
-  /**
-   * Once the component is updated
-   */
-  componentDidUpdate() {
-    this.setFirstTabIndex();
-  }
-
-  render() {
-    return (
-      <div role="list" tabindex={0} onKeyDown={e => this.onKeyDown(e)}>
-        <slot />
-      </div>
-    );
+    items.forEach((element: HTMLGuxTextHighlightElement) => {
+      element.setHighlight(value);
+    });
   }
 }

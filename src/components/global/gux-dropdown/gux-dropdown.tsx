@@ -212,18 +212,19 @@ export class GuxDropdown {
         <gux-list
           ref={el => (this.listElement = el as HTMLGuxListElement)}
           class={this.opened ? 'opened' : ''}
+          highlight={this.value}
         >
           {this.items.map(item => {
             return (
               <gux-list-item
                 value={item.text}
-                onAction={() => {
-                  this.setValue(item.text);
+                text={item.text}
+                onAction={value => {
+                  this.setValue(value.detail);
                   if (item.callback) {
                     item.callback();
                   }
                 }}
-                highlight={this.value}
                 onFocus={() => {
                   this._focusListItemHandler(item.text);
                 }}

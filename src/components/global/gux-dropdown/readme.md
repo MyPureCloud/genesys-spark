@@ -47,7 +47,7 @@ Type: `Promise<void>`
 
 - [gux-text-field](../gux-text-field)
 - [gux-list](../gux-list)
-- [gux-list-item](../gux-list)
+- [gux-list-item](../gux-list/list-item)
 
 ### Graph
 ```mermaid
@@ -55,6 +55,7 @@ graph TD;
   gux-dropdown --> gux-text-field
   gux-dropdown --> gux-list
   gux-dropdown --> gux-list-item
+  gux-list-item --> gux-text-highlight
   gux-pagination-items-per-page --> gux-dropdown
   style gux-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```

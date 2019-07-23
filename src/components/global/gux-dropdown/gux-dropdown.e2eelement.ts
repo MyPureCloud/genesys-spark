@@ -16,7 +16,7 @@ export class E2EGuxDropdown {
   }
 
   get listItems(): Promise<E2EElement[]> {
-    return this.element.then(el => el.findAll('.list-item'));
+    return this.element.then(el => el.findAll('gux-list-item'));
   }
 
   get currentValue(): Promise<string> {

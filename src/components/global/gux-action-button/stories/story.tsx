@@ -11,19 +11,19 @@ storiesOf('Basic Components', module).add(
     const el = document.createElement('div');
     el.innerHTML = `
           <gux-action-button text="Blop">
-              <gux-list-item id="listItem1" value="test"></gux-list-item>
-              <gux-list-item id="listItem2" value="test2"></gux-list-item>
-              <gux-list-item value="test3" disabled="true"></gux-list-item>
+              <gux-list-item id="listItem1" text="test" value="test"></gux-list-item>
+              <gux-list-item id="listItem2" text="test2" value="test2"></gux-list-item>
+              <gux-list-item text="test3" value="test3" disabled="true"></gux-list-item>
           </gux-action-button>
       `;
 
     setTimeout(() => {
       document.getElementById('listItem1').addEventListener('action', i => {
-        alert('test:' + JSON.stringify(i));
+        alert(`test: ${i.detail}`);
       });
 
       document.getElementById('listItem2').addEventListener('action', i => {
-        alert('test:' + JSON.stringify(i));
+        alert(`test: ${i.detail}`);
       });
     });
 

@@ -8,11 +8,14 @@ gux-list-item {
       padding: 0px 16px;
       display: flex;
       cursor: pointer;
-      &.disabled {
-        opacity: 0.5;
-        pointer-events: none;
-        cursor: default;
-      }
+    }
+
+    &.disabled {
+        .list-item {
+          opacity: 0.5;
+          pointer-events: none;
+          cursor: default;
+        }
     }
   }
   
@@ -20,14 +23,12 @@ gux-list-item {
   
   // Dark
   .gux-list-item-dark-theme {
-    .list-item {
-      &:not(.disabled) {
-        &:focus, &:active {
-          background: @gux-dark-blue;
-          color: @gux-off-white;
-        }
+    &:focus, &:active {
+      .list-item {
+        background: @gux-dark-blue;
+        color: @gux-off-white;
       }
-    } 
+    }
   }
   
   .gux-dark-theme {
@@ -41,12 +42,10 @@ gux-list-item {
   
   // Light
   .gux-list-item-light-theme {
-    .list-item {
-      &:not(.disabled) {
-        &:focus, &:active {
-          background: @gux-dark-blue;
-          color: @gux-off-white;
-        }
+    &:focus, &:active {
+      .list-item {
+        background: @gux-dark-blue;
+        color: @gux-off-white;
       }
     }
   }
