@@ -7,6 +7,7 @@ import {
   Listen,
   Method,
   Prop,
+  State,
   Watch
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
@@ -32,6 +33,12 @@ export class GuxList {
    */
   @Prop()
   highlight: string;
+
+  /**
+   * The currently selected index.
+   */
+  @State()
+  selectedIndex: number = -1;
 
   /**
    * Triggered when the list's selection is changed.
@@ -63,34 +70,18 @@ export class GuxList {
 
   @Method()
   async setFocusOnFirstItem(): Promise<void> {
-    this.focusFirstItem();
-  }
-
-  focusFirstItem(): void {
-    const items = this.root.querySelectorAll(validChildren);
-
-    items.forEach((element: HTMLGuxListItemElement, index: number) => {
-      if (index !== 0) {
-        element.setAttribute('tabindex', '-1');
-      } else {
-        element.setAttribute('tabindex', '0');
-        element.focus();
-        setTimeout(() => {
-          this.value = element.value;
-        });
-      }
-    });
+    this.selectedIndex = 0;
   }
 
   /**
    * Once the component is loaded
    */
   componentDidLoad() {
-    this.focusFirstItem();
     this.performHighlight(this.highlight);
   }
 
   render() {
+    this.indexChildren();
     return (
       <div role="list" tabindex={0} onKeyDown={e => this.onKeyDown(e)}>
         <slot />
@@ -106,51 +97,54 @@ export class GuxList {
     }
 
     const filteredList = this.root.querySelectorAll(validChildren);
-    let currentIndex = -1;
-
-    filteredList.forEach((element: HTMLElement, index: number) => {
-      if (element.tabIndex === 0) {
-        currentIndex = index;
-      }
-    });
 
     let newIndex = -1;
     switch (key) {
       case KeyCode.Up:
-        if (currentIndex) {
-          newIndex = currentIndex - 1;
+        if (this.selectedIndex) {
+          newIndex = this.selectedIndex - 1;
         }
         break;
       case KeyCode.Home:
-        if (currentIndex) {
+        if (this.selectedIndex) {
           newIndex = 0;
         }
         break;
       case KeyCode.Down:
-        if (currentIndex !== filteredList.length - 1) {
-          newIndex = currentIndex + 1;
+        if (this.selectedIndex !== filteredList.length - 1) {
+          newIndex = this.selectedIndex + 1;
         }
         break;
       case KeyCode.End:
-        if (currentIndex !== filteredList.length - 1) {
+        if (this.selectedIndex !== filteredList.length - 1) {
           newIndex = filteredList.length - 1;
         }
         break;
     }
 
     if (newIndex !== -1) {
-      filteredList.forEach((element: HTMLGuxListItemElement, index: number) => {
-        if (index !== newIndex) {
-          element.setAttribute('tabindex', '-1');
-        } else {
-          element.setAttribute('tabindex', '0');
-          element.focus();
-          setTimeout(() => {
-            this.value = element.value;
-          });
-        }
-      });
+      this.selectedIndex = newIndex;
     }
+  }
+
+  private indexChildren(): void {
+    const children = this.root.querySelectorAll(validChildren);
+
+    if (!children || this.selectedIndex === -1) {
+      return;
+    }
+
+    children.forEach((element: HTMLGuxListItemElement, index: number) => {
+      if (index !== this.selectedIndex) {
+        element.setAttribute('tabindex', '-1');
+      } else {
+        element.setAttribute('tabindex', '0');
+        element.focus();
+        setTimeout(() => {
+          this.value = element.value;
+        });
+      }
+    });
   }
 
   private performHighlight(value: string): void {

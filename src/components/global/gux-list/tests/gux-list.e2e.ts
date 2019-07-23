@@ -10,20 +10,6 @@ describe('gux-list', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('should auto select the first item in the list', async () => {
-    const page = await newE2EPage();
-
-    await page.setContent(`<gux-list>
-      <gux-list-item value="test" text="first"/>
-    </gux-list>`);
-
-    const element = await page.find('gux-list');
-    await page.waitForChanges();
-
-    const focused = await element.find(focusedElementSelector);
-    expect(focused.innerText).toContain('first');
-  });
-
   it('should select the next item on down arrow', async () => {
     const page = await newE2EPage();
 
