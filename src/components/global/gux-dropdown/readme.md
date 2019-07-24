@@ -19,9 +19,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Events
 
-| Event    | Description | Type                  |
-| -------- | ----------- | --------------------- |
-| `change` |             | `CustomEvent<string>` |
+| Event    | Description                      | Type                  |
+| -------- | -------------------------------- | --------------------- |
+| `change` | Emits when selection is changed. | `CustomEvent<string>` |
 
 
 ## Methods

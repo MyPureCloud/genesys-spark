@@ -1,5 +1,14 @@
 # gux-action-button
+An action button. In order to use this element toggle children must be slotted in.
 
+Example usage
+```html
+<gux-action-button text="Button Text">
+  <gux-action-item value="test" text="test"/>
+  <gux-action-item value="test2" text="test2"/>
+  <gux-action-item value="test3" text="test3"/>
+</gux-action-button>
+```
 
 <!-- Auto Generated Below -->
 

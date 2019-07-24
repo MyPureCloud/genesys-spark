@@ -27,10 +27,10 @@ export class GuxListItem {
   value: any;
 
   /**
-   * Emits when the list item action is triggered.
+   * Emits when the list item is clicked, or enter/space is pressed.
    */
   @Event()
-  action: EventEmitter<any>;
+  press: EventEmitter<any>;
 
   @Listen('click')
   handleClick() {
@@ -55,10 +55,10 @@ export class GuxListItem {
   }
 
   private onItemClicked(): void {
-    this.emitAction();
+    this.emitPress();
   }
 
-  private emitAction() {
-    this.action.emit(this.value);
+  private emitPress() {
+    this.press.emit(this.value);
   }
 }

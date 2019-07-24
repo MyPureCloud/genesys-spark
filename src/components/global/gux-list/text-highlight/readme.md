@@ -7,22 +7,10 @@ Displays highlightable text.
 
 ## Properties
 
-| Property | Attribute | Description           | Type     | Default     |
-| -------- | --------- | --------------------- | -------- | ----------- |
-| `text`   | `text`    | The value to display. | `string` | `undefined` |
-
-
-## Methods
-
-### `setHighlight(value: string) => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| Property    | Attribute   | Description            | Type     | Default     |
+| ----------- | ----------- | ---------------------- | -------- | ----------- |
+| `highlight` | `highlight` | The text to highlight. | `string` | `undefined` |
+| `text`      | `text`      | The value to display.  | `string` | `undefined` |
 
 
 ## Dependencies

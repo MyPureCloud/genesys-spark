@@ -1,4 +1,4 @@
-import { Component, h, Method, Prop, State } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'gux-text-highlight'
@@ -13,13 +13,8 @@ export class GuxTextHighlight {
   /**
    * The text to highlight.
    */
-  @State()
+  @Prop()
   highlight: string;
-
-  @Method()
-  async setHighlight(value: string): Promise<void> {
-    this.highlight = value;
-  }
 
   render() {
     if (this.highlight && this.text) {

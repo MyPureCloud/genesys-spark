@@ -81,7 +81,7 @@ export class GuxList {
   }
 
   render() {
-    this.indexChildren();
+    this.updateTabIndexes();
     return (
       <div role="list" tabindex={0} onKeyDown={e => this.onKeyDown(e)}>
         <slot />
@@ -127,7 +127,7 @@ export class GuxList {
     }
   }
 
-  private indexChildren(): void {
+  private updateTabIndexes(): void {
     const children = this.root.querySelectorAll(validChildren);
 
     if (!children || this.selectedIndex === -1) {
@@ -155,7 +155,7 @@ export class GuxList {
     }
 
     items.forEach((element: HTMLGuxTextHighlightElement) => {
-      element.setHighlight(value);
+      element.highlight = value;
     });
   }
 }

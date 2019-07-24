@@ -37,7 +37,7 @@ describe('gux-list-item', () => {
     );
 
     const component = await page.find('gux-list-item');
-    const spy = await component.spyOnEvent('action');
+    const spy = await component.spyOnEvent('press');
 
     await component.click();
     await page.waitForChanges();
@@ -52,7 +52,7 @@ describe('gux-list-item', () => {
     );
 
     const component = await page.find('gux-list-item');
-    const spy = await component.spyOnEvent('action');
+    const spy = await component.spyOnEvent('press');
 
     await component.press('Enter');
     await page.waitForChanges();
@@ -67,7 +67,7 @@ describe('gux-list-item', () => {
     );
 
     const component = await page.find('gux-list-item');
-    const spy = await component.spyOnEvent('action');
+    const spy = await component.spyOnEvent('press');
 
     await component.press('Space');
     await page.waitForChanges();

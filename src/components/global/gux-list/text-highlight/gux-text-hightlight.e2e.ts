@@ -11,10 +11,9 @@ describe('gux-text-highlight', () => {
 
   it('should update the highlighted text when a matching highlight is provided.', async () => {
     const page = await newE2EPage();
-    await page.setContent('<gux-text-highlight text="testing"/>');
-
-    const component = await page.find('gux-text-highlight');
-    await component.callMethod('setHighlight', 'te');
+    await page.setContent(
+      '<gux-text-highlight text="testing" highlight="te"/>'
+    );
     await page.waitForChanges();
 
     const highlight = await page.find('strong');
@@ -23,10 +22,9 @@ describe('gux-text-highlight', () => {
 
   it('should not provide a highlight if non matching highlight is provided.', async () => {
     const page = await newE2EPage();
-    await page.setContent('<gux-text-highlight text="testing"/>');
-
-    const component = await page.find('gux-text-highlight');
-    await component.callMethod('setHighlight', 'foo');
+    await page.setContent(
+      '<gux-text-highlight text="testing" highlight="foo"/>'
+    );
     await page.waitForChanges();
 
     const highlight = await page.find('strong');

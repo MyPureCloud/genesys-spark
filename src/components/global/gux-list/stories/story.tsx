@@ -28,14 +28,12 @@ storiesOf('Basic Components', module).add(
         document.getElementById('selectionDetails').innerText = c.detail;
       });
 
-      document.getElementById('listItem1').addEventListener('action', i => {
-        action('action')(`test: ${i.detail}`);
+      document.getElementById('listItem1').addEventListener('press', i => {
+        action('press')(`test: ${i.detail}`);
       });
-      document
-        .getElementById('customListItem')
-        .addEventListener('action', i => {
-          action('action')(`Custom: ${i.detail}`);
-        });
+      document.getElementById('customListItem').addEventListener('press', i => {
+        action('press')(`Custom: ${i.detail}`);
+      });
     });
 
     document.getElementsByTagName('html')[0].className =

@@ -64,6 +64,9 @@ export class GuxDropdown {
 
   inputIsFocused: boolean = false;
 
+  /**
+   * Emits when selection is changed.
+   */
   @Event()
   change: EventEmitter<string>;
   emitChange(value: string) {
@@ -214,12 +217,12 @@ export class GuxDropdown {
           class={this.opened ? 'opened' : ''}
           highlight={this.value}
         >
-          {this.items.map(item => {
+          {this.filteredItems.map(item => {
             return (
               <gux-list-item
                 value={item.text}
                 text={item.text}
-                onAction={value => {
+                onPress={value => {
                   this.setValue(value.detail);
                   if (item.callback) {
                     item.callback();

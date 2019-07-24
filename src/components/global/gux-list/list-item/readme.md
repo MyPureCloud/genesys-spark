@@ -25,15 +25,16 @@ Example of a custom list item with highlighting
 
 ## Events
 
-| Event    | Description                                   | Type               |
-| -------- | --------------------------------------------- | ------------------ |
-| `action` | Emits when the list item action is triggered. | `CustomEvent<any>` |
+| Event   | Description                                                     | Type               |
+| ------- | --------------------------------------------------------------- | ------------------ |
+| `press` | Emits when the list item is clicked, or enter/space is pressed. | `CustomEvent<any>` |
 
 
 ## Dependencies
 
 ### Used by
 
+ - [gux-action-item](../../gux-action-button/gux-action-item)
  - [gux-dropdown](../../gux-dropdown)
 
 ### Depends on
@@ -44,6 +45,7 @@ Example of a custom list item with highlighting
 ```mermaid
 graph TD;
   gux-list-item --> gux-text-highlight
+  gux-action-item --> gux-list-item
   gux-dropdown --> gux-list-item
   style gux-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
