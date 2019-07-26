@@ -11,6 +11,13 @@ Example usage
 </gux-list>
 ```
 
+Example with slotting
+```html
+<gux-list>
+  <gux-list-item><span>⌘</span><gux-text-highlight text="test"/></gux-list-item>
+</gux-list>
+```
+
 <!-- Auto Generated Below -->
 
 
