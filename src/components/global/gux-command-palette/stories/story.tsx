@@ -6,37 +6,50 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
+function buildAdditionalItems(items, count) {
+  for (let i = 0; i < count; i++) {
+    items.push({
+      details: `Test item ${i}`,
+      text: `Item ${i}`
+    });
+  }
+  return items;
+}
+
 storiesOf('Basic Components', module).add(
   'Command Palette',
   withReadme(README, () => {
     const root = document.createElement('div');
     const el = document.createElement('gux-command-palette');
-    el.items = object('items', [
-      {
-        callback: i => {
-          alert('test:' + JSON.stringify(i));
+    el.items = buildAdditionalItems(
+      [
+        {
+          callback: i => {
+            alert('test:' + JSON.stringify(i));
+          },
+          details: 'shows an alert',
+          shortcut: '⌘ T',
+          text: 'test',
+          type: 'recent'
         },
-        details: 'shows an alert',
-        shortcut: '⌘ T',
-        text: 'test',
-        type: 'recent'
-      },
-      {
-        callback: i => {
-          alert('test2:' + JSON.stringify(i));
+        {
+          callback: i => {
+            alert('test2:' + JSON.stringify(i));
+          },
+          details: 'a fruit',
+          text: 'apple',
+          type: 'common'
         },
-        details: 'a fruit',
-        text: 'apple',
-        type: 'common'
-      },
-      {
-        callback: i => {
-          alert('test3:' + JSON.stringify(i));
-        },
-        text: 'bannana',
-        type: 'common'
-      }
-    ]);
+        {
+          callback: i => {
+            alert('test3:' + JSON.stringify(i));
+          },
+          text: 'bannana',
+          type: 'common'
+        }
+      ],
+      1000
+    );
 
     const btn = document.createElement('gux-button');
     btn.text = 'Show';
