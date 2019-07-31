@@ -2,45 +2,12 @@
 @menu-background-color: @gux-off-white;
 @menu-border-color: #dae1eb;
 @menu-shadow: rgba(34, 37, 41, 0.24);
-@divider-color: #c3cad4;
 
 gux-list {
-  ul {
+  div {
     list-style: none;
     margin: 0;
     padding: 8px 0;
-    > li {
-      position: relative;
-      height: 32px;
-      line-height: 32px;
-      padding: 0px 16px;
-      display: flex;
-      cursor: pointer;
-      &.disabled {
-        opacity: 0.5;
-        pointer-events: none;
-        cursor: default;
-      }
-      &.divider {
-        height: 1px;
-        margin: 5px 12px;
-        pointer-events: none;
-      }
-
-      &.header {
-        pointer-events: none;
-      }
-
-      .item-with-description {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-
-        * {
-          flex: 0 0 auto;
-        }
-      }
-    }
   }
 }
 
@@ -49,22 +16,10 @@ gux-list {
 // Dark
 .gux-list-dark-theme {
   color: @gux-grey-2;
-  ul {
+  div {
     background: @menu-background-color;
     border-color: 1px solid @menu-border-color;
     box-shadow: 0px 0 2px 0px @menu-shadow;
-    > li {
-      &:not(.disabled) {
-        &:hover,
-        &:focus {
-          background: @gux-dark-blue;
-          color: @gux-off-white;
-        }
-      }
-      &.divider {
-        background-color: @divider-color;
-      }
-    }
   }
 }
 
@@ -79,22 +34,10 @@ gux-list.gux-dark-theme {
 
 // Light
 .gux-list-light-theme {
-  ul {
+  div {
     background: @menu-background-color;
     border-color: 1px solid @menu-border-color;
     box-shadow: 0px 0 2px 0px @menu-shadow;
-    > li {
-      &:not(.disabled) {
-        &:hover,
-        &:focus {
-          background: @gux-dark-blue;
-          color: @gux-off-white;
-        }
-      }
-      &.divider {
-        background-color: @divider-color;
-      }
-    }
   }
 }
 

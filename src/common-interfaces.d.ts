@@ -3,8 +3,8 @@ import { ListTypeEnum, ActionTypeEnum } from './common-enums';
 export interface IListItem {
   type?: ListTypeEnum;
   text?: string;
-  description?: string;
   el?: HTMLLIElement;
+  description?: string;
   isDisabled?: boolean;
   callback?: any;
 }

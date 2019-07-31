@@ -43,13 +43,18 @@ Type: `Promise<void>`
 
 - [gux-search](../gux-search)
 - [gux-list](../gux-list)
+- [gux-list-item](../gux-list/list-item)
+- [gux-text-highlight](../gux-list/text-highlight)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-command-palette --> gux-search
   gux-command-palette --> gux-list
+  gux-command-palette --> gux-list-item
+  gux-command-palette --> gux-text-highlight
   gux-search --> gux-text-field
+  gux-list-item --> gux-text-highlight
   style gux-command-palette fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

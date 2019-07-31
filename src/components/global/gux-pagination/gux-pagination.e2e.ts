@@ -16,6 +16,7 @@ describe('gux-pagination', () => {
       '<gux-pagination total-items="152" current-page="2"></genesys-paginiation>'
     );
 
+    await page.waitForChanges();
     const firstPageButton = await page.find('.first-page-button');
     const lastPageButton = await page.find('.last-page-button');
     const nextPageButton = await page.find('.next-page-button');
@@ -60,6 +61,7 @@ describe('gux-pagination', () => {
       '<gux-pagination total-items="75" current-page="2"></genesys-paginiation>'
     );
 
+    await page.waitForChanges();
     const display = await page.find('.pagination-item-counts-display');
 
     const dropdown = new E2EGuxDropdown(page, '.pagination-items-per-page');
@@ -80,6 +82,7 @@ describe('gux-pagination', () => {
       '<gux-pagination total-items="75" current-page="2"></genesys-paginiation>'
     );
 
+    await page.waitForChanges();
     const itemCountDisplay = await page.find('.pagination-item-counts-display');
     const currentPageInput = await page.find('.pagination-current-page-input');
 
@@ -101,6 +104,7 @@ describe('gux-pagination', () => {
     const page = await newE2EPage();
     await page.setContent('<gux-pagination></genesys-paginiation>');
 
+    await page.waitForChanges();
     const component = await page.find('gux-pagination');
     await component.callMethod('setItemsPerPage', 30, []);
     await page.waitForChanges();

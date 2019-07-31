@@ -92,7 +92,16 @@ export class GuxCommandPalette {
 
     if (this.filterValue && this.filteredItems.length) {
       const filterList = (
-        <gux-list items={this.filteredItems} highlight={this.filterValue} />
+        <gux-list highlight={this.filterValue}>
+          {this.filteredItems.map(item => {
+            return (
+              <gux-list-item value={item.text}>
+                <gux-text-highlight text={item.text} />
+                <span class="shortcut">{item.description}</span>
+              </gux-list-item>
+            );
+          })}
+        </gux-list>
       );
 
       if (!this.foundItem || !commonItems.length) {
@@ -113,7 +122,18 @@ export class GuxCommandPalette {
     }
 
     if (!lists.length) {
-      return <gux-list items={this.transformCommands(this.items)} />;
+      return (
+        <gux-list>
+          {this.transformCommands(this.items).map(item => {
+            return (
+              <gux-list-item value={item.text}>
+                <gux-text-highlight text={item.text} />
+                <span class="shortcut">{item.description}</span>
+              </gux-list-item>
+            );
+          })}
+        </gux-list>
+      );
     }
 
     return lists;
@@ -230,10 +250,16 @@ export class GuxCommandPalette {
     header?: string
   ): GuxList {
     return (
-      <gux-list
-        items={this.transformCommands(items, header)}
-        highlight={filter}
-      />
+      <gux-list highlight={filter}>
+        {this.transformCommands(items, header).map(item => {
+          return (
+            <gux-list-item value={item.text}>
+              <gux-text-highlight text={item.text} />
+              <span class="shortcut">{item.description}</span>
+            </gux-list-item>
+          );
+        })}
+      </gux-list>
     );
   }
 }

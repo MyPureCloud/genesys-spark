@@ -1,0 +1,66 @@
+// Variables part
+
+gux-list-item {
+
+    .list-item {
+      height: 32px;
+      line-height: 32px;
+      padding: 0px 16px;
+      display: flex;
+      cursor: pointer;
+    }
+
+    &[disabled] {
+        .list-item {
+          opacity: 0.5;
+          pointer-events: none;
+          cursor: default;
+        }
+    }
+  }
+  
+  // Theming
+  
+  // Dark
+  .gux-list-item-dark-theme {
+    &:focus, &:active {
+      .list-item {
+        background: @gux-dark-blue;
+        color: @gux-off-white;
+      }
+    }
+  }
+  
+  .gux-dark-theme {
+    gux-list-item {
+      .gux-list-item-dark-theme();
+    }
+  }
+  gux-list-item.gux-dark-theme {
+    .gux-list-item-dark-theme();
+  }
+  
+  // Light
+  .gux-list-item-light-theme {
+    &:focus, &:active {
+      .list-item {
+        background: @gux-dark-blue;
+        color: @gux-off-white;
+      }
+    }
+  }
+  
+  .gux-light-theme {
+    gux-list-item {
+      .gux-list-item-light-theme();
+    }
+  }
+  gux-list-item.gux-light-theme {
+    .gux-list-item-light-theme();
+  }
+  
+  // Default Theme
+  gux-list-item {
+    .gux-list-item-light-theme();
+  }
+  

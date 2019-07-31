@@ -4,11 +4,15 @@ import {
   Event,
   EventEmitter,
   h,
+  Listen,
   Method,
-  Prop
+  Prop,
+  State,
+  Watch
 } from '@stencil/core';
-import { KeyCode, ListTypeEnum } from '../../../common-enums';
-import { IListItem } from '../../../common-interfaces';
+import { KeyCode } from '../../../common-enums';
+
+const validChildren = 'gux-list-item:not([disabled])';
 
 @Component({
   styleUrl: 'gux-list.less',
@@ -17,200 +21,141 @@ import { IListItem } from '../../../common-interfaces';
 export class GuxList {
   @Element()
   root: HTMLGuxListElement;
-  /**
-   * The list.
-   * each item should contain a text and a type
-   * an item could have the property isDisabled
-   */
-  @Prop()
-  items: IListItem[] = [];
-  /**
-   * Highlights to bold.
-   */
-  @Prop()
-  highlight: string = '';
 
+  /**
+   * The current selection in the list.
+   */
+  @Prop()
+  value: any;
+
+  /**
+   * The highlight value
+   */
+  @Prop()
+  highlight: string;
+
+  /**
+   * The currently selected index.
+   */
+  @State()
+  selectedIndex: number = -1;
+
+  /**
+   * Triggered when the list's selection is changed.
+   */
   @Event()
-  change: EventEmitter;
-  emitChange(value: string) {
-    this.change.emit(value);
+  changed: EventEmitter<any>;
+  emitChanged(value: any) {
+    this.changed.emit(value);
   }
 
-  onItemClicked(item: IListItem) {
-    this.emitChange(item.text);
-    if (item.callback) {
-      item.callback(item);
+  @Listen('selected')
+  itemSelected(ev: CustomEvent<any>) {
+    if (!ev.detail) {
+      return;
     }
-    item.el.setAttribute('tabindex', '0');
-    this.items.forEach(i => {
-      if (i.el && i !== item) {
-        i.el.setAttribute('tabindex', '-1');
-      }
-    });
+
+    this.value = ev.detail;
   }
 
-  _computedText(text: string) {
-    if (this.highlight && text.startsWith(this.highlight)) {
-      return (
-        <span>
-          <strong>{this.highlight}</strong>
-          {text.replace(this.highlight, '')}
-        </span>
-      );
-    } else {
-      return text;
-    }
+  @Watch('highlight')
+  highlightHandler(newValue: string): void {
+    this.performHighlight(newValue);
+  }
+
+  @Watch('value')
+  valueHandler(newValue) {
+    this.emitChanged(newValue);
   }
 
   @Method()
-  async setFocusOnFirstItem() {
-    this.items.forEach(i => {
-      if (i.el) {
-        i.el.setAttribute('tabindex', '-1');
-      }
-    });
-    const firstFocusable = this.items.find(item => {
-      return (
-        item.el &&
-        !item.isDisabled &&
-        (!item.type || item.type === ListTypeEnum.Item)
-      );
-    });
-    firstFocusable.el.setAttribute('tabindex', '0');
-    if (firstFocusable) {
-      firstFocusable.el.focus();
-    }
-  }
-
-  onKeyDown(event: KeyboardEvent, item: IListItem) {
-    const validKeys = [
-      KeyCode.Up,
-      KeyCode.Down,
-      KeyCode.End,
-      KeyCode.Home,
-      KeyCode.Enter,
-      KeyCode.Space
-    ];
-    const key = event.keyCode;
-    if (validKeys.indexOf(event.keyCode) === -1) {
-      return;
-    }
-    const filteredList = this.items.filter(i => {
-      return i.el && !i.isDisabled && (!i.type || i.type === ListTypeEnum.Item);
-    });
-    const currentIndex = filteredList.indexOf(item);
-    let el = null;
-    switch (key) {
-      case KeyCode.Enter:
-      case KeyCode.Space:
-        item.el.click();
-        break;
-      case KeyCode.Up:
-        if (currentIndex) {
-          const i = this.items.indexOf(filteredList[currentIndex - 1]);
-          el = this.items[i].el;
-        }
-        break;
-      case KeyCode.Home:
-        if (currentIndex) {
-          const i = this.items.indexOf(filteredList[0]);
-          el = this.items[i].el;
-        }
-        break;
-      case KeyCode.Down:
-        if (currentIndex !== filteredList.length - 1) {
-          const i = this.items.indexOf(filteredList[currentIndex + 1]);
-          el = this.items[i].el;
-        }
-        break;
-      case KeyCode.End:
-        if (currentIndex !== filteredList.length - 1) {
-          const i = this.items.indexOf(filteredList[filteredList.length - 1]);
-          el = this.items[i].el;
-        }
-        break;
-    }
-    if (el) {
-      item.el.setAttribute('tabindex', '-1');
-      el.setAttribute('tabindex', '0');
-      el.focus();
-    }
-  }
-
-  emitFocusEvent(event, item) {
-    this.root.dispatchEvent(
-      new CustomEvent(event.type, { ...event, detail: item })
-    );
-  }
-
-  setFirstTabIndex() {
-    const firstFocusable = this.items.find(item => {
-      return (
-        item.el &&
-        !item.isDisabled &&
-        (!item.type || item.type === ListTypeEnum.Item)
-      );
-    });
-    if (firstFocusable) {
-      firstFocusable.el.setAttribute('tabindex', '0');
-    }
+  async setFocusOnFirstItem(): Promise<void> {
+    this.selectedIndex = 0;
   }
 
   /**
    * Once the component is loaded
    */
   componentDidLoad() {
-    this.setFirstTabIndex();
-  }
-  /**
-   * Once the component is updated
-   */
-  componentDidUpdate() {
-    this.setFirstTabIndex();
+    this.performHighlight(this.highlight);
   }
 
-  renderItemText(item: IListItem): any {
-    if (!item.description) {
-      return this._computedText(item.text);
-    }
-
+  render() {
+    this.updateTabIndexes();
     return (
-      <div class="item-with-description">
-        <span>{this._computedText(item.text)}</span>{' '}
-        <span>{item.description}</span>
+      <div role="list" tabindex={0} onKeyDown={e => this.onKeyDown(e)}>
+        <slot />
       </div>
     );
   }
 
-  render() {
-    return (
-      <ul>
-        {this.items.map(item => {
-          switch (item.type) {
-            case ListTypeEnum.Divider:
-              return <li class="divider" role="presentation" tabIndex={-1} />;
-            case ListTypeEnum.Header:
-              return (
-                <li tabIndex={-1} class="header">
-                  <strong>{item.text}</strong>
-                </li>
-              );
-            default:
-              return (
-                <li
-                  class={item.isDisabled ? 'disabled' : ''}
-                  tabIndex={-1}
-                  ref={el => (item.el = el)}
-                  onClick={() => this.onItemClicked(item)}
-                  onKeyDown={e => this.onKeyDown(e, item)}
-                  onFocus={e => this.emitFocusEvent(e, item)}
-                >
-                  {this.renderItemText(item)}
-                </li>
-              );
-          }
-        })}
-      </ul>
-    );
+  private onKeyDown(event: KeyboardEvent): void {
+    const validKeys = [KeyCode.Up, KeyCode.Down, KeyCode.End, KeyCode.Home];
+    const key = event.keyCode;
+    if (validKeys.indexOf(key) === -1) {
+      return;
+    }
+
+    const filteredList = this.root.querySelectorAll(validChildren);
+
+    let newIndex = -1;
+    switch (key) {
+      case KeyCode.Up:
+        if (this.selectedIndex) {
+          newIndex = this.selectedIndex - 1;
+        }
+        break;
+      case KeyCode.Home:
+        if (this.selectedIndex) {
+          newIndex = 0;
+        }
+        break;
+      case KeyCode.Down:
+        if (this.selectedIndex !== filteredList.length - 1) {
+          newIndex = this.selectedIndex + 1;
+        }
+        break;
+      case KeyCode.End:
+        if (this.selectedIndex !== filteredList.length - 1) {
+          newIndex = filteredList.length - 1;
+        }
+        break;
+    }
+
+    if (newIndex !== -1) {
+      this.selectedIndex = newIndex;
+    }
+  }
+
+  private updateTabIndexes(): void {
+    const children = this.root.querySelectorAll(validChildren);
+
+    if (!children || this.selectedIndex === -1) {
+      return;
+    }
+
+    children.forEach((element: HTMLGuxListItemElement, index: number) => {
+      if (index !== this.selectedIndex) {
+        element.setAttribute('tabindex', '-1');
+      } else {
+        element.setAttribute('tabindex', '0');
+        element.focus();
+        setTimeout(() => {
+          this.value = element.value;
+        });
+      }
+    });
+  }
+
+  private performHighlight(value: string): void {
+    const items = this.root.querySelectorAll('gux-text-highlight');
+
+    if (!items) {
+      return;
+    }
+
+    items.forEach((element: HTMLGuxTextHighlightElement) => {
+      element.highlight = value;
+    });
   }
 }

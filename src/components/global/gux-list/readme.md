@@ -1,22 +1,39 @@
 # gux-list
+A list element. In order to use this element list contents must be slotted in.
 
+Example usage
+```html
+<gux-list>
+  <gux-list-item value="test" text="test1"/>
+  <gux-list-divider/>
+  <gux-list-item value="test" text="test2"/>
+  <gux-list-item value="test" text="test3"/>
+</gux-list>
+```
+
+Example with slotting
+```html
+<gux-list>
+  <gux-list-item><span>⌘</span><gux-text-highlight text="test"/></gux-list-item>
+</gux-list>
+```
 
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-| Property    | Attribute   | Description                                                                                     | Type          | Default |
-| ----------- | ----------- | ----------------------------------------------------------------------------------------------- | ------------- | ------- |
-| `highlight` | `highlight` | Highlights to bold.                                                                             | `string`      | `''`    |
-| `items`     | --          | The list. each item should contain a text and a type an item could have the property isDisabled | `IListItem[]` | `[]`    |
+| Property    | Attribute   | Description                        | Type     | Default     |
+| ----------- | ----------- | ---------------------------------- | -------- | ----------- |
+| `highlight` | `highlight` | The highlight value                | `string` | `undefined` |
+| `value`     | `value`     | The current selection in the list. | `any`    | `undefined` |
 
 
 ## Events
 
-| Event    | Description | Type               |
-| -------- | ----------- | ------------------ |
-| `change` |             | `CustomEvent<any>` |
+| Event     | Description                                     | Type               |
+| --------- | ----------------------------------------------- | ------------------ |
+| `changed` | Triggered when the list's selection is changed. | `CustomEvent<any>` |
 
 
 ## Methods
