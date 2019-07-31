@@ -9,7 +9,6 @@ import {
   Watch
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
-import { IListItem } from '../../../common-interfaces';
 
 @Component({
   styleUrl: 'gux-action-button.less',
@@ -36,14 +35,6 @@ export class GuxActionButton {
    */
   @Event()
   actionClick: EventEmitter;
-
-  /**
-   * The list.
-   * each item should contain a text and a type
-   * an item could have the poperty isDisabled
-   */
-  @Prop()
-  items: IListItem[] = [];
 
   /**
    * The component text.
@@ -141,12 +132,9 @@ export class GuxActionButton {
           leftIcon="dropdown-arrow"
           class="gux-dropdown"
         />
-        <gux-list
-          ref={el => (this.listElement = el as HTMLGuxListElement)}
-          items={this.items}
-          onKeyUp={e => this.onKeyUpEvent(e)}
-          onClick={() => this.toggle()}
-        />
+        <gux-list ref={el => (this.listElement = el as HTMLGuxListElement)}>
+          <slot />
+        </gux-list>
       </div>
     );
   }

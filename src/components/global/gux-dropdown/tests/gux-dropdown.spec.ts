@@ -2,10 +2,7 @@ import { GuxDropdown } from '../gux-dropdown';
 
 describe('gux-dropdown', () => {
   let component;
-  const items = [
-    { text: 'Belgium' },
-    { text: 'Brazil' }
-  ];
+  const items = [{ text: 'Belgium' }, { text: 'Brazil' }];
   const thirdItem = { text: 'France' };
   beforeEach(async () => {
     component = new GuxDropdown();
@@ -33,7 +30,7 @@ describe('gux-dropdown', () => {
     });
     it('_focusListItemHandler', () => {
       const value = 'dummy';
-      component._focusListItemHandler({ text: value });
+      component._focusListItemHandler(value);
       expect(component.forcedGhostValue).toEqual(value);
     });
     it('_blurHandler', () => {

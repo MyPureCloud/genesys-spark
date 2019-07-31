@@ -1,6 +1,8 @@
 import {
   Component,
   Element,
+  Event,
+  EventEmitter,
   h,
   Listen,
   Method,
@@ -62,6 +64,15 @@ export class GuxDropdown {
 
   inputIsFocused: boolean = false;
 
+  /**
+   * Emits when selection is changed.
+   */
+  @Event()
+  change: EventEmitter<string>;
+  emitChange(value: string) {
+    this.change.emit(value);
+  }
+
   @Listen('focusout')
   onFocusOut(e: FocusEvent) {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
@@ -104,6 +115,7 @@ export class GuxDropdown {
   setValue(text) {
     this.value = text;
     this.opened = false;
+    this.emitChange(this.value);
   }
   _clickHandler() {
     if (!this.disabled) {
@@ -113,8 +125,8 @@ export class GuxDropdown {
   _focusHandler() {
     this.inputIsFocused = true;
   }
-  _focusListItemHandler(item: IListItem) {
-    this.forcedGhostValue = this.value + item.text.substring(this.value.length);
+  _focusListItemHandler(text: string) {
+    this.forcedGhostValue = this.value + text.substring(this.value.length);
   }
   _blurHandler() {
     this.inputIsFocused = false;
@@ -202,16 +214,27 @@ export class GuxDropdown {
         </div>
         <gux-list
           ref={el => (this.listElement = el as HTMLGuxListElement)}
-          onChange={e => {
-            this.setValue(e.detail);
-          }}
-          onFocus={e => {
-            this._focusListItemHandler(e.detail as IListItem);
-          }}
           class={this.opened ? 'opened' : ''}
-          items={this.filteredItems}
           highlight={this.value}
-        />
+        >
+          {this.filteredItems.map(item => {
+            return (
+              <gux-list-item
+                value={item.text}
+                text={item.text}
+                onPress={value => {
+                  this.setValue(value.detail);
+                  if (item.callback) {
+                    item.callback();
+                  }
+                }}
+                onFocus={() => {
+                  this._focusListItemHandler(item.text);
+                }}
+              />
+            );
+          })}
+        </gux-list>
       </div>
     );
   }
