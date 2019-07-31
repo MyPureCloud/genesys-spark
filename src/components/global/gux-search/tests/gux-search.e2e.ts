@@ -39,8 +39,8 @@ describe('gux-search', () => {
     });
   });
 
-  describe('on text input', async () => {
-    it('sho', async () => {
+  describe('on text input', () => {
+    it('should send key data.', async () => {
       const page = await newE2EPage();
 
       await page.setContent('<gux-search></gux-search>');
