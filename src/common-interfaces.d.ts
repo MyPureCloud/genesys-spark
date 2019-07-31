@@ -1,4 +1,4 @@
-import { ListTypeEnum, ActionTypeEnum } from './common-enums';
+import { ListTypeEnum } from './common-enums';
 
 export interface IListItem {
   type?: ListTypeEnum;
@@ -7,12 +7,4 @@ export interface IListItem {
   description?: string;
   isDisabled?: boolean;
   callback?: any;
-}
-
-export interface ICommand {
-  text: string;
-  details?: string;
-  type?: ActionTypeEnum;
-  callback(): void;
-  shortcut?: string;
 }

@@ -12,7 +12,7 @@ import {
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 
-const validChildren = 'gux-list-item:not([disabled])';
+const validChildren = 'gux-list-item:not([disabled]):not(.header)';
 
 @Component({
   styleUrl: 'gux-list.less',

@@ -7,11 +7,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property      | Attribute      | Description                      | Type         | Default     |
-| ------------- | -------------- | -------------------------------- | ------------ | ----------- |
-| `filterValue` | `filter-value` | The current search value.        | `string`     | `undefined` |
-| `items`       | --             | The full command list.           | `ICommand[]` | `[]`        |
-| `visible`     | `visible`      | If the command palette is shown. | `boolean`    | `false`     |
+| Property      | Attribute      | Description                      | Type      | Default     |
+| ------------- | -------------- | -------------------------------- | --------- | ----------- |
+| `filterValue` | `filter-value` | The current search value.        | `string`  | `undefined` |
+| `visible`     | `visible`      | If the command palette is shown. | `boolean` | `false`     |
 
 
 ## Methods

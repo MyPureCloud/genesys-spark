@@ -1,11 +1,9 @@
-import { Component, Element, h, Method, Prop, State } from '@stencil/core';
-import { ActionTypeEnum, ListTypeEnum } from '../../../common-enums';
-import { ICommand, IListItem } from '../../../common-interfaces';
+import { Component, Element, h, Method, Prop } from '@stencil/core';
 import { buildI18nForComponent } from '../../i18n';
 import { GuxList } from '../gux-list/gux-list';
 import paletteResources from './gux-command-palette.i18n.json';
 
-function getCommandText(command: ICommand): string {
+function getCommandText(command: HTMLGuxCommandActionElement): string {
   if (!command.details) {
     return command.text;
   }
@@ -22,12 +20,6 @@ export class GuxCommandPalette {
   element: HTMLElement;
 
   /**
-   * The full command list.
-   */
-  @Prop()
-  items: ICommand[] | undefined = [];
-
-  /**
    * The current search value.
    */
   @Prop()
@@ -39,12 +31,7 @@ export class GuxCommandPalette {
   @Prop()
   visible: boolean = false;
 
-  @State()
-  foundItem: boolean = false;
-
-  private filteredItems: IListItem[] = [];
-
-  private input: HTMLElement;
+  private inputElement: HTMLElement;
 
   private i18n: (resourceKey: string, context?: any) => string;
 
@@ -61,7 +48,7 @@ export class GuxCommandPalette {
             this.handleInput(e);
           }}
           value={this.filterValue}
-          ref={el => (this.input = el)}
+          ref={el => (this.inputElement = el)}
         />
         {this.renderLists()}
       </div>
@@ -69,8 +56,10 @@ export class GuxCommandPalette {
   }
 
   renderLists() {
-    const recentItems = this.getSpecificActions(ActionTypeEnum.Recent);
-    const commonItems = this.getSpecificActions(ActionTypeEnum.Common);
+    const allItems = Array.from(this.element.children).slice(0, -1) as any[];
+    const recentItems = allItems.filter(item => item.recent);
+    const commonItems = allItems.filter(item => item.common);
+    const filteredItems = this.filterItems(allItems);
     let recentList: GuxList;
     let commonList: GuxList;
 
@@ -84,27 +73,18 @@ export class GuxCommandPalette {
 
     if (recentItems.length) {
       recentList = this.createList(
-        commonItems,
+        recentItems,
         this.filterValue,
         this.i18n('recentSearch')
       );
     }
 
-    if (this.filterValue && this.filteredItems.length) {
+    if (this.filterValue && filteredItems.length) {
       const filterList = (
-        <gux-list highlight={this.filterValue}>
-          {this.filteredItems.map(item => {
-            return (
-              <gux-list-item value={item.text}>
-                <gux-text-highlight text={item.text} />
-                <span class="shortcut">{item.description}</span>
-              </gux-list-item>
-            );
-          })}
-        </gux-list>
+        <gux-list highlight={this.filterValue}>{filteredItems}</gux-list>
       );
 
-      if (!this.foundItem || !commonItems.length) {
+      if (filteredItems.length !== 1 || !commonItems.length) {
         return filterList;
       }
 
@@ -122,18 +102,7 @@ export class GuxCommandPalette {
     }
 
     if (!lists.length) {
-      return (
-        <gux-list>
-          {this.transformCommands(this.items).map(item => {
-            return (
-              <gux-list-item value={item.text}>
-                <gux-text-highlight text={item.text} />
-                <span class="shortcut">{item.description}</span>
-              </gux-list-item>
-            );
-          })}
-        </gux-list>
-      );
+      return <gux-list>{this.transformCommands(allItems)}</gux-list>;
     }
 
     return lists;
@@ -144,7 +113,7 @@ export class GuxCommandPalette {
     this.visible = true;
 
     setTimeout(() => {
-      this.input.querySelector('input').focus();
+      this.inputElement.querySelector('input').focus();
     });
   }
 
@@ -156,109 +125,92 @@ export class GuxCommandPalette {
 
   private handleInput(event: any) {
     this.filterValue = event.target.value;
-
-    if (!this.filterValue) {
-      return;
-    }
-
-    this.filterItems(this.filterValue);
   }
 
-  private getSpecificActions(type: ActionTypeEnum): ICommand[] {
-    return this.items.filter(item => {
-      return item.type && item.type === type;
-    });
-  }
-
-  private filterItems(value: string) {
-    let exactMatch = false;
-    this.filteredItems = this.transformCommands(
-      this.items
-        .filter((item: ICommand) => {
-          if (item.text === value) {
-            exactMatch = true;
-          }
-
-          return item.text.includes(value);
+  private filterItems(
+    items: HTMLGuxCommandActionElement[]
+  ): HTMLGuxListItemElement[] {
+    return this.transformCommands(
+      items
+        .filter((item: HTMLGuxCommandActionElement) => {
+          return item.text.includes(this.filterValue);
         })
-        .sort((a: ICommand, b: ICommand) => {
-          const aText = a.text.toUpperCase();
-          const bText = b.text.toUpperCase();
+        .sort(
+          (a: HTMLGuxCommandActionElement, b: HTMLGuxCommandActionElement) => {
+            const aText = a.text.toUpperCase();
+            const bText = b.text.toUpperCase();
 
-          if (aText < bText) {
-            return -1;
+            if (aText < bText) {
+              return -1;
+            }
+
+            if (aText > bText) {
+              return 1;
+            }
+
+            return 0;
           }
-
-          if (aText > bText) {
-            return 1;
-          }
-
-          return 0;
-        })
+        )
     );
-
-    this.foundItem = exactMatch;
   }
 
   private transformCommands(
-    commands: ICommand[],
+    commands: HTMLGuxCommandActionElement[],
     header?: string
-  ): IListItem[] {
+  ): HTMLGuxListItemElement[] {
     const retVal = [];
 
     if (header) {
-      retVal.push({
-        text: header,
-        type: ListTypeEnum.Header
-      });
+      retVal.push(
+        <gux-list-item value={header} text={header} class="header" />
+      );
     }
 
-    commands.forEach((command: ICommand) => {
+    commands.forEach((command: HTMLGuxCommandActionElement) => {
+      const commandText = getCommandText(command);
+
       if (command.shortcut) {
-        retVal.push(this.createShortcutCommand(command));
+        retVal.push(
+          <gux-list-item
+            value={command.text}
+            onPress={this.handlePress(command)}
+          >
+            <gux-text-highlight text={commandText} />
+            <span class="shortcut">{command.shortcut}</span>
+          </gux-list-item>
+        );
         return;
       }
 
-      retVal.push({
-        callback: this.createCallback(command.callback),
-        text: getCommandText(command)
-      });
+      retVal.push(
+        <gux-list-item
+          value={command.text}
+          text={commandText}
+          onPress={this.handlePress(command)}
+        />
+      );
     });
 
     return retVal;
   }
 
-  private createShortcutCommand(command: ICommand): IListItem {
-    return {
-      callback: this.createCallback(command.callback),
-      description: command.shortcut,
-      text: getCommandText(command),
-      type: ListTypeEnum.Item
-    };
-  }
-
-  private createCallback(callback: () => void): () => void {
+  private handlePress(command: HTMLGuxCommandActionElement): () => void {
     return () => {
       this.close();
-      setTimeout(callback);
+      setTimeout(() => {
+        command.invokeAction();
+      });
     };
   }
 
   private createList(
-    items: ICommand[],
+    items: HTMLGuxCommandActionElement[],
     filter: string,
     header?: string
   ): GuxList {
     return (
       <gux-list highlight={filter}>
-        {this.transformCommands(items, header).map(item => {
-          return (
-            <gux-list-item value={item.text}>
-              <gux-text-highlight text={item.text} />
-              <span class="shortcut">{item.description}</span>
-            </gux-list-item>
-          );
-        })}
+        {this.transformCommands(items, header)}
       </gux-list>
     );
   }

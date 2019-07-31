@@ -16,9 +16,3 @@ export enum ListTypeEnum {
   Item = 'item',
   Header = 'header'
 }
-
-export enum ActionTypeEnum {
-  None = 'none',
-  Recent = 'recent',
-  Common = 'common'
-}

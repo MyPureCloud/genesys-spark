@@ -1,55 +1,20 @@
 import { action } from '@storybook/addon-actions';
-import { object, select, text } from '@storybook/addon-knobs/polymer';
+import { select } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
-import { html, render } from 'lit-html';
 import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
-
-function buildAdditionalItems(items, count) {
-  for (let i = 0; i < count; i++) {
-    items.push({
-      details: `Test item ${i}`,
-      text: `Item ${i}`
-    });
-  }
-  return items;
-}
 
 storiesOf('Basic Components', module).add(
   'Command Palette',
   withReadme(README, () => {
     const root = document.createElement('div');
     const el = document.createElement('gux-command-palette');
-    el.items = buildAdditionalItems(
-      [
-        {
-          callback: i => {
-            alert('test:' + JSON.stringify(i));
-          },
-          details: 'shows an alert',
-          shortcut: '⌘ T',
-          text: 'test',
-          type: 'recent'
-        },
-        {
-          callback: i => {
-            alert('test2:' + JSON.stringify(i));
-          },
-          details: 'a fruit',
-          text: 'apple',
-          type: 'common'
-        },
-        {
-          callback: i => {
-            alert('test3:' + JSON.stringify(i));
-          },
-          text: 'bannana',
-          type: 'common'
-        }
-      ],
-      1000
-    );
+    el.innerHTML = `
+      <gux-command-action id="testItem" text="test" details="shows an alert" shortcut="⌘ T"></gux-command-action>
+      <gux-command-action text="apple" details="a fruit" common></gux-command-action>
+      <gux-command-action text="bannana" recent></gux-command-action>
+    `;
 
     const btn = document.createElement('gux-button');
     btn.text = 'Show';
@@ -77,6 +42,12 @@ storiesOf('Basic Components', module).add(
       if (e.key === 'Escape' && el.visible) {
         toggleCommandPalette();
       }
+    });
+
+    setTimeout(() => {
+      document.getElementById('testItem').addEventListener('action', () => {
+        action('action')('test command invoked');
+      });
     });
 
     document.getElementsByTagName('html')[0].className =
