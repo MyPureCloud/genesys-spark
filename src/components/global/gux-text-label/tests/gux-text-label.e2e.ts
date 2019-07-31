@@ -5,6 +5,8 @@ describe('gux-text-label', () => {
     const page = await newE2EPage();
 
     await page.setContent('<gux-text-label></gux-text-label>');
+    await page.waitForChanges();
+
     const element = await page.find('gux-text-label');
     expect(element).toHaveClass('hydrated');
   });
@@ -15,6 +17,8 @@ describe('gux-text-label', () => {
     await page.setContent(
       '<gux-text-label label="Test Item"></gux-text-label>'
     );
+    await page.waitForChanges();
+
     const element = await page.find('gux-text-label label');
     expect(element).toEqualText('Test Item');
   });
@@ -27,6 +31,8 @@ describe('gux-text-label', () => {
         <div slot="label">Test Item</div>
       </gux-text-label>`
     );
+    await page.waitForChanges();
+
     const element = await page.find('gux-text-label label');
     expect(element).toEqualText('Test Item');
   });
@@ -37,6 +43,8 @@ describe('gux-text-label', () => {
     await page.setContent(
       '<gux-text-label label="Test Item"><gux-text-field></gux-text-field></gux-text-label>'
     );
+    await page.waitForChanges();
+
     const textLabel = await page.find('gux-text-label label');
     const labelId = textLabel.id;
 
