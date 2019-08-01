@@ -91,8 +91,15 @@ export class GuxTextField {
   @Prop()
   useClearButton: boolean = true;
 
-  @State()
+  /**
+   * Aria label to use in case the text field
+   * does not have an actual label.
+   */
+  @Prop()
   srLabel: string;
+
+  @State()
+  srLabelledby: string;
 
   @State()
   classList: string[] = [];
@@ -207,7 +214,7 @@ export class GuxTextField {
    */
   @Method()
   async setLabeledBy(id: string) {
-    this.srLabel = id;
+    this.srLabelledby = id;
   }
 
   /**
@@ -226,7 +233,8 @@ export class GuxTextField {
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
-            aria-labelledby={this.srLabel}
+            aria-label={this.srLabel}
+            aria-labelledby={this.srLabelledby}
             disabled={this.disabled}
             readonly={this.readonly}
             placeholder={this.placeholder}

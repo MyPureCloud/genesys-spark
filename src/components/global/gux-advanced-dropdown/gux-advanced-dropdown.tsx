@@ -9,6 +9,8 @@ import {
   State,
   Watch
 } from '@stencil/core';
+import { buildI18nForComponent } from '../../i18n';
+import advancedDropDownResources from './gux-advanced-dropdown.i18n.json';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
@@ -19,6 +21,7 @@ export class GuxAdvancedDropdown {
   root: HTMLStencilElement;
   searchElement: HTMLGuxSearchElement;
   inputBox: HTMLElement;
+  i18n: (resourceKey: string, context?: any) => string;
 
   /**
    * Disable the input and prevent interactions.
@@ -39,7 +42,7 @@ export class GuxAdvancedDropdown {
   input: EventEmitter<string>;
 
   @State()
-  srLabel: string;
+  srLabelledby: string;
 
   @State()
   opened: boolean;
@@ -68,7 +71,7 @@ export class GuxAdvancedDropdown {
 
   @Method()
   async setLabeledBy(id: string) {
-    this.srLabel = id;
+    this.srLabelledby = id;
   }
 
   @Listen('focusout')
@@ -76,6 +79,13 @@ export class GuxAdvancedDropdown {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
       this.closeDropdown(false);
     }
+  }
+
+  async componentWillLoad() {
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      advancedDropDownResources
+    );
   }
 
   componentDidLoad() {
@@ -109,7 +119,7 @@ export class GuxAdvancedDropdown {
           <a
             ref={el => (this.inputBox = el)}
             class="gux-select-input"
-            aria-labelledby={this.srLabel}
+            aria-labelledby={this.srLabelledby}
             tabindex="0"
             onMouseDown={() => this.inputMouseDown()}
             onKeyDown={e => this.inputKeyDown(e)}
@@ -133,6 +143,7 @@ export class GuxAdvancedDropdown {
             <gux-search
               ref={el => (this.searchElement = el as HTMLGuxSearchElement)}
               class="gux-light-theme"
+              srLabel={this.i18n('searchAria')}
               dynamic-search="true"
               onInput={e => e.stopPropagation()}
               onSearch={e => this.searchRequested(e)}

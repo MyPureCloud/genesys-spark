@@ -51,6 +51,12 @@ export class GuxSearch {
   searchTimeout: number = 500;
 
   /**
+   * Aria label for the search box.
+   */
+  @Prop()
+  srLabel: string;
+
+  /**
    * Triggered when a search is requested.
    */
   @Event()
@@ -103,6 +109,7 @@ export class GuxSearch {
             value={this.value}
             disabled={this.disabled}
             placeholder={this.placeholder}
+            srLabel={this.srLabel}
             onInput={e => this._onInput(e)}
             onKeyDown={e => this._onKeyDown(e)}
           />
