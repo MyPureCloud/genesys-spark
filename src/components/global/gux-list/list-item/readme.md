@@ -17,10 +17,11 @@ Example of a custom list item with highlighting
 
 ## Properties
 
-| Property | Attribute | Description                          | Type     | Default     |
-| -------- | --------- | ------------------------------------ | -------- | ----------- |
-| `text`   | `text`    | The value to display.                | `string` | `undefined` |
-| `value`  | `value`   | The value associated with this item. | `any`    | `undefined` |
+| Property   | Attribute  | Description                          | Type                                                    | Default     |
+| ---------- | ---------- | ------------------------------------ | ------------------------------------------------------- | ----------- |
+| `strategy` | `strategy` | How the item should be highlighted.  | `HighlightStrategy.Contains \| HighlightStrategy.Start` | `undefined` |
+| `text`     | `text`     | The value to display.                | `string`                                                | `undefined` |
+| `value`    | `value`    | The value associated with this item. | `any`                                                   | `undefined` |
 
 
 ## Events

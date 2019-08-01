@@ -12,7 +12,7 @@ import {
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 
-const validChildren = 'gux-list-item:not([disabled]):not(.header)';
+const validChildren = 'gux-list-item:not([disabled])';
 
 @Component({
   styleUrl: 'gux-list.less',
@@ -45,6 +45,11 @@ export class GuxList {
    */
   @Event()
   changed: EventEmitter<any>;
+
+  private observer: MutationObserver = new MutationObserver(() => {
+    this.performHighlight(this.highlight);
+  });
+
   emitChanged(value: any) {
     this.changed.emit(value);
   }
@@ -56,11 +61,6 @@ export class GuxList {
     }
 
     this.value = ev.detail;
-  }
-
-  @Watch('highlight')
-  highlightHandler(newValue: string): void {
-    this.performHighlight(newValue);
   }
 
   @Watch('value')
@@ -78,9 +78,15 @@ export class GuxList {
    */
   componentDidLoad() {
     this.performHighlight(this.highlight);
+    this.observer.observe(this.root, { childList: true, subtree: true });
+  }
+
+  componentDidUnload() {
+    this.observer.disconnect();
   }
 
   render() {
+    this.performHighlight(this.highlight);
     this.updateTabIndexes();
     return (
       <div role="list" tabindex={0} onKeyDown={e => this.onKeyDown(e)}>

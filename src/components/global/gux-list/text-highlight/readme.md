@@ -7,10 +7,11 @@ Displays highlightable text.
 
 ## Properties
 
-| Property    | Attribute   | Description            | Type     | Default     |
-| ----------- | ----------- | ---------------------- | -------- | ----------- |
-| `highlight` | `highlight` | The text to highlight. | `string` | `undefined` |
-| `text`      | `text`      | The value to display.  | `string` | `undefined` |
+| Property    | Attribute   | Description                             | Type                                                    | Default                   |
+| ----------- | ----------- | --------------------------------------- | ------------------------------------------------------- | ------------------------- |
+| `highlight` | `highlight` | The text to highlight.                  | `string`                                                | `undefined`               |
+| `strategy`  | `strategy`  | The way the text should be highlighted. | `HighlightStrategy.Contains \| HighlightStrategy.Start` | `HighlightStrategy.Start` |
+| `text`      | `text`      | The value to display.                   | `string`                                                | `undefined`               |
 
 
 ## Dependencies

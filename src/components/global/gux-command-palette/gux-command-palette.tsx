@@ -1,6 +1,7 @@
 import { Component, Element, h, Method, Prop } from '@stencil/core';
 import { buildI18nForComponent } from '../../i18n';
 import { GuxList } from '../gux-list/gux-list';
+import { HighlightStrategy } from '../gux-list/text-highlight/highlight-enums';
 import paletteResources from './gux-command-palette.i18n.json';
 
 function getCommandText(command: HTMLGuxCommandActionElement): string {
@@ -60,7 +61,6 @@ export class GuxCommandPalette {
     const recentItems = allItems.filter(item => item.recent);
     const commonItems = allItems.filter(item => item.common);
     const filteredItems = this.filterItems(allItems);
-    let recentList: GuxList;
     let commonList: GuxList;
 
     if (commonItems.length) {
@@ -68,14 +68,6 @@ export class GuxCommandPalette {
         commonItems,
         this.filterValue,
         this.i18n('commonSearch')
-      );
-    }
-
-    if (recentItems.length) {
-      recentList = this.createList(
-        recentItems,
-        this.filterValue,
-        this.i18n('recentSearch')
       );
     }
 
@@ -93,8 +85,14 @@ export class GuxCommandPalette {
 
     const lists = [];
 
-    if (recentList && !this.filterValue) {
-      lists.push(recentList);
+    if (recentItems.length && !this.filterValue) {
+      lists.push(
+        this.createList(
+          recentItems,
+          this.filterValue,
+          this.i18n('recentSearch')
+        )
+      );
     }
 
     if (commonList) {
@@ -161,9 +159,7 @@ export class GuxCommandPalette {
     const retVal = [];
 
     if (header) {
-      retVal.push(
-        <gux-list-item value={header} text={header} class="header" />
-      );
+      retVal.push(<strong>{header}</strong>);
     }
 
     commands.forEach((command: HTMLGuxCommandActionElement) => {
@@ -174,6 +170,7 @@ export class GuxCommandPalette {
           <gux-list-item
             value={command.text}
             onPress={this.handlePress(command)}
+            strategy={HighlightStrategy.Contains}
           >
             <gux-text-highlight text={commandText} />
             <span class="shortcut">{command.shortcut}</span>
@@ -187,6 +184,7 @@ export class GuxCommandPalette {
           value={command.text}
           text={commandText}
           onPress={this.handlePress(command)}
+          strategy={HighlightStrategy.Contains}
         />
       );
     });

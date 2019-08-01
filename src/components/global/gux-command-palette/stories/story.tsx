@@ -13,7 +13,7 @@ storiesOf('Basic Components', module).add(
     el.innerHTML = `
       <gux-command-action id="testItem" text="test" details="shows an alert" shortcut="⌘ T"></gux-command-action>
       <gux-command-action text="apple" details="a fruit" common></gux-command-action>
-      <gux-command-action text="bannana" recent></gux-command-action>
+      <gux-command-action text="banana" recent></gux-command-action>
     `;
 
     const btn = document.createElement('gux-button');
@@ -45,8 +45,10 @@ storiesOf('Basic Components', module).add(
     });
 
     setTimeout(() => {
-      document.getElementById('testItem').addEventListener('action', () => {
-        action('action')('test command invoked');
+      document.querySelectorAll('gux-command-action').forEach(actionItem => {
+        actionItem.addEventListener('action', () => {
+          action('action')(`${actionItem.text} command invoked`);
+        });
       });
     });
 
