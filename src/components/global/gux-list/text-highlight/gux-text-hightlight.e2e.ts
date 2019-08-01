@@ -52,4 +52,16 @@ describe('gux-text-highlight', () => {
     const highlight = await page.findAll('strong');
     expect(highlight.length).toBe(2);
   });
+
+  it('should properly handle starts with logic', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="testing" highlight="te" strategy="1"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.findAll('strong');
+    expect(highlight.length).toBe(1);
+    expect(highlight[0].innerText).toBe('te');
+  });
 });

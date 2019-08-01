@@ -59,9 +59,14 @@ export class GuxTextHighlight {
     const retVal = [];
     parts.forEach((part, index) => {
       const ind = this.text.indexOf(part);
+      const start = this.text.startsWith(this.highlight);
 
-      if (ind === 0 && this.text.startsWith(this.highlight)) {
-        retVal.push(part);
+      if (ind === 0 && start && parts.length !== 2) {
+        return;
+      }
+
+      if (ind === 0 && start) {
+        retVal.push(<strong>{this.highlight}</strong>);
       } else if (ind === 1) {
         retVal.push(<strong>{this.highlight}</strong>);
         retVal.push(part);
