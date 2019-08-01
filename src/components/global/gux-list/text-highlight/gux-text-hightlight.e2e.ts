@@ -64,4 +64,31 @@ describe('gux-text-highlight', () => {
     expect(highlight.length).toBe(1);
     expect(highlight[0].innerText).toBe('te');
   });
+
+  it('should properly handle starts with logic for single characters', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="banana" highlight="b" strategy="1"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.findAll('strong');
+    expect(highlight.length).toBe(1);
+    expect(highlight[0].innerText).toBe('b');
+  });
+
+  it('should handle single character in the middle', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="test" highlight="e" strategy="1"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.findAll('strong');
+    expect(highlight.length).toBe(1);
+    expect(highlight[0].innerText).toBe('e');
+
+    const text = await page.find('gux-text-highlight');
+    expect(text.innerText).toBe('test');
+  });
 });
