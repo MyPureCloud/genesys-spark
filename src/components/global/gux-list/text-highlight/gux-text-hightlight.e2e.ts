@@ -30,4 +30,26 @@ describe('gux-text-highlight', () => {
     const highlight = await page.find('strong');
     expect(highlight).toBe(null);
   });
+
+  it('should handle contains highlight with single segment', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="testing" highlight="est" strategy="1"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.find('strong');
+    expect(highlight.innerText).toBe('est');
+  });
+
+  it('should handle contains highlight with multiple segments', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="testing" highlight="t" strategy="1"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.findAll('strong');
+    expect(highlight.length).toBe(2);
+  });
 });
