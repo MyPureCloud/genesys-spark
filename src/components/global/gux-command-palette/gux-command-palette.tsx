@@ -12,6 +12,27 @@ function getCommandText(command: HTMLGuxCommandActionElement): string {
   return `${command.text}: ${command.details}`;
 }
 
+function sortActions(
+  items: HTMLGuxCommandActionElement[]
+): HTMLGuxCommandActionElement[] {
+  return items.sort(
+    (a: HTMLGuxCommandActionElement, b: HTMLGuxCommandActionElement) => {
+      const aText = a.text.toUpperCase();
+      const bText = b.text.toUpperCase();
+
+      if (aText < bText) {
+        return -1;
+      }
+
+      if (aText > bText) {
+        return 1;
+      }
+
+      return 0;
+    }
+  );
+}
+
 @Component({
   styleUrl: 'gux-command-palette.less',
   tag: 'gux-command-palette'
@@ -129,26 +150,11 @@ export class GuxCommandPalette {
     items: HTMLGuxCommandActionElement[]
   ): HTMLGuxListItemElement[] {
     return this.transformCommands(
-      items
-        .filter((item: HTMLGuxCommandActionElement) => {
+      sortActions(
+        items.filter((item: HTMLGuxCommandActionElement) => {
           return item.text.includes(this.filterValue);
         })
-        .sort(
-          (a: HTMLGuxCommandActionElement, b: HTMLGuxCommandActionElement) => {
-            const aText = a.text.toUpperCase();
-            const bText = b.text.toUpperCase();
-
-            if (aText < bText) {
-              return -1;
-            }
-
-            if (aText > bText) {
-              return 1;
-            }
-
-            return 0;
-          }
-        )
+      )
     );
   }
 
@@ -208,7 +214,7 @@ export class GuxCommandPalette {
   ): GuxList {
     return (
       <gux-list highlight={filter}>
-        {this.transformCommands(items, header)}
+        {this.transformCommands(sortActions(items), header)}
       </gux-list>
     );
   }
