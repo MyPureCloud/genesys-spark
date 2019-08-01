@@ -41,7 +41,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.6.1",
     "@commitlint/config-conventional": "^7.6.0",
-    "@stencil/core": "^1.0.7",
+    "@stencil/core": "^1.2.3",
     "@stencil/less": "^1.0.0",
     "@stencil/utils": "0.0.5",
     "@stencil/webpack": "0.0.6",
