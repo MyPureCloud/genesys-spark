@@ -121,7 +121,9 @@ export class GuxCommandPalette {
     }
 
     if (!lists.length) {
-      return <gux-list>{this.transformCommands(allItems)}</gux-list>;
+      return (
+        <gux-list>{this.transformCommands(sortActions(allItems))}</gux-list>
+      );
     }
 
     return lists;
