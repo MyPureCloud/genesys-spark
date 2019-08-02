@@ -1,11 +1,11 @@
 // Variables part
 @palette-background-color: @gux-off-white;
+@palette-background-color-dark: #555d66;
 @palette-border-color: #dae1eb;
 @palette-shadow: rgba(34, 37, 41, 0.24);
 
 // Style
 gux-command-palette .gux-command-palette {
-    background: @palette-background-color;
     border-color: 1px solid @palette-border-color;
     box-shadow: 0px 0 2px 0px @palette-shadow;
     position: absolute;
@@ -75,7 +75,10 @@ gux-command-palette .gux-command-palette {
 
 // Dark
 .gux-command-palette-dark-theme {
-    color: @gux-off-white;
+    .gux-command-palette {
+        background: @palette-background-color-dark;
+        color: @gux-off-white;
+    }
 };
 
 .gux-dark-theme {
@@ -90,7 +93,10 @@ gux-command-palette.gux-dark-theme {
 
 // Light
 .gux-command-palette-light-theme {
-    color: @gux-grey-2;
+    .gux-command-palette {
+        background: @palette-background-color;
+        color: @gux-grey-2;
+    }
 };
 
 .gux-light-theme {
