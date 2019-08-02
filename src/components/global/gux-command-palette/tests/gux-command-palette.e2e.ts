@@ -201,4 +201,42 @@ describe('gux-command-palette', () => {
     expect(headers.length).toBe(2);
     expect(headers[1].innerText).toBe('Common Searches:');
   });
+
+  it('shows limit when there are too many items.', async () => {
+    const page = await newE2EPage();
+
+    function buildItems(count: number) {
+      let retVal = '';
+      for (let i = 0; i < count; i++) {
+        retVal += `
+          <gux-command-action text="test${i}"></gux-command-action>
+        `;
+      }
+
+      return retVal;
+    }
+
+    await page.setContent(`
+    <gux-command-palette>
+      <gux-command-action text="apple" common></gux-command-action>
+      <gux-command-action text="pear" recent></gux-command-action>
+      ${buildItems(60)}
+    </gux-command-palette>`);
+
+    await page.waitForChanges();
+
+    const component = await page.find('gux-command-palette');
+    await component.callMethod('open');
+    await page.waitForChanges();
+
+    const search = await (await page.find('gux-search')).find('input');
+    await search.press('KeyT');
+    await page.waitForChanges();
+
+    const limit = await page.find('.limit');
+
+    expect(limit.innerText).toBe(
+      'Results limited, refine your search for more commands.'
+    );
+  });
 });

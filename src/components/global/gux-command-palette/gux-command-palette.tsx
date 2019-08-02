@@ -4,6 +4,8 @@ import { GuxList } from '../gux-list/gux-list';
 import { HighlightStrategy } from '../gux-list/text-highlight/highlight-enums';
 import paletteResources from './gux-command-palette.i18n.json';
 
+const filterLimit = 50;
+
 function getCommandText(command: HTMLGuxCommandActionElement): string {
   if (!command.details) {
     return command.text;
@@ -81,7 +83,7 @@ export class GuxCommandPalette {
     const allItems = Array.from(this.element.children).slice(0, -1) as any[];
     const recentItems = allItems.filter(item => item.recent);
     const commonItems = allItems.filter(item => item.common);
-    const filteredItems = this.filterItems(allItems);
+    let filteredItems = this.filterItems(allItems);
     let commonList: GuxList;
 
     if (commonItems.length) {
@@ -93,9 +95,18 @@ export class GuxCommandPalette {
     }
 
     if (this.filterValue && filteredItems.length) {
-      const filterList = (
+      const filterExceeded = filteredItems.length > filterLimit;
+      if (filterExceeded) {
+        filteredItems = filteredItems.slice(0, filterLimit);
+      }
+
+      const filterList = [
         <gux-list highlight={this.filterValue}>{filteredItems}</gux-list>
-      );
+      ];
+
+      if (filterExceeded) {
+        filterList.unshift(<div class="limit">{this.i18n('limited')}</div>);
+      }
 
       if (filteredItems.length !== 1 || !commonItems.length) {
         return filterList;
