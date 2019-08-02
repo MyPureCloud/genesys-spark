@@ -1,6 +1,25 @@
 # gux-command-palette
+A command palette. This control is used to display possible commands and allows for those commands to be triggered.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+## Example
+```xml
+  <head>
+    <script type="text/javascript">
+      function openCommandPalette() {
+        document.getElementById('palette').open();
+      }
+    </script>
+  </head>
+  <body onload="openCommandPalette()">
+    <gux-command-palette id="palette">
+      <gux-command-action text="test" details="shows an alert" shortcut="⌘ T"></gux-command-action>
+      <gux-command-action text="test2" details="Does a thing" shortcut="⌥ T"></gux-command-action>
+      <gux-command-action text="test3" shortcut="⌃ T"></gux-command-action>
+      <gux-command-action text="apple" details="a fruit" common></gux-command-action>
+      <gux-command-action text="banana" recent></gux-command-action>
+    </gux-command-palette>
+  </body>
+```
 
 <!-- Auto Generated Below -->
 
@@ -17,7 +36,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### `close() => Promise<void>`
 
-
+Closes the command palette.
 
 #### Returns
 
@@ -27,7 +46,7 @@ Type: `Promise<void>`
 
 ### `open() => Promise<void>`
 
-
+Opens the command palette.
 
 #### Returns
 

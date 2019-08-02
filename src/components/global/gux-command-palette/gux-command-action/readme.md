@@ -1,6 +1,20 @@
 # gux-command-action
+An action to display in the command palette. Actions can be recent, common or neither.
 
+## Adding a common action
+```xml
+    <gux-command-action text="Hello World" common></gux-command-action>
+```
 
+## Adding a recent action
+```xml
+    <gux-command-action text="Hello World" recent></gux-command-action>
+```
+
+## Adding a standard action
+```xml
+    <gux-command-action text="Hello World"></gux-command-action>
+```
 
 <!-- Auto Generated Below -->
 

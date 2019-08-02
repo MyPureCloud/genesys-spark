@@ -140,6 +140,9 @@ export class GuxCommandPalette {
     return lists;
   }
 
+  /**
+   * Opens the command palette.
+   */
   @Method()
   async open() {
     this.visible = true;
@@ -149,6 +152,9 @@ export class GuxCommandPalette {
     });
   }
 
+  /**
+   * Closes the command palette.
+   */
   @Method()
   async close() {
     this.filterValue = '';
