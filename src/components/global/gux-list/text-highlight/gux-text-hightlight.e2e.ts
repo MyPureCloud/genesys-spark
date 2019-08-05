@@ -91,4 +91,79 @@ describe('gux-text-highlight', () => {
     const text = await page.find('gux-text-highlight');
     expect(text.innerText).toBe('test');
   });
+
+  it('should handle starts with fuzzy matches', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="food" highlight="f" strategy="fuzzy"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.findAll('strong');
+    expect(highlight.length).toBe(1);
+    expect(highlight[0].innerText).toBe('f');
+
+    const text = await page.find('gux-text-highlight');
+    expect(text.innerText).toBe('food');
+  });
+
+  it('should handle ends with fuzzy matches', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="food" highlight="d" strategy="fuzzy"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.findAll('strong');
+    expect(highlight.length).toBe(1);
+    expect(highlight[0].innerText).toBe('d');
+
+    const text = await page.find('gux-text-highlight');
+    expect(text.innerText).toBe('food');
+  });
+
+  it('should handle non matching fuzzy matches', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="food" highlight="z" strategy="fuzzy"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.findAll('strong');
+    expect(highlight.length).toBe(0);
+
+    const text = await page.find('gux-text-highlight');
+    expect(text.innerText).toBe('food');
+  });
+
+  it('should handle contains fuzzy matches', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="apple" highlight="pl" strategy="fuzzy"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.findAll('strong');
+    expect(highlight.length).toBe(1);
+    expect(highlight[0].innerText).toBe('pl');
+
+    const text = await page.find('gux-text-highlight');
+    expect(text.innerText).toBe('apple');
+  });
+
+  it('should handle fuzzy matches', async () => {
+    const page = await newE2EPage();
+    await page.setContent(
+      '<gux-text-highlight text="Dial Home Phone" highlight="dial ph" strategy="fuzzy"/>'
+    );
+    await page.waitForChanges();
+
+    const highlight = await page.findAll('strong');
+    expect(highlight.length).toBe(2);
+    expect(highlight[0].innerText).toBe('Dial');
+    expect(highlight[1].innerText).toBe('Ph');
+
+    const text = await page.find('gux-text-highlight');
+    expect(text.innerText).toBe('Dial Home Phone');
+  });
 });

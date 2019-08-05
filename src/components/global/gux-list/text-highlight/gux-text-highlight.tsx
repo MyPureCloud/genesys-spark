@@ -1,4 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
+import { getFuzzyMatch, matchesFuzzy } from '../../../../search';
 import { HighlightStrategy } from './highlight-enums';
 
 @Component({
@@ -21,7 +22,7 @@ export class GuxTextHighlight {
    * The way the text should be highlighted.
    */
   @Prop()
-  strategy: HighlightStrategy = HighlightStrategy.Start;
+  strategy: string = HighlightStrategy.Start;
 
   render() {
     if (this.highlight && this.text) {
@@ -37,6 +38,8 @@ export class GuxTextHighlight {
         return this.renderStartsWith();
       case HighlightStrategy.Contains:
         return this.renderContains();
+      case HighlightStrategy.Fuzzy:
+        return this.renderFuzzy();
       default:
         return this.text;
     }
@@ -87,6 +90,26 @@ export class GuxTextHighlight {
     });
 
     return retVal;
+  }
+
+  private renderFuzzy(): HTMLElement | string {
+    if (!matchesFuzzy(this.highlight, this.text)) {
+      return this.text;
+    }
+
+    const result = getFuzzyMatch(this.highlight, this.text);
+    let retVal = this.text;
+
+    if (!result.groups) {
+      retVal = this.text.replace(result[0], `<strong>${result[0]}</strong>`);
+    } else {
+      Object.keys(result.groups).forEach(key => {
+        const value = result.groups[key];
+        retVal = retVal.replace(value, `<strong>${value}</strong>`);
+      });
+    }
+
+    return <span innerHTML={retVal} />;
   }
 
   private renderPrefixHighlight(): HTMLElement {

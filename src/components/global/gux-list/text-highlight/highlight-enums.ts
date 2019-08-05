@@ -1,4 +1,5 @@
 export enum HighlightStrategy {
   Start = 'start',
-  Contains = 'contains'
+  Contains = 'contains',
+  Fuzzy = 'fuzzy'
 }

@@ -14,6 +14,7 @@ storiesOf('Basic Components', module).add(
       <gux-command-action id="testItem" text="test" details="shows an alert" shortcut="⌘ T"></gux-command-action>
       <gux-command-action id="testItem" text="test2" details="Does a thing" shortcut="⌥ T"></gux-command-action>
       <gux-command-action id="testItem" text="test3" shortcut="⌃ T"></gux-command-action>
+      <gux-command-action text="Dial Home Phone" details="John Smith"></gux-command-action>
       <gux-command-action text="apple" details="a fruit" common></gux-command-action>
       <gux-command-action text="banana" recent></gux-command-action>
     `;

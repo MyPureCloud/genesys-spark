@@ -1,4 +1,5 @@
 import { Component, Element, h, Method, State } from '@stencil/core';
+import { matchesFuzzy } from '../../../search';
 import { buildI18nForComponent } from '../../i18n';
 import { HighlightStrategy } from '../gux-list/text-highlight/highlight-enums';
 import paletteResources from './gux-command-palette.i18n.json';
@@ -170,7 +171,7 @@ export class GuxCommandPalette {
     return this.transformCommands(
       sortActions(
         items.filter((item: HTMLGuxCommandActionElement) => {
-          return item.text.includes(this.filterValue);
+          return matchesFuzzy(this.filterValue, item.text);
         })
       )
     );
@@ -194,7 +195,7 @@ export class GuxCommandPalette {
           <gux-list-item
             value={command.text}
             onPress={this.handlePress(command)}
-            strategy={HighlightStrategy.Contains}
+            strategy={HighlightStrategy.Fuzzy}
           >
             <gux-text-highlight text={commandText} />
             <span class="shortcut">{command.shortcut}</span>
@@ -208,7 +209,7 @@ export class GuxCommandPalette {
           value={command.text}
           text={commandText}
           onPress={this.handlePress(command)}
-          strategy={HighlightStrategy.Contains}
+          strategy={HighlightStrategy.Fuzzy}
         />
       );
     });
