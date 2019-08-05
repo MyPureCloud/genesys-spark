@@ -1,9 +1,9 @@
 import { GuxList } from '../gux-list';
 
 describe('gux-list', () => {
-  it('builds', () => {
-    let obs = false;
+  let obs = false;
 
+  beforeEach(() => {
     global.MutationObserver = class MutationObserver {
       disconnect() {
         obs = false;
@@ -13,8 +13,14 @@ describe('gux-list', () => {
         obs = true;
       }
     };
+  });
 
+  it('builds', () => {
     expect(new GuxList()).toBeTruthy();
     expect(obs).toBeFalsy();
+  });
+
+  afterEach(() => {
+    delete global.MutationObserver;
   });
 });

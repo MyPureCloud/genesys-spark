@@ -24,14 +24,6 @@ A command palette. This control is used to display possible commands and allows 
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property      | Attribute      | Description                      | Type      | Default     |
-| ------------- | -------------- | -------------------------------- | --------- | ----------- |
-| `filterValue` | `filter-value` | The current search value.        | `string`  | `undefined` |
-| `visible`     | `visible`      | If the command palette is shown. | `boolean` | `false`     |
-
-
 ## Methods
 
 ### `close() => Promise<void>`

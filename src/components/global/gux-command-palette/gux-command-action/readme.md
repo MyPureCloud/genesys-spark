@@ -21,33 +21,20 @@ An action to display in the command palette. Actions can be recent, common or ne
 
 ## Properties
 
-| Property   | Attribute  | Description                         | Type      | Default     |
-| ---------- | ---------- | ----------------------------------- | --------- | ----------- |
-| `common`   | `common`   | If the command is a common command. | `boolean` | `undefined` |
-| `details`  | `details`  | Details about the command.          | `string`  | `undefined` |
-| `recent`   | `recent`   | If the command is a recent command. | `boolean` | `undefined` |
-| `shortcut` | `shortcut` | The shortcut for the command.       | `string`  | `undefined` |
-| `text`     | `text`     | The textual value of the command.   | `string`  | `undefined` |
+| Property   | Attribute  | Description                                                                                                    | Type      | Default |
+| ---------- | ---------- | -------------------------------------------------------------------------------------------------------------- | --------- | ------- |
+| `common`   | `common`   | If the command is a common command. Common commands are choosen defaults a user might want to use.             | `boolean` | `false` |
+| `details`  | `details`  | Details about the command. This acts as extra contextual information about the command.                        | `string`  | `''`    |
+| `recent`   | `recent`   | If the command is a recent command. Recent commands are commands that the user has recently issued.            | `boolean` | `false` |
+| `shortcut` | `shortcut` | The shortcut for the command. Textual representation of a shortcut associated with this command, if it exists. | `string`  | `''`    |
+| `text`     | `text`     | The textual value of the command.                                                                              | `string`  | `''`    |
 
 
 ## Events
 
-| Event    | Description                                                     | Type                |
-| -------- | --------------------------------------------------------------- | ------------------- |
-| `action` | Emits when the list item is clicked, or enter/space is pressed. | `CustomEvent<void>` |
-
-
-## Methods
-
-### `invokeAction() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| Event   | Description                                                     | Type                |
+| ------- | --------------------------------------------------------------- | ------------------- |
+| `press` | Emits when the list item is clicked, or enter/space is pressed. | `CustomEvent<void>` |
 
 
 ----------------------------------------------

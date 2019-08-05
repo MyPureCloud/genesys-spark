@@ -50,7 +50,7 @@ export class GuxTextHighlight {
     return this.text;
   }
 
-  private renderContains(): any[] | string {
+  private renderContains(): HTMLElement[] | string {
     const parts = this.text.split(this.highlight);
     if (parts.length === 1) {
       return this.text;

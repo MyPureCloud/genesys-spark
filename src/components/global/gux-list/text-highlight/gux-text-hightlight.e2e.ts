@@ -34,7 +34,7 @@ describe('gux-text-highlight', () => {
   it('should handle contains highlight with single segment', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<gux-text-highlight text="testing" highlight="est" strategy="1"/>'
+      '<gux-text-highlight text="testing" highlight="est" strategy="contains"/>'
     );
     await page.waitForChanges();
 
@@ -45,7 +45,7 @@ describe('gux-text-highlight', () => {
   it('should handle contains highlight with multiple segments', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<gux-text-highlight text="testing" highlight="t" strategy="1"/>'
+      '<gux-text-highlight text="testing" highlight="t" strategy="contains"/>'
     );
     await page.waitForChanges();
 
@@ -56,7 +56,7 @@ describe('gux-text-highlight', () => {
   it('should properly handle starts with logic', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<gux-text-highlight text="testing" highlight="te" strategy="1"/>'
+      '<gux-text-highlight text="testing" highlight="te" strategy="contains"/>'
     );
     await page.waitForChanges();
 
@@ -68,7 +68,7 @@ describe('gux-text-highlight', () => {
   it('should properly handle starts with logic for single characters', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<gux-text-highlight text="banana" highlight="b" strategy="1"/>'
+      '<gux-text-highlight text="banana" highlight="b" strategy="contains"/>'
     );
     await page.waitForChanges();
 
@@ -80,7 +80,7 @@ describe('gux-text-highlight', () => {
   it('should handle single character in the middle', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<gux-text-highlight text="test" highlight="e" strategy="1"/>'
+      '<gux-text-highlight text="test" highlight="e" strategy="contains"/>'
     );
     await page.waitForChanges();
 

@@ -158,16 +158,16 @@ describe('gux-command-palette', () => {
 
     const lists = await page.findAll('gux-list');
 
-    expect(lists.length).toBe(1);
+    expect(lists.length).toBe(2);
     const items = await page.findAll('gux-list-item');
 
-    expect(items.length).toBe(3);
+    expect(items.length).toBe(4);
     expect(items[0].innerText).toBe('test');
     expect(items[1].innerText).toBe('test2');
     expect(items[2].innerText).toBe('test3');
   });
 
-  it('shows common search on exact match', async () => {
+  it('should not show common search on exact match', async () => {
     const page = await newE2EPage();
 
     await page.setContent(`
@@ -190,16 +190,11 @@ describe('gux-command-palette', () => {
 
     const lists = await page.findAll('gux-list');
 
-    expect(lists.length).toBe(2);
+    expect(lists.length).toBe(1);
     const items = await page.findAll('gux-list-item');
 
-    expect(items.length).toBe(2);
+    expect(items.length).toBe(1);
     expect(items[0].innerText).toBe('orange');
-    expect(items[1].innerText).toBe('apple');
-
-    const headers = await page.findAll('strong');
-    expect(headers.length).toBe(2);
-    expect(headers[1].innerText).toBe('Common Searches:');
   });
 
   it('shows limit when there are too many items.', async () => {

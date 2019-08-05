@@ -48,8 +48,8 @@ storiesOf('Basic Components', module).add(
 
     setTimeout(() => {
       document.querySelectorAll('gux-command-action').forEach(actionItem => {
-        actionItem.addEventListener('action', () => {
-          action('action')(`${actionItem.text} command invoked`);
+        actionItem.addEventListener('press', () => {
+          action('press')(`${actionItem.text} command invoked`);
         });
       });
     });

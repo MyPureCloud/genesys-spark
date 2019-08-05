@@ -1,6 +1,5 @@
-import { Component, Element, h, Method, Prop } from '@stencil/core';
+import { Component, Element, h, Method, State } from '@stencil/core';
 import { buildI18nForComponent } from '../../i18n';
-import { GuxList } from '../gux-list/gux-list';
 import { HighlightStrategy } from '../gux-list/text-highlight/highlight-enums';
 import paletteResources from './gux-command-palette.i18n.json';
 
@@ -46,13 +45,13 @@ export class GuxCommandPalette {
   /**
    * The current search value.
    */
-  @Prop()
-  filterValue: string;
+  @State()
+  filterValue: string = '';
 
   /**
    * If the command palette is shown.
    */
-  @Prop()
+  @State()
   visible: boolean = false;
 
   private inputElement: HTMLElement;
@@ -84,7 +83,7 @@ export class GuxCommandPalette {
     const recentItems = allItems.filter(item => item.recent);
     const commonItems = allItems.filter(item => item.common);
     let filteredItems = this.filterItems(allItems);
-    let commonList: GuxList;
+    let commonList: HTMLGuxListElement;
 
     if (commonItems.length) {
       commonList = this.createList(
@@ -108,11 +107,11 @@ export class GuxCommandPalette {
         filterList.unshift(<div class="limit">{this.i18n('limited')}</div>);
       }
 
-      if (filteredItems.length !== 1 || !commonItems.length) {
-        return filterList;
+      if (filteredItems.length !== 1 && commonItems.length) {
+        return [filterList, commonList];
       }
 
-      return [filterList, commonList];
+      return filterList;
     }
 
     const lists = [];
@@ -221,7 +220,7 @@ export class GuxCommandPalette {
     return () => {
       this.close();
       setTimeout(() => {
-        command.invokeAction();
+        command.invokePress();
       });
     };
   }
@@ -230,7 +229,7 @@ export class GuxCommandPalette {
     items: HTMLGuxCommandActionElement[],
     filter: string,
     header?: string
-  ): GuxList {
+  ): HTMLGuxListElement {
     return (
       <gux-list highlight={filter}>
         {this.transformCommands(sortActions(items), header)}
