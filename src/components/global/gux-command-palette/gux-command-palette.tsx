@@ -6,14 +6,6 @@ import paletteResources from './gux-command-palette.i18n.json';
 
 const filterLimit = 50;
 
-function getCommandText(command: HTMLGuxCommandActionElement): string {
-  if (!command.details) {
-    return command.text;
-  }
-
-  return `${command.text}: ${command.details}`;
-}
-
 function sortActions(
   items: HTMLGuxCommandActionElement[]
 ): HTMLGuxCommandActionElement[] {
@@ -171,7 +163,10 @@ export class GuxCommandPalette {
     return this.transformCommands(
       sortActions(
         items.filter((item: HTMLGuxCommandActionElement) => {
-          return matchesFuzzy(this.filterValue, item.text);
+          return matchesFuzzy(
+            this.filterValue,
+            `${item.text} + ${item.details}`
+          );
         })
       )
     );
@@ -188,29 +183,45 @@ export class GuxCommandPalette {
     }
 
     commands.forEach((command: HTMLGuxCommandActionElement) => {
-      const commandText = getCommandText(command);
-
       if (command.shortcut) {
         retVal.push(
           <gux-list-item
             value={command.text}
             onPress={this.handlePress(command)}
-            strategy={HighlightStrategy.Fuzzy}
           >
-            <gux-text-highlight text={commandText} />
-            <span class="shortcut">{command.shortcut}</span>
+            <div>
+              <gux-text-highlight
+                text={command.text}
+                strategy={HighlightStrategy.Fuzzy}
+              />
+              <span class="shortcut">{command.shortcut}</span>
+            </div>
+            {command.details && (
+              <gux-text-highlight
+                class="details"
+                text={command.details}
+                strategy={HighlightStrategy.Fuzzy}
+              />
+            )}
           </gux-list-item>
         );
         return;
       }
 
       retVal.push(
-        <gux-list-item
-          value={command.text}
-          text={commandText}
-          onPress={this.handlePress(command)}
-          strategy={HighlightStrategy.Fuzzy}
-        />
+        <gux-list-item value={command.text} onPress={this.handlePress(command)}>
+          <gux-text-highlight
+            text={command.text}
+            strategy={HighlightStrategy.Fuzzy}
+          />
+          {command.details && (
+            <gux-text-highlight
+              class="details"
+              text={command.details}
+              strategy={HighlightStrategy.Fuzzy}
+            />
+          )}
+        </gux-list-item>
       );
     });
 

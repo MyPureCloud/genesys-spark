@@ -11,11 +11,12 @@ storiesOf('Basic Components', module).add(
     const root = document.createElement('div');
     const el = document.createElement('gux-command-palette');
     el.innerHTML = `
-      <gux-command-action id="testItem" text="test" details="shows an alert" shortcut="⌘ T"></gux-command-action>
-      <gux-command-action id="testItem" text="test2" details="Does a thing" shortcut="⌥ T"></gux-command-action>
-      <gux-command-action id="testItem" text="test3" shortcut="⌃ T"></gux-command-action>
-      <gux-command-action text="Dial Home Phone" details="John Smith"></gux-command-action>
-      <gux-command-action text="apple" details="a fruit" common></gux-command-action>
+      <gux-command-action text="Dial Extension" details="John Smith (Company Directory)" shortcut="⌘ T"></gux-command-action>
+      <gux-command-action text="Dial Business Phone" details="John Smith (Company Directory)" shortcut="⌥ T"></gux-command-action>
+      <gux-command-action text="Dial Business Phone 2" shortcut="⌥ B"></gux-command-action>
+      <gux-command-action text="Dial Pager" shortcut="⌃ T"></gux-command-action>
+      <gux-command-action text="Dial Home Phone" details="John Smith (Company Directory)"></gux-command-action>
+      <gux-command-action text="apple" details="a fruit." common></gux-command-action>
       <gux-command-action text="banana" recent></gux-command-action>
     `;
 

@@ -2,6 +2,7 @@
 @palette-background-color: @gux-off-white;
 @palette-background-color-dark: #555d66;
 @palette-border-color: #dae1eb;
+@palette-details-color: #77828F;
 @palette-shadow: rgba(34, 37, 41, 0.24);
 
 // Style
@@ -58,15 +59,49 @@ gux-command-palette .gux-command-palette {
         margin-bottom: 0;
     }
 
-    gux-list gux-list-item .list-item {
-        display: flex;
-        
-        gux-text-highlight {
-            flex: 1 1 auto;
+    gux-list gux-list-item {
+        .list-item {
+            display: block;
+            height: unset;
+
+            gux-text-highlight, .shortcut {
+                display: block;
+                height: 16px;
+                line-height: 16px;
+                margin-bottom: 2px;
+            }
+
+            & div {
+              display: flex;
+              border: none;
+              box-shadow: none;
+              padding: 0;
+            
+              gux-text-highlight {
+                  flex: 1 1 auto;
+              }
+          
+              .shortcut {
+                  flex: 0 1 auto;
+              }
+
+              &:last-child {
+                margin-bottom: 8px;
+              }
+            }
+
+            .details {
+                line-height: 16px;
+                font-size: 11px;
+                margin-bottom: 8px;
+                margin-left: 4px;
+            }
         }
 
-        .shortcut {
-            flex: 0 1 auto;
+        &:last-of-type {
+            .details, div:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -78,6 +113,21 @@ gux-command-palette .gux-command-palette {
     .gux-command-palette {
         background: @palette-background-color-dark;
         color: @gux-off-white;
+
+        gux-list gux-list-item:focus, gux-list gux-list-item:active {
+            .list-item div {
+                background: @gux-dark-blue;
+                color: @gux-off-white;
+            }
+
+            .list-item .details {
+                color: @gux-off-white;
+            }
+        }
+
+        gux-list gux-list-item .list-item .details {
+            color: @palette-details-color;
+        }
     }
 };
 
@@ -96,6 +146,22 @@ gux-command-palette.gux-dark-theme {
     .gux-command-palette {
         background: @palette-background-color;
         color: @gux-grey-2;
+
+
+        gux-list gux-list-item:focus, gux-list gux-list-item:active {
+            .list-item div {
+                background: @gux-dark-blue;
+                color: @gux-off-white;
+            }
+
+            .list-item .details {
+                color: @gux-off-white;
+            }
+        }
+
+        gux-list gux-list-item .list-item .details {
+            color: @palette-details-color;
+        }
     }
 };
 
