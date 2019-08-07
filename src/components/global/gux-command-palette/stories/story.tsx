@@ -21,15 +21,18 @@ storiesOf('Basic Components', module).add(
     `;
 
     const btn = document.createElement('gux-button');
+    let visible = false;
     btn.text = 'Show';
     function toggleCommandPalette() {
-      if (!el.visible) {
+      if (!visible) {
         el.open();
         btn.text = 'Hide';
       } else {
         el.close();
         btn.text = 'Show';
       }
+
+      visible = !visible;
     }
     btn.addEventListener('click', toggleCommandPalette);
 
@@ -40,10 +43,10 @@ storiesOf('Basic Components', module).add(
     root.appendChild(el);
 
     document.addEventListener('keydown', e => {
-      if (e.key === '.' && e.ctrlKey && !el.visible) {
+      if (e.key === '.' && e.ctrlKey && !visible) {
         toggleCommandPalette();
       }
-      if (e.key === 'Escape' && el.visible) {
+      if (e.key === 'Escape' && visible) {
         toggleCommandPalette();
       }
     });
