@@ -11,6 +11,14 @@ function sortActions(
 ): HTMLGuxCommandActionElement[] {
   return items.sort(
     (a: HTMLGuxCommandActionElement, b: HTMLGuxCommandActionElement) => {
+      if (a.recent && !b.recent) {
+        return -1;
+      }
+
+      if (!a.recent && b.recent) {
+        return 1;
+      }
+
       const aText = a.text.toUpperCase();
       const bText = b.text.toUpperCase();
 
@@ -157,9 +165,7 @@ export class GuxCommandPalette {
     this.filterValue = event.target.value;
   }
 
-  private filterItems(
-    items: HTMLGuxCommandActionElement[]
-  ): HTMLGuxListItemElement[] {
+  private filterItems(items: HTMLGuxCommandActionElement[]): HTMLElement[] {
     return this.transformCommands(
       sortActions(
         items.filter((item: HTMLGuxCommandActionElement) => {
@@ -168,61 +174,84 @@ export class GuxCommandPalette {
             `${item.text} + ${item.details}`
           );
         })
-      )
+      ),
+      '',
+      true
+    );
+  }
+
+  private createShortcutItem(
+    command: HTMLGuxCommandActionElement
+  ): HTMLGuxListItemElement {
+    return (
+      <gux-list-item value={command.text} onPress={this.handlePress(command)}>
+        <div>
+          <gux-text-highlight
+            text={command.text}
+            strategy={HighlightStrategy.Fuzzy}
+          />
+          <span class="shortcut">{command.shortcut}</span>
+        </div>
+        {command.details && (
+          <gux-text-highlight
+            class="details"
+            text={command.details}
+            strategy={HighlightStrategy.Fuzzy}
+          />
+        )}
+      </gux-list-item>
+    );
+  }
+
+  private createStandardItem(
+    command: HTMLGuxCommandActionElement
+  ): HTMLGuxListItemElement {
+    return (
+      <gux-list-item value={command.text} onPress={this.handlePress(command)}>
+        <gux-text-highlight
+          text={command.text}
+          strategy={HighlightStrategy.Fuzzy}
+        />
+        {command.details && (
+          <gux-text-highlight
+            class="details"
+            text={command.details}
+            strategy={HighlightStrategy.Fuzzy}
+          />
+        )}
+      </gux-list-item>
     );
   }
 
   private transformCommands(
     commands: HTMLGuxCommandActionElement[],
-    header?: string
-  ): HTMLGuxListItemElement[] {
+    header?: string,
+    divider?: boolean
+  ): HTMLElement[] {
     const retVal = [];
 
     if (header) {
       retVal.push(<strong>{header}</strong>);
     }
 
-    commands.forEach((command: HTMLGuxCommandActionElement) => {
+    let needsDivider = divider;
+
+    commands.forEach((command: HTMLGuxCommandActionElement, index: number) => {
+      if (index === 0 && !command.recent) {
+        needsDivider = false;
+      }
+
+      if (needsDivider && !command.recent) {
+        needsDivider = false;
+        retVal.push(<gux-list-divider />);
+      }
+
       if (command.shortcut) {
-        retVal.push(
-          <gux-list-item
-            value={command.text}
-            onPress={this.handlePress(command)}
-          >
-            <div>
-              <gux-text-highlight
-                text={command.text}
-                strategy={HighlightStrategy.Fuzzy}
-              />
-              <span class="shortcut">{command.shortcut}</span>
-            </div>
-            {command.details && (
-              <gux-text-highlight
-                class="details"
-                text={command.details}
-                strategy={HighlightStrategy.Fuzzy}
-              />
-            )}
-          </gux-list-item>
-        );
+        retVal.push(this.createShortcutItem(command));
         return;
       }
 
-      retVal.push(
-        <gux-list-item value={command.text} onPress={this.handlePress(command)}>
-          <gux-text-highlight
-            text={command.text}
-            strategy={HighlightStrategy.Fuzzy}
-          />
-          {command.details && (
-            <gux-text-highlight
-              class="details"
-              text={command.details}
-              strategy={HighlightStrategy.Fuzzy}
-            />
-          )}
-        </gux-list-item>
-      );
+      retVal.push(this.createStandardItem(command));
     });
 
     return retVal;

@@ -162,9 +162,9 @@ describe('gux-command-palette', () => {
     const items = await page.findAll('gux-list-item');
 
     expect(items.length).toBe(4);
-    expect(items[0].innerText).toBe('test');
-    expect(items[1].innerText).toBe('test2');
-    expect(items[2].innerText).toBe('test3');
+    expect(items[0].innerText).toBe('test3');
+    expect(items[1].innerText).toBe('test');
+    expect(items[2].innerText).toBe('test2');
   });
 
   it('should not show common search on exact match', async () => {
