@@ -46,6 +46,13 @@ export class GuxList {
   @Event()
   changed: EventEmitter<any>;
 
+  /**
+   * Using a mutation observer because component loading order is not quite right.
+   * In this case we are attempting to update a component that updates a component.
+   * What ends up happening is that there is no hook to make sure all components have loaded.
+   * When the DOM load order gets fixed we should be able to remove this logic.
+   * https://github.com/ionic-team/stencil/issues/1261
+   */
   private observer: MutationObserver = new MutationObserver(() => {
     this.performHighlight(this.highlight);
   });
