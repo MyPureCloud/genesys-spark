@@ -23,7 +23,7 @@ gux-list-item {
   
   // Dark
   .gux-list-item-dark-theme {
-    &:focus, &:active {
+    &:focus, &:active, &:hover:not([disabled]) {
       .list-item {
         background: @gux-dark-blue;
         color: @gux-off-white;
@@ -42,7 +42,7 @@ gux-list-item {
   
   // Light
   .gux-list-item-light-theme {
-    &:focus, &:active {
+    &:focus, &:active, &:hover:not([disabled]) {
       .list-item {
         background: @gux-dark-blue;
         color: @gux-off-white;
