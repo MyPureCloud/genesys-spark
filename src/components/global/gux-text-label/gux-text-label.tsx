@@ -35,14 +35,14 @@ export class GuxTextLabel {
     ) as any;
     if (
       typeof labeledComponentSlot.componentOnReady !== 'function' ||
-      typeof labeledComponentSlot.setLabeledBy !== 'function'
+      typeof labeledComponentSlot.setLabelledBy !== 'function'
     ) {
       // Only set labeled by if its supported by the contained element.
       return;
     }
 
     labeledComponentSlot.componentOnReady().then(() => {
-      labeledComponentSlot.setLabeledBy(this.id);
+      labeledComponentSlot.setLabelledBy(this.id);
     });
   }
 

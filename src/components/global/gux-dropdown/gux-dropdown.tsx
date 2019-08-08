@@ -83,7 +83,7 @@ export class GuxDropdown {
 
   @Method()
   async setLabeledBy(labeledBy: string) {
-    this.textFieldElement.setLabeledBy(labeledBy);
+    this.textFieldElement.setLabelledBy(labeledBy);
   }
 
   onKeyDown(event: KeyboardEvent) {
