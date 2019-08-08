@@ -36,6 +36,13 @@ storiesOf('Basic Components', module).add(
         </gux-text-label>
 
         <gux-text-label
+          label="Advanced Dropdown"
+          position=${select('position', ['above', 'beside'], 'above')}
+        >
+          <gux-advanced-dropdown></gux-advanced-dropdown>
+        </gux-text-label>
+
+        <gux-text-label
           label="Search"
           position=${select('position', ['vertical', 'horizontal'], 'vertical')}
         >

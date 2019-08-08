@@ -14,6 +14,7 @@ performs a search request when the 'return' key is pressed.
 | `dynamicSearch` | `dynamic-search` | Operate the search control using dynamic searching as the input value is updated.  Searches debounced to execute every searchTimeout. | `boolean` | `false`     |
 | `placeholder`   | `placeholder`    | The input placeholder.                                                                                                                | `string`  | `undefined` |
 | `searchTimeout` | `search-timeout` | Timeout between input and search.                                                                                                     | `number`  | `500`       |
+| `srLabel`       | `sr-label`       | Aria label for the search box.                                                                                                        | `string`  | `undefined` |
 | `value`         | `value`          | Indicate the input search value                                                                                                       | `string`  | `''`        |
 
 
@@ -27,9 +28,19 @@ performs a search request when the 'return' key is pressed.
 
 ## Methods
 
+### `setInputFocus() => Promise<void>`
+
+Sets the input focus to the search input.
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 ### `setLabeledBy(labeledBy: string) => Promise<void>`
 
-
+Provides an aria-labeledby element for this component.
 
 #### Parameters
 
