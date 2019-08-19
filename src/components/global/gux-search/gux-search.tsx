@@ -52,6 +52,12 @@ export class GuxSearch {
   searchTimeout: number = 500;
 
   /**
+   * Aria label for the search box.
+   */
+  @Prop()
+  srLabel: string;
+
+  /**
    * Triggered when a search is requested.
    */
   @Event()
@@ -79,9 +85,20 @@ export class GuxSearch {
     }, this.searchTimeout);
   }
 
+  /**
+   * Provides an aria-labeledby element for this component.
+   */
   @Method()
   async setLabeledBy(labeledBy: string) {
-    this.textFieldElement.setLabeledBy(labeledBy);
+    this.textFieldElement.setLabelledBy(labeledBy);
+  }
+
+  /**
+   * Sets the input focus to the search input.
+   */
+  @Method()
+  async setInputFocus() {
+    this.textFieldElement.setInputFocus();
   }
 
   render() {
@@ -93,6 +110,7 @@ export class GuxSearch {
             value={this.value}
             disabled={this.disabled}
             placeholder={this.placeholder}
+            srLabel={this.srLabel}
             onInput={e => this._onInput(e)}
             onKeyDown={e => this._onKeyDown(e)}
           />
