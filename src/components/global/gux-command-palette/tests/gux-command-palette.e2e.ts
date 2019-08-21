@@ -129,8 +129,8 @@ describe('gux-command-palette', () => {
     const items = await page.findAll('gux-list-item');
 
     expect(items.length).toBe(2);
-    expect(items[0].innerText).toBe('test2');
-    expect(items[1].innerText).toBe('test');
+    expect(items[0].innerText).toBe('test');
+    expect(items[1].innerText).toBe('test2');
 
     const headers = await page.findAll('strong');
     expect(headers.length).toBe(0);
