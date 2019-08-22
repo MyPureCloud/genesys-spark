@@ -1,5 +1,5 @@
 {
-  "perPage": "per page",
+  "perPage": "pro Seite",
   "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": " of {totalItems, number}"
+  "totalItems": " von {totalItems, number}"
 }
