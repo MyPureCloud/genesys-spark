@@ -74,7 +74,7 @@ export class GuxCommandPalette {
           value={this.filterValue}
           ref={el => (this.inputElement = el)}
         />
-        {this.renderLists()}
+        {this.visible && this.renderLists()}
       </div>
     );
   }

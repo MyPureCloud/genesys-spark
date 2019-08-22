@@ -55,6 +55,7 @@ storiesOf('Basic Components', module).add(
       document.querySelectorAll('gux-command-action').forEach(actionItem => {
         actionItem.addEventListener('press', () => {
           action('press')(`${actionItem.text} command invoked`);
+          setTimeout(toggleCommandPalette);
         });
       });
     });
