@@ -1,5 +1,6 @@
 const conversion = /[ +]/g;
 const expressions = new Map<string, RegExp>();
+const replacements = new Map<string, RegExp>();
 
 function convertToExpression(word: string): RegExp {
   let newexp = word.replace(conversion, '.*');
@@ -10,15 +11,13 @@ function convertToExpression(word: string): RegExp {
     return new RegExp(newexp, 'i');
   }
 
-  let ind = 97;
-
-  newexp = `(?<${String.fromCharCode(ind)}>`;
+  newexp = `(`;
 
   parts.forEach((part, index) => {
     newexp += part + ').*';
 
     if (index !== parts.length - 1) {
-      newexp += `(?<${String.fromCharCode(++ind)}>`;
+      newexp += `(`;
     }
   });
 
@@ -35,12 +34,18 @@ export function matchesFuzzy(sourceWord: string, targetWord: string): boolean {
   return exp.test(targetWord);
 }
 
-export function getFuzzyMatch(sourceWord: string, targetWord: string): any {
-  let exp = expressions.get(sourceWord);
-  if (!exp) {
-    exp = convertToExpression(sourceWord);
-    expressions.set(sourceWord, exp);
-  }
+export function getFuzzyReplacements(sourceWord: string): any[] {
+  return sourceWord
+    .replace(conversion, '.*')
+    .split('.*')
+    .map(word => {
+      let exp = replacements.get(word);
 
-  return targetWord.match(exp);
+      if (!exp) {
+        exp = new RegExp(word, 'i');
+        replacements.set(word, exp);
+      }
+
+      return exp;
+    });
 }

@@ -1,5 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
-import { getFuzzyMatch, matchesFuzzy } from '../../../../search';
+import { getFuzzyReplacements, matchesFuzzy } from '../../../../search';
 import { HighlightStrategy } from './highlight-enums';
 
 @Component({
@@ -97,17 +97,13 @@ export class GuxTextHighlight {
       return this.text;
     }
 
-    const result = getFuzzyMatch(this.highlight, this.text);
+    const result = getFuzzyReplacements(this.highlight);
     let retVal = this.text;
 
-    if (!result.groups) {
-      retVal = this.text.replace(result[0], `<strong>${result[0]}</strong>`);
-    } else {
-      Object.keys(result.groups).forEach(key => {
-        const value = result.groups[key];
-        retVal = retVal.replace(value, `<strong>${value}</strong>`);
-      });
-    }
+    result.forEach(replacement => {
+      const found = this.text.match(replacement);
+      retVal = retVal.replace(replacement, `<strong>${found[0]}</strong>`);
+    });
 
     return <span innerHTML={retVal} />;
   }
