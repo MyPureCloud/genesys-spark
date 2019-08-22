@@ -54,6 +54,7 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
+ - [gux-command-palette](../gux-command-palette)
 
 ### Depends on
 
@@ -64,6 +65,7 @@ Type: `Promise<void>`
 graph TD;
   gux-search --> gux-text-field
   gux-advanced-dropdown --> gux-search
+  gux-command-palette --> gux-search
   style gux-search fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -17,10 +17,11 @@ Example of a custom list item with highlighting
 
 ## Properties
 
-| Property | Attribute | Description                          | Type     | Default     |
-| -------- | --------- | ------------------------------------ | -------- | ----------- |
-| `text`   | `text`    | The value to display.                | `string` | `undefined` |
-| `value`  | `value`   | The value associated with this item. | `any`    | `undefined` |
+| Property   | Attribute  | Description                          | Type                                                                               | Default     |
+| ---------- | ---------- | ------------------------------------ | ---------------------------------------------------------------------------------- | ----------- |
+| `strategy` | `strategy` | How the item should be highlighted.  | `HighlightStrategy.Contains \| HighlightStrategy.Fuzzy \| HighlightStrategy.Start` | `undefined` |
+| `text`     | `text`     | The value to display.                | `string`                                                                           | `undefined` |
+| `value`    | `value`    | The value associated with this item. | `any`                                                                              | `undefined` |
 
 
 ## Events
@@ -35,6 +36,7 @@ Example of a custom list item with highlighting
 ### Used by
 
  - [gux-action-item](../../gux-action-button/gux-action-item)
+ - [gux-command-palette](../../gux-command-palette)
  - [gux-dropdown](../../gux-dropdown)
 
 ### Depends on
@@ -46,6 +48,7 @@ Example of a custom list item with highlighting
 graph TD;
   gux-list-item --> gux-text-highlight
   gux-action-item --> gux-list-item
+  gux-command-palette --> gux-list-item
   gux-dropdown --> gux-list-item
   style gux-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
