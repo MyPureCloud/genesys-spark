@@ -1,5 +1,5 @@
 {
-  "perPage": "per page",
+  "perPage": "ต่อหน้า",
   "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": " of {totalItems, number}"
+  "totalItems": "จาก {totalItems, number}"
 }

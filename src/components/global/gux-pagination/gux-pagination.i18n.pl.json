@@ -1,5 +1,5 @@
 {
-  "perPage": "per page",
+  "perPage": "na str.",
   "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": " of {totalItems, number}"
+  "totalItems": " z {totalItems, number}"
 }
