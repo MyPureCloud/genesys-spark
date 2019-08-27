@@ -1,10 +1,22 @@
-import { Component, Method, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Method,
+  Prop
+} from '@stencil/core';
+import { buildI18nForComponent } from '../../i18n';
+import modalComponentResources from './gux-modal.i18n.json';
+
 
 @Component({
   styleUrl: 'gux-modal.less',
   tag: 'gux-modal'
 })
 export class GuxModal {
+  i18n: (resourceKey: string, context?: any) => string;
+
+  @Element() element: HTMLElement;
+
   /**
    * Indicates the size of the modal (small, medium or large)
    */
@@ -28,6 +40,14 @@ export class GuxModal {
     this.active = false;
   }
 
+  async componentWillLoad() {
+    this.i18n = await buildI18nForComponent(
+      this.element,
+      modalComponentResources
+    );
+  }
+
+
   render() {
     const activeClass = this.active ? 'active' : 'hidden';
     return (
@@ -45,7 +65,7 @@ export class GuxModal {
           <div class="button-footer">
             <gux-button
               title="Cancel"
-              text="Cancel"
+              text={this.i18n('cancel')}
               accent="secondary"
               onClick={this.closeModal.bind(this)}
             />
