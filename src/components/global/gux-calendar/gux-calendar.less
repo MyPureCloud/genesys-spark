@@ -36,7 +36,7 @@ gux-calendar {
     }
     .content {
       display: flex;
-      padding: 16px 19px 20px 19px;
+      padding: 16px 22px 20px 22px;
       table {
         height: 100%;
         table-layout: fixed;
@@ -90,6 +90,13 @@ gux-calendar {
       table {
         tr {
           td {
+            &.hovered {
+              background-color: @gux-light-blue;
+            }
+            &.selected {
+              background-color: @gux-dark-blue;
+              color: @gux-off-white;
+            }
             &:hover {
               background-color: @gux-dark-blue;
               color: @gux-off-white;
@@ -103,13 +110,6 @@ gux-calendar {
               &.hidden {
                 visibility: hidden;
               }
-            }
-            &.hovered {
-              background-color: @gux-light-blue;
-            }
-            &.selected {
-              background-color: @gux-dark-blue;
-              color: @gux-off-white;
             }
           }
         }

@@ -1,6 +1,5 @@
 build/
 dist/
-www/
 .docs/
 .npmrc
 

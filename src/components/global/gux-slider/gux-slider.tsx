@@ -129,11 +129,12 @@ export class GuxSlider {
           </div>
         </div>
         {this.displayTextBox && (
-          <gux-text-field
-            label="slider value"
-            value={value}
-            onChange={(e: UIEvent) => this.updateValue(e)}
-          />
+          <gux-text-label label="slider value">
+            <gux-text-field
+              value={value}
+              onChange={(e: UIEvent) => this.updateValue(e)}
+            />
+          </gux-text-label>
         )}
       </div>
     );

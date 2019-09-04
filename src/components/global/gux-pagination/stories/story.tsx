@@ -39,15 +39,9 @@ storiesOf('Pagination', module)
       component.totalItems = number('totalItems', 250);
       component.currentPage = number('currentPage', 3);
 
-      const itemsPerPage = number('setItemsPerPage(value)', 20);
-      const itemsPerPageOptions = array('setItemsPerPage(options)', [
-        10,
-        20
-      ]).map(i => parseInt(i, 10));
-
-      component.componentOnReady().then(() => {
-        component.setItemsPerPage(itemsPerPage, itemsPerPageOptions);
-      });
+      // Items per page as optional, mutable props
+      component.itemsPerPage = number('itemsPerPage', 5);
+      component.itemsPerPageOptions = array('itemsPerPageOptions', [5, 10, 20]);
 
       return component;
     })

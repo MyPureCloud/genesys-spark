@@ -20,9 +20,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Events
 
-| Event    | Description                   | Type                |
-| -------- | ----------------------------- | ------------------- |
-| `change` | Triggered user selects a date | `CustomEvent<void>` |
+| Event   | Description                        | Type                |
+| ------- | ---------------------------------- | ------------------- |
+| `input` | Triggered when user selects a date | `CustomEvent<void>` |
 
 
 ## Methods

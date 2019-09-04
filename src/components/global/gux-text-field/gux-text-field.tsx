@@ -55,18 +55,6 @@ export class GuxTextField {
   placeholder: string;
 
   /**
-   * The input label.
-   */
-  @Prop()
-  label: string;
-
-  /**
-   * The input label position (can be left or top) if not defined the position depends of the label width.
-   */
-  @Prop()
-  labelPosition: string;
-
-  /**
    * The input validation.
    */
   @Prop()
@@ -103,6 +91,16 @@ export class GuxTextField {
   @Prop()
   useClearButton: boolean = true;
 
+  /**
+   * Aria label to use in case the text field
+   * does not have an actual label.
+   */
+  @Prop()
+  srLabel: string;
+
+  @State()
+  srLabelledby: string;
+
   @State()
   classList: string[] = [];
 
@@ -128,7 +126,7 @@ export class GuxTextField {
     this.input.emit(event.target.value);
   }
 
-  emitFocusEvent (event) {
+  emitFocusEvent(event) {
     this.root.dispatchEvent(new FocusEvent(event.type, event));
   }
 
@@ -172,14 +170,6 @@ export class GuxTextField {
 
   getClassList(): string {
     let classList = [];
-    if (['left', 'top'].includes(this.labelPosition)) {
-      if (this.labelPosition === 'left') {
-        classList = [...classList, 'flex'];
-      }
-    } else if (this.label && this.label.length < 10) {
-      classList = [...classList, 'flex'];
-    }
-
     if (this.errorMessage) {
       classList = [...classList, this.errorMessageType];
     }
@@ -219,22 +209,38 @@ export class GuxTextField {
     this.inputElement.value = '';
   }
 
+  /**
+   * Provides an aria-labeledby element for this component.
+   */
+  @Method()
+  async setLabeledBy(id: string) {
+    this.srLabelledby = id;
+  }
+
+  /**
+   * Sets the input focus to the text input.
+   */
+  @Method()
+  async setInputFocus() {
+    this.inputElement.focus();
+  }
+
   render() {
     return (
       <div class={this.getClassList()}>
-        {this.label && <label>{this.label}</label>}
         <div class="gux-field">
           <input
-            aria-label={this.label}
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
+            aria-label={this.srLabel}
+            aria-labelledby={this.srLabelledby}
             disabled={this.disabled}
             readonly={this.readonly}
             placeholder={this.placeholder}
-            onInput={(e) => this.emitInput(e)}
-            onFocus={(e) => this.emitFocusEvent(e)}
-            onBlur={(e) => this.emitFocusEvent(e)}
+            onInput={e => this.emitInput(e)}
+            onFocus={e => this.emitFocusEvent(e)}
+            onBlur={e => this.emitFocusEvent(e)}
           />
           {this.showClearButton && (
             <button
@@ -255,4 +261,3 @@ export class GuxTextField {
     );
   }
 }
-

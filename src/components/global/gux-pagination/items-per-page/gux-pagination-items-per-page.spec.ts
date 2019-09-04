@@ -18,6 +18,6 @@ describe('gux-pagination-item-counts', () => {
     expect(component.render()).toBeTruthy();
 
     expect(component.itemsPerPage).toBe(25);
-    expect(component.itemsPerPageOptions).toEqual([25, 50, 100]);
+    expect(component.itemsPerPageOptions).toEqual([25, 50, 75, 100]);
   });
 });

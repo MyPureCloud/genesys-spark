@@ -1,4 +1,4 @@
-import { Component, Element, Listen, Prop, State } from '@stencil/core';
+import { Component, Element, Listen, Method, Prop, State } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 import { IListItem } from '../../../common-interfaces';
 
@@ -33,16 +33,6 @@ export class GuxDropdown {
   @Prop()
   placeholder: string;
   /**
-   * The dropdown label.
-   */
-  @Prop()
-  label: string;
-  /**
-   * The input label position (can be left or top) if not defined the position depends of the label width.
-   */
-  @Prop({ reflectToAttr: true, mutable: true })
-  labelPosition: string = 'left';
-  /**
    * The list items, an item contains a `text` and can be disabled.
    */
   @Prop()
@@ -59,14 +49,22 @@ export class GuxDropdown {
   @State()
   forcedGhostValue: string;
 
+  @State()
+  srLabeledBy: string;
+
   inputIsFocused: boolean = false;
 
   @Listen('focusout')
-  onFocusOut (e: FocusEvent) {
+  onFocusOut(e: FocusEvent) {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
       this.opened = false;
       this.forcedGhostValue = '';
     }
+  }
+
+  @Method()
+  async setLabeledBy(labeledBy: string) {
+    this.textFieldElement.setLabeledBy(labeledBy);
   }
 
   onKeyDown(event: KeyboardEvent) {
@@ -75,7 +73,9 @@ export class GuxDropdown {
       case KeyCode.Down:
         if (this.inputIsFocused) {
           this.opened = true;
-          setTimeout (() => { this.listElement.setFocusOnFirstItem() });
+          setTimeout(() => {
+            this.listElement.setFocusOnFirstItem();
+          });
         }
         break;
       case KeyCode.Enter:
@@ -83,49 +83,51 @@ export class GuxDropdown {
         break;
       default:
         if (!this.filterable) {
-          const arr = this.items.filter((item) => {
+          const arr = this.items.filter(item => {
             return item.text.startsWith(event.key);
           });
-          if (arr[0]) { arr[0].el.focus(); }
+          if (arr[0]) {
+            arr[0].el.focus();
+          }
         }
     }
   }
 
-  setValue (text) {
+  setValue(text) {
     this.value = text;
     this.opened = false;
   }
-  _clickHandler () {
+  _clickHandler() {
     if (!this.disabled) {
       this.opened = !this.opened;
     }
   }
-  _focusHandler () {
+  _focusHandler() {
     this.inputIsFocused = true;
   }
-  _focusListItemHandler (item: IListItem) {
+  _focusListItemHandler(item: IListItem) {
     this.forcedGhostValue = this.value + item.text.substring(this.value.length);
   }
-  _blurHandler () {
+  _blurHandler() {
     this.inputIsFocused = false;
     this.forcedGhostValue = '';
   }
-  _inputHandler (event: CustomEvent) {
+  _inputHandler(event: CustomEvent) {
     this.value = event.detail;
     this.opened = true;
   }
 
-  _showDropdownIcon () {
-    const match = this.items.filter((item) => {
+  _showDropdownIcon() {
+    const match = this.items.filter(item => {
       return item.text === this.value;
     });
-    const filterableBehavior = (!this.value || !!match.length);
-    return (this.filterable ? filterableBehavior : (true));
+    const filterableBehavior = !this.value || !!match.length;
+    return this.filterable ? filterableBehavior : true;
   }
 
-  get filteredItems () {
+  get filteredItems() {
     if (this.filterable) {
-      const arr = this.items.filter((item) => {
+      const arr = this.items.filter(item => {
         return item.text.toLowerCase().startsWith(this.value.toLowerCase());
       });
       return arr;
@@ -134,21 +136,18 @@ export class GuxDropdown {
     }
   }
 
-  get ghost () {
-    const firstFilteredItem = (this.filteredItems.length) ? this.filteredItems[0].text : '';
-    const valueGhost = this.value + firstFilteredItem.substring(this.value.length);
-    const ghost = (this.forcedGhostValue) ? this.forcedGhostValue : valueGhost;
-    const placeholder = (!this.value) ? this.placeholder : '';
-    return (this.opened && this.filterable) ? ghost : placeholder;
+  get ghost() {
+    const firstFilteredItem = this.filteredItems.length
+      ? this.filteredItems[0].text
+      : '';
+    const valueGhost =
+      this.value + firstFilteredItem.substring(this.value.length);
+    const ghost = this.forcedGhostValue ? this.forcedGhostValue : valueGhost;
+    const placeholder = !this.value ? this.placeholder : '';
+    return this.opened && this.filterable ? ghost : placeholder;
   }
 
-  componentWillLoad () {
-    if (this.label && this.label.length > 10) {
-      this.labelPosition = 'top';
-    }
-  }
-
-  componentDidLoad () {
+  componentDidLoad() {
     if (!this.filterable) {
       this.textFieldElement.readonly = true;
     }
@@ -156,32 +155,55 @@ export class GuxDropdown {
 
   render() {
     return (
-      <div class={`gux-dropdown ${this.mode} ${this.mode} ${this.disabled ? 'disabled' : ''} ${this.opened ? 'active' : ''}`}
-        onKeyDown={(e) => this.onKeyDown(e)}>
-        {this.label && <label>{this.label}</label>}
+      <div
+        class={`gux-dropdown ${this.mode} ${this.mode} ${
+          this.disabled ? 'disabled' : ''
+        } ${this.opened ? 'active' : ''}`}
+        onKeyDown={e => this.onKeyDown(e)}
+      >
         <div class="select-field">
-          <span class="ghost" aria-hidden="true">{this.ghost}</span>
+          <span class="ghost" aria-hidden="true">
+            {this.ghost}
+          </span>
           <gux-text-field
             ref={el => (this.textFieldElement = el as HTMLGuxTextFieldElement)}
-            onMouseDown={() => { this._clickHandler() }}
-            onFocus={() => { this._focusHandler() }}
-            onBlur={() => { this._blurHandler() }}
-            onInput={(e) => { this._inputHandler(e) }}
+            onMouseDown={() => {
+              this._clickHandler();
+            }}
+            onFocus={() => {
+              this._focusHandler();
+            }}
+            onBlur={() => {
+              this._blurHandler();
+            }}
+            onInput={e => {
+              this._inputHandler(e);
+            }}
             value={this.value}
             disabled={this.disabled}
             class={this._showDropdownIcon() ? 'unclearable' : ''}
-            >
-          </gux-text-field>
-          {this._showDropdownIcon() && <button aria-hidden="true" tabindex="-1" type="button" class="genesys-icon-dropdown-arrow"/>}
+          />
+          {this._showDropdownIcon() && (
+            <button
+              aria-hidden="true"
+              tabindex="-1"
+              type="button"
+              class="genesys-icon-dropdown-arrow"
+            />
+          )}
         </div>
         <gux-list
           ref={el => (this.listElement = el as HTMLGuxListElement)}
-          onChange={(e) => { this.setValue(e.detail) }}
-          onFocus={(e) => { this._focusListItemHandler(e.detail as IListItem) }}
-          class={this.opened ? "opened" : ""}
+          onChange={e => {
+            this.setValue(e.detail);
+          }}
+          onFocus={e => {
+            this._focusListItemHandler(e.detail as IListItem);
+          }}
+          class={this.opened ? 'opened' : ''}
           items={this.filteredItems}
-          highlight={this.value}>
-        </gux-list>
+          highlight={this.value}
+        />
       </div>
     );
   }

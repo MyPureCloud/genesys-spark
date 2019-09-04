@@ -1,0 +1,5 @@
+{
+  "perPage": "每页",
+  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+  "totalItems": " / {totalItems, number}"
+}

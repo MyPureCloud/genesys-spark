@@ -12,9 +12,7 @@ import {
   addClassToElements,
   removeClassToElements
 } from '../../../common-utils';
-import { buildI18nForComponent } from '../../i18n';
 import { IDateElement } from './gux-calendar-constants';
-import i18nStrings from './gux-calendar.i18n.json';
 
 @Component({
   styleUrl: 'gux-calendar.less',
@@ -69,14 +67,14 @@ export class GuxCalendar {
 
   isSelecting: boolean = false;
 
-  i18n: (resourceKey: string, context?: any) => string;
-
   /**
-   * Triggered user selects a date
+   * Triggered when user selects a date
    */
   @Event()
+  input: EventEmitter;
   change: EventEmitter;
   onChange(value: Date | Date[]) {
+    this.input.emit(value);
     this.change.emit(value);
   }
 
@@ -86,8 +84,13 @@ export class GuxCalendar {
   @Method()
   setValue(value: Date | Date[]) {
     if (this.mode === CalendarModes.Range) {
-      this.fromValue = new Date(value[0].getTime());
-      this.toValue = new Date(value[1].getTime());
+      if (value[0] > value[1]) {
+        this.fromValue = new Date(value[1].getTime());
+        this.toValue = new Date(value[0].getTime());
+      } else {
+        this.fromValue = new Date(value[0].getTime());
+        this.toValue = new Date(value[1].getTime());
+      }
       this.previewValue = new Date(value[0].getTime());
     } else {
       this.value = new Date((value as Date).getTime());
@@ -135,7 +138,7 @@ export class GuxCalendar {
     }
   }
 
-  getMonth(index: number) {
+  getMonthLabel(index: number) {
     const month = new Date(this.previewValue.getTime());
     month.setMonth(month.getMonth() + index);
     const monthName = month.toLocaleString(this.locale, { month: 'long' });
@@ -148,12 +151,6 @@ export class GuxCalendar {
     const firstDayOffset =
       (-1 * (this.firstDayOfWeek - firstDayOfMonth - 7)) % 7;
     return new Date(startDate.getTime() - firstDayOffset * (86400 * 1000));
-  }
-
-  weeksInMonth(month: number, year: number, monthDays: number): number {
-    const firstOfMonth = new Date(year, month, 1);
-    const firstWeekDay = (firstOfMonth.getDay() - this.firstDayOfWeek + 7) % 7;
-    return Math.ceil((firstWeekDay + monthDays) / 7);
   }
 
   generateDatesFrom(
@@ -240,8 +237,7 @@ export class GuxCalendar {
     const year = month.getFullYear();
     const startTime = this.firstDateInMonth(monthIndex, year);
     const monthDays = new Date(year, monthIndex + 1, 0).getDate();
-    const totalWeeks = this.weeksInMonth(monthIndex, year, monthDays);
-    const totalDays = monthDays + (totalWeeks * 7 - monthDays);
+    const totalDays = monthDays + (42 * 7 - monthDays);
     const datesArray = this.generateDatesFrom(
       monthIndex,
       startTime.getTime(),
@@ -306,16 +302,11 @@ export class GuxCalendar {
         // First click
         removeClassToElements(this.getAllDatesElements(), 'hovered');
         this.isSelecting = true;
-        this.fromValue = date;
+        this.fromValue = new Date(date.getTime());
+        this.toValue = new Date(date.getTime());
       } else {
         // Second click
         this.isSelecting = false;
-        if (this.fromValue > date) {
-          this.toValue = new Date(this.fromValue);
-          this.fromValue = date;
-        } else {
-          this.toValue = date;
-        }
         const target: HTMLTableCellElement = this.root.querySelector(
           `td[data-date="${date.getTime()}"]`
         );
@@ -323,6 +314,7 @@ export class GuxCalendar {
           target.classList.add('selected');
         }
         this.updateRangeElements();
+        this.setValue([date, this.fromValue]);
         this.onChange([this.fromValue, this.toValue]);
       }
     }
@@ -387,20 +379,18 @@ export class GuxCalendar {
   }
 
   get weekdays(): string[] {
-    const days = [
-      this.i18n('sunday'),
-      this.i18n('monday'),
-      this.i18n('tuesday'),
-      this.i18n('wednesday'),
-      this.i18n('thursday'),
-      this.i18n('friday'),
-      this.i18n('saturday')
-    ];
+    // Sunday
+    const days = [];
+    const day = new Date(1970, 0, 4);
+    for (let i = 0; i < 7; i++) {
+      day.setDate(day.getDate() + 1);
+      const weekday = day.toLocaleString(this.locale, { weekday: 'long' });
+      days.push(weekday.charAt(0).toUpperCase());
+    }
     return days.concat(days.splice(0, this.firstDayOfWeek));
   }
 
   async componentWillLoad() {
-    this.i18n = await buildI18nForComponent(this.root, i18nStrings);
     this.value.setHours(0, 0, 0, 0);
     this.fromValue.setHours(0, 0, 0, 0);
     this.toValue.setHours(0, 0, 0, 0);
@@ -429,7 +419,7 @@ export class GuxCalendar {
       <div class="month-list">
         {Array.from(Array(this.numberOfMonths).keys()).map(index => (
           <label>
-            {this.getMonth(index)} {this.previewValue.getFullYear()}
+            {this.getMonthLabel(index)} {this.previewValue.getFullYear()}
           </label>
         ))}
       </div>
@@ -438,10 +428,10 @@ export class GuxCalendar {
 
   renderCalendarTable(index) {
     return (
-      <table cellPadding="0">
+      <table cellPadding="2">
         <tr>
           {this.weekdays.map(day => (
-            <th>{day.charAt(0)}</th>
+            <th>{day}</th>
           ))}
         </tr>
         {this.getMonthDays(index).map(week => (

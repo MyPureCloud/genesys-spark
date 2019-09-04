@@ -1,11 +1,6 @@
 import { Config } from '@stencil/core';
-import { OutputTargetDist } from '@stencil/core/dist/declarations';
 import { less } from '@stencil/less';
 
-const distTarget: OutputTargetDist = {
-  dir: 'www/static',
-  type: 'dist'
-};
 export const config: Config = {
   copy: [
     {
@@ -33,8 +28,7 @@ export const config: Config = {
     {
       dir: 'dist',
       type: 'dist'
-    },
-    distTarget
+    }
   ],
   plugins: [
     less({

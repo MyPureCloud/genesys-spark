@@ -1,0 +1,5 @@
+{
+  "perPage": "par page",
+  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+  "totalItems": " / {totalItems, number}"
+}
