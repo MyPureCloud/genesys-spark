@@ -50,6 +50,7 @@ module.exports = ({ config, mode }) => {
 
   config.resolve = {
     ...config.resolve,
+    extensions: [...config.resolve.extensions, '.ts', '.tsx'],
     alias: {
       'genesys-webcomponents': path.resolve(
         __dirname,
