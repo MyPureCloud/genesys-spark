@@ -151,16 +151,6 @@ export class GuxSpinButton {
   }
 
   incrementValue(up: boolean) {
-    if (this.value > this.max) {
-      this.value = this.max;
-      return;
-    }
-
-    if (this.value < this.min) {
-      this.value = this.min;
-      return;
-    }
-
     let total: number;
     const mod = this.value % this.step;
     if (mod === 0) {
