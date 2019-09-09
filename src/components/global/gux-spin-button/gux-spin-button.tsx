@@ -183,6 +183,7 @@ export class GuxSpinButton {
         <div class="gux-spin-button-container">
           <button
             id="gux-spin-button-increment"
+            aria-label={this.i18n('increment')}
             onClick={() => {
               this.incrementValue(true);
             }}
@@ -191,6 +192,7 @@ export class GuxSpinButton {
           />
           <button
             id="gux-spin-button-decrement"
+            aria-label={this.i18n('decrement')}
             onClick={() => {
               this.incrementValue(false);
             }}

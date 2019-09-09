@@ -24,7 +24,7 @@
 
 | Event   | Description                 | Type                  |
 | ------- | --------------------------- | --------------------- |
-| `input` | Triggered when user inputs. | `CustomEvent<Number>` |
+| `input` | Triggered when user inputs. | `CustomEvent<number>` |
 
 
 ## Methods
