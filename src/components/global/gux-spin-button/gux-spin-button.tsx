@@ -1,11 +1,11 @@
 import {
   Component,
-  Prop,
-  Event,
   Element,
+  Event,
+  Listen,
   Method,
-  Watch,
-  Listen
+  Prop,
+  Watch
 } from '@stencil/core';
 import { EventEmitter } from 'events';
 
@@ -13,33 +13,12 @@ import { buildI18nForComponent } from '../../i18n';
 import defaultResources from './gux-spin-button.i18n.json';
 
 @Component({
-  tag: 'gux-spin-button',
-  styleUrl: 'gux-spin-button.less'
+  styleUrl: 'gux-spin-button.less',
+  tag: 'gux-spin-button'
 })
 export class GuxSpinButton {
   @Element()
   element: HTMLElement;
-
-  /**
-   * Triggered when user inputs.
-   */
-  @Event()
-  input: EventEmitter;
-  emitInput(event: CustomEvent) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    this.value = Number(event.detail);
-  }
-
-  @Watch('value')
-  valueWatchHandler() {
-    if (!this.ignoreValidation) {
-      this.validate();
-    }
-
-    this.input.emit(this.value.toString());
-  }
 
   /**
    * The current number value of the text field
@@ -95,6 +74,24 @@ export class GuxSpinButton {
   @Prop({ reflectToAttr: true })
   ignoreValidation: boolean;
 
+  /**
+   * Triggered when user inputs.
+   */
+  @Event()
+  input: EventEmitter;
+
+  private i18n: (resourceKey: string, context?: any) => string;
+
+  emitInput(event: CustomEvent) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    this.value = Number(event.detail);
+  }
+
+  /**
+   * Checks if the component is valid
+   */
   @Method()
   async validate(): Promise<boolean> {
     if (isNaN(this.value)) {
@@ -123,6 +120,15 @@ export class GuxSpinButton {
     }
   }
 
+  @Watch('value')
+  valueWatchHandler() {
+    if (!this.ignoreValidation) {
+      this.validate();
+    }
+
+    this.input.emit(this.value.toString());
+  }
+
   @Listen('keydown')
   handleKeyDown(ev: KeyboardEvent) {
     switch (ev.key) {
@@ -138,8 +144,6 @@ export class GuxSpinButton {
         break;
     }
   }
-
-  private i18n: (resourceKey: string, context?: any) => string;
 
   async componentWillLoad() {
     this.i18n = await buildI18nForComponent(this.element, defaultResources);
@@ -180,7 +184,7 @@ export class GuxSpinButton {
         id="gux-spin-button-text-field"
         type={'number'}
         value={this.value.toString()}
-        onInput={Event => this.emitInput(Event)}
+        onInput={ev => this.emitInput(ev)}
         useClearButton={false}
         disabled={this.disabled}
         errorMessage={this.errorMessage}

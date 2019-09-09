@@ -5,9 +5,6 @@ describe('wem-annotations', () => {
 
   beforeEach(async () => {
     page = await newE2EPage();
-    page.on('console', (msg: { text: () => void }) =>
-      console.log('PAGE LOG:', msg.text())
-    );
     await page.setContent(`
       <gux-spin-button
         min="15"
