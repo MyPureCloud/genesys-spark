@@ -20,7 +20,7 @@ describe('wem-annotations', () => {
     const element = await page.find('gux-spin-button');
     expect(element).toHaveClass('hydrated');
   });
-  it('should disable the descrement button', async () => {
+  it('should disable the decrement button', async () => {
     const decrementButton = await page.find('#gux-spin-button-decrement');
     await decrementButton.click(); // Down to 15
     await page.waitForChanges();
