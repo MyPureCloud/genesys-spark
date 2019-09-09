@@ -37,7 +37,7 @@ describe('gux-spin-button', () => {
     element.incrementValue(false);
     expect(element.value).toEqual(15);
   });
-  it('decrementing should not go below mmin value', () => {
+  it('decrementing should not go below min value', () => {
     element.value = 15;
     element.incrementValue(false);
     expect(element.value).toEqual(15);

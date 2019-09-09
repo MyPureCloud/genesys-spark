@@ -78,7 +78,7 @@ export class GuxSpinButton {
    * Triggered when user inputs.
    */
   @Event()
-  input: EventEmitter<Number>;
+  input: EventEmitter<number>;
 
   private i18n: (resourceKey: string, context?: any) => string;
 
@@ -179,35 +179,37 @@ export class GuxSpinButton {
   }
 
   render() {
-    const el = [
-      <gux-text-field
-        id="gux-spin-button-text-field"
-        type={'number'}
-        value={this.value.toString()}
-        onInput={ev => this.emitInput(ev)}
-        useClearButton={false}
-        disabled={this.disabled}
-        errorMessage={this.errorMessage}
-      />,
-      <div class="gux-spin-button-container">
-        <button
-          id="gux-spin-button-increment"
-          onClick={() => {
-            this.incrementValue(true);
-          }}
-          class="genesys-icon-iw-circle-no-chevron-up gux-spin-button"
-          disabled={this.disabled || this.value >= this.max}
+    const el = (
+      <div class="gux-spin-container">
+        <gux-text-field
+          id="gux-spin-button-text-field"
+          type={'number'}
+          value={this.value.toString()}
+          onInput={ev => this.emitInput(ev)}
+          useClearButton={false}
+          disabled={this.disabled}
+          errorMessage={this.errorMessage}
         />
-        <button
-          id="gux-spin-button-decrement"
-          onClick={() => {
-            this.incrementValue(false);
-          }}
-          class="genesys-icon-iw-circle-no-chevron-down gux-spin-button"
-          disabled={this.disabled || this.value <= this.min}
-        />
+        <div class="gux-spin-button-container">
+          <button
+            id="gux-spin-button-increment"
+            onClick={() => {
+              this.incrementValue(true);
+            }}
+            class="genesys-icon-iw-circle-no-chevron-up gux-spin-button"
+            disabled={this.disabled || this.value >= this.max}
+          />
+          <button
+            id="gux-spin-button-decrement"
+            onClick={() => {
+              this.incrementValue(false);
+            }}
+            class="genesys-icon-iw-circle-no-chevron-down gux-spin-button"
+            disabled={this.disabled || this.value <= this.min}
+          />
+        </div>
       </div>
-    ];
+    );
 
     if (this.label === '') {
       return el;
