@@ -22,16 +22,16 @@
 
 ## Events
 
-| Event   | Description                 | Type                |
-| ------- | --------------------------- | ------------------- |
-| `input` | Triggered when user inputs. | `CustomEvent<void>` |
+| Event   | Description                 | Type                  |
+| ------- | --------------------------- | --------------------- |
+| `input` | Triggered when user inputs. | `CustomEvent<Number>` |
 
 
 ## Methods
 
 ### `validate() => Promise<boolean>`
 
-
+Checks if the component is valid
 
 #### Returns
 

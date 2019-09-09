@@ -2,12 +2,12 @@ import {
   Component,
   Element,
   Event,
+  EventEmitter,
   Listen,
   Method,
   Prop,
   Watch
 } from '@stencil/core';
-import { EventEmitter } from 'events';
 
 import { buildI18nForComponent } from '../../i18n';
 import defaultResources from './gux-spin-button.i18n.json';
@@ -78,7 +78,7 @@ export class GuxSpinButton {
    * Triggered when user inputs.
    */
   @Event()
-  input: EventEmitter;
+  input: EventEmitter<Number>;
 
   private i18n: (resourceKey: string, context?: any) => string;
 
@@ -126,7 +126,7 @@ export class GuxSpinButton {
       this.validate();
     }
 
-    this.input.emit(this.value.toString());
+    this.input.emit(this.value);
   }
 
   @Listen('keydown')

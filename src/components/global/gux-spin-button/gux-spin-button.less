@@ -64,7 +64,7 @@ gux-spin-button {
             .gux-spin-button[disabled] {
                 color  : @gux-grey-2;
                 opacity: 0.25;
-                cursor: none;
+                cursor: default;
             }
 
             .gux-spin-button:focus {
@@ -96,7 +96,7 @@ gux-spin-button.gux-light-theme {
 
 // Dark
 .gux-spin-button-dark-theme {
-    button {
+    button, button[disabled] {
         color: @gux-off-white;
     }
 }

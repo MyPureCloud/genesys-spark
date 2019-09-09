@@ -14,7 +14,7 @@ storiesOf('Basic Components', module).add(
       html`
         <gux-text-label
           label="${text('label', 'Form Input')}"
-          position=${select('position', ['above', 'beside'], 'above')}
+          position=${select('position', ['above', 'beside'], 'beside')}
         >
           <gux-text-field></gux-text-field>
         </gux-text-label>
