@@ -67,7 +67,7 @@ export class GuxCalendar {
    * Sets new value and rerender the calendar
    */
   @Method()
-  setValue(value: Date | [Date, Date]) {
+  async setValue(value: Date | [Date, Date]) {
     if (this.mode === CalendarModes.Range) {
       if (value[0] > value[1]) {
         this.value = [
@@ -155,7 +155,7 @@ export class GuxCalendar {
         0,
         0
       );
-      const classes = ['unselectable'];
+      const classes = [];
       let hidden = false;
       if (date.getMonth() !== month) {
         classes.push('not-in-month');

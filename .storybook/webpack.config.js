@@ -34,7 +34,7 @@ module.exports = ({ config, mode }) => {
       use: babelLoader
     },
     {
-      test: /\.tsx$/,
+      test: /\.tsx?$/,
       exclude: /node_modules/,
       use: [
         babelLoader,

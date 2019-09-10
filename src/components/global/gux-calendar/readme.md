@@ -35,7 +35,7 @@ Type: `Promise<void>`
 
 
 
-### `setValue(value: Date | [Date, Date]) => void`
+### `setValue(value: Date | [Date, Date]) => Promise<void>`
 
 Sets new value and rerender the calendar
 
@@ -47,7 +47,7 @@ Sets new value and rerender the calendar
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
