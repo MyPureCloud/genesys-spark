@@ -12,7 +12,9 @@ export enum KeyCode {
   Esc = 27,
   Tab = 9,
   Del = 46,
-  Backsp = 8
+  Backsp = 8,
+  PageUp = 33,
+  PageDown = 34
 }
 
 export enum ListTypeEnum {

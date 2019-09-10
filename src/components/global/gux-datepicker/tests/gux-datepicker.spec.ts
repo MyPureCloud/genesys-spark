@@ -39,9 +39,6 @@ describe('gux-datepicker', () => {
     component.input = {
       emit: jest.fn()
     };
-    component.change = {
-      emit: jest.fn()
-    };
     component.i18n = jest.fn();
     component.root = {
       contains() {
@@ -170,11 +167,10 @@ describe('gux-datepicker', () => {
   });
   // Events
   describe('events', () => {
-    it('onChange', () => {
+    it('onInput', () => {
       const value = new Date();
-      component.onChange(value);
+      component.onInput(value);
       expect(component.input.emit).toHaveBeenCalledWith(value);
-      expect(component.change.emit).toHaveBeenCalledWith(value);
     });
   });
 });

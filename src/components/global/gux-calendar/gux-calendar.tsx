@@ -25,17 +25,7 @@ export class GuxCalendar {
    * The calendar current selected date
    */
   @Prop({ mutable: true })
-  value: Date = new Date();
-  /**
-   * The calendar current from range value
-   */
-  @Prop({ mutable: true })
-  fromValue: Date = new Date();
-  /**
-   * The calendar current to range value
-   */
-  @Prop({ mutable: true })
-  toValue: Date = new Date();
+  value: Date | [Date, Date] = new Date();
   /**
    * The calendar first week day (default to 0 (sunday))
    */
@@ -62,36 +52,35 @@ export class GuxCalendar {
   @State()
   previewValue: Date = new Date();
 
-  shouldFocus: boolean = false;
-  shouldSetTabIndex: boolean = false;
-
   isSelecting: boolean = false;
 
   /**
    * Triggered when user selects a date
    */
   @Event()
-  input: EventEmitter;
-  change: EventEmitter;
-  onChange(value: Date | Date[]) {
-    this.input.emit(value);
-    this.change.emit(value);
+  input: EventEmitter<Date | [Date, Date]>;
+  onInput() {
+    this.input.emit(this.value);
   }
 
   /**
    * Sets new value and rerender the calendar
    */
   @Method()
-  setValue(value: Date | Date[]) {
+  setValue(value: Date | [Date, Date]) {
     if (this.mode === CalendarModes.Range) {
       if (value[0] > value[1]) {
-        this.fromValue = new Date(value[1].getTime());
-        this.toValue = new Date(value[0].getTime());
+        this.value = [
+          new Date(value[1].getTime()),
+          new Date(value[0].getTime())
+        ];
       } else {
-        this.fromValue = new Date(value[0].getTime());
-        this.toValue = new Date(value[1].getTime());
+        this.value = [
+          new Date(value[0].getTime()),
+          new Date(value[1].getTime())
+        ];
       }
-      this.previewValue = new Date(value[0].getTime());
+      this.previewValue = new Date(this.value[0].getTime());
     } else {
       this.value = new Date((value as Date).getTime());
       this.previewValue = new Date((value as Date).getTime());
@@ -102,7 +91,7 @@ export class GuxCalendar {
    * Focus the preview date
    */
   @Method()
-  focusPreviewDate() {
+  async focusPreviewDate() {
     const target: HTMLTableCellElement = this.root.querySelector(
       `td[data-date="${this.previewValue.getTime()}"]`
     );
@@ -113,29 +102,17 @@ export class GuxCalendar {
 
   incrementPreviewDateByMonth(month: number) {
     this.previewValue = new Date(
-      this.previewValue.setMonth(this.previewValue.getMonth() + month)
+      this.previewValue.getFullYear(),
+      this.previewValue.getMonth() + month,
+      this.previewValue.getDate(),
+      0,
+      0,
+      0
     );
-    this.updateTabIndex(false);
-  }
-
-  updateTabIndex(willFocus: boolean) {
-    for (const element of this.getAllSelectableDatesElements()) {
-      element.setAttribute('tabindex', '-1');
-    }
-    const target: HTMLTableCellElement = this.root.querySelector(
-      `td[data-date="${this.previewValue.getTime()}"]`
-    );
-    if (target && !target.classList.contains('not-in-month')) {
-      target.setAttribute('tabindex', '0');
-      if (willFocus) {
-        target.focus();
-      }
-    } else {
-      this.shouldSetTabIndex = true;
-      if (willFocus) {
-        this.shouldFocus = true;
-      }
-    }
+    // Wait for render before focusing preview date
+    setTimeout(() => {
+      this.focusPreviewDate();
+    });
   }
 
   getMonthLabel(index: number) {
@@ -146,8 +123,8 @@ export class GuxCalendar {
   }
 
   firstDateInMonth(month: number, year: number) {
-    const startDate = new Date(year, month, 1);
-    const firstDayOfMonth = startDate.getUTCDay();
+    const startDate = new Date(year, month, 1, 0, 0, 0, 0);
+    const firstDayOfMonth = startDate.getDay();
     const firstDayOffset =
       (-1 * (this.firstDayOfWeek - firstDayOfMonth - 7)) % 7;
     return new Date(startDate.getTime() - firstDayOffset * (86400 * 1000));
@@ -155,29 +132,29 @@ export class GuxCalendar {
 
   generateDatesFrom(
     month: number,
-    startTimestamp: number,
+    startDate: Date,
     length: number
   ): IDateElement[] {
     const arr = [];
-    const selectedTimestamp = new Date(
-      this.value.getFullYear(),
-      this.value.getMonth(),
-      this.value.getDate()
-    ).getTime();
-    const fromTimeStamp = new Date(
-      this.fromValue.getFullYear(),
-      this.fromValue.getMonth(),
-      this.fromValue.getDate()
-    ).getTime();
-    const toTimeStamp = new Date(
-      this.toValue.getFullYear(),
-      this.toValue.getMonth(),
-      this.toValue.getDate()
-    ).getTime();
+    const currentDate = new Date(
+      startDate.getFullYear(),
+      startDate.getMonth(),
+      startDate.getDate(),
+      0,
+      0,
+      0,
+      0
+    );
     for (let i = 0; i < length; i++) {
-      const increment = 86400 * 1000 * i;
-      const timestamp = startTimestamp + increment;
-      const date = new Date(timestamp);
+      const date = new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate(),
+        0,
+        0,
+        0,
+        0
+      );
       const classes = ['unselectable'];
       let hidden = false;
       if (date.getMonth() !== month) {
@@ -189,6 +166,16 @@ export class GuxCalendar {
       }
       let isSelected = false;
       if (this.mode === CalendarModes.Range) {
+        const fromTimeStamp = new Date(
+          this.value[0].getFullYear(),
+          this.value[0].getMonth(),
+          this.value[0].getDate()
+        ).getTime();
+        const toTimeStamp = new Date(
+          this.value[1].getFullYear(),
+          this.value[1].getMonth(),
+          this.value[1].getDate()
+        ).getTime();
         if (
           date.getTime() === fromTimeStamp ||
           date.getTime() === toTimeStamp
@@ -197,6 +184,11 @@ export class GuxCalendar {
           classes.push('selected');
         }
       } else {
+        const selectedTimestamp = new Date(
+          (this.value as Date).getFullYear(),
+          (this.value as Date).getMonth(),
+          (this.value as Date).getDate()
+        ).getTime();
         if (date.getTime() === selectedTimestamp) {
           isSelected = true;
           classes.push('selected');
@@ -208,6 +200,7 @@ export class GuxCalendar {
         hidden,
         selected: isSelected
       });
+      currentDate.setDate(currentDate.getDate() + 1);
     }
     return arr;
   }
@@ -235,14 +228,8 @@ export class GuxCalendar {
     month.setMonth(month.getMonth() + index);
     const monthIndex = month.getMonth();
     const year = month.getFullYear();
-    const startTime = this.firstDateInMonth(monthIndex, year);
-    const monthDays = new Date(year, monthIndex + 1, 0).getDate();
-    const totalDays = monthDays + (42 * 7 - monthDays);
-    const datesArray = this.generateDatesFrom(
-      monthIndex,
-      startTime.getTime(),
-      totalDays
-    );
+    const startDate = this.firstDateInMonth(monthIndex, year);
+    const datesArray = this.generateDatesFrom(monthIndex, startDate, 42);
     return this.create2DArray(datesArray, 7);
   }
 
@@ -296,14 +283,14 @@ export class GuxCalendar {
   onDateClick(date: Date) {
     if (this.mode !== CalendarModes.Range) {
       this.setValue(date);
-      this.onChange(date);
+      this.onInput();
     } else {
       if (!this.isSelecting) {
         // First click
         removeClassToElements(this.getAllDatesElements(), 'hovered');
         this.isSelecting = true;
-        this.fromValue = new Date(date.getTime());
-        this.toValue = new Date(date.getTime());
+        this.value = [new Date(date.getTime()), new Date(date.getTime())];
+        this.previewValue = new Date(date.getTime());
       } else {
         // Second click
         this.isSelecting = false;
@@ -314,15 +301,16 @@ export class GuxCalendar {
           target.classList.add('selected');
         }
         this.updateRangeElements();
-        this.setValue([date, this.fromValue]);
-        this.onChange([this.fromValue, this.toValue]);
+        this.setValue([date, this.value[0]]);
+        this.onInput();
       }
     }
+    this.focusPreviewDate();
   }
 
   onDateMouseEnter(date: Date) {
     if (this.mode === CalendarModes.Range && this.isSelecting) {
-      this.toValue = date;
+      this.value[1] = date;
       this.updateRangeElements();
     }
   }
@@ -330,8 +318,8 @@ export class GuxCalendar {
   updateRangeElements() {
     removeClassToElements(this.getAllDatesElements(), 'hovered');
     const rangeElements = this.getRangeDatesElements(
-      this.fromValue,
-      this.toValue
+      this.value[0],
+      this.value[1]
     );
     addClassToElements(rangeElements, 'hovered');
   }
@@ -347,70 +335,69 @@ export class GuxCalendar {
           this.previewValue.setDate(this.previewValue.getDate() + 7)
         );
         this.onDateMouseEnter(this.previewValue);
+        this.focusPreviewDate();
         break;
       case KeyCode.Up:
         this.previewValue = new Date(
           this.previewValue.setDate(this.previewValue.getDate() - 7)
         );
         this.onDateMouseEnter(this.previewValue);
+        this.focusPreviewDate();
         break;
       case KeyCode.Left:
         this.previewValue = new Date(
           this.previewValue.setDate(this.previewValue.getDate() - 1)
         );
         this.onDateMouseEnter(this.previewValue);
+        this.focusPreviewDate();
         break;
       case KeyCode.Right:
         this.previewValue = new Date(
           this.previewValue.setDate(this.previewValue.getDate() + 1)
         );
         this.onDateMouseEnter(this.previewValue);
+        this.focusPreviewDate();
         break;
-      case KeyCode.End:
+      case KeyCode.PageUp:
         this.incrementPreviewDateByMonth(1);
         this.onDateMouseEnter(this.previewValue);
         break;
-      case KeyCode.Home:
+      case KeyCode.PageDown:
         this.incrementPreviewDateByMonth(-1);
         this.onDateMouseEnter(this.previewValue);
         break;
     }
-    this.updateTabIndex(true);
+  }
+
+  shiftArray(arr: string[], n: number): string[] {
+    const times = n > arr.length ? n % arr.length : n;
+    return arr.concat(arr.splice(0, times));
   }
 
   get weekdays(): string[] {
-    // Sunday
     const days = [];
+    // Sunday
     const day = new Date(1970, 0, 4);
     for (let i = 0; i < 7; i++) {
-      day.setDate(day.getDate() + 1);
       const weekday = day.toLocaleString(this.locale, { weekday: 'long' });
       days.push(weekday.charAt(0).toUpperCase());
+      day.setDate(day.getDate() + 1);
     }
-    return days.concat(days.splice(0, this.firstDayOfWeek));
+    return this.shiftArray(days, this.firstDayOfWeek);
   }
 
-  async componentWillLoad() {
-    this.value.setHours(0, 0, 0, 0);
-    this.fromValue.setHours(0, 0, 0, 0);
-    this.toValue.setHours(0, 0, 0, 0);
-    this.previewValue.setHours(0, 0, 0, 0);
+  componentWillLoad() {
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    if (this.mode === CalendarModes.Range) {
+      this.value = [now, now];
+    } else {
+      this.value = now;
+    }
+    this.previewValue = now;
   }
 
   componentDidUpdate() {
-    if (this.shouldSetTabIndex) {
-      const target: HTMLTableCellElement = this.root.querySelector(
-        `td[data-date="${this.previewValue.getTime()}"]`
-      );
-      if (target) {
-        target.setAttribute('tabindex', '0');
-        if (this.shouldFocus) {
-          target.focus();
-          this.shouldFocus = false;
-        }
-      }
-      this.shouldSetTabIndex = false;
-    }
     this.updateRangeElements();
   }
 

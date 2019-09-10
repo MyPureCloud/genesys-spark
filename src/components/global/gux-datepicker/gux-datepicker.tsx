@@ -22,12 +22,7 @@ export class GuxDatepicker {
    * The datepicker current value
    */
   @Prop({ mutable: true })
-  value: Date = new Date();
-  /**
-   * The calendar current to range value
-   */
-  @Prop({ mutable: true })
-  toValue: Date = new Date();
+  value: Date | [Date, Date] = new Date();
   /**
    * The datepicker label (can be a single label, or an array of two if it's a range datepicker)
    */
@@ -97,11 +92,9 @@ export class GuxDatepicker {
    * Triggered when user selects a date
    */
   @Event()
-  input: EventEmitter;
-  change: EventEmitter;
-  onChange(value: Date | Date[]) {
+  input: EventEmitter<Date | [Date, Date]>;
+  onInput(value: Date | [Date, Date]) {
     this.input.emit(value);
-    this.change.emit(value);
   }
 
   get calendarLabels() {
@@ -143,8 +136,7 @@ export class GuxDatepicker {
 
   onDaySelect(day: Date | Date[]) {
     if (this.mode === CalendarModes.Range) {
-      this.value = day[0];
-      this.toValue = day[1];
+      this.value = [day[0], day[1]];
       this.updateDate();
       this.inputElement.value = this.formatedValue;
       this.toInputElement.value = this.toFormatedValue;
@@ -165,12 +157,14 @@ export class GuxDatepicker {
   }
 
   setValue() {
-    this.value = this.stringToDate(this.inputElement.value);
     if (this.mode === CalendarModes.Range) {
-      this.toValue = this.stringToDate(this.toInputElement.value);
+      const fromValue = this.stringToDate(this.inputElement.value);
+      const toValue = this.stringToDate(this.toInputElement.value);
+      this.value = [fromValue, toValue];
       this.updateDate();
-      this.calendarElement.setValue([this.value, this.toValue]);
+      this.calendarElement.setValue(this.value);
     } else {
+      this.value = this.stringToDate(this.inputElement.value);
       this.updateDate();
       this.calendarElement.setValue(this.value);
     }
@@ -209,21 +203,13 @@ export class GuxDatepicker {
         case KeyCode.Down:
           e.preventDefault();
           this.increment(-1);
-          if (this.mode === CalendarModes.Range) {
-            this.calendarElement.setValue([this.value, this.toValue]);
-          } else {
-            this.calendarElement.setValue(this.value);
-          }
+          this.calendarElement.setValue(this.value);
           this.setCursorRange();
           break;
         case KeyCode.Up:
           e.preventDefault();
           this.increment(1);
-          if (this.mode === CalendarModes.Range) {
-            this.calendarElement.setValue([this.value, this.toValue]);
-          } else {
-            this.calendarElement.setValue(this.value);
-          }
+          this.calendarElement.setValue(this.value);
           this.setCursorRange();
           break;
         case KeyCode.Left:
@@ -364,11 +350,12 @@ export class GuxDatepicker {
     if (newValue) {
       switch (this.format[this.selectionRange[0]]) {
         case 'd':
+          // TODO check depending on focusedField
           if (
             newValue <=
             new Date(
-              this.value.getFullYear(),
-              this.value.getMonth() + 1,
+              (this.value as Date).getFullYear(),
+              (this.value as Date).getMonth() + 1,
               0
             ).getDate()
           ) {
@@ -387,43 +374,47 @@ export class GuxDatepicker {
     return false;
   }
 
-  updateDate() {
-    let map: any;
-    let regexp: RegExp;
-    if (this.mode === CalendarModes.Range) {
-      map = {
-        dd: `0${this.toValue.getDate()}`.slice(-2),
-        mm: `0${this.toValue.getMonth() + 1}`.slice(-2)
-      };
-      if (this.yearFormat === 'yyyy') {
-        map.yyyy = this.toValue.getFullYear().toString();
-      } else {
-        map.yy = this.toValue
-          .getFullYear()
-          .toString()
-          .slice(-2);
-      }
-      regexp = new RegExp(Object.keys(map).join('|'), 'gi');
-      this.toFormatedValue = this.format.replace(regexp, match => {
-        return map[match];
-      });
-    }
-    map = {
-      dd: `0${this.value.getDate()}`.slice(-2),
-      mm: `0${this.value.getMonth() + 1}`.slice(-2)
+  getMapAndRegexFromField(value: Date) {
+    const map: any = {
+      dd: `0${value.getDate()}`.slice(-2),
+      mm: `0${value.getMonth() + 1}`.slice(-2)
     };
     if (this.yearFormat === 'yyyy') {
-      map.yyyy = this.value.getFullYear().toString();
+      map.yyyy = value.getFullYear().toString();
     } else {
-      map.yy = this.value
+      map.yy = value
         .getFullYear()
         .toString()
         .slice(-2);
     }
-    regexp = new RegExp(Object.keys(map).join('|'), 'gi');
-    this.formatedValue = this.format.replace(regexp, match => {
-      return map[match];
-    });
+    const regexp = new RegExp(Object.keys(map).join('|'), 'gi');
+    return {
+      map,
+      regexp
+    };
+  }
+
+  updateDate() {
+    if (this.mode === CalendarModes.Range) {
+      const { map: map1, regexp: regexp1 } = this.getMapAndRegexFromField(
+        this.value[0]
+      );
+      this.formatedValue = this.format.replace(regexp1, match => {
+        return map1[match];
+      });
+      const { map: map2, regexp: regexp2 } = this.getMapAndRegexFromField(
+        this.value[1]
+      );
+      this.toFormatedValue = this.format.replace(regexp2, match => {
+        return map2[match];
+      });
+    } else {
+      const { map: map3, regexp: regexp3 } = this.getMapAndRegexFromField(this
+        .value as Date);
+      this.formatedValue = this.format.replace(regexp3, match => {
+        return map3[match];
+      });
+    }
   }
 
   setCursorRange() {
@@ -438,6 +429,7 @@ export class GuxDatepicker {
   toggleCalendar() {
     this.active = !this.active;
     if (this.active) {
+      // Wait for render before focusing preview date
       setTimeout(() => {
         this.calendarElement.focusPreviewDate();
       });
@@ -455,11 +447,20 @@ export class GuxDatepicker {
     return sep;
   }
 
+  getRefValue(): Date {
+    if (this.mode === CalendarModes.Range) {
+      return this.focusedField === this.inputElement
+        ? this.value[0]
+        : this.value[1];
+    } else {
+      return this.value as Date;
+    }
+  }
+
   increment(value: number) {
     let selectionText = document.getSelection().toString();
     const type = this.setSelectionRange(this.focusedField.selectionStart);
-    const refValue =
-      this.focusedField === this.inputElement ? this.value : this.toValue;
+    const refValue = this.getRefValue();
     switch (type) {
       case 'd':
         selectionText = this.incrementDay(value, refValue);
@@ -479,11 +480,11 @@ export class GuxDatepicker {
   }
 
   incrementDay(value: number, ref: Date): string {
-    const newDay = new Date(ref.valueOf());
+    let newDay = new Date(ref.valueOf());
     newDay.setDate(newDay.getDate() + value);
     if (value < 0) {
       if (newDay.getDate() > ref.getDate()) {
-        newDay.setMonth(newDay.getMonth() + 1);
+        newDay = new Date(ref.getFullYear(), ref.getMonth() + 1, 0, 0, 0, 0);
       }
     } else {
       if (newDay.getDate() < ref.getDate()) {
@@ -522,14 +523,21 @@ export class GuxDatepicker {
 
   async componentWillLoad() {
     this.i18n = await buildI18nForComponent(this.root, i18nStrings);
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    if (this.mode === CalendarModes.Range) {
+      this.value = [now, now];
+    } else {
+      this.value = now;
+    }
+    if (this.mode === CalendarModes.Range && this.numberOfMonths < 2) {
+      this.numberOfMonths = 2;
+    }
   }
   componentDidLoad() {
     this.inputElement = this.textFieldElement.querySelector('input');
     if (this.mode === CalendarModes.Range) {
       this.toInputElement = this.toTextFieldElement.querySelector('input');
-    }
-    if (this.mode === CalendarModes.Range && this.numberOfMonths < 2) {
-      this.numberOfMonths = 2;
     }
     if (!this.format.includes('yyyy')) {
       this.yearFormat = 'yy';
@@ -571,7 +579,7 @@ export class GuxDatepicker {
                 }
                 value={this.value}
                 mode={this.mode}
-                onChange={(e: CustomEvent) => this.onDaySelect(e.detail)}
+                onInput={(e: CustomEvent) => this.onDaySelect(e.detail)}
                 firstDayOfWeek={this.firstDayOfWeek}
                 locale={this.locale}
                 numberOfMonths={this.numberOfMonths}

@@ -9,9 +9,6 @@ describe('gux-calendar', () => {
     component.input = {
       emit: jest.fn()
     };
-    component.change = {
-      emit: jest.fn()
-    };
     component.root = {
       querySelector() {
         return null;
@@ -50,15 +47,15 @@ describe('gux-calendar', () => {
         component.mode = CalendarModes.Range;
         component.setValue([newValue2, newValue]);
         expect(component.previewValue).toEqual(newValue2);
-        expect(component.fromValue).toEqual(newValue2);
-        expect(component.toValue).toEqual(newValue);
+        expect(component.value[0]).toEqual(newValue2);
+        expect(component.value[1]).toEqual(newValue);
       });
       it('setValue with range mode to-from', () => {
         component.mode = CalendarModes.Range;
         component.setValue([newValue, newValue2]);
-        expect(component.previewValue).toEqual(newValue);
-        expect(component.fromValue).toEqual(newValue2);
-        expect(component.toValue).toEqual(newValue);
+        expect(component.previewValue).toEqual(newValue2);
+        expect(component.value[0]).toEqual(newValue2);
+        expect(component.value[1]).toEqual(newValue);
       });
       it('focusPreviewDate', () => {
         component.focusPreviewDate();
@@ -81,39 +78,10 @@ describe('gux-calendar', () => {
           newValue.getMonth() + 3
         );
       });
-      it('updateTabIndex without target', () => {
-        const element = {
-          setAttribute: jest.fn()
-        };
-        spyOn(component, 'getAllSelectableDatesElements').and.callFake(() => [
-          element
-        ]);
-        component.updateTabIndex(false);
-        expect(element.setAttribute).toHaveBeenCalledWith('tabindex', '-1');
-        expect(component.shouldSetTabIndex).toEqual(true);
-        expect(component.shouldFocus).toEqual(false);
-        component.updateTabIndex(true);
-        expect(component.shouldFocus).toEqual(true);
-      });
-      it('updateTabIndex with target', () => {
-        component.root = {
-          querySelector() {
-            return spyEl;
-          }
-        } as any;
-        spyOn(component, 'getAllSelectableDatesElements').and.callFake(
-          () => []
-        );
-        component.updateTabIndex(false);
-        expect(spyEl.setAttribute).toHaveBeenCalledWith('tabindex', '0');
-        component.updateTabIndex(true);
-        expect(spyEl.focus).toHaveBeenCalled();
-      });
       it('generateDatesFrom', () => {
-        component.value = newValue2;
-        component.fromValue = newValue2;
+        component.value = [newValue2, newValue3];
         component.mode = CalendarModes.Range;
-        const result = component.generateDatesFrom(1, newValue2.getTime(), 31);
+        const result = component.generateDatesFrom(1, newValue3, 42);
         expect(result[0].selected).toEqual(true);
         expect(result).toEqual(
           expect.arrayContaining([
@@ -161,12 +129,12 @@ describe('gux-calendar', () => {
         spyOn(component, 'setValue').and.callFake(() => {
           return;
         });
-        spyOn(component, 'onChange').and.callFake(() => {
+        spyOn(component, 'onInput').and.callFake(() => {
           return;
         });
         component.onDateClick(newValue);
         expect(component.setValue).toHaveBeenCalledWith(newValue);
-        expect(component.onChange).toHaveBeenCalledWith(newValue);
+        expect(component.onInput).toHaveBeenCalled();
       });
       it('onDateClick with range mode', () => {
         component.mode = CalendarModes.Range;
@@ -176,7 +144,7 @@ describe('gux-calendar', () => {
         spyOn(utils, 'removeClassToElements').and.callFake(() => {
           return;
         });
-        spyOn(component, 'onChange').and.callFake(() => {
+        spyOn(component, 'onInput').and.callFake(() => {
           return;
         });
         spyOn(component, 'updateRangeElements').and.callFake(() => {
@@ -184,7 +152,7 @@ describe('gux-calendar', () => {
         });
         component.onDateClick(newValue2);
         component.onDateClick(newValue3);
-        expect(component.onChange).toHaveBeenCalledWith([newValue2, newValue3]);
+        expect(component.onInput).toHaveBeenCalled();
       });
       it('onDateMouseEnter', () => {
         spyOn(component, 'updateRangeElements').and.callFake(() => {
@@ -193,7 +161,7 @@ describe('gux-calendar', () => {
         component.mode = CalendarModes.Range;
         component.isSelecting = true;
         component.onDateMouseEnter(newValue);
-        expect(component.toValue).toEqual(newValue);
+        expect(component.value[1]).toEqual(newValue);
         expect(component.updateRangeElements).toHaveBeenCalled();
       });
       it('onKeyDown', () => {
@@ -203,7 +171,7 @@ describe('gux-calendar', () => {
         spyOn(component, 'setValue').and.callFake(() => {
           return;
         });
-        spyOn(component, 'onChange').and.callFake(() => {
+        spyOn(component, 'onInput').and.callFake(() => {
           return;
         });
         const initialPreviewValue = newValue3;
@@ -221,16 +189,16 @@ describe('gux-calendar', () => {
         event = { keyCode: KeyCode.Right } as KeyboardEvent;
         component.onKeyDown(event);
         expect(component.previewValue.getDate()).toEqual(days);
-        event = { keyCode: KeyCode.End } as KeyboardEvent;
+        event = { keyCode: KeyCode.PageUp } as KeyboardEvent;
         component.onKeyDown(event);
         expect(component.incrementPreviewDateByMonth).toHaveBeenCalledWith(1);
-        event = { keyCode: KeyCode.Home } as KeyboardEvent;
+        event = { keyCode: KeyCode.PageDown } as KeyboardEvent;
         component.onKeyDown(event);
         expect(component.incrementPreviewDateByMonth).toHaveBeenCalledWith(-1);
         event = { keyCode: KeyCode.Enter } as KeyboardEvent;
         component.onKeyDown(event);
         expect(component.setValue).toHaveBeenCalledWith(initialPreviewValue);
-        expect(component.onChange).toHaveBeenCalledWith(initialPreviewValue);
+        expect(component.onInput).toHaveBeenCalled();
       });
     });
   });
@@ -242,11 +210,11 @@ describe('gux-calendar', () => {
   });
   // Events
   describe('events', () => {
-    it('onChange', () => {
+    it('onInput', () => {
       const value = new Date();
-      component.onChange(value);
+      component.value = value;
+      component.onInput();
       expect(component.input.emit).toHaveBeenCalledWith(value);
-      expect(component.change.emit).toHaveBeenCalledWith(value);
     });
   });
 });

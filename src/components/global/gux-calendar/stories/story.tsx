@@ -21,7 +21,7 @@ storiesOf('Basic Components', module)
         'gux-calendar'
       ) as HTMLGuxCalendarElement;
       el.mode = select('mode', ['single', 'range'], 'single');
-      el.firstDayOfWeek = number('firstDayOfWeek', 0, {
+      el.firstDayOfWeek = number('firstDayOfWeek', 1, {
         max: 6,
         min: 0,
         range: true,
@@ -32,8 +32,8 @@ storiesOf('Basic Components', module)
         'locale',
         navigator.languages ? navigator.languages[0] : navigator.language
       );
-      el.addEventListener('change', (e: CustomEvent) =>
-        action('change')(e.detail)
+      el.addEventListener('input', (e: CustomEvent) =>
+        action('input')(e.detail)
       );
       document.getElementsByTagName('html')[0].className =
         'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
