@@ -45,18 +45,6 @@ export class GuxSpinButton {
   step: number;
 
   /**
-   * Label text
-   */
-  @Prop({ reflectToAttr: true })
-  label: string;
-
-  /**
-   * Label position
-   */
-  @Prop({ reflectToAttr: true })
-  labelPosition: 'above' | 'beside' = 'beside';
-
-  /**
    * If the component is disabled or not
    */
   @Prop({ reflectToAttr: true })
@@ -95,9 +83,7 @@ export class GuxSpinButton {
   @Method()
   async validate(): Promise<boolean> {
     if (isNaN(this.value)) {
-      this.errorMessage = this.ignoreValidation
-        ? null
-        : this.i18n('validation.nan');
+      this.value = 0;
       return false;
     } else if (this.value > this.max) {
       this.errorMessage = this.ignoreValidation
@@ -169,7 +155,7 @@ export class GuxSpinButton {
   }
 
   render() {
-    const el = (
+    return (
       <div class="gux-spin-container">
         <gux-text-field
           id="gux-spin-button-text-field"
@@ -201,16 +187,6 @@ export class GuxSpinButton {
           />
         </div>
       </div>
-    );
-
-    if (this.label === '') {
-      return el;
-    }
-
-    return (
-      <gux-text-label label={this.label} position={this.labelPosition}>
-        {el}
-      </gux-text-label>
     );
   }
 }
