@@ -10,6 +10,9 @@ import {
   Watch
 } from '@stencil/core';
 
+import { buildI18nForComponent } from '../../i18n';
+import textFieldResources from './gux-text-field.i18n.json';
+
 enum Types {
   Warning = 'warning',
   Error = 'error'
@@ -22,8 +25,8 @@ enum Types {
 export class GuxTextField {
   @Element()
   root: HTMLGuxTextFieldElement;
-
   inputElement: HTMLInputElement;
+  i18n: (resourceKey: string, context?: any) => string;
 
   /**
    * Indicate the input value
@@ -180,10 +183,18 @@ export class GuxTextField {
     return classList.join(' ');
   }
 
+  async componentWillLoad() {
+    this.i18n = await buildI18nForComponent(this.root, textFieldResources);
+  }
+
   componentDidLoad() {
     this.internalErrorMessage = this.errorMessage;
     this.firstValue = this.value;
     this._testValue(this.value);
+
+    if (this.eraseLabel === '') {
+      this.eraseLabel = this.i18n('clear');
+    }
   }
 
   getIconByMessageType(type) {
