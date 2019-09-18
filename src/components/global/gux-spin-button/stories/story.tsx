@@ -22,12 +22,12 @@ storiesOf('Basic Components', module).add(
     );
 
     const component = document.createElement('gux-spin-button');
-    component.label = text('Label', 'Minutes');
     component.min = number('Minimal value', '15');
     component.max = number('Maximum value', '60');
     component.step = number('Interval value', '15');
     component.value = number('Input value', '30');
     component.ignoreValidation = boolean('Ignore validation', false);
+    component.setAttribute('disabled', boolean('Disabled', false));
     component.errorMessage = text('Error message');
     component.addEventListener('input', e => action('input')(e.detail));
 

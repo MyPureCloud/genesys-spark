@@ -105,4 +105,13 @@ describe('wem-annotations', () => {
 
     expect(await component.getProperty('value')).toBe(15);
   });
+  it('entering NaN should show validation', async () => {
+    const component = await page.find('gux-spin-button');
+    await component.setProperty('value', 'randomString');
+    await page.waitForChanges();
+    expect(await page.find('.gux-error')).toBeTruthy();
+    const isValid = await component.callMethod('validate');
+    await page.waitForChanges();
+    expect(isValid).toBeFalsy();
+  });
 });
