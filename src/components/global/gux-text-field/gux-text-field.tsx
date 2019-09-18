@@ -26,7 +26,6 @@ export class GuxTextField {
   @Element()
   root: HTMLGuxTextFieldElement;
   inputElement: HTMLInputElement;
-  i18n: (resourceKey: string, context?: any) => string;
 
   /**
    * Indicate the input value
@@ -123,6 +122,9 @@ export class GuxTextField {
    */
   @Event()
   input: EventEmitter;
+
+  private i18n: (resourceKey: string, context?: any) => string;
+
   emitInput(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -191,10 +193,6 @@ export class GuxTextField {
     this.internalErrorMessage = this.errorMessage;
     this.firstValue = this.value;
     this._testValue(this.value);
-
-    if (this.eraseLabel === '') {
-      this.eraseLabel = this.i18n('clear');
-    }
   }
 
   getIconByMessageType(type) {
@@ -260,6 +258,7 @@ export class GuxTextField {
               type="button"
               class="genesys-icon-close"
               title={this.eraseLabel}
+              aria-label={this.i18n && this.i18n('eraseBtnAria')}
               onClick={e => this._clear(e)}
             />
           )}
