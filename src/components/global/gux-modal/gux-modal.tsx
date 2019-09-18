@@ -1,12 +1,6 @@
-import {
-  Component,
-  Element,
-  Method,
-  Prop
-} from '@stencil/core';
+import { Component, Element, Method, Prop } from '@stencil/core';
 import { buildI18nForComponent } from '../../i18n';
 import modalComponentResources from './gux-modal.i18n.json';
-
 
 @Component({
   styleUrl: 'gux-modal.less',
@@ -46,7 +40,6 @@ export class GuxModal {
       modalComponentResources
     );
   }
-
 
   render() {
     const activeClass = this.active ? 'active' : 'hidden';
