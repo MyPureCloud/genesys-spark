@@ -68,6 +68,7 @@ export class GuxCommandPalette {
       <div class={`gux-command-palette ${this.visible ? '' : 'hidden'}`}>
         <gux-search
           use-clear-button
+          sr-label={this.i18n('search')}
           onInput={(e: any) => {
             this.handleInput(e);
           }}
