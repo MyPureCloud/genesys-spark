@@ -5,6 +5,7 @@ import { HighlightStrategy } from '../gux-list/text-highlight/highlight-enums';
 import paletteResources from './gux-command-palette.i18n.json';
 
 const filterLimit = 50;
+const animationDuration = 305; //from gux-command-palette.less
 
 function sortActions(
   items: HTMLGuxCommandActionElement[]
@@ -150,7 +151,7 @@ export class GuxCommandPalette {
 
     setTimeout(() => {
       this.inputElement.querySelector('input').focus();
-    });
+    }, animationDuration);
   }
 
   /**
