@@ -258,7 +258,7 @@ export class GuxTextField {
               type="button"
               class="genesys-icon-close"
               title={this.eraseLabel}
-              aria-label={this.i18n && this.i18n('eraseBtnAria')}
+              aria-label={this.i18n('eraseBtnAria')}
               onClick={e => this._clear(e)}
             />
           )}

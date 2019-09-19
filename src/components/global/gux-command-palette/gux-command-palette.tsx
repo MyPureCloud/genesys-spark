@@ -5,7 +5,7 @@ import { HighlightStrategy } from '../gux-list/text-highlight/highlight-enums';
 import paletteResources from './gux-command-palette.i18n.json';
 
 const filterLimit = 50;
-const animationDuration = 305; // from gux-command-palette.less
+const animationDuration = 300; // this 300ms duration must be kept in sync with the 300ms transition in the CSS
 
 function sortActions(
   items: HTMLGuxCommandActionElement[]

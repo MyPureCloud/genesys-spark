@@ -14,7 +14,7 @@ gux-command-palette .gux-command-palette {
     right: 0;
     margin: 0 auto;
     max-width: 750px;
-    
+
     padding: 12px;
 
     &.hidden {
@@ -27,6 +27,7 @@ gux-command-palette .gux-command-palette {
         animation-name: fadeIn;
         animation-iteration-count: 1;
         animation-timing-function: ease-in;
+        // this 300ms duration must be kept in sync with the 300 second focus timeout in the TypeScript
         animation-duration: 300ms;
     }
 
@@ -76,11 +77,11 @@ gux-command-palette .gux-command-palette {
               border: none;
               box-shadow: none;
               padding: 0;
-            
+
               gux-text-highlight {
                   flex: 1 1 auto;
               }
-          
+
               .shortcut {
                   flex: 0 1 auto;
               }
