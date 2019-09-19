@@ -13,11 +13,9 @@ storiesOf('Basic Components', module).add(
     el.innerHTML = `
       <gux-command-action text="Dial Extension" details="John Smith (Company Directory)" shortcut="⌘ T"></gux-command-action>
       <gux-command-action text="Dial Business Phone" details="John Smith (Company Directory)" shortcut="⌥ T"></gux-command-action>
-      <gux-command-action text="Dial Business Phone 2" shortcut="⌥ B"></gux-command-action>
-      <gux-command-action text="Dial Pager" shortcut="⌃ T"></gux-command-action>
-      <gux-command-action text="Dial Home Phone" details="John Smith (Company Directory)"></gux-command-action>
-      <gux-command-action text="apple" details="a fruit." common></gux-command-action>
-      <gux-command-action text="banana" recent></gux-command-action>
+      <gux-command-action text="Dial Business Phone 2" shortcut="⌥ B" recent></gux-command-action>
+      <gux-command-action text="Dial Pager" shortcut="⌃ T" recent></gux-command-action>
+      <gux-command-action text="Dial Home Phone" details="John Smith (Company Directory)" recent common></gux-command-action>
     `;
 
     const btn = document.createElement('gux-button');
