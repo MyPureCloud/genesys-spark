@@ -5,6 +5,7 @@ import { HighlightStrategy } from '../gux-list/text-highlight/highlight-enums';
 import paletteResources from './gux-command-palette.i18n.json';
 
 const filterLimit = 50;
+const animationDuration = 300; // this 300ms duration must be kept in sync with the 300ms transition in the CSS
 
 function sortActions(
   items: HTMLGuxCommandActionElement[]
@@ -65,9 +66,12 @@ export class GuxCommandPalette {
 
   render() {
     return (
-      <div class={`gux-command-palette ${this.visible ? '' : 'hidden'}`}>
+      <div
+        class={`gux-command-palette ${this.visible ? '' : 'hidden'}`}
+        role="dialog"
+      >
         <gux-search
-          use-clear-button
+          sr-label={this.i18n('search')}
           onInput={(e: any) => {
             this.handleInput(e);
           }}
@@ -149,7 +153,7 @@ export class GuxCommandPalette {
 
     setTimeout(() => {
       this.inputElement.querySelector('input').focus();
-    });
+    }, animationDuration);
   }
 
   /**

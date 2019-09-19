@@ -10,6 +10,9 @@ import {
   Watch
 } from '@stencil/core';
 
+import { buildI18nForComponent } from '../../i18n';
+import textFieldResources from './gux-text-field.i18n.json';
+
 enum Types {
   Warning = 'warning',
   Error = 'error'
@@ -22,7 +25,6 @@ enum Types {
 export class GuxTextField {
   @Element()
   root: HTMLGuxTextFieldElement;
-
   inputElement: HTMLInputElement;
 
   /**
@@ -120,6 +122,9 @@ export class GuxTextField {
    */
   @Event()
   input: EventEmitter;
+
+  private i18n: (resourceKey: string, context?: any) => string;
+
   emitInput(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -178,6 +183,10 @@ export class GuxTextField {
       classList = [...classList, 'disabled'];
     }
     return classList.join(' ');
+  }
+
+  async componentWillLoad() {
+    this.i18n = await buildI18nForComponent(this.root, textFieldResources);
   }
 
   componentDidLoad() {
@@ -249,6 +258,7 @@ export class GuxTextField {
               type="button"
               class="genesys-icon-close"
               title={this.eraseLabel}
+              aria-label={this.i18n('eraseBtnAria')}
               onClick={e => this._clear(e)}
             />
           )}

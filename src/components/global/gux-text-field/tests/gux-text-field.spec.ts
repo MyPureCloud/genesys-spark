@@ -1,12 +1,13 @@
 import { GuxTextField } from '../gux-text-field';
 
 describe('gux-text-field', () => {
-  it('builds', () => {
+  it('builds', async () => {
     const component = new GuxTextField();
     expect(component).toBeTruthy();
     expect(component.render()).toBeTruthy();
     component.value = 'value';
     component.errorMessage = 'error';
+    await component.componentWillLoad();
     expect(component.render()).toBeTruthy();
   });
   describe('getClassList', () => {

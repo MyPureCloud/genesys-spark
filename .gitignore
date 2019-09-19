@@ -12,6 +12,7 @@ dist/
 log.txt
 *.sublime-project
 *.sublime-workspace
+*.iml
 
 .out/
 .stencil/
