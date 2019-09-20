@@ -1,0 +1,109 @@
+// Style
+gux-datepicker {
+  display: block;
+  min-width: 200px;
+  height: auto;
+  > div.gux-datepicker {
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      outline: none;
+    }
+    > div.gux-datepicker-field {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+      margin-right: 12px;
+      gux-text-field {
+        position: relative;
+        input::-ms-clear {
+          display: none;
+        }
+        &.gux-to-date {
+          margin-left: 10px;
+        }
+        > button {
+          color: @gux-grey-2;
+          position: absolute;
+          height: 32px;
+          font-size: 16px;
+          bottom: 0;
+          right: 0;
+          z-index: 1;
+          &:hover {
+            color: @gux-dark-blue;
+          }
+        }
+        > div > div > button {
+          display: none;
+        }
+      }
+    }
+    &.active {
+      > div.gux-datepicker-field > gux-text-field > button {
+        color: @gux-dark-blue;
+      }
+      gux-calendar {
+        display: block;
+      }
+    }
+  }
+  gux-calendar {
+    display: none;
+    position: absolute;
+    top: 35px;
+    z-index: 2;
+  }
+}
+
+// Theming
+
+// Light
+.gux-datepicker-light-theme {
+  color: @gux-grey-2;
+};
+
+.gux-light-theme {
+  gux-datepicker {
+    .gux-datepicker-light-theme();
+  }
+}
+
+gux-datepicker.gux-light-theme {
+  .gux-datepicker-light-theme();
+}
+
+// Dark
+.gux-datepicker-dark-theme {
+  > div.gux-datepicker {
+    > div.gux-datepicker-field {
+      gux-text-field {
+        label {
+          color: @gux-off-white;
+        }
+        > button {
+          color: @gux-off-white;
+          &:hover {
+            color: @gux-off-white;
+          }
+        }
+      }
+    }
+  }
+};
+
+.gux-dark-theme {
+  gux-datepicker {
+    .gux-datepicker-dark-theme();
+  }
+}
+
+gux-datepicker.gux-dark-theme {
+  .gux-datepicker-dark-theme();
+}
+
+// Default Theme
+gux-datepicker {
+  .gux-datepicker-light-theme();
+}

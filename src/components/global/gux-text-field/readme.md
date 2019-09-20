@@ -76,18 +76,22 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [gux-datepicker](../gux-datepicker)
  - [gux-dropdown](../gux-dropdown)
  - [gux-pagination-buttons](../gux-pagination/buttons)
  - [gux-search](../gux-search)
  - [gux-slider](../gux-slider)
+ - [gux-spin-button](../gux-spin-button)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-datepicker --> gux-text-field
   gux-dropdown --> gux-text-field
   gux-pagination-buttons --> gux-text-field
   gux-search --> gux-text-field
   gux-slider --> gux-text-field
+  gux-spin-button --> gux-text-field
   style gux-text-field fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

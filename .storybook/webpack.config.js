@@ -34,7 +34,7 @@ module.exports = ({ config, mode }) => {
       use: babelLoader
     },
     {
-      test: /\.tsx$/,
+      test: /\.tsx?$/,
       exclude: /node_modules/,
       use: [
         babelLoader,
@@ -50,6 +50,7 @@ module.exports = ({ config, mode }) => {
 
   config.resolve = {
     ...config.resolve,
+    extensions: [...config.resolve.extensions, '.ts', '.tsx'],
     alias: {
       'genesys-webcomponents': path.resolve(
         __dirname,

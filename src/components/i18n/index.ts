@@ -5,12 +5,16 @@ export const buildI18nForComponent = async (
   component: HTMLElement,
   defaultResources: ILocalizedComponentResources
 ): Promise<(resourceKey: string, context?: any) => string> => {
-  const locale = getComponentClosestLanguage(component);
-  const resources = await getComponentI18nResources(
-    component,
-    defaultResources,
-    locale
-  );
+  let resources = defaultResources;
+  let locale = 'en';
+  if (component !== undefined) {
+    locale = getComponentClosestLanguage(component);
+    resources = await getComponentI18nResources(
+      component,
+      defaultResources,
+      locale
+    );
+  }
 
   const intlFormats = Object.entries(resources).reduce((map, [key, val]) => {
     map.set(key, new IntlMessageFormat(val, locale));

@@ -27,9 +27,7 @@ describe('gux-radio', () => {
   it('should render the assigned label', async () => {
     const page = await newE2EPage();
 
-    await page.setContent(
-      '<gux-radio>my label is so cool</gux-radio>'
-    );
+    await page.setContent('<gux-radio>my label is so cool</gux-radio>');
     const component = await page.find('gux-radio');
     const label = await component.find('label');
 

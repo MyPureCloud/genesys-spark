@@ -1,0 +1,5 @@
+{
+  "perPage": "pr. side",
+  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+  "totalItems": " af {totalItems, number}"
+}

@@ -1,0 +1,5 @@
+{
+  "perPage": "페이지당",
+  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+  "totalItems": "{totalItems, number}의"
+}
