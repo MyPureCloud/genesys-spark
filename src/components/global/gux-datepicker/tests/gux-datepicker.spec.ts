@@ -3,6 +3,7 @@ import { CalendarModes, KeyCode } from './../../../../common-enums';
 
 describe('gux-datepicker', () => {
   let component: GuxDatepicker;
+  let componentRoot: any;
   beforeEach(async () => {
     document.getSelection = () => {
       return {
@@ -40,11 +41,10 @@ describe('gux-datepicker', () => {
       emit: jest.fn()
     };
     component.i18n = jest.fn();
-    component.root = {
-      contains() {
-        return null;
-      }
-    } as any;
+    componentRoot = component.root;
+    componentRoot.contains = () => {
+      return null;
+    };
   });
   it('builds', () => {
     component.componentWillLoad();

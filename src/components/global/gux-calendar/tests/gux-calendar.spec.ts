@@ -4,19 +4,19 @@ import { GuxCalendar } from '../gux-calendar';
 
 describe('gux-calendar', () => {
   let component: GuxCalendar;
+  let componentRoot: any;
   beforeEach(async () => {
     component = new GuxCalendar();
     component.input = {
       emit: jest.fn()
     };
-    component.root = {
-      querySelector() {
-        return null;
-      },
-      querySelectorAll() {
-        return [];
-      }
-    } as any;
+    componentRoot = component.root as any;
+    componentRoot.querySelector = () => {
+      return null;
+    };
+    componentRoot.querySelectorAll = () => {
+      return [];
+    };
   });
   it('builds', () => {
     component.componentWillLoad();
@@ -60,11 +60,9 @@ describe('gux-calendar', () => {
       it('focusPreviewDate', () => {
         component.focusPreviewDate();
         expect(spyEl.focus).not.toHaveBeenCalled();
-        component.root = {
-          querySelector() {
-            return spyEl;
-          }
-        } as any;
+        componentRoot.querySelector = () => {
+          return spyEl;
+        };
         component.focusPreviewDate();
         expect(spyEl.focus).toHaveBeenCalled();
       });
@@ -98,11 +96,9 @@ describe('gux-calendar', () => {
       });
       it('getAllDatesElements', () => {
         const dummy = ['one', 'two'];
-        component.root = {
-          querySelectorAll() {
-            return dummy;
-          }
-        } as any;
+        componentRoot.querySelectorAll = () => {
+          return dummy;
+        };
         const result = component.getAllDatesElements();
         expect(result).toEqual(dummy);
       });
@@ -113,11 +109,9 @@ describe('gux-calendar', () => {
           newValue2,
           newValue3
         );
-        component.root = {
-          querySelector() {
-            return 'dummy';
-          }
-        } as any;
+        componentRoot.querySelector = () => {
+          return 'dummy';
+        };
         const result = component.getRangeDatesElements(newValue3, newValue2);
         expect(component.getRangeDates).toHaveBeenCalledWith(
           newValue2,

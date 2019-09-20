@@ -12,7 +12,7 @@ export const config: Config = {
       src: 'style/icons'
     },
     {
-      dest: '../i18n',
+      dest: '../genesys-webcomponents/i18n',
       src: '../build/i18n'
     }
   ],
