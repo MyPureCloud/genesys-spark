@@ -1,10 +1,23 @@
-import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  h,
+  Prop
+} from '@stencil/core';
+import { buildI18nForComponent } from '../../i18n';
+import modalComponentResources from './gux-modal.i18n.json';
 
 @Component({
   styleUrl: 'gux-modal.less',
   tag: 'gux-modal'
 })
 export class GuxModal {
+  i18n: (resourceKey: string, context?: any) => string;
+
+  @Element() element: HTMLElement;
+
   /**
    * Triggered when any of the the cancel buttons get clicked
    */
@@ -27,6 +40,13 @@ export class GuxModal {
     this.close.emit();
   }
 
+  async componentWillLoad() {
+    this.i18n = await buildI18nForComponent(
+      this.element,
+      modalComponentResources
+    );
+  }
+
   render() {
     return (
       <div class="modal">
@@ -43,7 +63,7 @@ export class GuxModal {
           <div class="button-footer">
             <gux-button
               title="Cancel"
-              text="Cancel"
+              text={this.i18n('cancel')}
               accent="secondary"
               onClick={this.closeModal.bind(this)}
             />

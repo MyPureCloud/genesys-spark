@@ -29,13 +29,13 @@ describe('gux-radio-group', () => {
 
     await label1.click();
     await page.waitForChanges();
-    await(page.waitFor(1000))
+    await page.waitFor(1000);
 
     expect(await radio1.getProperty('checked')).toEqual(true);
 
     await label2.click();
     await page.waitForChanges();
-    await(page.waitFor(1000))
+    await page.waitFor(1000);
     expect(await radio1.getProperty('checked')).toEqual(false);
   });
 

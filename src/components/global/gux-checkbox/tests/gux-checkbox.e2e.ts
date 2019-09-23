@@ -1,4 +1,4 @@
-import { newE2EPage } from '@stencil/core/testing'
+import { newE2EPage } from '@stencil/core/testing';
 
 describe('gux-checkbox', () => {
   it('renders', async () => {
@@ -38,7 +38,6 @@ describe('gux-checkbox', () => {
     const component = await page.find('gux-checkbox');
     const label = await component.find('label');
 
-
     expect(label.className).toContain('gux-mixed');
 
     await label.click();
@@ -54,7 +53,7 @@ describe('gux-checkbox', () => {
     expect(label.className).toContain('gux-checked');
   });
 
-  it('should render the assigned label', async () =>{
+  it('should render the assigned label', async () => {
     const page = await newE2EPage();
 
     await page.setContent('<gux-checkbox>my label is so cool</gux-checkbox>');
