@@ -87,7 +87,7 @@ pipeline {
         dir(env.REPO_DIR) {
           script {
             if ( isAlpha() ) {
-              sh "npm run release -- --prerelease alpha"
+              sh "npm run release -- --prerelease alpha --skip.changelog "
             } else {
               sh "npm run release"
             }
