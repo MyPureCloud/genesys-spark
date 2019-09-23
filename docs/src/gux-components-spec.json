@@ -1,0 +1,117 @@
+{
+    "gux-accordion": { },
+    "gux-button": {
+        "attributes": [
+            { "name": "disabled", "type": "checkbox" },
+            { "name": "title", "type": "text" },
+            { "name": "text", "type": "text" },
+            { "name": "left-icon", "type": "text" },
+            { "name": "right-icon", "type": "text" },
+            { "name": "accent", "type": "select", "options": [ "primary", "secondary" ] }
+        ],
+        "events": [
+            { "name": "click", "description": "Triggered when element is clicked" }
+        ]
+    },
+    "gux-action-button": {
+        "attributes": [
+            { "name": "disabled", "type": "checkbox" },
+            { "name": "title", "type": "text" },
+            { "name": "text", "type": "text" },
+            { "name": "items", "type": "json" },
+            { "name": "accent", "type": "select", "options": [ "primary", "secondary" ] }
+        ],
+        "events": [
+            { "name": "open", "description": "Triggered when element is opened" },
+            { "name": "close", "description": "Triggered when element is closed" },
+            { "name": "actionClick", "description": "Triggered when element is clicked" }
+        ]
+    },
+    "gux-action-toast": {
+        "attributes": [
+            { "name": "toast-title", "type": "text" },
+            { "name": "message", "type": "text" },
+            { "name": "subject", "type": "text" },
+            { "name": "icon", "type": "text" },
+            { "name": "right-button", "type": "json" },
+            { "name": "left-button", "type": "json" },
+            { "name": "key-values", "type": "json" }
+        ]
+    },
+    "gux-checkbox": {
+        "attributes": [
+            { "name": "checked", "type": "checkbox" },
+            { "name": "indeterminate", "type": "checkbox" },
+            { "name": "disabled", "type": "checkbox" }
+        ],
+        "events": [
+            { "name": "check", "description": "Triggered when element's checked state is changed" }
+        ]
+    },
+    "gux-color-picker": {
+        "attributes": [
+            { "name": "value", "type": "text" },
+            { "name": "disabled", "type": "checkbox" },
+            { "name": "custom-colors", "type": "json" }
+        ],
+        "events": [
+            { "name": "input", "description": "Triggered when elements value is changed" }
+        ]
+    },
+    "gux-color-select": {
+        "attributes": [
+            { "name": "value", "type": "text" },
+            { "name": "custom-colors", "type": "json" }
+        ],
+        "events": [
+            { "name": "input", "description": "Triggered when a color is clicked" }
+        ]
+    },
+    "gux-disclosure-button": {
+        "attributes": [
+            { "name": "position", "type": "select", "options": [ "left", "right" ] },
+            { "name": "label", "type": "text" }
+        ],
+        "events": [
+            { "name": "active", "description": "Triggered when panel state is changed" }
+        ]
+    },
+    "gux-dropdown": {
+        "attributes": [
+            { "name": "mode", "type": "select", "options": [ "default", "page", "palette" ] },
+            { "name": "disabled", "type": "checkbox" },
+            { "name": "filterable", "type": "checkbox" },
+            { "name": "value", "type": "text" },
+            { "name": "placeholder", "type": "text" },
+            { "name": "items", "type": "json" }
+        ],
+        "events": [
+            { "name": "change", "description": "Triggered when item is selected from dropdown" }
+        ]
+    },
+    "gux-list": {
+        "attributes": [
+            { "name": "items", "type": "json" }
+        ]
+    },
+    "gux-modal": {
+        "attributes": [
+            { "name": "size", "type": "select", "options": [ "small", "medium", "large" ] },
+            { "name": "modal-title", "type": "text" },
+            { "name": "active", "type": "checkbox" }
+        ]
+    },
+    "gux-notification-toast": {
+        "attributes": [
+            { "name": "toast-title", "type": "text" },
+            { "name": "icon", "type": "text" },
+            { "name": "accent", "type": "select", "options": [ "neutral", "positive", "alert", "warning" ]},
+            { "name": "message", "type": "text" }
+        ],
+        "events": [
+            { "name": "closeClick", "description": "Triggered when the close icon is clicked" }
+        ]
+    },
+    "gux-page-loading-spinner": { },
+    "gux-panel-frame": { }
+}

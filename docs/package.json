@@ -1,0 +1,22 @@
+{
+  "name": "webcomponent-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eric Lifka <eric.lifka@genesys.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/component-pages/*",
+    "copy-dep": "mkdir -p static/build && cp node_modules/@genesys/common-webcomponents/dist/genesys-webcomponents/* static/build"
+  },
+  "dependencies": {
+    "@genesys/common-webcomponents": "^0.25.0",
+    "monaco-editor": "^0.17.0",
+    "parse5": "^5.1.0",
+    "iframe-coordinator": "2.4.0"
+  },
+  "devDependencies": {
+    "less": "^3.9.0",
+    "parcel": "^1.12.3",
+    "parcel-plugin-static-files-copy": "^2.1.2"
+  }
+}
