@@ -188,7 +188,11 @@ export class GuxCommandPalette {
     command: HTMLGuxCommandActionElement
   ): HTMLGuxListItemElement {
     return (
-      <gux-list-item value={command.text} onPress={this.handlePress(command)}>
+      <gux-list-item
+        value={command.text}
+        onPress={this.handlePress(command)}
+        class={(command.details && 'has-details') || ''}
+      >
         <div>
           <gux-text-highlight
             text={command.text}
@@ -211,7 +215,11 @@ export class GuxCommandPalette {
     command: HTMLGuxCommandActionElement
   ): HTMLGuxListItemElement {
     return (
-      <gux-list-item value={command.text} onPress={this.handlePress(command)}>
+      <gux-list-item
+        value={command.text}
+        onPress={this.handlePress(command)}
+        class={(command.details && 'has-details') || ''}
+      >
         <gux-text-highlight
           text={command.text}
           strategy={HighlightStrategy.Fuzzy}
