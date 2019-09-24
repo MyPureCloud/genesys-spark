@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "2.0.0-alpha.1",
+  "version": "1.0.0-alpha.0",
   "description": "Common webcomponents",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -36,7 +36,8 @@
     "i18n": "node scripts/build-i18n.js"
   },
   "dependencies": {
-    "intl-messageformat": "^2.2.0"
+    "intl-messageformat": "^2.2.0",
+    "standard-version": "^7.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.6.1",
@@ -86,7 +87,6 @@
     "polymer-webpack-loader": "^2.0.3",
     "prettier": "^1.17.1",
     "puppeteer": "1.19.0",
-    "standard-version": "^5.0.2",
     "storybook-readme": "^5.0.3",
     "ts-loader": "^5.4.5",
     "tslint": "^5.16.0",
