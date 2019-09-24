@@ -1,2 +1,15 @@
-/node_modules/
+package-lock.json
 /src/components.d.ts
+
+build/
+dist/
+.docs/
+.out/
+.stencil/
+.idea/
+.vscode/
+.versions/
+.coverage/
+components.d.ts
+node_modules/
+$RECYCLE.BIN/

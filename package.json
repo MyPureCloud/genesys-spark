@@ -27,7 +27,7 @@
     "storybook.dev": "./node_modules/.bin/start-storybook -p 9001 -c .storybook -s ./src/style,./dist",
     "create-component": "node scripts/create-component.js",
     "dev": "stencil build --dev && ./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run storybook.dev\"",
-    "format": "prettier ./src/**/*.ts ./src/**/*.tsx",
+    "format": "prettier \"./**/*.{ts,tsx,js,jsx,json}\"",
     "format.fix": "npm run format -- --write",
     "lint": "npm run lint.commit && npm run lint.ts",
     "lint.fix": "npm run lint.ts -- --fix",
@@ -120,7 +120,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{ts,tsx,js,jsx,json}": [
       "prettier --write",
       "git add"
     ]

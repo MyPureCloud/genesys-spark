@@ -8,5 +8,6 @@
     "jsxBracketSameLine": false,
     "printWidth": 80,
     "useTabs": false,
-    "proseWrap": "preserve"
+    "proseWrap": "preserve",
+    "endOfLine": "lf"
 }
