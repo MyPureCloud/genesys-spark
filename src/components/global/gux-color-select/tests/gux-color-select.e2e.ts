@@ -1,4 +1,4 @@
-import { newE2EPage } from '@stencil/core/testing'
+import { newE2EPage } from '@stencil/core/testing';
 
 describe('gux-color-select', () => {
   it('renders', async () => {

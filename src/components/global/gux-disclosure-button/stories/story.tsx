@@ -6,13 +6,12 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Basic Components', module)
-  .add(
-    'Disclosure Button',
-    withReadme(README, () => {
-      const el = document.createElement('div');
-      render(
-        html`
+storiesOf('Basic Components', module).add(
+  'Disclosure Button',
+  withReadme(README, () => {
+    const el = document.createElement('div');
+    render(
+      html`
         <div style='position:absolute;top:0;bottom:0;left:0;right:0;padding-right:8px;padding-left:8px;'>
         <h2>Basic samples</h2>
         <i>Position right</i><br/><br/>
@@ -37,14 +36,14 @@ storiesOf('Basic Components', module)
           </div>
         </div>
       `,
-        el
-      );
-      setTimeout(() => {
-        const it = document.getElementById('interactive');
-        it.addEventListener('active', e => action('active')(e.detail));
-      }, 100);
-      document.getElementsByTagName('html')[0].className =
-        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
-      return el;
-    })
-  );
+      el
+    );
+    setTimeout(() => {
+      const it = document.getElementById('interactive');
+      it.addEventListener('active', e => action('active')(e.detail));
+    }, 100);
+    document.getElementsByTagName('html')[0].className =
+      'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+    return el;
+  })
+);
