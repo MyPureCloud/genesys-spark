@@ -1,7 +1,7 @@
 import { checkA11y } from '@storybook/addon-a11y';
 import { select, withKnobs } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
-import { withReadme  } from 'storybook-readme';
+import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
