@@ -3,9 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 
+const prereleaseRegex = /.+-(alpha|beta)\.\d+$/
 
-const deployVersion = require('../package.json').version;
+const deployVersion = getDeployVersion();
 const manifestPath = path.join(__dirname,'../manifest.json');
+
 
 
 const buildDate = new Date();
@@ -33,3 +35,12 @@ let manifestJson = JSON.stringify(manifest, null, 2);
 console.log('Generated Manifest: ', manifestJson);
 
 fs.writeFileSync(manifestPath, manifestJson, {encoding: 'utf8'});
+
+function getDeployVersion() {
+  const packageVersion = require('../package.json').version;
+  if (prereleaseRegex.test(packageVersion)) {
+    return packageVersion.replace(prereleaseRegex, "");
+  } else {
+    return packageVersion;
+  }
+}

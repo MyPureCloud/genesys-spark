@@ -13,7 +13,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run i18n && npm run stencil && npm run storybook",
+    "build": "npm run i18n && npm run stencil && npm run docs",
     "commit": "git-cz",
     "release": "standard-version",
     "stencil": "stencil build --docs --prod",
@@ -23,16 +23,15 @@
     "test.screenshot": "stencil test --e2e --screenshot",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "storybook": "./node_modules/.bin/build-storybook -c .storybook -s ./src/style,./dist -o .out",
-    "storybook.dev": "./node_modules/.bin/start-storybook -p 9001 -c .storybook -s ./src/style,./dist",
     "create-component": "node scripts/create-component.js",
-    "dev": "stencil build --dev && ./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run storybook.dev\"",
+    "dev": "stencil build --dev && ./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run docs.dev\"",
     "format": "prettier \"./**/*.{ts,tsx,js,jsx,json}\"",
     "format.fix": "npm run format -- --write",
     "lint": "npm run lint.commit && npm run lint.ts",
     "lint.fix": "npm run lint.ts -- --fix",
     "lint.ts": "tslint --project .",
-    "lint.commit": "commitlint -f 13e848202da747905de52a463f9ac1a55fa15957",
+    "lint.commit": "commitlint -f 6df853ea6344541c5262a8fe1455b8bbc00cbfbb",
+    "prepare": "./scripts/prepare-docs.sh",
     "i18n": "node scripts/build-i18n.js"
   },
   "dependencies": {
