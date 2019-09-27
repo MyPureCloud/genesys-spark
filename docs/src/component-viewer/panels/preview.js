@@ -1,5 +1,5 @@
 export const createPreview = panel => {
-    return html => {
-        panel.innerHTML = html;
-    }
-}
+  return html => {
+    panel.innerHTML = html;
+  };
+};

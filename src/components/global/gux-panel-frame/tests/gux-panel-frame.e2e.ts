@@ -1,4 +1,4 @@
-import { newE2EPage } from '@stencil/core/testing'
+import { newE2EPage } from '@stencil/core/testing';
 
 describe('gux-panel-frame', () => {
   it('renders', async () => {
@@ -12,7 +12,9 @@ describe('gux-panel-frame', () => {
   it('should render all parts', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-panel-frame><div slot="header"></div><div slot="body"></div><div slot="footer"></div></gux-panel-frame>');
+    await page.setContent(
+      '<gux-panel-frame><div slot="header"></div><div slot="body"></div><div slot="footer"></div></gux-panel-frame>'
+    );
     const header = await page.find('.gux-panel-header');
     const body = await page.find('.gux-panel-body');
     const footer = await page.find('.gux-panel-footer');
@@ -24,7 +26,9 @@ describe('gux-panel-frame', () => {
   it('should not render any part', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-panel-frame><div slot="nothing"></div></gux-panel-frame>');
+    await page.setContent(
+      '<gux-panel-frame><div slot="nothing"></div></gux-panel-frame>'
+    );
     const header = await page.find('.gux-panel-header');
     const body = await page.find('.gux-panel-body');
     const footer = await page.find('.gux-panel-footer');
