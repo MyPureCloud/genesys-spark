@@ -1,4 +1,4 @@
-import { newE2EPage, E2EElement, E2EPage } from '@stencil/core/testing';
+import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
 
 describe('gux-command-palette', () => {
   it('renders', async () => {
