@@ -1,4 +1,4 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newE2EPage, E2EElement, E2EPage } from '@stencil/core/testing';
 
 describe('gux-command-palette', () => {
   it('renders', async () => {
@@ -233,5 +233,65 @@ describe('gux-command-palette', () => {
     expect(limit.innerText).toBe(
       'Results limited, refine your search for more commands.'
     );
+  });
+
+  describe('keyboard navigation', () => {
+    let page: E2EPage;
+    let commandPallete: E2EElement;
+    beforeEach(async () => {
+      page = await newE2EPage();
+
+      await page.setContent(`
+      <gux-command-palette>
+        <gux-command-action text="common" common></gux-command-action>
+        <gux-command-action text="recent" recent></gux-command-action>
+      </gux-command-palette>`);
+
+      await page.waitForChanges();
+
+      commandPallete = await page.find('gux-command-palette');
+      await commandPallete.callMethod('open');
+      await page.waitForChanges();
+    });
+
+    it('should navigate to recent list on key down', async () => {
+      await commandPallete.press('ArrowDown');
+      await page.waitForChanges();
+      await commandPallete.press('ArrowDown');
+      await page.waitForChanges();
+
+      const focusedELement = await page.find(':focus');
+      expect(focusedELement.outerHTML).toContain('recent');
+    });
+
+    it('should navigate to common list on key downs', async () => {
+      await commandPallete.press('ArrowDown');
+      await page.waitForChanges();
+      await commandPallete.press('ArrowDown');
+      await page.waitForChanges();
+      await commandPallete.press('ArrowDown');
+      await page.waitForChanges();
+
+      const focusedELement = await page.find(':focus');
+      expect(focusedELement.outerHTML).toContain('common');
+    });
+
+    it('should navigate back to search on key up', async () => {
+      await commandPallete.press('ArrowDown');
+      await page.waitForChanges();
+      await commandPallete.press('ArrowDown');
+      await page.waitForChanges();
+      await commandPallete.press('ArrowDown');
+      await page.waitForChanges();
+      await commandPallete.press('ArrowUp');
+      await page.waitForChanges();
+      await commandPallete.press('ArrowUp');
+      await page.waitForChanges();
+      await commandPallete.press('ArrowUp');
+      await page.waitForChanges();
+
+      const focusedELement = await page.find(':focus');
+      expect(focusedELement.nodeName).toContain('INPUT');
+    });
   });
 });

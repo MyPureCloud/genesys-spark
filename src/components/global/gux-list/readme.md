@@ -38,7 +38,37 @@ Example with slotting
 
 ## Methods
 
+### `isFirstItemSelected() => Promise<boolean>`
+
+Returns whether the first item in the list is selected.
+
+#### Returns
+
+Type: `Promise<boolean>`
+
+
+
+### `isLastItemSelected() => Promise<boolean>`
+
+Returns whether the last item in the list is selected.
+
+#### Returns
+
+Type: `Promise<boolean>`
+
+
+
 ### `setFocusOnFirstItem() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `setFocusOnLastItem() => Promise<void>`
 
 
 
