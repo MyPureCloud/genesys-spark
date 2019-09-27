@@ -185,8 +185,7 @@ export class GuxCommandPalette {
           );
         })
       ),
-      '',
-      true
+      ''
     );
   }
 
@@ -243,8 +242,7 @@ export class GuxCommandPalette {
 
   private transformCommands(
     commands: HTMLGuxCommandActionElement[],
-    header?: string,
-    divider?: boolean
+    header?: string
   ): HTMLElement[] {
     const retVal = [];
 
@@ -252,18 +250,7 @@ export class GuxCommandPalette {
       retVal.push(<strong>{header}</strong>);
     }
 
-    let needsDivider = divider;
-
-    commands.forEach((command: HTMLGuxCommandActionElement, index: number) => {
-      if (index === 0 && !command.recent) {
-        needsDivider = false;
-      }
-
-      if (needsDivider && !command.recent) {
-        needsDivider = false;
-        // retVal.push(<gux-list-divider />);
-      }
-
+    commands.forEach((command: HTMLGuxCommandActionElement) => {
       if (command.shortcut) {
         retVal.push(this.createShortcutItem(command));
         return;
