@@ -37,10 +37,28 @@ export class GuxAdvancedDropdown {
   placeholder: string;
 
   /**
+   * Whether the list should filter its current options.
+   */
+  @Prop()
+  noFilter: boolean = false;
+
+  /**
+   * Timeout between filter input changed and event being emitted.
+   */
+  @Prop()
+  filterDebounceTimeout: number = 500;
+
+  /**
    * Fires when the value of the advanced dropdown changes.
    */
   @Event()
   input: EventEmitter<string>;
+
+  /**
+   * Fires when the filter of the advanced dropdown changes.
+   */
+  @Event()
+  filter: EventEmitter<string>;
 
   @State()
   srLabelledby: string;
@@ -148,6 +166,7 @@ export class GuxAdvancedDropdown {
               dynamic-search="true"
               onInput={e => e.stopPropagation()}
               onSearch={e => this.searchRequested(e)}
+              searchTimeout={this.filterDebounceTimeout}
             />
             <div
               class="gux-dropdown-options"
@@ -241,10 +260,14 @@ export class GuxAdvancedDropdown {
   }
 
   private searchRequested(event: CustomEvent) {
-    for (const option of this.selectionOptions) {
-      option.shouldFilter(event.detail).then(isFiltered => {
-        option.filtered = isFiltered;
-      });
+    this.filter.emit(event.detail);
+
+    if (!this.noFilter) {
+      for (const option of this.selectionOptions) {
+        option.shouldFilter(event.detail).then(isFiltered => {
+          option.filtered = isFiltered;
+        });
+      }
     }
   }
 

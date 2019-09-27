@@ -5,14 +5,13 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Basic Components', module)
-  .add(
-    'Accordion',
-    withReadme(README, () => {
-      const el = document.createElement('div');
-      render(
-        html`
-        <gux-accordion id='interactive'>
+storiesOf('Basic Components', module).add(
+  'Accordion',
+  withReadme(README, () => {
+    const el = document.createElement('div');
+    render(
+      html`
+        <gux-accordion id="interactive">
           <div slot="First Section">
             <span>I'm a span in a div.</span>
             <button>I'm the button.</button>
@@ -22,10 +21,10 @@ storiesOf('Basic Components', module)
           <h1>I'm an h1, but i'm not a slot.</h1>
         </gux-accordion>
       `,
-        el
-      );
-      document.getElementsByTagName('html')[0].className =
-        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
-      return el;
-    })
-  );
+      el
+    );
+    document.getElementsByTagName('html')[0].className =
+      'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+    return el;
+  })
+);

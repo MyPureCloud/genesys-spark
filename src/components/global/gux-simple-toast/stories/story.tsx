@@ -6,34 +6,33 @@ import { withReadme } from 'storybook-readme';
 
 import README from '../readme.md';
 
-storiesOf('Basic Components', module)
-  .add(
-    'Simple Toast',
-    withReadme(README, () => {
-      const el = document.createElement('div');
-      render(
-        html`
+storiesOf('Basic Components', module).add(
+  'Simple Toast',
+  withReadme(README, () => {
+    const el = document.createElement('div');
+    render(
+      html`
         <h2>Basic samples</h2>
-        <br/><i>For Light Theme</i><br/><br/>
+        <br /><i>For Light Theme</i><br /><br />
         <gux-simple-toast
-          toast-title='Holiday approved'
-          icon='genesys-icon-calendar-generic'
-          accent='neutral'
-          message='Family vacation on 06/24/16 approved'
+          toast-title="Holiday approved"
+          icon="genesys-icon-calendar-generic"
+          accent="neutral"
+          message="Family vacation on 06/24/16 approved"
         >
         </gux-simple-toast>
-        <br/><i>For Dark Theme</i><br/><br/>
+        <br /><i>For Dark Theme</i><br /><br />
         <gux-simple-toast
-          class='gux-dark-theme'
-          toast-title='Holiday approved'
-          icon='genesys-icon-calendar-generic'
-          accent='neutral'
-          message='Family vacation on 06/24/16 approved'
+          class="gux-dark-theme"
+          toast-title="Holiday approved"
+          icon="genesys-icon-calendar-generic"
+          accent="neutral"
+          message="Family vacation on 06/24/16 approved"
         >
         </gux-simple-toast>
         <h2>Interactive sample</h2>
         <gux-simple-toast
-          id='interactive'
+          id="interactive"
           toast-title=${text('toastTitle', 'title')}
           icon=${text('icon', 'genesys-icon-alert-octo')}
           accent=${select(
@@ -46,14 +45,14 @@ storiesOf('Basic Components', module)
         >
         </gux-simple-toast>
       `,
-        el
-      );
-      setTimeout(() => {
-        const it = document.getElementById('interactive');
-        it.addEventListener('closeClick', e => action('closeClick')(e.detail));
-      }, 100);
-      document.getElementsByTagName('html')[0].className =
-        'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
-      return el;
-    })
-  );
+      el
+    );
+    setTimeout(() => {
+      const it = document.getElementById('interactive');
+      it.addEventListener('closeClick', e => action('closeClick')(e.detail));
+    }, 100);
+    document.getElementsByTagName('html')[0].className =
+      'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
+    return el;
+  })
+);

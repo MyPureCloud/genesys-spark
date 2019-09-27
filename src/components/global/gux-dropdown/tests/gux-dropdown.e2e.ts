@@ -1,4 +1,4 @@
-import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing'
+import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
 
 describe('gux-dropdown', () => {
   let page: E2EPage;
