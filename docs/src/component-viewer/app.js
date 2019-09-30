@@ -1,5 +1,7 @@
-import { defineCustomElements } from '@genesys/common-webcomponents/dist/esm/es5/genesys-webcomponents.define.js';
+import 'genesys-webcomponents';
 import parse5 from 'parse5';
+import 'fonts.css';
+import 'icons.css';
 
 import AttributesPanel from './panels/attributes';
 import { createPreview } from './panels/preview';
@@ -7,11 +9,11 @@ import { createEditor } from './panels/editor';
 import EventsPanel from './panels/events';
 import { toHTML } from '../utils/to-html';
 
-defineCustomElements(window, {});
+//gwc.defineCustomElements(window, {});
 
 function createLayout() {
   let template = toHTML(`
-    <div class="content">
+    <div class="component-viewer content">
         <div class="left-column">
             <div class="preview"></div>
             <div class="editor"></div>

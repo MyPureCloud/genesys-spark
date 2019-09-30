@@ -2,45 +2,36 @@
 
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
+const version = require('./version-helper');
 
-const prereleaseRegex = /.+-(alpha|beta)\.\d+$/
-
-const deployVersion = getDeployVersion();
-const manifestPath = path.join(__dirname,'../manifest.json');
-
-
+const deployVersion = version.getDeployVersion();
+const manifestPath = path.join(__dirname, '../manifest.json');
 
 const buildDate = new Date();
+
+let docIndexes = glob
+  .sync(path.join(__dirname, '../docs/dist/*.html'))
+  .map(file => {
+    return {
+      file: path.basename(file)
+    };
+  });
+
+docIndexes.push({
+  file: 'versions.json'
+});
 
 let manifest = {
   name: 'common-ui-docs/genesys-webcomponents',
   version: deployVersion,
   build: `${process.env.BUILD_NUMBER}`,
   buildDate: buildDate.toISOString(),
-  indexFiles: [
-    {
-      file: 'index.html'
-    },
-    {
-      file: 'iframe.html'
-    },
-    {
-      file: 'versions.json'
-    }
-  ]
-}
+  indexFiles: docIndexes
+};
 
 let manifestJson = JSON.stringify(manifest, null, 2);
 
 console.log('Generated Manifest: ', manifestJson);
 
-fs.writeFileSync(manifestPath, manifestJson, {encoding: 'utf8'});
-
-function getDeployVersion() {
-  const packageVersion = require('../package.json').version;
-  if (prereleaseRegex.test(packageVersion)) {
-    return packageVersion.replace(prereleaseRegex, "");
-  } else {
-    return packageVersion;
-  }
-}
+fs.writeFileSync(manifestPath, manifestJson, { encoding: 'utf8' });

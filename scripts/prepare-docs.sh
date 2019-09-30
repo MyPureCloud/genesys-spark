@@ -7,5 +7,5 @@ DOCS_DIR="${PROJ_DIR}/docs"
 if [ ! -d "${DOCS_DIR}/node_modules" ]; then
   echo "Installing docs dependencies..."
   cd "${DOCS_DIR}"
-  npm install
+  npm ci
 fi
