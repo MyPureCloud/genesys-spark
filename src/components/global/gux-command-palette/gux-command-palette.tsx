@@ -1,4 +1,5 @@
 import { Component, Element, h, Method, State } from '@stencil/core';
+import { KeyCode } from '../../../common-enums';
 import { matchesFuzzy } from '../../../search';
 import { buildI18nForComponent } from '../../i18n';
 import { HighlightStrategy } from '../gux-list/text-highlight/highlight-enums';
@@ -69,6 +70,7 @@ export class GuxCommandPalette {
       <div
         class={`gux-command-palette ${this.visible ? '' : 'hidden'}`}
         role="dialog"
+        onKeyDown={e => this.onKeyDown(e)}
       >
         <gux-search
           sr-label={this.i18n('search')}
@@ -105,7 +107,9 @@ export class GuxCommandPalette {
       }
 
       const filterList = [
-        <gux-list highlight={this.filterValue}>{filteredItems}</gux-list>
+        <gux-list tabindex="-1" highlight={this.filterValue}>
+          {filteredItems}
+        </gux-list>
       ];
 
       if (filterExceeded) {
@@ -137,7 +141,9 @@ export class GuxCommandPalette {
 
     if (!lists.length) {
       return (
-        <gux-list>{this.transformCommands(sortActions(allItems))}</gux-list>
+        <gux-list tabindex="-1">
+          {this.transformCommands(sortActions(allItems))}
+        </gux-list>
       );
     }
 
@@ -179,8 +185,7 @@ export class GuxCommandPalette {
           );
         })
       ),
-      '',
-      true
+      ''
     );
   }
 
@@ -237,8 +242,7 @@ export class GuxCommandPalette {
 
   private transformCommands(
     commands: HTMLGuxCommandActionElement[],
-    header?: string,
-    divider?: boolean
+    header?: string
   ): HTMLElement[] {
     const retVal = [];
 
@@ -246,18 +250,7 @@ export class GuxCommandPalette {
       retVal.push(<strong>{header}</strong>);
     }
 
-    let needsDivider = divider;
-
-    commands.forEach((command: HTMLGuxCommandActionElement, index: number) => {
-      if (index === 0 && !command.recent) {
-        needsDivider = false;
-      }
-
-      if (needsDivider && !command.recent) {
-        needsDivider = false;
-        retVal.push(<gux-list-divider />);
-      }
-
+    commands.forEach((command: HTMLGuxCommandActionElement) => {
       if (command.shortcut) {
         retVal.push(this.createShortcutItem(command));
         return;
@@ -284,9 +277,93 @@ export class GuxCommandPalette {
     header?: string
   ): HTMLGuxListElement {
     return (
-      <gux-list highlight={filter}>
+      <gux-list highlight={filter} tabindex="-1">
         {this.transformCommands(sortActions(items), header)}
       </gux-list>
     );
+  }
+
+  private onKeyDown(event: KeyboardEvent): void {
+    const validKeys = [KeyCode.Up, KeyCode.Down];
+    const key = event.keyCode;
+    if (validKeys.indexOf(key) === -1) {
+      return;
+    }
+
+    switch (key) {
+      case KeyCode.Up:
+        this.navigateUp();
+        break;
+      case KeyCode.Down:
+        this.navigateDown();
+        break;
+    }
+  }
+
+  private elementIsSearch(el: Element): boolean {
+    return el.closest('gux-search') !== null;
+  }
+
+  private getParentGuxList(el: Element): HTMLGuxListElement {
+    return el.closest('gux-list');
+  }
+
+  private setFocusOnElement(el: Element): void {
+    const listElement = el as HTMLGuxListElement;
+    if (listElement && listElement.setFocusOnLastItem) {
+      listElement.setFocusOnLastItem();
+      return;
+    }
+
+    const searchElement = el as HTMLGuxSearchElement;
+    if (searchElement && searchElement.setInputFocus) {
+      searchElement.setInputFocus();
+    }
+  }
+
+  private navigateUp() {
+    const focusedElement = this.element.querySelector(':focus');
+    if (this.elementIsSearch(focusedElement)) {
+      // Already at the top, don't need to focus elsewhere
+      return;
+    }
+
+    const guxList = this.getParentGuxList(focusedElement);
+    if (!guxList) {
+      return;
+    }
+
+    guxList.isFirstItemSelected().then(firstSelected => {
+      if (!firstSelected) {
+        // Let the GUX List handle navigation through the list
+        return;
+      }
+
+      // Manually jump to the previous element
+      this.setFocusOnElement(guxList.previousElementSibling);
+    });
+  }
+
+  private navigateDown() {
+    const focusedElement = this.element.querySelector(':focus');
+    if (this.elementIsSearch(focusedElement)) {
+      this.element.querySelector('gux-list').setFocusOnFirstItem();
+      return;
+    }
+
+    const guxList = this.getParentGuxList(focusedElement);
+    if (!guxList) {
+      return;
+    }
+
+    guxList.isLastItemSelected().then(lastSelected => {
+      if (!lastSelected) {
+        // Let the GUX List handle navigation through the list
+        return;
+      }
+
+      // Manually jump to the next element
+      this.setFocusOnElement(guxList.nextElementSibling);
+    });
   }
 }

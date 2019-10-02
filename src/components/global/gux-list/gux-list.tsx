@@ -75,9 +75,40 @@ export class GuxList {
     this.emitChanged(newValue);
   }
 
+  /*
+   * Sets focus to the fist item in the list.
+   */
   @Method()
   async setFocusOnFirstItem(): Promise<void> {
     this.selectedIndex = 0;
+    this.updateTabIndexes();
+  }
+
+  /*
+   * Sets focus to the last item in the list.
+   */
+  @Method()
+  async setFocusOnLastItem(): Promise<void> {
+    const filteredList = this.root.querySelectorAll(validChildren);
+    this.selectedIndex = filteredList.length - 1;
+    this.updateTabIndexes();
+  }
+
+  /**
+   * Returns whether the last item in the list is selected.
+   */
+  @Method()
+  async isLastItemSelected(): Promise<boolean> {
+    const filteredList = this.root.querySelectorAll(validChildren);
+    return this.selectedIndex === filteredList.length - 1;
+  }
+
+  /**
+   * Returns whether the first item in the list is selected.
+   */
+  @Method()
+  async isFirstItemSelected(): Promise<boolean> {
+    return this.selectedIndex <= 0;
   }
 
   /**
@@ -116,6 +147,7 @@ export class GuxList {
       case KeyCode.Up:
         if (this.selectedIndex) {
           newIndex = this.selectedIndex - 1;
+          event.stopPropagation();
         }
         break;
       case KeyCode.Home:
@@ -126,6 +158,7 @@ export class GuxList {
       case KeyCode.Down:
         if (this.selectedIndex !== filteredList.length - 1) {
           newIndex = this.selectedIndex + 1;
+          event.stopPropagation();
         }
         break;
       case KeyCode.End:

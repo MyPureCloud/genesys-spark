@@ -105,6 +105,9 @@ describe('gux-list', () => {
 
     const focused = await element.find(focusedElementSelector);
     expect(focused.innerText).toContain('first');
+
+    const firstSelected = await element.callMethod('isFirstItemSelected');
+    expect(firstSelected).toBeTruthy();
   });
 
   it('should select the first item on home pressed.', async () => {
@@ -127,5 +130,47 @@ describe('gux-list', () => {
 
     const focused = await element.find(focusedElementSelector);
     expect(focused.innerText).toContain('first');
+  });
+
+  it('should set focus to first item when requested', async () => {
+    const page = await newE2EPage();
+
+    await page.setContent(`<gux-list>
+      <gux-list-item value="test" text="first"/>
+      <gux-list-item value="test2" text="test2"/>
+    </gux-list>`);
+
+    const element = await page.find('gux-list');
+    await page.waitForChanges();
+
+    await element.callMethod('setFocusOnFirstItem');
+    await page.waitForChanges();
+
+    const firstSelected = await element.callMethod('isFirstItemSelected');
+    expect(firstSelected).toBeTruthy();
+
+    const focused = await element.find(focusedElementSelector);
+    expect(focused.innerText).toContain('first');
+  });
+
+  it('should set focus to last item when requested', async () => {
+    const page = await newE2EPage();
+
+    await page.setContent(`<gux-list>
+      <gux-list-item value="test" text="first"/>
+      <gux-list-item value="test2" text="test2"/>
+    </gux-list>`);
+
+    const element = await page.find('gux-list');
+    await page.waitForChanges();
+
+    await element.callMethod('setFocusOnLastItem');
+    await page.waitForChanges();
+
+    const lastSelected = await element.callMethod('isLastItemSelected');
+    expect(lastSelected).toBeTruthy();
+
+    const focused = await element.find(focusedElementSelector);
+    expect(focused.innerText).toContain('test2');
   });
 });
