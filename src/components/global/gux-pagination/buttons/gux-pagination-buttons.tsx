@@ -1,4 +1,5 @@
 import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+
 import { GuxTextField } from '../../gux-text-field/gux-text-field';
 
 @Component({
@@ -32,15 +33,17 @@ export class GuxPaginationButtons {
           <gux-button
             class="first-page-button"
             onClick={() => this.currentPageChanged.emit(1)}
-            leftIcon="genesys-icon-arrow-left-dbl"
             disabled={this.onFirstPage}
-          />
+          >
+            <span role="img" class="genesys-icon-arrow-left-dbl" />
+          </gux-button>
           <gux-button
             class="previous-page-button"
             onClick={() => this.currentPageChanged.emit(this.currentPage - 1)}
-            leftIcon="genesys-icon-chevron-small-left"
             disabled={this.onFirstPage}
-          />
+          >
+            <span role="img" class="genesys-icon-chevron-small-left" />
+          </gux-button>
         </div>
         <span class="gux-pagination-current-page-text">
           Page{' '}
@@ -58,15 +61,17 @@ export class GuxPaginationButtons {
           <gux-button
             class="next-page-button"
             onClick={() => this.currentPageChanged.emit(this.currentPage + 1)}
-            leftIcon="genesys-icon-chevron-small-right"
             disabled={this.onLastPage}
-          />
+          >
+            <span role="img" class="genesys-icon-chevron-small-right" />
+          </gux-button>
           <gux-button
             class="last-page-button"
             onClick={() => this.currentPageChanged.emit(this.totalPages)}
-            leftIcon="genesys-icon-arrow-right-dbl"
             disabled={this.onLastPage}
-          />
+          >
+            <span role="img" class="genesys-icon-arrow-right-dbl" />
+          </gux-button>
         </div>
       </div>
     );

@@ -17,14 +17,14 @@ storiesOf('Basic Components', module).add(
         >
           <div style="display:flex;justify-content:space-between">
             <div>
-              <gux-button text="Top Left"></gux-button>
+              <gux-button>Top Left</gux-button>
               <gux-tooltip
                 text="Top left tooltip that goes on bottom, and fixed on the left"
               >
               </gux-tooltip>
             </div>
             <div>
-              <gux-button text="Top Right"></gux-button>
+              <gux-button>Top Right</gux-button>
               <gux-tooltip
                 text="Top right tooltip that goes on bottom, and fixed on the right"
               >
@@ -42,7 +42,7 @@ storiesOf('Basic Components', module).add(
               >
                 <div style="height:200px;text-align:center">
                   <div style="display:inline-block;margin-top:84px;">
-                    <gux-button text="Scroll"></gux-button>
+                    <gux-button>Scroll</gux-button>
                     <gux-tooltip
                       text="Tooltip should move on scroll"
                       delay="0"
@@ -54,25 +54,23 @@ storiesOf('Basic Components', module).add(
               </div>
             </div>
             <div style="margin:auto">
-              <gux-button
-                id="center-button"
-                text="Interactive"
-                accent="primary"
-              ></gux-button>
-              <gux-button id="center-button-show" text="Show"></gux-button>
-              <gux-button id="center-button-hide" text="Hide"></gux-button>
+              <gux-button id="center-button" accent="primary"
+                >Interactive</gux-button
+              >
+              <gux-button id="center-button-show">Show</gux-button>
+              <gux-button id="center-button-hide">Hide</gux-button>
             </div>
           </div>
           <div style="display:flex;justify-content:space-between">
             <div>
-              <gux-button text="Bottom Left"></gux-button>
+              <gux-button>Bottom Left</gux-button>
               <gux-tooltip
                 text="Bottom left tooltip that goes on top, and fixed on the left"
               >
               </gux-tooltip>
             </div>
             <div>
-              <gux-button text="Bottom Right"></gux-button>
+              <gux-button>Bottom Right</gux-button>
               <gux-tooltip
                 text="Bottom right tooltip that goes on top, and fixed on the right"
               >

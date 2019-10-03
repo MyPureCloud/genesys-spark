@@ -6,7 +6,10 @@ import {
   h,
   Prop
 } from '@stencil/core';
+
+import { ButtonAccents } from '../../../common-enums';
 import { buildI18nForComponent } from '../../i18n';
+
 import modalComponentResources from './gux-modal.i18n.json';
 
 @Component({
@@ -62,11 +65,12 @@ export class GuxModal {
           </div>
           <div class="button-footer">
             <gux-button
-              title="Cancel"
-              text={this.i18n('cancel')}
-              accent="secondary"
+              title={this.i18n('cancel')}
+              accent={ButtonAccents.Secondary}
               onClick={this.closeModal.bind(this)}
-            />
+            >
+              <span>{this.i18n('cancel')}</span>
+            </gux-button>
             <div class="additional-buttons">
               <slot name="additional-buttons" />
             </div>

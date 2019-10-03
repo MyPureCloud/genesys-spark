@@ -32,7 +32,7 @@
     "lint": "npm run lint.commit && npm run lint.ts",
     "lint.fix": "npm run lint.ts -- --fix",
     "lint.ts": "tslint --project .",
-    "lint.commit": "commitlint -f 6df853ea6344541c5262a8fe1455b8bbc00cbfbb",
+    "lint.commit": "commitlint -f 13e848202da747905de52a463f9ac1a55fa15957",
     "i18n": "node scripts/build-i18n.js"
   },
   "dependencies": {
