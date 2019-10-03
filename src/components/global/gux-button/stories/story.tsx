@@ -8,16 +8,23 @@ import README from '../readme.md';
 storiesOf('Basic Components', module).add(
   'Button',
   withReadme(README, () => {
-    const el = document.createElement('gux-button');
-    el.disabled = boolean('disabled', false);
-    el.title = text('title', 'Blop');
-    el.text = text('text', 'Blop');
-    el.leftIcon = text('leftIcon', '');
-    el.rightIcon = text('rightIcon', '');
-    el.accent = select('accent', ['primary', 'secondary'], 'secondary');
-    el.addEventListener('click', e => action('click')(e)); // native event
+    const buttonElement = document.createElement('gux-button');
+    buttonElement.disabled = boolean('disabled', false);
+    buttonElement.title = text('title', 'Blop');
+    buttonElement.accent = select(
+      'accent',
+      ['primary', 'secondary'],
+      'secondary'
+    );
+    buttonElement.addEventListener('click', e => action('click')(e)); // native event
+
+    const buttonContentElement = document.createElement('span');
+    buttonContentElement.innerHTML = 'Blob';
+
+    buttonElement.appendChild(buttonContentElement);
+
     document.getElementsByTagName('html')[0].className =
       'gux-' + select('theme', ['dark', 'default'], 'default') + '-theme';
-    return el;
+    return buttonElement;
   })
 );

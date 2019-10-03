@@ -38,9 +38,11 @@ gux-button {
     text-overflow: ellipsis;
     font-size: 12px;
     font-weight: bold;
+
     &:focus {
       outline: none;
     }
+
     &.gux-primary {
       background-color: @primary-background-color;
       border: 1px solid @primary-border-color;
@@ -55,6 +57,7 @@ gux-button {
         box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
       }
     }
+
     &.gux-secondary {
       background-color: @secondary-background-color;
       border: 1px solid @secondary-border-color;
@@ -67,17 +70,6 @@ gux-button {
       }
       &:focus {
         box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
-      }
-    }
-
-    .left-icon,
-    .right-icon {
-      font-size: @gux-icon-size-default;
-      line-height: 30px;
-      height: 30px;
-
-      &.margin {
-        margin-left: 5px;
       }
     }
   }

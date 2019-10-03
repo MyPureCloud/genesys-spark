@@ -17,7 +17,7 @@ storiesOf('Basic Components', module)
       render(
         html`
         <h2>Interactive sample</h2>
-        <gux-button id='interactive-button' text='Display modal'></gux-button>
+        <gux-button id='interactive-button'>Display modal</gux-button>
         <gux-modal
           id="interactive"
           size=${select('size', ['small', 'medium', 'large'], 'small')}
@@ -26,7 +26,7 @@ storiesOf('Basic Components', module)
         >
           <div slot="modal-content">This contains the modal content.</div>
           <div slot="additional-buttons">
-            <gux-button title='Button' text='Text' accent='primary'></gux-button>
+            <gux-button title='Button' accent='primary'>Text</gux-button>
         </gux-modal>
       `,
         el

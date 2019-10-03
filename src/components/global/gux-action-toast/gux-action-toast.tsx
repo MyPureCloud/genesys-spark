@@ -1,5 +1,7 @@
 import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 
+import { ButtonAccents } from '../../../common-enums';
+
 @Component({
   styleUrl: 'gux-action-toast.less',
   tag: 'gux-action-toast'
@@ -47,11 +49,13 @@ export class GuxActionToast {
    */
   @Prop()
   keyValues: { [key: string]: string } = {};
+
   /**
    * The left button.
    */
   @Prop()
   secondaryButton: any;
+
   /**
    * The right button.
    */
@@ -97,29 +101,42 @@ export class GuxActionToast {
         <div class="buttons">
           {this.secondaryButton && (
             <gux-button
-              text={this.secondaryButton.text}
-              left-icon={this.secondaryButton.leftIcon}
-              right-icon={this.secondaryButton.rightIcon}
-              accent=""
               disabled={this.secondaryButton.disabled}
               title={
                 this.secondaryButton.title ? this.secondaryButton.title : ''
               }
               onClick={() => this.onButtonClickHandler(this.secondaryButton)}
               class="left-button"
-            />
+            >
+              <span
+                role="img"
+                class={`genesys-icon-${this.secondaryButton.leftIcon}`}
+              />
+              <span>text</span>
+              <span
+                role="img"
+                class={`genesys-icon-${this.secondaryButton.rightIcon}`}
+              />
+            </gux-button>
           )}
           {this.primaryButton && (
             <gux-button
-              text={this.primaryButton.text}
-              left-icon={this.primaryButton.leftIcon}
-              right-icon={this.primaryButton.rightIcon}
-              accent="primary"
+              accent={ButtonAccents.Primary}
               disabled={this.primaryButton.disabled}
               title={this.primaryButton.title ? this.primaryButton.title : ''}
               onClick={() => this.onButtonClickHandler(this.primaryButton)}
               class="right-button"
-            />
+            >
+              <span
+                role="img"
+                class={`genesys-icon-${this.primaryButton.leftIcon}`}
+              />
+              <span>text</span>
+              <span
+                role="img"
+                class={`genesys-icon-${this.primaryButton.rightIcon}`}
+              />
+            </gux-button>
           )}
         </div>
       </div>

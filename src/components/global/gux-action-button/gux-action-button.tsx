@@ -8,7 +8,8 @@ import {
   Prop,
   Watch
 } from '@stencil/core';
-import { KeyCode } from '../../../common-enums';
+
+import { ButtonAccents, KeyCode } from '../../../common-enums';
 
 @Component({
   styleUrl: 'gux-action-button.less',
@@ -52,7 +53,7 @@ export class GuxActionButton {
    * The component accent (secondary or primary).
    */
   @Prop()
-  accent: string = 'secondary';
+  accent: ButtonAccents = ButtonAccents.Secondary;
 
   /**
    * It is used to open or not the list.
@@ -118,20 +119,22 @@ export class GuxActionButton {
       <div class={'gux-action-button' + (this.isOpen ? ' open' : '')}>
         <gux-button
           accent={this.accent}
-          text={this.text}
           disabled={this.disabled}
           onClick={() => this.onActionClick()}
           class="gux-action"
-        />
+        >
+          <span>{this.text}</span>
+        </gux-button>
         <gux-button
           accent={this.accent}
           disabled={this.disabled}
           ref={el => (this.dropdownButton = el)}
           onClick={() => this.toggle()}
           onKeyUp={e => this.onKeyUpEvent(e)}
-          leftIcon="dropdown-arrow"
           class="gux-dropdown"
-        />
+        >
+          <span role="img" class="genesys-icon-dropdown-arrow" />
+        </gux-button>
         <gux-list ref={el => (this.listElement = el as HTMLGuxListElement)}>
           <slot />
         </gux-list>

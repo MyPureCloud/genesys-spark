@@ -2,6 +2,7 @@ import { select } from '@storybook/addon-knobs/polymer';
 import { storiesOf } from '@storybook/polymer';
 import { html, render } from 'lit-html';
 import { withReadme } from 'storybook-readme';
+
 import README from '../readme.md';
 
 storiesOf('Basic Components', module).add(
@@ -109,8 +110,8 @@ storiesOf('Basic Components', module).add(
               </div>
               <div slot="footer">
                 <div style="display: flex; justify-content: space-between">
-                  <gux-button text="Close"></gux-button>
-                  <gux-button text="Accept" accent="primary"></gux-button>
+                  <gux-button>Close</gux-button>
+                  <gux-button accent="primary">Accept</gux-button>
                 </div>
               </div>
             </gux-panel-frame>`;

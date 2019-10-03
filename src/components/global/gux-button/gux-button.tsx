@@ -1,5 +1,7 @@
 import { Component, Element, h, Prop, State } from '@stencil/core';
 
+import { ButtonAccents } from '../../../common-enums';
+
 @Component({
   styleUrl: 'gux-button.less',
   tag: 'gux-button'
@@ -13,50 +15,28 @@ export class GuxButton {
    * Indicate if the button is disabled or not
    */
   @Prop({ reflectToAttr: true })
-  disabled: boolean = false;
+  disabled = false;
 
   /**
    * The component accent (secondary or primary).
    */
   @Prop()
-  accent: string = 'secondary';
-
-  /**
-   * The component text.
-   */
-  @Prop()
-  text: string = '';
-
-  /**
-   * The component left icon.
-   */
-  @Prop()
-  leftIcon: string = '';
-
-  /**
-   * The component right icon.
-   */
-  @Prop()
-  rightIcon: string = '';
+  accent: ButtonAccents = ButtonAccents.Secondary;
 
   @State()
   title: string;
 
-  /**
-   * This function is to check color and return a default one
-   */
-  getAccent() {
-    return this.accent === 'primary' ? 'primary' : 'secondary';
-  }
-
-  componentDidLoad() {
+  async componentDidLoad() {
     this.title = this.root.title;
   }
 
-  formatIcon(iconName: string) {
-    return iconName.indexOf('genesys-icon') === 0
-      ? iconName
-      : 'genesys-icon-' + iconName;
+  private get accentClass() {
+    const accent =
+      this.accent === ButtonAccents.Primary
+        ? ButtonAccents.Primary
+        : ButtonAccents.Secondary;
+
+    return `gux-${accent}`;
   }
 
   render() {
@@ -65,31 +45,9 @@ export class GuxButton {
         title={this.title}
         ref={el => (this.button = el)}
         disabled={this.disabled}
-        class={'gux-' + this.getAccent()}
+        class={this.accentClass}
       >
-        {this.leftIcon ? (
-          <span
-            class={
-              this.formatIcon(this.leftIcon) +
-              ' left-icon' +
-              (this.text ? ' margin' : '')
-            }
-          />
-        ) : (
-          ''
-        )}
-        {this.text}
-        {this.rightIcon ? (
-          <span
-            class={
-              this.formatIcon(this.rightIcon) +
-              ' right-icon' +
-              (this.text ? ' margin' : '')
-            }
-          />
-        ) : (
-          ''
-        )}
+        <slot />
       </button>
     );
   }
