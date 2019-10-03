@@ -71,10 +71,9 @@ describe('gux-calendar', () => {
     describe('private', () => {
       it('incrementPreviewDateByMonth', () => {
         const inc = 3;
+        newValue.setMonth(newValue.getMonth() + 3);
         component.incrementPreviewDateByMonth(inc);
-        expect(component.previewValue.getMonth()).toEqual(
-          newValue.getMonth() + 3
-        );
+        expect(component.previewValue.getMonth()).toEqual(newValue.getMonth());
       });
       it('generateDatesFrom', () => {
         component.value = [newValue2, newValue3];
