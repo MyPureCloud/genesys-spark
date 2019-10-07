@@ -7,8 +7,8 @@ String[] mailingList = [
   "Jarrod.Stormo@genesys.com",
   "Matthew.Cheely@genesys.com",
   "Keri.Lawrence@genesys.com",
-  "Chris.Covert@genesys.com",
-  "Darragh.Kirwan@genesys.com"
+  "Darragh.Kirwan@genesys.com",
+  "Eric.Lifka@genesys.com"
 ]
 
 def isAlpha() {
@@ -66,6 +66,7 @@ pipeline {
           // Make a local branch so we can work with history and push (there's probably a better way to do this)
           sh "git checkout -b ${env.SHORT_BRANCH}"
           sh "${env.WORKSPACE}/${env.NPM_UTIL_PATH}/scripts/jenkins-create-npmrc.sh"
+          sh "cp .npmrc docs/.npmrc"
           sh "npm ci"
         }
       }
@@ -105,8 +106,9 @@ pipeline {
           sh '''
             export CDN_URL=$(./node_modules/.bin/cdn --ecosystem pc --manifest manifest.json)
             npm run build
-            node ./scripts/fix-doc-urls
           '''
+          // Re-generate manifest file after building docs - required to find *.html in docs
+          sh './scripts/generate-manifest'
         }
       }
     }
@@ -149,7 +151,7 @@ pipeline {
             ./node_modules/.bin/upload \
                 --ecosystem pc \
                 --manifest manifest.json \
-                --source-dir ./.out
+                --source-dir ./docs/dist
           '''
         }
       }

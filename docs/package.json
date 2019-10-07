@@ -5,18 +5,27 @@
   "author": "Eric Lifka <eric.lifka@genesys.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/component-pages/*",
-    "copy-dep": "mkdir -p static/build && cp node_modules/@genesys/common-webcomponents/dist/genesys-webcomponents/* static/build"
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "staticFiles": {
+    "staticPath": "../dist/genesys-webcomponents",
+    "watcherGlob": "**"
   },
   "dependencies": {
-    "@genesys/common-webcomponents": "^0.25.0",
+    "iframe-coordinator": "2.4.0",
     "monaco-editor": "^0.17.0",
-    "parse5": "^5.1.0",
-    "iframe-coordinator": "2.4.0"
+    "parse5": "^5.1.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.6.2",
+    "@stencil/webpack": "0.0.6",
+    "copy-webpack-plugin": "^5.0.4",
     "less": "^3.9.0",
-    "parcel": "^1.12.3",
-    "parcel-plugin-static-files-copy": "^2.1.2"
+    "less-loader": "^5.0.0",
+    "monaco-editor-webpack-plugin": "^1.7.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
   }
 }

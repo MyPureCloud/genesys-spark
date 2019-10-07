@@ -10,35 +10,35 @@ body {
     background-color: #fdfdfd;
 }
 
-.content {
+.component-viewer.content {
     display: flex;
     flex-direction: row;
     height: 100%;
 }
 
-.left-column,
-.right-column {
+.component-viewer > .left-column,
+.component-viewer > .right-column {
     display: flex;
     flex-direction: column;
 }
 
-.left-column {
+.component-viewer > .left-column {
     width: 600px;
     border-right: @border;
 
-    .preview {
+    > .preview {
         flex-grow: 1;
         border-bottom: @border;
         padding: 27px 30px;
         overflow-y: auto;
     }
 
-    .editor {
+    > .editor {
         height: 400px;
     }
 }
 
-.right-column {
+.component-viewer > .right-column {
     flex-grow: 1;
     font-family: sans-serif;
     line-height: 1.4em;
@@ -70,31 +70,32 @@ body {
             padding-bottom: 20px;
         }
     }
-}
 
-.attribute-group label {
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 7px;
+    .attribute-group label {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 7px;
 
-    span {
+      span {
         min-width: 100px;
         flex-grow: 0;
-    }
+      }
 
-    select,
-    textarea,
-    input:not([type='checkbox']) {
+      select,
+      textarea,
+      input:not([type='checkbox']) {
         flex-grow: 1;
         padding: 7px 10px;
         border-radius: 5px;
         border: @border;
-    }
+      }
 
-    select,
-    input[type="checkbox"] {
+      select,
+      input[type="checkbox"] {
         cursor: pointer;
-    }
+      }
+}
+
 }

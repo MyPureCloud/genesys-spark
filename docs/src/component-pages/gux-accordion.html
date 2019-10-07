@@ -1,14 +1,11 @@
 <html>
-<head>
+  <head>
     <title>gux-accordion</title>
-    <link rel="stylesheet" type="text/css" href="../styles/component-viewer.less">
-    <link rel="stylesheet" type="text/css" href="../../node_modules/monaco-editor/min/vs/editor/editor.main.css" />
-</head>
-<body>
-
-<script src="../index.js"></script>
-<script>
-webcomponentsDocsMain(`
+  </head>
+  <body>
+    <script src="${CDN_URL}index.js"></script>
+    <script>
+      webcomponentsDocsMain(`
 <gux-accordion id='interactive'>
     <div slot="First Section">
         <span>I'm a span in a div.</span>
@@ -19,7 +16,6 @@ webcomponentsDocsMain(`
     <h1>I'm an h1, but i'm not a slot.</h1>
 </gux-accordion>
 `);
-</script>
-
-</body>
+    </script>
+  </body>
 </html>
