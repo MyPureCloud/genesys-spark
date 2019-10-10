@@ -22,7 +22,7 @@
       { "name": "disabled", "type": "checkbox" },
       { "name": "title", "type": "text" },
       { "name": "text", "type": "text" },
-      { "name": "items", "type": "json" },
+      { "name": "is-open", "type": "checkbox" },
       {
         "name": "accent",
         "type": "select",
@@ -47,6 +47,13 @@
       { "name": "right-button", "type": "json" },
       { "name": "left-button", "type": "json" },
       { "name": "key-values", "type": "json" }
+    ]
+  },
+  "gux-advanced-dropdown": {
+    "attributes": [{ "name": "disabled", "type": "checkbox" }],
+    "events": [
+      { "name": "input", "description": "Item from dropdown selected" },
+      { "name": "filter", "description": "Filter value changed" }
     ]
   },
   "gux-checkbox": {
@@ -126,8 +133,13 @@
         "type": "select",
         "options": ["small", "medium", "large"]
       },
-      { "name": "modal-title", "type": "text" },
-      { "name": "active", "type": "checkbox" }
+      { "name": "modal-title", "type": "text" }
+    ],
+    "events": [
+      {
+        "name": "close",
+        "description": "Modal is signaling that it should be hidden"
+      }
     ]
   },
   "gux-notification-toast": {
@@ -149,5 +161,12 @@
     ]
   },
   "gux-page-loading-spinner": {},
-  "gux-panel-frame": {}
+  "gux-panel-frame": {},
+  "gux-list-item": {
+    "hidePage": true,
+    "attributes": [{ "name": "disabled", "type": "checkbox" }],
+    "events": [
+      { "name": "press", "description": "list item selected within list" }
+    ]
+  }
 }

@@ -2,7 +2,9 @@ import { toHTML } from '../utils/to-html.js';
 import COMPONENT_SPEC from '../gux-components-spec.json';
 
 export function bootstrap() {
-  let components = Object.keys(COMPONENT_SPEC);
+  let components = Object.keys(COMPONENT_SPEC).filter(
+    component => !COMPONENT_SPEC[component].hidePage
+  );
 
   document.body.appendChild(
     toHTML(`
