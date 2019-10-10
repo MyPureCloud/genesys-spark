@@ -141,7 +141,7 @@ pipeline {
 
     stage('Upload Docs') {
       when {
-        expression { isRelease() }
+        expression { shouldPublish() }
       }
       steps {
         sh "echo Uploading release!"
@@ -160,7 +160,7 @@ pipeline {
 
     stage('Deploy Docs') {
       when {
-        expression { isRelease() }
+        expression { shouldPublish() }
       }
       steps {
         dir (env.REPO_DIR) {
