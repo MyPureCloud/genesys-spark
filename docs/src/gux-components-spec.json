@@ -183,7 +183,19 @@
       { "name": "rating", "type": "text" },
       { "name": "max-rating", "type": "text" },
       { "name": "allow-half-ratings", "type": "checkbox" }
-    ]
+    ],
+    "events": [{ "name": "update", "description": "rating value changed" }]
+  },
+  "gux-slider": {
+    "attributes": [
+      { "name": "min", "type": "text" },
+      { "name": "max", "type": "text" },
+      { "name": "step", "type": "text" },
+      { "name": "value", "type": "text" },
+      { "name": "is-percentage", "type": "checkbox" },
+      { "name": "display-text-box", "type": "checkbox" }
+    ],
+    "events": [{ "name": "update", "description": "slider value changed" }]
   },
 
   "gux-list-item": {

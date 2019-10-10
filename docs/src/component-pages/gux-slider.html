@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>gux-slider</title>
+  </head>
+  <body>
+    <script src="${CDN_URL}index.js"></script>
+    <script>
+      webcomponentsDocsMain(`
+<gux-slider
+    min=0
+    max=10
+    step=1
+    value=3
+    is-percentage="true"
+></gux-slider>
+
+<gux-slider
+    min=0
+    max=3
+    step=1
+    value=2
+    display-text-box="false"
+></gux-slider>
+`);
+    </script>
+  </body>
+</html>
