@@ -168,12 +168,31 @@
       { "name": "max", "type": "text" }
     ]
   },
+  "gux-radio": {
+    "attributes": [
+      { "name": "value", "type": "text" },
+      { "name": "disabled", "type": "checkbox" }
+    ],
+    "events": [
+      { "name": "check", "description": "Radio button checked state changed" }
+    ]
+  },
 
   "gux-list-item": {
     "hidePage": true,
     "attributes": [{ "name": "disabled", "type": "checkbox" }],
     "events": [
       { "name": "press", "description": "list item selected within list" }
+    ]
+  },
+  "gux-radio-group": {
+    "hidePage": true,
+    "attributes": [{ "name": "name", "type": "text" }],
+    "events": [
+      {
+        "name": "input",
+        "description": "Radio selection state is changed inside the group"
+      }
     ]
   }
 }
