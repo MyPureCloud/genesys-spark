@@ -22,15 +22,24 @@ iframe {
 nav {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #dae1e8;
+    font-family: Roboto, sans-serif;
 
     header {
-        background-color: #ccc;
         font-size: 18px;
         padding: 12px 15px 10px 15px;
     }
 
     a {
-        padding: 5px 10px;
+        line-height: 32px;
+        padding: 0 16px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #444a52;
+
+        &:hover {
+            color: #fdfdfd;
+            background-color: #2a60c8;
+        }
     }
 }
