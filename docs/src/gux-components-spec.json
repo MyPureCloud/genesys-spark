@@ -197,6 +197,12 @@
     ],
     "events": [{ "name": "update", "description": "slider value changed" }]
   },
+  "gux-switch": {
+    "attributes": [{ "name": "selected-value", "type": "text" }],
+    "events": [
+      { "name": "selectionChanged", "description": "switch state was changed" }
+    ]
+  },
 
   "gux-list-item": {
     "hidePage": true,
