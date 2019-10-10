@@ -177,6 +177,14 @@
       { "name": "check", "description": "Radio button checked state changed" }
     ]
   },
+  "gux-rating": {
+    "attributes": [
+      { "name": "disabled", "type": "checkbox" },
+      { "name": "rating", "type": "text" },
+      { "name": "max-rating", "type": "text" },
+      { "name": "allow-half-ratings", "type": "checkbox" }
+    ]
+  },
 
   "gux-list-item": {
     "hidePage": true,
