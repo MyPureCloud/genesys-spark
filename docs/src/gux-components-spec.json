@@ -212,6 +212,24 @@
     ],
     "events": [{ "name": "check", "description": "toggle state changed" }]
   },
+  "gux-tooltip": {
+    "attributes": [
+      { "name": "text", "type": "text" },
+      { "name": "for", "type": "text" },
+      { "name": "delay", "type": "text" },
+      { "name": "is-shown", "type": "checkbox" }
+    ],
+    "events": [
+      {
+        "name": "hidden",
+        "description": "fired when tooltip moves to hidden state"
+      },
+      {
+        "name": "shown",
+        "description": "fired when tooltip moves to visible state"
+      }
+    ]
+  },
 
   "gux-list-item": {
     "hidePage": true,
