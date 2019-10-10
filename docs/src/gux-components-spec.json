@@ -203,6 +203,15 @@
       { "name": "selectionChanged", "description": "switch state was changed" }
     ]
   },
+  "gux-toggle": {
+    "attributes": [
+      { "name": "checked", "type": "checkbox" },
+      { "name": "disabled", "type": "checkbox" },
+      { "name": "checked-label", "type": "select", "options": ["on", "off"] },
+      { "name": "unchecked-label", "type": "select", "options": ["on", "off"] }
+    ],
+    "events": [{ "name": "check", "description": "toggle state changed" }]
+  },
 
   "gux-list-item": {
     "hidePage": true,
