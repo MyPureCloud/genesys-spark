@@ -162,6 +162,13 @@
   },
   "gux-page-loading-spinner": {},
   "gux-panel-frame": {},
+  "gux-radial-progress": {
+    "attributes": [
+      { "name": "value", "type": "text" },
+      { "name": "max", "type": "text" }
+    ]
+  },
+
   "gux-list-item": {
     "hidePage": true,
     "attributes": [{ "name": "disabled", "type": "checkbox" }],
