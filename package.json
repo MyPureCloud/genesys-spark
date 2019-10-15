@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "description": "Common webcomponents",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -38,8 +38,7 @@
   },
   "dependencies": {
     "intl-messageformat": "^2.2.0",
-    "standard-version": "^7.0.0",
-    "webpack-cli": "^3.3.9"
+    "standard-version": "^7.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.6.1",
@@ -70,7 +69,6 @@
     "cheerio": "^1.0.0-rc.3",
     "commitizen": "^3.1.1",
     "concurrently": "^4.1.0",
-    "copy-webpack-plugin": "^5.0.4",
     "cz-conventional-changelog": "^2.1.0",
     "glob": "^7.1.4",
     "handlebars": "^4.1.2",
@@ -86,7 +84,6 @@
     "lit-html": "^1.0.0",
     "markdown-loader": "^4.0.0",
     "moment": "^2.24.0",
-    "monaco-editor-webpack-plugin": "^1.7.0",
     "pixelmatch": "4.0.2",
     "polymer-webpack-loader": "^2.0.3",
     "prettier": "^1.17.1",
