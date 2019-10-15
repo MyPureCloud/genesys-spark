@@ -1,13 +1,15 @@
-@border: 1px solid #c3cad4;
-@soft-border: 1px solid #e4e9f0;
+@border : 1px solid #c3cad4;
+@soft-border: 1px solid #dae1e8;
 
 html,
 body {
     padding: 0;
     margin: 0;
     height: 100%;
-    width:100%;
+    width: 100%;
     background-color: #fdfdfd;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
 }
 
 .component-viewer.content {
@@ -16,37 +18,37 @@ body {
     height: 100%;
 }
 
-.component-viewer > .left-column,
-.component-viewer > .right-column {
+.component-viewer>.left-column,
+.component-viewer>.right-column {
     display: flex;
     flex-direction: column;
 }
 
-.component-viewer > .left-column {
+.component-viewer>.left-column {
     width: 600px;
     border-right: @border;
 
-    > .preview {
+    >.preview {
+        position: relative;
         flex-grow: 1;
         border-bottom: @border;
         padding: 27px 30px;
         overflow-y: auto;
     }
 
-    > .editor {
+    >.editor {
         height: 400px;
     }
 }
 
-.component-viewer > .right-column {
+.component-viewer>.right-column {
     flex-grow: 1;
-    font-family: sans-serif;
+    overflow: auto;
     line-height: 1.4em;
     color: #444a52;
-    font-size: 16px;
 
     .title {
-        font-size: 18px;
+        font-size: 14px;
         padding: 5px 0;
         border-bottom: @soft-border;
         margin: 0 0 10px -7px;
@@ -72,30 +74,29 @@ body {
     }
 
     .attribute-group label {
-      cursor: pointer;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 7px;
-
-      span {
-        min-width: 100px;
-        flex-grow: 0;
-      }
-
-      select,
-      textarea,
-      input:not([type='checkbox']) {
-        flex-grow: 1;
-        padding: 7px 10px;
-        border-radius: 5px;
-        border: @border;
-      }
-
-      select,
-      input[type="checkbox"] {
         cursor: pointer;
-      }
-}
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 7px;
 
+        span {
+            min-width: 100px;
+            flex-grow: 0;
+        }
+
+        select,
+        textarea,
+        input:not([type='checkbox']) {
+            flex-grow: 1;
+            padding: 7px 10px;
+            border-radius: 5px;
+            border: @border;
+        }
+
+        select,
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+    }
 }

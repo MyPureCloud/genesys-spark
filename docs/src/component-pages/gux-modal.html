@@ -7,26 +7,42 @@
     <script>
       webcomponentsDocsMain(
         `
-<gux-button id="open-modal" text="Open" accent="primary"></gux-button>
+<gux-button id="open-modal" accent="primary">Show Modal</gux-button>
 <gux-modal
     id="modal-example"
+    class="hidden"
     size="small"
     modalTitle="Modal Header">
 
     <div slot="modal-content">This contains the modal content.</div>
     <div slot="additional-buttons">
-        <gux-button title='Button' text='Text' accent='primary'></gux-button>
+        <gux-button title='Button' accent='primary'>Accept</gux-button>
     </div>
 </gux-modal>
-`,
-        function() {
-          let button = document.getElementById('open-modal');
-          let modal = document.getElementById('modal-example');
-          if (button && modal) {
-            button.addEventListener('click', () => (modal.active = true));
-          }
-        }
-      );
+<!--
+let button = document.getElementById('open-modal');
+let modal = document.getElementById('modal-example');
+if (button && modal) {
+    button.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+    });
+    modal.addEventListener('close', () => {
+        modal.classList.add('hidden');
+    });
+}
+-->
+`, function() {
+    let button = document.getElementById('open-modal');
+    let modal = document.getElementById('modal-example');
+    if (button && modal) {
+        button.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+        modal.addEventListener('close', () => {
+            modal.classList.add('hidden');
+        });
+    }
+});
     </script>
   </body>
 </html>
