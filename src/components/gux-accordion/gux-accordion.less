@@ -1,27 +1,33 @@
 // Variables part
 
 gux-accordion {
-  ul.gux-accordion {
-    list-style: none;
+  .gux-accordion {
     padding: 0;
     margin: 0;
     .section {
       .header {
         box-sizing: border-box;
         height: 40px;
-        line-height: 40px;
-        font-weight: bold;
-        padding-left: 16px;
-        cursor: pointer;
         button {
-          cursor: pointer;
-          float: right;
-          padding: 0 12px;
-          height: 39px;
+          font-family: inherit;
+          font-size: inherit;
+          line-height: 40px;
+          font-weight: bold;
           border: none;
           background: none;
           display: block;
-          outline: none;
+          cursor: pointer;
+          width: 100%;
+          text-align: left;
+          padding: 0;
+          .heading-text {
+            padding: 0 0 0 16px;
+          }
+        }
+        .toggle-arrow {
+          float: right;
+          padding: 0 12px;
+          height: 39px;
           font-size: 16px;
         }
       }
@@ -32,7 +38,7 @@ gux-accordion {
       }
       &.opened {
         .header {
-          button {
+          .toggle-arrow {
             transform: rotate(180deg);
           }
         }
@@ -47,17 +53,14 @@ gux-accordion {
 // Theming
 // Light
 .gux-accordion-light-theme {
-  ul.gux-accordion {
+  .gux-accordion {
     background-color: @gux-off-white-bg;
     .section {
       color: @gux-grey-type;
       .header {
         border-top: 1px solid @gux-border;
-        button {
-          color: @gux-grey-type;
-        }
         &:hover {
-          button {
+          .toggle-arrow {
             color: @gux-dark-blue;
           }
         }
@@ -94,11 +97,11 @@ gux-accordion.gux-light-theme {
       color: @gux-off-white-type;
       .header {
         border-top: 1px solid @gux-grey-1;
-        button {
+        .toggle-arrow {
           color: @gux-off-white-type;
         }
         &:hover {
-          button {
+          .toggle-arrow {
             color: @gux-blue;
           }
         }

@@ -27,7 +27,7 @@ describe('gux-accordion', () => {
     </gux-accordion>
     `);
     element = await page.find('gux-accordion');
-    const sections = await element.findAll('gux-accordion li');
+    const sections = await element.findAll('gux-accordion section');
     expect(sections.length).toEqual(slots.length);
   });
   it('opens, closes section', async () => {
@@ -40,7 +40,7 @@ describe('gux-accordion', () => {
     </gux-accordion>
     `);
     element = await page.find('gux-accordion');
-    const section = await element.find('gux-accordion li');
+    const section = await element.find('gux-accordion section');
     const header = await section.find('.header');
     expect(section.className).toEqual('section');
     await header.click();

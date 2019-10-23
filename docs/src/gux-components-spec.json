@@ -1,5 +1,7 @@
 {
-  "gux-accordion": {},
+  "gux-accordion": {
+    "attributes": [{ "name": "heading-level", "type": "text" }]
+  },
   "gux-button": {
     "attributes": [
       { "name": "disabled", "type": "checkbox" },

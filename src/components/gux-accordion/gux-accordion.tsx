@@ -1,9 +1,13 @@
-import { Component, Element, h, Method } from '@stencil/core';
+import { Component, Element, h, Method, Prop } from '@stencil/core';
 import { KeyCode } from '../../common-enums';
 
 interface ISection {
   slotName: string;
   slotRef: HTMLElement;
+}
+
+function getToggleButton(slot: HTMLElement): HTMLElement {
+  return slot.children[0].children[0] as HTMLElement;
 }
 
 @Component({
@@ -15,6 +19,15 @@ export class GuxAccordion {
   root: HTMLGuxAccordionElement;
 
   sections: ISection[] = [];
+
+  /**
+   * The heading level within the page the
+   * accordion section headers should be set to.
+   * heading-level="3" woudl be equivalent to an
+   * h3 element.
+   */
+  @Prop()
+  headingLevel: number = null;
 
   initializeSections() {
     const children = Array.from(this.root.children);
@@ -106,54 +119,53 @@ export class GuxAccordion {
 
   onKeyDown(event: KeyboardEvent, slotName: string) {
     switch (event.keyCode) {
-      case KeyCode.Enter:
-      case KeyCode.Space:
-        this.toggle(slotName);
-        break;
       case KeyCode.Up:
         const previousSlot = this.getPreviousSlot(slotName);
-        previousSlot.focus();
+        getToggleButton(previousSlot).focus();
         break;
       case KeyCode.Down:
         const nextSlot = this.getNextSlot(slotName);
-        nextSlot.focus();
+        getToggleButton(nextSlot).focus();
         break;
       case KeyCode.End:
         const lastSlot = this.sections[this.sections.length - 1].slotRef;
-        lastSlot.focus();
+        getToggleButton(lastSlot).focus();
         break;
       case KeyCode.Home:
         const firstSlot = this.sections[0].slotRef;
-        firstSlot.focus();
+        getToggleButton(firstSlot).focus();
         break;
     }
   }
 
   render() {
     return (
-      <ul class="gux-accordion">
+      <div class="gux-accordion">
         {this.sections.map(slot => (
-          <li
+          <section
             class="section"
-            ref={el => (slot.slotRef = el)}
-            tabindex="0"
             onKeyDown={e => this.onKeyDown(e, slot.slotName)}
+            ref={el => (slot.slotRef = el)}
           >
-            <div class="header" onClick={() => this.toggle(slot.slotName)}>
-              <span>{slot.slotName}</span>
-              <button
-                aria-hidden="true"
-                type="button"
-                class="genesys-icon-dropdown-arrow"
-                tabindex="-1"
-              />
+            <div
+              aria-role="heading"
+              aria-level={this.headingLevel}
+              class="header"
+            >
+              <button type="button" onClick={() => this.toggle(slot.slotName)}>
+                <span class="heading-text">{slot.slotName}</span>
+                <span
+                  class="toggle-arrow genesys-icon-dropdown-arrow"
+                  aria-hidden="true"
+                />
+              </button>
             </div>
             <div class="content">
               <slot name={slot.slotName} />
             </div>
-          </li>
+          </section>
         ))}
-      </ul>
+      </div>
     );
   }
 }

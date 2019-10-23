@@ -1,5 +1,5 @@
-import { GuxDatepicker } from '../gux-datepicker';
 import { CalendarModes, KeyCode } from '../../../common-enums';
+import { GuxDatepicker } from '../gux-datepicker';
 
 describe('gux-datepicker', () => {
   let component: GuxDatepicker;
