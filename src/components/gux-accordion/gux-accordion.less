@@ -1,0 +1,136 @@
+// Variables part
+
+gux-accordion {
+  .gux-accordion {
+    padding: 0;
+    margin: 0;
+    .section {
+      .header {
+        box-sizing: border-box;
+        height: 40px;
+        button {
+          font-family: inherit;
+          font-size: inherit;
+          line-height: 40px;
+          font-weight: bold;
+          border: none;
+          background: none;
+          display: block;
+          cursor: pointer;
+          width: 100%;
+          text-align: left;
+          padding: 0;
+          .heading-text {
+            padding: 0 0 0 16px;
+          }
+        }
+        .toggle-arrow {
+          float: right;
+          padding: 0 12px;
+          height: 39px;
+          font-size: 16px;
+        }
+      }
+      .content {
+        box-sizing: border-box;
+        display: none;
+        padding: 16px;
+      }
+      &.opened {
+        .header {
+          .toggle-arrow {
+            transform: rotate(180deg);
+          }
+        }
+        .content {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Theming
+// Light
+.gux-accordion-light-theme {
+  .gux-accordion {
+    background-color: @gux-off-white-bg;
+    .section {
+      color: @gux-grey-type;
+      .header {
+        border-top: 1px solid @gux-border;
+        &:hover {
+          .toggle-arrow {
+            color: @gux-dark-blue;
+          }
+        }
+      }
+      &.opened {
+        .header {
+          border-bottom: 1px solid @gux-border;
+        }
+      }
+      &:last-of-type {
+        .header {
+          border-bottom: 1px solid @gux-border;
+        }
+        .content {
+          border-bottom: 1px solid @gux-border;
+        }
+      }
+    }
+  }
+}
+.gux-light-theme {
+  gux-accordion {
+    .gux-accordion-light-theme();
+  }
+}
+gux-accordion.gux-light-theme {
+  .gux-accordion-light-theme();
+}
+// Dark
+.gux-accordion-dark-theme {
+  ul.gux-accordion {
+    background-color: @gux-panel;
+    .section {
+      color: @gux-off-white-type;
+      .header {
+        border-top: 1px solid @gux-grey-1;
+        .toggle-arrow {
+          color: @gux-off-white-type;
+        }
+        &:hover {
+          .toggle-arrow {
+            color: @gux-blue;
+          }
+        }
+      }
+      &.opened {
+        .header {
+          border-bottom: 1px solid @gux-grey-1;
+        }
+      }
+      &:last-of-type {
+        .header {
+          border-bottom: 1px solid @gux-grey-1;
+        }
+        .content {
+          border-bottom: 1px solid @gux-grey-1;
+        }
+      }
+    }
+  }
+}
+.gux-dark-theme {
+  gux-accordion {
+    .gux-accordion-dark-theme();
+  }
+}
+gux-accordion.gux-dark-theme {
+  .gux-accordion-dark-theme();
+}
+// Default
+gux-accordion {
+  .gux-accordion-light-theme();
+}

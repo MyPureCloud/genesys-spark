@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const stencil = require('@stencil/webpack');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -56,6 +57,16 @@ module.exports = {
         from: 'src/component-pages/*.html',
         flatten: true,
         transform: injectCdnUrl
+      },
+      {
+        from: '../src/components/**/example.html',
+        transformPath(targetPath) {
+          const segments = targetPath.split(path.sep);
+          const component = segments[segments.length - 2];
+          console.log('PATH', targetPath, component);
+          return `${component}.html`;
+        },
+        transform: generateComponentPage
       }
     ])
   ],
@@ -65,6 +76,16 @@ module.exports = {
     serveIndex: true
   }
 };
+
+const componentPageTemplate = fs
+  .readFileSync('src/component-pages/template.html')
+  .toString();
+
+function generateComponentPage(exampleMarkup) {
+  const withCdn = injectCdnUrl(componentPageTemplate);
+  const sanitizedMarkup = exampleMarkup.toString().replace(/`/g, '\\`');
+  return withCdn.replace('${EXAMPLE_HTML}', sanitizedMarkup);
+}
 
 function injectCdnUrl(content) {
   let htmlCdnUrl = CDN_URL;
