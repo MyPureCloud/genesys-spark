@@ -1,15 +1,8 @@
-<html>
-  <head>
-    <title>gux-action-button</title>
-  </head>
-  <body>
-    <script src="${CDN_URL}index.js"></script>
-    <script>
-      webcomponentsDocsMain(`
 <gux-action-button text="Primary" accent="primary" is-open="true">
     <gux-action-item id="listItem1" text="test" value="test" onclick="alert('listItem1 clicked')"></gux-action-item>
     <gux-action-item id="listItem2" text="test2" value="test2"></gux-action-item>
     <gux-action-item text="test3" value="test3" disabled="true"></gux-action-item>
+    <gux-list-divider></gux-list-divider>
     <gux-action-item><span>I am a span</span></gux-action-item>
 </gux-action-button>
 
@@ -17,9 +10,6 @@
     <gux-action-item id="listItem1" text="test" value="test" onclick="alert('listItem1 clicked')"></gux-action-item>
     <gux-action-item id="listItem2" text="test2" value="test2"></gux-action-item>
     <gux-action-item text="test3" value="test3" disabled="true"></gux-action-item>
+    <gux-list-divider></gux-list-divider>
     <gux-action-item><span>I am a span</span></gux-action-item>
 </gux-action-button>
-`);
-    </script>
-  </body>
-</html>
