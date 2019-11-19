@@ -67,6 +67,9 @@ module.exports = {
           return `${component}.html`;
         },
         transform: generateComponentPage
+      },
+      {
+        from: '../dist/svg-icons/*.svg'
       }
     ])
   ],
