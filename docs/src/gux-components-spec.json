@@ -52,7 +52,12 @@
     ]
   },
   "gux-advanced-dropdown": {
-    "attributes": [{ "name": "disabled", "type": "checkbox" }],
+    "attributes": [
+      { "name": "disabled", "type": "checkbox" },
+      { "name": "no-filter", "type": "checkbox" },
+      { "name": "filter-debounce-timeout", "type": "text" },
+      { "name": "placeholder", "type": "text" }
+    ],
     "events": [
       { "name": "input", "description": "Item from dropdown selected" },
       { "name": "filter", "description": "Filter value changed" }
@@ -248,6 +253,14 @@
         "name": "input",
         "description": "Radio selection state is changed inside the group"
       }
+    ]
+  },
+  "gux-dropdown-option": {
+    "hidePage": true,
+    "attributes": [
+      { "name": "selected", "type": "checkbox" },
+      { "name": "value", "type": "text" },
+      { "name": "text", "type": "text" }
     ]
   }
 }
