@@ -13,7 +13,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run i18n && npm run icons && npm run stencil",
+    "build": "npm run i18n && npm run icons && npm run stencil && npm run docs",
     "commit": "git-cz",
     "docs": "cd ./docs && npm run build",
     "docs.dev": "cd ./docs && npm run start",
