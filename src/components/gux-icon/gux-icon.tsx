@@ -12,7 +12,7 @@ export class GuxIcon {
   iconname: string;
 
   /**
-   * Indicate wether the icon should be ignored by accessibility tools or not
+   * Indicate whether the icon should be ignored by accessibility tools or not
    */
   @Prop()
   decorative: boolean = false;
