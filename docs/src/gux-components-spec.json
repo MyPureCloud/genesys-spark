@@ -172,10 +172,9 @@
   },
   "gux-icon": {
     "attributes": [
-      { "name": "iconname", "type": "text" },
+      { "name": "icon-name", "type": "text" },
       { "name": "decorative", "type": "checkbox" },
-      { "name": "label", "type": "text" },
-      { "name": "size", "type": "text" }
+      { "name": "screenreader-text", "type": "text" }
     ]
   },
   "gux-radio": {

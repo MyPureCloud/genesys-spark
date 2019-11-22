@@ -18,7 +18,7 @@
     "docs": "cd ./docs && npm run build",
     "docs.dev": "cd ./docs && npm run start",
     "release": "standard-version",
-    "stencil": "stencil build --docs --prod",
+    "stencil": "stencil build --prod",
     "stencil.dev": "stencil build --dev --watch",
     "test.unit": "stencil test --spec",
     "test.e2e": "stencil test --e2e",
