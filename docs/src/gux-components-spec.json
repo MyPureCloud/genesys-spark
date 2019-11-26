@@ -52,7 +52,12 @@
     ]
   },
   "gux-advanced-dropdown": {
-    "attributes": [{ "name": "disabled", "type": "checkbox" }],
+    "attributes": [
+      { "name": "disabled", "type": "checkbox" },
+      { "name": "no-filter", "type": "checkbox" },
+      { "name": "filter-debounce-timeout", "type": "text" },
+      { "name": "placeholder", "type": "text" }
+    ],
     "events": [
       { "name": "input", "description": "Item from dropdown selected" },
       { "name": "filter", "description": "Filter value changed" }
@@ -126,7 +131,13 @@
     ]
   },
   "gux-list": {
-    "attributes": [{ "name": "items", "type": "json" }]
+    "attributes": [{ "name": "highlight", "type": "text" }],
+    "events": [
+      {
+        "name": "changed",
+        "description": "Triggered when the list's selection is changed"
+      }
+    ]
   },
   "gux-modal": {
     "attributes": [
@@ -235,7 +246,11 @@
 
   "gux-list-item": {
     "hidePage": true,
-    "attributes": [{ "name": "disabled", "type": "checkbox" }],
+    "attributes": [
+      { "name": "disabled", "type": "checkbox" },
+      { "name": "text", "type": "text" },
+      { "name": "value", "type": "text" }
+    ],
     "events": [
       { "name": "press", "description": "list item selected within list" }
     ]
@@ -248,6 +263,14 @@
         "name": "input",
         "description": "Radio selection state is changed inside the group"
       }
+    ]
+  },
+  "gux-dropdown-option": {
+    "hidePage": true,
+    "attributes": [
+      { "name": "selected", "type": "checkbox" },
+      { "name": "value", "type": "text" },
+      { "name": "text", "type": "text" }
     ]
   }
 }
