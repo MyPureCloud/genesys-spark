@@ -94,7 +94,6 @@ export class GuxActionButton {
   }
 
   onActionClick() {
-    this.toggle();
     this.actionClick.emit();
   }
 

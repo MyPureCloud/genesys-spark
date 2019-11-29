@@ -35,8 +35,9 @@ describe('gux-action-button', () => {
     const page = await newE2EPage();
     await page.setContent('<gux-action-button></gux-action-button>');
     const element = await page.find('gux-action-button');
+    const dropdownElm = await element.find('.gux-dropdown');
     const onOpen = await element.spyOnEvent('open');
-    await element.click();
+    await dropdownElm.click();
     expect(onOpen).toHaveReceivedEventTimes(1);
   });
 
