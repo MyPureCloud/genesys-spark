@@ -25,7 +25,7 @@ export class GuxIcon {
 
   componentDidLoad() {
     if (!this.decorative && !this.screenreaderText) {
-      console.error(
+      throw new Error(
         '[gux-icon] No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true'
       );
     }
