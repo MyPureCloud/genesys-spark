@@ -19,6 +19,14 @@ gux-color-select {
     align-content: flex-start;
     margin: 0;
     padding: 0 20px 8px;
+
+    > * {
+      display: none;
+    }
+
+    > gux-color-option {
+      display: inline-block;
+    }
   }
 }
 
@@ -26,35 +34,35 @@ gux-color-select {
 
 // Dark
 .gux-color-select-dark-theme {
-    color: @gux-off-white;
-};
+  color: @gux-off-white;
+}
 
 .gux-dark-theme {
-    gux-color-select {
-        .gux-color-select-dark-theme();
-    }
+  gux-color-select {
+    .gux-color-select-dark-theme();
+  }
 }
 
 gux-color-select.gux-dark-theme {
-    .gux-color-select-dark-theme();
+  .gux-color-select-dark-theme();
 }
 
 // Light
 .gux-color-select-light-theme {
-    color: @gux-grey-2;
-};
+  color: @gux-grey-2;
+}
 
 .gux-light-theme {
-    gux-color-select {
-        .gux-color-select-light-theme();
-    }
+  gux-color-select {
+    .gux-color-select-light-theme();
+  }
 }
 
 gux-color-select.gux-light-theme {
-    .gux-color-select-light-theme();
+  .gux-color-select-light-theme();
 }
 
 // Default Theme
 gux-color-select {
-    .gux-color-select-light-theme();
+  .gux-color-select-light-theme();
 }

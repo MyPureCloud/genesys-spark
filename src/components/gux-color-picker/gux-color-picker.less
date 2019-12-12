@@ -1,5 +1,5 @@
 // Variables part
-@background: #F9FAFB;
+@background: #f9fafb;
 
 // Style
 gux-color-picker {
@@ -7,6 +7,12 @@ gux-color-picker {
     position: relative;
     display: inline-block;
     width: 160px;
+  }
+
+  // Don't render options as direct children of the picker
+  // They'll render a slot components when open
+  > gux-color-option {
+    display: none;
   }
 
   .gux-color-picker-main-element {
@@ -101,34 +107,34 @@ gux-color-picker {
   i.genesys-icon-dropdown-arrow {
     color: @gux-off-white;
   }
-};
+}
 
 .gux-dark-theme {
-    gux-color-picker {
-        .gux-color-picker-dark-theme();
-    }
+  gux-color-picker {
+    .gux-color-picker-dark-theme();
+  }
 }
 
 gux-color-picker.gux-dark-theme {
-    .gux-color-picker-dark-theme();
+  .gux-color-picker-dark-theme();
 }
 
 // Light
 .gux-color-picker-light-theme {
-    color: @gux-grey-2;
-};
+  color: @gux-grey-2;
+}
 
 .gux-light-theme {
-    gux-color-picker {
-        .gux-color-picker-light-theme();
-    }
+  gux-color-picker {
+    .gux-color-picker-light-theme();
+  }
 }
 
 gux-color-picker.gux-light-theme {
-    .gux-color-picker-light-theme();
+  .gux-color-picker-light-theme();
 }
 
 // Default Theme
 gux-color-picker {
-    .gux-color-picker-light-theme();
+  .gux-color-picker-light-theme();
 }

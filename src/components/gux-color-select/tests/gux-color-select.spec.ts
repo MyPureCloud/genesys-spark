@@ -13,10 +13,8 @@ describe('gux-color-select', () => {
 
     it('returns number of tiles for custom and blank', () => {
       const component = new GuxColorSelect();
-      expect(component.renderBlankTiles().length).toEqual(10);
-      component.customColors = ['#000', '#fff'];
-      expect(component.renderCustomTiles().length).toEqual(2);
-      expect(component.renderBlankTiles().length).toEqual(8);
+      expect(component.renderDefaultTiles().length).toEqual(10);
+      expect(component.renderBlankTiles().length).toEqual(0);
     });
   });
 });
