@@ -16,7 +16,7 @@ export const config: Config = {
       src: '../build/i18n'
     },
     {
-      dest: '../svg-icons',
+      dest: '../genesys-webcomponents/svg-icons',
       src: '../build/svg-icons'
     }
   ],

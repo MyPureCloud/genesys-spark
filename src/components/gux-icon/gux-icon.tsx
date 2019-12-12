@@ -1,4 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
+import { getAssetPath } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-icon.less',
@@ -32,9 +33,10 @@ export class GuxIcon {
   }
 
   render() {
+    const url = getAssetPath('svg-icons/genesys-icons.svg');
     return (
       <svg aria-hidden={this.decorative} aria-label={this.screenreaderText}>
-        <use xlinkHref={`svg-icons/genesys-icons.svg#${this.iconName}`} />
+        <use xlinkHref={`${url}#${this.iconName}`} />
       </svg>
     );
   }
