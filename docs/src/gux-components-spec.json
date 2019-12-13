@@ -63,6 +63,18 @@
       { "name": "filter", "description": "Filter value changed" }
     ]
   },
+  "gux-calendar": {
+    "attributes": [
+      { "name": "mode", "type": "select", "options": ["single", "range"] },
+      { "name": "value", "type": "string" },
+      { "name": "numberOfMonths", "type": "text" },
+      { "name": "locale", "type": "text" },
+      { "name": "firstDayOfWeek", "type": "text" }
+    ],
+    "events": [
+      { "name": "input", "description": "Triggered when value is changed" }
+    ]
+  },
   "gux-checkbox": {
     "attributes": [
       { "name": "checked", "type": "checkbox" },
@@ -92,6 +104,19 @@
     "attributes": [{ "name": "value", "type": "text" }],
     "events": [
       { "name": "input", "description": "Triggered when a color is clicked" }
+    ]
+  },
+  "gux-datepicker": {
+    "attributes": [
+      { "name": "mode", "type": "select", "options": ["single", "range"] },
+      { "name": "value", "type": "string" },
+      { "name": "format", "type": "string" },
+      { "name": "numberOfMonths", "type": "text" },
+      { "name": "locale", "type": "text" },
+      { "name": "firstDayOfWeek", "type": "text" }
+    ],
+    "events": [
+      { "name": "input", "description": "Triggered when value is changed" }
     ]
   },
   "gux-disclosure-button": {
