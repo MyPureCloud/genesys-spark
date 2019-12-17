@@ -1,0 +1,24 @@
+
+<h1> Accessibility </h1>
+<gux-icon class="example" icon-name="add-user" decorative="true"></gux-icon>
+<p> Use <strong>decorative</strong> property if the icon does not used for interacting with the page</p>
+
+<gux-icon class="example" icon-name="add-user" screenreader-text="add John Smith to contact list"></gux-icon>
+<p> Use <strong>label</strong> property is used to perform an action on the page (NOTE: in an actual production use-case this label should be localized)</p>
+
+<h1> Styling </h1>
+<gux-icon id="styled" icon-name="add-user" decorative="true"></gux-icon>
+<p> You can use the <strong>color</strong>, <strong>height</strong> and <strong>width</strong> properties to style your icon </p>
+
+<style>
+  #styled {
+    color: #ff4f1f;
+    height: 100px;
+    width: 100px;
+  }
+
+  .example {
+    width: 50px;
+    height: 50px;
+  }
+</style>

@@ -177,6 +177,13 @@
       { "name": "max", "type": "text" }
     ]
   },
+  "gux-icon": {
+    "attributes": [
+      { "name": "icon-name", "type": "text" },
+      { "name": "decorative", "type": "checkbox" },
+      { "name": "screenreader-text", "type": "text" }
+    ]
+  },
   "gux-radio": {
     "attributes": [
       { "name": "value", "type": "text" },
