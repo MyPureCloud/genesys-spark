@@ -5,7 +5,7 @@
 	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <g>
 	<g>
-		<path fill="#3D464D" d="M5,7h7V0H5V7z M1,15h7V8H1V15z M9,15h7V8H9V15z"/>
+		<path d="M5,7h7V0H5V7z M1,15h7V8H1V15z M9,15h7V8H9V15z"/>
 	</g>
 </g>
 </svg>

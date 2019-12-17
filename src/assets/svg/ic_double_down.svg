@@ -15,17 +15,17 @@
 	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <switch>
 	<foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
-		<i:pgfRef  xlink:href="#adobe_illustrator_pgf">
-		</i:pgfRef>
+		<pgfRef  xlink:href="#adobe_illustrator_pgf">
+		</pgfRef>
 	</foreignObject>
-	<g i:extraneous="self">
+	<g extraneous="self">
 		<g>
-			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#434951" points="8,11 4,7 2,7 8,13 14,7 12,7 			"/>
-			<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#434951" points="8,9 2,3 14,3 			"/>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" points="8,11 4,7 2,7 8,13 14,7 12,7 			"/>
+			<polygon fill-rule="evenodd" clip-rule="evenodd" points="8,9 2,3 14,3 			"/>
 		</g>
 	</g>
 </switch>
-<i:pgf  id="adobe_illustrator_pgf">
+<pgf  id="adobe_illustrator_pgf">
 	<![CDATA[
 	eJzsvYmOJMmRJfgF9g++WDRA9g6jTU1ND+MOFgiPg8MB2Syw2NO9aAwK2VlJMqfzKGRlsZf79Svv
 iYiqmrtHVORRJLFdociMcHE1NTM9ROV4Ivp3/9sXX/7s+uu3//biZ/FqPkx/93c37148e//23c8P
@@ -2168,5 +2168,5 @@ Uhe0rRPJdVIssiTtfPGqDvLoLCRTVV2lsSTf9B8k2wLiqPk0Z6XQ1FuIJnEz0pLS2g42tWHupvbv
 8u/Xe//sCf2Kunv3drdu/fzw6fGnF4cnz44vdk+fH/7heDk8O8MDBcdfwZfl6cXx8xfnF8fL8y/O
 v0YKiDT2W7fe/9kHu/8H8HxbjQ==
 	]]>
-</i:pgf>
+</pgf>
 </svg>

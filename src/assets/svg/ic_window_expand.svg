@@ -5,13 +5,13 @@
 	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <g>
 	<g>
-		<path fill="#3D464D" d="M3,4v8h10V4H3z M11,10H5V6h6V10z"/>
+		<path d="M3,4v8h10V4H3z M11,10H5V6h6V10z"/>
 	</g>
 	<g>
-		<polygon fill="#3D464D" points="2,3 4,3 4,1 0,1 0,5 2,5 		"/>
-		<polygon fill="#3D464D" points="2,13 4,13 4,15 0,15 0,11 2,11 		"/>
-		<polygon fill="#3D464D" points="14,13 12,13 12,15 16,15 16,11 14,11 		"/>
-		<polygon fill="#3D464D" points="14,3 12,3 12,1 16,1 16,5 14,5 		"/>
+		<polygon points="2,3 4,3 4,1 0,1 0,5 2,5 		"/>
+		<polygon points="2,13 4,13 4,15 0,15 0,11 2,11 		"/>
+		<polygon points="14,13 12,13 12,15 16,15 16,11 14,11 		"/>
+		<polygon points="14,3 12,3 12,1 16,1 16,5 14,5 		"/>
 	</g>
 </g>
 </svg>

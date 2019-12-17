@@ -4,11 +4,11 @@
 <svg version="1.1" id="artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <g>
-	<rect x="1" y="1" fill="#3D464D" width="3" height="3"/>
-	<rect x="5" y="1" fill="#3D464D" width="10" height="3"/>
-	<rect x="1" y="6" fill="#3D464D" width="3" height="3"/>
-	<rect x="5" y="6" fill="#3D464D" width="10" height="3"/>
-	<rect x="1" y="11" fill="#3D464D" width="3" height="3"/>
-	<rect x="5" y="11" fill="#3D464D" width="10" height="3"/>
+	<rect x="1" y="1" width="3" height="3"/>
+	<rect x="5" y="1" width="10" height="3"/>
+	<rect x="1" y="6" width="3" height="3"/>
+	<rect x="5" y="6" width="10" height="3"/>
+	<rect x="1" y="11" width="3" height="3"/>
+	<rect x="5" y="11" width="10" height="3"/>
 </g>
 </svg>

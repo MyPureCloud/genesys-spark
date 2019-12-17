@@ -4,8 +4,8 @@
 <svg version="1.1" id="artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <g>
-	<polygon fill="#3D464D" points="0,4.53 0,12 7,15.732 7,8.273 	"/>
-	<polygon fill="#3D464D" points="15,4.545 8,8.288 8,15.732 15,12 	"/>
-	<polygon fill="#3D464D" points="14.406,3.706 7.458,0 0.523,3.698 7.473,7.414 	"/>
+	<polygon points="0,4.53 0,12 7,15.732 7,8.273 	"/>
+	<polygon points="15,4.545 8,8.288 8,15.732 15,12 	"/>
+	<polygon points="14.406,3.706 7.458,0 0.523,3.698 7.473,7.414 	"/>
 </g>
 </svg>

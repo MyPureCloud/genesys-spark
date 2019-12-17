@@ -6,11 +6,11 @@
 <g>
 	<g>
 		<g>
-			<path fill="#3D464D" d="M4,13V8h4.5V7.152L10.2,8H12v0.907l3,1.513V1h-1.5H12H4H1v13h3h4.5v-1H4z M13,2h1v1h-1V2z M13,4h1v1h-1V4
+			<path d="M4,13V8h4.5V7.152L10.2,8H12v0.907l3,1.513V1h-1.5H12H4H1v13h3h4.5v-1H4z M13,2h1v1h-1V2z M13,4h1v1h-1V4
 				z M13,6h1v1h-1V6z M13,8h1v1h-1V8z M4,2h8v5H4V2z M3,13H2v-1h1V13z M3,11H2v-1h1V11z M3,9H2V8h1V9z M3,7H2V6h1V7z M3,5H2V4h1V5z
 				 M3,3H2V2h1V3z"/>
 		</g>
-		<path fill="#3D464D" d="M9.5,15.75v-6.5l6.5,3.252L9.5,15.75z"/>
+		<path d="M9.5,15.75v-6.5l6.5,3.252L9.5,15.75z"/>
 	</g>
 </g>
 </svg>

@@ -3,6 +3,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#3D464D" points="11,6 10,5 8,7 6,5 5,6 7,8 5,10 6,11 8,9 10,11 11,10 9,8 
+<polygon fill-rule="evenodd" clip-rule="evenodd" points="11,6 10,5 8,7 6,5 5,6 7,8 5,10 6,11 8,9 10,11 11,10 9,8 
 	"/>
 </svg>

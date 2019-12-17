@@ -15,16 +15,16 @@
 	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <switch>
 	<foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
-		<i:pgfRef  xlink:href="#adobe_illustrator_pgf">
-		</i:pgfRef>
+		<pgfRef  xlink:href="#adobe_illustrator_pgf">
+		</pgfRef>
 	</foreignObject>
-	<g i:extraneous="self">
-		<path fill="#444A52" d="M4.933,8.067l-1.5-1.487l-1.43,1.414l1.499,1.504L4.933,8.067z M9,1H7v5l2-2V1z M9,10.115V8l5-5l-1-1L9,6
+	<g extraneous="self">
+		<path d="M4.933,8.067l-1.5-1.487l-1.43,1.414l1.499,1.504L4.933,8.067z M9,1H7v5l2-2V1z M9,10.115V8l5-5l-1-1L9,6
 			L7,8L5.938,9.062L4.5,10.5L2,13l1,1l2.499-2.498l2.439,2.447l0.002-0.006l0.004,0.006l5.94-5.955L12.502,6.58L9,10.115z M7,10.115
 			l-0.058-0.057L7,10V10.115z"/>
 	</g>
 </switch>
-<i:pgf  id="adobe_illustrator_pgf">
+<pgf  id="adobe_illustrator_pgf">
 	<![CDATA[
 	eJzsvYmOJMmRJfgF9g++WDRA9k5Fm5qaHsYdLBAeB4cDskmw2NO9aAwK2VlJMqfzKGRlsZf79Svv
 iYiqmrtHVORRJLFdociMcHE1NTM9ROV4Ivp3/9tvvvzi+uu3//bii3g1H6a/+7ubdy+evX/77mcH
@@ -2168,5 +2168,5 @@ Y0sq8/qyqh7NKfWn5Lda1lpIW9C6TijXUbHIorTzxas2yNFZSKaqtkqxJN/1HyjbHOJo+TRpJdfU
 e4hGcTfSnNLbDjatYR6m9vf5F+19cPaYflfd7du7Gzd+fvjk+LPzw5Onx+e7J88P/3i8HJ6d4ZGC
 46/gy/Lk/Pj5i2fnx8vzL559jRhgaeQ3bnzwsw93/w+Cq9sO
 	]]>
-</i:pgf>
+</pgf>
 </svg>

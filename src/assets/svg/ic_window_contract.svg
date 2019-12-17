@@ -4,6 +4,6 @@
 <svg version="1.1" id="artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <g>
-	<path fill="#3D464D" d="M13,12h3v-2h-5v5h2V12z M0,10v2h3v3h2v-5H0z M13,1h-2v5h5V4h-3V1z M3,4H0v2h5V1H3V4z"/>
+	<path d="M13,12h3v-2h-5v5h2V12z M0,10v2h3v3h2v-5H0z M13,1h-2v5h5V4h-3V1z M3,4H0v2h5V1H3V4z"/>
 </g>
 </svg>

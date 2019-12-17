@@ -4,7 +4,7 @@
 <svg version="1.1" id="artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
 <g>
-	<path fill="#3D464D" d="M14.9,8c0-3.811-3.089-6.9-6.9-6.9c-3.811,0-6.9,3.09-6.9,6.9s3.089,6.9,6.9,6.9
+	<path d="M14.9,8c0-3.811-3.089-6.9-6.9-6.9c-3.811,0-6.9,3.09-6.9,6.9s3.089,6.9,6.9,6.9
 		C11.811,14.9,14.9,11.811,14.9,8z M6,4.984l5,3.018l-5,3.014V4.984z"/>
 </g>
 </svg>
