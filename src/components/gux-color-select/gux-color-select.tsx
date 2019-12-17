@@ -1,8 +1,10 @@
 import {
   Component,
+  Element,
   Event,
   EventEmitter,
   h,
+  Listen,
   Prop,
   State,
   Watch
@@ -14,11 +16,8 @@ import { defaultColors } from './colors';
   tag: 'gux-color-select'
 })
 export class GuxColorSelect {
-  /**
-   * Indicates the custom Colors displayed in the matrix
-   */
-  @Prop()
-  customColors: string[] = [];
+  @Element()
+  element: HTMLElement;
 
   /**
    * Determines the state activeColor
@@ -52,36 +51,30 @@ export class GuxColorSelect {
     this.activeColor = newValue;
   }
 
+  @Listen('tileClick')
+  onClickHandler(ev: CustomEvent) {
+    this.onSelectColorHandler(ev.detail);
+  }
+
   renderDefaultTiles() {
     return defaultColors.map((color, index) => (
-      <gux-color-tile
+      <gux-color-option
         key={`${color}-${index}`}
         value={color}
         active={this.activeColor === color}
-        onTileClick={ev => this.onSelectColorHandler(ev.detail)}
-      />
-    ));
-  }
-
-  renderCustomTiles() {
-    return this.customColors.map((color, index) => (
-      <gux-color-tile
-        key={`custom-${color}-${index}`}
-        value={color}
-        active={this.activeColor === color}
-        onTileClick={ev => this.onSelectColorHandler(ev.detail)}
       />
     ));
   }
 
   renderBlankTiles() {
-    const maxNumberOfTiles = 20;
+    const rowWidth = 5;
     const blankTiles = [];
-    const blankTilesLength =
-      maxNumberOfTiles - defaultColors.length - this.customColors.length;
+    const hangingTiles =
+      (defaultColors.length + this.element.children.length) % rowWidth;
+    const blankTilesLength = hangingTiles === 0 ? 0 : rowWidth - hangingTiles;
     for (let i = 0; i < blankTilesLength; i += 1) {
       blankTiles.push(
-        <gux-color-tile key={`blank-tile-${i}`} aria-hidden="true" />
+        <gux-color-option key={`blank-tile-${i}`} aria-hidden="true" />
       );
     }
     return blankTiles;
@@ -92,7 +85,7 @@ export class GuxColorSelect {
       <div>
         <div class="gux-color-matrix">
           {this.renderDefaultTiles()}
-          {this.renderCustomTiles()}
+          <slot />
           {this.renderBlankTiles()}
         </div>
       </div>

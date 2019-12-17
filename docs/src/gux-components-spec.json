@@ -79,8 +79,7 @@
   "gux-color-picker": {
     "attributes": [
       { "name": "value", "type": "text" },
-      { "name": "disabled", "type": "checkbox" },
-      { "name": "custom-colors", "type": "json" }
+      { "name": "disabled", "type": "checkbox" }
     ],
     "events": [
       {
@@ -90,10 +89,7 @@
     ]
   },
   "gux-color-select": {
-    "attributes": [
-      { "name": "value", "type": "text" },
-      { "name": "custom-colors", "type": "json" }
-    ],
+    "attributes": [{ "name": "value", "type": "text" }],
     "events": [
       { "name": "input", "description": "Triggered when a color is clicked" }
     ]

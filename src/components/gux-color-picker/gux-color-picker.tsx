@@ -19,12 +19,6 @@ export class GuxColorPicker {
   root: HTMLGuxColorPickerElement;
 
   /**
-   * Indicates the custom Colors displayed in the color matrix dropdown
-   */
-  @Prop()
-  customColors: string[] = [];
-
-  /**
    * Determines the state activeColor
    */
   @Prop()
@@ -98,11 +92,12 @@ export class GuxColorPicker {
         </button>
         {this.opened && (
           <gux-color-select
-            customColors={this.customColors}
             value={this.activeColor}
             onInput={() => this.input}
             class="gux-color-picker-color-select"
-          />
+          >
+            <slot />
+          </gux-color-select>
         )}
       </section>
     );

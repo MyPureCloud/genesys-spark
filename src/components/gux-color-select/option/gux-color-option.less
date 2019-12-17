@@ -1,7 +1,7 @@
 // Variables part
 
 // Style
-gux-color-tile {
+gux-color-option {
   > button {
     margin: 4px;
     border: none;
@@ -16,7 +16,7 @@ gux-color-tile {
 
     &:not(:disabled):hover,
     &:focus,
-    &.gux-color-tile-active,
+    &.gux-color-option-active,
     &:active {
       outline: 1px solid @gux-dark-blue;
       border: 1px white solid;
@@ -38,36 +38,36 @@ gux-color-tile {
 // Theming
 
 // Dark
-.gux-color-tile-dark-theme {
-    color: @gux-off-white;
-};
-
-.gux-dark-theme {
-    gux-color-tile {
-        .gux-color-tile-dark-theme();
-    }
+.gux-color-option-dark-theme {
+  color: @gux-off-white;
 }
 
-gux-color-tile.gux-dark-theme {
-    .gux-color-tile-dark-theme();
+.gux-dark-theme {
+  gux-color-option {
+    .gux-color-option-dark-theme();
+  }
+}
+
+gux-color-option.gux-dark-theme {
+  .gux-color-option-dark-theme();
 }
 
 // Light
-.gux-color-tile-light-theme {
-    color: @gux-grey-2;
-};
-
-.gux-light-theme {
-    gux-color-tile {
-        .gux-color-tile-light-theme();
-    }
+.gux-color-option-light-theme {
+  color: @gux-grey-2;
 }
 
-gux-color-tile.gux-light-theme {
-    .gux-color-tile-light-theme();
+.gux-light-theme {
+  gux-color-option {
+    .gux-color-option-light-theme();
+  }
+}
+
+gux-color-option.gux-light-theme {
+  .gux-color-option-light-theme();
 }
 
 // Default Theme
-gux-color-tile {
-    .gux-color-tile-light-theme();
+gux-color-option {
+  .gux-color-option-light-theme();
 }

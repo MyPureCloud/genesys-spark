@@ -1,10 +1,10 @@
 import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 
 @Component({
-  styleUrl: 'gux-color-tile.less',
-  tag: 'gux-color-tile'
+  styleUrl: 'gux-color-option.less',
+  tag: 'gux-color-option'
 })
-export class GuxColorTile {
+export class GuxColorOption {
   /**
    * Indicate if the tile is active
    */
@@ -31,7 +31,7 @@ export class GuxColorTile {
     return (
       <button
         value={this.value}
-        class={this.active ? 'gux-color-tile-active' : ''}
+        class={this.active ? 'gux-color-option-active' : ''}
         disabled={!this.value}
         style={this.value && { 'background-color': this.value }}
         onClick={this.onTileClickHandler}
