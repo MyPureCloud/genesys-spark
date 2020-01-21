@@ -157,9 +157,7 @@ export class GuxRating {
       return;
     }
     const regxp = new RegExp(
-      `${KeyCode.Right}|${KeyCode.Up}|${KeyCode.Left}|${KeyCode.Down}|${
-        KeyCode.End
-      }|${KeyCode.Home}`
+      `${KeyCode.Right}|${KeyCode.Up}|${KeyCode.Left}|${KeyCode.Down}|${KeyCode.End}|${KeyCode.Home}`
     );
     const key = event.keyCode;
     if (!regxp.test('' + key)) {

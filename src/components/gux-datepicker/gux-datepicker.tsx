@@ -410,8 +410,9 @@ export class GuxDatepicker {
         return map2[match];
       });
     } else {
-      const { map: map3, regexp: regexp3 } = this.getMapAndRegexFromField(this
-        .value as Date);
+      const { map: map3, regexp: regexp3 } = this.getMapAndRegexFromField(
+        this.value as Date
+      );
       this.formatedValue = this.format.replace(regexp3, match => {
         return map3[match];
       });
