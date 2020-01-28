@@ -1,6 +1,6 @@
 {
-  "recentSearch": "Recently Searched:",
-  "commonSearch": "Common Searches:",
-  "limited": "Results limited, refine your search for more commands.",
-  "search": "Search for commands."
+  "recentSearch": "최근 검색:",
+  "commonSearch": "공통 검색:",
+  "limited": "결과가 제한되었습니다. 더 많은 명령어로 검색 범위를 좁히십시오.",
+  "search": "명령어 검색"
 }
