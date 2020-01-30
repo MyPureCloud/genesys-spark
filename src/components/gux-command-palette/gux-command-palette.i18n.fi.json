@@ -1,6 +1,6 @@
 {
-  "recentSearch": "Recently Searched:",
-  "commonSearch": "Common Searches:",
-  "limited": "Results limited, refine your search for more commands.",
-  "search": "Search for commands."
+  "recentSearch": "Viimeaikaiset haut:",
+  "commonSearch": "Yleiset haut:",
+  "limited": "Tuloksia on rajattu. Saat lisää komentoja tarkentamalla hakua.",
+  "search": "Hae komentoja."
 }
