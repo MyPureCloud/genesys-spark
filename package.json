@@ -32,7 +32,7 @@
     "lint": "npm run lint.commit && npm run lint.ts",
     "lint.fix": "npm run lint.ts -- --fix",
     "lint.ts": "tslint --project .",
-    "lint.commit": "commitlint -f 13e848202da747905de52a463f9ac1a55fa15957",
+    "lint.commit": "commitlint -f e05539276d8caa069b5e59c93e313652249d056c",
     "prepare": "./scripts/prepare-docs.sh && npm run i18n && npm run icons",
     "i18n": "node scripts/build-i18n.js",
     "icons": "node scripts/build-icons.js && svgo -f build/svg-icons"
