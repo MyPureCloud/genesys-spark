@@ -60,3 +60,49 @@ export function getPositionRelativeToTarget(
   }
   return resultRect;
 }
+
+/********************************************************
+ * Date Utilities                                       *
+ *                                                      *
+ * Date formatting and parsing helpers, for ISO formats *
+ * and human formats.                                   *
+ ********************************************************/
+
+// ISO UTILS
+
+// Converts a Date to ISO-8601 compliant format YYYY-MM-DD
+export function asIsoDateString(date: Date): string {
+  const monthStr = (date.getMonth() + 1).toString().padStart(2, '0');
+  const dateStr = date
+    .getDate()
+    .toString()
+    .padStart(2, '0');
+  return `${date.getFullYear()}-${monthStr}-${dateStr}`;
+}
+
+// Converts two dates to an ISO-8601 compliant range (gauranteed to be sorted)
+export function asIsoDateRange(date1: Date, date2: Date) {
+  const [start, end] = sortDates([date1, date2]);
+  return `${asIsoDateString(start)}/${asIsoDateString(end)}`;
+}
+
+// Converts ISO-8601 compliant format YYYY-MM-DD to Date
+export function fromIsoDateString(isostr: string): Date {
+  const [yearStr, monthStr, dayStr] = isostr.split('-');
+  const year = parseInt(yearStr, 10);
+  const month = parseInt(monthStr, 10) - 1; // zero-indexed month
+  const day = parseInt(dayStr, 10);
+  return new Date(year, month, day);
+}
+
+// Converts ISO-8601 compliant range format YYYY-MM-DD/YYYY-MM-DD to [Date, Date]
+export function fromIsoDateRange(isostr: string): [Date, Date] {
+  const [startStr, endStr] = isostr.split('/');
+  return [fromIsoDateString(startStr), fromIsoDateString(endStr)];
+}
+
+function sortDates(dates: Date[]): Date[] {
+  return dates.sort((d1, d2) => {
+    return d1 < d2 ? -1 : 1;
+  });
+}

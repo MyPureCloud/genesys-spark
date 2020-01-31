@@ -25,9 +25,11 @@ describe('gux-calendar', () => {
   });
   // Methods
   describe('methods', () => {
-    const newValue = new Date();
-    const newValue2 = new Date(1970, 0, 1);
-    const newValue3 = new Date(1970, 0, 5);
+    const testDate = new Date(2020, 0, 15);
+    const testDateIso = '2020-01-15';
+    const rangeStart = new Date(1970, 0, 15);
+    const rangeEnd = new Date(1970, 0, 20);
+    const rangeIso = '1970-01-15/1970-01-20';
     const spyEl = {
       classList: {
         add: jest.fn(),
@@ -39,23 +41,21 @@ describe('gux-calendar', () => {
     // Public
     describe('public', () => {
       it('setValue with single mode', () => {
-        component.setValue(newValue);
-        expect(component.previewValue).toEqual(newValue);
-        expect(component.value).toEqual(newValue);
+        component.setValue(testDate);
+        expect(component.previewValue).toEqual(testDate);
+        expect(component.value).toEqual(testDateIso);
       });
       it('setValue with range mode from-to', () => {
         component.mode = CalendarModes.Range;
-        component.setValue([newValue2, newValue]);
-        expect(component.previewValue).toEqual(newValue2);
-        expect(component.value[0]).toEqual(newValue2);
-        expect(component.value[1]).toEqual(newValue);
+        component.setValue([rangeStart, rangeEnd]);
+        expect(component.previewValue).toEqual(rangeStart);
+        expect(component.value).toEqual(rangeIso);
       });
       it('setValue with range mode to-from', () => {
         component.mode = CalendarModes.Range;
-        component.setValue([newValue, newValue2]);
-        expect(component.previewValue).toEqual(newValue2);
-        expect(component.value[0]).toEqual(newValue2);
-        expect(component.value[1]).toEqual(newValue);
+        component.setValue([rangeEnd, rangeStart]);
+        expect(component.previewValue).toEqual(rangeStart);
+        expect(component.value).toEqual(rangeIso);
       });
       it('focusPreviewDate', () => {
         component.focusPreviewDate();
@@ -71,14 +71,14 @@ describe('gux-calendar', () => {
     describe('private', () => {
       it('incrementPreviewDateByMonth', () => {
         const inc = 3;
-        newValue.setMonth(newValue.getMonth() + 3);
+        testDate.setMonth(testDate.getMonth() + 3);
         component.incrementPreviewDateByMonth(inc);
-        expect(component.previewValue.getMonth()).toEqual(newValue.getMonth());
+        expect(component.previewValue.getMonth()).toEqual(testDate.getMonth());
       });
       it('generateDatesFrom', () => {
-        component.value = [newValue2, newValue3];
+        component.value = rangeIso;
         component.mode = CalendarModes.Range;
-        const result = component.generateDatesFrom(1, newValue3, 42);
+        const result = component.generateDatesFrom(1, rangeEnd, 42);
         expect(result[0].selected).toEqual(true);
         expect(result).toEqual(
           expect.arrayContaining([
@@ -90,8 +90,8 @@ describe('gux-calendar', () => {
       });
       it('addDays', () => {
         const inc = 2;
-        const result = component.addDays(newValue3, inc);
-        expect(result.getDate()).toEqual(newValue3.getDate() + inc);
+        const result = component.addDays(rangeEnd, inc);
+        expect(result.getDate()).toEqual(rangeEnd.getDate() + inc);
       });
       it('getAllDatesElements', () => {
         const dummy = ['one', 'two'];
@@ -103,31 +103,31 @@ describe('gux-calendar', () => {
       });
       it('getRangeDatesElements', () => {
         spyOn(component, 'getRangeDates').and.callThrough();
-        component.getRangeDatesElements(newValue2, newValue3);
+        component.getRangeDatesElements(rangeStart, rangeEnd);
         expect(component.getRangeDates).toHaveBeenCalledWith(
-          newValue2,
-          newValue3
+          rangeStart,
+          rangeEnd
         );
         componentRoot.querySelector = () => {
           return 'dummy';
         };
-        const result = component.getRangeDatesElements(newValue3, newValue2);
+        const result = component.getRangeDatesElements(rangeEnd, rangeStart);
         expect(component.getRangeDates).toHaveBeenCalledWith(
-          newValue2,
-          newValue3
+          rangeStart,
+          rangeEnd
         );
-        expect(result.length).toEqual(5);
+        expect(result.length).toEqual(6);
       });
       it('onDateClick with single mode', () => {
         spyOn(component, 'setValue').and.callFake(() => {
           return;
         });
-        spyOn(component, 'onInput').and.callFake(() => {
+        spyOn(component, 'emitInput').and.callFake(() => {
           return;
         });
-        component.onDateClick(newValue);
-        expect(component.setValue).toHaveBeenCalledWith(newValue);
-        expect(component.onInput).toHaveBeenCalled();
+        component.onDateClick(testDate);
+        expect(component.setValue).toHaveBeenCalledWith(testDate);
+        expect(component.emitInput).toHaveBeenCalled();
       });
       it('onDateClick with range mode', () => {
         component.mode = CalendarModes.Range;
@@ -137,24 +137,24 @@ describe('gux-calendar', () => {
         spyOn(utils, 'removeClassToElements').and.callFake(() => {
           return;
         });
-        spyOn(component, 'onInput').and.callFake(() => {
+        spyOn(component, 'emitInput').and.callFake(() => {
           return;
         });
         spyOn(component, 'updateRangeElements').and.callFake(() => {
           return;
         });
-        component.onDateClick(newValue2);
-        component.onDateClick(newValue3);
-        expect(component.onInput).toHaveBeenCalled();
+        component.onDateClick(rangeStart);
+        component.onDateClick(rangeEnd);
+        expect(component.emitInput).toHaveBeenCalled();
       });
       it('onDateMouseEnter', () => {
         spyOn(component, 'updateRangeElements').and.callFake(() => {
           return;
         });
         component.mode = CalendarModes.Range;
-        component.isSelecting = true;
-        component.onDateMouseEnter(newValue);
-        expect(component.value[1]).toEqual(newValue);
+        component.selectingDate = rangeStart;
+        component.onDateMouseEnter(rangeEnd);
+        expect(component.value.split('/')[1]).toEqual(rangeIso.split('/')[1]);
         expect(component.updateRangeElements).toHaveBeenCalled();
       });
       it('onKeyDown', () => {
@@ -164,11 +164,11 @@ describe('gux-calendar', () => {
         spyOn(component, 'setValue').and.callFake(() => {
           return;
         });
-        spyOn(component, 'onInput').and.callFake(() => {
+        spyOn(component, 'emitInput').and.callFake(() => {
           return;
         });
-        const initialPreviewValue = newValue3;
-        component.previewValue = new Date(newValue3);
+        const initialPreviewValue = rangeEnd;
+        component.previewValue = new Date(rangeEnd);
         const days = initialPreviewValue.getDate();
         let event = { keyCode: KeyCode.Down } as KeyboardEvent;
         component.onKeyDown(event);
@@ -191,7 +191,7 @@ describe('gux-calendar', () => {
         event = { keyCode: KeyCode.Enter } as KeyboardEvent;
         component.onKeyDown(event);
         expect(component.setValue).toHaveBeenCalledWith(initialPreviewValue);
-        expect(component.onInput).toHaveBeenCalled();
+        expect(component.emitInput).toHaveBeenCalled();
       });
     });
   });
@@ -204,9 +204,9 @@ describe('gux-calendar', () => {
   // Events
   describe('events', () => {
     it('onInput', () => {
-      const value = new Date();
+      const value = '2020-01-15';
       component.value = value;
-      component.onInput();
+      component.emitInput();
       expect(component.input.emit).toHaveBeenCalledWith(value);
     });
   });
