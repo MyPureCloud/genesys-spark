@@ -70,10 +70,9 @@ describe('gux-calendar', () => {
     // Private
     describe('private', () => {
       it('incrementPreviewDateByMonth', () => {
-        const inc = 3;
-        testDate.setMonth(testDate.getMonth() + 3);
-        component.incrementPreviewDateByMonth(inc);
-        expect(component.previewValue.getMonth()).toEqual(testDate.getMonth());
+        const startingMonth = component.previewValue.getMonth();
+        component.incrementPreviewDateByMonth(3);
+        expect(component.previewValue.getMonth()).toEqual(startingMonth + 3);
       });
       it('generateDatesFrom', () => {
         component.value = rangeIso;
