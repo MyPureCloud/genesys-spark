@@ -102,11 +102,11 @@ export class GuxCalendar {
     }
   }
 
-  incrementPreviewDateByMonth(month: number) {
+  incrementPreviewDateByMonth(increment: number) {
     this.previewValue = new Date(
       this.previewValue.getFullYear(),
-      this.previewValue.getMonth() + month,
-      this.previewValue.getDate(),
+      this.previewValue.getMonth() + increment,
+      15, // Don't use the day from the old value, because we'll skip a month on the 31st
       0,
       0,
       0
