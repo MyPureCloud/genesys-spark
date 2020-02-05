@@ -6,7 +6,8 @@ import {
   h,
   Listen,
   Prop,
-  State
+  State,
+  Watch
 } from '@stencil/core';
 import { CalendarModes, KeyCode } from '../../common-enums';
 import {
@@ -435,6 +436,11 @@ export class GuxDatepicker {
         this.calendarElement.focusPreviewDate();
       });
     }
+  }
+
+  @Watch('value')
+  watchValue() {
+    this.updateDate();
   }
 
   setSelectionRange(index: number) {
