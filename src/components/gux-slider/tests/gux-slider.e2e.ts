@@ -48,7 +48,7 @@ describe('gux-slider', () => {
     const textField = await page.find(
       'gux-slider gux-text-label gux-text-field'
     );
-    let vall = await textField.getProperty('disabled');
-    expect(vall).toBe(false);
+    val = await textField.getProperty('disabled');
+    expect(val).toBe(false);
   });
 });
