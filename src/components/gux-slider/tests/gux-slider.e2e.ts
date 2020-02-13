@@ -36,4 +36,19 @@ describe('gux-slider', () => {
     val = await input.getProperty('value');
     expect(val).toBe('1.5');
   });
+
+  it('disable inputs when component is disabled', async () => {
+    const page = await newE2EPage();
+
+    await page.setContent('<gux-slider disabled="true"></gux-slider>');
+    const input = await page.find('gux-slider input');
+    expect(input).toHaveClass('range-input');
+    let val = await input.getProperty('disabled');
+    expect(val).toBe(true);
+    const textField = await page.find(
+      'gux-slider gux-text-label gux-text-field'
+    );
+    val = await textField.getProperty('disabled');
+    expect(val).toBe(true);
+  });
 });

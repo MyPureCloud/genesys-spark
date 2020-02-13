@@ -36,6 +36,12 @@ export class GuxSlider {
   @Prop()
   isPercentage: boolean = false;
 
+  /**
+   * Whether or not the slider is disabled.
+   */
+  @Prop()
+  disabled: boolean = false;
+
   sliderInput: HTMLInputElement;
   sliderMask: HTMLElement;
   sliderTooltip: HTMLElement;
@@ -107,6 +113,7 @@ export class GuxSlider {
             // onChange event required because IE11 doesn't support onInput for range inputs
             onChange={(e: UIEvent) => this.updateValue(e)}
             onInput={(e: UIEvent) => this.updateValue(e)}
+            disabled={this.disabled}
           />
           <div class="mask">
             <div class="mask-slider" ref={el => (this.sliderMask = el)} />
@@ -133,6 +140,7 @@ export class GuxSlider {
             <gux-text-field
               value={value}
               onChange={(e: UIEvent) => this.updateValue(e)}
+              disabled={this.disabled}
             />
           </gux-text-label>
         )}
