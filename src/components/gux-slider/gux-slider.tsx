@@ -37,7 +37,7 @@ export class GuxSlider {
   isPercentage: boolean = false;
 
   /**
-   * Whether or not the sliebar is disabled.
+   * Whether or not the slider is disabled.
    */
   @Prop()
   disabled: boolean = false;
