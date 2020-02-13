@@ -49,6 +49,6 @@ describe('gux-slider', () => {
       'gux-slider gux-text-label gux-text-field'
     );
     val = await textField.getProperty('disabled');
-    expect(val).toBe(false);
+    expect(val).toBe(true);
   });
 });
