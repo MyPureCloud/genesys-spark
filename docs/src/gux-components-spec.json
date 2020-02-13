@@ -234,7 +234,8 @@
       { "name": "step", "type": "text" },
       { "name": "value", "type": "text" },
       { "name": "is-percentage", "type": "checkbox" },
-      { "name": "display-text-box", "type": "checkbox" }
+      { "name": "display-text-box", "type": "checkbox" },
+      { "name": "disabled", "type": "checkbox" }
     ],
     "events": [{ "name": "update", "description": "slider value changed" }]
   },

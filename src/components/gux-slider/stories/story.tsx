@@ -29,6 +29,7 @@ storiesOf('Basic Components', module).add(
       const slider = document.getElementById('interactive');
       slider.isPercentage = boolean('isPercentage', true);
       slider.displayTextBox = boolean('displayTextBox', true);
+      slider.disabled = boolean('disabled', true);
       slider.addEventListener('update', e => action('update')(e.detail));
     }, 100);
     document.getElementsByTagName('html')[0].className =
