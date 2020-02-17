@@ -71,6 +71,7 @@ export class GuxCommandPalette {
         class={`gux-command-palette ${this.visible ? '' : 'hidden'}`}
         role="dialog"
         onKeyDown={e => this.onKeyDown(e)}
+        aria-label={this.i18n('title')}
       >
         <gux-search
           sr-label={this.i18n('search')}
