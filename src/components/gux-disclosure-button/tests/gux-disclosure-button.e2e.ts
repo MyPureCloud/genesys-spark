@@ -19,4 +19,26 @@ describe('gux-disclosure-button', () => {
     await button.click();
     expect(panel).toHaveClass('active');
   });
+
+  describe('disclosure panel open-at-start', () => {
+    it('should not open disclosure panel when property openAtStart is set to false or not specified', async () => {
+      const page = await newE2EPage();
+
+      await page.setContent('<gux-disclosure-button></gux-disclosure-button>');
+      page.waitForChanges();
+      const panel = await page.find('.disclosure-panel');
+      expect(panel).not.toHaveClass('active');
+    });
+
+    it('opens disclosure panel when property openAtStart is set to true', async () => {
+      const page = await newE2EPage();
+
+      await page.setContent(
+        '<gux-disclosure-button open-at-start="true"></gux-disclosure-button>'
+      );
+      page.waitForChanges();
+      const panel = await page.find('.disclosure-panel');
+      expect(panel).toHaveClass('active');
+    });
+  });
 });
