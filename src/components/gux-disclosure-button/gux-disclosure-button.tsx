@@ -18,7 +18,13 @@ export class GuxDisclosureButton {
   label: string = 'open';
 
   /**
-   * Denotes state of discloseure panel
+   * Disclosure panel will open by default if set to true
+   */
+  @Prop()
+  openAtStart: boolean = false;
+
+  /**
+   * Denotes state of disclosure panel
    */
   @State()
   isPanelActive: boolean = false;
@@ -58,6 +64,7 @@ export class GuxDisclosureButton {
   }
 
   componentDidLoad() {
+    this.isPanelActive = this.openAtStart;
     this.setButtonImg();
   }
 
