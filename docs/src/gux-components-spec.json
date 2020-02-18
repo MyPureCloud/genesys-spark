@@ -123,7 +123,7 @@
     "attributes": [
       { "name": "position", "type": "select", "options": ["left", "right"] },
       { "name": "label", "type": "text" },
-      { "name": "open-at-start", "type": "checkbox" }
+      { "name": "is-open", "type": "checkbox" }
     ],
     "events": [
       {

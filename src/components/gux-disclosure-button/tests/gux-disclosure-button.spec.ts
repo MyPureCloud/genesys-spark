@@ -5,11 +5,11 @@ describe('gux-disclosure-button', () => {
     expect(new GuxDisclosureButton()).toBeTruthy();
   });
 
-  it('should toggle the isPanelActive property', async () => {
+  it('should toggle the isOpen property', async () => {
     const disclosureButton = new GuxDisclosureButton();
 
-    expect(disclosureButton.isPanelActive).toBe(false);
+    expect(disclosureButton.isOpen).toBe(false);
     disclosureButton.togglePanel();
-    expect(disclosureButton.isPanelActive).toBe(true);
+    expect(disclosureButton.isOpen).toBe(true);
   });
 });

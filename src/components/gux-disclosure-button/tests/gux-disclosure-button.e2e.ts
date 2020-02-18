@@ -13,14 +13,13 @@ describe('gux-disclosure-button', () => {
     const page = await newE2EPage();
 
     await page.setContent('<gux-disclosure-button></gux-disclosure-button>');
-    const component = await page.find('gux-disclosure-button');
     const button = await page.find('.disclosure-button');
     const panel = await page.find('.disclosure-panel');
     await button.click();
     expect(panel).toHaveClass('active');
   });
 
-  describe('disclosure panel open-at-start', () => {
+  describe('disclosure panel is-open', () => {
     it('should not open disclosure panel when property openAtStart is set to false or not specified', async () => {
       const page = await newE2EPage();
 
@@ -34,7 +33,7 @@ describe('gux-disclosure-button', () => {
       const page = await newE2EPage();
 
       await page.setContent(
-        '<gux-disclosure-button open-at-start="true"></gux-disclosure-button>'
+        '<gux-disclosure-button is-open="true"></gux-disclosure-button>'
       );
       page.waitForChanges();
       const panel = await page.find('.disclosure-panel');
