@@ -122,7 +122,8 @@
   "gux-disclosure-button": {
     "attributes": [
       { "name": "position", "type": "select", "options": ["left", "right"] },
-      { "name": "label", "type": "text" }
+      { "name": "label", "type": "text" },
+      { "name": "is-open", "type": "checkbox" }
     ],
     "events": [
       {

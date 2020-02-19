@@ -18,10 +18,10 @@ export class GuxDisclosureButton {
   label: string = 'open';
 
   /**
-   * Denotes state of discloseure panel
+   * Used to open or close the disclosure panel
    */
-  @State()
-  isPanelActive: boolean = false;
+  @Prop({ mutable: true })
+  isOpen: boolean = false;
 
   /**
    * Indicated image used by button
@@ -30,39 +30,39 @@ export class GuxDisclosureButton {
   buttonImg: string = 'genesys-icon-expand-right';
 
   /**
-   * Return the state of the components panel on state chenge
+   * Return the state of the components panel on state change
    * @return the panel state
    */
   @Event()
   active: EventEmitter;
   changeState() {
     this.togglePanel();
-    this.active.emit(this.isPanelActive);
+    this.active.emit(this.isOpen);
   }
 
   togglePanel() {
-    this.isPanelActive = !this.isPanelActive;
+    this.isOpen = !this.isOpen;
     this.setButtonImg();
   }
 
   setButtonImg() {
     if (this.position === 'right') {
-      this.buttonImg = this.isPanelActive
+      this.buttonImg = this.isOpen
         ? 'genesys-icon-expand-right'
         : 'genesys-icon-expand-left';
     } else {
-      this.buttonImg = this.isPanelActive
+      this.buttonImg = this.isOpen
         ? 'genesys-icon-expand-left'
         : 'genesys-icon-expand-right';
     }
   }
 
-  componentDidLoad() {
+  componentWillLoad() {
     this.setButtonImg();
   }
 
   render() {
-    const activeClass = this.isPanelActive ? 'active' : '';
+    const activeClass = this.isOpen ? 'active' : '';
     return (
       <div class={`disclosure-button-container ${this.position}`}>
         <button
