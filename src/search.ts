@@ -2,32 +2,10 @@ const conversion = /[ +]/g;
 const expressions = new Map<string, RegExp>();
 const replacements = new Map<string, RegExp>();
 
-function convertToExpression(word: string): RegExp {
-  let newexp = word.replace(conversion, '.*');
-
-  const parts = newexp.split('.*');
-
-  if (parts.length === 1) {
-    return new RegExp(newexp, 'i');
-  }
-
-  newexp = `(`;
-
-  parts.forEach((part, index) => {
-    newexp += part + ').*';
-
-    if (index !== parts.length - 1) {
-      newexp += `(`;
-    }
-  });
-
-  return new RegExp(newexp + '$', 'i');
-}
-
 export function matchesFuzzy(sourceWord: string, targetWord: string): boolean {
   let exp = expressions.get(sourceWord);
   if (!exp) {
-    exp = convertToExpression(sourceWord);
+    exp = convertToRegex(sourceWord);
     expressions.set(sourceWord, exp);
   }
 
@@ -36,8 +14,8 @@ export function matchesFuzzy(sourceWord: string, targetWord: string): boolean {
 
 export function getFuzzyReplacements(sourceWord: string): any[] {
   return sourceWord
-    .replace(conversion, '.*')
-    .split('.*')
+    .split(conversion)
+    .map(makeRegexSafe)
     .map(word => {
       let exp = replacements.get(word);
 
@@ -48,4 +26,28 @@ export function getFuzzyReplacements(sourceWord: string): any[] {
 
       return exp;
     });
+}
+
+function makeRegexSafe(str: string): string {
+  return str.replace(/[\^$*+?.(){}[\]\\]/g, '\\$&');
+}
+
+function convertToRegex(word: string): RegExp {
+  const parts = word.split(conversion).map(makeRegexSafe);
+
+  if (parts.length === 1) {
+    return new RegExp(parts[0], 'i');
+  }
+
+  let newexp = `(`;
+
+  parts.forEach((part, index) => {
+    newexp += part + ').*';
+
+    if (index !== parts.length - 1) {
+      newexp += `(`;
+    }
+  });
+
+  return new RegExp(newexp + '$', 'i');
 }
