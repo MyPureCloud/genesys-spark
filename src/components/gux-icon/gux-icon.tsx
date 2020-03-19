@@ -1,6 +1,8 @@
 import { Component, h, Prop } from '@stencil/core';
 import { getAssetPath } from '@stencil/core';
 
+const SVG_CONTAINER_ID = 'gux-icon-catalog';
+
 @Component({
   styleUrl: 'gux-icon.less',
   tag: 'gux-icon'
@@ -24,6 +26,22 @@ export class GuxIcon {
   @Prop()
   screenreaderText: string;
 
+  private async loadSvgData() {
+    if (!document.getElementById(SVG_CONTAINER_ID)) {
+      const url = getAssetPath('svg-icons/genesys-icons.svg');
+      const svgContainer = document.createElement('div');
+      svgContainer.setAttribute('id', SVG_CONTAINER_ID);
+      document.head.appendChild(svgContainer);
+
+      const iconResponse = await fetch(url);
+      svgContainer.innerHTML = await iconResponse.text();
+    }
+  }
+
+  async componentWillLoad() {
+    return await this.loadSvgData();
+  }
+
   componentDidLoad() {
     if (!this.decorative && !this.screenreaderText) {
       throw new Error(
@@ -33,10 +51,9 @@ export class GuxIcon {
   }
 
   render() {
-    const url = getAssetPath('svg-icons/genesys-icons.svg');
     return (
       <svg aria-hidden={this.decorative} aria-label={this.screenreaderText}>
-        <use xlinkHref={`${url}#${this.iconName}`} />
+        <use xlinkHref={`#gux-icon-${this.iconName}`} />
       </svg>
     );
   }

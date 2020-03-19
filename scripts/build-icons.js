@@ -24,7 +24,7 @@ glob('src/assets/svg/*.svg', (err, files) => {
     const match = file.match(filePatternRegex);
     const name = match[1];
 
-    svg.add(name, fs.readFileSync(file, 'utf8'));
+    svg.add(`gux-icon-${name}`, fs.readFileSync(file, 'utf8'));
   });
 
   if (!fs.existsSync(outputFolder)) {
