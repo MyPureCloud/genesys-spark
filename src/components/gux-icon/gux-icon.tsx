@@ -26,18 +26,6 @@ export class GuxIcon {
   @Prop()
   screenreaderText: string;
 
-  private async loadSvgData() {
-    if (!document.getElementById(SVG_CONTAINER_ID)) {
-      const url = getAssetPath('svg-icons/genesys-icons.svg');
-      const svgContainer = document.createElement('div');
-      svgContainer.setAttribute('id', SVG_CONTAINER_ID);
-      document.head.appendChild(svgContainer);
-
-      const iconResponse = await fetch(url);
-      svgContainer.innerHTML = await iconResponse.text();
-    }
-  }
-
   async componentWillLoad() {
     return await this.loadSvgData();
   }
@@ -56,5 +44,17 @@ export class GuxIcon {
         <use xlinkHref={`#gux-icon-${this.iconName}`} />
       </svg>
     );
+  }
+
+  private async loadSvgData() {
+    if (!document.getElementById(SVG_CONTAINER_ID)) {
+      const url = getAssetPath('svg-icons/genesys-icons.svg');
+      const svgContainer = document.createElement('div');
+      svgContainer.setAttribute('id', SVG_CONTAINER_ID);
+      document.head.appendChild(svgContainer);
+
+      const iconResponse = await fetch(url);
+      svgContainer.innerHTML = await iconResponse.text();
+    }
   }
 }

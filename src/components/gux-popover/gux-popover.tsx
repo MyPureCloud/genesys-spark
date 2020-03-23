@@ -1,3 +1,4 @@
+import { createPopper, Instance } from '@popperjs/core';
 import {
   Component,
   Element,
@@ -6,7 +7,6 @@ import {
   h,
   Prop
 } from '@stencil/core';
-import { createPopper, Instance } from '@popperjs/core';
 import { buildI18nForComponent } from '../i18n';
 import modalComponentResources from './gux-popover.i18n.json';
 
@@ -61,15 +61,14 @@ export class GuxPopover {
   @Prop()
   for: string;
 
-  @Element() private element: HTMLElement;
-
   popperInstance: Instance;
+
+  @Element() private element: HTMLElement;
 
   runPopper() {
     const referenceElement = document.getElementById(this.for);
     if (referenceElement) {
       this.popperInstance = createPopper(referenceElement, this.element, {
-        placement: this.position,
         modifiers: [
           {
             name: 'offset',
@@ -77,7 +76,8 @@ export class GuxPopover {
               offset: [0, 7]
             }
           }
-        ]
+        ],
+        placement: this.position
       });
     } else {
       console.error(
