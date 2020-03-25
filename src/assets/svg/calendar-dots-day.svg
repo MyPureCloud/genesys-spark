@@ -1,1 +1,3 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>calendar-dots-day</title><path d="M18.5 16a2.5 2.5 0 1 1-2.5-2.5 2.5 2.5 0 0 1 2.5 2.5z"/></svg>
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <path d="M18.5 16a2.5 2.5 0 11-2.5-2.5 2.5 2.5 0 012.5 2.5z"/>
+</svg>

@@ -1,11 +1,3 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-<g>
-	<path style="fill:#3D464D;" d="M10,11c0,0.188-0.041,0.433-0.205,0.522c-0.165,0.09-0.267,0.081-0.423-0.023L4.836,8.427
-		C4.693,8.333,4.594,8.172,4.594,8s0.06-0.333,0.203-0.428l4.582-3.071C9.535,4.397,9.63,4.388,9.795,4.478
-		C9.959,4.567,10,4.812,10,5v2h5V4c0-1.65-1.35-3-3-3H4C2.35,1,1,2.35,1,4v8c0,1.65,1.35,3,3,3h8c1.65,0,3-1.35,3-3V9h-5V11z"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <path d="M10 11c0 .188-.041.433-.205.522-.165.09-.267.081-.423-.023L4.836 8.427c-.143-.094-.242-.255-.242-.427s.06-.333.203-.428l4.582-3.071c.156-.104.251-.113.416-.023.164.089.205.334.205.522v2h5V4c0-1.65-1.35-3-3-3H4C2.35 1 1 2.35 1 4v8c0 1.65 1.35 3 3 3h8c1.65 0 3-1.35 3-3V9h-5v2z" fill="#3d464d"/>
 </svg>

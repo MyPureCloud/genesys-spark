@@ -1,12 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="artwork" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-<g>
-	<path style="fill:#3D464D;" d="M11.055,3h-6.11C2.243,3,0.051,5.298,0.051,8s2.191,5,4.894,5h6.11c2.702,0,4.894-2.298,4.894-5
-		S13.757,3,11.055,3z M10.999,11.655c-2.018,0-3.655-1.638-3.655-3.655s1.638-3.655,3.655-3.655c2.019,0,3.655,1.638,3.655,3.655
-		S13.017,11.655,10.999,11.655z"/>
-</g>
-<polygon style="fill:#3D464D;" points="10.543,9.913 8.999,8.368 9.706,7.661 10.543,8.499 12.749,6.294 13.456,7.001 "/>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <path d="M11.055 3h-6.11C2.243 3 .051 5.298.051 8s2.191 5 4.894 5h6.11c2.702 0 4.894-2.298 4.894-5s-2.192-5-4.894-5zm-.056 8.655c-2.018 0-3.655-1.638-3.655-3.655s1.638-3.655 3.655-3.655a3.656 3.656 0 010 7.31z" fill="#3d464d"/>
+    <path fill="#3d464d" d="M10.543 9.913L8.999 8.368l.707-.707.837.838 2.206-2.205.707.707z"/>
 </svg>

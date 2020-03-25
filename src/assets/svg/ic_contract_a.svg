@@ -1,2 +1,4 @@
-<svg id="icons" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>contract_a</title><polygon points="6 1.5 3.5 4 6 4 6 1.5"/><path
-     d="M 7 1 L 7 5 L 3 5 L 3 14 L 13 14 L 13 1 L 7 1 z M 6 1.5 L 3.5 4 L 6 4 L 6 1.5 z M 11 6 L 11 12 L 5 12 L 11 6 z "/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <path d="M6 1.5L3.5 4H6V1.5z"/>
+    <path d="M7 1v4H3v9h10V1H7zm-1 .5L3.5 4H6V1.5zM11 6v6H5l6-6z"/>
+</svg>

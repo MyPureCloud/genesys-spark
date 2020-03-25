@@ -1,1 +1,3 @@
-<svg id="icons" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>bell</title><path d="M12,10V7A4,4,0,0,0,9.51,3.3a2,2,0,1,0-3,0A4,4,0,0,0,4,7v3L2,13H14ZM8,16a2.07,2.07,0,0,0,2-2H6A2.07,2.07,0,0,0,8,16Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <path d="M12 10V7a4 4 0 00-2.49-3.7 2 2 0 10-3 0A4 4 0 004 7v3l-2 3h12zm-4 6a2.07 2.07 0 002-2H6a2.07 2.07 0 002 2z"/>
+</svg>
