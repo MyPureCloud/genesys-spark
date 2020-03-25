@@ -38,6 +38,7 @@
     "icons": "node scripts/build-icons.js && svgo -f build/svg-icons"
   },
   "dependencies": {
+    "@popperjs/core": "^2.1.1",
     "intl-messageformat": "^2.2.0",
     "standard-version": "^7.0.0"
   },

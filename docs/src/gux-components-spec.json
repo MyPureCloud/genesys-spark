@@ -197,6 +197,37 @@
   },
   "gux-page-loading-spinner": {},
   "gux-panel-frame": {},
+  "gux-popover": {
+    "attributes": [
+      { "name": "hide-close", "type": "checkbox" },
+      {
+        "name": "position",
+        "type": "select",
+        "options": [
+          "top",
+          "top-start",
+          "top-end",
+          "right",
+          "right-start",
+          "right-end",
+          "bottom",
+          "bottom-start",
+          "bottom-end",
+          "left",
+          "left-start",
+          "left-end"
+        ]
+      },
+      { "name": "for", "type": "text" },
+      { "name": "hidden", "type": "checkbox" }
+    ],
+    "events": [
+      {
+        "name": "close",
+        "description": "Popover signaling that it should be hidden"
+      }
+    ]
+  },
   "gux-radial-progress": {
     "attributes": [
       { "name": "value", "type": "text" },
