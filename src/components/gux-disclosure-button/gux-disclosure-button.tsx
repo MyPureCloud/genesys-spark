@@ -27,7 +27,7 @@ export class GuxDisclosureButton {
    * Indicated image used by button
    */
   @State()
-  buttonImg: string = 'genesys-icon-expand-right';
+  icon: string = 'ic-expand-right';
 
   /**
    * Return the state of the components panel on state change
@@ -42,34 +42,31 @@ export class GuxDisclosureButton {
 
   togglePanel() {
     this.isOpen = !this.isOpen;
-    this.setButtonImg();
+    this.updateIcon();
   }
 
-  setButtonImg() {
+  updateIcon() {
     if (this.position === 'right') {
-      this.buttonImg = this.isOpen
-        ? 'genesys-icon-expand-right'
-        : 'genesys-icon-expand-left';
+      this.icon = this.isOpen ? 'ic-expand-right' : 'ic-expand-left';
     } else {
-      this.buttonImg = this.isOpen
-        ? 'genesys-icon-expand-left'
-        : 'genesys-icon-expand-right';
+      this.icon = this.isOpen ? 'ic-expand-left' : 'ic-expand-right';
     }
   }
 
   componentWillLoad() {
-    this.setButtonImg();
+    this.updateIcon();
   }
 
   render() {
     const activeClass = this.isOpen ? 'active' : '';
     return (
       <div class={`disclosure-button-container ${this.position}`}>
-        <button
-          class={`disclosure-button ${this.buttonImg}`}
-          aria-label={this.label}
-          onClick={() => this.changeState()}
-        />
+        <button class="disclosure-button" onClick={() => this.changeState()}>
+          <gux-icon
+            icon-name={`${this.icon}`}
+            screenreader-text={this.label}
+          ></gux-icon>
+        </button>
         <div class={`disclosure-panel ${this.position} ${activeClass}`}>
           <slot name="panel-content" />
         </div>
