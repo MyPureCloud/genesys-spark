@@ -333,5 +333,16 @@
       { "name": "value", "type": "text" },
       { "name": "text", "type": "text" }
     ]
+  },
+  "gux-text-highlight": {
+    "attributes": [
+      { "name": "text", "type": "text" },
+      { "name": "highlight", "type": "text" },
+      {
+        "name": "strategy",
+        "type": "select",
+        "options": ["start", "contains", "fuzzy"]
+      }
+    ]
   }
 }

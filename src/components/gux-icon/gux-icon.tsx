@@ -1,9 +1,9 @@
-import { Component, h, Prop } from '@stencil/core';
-import { getAssetPath } from '@stencil/core';
+import { Component, getAssetPath, h, Prop } from '@stencil/core';
 
 const SVG_CONTAINER_ID = 'gux-icon-catalog';
 
 @Component({
+  assetsDirs: ['icons'],
   styleUrl: 'gux-icon.less',
   tag: 'gux-icon'
 })
@@ -27,7 +27,9 @@ export class GuxIcon {
   screenreaderText: string;
 
   async componentWillLoad() {
-    return await this.loadSvgData();
+    if (this.iconName) {
+      await this.loadSvgData(this.iconName);
+    }
   }
 
   componentDidLoad() {
@@ -41,20 +43,47 @@ export class GuxIcon {
   render() {
     return (
       <svg aria-hidden={this.decorative} aria-label={this.screenreaderText}>
-        <use xlinkHref={`#gux-icon-${this.iconName}`} />
+        <use xlinkHref={`#${iconId(this.iconName)}`} />
       </svg>
     );
   }
 
-  private async loadSvgData() {
-    if (!document.getElementById(SVG_CONTAINER_ID)) {
-      const url = getAssetPath('svg-icons/genesys-icons.svg');
-      const svgContainer = document.createElement('div');
-      svgContainer.setAttribute('id', SVG_CONTAINER_ID);
-      document.head.appendChild(svgContainer);
+  private async loadSvgData(iconName) {
+    const id = iconId(iconName);
+    const svgContainer = this.getSvgContainer();
+    if (svgContainer.querySelector(`#${id}`)) {
+      return;
+    } else {
+      // Create a placholder element so other icons on page won't try to
+      // simultanously fetch while we're waiting on the icon to load
+      const placeholder = document.createElement('div');
+      placeholder.setAttribute('id', id);
+      svgContainer.appendChild(placeholder);
 
-      const iconResponse = await fetch(url);
-      svgContainer.innerHTML = await iconResponse.text();
+      // Fetch the icon and replace the placeholder with it
+      const iconUrl = getAssetPath(`./icons/${this.iconName}.svg`);
+      const iconResponse = await fetch(iconUrl);
+      const svgText = await iconResponse.text();
+      const svgElement = new DOMParser().parseFromString(
+        svgText,
+        'image/svg+xml'
+      ).firstChild as Element;
+      svgElement.setAttribute('id', id);
+      placeholder.replaceWith(svgElement);
     }
   }
+
+  private getSvgContainer() {
+    let svgContainer = document.getElementById(SVG_CONTAINER_ID);
+    if (!svgContainer) {
+      svgContainer = document.createElement('div');
+      svgContainer.setAttribute('id', SVG_CONTAINER_ID);
+      document.head.appendChild(svgContainer);
+    }
+    return svgContainer;
+  }
+}
+
+function iconId(iconName) {
+  return `gux-icon-${iconName}`;
 }

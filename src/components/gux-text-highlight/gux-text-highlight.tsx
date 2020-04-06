@@ -1,5 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
-import { getFuzzyReplacements, matchesFuzzy } from '../../../search';
+import { getFuzzyReplacements, matchesFuzzy } from '../../search';
 import { HighlightStrategy } from './highlight-enums';
 
 @Component({

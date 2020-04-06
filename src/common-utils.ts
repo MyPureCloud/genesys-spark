@@ -1,3 +1,17 @@
+import { getAssetPath } from '@stencil/core';
+
+// Replaced by rollup plugin for prod builds - empty string in dev
+const CDN_URL = '{{__cdn_url__}}';
+
+export function getStaticAssetPath(assetPath) {
+  if (!CDN_URL) {
+    // if we're not in a production build, just use stencil's built-in path
+    return getAssetPath(assetPath);
+  } else {
+    return CDN_URL.replace(/\/?$/, '/') + 'assetPath'.replace(/^\/?/, '');
+  }
+}
+
 export function addClassToElements(
   elements: HTMLElement | HTMLElement[],
   className: string
