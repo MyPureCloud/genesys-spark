@@ -2,18 +2,15 @@
   "name": "@genesys/common-webcomponents",
   "version": "1.0.0-alpha.28",
   "description": "Common webcomponents",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "es2015": "dist/esm/index.mjs",
-  "es2017": "dist/esm/index.mjs",
-  "jsnext:main": "dist/esm/index.mjs",
+  "main": "dist/stencil-wrapper.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "build": "npm run i18n && npm run stencil && npm run docs",
+    "build": "npm run i18n && npm run stencil && npm run docs && npm run build-wrapper",
+    "build-wrapper": "./scripts/wrap-stencil.js",
     "commit": "git-cz",
     "docs": "cd ./docs && npm run build",
     "docs.dev": "cd ./docs && npm run start",

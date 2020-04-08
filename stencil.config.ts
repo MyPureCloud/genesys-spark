@@ -20,10 +20,6 @@ export const config: Config = {
   ],
   rollupPlugins: {
     before: [
-      replace({
-        __cdn_url__: `${CDN_URL}`,
-        delimiters: ['{{', '}}']
-      }),
       copy({
         targets: [{ src: 'build/i18n', dest: 'dist/genesys-webcomponents' }],
         verbose: true

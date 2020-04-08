@@ -1,4 +1,4 @@
-import { getStaticAssetPath } from '../../common-utils';
+import { getAssetPath } from '@stencil/core';
 
 export interface ILocalizedComponentResources {
   [resourceKey: string]: string;
@@ -15,7 +15,7 @@ export interface IResourceCache {
 const resourceCache: IResourceCache = {};
 
 export const determineFetchUrl = (locale: string = 'en'): string =>
-  getStaticAssetPath(`i18n/genesys-webcomponents.i18n.${locale}.json`);
+  getAssetPath(`i18n/genesys-webcomponents.i18n.${locale}.json`);
 
 export const fetchResources = async (
   componentName: string,
