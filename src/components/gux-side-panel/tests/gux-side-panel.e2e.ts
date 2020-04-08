@@ -14,7 +14,7 @@ describe('gux-side-panel', () => {
 
     await page.setContent(`<gux-side-panel>
         <div slot="side-panel-icons">
-          <gux-side-panel-button id="settings-button" icon="genesys-icon-settings-gear" alt-text="settings gear">
+          <gux-side-panel-button id="settings-button" icon="ic-settings-gear" alt-text="settings gear">
           </gux-side-panel-button>
         </div>
 
@@ -37,7 +37,7 @@ describe('gux-side-panel', () => {
 
     await page.setContent(`<gux-side-panel>
         <div slot="side-panel-icons">
-          <gux-side-panel-button id="settings-button" icon="genesys-icon-settings-gear" alt-text="settings gear">
+          <gux-side-panel-button id="settings-button" icon="ic-settings-gear" alt-text="settings gear">
           </gux-side-panel-button>
         </div>
 

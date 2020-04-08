@@ -440,19 +440,23 @@ export class GuxCalendar {
         <div class="header">
           <button
             type="button"
-            class="genesys-icon-chevron-left"
+            class="left"
             onClick={() => this.incrementPreviewDateByMonth(-1)}
             tabindex="-1"
             aria-hidden="true"
-          />
+          >
+            <gux-icon decorative iconName="ic-chevron-left"></gux-icon>
+          </button>
           {this.renderMonthHeader()}
           <button
             type="button"
-            class="genesys-icon-chevron-right"
+            class="right"
             onClick={() => this.incrementPreviewDateByMonth(1)}
             tabindex="-1"
             aria-hidden="true"
-          />
+          >
+            <gux-icon decorative iconName="ic-chevron-right"></gux-icon>
+          </button>
         </div>
         <div class="content">
           {Array.from(Array(this.numberOfMonths).keys()).map(index =>

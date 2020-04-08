@@ -577,12 +577,13 @@ export class GuxDatepicker {
               <button
                 aria-hidden="true"
                 type="button"
-                class="genesys-icon-calendar-generic"
                 onClick={() => {
                   this.toggleCalendar();
                 }}
                 tabindex="-1"
-              />
+              >
+                <gux-icon decorative iconName="ic-calendar-generic"></gux-icon>
+              </button>
               <gux-calendar
                 ref={(el: HTMLGuxCalendarElement) =>
                   (this.calendarElement = el)
@@ -614,12 +615,16 @@ export class GuxDatepicker {
                 <button
                   aria-hidden="true"
                   type="button"
-                  class="genesys-icon-calendar-generic"
                   onClick={() => {
                     this.toggleCalendar();
                   }}
                   tabindex="-1"
-                />
+                >
+                  <gux-icon
+                    decorative
+                    iconName="ic-calendar-generic"
+                  ></gux-icon>
+                </button>
               </gux-text-field>
             </gux-text-label>
           </div>

@@ -9,6 +9,7 @@ gux-calendar {
       position: relative;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       height: 16px;
       padding: 16px;
       button {
@@ -17,11 +18,14 @@ gux-calendar {
         border: none;
         background: none;
         outline: none;
-        &.genesys-icon-chevron-left {
+        &.left {
           left: 18px;
         }
-        &.genesys-icon-chevron-right {
+        &.right {
           right: 18px;
+        }
+        gux-icon {
+          width: 13px;
         }
       }
       .month-list {
@@ -118,7 +122,7 @@ gux-calendar {
       }
     }
   }
-};
+}
 
 .gux-light-theme {
   gux-calendar {
@@ -130,7 +134,7 @@ gux-calendar {
 .gux-calendar-dark-theme {
   // Same as light
   .gux-calendar-light-theme();
-};
+}
 
 .gux-dark-theme {
   gux-calendar {

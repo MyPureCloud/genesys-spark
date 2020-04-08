@@ -78,7 +78,7 @@ export class GuxActionToast {
         />
         <div class="header">
           {this.icon ? (
-            <i class={this.icon} />
+            <gux-icon decorative iconName={this.icon} />
           ) : this.iconUri ? (
             <img src={this.iconUri} />
           ) : (
@@ -108,15 +108,9 @@ export class GuxActionToast {
               onClick={() => this.onButtonClickHandler(this.secondaryButton)}
               class="left-button"
             >
-              <span
-                role="img"
-                class={`genesys-icon-${this.secondaryButton.leftIcon}`}
-              />
-              <span>text</span>
-              <span
-                role="img"
-                class={`genesys-icon-${this.secondaryButton.rightIcon}`}
-              />
+              <gux-icon decorative iconName={this.secondaryButton.leftIcon} />
+              <span>{this.secondaryButton.text}</span>
+              <gux-icon decorative iconName={this.secondaryButton.rightIcon} />
             </gux-button>
           )}
           {this.primaryButton && (
@@ -127,15 +121,9 @@ export class GuxActionToast {
               onClick={() => this.onButtonClickHandler(this.primaryButton)}
               class="right-button"
             >
-              <span
-                role="img"
-                class={`genesys-icon-${this.primaryButton.leftIcon}`}
-              />
-              <span>text</span>
-              <span
-                role="img"
-                class={`genesys-icon-${this.primaryButton.rightIcon}`}
-              />
+              <gux-icon decorative iconName={this.primaryButton.leftIcon} />
+              <span>{this.primaryButton.text}</span>
+              <gux-icon decorative iconName={this.primaryButton.rightIcon} />
             </gux-button>
           )}
         </div>

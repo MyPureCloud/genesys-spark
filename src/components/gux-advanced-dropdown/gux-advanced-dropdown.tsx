@@ -148,12 +148,9 @@ export class GuxAdvancedDropdown {
             )}
             {this.value && <span class="gux-select-value">{this.value}</span>}
           </a>
-          <button
-            aria-hidden="true"
-            tabindex="-1"
-            type="button"
-            class="genesys-icon-dropdown-arrow"
-          />
+          <div class="icon-wrapper">
+            <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+          </div>
         </div>
         <div
           class={`gux-advanced-dropdown-menu ${this.opened ? 'opened' : ''}`}

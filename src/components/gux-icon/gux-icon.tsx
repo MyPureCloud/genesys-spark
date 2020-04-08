@@ -1,4 +1,4 @@
-import { Component, getAssetPath, h, Prop } from '@stencil/core';
+import { Component, getAssetPath, h, Prop, State, Watch } from '@stencil/core';
 
 const SVG_CONTAINER_ID = 'gux-icon-catalog';
 
@@ -26,10 +26,20 @@ export class GuxIcon {
   @Prop()
   screenreaderText: string;
 
-  async componentWillLoad() {
-    if (this.iconName) {
-      await this.loadSvgData(this.iconName);
+  @State()
+  viewBox?: string;
+
+  @Watch('iconName')
+  async prepIcon(iconName: string) {
+    if (iconName) {
+      const svg = await this.loadSvgData(iconName);
+      // Ideally, we'd use consistent scale for all icons and this would be unnecessary
+      this.viewBox = (svg && svg.getAttribute('viewBox')) || null;
     }
+  }
+
+  async componentWillLoad() {
+    await this.prepIcon(this.iconName);
   }
 
   componentDidLoad() {
@@ -42,17 +52,30 @@ export class GuxIcon {
 
   render() {
     return (
-      <svg aria-hidden={this.decorative} aria-label={this.screenreaderText}>
-        <use xlinkHref={`#${iconId(this.iconName)}`} />
-      </svg>
+      this.iconName && (
+        <svg
+          aria-hidden={this.decorative}
+          aria-label={this.screenreaderText}
+          viewBox={this.viewBox}
+        >
+          <use xlinkHref={`#${iconId(this.iconName)}`} />
+        </svg>
+      )
     );
   }
 
-  private async loadSvgData(iconName) {
+  private loadSvgData(iconName: string): Promise<Element> {
     const id = iconId(iconName);
     const svgContainer = this.getSvgContainer();
-    if (svgContainer.querySelector(`#${id}`)) {
-      return;
+    let svgElement = svgContainer.querySelector(`#${id}`);
+    if (svgElement) {
+      const pendingFetch = (svgElement as any).pending;
+      // If some other instance is loading the icon, wait on that
+      if (pendingFetch) {
+        return pendingFetch;
+      } else {
+        return Promise.resolve(svgElement);
+      }
     } else {
       // Create a placholder element so other icons on page won't try to
       // simultanously fetch while we're waiting on the icon to load
@@ -62,14 +85,21 @@ export class GuxIcon {
 
       // Fetch the icon and replace the placeholder with it
       const iconUrl = getAssetPath(`./icons/${this.iconName}.svg`);
-      const iconResponse = await fetch(iconUrl);
-      const svgText = await iconResponse.text();
-      const svgElement = new DOMParser().parseFromString(
-        svgText,
-        'image/svg+xml'
-      ).firstChild as Element;
-      svgElement.setAttribute('id', id);
-      placeholder.replaceWith(svgElement);
+      const svgPromise = fetch(iconUrl)
+        .then(response => {
+          return response.text();
+        })
+        .then(svgText => {
+          svgElement = new DOMParser().parseFromString(svgText, 'image/svg+xml')
+            .firstChild as Element;
+          svgElement.setAttribute('id', id);
+          placeholder.replaceWith(svgElement);
+          return svgElement;
+        });
+      // This is an ugly kludge to make this promise accessible to other icons
+      // waiting on the same svg
+      (placeholder as any).pending = svgPromise;
+      return svgPromise;
     }
   }
 

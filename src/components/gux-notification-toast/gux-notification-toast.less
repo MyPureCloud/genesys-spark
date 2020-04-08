@@ -12,9 +12,8 @@ gux-notification-toast {
       flex: 1;
       overflow: hidden;
     }
-    .icon-wrapper i,
+    .icon-wrapper gux-icon,
     .icon-wrapper img {
-      font-size: 32px;
       height: 32px;
       width: 32px;
       margin-right: 8px;
@@ -41,6 +40,11 @@ gux-notification-toast {
         cursor: pointer;
         border: none;
         background: none;
+        padding: 0;
+      }
+      gux-icon {
+        width: 12px;
+        height: 12px;
       }
     }
   }

@@ -35,14 +35,14 @@ export class GuxPaginationButtons {
             onClick={() => this.currentPageChanged.emit(1)}
             disabled={this.onFirstPage}
           >
-            <span role="img" class="genesys-icon-arrow-left-dbl" />
+            <gux-icon decorative iconName="ic-arrow-left-dbl"></gux-icon>
           </gux-button>
           <gux-button
             class="previous-page-button"
             onClick={() => this.currentPageChanged.emit(this.currentPage - 1)}
             disabled={this.onFirstPage}
           >
-            <span role="img" class="genesys-icon-chevron-small-left" />
+            <gux-icon decorative iconName="ic-chevron-small-left"></gux-icon>
           </gux-button>
         </div>
         <span class="gux-pagination-current-page-text">
@@ -63,14 +63,14 @@ export class GuxPaginationButtons {
             onClick={() => this.currentPageChanged.emit(this.currentPage + 1)}
             disabled={this.onLastPage}
           >
-            <span role="img" class="genesys-icon-chevron-small-right" />
+            <gux-icon decorative iconName="ic-chevron-small-right"></gux-icon>
           </gux-button>
           <gux-button
             class="last-page-button"
             onClick={() => this.currentPageChanged.emit(this.totalPages)}
             disabled={this.onLastPage}
           >
-            <span role="img" class="genesys-icon-arrow-right-dbl" />
+            <gux-icon decorative iconName="ic-arrow-right-dbl"></gux-icon>
           </gux-button>
         </div>
       </div>

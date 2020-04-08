@@ -205,11 +205,13 @@ export class GuxDropdown {
           />
           {this._showDropdownIcon() && (
             <button
+              class="dropdown-indicator"
               aria-hidden="true"
               tabindex="-1"
               type="button"
-              class="genesys-icon-dropdown-arrow"
-            />
+            >
+              <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+            </button>
           )}
         </div>
         <gux-list

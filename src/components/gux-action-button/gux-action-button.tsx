@@ -132,7 +132,7 @@ export class GuxActionButton {
           onKeyUp={e => this.onKeyUpEvent(e)}
           class="gux-dropdown"
         >
-          <span role="img" class="genesys-icon-dropdown-arrow" />
+          <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
         </gux-button>
         <gux-list ref={el => (this.listElement = el as HTMLGuxListElement)}>
           <slot />
