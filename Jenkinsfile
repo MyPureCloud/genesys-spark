@@ -129,7 +129,7 @@ pipeline {
             ./node_modules/.bin/upload \
                 --ecosystem pc \
                 --manifest library-manifest.json \
-                --source-dir ./dist
+                --source-dir ./dist/genesys-webcomponents
           '''
         }
       }
