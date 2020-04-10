@@ -19,7 +19,7 @@ export const config: Config = {
     })
   ],
   rollupPlugins: {
-    before: [
+    after: [
       copy({
         targets: [{ src: 'build/i18n', dest: 'dist/genesys-webcomponents' }],
         verbose: true

@@ -3,7 +3,7 @@ import { KeyCode } from '../../common-enums';
 import { matchesFuzzy } from '../../search';
 import { HighlightStrategy } from '../gux-text-highlight/highlight-enums';
 import { buildI18nForComponent } from '../i18n';
-import paletteResources from './gux-command-palette.i18n.json';
+import paletteResources from './i18n/en.json';
 
 const filterLimit = 50;
 const animationDuration = 300; // this 300ms duration must be kept in sync with the 300ms transition in the CSS

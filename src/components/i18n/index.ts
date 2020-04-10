@@ -1,14 +1,19 @@
 import IntlMessageFormat from 'intl-messageformat';
 import { fetchResources, ILocalizedComponentResources } from './fetchResources';
+// If this import is failing, you should run the i18n script to generate the list of locales
+import locales from './locales.json';
 
-export const buildI18nForComponent = async (
+const DEFAULT_LOCALE = 'en';
+
+export async function buildI18nForComponent(
   component: HTMLElement,
   defaultResources: ILocalizedComponentResources
-): Promise<(resourceKey: string, context?: any) => string> => {
+): Promise<(resourceKey: string, context?: any) => string> {
   let resources = defaultResources;
   let locale = 'en';
+
   if (component !== undefined) {
-    locale = getComponentClosestLanguage(component);
+    locale = getDesiredLocale(component);
     resources = await getComponentI18nResources(
       component,
       defaultResources,
@@ -23,19 +28,19 @@ export const buildI18nForComponent = async (
 
   return (resourceKey: string, context?: any): string =>
     intlFormats.get(resourceKey).format(context);
-};
+}
 
-export const getComponentI18nResources = async (
+export async function getComponentI18nResources(
   component: HTMLElement,
   defaultResources: ILocalizedComponentResources,
   locale: string
-) => {
+) {
   const componentName = component.tagName.toLocaleLowerCase();
 
   let resources: ILocalizedComponentResources;
   if (component['i18n-resources']) {
     resources = component['i18n-resources'];
-  } else if (locale !== 'en') {
+  } else if (locale !== DEFAULT_LOCALE) {
     try {
       resources = await fetchResources(componentName, locale);
     } catch (_) {
@@ -48,9 +53,31 @@ export const getComponentI18nResources = async (
   }
 
   return resources;
-};
+}
 
-const getComponentClosestLanguage = (element: HTMLElement): string => {
+function getDesiredLocale(element: HTMLElement) {
+  const locale = findLocaleInDom(element);
+  const lang = locale.split(/[_-]/)[0];
+  if (locales.indexOf(locale) >= 0) {
+    return locale;
+  } else if (locale.indexOf(lang) >= 0) {
+    return lang;
+  } else {
+    console.error(
+      `gux: No translation locale found for ${locale}, defaulting to '${DEFAULT_LOCALE}'`
+    );
+    return DEFAULT_LOCALE;
+  }
+}
+
+function findLocaleInDom(element: HTMLElement): string {
   const closestElement = element.closest('[lang]') as HTMLElement;
-  return closestElement ? closestElement.lang : 'en';
-};
+  if (closestElement && closestElement.lang) {
+    return closestElement.lang.toLowerCase();
+  } else {
+    console.error(
+      `gux: No language specified on page, defaulting to '${DEFAULT_LOCALE}`
+    );
+    return DEFAULT_LOCALE;
+  }
+}

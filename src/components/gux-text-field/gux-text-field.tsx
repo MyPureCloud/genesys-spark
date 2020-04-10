@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent } from '../i18n';
-import textFieldResources from './gux-text-field.i18n.json';
+import textFieldResources from './i18n/en.json';
 
 enum Types {
   Warning = 'warning',

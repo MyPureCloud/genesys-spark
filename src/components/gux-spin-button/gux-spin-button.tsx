@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent } from '../i18n';
-import defaultResources from './gux-spin-button.i18n.json';
+import defaultResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-spin-button.less',

@@ -11,7 +11,7 @@ import {
   Watch
 } from '@stencil/core';
 import { buildI18nForComponent } from '../i18n';
-import advancedDropDownResources from './gux-advanced-dropdown.i18n.json';
+import advancedDropDownResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',

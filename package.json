@@ -31,7 +31,7 @@
     "lint.ts": "tslint --project .",
     "lint.commit": "commitlint -f e05539276d8caa069b5e59c93e313652249d056c",
     "prepare": "./scripts/prepare-docs.sh && npm run i18n",
-    "i18n": "node scripts/build-i18n.js"
+    "i18n": "./scripts/build-i18n.js"
   },
   "dependencies": {
     "@popperjs/core": "^2.1.1",

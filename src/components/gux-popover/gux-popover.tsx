@@ -8,7 +8,7 @@ import {
   Prop
 } from '@stencil/core';
 import { buildI18nForComponent } from '../i18n';
-import modalComponentResources from './gux-popover.i18n.json';
+import modalComponentResources from './i18n/en.json';
 
 export type PopperPosition =
   | 'top'
