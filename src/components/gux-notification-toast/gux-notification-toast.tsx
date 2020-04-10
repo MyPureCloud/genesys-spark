@@ -63,7 +63,7 @@ export class GuxNotificationToast {
 
   getIcon() {
     return this.icon ? (
-      <i class={this.icon} />
+      <gux-icon decorative iconName={this.icon}></gux-icon>
     ) : this.iconUri ? (
       <img src={this.iconUri} />
     ) : (
@@ -84,11 +84,8 @@ export class GuxNotificationToast {
           </div>
         </div>
         <div class="close-icon-wrapper">
-          <button
-            onClick={e => this.onCloseButtonClickHandler(e)}
-            title={this.i18n.close}
-          >
-            <i class="genesys-icon-close" />
+          <button onClick={e => this.onCloseButtonClickHandler(e)}>
+            <gux-icon iconName="close" screenreaderText={this.i18n.close} />
           </button>
         </div>
       </div>

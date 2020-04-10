@@ -6,44 +6,7 @@ gux-icon {
 
   > svg {
     fill: currentColor;
-    height: 100%;
-    width: 100%;
+    height: unset;
+    width: unset;
   }
-}
-
-// Theming
-
-// Dark
-.gux-icon-dark-theme {
-    color: @gux-off-white;
-};
-
-.gux-dark-theme {
-    gux-icon {
-        .gux-icon-dark-theme();
-    }
-}
-
-gux-icon.gux-dark-theme {
-    .gux-icon-dark-theme();
-}
-
-// Light
-.gux-icon-light-theme {
-    color: @gux-grey-2;
-};
-
-.gux-light-theme {
-    gux-icon {
-        .gux-icon-light-theme();
-    }
-}
-
-gux-icon.gux-light-theme {
-    .gux-icon-light-theme();
-}
-
-// Default Theme
-gux-icon {
-    .gux-icon-light-theme();
 }

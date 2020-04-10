@@ -1,5 +1,5 @@
 // Variables part
-@background-color: #F9FAFB;
+@background-color: #f9fafb;
 @background-color-dark-theme: #555d66;
 
 @text-color: @gux-grey-2;
@@ -63,19 +63,19 @@ gux-advanced-dropdown {
         }
       }
 
-      button.genesys-icon-dropdown-arrow {
+      .icon-wrapper {
+        gux-icon {
+          width: 16px;
+          height: 16px;
+        }
         position: absolute;
+        display: flex;
+        align-items: center;
         top: 1px;
-        right: 3px;
+        right: 8px;
         bottom: 0;
-        border: none;
-        background: none;
         cursor: pointer;
-        display: block;
-        outline: none;
         overflow: hidden;
-        font-size: 16px;
-        pointer-events: none;
       }
     }
 
@@ -180,7 +180,7 @@ gux-advanced-dropdown {
         }
       }
 
-      button.genesys-icon-dropdown-arrow {
+      gux-icon {
         color: @text-color-dark-theme;
       }
     }
@@ -211,14 +211,14 @@ gux-advanced-dropdown.gux-dark-theme {
       a.gux-select-input {
         background-color: @background-color;
         color: @text-color;
-        border-color: @border-color
+        border-color: @border-color;
       }
 
-      button.genesys-icon-dropdown-arrow {
+      gux-icon {
         color: @text-color;
       }
     }
-    
+
     &.active {
       .gux-select-field a.gux-select-input {
         border: 1px solid @active-border;

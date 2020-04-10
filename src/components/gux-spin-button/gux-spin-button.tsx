@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent } from '../i18n';
-import defaultResources from './gux-spin-button.i18n.json';
+import defaultResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-spin-button.less',
@@ -174,18 +174,28 @@ export class GuxSpinButton {
             onClick={() => {
               this.incrementValue(true);
             }}
-            class="genesys-icon-iw-circle-no-chevron-up gux-spin-button"
+            class="gux-spin-button"
             disabled={this.disabled || this.value >= this.max}
-          />
+          >
+            <gux-icon
+              decorative
+              iconName="ic-iw-circle-no-chevron-up"
+            ></gux-icon>
+          </button>
           <button
             id="gux-spin-button-decrement"
             aria-label={this.i18n('decrement')}
             onClick={() => {
               this.incrementValue(false);
             }}
-            class="genesys-icon-iw-circle-no-chevron-down gux-spin-button"
+            class="gux-spin-button"
             disabled={this.disabled || this.value <= this.min}
-          />
+          >
+            <gux-icon
+              decorative
+              iconName="ic-iw-circle-no-chevron-down"
+            ></gux-icon>
+          </button>
         </div>
       </div>
     );

@@ -89,7 +89,7 @@ describe('gux-text-highlight', () => {
     expect(highlight[0].innerText).toBe('e');
 
     const text = await page.find('gux-text-highlight');
-    expect(text.innerText).toBe('test');
+    expect(text.innerText.trim()).toBe('test');
   });
 
   it('should handle starts with fuzzy matches', async () => {
@@ -104,7 +104,7 @@ describe('gux-text-highlight', () => {
     expect(highlight[0].innerText).toBe('f');
 
     const text = await page.find('gux-text-highlight');
-    expect(text.innerText).toBe('food');
+    expect(text.innerText.trim()).toBe('food');
   });
 
   it('should handle ends with fuzzy matches', async () => {
@@ -119,7 +119,7 @@ describe('gux-text-highlight', () => {
     expect(highlight[0].innerText).toBe('d');
 
     const text = await page.find('gux-text-highlight');
-    expect(text.innerText).toBe('food');
+    expect(text.innerText.trim()).toBe('food');
   });
 
   it('should handle non matching fuzzy matches', async () => {
@@ -133,7 +133,7 @@ describe('gux-text-highlight', () => {
     expect(highlight.length).toBe(0);
 
     const text = await page.find('gux-text-highlight');
-    expect(text.innerText).toBe('food');
+    expect(text.innerText.trim()).toBe('food');
   });
 
   it('should handle contains fuzzy matches', async () => {
@@ -148,7 +148,7 @@ describe('gux-text-highlight', () => {
     expect(highlight[0].innerText).toBe('pl');
 
     const text = await page.find('gux-text-highlight');
-    expect(text.innerText).toBe('apple');
+    expect(text.innerText.trim()).toBe('apple');
   });
 
   it('should handle fuzzy matches', async () => {
@@ -164,6 +164,6 @@ describe('gux-text-highlight', () => {
     expect(highlight[1].innerText).toBe('Ph');
 
     const text = await page.find('gux-text-highlight');
-    expect(text.innerText).toBe('Dial Home Phone');
+    expect(text.innerText.trim()).toBe('Dial Home Phone');
   });
 });

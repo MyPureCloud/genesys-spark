@@ -13,6 +13,7 @@ describe('gux-disclosure-button', () => {
     const page = await newE2EPage();
 
     await page.setContent('<gux-disclosure-button></gux-disclosure-button>');
+    page.waitForChanges();
     const button = await page.find('.disclosure-button');
     const panel = await page.find('.disclosure-panel');
     await button.click();

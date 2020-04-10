@@ -2,7 +2,7 @@
 
 // Style
 gux-modal {
-  &.hidden{
+  &.hidden {
     display: none;
   }
 
@@ -58,14 +58,15 @@ gux-modal {
       position: absolute;
       top: 15px;
       right: 15px;
-      height: 11px;
-      width: 11px;
       padding: 0;
       border: none;
       background: transparent;
       font-size: 11px;
       color: @gux-icons;
       cursor: pointer;
+      gux-icon {
+        width: 12px;
+      }
     }
 
     .modal-header {
@@ -86,7 +87,9 @@ gux-modal {
 
   .modal-container {
     @media (max-width: 416px) {
-      &.small, &.medium, &.large {
+      &.small,
+      &.medium,
+      &.large {
         height: 100%;
         width: 100%;
       }

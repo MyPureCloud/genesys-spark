@@ -1,14 +1,11 @@
-@Library('pipeline-library@master')
+@Library('pipeline-library')
 import com.genesys.jenkins.Service
 
 def notifications = null
 String[] mailingList = [
   "Jeremie.Pichon@genesys.com",
-  "Jarrod.Stormo@genesys.com",
   "Matthew.Cheely@genesys.com",
-  "Keri.Lawrence@genesys.com",
-  "Darragh.Kirwan@genesys.com",
-  "Eric.Lifka@genesys.com"
+  "Darragh.Kirwan@genesys.com"
 ]
 
 def isAlpha() {
@@ -18,9 +15,16 @@ def isAlpha() {
 def isRelease() {
   return env.SHORT_BRANCH.equals('master');
 }
+def isFeature() {
+  return env.SHORT_BRANCH.startsWith('feature/');
+}
 
 def shouldPublish() {
   return isAlpha() || isRelease();
+}
+
+def shouldUploadAssets() { 
+  isAlpha() || isRelease() || isFeature();
 }
 
 pipeline {
@@ -104,11 +108,29 @@ pipeline {
           sh './scripts/generate-manifest'
           // Generate the CDN_URL for use in the docs and build everything.
           sh '''
-            export CDN_URL=$(./node_modules/.bin/cdn --ecosystem pc --manifest manifest.json)
+            export DOCS_CDN_URL=$(./node_modules/.bin/cdn --ecosystem pc --manifest docs-manifest.json)
+            export CDN_URL=$(./node_modules/.bin/cdn --ecosystem pc --manifest library-manifest.json)
             npm run build
           '''
           // Re-generate manifest file after building docs - required to find *.html in docs
           sh './scripts/generate-manifest'
+        }
+      }
+    }
+
+    stage('Upload Assets') {
+      when {
+        expression { shouldUploadAssets() }
+      }
+      steps {
+        dir(env.REPO_DIR) {
+          sh "echo Uploading static assets!"
+          sh '''
+            ./node_modules/.bin/upload \
+                --ecosystem pc \
+                --manifest library-manifest.json \
+                --source-dir ./dist
+          '''
         }
       }
     }
@@ -150,7 +172,7 @@ pipeline {
           sh '''
             ./node_modules/.bin/upload \
                 --ecosystem pc \
-                --manifest manifest.json \
+                --manifest docs-manifest.json \
                 --source-dir ./docs/dist
           '''
         }
@@ -167,7 +189,7 @@ pipeline {
           sh '''
             ./node_modules/.bin/deploy \
                 --ecosystem pc \
-                --manifest manifest.json \
+                --manifest docs-manifest.json \
                 --dest-env dev
           '''
         }

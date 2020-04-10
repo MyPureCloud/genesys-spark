@@ -77,7 +77,7 @@ export class GuxSimpleToast {
             onClick={e => this.onCloseButtonClickHandler(e)}
             title={this.closeLabel}
           >
-            <i class="genesys-icon-close" />
+            <gux-icon decorative iconName="ic-close"></gux-icon>
           </button>
         </div>
       </div>

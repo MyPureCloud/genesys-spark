@@ -11,7 +11,7 @@ import {
   Watch
 } from '@stencil/core';
 import { buildI18nForComponent } from '../i18n';
-import advancedDropDownResources from './gux-advanced-dropdown.i18n.json';
+import advancedDropDownResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
@@ -148,12 +148,9 @@ export class GuxAdvancedDropdown {
             )}
             {this.value && <span class="gux-select-value">{this.value}</span>}
           </a>
-          <button
-            aria-hidden="true"
-            tabindex="-1"
-            type="button"
-            class="genesys-icon-dropdown-arrow"
-          />
+          <div class="icon-wrapper">
+            <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+          </div>
         </div>
         <div
           class={`gux-advanced-dropdown-menu ${this.opened ? 'opened' : ''}`}

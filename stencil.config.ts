@@ -1,32 +1,11 @@
+import replace from '@rollup/plugin-replace';
 import { Config } from '@stencil/core';
 import { less } from '@stencil/less';
+import copy from 'rollup-plugin-copy';
+
+const CDN_URL = process.env.CDN_URL || '';
 
 export const config: Config = {
-  copy: [
-    {
-      dest: '../fonts',
-      src: 'style/fonts'
-    },
-    {
-      dest: '../icons',
-      src: 'style/icons'
-    },
-    {
-      dest: '../genesys-webcomponents/i18n',
-      src: '../build/i18n'
-    },
-    {
-      dest: '../genesys-webcomponents/svg-icons',
-      src: '../build/svg-icons'
-    }
-  ],
-  excludeSrc: [
-    '**/test/**',
-    '**/*.spec.*',
-    '**/*.e2e.*',
-    '**/stories/**',
-    '**/**.md'
-  ],
   namespace: 'genesys-webcomponents',
   outputTargets: [
     {
@@ -39,6 +18,14 @@ export const config: Config = {
       injectGlobalPaths: ['src/style/variables.less', 'src/style/mixins.less']
     })
   ],
+  rollupPlugins: {
+    after: [
+      copy({
+        targets: [{ src: 'build/i18n', dest: 'dist/genesys-webcomponents' }],
+        verbose: true
+      })
+    ]
+  },
   testing: {
     browserArgs: ['--no-sandbox'],
     browserHeadless: true,

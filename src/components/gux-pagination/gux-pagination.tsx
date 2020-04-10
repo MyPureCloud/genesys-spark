@@ -10,7 +10,7 @@ import {
 import { GuxPaginationLayout } from './gux-pagination-layout';
 
 import { buildI18nForComponent } from '../i18n';
-import paginationResources from './gux-pagination.i18n.json';
+import paginationResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-pagination.less',
