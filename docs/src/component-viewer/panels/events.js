@@ -1,4 +1,4 @@
-import COMPONENT_SPEC from '../../gux-components-spec.json';
+import COMPONENT_SPEC from '../../components-spec.json';
 import { emptyElement } from '../../utils/empty-element';
 import { toHTML } from '../../utils/to-html.js';
 

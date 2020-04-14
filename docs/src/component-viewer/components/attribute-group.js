@@ -1,20 +1,20 @@
 import { toHTML } from '../../utils/to-html';
-import COMPONENT_SPEC from '../../gux-components-spec.json';
+import COMPONENT_SPEC from '../../components-spec.json';
 import { checkboxAttribute } from './checkbox-attribute';
 import { selectAttribute } from './select-attribute';
 import { textAttribute } from './text-attribute';
 import { jsonAttribute } from './json-attribute';
 
 export const createAttributeGroup = (parent, astNode, renderCallback) => {
-  let elementName = astNode.nodeName;
-  let element = toHTML(`
+  const elementName = astNode.nodeName;
+  const element = toHTML(`
         <div class="attribute-group">
             <div class="title">${elementName}</div>
         </div>`);
 
   parent.appendChild(element);
 
-  let attributes = COMPONENT_SPEC[elementName].attributes || [];
+  const attributes = COMPONENT_SPEC[elementName].attributes || [];
   Object.entries(attributes).forEach(([name, type]) => {
     let handler = handlerFor(type);
     if (handler) {
@@ -36,7 +36,7 @@ function handlerFor(type) {
   } else if (type == 'checkbox') {
     return checkboxAttribute;
   } else if (type == 'json') {
-    //TODO: delete when not needed
+    //TODO: delete when not needed (see COMUI-122)
     return jsonAttribute;
   }
 }

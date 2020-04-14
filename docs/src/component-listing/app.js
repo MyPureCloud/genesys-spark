@@ -1,5 +1,5 @@
 import { toHTML } from '../utils/to-html.js';
-import COMPONENT_SPEC from '../gux-components-spec.json';
+import COMPONENT_SPEC from '../components-spec.json';
 
 export function bootstrap() {
   let components = Object.keys(COMPONENT_SPEC).filter(
