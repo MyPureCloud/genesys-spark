@@ -1,14 +1,14 @@
 import { toHTML } from '../../utils/to-html';
 import { debounce } from '../../utils/debounce';
 
-export const jsonAttribute = (attr, astNode, parent, renderCallback) => {
-  let matchingAttr = astNode.attrs.find(a => a.name === attr.name);
+export const jsonAttribute = (name, astNode, parent, renderCallback) => {
+  let matchingAttr = astNode.attrs.find(a => a.name === name);
 
   let value = parse(matchingAttr ? matchingAttr.value : '', 2);
 
   let element = toHTML(`
     <label>
-        <span>${attr.name}:</span>
+        <span>${name}:</span>
         <textarea rows="6">${value}</textarea>
     </label>`);
 
@@ -20,9 +20,9 @@ export const jsonAttribute = (attr, astNode, parent, renderCallback) => {
       if (matchingAttr) {
         matchingAttr.value = value;
       } else if (value) {
-        astNode.attrs.push({ name: attr.name, value });
+        astNode.attrs.push({ name: name, value });
       } else {
-        astNode.attrs = astNode.attrs.filter(a => a.name !== attr.name);
+        astNode.attrs = astNode.attrs.filter(a => a.name !== name);
       }
 
       renderCallback();

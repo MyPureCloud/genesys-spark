@@ -25,7 +25,7 @@ export default class EventsPanel {
       let elements = this.targetElement.getElementsByTagName(component);
       let events = COMPONENT_SPEC[component].events || [];
 
-      for (let { name, description } of events) {
+      Object.entries(events).forEach(([name, description]) => {
         descriptionsEl.appendChild(
           toHTML(`
                 <div>
@@ -39,18 +39,27 @@ export default class EventsPanel {
           element.addEventListener(name, function(e) {
             let detail = e ? e.detail : e;
             let target = e ? e.target : '';
-            triggeredEl.appendChild(
-              toHTML(`
+            if (detail !== null && detail !== undefined) {
+              triggeredEl.appendChild(
+                toHTML(`
                         <div>
                             <span>${component}</span>
                             <span>[${name}]</span>
                             - <span>${detail}</span>
-                            - <span>${target}</span>
                         </div>`)
-            );
+              );
+            } else {
+              triggeredEl.appendChild(
+                toHTML(`
+                        <div>
+                            <span>${component}</span>
+                            <span>[${name}]</span>
+                        </div>`)
+              );
+            }
           });
         }
-      }
+      });
     });
   }
 
