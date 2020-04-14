@@ -84,7 +84,8 @@
     "typedoc": "^0.14.2",
     "webpack": "^4.32.0",
     "webpack-dev-server": "^3.4.1",
-    "workbox-build": "3.4.1"
+    "workbox-build": "3.4.1",
+    "xmldom": "^0.3.0"
   },
   "repository": {
     "type": "git",
