@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "1.0.0-alpha.30",
+  "version": "1.0.0-alpha.31",
   "description": "Common webcomponents",
   "main": "dist/stencil-wrapper.js",
   "types": "dist/types/components.d.ts",
