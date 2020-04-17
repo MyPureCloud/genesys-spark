@@ -12,7 +12,8 @@ gux-checkbox {
 
   .gux-checkbox-container {
     position: relative;
-    padding-left: @gux-icon-size-default + 4px;
+    padding-left: 24px;
+    line-height: 24px;
   }
 
   input {
@@ -31,6 +32,10 @@ gux-checkbox {
 
   label {
     display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   label::before {
@@ -40,8 +45,8 @@ gux-checkbox {
     height: 11px;
     width: 11px;
 
-    left: 2px;
-    top: 3px;
+    left: 6px;
+    top: 7px;
   }
 
   label::after {
@@ -49,8 +54,8 @@ gux-checkbox {
     content: '';
 
     position: absolute;
-    left: 0;
-    top: 2px;
+    left: 4px;
+    top: 6px;
     width: @gux-icon-size-default;
     height: @gux-icon-size-default;
   }
@@ -71,7 +76,7 @@ gux-checkbox {
 
   label.gux-checked::after {
     transform: scaleY(-1);
-    top: -1px;
+    top: 3px;
     background-image: @gux-icon-checkbox-checked;
   }
 
