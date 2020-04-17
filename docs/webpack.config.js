@@ -48,7 +48,6 @@ module.exports = {
     }
   },
   plugins: [
-    new stencil.StencilPlugin(),
     new MonacoWebpackPlugin(),
     new CopyPlugin([
       {
@@ -56,6 +55,7 @@ module.exports = {
         flatten: true,
         transform: injectCdnUrl
       },
+      { from: '../dist/genesys-webcomponents/**/*' },
       {
         from: '../src/components/**/example.html',
         transformPath(targetPath) {
