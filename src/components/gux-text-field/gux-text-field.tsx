@@ -239,6 +239,7 @@ export class GuxTextField {
       <div class={this.getClassList()}>
         <div class="gux-field">
           <input
+            class={this.showClearButton ? 'text-clearable' : ''}
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
