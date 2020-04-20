@@ -87,14 +87,31 @@ export class GuxIcon {
       const iconUrl = getAssetPath(`./icons/${this.iconName}.svg`);
       const svgPromise = fetch(iconUrl)
         .then(response => {
-          return response.text();
+          if (response.status === 200) {
+            return response.text();
+          }
+          console.error(
+            `[gux-icon] icon "${this.iconName}" is either invalid or not found`
+          );
+          return null;
         })
         .then(svgText => {
-          svgElement = new DOMParser().parseFromString(svgText, 'image/svg+xml')
-            .firstChild as Element;
-          svgElement.setAttribute('id', id);
-          placeholder.replaceWith(svgElement);
-          return svgElement;
+          if (svgText) {
+            svgElement = new DOMParser().parseFromString(
+              svgText,
+              'image/svg+xml'
+            ).firstChild as Element;
+            svgElement.setAttribute('id', id);
+            placeholder.replaceWith(svgElement);
+            return svgElement;
+          }
+          return null;
+        })
+        .catch(() => {
+          console.error(
+            `[gux-icon] icon "${this.iconName}" is either invalid or not found`
+          );
+          return null;
         });
       // This is an ugly kludge to make this promise accessible to other icons
       // waiting on the same svg
