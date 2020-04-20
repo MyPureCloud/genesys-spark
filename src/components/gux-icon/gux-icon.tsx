@@ -83,7 +83,7 @@ export class GuxIcon {
       placeholder.setAttribute('id', id);
       svgContainer.appendChild(placeholder);
 
-      // Fetch the icon and replace the placeholder with it
+      // Fetch the icon and replace the placeholder with it.
       const iconUrl = getAssetPath(`./icons/${this.iconName}.svg`);
       const svgPromise = fetch(iconUrl)
         .then(response => {
@@ -91,7 +91,7 @@ export class GuxIcon {
             return response.text();
           }
           throw new Error(
-            `[gux-icon] icon "${this.iconName}" is either invalid or not found`
+            `[gux-icon] fetching failed for icon "${this.iconName}" with status "${response.statusText} (${response.status})".`
           );
         })
         .then(svgText => {
@@ -102,7 +102,9 @@ export class GuxIcon {
           return svgElement;
         })
         .catch(err => {
-          console.error(err);
+          setTimeout(() => {
+            throw new Error(err.message);
+          }, 0);
           return null;
         });
       // This is an ugly kludge to make this promise accessible to other icons
