@@ -9,7 +9,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run i18n && npm run stencil && npm run docs && npm run build-wrapper",
+    "build": "npm run prepare-types && npm run i18n && npm run stencil && npm run docs && npm run build-wrapper",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "commit": "git-cz",
     "docs": "cd ./docs && npm run build",
@@ -30,7 +30,8 @@
     "lint.fix": "npm run lint.ts -- --fix",
     "lint.ts": "tslint --project .",
     "lint.commit": "commitlint -f e05539276d8caa069b5e59c93e313652249d056c",
-    "prepare": "./scripts/prepare-docs.sh && npm run i18n",
+    "prepare": "npm run prepare-types && ./scripts/prepare-docs.sh && npm run i18n",
+    "prepare-types": "./scripts/prepare-types.js",
     "i18n": "./scripts/build-i18n.js"
   },
   "dependencies": {
