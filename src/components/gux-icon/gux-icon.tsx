@@ -90,27 +90,19 @@ export class GuxIcon {
           if (response.status === 200) {
             return response.text();
           }
-          console.error(
+          throw new Error(
             `[gux-icon] icon "${this.iconName}" is either invalid or not found`
           );
-          return null;
         })
         .then(svgText => {
-          if (svgText) {
-            svgElement = new DOMParser().parseFromString(
-              svgText,
-              'image/svg+xml'
-            ).firstChild as Element;
-            svgElement.setAttribute('id', id);
-            placeholder.replaceWith(svgElement);
-            return svgElement;
-          }
-          return null;
+          svgElement = new DOMParser().parseFromString(svgText, 'image/svg+xml')
+            .firstChild as Element;
+          svgElement.setAttribute('id', id);
+          placeholder.replaceWith(svgElement);
+          return svgElement;
         })
-        .catch(() => {
-          console.error(
-            `[gux-icon] icon "${this.iconName}" is either invalid or not found`
-          );
+        .catch(err => {
+          console.error(err);
           return null;
         });
       // This is an ugly kludge to make this promise accessible to other icons
