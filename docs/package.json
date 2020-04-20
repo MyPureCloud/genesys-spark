@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.6.2",
-    "@stencil/webpack": "0.0.6",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.4.2",
     "file-loader": "^5.0.2",
