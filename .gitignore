@@ -24,8 +24,6 @@ log.txt
 .coverage/
 manifest.json
 components.d.ts
-index.d.ts
-stencil-wrapper.d.ts
 node_modules/
 $RECYCLE.BIN/
 
