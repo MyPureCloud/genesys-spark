@@ -1,11 +1,6 @@
 import { toHTML } from '../../utils/to-html';
 
-export const checkboxAttribute = (
-  { name },
-  astNode,
-  parent,
-  renderCallback
-) => {
+export const checkboxAttribute = (name, astNode, parent, renderCallback) => {
   let matchingAttr = astNode.attrs.find(a => a.name === name);
 
   let element = toHTML(`

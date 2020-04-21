@@ -1,5 +1,5 @@
 import { toHTML } from '../utils/to-html.js';
-import COMPONENT_SPEC from '../gux-components-spec.json';
+import COMPONENT_SPEC from '../components-spec.json';
 
 export function bootstrap() {
   let components = Object.keys(COMPONENT_SPEC).filter(
@@ -12,7 +12,10 @@ export function bootstrap() {
             <nav>
                 <header>Components</header>
                 ${components
-                  .map(component => `<a href="#${component}">${component}</a>`)
+                  .map(
+                    component =>
+                      `<a href="#${component}">${shortName(component)}</a>`
+                  )
                   .join('')}
             </nav>
             <iframe id="componentFrame" />
@@ -29,4 +32,8 @@ export function bootstrap() {
 
   window.addEventListener('hashchange', hashHandler);
   hashHandler();
+}
+
+function shortName(component) {
+  return component.replace(/^gux-/, '');
 }

@@ -1,4 +1,4 @@
-import COMPONENT_SPEC from '../../gux-components-spec.json';
+import COMPONENT_SPEC from '../../components-spec.json';
 import { createAttributeGroup } from '../components/attribute-group';
 import { emptyElement } from '../../utils/empty-element.js';
 
