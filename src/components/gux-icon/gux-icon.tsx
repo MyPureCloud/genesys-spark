@@ -103,7 +103,7 @@ export class GuxIcon {
         })
         .catch(err => {
           setTimeout(() => {
-            throw new Error(err.message);
+            throw err;
           }, 0);
           return null;
         });
