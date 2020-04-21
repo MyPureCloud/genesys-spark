@@ -83,11 +83,16 @@ export class GuxIcon {
       placeholder.setAttribute('id', id);
       svgContainer.appendChild(placeholder);
 
-      // Fetch the icon and replace the placeholder with it
+      // Fetch the icon and replace the placeholder with it.
       const iconUrl = getAssetPath(`./icons/${this.iconName}.svg`);
       const svgPromise = fetch(iconUrl)
         .then(response => {
-          return response.text();
+          if (response.status === 200) {
+            return response.text();
+          }
+          throw new Error(
+            `[gux-icon] fetching failed for icon "${this.iconName}" with status "${response.statusText} (${response.status})".`
+          );
         })
         .then(svgText => {
           svgElement = new DOMParser().parseFromString(svgText, 'image/svg+xml')
@@ -95,6 +100,12 @@ export class GuxIcon {
           svgElement.setAttribute('id', id);
           placeholder.replaceWith(svgElement);
           return svgElement;
+        })
+        .catch(err => {
+          setTimeout(() => {
+            throw err;
+          }, 0);
+          return null;
         });
       // This is an ugly kludge to make this promise accessible to other icons
       // waiting on the same svg
