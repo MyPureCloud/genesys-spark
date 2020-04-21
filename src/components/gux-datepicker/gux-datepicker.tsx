@@ -158,6 +158,8 @@ export class GuxDatepicker {
   }
 
   setValue() {
+    this.replaceUndefinedChars();
+
     if (this.mode === CalendarModes.Range) {
       const fromValue = this.stringToDate(this.inputElement.value);
       const toValue = this.stringToDate(this.toInputElement.value);
@@ -170,6 +172,7 @@ export class GuxDatepicker {
       this.updateDate();
       this.calendarElement.setValue(date);
     }
+    this.input.emit(this.value);
   }
 
   getPreviousSep(sep: string) {
@@ -193,6 +196,7 @@ export class GuxDatepicker {
       this.focusedField = e.target as HTMLInputElement;
       switch (e.keyCode) {
         case KeyCode.Enter:
+        case KeyCode.Esc:
           this.focusedField.blur();
           this.active = false;
           break;
@@ -220,8 +224,6 @@ export class GuxDatepicker {
             )
           );
           this.setCursorRange();
-          this.replaceUndefinedChars();
-          this.setValue();
           break;
         case KeyCode.Right:
           e.preventDefault();
@@ -231,8 +233,6 @@ export class GuxDatepicker {
             )
           );
           this.setCursorRange();
-          this.replaceUndefinedChars();
-          this.setValue();
           break;
         default:
           const inputNumber = parseInt(e.key, 10);
@@ -264,7 +264,6 @@ export class GuxDatepicker {
                 this.setValue();
               }
             }
-            this.input.emit(this.value);
           }
           this.setSelectionRange(selectionStart);
           this.setCursorRange();
@@ -286,10 +285,6 @@ export class GuxDatepicker {
 
   @Listen('focusout')
   onFocusOut(e: FocusEvent) {
-    if (!this.calendarElement.contains(e.relatedTarget as Node)) {
-      this.replaceUndefinedChars();
-      this.setValue();
-    }
     if (!this.root.contains(e.relatedTarget as Node)) {
       this.active = false;
     }
