@@ -88,7 +88,7 @@ export class GuxColorPicker {
             style={{ background: this.activeColor }}
           />
           <div class="gux-color-picker-color-name">{this.activeColor}</div>
-          <i class="genesys-icon-dropdown-arrow" />
+          <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
         </button>
         {this.opened && (
           <gux-color-select

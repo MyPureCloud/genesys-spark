@@ -1,15 +1,11 @@
-import 'genesys-webcomponents';
 import parse5 from 'parse5';
-import 'fonts.css';
-import 'icons.css';
+import '../styles/fonts/fonts.css';
 
 import AttributesPanel from './panels/attributes';
 import { createPreview } from './panels/preview';
 import { createEditor } from './panels/editor';
 import EventsPanel from './panels/events';
 import { toHTML } from '../utils/to-html';
-
-//gwc.defineCustomElements(window, {});
 
 function createLayout() {
   let template = toHTML(`

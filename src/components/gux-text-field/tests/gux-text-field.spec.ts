@@ -32,15 +32,11 @@ describe('gux-text-field', () => {
       const component = new GuxTextField();
       component.errorMessage = 'error';
       component.componentDidLoad();
-      expect(component.getIconByMessageType('sss')).toBe(
-        'genesys-icon-alert-octo'
-      );
+      expect(component.getIconByMessageType('sss')).toBe('ic-alert-octo');
       expect(component.getIconByMessageType('warning')).toBe(
-        'genesys-icon-alert-triangle'
+        'ic-alert-triangle'
       );
-      expect(component.getIconByMessageType('error')).toBe(
-        'genesys-icon-alert-octo'
-      );
+      expect(component.getIconByMessageType('error')).toBe('ic-alert-octo');
     });
   });
   describe('clear', () => {

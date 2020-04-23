@@ -16,7 +16,7 @@ describe('gux-list-item', () => {
     const component = await page.find('gux-list-item');
 
     expect(component.getAttribute('role')).toBe('listitem');
-    expect(component.innerText).toBe('testing');
+    expect(component.innerText.trim()).toBe('testing');
   });
 
   it('should correctly slot elements', async () => {

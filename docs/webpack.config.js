@@ -4,7 +4,7 @@ const stencil = require('@stencil/webpack');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const CDN_URL = process.env.CDN_URL || '';
+const CDN_URL = process.env.DOCS_CDN_URL || '';
 
 module.exports = {
   entry: './src/index.js',
@@ -44,13 +44,10 @@ module.exports = {
       'genesys-webcomponents': path.resolve(
         __dirname,
         '../dist/genesys-webcomponents'
-      ),
-      'fonts.css': path.resolve(__dirname, '../dist/fonts/fonts.css'),
-      'icons.css': path.resolve(__dirname, '../dist/icons/icons.css')
+      )
     }
   },
   plugins: [
-    new stencil.StencilPlugin(),
     new MonacoWebpackPlugin(),
     new CopyPlugin([
       {
@@ -58,6 +55,7 @@ module.exports = {
         flatten: true,
         transform: injectCdnUrl
       },
+      { from: '../dist/genesys-webcomponents/**/*' },
       {
         from: '../src/components/**/example.html',
         transformPath(targetPath) {
@@ -67,9 +65,6 @@ module.exports = {
           return `${component}.html`;
         },
         transform: generateComponentPage
-      },
-      {
-        from: '../dist/svg-icons/*.svg'
       }
     ])
   ],

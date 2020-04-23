@@ -1,10 +1,16 @@
 import { toHTML } from '../../utils/to-html';
 
-export const selectAttribute = (attr, astNode, parent, renderCallback) => {
-  let matchingAttr = astNode.attrs.find(a => a.name === attr.name);
+export const selectAttribute = (
+  values,
+  name,
+  astNode,
+  parent,
+  renderCallback
+) => {
+  let matchingAttr = astNode.attrs.find(a => a.name === name);
   let options = [
     { value: '', selected: false },
-    ...attr.options.map(value => ({ value, selected: false }))
+    ...values.map(value => ({ value, selected: false }))
   ];
 
   options.forEach(option => {
@@ -21,7 +27,7 @@ export const selectAttribute = (attr, astNode, parent, renderCallback) => {
 
   let element = toHTML(`
     <label>
-        <span>${attr.name}:</span>
+        <span>${name}:</span>
         <select>
             ${options.map(
               o => `
@@ -37,11 +43,11 @@ export const selectAttribute = (attr, astNode, parent, renderCallback) => {
     let selected = event.target.value;
 
     if (selected === '') {
-      astNode.attrs = astNode.attrs.filter(a => a.name !== attr.name);
+      astNode.attrs = astNode.attrs.filter(a => a.name !== name);
     } else if (matchingAttr) {
       matchingAttr.value = selected;
     } else {
-      astNode.attrs.push({ name: attr.name, value: selected });
+      astNode.attrs.push({ name: name, value: selected });
     }
 
     renderCallback();

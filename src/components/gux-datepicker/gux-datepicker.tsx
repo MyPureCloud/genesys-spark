@@ -17,7 +17,7 @@ import {
   fromIsoDateString
 } from '../../common-utils';
 import { buildI18nForComponent } from '../i18n';
-import i18nStrings from './gux-datepicker.i18n.json';
+import i18nStrings from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-datepicker.less',
@@ -577,12 +577,13 @@ export class GuxDatepicker {
               <button
                 aria-hidden="true"
                 type="button"
-                class="genesys-icon-calendar-generic"
                 onClick={() => {
                   this.toggleCalendar();
                 }}
                 tabindex="-1"
-              />
+              >
+                <gux-icon decorative iconName="ic-calendar-generic"></gux-icon>
+              </button>
               <gux-calendar
                 ref={(el: HTMLGuxCalendarElement) =>
                   (this.calendarElement = el)
@@ -614,12 +615,16 @@ export class GuxDatepicker {
                 <button
                   aria-hidden="true"
                   type="button"
-                  class="genesys-icon-calendar-generic"
                   onClick={() => {
                     this.toggleCalendar();
                   }}
                   tabindex="-1"
-                />
+                >
+                  <gux-icon
+                    decorative
+                    iconName="ic-calendar-generic"
+                  ></gux-icon>
+                </button>
               </gux-text-field>
             </gux-text-label>
           </div>

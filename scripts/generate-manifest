@@ -5,33 +5,59 @@ const path = require('path');
 const glob = require('glob');
 const version = require('./version-helper');
 
-const deployVersion = version.getDeployVersion();
-const manifestPath = path.join(__dirname, '../manifest.json');
-
 const buildDate = new Date();
 
-let docIndexes = glob
-  .sync(path.join(__dirname, '../docs/dist/*.html'))
-  .map(file => {
-    return {
-      file: path.basename(file)
-    };
+generateDocsManifest();
+generateLibraryManifest();
+
+function generateLibraryManifest() {
+  const deployVersion = version.getDeployVersion();
+  const manifestPath = path.join(__dirname, '../library-manifest.json');
+  const uploadDir = path.join(__dirname, '../dist/genesys-webcomponents');
+
+  let manifest = {
+    name: 'genesys-webcomponents',
+    sourceDir: uploadDir,
+    version: deployVersion,
+    build: `${process.env.BUILD_NUMBER}`,
+    buildDate: buildDate.toISOString(),
+    indexFiles: []
+  };
+
+  writeManifest(manifest, manifestPath);
+}
+
+function generateDocsManifest() {
+  const deployVersion = version.getDeployVersion();
+  const manifestPath = path.join(__dirname, '../docs-manifest.json');
+
+  let docIndexes = glob
+    .sync(path.join(__dirname, '../docs/dist/*.html'))
+    .map(file => {
+      return {
+        file: path.basename(file)
+      };
+    });
+
+  docIndexes.push({
+    file: 'versions.json'
   });
 
-docIndexes.push({
-  file: 'versions.json'
-});
+  let docsManifest = {
+    name: 'common-ui-docs/genesys-webcomponents',
+    version: deployVersion,
+    build: `${process.env.BUILD_NUMBER}`,
+    buildDate: buildDate.toISOString(),
+    indexFiles: docIndexes
+  };
 
-let manifest = {
-  name: 'common-ui-docs/genesys-webcomponents',
-  version: deployVersion,
-  build: `${process.env.BUILD_NUMBER}`,
-  buildDate: buildDate.toISOString(),
-  indexFiles: docIndexes
-};
+  writeManifest(docsManifest, manifestPath);
+}
 
-let manifestJson = JSON.stringify(manifest, null, 2);
+function writeManifest(manifest, path) {
+  let manifestJson = JSON.stringify(manifest, null, 2);
 
-console.log('Generated Manifest: ', manifestJson);
+  console.log(`Writing manifest file: ${path}`, manifestJson);
 
-fs.writeFileSync(manifestPath, manifestJson, { encoding: 'utf8' });
+  fs.writeFileSync(path, manifestJson, { encoding: 'utf8' });
+}

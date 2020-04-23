@@ -5,12 +5,13 @@
   <body>
     <script src="${CDN_URL}index.js"></script>
     <script>
-      webcomponentsDocsMain(`
+      webcomponentsDocsMain(
+        `
 <gux-action-toast
     id="example-toast"
     toast-title='The Title'
     message='the message'
-    icon='genesys-icon-chat'
+    icon='ic-chat'
 >
 </gux-action-toast>
 <!--
@@ -31,12 +32,12 @@ if (toast) {
           let toast = document.getElementById('example-toast');
           if (toast) {
             toast.primaryButton = {
-                callback: () => alert('primary clicked'),
-                text: 'Accept'
+              callback: () => alert('primary clicked'),
+              text: 'Accept'
             };
             toast.secondaryButton = {
-                callback: () => alert('secondary clicked'),
-                text: 'Reject'
+              callback: () => alert('secondary clicked'),
+              text: 'Reject'
             };
           }
         }

@@ -54,11 +54,12 @@ export class GuxModal {
     return (
       <div class="modal">
         <div class={`modal-container ${this.size}`}>
-          <button
-            class="cancel-button genesys-icon-close"
-            title="Cancel"
-            onClick={this.closeModal.bind(this)}
-          />
+          <button class="cancel-button" onClick={this.closeModal.bind(this)}>
+            <gux-icon
+              screenreaderText={this.i18n('cancel')}
+              iconName="ic-close"
+            ></gux-icon>
+          </button>
           <h1 class="modal-header large-title">{this.modalTitle}</h1>
           <div class="modal-content">
             <slot name="modal-content" />

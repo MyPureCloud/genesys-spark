@@ -154,10 +154,9 @@ export class GuxAccordion {
             >
               <button type="button" onClick={() => this.toggle(slot.slotName)}>
                 <span class="heading-text">{slot.slotName}</span>
-                <span
-                  class="toggle-arrow genesys-icon-dropdown-arrow"
-                  aria-hidden="true"
-                />
+                <span class="toggle-arrow">
+                  <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+                </span>
               </button>
             </div>
             <div class="content">

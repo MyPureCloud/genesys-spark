@@ -1,0 +1,264 @@
+{
+  "gux-accordion": {
+    "attributes": { "heading-level": "text" }
+  },
+  "gux-button": {
+    "attributes": {
+      "disabled": "checkbox",
+      "title": "text",
+      "text": "text",
+      "left-icon": "text",
+      "right-icon": "text",
+      "accent": ["primary", "secondary"]
+    },
+    "events": { "click": "Triggered when element is clicked" }
+  },
+  "gux-action-button": {
+    "attributes": {
+      "disabled": "checkbox",
+      "title": "text",
+      "text": "text",
+      "is-open": "checkbox",
+      "accent": ["primary", "secondary"]
+    },
+    "events": {
+      "open": "Triggered when element is opened",
+      "close": "Triggered when element is closed",
+      "actionClick": "Triggered when element is clicked"
+    }
+  },
+  "gux-action-toast": {
+    "attributes": {
+      "toast-title": "text",
+      "message": "text",
+      "subject": "text",
+      "icon": "text",
+      "right-button": "json",
+      "left-button": "json",
+      "key-values": "json"
+    }
+  },
+  "gux-advanced-dropdown": {
+    "attributes": {
+      "disabled": "checkbox",
+      "no-filter": "checkbox",
+      "filter-debounce-timeout": "text",
+      "placeholder": "text"
+    },
+    "events": {
+      "input": "Item from dropdown selected",
+      "filter": "Filter value changed"
+    }
+  },
+  "gux-calendar": {
+    "attributes": {
+      "mode": ["single", "range"],
+      "value": "string",
+      "numberOfMonths": "text",
+      "locale": "text",
+      "firstDayOfWeek": "text"
+    },
+    "events": { "input": "Triggered when value is changed" }
+  },
+  "gux-checkbox": {
+    "attributes": {
+      "checked": "checkbox",
+      "indeterminate": "checkbox",
+      "disabled": "checkbox"
+    },
+    "events": {
+      "check": "Triggered when element's checked state is changed"
+    }
+  },
+  "gux-color-picker": {
+    "attributes": { "value": "text", "disabled": "checkbox" },
+    "events": {
+      "input": "Triggered when elements value is changed"
+    }
+  },
+  "gux-color-select": {
+    "attributes": { "value": "text" },
+    "events": { "input": "Triggered when a color is clicked" }
+  },
+  "gux-datepicker": {
+    "attributes": {
+      "mode": ["single", "range"],
+      "value": "string",
+      "format": "string",
+      "numberOfMonths": "text",
+      "locale": "text",
+      "firstDayOfWeek": "text"
+    },
+    "events": { "input": "Triggered when value is changed" }
+  },
+  "gux-disclosure-button": {
+    "attributes": {
+      "position": ["left", "right"],
+      "label": "text",
+      "is-open": "checkbox"
+    },
+    "events": {
+      "active": "Triggered when panel state is changed"
+    }
+  },
+  "gux-dropdown": {
+    "attributes": {
+      "mode": ["default", "page", "palette"],
+      "disabled": "checkbox",
+      "filterable": "checkbox",
+      "value": "text",
+      "placeholder": "text",
+      "items": "json"
+    },
+    "events": {
+      "change": "Triggered when item is selected from dropdown"
+    }
+  },
+  "gux-list": {
+    "attributes": { "highlight": "text" },
+    "events": {
+      "changed": "Triggered when the list's selection is changed"
+    }
+  },
+  "gux-modal": {
+    "attributes": {
+      "size": ["small", "medium", "large"],
+      "modal-title": "text"
+    },
+    "events": {
+      "close": "Modal is signaling that it should be hidden"
+    }
+  },
+  "gux-notification-toast": {
+    "attributes": {
+      "toast-title": "text",
+      "icon": "text",
+      "accent": ["neutral", "positive", "alert", "warning"],
+      "message": "text"
+    },
+    "events": {
+      "closeClick": "Triggered when the close icon is clicked"
+    }
+  },
+  "gux-page-loading-spinner": {},
+  "gux-panel-frame": {},
+  "gux-popover": {
+    "attributes": {
+      "hide-close": "checkbox",
+      "position": [
+        "top",
+        "top-start",
+        "top-end",
+        "right",
+        "right-start",
+        "right-end",
+        "bottom",
+        "bottom-start",
+        "bottom-end",
+        "left",
+        "left-start",
+        "left-end"
+      ],
+      "for": "text",
+      "hidden": "checkbox"
+    },
+    "events": {
+      "close": "Popover signaling that it should be hidden"
+    }
+  },
+  "gux-radial-progress": {
+    "attributes": { "value": "text", "max": "text" }
+  },
+  "gux-icon": {
+    "attributes": {
+      "icon-name": "text",
+      "decorative": "checkbox",
+      "screenreader-text": "text"
+    }
+  },
+  "gux-radio": {
+    "attributes": { "value": "text", "disabled": "checkbox" },
+    "events": { "check": "Radio button checked state changed" }
+  },
+  "gux-rating": {
+    "attributes": {
+      "disabled": "checkbox",
+      "rating": "text",
+      "max-rating": "text",
+      "allow-half-ratings": "checkbox"
+    },
+    "events": { "update": "rating value changed" }
+  },
+  "gux-slider": {
+    "attributes": [
+      { "min": "text" },
+      { "max": "text" },
+      { "step": "text" },
+      { "value": "text" },
+      { "is-percentage": "checkbox" },
+      { "display-text-box": "checkbox" },
+      { "disabled": "checkbox" }
+    ],
+    "events": { "update": "slider value changed" }
+  },
+  "gux-switch": {
+    "attributes": { "selected-value": "text" },
+    "events": { "selectionChanged": "switch state was changed" }
+  },
+  "gux-toggle": {
+    "attributes": {
+      "checked": "checkbox",
+      "disabled": "checkbox",
+      "checked-label": ["on", "off"],
+      "unchecked-label": ["on", "off"]
+    },
+    "events": { "check": "toggle state changed" }
+  },
+  "gux-tooltip": {
+    "attributes": {
+      "text": "text",
+      "for": "text",
+      "delay": "text",
+      "is-shown": "checkbox"
+    },
+    "events": {
+      "hidden": "fired when tooltip moves to hidden state",
+      "shown": "fired when tooltip moves to visible state"
+    }
+  },
+
+  "gux-list-item": {
+    "hidePage": true,
+    "attributes": { "disabled": "checkbox", "text": "text", "value": "text" },
+    "events": { "press": "list item selected within list" }
+  },
+  "gux-radio-group": {
+    "hidePage": true,
+    "attributes": { "name": "text" },
+    "events": {
+      "input": "Radio selection state is changed inside the group"
+    }
+  },
+  "gux-dropdown-option": {
+    "hidePage": true,
+    "attributes": { "selected": "checkbox", "value": "text", "text": "text" }
+  },
+  "gux-text-field": {
+    "attributes": {
+      "value": "text",
+
+      "type": ["text", "email", "password", "number"],
+      "disable": "checkbox",
+      "readonly": "checkbox",
+      "placeholder": "text"
+    },
+    "events": { "input": "fires on user input" }
+  },
+  "gux-text-highlight": {
+    "attributes": {
+      "text": "text",
+      "highlight": "text",
+      "strategy": ["start", "contains", "fuzzy"]
+    }
+  }
+}

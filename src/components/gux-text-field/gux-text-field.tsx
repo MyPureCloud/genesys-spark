@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent } from '../i18n';
-import textFieldResources from './gux-text-field.i18n.json';
+import textFieldResources from './i18n/en.json';
 
 enum Types {
   Warning = 'warning',
@@ -196,9 +196,7 @@ export class GuxTextField {
   }
 
   getIconByMessageType(type) {
-    return type === 'warning'
-      ? 'genesys-icon-alert-triangle'
-      : 'genesys-icon-alert-octo';
+    return type === 'warning' ? 'ic-alert-triangle' : 'ic-alert-octo';
   }
 
   _clear(event) {
@@ -241,6 +239,7 @@ export class GuxTextField {
       <div class={this.getClassList()}>
         <div class="gux-field">
           <input
+            class={this.showClearButton ? 'text-clearable' : ''}
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
@@ -256,16 +255,21 @@ export class GuxTextField {
           {this.showClearButton && (
             <button
               type="button"
-              class="genesys-icon-close"
+              class="clear-button"
               title={this.eraseLabel}
               aria-label={this.i18n('eraseBtnAria')}
               onClick={e => this._clear(e)}
-            />
+            >
+              <gux-icon decorative iconName="ic-close"></gux-icon>
+            </button>
           )}
         </div>
         {this.errorMessage && (
           <div class="gux-error">
-            <i class={this.getIconByMessageType(this.errorMessageType)} />
+            <gux-icon
+              decorative
+              iconName={this.getIconByMessageType(this.errorMessageType)}
+            />
             <label>{this.errorMessage}</label>
           </div>
         )}

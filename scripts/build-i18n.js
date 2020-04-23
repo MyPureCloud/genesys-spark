@@ -1,26 +1,28 @@
+#! /usr/bin/env node
+
 /*
- * Bundles the component.i18n.<lang>.json files for each component into a
+ * Bundles the <lang>.json files for each component into a
  * single genesys-webcomponents.i18n.<lang>.json file per language.  The
- * default/english component.i18n.json files aren't bundled here, because
- * webpack handles that for us.
+ * default/english component.i18n.json files are built in, so are ignored here.
  */
 
 const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
 
-const filePatternRegex = /[\/\\]([^\/\\]+)\.i18n\.([^.]+)\.json$/;
-const outputFolder = path.join(__dirname, '../build/i18n');
-const outputFileName = 'genesys-webcomponents';
+const filePatternRegex = /[\/\\]([^\/\\]+)\/i18n\/([^.]+)\.json$/;
+const translationsFolder = path.join(__dirname, '../build/i18n');
+const localesFile = path.join(__dirname, '../src/components/i18n/locales.json');
 
-glob('src/components/**/*.i18n.*.json', (err, files) => {
+glob('src/components/**/i18n/*.json', (err, files) => {
   if (err) {
     console.error('Error encountered while trying to find the i18n json files');
     console.error(err);
     process.exit(1);
   }
 
-  const languages = {};
+  const translations = {};
+  const locales = [];
 
   files.forEach(file => {
     const match = file.match(filePatternRegex);
@@ -30,23 +32,27 @@ glob('src/components/**/*.i18n.*.json', (err, files) => {
     }
 
     const component = match[1];
-    const lang = match[2];
+    const locale = match[2];
 
-    languages[lang] = languages[lang] || {};
-    languages[lang][component] = JSON.parse(fs.readFileSync(file, 'utf8'));
+    locales.push(locale);
+    translations[locale] = translations[locale] || {};
+    translations[locale][component] = JSON.parse(fs.readFileSync(file, 'utf8'));
   });
 
-  if (!fs.existsSync(outputFolder)) {
-    fs.mkdirSync(outputFolder, { recursive: true });
+  if (!fs.existsSync(translationsFolder)) {
+    fs.mkdirSync(translationsFolder, { recursive: true });
   }
 
-  Object.keys(languages).forEach(lang => {
+  console.log('Writing locale list...');
+  fs.writeFileSync(localesFile, `${JSON.stringify(locales, null, 2)}\n`);
+
+  console.log('Writing translation files...');
+  Object.keys(translations).forEach(lang => {
     const targetFile = path.join(
-      outputFolder,
-      `${outputFileName}.i18n.${lang}.json`
+      translationsFolder,
+      `genesys-webcomponents.i18n.${lang}.json`
     );
 
-    console.log(`Writing '${targetFile}'`);
-    fs.writeFileSync(targetFile, JSON.stringify(languages[lang]));
+    fs.writeFileSync(targetFile, JSON.stringify(translations[lang]));
   });
 });
