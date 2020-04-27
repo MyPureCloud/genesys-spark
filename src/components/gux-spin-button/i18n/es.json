@@ -1,7 +1,7 @@
 {
-  "validation.max": "Cannot be greater than {max, number}",
-  "validation.min": "Cannot be less than {min, number}",
-  "validation.increment": "Must be a multiple of {increment, number}",
-  "increment": "increment",
-  "decrement": "decrement"
+  "validation.max": "No puede ser mayor que {max, number}",
+  "validation.min": "No puede ser menor que {min, number}",
+  "validation.increment": "Debe ser múltiplo de {increment, number}",
+  "increment": "incremento",
+  "decrement": "decremento"
 }
