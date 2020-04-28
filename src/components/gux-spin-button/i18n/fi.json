@@ -1,7 +1,7 @@
 {
-  "validation.max": "Cannot be greater than {max, number}",
-  "validation.min": "Cannot be less than {min, number}",
-  "validation.increment": "Must be a multiple of {increment, number}",
-  "increment": "increment",
-  "decrement": "decrement"
+  "validation.max": "Ei voi olla suurempi kuin {max, number}",
+  "validation.min": "Ei voi olla pienempi kuin {min, number}",
+  "validation.increment": "On oltava seuraavan monikerta: {increment, number}",
+  "increment": "lisäys",
+  "decrement": "vähennys"
 }
