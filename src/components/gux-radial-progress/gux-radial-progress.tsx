@@ -1,7 +1,9 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, JSX, Prop } from '@stencil/core';
 
 const RADIUS = 26;
 const STROKE_DASH = 2 * Math.PI * RADIUS;
+
+let idCounter = 0;
 
 @Component({
   styleUrl: 'gux-radial-progress.less',
@@ -20,17 +22,25 @@ export class GuxRadialProgress {
   @Prop()
   max: number = 100;
 
-  render() {
-    return this.value === undefined ? (
-      <div aria-busy="true">
-        <div class="gux-spinner gux-spinner-animation" />
-      </div>
-    ) : (
+  private dropshadowId = `dropshadow-${idCounter++}`;
+
+  render(): JSX.Element {
+    return this.canShowPercentage(this.value, this.max)
+      ? this.showPercentageState(this.value, this.max)
+      : this.showSpinnerState();
+  }
+
+  private canShowPercentage(value, max) {
+    return !(isNaN(value) || isNaN(max) || value > max || value < 0);
+  }
+
+  private showPercentageState(value, max): JSX.Element {
+    return (
       <div
         role="progressbar"
-        aria-valuenow={this.value}
+        aria-valuenow={value}
         aria-valuemin="0"
-        aria-valuemax={this.max}
+        aria-valuemax={max}
       >
         <svg
           class="svg-container"
@@ -38,7 +48,7 @@ export class GuxRadialProgress {
           height="65px"
           viewBox="0 0 65 65"
         >
-          <filter id="dropshadow">
+          <filter id={this.dropshadowId}>
             <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
             <feOffset dx="0" dy="0" result="offsetblur" />
             <feMerge>
@@ -52,15 +62,23 @@ export class GuxRadialProgress {
             cy="50%"
             r={RADIUS}
             class="dynamic-circle"
-            stroke-dashoffset={STROKE_DASH * (1 - this.value / this.max)}
+            stroke-dashoffset={STROKE_DASH * (1 - value / max)}
             stroke-dasharray={STROKE_DASH}
-            filter="url(#dropshadow)"
+            filter={'url(#' + this.dropshadowId + ')'}
           />
 
-          <text x="50%" y="50%" class="percentage">
-            {`${Math.round((this.value / this.max) * 100)}%`}
+          <text x="50%" y="50%" dominant-baseline="central" class="percentage">
+            {`${Math.round((value / max) * 100)}%`}
           </text>
         </svg>
+      </div>
+    );
+  }
+
+  private showSpinnerState(): JSX.Element {
+    return (
+      <div aria-busy="true">
+        <div class="spinner" />
       </div>
     );
   }
