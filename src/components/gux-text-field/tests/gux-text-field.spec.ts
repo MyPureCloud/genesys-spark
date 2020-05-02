@@ -19,11 +19,11 @@ describe('gux-text-field', () => {
       expect(component.getClassList().split(' ').length).toBe(1);
     });
   });
-  describe('componentDidLoad', () => {
-    it('should create set internalErrorMessage', () => {
+  describe('componentWillLoad', () => {
+    it('should create set internalErrorMessage', async () => {
       const component = new GuxTextField();
       component.errorMessage = 'error';
-      component.componentDidLoad();
+      await component.componentWillLoad();
       expect(component.internalErrorMessage).toBe('error');
     });
   });
