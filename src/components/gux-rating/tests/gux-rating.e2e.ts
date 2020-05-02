@@ -1,19 +1,34 @@
 import { newE2EPage } from '@stencil/core/testing';
 
 describe('gux-rating', () => {
-  it('renders', async () => {
-    const page = await newE2EPage();
+  describe('#render', () => {
+    [
+      '<gux-rating></gux-rating>',
+      '<gux-rating rating="0"></gux-rating>',
+      '<gux-rating rating="1"></gux-rating>',
+      '<gux-rating rating="2"></gux-rating>',
+      '<gux-rating rating="3"></gux-rating>',
+      '<gux-rating rating="4"></gux-rating>',
+      '<gux-rating rating="5"></gux-rating>',
+      '<gux-rating allow-half-ratings rating="0.5"></gux-rating>',
+      '<gux-rating allow-half-ratings rating="1.5"></gux-rating>',
+      '<gux-rating allow-half-ratings rating="2.5"></gux-rating>',
+      '<gux-rating allow-half-ratings rating="3.5"></gux-rating>',
+      '<gux-rating allow-half-ratings rating="4.5"></gux-rating>',
+      '<gux-rating rating="0" max-rating=10></gux-rating>',
+      '<gux-rating rating="5" max-rating=10></gux-rating>',
+      '<gux-rating rating="10" max-rating=10></gux-rating>',
+      '<gux-rating rating="3" disabled></gux-rating>'
+    ].forEach((content, index) => {
+      it(`should render component as expected (${index + 1})`, async () => {
+        const page = await newE2EPage();
 
-    await page.setContent('<gux-rating></gux-rating>');
-    const element = await page.find('gux-rating');
-    expect(element).toHaveClass('hydrated');
-  });
+        await page.setContent(content);
 
-  it('renders should create stars', async () => {
-    const page = await newE2EPage();
+        const element = await page.find('gux-rating');
 
-    await page.setContent('<gux-rating></gux-rating>');
-    const components = await page.findAll('svg');
-    expect(components.length).toBe(5);
+        expect(element.innerHTML).toMatchSnapshot();
+      });
+    });
   });
 });
