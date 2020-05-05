@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-radial-progress #render should render component as expected (1) 1`] = `
+<gux-radial-progress>
+  <div aria-busy="true">
+    <div class="spinner"></div>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (2) 1`] = `
+<gux-radial-progress value="0">
+  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar">
+    <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
+      <filter id="dropshadow-1">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+        <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-1)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="163.36281798666926"></circle>
+      <text class="percentage" dominant-baseline="central" x="50%" y="50%">
+        0%
+      </text>
+    </svg>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (3) 1`] = `
+<gux-radial-progress value="10">
+  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
+    <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
+      <filter id="dropshadow-2">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+        <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-2)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="147.02653618800232"></circle>
+      <text class="percentage" dominant-baseline="central" x="50%" y="50%">
+        10%
+      </text>
+    </svg>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (4) 1`] = `
+<gux-radial-progress value="100">
+  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">
+    <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
+      <filter id="dropshadow-3">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+        <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-3)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="0"></circle>
+      <text class="percentage" dominant-baseline="central" x="50%" y="50%">
+        100%
+      </text>
+    </svg>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (5) 1`] = `
+<gux-radial-progress value="123">
+  <div aria-busy="true">
+    <div class="spinner"></div>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (6) 1`] = `
+<gux-radial-progress value="200">
+  <div aria-busy="true">
+    <div class="spinner"></div>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (7) 1`] = `
+<gux-radial-progress max="100" value="10">
+  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
+    <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
+      <filter id="dropshadow-6">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+        <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-6)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="147.02653618800232"></circle>
+      <text class="percentage" dominant-baseline="central" x="50%" y="50%">
+        10%
+      </text>
+    </svg>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (8) 1`] = `
+<gux-radial-progress max="10" value="10">
+  <div aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" role="progressbar">
+    <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
+      <filter id="dropshadow-7">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+        <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+        <feMerge>
+          <feMergeNode></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-7)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="0"></circle>
+      <text class="percentage" dominant-baseline="central" x="50%" y="50%">
+        100%
+      </text>
+    </svg>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (9) 1`] = `
+<gux-radial-progress max="100" value="test">
+  <div aria-busy="true">
+    <div class="spinner"></div>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (10) 1`] = `
+<gux-radial-progress max="100" value="-123">
+  <div aria-busy="true">
+    <div class="spinner"></div>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (11) 1`] = `
+<gux-radial-progress max="100" value="200">
+  <div aria-busy="true">
+    <div class="spinner"></div>
+  </div>
+</gux-radial-progress>
+`;
+
+exports[`gux-radial-progress #render should render component as expected (12) 1`] = `
+<gux-radial-progress max="test" value="10">
+  <div aria-busy="true">
+    <div class="spinner"></div>
+  </div>
+</gux-radial-progress>
+`;
