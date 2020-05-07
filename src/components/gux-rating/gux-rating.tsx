@@ -203,6 +203,7 @@ export class GuxRating {
       <div class="gux-rating" role="radiogroup" aria-label={this.ariaLabel}>
         {this.ratingItems.map((ratingItem, i) => (
           <div
+            class="gux-rating-element"
             role="radio"
             aria-checked={
               this.rating - 1 === i
