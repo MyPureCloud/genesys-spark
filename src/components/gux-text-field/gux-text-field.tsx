@@ -186,11 +186,11 @@ export class GuxTextField {
   }
 
   async componentWillLoad() {
+    this.internalErrorMessage = this.errorMessage;
     this.i18n = await buildI18nForComponent(this.root, textFieldResources);
   }
 
   componentDidLoad() {
-    this.internalErrorMessage = this.errorMessage;
     this.firstValue = this.value;
     this._testValue(this.value);
   }
