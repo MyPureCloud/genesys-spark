@@ -37,7 +37,7 @@ describe('gux-pagination-item-counts', () => {
       expect(component.firstItem).toBe(41);
     });
 
-    it('should equal 0 while totalItems equals 0', () => {
+    it('should be able to handle totalItems = 0', () => {
       component.totalItems = 0;
       component.itemsPerPage = 25;
       expect(component.firstItem).toBe(0);
