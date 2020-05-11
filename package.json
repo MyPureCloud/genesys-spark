@@ -16,7 +16,7 @@
     "docs.dev": "cd ./docs && npm run start",
     "release": "standard-version",
     "stencil": "stencil build --prod",
-    "stencil.dev": "stencil build --dev --watch",
+    "stencil.dev": "stencil build --dev --watch --docs",
     "test.unit": "stencil test --spec",
     "test.unit.update-snapshot": "stencil test --spec --updateSnapshot",
     "test.e2e": "stencil test --e2e",
@@ -32,7 +32,8 @@
     "lint.ts": "tslint --project .",
     "lint.commit": "commitlint -f 49d16b222b85182b3e0903c4dd3141389f14c9ad",
     "prepare": "./scripts/prepare-docs.sh && npm run i18n",
-    "i18n": "./scripts/build-i18n.js"
+    "i18n": "./scripts/build-i18n.js",
+    "check-readmes": "./scripts/check-readmes.sh"
   },
   "dependencies": {
     "@popperjs/core": "^2.4.0",

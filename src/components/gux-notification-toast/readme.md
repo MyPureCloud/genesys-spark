@@ -25,6 +25,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | `closeClick` |             | `CustomEvent<any>` |
 
 
+## Dependencies
+
+### Depends on
+
+- [gux-icon](../gux-icon)
+
+### Graph
+```mermaid
+graph TD;
+  gux-notification-toast --> gux-icon
+  style gux-notification-toast fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

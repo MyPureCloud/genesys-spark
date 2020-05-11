@@ -7,22 +7,22 @@ This is a datepicker component, that allows the user to select a date, or a rang
 
 ## Properties
 
-| Property         | Attribute           | Description                                                                                 | Type                   | Default                                                                     |
-| ---------------- | ------------------- | ------------------------------------------------------------------------------------------- | ---------------------- | --------------------------------------------------------------------------- |
-| `firstDayOfWeek` | `first-day-of-week` | The datepicker first week day (default to 0 (sunday))                                       | `number`               | `0`                                                                         |
-| `format`         | `format`            | The datepicker date format (default to mm/dd/yyyy, or specified)                            | `string`               | `'mm/dd/yyyy'`                                                              |
-| `label`          | `label`             | The datepicker label (can be a single label, or an array of two if it's a range datepicker) | `string \| string[]`   | `''`                                                                        |
-| `locale`         | `locale`            | The calendar locale (default to browser locale)                                             | `string`               | `navigator.languages     ? navigator.languages[0]     : navigator.language` |
-| `mode`           | `mode`              | The calendar mode (can be single or range)                                                  | `string`               | `CalendarModes.Single`                                                      |
-| `numberOfMonths` | `number-of-months`  | The datepicker number of months displayed                                                   | `number`               | `1`                                                                         |
-| `value`          | --                  | The datepicker current value                                                                | `Date \| [Date, Date]` | `new Date()`                                                                |
+| Property         | Attribute           | Description                                                                                 | Type                 | Default                                                                     |
+| ---------------- | ------------------- | ------------------------------------------------------------------------------------------- | -------------------- | --------------------------------------------------------------------------- |
+| `firstDayOfWeek` | `first-day-of-week` | The datepicker first week day (default to 0 (sunday))                                       | `number`             | `0`                                                                         |
+| `format`         | `format`            | The datepicker date format (default to mm/dd/yyyy, or specified)                            | `string`             | `'mm/dd/yyyy'`                                                              |
+| `label`          | `label`             | The datepicker label (can be a single label, or an array of two if it's a range datepicker) | `string \| string[]` | `''`                                                                        |
+| `locale`         | `locale`            | The calendar locale (default to browser locale)                                             | `string`             | `navigator.languages     ? navigator.languages[0]     : navigator.language` |
+| `mode`           | `mode`              | The calendar mode (can be single or range)                                                  | `string`             | `CalendarModes.Single`                                                      |
+| `numberOfMonths` | `number-of-months`  | The datepicker number of months displayed                                                   | `number`             | `1`                                                                         |
+| `value`          | `value`             | The datepicker current value                                                                | `string`             | `undefined`                                                                 |
 
 
 ## Events
 
-| Event   | Description                        | Type                                |
-| ------- | ---------------------------------- | ----------------------------------- |
-| `input` | Triggered when user selects a date | `CustomEvent<Date \| [Date, Date]>` |
+| Event   | Description                        | Type                  |
+| ------- | ---------------------------------- | --------------------- |
+| `input` | Triggered when user selects a date | `CustomEvent<string>` |
 
 
 ## Dependencies
@@ -31,6 +31,7 @@ This is a datepicker component, that allows the user to select a date, or a rang
 
 - [gux-text-label](../gux-text-label)
 - [gux-text-field](../gux-text-field)
+- [gux-icon](../gux-icon)
 - [gux-calendar](../gux-calendar)
 
 ### Graph
@@ -38,7 +39,10 @@ This is a datepicker component, that allows the user to select a date, or a rang
 graph TD;
   gux-datepicker --> gux-text-label
   gux-datepicker --> gux-text-field
+  gux-datepicker --> gux-icon
   gux-datepicker --> gux-calendar
+  gux-text-field --> gux-icon
+  gux-calendar --> gux-icon
   style gux-datepicker fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

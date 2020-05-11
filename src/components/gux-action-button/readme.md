@@ -37,12 +37,14 @@ Example usage
 ### Depends on
 
 - [gux-button](../gux-button)
+- [gux-icon](../gux-icon)
 - [gux-list](../gux-list)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-action-button --> gux-button
+  gux-action-button --> gux-icon
   gux-action-button --> gux-list
   style gux-action-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

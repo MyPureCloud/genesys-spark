@@ -43,11 +43,14 @@ Type: `Promise<boolean>`
 ### Depends on
 
 - [gux-text-field](../gux-text-field)
+- [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-spin-button --> gux-text-field
+  gux-spin-button --> gux-icon
+  gux-text-field --> gux-icon
   style gux-spin-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -15,17 +15,11 @@
     "resolveJsonModule": true
   },
   "include": ["src"],
-  "exclude": [
-    "node_modules",
-    "**/test/**",
-    "**/*.spec.*",
-    "**/*.e2e.*",
-    "**/stories/**"
-  ],
+  "exclude": ["node_modules", "**/test/**", "**/*.spec.*", "**/*.e2e.*"],
   "typedocOptions": {
     "ignoreCompilerErrors": true,
     "mode": "modules",
     "json": "./.docs/data.json",
-    "exclude": ["**/*.spec.ts", "**/*.e2e.ts", "**/stories/**"]
+    "exclude": ["**/*.spec.ts", "**/*.e2e.ts"]
   }
 }

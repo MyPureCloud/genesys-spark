@@ -83,9 +83,14 @@ Type: `Promise<void>`
  - [gux-slider](../gux-slider)
  - [gux-spin-button](../gux-spin-button)
 
+### Depends on
+
+- [gux-icon](../gux-icon)
+
 ### Graph
 ```mermaid
 graph TD;
+  gux-text-field --> gux-icon
   gux-datepicker --> gux-text-field
   gux-dropdown --> gux-text-field
   gux-pagination-buttons --> gux-text-field

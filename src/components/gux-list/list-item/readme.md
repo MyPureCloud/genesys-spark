@@ -41,7 +41,7 @@ Example of a custom list item with highlighting
 
 ### Depends on
 
-- [gux-text-highlight](../text-highlight)
+- [gux-text-highlight](../../gux-text-highlight)
 
 ### Graph
 ```mermaid

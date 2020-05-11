@@ -11,6 +11,9 @@ export const config: Config = {
     {
       dir: 'dist',
       type: 'dist'
+    },
+    {
+      type: 'docs-readme'
     }
   ],
   plugins: [
