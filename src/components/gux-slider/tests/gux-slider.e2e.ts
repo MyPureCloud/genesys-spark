@@ -4,7 +4,7 @@ describe('gux-slider', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-slider></gux-slider>');
+    await page.setContent('<gux-slider lang="en"></gux-slider>');
     const element = await page.find('gux-slider');
     expect(element).toHaveClass('hydrated');
   });
@@ -12,7 +12,7 @@ describe('gux-slider', () => {
   it('renders changes when value is incremented', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-slider></gux-slider>');
+    await page.setContent('<gux-slider lang="en"></gux-slider>');
     const component = await page.find('gux-slider');
     const input = await page.find('gux-slider input');
     expect(input).toHaveClass('range-input');
@@ -26,7 +26,7 @@ describe('gux-slider', () => {
   it('renders changes when value is incremented using step property', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-slider step=1.5></gux-slider>');
+    await page.setContent('<gux-slider lang="en" step=1.5></gux-slider>');
     const component = await page.find('gux-slider');
     const input = await page.find('gux-slider input');
     expect(input).toHaveClass('range-input');
@@ -40,7 +40,9 @@ describe('gux-slider', () => {
   it('disable inputs when component is disabled', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-slider disabled="true"></gux-slider>');
+    await page.setContent(
+      '<gux-slider lang="en" disabled="true"></gux-slider>'
+    );
     const input = await page.find('gux-slider input');
     expect(input).toHaveClass('range-input');
     let val = await input.getProperty('disabled');

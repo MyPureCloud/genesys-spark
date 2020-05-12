@@ -7,9 +7,7 @@ describe('gux-dropdown', () => {
     page = await newE2EPage();
   });
   it('renders', async () => {
-    await page.setContent(`
-    <gux-dropdown></gux-dropdown>
-    `);
+    await page.setContent(`<gux-dropdown lang="en"></gux-dropdown>`);
     element = await page.find('gux-dropdown');
     expect(element).toHaveClass('hydrated');
   });

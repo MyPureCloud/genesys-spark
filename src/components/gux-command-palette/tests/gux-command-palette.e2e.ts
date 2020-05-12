@@ -4,7 +4,9 @@ describe('gux-command-palette', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-command-palette></gux-command-palette>');
+    await page.setContent(
+      '<gux-command-palette lang="en"></gux-command-palette>'
+    );
     const element = await page.find('gux-command-palette');
     expect(element).toHaveClass('hydrated');
   });
@@ -13,7 +15,7 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette>
+    <gux-command-palette lang="en">
       <gux-command-action text="test"></gux-command-action>
     </gux-command-palette>`);
 
@@ -31,7 +33,7 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette>
+    <gux-command-palette lang="en">
       <gux-command-action text="test" recent></gux-command-action>
     </gux-command-palette>`);
 
@@ -57,7 +59,7 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette>
+    <gux-command-palette lang="en">
       <gux-command-action text="test" common></gux-command-action>
     </gux-command-palette>`);
 
@@ -83,7 +85,7 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette>
+    <gux-command-palette lang="en">
       <gux-command-action text="test" common></gux-command-action>
       <gux-command-action text="test2" recent></gux-command-action>
     </gux-command-palette>`);
@@ -112,7 +114,7 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette>
+    <gux-command-palette lang="en">
       <gux-command-action text="test"></gux-command-action>
       <gux-command-action text="test2"></gux-command-action>
     </gux-command-palette>`);
@@ -140,7 +142,7 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette>
+    <gux-command-palette lang="en">
       <gux-command-action text="test" common></gux-command-action>
       <gux-command-action text="test2"></gux-command-action>
       <gux-command-action text="test3" recent></gux-command-action>
@@ -171,7 +173,7 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette>
+    <gux-command-palette lang="en">
       <gux-command-action text="apple" common></gux-command-action>
       <gux-command-action text="orange"></gux-command-action>
       <gux-command-action text="pear" recent></gux-command-action>
@@ -212,7 +214,7 @@ describe('gux-command-palette', () => {
     }
 
     await page.setContent(`
-    <gux-command-palette>
+    <gux-command-palette lang="en">
       <gux-command-action text="apple" common></gux-command-action>
       <gux-command-action text="pear" recent></gux-command-action>
       ${buildItems(60)}
@@ -242,7 +244,7 @@ describe('gux-command-palette', () => {
       page = await newE2EPage();
 
       await page.setContent(`
-      <gux-command-palette>
+      <gux-command-palette lang="en">
         <gux-command-action text="common" common></gux-command-action>
         <gux-command-action text="recent" recent></gux-command-action>
       </gux-command-palette>`);

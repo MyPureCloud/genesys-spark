@@ -1,18 +1,24 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { GuxAccordion } from '../gux-accordion';
 
 describe('gux-accordion', () => {
-  let component;
+  let component: GuxAccordion;
+
   beforeEach(async () => {
-    component = new GuxAccordion();
-  });
-  it('builds', () => {
-    expect(component).toBeTruthy();
+    const page = await newSpecPage({
+      components: [GuxAccordion],
+      html: `<gux-accordion></gux-accordion>`,
+      language: 'en'
+    });
+
+    component = page.rootInstance;
   });
 
-  describe('methods', () => {
+  describe('Class Logic', () => {
     let firstSection;
     let secondSection;
     let thirdSection;
+
     beforeEach(async () => {
       firstSection = {
         slotName: 'First',
@@ -28,10 +34,12 @@ describe('gux-accordion', () => {
       };
       component.sections = [firstSection, secondSection, thirdSection];
     });
+
     it('getSectionByName', () => {
       const section = component.getSectionByName(firstSection.slotName);
       expect(section).toEqual(firstSection);
     });
+
     it('getPreviousSlot', () => {
       expect(component.getPreviousSlot(firstSection.slotName)).toEqual(
         thirdSection.slotRef
@@ -40,6 +48,7 @@ describe('gux-accordion', () => {
         secondSection.slotRef
       );
     });
+
     it('getNextSlot', () => {
       expect(component.getNextSlot(thirdSection.slotName)).toEqual(
         firstSection.slotRef

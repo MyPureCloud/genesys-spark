@@ -2,6 +2,22 @@ import { newSpecPage, SpecPage } from '@stencil/core/testing';
 import { GuxRating } from '../gux-rating';
 
 describe('gux-rating', () => {
+  let component: GuxRating;
+
+  beforeEach(async () => {
+    const page = await newSpecPage({
+      components: [GuxRating],
+      html: `<gux-rating></gux-rating>`,
+      language: 'en'
+    });
+
+    component = page.rootInstance;
+  });
+
+  it('should build', async () => {
+    expect(component).toBeInstanceOf(GuxRating);
+  });
+
   describe('#render', () => {
     [
       '<gux-rating></gux-rating>',
@@ -24,7 +40,8 @@ describe('gux-rating', () => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({
           components: [GuxRating],
-          html: input
+          html: input,
+          language: 'en'
         });
 
         expect(page.root).toMatchSnapshot();

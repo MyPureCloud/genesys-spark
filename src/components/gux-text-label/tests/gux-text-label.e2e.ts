@@ -4,7 +4,11 @@ describe('gux-text-label', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-text-label></gux-text-label>');
+    await page.setContent(`
+      <gux-text-label lang="en" label="Test Item">
+        <gux-text-field></gux-text-field>
+      </gux-text-label>
+    `);
     await page.waitForChanges();
 
     const element = await page.find('gux-text-label');
@@ -14,9 +18,11 @@ describe('gux-text-label', () => {
   it('uses the correct label when simple label value provided', async () => {
     const page = await newE2EPage();
 
-    await page.setContent(
-      '<gux-text-label label="Test Item"></gux-text-label>'
-    );
+    await page.setContent(`
+      <gux-text-label lang="en" label="Test Item">
+        <gux-text-field></gux-text-field>
+      </gux-text-label>
+    `);
     await page.waitForChanges();
 
     const element = await page.find('gux-text-label label');
@@ -26,11 +32,12 @@ describe('gux-text-label', () => {
   it('uses the correct label when slotted label provided', async () => {
     const page = await newE2EPage();
 
-    await page.setContent(
-      `<gux-text-label>
+    await page.setContent(`
+      <gux-text-label lang="en">
         <div slot="label">Test Item</div>
-      </gux-text-label>`
-    );
+        <gux-text-field></gux-text-field>
+      </gux-text-label>
+    `);
     await page.waitForChanges();
 
     const element = await page.find('gux-text-label label');
@@ -41,7 +48,7 @@ describe('gux-text-label', () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<gux-text-label label="Test Item"><gux-text-field></gux-text-field></gux-text-label>'
+      '<gux-text-label lang="en" label="Test Item"><gux-text-field></gux-text-field></gux-text-label>'
     );
     await page.waitForChanges();
 

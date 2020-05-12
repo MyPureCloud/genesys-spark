@@ -4,7 +4,7 @@ describe('gux-search', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-search></gux-search>');
+    await page.setContent('<gux-search lang="en"></gux-search>');
     const element = await page.find('gux-search');
     expect(element).toHaveClass('hydrated');
   });
@@ -13,7 +13,7 @@ describe('gux-search', () => {
     it('should appear when the value is not empty', async () => {
       const page = await newE2EPage();
 
-      await page.setContent('<gux-search></gux-search>');
+      await page.setContent('<gux-search lang="en"></gux-search>');
       const element = await page.find('gux-search');
       let clearButton = await element.find('button');
       const input = await element.find('input');
@@ -43,7 +43,7 @@ describe('gux-search', () => {
     it('should send key data.', async () => {
       const page = await newE2EPage();
 
-      await page.setContent('<gux-search></gux-search>');
+      await page.setContent('<gux-search lang="en"></gux-search>');
       const element = await page.find('gux-search');
       const input = await element.find('input');
 
@@ -57,7 +57,7 @@ describe('gux-search', () => {
     it('should emit search event on Enter', async () => {
       const page = await newE2EPage();
 
-      await page.setContent('<gux-search></gux-search>');
+      await page.setContent('<gux-search lang="en"></gux-search>');
       const element = await page.find('gux-search');
       const input = await element.find('input');
 
@@ -77,7 +77,7 @@ describe('gux-search', () => {
       const page = await newE2EPage();
 
       await page.setContent(
-        '<gux-search dynamic-search="true" search-timeout="0"></gux-search>'
+        '<gux-search lang="en" dynamic-search="true" search-timeout="0"></gux-search>'
       );
       const element = await page.find('gux-search');
       const input = await element.find('input');

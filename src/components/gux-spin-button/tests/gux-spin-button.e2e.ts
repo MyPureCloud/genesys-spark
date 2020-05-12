@@ -7,6 +7,7 @@ describe('wem-annotations', () => {
     page = await newE2EPage();
     await page.setContent(`
       <gux-spin-button
+        lang="en"
         min="15"
         max="60"
         step="15"

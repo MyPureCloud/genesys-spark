@@ -4,7 +4,7 @@ describe('gux-modal', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-modal></gux-modal>');
+    await page.setContent('<gux-modal lang="en"></gux-modal>');
     const element = await page.find('gux-modal');
     expect(element).toHaveClass('hydrated');
   });
@@ -12,7 +12,7 @@ describe('gux-modal', () => {
   it('Should trigger close event on modal cancel button click', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-modal></gux-modal>');
+    await page.setContent('<gux-modal lang="en"></gux-modal>');
     const component = await page.find('gux-modal');
     const onClose = await component.spyOnEvent('close');
     component.setProperty('active', true);
