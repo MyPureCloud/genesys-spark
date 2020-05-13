@@ -18,11 +18,16 @@ export class GuxPaginationItemCounts {
   itemsPerPage: number = 25;
 
   get firstItem(): number {
-    return (this.currentPage - 1) * this.itemsPerPage + 1;
+    return this.totalItems < 1
+      ? 0
+      : (this.currentPage - 1) * this.itemsPerPage + 1;
   }
 
   get lastItem(): number {
     const calculatedLastItem = this.firstItem + this.itemsPerPage - 1;
+    if (this.totalItems < 1) {
+      return 0;
+    }
     return calculatedLastItem < this.totalItems
       ? calculatedLastItem
       : this.totalItems;

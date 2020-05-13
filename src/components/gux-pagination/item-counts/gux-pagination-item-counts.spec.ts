@@ -36,6 +36,22 @@ describe('gux-pagination-item-counts', () => {
       component.itemsPerPage = 10;
       expect(component.firstItem).toBe(41);
     });
+
+    it('should be able to handle totalItems = 0', () => {
+      component.totalItems = 0;
+      component.itemsPerPage = 25;
+      expect(component.firstItem).toBe(0);
+      expect(component.lastItem).toBe(0);
+      expect(component.currentPage).toBe(1);
+    });
+
+    it('should be able to handle totalItems < 0', () => {
+      component.totalItems = -2;
+      component.itemsPerPage = 25;
+      expect(component.firstItem).toBe(0);
+      expect(component.lastItem).toBe(0);
+      expect(component.currentPage).toBe(1);
+    });
   });
 
   describe('when calculating lastItem', () => {
