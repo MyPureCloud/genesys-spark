@@ -34,9 +34,9 @@
             .cls-1{fill:none}
         </style>
     </defs>
-    <ellipse id="path4215" cx="9.475" cy="12.772" rx="2.153" ry="2.228" fill="#444a52" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
-    <ellipse id="path4211" cx="12.468" cy="9.292" rx="1.242" ry="1.284" fill="#444a52" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
-    <ellipse id="path4199" cx="5.588" cy="4.562" rx="3.443" ry="3.562" fill="#444a52" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
-    <ellipse id="path4209" cx="13.258" cy="4.489" rx="2.033" ry="2.102" fill="#444a52" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
-    <ellipse id="path4213" cx="3.451" cy="11.511" rx="2.145" ry="2.219" fill="#444a52" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <ellipse id="path4215" cx="9.475" cy="12.772" rx="2.153" ry="2.228" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <ellipse id="path4211" cx="12.468" cy="9.292" rx="1.242" ry="1.284" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <ellipse id="path4199" cx="5.588" cy="4.562" rx="3.443" ry="3.562" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <ellipse id="path4209" cx="13.258" cy="4.489" rx="2.033" ry="2.102" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <ellipse id="path4213" cx="3.451" cy="11.511" rx="2.145" ry="2.219" fill-opacity="1" stroke="none" stroke-width="2" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
 </svg>

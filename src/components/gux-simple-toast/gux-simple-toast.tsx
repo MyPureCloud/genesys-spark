@@ -56,7 +56,7 @@ export class GuxSimpleToast {
 
   getIcon() {
     if (this.icon) {
-      return <i class={this.icon} />;
+      return <gux-icon decorative iconName={this.icon}></gux-icon>;
     } else if (this.iconUri) {
       return <img src={this.iconUri} />;
     }
