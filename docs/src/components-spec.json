@@ -260,5 +260,14 @@
       "highlight": "text",
       "strategy": ["start", "contains", "fuzzy"]
     }
+  },
+  "gux-pagination": {
+    "attributes": {
+      "current-page": "text",
+      "total-items": "text",
+      "layout": ["small", "medium", "large"],
+      "items-per-page": "text",
+      "items-per-page-options": "text"
+    }
   }
 }
