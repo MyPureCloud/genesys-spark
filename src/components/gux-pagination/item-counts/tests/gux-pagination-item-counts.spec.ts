@@ -1,14 +1,21 @@
-import { GuxPaginationItemCounts } from './gux-pagination-item-counts';
+import { newSpecPage } from '@stencil/core/testing';
+import { GuxPaginationItemCounts } from '../gux-pagination-item-counts';
 
 describe('gux-pagination-item-counts', () => {
   let component: GuxPaginationItemCounts;
 
-  beforeEach(() => {
-    component = new GuxPaginationItemCounts();
+  beforeEach(async () => {
+    const page = await newSpecPage({
+      components: [GuxPaginationItemCounts],
+      html: `<gux-pagination-item-counts></gux-pagination-item-counts>`,
+      language: 'en'
+    });
+
+    component = page.rootInstance;
     component.totalItems = 152;
   });
 
-  it('builds with sensible defaults', () => {
+  it('should build with sensible defaults', () => {
     expect(component).toBeTruthy();
     expect(component.render()).toBeTruthy();
 

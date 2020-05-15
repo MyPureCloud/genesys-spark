@@ -7,13 +7,15 @@ image: timbru31/node-chrome
 pipelines:
   default:
     - step:
-       script:
-         - echo "-- Genesys WebComponents --"
-         - node -v
-         - npm -v
-         - npm install
-         - npm run build
-         - npm run format -- --check
-         - npm run lint
-         - npm run test
-         - echo "Fanfare!"
+        caches:
+          - node
+        script:
+          - echo "-- Genesys WebComponents --"
+          - node -v
+          - npm -v
+          - npm install
+          - npm run build
+          - npm run format -- --check
+          - npm run lint
+          - npm run test
+          - echo "Fanfare!"

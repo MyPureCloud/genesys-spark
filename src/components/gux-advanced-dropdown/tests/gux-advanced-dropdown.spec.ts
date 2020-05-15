@@ -10,7 +10,8 @@ describe('gux-advanced-dropdown', () => {
           <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
           <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
         </gux-advanced-dropdown>
-      `
+      `,
+      language: 'en'
     });
 
     expect(page.root).toMatchSnapshot();

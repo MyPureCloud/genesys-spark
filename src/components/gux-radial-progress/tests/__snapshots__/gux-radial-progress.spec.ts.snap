@@ -12,7 +12,7 @@ exports[`gux-radial-progress #render should render component as expected (2) 1`]
 <gux-radial-progress value="0">
   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar">
     <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
-      <filter id="dropshadow-1">
+      <filter id="dropshadow-4">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
         <feMerge>
@@ -21,7 +21,7 @@ exports[`gux-radial-progress #render should render component as expected (2) 1`]
         </feMerge>
       </filter>
       <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
-      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-1)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="163.36281798666926"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-4)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="163.36281798666926"></circle>
       <text class="percentage" dominant-baseline="central" x="50%" y="50%">
         0%
       </text>
@@ -34,7 +34,7 @@ exports[`gux-radial-progress #render should render component as expected (3) 1`]
 <gux-radial-progress value="10">
   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
     <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
-      <filter id="dropshadow-2">
+      <filter id="dropshadow-6">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
         <feMerge>
@@ -43,7 +43,7 @@ exports[`gux-radial-progress #render should render component as expected (3) 1`]
         </feMerge>
       </filter>
       <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
-      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-2)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="147.02653618800232"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-6)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="147.02653618800232"></circle>
       <text class="percentage" dominant-baseline="central" x="50%" y="50%">
         10%
       </text>
@@ -56,7 +56,7 @@ exports[`gux-radial-progress #render should render component as expected (4) 1`]
 <gux-radial-progress value="100">
   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">
     <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
-      <filter id="dropshadow-3">
+      <filter id="dropshadow-8">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
         <feMerge>
@@ -65,7 +65,7 @@ exports[`gux-radial-progress #render should render component as expected (4) 1`]
         </feMerge>
       </filter>
       <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
-      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-3)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="0"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-8)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="0"></circle>
       <text class="percentage" dominant-baseline="central" x="50%" y="50%">
         100%
       </text>
@@ -94,7 +94,7 @@ exports[`gux-radial-progress #render should render component as expected (7) 1`]
 <gux-radial-progress max="100" value="10">
   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
     <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
-      <filter id="dropshadow-6">
+      <filter id="dropshadow-14">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
         <feMerge>
@@ -103,7 +103,7 @@ exports[`gux-radial-progress #render should render component as expected (7) 1`]
         </feMerge>
       </filter>
       <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
-      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-6)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="147.02653618800232"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-14)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="147.02653618800232"></circle>
       <text class="percentage" dominant-baseline="central" x="50%" y="50%">
         10%
       </text>
@@ -116,7 +116,7 @@ exports[`gux-radial-progress #render should render component as expected (8) 1`]
 <gux-radial-progress max="10" value="10">
   <div aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" role="progressbar">
     <svg class="svg-container" height="65px" viewBox="0 0 65 65" width="65px">
-      <filter id="dropshadow-7">
+      <filter id="dropshadow-16">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
         <feMerge>
@@ -125,7 +125,7 @@ exports[`gux-radial-progress #render should render component as expected (8) 1`]
         </feMerge>
       </filter>
       <circle class="static-circle" cx="50%" cy="50%" r="26"></circle>
-      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-7)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="0"></circle>
+      <circle class="dynamic-circle" cx="50%" cy="50%" filter="url(#dropshadow-16)" r="26" stroke-dasharray="163.36281798666926" stroke-dashoffset="0"></circle>
       <text class="percentage" dominant-baseline="central" x="50%" y="50%">
         100%
       </text>

@@ -1,11 +1,11 @@
 import { newE2EPage } from '@stencil/core/testing';
-import { E2EGuxDropdown } from '../gux-dropdown/gux-dropdown.e2eelement';
+import { E2EGuxDropdown } from '../../gux-dropdown/gux-dropdown.e2eelement';
 
 describe('gux-pagination', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-pagination></gux-pagination>');
+    await page.setContent('<gux-pagination lang="en"></gux-pagination>');
     const element = await page.find('gux-pagination');
     expect(element).toHaveClass('hydrated');
   });
@@ -13,7 +13,7 @@ describe('gux-pagination', () => {
   it('should update the display when paging back and forth', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<gux-pagination total-items="152" current-page="2"></genesys-paginiation>'
+      '<gux-pagination lang="en" total-items="152" current-page="2"></genesys-paginiation>'
     );
 
     await page.waitForChanges();
@@ -58,7 +58,7 @@ describe('gux-pagination', () => {
   it('should update the item counts when selecting a new items per page', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<gux-pagination total-items="75" current-page="2"></genesys-paginiation>'
+      '<gux-pagination lang="en" total-items="75" current-page="2"></genesys-paginiation>'
     );
 
     await page.waitForChanges();
@@ -79,7 +79,7 @@ describe('gux-pagination', () => {
   it('should update the current page if the new items per page selection make current page invalid', async () => {
     const page = await newE2EPage();
     await page.setContent(
-      '<gux-pagination total-items="75" current-page="2"></genesys-paginiation>'
+      '<gux-pagination lang="en" total-items="75" current-page="2"></genesys-paginiation>'
     );
 
     await page.waitForChanges();
@@ -102,7 +102,7 @@ describe('gux-pagination', () => {
 
   it('should hide the items per page dropdown if there are no items per page options', async () => {
     const page = await newE2EPage();
-    await page.setContent('<gux-pagination></genesys-paginiation>');
+    await page.setContent('<gux-pagination lang="en"></genesys-paginiation>');
 
     await page.waitForChanges();
     const component = await page.find('gux-pagination');

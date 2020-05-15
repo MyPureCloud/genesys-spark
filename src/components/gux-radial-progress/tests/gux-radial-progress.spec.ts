@@ -2,6 +2,22 @@ import { newSpecPage } from '@stencil/core/testing';
 import { GuxRadialProgress } from '../gux-radial-progress';
 
 describe('gux-radial-progress', () => {
+  let component: GuxRadialProgress;
+
+  beforeEach(async () => {
+    const page = await newSpecPage({
+      components: [GuxRadialProgress],
+      html: `<gux-radial-progress></gux-radial-progress>`,
+      language: 'en'
+    });
+
+    component = page.rootInstance;
+  });
+
+  it('should build', async () => {
+    expect(component).toBeInstanceOf(GuxRadialProgress);
+  });
+
   describe('#render', () => {
     [
       '<gux-radial-progress></gux-radial-progress>',
@@ -20,7 +36,8 @@ describe('gux-radial-progress', () => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({
           components: [GuxRadialProgress],
-          html: input
+          html: input,
+          language: 'en'
         });
 
         expect(page.root).toMatchSnapshot();
