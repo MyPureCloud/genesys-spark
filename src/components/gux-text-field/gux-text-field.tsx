@@ -199,12 +199,6 @@ export class GuxTextField {
     return type === 'warning' ? 'ic-alert-triangle' : 'ic-alert-octo';
   }
 
-  _clear(event) {
-    this.clear();
-    this.inputElement.focus();
-    this.emitInput(event);
-  }
-
   /**
    * Clears the input.
    */
@@ -215,6 +209,8 @@ export class GuxTextField {
     }
     this.value = '';
     this.inputElement.value = '';
+    this.inputElement.focus();
+    this.input.emit(this.value);
   }
 
   /**
@@ -258,7 +254,7 @@ export class GuxTextField {
               class="clear-button"
               title={this.eraseLabel}
               aria-label={this.i18n('eraseBtnAria')}
-              onClick={e => this._clear(e)}
+              onClick={() => this.clear()}
             >
               <gux-icon decorative iconName="ic-close"></gux-icon>
             </button>
