@@ -30,8 +30,8 @@ describe('gux-simple-toast', () => {
       expect((component.getIcon() as any).$attrs$.src).toBe('test');
       component.icon = 'test';
       // testing JSX
-      expect((component.getIcon() as any).$tag$).toBe('i');
-      expect((component.getIcon() as any).$attrs$.class).toBe('test');
+      expect((component.getIcon() as any).$tag$).toBe('gux-icon');
+      expect((component.getIcon() as any).$attrs$.iconName).toBe('test');
     });
   });
 });
