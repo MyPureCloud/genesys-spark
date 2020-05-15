@@ -91,12 +91,12 @@ export class GuxRadio {
         <input
           id={`gux-radio-${this.id}`}
           name={this.name}
-          value={this.value}
           type="radio"
           onChange={e => this.onChecked(e)}
           onInput={e => this.onChecked(e)}
           disabled={this.disabled}
           {...{ checked: this.checked ? true : undefined }}
+          value={this.value}
         />
         <label
           id={`gux-radio-label-${this.id}`}
