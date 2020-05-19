@@ -17,6 +17,10 @@ You may also want to join the chat room for the Genesys Cloud [Common UI Develop
 
 ## Installing the library
 
+Currently the main line of development is done in the 1.0.0-alpha branch/release. This is because we are working on making
+changes to the APIs of some components to bring them up to our [API design standards](COMPONENT_DESIGN.md). The elements
+that are currently likely to change are documented by the `likely-breaking-changes` label [in JIRA](<https://inindca.atlassian.net/issues/?jql=project%20%3D%20%22COMUI%22%20AND%20resolution%20%3D%20Unresolved%20AND%20labels%20in%20(likely-breaking-changes)%20ORDER%20BY%20priority%20DESC>).
+
 ### Prerequisites
 
 Published artifacts are stored in our private artifactory/jfrog registry, so you will need to update your
