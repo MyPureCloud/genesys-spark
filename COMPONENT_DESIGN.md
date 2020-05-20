@@ -2,8 +2,13 @@
 
 Best practices for developing presentational web components that have a nice API and are easy to work with.
 
- - [Prefer structured markup](#markdown-header-prefer-structured-markup-over-complex-attributes-over-js-interfaces)
- - [Use a consistent input API](#markdown-header-use-a-consistent-api-for-components-that-accept-input)
+The general principle at work in this document is that our presentational components should have APIs that are
+consistent with native browser elements. They should feel familiar to users who are comfortable working with
+native input elements and controls.
+
+- [Prefer structured markup](#markdown-header-prefer-structured-markup-over-complex-attributes-over-js-interfaces)
+- [Use a consistent input API](#markdown-header-use-a-consistent-api-for-components-that-accept-input)
+- [Don't use reflectToAttr](#markdown-header-dont-use-reflecttoattr)
 
 ## Prefer structured markup over complex attributes or js interfaces
 
@@ -71,4 +76,19 @@ those components and for events emitted by the components. In particular compone
 - Should have a `value` attribute and property, like the various native input-related elements
   - An additional boolean attribute similar to `checked` may be appropriate for elements with boolean state.
 - Should emit the `input` event (at a minimum) with the `detail` property on the event set to the data the
-component is intended to get from the user.
+  component is intended to get from the user.
+
+## Don't use reflectToAttr
+
+Stencil properties can be set with the option `reflectToAttr`. When set, a change in an elements property will
+also change the value of the attribute in the DOM. For example, when dealing with this input element:
+
+```html
+<my-custom-input id="myInput" value="default"></my-custom-input>
+```
+
+If `reflectToAttr` was set on `value`, then calling `document.getElementById("myInput").value = "new value"` would
+mean that `document.getElementById("myInput").getAttr("value")` would now return "new value". This is _not_ how
+native browser elements behave. It also puts the internal implementation of the compnent in conflict with the surrounding
+framework used to render it about what the attribute's value should be, since it is being set twice, potentially leading
+to bugs.
