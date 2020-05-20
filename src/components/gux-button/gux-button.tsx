@@ -26,7 +26,7 @@ export class GuxButton {
   @State()
   title: string;
 
-  async componentDidLoad() {
+  async componentWillLoad() {
     this.title = this.root.title;
   }
 
