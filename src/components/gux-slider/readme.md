@@ -11,6 +11,7 @@ The scroll bar users to increase or decrease the rating using arrow keys located
 
 | Property         | Attribute          | Description                                  | Type      | Default |
 | ---------------- | ------------------ | -------------------------------------------- | --------- | ------- |
+| `disabled`       | `disabled`         | Whether or not the slider is disabled.       | `boolean` | `false` |
 | `displayTextBox` | `display-text-box` | Indicates if the input box will be displayed | `boolean` | `true`  |
 | `isPercentage`   | `is-percentage`    | Indicate if the value is a percentage        | `boolean` | `false` |
 | `max`            | `max`              | Indicates the maximum value for the slider   | `number`  | `100`   |
@@ -38,6 +39,7 @@ The scroll bar users to increase or decrease the rating using arrow keys located
 graph TD;
   gux-slider --> gux-text-label
   gux-slider --> gux-text-field
+  gux-text-field --> gux-icon
   style gux-slider fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

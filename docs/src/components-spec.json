@@ -2,17 +2,6 @@
   "gux-accordion": {
     "attributes": { "heading-level": "text" }
   },
-  "gux-button": {
-    "attributes": {
-      "disabled": "checkbox",
-      "title": "text",
-      "text": "text",
-      "left-icon": "text",
-      "right-icon": "text",
-      "accent": ["primary", "secondary"]
-    },
-    "events": { "click": "Triggered when element is clicked" }
-  },
   "gux-action-button": {
     "attributes": {
       "disabled": "checkbox",
@@ -50,6 +39,17 @@
       "filter": "Filter value changed"
     }
   },
+  "gux-button": {
+    "attributes": {
+      "disabled": "checkbox",
+      "title": "text",
+      "text": "text",
+      "left-icon": "text",
+      "right-icon": "text",
+      "accent": ["primary", "secondary"]
+    },
+    "events": { "click": "Triggered when element is clicked" }
+  },
   "gux-calendar": {
     "attributes": {
       "mode": ["single", "range"],
@@ -80,6 +80,7 @@
     "attributes": { "value": "text" },
     "events": { "input": "Triggered when a color is clicked" }
   },
+  "gux-command-palette": {},
   "gux-datepicker": {
     "attributes": {
       "mode": ["single", "range"],
@@ -114,11 +115,27 @@
       "change": "Triggered when item is selected from dropdown"
     }
   },
+  "gux-dropdown-option": {
+    "hidePage": true,
+    "attributes": { "selected": "checkbox", "value": "text", "text": "text" }
+  },
+  "gux-icon": {
+    "attributes": {
+      "icon-name": "text",
+      "decorative": "checkbox",
+      "screenreader-text": "text"
+    }
+  },
   "gux-list": {
     "attributes": { "highlight": "text" },
     "events": {
       "changed": "Triggered when the list's selection is changed"
     }
+  },
+  "gux-list-item": {
+    "hidePage": true,
+    "attributes": { "disabled": "checkbox", "text": "text", "value": "text" },
+    "events": { "press": "list item selected within list" }
   },
   "gux-modal": {
     "attributes": {
@@ -141,6 +158,15 @@
     }
   },
   "gux-page-loading-spinner": {},
+  "gux-pagination": {
+    "attributes": {
+      "current-page": "text",
+      "total-items": "text",
+      "layout": ["small", "medium", "large"],
+      "items-per-page": "text",
+      "items-per-page-options": "text"
+    }
+  },
   "gux-panel-frame": {},
   "gux-popover": {
     "attributes": {
@@ -169,16 +195,16 @@
   "gux-radial-progress": {
     "attributes": { "value": "text", "max": "text" }
   },
-  "gux-icon": {
-    "attributes": {
-      "icon-name": "text",
-      "decorative": "checkbox",
-      "screenreader-text": "text"
-    }
-  },
   "gux-radio": {
     "attributes": { "value": "text", "disabled": "checkbox" },
     "events": { "check": "Radio button checked state changed" }
+  },
+  "gux-radio-group": {
+    "hidePage": true,
+    "attributes": { "name": "text" },
+    "events": {
+      "input": "Radio selection state is changed inside the group"
+    }
   },
   "gux-rating": {
     "attributes": {
@@ -189,6 +215,9 @@
     },
     "events": { "update": "rating value changed" }
   },
+  "gux-search": {},
+  "gux-side-panel": {},
+  "gux-simple-toast": {},
   "gux-slider": {
     "attributes": [
       { "min": "text" },
@@ -201,47 +230,10 @@
     ],
     "events": { "update": "slider value changed" }
   },
+  "gux-spin-button": {},
   "gux-switch": {
     "attributes": { "selected-value": "text" },
     "events": { "selectionChanged": "switch state was changed" }
-  },
-  "gux-toggle": {
-    "attributes": {
-      "checked": "checkbox",
-      "disabled": "checkbox",
-      "checked-label": ["on", "off"],
-      "unchecked-label": ["on", "off"]
-    },
-    "events": { "check": "toggle state changed" }
-  },
-  "gux-tooltip": {
-    "attributes": {
-      "text": "text",
-      "for": "text",
-      "delay": "text",
-      "is-shown": "checkbox"
-    },
-    "events": {
-      "hidden": "fired when tooltip moves to hidden state",
-      "shown": "fired when tooltip moves to visible state"
-    }
-  },
-
-  "gux-list-item": {
-    "hidePage": true,
-    "attributes": { "disabled": "checkbox", "text": "text", "value": "text" },
-    "events": { "press": "list item selected within list" }
-  },
-  "gux-radio-group": {
-    "hidePage": true,
-    "attributes": { "name": "text" },
-    "events": {
-      "input": "Radio selection state is changed inside the group"
-    }
-  },
-  "gux-dropdown-option": {
-    "hidePage": true,
-    "attributes": { "selected": "checkbox", "value": "text", "text": "text" }
   },
   "gux-text-field": {
     "attributes": {
@@ -261,13 +253,26 @@
       "strategy": ["start", "contains", "fuzzy"]
     }
   },
-  "gux-pagination": {
+  "gux-text-label": {},
+  "gux-toggle": {
     "attributes": {
-      "current-page": "text",
-      "total-items": "text",
-      "layout": ["small", "medium", "large"],
-      "items-per-page": "text",
-      "items-per-page-options": "text"
+      "checked": "checkbox",
+      "disabled": "checkbox",
+      "checked-label": ["on", "off"],
+      "unchecked-label": ["on", "off"]
+    },
+    "events": { "check": "toggle state changed" }
+  },
+  "gux-tooltip": {
+    "attributes": {
+      "text": "text",
+      "for": "text",
+      "delay": "text",
+      "is-shown": "checkbox"
+    },
+    "events": {
+      "hidden": "fired when tooltip moves to hidden state",
+      "shown": "fired when tooltip moves to visible state"
     }
   }
 }

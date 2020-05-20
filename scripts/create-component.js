@@ -33,8 +33,8 @@ createComponentStencilFiles = (componentName, componentType, dir) => {
     'utf8'
   );
   const mdTpl = fs.readFileSync(path.resolve(tplPath, 'README.md.hbs'), 'utf8');
-  const storyTpl = fs.readFileSync(
-    path.resolve(tplPath, 'story.tsx.hbs'),
+  const exampleTpl = fs.readFileSync(
+    path.resolve(tplPath, 'example.html.hbs'),
     'utf8'
   );
   const specTpl = fs.readFileSync(
@@ -74,8 +74,8 @@ createComponentStencilFiles = (componentName, componentType, dir) => {
     Handlebars.compile(mdTpl)(data)
   );
   fs.writeFileSync(
-    path.resolve(dir, componentName + '/stories/story.tsx'),
-    Handlebars.compile(storyTpl)(data)
+    path.resolve(dir, componentName + '/example.html'),
+    Handlebars.compile(exampleTpl)(data)
   );
 };
 

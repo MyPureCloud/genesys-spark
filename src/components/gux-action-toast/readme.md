@@ -32,11 +32,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Depends on
 
+- [gux-icon](../gux-icon)
 - [gux-button](../gux-button)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-action-toast --> gux-icon
   gux-action-toast --> gux-button
   style gux-action-toast fill:#f9f,stroke:#333,stroke-width:4px
 ```
