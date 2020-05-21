@@ -4,14 +4,14 @@ describe('gux-datepicker', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-datepicker></gux-datepicker>');
+    await page.setContent('<gux-datepicker lang="en"></gux-datepicker>');
     const element = await page.find('gux-datepicker');
     expect(element).toHaveClass('hydrated');
   });
   it('updates the text input state when the datepicker’s value property is set', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-datepicker></gux-datepicker>');
+    await page.setContent('<gux-datepicker lang="en"></gux-datepicker>');
     const element = await page.find('gux-datepicker');
 
     await element.setProperty('value', '1985-12-01');
