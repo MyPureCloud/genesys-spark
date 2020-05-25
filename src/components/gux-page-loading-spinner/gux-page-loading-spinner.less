@@ -29,46 +29,10 @@ gux-page-loading-spinner {
     height: 60px;
     background-repeat: no-repeat;
     background: url(@spinner-image);
+    margin: auto;
   }
   .page-loading-spinner.gux-page-loading-animation {
     animation-name: play65, rotate65;
     animation-iteration-count: infinite, infinite;
   }
-}
-
-// Theming
-
-// Dark
-.gux-page-loading-spinner-dark-theme {
-    color: @gux-off-white;
-};
-
-.gux-dark-theme {
-  gux-page-loading-spinner {
-        .gux-page-loading-spinner-dark-theme();
-    }
-}
-
-gux-page-loading-spinner.gux-dark-theme {
-    .gux-page-loading-spinner-dark-theme();
-}
-
-// Light
-.gux-page-loading-spinner-light-theme {
-    color: @gux-grey-2;
-};
-
-.gux-light-theme {
-  gux-page-loading-spinner {
-        .gux-page-loading-spinner-light-theme();
-    }
-}
-
-gux-page-loading-spinner.gux-light-theme {
-    .gux-page-loading-spinner-light-theme();
-}
-
-// Default Theme
-gux-page-loading-spinner {
-    .gux-page-loading-spinner-light-theme();
 }
