@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-page-loading-spinner renders 1`] = `"<gux-page-loading-spinner class=\\"hydrated\\"><div class=\\"page-loading-spinner gux-page-loading-animation\\"></div></gux-page-loading-spinner>"`;
