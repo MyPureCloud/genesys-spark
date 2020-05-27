@@ -25,7 +25,7 @@ describe('gux-button', () => {
     element.setAttribute('disabled', 'disabled');
     await page.waitForChanges();
     expect(element).toHaveAttribute('disabled');
-    expect(element).toEqualAttribute('disabled', '');
+    expect(element).toEqualAttribute('disabled', 'disabled');
     await element.click();
     expect(onclick).toHaveReceivedEventTimes(0);
   });
