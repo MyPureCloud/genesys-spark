@@ -101,7 +101,16 @@ Once you've checked out the project, this is the easist way to see your componen
 npm run dev
 ```
 
-then navigate to http://localhost:8080 to see the docs
+then navigate to `http://localhost:8080/` to see the docs
+
+If you want the docs to be accessible externally you can use
+
+```sh
+npm run dev.public
+```
+
+this will host the docs on `http://0.0.0.0:8080/`.
+This means they are available elsewhere on your network at `http:/<your-ip-address>:8080/`.
 
 ### Running tests
 
