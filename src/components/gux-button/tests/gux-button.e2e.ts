@@ -24,8 +24,6 @@ describe('gux-button', () => {
     const onclick = await element.spyOnEvent('click');
     element.setAttribute('disabled', 'disabled');
     await page.waitForChanges();
-    expect(element).toHaveAttribute('disabled');
-    expect(element).toEqualAttribute('disabled', 'disabled');
     await element.click();
     expect(onclick).toHaveReceivedEventTimes(0);
   });
