@@ -7,7 +7,9 @@ describe('gux-page-loading-spinner', () => {
     await page.setContent(
       '<gux-page-loading-spinner></gux-page-loading-spinner>'
     );
+
     const element = await page.find('gux-page-loading-spinner');
-    expect(element).toHaveClass('hydrated');
+
+    expect(element.outerHTML).toMatchSnapshot();
   });
 });

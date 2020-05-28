@@ -76,6 +76,11 @@ for more details.
 Since IE11 does not support web components natively, you will need to
 [apply polyfills](https://stenciljs.com/docs/angular#edge-and-ie11-polyfills) in order to support it.
 
+### Localization
+
+You will need to set a lang attribute on the Gux component or one of its ancestor elements and the Gux component will use that to decide what language to use.
+For example you could set it on the page somewhere at a high level, e.g. `<html lang="en">` or `<body lang="en">` and all the Gux components will use that to decide what language to use.
+
 ## Development and Contribution
 
 The common component library has a very small set of developers, who also work on other projects, so
@@ -96,7 +101,16 @@ Once you've checked out the project, this is the easist way to see your componen
 npm run dev
 ```
 
-then navigate to http://localhost:8080 to see the docs
+then navigate to `http://localhost:8080/` to see the docs
+
+If you want the docs to be accessible externally you can use
+
+```sh
+npm run dev.public
+```
+
+this will host the docs on `http://0.0.0.0:8080/`.
+This means they are available elsewhere on your network at `http:/<your-ip-address>:8080/`.
 
 ### Running tests
 

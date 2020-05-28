@@ -1,6 +1,6 @@
 # gux-page-loading-spinner
 
-A simple loading spinner for loading pages. 
+A simple loading spinner for loading pages.
 
 <!-- Auto Generated Below -->
 

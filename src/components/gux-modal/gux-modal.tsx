@@ -10,7 +10,7 @@ import {
 import { ButtonAccents } from '../../common-enums';
 import { buildI18nForComponent } from '../i18n';
 
-import modalComponentResources from './gux-modal.i18n.json';
+import modalComponentResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-modal.less',

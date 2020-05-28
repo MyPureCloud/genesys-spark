@@ -47,7 +47,7 @@ export class GuxSlider {
   sliderTooltip: HTMLElement;
   sliderTooltipContainer: HTMLElement;
 
-  inputRegex = new RegExp('([0-9]+.?[0-9]*)%?');
+  inputRegex = new RegExp('(-?[0-9]+.?[0-9]*)%?');
 
   /**
    * Triggered when the value is changed
@@ -57,14 +57,17 @@ export class GuxSlider {
   update: EventEmitter;
   updateValue(event) {
     const result = this.inputRegex.exec(event.target.value);
-    const resultValue = result && result[1] ? +result[1] : this.min;
-    const newValue = Math.min(Math.max(resultValue, this.min), this.max);
-    const upToDate = this.value === newValue;
-    const stepOffset = Math.round(newValue / this.step);
-    this.value = newValue % this.step !== 0 ? this.step * stepOffset : newValue;
-    if (!upToDate) {
-      this.update.emit(this.value);
-      this.updatePosition();
+    if (result !== null) {
+      const resultValue = result && result[1] ? +result[1] : this.min;
+      const newValue = Math.min(Math.max(resultValue, this.min), this.max);
+      const upToDate = this.value === newValue;
+      const stepOffset = Math.round(newValue / this.step);
+      this.value =
+        newValue % this.step !== 0 ? this.step * stepOffset : newValue;
+      if (!upToDate) {
+        this.update.emit(this.value);
+        this.updatePosition();
+      }
     }
   }
 
