@@ -14,7 +14,7 @@ export class GuxButton {
   /**
    * Indicate if the button is disabled or not
    */
-  @Prop({ reflectToAttr: true })
+  @Prop()
   disabled = false;
 
   /**

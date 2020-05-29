@@ -22,11 +22,7 @@
 gux-button {
   display: inline-block;
   min-width: 32px;
-  &[disabled] {
-    opacity: 0.5;
-    pointer-events: none;
-    cursor: default;
-  }
+  
   > button {
     width: 100%;
     padding: 0 16px;
@@ -38,6 +34,11 @@ gux-button {
     text-overflow: ellipsis;
     font-size: 12px;
     font-weight: bold;
+    
+    &[disabled] {
+      opacity: 0.5;
+      cursor: default;
+    }
 
     &:focus {
       outline: none;
