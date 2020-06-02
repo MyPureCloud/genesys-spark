@@ -1,15 +1,17 @@
-import { Component, Element, h, Prop, State } from '@stencil/core';
+import { Component, h, JSX, Prop } from '@stencil/core';
 
-import { ButtonAccents } from '../../common-enums';
+export type GuxButtonAccent = 'primary' | 'secondary';
 
 @Component({
   styleUrl: 'gux-button.less',
   tag: 'gux-button'
 })
 export class GuxButton {
-  @Element()
-  root: HTMLGuxButtonElement;
-  button: HTMLButtonElement;
+  /**
+   * The component title
+   */
+  @Prop()
+  title: string;
 
   /**
    * Indicate if the button is disabled or not
@@ -21,32 +23,19 @@ export class GuxButton {
    * The component accent (secondary or primary).
    */
   @Prop()
-  accent: ButtonAccents = ButtonAccents.Secondary;
+  accent: GuxButtonAccent = 'secondary';
 
-  @State()
-  title: string;
+  private get class(): string {
+    if (this.accent === 'primary') {
+      return 'gux-primary';
+    }
 
-  async componentWillLoad() {
-    this.title = this.root.title;
+    return 'gux-secondary';
   }
 
-  private get accentClass() {
-    const accent =
-      this.accent === ButtonAccents.Primary
-        ? ButtonAccents.Primary
-        : ButtonAccents.Secondary;
-
-    return `gux-${accent}`;
-  }
-
-  render() {
+  render(): JSX.Element {
     return (
-      <button
-        title={this.title}
-        ref={el => (this.button = el)}
-        disabled={this.disabled}
-        class={this.accentClass}
-      >
+      <button title={this.title} disabled={this.disabled} class={this.class}>
         <slot />
       </button>
     );

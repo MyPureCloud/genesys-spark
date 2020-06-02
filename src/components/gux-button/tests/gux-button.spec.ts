@@ -1,46 +1,55 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { ButtonAccents } from '../../../common-enums';
-import { GuxButton } from '../gux-button';
+import { GuxButton } from '../../gux-button/gux-button';
 
-describe('gux-button', () => {
-  let component: GuxButton;
+const components = [GuxButton];
+const language = 'en';
 
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxButton],
-      html: `<gux-button></gux-button>`,
-      language: 'en'
-    });
+describe('gux-modal', () => {
+  describe('#render', () => {
+    [
+      {
+        description: 'should render default button',
+        html: '<gux-button title="default">Button</gux-button>'
+      },
+      {
+        description: 'should render primary button',
+        html: '<gux-button title="default" accent="primary">Button</gux-button>'
+      },
+      {
+        description: 'should render secondary button',
+        html:
+          '<gux-button title="default" accent="secondary">Button</gux-button>'
+      },
+      {
+        description: 'should render invalid accent button',
+        html:
+          '<gux-button title="Invalid accent" accent="invalid">Invalid accent</gux-button>'
+      },
+      {
+        description: 'should render disabled default button',
+        html: '<gux-button title="default" disabled>Button</gux-button>'
+      },
+      {
+        description: 'should render disabled primary button',
+        html:
+          '<gux-button title="default" accent="primary" disabled>Button</gux-button>'
+      },
+      {
+        description: 'should render disabled secondary button',
+        html:
+          '<gux-button title="default" accent="secondary" disabled>Button</gux-button>'
+      },
+      {
+        description: 'should render disabled invalid accent button',
+        html:
+          '<gux-button title="Invalid accent" accent="invalid" disabled>Invalid accent</gux-button>'
+      }
+    ].forEach(({ description, html }) => {
+      it(description, async () => {
+        const page = await newSpecPage({ components, html, language });
 
-    component = page.rootInstance;
-  });
-
-  it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxButton);
-  });
-
-  describe('Class Logic', () => {
-    describe('getAccent', () => {
-      it('returns secondary string for no accent defined', () => {
-        expect((component as any).accentClass).toEqual(
-          `gux-${ButtonAccents.Secondary}`
-        );
-      });
-
-      it('returns primary if accent equals to primary', () => {
-        component.accent = ButtonAccents.Primary;
-
-        expect((component as any).accentClass).toEqual(
-          `gux-${ButtonAccents.Primary}`
-        );
-      });
-
-      it('returns secondary string for other accents defined', () => {
-        component.accent = 'sss' as ButtonAccents;
-
-        expect((component as any).accentClass).toEqual(
-          `gux-${ButtonAccents.Secondary}`
-        );
+        expect(page.rootInstance).toBeInstanceOf(GuxButton);
+        expect(page.root).toMatchSnapshot();
       });
     });
   });
