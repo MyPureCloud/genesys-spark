@@ -1,0 +1,179 @@
+// Variables part
+
+// Style
+.popover-content {
+  margin: 5px 0 !important;
+
+  .tab-dropdown-option {
+    display: flex;
+    width: 120px;
+    height: 35px;
+    align-items: center;
+    transition: color 0.25s, background-color 0.25s;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    color: #444a52;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: #2A60C8;
+      color: #FDFDFD;
+    }
+
+    gux-icon {
+      margin: 0 10px;
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+gux-tabs {
+  .gux-tabs {
+    display: flex;
+    align-items: flex-end;
+    background-color: #E6E8E8;
+    width: 100%;
+    height: 40px;
+
+    .gux-tab {
+      display: flex;
+      align-items: center;
+      margin-left: 4px;
+      height: 35px;
+      width: 160px;
+      padding: 10px 5px 10px 10px;
+      background-color: #CFD1D1;
+      border: none;
+
+      .tab-title {
+        color: #444A52;
+        flex: 1 1 auto;
+        height: 12px;
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow-x: hidden;
+        cursor: default;
+        position: relative;
+        padding-bottom: 4px;
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        font-size: 12px;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 14px;
+          height: 15px;
+          bottom: 0;
+          right: 0;
+          background: linear-gradient(transparent, #CFD1D1) right repeat;
+        }
+      }
+
+      .tab-dropdown-container {
+        flex: 0 0 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        padding: 0;
+        border: none;
+        color: #444A52;
+        z-index: 1;
+        cursor: pointer;
+
+        &:hover {
+          gux-icon {
+            color: #2A60C8;
+          }
+        }
+
+        gux-icon {
+          transition: color 0.25s;
+          width: 100%;
+        }
+      }
+
+      .tab-icon-container {
+        flex: 0 0 16px;
+        display: flex;
+        height: 14px;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2px;
+        margin-right: 10px;
+        color: #444A52;
+
+        gux-icon {
+          width: 100%;
+        }
+      }
+
+      &.selected {
+        background-color: #FDFDFD;
+        height: 34px;
+        margin-bottom: 1px;
+
+        .tab-title {
+          color: #444A52;
+          font-weight: bold;
+
+          &:after {
+            background: linear-gradient(transparent, #FDFDFD) right repeat;
+          }
+        }
+
+        .tab-dropdown-container {
+          color: #98A7B8;
+        }
+
+        .tab-icon-container {
+          color: #2A60C8;
+        }
+      }
+    }
+  }
+}
+
+// Theming
+// Light
+.gux-tabs-light-theme {
+
+}
+
+.gux-light-theme {
+  gux-tabs {
+    .gux-tabs-light-theme();
+  }
+}
+
+gux-tabs.gux-light-theme {
+  .gux-tabs-light-theme();
+}
+
+// Dark
+.gux-tabs-dark-theme {
+
+}
+
+.gux-dark-theme {
+  gux-tabs {
+    .gux-tabs-dark-theme();
+  }
+}
+
+gux-tabs.gux-dark-theme {
+  .gux-tabs-dark-theme();
+}
+
+// Default
+gux-tabs {
+  .gux-tabs-light-theme();
+}

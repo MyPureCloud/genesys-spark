@@ -24,6 +24,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [gux-tabs](../gux-tabs)
+
 ### Depends on
 
 - [gux-icon](../gux-icon)
@@ -32,6 +36,7 @@
 ```mermaid
 graph TD;
   gux-popover --> gux-icon
+  gux-tabs --> gux-popover
   style gux-popover fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

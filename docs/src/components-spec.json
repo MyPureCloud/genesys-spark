@@ -235,6 +235,7 @@
     "attributes": { "selected-value": "text" },
     "events": { "selectionChanged": "switch state was changed" }
   },
+  "gux-tabs": {},
   "gux-text-field": {
     "attributes": {
       "value": "text",
