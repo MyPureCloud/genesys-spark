@@ -8,7 +8,7 @@ import {
   Prop
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
-import { HighlightStrategy } from '../../gux-text-highlight/highlight-enums';
+import { GuxTextHighlightStrategy } from '../../gux-text-highlight/gux-text-highlight';
 
 @Component({
   styleUrl: 'gux-list-item.less',
@@ -31,7 +31,7 @@ export class GuxListItem {
    * How the item should be highlighted.
    */
   @Prop()
-  strategy: HighlightStrategy;
+  strategy: GuxTextHighlightStrategy;
 
   /**
    * Emits when the list item is clicked, or enter/space is pressed.
