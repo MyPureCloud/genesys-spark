@@ -7,21 +7,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property     | Attribute     | Description                                               | Type     | Default     |
-| ------------ | ------------- | --------------------------------------------------------- | -------- | ----------- |
-| `accent`     | `accent`      | The component accent (alert warning positive or neutral). | `string` | `'neutral'` |
-| `closeLabel` | `close-label` | The label for the close button                            | `string` | `''`        |
-| `icon`       | `icon`        | The icon name of the title.                               | `string` | `undefined` |
-| `iconUri`    | `icon-uri`    | The icon uri of the title.                                | `string` | `undefined` |
-| `idToast`    | `id-toast`    | The id of the title.                                      | `string` | `undefined` |
-| `message`    | `message`     | The message of the toast.                                 | `string` | `undefined` |
+| Property | Attribute | Description           | Type                                              | Default     |
+| -------- | --------- | --------------------- | ------------------------------------------------- | ----------- |
+| `accent` | `accent`  | The component accent. | `"alert" \| "neutral" \| "positive" \| "warning"` | `'neutral'` |
 
 
 ## Events
 
-| Event        | Description | Type               |
-| ------------ | ----------- | ------------------ |
-| `closeClick` |             | `CustomEvent<any>` |
+| Event        | Description | Type                |
+| ------------ | ----------- | ------------------- |
+| `guxdismiss` |             | `CustomEvent<void>` |
+
+
+## Slots
+
+| Slot        | Description                                |
+| ----------- | ------------------------------------------ |
+| `"icon"`    | Required slot for gux-icon                 |
+| `"message"` | Required slot for the simple toast message |
 
 
 ## Dependencies

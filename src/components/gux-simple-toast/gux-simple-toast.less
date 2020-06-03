@@ -1,107 +1,124 @@
 gux-simple-toast {
-  > div {
-    padding: 12px 12px;
-    display: flex;
-    width: 336px;
-    position: relative;
-    border: 1px solid;
-    .content-wrapper {
-      flex: 1;
-      overflow: hidden;
-      line-height: 16px;
-      padding-right: 40px;
+  padding: 8px 12px;
+  width: 336px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+  border-top: 1px solid;
+
+  .icon{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 6px;
+
+    &.alert {
+      color: @gux-alert;
     }
-    .icon-wrapper {
-      height: 16px;
+    &.warning {
+      color: @gux-warning;
     }
-    .icon-wrapper i,
-    .icon-wrapper img {
-      font-size: 16px;
-      height: 16px;
-      width: 16px;
-      margin-right: 8px;
+    &.positive {
+      color: @gux-positive;
     }
-    .message {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-height: 32px;
+    &.neutral {
+      color: @gux-neutral;
     }
-    .close-icon-wrapper {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      button {
-        cursor: pointer;
-        border: none;
-        background: none;
-      }
+
+    gux-icon {
+      width: 12px
+    }
+  }
+
+  .message{
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    line-height: 24px;
+    margin: 0 12px 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 48px;
+  }
+
+  .dismiss-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 11px;
+    cursor: pointer;
+    gux-icon {
+      width: 12px;
     }
   }
 }
 
 // Theming
-
-// Dark
-.gux-simple-toast-dark-theme {
-  > div {
-    background: @gux-off-white;
-    color: @gux-grey-2;
-    border-color: @gux-border;
-    .close-icon-wrapper {
-      button {
-        color: @gux-pale-gray;
-      }
-    }
-    .icon-wrapper.alert {
-      color: @gux-alert;
-    }
-    .icon-wrapper.warning {
-      color: @gux-warning;
-    }
-    .icon-wrapper.positive {
-      color: @gux-positive;
-    }
-    .icon-wrapper.neutral {
-      color: @gux-neutral;
-    }
-  }
-}
-
-.gux-dark-theme {
-  gux-simple-toast {
-    .gux-simple-toast-dark-theme();
-  }
-}
-gux-simple-toast.gux-dark-theme {
-  .gux-simple-toast-dark-theme();
-}
-
 // Light
 .gux-simple-toast-light-theme {
-  > div {
-    background: @gux-panel;
-    color: @gux-off-white;
-    border-color: @gux-grey-2;
-    .close-icon-wrapper {
-      button {
-        color: @gux-pale-gray-2;
-      }
-    }
-    .icon-wrapper.alert {
+  background: @gux-panel;
+  color: @gux-off-white;
+  border-color: @gux-grey-2;
+
+  .icon{
+    &.alert {
       color: @gux-alert-2;
     }
-    .icon-wrapper.warning {
+    &.warning {
       color: @gux-warning;
     }
-    .icon-wrapper.positive {
+    &.positive {
       color: @gux-positive;
     }
-    .icon-wrapper.neutral {
+    &.neutral {
       color: @gux-neutral-2;
     }
   }
+
+  .dismiss-button {
+    color: @gux-off-white;
+  }
 }
 
+// Dark
+.gux-simple-toast-dark-theme {
+  background: @gux-off-white;
+  color: @gux-grey-2;
+  border-color: @gux-border;
+
+  .icon {
+    &.alert {
+      color: @gux-alert;
+    }
+    &.warning {
+      color: @gux-warning;
+    }
+    &.positive {
+      color: @gux-positive;
+    }
+    &.neutral {
+      color: @gux-neutral;
+    }
+  }
+
+  .dismiss-button {
+    color: @gux-grey-2;
+  }
+}
+
+// Default Theme
+gux-simple-toast {
+  .gux-simple-toast-light-theme();
+}
+
+// Light Theme
 .gux-light-theme {
   gux-simple-toast {
     .gux-simple-toast-light-theme();
@@ -110,7 +127,13 @@ gux-simple-toast.gux-dark-theme {
 gux-simple-toast.gux-light-theme {
   .gux-simple-toast-light-theme();
 }
-// Default Theme
-gux-simple-toast {
-  .gux-simple-toast-light-theme();
+
+// Dark Theme
+.gux-dark-theme {
+  gux-simple-toast {
+    .gux-simple-toast-dark-theme();
+  }
+}
+gux-simple-toast.gux-dark-theme {
+  .gux-simple-toast-dark-theme();
 }

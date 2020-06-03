@@ -22,7 +22,7 @@ export default class AttributesPanel {
       [current, ...queue] = queue;
 
       if (current.childNodes && current.childNodes.length > 0) {
-        queue = [...queue, ...current.childNodes];
+        queue = [...current.childNodes, ...queue];
       }
 
       if (COMPONENT_SPEC[current.nodeName]) {
