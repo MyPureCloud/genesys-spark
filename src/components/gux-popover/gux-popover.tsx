@@ -5,7 +5,8 @@ import {
   Event,
   EventEmitter,
   h,
-  Prop
+  Prop,
+  Watch
 } from '@stencil/core';
 import { buildI18nForComponent } from '../i18n';
 import modalComponentResources from './i18n/en.json';
@@ -64,6 +65,13 @@ export class GuxPopover {
   popperInstance: Instance;
 
   @Element() private element: HTMLElement;
+
+  @Watch('hidden')
+  hiddenHandler(hidden: boolean) {
+    if (!hidden && !this.popperInstance) {
+      this.runPopper();
+    }
+  }
 
   runPopper() {
     const referenceElement = document.getElementById(this.for);

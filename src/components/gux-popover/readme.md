@@ -26,7 +26,7 @@
 
 ### Used by
 
- - [gux-tabs](../gux-tabs)
+ - [gux-tab](../gux-tabs/gux-tab)
 
 ### Depends on
 
@@ -36,7 +36,7 @@
 ```mermaid
 graph TD;
   gux-popover --> gux-icon
-  gux-tabs --> gux-popover
+  gux-tab --> gux-popover
   style gux-popover fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

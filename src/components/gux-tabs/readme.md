@@ -9,14 +9,16 @@
 
 ### Depends on
 
+- [gux-tab](gux-tab)
 - [gux-icon](../gux-icon)
-- [gux-popover](../gux-popover)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-tabs --> gux-tab
   gux-tabs --> gux-icon
-  gux-tabs --> gux-popover
+  gux-tab --> gux-icon
+  gux-tab --> gux-popover
   gux-popover --> gux-icon
   style gux-tabs fill:#f9f,stroke:#333,stroke-width:4px
 ```
