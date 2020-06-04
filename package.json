@@ -35,6 +35,7 @@
     "lint.commit": "commitlint -f 49d16b222b85182b3e0903c4dd3141389f14c9ad",
     "prepare": "./scripts/prepare-docs.sh && npm run i18n",
     "i18n": "./scripts/build-i18n.js",
+    "list-i18n-files": "./scripts/list-i18n-files.js",
     "check-readmes": "./scripts/check-readmes.sh"
   },
   "dependencies": {
