@@ -53,9 +53,8 @@
   "gux-calendar": {
     "attributes": {
       "mode": ["single", "range"],
-      "value": "string",
+      "value": "text",
       "numberOfMonths": "text",
-      "locale": "text",
       "firstDayOfWeek": "text"
     },
     "events": { "input": "Triggered when value is changed" }
@@ -84,10 +83,9 @@
   "gux-datepicker": {
     "attributes": {
       "mode": ["single", "range"],
-      "value": "string",
-      "format": "string",
+      "value": "text",
+      "format": "text",
       "numberOfMonths": "text",
-      "locale": "text",
       "firstDayOfWeek": "text"
     },
     "events": { "input": "Triggered when value is changed" }

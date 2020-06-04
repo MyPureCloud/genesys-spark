@@ -55,7 +55,7 @@ export async function getComponentI18nResources(
   return resources;
 }
 
-function getDesiredLocale(element: HTMLElement) {
+export function getDesiredLocale(element: HTMLElement) {
   const locale = findLocaleInDom(element);
   const lang = locale.split(/[_-]/)[0];
   if (locales.indexOf(locale) >= 0) {
