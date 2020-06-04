@@ -1,7 +1,6 @@
 import { Component, Element, h, Method, State } from '@stencil/core';
 import { KeyCode } from '../../common-enums';
 import { matchesFuzzy } from '../../search';
-import { HighlightStrategy } from '../gux-text-highlight/highlight-enums';
 import { buildI18nForComponent } from '../i18n';
 import paletteResources from './i18n/en.json';
 
@@ -200,17 +199,14 @@ export class GuxCommandPalette {
         class={(command.details && 'has-details') || ''}
       >
         <div>
-          <gux-text-highlight
-            text={command.text}
-            strategy={HighlightStrategy.Fuzzy}
-          />
+          <gux-text-highlight text={command.text} strategy="fuzzy" />
           <span class="shortcut">{command.shortcut}</span>
         </div>
         {command.details && (
           <gux-text-highlight
             class="details"
             text={command.details}
-            strategy={HighlightStrategy.Fuzzy}
+            strategy="fuzzy"
           />
         )}
       </gux-list-item>
@@ -226,15 +222,12 @@ export class GuxCommandPalette {
         onPress={this.handlePress(command)}
         class={(command.details && 'has-details') || ''}
       >
-        <gux-text-highlight
-          text={command.text}
-          strategy={HighlightStrategy.Fuzzy}
-        />
+        <gux-text-highlight text={command.text} strategy="fuzzy" />
         {command.details && (
           <gux-text-highlight
             class="details"
             text={command.details}
-            strategy={HighlightStrategy.Fuzzy}
+            strategy="fuzzy"
           />
         )}
       </gux-list-item>
