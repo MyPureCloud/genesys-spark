@@ -8,10 +8,11 @@ You can choose between two type (secondary and primary).
 
 ## Properties
 
-| Property   | Attribute  | Description                                  | Type                                               | Default                   |
-| ---------- | ---------- | -------------------------------------------- | -------------------------------------------------- | ------------------------- |
-| `accent`   | `accent`   | The component accent (secondary or primary). | `ButtonAccents.Primary \| ButtonAccents.Secondary` | `ButtonAccents.Secondary` |
-| `disabled` | `disabled` | Indicate if the button is disabled or not    | `boolean`                                          | `false`                   |
+| Property   | Attribute  | Description                                  | Type                       | Default       |
+| ---------- | ---------- | -------------------------------------------- | -------------------------- | ------------- |
+| `accent`   | `accent`   | The component accent (secondary or primary). | `"primary" \| "secondary"` | `'secondary'` |
+| `disabled` | `disabled` | Indicate if the button is disabled or not    | `boolean`                  | `false`       |
+| `title`    | `title`    | The component title                          | `string`                   | `undefined`   |
 
 
 ## Dependencies
