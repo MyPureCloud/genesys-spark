@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-simple-toast #render should render alert simple toast 1`] = `
+<gux-simple-toast accent="alert">
+  <!---->
+  <div class="alert icon">
+    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+  </div>
+  <div class="message">
+    <div slot="message">
+      This is the message
+    </div>
+  </div>
+  <button class="dismiss-button" title="Dismiss">
+    <gux-icon iconname="ic-close" screenreadertext="Dismiss"></gux-icon>
+  </button>
+</gux-simple-toast>
+`;
+
+exports[`gux-simple-toast #render should render neutral simple toast 1`] = `
+<gux-simple-toast accent="neutral">
+  <!---->
+  <div class="icon neutral">
+    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+  </div>
+  <div class="message">
+    <div slot="message">
+      This is the message
+    </div>
+  </div>
+  <button class="dismiss-button" title="Dismiss">
+    <gux-icon iconname="ic-close" screenreadertext="Dismiss"></gux-icon>
+  </button>
+</gux-simple-toast>
+`;
+
+exports[`gux-simple-toast #render should render positive simple toast 1`] = `
+<gux-simple-toast accent="positive">
+  <!---->
+  <div class="icon positive">
+    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+  </div>
+  <div class="message">
+    <div slot="message">
+      This is the message
+    </div>
+  </div>
+  <button class="dismiss-button" title="Dismiss">
+    <gux-icon iconname="ic-close" screenreadertext="Dismiss"></gux-icon>
+  </button>
+</gux-simple-toast>
+`;
+
+exports[`gux-simple-toast #render should render warning simple toast 1`] = `
+<gux-simple-toast accent="warning">
+  <!---->
+  <div class="icon warning">
+    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+  </div>
+  <div class="message">
+    <div slot="message">
+      This is the message
+    </div>
+  </div>
+  <button class="dismiss-button" title="Dismiss">
+    <gux-icon iconname="ic-close" screenreadertext="Dismiss"></gux-icon>
+  </button>
+</gux-simple-toast>
+`;

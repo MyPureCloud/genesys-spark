@@ -1,86 +1,85 @@
-import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  h,
+  Host,
+  JSX,
+  Prop
+} from '@stencil/core';
 
+import { buildI18nForComponent } from '../i18n';
+
+import modalComponentResources from './i18n/en.json';
+
+export type GuxNotificationAccent =
+  | 'neutral'
+  | 'positive'
+  | 'alert'
+  | 'warning';
+
+/**
+ * @slot icon - Required slot for gux-icon
+ * @slot message - Required slot for the simple toast message
+ */
 @Component({
   styleUrl: 'gux-simple-toast.less',
   tag: 'gux-simple-toast'
 })
 export class GuxSimpleToast {
+  /**
+   * The component accent.
+   */
+  @Prop()
+  accent: GuxNotificationAccent = 'neutral';
+
   @Event()
-  closeClick: EventEmitter;
+  guxdismiss: EventEmitter<void>;
 
-  /**
-   * The component accent (alert warning positive or neutral).
-   */
-  @Prop()
-  accent: string = 'neutral';
+  private getI18nValue: (resourceKey: string, context?: any) => string;
 
-  /**
-   * The id of the title.
-   */
-  @Prop()
-  idToast: string;
-  /**
-   * The icon name of the title.
-   */
-  @Prop()
-  icon: string;
-  /**
-   * The icon uri of the title.
-   */
-  @Prop()
-  iconUri: string;
-  /**
-   * The message of the toast.
-   */
-  @Prop()
-  message: string;
+  @Element()
+  private root: HTMLElement;
 
-  /**
-   * The label for the close button
-   */
-  @Prop()
-  closeLabel: string = '';
-
-  onCloseButtonClickHandler(e) {
-    this.closeClick.emit({ idToast: this.idToast, originalEvent: e });
-  }
-
-  /**
-   * This function is to check accent
-   */
-  getAccent() {
-    const accent = this.accent.toLowerCase();
-    const allowed = ['warning', 'alert', 'neutral', 'positive'];
-    return allowed.includes(accent) ? accent : 'neutral';
-  }
-
-  getIcon() {
-    if (this.icon) {
-      return <gux-icon decorative iconName={this.icon}></gux-icon>;
-    } else if (this.iconUri) {
-      return <img src={this.iconUri} />;
-    }
-    return '';
-  }
-
-  render() {
-    return (
-      <div class="gux-simple-toast">
-        <div class={'icon-wrapper ' + this.getAccent()}>{this.getIcon()}</div>
-        <div class="content-wrapper">
-          <div class="message" title={this.message}>
-            {this.message}
-          </div>
-        </div>
-        <div class="close-icon-wrapper">
-          <button
-            onClick={e => this.onCloseButtonClickHandler(e)}
-            title={this.closeLabel}
-          >
-            <gux-icon decorative iconName="ic-close"></gux-icon>
-          </button>
-        </div>
-      </div>
+  async componentWillLoad(): Promise<void> {
+    this.getI18nValue = await buildI18nForComponent(
+      this.root,
+      modalComponentResources
     );
+  }
+
+  render(): JSX.Element {
+    return (
+      <Host>
+        <div class={`icon ${this.accent}`}>
+          <slot name="icon" />
+        </div>
+
+        <div class="message">
+          <slot name="message" />
+        </div>
+
+        <button
+          class="dismiss-button"
+          title={this.getI18nValue('dismiss')}
+          onClick={this.onDismissClickHandler.bind(this)}
+        >
+          <gux-icon
+            screenreaderText={this.getI18nValue('dismiss')}
+            iconName="ic-close"
+          ></gux-icon>
+        </button>
+      </Host>
+    );
+  }
+
+  private onDismissClickHandler(event: MouseEvent): void {
+    event.stopPropagation();
+
+    const dismissEvent = this.guxdismiss.emit();
+    if (!dismissEvent.defaultPrevented) {
+      this.root.remove();
+    }
   }
 }

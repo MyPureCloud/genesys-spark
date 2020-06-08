@@ -215,7 +215,12 @@
   },
   "gux-search": {},
   "gux-side-panel": {},
-  "gux-simple-toast": {},
+  "gux-simple-toast": {
+    "attributes": {
+      "accent": ["neutral", "positive", "alert", "warning"]
+    },
+    "events": { "guxdismiss": "toast dismiss button pressed" }
+  },
   "gux-slider": {
     "attributes": [
       { "min": "text" },
@@ -236,7 +241,6 @@
   "gux-text-field": {
     "attributes": {
       "value": "text",
-
       "type": ["text", "email", "password", "number"],
       "disable": "checkbox",
       "readonly": "checkbox",
