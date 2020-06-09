@@ -53,4 +53,52 @@ describe('gux-modal', () => {
       });
     });
   });
+
+  describe('click', () => {
+    it('should fire a click event when an enabled button is clicked', async () => {
+      const html = '<gux-button title="default">Button</gux-button>';
+      const page = await newSpecPage({ components, html, language });
+      const element = page.root as HTMLElement;
+      const button = page.root.querySelector('button') as HTMLButtonElement;
+      const clickSpy = jest.fn();
+
+      element.addEventListener('click', clickSpy);
+
+      button.click();
+      await page.waitForChanges();
+
+      expect(clickSpy).toHaveBeenCalled();
+    });
+
+    it('should fire a click event when an enabled button slot content is clicked', async () => {
+      const html = '<gux-button title="default"><span>Span</span></gux-button>';
+      const page = await newSpecPage({ components, html, language });
+      const element = page.root as HTMLElement;
+      const span = page.root.querySelector('span') as HTMLButtonElement;
+      const clickSpy = jest.fn();
+
+      element.addEventListener('click', clickSpy);
+
+      span.click();
+      await page.waitForChanges();
+
+      expect(clickSpy).toHaveBeenCalled();
+    });
+
+    it('should not fire a click event when a disabled button slot content is clicked', async () => {
+      const html =
+        '<gux-button title="default" disabled><span>Span</span></gux-button>';
+      const page = await newSpecPage({ components, html, language });
+      const element = page.root as HTMLElement;
+      const span = page.root.querySelector('span') as HTMLButtonElement;
+      const clickSpy = jest.fn();
+
+      element.addEventListener('click', clickSpy);
+
+      span.click();
+      await page.waitForChanges();
+
+      expect(clickSpy).not.toHaveBeenCalled();
+    });
+  });
 });

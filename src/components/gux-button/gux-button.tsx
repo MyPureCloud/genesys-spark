@@ -1,4 +1,4 @@
-import { Component, h, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 export type GuxButtonAccent = 'primary' | 'secondary';
 
@@ -7,6 +7,14 @@ export type GuxButtonAccent = 'primary' | 'secondary';
   tag: 'gux-button'
 })
 export class GuxButton {
+  private get class(): string {
+    if (this.accent === 'primary') {
+      return 'gux-primary';
+    }
+
+    return 'gux-secondary';
+  }
+
   /**
    * The component title
    */
@@ -24,13 +32,11 @@ export class GuxButton {
    */
   @Prop()
   accent: GuxButtonAccent = 'secondary';
+  @Element()
+  private root: HTMLGuxButtonElement;
 
-  private get class(): string {
-    if (this.accent === 'primary') {
-      return 'gux-primary';
-    }
-
-    return 'gux-secondary';
+  componentWillLoad() {
+    this.makeSlotContentDisableable();
   }
 
   render(): JSX.Element {
@@ -39,5 +45,17 @@ export class GuxButton {
         <slot />
       </button>
     );
+  }
+
+  private makeSlotContentDisableable() {
+    Array.from(this.root.children).forEach(slotElement => {
+      slotElement.addEventListener('click', (event: MouseEvent): void => {
+        if (this.disabled) {
+          event.stopImmediatePropagation();
+          event.stopPropagation();
+          event.preventDefault();
+        }
+      });
+    });
   }
 }

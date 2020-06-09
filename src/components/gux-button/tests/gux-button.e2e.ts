@@ -64,4 +64,33 @@ describe('gux-button', () => {
       });
     });
   });
+
+  describe('click', () => {
+    it('should fire a click event when an enabled button slot content is clicked', async () => {
+      const html = '<gux-button title="default"><span>Span</span></gux-button>';
+      const page = await newE2EPage({ html });
+      const element = await page.find('gux-button');
+      const onClickSpy = await element.spyOnEvent('click');
+      const span = await page.find('span');
+
+      span.click();
+      await page.waitForChanges();
+
+      expect(onClickSpy).toHaveReceivedEventTimes(1);
+    });
+
+    it('should not fire a click event when a disabled button slot content is clicked', async () => {
+      const html =
+        '<gux-button title="default" disabled><span>Span</span></gux-button>';
+      const page = await newE2EPage({ html });
+      const element = await page.find('gux-button');
+      const onClickSpy = await element.spyOnEvent('click');
+      const span = await page.find('span');
+
+      span.click();
+      await page.waitForChanges();
+
+      expect(onClickSpy).toHaveReceivedEventTimes(0);
+    });
+  });
 });
