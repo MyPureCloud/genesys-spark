@@ -21,7 +21,6 @@ You can choose between two type (secondary and primary).
 
  - [gux-action-button](../gux-action-button)
  - [gux-action-toast](../gux-action-toast)
- - [gux-modal](../gux-modal)
  - [gux-pagination-buttons](../gux-pagination/buttons)
 
 ### Graph
@@ -29,7 +28,6 @@ You can choose between two type (secondary and primary).
 graph TD;
   gux-action-button --> gux-button
   gux-action-toast --> gux-button
-  gux-modal --> gux-button
   gux-pagination-buttons --> gux-button
   style gux-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

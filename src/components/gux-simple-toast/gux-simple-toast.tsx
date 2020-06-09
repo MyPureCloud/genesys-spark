@@ -66,8 +66,8 @@ export class GuxSimpleToast {
           onClick={this.onDismissClickHandler.bind(this)}
         >
           <gux-icon
-            screenreaderText={this.getI18nValue('dismiss')}
-            iconName="ic-close"
+            screenreader-text={this.getI18nValue('dismiss')}
+            icon-name="ic-close"
           ></gux-icon>
         </button>
       </Host>

@@ -3,12 +3,14 @@ import { fetchResources, ILocalizedComponentResources } from './fetchResources';
 // If this import is failing, you should run the i18n script to generate the list of locales
 import locales from './locales.json';
 
+export type GetI18nValue = (resourceKey: string, context?: any) => string;
+
 const DEFAULT_LOCALE = 'en';
 
 export async function buildI18nForComponent(
   component: HTMLElement,
   defaultResources: ILocalizedComponentResources
-): Promise<(resourceKey: string, context?: any) => string> {
+): Promise<GetI18nValue> {
   let resources = defaultResources;
   let locale = 'en';
 
@@ -34,7 +36,7 @@ export async function getComponentI18nResources(
   component: HTMLElement,
   defaultResources: ILocalizedComponentResources,
   locale: string
-) {
+): Promise<ILocalizedComponentResources> {
   const componentName = component.tagName.toLocaleLowerCase();
 
   let resources: ILocalizedComponentResources;
@@ -55,7 +57,7 @@ export async function getComponentI18nResources(
   return resources;
 }
 
-export function getDesiredLocale(element: HTMLElement) {
+export function getDesiredLocale(element: HTMLElement): string {
   const locale = findLocaleInDom(element);
   const lang = locale.split(/[_-]/)[0];
   if (locales.indexOf(locale) >= 0) {
