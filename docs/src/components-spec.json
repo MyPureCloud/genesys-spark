@@ -16,17 +16,7 @@
       "actionClick": "Triggered when element is clicked"
     }
   },
-  "gux-action-toast": {
-    "attributes": {
-      "toast-title": "text",
-      "message": "text",
-      "subject": "text",
-      "icon": "text",
-      "right-button": "json",
-      "left-button": "json",
-      "key-values": "json"
-    }
-  },
+  "gux-action-toast": {},
   "gux-advanced-dropdown": {
     "attributes": {
       "disabled": "checkbox",

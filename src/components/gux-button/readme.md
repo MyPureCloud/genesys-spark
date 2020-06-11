@@ -20,14 +20,12 @@ You can choose between two type (secondary and primary).
 ### Used by
 
  - [gux-action-button](../gux-action-button)
- - [gux-action-toast](../gux-action-toast)
  - [gux-pagination-buttons](../gux-pagination/buttons)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-action-button --> gux-button
-  gux-action-toast --> gux-button
   gux-pagination-buttons --> gux-button
   style gux-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
