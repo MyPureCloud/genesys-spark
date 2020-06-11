@@ -22,6 +22,7 @@
 gux-button {
   display: inline-block;
   min-width: 32px;
+  pointer-events: none;
 
   > button {
     width: 100%;
@@ -34,6 +35,7 @@ gux-button {
     text-overflow: ellipsis;
     font-size: 12px;
     font-weight: bold;
+    pointer-events: auto;
 
     &[disabled] {
       opacity: 0.5;
