@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-notification-toast #render should render alert notification toast 1`] = `
+<gux-notification-toast accent="alert">
+  <!---->
+  <div class="alert icon">
+    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+  </div>
+  <div class="content">
+    <div class="title">
+      <div slot="title">
+        Title
+      </div>
+    </div>
+    <div class="message">
+      <div slot="message">
+        This is the message
+      </div>
+    </div>
+  </div>
+  <button class="dismiss-button" title="Dismiss">
+    <gux-icon iconname="ic-close" screenreadertext="Dismiss"></gux-icon>
+  </button>
+</gux-notification-toast>
+`;
+
+exports[`gux-notification-toast #render should render neutral notification toast 1`] = `
+<gux-notification-toast accent="neutral">
+  <!---->
+  <div class="icon neutral">
+    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+  </div>
+  <div class="content">
+    <div class="title">
+      <div slot="title">
+        Title
+      </div>
+    </div>
+    <div class="message">
+      <div slot="message">
+        This is the message
+      </div>
+    </div>
+  </div>
+  <button class="dismiss-button" title="Dismiss">
+    <gux-icon iconname="ic-close" screenreadertext="Dismiss"></gux-icon>
+  </button>
+</gux-notification-toast>
+`;
+
+exports[`gux-notification-toast #render should render positive notification toast 1`] = `
+<gux-notification-toast accent="positive">
+  <!---->
+  <div class="icon positive">
+    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+  </div>
+  <div class="content">
+    <div class="title">
+      <div slot="title">
+        Title
+      </div>
+    </div>
+    <div class="message">
+      <div slot="message">
+        This is the message
+      </div>
+    </div>
+  </div>
+  <button class="dismiss-button" title="Dismiss">
+    <gux-icon iconname="ic-close" screenreadertext="Dismiss"></gux-icon>
+  </button>
+</gux-notification-toast>
+`;
+
+exports[`gux-notification-toast #render should render warning notification toast 1`] = `
+<gux-notification-toast accent="warning">
+  <!---->
+  <div class="icon warning">
+    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+  </div>
+  <div class="content">
+    <div class="title">
+      <div slot="title">
+        Title
+      </div>
+    </div>
+    <div class="message">
+      <div slot="message">
+        This is the message
+      </div>
+    </div>
+  </div>
+  <button class="dismiss-button" title="Dismiss">
+    <gux-icon iconname="ic-close" screenreadertext="Dismiss"></gux-icon>
+  </button>
+</gux-notification-toast>
+`;
