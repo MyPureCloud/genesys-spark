@@ -2,10 +2,6 @@
 
 // Style
 gux-modal {
-  &.hidden {
-    display: none;
-  }
-
   .modal {
     display: flex;
     justify-content: center;
@@ -16,82 +12,93 @@ gux-modal {
     right: 0;
     left: 0;
     background: rgba(34, 37, 41, 0.8);
-  }
 
-  .modal-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    padding: 40px;
-    justify-content: space-between;
-    background: @gux-off-white;
-    box-shadow: 0px 0px 2px rgba(34, 37, 41, 0.24);
+    .modal-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 40px;
+      justify-content: space-between;
+      background: @gux-off-white;
+      box-shadow: 0 0 2px rgba(34, 37, 41, 0.24);
 
-    &.small {
-      height: 368px;
-      width: 416px;
+      &.small {
+        max-height: 368px;
+        width: 416px;
+
+        .modal-content {
+          max-height: 160px;
+        }
+      }
+
+      &.medium {
+        max-height: 640px;
+        width: 672px;
+      }
+
+      &.large {
+        max-height: 640px;
+        width: 940px;
+      }
+
+      .dismiss-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        font-size: 11px;
+        color: @gux-icons;
+        cursor: pointer;
+        gux-icon {
+          width: 12px;
+        }
+      }
+
+      .modal-header {
+        width: inherit;
+        margin: 0;
+        padding-bottom: 24px;
+      }
 
       .modal-content {
-        height: 160px;
+        margin: 0 8px 24px 8px;
+        max-height: 432px;
+        overflow-y: auto;
+
+        &.no-buttons {
+          margin-bottom: 0;
+        }
+      }
+      .button-footer {
+        display: flex;
+        justify-content: space-between;
+
+        .left-align-buttons {
+          gux-button {
+            padding-right: 5px;
+          }
+        }
+
+        .right-align-buttons {
+          gux-button {
+            padding-left: 5px;
+          }
+        }
       }
     }
 
-    &.medium {
-      height: 640px;
-      width: 672px;
-    }
-
-    &.large {
-      height: 640px;
-      width: 940px;
-    }
-
-    .button-footer {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .cancel-button {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      padding: 0;
-      border: none;
-      background: transparent;
-      font-size: 11px;
-      color: @gux-icons;
-      cursor: pointer;
-      gux-icon {
-        width: 12px;
-      }
-    }
-
-    .modal-header {
-      width: inherit;
-      margin: 0px;
-      padding-bottom: 24px;
-    }
-
-    .modal-content {
-      padding: 0px 8px 24px 8px;
-      height: 432px;
-    }
-
-    .additional-button {
-      padding-left: 5px;
-    }
-  }
-
-  .modal-container {
-    @media (max-width: 416px) {
-      &.small,
-      &.medium,
-      &.large {
-        height: 100%;
-        width: 100%;
+    .modal-container {
+      @media (max-width: 416px) {
+        &.small,
+        &.medium,
+        &.large {
+          height: 100%;
+          width: 100%;
+        }
       }
     }
   }

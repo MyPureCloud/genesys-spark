@@ -4,80 +4,115 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Prop
 } from '@stencil/core';
 
-import { ButtonAccents } from '../../common-enums';
-import { buildI18nForComponent } from '../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../i18n';
 
 import modalComponentResources from './i18n/en.json';
 
+export type GuxModalSize = 'small' | 'medium' | 'large';
+
+/**
+ * @slot content - Required slot for the modal content
+ * @slot left-align-buttons - Optional slot to set gux-buttons aligned to the left of the modal
+ * @slot right-align-buttons - Optional slot to set gux-buttons aligned to the left of the modal
+ * @slot title - Optional slot to set the modal title
+ */
 @Component({
   styleUrl: 'gux-modal.less',
   tag: 'gux-modal'
 })
 export class GuxModal {
-  i18n: (resourceKey: string, context?: any) => string;
-
-  @Element() element: HTMLElement;
-
-  /**
-   * Triggered when any of the the cancel buttons get clicked
-   */
-  @Event()
-  close: EventEmitter;
-
   /**
    * Indicates the size of the modal (small, medium or large)
    */
   @Prop()
-  size: 'small' | 'medium' | 'large';
+  size: GuxModalSize = 'small';
 
   /**
-   * Indicates the title/header for the modal
+   * Fired when a user dismisses the modal
    */
-  @Prop()
-  modalTitle: string = 'Modal Header';
+  @Event()
+  guxdismiss: EventEmitter<void>;
+  private getI18nValue: GetI18nValue;
 
-  closeModal() {
-    this.close.emit();
-  }
+  @Element()
+  private element: HTMLElement;
 
-  async componentWillLoad() {
-    this.i18n = await buildI18nForComponent(
+  async componentWillLoad(): Promise<void> {
+    this.getI18nValue = await buildI18nForComponent(
       this.element,
       modalComponentResources
     );
   }
 
-  render() {
+  render(): JSX.Element {
+    const hasModalTitleSlot = this.hasModalTitleSlot();
+    const hasFooterButtons = this.hasFooterButtons();
+
     return (
       <div class="modal">
         <div class={`modal-container ${this.size}`}>
-          <button class="cancel-button" onClick={this.closeModal.bind(this)}>
+          <button
+            class="dismiss-button"
+            title={this.getI18nValue('dismiss')}
+            onClick={this.onDismissClickHandler.bind(this)}
+          >
             <gux-icon
-              screenreaderText={this.i18n('cancel')}
-              iconName="ic-close"
+              screenreader-text={this.getI18nValue('dismiss')}
+              icon-name="ic-close"
             ></gux-icon>
           </button>
-          <h1 class="modal-header large-title">{this.modalTitle}</h1>
-          <div class="modal-content">
-            <slot name="modal-content" />
+
+          {hasModalTitleSlot && (
+            <h1 class="modal-header">
+              <slot name="title" />
+            </h1>
+          )}
+
+          <div
+            class={{ 'modal-content': true, 'no-buttons': !hasFooterButtons }}
+          >
+            <p>
+              <slot name="content" />
+            </p>
           </div>
-          <div class="button-footer">
-            <gux-button
-              title={this.i18n('cancel')}
-              accent={ButtonAccents.Secondary}
-              onClick={this.closeModal.bind(this)}
-            >
-              <span>{this.i18n('cancel')}</span>
-            </gux-button>
-            <div class="additional-buttons">
-              <slot name="additional-buttons" />
+
+          {hasFooterButtons && (
+            <div class="button-footer">
+              <div>
+                <slot name="left-align-buttons" />
+              </div>
+
+              <div class="right-align-buttons">
+                <slot name="right-align-buttons" />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     );
+  }
+
+  private hasModalTitleSlot(): boolean {
+    return Boolean(this.element.querySelector('[slot="title"]'));
+  }
+
+  private hasFooterButtons(): boolean {
+    return (
+      Boolean(this.element.querySelector('[slot="left-align-buttons"]')) ||
+      Boolean(this.element.querySelector('[slot="right-align-buttons"]'))
+    );
+  }
+
+  private onDismissClickHandler(event: MouseEvent): void {
+    event.stopPropagation();
+
+    const dismissEvent = this.guxdismiss.emit();
+    if (!dismissEvent.defaultPrevented) {
+      this.element.remove();
+    }
   }
 }

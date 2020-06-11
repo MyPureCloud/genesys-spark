@@ -137,11 +137,10 @@
   },
   "gux-modal": {
     "attributes": {
-      "size": ["small", "medium", "large"],
-      "modal-title": "text"
+      "size": ["small", "medium", "large"]
     },
     "events": {
-      "close": "Modal is signaling that it should be hidden"
+      "guxdismiss": "modal dismiss button pressed"
     }
   },
   "gux-notification-toast": {
