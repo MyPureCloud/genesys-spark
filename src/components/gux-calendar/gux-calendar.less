@@ -18,6 +18,7 @@ gux-calendar {
         border: none;
         background: none;
         outline: none;
+        padding: 5px;
         &.left {
           left: 18px;
         }
@@ -26,6 +27,8 @@ gux-calendar {
         }
         gux-icon {
           width: 13px;
+          height: 13px;
+          pointer-events: none;
         }
       }
       .month-list {
@@ -42,7 +45,6 @@ gux-calendar {
       display: flex;
       padding: 16px 22px 20px 22px;
       table {
-        height: 100%;
         table-layout: fixed;
         text-align: left;
         border-spacing: 0;
