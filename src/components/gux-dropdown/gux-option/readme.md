@@ -25,9 +25,9 @@
 
 ## Methods
 
-### `getDisplayedValue() => Promise<string>`
+### `getDisplayedText() => Promise<string>`
 
-Gets the value rendered by the drop down item.
+Gets the text rendered by the drop down item.
 
 #### Returns
 

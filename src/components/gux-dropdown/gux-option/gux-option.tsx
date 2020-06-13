@@ -66,11 +66,11 @@ export class GuxOption {
   selectedChanged: EventEmitter<string>;
 
   /**
-   * Gets the value rendered by the drop down item.
+   * Gets the text rendered by the drop down item.
    */
   @Method()
-  getDisplayedValue(): Promise<string> {
-    return Promise.resolve(this.value);
+  getDisplayedText(): Promise<string> {
+    return Promise.resolve(this.text);
   }
 
   /**
