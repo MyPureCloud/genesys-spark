@@ -85,14 +85,12 @@ Type: `Promise<void>`
 
  - [gux-action-button](../gux-action-button)
  - [gux-command-palette](../gux-command-palette)
- - [gux-dropdown](../gux-dropdown)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-action-button --> gux-list
   gux-command-palette --> gux-list
-  gux-dropdown --> gux-list
   style gux-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

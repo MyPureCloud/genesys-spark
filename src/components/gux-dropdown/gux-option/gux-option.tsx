@@ -43,7 +43,7 @@ export class GuxOption {
    *
    * Should only be used by internal users.
    */
-  @Prop({ mutable: true })
+  @Prop({ mutable: true, reflectToAttr: true })
   filtered: boolean;
 
   @Prop()

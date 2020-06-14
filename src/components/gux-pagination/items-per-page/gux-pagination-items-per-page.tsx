@@ -36,7 +36,7 @@ export class GuxPaginationItemsPerPage {
 
   @Watch('itemsPerPageOptions')
   itemsPerPageOptionsChanged(newValue: number[]) {
-    this.dropdown.items = newValue.map(option => ({ text: option + '' }));
+    newValue.map(option => ({ text: option + '' }));
   }
 
   componentDidLoad() {
@@ -49,7 +49,7 @@ export class GuxPaginationItemsPerPage {
         <gux-dropdown
           class="pagination-items-per-page"
           ref={dropdown => (this.dropdown = dropdown as any)}
-          value={this.itemsPerPage + ''}
+          // value={this.itemsPerPage + ''}
           onChange={() =>
             this.itemsPerPageChanged.emit(parseInt(this.dropdown.value, 10))
           }

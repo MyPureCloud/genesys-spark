@@ -10,7 +10,6 @@ import {
   State
 } from '@stencil/core';
 import { KeyCode } from '../../common-enums';
-import { IListItem } from '../../common-interfaces';
 
 @Component({
   styleUrl: 'gux-dropdown.less',
@@ -20,7 +19,6 @@ export class GuxDropdown {
   @Element()
   root: HTMLGuxDropdownElement;
   textFieldElement: HTMLGuxTextFieldElement;
-  listElement: HTMLGuxListElement;
 
   /**
    * Sets the select mode (default, page or palette).
@@ -35,18 +33,13 @@ export class GuxDropdown {
   /**
    * Indicate the dropdown input value
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true })
   value: string = '';
   /**
    * The dropdown placeholder.
    */
   @Prop()
   placeholder: string;
-  /**
-   * The list items, an item contains a `text` and can be disabled.
-   */
-  @Prop()
-  items: IListItem[] = [];
   /**
    * Whether the user can filter or not.
    */
@@ -55,6 +48,9 @@ export class GuxDropdown {
 
   @State()
   opened: boolean;
+
+  @State()
+  selectionOptions: HTMLGuxOptionElement[];
 
   @State()
   forcedGhostValue: string;
@@ -87,26 +83,53 @@ export class GuxDropdown {
   }
 
   onKeyDown(event: KeyboardEvent) {
+    const focusIndex = this.getFocusIndex();
     switch (event.keyCode) {
       case KeyCode.Up:
+        if (focusIndex > 0) {
+          setTimeout(() => {
+            this.selectionOptions[focusIndex - 1].focus();
+          });
+        }
+        break;
       case KeyCode.Down:
         if (this.inputIsFocused) {
           this.opened = true;
+        }
+        if (focusIndex < this.selectionOptions.length - 1) {
           setTimeout(() => {
-            this.listElement.setFocusOnFirstItem();
+            this.selectionOptions[focusIndex + 1].focus();
           });
         }
+        break;
+      case KeyCode.Home:
+        if (!this.selectionOptions.length) {
+          return;
+        }
+        setTimeout(() => {
+          this.selectionOptions[0].focus();
+        });
+        break;
+      case KeyCode.End:
+        if (!this.selectionOptions.length) {
+          return;
+        }
+        setTimeout(() => {
+          this.selectionOptions[this.selectionOptions.length - 1].focus();
+        });
         break;
       case KeyCode.Enter:
       case KeyCode.Space:
         break;
       default:
         if (!this.filterable) {
-          const arr = this.items.filter(item => {
+          const arr = this.selectionOptions.filter(item => {
             return item.text.startsWith(event.key);
           });
           if (arr[0]) {
-            arr[0].el.focus();
+            setTimeout(() => {
+              arr[0].focus();
+            });
           }
         }
     }
@@ -125,7 +148,7 @@ export class GuxDropdown {
   _focusHandler() {
     this.inputIsFocused = true;
   }
-  _focusListItemHandler(text: string) {
+  _focusOptionItemHandler(text: string) {
     this.forcedGhostValue = this.value + text.substring(this.value.length);
   }
   _blurHandler() {
@@ -138,25 +161,29 @@ export class GuxDropdown {
   }
 
   _showDropdownIcon() {
-    const match = this.items.filter(item => {
-      return item.text === this.value;
-    });
+    let match = [];
+    if (this.selectionOptions) {
+      match = this.selectionOptions.filter(item => {
+        return item.text === this.value;
+      });
+    }
     const filterableBehavior = !this.value || !!match.length;
     return this.filterable ? filterableBehavior : true;
   }
 
   get filteredItems() {
-    if (this.filterable) {
-      const arr = this.items.filter(item => {
+    if (this.filterable && this.selectionOptions) {
+      const arr = this.selectionOptions.filter(item => {
         return item.text.toLowerCase().startsWith(this.value.toLowerCase());
       });
       return arr;
     } else {
-      return this.items;
+      return this.selectionOptions ? this.selectionOptions : [];
     }
   }
 
   get ghost() {
+    this.searchHighlightAndFilter(this.value);
     const firstFilteredItem = this.filteredItems.length
       ? this.filteredItems[0].text
       : '';
@@ -170,6 +197,17 @@ export class GuxDropdown {
   componentDidLoad() {
     if (!this.filterable) {
       this.textFieldElement.readonly = true;
+    }
+    this.selectionOptions = this.getSelectionOptions();
+    for (const option of this.selectionOptions) {
+      option.addEventListener('selectedChanged', async () => {
+        const text = await option.getDisplayedText();
+        this.setValue(text);
+      });
+      option.addEventListener('onFocus', async () => {
+        const text = await option.getDisplayedText();
+        this._focusOptionItemHandler(text);
+      });
     }
   }
 
@@ -214,30 +252,46 @@ export class GuxDropdown {
             </button>
           )}
         </div>
-        <gux-list
-          ref={el => (this.listElement = el as HTMLGuxListElement)}
-          class={this.opened ? 'opened' : ''}
-          highlight={this.value}
-        >
-          {this.filteredItems.map(item => {
-            return (
-              <gux-list-item
-                value={item.text}
-                text={item.text}
-                onPress={value => {
-                  this.setValue(value.detail);
-                  if (item.callback) {
-                    item.callback();
-                  }
-                }}
-                onFocus={() => {
-                  this._focusListItemHandler(item.text);
-                }}
-              />
-            );
-          })}
-        </gux-list>
+        <div class={`gux-options ${this.opened ? 'opened' : ''}`}>
+          <slot />
+        </div>
       </div>
     );
+  }
+
+  private getSelectionOptions(): HTMLGuxOptionElement[] {
+    const result: HTMLGuxOptionElement[] = [];
+    const options: HTMLElement = this.root.getElementsByClassName(
+      'gux-options'
+    )[0] as HTMLElement;
+
+    // Hack around TSX not supporting for..of on HTMLCollection, this
+    // needs to be tested in IE11
+    const childrenElements: any = options.children;
+    for (const child of childrenElements) {
+      if (child.matches('gux-option')) {
+        result.push(child as HTMLGuxOptionElement);
+      }
+    }
+
+    return result;
+  }
+
+  private getFocusIndex(): number {
+    return this.selectionOptions.findIndex(option => {
+      return option.matches(':focus');
+    });
+  }
+
+  private searchHighlightAndFilter(searchInput: string) {
+    if (this.selectionOptions) {
+      for (const option of this.selectionOptions) {
+        option.shouldFilter(searchInput).then(isFiltered => {
+          if (this.filterable) {
+            option.filtered = isFiltered;
+          }
+        });
+      }
+    }
   }
 }
