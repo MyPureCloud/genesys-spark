@@ -111,14 +111,12 @@
       "placeholder": "text"
     },
     "events": {
-      "input": "Item from dropdown selected",
-      "filter": "Filter value changed",
       "change": "Triggered when item is selected from dropdown"
     }
   },
   "gux-option": {
     "hidePage": true,
-    "attributes": { "selected": "checkbox", "value": "text", "text": "text" }
+    "attributes": { "value": "text", "text": "text" }
   },
   "gux-dropdown-option": {
     "hidePage": true,

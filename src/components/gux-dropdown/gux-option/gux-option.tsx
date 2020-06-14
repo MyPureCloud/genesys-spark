@@ -46,12 +46,6 @@ export class GuxOption {
   @Prop({ mutable: true })
   filtered: boolean;
 
-  /**
-   * If present, this Boolean attribute indicates that the option is currently selected.
-   */
-  @Prop({ mutable: true })
-  selected: boolean;
-
   @Prop()
   text: string;
 
@@ -107,7 +101,6 @@ export class GuxOption {
       switch (e.key) {
         case ' ':
         case 'Enter':
-          this.selected = true;
           this.selectedChanged.emit(this.value);
           break;
       }
@@ -150,7 +143,6 @@ export class GuxOption {
   }
 
   private onItemClicked() {
-    this.selected = true;
     this.selectedChanged.emit(this.value);
   }
 }

@@ -85,12 +85,20 @@ gux-dropdown {
     }
 
     .gux-options {
+      display: none;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
       margin: 0;
       padding: 8px 0;
       background: @menu-background-color;
       border: 1px solid @menu-border-color;
       box-shadow: none;
       color: @text-color;
+
+      &.opened {
+        display: block;
+      }
 
       > gux-option {
         position: relative;
@@ -200,11 +208,7 @@ gux-dropdown {
           border-bottom: 1px solid @gux-dark-blue;
         }
       }
-
-      gux-list {
-        width: calc(100% - 16px);
-        margin: 0 8px;
-      }
+      
     }
   }
 }
