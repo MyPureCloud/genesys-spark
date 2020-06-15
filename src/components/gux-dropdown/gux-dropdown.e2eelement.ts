@@ -11,26 +11,22 @@ export class E2EGuxDropdown {
     return this.element.then(el => el.find('input'));
   }
 
-  get listElement(): Promise<E2EElement> {
-    return this.element.then(el => el.find('gux-list'));
-  }
-
-  get listItems(): Promise<E2EElement[]> {
-    return this.element.then(el => el.findAll('gux-list-item'));
+  get options(): Promise<E2EElement[]> {
+    return this.element.then(el => el.findAll('gux-option'));
   }
 
   get currentValue(): Promise<string> {
     return this.textField.then(el => el.getAttribute('value'));
   }
 
-  async itemWithValue(value: string): Promise<E2EElement> {
-    return (await this.listItems).find(el => el.textContent.includes(value));
+  async optionWithValue(value: string): Promise<E2EElement> {
+    return (await this.options).find(el => el.textContent.includes(value));
   }
 
   async select(value: string): Promise<void> {
     (await this.element).click();
 
-    const listItem = await this.itemWithValue(value);
-    await listItem.click();
+    const option = await this.optionWithValue(value);
+    await option.click();
   }
 }

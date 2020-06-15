@@ -49,14 +49,14 @@ export class GuxPaginationItemsPerPage {
         <gux-dropdown
           class="pagination-items-per-page"
           ref={dropdown => (this.dropdown = dropdown as any)}
-          // value={this.itemsPerPage + ''}
+          value={this.itemsPerPage + ''}
           onChange={() =>
             this.itemsPerPageChanged.emit(parseInt(this.dropdown.value, 10))
           }
         >
-          {/* {(this.itemsPerPageOptions || []).map(opt => (
-            <option selected={opt === this.itemsPerPage}>{opt}</option>
-          ))} */}
+          {(this.itemsPerPageOptions || []).map(opt => (
+            <gux-option value={opt + ''} text={opt + ''}></gux-option>
+          ))}
         </gux-dropdown>
         <span>{this.i18n && this.i18n('perPage')}</span>
       </div>

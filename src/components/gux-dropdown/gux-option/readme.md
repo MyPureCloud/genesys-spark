@@ -46,6 +46,19 @@ Type: `Promise<boolean>`
 
 
 
+## Dependencies
+
+### Used by
+
+ - [gux-pagination-items-per-page](../../gux-pagination/items-per-page)
+
+### Graph
+```mermaid
+graph TD;
+  gux-pagination-items-per-page --> gux-option
+  style gux-option fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

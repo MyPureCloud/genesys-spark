@@ -72,6 +72,7 @@ graph TD;
   gux-pagination --> gux-pagination-items-per-page
   gux-pagination --> gux-pagination-buttons
   gux-pagination-items-per-page --> gux-dropdown
+  gux-pagination-items-per-page --> gux-option
   gux-dropdown --> gux-text-field
   gux-dropdown --> gux-icon
   gux-text-field --> gux-icon
