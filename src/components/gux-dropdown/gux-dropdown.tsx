@@ -135,10 +135,10 @@ export class GuxDropdown {
     }
   }
 
-  setValue(text) {
+  setValue(text: string, value: string) {
     this.value = text;
     this.opened = false;
-    this.emitChange(this.value);
+    this.emitChange(value);
   }
   _clickHandler() {
     if (!this.disabled) {
@@ -200,13 +200,13 @@ export class GuxDropdown {
     }
     this.selectionOptions = this.getSelectionOptions();
     for (const option of this.selectionOptions) {
-      option.addEventListener('selectedChanged', async () => {
+      option.addEventListener('selectedChanged', async (e: CustomEvent) => {
         const text = await option.getDisplayedText();
-        this.setValue(text);
+        this.setValue(text, e.detail);
       });
-      option.addEventListener('onFocus', async () => {
-        const text = await option.getDisplayedText();
-        this._focusOptionItemHandler(text);
+
+      option.addEventListener('onFocus', (e: CustomEvent) => {
+        this._focusOptionItemHandler(e.detail);
       });
     }
   }

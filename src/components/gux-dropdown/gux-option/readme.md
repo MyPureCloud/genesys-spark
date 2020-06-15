@@ -19,6 +19,7 @@
 
 | Event             | Description                             | Type                  |
 | ----------------- | --------------------------------------- | --------------------- |
+| `onFocus`         | Occurs when the item has been focused.  | `CustomEvent<string>` |
 | `selectedChanged` | Occurs when the item has been selected. | `CustomEvent<string>` |
 
 

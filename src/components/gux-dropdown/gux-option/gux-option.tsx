@@ -60,6 +60,12 @@ export class GuxOption {
   selectedChanged: EventEmitter<string>;
 
   /**
+   * Occurs when the item has been focused.
+   */
+  @Event()
+  onFocus: EventEmitter<string>;
+
+  /**
    * Gets the text rendered by the drop down item.
    */
   @Method()
@@ -93,6 +99,7 @@ export class GuxOption {
   }
 
   componentDidLoad() {
+    this.root.onfocus = () => this.onFocus.emit(this.text);
     this.root.onclick = () => {
       this.onItemClicked();
     };
