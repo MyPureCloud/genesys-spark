@@ -1,6 +1,6 @@
 import { Component, getAssetPath, h, Prop, State, Watch } from '@stencil/core';
 
-const SVG_CONTAINER_ID = 'gux-icon-catalog';
+const svgCache: Map<string, Promise<SVGElement>> = new Map();
 
 @Component({
   assetsDirs: ['icons'],
@@ -27,14 +27,21 @@ export class GuxIcon {
   screenreaderText: string;
 
   @State()
-  viewBox?: string;
+  private viewBox?: string;
+
+  @State()
+  private dataUri?: string;
 
   @Watch('iconName')
   async prepIcon(iconName: string) {
     if (iconName) {
       const svg = await this.loadSvgData(iconName);
-      // Ideally, we'd use consistent scale for all icons and this would be unnecessary
-      this.viewBox = (svg && svg.getAttribute('viewBox')) || null;
+
+      if (svg) {
+        // Ideally, we'd use consistent scale for all icons and this would be unnecessary
+        this.viewBox = svg.getAttribute('viewBox') || null;
+        this.dataUri = this.getDataUri(svg);
+      }
     }
   }
 
@@ -52,79 +59,62 @@ export class GuxIcon {
 
   render() {
     return (
-      this.iconName && (
+      this.dataUri && (
         <svg
           aria-hidden={this.decorative}
           aria-label={this.screenreaderText}
           viewBox={this.viewBox}
         >
-          <use xlinkHref={`#${iconId(this.iconName)}`} />
+          <use xlinkHref={this.dataUri} />
         </svg>
       )
     );
   }
 
-  private loadSvgData(iconName: string): Promise<Element> {
-    const id = iconId(iconName);
-    const svgContainer = this.getSvgContainer();
-    let svgElement = svgContainer.querySelector(`#${id}`);
-    if (svgElement) {
-      const pendingFetch = (svgElement as any).pending;
-      // If some other instance is loading the icon, wait on that
-      if (pendingFetch) {
-        return pendingFetch;
-      } else {
-        return Promise.resolve(svgElement);
-      }
-    } else {
-      // Create a placholder element so other icons on page won't try to
-      // simultanously fetch while we're waiting on the icon to load
-      const placeholder = document.createElement('div');
-      placeholder.setAttribute('id', id);
-      svgContainer.appendChild(placeholder);
-
-      // Fetch the icon and replace the placeholder with it.
-      const iconUrl = getAssetPath(`./icons/${this.iconName}.svg`);
-      const svgPromise = fetch(iconUrl)
-        .then(response => {
-          if (response.status === 200) {
-            return response.text();
-          }
-          throw new Error(
-            `[gux-icon] fetching failed for icon "${this.iconName}" with status "${response.statusText} (${response.status})".`
-          );
-        })
-        .then(svgText => {
-          svgElement = new DOMParser().parseFromString(svgText, 'image/svg+xml')
-            .firstChild as Element;
-          svgElement.setAttribute('id', id);
-          placeholder.replaceWith(svgElement);
-          return svgElement;
-        })
-        .catch(err => {
-          setTimeout(() => {
-            throw err;
-          }, 0);
-          return null;
-        });
-      // This is an ugly kludge to make this promise accessible to other icons
-      // waiting on the same svg
-      (placeholder as any).pending = svgPromise;
-      return svgPromise;
-    }
+  private getIconId(iconName): string {
+    return `gux-icon-${iconName}`;
   }
 
-  private getSvgContainer() {
-    let svgContainer = document.getElementById(SVG_CONTAINER_ID);
-    if (!svgContainer) {
-      svgContainer = document.createElement('div');
-      svgContainer.setAttribute('id', SVG_CONTAINER_ID);
-      document.head.appendChild(svgContainer);
-    }
-    return svgContainer;
+  private getDataUri(svg: SVGElement): string {
+    return `data:image/svg+xml;utf8,${svg.outerHTML}#${svg.getAttribute('id')}`;
   }
-}
 
-function iconId(iconName) {
-  return `gux-icon-${iconName}`;
+  private loadSvgData(iconName: string): Promise<SVGElement> {
+    const id = this.getIconId(iconName);
+    const cachedSvgElement = svgCache.get(id);
+
+    if (cachedSvgElement) {
+      return cachedSvgElement;
+    }
+
+    const iconUrl = getAssetPath(`./icons/${this.iconName}.svg`);
+    const getSvgElement = fetch(iconUrl)
+      .then(response => {
+        if (response.status === 200) {
+          return response.text();
+        }
+        throw new Error(
+          `[gux-icon] fetching failed for icon "${this.iconName}" with status "${response.statusText} (${response.status})".`
+        );
+      })
+      .then(svgText => {
+        const svgElement = new DOMParser().parseFromString(
+          svgText,
+          'image/svg+xml'
+        ).firstChild as SVGElement;
+        svgElement.setAttribute('id', id);
+
+        return svgElement;
+      })
+      .catch(err => {
+        setTimeout(() => {
+          throw err;
+        }, 0);
+        return null;
+      });
+
+    svgCache.set(id, getSvgElement);
+
+    return getSvgElement;
+  }
 }
