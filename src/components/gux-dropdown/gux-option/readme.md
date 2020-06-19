@@ -52,9 +52,14 @@ Type: `Promise<boolean>`
 
  - [gux-pagination-items-per-page](../../gux-pagination/items-per-page)
 
+### Depends on
+
+- [gux-text-highlight](../../gux-text-highlight)
+
 ### Graph
 ```mermaid
 graph TD;
+  gux-option --> gux-text-highlight
   gux-pagination-items-per-page --> gux-option
   style gux-option fill:#f9f,stroke:#333,stroke-width:4px
 ```
