@@ -18,13 +18,11 @@ A styled label element typically used in conjunction with input controls.  The l
 ### Used by
 
  - [gux-datepicker](../gux-datepicker)
- - [gux-slider](../gux-slider)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-datepicker --> gux-text-label
-  gux-slider --> gux-text-label
   style gux-text-label fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
