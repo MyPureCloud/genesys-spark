@@ -31,15 +31,6 @@ export class GuxOption {
   @Prop()
   disabled: boolean;
 
-  /**
-   * If this Boolean attribute is set, the option is not visible to the select control.
-   * This does not mean that it clears the selection if it was previously selected.
-   *
-   * Should only be used by internal users.
-   */
-  @Prop({ mutable: true, reflectToAttr: true })
-  filtered: boolean;
-
   @Prop()
   text: string;
 

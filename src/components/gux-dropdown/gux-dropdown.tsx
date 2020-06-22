@@ -287,8 +287,8 @@ export class GuxDropdown {
     if (this.selectionOptions) {
       for (const option of this.selectionOptions) {
         option.shouldFilter(searchInput).then(isFiltered => {
-          if (this.filterable) {
-            option.filtered = isFiltered;
+          if (this.filterable && isFiltered) {
+            option.classList.add('filtered');
           }
         });
       }
