@@ -26,21 +26,21 @@ describe('gux-option', () => {
         expect(result).toBeFalsy();
       });
 
-      it('should not filter if string is in the text', async () => {
+      it('should filter if string is in the text', async () => {
         component.text = 'TestsAreAwesome';
 
         const result = await component.shouldFilter('Are');
 
-        expect(result).toBeFalsy();
+        expect(result).toBeTruthy();
         expect(component.highlight).toBe('Are');
       });
 
-      it('should not filter if case-insensitive string is in the text', async () => {
+      it('should filter if case-insensitive string is in the text', async () => {
         component.text = 'TestsAreAwesome';
 
         const result = await component.shouldFilter('are');
 
-        expect(result).toBeFalsy();
+        expect(result).toBeTruthy();
         expect(component.highlight).toBe('are');
       });
 
