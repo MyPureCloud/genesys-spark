@@ -116,7 +116,7 @@ gux-dropdown {
           }
         }
 
-        &.disabled {
+        &[disabled] {
           opacity: 0.5;
           pointer-events: none;
           cursor: default;
@@ -126,7 +126,7 @@ gux-dropdown {
           display: none;
         }
 
-        &:not(.disabled) {
+        &:not([disabled]) {
           &[selected] {
             background: @gux-light-blue;
             color: @text-color;

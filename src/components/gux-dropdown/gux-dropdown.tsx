@@ -87,9 +87,7 @@ export class GuxDropdown {
     switch (event.keyCode) {
       case KeyCode.Up:
         if (focusIndex > 0) {
-          setTimeout(() => {
-            this.selectionOptions[focusIndex - 1].focus();
-          });
+          this.selectionOptions[focusIndex - 1].focus();
         }
         break;
       case KeyCode.Down:
@@ -97,26 +95,20 @@ export class GuxDropdown {
           this.opened = true;
         }
         if (focusIndex < this.selectionOptions.length - 1) {
-          setTimeout(() => {
-            this.selectionOptions[focusIndex + 1].focus();
-          });
+          this.selectionOptions[focusIndex + 1].focus();
         }
         break;
       case KeyCode.Home:
         if (!this.selectionOptions.length) {
           return;
         }
-        setTimeout(() => {
-          this.selectionOptions[0].focus();
-        });
+        this.selectionOptions[0].focus();
         break;
       case KeyCode.End:
         if (!this.selectionOptions.length) {
           return;
         }
-        setTimeout(() => {
-          this.selectionOptions[this.selectionOptions.length - 1].focus();
-        });
+        this.selectionOptions[this.selectionOptions.length - 1].focus();
         break;
       case KeyCode.Enter:
       case KeyCode.Space:
@@ -127,9 +119,7 @@ export class GuxDropdown {
             return item.text.startsWith(event.key);
           });
           if (arr[0]) {
-            setTimeout(() => {
-              arr[0].focus();
-            });
+            arr[0].focus();
           }
         }
     }
