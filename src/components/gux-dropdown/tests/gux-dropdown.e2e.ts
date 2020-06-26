@@ -15,13 +15,13 @@ describe('gux-dropdown', () => {
   it('opens drop down on click', async () => {
     await page.setContent(`
     <gux-dropdown placeholder="Select..." filterable=true>
-      <gux-option value="en-US" text="American English"></gux-option>
-      <gux-option value="es" text="Latin American Spanish"></gux-option>
-      <gux-option value="es-ES" text="European Spanish"></gux-option>
-      <gux-option value="en-UK" text="UK English"></gux-option>
-      <gux-option value="fr-CA" text="Canadian French"></gux-option>
+      <gux-option value="en-US">American English</gux-option>
+      <gux-option value="es">Latin American Spanish</gux-option>
+      <gux-option value="es-ES">European Spanish</gux-option>
+      <gux-option value="en-UK">UK English</gux-option>
+      <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
       <gux-option value="fr" text="European French"></gux-option>
-      <gux-option value="nl" text="Dutch"></gux-option>
+      <gux-option>Dutch</gux-option>
     </gux-dropdown> 
     `);
     await page.waitForChanges();
@@ -38,13 +38,13 @@ describe('gux-dropdown', () => {
     page = await newE2EPage();
     await page.setContent(`
     <gux-dropdown placeholder="Select..." filterable=true>
-      <gux-option value="en-US" text="American English"></gux-option>
-      <gux-option value="es" text="Latin American Spanish"></gux-option>
-      <gux-option value="es-ES" text="European Spanish"></gux-option>
-      <gux-option value="en-UK" text="UK English"></gux-option>
-      <gux-option value="fr-CA" text="Canadian French"></gux-option>
+      <gux-option value="en-US">American English</gux-option>
+      <gux-option value="es">Latin American Spanish</gux-option>
+      <gux-option value="es-ES">European Spanish</gux-option>
+      <gux-option value="en-UK">UK English</gux-option>
+      <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
       <gux-option value="fr" text="European French"></gux-option>
-      <gux-option value="nl" text="Dutch"></gux-option>
+      <gux-option>Dutch</gux-option>
     </gux-dropdown> 
     `);
     await page.waitForChanges();

@@ -55,7 +55,7 @@ export class GuxPaginationItemsPerPage {
           }
         >
           {(this.itemsPerPageOptions || []).map(opt => (
-            <gux-option value={opt + ''} text={opt + ''}></gux-option>
+            <gux-option value={opt + ''}>{opt + ''}</gux-option>
           ))}
         </gux-dropdown>
         <span>{this.i18n && this.i18n('perPage')}</span>

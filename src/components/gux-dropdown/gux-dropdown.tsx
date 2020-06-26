@@ -190,8 +190,8 @@ export class GuxDropdown {
     }
     this.selectionOptions = this.getSelectionOptions();
     for (const option of this.selectionOptions) {
-      option.addEventListener('selectedChanged', async (e: CustomEvent) => {
-        const text = await option.getDisplayedText();
+      option.addEventListener('selectedChanged', (e: CustomEvent) => {
+        const text = option.text;
         this.setValue(text, e.detail);
       });
 

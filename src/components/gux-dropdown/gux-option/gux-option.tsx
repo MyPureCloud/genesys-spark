@@ -15,6 +15,7 @@ import {
 export class GuxOption {
   @Element()
   root: HTMLGuxOptionElement;
+  slotContent: HTMLElement;
 
   /**
    * The content of this attribute represents the value to be submitted on 'input' changes,
@@ -31,6 +32,11 @@ export class GuxOption {
   @Prop()
   disabled: boolean;
 
+  /**
+   * The content of this attribute represents the value to be displayed,
+   * If this attribute is omitted, the value is taken from the text content of the slot.
+   * This attribute takes precedence over slot value
+   */
   @Prop()
   text: string;
 
@@ -50,14 +56,6 @@ export class GuxOption {
   onFocus: EventEmitter<string>;
 
   /**
-   * Gets the text rendered by the drop down item.
-   */
-  @Method()
-  getDisplayedText(): Promise<string> {
-    return Promise.resolve(this.text);
-  }
-
-  /**
    * Determines if the search input matches this option.
    *
    * @param searchInput The input string being searched for.
@@ -65,11 +63,16 @@ export class GuxOption {
   @Method()
   shouldFilter(searchInput: string): Promise<boolean> {
     this.highlight = searchInput;
-
     if (!searchInput) {
       return Promise.resolve(false);
     }
     return Promise.resolve(!this.text.startsWith(searchInput));
+  }
+
+  componentWillLoad() {
+    if (!this.text) {
+      this.text = this.root.textContent;
+    }
   }
 
   componentDidLoad() {
@@ -82,7 +85,7 @@ export class GuxOption {
       switch (e.key) {
         case ' ':
         case 'Enter':
-          this.selectedChanged.emit(this.value);
+          this.selectedChanged.emit(this.value ? this.value : this.text);
           break;
       }
     };
@@ -97,6 +100,12 @@ export class GuxOption {
   render() {
     return (
       <div>
+        <span
+          ref={el => (this.slotContent = el as HTMLElement)}
+          style={{ display: 'none' }}
+        >
+          <slot />
+        </span>
         <gux-text-highlight
           text={this.text}
           highlight={this.highlight ? this.highlight : ''}
@@ -106,6 +115,6 @@ export class GuxOption {
   }
 
   private onItemClicked() {
-    this.selectedChanged.emit(this.value);
+    this.selectedChanged.emit(this.value ? this.value : this.text);
   }
 }

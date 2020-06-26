@@ -10,9 +10,13 @@ describe('gux-dropdown', () => {
       components: [GuxDropdown, GuxOption],
       html: `
       <gux-dropdown>
-        <gux-option value="en-US" text="American English"></gux-option>
-        <gux-option value="es-ES" text="European Spanish"></gux-option>
+        <gux-option value="en-US">American English</gux-option>
+        <gux-option value="es">Latin American Spanish</gux-option>
+        <gux-option value="es-ES">European Spanish</gux-option>
+        <gux-option value="en-UK">UK English</gux-option>
+        <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
         <gux-option value="fr" text="European French"></gux-option>
+        <gux-option>Dutch</gux-option>
       </gux-dropdown>`,
       language: 'en'
     });
@@ -67,8 +71,12 @@ describe('gux-dropdown', () => {
         component.filterable = false;
         expect(component.filteredItems.map(opt => opt.text)).toEqual([
           'American English',
+          'Latin American Spanish',
           'European Spanish',
-          'European French'
+          'UK English',
+          'Canadian French',
+          'European French',
+          'Dutch'
         ]);
         component.filterable = true;
         component.value = 'Eu';
@@ -80,13 +88,13 @@ describe('gux-dropdown', () => {
         expect(component.filteredItems.map(opt => opt.text)).toEqual([
           'American English'
         ]);
-        component.value = 'Dut';
+        component.value = 'Ind';
         expect(component.filteredItems.map(opt => opt.text)).toEqual([]);
       });
       it('ghost', () => {
         component.opened = true;
         component.filterable = true;
-        component.forcedGhostValue = 'Bel';
+        component.forcedGhostValue = 'Ame';
         expect(component.ghost).toEqual(component.forcedGhostValue);
         component.opened = false;
         component.value = '';
