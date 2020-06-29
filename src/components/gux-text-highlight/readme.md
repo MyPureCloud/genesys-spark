@@ -20,12 +20,14 @@
 
  - [gux-command-palette](../gux-command-palette)
  - [gux-list-item](../gux-list/list-item)
+ - [gux-option](../gux-dropdown/gux-option)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-command-palette --> gux-text-highlight
   gux-list-item --> gux-text-highlight
+  gux-option --> gux-text-highlight
   style gux-text-highlight fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

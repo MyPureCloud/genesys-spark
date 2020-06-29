@@ -96,12 +96,15 @@
       "disabled": "checkbox",
       "filterable": "checkbox",
       "value": "text",
-      "placeholder": "text",
-      "items": "json"
+      "placeholder": "text"
     },
     "events": {
       "change": "Triggered when item is selected from dropdown"
     }
+  },
+  "gux-option": {
+    "hidePage": true,
+    "attributes": { "value": "text", "text": "text" }
   },
   "gux-dropdown-option": {
     "hidePage": true,
