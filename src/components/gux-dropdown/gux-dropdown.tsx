@@ -164,7 +164,7 @@ export class GuxDropdown {
   get filteredItems() {
     if (this.filterable && this.selectionOptions) {
       const arr = this.selectionOptions.filter(item => {
-        return item.text.startsWith(this.value);
+        return item.text.toLowerCase().startsWith(this.value.toLowerCase());
       });
       return arr;
     } else {

@@ -84,6 +84,12 @@ describe('gux-dropdown', () => {
           'European Spanish',
           'European French'
         ]);
+        component.filterable = true;
+        component.value = 'eu';
+        expect(component.filteredItems.map(opt => opt.text)).toEqual([
+          'European Spanish',
+          'European French'
+        ]);
         component.value = 'Ame';
         expect(component.filteredItems.map(opt => opt.text)).toEqual([
           'American English'

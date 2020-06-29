@@ -66,7 +66,9 @@ export class GuxOption {
     if (!searchInput) {
       return Promise.resolve(false);
     }
-    return Promise.resolve(!this.text.startsWith(searchInput));
+    return Promise.resolve(
+      !this.text.toLowerCase().startsWith(searchInput.toLowerCase())
+    );
   }
 
   componentWillLoad() {
