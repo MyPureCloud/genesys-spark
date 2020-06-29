@@ -32,6 +32,11 @@
 - Review will be thorough - problems in these components will have a widespread impact.
 - If your review is completed and you don't have merge rights for master, reach out to the [Common UI Dev Team](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b) and one of us will get it merged.
 
+
+### After Merging
+
+- If your change added a new english localization file please create a ticket in the `LOCAL` Jira project notifying the localization team of the location of the new file. This will allow them to start creating the other language files necessary.
+
 ### Versioning
 
 - Package version is determined at publish time through the commit types specified.

@@ -1,3 +1,8 @@
+<h1 id="shadow-dom-header">Shadow DOM</h1>
+<p>
+  The `gux-icon` is expected to work even when used in the shadow dom (open)
+</p>
+
 <h1>Accessibility</h1>
 <gux-icon class="example" icon-name="add-user" decorative="true"></gux-icon>
 <p>
@@ -22,7 +27,55 @@
   <strong>width</strong> css propreties to style your icon
 </p>
 
-<style>
+<h1>Caching</h1>
+<div>
+  <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+</div>
+<hr>
+<div>
+  <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+</div>
+<hr>
+<div>
+  <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+</div>
+<hr>
+<div>
+  <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+</div>
+<hr>
+<div>
+  <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
+  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+</div>
+<p>
+  Duplicated icons should not require additional newtwork calls
+</p>
+
+
+<style onload="(function () {
+  const shadowDomHeaderElement = document.getElementById('shadow-dom-header');
+  const hostElement = document.createElement('div');
+  const shadowRoot = hostElement.attachShadow({ mode: 'open' });
+  const guxIcon = document.createElement('gux-icon');
+
+  guxIcon.setAttribute('icon-name', 'add-user');
+  guxIcon.setAttribute('screenreader-text', 'test');
+  guxIcon.setAttribute('style', 'width: 50px; height: 50px;');
+
+  shadowRoot.appendChild(guxIcon);
+
+  shadowDomHeaderElement.parentNode.insertBefore(hostElement, shadowDomHeaderElement.nextSibling);
+})()">
   #styled {
     color: #ff4f1f;
     height: 100px;

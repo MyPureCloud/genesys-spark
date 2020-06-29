@@ -1,54 +1,61 @@
-import { Component, Element, h, Prop, State } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
-import { ButtonAccents } from '../../common-enums';
+export type GuxButtonAccent = 'primary' | 'secondary';
 
 @Component({
   styleUrl: 'gux-button.less',
   tag: 'gux-button'
 })
 export class GuxButton {
-  @Element()
-  root: HTMLGuxButtonElement;
-  button: HTMLButtonElement;
+  private get class(): string {
+    if (this.accent === 'primary') {
+      return 'gux-primary';
+    }
+
+    return 'gux-secondary';
+  }
+
+  /**
+   * The component title
+   */
+  @Prop()
+  title: string;
 
   /**
    * Indicate if the button is disabled or not
    */
-  @Prop({ reflectToAttr: true })
+  @Prop()
   disabled = false;
 
   /**
    * The component accent (secondary or primary).
    */
   @Prop()
-  accent: ButtonAccents = ButtonAccents.Secondary;
+  accent: GuxButtonAccent = 'secondary';
+  @Element()
+  private root: HTMLGuxButtonElement;
 
-  @State()
-  title: string;
-
-  async componentWillLoad() {
-    this.title = this.root.title;
+  componentWillLoad() {
+    this.makeSlotContentDisableable();
   }
 
-  private get accentClass() {
-    const accent =
-      this.accent === ButtonAccents.Primary
-        ? ButtonAccents.Primary
-        : ButtonAccents.Secondary;
-
-    return `gux-${accent}`;
-  }
-
-  render() {
+  render(): JSX.Element {
     return (
-      <button
-        title={this.title}
-        ref={el => (this.button = el)}
-        disabled={this.disabled}
-        class={this.accentClass}
-      >
+      <button title={this.title} disabled={this.disabled} class={this.class}>
         <slot />
       </button>
     );
+  }
+
+  private makeSlotContentDisableable() {
+    Array.from(this.root.children).forEach(slotElement => {
+      slotElement.addEventListener('click', (event: MouseEvent): void => {
+        if (this.disabled) {
+          event.stopImmediatePropagation();
+          event.stopPropagation();
+          event.preventDefault();
+        }
+      });
+    });
   }
 }

@@ -1,6 +1,7 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, JSX, Prop } from '@stencil/core';
 import { getFuzzyReplacements, matchesFuzzy } from '../../search';
-import { HighlightStrategy } from './highlight-enums';
+
+export type GuxTextHighlightStrategy = 'start' | 'contains' | 'fuzzy';
 
 @Component({
   tag: 'gux-text-highlight'
@@ -22,98 +23,88 @@ export class GuxTextHighlight {
    * The way the text should be highlighted.
    */
   @Prop()
-  strategy: string = HighlightStrategy.Start;
+  strategy: GuxTextHighlightStrategy = 'start';
 
-  render() {
+  render(): JSX.Element {
     if (this.highlight && this.text) {
-      return this.renderHighlight();
-    } else {
-      return this.text;
-    }
-  }
-
-  private renderHighlight(): any {
-    switch (this.strategy) {
-      case HighlightStrategy.Start:
-        return this.renderStartsWith();
-      case HighlightStrategy.Contains:
-        return this.renderContains();
-      case HighlightStrategy.Fuzzy:
-        return this.renderFuzzy();
-      default:
-        return this.text;
-    }
-  }
-
-  private renderStartsWith(): HTMLElement | string {
-    if (this.text.startsWith(this.highlight)) {
-      return this.renderPrefixHighlight();
-    }
-
-    return this.text;
-  }
-
-  private renderContains(): HTMLElement[] | string {
-    const parts = this.text.split(this.highlight);
-    if (parts.length === 1) {
-      return this.text;
-    }
-
-    const start = this.text.startsWith(this.highlight);
-
-    if (parts.length === 2 && start) {
-      return [<strong>{this.highlight}</strong>, parts[1]];
-    }
-
-    const retVal = [];
-
-    parts.forEach((part, index) => {
-      if (index === 0 && start) {
-        return;
+      switch (this.strategy) {
+        case 'start':
+          return this.renderStartsWith();
+        case 'contains':
+          return this.renderContains();
+        case 'fuzzy':
+          return this.renderFuzzy();
       }
-
-      if (index === 0) {
-        retVal.push(part);
-      } else if (index === 1) {
-        retVal.push(<strong>{this.highlight}</strong>);
-        retVal.push(part);
-        if (index !== parts.length - 1) {
-          retVal.push(<strong>{this.highlight}</strong>);
-        }
-      } else {
-        retVal.push(part);
-
-        if (index !== parts.length - 1) {
-          retVal.push(<strong>{this.highlight}</strong>);
-        }
-      }
-    });
-
-    return retVal;
-  }
-
-  private renderFuzzy(): HTMLElement | string {
-    if (!matchesFuzzy(this.highlight, this.text)) {
-      return this.text;
     }
 
-    const result = getFuzzyReplacements(this.highlight);
-    let retVal = this.text;
-
-    result.forEach(replacement => {
-      const found = this.text.match(replacement);
-      retVal = retVal.replace(replacement, `<strong>${found[0]}</strong>`);
-    });
-
-    return <span innerHTML={retVal} />;
+    return <span>{this.text}</span>;
   }
 
-  private renderPrefixHighlight(): HTMLElement {
-    return (
-      <span>
-        <strong>{this.highlight}</strong>
-        {this.text.replace(this.highlight, '')}
-      </span>
-    );
+  private renderStartsWith(): HTMLSpanElement {
+    if (this.text.toLowerCase().startsWith(this.highlight.toLowerCase())) {
+      const highlight = this.text.substring(0, this.highlight.length);
+      const after = this.text.substring(this.highlight.length);
+
+      return (
+        <span>
+          <mark>{highlight}</mark>
+          {after}
+        </span>
+      );
+    }
+
+    return <span>{this.text}</span>;
+  }
+
+  private renderContains(): HTMLSpanElement {
+    const html = {
+      highlighted: '',
+      remaining: this.text
+    };
+
+    while (
+      html.remaining.toLowerCase().includes(this.highlight.toLowerCase())
+    ) {
+      const index = html.remaining
+        .toLowerCase()
+        .indexOf(this.highlight.toLowerCase());
+      const before = html.remaining.substring(0, index);
+      const highlight = html.remaining.substring(
+        index,
+        index + this.highlight.length
+      );
+      html.highlighted += before + `<mark>${highlight}</mark>`;
+      html.remaining = html.remaining.substring(index + highlight.length);
+    }
+
+    return <span innerHTML={html.highlighted + html.remaining} />;
+  }
+
+  private renderFuzzy(): HTMLSpanElement {
+    if (matchesFuzzy(this.highlight, this.text)) {
+      const html = getFuzzyReplacements(this.highlight).reduce(
+        (acc, needle) => {
+          const {
+            0: highlight,
+            index,
+            input
+          } = (acc.remaining as string).match(needle);
+          const before = input.substring(0, index);
+          const highlighted =
+            acc.highlighted + before + `<mark>${highlight}</mark>`;
+          const remaining = input.substring(index + highlight.length);
+
+          return { highlighted, remaining };
+        },
+        {
+          highlighted: '',
+          remaining: this.text
+        }
+      );
+
+      return <span innerHTML={html.highlighted + html.remaining} />;
+    }
+
+    return <span>{this.text}</span>;
   }
 }
