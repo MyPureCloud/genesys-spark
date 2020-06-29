@@ -3,11 +3,16 @@
 gux-list-item {
 
     .list-item {
-      height: 32px;
+      height: max-content;
+      word-wrap: break-word;
       line-height: 32px;
       padding: 0px 16px;
       display: flex;
       cursor: pointer;
+
+      gux-text-highlight {
+        width: 100%;
+      }
     }
 
     &[disabled] {
