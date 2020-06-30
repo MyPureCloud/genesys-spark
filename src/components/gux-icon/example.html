@@ -1,4 +1,5 @@
 <h1 id="shadow-dom-header">Shadow DOM</h1>
+<div id="shadow-dom-host"></div>
 <p>
   The `gux-icon` is expected to work even when used in the shadow dom (open)
 </p>
@@ -18,6 +19,15 @@
 <p>
   Set the <strong>screenreader-text</strong> attribute if the icon conveys
   information to the user that would not otherwise be available
+</p>
+
+<gux-icon
+  class="example"
+  icon-name="add-user"
+></gux-icon>
+<p>
+  If neither <strong>decorative</strong> or <strong>screenreader-text</strong>
+  are set an error will be logged in the console
 </p>
 
 <h1>Styling</h1>
@@ -61,10 +71,9 @@
   Duplicated icons should not require additional newtwork calls
 </p>
 
-
 <style onload="(function () {
   const shadowDomHeaderElement = document.getElementById('shadow-dom-header');
-  const hostElement = document.createElement('div');
+  const hostElement = document.getElementById('shadow-dom-host');
   const shadowRoot = hostElement.attachShadow({ mode: 'open' });
   const guxIcon = document.createElement('gux-icon');
 
@@ -73,8 +82,6 @@
   guxIcon.setAttribute('style', 'width: 50px; height: 50px;');
 
   shadowRoot.appendChild(guxIcon);
-
-  shadowDomHeaderElement.parentNode.insertBefore(hostElement, shadowDomHeaderElement.nextSibling);
 })()">
   #styled {
     color: #ff4f1f;
