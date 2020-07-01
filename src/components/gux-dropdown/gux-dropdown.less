@@ -45,6 +45,8 @@ gux-dropdown {
         border-radius: 2px;
         font-size: 12px;
         line-height: 1.66666667;
+        white-space: nowrap;
+        overflow: hidden;
       }
 
       gux-text-field {
@@ -110,6 +112,9 @@ gux-dropdown {
 
         > div {
           position: relative;
+          overflow: hidden; 
+          white-space: nowrap;
+          text-overflow: ellipsis;
 
           .ghost {
             position: absolute;
@@ -144,6 +149,9 @@ gux-dropdown {
     &.page {
       .select-field {
         .ghost {
+          white-space: nowrap;
+          overflow: hidden;
+          
           .large-title();
           line-height: 1.66666667;
           height: 48px;
@@ -178,6 +186,9 @@ gux-dropdown {
     &.palette {
       .select-field {
         .ghost {
+          white-space: nowrap;
+          overflow: hidden;
+
           .small-title();
           line-height: 1.66666667;
           height: 52px;

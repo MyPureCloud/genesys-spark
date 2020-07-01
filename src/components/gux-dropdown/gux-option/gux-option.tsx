@@ -102,16 +102,19 @@ export class GuxOption {
   render() {
     return (
       <div>
-        <span
-          ref={el => (this.slotContent = el as HTMLElement)}
-          style={{ display: 'none' }}
-        >
-          <slot />
-        </span>
-        <gux-text-highlight
-          text={this.text}
-          highlight={this.highlight ? this.highlight : ''}
-        />
+        <div>
+          <span
+            ref={el => (this.slotContent = el as HTMLElement)}
+            style={{ display: 'none' }}
+          >
+            <slot />
+          </span>
+          <gux-text-highlight
+            text={this.text}
+            highlight={this.highlight ? this.highlight : ''}
+          />
+        </div>
+        {/* <gux-tooltip delay={0} text='My great tooltip'></gux-tooltip> */}
       </div>
     );
   }

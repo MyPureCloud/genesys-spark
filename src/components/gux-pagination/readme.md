@@ -77,6 +77,7 @@ graph TD;
   gux-dropdown --> gux-icon
   gux-text-field --> gux-icon
   gux-option --> gux-text-highlight
+  gux-option --> gux-tooltip
   gux-pagination-buttons --> gux-button
   gux-pagination-buttons --> gux-icon
   gux-pagination-buttons --> gux-text-field
