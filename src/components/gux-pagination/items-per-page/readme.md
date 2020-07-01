@@ -55,7 +55,6 @@ graph TD;
   gux-dropdown --> gux-icon
   gux-text-field --> gux-icon
   gux-option --> gux-text-highlight
-  gux-option --> gux-tooltip
   gux-pagination --> gux-pagination-items-per-page
   style gux-pagination-items-per-page fill:#f9f,stroke:#333,stroke-width:4px
 ```

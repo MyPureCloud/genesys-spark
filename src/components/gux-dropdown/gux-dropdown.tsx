@@ -214,6 +214,7 @@ export class GuxDropdown {
             {this.ghost}
           </span>
           <gux-text-field
+            title={this.value}
             ref={el => (this.textFieldElement = el as HTMLGuxTextFieldElement)}
             onMouseDown={() => {
               this._clickHandler();

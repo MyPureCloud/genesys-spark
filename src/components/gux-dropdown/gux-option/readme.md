@@ -44,13 +44,11 @@ Type: `Promise<boolean>`
 ### Depends on
 
 - [gux-text-highlight](../../gux-text-highlight)
-- [gux-tooltip](../../gux-tooltip)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-option --> gux-text-highlight
-  gux-option --> gux-tooltip
   gux-pagination-items-per-page --> gux-option
   style gux-option fill:#f9f,stroke:#333,stroke-width:4px
 ```
