@@ -11,7 +11,7 @@
 | ------------------ | ------------------- | ------------------------------------------------------------------------------------- | --------- | ----------- |
 | `decorative`       | `decorative`        | Indicate whether the icon should be ignored by accessibility tools or not             | `boolean` | `false`     |
 | `iconName`         | `icon-name`         | Indicate which icon to display                                                        | `string`  | `undefined` |
-| `screenreaderText` | `screenreader-text` | Localized text describing the intent of this icon (not required if `decorative=true`) | `string`  | `undefined` |
+| `screenreaderText` | `screenreader-text` | Localized text describing the intent of this icon (not required if `decorative=true`) | `string`  | `''`        |
 
 
 ## Dependencies
