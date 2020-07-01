@@ -28,7 +28,7 @@ def shouldUploadAssets() {
 }
 
 pipeline {
-  agent { label 'infra_mesos' }
+  agent { label 'infra_mesos_v2' }
   options {
     quietPeriod(480)
     disableConcurrentBuilds()
