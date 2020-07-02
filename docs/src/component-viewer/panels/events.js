@@ -36,7 +36,7 @@ export default class EventsPanel {
         );
 
         for (let element of elements) {
-          element.addEventListener(name, function(e) {
+          element.addEventListener(name, function (e) {
             let detail = e ? e.detail : e;
             let target = e ? e.target : '';
             if (detail !== null && detail !== undefined) {
