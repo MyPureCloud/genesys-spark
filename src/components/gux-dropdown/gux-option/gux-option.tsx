@@ -101,7 +101,7 @@ export class GuxOption {
 
   render() {
     return (
-      <div>
+      <div title={this.text}>
         <span
           ref={el => (this.slotContent = el as HTMLElement)}
           style={{ display: 'none' }}
