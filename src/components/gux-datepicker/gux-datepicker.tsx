@@ -373,10 +373,7 @@ export class GuxDatepicker {
     if (this.yearFormat === 'yyyy') {
       map.yyyy = value.getFullYear().toString();
     } else {
-      map.yy = value
-        .getFullYear()
-        .toString()
-        .slice(-2);
+      map.yy = value.getFullYear().toString().slice(-2);
     }
     const regexp = new RegExp(Object.keys(map).join('|'), 'gi');
     return {
@@ -508,10 +505,7 @@ export class GuxDatepicker {
     if (this.yearFormat === 'yyyy') {
       return newYear.getFullYear().toString();
     } else {
-      return newYear
-        .getFullYear()
-        .toString()
-        .slice(-2);
+      return newYear.getFullYear().toString().slice(-2);
     }
   }
 

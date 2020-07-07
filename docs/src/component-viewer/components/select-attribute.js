@@ -39,7 +39,7 @@ export const selectAttribute = (
         </select>
     </lebel>`);
 
-  element.addEventListener('change', function(event) {
+  element.addEventListener('change', function (event) {
     let selected = event.target.value;
 
     if (selected === '') {

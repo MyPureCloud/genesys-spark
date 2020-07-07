@@ -73,10 +73,7 @@ export function getPositionRelativeToTarget(
 // Converts a Date to ISO-8601 compliant format YYYY-MM-DD
 export function asIsoDateString(date: Date): string {
   const monthStr = (date.getMonth() + 1).toString().padStart(2, '0');
-  const dateStr = date
-    .getDate()
-    .toString()
-    .padStart(2, '0');
+  const dateStr = date.getDate().toString().padStart(2, '0');
   return `${date.getFullYear()}-${monthStr}-${dateStr}`;
 }
 
