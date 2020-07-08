@@ -30,7 +30,7 @@
  - [gux-input-color-beta](../form/gux-form-field/components/gux-input-color-beta)
  - [gux-modal](../gux-modal)
  - [gux-notification-toast](../gux-notification-toast)
- - [gux-pagination-buttons](../gux-pagination/buttons)
+ - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-popover](../gux-popover)
  - [gux-search](../gux-search)
  - [gux-side-panel-button](../gux-side-panel/buttons)

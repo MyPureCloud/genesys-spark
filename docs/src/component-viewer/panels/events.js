@@ -40,14 +40,25 @@ export default class EventsPanel {
             let detail = e ? e.detail : e;
             let target = e ? e.target : '';
             if (detail !== null && detail !== undefined) {
-              triggeredEl.appendChild(
-                toHTML(`
-                        <div>
-                            <span>${component}</span>
-                            <span>[${name}]</span>
-                            - <span>${detail}</span>
-                        </div>`)
-              );
+              if (typeof detail === 'object') {
+                triggeredEl.appendChild(
+                  toHTML(`
+                          <div>
+                              <span>${component}</span>
+                              <span>[${name}]</span>
+                              - <span>${JSON.stringify(detail)}</span>
+                          </div>`)
+                );
+              } else {
+                triggeredEl.appendChild(
+                  toHTML(`
+                          <div>
+                              <span>${component}</span>
+                              <span>[${name}]</span>
+                              - <span>${detail}</span>
+                          </div>`)
+                );
+              }
             } else {
               triggeredEl.appendChild(
                 toHTML(`

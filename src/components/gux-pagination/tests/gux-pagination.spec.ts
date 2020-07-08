@@ -1,101 +1,54 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxPagination } from '../gux-pagination';
 
+import { GuxButton } from '../../gux-button/gux-button';
+import { GuxDropdown } from '../../gux-dropdown/gux-dropdown';
+import { GuxOption } from '../../gux-dropdown/gux-option/gux-option';
+import { GuxPaginationButtons } from '../gux-pagination-buttons/gux-pagination-buttons';
+import { GuxPaginationItemCounts } from '../gux-pagination-item-counts/gux-pagination-item-counts';
+import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page/gux-pagination-items-per-page';
+import { GuxTextField } from '../../gux-text-field/gux-text-field';
+
+const components = [
+  GuxButton,
+  GuxDropdown,
+  GuxOption,
+  GuxPagination,
+  GuxPaginationButtons,
+  GuxPaginationItemCounts,
+  GuxPaginationItemsPerPage,
+  GuxTextField
+];
+const language = 'en';
+
 describe('gux-pagination', () => {
-  let component: GuxPagination;
+  describe('#render', () => {
+    [
+      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
+      { currentPage: 1, totalItems: 1000, itemsPerPage: 50, layout: 'full' },
+      { currentPage: 1, totalItems: 1000, itemsPerPage: 75, layout: 'full' },
+      { currentPage: 1, totalItems: 1000, itemsPerPage: 100, layout: 'full' },
+      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
+      { currentPage: 10, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
+      { currentPage: 10, totalItems: 1000, itemsPerPage: 50, layout: 'full' },
+      { currentPage: 10, totalItems: 1000, itemsPerPage: 75, layout: 'full' },
+      { currentPage: 10, totalItems: 1000, itemsPerPage: 100, layout: 'full' },
+      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'small' }
+    ].forEach(({ currentPage, totalItems, itemsPerPage, layout }, index) => {
+      it(`should render as expected (${index + 1})`, async () => {
+        const html = `
+          <gux-pagination
+            current-page="${currentPage}"
+            total-items="${totalItems}"
+            items-per-page="${itemsPerPage}"
+            layout="${layout}"
+          ></gux-pagination>
+        `;
+        const page = await newSpecPage({ components, html, language });
 
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxPagination],
-      html: `<gux-pagination></gux-pagination>`,
-      language: 'en'
-    });
+        expect(page.rootInstance).toBeInstanceOf(GuxPagination);
 
-    component = page.rootInstance;
-    component.pageChanged = {
-      emit: jest.fn()
-    };
-  });
-
-  it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxPagination);
-  });
-
-  describe('Class Logic', () => {
-    describe('setPage', () => {
-      describe('successful changes', () => {
-        beforeEach(() => {
-          component.currentPage = 3;
-          component.totalItems = 101;
-
-          component.setPage(2);
-        });
-
-        it('should set the current page property', () => {
-          expect(component.currentPage).toBe(2);
-        });
-      });
-
-      describe('when attempting to set the page before the first page', () => {
-        beforeEach(() => {
-          component.currentPage = 3;
-          component.totalItems = 101;
-
-          component.setPage(-1);
-        });
-
-        it('should set the property to the first page', () => {
-          expect(component.currentPage).toBe(1);
-        });
-      });
-
-      describe('when attempting to set the page past the last page', () => {
-        beforeEach(() => {
-          component.currentPage = 3;
-          component.totalItems = 101;
-
-          component.setPage(6);
-        });
-
-        it('should set the property to the last page', () => {
-          expect(component.currentPage).toBe(5);
-        });
-      });
-    });
-
-    describe('when calculating the total pages', () => {
-      beforeEach(() => {
-        component.totalItems = 25;
-        component.itemsPerPage = 7;
-      });
-
-      it('should take into count both total items and items per page', () => {
-        expect(component.calculatTotalPages()).toBe(4);
-      });
-    });
-
-    describe('when increasing the items per page', () => {
-      beforeEach(() => {
-        component.totalItems = 40;
-        component.currentPage = 2;
-
-        component.itemsPerPageComponent = {
-          setItemsPerPage: jest.fn()
-        } as any;
-
-        // the content now all fits on one page
-        component.setItemsPerPage(50);
-        component.componentWillUpdate();
-      });
-
-      it('should not allow current page to remain beyond the new last page', () => {
-        expect(component.currentPage).toBe(1);
-      });
-
-      it('should let the items per page element know that the items per page has changed', () => {
-        expect(
-          component.itemsPerPageComponent.setItemsPerPage
-        ).toHaveBeenCalledWith(50, undefined);
+        expect(page.root).toMatchSnapshot();
       });
     });
   });

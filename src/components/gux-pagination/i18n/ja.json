@@ -1,5 +1,0 @@
-{
-  "perPage": "/ページ",
-  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": "/{totalItems, number}"
-}

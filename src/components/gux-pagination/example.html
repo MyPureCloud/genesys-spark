@@ -1,16 +1,28 @@
-<div style="width: max-content">
+<div>
   <h1>English</h1>
-  <div lang="en" styl>
-    <gux-pagination total-items="123"></gux-pagination>
+  <h2>Full</h2>
+  <div lang="en">
+    <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
+  </div>
+
+  <h2>Small</h2>
+  <div lang="en">
+    <gux-pagination total-items="123" items-per-page="25" layout="small"></gux-pagination>
   </div>
 
   <h1>German</h1>
   <div lang="de">
-    <gux-pagination total-items="123"></gux-pagination>
+    <gux-pagination total-items="123" items-per-page="50"></gux-pagination>
   </div>
 
   <h1>Japanese</h1>
   <div lang="ja">
-    <gux-pagination total-items="123"></gux-pagination>
+    <gux-pagination current-page="3" total-items="123" items-per-page="25"></gux-pagination>
+  </div>
+
+
+  <h1>No Options</h1>
+  <div>
+    <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
   </div>
 </div>

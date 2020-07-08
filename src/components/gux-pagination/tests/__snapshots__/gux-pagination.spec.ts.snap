@@ -1,0 +1,1361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-pagination #render should render as expected (1) 1`] = `
+<gux-pagination current-page="1" items-per-page="25" layout="full" total-items="1000">
+  <div class="full gux-pagination-container">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            1 - 25
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="25">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="25" value="25">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="25">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="25" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="25" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="25" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="25" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="1" total-pages="40">
+        <div class="gux-pagination-buttons-container">
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="full gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="1">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="1">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 40
+            </div>
+          </div>
+          <div class="full gux-pagination-buttons-small-spacer"></div>
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (2) 1`] = `
+<gux-pagination current-page="1" items-per-page="50" layout="full" total-items="1000">
+  <div class="full gux-pagination-container">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="1" items-per-page="50" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            1 - 50
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="50">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="50" value="50">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="50">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="50" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="50" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="50" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="50" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="1" total-pages="20">
+        <div class="gux-pagination-buttons-container">
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="full gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="1">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="1">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 20
+            </div>
+          </div>
+          <div class="full gux-pagination-buttons-small-spacer"></div>
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (3) 1`] = `
+<gux-pagination current-page="1" items-per-page="75" layout="full" total-items="1000">
+  <div class="full gux-pagination-container">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="1" items-per-page="75" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            1 - 75
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="75">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="75" value="75">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="75">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="75" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="75" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="75" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="75" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="1" total-pages="14">
+        <div class="gux-pagination-buttons-container">
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="full gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="1">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="1">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 14
+            </div>
+          </div>
+          <div class="full gux-pagination-buttons-small-spacer"></div>
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (4) 1`] = `
+<gux-pagination current-page="1" items-per-page="100" layout="full" total-items="1000">
+  <div class="full gux-pagination-container">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="1" items-per-page="100" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            1 - 100
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="100">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="100" value="100">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="100">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="100" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="100" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="100" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="100" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="1" total-pages="10">
+        <div class="gux-pagination-buttons-container">
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="full gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="1">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="1">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 10
+            </div>
+          </div>
+          <div class="full gux-pagination-buttons-small-spacer"></div>
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (5) 1`] = `
+<gux-pagination current-page="1" items-per-page="25" layout="full" total-items="1000">
+  <div class="full gux-pagination-container">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            1 - 25
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="25">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="25" value="25">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="25">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="25" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="25" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="25" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="25" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="1" total-pages="40">
+        <div class="gux-pagination-buttons-container">
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="full gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="1">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="1">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 40
+            </div>
+          </div>
+          <div class="full gux-pagination-buttons-small-spacer"></div>
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (6) 1`] = `
+<gux-pagination current-page="10" items-per-page="25" layout="full" total-items="1000">
+  <div class="full gux-pagination-container">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="10" items-per-page="25" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            226 - 250
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="25">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="25" value="25">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="25">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="25" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="25" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="25" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="25" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="10" total-pages="40">
+        <div class="gux-pagination-buttons-container">
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="full gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="10">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="10">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 40
+            </div>
+          </div>
+          <div class="full gux-pagination-buttons-small-spacer"></div>
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (7) 1`] = `
+<gux-pagination current-page="10" items-per-page="50" layout="full" total-items="1000">
+  <div class="full gux-pagination-container">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="10" items-per-page="50" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            451 - 500
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="50">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="50" value="50">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="50">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="50" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="50" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="50" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="50" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="10" total-pages="20">
+        <div class="gux-pagination-buttons-container">
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="full gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="10">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="10">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 20
+            </div>
+          </div>
+          <div class="full gux-pagination-buttons-small-spacer"></div>
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (8) 1`] = `
+<gux-pagination current-page="10" items-per-page="75" layout="full" total-items="1000">
+  <div class="full gux-pagination-container">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="10" items-per-page="75" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            676 - 750
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="75">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="75" value="75">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="75">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="75" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="75" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="75" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="75" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="10" total-pages="14">
+        <div class="gux-pagination-buttons-container">
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="full gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="10">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="10">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 14
+            </div>
+          </div>
+          <div class="full gux-pagination-buttons-small-spacer"></div>
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (9) 1`] = `
+<gux-pagination current-page="10" items-per-page="100" layout="full" total-items="1000">
+  <div class="full gux-pagination-container">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="10" items-per-page="100" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            901 - 1,000
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="100">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="100" value="100">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="100">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="100" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="100" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="100" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="100" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="10" total-pages="10">
+        <div class="gux-pagination-buttons-container">
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="full gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="10">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="10">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 10
+            </div>
+          </div>
+          <div class="full gux-pagination-buttons-small-spacer"></div>
+          <div class="full gux-pagination-buttons-group">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (10) 1`] = `
+<gux-pagination current-page="1" items-per-page="25" layout="small" total-items="1000">
+  <div class="gux-pagination-container small">
+    <div class="gux-pagination-container-left">
+      <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            1 - 25
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="25">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown>
+              <!---->
+              <div class="default gux-dropdown">
+                <div class="select-field">
+                  <span aria-hidden="true" class="ghost"></span>
+                  <gux-text-field class="unclearable" title="25" value="25">
+                    <div>
+                      <div class="gux-field">
+                        <input readonly="" type="text" value="25">
+                      </div>
+                    </div>
+                  </gux-text-field>
+                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+                  </button>
+                </div>
+                <div class="gux-options">
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="25">
+                      <span style="display: none;">
+                        25
+                      </span>
+                      <gux-text-highlight highlight="25" text="25"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="50">
+                      <span style="display: none;">
+                        50
+                      </span>
+                      <gux-text-highlight highlight="25" text="50"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="75">
+                      <span style="display: none;">
+                        75
+                      </span>
+                      <gux-text-highlight highlight="25" text="75"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                  <gux-option tabindex="0">
+                    <!---->
+                    <div title="100">
+                      <span style="display: none;">
+                        100
+                      </span>
+                      <gux-text-highlight highlight="25" text="100"></gux-text-highlight>
+                    </div>
+                  </gux-option>
+                </div>
+              </div>
+            </gux-dropdown>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div>
+      <gux-pagination-buttons current-page="1" total-pages="40">
+        <div class="gux-pagination-buttons-container">
+          <div class="gux-pagination-buttons-group small">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="First">
+                <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" disabled="" title="Previous">
+                <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+          <div class="gux-pagination-buttons-input-container small">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-text-field use-clear-button="false" value="1">
+                <div>
+                  <div class="gux-field">
+                    <input type="text" value="1">
+                  </div>
+                </div>
+              </gux-text-field>
+            </div>
+            <div>
+              of 40
+            </div>
+          </div>
+          <div class="gux-pagination-buttons-small-spacer small"></div>
+          <div class="gux-pagination-buttons-group small">
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Next">
+                <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+              </button>
+            </gux-button>
+            <gux-button>
+              <!---->
+              <button class="gux-secondary" title="Last">
+                <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;

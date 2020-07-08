@@ -29,7 +29,7 @@ export async function buildI18nForComponent(
   }, new Map<string, IntlMessageFormat>());
 
   return (resourceKey: string, context?: any): string =>
-    intlFormats.get(resourceKey).format(context);
+    intlFormats.get(resourceKey).format(context) as string;
 }
 
 export async function getComponentI18nResources(
@@ -60,6 +60,7 @@ export async function getComponentI18nResources(
 export function getDesiredLocale(element: HTMLElement): string {
   const locale = findLocaleInDom(element);
   const lang = locale.split(/[_-]/)[0];
+
   if (locales.indexOf(locale) >= 0) {
     return locale;
   } else if (locale.indexOf(lang) >= 0) {

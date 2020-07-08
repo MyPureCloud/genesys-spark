@@ -1,5 +1,0 @@
-{
-  "perPage": "per pagina",
-  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": " van {totalItems, number}"
-}

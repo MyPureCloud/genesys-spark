@@ -1,36 +1,42 @@
-@import './pagination-variables.less';
 
-gux-pagination > .gux-pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+gux-pagination {
+  display: block;
 
-  gux-pagination-item-counts {
-    margin-right: @gux-pagination-text-margin;
-  }
+  .gux-pagination-container {
+    margin-top: 12px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
 
-  .pagination-buttons {
-    margin-left: auto;
-  }
-
-  &.gux-pagination-layout-medium,
-  &.gux-pagination-layout-small {
-    gux-pagination-items-per-page {
-      display: none;
-    }
-  }
-
-  &.gux-pagination-layout-small {
-    display: block;
-
-    gux-pagination-item-counts,
-    .pagination-buttons {
-      margin: 0;
-      text-align: center;
+    &.small {
+      gux-pagination-items-per-page {
+        display: none;
+      }
     }
 
-    .pagination-buttons {
-      margin-top: @gux-pagination-button-margin;
+    & > div {
+      order: 0;
+      flex: 0 1 auto;
+      align-self: auto;
+    }
+
+    .gux-pagination-container-left {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: center;
+
+      & > * {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+      }
     }
   }
 }
