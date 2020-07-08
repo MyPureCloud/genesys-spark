@@ -42,6 +42,12 @@ export class GuxSlider {
   @Prop()
   disabled: boolean = false;
 
+  /**
+   * Set an invisible label for accessibility uses
+   */
+  @Prop()
+  srLabel: string = '';
+
   sliderInput: HTMLInputElement;
   sliderMask: HTMLElement;
   sliderTooltip: HTMLElement;
@@ -112,6 +118,7 @@ export class GuxSlider {
             max={this.max}
             step={this.step}
             value={this.value}
+            aria-label={this.srLabel}
             ref={el => (this.sliderInput = el)}
             // onChange event required because IE11 doesn't support onInput for range inputs
             onChange={(e: UIEvent) => this.updateValue(e)}
@@ -139,13 +146,12 @@ export class GuxSlider {
           </div>
         </div>
         {this.displayTextBox && (
-          <gux-text-label label="slider value">
-            <gux-text-field
-              value={value}
-              onChange={(e: UIEvent) => this.updateValue(e)}
-              disabled={this.disabled}
-            />
-          </gux-text-label>
+          <gux-text-field
+            value={value}
+            onChange={(e: UIEvent) => this.updateValue(e)}
+            disabled={this.disabled}
+            srLabel={this.srLabel}
+          />
         )}
       </div>
     );

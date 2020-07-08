@@ -66,13 +66,6 @@ export class GuxDatepicker {
    */
   @Prop()
   firstDayOfWeek: number = 0;
-  /**
-   * The calendar locale (default to browser locale)
-   */
-  @Prop()
-  locale: string = navigator.languages
-    ? navigator.languages[0]
-    : navigator.language;
 
   @State()
   active: boolean = false;
@@ -380,10 +373,7 @@ export class GuxDatepicker {
     if (this.yearFormat === 'yyyy') {
       map.yyyy = value.getFullYear().toString();
     } else {
-      map.yy = value
-        .getFullYear()
-        .toString()
-        .slice(-2);
+      map.yy = value.getFullYear().toString().slice(-2);
     }
     const regexp = new RegExp(Object.keys(map).join('|'), 'gi');
     return {
@@ -515,10 +505,7 @@ export class GuxDatepicker {
     if (this.yearFormat === 'yyyy') {
       return newYear.getFullYear().toString();
     } else {
-      return newYear
-        .getFullYear()
-        .toString()
-        .slice(-2);
+      return newYear.getFullYear().toString().slice(-2);
     }
   }
 
@@ -587,7 +574,6 @@ export class GuxDatepicker {
                 mode={this.mode}
                 onInput={(e: CustomEvent) => this.onCalendarSelect(e)}
                 firstDayOfWeek={this.firstDayOfWeek}
-                locale={this.locale}
                 numberOfMonths={this.numberOfMonths}
               />
             </gux-text-field>

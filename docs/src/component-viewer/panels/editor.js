@@ -6,7 +6,8 @@ const CONFIG = {
   minimap: {
     enabled: false
   },
-  language: 'html'
+  language: 'html',
+  automaticLayout: true
 };
 
 export const createEditor = (panel, changeHandler) => {

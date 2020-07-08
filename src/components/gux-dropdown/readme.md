@@ -7,14 +7,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property      | Attribute     | Description                                                    | Type          | Default     |
-| ------------- | ------------- | -------------------------------------------------------------- | ------------- | ----------- |
-| `disabled`    | `disabled`    | Disable the input and prevent interactions.                    | `boolean`     | `false`     |
-| `filterable`  | `filterable`  | Whether the user can filter or not.                            | `boolean`     | `undefined` |
-| `items`       | --            | The list items, an item contains a `text` and can be disabled. | `IListItem[]` | `[]`        |
-| `mode`        | `mode`        | Sets the select mode (default, page or palette).               | `string`      | `'default'` |
-| `placeholder` | `placeholder` | The dropdown placeholder.                                      | `string`      | `undefined` |
-| `value`       | `value`       | Indicate the dropdown input value                              | `string`      | `''`        |
+| Property      | Attribute     | Description                                      | Type      | Default     |
+| ------------- | ------------- | ------------------------------------------------ | --------- | ----------- |
+| `disabled`    | `disabled`    | Disable the input and prevent interactions.      | `boolean` | `false`     |
+| `filterable`  | `filterable`  | Whether the user can filter or not.              | `boolean` | `undefined` |
+| `mode`        | `mode`        | Sets the select mode (default, page or palette). | `string`  | `'default'` |
+| `placeholder` | `placeholder` | The dropdown placeholder.                        | `string`  | `undefined` |
+| `value`       | `value`       | Indicate the dropdown input value                | `string`  | `''`        |
 
 
 ## Events
@@ -47,18 +46,13 @@ Type: `Promise<void>`
 
 - [gux-text-field](../gux-text-field)
 - [gux-icon](../gux-icon)
-- [gux-list](../gux-list)
-- [gux-list-item](../gux-list/list-item)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-dropdown --> gux-text-field
   gux-dropdown --> gux-icon
-  gux-dropdown --> gux-list
-  gux-dropdown --> gux-list-item
   gux-text-field --> gux-icon
-  gux-list-item --> gux-text-highlight
   gux-pagination-items-per-page --> gux-dropdown
   style gux-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```

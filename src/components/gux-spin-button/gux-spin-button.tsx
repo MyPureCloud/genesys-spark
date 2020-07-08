@@ -24,7 +24,7 @@ export class GuxSpinButton {
   /**
    * The current number value of the text field
    */
-  @Prop({ reflectToAttr: true, mutable: true })
+  @Prop({ mutable: true })
   value: number;
 
   /**

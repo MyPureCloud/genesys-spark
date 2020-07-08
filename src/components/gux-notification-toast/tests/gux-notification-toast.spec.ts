@@ -1,49 +1,115 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxNotificationToast } from '../gux-notification-toast';
 
+const components = [GuxNotificationToast];
+const language = 'en';
+
 describe('gux-notification-toast', () => {
-  let component: GuxNotificationToast;
+  describe('#render', () => {
+    [
+      {
+        description: 'should render neutral notification toast',
+        html: `
+          <gux-notification-toast accent="neutral">
+            <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+            <div slot="title">Title</div>
+            <div slot="message">This is the message</div>
+          </gux-notification-toast>
+        `
+      },
+      {
+        description: 'should render positive notification toast',
+        html: `
+          <gux-notification-toast accent="positive">
+            <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+            <div slot="title">Title</div>
+            <div slot="message">This is the message</div>
+          </gux-notification-toast>
+        `
+      },
+      {
+        description: 'should render alert notification toast',
+        html: `
+          <gux-notification-toast accent="alert">
+            <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+            <div slot="title">Title</div>
+            <div slot="message">This is the message</div>
+          </gux-notification-toast>
+        `
+      },
+      {
+        description: 'should render warning notification toast',
+        html: `
+          <gux-notification-toast accent="warning">
+            <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+            <div slot="title">Title</div>
+            <div slot="message">This is the message</div>
+          </gux-notification-toast>
+        `
+      }
+    ].forEach(({ description, html }) => {
+      it(description, async () => {
+        const page = await newSpecPage({ components, html, language });
 
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxNotificationToast],
-      html: `<gux-notification-toast></gux-notification-toast>`,
-      language: 'en'
+        expect(page.rootInstance).toBeInstanceOf(GuxNotificationToast);
+
+        expect(page.root).toMatchSnapshot();
+      });
     });
-
-    component = page.rootInstance;
   });
 
-  it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxNotificationToast);
-  });
+  describe('dismiss', () => {
+    it('click dismiss button', async () => {
+      const html = `
+        <gux-notification-toast accent="neutral">
+          <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+          <div slot="title">Title</div>
+          <div slot="message">This is the message</div>
+        </gux-notification-toast>
+      `;
+      const page = await newSpecPage({ components, html, language });
+      const element = page.root as HTMLElement;
+      const dismissButton = page.root.querySelector(
+        '.dismiss-button'
+      ) as HTMLButtonElement;
+      const guxdismissSpy = jest.fn();
+      const clickSpy = jest.fn();
+      const elementRemoveSpy = jest.spyOn(element, 'remove');
 
-  describe('Class Logic', () => {
-    describe('getAccent', () => {
-      it('should return neutral if props/attr is not set correctly', () => {
-        expect(component.getAccent()).toBe('neutral');
-        component.accent = 'aaaaaa';
-        expect(component.getAccent()).toBe('neutral');
-      });
+      page.win.addEventListener('guxdismiss', guxdismissSpy);
+      page.win.addEventListener('click', clickSpy);
 
-      it('should return accent in lowercase if props/attr is set correctly', () => {
-        expect(component.getAccent()).toBe('neutral');
-        component.accent = 'PoSitive';
-        expect(component.getAccent()).toBe('positive');
-      });
+      dismissButton.click();
+      await page.waitForChanges();
+
+      expect(guxdismissSpy).toHaveBeenCalled();
+      expect(clickSpy).not.toHaveBeenCalled();
+      expect(elementRemoveSpy).toBeCalledWith();
     });
 
-    describe('getIcon', () => {
-      it('should return icon and accent classname', () => {
-        expect(component.getIcon()).toBe('');
-        component.iconUri = 'test';
-        // testing JSX
-        expect((component.getIcon() as any).$tag$).toBe('img');
-        expect((component.getIcon() as any).$attrs$.src).toBe('test');
-        component.icon = 'test';
-        expect((component.getIcon() as any).$tag$).toBe('gux-icon');
-        expect((component.getIcon() as any).$attrs$.iconName).toBe('test');
+    it('click dismiss button and prevent default', async () => {
+      const html = `
+        <gux-notification-toast accent="neutral">
+          <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+          <div slot="title">Title</div>
+          <div slot="message">This is the message</div>
+        </gux-notification-toast>
+      `;
+      const page = await newSpecPage({ components, html, language });
+      const element = page.root as HTMLElement;
+      const dismissButton = page.root.querySelector(
+        '.dismiss-button'
+      ) as HTMLButtonElement;
+      const elementRemoveSpy = jest.spyOn(element, 'remove');
+
+      page.win.addEventListener('guxdismiss', (event: Event) => {
+        event.preventDefault();
       });
+
+      dismissButton.click();
+      await page.waitForChanges();
+
+      expect(elementRemoveSpy).not.toBeCalled();
     });
   });
 });

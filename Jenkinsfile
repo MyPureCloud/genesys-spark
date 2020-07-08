@@ -28,7 +28,7 @@ def shouldUploadAssets() {
 }
 
 pipeline {
-  agent { label 'infra_mesos' }
+  agent { label 'infra_mesos_v2' }
   options {
     quietPeriod(480)
     disableConcurrentBuilds()
@@ -93,7 +93,7 @@ pipeline {
         dir(env.REPO_DIR) {
           script {
             if ( isAlpha() ) {
-              sh "npm run release -- --prerelease alpha --skip.changelog "
+              sh "npm run release -- --prerelease alpha"
             } else {
               sh "npm run release"
             }

@@ -20,10 +20,11 @@ export const createAttributeGroup = (parent, astNode, renderCallback) => {
     if (handler) {
       handler(name, astNode, element, renderCallback);
     } else {
-      console.error(
-        'Found attribute type with no implemented renderer: ',
-        name
-      );
+      console.error('Found attribute type with no implemented renderer: ', {
+        elementName,
+        attributeName: name,
+        attributeType: type
+      });
     }
   });
 };

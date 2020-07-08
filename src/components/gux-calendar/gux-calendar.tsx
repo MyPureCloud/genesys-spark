@@ -8,6 +8,7 @@ import {
   Prop,
   State
 } from '@stencil/core';
+
 import { CalendarModes, KeyCode } from '../../common-enums';
 import {
   addClassToElements,
@@ -17,6 +18,7 @@ import {
   fromIsoDateString,
   removeClassToElements
 } from '../../common-utils';
+import { getDesiredLocale } from '../i18n';
 import { IDateElement } from './gux-calendar-constants';
 
 @Component({
@@ -40,14 +42,6 @@ export class GuxCalendar {
   firstDayOfWeek: number = 0;
 
   /**
-   * The calendar locale (default to browser locale)
-   */
-  @Prop()
-  locale: string = navigator.languages
-    ? navigator.languages[0]
-    : navigator.language;
-
-  /**
    * The calendar mode (can be single or range)
    */
   @Prop()
@@ -69,6 +63,9 @@ export class GuxCalendar {
    */
   @Event()
   input: EventEmitter<string>;
+
+  private locale: string = 'en';
+
   emitInput() {
     this.input.emit(this.value);
   }
@@ -377,6 +374,8 @@ export class GuxCalendar {
   }
 
   componentWillLoad() {
+    this.locale = getDesiredLocale(this.root);
+
     if (!this.value) {
       const now = new Date();
       now.setHours(0, 0, 0, 0);

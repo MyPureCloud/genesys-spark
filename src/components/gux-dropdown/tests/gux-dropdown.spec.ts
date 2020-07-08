@@ -1,13 +1,23 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxDropdown } from '../gux-dropdown';
+import { GuxOption } from '../gux-option/gux-option';
 
 describe('gux-dropdown', () => {
   let component: GuxDropdown;
 
   beforeEach(async () => {
     const page = await newSpecPage({
-      components: [GuxDropdown],
-      html: `<gux-dropdown></gux-dropdown>`,
+      components: [GuxDropdown, GuxOption],
+      html: `
+      <gux-dropdown>
+        <gux-option value="en-US">American English</gux-option>
+        <gux-option value="es">Latin American Spanish</gux-option>
+        <gux-option value="es-ES">European Spanish</gux-option>
+        <gux-option value="en-UK">UK English</gux-option>
+        <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
+        <gux-option value="fr" text="European French"></gux-option>
+        <gux-option>Dutch</gux-option>
+      </gux-dropdown>`,
       language: 'en'
     });
 
@@ -19,18 +29,16 @@ describe('gux-dropdown', () => {
   });
 
   describe('Class Logic', () => {
-    const items = [{ text: 'Belgium' }, { text: 'Brazil' }];
-    const thirdItem = { text: 'France' };
-
-    beforeEach(async () => {
-      component.items = [...items, thirdItem];
-    });
-
     describe('methods', () => {
       it('setValue', () => {
         const value = 'dummy';
-        component.setValue(value);
-        expect(component.value).toEqual(value);
+        const text = 'dummyText';
+        spyOn(component, 'emitChange').and.callFake(() => {
+          return;
+        });
+        component.setValue(text, value);
+        expect(component.value).toEqual(text);
+        expect(component.emitChange).toHaveBeenCalledWith(value);
       });
       it('_clickHandler', () => {
         component.disabled = false;
@@ -44,7 +52,7 @@ describe('gux-dropdown', () => {
       });
       it('_focusListItemHandler', () => {
         const value = 'dummy';
-        component._focusListItemHandler(value);
+        component._focusOptionItemHandler(value);
         expect(component.forcedGhostValue).toEqual(value);
       });
       it('_blurHandler', () => {
@@ -61,15 +69,38 @@ describe('gux-dropdown', () => {
     describe('getters', () => {
       it('filteredItems', () => {
         component.filterable = false;
-        expect(component.filteredItems).toEqual([...items, thirdItem]);
+        expect(component.filteredItems.map(opt => opt.text)).toEqual([
+          'American English',
+          'Latin American Spanish',
+          'European Spanish',
+          'UK English',
+          'Canadian French',
+          'European French',
+          'Dutch'
+        ]);
         component.filterable = true;
-        component.value = 'B';
-        expect(component.filteredItems).toEqual(items);
+        component.value = 'Eu';
+        expect(component.filteredItems.map(opt => opt.text)).toEqual([
+          'European Spanish',
+          'European French'
+        ]);
+        component.filterable = true;
+        component.value = 'eu';
+        expect(component.filteredItems.map(opt => opt.text)).toEqual([
+          'European Spanish',
+          'European French'
+        ]);
+        component.value = 'Ame';
+        expect(component.filteredItems.map(opt => opt.text)).toEqual([
+          'American English'
+        ]);
+        component.value = 'Ind';
+        expect(component.filteredItems.map(opt => opt.text)).toEqual([]);
       });
       it('ghost', () => {
         component.opened = true;
         component.filterable = true;
-        component.forcedGhostValue = 'Bel';
+        component.forcedGhostValue = 'Ame';
         expect(component.ghost).toEqual(component.forcedGhostValue);
         component.opened = false;
         component.value = '';

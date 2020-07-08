@@ -25,7 +25,8 @@ body {
 }
 
 .component-viewer>.left-column {
-    width: 600px;
+    min-width: 600px;
+    flex-grow: 1;
     border-right: @border;
 
     >.preview {
@@ -34,18 +35,42 @@ body {
         border-bottom: @border;
         padding: 27px 30px;
         overflow-y: auto;
+        background-color: #fff793;
+        color: #ff4f1f;
+
+        &.gux-light-theme {
+            background-color: #fdfdfd;
+            color: #444a52
+        }
+
+        &.gux-dark-theme {
+            background-color: #393845;
+            color: #fdfdfd
+        }
     }
 
     >.editor {
-        height: 400px;
+        max-height: 400px;
+        flex-grow: 1;
     }
 }
 
 .component-viewer>.right-column {
+    max-width: 600px;
+    min-width: 300px;
     flex-grow: 1;
     overflow: auto;
     line-height: 1.4em;
     color: #444a52;
+
+    summary {
+        margin: 5px;
+        &.heading {
+            font-size: 20px;
+            padding: 5px 0;
+            border-bottom: @soft-border;
+        }
+    }
 
     .title {
         font-size: 14px;
@@ -99,4 +124,27 @@ body {
             cursor: pointer;
         }
     }
+}
+
+.tab {
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+    }
+
+.tab button.active {
+    background-color: #ccc;
 }

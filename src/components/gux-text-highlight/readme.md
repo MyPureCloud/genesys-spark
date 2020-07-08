@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property    | Attribute   | Description                             | Type     | Default                   |
-| ----------- | ----------- | --------------------------------------- | -------- | ------------------------- |
-| `highlight` | `highlight` | The text to highlight.                  | `string` | `undefined`               |
-| `strategy`  | `strategy`  | The way the text should be highlighted. | `string` | `HighlightStrategy.Start` |
-| `text`      | `text`      | The value to display.                   | `string` | `undefined`               |
+| Property    | Attribute   | Description                             | Type                               | Default     |
+| ----------- | ----------- | --------------------------------------- | ---------------------------------- | ----------- |
+| `highlight` | `highlight` | The text to highlight.                  | `string`                           | `undefined` |
+| `strategy`  | `strategy`  | The way the text should be highlighted. | `"contains" \| "fuzzy" \| "start"` | `'start'`   |
+| `text`      | `text`      | The value to display.                   | `string`                           | `undefined` |
 
 
 ## Dependencies
@@ -20,12 +20,14 @@
 
  - [gux-command-palette](../gux-command-palette)
  - [gux-list-item](../gux-list/list-item)
+ - [gux-option](../gux-dropdown/gux-option)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-command-palette --> gux-text-highlight
   gux-list-item --> gux-text-highlight
+  gux-option --> gux-text-highlight
   style gux-text-highlight fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

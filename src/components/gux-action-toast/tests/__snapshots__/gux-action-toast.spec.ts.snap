@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-action-toast #render should render action toast 1`] = `
+<gux-action-toast accent="neutral">
+  <!---->
+  <div class="header">
+    <div class="icon">
+      <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+    </div>
+    <div class="title">
+      <div slot="title">
+        Title
+      </div>
+    </div>
+  </div>
+  <div class="message">
+    <div slot="message">
+      This is the message
+    </div>
+  </div>
+  <div class="action-buttons">
+    <div class="negitive-button">
+      <gux-button slot="negitive-button">
+        Reject
+      </gux-button>
+    </div>
+    <div class="positive-button">
+      <gux-button accent="primary" slot="positive-button">
+        Accept
+      </gux-button>
+    </div>
+  </div>
+</gux-action-toast>
+`;

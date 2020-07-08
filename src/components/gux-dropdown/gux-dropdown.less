@@ -14,6 +14,9 @@
 @focus-outline-dark-theme: @gux-blue;
 @active-border: @gux-dark-blue;
 
+@menu-background-color: @gux-off-white;
+@menu-border-color: #dae1eb;
+
 // Style
 gux-dropdown {
   div.gux-dropdown {
@@ -42,6 +45,9 @@ gux-dropdown {
         border-radius: 2px;
         font-size: 12px;
         line-height: 1.66666667;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       gux-text-field {
@@ -52,6 +58,7 @@ gux-dropdown {
         input {
           cursor: pointer;
           background-color: transparent;
+          text-overflow: ellipsis;
         }
 
         &.unclearable {
@@ -81,19 +88,72 @@ gux-dropdown {
       }
     }
 
-    gux-list {
+    .gux-options {
       display: none;
       position: absolute;
       width: 100%;
       z-index: 1;
+      margin: 0;
+      padding: 8px 0;
+      background: @menu-background-color;
+      border: 1px solid @menu-border-color;
+      box-shadow: none;
+      color: @text-color;
+
       &.opened {
         display: block;
+      }
+
+      > gux-option {
+        position: relative;
+        height: 32px;
+        line-height: 32px;
+        padding: 0px 16px;
+        display: flex;
+        cursor: pointer;
+
+        > div {
+          position: relative;
+          overflow: hidden; 
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          .ghost {
+            position: absolute;
+          }
+        }
+
+        &[disabled] {
+          opacity: 0.5;
+          pointer-events: none;
+          cursor: default;
+        }
+
+        &.filtered {
+          display: none;
+        }
+
+        &:not([disabled]) {
+          &[selected] {
+            background: @gux-light-blue;
+            color: @text-color;
+          }
+
+          &:hover,
+          &:focus {
+            background: @gux-dark-blue;
+            color: @gux-off-white;
+          }
+        }
       }
     }
 
     &.page {
       .select-field {
         .ghost {
+          white-space: nowrap;
+          overflow: hidden;
+          
           .large-title();
           line-height: 1.66666667;
           height: 48px;
@@ -128,6 +188,9 @@ gux-dropdown {
     &.palette {
       .select-field {
         .ghost {
+          white-space: nowrap;
+          overflow: hidden;
+
           .small-title();
           line-height: 1.66666667;
           height: 52px;
@@ -158,11 +221,7 @@ gux-dropdown {
           border-bottom: 1px solid @gux-dark-blue;
         }
       }
-
-      gux-list {
-        width: calc(100% - 16px);
-        margin: 0 8px;
-      }
+      
     }
   }
 }

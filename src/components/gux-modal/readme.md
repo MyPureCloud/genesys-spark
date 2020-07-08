@@ -1,23 +1,30 @@
 # genesys-modal
 
-This is a basic modal component in which a user can customize the content using a slot with the name modal-content.
-
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-| Property     | Attribute     | Description                                              | Type                             | Default          |
-| ------------ | ------------- | -------------------------------------------------------- | -------------------------------- | ---------------- |
-| `modalTitle` | `modal-title` | Indicates the title/header for the modal                 | `string`                         | `'Modal Header'` |
-| `size`       | `size`        | Indicates the size of the modal (small, medium or large) | `"large" \| "medium" \| "small"` | `undefined`      |
+| Property | Attribute | Description                                              | Type                             | Default   |
+| -------- | --------- | -------------------------------------------------------- | -------------------------------- | --------- |
+| `size`   | `size`    | Indicates the size of the modal (small, medium or large) | `"large" \| "medium" \| "small"` | `'small'` |
 
 
 ## Events
 
-| Event   | Description                                              | Type               |
-| ------- | -------------------------------------------------------- | ------------------ |
-| `close` | Triggered when any of the the cancel buttons get clicked | `CustomEvent<any>` |
+| Event        | Description                           | Type                |
+| ------------ | ------------------------------------- | ------------------- |
+| `guxdismiss` | Fired when a user dismisses the modal | `CustomEvent<void>` |
+
+
+## Slots
+
+| Slot                    | Description                                                       |
+| ----------------------- | ----------------------------------------------------------------- |
+| `"content"`             | Required slot for the modal content                               |
+| `"left-align-buttons"`  | Optional slot to set gux-buttons aligned to the left of the modal |
+| `"right-align-buttons"` | Optional slot to set gux-buttons aligned to the left of the modal |
+| `"title"`               | Optional slot to set the modal title                              |
 
 
 ## Dependencies
@@ -25,13 +32,11 @@ This is a basic modal component in which a user can customize the content using 
 ### Depends on
 
 - [gux-icon](../gux-icon)
-- [gux-button](../gux-button)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-modal --> gux-icon
-  gux-modal --> gux-button
   style gux-modal fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

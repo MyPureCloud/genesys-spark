@@ -1,0 +1,663 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-modal #render should render large modal 1`] = `
+<gux-modal size="large">
+  <!---->
+  <div class="modal">
+    <div class="large modal-container">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render large modal 2`] = `
+<gux-modal size="large">
+  <!---->
+  <div class="modal">
+    <div class="large modal-container">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render medium modal 1`] = `
+<gux-modal size="medium">
+  <!---->
+  <div class="modal">
+    <div class="medium modal-container">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render medium modal 2`] = `
+<gux-modal size="medium">
+  <!---->
+  <div class="modal">
+    <div class="medium modal-container">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render modal with just left align buttons 1`] = `
+<gux-modal size="small">
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons"></div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render modal with just left align buttons 2`] = `
+<gux-modal size="small">
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons"></div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render modal with just right align buttons 1`] = `
+<gux-modal size="small">
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div></div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render modal with just right align buttons 2`] = `
+<gux-modal size="small">
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div></div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render modal without a title 1`] = `
+<gux-modal size="large">
+  <!---->
+  <div class="modal">
+    <div class="large modal-container">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render modal without a title 2`] = `
+<gux-modal size="large">
+  <!---->
+  <div class="modal">
+    <div class="large modal-container">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render modal without buttons 1`] = `
+<gux-modal size="small">
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content no-buttons">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render modal without buttons 2`] = `
+<gux-modal size="small">
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content no-buttons">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render small modal 1`] = `
+<gux-modal size="small">
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render small modal 2`] = `
+<gux-modal size="small">
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render small modal by default 1`] = `
+<gux-modal>
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render small modal by default 2`] = `
+<gux-modal>
+  <!---->
+  <div class="modal">
+    <div class="modal-container small">
+      <button class="dismiss-button" title="Dismiss">
+        <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+      </button>
+      <h1 class="modal-header">
+        <div slot="title">
+          Modal Title
+        </div>
+      </h1>
+      <div class="modal-content">
+        <p>
+          <div slot="content">
+            This contains the modal content.
+          </div>
+        </p>
+      </div>
+      <div class="button-footer">
+        <div>
+          <div slot="left-align-buttons">
+            <gux-button title="Cancel">
+              <!---->
+              <button class="gux-secondary" title="Cancel">
+                Cancel
+              </button>
+            </gux-button>
+          </div>
+        </div>
+        <div class="right-align-buttons">
+          <div slot="right-align-buttons">
+            <gux-button accent="primary" title="Button">
+              <!---->
+              <button class="gux-primary" title="Button">
+                Accept
+              </button>
+            </gux-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</gux-modal>
+`;

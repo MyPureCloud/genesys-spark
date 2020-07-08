@@ -22,7 +22,8 @@
 gux-button {
   display: inline-block;
   min-width: 32px;
-  
+  pointer-events: none;
+
   > button {
     width: 100%;
     padding: 0 16px;
@@ -34,7 +35,8 @@ gux-button {
     text-overflow: ellipsis;
     font-size: 12px;
     font-weight: bold;
-    
+    pointer-events: auto;
+
     &[disabled] {
       opacity: 0.5;
       cursor: default;
@@ -43,70 +45,73 @@ gux-button {
     &:focus {
       outline: none;
     }
-
-    &.gux-primary {
-      background-color: @primary-background-color;
-      border: 1px solid @primary-border-color;
-      color: @primary-color;
-      &:hover {
-        box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.48);
-      }
-      &:active {
-        background-color: @primary-active-background-color;
-      }
-      &:focus {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
-      }
-    }
-
-    &.gux-secondary {
-      background-color: @secondary-background-color;
-      border: 1px solid @secondary-border-color;
-      color: @secondary-color;
-      &:hover {
-        box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.24);
-      }
-      &:active {
-        background-color: @secondary-active-background-color;
-      }
-      &:focus {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
-      }
-    }
   }
 }
 
 // Theming
-
-// Dark
 .gux-button-dark-theme {
   > button {
-    &.gux-primary {
-      background-color: @primary-dark-background-color;
-      border: 1px solid @primary-dark-border-color;
-      color: @primary-dark-color;
-      &:hover {
-        background-color: @primary-dark-hover-background-color;
-      }
-      &:active {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 1);
-      }
-      &:focus {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
-      }
-    }
     &.gux-secondary {
       background-color: @secondary-dark-background-color;
       border: 1px solid @secondary-dark-border-color;
       color: @secondary-dark-color;
+
       &:hover {
         background-color: @secondary-dark-hover-background-color;
       }
+
       &:active {
         box-shadow: 0 0 0 3px rgba(117, 168, 255, 1);
       }
+
       &:focus {
         box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+      }
+
+      &[disabled] {
+        &:hover {
+          background-color: @secondary-dark-background-color;
+        }
+
+        &:active {
+          box-shadow: none;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &.gux-primary {
+      background-color: @primary-dark-background-color;
+      border: 1px solid @primary-dark-border-color;
+      color: @primary-dark-color;
+
+      &:hover {
+        background-color: @primary-dark-hover-background-color;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 3px rgba(117, 168, 255, 1);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+      }
+
+      &[disabled] {
+        &:hover {
+          background-color: @primary-dark-background-color;
+        }
+
+        &:active {
+          box-shadow: none;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
       }
     }
   }
@@ -114,37 +119,78 @@ gux-button {
 
 .gux-button-light-theme {
   > button {
-    &.gux-primary {
-      background-color: @primary-background-color;
-      border: 1px solid @primary-border-color;
-      color: @primary-color;
-      &:hover {
-        box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.48);
-      }
-      &:active {
-        background-color: @primary-active-background-color;
-      }
-      &:focus {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
-      }
-    }
     &.gux-secondary {
       background-color: @secondary-background-color;
       border: 1px solid @secondary-border-color;
       color: @secondary-color;
+
       &:hover {
         box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.24);
       }
+
       &:active {
         background-color: @secondary-active-background-color;
       }
+
       &:focus {
         box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+      }
+
+      &[disabled] {
+        &:hover {
+          box-shadow: none;
+        }
+
+        &:active {
+          background-color: @secondary-background-color;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &.gux-primary {
+      background-color: @primary-background-color;
+      border: 1px solid @primary-border-color;
+      color: @primary-color;
+
+      &:hover {
+        box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.48);
+      }
+
+      &:active {
+        background-color: @primary-active-background-color;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+      }
+
+      &[disabled] {
+        &:hover {
+          box-shadow: none;
+        }
+
+        &:active {
+          background-color: @primary-background-color;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
       }
     }
   }
 }
 
+// Default Theme
+gux-button {
+  .gux-button-light-theme();
+}
+
+// Dark
 .gux-dark-theme {
   gux-button {
     .gux-button-dark-theme();
@@ -161,10 +207,5 @@ gux-button.gux-dark-theme {
   }
 }
 gux-button.gux-light-theme {
-  .gux-button-light-theme();
-}
-
-// Default Theme
-gux-button {
   .gux-button-light-theme();
 }

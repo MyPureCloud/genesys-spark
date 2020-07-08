@@ -47,9 +47,7 @@ describe('gux-slider', () => {
     expect(input).toHaveClass('range-input');
     let val = await input.getProperty('disabled');
     expect(val).toBe(true);
-    const textField = await page.find(
-      'gux-slider gux-text-label gux-text-field'
-    );
+    const textField = await page.find('gux-slider gux-text-field');
     val = await textField.getProperty('disabled');
     expect(val).toBe(true);
   });

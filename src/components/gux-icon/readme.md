@@ -11,7 +11,7 @@
 | ------------------ | ------------------- | ------------------------------------------------------------------------------------- | --------- | ----------- |
 | `decorative`       | `decorative`        | Indicate whether the icon should be ignored by accessibility tools or not             | `boolean` | `false`     |
 | `iconName`         | `icon-name`         | Indicate which icon to display                                                        | `string`  | `undefined` |
-| `screenreaderText` | `screenreader-text` | Localized text describing the intent of this icon (not required if `decorative=true`) | `string`  | `undefined` |
+| `screenreaderText` | `screenreader-text` | Localized text describing the intent of this icon (not required if `decorative=true`) | `string`  | `''`        |
 
 
 ## Dependencies
@@ -20,7 +20,6 @@
 
  - [gux-accordion](../gux-accordion)
  - [gux-action-button](../gux-action-button)
- - [gux-action-toast](../gux-action-toast)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-calendar](../gux-calendar)
  - [gux-color-picker](../gux-color-picker)
@@ -45,7 +44,6 @@
 graph TD;
   gux-accordion --> gux-icon
   gux-action-button --> gux-icon
-  gux-action-toast --> gux-icon
   gux-advanced-dropdown --> gux-icon
   gux-calendar --> gux-icon
   gux-color-picker --> gux-icon
