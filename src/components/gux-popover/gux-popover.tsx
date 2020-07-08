@@ -8,6 +8,7 @@ import {
   Prop,
   Watch
 } from '@stencil/core';
+import { ClickOutside } from 'stencil-click-outside';
 import { buildI18nForComponent } from '../i18n';
 import modalComponentResources from './i18n/en.json';
 
@@ -51,6 +52,12 @@ export class GuxPopover {
   hideClose: boolean;
 
   /**
+   * Close popover when the user clicks outside of its bounds
+   */
+  @Prop()
+  closeOnClickOutside: boolean = false;
+
+  /**
    * Indicate if the popover is hidden
    */
   @Prop({ mutable: true })
@@ -70,6 +77,13 @@ export class GuxPopover {
   hiddenHandler(hidden: boolean) {
     if (!hidden && !this.popperInstance) {
       this.runPopper();
+    }
+  }
+
+  @ClickOutside()
+  checkForClickOutside() {
+    if (this.closeOnClickOutside && !this.hidden) {
+      this.closePopover();
     }
   }
 

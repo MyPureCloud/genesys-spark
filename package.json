@@ -40,7 +40,9 @@
   "dependencies": {
     "@popperjs/core": "^2.4.0",
     "intl-messageformat": "^2.2.0",
-    "sortablejs": "^1.10.2"
+    "resize-observer-polyfill": "^1.5.1",
+    "sortablejs": "^1.10.2",
+    "stencil-click-outside": "^1.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

@@ -1,4 +1,14 @@
-import { Component, Element, h } from '@stencil/core'; // , Element, Method, Prop
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  h,
+  readTask,
+  State,
+  writeTask
+} from '@stencil/core';
+import ResizeObserver from 'resize-observer-polyfill';
 import Sortable, { MoveEvent } from 'sortablejs';
 
 @Component({
@@ -6,18 +16,35 @@ import Sortable, { MoveEvent } from 'sortablejs';
   tag: 'gux-tabs'
 })
 export class GuxTabs {
-  sortableInstance?: Sortable;
+  /**
+   * Triggers when the new tab button is selected.
+   */
+  @Event() newTab: EventEmitter;
+
+  /**
+   * Triggers when the sorting of the tabs is changed.
+   */
+  @Event() sortChanged: EventEmitter;
 
   @Element() private element: HTMLElement;
 
+  @State() private hasScrollbar: boolean = false;
+
+  private sortableInstance?: Sortable;
+
+  private resizeObserver?: ResizeObserver;
+
   createSortable() {
     this.sortableInstance = new Sortable(
-      this.element.querySelector('.gux-tabs'),
+      this.element.querySelector('.scrollable-section'),
       {
         animation: 250,
         filter: '.ignore-sort',
         onMove: (event: MoveEvent) => {
           return !event.related.classList.contains('ignore-sort');
+        },
+        onUpdate: () => {
+          this.sortChanged.emit();
         }
       }
     );
@@ -34,28 +61,101 @@ export class GuxTabs {
     if (this.sortableInstance) {
       this.destroySortable();
     }
+    if (process.env.npm_lifecycle_event.indexOf('test') === -1) {
+      this.resizeObserver.unobserve(this.element);
+    }
   }
 
   componentDidLoad() {
     if (!this.sortableInstance) {
       this.createSortable();
     }
+
+    if (!this.resizeObserver) {
+      this.resizeObserver = new ResizeObserver(() => {
+        readTask(() => {
+          const el = this.element.querySelector('.scrollable-section');
+          this.hasScrollbar = el.clientWidth !== el.scrollWidth;
+        });
+      });
+    }
+
+    if (process.env.npm_lifecycle_event.indexOf('test') === -1) {
+      this.resizeObserver.observe(this.element);
+    }
+  }
+
+  componentDidRender() {
+    setTimeout(() => {
+      readTask(() => {
+        const el = this.element.querySelector('.scrollable-section');
+        const hasScrollbar = el.clientWidth !== el.scrollWidth;
+        if (this.hasScrollbar !== hasScrollbar) {
+          this.hasScrollbar = hasScrollbar;
+        }
+      });
+    }, 200);
+  }
+
+  scrollLeft() {
+    writeTask(() => {
+      this.element.querySelector('.scrollable-section').scrollBy(-100, 0);
+    });
+  }
+
+  scrollRight() {
+    writeTask(() => {
+      this.element.querySelector('.scrollable-section').scrollBy(100, 0);
+    });
   }
 
   render() {
     return (
       <div class="gux-tabs">
-        <gux-tab title="Title of tab" selected={true} index={0}>
-          {' '}
-        </gux-tab>
-        <gux-tab
-          title="Title of tab title title"
-          selected={false}
-          index={1}
-        ></gux-tab>
-        <button title="Create New Tab" class="add-tab ignore-sort">
-          <gux-icon iconName="ic-add" decorative={true}></gux-icon>
-        </button>
+        <div class="action-button-container">
+          {this.hasScrollbar ? (
+            <button
+              title="Create New Tab"
+              class="arrow-button"
+              onClick={() => this.scrollLeft()}
+            >
+              <gux-icon iconName="ic-chevron-left" decorative={true} />
+            </button>
+          ) : null}
+        </div>
+        <div class="scrollable-section">
+          <slot />
+          {this.hasScrollbar ? null : (
+            <button
+              title="Create New Tab"
+              class="add-tab ignore-sort"
+              onClick={() => this.newTab.emit()}
+            >
+              <gux-icon iconName="ic-add" decorative={true} />
+            </button>
+          )}
+        </div>
+        <div class="action-button-container">
+          {this.hasScrollbar ? (
+            <button
+              title="Create New Tab"
+              class="arrow-button"
+              onClick={() => this.scrollRight()}
+            >
+              <gux-icon iconName="ic-chevron-right" decorative={true} />
+            </button>
+          ) : null}
+
+          {this.hasScrollbar ? (
+            <button
+              title="Create New Tab"
+              class="add-tab"
+              onClick={() => this.newTab.emit()}
+            >
+              <gux-icon iconName="ic-add" decorative={true} />
+            </button>
+          ) : null}
+        </div>
       </div>
     );
   }

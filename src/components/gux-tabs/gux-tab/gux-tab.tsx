@@ -1,42 +1,88 @@
-import { Component, h, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+  State,
+  writeTask
+} from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-tab.less',
   tag: 'gux-tab'
 })
 export class GuxTab {
-  @Prop() selected: boolean = false;
-  @Prop() title: string = '';
-  @Prop() index: number = 0;
+  /**
+   * unique id for the tab
+   */
+  @Prop() tabId: string;
 
-  @State() popoverHidden: boolean = true;
+  /**
+   * indicates whether or not the tab is selected
+   */
+  @Prop() active: boolean = false;
+
+  /**
+   * indicates the gux-icon to display on the left side of the tab (similar to a favicon in the browser)
+   */
+  @Prop() tabIconName: string;
+
+  /**
+   * Triggers when the tab is selected
+   * @returns the id of the tab
+   */
+  @Event() selected: EventEmitter<string>;
+
+  @State() private popoverHidden: boolean = true;
+  @State() private hasAnimated: boolean = false;
+
+  @Element() private element: HTMLElement;
 
   toggleOptions(e: MouseEvent) {
     this.popoverHidden = !this.popoverHidden;
-    e.preventDefault();
     e.stopPropagation();
-    e.stopImmediatePropagation();
+  }
+
+  onSelectDropdownOption(e: MouseEvent) {
+    this.popoverHidden = true;
+    e.stopPropagation();
   }
 
   selectTab() {
     this.popoverHidden = true;
+    if (!this.active) {
+      this.selected.emit(this.tabId);
+    }
+  }
+
+  componentDidLoad() {
+    if (!this.hasAnimated) {
+      writeTask(() => {
+        this.element.querySelector('.gux-tab').classList.add('show');
+        this.hasAnimated = true;
+      });
+    }
   }
 
   render() {
     return (
       <button
-        class={`gux-tab ${this.selected ? 'selected' : ''}`}
+        class={`gux-tab ${this.active ? 'selected' : ''}`}
         onClick={() => this.selectTab()}
         role="button"
       >
-        <div class="tab-icon-container">
-          <gux-icon iconName="ic-locked" decorative={true}></gux-icon>
-        </div>
-        <span class="tab-title" title="Title of tab">
-          {this.title}
+        {this.tabIconName ? (
+          <div class="tab-icon-container">
+            <gux-icon iconName={this.tabIconName} decorative={true}></gux-icon>
+          </div>
+        ) : null}
+        <span class="tab-title">
+          <slot name="title" />
         </span>
         <button
-          id={`tab${this.index}`}
+          id={this.tabId}
           class="tab-dropdown-container"
           onClick={(e: MouseEvent) => this.toggleOptions(e)}
         >
@@ -46,26 +92,15 @@ export class GuxTab {
         <gux-popover
           id="popover-example"
           position="top-start"
-          for={`tab${this.index}`}
+          for={this.tabId}
           hideClose={true}
           hidden={this.popoverHidden}
+          closeOnClickOutside={true}
+          onClose={() => (this.popoverHidden = true)}
         >
-          <button class="tab-dropdown-option" onClick={() => this.selectTab()}>
-            <gux-icon iconName="ic-pencil" decorative={true}></gux-icon>
-            <span> Edit... </span>
-          </button>
-          <button class="tab-dropdown-option" onClick={() => this.selectTab()}>
-            <gux-icon iconName="ic-clone" decorative={true}></gux-icon>
-            <span> Clone </span>
-          </button>
-          <button class="tab-dropdown-option" onClick={() => this.selectTab()}>
-            <gux-icon iconName="ic-share" decorative={true}></gux-icon>
-            <span> Share... </span>
-          </button>
-          <button class="tab-dropdown-option" onClick={() => this.selectTab()}>
-            <gux-icon iconName="ic-download" decorative={true}></gux-icon>
-            <span> Download... </span>
-          </button>
+          <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
+            <slot name="dropdown-options" />
+          </div>
         </gux-popover>
       </button>
     );
