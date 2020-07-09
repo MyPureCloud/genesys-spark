@@ -61,8 +61,9 @@ export class GuxTabs {
     if (this.sortableInstance) {
       this.destroySortable();
     }
-    if (process.env.npm_lifecycle_event.indexOf('test') === -1) {
-      this.resizeObserver.unobserve(this.element);
+
+    if (this.element instanceof window.Element) {
+      this.resizeObserver.unobserve(this.element.querySelector('.gux-tabs'));
     }
   }
 
@@ -80,8 +81,8 @@ export class GuxTabs {
       });
     }
 
-    if (process.env.npm_lifecycle_event.indexOf('test') === -1) {
-      this.resizeObserver.observe(this.element);
+    if (this.element instanceof window.Element) {
+      this.resizeObserver.observe(this.element.querySelector('.gux-tabs'));
     }
   }
 

@@ -42,10 +42,13 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.4.3",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
     "intl-messageformat": "^7.8.4",
     "resize-observer-polyfill": "^1.5.1",
     "sortablejs": "^1.10.2",
-    "stencil-click-outside": "^1.7.0"
+    "stencil-click-outside": "^1.7.0",
+    "style-loader": "^1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
