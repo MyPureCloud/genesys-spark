@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.87](http://inindca///compare/v1.0.0-alpha.86...v1.0.0-alpha.87) (2020-07-14)
+
+
+### Bug Fixes
+
+* input accept invalid values ([e8c6540](http://inindca///commit/e8c6540ec9de9ca69075ee9f44402592c9afbc12))
+
 ## [1.0.0-alpha.86](http://inindca///compare/v1.0.0-alpha.85...v1.0.0-alpha.86) (2020-07-08)
 
 <a name="0.48.0"></a>
