@@ -53,7 +53,7 @@ export class GuxSlider {
   sliderTooltip: HTMLElement;
   sliderTooltipContainer: HTMLElement;
 
-  inputRegex = new RegExp('(-?[0-9]+.?[0-9]*)%?');
+  inputRegex = new RegExp('^(-?[0-9]+[.]?[0-9]*)%?$');
 
   /**
    * Triggered when the value is changed
