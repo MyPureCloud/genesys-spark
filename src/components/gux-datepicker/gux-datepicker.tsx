@@ -51,6 +51,19 @@ export class GuxDatepicker {
    */
   @State()
   toFormatedValue: string = '';
+
+  /**
+   * The min date selectable
+   */
+  @Prop()
+  minDate: string = '';
+
+  /**
+   * The max date selectable
+   */
+  @Prop()
+  maxDate: string = '';
+
   /**
    * The calendar mode (can be single or range)
    */
@@ -573,6 +586,8 @@ export class GuxDatepicker {
                 value={this.value}
                 mode={this.mode}
                 onInput={(e: CustomEvent) => this.onCalendarSelect(e)}
+                minDate={this.minDate}
+                maxDate={this.maxDate}
                 firstDayOfWeek={this.firstDayOfWeek}
                 numberOfMonths={this.numberOfMonths}
               />
