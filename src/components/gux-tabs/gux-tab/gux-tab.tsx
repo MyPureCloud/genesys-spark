@@ -90,7 +90,6 @@ export class GuxTab {
         </button>
 
         <gux-popover
-          id="popover-example"
           position="top-start"
           for={this.tabId}
           hideClose={true}
