@@ -42,6 +42,18 @@ export class GuxCalendar {
   firstDayOfWeek: number = 0;
 
   /**
+   * The min date selectable
+   */
+  @Prop()
+  minDate: string = '';
+
+  /**
+   * The max date selectable
+   */
+  @Prop()
+  maxDate: string = '';
+
+  /**
    * The calendar mode (can be single or range)
    */
   @Prop()
@@ -163,6 +175,17 @@ export class GuxCalendar {
           hidden = true;
         }
       }
+
+      let disabled = false;
+      if (this.maxDate && fromIsoDateString(this.maxDate) < date) {
+        classes.push('disabled');
+        disabled = true;
+      }
+      if (this.minDate && fromIsoDateString(this.minDate) > date) {
+        classes.push('disabled');
+        disabled = true;
+      }
+
       let isSelected = false;
       if (this.mode === CalendarModes.Range) {
         const [start, end] = fromIsoDateRange(this.value);
@@ -186,6 +209,7 @@ export class GuxCalendar {
         class: classes.join(' '),
         date,
         hidden,
+        disabled,
         selected: isSelected
       });
       currentDate.setDate(currentDate.getDate() + 1);

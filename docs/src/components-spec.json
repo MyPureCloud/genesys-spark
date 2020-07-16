@@ -44,8 +44,10 @@
     "attributes": {
       "mode": ["single", "range"],
       "value": "text",
-      "numberOfMonths": "text",
-      "firstDayOfWeek": "text"
+      "min-date": "text",
+      "max-date": "text",
+      "number-of-months": "text",
+      "first-day-of-week": "text"
     },
     "events": { "input": "Triggered when value is changed" }
   },
