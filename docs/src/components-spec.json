@@ -214,15 +214,15 @@
     "events": { "guxdismiss": "toast dismiss button pressed" }
   },
   "gux-slider": {
-    "attributes": [
-      { "min": "text" },
-      { "max": "text" },
-      { "step": "text" },
-      { "value": "text" },
-      { "is-percentage": "checkbox" },
-      { "display-text-box": "checkbox" },
-      { "disabled": "checkbox" }
-    ],
+    "attributes": {
+      "min": "text",
+      "max": "text",
+      "step": "text",
+      "value": "text",
+      "is-percentage": "checkbox",
+      "display-text-box": "checkbox",
+      "disabled": "checkbox"
+    },
     "events": { "update": "slider value changed" }
   },
   "gux-spin-button": {},

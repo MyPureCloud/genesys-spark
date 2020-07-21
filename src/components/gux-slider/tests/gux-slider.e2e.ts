@@ -45,10 +45,7 @@ describe('gux-slider', () => {
     );
     const input = await page.find('gux-slider input');
     expect(input).toHaveClass('range-input');
-    let val = await input.getProperty('disabled');
-    expect(val).toBe(true);
-    const textField = await page.find('gux-slider gux-text-field');
-    val = await textField.getProperty('disabled');
+    const val = await input.getProperty('disabled');
     expect(val).toBe(true);
   });
 });
