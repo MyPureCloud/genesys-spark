@@ -141,6 +141,13 @@ export class GuxCalendar {
     return new Date(startDate.getTime() - firstDayOffset * (86400 * 1000));
   }
 
+  outOfBounds(date: Date): boolean {
+    return (
+      (this.maxDate !== '' && fromIsoDateString(this.maxDate) < date) ||
+      (this.minDate !== '' && fromIsoDateString(this.minDate) > date)
+    );
+  }
+
   generateDatesFrom(
     month: number,
     startDate: Date,
@@ -177,11 +184,7 @@ export class GuxCalendar {
       }
 
       let disabled = false;
-      if (this.maxDate && fromIsoDateString(this.maxDate) < date) {
-        classes.push('disabled');
-        disabled = true;
-      }
-      if (this.minDate && fromIsoDateString(this.minDate) > date) {
+      if (this.outOfBounds(date)) {
         classes.push('disabled');
         disabled = true;
       }
@@ -293,30 +296,32 @@ export class GuxCalendar {
   }
 
   onDateClick(date: Date) {
-    if (this.mode !== CalendarModes.Range) {
-      this.setValue(date);
-      this.emitInput();
-    } else {
-      if (this.selectingDate === null) {
-        // First click
-        removeClassToElements(this.getAllDatesElements(), 'hovered');
-        this.selectingDate = date;
-        this.value = asIsoDateRange(date, date);
-      } else {
-        // Second click
-        const target: HTMLTableCellElement = this.root.querySelector(
-          `td[data-date="${date.getTime()}"]`
-        );
-        if (target) {
-          target.classList.add('selected');
-        }
-        this.updateRangeElements();
-        this.setValue([this.selectingDate, date]);
+    if (!this.outOfBounds(date)) {
+      if (this.mode !== CalendarModes.Range) {
+        this.setValue(date);
         this.emitInput();
-        this.selectingDate = null;
+      } else {
+        if (this.selectingDate === null) {
+          // First click
+          removeClassToElements(this.getAllDatesElements(), 'hovered');
+          this.selectingDate = date;
+          this.value = asIsoDateRange(date, date);
+        } else {
+          // Second click
+          const target: HTMLTableCellElement = this.root.querySelector(
+            `td[data-date="${date.getTime()}"]`
+          );
+          if (target) {
+            target.classList.add('selected');
+          }
+          this.updateRangeElements();
+          this.setValue([this.selectingDate, date]);
+          this.emitInput();
+          this.selectingDate = null;
+        }
       }
+      this.focusPreviewDate();
     }
-    this.focusPreviewDate();
   }
 
   onDateMouseEnter(date: Date) {
