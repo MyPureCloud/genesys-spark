@@ -103,3 +103,19 @@ function sortDates(dates: Date[]): Date[] {
     return d1 < d2 ? -1 : 1;
   });
 }
+
+export default function onHiddenChange(
+  element: HTMLElement,
+  callback: (hidden: boolean) => void
+) {
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(() => {
+      callback(element.hidden);
+    });
+  });
+
+  observer.observe(element, {
+    attributes: true,
+    attributeFilter: ['hidden']
+  });
+}

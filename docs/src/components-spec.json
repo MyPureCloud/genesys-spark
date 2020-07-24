@@ -160,7 +160,7 @@
   "gux-panel-frame": {},
   "gux-popover": {
     "attributes": {
-      "hide-close": "checkbox",
+      "display-dismiss-button": "checkbox",
       "position": [
         "top",
         "top-start",
@@ -175,12 +175,9 @@
         "left-start",
         "left-end"
       ],
-      "for": "text",
-      "hidden": "checkbox"
+      "for": "text"
     },
-    "events": {
-      "close": "Popover signaling that it should be hidden"
-    }
+    "events": { "guxdismiss": "popover dismissed" }
   },
   "gux-radial-progress": {
     "attributes": { "value": "text", "max": "text" }
