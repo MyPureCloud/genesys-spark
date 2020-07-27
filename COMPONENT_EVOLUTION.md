@@ -23,6 +23,27 @@ a series of states:
 This cycle is implemented on a per-component basis by adding a `-beta` or `-deprecated` suffix to
 the component element names for the respective states.
 
+## Migrations
+
+On a major release all component state changes will be documented and presented in an easy to follow migration guide.
+
+### beta → supported
+
+If the application is using the latest beta version of the component there will be no need for code
+changes other than removing the `-beta` suffix. If the beta version is out of date there may be a
+need for some development work as the components api may have changed. A component will not move to
+the supported state unless it is well documented so this migration should be straight-forward.
+
+### supported → deprecated
+
+There will be no need for code changes other than adding the `-deprecated` suffix. At this stage the
+development team should start planning to move to the supported version before the next major release.
+
+### deprecated → supported
+
+When a component version is deprecating a migration guide will be created to help development teams
+move to the newly supported component.
+
 ## Rotation Schedule
 
 Components will rotate through the beta/supported/deprecated cycle on roughly a quarterly basis.
