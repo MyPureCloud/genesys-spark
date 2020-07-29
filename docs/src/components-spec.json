@@ -268,5 +268,14 @@
       "hidden": "fired when tooltip moves to hidden state",
       "shown": "fired when tooltip moves to visible state"
     }
+  },
+  "gux-form-field-beta": {
+    "attributes": {},
+    "events": {
+      "change": "Standard Event",
+      "click": "Standard Event",
+      "input": "Standard Event",
+      "submit": "Standard Event"
+    }
   }
 }
