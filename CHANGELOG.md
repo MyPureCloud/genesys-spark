@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.89](http://inindca///compare/v1.0.0-alpha.88...v1.0.0-alpha.89) (2020-07-29)
+
+
+### Features
+
+* **gux-form-field:** added new form inputs ([9491912](http://inindca///commit/9491912c4ca0f906e4a55ffe223959ea6a7ad9b4))
+
 ## [1.0.0-alpha.88](http://inindca///compare/v1.0.0-alpha.87...v1.0.0-alpha.88) (2020-07-20)
 
 ## [1.0.0-alpha.87](http://inindca///compare/v1.0.0-alpha.86...v1.0.0-alpha.87) (2020-07-14)
