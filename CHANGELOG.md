@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.91](http://inindca///compare/v1.0.0-alpha.90...v1.0.0-alpha.91) (2020-07-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **gux-pagination:** api changes to both props and events
+
+COMUI-145
+
+* **gux-pagination:** api changes ([4a2aed5](http://inindca///commit/4a2aed5930c3da279b6ed63fb12781e59840c542))
+
 ## [1.0.0-alpha.90](http://inindca///compare/v1.0.0-alpha.89...v1.0.0-alpha.90) (2020-07-30)
 
 ## [1.0.0-alpha.89](http://inindca///compare/v1.0.0-alpha.88...v1.0.0-alpha.89) (2020-07-29)
