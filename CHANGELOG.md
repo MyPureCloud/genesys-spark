@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.92](http://inindca///compare/v1.0.0-alpha.91...v1.0.0-alpha.92) (2020-07-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **gux-popover:** api changes to both props and events
+
+COMUI-234
+
+* **gux-popover:** api changes ([4b17aec](http://inindca///commit/4b17aecd0ac634d59ee0c30b805d77516ba06e1a))
+
 ## [1.0.0-alpha.91](http://inindca///compare/v1.0.0-alpha.90...v1.0.0-alpha.91) (2020-07-30)
 
 
