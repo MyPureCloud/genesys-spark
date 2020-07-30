@@ -1,5 +1,5 @@
 {
-  "perPage": "per page",
-  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": " of {totalItems, number}"
+  "perPage": "na stránku",
+  "itemCountDisplay": "{firstItem, number} až {lastItem, number}",
+  "totalItems": "z {totalItems, number}"
 }
