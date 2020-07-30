@@ -39,7 +39,7 @@ Type: `Promise<boolean>`
 
 ### Used by
 
- - [gux-pagination-items-per-page](../../gux-pagination/items-per-page)
+ - [gux-pagination-items-per-page](../../gux-pagination/gux-pagination-items-per-page)
 
 ### Depends on
 

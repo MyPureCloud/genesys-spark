@@ -1,5 +1,0 @@
-{
-  "perPage": "sivulla",
-  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": "/ {totalItems, number}"
-}

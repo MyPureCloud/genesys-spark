@@ -1,5 +1,0 @@
-{
-  "perPage": "لكل صفحة",
-  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": " من {totalItems, number}"
-}

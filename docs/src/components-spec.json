@@ -152,9 +152,11 @@
     "attributes": {
       "current-page": "text",
       "total-items": "text",
-      "layout": ["small", "medium", "large"],
-      "items-per-page": "text",
-      "items-per-page-options": "text"
+      "items-per-page": ["25", "50", "75", "100"],
+      "layout": ["small", "full"]
+    },
+    "events": {
+      "guxpaginationchange": "Needs description"
     }
   },
   "gux-panel-frame": {},

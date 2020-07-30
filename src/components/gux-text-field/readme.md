@@ -78,7 +78,7 @@ Type: `Promise<void>`
 
  - [gux-datepicker](../gux-datepicker)
  - [gux-dropdown](../gux-dropdown)
- - [gux-pagination-buttons](../gux-pagination/buttons)
+ - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-search](../gux-search)
  - [gux-slider](../gux-slider)
  - [gux-spin-button](../gux-spin-button)
