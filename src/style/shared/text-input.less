@@ -1,0 +1,76 @@
+/*
+ * This is a partial migration of text-field styles for components that want the same text styles
+ * as gux-text-field, but need direct access to the input element. It may be worth migrating error
+ * and warning styles, or other items here in the future if they also end up being shared.
+ */
+
+.input-style {
+  @background-color: @gux-off-white;
+  @text-color: @gux-grey-2;
+  @border: @gux-border-alt;
+  @placeholder: @gux-pale-gray-2;
+  @focus-outline: fade(@gux-blue, 50%);
+  @focus-border: @gux-dark-blue;
+
+  font-family: inherit;
+  height: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px 12px 4px 12px;
+  background-color: @background-color;
+  background-image: none;
+  border: 1px solid @border;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 1.66666667;
+  color: @text-color;
+  &::placeholder {
+    color: @placeholder;
+  }
+  &::-webkit-input-placeholder {
+    color: @placeholder;
+  }
+  &::-ms-input-placeholder {
+    color: @placeholder;
+  }
+  &::-moz-placeholder {
+    color: @placeholder;
+  }
+  &.focused,
+  &:focus {
+    border: 1px solid @focus-border;
+    outline: none;
+    box-shadow: 0px 0px 4px @focus-outline;
+  }
+}
+
+.input-dark-theme {
+  @dark-background-color: @gux-grey-2;
+  @dark-text-color: @gux-off-white;
+  @dark-border: @gux-grey-1;
+  @dark-placeholder: @gux-pale-gray-2;
+  @dark-focus-border: @gux-blue;
+  @dark-focus-outline: @gux-blue;
+
+  background-color: @dark-background-color;
+  border: 1px solid @dark-border;
+  color: @dark-text-color;
+  &::placeholder {
+    color: @dark-placeholder;
+  }
+  &::-webkit-input-placeholder {
+    color: @dark-placeholder;
+  }
+  &::-ms-input-placeholder {
+    color: @dark-placeholder;
+  }
+  &::-moz-placeholder {
+    color: @dark-placeholder;
+  }
+  &.focused,
+  &:focus {
+    border: 1px solid @dark-focus-border;
+    outline: 3px @dark-focus-outline;
+    box-shadow: none;
+  }
+}

@@ -271,6 +271,15 @@
     }
   },
   "gux-text-label": {},
+  "gux-time-picker": {
+    "attributes": {
+      "value": "text",
+      "max": "text",
+      "min": "text",
+      "interval": "text"
+    },
+    "events": { "changed": "value changed" }
+  },
   "gux-toggle": {
     "attributes": {
       "checked": "checkbox",
