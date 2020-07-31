@@ -5,12 +5,16 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
+  Listen,
   Prop,
+  State,
   Watch
 } from '@stencil/core';
+import { buildI18nForComponent, GetI18nValue } from '../i18n';
 import { ClickOutside } from 'stencil-click-outside';
-import { buildI18nForComponent } from '../i18n';
 import modalComponentResources from './i18n/en.json';
+import onHiddenChange from '../..//common-utils';
 
 export type PopperPosition =
   | 'top'
@@ -31,25 +35,29 @@ export type PopperPosition =
   tag: 'gux-popover'
 })
 export class GuxPopover {
-  i18n: (resourceKey: string, context?: any) => string;
+  private i18n: GetI18nValue;
+  private popperInstance: Instance;
+  private forElement: HTMLElement;
+
+  @Element() private element: HTMLElement;
 
   /**
-   * Triggered when the close button gets clicked
+   * Indicates the id of the element the popover should anchor to
    */
-  @Event()
-  close: EventEmitter;
+  @Prop()
+  for: string;
 
   /**
    * Indicate position of popover element arrow (follow popper js position attribute api)
    */
   @Prop()
-  position: PopperPosition = 'top';
+  position: PopperPosition = 'bottom';
 
   /**
-   * Indicate if the close button is displayed
+   * Indicate if the dismiss button is displayed
    */
   @Prop()
-  hideClose: boolean;
+  displayDismissButton: boolean;
 
   /**
    * Close popover when the user clicks outside of its bounds
@@ -58,20 +66,29 @@ export class GuxPopover {
   closeOnClickOutside: boolean = false;
 
   /**
-   * Indicate if the popover is hidden
+   * Fired when a user dismisses the popover
    */
-  @Prop({ mutable: true })
-  hidden: boolean = false;
+  @Event()
+  guxdismiss: EventEmitter<void>;
 
-  /**
-   * Indicates the id of the element the popover should anchor to
-   */
-  @Prop()
-  for: string;
+  @Watch('hidden')
+  watchHidden() {
+    if (this.popperInstance) {
+      this.popperInstance.forceUpdate();
+    }
+  }
 
-  popperInstance: Instance;
+  @State()
+  hidden: boolean = true;
 
-  @Element() private element: HTMLElement;
+  @Listen('click', { target: 'window' })
+  onClickAway(e: FocusEvent) {
+    if (!this.displayDismissButton && !this.hidden) {
+      if (!e.relatedTarget || !this.element.contains(e.relatedTarget as Node)) {
+        this.dismiss();
+      }
+    }
+  }
 
   @Watch('hidden')
   hiddenHandler(hidden: boolean) {
@@ -83,14 +100,13 @@ export class GuxPopover {
   @ClickOutside()
   checkForClickOutside() {
     if (this.closeOnClickOutside && !this.hidden) {
-      this.closePopover();
+      this.dismiss();
     }
   }
 
-  runPopper() {
-    const referenceElement = document.getElementById(this.for);
-    if (referenceElement) {
-      this.popperInstance = createPopper(referenceElement, this.element, {
+  private runPopper(): void {
+    if (this.forElement) {
+      this.popperInstance = createPopper(this.forElement, this.element, {
         modifiers: [
           {
             name: 'offset',
@@ -108,48 +124,54 @@ export class GuxPopover {
     }
   }
 
-  destroyPopper() {
-    const instance = this.popperInstance;
-    if (instance) {
-      instance.destroy();
+  private destroyPopper(): void {
+    if (this.popperInstance) {
+      this.popperInstance.destroy();
       this.popperInstance = null;
     }
   }
 
-  closePopover() {
-    this.hidden = true;
-    this.destroyPopper();
-    this.close.emit();
+  private dismiss(): void {
+    const dismissEvent = this.guxdismiss.emit();
+    if (!dismissEvent.defaultPrevented) {
+      this.element.setAttribute('hidden', '');
+    }
   }
 
-  async componentWillLoad() {
+  async componentWillLoad(): Promise<void> {
+    this.forElement = document.getElementById(this.for);
+
     this.i18n = await buildI18nForComponent(
       this.element,
       modalComponentResources
     );
+
+    onHiddenChange(this.element, (hidden: boolean) => {
+      this.hidden = hidden;
+    });
+
+    this.hidden = this.element.hidden;
   }
 
-  componentDidLoad() {
-    if (!this.hidden && !this.popperInstance) {
-      this.runPopper();
-    }
+  componentDidLoad(): void {
+    this.runPopper();
   }
 
-  componentDidUnload() {
+  componentDidUnload(): void {
     this.destroyPopper();
   }
 
-  render() {
+  render(): JSX.Element {
     return (
-      <div class={`popover-wrapper ${this.hidden ? 'hidden' : ''}`}>
+      <div class={`popover-wrapper`}>
         <div class="arrow" data-popper-arrow />
-        {!this.hideClose && (
+        {this.displayDismissButton && (
           <div class="title-bar">
             <gux-icon
-              class="close"
+              class="dismiss"
               icon-name="close"
-              screenreader-text={this.i18n('close')}
-              onClick={this.closePopover.bind(this)}
+              screenreader-text={this.i18n('dismiss')}
+              onClick={this.dismiss.bind(this)}
             />
           </div>
         )}

@@ -119,7 +119,7 @@ export class GuxTabs {
           this.hasScrollbar = hasScrollbar;
         }
       });
-    }, 200);
+    }, 500);
   }
 
   scrollLeft() {

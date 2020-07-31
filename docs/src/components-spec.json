@@ -152,15 +152,17 @@
     "attributes": {
       "current-page": "text",
       "total-items": "text",
-      "layout": ["small", "medium", "large"],
-      "items-per-page": "text",
-      "items-per-page-options": "text"
+      "items-per-page": ["25", "50", "75", "100"],
+      "layout": ["small", "full"]
+    },
+    "events": {
+      "guxpaginationchange": "Needs description"
     }
   },
   "gux-panel-frame": {},
   "gux-popover": {
     "attributes": {
-      "hide-close": "checkbox",
+      "display-dismiss-button": "checkbox",
       "position": [
         "top",
         "top-start",
@@ -175,12 +177,9 @@
         "left-start",
         "left-end"
       ],
-      "for": "text",
-      "hidden": "checkbox"
+      "for": "text"
     },
-    "events": {
-      "close": "Popover signaling that it should be hidden"
-    }
+    "events": { "guxdismiss": "popover dismissed" }
   },
   "gux-radial-progress": {
     "attributes": { "value": "text", "max": "text" }
@@ -214,15 +213,15 @@
     "events": { "guxdismiss": "toast dismiss button pressed" }
   },
   "gux-slider": {
-    "attributes": [
-      { "min": "text" },
-      { "max": "text" },
-      { "step": "text" },
-      { "value": "text" },
-      { "is-percentage": "checkbox" },
-      { "display-text-box": "checkbox" },
-      { "disabled": "checkbox" }
-    ],
+    "attributes": {
+      "min": "text",
+      "max": "text",
+      "step": "text",
+      "value": "text",
+      "is-percentage": "checkbox",
+      "display-text-box": "checkbox",
+      "disabled": "checkbox"
+    },
     "events": { "update": "slider value changed" }
   },
   "gux-spin-button": {},
@@ -287,6 +286,15 @@
     "events": {
       "hidden": "fired when tooltip moves to hidden state",
       "shown": "fired when tooltip moves to visible state"
+    }
+  },
+  "gux-form-field-beta": {
+    "attributes": {},
+    "events": {
+      "change": "Standard Event",
+      "click": "Standard Event",
+      "input": "Standard Event",
+      "submit": "Standard Event"
     }
   }
 }

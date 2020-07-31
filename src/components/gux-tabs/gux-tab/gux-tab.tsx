@@ -77,18 +77,20 @@ export class GuxTab {
           </button>
         )}
 
-        <gux-popover
-          position="top-start"
-          for={this.tabId}
-          hideClose={true}
-          hidden={this.popoverHidden}
-          closeOnClickOutside={true}
-          onClose={() => (this.popoverHidden = true)}
-        >
-          <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
-            <slot name="dropdown-options" />
-          </div>
-        </gux-popover>
+        {this.hasDropdownOptions && (
+          <gux-popover
+            position="top-start"
+            for={this.tabId}
+            displayDismissButton={false}
+            hidden={this.popoverHidden}
+            closeOnClickOutside={true}
+            onGuxdismiss={() => (this.popoverHidden = true)}
+          >
+            <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
+              <slot name="dropdown-options" />
+            </div>
+          </gux-popover>
+        )}
       </button>
     );
   }

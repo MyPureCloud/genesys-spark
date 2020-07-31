@@ -18,7 +18,7 @@ describe('gux-popover', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('Should trigger close event on popover cancel button click', async () => {
+  it('Should trigger guxdismiss event on popover dismiss button click', async () => {
     const page = await newE2EPage();
 
     await page.setContent(`
@@ -26,16 +26,16 @@ describe('gux-popover', () => {
         <div id="popover-target">
           Example Element
         </div>
-        <gux-popover position="top" for="popover-target">
+        <gux-popover position="top" for="popover-target" display-dismiss-button>
           <div>popover content</div>
         </gux-popover>
       </div>
     `);
     const component = await page.find('gux-popover');
-    const close = await component.spyOnEvent('close');
-    const button = await page.find('.close');
+    const guxdismiss = await component.spyOnEvent('guxdismiss');
+    const button = await page.find('.dismiss');
     await button.click();
-    expect(close).toHaveReceivedEvent();
+    expect(guxdismiss).toHaveReceivedEvent();
   });
 
   it('Supports hiding the close button', async () => {
@@ -52,9 +52,9 @@ describe('gux-popover', () => {
       </div>
     `);
     const component = await page.find('gux-popover');
-    component.setProperty('hideClose', true);
+    component.setProperty('displayDismissDutton', false);
     await page.waitForChanges();
-    const button = await page.find('.close');
+    const button = await page.find('.dismiss');
     expect(button).toBeNull();
   });
 });

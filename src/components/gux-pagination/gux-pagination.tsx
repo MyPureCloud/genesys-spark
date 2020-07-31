@@ -1,25 +1,27 @@
 import {
   Component,
-  Element,
+  ComponentInterface,
   Event,
   EventEmitter,
   h,
-  Method,
-  Prop
+  JSX,
+  Prop,
+  State
 } from '@stencil/core';
-import { GuxPaginationLayout } from './gux-pagination-layout';
 
-import { buildI18nForComponent } from '../i18n';
-import paginationResources from './i18n/en.json';
+import { GuxItemsPerPage } from './gux-pagination-items-per-page/gux-pagination-items-per-page';
+
+export type GuxPaginationLayout = 'small' | 'full';
+export type GuxPaginationState = {
+  currentPage: number;
+  itemsPerPage: number;
+};
 
 @Component({
   styleUrl: 'gux-pagination.less',
   tag: 'gux-pagination'
 })
-export class GuxPagination {
-  @Element()
-  element: HTMLElement;
-
+export class GuxPagination implements ComponentInterface {
   /**
    * The currently select page. Changes are watched by the component.
    */
@@ -30,148 +32,92 @@ export class GuxPagination {
    * The total number of items in the data set. Used to calculate total page count
    */
   @Prop()
-  totalItems: number;
+  totalItems: number = 0;
 
   /**
-   * The responsive size of the control to use: "small", "medium", or "large". See
-   * the exported recommendedBreakpoints for the pixel widths that are recommended
-   * for each size.
+   * The max number of items on a page. Used to calculate total page count
+   */
+  @Prop({ mutable: true })
+  itemsPerPage: GuxItemsPerPage = 25;
+
+  /**
+   * The pagination component can have different layouts to suit the available space
    */
   @Prop()
-  layout: GuxPaginationLayout | string = GuxPaginationLayout.Large;
-
-  @Prop({ mutable: true })
-  itemsPerPage: number = 25;
-
-  @Prop({ mutable: true })
-  itemsPerPageOptions: number[] = [25, 50, 100];
+  layout: GuxPaginationLayout = 'full';
 
   /**
-   * Fired when the current page property changes.
+   * The total number of pages needed for the the data set.
    */
+  @State()
+  private totalPages: number;
+
   @Event()
-  pageChanged: EventEmitter<number>;
+  private guxpaginationchange: EventEmitter<GuxPaginationState>;
 
-  /**
-   * Fired when user selects a new number of items per page.
-   */
-  @Event()
-  itemsPerPageChanged: EventEmitter<number>;
-  itemsPerPageComponent: HTMLGuxPaginationItemsPerPageElement;
-
-  private i18n: (resourceKey: string, context?: any) => string;
-
-  coerceItemsPerPageOptions() {
-    // Make sure these props are coerced to their proper type if passed as string literals by a static HTML parent
-    if (typeof this.itemsPerPageOptions === 'string') {
-      try {
-        const itemsPerPageOptions = JSON.parse(this.itemsPerPageOptions)
-
-          // Coerce to numbers
-          .map(option => Number(option))
-
-          // Filter out NaN and 0
-          .filter(option => !!option);
-        this.itemsPerPageOptions = itemsPerPageOptions;
-      } catch (e) {
-        console.error(
-          'Could not parse argument `itemsPerPageOptions` make sure you provided an array of numbers'
-        );
-        console.error(e);
-        this.itemsPerPageOptions = [25, 50, 100];
-      }
+  private setPage(page: number): void {
+    if (page < 1) {
+      this.setPage(1);
+      return;
     }
-  }
 
-  async componentWillLoad() {
-    this.i18n = await buildI18nForComponent(this.element, paginationResources);
-    this.coerceItemsPerPageOptions();
-  }
-
-  calculatTotalPages(): number {
-    return Math.ceil(this.totalItems / this.itemsPerPage);
-  }
-
-  /**
-   * Sets the number of items to display on a single page, and optionally the list
-   * of items that the user can choose from in the dropdown.
-   *
-   * If options are omitted, the user selection dropdown won't be displayed.
-   *
-   * @param value The number of items to show per page.
-   * @param options The values the user can choose from.
-   */
-  @Method()
-  async setItemsPerPage(value: number, options?: number[]): Promise<void> {
-    this.itemsPerPageOptions = options;
-    this.itemsPerPage = value;
-
-    this.itemsPerPageComponent.setItemsPerPage(value, options);
-  }
-
-  @Method()
-  async setPage(page: number): Promise<void> {
     const totalPages = this.calculatTotalPages();
     if (page > totalPages) {
       this.setPage(totalPages);
       return;
     }
 
-    if (page < 1) {
-      this.setPage(1);
-      return;
-    }
-
-    if (this.currentPage === page) {
-      return;
-    }
-
     this.currentPage = page;
-    this.pageChanged.emit(this.currentPage);
+    this.guxpaginationchange.emit({
+      currentPage: this.currentPage,
+      itemsPerPage: this.itemsPerPage
+    });
   }
 
-  componentWillUpdate() {
-    const totalPages = this.calculatTotalPages();
-
-    this.coerceItemsPerPageOptions();
-
-    if (this.currentPage > totalPages) {
-      this.currentPage = totalPages;
-    }
+  private calculatTotalPages(): number {
+    return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
-  render() {
+  private handleInternalitemsperpagechange(event: CustomEvent): void {
+    this.itemsPerPage = event.detail;
+    this.setPage(1);
+  }
+
+  private handleInternalcurrentpagechange(event: CustomEvent): void {
+    this.setPage(event.detail);
+  }
+
+  componentWillRender(): void {
+    this.totalPages = this.calculatTotalPages();
+    this.currentPage = Math.min(this.currentPage, this.totalPages);
+  }
+
+  render(): JSX.Element {
     return (
-      <div class={`gux-pagination gux-pagination-layout-${this.layout}`}>
-        <gux-pagination-item-counts
-          totalItems={this.totalItems}
-          currentPage={this.currentPage}
-          itemsPerPage={this.itemsPerPage}
-          i18n={this.i18n}
-        />
-
-        {!this.itemsPerPageOptions || !this.itemsPerPageOptions.length ? (
-          <div />
-        ) : (
-          <gux-pagination-items-per-page
-            ref={ref =>
-              (this.itemsPerPageComponent = ref as HTMLGuxPaginationItemsPerPageElement)
-            }
-            onItemsPerPageChanged={ev => {
-              this.itemsPerPage = ev.detail;
-            }}
-            itemsPerPage={this.itemsPerPage}
-            itemsPerPageOptions={this.itemsPerPageOptions}
-            i18n={this.i18n}
+      <div class={`gux-pagination-container ${this.layout}`}>
+        <div class="gux-pagination-container-left">
+          <gux-pagination-item-counts
+            total-items={this.totalItems}
+            current-page={this.currentPage}
+            items-per-page={this.itemsPerPage}
           />
-        )}
-
-        <gux-pagination-buttons
-          class={`pagination-buttons gux-pagination-layout-${this.layout}`}
-          currentPage={this.currentPage}
-          totalPages={this.calculatTotalPages()}
-          onCurrentPageChanged={ev => this.setPage(ev.detail)}
-        />
+          <gux-pagination-items-per-page
+            items-per-page={this.itemsPerPage}
+            on-internalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
+              this
+            )}
+          ></gux-pagination-items-per-page>
+        </div>
+        <div>
+          <gux-pagination-buttons
+            layout={this.layout}
+            current-page={this.currentPage}
+            total-pages={this.totalPages}
+            on-internalcurrentpagechange={this.handleInternalcurrentpagechange.bind(
+              this
+            )}
+          />
+        </div>
       </div>
     );
   }

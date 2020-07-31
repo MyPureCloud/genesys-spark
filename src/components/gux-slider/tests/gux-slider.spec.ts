@@ -39,9 +39,8 @@ describe('gux-slider', () => {
     expect(component.value).toEqual(-5);
   });
 
-  it('when event value is not number do not set value', async () => {
-    component.value = 5;
+  it('when event value is not number set value to 0', async () => {
     component.updateValue({ target: { value: 'aabb' } });
-    expect(component.value).toEqual(5);
+    expect(component.value).toEqual(0);
   });
 });

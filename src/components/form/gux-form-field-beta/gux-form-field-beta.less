@@ -1,0 +1,74 @@
+
+// Variables part
+
+// Style
+gux-form-field-beta {
+  .label-and-input-and-error-container {
+    margin: 16px 0;
+
+    .label-and-input-container {
+      label {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      &.beside {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        label {
+          min-width: 40px;
+          margin-right: 8px;
+        }
+
+        gux-input-range-beta,
+        gux-input-text-like-beta {
+          flex: 1 1 auto;
+        }
+      }
+    }
+
+    .error {
+      margin: 4px 0;
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-form-field-dark-theme {
+  color: @gux-off-white;
+};
+
+.gux-dark-theme {
+  gux-form-field-beta {
+      .gux-form-field-dark-theme();
+  }
+}
+
+gux-form-field-beta.gux-dark-theme {
+  .gux-form-field-dark-theme();
+}
+
+// Light
+.gux-form-field-light-theme {
+  color: @gux-grey-2;
+};
+
+.gux-light-theme {
+  gux-form-field-beta {
+      .gux-form-field-light-theme();
+  }
+}
+
+gux-form-field-beta.gux-light-theme {
+  .gux-form-field-light-theme();
+}
+
+// Default Theme
+gux-form-field-beta {
+  .gux-form-field-light-theme();
+}

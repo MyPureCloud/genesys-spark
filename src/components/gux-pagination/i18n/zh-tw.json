@@ -1,5 +1,0 @@
-{
-  "perPage": "每一頁",
-  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": " 共 {totalItems, number}"
-}

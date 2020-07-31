@@ -1,14 +1,9 @@
-// Variables part
-
 // Style
 gux-popover {
   z-index: 2;
+  color: @gux-grey-2;
 
   .popover-wrapper {
-    &.hidden {
-      display: none;
-    }
-
     display: flex;
     flex-direction: column;
     border: 1px @gux-border;
@@ -98,7 +93,7 @@ gux-popover {
     align-self: flex-end;
     margin-bottom: -16px;
 
-    .close {
+    .dismiss {
       height: 12px;
       width: 12px;
       padding: 4px 4px 0 0;
@@ -114,41 +109,4 @@ gux-popover {
   .popover-content {
     margin: 16px 18px;
   }
-}
-
-// Theming
-
-// Dark
-.gux-popover-dark-theme {
-  color: @gux-off-white;
-}
-
-.gux-dark-theme {
-  gux-popover {
-    .gux-popover-dark-theme();
-  }
-}
-
-gux-popover.gux-dark-theme {
-  .gux-popover-dark-theme();
-}
-
-// Light
-.gux-popover-light-theme {
-  color: @gux-grey-2;
-}
-
-.gux-light-theme {
-  gux-popover {
-    .gux-popover-light-theme();
-  }
-}
-
-gux-popover.gux-light-theme {
-  .gux-popover-light-theme();
-}
-
-// Default Theme
-gux-popover {
-  .gux-popover-light-theme();
 }

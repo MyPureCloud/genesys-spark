@@ -20,7 +20,7 @@ You can choose between two type (secondary and primary).
 ### Used by
 
  - [gux-action-button](../gux-action-button)
- - [gux-pagination-buttons](../gux-pagination/buttons)
+ - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
 
 ### Graph
 ```mermaid

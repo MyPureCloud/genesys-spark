@@ -9,7 +9,14 @@
   </div>
 </div>
 
-<style>
+<style onload="(function () {
+  const popoverTarget = document.getElementById('popover-target');
+  const popoverExample = document.getElementById('popover-example');
+
+  popoverTarget.addEventListener('mouseover', () => {
+    popoverExample.hidden = false;
+  });
+})()">
   .scroll-container {
     border: 1px solid #aaa;
     width: 300px;
