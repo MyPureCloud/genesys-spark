@@ -3,14 +3,9 @@ import com.genesys.jenkins.Service
 
 def notifications = null
 String[] mailingList = [
-  "Jeremie.Pichon@genesys.com",
   "Matthew.Cheely@genesys.com",
-  "Darragh.Kirwan@genesys.com"
+  "Daragh.King@genesys.com"
 ]
-
-def isAlpha() {
-  return env.SHORT_BRANCH.startsWith('alpha/');
-}
 
 def isRelease() {
   return env.SHORT_BRANCH.equals('master');
@@ -20,11 +15,11 @@ def isFeature() {
 }
 
 def shouldPublish() {
-  return isAlpha() || isRelease();
+  return isRelease();
 }
 
 def shouldUploadAssets() { 
-  isAlpha() || isRelease() || isFeature();
+  isRelease() || isFeature();
 }
 
 pipeline {
@@ -92,11 +87,7 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           script {
-            if ( isAlpha() ) {
-              sh "npm run release -- --prerelease alpha"
-            } else {
-              sh "npm run release"
-            }
+            sh "npm run release -- --prerelease alpha"
           }
         }
       }
@@ -144,17 +135,9 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           script {
-            if ( isAlpha() ) {
-              sh "npm publish --tag alpha"
-              sshagent(credentials: ['7c2a5698-a932-447a-9727-6852d0994ea0']) {
-                sh "git push --follow-tags -u origin ${env.SHORT_BRANCH}"
-              }
-            } else {
-              sh "echo regular publish"
-              sh "npm publish"
-              sshagent(credentials: ['7c2a5698-a932-447a-9727-6852d0994ea0']) {
-                sh "git push --folow-tags -u origin ${env.SHORT_BRANCH}"
-              }
+            sh "npm publish --tag alpha"
+            sshagent(credentials: ['7c2a5698-a932-447a-9727-6852d0994ea0']) {
+              sh "git push --follow-tags -u origin ${env.SHORT_BRANCH}"
             }
           }
         }
