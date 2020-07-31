@@ -1,13 +1,4 @@
-import {
-  Component,
-  Element,
-  Event,
-  EventEmitter,
-  h,
-  Prop,
-  State,
-  writeTask
-} from '@stencil/core';
+import { Component, Element, h, Prop, State, writeTask } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-tab.less',
@@ -29,16 +20,14 @@ export class GuxTab {
    */
   @Prop() tabIconName: string;
 
-  /**
-   * Triggers when the tab is selected
-   * @returns the id of the tab
-   */
-  @Event() selected: EventEmitter<string>;
-
   @State() private popoverHidden: boolean = true;
   @State() private hasAnimated: boolean = false;
 
   @Element() private element: HTMLElement;
+
+  private get hasDropdownOptions() {
+    return !!this.element.querySelector('[slot="dropdown-options"]');
+  }
 
   toggleOptions(e: MouseEvent) {
     this.popoverHidden = !this.popoverHidden;
@@ -52,9 +41,6 @@ export class GuxTab {
 
   selectTab() {
     this.popoverHidden = true;
-    if (!this.active) {
-      this.selected.emit(this.tabId);
-    }
   }
 
   componentDidLoad() {
@@ -81,13 +67,15 @@ export class GuxTab {
         <span class="tab-title">
           <slot name="title" />
         </span>
-        <button
-          id={this.tabId}
-          class="tab-dropdown-container"
-          onClick={(e: MouseEvent) => this.toggleOptions(e)}
-        >
-          <gux-icon iconName="ellipsis-v" decorative={true}></gux-icon>
-        </button>
+        {this.hasDropdownOptions && (
+          <button
+            id={this.tabId}
+            class="tab-dropdown-container"
+            onClick={(e: MouseEvent) => this.toggleOptions(e)}
+          >
+            <gux-icon iconName="ellipsis-v" decorative={true}></gux-icon>
+          </button>
+        )}
 
         <gux-popover
           position="top-start"

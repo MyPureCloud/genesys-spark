@@ -13,13 +13,6 @@
 | `optionId` | `option-id` | unique id for the option                       | `string` | `undefined` |
 
 
-## Events
-
-| Event            | Description                           | Type                  |
-| ---------------- | ------------------------------------- | --------------------- |
-| `optionSelected` | Triggers when the option is selected. | `CustomEvent<string>` |
-
-
 ## Dependencies
 
 ### Depends on

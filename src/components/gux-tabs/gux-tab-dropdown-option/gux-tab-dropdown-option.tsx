@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-tab-dropdown-option.less',
@@ -15,22 +15,9 @@ export class GuxTabDropdownOption {
    */
   @Prop() iconName: string;
 
-  /**
-   * Triggers when the option is selected.
-   * @return the value of the newly selected option
-   */
-  @Event() optionSelected: EventEmitter<string>;
-
-  selectDropdownOption() {
-    this.optionSelected.emit(this.optionId);
-  }
-
   render() {
     return (
-      <button
-        class="tab-dropdown-option"
-        onClick={() => this.selectDropdownOption()}
-      >
+      <button class="tab-dropdown-option">
         <gux-icon iconName={this.iconName} decorative={true}></gux-icon>
         <span>
           <slot />

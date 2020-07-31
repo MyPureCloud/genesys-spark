@@ -4,11 +4,12 @@ import {
   Event,
   EventEmitter,
   h,
+  // Listen,
+  Prop,
   readTask,
   State,
   writeTask
 } from '@stencil/core';
-import ResizeObserver from 'resize-observer-polyfill';
 import Sortable, { MoveEvent } from 'sortablejs';
 
 @Component({
@@ -17,9 +18,16 @@ import Sortable, { MoveEvent } from 'sortablejs';
 })
 export class GuxTabs {
   /**
+   * Enable tab sorting by drag/drop
+   */
+  @Prop() allowSort: boolean = true;
+
+  /**
    * Triggers when the new tab button is selected.
    */
   @Event() newTab: EventEmitter;
+
+  @Event() input: EventEmitter;
 
   /**
    * Triggers when the sorting of the tabs is changed.
@@ -29,6 +37,11 @@ export class GuxTabs {
   @Element() private element: HTMLElement;
 
   @State() private hasScrollbar: boolean = false;
+
+  // @Listen('selected')
+  // selectedHandler(event: CustomEvent<string>) {
+  //   this.input.emit(event.detail);
+  // }
 
   private sortableInstance?: Sortable;
 
@@ -62,17 +75,15 @@ export class GuxTabs {
       this.destroySortable();
     }
 
-    if (this.element instanceof window.Element) {
-      this.resizeObserver.unobserve(this.element.querySelector('.gux-tabs'));
-    }
+    this.resizeObserver?.unobserve(this.element.querySelector('.gux-tabs'));
   }
 
   componentDidLoad() {
-    if (!this.sortableInstance) {
+    if (this.allowSort && !this.sortableInstance) {
       this.createSortable();
     }
 
-    if (!this.resizeObserver) {
+    if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() => {
         readTask(() => {
           const el = this.element.querySelector('.scrollable-section');
@@ -81,9 +92,22 @@ export class GuxTabs {
       });
     }
 
-    if (this.element instanceof window.Element) {
-      this.resizeObserver.observe(this.element.querySelector('.gux-tabs'));
-    }
+    this.resizeObserver?.observe(this.element.querySelector('.gux-tabs'));
+
+    const tabElements = this.element.querySelectorAll('gux-tab');
+    tabElements.forEach(tab => {
+      tab.addEventListener('click', () => {
+        if ((tab as HTMLGuxTabElement).active) {
+          return;
+        }
+
+        tabElements.forEach(t => {
+          (t as HTMLGuxTabElement).active = false;
+        });
+
+        (tab as HTMLGuxTabElement).active = true;
+      });
+    });
   }
 
   componentDidRender() {

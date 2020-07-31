@@ -231,11 +231,23 @@
     "events": { "selectionChanged": "switch state was changed" }
   },
   "gux-tabs": {
+    "attributes": {
+      "allow-sort": "checkbox"
+    },
     "events": {
       "newTab": "new tab button was pressed",
-      "sortChanged": "sort was changed",
-      "selected": "tab selected",
-      "optionSelected": "dropdownoption selected"
+      "sortChanged": "tab sort was changed",
+      "input": "tab selected"
+    }
+  },
+  "gux-tab": {
+    "attributes": {
+      "tab-icon-name": "text"
+    }
+  },
+  "gux-tab-dropdown-option": {
+    "attributes": {
+      "icon-name": "text"
     }
   },
   "gux-text-field": {

@@ -14,13 +14,6 @@
 | `tabId`       | `tab-id`        | unique id for the tab                                                                               | `string`  | `undefined` |
 
 
-## Events
-
-| Event      | Description                       | Type                  |
-| ---------- | --------------------------------- | --------------------- |
-| `selected` | Triggers when the tab is selected | `CustomEvent<string>` |
-
-
 ## Dependencies
 
 ### Depends on
