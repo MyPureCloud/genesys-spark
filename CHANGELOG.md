@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.93](http://inindca///compare/v1.0.0-alpha.92...v1.0.0-alpha.93) (2020-07-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **gux-slider:** removed text input field from slider component
+
+CUMUI-163
+
+### Bug Fixes
+
+* **gux-slider:** removed text input field ([61e25ed](http://inindca///commit/61e25ed4eac3e2e635ecb2f89d4bcca196e55e86))
+
 ## [1.0.0-alpha.92](http://inindca///compare/v1.0.0-alpha.91...v1.0.0-alpha.92) (2020-07-30)
 
 
