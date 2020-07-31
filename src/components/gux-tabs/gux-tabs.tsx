@@ -4,7 +4,6 @@ import {
   Event,
   EventEmitter,
   h,
-  // Listen,
   Prop,
   readTask,
   State,
@@ -37,11 +36,6 @@ export class GuxTabs {
   @Element() private element: HTMLElement;
 
   @State() private hasScrollbar: boolean = false;
-
-  // @Listen('selected')
-  // selectedHandler(event: CustomEvent<string>) {
-  //   this.input.emit(event.detail);
-  // }
 
   private sortableInstance?: Sortable;
 
