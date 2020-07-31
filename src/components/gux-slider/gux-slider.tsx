@@ -61,19 +61,24 @@ export class GuxSlider {
    */
   @Event()
   update: EventEmitter;
-  updateValue(event) {
-    const result = this.inputRegex.exec(event.target.value);
-    if (result !== null) {
-      const resultValue = result && result[1] ? +result[1] : this.min;
-      const newValue = Math.min(Math.max(resultValue, this.min), this.max);
-      const upToDate = this.value === newValue;
-      const stepOffset = Math.round(newValue / this.step);
-      this.value =
-        newValue % this.step !== 0 ? this.step * stepOffset : newValue;
-      if (!upToDate) {
-        this.update.emit(this.value);
-        this.updatePosition();
-      }
+
+  updateValue(event: InputEvent) {
+    const target = event.target as HTMLInputElement;
+    const value = Number(target.value);
+
+    this.setValue(value);
+  }
+
+  setValue(value: number) {
+    const resultValue = value || this.min;
+    const newValue = Math.min(Math.max(resultValue, this.min), this.max);
+    const upToDate = this.value === newValue;
+
+    this.value = newValue;
+
+    if (!upToDate) {
+      this.update.emit(this.value);
+      this.updatePosition();
     }
   }
 
@@ -81,10 +86,6 @@ export class GuxSlider {
    * Once the component is loaded do the setup
    */
   componentDidLoad() {
-    const stepOffset = Math.round(this.value / this.step);
-    if (this.value % this.step !== 0) {
-      this.value = this.step * stepOffset;
-    }
     this.updatePosition();
   }
 
@@ -121,11 +122,11 @@ export class GuxSlider {
             aria-label={this.srLabel}
             ref={el => (this.sliderInput = el)}
             // onChange event required because IE11 doesn't support onInput for range inputs
-            onChange={(e: UIEvent) => this.updateValue(e)}
-            onInput={(e: UIEvent) => this.updateValue(e)}
+            onChange={(e: InputEvent) => this.updateValue(e)}
+            onInput={(e: InputEvent) => this.updateValue(e)}
             disabled={this.disabled}
           />
-          <div class="mask">
+          <div class={`mask${this.disabled ? ' disabled' : ''}`}>
             <div class="mask-slider" ref={el => (this.sliderMask = el)} />
             <div class="mask-track-container">
               <div class="mask-track" />
@@ -146,12 +147,9 @@ export class GuxSlider {
           </div>
         </div>
         {this.displayTextBox && (
-          <gux-text-field
-            value={value}
-            onChange={(e: UIEvent) => this.updateValue(e)}
-            disabled={this.disabled}
-            srLabel={this.srLabel}
-          />
+          <div class="slider-display" aria-label={this.srLabel}>
+            {value}
+          </div>
         )}
       </div>
     );
