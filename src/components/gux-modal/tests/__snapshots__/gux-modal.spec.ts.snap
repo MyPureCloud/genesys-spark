@@ -21,7 +21,7 @@ exports[`gux-modal #render should render large modal 1`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -68,7 +68,7 @@ exports[`gux-modal #render should render large modal 2`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -115,7 +115,7 @@ exports[`gux-modal #render should render medium modal 1`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -162,7 +162,7 @@ exports[`gux-modal #render should render medium modal 2`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -209,7 +209,7 @@ exports[`gux-modal #render should render modal with just left align buttons 1`] 
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -247,7 +247,7 @@ exports[`gux-modal #render should render modal with just left align buttons 2`] 
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -285,7 +285,7 @@ exports[`gux-modal #render should render modal with just right align buttons 1`]
         </p>
       </div>
       <div class="button-footer">
-        <div></div>
+        <div class="left-align-buttons"></div>
         <div class="right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary" title="Button">
@@ -323,7 +323,7 @@ exports[`gux-modal #render should render modal with just right align buttons 2`]
         </p>
       </div>
       <div class="button-footer">
-        <div></div>
+        <div class="left-align-buttons"></div>
         <div class="right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary" title="Button">
@@ -356,7 +356,7 @@ exports[`gux-modal #render should render modal without a title 1`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -398,7 +398,7 @@ exports[`gux-modal #render should render modal without a title 2`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -495,7 +495,7 @@ exports[`gux-modal #render should render small modal 1`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -542,7 +542,7 @@ exports[`gux-modal #render should render small modal 2`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -589,7 +589,7 @@ exports[`gux-modal #render should render small modal by default 1`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
@@ -636,7 +636,7 @@ exports[`gux-modal #render should render small modal by default 2`] = `
         </p>
       </div>
       <div class="button-footer">
-        <div>
+        <div class="left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button title="Cancel">
               <!---->
