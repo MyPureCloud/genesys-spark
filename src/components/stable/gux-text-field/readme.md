@@ -79,7 +79,7 @@ Type: `Promise<void>`
  - [gux-datepicker](../gux-datepicker)
  - [gux-dropdown](../gux-dropdown)
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
- - [gux-search](../../beta/gux-search)
+ - [gux-search-beta](../../beta/gux-search)
  - [gux-spin-button](../gux-spin-button)
 
 ### Depends on
@@ -93,7 +93,7 @@ graph TD;
   gux-datepicker --> gux-text-field
   gux-dropdown --> gux-text-field
   gux-pagination-buttons --> gux-text-field
-  gux-search --> gux-text-field
+  gux-search-beta --> gux-text-field
   gux-spin-button --> gux-text-field
   style gux-text-field fill:#f9f,stroke:#333,stroke-width:4px
 ```

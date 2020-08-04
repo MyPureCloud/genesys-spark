@@ -5,9 +5,9 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<gux-command-palette lang="en"></gux-command-palette>'
+      '<gux-command-palette-beta lang="en"></gux-command-palette-beta>'
     );
-    const element = await page.find('gux-command-palette');
+    const element = await page.find('gux-command-palette-beta');
     expect(element).toHaveClass('hydrated');
   });
 
@@ -15,17 +15,17 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette lang="en">
+    <gux-command-palette-beta lang="en">
       <gux-command-action text="test"></gux-command-action>
-    </gux-command-palette>`);
+    </gux-command-palette-beta>`);
 
     await page.waitForChanges();
-    let component = await page.find('gux-command-palette');
+    let component = await page.find('gux-command-palette-beta');
 
     await component.callMethod('open');
 
     await page.waitForChanges();
-    component = await page.find('gux-command-palette');
+    component = await page.find('gux-command-palette-beta');
     expect(component.classList.contains('hidden')).toBeFalsy();
   });
 
@@ -33,13 +33,13 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette lang="en">
+    <gux-command-palette-beta lang="en">
       <gux-command-action text="test" recent></gux-command-action>
-    </gux-command-palette>`);
+    </gux-command-palette-beta>`);
 
     await page.waitForChanges();
 
-    const component = await page.find('gux-command-palette');
+    const component = await page.find('gux-command-palette-beta');
     await component.callMethod('open');
     await page.waitForChanges();
 
@@ -59,13 +59,13 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette lang="en">
+    <gux-command-palette-beta lang="en">
       <gux-command-action text="test" common></gux-command-action>
-    </gux-command-palette>`);
+    </gux-command-palette-beta>`);
 
     await page.waitForChanges();
 
-    const component = await page.find('gux-command-palette');
+    const component = await page.find('gux-command-palette-beta');
     await component.callMethod('open');
     await page.waitForChanges();
 
@@ -85,14 +85,14 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette lang="en">
+    <gux-command-palette-beta lang="en">
       <gux-command-action text="test" common></gux-command-action>
       <gux-command-action text="test2" recent></gux-command-action>
-    </gux-command-palette>`);
+    </gux-command-palette-beta>`);
 
     await page.waitForChanges();
 
-    const component = await page.find('gux-command-palette');
+    const component = await page.find('gux-command-palette-beta');
     await component.callMethod('open');
     await page.waitForChanges();
 
@@ -114,14 +114,14 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette lang="en">
+    <gux-command-palette-beta lang="en">
       <gux-command-action text="test"></gux-command-action>
       <gux-command-action text="test2"></gux-command-action>
-    </gux-command-palette>`);
+    </gux-command-palette-beta>`);
 
     await page.waitForChanges();
 
-    const component = await page.find('gux-command-palette');
+    const component = await page.find('gux-command-palette-beta');
     await component.callMethod('open');
     await page.waitForChanges();
 
@@ -142,19 +142,19 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette lang="en">
+    <gux-command-palette-beta lang="en">
       <gux-command-action text="test" common></gux-command-action>
       <gux-command-action text="test2"></gux-command-action>
       <gux-command-action text="test3" recent></gux-command-action>
-    </gux-command-palette>`);
+    </gux-command-palette-beta>`);
 
     await page.waitForChanges();
 
-    const component = await page.find('gux-command-palette');
+    const component = await page.find('gux-command-palette-beta');
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const search = await (await page.find('gux-search')).find('input');
+    const search = await (await page.find('gux-search-beta')).find('input');
     await search.press('KeyT');
     await page.waitForChanges();
 
@@ -173,19 +173,19 @@ describe('gux-command-palette', () => {
     const page = await newE2EPage();
 
     await page.setContent(`
-    <gux-command-palette lang="en">
+    <gux-command-palette-beta lang="en">
       <gux-command-action text="apple" common></gux-command-action>
       <gux-command-action text="orange"></gux-command-action>
       <gux-command-action text="pear" recent></gux-command-action>
-    </gux-command-palette>`);
+    </gux-command-palette-beta>`);
 
     await page.waitForChanges();
 
-    const component = await page.find('gux-command-palette');
+    const component = await page.find('gux-command-palette-beta');
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const search = await (await page.find('gux-search')).find('input');
+    const search = await (await page.find('gux-search-beta')).find('input');
     await search.press('KeyO');
     await search.press('KeyR');
     await page.waitForChanges();
@@ -214,19 +214,19 @@ describe('gux-command-palette', () => {
     }
 
     await page.setContent(`
-    <gux-command-palette lang="en">
+    <gux-command-palette-beta lang="en">
       <gux-command-action text="apple" common></gux-command-action>
       <gux-command-action text="pear" recent></gux-command-action>
       ${buildItems(60)}
-    </gux-command-palette>`);
+    </gux-command-palette-beta>`);
 
     await page.waitForChanges();
 
-    const component = await page.find('gux-command-palette');
+    const component = await page.find('gux-command-palette-beta');
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const search = await (await page.find('gux-search')).find('input');
+    const search = await (await page.find('gux-search-beta')).find('input');
     await search.press('KeyT');
     await page.waitForChanges();
 
@@ -244,14 +244,14 @@ describe('gux-command-palette', () => {
       page = await newE2EPage();
 
       await page.setContent(`
-      <gux-command-palette lang="en">
+      <gux-command-palette-beta lang="en">
         <gux-command-action text="common" common></gux-command-action>
         <gux-command-action text="recent" recent></gux-command-action>
-      </gux-command-palette>`);
+      </gux-command-palette-beta>`);
 
       await page.waitForChanges();
 
-      commandPallete = await page.find('gux-command-palette');
+      commandPallete = await page.find('gux-command-palette-beta');
       await commandPallete.callMethod('open');
       await page.waitForChanges();
     });

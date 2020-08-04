@@ -1,5 +1,5 @@
-import { CalendarModes, KeyCode } from '../../../common-enums';
-import * as utils from '../../../common-utils';
+import { CalendarModes, KeyCode } from '../../../../common-enums';
+import * as utils from '../../../../common-utils';
 import { GuxCalendar } from '../gux-calendar';
 
 describe('gux-calendar', () => {

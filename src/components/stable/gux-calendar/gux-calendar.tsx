@@ -18,7 +18,7 @@ import {
   fromIsoDateString,
   removeClassToElements
 } from '../../../common-utils';
-import { getDesiredLocale } from '../../i18n';
+import { getDesiredLocale } from '../../../i18n';
 import { IDateElement } from './gux-calendar-constants';
 
 @Component({

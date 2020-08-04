@@ -7,7 +7,7 @@ describe('gux-search', () => {
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [GuxSearch],
-      html: `<gux-search></gux-search>`,
+      html: `<gux-search-beta></gux-search-beta>`,
       language: 'en'
     });
 

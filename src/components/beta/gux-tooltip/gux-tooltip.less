@@ -1,6 +1,6 @@
 // Variables part
 
-gux-tooltip {
+gux-tooltip-beta {
   div.gux-tooltip {
     position: absolute;
     white-space: nowrap;
@@ -21,10 +21,10 @@ gux-tooltip {
       opacity: 1;
     }
 
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-    -o-transition: opacity .25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
   }
 }
 
@@ -37,11 +37,11 @@ gux-tooltip {
   }
 }
 .gux-light-theme {
-  gux-tooltip {
-      .gux-tooltip-light-theme;
+  gux-tooltip-beta {
+    .gux-tooltip-light-theme;
   }
 }
-gux-tooltip.gux-light-theme {
+gux-tooltip-beta.gux-light-theme {
   .gux-tooltip-light-theme;
 }
 // Dark
@@ -52,14 +52,14 @@ gux-tooltip.gux-light-theme {
   }
 }
 .gux-dark-theme {
-  gux-tooltip {
+  gux-tooltip-beta {
     .gux-tooltip-dark-theme;
   }
 }
-gux-tooltip.gux-dark-theme {
+gux-tooltip-beta.gux-dark-theme {
   .gux-tooltip-dark-theme;
 }
 // Default
-gux-tooltip {
+gux-tooltip-beta {
   .gux-tooltip-light-theme;
 }

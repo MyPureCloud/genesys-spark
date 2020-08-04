@@ -1,13 +1,10 @@
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-side-panel.less',
-  tag: 'gux-side-panel'
+  tag: 'gux-side-panel-beta'
 })
 export class GuxSidePanel {
-  @Element()
-  root: HTMLGuxSidePanelElement;
-
   @Prop()
   isOpen = false;
 

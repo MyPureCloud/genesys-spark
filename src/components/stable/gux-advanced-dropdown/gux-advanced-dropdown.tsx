@@ -10,7 +10,7 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import { buildI18nForComponent } from '../../i18n';
+import { buildI18nForComponent } from '../../../i18n';
 import advancedDropDownResources from './i18n/en.json';
 
 @Component({
@@ -20,7 +20,7 @@ import advancedDropDownResources from './i18n/en.json';
 export class GuxAdvancedDropdown {
   @Element()
   root: HTMLElement;
-  searchElement: HTMLGuxSearchElement;
+  searchElement: HTMLGuxSearchBetaElement;
   inputBox: HTMLElement;
   i18n: (resourceKey: string, context?: any) => string;
 
@@ -156,8 +156,8 @@ export class GuxAdvancedDropdown {
           class={`gux-advanced-dropdown-menu ${this.opened ? 'opened' : ''}`}
         >
           <div class="gux-dropdown-menu-container">
-            <gux-search
-              ref={el => (this.searchElement = el as HTMLGuxSearchElement)}
+            <gux-search-beta
+              ref={el => (this.searchElement = el as HTMLGuxSearchBetaElement)}
               class="gux-light-theme"
               srLabel={this.i18n('searchAria')}
               dynamic-search="true"

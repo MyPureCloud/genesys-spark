@@ -4,8 +4,8 @@ describe('gux-search', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-search lang="en"></gux-search>');
-    const element = await page.find('gux-search');
+    await page.setContent('<gux-search-beta lang="en"></gux-search-beta>');
+    const element = await page.find('gux-search-beta');
     expect(element).toHaveClass('hydrated');
   });
 
@@ -13,8 +13,8 @@ describe('gux-search', () => {
     it('should appear when the value is not empty', async () => {
       const page = await newE2EPage();
 
-      await page.setContent('<gux-search lang="en"></gux-search>');
-      const element = await page.find('gux-search');
+      await page.setContent('<gux-search-beta lang="en"></gux-search-beta>');
+      const element = await page.find('gux-search-beta');
       let clearButton = await element.find('button');
       const input = await element.find('input');
       expect(clearButton).toBeNull();
@@ -43,8 +43,8 @@ describe('gux-search', () => {
     it('should send key data.', async () => {
       const page = await newE2EPage();
 
-      await page.setContent('<gux-search lang="en"></gux-search>');
-      const element = await page.find('gux-search');
+      await page.setContent('<gux-search-beta lang="en"></gux-search-beta>');
+      const element = await page.find('gux-search-beta');
       const input = await element.find('input');
 
       const inputSpy = await element.spyOnEvent('input');
@@ -57,8 +57,8 @@ describe('gux-search', () => {
     it('should emit search event on Enter', async () => {
       const page = await newE2EPage();
 
-      await page.setContent('<gux-search lang="en"></gux-search>');
-      const element = await page.find('gux-search');
+      await page.setContent('<gux-search-beta lang="en"></gux-search-beta>');
+      const element = await page.find('gux-search-beta');
       const input = await element.find('input');
 
       const searchSpy = await element.spyOnEvent('search');
@@ -77,9 +77,9 @@ describe('gux-search', () => {
       const page = await newE2EPage();
 
       await page.setContent(
-        '<gux-search lang="en" dynamic-search="true" search-timeout="0"></gux-search>'
+        '<gux-search-beta lang="en" dynamic-search="true" search-timeout="0"></gux-search-beta>'
       );
-      const element = await page.find('gux-search');
+      const element = await page.find('gux-search-beta');
       const input = await element.find('input');
 
       const searchSpy = await element.spyOnEvent('search');

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-rating #render should render component as expected (1) 1`] = `
-<gux-rating rating="0">
+<gux-rating-beta rating="0">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="0" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -69,11 +69,11 @@ exports[`gux-rating #render should render component as expected (1) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (2) 1`] = `
-<gux-rating rating="0">
+<gux-rating-beta rating="0">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="0" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -141,11 +141,11 @@ exports[`gux-rating #render should render component as expected (2) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (3) 1`] = `
-<gux-rating rating="1">
+<gux-rating-beta rating="1">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="true" aria-label="0" class="gux-rating-element" role="radio" tabindex="0" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -213,11 +213,11 @@ exports[`gux-rating #render should render component as expected (3) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (4) 1`] = `
-<gux-rating rating="2">
+<gux-rating-beta rating="2">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -285,11 +285,11 @@ exports[`gux-rating #render should render component as expected (4) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (5) 1`] = `
-<gux-rating rating="3">
+<gux-rating-beta rating="3">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -357,11 +357,11 @@ exports[`gux-rating #render should render component as expected (5) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (6) 1`] = `
-<gux-rating rating="4">
+<gux-rating-beta rating="4">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -429,11 +429,11 @@ exports[`gux-rating #render should render component as expected (6) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (7) 1`] = `
-<gux-rating rating="5">
+<gux-rating-beta rating="5">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -501,11 +501,11 @@ exports[`gux-rating #render should render component as expected (7) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (8) 1`] = `
-<gux-rating allow-half-ratings="" rating="0.5">
+<gux-rating-beta allow-half-ratings="" rating="0.5">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="mixed" aria-label="0" class="gux-rating-element" role="radio" tabindex="0" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -573,11 +573,11 @@ exports[`gux-rating #render should render component as expected (8) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (9) 1`] = `
-<gux-rating allow-half-ratings="" rating="1.5">
+<gux-rating-beta allow-half-ratings="" rating="1.5">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -645,11 +645,11 @@ exports[`gux-rating #render should render component as expected (9) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (10) 1`] = `
-<gux-rating allow-half-ratings="" rating="2.5">
+<gux-rating-beta allow-half-ratings="" rating="2.5">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -717,11 +717,11 @@ exports[`gux-rating #render should render component as expected (10) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (11) 1`] = `
-<gux-rating allow-half-ratings="" rating="3.5">
+<gux-rating-beta allow-half-ratings="" rating="3.5">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -789,11 +789,11 @@ exports[`gux-rating #render should render component as expected (11) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (12) 1`] = `
-<gux-rating allow-half-ratings="" rating="4.5">
+<gux-rating-beta allow-half-ratings="" rating="4.5">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -861,11 +861,11 @@ exports[`gux-rating #render should render component as expected (12) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (13) 1`] = `
-<gux-rating max-rating="10" rating="0">
+<gux-rating-beta max-rating="10" rating="0">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="0" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -998,11 +998,11 @@ exports[`gux-rating #render should render component as expected (13) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (14) 1`] = `
-<gux-rating max-rating="10" rating="5">
+<gux-rating-beta max-rating="10" rating="5">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1135,11 +1135,11 @@ exports[`gux-rating #render should render component as expected (14) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (15) 1`] = `
-<gux-rating max-rating="10" rating="10">
+<gux-rating-beta max-rating="10" rating="10">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1272,11 +1272,11 @@ exports[`gux-rating #render should render component as expected (15) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (16) 1`] = `
-<gux-rating disabled="" rating="3">
+<gux-rating-beta disabled="" rating="3">
   <div aria-label="" class="gux-rating" role="radiogroup">
     <div aria-checked="false" aria-label="0" class="gux-rating-element" role="radio" tabindex="-1" title="0">
       <svg class="gux-rating-item" role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1344,5 +1344,5 @@ exports[`gux-rating #render should render component as expected (16) 1`] = `
       </svg>
     </div>
   </div>
-</gux-rating>
+</gux-rating-beta>
 `;

@@ -1,7 +1,7 @@
 import { Component, Element, h, Method, State } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 import { matchesFuzzy } from '../../../search';
-import { buildI18nForComponent } from '../../i18n';
+import { buildI18nForComponent } from '../../../i18n';
 import paletteResources from './i18n/en.json';
 
 const filterLimit = 50;
@@ -38,7 +38,7 @@ function sortActions(
 
 @Component({
   styleUrl: 'gux-command-palette.less',
-  tag: 'gux-command-palette'
+  tag: 'gux-command-palette-beta'
 })
 export class GuxCommandPalette {
   @Element()
@@ -72,7 +72,7 @@ export class GuxCommandPalette {
         onKeyDown={e => this.onKeyDown(e)}
         aria-label={this.i18n('title')}
       >
-        <gux-search
+        <gux-search-beta
           sr-label={this.i18n('search')}
           onInput={(e: any) => {
             this.handleInput(e);
@@ -295,7 +295,7 @@ export class GuxCommandPalette {
   }
 
   private elementIsSearch(el: Element): boolean {
-    return el.closest('gux-search') !== null;
+    return el.closest('gux-search-beta') !== null;
   }
 
   private getParentGuxList(el: Element): HTMLGuxListElement {
@@ -309,7 +309,7 @@ export class GuxCommandPalette {
       return;
     }
 
-    const searchElement = el as HTMLGuxSearchElement;
+    const searchElement = el as HTMLGuxSearchBetaElement;
     if (searchElement && searchElement.setInputFocus) {
       searchElement.setInputFocus();
     }

@@ -7,7 +7,7 @@ describe('gux-panel-frame', () => {
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [GuxPanelFrame],
-      html: `<gux-panel-frame></gux-panel-frame>`,
+      html: `<gux-panel-frame-beta></gux-panel-frame-beta>`,
       language: 'en'
     });
 

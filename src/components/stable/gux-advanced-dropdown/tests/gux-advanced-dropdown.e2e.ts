@@ -74,7 +74,7 @@ describe('gux-advanced-dropdown', () => {
     inputElm.click();
     await page.waitForChanges();
 
-    const guxSearch = await element.find('gux-search');
+    const guxSearch = await element.find('gux-search-beta');
     guxSearch.setProperty('value', 'en');
     await page.waitForChanges();
 
@@ -100,7 +100,7 @@ describe('gux-advanced-dropdown', () => {
     inputElm.click();
     await page.waitForChanges();
 
-    const guxSearch = await element.find('gux-search');
+    const guxSearch = await element.find('gux-search-beta');
     guxSearch.setProperty('value', 'en');
     await page.waitForChanges();
 

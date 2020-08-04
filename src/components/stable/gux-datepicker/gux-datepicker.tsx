@@ -16,7 +16,7 @@ import {
   fromIsoDateRange,
   fromIsoDateString
 } from '../../../common-utils';
-import { buildI18nForComponent } from '../../i18n';
+import { buildI18nForComponent } from '../../../i18n';
 import i18nStrings from './i18n/en.json';
 
 @Component({

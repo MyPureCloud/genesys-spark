@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import * as Utils from '../../../common-utils';
+import * as Utils from '../../../../common-utils';
 import { GuxTooltip } from '../gux-tooltip';
 
 describe('gux-tooltip', () => {
@@ -8,7 +8,7 @@ describe('gux-tooltip', () => {
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [GuxTooltip],
-      html: `<gux-tooltip></gux-tooltip>`,
+      html: `<gux-tooltip-beta></gux-tooltip-beta>`,
       language: 'en'
     });
 

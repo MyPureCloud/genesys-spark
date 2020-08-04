@@ -13,11 +13,11 @@ import { getPositionRelativeToTarget } from '../../../common-utils';
 
 @Component({
   styleUrl: 'gux-tooltip.less',
-  tag: 'gux-tooltip'
+  tag: 'gux-tooltip-beta'
 })
 export class GuxTooltip {
   @Element()
-  root: HTMLGuxTooltipElement;
+  root: HTMLElement;
 
   /**
    * Element's id.

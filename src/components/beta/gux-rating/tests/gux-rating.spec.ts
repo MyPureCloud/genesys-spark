@@ -7,7 +7,7 @@ describe('gux-rating', () => {
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [GuxRating],
-      html: `<gux-rating></gux-rating>`,
+      html: `<gux-rating-beta></gux-rating-beta>`,
       language: 'en'
     });
 
@@ -20,22 +20,22 @@ describe('gux-rating', () => {
 
   describe('#render', () => {
     [
-      '<gux-rating></gux-rating>',
-      '<gux-rating rating="0"></gux-rating>',
-      '<gux-rating rating="1"></gux-rating>',
-      '<gux-rating rating="2"></gux-rating>',
-      '<gux-rating rating="3"></gux-rating>',
-      '<gux-rating rating="4"></gux-rating>',
-      '<gux-rating rating="5"></gux-rating>',
-      '<gux-rating allow-half-ratings rating="0.5"></gux-rating>',
-      '<gux-rating allow-half-ratings rating="1.5"></gux-rating>',
-      '<gux-rating allow-half-ratings rating="2.5"></gux-rating>',
-      '<gux-rating allow-half-ratings rating="3.5"></gux-rating>',
-      '<gux-rating allow-half-ratings rating="4.5"></gux-rating>',
-      '<gux-rating rating="0" max-rating=10></gux-rating>',
-      '<gux-rating rating="5" max-rating=10></gux-rating>',
-      '<gux-rating rating="10" max-rating=10></gux-rating>',
-      '<gux-rating rating="3" disabled></gux-rating>'
+      '<gux-rating-beta></gux-rating-beta>',
+      '<gux-rating-beta rating="0"></gux-rating-beta>',
+      '<gux-rating-beta rating="1"></gux-rating-beta>',
+      '<gux-rating-beta rating="2"></gux-rating-beta>',
+      '<gux-rating-beta rating="3"></gux-rating-beta>',
+      '<gux-rating-beta rating="4"></gux-rating-beta>',
+      '<gux-rating-beta rating="5"></gux-rating-beta>',
+      '<gux-rating-beta allow-half-ratings rating="0.5"></gux-rating-beta>',
+      '<gux-rating-beta allow-half-ratings rating="1.5"></gux-rating-beta>',
+      '<gux-rating-beta allow-half-ratings rating="2.5"></gux-rating-beta>',
+      '<gux-rating-beta allow-half-ratings rating="3.5"></gux-rating-beta>',
+      '<gux-rating-beta allow-half-ratings rating="4.5"></gux-rating-beta>',
+      '<gux-rating-beta rating="0" max-rating=10></gux-rating-beta>',
+      '<gux-rating-beta rating="5" max-rating=10></gux-rating-beta>',
+      '<gux-rating-beta rating="10" max-rating=10></gux-rating-beta>',
+      '<gux-rating-beta rating="3" disabled></gux-rating-beta>'
     ].forEach((input, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({
@@ -83,7 +83,7 @@ describe('gux-rating', () => {
       beforeEach(async () => {
         page = await newSpecPage({
           components: [GuxRating],
-          html: '<gux-rating></gux-rating>'
+          html: '<gux-rating-beta></gux-rating-beta>'
         });
       });
 
@@ -144,7 +144,7 @@ describe('gux-rating', () => {
       beforeEach(async () => {
         page = await newSpecPage({
           components: [GuxRating],
-          html: '<gux-rating allow-half-ratings></gux-rating>'
+          html: '<gux-rating-beta allow-half-ratings></gux-rating-beta>'
         });
       });
 
@@ -229,7 +229,7 @@ describe('gux-rating', () => {
       beforeEach(async () => {
         page = await newSpecPage({
           components: [GuxRating],
-          html: '<gux-rating rating="3" disabled></gux-rating>'
+          html: '<gux-rating-beta rating="3" disabled></gux-rating-beta>'
         });
       });
 

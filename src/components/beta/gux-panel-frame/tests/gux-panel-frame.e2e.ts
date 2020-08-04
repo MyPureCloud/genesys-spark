@@ -4,8 +4,8 @@ describe('gux-panel-frame', () => {
   it('renders', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<gux-panel-frame></gux-panel-frame>');
-    const element = await page.find('gux-panel-frame');
+    await page.setContent('<gux-panel-frame-beta></gux-panel-frame-beta>');
+    const element = await page.find('gux-panel-frame-beta');
     expect(element).toHaveClass('hydrated');
   });
 
@@ -13,7 +13,7 @@ describe('gux-panel-frame', () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<gux-panel-frame><div slot="header"></div><div slot="body"></div><div slot="footer"></div></gux-panel-frame>'
+      '<gux-panel-frame-beta><div slot="header"></div><div slot="body"></div><div slot="footer"></div></gux-panel-frame-beta>'
     );
     const header = await page.find('.gux-panel-header');
     const body = await page.find('.gux-panel-body');
@@ -27,7 +27,7 @@ describe('gux-panel-frame', () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<gux-panel-frame><div slot="nothing"></div></gux-panel-frame>'
+      '<gux-panel-frame-beta><div slot="nothing"></div></gux-panel-frame-beta>'
     );
     const header = await page.find('.gux-panel-header');
     const body = await page.find('.gux-panel-body');

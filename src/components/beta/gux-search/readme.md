@@ -54,7 +54,7 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-advanced-dropdown](../../stable/gux-advanced-dropdown)
- - [gux-command-palette](../gux-command-palette)
+ - [gux-command-palette-beta](../gux-command-palette)
 
 ### Depends on
 
@@ -64,12 +64,12 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-search --> gux-text-field
-  gux-search --> gux-icon
+  gux-search-beta --> gux-text-field
+  gux-search-beta --> gux-icon
   gux-text-field --> gux-icon
-  gux-advanced-dropdown --> gux-search
-  gux-command-palette --> gux-search
-  style gux-search fill:#f9f,stroke:#333,stroke-width:4px
+  gux-advanced-dropdown --> gux-search-beta
+  gux-command-palette-beta --> gux-search-beta
+  style gux-search-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

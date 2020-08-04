@@ -12,11 +12,11 @@ import {
 
 @Component({
   styleUrl: 'gux-search.less',
-  tag: 'gux-search'
+  tag: 'gux-search-beta'
 })
 export class GuxSearch {
   @Element()
-  root: HTMLGuxSearchElement;
+  root: HTMLElement;
   textFieldElement: HTMLGuxTextFieldElement;
 
   /**

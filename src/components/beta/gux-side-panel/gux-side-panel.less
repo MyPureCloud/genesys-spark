@@ -1,7 +1,7 @@
 // Variables part
 
 // Style
-gux-side-panel {
+gux-side-panel-beta {
   aside {
     height: 100%;
     background-color: @gux-off-white;
@@ -39,7 +39,7 @@ gux-side-panel {
       width: 280px;
       height: 100%;
 
-      [slot="side-panel-content"] {
+      [slot='side-panel-content'] {
         height: 100%;
       }
 
@@ -54,43 +54,43 @@ gux-side-panel {
 
 // Dark
 .gux-side-panel-dark-theme {
-    color: @gux-off-white;
+  color: @gux-off-white;
 
-    aside {
-      background-color: @gux-charcoal;
+  aside {
+    background-color: @gux-charcoal;
 
-      .panel-icons {
-        border-color: @gux-grey-1;
-      }
+    .panel-icons {
+      border-color: @gux-grey-1;
     }
-};
-
-.gux-dark-theme {
-    gux-side-panel {
-        .gux-side-panel-dark-theme();
-    }
+  }
 }
 
-gux-side-panel.gux-dark-theme {
+.gux-dark-theme {
+  gux-side-panel-beta {
     .gux-side-panel-dark-theme();
+  }
+}
+
+gux-side-panel-beta.gux-dark-theme {
+  .gux-side-panel-dark-theme();
 }
 
 // Light
 .gux-side-panel-light-theme {
-    color: @gux-grey-2;
-};
-
-.gux-light-theme {
-    gux-side-panel {
-        .gux-side-panel-light-theme();
-    }
+  color: @gux-grey-2;
 }
 
-gux-side-panel.gux-light-theme {
+.gux-light-theme {
+  gux-side-panel-beta {
     .gux-side-panel-light-theme();
+  }
+}
+
+gux-side-panel-beta.gux-light-theme {
+  .gux-side-panel-light-theme();
 }
 
 // Default Theme
-gux-side-panel {
-    .gux-side-panel-light-theme();
+gux-side-panel-beta {
+  .gux-side-panel-light-theme();
 }

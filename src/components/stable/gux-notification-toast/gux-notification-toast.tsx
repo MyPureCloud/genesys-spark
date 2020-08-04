@@ -9,7 +9,7 @@ import {
   Prop
 } from '@stencil/core';
 
-import { buildI18nForComponent } from '../../i18n';
+import { buildI18nForComponent } from '../../../i18n';
 
 import modalComponentResources from './i18n/en.json';
 

@@ -35,7 +35,7 @@
 
 ### Depends on
 
-- [gux-icon](../../stable/gux-icon)
+- [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid

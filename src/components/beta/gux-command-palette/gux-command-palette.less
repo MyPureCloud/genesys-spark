@@ -6,7 +6,7 @@
 @palette-shadow: rgba(34, 37, 41, 0.24);
 
 // Style
-gux-command-palette .gux-command-palette {
+gux-command-palette-beta .gux-command-palette {
   border-color: 1px solid @palette-border-color;
   box-shadow: 0px 0 2px 0px @palette-shadow;
   position: absolute;
@@ -139,12 +139,12 @@ gux-command-palette .gux-command-palette {
 }
 
 .gux-dark-theme {
-  gux-command-palette {
+  gux-command-palette-beta {
     .gux-command-palette-dark-theme();
   }
 }
 
-gux-command-palette.gux-dark-theme {
+gux-command-palette-beta.gux-dark-theme {
   .gux-command-palette-dark-theme();
 }
 
@@ -174,16 +174,16 @@ gux-command-palette.gux-dark-theme {
 }
 
 .gux-light-theme {
-  gux-command-palette {
+  gux-command-palette-beta {
     .gux-command-palette-light-theme();
   }
 }
 
-gux-command-palette.gux-light-theme {
+gux-command-palette-beta.gux-light-theme {
   .gux-command-palette-light-theme();
 }
 
 // Default Theme
-gux-command-palette {
+gux-command-palette-beta {
   .gux-command-palette-light-theme();
 }

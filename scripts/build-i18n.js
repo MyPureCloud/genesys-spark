@@ -12,7 +12,7 @@ const path = require('path');
 
 const filePatternRegex = /[\/\\]([^\/\\]+)\/i18n\/([^.]+)\.json$/;
 const translationsFolder = path.join(__dirname, '../build/i18n');
-const localesFile = path.join(__dirname, '../src/components/i18n/locales.json');
+const localesFile = path.join(__dirname, '../src/i18n/locales.json');
 
 glob('src/components/**/i18n/*.json', (err, files) => {
   if (err) {

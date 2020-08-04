@@ -1,4 +1,4 @@
-import { CalendarModes, KeyCode } from '../../../common-enums';
+import { CalendarModes, KeyCode } from '../../../../common-enums';
 import { GuxDatepicker } from '../gux-datepicker';
 
 describe('gux-datepicker', () => {

@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KeyCode } from '../../../common-enums';
+import { KeyCode } from '../../../../common-enums';
 import { GuxSwitch } from '../gux-switch';
 import { ISwitchItem } from '../gux-switch.constants';
 
@@ -9,7 +9,7 @@ describe('gux-switch', () => {
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [GuxSwitch],
-      html: `<gux-switch></gux-switch>`,
+      html: `<gux-switch-beta></gux-switch-beta>`,
       language: 'en'
     });
 

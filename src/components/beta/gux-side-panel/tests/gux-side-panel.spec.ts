@@ -7,7 +7,7 @@ describe('gux-side-panel', () => {
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [GuxSidePanel],
-      html: `<gux-side-panel></gux-side-panel>`,
+      html: `<gux-side-panel-beta></gux-side-panel-beta>`,
       language: 'en'
     });
 

@@ -11,11 +11,11 @@ import { KeyCode } from '../../../common-enums';
 
 @Component({
   styleUrl: 'gux-rating.less',
-  tag: 'gux-rating'
+  tag: 'gux-rating-beta'
 })
 export class GuxRating {
   @Element()
-  root: HTMLGuxRatingElement;
+  root: HTMLElement;
 
   /**
    * Determines if the user can set a rating

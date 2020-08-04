@@ -51,7 +51,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-search](../gux-search)
+- [gux-search-beta](../gux-search)
 - [gux-list](../../stable/gux-list)
 - [gux-list-item](../../stable/gux-list/list-item)
 - [gux-text-highlight](../../stable/gux-text-highlight)
@@ -59,15 +59,15 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-command-palette --> gux-search
-  gux-command-palette --> gux-list
-  gux-command-palette --> gux-list-item
-  gux-command-palette --> gux-text-highlight
-  gux-search --> gux-text-field
-  gux-search --> gux-icon
+  gux-command-palette-beta --> gux-search-beta
+  gux-command-palette-beta --> gux-list
+  gux-command-palette-beta --> gux-list-item
+  gux-command-palette-beta --> gux-text-highlight
+  gux-search-beta --> gux-text-field
+  gux-search-beta --> gux-icon
   gux-text-field --> gux-icon
   gux-list-item --> gux-text-highlight
-  style gux-command-palette fill:#f9f,stroke:#333,stroke-width:4px
+  style gux-command-palette-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

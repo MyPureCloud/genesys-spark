@@ -7,7 +7,7 @@ describe('gux-command-palette', () => {
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [GuxCommandPalette],
-      html: `<gux-command-palette></gux-command-palette>`,
+      html: `<gux-command-palette-beta></gux-command-palette-beta>`,
       language: 'en'
     });
 

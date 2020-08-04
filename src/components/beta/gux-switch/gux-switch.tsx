@@ -5,7 +5,7 @@ import { AllowedLayouts, ISwitchItem } from './gux-switch.constants';
 
 @Component({
   styleUrl: 'gux-switch.less',
-  tag: 'gux-switch'
+  tag: 'gux-switch-beta'
 })
 export class GuxSwitch {
   /**

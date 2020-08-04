@@ -12,7 +12,7 @@ exports[`gux-advanced-dropdown should render 1`] = `
     </div>
     <div class="gux-advanced-dropdown-menu">
       <div class="gux-dropdown-menu-container">
-        <gux-search class="gux-light-theme" dynamic-search="true" searchtimeout="500" srlabel="Search"></gux-search>
+        <gux-search-beta class="gux-light-theme" dynamic-search="true" searchtimeout="500" srlabel="Search"></gux-search-beta>
         <div class="gux-dropdown-options">
           <gux-dropdown-option text="English" value="en"></gux-dropdown-option>
           <gux-dropdown-option text="Dutch" value="nl"></gux-dropdown-option>
