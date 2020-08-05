@@ -34,7 +34,7 @@
     "lint": "npm run lint.commit && npm run lint.ts",
     "lint.fix": "npm run lint.ts -- --fix",
     "lint.ts": "tslint --project .",
-    "lint.commit": "commitlint -f f141386578705cf2a1bf1fe7f2a6235ed7448734",
+    "lint.commit": "commitlint -f 811627c6ed30490b975acc4cbc2c2f4bac32e8ae",
     "prepare": "./scripts/prepare-docs.sh && npm run i18n",
     "i18n": "./scripts/build-i18n.js",
     "list-i18n-files": "./scripts/list-i18n-files.js",
