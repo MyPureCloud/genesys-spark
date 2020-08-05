@@ -1,0 +1,189 @@
+// Variables part
+@palette-background-color: @gux-off-white;
+@palette-background-color-dark: #555d66;
+@palette-border-color: #dae1eb;
+@palette-details-color: #77828f;
+@palette-shadow: rgba(34, 37, 41, 0.24);
+
+// Style
+gux-command-palette .gux-command-palette {
+  border-color: 1px solid @palette-border-color;
+  box-shadow: 0px 0 2px 0px @palette-shadow;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 750px;
+
+  padding: 12px;
+
+  &.hidden {
+    display: none;
+    top: 0;
+  }
+
+  &:not(.hidden) {
+    top: 40px;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    // this 300ms duration must be kept in sync with the 300 second focus timeout in the TypeScript
+    animation-duration: 300ms;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      top: 0;
+    }
+    100% {
+      opacity: 1;
+      top: 40px;
+    }
+  }
+
+  .limit {
+    margin-bottom: 8px;
+  }
+
+  gux-list > div[role='list'] > strong {
+    height: 32px;
+    line-height: 32px;
+    padding: 0px 16px;
+  }
+
+  gux-text-field,
+  gux-list > div[role='list'] {
+    margin-bottom: 12px;
+  }
+
+  gux-list + gux-list > div[role='list'] {
+    margin-bottom: 0;
+  }
+
+  gux-list gux-list-item.has-details {
+    .list-item {
+      line-height: 16px;
+    }
+  }
+
+  gux-list gux-list-item {
+    .list-item {
+      display: block;
+      line-height: 32px;
+
+      gux-text-highlight,
+      .shortcut {
+        display: block;
+      }
+
+      & div {
+        display: flex;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+
+        gux-text-highlight {
+          flex: 1 1 auto;
+        }
+
+        .shortcut {
+          flex: 0 1 auto;
+        }
+      }
+
+      & gux-text-highlight:last-child {
+        margin-bottom: 8px;
+      }
+
+      .details {
+        font-size: 11px;
+        margin-left: 4px;
+      }
+    }
+
+    &:last-of-type {
+      .details,
+      div:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-command-palette-dark-theme {
+  .gux-command-palette {
+    background: @palette-background-color-dark;
+    color: @gux-off-white;
+
+    gux-list gux-list-item:focus,
+    gux-list gux-list-item:active,
+    gux-list gux-list-item:hover {
+      .list-item div {
+        background: @gux-dark-blue;
+        color: @gux-off-white;
+      }
+
+      .list-item .details {
+        color: @gux-off-white;
+      }
+    }
+
+    gux-list gux-list-item .list-item .details {
+      color: @palette-details-color;
+    }
+  }
+}
+
+.gux-dark-theme {
+  gux-command-palette {
+    .gux-command-palette-dark-theme();
+  }
+}
+
+gux-command-palette.gux-dark-theme {
+  .gux-command-palette-dark-theme();
+}
+
+// Light
+.gux-command-palette-light-theme {
+  .gux-command-palette {
+    background: @palette-background-color;
+    color: @gux-grey-2;
+
+    gux-list gux-list-item:focus,
+    gux-list gux-list-item:active,
+    gux-list gux-list-item:hover {
+      .list-item div {
+        background: @gux-dark-blue;
+        color: @gux-off-white;
+      }
+
+      .list-item .details {
+        color: @gux-off-white;
+      }
+    }
+
+    gux-list gux-list-item .list-item .details {
+      color: @palette-details-color;
+    }
+  }
+}
+
+.gux-light-theme {
+  gux-command-palette {
+    .gux-command-palette-light-theme();
+  }
+}
+
+gux-command-palette.gux-light-theme {
+  .gux-command-palette-light-theme();
+}
+
+// Default Theme
+gux-command-palette {
+  .gux-command-palette-light-theme();
+}

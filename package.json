@@ -1,103 +1,94 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "0.48.0",
+  "version": "1.0.0-alpha.94",
   "description": "Common webcomponents",
-  "module": "dist/esm/index.js",
-  "main": "dist/index.js",
-  "types": "dist/types/components.d.ts",
+  "main": "dist/stencil-wrapper.js",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "build": "npm run i18n && npm run stencil && npm run storybook",
+    "build": "npm run i18n && npm run stencil && npm run docs && npm run build-wrapper",
+    "build-wrapper": "./scripts/wrap-stencil.js",
     "commit": "git-cz",
+    "docs": "cd ./docs && npm run build",
+    "docs.dev": "cd ./docs && npm run start",
+    "docs.dev.public": "cd ./docs && npm run start -- --host 0.0.0.0",
     "release": "standard-version",
-    "stencil": "stencil build --docs --prod",
+    "stencil": "stencil build --prod",
     "stencil.dev": "stencil build --dev --watch --docs",
     "test.unit": "stencil test --spec",
+    "test.unit.update-snapshot": "stencil test --spec --updateSnapshot",
     "test.e2e": "stencil test --e2e",
+    "test.e2e.update-snapshot": "stencil test --e2e --updateSnapshot",
     "test.screenshot": "stencil test --e2e --screenshot",
+    "test.update-snapshot": "stencil test --spec --e2e --updateSnapshot",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "storybook": "./node_modules/.bin/build-storybook -c .storybook -s ./src/style,./dist -o .out",
-    "storybook.dev": "./node_modules/.bin/start-storybook -p 9001 -c .storybook -s ./src/style,./dist",
     "create-component": "node scripts/create-component.js",
-    "dev": "stencil build --dev && \"./node_modules/.bin/concurrently\" \"npm run stencil.dev\" \"npm run storybook.dev\"",
-    "format": "prettier ./src/**/*.ts ./src/**/*.tsx",
+    "dev": "./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run docs.dev\"",
+    "dev.public": "./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run docs.dev.public\"",
+    "format": "prettier \"./**/*.{ts,tsx,js,jsx,json}\"",
     "format.fix": "npm run format -- --write",
     "lint": "npm run lint.commit && npm run lint.ts",
     "lint.fix": "npm run lint.ts -- --fix",
     "lint.ts": "tslint --project .",
-    "lint.commit": "commitlint -f d3ce2e89721467e25922f923863ea3da9579bc73",
-    "i18n": "node scripts/build-i18n.js"
+    "lint.commit": "commitlint -f 811627c6ed30490b975acc4cbc2c2f4bac32e8ae",
+    "prepare": "./scripts/prepare-docs.sh && npm run i18n",
+    "i18n": "./scripts/build-i18n.js",
+    "list-i18n-files": "./scripts/list-i18n-files.js",
+    "check-readmes": "./scripts/check-readmes.sh"
   },
   "dependencies": {
-    "intl-messageformat": "^2.2.0"
+    "@popperjs/core": "^2.4.4",
+    "intl-messageformat": "^9.0.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.6.1",
-    "@commitlint/config-conventional": "^7.6.0",
-    "@stencil/core": "^0.18.1",
-    "@stencil/less": "^0.1.0",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@rollup/plugin-replace": "^2.3.3",
+    "@stencil/core": "^1.16.0",
+    "@stencil/less": "^1.0.0",
     "@stencil/utils": "0.0.5",
     "@stencil/webpack": "0.0.6",
-    "@storybook/addon-a11y": "^5.0.11",
-    "@storybook/addon-actions": "5.0.3",
-    "@storybook/addon-backgrounds": "5.0.3",
-    "@storybook/addon-knobs": "5.0.3",
-    "@storybook/addon-links": "5.0.3",
-    "@storybook/addon-notes": "5.0.3",
-    "@storybook/addon-storysource": "5.0.3",
-    "@storybook/addon-viewport": "5.0.3",
-    "@storybook/addons": "5.0.3",
-    "@storybook/cli": "^5.0.11",
-    "@storybook/html": "^5.0.11",
-    "@storybook/polymer": "5.0.3",
-    "@types/jest": "23.3.5",
-    "@types/puppeteer": "1.12.4",
-    "acorn": "^6.1.1",
-    "ajv": "^6.10.0",
-    "babel-core": "6.26.3",
-    "babel-loader": "7.1.5",
-    "babel-preset-env": "1.7.0",
-    "cheerio": "^1.0.0-rc.3",
-    "commitizen": "^3.1.1",
-    "concurrently": "^4.1.0",
-    "cz-conventional-changelog": "^2.1.0",
-    "glob": "^7.1.4",
-    "handlebars": "^4.1.2",
-    "html-loader": "^0.5.5",
-    "husky": "^1.3.1",
-    "inquirer": "^6.3.1",
-    "jest": "23.6.0",
-    "jest-cli": "23.6.0",
-    "jest-environment-node": "23.4.0",
-    "jest-junit": "^5.2.0",
-    "lint-staged": "^8.1.7",
-    "lit-html": "^1.0.0",
-    "markdown-loader": "^4.0.0",
-    "moment": "^2.24.0",
-    "pixelmatch": "4.0.2",
-    "polymer-webpack-loader": "^2.0.3",
-    "prettier": "^1.17.1",
-    "puppeteer": "1.11.0",
-    "standard-version": "^5.0.2",
-    "storybook-readme": "^5.0.3",
-    "ts-loader": "^5.4.5",
-    "tslint": "^5.16.0",
+    "@types/jest": "^26.0.4",
+    "@types/puppeteer": "3.0.1",
+    "babel-loader": "^8.1.0",
+    "commitizen": "^4.1.2",
+    "concurrently": "^5.2.0",
+    "cz-conventional-changelog": "^3.2.0",
+    "glob": "^7.1.6",
+    "handlebars": "^4.7.6",
+    "husky": "^4.2.5",
+    "inquirer": "^7.3.0",
+    "jest": "^26.1.0",
+    "jest-cli": "^26.1.0",
+    "jest-config": "^26.1.0",
+    "jest-environment-node": "^26.1.0",
+    "jest-junit": "^11.0.1",
+    "lint-staged": "^10.2.11",
+    "mutation-observer": "^1.0.3",
+    "prettier": "^2.0.5",
+    "puppeteer": "4.0.1",
+    "rollup-plugin-copy": "^3.3.0",
+    "standard-version": "^8.0.0",
+    "svgo": "^1.3.2",
+    "ts-loader": "^7.0.5",
+    "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
-    "typedoc": "^0.13.0",
-    "webpack": "^4.32.0",
-    "webpack-dev-server": "^3.4.1",
-    "workbox-build": "3.4.1"
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0",
+    "xmldom": "^0.3.0"
   },
   "repository": {
     "type": "git",
     "url": "git+bitbucket.org:inindca/genesys-webcomponents.git"
   },
   "optionalDependencies": {
-    "@purecloud/web-app-deploy": "^5.2.5"
+    "@purecloud/web-app-deploy": "^5.2.10"
   },
   "config": {
     "commitizen": {
@@ -107,7 +98,17 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
+    ],
+    "rules": {
+      "subject-case": [
+        2,
+        "never",
+        [
+          "pascal-case",
+          "upper-case"
+        ]
+      ]
+    }
   },
   "husky": {
     "hooks": {
@@ -117,8 +118,10 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ]
+      "tslint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx,json}": "prettier --write",
+    "*.svg": "svgo -i"
   }
 }

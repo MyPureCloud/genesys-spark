@@ -1,0 +1,22 @@
+gux-pagination-items-per-page {
+  .gux-pagination-items-per-page-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+
+    & > div {
+      order: 0;
+      flex: 0 1 auto;
+      align-self: auto;
+      white-space: nowrap;
+    }
+
+    .gux-pagination-items-per-page-picker{
+      width: 60px;
+      margin: 0 8px 0 16px;
+    }
+  }
+}

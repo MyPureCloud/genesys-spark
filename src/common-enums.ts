@@ -27,3 +27,8 @@ export enum CalendarModes {
   Single = 'single',
   Range = 'range'
 }
+
+export enum ButtonAccents {
+  Primary = 'primary',
+  Secondary = 'secondary'
+}

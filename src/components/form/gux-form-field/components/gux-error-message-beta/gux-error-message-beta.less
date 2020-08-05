@@ -1,0 +1,50 @@
+// Style
+gux-error-message-beta {
+  .container {
+    .icon {
+      color: red;
+      display: inline;
+    }
+
+    .message {
+      display: inline;
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-error-message-dark-theme {
+  color: @gux-off-white;
+};
+
+.gux-dark-theme {
+  gux-error-message-beta {
+      .gux-error-message-dark-theme();
+  }
+}
+
+gux-error-message-beta.gux-dark-theme {
+  .gux-error-message-dark-theme();
+}
+
+// Light
+.gux-error-message-light-theme {
+  color: @gux-grey-2;
+};
+
+.gux-light-theme {
+  gux-error-message-beta {
+      .gux-error-message-light-theme();
+  }
+}
+
+gux-error-message-beta.gux-light-theme {
+  .gux-error-message-light-theme();
+}
+
+// Default Theme
+gux-error-message-beta {
+  .gux-error-message-light-theme();
+}

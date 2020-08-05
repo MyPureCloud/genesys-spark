@@ -1,0 +1,141 @@
+gux-simple-toast {
+  padding: 8px 12px;
+  width: 336px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+  border-top: 1px solid;
+
+  .icon{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 6px;
+
+    &.alert {
+      color: @gux-alert;
+    }
+    &.warning {
+      color: @gux-warning;
+    }
+    &.positive {
+      color: @gux-positive;
+    }
+    &.neutral {
+      color: @gux-neutral;
+    }
+
+    gux-icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .message{
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    line-height: 24px;
+    margin: 0 12px 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 48px;
+  }
+
+  .dismiss-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 11px;
+    cursor: pointer;
+    gux-icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+// Theming
+// Light
+.gux-simple-toast-light-theme {
+  background: @gux-panel;
+  color: @gux-off-white;
+  border-color: @gux-grey-2;
+
+  .icon{
+    &.alert {
+      color: @gux-alert-2;
+    }
+    &.warning {
+      color: @gux-warning;
+    }
+    &.positive {
+      color: @gux-positive;
+    }
+    &.neutral {
+      color: @gux-neutral-2;
+    }
+  }
+
+  .dismiss-button {
+    color: @gux-off-white;
+  }
+}
+
+// Dark
+.gux-simple-toast-dark-theme {
+  background: @gux-off-white;
+  color: @gux-grey-2;
+  border-color: @gux-border;
+
+  .icon {
+    &.alert {
+      color: @gux-alert;
+    }
+    &.warning {
+      color: @gux-warning;
+    }
+    &.positive {
+      color: @gux-positive;
+    }
+    &.neutral {
+      color: @gux-neutral;
+    }
+  }
+
+  .dismiss-button {
+    color: @gux-grey-2;
+  }
+}
+
+// Default Theme
+gux-simple-toast {
+  .gux-simple-toast-light-theme();
+}
+
+// Light Theme
+.gux-light-theme {
+  gux-simple-toast {
+    .gux-simple-toast-light-theme();
+  }
+}
+gux-simple-toast.gux-light-theme {
+  .gux-simple-toast-light-theme();
+}
+
+// Dark Theme
+.gux-dark-theme {
+  gux-simple-toast {
+    .gux-simple-toast-dark-theme();
+  }
+}
+gux-simple-toast.gux-dark-theme {
+  .gux-simple-toast-dark-theme();
+}

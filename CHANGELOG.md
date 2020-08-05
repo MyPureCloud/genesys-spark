@@ -1,6 +1,63 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.0.0-alpha.94](http://inindca///compare/v1.0.0-alpha.93...v1.0.0-alpha.94) (2020-08-04)
+
+## [1.0.0-alpha.93](http://inindca///compare/v1.0.0-alpha.92...v1.0.0-alpha.93) (2020-07-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **gux-slider:** removed text input field from slider component
+
+CUMUI-163
+
+### Bug Fixes
+
+* **gux-slider:** removed text input field ([61e25ed](http://inindca///commit/61e25ed4eac3e2e635ecb2f89d4bcca196e55e86))
+
+## [1.0.0-alpha.92](http://inindca///compare/v1.0.0-alpha.91...v1.0.0-alpha.92) (2020-07-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **gux-popover:** api changes to both props and events
+
+COMUI-234
+
+* **gux-popover:** api changes ([4b17aec](http://inindca///commit/4b17aecd0ac634d59ee0c30b805d77516ba06e1a))
+
+## [1.0.0-alpha.91](http://inindca///compare/v1.0.0-alpha.90...v1.0.0-alpha.91) (2020-07-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **gux-pagination:** api changes to both props and events
+
+COMUI-145
+
+* **gux-pagination:** api changes ([4a2aed5](http://inindca///commit/4a2aed5930c3da279b6ed63fb12781e59840c542))
+
+## [1.0.0-alpha.90](http://inindca///compare/v1.0.0-alpha.89...v1.0.0-alpha.90) (2020-07-30)
+
+## [1.0.0-alpha.89](http://inindca///compare/v1.0.0-alpha.88...v1.0.0-alpha.89) (2020-07-29)
+
+
+### Features
+
+* **gux-form-field:** added new form inputs ([9491912](http://inindca///commit/9491912c4ca0f906e4a55ffe223959ea6a7ad9b4))
+
+## [1.0.0-alpha.88](http://inindca///compare/v1.0.0-alpha.87...v1.0.0-alpha.88) (2020-07-20)
+
+## [1.0.0-alpha.87](http://inindca///compare/v1.0.0-alpha.86...v1.0.0-alpha.87) (2020-07-14)
+
+
+### Bug Fixes
+
+* input accept invalid values ([e8c6540](http://inindca///commit/e8c6540ec9de9ca69075ee9f44402592c9afbc12))
+
+## [1.0.0-alpha.86](http://inindca///compare/v1.0.0-alpha.85...v1.0.0-alpha.86) (2020-07-08)
 
 <a name="0.48.0"></a>
 # 0.48.0 (2019-09-10)

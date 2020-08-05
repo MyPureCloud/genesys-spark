@@ -1,5 +1,0 @@
-{
-  "perPage": "sayfa başına",
-  "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-  "totalItems": "{totalItems, number} içinde"
-}

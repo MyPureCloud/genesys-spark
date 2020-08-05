@@ -1,0 +1,147 @@
+// Variables part
+
+// Style
+gux-modal {
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(34, 37, 41, 0.8);
+
+    .modal-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 40px;
+      justify-content: space-between;
+      background: @gux-off-white;
+      box-shadow: 0 0 2px rgba(34, 37, 41, 0.24);
+
+      &.small {
+        max-height: 368px;
+        width: 416px;
+
+        .modal-content {
+          max-height: 160px;
+        }
+      }
+
+      &.medium {
+        max-height: 640px;
+        width: 672px;
+      }
+
+      &.large {
+        max-height: 640px;
+        width: 940px;
+      }
+
+      .dismiss-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        font-size: 11px;
+        color: @gux-icons;
+        cursor: pointer;
+        gux-icon {
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      .modal-header {
+        width: inherit;
+        margin: 0;
+        padding-bottom: 24px;
+      }
+
+      .modal-content {
+        margin: 0 8px 24px 8px;
+        max-height: 432px;
+        overflow-y: auto;
+
+        &.no-buttons {
+          margin-bottom: 0;
+        }
+      }
+      .button-footer {
+        display: flex;
+        justify-content: space-between;
+
+        .left-align-buttons {
+          gux-button {
+            padding-right: 5px;
+          }
+        }
+
+        .right-align-buttons {
+          gux-button {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+
+    .modal-container {
+      @media (max-width: 416px) {
+        &.small,
+        &.medium,
+        &.large {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-modal-dark-theme {
+  color: @gux-off-white;
+
+  .modal-container {
+    background: @gux-charcoal;
+  }
+}
+
+.gux-dark-theme {
+  gux-modal {
+    .gux-modal-dark-theme();
+  }
+}
+
+gux-modal.gux-dark-theme {
+  .gux-modal-dark-theme();
+}
+
+// Light
+.gux-modal-light-theme {
+  color: @gux-grey-2;
+}
+
+.gux-light-theme {
+  gux-modal {
+    .gux-modal-light-theme();
+  }
+}
+
+gux-modal.gux-light-theme {
+  .gux-modal-light-theme();
+}
+
+// Default Theme
+gux-modal {
+  .gux-modal-light-theme();
+}

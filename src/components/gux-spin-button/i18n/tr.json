@@ -1,0 +1,7 @@
+{
+  "validation.max": "{max, number} değerinden büyük olamaz",
+  "validation.min": "{min, number} değerinden küçük olamaz",
+  "validation.increment": "{increment, number} değerinin katı olmalıdır",
+  "increment": "artış",
+  "decrement": "azalış"
+}

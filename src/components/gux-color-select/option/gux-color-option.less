@@ -1,0 +1,73 @@
+// Variables part
+
+// Style
+gux-color-option {
+  > button {
+    margin: 4px;
+    border: none;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    flex: 0 0 16px;
+    padding: 0;
+
+    &:not(:disabled):hover,
+    &:focus,
+    &.gux-color-option-active,
+    &:active {
+      outline: 1px solid @gux-dark-blue;
+      border: 1px white solid;
+    }
+
+    &:disabled {
+      background-color: @gux-off-white;
+      border: 1px solid @gux-grey-2;
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+
+  button::-moz-focus-inner {
+    border: none;
+  }
+}
+
+// Theming
+
+// Dark
+.gux-color-option-dark-theme {
+  color: @gux-off-white;
+}
+
+.gux-dark-theme {
+  gux-color-option {
+    .gux-color-option-dark-theme();
+  }
+}
+
+gux-color-option.gux-dark-theme {
+  .gux-color-option-dark-theme();
+}
+
+// Light
+.gux-color-option-light-theme {
+  color: @gux-grey-2;
+}
+
+.gux-light-theme {
+  gux-color-option {
+    .gux-color-option-light-theme();
+  }
+}
+
+gux-color-option.gux-light-theme {
+  .gux-color-option-light-theme();
+}
+
+// Default Theme
+gux-color-option {
+  .gux-color-option-light-theme();
+}

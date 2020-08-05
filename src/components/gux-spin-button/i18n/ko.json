@@ -1,0 +1,7 @@
+{
+  "validation.max": "{max, number}보다 클 수 없음",
+  "validation.min": "{min, number}보다 작을 수 없음",
+  "validation.increment": "{increment, number}의 배수여야 함",
+  "increment": "증가",
+  "decrement": "감소"
+}

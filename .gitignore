@@ -2,6 +2,8 @@ build/
 dist/
 .docs/
 .npmrc
+./docs/.npmrc
+src/components/i18n/locales.json
 
 *~
 *.sw[mnpcod]
@@ -12,6 +14,7 @@ dist/
 log.txt
 *.sublime-project
 *.sublime-workspace
+*.iml
 
 .out/
 .stencil/
@@ -19,6 +22,7 @@ log.txt
 .vscode/
 .versions/
 .coverage/
+*-manifest.json
 components.d.ts
 node_modules/
 $RECYCLE.BIN/

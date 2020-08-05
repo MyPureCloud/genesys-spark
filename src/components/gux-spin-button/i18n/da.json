@@ -1,0 +1,7 @@
+{
+  "validation.max": "Kan ikke være større end {max, number}",
+  "validation.min": "Kan ikke være mindre end {min, number}",
+  "validation.increment": "Skal være et multiplum af {increment, number}",
+  "increment": "stigning",
+  "decrement": "reduktion"
+}

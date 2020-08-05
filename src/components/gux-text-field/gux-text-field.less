@@ -1,0 +1,250 @@
+// Variables part
+@background-color: @gux-off-white;
+@text-color: @gux-grey-2;
+@border: @gux-border-alt;
+@placeholder: @gux-pale-gray-2;
+@icon-color: #B1BECC;
+
+@dark-background-color: @gux-grey-2;
+@dark-text-color: @gux-off-white;
+@dark-border: @gux-grey-1;
+@dark-placeholder: @gux-pale-gray-2;
+@dark-icon-color: #B1BECC;
+
+@focus-outline: fade(@gux-blue, 50%);
+@focus-border: @gux-dark-blue;
+@alert-color: @gux-alert;
+@alert-color-dark: @gux-alert-2;
+
+gux-text-field {
+  display: block;
+  > div {
+    margin: 4px 0;
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
+    }
+    &.error, &.warning {
+      input {
+        border-color: @alert-color;
+        outline: 0;
+        &:focus,
+        &:hover {
+          border-color: @alert-color;
+          outline: 0;
+        }
+      }
+      .gux-error {
+        color: @alert-color;
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+    &.warning {
+      .gux-error {
+        i {
+          color: @gux-warning;
+        }
+      }
+    }
+    > div.gux-field {
+      position: relative;
+      height: 32px;
+    }
+
+  }
+  .gux-field {
+    position: relative;
+    input {
+      font-family: inherit;
+      height: 32px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 4px 12px 4px 12px;
+      background-color: @background-color;
+      background-image: none;
+      border: 1px solid @border;
+      border-radius: 2px;
+      font-size: 12px;
+      line-height: 1.66666667;
+      color: @text-color;
+      &::placeholder {
+        color: @placeholder;
+      }
+      &::-webkit-input-placeholder {
+        color: @placeholder;
+      }
+      &::-ms-input-placeholder {
+        color: @placeholder;
+      }
+      &::-moz-placeholder {
+        color: @placeholder;
+      }
+      &:focus {
+        border: 1px solid @focus-border;
+        outline: none;
+        box-shadow: 0px 0px 4px @focus-outline;
+      }
+
+      &.text-clearable {
+        padding-right: 25px;
+      }
+    }
+    button {
+      color: @icon-color;
+      position: absolute;
+      top: 1px;
+      right: 3px;
+      bottom: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+      display: block;
+      outline: none;
+      overflow: hidden;
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-text-field-dark-theme {
+  > div {
+    &.error, &.warning {
+      input {
+        border-color: @alert-color-dark;
+        outline: 0;
+        &:focus,
+        &:hover {
+          border-color: @alert-color-dark;
+          outline: 0;
+        }
+      }
+      .gux-error {
+        color: @alert-color-dark;
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+    &.warning {
+      .gux-error {
+        i {
+          color: @gux-warning;
+        }
+      }
+    }
+  }
+  .gux-field {
+    input {
+      background-color: @dark-background-color;
+      border: 1px solid @dark-border;
+      color: @dark-text-color;
+      &::placeholder {
+        color: @dark-placeholder;
+      }
+      &::-webkit-input-placeholder {
+        color: @dark-placeholder;
+      }
+      &::-ms-input-placeholder {
+        color: @dark-placeholder;
+      }
+      &::-moz-placeholder {
+        color: @dark-placeholder;
+      }
+      &:focus {
+        border: 1px solid @gux-blue;
+        outline: 3px @gux-blue;
+        box-shadow: none;
+      }
+    }
+
+    button {
+      color: @dark-icon-color;
+    }
+  }
+
+  &:not([disabled]):hover,
+  &:not([disabled]):focus {
+    button {
+      opacity: 1;
+    }
+  }
+}
+
+.gux-dark-theme {
+  gux-text-field {
+    .gux-text-field-dark-theme();
+  }
+}
+.gux-text-field.gux-dark-theme {
+  .gux-text-field-dark-theme();
+}
+
+// Light
+.gux-text-field-light-theme {
+  > div {
+    &.error, &.warning {
+      input {
+        border-color: @alert-color;
+        &:focus,
+        &:hover {
+          border-color: @alert-color;
+        }
+      }
+      .gux-error {
+        color: @alert-color;
+      }
+    }
+    &.warning {
+      .gux-error {
+        i {
+          color: @gux-warning;
+        }
+      }
+    }
+  }
+  .gux-field {
+    input {
+      background-color: @background-color;
+      border: 1px solid @border;
+      color: @text-color;
+      &::placeholder {
+        color: @placeholder;
+      }
+      &::-webkit-input-placeholder {
+        color: @placeholder;
+      }
+      &::-ms-input-placeholder {
+        color: @placeholder;
+      }
+      &::-moz-placeholder {
+        color: @placeholder;
+      }
+      &:focus {
+        border: 1px solid @focus-border;
+        box-shadow: 0px 0px 4px @focus-outline;
+      }
+    }
+    button {
+      color: @icon-color;
+    }
+  }
+}
+
+.gux-light-theme {
+  gux-text-field {
+      .gux-text-field-light-theme();
+  }
+}
+gux-text-field.gux-light-theme {
+  .gux-text-field-light-theme();
+}
+
+// Default Theme
+gux-text-field {
+  .gux-text-field-light-theme();
+}

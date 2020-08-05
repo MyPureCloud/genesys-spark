@@ -1,0 +1,115 @@
+// Variables part
+
+gux-spin-button {
+  width: 100%;
+
+  .gux-spin-button-label {
+    margin: 10px 8px 0 0;
+  }
+
+  .gux-spin-container {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+
+  div {
+    gux-text-field {
+      width: 100%;
+
+      // Needed inorder to get rid of the html number input arrows
+      input::-webkit-inner-spin-button,
+      input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+
+      input[type='number'] {
+        -moz-appearance: textfield;
+      }
+
+      input {
+        text-align: right;
+      }
+    }
+
+    .gux-spin-button-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+      height: 32px;
+      margin-top: 4px;
+
+      .gux-spin-button {
+        background: none;
+        color: @gux-grey-2;
+        border: none;
+        margin: auto 0;
+        padding: 0;
+        width: 16px;
+        height: 16px;
+      }
+
+      .gux-spin-button:hover {
+        color: @gux-dark-blue;
+        cursor: pointer;
+      }
+
+      .gux-spin-button[disabled] {
+        color: @gux-grey-2;
+        opacity: 0.25;
+        cursor: default;
+      }
+
+      .gux-spin-button:focus {
+        border: 1px solid #2a60c8;
+        outline: none;
+        -webkit-box-shadow: 0px 0px 4px rgba(117, 168, 255, 0.5);
+        box-shadow: 0px 0px 4px rgba(117, 168, 255, 0.5);
+      }
+    }
+  }
+}
+
+// Theming
+// Light
+.gux-spin-button-light-theme {
+  div.gux-spin-button {
+  }
+}
+
+.gux-light-theme {
+  gux-spin-button {
+    .gux-spin-button-light-theme();
+  }
+}
+
+gux-spin-button.gux-light-theme {
+  .gux-spin-button-light-theme();
+}
+
+// Dark
+.gux-spin-button-dark-theme {
+  button,
+  button[disabled] {
+    color: @gux-off-white;
+  }
+}
+
+.gux-dark-theme {
+  gux-spin-button {
+    .gux-spin-button-dark-theme();
+    div {
+      .gux-spin-button-container {
+        .gux-spin-button-dark-theme();
+      }
+    }
+  }
+}
+
+// Default
+gux-spin-button {
+  .gux-spin-button-light-theme();
+}

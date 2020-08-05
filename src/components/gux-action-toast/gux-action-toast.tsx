@@ -1,0 +1,44 @@
+import { Component, h, Host, JSX } from '@stencil/core';
+
+/**
+ * @slot icon - Required slot for gux-icon
+ * @slot title - Required slot for the action toast title
+ * @slot message - Required slot for the action toast message
+ * @slot negitive-button - Required slot for the action toast negitive button
+ * @slot positive-button - Required slot for the action toast positive button
+ */
+@Component({
+  styleUrl: 'gux-action-toast.less',
+  tag: 'gux-action-toast'
+})
+export class GuxActionToast {
+  render(): JSX.Element {
+    return (
+      <Host>
+        <div class="header">
+          <div class="icon">
+            <slot name="icon" />
+          </div>
+
+          <div class="title">
+            <slot name="title" />
+          </div>
+        </div>
+
+        <div class="message">
+          <slot name="message" />
+        </div>
+
+        <div class="action-buttons">
+          <div class="negitive-button">
+            <slot name="negitive-button" />
+          </div>
+
+          <div class="positive-button">
+            <slot name="positive-button" />
+          </div>
+        </div>
+      </Host>
+    );
+  }
+}

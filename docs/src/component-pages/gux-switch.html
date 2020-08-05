@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <title>gux-switch</title>
+  </head>
+  <body>
+    <script src="${CDN_URL}index.js"></script>
+    <script>
+      webcomponentsDocsMain(`
+<div>Small</div>
+<gux-switch id="small"
+    layout="small"
+    selected-value="Day"
+></gux-switch>
+
+<div>Medium</div>
+<gux-switch id="medium"
+    layout="medium"
+    selected-value="Minute"
+></gux-switch>
+
+<div>Large</div>
+<gux-switch id="large"
+    layout="large"
+    selected-value="Month"
+></gux-switch>
+<!--
+[ document.getElementById('small')
+, document.getElementById('medium')
+, document.getElementById('large')
+].forEach(function (s) {
+    s.items = [{
+        displayName: 'Month',
+        value: 'Month'
+    }, {
+        displayName: 'Week',
+        value: 'Week'
+    }, {
+        displayName: 'Day',
+        value: 'Day'
+    }, {
+        displayName: 'Hour',
+        isDisabled: true,
+        value: 'Hour'
+    }, {
+        displayName: 'Minute',
+        value: 'Minute'
+    }];
+});
+-->
+`, function () {
+    [ document.getElementById('small')
+    , document.getElementById('medium')
+    , document.getElementById('large')
+    ].forEach(function (s) {
+        s.items = [{
+            displayName: 'Month',
+            value: 'Month'
+        }, {
+            displayName: 'Week',
+            value: 'Week'
+        }, {
+            displayName: 'Day',
+            value: 'Day'
+        }, {
+            displayName: 'Hour',
+            isDisabled: true,
+            value: 'Hour'
+        }, {
+            displayName: 'Minute',
+            value: 'Minute'
+        }];
+    });
+});
+    </script>
+  </body>
+</html>

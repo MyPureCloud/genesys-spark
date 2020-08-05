@@ -1,0 +1,7 @@
+{
+  "validation.max": "Nesmí být větší než {max, number}",
+  "validation.min": "Nesmí být menší než {min, number}",
+  "validation.increment": "Musí být násobek {increment, number}",
+  "increment": "zvýšení",
+  "decrement": "snížení"
+}

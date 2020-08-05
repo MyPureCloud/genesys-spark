@@ -1,0 +1,42 @@
+
+gux-pagination {
+  display: block;
+
+  .gux-pagination-container {
+    margin-top: 12px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+
+    &.small {
+      gux-pagination-items-per-page {
+        display: none;
+      }
+    }
+
+    & > div {
+      order: 0;
+      flex: 0 1 auto;
+      align-self: auto;
+    }
+
+    .gux-pagination-container-left {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: center;
+
+      & > * {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+      }
+    }
+  }
+}

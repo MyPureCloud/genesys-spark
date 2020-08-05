@@ -1,0 +1,7 @@
+{
+  "validation.max": "{max, number} より大きくはできません",
+  "validation.min": "{min, number} より小さくはできません",
+  "validation.increment": "{increment, number} の倍数にしてください",
+  "increment": "加算",
+  "decrement": "減算"
+}
