@@ -82,7 +82,7 @@ export class GuxModal {
 
           {hasFooterButtons && (
             <div class="button-footer">
-              <div>
+              <div class="left-align-buttons">
                 <slot name="left-align-buttons" />
               </div>
 
