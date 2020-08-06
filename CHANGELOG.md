@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.95](http://inindca///compare/v1.0.0-alpha.94...v1.0.0-alpha.95) (2020-08-06)
+
+
+### Bug Fixes
+
+* **gux-modal:** css fix ([8c5e44d](http://inindca///commit/8c5e44dbd901de1d4f80c255f060353c36796c9d))
+
 ## [1.0.0-alpha.94](http://inindca///compare/v1.0.0-alpha.93...v1.0.0-alpha.94) (2020-08-04)
 
 ## [1.0.0-alpha.93](http://inindca///compare/v1.0.0-alpha.92...v1.0.0-alpha.93) (2020-07-31)
