@@ -1,8 +1,8 @@
 {
-  "page": "Page",
-  "totalPages": " of {totalPages, number}",
-  "first": "First",
-  "previous": "Previous",
-  "next": "Next",
-  "last": "Last"
+  "page": "Seite",
+  "totalPages": " von {totalPages, number}",
+  "first": "Vorname",
+  "previous": "Zurück",
+  "next": "Weiter",
+  "last": "Nachname"
 }

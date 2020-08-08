@@ -1,8 +1,8 @@
 {
-  "page": "Page",
-  "totalPages": " of {totalPages, number}",
-  "first": "First",
-  "previous": "Previous",
-  "next": "Next",
-  "last": "Last"
+  "page": "ページ",
+  "totalPages": " / {totalPages, number}",
+  "first": "名",
+  "previous": "前へ",
+  "next": "次へ",
+  "last": "姓"
 }

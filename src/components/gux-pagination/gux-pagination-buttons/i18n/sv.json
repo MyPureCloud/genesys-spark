@@ -1,8 +1,8 @@
 {
-  "page": "Page",
-  "totalPages": " of {totalPages, number}",
-  "first": "First",
-  "previous": "Previous",
-  "next": "Next",
-  "last": "Last"
+  "page": "Sida",
+  "totalPages": " av {totalPages, number}",
+  "first": "Förnamn",
+  "previous": "Föregående",
+  "next": "Nästa",
+  "last": "Efternamn"
 }
