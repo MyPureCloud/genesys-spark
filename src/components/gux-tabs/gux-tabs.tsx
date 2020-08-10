@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 import Sortable, { MoveEvent } from 'sortablejs';
 import { buildI18nForComponent, GetI18nValue } from '../i18n';
-import paginationResources from './i18n/en.json';
+import tabsResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-tabs.less',
@@ -90,7 +90,7 @@ export class GuxTabs {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.element, paginationResources);
+    this.i18n = await buildI18nForComponent(this.element, tabsResources);
   }
 
   componentDidLoad() {

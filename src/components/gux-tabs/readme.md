@@ -7,16 +7,18 @@
 
 ## Properties
 
-| Property    | Attribute    | Description                     | Type      | Default |
-| ----------- | ------------ | ------------------------------- | --------- | ------- |
-| `allowSort` | `allow-sort` | Enable tab sorting by drag/drop | `boolean` | `true`  |
+| Property           | Attribute             | Description                         | Type      | Default |
+| ------------------ | --------------------- | ----------------------------------- | --------- | ------- |
+| `allowSort`        | `allow-sort`          | Enable tab sorting by drag/drop     | `boolean` | `false` |
+| `showNewTabButton` | `show-new-tab-button` | Enable new tab button               | `boolean` | `false` |
+| `value`            | `value`               | tabId of the currently selected tab | `string`  | `''`    |
 
 
 ## Events
 
 | Event         | Description                                       | Type               |
 | ------------- | ------------------------------------------------- | ------------------ |
-| `input`       |                                                   | `CustomEvent<any>` |
+| `input`       | Triggers when a tab is selected.                  | `CustomEvent<any>` |
 | `newTab`      | Triggers when the new tab button is selected.     | `CustomEvent<any>` |
 | `sortChanged` | Triggers when the sorting of the tabs is changed. | `CustomEvent<any>` |
 
