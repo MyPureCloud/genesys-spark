@@ -10,6 +10,8 @@ import {
   writeTask
 } from '@stencil/core';
 import Sortable, { MoveEvent } from 'sortablejs';
+import { buildI18nForComponent, GetI18nValue } from '../i18n';
+import paginationResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-tabs.less',
@@ -19,13 +21,26 @@ export class GuxTabs {
   /**
    * Enable tab sorting by drag/drop
    */
-  @Prop() allowSort: boolean = true;
+  @Prop() allowSort: boolean = false;
+
+  /**
+   * Enable new tab button
+   */
+  @Prop() showNewTabButton: boolean = false;
+
+  /**
+   * tabId of the currently selected tab
+   */
+  @Prop() value: string = '';
 
   /**
    * Triggers when the new tab button is selected.
    */
   @Event() newTab: EventEmitter;
 
+  /**
+   * Triggers when a tab is selected.
+   */
   @Event() input: EventEmitter;
 
   /**
@@ -36,6 +51,8 @@ export class GuxTabs {
   @Element() private element: HTMLElement;
 
   @State() private hasScrollbar: boolean = false;
+
+  private i18n: GetI18nValue;
 
   private sortableInstance?: Sortable;
 
@@ -72,6 +89,10 @@ export class GuxTabs {
     this.resizeObserver?.unobserve(this.element.querySelector('.gux-tabs'));
   }
 
+  async componentWillLoad(): Promise<void> {
+    this.i18n = await buildI18nForComponent(this.element, paginationResources);
+  }
+
   componentDidLoad() {
     if (this.allowSort && !this.sortableInstance) {
       this.createSortable();
@@ -90,6 +111,10 @@ export class GuxTabs {
 
     const tabElements = this.element.querySelectorAll('gux-tab');
     tabElements.forEach(tab => {
+      if (this.value && this.value === (tab as HTMLGuxTabElement).tabId) {
+        (tab as HTMLGuxTabElement).active = true;
+      }
+
       tab.addEventListener('click', () => {
         if ((tab as HTMLGuxTabElement).active) {
           return;
@@ -100,6 +125,9 @@ export class GuxTabs {
         });
 
         (tab as HTMLGuxTabElement).active = true;
+
+        this.input.emit();
+        this.value = (tab as HTMLGuxTabElement).tabId;
       });
     });
   }
@@ -129,12 +157,23 @@ export class GuxTabs {
   }
 
   render() {
+    const AddNewTabButton = (props: { onClick: () => void }) => {
+      return (
+        <button
+          title={this.i18n('createNewTab')}
+          class="add-tab"
+          onClick={() => props.onClick()}
+        >
+          <gux-icon iconName="ic-add" decorative={true} />
+        </button>
+      );
+    };
     return (
       <div class="gux-tabs">
         <div class="action-button-container">
           {this.hasScrollbar ? (
             <button
-              title="Create New Tab"
+              title={this.i18n('scrollLeft')}
               class="arrow-button"
               onClick={() => this.scrollLeft()}
             >
@@ -144,20 +183,14 @@ export class GuxTabs {
         </div>
         <div class="scrollable-section">
           <slot />
-          {this.hasScrollbar ? null : (
-            <button
-              title="Create New Tab"
-              class="add-tab ignore-sort"
-              onClick={() => this.newTab.emit()}
-            >
-              <gux-icon iconName="ic-add" decorative={true} />
-            </button>
-          )}
+          {this.showNewTabButton && !this.hasScrollbar ? (
+            <AddNewTabButton onClick={() => this.newTab.emit()} />
+          ) : null}
         </div>
         <div class="action-button-container">
           {this.hasScrollbar ? (
             <button
-              title="Create New Tab"
+              title={this.i18n('scrollRight')}
               class="arrow-button"
               onClick={() => this.scrollRight()}
             >
@@ -165,14 +198,8 @@ export class GuxTabs {
             </button>
           ) : null}
 
-          {this.hasScrollbar ? (
-            <button
-              title="Create New Tab"
-              class="add-tab"
-              onClick={() => this.newTab.emit()}
-            >
-              <gux-icon iconName="ic-add" decorative={true} />
-            </button>
+          {this.showNewTabButton && this.hasScrollbar ? (
+            <AddNewTabButton onClick={() => this.newTab.emit()} />
           ) : null}
         </div>
       </div>
