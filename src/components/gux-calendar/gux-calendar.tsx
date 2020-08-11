@@ -42,6 +42,18 @@ export class GuxCalendar {
   firstDayOfWeek: number = 0;
 
   /**
+   * The min date selectable
+   */
+  @Prop()
+  minDate: string = '';
+
+  /**
+   * The max date selectable
+   */
+  @Prop()
+  maxDate: string = '';
+
+  /**
    * The calendar mode (can be single or range)
    */
   @Prop()
@@ -114,6 +126,11 @@ export class GuxCalendar {
     });
   }
 
+  async setValueAndEmit(value: Date | [Date, Date]) {
+    this.setValue(value);
+    this.emitInput();
+  }
+
   getMonthLabel(index: number) {
     const month = new Date(this.previewValue.getTime());
     month.setMonth(month.getMonth() + index);
@@ -127,6 +144,13 @@ export class GuxCalendar {
     const firstDayOffset =
       (-1 * (this.firstDayOfWeek - firstDayOfMonth - 7)) % 7;
     return new Date(startDate.getTime() - firstDayOffset * (86400 * 1000));
+  }
+
+  outOfBounds(date: Date): boolean {
+    return (
+      (this.maxDate !== '' && fromIsoDateString(this.maxDate) < date) ||
+      (this.minDate !== '' && fromIsoDateString(this.minDate) > date)
+    );
   }
 
   generateDatesFrom(
@@ -163,6 +187,13 @@ export class GuxCalendar {
           hidden = true;
         }
       }
+
+      let disabled = false;
+      if (this.outOfBounds(date)) {
+        classes.push('disabled');
+        disabled = true;
+      }
+
       let isSelected = false;
       if (this.mode === CalendarModes.Range) {
         const [start, end] = fromIsoDateRange(this.value);
@@ -186,6 +217,7 @@ export class GuxCalendar {
         class: classes.join(' '),
         date,
         hidden,
+        disabled,
         selected: isSelected
       });
       currentDate.setDate(currentDate.getDate() + 1);
@@ -269,30 +301,30 @@ export class GuxCalendar {
   }
 
   onDateClick(date: Date) {
-    if (this.mode !== CalendarModes.Range) {
-      this.setValue(date);
-      this.emitInput();
-    } else {
-      if (this.selectingDate === null) {
-        // First click
-        removeClassToElements(this.getAllDatesElements(), 'hovered');
-        this.selectingDate = date;
-        this.value = asIsoDateRange(date, date);
+    if (!this.outOfBounds(date)) {
+      if (this.mode !== CalendarModes.Range) {
+        this.setValueAndEmit(date);
       } else {
-        // Second click
-        const target: HTMLTableCellElement = this.root.querySelector(
-          `td[data-date="${date.getTime()}"]`
-        );
-        if (target) {
-          target.classList.add('selected');
+        if (this.selectingDate === null) {
+          // First click
+          removeClassToElements(this.getAllDatesElements(), 'hovered');
+          this.selectingDate = date;
+          this.value = asIsoDateRange(date, date);
+        } else {
+          // Second click
+          const target: HTMLTableCellElement = this.root.querySelector(
+            `td[data-date="${date.getTime()}"]`
+          );
+          if (target) {
+            target.classList.add('selected');
+          }
+          this.updateRangeElements();
+          this.setValueAndEmit([this.selectingDate, date]);
+          this.selectingDate = null;
         }
-        this.updateRangeElements();
-        this.setValue([this.selectingDate, date]);
-        this.emitInput();
-        this.selectingDate = null;
       }
+      this.focusPreviewDate();
     }
-    this.focusPreviewDate();
   }
 
   onDateMouseEnter(date: Date) {

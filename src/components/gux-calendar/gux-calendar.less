@@ -109,6 +109,10 @@ gux-calendar {
               background-color: @gux-dark-blue;
               color: @gux-off-white;
             }
+            &.disabled {
+              opacity: 0.3;
+              pointer-events: none;
+            }
             &.not-in-month {
               color: @gux-pale-gray-2;
               &:hover {
