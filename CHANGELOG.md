@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.101](http://inindca///compare/v1.0.0-alpha.100...v1.0.0-alpha.101) (2020-08-11)
+
+
+### Features
+
+* **gux-calendar:** min and max date added ([cb4605a](http://inindca///commit/cb4605af9285545809df97e8054a82dd33c74f7a))
+* **gux-datepicker:** min and max date added ([e5f3106](http://inindca///commit/e5f3106b2c29478e6d2bd76e83095df4adb0fac6))
+
+
+### Bug Fixes
+
+* **gix-datepicker:** add min-date and max-date to range picker example ([8998797](http://inindca///commit/899879773552926a945f999c20bbe530702dc573))
+* **gix-datepicker:** outOfBounds checks added to incementing input ([befddf8](http://inindca///commit/befddf84c652cf3b0b44d79aa9d578f074cbfc85))
+* **gux-calendar:** add min-date to example ([1e9db15](http://inindca///commit/1e9db15a01b2584d693dff580f1a8d6f73f64825))
+* **gux-calendar:** In bounds check selecting with key presses ([5e5ab1b](http://inindca///commit/5e5ab1b4bd13e7453bc4f615a4a9703df0219342))
+* **gux-calendar:** min max lint fix css ([83959fe](http://inindca///commit/83959fefde77cccb78aef25f2d5bbd0bfbb5e581))
+* **gux-calendar:** Refactor setValue and emit into one async function ([b3d6a49](http://inindca///commit/b3d6a492a00e8e46456c2d89a3a547c236df239e))
+* **gux-datepicker:** Simplify date reset and comment ([534c4ea](http://inindca///commit/534c4ea4579fe904b6dd9eeec1aa8253d88916ee))
+
 ## [1.0.0-alpha.100](http://inindca///compare/v1.0.0-alpha.99...v1.0.0-alpha.100) (2020-08-10)
 
 ## [1.0.0-alpha.99](http://inindca///compare/v1.0.0-alpha.98...v1.0.0-alpha.99) (2020-08-10)
