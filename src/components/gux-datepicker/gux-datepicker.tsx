@@ -163,6 +163,13 @@ export class GuxDatepicker {
     }
   }
 
+  outOfBounds(date: Date): boolean {
+    return (
+      (this.maxDate !== '' && fromIsoDateString(this.maxDate) < date) ||
+      (this.minDate !== '' && fromIsoDateString(this.minDate) > date)
+    );
+  }
+
   setValue() {
     this.replaceUndefinedChars();
 
@@ -465,6 +472,7 @@ export class GuxDatepicker {
     let selectionText = document.getSelection().toString();
     const type = this.setSelectionRange(this.focusedField.selectionStart);
     const refValue = this.getRefValue();
+
     switch (type) {
       case 'd':
         selectionText = this.incrementDay(value, refValue);
@@ -476,16 +484,19 @@ export class GuxDatepicker {
         selectionText = this.incrementYear(value, refValue);
         break;
     }
+
     this.focusedField.value =
       this.focusedField.value.substr(0, this.selectionRange[0]) +
       selectionText +
       this.focusedField.value.substr(this.selectionRange[1]);
+
     this.setValue();
   }
 
   incrementDay(value: number, ref: Date): string {
     let newDay = new Date(ref.valueOf());
     newDay.setDate(newDay.getDate() + value);
+
     if (value < 0) {
       if (newDay.getDate() > ref.getDate()) {
         newDay = new Date(ref.getFullYear(), ref.getMonth() + 1, 0, 0, 0, 0);
@@ -495,11 +506,18 @@ export class GuxDatepicker {
         newDay.setMonth(newDay.getMonth() - 1);
       }
     }
+
+    if (this.outOfBounds(newDay)) {
+      newDay = new Date(ref.valueOf());
+    }
+
     return `0${newDay.getDate().toString()}`.slice(-2);
   }
+
   incrementMonth(value: number, ref: Date): string {
-    const newMonth = new Date(ref.valueOf());
+    let newMonth = new Date(ref.valueOf());
     newMonth.setMonth(newMonth.getMonth() + value);
+
     if (value < 0) {
       if (newMonth.getMonth() > ref.getMonth()) {
         newMonth.setFullYear(newMonth.getFullYear() + 1);
@@ -509,12 +527,23 @@ export class GuxDatepicker {
         newMonth.setFullYear(newMonth.getFullYear() - 1);
       }
     }
+
+    if (this.outOfBounds(newMonth)) {
+      newMonth = new Date(ref.valueOf());
+    }
+
     return `0${(newMonth.getMonth() + 1).toString()}`.slice(-2);
   }
+
   incrementYear(value: number, ref: Date): string {
-    const newYear = new Date(ref.valueOf());
+    let newYear = new Date(ref.valueOf());
     newYear.setFullYear(ref.getFullYear() + value);
     this.lastYear = newYear.getFullYear();
+
+    if (this.outOfBounds(newYear)) {
+      newYear = new Date(ref.valueOf());
+    }
+
     if (this.yearFormat === 'yyyy') {
       return newYear.getFullYear().toString();
     } else {
