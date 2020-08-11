@@ -507,8 +507,9 @@ export class GuxDatepicker {
       }
     }
 
+    // Reset date if out of bounds
     if (this.outOfBounds(newDay)) {
-      newDay = new Date(ref.valueOf());
+      newDay = ref;
     }
 
     return `0${newDay.getDate().toString()}`.slice(-2);
@@ -528,8 +529,9 @@ export class GuxDatepicker {
       }
     }
 
+    // Reset date if out of bounds
     if (this.outOfBounds(newMonth)) {
-      newMonth = new Date(ref.valueOf());
+      newMonth = ref;
     }
 
     return `0${(newMonth.getMonth() + 1).toString()}`.slice(-2);
@@ -540,8 +542,9 @@ export class GuxDatepicker {
     newYear.setFullYear(ref.getFullYear() + value);
     this.lastYear = newYear.getFullYear();
 
+    // Reset date if out of bounds
     if (this.outOfBounds(newYear)) {
-      newYear = new Date(ref.valueOf());
+      newYear = ref;
     }
 
     if (this.yearFormat === 'yyyy') {
