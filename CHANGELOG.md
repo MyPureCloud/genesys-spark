@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.102](http://inindca///compare/v1.0.0-alpha.101...v1.0.0-alpha.102) (2020-08-11)
+
+
+### Features
+
+* **gux-tabs:** add instanceof check to this.element ([c557bde](http://inindca///commit/c557bde6126402654b61ccfc59844dec8fba55c6))
+* **gux-tabs:** address more pr comments ([c7dc8c7](http://inindca///commit/c7dc8c72c4ebd40a3af14539ddf70b7f7ba31f14))
+* **gux-tabs:** address pr comments ([c477b76](http://inindca///commit/c477b7607dc7ab16068e385e671d9de41cf8bbea))
+* **gux-tabs:** change scrollbar-width to none ([a6803ba](http://inindca///commit/a6803bae0ecdee78520df1d3a1996eb087257d63))
+* **gux-tabs:** create basic gux-tabs component ([c90d03a](http://inindca///commit/c90d03ac82a135acf1d80f56a2c2d5ad0ed05e1c))
+* **gux-tabs:** extract individual tab into its own component ([5c74a0f](http://inindca///commit/5c74a0f7dc17dfde65c5119f4f5321a78715f19f))
+* **gux-tabs:** finish gux-tabs implementation ([94f0df0](http://inindca///commit/94f0df0c65915b0f7b4604aaa56fce2bccf63044))
+* **gux-tabs:** fix merge conflicts with alpha/1.0.0 ([0793ad2](http://inindca///commit/0793ad289d9b62f827711de13ab1518fa8c6f113))
+* **gux-tabs:** fix variable name ([4ca7758](http://inindca///commit/4ca7758667a702a94ca4be88244705fae5b94550))
+* **gux-tabs:** move loaders to devDeps ([4eef716](http://inindca///commit/4eef7163eb3346a1bbe64b77767ca9699d7a0660))
+* **gux-tabs:** remove dead code ([385d7d2](http://inindca///commit/385d7d2987ff147524de20be8bb0e0301d2e9a94))
+* **gux-tabs:** remove unecessary id ([d77af25](http://inindca///commit/d77af25606b9cd1c8448c9c7c0ffaa4bb7a7b6b5))
+* **gux-tabs:** remove unneded deps ([53458bd](http://inindca///commit/53458bdb67f53e0e797a8588febbcbfecd322f58))
+* **gux-tabs:** sync with alpha/1.0.0 ([8566c69](http://inindca///commit/8566c69b0842a5716b1779d069f717d51de251d9))
+* **readme.md:** add polyfill doc ([6a8fb44](http://inindca///commit/6a8fb442700477933de895a12cea071a034e65d8))
+
 ## [1.0.0-alpha.101](http://inindca///compare/v1.0.0-alpha.100...v1.0.0-alpha.101) (2020-08-11)
 
 
