@@ -36,6 +36,9 @@
  - [gux-side-panel-button](../gux-side-panel/buttons)
  - [gux-simple-toast](../gux-simple-toast)
  - [gux-spin-button](../gux-spin-button)
+ - [gux-tab](../gux-tabs/gux-tab)
+ - [gux-tab-dropdown-option](../gux-tabs/gux-tab-dropdown-option)
+ - [gux-tabs](../gux-tabs)
  - [gux-text-field](../gux-text-field)
 
 ### Graph
@@ -59,6 +62,9 @@ graph TD;
   gux-side-panel-button --> gux-icon
   gux-simple-toast --> gux-icon
   gux-spin-button --> gux-icon
+  gux-tab --> gux-icon
+  gux-tab-dropdown-option --> gux-icon
+  gux-tabs --> gux-icon
   gux-text-field --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```

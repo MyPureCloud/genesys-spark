@@ -1,0 +1,173 @@
+// Variables part
+@gux-off-tab-fill: #CFD1D1;
+
+// Style
+.popover-content {
+  margin: 5px 0 !important;
+}
+
+gux-tab {
+  .gux-tab {
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    height: 36px;
+    width: 0;
+    overflow: hidden;
+    padding: 10px 5px 10px 10px;
+    border: none;
+    transition: width 0.4s ease-out;
+
+    &.show {
+      width: 160px;
+    }
+
+    .tab-title {
+      flex: 1 1 auto;
+      height: 12px;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow-x: hidden;
+      cursor: default;
+      position: relative;
+      padding-bottom: 4px;
+      font-family: @gux-regular-font;
+      text-align: left;
+      font-size: 12px;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 14px;
+        height: 15px;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    .tab-dropdown-container {
+      flex: 0 0 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      padding: 0;
+      border: none;
+      z-index: 1;
+      cursor: pointer;
+
+      gux-icon {
+        transition: color 0.25s;
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    .tab-icon-container {
+      flex: 0 0 16px;
+      display: flex;
+      height: 14px;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 2px;
+      margin-right: 10px;
+
+      gux-icon {
+        width: 100%;
+      }
+    }
+
+    &.selected {
+      .tab-title {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Theming
+// Light
+.gux-tabs-light-theme {
+  .gux-tab {
+    background-color: @gux-off-tab-fill;
+
+    .tab-title {
+      color: @gux-grey-2;
+
+      &:after {
+        background: linear-gradient(transparent, @gux-off-tab-fill) right repeat;
+      }
+    }
+
+    .tab-dropdown-container {
+      color: @gux-grey-2;
+
+      &:hover,
+      &:focus {
+        gux-icon {
+          color: @gux-dark-blue;
+        }
+      }
+    }
+
+    .tab-icon-container {
+      color: @gux-grey-2;
+    }
+
+    &.selected {
+      background-color: @gux-off-white;
+
+      &:active {
+        background-color: @gux-off-white;
+      }
+
+      .tab-title {
+        color: @gux-grey-2;
+
+        &:after {
+          background: linear-gradient(transparent, @gux-off-white) right repeat;
+        }
+      }
+
+      .tab-dropdown-container {
+        color: @gux-off-white-bg-3;
+      }
+
+      .tab-icon-container {
+        color: @gux-dark-blue;
+      }
+    }
+  }
+}
+
+.gux-light-theme {
+  gux-tabs {
+    .gux-tabs-light-theme();
+  }
+}
+
+gux-tabs.gux-light-theme {
+  .gux-tabs-light-theme();
+}
+
+// Dark
+.gux-tabs-dark-theme {
+
+}
+
+.gux-dark-theme {
+  gux-tabs {
+    .gux-tabs-dark-theme();
+  }
+}
+
+gux-tabs.gux-dark-theme {
+  .gux-tabs-dark-theme();
+}
+
+// Default
+gux-tabs {
+  .gux-tabs-light-theme();
+}

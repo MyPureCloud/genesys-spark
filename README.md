@@ -76,6 +76,14 @@ for more details.
 Since IE11 does not support web components natively, you will need to
 [apply polyfills](https://stenciljs.com/docs/angular#edge-and-ie11-polyfills) in order to support it.
 
+Component-specific polyfills
+
+| component | web api that requires polyfill                                                    |
+|-----------|---------------------------------------------------------------------------------- |
+| gux-tabs  | [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) |
+
+
+
 ### Localization
 
 You will need to set a lang attribute on the Gux component or one of its ancestor elements and the Gux component will use that to decide what language to use.
