@@ -126,6 +126,11 @@ export class GuxCalendar {
     });
   }
 
+  async setValueAndEmit(value: Date | [Date, Date]) {
+    this.setValue(value);
+    this.emitInput();
+  }
+
   getMonthLabel(index: number) {
     const month = new Date(this.previewValue.getTime());
     month.setMonth(month.getMonth() + index);
@@ -298,8 +303,7 @@ export class GuxCalendar {
   onDateClick(date: Date) {
     if (!this.outOfBounds(date)) {
       if (this.mode !== CalendarModes.Range) {
-        this.setValue(date);
-        this.emitInput();
+        this.setValueAndEmit(date);
       } else {
         if (this.selectingDate === null) {
           // First click
@@ -315,8 +319,7 @@ export class GuxCalendar {
             target.classList.add('selected');
           }
           this.updateRangeElements();
-          this.setValue([this.selectingDate, date]);
-          this.emitInput();
+          this.setValueAndEmit([this.selectingDate, date]);
           this.selectingDate = null;
         }
       }
