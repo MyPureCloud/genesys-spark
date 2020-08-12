@@ -67,7 +67,7 @@ export class GuxModal {
           </button>
 
           {hasModalTitleSlot && (
-            <h1 class="modal-header">
+            <h1 class="modal-header large-title">
               <slot name="title" />
             </h1>
           )}
