@@ -37,6 +37,7 @@ Example of a custom list item with highlighting
 
  - [gux-action-item](../../gux-action-button/gux-action-item)
  - [gux-command-palette](../../gux-command-palette)
+ - [gux-time-picker](../../gux-time-picker)
 
 ### Depends on
 
@@ -48,6 +49,7 @@ graph TD;
   gux-list-item --> gux-text-highlight
   gux-action-item --> gux-list-item
   gux-command-palette --> gux-list-item
+  gux-time-picker --> gux-list-item
   style gux-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
