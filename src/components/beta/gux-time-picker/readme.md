@@ -31,16 +31,16 @@ A check event is triggered when the state of the component changed.
 
 ### Depends on
 
-- [gux-list](../gux-list)
-- [gux-list-item](../gux-list/list-item)
+- [gux-list](../../stable/gux-list)
+- [gux-list-item](../../stable/gux-list/list-item)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-time-picker --> gux-list
-  gux-time-picker --> gux-list-item
+  gux-time-picker-beta --> gux-list
+  gux-time-picker-beta --> gux-list-item
   gux-list-item --> gux-text-highlight
-  style gux-time-picker fill:#f9f,stroke:#333,stroke-width:4px
+  style gux-time-picker-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

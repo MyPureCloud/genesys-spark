@@ -12,7 +12,7 @@ import {
   Watch
 } from '@stencil/core';
 import { ClickOutside } from 'stencil-click-outside';
-import { buildI18nForComponent, GetI18nValue } from '../../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import modalComponentResources from './i18n/en.json';
 import onHiddenChange from '../../../common-utils';
 

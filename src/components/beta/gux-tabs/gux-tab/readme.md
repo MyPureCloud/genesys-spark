@@ -18,8 +18,8 @@
 
 ### Depends on
 
-- [gux-icon](../../gux-icon)
-- [gux-popover](../../gux-popover)
+- [gux-icon](../../../stable/gux-icon)
+- [gux-popover](../../../stable/gux-popover)
 
 ### Graph
 ```mermaid

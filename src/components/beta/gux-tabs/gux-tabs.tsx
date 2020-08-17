@@ -10,12 +10,12 @@ import {
   writeTask
 } from '@stencil/core';
 import Sortable, { MoveEvent } from 'sortablejs';
-import { buildI18nForComponent, GetI18nValue } from '../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import tabsResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-tabs.less',
-  tag: 'gux-tabs'
+  tag: 'gux-tabs-beta'
 })
 export class GuxTabs {
   /**

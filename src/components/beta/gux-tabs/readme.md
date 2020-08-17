@@ -27,13 +27,13 @@
 
 ### Depends on
 
-- [gux-icon](../gux-icon)
+- [gux-icon](../../stable/gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-tabs --> gux-icon
-  style gux-tabs fill:#f9f,stroke:#333,stroke-width:4px
+  gux-tabs-beta --> gux-icon
+  style gux-tabs-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

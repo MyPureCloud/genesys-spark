@@ -18,6 +18,7 @@ Example of a custom list item with highlighting
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute  | Description                          | Type                               | Default     |
@@ -26,33 +27,36 @@ Example of a custom list item with highlighting
 | `text`     | `text`     | The value to display.                | `string`                           | `undefined` |
 | `value`    | `value`    | The value associated with this item. | `any`                              | `undefined` |
 
+
 ## Events
 
 | Event   | Description                                                     | Type               |
 | ------- | --------------------------------------------------------------- | ------------------ |
 | `press` | Emits when the list item is clicked, or enter/space is pressed. | `CustomEvent<any>` |
 
+
 ## Dependencies
 
 ### Used by
 
-- [gux-action-item](../../gux-action-button/gux-action-item)
-- [gux-command-palette-beta](../../../beta/gux-command-palette)
+ - [gux-action-item](../../gux-action-button/gux-action-item)
+ - [gux-command-palette-beta](../../../beta/gux-command-palette)
+ - [gux-time-picker-beta](../../../beta/gux-time-picker)
 
 ### Depends on
 
 - [gux-text-highlight](../../gux-text-highlight)
 
 ### Graph
-
 ```mermaid
 graph TD;
   gux-list-item --> gux-text-highlight
   gux-action-item --> gux-list-item
   gux-command-palette-beta --> gux-list-item
+  gux-time-picker-beta --> gux-list-item
   style gux-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

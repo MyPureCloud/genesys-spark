@@ -9,8 +9,8 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import { KeyCode } from '../../common-enums';
-import { fromIsoTimeString } from '../../common-utils';
+import { KeyCode } from '../../../common-enums';
+import { fromIsoTimeString } from '../../../common-utils';
 
 const MAX_TIME: string = '23:59:59';
 const MIN_TIME: string = '00:00:00';
@@ -18,7 +18,7 @@ const DEFAULT_INTERVAL: number = 15;
 
 @Component({
   styleUrl: 'gux-time-picker.less',
-  tag: 'gux-time-picker'
+  tag: 'gux-time-picker-beta'
 })
 export class GuxTimePicker {
   @Element()

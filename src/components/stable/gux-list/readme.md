@@ -25,6 +25,7 @@ Example with slotting
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property    | Attribute   | Description                        | Type     | Default     |
@@ -32,11 +33,13 @@ Example with slotting
 | `highlight` | `highlight` | The highlight value                | `string` | `undefined` |
 | `value`     | `value`     | The current selection in the list. | `any`    | `undefined` |
 
+
 ## Events
 
 | Event     | Description                                     | Type               |
 | --------- | ----------------------------------------------- | ------------------ |
 | `changed` | Triggered when the list's selection is changed. | `CustomEvent<any>` |
+
 
 ## Methods
 
@@ -48,6 +51,8 @@ Returns whether the first item in the list is selected.
 
 Type: `Promise<boolean>`
 
+
+
 ### `isLastItemSelected() => Promise<boolean>`
 
 Returns whether the last item in the list is selected.
@@ -56,34 +61,46 @@ Returns whether the last item in the list is selected.
 
 Type: `Promise<boolean>`
 
+
+
 ### `setFocusOnFirstItem() => Promise<void>`
+
+
 
 #### Returns
 
 Type: `Promise<void>`
+
+
 
 ### `setFocusOnLastItem() => Promise<void>`
 
+
+
 #### Returns
 
 Type: `Promise<void>`
+
+
+
 
 ## Dependencies
 
 ### Used by
 
-- [gux-action-button](../gux-action-button)
-- [gux-command-palette-beta](../../beta/gux-command-palette)
+ - [gux-action-button](../gux-action-button)
+ - [gux-command-palette-beta](../../beta/gux-command-palette)
+ - [gux-time-picker-beta](../../beta/gux-time-picker)
 
 ### Graph
-
 ```mermaid
 graph TD;
   gux-action-button --> gux-list
   gux-command-palette-beta --> gux-list
+  gux-time-picker-beta --> gux-list
   style gux-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*
