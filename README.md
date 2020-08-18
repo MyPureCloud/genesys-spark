@@ -11,15 +11,19 @@ Distribution Groups"
 
 You may also want to join the chat room for the Genesys Cloud [Common UI Development Group](https://apps.mypurecloud.com/directory/#/group/3fd509fa-c20b-4cfe-ab01-f81588d2a510)
 
+At any given time there are three types of components present in the library:
+
+- **stable**: Most components fall into this category, and there will be no breaking api changes outside of a major release.
+- **beta**: New components where the API design is still being explored. Breaking changes _may_ happen without a major version change.
+- **legacy**: Old components that have been replaced by a new component, or a newer version of the component witn an incompatible API. These will be removed in the next major release.
+
+For more details on the component evolutin process see the full [documentation on the topic](./COMPONENT_EVOLUTION.md)
+
 ## Demo/Documentation
 
 [Lives here](https://apps.inindca.com/common-ui-docs/#/genesys-webcomponents/latest)
 
 ## Installing the library
-
-Currently the main line of development is done in the 1.0.0-alpha branch/release. This is because we are working on making
-changes to the APIs of some components to bring them up to our [API design standards](COMPONENT_DESIGN.md). The elements
-that are currently likely to change are documented by the `likely-breaking-changes` label [in JIRA](<https://inindca.atlassian.net/issues/?jql=project%20%3D%20%22COMUI%22%20AND%20resolution%20%3D%20Unresolved%20AND%20labels%20in%20(likely-breaking-changes)%20ORDER%20BY%20priority%20DESC>).
 
 ### Prerequisites
 
