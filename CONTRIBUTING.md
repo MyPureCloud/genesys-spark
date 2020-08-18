@@ -15,15 +15,18 @@
 
 ### While Working
 
-- Use `npm commit` or `git cz` to ensure correctly formatted commit messages. ([Commitizen](https://github.com/commitizen/cz-cli))
+- Use `npm run commit` or `git cz` to ensure correctly formatted commit messages. ([Commitizen](https://github.com/commitizen/cz-cli))
 - Components should follow our best practices for [Component Design](./COMPONENT_DESIGN.md)
 - Components should be implemented in TypeScript, with Stencil (if you think you need to deviate from this, talk to the common UI dev team first)
-- Make sure to create unit tests for your component
-- Be sure your component will meet the [Common UI Application Accessibility Guidelines](https://intranet.genesys.com/pages/viewpage.action?spaceKey=CMC&title=Common+UI+Application+Accessibility++Guidelines)
+- Create tests for your component
+  - Use unit tests for helper utils and any JS apis on the component
+  - Use pupetter e2e tests for user interactions
+  - Create a [snapshot test](https://jestjs.io/docs/en/snapshot-testing) for detecting unintended markup changes
+- Be sure your component meets the [Common UI Application Accessibility Guidelines](https://intranet.genesys.com/pages/viewpage.action?spaceKey=CMC&title=Common+UI+Application+Accessibility++Guidelines)
 - Make sure any text generated within your component uses the `i18n` [localization tools](https://bitbucket.org/inindca/genesys-webcomponents/wiki/Localization) for string replacement.
-- Each Component should be configured with a working documentation example.
+- Each component should include a file with example usages
+  - Examples should include all presentational variations
 - Format your code based on the `.prettierrc.json` settings (configuring auto-format with [Prettier](prettier.io) is highly recommended).
-- This repo uses [Conventional Commits](https://www.conventionalcommits.org/). You can use `npm run commit` to open a cli prompt which will format commits automatically. Specify an appropriate type, and scope for the commit. e.g `ci(bitbucket): ..., feat(gux-accordian):`
 
 ### During Review
 
@@ -31,7 +34,6 @@
 - Tests, tslint and commitlint must be passing
 - Review will be thorough - problems in these components will have a widespread impact.
 - If your review is completed and you don't have merge rights for master, reach out to the [Common UI Dev Team](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b) and one of us will get it merged.
-
 
 ### After Merging
 
