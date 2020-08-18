@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.104](http://inindca///compare/v1.0.0-alpha.103...v1.0.0-alpha.104) (2020-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* component tag changes
+* Several components renamed
+
+COMUI-236
+
+### Features
+
+* **component:** Add time-picker component ([8031730](http://inindca///commit/80317302ec8c84418e380d8804664883ad143f52))
+* beta components suffixed with `-beta` ([11e5dc0](http://inindca///commit/11e5dc03ed50bd4c597ce33476c3ec009f7df853))
+
+
+### Bug Fixes
+
+* **tests:** fix broken tests ([0cabd59](http://inindca///commit/0cabd59478555917d94602c90c6620d44d6ae46f))
+
+
+* bring new components and translations into the new `-beta` process ([137b597](http://inindca///commit/137b59778a979b53c137e15c27d0ddf85d46abf9))
+
 ## [1.0.0-alpha.103](http://inindca///compare/v1.0.0-alpha.102...v1.0.0-alpha.103) (2020-08-13)
 
 
