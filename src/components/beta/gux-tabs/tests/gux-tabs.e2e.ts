@@ -10,9 +10,9 @@ describe('gux-tabs', () => {
 
   it('renders', async () => {
     await page.setContent(`
-    <gux-tabs></gux-tabs>
+    <gux-tabs-beta></gux-tabs-beta>
     `);
-    element = await page.find('gux-tabs');
+    element = await page.find('gux-tabs-beta');
     expect(element).toHaveClass('hydrated');
   });
 });

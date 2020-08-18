@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KeyCode } from '../../../common-enums';
+import { KeyCode } from '../../../../common-enums';
 import { GuxTimePicker } from '../gux-time-picker';
 
 const MAX_TIME: string = '23:59:59';
