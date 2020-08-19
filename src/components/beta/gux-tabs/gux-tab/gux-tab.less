@@ -24,13 +24,12 @@ gux-tab {
 
     .tab-title {
       flex: 1 1 auto;
-      height: 12px;
-      line-height: 1.2;
+      height: 14px;
       white-space: nowrap;
-      overflow-x: hidden;
+      overflow: hidden;
       cursor: default;
       position: relative;
-      padding-bottom: 4px;
+      padding-bottom: 2px;
       font-family: @gux-regular-font;
       text-align: left;
       font-size: 12px;
@@ -89,7 +88,7 @@ gux-tab {
 
 // Theming
 // Light
-.gux-tabs-light-theme {
+.gux-tab-light-theme {
   .gux-tab {
     background-color: @gux-off-tab-fill;
 
@@ -97,7 +96,7 @@ gux-tab {
       color: @gux-grey-2;
 
       &:after {
-        background: linear-gradient(transparent, @gux-off-tab-fill) right repeat;
+        background: linear-gradient(90deg, fade(@gux-off-tab-fill, 0%), @gux-off-tab-fill);
       }
     }
 
@@ -127,7 +126,7 @@ gux-tab {
         color: @gux-grey-2;
 
         &:after {
-          background: linear-gradient(transparent, @gux-off-white) right repeat;
+          background: linear-gradient(90deg, fade(@gux-off-white, 0%), @gux-off-white);
         }
       }
 
@@ -143,31 +142,31 @@ gux-tab {
 }
 
 .gux-light-theme {
-  gux-tabs {
-    .gux-tabs-light-theme();
+  gux-tab {
+    .gux-tab-light-theme();
   }
 }
 
-gux-tabs.gux-light-theme {
-  .gux-tabs-light-theme();
+gux-tab.gux-light-theme {
+  .gux-tab-light-theme();
 }
 
 // Dark
-.gux-tabs-dark-theme {
+.gux-tab-dark-theme {
 
 }
 
 .gux-dark-theme {
-  gux-tabs {
-    .gux-tabs-dark-theme();
+  gux-tab {
+    .gux-tab-dark-theme();
   }
 }
 
-gux-tabs.gux-dark-theme {
-  .gux-tabs-dark-theme();
+gux-tab.gux-dark-theme {
+  .gux-tab-dark-theme();
 }
 
 // Default
-gux-tabs {
-  .gux-tabs-light-theme();
+gux-tab {
+  .gux-tab-light-theme();
 }
