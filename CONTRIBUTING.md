@@ -8,10 +8,16 @@
 
 ### Before Starting
 
+#### For Genesys Employees
+
 - Make sure what you're building is in the [Genesys UX Guidelines](https://intranet.genesys.com/display/UXT/Genesys+UX+Guidelines+3.0)
   - If you want something that's not in those guidelines, work with the UX team (UXTeam@genesys.com) to get it added and figure out if it needs to be common.
 - Check the [Common UI Board](https://inindca.atlassian.net/projects/COMUI) in JIRA to make sure nobody else is already working on your feature.
 - Create or find an issue on the [Common UI Board](https://inindca.atlassian.net/projects/COMUI) for your feature, or assign the issue to yourself.
+
+#### For External Contributors
+
+- Open a GitHub Issue describing the issue you are looking to solve, or the feature you'd like to add, for discussion with the maintainers.
 
 ### While Working
 
