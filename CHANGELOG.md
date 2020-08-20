@@ -2,6 +2,337 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.0.0 (2020-08-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* component tag changes
+* **localization:** language files may need to be uploaded to a new path
+* **gux-pagination:** api changes to both props and events
+
+COMUI-145
+* **gux-popover:** api changes to both props and events
+
+COMUI-234
+* **gux-slider:** removed text input field from slider component
+
+CUMUI-163
+* **gux-dropdown:** gux-dropdown
+* **gux-dropdown:** Js array has been changed to gux-option
+
+comui-140
+* **gux-dropdown:** jsarray replaced with gux-option
+* **gux-dropdown:** jslist replaced with gux-options
+* **gux-dropdown:** llist changed with gux-option
+* **gux-dropdown:** jslist replaced with gux-option
+* **gux-dropdown:** Remove IList array
+* **gux-dropdown:** Removing Js array and adding Gux-option as a child element
+* **gux-dropdown:** jsitems and refelct attribute removed
+* **gux-dropdown:** reflect attribute and jslist removed
+* **gux-dropdown:** removed reflect to attribute and js list from gux dropdown
+
+COMUI-140
+* Several components renamed
+
+COMUI-236
+* **gux-dropdown:** JS List has been replaced with Gux-option
+* **gux-dropdown:** JSlist has been replaced with Gux-option
+* **gux-action-toast:** Updated public API
+
+COMUI-132
+* **gux-notification-toast:** Updated public API
+
+COMUI-143
+* **gux-modal:** updated public api
+
+COMUI-142
+* **gux-simple-toast:** Updated public API
+
+COMUI-153
+* **localisation:** gux-calendar and gux-datepicker no longer have a locale property
+
+COMUI-209
+* **gux-dropdown:** Ilist has been removed from gux-dropdown
+* **gux-button:** reflectattribute
+
+COMUI-204
+* **gux-page-loading-spinner:** There is no need for client apps to centre this component manually anymore
+
+COMUI-144
+* **asset handling:** new default module, using `registerElements` to set up components
+
+COMUI-195
+* **icons:** changed icon names
+* **calendar:** the `value` property on calendar elements is now a string instead of dates
+
+COMUI-174, COMUI-135
+* **color-pickers:** Property-based custom color setup has been replaced with declarative markup
+
+COMUI-137
+* **gux-dropdown:** Ilist has been changed to gux-option
+
+### Features
+
+* **action-button:** button now support disabled property ([3557ca9](http://inindca///commit/3557ca93ce9305e9d86641182ba5923e83be2d70))
+* **advanced-dropdown:** adding created component for advanced-dropdwn ([3958c78](http://inindca///commit/3958c7857c77208acf1ed73d4438663dc39a7011))
+* **advanced-dropdown:** adding created component for advanced-dropdwn ([6632f8e](http://inindca///commit/6632f8ed8823864dbeac4bdcbd1b86c1e0661455))
+* **advanced-dropdown:** basic feature/control implementation ([9d55a73](http://inindca///commit/9d55a7316b59641b25ced1004dbab69a7d1cd836))
+* **advanced-dropdown:** basic feature/control implementation ([2b64d2d](http://inindca///commit/2b64d2d06257c14cd47a1bc7f446be6b1cc5510f))
+* **button:** button now support actionClick event that respect disabled ([af8edbb](http://inindca///commit/af8edbb6c5d08f1838b3306f9f88f6a1a79ddb22))
+* **button:** disable native click when disabled & remove custom event ([39776e8](http://inindca///commit/39776e8ce5628954a826e656210ee7449e6e3f32))
+* **button:** improve action-button disabled prop comment ([da12616](http://inindca///commit/da126166eb861e851059a74d0fd1904df952fc04))
+* **button:** remove duplicate disabled css closure as it's useless ([0dbaa14](http://inindca///commit/0dbaa1462f7330f7d131bdfe0b5f1109e3e5ddbc))
+* **calendar:** use ISO strings for calendar and datepicker values ([c3a300c](http://inindca///commit/c3a300c55d4356313309b3ec170740371ed62fd6))
+* **color-picker:** add color picker components ([2f7c6d7](http://inindca///commit/2f7c6d790b64cefd15755f8d73659f5daae72509))
+* **command-palette:** add dark theme ([58468b8](http://inindca///commit/58468b84e2f44c86c767a2f30e6b2f996f4af0b6))
+* **command-palette:** added filter limit ([3f5a6db](http://inindca///commit/3f5a6db689baeb80bb5207b5858a8e7eb4315ade))
+* **command-palette:** initial creation of component ([76ecc89](http://inindca///commit/76ecc897194042e80880db97a618572912414495))
+* **command-palette:** rank recent higher in filter ([1c9b808](http://inindca///commit/1c9b808d2fd207f5bd1fc13e2b03a90957e7e723))
+* **component:** Add time-picker component ([8031730](http://inindca///commit/80317302ec8c84418e380d8804664883ad143f52))
+* **comui-21:** add spinners and radial progress ([d7b9fc2](http://inindca///commit/d7b9fc291748e9dd30c97a27753af385b8ca07a9))
+* **datepicker:** add initial draft ([7a76e0b](http://inindca///commit/7a76e0bc65996e8a8114e8772383f20da258ea00))
+* **gix-slider:** GIA-1876 | added the disabled attribute ([ceb7441](http://inindca///commit/ceb7441a39dfc6cf7217ec55d125c14c65a50be1))
+* **gix-slider:** GIA-1876 | fixed npm run lint error ([5e39ab1](http://inindca///commit/5e39ab17d8a5086c518c73acb195fdbe8142e958))
+* **gix-slider:** GIA-1876 | fixed npm run lint error ([4d9610c](http://inindca///commit/4d9610cbc0a6a449f28ad343637b5e29cda03ff1))
+* **gix-slider:** GIA-1876 | fixed typo on comment ([ee87ebc](http://inindca///commit/ee87ebc89cc2de96adf4b3d27ab4e75f0364496e))
+* **gux-accordion:** improved implementation and docs ([2011006](http://inindca///commit/20110067d5dccf8de1eb409df7472deca900515a))
+* **gux-calendar:** min and max date added ([cb4605a](http://inindca///commit/cb4605af9285545809df97e8054a82dd33c74f7a))
+* **gux-checkbox:** initial checkbox implementation ([eb001f3](http://inindca///commit/eb001f31e43b47fae2acc204fc98c249322873ea))
+* **gux-checkbox:** use slots for labels ([bc6d14b](http://inindca///commit/bc6d14b269e9f16e06061071ebb288ac6922be33))
+* **gux-datepicker:** min and max date added ([e5f3106](http://inindca///commit/e5f3106b2c29478e6d2bd76e83095df4adb0fac6))
+* **gux-disclosure-button:** exposing a property to open at start ([df4a878](http://inindca///commit/df4a878da224c6f471ae989c13cbf28edb835355))
+* **gux-disclosure-button:** isOpen prop is used to open the panel ([03843d2](http://inindca///commit/03843d264ac582b2e3105d5e8f4eda490296b435))
+* **gux-form-field:** added new form inputs ([9491912](http://inindca///commit/9491912c4ca0f906e4a55ffe223959ea6a7ad9b4))
+* **gux-icon:** add docs command back to build script ([ab82955](http://inindca///commit/ab82955f655fff332b8fe2447838001845e63d2b))
+* **gux-icon:** add single svg for reviewers ([1d92eaf](http://inindca///commit/1d92eaf723b85c552e4e8c7e4f693eed5b852dcc))
+* **gux-icon:** add sizing/coloring docs to gux-icon and fix misspell ([64894c8](http://inindca///commit/64894c850ab05da30f0562a21c3144f9bf540ff9))
+* **gux-icon:** add svg icons ([83e921b](http://inindca///commit/83e921b2c128e3b5b3cb2aaff61bb478aecadb28))
+* **gux-tabs:** finish gux-tabs implementation ([94f0df0](http://inindca///commit/94f0df0c65915b0f7b4604aaa56fce2bccf63044))
+* add aria-label to search input ([59edfd6](http://inindca///commit/59edfd628da676c628d363ed0007f67c90e47074))
+* **gux-icon:** address pr commnets ([492c244](http://inindca///commit/492c244b92825fe303f01006141f44ec99751631))
+* **gux-icon:** create gux-icon component ([0782c53](http://inindca///commit/0782c539e7d7821bb12954631aa5f19a259b3f4a))
+* **gux-icon:** make svg expand to the width of its parent ([cf89a05](http://inindca///commit/cf89a059b802f466ce0ca55776d79c21c028112f))
+* **gux-icon:** repair svgs ([9000c72](http://inindca///commit/9000c72264e03968ed1ac0746c24bba5e4932303))
+* **gux-icon:** run stencil build to fill out docs ([975a6cb](http://inindca///commit/975a6cbfd55c437681f8ecbf2d816340e1b6689d))
+* **gux-icon:** throw error if icon is not accessible ([1d3b153](http://inindca///commit/1d3b153211b102c4c4c31dc8e53e2976485159c2))
+* **gux-icon:** use getAssetPath instead of assuming icon location ([3be2a79](http://inindca///commit/3be2a79656c326d09a9eab930450b31e628d7a83))
+* **gux-radio:** initial radio button implementation ([abab6d8](http://inindca///commit/abab6d8117817645669a8b473663a3e148791f9c))
+* **gux-radio:** use slots for labels ([49c474e](http://inindca///commit/49c474ef9263162d411997df132c754b622b5e5b))
+* **gux-tabs:** add instanceof check to this.element ([c557bde](http://inindca///commit/c557bde6126402654b61ccfc59844dec8fba55c6))
+* **gux-tabs:** address more pr comments ([c7dc8c7](http://inindca///commit/c7dc8c72c4ebd40a3af14539ddf70b7f7ba31f14))
+* **gux-tabs:** address pr comments ([c477b76](http://inindca///commit/c477b7607dc7ab16068e385e671d9de41cf8bbea))
+* **gux-tabs:** change scrollbar-width to none ([a6803ba](http://inindca///commit/a6803bae0ecdee78520df1d3a1996eb087257d63))
+* **gux-tabs:** create basic gux-tabs component ([c90d03a](http://inindca///commit/c90d03ac82a135acf1d80f56a2c2d5ad0ed05e1c))
+* **gux-tabs:** extract individual tab into its own component ([5c74a0f](http://inindca///commit/5c74a0f7dc17dfde65c5119f4f5321a78715f19f))
+* **gux-tabs:** fix merge conflicts with alpha/1.0.0 ([0793ad2](http://inindca///commit/0793ad289d9b62f827711de13ab1518fa8c6f113))
+* **gux-tabs:** fix variable name ([4ca7758](http://inindca///commit/4ca7758667a702a94ca4be88244705fae5b94550))
+* **gux-tabs:** move loaders to devDeps ([4eef716](http://inindca///commit/4eef7163eb3346a1bbe64b77767ca9699d7a0660))
+* **gux-tabs:** remove dead code ([385d7d2](http://inindca///commit/385d7d2987ff147524de20be8bb0e0301d2e9a94))
+* **gux-tabs:** remove unecessary id ([d77af25](http://inindca///commit/d77af25606b9cd1c8448c9c7c0ffaa4bb7a7b6b5))
+* **gux-tabs:** remove unneded deps ([53458bd](http://inindca///commit/53458bdb67f53e0e797a8588febbcbfecd322f58))
+* **gux-tabs:** sync with alpha/1.0.0 ([8566c69](http://inindca///commit/8566c69b0842a5716b1779d069f717d51de251d9))
+* **highlight:** add fuzzy search ([311e4ee](http://inindca///commit/311e4ee8f6e38c9245d7a71128fe47db11060b9b))
+* **highlight:** more highlight strats ([30e6f0a](http://inindca///commit/30e6f0a9f8847bdd6c2f075c552918eb7a2f1455))
+* **icons:** optimize generated svg icon file ([2b3d292](http://inindca///commit/2b3d292b17c0a288c32b6e20915659367b96f469))
+* **Jenkinsfile:** add notification for failed/fixed builds ([623f72d](http://inindca///commit/623f72d21cdf8f2787e1d23e18e97b8b3c883209))
+* add aria-label to search input ([e7cb533](http://inindca///commit/e7cb533f7526dd27689bf768756828439c304a01))
+* add default title for text field erase button ([07b107c](http://inindca///commit/07b107c0dd73e2b0d48641bfc5b41ac281262522))
+* add dialog role to command palette ([c13d52b](http://inindca///commit/c13d52be1e358b3d9183aff4e46d1ab220e13814))
+* added aria label to increment/decrement ([e984e7e](http://inindca///commit/e984e7e4d8d868c5d2d4e8dddfdb41c490261608))
+* added spin-button component ([bd2c32b](http://inindca///commit/bd2c32b7ee952423d7cb5f094b9446d85beb40b4))
+* adding initial text label control ([b304b7b](http://inindca///commit/b304b7b19d136330b48821b253c6edb5b59808e9))
+* **search:** adding dynamic search support ([4e8279b](http://inindca///commit/4e8279bb53df3b411ce35e569f596c0ec0410198))
+* beta components suffixed with `-beta` ([11e5dc0](http://inindca///commit/11e5dc03ed50bd4c597ce33476c3ec009f7df853))
+* **modal:** add basic modal component ([bfebcb9](http://inindca///commit/bfebcb904206287ac54af2b4f2939bec0b973eef))
+* **modal:** make the model active by default ([bfc085e](http://inindca///commit/bfc085e94f461f52e77482042edf6225a2d38ff1))
+* **pagination:** allows for declarative syntax in pagiation ([91e96f2](http://inindca///commit/91e96f28fd7717dc43072414a42eef7c0fda472a))
+* pdna-2900 added e2e for NaN scenario ([6a9e79d](http://inindca///commit/6a9e79d5c9028b32d94266b350f84c499302a911))
+* **pagination:** declarative syntax in pagination ([d9e0259](http://inindca///commit/d9e02598018215063d1cfe09bab6fa55f8cde33f))
+* **pagination:** declarative syntax in pagination ([4cf9343](http://inindca///commit/4cf9343e27760a599d75695f1dbe211f63ddee79))
+* **pagination:** declarative syntax in pagination ([d656911](http://inindca///commit/d6569115bd391e2ffee5c8207a2d67e28b7c6dea))
+* exposed filter and debounce for adv dropdown ([f664c86](http://inindca///commit/f664c86a87d3fab606f414a34a0b1f18087fabbd))
+* fixed error styling and linting ([756f9e0](http://inindca///commit/756f9e09b3897980adf1325c2f5e14b42d1bf040))
+* fixed linting ([35686ce](http://inindca///commit/35686cee5afccabdb12c28fb6239603d052cb0cc))
+* pr fixes ([4f51ae1](http://inindca///commit/4f51ae18932f1753a08e461cacfe62f1b41b8e35))
+* **popover:** add popover component ([7d709dc](http://inindca///commit/7d709dcb7eb1c645b7bb25d9fd4bc3081ba774ac))
+* **readme.md:** add polyfill doc ([6a8fb44](http://inindca///commit/6a8fb442700477933de895a12cea071a034e65d8))
+* **search:** adding support for labels on search ([43fe693](http://inindca///commit/43fe69355575ea9de45d649acf5ee2602da7ff95))
+* **serch:** adding initial gux-search component ([d605544](http://inindca///commit/d60554458e153dc301cc2cdc0f7fde116ad1cd6e))
+* **side-panel:** added side panel component ([9b33454](http://inindca///commit/9b3345491caae8f6d22f54703c14434d2dd1ea5c))
+* removed duplicated check as it wasn't saving that much compute ([d66bd62](http://inindca///commit/d66bd62fca7f8bdc31e310636e21e59a176da895))
+* typo fixes ([8e7cb54](http://inindca///commit/8e7cb54b73eaffc0ac9291a9ef75ebfe873c6363))
+* update git ignore for iml files ([44cc316](http://inindca///commit/44cc316778ec36e05316047163c78f80c4cd5252))
+
+
+### Bug Fixes
+
+* **action-button:** clear lint error ([db5287e](http://inindca///commit/db5287e4f2378adbea806f09b807f3ecc70517c3))
+* **advanced-dropdown:** focus now gets set to search field ([2f0ab18](http://inindca///commit/2f0ab188eb63ea3bf4f9d0ecc4316ddc2319802c))
+* **advanced-dropdown:** improve styles of dropdowns to match standard ([8e682d3](http://inindca///commit/8e682d37346f73f2660cfc7b516dbb477796e0eb))
+* **advanced-dropdown:** update from comments in pr ([4c10add](http://inindca///commit/4c10addb903dd7dffe03648260f46828ba756315))
+* **assets:** Start to fix asset loading issues when deployed ([7a77e1a](http://inindca///commit/7a77e1a2d0149e2314db5528ef7b8bb91aab0929))
+* **button:** align font with ux guidelines ([e4c0e99](http://inindca///commit/e4c0e991dcf37e65807445bffff57a5d4d13b5b7))
+* **button:** remove max-width ([3346162](http://inindca///commit/3346162efd24296a281c8f52f96c4182c59871db))
+* **calendar:** fix month advancement going too far on the 31st ([e2325e4](http://inindca///commit/e2325e4685f897843e2b94f28c749bd584cae57d))
+* **chatalerticon:** chat alert icon white partition ([40bbdd0](http://inindca///commit/40bbdd0fa9f3e31e5001ae2372e21c0e2aae5c37))
+* **command palette:** regex not working in FF ([122b8df](http://inindca///commit/122b8df2581fe6a3fa3c4a97d7831c10b8ae0ba1))
+* **command palette:** strange focus behavior ([fc7fdc8](http://inindca///commit/fc7fdc82ebb3ed8182bbb1ce209b2d3fa8bc5a6b))
+* **command palette:** use search component ([6655916](http://inindca///commit/6655916c5dd8d9ae14bc0694552611885f0fb48a))
+* **command-palette:** change style ([b8029f3](http://inindca///commit/b8029f33e7b789db5a82ecc4318a2e3d45546877))
+* **command-palette:** first round of changes ([62fe9a0](http://inindca///commit/62fe9a0f40cea2ea2198634eec726ef5585b7e17))
+* **command-palette:** fix broken tests ([2720918](http://inindca///commit/2720918e115c6b8a65429b162c2d4cec33f39ba5))
+* **command-palette:** fix detail-less item styles ([b18c3f3](http://inindca///commit/b18c3f3c32732808633c7adf170eb9c34618d0fb))
+* **command-palette:** fix horizontal scrolling issue ([1c3ad4a](http://inindca///commit/1c3ad4a6b299b4c75fff26f7654fcac225188600))
+* **command-palette:** hover style broken ([09c2507](http://inindca///commit/09c250753ac529013a10ad580574a64877d22199))
+* add definite timeout to input focus on open ([69ac393](http://inindca///commit/69ac393233dc22c8bdb7d49502eceec5b08de08c))
+* **command-palette:** sort all lists ([e8ac81b](http://inindca///commit/e8ac81be5688aba3c01cb78a9d3f209f659f7205))
+* **command-palette:** story was not hiding palette ([dce1468](http://inindca///commit/dce1468342c7c9f4be743c789adc1faf579de041))
+* **command-pallete:** no details and no shortcut style ([2f5f7e5](http://inindca///commit/2f5f7e547d44faf26499e3906a045ab67ca6627a))
+* **component:** prevent overflow of text and replace with ellipsis ([a8ce9ac](http://inindca///commit/a8ce9acefcf24475c20ba6861f3e43514a6b81f5))
+* **component:** Replace label with srLabel in slider component ([f22cedd](http://inindca///commit/f22cedd3e3e0a7890da15bd6988af01c86bf7caf))
+* **datepicker:** fix keyboard navigation ([2989bfd](http://inindca///commit/2989bfd31bf061b37935346eff3d7a49fdeeda9c))
+* **datepicker:** fix uts ([c4258f8](http://inindca///commit/c4258f8d801e2d4ebad82ee7852c6339f5ed3755))
+* **e2e:** remove console.log ([5083c9f](http://inindca///commit/5083c9fc59d2985777091dfca2fff3b96afe967e))
+* **gix-datepicker:** add min-date and max-date to range picker example ([8998797](http://inindca///commit/899879773552926a945f999c20bbe530702dc573))
+* **gix-datepicker:** outOfBounds checks added to incementing input ([befddf8](http://inindca///commit/befddf84c652cf3b0b44d79aa9d578f074cbfc85))
+* **gux-action-button:** prevent toggle on action click ([0e2978a](http://inindca///commit/0e2978a13cd468d256e0d2c0f7e9c715d74d9f24))
+* **gux-button:** padding on component no longer clickable ([2c217b2](http://inindca///commit/2c217b2b1dfd6651f22549b5efbc0c1aad19244d))
+* **gux-button:** removed reflectattribute ([a05abce](http://inindca///commit/a05abce7df199a4b3813e34e3c3f7a17b630fd97))
+* **gux-calendar:** add min-date to example ([1e9db15](http://inindca///commit/1e9db15a01b2584d693dff580f1a8d6f73f64825))
+* **gux-calendar:** In bounds check selecting with key presses ([5e5ab1b](http://inindca///commit/5e5ab1b4bd13e7453bc4f615a4a9703df0219342))
+* **gux-calendar:** min max lint fix css ([83959fe](http://inindca///commit/83959fefde77cccb78aef25f2d5bbd0bfbb5e581))
+* **gux-calendar:** Refactor setValue and emit into one async function ([b3d6a49](http://inindca///commit/b3d6a492a00e8e46456c2d89a3a547c236df239e))
+* **gux-checkbox:** add missing hover effects ([cd8814c](http://inindca///commit/cd8814c205c161a6edc333151c889c9b21b927b4))
+* **gux-checkbox:** added focus styling for accessibility ([8322783](http://inindca///commit/8322783f5852fd859f8ec468a45a5de80f80a0a7))
+* **gux-checkbox:** improve indeterminate behavior and checkbox story ([3083057](http://inindca///commit/3083057de5aa3518096650ad80d59e628aa74050))
+* **gux-checkbox:** linting issues ([3a7212a](http://inindca///commit/3a7212a24cd58e264cc5a50b52d3c5dfed8a6fb8))
+* **gux-checkbox:** use `cursor: not-allowed` when disabled ([f037996](http://inindca///commit/f037996a2511b4bff118784ee48d76f16e0cf516))
+* **gux-datepicker:** DOM value out of sync with prop ([53c837a](http://inindca///commit/53c837a9da4499ec0eef494a873487da38d6afff))
+* **gux-datepicker:** fixed bug in keyboard input ([5eeab9e](http://inindca///commit/5eeab9ee73725300e29f2b112d2e9856a47733a5))
+* **gux-datepicker:** Simplify date reset and comment ([534c4ea](http://inindca///commit/534c4ea4579fe904b6dd9eeec1aa8253d88916ee))
+* **gux-icon:** error statement updated ([1e84c91](http://inindca///commit/1e84c9169c8312c373b9895ef11b897ac64d6b4c))
+* **gux-icon:** gux-icom promise error handling ([ea8d866](http://inindca///commit/ea8d8663a5d48e27e5e9415eb1be91424a1caaae))
+* **gux-icon:** gux-icon promise errors resolved ([b792854](http://inindca///commit/b792854320a97f7386cb6b68abb6a81dac74853a))
+* **gux-icon:** gux-icon unhandled promise error is fixed ([8561a4a](http://inindca///commit/8561a4a91634ef587757dc9fc2529404366031ad))
+* **gux-icon:** now uses innerHtml instead of svg use ([bc33a8b](http://inindca///commit/bc33a8bf4355e5fe980544d943a2b7c12e5dac5d))
+* **gux-icon:** set explicit height so they display correctly on safari ([bda0ed0](http://inindca///commit/bda0ed03341eb1ca9b3fc6e19fd29eb501d9ae08))
+* **gux-icon:** Support icons when svg file is hosted cross-origin ([b051021](http://inindca///commit/b051021ba2919da58b7d68ca9fe7904ac7383bd4))
+* **gux-list-item:** item's text now wrap within its container ([22d6c0e](http://inindca///commit/22d6c0e73cce16fc512eb98ee54f8436027b289b))
+* **gux-list-item:** removed line height and opted for padding ([1945902](http://inindca///commit/1945902d7f41a5872bc0e63cd7e09866ac2f712a))
+* **gux-modal:** css fix ([8c5e44d](http://inindca///commit/8c5e44dbd901de1d4f80c255f060353c36796c9d))
+* **gux-pagination:** comui-199 ([8e56d25](http://inindca///commit/8e56d25ac1e030d6594a5d9c81966980b36a8efd))
+* **gux-pagination:** comui-199 ([85b33ba](http://inindca///commit/85b33ba0613bab6fcd302b192124b5576d068987))
+* **gux-pagination:** comui-199 ([53be4a9](http://inindca///commit/53be4a9f07b128314fe27abca6357c15461f2fea))
+* **gux-pagination:** guard against negative totalitems ([d1abcb7](http://inindca///commit/d1abcb7505d3b9681506242f8559ba88881ff4fd))
+* **gux-radio:** add missing hover effects ([8787386](http://inindca///commit/8787386a58cb6aa66ed71c87fea92c87838a6cb2))
+* **gux-radio:** disabled radios are 0.5 opacity ([6e0e862](http://inindca///commit/6e0e8626943f3182af553570ee9e3f58a7c87ac5))
+* **gux-radio:** use `cursor: not-allowed` when disabled ([552b2cd](http://inindca///commit/552b2cdcd2dce7dc425b1cbd3d18b9809bed91c7))
+* **gux-slider:** bux fixes ([3849ff9](http://inindca///commit/3849ff9196ce39f1e56d8c88f1ee656167e1a21a))
+* **gux-slider:** removed text input field ([61e25ed](http://inindca///commit/61e25ed4eac3e2e635ecb2f89d4bcca196e55e86))
+* **gux-tab:** fix style issues in gux-tab ([0abfc69](http://inindca///commit/0abfc69c10165d45b4ecfae316ea84d5b772c57a))
+* **gux-text-field:** fixed clear button covering text ([80f1ad5](http://inindca///commit/80f1ad5e758bb2d7e3b73592bc80895f7136db9c))
+* **gux-text-highlight:** fixed fuzzy strategy ([6d12f39](http://inindca///commit/6d12f39ad695cddfabf29231bc53fa03c7f915fa))
+* **guxicons:** hard coded values for fill attribute of svg ([473f260](http://inindca///commit/473f26061fa3e6a35b6bb05752a5d0d968e59725))
+* **highlight:** contains not always working for starts with logic ([862c313](http://inindca///commit/862c3137b469b8e638c9e242d29b777fd88e754c))
+* **highlight:** more highlight issues ([726a321](http://inindca///commit/726a321685becdef75d80d412354c23e1d50e9c4))
+* **i18n:** fix translation loading ([e654b17](http://inindca///commit/e654b173dbe19ec050c8a328c14830266d28a67b))
+* **icons:** fix icons that could not be parsed by svgo ([90903a6](http://inindca///commit/90903a606c2149e3cfee65ac85ef155e6691e80d))
+* **icons:** make sure icon svgs scale correctly ([4c5ab7f](http://inindca///commit/4c5ab7f31940a2bab85c95db094b9428bde5b225))
+* **icons:** migrate to gux-icon ([c3646ac](http://inindca///commit/c3646ac954dfa58d3572d5332382c9ddd51ed963))
+* **list:** add doc and typing ([a4431a9](http://inindca///commit/a4431a98f1ff352a9f49940cd31f2b648de0d995))
+* **list:** fix failing tests ([6838242](http://inindca///commit/6838242f95a020ba1d489c992079d865db6d0838))
+* **list:** missing hover effect ([9527298](http://inindca///commit/9527298d069cbb7fb5c8954bfbf91ce9fe091129))
+* **list:** readd change event ([057e831](http://inindca///commit/057e831fd79eced5570bcf826e667f9a35a6d265))
+* **list:** requested changes round1 ([72bb79f](http://inindca///commit/72bb79fbefab53d780bee888118a737ceae549f9))
+* **list:** requested changes round2 ([cd9d197](http://inindca///commit/cd9d197ccfb85d1bf9d840dfc3ec7f17f3375c45))
+* **list:** requested changes round3 ([60b9826](http://inindca///commit/60b9826f4abb53811a53122c6dec9a73d8d45f33))
+* **localisation:** removed localisation via locale property ([d717daf](http://inindca///commit/d717daf1b0b0eb4c819cc1a47a41557f3577db62))
+* **localization:** load language files from stencil asset path ([3b15b95](http://inindca///commit/3b15b959149814337c2d9ac721b6f54a8042f118))
+* **modal:** fix modal z-index issue with text-field & checkbox ([fa3a33d](http://inindca///commit/fa3a33d3be117ce05c58ab8b67939df47f050a9d))
+* **search:** adding support for higlights and pre-section theme ([5b54c87](http://inindca///commit/5b54c877d28231e4e1e2b98872a9516581425643))
+* update gux-search for stencil 1" ([24ab180](http://inindca///commit/24ab18010de64c82b5657374c42f3a7b9b323639))
+* **modal:** fix title style ([f120f9d](http://inindca///commit/f120f9da45536ec765670eadc71570214cc1a0d8))
+* **search:** add support for keyboard navigation ([9167e75](http://inindca///commit/9167e757fcc11fbbc36c600e22b33d5ee2f8b2db))
+* **search:** adding e2e tests for events on search ([8b5668f](http://inindca///commit/8b5668fa886b4081bbe34cb42f863c1dd92d001d))
+* **search:** fix comments from pr ([0f70474](http://inindca///commit/0f70474d6ca1f589caf8ce8843390a599ca9197c))
+* **side-panel:** fix dark mode style issues ([c21fb7f](http://inindca///commit/c21fb7fa116ac1006fe34f3b4b054a21433124d9))
+* **static assets:** fix uploaded asset folder ([b7ac168](http://inindca///commit/b7ac1681d35296d41a69fff75653fd441c8072fc))
+* **stencil:** update stencil to 1.2.3 ([859cc18](http://inindca///commit/859cc18216641d3e594670c3704a4fff965f077f))
+* **stencil:** update to 1.3.0 ([1da9f72](http://inindca///commit/1da9f723b75e27711fb267a5479bb14b1d00740b))
+* **storybook:** actually fix ts imports, for real this time, probably ([cd3983b](http://inindca///commit/cd3983b6aae7097bdb5e435bc026a7f5cd3615c6))
+* **storybook:** add ts and tsx extensions to storybook webpack config ([d84df14](http://inindca///commit/d84df146c0f265ea757343c901e6a104f95498b8))
+* **storybook:** put components under the basic components heading ([decf79e](http://inindca///commit/decf79eb95144ee4d1811de04df774860d4ac98f))
+* **switch component:** add padding above css selector ([1056911](http://inindca///commit/1056911ee4e0b32bc34146af711c94f6ef3346b2))
+* **switch component:** fix blue outline on active switch ([ebab282](http://inindca///commit/ebab28297b60fdaac03a4d1797bd3886be82c6f4))
+* **test:** flakey e2e tests ([fd27901](http://inindca///commit/fd2790111a18ed3f490a05b468c0b99f4317e0d5))
+* **tests:** fix broken tests ([0cabd59](http://inindca///commit/0cabd59478555917d94602c90c6620d44d6ae46f))
+* **text matching:** don't fail text matches on special RegExp Characters ([8edf29d](http://inindca///commit/8edf29d426e2543fbff15f6eac57d2dddb5a5620))
+* **type-definition:** build error resolve and simplified the process ([99dba62](http://inindca///commit/99dba620dc272e9198e5bec52cde91d3492cc8ef))
+* **type-generation:** automatic type generation ([f873ff3](http://inindca///commit/f873ff3e4951afd78ac4a01e42b37c7199e3bc53))
+* **version:** manual version bump to alpha-45 ([ba43f91](http://inindca///commit/ba43f91133955e507cd8db818cddf01557eacbed))
+* **whatsappicon:** fill color updated ([88ed454](http://inindca///commit/88ed454e6179d8a7cbd679912f7f6c9fa2beb2ea))
+* add srLabel attributes for search and text field ([ebfbdd0](http://inindca///commit/ebfbdd01b0dcda62a45dc4b0049124aa0f7a448a))
+* Add title to options and text field ([7bd3380](http://inindca///commit/7bd33805feacb326e5e8d0bb9cce770604f09d9b))
+* adding accessibility support for new label ([e535c0d](http://inindca///commit/e535c0dbc167010dd4d1e1295b63b85ec27d1311))
+* allowing complex dom labels using named slots' ([f6b27e4](http://inindca///commit/f6b27e4e8089afcaa5988115ea6f810da49118c7))
+* divider was causing DOM issues with stencil ([15ad86b](http://inindca///commit/15ad86b2f538554d466b03c1b49ece14b73dfcca))
+* don't use labelPosition default values ([0daefd1](http://inindca///commit/0daefd136f710c450cd2ae8a9383b6d9896be4e9))
+* few property and readme updates on gux-text-label ([7a87365](http://inindca///commit/7a87365c5ee321f01610127f0de5101bf1c66abe))
+* firefox no longer shows extra spin buttons for number spinner ([01b4e9d](http://inindca///commit/01b4e9d53950b9761c5154cf2742117f6e4f6aef))
+* fix test issue with gux-text-field ([66ac2fa](http://inindca///commit/66ac2fad22f5ff646b5d0e92a4869df22be0263d))
+* fixed infinite nans issue removed label and added disabled knob ([c14849a](http://inindca///commit/c14849a754988088dcc956cafc56919a7906992e))
+* generating id for labels and using it for aria ([d2bd7ac](http://inindca///commit/d2bd7ac6503ef03d6106735cf16f3332802a3b04))
+* implementing basic feature set and themes ([85c7451](http://inindca///commit/85c7451de10ea7a1e719790fc234affdf3f79e7d))
+* improving command palette keyboard navigation using arrow keys ([b79b428](http://inindca///commit/b79b428547ac85cc813aa7d0dd02da75ac884c36))
+* input accept invalid values ([e8c6540](http://inindca///commit/e8c6540ec9de9ca69075ee9f44402592c9afbc12))
+* lint error ([e7ceb7c](http://inindca///commit/e7ceb7c4b473fd1ceba3dfbb85144e8fcd4bc61a))
+* lint issue ([50ee8a1](http://inindca///commit/50ee8a196639bd643ed8cc43bc0e7ec4aa797504))
+* linting issue with command palette spec ([03202bc](http://inindca///commit/03202bccf8c5c75c0739e8a17222742308dce03d))
+* more linting issues ([9631996](http://inindca///commit/9631996a0c15f6c75b4bf302851a173164da4dba))
+* only focus search on keyboard usage ([94b34db](http://inindca///commit/94b34dbdb8f91a2f1d704523393b0d6955bd63f0))
+* pdna-2966 | changed the css for gux-text-label ([4b866cf](http://inindca///commit/4b866cfe9d3e3e0d61b89f47c25ec4c324343497))
+* pull changes from master (including next label) ([6e7912c](http://inindca///commit/6e7912c516e33a8a7ed01b43a5bd5e78c28bda0e))
+* pull formatting changes ([dd06681](http://inindca///commit/dd066812a248c6017a0afa7a59332cb72a66111b))
+* pull formatting changes ([cdda17f](http://inindca///commit/cdda17fab5ce2bbb1e937fd85e96de69f157c7cb))
+* pull request issues ([f99e992](http://inindca///commit/f99e992815ad7147ade2209d0a0672d521964fce))
+* remove label from advanced dropdown and clean up doc ([33df7b9](http://inindca///commit/33df7b967b958eef5746ebfe2ec6680073bd1b5c))
+* removing label from gux-search ([333663f](http://inindca///commit/333663fa5ef90d398093c8fe5232722c2acc681b))
+* type added for registerElements method ([d932351](http://inindca///commit/d93235118ea8289f221ef2e0d6cf6c3d933a76c6))
+* updating all components to use common label instead of custom label ([35e54e6](http://inindca///commit/35e54e60d6577cd5c1d2e40d29c5a246efe664ab))
+
+
+* **color-pickers:** use html instead of js for custom colors ([24df9ef](http://inindca///commit/24df9ef12686a7025abd83605f55748a7f560b7e))
+* **gux-pagination:** api changes ([4a2aed5](http://inindca///commit/4a2aed5930c3da279b6ed63fb12781e59840c542))
+* **gux-popover:** api changes ([4b17aec](http://inindca///commit/4b17aecd0ac634d59ee0c30b805d77516ba06e1a))
+* bring new components and translations into the new `-beta` process ([137b597](http://inindca///commit/137b59778a979b53c137e15c27d0ddf85d46abf9))
+
+
+### improvement
+
+* **asset handling:** automatically set asset loading url ([3b08624](http://inindca///commit/3b0862400dfccf7dd8d31e0a825d182ae4d32501))
+* **gux-action-toast:** updated component api ([d111668](http://inindca///commit/d1116681f9bd19a5c1c46e752998db90a00b6b99))
+* **gux-dropdown:** code-review changes ([91c91f9](http://inindca///commit/91c91f96dcb57367d621f926ae21b32d50b60049))
+* **gux-dropdown:** JS List has been replaced with Gux-option ([f5b2120](http://inindca///commit/f5b2120a18caa26cc9fd1ac9342187ca63f7a26e))
+* **gux-dropdown:** jsarray replaced with gux-option ([33449fb](http://inindca///commit/33449fb4677b3f5ddfa6344048aed6c9f50cd7d7))
+* **gux-dropdown:** jsitems and refelct attribute removed ([68a6295](http://inindca///commit/68a629515cca2be17966b1dfe31ebf2470a2bb30))
+* **gux-dropdown:** jslist replaced with gux-option ([556e30e](http://inindca///commit/556e30e9b0daec1a12eeaa4c6124c0581441616b))
+* **gux-dropdown:** jslist replaced with gux-options ([90a1e0a](http://inindca///commit/90a1e0a064495820c33dfa81051367ca39c8b91c))
+* **gux-dropdown:** llist changed with gux-option ([20b655e](http://inindca///commit/20b655e52db172c17c665d4011c2c18397604db6))
+* **gux-dropdown:** reflect attribute and jslist removed ([7b21034](http://inindca///commit/7b21034726b8dbcf0199cf0ca9c1ad35cf9f352e))
+* **gux-dropdown:** Remove IList array ([29f0aa2](http://inindca///commit/29f0aa2204bff167650e6d7bb3ed235140c25299))
+* **gux-dropdown:** remove reflect to attribute and js list ([83ebf91](http://inindca///commit/83ebf918c721b1604126d59459c3aeb819f1bf62))
+* **gux-dropdown:** remove reflect to attribute and js list ([bc1b33e](http://inindca///commit/bc1b33e8cb35f29abc40bb82c52eb346210b03a2))
+* **gux-dropdown:** Removing Js array ([bb1edec](http://inindca///commit/bb1edece0f25934621abf9851170fc7796691ce6))
+* **gux-dropdown:** Removing JS array in Gux-Dropdown ([b03c4ed](http://inindca///commit/b03c4ed474aa3facd6b74b00edcb852a402c87b8))
+* **gux-dropdown:** Removing JS array in Gux-Dropdown ([1e7969b](http://inindca///commit/1e7969b41820ef6e52bbd45e69aff7b03d1d9f43))
+* **gux-dropdown:** Removing JsList ([27e7228](http://inindca///commit/27e7228be0c1bb50f7578dce98eee6bbae872666))
+* **gux-modal:** updated public api ([449a61f](http://inindca///commit/449a61fc54dc77b8d43788f9655996d2a444ca85))
+* **gux-notification-toast:** updated component api ([5bfdc60](http://inindca///commit/5bfdc60452b3104f1a2622251414693b54d8920a))
+* **gux-page-loading-spinner:** centers horizontally by default ([81a919a](http://inindca///commit/81a919a5c03ed4a916348bd4565d9cd9f33160a7))
+* **gux-simple-toast:** updated component api ([9fede30](http://inindca///commit/9fede30b7db20da351ab91d7c64a6a6521c00943))
+* **icons:** change '_' to '-' in icon names ([ff65f18](http://inindca///commit/ff65f18c7308aa6bb8c50676bca4aa7f0d9199df))
+
 ## [1.0.0-alpha.104](http://inindca///compare/v1.0.0-alpha.103...v1.0.0-alpha.104) (2020-08-18)
 
 
