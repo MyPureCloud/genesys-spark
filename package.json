@@ -9,7 +9,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run i18n && npm run stencil && npm run docs && npm run build-wrapper",
+    "build": "npm run i18n && npm run stencil && npm run less && npm run docs && npm run build-wrapper",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "commit": "git-cz",
     "docs": "cd ./docs && npm run build",
@@ -31,6 +31,7 @@
     "dev.public": "./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run docs.dev.public\"",
     "format": "prettier \"./**/*.{ts,tsx,js,jsx,json}\"",
     "format.fix": "npm run format -- --write",
+    "less": "lessc ./src/style/style.less ./dist/style/style.css",
     "lint": "npm run lint.commit && npm run lint.ts",
     "lint.fix": "npm run lint.ts -- --fix",
     "lint.ts": "tslint --project .",

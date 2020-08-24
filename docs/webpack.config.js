@@ -61,7 +61,6 @@ module.exports = {
         transformPath(targetPath) {
           const segments = targetPath.split(path.sep);
           const component = segments[segments.length - 2];
-          console.log('PATH', targetPath, component);
           return `${component}.html`;
         },
         transform: generateComponentPage
