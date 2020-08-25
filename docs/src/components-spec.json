@@ -29,6 +29,17 @@
       "filter": "Filter value changed"
     }
   },
+  "gux-breadcrumbs": {
+    "attributes": {
+      "accent": ["primary", "secondary"]
+    }
+  },
+  "gux-breadcrumbs-item": {
+    "attributes": {
+      "link": "text",
+      "text": "text"
+    }
+  },
   "gux-button": {
     "attributes": {
       "disabled": "checkbox",

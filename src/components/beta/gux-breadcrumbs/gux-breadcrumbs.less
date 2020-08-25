@@ -1,0 +1,26 @@
+gux-breadcrumbs {
+  .separator {
+    padding: 0 7px;
+  }
+  a.breadcrumb {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .breadcrumb:last-child {
+    font-weight: 600;
+  }
+}
+
+// Light theme
+.gux-breadcrumbs-light-theme {
+  .separator {
+    color: @gux-grey-2;
+  }
+}
+.gux-light-theme {
+  gux-breadcrumbs {
+    .gux-breadcrumbs-light-theme();
+  }
+}
