@@ -29,15 +29,15 @@
       "filter": "Filter value changed"
     }
   },
-  "gux-breadcrumbs": {
+  "gux-breadcrumbs-beta": {
     "attributes": {
       "accent": ["primary", "secondary"]
     }
   },
-  "gux-breadcrumbs-item": {
+  "gux-breadcrumb-item": {
+    "hidePage": true,
     "attributes": {
-      "link": "text",
-      "text": "text"
+      "href": "text"
     }
   },
   "gux-button": {

@@ -1,15 +1,20 @@
-gux-breadcrumbs {
+gux-breadcrumbs-beta {
+  nav.breadcrumbs {
+    display: block;
+    border: none;
+  }
   .separator {
     padding: 0 7px;
   }
   a.breadcrumb {
+    color: -webkit-link;
     text-decoration: none;
+    line-height: normal;
+    padding: 0;
     &:hover {
+      background-color: transparent;
       text-decoration: underline;
     }
-  }
-  .breadcrumb:last-child {
-    font-weight: 600;
   }
 }
 
@@ -20,7 +25,7 @@ gux-breadcrumbs {
   }
 }
 .gux-light-theme {
-  gux-breadcrumbs {
+  gux-breadcrumbs-beta {
     .gux-breadcrumbs-light-theme();
   }
 }

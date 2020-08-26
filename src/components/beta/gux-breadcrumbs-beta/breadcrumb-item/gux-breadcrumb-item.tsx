@@ -1,15 +1,9 @@
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'gux-breadcrumbs-item'
+  tag: 'gux-breadcrumb-item'
 })
-export class GuxBreadcrumbsItem {
-  @Element()
-  root: HTMLGuxBreadcrumbsItemElement;
-
-  @Prop()
-  text: string;
-
+export class GuxBreadcrumbItem {
   @Prop()
   lastBreadcrumb: boolean;
 
@@ -17,7 +11,7 @@ export class GuxBreadcrumbsItem {
   accent: string;
 
   @Prop()
-  link: string;
+  href: string;
 
   render() {
     const separatorIcon =
@@ -28,14 +22,16 @@ export class GuxBreadcrumbsItem {
           decorative
         ></gux-icon>
       ) : (
-        <span class="separator">/</span>
+        <span class="separator" aria-hidden="true">
+          /
+        </span>
       );
     const separator = this.lastBreadcrumb ? '' : separatorIcon;
-    if (this.link && !this.lastBreadcrumb) {
+    if (this.href && !this.lastBreadcrumb) {
       return (
         <span>
-          <a class="breadcrumb" href={this.link}>
-            {this.text}
+          <a class="breadcrumb" href={this.href}>
+            <slot />
           </a>
           {separator}
         </span>
@@ -43,7 +39,9 @@ export class GuxBreadcrumbsItem {
     } else {
       return (
         <span>
-          <span class="breadcrumb">{this.text}</span>
+          <span class="breadcrumb">
+            <slot />
+          </span>
           {separator}
         </span>
       );

@@ -10,9 +10,8 @@
 | Property         | Attribute         | Description | Type      | Default     |
 | ---------------- | ----------------- | ----------- | --------- | ----------- |
 | `accent`         | `accent`          |             | `string`  | `undefined` |
+| `href`           | `href`            |             | `string`  | `undefined` |
 | `lastBreadcrumb` | `last-breadcrumb` |             | `boolean` | `undefined` |
-| `link`           | `link`            |             | `string`  | `undefined` |
-| `text`           | `text`            |             | `string`  | `undefined` |
 
 
 ## Dependencies
@@ -24,8 +23,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-breadcrumbs-item --> gux-icon
-  style gux-breadcrumbs-item fill:#f9f,stroke:#333,stroke-width:4px
+  gux-breadcrumb-item --> gux-icon
+  style gux-breadcrumb-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

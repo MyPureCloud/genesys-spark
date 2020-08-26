@@ -1,12 +1,12 @@
-import { Component, Element, Prop } from '@stencil/core';
+import { Component, Element, h, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-breadcrumbs.less',
-  tag: 'gux-breadcrumbs'
+  tag: 'gux-breadcrumbs-beta'
 })
 export class GuxBreadcrumbs {
   @Element()
-  root: HTMLGuxBreadcrumbsElement;
+  root: HTMLElement;
 
   @Prop()
   accent: string = 'primary';
@@ -18,5 +18,13 @@ export class GuxBreadcrumbs {
     for (const children of childrens) {
       children.setAttribute('accent', this.accent);
     }
+  }
+
+  render() {
+    return (
+      <nav aria-label="Breadcrumbs" class="breadcrumbs">
+        <slot />
+      </nav>
+    );
   }
 }
