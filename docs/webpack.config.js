@@ -64,6 +64,13 @@ module.exports = {
           return `${component}.html`;
         },
         transform: generateComponentPage
+      },
+      {
+        from: '../src/style/examples/*.html',
+        transformPath(targetPath) {
+          return path.basename(targetPath);
+        },
+        transform: generateComponentPage
       }
     ])
   ],
@@ -89,5 +96,5 @@ function injectCdnUrl(content) {
   if (htmlCdnUrl.length > 0 && !htmlCdnUrl.endsWith('/')) {
     htmlCdnUrl = htmlCdnUrl + '/';
   }
-  return content.toString().replace('${CDN_URL}', htmlCdnUrl);
+  return content.toString().replace(/\$\{CDN_URL\}/g, htmlCdnUrl);
 }

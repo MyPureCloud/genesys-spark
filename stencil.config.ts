@@ -7,6 +7,7 @@ const CDN_URL = process.env.CDN_URL || '';
 
 export const config: Config = {
   namespace: 'genesys-webcomponents',
+  globalStyle: 'src/style/style.less',
   outputTargets: [
     {
       dir: 'dist',
@@ -18,13 +19,16 @@ export const config: Config = {
   ],
   plugins: [
     stencilLess({
-      injectGlobalPaths: ['src/style/variables.less', 'src/style/mixins.less']
+      injectGlobalPaths: ['src/style/variables.less']
     })
   ],
   rollupPlugins: {
     after: [
       copy({
-        targets: [{ src: 'build/i18n', dest: 'dist/genesys-webcomponents' }]
+        targets: [
+          { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
+          { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' }
+        ]
       })
     ]
   },

@@ -1,61 +1,61 @@
+@import (reference) '../../../style/typography.less';
+
 // Variables part
 
 // Style
 gux-text-label {
+  .label {
+    .gux-label();
+  }
+
+  .gux-text-label-container.beside {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
     .gux-label {
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 20px;
+      margin-right: 8px;
     }
 
-    .gux-text-label-container.beside {
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-
-        .gux-label {
-            margin-right: 8px;
-        }
-
-        .gux-labeled-component {
-            flex: 1 1 auto;
-        }
+    .gux-labeled-component {
+      flex: 1 1 auto;
     }
+  }
 }
 
 // Theming
 
 // Dark
 .gux-text-label-dark-theme {
-    color: @gux-off-white;
-};
+  color: @gux-off-white;
+}
 
 .gux-dark-theme {
-    gux-text-label {
-        .gux-text-label-dark-theme();
-    }
+  gux-text-label {
+    .gux-text-label-dark-theme();
+  }
 }
 
 gux-text-label.gux-dark-theme {
-    .gux-text-label-dark-theme();
+  .gux-text-label-dark-theme();
 }
 
 // Light
 .gux-text-label-light-theme {
-    color: @gux-grey-2;
-};
+  color: @gux-grey-2;
+}
 
 .gux-light-theme {
-    gux-text-label {
-        .gux-text-label-light-theme();
-    }
+  gux-text-label {
+    .gux-text-label-light-theme();
+  }
 }
 
 gux-text-label.gux-light-theme {
-    .gux-text-label-light-theme();
+  .gux-text-label-light-theme();
 }
 
 // Default Theme
 gux-text-label {
-    .gux-text-label-light-theme();
+  .gux-text-label-light-theme();
 }

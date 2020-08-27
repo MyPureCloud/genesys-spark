@@ -2,9 +2,11 @@ import { toHTML } from '../utils/to-html.js';
 import COMPONENT_SPEC from '../components-spec.json';
 
 export function bootstrap() {
-  let components = Object.keys(COMPONENT_SPEC).filter(
-    component => !COMPONENT_SPEC[component].hidePage
-  );
+  let components = Object.keys(COMPONENT_SPEC)
+    .filter(component => !COMPONENT_SPEC[component].hidePage)
+    .sort((a, b) => {
+      return a < b ? -1 : 1;
+    });
 
   document.body.appendChild(
     toHTML(`
