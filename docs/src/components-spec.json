@@ -314,7 +314,7 @@
     "attributes": {
       "compact": "checkbox",
       "object-table": "checkbox",
-      "epmty-table-message": "text"
+      "epmty-message": "text"
     },
     "events": {}
   }

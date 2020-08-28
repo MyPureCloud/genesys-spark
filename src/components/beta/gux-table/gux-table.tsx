@@ -1,4 +1,12 @@
-import { Component, Element, h, Prop, State, Listen } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Prop,
+  State,
+  Listen,
+  readTask
+} from '@stencil/core';
 
 interface TableHeaderCell {
   name: string;
@@ -22,6 +30,7 @@ export class GuxTable {
   private rows: TableRowCell[][] = [];
   private additionalCellWidth: number = 0;
   private isHorizontalScroll: boolean = true;
+  private resizeObserver: ResizeObserver;
 
   /**
    * Indicates that table content scrolled to it's last column
@@ -57,14 +66,7 @@ export class GuxTable {
    * Represents info message that should be displayed for empty table
    */
   @Prop()
-  epmtyTableMessage: string = '<no data message>';
-
-  @Listen('resize', { capture: true, target: 'window' })
-  onResize() {
-    setTimeout(() => {
-      this.evaluateCellsWidth();
-    }, 100);
-  }
+  emptyMessage: string = '<no data message>';
 
   @Listen('scroll', { capture: true, target: 'parent' })
   onScroll() {
@@ -72,7 +74,7 @@ export class GuxTable {
       this.tableContainer.scrollWidth - this.tableContainer.clientWidth;
     if (this.tableContainer.scrollLeft === 0) {
       this.isScrolledToFirstCell = true;
-    } else if (this.tableContainer.scrollLeft === maxScrollLeft) {
+    } else if (Math.abs(this.tableContainer.scrollLeft - maxScrollLeft) < 10) {
       this.isScrolledToLastCell = true;
     } else {
       this.isScrolledToFirstCell = false;
@@ -141,11 +143,6 @@ export class GuxTable {
       left: currentScrollX - scrollToValue,
       behavior: 'smooth'
     });
-
-    if (scrollToValue <= 0) {
-      this.isScrolledToFirstCell = true;
-    }
-    this.isScrolledToLastCell = false;
   }
 
   private nextColumn(): void {
@@ -158,12 +155,8 @@ export class GuxTable {
 
     this.isScrolledToFirstCell = false;
 
-    columns.some((column, index) => {
+    columns.some(column => {
       columnsWidth += column.getBoundingClientRect().width;
-
-      if (index === columns.length - 1) {
-        this.isScrolledToLastCell = true;
-      }
 
       if (columnsWidth > containerWidth + currentScrollX) {
         return true;
@@ -276,7 +269,7 @@ export class GuxTable {
         (containerWidth -
           tableColumnsFullWidth -
           this.columnsWidth.length -
-          1) /
+          this.getTableScrollbarConstant()) /
           this.columnsWidth.length
       );
 
@@ -288,11 +281,53 @@ export class GuxTable {
     }
   }
 
+  private getRowCellWidth(index: number): number {
+    if (index === this.columnsWidth.length - 1 && this.isVerticalScroll()) {
+      return this.columnsWidth[index] - this.getTableScrollbarConstant();
+    } else {
+      return this.columnsWidth[index];
+    }
+  }
+
+  private getTableScrollbarConstant(): number {
+    if (!this.isVerticalScroll()) {
+      return 0;
+    } else if (this.isMacOS() && this.isFirefox()) {
+      return 0;
+    } else if (this.isFirefox()) {
+      return 8;
+    } else {
+      return 5;
+    }
+  }
+
+  private isMacOS(): boolean {
+    return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+  }
+
+  private isFirefox(): boolean {
+    return navigator.userAgent.toLowerCase().indexOf('firefox') >= 0;
+  }
+
   componentWillLoad() {
     this.prepareTableData();
     setTimeout(() => {
       this.evaluateCellsWidth();
+
+      if (!this.resizeObserver && window.ResizeObserver) {
+        this.resizeObserver = new ResizeObserver(() => {
+          readTask(() => {
+            this.evaluateCellsWidth();
+          });
+        });
+      }
+
+      this.resizeObserver?.observe(document.querySelector('gux-table-beta'));
     });
+  }
+
+  disconnectedCallback() {
+    this.resizeObserver?.unobserve(document.querySelector('gux-table-beta'));
   }
 
   render() {
@@ -353,7 +388,9 @@ export class GuxTable {
                   {row.map((rowCell, cellIndex) => (
                     <div
                       class={this.getCellClasses('body', rowCell)}
-                      style={{ minWidth: `${this.columnsWidth[cellIndex]}px` }}
+                      style={{
+                        minWidth: `${this.getRowCellWidth(cellIndex)}px`
+                      }}
                       key={`row-${rowIndex}-cell-${cellIndex}`}
                     >
                       <p>{rowCell.value}</p>
@@ -363,13 +400,13 @@ export class GuxTable {
               ))}
             </div>
           )}
-          <slot name="data" />
         </div>
         {this.isTableEmpty() && (
           <div class="empty-table">
-            <h2>{this.epmtyTableMessage}</h2>
+            <h2>{this.emptyMessage}</h2>
           </div>
         )}
+        <slot name="data" />
       </div>
     );
   }
