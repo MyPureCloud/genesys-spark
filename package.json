@@ -86,6 +86,7 @@
     "ts-loader": "^7.0.5",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
+    "typescript": "~3.5.3",
     "webpack": "^4.43.0",
     "webpack-dev-server": "^3.11.0",
     "xmldom": "^0.3.0"
