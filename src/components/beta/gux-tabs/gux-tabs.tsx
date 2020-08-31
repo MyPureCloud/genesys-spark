@@ -15,7 +15,8 @@ import tabsResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-tabs.less',
-  tag: 'gux-tabs-beta'
+  tag: 'gux-tabs-beta',
+  shadow: true
 })
 export class GuxTabs {
   /**
@@ -29,19 +30,9 @@ export class GuxTabs {
   @Prop() showNewTabButton: boolean = false;
 
   /**
-   * tabId of the currently selected tab
-   */
-  @Prop() value: string = '';
-
-  /**
    * Triggers when the new tab button is selected.
    */
   @Event() newTab: EventEmitter;
-
-  /**
-   * Triggers when a tab is selected.
-   */
-  @Event() input: EventEmitter;
 
   /**
    * Triggers when the sorting of the tabs is changed.
@@ -59,19 +50,17 @@ export class GuxTabs {
   private resizeObserver?: ResizeObserver;
 
   createSortable() {
-    this.sortableInstance = new Sortable(
-      this.element.querySelector('.scrollable-section'),
-      {
-        animation: 250,
-        filter: '.ignore-sort',
-        onMove: (event: MoveEvent) => {
-          return !event.related.classList.contains('ignore-sort');
-        },
-        onUpdate: () => {
-          this.sortChanged.emit();
-        }
+    this.sortableInstance = new Sortable(this.element, {
+      animation: 250,
+      draggable: 'gux-tab',
+      filter: '.ignore-sort',
+      onMove: (event: MoveEvent) => {
+        return !event.related.classList.contains('ignore-sort');
+      },
+      onUpdate: () => {
+        this.sortChanged.emit();
       }
-    );
+    });
   }
 
   destroySortable() {
@@ -86,9 +75,9 @@ export class GuxTabs {
       this.destroySortable();
     }
 
-    if (this.resizeObserver) {
-      this.resizeObserver.unobserve(this.element.querySelector('.gux-tabs'));
-    }
+    this.resizeObserver?.unobserve(
+      this.element.shadowRoot.querySelector('.gux-tabs')
+    );
   }
 
   async componentWillLoad(): Promise<void> {
@@ -103,43 +92,23 @@ export class GuxTabs {
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() => {
         readTask(() => {
-          const el = this.element.querySelector('.scrollable-section');
+          const el = this.element.shadowRoot.querySelector(
+            '.scrollable-section'
+          );
           this.hasScrollbar = el.clientWidth !== el.scrollWidth;
         });
       });
     }
 
-    if (this.resizeObserver) {
-      this.resizeObserver.observe(this.element.querySelector('.gux-tabs'));
-    }
-
-    const tabElements = this.element.querySelectorAll('gux-tab');
-    tabElements.forEach(tab => {
-      if (this.value && this.value === (tab as HTMLGuxTabElement).tabId) {
-        (tab as HTMLGuxTabElement).active = true;
-      }
-
-      tab.addEventListener('click', () => {
-        if ((tab as HTMLGuxTabElement).active) {
-          return;
-        }
-
-        tabElements.forEach(t => {
-          (t as HTMLGuxTabElement).active = false;
-        });
-
-        (tab as HTMLGuxTabElement).active = true;
-
-        this.input.emit();
-        this.value = (tab as HTMLGuxTabElement).tabId;
-      });
-    });
+    this.resizeObserver?.observe(
+      this.element.shadowRoot.querySelector('.gux-tabs')
+    );
   }
 
   componentDidRender() {
     setTimeout(() => {
       readTask(() => {
-        const el = this.element.querySelector('.scrollable-section');
+        const el = this.element.shadowRoot.querySelector('.scrollable-section');
         const hasScrollbar = el.clientWidth !== el.scrollWidth;
         if (this.hasScrollbar !== hasScrollbar) {
           this.hasScrollbar = hasScrollbar;
@@ -150,13 +119,17 @@ export class GuxTabs {
 
   scrollLeft() {
     writeTask(() => {
-      this.element.querySelector('.scrollable-section').scrollBy(-100, 0);
+      this.element.shadowRoot
+        .querySelector('.scrollable-section')
+        .scrollBy(-100, 0);
     });
   }
 
   scrollRight() {
     writeTask(() => {
-      this.element.querySelector('.scrollable-section').scrollBy(100, 0);
+      this.element.shadowRoot
+        .querySelector('.scrollable-section')
+        .scrollBy(100, 0);
     });
   }
 
