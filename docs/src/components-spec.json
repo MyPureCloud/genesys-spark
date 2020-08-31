@@ -29,7 +29,7 @@
       "filter": "Filter value changed"
     }
   },
-  "gux-breadcrumbs-beta": {
+  "gux-breadcrumbs": {
     "attributes": {
       "accent": ["primary", "secondary"]
     }

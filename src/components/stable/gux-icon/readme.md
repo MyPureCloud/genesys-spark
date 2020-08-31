@@ -21,7 +21,7 @@
  - [gux-accordion](../gux-accordion)
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
- - [gux-breadcrumb-item](../../beta/gux-breadcrumbs-beta/breadcrumb-item)
+ - [gux-breadcrumb-item](../../beta/gux-breadcrumbs/breadcrumb-item)
  - [gux-calendar](../gux-calendar)
  - [gux-color-picker](../gux-color-picker)
  - [gux-datepicker](../gux-datepicker)
