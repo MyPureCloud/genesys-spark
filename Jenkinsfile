@@ -136,7 +136,7 @@ pipeline {
         dir(env.REPO_DIR) {
           script {
             sh "npm publish"
-            sshagent(credentials: ['b6687db4-ea46-41a7-b151-15e6d94b1de7']) {
+            sshagent(credentials: ['3aa16916-868b-4290-a9ee-b1a05343667e']) {
               sh "git push --follow-tags -u origin ${env.SHORT_BRANCH}"
             }
           }
