@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](http://inindca///compare/v1.0.0...v1.0.1) (2020-09-01)
+
+
+### Bug Fixes
+
+* downgrade TypeScript to support older versions of Angular ([efe51a1](http://inindca///commit/efe51a1cc3096c7dd97ddc40d7e83520aa10639c))
+
 ## 1.0.0 (2020-08-20)
 
 
