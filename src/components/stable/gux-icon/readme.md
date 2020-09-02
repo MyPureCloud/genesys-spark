@@ -21,6 +21,7 @@
  - [gux-accordion](../gux-accordion)
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
+ - [gux-breadcrumb-item](../../beta/gux-breadcrumbs/breadcrumb-item)
  - [gux-calendar](../gux-calendar)
  - [gux-color-picker](../gux-color-picker)
  - [gux-datepicker](../gux-datepicker)
@@ -47,6 +48,7 @@ graph TD;
   gux-accordion --> gux-icon
   gux-action-button --> gux-icon
   gux-advanced-dropdown --> gux-icon
+  gux-breadcrumb-item --> gux-icon
   gux-calendar --> gux-icon
   gux-color-picker --> gux-icon
   gux-datepicker --> gux-icon
