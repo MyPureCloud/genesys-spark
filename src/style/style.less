@@ -1,5 +1,14 @@
 /*
  * This file combines all the exported library styles into a single stylesheet for consumption by applications.
  */
-
+@import (reference) 'variables.less';
 @import 'typography.less';
+
+a {
+  color: @gux-dark-blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
