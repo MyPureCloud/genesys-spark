@@ -2,20 +2,22 @@ import {
   Component,
   Element,
   h,
-  Prop,
-  State,
   Listen,
-  readTask
+  Prop,
+  readTask,
+  State
 } from '@stencil/core';
 
 interface TableHeaderCell {
   name: string;
   type: string;
+  value: string;
+  sortable?: boolean;
+  sortDirection?: string;
 }
 
-interface TableRowCell {
-  value: string;
-  type: string;
+interface TableRow {
+  selected: boolean;
 }
 
 @Component({
@@ -26,9 +28,10 @@ export class GuxTable {
   @Element()
   root: HTMLElement;
 
+  @State()
   private columns: TableHeaderCell[] = [];
-  private rows: TableRowCell[][] = [];
-  private additionalCellWidth: number = 0;
+
+  private rows: TableRow[] = [];
   private isHorizontalScroll: boolean = true;
   private resizeObserver: ResizeObserver;
 
@@ -68,62 +71,81 @@ export class GuxTable {
   @Prop()
   emptyMessage: string = '<no data message>';
 
-  @Listen('scroll', { capture: true, target: 'parent' })
+  @Listen('scroll', { capture: true })
   onScroll() {
+    const scrollLeft = this.tableContainer.querySelector('.gux-table-body')
+      .scrollLeft;
     const maxScrollLeft =
-      this.tableContainer.scrollWidth - this.tableContainer.clientWidth;
-    if (this.tableContainer.scrollLeft === 0) {
+      this.tableContainer.querySelector('.gux-table-body').scrollWidth -
+      this.tableContainer.querySelector('.gux-table-body').clientWidth;
+    this.tableContainer.querySelector(
+      '.gux-table-head'
+    ).scrollLeft = scrollLeft;
+
+    if (scrollLeft === 0) {
       this.isScrolledToFirstCell = true;
-    } else if (Math.abs(this.tableContainer.scrollLeft - maxScrollLeft) < 10) {
+    } else if (maxScrollLeft - scrollLeft - this.tableScrollbarConstant === 0) {
       this.isScrolledToLastCell = true;
-    } else {
-      this.isScrolledToFirstCell = false;
-      this.isScrolledToLastCell = false;
     }
   }
 
-  get getTableClasses(): string {
+  private get tableContainer(): HTMLElement {
+    return this.root.children[0] as HTMLElement;
+  }
+
+  private get isTableEmpty(): boolean {
+    return (
+      !this.root.children[0] ||
+      this.root.children[0].querySelectorAll('tbody tr').length < 1
+    );
+  }
+
+  private get isVerticalScroll(): boolean {
+    const rowsCount = this.tableContainer.querySelectorAll(
+      '.gux-table-body tbody tr'
+    ).length;
+    return rowsCount * (this.compact ? 24 : 40) > this.root.clientHeight;
+  }
+
+  private get headerWidth(): number {
+    return this.columnsWidth.reduce((a, b) => a + b + 12 + 24 + 1, 0);
+  }
+
+  private get tableScrollbarConstant(): number {
+    const container = this.tableContainer.querySelector(
+      '.gux-table-body'
+    ) as HTMLElement;
+    return container.offsetWidth - container.clientWidth;
+  }
+
+  private get tableClasses(): string {
     return [
-      'gux-table-container',
-      this.compact ? 'compact' : '',
-      this.objectTable ? 'object-table' : '',
-      this.isVerticalScroll() ? 'vertical-scroll' : '',
+      'gux-table',
+      this.isVerticalScroll ? 'vertical-scroll' : '',
       this.isHorizontalScroll ? 'horizontal-scroll' : ''
     ]
       .join(' ')
       .trim();
   }
 
-  private getCellClasses(
-    type: string,
-    cell: TableHeaderCell | TableRowCell
-  ): string {
+  private get tableBodyClasses(): string {
     return [
-      type === 'header' ? 'gux-table-header-column' : '',
-      type === 'body' ? 'gux-table-body-row-cell' : '',
-      cell.type === 'number' ? 'cell-number' : '',
-      cell.type === 'action' ? 'cell-action' : ''
+      'gux-table-body',
+      this.compact ? 'compact' : '',
+      this.objectTable ? 'object-table' : ''
     ]
       .join(' ')
       .trim();
   }
 
-  private get table(): HTMLElement {
-    return this.root.children[0] as HTMLElement;
-  }
-
-  private get tableContainer(): HTMLElement {
-    return this.root.children[0].getElementsByClassName(
-      'gux-table-container'
-    )[0] as HTMLElement;
-  }
-
   private previousColumn(): void {
     const columns = Array.from(
-      this.table.querySelectorAll('.gux-table-header-column')
+      this.tableContainer.querySelectorAll('.gux-table-body thead th')
     );
-    const currentScrollX = this.tableContainer.scrollLeft;
-    const containerWidth = this.root.children[0].getBoundingClientRect().width;
+
+    const currentScrollX = this.tableContainer.querySelector('.gux-table-body')
+      .scrollLeft;
+    const containerWidth = this.root.getBoundingClientRect().width;
     let columnsWidth = 0;
 
     columns.some(column => {
@@ -138,23 +160,24 @@ export class GuxTable {
       }
     });
 
+    this.isScrolledToLastCell = false;
     const scrollToValue = currentScrollX + containerWidth - columnsWidth;
-    this.tableContainer.scrollTo({
-      left: currentScrollX - scrollToValue,
-      behavior: 'smooth'
-    });
+    this.tableContainer.querySelector('.gux-table-body').scrollLeft = Math.ceil(
+      currentScrollX - scrollToValue
+    );
   }
 
   private nextColumn(): void {
     const columns = Array.from(
-      this.table.querySelectorAll('.gux-table-header-column')
+      this.tableContainer.querySelectorAll('.gux-table-body thead th')
     );
-    const currentScrollX = this.tableContainer.scrollLeft;
-    const containerWidth = this.root.children[0].getBoundingClientRect().width;
+
+    const currentScrollX = this.tableContainer.querySelector('.gux-table-body')
+      .scrollLeft;
+    const containerWidth = this.root.getBoundingClientRect().width;
     let columnsWidth = 0;
 
     this.isScrolledToFirstCell = false;
-
     columns.some(column => {
       columnsWidth += column.getBoundingClientRect().width;
 
@@ -165,16 +188,8 @@ export class GuxTable {
       }
     });
 
-    this.tableContainer.scrollTo({
-      left: columnsWidth - containerWidth,
-      behavior: 'smooth'
-    });
-  }
-
-  private isTableEmpty(): boolean {
-    return (
-      !this.root.children[0] ||
-      this.root.children[0].querySelectorAll('tbody tr').length < 1
+    this.tableContainer.querySelector('.gux-table-body').scrollLeft = Math.ceil(
+      columnsWidth - containerWidth
     );
   }
 
@@ -188,130 +203,78 @@ export class GuxTable {
     }
   }
 
+  private getHeaderCellClasses(cell: TableHeaderCell): string {
+    return [
+      cell.type === 'number' ? 'cell-number' : '',
+      cell.type === 'action' ? 'cell-action' : ''
+    ]
+      .join(' ')
+      .trim();
+  }
+
   private prepareTableData(): void {
-    this.columns = Array.from(this.table.querySelectorAll('thead th')).map(
-      column => ({
-        name: column.innerHTML,
-        type: this.getColumnType(column),
-        width: column.clientWidth
-      })
-    );
-
-    this.rows = Array.from(this.table.querySelectorAll('tbody tr')).map(row => {
-      const tableRow = Array.from(row.querySelectorAll('td')).map(
-        (column, index) => ({
-          value: column.innerHTML,
-          type: this.columns[index].type
-        })
-      );
-
-      return tableRow;
-    });
-  }
-
-  private isVerticalScroll(): boolean {
-    const rowsCount =
-      this.root.getElementsByClassName('gux-table-body-row').length + 1;
-    return rowsCount * (this.compact ? 24 : 40) > this.root.clientHeight;
-  }
-
-  private getInitialColumnsWidth(): number[] {
-    const headerCellsWidth = Array.from(
-      this.table.querySelectorAll('.gux-table-header-column')
-    ).map(column => {
-      return Math.ceil(column.getBoundingClientRect().width) - 12 - 24;
+    this.columns = Array.from(
+      this.tableContainer.querySelectorAll('.gux-table-body thead th')
+    ).map((column: HTMLElement, index: number) => {
+      return {
+        name: column.dataset.columnName || index.toString(),
+        sortable: column.dataset.hasOwnProperty('sortable'),
+        sortDirection: '',
+        value: column.innerHTML,
+        type: this.getColumnType(column)
+      };
     });
 
-    const rowsCellsWidth = Array.from(
-      this.table.getElementsByClassName('gux-table-body-row')
-    ).map(row => {
-      return Array.from(row.children).map(
-        rowCell => Math.ceil(rowCell.getBoundingClientRect().width) - 12 - 24
-      );
-    });
+    this.rows = Array.from(
+      this.tableContainer.querySelectorAll('.gux-table-body tbody tr')
+    ).map((row, rowIndex) => {
+      Array.from(row.querySelectorAll('td')).forEach((cell, cellIndex) => {
+        cell.setAttribute('data-row', rowIndex.toString());
+        cell.setAttribute('data-row-cell', cellIndex.toString());
+      });
 
-    const transposedRowsCellWidth = !rowsCellsWidth.length
-      ? []
-      : Object.keys(rowsCellsWidth[0]).map(c => {
-          return rowsCellsWidth.map(r => r[c]);
-        });
-
-    return headerCellsWidth.map((cellWidth, idx) => {
-      if (transposedRowsCellWidth[idx] && transposedRowsCellWidth[idx].length) {
-        return Math.max(cellWidth, ...transposedRowsCellWidth[idx]);
-      } else {
-        return cellWidth;
-      }
+      return {
+        selected: false
+      };
     });
   }
 
   private evaluateCellsWidth(): void {
-    if (!this.columnsWidth.length) {
-      this.columnsWidth = this.getInitialColumnsWidth();
-    }
+    const tableWidth = this.tableContainer
+      .querySelector('.gux-table-body table')
+      .getBoundingClientRect().width;
+    const containerWidth = this.root.getBoundingClientRect().width;
 
-    this.columnsWidth = this.columnsWidth.map(width => {
-      return width - this.additionalCellWidth;
-    });
-    this.additionalCellWidth = 0;
-
-    /* Check if table doesn't takes full width of container */
-    const containerWidth = this.root.clientWidth;
-    const tableColumnsFullWidth = this.columnsWidth.reduce(
-      (a, b) => a + b + 12 + 24,
-      0
-    );
-
-    if (tableColumnsFullWidth < containerWidth) {
+    if (tableWidth <= containerWidth) {
       this.isHorizontalScroll = false;
-
-      this.additionalCellWidth = Math.floor(
-        (containerWidth -
-          tableColumnsFullWidth -
-          this.columnsWidth.length -
-          this.getTableScrollbarConstant()) /
-          this.columnsWidth.length
-      );
-
-      this.columnsWidth = this.columnsWidth.map(width => {
-        return width + this.additionalCellWidth;
-      });
     } else {
       this.isHorizontalScroll = true;
     }
-  }
 
-  private getRowCellWidth(index: number): number {
-    if (index === this.columnsWidth.length - 1 && this.isVerticalScroll()) {
-      return this.columnsWidth[index] - this.getTableScrollbarConstant();
-    } else {
-      return this.columnsWidth[index];
-    }
-  }
+    const columns = Array.from(
+      this.tableContainer.querySelectorAll('.gux-table-body thead th')
+    );
 
-  private getTableScrollbarConstant(): number {
-    if (!this.isVerticalScroll()) {
-      return 0;
-    } else if (this.isMacOS() && this.isFirefox()) {
-      return 0;
-    } else if (this.isFirefox()) {
-      return 8;
-    } else {
-      return 5;
-    }
-  }
+    this.columnsWidth = columns.map((column, index) => {
+      let columnWidth = column.getBoundingClientRect().width - 12 - 24 - 1;
 
-  private isMacOS(): boolean {
-    return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-  }
+      if (this.isVerticalScroll && index === columns.length - 1) {
+        columnWidth += this.tableScrollbarConstant;
+      }
+      if (
+        this.isHorizontalScroll &&
+        (index === 0 || index === columns.length - 1)
+      ) {
+        columnWidth -= 24;
+      }
 
-  private isFirefox(): boolean {
-    return navigator.userAgent.toLowerCase().indexOf('firefox') >= 0;
+      return columnWidth;
+    });
   }
 
   componentWillLoad() {
-    this.prepareTableData();
     setTimeout(() => {
+      this.prepareTableData();
       this.evaluateCellsWidth();
 
       if (!this.resizeObserver && window.ResizeObserver) {
@@ -322,91 +285,72 @@ export class GuxTable {
         });
       }
 
-      this.resizeObserver?.observe(document.querySelector('gux-table-beta'));
+      this.resizeObserver?.observe(
+        this.tableContainer.querySelector('.gux-table-body table')
+      );
     });
   }
 
   disconnectedCallback() {
-    this.resizeObserver?.unobserve(document.querySelector('gux-table-beta'));
+    this.resizeObserver?.unobserve(
+      this.tableContainer.querySelector('.gux-table-body table')
+    );
   }
 
   render() {
     return (
-      <div class="gux-table">
-        {this.isHorizontalScroll && (
-          <div
-            class={
-              this.isScrolledToFirstCell
-                ? 'gux-scroll-left disabled'
-                : 'gux-scroll-left'
-            }
-            onClick={
-              !this.isScrolledToFirstCell && this.previousColumn.bind(this)
-            }
-          >
-            ‹
-          </div>
-        )}
-        {this.isHorizontalScroll && (
-          <div
-            class={
-              this.isScrolledToLastCell
-                ? 'gux-scroll-right disabled'
-                : 'gux-scroll-right'
-            }
-            onClick={!this.isScrolledToLastCell && this.nextColumn.bind(this)}
-          >
-            ›
-          </div>
-        )}
-        <div class={this.getTableClasses}>
-          <div
-            class="gux-table-header"
-            style={{
-              visibility: this.columnsWidth.length ? 'unset' : 'hidden'
-            }}
-          >
-            {this.columns.map((column, index) => (
-              <div
-                class={this.getCellClasses('header', column)}
-                style={{ minWidth: `${this.columnsWidth[index]}px` }}
-                key={`column-${index}`}
-              >
-                <b>{column.name}</b>
-              </div>
-            ))}
-          </div>
-          {!!this.rows.length && (
+      <div class={this.tableClasses}>
+        <div class="gux-table-head">
+          {this.isHorizontalScroll && (
             <div
-              class="gux-table-body"
-              style={{
-                visibility: this.columnsWidth.length ? 'unset' : 'hidden'
-              }}
+              class={
+                this.isScrolledToFirstCell
+                  ? 'gux-table-scroll-left disabled'
+                  : 'gux-table-scroll-left'
+              }
+              onClick={
+                !this.isScrolledToFirstCell && this.previousColumn.bind(this)
+              }
             >
-              {this.rows.map((row, rowIndex) => (
-                <div class="gux-table-body-row" key={`row-${rowIndex}`}>
-                  {row.map((rowCell, cellIndex) => (
-                    <div
-                      class={this.getCellClasses('body', rowCell)}
-                      style={{
-                        minWidth: `${this.getRowCellWidth(cellIndex)}px`
-                      }}
-                      key={`row-${rowIndex}-cell-${cellIndex}`}
-                    >
-                      <p>{rowCell.value}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
+              ‹
             </div>
           )}
+          {this.isHorizontalScroll && (
+            <div
+              class={
+                this.isScrolledToLastCell
+                  ? 'gux-table-scroll-right disabled'
+                  : 'gux-table-scroll-right'
+              }
+              onClick={!this.isScrolledToLastCell && this.nextColumn.bind(this)}
+            >
+              ›
+            </div>
+          )}
+          <table style={{ width: `${this.headerWidth}px` }}>
+            <thead>
+              <tr>
+                {!!this.columns.length &&
+                  this.columns.map((column, index) => (
+                    <th
+                      class={this.getHeaderCellClasses(column)}
+                      style={{ minWidth: `${this.columnsWidth[index]}px` }}
+                    >
+                      {column.value}
+                    </th>
+                  ))}
+              </tr>
+            </thead>
+          </table>
         </div>
-        {this.isTableEmpty() && (
+        <div class={this.tableBodyClasses}>
+          <slot name="data" />
+        </div>
+        {this.isTableEmpty && (
           <div class="empty-table">
             <h2>{this.emptyMessage}</h2>
           </div>
         )}
-        <slot name="data" />
       </div>
     );
   }

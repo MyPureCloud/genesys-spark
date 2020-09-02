@@ -3,193 +3,203 @@
 @gux-scroll-btn-disabled-text:#c3cad4;
 @gux-scroll-btn-shadow-left: 1px -1px 1px rgba(34, 37, 41, 0.08); 
 @gux-scroll-btn-shadow-right: -1px -1px 1px rgba(34, 37, 41, 0.08);
-@gux-table-row-hover: #deeafc;
+@gux-table-row-hover: rgba(117, 168, 255, .24);
 @gux-table-scroll-divider: rgba(34, 37, 41, 0.1);
 @gux-table-scroll-thumb: #B5B6B7;
 
 gux-table-beta {
   display: block;
-  height: fit-content;
-  position: relative;
-
-  table {
-    display: none;
-  }
 
   .gux-table {
     height: inherit;
+    position: relative;
 
-    .empty-table {
-      align-items: center;
-      background: @gux-off-white;
-      color: @gux-grey-bg-3;
-      display: flex;
-      height: 150px;
-      justify-content: center;
-      
-      h2 {
-        margin: 0px;
-      }
-    }
-
-    .gux-scroll-left,
-    .gux-scroll-right {
-      align-items: center;
-      background: @gux-border;
-      border: 1px solid @gux-scroll-btn-border;
+    table {
+      border-spacing: 0px;
       color: @gux-grey-2;
-      cursor: pointer;
-      display: flex;
-      font-size: 18px;
-      height: 38px;
-      justify-content: center;
-      position: absolute;
-      width: 24px;
-      z-index: 1;
-
-      &.disabled {
-        background: @gux-off-white-bg-2;
-        color: @gux-scroll-btn-disabled-text;
-      }
-    }
-
-    .gux-scroll-left {
-      border-bottom-right-radius: 2px;
-      border-top-right-radius: 2px;
-      box-shadow: @gux-scroll-btn-shadow-left;
-    }
-
-    .gux-scroll-right {
-      border-bottom-left-radius: 2px;
-      border-top-left-radius: 2px;
-      box-shadow: @gux-scroll-btn-shadow-right;
-      right: 0;
-    }
-
-    .gux-table-container {
-      height: inherit;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      position: relative;
-      scrollbar-color: @gux-pale-gray @gux-off-white;
-      scrollbar-width: thin;
-      
-      &.vertical-scroll {
-        .gux-table-header {
-          border-bottom: 1px solid @gux-table-scroll-divider
-        }
-      }
-
-      .gux-table-header-column,
-      .gux-table-body-row-cell {
-        border-color:@gux-border;
+      font-size: 12px;
+      white-space: nowrap;
+      width: 100%;
+  
+      th, td {
+        border-color:#e4e9f0;
         border-style: solid;
         border-width: 0px 1px 1px 0px;
-        padding: 11.5px 24px 11.5px 12px;
-        white-space: nowrap;
-
-        p {
-          margin: 0px;
-        }
+        padding-left: 12px;
+        padding-right: 24px;
+        height: 40px;
+        text-align: left;
       }
-
-      .gux-table-header-column:last-child,
-      .gux-table-body-row-cell:last-child {
+  
+      th[data-cell-numeric],
+      td[data-cell-numeric],
+      th[data-cell-action],
+      td[data-cell-action] {
+        padding-right: 12px;
+        padding-left: 24px;
+        text-align: right;
+      }
+  
+      th:last-child, td:last-child {
         border-right-width: 0px;
       }
+    }
 
-      .gux-table-header {
-        background: @gux-off-white;
+    .gux-table-head {
+      overflow: hidden;
+      width: 100%;
+
+      tr {
+        background: #FDFDFD;
+        
+        th {
+          &.cell-number,
+          &.cell-action {
+            padding-left: 24px;
+            padding-right: 12px;
+            text-align: right;
+          }
+        }
+      }
+
+      .gux-table-scroll-left,
+      .gux-table-scroll-right {
+        align-items: center;
+        background: @gux-border;
+        border: 1px solid @gux-scroll-btn-border;
+        color: @gux-grey-2;
+        cursor: pointer;
         display: flex;
-        width: fit-content;
-        width: -moz-fit-content;
-      }
+        font-size: 18px;
+        height: 38px;
+        justify-content: center;
+        position: absolute;
+        width: 24px;
+        z-index: 1;
 
-      .gux-table-body {
-        max-height: calc(100% - 43px);
-        overflow-y: scroll;
-        overflow-x: hidden;
-        scrollbar-color: @gux-table-scroll-thumb @gux-off-white;
-        scrollbar-width: thin;
-        width: fit-content;
-        width: -moz-fit-content;
-
-        &::-webkit-scrollbar {
-          width: 4px;
-        }
-
-        &::-webkit-scrollbar-track {
-          background: @gux-off-white;
-        }
-  
-        &::-webkit-scrollbar-thumb {
-          background: @gux-table-scroll-thumb;
-        }
-  
-        &::-webkit-scrollbar-thumb:hover {
-          background: @gux-border-dark;
-        }
-
-        .gux-table-body-row {
+        &.disabled {
           background: @gux-off-white-bg-2;
-          display: flex; 
-        }
-
-        .gux-table-body-row:nth-child(2n) {
-          background: @gux-off-white;
+          color: @gux-scroll-btn-disabled-text;
         }
       }
 
-      .gux-table-header-column,
-      .gux-table-body-row-cell {     
-        &.cell-number,
-        &.cell-action {
-          padding: 11.5px 12px 11.5px 24px;
-          text-align: right;
-        }
+      .gux-table-scroll-left {
+        border-bottom-right-radius: 2px;
+        border-top-right-radius: 2px;
+        box-shadow: @gux-scroll-btn-shadow-left;
       }
 
-      &.horizontal-scroll {
-        .gux-table-header-column:first-child {
-          b, p {
-            margin-left: 26px;
-          }
-        }
-        .gux-table-header-column:last-child {
-          b, p {
-            margin-right: 26px;
-          }
-        }
+      .gux-table-scroll-right {
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 2px;
+        box-shadow: @gux-scroll-btn-shadow-right;
+        right: 0;
+      }
+    }
+
+    .gux-table-body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      scrollbar-color: @gux-table-scroll-thumb @gux-off-white;
+      scrollbar-width: thin;
+      width: 100%;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: @gux-off-white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: @gux-table-scroll-thumb;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: @gux-border-dark;
       }
 
       &.compact {
-        .gux-table-body-row-cell {
-          padding-top: 3.5px;
-          padding-bottom: 3.5px;
+        td {
+          height: 24px;
         }
       }
-
+  
       &.object-table {
-        .gux-table-body-row {
-          .gux-table-body-row-cell {
-            border-color:@gux-off-white-bg-2;
+        tbody {
+          th, td {
+            border-width: 0px;
           }
-        }
-
-        .gux-table-body-row:nth-child(2n) {
-          .gux-table-body-row-cell {
-            border-color: @gux-off-white;
-          }
-        }
-
-        .gux-table-body-row:hover {
-          background: @gux-table-row-hover;
-
-          .gux-table-body-row-cell {
-            border-color:@gux-table-row-hover;
+  
+          tr:hover {
+            background: @gux-table-row-hover;
           }
         }
       }
+
+      table {
+        thead {
+          tr, th {
+            border-bottom: 0px;
+            height: 0px;
+            line-height: 0 !important;
+            overflow: hidden;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            
+            div {
+              height: 0px;
+              overflow: hidden;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            background: #F8F8F8;
+          }
+      
+          tr:nth-child(2n) {
+            background: #FDFDFD;
+          }
+        }
+      }
+    }
+
+    &.vertical-scroll {
+      .gux-table-body {
+        max-height: calc(100% - 40px);
+      }
+
+      .gux-table-head {
+        border-bottom: 1px solid @gux-table-scroll-divider;
+      }
+    }
+
+    &.horizontal-scroll {
+      thead {
+        th:first-child {
+          padding-left: 36px;
+        }
+
+        th:last-child {
+          padding-right: 48px;
+        }
+      }
+    }
+  }
+
+  .empty-table {
+    align-items: center;
+    background: @gux-off-white;
+    color: @gux-grey-bg-3;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+
+    h2 {
+      margin: 0px;
     }
   }
 }
