@@ -7,11 +7,14 @@ const CopyPlugin = require('copy-webpack-plugin');
 const CDN_URL = process.env.DOCS_CDN_URL || '';
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    componentListing: './src/component-listing/app.js',
+    componentViewer: './src/component-viewer/app.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: CDN_URL,
-    filename: 'index.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -51,6 +54,12 @@ module.exports = {
     new MonacoWebpackPlugin(),
     new CopyPlugin([
       {
+        from: 'src/index.html',
+        flatten: true,
+        transform: injectCdnUrl
+      },
+      {
+        //TODO: Remove when all examples are moved to component directories
         from: 'src/component-pages/*.html',
         flatten: true,
         transform: injectCdnUrl
@@ -82,7 +91,7 @@ module.exports = {
 };
 
 const componentPageTemplate = fs
-  .readFileSync('src/component-pages/template.html')
+  .readFileSync('src/viewer-template.html')
   .toString();
 
 function generateComponentPage(exampleMarkup) {

@@ -1,11 +1,15 @@
 import parse5 from 'parse5';
-import '../styles/fonts/fonts.css';
 
 import AttributesPanel from './panels/attributes';
 import { createPreview } from './panels/preview';
 import { createEditor } from './panels/editor';
 import EventsPanel from './panels/events';
 import { toHTML } from '../utils/to-html';
+import 'genesys-webcomponents';
+import '../styles/component-viewer.less';
+
+window.webcomponentsDocsMain = (example = '', renderCallback = () => {}) =>
+  bootstrap(example.trim(), renderCallback);
 
 function createLayout() {
   let template = toHTML(`

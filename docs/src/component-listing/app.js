@@ -1,5 +1,7 @@
 import { toHTML } from '../utils/to-html.js';
 import COMPONENT_SPEC from '../components-spec.json';
+import 'genesys-webcomponents';
+import '../styles/component-listing.less';
 
 export function bootstrap() {
   let components = Object.keys(COMPONENT_SPEC)
@@ -39,3 +41,5 @@ export function bootstrap() {
 function shortName(component) {
   return component.replace(/^gux-/, '');
 }
+
+bootstrap();
