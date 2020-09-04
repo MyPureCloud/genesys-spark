@@ -1,0 +1,27 @@
+gux-breadcrumbs-beta {
+  nav.breadcrumbs {
+    display: block;
+    border: none;
+  }
+  .separator {
+    padding: 0 7px;
+  }
+  a.breadcrumb {
+    color: -webkit-link;
+    text-decoration: none;
+    line-height: normal;
+    padding: 0;
+  }
+}
+
+// Light theme
+.gux-breadcrumbs-light-theme {
+  .separator {
+    color: @gux-grey-2;
+  }
+}
+.gux-light-theme {
+  gux-breadcrumbs-beta {
+    .gux-breadcrumbs-light-theme();
+  }
+}

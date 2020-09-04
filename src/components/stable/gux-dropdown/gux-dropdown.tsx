@@ -264,7 +264,6 @@ export class GuxDropdown {
         result.push(child as HTMLGuxOptionElement);
       }
     }
-
     return result;
   }
 
