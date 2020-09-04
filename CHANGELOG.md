@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](http://inindca///compare/v1.0.3...v1.1.0) (2020-09-04)
+
+
+### Features
+
+* **finish breadcrumbs component:** added breadcrumbs and breadcrumbs-item components ([ee24a6d](http://inindca///commit/ee24a6d96bfbbe5400548603687b205afd20b5ed))
+
+
+### Bug Fixes
+
+* returned the remote code ([90c0c35](http://inindca///commit/90c0c351366f2f153768e47f10bdee61698f425f))
+* **breacrumbs component:** add expample, rename component, remove unnecessary styles ([73061c0](http://inindca///commit/73061c0e917509cee588f0b34c6fe93570ebed76))
+
 ### [1.0.3](http://inindca///compare/v1.0.2...v1.0.3) (2020-09-01)
 
 ### [1.0.2](http://inindca///compare/v1.0.1...v1.0.2) (2020-09-01)
