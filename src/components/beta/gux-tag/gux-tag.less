@@ -1,0 +1,155 @@
+@import (reference) '../../../style/color.less';
+// Variables part
+@border-radius: 2px;
+
+// Style
+gux-tag-beta {
+  margin-right: 8px;
+  display: inline-block;
+  div.gux-tag {
+    position: relative;
+    margin: 4px 0;
+    display: flex;
+    margin: 4px 0;
+
+    .gux-tag-text,
+    .gux-tag-delete-button {
+      height: 22px;
+      border-radius: @border-radius;
+      text-align: center;
+      color: @gux-off-white;
+      padding: 0;
+    }
+
+    .gux-default {
+      background-color: @gux-charcoal-grey;
+    }
+    .gux-navy {
+      background-color: @gux-navy;
+    }
+    .gux-blue {
+      background-color: @gux-blue;
+    }
+    .gux-electric-purple {
+      background-color: @gux-electric-purple;
+    }
+    .gux-aqua-green {
+      background-color: @gux-aqua-green;
+    }
+    .gux-fuscha {
+      background-color: @gux-fuscha;
+    }
+    .gux-dark-purple {
+      background-color: @gux-dark-purple;
+    }
+    .gux-bubblegum-pink {
+      background-color: @gux-bubblegum-pink;
+    }
+    .gux-olive-green {
+      background-color: @gux-olive-green;
+    }
+    .gux-lilac {
+      background-color: @gux-lilac;
+      color: @gux-charcoal-grey;
+    }
+    .gux-yellow {
+      background-color: @gux-yellow-green;
+      color: @gux-charcoal-grey;
+    }
+
+    .gux-tag-text {
+      white-space: nowrap;
+      padding: 1px 8px;
+      line-height: 22px;
+    }
+
+    .gux-tag-delete-button {
+      width: 0;
+      height: 24px;
+      display: flex;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 0 @border-radius @border-radius 0;
+      margin-left: 1px;
+      transition: width 0.2s linear 0.2s;
+      overflow: hidden;
+    }
+
+    .gux-tag-delete-icon {
+      margin: 0 auto;
+      opacity: 0;
+      transition: opacity 0.2s linear 0.1s;
+    }
+    .gux-tag-delete-button:active,
+    .gux-tag-delete-button:focus {
+      display: flex;
+    }
+
+    .show-delete-button {
+      width: 24px;
+      .gux-tag-delete-icon {
+        opacity: 1;
+      }
+    }
+    .active-text-element {
+      border-radius: @border-radius 0 0 @border-radius;
+    }
+
+    &:hover {
+      .gux-tag-text {
+        .active-text-element();
+      }
+      .gux-tag-delete-button {
+        .show-delete-button();
+      }
+    }
+    .gux-tag-text:focus {
+      .active-text-element();
+    }
+    .gux-tag-delete-button:focus {
+      .show-delete-button();
+    }
+    .gux-tag-text:focus ~ .gux-tag-delete-button {
+      .show-delete-button();
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-tag-dark-theme {
+  color: @gux-off-white;
+}
+
+.gux-dark-theme {
+  gux-tag-beta {
+    .gux-tag-dark-theme();
+  }
+}
+
+gux-tag-beta.gux-dark-theme {
+  .gux-tag-dark-theme();
+}
+
+// Light
+.gux-tag-light-theme {
+  color: @gux-charcoal-grey;
+}
+
+.gux-light-theme {
+  gux-tag-beta {
+    .gux-tag-light-theme();
+  }
+}
+
+gux-tag-beta.gux-light-theme {
+  .gux-tag-light-theme();
+}
+
+// Default Theme
+gux-tag-beta {
+  .gux-tag-light-theme();
+}

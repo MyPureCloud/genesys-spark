@@ -22,7 +22,7 @@ def shouldUploadDocs() {
   isRelease() || isFeature();
 }
 
-def shouldUploadAssets() { 
+def shouldUploadAssets() {
   isRelease() || isFeature();
 }
 
@@ -48,7 +48,7 @@ pipeline {
   }
 
   tools {
-    nodejs 'NodeJS 10.15.3'
+    nodejs "NodeJS 12.13.0"
   }
 
   stages {

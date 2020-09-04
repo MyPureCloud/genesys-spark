@@ -273,6 +273,27 @@
       "icon-name": "text"
     }
   },
+  "gux-tag": {},
+  "gux-tag-beta": {
+    "hidePage": true,
+    "attributes": {
+      "color": [
+        "navy",
+        "blue",
+        "electric-purple",
+        "aqua-green",
+        "fuscha",
+        "dark-purple",
+        "bubblegum-pink",
+        "olive-green",
+        "lilac",
+        "yellow-green"
+      ]
+    },
+    "events": {
+      "guxdelete": "Click on delete tag button"
+    }
+  },
   "gux-text-field": {
     "attributes": {
       "value": "text",

@@ -1,0 +1,53 @@
+<h1>Example of the tag colours</h1>
+<div class="tags">
+  <gux-tag-beta>default</gux-tag-beta>
+  <gux-tag-beta color="default">default (explicit)</gux-tag-beta>
+  <gux-tag-beta color="navy">navy</gux-tag-beta>
+  <gux-tag-beta color="blue">blue</gux-tag-beta>
+  <gux-tag-beta color="electric-purple">electric-purple</gux-tag-beta>
+  <gux-tag-beta color="aqua-green">aqua-green</gux-tag-beta>
+  <gux-tag-beta color="fuscha">fuscha</gux-tag-beta>
+  <gux-tag-beta color="bubblegum-pink">bubblegum-pink</gux-tag-beta>
+  <gux-tag-beta color="dark-purple">dark purple</gux-tag-beta>
+  <gux-tag-beta color="olive-green">olive-green</gux-tag-beta>
+  <gux-tag-beta color="lilac">lilac</gux-tag-beta>
+  <gux-tag-beta color="yellow">yellow</gux-tag-beta>
+</div>
+
+<h1>Example of the deleting tags</h1>
+<div id="delete-tag" class="tags">
+  <gux-tag-beta color="default" value="1">Tag 1</gux-tag-beta>
+  <gux-tag-beta color="default" value="2">Tag 2</gux-tag-beta>
+  <gux-tag-beta color="default" value="3">Tag 3</gux-tag-beta>
+  <gux-tag-beta color="default" value="4">Tag 4</gux-tag-beta>
+  <gux-tag-beta color="default" value="5">Tag 5</gux-tag-beta>
+  <gux-tag-beta color="default" value="6">Tag 6</gux-tag-beta>
+  <gux-tag-beta color="default" value="7">Tag 7</gux-tag-beta>
+  <gux-tag-beta color="default" value="8">Tag 8</gux-tag-beta>
+  <gux-tag-beta color="default" value="9">Tag 9</gux-tag-beta>
+  <gux-tag-beta color="default" value="10">Tag 10</gux-tag-beta>
+</div>
+
+<style
+  onload="(function() {
+  const deleteTagElement = document.querySelector('#delete-tag');
+  deleteTagElement.addEventListener('guxdelete', (event) => {
+    const valueToDelete = event.detail;
+
+    const tags = Array.from(
+      deleteTagElement.querySelectorAll('gux-tag-beta')
+    );
+
+    tags.forEach((tag) => {
+      if (tag.value === valueToDelete) {
+        tag.remove();
+      }
+    });
+  })
+})()"
+>
+  .tags {
+    border: 1px solid var(--gux-charcoal-grey);
+    padding: 10px;
+  }
+</style>
