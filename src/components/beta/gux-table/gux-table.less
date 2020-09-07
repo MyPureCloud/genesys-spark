@@ -45,59 +45,46 @@ gux-table-beta {
       }
     }
 
-    .gux-table-head {
-      overflow: hidden;
-      width: 100%;
+    .gux-table-scroll-left,
+    .gux-table-scroll-right {
+      align-items: center;
+      background: @gux-border;
+      border: 1px solid @gux-scroll-btn-border;
+      color: @gux-grey-2;
+      cursor: pointer;
+      display: flex;
+      height: 38px;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      width: 24px;
+      z-index: 1;
 
-      tr {
-        background: #FDFDFD;
-        
-        th {
-          &.cell-number,
-          &.cell-action {
-            padding-left: 24px;
-            padding-right: 12px;
-            text-align: right;
-          }
-        }
+      &.disabled {
+        background: @gux-off-white-bg-2;
+        color: @gux-scroll-btn-disabled-text;
       }
 
-      .gux-table-scroll-left,
-      .gux-table-scroll-right {
-        align-items: center;
-        background: @gux-border;
-        border: 1px solid @gux-scroll-btn-border;
-        color: @gux-grey-2;
-        cursor: pointer;
-        display: flex;
-        font-size: 18px;
-        height: 38px;
-        justify-content: center;
-        position: absolute;
-        width: 24px;
-        z-index: 1;
-
-        &.disabled {
-          background: @gux-off-white-bg-2;
-          color: @gux-scroll-btn-disabled-text;
-        }
-      }
-
-      .gux-table-scroll-left {
-        border-bottom-right-radius: 2px;
-        border-top-right-radius: 2px;
-        box-shadow: @gux-scroll-btn-shadow-left;
-      }
-
-      .gux-table-scroll-right {
-        border-bottom-left-radius: 2px;
-        border-top-left-radius: 2px;
-        box-shadow: @gux-scroll-btn-shadow-right;
-        right: 0;
+      gux-icon {
+        height: 8px;
+        width: 8px;
       }
     }
 
-    .gux-table-body {
+    .gux-table-scroll-left {
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px;
+      box-shadow: @gux-scroll-btn-shadow-left;
+    }
+
+    .gux-table-scroll-right {
+      border-bottom-left-radius: 2px;
+      border-top-left-radius: 2px;
+      box-shadow: @gux-scroll-btn-shadow-right;
+      right: 0;
+    }
+
+    .gux-table-container {
       overflow-x: hidden;
       overflow-y: auto;
       scrollbar-color: @gux-table-scroll-thumb @gux-off-white;
@@ -139,20 +126,10 @@ gux-table-beta {
       }
 
       table {
-        thead {
-          tr, th {
-            border-bottom: 0px;
-            height: 0px;
-            line-height: 0 !important;
-            overflow: hidden;
-            padding-bottom: 0px;
-            padding-top: 0px;
-            
-            div {
-              height: 0px;
-              overflow: hidden;
-            }
-          }
+        th {
+          position: sticky;
+          top: 0;
+          background: #FDFDFD;
         }
 
         tbody {
@@ -168,12 +145,15 @@ gux-table-beta {
     }
 
     &.vertical-scroll {
-      .gux-table-body {
-        max-height: calc(100% - 40px);
+      .gux-table-container {
+        max-height: 100%;
       }
 
-      .gux-table-head {
-        border-bottom: 1px solid @gux-table-scroll-divider;
+      thead {
+        th {
+          border-bottom-color: @gux-table-scroll-divider;
+          border-bottom-width: 2px;
+        }
       }
     }
 
