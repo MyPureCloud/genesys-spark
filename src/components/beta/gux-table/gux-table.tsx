@@ -264,7 +264,7 @@ export class GuxTable {
           <slot name="data" />
         </div>
         {this.isHorizontalScroll && (
-          <div
+          <button
             class={
               this.isScrolledToFirstCell
                 ? 'gux-table-scroll-left disabled'
@@ -278,10 +278,10 @@ export class GuxTable {
               icon-name="ic-chevron-left"
               screenreader-text={this.i18n('scrollLeft')}
             />
-          </div>
+          </button>
         )}
         {this.isHorizontalScroll && (
-          <div
+          <button
             class={
               this.isScrolledToLastCell
                 ? 'gux-table-scroll-right disabled'
@@ -294,7 +294,7 @@ export class GuxTable {
               icon-name="ic-chevron-right"
               screenreader-text={this.i18n('scrollRight')}
             />
-          </div>
+          </button>
         )}
         {this.isTableEmpty && (
           <div class="empty-table">
