@@ -22,7 +22,7 @@ glob('src/components/**/i18n/*.json', (err, files) => {
   }
 
   const translations = {};
-  const locales = [];
+  const locales = new Set();
 
   files.forEach(file => {
     const match = file.match(filePatternRegex);
@@ -34,7 +34,7 @@ glob('src/components/**/i18n/*.json', (err, files) => {
     const component = match[1];
     const locale = match[2];
 
-    locales.push(locale);
+    locales.add(locale);
     translations[locale] = translations[locale] || {};
     translations[locale][component] = JSON.parse(fs.readFileSync(file, 'utf8'));
   });
@@ -44,7 +44,10 @@ glob('src/components/**/i18n/*.json', (err, files) => {
   }
 
   console.log('Writing locale list...');
-  fs.writeFileSync(localesFile, `${JSON.stringify(locales, null, 2)}\n`);
+  fs.writeFileSync(
+    localesFile,
+    `${JSON.stringify(Array.from(locales), null, 2)}\n`
+  );
 
   console.log('Writing translation files...');
   Object.keys(translations).forEach(lang => {

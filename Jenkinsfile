@@ -87,7 +87,7 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           script {
-            sh "npm run release -- --prerelease alpha"
+            sh "npm run release"
           }
         }
       }
@@ -135,8 +135,8 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           script {
-            sh "npm publish --tag alpha"
-            sshagent(credentials: ['7c2a5698-a932-447a-9727-6852d0994ea0']) {
+            sh "npm publish"
+            sshagent(credentials: ['3aa16916-868b-4290-a9ee-b1a05343667e']) {
               sh "git push --follow-tags -u origin ${env.SHORT_BRANCH}"
             }
           }

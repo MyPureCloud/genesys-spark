@@ -7,13 +7,8 @@ export type GuxButtonAccent = 'primary' | 'secondary';
   tag: 'gux-button'
 })
 export class GuxButton {
-  private get class(): string {
-    if (this.accent === 'primary') {
-      return 'gux-primary';
-    }
-
-    return 'gux-secondary';
-  }
+  @Element()
+  private root: HTMLElement;
 
   /**
    * The component title
@@ -32,8 +27,6 @@ export class GuxButton {
    */
   @Prop()
   accent: GuxButtonAccent = 'secondary';
-  @Element()
-  private root: HTMLGuxButtonElement;
 
   componentWillLoad() {
     this.makeSlotContentDisableable();
@@ -41,7 +34,11 @@ export class GuxButton {
 
   render(): JSX.Element {
     return (
-      <button title={this.title} disabled={this.disabled} class={this.class}>
+      <button
+        title={this.title}
+        disabled={this.disabled}
+        class={this.accent === 'primary' ? 'gux-primary' : 'gux-secondary'}
+      >
         <slot />
       </button>
     );
