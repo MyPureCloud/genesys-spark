@@ -28,14 +28,17 @@ export class GuxTable {
   @Element()
   root: HTMLElement;
 
-  @State()
-  private columns: TableHeaderCell[] = [];
-
   private rows: TableRow[] = [];
 
   private resizeObserver: ResizeObserver;
 
   private i18n: GetI18nValue;
+
+  /**
+   * Keeps columns names, sorting information, etc.
+   */
+  @State()
+  private columns: TableHeaderCell[] = [];
 
   /**
    * Indicates that horizontal scroll is presented for table
