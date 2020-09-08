@@ -38,6 +38,7 @@
  - [gux-side-panel-button](../../beta/gux-side-panel/buttons)
  - [gux-simple-toast](../gux-simple-toast)
  - [gux-spin-button](../gux-spin-button)
+ - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab](../../beta/gux-tabs/gux-tab)
  - [gux-tab-dropdown-option](../../beta/gux-tabs/gux-tab-dropdown-option)
  - [gux-table-beta](../../beta/gux-table)
@@ -68,6 +69,7 @@ graph TD;
   gux-side-panel-button --> gux-icon
   gux-simple-toast --> gux-icon
   gux-spin-button --> gux-icon
+  gux-submenu --> gux-icon
   gux-tab --> gux-icon
   gux-tab-dropdown-option --> gux-icon
   gux-table-beta --> gux-icon
