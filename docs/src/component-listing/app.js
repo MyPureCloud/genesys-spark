@@ -1,10 +1,14 @@
 import { toHTML } from '../utils/to-html.js';
 import COMPONENT_SPEC from '../components-spec.json';
+import 'genesys-webcomponents';
+import '../styles/component-listing.less';
 
 export function bootstrap() {
-  let components = Object.keys(COMPONENT_SPEC).filter(
-    component => !COMPONENT_SPEC[component].hidePage
-  );
+  let components = Object.keys(COMPONENT_SPEC)
+    .filter(component => !COMPONENT_SPEC[component].hidePage)
+    .sort((a, b) => {
+      return a < b ? -1 : 1;
+    });
 
   document.body.appendChild(
     toHTML(`
@@ -37,3 +41,5 @@ export function bootstrap() {
 function shortName(component) {
   return component.replace(/^gux-/, '');
 }
+
+bootstrap();

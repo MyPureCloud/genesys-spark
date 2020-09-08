@@ -1,150 +1,148 @@
-@border : 1px solid #c3cad4;
+@border: 1px solid #c3cad4;
 @soft-border: 1px solid #dae1e8;
 
 html,
 body {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #fdfdfd;
-    font-family: Roboto, sans-serif;
-    font-size: 12px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fdfdfd;
 }
 
 .component-viewer.content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.component-viewer > .left-column,
+.component-viewer > .right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.component-viewer > .left-column {
+  min-width: 600px;
+  flex-grow: 1;
+  border-right: @border;
+
+  > .preview {
+    position: relative;
+    flex-grow: 1;
+    border-bottom: @border;
+    padding: 27px 30px;
+    overflow-y: auto;
+    background-color: #fff793;
+    color: #ff4f1f;
+
+    &.gux-light-theme {
+      background-color: #fdfdfd;
+      color: #444a52;
+    }
+
+    &.gux-dark-theme {
+      background-color: #393845;
+      color: #fdfdfd;
+    }
+  }
+
+  > .editor {
+    max-height: 400px;
+    flex-grow: 1;
+  }
+}
+
+.component-viewer > .right-column {
+  max-width: 600px;
+  min-width: 300px;
+  flex-grow: 1;
+  overflow: auto;
+  line-height: 1.4em;
+  color: #444a52;
+
+  summary {
+    margin: 5px;
+    &.heading {
+      font-size: 20px;
+      padding: 5px 0;
+      border-bottom: @soft-border;
+    }
+  }
+
+  .title {
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: @soft-border;
+    margin: 0 0 10px -7px;
+  }
+
+  .attributes {
+    flex-grow: 0;
+    border-bottom: @border;
+    padding: 7px 10px 7px 17px;
+
+    .attribute-group {
+      padding-bottom: 5px;
+    }
+  }
+
+  .events {
+    flex-grow: 1;
+    padding: 7px 10px 7px 17px;
+
+    .event-descriptions {
+      padding-bottom: 20px;
+    }
+  }
+
+  .attribute-group label {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
-    height: 100%;
-}
+    align-items: center;
+    margin-bottom: 7px;
 
-.component-viewer>.left-column,
-.component-viewer>.right-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.component-viewer>.left-column {
-    min-width: 600px;
-    flex-grow: 1;
-    border-right: @border;
-
-    >.preview {
-        position: relative;
-        flex-grow: 1;
-        border-bottom: @border;
-        padding: 27px 30px;
-        overflow-y: auto;
-        background-color: #fff793;
-        color: #ff4f1f;
-
-        &.gux-light-theme {
-            background-color: #fdfdfd;
-            color: #444a52
-        }
-
-        &.gux-dark-theme {
-            background-color: #393845;
-            color: #fdfdfd
-        }
+    span {
+      min-width: 100px;
+      flex-grow: 0;
     }
 
-    >.editor {
-        max-height: 400px;
-        flex-grow: 1;
-    }
-}
-
-.component-viewer>.right-column {
-    max-width: 600px;
-    min-width: 300px;
-    flex-grow: 1;
-    overflow: auto;
-    line-height: 1.4em;
-    color: #444a52;
-
-    summary {
-        margin: 5px;
-        &.heading {
-            font-size: 20px;
-            padding: 5px 0;
-            border-bottom: @soft-border;
-        }
+    select,
+    textarea,
+    input:not([type='checkbox']) {
+      flex-grow: 1;
+      padding: 7px 10px;
+      border-radius: 5px;
+      border: @border;
     }
 
-    .title {
-        font-size: 14px;
-        padding: 5px 0;
-        border-bottom: @soft-border;
-        margin: 0 0 10px -7px;
+    select,
+    input[type='checkbox'] {
+      cursor: pointer;
     }
-
-    .attributes {
-        flex-grow: 0;
-        border-bottom: @border;
-        padding: 7px 10px 7px 17px;
-
-        .attribute-group {
-            padding-bottom: 5px;
-        }
-    }
-
-    .events {
-        flex-grow: 1;
-        padding: 7px 10px 7px 17px;
-
-        .event-descriptions {
-            padding-bottom: 20px;
-        }
-    }
-
-    .attribute-group label {
-        cursor: pointer;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 7px;
-
-        span {
-            min-width: 100px;
-            flex-grow: 0;
-        }
-
-        select,
-        textarea,
-        input:not([type='checkbox']) {
-            flex-grow: 1;
-            padding: 7px 10px;
-            border-radius: 5px;
-            border: @border;
-        }
-
-        select,
-        input[type="checkbox"] {
-            cursor: pointer;
-        }
-    }
+  }
 }
 
 .tab {
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
 
 .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
 }
 
 .tab button:hover {
-    background-color: #ddd;
-    }
+  background-color: #ddd;
+}
 
 .tab button.active {
-    background-color: #ccc;
+  background-color: #ccc;
 }

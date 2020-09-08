@@ -1,12 +1,13 @@
 import replace from '@rollup/plugin-replace';
 import { Config } from '@stencil/core';
-import { less } from '@stencil/less';
+import { less as stencilLess } from '@stencil/less';
 import copy from 'rollup-plugin-copy';
 
 const CDN_URL = process.env.CDN_URL || '';
 
 export const config: Config = {
   namespace: 'genesys-webcomponents',
+  globalStyle: 'src/style/style.less',
   outputTargets: [
     {
       dir: 'dist',
@@ -17,15 +18,17 @@ export const config: Config = {
     }
   ],
   plugins: [
-    less({
-      injectGlobalPaths: ['src/style/variables.less', 'src/style/mixins.less']
+    stencilLess({
+      injectGlobalPaths: ['src/style/variables.less']
     })
   ],
   rollupPlugins: {
     after: [
       copy({
-        targets: [{ src: 'build/i18n', dest: 'dist/genesys-webcomponents' }],
-        verbose: true
+        targets: [
+          { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
+          { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' }
+        ]
       })
     ]
   },

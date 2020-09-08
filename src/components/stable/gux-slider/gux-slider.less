@@ -1,3 +1,5 @@
+@import (reference) '../../../style/typography.less';
+
 // Variables part
 @slider-fill: @gux-dark-blue;
 @slider-border: #e0e0e0;
@@ -167,6 +169,7 @@ gux-slider {
   }
 
   .range-tooltip {
+    .gux-small-text();
     visibility: hidden;
     display: flex;
     position: absolute;

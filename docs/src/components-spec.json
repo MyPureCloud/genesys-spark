@@ -255,11 +255,13 @@
     }
   },
   "gux-tab": {
+    "hidePage": true,
     "attributes": {
       "tab-icon-name": "text"
     }
   },
   "gux-tab-dropdown-option": {
+    "hidePage": true,
     "attributes": {
       "icon-name": "text"
     }
@@ -320,5 +322,9 @@
       "input": "Standard Event",
       "submit": "Standard Event"
     }
+  },
+  "typography": {
+    "attributes": {},
+    "events": {}
   }
 }
