@@ -138,10 +138,7 @@ export class GuxSlider {
             }
             ref={el => (this.sliderTooltipContainer = el)}
           >
-            <div
-              class="range-tooltip small-body"
-              ref={el => (this.sliderTooltip = el)}
-            >
+            <div class="range-tooltip" ref={el => (this.sliderTooltip = el)}>
               {value}
             </div>
           </div>

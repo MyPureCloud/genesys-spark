@@ -127,7 +127,12 @@ export class GuxList {
     this.performHighlight(this.highlight);
     this.updateTabIndexes();
     return (
-      <div role="list" tabindex={0} onKeyDown={e => this.onKeyDown(e)}>
+      <div
+        class="list-items-container"
+        role="list"
+        tabindex={0}
+        onKeyDown={e => this.onKeyDown(e)}
+      >
         <slot />
       </div>
     );

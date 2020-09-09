@@ -7,11 +7,14 @@ const CopyPlugin = require('copy-webpack-plugin');
 const CDN_URL = process.env.DOCS_CDN_URL || '';
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    componentListing: './src/component-listing/app.js',
+    componentViewer: './src/component-viewer/app.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: CDN_URL,
-    filename: 'index.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -51,6 +54,12 @@ module.exports = {
     new MonacoWebpackPlugin(),
     new CopyPlugin([
       {
+        from: 'src/index.html',
+        flatten: true,
+        transform: injectCdnUrl
+      },
+      {
+        //TODO: Remove when all examples are moved to component directories
         from: 'src/component-pages/*.html',
         flatten: true,
         transform: injectCdnUrl
@@ -61,8 +70,14 @@ module.exports = {
         transformPath(targetPath) {
           const segments = targetPath.split(path.sep);
           const component = segments[segments.length - 2];
-          console.log('PATH', targetPath, component);
           return `${component}.html`;
+        },
+        transform: generateComponentPage
+      },
+      {
+        from: '../src/style/examples/*.html',
+        transformPath(targetPath) {
+          return path.basename(targetPath);
         },
         transform: generateComponentPage
       }
@@ -77,7 +92,7 @@ module.exports = {
 };
 
 const componentPageTemplate = fs
-  .readFileSync('src/component-pages/template.html')
+  .readFileSync('src/viewer-template.html')
   .toString();
 
 function generateComponentPage(exampleMarkup) {
@@ -91,5 +106,5 @@ function injectCdnUrl(content) {
   if (htmlCdnUrl.length > 0 && !htmlCdnUrl.endsWith('/')) {
     htmlCdnUrl = htmlCdnUrl + '/';
   }
-  return content.toString().replace('${CDN_URL}', htmlCdnUrl);
+  return content.toString().replace(/\$\{CDN_URL\}/g, htmlCdnUrl);
 }
