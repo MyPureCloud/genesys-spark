@@ -4,7 +4,7 @@
 @menu-shadow: rgba(34, 37, 41, 0.24);
 
 gux-list {
-  div {
+  .list-items-container {
     list-style: none;
     margin: 0;
     padding: 8px 0;
@@ -16,9 +16,8 @@ gux-list {
 // Dark
 .gux-list-dark-theme {
   color: @gux-grey-2;
-  div {
+  .list-items-container {
     background: @menu-background-color;
-    border-color: 1px solid @menu-border-color;
     box-shadow: 0px 0 2px 0px @menu-shadow;
   }
 }
@@ -34,9 +33,8 @@ gux-list.gux-dark-theme {
 
 // Light
 .gux-list-light-theme {
-  div {
+  .list-items-container {
     background: @menu-background-color;
-    border-color: 1px solid @menu-border-color;
     box-shadow: 0px 0 2px 0px @menu-shadow;
   }
 }
