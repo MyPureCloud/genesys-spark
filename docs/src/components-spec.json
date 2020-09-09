@@ -331,8 +331,6 @@
     },
     "events": {}
   },
-  "typography": {
-    "attributes": {},
-    "events": {}
-  }
+  "typography": {},
+  "color": {}
 }

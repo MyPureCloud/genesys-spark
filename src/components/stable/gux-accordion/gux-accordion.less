@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 
 gux-accordion {
@@ -59,14 +61,14 @@ gux-accordion {
 // Light
 .gux-accordion-light-theme {
   .gux-accordion {
-    background-color: @gux-off-white-bg;
+    background-color: @gux-background;
     .section {
-      color: @gux-grey-type;
+      coclor: @gux-charcoal-grey;
       .header {
         border-top: 1px solid @gux-border;
         &:hover {
           .toggle-arrow {
-            color: @gux-dark-blue;
+            color: @gux-genesys-dark-blue;
           }
         }
       }
@@ -97,31 +99,31 @@ gux-accordion.gux-light-theme {
 // Dark
 .gux-accordion-dark-theme {
   ul.gux-accordion {
-    background-color: @gux-panel;
+    background-color: @gux-background-dark;
     .section {
-      color: @gux-off-white-type;
+      color: @gux-type-dark;
       .header {
-        border-top: 1px solid @gux-grey-1;
+        border-top: 1px solid @gux-grey-global;
         .toggle-arrow {
-          color: @gux-off-white-type;
+          color: @gux-type-dark;
         }
         &:hover {
           .toggle-arrow {
-            color: @gux-blue;
+            color: @gux-genesys-blue;
           }
         }
       }
       &.opened {
         .header {
-          border-bottom: 1px solid @gux-grey-1;
+          border-bottom: 1px solid @gux-grey-global;
         }
       }
       &:last-of-type {
         .header {
-          border-bottom: 1px solid @gux-grey-1;
+          border-bottom: 1px solid @gux-grey-global;
         }
         .content {
-          border-bottom: 1px solid @gux-grey-1;
+          border-bottom: 1px solid @gux-grey-global;
         }
       }
     }

@@ -1,7 +1,10 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
+@gux-off-white-bg-2: #f8f8f8;
 @gux-scroll-btn-border: #d5dce0;
 @gux-scroll-btn-disabled-text:#c3cad4;
-@gux-scroll-btn-shadow-left: 1px -1px 1px rgba(34, 37, 41, 0.08); 
+@gux-scroll-btn-shadow-left: 1px -1px 1px rgba(34, 37, 41, 0.08);
 @gux-scroll-btn-shadow-right: -1px -1px 1px rgba(34, 37, 41, 0.08);
 @gux-table-row-hover: rgba(117, 168, 255, .24);
 @gux-table-scroll-divider: rgba(34, 37, 41, 0.1);
@@ -16,11 +19,11 @@ gux-table-beta {
 
     table {
       border-spacing: 0px;
-      color: @gux-grey-2;
+      color: @gux-charcoal-grey;
       font-size: 12px;
       white-space: nowrap;
       width: 100%;
-  
+
       th, td {
         border-color: @gux-border;
         border-style: solid;
@@ -30,7 +33,7 @@ gux-table-beta {
         height: 40px;
         text-align: left;
       }
-  
+
       th[data-cell-numeric],
       td[data-cell-numeric],
       th[data-cell-action],
@@ -39,7 +42,7 @@ gux-table-beta {
         padding-left: 24px;
         text-align: right;
       }
-  
+
       th:last-child, td:last-child {
         border-right-width: 0px;
       }
@@ -50,7 +53,7 @@ gux-table-beta {
       align-items: center;
       background: @gux-border;
       border: 1px solid @gux-scroll-btn-border;
-      color: @gux-grey-2;
+      color: @gux-charcoal-grey;
       cursor: pointer;
       display: flex;
       height: 38px;
@@ -105,7 +108,7 @@ gux-table-beta {
       }
 
       &::-webkit-scrollbar-thumb:hover {
-        background: @gux-border-dark;
+        background: #555d66;
       }
 
       &.compact {
@@ -113,13 +116,13 @@ gux-table-beta {
           height: 24px;
         }
       }
-  
+
       &.object-table {
         tbody {
           th, td {
             border-width: 0px;
           }
-  
+
           tr:hover {
             background: @gux-table-row-hover;
           }
@@ -137,7 +140,7 @@ gux-table-beta {
           tr {
             background: @gux-off-white-bg-2;
           }
-      
+
           tr:nth-child(2n) {
             background: @gux-off-white;
           }
@@ -170,7 +173,7 @@ gux-table-beta {
   .empty-table {
     align-items: center;
     background: @gux-off-white;
-    color: @gux-grey-bg-3;
+    color: #9baab8;
     display: flex;
     height: 150px;
     justify-content: center;

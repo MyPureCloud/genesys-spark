@@ -1,11 +1,13 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 
 gux-tooltip-beta {
   div.gux-tooltip {
     position: absolute;
     white-space: nowrap;
-    background-color: @gux-off-white-bg;
-    color: @gux-grey-2;
+    background-color: @gux-background;
+    color: @gux-type;
     height: 32px;
     line-height: 32px;
     font-size: 12px;
@@ -32,8 +34,8 @@ gux-tooltip-beta {
 // Light
 .gux-tooltip-light-theme {
   div.gux-tooltip {
-    border: 1px solid @gux-border-alt;
-    box-shadow: 0 0 2px 0 fade(@gux-grey-1, 24);
+    border: 1px solid #dae1e8;
+    box-shadow: 0 0 2px 0 fade(@gux-grey-global, 24);
   }
 }
 .gux-light-theme {
@@ -47,8 +49,8 @@ gux-tooltip-beta.gux-light-theme {
 // Dark
 .gux-tooltip-dark-theme {
   div.gux-tooltip {
-    border: 1px solid @gux-border-dark;
-    box-shadow: 0 0 2px 0 fade(@gux-grey-1, 100);
+    border: 1px solid #555d66;
+    box-shadow: 0 0 2px 0 fade(@gux-grey-global, 100);
   }
 }
 .gux-dark-theme {

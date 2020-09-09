@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 @keyframes play65 {
   from {background-position: 0px 0px;}
@@ -41,19 +43,19 @@ gux-radial-progress {
         transform: rotate(-90deg);
         transform-origin: 50% 50%;
         fill: none;
-        stroke: @gux-blue;
+        stroke: @gux-genesys-blue;
         stroke-width: 5;
       }
 
       .static-circle {
         fill: none;
-        stroke: @gux-light-blue;
+        stroke: #deeaff;
         stroke-width: 5;
       }
 
       .percentage {
         text-anchor: middle;
-        fill: @gux-grey-2;
+        fill: @gux-charcoal-grey;
         font-size: 12px;
       }
     }
@@ -64,7 +66,7 @@ gux-radial-progress {
 
 // Dark
 .gux-radial-progress-dark-theme {
-    color: @gux-off-white;
+    color: @gux-type-dark;
     > div {
       .percentage {
         fill: @gux-off-white;
@@ -84,7 +86,7 @@ gux-radial-progress.gux-dark-theme {
 
 // Light
 .gux-radial-progress-light-theme {
-    color: @gux-grey-2;
+    color: @gux-type;
 };
 
 .gux-light-theme {
