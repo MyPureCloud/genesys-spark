@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](http://inindca///compare/v1.1.0...v1.2.0) (2020-09-10)
+
+
+### Features
+
+* **style:** provide typography styles as css ([5d77490](http://inindca///commit/5d77490928880a77ed7227823f5d7fdf38793cd7))
+* **styles:** add baseline link styles to published css ([c847f68](http://inindca///commit/c847f6818ccea411e2b2978aa28d329f881297ec))
+* **typography:** use new typography styles in component CSS, add docs ([f797d0d](http://inindca///commit/f797d0df21ec2bf37e55399a20b475811d771cf2))
+
+
+### Bug Fixes
+
+* **docs:** better separation of documentation styles from component styles ([7ff0f85](http://inindca///commit/7ff0f85c1248cfe6033a56f9e4cac186b631535d))
+* **gux-list:** fixed an over general css style ([2d65320](http://inindca///commit/2d65320124c30825ebe3f670785310f901d69e2c))
+* **gux-option:** highlight styling is now bold instead of yellow background ([6781ae2](http://inindca///commit/6781ae22e6a7f3314da63d8fff5c704a1fe36889))
+* **gux-toggle:** fixed css issues ([4865dc5](http://inindca///commit/4865dc5bfdc9719966d956a2aafc5df53903b59d))
+* **locales:** stopped build creating duplicates in locales.json ([557120c](http://inindca///commit/557120c30fb21bc3903b6d7640def81bc275f7bb))
+
 ## [1.1.0](http://inindca///compare/v1.0.3...v1.1.0) (2020-09-04)
 
 
