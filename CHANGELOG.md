@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](http://inindca///compare/v1.2.0...v1.3.0) (2020-09-11)
+
+
+### Features
+
+* **table component:** table component implementation ([34027cd](http://inindca///commit/34027cd915e086c7e12314e18b36c9480ab57e5e)), closes [#5](http://inindca///issues/5)
+
+
+### Bug Fixes
+
+* **table component:** conflicts resolved ([c8175af](http://inindca///commit/c8175af662df7fa582a292a6643cea779eb213f7))
+* **table component:** disableHostCheck flag removed ([b47bd57](http://inindca///commit/b47bd570499a7f11a8d056c125059619ffa0c2b2))
+* **table component:** fix appearance and logic issues ([a2f134d](http://inindca///commit/a2f134d1f1b5250318073fbcea61c89b9bdbafe2))
+* **table component:** test code removed ([8469dbd](http://inindca///commit/8469dbd5932cf8aba0f486b9e52f5c32a2aa1440))
+* **table component:** use <button> tag instead of <div> for scroll buttons ([2571dcc](http://inindca///commit/2571dcc40db187261956be596bb499868fb2537c))
+* **table xomponent:** test styles removed ([dc60568](http://inindca///commit/dc605680d1b49d5d71e85782be5ac7d14f5ed257))
+
 ## [1.2.0](http://inindca///compare/v1.1.0...v1.2.0) (2020-09-10)
 
 
