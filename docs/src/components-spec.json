@@ -323,6 +323,14 @@
       "submit": "Standard Event"
     }
   },
+  "gux-table": {
+    "attributes": {
+      "compact": "checkbox",
+      "object-table": "checkbox",
+      "epmty-message": "text"
+    },
+    "events": {}
+  },
   "typography": {
     "attributes": {},
     "events": {}
