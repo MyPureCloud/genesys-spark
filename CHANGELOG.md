@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](http://inindca///compare/v1.3.0...v1.3.1) (2020-09-14)
+
 ## [1.3.0](http://inindca///compare/v1.2.0...v1.3.0) (2020-09-11)
 
 
