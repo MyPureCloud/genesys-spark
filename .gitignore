@@ -3,7 +3,7 @@ dist/
 .docs/
 .npmrc
 ./docs/.npmrc
-src/components/i18n/locales.json
+src/i18n/locales.json
 
 *~
 *.sw[mnpcod]

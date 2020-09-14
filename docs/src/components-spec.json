@@ -255,11 +255,13 @@
     }
   },
   "gux-tab": {
+    "hidePage": true,
     "attributes": {
       "tab-icon-name": "text"
     }
   },
   "gux-tab-dropdown-option": {
+    "hidePage": true,
     "attributes": {
       "icon-name": "text"
     }
@@ -320,5 +322,17 @@
       "input": "Standard Event",
       "submit": "Standard Event"
     }
+  },
+  "gux-table": {
+    "attributes": {
+      "compact": "checkbox",
+      "object-table": "checkbox",
+      "epmty-message": "text"
+    },
+    "events": {}
+  },
+  "typography": {
+    "attributes": {},
+    "events": {}
   }
 }

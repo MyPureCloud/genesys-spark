@@ -10,6 +10,7 @@ import {
 } from '@stencil/core';
 
 @Component({
+  styleUrl: 'gux-option.less',
   tag: 'gux-option'
 })
 export class GuxOption {

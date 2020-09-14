@@ -86,7 +86,9 @@ export class GuxTabs {
       this.destroySortable();
     }
 
-    this.resizeObserver?.unobserve(this.element.querySelector('.gux-tabs'));
+    if (this.resizeObserver) {
+      this.resizeObserver.unobserve(this.element.querySelector('.gux-tabs'));
+    }
   }
 
   async componentWillLoad(): Promise<void> {
@@ -107,7 +109,9 @@ export class GuxTabs {
       });
     }
 
-    this.resizeObserver?.observe(this.element.querySelector('.gux-tabs'));
+    if (this.resizeObserver) {
+      this.resizeObserver.observe(this.element.querySelector('.gux-tabs'));
+    }
 
     const tabElements = this.element.querySelectorAll('gux-tab');
     tabElements.forEach(tab => {

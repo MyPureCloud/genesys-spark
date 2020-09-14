@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](http://inindca///compare/v1.2.0...v1.3.0) (2020-09-11)
+
+
+### Features
+
+* **table component:** table component implementation ([34027cd](http://inindca///commit/34027cd915e086c7e12314e18b36c9480ab57e5e)), closes [#5](http://inindca///issues/5)
+
+
+### Bug Fixes
+
+* **table component:** conflicts resolved ([c8175af](http://inindca///commit/c8175af662df7fa582a292a6643cea779eb213f7))
+* **table component:** disableHostCheck flag removed ([b47bd57](http://inindca///commit/b47bd570499a7f11a8d056c125059619ffa0c2b2))
+* **table component:** fix appearance and logic issues ([a2f134d](http://inindca///commit/a2f134d1f1b5250318073fbcea61c89b9bdbafe2))
+* **table component:** test code removed ([8469dbd](http://inindca///commit/8469dbd5932cf8aba0f486b9e52f5c32a2aa1440))
+* **table component:** use <button> tag instead of <div> for scroll buttons ([2571dcc](http://inindca///commit/2571dcc40db187261956be596bb499868fb2537c))
+* **table xomponent:** test styles removed ([dc60568](http://inindca///commit/dc605680d1b49d5d71e85782be5ac7d14f5ed257))
+
+## [1.2.0](http://inindca///compare/v1.1.0...v1.2.0) (2020-09-10)
+
+
+### Features
+
+* **style:** provide typography styles as css ([5d77490](http://inindca///commit/5d77490928880a77ed7227823f5d7fdf38793cd7))
+* **styles:** add baseline link styles to published css ([c847f68](http://inindca///commit/c847f6818ccea411e2b2978aa28d329f881297ec))
+* **typography:** use new typography styles in component CSS, add docs ([f797d0d](http://inindca///commit/f797d0df21ec2bf37e55399a20b475811d771cf2))
+
+
+### Bug Fixes
+
+* **docs:** better separation of documentation styles from component styles ([7ff0f85](http://inindca///commit/7ff0f85c1248cfe6033a56f9e4cac186b631535d))
+* **gux-list:** fixed an over general css style ([2d65320](http://inindca///commit/2d65320124c30825ebe3f670785310f901d69e2c))
+* **gux-option:** highlight styling is now bold instead of yellow background ([6781ae2](http://inindca///commit/6781ae22e6a7f3314da63d8fff5c704a1fe36889))
+* **gux-toggle:** fixed css issues ([4865dc5](http://inindca///commit/4865dc5bfdc9719966d956a2aafc5df53903b59d))
+* **locales:** stopped build creating duplicates in locales.json ([557120c](http://inindca///commit/557120c30fb21bc3903b6d7640def81bc275f7bb))
+
+## [1.1.0](http://inindca///compare/v1.0.3...v1.1.0) (2020-09-04)
+
+
+### Features
+
+* **finish breadcrumbs component:** added breadcrumbs and breadcrumbs-item components ([ee24a6d](http://inindca///commit/ee24a6d96bfbbe5400548603687b205afd20b5ed))
+
+
+### Bug Fixes
+
+* returned the remote code ([90c0c35](http://inindca///commit/90c0c351366f2f153768e47f10bdee61698f425f))
+* **breacrumbs component:** add expample, rename component, remove unnecessary styles ([73061c0](http://inindca///commit/73061c0e917509cee588f0b34c6fe93570ebed76))
+
 ### [1.0.3](http://inindca///compare/v1.0.2...v1.0.3) (2020-09-01)
 
 ### [1.0.2](http://inindca///compare/v1.0.1...v1.0.2) (2020-09-01)

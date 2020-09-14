@@ -1,3 +1,5 @@
+@import (reference) '../../../style/typography.less';
+
 // Variables part
 @background-color: #f9fafb;
 @background-color-dark-theme: #555d66;
@@ -114,7 +116,7 @@ gux-dropdown {
 
         > div {
           position: relative;
-          overflow: hidden; 
+          overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
 
@@ -153,8 +155,8 @@ gux-dropdown {
         .ghost {
           white-space: nowrap;
           overflow: hidden;
-          
-          .large-title();
+
+          .h1();
           line-height: 1.66666667;
           height: 48px;
           padding: 2px 25px 4px 11px;
@@ -165,7 +167,7 @@ gux-dropdown {
             height: 48px;
           }
           input {
-            .large-title();
+            .h1();
             line-height: 1.66666667;
             height: 48px;
             border: none;
@@ -191,7 +193,7 @@ gux-dropdown {
           white-space: nowrap;
           overflow: hidden;
 
-          .small-title();
+          .h2();
           line-height: 1.66666667;
           height: 52px;
           padding: 9px 25px 4px 11px;
@@ -202,7 +204,7 @@ gux-dropdown {
             height: 52px;
           }
           input {
-            .small-title();
+            .h2();
             line-height: 1.66666667;
             height: 52px;
             border: none;
@@ -221,7 +223,6 @@ gux-dropdown {
           border-bottom: 1px solid @gux-dark-blue;
         }
       }
-      
     }
   }
 }

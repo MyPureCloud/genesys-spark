@@ -1,3 +1,5 @@
+@import (reference) '../../../style/typography.less';
+
 // Variables part
 @primary-background-color: @gux-dark-blue;
 @primary-border-color: #2455a3;
@@ -40,7 +42,7 @@ gux-action-toast {
     justify-content: flex-start;
     align-content: stretch;
     align-items: center;
-    .small-title();
+    .h2();
 
     .icon {
       color: @gux-teal-sec;
@@ -67,6 +69,7 @@ gux-action-toast {
     flex: 0 1 auto;
     align-self: auto;
     margin: 16px 0;
+    .body-font();
 
     dl {
       display: flex;
@@ -82,7 +85,7 @@ gux-action-toast {
         order: 0;
         flex: 0 1 20%;
         align-self: auto;
-        .body-bold();
+        .bold-font();
       }
 
       dd {
@@ -90,7 +93,6 @@ gux-action-toast {
         order: 0;
         flex: 0 1 80%;
         align-self: auto;
-        .body()
       }
     }
   }
@@ -310,7 +312,6 @@ gux-action-toast {
     }
   }
 }
-
 
 // Default Theme
 gux-action-toast {

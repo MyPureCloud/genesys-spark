@@ -23,7 +23,7 @@ def shouldUploadAssets() {
 }
 
 pipeline {
-  agent { label 'infra_mesos_v2' }
+  agent { label 'dev_mesos_v2' }
   options {
     quietPeriod(480)
     disableConcurrentBuilds()
@@ -55,16 +55,37 @@ pipeline {
       }
     }
 
-    stage('Prep') {
+    stage('Checkout') {
       steps {
         deleteDir()
-        sh "env"
-        sh "git clone --single-branch -b master --depth=1 git@bitbucket.org:inindca/npm-utils.git ${env.NPM_UTIL_PATH}"
         dir(env.REPO_DIR) {
-          echo "Building branch: ${env.GIT_BRANCH}"
           checkout scm
           // Make a local branch so we can work with history and push (there's probably a better way to do this)
           sh "git checkout -b ${env.SHORT_BRANCH}"
+        }
+      }
+    }
+
+
+    stage('Avoid Build Loop') {
+      steps {
+        script {
+          dir(env.REPO_DIR) {
+            def lastCommit = sh(script: 'git log -n 1 --format=%s', returnStdout: true).trim()
+            if (lastCommit.startsWith('chore(release)')) {
+              currentBuild.description = 'Skipped'
+              currentBuild.result = 'ABORTED'
+              error('Last commit was a release, exiting build process.')
+            }
+          }
+        }
+      }
+    }
+
+    stage('Prep') {
+      steps {
+        sh "git clone --single-branch -b master --depth=1 git@bitbucket.org:inindca/npm-utils.git ${env.NPM_UTIL_PATH}"
+        dir(env.REPO_DIR) {
           sh "${env.WORKSPACE}/${env.NPM_UTIL_PATH}/scripts/jenkins-create-npmrc.sh"
           sh "cp .npmrc docs/.npmrc"
           sh "npm ci"
@@ -75,6 +96,7 @@ pipeline {
     stage('Check') {
       steps {
         dir(env.REPO_DIR) {
+          sh "npm run lint"
           sh "npm run test.unit"
         }
       }
@@ -139,6 +161,10 @@ pipeline {
             sshagent(credentials: ['3aa16916-868b-4290-a9ee-b1a05343667e']) {
               sh "git push --follow-tags -u origin ${env.SHORT_BRANCH}"
             }
+          }
+          script {
+            publishedVersion = sh(script: 'node -e "console.log(require(\'./package.json\').version)"', returnStdout: true).trim()
+            currentBuild.description = publishedVersion
           }
         }
       }

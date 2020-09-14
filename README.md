@@ -46,6 +46,17 @@ The `-E` is for exact-version while we are in alpha and breaking changes may sti
 
 ## Setting up your App
 
+### Stylesheets
+
+The library provides a baseline set of CSS styles in the package under `dist/genesys-webcomponents/genesys-webcomponents.css`. The stylesheet provides:
+
+- Baseline styles for browser elements
+- Classes for specific typography patterns
+- CSS variables for colors (coming soon)
+- CSS variables for spacing (coming soon)
+
+The best mechanism for importing the stylesheet into your project will depend on how you handle CSS in your project in general. Reach out to the Common UI Development group if you're having trouble with your specific integration.
+
 ### Genesys Cloud applications
 
 Genesys Cloud applications, or other always-online apps should import the library and call
@@ -83,10 +94,8 @@ Since IE11 does not support web components natively, you will need to
 Component-specific polyfills
 
 | component | web api that requires polyfill                                                    |
-|-----------|---------------------------------------------------------------------------------- |
+| --------- | --------------------------------------------------------------------------------- |
 | gux-tabs  | [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) |
-
-
 
 ### Localization
 

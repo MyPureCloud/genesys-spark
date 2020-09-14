@@ -1,0 +1,182 @@
+// Variables part
+@gux-scroll-btn-border: #d5dce0;
+@gux-scroll-btn-disabled-text:#c3cad4;
+@gux-scroll-btn-shadow-left: 1px -1px 1px rgba(34, 37, 41, 0.08); 
+@gux-scroll-btn-shadow-right: -1px -1px 1px rgba(34, 37, 41, 0.08);
+@gux-table-row-hover: rgba(117, 168, 255, .24);
+@gux-table-scroll-divider: rgba(34, 37, 41, 0.1);
+@gux-table-scroll-thumb: #B5B6B7;
+
+gux-table-beta {
+  display: block;
+
+  .gux-table {
+    height: inherit;
+    position: relative;
+
+    table {
+      border-spacing: 0px;
+      color: @gux-grey-2;
+      font-size: 12px;
+      white-space: nowrap;
+      width: 100%;
+  
+      th, td {
+        border-color: @gux-border;
+        border-style: solid;
+        border-width: 0px 1px 1px 0px;
+        padding-left: 12px;
+        padding-right: 24px;
+        height: 40px;
+        text-align: left;
+      }
+  
+      th[data-cell-numeric],
+      td[data-cell-numeric],
+      th[data-cell-action],
+      td[data-cell-action] {
+        padding-right: 12px;
+        padding-left: 24px;
+        text-align: right;
+      }
+  
+      th:last-child, td:last-child {
+        border-right-width: 0px;
+      }
+    }
+
+    .gux-table-scroll-left,
+    .gux-table-scroll-right {
+      align-items: center;
+      background: @gux-border;
+      border: 1px solid @gux-scroll-btn-border;
+      color: @gux-grey-2;
+      cursor: pointer;
+      display: flex;
+      height: 38px;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      width: 24px;
+      z-index: 1;
+
+      &.disabled {
+        background: @gux-off-white-bg-2;
+        color: @gux-scroll-btn-disabled-text;
+      }
+
+      gux-icon {
+        height: 8px;
+        width: 8px;
+      }
+    }
+
+    .gux-table-scroll-left {
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px;
+      box-shadow: @gux-scroll-btn-shadow-left;
+    }
+
+    .gux-table-scroll-right {
+      border-bottom-left-radius: 2px;
+      border-top-left-radius: 2px;
+      box-shadow: @gux-scroll-btn-shadow-right;
+      right: 0;
+    }
+
+    .gux-table-container {
+      max-height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      scrollbar-color: @gux-table-scroll-thumb @gux-off-white;
+      scrollbar-width: thin;
+      width: 100%;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: @gux-off-white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: @gux-table-scroll-thumb;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: @gux-border-dark;
+      }
+
+      &.compact {
+        td {
+          height: 24px;
+        }
+      }
+  
+      &.object-table {
+        tbody {
+          th, td {
+            border-width: 0px;
+          }
+  
+          tr:hover {
+            background: @gux-table-row-hover;
+          }
+        }
+      }
+
+      table {
+        th {
+          position: sticky;
+          top: 0;
+          background: @gux-off-white;
+        }
+
+        tbody {
+          tr {
+            background: @gux-off-white-bg-2;
+          }
+      
+          tr:nth-child(2n) {
+            background: @gux-off-white;
+          }
+        }
+      }
+    }
+
+    &.vertical-scroll {
+      thead {
+        th {
+          border-bottom-color: @gux-table-scroll-divider;
+          border-bottom-width: 2px;
+        }
+      }
+    }
+
+    &.horizontal-scroll {
+      thead {
+        th:first-child {
+          padding-left: 36px;
+        }
+
+        th:last-child {
+          padding-right: 48px;
+        }
+      }
+    }
+  }
+
+  .empty-table {
+    align-items: center;
+    background: @gux-off-white;
+    color: @gux-grey-bg-3;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+
+    h2 {
+      margin: 0px;
+    }
+  }
+}
