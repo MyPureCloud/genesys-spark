@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](http://inindca///compare/v1.3.1...v1.3.2) (2020-09-15)
+
+
+### Bug Fixes
+
+* **gux-table:** resizeObserver not present in spec tests ([f9193a1](http://inindca///commit/f9193a1e542c87b06b8f64ca2ad83b3784fd9d43))
+
 ### [1.3.1](http://inindca///compare/v1.3.0...v1.3.1) (2020-09-14)
 
 ## [1.3.0](http://inindca///compare/v1.2.0...v1.3.0) (2020-09-11)
