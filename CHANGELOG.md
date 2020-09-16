@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](http://inindca///compare/v1.3.2...v1.4.0) (2020-09-16)
+
+
+### Features
+
+* **gux-pagination:** added expanded layout ([524d98d](http://inindca///commit/524d98d09d0a21029151c0b5fc74b1f8914f3820))
+
 ### [1.3.2](http://inindca///compare/v1.3.1...v1.3.2) (2020-09-15)
 
 
