@@ -12,31 +12,33 @@ gux-pagination {
     align-content: stretch;
     align-items: center;
 
-    &.small {
-      gux-pagination-items-per-page {
-        display: none;
-      }
-    }
-
-    & > div {
-      order: 0;
-      flex: 0 1 auto;
-      align-self: auto;
-    }
-
-    .gux-pagination-container-left {
+    .gux-pagination-info {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: flex-start;
       align-content: stretch;
       align-items: center;
+      order: 0;
+      flex: 1 1 auto;
+      align-self: auto;
 
       & > * {
         order: 0;
         flex: 0 1 auto;
         align-self: auto;
       }
+    }
+
+    .gux-pagination-change {
+      margin-left: 16px;
+      order: 0;
+      flex: 1 1 auto;
+      align-self: auto;
+    }
+
+    .gux-pagination-change:first-child {
+      margin-left: 0;
     }
   }
 }
