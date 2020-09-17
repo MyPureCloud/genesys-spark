@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 
 // Style
@@ -54,11 +56,11 @@ gux-disclosure-button {
 
 // Dark
 .gux-disclosure-button-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
 
   .disclosure-button-container button {
-    border-color: @gux-grey-1;
-    color: @gux-off-white;
+    border-color: @gux-grey-global;
+    color: @gux-type-dark;
   }
 }
 
@@ -74,11 +76,11 @@ gux-disclosure-button.gux-dark-theme {
 
 // Light
 .gux-disclosure-button-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 
   .disclosure-button-container button {
     border-color: @gux-border;
-    color: @gux-grey-2;
+    color: @gux-type;
   }
 }
 

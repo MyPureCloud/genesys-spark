@@ -27,7 +27,11 @@ export const config: Config = {
       copy({
         targets: [
           { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
-          { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' }
+          { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' },
+          {
+            src: ['src/style/color-palette.less', 'src/style/typography.less'],
+            dest: 'dist/genesys-webcomponents/less'
+          }
         ]
       })
     ]

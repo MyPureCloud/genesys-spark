@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 
 gux-rating-beta {
@@ -24,14 +26,14 @@ gux-rating-beta {
 .gux-rating-dark-theme {
   .gux-rating-item-shape-default {
     &:hover {
-      stroke: @gux-blue;
+      stroke: @gux-genesys-blue;
     }
     &.gux-rating-item-shape-fill-percent-50 {
-      stroke: @gux-blue;
+      stroke: @gux-genesys-blue;
     }
     &.gux-rating-item-shape-fill-percent-100 {
-      fill: @gux-blue;
-      stroke: @gux-blue;
+      fill: @gux-genesys-blue;
+      stroke: @gux-genesys-blue;
     }
   }
 
@@ -41,7 +43,7 @@ gux-rating-beta {
       &:focus {
         svg {
           .gux-rating-item-shape-default {
-            stroke: @gux-blue;
+            stroke: @gux-genesys-blue;
           }
         }
       }
@@ -54,7 +56,7 @@ gux-rating-beta {
         stop-color: transparent;
       }
       stop:first-child {
-        stop-color: @gux-blue;
+        stop-color: @gux-genesys-blue;
       }
     }
   }
@@ -73,13 +75,13 @@ gux-rating-beta.gux-dark-theme {
 // Light
 .gux-rating-light-theme {
   .gux-rating-item-shape-default {
-    stroke: @gux-icons;
+    stroke: #98a7b8;
     &.gux-rating-item-shape-fill-percent-50 {
-      stroke: @gux-grey-2;
+      stroke: @gux-charcoal-grey;
     }
     &.gux-rating-item-shape-fill-percent-100 {
-      fill: @gux-grey-2;
-      stroke: @gux-grey-2;
+      fill: @gux-charcoal-grey;
+      stroke: @gux-charcoal-grey;
     }
   }
 
@@ -89,7 +91,7 @@ gux-rating-beta.gux-dark-theme {
       &:focus {
         svg {
           .gux-rating-item-shape-default {
-            stroke: @gux-grey-2;
+            stroke: @gux-charcoal-grey;
           }
         }
       }
@@ -102,7 +104,7 @@ gux-rating-beta.gux-dark-theme {
         stop-color: transparent;
       }
       stop:first-child {
-        stop-color: @gux-grey-2;
+        stop-color: @gux-type;
       }
     }
   }

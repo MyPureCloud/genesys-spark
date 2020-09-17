@@ -1,3 +1,6 @@
+@import (reference) '../color.less';
+
+
 /*
  * This is a partial migration of text-field styles for components that want the same text styles
  * as gux-text-field, but need direct access to the input element. It may be worth migrating error
@@ -5,12 +8,12 @@
  */
 
 .input-style {
-  @background-color: @gux-off-white;
-  @text-color: @gux-grey-2;
-  @border: @gux-border-alt;
-  @placeholder: @gux-pale-gray-2;
-  @focus-outline: fade(@gux-blue, 50%);
-  @focus-border: @gux-dark-blue;
+  @background-color: @gux-type-dark;
+  @text-color: @gux-type;
+  @border: #dae1e8;
+  @placeholder: #9baaba;
+  @focus-outline: fade(@gux-genesys-blue, 50%);
+  @focus-border: @gux-genesys-dark-blue;
 
   font-family: inherit;
   height: 32px;
@@ -45,12 +48,12 @@
 }
 
 .input-dark-theme {
-  @dark-background-color: @gux-grey-2;
-  @dark-text-color: @gux-off-white;
-  @dark-border: @gux-grey-1;
-  @dark-placeholder: @gux-pale-gray-2;
-  @dark-focus-border: @gux-blue;
-  @dark-focus-outline: @gux-blue;
+  @dark-background-color: @gux-type;
+  @dark-text-color: @gux-type-dark;
+  @dark-border: @gux-grey-global;
+  @dark-placeholder: #9baaba;
+  @dark-focus-border: @gux-genesys-blue;
+  @dark-focus-outline: @gux-genesys-blue;
 
   background-color: @dark-background-color;
   border: 1px solid @dark-border;

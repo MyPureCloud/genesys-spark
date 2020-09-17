@@ -1,10 +1,12 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 
 // Style
 gux-panel-frame-beta {
   .panel-container {
     border: 1px solid @gux-border;
-    background-color: @gux-off-white;
+    background-color: @gux-type-dark;
     display: flex;
     flex-direction: column;
     padding: 8px 15px;
@@ -41,12 +43,12 @@ gux-panel-frame-beta {
 
 // Dark
 .gux-panel-frame-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
   > div,
   .gux-panel-header,
   .gux-panel-footer {
-    border-color: @gux-grey-1;
-    background-color: @gux-charcoal;
+    border-color: @gux-grey-global;
+    background-color: @gux-charcoal-grey;
   }
 }
 
@@ -62,7 +64,7 @@ gux-panel-frame-beta.gux-dark-theme {
 
 // Light
 .gux-panel-frame-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 }
 
 .gux-light-theme {

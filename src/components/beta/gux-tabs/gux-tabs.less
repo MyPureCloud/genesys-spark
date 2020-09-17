@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 @gux-tabs-background: #e6e8e8;
 @gux-off-tab-fill: #cfd1d1;
@@ -97,11 +99,11 @@ gux-tabs-beta {
 
       .arrow-button {
         background-color: @gux-tabs-background;
-        color: @gux-grey-2;
+        color: @gux-type;
         border-color: @gux-off-tab-fill;
 
         &:hover {
-          color: @gux-dark-blue;
+          color: @gux-genesys-dark-blue;
         }
 
         &:active {
@@ -111,11 +113,11 @@ gux-tabs-beta {
 
       .add-tab {
         background-color: @gux-tabs-background;
-        color: @gux-grey-2;
+        color: @gux-type;
         border-color: @gux-off-tab-fill;
 
         &:hover {
-          color: @gux-dark-blue;
+          color: @gux-genesys-dark-blue;
         }
 
         &:active {
@@ -126,23 +128,23 @@ gux-tabs-beta {
 
     .scrollable-section {
       &::-webkit-scrollbar-track {
-        background: @gux-off-white;
+        background: @gux-background;
       }
 
       &::-webkit-scrollbar-thumb {
-        background: @gux-pale-gray;
+        background: #77828f;
       }
 
       &::-webkit-scrollbar-thumb:hover {
-        background: @gux-grey-2;
+        background: @gux-charcoal-grey;
       }
 
       .add-tab {
         background-color: @gux-off-tab-fill;
-        color: @gux-grey-2;
+        color: @gux-type;
 
         &:hover {
-          color: @gux-dark-blue;
+          color: @gux-genesys-dark-blue;
         }
 
         &:active {

@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 
 gux-spin-button {
@@ -44,7 +46,7 @@ gux-spin-button {
 
       .gux-spin-button {
         background: none;
-        color: @gux-grey-2;
+        color: @gux-type;
         border: none;
         margin: auto 0;
         padding: 0;
@@ -53,12 +55,12 @@ gux-spin-button {
       }
 
       .gux-spin-button:hover {
-        color: @gux-dark-blue;
+        color: @gux-genesys-dark-blue;
         cursor: pointer;
       }
 
       .gux-spin-button[disabled] {
-        color: @gux-grey-2;
+        color: @gux-type;
         opacity: 0.25;
         cursor: default;
       }
@@ -94,7 +96,7 @@ gux-spin-button.gux-light-theme {
 .gux-spin-button-dark-theme {
   button,
   button[disabled] {
-    color: @gux-off-white;
+    color: @gux-type-dark;
   }
 }
 

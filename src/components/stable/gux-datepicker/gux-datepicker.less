@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // Style
 gux-datepicker {
   display: block;
@@ -24,7 +26,7 @@ gux-datepicker {
           margin-left: 10px;
         }
         > button {
-          color: @gux-grey-2;
+          color: @gux-type;
           position: absolute;
           height: 32px;
           font-size: 16px;
@@ -32,7 +34,7 @@ gux-datepicker {
           right: 0;
           z-index: 1;
           &:hover {
-            color: @gux-dark-blue;
+            color: @gux-genesys-dark-blue;
           }
         }
         > div > div > button {
@@ -42,7 +44,7 @@ gux-datepicker {
     }
     &.active {
       > div.gux-datepicker-field > gux-text-field > button {
-        color: @gux-dark-blue;
+        color: @gux-genesys-dark-blue;
       }
       gux-calendar {
         display: block;
@@ -61,7 +63,7 @@ gux-datepicker {
 
 // Light
 .gux-datepicker-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 };
 
 .gux-light-theme {
@@ -80,12 +82,12 @@ gux-datepicker.gux-light-theme {
     > div.gux-datepicker-field {
       gux-text-field {
         label {
-          color: @gux-off-white;
+          color: @gux-type-dark;
         }
         > button {
-          color: @gux-off-white;
+          color: @gux-type-dark;
           &:hover {
-            color: @gux-off-white;
+            color: @gux-type-dark;
           }
         }
       }

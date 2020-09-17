@@ -1,3 +1,5 @@
+@import (reference) '../../../../style/color.less';
+
 // Variables part
 
 // Style
@@ -18,13 +20,13 @@ gux-color-option {
     &:focus,
     &.gux-color-option-active,
     &:active {
-      outline: 1px solid @gux-dark-blue;
+      outline: 1px solid @gux-genesys-dark-blue;
       border: 1px white solid;
     }
 
     &:disabled {
-      background-color: @gux-off-white;
-      border: 1px solid @gux-grey-2;
+      background-color: @gux-type-dark;
+      border: 1px solid @gux-charcoal-grey;
       opacity: 0.5;
       cursor: default;
     }
@@ -39,7 +41,7 @@ gux-color-option {
 
 // Dark
 .gux-color-option-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
 }
 
 .gux-dark-theme {
@@ -54,7 +56,7 @@ gux-color-option.gux-dark-theme {
 
 // Light
 .gux-color-option-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 }
 
 .gux-light-theme {

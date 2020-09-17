@@ -1,10 +1,11 @@
 @import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/color.less';
 
 // Variables part
-@slider-fill: @gux-dark-blue;
+@slider-fill: @gux-genesys-dark-blue;
 @slider-border: #e0e0e0;
 @slider-dark: @gux-off-white;
-@slider-fill-dark: @gux-blue;
+@slider-fill-dark: @gux-genesys-blue;
 
 .track {
   height: 2px;
@@ -181,7 +182,7 @@ gux-slider {
     justify-content: center;
     align-items: center;
     margin-left: -20px;
-    background-color: @gux-off-white;
+    background-color: @gux-type-dark;
 
     &::after,
     &::before {
@@ -196,7 +197,7 @@ gux-slider {
     }
 
     &::after {
-      border-top-color: @gux-off-white;
+      border-top-color: @gux-type-dark;
       border-width: 4px;
       margin-left: -4px;
     }
@@ -266,13 +267,13 @@ gux-slider {
   }
 
   .range-tooltip {
-    color: @gux-grey-type;
+    coclor: @gux-charcoal-grey;
     background-color: @slider-dark;
   }
 
   .slider-display {
     background-color: @slider-dark;
-    color: @gux-grey-type;
+    coclor: @gux-charcoal-grey;
   }
 }
 
