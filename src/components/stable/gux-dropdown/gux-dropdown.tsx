@@ -10,6 +10,7 @@ import {
   State
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
+import { whenEventIsFrom } from '../../../common-utils';
 
 @Component({
   styleUrl: 'gux-dropdown.less',
@@ -17,7 +18,7 @@ import { KeyCode } from '../../../common-enums';
 })
 export class GuxDropdown {
   @Element()
-  root: HTMLGuxDropdownElement;
+  root: HTMLElement;
   textFieldElement: HTMLGuxTextFieldElement;
 
   /**
@@ -50,9 +51,6 @@ export class GuxDropdown {
   opened: boolean;
 
   @State()
-  selectionOptions: HTMLGuxOptionElement[];
-
-  @State()
   forcedGhostValue: string;
 
   @State()
@@ -82,40 +80,42 @@ export class GuxDropdown {
     this.textFieldElement.setLabelledBy(labeledBy);
   }
 
+  // TODO: Fix the keyboard navigation I broke
   onKeyDown(event: KeyboardEvent) {
-    const focusIndex = this.getFocusIndex();
+    const selectionOptions = this.getSelectionOptions();
+    const focusIndex = this.getFocusIndex(selectionOptions);
     switch (event.keyCode) {
       case KeyCode.Up:
         if (focusIndex > 0) {
-          this.selectionOptions[focusIndex - 1].focus();
+          selectionOptions[focusIndex - 1].focus();
         }
         break;
       case KeyCode.Down:
         if (this.inputIsFocused) {
           this.opened = true;
         }
-        if (focusIndex < this.selectionOptions.length - 1) {
-          this.selectionOptions[focusIndex + 1].focus();
+        if (focusIndex < selectionOptions.length - 1) {
+          selectionOptions[focusIndex + 1].focus();
         }
         break;
       case KeyCode.Home:
-        if (!this.selectionOptions.length) {
+        if (!selectionOptions.length) {
           return;
         }
-        this.selectionOptions[0].focus();
+        selectionOptions[0].focus();
         break;
       case KeyCode.End:
-        if (!this.selectionOptions.length) {
+        if (!selectionOptions.length) {
           return;
         }
-        this.selectionOptions[this.selectionOptions.length - 1].focus();
+        selectionOptions[selectionOptions.length - 1].focus();
         break;
       case KeyCode.Enter:
       case KeyCode.Space:
         break;
       default:
         if (!this.filterable) {
-          const arr = this.selectionOptions.filter(item => {
+          const arr = selectionOptions.filter(item => {
             return item.text.startsWith(event.key);
           });
           if (arr[0]) {
@@ -130,45 +130,69 @@ export class GuxDropdown {
     this.opened = false;
     this.emitChange(value);
   }
+
   _clickHandler() {
     if (!this.disabled) {
       this.opened = !this.opened;
     }
   }
+
   _focusHandler() {
     this.inputIsFocused = true;
   }
-  _focusOptionItemHandler(text: string) {
-    this.forcedGhostValue = this.value + text.substring(this.value.length);
+
+  _optionFocusedHandler(e: FocusEvent) {
+    whenEventIsFrom('gux-option', e, elem => {
+      const option = elem as HTMLGuxOptionElement;
+      this.forcedGhostValue =
+        this.value + option.text.substring(this.value.length);
+    });
   }
+
+  private _optionClickedHandler(e: MouseEvent) {
+    whenEventIsFrom('gux-option', e, elem => {
+      const option = elem as HTMLGuxOptionElement;
+      this.setValue(option.text, option.value || option.text);
+    });
+  }
+
+  private _optionKeyDownHandler(e: KeyboardEvent) {
+    if (e.key === ' ' || e.key === 'Enter') {
+      whenEventIsFrom('gux-option', e, elem => {
+        const option = elem as HTMLGuxOptionElement;
+        this.setValue(option.text, option.value || option.text);
+      });
+    }
+  }
+
   _blurHandler() {
     this.inputIsFocused = false;
     this.forcedGhostValue = '';
   }
+
   _inputHandler(event: CustomEvent) {
     this.value = event.detail;
     this.opened = true;
   }
 
-  _showDropdownIcon() {
-    let match = [];
-    if (this.selectionOptions) {
-      match = this.selectionOptions.filter(item => {
-        return item.text === this.value;
-      });
-    }
+  private _showDropdownIcon() {
+    const selectionOptions = this.getSelectionOptions();
+    const match = selectionOptions.filter(item => {
+      return item.text === this.value;
+    });
     const filterableBehavior = !this.value || !!match.length;
     return this.filterable ? filterableBehavior : true;
   }
 
   get filteredItems() {
-    if (this.filterable && this.selectionOptions) {
-      const arr = this.selectionOptions.filter(item => {
+    const selectionOptions = this.getSelectionOptions();
+    if (this.filterable) {
+      const arr = selectionOptions.filter(item => {
         return item.text.toLowerCase().startsWith(this.value.toLowerCase());
       });
       return arr;
     } else {
-      return this.selectionOptions ? this.selectionOptions : [];
+      return selectionOptions;
     }
   }
 
@@ -188,17 +212,26 @@ export class GuxDropdown {
     if (!this.filterable) {
       this.textFieldElement.readonly = true;
     }
-    this.selectionOptions = this.getSelectionOptions();
-    for (const option of this.selectionOptions) {
-      option.addEventListener('selectedChanged', (e: CustomEvent) => {
-        const text = option.text;
-        this.setValue(text, e.detail);
-      });
+  }
 
-      option.addEventListener('onFocus', (e: CustomEvent) => {
-        this._focusOptionItemHandler(e.detail);
-      });
+  private getSelectionOptions(): HTMLGuxOptionElement[] {
+    const result: HTMLGuxOptionElement[] = [];
+    const options: HTMLElement = this.root.getElementsByClassName(
+      'gux-options'
+    )[0] as HTMLElement;
+
+    if (!options) {
+      return [];
     }
+    // Hack around TSX not supporting for..of on HTMLCollection, this
+    // needs to be tested in IE11
+    const childrenElements: any = options.children;
+    for (const child of childrenElements) {
+      if (child.matches('gux-option')) {
+        result.push(child as HTMLGuxOptionElement);
+      }
+    }
+    return result;
   }
 
   render() {
@@ -243,39 +276,28 @@ export class GuxDropdown {
             </button>
           )}
         </div>
-        <div class={`gux-options ${this.opened ? 'opened' : ''}`}>
+        <div
+          class={`gux-options ${this.opened ? 'opened' : ''}`}
+          onClick={this._optionClickedHandler.bind(this)}
+          onFocusIn={this._optionFocusedHandler.bind(this)}
+          onKeyDown={this._optionKeyDownHandler.bind(this)}
+        >
           <slot />
         </div>
       </div>
     );
   }
 
-  private getSelectionOptions(): HTMLGuxOptionElement[] {
-    const result: HTMLGuxOptionElement[] = [];
-    const options: HTMLElement = this.root.getElementsByClassName(
-      'gux-options'
-    )[0] as HTMLElement;
-
-    // Hack around TSX not supporting for..of on HTMLCollection, this
-    // needs to be tested in IE11
-    const childrenElements: any = options.children;
-    for (const child of childrenElements) {
-      if (child.matches('gux-option')) {
-        result.push(child as HTMLGuxOptionElement);
-      }
-    }
-    return result;
-  }
-
-  private getFocusIndex(): number {
-    return this.selectionOptions.findIndex(option => {
+  private getFocusIndex(selectionOptions: HTMLGuxOptionElement[]): number {
+    return selectionOptions.findIndex(option => {
       return option.matches(':focus');
     });
   }
 
   private searchHighlightAndFilter(searchInput: string) {
-    if (this.selectionOptions) {
-      for (const option of this.selectionOptions) {
+    const selectionOptions = this.getSelectionOptions();
+    if (selectionOptions) {
+      for (const option of selectionOptions) {
         option.shouldFilter(searchInput).then(isFiltered => {
           if (this.filterable && isFiltered) {
             option.classList.add('filtered');
