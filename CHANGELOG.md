@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](http://inindca///compare/v1.4.0...v1.5.0) (2020-09-17)
+
+
+### Features
+
+* **color-styles:** exporting common color variables ([eec3866](http://inindca///commit/eec3866d0734339b9fa3beace3102178c5f50303))
+
+
+### Bug Fixes
+
+* **gux-dropdown:** better handle asynchronously loaded options ([dcc1c13](http://inindca///commit/dcc1c13033025e723e4a3cf90967f95373f55d8f))
+
 ## [1.4.0](http://inindca///compare/v1.3.2...v1.4.0) (2020-09-16)
 
 
