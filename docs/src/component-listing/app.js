@@ -7,7 +7,7 @@ export function bootstrap() {
   let components = Object.keys(COMPONENT_SPEC)
     .filter(component => !COMPONENT_SPEC[component].hidePage)
     .sort((a, b) => {
-      return a < b ? -1 : 1;
+      return shortName(a) < shortName(b) ? -1 : 1;
     });
 
   document.body.appendChild(
