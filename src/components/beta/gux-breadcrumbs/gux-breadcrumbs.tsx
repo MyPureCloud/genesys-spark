@@ -28,7 +28,12 @@ export class GuxBreadcrumbs {
 
   render() {
     return (
-      <nav aria-label={this.i18n('label')} class="breadcrumbs">
+      <nav
+        aria-label={this.i18n('label')}
+        class={`breadcrumbs ${
+          this.accent === 'primary' ? 'gux-large-text' : ''
+        }`}
+      >
         <slot />
       </nav>
     );

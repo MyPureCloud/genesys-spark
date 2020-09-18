@@ -3,11 +3,14 @@ gux-breadcrumbs-beta {
     display: block;
     border: none;
   }
+  .link-row {
+    display: inline-flex;
+  }
   .separator {
+    align-self: center;
     padding: 0 7px;
   }
   a.breadcrumb {
-    color: -webkit-link;
     padding: 0;
   }
 }
@@ -15,7 +18,7 @@ gux-breadcrumbs-beta {
 // Light theme
 .gux-breadcrumbs-light-theme {
   .separator {
-    color: @gux-grey-2;
+    color: @gux-icons;
   }
 }
 .gux-light-theme {

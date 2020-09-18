@@ -13,23 +13,26 @@ export class GuxBreadcrumbItem {
   @Prop()
   href: string;
 
+  private isAccentSecondary() {
+    return this.accent === 'secondary';
+  }
+
   render() {
-    const separatorIcon =
-      this.accent === 'secondary' ? (
-        <gux-icon
-          class="separator"
-          icon-name="ic-chevron-right"
-          decorative
-        ></gux-icon>
-      ) : (
-        <span class="separator" aria-hidden="true">
-          /
-        </span>
-      );
+    const separatorIcon = this.isAccentSecondary() ? (
+      <gux-icon
+        class="separator"
+        icon-name="ic-chevron-small-right"
+        decorative
+      ></gux-icon>
+    ) : (
+      <span class="separator" aria-hidden="true">
+        /
+      </span>
+    );
     const separator = this.lastBreadcrumb ? '' : separatorIcon;
-    if (this.href && !this.lastBreadcrumb) {
+    if (this.href && !this.lastBreadcrumb && this.isAccentSecondary()) {
       return (
-        <span>
+        <span class="link-row">
           <a class="breadcrumb" href={this.href}>
             <slot />
           </a>
