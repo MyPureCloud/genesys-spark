@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](http://inindca///compare/v1.5.0...v1.5.1) (2020-09-18)
+
+
+### Bug Fixes
+
+* **doc-site:** fix the sort order of components ([40fcb0c](http://inindca///commit/40fcb0c0beac68670ce87a225439089d951b4a4b))
+
 ## [1.5.0](http://inindca///compare/v1.4.0...v1.5.0) (2020-09-17)
 
 
