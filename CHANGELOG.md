@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.2](http://inindca///compare/v1.5.1...v1.5.2) (2020-09-21)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed styling of date range labels ([70f28e8](http://inindca///commit/70f28e87463a79241a2c8d2c30e227e45d53e9ae))
+
 ### [1.5.1](http://inindca///compare/v1.5.0...v1.5.1) (2020-09-18)
 
 
