@@ -29,7 +29,9 @@
       "filter": "Filter value changed"
     }
   },
-  "gux-breadcrumbs": {
+  "gux-breadcrumbs": {},
+  "gux-breadcrumbs-beta": {
+    "hidePage": true,
     "attributes": {
       "accent": ["primary", "secondary"]
     }
