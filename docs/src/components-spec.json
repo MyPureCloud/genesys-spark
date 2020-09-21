@@ -159,7 +159,7 @@
       "message": "text"
     },
     "events": {
-      "closeClick": "Triggered when the close icon is clicked"
+      "guxdismiss": "Triggered when the dismiss icon is clicked"
     }
   },
   "gux-page-loading-spinner": {},
