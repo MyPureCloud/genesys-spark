@@ -16,15 +16,22 @@ gux-datepicker {
       position: relative;
       display: inline-block;
       width: 200px;
-      margin-right: 12px;
+      margin-right: 20px;
+
       gux-text-field {
         position: relative;
+
+        &:hover {
+          > button {
+            color: @gux-genesys-dark-blue;
+          }
+        }
+
+
         input::-ms-clear {
           display: none;
         }
-        &.gux-to-date {
-          margin-left: 10px;
-        }
+
         > button {
           color: @gux-type;
           position: absolute;
@@ -33,9 +40,6 @@ gux-datepicker {
           bottom: 0;
           right: 0;
           z-index: 1;
-          &:hover {
-            color: @gux-genesys-dark-blue;
-          }
         }
         > div > div > button {
           display: none;
