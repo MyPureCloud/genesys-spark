@@ -10,7 +10,7 @@
 @gux-table-scroll-divider: rgba(34, 37, 41, 0.1);
 @gux-table-scroll-thumb: #B5B6B7;
 
-gux-table-beta {
+gux-table {
   display: block;
 
   .gux-table {
@@ -130,10 +130,22 @@ gux-table-beta {
       }
 
       table {
-        th {
-          position: sticky;
-          top: 0;
-          background: @gux-off-white;
+        thead {
+          th {
+            position: sticky;
+            top: 0;
+            background: @gux-off-white;
+          }
+
+          .gux-column-resize {
+            cursor: col-resize;
+            height: 100%;
+            position: absolute;
+            right: -1px;
+            top: 0;
+            width: 3px;
+            z-index: 99;
+          }
         }
 
         tbody {
@@ -166,6 +178,17 @@ gux-table-beta {
         th:last-child {
           padding-right: 48px;
         }
+      }
+    }
+
+    &.column-resizing-hover,
+    &.column-resizing {
+      cursor: col-resize;
+
+      .gux-column-sort-arrow-down,
+      .gux-column-sort-arrow-up,
+      .gux-column-sort-highlight {
+        display: none !important;
       }
     }
   }

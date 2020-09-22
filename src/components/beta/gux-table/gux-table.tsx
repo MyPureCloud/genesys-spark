@@ -9,18 +9,21 @@ import {
 } from '@stencil/core';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import tableResources from './i18n/en.json';
+import { IColumnResizeState } from './gux-table-constants';
 
 @Component({
   styleUrl: 'gux-table.less',
-  tag: 'gux-table-beta'
+  tag: 'gux-table'
 })
 export class GuxTable {
   @Element()
   root: HTMLElement;
 
   private resizeObserver: ResizeObserver;
-
   private i18n: GetI18nValue;
+  private columnResizeState: IColumnResizeState | null;
+  private tableId: string = this.generateTableId();
+  private columnsWidths: object = {};
 
   /**
    * Indicates that vertical scroll is presented for table
@@ -64,6 +67,12 @@ export class GuxTable {
   @Prop()
   emptyMessage: string;
 
+  /**
+   * Indicates that table should have resizable columns
+   */
+  @Prop()
+  resizableColumns: boolean;
+
   @Listen('scroll', { capture: true })
   onScroll(): void {
     const scrollLeft = this.tableContainer.querySelector('.gux-table-container')
@@ -76,6 +85,27 @@ export class GuxTable {
       this.isScrolledToFirstCell = true;
     } else if (maxScrollLeft - scrollLeft - this.tableScrollbarConstant === 0) {
       this.isScrolledToLastCell = true;
+    }
+  }
+
+  @Listen('mouseup', { capture: true })
+  onMouseUp(): void {
+    if (this.columnResizeState) {
+      this.tableContainer.classList.remove('column-resizing');
+      this.columnResizeState = null;
+    }
+  }
+
+  @Listen('mousemove', { capture: true })
+  onMouseMove(event: MouseEvent): void {
+    if (this.columnResizeState) {
+      const columnName = this.columnResizeState.resizableColumn.dataset
+        .columnName;
+      const columnWidth =
+        this.columnResizeState.resizableColumnInitialWidth +
+        (event.pageX - this.columnResizeState.columnResizeMouseStartX);
+      this.columnsWidths[columnName] = `${columnWidth > 1 ? columnWidth : 1}px`;
+      this.setResizableColumnsStyles();
     }
   }
 
@@ -115,6 +145,10 @@ export class GuxTable {
     ]
       .join(' ')
       .trim();
+  }
+
+  private generateTableId(): string {
+    return `gux-table-${Math.random().toString(36).substr(2, 9)}`;
   }
 
   private previousColumn(): void {
@@ -218,11 +252,65 @@ export class GuxTable {
       tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
   }
 
+  private prepareResizableColumns(): void {
+    const styleElement = document.createElement('style');
+    styleElement.id = `${this.tableId}-styles`;
+    document.querySelector('head').appendChild(styleElement);
+
+    const columnsElements = Array.from(
+      this.tableContainer.querySelectorAll('thead th')
+    ).slice(0, -1);
+
+    const resizeElement = document.createElement('div');
+    resizeElement.setAttribute('class', 'gux-column-resize');
+
+    columnsElements.forEach((column: HTMLElement) => {
+      const columnResizeElement = resizeElement.cloneNode(true);
+
+      columnResizeElement.addEventListener('mouseover', () => {
+        this.tableContainer.classList.add('column-resizing-hover');
+      });
+      columnResizeElement.addEventListener('mouseleave', () => {
+        this.tableContainer.classList.remove('column-resizing-hover');
+      });
+
+      columnResizeElement.addEventListener('mousedown', (event: MouseEvent) => {
+        const currentElement = event.target as HTMLElement;
+        const resizableColumn = currentElement.parentNode as HTMLElement;
+
+        this.columnResizeState = {
+          resizableColumn,
+          columnResizeMouseStartX: event.pageX,
+          resizableColumnInitialWidth: resizableColumn.clientWidth - 12 - 24
+        };
+
+        this.tableContainer.classList.add('column-resizing');
+      });
+
+      column.appendChild(columnResizeElement);
+    });
+  }
+
+  private setResizableColumnsStyles(): void {
+    const styleElement = document.getElementById(`${this.tableId}-styles`);
+    let columnsStyles = '';
+
+    Object.keys(this.columnsWidths).forEach((column: string) => {
+      columnsStyles += `#${this.tableId} th[data-column-name="${column}"]{width:${this.columnsWidths[column]};min-width:${this.columnsWidths[column]};}`;
+    });
+
+    styleElement.innerHTML = columnsStyles;
+  }
+
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, tableResources);
 
     if (!this.emptyMessage) {
       this.emptyMessage = this.i18n('emptyMessage');
+    }
+
+    if (this.resizableColumns) {
+      this.prepareResizableColumns();
     }
 
     setTimeout(() => {
@@ -252,12 +340,16 @@ export class GuxTable {
         this.tableContainer.querySelector('.gux-table-container table')
       );
     }
+
+    if (this.resizableColumns) {
+      document.getElementById(`${this.tableId}-styles`).remove();
+    }
   }
 
   render() {
     return (
       <div class={this.tableClasses}>
-        <div class={this.tableContainerClasses}>
+        <div id={this.tableId} class={this.tableContainerClasses}>
           <slot name="data" />
         </div>
         {this.isHorizontalScroll && (
