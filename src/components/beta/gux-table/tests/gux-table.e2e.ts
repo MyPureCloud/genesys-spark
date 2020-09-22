@@ -10,7 +10,7 @@ describe('gux-table', () => {
 
   it('renders', async () => {
     await page.setContent(`
-      <gux-table-beta>
+      <gux-table>
         <table slot="data">
           <thead>
             <tr>
@@ -25,9 +25,9 @@ describe('gux-table', () => {
             </tr>
           </tbody>
         </table>
-      </gux-table-beta>
+      </gux-table>
     `);
-    element = await page.find('gux-table-beta');
+    element = await page.find('gux-table');
     expect(element).toHaveClass('hydrated');
   });
 });
