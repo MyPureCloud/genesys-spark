@@ -198,6 +198,11 @@
     },
     "events": { "guxdismiss": "popover dismissed" }
   },
+  "gux-radial-loading": {
+    "attributes": {
+      "context": ["modal", "input", "full-page"]
+    }
+  },
   "gux-radial-progress": {
     "attributes": { "value": "text", "max": "text" }
   },
