@@ -238,16 +238,20 @@ export class GuxTable {
         });
       }
 
-      this.resizeObserver.observe(
-        this.tableContainer.querySelector('.gux-table-container table')
-      );
+      if (this.resizeObserver) {
+        this.resizeObserver.observe(
+          this.tableContainer.querySelector('.gux-table-container table')
+        );
+      }
     });
   }
 
   disconnectedCallback(): void {
-    this.resizeObserver.unobserve(
-      this.tableContainer.querySelector('.gux-table-container table')
-    );
+    if (this.resizeObserver) {
+      this.resizeObserver.unobserve(
+        this.tableContainer.querySelector('.gux-table-container table')
+      );
+    }
   }
 
   render() {

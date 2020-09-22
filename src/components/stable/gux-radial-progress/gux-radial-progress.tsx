@@ -1,6 +1,6 @@
 import { Component, h, JSX, Prop } from '@stencil/core';
 
-const RADIUS = 26;
+const RADIUS = 23.5;
 const STROKE_DASH = 2 * Math.PI * RADIUS;
 
 let idCounter = 0;
@@ -44,9 +44,9 @@ export class GuxRadialProgress {
       >
         <svg
           class="svg-container"
-          width="65px"
-          height="65px"
-          viewBox="0 0 65 65"
+          width="60px"
+          height="60px"
+          viewBox="0 0 60 60"
         >
           <filter id={this.dropshadowId}>
             <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
@@ -76,10 +76,6 @@ export class GuxRadialProgress {
   }
 
   private showSpinnerState(): JSX.Element {
-    return (
-      <div aria-busy="true">
-        <div class="spinner" />
-      </div>
-    );
+    return <gux-radial-loading-beta context="modal"></gux-radial-loading-beta>;
   }
 }

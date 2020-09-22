@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // <svg xmlns="http://www.w3.org/2000/svg" viewBox="92 33 324 320"><path d="M256 350q66 0 113 -46.5t47 -111.5t-47 -111.5t-113 -46.5t-113 46.5t-47 111.5t47 111.5t113 46.5zM256 62q53 0 90.5 37.5t37.5 90.5t-37.5 90.5t-90.5 37.5t-90.5 -37.5t-37.5 -90.5t37.5 -90.5t90.5 -37.5z" fill="#98a7b8"/></svg>
 @gux-icon-radio-unchecked: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='92 33 324 320'%3E%3Cpath d='M256 350q66 0 113 -46.5t47 -111.5t-47 -111.5t-113 -46.5t-113 46.5t-47 111.5t47 111.5t113 46.5zM256 62q53 0 90.5 37.5t37.5 90.5t-37.5 90.5t-90.5 37.5t-90.5 -37.5t-37.5 -90.5t37.5 -90.5t90.5 -37.5z' fill='%2398a7b8'/%3E%3C/svg%3E");
 @gux-icon-radio-unchecked-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='92 33 324 320'%3E%3Cpath d='M256 350q66 0 113 -46.5t47 -111.5t-47 -111.5t-113 -46.5t-113 46.5t-47 111.5t47 111.5t113 46.5zM256 62q53 0 90.5 37.5t37.5 90.5t-37.5 90.5t-90.5 37.5t-90.5 -37.5t-37.5 -90.5t37.5 -90.5t90.5 -37.5z' fill='%232a60c8'/%3E%3C/svg%3E");
@@ -11,7 +13,7 @@ gux-radio {
 
   .gux-radio-container {
     position: relative;
-    padding-left: @gux-icon-size-default + 4px;
+    padding-left: @gux-icon-size-default-global + 4px;
   }
 
   input {
@@ -31,8 +33,8 @@ gux-radio {
     position: absolute;
     left: 0;
     top: 0;
-    width: @gux-icon-size-default;
-    height: @gux-icon-size-default;
+    width: @gux-icon-size-default-global;
+    height: @gux-icon-size-default-global;
   }
 
   input:not(:checked) ~ label::after {
@@ -56,7 +58,7 @@ gux-radio {
 }
 
 .gux-radio-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
 
   input:checked ~ label::after {
     background-image: @gux-icon-radio-checked-dark;
@@ -79,7 +81,7 @@ gux-radio.gux-dark-theme {
 
 // Light
 .gux-radio-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 }
 
 .gux-light-theme {

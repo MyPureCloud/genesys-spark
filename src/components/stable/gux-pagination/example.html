@@ -2,27 +2,55 @@
   <h1>English</h1>
   <h2>Full</h2>
   <div lang="en">
+    <div class="table-placeholder"></div>
     <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
+  </div>
+
+  <h2>Expanded</h2>
+  <div lang="en">
+    <div class="table-placeholder"></div>
+    <gux-pagination total-items="421" items-per-page="25" layout="expanded"></gux-pagination>
   </div>
 
   <h2>Small</h2>
   <div lang="en">
+    <div class="table-placeholder"></div>
     <gux-pagination total-items="123" items-per-page="25" layout="small"></gux-pagination>
   </div>
 
   <h1>German</h1>
   <div lang="de">
+    <div class="table-placeholder"></div>
     <gux-pagination total-items="123" items-per-page="50"></gux-pagination>
   </div>
 
   <h1>Japanese</h1>
   <div lang="ja">
+    <div class="table-placeholder"></div>
     <gux-pagination current-page="3" total-items="123" items-per-page="25"></gux-pagination>
   </div>
 
 
   <h1>No Options</h1>
   <div>
+    <div class="table-placeholder"></div>
     <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
   </div>
 </div>
+
+<style>
+  .table-placeholder {
+    padding: 10px;
+    border: 1px dashed gainsboro;
+    text-align: center;
+    color: gainsboro;
+    background-image: linear-gradient(45deg, GAINSBORO 25%, transparent 25%, transparent 50%, GAINSBORO 50%, GAINSBORO 75%, transparent 75%, #fff);
+    background-size: 5px 5px;
+  }
+
+  .table-placeholder:before {
+    content: "Table Placeholder";
+    background-color: white;
+    padding: 5px
+  }
+</style>

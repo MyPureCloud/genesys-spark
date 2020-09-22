@@ -1,22 +1,23 @@
 @import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/color.less';
 
 // Variables part
 @background-color: #f9fafb;
 @background-color-dark-theme: #555d66;
 
-@text-color: @gux-grey-2;
-@text-color-dark-theme: @gux-off-white;
+@text-color: @gux-type;
+@text-color-dark-theme: @gux-type-dark;
 
-@placeholder: @gux-pale-gray-2;
+@placeholder: #9baaba;
 
-@border-color: @gux-border-alt;
-@border-color-dark-theme: @gux-grey-1;
+@border-color: #dae1e8;
+@border-color-dark-theme: @gux-grey-global;
 
-@focus-outline: fade(@gux-blue, 50%);
-@focus-outline-dark-theme: @gux-blue;
-@active-border: @gux-dark-blue;
+@focus-outline: fade(@gux-genesys-blue, 50%);
+@focus-outline-dark-theme: @gux-genesys-blue;
+@active-border: @gux-genesys-dark-blue;
 
-@menu-background-color: @gux-off-white;
+@menu-background-color: @gux-type-dark;
 @menu-border-color: #dae1eb;
 
 // Style
@@ -137,14 +138,14 @@ gux-dropdown {
 
         &:not([disabled]) {
           &[selected] {
-            background: @gux-light-blue;
+            background: #deeaff;
             color: @text-color;
           }
 
           &:hover,
           &:focus {
-            background: @gux-dark-blue;
-            color: @gux-off-white;
+            background: @gux-genesys-dark-blue;
+            color: @gux-type-dark;
           }
         }
       }
@@ -175,7 +176,7 @@ gux-dropdown {
             &:focus {
               box-shadow: none;
               border: none;
-              border-bottom: 2px solid fade(@gux-blue, 50%);
+              border-bottom: 2px solid fade(@gux-genesys-blue, 50%);
             }
           }
         }
@@ -183,7 +184,7 @@ gux-dropdown {
 
       &.active {
         .select-field gux-text-field input:focus {
-          border-bottom: 1px solid @gux-dark-blue;
+          border-bottom: 1px solid @gux-genesys-dark-blue;
         }
       }
     }
@@ -212,7 +213,7 @@ gux-dropdown {
             &:focus {
               box-shadow: none;
               border: none;
-              border-bottom: 2px solid fade(@gux-blue, 50%);
+              border-bottom: 2px solid fade(@gux-genesys-blue, 50%);
             }
           }
         }
@@ -220,7 +221,7 @@ gux-dropdown {
 
       &.active {
         .select-field gux-text-field input:focus {
-          border-bottom: 1px solid @gux-dark-blue;
+          border-bottom: 1px solid @gux-genesys-dark-blue;
         }
       }
     }
@@ -264,8 +265,8 @@ gux-dropdown {
     &.page {
       .select-field {
         .ghost {
-          background-color: @gux-off-white-bg;
-          color: @gux-grey-bg-3;
+          background-color: @gux-background;
+          color: #9baab8;
         }
 
         gux-text-field input {
@@ -275,15 +276,15 @@ gux-dropdown {
 
       &.active {
         gux-text-field input {
-          border-bottom: 1px solid @gux-blue;
+          border-bottom: 1px solid @gux-genesys-blue;
         }
       }
     }
     &.palette {
       .select-field {
         .ghost {
-          background-color: @gux-off-white-bg;
-          color: @gux-grey-bg-3;
+          background-color: @gux-background;
+          color: #9baab8;
         }
         gux-text-field {
           input {
@@ -294,7 +295,7 @@ gux-dropdown {
       &.active {
         gux-text-field {
           input {
-            border-bottom: 1px solid @gux-blue;
+            border-bottom: 1px solid @gux-genesys-blue;
           }
         }
       }
@@ -313,12 +314,12 @@ gux-dropdown {
 
 // Dark
 .gux-dropdown-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
   div.gux-dropdown {
     .select-field {
       .ghost {
         background-color: @background-color-dark-theme;
-        color: @gux-pale-gray-2;
+        color: #9baaba;
       }
 
       gux-text-field input {
@@ -355,42 +356,42 @@ gux-dropdown {
     &.page {
       .select-field {
         .ghost {
-          background-color: @gux-charcoal;
+          background-color: @gux-charcoal-grey;
         }
 
         gux-text-field input {
-          border-color: @gux-grey-1;
+          border-color: @gux-grey-global;
 
           &:focus {
-            border-color: fade(@gux-blue, 50%);
+            border-color: fade(@gux-genesys-blue, 50%);
           }
         }
       }
 
       &.active {
         gux-text-field input:focus {
-          border-bottom: 1px solid @gux-blue;
+          border-bottom: 1px solid @gux-genesys-blue;
         }
       }
     }
     &.palette {
       .select-field {
         .ghost {
-          background-color: @gux-charcoal;
+          background-color: @gux-charcoal-grey;
         }
 
         gux-text-field input {
-          border-color: @gux-grey-1;
+          border-color: @gux-grey-global;
 
           &:focus {
-            border-color: fade(@gux-blue, 50%);
+            border-color: fade(@gux-genesys-blue, 50%);
           }
         }
       }
 
       &.active {
         gux-text-field input:focus {
-          border-bottom: 1px solid @gux-blue;
+          border-bottom: 1px solid @gux-genesys-blue;
         }
       }
     }

@@ -9,8 +9,9 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
-import paginationResources from './i18n/en.json';
 import { GuxPaginationLayout } from '../gux-pagination';
+import paginationResources from './i18n/en.json';
+import { GuxPaginationButtonsService } from './gux-pagination-button.service';
 
 @Component({
   styleUrl: 'gux-pagination-buttons.less',
@@ -60,6 +61,10 @@ export class GuxPaginationButtons {
     this.internalcurrentpagechange.emit(this.totalPages);
   }
 
+  private handleClickPage(pageNumber: number): void {
+    this.internalcurrentpagechange.emit(pageNumber);
+  }
+
   private setPageFromInput(value: string): void {
     const page = parseInt(value, 10);
 
@@ -70,14 +75,82 @@ export class GuxPaginationButtons {
     }
   }
 
+  private getPageListEnteries(
+    currentPage: number,
+    totalPages: number
+  ): JSX.Element[] {
+    return GuxPaginationButtonsService.getPageList(
+      currentPage,
+      totalPages
+    ).reduce((acc, cv) => {
+      if (cv.current) {
+        return acc.concat(
+          <button class="gux-pagination-buttons-list-current">
+            {cv.display}
+          </button>
+        );
+      }
+
+      return acc.concat(
+        <button
+          class="gux-pagination-buttons-list-target"
+          onClick={() => this.handleClickPage(cv.pageNumber)}
+        >
+          {cv.display}
+        </button>
+      );
+    }, []);
+  }
+
+  private getSmallPagePicker(): JSX.Element {
+    return <div class={'gux-pagination-buttons-spacer'}></div>;
+  }
+
+  private getExpandedPagePicker(): JSX.Element {
+    return (
+      <div class="gux-pagination-buttons-list-container">
+        {this.getPageListEnteries(this.currentPage, this.totalPages)}
+      </div>
+    );
+  }
+
+  private getFullPagePicker(): JSX.Element {
+    return (
+      <div class="gux-pagination-buttons-input-container">
+        <div>{this.i18n('page')}</div>
+        <div class="gux-pagination-buttons-input">
+          <gux-text-field
+            value={String(this.currentPage)}
+            ref={ref => (this.textFieldRef = ref)}
+            use-clear-button="false"
+            onChange={() => this.setPageFromInput(this.textFieldRef.value)}
+          />
+        </div>
+        <div>{this.i18n('totalPages', { totalPages: this.totalPages })}</div>
+      </div>
+    );
+  }
+
+  private getPagePicker(layout: GuxPaginationLayout): JSX.Element {
+    if (layout === 'small') {
+      return this.getSmallPagePicker();
+    }
+
+    if (layout === 'expanded') {
+      return this.getExpandedPagePicker();
+    }
+
+    return this.getFullPagePicker();
+  }
+
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.element, paginationResources);
   }
 
   render(): JSX.Element {
     return (
-      <div class="gux-pagination-buttons-container">
-        <div class={`gux-pagination-buttons-group ${this.layout}`}>
+      <div class={`gux-pagination-buttons-container ${this.layout}`}>
+        <div class="gux-pagination-buttons-group">
           <gux-button
             title={this.i18n('first')}
             disabled={this.onFirstPage}
@@ -94,22 +167,9 @@ export class GuxPaginationButtons {
           </gux-button>
         </div>
 
-        <div class={`gux-pagination-buttons-input-container ${this.layout}`}>
-          <div>{this.i18n('page')}</div>
-          <div class="gux-pagination-buttons-input">
-            <gux-text-field
-              value={String(this.currentPage)}
-              ref={ref => (this.textFieldRef = ref)}
-              use-clear-button="false"
-              onChange={() => this.setPageFromInput(this.textFieldRef.value)}
-            />
-          </div>
-          <div>{this.i18n('totalPages', { totalPages: this.totalPages })}</div>
-        </div>
+        {this.getPagePicker(this.layout)}
 
-        <div class={`gux-pagination-buttons-small-spacer ${this.layout}`}></div>
-
-        <div class={`gux-pagination-buttons-group ${this.layout}`}>
+        <div class="gux-pagination-buttons-group">
           <gux-button
             title={this.i18n('next')}
             disabled={this.onLastPage}

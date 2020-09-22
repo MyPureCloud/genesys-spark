@@ -628,13 +628,12 @@ export class GuxDatepicker {
         </div>
         {this.mode === CalendarModes.Range && (
           <div
-            class="gux-datepicker-field datepicker-to"
+            class="gux-datepicker-field"
             ref={(el: HTMLDivElement) => (this.fieldDatepickerElement = el)}
           >
             <gux-text-label label={this.calendarLabels[1]} position="beside">
               <gux-text-field
                 type="text"
-                class="gux-to-date"
                 ref={(el: HTMLGuxTextFieldElement) =>
                   (this.toTextFieldElement = el)
                 }

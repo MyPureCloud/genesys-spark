@@ -1,6 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxDropdown } from '../gux-dropdown';
 import { GuxOption } from '../gux-option/gux-option';
+import { whenEventIsFrom } from '../../../../common-utils';
 
 describe('gux-dropdown', () => {
   let component: GuxDropdown;
@@ -50,10 +51,22 @@ describe('gux-dropdown', () => {
         component._focusHandler();
         expect(component.inputIsFocused).toEqual(true);
       });
-      it('_focusListItemHandler', () => {
+      it('_focusListItemHandler responds to events from options', () => {
         const value = 'dummy';
-        component._focusOptionItemHandler(value);
+        const option = document.createElement('gux-option');
+        option.setAttribute('text', value);
+        const event = { target: option };
+        component._optionFocusedHandler(event);
         expect(component.forcedGhostValue).toEqual(value);
+      });
+      it('_focusListItemHandler ignores events not from options', () => {
+        const value = 'dummy';
+        const event = {
+          target: document.createElement('div')
+        };
+
+        component._optionFocusedHandler(event);
+        expect(component.forcedGhostValue).not.toEqual(value);
       });
       it('_blurHandler', () => {
         component._blurHandler();

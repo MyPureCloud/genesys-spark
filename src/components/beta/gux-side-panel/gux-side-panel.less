@@ -1,11 +1,13 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 
 // Style
 gux-side-panel-beta {
   aside {
     height: 100%;
-    background-color: @gux-off-white;
-    color: @gux-grey-2;
+    background-color: @gux-type-dark;
+    color: @gux-type;
     display: flex;
     flex-direction: row-reverse;
     position: relative;
@@ -54,13 +56,13 @@ gux-side-panel-beta {
 
 // Dark
 .gux-side-panel-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
 
   aside {
-    background-color: @gux-charcoal;
+    background-color: @gux-charcoal-grey;
 
     .panel-icons {
-      border-color: @gux-grey-1;
+      border-color: @gux-grey-global;
     }
   }
 }
@@ -77,7 +79,7 @@ gux-side-panel-beta.gux-dark-theme {
 
 // Light
 .gux-side-panel-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 }
 
 .gux-light-theme {
