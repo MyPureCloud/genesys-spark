@@ -1,5 +1,5 @@
 <h1>Data table</h1>
-<gux-table-beta>
+<gux-table>
   <table slot="data">
     <thead>
       <tr>
@@ -36,10 +36,10 @@
       </tr>
     </tbody>
   </table>
-</gux-table-beta>
+</gux-table>
 
 <h1>Data table compact</h1>
-<gux-table-beta compact>
+<gux-table compact>
   <table slot="data">
     <thead>
       <tr>
@@ -76,10 +76,10 @@
       </tr>
     </tbody>
   </table>
-</gux-table-beta>
+</gux-table>
 
 <h1>Object table</h1>
-<gux-table-beta object-table>
+<gux-table object-table>
   <table slot="data">
     <thead>
       <tr>
@@ -116,10 +116,10 @@
       </tr>
     </tbody>
   </table>
-</gux-table-beta>
+</gux-table>
 
 <h1>Empty table</h1>
-<gux-table-beta object-table>
+<gux-table object-table>
   <table slot="data">
     <thead>
       <tr>
@@ -130,10 +130,10 @@
       </tr>
     </thead>
   </table>
-</gux-table-beta>
+</gux-table>
 
 <h1>Data table with scroll</h1>
-<gux-table-beta style="height: 150px;">
+<gux-table style="height: 150px;">
   <table slot="data">
     <thead>
       <tr>
@@ -244,4 +244,44 @@
       </tr>
     </tbody>
   </table>
-</gux-table-beta>
+</gux-table>
+
+<h1>Data table with sortable columns</h1>
+<gux-table>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th data-column-name="first-name" data-sortable data-sort="asc">First name</th>
+        <th data-column-name="last-name" data-sortable>Last name</th>
+        <th data-column-name="age" data-sortable data-cell-numeric data-sort="desc">Age</th>
+        <th data-column-name="action" data-cell-action>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td data-cell-numeric>25</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td data-cell-numeric>23</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td data-cell-numeric>21</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td data-cell-numeric>23</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table>

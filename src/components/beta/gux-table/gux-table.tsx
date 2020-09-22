@@ -1,6 +1,8 @@
 import {
   Component,
   Element,
+  Event,
+  EventEmitter,
   h,
   Listen,
   Prop,
@@ -12,7 +14,7 @@ import tableResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-table.less',
-  tag: 'gux-table-beta'
+  tag: 'gux-table'
 })
 export class GuxTable {
   @Element()
@@ -63,6 +65,11 @@ export class GuxTable {
    */
   @Prop()
   emptyMessage: string;
+
+  /**
+   * Triggers when the sorting of the table column is changed.
+   */
+  @Event() sortChanged: EventEmitter;
 
   @Listen('scroll', { capture: true })
   onScroll(): void {
@@ -218,12 +225,58 @@ export class GuxTable {
       tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
   }
 
+  private prepareSortableColumns(): void {
+    const columnsElements = Array.from(
+      this.tableContainer.querySelectorAll('thead th')
+    );
+    const downArrow = document.createElement('gux-icon');
+    const upArrow = document.createElement('gux-icon');
+    const sortingHiglight = document.createElement('div');
+
+    downArrow.setAttribute('icon-name', 'ic-arrow-solid-down');
+    downArrow.setAttribute('class', 'gux-column-sort-arrow-down');
+    downArrow.setAttribute('decorative', '');
+    upArrow.setAttribute('icon-name', 'ic-arrow-solid-up');
+    upArrow.setAttribute('class', 'gux-column-sort-arrow-up');
+    upArrow.setAttribute('decorative', '');
+    sortingHiglight.setAttribute('class', 'gux-column-sort-highlight');
+
+    columnsElements.forEach((column: HTMLElement) => {
+      if (column.dataset.hasOwnProperty('sortable')) {
+        column.appendChild(downArrow.cloneNode(true));
+        column.appendChild(upArrow.cloneNode(true));
+        column.appendChild(sortingHiglight.cloneNode(true));
+        column.onclick = (event: MouseEvent) => {
+          const columnElement = event.target as HTMLElement;
+          const sortDirection = columnElement.dataset.sort || '';
+          let newSortDirection = null;
+
+          switch (sortDirection) {
+            case '':
+              newSortDirection = 'asc';
+              break;
+            case 'asc':
+              newSortDirection = 'desc';
+              break;
+          }
+
+          this.sortChanged.emit({
+            columnName: columnElement.dataset.columnName,
+            sortDirection: newSortDirection
+          });
+        };
+      }
+    });
+  }
+
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, tableResources);
 
     if (!this.emptyMessage) {
       this.emptyMessage = this.i18n('emptyMessage');
     }
+
+    this.prepareSortableColumns();
 
     setTimeout(() => {
       this.checkHorizontalScroll();

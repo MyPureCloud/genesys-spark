@@ -336,7 +336,9 @@
       "object-table": "checkbox",
       "epmty-message": "text"
     },
-    "events": {}
+    "events": {
+      "sortChanged": "Fired when sorting of the table column is changed"
+    }
   },
   "typography": {},
   "color": {}

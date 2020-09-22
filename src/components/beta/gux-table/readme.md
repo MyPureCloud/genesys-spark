@@ -14,6 +14,13 @@
 | `objectTable`  | `object-table`  | Indicates that object table specific styles should be applied    | `boolean` | `false`     |
 
 
+## Events
+
+| Event         | Description                                               | Type               |
+| ------------- | --------------------------------------------------------- | ------------------ |
+| `sortChanged` | Triggers when the sorting of the table column is changed. | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Depends on
@@ -23,8 +30,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-table-beta --> gux-icon
-  style gux-table-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-table --> gux-icon
+  style gux-table fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -8,7 +8,7 @@ describe('gux-table', () => {
     const page = await newSpecPage({
       components: [GuxTable],
       html: `
-        <gux-table-beta>
+        <gux-table>
           <table slot="data">
             <thead>
               <tr>
@@ -23,7 +23,7 @@ describe('gux-table', () => {
               </tr>
             </tbody>
           </table>
-        </gux-table-beta>
+        </gux-table>
       `,
       language: 'en'
     });
