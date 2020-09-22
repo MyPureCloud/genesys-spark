@@ -1,4 +1,6 @@
-  @gux-off-tab-fill: #cfd1d1;
+@import (reference) '../../../../style/color.less';
+
+@gux-off-tab-fill: #cfd1d1;
 
   // Style
   .popover-content {
@@ -91,7 +93,7 @@
       background-color: @gux-off-tab-fill;
 
       .tab-title {
-        color: @gux-grey-2;
+        color: @gux-type;
 
         &:after {
           background: linear-gradient(
@@ -103,29 +105,29 @@
       }
 
       .tab-dropdown-container {
-        color: @gux-grey-2;
+        color: @gux-type;
 
         &:hover,
         &:focus {
           gux-icon {
-            color: @gux-dark-blue;
+            color: @gux-genesys-dark-blue;
           }
         }
       }
 
       .tab-icon-container {
-        color: @gux-grey-2;
+        color: @gux-type;
       }
 
       &.selected {
-        background-color: @gux-off-white;
+        background-color: @gux-type-dark;
 
         &:active {
-          background-color: @gux-off-white;
+          background-color: @gux-type-dark;
         }
 
         .tab-title {
-          color: @gux-grey-2;
+          color: @gux-type;
 
           &:after {
             background: linear-gradient(
@@ -137,11 +139,11 @@
         }
 
         .tab-dropdown-container {
-          color: @gux-off-white-bg-3;
+          color: #98a7b8;
         }
 
         .tab-icon-container {
-          color: @gux-dark-blue;
+          color: @gux-genesys-dark-blue;
         }
       }
     }

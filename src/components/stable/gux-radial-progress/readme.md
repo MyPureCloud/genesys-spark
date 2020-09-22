@@ -16,6 +16,19 @@ Otherwise, if the progress is unknown, and no percentage is provided, it instead
 | `value`  | `value`   | The progress made in the progress spinner compared to the max value | `number` | `undefined` |
 
 
+## Dependencies
+
+### Depends on
+
+- [gux-radial-loading-beta](../../beta/gux-radial-loading)
+
+### Graph
+```mermaid
+graph TD;
+  gux-radial-progress --> gux-radial-loading-beta
+  style gux-radial-progress fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

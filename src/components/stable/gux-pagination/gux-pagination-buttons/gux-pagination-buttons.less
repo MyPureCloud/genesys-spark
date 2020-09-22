@@ -1,3 +1,5 @@
+@import (reference) '../../../../style/color.less';
+
 gux-pagination-buttons {
   .gux-pagination-buttons-container {
     display: flex;
@@ -6,7 +8,10 @@ gux-pagination-buttons {
     justify-content: flex-end;
     align-content: stretch;
     align-items: center;
-    margin-left: 16px;
+
+    &.expanded {
+      justify-content: center;
+    }
 
     & > div {
       order: 0;
@@ -31,10 +36,6 @@ gux-pagination-buttons {
       align-content: stretch;
       align-items: center;
 
-      &.small {
-        display: none;
-      }
-
       & > div {
         order: 0;
         flex: 0 1 auto;
@@ -52,14 +53,74 @@ gux-pagination-buttons {
       }
     }
 
-    .gux-pagination-buttons-small-spacer {
-      width: 10px;
-      display: none;
+    .gux-pagination-buttons-list-container {
+      margin: 0 16px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: center;
 
-      &.small {
-        display: block;
+      .gux-pagination-buttons-list-current,
+      .gux-pagination-buttons-list-target {
+        margin: 0;
+        padding: 0 8px;
+        border: none;
+        background: inherit;
+        height: 32px;
+      }
+
+      .gux-pagination-buttons-list-current {
+        color: @gux-type;
+        font-weight: 600;
+      }
+
+      .gux-pagination-buttons-list-target {
+        color: @gux-dark-blue;
+        cursor: pointer;
       }
     }
-  }
 
+    .gux-pagination-buttons-spacer {
+      width: 10px;
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-pagination-buttons-dark-theme {
+  color: @gux-off-white;
+};
+
+.gux-dark-theme {
+  gux-pagination-buttons {
+      .gux-pagination-buttons-dark-theme();
+  }
+}
+
+gux-pagination-buttons.gux-dark-theme {
+  .gux-pagination-buttons-dark-theme();
+}
+
+// Light
+.gux-pagination-buttons-light-theme {
+  color: @gux-type;
+};
+
+.gux-light-theme {
+  gux-pagination-buttons {
+      .gux-pagination-buttons-light-theme();
+  }
+}
+
+gux-pagination-buttons.gux-light-theme {
+  .gux-pagination-buttons-light-theme();
+}
+
+// Default Theme
+gux-pagination-buttons {
+  .gux-pagination-buttons-light-theme();
 }

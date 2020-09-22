@@ -29,7 +29,9 @@
       "filter": "Filter value changed"
     }
   },
-  "gux-breadcrumbs": {
+  "gux-breadcrumbs": {},
+  "gux-breadcrumbs-beta": {
+    "hidePage": true,
     "attributes": {
       "accent": ["primary", "secondary"]
     }
@@ -196,6 +198,11 @@
     },
     "events": { "guxdismiss": "popover dismissed" }
   },
+  "gux-radial-loading": {
+    "attributes": {
+      "context": ["modal", "input", "full-page"]
+    }
+  },
   "gux-radial-progress": {
     "attributes": { "value": "text", "max": "text" }
   },
@@ -331,8 +338,6 @@
     },
     "events": {}
   },
-  "typography": {
-    "attributes": {},
-    "events": {}
-  }
+  "typography": {},
+  "color": {}
 }

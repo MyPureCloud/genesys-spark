@@ -1,3 +1,5 @@
+@import (reference) '../../../../style/color.less';
+
 // Variables part
 
 gux-list-item {
@@ -22,19 +24,19 @@ gux-list-item {
         }
     }
   }
-  
+
   // Theming
-  
+
   // Dark
   .gux-list-item-dark-theme {
     &:focus, &:active, &:hover:not([disabled]) {
       .list-item {
-        background: @gux-dark-blue;
-        color: @gux-off-white;
+        background: @gux-genesys-dark-blue;
+        color: @gux-type-dark;
       }
     }
   }
-  
+
   .gux-dark-theme {
     gux-list-item {
       .gux-list-item-dark-theme();
@@ -43,17 +45,17 @@ gux-list-item {
   gux-list-item.gux-dark-theme {
     .gux-list-item-dark-theme();
   }
-  
+
   // Light
   .gux-list-item-light-theme {
     &:focus, &:active, &:hover:not([disabled]) {
       .list-item {
-        background: @gux-dark-blue;
-        color: @gux-off-white;
+        background: @gux-genesys-dark-blue;
+        color: @gux-type-dark;
       }
     }
   }
-  
+
   .gux-light-theme {
     gux-list-item {
       .gux-list-item-light-theme();
@@ -62,9 +64,8 @@ gux-list-item {
   gux-list-item.gux-light-theme {
     .gux-list-item-light-theme();
   }
-  
+
   // Default Theme
   gux-list-item {
     .gux-list-item-light-theme();
   }
-  

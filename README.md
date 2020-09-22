@@ -52,7 +52,7 @@ The library provides a baseline set of CSS styles in the package under `dist/gen
 
 - Baseline styles for browser elements
 - Classes for specific typography patterns
-- CSS variables for colors (coming soon)
+- CSS variables for colors
 - CSS variables for spacing (coming soon)
 
 The best mechanism for importing the stylesheet into your project will depend on how you handle CSS in your project in general. Reach out to the Common UI Development group if you're having trouble with your specific integration.

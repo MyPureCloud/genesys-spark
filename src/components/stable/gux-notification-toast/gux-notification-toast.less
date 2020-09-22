@@ -1,3 +1,6 @@
+// Variables part
+@import (reference) '../../../style/color.less';
+
 gux-notification-toast {
   padding: 16px 8px 16px 16px;
   width: 336px;
@@ -76,42 +79,42 @@ gux-notification-toast {
 // Theming
 // Light
 .gux-notification-toast-light-theme {
-  background: @gux-panel;
-  color: @gux-off-white;
-  border-color: @gux-grey-2;
+  background: @gux-background-dark;
+  color: @gux-type-dark;
+  border-color: @gux-type;
 
   .icon{
     &.alert {
-      color: @gux-alert-2;
+      color: @gux-alert-dark;
     }
     &.warning {
-      color: @gux-warning;
+      color: @gux-warning-dark;
     }
     &.positive {
-      color: @gux-positive;
+      color: @gux-positive-dark;
     }
     &.neutral {
-      color: @gux-neutral-2;
+      color: @gux-neutral-dark;
     }
   }
 
   .title{
-    color: @gux-off-white;
+    color: @gux-type-dark;
   }
 
   .message{
-    color: @gux-pale-gray-2;
+    color: #9baaba;
   }
 
   .dismiss-button {
-    color: @gux-off-white;
+    color: @gux-type-dark;
   }
 }
 
 // Dark
 .gux-notification-toast-dark-theme {
-  background: @gux-off-white;
-  color: @gux-grey-2;
+  background: @gux-background;
+  color: @gux-type;
   border-color: @gux-border;
 
   .icon {
@@ -130,15 +133,15 @@ gux-notification-toast {
   }
 
   .title{
-    color: @gux-grey-2;
+    color: @gux-type;
   }
 
   .message{
-    color: @gux-pale-gray;
+    color: #77828f;
   }
 
   .dismiss-button {
-    color: @gux-grey-2;
+    color: @gux-type;
   }
 }
 

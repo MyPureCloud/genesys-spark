@@ -1,14 +1,16 @@
+@import (reference) '../../../style/color.less';
+
 // Style
 gux-popover {
   z-index: 2;
-  color: @gux-grey-2;
+  color: @gux-type;
 
   .popover-wrapper {
     display: flex;
     flex-direction: column;
     border: 1px @gux-border;
-    box-shadow: 0px 0px 2px fade(@gux-grey-1, 24%);
-    background-color: @gux-off-white;
+    box-shadow: 0px 0px 2px fade(@gux-grey-global, 24%);
+    background-color: @gux-type-dark;
   }
 
   .arrow,
@@ -35,7 +37,7 @@ gux-popover {
       border-bottom-color: @gux-border;
       margin-top: -12px;
       &:after {
-        border-bottom-color: @gux-off-white;
+        border-bottom-color: @gux-type-dark;
         margin-top: -2px;
         margin-left: -4px;
       }
@@ -51,7 +53,7 @@ gux-popover {
       border-top-color: @gux-border;
       margin-bottom: -12px;
       &:after {
-        border-top-color: @gux-off-white;
+        border-top-color: @gux-type-dark;
         margin-top: -6px;
         margin-left: -4px;
       }
@@ -67,7 +69,7 @@ gux-popover {
       border-left-color: @gux-border;
       margin-right: -12px;
       &:after {
-        border-left-color: @gux-off-white;
+        border-left-color: @gux-type-dark;
         margin-top: -4px;
         margin-left: -6px;
       }
@@ -82,7 +84,7 @@ gux-popover {
       border-right-color: @gux-border;
       margin-left: -12px;
       &:after {
-        border-right-color: @gux-off-white;
+        border-right-color: @gux-type-dark;
         margin-top: -4px;
         margin-left: -2px;
       }
@@ -98,10 +100,10 @@ gux-popover {
       width: 12px;
       padding: 4px 4px 0 0;
       cursor: pointer;
-      color: @gux-icons;
+      color: #98a7b8;
 
       &:hover {
-        color: @gux-dark-blue;
+        color: @gux-genesys-dark-blue;
       }
     }
   }

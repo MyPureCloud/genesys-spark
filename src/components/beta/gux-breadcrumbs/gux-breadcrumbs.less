@@ -1,25 +1,10 @@
 gux-breadcrumbs-beta {
-  nav.breadcrumbs {
-    display: block;
-    border: none;
-  }
-  .separator {
-    padding: 0 7px;
-  }
-  a.breadcrumb {
-    color: -webkit-link;
-    padding: 0;
-  }
-}
-
-// Light theme
-.gux-breadcrumbs-light-theme {
-  .separator {
-    color: @gux-grey-2;
-  }
-}
-.gux-light-theme {
-  gux-breadcrumbs-beta {
-    .gux-breadcrumbs-light-theme();
+  .gux-breadcrumbs-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
   }
 }

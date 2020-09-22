@@ -1,5 +1,7 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
-@palette-background-color: @gux-off-white;
+@palette-background-color: @gux-type-dark;
 @palette-background-color-dark: #555d66;
 @palette-border-color: #dae1eb;
 @palette-details-color: #77828f;
@@ -117,18 +119,18 @@ gux-command-palette-beta .gux-command-palette {
 .gux-command-palette-dark-theme {
   .gux-command-palette {
     background: @palette-background-color-dark;
-    color: @gux-off-white;
+    color: @gux-type-dark;
 
     gux-list gux-list-item:focus,
     gux-list gux-list-item:active,
     gux-list gux-list-item:hover {
       .list-item div {
-        background: @gux-dark-blue;
-        color: @gux-off-white;
+        background: @gux-genesys-dark-blue;
+        color: @gux-type-dark;
       }
 
       .list-item .details {
-        color: @gux-off-white;
+        color: @gux-type-dark;
       }
     }
 
@@ -152,18 +154,18 @@ gux-command-palette-beta.gux-dark-theme {
 .gux-command-palette-light-theme {
   .gux-command-palette {
     background: @palette-background-color;
-    color: @gux-grey-2;
+    color: @gux-type;
 
     gux-list gux-list-item:focus,
     gux-list gux-list-item:active,
     gux-list gux-list-item:hover {
       .list-item div {
-        background: @gux-dark-blue;
-        color: @gux-off-white;
+        background: @gux-genesys-dark-blue;
+        color: @gux-type-dark;
       }
 
       .list-item .details {
-        color: @gux-off-white;
+        color: @gux-type-dark;
       }
     }
 
