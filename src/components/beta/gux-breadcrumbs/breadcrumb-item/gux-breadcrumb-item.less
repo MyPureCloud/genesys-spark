@@ -1,0 +1,23 @@
+@import (reference) '../../../../style/color.less';
+
+gux-breadcrumb-item {
+  .gux-breadcrumb-generation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+
+    .gux-breadcrumb-separator {
+      margin: 0 8px;
+      color: @gux-ghost-type;
+    }
+
+    gux-icon.gux-breadcrumb-separator {
+      margin: 0 4px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

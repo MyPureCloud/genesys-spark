@@ -7,11 +7,9 @@
 
 ## Properties
 
-| Property         | Attribute         | Description | Type      | Default     |
-| ---------------- | ----------------- | ----------- | --------- | ----------- |
-| `accent`         | `accent`          |             | `string`  | `undefined` |
-| `href`           | `href`            |             | `string`  | `undefined` |
-| `lastBreadcrumb` | `last-breadcrumb` |             | `boolean` | `undefined` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `href`   | `href`    |             | `string` | `undefined` |
 
 
 ## Dependencies

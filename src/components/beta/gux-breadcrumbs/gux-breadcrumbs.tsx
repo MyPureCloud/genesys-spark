@@ -1,34 +1,34 @@
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
+
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+
 import breadcrumbsResources from './i18n/en.json';
-import { buildI18nForComponent } from '../../../i18n';
+
+export type GuxBreadcrumbAccent = 'primary' | 'secondary';
 
 @Component({
   styleUrl: 'gux-breadcrumbs.less',
   tag: 'gux-breadcrumbs-beta'
 })
 export class GuxBreadcrumbs {
+  private i18n: GetI18nValue;
+
   @Element()
-  root: HTMLElement;
+  private root: HTMLGuxBreadcrumbsBetaElement;
 
   @Prop()
-  accent: string = 'primary';
+  accent: GuxBreadcrumbAccent = 'primary';
 
-  private i18n: (resourceKey: string, context?: any) => string;
-
-  async componentWillRender() {
+  async componentWillRender(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, breadcrumbsResources);
-
-    const childrens = Array.from(this.root.children);
-    const lastElement = childrens[childrens.length - 1] as HTMLElement;
-    if (lastElement) lastElement.setAttribute('last-breadcrumb', '');
-    for (const children of childrens) {
-      children.setAttribute('accent', this.accent);
-    }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
-      <nav aria-label={this.i18n('label')} class="breadcrumbs">
+      <nav
+        aria-label={this.i18n('breadcrumbs')}
+        class="gux-breadcrumbs-container"
+      >
         <slot />
       </nav>
     );

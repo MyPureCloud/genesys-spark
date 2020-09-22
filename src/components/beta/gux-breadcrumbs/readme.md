@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `accent` | `accent`  |             | `string` | `'primary'` |
+| Property | Attribute | Description | Type                       | Default     |
+| -------- | --------- | ----------- | -------------------------- | ----------- |
+| `accent` | `accent`  |             | `"primary" \| "secondary"` | `'primary'` |
 
 
 ----------------------------------------------
