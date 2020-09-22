@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](http://inindca///compare/v1.5.2...v1.6.0) (2020-09-22)
+
+
+### Features
+
+* **gux-radial-loading-beta:** added new gux-radial-loading-beta component ([71ee064](http://inindca///commit/71ee0641015aa06e9053c521c1336d0adc176c9c))
+
+
+### Bug Fixes
+
+* **gux-breadcrumbs:** reduced the public api of breadcrumb components ([15ddd6d](http://inindca///commit/15ddd6d8747b1a326563273019c7125bb2ff579e))
+
 ### [1.5.2](http://inindca///compare/v1.5.1...v1.5.2) (2020-09-21)
 
 
