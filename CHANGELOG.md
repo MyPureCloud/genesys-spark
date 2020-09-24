@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](http://inindca///compare/v1.6.1...v1.7.0) (2020-09-24)
+
+
+### Features
+
+* **styles:** added spacing styles to export ([566e820](http://inindca///commit/566e820ca7436e6781275b4d7ba72385be7ca422))
+
 ### [1.6.1](http://inindca///compare/v1.6.0...v1.6.1) (2020-09-23)
 
 ## [1.6.0](http://inindca///compare/v1.5.2...v1.6.0) (2020-09-22)
