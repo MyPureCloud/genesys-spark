@@ -8,6 +8,7 @@ import { toHTML } from '../utils/to-html';
 import 'genesys-webcomponents';
 import '../styles/component-viewer.less';
 
+window.toHTML = toHTML;
 window.webcomponentsDocsMain = (example = '', renderCallback = () => {}) =>
   bootstrap(example.trim(), renderCallback);
 

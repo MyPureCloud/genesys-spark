@@ -148,7 +148,7 @@ describe('gux-modal', () => {
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
       const dismissButton = page.root.querySelector(
-        '.dismiss-button'
+        '.gux-dismiss-button'
       ) as HTMLButtonElement;
       const guxdismissSpy = jest.fn();
       const clickSpy = jest.fn();
@@ -181,7 +181,7 @@ describe('gux-modal', () => {
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
       const dismissButton = page.root.querySelector(
-        '.dismiss-button'
+        '.gux-dismiss-button'
       ) as HTMLButtonElement;
       const elementRemoveSpy = jest.spyOn(element, 'remove');
 
