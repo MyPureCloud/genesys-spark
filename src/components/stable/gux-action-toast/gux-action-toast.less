@@ -1,24 +1,28 @@
 @import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/color.less';
 
 // Variables part
-@primary-background-color: @gux-dark-blue;
+// - Colors
+@action-reqired-icon-color: @gux-aqua-green;
+
+@primary-background-color: @gux-genesys-dark-blue;
 @primary-border-color: #2455a3;
-@primary-color: @gux-off-white;
+@primary-color: @gux-type-dark;
 @primary-active-background-color: #275aad;
 
-@primary-dark-background-color: @gux-dark-blue;
-@primary-dark-border-color: @gux-grey-1;
-@primary-dark-color: @gux-off-white;
+@primary-dark-background-color: @gux-genesys-dark-blue;
+@primary-dark-border-color: @gux-grey-global;
+@primary-dark-color: @gux-type-dark;
 @primary-dark-hover-background-color: #3476f5;
 
 @secondary-background-color: @gux-border;
 @secondary-border-color: #d5dce0;
-@secondary-color: @gux-grey-2;
+@secondary-color: @gux-type;
 @secondary-active-background-color: #dce1e5;
 
 @secondary-dark-background-color: #555d66;
-@secondary-dark-border-color: @gux-grey-1;
-@secondary-dark-color: @gux-off-white;
+@secondary-dark-border-color: @gux-grey-global;
+@secondary-dark-color: @gux-type-dark;
 @secondary-dark-hover-background-color: #76818f;
 
 gux-action-toast {
@@ -45,7 +49,7 @@ gux-action-toast {
     .h2();
 
     .icon {
-      color: @gux-teal-sec;
+      color: @action-reqired-icon-color;
       order: 0;
       flex: 0 1 auto;
       align-self: auto;
@@ -193,13 +197,13 @@ gux-action-toast {
 }
 
 .gux-action-toast-light-theme {
-  background: @gux-panel;
-  color: @gux-off-white;
-  border-color: @gux-grey-2;
+  background: @gux-background-dark;
+  color: @gux-type-dark;
+  border-color: @gux-type;
 
   .message {
     dt {
-      color: @gux-pale-gray-2;
+      color: #9baaba;
     }
   }
 
@@ -288,13 +292,13 @@ gux-action-toast {
 }
 
 .gux-action-toast-dark-theme {
-  background: @gux-off-white;
-  color: @gux-grey-2;
+  background: @gux-background;
+  color: @gux-type;
   border-color: @gux-border;
 
   .message {
     dt {
-      color: @gux-pale-gray;
+      color: #77828f;
     }
   }
 

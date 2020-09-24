@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 @background: #f9fafb;
 
@@ -25,7 +27,7 @@ gux-color-picker {
     box-shadow: 0 0 0 0 transparent;
     transition: box-shadow 0.2s;
     background-color: @background;
-    border: 1px solid @gux-border-alt;
+    border: 1px solid #dae1e8;
     border-radius: 2px;
     cursor: pointer;
 
@@ -38,9 +40,9 @@ gux-color-picker {
 
   .gux-color-picker-main-element:focus,
   .gux-color-picker-opened {
-    border-color: @gux-dark-blue;
+    border-color: @gux-genesys-dark-blue;
     outline: none;
-    box-shadow: 0 0 4px fade(@gux-blue, 50%);
+    box-shadow: 0 0 4px fade(@gux-genesys-blue, 50%);
   }
 
   .gux-color-picker-selected-color {
@@ -53,7 +55,7 @@ gux-color-picker {
     margin: 9px 0;
     float: left;
     font-size: 12px;
-    color: @gux-grey-2;
+    color: @gux-type;
   }
 
   .gux-color-picker-color-select {
@@ -87,25 +89,25 @@ gux-color-picker {
 
 // Dark
 .gux-color-picker-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
 
   .gux-color-picker-main-element {
-    border-color: @gux-grey-1;
-    background-color: @gux-border-dark;
+    border-color: @gux-grey-global;
+    background-color: #555d66;
   }
 
   .gux-color-picker-main-element:focus,
   .gux-color-picker-opened {
-    border-color: @gux-blue;
+    border-color: @gux-genesys-blue;
     box-shadow: none;
   }
 
   .gux-color-picker-color-name {
-    color: @gux-off-white;
+    color: @gux-type-dark;
   }
 
   gux-icon {
-    color: @gux-off-white;
+    color: @gux-type-dark;
   }
 }
 
@@ -121,7 +123,7 @@ gux-color-picker.gux-dark-theme {
 
 // Light
 .gux-color-picker-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 }
 
 .gux-light-theme {

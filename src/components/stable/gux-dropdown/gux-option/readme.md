@@ -14,14 +14,6 @@
 | `value`    | `value`    | The content of this attribute represents the value to be submitted on 'input' changes, should this option be selected. If this attribute is omitted, the value is taken from the text content of the option element. | `string`  | `undefined` |
 
 
-## Events
-
-| Event             | Description                             | Type                  |
-| ----------------- | --------------------------------------- | --------------------- |
-| `onFocus`         | Occurs when the item has been focused.  | `CustomEvent<string>` |
-| `selectedChanged` | Occurs when the item has been selected. | `CustomEvent<string>` |
-
-
 ## Methods
 
 ### `shouldFilter(searchInput: string) => Promise<boolean>`

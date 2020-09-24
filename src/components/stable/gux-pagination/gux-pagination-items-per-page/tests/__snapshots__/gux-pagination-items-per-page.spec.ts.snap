@@ -57,7 +57,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
                 <span style="display: none;">
                   25
                 </span>
-                <gux-text-highlight highlight="25" text="25"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="25"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -66,7 +66,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
                 <span style="display: none;">
                   50
                 </span>
-                <gux-text-highlight highlight="25" text="50"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="50"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -75,7 +75,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
                 <span style="display: none;">
                   75
                 </span>
-                <gux-text-highlight highlight="25" text="75"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="75"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -84,7 +84,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
                 <span style="display: none;">
                   100
                 </span>
-                <gux-text-highlight highlight="25" text="100"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="100"></gux-text-highlight>
               </div>
             </gux-option>
           </div>
@@ -155,7 +155,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
                 <span style="display: none;">
                   25
                 </span>
-                <gux-text-highlight highlight="50" text="25"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="25"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -164,7 +164,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
                 <span style="display: none;">
                   50
                 </span>
-                <gux-text-highlight highlight="50" text="50"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="50"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -173,7 +173,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
                 <span style="display: none;">
                   75
                 </span>
-                <gux-text-highlight highlight="50" text="75"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="75"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -182,7 +182,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
                 <span style="display: none;">
                   100
                 </span>
-                <gux-text-highlight highlight="50" text="100"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="100"></gux-text-highlight>
               </div>
             </gux-option>
           </div>
@@ -253,7 +253,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
                 <span style="display: none;">
                   25
                 </span>
-                <gux-text-highlight highlight="75" text="25"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="25"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -262,7 +262,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
                 <span style="display: none;">
                   50
                 </span>
-                <gux-text-highlight highlight="75" text="50"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="50"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -271,7 +271,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
                 <span style="display: none;">
                   75
                 </span>
-                <gux-text-highlight highlight="75" text="75"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="75"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -280,7 +280,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
                 <span style="display: none;">
                   100
                 </span>
-                <gux-text-highlight highlight="75" text="100"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="100"></gux-text-highlight>
               </div>
             </gux-option>
           </div>
@@ -351,7 +351,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
                 <span style="display: none;">
                   25
                 </span>
-                <gux-text-highlight highlight="100" text="25"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="25"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -360,7 +360,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
                 <span style="display: none;">
                   50
                 </span>
-                <gux-text-highlight highlight="100" text="50"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="50"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -369,7 +369,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
                 <span style="display: none;">
                   75
                 </span>
-                <gux-text-highlight highlight="100" text="75"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="75"></gux-text-highlight>
               </div>
             </gux-option>
             <gux-option tabindex="0">
@@ -378,7 +378,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
                 <span style="display: none;">
                   100
                 </span>
-                <gux-text-highlight highlight="100" text="100"></gux-text-highlight>
+                <gux-text-highlight highlight="" text="100"></gux-text-highlight>
               </div>
             </gux-option>
           </div>

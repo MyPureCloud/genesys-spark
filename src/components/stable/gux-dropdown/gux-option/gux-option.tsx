@@ -1,13 +1,4 @@
-import {
-  Component,
-  Element,
-  Event,
-  EventEmitter,
-  h,
-  Method,
-  Prop,
-  State
-} from '@stencil/core';
+import { Component, Element, h, Method, Prop, State } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-option.less',
@@ -45,18 +36,6 @@ export class GuxOption {
   highlight: string;
 
   /**
-   * Occurs when the item has been selected.
-   */
-  @Event()
-  selectedChanged: EventEmitter<string>;
-
-  /**
-   * Occurs when the item has been focused.
-   */
-  @Event()
-  onFocus: EventEmitter<string>;
-
-  /**
    * Determines if the search input matches this option.
    *
    * @param searchInput The input string being searched for.
@@ -76,22 +55,6 @@ export class GuxOption {
     if (!this.text) {
       this.text = this.root.textContent;
     }
-  }
-
-  componentDidLoad() {
-    this.root.onfocus = () => this.onFocus.emit(this.text);
-    this.root.onclick = () => {
-      this.onItemClicked();
-    };
-
-    this.root.onkeydown = (e: KeyboardEvent) => {
-      switch (e.key) {
-        case ' ':
-        case 'Enter':
-          this.selectedChanged.emit(this.value ? this.value : this.text);
-          break;
-      }
-    };
   }
 
   hostData() {
@@ -115,9 +78,5 @@ export class GuxOption {
         />
       </div>
     );
-  }
-
-  private onItemClicked() {
-    this.selectedChanged.emit(this.value ? this.value : this.text);
   }
 }

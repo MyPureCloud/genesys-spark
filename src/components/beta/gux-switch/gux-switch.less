@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 
 // Style
@@ -23,9 +25,9 @@
 
       &:hover, &:active, &:focus {
         cursor: pointer;
-        color: @gux-dark-blue;
+        color: @gux-genesys-dark-blue;
       }
-      
+
       &:focus {
         outline: none;
       }
@@ -46,7 +48,7 @@
 
     &.selected {
       .display-text {
-        box-shadow: inset 0px -1px 0px 0px @gux-grey-2;
+        box-shadow: inset 0px -1px 0px 0px @gux-charcoal-grey;
         font-weight: bold;
       }
     }
@@ -64,13 +66,13 @@
 
       &.selected {
         .display-text {
-          box-shadow: inset 0px -4px 0px 0px @gux-blue;
+          box-shadow: inset 0px -4px 0px 0px @gux-genesys-blue;
         }
       }
     }
 
     &:hover, &:active {
-      color: @gux-dark-blue;
+      color: @gux-genesys-dark-blue;
     }
 
     &.disabled {
@@ -86,31 +88,31 @@
 .gux-switch-dark-theme {
 
   .gux-switch {
-    box-shadow: inset 0px -1px 0px 0px @gux-grey-1;
+    box-shadow: inset 0px -1px 0px 0px @gux-grey-global;
 
     .switch-button {
       .display-text  {
-        color: @gux-off-white;
+        color: @gux-type-dark;
       }
 
       &:hover, &:active {
         cursor: pointer;
 
         .display-text  {
-          color: @gux-dark-blue;
+          color: @gux-genesys-dark-blue;
         }
       }
     }
 
     &.selected {
       .display-text {
-        box-shadow: inset 0px -1px 0px 0px @gux-blue;
+        box-shadow: inset 0px -1px 0px 0px @gux-genesys-blue;
         font-weight: bold;
       }
 
       &.large {
         .display-text {
-          box-shadow: inset 0px -4px 0px 0px @gux-blue;
+          box-shadow: inset 0px -4px 0px 0px @gux-genesys-blue;
         }
       }
     }
@@ -130,7 +132,7 @@
 
 // Light
 .gux-switch-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 };
 
 .gux-light-theme {

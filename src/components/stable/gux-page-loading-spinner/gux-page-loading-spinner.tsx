@@ -6,6 +6,8 @@ import { Component, h, JSX } from '@stencil/core';
 })
 export class GuxPageLoadingSpinner {
   render(): JSX.Element {
-    return <div class="page-loading-spinner gux-page-loading-animation" />;
+    return (
+      <gux-radial-loading-beta context="full-page"></gux-radial-loading-beta>
+    );
   }
 }

@@ -14,12 +14,12 @@ the pagination state.
 
 ## Properties
 
-| Property       | Attribute        | Description                                                                     | Type                    | Default  |
-| -------------- | ---------------- | ------------------------------------------------------------------------------- | ----------------------- | -------- |
-| `currentPage`  | `current-page`   | The currently select page. Changes are watched by the component.                | `number`                | `1`      |
-| `itemsPerPage` | `items-per-page` | The max number of items on a page. Used to calculate total page count           | `100 \| 25 \| 50 \| 75` | `25`     |
-| `layout`       | `layout`         | The pagination component can have different layouts to suit the available space | `"full" \| "small"`     | `'full'` |
-| `totalItems`   | `total-items`    | The total number of items in the data set. Used to calculate total page count   | `number`                | `0`      |
+| Property       | Attribute        | Description                                                                     | Type                              | Default  |
+| -------------- | ---------------- | ------------------------------------------------------------------------------- | --------------------------------- | -------- |
+| `currentPage`  | `current-page`   | The currently select page. Changes are watched by the component.                | `number`                          | `1`      |
+| `itemsPerPage` | `items-per-page` | The max number of items on a page. Used to calculate total page count           | `100 \| 25 \| 50 \| 75`           | `25`     |
+| `layout`       | `layout`         | The pagination component can have different layouts to suit the available space | `"expanded" \| "full" \| "small"` | `'full'` |
+| `totalItems`   | `total-items`    | The total number of items in the data set. Used to calculate total page count   | `number`                          | `0`      |
 
 
 ## Events
@@ -49,9 +49,9 @@ graph TD;
   gux-dropdown --> gux-icon
   gux-text-field --> gux-icon
   gux-option --> gux-text-highlight
+  gux-pagination-buttons --> gux-text-field
   gux-pagination-buttons --> gux-button
   gux-pagination-buttons --> gux-icon
-  gux-pagination-buttons --> gux-text-field
   style gux-pagination fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
