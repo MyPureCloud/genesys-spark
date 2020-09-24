@@ -14,25 +14,26 @@ window.webcomponentsDocsMain = (example = '', renderCallback = () => {}) =>
 function createLayout() {
   let template = toHTML(`
     <div class="component-viewer content">
-        <div class="left-column">
-          <div class="tab">
-            <button class="tablinks light active">Light Theme</button>
-            <button class="tablinks dark">Dark Theme</button>
-            <button class="tablinks inherited">Inherited Theme</button>
-          </div>
-          <div class="preview gux-light-theme"></div>
-          <div class="editor"></div>
+      <div class="left-column">
+        <div class="tab" hidden>
+          <button class="tablinks light active">Light Theme</button>
+          <button class="tablinks dark">Dark Theme</button>
+          <button class="tablinks inherited">Inherited Theme</button>
         </div>
-        <div class="right-column">
-          <details open>
-            <summary class="heading">Attributes</summary>
-            <div class="attributes"></div>
-          </details>
-          <details open>
-            <summary class="heading">Events</summary>
-            <div class="events"></div>
-          </details>
-        </div>
+        <div class="preview gux-light-theme"></div>
+        <div class="editor"></div>
+      </div>
+      <div class="right-column">
+        <details>
+          <summary class="heading">Attributes</summary>
+          <div class="attributes"></div>
+        </details>
+        <details>
+          <summary class="heading">Event Details</summary>
+          <div class="events"></div>
+        </details>
+      </div>
+      <div class="notification"></div>
     </div>
   `);
   document.body.appendChild(template);
@@ -43,6 +44,7 @@ function createLayout() {
   const preview = template.querySelector('.preview');
   const attribute = template.querySelector('.attributes');
   const events = template.querySelector('.events');
+  const notification = template.querySelector('.notification');
   const editor = template.querySelector('.editor');
 
   return {
@@ -52,6 +54,7 @@ function createLayout() {
     preview,
     attribute,
     events,
+    notification,
     editor
   };
 }
@@ -78,6 +81,7 @@ export const bootstrap = (exampleCode, callback) => {
     preview,
     attribute,
     events,
+    notification,
     editor
   } = createLayout();
 
@@ -95,7 +99,7 @@ export const bootstrap = (exampleCode, callback) => {
 
   // Code Setter
   const attributesPanel = new AttributesPanel(attribute);
-  const eventsPanel = new EventsPanel(events, preview);
+  const eventsPanel = new EventsPanel(events, preview, notification);
   const updatePreview = createPreview(preview);
 
   const updateCode = createEditor(editor, newCode => {
