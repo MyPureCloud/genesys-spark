@@ -1,6 +1,6 @@
 import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
 
-describe('gux-table', () => {
+describe('gux-table-beta', () => {
   let page: E2EPage;
   let element: E2EElement;
 
@@ -10,7 +10,7 @@ describe('gux-table', () => {
 
   it('renders', async () => {
     await page.setContent(`
-      <gux-table>
+      <gux-table-beta>
         <table slot="data">
           <thead>
             <tr>
@@ -25,9 +25,9 @@ describe('gux-table', () => {
             </tr>
           </tbody>
         </table>
-      </gux-table>
+      </gux-table-beta>
     `);
-    element = await page.find('gux-table');
+    element = await page.find('gux-table-beta');
     expect(element).toHaveClass('hydrated');
   });
 });

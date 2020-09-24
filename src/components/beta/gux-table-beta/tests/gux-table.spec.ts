@@ -1,14 +1,14 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxTable } from '../gux-table';
 
-describe('gux-table', () => {
+describe('gux-table-beta', () => {
   let component: GuxTable;
 
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [GuxTable],
       html: `
-        <gux-table>
+        <gux-table-beta>
           <table slot="data">
             <thead>
               <tr>
@@ -23,7 +23,7 @@ describe('gux-table', () => {
               </tr>
             </tbody>
           </table>
-        </gux-table>
+        </gux-table-beta>
       `,
       language: 'en'
     });

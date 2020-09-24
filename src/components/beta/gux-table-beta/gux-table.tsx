@@ -13,7 +13,7 @@ import { IColumnResizeState } from './gux-table-constants';
 
 @Component({
   styleUrl: 'gux-table.less',
-  tag: 'gux-table'
+  tag: 'gux-table-beta'
 })
 export class GuxTable {
   @Element()
@@ -281,7 +281,13 @@ export class GuxTable {
         this.columnResizeState = {
           resizableColumn,
           columnResizeMouseStartX: event.pageX,
-          resizableColumnInitialWidth: resizableColumn.clientWidth - 12 - 24
+          resizableColumnInitialWidth: parseInt(
+            window
+              .getComputedStyle(resizableColumn)
+              .getPropertyValue('width')
+              .split('px')[0],
+            10
+          )
         };
 
         this.tableContainer.classList.add('column-resizing');
