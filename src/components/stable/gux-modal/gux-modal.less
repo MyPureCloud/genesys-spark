@@ -1,6 +1,7 @@
-// Variables part
-
 @import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/color.less';
+
+// Variables part
 
 // Style
 gux-modal {
@@ -24,7 +25,7 @@ gux-modal {
       width: 100%;
       padding: 40px;
       justify-content: space-between;
-      background: @gux-off-white;
+      background: @gux-background;
       box-shadow: 0 0 2px rgba(34, 37, 41, 0.24);
 
       &.small {
@@ -54,7 +55,7 @@ gux-modal {
         border: none;
         background: transparent;
         font-size: 11px;
-        color: @gux-icons;
+        color: #98a7b8;
         cursor: pointer;
         gux-icon {
           width: 12px;
@@ -112,10 +113,10 @@ gux-modal {
 
 // Dark
 .gux-modal-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
 
   .modal-container {
-    background: @gux-charcoal;
+    background: @gux-charcoal-grey;
   }
 }
 
@@ -131,7 +132,7 @@ gux-modal.gux-dark-theme {
 
 // Light
 .gux-modal-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 }
 
 .gux-light-theme {

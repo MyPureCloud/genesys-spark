@@ -2,6 +2,62 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](http://inindca///compare/v1.6.0...v1.6.1) (2020-09-23)
+
+## [1.6.0](http://inindca///compare/v1.5.2...v1.6.0) (2020-09-22)
+
+
+### Features
+
+* **gux-radial-loading-beta:** added new gux-radial-loading-beta component ([71ee064](http://inindca///commit/71ee0641015aa06e9053c521c1336d0adc176c9c))
+
+
+### Bug Fixes
+
+* **gux-breadcrumbs:** reduced the public api of breadcrumb components ([15ddd6d](http://inindca///commit/15ddd6d8747b1a326563273019c7125bb2ff579e))
+
+### [1.5.2](http://inindca///compare/v1.5.1...v1.5.2) (2020-09-21)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed styling of date range labels ([70f28e8](http://inindca///commit/70f28e87463a79241a2c8d2c30e227e45d53e9ae))
+
+### [1.5.1](http://inindca///compare/v1.5.0...v1.5.1) (2020-09-18)
+
+
+### Bug Fixes
+
+* **doc-site:** fix the sort order of components ([40fcb0c](http://inindca///commit/40fcb0c0beac68670ce87a225439089d951b4a4b))
+
+## [1.5.0](http://inindca///compare/v1.4.0...v1.5.0) (2020-09-17)
+
+
+### Features
+
+* **color-styles:** exporting common color variables ([eec3866](http://inindca///commit/eec3866d0734339b9fa3beace3102178c5f50303))
+
+
+### Bug Fixes
+
+* **gux-dropdown:** better handle asynchronously loaded options ([dcc1c13](http://inindca///commit/dcc1c13033025e723e4a3cf90967f95373f55d8f))
+
+## [1.4.0](http://inindca///compare/v1.3.2...v1.4.0) (2020-09-16)
+
+
+### Features
+
+* **gux-pagination:** added expanded layout ([524d98d](http://inindca///commit/524d98d09d0a21029151c0b5fc74b1f8914f3820))
+
+### [1.3.2](http://inindca///compare/v1.3.1...v1.3.2) (2020-09-15)
+
+
+### Bug Fixes
+
+* **gux-table:** resizeObserver not present in spec tests ([f9193a1](http://inindca///commit/f9193a1e542c87b06b8f64ca2ad83b3784fd9d43))
+
+### [1.3.1](http://inindca///compare/v1.3.0...v1.3.1) (2020-09-14)
+
 ## [1.3.0](http://inindca///compare/v1.2.0...v1.3.0) (2020-09-11)
 
 

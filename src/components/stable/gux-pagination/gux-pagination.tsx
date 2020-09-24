@@ -11,7 +11,7 @@ import {
 
 import { GuxItemsPerPage } from './gux-pagination-items-per-page/gux-pagination-items-per-page';
 
-export type GuxPaginationLayout = 'small' | 'full';
+export type GuxPaginationLayout = 'small' | 'expanded' | 'full';
 export type GuxPaginationState = {
   currentPage: number;
   itemsPerPage: number;
@@ -87,6 +87,33 @@ export class GuxPagination implements ComponentInterface {
     this.setPage(event.detail);
   }
 
+  private getPaginationInfoElement(layout: GuxPaginationLayout): JSX.Element[] {
+    if (layout === 'expanded') {
+      return null;
+    }
+
+    const content = [
+      <gux-pagination-item-counts
+        total-items={this.totalItems}
+        current-page={this.currentPage}
+        items-per-page={this.itemsPerPage}
+      />
+    ];
+
+    if (layout === 'full') {
+      content.push(
+        <gux-pagination-items-per-page
+          items-per-page={this.itemsPerPage}
+          on-internalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
+            this
+          )}
+        ></gux-pagination-items-per-page>
+      );
+    }
+
+    return <div class="gux-pagination-info">{content}</div>;
+  }
+
   componentWillRender(): void {
     this.totalPages = this.calculatTotalPages();
     this.currentPage = Math.min(this.currentPage, this.totalPages);
@@ -94,21 +121,9 @@ export class GuxPagination implements ComponentInterface {
 
   render(): JSX.Element {
     return (
-      <div class={`gux-pagination-container ${this.layout}`}>
-        <div class="gux-pagination-container-left">
-          <gux-pagination-item-counts
-            total-items={this.totalItems}
-            current-page={this.currentPage}
-            items-per-page={this.itemsPerPage}
-          />
-          <gux-pagination-items-per-page
-            items-per-page={this.itemsPerPage}
-            on-internalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
-              this
-            )}
-          ></gux-pagination-items-per-page>
-        </div>
-        <div>
+      <div class={`gux-pagination-container`}>
+        {this.getPaginationInfoElement(this.layout)}
+        <div class="gux-pagination-change">
           <gux-pagination-buttons
             layout={this.layout}
             current-page={this.currentPage}

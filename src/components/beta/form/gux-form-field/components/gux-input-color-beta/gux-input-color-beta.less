@@ -1,3 +1,5 @@
+@import (reference) '../../../../../../style/color.less';
+
 // Variables part
 @background: #f9fafb;
 
@@ -25,15 +27,15 @@ gux-input-color-beta {
     box-shadow: 0 0 0 0 transparent;
     transition: box-shadow 0.2s;
     background-color: @background;
-    border: 1px solid @gux-border-alt;
+    border: 1px solid #dae1e8;
     border-radius: 2px;
     cursor: pointer;
 
     &:focus,
     &.opened {
-      border-color: @gux-dark-blue;
+      border-color: @gux-genesys-dark-blue;
       outline: none;
-      box-shadow: 0 0 4px fade(@gux-blue, 50%);
+      box-shadow: 0 0 4px fade(@gux-genesys-blue, 50%);
     }
 
     &:disabled {
@@ -53,7 +55,7 @@ gux-input-color-beta {
     margin: 9px 0;
     float: left;
     font-size: 12px;
-    color: @gux-grey-2;
+    color: @gux-type;
   }
 
   .gux-input-color-color-select {
@@ -92,25 +94,25 @@ gux-input-color-beta {
 
 // Dark
 .gux-input-color-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
 
   .gux-input-color-main-element {
-    border-color: @gux-grey-1;
-    background-color: @gux-border-dark;
+    border-color: @gux-grey-global;
+    background-color: #555d66;
   }
 
   .gux-input-color-main-element:focus,
   .gux-input-color-opened {
-    border-color: @gux-blue;
+    border-color: @gux-genesys-blue;
     box-shadow: none;
   }
 
   .gux-input-color-color-name {
-    color: @gux-off-white;
+    color: @gux-type-dark;
   }
 
   gux-icon {
-    color: @gux-off-white;
+    color: @gux-type-dark;
   }
 }
 
@@ -126,7 +128,7 @@ gux-input-color-beta.gux-dark-theme {
 
 // Light
 .gux-input-color-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 }
 
 .gux-light-theme {

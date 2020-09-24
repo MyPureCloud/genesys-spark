@@ -1,22 +1,24 @@
+@import (reference) '../../../style/color.less';
+
 // Variables part
 @background-color: #f9fafb;
 @background-color-dark-theme: #555d66;
 
-@text-color: @gux-grey-2;
-@text-color-dark-theme: @gux-off-white;
+@text-color: @gux-type;
+@text-color-dark-theme: @gux-type-dark;
 
-@placeholder: @gux-pale-gray-2;
+@placeholder: #9baaba;
 
-@border-color: @gux-border-alt;
-@border-color-dark-theme: @gux-grey-1;
+@border-color: #dae1e8;
+@border-color-dark-theme: @gux-grey-global;
 
-@focus-outline: fade(@gux-blue, 50%);
-@focus-outline-dark-theme: @gux-blue;
-@active-border: @gux-dark-blue;
+@focus-outline: fade(@gux-genesys-blue, 50%);
+@focus-outline-dark-theme: @gux-genesys-blue;
+@active-border: @gux-genesys-dark-blue;
 
 @menu-shadow: rgba(34, 37, 41, 0.24);
 
-@menu-background-color: @gux-off-white;
+@menu-background-color: @gux-type-dark;
 @menu-border-color: #dae1eb;
 @divider-color: #c3cad4;
 
@@ -59,7 +61,7 @@ gux-advanced-dropdown {
 
         &:focus {
           outline: none;
-          box-shadow: 0px 0px 0px 3px fade(@gux-blue, 50%);
+          box-shadow: 0px 0px 0px 3px fade(@gux-genesys-blue, 50%);
         }
       }
 
@@ -95,7 +97,7 @@ gux-advanced-dropdown {
       position: absolute;
       width: 100%;
       z-index: 1;
-      background: @gux-off-white;
+      background: @gux-background;
 
       .gux-dropdown-menu-container {
         padding: 16px;
@@ -147,14 +149,14 @@ gux-advanced-dropdown {
 
         &:not(.disabled) {
           &[selected] {
-            background: @gux-light-blue;
+            background: #deeaff;
             color: @text-color;
           }
 
           &:hover,
           &:focus {
-            background: @gux-dark-blue;
-            color: @gux-off-white;
+            background: @gux-genesys-dark-blue;
+            color: @gux-type-dark;
           }
         }
       }
@@ -166,7 +168,7 @@ gux-advanced-dropdown {
 
 // Dark
 .gux-advanced-dropdown-dark-theme {
-  color: @gux-off-white;
+  color: @gux-type-dark;
 
   div.gux-dropdown {
     .gux-select-field {
@@ -204,7 +206,7 @@ gux-advanced-dropdown.gux-dark-theme {
 
 // Light
 .gux-advanced-dropdown-light-theme {
-  color: @gux-grey-2;
+  color: @gux-type;
 
   div.gux-dropdown {
     .gux-select-field {

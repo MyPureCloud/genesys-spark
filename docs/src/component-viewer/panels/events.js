@@ -2,23 +2,23 @@ import COMPONENT_SPEC from '../../components-spec.json';
 import { emptyElement } from '../../utils/empty-element';
 import { toHTML } from '../../utils/to-html.js';
 
+const MAX_NOTIFICATION = 5;
+
 export default class EventsPanel {
-  constructor(panel, targetElement) {
+  constructor(panel, targetElement, notificationPanel) {
     this.panel = panel;
     this.targetElement = targetElement;
+    this.notificationPanel = notificationPanel;
+    this.descriptions = toHTML(`<dl class="event-descriptions"></dl>`);
 
-    panel.appendChild(toHTML(`<div class="title">Event Descriptions</div>`));
-    this.descriptions = toHTML(`<div class="event-descriptions"></div>`);
     panel.appendChild(this.descriptions);
-
-    panel.appendChild(toHTML(`<div class="title">Triggered Events</div>`));
-    this.triggered = toHTML(`<div class="triggered-events"></div>`);
-    panel.appendChild(this.triggered);
   }
 
   updateFromTree(ast) {
     let descriptionsEl = (this.descriptions = emptyElement(this.descriptions));
-    let triggeredEl = (this.triggered = emptyElement(this.triggered));
+    let notificationPanelEl = (this.notificationPanel = emptyElement(
+      this.notificationPanel
+    ));
     let components = this.traverseTree(ast);
 
     components.forEach(component => {
@@ -26,48 +26,29 @@ export default class EventsPanel {
       let events = COMPONENT_SPEC[component].events || [];
 
       Object.entries(events).forEach(([name, description]) => {
-        descriptionsEl.appendChild(
-          toHTML(`
-                <div>
-                    <span>${component}</span>
-                    <span>[${name}]</span>
-                    - <span>${description}</span>
-                </div>`)
-        );
+        descriptionsEl.appendChild(toHTML(`<dt>${component} [${name}]</dt>`));
+        descriptionsEl.appendChild(toHTML(`<dd>${description}</dd>`));
 
         for (let element of elements) {
           element.addEventListener(name, function (e) {
-            let detail = e ? e.detail : e;
-            let target = e ? e.target : '';
-            if (detail !== null && detail !== undefined) {
-              if (typeof detail === 'object') {
-                triggeredEl.appendChild(
-                  toHTML(`
-                          <div>
-                              <span>${component}</span>
-                              <span>[${name}]</span>
-                              - <span>${JSON.stringify(detail)}</span>
-                          </div>`)
-                );
-              } else {
-                triggeredEl.appendChild(
-                  toHTML(`
-                          <div>
-                              <span>${component}</span>
-                              <span>[${name}]</span>
-                              - <span>${detail}</span>
-                          </div>`)
-                );
-              }
-            } else {
-              triggeredEl.appendChild(
-                toHTML(`
-                        <div>
-                            <span>${component}</span>
-                            <span>[${name}]</span>
-                        </div>`)
-              );
+            const detail = e ? e.detail : e;
+            const target = e ? e.target : '';
+
+            let currentNotifications = notificationPanelEl.children;
+
+            while (currentNotifications.length >= MAX_NOTIFICATION) {
+              currentNotifications[0].remove();
+              currentNotifications = notificationPanelEl.children;
             }
+            notificationPanelEl.appendChild(
+              EventsPanel.getNotificationToast(
+                `${component} [${name}${
+                  target.id ? ' (' + target.id + ')' : ''
+                }]`,
+                detail,
+                target.id
+              )
+            );
           });
         }
       });
@@ -92,5 +73,37 @@ export default class EventsPanel {
     }
 
     return components;
+  }
+
+  static getNotificationToast(title, detail) {
+    let message;
+
+    if (detail !== null && detail !== undefined) {
+      if (typeof detail === 'object') {
+        message = JSON.stringify(detail);
+      } else {
+        message = detail;
+      }
+    } else {
+      message = 'No additional details';
+    }
+
+    const notification = toHTML(`
+      <gux-notification-toast accent="neutral">
+        <gux-icon slot="icon" icon-name="ic-alert-info" decorative></gux-icon>
+        <div slot="title">${title}</div>
+        <div slot="message">${message}</div>
+      </gux-notification-toast>
+    `);
+
+    setTimeout(function () {
+      notification.classList.add('show');
+    }, 10);
+
+    setTimeout(function () {
+      notification.remove();
+    }, 5000);
+
+    return notification;
   }
 }

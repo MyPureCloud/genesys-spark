@@ -14,7 +14,10 @@ describe('gux-pagination-item-counts', () => {
       { totalPages: 10, currentPage: 5, layout: 'full' },
       { totalPages: 0, currentPage: 0, layout: 'small' },
       { totalPages: 10, currentPage: 1, layout: 'small' },
-      { totalPages: 10, currentPage: 5, layout: 'small' }
+      { totalPages: 10, currentPage: 5, layout: 'small' },
+      { totalPages: 0, currentPage: 0, layout: 'expanded' },
+      { totalPages: 10, currentPage: 1, layout: 'expanded' },
+      { totalPages: 10, currentPage: 5, layout: 'expanded' }
     ].forEach(({ totalPages, currentPage, layout }, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const html = `

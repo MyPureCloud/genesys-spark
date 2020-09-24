@@ -2,8 +2,8 @@
 
 exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = `
 <gux-pagination-buttons current-page="0" layout="full" total-pages="0">
-  <div class="gux-pagination-buttons-container">
-    <div class="full gux-pagination-buttons-group">
+  <div class="full gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" disabled="" title="First">
@@ -17,7 +17,7 @@ exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = 
         </button>
       </gux-button>
     </div>
-    <div class="full gux-pagination-buttons-input-container">
+    <div class="gux-pagination-buttons-input-container">
       <div>
         Page
       </div>
@@ -34,8 +34,7 @@ exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = 
         of 0
       </div>
     </div>
-    <div class="full gux-pagination-buttons-small-spacer"></div>
-    <div class="full gux-pagination-buttons-group">
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" disabled="" title="Next">
@@ -55,8 +54,8 @@ exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = `
 <gux-pagination-buttons current-page="1" layout="full" total-pages="10">
-  <div class="gux-pagination-buttons-container">
-    <div class="full gux-pagination-buttons-group">
+  <div class="full gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" disabled="" title="First">
@@ -70,7 +69,7 @@ exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = 
         </button>
       </gux-button>
     </div>
-    <div class="full gux-pagination-buttons-input-container">
+    <div class="gux-pagination-buttons-input-container">
       <div>
         Page
       </div>
@@ -87,8 +86,7 @@ exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = 
         of 10
       </div>
     </div>
-    <div class="full gux-pagination-buttons-small-spacer"></div>
-    <div class="full gux-pagination-buttons-group">
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" title="Next">
@@ -108,8 +106,8 @@ exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = `
 <gux-pagination-buttons current-page="5" layout="full" total-pages="10">
-  <div class="gux-pagination-buttons-container">
-    <div class="full gux-pagination-buttons-group">
+  <div class="full gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" title="First">
@@ -123,7 +121,7 @@ exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = 
         </button>
       </gux-button>
     </div>
-    <div class="full gux-pagination-buttons-input-container">
+    <div class="gux-pagination-buttons-input-container">
       <div>
         Page
       </div>
@@ -140,8 +138,7 @@ exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = 
         of 10
       </div>
     </div>
-    <div class="full gux-pagination-buttons-small-spacer"></div>
-    <div class="full gux-pagination-buttons-group">
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" title="Next">
@@ -161,8 +158,8 @@ exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (4) 1`] = `
 <gux-pagination-buttons current-page="0" layout="small" total-pages="0">
-  <div class="gux-pagination-buttons-container">
-    <div class="gux-pagination-buttons-group small">
+  <div class="gux-pagination-buttons-container small">
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" disabled="" title="First">
@@ -176,25 +173,8 @@ exports[`gux-pagination-item-counts #render should render as expected (4) 1`] = 
         </button>
       </gux-button>
     </div>
-    <div class="gux-pagination-buttons-input-container small">
-      <div>
-        Page
-      </div>
-      <div class="gux-pagination-buttons-input">
-        <gux-text-field use-clear-button="false" value="0">
-          <div>
-            <div class="gux-field">
-              <input type="text" value="0">
-            </div>
-          </div>
-        </gux-text-field>
-      </div>
-      <div>
-        of 0
-      </div>
-    </div>
-    <div class="gux-pagination-buttons-small-spacer small"></div>
-    <div class="gux-pagination-buttons-group small">
+    <div class="gux-pagination-buttons-spacer"></div>
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" disabled="" title="Next">
@@ -214,8 +194,8 @@ exports[`gux-pagination-item-counts #render should render as expected (4) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (5) 1`] = `
 <gux-pagination-buttons current-page="1" layout="small" total-pages="10">
-  <div class="gux-pagination-buttons-container">
-    <div class="gux-pagination-buttons-group small">
+  <div class="gux-pagination-buttons-container small">
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" disabled="" title="First">
@@ -229,25 +209,8 @@ exports[`gux-pagination-item-counts #render should render as expected (5) 1`] = 
         </button>
       </gux-button>
     </div>
-    <div class="gux-pagination-buttons-input-container small">
-      <div>
-        Page
-      </div>
-      <div class="gux-pagination-buttons-input">
-        <gux-text-field use-clear-button="false" value="1">
-          <div>
-            <div class="gux-field">
-              <input type="text" value="1">
-            </div>
-          </div>
-        </gux-text-field>
-      </div>
-      <div>
-        of 10
-      </div>
-    </div>
-    <div class="gux-pagination-buttons-small-spacer small"></div>
-    <div class="gux-pagination-buttons-group small">
+    <div class="gux-pagination-buttons-spacer"></div>
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" title="Next">
@@ -267,8 +230,8 @@ exports[`gux-pagination-item-counts #render should render as expected (5) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (6) 1`] = `
 <gux-pagination-buttons current-page="5" layout="small" total-pages="10">
-  <div class="gux-pagination-buttons-container">
-    <div class="gux-pagination-buttons-group small">
+  <div class="gux-pagination-buttons-container small">
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" title="First">
@@ -282,25 +245,178 @@ exports[`gux-pagination-item-counts #render should render as expected (6) 1`] = 
         </button>
       </gux-button>
     </div>
-    <div class="gux-pagination-buttons-input-container small">
-      <div>
-        Page
-      </div>
-      <div class="gux-pagination-buttons-input">
-        <gux-text-field use-clear-button="false" value="5">
-          <div>
-            <div class="gux-field">
-              <input type="text" value="5">
-            </div>
-          </div>
-        </gux-text-field>
-      </div>
-      <div>
-        of 10
-      </div>
+    <div class="gux-pagination-buttons-spacer"></div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" title="Next">
+          <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+        </button>
+      </gux-button>
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" title="Last">
+          <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+        </button>
+      </gux-button>
     </div>
-    <div class="gux-pagination-buttons-small-spacer small"></div>
-    <div class="gux-pagination-buttons-group small">
+  </div>
+</gux-pagination-buttons>
+`;
+
+exports[`gux-pagination-item-counts #render should render as expected (7) 1`] = `
+<gux-pagination-buttons current-page="0" layout="expanded" total-pages="0">
+  <div class="expanded gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" disabled="" title="First">
+          <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+        </button>
+      </gux-button>
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" disabled="" title="Previous">
+          <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+        </button>
+      </gux-button>
+    </div>
+    <div class="gux-pagination-buttons-list-container"></div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" disabled="" title="Next">
+          <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+        </button>
+      </gux-button>
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" disabled="" title="Last">
+          <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+        </button>
+      </gux-button>
+    </div>
+  </div>
+</gux-pagination-buttons>
+`;
+
+exports[`gux-pagination-item-counts #render should render as expected (8) 1`] = `
+<gux-pagination-buttons current-page="1" layout="expanded" total-pages="10">
+  <div class="expanded gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" disabled="" title="First">
+          <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+        </button>
+      </gux-button>
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" disabled="" title="Previous">
+          <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+        </button>
+      </gux-button>
+    </div>
+    <div class="gux-pagination-buttons-list-container">
+      <button class="gux-pagination-buttons-list-current">
+        1
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        2
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        3
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        4
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        5
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        6
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        7
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        8
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        9
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        10
+      </button>
+    </div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" title="Next">
+          <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+        </button>
+      </gux-button>
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" title="Last">
+          <gux-icon decorative="" iconname="ic-arrow-right-dbl"></gux-icon>
+        </button>
+      </gux-button>
+    </div>
+  </div>
+</gux-pagination-buttons>
+`;
+
+exports[`gux-pagination-item-counts #render should render as expected (9) 1`] = `
+<gux-pagination-buttons current-page="5" layout="expanded" total-pages="10">
+  <div class="expanded gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" title="First">
+          <gux-icon decorative="" iconname="ic-arrow-left-dbl"></gux-icon>
+        </button>
+      </gux-button>
+      <gux-button>
+        <!---->
+        <button class="gux-secondary" title="Previous">
+          <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+        </button>
+      </gux-button>
+    </div>
+    <div class="gux-pagination-buttons-list-container">
+      <button class="gux-pagination-buttons-list-target">
+        1
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        2
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        3
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        4
+      </button>
+      <button class="gux-pagination-buttons-list-current">
+        5
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        6
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        7
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        8
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        9
+      </button>
+      <button class="gux-pagination-buttons-list-target">
+        10
+      </button>
+    </div>
+    <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
         <button class="gux-secondary" title="Next">

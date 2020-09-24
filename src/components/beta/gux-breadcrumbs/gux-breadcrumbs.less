@@ -1,28 +1,10 @@
 gux-breadcrumbs-beta {
-  nav.breadcrumbs {
-    display: block;
-    border: none;
-  }
-  .link-row {
-    display: inline-flex;
-  }
-  .separator {
-    align-self: center;
-    padding: 0 7px;
-  }
-  a.breadcrumb {
-    padding: 0;
-  }
-}
-
-// Light theme
-.gux-breadcrumbs-light-theme {
-  .separator {
-    color: @gux-icons;
-  }
-}
-.gux-light-theme {
-  gux-breadcrumbs-beta {
-    .gux-breadcrumbs-light-theme();
+  .gux-breadcrumbs-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
   }
 }
