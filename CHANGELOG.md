@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.1](http://inindca///compare/v1.7.0...v1.7.1) (2020-09-25)
+
+
+### Bug Fixes
+
+* **gux-modal:** improved documentation of default behaviour ([fe51f5a](http://inindca///commit/fe51f5accd748615ac6d6ed0e55f349121ee2248))
+
 ## [1.7.0](http://inindca///compare/v1.6.1...v1.7.0) (2020-09-24)
 
 
