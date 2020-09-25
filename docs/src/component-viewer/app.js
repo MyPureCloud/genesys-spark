@@ -24,16 +24,18 @@ function createLayout() {
         <div class="preview gux-light-theme"></div>
         <div class="editor"></div>
       </div>
-      <div class="right-column">
-        <details>
-          <summary class="heading">Attributes</summary>
-          <div class="attributes"></div>
-        </details>
-        <details>
-          <summary class="heading">Event Details</summary>
-          <div class="events"></div>
-        </details>
-      </div>
+      <gux-disclosure-button position="right">
+        <div slot="panel-content" class="controls-column">
+          <details>
+            <summary class="heading">Event Descriptions</summary>
+            <div class="events"></div>
+          </details>
+          <details>
+            <summary class="heading">Attributes</summary>
+            <div class="attributes"></div>
+          </details>
+        </div>
+      </gux-disclosure-button>
       <div class="notification"></div>
     </div>
   `);
