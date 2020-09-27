@@ -257,7 +257,8 @@
     },
     "events": {
       "newTab": "new tab button was pressed",
-      "sortChanged": "tab sort was changed"
+      "sortChanged": "tab sort was changed",
+      "input": "tab selected"
     }
   },
   "gux-tab": {
