@@ -30,14 +30,24 @@ export class GuxTabs {
   @Prop() showNewTabButton: boolean = false;
 
   /**
+   * tabId of the currently selected tab
+   */
+  @Prop() value: string = '';
+
+  /**
    * Triggers when the new tab button is selected.
    */
   @Event() newTab: EventEmitter;
 
   /**
+   * Triggers when a tab is selected.
+   */
+  @Event() input: EventEmitter;
+
+  /**
    * Triggers when the sorting of the tabs is changed.
    */
-  @Event() sortChanged: EventEmitter;
+  @Event() sortChanged: EventEmitter<string[]>;
 
   @Element() private element: HTMLElement;
 
@@ -58,7 +68,10 @@ export class GuxTabs {
         return !event.related.classList.contains('ignore-sort');
       },
       onUpdate: () => {
-        this.sortChanged.emit();
+        const tabIds = Array.from(this.element.querySelectorAll('gux-tab')).map(
+          tabElement => tabElement.tabId
+        );
+        this.sortChanged.emit(tabIds);
       }
     });
   }
@@ -103,6 +116,14 @@ export class GuxTabs {
     this.resizeObserver?.observe(
       this.element.shadowRoot.querySelector('.gux-tabs')
     );
+
+    this.element.addEventListener('click', (e: any) => {
+      const tab = e.path.find((el: any) => el.tabId);
+      if (tab && !tab.active) {
+        this.value = tab.tabId;
+        this.input.emit();
+      }
+    });
   }
 
   componentDidRender() {
