@@ -1,66 +1,65 @@
 @import (reference) '../../../style/color.less';
 
-// Variables part
-
+// Style
 gux-tooltip-beta {
-  div.gux-tooltip {
-    position: absolute;
-    white-space: nowrap;
-    background-color: @gux-background;
-    color: @gux-type;
-    height: 32px;
-    line-height: 32px;
-    font-size: 12px;
-    padding: 0 8px;
-    opacity: 0;
-    z-index: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    box-sizing: border-box;
-    pointer-events: none;
+  font-size: 12px;
+  line-height: 32px;
+  padding: 0 12px;
+  max-width: 500px;
+  white-space: nowrap;
+  background-color: @gux-background;
+  color: @gux-type;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 1;
+  visibility: hidden !important;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
 
-    &.shown {
-      opacity: 1;
-    }
-
-    transition: opacity 0.25s ease-in-out;
-    -moz-transition: opacity 0.25s ease-in-out;
-    -webkit-transition: opacity 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out;
+  &.gux-show {
+    visibility: visible !important;
+    opacity: 1;
   }
+}
+
+.gux-tooltip-for-element {
+  cursor: pointer;
 }
 
 // Theming
 // Light
 .gux-tooltip-light-theme {
-  div.gux-tooltip {
-    border: 1px solid #dae1e8;
-    box-shadow: 0 0 2px 0 fade(@gux-grey-global, 24);
-  }
+  border: 1px solid #dae1e8;
+  box-shadow: 0 0 2px 0 fade(@gux-grey-global, 24);
 }
+
 .gux-light-theme {
   gux-tooltip-beta {
     .gux-tooltip-light-theme;
   }
 }
+
 gux-tooltip-beta.gux-light-theme {
   .gux-tooltip-light-theme;
 }
 // Dark
 .gux-tooltip-dark-theme {
-  div.gux-tooltip {
-    border: 1px solid #555d66;
-    box-shadow: 0 0 2px 0 fade(@gux-grey-global, 100);
-  }
+  border: 1px solid #555d66;
+  box-shadow: 0 0 2px 0 fade(@gux-grey-global, 100);
 }
+
 .gux-dark-theme {
   gux-tooltip-beta {
     .gux-tooltip-dark-theme;
   }
 }
+
 gux-tooltip-beta.gux-dark-theme {
   .gux-tooltip-dark-theme;
 }
+
 // Default
 gux-tooltip-beta {
   .gux-tooltip-light-theme;
