@@ -9,7 +9,7 @@
 
   .gux-switch {
     border: none;
-    box-shadow: inset 0px -1px 0px 0px @gux-border;
+    box-shadow: inset 0 -1px 0 0 @gux-border;
     display: inline-block;
 
     .switch-button {
@@ -23,7 +23,9 @@
         margin: 0 8px;
       }
 
-      &:hover, &:active, &:focus {
+      &:hover,
+      &:active,
+      &:focus {
         cursor: pointer;
         color: @gux-genesys-dark-blue;
       }
@@ -45,10 +47,9 @@
       }
     }
 
-
     &.selected {
       .display-text {
-        box-shadow: inset 0px -1px 0px 0px @gux-charcoal-grey;
+        box-shadow: inset 0 -1px 0 0 @gux-charcoal-grey;
         font-weight: bold;
       }
     }
@@ -66,12 +67,13 @@
 
       &.selected {
         .display-text {
-          box-shadow: inset 0px -4px 0px 0px @gux-genesys-blue;
+          box-shadow: inset 0 -4px 0 0 @gux-genesys-blue;
         }
       }
     }
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: @gux-genesys-dark-blue;
     }
 
@@ -86,19 +88,19 @@
 
 // Dark
 .gux-switch-dark-theme {
-
   .gux-switch {
-    box-shadow: inset 0px -1px 0px 0px @gux-grey-global;
+    box-shadow: inset 0 -1px 0 0 @gux-grey-global;
 
     .switch-button {
-      .display-text  {
+      .display-text {
         color: @gux-type-dark;
       }
 
-      &:hover, &:active {
+      &:hover,
+      &:active {
         cursor: pointer;
 
-        .display-text  {
+        .display-text {
           color: @gux-genesys-dark-blue;
         }
       }
@@ -106,19 +108,18 @@
 
     &.selected {
       .display-text {
-        box-shadow: inset 0px -1px 0px 0px @gux-genesys-blue;
+        box-shadow: inset 0 -1px 0 0 @gux-genesys-blue;
         font-weight: bold;
       }
 
       &.large {
         .display-text {
-          box-shadow: inset 0px -4px 0px 0px @gux-genesys-blue;
+          box-shadow: inset 0 -4px 0 0 @gux-genesys-blue;
         }
       }
     }
-
   }
-};
+}
 
 .gux-dark-theme {
   .gux-switch-group {
@@ -133,7 +134,7 @@
 // Light
 .gux-switch-light-theme {
   color: @gux-type;
-};
+}
 
 .gux-light-theme {
   .gux-switch-group {

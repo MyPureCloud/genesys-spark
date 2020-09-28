@@ -21,31 +21,38 @@
 
 gux-text-field {
   display: block;
+
   > div {
     margin: 4px 0;
+
     &.disabled {
       opacity: 0.5;
       pointer-events: none;
       cursor: default;
     }
+
     &.error,
     &.warning {
       input {
         border-color: @alert-color;
         outline: 0;
+
         &:focus,
         &:hover {
           border-color: @alert-color;
           outline: 0;
         }
       }
+
       .gux-error {
         color: @alert-color;
+
         i {
           margin-right: 4px;
         }
       }
     }
+
     &.warning {
       .gux-error {
         i {
@@ -53,13 +60,16 @@ gux-text-field {
         }
       }
     }
+
     > div.gux-field {
       position: relative;
       height: 32px;
     }
   }
+
   .gux-field {
     position: relative;
+
     input {
       .input-style();
 
@@ -67,6 +77,7 @@ gux-text-field {
         padding-right: 25px;
       }
     }
+
     button {
       color: @icon-color;
       position: absolute;
@@ -93,19 +104,23 @@ gux-text-field {
       input {
         border-color: @alert-color-dark;
         outline: 0;
+
         &:focus,
         &:hover {
           border-color: @alert-color-dark;
           outline: 0;
         }
       }
+
       .gux-error {
         color: @alert-color-dark;
+
         i {
           margin-right: 4px;
         }
       }
     }
+
     &.warning {
       .gux-error {
         i {
@@ -138,6 +153,7 @@ gux-text-field {
     .gux-text-field-dark-theme();
   }
 }
+
 .gux-text-field.gux-dark-theme {
   .gux-text-field-dark-theme();
 }
@@ -149,15 +165,18 @@ gux-text-field {
     &.warning {
       input {
         border-color: @alert-color;
+
         &:focus,
         &:hover {
           border-color: @alert-color;
         }
       }
+
       .gux-error {
         color: @alert-color;
       }
     }
+
     &.warning {
       .gux-error {
         i {
@@ -166,28 +185,35 @@ gux-text-field {
       }
     }
   }
+
   .gux-field {
     input {
       background-color: @background-color;
       border: 1px solid @border;
       color: @text-color;
+
       &::placeholder {
         color: @placeholder;
       }
+
       &::-webkit-input-placeholder {
         color: @placeholder;
       }
+
       &::-ms-input-placeholder {
         color: @placeholder;
       }
+
       &::-moz-placeholder {
         color: @placeholder;
       }
+
       &:focus {
         border: 1px solid @focus-border;
-        box-shadow: 0px 0px 4px @focus-outline;
+        box-shadow: 0 0 4px @focus-outline;
       }
     }
+
     button {
       color: @icon-color;
     }
@@ -199,6 +225,7 @@ gux-text-field {
     .gux-text-field-light-theme();
   }
 }
+
 gux-text-field.gux-light-theme {
   .gux-text-field-light-theme();
 }

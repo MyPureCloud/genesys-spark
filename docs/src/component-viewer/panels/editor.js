@@ -7,7 +7,8 @@ const CONFIG = {
     enabled: false
   },
   language: 'html',
-  automaticLayout: true
+  automaticLayout: true,
+  tabSize: 2
 };
 
 export const createEditor = (panel, changeHandler) => {

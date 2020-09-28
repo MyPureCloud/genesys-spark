@@ -12,7 +12,7 @@ gux-simple-toast {
   align-items: flex-start;
   border-top: 1px solid;
 
-  .icon{
+  .icon {
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
@@ -21,12 +21,15 @@ gux-simple-toast {
     &.alert {
       color: @gux-alert;
     }
+
     &.warning {
       color: @gux-warning;
     }
+
     &.positive {
       color: @gux-positive;
     }
+
     &.neutral {
       color: @gux-neutral;
     }
@@ -37,7 +40,7 @@ gux-simple-toast {
     }
   }
 
-  .message{
+  .message {
     order: 0;
     flex: 1 1 auto;
     align-self: auto;
@@ -57,6 +60,7 @@ gux-simple-toast {
     background: transparent;
     font-size: 11px;
     cursor: pointer;
+
     gux-icon {
       width: 12px;
       height: 12px;
@@ -71,16 +75,19 @@ gux-simple-toast {
   color: @gux-type-dark;
   border-color: @gux-type;
 
-  .icon{
+  .icon {
     &.alert {
       color: @gux-alert-dark;
     }
+
     &.warning {
       color: @gux-warning-dark;
     }
+
     &.positive {
       color: @gux-positive-dark;
     }
+
     &.neutral {
       color: @gux-neutral-dark;
     }
@@ -101,12 +108,15 @@ gux-simple-toast {
     &.alert {
       color: @gux-alert;
     }
+
     &.warning {
       color: @gux-warning;
     }
+
     &.positive {
       color: @gux-positive;
     }
+
     &.neutral {
       color: @gux-neutral;
     }
@@ -128,6 +138,7 @@ gux-simple-toast {
     .gux-simple-toast-light-theme();
   }
 }
+
 gux-simple-toast.gux-light-theme {
   .gux-simple-toast-light-theme();
 }
@@ -138,6 +149,7 @@ gux-simple-toast.gux-light-theme {
     .gux-simple-toast-dark-theme();
   }
 }
+
 gux-simple-toast.gux-dark-theme {
   .gux-simple-toast-dark-theme();
 }

@@ -21,10 +21,7 @@
   information to the user that would not otherwise be available
 </p>
 
-<gux-icon
-  class="example"
-  icon-name="add-user"
-></gux-icon>
+<gux-icon class="example" icon-name="add-user"></gux-icon>
 <p>
   If neither <strong>decorative</strong> or <strong>screenreader-text</strong>
   are set an error will be logged in the console
@@ -40,38 +37,79 @@
 <h1>Caching</h1>
 <div>
   <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-center"
+    decorative="true"
+  ></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-right"
+    decorative="true"
+  ></gux-icon>
 </div>
-<hr>
+<hr />
 <div>
   <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-center"
+    decorative="true"
+  ></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-right"
+    decorative="true"
+  ></gux-icon>
 </div>
-<hr>
+<hr />
 <div>
   <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-center"
+    decorative="true"
+  ></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-right"
+    decorative="true"
+  ></gux-icon>
 </div>
-<hr>
+<hr />
 <div>
   <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-center"
+    decorative="true"
+  ></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-right"
+    decorative="true"
+  ></gux-icon>
 </div>
-<hr>
+<hr />
 <div>
   <gux-icon class="example" icon-name="align-left" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative="true"></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative="true"></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-center"
+    decorative="true"
+  ></gux-icon>
+  <gux-icon
+    class="example"
+    icon-name="align-right"
+    decorative="true"
+  ></gux-icon>
 </div>
 <p>
   Duplicated icons should not require additional newtwork calls
 </p>
 
-<style onload="(function () {
+<style
+  onload="(function () {
   const shadowDomHeaderElement = document.getElementById('shadow-dom-header');
   const hostElement = document.getElementById('shadow-dom-host');
   const shadowRoot = hostElement.attachShadow({ mode: 'open' });
@@ -82,7 +120,8 @@
   guxIcon.setAttribute('style', 'width: 50px; height: 50px;');
 
   shadowRoot.appendChild(guxIcon);
-})()">
+})()"
+>
   #styled {
     color: #ff4f1f;
     height: 100px;

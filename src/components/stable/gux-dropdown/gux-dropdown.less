@@ -25,14 +25,17 @@ gux-dropdown {
   div.gux-dropdown {
     position: relative;
     margin: 4px 0;
+
     &.disabled {
       opacity: 0.5;
       pointer-events: none;
       cursor: default;
     }
+
     &.left {
       display: flex;
     }
+
     .select-field {
       position: relative;
       height: 32px;
@@ -84,6 +87,7 @@ gux-dropdown {
         overflow: hidden;
         pointer-events: none;
       }
+
       &.top {
         .ghost {
           margin-top: 32px;
@@ -111,7 +115,7 @@ gux-dropdown {
         position: relative;
         height: 32px;
         line-height: 32px;
-        padding: 0px 16px;
+        padding: 0 16px;
         display: flex;
         cursor: pointer;
 
@@ -158,21 +162,27 @@ gux-dropdown {
           overflow: hidden;
 
           .h1();
+
           line-height: 1.66666667;
           height: 48px;
           padding: 2px 25px 4px 11px;
         }
+
         height: 48px;
+
         gux-text-field {
           div.gux-field {
             height: 48px;
           }
+
           input {
             .h1();
+
             line-height: 1.66666667;
             height: 48px;
             border: none;
             border-bottom: 2px solid transparent;
+
             &:focus {
               box-shadow: none;
               border: none;
@@ -188,6 +198,7 @@ gux-dropdown {
         }
       }
     }
+
     &.palette {
       .select-field {
         .ghost {
@@ -195,21 +206,27 @@ gux-dropdown {
           overflow: hidden;
 
           .h2();
+
           line-height: 1.66666667;
           height: 52px;
           padding: 9px 25px 4px 11px;
         }
+
         height: 52px;
+
         gux-text-field {
           div.gux-field {
             height: 52px;
           }
+
           input {
             .h2();
+
             line-height: 1.66666667;
             height: 52px;
             border: none;
             border-bottom: 2px solid transparent;
+
             &:focus {
               box-shadow: none;
               border: none;
@@ -242,7 +259,7 @@ gux-dropdown {
         color: @text-color;
 
         &:focus {
-          box-shadow: 0px 0px 0px 3px @focus-outline;
+          box-shadow: 0 0 0 3px @focus-outline;
         }
       }
 
@@ -256,7 +273,7 @@ gux-dropdown {
         .gux-field {
           input:focus {
             border: 1px solid @active-border;
-            box-shadow: 0px 0px 4px @focus-outline;
+            box-shadow: 0 0 4px @focus-outline;
           }
         }
       }
@@ -280,18 +297,21 @@ gux-dropdown {
         }
       }
     }
+
     &.palette {
       .select-field {
         .ghost {
           background-color: @gux-background;
           color: #9baab8;
         }
+
         gux-text-field {
           input {
             border-bottom: 1px solid @gux-border;
           }
         }
       }
+
       &.active {
         gux-text-field {
           input {
@@ -308,6 +328,7 @@ gux-dropdown {
     .gux-dropdown-light-theme;
   }
 }
+
 .gux-dropdown.gux-light-theme {
   .gux-dropdown-light-theme;
 }
@@ -315,6 +336,7 @@ gux-dropdown {
 // Dark
 .gux-dropdown-dark-theme {
   color: @gux-type-dark;
+
   div.gux-dropdown {
     .select-field {
       .ghost {
@@ -336,7 +358,7 @@ gux-dropdown {
       .select-field {
         gux-text-field input {
           &:focus {
-            box-shadow: 0px 0px 1px 3px @focus-outline-dark-theme;
+            box-shadow: 0 0 1px 3px @focus-outline-dark-theme;
           }
         }
       }
@@ -346,7 +368,7 @@ gux-dropdown {
           .gux-field {
             input:focus {
               border-color: @border-color-dark-theme;
-              box-shadow: 0px 0px 1px 3px @focus-outline-dark-theme;
+              box-shadow: 0 0 1px 3px @focus-outline-dark-theme;
             }
           }
         }
@@ -374,6 +396,7 @@ gux-dropdown {
         }
       }
     }
+
     &.palette {
       .select-field {
         .ghost {
@@ -397,11 +420,13 @@ gux-dropdown {
     }
   }
 }
+
 .gux-dark-theme {
   gux-dropdown {
     .gux-dropdown-dark-theme;
   }
 }
+
 .gux-dropdown.gux-dark-theme {
   .gux-dropdown-dark-theme;
 }
