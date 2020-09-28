@@ -7,6 +7,7 @@ import {
   Prop,
   readTask,
   State,
+  Watch,
   writeTask
 } from '@stencil/core';
 import Sortable, { MoveEvent } from 'sortablejs';
@@ -58,6 +59,27 @@ export class GuxTabs {
   private sortableInstance?: Sortable;
 
   private resizeObserver?: ResizeObserver;
+
+  @Watch('value')
+  watchHandler(newValue: string, oldValue: string) {
+    if (newValue) {
+      const newActiveTab: any = this.element.querySelector(
+        `gux-tab[tab-id='${newValue}']`
+      );
+      if (newActiveTab) {
+        newActiveTab.active = true;
+      }
+    }
+
+    if (oldValue) {
+      const oldActiveTab: any = this.element.querySelector(
+        `gux-tab[tab-id='${oldValue}']`
+      );
+      if (oldActiveTab) {
+        oldActiveTab.active = false;
+      }
+    }
+  }
 
   createSortable() {
     this.sortableInstance = new Sortable(this.element, {
@@ -133,6 +155,15 @@ export class GuxTabs {
         const hasScrollbar = el.clientWidth !== el.scrollWidth;
         if (this.hasScrollbar !== hasScrollbar) {
           this.hasScrollbar = hasScrollbar;
+        }
+
+        if (this.value) {
+          const activeTab: any = this.element.querySelector(
+            `gux-tab[tab-id='${this.value}']`
+          );
+          if (activeTab) {
+            activeTab.active = true;
+          }
         }
       });
     }, 500);
