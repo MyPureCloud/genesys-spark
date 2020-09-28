@@ -144,13 +144,7 @@ export class GuxTable {
         this.columnResizeState = {
           resizableColumn,
           columnResizeMouseStartX: event.pageX,
-          resizableColumnInitialWidth: parseInt(
-            window
-              .getComputedStyle(resizableColumn)
-              .getPropertyValue('width')
-              .split('px')[0],
-            10
-          )
+          resizableColumnInitialWidth: resizableColumn.offsetWidth
         };
 
         this.tableContainer.classList.add('column-resizing');
