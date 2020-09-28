@@ -1,14 +1,21 @@
 @import (reference) '../../../style/color.less';
 
 // Variables part
-@gux-off-white-bg-2: #f8f8f8;
-@gux-scroll-btn-border: #d5dce0;
-@gux-scroll-btn-disabled-text:#c3cad4;
-@gux-scroll-btn-shadow-left: 1px -1px 1px rgba(34, 37, 41, 0.08);
-@gux-scroll-btn-shadow-right: -1px -1px 1px rgba(34, 37, 41, 0.08);
-@gux-table-row-hover: rgba(117, 168, 255, .24);
+@gux-table-scroll-btn-border: #d5dce0;
+@gux-table-scroll-btn-disabled-text: #c3cad4;
+@gux-table-scroll-btn-shadow-left: 1px -1px 1px rgba(34, 37, 41, 0.08);
+@gux-table-scroll-btn-shadow-right: -1px -1px 1px rgba(34, 37, 41, 0.08);
 @gux-table-scroll-divider: rgba(34, 37, 41, 0.1);
-@gux-table-scroll-thumb: #B5B6B7;
+@gux-table-scroll-thumb: #b5b6b7;
+@gux-table-scroll-thumb-hover: #555d66;
+@gux-table-row-hover-selection: fade(@gux-genesys-blue, 24%);
+@gux-table-background-secondary: #f8f8f8;
+@gux-table-column-sort-hover: #98a7b8;
+@gux-table-empty-message: #9baab8;
+
+gux-table-beta * {
+  box-sizing: border-box;
+}
 
 gux-table-beta {
   display: block;
@@ -24,7 +31,8 @@ gux-table-beta {
       white-space: nowrap;
       width: 100%;
 
-      th, td {
+      th,
+      td {
         border-color: @gux-border;
         border-style: solid;
         border-width: 0px 1px 1px 0px;
@@ -43,7 +51,8 @@ gux-table-beta {
         text-align: right;
       }
 
-      th:last-child, td:last-child {
+      th:last-child,
+      td:last-child {
         border-right-width: 0px;
       }
     }
@@ -52,7 +61,7 @@ gux-table-beta {
     .gux-table-scroll-right {
       align-items: center;
       background: @gux-border;
-      border: 1px solid @gux-scroll-btn-border;
+      border: 1px solid @gux-table-scroll-btn-border;
       color: @gux-charcoal-grey;
       cursor: pointer;
       display: flex;
@@ -64,8 +73,8 @@ gux-table-beta {
       z-index: 1;
 
       &.disabled {
-        background: @gux-off-white-bg-2;
-        color: @gux-scroll-btn-disabled-text;
+        background: @gux-table-background-secondary;
+        color: @gux-table-scroll-btn-disabled-text;
       }
 
       gux-icon {
@@ -77,13 +86,13 @@ gux-table-beta {
     .gux-table-scroll-left {
       border-bottom-right-radius: 2px;
       border-top-right-radius: 2px;
-      box-shadow: @gux-scroll-btn-shadow-left;
+      box-shadow: @gux-table-scroll-btn-shadow-left;
     }
 
     .gux-table-scroll-right {
       border-bottom-left-radius: 2px;
       border-top-left-radius: 2px;
-      box-shadow: @gux-scroll-btn-shadow-right;
+      box-shadow: @gux-table-scroll-btn-shadow-right;
       right: 0;
     }
 
@@ -108,7 +117,7 @@ gux-table-beta {
       }
 
       &::-webkit-scrollbar-thumb:hover {
-        background: #555d66;
+        background: @gux-table-scroll-thumb-hover;
       }
 
       &.compact {
@@ -119,26 +128,34 @@ gux-table-beta {
 
       &.object-table {
         tbody {
-          th, td {
+          th,
+          td {
             border-width: 0px;
           }
 
           tr:hover {
-            background: @gux-table-row-hover;
+            background: @gux-table-row-hover-selection;
           }
         }
       }
 
+      &.column-resizing-hover,
+      &.column-resizing {
+        cursor: col-resize;
+      }
+
       table {
-        th {
-          position: sticky;
-          top: 0;
-          background: @gux-off-white;
+        thead {
+          th {
+            position: sticky;
+            top: 0;
+            background: @gux-off-white;
+          }
         }
 
         tbody {
           tr {
-            background: @gux-off-white-bg-2;
+            background: @gux-table-background-secondary;
           }
 
           tr:nth-child(2n) {
@@ -167,13 +184,13 @@ gux-table-beta {
           padding-right: 48px;
         }
       }
-    }
+    }    
   }
 
   .empty-table {
     align-items: center;
     background: @gux-off-white;
-    color: #9baab8;
+    color: @gux-table-empty-message;
     display: flex;
     height: 150px;
     justify-content: center;

@@ -39,7 +39,7 @@
  - [gux-spin-button](../gux-spin-button)
  - [gux-tab](../../beta/gux-tabs/gux-tab)
  - [gux-tab-dropdown-option](../../beta/gux-tabs/gux-tab-dropdown-option)
- - [gux-table-beta](../../beta/gux-table)
+ - [gux-table-beta](../../beta/gux-table-beta)
  - [gux-tabs-beta](../../beta/gux-tabs)
  - [gux-text-field](../gux-text-field)
 
