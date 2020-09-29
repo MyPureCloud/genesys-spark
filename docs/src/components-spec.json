@@ -330,11 +330,12 @@
       "submit": "Standard Event"
     }
   },
-  "gux-table": {
+  "gux-table-beta": {
     "attributes": {
       "compact": "checkbox",
       "object-table": "checkbox",
-      "epmty-message": "text"
+      "epmty-message": "text",
+      "resizable-columns": "checkbox"
     },
     "events": {}
   },

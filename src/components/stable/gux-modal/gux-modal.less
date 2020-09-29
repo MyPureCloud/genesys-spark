@@ -5,7 +5,7 @@
 
 // Style
 gux-modal {
-  .modal {
+  .gux-modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ gux-modal {
     background: rgba(34, 37, 41, 0.8);
     z-index: 1;
 
-    .modal-container {
+    .gux-modal-container {
       display: flex;
       flex-direction: column;
       position: relative;
@@ -28,26 +28,26 @@ gux-modal {
       background: @gux-background;
       box-shadow: 0 0 2px rgba(34, 37, 41, 0.24);
 
-      &.small {
+      &.gux-small {
         max-height: 368px;
         width: 416px;
 
-        .modal-content {
+        .gux-modal-content {
           max-height: 160px;
         }
       }
 
-      &.medium {
+      &.gux-medium {
         max-height: 640px;
         width: 672px;
       }
 
-      &.large {
+      &.gux-large {
         max-height: 640px;
         width: 940px;
       }
 
-      .dismiss-button {
+      .gux-dismiss-button {
         position: absolute;
         top: 15px;
         right: 15px;
@@ -57,38 +57,39 @@ gux-modal {
         font-size: 11px;
         color: #98a7b8;
         cursor: pointer;
+
         gux-icon {
           width: 12px;
           height: 12px;
         }
       }
 
-      .modal-header {
+      .gux-modal-header {
         margin: 0;
         padding-bottom: 24px;
         .h1();
       }
 
-      .modal-content {
+      .gux-modal-content {
         margin: 0 8px 24px 8px;
         max-height: 432px;
         overflow-y: auto;
 
-        &.no-buttons {
+        &.gux-no-buttons {
           margin-bottom: 0;
         }
       }
-      .button-footer {
+      .gux-button-footer {
         display: flex;
         justify-content: space-between;
 
-        .left-align-buttons {
+        .gux-left-align-buttons {
           gux-button {
             padding-right: 5px;
           }
         }
 
-        .right-align-buttons {
+        .gux-right-align-buttons {
           gux-button {
             padding-left: 5px;
           }
@@ -96,11 +97,11 @@ gux-modal {
       }
     }
 
-    .modal-container {
+    .gux-modal-container {
       @media (max-width: 416px) {
-        &.small,
-        &.medium,
-        &.large {
+        &.gux-small,
+        &.gux-medium,
+        &.gux-large {
           height: 100%;
           width: 100%;
         }
@@ -115,7 +116,7 @@ gux-modal {
 .gux-modal-dark-theme {
   color: @gux-type-dark;
 
-  .modal-container {
+  .gux-modal-container {
     background: @gux-charcoal-grey;
   }
 }

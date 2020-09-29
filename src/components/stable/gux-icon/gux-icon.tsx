@@ -50,7 +50,9 @@ export class GuxIcon {
 
   render() {
     return (
-      this.svgHtml && <div class="container" innerHTML={this.svgHtml}></div>
+      this.svgHtml && (
+        <div class="gux-icon-container" innerHTML={this.svgHtml}></div>
+      )
     );
   }
 

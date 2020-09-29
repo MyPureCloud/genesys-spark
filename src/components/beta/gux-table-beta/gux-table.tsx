@@ -9,6 +9,10 @@ import {
 } from '@stencil/core';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import tableResources from './i18n/en.json';
+import { IColumnResizeState } from './gux-table-constants';
+import { whenEventIsFrom } from '../../../common-utils';
+
+const COL_RESIZE_HANDLE_WIDTH = 3;
 
 @Component({
   styleUrl: 'gux-table.less',
@@ -19,8 +23,10 @@ export class GuxTable {
   root: HTMLElement;
 
   private resizeObserver: ResizeObserver;
-
   private i18n: GetI18nValue;
+  private columnResizeState: IColumnResizeState | null;
+  private tableId: string = this.generateTableId();
+  private columnsWidths: object = {};
 
   /**
    * Indicates that vertical scroll is presented for table
@@ -47,6 +53,12 @@ export class GuxTable {
   private isScrolledToLastCell: boolean = false;
 
   /**
+   * Indicates if the mouse is in a position that supports starting resize
+   */
+  @State()
+  private resizeHover: boolean = false;
+
+  /**
    * Indicates table row density style
    */
   @Prop()
@@ -64,6 +76,12 @@ export class GuxTable {
   @Prop()
   emptyMessage: string;
 
+  /**
+   * Indicates that table should have resizable columns
+   */
+  @Prop()
+  resizableColumns: boolean;
+
   @Listen('scroll', { capture: true })
   onScroll(): void {
     const scrollLeft = this.tableContainer.querySelector('.gux-table-container')
@@ -77,6 +95,74 @@ export class GuxTable {
     } else if (maxScrollLeft - scrollLeft - this.tableScrollbarConstant === 0) {
       this.isScrolledToLastCell = true;
     }
+  }
+
+  @Listen('mouseup', { capture: true })
+  onMouseUp(): void {
+    if (this.columnResizeState) {
+      this.tableContainer.classList.remove('column-resizing');
+      this.columnResizeState = null;
+    }
+  }
+
+  @Listen('mousemove', { capture: true })
+  onMouseMove(event: MouseEvent): void {
+    if (this.resizableColumns) {
+      if (this.columnResizeState) {
+        const columnName = this.columnResizeState.resizableColumn.dataset
+          .columnName;
+        const columnWidth =
+          this.columnResizeState.resizableColumnInitialWidth +
+          (event.pageX - this.columnResizeState.columnResizeMouseStartX);
+
+        this.columnsWidths[columnName] = `${
+          columnWidth > 1 ? columnWidth : 1
+        }px`;
+        this.setResizableColumnsStyles();
+      } else {
+        this.resizeHover = false;
+        whenEventIsFrom('th', event, (th: HTMLTableCellElement) => {
+          const columnsLength = this.tableContainer.querySelectorAll(
+            '.gux-table-container thead th'
+          ).length;
+          const isLastColumn = columnsLength - 1 === th.cellIndex;
+
+          if (this.isInResizeZone(event, th) && !isLastColumn) {
+            this.resizeHover = true;
+          }
+        });
+      }
+    }
+  }
+
+  @Listen('mousedown')
+  onMouseDown(event: MouseEvent): void {
+    whenEventIsFrom('th', event, th => {
+      if (this.resizableColumns && this.isInResizeZone(event, th)) {
+        const resizableColumn = th;
+
+        this.columnResizeState = {
+          resizableColumn,
+          columnResizeMouseStartX: event.pageX,
+          resizableColumnInitialWidth: resizableColumn.offsetWidth
+        };
+
+        this.tableContainer.classList.add('column-resizing');
+      }
+    });
+  }
+
+  private isInResizeZone(event: MouseEvent, header: HTMLElement): boolean {
+    return (
+      header.getBoundingClientRect().right - event.clientX <
+      COL_RESIZE_HANDLE_WIDTH
+    );
+  }
+
+  private prepareResizableColumns(): void {
+    const styleElement = document.createElement('style');
+    styleElement.id = `${this.tableId}-styles`;
+    document.querySelector('head').appendChild(styleElement);
   }
 
   private get tableContainer(): HTMLElement {
@@ -111,10 +197,16 @@ export class GuxTable {
     return [
       'gux-table-container',
       this.compact ? 'compact' : '',
-      this.objectTable ? 'object-table' : ''
+      this.objectTable ? 'object-table' : '',
+      this.columnResizeState ? 'column-resizing' : '',
+      this.resizeHover ? 'column-resizing-hover' : ''
     ]
       .join(' ')
       .trim();
+  }
+
+  private generateTableId(): string {
+    return `gux-table-${Math.random().toString(36).substr(2, 9)}`;
   }
 
   private previousColumn(): void {
@@ -218,11 +310,26 @@ export class GuxTable {
       tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
   }
 
+  private setResizableColumnsStyles(): void {
+    const styleElement = document.getElementById(`${this.tableId}-styles`);
+    let columnsStyles = '';
+
+    Object.keys(this.columnsWidths).forEach((column: string) => {
+      columnsStyles += `#${this.tableId} th[data-column-name="${column}"]{width:${this.columnsWidths[column]};min-width:${this.columnsWidths[column]};}`;
+    });
+
+    styleElement.innerHTML = columnsStyles;
+  }
+
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, tableResources);
 
     if (!this.emptyMessage) {
       this.emptyMessage = this.i18n('emptyMessage');
+    }
+
+    if (this.resizableColumns) {
+      this.prepareResizableColumns();
     }
 
     setTimeout(() => {
@@ -252,12 +359,16 @@ export class GuxTable {
         this.tableContainer.querySelector('.gux-table-container table')
       );
     }
+
+    if (this.resizableColumns) {
+      document.getElementById(`${this.tableId}-styles`).remove();
+    }
   }
 
   render() {
     return (
       <div class={this.tableClasses}>
-        <div class={this.tableContainerClasses}>
+        <div id={this.tableId} class={this.tableContainerClasses}>
           <slot name="data" />
         </div>
         {this.isHorizontalScroll && (

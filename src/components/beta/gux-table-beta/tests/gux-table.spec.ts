@@ -1,7 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxTable } from '../gux-table';
 
-describe('gux-table', () => {
+describe('gux-table-beta', () => {
   let component: GuxTable;
 
   beforeEach(async () => {

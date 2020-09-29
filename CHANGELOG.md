@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](http://inindca///compare/v1.7.1...v1.8.0) (2020-09-28)
+
+
+### Features
+
+* **table component:** columns resizing feature implementation ([015e183](http://inindca///commit/015e183bfcbccde4f8ae9e440949c1af11296703))
+
+
+### Bug Fixes
+
+* **icon:** fix overly generic class name within component ([4dcdb62](http://inindca///commit/4dcdb6287e41abe287a93086d4d05caa8e761d14))
+* **table component:** fix colors variables ([77060b0](http://inindca///commit/77060b01aed3ff2a980bc4505bd250c5eb26d7ee))
+* **table component:** fix getting width of resizable column ([790b3c0](http://inindca///commit/790b3c0460a6ba51abc13a45307fedf6188881c5))
+* **table component:** missing docs attribute added ([1d8b05f](http://inindca///commit/1d8b05f895e3606669de5faa004e29502fee3aa0))
+* **table component:** tests fixed ([cad3b3b](http://inindca///commit/cad3b3b59da393646b5929f1324e3160a0d3229e))
+* **table component:** unused styles removed ([b77bb85](http://inindca///commit/b77bb858d5260cd5c78ce30a76ab1bb567b1bc1f))
+
+### [1.7.1](http://inindca///compare/v1.7.0...v1.7.1) (2020-09-25)
+
+
+### Bug Fixes
+
+* **gux-modal:** improved documentation of default behaviour ([fe51f5a](http://inindca///commit/fe51f5accd748615ac6d6ed0e55f349121ee2248))
+
+## [1.7.0](http://inindca///compare/v1.6.1...v1.7.0) (2020-09-24)
+
+
+### Features
+
+* **styles:** added spacing styles to export ([566e820](http://inindca///commit/566e820ca7436e6781275b4d7ba72385be7ca422))
+
 ### [1.6.1](http://inindca///compare/v1.6.0...v1.6.1) (2020-09-23)
 
 ## [1.6.0](http://inindca///compare/v1.5.2...v1.6.0) (2020-09-22)
