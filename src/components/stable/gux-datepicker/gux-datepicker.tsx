@@ -591,7 +591,7 @@ export class GuxDatepicker {
 
   render() {
     return (
-      <div class={`gux-datepicker ${this.active ? 'active' : ''}`}>
+      <div class={`gux-datepicker ${this.active ? 'gux-active' : ''}`}>
         <div
           class="gux-datepicker-field"
           ref={(el: HTMLDivElement) => (this.fieldDatepickerElement = el)}

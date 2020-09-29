@@ -43,7 +43,7 @@ export class GuxRadialProgress {
         aria-valuemax={max}
       >
         <svg
-          class="svg-container"
+          class="gux-svg-container"
           width="60px"
           height="60px"
           viewBox="0 0 60 60"
@@ -56,18 +56,23 @@ export class GuxRadialProgress {
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
-          <circle cx="50%" cy="50%" r={RADIUS} class="static-circle" />
+          <circle cx="50%" cy="50%" r={RADIUS} class="gux-static-circle" />
           <circle
             cx="50%"
             cy="50%"
             r={RADIUS}
-            class="dynamic-circle"
+            class="gux-dynamic-circle"
             stroke-dashoffset={STROKE_DASH * (1 - value / max)}
             stroke-dasharray={STROKE_DASH}
             filter={'url(#' + this.dropshadowId + ')'}
           />
 
-          <text x="50%" y="50%" dominant-baseline="central" class="percentage">
+          <text
+            x="50%"
+            y="50%"
+            dominant-baseline="central"
+            class="gux-percentage"
+          >
             {`${Math.round((value / max) * 100)}%`}
           </text>
         </svg>

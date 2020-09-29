@@ -7,8 +7,8 @@ gux-accordion {
     padding: 0;
     margin: 0;
 
-    .section {
-      .header {
+    .gux-section {
+      .gux-header {
         box-sizing: border-box;
         height: 40px;
 
@@ -25,12 +25,12 @@ gux-accordion {
           text-align: left;
           padding: 0;
 
-          .heading-text {
+          .gux-heading-text {
             padding: 0 0 0 16px;
           }
         }
 
-        .toggle-arrow {
+        .gux-toggle-arrow {
           float: right;
           padding: 0 12px;
           height: 39px;
@@ -44,20 +44,20 @@ gux-accordion {
         }
       }
 
-      .content {
+      .gux-content {
         box-sizing: border-box;
         display: none;
         padding: 16px;
       }
 
-      &.opened {
-        .header {
-          .toggle-arrow {
+      &.gux-opened {
+        .gux-header {
+          .gux-toggle-arrow {
             transform: scaleY(-1);
           }
         }
 
-        .content {
+        .gux-content {
           display: block;
         }
       }
@@ -71,31 +71,31 @@ gux-accordion {
   .gux-accordion {
     background-color: @gux-background;
 
-    .section {
+    .gux-section {
       color: @gux-charcoal-grey;
 
-      .header {
+      .gux-header {
         border-top: 1px solid @gux-border;
 
         &:hover {
-          .toggle-arrow {
+          .gux-toggle-arrow {
             color: @gux-genesys-dark-blue;
           }
         }
       }
 
-      &.opened {
-        .header {
+      &.gux-opened {
+        .gux-header {
           border-bottom: 1px solid @gux-border;
         }
       }
 
       &:last-of-type {
-        .header {
+        .gux-header {
           border-bottom: 1px solid @gux-border;
         }
 
-        .content {
+        .gux-content {
           border-bottom: 1px solid @gux-border;
         }
       }
@@ -117,10 +117,10 @@ gux-accordion.gux-light-theme {
   ul.gux-accordion {
     background-color: @gux-background-dark;
 
-    .section {
+    .gux-section {
       color: @gux-type-dark;
 
-      .header {
+      .gux-header {
         border-top: 1px solid @gux-grey-global;
 
         .toggle-arrow {
@@ -134,18 +134,18 @@ gux-accordion.gux-light-theme {
         }
       }
 
-      &.opened {
-        .header {
+      &.gux-opened {
+        .gux-header {
           border-bottom: 1px solid @gux-grey-global;
         }
       }
 
       &:last-of-type {
-        .header {
+        .gux-header {
           border-bottom: 1px solid @gux-grey-global;
         }
 
-        .content {
+        .gux-content {
           border-bottom: 1px solid @gux-grey-global;
         }
       }

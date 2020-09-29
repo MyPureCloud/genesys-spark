@@ -244,7 +244,7 @@ export class GuxTimePicker {
             type="text"
             value={this.value}
             size={9}
-            class={this.active ? 'focused' : ''}
+            class={this.active ? 'gux-focused' : ''}
             ref={el => (this.inputElement = el)}
           ></input>
         </div>

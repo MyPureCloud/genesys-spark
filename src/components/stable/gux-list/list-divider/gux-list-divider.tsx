@@ -6,6 +6,12 @@ import { Component, h } from '@stencil/core';
 })
 export class GuxListDivider {
   render() {
-    return <span role="presentation" class="list-item divider" tabindex={-1} />;
+    return (
+      <span
+        role="presentation"
+        class="gux-list-item gux-divider"
+        tabindex={-1}
+      />
+    );
   }
 }

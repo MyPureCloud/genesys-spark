@@ -31,12 +31,12 @@ describe('gux-time-picker-beta', () => {
     // Focus in
     const input = await page.find('gux-time-picker-beta input');
     await input.focus();
-    expect(input).toHaveClass('focused');
+    expect(input).toHaveClass('gux-focused');
 
     // Type
     await input.type('00:55:00');
     let list = await page.find('gux-time-picker-beta gux-list');
-    expect(input).toHaveClass('focused');
+    expect(input).toHaveClass('gux-focused');
     expect(list).not.toBeNull();
 
     // Lose Focus
@@ -56,12 +56,12 @@ describe('gux-time-picker-beta', () => {
     // Focus in
     const input = await page.find('gux-time-picker-beta input');
     await input.focus();
-    expect(input).toHaveClass('focused');
+    expect(input).toHaveClass('gux-focused');
 
     // Type
     await input.type('00:55:0');
     let list = await page.find('gux-time-picker-beta gux-list');
-    expect(input).toHaveClass('focused');
+    expect(input).toHaveClass('gux-focused');
     expect(list).not.toBeNull();
 
     // Lose Focus

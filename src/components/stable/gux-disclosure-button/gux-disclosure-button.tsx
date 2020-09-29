@@ -60,16 +60,19 @@ export class GuxDisclosureButton {
   }
 
   render() {
-    const activeClass = this.isOpen ? 'active' : '';
+    const activeClass = this.isOpen ? 'gux-active' : '';
     return (
-      <div class={`disclosure-button-container ${this.position}`}>
-        <button class="disclosure-button" onClick={() => this.changeState()}>
+      <div class={`gux-disclosure-button-container gux-${this.position}`}>
+        <button
+          class="gux-disclosure-button"
+          onClick={() => this.changeState()}
+        >
           <gux-icon
             icon-name={`${this.icon}`}
             screenreader-text={this.label}
           ></gux-icon>
         </button>
-        <div class={`disclosure-panel ${this.position} ${activeClass}`}>
+        <div class={`gux-disclosure-panel gux-${this.position} ${activeClass}`}>
           <slot name="panel-content" />
         </div>
       </div>

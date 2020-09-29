@@ -237,13 +237,13 @@ export class GuxDropdown {
   render() {
     return (
       <div
-        class={`gux-dropdown ${this.mode} ${this.mode} ${
-          this.disabled ? 'disabled' : ''
-        } ${this.opened ? 'active' : ''}`}
+        class={`gux-dropdown gux-${this.mode} ${
+          this.disabled ? 'gux-disabled' : ''
+        } ${this.opened ? 'gux-active' : ''}`}
         onKeyDown={e => this.onKeyDown(e)}
       >
-        <div class="select-field">
-          <span class="ghost" aria-hidden="true">
+        <div class="gux-select-field">
+          <span class="gux-ghost" aria-hidden="true">
             {this.getGhost()}
           </span>
           <gux-text-field
@@ -263,11 +263,11 @@ export class GuxDropdown {
             }}
             value={this.value}
             disabled={this.disabled}
-            class={this._showDropdownIcon() ? 'unclearable' : ''}
+            class={this._showDropdownIcon() ? 'gux-unclearable' : ''}
           />
           {this._showDropdownIcon() && (
             <button
-              class="dropdown-indicator"
+              class="gux-dropdown-indicator"
               aria-hidden="true"
               tabindex="-1"
               type="button"
@@ -277,7 +277,7 @@ export class GuxDropdown {
           )}
         </div>
         <div
-          class={`gux-options ${this.opened ? 'opened' : ''}`}
+          class={`gux-options ${this.opened ? 'gux-opened' : ''}`}
           onClick={this._optionClickedHandler.bind(this)}
           onFocusIn={this._optionFocusedHandler.bind(this)}
           onKeyDown={this._optionKeyDownHandler.bind(this)}
@@ -300,9 +300,9 @@ export class GuxDropdown {
       for (const option of selectionOptions) {
         option.shouldFilter(searchInput).then(isFiltered => {
           if (this.filterable && isFiltered) {
-            option.classList.add('filtered');
+            option.classList.add('gux-filtered');
           } else {
-            option.classList.remove('filtered');
+            option.classList.remove('gux-filtered');
           }
         });
       }

@@ -128,7 +128,7 @@ export class GuxList {
     this.updateTabIndexes();
     return (
       <div
-        class="list-items-container"
+        class="gux-list-items-container"
         role="list"
         tabindex={0}
         onKeyDown={e => this.onKeyDown(e)}

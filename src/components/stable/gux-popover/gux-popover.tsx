@@ -152,19 +152,19 @@ export class GuxPopover {
 
   render(): JSX.Element {
     return (
-      <div class={`popover-wrapper`}>
-        <div class="arrow" data-popper-arrow />
+      <div class="gux-popover-wrapper">
+        <div class="gux-arrow" data-popper-arrow />
         {this.displayDismissButton && (
           <div class="title-bar">
             <gux-icon
-              class="dismiss"
+              class="gux-dismiss"
               icon-name="close"
               screenreader-text={this.i18n('dismiss')}
               onClick={this.dismiss.bind(this)}
             />
           </div>
         )}
-        <div class="popover-content">
+        <div class="gux-popover-content">
           <slot />
         </div>
       </div>

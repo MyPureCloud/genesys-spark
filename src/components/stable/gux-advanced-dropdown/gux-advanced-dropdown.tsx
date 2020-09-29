@@ -132,8 +132,8 @@ export class GuxAdvancedDropdown {
     return (
       <div
         class={`gux-dropdown
-        ${this.disabled ? 'disabled' : ''}
-        ${this.opened ? 'active' : ''}`}
+        ${this.disabled ? 'gux-disabled' : ''}
+        ${this.opened ? 'gux-active' : ''}`}
       >
         <div class="gux-select-field">
           <a
@@ -149,12 +149,14 @@ export class GuxAdvancedDropdown {
             )}
             {this.value && <span class="gux-select-value">{this.value}</span>}
           </a>
-          <div class="icon-wrapper">
+          <div class="gux-icon-wrapper">
             <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
           </div>
         </div>
         <div
-          class={`gux-advanced-dropdown-menu ${this.opened ? 'opened' : ''}`}
+          class={`gux-advanced-dropdown-menu ${
+            this.opened ? 'gux-opened' : ''
+          }`}
         >
           <div class="gux-dropdown-menu-container">
             <gux-search-beta

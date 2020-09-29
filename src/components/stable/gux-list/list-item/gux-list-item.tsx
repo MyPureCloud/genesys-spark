@@ -55,7 +55,7 @@ export class GuxListItem {
   render() {
     return (
       <Host role="listitem">
-        <span class="list-item">
+        <span class="gux-list-item">
           {this.text && (
             <gux-text-highlight text={this.text} strategy={this.strategy} />
           )}

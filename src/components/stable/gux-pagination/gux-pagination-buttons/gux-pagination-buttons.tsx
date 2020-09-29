@@ -150,7 +150,7 @@ export class GuxPaginationButtons {
 
   render(): JSX.Element {
     return (
-      <div class={`gux-pagination-buttons-container ${this.layout}`}>
+      <div class={`gux-pagination-buttons-container gux-${this.layout}`}>
         <div class="gux-pagination-buttons-group">
           <gux-button
             title={this.i18n('first')}

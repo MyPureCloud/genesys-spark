@@ -2,7 +2,7 @@
 
 exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = `
 <gux-pagination-buttons current-page="0" layout="full" total-pages="0">
-  <div class="full gux-pagination-buttons-container">
+  <div class="gux-full gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
@@ -54,7 +54,7 @@ exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = `
 <gux-pagination-buttons current-page="1" layout="full" total-pages="10">
-  <div class="full gux-pagination-buttons-container">
+  <div class="gux-full gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
@@ -106,7 +106,7 @@ exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = `
 <gux-pagination-buttons current-page="5" layout="full" total-pages="10">
-  <div class="full gux-pagination-buttons-container">
+  <div class="gux-full gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
@@ -158,7 +158,7 @@ exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (4) 1`] = `
 <gux-pagination-buttons current-page="0" layout="small" total-pages="0">
-  <div class="gux-pagination-buttons-container small">
+  <div class="gux-pagination-buttons-container gux-small">
     <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
@@ -194,7 +194,7 @@ exports[`gux-pagination-item-counts #render should render as expected (4) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (5) 1`] = `
 <gux-pagination-buttons current-page="1" layout="small" total-pages="10">
-  <div class="gux-pagination-buttons-container small">
+  <div class="gux-pagination-buttons-container gux-small">
     <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
@@ -230,7 +230,7 @@ exports[`gux-pagination-item-counts #render should render as expected (5) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (6) 1`] = `
 <gux-pagination-buttons current-page="5" layout="small" total-pages="10">
-  <div class="gux-pagination-buttons-container small">
+  <div class="gux-pagination-buttons-container gux-small">
     <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
@@ -266,7 +266,7 @@ exports[`gux-pagination-item-counts #render should render as expected (6) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (7) 1`] = `
 <gux-pagination-buttons current-page="0" layout="expanded" total-pages="0">
-  <div class="expanded gux-pagination-buttons-container">
+  <div class="gux-expanded gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
@@ -302,7 +302,7 @@ exports[`gux-pagination-item-counts #render should render as expected (7) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (8) 1`] = `
 <gux-pagination-buttons current-page="1" layout="expanded" total-pages="10">
-  <div class="expanded gux-pagination-buttons-container">
+  <div class="gux-expanded gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->
@@ -369,7 +369,7 @@ exports[`gux-pagination-item-counts #render should render as expected (8) 1`] = 
 
 exports[`gux-pagination-item-counts #render should render as expected (9) 1`] = `
 <gux-pagination-buttons current-page="5" layout="expanded" total-pages="10">
-  <div class="expanded gux-pagination-buttons-container">
+  <div class="gux-expanded gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
       <gux-button>
         <!---->

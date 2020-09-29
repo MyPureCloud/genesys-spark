@@ -15,26 +15,26 @@ export class GuxActionToast {
   render(): JSX.Element {
     return (
       <Host>
-        <div class="header">
-          <div class="icon">
+        <div class="gux-header">
+          <div class="gux-icon">
             <slot name="icon" />
           </div>
 
-          <div class="title">
+          <div class="gux-title">
             <slot name="title" />
           </div>
         </div>
 
-        <div class="message">
+        <div class="gux-message">
           <slot name="message" />
         </div>
 
-        <div class="action-buttons">
-          <div class="negitive-button">
+        <div class="gux-action-buttons">
+          <div class="gux-negitive-button">
             <slot name="negitive-button" />
           </div>
 
-          <div class="positive-button">
+          <div class="gux-positive-button">
             <slot name="positive-button" />
           </div>
         </div>

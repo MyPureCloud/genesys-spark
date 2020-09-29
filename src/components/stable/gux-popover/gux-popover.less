@@ -5,7 +5,7 @@ gux-popover {
   z-index: 2;
   color: @gux-type;
 
-  .popover-wrapper {
+  .gux-popover-wrapper {
     display: flex;
     flex-direction: column;
     border: 1px @gux-border;
@@ -13,8 +13,8 @@ gux-popover {
     background-color: @gux-type-dark;
   }
 
-  .arrow,
-  .arrow::after {
+  .gux-arrow,
+  .gux-arrow::after {
     position: absolute;
     content: ' ';
     height: 0;
@@ -23,11 +23,11 @@ gux-popover {
     border-color: transparent;
   }
 
-  .arrow {
+  .gux-arrow {
     border-width: 6px;
   }
 
-  .arrow::after {
+  .gux-arrow::after {
     border-width: 4px;
   }
 
@@ -36,7 +36,7 @@ gux-popover {
   &[data-popper-placement='bottom-end'] {
     margin-top: 6px;
 
-    .arrow {
+    .gux-arrow {
       border-bottom-color: @gux-border;
       margin-top: -12px;
 
@@ -53,7 +53,7 @@ gux-popover {
   &[data-popper-placement='top-end'] {
     margin-bottom: 6px;
 
-    .arrow {
+    .gux-arrow {
       bottom: 0;
       border-top-color: @gux-border;
       margin-bottom: -12px;
@@ -71,7 +71,7 @@ gux-popover {
   &[data-popper-placement='left-end'] {
     margin-right: 6px;
 
-    .arrow {
+    .gux-arrow {
       right: 0;
       border-left-color: @gux-border;
       margin-right: -12px;
@@ -89,7 +89,7 @@ gux-popover {
   &[data-popper-placement='right-end'] {
     margin-left: 6px;
 
-    .arrow {
+    .gux-arrow {
       border-right-color: @gux-border;
       margin-left: -12px;
 
@@ -101,11 +101,11 @@ gux-popover {
     }
   }
 
-  .title-bar {
+  .gux-title-bar {
     align-self: flex-end;
     margin-bottom: -16px;
 
-    .dismiss {
+    .gux-dismiss {
       height: 12px;
       width: 12px;
       padding: 4px 4px 0 0;
@@ -118,7 +118,7 @@ gux-popover {
     }
   }
 
-  .popover-content {
+  .gux-popover-content {
     margin: 16px 18px;
   }
 }

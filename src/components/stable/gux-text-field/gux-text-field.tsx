@@ -177,10 +177,10 @@ export class GuxTextField {
   getClassList(): string {
     let classList = [];
     if (this.errorMessage) {
-      classList = [...classList, this.errorMessageType];
+      classList = [...classList, `gux-${this.errorMessageType}`];
     }
     if (this.disabled) {
-      classList = [...classList, 'disabled'];
+      classList = [...classList, 'gux-disabled'];
     }
     return classList.join(' ');
   }
@@ -235,7 +235,7 @@ export class GuxTextField {
       <div class={this.getClassList()}>
         <div class="gux-field">
           <input
-            class={this.showClearButton() ? 'text-clearable' : ''}
+            class={this.showClearButton() ? 'gux-text-clearable' : ''}
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
@@ -251,7 +251,7 @@ export class GuxTextField {
           {this.showClearButton() && (
             <button
               type="button"
-              class="clear-button"
+              class="gux-clear-button"
               title={this.eraseLabel}
               aria-label={this.i18n('eraseBtnAria')}
               onClick={() => this.clear()}

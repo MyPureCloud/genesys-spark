@@ -27,7 +27,7 @@ describe('gux-advanced-dropdown', () => {
     await page.waitForChanges();
 
     const dropMenuElm = await element.find('.gux-advanced-dropdown-menu');
-    expect(dropMenuElm.className.split(' ')).toContain('opened');
+    expect(dropMenuElm.className.split(' ')).toContain('gux-opened');
   });
 
   it('selects an item when an option is clicked', async () => {
@@ -54,7 +54,7 @@ describe('gux-advanced-dropdown', () => {
     dropMenuElm = await element.find('.gux-advanced-dropdown-menu');
 
     expect(inputSpy).toHaveReceivedEventDetail('en');
-    expect(dropMenuElm.className.split(' ')).not.toContain('opened');
+    expect(dropMenuElm.className.split(' ')).not.toContain('gux-opened');
   });
 
   it('Should fire filter event with a delay', async () => {
