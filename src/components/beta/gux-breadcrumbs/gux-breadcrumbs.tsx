@@ -27,9 +27,10 @@ export class GuxBreadcrumbs {
     return (
       <nav
         aria-label={this.i18n('breadcrumbs')}
-        class={`gux-breadcrumbs-container ${
-          this.accent === 'primary' ? 'gux-large-text' : ''
-        }`}
+        class={{
+          'gux-breadcrumbs-container': true,
+          'gux-large-text': this.accent === 'primary'
+        }}
       >
         <slot />
       </nav>

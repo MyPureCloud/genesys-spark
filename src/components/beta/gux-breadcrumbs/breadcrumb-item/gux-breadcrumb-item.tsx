@@ -1,5 +1,7 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
+export type GuxBreadcrumbAccent = 'primary' | 'secondary';
+
 @Component({
   styleUrl: 'gux-breadcrumb-item.less',
   tag: 'gux-breadcrumb-item'
@@ -11,7 +13,7 @@ export class GuxBreadcrumbItem {
   @Prop()
   href: string;
 
-  private getAccent(): string {
+  private getAccent(): GuxBreadcrumbAccent {
     const container = this.root.closest('gux-breadcrumbs-beta');
     return container.accent;
   }
@@ -25,21 +27,21 @@ export class GuxBreadcrumbItem {
 
   private getBreadcrumb(): JSX.Element {
     if (
-      this.href &&
-      !this.isLastBreadcrumb() &&
+      !this.href ||
+      this.isLastBreadcrumb() ||
       this.getAccent() === 'primary'
     ) {
       return (
-        <a class="gux-breadcrumb-content" href={this.href}>
+        <span class="gux-breadcrumb-content">
           <slot />
-        </a>
+        </span>
       );
     }
 
     return (
-      <span class="gux-breadcrumb-content">
+      <a class="gux-breadcrumb-content" href={this.href}>
         <slot />
-      </span>
+      </a>
     );
   }
 
