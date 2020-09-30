@@ -349,30 +349,30 @@ export class GuxTable {
     if (!this.emptyMessage) {
       this.emptyMessage = this.i18n('emptyMessage');
     }
+  }
 
-    setTimeout(() => {
-      if (this.resizableColumns) {
-        this.prepareResizableColumns();
-      }
+  componentDidLoad() {
+    if (this.resizableColumns) {
+      this.prepareResizableColumns();
+    }
 
-      this.checkHorizontalScroll();
-      this.checkVerticalScroll();
+    this.checkHorizontalScroll();
+    this.checkVerticalScroll();
 
-      if (!this.resizeObserver && window.ResizeObserver) {
-        this.resizeObserver = new ResizeObserver(() => {
-          readTask(() => {
-            this.checkHorizontalScroll();
-            this.checkVerticalScroll();
-          });
+    if (!this.resizeObserver && window.ResizeObserver) {
+      this.resizeObserver = new ResizeObserver(() => {
+        readTask(() => {
+          this.checkHorizontalScroll();
+          this.checkVerticalScroll();
         });
-      }
+      });
+    }
 
-      if (this.resizeObserver) {
-        this.resizeObserver.observe(
-          this.tableContainer.querySelector('.gux-table-container table')
-        );
-      }
-    });
+    if (this.resizeObserver) {
+      this.resizeObserver.observe(
+        this.tableContainer.querySelector('.gux-table-container table')
+      );
+    }
   }
 
   disconnectedCallback(): void {
