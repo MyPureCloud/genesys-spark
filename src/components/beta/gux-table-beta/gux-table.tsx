@@ -1,6 +1,9 @@
 import {
   Component,
   Element,
+  Event,
+  EventEmitter,
+  getAssetPath,
   h,
   Listen,
   Prop,
@@ -9,7 +12,7 @@ import {
 } from '@stencil/core';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import tableResources from './i18n/en.json';
-import { IColumnResizeState } from './gux-table-constants';
+import { IColumnResizeState, ISortState } from './gux-table-constants';
 import { whenEventIsFrom } from '../../../common-utils';
 
 const COL_RESIZE_HANDLE_WIDTH = 3;
@@ -75,6 +78,11 @@ export class GuxTable {
    */
   @Prop()
   emptyMessage: string;
+
+  /**
+   * Triggers when the sorting of the table column is changed.
+   */
+  @Event() sortChanged: EventEmitter<ISortState>;
 
   /**
    * Indicates that table should have resizable columns
@@ -161,7 +169,7 @@ export class GuxTable {
 
   private prepareResizableColumns(): void {
     const styleElement = document.createElement('style');
-    styleElement.id = `${this.tableId}-styles`;
+    styleElement.id = `${this.tableId}-resizable-styles`;
     document.querySelector('head').appendChild(styleElement);
   }
 
@@ -310,8 +318,59 @@ export class GuxTable {
       tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
   }
 
+  private prepareSortableColumns(): void {
+    const columnsElements = Array.from(
+      this.tableContainer.querySelectorAll('thead th')
+    );
+    this.setSortableColumnsStyles();
+
+    columnsElements.forEach((column: HTMLElement) => {
+      if (column.dataset.hasOwnProperty('sortable')) {
+        column.onclick = (event: MouseEvent) => {
+          const columnElement = event.target as HTMLElement;
+          const sortDirection = columnElement.dataset.sort || '';
+          let newSortDirection = null;
+
+          switch (sortDirection) {
+            case '':
+              newSortDirection = 'asc';
+              break;
+            case 'asc':
+              newSortDirection = 'desc';
+              break;
+          }
+
+          this.sortChanged.emit({
+            columnName: columnElement.dataset.columnName,
+            sortDirection: newSortDirection
+          });
+        };
+      }
+    });
+  }
+
+  private setSortableColumnsStyles(): void {
+    const styleElement = document.createElement('style');
+    styleElement.id = `${this.tableId}-sortable-styles`;
+
+    const ascArrowIcon = getAssetPath(`./icons/ic-arrow-solid-down.svg`);
+    const descArrowIcon = getAssetPath(`./icons/ic-arrow-solid-up.svg`);
+    const sortAscContent = this.i18n('sortAsc');
+    const sortDescContent = this.i18n('sortDesc');
+
+    styleElement.innerHTML = `
+      th[data-sortable]:hover:after{content: "${sortAscContent}";background-image: url("${ascArrowIcon}");}
+      th[data-sort="asc"]:after{background-image:url("${ascArrowIcon}")!important;content:"${sortAscContent}"!important;}
+      th[data-sort="desc"]:after{background-image:url("${descArrowIcon}")!important;content:"${sortDescContent}"!important;}
+    `;
+
+    document.querySelector('head').appendChild(styleElement);
+  }
+
   private setResizableColumnsStyles(): void {
-    const styleElement = document.getElementById(`${this.tableId}-styles`);
+    const styleElement = document.getElementById(
+      `${this.tableId}-resizable-styles`
+    );
     let columnsStyles = '';
 
     Object.keys(this.columnsWidths).forEach((column: string) => {
@@ -327,30 +386,31 @@ export class GuxTable {
     if (!this.emptyMessage) {
       this.emptyMessage = this.i18n('emptyMessage');
     }
+  }
 
+  componentDidLoad() {
     if (this.resizableColumns) {
       this.prepareResizableColumns();
     }
 
-    setTimeout(() => {
-      this.checkHorizontalScroll();
-      this.checkVerticalScroll();
+    this.prepareSortableColumns();
+    this.checkHorizontalScroll();
+    this.checkVerticalScroll();
 
-      if (!this.resizeObserver && window.ResizeObserver) {
-        this.resizeObserver = new ResizeObserver(() => {
-          readTask(() => {
-            this.checkHorizontalScroll();
-            this.checkVerticalScroll();
-          });
+    if (!this.resizeObserver && window.ResizeObserver) {
+      this.resizeObserver = new ResizeObserver(() => {
+        readTask(() => {
+          this.checkHorizontalScroll();
+          this.checkVerticalScroll();
         });
-      }
+      });
+    }
 
-      if (this.resizeObserver) {
-        this.resizeObserver.observe(
-          this.tableContainer.querySelector('.gux-table-container table')
-        );
-      }
-    });
+    if (this.resizeObserver) {
+      this.resizeObserver.observe(
+        this.tableContainer.querySelector('.gux-table-container table')
+      );
+    }
   }
 
   disconnectedCallback(): void {
@@ -361,7 +421,8 @@ export class GuxTable {
     }
 
     if (this.resizableColumns) {
-      document.getElementById(`${this.tableId}-styles`).remove();
+      document.getElementById(`${this.tableId}-resizable-styles`).remove();
+      document.getElementById(`${this.tableId}-sortable-styles`).remove();
     }
   }
 

@@ -151,6 +151,30 @@ gux-table-beta {
             top: 0;
             background: @gux-off-white;
           }
+
+          th[data-sort] {
+            box-shadow: inset 0 -4px 0 0 @gux-blue;
+          }
+
+          th[data-sortable]:hover::after,
+          th[data-sort='asc']::after,
+          th[data-sort='desc']::after {
+            color: transparent;
+            display: block;
+            width: 14px;
+            position: absolute;
+            right: 6px;
+            top: 13px;
+          }
+
+          th[data-cell-action][data-sortable]:hover::after,
+          th[data-cell-numeric][data-sortable]:hover::after,
+          th[data-cell-action][data-sort='asc']::after,
+          th[data-cell-numeric][data-sort='asc']::after,
+          th[data-cell-action][data-sort='desc']::after,
+          th[data-cell-numeric][data-sort='desc']::after {
+            left: 6px;
+          }
         }
 
         tbody {

@@ -331,7 +331,9 @@
       "epmty-message": "text",
       "resizable-columns": "checkbox"
     },
-    "events": {}
+    "events": {
+      "sortChanged": "Fired when sorting of the table column is changed"
+    }
   },
   "typography": {},
   "color": {}
