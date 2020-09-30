@@ -334,5 +334,6 @@
     "events": {}
   },
   "typography": {},
-  "color": {}
+  "color": {},
+  "spacing": {}
 }
