@@ -30,8 +30,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-table --> gux-icon
-  style gux-table fill:#f9f,stroke:#333,stroke-width:4px
+  gux-table-beta --> gux-icon
+  style gux-table-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

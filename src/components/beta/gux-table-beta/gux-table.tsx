@@ -14,7 +14,7 @@ import tableResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-table.less',
-  tag: 'gux-table'
+  tag: 'gux-table-beta'
 })
 export class GuxTable {
   @Element()
