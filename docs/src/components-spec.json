@@ -309,16 +309,10 @@
     },
     "events": { "check": "toggle state changed" }
   },
-  "gux-tooltip": {
+  "gux-tooltip": {},
+  "gux-tooltip-beta": {
     "attributes": {
-      "text": "text",
-      "for": "text",
-      "delay": "text",
-      "is-shown": "checkbox"
-    },
-    "events": {
-      "hidden": "fired when tooltip moves to hidden state",
-      "shown": "fired when tooltip moves to visible state"
+      "for": "text"
     }
   },
   "gux-form-field-beta": {
