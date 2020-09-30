@@ -7,15 +7,19 @@ gux-rating-beta {
     opacity: 0.5;
     pointer-events: none;
   }
+
   .gux-rating {
     display: inline-block;
+
     > div {
       &:focus {
         outline: none;
       }
+
       display: inline-block;
     }
   }
+
   svg {
     width: 24px;
     cursor: pointer;
@@ -28,9 +32,11 @@ gux-rating-beta {
     &:hover {
       stroke: @gux-genesys-blue;
     }
+
     &.gux-rating-item-shape-fill-percent-50 {
       stroke: @gux-genesys-blue;
     }
+
     &.gux-rating-item-shape-fill-percent-100 {
       fill: @gux-genesys-blue;
       stroke: @gux-genesys-blue;
@@ -40,6 +46,7 @@ gux-rating-beta {
   .gux-rating {
     > div {
       display: inline-block;
+
       &:focus {
         svg {
           .gux-rating-item-shape-default {
@@ -51,10 +58,11 @@ gux-rating-beta {
   }
 
   svg {
-    linearGradient {
+    lineargradient {
       stop {
         stop-color: transparent;
       }
+
       stop:first-child {
         stop-color: @gux-genesys-blue;
       }
@@ -68,6 +76,7 @@ gux-rating-beta {
     .gux-rating-dark-theme();
   }
 }
+
 gux-rating-beta.gux-dark-theme {
   .gux-rating-dark-theme();
 }
@@ -76,9 +85,11 @@ gux-rating-beta.gux-dark-theme {
 .gux-rating-light-theme {
   .gux-rating-item-shape-default {
     stroke: #98a7b8;
+
     &.gux-rating-item-shape-fill-percent-50 {
       stroke: @gux-charcoal-grey;
     }
+
     &.gux-rating-item-shape-fill-percent-100 {
       fill: @gux-charcoal-grey;
       stroke: @gux-charcoal-grey;
@@ -88,6 +99,7 @@ gux-rating-beta.gux-dark-theme {
   .gux-rating {
     > div {
       display: inline-block;
+
       &:focus {
         svg {
           .gux-rating-item-shape-default {
@@ -99,10 +111,11 @@ gux-rating-beta.gux-dark-theme {
   }
 
   svg {
-    linearGradient {
+    lineargradient {
       stop {
         stop-color: transparent;
       }
+
       stop:first-child {
         stop-color: @gux-type;
       }
@@ -115,6 +128,7 @@ gux-rating-beta.gux-dark-theme {
     .gux-rating-light-theme();
   }
 }
+
 gux-rating-beta.gux-light-theme {
   .gux-rating-light-theme();
 }

@@ -5,6 +5,7 @@ gux-datepicker {
   display: block;
   min-width: 200px;
   height: auto;
+
   > div.gux-datepicker {
     button {
       cursor: pointer;
@@ -12,6 +13,7 @@ gux-datepicker {
       background: none;
       outline: none;
     }
+
     > div.gux-datepicker-field {
       position: relative;
       display: inline-block;
@@ -27,7 +29,6 @@ gux-datepicker {
           }
         }
 
-
         input::-ms-clear {
           display: none;
         }
@@ -41,20 +42,24 @@ gux-datepicker {
           right: 0;
           z-index: 1;
         }
+
         > div > div > button {
           display: none;
         }
       }
     }
+
     &.active {
       > div.gux-datepicker-field > gux-text-field > button {
         color: @gux-genesys-dark-blue;
       }
+
       gux-calendar {
         display: block;
       }
     }
   }
+
   gux-calendar {
     display: none;
     position: absolute;
@@ -68,7 +73,7 @@ gux-datepicker {
 // Light
 .gux-datepicker-light-theme {
   color: @gux-type;
-};
+}
 
 .gux-light-theme {
   gux-datepicker {
@@ -88,8 +93,10 @@ gux-datepicker.gux-light-theme {
         label {
           color: @gux-type-dark;
         }
+
         > button {
           color: @gux-type-dark;
+
           &:hover {
             color: @gux-type-dark;
           }
@@ -97,7 +104,7 @@ gux-datepicker.gux-light-theme {
       }
     }
   }
-};
+}
 
 .gux-dark-theme {
   gux-datepicker {

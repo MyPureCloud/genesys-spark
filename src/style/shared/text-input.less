@@ -1,6 +1,5 @@
 @import (reference) '../color.less';
 
-
 /*
  * This is a partial migration of text-field styles for components that want the same text styles
  * as gux-text-field, but need direct access to the input element. It may be worth migrating error
@@ -27,23 +26,28 @@
   font-size: 12px;
   line-height: 1.66666667;
   color: @text-color;
+
   &::placeholder {
     color: @placeholder;
   }
+
   &::-webkit-input-placeholder {
     color: @placeholder;
   }
+
   &::-ms-input-placeholder {
     color: @placeholder;
   }
+
   &::-moz-placeholder {
     color: @placeholder;
   }
+
   &.focused,
   &:focus {
     border: 1px solid @focus-border;
     outline: none;
-    box-shadow: 0px 0px 4px @focus-outline;
+    box-shadow: 0 0 4px @focus-outline;
   }
 }
 
@@ -58,18 +62,23 @@
   background-color: @dark-background-color;
   border: 1px solid @dark-border;
   color: @dark-text-color;
+
   &::placeholder {
     color: @dark-placeholder;
   }
+
   &::-webkit-input-placeholder {
     color: @dark-placeholder;
   }
+
   &::-ms-input-placeholder {
     color: @dark-placeholder;
   }
+
   &::-moz-placeholder {
     color: @dark-placeholder;
   }
+
   &.focused,
   &:focus {
     border: 1px solid @dark-focus-border;

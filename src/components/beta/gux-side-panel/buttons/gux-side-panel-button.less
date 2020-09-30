@@ -1,7 +1,6 @@
 @import (reference) '../../../../style/color.less';
 
 gux-side-panel-button {
-
   button {
     width: 48px;
     height: 48px;
@@ -26,7 +25,7 @@ gux-side-panel-button {
       }
     }
 
-    &:focus{
+    &:focus {
       outline: none;
     }
 
@@ -59,34 +58,34 @@ gux-side-panel-button {
       }
     }
   }
-};
+}
 
 .gux-dark-theme {
-    gux-side-panel-button {
-        .gux-side-panel-button-dark-theme();
-    }
+  gux-side-panel-button {
+    .gux-side-panel-button-dark-theme();
+  }
 }
 
 gux-side-panel-button.gux-dark-theme {
-    .gux-side-panel-button-dark-theme();
+  .gux-side-panel-button-dark-theme();
 }
 
 // Light
 .gux-side-panel-button-light-theme {
-    color: @gux-type;
-};
+  color: @gux-type;
+}
 
 .gux-light-theme {
-    gux-side-panel-button {
-        .gux-side-panel-button-light-theme();
-    }
+  gux-side-panel-button {
+    .gux-side-panel-button-light-theme();
+  }
 }
 
 gux-side-panel-button.gux-light-theme {
-    .gux-side-panel-button-light-theme();
+  .gux-side-panel-button-light-theme();
 }
 
 // Default Theme
 gux-side-panel-button {
-    .gux-side-panel-button-light-theme();
+  .gux-side-panel-button-light-theme();
 }
