@@ -1,5 +1,7 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
+export type GuxBreadcrumbAccent = 'primary' | 'secondary';
+
 @Component({
   styleUrl: 'gux-breadcrumb-item.less',
   tag: 'gux-breadcrumb-item'
@@ -11,6 +13,11 @@ export class GuxBreadcrumbItem {
   @Prop()
   href: string;
 
+  private getAccent(): GuxBreadcrumbAccent {
+    const container = this.root.closest('gux-breadcrumbs-beta');
+    return container.accent;
+  }
+
   private isLastBreadcrumb(): boolean {
     const parentNode = this.root.parentNode;
     const children = parentNode.children;
@@ -19,18 +26,22 @@ export class GuxBreadcrumbItem {
   }
 
   private getBreadcrumb(): JSX.Element {
-    if (this.href && !this.isLastBreadcrumb()) {
+    if (
+      !this.href ||
+      this.isLastBreadcrumb() ||
+      this.getAccent() === 'primary'
+    ) {
       return (
-        <a class="gux-breadcrumb-content" href={this.href}>
+        <span class="gux-breadcrumb-content">
           <slot />
-        </a>
+        </span>
       );
     }
 
     return (
-      <span class="gux-breadcrumb-content">
+      <a class="gux-breadcrumb-content" href={this.href}>
         <slot />
-      </span>
+      </a>
     );
   }
 
@@ -39,10 +50,7 @@ export class GuxBreadcrumbItem {
       return null;
     }
 
-    const container = this.root.closest('gux-breadcrumbs-beta');
-    const accent = container.accent;
-
-    switch (accent) {
+    switch (this.getAccent()) {
       case 'primary':
         return (
           <span class="gux-breadcrumb-separator" aria-hidden="true">
