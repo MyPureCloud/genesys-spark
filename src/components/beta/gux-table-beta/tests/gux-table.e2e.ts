@@ -1,6 +1,6 @@
 import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
 
-describe('gux-table', () => {
+describe('gux-table-beta', () => {
   let page: E2EPage;
   let element: E2EElement;
 

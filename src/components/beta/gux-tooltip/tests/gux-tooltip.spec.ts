@@ -1,30 +1,76 @@
 import { newSpecPage } from '@stencil/core/testing';
-import * as Utils from '../../../../common-utils';
+import * as popperjs from '@popperjs/core';
 import { GuxTooltip } from '../gux-tooltip';
 
-describe('gux-tooltip', () => {
-  let component: GuxTooltip;
+const components = [GuxTooltip];
+const language = 'en';
 
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxTooltip],
-      html: `<gux-tooltip-beta></gux-tooltip-beta>`,
-      language: 'en'
-    });
+describe('gux-tooltip-beta', () => {
+  beforeEach(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
+    // popperjs does not work with Stencils MockHTMLElements used in tests
+    jest.spyOn(popperjs, 'createPopper').mockReturnValue(({
+      destroy: jest.fn()
+    } as unknown) as popperjs.Instance);
+  });
 
-    component = page.rootInstance;
+  afterEach(() => {
+    jest.spyOn(global.Math, 'random').mockRestore();
+    jest.spyOn(popperjs, 'createPopper').mockRestore();
   });
 
   it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxTooltip);
+    const html = '<gux-tooltip-beta></gux-tooltip-beta>';
+    const page = await newSpecPage({ components, html, language });
+
+    expect(page.rootInstance).toBeInstanceOf(GuxTooltip);
   });
 
-  describe('Class Logic', () => {
-    describe('methods', () => {
-      it('resize', () => {
-        spyOn(Utils, 'getPositionRelativeToTarget');
-        component.onWindowEvent();
-        expect(Utils.getPositionRelativeToTarget).toHaveBeenCalled();
+  describe('#render', () => {
+    [
+      `
+        <div>
+          <div>Element</div>
+          <gux-tooltip-beta>Tooltip</gux-tooltip-beta>
+        </div>
+      `,
+      `
+        <div>
+          <div id="element">Element</div>
+          <gux-tooltip-beta for="element">Tooltip</gux-tooltip-beta>
+        </div>
+      `
+    ].forEach((html, index) => {
+      it(`should render component as expected (${index + 1})`, async () => {
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.body).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('#remove', () => {
+    [
+      `
+        <div>
+          <div>Element</div>
+          <gux-tooltip-beta>Tooltip</gux-tooltip-beta>
+        </div>
+      `,
+      `
+        <div>
+          <div id="element">Element</div>
+          <gux-tooltip-beta for="element">Tooltip</gux-tooltip-beta>
+        </div>
+      `
+    ].forEach((html, index) => {
+      it(`should remove component as expected (${index + 1})`, async () => {
+        const page = await newSpecPage({ components, html, language });
+
+        page.root.remove();
+        page.waitForChanges();
+
+        expect(page.body).toMatchSnapshot();
       });
     });
   });

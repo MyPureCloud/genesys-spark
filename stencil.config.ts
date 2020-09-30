@@ -29,7 +29,11 @@ export const config: Config = {
           { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
           { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' },
           {
-            src: ['src/style/color-palette.less', 'src/style/typography.less'],
+            src: [
+              'src/style/color-palette.less',
+              'src/style/spacing.less',
+              'src/style/typography.less'
+            ],
             dest: 'dist/genesys-webcomponents/less'
           }
         ]

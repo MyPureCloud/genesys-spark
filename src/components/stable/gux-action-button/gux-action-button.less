@@ -5,11 +5,13 @@
 gux-action-button {
   display: inline-block;
   min-width: 128px;
+
   .gux-dropdown {
     margin-left: -2px;
+
     button {
       width: 32px;
-      min-width: 0px;
+      min-width: 0;
       padding: 0;
 
       span[role='img'] {
@@ -19,6 +21,7 @@ gux-action-button {
       }
     }
   }
+
   .gux-action {
     button {
       max-width: none;
@@ -26,12 +29,15 @@ gux-action-button {
       width: 100%;
     }
   }
+
   .gux-action-button {
     display: flex;
     position: relative;
+
     .gux-action {
       flex: 1;
     }
+
     gux-list {
       display: none;
       width: 100%;
@@ -39,12 +45,14 @@ gux-action-button {
       z-index: 1000;
       top: 32px;
     }
+
     &.open {
       gux-list {
         display: block;
       }
     }
   }
+
   gux-icon {
     width: 16px;
     height: 16px;
@@ -63,6 +71,7 @@ gux-action-button {
     .gux-action-button-dark-theme();
   }
 }
+
 gux-action-button.gux-dark-theme {
   .gux-action-button-dark-theme();
 }
@@ -76,6 +85,7 @@ gux-action-button.gux-dark-theme {
     .gux-action-button-light-theme();
   }
 }
+
 gux-action-button.gux-light-theme {
   .gux-action-button-light-theme();
 }

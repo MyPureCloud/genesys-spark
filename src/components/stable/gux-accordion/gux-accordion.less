@@ -6,10 +6,12 @@ gux-accordion {
   .gux-accordion {
     padding: 0;
     margin: 0;
+
     .section {
       .header {
         box-sizing: border-box;
         height: 40px;
+
         button {
           font-family: inherit;
           font-size: inherit;
@@ -22,33 +24,39 @@ gux-accordion {
           width: 100%;
           text-align: left;
           padding: 0;
+
           .heading-text {
             padding: 0 0 0 16px;
           }
         }
+
         .toggle-arrow {
           float: right;
           padding: 0 12px;
           height: 39px;
           display: flex;
           align-items: center;
+
           gux-icon {
             width: 16px;
             height: 16px;
           }
         }
       }
+
       .content {
         box-sizing: border-box;
         display: none;
         padding: 16px;
       }
+
       &.opened {
         .header {
           .toggle-arrow {
             transform: scaleY(-1);
           }
         }
+
         .content {
           display: block;
         }
@@ -62,25 +70,31 @@ gux-accordion {
 .gux-accordion-light-theme {
   .gux-accordion {
     background-color: @gux-background;
+
     .section {
-      coclor: @gux-charcoal-grey;
+      color: @gux-charcoal-grey;
+
       .header {
         border-top: 1px solid @gux-border;
+
         &:hover {
           .toggle-arrow {
             color: @gux-genesys-dark-blue;
           }
         }
       }
+
       &.opened {
         .header {
           border-bottom: 1px solid @gux-border;
         }
       }
+
       &:last-of-type {
         .header {
           border-bottom: 1px solid @gux-border;
         }
+
         .content {
           border-bottom: 1px solid @gux-border;
         }
@@ -88,11 +102,13 @@ gux-accordion {
     }
   }
 }
+
 .gux-light-theme {
   gux-accordion {
     .gux-accordion-light-theme();
   }
 }
+
 gux-accordion.gux-light-theme {
   .gux-accordion-light-theme();
 }
@@ -100,28 +116,35 @@ gux-accordion.gux-light-theme {
 .gux-accordion-dark-theme {
   ul.gux-accordion {
     background-color: @gux-background-dark;
+
     .section {
       color: @gux-type-dark;
+
       .header {
         border-top: 1px solid @gux-grey-global;
+
         .toggle-arrow {
           color: @gux-type-dark;
         }
+
         &:hover {
           .toggle-arrow {
             color: @gux-genesys-blue;
           }
         }
       }
+
       &.opened {
         .header {
           border-bottom: 1px solid @gux-grey-global;
         }
       }
+
       &:last-of-type {
         .header {
           border-bottom: 1px solid @gux-grey-global;
         }
+
         .content {
           border-bottom: 1px solid @gux-grey-global;
         }
@@ -129,11 +152,13 @@ gux-accordion.gux-light-theme {
     }
   }
 }
+
 .gux-dark-theme {
   gux-accordion {
     .gux-accordion-dark-theme();
   }
 }
+
 gux-accordion.gux-dark-theme {
   .gux-accordion-dark-theme();
 }

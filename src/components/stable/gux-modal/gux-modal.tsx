@@ -32,7 +32,7 @@ export class GuxModal {
   size: GuxModalSize = 'small';
 
   /**
-   * Fired when a user dismisses the modal
+   * Fired when a user dismisses the modal (The default behaviour is to remove the component from the DOM)
    */
   @Event()
   guxdismiss: EventEmitter<void>;
@@ -53,10 +53,10 @@ export class GuxModal {
     const hasFooterButtons = this.hasFooterButtons();
 
     return (
-      <div class="modal">
-        <div class={`modal-container ${this.size}`}>
+      <div class="gux-modal">
+        <div class={`gux-modal-container gux-${this.size}`}>
           <button
-            class="dismiss-button"
+            class="gux-dismiss-button"
             title={this.getI18nValue('dismiss')}
             onClick={this.onDismissClickHandler.bind(this)}
           >
@@ -67,13 +67,16 @@ export class GuxModal {
           </button>
 
           {hasModalTitleSlot && (
-            <h1 class="modal-header">
+            <h1 class="gux-modal-header">
               <slot name="title" />
             </h1>
           )}
 
           <div
-            class={{ 'modal-content': true, 'no-buttons': !hasFooterButtons }}
+            class={{
+              'gux-modal-content': true,
+              'gux-no-buttons': !hasFooterButtons
+            }}
           >
             <p>
               <slot name="content" />
@@ -81,12 +84,12 @@ export class GuxModal {
           </div>
 
           {hasFooterButtons && (
-            <div class="button-footer">
-              <div class="left-align-buttons">
+            <div class="gux-button-footer">
+              <div class="gux-left-align-buttons">
                 <slot name="left-align-buttons" />
               </div>
 
-              <div class="right-align-buttons">
+              <div class="gux-right-align-buttons">
                 <slot name="right-align-buttons" />
               </div>
             </div>

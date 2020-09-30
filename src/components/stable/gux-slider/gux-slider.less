@@ -22,7 +22,7 @@
   cursor: pointer;
 
   &:active {
-    margin-top: 0px;
+    margin-top: 0;
     height: 18px;
     width: 18px;
   }
@@ -72,6 +72,7 @@ gux-slider {
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       .thumb();
+
       margin-top: -5px;
 
       &:active {
@@ -96,7 +97,7 @@ gux-slider {
     }
 
     &::-ms-thumb {
-      margin-top: 0px;
+      margin-top: 0;
       .thumb();
     }
 
@@ -125,7 +126,7 @@ gux-slider {
   .mask {
     position: absolute;
     top: 8px;
-    left: 0px;
+    left: 0;
     width: 100%;
     z-index: 0;
 
@@ -141,7 +142,7 @@ gux-slider {
       justify-content: flex-end;
       align-self: center;
       height: 2px;
-      width: 0px;
+      width: 0;
       min-width: 12px;
       background-color: @slider-fill;
     }
@@ -171,6 +172,7 @@ gux-slider {
 
   .range-tooltip {
     .gux-small-text();
+
     visibility: hidden;
     display: flex;
     position: absolute;
@@ -216,6 +218,7 @@ gux-slider {
   .range-input:hover ~ .range-tooltip-container:not(.hidden),
   .range-input:active ~ .range-tooltip-container:not(.hidden) {
     visibility: visible;
+
     .range-tooltip {
       visibility: visible;
     }
@@ -228,7 +231,7 @@ gux-slider {
     flex: 0 1 auto;
     height: 32px;
     line-height: 32px;
-    margin: 0px 0 0 20px;
+    margin: 0 0 0 20px;
     min-width: 50px;
     order: 0;
     text-align: center;
@@ -258,6 +261,7 @@ gux-slider {
       background: @slider-dark;
     }
   }
+
   .mask-track {
     background-color: @slider-dark;
   }
@@ -267,13 +271,13 @@ gux-slider {
   }
 
   .range-tooltip {
-    coclor: @gux-charcoal-grey;
+    color: @gux-charcoal-grey;
     background-color: @slider-dark;
   }
 
   .slider-display {
     background-color: @slider-dark;
-    coclor: @gux-charcoal-grey;
+    color: @gux-charcoal-grey;
   }
 }
 

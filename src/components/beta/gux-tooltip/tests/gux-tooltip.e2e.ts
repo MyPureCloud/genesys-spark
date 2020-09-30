@@ -1,35 +1,38 @@
-import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
+import { newE2EPage } from '@stencil/core/testing';
 
-describe('gux-tooltip', () => {
-  let page: E2EPage;
-  let element: E2EElement;
-  beforeEach(async () => {
-    page = await newE2EPage();
-  });
-  it('renders', async () => {
-    await page.setContent('<gux-tooltip-beta></gux-tooltip-beta>');
-    element = await page.find('gux-tooltip-beta');
-    expect(element).toHaveClass('hydrated');
-  });
-  it('shows/hides the tooltip', async () => {
-    await page.setContent(`
-    <div>
-      <button>Button</button>
-      <gux-tooltip-beta
-        for="for"
-        text='Tooltip content'
-        delay='0'>
-      </gux-tooltip-beta>
-    </div>
-    `);
-    element = await page.find('gux-tooltip-beta');
-    const shownSpy = await element.spyOnEvent('shown');
-    const hiddenSpy = await element.spyOnEvent('hidden');
-    element.callMethod('show');
-    await page.waitForChanges();
-    expect(shownSpy).toHaveReceivedEvent();
-    await element.callMethod('hide');
-    page.waitForChanges();
-    expect(hiddenSpy).toHaveReceivedEvent();
+function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+describe('gux-tooltip-beta', () => {
+  describe('#render', () => {
+    [
+      `
+        <div id="element" lang="en">
+          <div>Element</div>
+          <gux-tooltip-beta>Tooltip</gux-tooltip-beta>
+        </div>
+      `,
+      `
+        <div lang="en">
+          <div id="element">Element</div>
+          <gux-tooltip-beta for="element">Tooltip</gux-tooltip-beta>
+        </div>
+      `
+    ].forEach((html, index) => {
+      it(`should render component as expected (${index + 1})`, async () => {
+        const page = await newE2EPage({ html });
+
+        const element = await page.find('#element');
+        const tooltip = await page.find('gux-tooltip-beta');
+
+        expect(element.getAttribute('aria-describedby')).toBe(tooltip.id);
+        expect(element).toHaveClass('gux-tooltip-for-element');
+        expect(tooltip.getAttribute('data-popper-placement')).toBe(
+          'bottom-start'
+        );
+        expect(tooltip).toHaveClass('hydrated');
+      });
+    });
   });
 });

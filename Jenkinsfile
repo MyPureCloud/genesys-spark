@@ -18,8 +18,20 @@ def shouldPublish() {
   return isRelease();
 }
 
+def shouldUploadDocs() {
+  isRelease() || isFeature();
+}
+
 def shouldUploadAssets() { 
   isRelease() || isFeature();
+}
+
+def uploadVersionOverride() {
+    if (isFeature()) {
+        return "--version ${env.SHORT_BRANCH}"
+    } else {
+        return ""
+    }
 }
 
 pipeline {
@@ -121,11 +133,11 @@ pipeline {
           // Generate manifest file with deployment metadata
           sh './scripts/generate-manifest'
           // Generate the CDN_URL for use in the docs and build everything.
-          sh '''
-            export DOCS_CDN_URL=$(./node_modules/.bin/cdn --ecosystem pc --manifest docs-manifest.json)
-            export CDN_URL=$(./node_modules/.bin/cdn --ecosystem pc --manifest library-manifest.json)
+          sh """
+            export DOCS_CDN_URL=\$(./node_modules/.bin/cdn ${uploadVersionOverride()} --ecosystem pc --manifest docs-manifest.json)
+            export CDN_URL=\$(./node_modules/.bin/cdn ${uploadVersionOverride()} --ecosystem pc --manifest library-manifest.json)
             npm run build
-          '''
+          """
           // Re-generate manifest file after building docs - required to find *.html in docs
           sh './scripts/generate-manifest'
         }
@@ -139,12 +151,13 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           sh "echo Uploading static assets!"
-          sh '''
+          sh """
             ./node_modules/.bin/upload \
+                ${uploadVersionOverride()} \
                 --ecosystem pc \
                 --manifest library-manifest.json \
                 --source-dir ./dist/genesys-webcomponents
-          '''
+          """
         }
       }
     }
@@ -173,18 +186,19 @@ pipeline {
 
     stage('Upload Docs') {
       when {
-        expression { shouldPublish() }
+        expression { shouldUploadDocs() }
       }
       steps {
         sh "echo Uploading release!"
         dir (env.REPO_DIR) {
           sh './scripts/generate-versions-file'
-          sh '''
+          sh """
             ./node_modules/.bin/upload \
+                ${uploadVersionOverride()} \
                 --ecosystem pc \
                 --manifest docs-manifest.json \
                 --source-dir ./docs/dist
-          '''
+          """
         }
       }
     }

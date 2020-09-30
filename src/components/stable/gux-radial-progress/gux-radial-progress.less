@@ -35,40 +35,41 @@ gux-radial-progress {
 
 // Dark
 .gux-radial-progress-dark-theme {
-    color: @gux-type-dark;
-    > div {
-      .percentage {
-        fill: @gux-off-white;
-      }
+  color: @gux-type-dark;
+
+  > div {
+    .percentage {
+      fill: @gux-off-white;
     }
-};
+  }
+}
 
 .gux-dark-theme {
-    gux-radial-progress {
-        .gux-radial-progress-dark-theme();
-    }
+  gux-radial-progress {
+    .gux-radial-progress-dark-theme();
+  }
 }
 
 gux-radial-progress.gux-dark-theme {
-    .gux-radial-progress-dark-theme();
+  .gux-radial-progress-dark-theme();
 }
 
 // Light
 .gux-radial-progress-light-theme {
-    color: @gux-type;
-};
+  color: @gux-type;
+}
 
 .gux-light-theme {
-    gux-radial-progress {
-        .gux-radial-progress-light-theme();
-    }
+  gux-radial-progress {
+    .gux-radial-progress-light-theme();
+  }
 }
 
 gux-radial-progress.gux-light-theme {
-    .gux-radial-progress-light-theme();
+  .gux-radial-progress-light-theme();
 }
 
 // Default Theme
 gux-radial-progress {
-    .gux-radial-progress-light-theme();
+  .gux-radial-progress-light-theme();
 }

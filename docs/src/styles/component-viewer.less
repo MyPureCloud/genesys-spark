@@ -14,6 +14,22 @@ body {
   display: flex;
   flex-direction: row;
   height: 100%;
+
+  .notification {
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    background-color: #393e45;
+
+    gux-notification-toast {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    gux-notification-toast.show {
+      opacity: 1;
+    }
+  }
 }
 
 .component-viewer > .left-column,
@@ -53,16 +69,15 @@ body {
   }
 }
 
-.component-viewer > .right-column {
-  max-width: 600px;
-  min-width: 300px;
-  flex-grow: 1;
+.component-viewer .controls-column {
+  width: 300px;
   overflow: auto;
   line-height: 1.4em;
   color: #444a52;
 
   summary {
     margin: 5px;
+
     &.heading {
       font-size: 20px;
       padding: 5px 0;
@@ -89,10 +104,16 @@ body {
 
   .events {
     flex-grow: 1;
-    padding: 7px 10px 7px 17px;
+    padding: 8px;
 
     .event-descriptions {
-      padding-bottom: 20px;
+      dl {
+        margin: 0;
+
+        dt {
+          font-weight: 800;
+        }
+      }
     }
   }
 

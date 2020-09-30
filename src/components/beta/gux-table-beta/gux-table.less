@@ -2,16 +2,20 @@
 
 // Variables part
 @gux-table-scroll-btn-border: #d5dce0;
-@gux-table-scroll-btn-disabled-text:#c3cad4;
+@gux-table-scroll-btn-disabled-text: #c3cad4;
 @gux-table-scroll-btn-shadow-left: 1px -1px 1px rgba(34, 37, 41, 0.08);
 @gux-table-scroll-btn-shadow-right: -1px -1px 1px rgba(34, 37, 41, 0.08);
 @gux-table-scroll-divider: rgba(34, 37, 41, 0.1);
-@gux-table-scroll-thumb: #B5B6B7;
+@gux-table-scroll-thumb: #b5b6b7;
 @gux-table-scroll-thumb-hover: #555d66;
 @gux-table-row-hover-selection: fade(@gux-genesys-blue, 24%);
 @gux-table-background-secondary: #f8f8f8;
 @gux-table-column-sort-hover: #98a7b8;
 @gux-table-empty-message: #9baab8;
+
+gux-table-beta * {
+  box-sizing: border-box;
+}
 
 gux-table-beta {
   display: block;
@@ -21,16 +25,17 @@ gux-table-beta {
     position: relative;
 
     table {
-      border-spacing: 0px;
+      border-spacing: 0;
       color: @gux-charcoal-grey;
       font-size: 12px;
       white-space: nowrap;
       width: 100%;
 
-      th, td {
+      th,
+      td {
         border-color: @gux-border;
         border-style: solid;
-        border-width: 0px 1px 1px 0px;
+        border-width: 0 1px 1px 0;
         padding-left: 12px;
         padding-right: 24px;
         height: 40px;
@@ -46,8 +51,9 @@ gux-table-beta {
         text-align: right;
       }
 
-      th:last-child, td:last-child {
-        border-right-width: 0px;
+      th:last-child,
+      td:last-child {
+        border-right-width: 0;
       }
     }
 
@@ -122,8 +128,9 @@ gux-table-beta {
 
       &.object-table {
         tbody {
-          th, td {
-            border-width: 0px;
+          th,
+          td {
+            border-width: 0;
           }
 
           tr:hover {
@@ -132,73 +139,41 @@ gux-table-beta {
         }
       }
 
+      &.column-resizing-hover,
+      &.column-resizing {
+        cursor: col-resize;
+      }
+
       table {
         thead {
           th {
             position: sticky;
             top: 0;
             background: @gux-off-white;
-
-            .gux-column-sort-arrow-down,
-            .gux-column-sort-arrow-up {
-              display: none;
-              position: absolute;
-              right: 6px;
-              top: 13px;
-            }
-
-            .gux-column-sort-highlight {
-              background: @gux-blue;
-              bottom: 0;
-              display: none;
-              height: 4px;
-              left: 0px;
-              position: absolute;
-              width: 100%;
-            }
-          }
-
-          th:hover {
-            .gux-column-sort-arrow-down {
-              color: @gux-table-column-sort-hover;
-              display: block;
-            }
-          }
-
-          th[data-cell-action],
-          th[data-cell-numeric] {
-            .gux-column-sort-arrow-down,
-            .gux-column-sort-arrow-up {
-              left: 6px;
-            }
           }
 
           th[data-sort] {
-            .gux-column-sort-highlight {
-              display: block;
-            }
+            box-shadow: inset 0 -4px 0 0 @gux-blue;
           }
 
-          th[data-sort="asc"] {
-            .gux-column-sort-arrow-down {
-              color: @gux-type;
-              display: block;
-            }
-
-            .gux-column-sort-arrow-up {
-              display: none !important;
-            }
+          th[data-sortable]:hover::after,
+          th[data-sort='asc']::after,
+          th[data-sort='desc']::after {
+            color: transparent;
+            display: block;
+            width: 14px;
+            position: absolute;
+            right: 6px;
+            top: 13px;
           }
 
-          th[data-sort="desc"] {
-            .gux-column-sort-arrow-up {
-              color: @gux-type;
-              display: block;
-            }
-
-            .gux-column-sort-arrow-down {
-              display: none !important;
-            }
+          th[data-cell-action][data-sortable]:hover::after,
+          th[data-cell-numeric][data-sortable]:hover::after,
+          th[data-cell-action][data-sort='asc']::after,
+          th[data-cell-numeric][data-sort='asc']::after,
+          th[data-cell-action][data-sort='desc']::after,
+          th[data-cell-numeric][data-sort='desc']::after {
+            left: 6px;
           }
         }
 
@@ -245,7 +220,7 @@ gux-table-beta {
     justify-content: center;
 
     h2 {
-      margin: 0px;
+      margin: 0;
     }
   }
 }

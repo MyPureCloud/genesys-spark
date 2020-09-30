@@ -6,24 +6,18 @@ When hovering a node, the tooltip will be shown below.
 
 If there is not enough space on the bottom, or right of the component, the tooltip position will be adjusted.
 
-## Example usage:
+## Example usage
 
 ``` html
 <!-- First option (With parentElement) -->
-<div id="container">
+<div>
   <button>Button</button>
-  <gux-tooltip
-    text='My great tooltip'>
-  </gux-tooltip>
+  <gux-tooltip>My great tooltip</gux-tooltip>
 </div>
 
 <!-- Second option (With parent id in for attribute) -->
-<gux-tooltip
-  id="interactive"
-  text="My awesome tooltip"
-  for="container"
-  delay="500">
-</gux-tooltip>
+<button id="needs-tooltip">Button</button>
+<gux-tooltip for="needs-tooltip">My great tooltip</gux-tooltip>
 ```
 
 <!-- Auto Generated Below -->
@@ -31,43 +25,16 @@ If there is not enough space on the bottom, or right of the component, the toolt
 
 ## Properties
 
-| Property  | Attribute  | Description                           | Type      | Default     |
-| --------- | ---------- | ------------------------------------- | --------- | ----------- |
-| `delay`   | `delay`    | Delay before hide. (Set to 0 to none) | `number`  | `1000`      |
-| `for`     | `for`      | Element's id.                         | `string`  | `undefined` |
-| `isShown` | `is-shown` | Tooltip current state.                | `boolean` | `false`     |
-| `text`    | `text`     | Tooltip text.                         | `string`  | `undefined` |
+| Property | Attribute | Description                                                                                                | Type     | Default     |
+| -------- | --------- | ---------------------------------------------------------------------------------------------------------- | -------- | ----------- |
+| `for`    | `for`     | Indicates the id of the element the popover should anchor to. (If not supplied the parent element is used) | `string` | `undefined` |
 
 
-## Events
+## Slots
 
-| Event    | Description                          | Type               |
-| -------- | ------------------------------------ | ------------------ |
-| `hidden` | Triggered when the tooltip is hidden | `CustomEvent<any>` |
-| `shown`  | Triggered when the tooltip is shown  | `CustomEvent<any>` |
-
-
-## Methods
-
-### `hide() => Promise<void>`
-
-Hides the tooltip.
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-### `show() => Promise<void>`
-
-Shows the tooltip.
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| Slot | Description            |
+| ---- | ---------------------- |
+|      | Content of the tooltip |
 
 
 ----------------------------------------------

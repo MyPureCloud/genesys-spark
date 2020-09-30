@@ -10,13 +10,12 @@
 // Style
 gux-command-palette-beta .gux-command-palette {
   border-color: 1px solid @palette-border-color;
-  box-shadow: 0px 0 2px 0px @palette-shadow;
+  box-shadow: 0 0 2px 0 @palette-shadow;
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
   max-width: 750px;
-
   padding: 12px;
 
   &.hidden {
@@ -38,6 +37,7 @@ gux-command-palette-beta .gux-command-palette {
       opacity: 0;
       top: 0;
     }
+
     100% {
       opacity: 1;
       top: 40px;
@@ -51,7 +51,7 @@ gux-command-palette-beta .gux-command-palette {
   gux-list > div[role='list'] > strong {
     height: 32px;
     line-height: 32px;
-    padding: 0px 16px;
+    padding: 0 16px;
   }
 
   gux-text-field,
