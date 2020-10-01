@@ -7,7 +7,9 @@
 
   <gux-simple-toast accent="positive">
     <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
-    <div slot="message">This is the message that is versy long but is on one line</div>
+    <div slot="message">
+      This is the message that is versy long but is on one line
+    </div>
   </gux-simple-toast>
 
   <gux-simple-toast accent="alert">
@@ -43,15 +45,17 @@
   </gux-simple-toast>
 </div>
 
-<style onload="(function() {
+<style
+  onload="(function() {
   const test = document.querySelector('.stop-default');
   test.addEventListener('guxdismiss', (event) => {
     event.preventDefault();
 
     event.target.classList.toggle('red');
   })
-})()">
-.red {
-  background-color: red !important;
-}
+})()"
+>
+  .red {
+    background-color: red !important;
+  }
 </style>

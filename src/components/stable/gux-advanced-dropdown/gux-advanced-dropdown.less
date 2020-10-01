@@ -27,6 +27,7 @@ gux-advanced-dropdown {
   div.gux-dropdown {
     position: relative;
     margin: 4px 0;
+
     &.disabled {
       opacity: 0.5;
       pointer-events: none;
@@ -46,7 +47,6 @@ gux-advanced-dropdown {
         left: 0;
         padding: 5px 12px 4px 12px;
         cursor: pointer;
-
         border: 1px solid @border-color;
         border-radius: 2px;
 
@@ -61,7 +61,7 @@ gux-advanced-dropdown {
 
         &:focus {
           outline: none;
-          box-shadow: 0px 0px 0px 3px fade(@gux-genesys-blue, 50%);
+          box-shadow: 0 0 0 3px fade(@gux-genesys-blue, 50%);
         }
       }
 
@@ -70,6 +70,7 @@ gux-advanced-dropdown {
           width: 16px;
           height: 16px;
         }
+
         position: absolute;
         display: flex;
         align-items: center;
@@ -84,16 +85,16 @@ gux-advanced-dropdown {
     &.active .select-field .select-input {
       border: 1px solid @active-border;
       outline: none;
-      box-shadow: 0px 0px 4px @focus-outline;
+      box-shadow: 0 0 4px @focus-outline;
 
       &:focus {
-        box-shadow: 0px 0px 4px @focus-outline;
+        box-shadow: 0 0 4px @focus-outline;
       }
     }
 
     .gux-advanced-dropdown-menu {
       display: none;
-      box-shadow: 0px 0 2px 0px @menu-shadow;
+      box-shadow: 0 0 2px 0 @menu-shadow;
       position: absolute;
       width: 100%;
       z-index: 1;
@@ -125,7 +126,7 @@ gux-advanced-dropdown {
         position: relative;
         height: 32px;
         line-height: 32px;
-        padding: 0px 16px;
+        padding: 0 16px;
         display: flex;
         cursor: pointer;
 
@@ -178,7 +179,7 @@ gux-advanced-dropdown {
         border-color: @border-color-dark-theme;
 
         &:focus {
-          box-shadow: 0px 0px 1px 3px @focus-outline-dark-theme;
+          box-shadow: 0 0 1px 3px @focus-outline-dark-theme;
         }
       }
 
@@ -189,7 +190,7 @@ gux-advanced-dropdown {
 
     &.active .gux-select-field a.gux-select-input {
       border-color: @border-color-dark-theme;
-      box-shadow: 0px 0px 1px 3px @focus-outline-dark-theme;
+      box-shadow: 0 0 1px 3px @focus-outline-dark-theme;
     }
   }
 }
@@ -224,7 +225,7 @@ gux-advanced-dropdown.gux-dark-theme {
     &.active {
       .gux-select-field a.gux-select-input {
         border: 1px solid @active-border;
-        box-shadow: 0px 0px 4px @focus-outline;
+        box-shadow: 0 0 4px @focus-outline;
       }
     }
   }

@@ -1,183 +1,128 @@
+import { createPopper, Instance } from '@popperjs/core';
 import {
   Component,
   Element,
-  Event,
-  EventEmitter,
   h,
+  Host,
   Listen,
-  Method,
+  JSX,
   Prop,
   State
 } from '@stencil/core';
-import { getPositionRelativeToTarget } from '../../../common-utils';
 
+import { randomHTMLId } from '../../../common-utils';
+
+/**
+ * @slot - Content of the tooltip
+ */
 @Component({
   styleUrl: 'gux-tooltip.less',
   tag: 'gux-tooltip-beta'
 })
 export class GuxTooltip {
+  private delayTimeout: NodeJS.Timer;
+  private forElement: HTMLElement;
+  private mouseenterHandler = () => this.show();
+  private mouseleaveHandler = () => this.hide();
+  private focusinHandler = () => this.show();
+  private focusoutHandler = () => this.hide();
+  private popperInstance: Instance;
+  private id = randomHTMLId('gux-tooltip');
+
   @Element()
-  root: HTMLElement;
+  private element: HTMLGuxTooltipBetaElement;
 
   /**
-   * Element's id.
+   * Indicates the id of the element the popover should anchor to. (If not supplied the parent element is used)
    */
   @Prop()
   for: string;
-  /**
-   * Tooltip text.
-   */
-  @Prop()
-  text: string;
-  /**
-   * Delay before hide. (Set to 0 to none)
-   */
-  @Prop()
-  delay: number = 1000;
-  /**
-   * Tooltip current state.
-   */
-  @Prop({ mutable: true, reflectToAttr: true })
-  isShown: boolean = false;
 
+  /**
+   * If tooltip is shown or not
+   */
   @State()
-  tooltipRect: { [s: string]: number };
+  isShown = false;
 
-  forNode: HTMLElement;
-  tooltipEl: HTMLElement;
-
-  positionOptions = {
-    offsetX: 0,
-    offsetY: 24,
-    width: undefined
-  };
-
-  initialWidth: number;
-
-  mouseenterHandler: () => void;
-  mouseleaveHandler: () => void;
-  scrollHandler: () => void;
-
-  delayTimeout: NodeJS.Timer;
-
-  /**
-   * Triggered when the tooltip is shown
-   */
-  @Event()
-  shown: EventEmitter;
-  /**
-   * Triggered when the tooltip is hidden
-   */
-  @Event()
-  hidden: EventEmitter;
-
-  emitEvent() {
-    if (this.isShown) {
-      this.shown.emit();
-    } else {
-      this.hidden.emit();
+  @Listen('keydown', { target: 'window', passive: true })
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Escape' && this.isShown) {
+      this.hide();
     }
   }
 
-  /**
-   * Shows the tooltip.
-   * @param duration Time before
-   */
-  @Method()
-  async show() {
+  private show(): void {
     this.delayTimeout = setTimeout(() => {
-      this.tooltipRect = getPositionRelativeToTarget(
-        this.tooltipEl,
-        this.forNode,
-        this.positionOptions
-      );
       this.isShown = true;
-      this.emitEvent();
-    }, this.delay);
+    }, 750); // the css transition is 250ms
   }
 
-  /**
-   * Hides the tooltip.
-   */
-  @Method()
-  async hide() {
+  private hide(): void {
     clearTimeout(this.delayTimeout);
     this.isShown = false;
-    this.emitEvent();
   }
 
-  @Listen('resize', { capture: true })
-  @Listen('scroll', { capture: true })
-  onWindowEvent() {
-    this.tooltipRect = getPositionRelativeToTarget(
-      this.tooltipEl,
-      this.forNode,
-      this.positionOptions
-    );
+  componentWillLoad(): void {
+    if (this.for) {
+      this.forElement = document.getElementById(this.for);
+    } else {
+      this.forElement = this.element.parentElement;
+    }
   }
 
-  get computedClass() {
-    return `gux-tooltip ${this.isShown ? 'shown' : ''}`;
+  componentDidLoad(): void {
+    if (this.forElement) {
+      this.forElement.classList.add('gux-tooltip-for-element');
+      this.forElement.setAttribute('aria-describedby', this.id);
+
+      this.popperInstance = createPopper(this.forElement, this.element, {
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, 16]
+            }
+          }
+        ],
+        placement: 'bottom-start'
+      });
+
+      this.forElement.addEventListener('mouseenter', this.mouseenterHandler);
+      this.forElement.addEventListener('mouseleave', this.mouseleaveHandler);
+      this.forElement.addEventListener('focusin', this.focusinHandler);
+      this.forElement.addEventListener('focusout', this.focusoutHandler);
+    } else {
+      console.error(
+        `gux-tooltip: invalid element supplied to 'for': "${this.for}"`
+      );
+    }
   }
 
-  get computedStyle() {
-    return {
-      bottom:
-        this.tooltipRect && this.tooltipRect.hasOwnProperty('bottom')
-          ? this.tooltipRect.bottom + 'px'
-          : '',
-      left:
-        this.tooltipRect && this.tooltipRect.hasOwnProperty('left')
-          ? this.tooltipRect.left + 'px'
-          : '',
-      right:
-        this.tooltipRect && this.tooltipRect.hasOwnProperty('right')
-          ? this.tooltipRect.right + 'px'
-          : '',
-      top:
-        this.tooltipRect && this.tooltipRect.hasOwnProperty('top')
-          ? this.tooltipRect.top + 'px'
-          : ''
-    };
+  componentDidUnload(): void {
+    this.forElement.classList.remove('gux-tooltip-for-element');
+    this.forElement.removeAttribute('aria-describedby');
+
+    if (this.popperInstance) {
+      this.popperInstance.destroy();
+      this.popperInstance = null;
+    }
+
+    this.forElement.removeEventListener('mouseenter', this.mouseenterHandler);
+    this.forElement.removeEventListener('mouseleave', this.mouseleaveHandler);
+    this.forElement.removeEventListener('focusin', this.focusinHandler);
+    this.forElement.removeEventListener('focusout', this.focusoutHandler);
   }
 
-  componentDidLoad() {
-    this.forNode = document.getElementById(this.for) || this.root.parentElement;
-
-    this.tooltipRect = getPositionRelativeToTarget(
-      this.tooltipEl,
-      this.forNode,
-      this.positionOptions
-    );
-
-    this.mouseenterHandler = () => {
-      this.show();
-    };
-    this.mouseleaveHandler = () => {
-      this.hide();
-    };
-
-    this.forNode.addEventListener('mouseenter', this.mouseenterHandler);
-    this.forNode.addEventListener('mouseleave', this.mouseleaveHandler);
-
-    this.positionOptions.width =
-      this.tooltipEl.getBoundingClientRect().width + 6;
-  }
-
-  componentDidUnload() {
-    this.forNode.removeEventListener('mouseenter', this.mouseenterHandler);
-    this.forNode.removeEventListener('mouseleave', this.mouseleaveHandler);
-  }
-
-  render() {
+  render(): JSX.Element {
     return (
-      <div
-        class={this.computedClass}
-        ref={el => (this.tooltipEl = el)}
-        style={this.computedStyle}
+      <Host
+        id={this.id}
+        class={{ 'gux-show': this.isShown }}
+        tabindex="0"
+        role="tooltip"
       >
-        {this.text}
-      </div>
+        <slot />
+      </Host>
     );
   }
 }

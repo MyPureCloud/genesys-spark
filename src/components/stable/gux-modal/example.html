@@ -1,8 +1,10 @@
 <div id="modal-container"></div>
 
 <div>
-    <h4>Typical Modal</h4>
-    <gux-button accent="primary" onClick='(function() {
+  <h4>Typical Modal</h4>
+  <gux-button
+    accent="primary"
+    onClick='(function() {
         const html = window.toHTML(`
             <gux-modal size="small">
                 <div slot="title">Modal Title</div>
@@ -17,12 +19,16 @@
         `);
 
         document.getElementById("modal-container").appendChild(html);
-    })()'>Open</gux-button>
+    })()'
+    >Open</gux-button
+  >
 </div>
 
 <div>
-    <h4>No title</h4>
-    <gux-button accent="primary" onClick='(function() {
+  <h4>No title</h4>
+  <gux-button
+    accent="primary"
+    onClick='(function() {
         const html = window.toHTML(`
             <gux-modal size="small">
                 <div slot="content">This contains the modal content.</div>
@@ -37,12 +43,16 @@
         `);
 
         document.getElementById("modal-container").appendChild(html);
-    })()'>Open</gux-button>
+    })()'
+    >Open</gux-button
+  >
 </div>
 
 <div>
-    <h4>Scrolling modal</h4>
-    <gux-button accent="primary" onClick='(function() {
+  <h4>Scrolling modal</h4>
+  <gux-button
+    accent="primary"
+    onClick='(function() {
         const html = window.toHTML(`
             <gux-modal size="small">
                 <div slot="title">Modal Title</div>
@@ -67,12 +77,16 @@
         `);
 
         document.getElementById("modal-container").appendChild(html);
-    })()'>Open</gux-button>
+    })()'
+    >Open</gux-button
+  >
 </div>
 
 <div>
-    <h4>Only content</h4>
-    <gux-button accent="primary" onClick='(function() {
+  <h4>Only content</h4>
+  <gux-button
+    accent="primary"
+    onClick='(function() {
         const html = window.toHTML(`
             <gux-modal size="small">
                 <div slot="content">
@@ -82,5 +96,7 @@
         `);
 
         document.getElementById("modal-container").appendChild(html);
-    })()'>Open</gux-button>
+    })()'
+    >Open</gux-button
+  >
 </div>

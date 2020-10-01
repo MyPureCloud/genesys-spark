@@ -3,3 +3,8 @@ export interface IColumnResizeState {
   resizableColumnInitialWidth: number;
   columnResizeMouseStartX: number;
 }
+
+export interface ISortState {
+  columnName: string;
+  sortDirection: string;
+}

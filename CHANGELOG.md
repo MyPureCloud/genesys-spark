@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](http://inindca///compare/v1.8.0...v1.9.0) (2020-09-30)
+
+
+### Features
+
+* **table component:** table component columns sorting feature implementation ([416762c](http://inindca///commit/416762c62eba7010cb89946bdec23c6f3fb16b48))
+
+
+### Bug Fixes
+
+* **breadcrumb component:** resolve conflict ([c5afeaa](http://inindca///commit/c5afeaa80c9db3e07035792e0ee411921f5fc07a)), closes [#43](http://inindca///issues/43)
+* **breadcrumbs component:** remove old test shapshots ([d5d68bd](http://inindca///commit/d5d68bd1337bffb5df0d7d69c70172857d649008)), closes [#43](http://inindca///issues/43)
+* **breadcrumbs component:** resolve conflict ([b293b67](http://inindca///commit/b293b67046a9081362762ad4a4fc72749450cf59)), closes [#43](http://inindca///issues/43)
+* **breadcrumbs component:** resolve conflicts ([650d843](http://inindca///commit/650d843c91d94b35a641fafdae8d1303a046257a)), closes [#43](http://inindca///issues/43)
+* **breadcrumbs component:** small style fixes ([0136ab2](http://inindca///commit/0136ab2a002f7b1bd842dee602c425d2a6ce48dd)), closes [#43](http://inindca///issues/43)
+* **breadcrumbs component:** update primary breadcrumbs. use GuxBreadcrumbAccent type for accent" ([8c15fff](http://inindca///commit/8c15fff10fef755ea8bbe30c982ac50eb0527f1f)), closes [#43](http://inindca///issues/43)
+* **breadcrumbs component:** update test ([b8ac1f4](http://inindca///commit/b8ac1f491fc269e575185adc001d1936b921cc3e)), closes [#43](http://inindca///issues/43)
+* **table component:** fix tests to use gux-table-beta selector ([4348007](http://inindca///commit/4348007d342bf1748e4596111411958f5138f92e))
+
 ## [1.8.0](http://inindca///compare/v1.7.1...v1.8.0) (2020-09-28)
 
 

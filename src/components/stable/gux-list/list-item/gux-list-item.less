@@ -3,69 +3,74 @@
 // Variables part
 
 gux-list-item {
+  .list-item {
+    height: max-content;
+    word-wrap: break-word;
+    padding: 8px 16px;
+    display: flex;
+    cursor: pointer;
 
+    gux-text-highlight {
+      width: 100%;
+    }
+  }
+
+  &[disabled] {
     .list-item {
-      height: max-content;
-      word-wrap: break-word;
-      padding: 8px 16px;
-      display: flex;
-      cursor: pointer;
-
-      gux-text-highlight {
-        width: 100%;
-      }
-    }
-
-    &[disabled] {
-        .list-item {
-          opacity: 0.5;
-          pointer-events: none;
-          cursor: default;
-        }
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
     }
   }
+}
 
-  // Theming
+// Theming
 
-  // Dark
-  .gux-list-item-dark-theme {
-    &:focus, &:active, &:hover:not([disabled]) {
-      .list-item {
-        background: @gux-genesys-dark-blue;
-        color: @gux-type-dark;
-      }
+// Dark
+.gux-list-item-dark-theme {
+  &:focus,
+  &:active,
+  &:hover:not([disabled]) {
+    .list-item {
+      background: @gux-genesys-dark-blue;
+      color: @gux-type-dark;
     }
   }
+}
 
-  .gux-dark-theme {
-    gux-list-item {
-      .gux-list-item-dark-theme();
-    }
-  }
-  gux-list-item.gux-dark-theme {
+.gux-dark-theme {
+  gux-list-item {
     .gux-list-item-dark-theme();
   }
+}
 
-  // Light
-  .gux-list-item-light-theme {
-    &:focus, &:active, &:hover:not([disabled]) {
-      .list-item {
-        background: @gux-genesys-dark-blue;
-        color: @gux-type-dark;
-      }
+gux-list-item.gux-dark-theme {
+  .gux-list-item-dark-theme();
+}
+
+// Light
+.gux-list-item-light-theme {
+  &:focus,
+  &:active,
+  &:hover:not([disabled]) {
+    .list-item {
+      background: @gux-genesys-dark-blue;
+      color: @gux-type-dark;
     }
   }
+}
 
-  .gux-light-theme {
-    gux-list-item {
-      .gux-list-item-light-theme();
-    }
-  }
-  gux-list-item.gux-light-theme {
-    .gux-list-item-light-theme();
-  }
-
-  // Default Theme
+.gux-light-theme {
   gux-list-item {
     .gux-list-item-light-theme();
   }
+}
+
+gux-list-item.gux-light-theme {
+  .gux-list-item-light-theme();
+}
+
+// Default Theme
+gux-list-item {
+  .gux-list-item-light-theme();
+}

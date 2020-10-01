@@ -25,7 +25,7 @@ gux-table-beta {
     position: relative;
 
     table {
-      border-spacing: 0px;
+      border-spacing: 0;
       color: @gux-charcoal-grey;
       font-size: 12px;
       white-space: nowrap;
@@ -35,7 +35,7 @@ gux-table-beta {
       td {
         border-color: @gux-border;
         border-style: solid;
-        border-width: 0px 1px 1px 0px;
+        border-width: 0 1px 1px 0;
         padding-left: 12px;
         padding-right: 24px;
         height: 40px;
@@ -53,7 +53,7 @@ gux-table-beta {
 
       th:last-child,
       td:last-child {
-        border-right-width: 0px;
+        border-right-width: 0;
       }
     }
 
@@ -65,11 +65,11 @@ gux-table-beta {
       color: @gux-charcoal-grey;
       cursor: pointer;
       display: flex;
-      height: 38px;
+      height: 35px;
       justify-content: center;
       position: absolute;
       top: 0;
-      width: 24px;
+      width: 12px;
       z-index: 1;
 
       &.disabled {
@@ -130,7 +130,7 @@ gux-table-beta {
         tbody {
           th,
           td {
-            border-width: 0px;
+            border-width: 0;
           }
 
           tr:hover {
@@ -150,6 +150,30 @@ gux-table-beta {
             position: sticky;
             top: 0;
             background: @gux-off-white;
+          }
+
+          th[data-sort] {
+            box-shadow: inset 0 -4px 0 0 @gux-blue;
+          }
+
+          th[data-sortable]:hover::after,
+          th[data-sort='asc']::after,
+          th[data-sort='desc']::after {
+            color: transparent;
+            display: block;
+            width: 14px;
+            position: absolute;
+            right: 6px;
+            top: 13px;
+          }
+
+          th[data-cell-action][data-sortable]:hover::after,
+          th[data-cell-numeric][data-sortable]:hover::after,
+          th[data-cell-action][data-sort='asc']::after,
+          th[data-cell-numeric][data-sort='asc']::after,
+          th[data-cell-action][data-sort='desc']::after,
+          th[data-cell-numeric][data-sort='desc']::after {
+            left: 6px;
           }
         }
 
@@ -184,7 +208,7 @@ gux-table-beta {
           padding-right: 48px;
         }
       }
-    }    
+    }
   }
 
   .empty-table {
@@ -196,7 +220,7 @@ gux-table-beta {
     justify-content: center;
 
     h2 {
-      margin: 0px;
+      margin: 0;
     }
   }
 }

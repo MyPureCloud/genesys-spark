@@ -55,14 +55,14 @@ gux-input-range-beta {
         }
       }
 
-      input[type=range] {
+      input[type='range'] {
         width: 100%;
         -webkit-appearance: none;
         background: transparent;
-        margin: @thumb-diameter/2 0;
+        margin: @thumb-diameter / 2 0;
         width: @track-width;
         height: @track-height;
-        margin-top: calc(-1 * (@thumb-diameter/2 + @track-height));
+        margin-top: calc(-1 * (@thumb-diameter / 2 + @track-height));
 
         &:focus {
           outline: none;
@@ -70,11 +70,13 @@ gux-input-range-beta {
 
         &::-webkit-slider-runnable-track {
           .track();
+
           background: transparent;
         }
 
         &::-webkit-slider-thumb {
           .thumb();
+
           -webkit-appearance: none;
           margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
         }
@@ -85,16 +87,19 @@ gux-input-range-beta {
 
         &::-moz-range-track {
           .track();
+
           background: transparent;
         }
 
         &::-moz-range-thumb {
-           .thumb();
-           margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
+          .thumb();
+
+          margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
         }
 
         &::-ms-track {
           .track();
+
           background: transparent;
           border-color: transparent;
           border-width: @thumb-diameter 0;
@@ -104,22 +109,26 @@ gux-input-range-beta {
         &::-ms-fill-lower {
           background: darken(transparent, @contrast);
         }
+
         &::-ms-fill-upper {
           background: transparent;
         }
+
         &::-ms-thumb {
           .thumb();
         }
+
         &:focus::-ms-fill-lower {
           background: transparent;
         }
+
         &:focus::-ms-fill-upper {
           background: lighten(transparent, @contrast);
         }
       }
 
       &.active {
-        input[type=range] {
+        input[type='range'] {
           &::-webkit-slider-thumb {
             transform: scale(1.5);
           }
@@ -140,7 +149,7 @@ gux-input-range-beta {
       flex: 0 1 auto;
       height: 32px;
       line-height: 32px;
-      margin: 0px 0 0 20px;
+      margin: 0 0 0 20px;
       order: 0;
       text-align: center;
       width: 50px;
@@ -162,7 +171,7 @@ gux-input-range-beta {
         }
       }
 
-      input[type=range] {
+      input[type='range'] {
         &::-webkit-slider-thumb {
           border: 0 solid @range-active; // For firefox
           background: @range-active;
@@ -212,7 +221,7 @@ gux-input-range-beta.gux-light-theme {
         }
       }
 
-      input[type=range] {
+      input[type='range'] {
         &::-webkit-slider-thumb {
           border: 0 solid @range-active-dark; // For firefox
           background: @range-active-dark;
