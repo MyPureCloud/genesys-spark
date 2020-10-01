@@ -19,6 +19,8 @@ import {
 import { buildI18nForComponent } from '../../../i18n';
 import i18nStrings from './i18n/en.json';
 
+export type GuxDatepickerMode = CalendarModes.Single | CalendarModes.Range;
+
 @Component({
   styleUrl: 'gux-datepicker.less',
   tag: 'gux-datepicker'
@@ -68,7 +70,7 @@ export class GuxDatepicker {
    * The calendar mode (can be single or range)
    */
   @Prop()
-  mode: string = CalendarModes.Single;
+  mode: GuxDatepickerMode = CalendarModes.Single;
   /**
    * The datepicker date format (default to mm/dd/yyyy, or specified)
    */
@@ -108,7 +110,7 @@ export class GuxDatepicker {
   @Event()
   input: EventEmitter<string>;
 
-  get calendarLabels() {
+  getCalendarLabels() {
     const labels: string[] = [].concat(this.label || []);
     if (this.mode === CalendarModes.Range) {
       return [labels[0] || this.i18n('start'), labels[1] || this.i18n('end')];
@@ -593,7 +595,7 @@ export class GuxDatepicker {
           class="gux-datepicker-field"
           ref={(el: HTMLDivElement) => (this.fieldDatepickerElement = el)}
         >
-          <gux-text-label label={this.calendarLabels[0]} position="beside">
+          <gux-text-label label={this.getCalendarLabels()[0]} position="beside">
             <gux-text-field
               type="text"
               ref={(el: HTMLGuxTextFieldElement) =>
@@ -631,7 +633,10 @@ export class GuxDatepicker {
             class="gux-datepicker-field"
             ref={(el: HTMLDivElement) => (this.fieldDatepickerElement = el)}
           >
-            <gux-text-label label={this.calendarLabels[1]} position="beside">
+            <gux-text-label
+              label={this.getCalendarLabels()[1]}
+              position="beside"
+            >
               <gux-text-field
                 type="text"
                 ref={(el: HTMLGuxTextFieldElement) =>

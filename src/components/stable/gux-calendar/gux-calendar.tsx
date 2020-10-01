@@ -21,6 +21,8 @@ import {
 import { getDesiredLocale } from '../../../i18n';
 import { IDateElement } from './gux-calendar-constants';
 
+export type GuxCalendarMode = CalendarModes.Single | CalendarModes.Range;
+
 @Component({
   styleUrl: 'gux-calendar.less',
   tag: 'gux-calendar'
@@ -57,7 +59,7 @@ export class GuxCalendar {
    * The calendar mode (can be single or range)
    */
   @Prop()
-  mode: string = CalendarModes.Single;
+  mode: GuxCalendarMode = CalendarModes.Single;
 
   /**
    * The calendar number of months displayed
@@ -393,7 +395,7 @@ export class GuxCalendar {
     return arr.concat(arr.splice(0, times));
   }
 
-  get weekdays(): string[] {
+  getWeekdays(): string[] {
     const days = [];
     // Sunday
     const day = new Date(1970, 0, 4);
@@ -440,7 +442,7 @@ export class GuxCalendar {
     return (
       <table cellPadding="2">
         <tr>
-          {this.weekdays.map(day => (
+          {this.getWeekdays().map(day => (
             <th>{day}</th>
           ))}
         </tr>

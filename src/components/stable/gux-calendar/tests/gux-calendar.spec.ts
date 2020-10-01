@@ -72,7 +72,9 @@ describe('gux-calendar', () => {
       it('incrementPreviewDateByMonth', () => {
         const startingMonth = component.previewValue.getMonth();
         component.incrementPreviewDateByMonth(3);
-        expect(component.previewValue.getMonth()).toEqual(startingMonth + 3);
+        expect(component.previewValue.getMonth()).toEqual(
+          (startingMonth + 3) % 12
+        );
       });
       it('generateDatesFrom', () => {
         component.value = rangeIso;
@@ -192,14 +194,13 @@ describe('gux-calendar', () => {
         expect(component.setValue).toHaveBeenCalledWith(initialPreviewValue);
         expect(component.emitInput).toHaveBeenCalled();
       });
+
+      it('getWeekdays', () => {
+        expect(component.getWeekdays().length).toEqual(7);
+      });
     });
   });
-  // Getters
-  describe('getters', () => {
-    it('weekdays', () => {
-      expect(component.weekdays.length).toEqual(7);
-    });
-  });
+
   // Events
   describe('events', () => {
     it('onInput', () => {

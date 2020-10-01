@@ -195,12 +195,10 @@ describe('gux-datepicker', () => {
         expect(event.preventDefault).toHaveBeenCalled();
       });
     });
-  });
-  // Getters
-  describe('getters', () => {
+
     it('calendarLabels', () => {
       component.mode = CalendarModes.Range;
-      expect(component.calendarLabels.length).toEqual(2);
+      expect(component.getCalendarLabels().length).toEqual(2);
       expect(component.i18n).toHaveBeenCalledTimes(2);
     });
   });

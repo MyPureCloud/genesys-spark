@@ -12,6 +12,8 @@ import {
 import { KeyCode } from '../../../common-enums';
 import { whenEventIsFrom } from '../../../common-utils';
 
+export type GuxDropdownMode = 'default' | 'page' | 'palette';
+
 @Component({
   styleUrl: 'gux-dropdown.less',
   tag: 'gux-dropdown'
@@ -25,7 +27,7 @@ export class GuxDropdown {
    * Sets the select mode (default, page or palette).
    */
   @Prop()
-  mode: string = 'default';
+  mode: GuxDropdownMode = 'default';
   /**
    * Disable the input and prevent interactions.
    */
@@ -184,7 +186,7 @@ export class GuxDropdown {
     return this.filterable ? filterableBehavior : true;
   }
 
-  get filteredItems() {
+  getFilteredItems() {
     const selectionOptions = this.getSelectionOptions();
     if (this.filterable) {
       const arr = selectionOptions.filter(item => {
@@ -196,10 +198,10 @@ export class GuxDropdown {
     }
   }
 
-  get ghost() {
+  getGhost() {
     this.searchHighlightAndFilter(this.value);
-    const firstFilteredItem = this.filteredItems.length
-      ? this.filteredItems[0].text
+    const firstFilteredItem = this.getFilteredItems().length
+      ? this.getFilteredItems()[0].text
       : '';
     const valueGhost =
       this.value + firstFilteredItem.substring(this.value.length);
@@ -244,7 +246,7 @@ export class GuxDropdown {
       >
         <div class="select-field">
           <span class="ghost" aria-hidden="true">
-            {this.ghost}
+            {this.getGhost()}
           </span>
           <gux-text-field
             title={this.value}
