@@ -152,12 +152,21 @@ export class GuxTable {
         this.columnResizeState = {
           resizableColumn,
           columnResizeMouseStartX: event.pageX,
-          resizableColumnInitialWidth: resizableColumn.offsetWidth
+          resizableColumnInitialWidth: this.getElementComputedWidth(
+            resizableColumn
+          )
         };
 
         this.tableContainer.classList.add('column-resizing');
       }
     });
+  }
+
+  private getElementComputedWidth(element: HTMLElement): number {
+    return parseInt(
+      window.getComputedStyle(element).getPropertyValue('width').split('px')[0],
+      10
+    );
   }
 
   private isInResizeZone(event: MouseEvent, header: HTMLElement): boolean {
@@ -171,6 +180,19 @@ export class GuxTable {
     const styleElement = document.createElement('style');
     styleElement.id = `${this.tableId}-resizable-styles`;
     document.querySelector('head').appendChild(styleElement);
+
+    const columns = Array.from(
+      this.tableContainer.querySelectorAll('.gux-table-container thead th')
+    );
+    columns.pop();
+
+    columns.forEach((column: HTMLElement) => {
+      this.columnsWidths[
+        column.dataset.columnName
+      ] = `${this.getElementComputedWidth(column)}px`;
+    });
+
+    this.setResizableColumnsStyles();
   }
 
   private get tableContainer(): HTMLElement {
