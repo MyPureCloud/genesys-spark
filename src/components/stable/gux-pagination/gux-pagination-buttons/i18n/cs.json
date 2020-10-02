@@ -1,8 +1,8 @@
 {
-  "page": "Page",
-  "totalPages": " of {totalPages, number}",
-  "first": "First",
-  "previous": "Previous",
-  "next": "Next",
-  "last": "Last"
+  "page": "Stránka",
+  "totalPages": " z {totalPages, number}",
+  "first": "První",
+  "previous": "Předchozí",
+  "next": "Další",
+  "last": "Poslední"
 }
