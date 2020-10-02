@@ -1,24 +1,28 @@
 # gux-switch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Native Events
+
+| Event    | Description | Type               |
+| -------- | ----------- | ------------------ |
+| `change` |             | `InputEvent`       |
+| `input`  |             | `InputEvent`       |
 
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-| Property        | Attribute        | Description                                        | Type                             | Default     |
-| --------------- | ---------------- | -------------------------------------------------- | -------------------------------- | ----------- |
-| `items`         | --               | The names and values of the switch buttons         | `ISwitchItem[]`                  | `undefined` |
-| `layout`        | `layout`         | The allowed sizes                                  | `"large" \| "medium" \| "small"` | `'medium'`  |
-| `selectedValue` | `selected-value` | Used to keep track of the currently selected value | `string`                         | `undefined` |
+| Property | Attribute | Description                                        | Type                   | Default     |
+| -------- | --------- | -------------------------------------------------- | ---------------------- | ----------- |
+| `layout` | `layout`  | The allowed sizes                                  | `"default" \| "small"` | `'default'` |
+| `value`  | `value`   | Used to keep track of the currently selected value | `string`               | `undefined` |
 
 
-## Events
+## Slots
 
-| Event              | Description                         | Type               |
-| ------------------ | ----------------------------------- | ------------------ |
-| `selectionChanged` | Triggers when a switch is selected. | `CustomEvent<any>` |
+| Slot | Description                      |
+| ---- | -------------------------------- |
+|      | list of gux-switch-item elements |
 
 
 ----------------------------------------------

@@ -1,0 +1,152 @@
+@import (reference) '../../../style/color.less';
+
+// Variables part
+
+// Style
+.gux-switch-group {
+  display: inline-block;
+  padding: 0;
+
+  .gux-switch {
+    border: none;
+    box-shadow: inset 0 -1px 0 0 @gux-border;
+    display: inline-block;
+
+    .switch-button {
+      border: none;
+      background: transparent;
+      padding: 0;
+
+      .display-text {
+        font-size: 12px;
+        padding: 8px 0;
+        margin: 0 8px;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        cursor: pointer;
+        color: @gux-genesys-dark-blue;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &:first-child {
+      .display-text {
+        margin-left: 0;
+      }
+    }
+
+    &:last-child {
+      .display-text {
+        margin-right: 0;
+      }
+    }
+
+    &.selected {
+      .display-text {
+        box-shadow: inset 0 -1px 0 0 @gux-charcoal-grey;
+        font-weight: bold;
+      }
+    }
+
+    &.small {
+      .display-text {
+        font-size: 10px;
+      }
+    }
+
+    &.large {
+      .display-text {
+        font-size: 14px;
+      }
+
+      &.selected {
+        .display-text {
+          box-shadow: inset 0 -4px 0 0 @gux-genesys-blue;
+        }
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: @gux-genesys-dark-blue;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-switch-dark-theme {
+  .gux-switch {
+    box-shadow: inset 0 -1px 0 0 @gux-grey-global;
+
+    .switch-button {
+      .display-text {
+        color: @gux-type-dark;
+      }
+
+      &:hover,
+      &:active {
+        cursor: pointer;
+
+        .display-text {
+          color: @gux-genesys-dark-blue;
+        }
+      }
+    }
+
+    &.selected {
+      .display-text {
+        box-shadow: inset 0 -1px 0 0 @gux-genesys-blue;
+        font-weight: bold;
+      }
+
+      &.large {
+        .display-text {
+          box-shadow: inset 0 -4px 0 0 @gux-genesys-blue;
+        }
+      }
+    }
+  }
+}
+
+.gux-dark-theme {
+  .gux-switch-group {
+    .gux-switch-dark-theme();
+  }
+}
+
+.gux-switch-group.gux-dark-theme {
+  .gux-switch-dark-theme();
+}
+
+// Light
+.gux-switch-light-theme {
+  color: @gux-type;
+}
+
+.gux-light-theme {
+  .gux-switch-group {
+    .gux-switch-light-theme();
+  }
+}
+
+.gux-switch-group.gux-light-theme {
+  .gux-switch-light-theme();
+}
+
+// Default Theme
+.gux-switch-group {
+  .gux-switch-light-theme();
+}

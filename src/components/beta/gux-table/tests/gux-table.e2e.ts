@@ -10,7 +10,7 @@ describe('gux-table-beta', () => {
 
   it('renders', async () => {
     await page.setContent(`
-      <gux-table-beta>
+      <gux-table-beta lang="en">
         <table slot="data">
           <thead>
             <tr>
