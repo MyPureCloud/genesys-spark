@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.2](http://inindca///compare/v1.9.1...v1.9.2) (2020-10-02)
+
+
+### Bug Fixes
+
+* **table component:** conflicts resolved ([86435b0](http://inindca///commit/86435b05eaf2febcb047a852d204ba29fa7be646))
+* **table component:** fix columns resizing functionality ([7adaabf](http://inindca///commit/7adaabfb2edf4ad707a860ca1c533d5045d5a41c))
+* **table component:** remove comment ([e159c81](http://inindca///commit/e159c8103bf8b8af77cc5c68f8b1f1778f0ba137))
+* **table component:** remove comment from example.html ([eec3c3c](http://inindca///commit/eec3c3c9cbe6223b19a1cc1c050e660cfef7199d))
+
 ### [1.9.1](http://inindca///compare/v1.9.0...v1.9.1) (2020-10-01)
 
 ## [1.9.0](http://inindca///compare/v1.8.0...v1.9.0) (2020-09-30)
