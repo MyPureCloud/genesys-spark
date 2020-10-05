@@ -17,9 +17,23 @@
 
 ## Events
 
-| Event         | Description                                               | Type                      |
-| ------------- | --------------------------------------------------------- | ------------------------- |
-| `sortChanged` | Triggers when the sorting of the table column is changed. | `CustomEvent<ISortState>` |
+| Event                 | Description                                               | Type                                 |
+| --------------------- | --------------------------------------------------------- | ------------------------------------ |
+| `guxselectionchanged` | Triggers when table row was selected/unselected           | `CustomEvent<GuxTableSelectedState>` |
+| `guxsortchanged`      | Triggers when the sorting of the table column is changed. | `CustomEvent<GuxTableSortState>`     |
+
+
+## Methods
+
+### `getSelected() => Promise<GuxTableSelectedState>`
+
+
+
+#### Returns
+
+Type: `Promise<GuxTableSelectedState>`
+
+
 
 
 ## Dependencies

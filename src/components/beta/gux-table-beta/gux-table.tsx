@@ -5,15 +5,23 @@ import {
   EventEmitter,
   getAssetPath,
   h,
+  JSX,
   Listen,
+  Method,
   Prop,
   readTask,
   State
 } from '@stencil/core';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import tableResources from './i18n/en.json';
-import { IColumnResizeState, ISortState } from './gux-table.types';
 import { whenEventIsFrom } from '../../../common-utils';
+
+import tableResources from './i18n/en.json';
+import {
+  GuxTableColumnResizeState,
+  GuxTableSortState,
+  GuxTableSelectedState
+} from './gux-table.types';
 
 const COL_RESIZE_HANDLE_WIDTH = 3;
 
@@ -23,11 +31,11 @@ const COL_RESIZE_HANDLE_WIDTH = 3;
 })
 export class GuxTable {
   @Element()
-  root: HTMLElement;
+  root: HTMLGuxTableBetaElement;
 
   private resizeObserver: ResizeObserver;
   private i18n: GetI18nValue;
-  private columnResizeState: IColumnResizeState | null;
+  private columnResizeState: GuxTableColumnResizeState | null;
   private tableId: string = this.generateTableId();
   private columnsWidths: object = {};
 
@@ -80,9 +88,14 @@ export class GuxTable {
   emptyMessage: string;
 
   /**
+   * Triggers when table row was selected/unselected
+   */
+  @Event() guxselectionchanged: EventEmitter<GuxTableSelectedState>;
+
+  /**
    * Triggers when the sorting of the table column is changed.
    */
-  @Event() sortChanged: EventEmitter<ISortState>;
+  @Event() guxsortchanged: EventEmitter<GuxTableSortState>;
 
   /**
    * Indicates that table should have resizable columns
@@ -103,6 +116,13 @@ export class GuxTable {
     } else if (maxScrollLeft - scrollLeft - this.tableScrollbarConstant === 0) {
       this.isScrolledToLastCell = true;
     }
+  }
+
+  @Listen('internalrowselectchange')
+  onInternalRowSelectChange(event: CustomEvent): void {
+    event.stopPropagation();
+
+    this.handleSelectableRows(event.target);
   }
 
   @Listen('mouseup', { capture: true })
@@ -160,6 +180,32 @@ export class GuxTable {
         this.tableContainer.classList.add('column-resizing');
       }
     });
+  }
+
+  /*
+   * returns the selected rows Ids.
+   */
+  @Method()
+  async getSelected(): Promise<GuxTableSelectedState> {
+    const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
+      this.tableContainer.querySelectorAll('tbody tr td gux-row-select')
+    );
+    const selectedRowIds: string[] = dataRowsSelectboxes.reduce(
+      (selectedDataRowsIds, dataRowSelectbox: HTMLGuxRowSelectElement) => {
+        if (dataRowSelectbox.selected) {
+          const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
+
+          return selectedDataRowsIds.concat(
+            tableRow.getAttribute('data-row-id')
+          );
+        }
+
+        return selectedDataRowsIds;
+      },
+      []
+    );
+
+    return { selectedRowIds };
   }
 
   private getElementComputedWidth(element: HTMLElement): number {
@@ -363,13 +409,40 @@ export class GuxTable {
               break;
           }
 
-          this.sortChanged.emit({
+          this.guxsortchanged.emit({
             columnName: columnElement.dataset.columnName,
             sortDirection: newSortDirection
           });
         };
       }
     });
+  }
+
+  private prepareSelectableRows(): void {
+    const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
+      this.tableContainer.querySelectorAll('tbody tr td gux-row-select')
+    );
+    const headerRowSelectbox: HTMLGuxRowSelectElement = this.tableContainer.querySelector(
+      'thead tr th gux-row-select'
+    );
+
+    dataRowsSelectboxes.forEach((dataRowSelectbox: HTMLGuxRowSelectElement) => {
+      const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
+
+      if (dataRowSelectbox.selected) {
+        tableRow.setAttribute('data-selected-row', '');
+      } else {
+        tableRow.removeAttribute('data-selected-row');
+      }
+    });
+
+    if (headerRowSelectbox) {
+      headerRowSelectbox.selected = dataRowsSelectboxes.every(
+        (dataRowSelectbox: HTMLGuxRowSelectElement) => {
+          return dataRowSelectbox.selected;
+        }
+      );
+    }
   }
 
   private setSortableColumnsStyles(): void {
@@ -417,6 +490,7 @@ export class GuxTable {
     }
 
     this.prepareSortableColumns();
+    this.prepareSelectableRows();
     this.checkHorizontalScroll();
     this.checkVerticalScroll();
 
@@ -449,7 +523,57 @@ export class GuxTable {
     }
   }
 
-  render() {
+  private rowSelection(dataRowSelectbox: HTMLGuxRowSelectElement): void {
+    const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
+
+    if (dataRowSelectbox.selected) {
+      tableRow.setAttribute('data-selected-row', '');
+    } else {
+      tableRow.removeAttribute('data-selected-row');
+    }
+  }
+  private allRowsSelection(
+    allRowSelectbox: HTMLGuxRowSelectElement,
+    dataRowsSelectboxes: HTMLGuxRowSelectElement[]
+  ): void {
+    dataRowsSelectboxes.forEach((dataRowSelectbox: HTMLGuxRowSelectElement) => {
+      const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
+
+      if (allRowSelectbox.selected) {
+        dataRowSelectbox.selected = true;
+        tableRow.setAttribute('data-selected-row', '');
+      } else {
+        dataRowSelectbox.selected = false;
+        tableRow.removeAttribute('data-selected-row');
+      }
+    });
+  }
+
+  private async handleSelectableRows(rowSelect: EventTarget): Promise<void> {
+    const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
+      this.tableContainer.querySelectorAll('tbody tr td gux-row-select')
+    );
+    const currentSelectbox = rowSelect as HTMLGuxRowSelectElement;
+    const headerRowSelectbox: HTMLGuxRowSelectElement = this.tableContainer.querySelector(
+      'thead tr th gux-row-select'
+    );
+
+    if (currentSelectbox === headerRowSelectbox) {
+      this.allRowsSelection(headerRowSelectbox, dataRowsSelectboxes);
+    } else {
+      this.rowSelection(currentSelectbox);
+
+      headerRowSelectbox.selected = dataRowsSelectboxes.every(
+        (dataRowSelectbox: HTMLGuxRowSelectElement) => {
+          return dataRowSelectbox.selected;
+        }
+      );
+    }
+
+    this.guxselectionchanged.emit(await this.getSelected());
+  }
+
+  render(): JSX.Element {
     return (
       <div class={this.tableClasses}>
         <div id={this.tableId} class={this.tableContainerClasses}>

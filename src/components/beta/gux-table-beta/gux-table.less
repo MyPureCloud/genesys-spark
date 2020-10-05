@@ -51,6 +51,13 @@ gux-table-beta {
         text-align: right;
       }
 
+      tr[data-row-id] th:first-child,
+      tr[data-row-id] td:first-child {
+        padding-left: 12px;
+        padding-right: 8px;
+        width: 16px;
+      }
+
       th:last-child,
       td:last-child {
         border-right-width: 0;
@@ -127,6 +134,11 @@ gux-table-beta {
       }
 
       &.object-table {
+        gux-row-select {
+          padding-bottom: 24px;
+          display: block;
+        }
+
         tbody {
           th,
           td {
@@ -135,6 +147,12 @@ gux-table-beta {
 
           tr:hover {
             background: @gux-table-row-hover-selection;
+          }
+
+          tr[data-selected-row] {
+            td {
+              background: @gux-table-row-hover-selection;
+            }
           }
         }
       }

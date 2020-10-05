@@ -1,37 +1,31 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxTable } from '../gux-table';
 
+const components = [GuxTable];
+const language = 'en';
+
 describe('gux-table-beta', () => {
-  let component: GuxTable;
-
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxTable],
-      html: `
-        <gux-table-beta>
-          <table slot="data">
-            <thead>
-              <tr>
-                <th>First name</th>
-                <th>Last name</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>John</td>
-                <td>Doe</td>
-              </tr>
-            </tbody>
-          </table>
-        </gux-table-beta>
-      `,
-      language: 'en'
-    });
-
-    component = page.rootInstance;
-  });
-
   it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxTable);
+    const html = `
+      <gux-table-beta>
+        <table slot="data">
+          <thead>
+            <tr>
+              <th>First name</th>
+              <th>Last name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+            </tr>
+          </tbody>
+        </table>
+      </gux-table-beta>
+    `;
+    const page = await newSpecPage({ components, html, language });
+
+    expect(page.rootInstance).toBeInstanceOf(GuxTable);
   });
 });

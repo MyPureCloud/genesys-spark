@@ -28,6 +28,7 @@ describe('gux-table-beta', () => {
       </gux-table-beta>
     `);
     element = await page.find('gux-table-beta');
+
     expect(element).toHaveClass('hydrated');
   });
 });
