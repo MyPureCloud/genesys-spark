@@ -336,5 +336,6 @@
     }
   },
   "typography": {},
-  "color": {}
+  "color": {},
+  "spacing": {}
 }

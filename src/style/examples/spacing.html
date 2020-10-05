@@ -1,0 +1,118 @@
+<h1>Spacing</h1>
+<h2>Named Spacings</h2>
+<div class="grid">
+  <div class="grid-element">
+    <h3>spacing-3xs</h3>
+    <div class="item spacing-3xs"></div>
+  </div>
+  <div class="grid-element">
+    <h3>spacing-2xs</h3>
+    <div class="item spacing-2xs"></div>
+  </div>
+  <div class="grid-element">
+    <h3>spacing-xs</h3>
+    <div class="item spacing-xs"></div>
+  </div>
+  <div class="grid-element">
+    <h3>spacing-small</h3>
+    <div class="item spacing-small"></div>
+  </div>
+  <div class="grid-element">
+    <h3>spacing-medium</h3>
+    <div class="item spacing-medium"></div>
+  </div>
+  <div class="grid-element">
+    <h3>spacing-large</h3>
+    <div class="item spacing-large"></div>
+  </div>
+  <div class="grid-element">
+    <h3>spacing-xl</h3>
+    <div class="item spacing-xl"></div>
+  </div>
+  <div class="grid-element">
+    <h3>spacing-2xl</h3>
+    <div class="item spacing-2xl"></div>
+  </div>
+  <div class="grid-element">
+    <h3>spacing-3xl</h3>
+    <div class="item spacing-3xl"></div>
+  </div>
+  <div class="grid-element">
+    <h3>spacing-4xl</h3>
+    <div class="item spacing-4xl"></div>
+  </div>
+</div>
+
+<style>
+  .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+  }
+
+  .grid-element {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin-right: 20px;
+  }
+
+  .item {
+    background-color: var(--gux-warm-red);
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .spacing-3xs {
+    height: var(--spacing-3xs);
+    width: var(--spacing-3xs);
+  }
+
+  .spacing-2xs {
+    height: var(--spacing-2xs);
+    width: var(--spacing-2xs);
+  }
+
+  .spacing-xs {
+    height: var(--spacing-xs);
+    width: var(--spacing-xs);
+  }
+
+  .spacing-small {
+    height: var(--spacing-small);
+    width: var(--spacing-small);
+  }
+
+  .spacing-medium {
+    height: var(--spacing-medium);
+    width: var(--spacing-medium);
+  }
+
+  .spacing-large {
+    height: var(--spacing-large);
+    width: var(--spacing-large);
+  }
+
+  .spacing-xl {
+    height: var(--spacing-xl);
+    width: var(--spacing-xl);
+  }
+
+  .spacing-2xl {
+    height: var(--spacing-2xl);
+    width: var(--spacing-2xl);
+  }
+
+  .spacing-3xl {
+    height: var(--spacing-3xl);
+    width: var(--spacing-3xl);
+  }
+
+  .spacing-4xl {
+    height: var(--spacing-4xl);
+    width: var(--spacing-4xl);
+  }
+</style>
