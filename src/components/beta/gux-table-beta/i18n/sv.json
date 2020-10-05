@@ -1,2 +1,7 @@
 {
+  "emptyMessage": "Inga data är tillgängliga",
+  "scrollLeft": "Rulla vänster",
+  "scrollRight": "Rulla höger",
+  "sortAsc": "Sorterade i stigande ordning",
+  "sortDesc": "Sorterade i fallande ordning"
 }
