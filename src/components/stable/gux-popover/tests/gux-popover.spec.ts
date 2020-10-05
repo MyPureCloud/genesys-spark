@@ -1,4 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
+import * as popperjs from '@popperjs/core';
 import MutationObserver from 'mutation-observer';
 import { GuxPopover } from '../gux-popover';
 
@@ -8,17 +9,14 @@ const language = 'en';
 describe('gux-popover', () => {
   beforeEach(async () => {
     global.MutationObserver = MutationObserver;
-    console.error = jest.fn();
+    // popperjs does not work with Stencils MockHTMLElements used in tests
+    jest.spyOn(popperjs, 'createPopper').mockReturnValue(({
+      destroy: jest.fn()
+    } as unknown) as popperjs.Instance);
   });
 
   afterEach(async () => {
-    // The error log and some Unhandled Promise Rejection Warnings are related to the fact newSpecPage uses MockHTMLElements not HTMLElements whicj popper.js does not like.
-    expect(console.error).toHaveBeenCalledWith(
-      'Popper: "arrow" element must be an HTMLElement (not an SVGElement). To use an SVG arrow, wrap it in an HTMLElement that will be used as the arrow.'
-    );
-    expect(console.error).toHaveBeenCalledWith(
-      'Popper: "arrow" modifier\'s `element` must be a child of the popper element.'
-    );
+    jest.spyOn(popperjs, 'createPopper').mockRestore();
   });
 
   describe('#render', () => {
