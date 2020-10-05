@@ -1,17 +1,16 @@
 #! /usr/bin/env node
 
+const fs = require('fs');
 const glob = require('glob');
 
-glob('src/components/**/i18n/en.json', (err, files) => {
-  if (err) {
-    console.error(
-      'Error encountered while trying to find the english i18n json files'
-    );
-    console.error(err);
-    process.exit(1);
-  }
+const files = glob.sync('src/components/**/i18n/en.json');
 
-  files.forEach(file => {
-    console.log(`genesys-webcomponents/${file}`);
-  });
+const output = files.map(file => {
+  const folder = file.replace('/en.json', '');
+  const component = folder.replace('/i18n', '');
+  const numberOfTranslations = fs.readdirSync(folder).length;
+
+  return { component, numberOfTranslations };
 });
+
+console.table(output, ['component', 'numberOfTranslations']);
