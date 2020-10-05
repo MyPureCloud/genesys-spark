@@ -18,6 +18,8 @@ enum Types {
   Error = 'error'
 }
 
+export type GuxTextFieldErrorMessageType = Types.Error | Types.Warning;
+
 @Component({
   styleUrl: 'gux-text-field.less',
   tag: 'gux-text-field'
@@ -73,7 +75,7 @@ export class GuxTextField {
    * The message type (warning or error)
    */
   @Prop({ mutable: true })
-  errorMessageType: string = Types.Error;
+  errorMessageType: GuxTextFieldErrorMessageType = Types.Error;
 
   /**
    * Timeout between input and validation.
@@ -112,7 +114,7 @@ export class GuxTextField {
   firstValue: string;
   timeout: any;
 
-  get showClearButton(): boolean {
+  showClearButton(): boolean {
     return this.useClearButton && this.value && !this.readonly;
   }
 
@@ -235,7 +237,7 @@ export class GuxTextField {
       <div class={this.getClassList()}>
         <div class="gux-field">
           <input
-            class={this.showClearButton ? 'text-clearable' : ''}
+            class={this.showClearButton() ? 'text-clearable' : ''}
             type={this.type}
             value={this.value}
             ref={el => (this.inputElement = el)}
@@ -248,7 +250,7 @@ export class GuxTextField {
             onFocus={e => this.emitFocusEvent(e)}
             onBlur={e => this.emitFocusEvent(e)}
           />
-          {this.showClearButton && (
+          {this.showClearButton() && (
             <button
               type="button"
               class="clear-button"

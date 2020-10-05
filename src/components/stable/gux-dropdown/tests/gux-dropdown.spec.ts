@@ -78,11 +78,10 @@ describe('gux-dropdown', () => {
         component._inputHandler({ detail: value } as CustomEvent);
         expect(component.value).toEqual(value);
       });
-    });
-    describe('getters', () => {
-      it('filteredItems', () => {
+
+      it('getFilteredItems()', () => {
         component.filterable = false;
-        expect(component.filteredItems.map(opt => opt.text)).toEqual([
+        expect(component.getFilteredItems().map(opt => opt.text)).toEqual([
           'American English',
           'Latin American Spanish',
           'European Spanish',
@@ -93,33 +92,34 @@ describe('gux-dropdown', () => {
         ]);
         component.filterable = true;
         component.value = 'Eu';
-        expect(component.filteredItems.map(opt => opt.text)).toEqual([
+        expect(component.getFilteredItems().map(opt => opt.text)).toEqual([
           'European Spanish',
           'European French'
         ]);
         component.filterable = true;
         component.value = 'eu';
-        expect(component.filteredItems.map(opt => opt.text)).toEqual([
+        expect(component.getFilteredItems().map(opt => opt.text)).toEqual([
           'European Spanish',
           'European French'
         ]);
         component.value = 'Ame';
-        expect(component.filteredItems.map(opt => opt.text)).toEqual([
+        expect(component.getFilteredItems().map(opt => opt.text)).toEqual([
           'American English'
         ]);
         component.value = 'Ind';
-        expect(component.filteredItems.map(opt => opt.text)).toEqual([]);
+        expect(component.getFilteredItems().map(opt => opt.text)).toEqual([]);
       });
-      it('ghost', () => {
+
+      it('getGhost', () => {
         component.opened = true;
         component.filterable = true;
         component.forcedGhostValue = 'Ame';
-        expect(component.ghost).toEqual(component.forcedGhostValue);
+        expect(component.getGhost()).toEqual(component.forcedGhostValue);
         component.opened = false;
         component.value = '';
         component.filterable = false;
         component.placeholder = 'Select...';
-        expect(component.ghost).toEqual(component.placeholder);
+        expect(component.getGhost()).toEqual(component.placeholder);
       });
     });
   });

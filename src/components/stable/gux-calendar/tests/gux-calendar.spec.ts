@@ -194,14 +194,13 @@ describe('gux-calendar', () => {
         expect(component.setValue).toHaveBeenCalledWith(initialPreviewValue);
         expect(component.emitInput).toHaveBeenCalled();
       });
+
+      it('getWeekdays', () => {
+        expect(component.getWeekdays().length).toEqual(7);
+      });
     });
   });
-  // Getters
-  describe('getters', () => {
-    it('weekdays', () => {
-      expect(component.weekdays.length).toEqual(7);
-    });
-  });
+
   // Events
   describe('events', () => {
     it('onInput', () => {

@@ -7,11 +7,11 @@ This is a UI button component that is used to open or dismiss an associated pane
 
 ## Properties
 
-| Property   | Attribute  | Description                                                | Type      | Default  |
-| ---------- | ---------- | ---------------------------------------------------------- | --------- | -------- |
-| `isOpen`   | `is-open`  | Used to open or close the disclosure panel                 | `boolean` | `false`  |
-| `label`    | `label`    | Indicates the label for the disclosure button              | `string`  | `'open'` |
-| `position` | `position` | Indicates the position of the button panel (right or left) | `string`  | `'left'` |
+| Property   | Attribute  | Description                                   | Type                | Default  |
+| ---------- | ---------- | --------------------------------------------- | ------------------- | -------- |
+| `isOpen`   | `is-open`  | Used to open or close the disclosure panel    | `boolean`           | `false`  |
+| `label`    | `label`    | Indicates the label for the disclosure button | `string`            | `'open'` |
+| `position` | `position` | Indicates the position of the button panel    | `"left" \| "right"` | `'left'` |
 
 
 ## Events

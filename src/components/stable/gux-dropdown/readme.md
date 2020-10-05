@@ -7,13 +7,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property      | Attribute     | Description                                      | Type      | Default     |
-| ------------- | ------------- | ------------------------------------------------ | --------- | ----------- |
-| `disabled`    | `disabled`    | Disable the input and prevent interactions.      | `boolean` | `false`     |
-| `filterable`  | `filterable`  | Whether the user can filter or not.              | `boolean` | `undefined` |
-| `mode`        | `mode`        | Sets the select mode (default, page or palette). | `string`  | `'default'` |
-| `placeholder` | `placeholder` | The dropdown placeholder.                        | `string`  | `undefined` |
-| `value`       | `value`       | Indicate the dropdown input value                | `string`  | `''`        |
+| Property      | Attribute     | Description                                      | Type                               | Default     |
+| ------------- | ------------- | ------------------------------------------------ | ---------------------------------- | ----------- |
+| `disabled`    | `disabled`    | Disable the input and prevent interactions.      | `boolean`                          | `false`     |
+| `filterable`  | `filterable`  | Whether the user can filter or not.              | `boolean`                          | `undefined` |
+| `mode`        | `mode`        | Sets the select mode (default, page or palette). | `"default" \| "page" \| "palette"` | `'default'` |
+| `placeholder` | `placeholder` | The dropdown placeholder.                        | `string`                           | `undefined` |
+| `value`       | `value`       | Indicate the dropdown input value                | `string`                           | `''`        |
 
 
 ## Events

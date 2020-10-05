@@ -7,16 +7,16 @@ This is a datepicker component, that allows the user to select a date, or a rang
 
 ## Properties
 
-| Property         | Attribute           | Description                                                                                 | Type                 | Default                |
-| ---------------- | ------------------- | ------------------------------------------------------------------------------------------- | -------------------- | ---------------------- |
-| `firstDayOfWeek` | `first-day-of-week` | The datepicker first week day (default to 0 (sunday))                                       | `number`             | `0`                    |
-| `format`         | `format`            | The datepicker date format (default to mm/dd/yyyy, or specified)                            | `string`             | `'mm/dd/yyyy'`         |
-| `label`          | `label`             | The datepicker label (can be a single label, or an array of two if it's a range datepicker) | `string \| string[]` | `''`                   |
-| `maxDate`        | `max-date`          | The max date selectable                                                                     | `string`             | `''`                   |
-| `minDate`        | `min-date`          | The min date selectable                                                                     | `string`             | `''`                   |
-| `mode`           | `mode`              | The calendar mode (can be single or range)                                                  | `string`             | `CalendarModes.Single` |
-| `numberOfMonths` | `number-of-months`  | The datepicker number of months displayed                                                   | `number`             | `1`                    |
-| `value`          | `value`             | The datepicker current value                                                                | `string`             | `undefined`            |
+| Property         | Attribute           | Description                                                                                 | Type                                          | Default                |
+| ---------------- | ------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------- | ---------------------- |
+| `firstDayOfWeek` | `first-day-of-week` | The datepicker first week day (default to 0 (sunday))                                       | `number`                                      | `0`                    |
+| `format`         | `format`            | The datepicker date format (default to mm/dd/yyyy, or specified)                            | `string`                                      | `'mm/dd/yyyy'`         |
+| `label`          | `label`             | The datepicker label (can be a single label, or an array of two if it's a range datepicker) | `string \| string[]`                          | `''`                   |
+| `maxDate`        | `max-date`          | The max date selectable                                                                     | `string`                                      | `''`                   |
+| `minDate`        | `min-date`          | The min date selectable                                                                     | `string`                                      | `''`                   |
+| `mode`           | `mode`              | The calendar mode (can be single or range)                                                  | `CalendarModes.Range \| CalendarModes.Single` | `CalendarModes.Single` |
+| `numberOfMonths` | `number-of-months`  | The datepicker number of months displayed                                                   | `number`                                      | `1`                    |
+| `value`          | `value`             | The datepicker current value                                                                | `string`                                      | `undefined`            |
 
 
 ## Events
