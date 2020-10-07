@@ -25,14 +25,14 @@ gux-text-field {
   > div {
     margin: 4px 0;
 
-    &.disabled {
+    &.gux-disabled {
       opacity: 0.5;
       pointer-events: none;
       cursor: default;
     }
 
-    &.error,
-    &.warning {
+    &.gux-error,
+    &.gux-warning {
       input {
         border-color: @alert-color;
         outline: 0;
@@ -53,7 +53,7 @@ gux-text-field {
       }
     }
 
-    &.warning {
+    &.gux-warning {
       .gux-error {
         i {
           color: @gux-warning;
@@ -71,9 +71,9 @@ gux-text-field {
     position: relative;
 
     input {
-      .input-style();
+      .gux-input-style();
 
-      &.text-clearable {
+      &.gux-text-clearable {
         padding-right: 25px;
       }
     }
@@ -99,8 +99,8 @@ gux-text-field {
 // Dark
 .gux-text-field-dark-theme {
   > div {
-    &.error,
-    &.warning {
+    &.gux-error,
+    &.gux-warning {
       input {
         border-color: @alert-color-dark;
         outline: 0;
@@ -121,7 +121,7 @@ gux-text-field {
       }
     }
 
-    &.warning {
+    &.gux-warning {
       .gux-error {
         i {
           color: @gux-warning;
@@ -132,7 +132,7 @@ gux-text-field {
 
   .gux-field {
     input {
-      .input-dark-theme();
+      .gux-input-dark-theme();
     }
 
     button {
@@ -161,8 +161,8 @@ gux-text-field {
 // Light
 .gux-text-field-light-theme {
   > div {
-    &.error,
-    &.warning {
+    &.gux-error,
+    &.gux-warning {
       input {
         border-color: @alert-color;
 
@@ -177,7 +177,7 @@ gux-text-field {
       }
     }
 
-    &.warning {
+    &.gux-warning {
       .gux-error {
         i {
           color: @gux-warning;

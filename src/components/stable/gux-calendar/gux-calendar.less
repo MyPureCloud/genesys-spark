@@ -8,7 +8,7 @@ gux-calendar {
   margin-top: -4px;
 
   div.gux-calendar {
-    .header {
+    .gux-header {
       position: relative;
       display: flex;
       justify-content: space-between;
@@ -24,11 +24,11 @@ gux-calendar {
         outline: none;
         padding: 5px;
 
-        &.left {
+        &.gux-left {
           left: 18px;
         }
 
-        &.right {
+        &.gux-right {
           right: 18px;
         }
 
@@ -39,7 +39,7 @@ gux-calendar {
         }
       }
 
-      .month-list {
+      .gux-month-list {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -51,7 +51,7 @@ gux-calendar {
       }
     }
 
-    .content {
+    .gux-content {
       display: flex;
       padding: 16px 22px 20px 22px;
 
@@ -99,7 +99,7 @@ gux-calendar {
   div.gux-calendar {
     border: 1px solid #dae1e8;
 
-    .header {
+    .gux-header {
       background-color: @gux-genesys-dark-blue;
       color: @gux-type-dark;
 
@@ -112,18 +112,18 @@ gux-calendar {
       }
     }
 
-    .content {
+    .gux-content {
       background-color: @gux-type-dark;
       color: @gux-type;
 
       table {
         tr {
           td {
-            &.hovered {
+            &.gux-hovered {
               background-color: #deeaff;
             }
 
-            &.selected {
+            &.gux-selected {
               background-color: @gux-genesys-dark-blue;
               color: @gux-type-dark;
             }
@@ -133,12 +133,12 @@ gux-calendar {
               color: @gux-type-dark;
             }
 
-            &.disabled {
+            &.gux-disabled {
               opacity: 0.3;
               pointer-events: none;
             }
 
-            &.not-in-month {
+            &.gux-not-in-month {
               color: #9baaba;
 
               &:hover {
@@ -146,7 +146,7 @@ gux-calendar {
                 color: @gux-type;
               }
 
-              &.hidden {
+              &.gux-hidden {
                 visibility: hidden;
               }
             }

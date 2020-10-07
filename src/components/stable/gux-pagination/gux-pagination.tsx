@@ -119,7 +119,7 @@ export class GuxPagination implements ComponentInterface {
 
   render(): JSX.Element {
     return (
-      <div class={`gux-pagination-container`}>
+      <div class="gux-pagination-container">
         {this.getPaginationInfoElement(this.layout)}
         <div class="gux-pagination-change">
           <gux-pagination-buttons

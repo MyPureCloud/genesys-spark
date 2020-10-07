@@ -3,28 +3,28 @@
 exports[`gux-action-toast #render should render action toast 1`] = `
 <gux-action-toast accent="neutral">
   <!---->
-  <div class="header">
-    <div class="icon">
+  <div class="gux-header">
+    <div class="gux-icon">
       <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
     </div>
-    <div class="title">
+    <div class="gux-title">
       <div slot="title">
         Title
       </div>
     </div>
   </div>
-  <div class="message">
+  <div class="gux-message">
     <div slot="message">
       This is the message
     </div>
   </div>
-  <div class="action-buttons">
-    <div class="negitive-button">
+  <div class="gux-action-buttons">
+    <div class="gux-negitive-button">
       <gux-button slot="negitive-button">
         Reject
       </gux-button>
     </div>
-    <div class="positive-button">
+    <div class="gux-positive-button">
       <gux-button accent="primary" slot="positive-button">
         Accept
       </gux-button>

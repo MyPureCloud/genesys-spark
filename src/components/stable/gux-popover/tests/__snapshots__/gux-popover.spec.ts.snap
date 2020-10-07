@@ -3,9 +3,9 @@
 exports[`gux-popover #render should render popover 1`] = `
 <gux-popover for="popover-target" id="popover-example" position="top">
   <!---->
-  <div class="popover-wrapper">
-    <div class="arrow" data-popper-arrow></div>
-    <div class="popover-content">
+  <div class="gux-popover-wrapper">
+    <div class="gux-arrow" data-popper-arrow></div>
+    <div class="gux-popover-content">
       <div>
         popover content
       </div>

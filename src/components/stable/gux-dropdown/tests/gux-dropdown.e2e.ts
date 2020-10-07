@@ -14,7 +14,7 @@ describe('gux-dropdown', () => {
 
   it('opens drop down on click', async () => {
     await page.setContent(`
-    <gux-dropdown placeholder="Select..." filterable=true>
+    <gux-dropdown lang="en" placeholder="Select..." filterable=true>
       <gux-option value="en-US">American English</gux-option>
       <gux-option value="es">Latin American Spanish</gux-option>
       <gux-option value="es-ES">European Spanish</gux-option>
@@ -22,7 +22,7 @@ describe('gux-dropdown', () => {
       <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
       <gux-option value="fr" text="European French"></gux-option>
       <gux-option>Dutch</gux-option>
-    </gux-dropdown> 
+    </gux-dropdown>
     `);
     await page.waitForChanges();
     element = await page.find('gux-dropdown');
@@ -31,13 +31,13 @@ describe('gux-dropdown', () => {
     await page.waitForChanges();
 
     const dropMenu = await element.find('.gux-dropdown');
-    expect(dropMenu.className.split(' ')).toContain('active');
+    expect(dropMenu.className.split(' ')).toContain('gux-active');
   });
 
   it('selects an item when an option is clicked', async () => {
     page = await newE2EPage();
     await page.setContent(`
-    <gux-dropdown placeholder="Select..." filterable=true>
+    <gux-dropdown lang="en" placeholder="Select..." filterable=true>
       <gux-option value="en-US">American English</gux-option>
       <gux-option value="es">Latin American Spanish</gux-option>
       <gux-option value="es-ES">European Spanish</gux-option>
@@ -45,7 +45,7 @@ describe('gux-dropdown', () => {
       <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
       <gux-option value="fr" text="European French"></gux-option>
       <gux-option>Dutch</gux-option>
-    </gux-dropdown> 
+    </gux-dropdown>
     `);
     await page.waitForChanges();
     element = await page.find('gux-dropdown');
@@ -62,6 +62,6 @@ describe('gux-dropdown', () => {
     dropMenu = await element.find('.gux-dropdown');
 
     expect(changeSpy).toHaveReceivedEventDetail('en-US');
-    expect(dropMenu.className.split(' ')).not.toContain('active');
+    expect(dropMenu.className.split(' ')).not.toContain('gux-active');
   });
 });

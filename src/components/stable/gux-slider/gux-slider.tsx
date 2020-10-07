@@ -109,12 +109,12 @@ export class GuxSlider {
       ? `${this.value}%`
       : `${this.value}`;
     return (
-      <div class="slider-component-container">
-        <div class="slider-container">
+      <div class="gux-slider-component-container">
+        <div class="gux-slider-container">
           <input
             type="range"
             role="slider"
-            class="range-input"
+            class="gux-range-input"
             min={this.min}
             max={this.max}
             step={this.step}
@@ -126,25 +126,29 @@ export class GuxSlider {
             onInput={(e: InputEvent) => this.updateValue(e)}
             disabled={this.disabled}
           />
-          <div class={`mask${this.disabled ? ' disabled' : ''}`}>
-            <div class="mask-slider" ref={el => (this.sliderMask = el)} />
-            <div class="mask-track-container">
-              <div class="mask-track" />
+          <div class={`gux-mask${this.disabled ? ' gux-disabled' : ''}`}>
+            <div class="gux-mask-slider" ref={el => (this.sliderMask = el)} />
+            <div class="gux-mask-track-container">
+              <div class="gux-mask-track" />
             </div>
           </div>
           <div
             class={
-              'range-tooltip-container' + (this.displayTextBox ? ' hidden' : '')
+              'gux-range-tooltip-container' +
+              (this.displayTextBox ? ' gux-hidden' : '')
             }
             ref={el => (this.sliderTooltipContainer = el)}
           >
-            <div class="range-tooltip" ref={el => (this.sliderTooltip = el)}>
+            <div
+              class="gux-range-tooltip"
+              ref={el => (this.sliderTooltip = el)}
+            >
               {value}
             </div>
           </div>
         </div>
         {this.displayTextBox && (
-          <div class="slider-display" aria-label={this.srLabel}>
+          <div class="gux-slider-display" aria-label={this.srLabel}>
             {value}
           </div>
         )}

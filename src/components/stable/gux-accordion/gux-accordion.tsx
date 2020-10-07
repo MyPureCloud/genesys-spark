@@ -56,7 +56,7 @@ export class GuxAccordion {
   async open(slot: string) {
     const section = this.getSectionByName(slot);
     if (section) {
-      section.slotRef.classList.add('opened');
+      section.slotRef.classList.add('gux-opened');
     }
   }
   /**
@@ -67,7 +67,7 @@ export class GuxAccordion {
   async close(slot: string) {
     const section = this.getSectionByName(slot);
     if (section) {
-      section.slotRef.classList.remove('opened');
+      section.slotRef.classList.remove('gux-opened');
     }
   }
   /**
@@ -78,7 +78,7 @@ export class GuxAccordion {
   async toggle(slot: string) {
     const section = this.getSectionByName(slot);
     if (section) {
-      section.slotRef.classList.toggle('opened');
+      section.slotRef.classList.toggle('gux-opened');
     }
   }
 
@@ -143,23 +143,23 @@ export class GuxAccordion {
       <div class="gux-accordion">
         {this.sections.map(slot => (
           <section
-            class="section"
+            class="gux-section"
             onKeyDown={e => this.onKeyDown(e, slot.slotName)}
             ref={el => (slot.slotRef = el)}
           >
             <div
               aria-role="heading"
               aria-level={this.headingLevel}
-              class="header"
+              class="gux-header"
             >
               <button type="button" onClick={() => this.toggle(slot.slotName)}>
-                <span class="heading-text">{slot.slotName}</span>
-                <span class="toggle-arrow">
+                <span class="gux-heading-text">{slot.slotName}</span>
+                <span class="gux-toggle-arrow">
                   <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
                 </span>
               </button>
             </div>
-            <div class="content">
+            <div class="gux-content">
               <slot name={slot.slotName} />
             </div>
           </section>

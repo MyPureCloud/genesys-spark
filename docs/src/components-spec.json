@@ -311,6 +311,7 @@
   },
   "gux-tooltip": {},
   "gux-tooltip-beta": {
+    "hidePage": true,
     "attributes": {
       "for": "text"
     }

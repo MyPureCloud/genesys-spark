@@ -3,7 +3,7 @@
 // Variables part
 
 gux-list-item {
-  .list-item {
+  .gux-list-item {
     height: max-content;
     word-wrap: break-word;
     padding: 8px 16px;
@@ -16,7 +16,7 @@ gux-list-item {
   }
 
   &[disabled] {
-    .list-item {
+    .gux-list-item {
       opacity: 0.5;
       pointer-events: none;
       cursor: default;
@@ -31,7 +31,7 @@ gux-list-item {
   &:focus,
   &:active,
   &:hover:not([disabled]) {
-    .list-item {
+    .gux-list-item {
       background: @gux-genesys-dark-blue;
       color: @gux-type-dark;
     }
@@ -53,7 +53,7 @@ gux-list-item.gux-dark-theme {
   &:focus,
   &:active,
   &:hover:not([disabled]) {
-    .list-item {
+    .gux-list-item {
       background: @gux-genesys-dark-blue;
       color: @gux-type-dark;
     }

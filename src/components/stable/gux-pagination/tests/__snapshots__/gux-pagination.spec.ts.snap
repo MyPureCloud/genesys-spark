@@ -19,17 +19,17 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
           <div class="gux-pagination-items-per-page-picker">
             <gux-dropdown>
               <!---->
-              <div class="default gux-dropdown">
-                <div class="select-field">
-                  <span aria-hidden="true" class="ghost"></span>
-                  <gux-text-field class="unclearable" title="25" value="25">
+              <div class="gux-default gux-dropdown">
+                <div class="gux-select-field">
+                  <span aria-hidden="true" class="gux-ghost"></span>
+                  <gux-text-field class="gux-unclearable" title="25" value="25">
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="25">
                       </div>
                     </div>
                   </gux-text-field>
-                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                  <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
                     <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
                   </button>
                 </div>
@@ -82,7 +82,7 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="1" total-pages="40">
-        <div class="full gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -154,17 +154,17 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
           <div class="gux-pagination-items-per-page-picker">
             <gux-dropdown>
               <!---->
-              <div class="default gux-dropdown">
-                <div class="select-field">
-                  <span aria-hidden="true" class="ghost"></span>
-                  <gux-text-field class="unclearable" title="50" value="50">
+              <div class="gux-default gux-dropdown">
+                <div class="gux-select-field">
+                  <span aria-hidden="true" class="gux-ghost"></span>
+                  <gux-text-field class="gux-unclearable" title="50" value="50">
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="50">
                       </div>
                     </div>
                   </gux-text-field>
-                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                  <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
                     <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
                   </button>
                 </div>
@@ -217,7 +217,7 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="1" total-pages="20">
-        <div class="full gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -289,17 +289,17 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
           <div class="gux-pagination-items-per-page-picker">
             <gux-dropdown>
               <!---->
-              <div class="default gux-dropdown">
-                <div class="select-field">
-                  <span aria-hidden="true" class="ghost"></span>
-                  <gux-text-field class="unclearable" title="75" value="75">
+              <div class="gux-default gux-dropdown">
+                <div class="gux-select-field">
+                  <span aria-hidden="true" class="gux-ghost"></span>
+                  <gux-text-field class="gux-unclearable" title="75" value="75">
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="75">
                       </div>
                     </div>
                   </gux-text-field>
-                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                  <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
                     <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
                   </button>
                 </div>
@@ -352,7 +352,7 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="1" total-pages="14">
-        <div class="full gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -424,17 +424,17 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
           <div class="gux-pagination-items-per-page-picker">
             <gux-dropdown>
               <!---->
-              <div class="default gux-dropdown">
-                <div class="select-field">
-                  <span aria-hidden="true" class="ghost"></span>
-                  <gux-text-field class="unclearable" title="100" value="100">
+              <div class="gux-default gux-dropdown">
+                <div class="gux-select-field">
+                  <span aria-hidden="true" class="gux-ghost"></span>
+                  <gux-text-field class="gux-unclearable" title="100" value="100">
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="100">
                       </div>
                     </div>
                   </gux-text-field>
-                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                  <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
                     <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
                   </button>
                 </div>
@@ -487,7 +487,7 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="1" total-pages="10">
-        <div class="full gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -559,17 +559,17 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
           <div class="gux-pagination-items-per-page-picker">
             <gux-dropdown>
               <!---->
-              <div class="default gux-dropdown">
-                <div class="select-field">
-                  <span aria-hidden="true" class="ghost"></span>
-                  <gux-text-field class="unclearable" title="25" value="25">
+              <div class="gux-default gux-dropdown">
+                <div class="gux-select-field">
+                  <span aria-hidden="true" class="gux-ghost"></span>
+                  <gux-text-field class="gux-unclearable" title="25" value="25">
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="25">
                       </div>
                     </div>
                   </gux-text-field>
-                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                  <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
                     <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
                   </button>
                 </div>
@@ -622,7 +622,7 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="1" total-pages="40">
-        <div class="full gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -694,17 +694,17 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
           <div class="gux-pagination-items-per-page-picker">
             <gux-dropdown>
               <!---->
-              <div class="default gux-dropdown">
-                <div class="select-field">
-                  <span aria-hidden="true" class="ghost"></span>
-                  <gux-text-field class="unclearable" title="25" value="25">
+              <div class="gux-default gux-dropdown">
+                <div class="gux-select-field">
+                  <span aria-hidden="true" class="gux-ghost"></span>
+                  <gux-text-field class="gux-unclearable" title="25" value="25">
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="25">
                       </div>
                     </div>
                   </gux-text-field>
-                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                  <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
                     <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
                   </button>
                 </div>
@@ -757,7 +757,7 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="10" total-pages="40">
-        <div class="full gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -829,17 +829,17 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
           <div class="gux-pagination-items-per-page-picker">
             <gux-dropdown>
               <!---->
-              <div class="default gux-dropdown">
-                <div class="select-field">
-                  <span aria-hidden="true" class="ghost"></span>
-                  <gux-text-field class="unclearable" title="50" value="50">
+              <div class="gux-default gux-dropdown">
+                <div class="gux-select-field">
+                  <span aria-hidden="true" class="gux-ghost"></span>
+                  <gux-text-field class="gux-unclearable" title="50" value="50">
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="50">
                       </div>
                     </div>
                   </gux-text-field>
-                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                  <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
                     <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
                   </button>
                 </div>
@@ -892,7 +892,7 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="10" total-pages="20">
-        <div class="full gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -964,17 +964,17 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
           <div class="gux-pagination-items-per-page-picker">
             <gux-dropdown>
               <!---->
-              <div class="default gux-dropdown">
-                <div class="select-field">
-                  <span aria-hidden="true" class="ghost"></span>
-                  <gux-text-field class="unclearable" title="75" value="75">
+              <div class="gux-default gux-dropdown">
+                <div class="gux-select-field">
+                  <span aria-hidden="true" class="gux-ghost"></span>
+                  <gux-text-field class="gux-unclearable" title="75" value="75">
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="75">
                       </div>
                     </div>
                   </gux-text-field>
-                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                  <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
                     <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
                   </button>
                 </div>
@@ -1027,7 +1027,7 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="10" total-pages="14">
-        <div class="full gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -1099,17 +1099,17 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
           <div class="gux-pagination-items-per-page-picker">
             <gux-dropdown>
               <!---->
-              <div class="default gux-dropdown">
-                <div class="select-field">
-                  <span aria-hidden="true" class="ghost"></span>
-                  <gux-text-field class="unclearable" title="100" value="100">
+              <div class="gux-default gux-dropdown">
+                <div class="gux-select-field">
+                  <span aria-hidden="true" class="gux-ghost"></span>
+                  <gux-text-field class="gux-unclearable" title="100" value="100">
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="100">
                       </div>
                     </div>
                   </gux-text-field>
-                  <button aria-hidden="true" class="dropdown-indicator" tabindex="-1" type="button">
+                  <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
                     <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
                   </button>
                 </div>
@@ -1162,7 +1162,7 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="10" total-pages="10">
-        <div class="full gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -1232,7 +1232,7 @@ exports[`gux-pagination #render should render as expected (10) 1`] = `
     </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="1" total-pages="40">
-        <div class="gux-pagination-buttons-container small">
+        <div class="gux-pagination-buttons-container gux-small">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->
@@ -1274,7 +1274,7 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
   <div class="gux-pagination-container">
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="1" total-pages="40">
-        <div class="expanded gux-pagination-buttons-container">
+        <div class="gux-expanded gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button>
               <!---->

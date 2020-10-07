@@ -181,16 +181,16 @@ export class GuxCalendar {
       const classes = [];
       let hidden = false;
       if (date.getMonth() !== month) {
-        classes.push('not-in-month');
+        classes.push('gux-not-in-month');
         if (this.mode === CalendarModes.Range) {
-          classes.push('hidden');
+          classes.push('gux-hidden');
           hidden = true;
         }
       }
 
       let disabled = false;
       if (this.outOfBounds(date)) {
-        classes.push('disabled');
+        classes.push('gux-disabled');
         disabled = true;
       }
 
@@ -204,13 +204,13 @@ export class GuxCalendar {
           date.getTime() === toTimeStamp
         ) {
           isSelected = true;
-          classes.push('selected');
+          classes.push('gux-selected');
         }
       } else {
         const selectedTimestamp = fromIsoDateString(this.value).getTime();
         if (date.getTime() === selectedTimestamp) {
           isSelected = true;
-          classes.push('selected');
+          classes.push('gux-selected');
         }
       }
       arr.push({
@@ -307,7 +307,7 @@ export class GuxCalendar {
       } else {
         if (this.selectingDate === null) {
           // First click
-          removeClassToElements(this.getAllDatesElements(), 'hovered');
+          removeClassToElements(this.getAllDatesElements(), 'gux-hovered');
           this.selectingDate = date;
           this.value = asIsoDateRange(date, date);
         } else {
@@ -316,7 +316,7 @@ export class GuxCalendar {
             `td[data-date="${date.getTime()}"]`
           );
           if (target) {
-            target.classList.add('selected');
+            target.classList.add('gux-selected');
           }
           this.updateRangeElements();
           this.setValueAndEmit([this.selectingDate, date]);
@@ -336,10 +336,10 @@ export class GuxCalendar {
 
   updateRangeElements() {
     if (this.mode === CalendarModes.Range) {
-      removeClassToElements(this.getAllDatesElements(), 'hovered');
+      removeClassToElements(this.getAllDatesElements(), 'gux-hovered');
       const [start, end] = fromIsoDateRange(this.value);
       const rangeElements = this.getRangeDatesElements(start, end);
-      addClassToElements(rangeElements, 'hovered');
+      addClassToElements(rangeElements, 'gux-hovered');
     }
   }
 
@@ -426,7 +426,7 @@ export class GuxCalendar {
 
   renderMonthHeader() {
     return (
-      <div class="month-list">
+      <div class="gux-month-list">
         {Array.from(Array(this.numberOfMonths).keys()).map(index => (
           <label>
             {this.getMonthLabel(index)} {this.previewValue.getFullYear()}
@@ -468,10 +468,10 @@ export class GuxCalendar {
   render() {
     return (
       <div class="gux-calendar">
-        <div class="header">
+        <div class="gux-header">
           <button
             type="button"
-            class="left"
+            class="gux-left"
             onClick={() => this.incrementPreviewDateByMonth(-1)}
             tabindex="-1"
             aria-hidden="true"
@@ -481,7 +481,7 @@ export class GuxCalendar {
           {this.renderMonthHeader()}
           <button
             type="button"
-            class="right"
+            class="gux-right"
             onClick={() => this.incrementPreviewDateByMonth(1)}
             tabindex="-1"
             aria-hidden="true"
@@ -489,7 +489,7 @@ export class GuxCalendar {
             <gux-icon decorative iconName="ic-chevron-right"></gux-icon>
           </button>
         </div>
-        <div class="content">
+        <div class="gux-content">
           {Array.from(Array(this.numberOfMonths).keys()).map(index =>
             this.renderCalendarTable(index)
           )}

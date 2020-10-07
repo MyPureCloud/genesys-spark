@@ -47,16 +47,16 @@ export class GuxSimpleToast {
   render(): JSX.Element {
     return (
       <Host>
-        <div class={`icon ${this.accent}`}>
+        <div class={`gux-icon gux-${this.accent}`}>
           <slot name="icon" />
         </div>
 
-        <div class="message">
+        <div class="gux-message">
           <slot name="message" />
         </div>
 
         <button
-          class="dismiss-button"
+          class="gux-dismiss-button"
           title={this.getI18nValue('dismiss')}
           onClick={this.onDismissClickHandler.bind(this)}
         >

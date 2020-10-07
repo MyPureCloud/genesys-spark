@@ -14,10 +14,10 @@ describe('gux-disclosure-button', () => {
 
     await page.setContent('<gux-disclosure-button></gux-disclosure-button>');
     page.waitForChanges();
-    const button = await page.find('.disclosure-button');
-    const panel = await page.find('.disclosure-panel');
+    const button = await page.find('.gux-disclosure-button');
+    const panel = await page.find('.gux-disclosure-panel');
     await button.click();
-    expect(panel).toHaveClass('active');
+    expect(panel).toHaveClass('gux-active');
   });
 
   describe('disclosure panel is-open', () => {
@@ -26,8 +26,8 @@ describe('gux-disclosure-button', () => {
 
       await page.setContent('<gux-disclosure-button></gux-disclosure-button>');
       page.waitForChanges();
-      const panel = await page.find('.disclosure-panel');
-      expect(panel).not.toHaveClass('active');
+      const panel = await page.find('.gux-disclosure-panel');
+      expect(panel).not.toHaveClass('gux-active');
     });
 
     it('opens disclosure panel when property openAtStart is set to true', async () => {
@@ -37,8 +37,8 @@ describe('gux-disclosure-button', () => {
         '<gux-disclosure-button is-open="true"></gux-disclosure-button>'
       );
       page.waitForChanges();
-      const panel = await page.find('.disclosure-panel');
-      expect(panel).toHaveClass('active');
+      const panel = await page.find('.gux-disclosure-panel');
+      expect(panel).toHaveClass('gux-active');
     });
   });
 });

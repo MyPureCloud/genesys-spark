@@ -115,7 +115,7 @@ export class GuxActionButton {
 
   render() {
     return (
-      <div class={'gux-action-button' + (this.isOpen ? ' open' : '')}>
+      <div class={'gux-action-button' + (this.isOpen ? ' gux-open' : '')}>
         <gux-button
           accent={this.accent}
           disabled={this.disabled}

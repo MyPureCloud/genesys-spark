@@ -48,8 +48,8 @@ export class GuxTextLabel {
 
   render() {
     return (
-      <div class={'gux-text-label-container ' + this.position}>
-        <label class="label" id={this.id}>
+      <div class={`gux-text-label-container gux-${this.position}`}>
+        <label class="gux-label" id={this.id}>
           <slot name="label">{this.label}</slot>
         </label>
         <div

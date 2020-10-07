@@ -6,13 +6,13 @@
 gux-disclosure-button {
   height: 100%;
 
-  .disclosure-button-container {
+  .gux-disclosure-button-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     height: 100%;
 
-    &.right {
+    &.gux-right {
       justify-content: flex-end;
     }
 
@@ -37,16 +37,16 @@ gux-disclosure-button {
     }
   }
 
-  .disclosure-panel {
+  .gux-disclosure-panel {
     display: none;
     width: 100%;
     order: -1;
 
-    &.right {
+    &.gux-right {
       order: 1;
     }
 
-    &.active {
+    &.gux-active {
       display: block;
     }
   }
@@ -58,7 +58,7 @@ gux-disclosure-button {
 .gux-disclosure-button-dark-theme {
   color: @gux-type-dark;
 
-  .disclosure-button-container button {
+  .gux-disclosure-button-container button {
     border-color: @gux-grey-global;
     color: @gux-type-dark;
   }
@@ -78,7 +78,7 @@ gux-disclosure-button.gux-dark-theme {
 .gux-disclosure-button-light-theme {
   color: @gux-type;
 
-  .disclosure-button-container button {
+  .gux-disclosure-button-container button {
     border-color: @gux-border;
     color: @gux-type;
   }
