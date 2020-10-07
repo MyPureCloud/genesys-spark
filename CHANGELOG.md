@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.3](http://inindca///compare/v1.9.2...v1.9.3) (2020-10-07)
+
+
+### Bug Fixes
+
+* **css:** all stable components css classes are now prefixed with gux- ([e1d859d](http://inindca///commit/e1d859db739cec7216d44ee373e045e568f62ce9))
+* **gux-icon:** typo in icon name ([79ef448](http://inindca///commit/79ef448c7a9314cf65a068c68d208eb0d152c526))
+* **types:** added union string literal types instead of string where appropriate ([b9bebea](http://inindca///commit/b9bebea95a7defe9e970a7c66900374ed6298a55))
+
 ### [1.9.2](http://inindca///compare/v1.9.1...v1.9.2) (2020-10-02)
 
 
