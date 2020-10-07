@@ -11,8 +11,7 @@ import {
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import modalComponentResources from './i18n/en.json';
-
-export type GuxModalSize = 'small' | 'medium' | 'large';
+import { GuxModalSize } from './gux-modal.types';
 
 /**
  * @slot content - Required slot for the modal content

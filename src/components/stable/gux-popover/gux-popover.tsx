@@ -12,23 +12,12 @@ import {
   Watch
 } from '@stencil/core';
 import { ClickOutside } from 'stencil-click-outside';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import modalComponentResources from './i18n/en.json';
 import onHiddenChange from '../../../common-utils';
 
-export type PopperPosition =
-  | 'top'
-  | 'top-start'
-  | 'top-end'
-  | 'right'
-  | 'right-start'
-  | 'right-end'
-  | 'bottom'
-  | 'bottom-start'
-  | 'bottom-end'
-  | 'left'
-  | 'left-start'
-  | 'left-end';
+import modalComponentResources from './i18n/en.json';
+import { PopperPosition } from './gux-popover.types';
 
 @Component({
   styleUrl: 'gux-popover.less',

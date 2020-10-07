@@ -9,13 +9,11 @@ import {
   State
 } from '@stencil/core';
 
-import { GuxItemsPerPage } from './gux-pagination-items-per-page/gux-pagination-items-per-page';
-
-export type GuxPaginationLayout = 'small' | 'expanded' | 'full';
-export type GuxPaginationState = {
-  currentPage: number;
-  itemsPerPage: number;
-};
+import {
+  GuxItemsPerPage,
+  GuxPaginationLayout,
+  GuxPaginationState
+} from './gux-pagination.types';
 
 @Component({
   styleUrl: 'gux-pagination.less',

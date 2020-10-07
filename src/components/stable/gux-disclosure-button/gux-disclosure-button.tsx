@@ -1,6 +1,6 @@
 import { Component, Event, EventEmitter, h, Prop, State } from '@stencil/core';
 
-export type GuxDisclosureButtonPosition = 'left' | 'right';
+import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
 
 @Component({
   styleUrl: 'gux-disclosure-button.less',

@@ -9,7 +9,8 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
-import { GuxPaginationLayout } from '../gux-pagination';
+import { GuxPaginationLayout } from '../gux-pagination.types';
+
 import paginationResources from './i18n/en.json';
 import { GuxPaginationButtonsService } from './gux-pagination-button.service';
 
