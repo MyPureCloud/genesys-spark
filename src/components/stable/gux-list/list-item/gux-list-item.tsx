@@ -7,8 +7,9 @@ import {
   Listen,
   Prop
 } from '@stencil/core';
+
 import { KeyCode } from '../../../../common-enums';
-import { GuxTextHighlightStrategy } from '../../gux-text-highlight/gux-text-highlight';
+import { GuxTextHighlightStrategy } from '../../gux-text-highlight/gux-text-highlight.types';
 
 @Component({
   styleUrl: 'gux-list-item.less',

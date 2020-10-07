@@ -12,12 +12,7 @@ import {
 import { buildI18nForComponent } from '../../../i18n';
 
 import modalComponentResources from './i18n/en.json';
-
-export type GuxNotificationAccent =
-  | 'neutral'
-  | 'positive'
-  | 'alert'
-  | 'warning';
+import { GuxSimpleToastAccent } from './gux-simple-toast.types';
 
 /**
  * @slot icon - Required slot for gux-icon
@@ -32,7 +27,7 @@ export class GuxSimpleToast {
    * The component accent.
    */
   @Prop()
-  accent: GuxNotificationAccent = 'neutral';
+  accent: GuxSimpleToastAccent = 'neutral';
 
   @Event()
   guxdismiss: EventEmitter<void>;

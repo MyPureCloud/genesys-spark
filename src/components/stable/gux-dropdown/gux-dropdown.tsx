@@ -12,8 +12,6 @@ import {
 import { KeyCode } from '../../../common-enums';
 import { whenEventIsFrom } from '../../../common-utils';
 
-export type GuxDropdownMode = 'default' | 'page' | 'palette';
-
 @Component({
   styleUrl: 'gux-dropdown.less',
   tag: 'gux-dropdown'
@@ -27,7 +25,7 @@ export class GuxDropdown {
    * Sets the select mode (default, page or palette).
    */
   @Prop()
-  mode: GuxDropdownMode = 'default';
+  mode: 'default' | 'page' | 'palette' = 'default';
   /**
    * Disable the input and prevent interactions.
    */

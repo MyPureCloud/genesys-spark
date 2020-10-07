@@ -19,9 +19,7 @@ import {
   removeClassToElements
 } from '../../../common-utils';
 import { getDesiredLocale } from '../../../i18n';
-import { IDateElement } from './gux-calendar-constants';
-
-export type GuxCalendarMode = CalendarModes.Single | CalendarModes.Range;
+import { GuxCalendarMode, IDateElement } from './gux-calendar.types';
 
 @Component({
   styleUrl: 'gux-calendar.less',

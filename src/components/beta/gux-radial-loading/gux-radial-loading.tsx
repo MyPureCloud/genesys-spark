@@ -1,6 +1,6 @@
 import { Component, h, JSX, Prop } from '@stencil/core';
 
-export type GuxRadialLoadingContext = 'full-page' | 'input' | 'modal';
+import { GuxRadialLoadingContext } from './gux-radial-loading.types';
 
 @Component({
   styleUrl: 'gux-radial-loading.less',

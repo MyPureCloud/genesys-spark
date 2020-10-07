@@ -9,6 +9,7 @@ import {
   State,
   Watch
 } from '@stencil/core';
+
 import { CalendarModes, KeyCode } from '../../../common-enums';
 import {
   asIsoDateRange,
@@ -17,9 +18,9 @@ import {
   fromIsoDateString
 } from '../../../common-utils';
 import { buildI18nForComponent } from '../../../i18n';
-import i18nStrings from './i18n/en.json';
 
-export type GuxDatepickerMode = CalendarModes.Single | CalendarModes.Range;
+import i18nStrings from './i18n/en.json';
+import { GuxDatepickerMode } from './gux-datepicker.types';
 
 @Component({
   styleUrl: 'gux-datepicker.less',

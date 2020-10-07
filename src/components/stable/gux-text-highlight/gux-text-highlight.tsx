@@ -1,7 +1,7 @@
 import { Component, h, JSX, Prop } from '@stencil/core';
 import { getFuzzyReplacements, matchesFuzzy } from '../../../search';
 
-export type GuxTextHighlightStrategy = 'start' | 'contains' | 'fuzzy';
+import { GuxTextHighlightStrategy } from './gux-text-highlight.types';
 
 @Component({
   tag: 'gux-text-highlight'

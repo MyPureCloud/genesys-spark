@@ -22,7 +22,7 @@ changing error-message attribute.
 | `disabled`         | `disabled`           | Disable the input and prevent interactions.                                               | `boolean`                                     | `false`       |
 | `eraseLabel`       | `erase-label`        | The label for the erase button                                                            | `string`                                      | `''`          |
 | `errorMessage`     | `error-message`      | The message displayed on validation failure.                                              | `string`                                      | `''`          |
-| `errorMessageType` | `error-message-type` | The message type (warning or error)                                                       | `Types.Error \| Types.Warning`                | `Types.Error` |
+| `errorMessageType` | `error-message-type` | The message type (warning or error)                                                       | `"error" \| "warning"`                        | `Types.Error` |
 | `placeholder`      | `placeholder`        | The input placeholder.                                                                    | `string`                                      | `undefined`   |
 | `readonly`         | `readonly`           | Set the input in readonly mode                                                            | `boolean`                                     | `false`       |
 | `srLabel`          | `sr-label`           | Aria label to use in case the text field does not have an actual label.                   | `string`                                      | `undefined`   |

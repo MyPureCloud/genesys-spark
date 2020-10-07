@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
-export type GuxBreadcrumbAccent = 'primary' | 'secondary';
+import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 
 @Component({
   styleUrl: 'gux-breadcrumb-item.less',

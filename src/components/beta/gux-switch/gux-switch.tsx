@@ -1,7 +1,7 @@
 import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 import { JSXBase } from '@stencil/core/internal';
 import { KeyCode } from '../../../common-enums';
-import { AllowedLayouts, ISwitchItem } from './gux-switch.constants';
+import { AllowedLayouts, ISwitchItem } from './gux-switch.types';
 
 @Component({
   styleUrl: 'gux-switch.less',

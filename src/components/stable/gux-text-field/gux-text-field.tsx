@@ -18,8 +18,6 @@ enum Types {
   Error = 'error'
 }
 
-export type GuxTextFieldErrorMessageType = Types.Error | Types.Warning;
-
 @Component({
   styleUrl: 'gux-text-field.less',
   tag: 'gux-text-field'
@@ -75,7 +73,7 @@ export class GuxTextField {
    * The message type (warning or error)
    */
   @Prop({ mutable: true })
-  errorMessageType: GuxTextFieldErrorMessageType = Types.Error;
+  errorMessageType: 'error' | 'warning' = Types.Error;
 
   /**
    * Timeout between input and validation.

@@ -11,9 +11,9 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
-import paginationResources from './i18n/en.json';
 
-export type GuxItemsPerPage = 25 | 50 | 75 | 100;
+import paginationResources from './i18n/en.json';
+import { GuxItemsPerPage } from '../gux-pagination.types';
 
 @Component({
   styleUrl: 'gux-pagination-items-per-page.less',

@@ -12,7 +12,7 @@ import {
 } from '@stencil/core';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import tableResources from './i18n/en.json';
-import { IColumnResizeState, ISortState } from './gux-table-constants';
+import { IColumnResizeState, ISortState } from './gux-table.types';
 import { whenEventIsFrom } from '../../../common-utils';
 
 const COL_RESIZE_HANDLE_WIDTH = 3;

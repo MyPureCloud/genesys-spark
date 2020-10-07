@@ -3,8 +3,7 @@ import { Component, Element, h, JSX, Prop } from '@stencil/core';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import breadcrumbsResources from './i18n/en.json';
-
-export type GuxBreadcrumbAccent = 'primary' | 'secondary';
+import { GuxBreadcrumbAccent } from './gux-breadcrumbs.types';
 
 @Component({
   styleUrl: 'gux-breadcrumbs.less',

@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
-export type GuxButtonAccent = 'primary' | 'secondary';
+import { GuxButtonAccent } from './gux-button.types';
 
 @Component({
   styleUrl: 'gux-button.less',
