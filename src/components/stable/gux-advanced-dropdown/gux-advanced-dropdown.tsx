@@ -10,7 +10,7 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import { buildI18nForComponent } from '../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import advancedDropDownResources from './i18n/en.json';
 
 @Component({
@@ -22,7 +22,8 @@ export class GuxAdvancedDropdown {
   root: HTMLElement;
   searchElement: HTMLGuxSearchBetaElement;
   inputBox: HTMLElement;
-  i18n: (resourceKey: string, context?: any) => string;
+
+  private i18n: GetI18nValue;
 
   /**
    * Disable the input and prevent interactions.
@@ -130,7 +131,7 @@ export class GuxAdvancedDropdown {
   render() {
     return (
       <div
-        class={`gux-dropdown 
+        class={`gux-dropdown
         ${this.disabled ? 'disabled' : ''}
         ${this.opened ? 'active' : ''}`}
       >

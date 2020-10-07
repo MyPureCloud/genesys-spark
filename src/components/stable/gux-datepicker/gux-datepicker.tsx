@@ -17,7 +17,7 @@ import {
   fromIsoDateRange,
   fromIsoDateString
 } from '../../../common-utils';
-import { buildI18nForComponent } from '../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import i18nStrings from './i18n/en.json';
 import { GuxDatepickerMode } from './gux-datepicker.types';
@@ -103,7 +103,7 @@ export class GuxDatepicker {
   lastSelection: number = 0;
   lastYear: number = new Date().getFullYear();
 
-  i18n: (resourceKey: string, context?: any) => string;
+  private i18n: GetI18nValue;
 
   /**
    * Triggered when user selects a date

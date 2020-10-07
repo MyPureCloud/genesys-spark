@@ -10,7 +10,7 @@ import {
   Watch
 } from '@stencil/core';
 
-import { buildI18nForComponent } from '../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import textFieldResources from './i18n/en.json';
 
 enum Types {
@@ -123,7 +123,7 @@ export class GuxTextField {
   @Event()
   input: EventEmitter;
 
-  private i18n: (resourceKey: string, context?: any) => string;
+  private i18n: GetI18nValue;
 
   emitInput(event) {
     event.preventDefault();

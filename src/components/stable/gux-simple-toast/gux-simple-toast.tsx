@@ -9,7 +9,7 @@ import {
   Prop
 } from '@stencil/core';
 
-import { buildI18nForComponent } from '../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import modalComponentResources from './i18n/en.json';
 import { GuxSimpleToastAccent } from './gux-simple-toast.types';
@@ -32,7 +32,7 @@ export class GuxSimpleToast {
   @Event()
   guxdismiss: EventEmitter<void>;
 
-  private getI18nValue: (resourceKey: string, context?: any) => string;
+  private getI18nValue: GetI18nValue;
 
   @Element()
   private root: HTMLElement;
