@@ -44,6 +44,15 @@ gux-modal {
         width: 940px;
       }
 
+      &.gux-dynamic {
+        max-height: calc(100vh - 2 * @min-modal-inset);
+        max-width: calc(100vw - 2 * @min-modal-inset);
+
+        .gux-modal-content {
+          max-height: none;
+        }
+      }
+
       .gux-dismiss-button {
         position: absolute;
         top: 15px;
