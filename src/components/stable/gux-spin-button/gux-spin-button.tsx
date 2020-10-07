@@ -10,7 +10,7 @@ import {
   Watch
 } from '@stencil/core';
 
-import { buildI18nForComponent } from '../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import defaultResources from './i18n/en.json';
 
 @Component({
@@ -69,7 +69,7 @@ export class GuxSpinButton {
   @Event()
   input: EventEmitter<number>;
 
-  private i18n: (resourceKey: string, context?: any) => string;
+  private i18n: GetI18nValue;
 
   emitInput(event: CustomEvent) {
     event.preventDefault();

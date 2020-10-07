@@ -1,7 +1,7 @@
 import { Component, Element, h, Method, State } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
 import { matchesFuzzy } from '../../../search';
-import { buildI18nForComponent } from '../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import paletteResources from './i18n/en.json';
 
 const filterLimit = 50;
@@ -58,7 +58,7 @@ export class GuxCommandPalette {
 
   private inputElement: HTMLElement;
 
-  private i18n: (resourceKey: string, context?: any) => string;
+  private i18n: GetI18nValue;
 
   async componentWillLoad() {
     this.i18n = await buildI18nForComponent(this.element, paletteResources);
