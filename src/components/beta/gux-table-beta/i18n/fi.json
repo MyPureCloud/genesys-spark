@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "Tietoja ei ole saatavissa",
+  "scrollLeft": "Vieritä vasemmalle",
+  "scrollRight": "Vieritä oikealle",
+  "sortAsc": "Lajiteltu nousevaan järjestykseen",
+  "sortDesc": "Lajiteltu laskevaan järjestykseen"
+}

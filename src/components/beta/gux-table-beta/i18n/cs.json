@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "Nejsou dostupná žádná data",
+  "scrollLeft": "Posunout doleva",
+  "scrollRight": "Posunout doprava",
+  "sortAsc": "Seřazeno vzestupně",
+  "sortDesc": "Seřazeno sestupně"
+}

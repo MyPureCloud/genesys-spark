@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "Keine Daten verfügbar",
+  "scrollLeft": "Nach links blättern",
+  "scrollRight": "Nach rechts blättern",
+  "sortAsc": "Aufsteigend sortiert",
+  "sortDesc": "Absteigend sortiert"
+}

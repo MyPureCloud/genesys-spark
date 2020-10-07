@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "Aucune donnée disponible",
+  "scrollLeft": "Faire défiler à gauche",
+  "scrollRight": "Faire défiler à droite",
+  "sortAsc": "Tri croissant",
+  "sortDesc": "Tri décroissant"
+}

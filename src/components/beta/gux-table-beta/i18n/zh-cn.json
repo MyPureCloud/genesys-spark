@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "无可用数据",
+  "scrollLeft": "向左滚动",
+  "scrollRight": "向右滚动",
+  "sortAsc": "升序排序",
+  "sortDesc": "降序排序"
+}
