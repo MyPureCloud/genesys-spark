@@ -1,7 +1,9 @@
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/spacing.less';
 
 // Variables part
+@min-modal-inset: @spacing-large;
 
 // Style
 gux-modal {
@@ -9,7 +11,7 @@ gux-modal {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -22,28 +24,23 @@ gux-modal {
       flex-direction: column;
       position: relative;
       box-sizing: border-box;
-      width: 100%;
       padding: 40px;
       justify-content: space-between;
       background: @gux-background;
       box-shadow: 0 0 2px rgba(34, 37, 41, 0.24);
 
       &.gux-small {
-        max-height: 368px;
+        max-height: e(%('min(368px, 100vh - 2 * %s)', @min-modal-inset));
         width: 416px;
-
-        .gux-modal-content {
-          max-height: 160px;
-        }
       }
 
       &.gux-medium {
-        max-height: 640px;
+        max-height: e(%('min(640, 100vh - 2 * %s)', @min-modal-inset));
         width: 672px;
       }
 
       &.gux-large {
-        max-height: 640px;
+        max-height: e(%('min(640, 100vh - 2 * %s)', @min-modal-inset));
         width: 940px;
       }
 
