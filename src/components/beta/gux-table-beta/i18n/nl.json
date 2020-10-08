@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "Geen gegevens beschikbaar",
+  "scrollLeft": "Naar links schuiven",
+  "scrollRight": "Naar rechts schuiven",
+  "sortAsc": "Oplopend sorteren",
+  "sortDesc": "Aflopend sorteren"
+}

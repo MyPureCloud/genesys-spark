@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "Kullanılabilir veri yok",
+  "scrollLeft": "Sola Kaydır",
+  "scrollRight": "Sağa Kaydır",
+  "sortAsc": "Artan Sıralı",
+  "sortDesc": "Azalan Sıralı"
+}
