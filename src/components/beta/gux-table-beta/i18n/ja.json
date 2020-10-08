@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "利用可能なデータがありません",
+  "scrollLeft": "左にスクロール",
+  "scrollRight": "右にスクロール",
+  "sortAsc": "昇順にソート済み",
+  "sortDesc": "降順にソート済み"
+}

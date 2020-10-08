@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "사용할 수 있는 데이터 없음",
+  "scrollLeft": "왼쪽으로 스크롤",
+  "scrollRight": "오른쪽으로 스크롤",
+  "sortAsc": "오름차순으로 정렬됨",
+  "sortDesc": "내림차순으로 정렬됨"
+}

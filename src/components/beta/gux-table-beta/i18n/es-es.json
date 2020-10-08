@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "No hay datos disponibles",
+  "scrollLeft": "Desplazar a la izquierda",
+  "scrollRight": "Desplazar a la derecha",
+  "sortAsc": "En orden ascendente",
+  "sortDesc": "En orden descendente"
+}
