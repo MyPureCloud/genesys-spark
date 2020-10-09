@@ -1,1 +1,7 @@
-{}
+{
+  "emptyMessage": "Ingen data tilgjengelig",
+  "scrollLeft": "Rull til venstre",
+  "scrollRight": "Rull til høyre",
+  "sortAsc": "Sortert stigende",
+  "sortDesc": "Sortert synkende"
+}
