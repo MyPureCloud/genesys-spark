@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](http://inindca///compare/v1.10.0...v1.11.0) (2020-10-13)
+
+
+### Features
+
+* **modal:** add dynamic modal size ([f4b2dec](http://inindca///commit/f4b2decdac791d5b0e6f7b2f231772a63ab6e8e4))
+
+
+### Bug Fixes
+
+* **modal:** ensure modal always coveres the full viewport ([ce661ed](http://inindca///commit/ce661ed9a1aab0c403d9f13b800c0574751c9c80))
+
 ## [1.10.0](http://inindca///compare/v1.9.4...v1.10.0) (2020-10-13)
 
 

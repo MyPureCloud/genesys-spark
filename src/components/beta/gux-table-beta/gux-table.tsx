@@ -355,6 +355,7 @@ export class GuxTable {
 
           switch (sortDirection) {
             case '':
+            case 'desc':
               newSortDirection = 'asc';
               break;
             case 'asc':
