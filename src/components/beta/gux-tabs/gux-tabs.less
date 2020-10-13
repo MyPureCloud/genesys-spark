@@ -5,84 +5,82 @@
 @gux-off-tab-fill: #cfd1d1;
 
 // Style
-gux-tabs-beta {
-  .gux-tabs {
+.gux-tabs {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 40px;
+  overflow-x: hidden;
+
+  .action-button-container {
     display: flex;
-    align-items: flex-end;
-    width: 100%;
-    height: 40px;
-    overflow-x: hidden;
+    border-radius: 2px;
 
-    .action-button-container {
+    .arrow-button {
+      height: 40px;
+      width: 24px;
+      border: none;
+      padding: 0;
       display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.25s;
       border-radius: 2px;
+      border-style: solid;
+      border-width: 1px;
 
-      .arrow-button {
-        height: 40px;
-        width: 24px;
-        border: none;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: color 0.25s;
-        border-radius: 2px;
-        border-style: solid;
-        border-width: 1px;
-
-        gux-icon {
-          height: 10px;
-          width: 10px;
-        }
-      }
-
-      .add-tab {
-        height: 40px;
-        width: 40px;
-        border: none;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: color 0.25s;
-        border-radius: 2px;
-        border-style: solid;
-        border-width: 1px;
-
-        gux-icon {
-          height: 16px;
-          width: 16px;
-        }
+      gux-icon {
+        height: 10px;
+        width: 10px;
       }
     }
 
-    .scrollable-section {
+    .add-tab {
+      height: 40px;
+      width: 40px;
+      border: none;
+      padding: 0;
       display: flex;
-      flex: 1 1 auto;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.25s;
+      border-radius: 2px;
+      border-style: solid;
+      border-width: 1px;
 
-      &::-webkit-scrollbar {
-        height: 0;
+      gux-icon {
+        height: 16px;
+        width: 16px;
       }
+    }
+  }
 
-      .add-tab {
-        height: 36px;
-        width: 36px;
-        min-width: 36px;
-        border: none;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 4px;
-        transition: color 0.25s;
+  .scrollable-section {
+    display: flex;
+    flex: 1 1 auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 
-        gux-icon {
-          height: 16px;
-          width: 16px;
-        }
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+
+    .add-tab {
+      height: 36px;
+      width: 36px;
+      min-width: 36px;
+      border: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 4px;
+      transition: color 0.25s;
+
+      gux-icon {
+        height: 16px;
+        width: 16px;
       }
     }
   }
