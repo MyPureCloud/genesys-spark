@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](http://inindca///compare/v1.9.4...v1.10.0) (2020-10-13)
+
+
+### Features
+
+* **tag:** add tag component ([a2f9b6a](http://inindca///commit/a2f9b6a9b92ce6f39fb28c1d5f5c05b9fceaf101)), closes [#21](http://inindca///issues/21)
+
+
+### Bug Fixes
+
+* **enum:** export const enums ([4e38aa8](http://inindca///commit/4e38aa8b8fa53d14e60ed41fd788d3af3fc5e7a7))
+
 ### [1.9.4](http://inindca///compare/v1.9.3...v1.9.4) (2020-10-08)
 
 ### [1.9.3](http://inindca///compare/v1.9.2...v1.9.3) (2020-10-07)
