@@ -1,4 +1,4 @@
-export enum KeyCode {
+export const enum KeyCode {
   A = 65,
   P = 80,
   Up = 38,
@@ -17,18 +17,23 @@ export enum KeyCode {
   PageDown = 34
 }
 
-export enum ListTypeEnum {
+export const enum ListTypeEnum {
   Divider = 'divider',
   Item = 'item',
   Header = 'header'
 }
 
-export enum CalendarModes {
+export const enum CalendarModes {
   Single = 'single',
   Range = 'range'
 }
 
-export enum ButtonAccents {
+export const enum ButtonAccents {
   Primary = 'primary',
   Secondary = 'secondary'
+}
+
+export const enum ErrorMessageType {
+  Warning = 'warning',
+  Error = 'error'
 }

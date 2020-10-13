@@ -11,12 +11,9 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import textFieldResources from './i18n/en.json';
+import { ErrorMessageType } from '../../../common-enums';
 
-enum Types {
-  Warning = 'warning',
-  Error = 'error'
-}
+import textFieldResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-text-field.less',
@@ -73,7 +70,8 @@ export class GuxTextField {
    * The message type (warning or error)
    */
   @Prop({ mutable: true })
-  errorMessageType: 'error' | 'warning' = Types.Error;
+  errorMessageType: ErrorMessageType.Error | ErrorMessageType.Warning =
+    ErrorMessageType.Error;
 
   /**
    * Timeout between input and validation.
@@ -150,7 +148,7 @@ export class GuxTextField {
     }
     if (this.validation instanceof RegExp) {
       if (!this.validation.test(value)) {
-        this.errorMessageType = Types.Error;
+        this.errorMessageType = ErrorMessageType.Error;
         this.errorMessage = this.internalErrorMessage;
       } else {
         this.errorMessage = '';
@@ -159,16 +157,16 @@ export class GuxTextField {
       const validation = this.validation(value);
       if (validation) {
         if (validation.warning) {
-          this.errorMessageType = Types.Warning;
+          this.errorMessageType = ErrorMessageType.Warning;
           this.errorMessage = validation.warning;
         } else if (validation.error) {
-          this.errorMessageType = Types.Error;
+          this.errorMessageType = ErrorMessageType.Error;
           this.errorMessage = validation.error;
         } else {
           this.errorMessage = '';
         }
       } else {
-        this.errorMessageType = Types.Error;
+        this.errorMessageType = ErrorMessageType.Error;
         this.errorMessage = this.internalErrorMessage;
       }
     }

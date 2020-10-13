@@ -7,21 +7,11 @@ import {
   JSX,
   Prop
 } from '@stencil/core';
-import tagResources from './i18n/en.json';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
-export type GuxTagColor =
-  | 'default'
-  | 'navy'
-  | 'blue'
-  | 'electric-purple'
-  | 'aqua-green'
-  | 'fuscha'
-  | 'dark-purple'
-  | 'bubblegum-pink'
-  | 'olive-green'
-  | 'lilac'
-  | 'yellow-green';
+import tagResources from './i18n/en.json';
+import { GuxTagColor } from './gux-tag.types';
 
 @Component({
   styleUrl: 'gux-tag.less',
