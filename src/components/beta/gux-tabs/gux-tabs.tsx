@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  Listen,
   Prop,
   readTask,
   State,
@@ -13,6 +14,7 @@ import {
 import Sortable, { MoveEvent } from 'sortablejs';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import tabsResources from './i18n/en.json';
+import { whenEventIsFrom } from '../../../common-utils';
 
 @Component({
   styleUrl: 'gux-tabs.less',
@@ -61,24 +63,25 @@ export class GuxTabs {
   private resizeObserver?: ResizeObserver;
 
   @Watch('value')
-  watchHandler(newValue: string, oldValue: string) {
-    if (newValue) {
-      const newActiveTab: any = this.element.querySelector(
-        `gux-tab[tab-id='${newValue}']`
-      );
-      if (newActiveTab) {
-        newActiveTab.active = true;
-      }
-    }
+  watchHandler(newValue: string) {
+    const tabs: HTMLGuxTabElement[] = Array.from(
+      this.element.querySelectorAll('gux-tab')
+    );
 
-    if (oldValue) {
-      const oldActiveTab: any = this.element.querySelector(
-        `gux-tab[tab-id='${oldValue}']`
-      );
-      if (oldActiveTab) {
-        oldActiveTab.active = false;
-      }
+    for (const tab of tabs) {
+      tab.active = tab.tabId === newValue;
     }
+  }
+
+  @Listen('click')
+  clickHandler(e: MouseEvent) {
+    whenEventIsFrom('gux-tab', e, elem => {
+      const tab = elem as HTMLGuxTabElement;
+      if (!tab.active) {
+        this.value = tab.tabId;
+        this.input.emit();
+      }
+    });
   }
 
   createSortable() {
@@ -110,9 +113,11 @@ export class GuxTabs {
       this.destroySortable();
     }
 
-    this.resizeObserver?.unobserve(
-      this.element.shadowRoot.querySelector('.gux-tabs')
-    );
+    if (this.resizeObserver) {
+      this.resizeObserver.unobserve(
+        this.element.shadowRoot.querySelector('.gux-tabs')
+      );
+    }
   }
 
   async componentWillLoad(): Promise<void> {
@@ -135,17 +140,11 @@ export class GuxTabs {
       });
     }
 
-    this.resizeObserver?.observe(
-      this.element.shadowRoot.querySelector('.gux-tabs')
-    );
-
-    this.element.addEventListener('click', (e: any) => {
-      const tab = e.path.find((el: any) => el.tabId);
-      if (tab && !tab.active) {
-        this.value = tab.tabId;
-        this.input.emit();
-      }
-    });
+    if (this.resizeObserver) {
+      this.resizeObserver.observe(
+        this.element.shadowRoot.querySelector('.gux-tabs')
+      );
+    }
   }
 
   componentDidRender() {
