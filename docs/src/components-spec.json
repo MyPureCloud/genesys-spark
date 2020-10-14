@@ -354,7 +354,8 @@
       "resizable-columns": "checkbox"
     },
     "events": {
-      "sortChanged": "Fired when sorting of the table column is changed"
+      "guxselectionchanged": "Fired when table row was selected/unselected",
+      "guxsortchanged": "Fired when sorting of the table column is changed"
     }
   },
   "typography": {},
