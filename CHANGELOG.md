@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](http://inindca///compare/v1.10.0...v1.12.0) (2020-10-14)
+
+
+### Features
+
+* **gux-table:** row selection implementation … ([9dec552](http://inindca///commit/9dec5524263c99e78f96293db9a4f4d397d92c56))
+* **modal:** add dynamic modal size ([f4b2dec](http://inindca///commit/f4b2decdac791d5b0e6f7b2f231772a63ab6e8e4))
+
+
+### Bug Fixes
+
+* **gux-breadcrumbs:** adding Link Back in Primary Breadcrumb ([bcb1458](http://inindca///commit/bcb14580e2f44251212d09dfaf4605abcb3c270b))
+* **modal:** ensure modal always coveres the full viewport ([ce661ed](http://inindca///commit/ce661ed9a1aab0c403d9f13b800c0574751c9c80))
+
 ## [1.11.0](http://inindca///compare/v1.10.0...v1.11.0) (2020-10-13)
 
 
