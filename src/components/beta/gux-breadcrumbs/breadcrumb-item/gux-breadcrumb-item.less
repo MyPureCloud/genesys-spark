@@ -1,4 +1,5 @@
 @import (reference) '../../../../style/color.less';
+@import (reference) '../../../../style/typography.less';
 
 gux-breadcrumb-item {
   .gux-breadcrumb-generation {
@@ -8,6 +9,10 @@ gux-breadcrumb-item {
     justify-content: flex-start;
     align-content: flex-start;
     align-items: center;
+
+    &.gux-primary {
+      .gux-large-text();
+    }
 
     .gux-breadcrumb-separator {
       margin: 0 8px;
