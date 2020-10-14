@@ -15,7 +15,14 @@ export class GuxBreadcrumbItem {
 
   private getAccent(): GuxBreadcrumbAccent {
     const container = this.root.closest('gux-breadcrumbs-beta');
-    return container.accent;
+
+    if (container) {
+      return container.accent;
+    } else {
+      console.error(
+        `gux-breadcrumb-item: must be within a gux-breadcrumbs-beta component`
+      );
+    }
   }
 
   private isLastBreadcrumb(): boolean {
@@ -26,11 +33,7 @@ export class GuxBreadcrumbItem {
   }
 
   private getBreadcrumb(): JSX.Element {
-    if (
-      !this.href ||
-      this.isLastBreadcrumb() ||
-      this.getAccent() === 'primary'
-    ) {
+    if (!this.href || this.isLastBreadcrumb()) {
       return (
         <span class="gux-breadcrumb-content">
           <slot />
@@ -45,12 +48,12 @@ export class GuxBreadcrumbItem {
     );
   }
 
-  private getSeparatorIcon(): JSX.Element {
+  private getSeparatorIcon(accent: GuxBreadcrumbAccent): JSX.Element {
     if (this.isLastBreadcrumb()) {
       return null;
     }
 
-    switch (this.getAccent()) {
+    switch (accent) {
       case 'primary':
         return (
           <span class="gux-breadcrumb-separator" aria-hidden="true">
@@ -75,10 +78,12 @@ export class GuxBreadcrumbItem {
   }
 
   render(): JSX.Element {
+    const accent: GuxBreadcrumbAccent = this.getAccent();
+
     return (
-      <span class="gux-breadcrumb-generation">
+      <span class={`gux-breadcrumb-generation gux-${accent}`}>
         {this.getBreadcrumb()}
-        {this.getSeparatorIcon()}
+        {this.getSeparatorIcon(accent)}
       </span>
     );
   }
