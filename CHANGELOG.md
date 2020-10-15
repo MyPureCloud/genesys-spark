@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.1](http://inindca///compare/v1.12.0...v1.12.1) (2020-10-15)
+
+
+### Bug Fixes
+
+* **gux-tabs:** address pr comments ([0e47c8f](http://inindca///commit/0e47c8f450be8702ed837321d9c7143adc940fcb))
+* **gux-tabs:** address pr comments ([efe9a5b](http://inindca///commit/efe9a5b4ccbc4f9e5744de9e47bb209a08d5d77d))
+* **gux-tabs:** cleaner click handling for gux-tabs ([604c4b8](http://inindca///commit/604c4b8d23a3b40c44336f95b9a39bd562496112))
+* **gux-tabs:** convert gux-tabs to shadow dom component ([4d5522d](http://inindca///commit/4d5522d2105a25218f36c04967b1e0e1af218b10))
+* **gux-tabs:** convert gux-tabs to shadow dom component ([87f6823](http://inindca///commit/87f6823b9fc2386b434267519e6f891519befada))
+* **gux-tabs:** fix conflict ([1d6b5bd](http://inindca///commit/1d6b5bde9970c0598160f472f0bb0609da6cfb04))
+* **gux-tabs:** fix less variable name ([931d019](http://inindca///commit/931d01938dc96d4b3789b108451c505a5df27f9e))
+* **gux-tabs:** improve value handling in gux-tabs ([590e7fe](http://inindca///commit/590e7fead7fa5a1291f6acf9d2fa3edecc7823da))
+* **gux-tabs:** improve value handling in gux-tabs ([02475e7](http://inindca///commit/02475e756b34adaeffca6d91a7ea435c1ccb6b0f))
+* **gux-tabs:** merge conflicts ([a8901be](http://inindca///commit/a8901bed8ce9a927a95504f12c6dba8aeaaa091c))
+
 ## [1.12.0](http://inindca///compare/v1.10.0...v1.12.0) (2020-10-14)
 
 
