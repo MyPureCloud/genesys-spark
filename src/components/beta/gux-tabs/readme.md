@@ -16,11 +16,11 @@
 
 ## Events
 
-| Event         | Description                                       | Type               |
-| ------------- | ------------------------------------------------- | ------------------ |
-| `input`       | Triggers when a tab is selected.                  | `CustomEvent<any>` |
-| `newTab`      | Triggers when the new tab button is selected.     | `CustomEvent<any>` |
-| `sortChanged` | Triggers when the sorting of the tabs is changed. | `CustomEvent<any>` |
+| Event         | Description                                       | Type                    |
+| ------------- | ------------------------------------------------- | ----------------------- |
+| `input`       | Triggers when a tab is selected.                  | `CustomEvent<any>`      |
+| `newTab`      | Triggers when the new tab button is selected.     | `CustomEvent<any>`      |
+| `sortChanged` | Triggers when the sorting of the tabs is changed. | `CustomEvent<string[]>` |
 
 
 ## Dependencies
