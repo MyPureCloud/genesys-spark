@@ -67,7 +67,7 @@ export class GuxCommandPalette {
   render() {
     return (
       <div
-        class={`gux-command-palette ${this.visible ? '' : 'hidden'}`}
+        class={`gux-command-palette ${this.visible ? '' : 'gux-hidden'}`}
         role="dialog"
         onKeyDown={e => this.onKeyDown(e)}
         aria-label={this.i18n('title')}
@@ -113,7 +113,7 @@ export class GuxCommandPalette {
       ];
 
       if (filterExceeded) {
-        filterList.unshift(<div class="limit">{this.i18n('limited')}</div>);
+        filterList.unshift(<div class="gux-limit">{this.i18n('limited')}</div>);
       }
 
       if (filteredItems.length !== 1 && commonItems.length) {
@@ -196,15 +196,15 @@ export class GuxCommandPalette {
       <gux-list-item
         value={command.text}
         onPress={this.handlePress(command)}
-        class={(command.details && 'has-details') || ''}
+        class={(command.details && 'gux-has-details') || ''}
       >
         <div>
           <gux-text-highlight text={command.text} strategy="fuzzy" />
-          <span class="shortcut">{command.shortcut}</span>
+          <span class="gux-shortcut">{command.shortcut}</span>
         </div>
         {command.details && (
           <gux-text-highlight
-            class="details"
+            class="gux-details"
             text={command.details}
             strategy="fuzzy"
           />
@@ -220,12 +220,12 @@ export class GuxCommandPalette {
       <gux-list-item
         value={command.text}
         onPress={this.handlePress(command)}
-        class={(command.details && 'has-details') || ''}
+        class={(command.details && 'gux-has-details') || ''}
       >
         <gux-text-highlight text={command.text} strategy="fuzzy" />
         {command.details && (
           <gux-text-highlight
-            class="details"
+            class="gux-details"
             text={command.details}
             strategy="fuzzy"
           />

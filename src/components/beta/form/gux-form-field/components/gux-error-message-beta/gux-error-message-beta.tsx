@@ -10,11 +10,11 @@ import { Component, h } from '@stencil/core';
 export class GuxErrorMessageBeta {
   render() {
     return (
-      <div class="container">
-        <div class="icon">
+      <div class="gux-container">
+        <div class="gux-icon">
           <gux-icon icon-name="ic-error-bold" decorative></gux-icon>
         </div>
-        <div class="message">
+        <div class="gux-message">
           <slot slot="error" />
         </div>
       </div>

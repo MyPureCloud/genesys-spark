@@ -11,13 +11,13 @@
 @track-radius: 0;
 @contrast: 5%;
 
-.track() {
+.gux-track() {
   width: @track-width;
   height: @track-height;
   cursor: pointer;
 }
 
-.thumb() {
+.gux-thumb() {
   height: @thumb-diameter;
   width: @thumb-diameter;
   border-radius: 100%;
@@ -26,7 +26,7 @@
 }
 
 gux-input-range-beta {
-  .container {
+  .gux-container {
     align-content: stretch;
     align-items: center;
     display: flex;
@@ -34,23 +34,23 @@ gux-input-range-beta {
     flex-wrap: nowrap;
     justify-content: flex-start;
 
-    &.disabled {
+    &.gux-disabled {
       opacity: 0.5;
       pointer-events: none;
     }
 
-    .range {
+    .gux-range {
       align-self: center;
       flex: 1 1 auto;
       order: 0;
       padding-top: 4px;
 
-      .track {
+      .gux-track {
         width: 100%;
         height: @track-height;
         margin: 6px 0;
 
-        .progress {
+        .gux-progress {
           height: @track-height;
         }
       }
@@ -69,13 +69,13 @@ gux-input-range-beta {
         }
 
         &::-webkit-slider-runnable-track {
-          .track();
+          .gux-track();
 
           background: transparent;
         }
 
         &::-webkit-slider-thumb {
-          .thumb();
+          .gux-thumb();
 
           -webkit-appearance: none;
           margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
@@ -86,19 +86,19 @@ gux-input-range-beta {
         }
 
         &::-moz-range-track {
-          .track();
+          .gux-track();
 
           background: transparent;
         }
 
         &::-moz-range-thumb {
-          .thumb();
+          .gux-thumb();
 
           margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
         }
 
         &::-ms-track {
-          .track();
+          .gux-track();
 
           background: transparent;
           border-color: transparent;
@@ -115,7 +115,7 @@ gux-input-range-beta {
         }
 
         &::-ms-thumb {
-          .thumb();
+          .gux-thumb();
         }
 
         &:focus::-ms-fill-lower {
@@ -127,7 +127,7 @@ gux-input-range-beta {
         }
       }
 
-      &.active {
+      &.gux-active {
         input[type='range'] {
           &::-webkit-slider-thumb {
             transform: scale(1.5);
@@ -144,7 +144,7 @@ gux-input-range-beta {
       }
     }
 
-    .display {
+    .gux-display {
       align-self: auto;
       flex: 0 1 auto;
       height: 32px;
@@ -161,12 +161,12 @@ gux-input-range-beta {
 // Theming
 // Light
 .gux-input-range-light-theme {
-  .container {
-    .range {
-      .track {
+  .gux-container {
+    .gux-range {
+      .gux-track {
         background-color: @range-inactive;
 
-        .progress {
+        .gux-progress {
           background-color: @range-active;
         }
       }
@@ -189,10 +189,10 @@ gux-input-range-beta {
       }
     }
 
-    .display {
+    .gux-display {
       border: 1px solid @range-inactive;
 
-      &.active {
+      &.gux-active {
         border-color: @range-active;
       }
     }
@@ -211,12 +211,12 @@ gux-input-range-beta.gux-light-theme {
 
 // Dark
 .gux-input-range-dark-theme {
-  .container {
-    .range {
-      .track {
+  .gux-container {
+    .gux-range {
+      .gux-track {
         background-color: @range-inactive-dark;
 
-        .progress {
+        .gux-progress {
           background-color: @range-active-dark;
         }
       }
@@ -239,12 +239,12 @@ gux-input-range-beta.gux-light-theme {
       }
     }
 
-    .display {
+    .gux-display {
       border: 1px solid @range-inactive-dark;
       background-color: @range-inactive-dark;
       color: @gux-type;
 
-      &.active {
+      &.gux-active {
         border-color: @range-active-dark;
       }
     }

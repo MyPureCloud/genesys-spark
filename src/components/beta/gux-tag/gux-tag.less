@@ -87,32 +87,32 @@ gux-tag-beta {
       display: flex;
     }
 
-    .show-delete-button {
+    .gux-show-delete-button {
       width: 24px;
       .gux-tag-delete-icon {
         opacity: 1;
       }
     }
-    .active-text-element {
+    .gux-active-text-element {
       border-radius: @border-radius 0 0 @border-radius;
     }
 
     &:hover {
       .gux-tag-text {
-        .active-text-element();
+        .gux-active-text-element();
       }
       .gux-tag-delete-button {
-        .show-delete-button();
+        .gux-show-delete-button();
       }
     }
     .gux-tag-text:focus {
-      .active-text-element();
+      .gux-active-text-element();
     }
     .gux-tag-delete-button:focus {
-      .show-delete-button();
+      .gux-show-delete-button();
     }
     .gux-tag-text:focus ~ .gux-tag-delete-button {
-      .show-delete-button();
+      .gux-show-delete-button();
     }
   }
 }
