@@ -64,7 +64,10 @@ export class GuxInputColorBeta {
       <section>
         <button
           type="button"
-          class={`gux-input-color-main-element${this.opened ? ' opened' : ''}`}
+          class={{
+            'gux-input-color-main-element': true,
+            'gux-opened': this.opened
+          }}
           disabled={this.disabled}
           onClick={this.clickHandler.bind(this)}
         >
@@ -76,7 +79,10 @@ export class GuxInputColorBeta {
           <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
         </button>
         <gux-input-color-select-beta
-          class={`gux-input-color-color-select${this.opened ? ' opened' : ''}`}
+          class={{
+            'gux-input-color-color-select': true,
+            'gux-opened': this.opened
+          }}
         >
           <slot name="input" slot="input" />
         </gux-input-color-select-beta>

@@ -24,28 +24,28 @@ describe('gux-side-panel', () => {
         component.position = 'left';
         component.isOpen = false;
 
-        expect(component.containerClass).toEqual('left closed');
+        expect(component.containerClass).toEqual('gux-left gux-closed');
       });
 
       it('should return the correct class for closed, right, panels', () => {
         component.position = 'right';
         component.isOpen = false;
 
-        expect(component.containerClass).toEqual('right closed');
+        expect(component.containerClass).toEqual('gux-right gux-closed');
       });
 
       it('should return the correct class for open, left, panels', () => {
         component.position = 'left';
         component.isOpen = true;
 
-        expect(component.containerClass).toEqual('left open');
+        expect(component.containerClass).toEqual('gux-left gux-open');
       });
 
       it('should return the correct class for open, right, panels', () => {
         component.position = 'right';
         component.isOpen = true;
 
-        expect(component.containerClass).toEqual('right open');
+        expect(component.containerClass).toEqual('gux-right gux-open');
       });
     });
 
@@ -53,13 +53,13 @@ describe('gux-side-panel', () => {
       it('should return the correct class for an open panel', () => {
         component.isOpen = false;
 
-        expect(component.contentClass).toEqual('panel-content closed');
+        expect(component.contentClass).toEqual('gux-panel-content gux-closed');
       });
 
       it('should return the correct class for closed, right, panels', () => {
         component.isOpen = true;
 
-        expect(component.contentClass).toEqual('panel-content open');
+        expect(component.contentClass).toEqual('gux-panel-content gux-open');
       });
     });
   });

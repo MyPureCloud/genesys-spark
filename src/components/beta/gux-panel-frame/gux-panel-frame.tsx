@@ -41,7 +41,7 @@ export class GuxPanelFrame {
 
   render() {
     return (
-      <div class="panel-container">
+      <div class="gux-panel-container">
         {this.hasHeader && (
           <div class="gux-panel-header">
             <slot name="header" />

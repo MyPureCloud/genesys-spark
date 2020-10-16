@@ -15,8 +15,8 @@ export class GuxRadialLoading {
 
   render(): JSX.Element {
     return (
-      <div class={`spinner-container ${this.context}`} aria-busy="true">
-        <div class="spin-circle" />
+      <div class={`gux-spinner-container gux-${this.context}`} aria-busy="true">
+        <div class="gux-spin-circle" />
       </div>
     );
   }

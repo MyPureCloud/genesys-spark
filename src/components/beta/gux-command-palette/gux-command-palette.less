@@ -18,12 +18,12 @@ gux-command-palette-beta .gux-command-palette {
   max-width: 750px;
   padding: 12px;
 
-  &.hidden {
+  &.gux-hidden {
     display: none;
     top: 0;
   }
 
-  &:not(.hidden) {
+  &:not(.gux-hidden) {
     top: 40px;
     animation-name: fadeIn;
     animation-iteration-count: 1;
@@ -44,7 +44,7 @@ gux-command-palette-beta .gux-command-palette {
     }
   }
 
-  .limit {
+  .gux-limit {
     margin-bottom: 8px;
   }
 
@@ -63,19 +63,19 @@ gux-command-palette-beta .gux-command-palette {
     margin-bottom: 0;
   }
 
-  gux-list gux-list-item.has-details {
-    .list-item {
+  gux-list gux-list-item.gux-has-details {
+    .gux-list-item {
       line-height: 16px;
     }
   }
 
   gux-list gux-list-item {
-    .list-item {
+    .gux-list-item {
       display: block;
       line-height: 32px;
 
       gux-text-highlight,
-      .shortcut {
+      .gux-shortcut {
         display: block;
       }
 
@@ -89,7 +89,7 @@ gux-command-palette-beta .gux-command-palette {
           flex: 1 1 auto;
         }
 
-        .shortcut {
+        .gux-shortcut {
           flex: 0 1 auto;
         }
       }
@@ -98,14 +98,14 @@ gux-command-palette-beta .gux-command-palette {
         margin-bottom: 8px;
       }
 
-      .details {
+      .gux-details {
         font-size: 11px;
         margin-left: 4px;
       }
     }
 
     &:last-of-type {
-      .details,
+      .gux-details,
       div:last-child {
         margin-bottom: 0;
       }
@@ -124,17 +124,17 @@ gux-command-palette-beta .gux-command-palette {
     gux-list gux-list-item:focus,
     gux-list gux-list-item:active,
     gux-list gux-list-item:hover {
-      .list-item div {
+      .gux-list-item div {
         background: @gux-genesys-dark-blue;
         color: @gux-type-dark;
       }
 
-      .list-item .details {
+      .gux-list-item .gux-details {
         color: @gux-type-dark;
       }
     }
 
-    gux-list gux-list-item .list-item .details {
+    gux-list gux-list-item .gux-list-item .gux-details {
       color: @palette-details-color;
     }
   }
@@ -159,17 +159,17 @@ gux-command-palette-beta.gux-dark-theme {
     gux-list gux-list-item:focus,
     gux-list gux-list-item:active,
     gux-list gux-list-item:hover {
-      .list-item div {
+      .gux-list-item div {
         background: @gux-genesys-dark-blue;
         color: @gux-type-dark;
       }
 
-      .list-item .details {
+      .gux-list-item .gux-details {
         color: @gux-type-dark;
       }
     }
 
-    gux-list gux-list-item .list-item .details {
+    gux-list gux-list-item .gux-list-item .gux-details {
       color: @palette-details-color;
     }
   }

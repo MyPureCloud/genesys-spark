@@ -140,7 +140,7 @@ export class GuxSearch {
   private getClassList(): string {
     let classList = [];
     if (this.disabled) {
-      classList = [...classList, 'disabled'];
+      classList = [...classList, 'gux-disabled'];
     }
     return classList.join(' ');
   }

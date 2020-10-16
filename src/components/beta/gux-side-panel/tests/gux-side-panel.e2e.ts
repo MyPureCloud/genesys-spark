@@ -23,7 +23,7 @@ describe('gux-side-panel', () => {
         </div>
       </gux-side-panel-beta>`);
     const component = await page.find('gux-side-panel-beta');
-    const contentElement = await page.find('div.panel-content');
+    const contentElement = await page.find('div.gux-panel-content');
 
     component.setProperty('position', 'right');
     component.setProperty('isOpen', true);
@@ -46,7 +46,7 @@ describe('gux-side-panel', () => {
         </div>
       </gux-side-panel-beta>`);
     const component = await page.find('gux-side-panel-beta');
-    const contentElement = await page.find('div.panel-content');
+    const contentElement = await page.find('div.gux-panel-content');
 
     component.setProperty('position', 'right');
     component.setProperty('isOpen', false);

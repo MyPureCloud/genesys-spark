@@ -12,17 +12,17 @@ export class GuxSidePanel {
   position: 'left' | 'right' = 'left';
 
   get containerClass(): string {
-    return `${this.position} ${this.isOpen ? 'open' : 'closed'}`;
+    return `gux-${this.position} gux-${this.isOpen ? 'open' : 'closed'}`;
   }
 
   get contentClass(): string {
-    return `panel-content ${this.isOpen ? 'open' : 'closed'}`;
+    return `gux-panel-content gux-${this.isOpen ? 'open' : 'closed'}`;
   }
 
   render() {
     return (
       <aside class={this.containerClass}>
-        <div class="panel-icons">
+        <div class="gux-panel-icons">
           <slot name="side-panel-icons" />
         </div>
         <div class={this.contentClass}>

@@ -53,14 +53,14 @@ export class GuxFormFieldBeta {
 
   private getInputColor(): JSX.Element {
     return (
-      <div class="label-and-input-and-error-container">
-        <div class={'label-and-input-container ' + this.labelPosition}>
+      <div class="gux-label-and-input-and-error-container">
+        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <slot name="label" slot="label" />
           <gux-input-color-beta>
             <slot name="input" />
           </gux-input-color-beta>
         </div>
-        <div class="error">
+        <div class="gux-error">
           <slot name="error" />
         </div>
       </div>
@@ -69,14 +69,14 @@ export class GuxFormFieldBeta {
 
   private getInputRange(): JSX.Element {
     return (
-      <div class="label-and-input-and-error-container">
-        <div class={'label-and-input-container ' + this.labelPosition}>
+      <div class="guxlabel-and-input-and-error-container">
+        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <slot name="label" slot="label" />
           <gux-input-range-beta>
             <slot name="input" />
           </gux-input-range-beta>
         </div>
-        <div class="error">
+        <div class="gux-error">
           <slot name="error" />
         </div>
       </div>
@@ -85,14 +85,14 @@ export class GuxFormFieldBeta {
 
   private getInputTextLike(): JSX.Element {
     return (
-      <div class="label-and-input-and-error-container">
-        <div class={'label-and-input-container ' + this.labelPosition}>
+      <div class="gux-label-and-input-and-error-container">
+        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <slot name="label" slot="label" />
           <gux-input-text-like-beta slot="input">
             <slot name="input" />
           </gux-input-text-like-beta>
         </div>
-        <div class="error">
+        <div class="gux-error">
           <slot name="error" />
         </div>
       </div>
