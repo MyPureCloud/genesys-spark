@@ -29,8 +29,7 @@
       "filter": "Filter value changed"
     }
   },
-  "gux-breadcrumbs": {},
-  "gux-breadcrumbs-beta": {
+  "gux-breadcrumbs": {
     "hidePage": true,
     "attributes": {
       "accent": ["primary", "secondary"]
@@ -286,8 +285,7 @@
       "icon-name": "text"
     }
   },
-  "gux-tag": {},
-  "gux-tag-beta": {
+  "gux-tag": {
     "hidePage": true,
     "attributes": {
       "color": [
@@ -343,14 +341,13 @@
     },
     "events": { "check": "toggle state changed" }
   },
-  "gux-tooltip": {},
-  "gux-tooltip-beta": {
+  "gux-tooltip": {
     "hidePage": true,
     "attributes": {
       "for": "text"
     }
   },
-  "gux-form-field-beta": {
+  "gux-form-field": {
     "attributes": {},
     "events": {
       "change": "Standard Event",
@@ -359,7 +356,7 @@
       "submit": "Standard Event"
     }
   },
-  "gux-table-beta": {
+  "gux-table": {
     "attributes": {
       "compact": "checkbox",
       "object-table": "checkbox",

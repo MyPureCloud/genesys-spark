@@ -1,4 +1,4 @@
-import COMPONENT_SPEC from '../../components-spec.json';
+import { getComponentSpec } from '../../component-spec.js';
 import { createAttributeGroup } from '../components/attribute-group';
 import { emptyElement } from '../../utils/empty-element.js';
 
@@ -25,7 +25,7 @@ export default class AttributesPanel {
         queue = [...current.childNodes, ...queue];
       }
 
-      if (COMPONENT_SPEC[current.nodeName]) {
+      if (getComponentSpec(current.nodeName)) {
         createAttributeGroup(this.panel, current, () => this.renderHook(root));
       }
     }

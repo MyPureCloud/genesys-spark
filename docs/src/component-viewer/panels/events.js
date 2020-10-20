@@ -1,4 +1,4 @@
-import COMPONENT_SPEC from '../../components-spec.json';
+import { getComponentSpec } from '../../component-spec.js';
 import { emptyElement } from '../../utils/empty-element';
 import { toHTML } from '../../utils/to-html.js';
 
@@ -23,7 +23,8 @@ export default class EventsPanel {
 
     components.forEach(component => {
       let elements = this.targetElement.getElementsByTagName(component);
-      let events = COMPONENT_SPEC[component].events || [];
+      let componentSpec = getComponentSpec(component);
+      let events = componentSpec.events || [];
 
       Object.entries(events).forEach(([name, description]) => {
         descriptionsEl.appendChild(toHTML(`<dt>${component} [${name}]</dt>`));
@@ -67,7 +68,7 @@ export default class EventsPanel {
         queue = [...queue, ...current.childNodes];
       }
 
-      if (COMPONENT_SPEC[current.nodeName]) {
+      if (getComponentSpec(current.nodeName)) {
         components.add(current.nodeName);
       }
     }
