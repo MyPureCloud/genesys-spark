@@ -1,5 +1,5 @@
 import { toHTML } from '../utils/to-html.js';
-import { componentSpecs } from '../component-specs.js';
+import { componentSpecs, getComponentSpec } from '../component-specs.js';
 import 'genesys-webcomponents';
 import '../styles/component-listing.less';
 
@@ -16,10 +16,13 @@ export function bootstrap() {
             <nav>
                 <header>Components</header>
                 ${components
-                  .map(
-                    component =>
-                      `<a href="#${component}">${shortName(component)}</a>`
-                  )
+                  .map(component => {
+                    let name = shortName(component);
+                    if (getComponentSpec(component).beta) {
+                      name += `<sup> 𝜷</sup>`;
+                    }
+                    return `<a href="#${component}">${name}</a>`;
+                  })
                   .join('')}
             </nav>
             <iframe id="componentFrame" />

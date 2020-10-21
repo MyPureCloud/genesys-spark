@@ -26,7 +26,7 @@ changing error-message attribute.
 
 ### Used by
 
- - [gux-form-field-beta](../../../gux-form-field-beta)
+ - [gux-form-field-beta](../..)
 
 ### Graph
 ```mermaid

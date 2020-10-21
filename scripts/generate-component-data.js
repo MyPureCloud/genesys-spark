@@ -45,7 +45,7 @@ function getComponentMetadata(path) {
   let { attributes, events } = parseComponentMarkdown(`${path}/readme.md`);
 
   return {
-    beta: path.endsWith('-beta'),
+    beta: path.includes('/components/beta/'),
     attributes,
     events
   };

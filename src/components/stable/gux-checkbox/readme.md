@@ -46,7 +46,7 @@ This component represents a checkbox with three possible states: `unchecked`, `c
 
 ### Used by
 
- - [gux-row-select](../../beta/gux-table-beta/gux-row-select)
+ - [gux-row-select](../../beta/gux-table/gux-row-select)
 
 ### Graph
 ```mermaid
