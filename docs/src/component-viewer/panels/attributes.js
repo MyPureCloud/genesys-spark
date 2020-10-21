@@ -1,4 +1,4 @@
-import { getComponentSpec } from '../../component-spec.js';
+import { getComponentSpec } from '../../component-specs.js';
 import { createAttributeGroup } from '../components/attribute-group';
 import { emptyElement } from '../../utils/empty-element.js';
 

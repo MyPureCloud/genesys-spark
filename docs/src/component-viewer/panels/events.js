@@ -1,4 +1,4 @@
-import { getComponentSpec } from '../../component-spec.js';
+import { getComponentSpec } from '../../component-specs.js';
 import { emptyElement } from '../../utils/empty-element';
 import { toHTML } from '../../utils/to-html.js';
 

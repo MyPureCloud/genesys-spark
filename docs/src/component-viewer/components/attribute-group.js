@@ -1,5 +1,5 @@
 import { toHTML } from '../../utils/to-html';
-import { getComponentSpec } from '../../component-spec.js';
+import { getComponentSpec } from '../../component-specs.js';
 import { checkboxAttribute } from './checkbox-attribute';
 import { selectAttribute } from './select-attribute';
 import { textAttribute } from './text-attribute';
