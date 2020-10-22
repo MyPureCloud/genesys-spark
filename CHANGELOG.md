@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](http://inindca///compare/v1.12.2...v1.13.0) (2020-10-22)
+
+
+### Features
+
+* **context-search:** context Search Beta ([#100](http://inindca//undefined/issues/100)) ([9b3267f](http://inindca///commit/9b3267fa5b40fdd80fd726997279b1600f6b2db4))
+
 ### [1.12.2](http://inindca///compare/v1.12.1...v1.12.2) (2020-10-16)
 
 ### [1.12.1](http://inindca///compare/v1.12.0...v1.12.1) (2020-10-15)
