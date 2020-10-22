@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
 
-import onDisabledChange from '../../../utils/on-disabled-change/on-disabled-change';
+import onDisabledChange from '../../../../../../utils/on-disabled-change/on-disabled-change';
 
 /**
  * @slot input - Required slot for input[type="range"]

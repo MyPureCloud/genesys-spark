@@ -1,0 +1,290 @@
+// Variables part
+@import (reference) '../../../style/shared/text-input.less';
+@import (reference) '../../../style/color.less';
+
+@background-color: @gux-type-dark;
+@text-color: @gux-type;
+@border: #dae1e8;
+@placeholder: #9baaba;
+@icon-color: #98a7b8;
+@icon-hover-color: @gux-charcoal-grey;
+@hair-line-color: @gux-border;
+
+@dark-background-color: @gux-type;
+@dark-text-color: @gux-type-dark;
+@dark-border: @gux-grey-global;
+@dark-placeholder: #9baaba;
+@dark-icon-color: #b1becc;
+@dark-icon-hover-color: @gux-off-white;
+
+@focus-outline: fade(@gux-genesys-blue, 50%);
+@focus-border: @gux-genesys-dark-blue;
+@dark-focus-border: @gux-genesys-blue;
+@dark-focus-outline: @gux-genesys-blue;
+
+gux-context-search-beta {
+  display: inline-block;
+  min-width: 300px;
+
+  gux-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .gux-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .gux-context {
+    margin: 4px 0;
+    display: flex;
+    flex-direction: row;
+    height: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 0 4px 0;
+    background-color: @background-color;
+    background-image: none;
+    border: 1px solid @border;
+    border-radius: 2px;
+
+    &.gux-focused,
+    &:focus,
+    &:focus-within {
+      border: 1px solid @focus-border;
+      outline: none;
+      box-shadow: 0 0 4px @focus-outline;
+    }
+
+    .gux-search-icon {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 8px;
+      padding-right: 4px;
+      display: flex;
+      align-items: center;
+      color: @icon-color;
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    input {
+      .gux-input-style();
+
+      flex-basis: 100%;
+      flex-shrink: 1;
+      border: 0;
+      padding: 0;
+      border-radius: 0;
+      height: 22px;
+
+      &.gux-focused,
+      &:focus {
+        border: 0;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .gux-context-control-panel {
+      flex-grow: 1;
+      line-height: 1.66666667;
+      height: 22px;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      align-content: center;
+
+      button {
+        align-items: center;
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: block;
+        outline: none;
+        overflow: hidden;
+        color: @icon-color;
+        &:disabled {
+          opacity: 0.5;
+          pointer-events: none;
+          cursor: default;
+        }
+        &:not(:disabled):hover,
+        &:not(:disabled):focus {
+          color: @icon-hover-color;
+        }
+      }
+
+      .gux-clear-button {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 0;
+        padding-bottom: 0;
+        align-items: center;
+      }
+
+      .gux-navigation-disabled {
+        opacity: 0.5;
+        pointer-events: auto;
+        cursor: default;
+      }
+
+      .gux-navigation-panel {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+        opacity: 0.5;
+        border-right: 1px solid @hair-line-color;
+
+        .gux-navigation-result {
+          padding-right: 8px;
+          padding-left: 8px;
+          align-items: center;
+          white-space: nowrap;
+          font-size: 12px;
+          font-family: inherit;
+        }
+
+        .gux-previous-button {
+          padding-right: 8px;
+          padding-left: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          align-items: center;
+        }
+
+        .gux-next-button {
+          padding-right: 8px;
+          padding-left: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-context-search-beta-dark-theme {
+  .gux-context {
+    background-color: @dark-background-color;
+    border: 1px solid @dark-border;
+    color: @dark-text-color;
+
+    &.gux-focused,
+    &:focus,
+    &:focus-within {
+      border: 1px solid @dark-focus-border;
+      outline: 3px @dark-focus-outline;
+      box-shadow: none;
+    }
+
+    input {
+      .gux-input-dark-theme();
+
+      border: 0;
+      padding: 0;
+      border-radius: 0;
+      height: 22px;
+
+      &.gux-focused,
+      &:focus {
+        border: 0;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    button {
+      color: @dark-icon-color;
+      &:not([disabled]):hover,
+      &:not([disabled]):focus {
+        color: @dark-icon-hover-color;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.gux-dark-theme {
+  gux-context-search-beta {
+    .gux-context-search-beta-dark-theme();
+  }
+}
+
+gux-context-search-beta.gux-dark-theme {
+  .gux-context-search-beta-dark-theme();
+}
+
+// Light
+.gux-context-search-beta-light-theme {
+  .gux-context {
+    background-color: @background-color;
+    border: 1px solid @border;
+
+    &.gux-focused,
+    &:focus,
+    &:focus-within {
+      border: 1px solid @focus-border;
+      outline: none;
+      box-shadow: 0 0 4px @focus-outline;
+    }
+
+    input {
+      background-color: @background-color;
+      color: @text-color;
+
+      &::placeholder {
+        color: @placeholder;
+      }
+
+      &::-webkit-input-placeholder {
+        color: @placeholder;
+      }
+
+      &::-ms-input-placeholder {
+        color: @placeholder;
+      }
+
+      &::-moz-placeholder {
+        color: @placeholder;
+      }
+
+      &.gux-focused,
+      &:focus {
+        border: 0;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    button {
+      color: @icon-color;
+    }
+  }
+}
+
+.gux-light-theme {
+  gux-context-search-beta {
+    .gux-context-search-beta-light-theme();
+  }
+}
+
+gux-context-search-beta.gux-light-theme {
+  .gux-context-search-beta-light-theme();
+}
+
+// Default Theme
+gux-context-search-beta {
+  .gux-context-search-beta-light-theme();
+}

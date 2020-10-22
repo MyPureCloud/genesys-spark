@@ -85,6 +85,19 @@
     "events": { "input": "Triggered when a color is clicked" }
   },
   "gux-command-palette": {},
+  "gux-context-search": {},
+  "gux-context-search-beta": {
+    "hidePage": true,
+    "attributes": {
+      "disable-navigation": "checkbox",
+      "match-count": "text",
+      "current-match": "text"
+    },
+    "events": {
+      "input": "Standard Event",
+      "guxcurrentmatchchanged": "Triggered when current match is changed"
+    }
+  },
   "gux-datepicker": {
     "attributes": {
       "mode": ["single", "range"],
