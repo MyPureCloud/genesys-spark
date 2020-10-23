@@ -269,13 +269,14 @@ describe('gux-context-search-beta', () => {
       expect(value).toBe('test');
       expect(currentMatch).toBe(1);
       expect(matchCount).toBe(20);
+      expect(inputSpy).toHaveReceivedEventTimes(4);
 
       clearButton.click();
       await page.waitForChanges();
       value = await input.getProperty('value');
       currentMatch = await element.getProperty('currentMatch');
       matchCount = await element.getProperty('matchCount');
-      expect(inputSpy).toHaveReceivedEventTimes(4);
+      expect(inputSpy).toHaveReceivedEventTimes(5);
       expect(guxCurrentMatchChangedSpy).toHaveReceivedEventTimes(1);
       expect(value).toBe('');
       expect(currentMatch).toBe(0);
@@ -317,13 +318,14 @@ describe('gux-context-search-beta', () => {
       expect(value).toBe('test');
       expect(currentMatch).toBe(1);
       expect(matchCount).toBe(20);
+      expect(inputSpy).toHaveReceivedEventTimes(4);
 
       clearButton.click();
       await page.waitForChanges();
       value = await input.getProperty('value');
       currentMatch = await element.getProperty('currentMatch');
       matchCount = await element.getProperty('matchCount');
-      expect(inputSpy).toHaveReceivedEventTimes(4);
+      expect(inputSpy).toHaveReceivedEventTimes(5);
       expect(guxCurrentMatchChangedSpy).toHaveReceivedEventTimes(1);
       expect(value).toBe('');
       expect(currentMatch).toBe(0);

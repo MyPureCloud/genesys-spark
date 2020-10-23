@@ -69,11 +69,11 @@ export class GuxContextSearchBeta {
     if (this.disabled) {
       return;
     }
-    this.value = '';
     this.matchCount = 0;
     this.currentMatch = 0;
-    this.inputSlottedElement.value = '';
+    this.value = '';
     this.emitCurrentMatchChanged();
+    this.resetInputSlottedElement();
   }
 
   async componentWillLoad() {
@@ -211,6 +211,21 @@ export class GuxContextSearchBeta {
     this.currentMatch = this.matchCount > 0 ? 1 : 0;
   }
 
+  private resetInputSlottedElement() {
+    this.inputSlottedElement.value = '';
+    this.inputSlottedElement.dispatchEvent(
+      new InputEvent('input', {
+        bubbles: true,
+        cancelable: true
+      })
+    );
+    this.inputSlottedElement.dispatchEvent(
+      new InputEvent('change', {
+        bubbles: true
+      })
+    );
+  }
+
   private nextClick(): void {
     if (this.disableNavigationPanel()) {
       return;
@@ -240,6 +255,7 @@ export class GuxContextSearchBeta {
       return;
     }
     this.value = event.target.value;
+    this.inputSlottedElement.value = event.target.value;
     this.resetCurrentMatch();
   }
 

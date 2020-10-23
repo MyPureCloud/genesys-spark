@@ -18,7 +18,8 @@
         type="text"
         placeholder="Search"
         value="Default Search Text"
-        oninput="console.log(event.target.value);"
+        oninput="console.log('Test oninput log : '+ event.target.value);"
+        onchange="console.log('Test onchange log : '+ event.target.value);"
       />
     </gux-context-search-beta>
   </div>
