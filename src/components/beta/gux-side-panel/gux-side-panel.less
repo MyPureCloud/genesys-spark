@@ -13,21 +13,21 @@ gux-side-panel-beta {
     position: relative;
     width: 49px;
 
-    &.left {
+    &.gux-left {
       flex-direction: row;
 
-      .panel-content {
+      .gux-panel-content {
         left: 49px;
       }
     }
 
-    &.right {
-      .panel-content {
+    &.gux-right {
+      .gux-panel-content {
         right: 49px;
       }
     }
 
-    .panel-icons {
+    .gux-panel-icons {
       border: 1px solid @gux-border;
 
       gux-side-panel-button {
@@ -36,7 +36,7 @@ gux-side-panel-beta {
       }
     }
 
-    .panel-content {
+    .gux-panel-content {
       position: absolute;
       width: 280px;
       height: 100%;
@@ -45,7 +45,7 @@ gux-side-panel-beta {
         height: 100%;
       }
 
-      &.closed {
+      &.gux-closed {
         display: none;
       }
     }
@@ -61,7 +61,7 @@ gux-side-panel-beta {
   aside {
     background-color: @gux-charcoal-grey;
 
-    .panel-icons {
+    .gux-panel-icons {
       border-color: @gux-grey-global;
     }
   }

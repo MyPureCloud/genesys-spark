@@ -230,7 +230,7 @@ describe('gux-command-palette', () => {
     await search.press('KeyT');
     await page.waitForChanges();
 
-    const limit = await page.find('.limit');
+    const limit = await page.find('.gux-limit');
 
     expect(limit.innerText).toBe(
       'Results limited, refine your search for more commands.'

@@ -24,6 +24,7 @@
  - [gux-breadcrumb-item](../../beta/gux-breadcrumbs/breadcrumb-item)
  - [gux-calendar](../gux-calendar)
  - [gux-color-picker](../gux-color-picker)
+ - [gux-context-search-beta](../../beta/gux-context-search)
  - [gux-datepicker](../gux-datepicker)
  - [gux-disclosure-button](../gux-disclosure-button)
  - [gux-dropdown](../gux-dropdown)
@@ -53,6 +54,7 @@ graph TD;
   gux-breadcrumb-item --> gux-icon
   gux-calendar --> gux-icon
   gux-color-picker --> gux-icon
+  gux-context-search-beta --> gux-icon
   gux-datepicker --> gux-icon
   gux-disclosure-button --> gux-icon
   gux-dropdown --> gux-icon

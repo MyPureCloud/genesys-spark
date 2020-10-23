@@ -1,1 +1,1 @@
-export type GuxModalSize = 'small' | 'medium' | 'large';
+export type GuxModalSize = 'small' | 'medium' | 'large' | 'dynamic';

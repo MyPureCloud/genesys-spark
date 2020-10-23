@@ -4,18 +4,22 @@ import {
   Event,
   EventEmitter,
   h,
+  Listen,
   Prop,
   readTask,
   State,
+  Watch,
   writeTask
 } from '@stencil/core';
 import Sortable, { MoveEvent } from 'sortablejs';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import tabsResources from './i18n/en.json';
+import { whenEventIsFrom } from '../../../common-utils';
 
 @Component({
   styleUrl: 'gux-tabs.less',
-  tag: 'gux-tabs-beta'
+  tag: 'gux-tabs-beta',
+  shadow: true
 })
 export class GuxTabs {
   /**
@@ -46,7 +50,7 @@ export class GuxTabs {
   /**
    * Triggers when the sorting of the tabs is changed.
    */
-  @Event() sortChanged: EventEmitter;
+  @Event() sortChanged: EventEmitter<string[]>;
 
   @Element() private element: HTMLElement;
 
@@ -58,20 +62,43 @@ export class GuxTabs {
 
   private resizeObserver?: ResizeObserver;
 
-  createSortable() {
-    this.sortableInstance = new Sortable(
-      this.element.querySelector('.scrollable-section'),
-      {
-        animation: 250,
-        filter: '.ignore-sort',
-        onMove: (event: MoveEvent) => {
-          return !event.related.classList.contains('ignore-sort');
-        },
-        onUpdate: () => {
-          this.sortChanged.emit();
-        }
-      }
+  @Watch('value')
+  watchHandler(newValue: string) {
+    const tabs: HTMLGuxTabElement[] = Array.from(
+      this.element.querySelectorAll('gux-tab')
     );
+
+    for (const tab of tabs) {
+      tab.active = tab.tabId === newValue;
+    }
+  }
+
+  @Listen('click')
+  clickHandler(e: MouseEvent) {
+    whenEventIsFrom('gux-tab', e, elem => {
+      const tab = elem as HTMLGuxTabElement;
+      if (!tab.active) {
+        this.value = tab.tabId;
+        this.input.emit();
+      }
+    });
+  }
+
+  createSortable() {
+    this.sortableInstance = new Sortable(this.element, {
+      animation: 250,
+      draggable: 'gux-tab',
+      filter: '.ignore-sort',
+      onMove: (event: MoveEvent) => {
+        return !event.related.classList.contains('ignore-sort');
+      },
+      onUpdate: () => {
+        const tabIds = Array.from(this.element.querySelectorAll('gux-tab')).map(
+          tabElement => tabElement.tabId
+        );
+        this.sortChanged.emit(tabIds);
+      }
+    });
   }
 
   destroySortable() {
@@ -87,7 +114,9 @@ export class GuxTabs {
     }
 
     if (this.resizeObserver) {
-      this.resizeObserver.unobserve(this.element.querySelector('.gux-tabs'));
+      this.resizeObserver.unobserve(
+        this.element.shadowRoot.querySelector('.gux-tabs')
+      );
     }
   }
 
@@ -103,46 +132,37 @@ export class GuxTabs {
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() => {
         readTask(() => {
-          const el = this.element.querySelector('.scrollable-section');
+          const el = this.element.shadowRoot.querySelector(
+            '.scrollable-section'
+          );
           this.hasScrollbar = el.clientWidth !== el.scrollWidth;
         });
       });
     }
 
     if (this.resizeObserver) {
-      this.resizeObserver.observe(this.element.querySelector('.gux-tabs'));
+      this.resizeObserver.observe(
+        this.element.shadowRoot.querySelector('.gux-tabs')
+      );
     }
-
-    const tabElements = this.element.querySelectorAll('gux-tab');
-    tabElements.forEach(tab => {
-      if (this.value && this.value === (tab as HTMLGuxTabElement).tabId) {
-        (tab as HTMLGuxTabElement).active = true;
-      }
-
-      tab.addEventListener('click', () => {
-        if ((tab as HTMLGuxTabElement).active) {
-          return;
-        }
-
-        tabElements.forEach(t => {
-          (t as HTMLGuxTabElement).active = false;
-        });
-
-        (tab as HTMLGuxTabElement).active = true;
-
-        this.input.emit();
-        this.value = (tab as HTMLGuxTabElement).tabId;
-      });
-    });
   }
 
   componentDidRender() {
     setTimeout(() => {
       readTask(() => {
-        const el = this.element.querySelector('.scrollable-section');
+        const el = this.element.shadowRoot.querySelector('.scrollable-section');
         const hasScrollbar = el.clientWidth !== el.scrollWidth;
         if (this.hasScrollbar !== hasScrollbar) {
           this.hasScrollbar = hasScrollbar;
+        }
+
+        if (this.value) {
+          const activeTab: any = this.element.querySelector(
+            `gux-tab[tab-id='${this.value}']`
+          );
+          if (activeTab) {
+            activeTab.active = true;
+          }
         }
       });
     }, 500);
@@ -150,13 +170,17 @@ export class GuxTabs {
 
   scrollLeft() {
     writeTask(() => {
-      this.element.querySelector('.scrollable-section').scrollBy(-100, 0);
+      this.element.shadowRoot
+        .querySelector('.scrollable-section')
+        .scrollBy(-100, 0);
     });
   }
 
   scrollRight() {
     writeTask(() => {
-      this.element.querySelector('.scrollable-section').scrollBy(100, 0);
+      this.element.shadowRoot
+        .querySelector('.scrollable-section')
+        .scrollBy(100, 0);
     });
   }
 

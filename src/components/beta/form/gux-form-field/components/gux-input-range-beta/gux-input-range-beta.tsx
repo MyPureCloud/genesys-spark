@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
 
-import onDisabledChange from '../../../utils/on-disabled-change/on-disabled-change';
+import onDisabledChange from '../../../../../../utils/on-disabled-change/on-disabled-change';
 
 /**
  * @slot input - Required slot for input[type="range"]
@@ -72,14 +72,32 @@ export class GuxInputRangeBeta {
 
   render(): JSX.Element {
     return (
-      <div class={this.disabled ? 'container disabled' : 'container'}>
-        <div class={this.active ? 'range active' : 'range'}>
-          <div class="track">
-            <div class="progress" ref={el => (this.progressElement = el)}></div>
+      <div
+        class={{
+          'gux-container': true,
+          'gux-disabled': this.disabled
+        }}
+      >
+        <div
+          class={{
+            'gux-range': true,
+            'gux-active': this.active
+          }}
+        >
+          <div class="gux-track">
+            <div
+              class="gux-progress"
+              ref={el => (this.progressElement = el)}
+            ></div>
           </div>
           <slot name="input" />
         </div>
-        <div class={this.active ? 'display active' : 'display'}>
+        <div
+          class={{
+            'gux-display': true,
+            'gux-active': this.active
+          }}
+        >
           {this.value}
         </div>
       </div>

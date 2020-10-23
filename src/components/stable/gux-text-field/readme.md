@@ -16,20 +16,20 @@ changing error-message attribute.
 
 ## Properties
 
-| Property           | Attribute            | Description                                                                               | Type                                          | Default       |
-| ------------------ | -------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------- | ------------- |
-| `debounceTimeout`  | `debounce-timeout`   | Timeout between input and validation.                                                     | `number`                                      | `500`         |
-| `disabled`         | `disabled`           | Disable the input and prevent interactions.                                               | `boolean`                                     | `false`       |
-| `eraseLabel`       | `erase-label`        | The label for the erase button                                                            | `string`                                      | `''`          |
-| `errorMessage`     | `error-message`      | The message displayed on validation failure.                                              | `string`                                      | `''`          |
-| `errorMessageType` | `error-message-type` | The message type (warning or error)                                                       | `"error" \| "warning"`                        | `Types.Error` |
-| `placeholder`      | `placeholder`        | The input placeholder.                                                                    | `string`                                      | `undefined`   |
-| `readonly`         | `readonly`           | Set the input in readonly mode                                                            | `boolean`                                     | `false`       |
-| `srLabel`          | `sr-label`           | Aria label to use in case the text field does not have an actual label.                   | `string`                                      | `undefined`   |
-| `type`             | `type`               | Indicate the input type                                                                   | `"email" \| "number" \| "password" \| "text"` | `'text'`      |
-| `useClearButton`   | `use-clear-button`   | Determines whether or not the 'x' clear button is displayed when the input contains text. | `boolean`                                     | `true`        |
-| `validation`       | `validation`         | The input validation.                                                                     | `any`                                         | `null`        |
-| `value`            | `value`              | Indicate the input value                                                                  | `string`                                      | `''`          |
+| Property           | Attribute            | Description                                                                               | Type                                                 | Default                  |
+| ------------------ | -------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------ |
+| `debounceTimeout`  | `debounce-timeout`   | Timeout between input and validation.                                                     | `number`                                             | `500`                    |
+| `disabled`         | `disabled`           | Disable the input and prevent interactions.                                               | `boolean`                                            | `false`                  |
+| `eraseLabel`       | `erase-label`        | The label for the erase button                                                            | `string`                                             | `''`                     |
+| `errorMessage`     | `error-message`      | The message displayed on validation failure.                                              | `string`                                             | `''`                     |
+| `errorMessageType` | `error-message-type` | The message type (warning or error)                                                       | `ErrorMessageType.Error \| ErrorMessageType.Warning` | `ErrorMessageType.Error` |
+| `placeholder`      | `placeholder`        | The input placeholder.                                                                    | `string`                                             | `undefined`              |
+| `readonly`         | `readonly`           | Set the input in readonly mode                                                            | `boolean`                                            | `false`                  |
+| `srLabel`          | `sr-label`           | Aria label to use in case the text field does not have an actual label.                   | `string`                                             | `undefined`              |
+| `type`             | `type`               | Indicate the input type                                                                   | `"email" \| "number" \| "password" \| "text"`        | `'text'`                 |
+| `useClearButton`   | `use-clear-button`   | Determines whether or not the 'x' clear button is displayed when the input contains text. | `boolean`                                            | `true`                   |
+| `validation`       | `validation`         | The input validation.                                                                     | `any`                                                | `null`                   |
+| `value`            | `value`              | Indicate the input value                                                                  | `string`                                             | `''`                     |
 
 
 ## Events

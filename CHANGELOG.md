@@ -2,6 +2,69 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](http://inindca///compare/v1.12.2...v1.13.0) (2020-10-22)
+
+
+### Features
+
+* **context-search:** context Search Beta ([#100](http://inindca//undefined/issues/100)) ([9b3267f](http://inindca///commit/9b3267fa5b40fdd80fd726997279b1600f6b2db4))
+
+### [1.12.2](http://inindca///compare/v1.12.1...v1.12.2) (2020-10-16)
+
+### [1.12.1](http://inindca///compare/v1.12.0...v1.12.1) (2020-10-15)
+
+
+### Bug Fixes
+
+* **gux-tabs:** address pr comments ([0e47c8f](http://inindca///commit/0e47c8f450be8702ed837321d9c7143adc940fcb))
+* **gux-tabs:** address pr comments ([efe9a5b](http://inindca///commit/efe9a5b4ccbc4f9e5744de9e47bb209a08d5d77d))
+* **gux-tabs:** cleaner click handling for gux-tabs ([604c4b8](http://inindca///commit/604c4b8d23a3b40c44336f95b9a39bd562496112))
+* **gux-tabs:** convert gux-tabs to shadow dom component ([4d5522d](http://inindca///commit/4d5522d2105a25218f36c04967b1e0e1af218b10))
+* **gux-tabs:** convert gux-tabs to shadow dom component ([87f6823](http://inindca///commit/87f6823b9fc2386b434267519e6f891519befada))
+* **gux-tabs:** fix conflict ([1d6b5bd](http://inindca///commit/1d6b5bde9970c0598160f472f0bb0609da6cfb04))
+* **gux-tabs:** fix less variable name ([931d019](http://inindca///commit/931d01938dc96d4b3789b108451c505a5df27f9e))
+* **gux-tabs:** improve value handling in gux-tabs ([590e7fe](http://inindca///commit/590e7fead7fa5a1291f6acf9d2fa3edecc7823da))
+* **gux-tabs:** improve value handling in gux-tabs ([02475e7](http://inindca///commit/02475e756b34adaeffca6d91a7ea435c1ccb6b0f))
+* **gux-tabs:** merge conflicts ([a8901be](http://inindca///commit/a8901bed8ce9a927a95504f12c6dba8aeaaa091c))
+
+## [1.12.0](http://inindca///compare/v1.10.0...v1.12.0) (2020-10-14)
+
+
+### Features
+
+* **gux-table:** row selection implementation … ([9dec552](http://inindca///commit/9dec5524263c99e78f96293db9a4f4d397d92c56))
+* **modal:** add dynamic modal size ([f4b2dec](http://inindca///commit/f4b2decdac791d5b0e6f7b2f231772a63ab6e8e4))
+
+
+### Bug Fixes
+
+* **gux-breadcrumbs:** adding Link Back in Primary Breadcrumb ([bcb1458](http://inindca///commit/bcb14580e2f44251212d09dfaf4605abcb3c270b))
+* **modal:** ensure modal always coveres the full viewport ([ce661ed](http://inindca///commit/ce661ed9a1aab0c403d9f13b800c0574751c9c80))
+
+## [1.11.0](http://inindca///compare/v1.10.0...v1.11.0) (2020-10-13)
+
+
+### Features
+
+* **modal:** add dynamic modal size ([f4b2dec](http://inindca///commit/f4b2decdac791d5b0e6f7b2f231772a63ab6e8e4))
+
+
+### Bug Fixes
+
+* **modal:** ensure modal always coveres the full viewport ([ce661ed](http://inindca///commit/ce661ed9a1aab0c403d9f13b800c0574751c9c80))
+
+## [1.10.0](http://inindca///compare/v1.9.4...v1.10.0) (2020-10-13)
+
+
+### Features
+
+* **tag:** add tag component ([a2f9b6a](http://inindca///commit/a2f9b6a9b92ce6f39fb28c1d5f5c05b9fceaf101)), closes [#21](http://inindca///issues/21)
+
+
+### Bug Fixes
+
+* **enum:** export const enums ([4e38aa8](http://inindca///commit/4e38aa8b8fa53d14e60ed41fd788d3af3fc5e7a7))
+
 ### [1.9.4](http://inindca///compare/v1.9.3...v1.9.4) (2020-10-08)
 
 ### [1.9.3](http://inindca///compare/v1.9.2...v1.9.3) (2020-10-07)

@@ -85,6 +85,19 @@
     "events": { "input": "Triggered when a color is clicked" }
   },
   "gux-command-palette": {},
+  "gux-context-search": {},
+  "gux-context-search-beta": {
+    "hidePage": true,
+    "attributes": {
+      "disable-navigation": "checkbox",
+      "match-count": "text",
+      "current-match": "text"
+    },
+    "events": {
+      "input": "Standard Event",
+      "guxcurrentmatchchanged": "Triggered when current match is changed"
+    }
+  },
   "gux-datepicker": {
     "attributes": {
       "mode": ["single", "range"],
@@ -354,7 +367,8 @@
       "resizable-columns": "checkbox"
     },
     "events": {
-      "sortChanged": "Fired when sorting of the table column is changed"
+      "guxselectionchanged": "Fired when table row was selected/unselected",
+      "guxsortchanged": "Fired when sorting of the table column is changed"
     }
   },
   "typography": {},

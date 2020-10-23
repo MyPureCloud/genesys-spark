@@ -3,17 +3,17 @@
 exports[`gux-breadcrumbs-beta #render should render component as expected (1) 1`] = `
 <gux-breadcrumbs-beta>
   <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container gux-large-text"></nav>
+  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container"></nav>
 </gux-breadcrumbs-beta>
 `;
 
 exports[`gux-breadcrumbs-beta #render should render component as expected (2) 1`] = `
 <gux-breadcrumbs-beta>
   <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container gux-large-text">
+  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
     <gux-breadcrumb-item>
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
           Category
         </span>
@@ -24,10 +24,10 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (2) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item href="#">
       <!---->
-      <span class="gux-breadcrumb-generation">
-        <span class="gux-breadcrumb-content">
+      <span class="gux-breadcrumb-generation gux-primary">
+        <a class="gux-breadcrumb-content" href="#">
           Parent
-        </span>
+        </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
@@ -35,7 +35,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (2) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item>
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
           Current
         </span>
@@ -48,10 +48,10 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (2) 1`
 exports[`gux-breadcrumbs-beta #render should render component as expected (3) 1`] = `
 <gux-breadcrumbs-beta>
   <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container gux-large-text">
+  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
     <gux-breadcrumb-item>
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
           Category
         </span>
@@ -62,10 +62,10 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (3) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item href="#">
       <!---->
-      <span class="gux-breadcrumb-generation">
-        <span class="gux-breadcrumb-content">
+      <span class="gux-breadcrumb-generation gux-primary">
+        <a class="gux-breadcrumb-content" href="#">
           Parent
-        </span>
+        </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
@@ -73,7 +73,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (3) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item href="#">
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
           Current
         </span>
@@ -86,10 +86,10 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (3) 1`
 exports[`gux-breadcrumbs-beta #render should render component as expected (4) 1`] = `
 <gux-breadcrumbs-beta accent="primary">
   <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container gux-large-text">
+  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
     <gux-breadcrumb-item>
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
           Category
         </span>
@@ -100,10 +100,10 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (4) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item href="#">
       <!---->
-      <span class="gux-breadcrumb-generation">
-        <span class="gux-breadcrumb-content">
+      <span class="gux-breadcrumb-generation gux-primary">
+        <a class="gux-breadcrumb-content" href="#">
           Parent
-        </span>
+        </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
@@ -111,7 +111,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (4) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item>
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
           Current
         </span>
@@ -127,7 +127,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (5) 1`
   <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
     <gux-breadcrumb-item>
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-secondary">
         <span class="gux-breadcrumb-content">
           Category
         </span>
@@ -136,7 +136,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (5) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item href="#">
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-secondary">
         <a class="gux-breadcrumb-content" href="#">
           Parent
         </a>
@@ -145,7 +145,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (5) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item>
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-secondary">
         <span class="gux-breadcrumb-content">
           Current
         </span>
@@ -161,7 +161,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (6) 1`
   <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
     <gux-breadcrumb-item>
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-invalid">
         <span class="gux-breadcrumb-content">
           Category
         </span>
@@ -172,7 +172,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (6) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item href="#">
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-invalid">
         <a class="gux-breadcrumb-content" href="#">
           Parent
         </a>
@@ -183,7 +183,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (6) 1`
     </gux-breadcrumb-item>
     <gux-breadcrumb-item>
       <!---->
-      <span class="gux-breadcrumb-generation">
+      <span class="gux-breadcrumb-generation gux-invalid">
         <span class="gux-breadcrumb-content">
           Current
         </span>
