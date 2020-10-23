@@ -18,6 +18,9 @@ export default class EventsPanel {
 
   updateFromTree(ast) {
     let descriptionsEl = (this.descriptions = emptyElement(this.descriptions));
+    let notificationPanelEl = (this.notificationPanel = emptyElement(
+      this.notificationPanel
+    ));
     let components = this.traverseTree(ast);
 
     components.forEach(component => {
@@ -37,9 +40,7 @@ export default class EventsPanel {
   }
 
   notifyEvent(e) {
-    let notificationPanelEl = (this.notificationPanel = emptyElement(
-      this.notificationPanel
-    ));
+    let notificationPanelEl = this.notificationPanel;
     const detail = e ? e.detail : e;
     const target = e ? e.currentTarget : '';
 
