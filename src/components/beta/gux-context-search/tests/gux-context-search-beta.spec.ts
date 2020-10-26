@@ -262,6 +262,8 @@ describe('gux-context-search-beta', () => {
 
     describe('methods', () => {
       it('clear', async () => {
+        const InputEventSpy = jest.fn();
+        global.InputEvent = InputEventSpy;
         const guxCurrentMatchChangedSpy = jest.fn();
         component.guxcurrentmatchchanged = {
           emit: guxCurrentMatchChangedSpy
@@ -272,6 +274,7 @@ describe('gux-context-search-beta', () => {
         expect(component.matchCount).toEqual(0);
         expect(component.currentMatch).toEqual(0);
         expect(component.guxcurrentmatchchanged.emit).toHaveBeenCalledWith(0);
+        expect(InputEventSpy).toHaveBeenCalledTimes(2);
       });
 
       it('clear when disable is true', async () => {

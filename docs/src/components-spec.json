@@ -95,6 +95,7 @@
     },
     "events": {
       "input": "Standard Event",
+      "change": "Standard Event",
       "guxcurrentmatchchanged": "Triggered when current match is changed"
     }
   },
