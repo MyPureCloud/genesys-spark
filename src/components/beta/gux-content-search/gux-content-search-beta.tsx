@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import contextSearchResources from './i18n/en.json';
+import contentSearchResources from './i18n/en.json';
 import onDisabledChange from '../../../utils/on-disabled-change/on-disabled-change';
 
 /**
@@ -19,14 +19,14 @@ import onDisabledChange from '../../../utils/on-disabled-change/on-disabled-chan
  */
 
 @Component({
-  styleUrl: 'gux-context-search-beta.less',
-  tag: 'gux-context-search-beta'
+  styleUrl: 'gux-content-search-beta.less',
+  tag: 'gux-content-search-beta'
 })
-export class GuxContextSearchBeta {
+export class GuxContentSearchBeta {
   private inputSlottedElement: HTMLInputElement;
 
   @Element()
-  private root: HTMLGuxContextSearchBetaElement;
+  private root: HTMLGuxContentSearchBetaElement;
 
   /**
    * Disables the Next and Previous buttons.
@@ -77,7 +77,7 @@ export class GuxContextSearchBeta {
   }
 
   async componentWillLoad() {
-    this.i18n = await buildI18nForComponent(this.root, contextSearchResources);
+    this.i18n = await buildI18nForComponent(this.root, contentSearchResources);
     this.inputSlottedElement = this.root.querySelector('input');
     this.disabled = this.inputSlottedElement.disabled;
     this.value = this.inputSlottedElement.value;
@@ -91,7 +91,7 @@ export class GuxContextSearchBeta {
 
   render() {
     return (
-      <div class={{ 'gux-disabled': this.disabled, 'gux-context': true }}>
+      <div class={{ 'gux-disabled': this.disabled, 'gux-content': true }}>
         <div class="gux-search-icon">
           <gux-icon decorative iconName="ic-search"></gux-icon>
         </div>
@@ -105,7 +105,7 @@ export class GuxContextSearchBeta {
     if (this.showNavigationPanel()) {
       const disableNavigationPanel = this.disableNavigationPanel();
       return (
-        <div class="gux-context-control-panel">
+        <div class="gux-content-control-panel">
           <div
             class={{
               'gux-navigation-panel': true,

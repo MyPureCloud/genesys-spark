@@ -1,4 +1,4 @@
-# gux-context-search-beta
+# gux-content-search-beta
 
 
 
@@ -50,8 +50,8 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-context-search-beta --> gux-icon
-  style gux-context-search-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-content-search-beta --> gux-icon
+  style gux-content-search-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

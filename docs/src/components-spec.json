@@ -85,8 +85,8 @@
     "events": { "input": "Triggered when a color is clicked" }
   },
   "gux-command-palette": {},
-  "gux-context-search": {},
-  "gux-context-search-beta": {
+  "gux-content-search": {},
+  "gux-content-search-beta": {
     "hidePage": true,
     "attributes": {
       "disable-navigation": "checkbox",

@@ -22,7 +22,7 @@
 @dark-focus-border: @gux-genesys-blue;
 @dark-focus-outline: @gux-genesys-blue;
 
-gux-context-search-beta {
+gux-content-search-beta {
   display: inline-block;
   min-width: 300px;
 
@@ -37,7 +37,7 @@ gux-context-search-beta {
     cursor: default;
   }
 
-  .gux-context {
+  .gux-content {
     margin: 4px 0;
     display: flex;
     flex-direction: row;
@@ -91,7 +91,7 @@ gux-context-search-beta {
       }
     }
 
-    .gux-context-control-panel {
+    .gux-content-control-panel {
       flex-grow: 1;
       line-height: 1.66666667;
       height: 22px;
@@ -176,8 +176,8 @@ gux-context-search-beta {
 // Theming
 
 // Dark
-.gux-context-search-beta-dark-theme {
-  .gux-context {
+.gux-content-search-beta-dark-theme {
+  .gux-content {
     background-color: @dark-background-color;
     border: 1px solid @dark-border;
     color: @dark-text-color;
@@ -218,18 +218,18 @@ gux-context-search-beta {
 }
 
 .gux-dark-theme {
-  gux-context-search-beta {
-    .gux-context-search-beta-dark-theme();
+  gux-content-search-beta {
+    .gux-content-search-beta-dark-theme();
   }
 }
 
-gux-context-search-beta.gux-dark-theme {
-  .gux-context-search-beta-dark-theme();
+gux-content-search-beta.gux-dark-theme {
+  .gux-content-search-beta-dark-theme();
 }
 
 // Light
-.gux-context-search-beta-light-theme {
-  .gux-context {
+.gux-content-search-beta-light-theme {
+  .gux-content {
     background-color: @background-color;
     border: 1px solid @border;
 
@@ -275,16 +275,16 @@ gux-context-search-beta.gux-dark-theme {
 }
 
 .gux-light-theme {
-  gux-context-search-beta {
-    .gux-context-search-beta-light-theme();
+  gux-content-search-beta {
+    .gux-content-search-beta-light-theme();
   }
 }
 
-gux-context-search-beta.gux-light-theme {
-  .gux-context-search-beta-light-theme();
+gux-content-search-beta.gux-light-theme {
+  .gux-content-search-beta-light-theme();
 }
 
 // Default Theme
-gux-context-search-beta {
-  .gux-context-search-beta-light-theme();
+gux-content-search-beta {
+  .gux-content-search-beta-light-theme();
 }
