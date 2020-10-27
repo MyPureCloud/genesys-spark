@@ -32,10 +32,7 @@ type ReactProps<T> = {
 type IsGux<K> = K extends `gux${infer _}` ? K : never;
 type GuxKeys<T> = Pick<T, IsGux<keyof T>>; 
 
-type StencilToReact<
-    T = GuxKeys<LocalJSX.IntrinsicElements>, 
-    U = GuxKeys<HTMLElementTagNameMap>
-> = StencilProps<T> & ReactProps<U>;
+type StencilToReact = StencilProps<GuxKeys<LocalJSX.IntrinsicElements>> & ReactProps<GuxKeys<HTMLElementTagNameMap>>;
 
 declare global {
     export namespace JSX {
