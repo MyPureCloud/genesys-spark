@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.1](http://inindca///compare/v1.13.0...v1.13.1) (2020-10-27)
+
+
+### Bug Fixes
+
+* **(docs editor):** fix some browsers displaying extra characters on empty lines ([72cc2de](http://inindca///commit/72cc2de5884d68a7391f7ff5dec2646ca4ee9b68))
+
 ## [1.13.0](http://inindca///compare/v1.12.2...v1.13.0) (2020-10-22)
 
 
