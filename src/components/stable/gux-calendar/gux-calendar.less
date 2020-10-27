@@ -1,6 +1,5 @@
 @import (reference) '../../../style/color.less';
-
-// Variables part
+@import (reference) '../../../style/typography.less';
 
 // Style
 gux-calendar {
@@ -47,6 +46,8 @@ gux-calendar {
         label {
           width: 100%;
           text-align: center;
+          .body-font();
+          .bold-font();
         }
       }
     }
@@ -78,6 +79,8 @@ gux-calendar {
             text-align: center;
             width: 24px;
             margin: 0;
+            .body-font();
+            .bold-font();
           }
 
           td {
@@ -85,6 +88,7 @@ gux-calendar {
             width: 24px;
             margin: 0;
             cursor: pointer;
+            .body-font();
           }
         }
       }
