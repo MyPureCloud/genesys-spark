@@ -1,4 +1,4 @@
-import COMPONENT_SPEC from '../../components-spec.json';
+import { getComponentSpec } from '../../component-specs.js';
 import { emptyElement } from '../../utils/empty-element';
 import { toHTML } from '../../utils/to-html.js';
 
@@ -10,6 +10,8 @@ export default class EventsPanel {
     this.targetElement = targetElement;
     this.notificationPanel = notificationPanel;
     this.descriptions = toHTML(`<dl class="event-descriptions"></dl>`);
+
+    window.notify = this.notifyEvent.bind(this);
 
     panel.appendChild(this.descriptions);
   }
@@ -23,36 +25,38 @@ export default class EventsPanel {
 
     components.forEach(component => {
       let elements = this.targetElement.getElementsByTagName(component);
-      let events = COMPONENT_SPEC[component].events || [];
+      let componentSpec = getComponentSpec(component);
+      let events = componentSpec.events || [];
 
       Object.entries(events).forEach(([name, description]) => {
         descriptionsEl.appendChild(toHTML(`<dt>${component} [${name}]</dt>`));
         descriptionsEl.appendChild(toHTML(`<dd>${description}</dd>`));
 
         for (let element of elements) {
-          element.addEventListener(name, function (e) {
-            const detail = e ? e.detail : e;
-            const target = e ? e.target : '';
-
-            let currentNotifications = notificationPanelEl.children;
-
-            while (currentNotifications.length >= MAX_NOTIFICATION) {
-              currentNotifications[0].remove();
-              currentNotifications = notificationPanelEl.children;
-            }
-            notificationPanelEl.appendChild(
-              EventsPanel.getNotificationToast(
-                `${component} [${name}${
-                  target.id ? ' (' + target.id + ')' : ''
-                }]`,
-                detail,
-                target.id
-              )
-            );
-          });
+          element.addEventListener(name, this.notifyEvent.bind(this));
         }
       });
     });
+  }
+
+  notifyEvent(e) {
+    let notificationPanelEl = this.notificationPanel;
+    const detail = e ? e.detail : e;
+    const target = e ? e.currentTarget : '';
+
+    let currentNotifications = notificationPanelEl.children;
+
+    while (currentNotifications.length >= MAX_NOTIFICATION) {
+      currentNotifications[0].remove();
+      currentNotifications = notificationPanelEl.children;
+    }
+    notificationPanelEl.appendChild(
+      EventsPanel.getNotificationToast(
+        e.type,
+        detail,
+        `${target.tagName.toLowerCase()}${target.id ? '#' + target.id : ''}`
+      )
+    );
   }
 
   traverseTree(root) {
@@ -67,7 +71,7 @@ export default class EventsPanel {
         queue = [...queue, ...current.childNodes];
       }
 
-      if (COMPONENT_SPEC[current.nodeName]) {
+      if (getComponentSpec(current.nodeName)) {
         components.add(current.nodeName);
       }
     }
@@ -75,25 +79,28 @@ export default class EventsPanel {
     return components;
   }
 
-  static getNotificationToast(title, detail) {
-    let message;
+  static getNotificationToast(title, detail, targetId) {
+    let data;
 
     if (detail !== null && detail !== undefined) {
       if (typeof detail === 'object') {
-        message = JSON.stringify(detail);
+        data = JSON.stringify(detail);
       } else {
-        message = detail;
+        data = detail;
       }
-    } else {
-      message = 'No additional details';
     }
 
     const notification = toHTML(`
-      <gux-notification-toast accent="neutral">
+      <gux-action-toast accent="neutral">
         <gux-icon slot="icon" icon-name="ic-alert-info" decorative></gux-icon>
         <div slot="title">${title}</div>
-        <div slot="message">${message}</div>
-      </gux-notification-toast>
+        <dl slot="message">
+          <dt ${data ? '' : 'hidden'}>detail</dt>
+          <dd ${data ? '' : 'hidden'}>${data}</dd>
+          <dt>target</dt>
+          <dd>${targetId}</dd>
+        </dl>
+      </gux-action-toast>
     `);
 
     setTimeout(function () {

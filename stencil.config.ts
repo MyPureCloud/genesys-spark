@@ -2,6 +2,7 @@ import replace from '@rollup/plugin-replace';
 import { Config } from '@stencil/core';
 import { less as stencilLess } from '@stencil/less';
 import copy from 'rollup-plugin-copy';
+import generateMetadata from './scripts/generate-component-data';
 
 const CDN_URL = process.env.CDN_URL || '';
 
@@ -37,7 +38,13 @@ export const config: Config = {
             dest: 'dist/genesys-webcomponents/less'
           }
         ]
-      })
+      }),
+      {
+        name: 'generate-metadata',
+        buildEnd() {
+          generateMetadata();
+        }
+      }
     ]
   },
   testing: {

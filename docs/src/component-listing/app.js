@@ -1,11 +1,11 @@
 import { toHTML } from '../utils/to-html.js';
-import COMPONENT_SPEC from '../components-spec.json';
+import { componentSpecs, getComponentSpec } from '../component-specs.js';
 import 'genesys-webcomponents';
 import '../styles/component-listing.less';
 
 export function bootstrap() {
-  let components = Object.keys(COMPONENT_SPEC)
-    .filter(component => !COMPONENT_SPEC[component].hidePage)
+  let components = Object.keys(componentSpecs)
+    .filter(component => !componentSpecs[component].hidePage)
     .sort((a, b) => {
       return shortName(a) < shortName(b) ? -1 : 1;
     });
@@ -16,10 +16,13 @@ export function bootstrap() {
             <nav>
                 <header>Components</header>
                 ${components
-                  .map(
-                    component =>
-                      `<a href="#${component}">${shortName(component)}</a>`
-                  )
+                  .map(component => {
+                    let name = shortName(component);
+                    if (getComponentSpec(component).beta) {
+                      name += `<sup> 𝜷</sup>`;
+                    }
+                    return `<a href="#${component}">${name}</a>`;
+                  })
                   .join('')}
             </nav>
             <iframe id="componentFrame" />
