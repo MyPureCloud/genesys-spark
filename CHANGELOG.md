@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.2](http://inindca///compare/v1.13.1...v1.13.2) (2020-10-28)
+
+
+### Bug Fixes
+
+* update react integration docs ([d782064](http://inindca///commit/d782064481f1b70f5778d11fed0f03a3cce58aa7))
+
 ### [1.13.1](http://inindca///compare/v1.13.0...v1.13.1) (2020-10-27)
 
 
