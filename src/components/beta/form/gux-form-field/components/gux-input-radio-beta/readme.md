@@ -25,7 +25,7 @@ See documentation for the `gux-radio-group` documentation for a more thourough e
 
 ### Used by
 
- - [gux-form-field-beta](../../../gux-form-field-beta)
+ - [gux-form-field-beta](../..)
 
 ### Graph
 ```mermaid

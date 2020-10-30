@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.3](http://inindca///compare/v1.13.2...v1.13.3) (2020-10-29)
+
+
+### Bug Fixes
+
+* **gux-calendar:** small css and style changes ([675e400](http://inindca///commit/675e400b868d2574864b98661e5958e12886dd1b))
+
+### [1.13.2](http://inindca///compare/v1.13.1...v1.13.2) (2020-10-28)
+
+
+### Bug Fixes
+
+* update react integration docs ([d782064](http://inindca///commit/d782064481f1b70f5778d11fed0f03a3cce58aa7))
+
+### [1.13.1](http://inindca///compare/v1.13.0...v1.13.1) (2020-10-27)
+
+
+### Bug Fixes
+
+* **(docs editor):** fix some browsers displaying extra characters on empty lines ([72cc2de](http://inindca///commit/72cc2de5884d68a7391f7ff5dec2646ca4ee9b68))
+
 ## [1.13.0](http://inindca///compare/v1.12.2...v1.13.0) (2020-10-22)
 
 
