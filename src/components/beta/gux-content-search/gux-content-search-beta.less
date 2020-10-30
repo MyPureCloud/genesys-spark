@@ -222,6 +222,16 @@ gux-content-search-beta {
         opacity: 1;
       }
     }
+
+    .gux-navigation-panel {
+      .gux-navigation-result {
+        color: @dark-navigation-text-color;
+        &:not(.gux-navigation-result-disabled):hover,
+        &:not(.gux-navigation-result-disabled):focus {
+          color: @dark-navigation-text-hover-color;
+        }
+      }
+    }
   }
 }
 
@@ -278,6 +288,16 @@ gux-content-search-beta.gux-dark-theme {
     }
     button {
       color: @icon-color;
+    }
+
+    .gux-navigation-panel {
+      .gux-navigation-result {
+        color: @navigation-text-color;
+        &:not(.gux-navigation-result-disabled):hover,
+        &:not(.gux-navigation-result-disabled):focus {
+          color: @navigation-text-hover-color;
+        }
+      }
     }
   }
 }
