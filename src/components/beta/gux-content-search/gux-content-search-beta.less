@@ -6,8 +6,10 @@
 @text-color: @gux-type;
 @border: #dae1e8;
 @placeholder: #9baaba;
-@icon-color: #98a7b8;
+@icon-color: #9baabb;
 @icon-hover-color: @gux-charcoal-grey;
+@navigation-text-color: #9baabb;
+@navigation-text-hover-color: @gux-charcoal-grey;
 @hair-line-color: @gux-border;
 
 @dark-background-color: @gux-type;
@@ -16,6 +18,8 @@
 @dark-placeholder: #9baaba;
 @dark-icon-color: #b1becc;
 @dark-icon-hover-color: @gux-off-white;
+@dark-navigation-text-color: #b1becc;
+@dark-navigation-text-hover-color: @gux-off-white;
 
 @focus-outline: fade(@gux-genesys-blue, 50%);
 @focus-border: @gux-genesys-dark-blue;
@@ -24,6 +28,7 @@
 
 gux-content-search-beta {
   display: inline-block;
+  width: 300px;
   min-width: 300px;
 
   gux-icon {
@@ -151,10 +156,14 @@ gux-content-search-beta {
           white-space: nowrap;
           font-size: 12px;
           font-family: inherit;
+          color: @navigation-text-color;
+          &:not(.gux-navigation-result-disabled):hover,
+          &:not(.gux-navigation-result-disabled):focus {
+            color: @navigation-text-hover-color;
+          }
         }
 
         .gux-previous-button {
-          padding-right: 8px;
           padding-left: 0;
           padding-top: 0;
           padding-bottom: 0;
@@ -162,7 +171,6 @@ gux-content-search-beta {
         }
 
         .gux-next-button {
-          padding-right: 8px;
           padding-left: 0;
           padding-top: 0;
           padding-bottom: 0;

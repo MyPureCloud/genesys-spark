@@ -114,7 +114,10 @@ export class GuxContentSearchBeta {
             title={this.matchCountResult()}
           >
             <span
-              class="gux-navigation-result"
+              class={{
+                'gux-navigation-result': true,
+                'gux-navigation-result-disabled': disableNavigationPanel
+              }}
               aria-label={this.matchCountResult()}
             >
               {this.matchCountResult()}
