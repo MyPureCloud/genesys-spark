@@ -102,6 +102,10 @@ Component-specific polyfills
 You will need to set a lang attribute on the Gux component or one of its ancestor elements and the Gux component will use that to decide what language to use.
 For example you could set it on the page somewhere at a high level, e.g. `<html lang="en">` or `<body lang="en">` and all the Gux components will use that to decide what language to use.
 
+### Framework Integrations
+
+- [React](./REACT_INTEGRATION.md)
+
 ## Development and Contribution
 
 The common component library has a very small set of developers, who also work on other projects, so

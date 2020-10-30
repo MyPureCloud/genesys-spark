@@ -1,5 +1,5 @@
 import { toHTML } from '../../utils/to-html';
-import COMPONENT_SPEC from '../../components-spec.json';
+import { getComponentSpec } from '../../component-specs.js';
 import { checkboxAttribute } from './checkbox-attribute';
 import { selectAttribute } from './select-attribute';
 import { textAttribute } from './text-attribute';
@@ -14,7 +14,7 @@ export const createAttributeGroup = (parent, astNode, renderCallback) => {
 
   parent.appendChild(element);
 
-  const attributes = COMPONENT_SPEC[elementName].attributes || [];
+  const attributes = getComponentSpec(elementName).attributes || [];
   Object.entries(attributes).forEach(([name, type]) => {
     let handler = handlerFor(type);
     if (handler) {

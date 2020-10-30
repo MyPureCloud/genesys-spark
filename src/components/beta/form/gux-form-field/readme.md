@@ -17,11 +17,11 @@
 
 ### Depends on
 
-- [gux-input-checkbox-beta](../gux-form-field/components/gux-input-checkbox-beta)
-- [gux-input-radio-beta](../gux-form-field/components/gux-input-radio-beta)
-- [gux-input-color-beta](../gux-form-field/components/gux-input-color-beta)
-- [gux-input-range-beta](../gux-form-field/components/gux-input-range-beta)
-- [gux-input-text-like-beta](../gux-form-field/components/gux-input-text-like-beta)
+- [gux-input-checkbox-beta](./components/gux-input-checkbox-beta)
+- [gux-input-radio-beta](./components/gux-input-radio-beta)
+- [gux-input-color-beta](./components/gux-input-color-beta)
+- [gux-input-range-beta](./components/gux-input-range-beta)
+- [gux-input-text-like-beta](./components/gux-input-text-like-beta)
 
 ### Graph
 ```mermaid
