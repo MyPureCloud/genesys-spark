@@ -11,7 +11,7 @@ const fs = require('fs');
 const glob = require('glob');
 const { DOMParser, XMLSerializer } = require('xmldom');
 
-glob('src/components/gux-icon/icons/**/*.svg', (err, files) => {
+glob('src/components/stable/gux-icon/icons/**/*.svg', (err, files) => {
   if (err) {
     console.error('Error encountered while trying to find the svg files');
     console.error(err);
