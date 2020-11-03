@@ -70,6 +70,7 @@ gux-content-search-beta {
       padding-right: 4px;
       display: flex;
       align-items: center;
+      flex-shrink: 0;
       color: @icon-color;
       &:disabled {
         opacity: 0.5;
@@ -87,6 +88,7 @@ gux-content-search-beta {
       padding: 0;
       border-radius: 0;
       height: 22px;
+      min-width: 0;
 
       &.gux-focused,
       &:focus {
@@ -98,6 +100,7 @@ gux-content-search-beta {
 
     .gux-content-control-panel {
       flex-grow: 1;
+      flex-shrink: 0;
       line-height: 1.66666667;
       height: 22px;
       padding: 0;
@@ -128,6 +131,7 @@ gux-content-search-beta {
       }
 
       .gux-clear-button {
+        flex-shrink: 0;
         padding-left: 8px;
         padding-right: 8px;
         padding-top: 0;
@@ -152,6 +156,8 @@ gux-content-search-beta {
         .gux-navigation-result {
           padding-right: 8px;
           padding-left: 8px;
+          padding-top: 0;
+          padding-bottom: 0;
           align-items: center;
           white-space: nowrap;
           font-size: 12px;
@@ -164,6 +170,8 @@ gux-content-search-beta {
         }
 
         .gux-previous-button {
+          flex-shrink: 0;
+          padding-right: 0;
           padding-left: 0;
           padding-top: 0;
           padding-bottom: 0;
@@ -171,6 +179,8 @@ gux-content-search-beta {
         }
 
         .gux-next-button {
+          flex-shrink: 0;
+          padding-right: 0;
           padding-left: 0;
           padding-top: 0;
           padding-bottom: 0;
