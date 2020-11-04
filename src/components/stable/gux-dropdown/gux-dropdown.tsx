@@ -10,7 +10,7 @@ import {
   State
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
-import { whenEventIsFrom } from '../../../common-utils';
+import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 
 @Component({
   styleUrl: 'gux-dropdown.less',

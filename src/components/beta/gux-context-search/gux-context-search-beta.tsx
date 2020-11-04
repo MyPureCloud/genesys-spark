@@ -12,7 +12,7 @@ import {
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import contextSearchResources from './i18n/en.json';
-import onDisabledChange from '../../../utils/on-disabled-change/on-disabled-change';
+import { onDisabledChange } from '../../../utils/dom/on-attribute-change';
 
 /**
  * @slot  - Required slot for input tag
@@ -24,6 +24,7 @@ import onDisabledChange from '../../../utils/on-disabled-change/on-disabled-chan
 })
 export class GuxContextSearchBeta {
   private inputSlottedElement: HTMLInputElement;
+  private disabledObserver: MutationObserver;
 
   @Element()
   private root: HTMLGuxContextSearchBetaElement;
@@ -81,12 +82,19 @@ export class GuxContextSearchBeta {
     this.inputSlottedElement = this.root.querySelector('input');
     this.disabled = this.inputSlottedElement.disabled;
     this.value = this.inputSlottedElement.value;
-    onDisabledChange(this.inputSlottedElement, (disabled: boolean) => {
-      this.disabled = disabled;
-    });
+    this.disabledObserver = onDisabledChange(
+      this.inputSlottedElement,
+      (disabled: boolean) => {
+        this.disabled = disabled;
+      }
+    );
     this.inputSlottedElement.addEventListener('input', e => this.onInput(e));
     this.setMatchCount();
     this.setCurrentMatch();
+  }
+
+  componentDidUnload(): void {
+    this.disabledObserver.disconnect();
   }
 
   render() {

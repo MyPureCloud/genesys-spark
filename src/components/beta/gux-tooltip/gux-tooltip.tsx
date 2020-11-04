@@ -10,7 +10,7 @@ import {
   State
 } from '@stencil/core';
 
-import { randomHTMLId } from '../../../common-utils';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
 /**
  * @slot - Content of the tooltip
