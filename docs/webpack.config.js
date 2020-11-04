@@ -58,12 +58,6 @@ module.exports = {
         flatten: true,
         transform: injectCdnUrl
       },
-      {
-        //TODO: Remove when all examples are moved to component directories
-        from: 'src/component-pages/*.html',
-        flatten: true,
-        transform: injectCdnUrl
-      },
       { from: '../dist/genesys-webcomponents/**/*' },
       {
         from: '../src/components/**/example.html',
