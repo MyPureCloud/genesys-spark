@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
 
-import onDisabledChange from '../../../../../../utils/on-disabled-change/on-disabled-change';
+import { onDisabledChange } from '../../../../../../utils/dom/on-attribute-change';
 
 /**
  * @slot input - Required slot for input[type="color"]
@@ -11,6 +11,7 @@ import onDisabledChange from '../../../../../../utils/on-disabled-change/on-disa
 })
 export class GuxInputColorBeta {
   private input: HTMLInputElement;
+  private disabledObserver: MutationObserver;
 
   @Element()
   private root: HTMLGuxInputColorBetaElement;
@@ -51,12 +52,19 @@ export class GuxInputColorBeta {
         e.preventDefault();
       }
     });
-    onDisabledChange(this.input, (disabled: boolean) => {
-      this.disabled = disabled;
-    });
+    this.disabledObserver = onDisabledChange(
+      this.input,
+      (disabled: boolean) => {
+        this.disabled = disabled;
+      }
+    );
 
     this.disabled = this.input.disabled;
     this.color = this.input.value;
+  }
+
+  componentDidUnload(): void {
+    this.disabledObserver.disconnect();
   }
 
   render(): JSX.Element {

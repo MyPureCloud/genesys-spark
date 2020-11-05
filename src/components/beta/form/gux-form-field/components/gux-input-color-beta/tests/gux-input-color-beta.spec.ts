@@ -13,7 +13,7 @@ const components = [
 const language = 'en';
 
 describe('gux-input-color-beta', () => {
-  beforeEach(async () => {
+  beforeEach(() => {
     global.MutationObserver = MutationObserver;
   });
 

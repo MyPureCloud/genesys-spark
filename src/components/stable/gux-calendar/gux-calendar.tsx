@@ -11,13 +11,15 @@ import {
 
 import { CalendarModes, KeyCode } from '../../../common-enums';
 import {
-  addClassToElements,
   asIsoDateRange,
-  asIsoDateString,
+  asIsoDate,
   fromIsoDateRange,
-  fromIsoDateString,
+  fromIsoDate
+} from '../../../utils/date/iso-dates';
+import {
+  addClassToElements,
   removeClassToElements
-} from '../../../common-utils';
+} from '../../../utils/dom/manipulate-elements-classes';
 import { getDesiredLocale } from '../../../i18n';
 import { GuxCalendarMode, IDateElement } from './gux-calendar.types';
 
@@ -93,7 +95,7 @@ export class GuxCalendar {
       this.previewValue = fromIsoDateRange(this.value)[0];
     } else {
       const selected = value as Date;
-      this.value = asIsoDateString(selected);
+      this.value = asIsoDate(selected);
       this.previewValue = selected;
     }
   }
@@ -148,8 +150,8 @@ export class GuxCalendar {
 
   outOfBounds(date: Date): boolean {
     return (
-      (this.maxDate !== '' && fromIsoDateString(this.maxDate) < date) ||
-      (this.minDate !== '' && fromIsoDateString(this.minDate) > date)
+      (this.maxDate !== '' && fromIsoDate(this.maxDate) < date) ||
+      (this.minDate !== '' && fromIsoDate(this.minDate) > date)
     );
   }
 
@@ -207,7 +209,7 @@ export class GuxCalendar {
           classes.push('gux-selected');
         }
       } else {
-        const selectedTimestamp = fromIsoDateString(this.value).getTime();
+        const selectedTimestamp = fromIsoDate(this.value).getTime();
         if (date.getTime() === selectedTimestamp) {
           isSelected = true;
           classes.push('gux-selected');
@@ -414,10 +416,10 @@ export class GuxCalendar {
       if (this.mode === CalendarModes.Range) {
         this.value = asIsoDateRange(now, now);
       } else {
-        this.value = asIsoDateString(now);
+        this.value = asIsoDate(now);
       }
     }
-    this.previewValue = fromIsoDateString(this.value);
+    this.previewValue = fromIsoDate(this.value);
   }
 
   componentDidRender() {
