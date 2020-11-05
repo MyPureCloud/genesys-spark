@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](http://inindca///compare/v1.13.3...v1.14.0) (2020-11-05)
+
+
+### Features
+
+* **gux-icon:** add gpe svgs ([479257c](http://inindca///commit/479257cb1463a86399f8a75a3403c16761560095))
+* **gux-switch:** api changes ([a894e17](http://inindca///commit/a894e17b3ed14161b97db283fe12a4469cc2a36f))
+
+
+### Bug Fixes
+
+* **gux-tab:** fix margin of gux-tab dropdown ([9db4ad0](http://inindca///commit/9db4ad013f0a13516e37ebdd5c970edb90a9df1a))
+
 ### [1.13.3](http://inindca///compare/v1.13.2...v1.13.3) (2020-10-29)
 
 
