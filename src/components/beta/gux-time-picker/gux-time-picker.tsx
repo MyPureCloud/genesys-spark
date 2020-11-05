@@ -10,7 +10,7 @@ import {
   Watch
 } from '@stencil/core';
 import { KeyCode } from '../../../common-enums';
-import { fromIsoTimeString } from '../../../common-utils';
+import { fromIsoTime } from '../../../utils/date/from-iso-time-string';
 
 const MAX_TIME: string = '23:59:59';
 const MIN_TIME: string = '00:00:00';
@@ -110,8 +110,8 @@ export class GuxTimePicker {
   }
 
   canBeCompletedToAValidTime(str: string) {
-    const max = fromIsoTimeString(str + this.max.slice(str.length));
-    const min = fromIsoTimeString(str + this.min.slice(str.length));
+    const max = fromIsoTime(str + this.max.slice(str.length));
+    const min = fromIsoTime(str + this.min.slice(str.length));
     if (
       (this.minTimeObj <= max && max <= this.maxTimeObj) ||
       (this.minTimeObj <= min && min <= this.maxTimeObj)
@@ -200,13 +200,13 @@ export class GuxTimePicker {
   validateBounds() {
     this.validateUpperBound();
     this.validateLowerBound();
-    this.maxTimeObj = fromIsoTimeString(this.max);
-    this.minTimeObj = fromIsoTimeString(this.min);
+    this.maxTimeObj = fromIsoTime(this.max);
+    this.minTimeObj = fromIsoTime(this.min);
     if (this.maxTimeObj < this.minTimeObj) {
       this.max = MAX_TIME;
       this.min = MIN_TIME;
-      this.maxTimeObj = fromIsoTimeString(this.max);
-      this.minTimeObj = fromIsoTimeString(this.min);
+      this.maxTimeObj = fromIsoTime(this.max);
+      this.minTimeObj = fromIsoTime(this.min);
     }
   }
 
@@ -217,7 +217,7 @@ export class GuxTimePicker {
         ? validatedValue
         : '';
     if (validatedValue) {
-      const valueTimeObj = fromIsoTimeString(validatedValue);
+      const valueTimeObj = fromIsoTime(validatedValue);
       validatedValue =
         this.minTimeObj <= valueTimeObj && valueTimeObj <= this.maxTimeObj
           ? validatedValue
@@ -271,7 +271,7 @@ export class GuxTimePicker {
         i.toString().padStart(2, '0'),
         '00'
       ].join(':');
-      const timeObj = fromIsoTimeString(time);
+      const timeObj = fromIsoTime(time);
       if (this.minTimeObj <= timeObj && timeObj <= this.maxTimeObj) {
         dropDownOptions.push(time);
       }

@@ -14,7 +14,7 @@ import {
 import { ClickOutside } from 'stencil-click-outside';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import onHiddenChange from '../../../common-utils';
+import { onHiddenChange } from '../../../utils/dom/on-attribute-change';
 
 import modalComponentResources from './i18n/en.json';
 import { PopperPosition } from './gux-popover.types';
@@ -27,6 +27,7 @@ export class GuxPopover {
   private i18n: GetI18nValue;
   private popperInstance: Instance;
   private forElement: HTMLElement;
+  private hiddenObserver: MutationObserver;
 
   @Element() private element: HTMLElement;
 
@@ -135,7 +136,7 @@ export class GuxPopover {
       modalComponentResources
     );
 
-    onHiddenChange(this.element, (hidden: boolean) => {
+    this.hiddenObserver = onHiddenChange(this.element, (hidden: boolean) => {
       this.hidden = hidden;
     });
 
@@ -148,6 +149,7 @@ export class GuxPopover {
 
   componentDidUnload(): void {
     this.destroyPopper();
+    this.hiddenObserver.disconnect();
   }
 
   render(): JSX.Element {

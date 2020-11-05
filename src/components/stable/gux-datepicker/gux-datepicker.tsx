@@ -13,10 +13,10 @@ import {
 import { CalendarModes, KeyCode } from '../../../common-enums';
 import {
   asIsoDateRange,
-  asIsoDateString,
+  asIsoDate,
   fromIsoDateRange,
-  fromIsoDateString
-} from '../../../common-utils';
+  fromIsoDate
+} from '../../../utils/date/iso-dates';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import i18nStrings from './i18n/en.json';
@@ -168,8 +168,8 @@ export class GuxDatepicker {
 
   outOfBounds(date: Date): boolean {
     return (
-      (this.maxDate !== '' && fromIsoDateString(this.maxDate) < date) ||
-      (this.minDate !== '' && fromIsoDateString(this.minDate) > date)
+      (this.maxDate !== '' && fromIsoDate(this.maxDate) < date) ||
+      (this.minDate !== '' && fromIsoDate(this.minDate) > date)
     );
   }
 
@@ -184,7 +184,7 @@ export class GuxDatepicker {
       this.calendarElement.setValue([fromValue, toValue]);
     } else {
       const date = this.stringToDate(this.inputElement.value);
-      this.value = asIsoDateString(date);
+      this.value = asIsoDate(date);
       this.updateDate();
       this.calendarElement.setValue(date);
     }
@@ -364,7 +364,7 @@ export class GuxDatepicker {
       switch (this.format[this.selectionRange[0]]) {
         case 'd':
           // TODO check depending on focusedField
-          const dateValue = fromIsoDateString(this.value);
+          const dateValue = fromIsoDate(this.value);
           if (
             newValue <=
             new Date(
@@ -417,7 +417,7 @@ export class GuxDatepicker {
         return map2[match];
       });
     } else {
-      const dateValue = fromIsoDateString(this.value);
+      const dateValue = fromIsoDate(this.value);
       const { map: map3, regexp: regexp3 } = this.getMapAndRegexFromField(
         dateValue
       );
@@ -467,7 +467,7 @@ export class GuxDatepicker {
       const [start, end] = fromIsoDateRange(this.value);
       return this.focusedField === this.inputElement ? start : end;
     } else {
-      return fromIsoDateString(this.value);
+      return fromIsoDate(this.value);
     }
   }
 
@@ -566,7 +566,7 @@ export class GuxDatepicker {
       if (this.mode === CalendarModes.Range) {
         this.value = asIsoDateRange(now, now);
       } else {
-        this.value = asIsoDateString(now);
+        this.value = asIsoDate(now);
       }
       if (this.mode === CalendarModes.Range && this.numberOfMonths < 2) {
         this.numberOfMonths = 2;

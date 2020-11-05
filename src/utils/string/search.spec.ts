@@ -1,4 +1,4 @@
-import { getFuzzyReplacements, matchesFuzzy } from '../search';
+import { getFuzzyReplacements, matchesFuzzy } from './search';
 
 describe('search', () => {
   describe('matches fuzzy', () => {

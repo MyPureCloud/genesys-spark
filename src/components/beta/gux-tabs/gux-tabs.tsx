@@ -14,7 +14,7 @@ import {
 import Sortable, { MoveEvent } from 'sortablejs';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import tabsResources from './i18n/en.json';
-import { whenEventIsFrom } from '../../../common-utils';
+import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 
 @Component({
   styleUrl: 'gux-tabs.less',

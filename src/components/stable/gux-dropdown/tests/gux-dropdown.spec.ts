@@ -1,7 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxDropdown } from '../gux-dropdown';
 import { GuxOption } from '../gux-option/gux-option';
-import { whenEventIsFrom } from '../../../../common-utils';
+import { whenEventIsFrom } from '../../../../utils/dom/when-event-is-from';
 
 describe('gux-dropdown', () => {
   let component: GuxDropdown;

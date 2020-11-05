@@ -1,5 +1,8 @@
 import { Component, h, JSX, Prop } from '@stencil/core';
-import { getFuzzyReplacements, matchesFuzzy } from '../../../search';
+import {
+  getFuzzyReplacements,
+  matchesFuzzy
+} from '../../../utils/string/search';
 
 import { GuxTextHighlightStrategy } from './gux-text-highlight.types';
 
