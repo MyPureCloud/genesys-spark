@@ -29,12 +29,6 @@ export class GuxContentSearchBeta {
   private root: HTMLGuxContentSearchBetaElement;
 
   /**
-   * Disables the Next and Previous buttons.
-   */
-  @Prop()
-  disableNavigation: boolean = false;
-
-  /**
    * The Match Count
    */
   @Prop({ mutable: true })
@@ -161,22 +155,10 @@ export class GuxContentSearchBeta {
   }
 
   private matchCountResult(): string {
-    if (this.disableNavigation) {
-      if (this.matchCount === 1) {
-        return this.i18n('match', {
-          matchCount: this.matchCount
-        });
-      } else {
-        return this.i18n('matches', {
-          matchCount: this.matchCount
-        });
-      }
-    } else {
-      return this.i18n('totalMatches', {
-        currentMatch: this.currentMatch,
-        matchCount: this.matchCount
-      });
-    }
+    return this.i18n('totalMatches', {
+      currentMatch: this.currentMatch,
+      matchCount: this.matchCount
+    });
   }
 
   private showNavigationPanel(): boolean {
@@ -184,7 +166,7 @@ export class GuxContentSearchBeta {
   }
 
   private disableNavigationPanel(): boolean {
-    return this.disabled || this.disableNavigation || this.matchCount <= 0;
+    return this.disabled || this.matchCount <= 0;
   }
 
   private setMatchCount(): void {
@@ -203,15 +185,11 @@ export class GuxContentSearchBeta {
       this.currentMatch =
         this.currentMatch &&
         Number.isInteger(this.currentMatch) &&
-        this.currentMatch > 0 &&
+        this.currentMatch >= 0 &&
         this.currentMatch <= this.matchCount
           ? Number(this.currentMatch)
-          : 1;
+          : 0;
     }
-  }
-
-  private resetCurrentMatch(): void {
-    this.currentMatch = this.matchCount > 0 ? 1 : 0;
   }
 
   private resetInputSlottedElement() {
@@ -245,7 +223,7 @@ export class GuxContentSearchBeta {
     if (this.disableNavigationPanel()) {
       return;
     }
-    if (this.currentMatch === 1) {
+    if (this.currentMatch === 1 || this.currentMatch === 0) {
       this.currentMatch = this.matchCount;
     } else {
       this.currentMatch--;
@@ -259,7 +237,8 @@ export class GuxContentSearchBeta {
     }
     this.value = event.target.value;
     this.inputSlottedElement.value = event.target.value;
-    this.resetCurrentMatch();
+    this.matchCount = 0;
+    this.currentMatch = 0;
   }
 
   private emitCurrentMatchChanged(): void {

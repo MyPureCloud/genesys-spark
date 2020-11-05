@@ -7,11 +7,10 @@
 
 ## Properties
 
-| Property            | Attribute            | Description                                        | Type      | Default |
-| ------------------- | -------------------- | -------------------------------------------------- | --------- | ------- |
-| `currentMatch`      | `current-match`      | The Current match count which needs to highlighted | `number`  | `0`     |
-| `disableNavigation` | `disable-navigation` | Disables the Next and Previous buttons.            | `boolean` | `false` |
-| `matchCount`        | `match-count`        | The Match Count                                    | `number`  | `0`     |
+| Property       | Attribute       | Description                                        | Type     | Default |
+| -------------- | --------------- | -------------------------------------------------- | -------- | ------- |
+| `currentMatch` | `current-match` | The Current match count which needs to highlighted | `number` | `0`     |
+| `matchCount`   | `match-count`   | The Match Count                                    | `number` | `0`     |
 
 
 ## Events

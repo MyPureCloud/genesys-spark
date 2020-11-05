@@ -118,76 +118,6 @@ describe('gux-content-search-beta', () => {
         html: `<gux-content-search-beta current-match="1100" match-count="100000001">
           <input type="text" disabled="true" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend."/>
         </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable navigate mode',
-        html: `<gux-content-search-beta current-match="1" match-count="10" disable-navigation="true">
-          <input type="text" placeholder="Search" value="Navigation Disabled"/>
-        </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable navigate mode with no matches',
-        html: `<gux-content-search-beta current-match="0" match-count="0" disable-navigation="true">
-          <input type="text" placeholder="Search" value="Navigation Disabled"/>
-        </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable navigate mode with 1 matches',
-        html: `<gux-content-search-beta current-match="0" match-count="1" disable-navigation="true">
-          <input type="text" placeholder="Search" value="Navigation Disabled"/>
-        </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable navigate mode with 100000000 matches',
-        html: `<gux-content-search-beta current-match="1000" match-count="100000000" disable-navigation="true">
-          <input type="text" placeholder="Search" value="Navigation Disabled"/>
-        </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable mode & disable Navigate Mode',
-        html: `<gux-content-search-beta current-match="1" match-count="10" disable-navigation="true">
-          <input type="text" disabled="true" placeholder="Search" value="Search Disabled Navigation Disable"/>
-        </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable mode & disable Navigate Mode with no match',
-        html: `<gux-content-search-beta current-match="0" match-count="0" disable-navigation="true">
-          <input type="text" disabled="true" placeholder="Search" value="Search Disabled Navigation Disable"/>
-        </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable mode & disable Navigate Mode with 1 match',
-        html: `<gux-content-search-beta current-match="1" match-count="1" disable-navigation="true">
-          <input type="text" disabled="true" placeholder="Search" value="Search Disabled Navigation Disable"/>
-        </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable mode & disable Navigate Mode with 1000000 match',
-        html: `<gux-content-search-beta current-match="1" match-count="1000000" disable-navigation="true">
-          <input type="text" disabled="true" placeholder="Search" value="Search Disabled Navigation Disable"/>
-        </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable mode & disable Navigate Mode with 100 match & long text',
-        html: `<gux-content-search-beta current-match="1" match-count="10" disable-navigation="true">
-          <input type="text" disabled="true" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend."/>
-        </gux-content-search-beta>`
-      },
-      {
-        description:
-          'should render default control with all props in disable mode & disable Navigate Mode with 1000000 match & long text',
-        html: `<gux-content-search-beta current-match="1" match-count="1000000" disable-navigation="true">
-          <input type="text" disabled="true" placeholder="Search" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend."/>
-        </gux-content-search-beta>`
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
@@ -230,7 +160,7 @@ describe('gux-content-search-beta', () => {
       await component.componentWillLoad();
       component.render();
       expect(component.matchCount).toBe(1);
-      expect(component.currentMatch).toBe(1);
+      expect(component.currentMatch).toBe(0);
     });
 
     it('componentWillLoad with invalid currentMatch & matchCount', async () => {
@@ -248,7 +178,7 @@ describe('gux-content-search-beta', () => {
       await component.componentWillLoad();
       component.render();
       expect(component.matchCount).toBe(10);
-      expect(component.currentMatch).toBe(1);
+      expect(component.currentMatch).toBe(0);
     });
 
     it('componentDidLoad with currentMatch when matchCount is 0', async () => {
