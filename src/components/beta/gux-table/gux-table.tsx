@@ -14,7 +14,7 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { whenEventIsFrom } from '../../../common-utils';
+import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 
 import tableResources from './i18n/en.json';
 import {
