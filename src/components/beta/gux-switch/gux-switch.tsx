@@ -1,92 +1,64 @@
-import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
-import { JSXBase } from '@stencil/core/internal';
-import { KeyCode } from '../../../common-enums';
-import { AllowedLayouts, ISwitchItem } from './gux-switch.types';
+import { Component, Element, h, Host, Listen, JSX, Prop } from '@stencil/core';
 
+import { GuxSwitchAllowedLayouts } from './gux-switch.types';
+
+import simulateNativeEvent from '../../../utils/simulate-native-event/simulate-native-event';
+
+/**
+ * @slot - list of gux-switch-item elements
+ */
 @Component({
   styleUrl: 'gux-switch.less',
   tag: 'gux-switch-beta'
 })
 export class GuxSwitch {
-  /**
-   * The names and values of the switch buttons
-   */
-  @Prop()
-  items: ISwitchItem[];
+  @Element() root: HTMLElement;
 
   /**
    * Used to keep track of the currently selected value
    */
   @Prop({ mutable: true })
-  selectedValue: string;
+  value: string;
 
   /**
    * The allowed sizes
    */
   @Prop()
-  layout: AllowedLayouts = 'medium';
+  layout: GuxSwitchAllowedLayouts = 'default';
 
-  /**
-   * Triggers when a switch is selected.
-   * @return the value of the newly selected switch
-   */
-  @Event()
-  selectionChanged: EventEmitter;
+  @Listen('click')
+  onClick(e: MouseEvent): void {
+    e.stopPropagation();
 
-  selectSwitchAtIndex(index: number) {
-    this.selectedValue = this.items[index].value;
-    this.selectionChanged.emit(this.selectedValue);
-  }
+    const switchItem = (e.target as HTMLElement).closest('gux-switch-item');
 
-  onKeyDownAtIndex(index: number, event: KeyboardEvent) {
-    if (this.items[index].isDisabled) {
-      event.stopPropagation();
-    } else if ([KeyCode.Enter, KeyCode.Space].includes(event.keyCode)) {
-      this.selectSwitchAtIndex(index);
+    if (switchItem && this.value !== switchItem.value) {
+      this.value = switchItem.value;
+
+      simulateNativeEvent(this.root, 'input');
+      simulateNativeEvent(this.root, 'change');
     }
   }
 
-  classForSwtichItemAtIndex(item: ISwitchItem): string {
-    return `gux-switch ${this.layout}${
-      item.value === this.selectedValue ? ' selected' : ''
-    }${item.isDisabled ? ' disabled' : ''}`;
+  private updateSelectedItem(switchItems: HTMLGuxSwitchItemElement[]): void {
+    switchItems.forEach(switchItem => {
+      if (switchItem.value === this.value) {
+        switchItem.classList.add('gux-selected');
+      } else {
+        switchItem.classList.remove('gux-selected');
+      }
+    });
   }
 
-  listElementForSwtichItemAtIndex(
-    item: ISwitchItem,
-    index: number
-  ): JSXBase.LiHTMLAttributes<HTMLLIElement> {
-    if (item.isDisabled) {
-      return (
-        <li class={this.classForSwtichItemAtIndex(item)}>
-          <button class="switch-button" disabled={item.isDisabled}>
-            <div class="display-text">{item.displayName}</div>
-          </button>
-        </li>
-      );
-    }
-    return (
-      <li class={this.classForSwtichItemAtIndex(item)}>
-        <button
-          class="switch-button"
-          disabled={item.isDisabled}
-          onKeyDown={ev => this.onKeyDownAtIndex(index, ev)}
-          onClick={() => this.selectSwitchAtIndex(index)}
-        >
-          <div class="display-text">{item.displayName}</div>
-        </button>
-      </li>
+  render(): JSX.Element {
+    this.updateSelectedItem(
+      Array.from(this.root.children) as HTMLGuxSwitchItemElement[]
     );
-  }
 
-  render() {
     return (
-      <ul class="gux-switch-group">
-        {this.items &&
-          this.items.map((item, index) =>
-            this.listElementForSwtichItemAtIndex(item, index)
-          )}
-      </ul>
+      <Host role="group" class={`gux-${this.layout}`}>
+        <slot />
+      </Host>
     );
   }
 }
