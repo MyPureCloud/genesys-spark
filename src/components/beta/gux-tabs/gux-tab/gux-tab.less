@@ -3,11 +3,15 @@
 @gux-off-tab-fill: #cfd1d1;
 
 // Style
-.popover-content {
-  margin: 5px 0 !important;
-}
-
 gux-tab {
+  gux-popover {
+    z-index: 1000;
+
+    .gux-popover-wrapper .gux-popover-content {
+      margin: 5px 0;
+    }
+  }
+
   .gux-tab {
     display: flex;
     align-items: center;
