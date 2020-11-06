@@ -215,7 +215,7 @@ export class GuxContentSearchBeta {
     if (this.getNormalizedCurrentMatch() === this.getNormalizedMatchCount()) {
       this.currentMatch = 1;
     } else {
-      this.currentMatch++;
+      this.currentMatch = this.getNormalizedCurrentMatch() + 1;
     }
     this.emitCurrentMatchChanged();
   }
@@ -230,7 +230,7 @@ export class GuxContentSearchBeta {
     ) {
       this.currentMatch = this.getNormalizedMatchCount();
     } else {
-      this.currentMatch--;
+      this.currentMatch = this.getNormalizedCurrentMatch() - 1;
     }
     this.emitCurrentMatchChanged();
   }
