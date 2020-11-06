@@ -1,4 +1,4 @@
-# gux-context-search-beta
+# gux-content-search-beta
 
 
 
@@ -7,11 +7,10 @@
 
 ## Properties
 
-| Property            | Attribute            | Description                                        | Type      | Default |
-| ------------------- | -------------------- | -------------------------------------------------- | --------- | ------- |
-| `currentMatch`      | `current-match`      | The Current match count which needs to highlighted | `number`  | `0`     |
-| `disableNavigation` | `disable-navigation` | Disables the Next and Previous buttons.            | `boolean` | `false` |
-| `matchCount`        | `match-count`        | The Match Count                                    | `number`  | `0`     |
+| Property       | Attribute       | Description                                        | Type     | Default |
+| -------------- | --------------- | -------------------------------------------------- | -------- | ------- |
+| `currentMatch` | `current-match` | The Current match count which needs to highlighted | `number` | `0`     |
+| `matchCount`   | `match-count`   | The Match Count                                    | `number` | `0`     |
 
 
 ## Events
@@ -50,8 +49,8 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-context-search-beta --> gux-icon
-  style gux-context-search-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-content-search-beta --> gux-icon
+  style gux-content-search-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
