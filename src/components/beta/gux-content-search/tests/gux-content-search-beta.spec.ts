@@ -151,7 +151,7 @@ describe('gux-content-search-beta', () => {
       component.matchCount = -1;
       await component.componentWillLoad();
       component.render();
-      expect(component.matchCount).toBe(0);
+      expect(component.matchCount).toBe(-1);
     });
 
     it('componentWillLoad with invalid currentMatch', async () => {
@@ -160,7 +160,7 @@ describe('gux-content-search-beta', () => {
       await component.componentWillLoad();
       component.render();
       expect(component.matchCount).toBe(1);
-      expect(component.currentMatch).toBe(0);
+      expect(component.currentMatch).toBe(-1);
     });
 
     it('componentWillLoad with invalid currentMatch & matchCount', async () => {
@@ -168,8 +168,8 @@ describe('gux-content-search-beta', () => {
       component.matchCount = -1;
       await component.componentWillLoad();
       component.render();
-      expect(component.matchCount).toBe(0);
-      expect(component.currentMatch).toBe(0);
+      expect(component.matchCount).toBe(-1);
+      expect(component.currentMatch).toBe(-1);
     });
 
     it('componentWillLoad with currentMatch greater than matchCount', async () => {
@@ -178,7 +178,7 @@ describe('gux-content-search-beta', () => {
       await component.componentWillLoad();
       component.render();
       expect(component.matchCount).toBe(10);
-      expect(component.currentMatch).toBe(0);
+      expect(component.currentMatch).toBe(11);
     });
 
     it('componentDidLoad with currentMatch when matchCount is 0', async () => {
@@ -187,7 +187,7 @@ describe('gux-content-search-beta', () => {
       await component.componentWillLoad();
       component.render();
       expect(component.matchCount).toBe(0);
-      expect(component.currentMatch).toBe(0);
+      expect(component.currentMatch).toBe(11);
     });
 
     describe('methods', () => {

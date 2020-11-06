@@ -83,8 +83,6 @@ export class GuxContentSearchBeta {
       }
     );
     this.inputSlottedElement.addEventListener('input', e => this.onInput(e));
-    this.setMatchCount();
-    this.setCurrentMatch();
   }
 
   componentDidUnload(): void {
@@ -164,8 +162,8 @@ export class GuxContentSearchBeta {
 
   private matchCountResult(): string {
     return this.i18n('totalMatches', {
-      currentMatch: this.currentMatch,
-      matchCount: this.matchCount
+      currentMatch: this.getNormalizedCurrentMatch(),
+      matchCount: this.getNormalizedMatchCount()
     });
   }
 
@@ -174,30 +172,25 @@ export class GuxContentSearchBeta {
   }
 
   private disableNavigationPanel(): boolean {
-    return this.disabled || this.matchCount <= 0;
+    return this.disabled || this.getNormalizedMatchCount() <= 0;
   }
 
-  private setMatchCount(): void {
-    this.matchCount =
-      this.matchCount &&
+  private getNormalizedMatchCount(): number {
+    return this.matchCount &&
       Number.isInteger(this.matchCount) &&
-      this.matchCount > 0
-        ? Number(this.matchCount)
-        : 0;
+      this.matchCount >= 0
+      ? Number(this.matchCount)
+      : 0;
   }
 
-  private setCurrentMatch(): void {
-    if (this.matchCount <= 0) {
-      this.currentMatch = 0;
-    } else if (this.matchCount > 0) {
-      this.currentMatch =
-        this.currentMatch &&
-        Number.isInteger(this.currentMatch) &&
-        this.currentMatch >= 0 &&
-        this.currentMatch <= this.matchCount
-          ? Number(this.currentMatch)
-          : 0;
-    }
+  private getNormalizedCurrentMatch(): number {
+    return this.currentMatch &&
+      Number.isInteger(this.currentMatch) &&
+      this.currentMatch >= 0 &&
+      this.currentMatch <= this.getNormalizedMatchCount() &&
+      this.getNormalizedMatchCount() > 0
+      ? Number(this.currentMatch)
+      : 0;
   }
 
   private resetInputSlottedElement() {
@@ -219,7 +212,7 @@ export class GuxContentSearchBeta {
     if (this.disableNavigationPanel()) {
       return;
     }
-    if (this.currentMatch === this.matchCount) {
+    if (this.getNormalizedCurrentMatch() === this.getNormalizedMatchCount()) {
       this.currentMatch = 1;
     } else {
       this.currentMatch++;
@@ -231,8 +224,11 @@ export class GuxContentSearchBeta {
     if (this.disableNavigationPanel()) {
       return;
     }
-    if (this.currentMatch === 1 || this.currentMatch === 0) {
-      this.currentMatch = this.matchCount;
+    if (
+      this.getNormalizedCurrentMatch() === 1 ||
+      this.getNormalizedCurrentMatch() === 0
+    ) {
+      this.currentMatch = this.getNormalizedMatchCount();
     } else {
       this.currentMatch--;
     }
@@ -250,6 +246,6 @@ export class GuxContentSearchBeta {
   }
 
   private emitCurrentMatchChanged(): void {
-    this.guxcurrentmatchchanged.emit(this.currentMatch);
+    this.guxcurrentmatchchanged.emit(this.getNormalizedCurrentMatch());
   }
 }
