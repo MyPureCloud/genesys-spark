@@ -2,1385 +2,1419 @@
 
 exports[`gux-rating #render should render component as expected (1) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" role="spinbutton" tabindex="0">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (2) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" role="spinbutton" tabindex="0" value="0">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (3) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="0.5" role="spinbutton" tabindex="0" value="0.5">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="50%" stop-opacity="1"></stop>
-          <stop offset="50%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="50%" stop-opacity="1"></stop>
+            <stop offset="50%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (4) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="1" role="spinbutton" tabindex="0" value="1">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (5) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="1.5" role="spinbutton" tabindex="0" value="1.5">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="50%" stop-opacity="1"></stop>
-          <stop offset="50%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="50%" stop-opacity="1"></stop>
+            <stop offset="50%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (6) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="2" role="spinbutton" tabindex="0" value="2">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (7) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="2.5" role="spinbutton" tabindex="0" value="2.5">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="50%" stop-opacity="1"></stop>
-          <stop offset="50%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="50%" stop-opacity="1"></stop>
+            <stop offset="50%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (8) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" role="spinbutton" tabindex="0" value="3">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (9) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="3.5" role="spinbutton" tabindex="0" value="3.5">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="50%" stop-opacity="1"></stop>
-          <stop offset="50%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="50%" stop-opacity="1"></stop>
+            <stop offset="50%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (10) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="4" role="spinbutton" tabindex="0" value="4">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (11) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="4.5" role="spinbutton" tabindex="0" value="4.5">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="50%" stop-opacity="1"></stop>
-          <stop offset="50%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="50%" stop-opacity="1"></stop>
+            <stop offset="50%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-50" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (12) 1`] = `
 <gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="spinbutton" tabindex="0" value="5">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (13) 1`] = `
 <gux-rating-beta aria-valuemax="10" aria-valuemin="0" aria-valuenow="0" max-value="10" role="spinbutton" tabindex="0" value="0">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (14) 1`] = `
 <gux-rating-beta aria-valuemax="10" aria-valuemin="0" aria-valuenow="5" max-value="10" role="spinbutton" tabindex="0" value="5">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (15) 1`] = `
 <gux-rating-beta aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" max-value="10" role="spinbutton" tabindex="0" value="10">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (16) 1`] = `
-<gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" class="gux-disabled" disabled="" role="spinbutton" tabindex="-1" value="3">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+<gux-rating-beta aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" disabled="" role="spinbutton" tabindex="-1" value="3">
+  <div class="gux-disabled gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;
 
 exports[`gux-rating #render should render component as expected (17) 1`] = `
 <gux-rating-beta aria-readonly="" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" readonly="" role="spinbutton" tabindex="0" value="3">
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="100%" stop-opacity="1"></stop>
-          <stop offset="100%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
-  <gux-rating-star>
-    <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stop-opacity="1"></stop>
-          <stop offset="0%" stop-opacity="1"></stop>
-        </linearGradient>
-      </defs>
-      <g stroke="none" stroke-width="1">
-        <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
-      </g>
-    </svg>
-  </gux-rating-star>
+  <div class="gux-rating-start-container">
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="100%" stop-opacity="1"></stop>
+            <stop offset="100%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-100" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+    <gux-rating-star>
+      <svg role="presentation" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="random" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-opacity="1"></stop>
+            <stop offset="0%" stop-opacity="1"></stop>
+          </linearGradient>
+        </defs>
+        <g stroke="none" stroke-width="1">
+          <polygon class="gux-rating-item-shape-default gux-rating-star-fill-percent-0" fill="url(#random)" points="12,5 14,10 19,10 15.133,13.988 17,19 12,16 7,19 9,14 5,10 10,10" stroke-width="1"></polygon>
+        </g>
+      </svg>
+    </gux-rating-star>
+  </div>
 </gux-rating-beta>
 `;

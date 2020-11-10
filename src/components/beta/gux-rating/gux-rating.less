@@ -1,12 +1,14 @@
 gux-rating-beta {
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: stretch;
-  align-items: center;
 
-  &.gux-disabled {
-    opacity: 0.5;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+  }
+
+  .gux-rating-start-container {
+    &.gux-disabled {
+      opacity: 0.5;
+    }
   }
 }

@@ -8,6 +8,8 @@ import clamp from '../../../utils/number/clamp';
   tag: 'gux-rating-beta'
 })
 export class GuxRating {
+  private ratingElement: HTMLDivElement;
+
   @Element() root: HTMLElement;
 
   @Prop({ mutable: true })
@@ -31,7 +33,7 @@ export class GuxRating {
     }
 
     const ratingStar = (event.target as HTMLElement).closest('gux-rating-star');
-    const clickedStarIndex = Array.from(this.root.children).findIndex(
+    const clickedStarIndex = Array.from(this.ratingElement.children).findIndex(
       child => child === ratingStar
     );
     const clickedStarNominalValue = clickedStarIndex + 1;
@@ -79,7 +81,7 @@ export class GuxRating {
     const validatedNewValue = clamp(
       newValue,
       0,
-      Array.from(this.root.children).length
+      Array.from(this.ratingElement.children).length
     );
 
     if (this.value !== validatedNewValue) {
@@ -111,13 +113,20 @@ export class GuxRating {
       <Host
         role="spinbutton"
         tabindex={this.getTabIndex()}
-        class={{ 'gux-disabled': this.disabled }}
         aria-readonly={this.readonly}
         aria-valuenow={this.value}
         aria-valuemin="0"
         aria-valuemax={this.maxValue}
       >
-        {this.getRatingStarElements()}
+        <div
+          ref={(el: HTMLDivElement) => (this.ratingElement = el)}
+          class={{
+            'gux-rating-start-container': true,
+            'gux-disabled': this.disabled
+          }}
+        >
+          {this.getRatingStarElements()}
+        </div>
       </Host>
     );
   }
