@@ -2,7 +2,7 @@ import { Component, Element, h, Host, Listen, JSX, Prop } from '@stencil/core';
 
 import { GuxSwitchAllowedLayouts } from './gux-switch.types';
 
-import simulateNativeEvent from '../../../utils/simulate-native-event/simulate-native-event';
+import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 
 /**
  * @slot - list of gux-switch-item elements
