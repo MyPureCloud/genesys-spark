@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.1](http://inindca///compare/v1.14.0...v1.14.1) (2020-11-07)
+
+
+### Bug Fixes
+
+* **content search:** css and Visual fix ([7b549b7](http://inindca///commit/7b549b723c1587d37fd639fe09713da087f0e15d))
+* **content search:** fixed the current match ([c9d3ec6](http://inindca///commit/c9d3ec6e2d90578efbb7cfd1b3dafedf6aa19939))
+* **content search:** removed disable navigation and few css changes ([79c7637](http://inindca///commit/79c76374082f0bb940dd0e8d0dd006f276c6d9fa))
+* **content-search:** css fix ([8640e71](http://inindca///commit/8640e7174ed61fa1ecb3f860f4d8fc571cbd93f2))
+* **context search:** fixed the failing unit test ([65cbde4](http://inindca///commit/65cbde49f0e31f80df467bcfd7d4461d2ee802f8))
+* **context search --> content search:** changed gux-context-search --> gux-content-search ([eeb79d9](http://inindca///commit/eeb79d9ac750720085c74ab671777eb465cbfd25))
+* **gux-context-search:** input event not emitted on click of clear ([5c8cdad](http://inindca///commit/5c8cdadd3c575b8bd144bda4cddba12a0326ec31))
+* **icons:** improve handling for non-square icon svgs ([72febca](http://inindca///commit/72febca955ed24dccbb74885a2e531ad695b8daa))
+
+## [1.14.0](http://inindca///compare/v1.13.3...v1.14.0) (2020-11-05)
+
+
+### Features
+
+* **gux-icon:** add gpe svgs ([479257c](http://inindca///commit/479257cb1463a86399f8a75a3403c16761560095))
+* **gux-switch:** api changes ([a894e17](http://inindca///commit/a894e17b3ed14161b97db283fe12a4469cc2a36f))
+
+
+### Bug Fixes
+
+* **gux-tab:** fix margin of gux-tab dropdown ([9db4ad0](http://inindca///commit/9db4ad013f0a13516e37ebdd5c970edb90a9df1a))
+
 ### [1.13.3](http://inindca///compare/v1.13.2...v1.13.3) (2020-10-29)
 
 

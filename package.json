@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "1.13.3",
+  "version": "1.14.1",
   "description": "Common webcomponents",
   "main": "dist/stencil-wrapper.js",
   "types": "dist/types/index.d.ts",
@@ -39,7 +39,7 @@
     "test.e2e": "stencil test --e2e",
     "test.e2e.update-snapshot": "stencil test --e2e --updateSnapshot",
     "test.screenshot": "stencil test --e2e --screenshot",
-    "test.unit": "stencil test --spec",
+    "test.unit": "stencil build dev && stencil test --spec",
     "test.unit.update-snapshot": "stencil test --spec --updateSnapshot",
     "test.update-snapshot": "stencil test --spec --e2e --updateSnapshot",
     "test.watch": "stencil test --spec --e2e --watchAll"

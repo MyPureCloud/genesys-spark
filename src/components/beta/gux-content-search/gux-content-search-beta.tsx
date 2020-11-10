@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import contextSearchResources from './i18n/en.json';
+import contentSearchResources from './i18n/en.json';
 import { onDisabledChange } from '../../../utils/dom/on-attribute-change';
 
 /**
@@ -19,21 +19,15 @@ import { onDisabledChange } from '../../../utils/dom/on-attribute-change';
  */
 
 @Component({
-  styleUrl: 'gux-context-search-beta.less',
-  tag: 'gux-context-search-beta'
+  styleUrl: 'gux-content-search-beta.less',
+  tag: 'gux-content-search-beta'
 })
-export class GuxContextSearchBeta {
+export class GuxContentSearchBeta {
   private inputSlottedElement: HTMLInputElement;
   private disabledObserver: MutationObserver;
 
   @Element()
-  private root: HTMLGuxContextSearchBetaElement;
-
-  /**
-   * Disables the Next and Previous buttons.
-   */
-  @Prop()
-  disableNavigation: boolean = false;
+  private root: HTMLGuxContentSearchBetaElement;
 
   /**
    * The Match Count
@@ -70,15 +64,15 @@ export class GuxContextSearchBeta {
     if (this.disabled) {
       return;
     }
-    this.value = '';
     this.matchCount = 0;
     this.currentMatch = 0;
-    this.inputSlottedElement.value = '';
+    this.value = '';
     this.emitCurrentMatchChanged();
+    this.resetInputSlottedElement();
   }
 
   async componentWillLoad() {
-    this.i18n = await buildI18nForComponent(this.root, contextSearchResources);
+    this.i18n = await buildI18nForComponent(this.root, contentSearchResources);
     this.inputSlottedElement = this.root.querySelector('input');
     this.disabled = this.inputSlottedElement.disabled;
     this.value = this.inputSlottedElement.value;
@@ -89,8 +83,6 @@ export class GuxContextSearchBeta {
       }
     );
     this.inputSlottedElement.addEventListener('input', e => this.onInput(e));
-    this.setMatchCount();
-    this.setCurrentMatch();
   }
 
   componentDidUnload(): void {
@@ -99,7 +91,7 @@ export class GuxContextSearchBeta {
 
   render() {
     return (
-      <div class={{ 'gux-disabled': this.disabled, 'gux-context': true }}>
+      <div class={{ 'gux-disabled': this.disabled, 'gux-content': true }}>
         <div class="gux-search-icon">
           <gux-icon decorative iconName="ic-search"></gux-icon>
         </div>
@@ -113,7 +105,7 @@ export class GuxContextSearchBeta {
     if (this.showNavigationPanel()) {
       const disableNavigationPanel = this.disableNavigationPanel();
       return (
-        <div class="gux-context-control-panel">
+        <div class="gux-content-control-panel">
           <div
             class={{
               'gux-navigation-panel': true,
@@ -122,7 +114,10 @@ export class GuxContextSearchBeta {
             title={this.matchCountResult()}
           >
             <span
-              class="gux-navigation-result"
+              class={{
+                'gux-navigation-result': true,
+                'gux-navigation-result-disabled': disableNavigationPanel
+              }}
               aria-label={this.matchCountResult()}
             >
               {this.matchCountResult()}
@@ -166,22 +161,10 @@ export class GuxContextSearchBeta {
   }
 
   private matchCountResult(): string {
-    if (this.disableNavigation) {
-      if (this.matchCount === 1) {
-        return this.i18n('match', {
-          matchCount: this.matchCount
-        });
-      } else {
-        return this.i18n('matches', {
-          matchCount: this.matchCount
-        });
-      }
-    } else {
-      return this.i18n('totalMatches', {
-        currentMatch: this.currentMatch,
-        matchCount: this.matchCount
-      });
-    }
+    return this.i18n('totalMatches', {
+      currentMatch: this.getNormalizedCurrentMatch(),
+      matchCount: this.getNormalizedMatchCount()
+    });
   }
 
   private showNavigationPanel(): boolean {
@@ -189,44 +172,50 @@ export class GuxContextSearchBeta {
   }
 
   private disableNavigationPanel(): boolean {
-    return this.disabled || this.disableNavigation || this.matchCount <= 0;
+    return this.disabled || this.getNormalizedMatchCount() <= 0;
   }
 
-  private setMatchCount(): void {
-    this.matchCount =
-      this.matchCount &&
+  private getNormalizedMatchCount(): number {
+    return this.matchCount &&
       Number.isInteger(this.matchCount) &&
-      this.matchCount > 0
-        ? Number(this.matchCount)
-        : 0;
+      this.matchCount >= 0
+      ? Number(this.matchCount)
+      : 0;
   }
 
-  private setCurrentMatch(): void {
-    if (this.matchCount <= 0) {
-      this.currentMatch = 0;
-    } else if (this.matchCount > 0) {
-      this.currentMatch =
-        this.currentMatch &&
-        Number.isInteger(this.currentMatch) &&
-        this.currentMatch > 0 &&
-        this.currentMatch <= this.matchCount
-          ? Number(this.currentMatch)
-          : 1;
-    }
+  private getNormalizedCurrentMatch(): number {
+    return this.currentMatch &&
+      Number.isInteger(this.currentMatch) &&
+      this.currentMatch >= 0 &&
+      this.currentMatch <= this.getNormalizedMatchCount() &&
+      this.getNormalizedMatchCount() > 0
+      ? Number(this.currentMatch)
+      : 0;
   }
 
-  private resetCurrentMatch(): void {
-    this.currentMatch = this.matchCount > 0 ? 1 : 0;
+  private resetInputSlottedElement() {
+    this.inputSlottedElement.value = '';
+    this.inputSlottedElement.dispatchEvent(
+      new InputEvent('input', {
+        bubbles: true,
+        cancelable: true
+      })
+    );
+    this.inputSlottedElement.dispatchEvent(
+      new InputEvent('change', {
+        bubbles: true
+      })
+    );
   }
 
   private nextClick(): void {
     if (this.disableNavigationPanel()) {
       return;
     }
-    if (this.currentMatch === this.matchCount) {
+    if (this.getNormalizedCurrentMatch() === this.getNormalizedMatchCount()) {
       this.currentMatch = 1;
     } else {
-      this.currentMatch++;
+      this.currentMatch = this.getNormalizedCurrentMatch() + 1;
     }
     this.emitCurrentMatchChanged();
   }
@@ -235,10 +224,13 @@ export class GuxContextSearchBeta {
     if (this.disableNavigationPanel()) {
       return;
     }
-    if (this.currentMatch === 1) {
-      this.currentMatch = this.matchCount;
+    if (
+      this.getNormalizedCurrentMatch() === 1 ||
+      this.getNormalizedCurrentMatch() === 0
+    ) {
+      this.currentMatch = this.getNormalizedMatchCount();
     } else {
-      this.currentMatch--;
+      this.currentMatch = this.getNormalizedCurrentMatch() - 1;
     }
     this.emitCurrentMatchChanged();
   }
@@ -248,10 +240,12 @@ export class GuxContextSearchBeta {
       return;
     }
     this.value = event.target.value;
-    this.resetCurrentMatch();
+    this.inputSlottedElement.value = event.target.value;
+    this.matchCount = 0;
+    this.currentMatch = 0;
   }
 
   private emitCurrentMatchChanged(): void {
-    this.guxcurrentmatchchanged.emit(this.currentMatch);
+    this.guxcurrentmatchchanged.emit(this.getNormalizedCurrentMatch());
   }
 }
