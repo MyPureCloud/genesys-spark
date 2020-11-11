@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](http://inindca///compare/v1.14.2...v1.15.0) (2020-11-11)
+
+
+### Features
+
+* **gux-rating:** updated public api ([a136905](http://inindca///commit/a136905cef336d0289f1b826dd1f2266a0651147))
+
+
+### Bug Fixes
+
+* **pagination:** drop-up instead of drop-down ([b389ea6](http://inindca///commit/b389ea6cc160f246657c36ee41c2c48ed37f1ef7))
+* **pr-comments:** addressed PR comments ([8a5a668](http://inindca///commit/8a5a66800c8b26499354f6b3dcc8c287c2e00955))
+
 ### [1.14.2](http://inindca///compare/v1.14.1...v1.14.2) (2020-11-10)
 
 
