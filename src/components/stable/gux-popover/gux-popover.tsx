@@ -103,6 +103,12 @@ export class GuxPopover {
             options: {
               offset: [0, 7]
             }
+          },
+          {
+            name: 'arrow',
+            options: {
+              padding: 16
+            }
           }
         ],
         placement: this.position
