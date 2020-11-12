@@ -5,6 +5,7 @@ import {
   EventEmitter,
   h,
   JSX,
+  Listen,
   Prop
 } from '@stencil/core';
 
@@ -18,11 +19,13 @@ import { GuxTagColor } from './gux-tag.types';
   tag: 'gux-tag-beta'
 })
 export class GuxTag {
+  private i18n: GetI18nValue;
+
   @Element()
   root: HTMLGuxTagBetaElement;
 
   /**
-   * Triggered when click on close button
+   * Triggered when click on remove button
    */
   @Event()
   guxdelete: EventEmitter<string>;
@@ -39,27 +42,61 @@ export class GuxTag {
   @Prop()
   value: string;
 
-  private i18n: GetI18nValue;
+  /**
+   * Tag is removable.
+   */
+  @Prop()
+  removable: boolean = false;
 
-  private handlerClickDeleteTag(): void {
+  /**
+   * Tag icon name.
+   */
+  @Prop()
+  icon: string;
+
+  @Listen('keydown')
+  onKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Backspace':
+      case 'Delete':
+        event.preventDefault();
+        event.stopPropagation();
+
+        this.removeTag();
+    }
+  }
+
+  private removeTag(): void {
     this.guxdelete.emit(this.value);
   }
 
-  private getDeleteButton(): JSX.Element {
-    return (
-      <button
-        class={`gux-tag-delete-button gux-${this.color}`}
-        onClick={this.handlerClickDeleteTag.bind(this)}
-        tabindex="0"
-        type="button"
-      >
-        <gux-icon
-          class="gux-tag-delete-icon"
-          icon-name="ic-close"
-          screenreader-text={this.i18n('delete-tag')}
-        />
-      </button>
-    );
+  private getIcon(): JSX.Element {
+    if (this.icon) {
+      return (
+        <div class="gux-tag-icon-container">
+          <gux-icon class="gux-tag-icon" icon-name={this.icon} decorative />
+        </div>
+      );
+    }
+  }
+
+  private getRemoveButton(): JSX.Element {
+    if (this.removable) {
+      return (
+        <button
+          class={`gux-tag-remove-button gux-${this.color}`}
+          onClick={this.removeTag.bind(this)}
+          tabindex="0"
+          type="button"
+        >
+          <gux-icon
+            class="gux-tag-remove-icon"
+            icon-name="ic-close"
+            screenreader-text={this.i18n('remove-tag')}
+          />
+        </button>
+      );
+    }
   }
 
   async componentWillRender(): Promise<void> {
@@ -69,10 +106,13 @@ export class GuxTag {
   render(): JSX.Element {
     return (
       <div class="gux-tag">
-        <div class={`gux-tag-text gux-${this.color}`}>
-          <slot />
+        <div class={`gux-tag-content gux-${this.color}`}>
+          {this.getIcon()}
+          <div class={`gux-tag-text`}>
+            <slot />
+          </div>
         </div>
-        {this.getDeleteButton()}
+        {this.getRemoveButton()}
       </div>
     );
   }
