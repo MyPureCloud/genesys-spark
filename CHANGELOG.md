@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.1](http://inindca///compare/v1.15.0...v1.15.1) (2020-11-12)
+
+
+### Bug Fixes
+
+* **color-palette:** removed gux-mid-grey ([731174d](http://inindca///commit/731174d9824627ae77bec0668aa971bead73dfe0))
+* **gux-popover:** arrow now padded from the popover edge ([e628ae8](http://inindca///commit/e628ae85e2a36e7fdc8b781d7d392e135a26640c))
+
 ## [1.15.0](http://inindca///compare/v1.14.2...v1.15.0) (2020-11-11)
 
 
