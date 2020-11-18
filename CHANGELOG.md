@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.16.0](http://inindca///compare/v1.15.1...v1.16.0) (2020-11-18)
+
+
+### Features
+
+* **flyout-menu:** added flyout menu component ([e2d6496](http://inindca///commit/e2d6496ec4e6826661ee18d5414bb337d471b482))
+
 ### [1.15.1](http://inindca///compare/v1.15.0...v1.15.1) (2020-11-12)
 
 
