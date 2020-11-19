@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.1](http://inindca///compare/v1.16.0...v1.16.1) (2020-11-19)
+
+
+### Bug Fixes
+
+* **gux-tag:** updates to match design ([865e9fb](http://inindca///commit/865e9fb4003dbc1ac32428e65c5517dbf32d9cab))
+
 ## [1.16.0](http://inindca///compare/v1.15.1...v1.16.0) (2020-11-18)
 
 
