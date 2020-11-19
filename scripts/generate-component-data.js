@@ -52,7 +52,7 @@ function getComponentMetadata(path) {
 }
 
 function parseComponentMarkdown(readmePath) {
-  let mdStr = fs.readFileSync(readmePath).toString();
+  const mdStr = fs.readFileSync(readmePath).toString();
 
   return {
     events: parseEventTable(mdStr),
@@ -61,7 +61,7 @@ function parseComponentMarkdown(readmePath) {
 }
 
 function parseEventTable(mdStr) {
-  let eventRegEx = new RegExp(/## Events\s(.*?)\s##/, 'gms');
+  let eventRegEx = new RegExp(/## Events\s(.*?)\n\n/, 'gms');
   let eventMatch = eventRegEx.exec(mdStr);
   let events = [];
   if (eventMatch !== null) {
