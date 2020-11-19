@@ -34,6 +34,7 @@
  - [gux-notification-toast](../gux-notification-toast)
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-popover](../gux-popover)
+ - [gux-rating-beta](../../beta/gux-rating)
  - [gux-search-beta](../../beta/gux-search)
  - [gux-side-panel-button](../../beta/gux-side-panel/buttons)
  - [gux-simple-toast](../gux-simple-toast)
@@ -65,6 +66,7 @@ graph TD;
   gux-notification-toast --> gux-icon
   gux-pagination-buttons --> gux-icon
   gux-popover --> gux-icon
+  gux-rating-beta --> gux-icon
   gux-search-beta --> gux-icon
   gux-side-panel-button --> gux-icon
   gux-simple-toast --> gux-icon

@@ -5,12 +5,9 @@ describe('gux-rating', () => {
     page: E2EPage
   ): Promise<{ emptyStars: number; halfStars: number; fullStars: number }> {
     return {
-      emptyStars: (await page.findAll('.gux-rating-star-fill-percent-0'))
-        .length,
-      halfStars: (await page.findAll('.gux-rating-star-fill-percent-50'))
-        .length,
-      fullStars: (await page.findAll('.gux-rating-star-fill-percent-100'))
-        .length
+      emptyStars: (await page.findAll('.gux-rating-star-empty')).length,
+      halfStars: (await page.findAll('.gux-rating-star-half')).length,
+      fullStars: (await page.findAll('.gux-rating-star-full')).length
     };
   }
 
@@ -102,7 +99,7 @@ describe('gux-rating', () => {
         e2ePage: E2EPage,
         position: number
       ): Promise<void> {
-        const ratingStarElements = await e2ePage.findAll('gux-rating-star');
+        const ratingStarElements = await e2ePage.findAll('gux-icon');
         const ratingElement = ratingStarElements[position - 1];
 
         ratingElement.click();
