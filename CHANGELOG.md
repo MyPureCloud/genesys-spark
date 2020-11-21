@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.17.0](http://inindca///compare/v1.16.1...v1.17.0) (2020-11-21)
+
+
+### Features
+
+* **gux-icon:** add icons ([bf0474f](http://inindca///commit/bf0474fa03daf28f2ac5ac992e9abaddc3bd2716))
+
 ### [1.16.1](http://inindca///compare/v1.16.0...v1.16.1) (2020-11-19)
 
 
