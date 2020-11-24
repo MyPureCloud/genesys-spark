@@ -135,13 +135,12 @@ export class GuxAdvancedDropdown {
         ${this.disabled ? 'gux-disabled' : ''}
         ${this.opened ? 'gux-active' : ''}`}
       >
-        <div class="gux-select-field">
+        <div class="gux-select-field" onMouseDown={() => this.inputMouseDown()}>
           <a
             ref={el => (this.inputBox = el)}
             class="gux-select-input"
             aria-labelledby={this.srLabelledby}
             tabindex="0"
-            onMouseDown={() => this.inputMouseDown()}
             onKeyDown={e => this.inputKeyDown(e)}
           >
             {this.placeholder && !this.value && (
