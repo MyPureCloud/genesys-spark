@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.2](http://inindca///compare/v1.17.1...v1.17.2) (2020-11-25)
+
+
+### Bug Fixes
+
+* **gux-advanced-dropdown:** dropdown icon now works as expected ([0d9a310](http://inindca///commit/0d9a31061273731a59ee91d55514790879d589e6))
+
 ### [1.17.1](http://inindca///compare/v1.17.0...v1.17.1) (2020-11-24)
 
 ## [1.17.0](http://inindca///compare/v1.16.1...v1.17.0) (2020-11-21)
