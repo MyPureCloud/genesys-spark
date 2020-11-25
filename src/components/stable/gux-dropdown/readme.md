@@ -35,6 +35,16 @@ Type: `Promise<void>`
 
 
 
+### `setSelected() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
 
 ## Dependencies
 

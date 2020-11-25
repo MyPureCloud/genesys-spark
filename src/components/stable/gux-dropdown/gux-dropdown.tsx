@@ -90,6 +90,19 @@ export class GuxDropdown {
     this.textFieldElement.setLabelledBy(labeledBy);
   }
 
+  @Method()
+  setSelected(): void {
+    const selectionOptions = this.getSelectionOptions();
+    const selectedOptionIndex = selectionOptions
+      .map(selectionOption => selectionOption.selected)
+      .lastIndexOf(true);
+
+    if (selectedOptionIndex >= 0) {
+      const option = selectionOptions[selectedOptionIndex];
+      this.value = option.text;
+    }
+  }
+
   // TODO: Fix the keyboard navigation I broke
   onKeyDown(event: KeyboardEvent) {
     const selectionOptions = this.getSelectionOptions();
@@ -220,7 +233,9 @@ export class GuxDropdown {
     return this.opened && this.filterable ? ghost : placeholder;
   }
 
-  componentDidLoad() {
+  componentDidLoad(): void {
+    this.setSelected();
+
     if (!this.filterable) {
       this.textFieldElement.readonly = true;
     }
