@@ -1,1 +1,6 @@
-{}
+{
+  "eraseBtnAria": "Rensa",
+  "navigateNextBtn": "Nästa",
+  "navigatePreviousBtn": "Föregående",
+  "totalMatches": "{currentMatch, number} av {matchCount, number}"
+}

@@ -1,1 +1,6 @@
-{}
+{
+  "eraseBtnAria": "Effacer",
+  "navigateNextBtn": "Suivant",
+  "navigatePreviousBtn": "Précédent",
+  "totalMatches": "{currentMatch, number} sur {matchCount, number}"
+}
