@@ -1,1 +1,6 @@
-{}
+{
+  "eraseBtnAria": "清除",
+  "navigateNextBtn": "下一步",
+  "navigatePreviousBtn": "上一步",
+  "totalMatches": "{matchCount, number} 之 {currentMatch, number}"
+}
