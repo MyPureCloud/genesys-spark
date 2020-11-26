@@ -72,6 +72,13 @@ export class GuxDropdown {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
       this.opened = false;
       this.forcedGhostValue = '';
+      const selectionOptions = this.getSelectionOptions();
+      const match = selectionOptions.some(item => {
+        return item.text === this.value;
+      });
+      if (!match) {
+        this.setValue('', '');
+      }
     }
   }
 
