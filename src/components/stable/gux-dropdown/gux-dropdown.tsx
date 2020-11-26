@@ -79,7 +79,7 @@ export class GuxDropdown {
         return item.text === this.value;
       });
       if (!match) {
-        this.setValue('', '');
+        this.value = '';
       }
     }
   }
