@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.4](http://inindca///compare/v1.17.3...v1.17.4) (2020-11-26)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** avoid extra change event ([7e4f608](http://inindca///commit/7e4f608888c2c24f400fa6b17cf3575e8263e361))
+* **gux-dropdown:** do not filter dropdown while opening, until value is edited ([9a49693](http://inindca///commit/9a49693bf428f370ba7d28de3b2cc7d87be32932))
+* **gux-dropdown:** revert to no value if invalid value entered when focus is lost ([29a44e0](http://inindca///commit/29a44e05c667e508e0acf0273858d4c3b19a7657))
+
 ### [1.17.3](http://inindca///compare/v1.17.2...v1.17.3) (2020-11-26)
 
 ### [1.17.2](http://inindca///compare/v1.17.1...v1.17.2) (2020-11-25)
