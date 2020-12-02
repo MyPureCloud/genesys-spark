@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.6](http://inindca///compare/v1.17.5...v1.17.6) (2020-12-02)
+
+
+### Bug Fixes
+
+* **component-specs:** fixed bug in components-spec events generation ([726eeff](http://inindca///commit/726eeff09497cb9e9ee6e78ace2fc304adc11497))
+
 ### [1.17.5](http://inindca///compare/v1.17.4...v1.17.5) (2020-12-01)
 
 ### [1.17.4](http://inindca///compare/v1.17.3...v1.17.4) (2020-11-26)
