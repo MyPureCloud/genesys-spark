@@ -12,7 +12,8 @@ import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
   tag: 'gux-switch-beta'
 })
 export class GuxSwitch {
-  @Element() root: HTMLElement;
+  @Element()
+  root: HTMLElement;
 
   /**
    * Used to keep track of the currently selected value

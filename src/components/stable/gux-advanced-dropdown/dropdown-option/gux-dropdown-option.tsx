@@ -20,7 +20,7 @@ function escapeRegex(input) {
 })
 export class GuxDropdownOption {
   @Element()
-  root: HTMLGuxDropdownOptionElement;
+  root: HTMLElement;
 
   /**
    * The content of this attribute represents the value to be submitted on 'input' changes,

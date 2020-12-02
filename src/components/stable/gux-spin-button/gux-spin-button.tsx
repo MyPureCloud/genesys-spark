@@ -19,7 +19,7 @@ import defaultResources from './i18n/en.json';
 })
 export class GuxSpinButton {
   @Element()
-  element: HTMLElement;
+  root: HTMLElement;
 
   /**
    * The current number value of the text field
@@ -133,7 +133,7 @@ export class GuxSpinButton {
   }
 
   async componentWillLoad() {
-    this.i18n = await buildI18nForComponent(this.element, defaultResources);
+    this.i18n = await buildI18nForComponent(this.root, defaultResources);
     this.validate();
   }
 

@@ -29,7 +29,8 @@ export class GuxPopover {
   private forElement: HTMLElement;
   private hiddenObserver: MutationObserver;
 
-  @Element() private element: HTMLElement;
+  @Element()
+  private root: HTMLElement;
 
   /**
    * Indicates the id of the element the popover should anchor to
@@ -74,7 +75,7 @@ export class GuxPopover {
   @Listen('click', { target: 'window' })
   onClickAway(e: FocusEvent) {
     if (!this.displayDismissButton && !this.hidden) {
-      if (!e.relatedTarget || !this.element.contains(e.relatedTarget as Node)) {
+      if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
         this.dismiss();
       }
     }
@@ -96,7 +97,7 @@ export class GuxPopover {
 
   private runPopper(): void {
     if (this.forElement) {
-      this.popperInstance = createPopper(this.forElement, this.element, {
+      this.popperInstance = createPopper(this.forElement, this.root, {
         modifiers: [
           {
             name: 'offset',
@@ -130,23 +131,20 @@ export class GuxPopover {
   private dismiss(): void {
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
-      this.element.setAttribute('hidden', '');
+      this.root.setAttribute('hidden', '');
     }
   }
 
   async componentWillLoad(): Promise<void> {
     this.forElement = document.getElementById(this.for);
 
-    this.i18n = await buildI18nForComponent(
-      this.element,
-      modalComponentResources
-    );
+    this.i18n = await buildI18nForComponent(this.root, modalComponentResources);
 
-    this.hiddenObserver = onHiddenChange(this.element, (hidden: boolean) => {
+    this.hiddenObserver = onHiddenChange(this.root, (hidden: boolean) => {
       this.hidden = hidden;
     });
 
-    this.hidden = this.element.hidden;
+    this.hidden = this.root.hidden;
   }
 
   componentDidLoad(): void {

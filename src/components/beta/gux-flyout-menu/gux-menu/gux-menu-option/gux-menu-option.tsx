@@ -10,7 +10,7 @@ export class GuxMenuOption {
   private buttonElement: HTMLButtonElement;
 
   @Element()
-  private root: HTMLGuxMenuOptionElement;
+  private root: HTMLElement;
 
   /**
    * Focus on the components button element

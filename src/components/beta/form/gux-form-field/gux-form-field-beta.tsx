@@ -13,7 +13,7 @@ export class GuxFormFieldBeta {
   private label: HTMLLabelElement;
 
   @Element()
-  private root: HTMLGuxFormFieldBetaElement;
+  private root: HTMLElement;
 
   @State()
   private type: string;

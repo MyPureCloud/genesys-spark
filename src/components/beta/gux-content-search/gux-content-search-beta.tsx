@@ -27,7 +27,7 @@ export class GuxContentSearchBeta {
   private disabledObserver: MutationObserver;
 
   @Element()
-  private root: HTMLGuxContentSearchBetaElement;
+  private root: HTMLElement;
 
   /**
    * The Match Count

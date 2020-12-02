@@ -21,7 +21,7 @@ import { GuxItemsPerPage } from '../gux-pagination.types';
 })
 export class GuxPaginationItemsPerPage implements ComponentInterface {
   @Element()
-  private element: HTMLGuxPaginationItemsPerPageElement;
+  private root: HTMLElement;
 
   private i18n: GetI18nValue;
 
@@ -40,7 +40,7 @@ export class GuxPaginationItemsPerPage implements ComponentInterface {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.element, paginationResources);
+    this.i18n = await buildI18nForComponent(this.root, paginationResources);
   }
 
   private getDropdown(): JSX.Element {

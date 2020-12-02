@@ -23,10 +23,11 @@ export class GuxTab {
   @State() private popoverHidden: boolean = true;
   @State() private hasAnimated: boolean = false;
 
-  @Element() private element: HTMLElement;
+  @Element()
+  private root: HTMLElement;
 
   private get hasDropdownOptions() {
-    return !!this.element.querySelector('[slot="dropdown-options"]');
+    return !!this.root.querySelector('[slot="dropdown-options"]');
   }
 
   toggleOptions(e: MouseEvent) {
@@ -46,7 +47,7 @@ export class GuxTab {
   componentDidLoad() {
     if (!this.hasAnimated) {
       writeTask(() => {
-        this.element.querySelector('.gux-tab').classList.add('show');
+        this.root.querySelector('.gux-tab').classList.add('show');
         this.hasAnimated = true;
       });
     }

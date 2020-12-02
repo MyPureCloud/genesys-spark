@@ -22,7 +22,7 @@ export class GuxTag {
   private i18n: GetI18nValue;
 
   @Element()
-  root: HTMLGuxTagBetaElement;
+  root: HTMLElement;
 
   /**
    * Triggered when click on remove button

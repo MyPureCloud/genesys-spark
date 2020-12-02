@@ -16,7 +16,7 @@ function getToggleButton(slot: HTMLElement): HTMLElement {
 })
 export class GuxAccordion {
   @Element()
-  root: HTMLGuxAccordionElement;
+  root: HTMLElement;
 
   sections: ISection[] = [];
 

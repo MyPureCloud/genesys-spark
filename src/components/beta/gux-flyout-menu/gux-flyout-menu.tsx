@@ -24,7 +24,7 @@ export class GuxFlyoutMenu {
   private menuContentElement: HTMLDivElement;
 
   @Element()
-  private root: HTMLGuxMenuOptionElement;
+  private root: HTMLElement;
 
   @State()
   private isShown: boolean = false;

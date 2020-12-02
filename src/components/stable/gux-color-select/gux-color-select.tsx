@@ -17,7 +17,7 @@ import { defaultColors } from './colors';
 })
 export class GuxColorSelect {
   @Element()
-  element: HTMLElement;
+  root: HTMLElement;
 
   /**
    * Determines the state activeColor
@@ -70,7 +70,7 @@ export class GuxColorSelect {
     const rowWidth = 5;
     const blankTiles = [];
     const hangingTiles =
-      (defaultColors.length + this.element.children.length) % rowWidth;
+      (defaultColors.length + this.root.children.length) % rowWidth;
     const blankTilesLength = hangingTiles === 0 ? 0 : rowWidth - hangingTiles;
     for (let i = 0; i < blankTilesLength; i += 1) {
       blankTiles.push(

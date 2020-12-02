@@ -17,6 +17,7 @@ import {
 export class GuxSearch {
   @Element()
   root: HTMLElement;
+
   textFieldElement: HTMLGuxTextFieldElement;
 
   /**

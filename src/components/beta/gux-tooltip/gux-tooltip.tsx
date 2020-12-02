@@ -30,7 +30,7 @@ export class GuxTooltip {
   private id = randomHTMLId('gux-tooltip');
 
   @Element()
-  private element: HTMLGuxTooltipBetaElement;
+  private root: HTMLElement;
 
   /**
    * Indicates the id of the element the popover should anchor to. (If not supplied the parent element is used)
@@ -66,7 +66,7 @@ export class GuxTooltip {
     if (this.for) {
       this.forElement = document.getElementById(this.for);
     } else {
-      this.forElement = this.element.parentElement;
+      this.forElement = this.root.parentElement;
     }
   }
 
@@ -75,7 +75,7 @@ export class GuxTooltip {
       this.forElement.classList.add('gux-tooltip-for-element');
       this.forElement.setAttribute('aria-describedby', this.id);
 
-      this.popperInstance = createPopper(this.forElement, this.element, {
+      this.popperInstance = createPopper(this.forElement, this.root, {
         modifiers: [
           {
             name: 'offset',

@@ -38,11 +38,11 @@ export class GuxModal {
   private getI18nValue: GetI18nValue;
 
   @Element()
-  private element: HTMLElement;
+  private root: HTMLElement;
 
   async componentWillLoad(): Promise<void> {
     this.getI18nValue = await buildI18nForComponent(
-      this.element,
+      this.root,
       modalComponentResources
     );
   }
@@ -99,13 +99,13 @@ export class GuxModal {
   }
 
   private hasModalTitleSlot(): boolean {
-    return Boolean(this.element.querySelector('[slot="title"]'));
+    return Boolean(this.root.querySelector('[slot="title"]'));
   }
 
   private hasFooterButtons(): boolean {
     return (
-      Boolean(this.element.querySelector('[slot="left-align-buttons"]')) ||
-      Boolean(this.element.querySelector('[slot="right-align-buttons"]'))
+      Boolean(this.root.querySelector('[slot="left-align-buttons"]')) ||
+      Boolean(this.root.querySelector('[slot="right-align-buttons"]'))
     );
   }
 
@@ -114,7 +114,7 @@ export class GuxModal {
 
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
-      this.element.remove();
+      this.root.remove();
     }
   }
 }

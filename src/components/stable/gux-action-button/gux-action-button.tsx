@@ -62,7 +62,7 @@ export class GuxActionButton {
   isOpen: boolean = false;
 
   @Element()
-  root: HTMLGuxActionButtonElement;
+  root: HTMLElement;
 
   toggle() {
     this.isOpen = !this.isOpen;

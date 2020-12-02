@@ -10,7 +10,8 @@ import clamp from '../../../utils/number/clamp';
 export class GuxRating {
   private ratingElement: HTMLDivElement;
 
-  @Element() root: HTMLElement;
+  @Element()
+  root: HTMLElement;
 
   @Prop({ mutable: true })
   value: number = 0;

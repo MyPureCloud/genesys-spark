@@ -21,7 +21,8 @@ import textFieldResources from './i18n/en.json';
 })
 export class GuxTextField {
   @Element()
-  root: HTMLGuxTextFieldElement;
+  root: HTMLElement;
+
   inputElement: HTMLInputElement;
 
   /**

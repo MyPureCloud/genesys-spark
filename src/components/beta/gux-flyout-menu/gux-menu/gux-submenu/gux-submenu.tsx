@@ -30,7 +30,7 @@ export class GuxSubmenu {
   private submenuContentElement: HTMLDivElement;
 
   @Element()
-  private root: HTMLGuxSubmenuElement;
+  private root: HTMLElement;
 
   @Prop()
   label: string;

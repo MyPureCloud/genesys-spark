@@ -20,7 +20,7 @@ const validChildren = 'gux-list-item:not([disabled])';
 })
 export class GuxList {
   @Element()
-  root: HTMLGuxListElement;
+  root: HTMLElement;
 
   /**
    * The current selection in the list.

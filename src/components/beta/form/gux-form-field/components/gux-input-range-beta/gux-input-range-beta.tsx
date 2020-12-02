@@ -16,7 +16,7 @@ export class GuxInputRangeBeta {
   private disabledObserver: MutationObserver;
 
   @Element()
-  private root: HTMLGuxInputRangeBetaElement;
+  private root: HTMLElement;
 
   @State()
   private disabled: boolean;

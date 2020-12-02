@@ -13,7 +13,7 @@ export class GuxBreadcrumbs {
   private i18n: GetI18nValue;
 
   @Element()
-  private root: HTMLGuxBreadcrumbsBetaElement;
+  private root: HTMLElement;
 
   @Prop()
   accent: GuxBreadcrumbAccent = 'primary';

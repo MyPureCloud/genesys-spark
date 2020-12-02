@@ -6,7 +6,8 @@ import { Component, Element, h, Method, Prop, State } from '@stencil/core';
 })
 export class GuxOption {
   @Element()
-  root: HTMLGuxOptionElement;
+  root: HTMLElement;
+
   slotContent: HTMLElement;
 
   /**
