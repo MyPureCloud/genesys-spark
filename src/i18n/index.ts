@@ -37,7 +37,9 @@ export async function getComponentI18nResources(
   defaultResources: ILocalizedComponentResources,
   locale: string
 ): Promise<ILocalizedComponentResources> {
-  const componentName = component.tagName.toLocaleLowerCase();
+  const componentName = component.tagName
+    .toLocaleLowerCase()
+    .replace(/-beta$/, '');
 
   let resources: ILocalizedComponentResources;
   if (component['i18n-resources']) {
