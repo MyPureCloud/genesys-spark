@@ -1,0 +1,6 @@
+{
+  "eraseBtnAria": "クリア",
+  "navigateNextBtn": "次へ",
+  "navigatePreviousBtn": "前へ",
+  "totalMatches": "{matchCount, number} 個中の {currentMatch, number} 個"
+}

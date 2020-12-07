@@ -40,7 +40,7 @@ export class GuxCheckbox {
 
   /** Emits when the checked state changes. */
   @Event()
-  check!: EventEmitter<boolean>;
+  check: EventEmitter<boolean>;
 
   componentWillLoad() {
     this.id = nextCheckboxId++;

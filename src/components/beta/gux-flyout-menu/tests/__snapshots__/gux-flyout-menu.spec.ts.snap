@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-flyout-menu #render should render as expected 1`] = `
+<gux-flyout-menu-beta tabindex="1">
+  <!---->
+  <span aria-haspopup="true">
+    <span slot="target">
+      Example Target Element
+    </span>
+  </span>
+  <div class="gux-flyout-menu-wrapper" style="position: absolute; left: 0; top: 0; margin: 0;">
+    <div class="gux-flyout-menu-content">
+      <gux-menu role="menu" slot="menu">
+        <!---->
+        <gux-menu-option>
+          <!---->
+          <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+            <span class="gux-menu-option-button-text">
+              Option One
+            </span>
+          </button>
+        </gux-menu-option>
+        <gux-submenu label="Submenu Two">
+          <!---->
+          <button aria-haspopup="true" class="gux-submenu-button" tabindex="-1" type="button">
+            <span class="gux-submenu-button-text">
+              Submenu Two
+            </span>
+            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-right"></gux-icon>
+          </button>
+          <div class="gux-submenu-wrapper" style="position: absolute; left: 0; top: 0; margin: 0;">
+            <div class="gux-submenu-content" role="menu">
+              <gux-menu-option>
+                <!---->
+                <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                  <span class="gux-menu-option-button-text">
+                    Option One
+                  </span>
+                </button>
+              </gux-menu-option>
+              <gux-submenu label="Submenu Two">
+                <!---->
+                <button aria-haspopup="true" class="gux-submenu-button" tabindex="-1" type="button">
+                  <span class="gux-submenu-button-text">
+                    Submenu Two
+                  </span>
+                  <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-right"></gux-icon>
+                </button>
+                <div class="gux-submenu-wrapper" style="position: absolute; left: 0; top: 0; margin: 0;">
+                  <div class="gux-submenu-content" role="menu">
+                    <gux-menu-option>
+                      <!---->
+                      <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                        <span class="gux-menu-option-button-text">
+                          Option One
+                        </span>
+                      </button>
+                    </gux-menu-option>
+                    <gux-menu-option>
+                      <!---->
+                      <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                        <span class="gux-menu-option-button-text">
+                          Option Two
+                        </span>
+                      </button>
+                    </gux-menu-option>
+                    <gux-menu-option>
+                      <!---->
+                      <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                        <span class="gux-menu-option-button-text">
+                          Option Three
+                        </span>
+                      </button>
+                    </gux-menu-option>
+                  </div>
+                </div>
+              </gux-submenu>
+              <gux-menu-option>
+                <!---->
+                <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                  <span class="gux-menu-option-button-text">
+                    Option Three
+                  </span>
+                </button>
+              </gux-menu-option>
+            </div>
+          </div>
+        </gux-submenu>
+        <gux-menu-option>
+          <!---->
+          <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+            <span class="gux-menu-option-button-text">
+              Option Three
+            </span>
+          </button>
+        </gux-menu-option>
+        <gux-menu-option>
+          <!---->
+          <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+            <span class="gux-menu-option-button-text">
+              Option Four
+            </span>
+          </button>
+        </gux-menu-option>
+        <gux-submenu label="Submenu Five">
+          <!---->
+          <button aria-haspopup="true" class="gux-submenu-button" tabindex="-1" type="button">
+            <span class="gux-submenu-button-text">
+              Submenu Five
+            </span>
+            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-right"></gux-icon>
+          </button>
+          <div class="gux-submenu-wrapper" style="position: absolute; left: 0; top: 0; margin: 0;">
+            <div class="gux-submenu-content" role="menu">
+              <gux-menu-option>
+                <!---->
+                <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                  <span class="gux-menu-option-button-text">
+                    Option One
+                  </span>
+                </button>
+              </gux-menu-option>
+              <gux-menu-option>
+                <!---->
+                <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                  <span class="gux-menu-option-button-text">
+                    Option Two
+                  </span>
+                </button>
+              </gux-menu-option>
+              <gux-submenu label="Submenu Three">
+                <!---->
+                <button aria-haspopup="true" class="gux-submenu-button" tabindex="-1" type="button">
+                  <span class="gux-submenu-button-text">
+                    Submenu Three
+                  </span>
+                  <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-right"></gux-icon>
+                </button>
+                <div class="gux-submenu-wrapper" style="position: absolute; left: 0; top: 0; margin: 0;">
+                  <div class="gux-submenu-content" role="menu">
+                    <gux-menu-option>
+                      <!---->
+                      <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                        <span class="gux-menu-option-button-text">
+                          Option One
+                        </span>
+                      </button>
+                    </gux-menu-option>
+                    <gux-submenu label="Submenu Two">
+                      <!---->
+                      <button aria-haspopup="true" class="gux-submenu-button" tabindex="-1" type="button">
+                        <span class="gux-submenu-button-text">
+                          Submenu Two
+                        </span>
+                        <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-right"></gux-icon>
+                      </button>
+                      <div class="gux-submenu-wrapper" style="position: absolute; left: 0; top: 0; margin: 0;">
+                        <div class="gux-submenu-content" role="menu">
+                          <gux-menu-option>
+                            <!---->
+                            <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                              <span class="gux-menu-option-button-text">
+                                Option One
+                              </span>
+                            </button>
+                          </gux-menu-option>
+                          <gux-submenu label="Submenu Two">
+                            <!---->
+                            <button aria-haspopup="true" class="gux-submenu-button" tabindex="-1" type="button">
+                              <span class="gux-submenu-button-text">
+                                Submenu Two
+                              </span>
+                              <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-right"></gux-icon>
+                            </button>
+                            <div class="gux-submenu-wrapper" style="position: absolute; left: 0; top: 0; margin: 0;">
+                              <div class="gux-submenu-content" role="menu">
+                                <gux-menu-option>
+                                  <!---->
+                                  <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                                    <span class="gux-menu-option-button-text">
+                                      Option One
+                                    </span>
+                                  </button>
+                                </gux-menu-option>
+                                <gux-menu-option>
+                                  <!---->
+                                  <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                                    <span class="gux-menu-option-button-text">
+                                      Option Two
+                                    </span>
+                                  </button>
+                                </gux-menu-option>
+                                <gux-menu-option>
+                                  <!---->
+                                  <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                                    <span class="gux-menu-option-button-text">
+                                      Option Three
+                                    </span>
+                                  </button>
+                                </gux-menu-option>
+                              </div>
+                            </div>
+                          </gux-submenu>
+                          <gux-menu-option>
+                            <!---->
+                            <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                              <span class="gux-menu-option-button-text">
+                                Option Three
+                              </span>
+                            </button>
+                          </gux-menu-option>
+                        </div>
+                      </div>
+                    </gux-submenu>
+                    <gux-menu-option>
+                      <!---->
+                      <button class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                        <span class="gux-menu-option-button-text">
+                          Option Three
+                        </span>
+                      </button>
+                    </gux-menu-option>
+                  </div>
+                </div>
+              </gux-submenu>
+            </div>
+          </div>
+        </gux-submenu>
+      </gux-menu>
+    </div>
+    <div class="gux-arrow" data-popper-arrow style="position: absolute;"></div>
+  </div>
+</gux-flyout-menu-beta>
+`;

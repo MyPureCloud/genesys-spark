@@ -1,0 +1,6 @@
+{
+  "eraseBtnAria": "Vymazat",
+  "navigateNextBtn": "Další",
+  "navigatePreviousBtn": "Předchozí",
+  "totalMatches": "{currentMatch, number} z {matchCount, number}"
+}

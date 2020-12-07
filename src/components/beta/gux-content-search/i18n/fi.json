@@ -1,0 +1,6 @@
+{
+  "eraseBtnAria": "Tyhjennä",
+  "navigateNextBtn": "Seuraava",
+  "navigatePreviousBtn": "Edellinen",
+  "totalMatches": "{currentMatch, number}/{matchCount, number}"
+}

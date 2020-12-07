@@ -1,0 +1,6 @@
+{
+  "eraseBtnAria": "Ryd",
+  "navigateNextBtn": "Næste",
+  "navigatePreviousBtn": "Forrige",
+  "totalMatches": "{currentMatch, number} af {matchCount, number}"
+}

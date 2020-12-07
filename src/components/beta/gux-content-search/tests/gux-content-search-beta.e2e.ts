@@ -162,8 +162,8 @@ describe('gux-content-search-beta', () => {
       let currentMatch = await element.getProperty('currentMatch');
       let matchCount = await element.getProperty('matchCount');
       expect(value).toBe('test');
-      expect(currentMatch).toBe(0);
-      expect(matchCount).toBe(0);
+      expect(currentMatch).toBe(1);
+      expect(matchCount).toBe(20);
       expect(inputSpy).toHaveReceivedEventTimes(4);
 
       clearButton.click();

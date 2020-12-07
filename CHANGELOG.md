@@ -2,6 +2,84 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.6](http://inindca///compare/v1.17.5...v1.17.6) (2020-12-02)
+
+
+### Bug Fixes
+
+* **component-specs:** fixed bug in components-spec events generation ([726eeff](http://inindca///commit/726eeff09497cb9e9ee6e78ace2fc304adc11497))
+
+### [1.17.5](http://inindca///compare/v1.17.4...v1.17.5) (2020-12-01)
+
+### [1.17.4](http://inindca///compare/v1.17.3...v1.17.4) (2020-11-26)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** avoid extra change event ([7e4f608](http://inindca///commit/7e4f608888c2c24f400fa6b17cf3575e8263e361))
+* **gux-dropdown:** do not filter dropdown while opening, until value is edited ([9a49693](http://inindca///commit/9a49693bf428f370ba7d28de3b2cc7d87be32932))
+* **gux-dropdown:** revert to no value if invalid value entered when focus is lost ([29a44e0](http://inindca///commit/29a44e05c667e508e0acf0273858d4c3b19a7657))
+
+### [1.17.3](http://inindca///compare/v1.17.2...v1.17.3) (2020-11-26)
+
+### [1.17.2](http://inindca///compare/v1.17.1...v1.17.2) (2020-11-25)
+
+
+### Bug Fixes
+
+* **gux-advanced-dropdown:** dropdown icon now works as expected ([0d9a310](http://inindca///commit/0d9a31061273731a59ee91d55514790879d589e6))
+
+### [1.17.1](http://inindca///compare/v1.17.0...v1.17.1) (2020-11-24)
+
+## [1.17.0](http://inindca///compare/v1.16.1...v1.17.0) (2020-11-21)
+
+
+### Features
+
+* **gux-icon:** add icons ([bf0474f](http://inindca///commit/bf0474fa03daf28f2ac5ac992e9abaddc3bd2716))
+
+### [1.16.1](http://inindca///compare/v1.16.0...v1.16.1) (2020-11-19)
+
+
+### Bug Fixes
+
+* **gux-tag:** updates to match design ([865e9fb](http://inindca///commit/865e9fb4003dbc1ac32428e65c5517dbf32d9cab))
+
+## [1.16.0](http://inindca///compare/v1.15.1...v1.16.0) (2020-11-18)
+
+
+### Features
+
+* **flyout-menu:** added flyout menu component ([e2d6496](http://inindca///commit/e2d6496ec4e6826661ee18d5414bb337d471b482))
+
+### [1.15.1](http://inindca///compare/v1.15.0...v1.15.1) (2020-11-12)
+
+
+### Bug Fixes
+
+* **color-palette:** removed gux-mid-grey ([731174d](http://inindca///commit/731174d9824627ae77bec0668aa971bead73dfe0))
+* **gux-popover:** arrow now padded from the popover edge ([e628ae8](http://inindca///commit/e628ae85e2a36e7fdc8b781d7d392e135a26640c))
+
+## [1.15.0](http://inindca///compare/v1.14.2...v1.15.0) (2020-11-11)
+
+
+### Features
+
+* **gux-rating:** updated public api ([a136905](http://inindca///commit/a136905cef336d0289f1b826dd1f2266a0651147))
+
+
+### Bug Fixes
+
+* **pagination:** drop-up instead of drop-down ([b389ea6](http://inindca///commit/b389ea6cc160f246657c36ee41c2c48ed37f1ef7))
+* **pr-comments:** addressed PR comments ([8a5a668](http://inindca///commit/8a5a66800c8b26499354f6b3dcc8c287c2e00955))
+
+### [1.14.2](http://inindca///compare/v1.14.1...v1.14.2) (2020-11-10)
+
+
+### Bug Fixes
+
+* **content search:** changed Input Event ([737beb4](http://inindca///commit/737beb4623abcf13782b32c250ede12d214ab344))
+
 ### [1.14.1](http://inindca///compare/v1.14.0...v1.14.1) (2020-11-07)
 
 

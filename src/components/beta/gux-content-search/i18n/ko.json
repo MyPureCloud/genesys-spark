@@ -1,0 +1,6 @@
+{
+  "eraseBtnAria": "지우기",
+  "navigateNextBtn": "다음",
+  "navigatePreviousBtn": "이전",
+  "totalMatches": "{matchCount, number}개 중 {currentMatch, number}개"
+}

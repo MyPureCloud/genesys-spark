@@ -47,7 +47,7 @@ export class GuxRadio {
    * Fired when the checked status of the radio changes.
    */
   @Event()
-  check!: EventEmitter<boolean>;
+  check: EventEmitter<boolean>;
 
   /**
    * Fired when the component is loaded.  Used for communicating with the

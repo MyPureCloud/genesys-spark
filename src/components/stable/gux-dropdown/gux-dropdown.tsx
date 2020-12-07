@@ -58,6 +58,8 @@ export class GuxDropdown {
 
   inputIsFocused: boolean = false;
 
+  valueEdited: boolean = false;
+
   /**
    * Emits when selection is changed.
    */
@@ -72,6 +74,13 @@ export class GuxDropdown {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
       this.opened = false;
       this.forcedGhostValue = '';
+      const selectionOptions = this.getSelectionOptions();
+      const match = selectionOptions.some(item => {
+        return item.text === this.value;
+      });
+      if (!match) {
+        this.value = '';
+      }
     }
   }
 
@@ -114,6 +123,7 @@ export class GuxDropdown {
       case KeyCode.Space:
         break;
       default:
+        this.valueEdited = true;
         if (!this.filterable) {
           const arr = selectionOptions.filter(item => {
             return item.text.startsWith(event.key);
@@ -128,6 +138,7 @@ export class GuxDropdown {
   setValue(text: string, value: string) {
     this.value = text;
     this.opened = false;
+    this.valueEdited = false;
     this.emitChange(value);
   }
 
@@ -299,7 +310,7 @@ export class GuxDropdown {
     if (selectionOptions) {
       for (const option of selectionOptions) {
         option.shouldFilter(searchInput).then(isFiltered => {
-          if (this.filterable && isFiltered) {
+          if (this.filterable && isFiltered && this.valueEdited) {
             option.classList.add('gux-filtered');
           } else {
             option.classList.remove('gux-filtered');

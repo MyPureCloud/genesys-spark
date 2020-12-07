@@ -1,0 +1,6 @@
+{
+  "eraseBtnAria": "ล้าง",
+  "navigateNextBtn": "ถัดไป",
+  "navigatePreviousBtn": "ก่อนหน้า",
+  "totalMatches": "{currentMatch, number} จาก {matchCount, number}"
+}

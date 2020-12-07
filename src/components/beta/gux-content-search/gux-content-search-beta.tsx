@@ -236,13 +236,7 @@ export class GuxContentSearchBeta {
   }
 
   private onInput(event): void {
-    if (this.disabled) {
-      return;
-    }
     this.value = event.target.value;
-    this.inputSlottedElement.value = event.target.value;
-    this.matchCount = 0;
-    this.currentMatch = 0;
   }
 
   private emitCurrentMatchChanged(): void {
