@@ -42,7 +42,7 @@ function sortActions(
 })
 export class GuxCommandPalette {
   @Element()
-  element: HTMLElement;
+  root: HTMLElement;
 
   /**
    * The current search value.
@@ -61,7 +61,7 @@ export class GuxCommandPalette {
   private i18n: GetI18nValue;
 
   async componentWillLoad() {
-    this.i18n = await buildI18nForComponent(this.element, paletteResources);
+    this.i18n = await buildI18nForComponent(this.root, paletteResources);
   }
 
   render() {
@@ -86,7 +86,7 @@ export class GuxCommandPalette {
   }
 
   renderLists() {
-    const allItems = Array.from(this.element.children).slice(0, -1) as any[];
+    const allItems = Array.from(this.root.children).slice(0, -1) as any[];
     const recentItems = allItems.filter(item => item.recent);
     const commonItems = allItems.filter(item => item.common);
     let filteredItems = this.filterItems(allItems);
@@ -316,7 +316,7 @@ export class GuxCommandPalette {
   }
 
   private navigateUp() {
-    const focusedElement = this.element.querySelector(':focus');
+    const focusedElement = this.root.querySelector(':focus');
     if (this.elementIsSearch(focusedElement)) {
       // Already at the top, don't need to focus elsewhere
       return;
@@ -339,9 +339,9 @@ export class GuxCommandPalette {
   }
 
   private navigateDown() {
-    const focusedElement = this.element.querySelector(':focus');
+    const focusedElement = this.root.querySelector(':focus');
     if (this.elementIsSearch(focusedElement)) {
-      this.element.querySelector('gux-list').setFocusOnFirstItem();
+      this.root.querySelector('gux-list').setFocusOnFirstItem();
       return;
     }
 

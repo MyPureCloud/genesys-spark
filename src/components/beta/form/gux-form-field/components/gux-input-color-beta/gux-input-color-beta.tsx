@@ -14,7 +14,7 @@ export class GuxInputColorBeta {
   private disabledObserver: MutationObserver;
 
   @Element()
-  private root: HTMLGuxInputColorBetaElement;
+  private root: HTMLElement;
 
   @State()
   private disabled: boolean;

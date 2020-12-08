@@ -15,7 +15,8 @@ const SPACE = 32;
 })
 export class GuxToggle {
   @Element()
-  root: HTMLGuxToggleElement;
+  root: HTMLElement;
+
   checkboxElement: HTMLInputElement;
 
   /**

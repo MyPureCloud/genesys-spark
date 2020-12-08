@@ -16,7 +16,7 @@ import {
 })
 export class GuxColorPicker {
   @Element()
-  root: HTMLGuxColorPickerElement;
+  root: HTMLElement;
 
   /**
    * Determines the state activeColor

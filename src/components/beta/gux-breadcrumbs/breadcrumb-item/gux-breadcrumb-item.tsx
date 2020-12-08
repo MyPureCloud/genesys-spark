@@ -8,7 +8,7 @@ import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 })
 export class GuxBreadcrumbItem {
   @Element()
-  private root: HTMLGuxBreadcrumbItemElement;
+  private root: HTMLElement;
 
   @Prop()
   href: string;

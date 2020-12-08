@@ -29,7 +29,7 @@ import { GuxCalendarMode, IDateElement } from './gux-calendar.types';
 })
 export class GuxCalendar {
   @Element()
-  root: HTMLGuxCalendarElement;
+  root: HTMLElement;
 
   /**
    * The calendar current selected date

@@ -16,7 +16,7 @@ import paginationResources from './i18n/en.json';
 })
 export class GuxPaginationItemCounts implements ComponentInterface {
   @Element()
-  private element: HTMLGuxPaginationItemCountsElement;
+  private root: HTMLElement;
 
   private i18n: GetI18nValue;
 
@@ -46,7 +46,7 @@ export class GuxPaginationItemCounts implements ComponentInterface {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.element, paginationResources);
+    this.i18n = await buildI18nForComponent(this.root, paginationResources);
   }
 
   render(): JSX.Element {

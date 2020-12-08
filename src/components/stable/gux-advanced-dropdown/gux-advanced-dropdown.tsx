@@ -20,6 +20,7 @@ import advancedDropDownResources from './i18n/en.json';
 export class GuxAdvancedDropdown {
   @Element()
   root: HTMLElement;
+
   searchElement: HTMLGuxSearchBetaElement;
   inputBox: HTMLElement;
 

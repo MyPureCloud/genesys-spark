@@ -13,7 +13,7 @@ export class GuxInputCheckboxBeta {
   private label: HTMLLabelElement;
 
   @Element()
-  private root: HTMLGuxInputCheckboxBetaElement;
+  private root: HTMLElement;
 
   @State()
   private checked: boolean;

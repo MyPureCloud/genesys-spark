@@ -28,7 +28,7 @@ import { GuxDatepickerMode } from './gux-datepicker.types';
 })
 export class GuxDatepicker {
   @Element()
-  root: HTMLGuxDatepickerElement;
+  root: HTMLElement;
   /**
    * The datepicker current value
    */

@@ -20,7 +20,7 @@ import { GuxPaginationButtonsService } from './gux-pagination-button.service';
 })
 export class GuxPaginationButtons {
   @Element()
-  private element: HTMLGuxPaginationItemCountsElement;
+  private root: HTMLElement;
 
   private textFieldRef: HTMLGuxTextFieldElement;
 
@@ -145,7 +145,7 @@ export class GuxPaginationButtons {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.element, paginationResources);
+    this.i18n = await buildI18nForComponent(this.root, paginationResources);
   }
 
   render(): JSX.Element {

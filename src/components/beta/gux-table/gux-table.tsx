@@ -31,7 +31,7 @@ const COL_RESIZE_HANDLE_WIDTH = 3;
 })
 export class GuxTable {
   @Element()
-  root: HTMLGuxTableBetaElement;
+  root: HTMLElement;
 
   private resizeObserver: ResizeObserver;
   private i18n: GetI18nValue;

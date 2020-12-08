@@ -19,6 +19,7 @@ import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 export class GuxDropdown {
   @Element()
   root: HTMLElement;
+
   textFieldElement: HTMLGuxTextFieldElement;
 
   /**
