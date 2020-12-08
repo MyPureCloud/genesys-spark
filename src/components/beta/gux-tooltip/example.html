@@ -48,6 +48,19 @@
     </div>
   </div>
 
+  <h3>In a contained where overflow is hidden</h3>
+  <div class="section">
+    <div class="no-overflow">
+      <div>
+        <gux-icon
+          icon-name="add-user"
+          screenreader-text="add John Smith to contact list"
+        ></gux-icon>
+        <gux-tooltip-beta>add John Smith to contact list</gux-tooltip-beta>
+      </div>
+    </div>
+  </div>
+
   <h3>Positioning Bottom</h3>
   <div class="section">
     <gux-button id="bottom-left">Bottom Left</gux-button>
@@ -91,6 +104,11 @@
     align-content: stretch;
     align-items: flex-start;
     width: 100%;
+  }
+
+  .no-overflow {
+    overflow: hidden;
+    position: relative;
   }
 
   p {

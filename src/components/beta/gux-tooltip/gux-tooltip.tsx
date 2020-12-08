@@ -84,7 +84,8 @@ export class GuxTooltip {
             }
           }
         ],
-        placement: 'bottom-start'
+        placement: 'bottom-start',
+        strategy: 'fixed'
       });
 
       this.forElement.addEventListener('mouseenter', this.mouseenterHandler);
