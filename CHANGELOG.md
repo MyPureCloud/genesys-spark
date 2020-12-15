@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.9](http://inindca///compare/v1.17.8...v1.17.9) (2020-12-15)
+
+
+### Bug Fixes
+
+* **gux-disclosure-button:** watch the isOpen property and update the icon when the value changes ([77af58f](http://inindca///commit/77af58f97daaf31fbd54801e0f7bc15d3a1cc037))
+
 ### [1.17.8](http://inindca///compare/v1.17.7...v1.17.8) (2020-12-11)
 
 
