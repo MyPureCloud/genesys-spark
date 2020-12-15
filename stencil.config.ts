@@ -37,7 +37,8 @@ export const config: Config = {
             ],
             dest: 'dist/genesys-webcomponents/less'
           }
-        ]
+        ],
+        verbose: true
       }),
       {
         name: 'generate-metadata',
