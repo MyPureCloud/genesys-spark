@@ -1,4 +1,12 @@
-import { Component, Event, EventEmitter, h, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
 
@@ -37,6 +45,12 @@ export class GuxDisclosureButton {
    */
   @Event()
   active: EventEmitter;
+
+  @Watch('isOpen')
+  watchIsOpen() {
+    this.updateIcon();
+  }
+
   changeState() {
     this.togglePanel();
     this.active.emit(this.isOpen);
@@ -44,7 +58,6 @@ export class GuxDisclosureButton {
 
   togglePanel() {
     this.isOpen = !this.isOpen;
-    this.updateIcon();
   }
 
   updateIcon() {
