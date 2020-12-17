@@ -22,7 +22,9 @@ export class GuxFormFieldBeta {
   private labelPosition: 'above' | 'beside' = 'above';
 
   componentWillLoad() {
-    this.input = this.root.querySelector('input[slot="input"]');
+    this.input = this.root.querySelector(
+      'input[slot="input"], select[slot="input"]'
+    );
     this.label = this.root.querySelector('label[slot="label"]');
     this.type = this.input.getAttribute('type');
   }
@@ -113,6 +115,7 @@ export class GuxFormFieldBeta {
       case 'number':
       case 'password':
       case 'search':
+      case 'select':
       case 'text':
         return this.getInputTextLike();
       default:
