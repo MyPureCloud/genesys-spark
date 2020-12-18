@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.10](http://inindca///compare/v1.17.9...v1.17.10) (2020-12-18)
+
+
+### Bug Fixes
+
+* **gux-form-field-beta:** Allow it to work with selects. COMUI-349 ([92d90f8](http://inindca///commit/92d90f8531eb7e05695661ade2a2010f70a8278f))
+* **i18n:** fix i18n build in Jenkins ([12e5439](http://inindca///commit/12e5439db426aa7ddbf9aae059edb3af7ae333ee))
+
 ### [1.17.9](http://inindca///compare/v1.17.8...v1.17.9) (2020-12-15)
 
 
