@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-    <g>
-        <path d="M9 2h5v5H9z"/>
-        <path d="M13 12H9V9H8v3H4V8h3V7H4V3h3V2H3v11h11V9h-1z"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9 2h5v5H9z"/><path d="M13 12H9V9H8v3H4V8h3V7H4V3h3V2H3v11h11V9h-1z"/></svg>
