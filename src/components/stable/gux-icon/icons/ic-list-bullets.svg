@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-    <path d="M5 3h10v1H5zm0 4h10v1H5zm0 4h10v1H5z"/>
-    <circle cx="2.5" cy="7.5" r="1.225"/>
-    <circle cx="2.5" cy="3.5" r="1.225"/>
-    <circle cx="2.5" cy="11.5" r="1.225"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 3h10v1H5zm0 4h10v1H5zm0 4h10v1H5z"/><circle cx="2.5" cy="7.5" r="1.225"/><circle cx="2.5" cy="3.5" r="1.225"/><circle cx="2.5" cy="11.5" r="1.225"/></svg>

@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27">
-  <title>Product Removed</title>
-  <circle cx="13.5" cy="13.5" r="13" fill="#F53131" stroke="#F53131" stroke-miterlimit="10"/>
-  <path d="M5.47,8.42H8a.8.8,0,0,1,.79.69l1.4,8.47a.81.81,0,0,0,.8.68h6.91" transform="translate(-0.5 -0.5)" fill="none" stroke="#fdfdfd" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.75"/>
-  <path d="M11,18.26h7.51a.91.91,0,0,0,.8-.8l1.2-5.71c.14-.7-.25-1.38-.8-1.38l-10.41,0,.93,7.16Z" transform="translate(-0.5 -0.5)" fill="#fdfdfd" stroke="#fdfdfd" stroke-miterlimit="10" stroke-width="0.75"/>
-  <circle cx="16.03" cy="20.06" r="1.35" fill="#fdfdfd"/>
-  <circle cx="10.34" cy="20.06" r="1.35" fill="#fdfdfd"/>
-  <line x1="16.29" y1="13.9" x2="12.49" y2="13.9" fill="none" stroke="#F53131" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.75"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27"><circle cx="13.5" cy="13.5" r="13" fill="#F53131" stroke="#F53131" stroke-miterlimit="10"/><path d="M4.97 7.92H7.5a.8.8 0 01.79.69l1.4 8.47a.81.81 0 00.8.68h6.91" fill="none" stroke="#fdfdfd" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/><path d="M10.5 17.76h7.51a.91.91 0 00.8-.8l1.2-5.71c.14-.7-.25-1.38-.8-1.38H8.8l.93 7.16z" fill="#fdfdfd" stroke="#fdfdfd" stroke-miterlimit="10" stroke-width=".75"/><circle cx="16.03" cy="20.06" r="1.35" fill="#fdfdfd"/><circle cx="10.34" cy="20.06" r="1.35" fill="#fdfdfd"/><path fill="none" stroke="#F53131" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75" d="M16.29 13.9h-3.8"/></svg>

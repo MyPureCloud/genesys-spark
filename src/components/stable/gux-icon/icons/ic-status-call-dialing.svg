@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-    <g>
-        <circle cx="8" cy="13" r="2"/>
-        <circle cx="3" cy="8" r="2"/>
-        <circle cx="8" cy="8" r="2"/>
-        <circle cx="13" cy="8" r="2"/>
-        <circle cx="3" cy="3" r="2"/>
-        <circle cx="8" cy="3" r="2"/>
-        <circle cx="13" cy="3" r="2"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="13" r="2"/><circle cx="3" cy="8" r="2"/><circle cx="8" cy="8" r="2"/><circle cx="13" cy="8" r="2"/><circle cx="3" cy="3" r="2"/><circle cx="8" cy="3" r="2"/><circle cx="13" cy="3" r="2"/></svg>
