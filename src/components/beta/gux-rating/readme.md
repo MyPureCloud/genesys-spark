@@ -24,12 +24,12 @@
 
 ### Depends on
 
-- [gux-rating-star](gux-rating-star)
+- [gux-icon](../../stable/gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-rating-beta --> gux-rating-star
+  gux-rating-beta --> gux-icon
   style gux-rating-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

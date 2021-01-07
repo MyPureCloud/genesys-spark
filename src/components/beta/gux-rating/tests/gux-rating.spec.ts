@@ -4,11 +4,10 @@ jest.mock('../../../../utils/dom/random-html-id', () => ({
 
 import { newSpecPage, SpecPage } from '@stencil/core/testing';
 import { GuxRating } from '../gux-rating';
-import { GuxRatingStar } from '../gux-rating-star/gux-rating-star';
 
 global.InputEvent = Event;
 
-const components = [GuxRating, GuxRatingStar];
+const components = [GuxRating];
 const language = 'en';
 
 describe('gux-rating', () => {
@@ -49,9 +48,7 @@ describe('gux-rating', () => {
 
   describe('#interactions', () => {
     async function clickStar(page: SpecPage, position: number): Promise<void> {
-      const ratingStarElements = page.doc.getElementsByTagName(
-        'gux-rating-star'
-      );
+      const ratingStarElements = page.doc.getElementsByTagName('gux-icon');
       const ratingElement = ratingStarElements[position - 1] as HTMLElement;
 
       ratingElement.click();
@@ -63,15 +60,12 @@ describe('gux-rating', () => {
       document
     ): { emptyStars: number; halfStars: number; fullStars: number } {
       return {
-        emptyStars: document.getElementsByClassName(
-          'gux-rating-star-fill-percent-0'
-        ).length,
-        halfStars: document.getElementsByClassName(
-          'gux-rating-star-fill-percent-50'
-        ).length,
-        fullStars: document.getElementsByClassName(
-          'gux-rating-star-fill-percent-100'
-        ).length
+        emptyStars: document.getElementsByClassName('gux-rating-star-empty')
+          .length,
+        halfStars: document.getElementsByClassName('gux-rating-star-half')
+          .length,
+        fullStars: document.getElementsByClassName('gux-rating-star-full')
+          .length
       };
     }
 
