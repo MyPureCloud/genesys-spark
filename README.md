@@ -36,13 +36,11 @@ the Genesys Cloud UI chat rooms if you need help with that.
 
 ### Install
 
-`npm install -E @genesys/common-webcomponents@alpha`
+`npm install @genesys/common-webcomponents`
 
 or
 
-`yarn add -E @genesys/common-webcomponents@alpha`
-
-The `-E` is for exact-version while we are in alpha and breaking changes may still be possible, so you will need to manually upgrade when needed.
+`yarn add @genesys/common-webcomponents`
 
 ## Setting up your App
 
