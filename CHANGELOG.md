@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.12](http://inindca///compare/v1.17.11...v1.17.12) (2021-01-08)
+
+
+### Bug Fixes
+
+* **readme:** fixed install code ([51fc696](http://inindca///commit/51fc69681fb190aeb247f79ba8cfac33b52b68ce))
+
 ### [1.17.11](http://inindca///compare/v1.17.10...v1.17.11) (2021-01-05)
 
 ### [1.17.10](http://inindca///compare/v1.17.9...v1.17.10) (2020-12-18)
