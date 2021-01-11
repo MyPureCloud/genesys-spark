@@ -1,7 +1,7 @@
 @import (reference) '../../../../../../style/color.less';
 
 // Variables part
-@background: #f9fafb;
+@background: @expalette-dropdown-background-color;
 
 // Style
 gux-input-color-beta {
@@ -27,15 +27,15 @@ gux-input-color-beta {
     box-shadow: 0 0 0 0 transparent;
     transition: box-shadow 0.2s;
     background-color: @background;
-    border: 1px solid #dae1e8;
+    border: 1px solid @gux-border;
     border-radius: 2px;
     cursor: pointer;
 
     &:focus,
     &.gux-opened {
-      border-color: @gux-genesys-dark-blue;
+      border-color: @gux-blue-60;
       outline: none;
-      box-shadow: 0 0 4px fade(@gux-genesys-blue, 50%);
+      box-shadow: 0 0 4px fade(@gux-blue-80, 50%);
     }
 
     &:disabled {
@@ -97,13 +97,13 @@ gux-input-color-beta {
   color: @gux-type-dark;
 
   .gux-input-color-main-element {
-    border-color: @gux-grey-global;
-    background-color: #555d66;
+    border-color: @gux-black-30;
+    background-color: @expalette-background-color-dark;
   }
 
   .gux-input-color-main-element:focus,
   .gux-input-color-opened {
-    border-color: @gux-genesys-blue;
+    border-color: @gux-blue-80;
     box-shadow: none;
   }
 

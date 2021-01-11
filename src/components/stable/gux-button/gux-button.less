@@ -1,25 +1,25 @@
 @import (reference) '../../../style/color.less';
 
 // Variables part
-@primary-background-color: @gux-genesys-dark-blue;
-@primary-border-color: #2455a3;
+@primary-background-color: @gux-blue-60;
+@primary-border-color: @expalette-primary-border-color;
 @primary-color: @gux-type-dark;
-@primary-active-background-color: #275aad;
+@primary-active-background-color: @expalette-primary-active-background-color;
 
-@primary-dark-background-color: @gux-genesys-dark-blue;
-@primary-dark-border-color: @gux-grey-global;
+@primary-dark-background-color: @gux-blue-60;
+@primary-dark-border-color: @gux-black-30;
 @primary-dark-color: @gux-type-dark;
-@primary-dark-hover-background-color: #3476f5;
+@primary-dark-hover-background-color: @expalette-primary-dark-hover-background-color;
 
 @secondary-background-color: @gux-border;
-@secondary-border-color: #d5dce0;
+@secondary-border-color: @expalette-secondary-border-color;
 @secondary-color: @gux-type;
-@secondary-active-background-color: #dce1e5;
+@secondary-active-background-color: @expalette-secondary-active-background-color;
 
-@secondary-dark-background-color: #555d66;
-@secondary-dark-border-color: @gux-grey-global;
+@secondary-dark-background-color: @expalette-background-color-dark;
+@secondary-dark-border-color: @gux-black-30;
 @secondary-dark-color: @gux-type-dark;
-@secondary-dark-hover-background-color: #76818f;
+@secondary-dark-hover-background-color: @expalette-secondary-dark-hover-background-color;
 
 gux-button {
   display: inline-block;
@@ -63,11 +63,11 @@ gux-button {
       }
 
       &:active {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 1);
+        box-shadow: 0 0 0 3px @gux-blue-80;
       }
 
       &:focus {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
       }
 
       &[disabled] {
@@ -95,11 +95,11 @@ gux-button {
       }
 
       &:active {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 1);
+        box-shadow: 0 0 0 3px @gux-blue-80;
       }
 
       &:focus {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
       }
 
       &[disabled] {
@@ -127,7 +127,7 @@ gux-button {
       color: @secondary-color;
 
       &:hover {
-        box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.24);
+        box-shadow: 0 0 1px 1px fade(@gux-black-30, 24%);
       }
 
       &:active {
@@ -135,7 +135,7 @@ gux-button {
       }
 
       &:focus {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
       }
 
       &[disabled] {
@@ -159,7 +159,7 @@ gux-button {
       color: @primary-color;
 
       &:hover {
-        box-shadow: 0 0 1px 1px rgba(34, 37, 41, 0.48);
+        box-shadow: 0 0 1px 1px fade(@gux-black-30, 0.48);
       }
 
       &:active {
@@ -167,7 +167,7 @@ gux-button {
       }
 
       &:focus {
-        box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
       }
 
       &[disabled] {

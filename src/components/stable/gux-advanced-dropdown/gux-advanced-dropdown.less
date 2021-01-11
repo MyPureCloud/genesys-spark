@@ -1,26 +1,26 @@
 @import (reference) '../../../style/color.less';
 
 // Variables part
-@background-color: #f9fafb;
-@background-color-dark-theme: #555d66;
+@background-color: @expalette-dropdown-background-color;
+@background-color-dark-theme: @expalette-background-color-dark;
 
 @text-color: @gux-type;
 @text-color-dark-theme: @gux-type-dark;
 
-@placeholder: #9baaba;
+@placeholder: @gux-placeholder;
 
-@border-color: #dae1e8;
-@border-color-dark-theme: @gux-grey-global;
+@border-color: @gux-border;
+@border-color-dark-theme: @gux-black-30;
 
-@focus-outline: fade(@gux-genesys-blue, 50%);
-@focus-outline-dark-theme: @gux-genesys-blue;
-@active-border: @gux-genesys-dark-blue;
+@focus-outline: fade(@gux-blue-80, 50%);
+@focus-outline-dark-theme: @gux-blue-80;
+@active-border: @gux-blue-60;
 
-@menu-shadow: rgba(34, 37, 41, 0.24);
+@menu-shadow: fade(@gux-black-30, 24%);
 
 @menu-background-color: @gux-type-dark;
-@menu-border-color: #dae1eb;
-@divider-color: #c3cad4;
+@menu-border-color: @gux-border;
+@divider-color: @expalette-grey-2;
 
 // Style
 gux-advanced-dropdown {
@@ -61,7 +61,7 @@ gux-advanced-dropdown {
 
         &:focus {
           outline: none;
-          box-shadow: 0 0 0 3px fade(@gux-genesys-blue, 50%);
+          box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
         }
       }
 
@@ -150,13 +150,13 @@ gux-advanced-dropdown {
 
         &:not(.gux-disabled) {
           &[selected] {
-            background: #deeaff;
+            background: @gux-blue-100;
             color: @text-color;
           }
 
           &:hover,
           &:focus {
-            background: @gux-genesys-dark-blue;
+            background: @gux-blue-60;
             color: @gux-type-dark;
           }
         }

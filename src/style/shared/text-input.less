@@ -7,82 +7,71 @@
  */
 
 .gux-input-style {
-  @background-color: @gux-type-dark;
-  @text-color: @gux-type;
-  @border: #dae1e8;
-  @placeholder: #9baaba;
-  @focus-outline: fade(@gux-genesys-blue, 50%);
-  @focus-border: @gux-genesys-dark-blue;
-
   font-family: inherit;
   height: 32px;
   width: 100%;
   box-sizing: border-box;
   padding: 4px 12px 4px 12px;
-  background-color: @background-color;
+  background-color: @gux-background;
   background-image: none;
-  border: 1px solid @border;
+  border: 1px solid @gux-border-strong;
   border-radius: 2px;
   font-size: 12px;
   line-height: 1.66666667;
-  color: @text-color;
+  color: @gux-type;
 
   &::placeholder {
-    color: @placeholder;
+    color: @gux-placeholder;
   }
 
   &::-webkit-input-placeholder {
-    color: @placeholder;
+    color: @gux-placeholder;
   }
 
   &::-ms-input-placeholder {
-    color: @placeholder;
+    color: @gux-placeholder;
   }
 
   &::-moz-placeholder {
-    color: @placeholder;
+    color: @gux-placeholder;
   }
 
   &.gux-focused,
   &:focus {
-    border: 1px solid @focus-border;
+    border: 1px solid @gux-blue-60;
     outline: none;
-    box-shadow: 0 0 4px @focus-outline;
+    box-shadow: 0 0 4px fade(@gux-blue-90, 50%);
   }
 }
 
 .gux-input-dark-theme {
-  @dark-background-color: @gux-type;
-  @dark-text-color: @gux-type-dark;
-  @dark-border: @gux-grey-global;
-  @dark-placeholder: #9baaba;
-  @dark-focus-border: @gux-genesys-blue;
-  @dark-focus-outline: @gux-genesys-blue;
+  @dark-focus-border: @gux-blue-80;
+  @dark-focus-outline: @gux-blue-80;
 
-  background-color: @dark-background-color;
-  border: 1px solid @dark-border;
-  color: @dark-text-color;
+  background-color: @expalette-background-color-dark-2;
+  border: 1px solid @gux-border-strong;
+  color: @gux-type-dark;
 
   &::placeholder {
-    color: @dark-placeholder;
+    color: @gux-placeholder;
   }
 
   &::-webkit-input-placeholder {
-    color: @dark-placeholder;
+    color: @gux-placeholder;
   }
 
   &::-ms-input-placeholder {
-    color: @dark-placeholder;
+    color: @gux-placeholder;
   }
 
   &::-moz-placeholder {
-    color: @dark-placeholder;
+    color: @gux-placeholder;
   }
 
   &.gux-focused,
   &:focus {
-    border: 1px solid @dark-focus-border;
-    outline: 3px @dark-focus-outline;
+    border: 1px solid @gux-blue-90;
+    outline: 3px @gux-blue-90;
     box-shadow: none;
   }
 }

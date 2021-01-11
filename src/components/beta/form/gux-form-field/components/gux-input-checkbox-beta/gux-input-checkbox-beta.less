@@ -24,7 +24,7 @@ gux-input-checkbox-beta {
     opacity: 0;
 
     &[type='checkbox']:focus + label::before {
-      outline: rgba(117, 168, 255, 0.5) solid 3px;
+      outline: fade(@gux-blue-80, 50%) solid 3px;
     }
 
     &[type='checkbox']:focus + label.gux-unchecked::after {

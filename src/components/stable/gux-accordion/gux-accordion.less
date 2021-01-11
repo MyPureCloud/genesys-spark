@@ -72,14 +72,14 @@ gux-accordion {
     background-color: @gux-background;
 
     .gux-section {
-      color: @gux-charcoal-grey;
+      color: @gux-black-50;
 
       .gux-header {
         border-top: 1px solid @gux-border;
 
         &:hover {
           .gux-toggle-arrow {
-            color: @gux-genesys-dark-blue;
+            color: @gux-blue-60;
           }
         }
       }
@@ -115,13 +115,13 @@ gux-accordion.gux-light-theme {
 // Dark
 .gux-accordion-dark-theme {
   ul.gux-accordion {
-    background-color: @gux-background-dark;
+    background-color: @expalette-background-color-dark-2;
 
     .gux-section {
       color: @gux-type-dark;
 
       .gux-header {
-        border-top: 1px solid @gux-grey-global;
+        border-top: 1px solid @gux-black-30;
 
         .toggle-arrow {
           color: @gux-type-dark;
@@ -129,24 +129,24 @@ gux-accordion.gux-light-theme {
 
         &:hover {
           .toggle-arrow {
-            color: @gux-genesys-blue;
+            color: @gux-blue-80;
           }
         }
       }
 
       &.gux-opened {
         .gux-header {
-          border-bottom: 1px solid @gux-grey-global;
+          border-bottom: 1px solid @gux-black-30;
         }
       }
 
       &:last-of-type {
         .gux-header {
-          border-bottom: 1px solid @gux-grey-global;
+          border-bottom: 1px solid @gux-black-30;
         }
 
         .gux-content {
-          border-bottom: 1px solid @gux-grey-global;
+          border-bottom: 1px solid @gux-black-30;
         }
       }
     }

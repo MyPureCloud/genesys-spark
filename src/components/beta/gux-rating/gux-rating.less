@@ -1,9 +1,11 @@
+@import (reference) '../../../style/color.less';
+
 gux-rating-beta {
   display: inline-flex;
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+    box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
   }
 
   .gux-rating-start-container {

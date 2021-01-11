@@ -3,18 +3,16 @@
 // Variables part
 @background-color: @gux-type-dark;
 @text-color: @gux-type;
-@border: #dae1e8;
-@placeholder: #9baaba;
-@icon-color: #b1becc;
+@border: @gux-border;
+@placeholder: @gux-placeholder;
 
 @dark-background-color: @gux-type;
 @dark-text-color: @gux-type-dark;
-@dark-border: @gux-grey-global;
-@dark-placeholder: #9baaba;
-@dark-icon-color: #b1becc;
+@dark-border: @gux-black-30;
+@dark-placeholder: @gux-placeholder;
 
-@focus-outline: fade(@gux-genesys-blue, 50%);
-@focus-border: @gux-genesys-dark-blue;
+@focus-outline: fade(@gux-blue-80, 50%);
+@focus-border: @gux-blue-60;
 
 gux-input-text-like-beta {
   display: block;
@@ -86,8 +84,8 @@ gux-input-text-like-beta {
     }
 
     &:focus {
-      border: 1px solid @gux-genesys-blue;
-      outline: 3px @gux-genesys-blue;
+      border: 1px solid @gux-blue-80;
+      outline: 3px @gux-blue-80;
       box-shadow: none;
     }
   }
