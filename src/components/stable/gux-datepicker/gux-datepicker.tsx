@@ -133,11 +133,14 @@ export class GuxDatepicker {
   }
 
   stringToDate(stringDate) {
-    const formatItems = this.format.toLowerCase().split('/');
-    const dateItems = stringDate.split('/');
+    const formatSeperator = this.format.match(/\W/)[0];
+    const formatItems = this.format.toLowerCase().split(formatSeperator);
+    const dateItems = stringDate.split(formatSeperator);
     const year = dateItems[formatItems.indexOf(this.yearFormat)];
     const month = parseInt(dateItems[formatItems.indexOf('mm')], 10) - 1;
-    const date = new Date(year, month, dateItems[formatItems.indexOf('dd')]);
+    const day = dateItems[formatItems.indexOf('dd')];
+    const date = new Date(year, month, day);
+
     if (
       this.yearFormat === 'yy' &&
       date.getFullYear() < 1970 &&
@@ -145,6 +148,7 @@ export class GuxDatepicker {
     ) {
       date.setFullYear(date.getFullYear() + 100);
     }
+
     return date;
   }
 
@@ -582,8 +586,11 @@ export class GuxDatepicker {
     if (!this.format.includes('yyyy')) {
       this.yearFormat = 'yy';
     }
+
+    const formatSeperator = this.format.match(/\W/)[0];
+
     this.sepArr = [];
-    this.format.split('/').map(sep => {
+    this.format.split(formatSeperator).map(sep => {
       this.sepArr.push(sep[0]);
     });
     this.updateDate();
