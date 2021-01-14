@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.13](http://inindca///compare/v1.17.12...v1.17.13) (2021-01-14)
+
+
+### Bug Fixes
+
+* **typography:** fixed h4 line-height and font weight ([851caef](http://inindca///commit/851caef0685d3a39697f81617356b3d516bd147b))
+
 ### [1.17.12](http://inindca///compare/v1.17.11...v1.17.12) (2021-01-08)
 
 
