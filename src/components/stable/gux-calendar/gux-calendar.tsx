@@ -400,8 +400,8 @@ export class GuxCalendar {
     // Sunday
     const day = new Date(1970, 0, 4);
     for (let i = 0; i < 7; i++) {
-      const weekday = day.toLocaleString(this.locale, { weekday: 'long' });
-      days.push(weekday.charAt(0).toUpperCase());
+      const weekday = day.toLocaleString(this.locale, { weekday: 'narrow' });
+      days.push(weekday);
       day.setDate(day.getDate() + 1);
     }
     return this.shiftArray(days, this.firstDayOfWeek);
