@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.14](http://inindca///compare/v1.17.13...v1.17.14) (2021-01-16)
+
+
+### Bug Fixes
+
+* **calendar:** fixed chinese weekday name abbreviations ([830f27e](http://inindca///commit/830f27e5fafb6b50356c2abaabc6670c394d6b13))
+
 ### [1.17.13](http://inindca///compare/v1.17.12...v1.17.13) (2021-01-14)
 
 
