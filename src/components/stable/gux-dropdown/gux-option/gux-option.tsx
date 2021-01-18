@@ -1,4 +1,12 @@
-import { Component, Element, h, Method, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Method,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-option.less',
@@ -7,7 +15,6 @@ import { Component, Element, h, Method, Prop, State } from '@stencil/core';
 export class GuxOption {
   @Element()
   root: HTMLElement;
-
   slotContent: HTMLElement;
 
   /**
@@ -33,8 +40,16 @@ export class GuxOption {
   @Prop()
   text: string;
 
+  @Prop()
+  selected: boolean;
+
   @State()
   highlight: string;
+
+  @Watch('selected')
+  updateParentSelection() {
+    this.getParentGuxDropdown().setSelected();
+  }
 
   /**
    * Determines if the search input matches this option.
@@ -50,6 +65,10 @@ export class GuxOption {
     return Promise.resolve(
       !this.text.toLowerCase().startsWith(searchInput.toLowerCase())
     );
+  }
+
+  private getParentGuxDropdown(): HTMLGuxDropdownElement {
+    return this.root.closest('gux-dropdown');
   }
 
   componentWillLoad() {
