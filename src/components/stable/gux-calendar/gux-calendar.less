@@ -101,17 +101,17 @@ gux-calendar {
 // Light
 .gux-calendar-light-theme {
   div.gux-calendar {
-    border: 1px solid #dae1e8;
+    border: 1px solid @gux-border;
 
     .gux-header {
-      background-color: @gux-genesys-dark-blue;
+      background-color: @gux-blue-60;
       color: @gux-type-dark;
 
       button {
         color: @gux-type-dark;
 
         &:focus {
-          outline: @gux-genesys-blue auto 5px;
+          outline: @gux-blue-80 auto 5px;
         }
       }
     }
@@ -124,16 +124,16 @@ gux-calendar {
         tr {
           td {
             &.gux-hovered {
-              background-color: #deeaff;
+              background-color: @gux-blue-100;
             }
 
             &.gux-selected {
-              background-color: @gux-genesys-dark-blue;
+              background-color: @gux-blue-60;
               color: @gux-type-dark;
             }
 
             &:hover {
-              background-color: @gux-genesys-dark-blue;
+              background-color: @gux-blue-60;
               color: @gux-type-dark;
             }
 
@@ -143,10 +143,10 @@ gux-calendar {
             }
 
             &.gux-not-in-month {
-              color: #9baaba;
+              color: @gux-placeholder;
 
               &:hover {
-                background-color: #dae1e8;
+                background-color: @gux-border;
                 color: @gux-type;
               }
 

@@ -2,10 +2,10 @@
 
 // Variables part
 @palette-background-color: @gux-type-dark;
-@palette-background-color-dark: #555d66;
-@palette-border-color: #dae1eb;
-@palette-details-color: #77828f;
-@palette-shadow: rgba(34, 37, 41, 0.24);
+@palette-background-color-dark: @expalette-background-color-dark;
+@palette-border-color: @gux-border;
+@palette-details-color: @gux-black-100;
+@palette-shadow: fade(@gux-black-30, 24%);
 
 // Style
 gux-command-palette-beta .gux-command-palette {
@@ -125,7 +125,7 @@ gux-command-palette-beta .gux-command-palette {
     gux-list gux-list-item:active,
     gux-list gux-list-item:hover {
       .gux-list-item div {
-        background: @gux-genesys-dark-blue;
+        background: @gux-blue-60;
         color: @gux-type-dark;
       }
 
@@ -160,7 +160,7 @@ gux-command-palette-beta.gux-dark-theme {
     gux-list gux-list-item:active,
     gux-list gux-list-item:hover {
       .gux-list-item div {
-        background: @gux-genesys-dark-blue;
+        background: @gux-blue-60;
         color: @gux-type-dark;
       }
 

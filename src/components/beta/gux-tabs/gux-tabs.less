@@ -1,8 +1,8 @@
 @import (reference) '../../../style/color.less';
 
 // Variables part
-@gux-tabs-background: #e6e8e8;
-@gux-off-tab-fill: #cfd1d1;
+@gux-tabs-background: @expalette-tabs-background;
+@gux-off-tab-fill: @expalette-off-tab-fill;
 
 // Style
 .gux-tabs {
@@ -96,11 +96,11 @@
 
     .arrow-button {
       background-color: @gux-tabs-background;
-      color: @gux-grey-global;
+      color: @gux-black-30;
       border-color: @gux-off-tab-fill;
 
       &:hover {
-        color: @gux-dark-blue;
+        color: @gux-blue-60;
       }
 
       &:active {
@@ -110,11 +110,11 @@
 
     .add-tab {
       background-color: @gux-tabs-background;
-      color: @gux-grey-global;
+      color: @gux-black-30;
       border-color: @gux-off-tab-fill;
 
       &:hover {
-        color: @gux-dark-blue;
+        color: @gux-blue-60;
       }
 
       &:active {
@@ -129,19 +129,19 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: @gux-grey-global;
+      background: @gux-black-30;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-      background: @gux-grey-global;
+      background: @gux-black-30;
     }
 
     .add-tab {
       background-color: @gux-off-tab-fill;
-      color: @gux-grey-global;
+      color: @gux-black-30;
 
       &:hover {
-        color: @gux-dark-blue;
+        color: @gux-blue-60;
       }
 
       &:active {

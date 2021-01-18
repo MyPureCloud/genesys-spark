@@ -1,6 +1,6 @@
 @import (reference) '../../../../style/color.less';
 
-@gux-off-tab-fill: #cfd1d1;
+@gux-off-tab-fill: @expalette-off-tab-fill;
 
 // Style
 gux-tab {
@@ -114,7 +114,7 @@ gux-tab {
       &:hover,
       &:focus {
         gux-icon {
-          color: @gux-genesys-dark-blue;
+          color: @gux-blue-60;
         }
       }
     }
@@ -143,11 +143,11 @@ gux-tab {
       }
 
       .tab-dropdown-container {
-        color: #98a7b8;
+        color: @gux-type;
       }
 
       .tab-icon-container {
-        color: @gux-genesys-dark-blue;
+        color: @gux-blue-60;
       }
     }
   }

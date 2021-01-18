@@ -55,7 +55,7 @@ gux-spin-button {
       }
 
       .gux-spin-button:hover {
-        color: @gux-genesys-dark-blue;
+        color: @gux-blue-60;
         cursor: pointer;
       }
 
@@ -66,10 +66,10 @@ gux-spin-button {
       }
 
       .gux-spin-button:focus {
-        border: 1px solid #2a60c8;
+        border: 1px solid @gux-blue-60;
         outline: none;
-        -webkit-box-shadow: 0 0 4px rgba(117, 168, 255, 0.5);
-        box-shadow: 0 0 4px rgba(117, 168, 255, 0.5);
+        -webkit-box-shadow: 0 0 4px fade(@gux-blue-80, 50%);
+        box-shadow: 0 0 4px fade(@gux-blue-80, 50%);
       }
     }
   }

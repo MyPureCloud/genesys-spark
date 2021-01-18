@@ -16,7 +16,7 @@ gux-modal {
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(34, 37, 41, 0.8);
+    background: fade(@gux-black-30, 0.8);
     z-index: 1;
 
     .gux-modal-container {
@@ -27,7 +27,7 @@ gux-modal {
       padding: 40px;
       justify-content: space-between;
       background: @gux-background;
-      box-shadow: 0 0 2px rgba(34, 37, 41, 0.24);
+      box-shadow: 0 0 2px fade(@gux-black-30, 24%);
 
       &.gux-small {
         max-height: e(%('min(368px, 100vh - 2 * %s)', @min-modal-inset));
@@ -61,7 +61,7 @@ gux-modal {
         border: none;
         background: transparent;
         font-size: 11px;
-        color: #98a7b8;
+        color: @gux-type;
         cursor: pointer;
 
         gux-icon {
@@ -124,7 +124,7 @@ gux-modal {
   color: @gux-type-dark;
 
   .gux-modal-container {
-    background: @gux-charcoal-grey;
+    background: @gux-black-50;
   }
 }
 
