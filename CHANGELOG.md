@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](http://inindca///compare/v1.17.14...v1.18.0) (2021-01-19)
+
+
+### Features
+
+* **gux-dropdown:** added seleced property to gux-option ([7932dcc](http://inindca///commit/7932dccf5ed1194d934796a0d6c70b3ab5249c49))
+
 ### [1.17.14](http://inindca///compare/v1.17.13...v1.17.14) (2021-01-16)
 
 
