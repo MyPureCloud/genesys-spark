@@ -12,7 +12,7 @@
     "build": "npm run clean && npm run i18n && npm run stencil && npm run docs && npm run build-wrapper",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "check-readmes": "./scripts/check-readmes.sh",
-    "clean": "rm -r ./dist",
+    "clean": "rm -r ./dist || true",
     "commit": "git-cz",
     "create-component": "node scripts/create-component.js",
     "dev": "./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run docs.dev\"",
