@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.1](http://inindca///compare/v1.18.0...v1.18.1) (2021-01-21)
+
+
+### Bug Fixes
+
+* **build:** fixed clean npm script ([d73ab9a](http://inindca///commit/d73ab9ade122a2de76885c5e87a81e486251f459))
+* **datepicker:** input now works for all date separators ([b1093ec](http://inindca///commit/b1093ec311d45794809daa5ada679b2922d126c2))
+
 ## [1.18.0](http://inindca///compare/v1.17.14...v1.18.0) (2021-01-19)
 
 
