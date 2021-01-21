@@ -92,7 +92,17 @@ const componentPageTemplate = fs
 function generateComponentPage(exampleMarkup) {
   const withCdn = injectCdnUrl(componentPageTemplate);
   const sanitizedMarkup = exampleMarkup.toString().replace(/`/g, '\\`');
-  return withCdn.replace('${EXAMPLE_HTML}', sanitizedMarkup);
+  let withHtml = withCdn.replace('${EXAMPLE_HTML}', sanitizedMarkup);
+
+  if (withHtml.includes('${ICON_EXAMPLE_LIST}')) {
+    const iconScript = require('./src/utils/generateIconsPage');
+    const iconsExamplesHtml = iconScript.generateHTML(
+      '../src/components/stable/gux-icon/icons'
+    );
+    withHtml = withHtml.replace('${ICON_EXAMPLE_LIST}', iconsExamplesHtml);
+  }
+
+  return withHtml;
 }
 
 function injectCdnUrl(content) {
