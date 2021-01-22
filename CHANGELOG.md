@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.19.0](http://inindca///compare/v1.18.1...v1.19.0) (2021-01-22)
+
+
+### Features
+
+* **gux-icon:** add beyond icon ([3c47ff9](http://inindca///commit/3c47ff9b4586d9ba5b2644f7b034145539d6ada4))
+
+
+### Bug Fixes
+
+* **gux-icon:** remove fill from beyond-logo ([9733612](http://inindca///commit/97336123298ff116000945a096daee0554543403))
+* **gux-icon:** rename to beyond-logo ([62209f6](http://inindca///commit/62209f65132bf5a61abbb90ded4b2922a8f5aaaf))
+
 ### [1.18.1](http://inindca///compare/v1.18.0...v1.18.1) (2021-01-21)
 
 
