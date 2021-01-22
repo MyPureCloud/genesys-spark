@@ -86,12 +86,12 @@ export class GuxDropdown {
   }
 
   @Method()
-  async setLabeledBy(labeledBy: string) {
+  async setLabeledBy(labeledBy: string): Promise<void> {
     this.textFieldElement.setLabelledBy(labeledBy);
   }
 
   @Method()
-  setSelected(): void {
+  async setSelected(): Promise<void> {
     const selectionOptions = this.getSelectionOptions();
     const selectedOptionIndex = selectionOptions
       .map(selectionOption => selectionOption.selected)
