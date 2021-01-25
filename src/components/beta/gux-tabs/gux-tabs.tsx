@@ -74,8 +74,8 @@ export class GuxTabs {
     }
   }
 
-  @Listen('click')
-  clickHandler(e: MouseEvent) {
+  @Listen('internaltabselected')
+  internaltabselectedHandler(e: CustomEvent) {
     whenEventIsFrom('gux-tab', e, elem => {
       const tab = elem as HTMLGuxTabElement;
       if (!tab.active) {
