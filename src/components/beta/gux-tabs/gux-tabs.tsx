@@ -123,7 +123,7 @@ export class GuxTabs {
     }
 
     if (this.domObserver) {
-      this.domObserver.unobserve(this.element);
+      this.domObserver.disconnect();
     }
   }
 
@@ -133,7 +133,7 @@ export class GuxTabs {
 
   checkForScrollbarHideOrShow() {
     readTask(() => {
-      const el = this.element.shadowRoot.querySelector('.scrollable-section');
+      const el = this.root.shadowRoot.querySelector('.scrollable-section');
       const hasScrollbar = el.clientWidth !== el.scrollWidth;
 
       if (hasScrollbar !== this.hasScrollbar) {
@@ -166,7 +166,7 @@ export class GuxTabs {
     }
 
     if (this.domObserver) {
-      this.domObserver.observe(this.element, {
+      this.domObserver.observe(this.root, {
         childList: true,
         attributes: false,
         subtree: true
