@@ -42,7 +42,7 @@ export class GuxBreadcrumbItem {
     }
 
     return (
-      <a class="gux-breadcrumb-content" href={this.href}>
+      <a class="gux-breadcrumb-content gux-link" href={this.href}>
         <slot />
       </a>
     );
