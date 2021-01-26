@@ -25,7 +25,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (2) 1`
     <gux-breadcrumb-item href="#">
       <!---->
       <span class="gux-breadcrumb-generation gux-primary">
-        <a class="gux-breadcrumb-content" href="#">
+        <a class="gux-breadcrumb-content gux-link" href="#">
           Parent
         </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
@@ -63,7 +63,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (3) 1`
     <gux-breadcrumb-item href="#">
       <!---->
       <span class="gux-breadcrumb-generation gux-primary">
-        <a class="gux-breadcrumb-content" href="#">
+        <a class="gux-breadcrumb-content gux-link" href="#">
           Parent
         </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
@@ -101,7 +101,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (4) 1`
     <gux-breadcrumb-item href="#">
       <!---->
       <span class="gux-breadcrumb-generation gux-primary">
-        <a class="gux-breadcrumb-content" href="#">
+        <a class="gux-breadcrumb-content gux-link" href="#">
           Parent
         </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
@@ -137,7 +137,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (5) 1`
     <gux-breadcrumb-item href="#">
       <!---->
       <span class="gux-breadcrumb-generation gux-secondary">
-        <a class="gux-breadcrumb-content" href="#">
+        <a class="gux-breadcrumb-content gux-link" href="#">
           Parent
         </a>
         <gux-icon class="gux-breadcrumb-separator" decorative="" icon-name="ic-chevron-small-right"></gux-icon>
@@ -173,7 +173,7 @@ exports[`gux-breadcrumbs-beta #render should render component as expected (6) 1`
     <gux-breadcrumb-item href="#">
       <!---->
       <span class="gux-breadcrumb-generation gux-invalid">
-        <a class="gux-breadcrumb-content" href="#">
+        <a class="gux-breadcrumb-content gux-link" href="#">
           Parent
         </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
