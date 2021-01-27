@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.1](http://inindca///compare/v1.19.0...v1.19.1) (2021-01-27)
+
+
+### Bug Fixes
+
+* **dropdown:** fixed issue in readme file related to @Method ([2510a85](http://inindca///commit/2510a85d7318c445545d3d90e78201b7579ff372))
+
 ## [1.19.0](http://inindca///compare/v1.18.1...v1.19.0) (2021-01-22)
 
 
