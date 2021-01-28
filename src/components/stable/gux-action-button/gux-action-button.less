@@ -6,91 +6,50 @@ gux-action-button {
   display: inline-block;
   min-width: 128px;
 
-  .gux-dropdown {
-    margin-left: -2px;
-
-    button {
-      width: 32px;
-      min-width: 0;
-      padding: 0;
-
-      span[role='img'] {
-        font-size: @gux-icon-size-default-global;
-        line-height: 30px;
-        height: 30px;
-      }
-    }
-  }
-
-  .gux-action {
-    button {
-      max-width: none;
-      text-align: center;
-      width: 100%;
-    }
-  }
-
-  .gux-action-button {
+  .gux-action-button-container {
     display: flex;
     position: relative;
 
-    .gux-action {
+    .gux-action-button {
       flex: 1;
+      margin-right: 1px;
+
+      button {
+        max-width: none;
+        text-align: center;
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
     }
 
-    gux-list {
+    .gux-dropdown-button {
+      button {
+        width: 32px;
+        min-width: 0;
+        padding: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        gux-icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .gux-dropdown-list {
       display: none;
       width: 100%;
       position: absolute;
-      z-index: 1000;
+      z-index: 1;
       top: 32px;
     }
 
     &.gux-open {
-      gux-list {
+      .gux-dropdown-list {
         display: block;
       }
     }
   }
-
-  gux-icon {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-// Theming
-
-// Dark
-.gux-action-button-dark-theme {
-  color: @gux-type-dark;
-}
-
-.gux-dark-theme {
-  gux-action-button {
-    .gux-action-button-dark-theme();
-  }
-}
-
-gux-action-button.gux-dark-theme {
-  .gux-action-button-dark-theme();
-}
-
-// Light
-.gux-action-button-light-theme {
-}
-
-.gux-light-theme {
-  gux-action-button {
-    .gux-action-button-light-theme();
-  }
-}
-
-gux-action-button.gux-light-theme {
-  .gux-action-button-light-theme();
-}
-
-// Default Theme
-gux-action-button {
-  .gux-action-button-light-theme();
 }

@@ -9,7 +9,7 @@ import {
   Watch
 } from '@stencil/core';
 
-import { ButtonAccents, KeyCode } from '../../../common-enums';
+import { ButtonAccents } from '../../../common-enums';
 
 @Component({
   styleUrl: 'gux-action-button.less',
@@ -98,14 +98,16 @@ export class GuxActionButton {
   }
 
   onKeyUpEvent(event: KeyboardEvent) {
-    const key = event.keyCode;
-    if (key === KeyCode.Esc) {
+    const key = event.key;
+
+    if (key === 'Escape') {
       this.isOpen = false;
-      const e = this.dropdownButton.querySelector('button') as HTMLElement;
-      e.focus();
+      const button = this.dropdownButton.querySelector('button') as HTMLElement;
+      button.focus();
     }
+
     if (
-      key === KeyCode.Down &&
+      key === 'ArrowDown' &&
       !((this.listElement as any) as HTMLElement).contains(event.target as Node)
     ) {
       this.isOpen = true;
@@ -115,14 +117,16 @@ export class GuxActionButton {
 
   render() {
     return (
-      <div class={'gux-action-button' + (this.isOpen ? ' gux-open' : '')}>
+      <div
+        class={'gux-action-button-container' + (this.isOpen ? ' gux-open' : '')}
+      >
         <gux-button
           accent={this.accent}
           disabled={this.disabled}
           onClick={() => this.onActionClick()}
-          class="gux-action"
+          class="gux-action-button"
         >
-          <span>{this.text}</span>
+          {this.text}
         </gux-button>
         <gux-button
           accent={this.accent}
@@ -130,11 +134,14 @@ export class GuxActionButton {
           ref={el => (this.dropdownButton = el)}
           onClick={() => this.toggle()}
           onKeyUp={e => this.onKeyUpEvent(e)}
-          class="gux-dropdown"
+          class="gux-dropdown-button"
         >
           <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
         </gux-button>
-        <gux-list ref={el => (this.listElement = el as HTMLGuxListElement)}>
+        <gux-list
+          class="gux-dropdown-list"
+          ref={el => (this.listElement = el as HTMLGuxListElement)}
+        >
           <slot />
         </gux-list>
       </div>
