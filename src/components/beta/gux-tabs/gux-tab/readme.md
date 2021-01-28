@@ -14,6 +14,13 @@
 | `tabId`       | `tab-id`        | unique id for the tab                                                                               | `string`  | `undefined` |
 
 
+## Events
+
+| Event                 | Description | Type                |
+| --------------------- | ----------- | ------------------- |
+| `internaltabselected` |             | `CustomEvent<void>` |
+
+
 ## Dependencies
 
 ### Depends on
