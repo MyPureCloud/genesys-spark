@@ -63,6 +63,8 @@ export class GuxTabs {
 
   private resizeObserver?: ResizeObserver;
 
+  private domObserver?: MutationObserver;
+
   @Watch('value')
   watchHandler(newValue: string) {
     const tabs: HTMLGuxTabElement[] = Array.from(
@@ -119,10 +121,25 @@ export class GuxTabs {
         this.root.shadowRoot.querySelector('.gux-tabs')
       );
     }
+
+    if (this.domObserver) {
+      this.domObserver.disconnect();
+    }
   }
 
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, tabsResources);
+  }
+
+  checkForScrollbarHideOrShow() {
+    readTask(() => {
+      const el = this.root.shadowRoot.querySelector('.scrollable-section');
+      const hasScrollbar = el.clientWidth !== el.scrollWidth;
+
+      if (hasScrollbar !== this.hasScrollbar) {
+        this.hasScrollbar = hasScrollbar;
+      }
+    });
   }
 
   componentDidLoad() {
@@ -131,12 +148,9 @@ export class GuxTabs {
     }
 
     if (!this.resizeObserver && window.ResizeObserver) {
-      this.resizeObserver = new ResizeObserver(() => {
-        readTask(() => {
-          const el = this.root.shadowRoot.querySelector('.scrollable-section');
-          this.hasScrollbar = el.clientWidth !== el.scrollWidth;
-        });
-      });
+      this.resizeObserver = new ResizeObserver(
+        this.checkForScrollbarHideOrShow.bind(this)
+      );
     }
 
     if (this.resizeObserver) {
@@ -144,16 +158,26 @@ export class GuxTabs {
         this.root.shadowRoot.querySelector('.gux-tabs')
       );
     }
+
+    if (!this.domObserver && window.MutationObserver) {
+      this.domObserver = new MutationObserver(
+        this.checkForScrollbarHideOrShow.bind(this)
+      );
+    }
+
+    if (this.domObserver) {
+      this.domObserver.observe(this.root, {
+        childList: true,
+        attributes: false,
+        subtree: true
+      });
+    }
   }
 
   componentDidRender() {
     setTimeout(() => {
       readTask(() => {
-        const el = this.root.shadowRoot.querySelector('.scrollable-section');
-        const hasScrollbar = el.clientWidth !== el.scrollWidth;
-        if (this.hasScrollbar !== hasScrollbar) {
-          this.hasScrollbar = hasScrollbar;
-        }
+        this.checkForScrollbarHideOrShow();
 
         if (this.value) {
           const activeTab: any = this.root.querySelector(
