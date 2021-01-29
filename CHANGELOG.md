@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.2](http://inindca///compare/v1.19.1...v1.19.2) (2021-01-29)
+
+
+### Bug Fixes
+
+* **gux-tab:** options toggle now propagates click events ([4c7fd23](http://inindca///commit/4c7fd23348787c4b4dbfd2199cb37d3d0fc14605))
+* **gux-tabs:** change references to this.element to this.root ([6bd05e0](http://inindca///commit/6bd05e009a324edfdaa10c89c5cdbc1f3022df2f))
+* **gux-tabs:** re-check scrollbar hide/show when dom changes ([9a479cc](http://inindca///commit/9a479cc64d731f578482b1f9d3334bea3ebdb90b))
+
 ### [1.19.1](http://inindca///compare/v1.19.0...v1.19.1) (2021-01-27)
 
 
