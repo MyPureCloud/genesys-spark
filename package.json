@@ -15,8 +15,8 @@
     "clean": "rm -r ./dist || true",
     "commit": "git-cz",
     "create-component": "node scripts/create-component.js",
-    "dev": "./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run docs.dev\"",
-    "dev.public": "./node_modules/.bin/concurrently  \"npm run stencil.dev\" \"npm run docs.dev.public\"",
+    "dev": "npx concurrently  \"npm run stencil.dev\" \"npm run docs.dev\"",
+    "dev.public": "npx concurrently  \"npm run stencil.dev\" \"npm run docs.dev.public\"",
     "docs": "cd ./docs && npm run build",
     "docs.dev": "cd ./docs && npm run start",
     "docs.dev.public": "cd ./docs && npm run start -- --host 0.0.0.0",
@@ -107,9 +107,6 @@
   "repository": {
     "type": "git",
     "url": "git+bitbucket.org:inindca/genesys-webcomponents.git"
-  },
-  "optionalDependencies": {
-    "@purecloud/web-app-deploy": "^5.2.10"
   },
   "config": {
     "commitizen": {
