@@ -98,7 +98,7 @@ export class GuxTab {
 
         {this.hasDropdownOptions && (
           <gux-popover
-            position="top-start"
+            position="top"
             for={this.tabId}
             displayDismissButton={false}
             hidden={this.popoverHidden}
