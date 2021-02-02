@@ -1,4 +1,15 @@
-<div id="modal-container"></div>
+<div id="modal-container">
+  <gux-modal size="small">
+    <div slot="title">Modal Title</div>
+    <div slot="content">This contains the modal content.</div>
+    <div slot="left-align-buttons">
+      <gux-button title="Cancel">Cancel</gux-button>
+    </div>
+    <div slot="right-align-buttons">
+      <gux-button title="Accept" accent="primary">Accept</gux-button>
+    </div>
+  </gux-modal>
+</div>
 
 <div>
   <h4>Typical Modal</h4>
