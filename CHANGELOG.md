@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.4](http://inindca///compare/v1.19.3...v1.19.4) (2021-02-03)
+
+
+### Bug Fixes
+
+* **gux-modal:** events now displayed in docs event panel ([563a235](http://inindca///commit/563a235462ee469cf8ba0e3aff06f98719a33f85))
+* **gux-tab:** fixed popover arrow positioning ([11cc0e9](http://inindca///commit/11cc0e9cb517acb647c7cff6e0d47b87341c7d09))
+
 ### [1.19.3](http://inindca///compare/v1.19.2...v1.19.3) (2021-02-02)
 
 ### [1.19.2](http://inindca///compare/v1.19.1...v1.19.2) (2021-01-29)
