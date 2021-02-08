@@ -101,6 +101,7 @@ pipeline {
           sh "${env.WORKSPACE}/${env.NPM_UTIL_PATH}/scripts/jenkins-create-npmrc.sh"
           sh "cp .npmrc docs/.npmrc"
           sh "npm ci"
+          sh "npm i --no-save @purecloud/web-app-deploy@latest"
         }
       }
     }
@@ -134,8 +135,9 @@ pipeline {
           sh './scripts/generate-manifest'
           // Generate the CDN_URL for use in the docs and build everything.
           sh """
-            export DOCS_CDN_URL=\$(./node_modules/.bin/cdn ${uploadVersionOverride()} --ecosystem pc --manifest docs-manifest.json)
-            export CDN_URL=\$(./node_modules/.bin/cdn ${uploadVersionOverride()} --ecosystem pc --manifest library-manifest.json)
+            export DOCS_CDN_URL=\$(npx cdn ${uploadVersionOverride()} --ecosystem pc --manifest docs-manifest.json)
+            export CDN_URL=\$(npx cdn ${uploadVersionOverride()} --ecosystem pc --manifest library-manifest.json)
+
             npm run build
           """
           // Re-generate manifest file after building docs - required to find *.html in docs
@@ -152,7 +154,7 @@ pipeline {
         dir(env.REPO_DIR) {
           sh "echo Uploading static assets!"
           sh """
-            ./node_modules/.bin/upload \
+             npx upload \
                 ${uploadVersionOverride()} \
                 --ecosystem pc \
                 --manifest library-manifest.json \
@@ -193,7 +195,7 @@ pipeline {
         dir (env.REPO_DIR) {
           sh './scripts/generate-versions-file'
           sh """
-            ./node_modules/.bin/upload \
+             npx upload \
                 ${uploadVersionOverride()} \
                 --ecosystem pc \
                 --manifest docs-manifest.json \
@@ -211,7 +213,7 @@ pipeline {
       steps {
         dir (env.REPO_DIR) {
           sh '''
-            ./node_modules/.bin/deploy \
+             npx deploy \
                 --ecosystem pc \
                 --manifest docs-manifest.json \
                 --dest-env dev
