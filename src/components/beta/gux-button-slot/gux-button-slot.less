@@ -1,0 +1,65 @@
+@import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
+
+gux-button-slot-beta {
+  display: inline-block;
+  min-width: 32px;
+  pointer-events: none;
+
+  input[type='button'],
+  input[type='submit'],
+  button {
+    width: 100%;
+    padding: 0 16px;
+    height: 32px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: bold;
+    pointer-events: auto;
+    background-color: @gux-grey-60;
+    color: @gux-black-50;
+
+    &[disabled] {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus:enabled {
+      .focus-ring();
+    }
+
+    &:hover:enabled {
+      background-color: @gux-grey-50;
+    }
+
+    &:active:enabled {
+      background-color: @gux-grey-40;
+    }
+  }
+
+  &[accent='primary'] {
+    input[type='button'],
+    input[type='submit'],
+    button {
+      background-color: @gux-blue-60;
+      color: @gux-grey-100;
+
+      &:hover:enabled {
+        background-color: @gux-blue-50;
+      }
+
+      &:active:enabled {
+        background-color: @gux-blue-40;
+      }
+    }
+  }
+}
