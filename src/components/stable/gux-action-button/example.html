@@ -29,8 +29,20 @@
     </gux-action-button>
   </div>
   <div>
+    <h1>Tertiary</h1>
+    <gux-action-button id="example-3" text="Tertiary" accent="tertiary">
+      <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
+      <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
+      <gux-action-item text="test 3" onclick="notify(event)"></gux-action-item>
+      <gux-list-divider></gux-list-divider>
+      <gux-action-item onclick="notify(event)"
+        ><span>I am a span</span></gux-action-item
+      >
+    </gux-action-button>
+  </div>
+  <div>
     <h1>Disabled</h1>
-    <gux-action-button id="example-3" text="Disabled" disabled>
+    <gux-action-button id="example-4" text="Disabled" disabled>
       <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
       <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
       <gux-action-item text="test3" onclick="notify(event)"></gux-action-item>
@@ -44,10 +56,10 @@
 
 <style
   onload="(function () {
-    const example3 = document.getElementById('example-3');
+    const example4 = document.getElementById('example-4');
 
     setInterval(() => {
-      example3.disabled = !example3.disabled;
+      example4.disabled = !example4.disabled;
     }, 5000);
   }
   )()"
