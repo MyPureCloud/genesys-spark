@@ -135,12 +135,10 @@
   "stylelint": {
     "extends": [
       "stylelint-config-standard",
-      "stylelint-config-prettier",
-      "stylelint-config-recess-order"
+      "stylelint-config-recess-order",
+      "stylelint-config-prettier"
     ],
     "rules": {
-      "block-no-empty": null,
-      "declaration-block-no-duplicate-properties": null,
       "no-descending-specificity": null,
       "no-duplicate-selectors": null,
       "selector-type-no-unknown": [

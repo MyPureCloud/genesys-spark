@@ -70,11 +70,11 @@ gux-dropdown {
     .gux-options {
       position: absolute;
       z-index: 1;
-      margin: 1px 0;
       padding: 8px 0;
+      margin: 1px 0;
+      color: @gux-black-50;
       background: @gux-grey-100;
       border: 1px solid @gux-black-100;
-      color: @gux-black-50;
       .shadow-30();
 
       &.gux-opened {
@@ -112,8 +112,8 @@ gux-dropdown {
 
         &:not([disabled]) {
           &[selected] {
-            background: @gux-blue-100;
             color: @gux-black-50;
+            background: @gux-blue-100;
           }
 
           &:hover,
@@ -218,13 +218,13 @@ gux-dropdown {
   div.gux-dropdown {
     .gux-select-field {
       .gux-ghost {
-        background-color: @gux-grey-90;
         color: @gux-black-90;
+        background-color: @gux-grey-90;
       }
 
       gux-text-field-legacy input {
-        border-color: @gux-black-100;
         color: @gux-black-50;
+        border-color: @gux-black-100;
 
         &:focus {
           box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
