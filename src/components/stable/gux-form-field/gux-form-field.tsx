@@ -5,6 +5,7 @@ import { trackComponent } from '../../../usage-tracking';
 /**
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
+ * @slot textarea - Required slot for textarea tag
  */
 @Component({
   styleUrl: 'gux-form-field.less',

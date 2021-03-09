@@ -1,8 +1,8 @@
-import { Component, Element, h, JSX, State, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, State } from '@stencil/core';
 import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 
 /**
- * @slot input - Required slot for input[type="radio"]
+ * @slot textarea - Required slot for textarea[type="textarea"]
  * @slot label - Required slot for label
  */
 @Component({
