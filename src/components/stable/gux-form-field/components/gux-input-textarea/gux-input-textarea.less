@@ -1,0 +1,119 @@
+@import (reference) '../../../../../style/color.less';
+
+// Variables part
+@dark-background-color: @gux-type;
+@dark-text-color: @gux-type-dark;
+@dark-border: @gux-black-30;
+
+gux-input-textarea {
+  position: relative;
+  display: block;
+
+  .gux-input-container {
+    &.gux-disabled {
+      opacity: 0.5;
+    }
+
+    textarea {
+      flex: 1 1 auto;
+      align-self: auto;
+      order: 0;
+      min-width: 100%;
+      max-width: 100%;
+      height: 32px;
+      padding: 4px 12px 4px 12px;
+      font-family: inherit;
+      font-size: 12px;
+      line-height: 1.66666667;
+      color: @gux-black-50;
+      background-color: @gux-grey-100;
+      background-image: none;
+      border: 1px solid @gux-grey-60;
+      border: none;
+      border-radius: 2px;
+      outline: none;
+
+      &::placeholder {
+        color: @gux-black-90;
+      }
+
+      &::-webkit-input-placeholder {
+        color: @gux-black-90;
+      }
+
+      &::-ms-input-placeholder {
+        color: @gux-black-90;
+      }
+
+      &::-moz-placeholder {
+        color: @gux-black-90;
+      }
+    }
+
+    &:focus-within {
+      border: 1px solid @gux-blue-60;
+      outline: none;
+      box-shadow: 0 0 4px fade(@gux-blue-80, 50%);
+    }
+  }
+}
+
+// Theming
+
+// Dark
+.gux-input-textarea-dark-theme {
+  .gux-input-container {
+    textarea {
+      color: @dark-text-color;
+      background-color: @dark-background-color;
+      border: 1px solid @dark-border;
+    }
+
+    &:focus-within {
+      border: 1px solid @gux-blue-80;
+      outline: 3px @gux-blue-80;
+      box-shadow: none;
+    }
+  }
+}
+
+.gux-dark-theme {
+  gux-input-textarea {
+    .gux-input-textarea-dark-theme();
+  }
+}
+
+gux-input-textarea.gux-dark-theme {
+  .gux-input-textarea-dark-theme();
+}
+
+// Light
+.gux-input-textarea-light-theme {
+  .gux-input-container {
+    textarea {
+      color: @gux-black-50;
+      background-color: @gux-grey-100;
+      border: 1px solid @gux-grey-60;
+    }
+
+    &:focus-within {
+      border: 1px solid @gux-blue-60;
+      box-shadow: 0 0 4px fade(@gux-blue-80, 50%);
+    }
+  }
+}
+
+.gux-light-theme {
+  gux-input-textarea {
+    .gux-input-textarea-light-theme();
+  }
+}
+
+gux-input-textarea.gux-light-theme {
+  .gux-input-textarea-light-theme();
+}
+
+// Default Theme
+gux-input-textarea {
+  .gux-input-textarea-light-theme();
+}

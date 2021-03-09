@@ -28,7 +28,7 @@ export class GuxFormField {
 
   componentWillLoad() {
     this.input = this.root.querySelector(
-      'input[slot="input"], select[slot="input"]'
+      'input[slot="input"], select[slot="input"], textarea[slot="textarea"]'
     );
     this.label = this.root.querySelector('label[slot="label"]');
     this.type = this.input.getAttribute('type');
@@ -124,6 +124,22 @@ export class GuxFormField {
     );
   }
 
+  private getInputTextArea(): JSX.Element {
+    return (
+      <div class="gux-label-and-input-and-error-container">
+        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+          <slot name="label" slot="label" />
+          <gux-input-textarea slot="textarea">
+            <slot name="textarea" />
+          </gux-input-textarea>
+        </div>
+        <div class="gux-error">
+          <slot name="error" />
+        </div>
+      </div>
+    );
+  }
+
   render(): JSX.Element {
     switch (this.type) {
       case 'checkbox':
@@ -143,6 +159,8 @@ export class GuxFormField {
         return this.getInputNumber(this.clearable);
       case 'search':
         return this.getInputTextLike(false);
+      case 'textarea':
+        return this.getInputTextArea();
       default:
         return (
           <div>
