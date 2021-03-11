@@ -2,8 +2,7 @@ import { Component, Element, h, JSX, State } from '@stencil/core';
 import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 
 /**
- * @slot textarea - Required slot for textarea[type="textarea"]
- * @slot label - Required slot for label
+ * @slot @slot input - Required slot for input[type="radio"]
  */
 @Component({
   styleUrl: 'gux-input-textarea.less',

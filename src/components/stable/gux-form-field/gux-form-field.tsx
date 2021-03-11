@@ -5,7 +5,6 @@ import { trackComponent } from '../../../usage-tracking';
 /**
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
- * @slot textarea - Required slot for textarea tag
  */
 @Component({
   styleUrl: 'gux-form-field.less',
@@ -22,7 +21,7 @@ export class GuxFormField {
   clearable: boolean;
 
   @State()
-  private type: string;
+  private slottedElementType: string = 'input' || 'select' || 'textarea';
 
   @State()
   private labelPosition: 'above' | 'beside' = 'above';
@@ -32,9 +31,10 @@ export class GuxFormField {
       'input[slot="input"], select[slot="input"], textarea[slot="textarea"]'
     );
     this.label = this.root.querySelector('label[slot="label"]');
-    this.type = this.input.getAttribute('type');
+    const type = this.input.getAttribute('type');
+    this.slottedElementType = this.input.tagName.toLowerCase();
 
-    trackComponent(this.root, { variant: this.type });
+    trackComponent(this.root, { variant: type });
   }
 
   componentWillRender() {
@@ -142,24 +142,29 @@ export class GuxFormField {
   }
 
   render(): JSX.Element {
-    switch (this.type) {
-      case 'checkbox':
-        return this.getInputCheckbox();
-      case 'radio':
-        return this.getInputRadio();
-      case 'color':
-        return this.getInputColor();
-      case 'range':
-        return this.getInputRange();
-      case 'email':
-      case 'password':
+    const type = this.input.getAttribute('type');
+    switch (this.slottedElementType) {
+      case 'input':
+        switch (type) {
+          case 'checkbox':
+            return this.getInputCheckbox();
+          case 'radio':
+            return this.getInputRadio();
+          case 'color':
+            return this.getInputColor();
+          case 'range':
+            return this.getInputRange();
+          case 'email':
+          case 'password':
+          case 'text':
+            return this.getInputTextLike(this.clearable);
+          case 'number':
+            return this.getInputNumber(this.clearable);
+          case 'search':
+            return this.getInputTextLike(false);
+        }
       case 'select':
-      case 'text':
         return this.getInputTextLike(this.clearable);
-      case 'number':
-        return this.getInputNumber(this.clearable);
-      case 'search':
-        return this.getInputTextLike(false);
       case 'textarea':
         return this.getInputTextArea();
       default:
