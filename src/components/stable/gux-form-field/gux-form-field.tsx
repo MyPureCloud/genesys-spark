@@ -162,6 +162,13 @@ export class GuxFormField {
             return this.getInputNumber(this.clearable);
           case 'search':
             return this.getInputTextLike(false);
+          default:
+            return (
+              <div>
+                <slot name="label" />
+                <slot name="input" />
+              </div>
+            );
         }
       case 'select':
         return this.getInputTextLike(this.clearable);
