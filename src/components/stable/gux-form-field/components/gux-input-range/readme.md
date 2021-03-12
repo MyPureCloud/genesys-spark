@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property             | Attribute              | Description | Type     | Default     |
+| -------------------- | ---------------------- | ----------- | -------- | ----------- |
+| `valueDisplaySuffix` | `value-display-suffix` |             | `string` | `undefined` |
+
+
 ## Slots
 
 | Slot      | Description                           |
