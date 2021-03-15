@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property         | Attribute          | Description | Type     | Default  |
+| ---------------- | ------------------ | ----------- | -------- | -------- |
+| `displayTextBox` | `display-text-box` |             | `string` | `'true'` |
+
+
 ## Slots
 
 | Slot      | Description                           |

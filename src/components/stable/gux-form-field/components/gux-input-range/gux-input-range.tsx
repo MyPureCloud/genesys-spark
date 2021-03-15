@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
+import { Component, Element, h, JSX, Listen, State, Prop } from '@stencil/core';
 import { setInterval, clearInterval } from 'requestanimationframe-timer';
 
 import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
@@ -31,6 +31,12 @@ export class GuxInputRange {
   @State()
   private valueWatcherId: number;
 
+  @Prop()
+  displayTextBox: string = 'true';
+
+  sliderTooltip: HTMLElement;
+  sliderTooltipContainer: HTMLElement;
+
   @Listen('input')
   onInput(e: MouseEvent): void {
     const input = e.target as HTMLInputElement;
@@ -62,6 +68,13 @@ export class GuxInputRange {
     const max = Number(this.input.max || 100);
     const placementPercentage = ((value - min) / (max - min)) * 100;
 
+    if (this.sliderTooltip) {
+      const width = this.sliderTooltipContainer.offsetWidth;
+      const offset =
+        placementPercentage - (placementPercentage / 8 / width) * 100;
+      this.sliderTooltip.style.left = `${offset}%`;
+    }
+
     this.progressElement.style.width = `${placementPercentage}%`;
   }
 
@@ -69,6 +82,7 @@ export class GuxInputRange {
     this.input = this.root.querySelector('input[slot="input"]');
     this.disabled = this.input.disabled;
     this.value = this.input.value;
+    this.displayTextBox = this.input.getAttribute('display-text-box');
 
     this.disabledObserver = onDisabledChange(
       this.input,
@@ -94,6 +108,10 @@ export class GuxInputRange {
   }
 
   render(): JSX.Element {
+    let shouldDisplayTextBox = true;
+    if (this.displayTextBox === 'false') {
+      shouldDisplayTextBox = false;
+    }
     return (
       <div
         class={{
@@ -118,9 +136,15 @@ export class GuxInputRange {
         <div
           class={{
             'gux-display': true,
-            'gux-active': this.active
+            'gux-active': this.active,
+            'gux-hidden': !shouldDisplayTextBox
           }}
+          ref={el => (this.sliderTooltipContainer = el)}
         >
+          <div
+            class="gux-range-tooltip"
+            ref={el => (this.sliderTooltip = el)}
+          ></div>
           {this.value}
         </div>
       </div>
