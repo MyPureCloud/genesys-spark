@@ -28,7 +28,7 @@ export class GuxFormField {
 
   componentWillLoad() {
     this.input = this.root.querySelector(
-      'input[slot="input"], select[slot="input"], textarea[slot="textarea"]'
+      'input[slot="input"], select[slot="input"], textarea[slot="input"]'
     );
     this.label = this.root.querySelector('label[slot="label"]');
     const type = this.input.getAttribute('type');
@@ -130,8 +130,8 @@ export class GuxFormField {
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <slot name="label" slot="label" />
-          <gux-input-textarea slot="textarea">
-            <slot name="textarea" />
+          <gux-input-textarea slot="input">
+            <slot name="input" />
           </gux-input-textarea>
         </div>
         <div class="gux-error">

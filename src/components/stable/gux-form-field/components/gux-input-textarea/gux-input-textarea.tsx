@@ -2,7 +2,7 @@ import { Component, Element, h, JSX, State } from '@stencil/core';
 import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 
 /**
- * @slot @slot input - Required slot for input[type="radio"]
+ * @slot input - Required slot for textarea[type="radio"]
  */
 @Component({
   styleUrl: 'gux-input-textarea.less',
@@ -19,7 +19,7 @@ export class GuxInputTextArea {
   private disabled: boolean;
 
   async componentWillLoad(): Promise<void> {
-    this.input = this.root.querySelector('textarea[slot="textarea"]');
+    this.input = this.root.querySelector('textarea[slot="input"]');
 
     this.disabled = this.input.disabled;
 
@@ -43,7 +43,7 @@ export class GuxInputTextArea {
           'gux-disabled': this.disabled
         }}
       >
-        <slot name="textarea" />
+        <slot name="input" />
       </div>
     );
   }
