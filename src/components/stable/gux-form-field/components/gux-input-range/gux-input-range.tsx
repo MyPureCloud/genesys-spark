@@ -34,6 +34,9 @@ export class GuxInputRange {
   @Prop()
   displayTextBox: string = 'true';
 
+  sliderTooltip: HTMLElement;
+  sliderTooltipContainer: HTMLElement;
+
   @Listen('input')
   onInput(e: MouseEvent): void {
     const input = e.target as HTMLInputElement;
@@ -64,6 +67,13 @@ export class GuxInputRange {
     const min = Number(this.input.min || 0);
     const max = Number(this.input.max || 100);
     const placementPercentage = ((value - min) / (max - min)) * 100;
+
+    if (this.sliderTooltip) {
+      const width = this.sliderTooltipContainer.offsetWidth;
+      const offset =
+        placementPercentage - (placementPercentage / 8 / width) * 100;
+      this.sliderTooltip.style.left = `${offset}%`;
+    }
 
     this.progressElement.style.width = `${placementPercentage}%`;
   }
@@ -125,11 +135,14 @@ export class GuxInputRange {
           <div
             class={
               'gux-range-tooltip-container' +
-              (this.displayTextBox ? ' gux-hidden' : '')
+              (shouldDisplayTextBox ? ' gux-hidden' : '')
             }
+            ref={el => (this.sliderTooltipContainer = el)}
           >
-            <div class="gux-range-tooltip">
-              {/* {console.log(this.value)} */}
+            <div
+              class="gux-range-tooltip"
+              ref={el => (this.sliderTooltip = el)}
+            >
               {this.value}
             </div>
           </div>
