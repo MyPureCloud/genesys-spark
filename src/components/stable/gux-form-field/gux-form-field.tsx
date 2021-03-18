@@ -20,6 +20,9 @@ export class GuxFormField {
   @Prop()
   clearable: boolean;
 
+  @Prop()
+  displayUnits: string;
+
   @State()
   private slottedElementType: string = 'input' || 'select' || 'textarea';
 
@@ -77,12 +80,12 @@ export class GuxFormField {
     );
   }
 
-  private getInputRange(): JSX.Element {
+  private getInputRange(displayUnits: string): JSX.Element {
     return (
       <div class="guxlabel-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <slot name="label" slot="label" />
-          <gux-input-range>
+          <gux-input-range display-units={displayUnits}>
             <slot name="input" />
           </gux-input-range>
         </div>
