@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property             | Attribute              | Description | Type     | Default     |
-| -------------------- | ---------------------- | ----------- | -------- | ----------- |
-| `valueDisplaySuffix` | `value-display-suffix` |             | `string` | `undefined` |
+| Property       | Attribute       | Description | Type     | Default     |
+| -------------- | --------------- | ----------- | -------- | ----------- |
+| `displayUnits` | `display-units` |             | `string` | `undefined` |
 
 
 ## Slots

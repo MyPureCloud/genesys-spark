@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property             | Attribute              | Description | Type      | Default     |
-| -------------------- | ---------------------- | ----------- | --------- | ----------- |
-| `clearable`          | `clearable`            |             | `boolean` | `undefined` |
-| `valueDisplaySuffix` | `value-display-suffix` |             | `string`  | `undefined` |
+| Property       | Attribute       | Description | Type      | Default     |
+| -------------- | --------------- | ----------- | --------- | ----------- |
+| `clearable`    | `clearable`     |             | `boolean` | `undefined` |
+| `displayUnits` | `display-units` |             | `string`  | `undefined` |
 
 
 ## Slots

@@ -20,7 +20,7 @@ export class GuxInputRange {
   private root: HTMLElement;
 
   @Prop()
-  valueDisplaySuffix: string;
+  displayUnits: string;
 
   @State()
   private disabled: boolean;
@@ -69,8 +69,8 @@ export class GuxInputRange {
   }
 
   private getDisplayValue(): string {
-    if (this.valueDisplaySuffix) {
-      return `${this.value}${this.valueDisplaySuffix}`;
+    if (this.displayUnits) {
+      return `${this.value}${this.displayUnits}`;
     }
 
     return this.value;
