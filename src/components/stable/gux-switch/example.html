@@ -145,22 +145,3 @@
 })()"
   >Get Value</gux-button
 >
-
-<h2>Add Itam</h2>
-
-<gux-switch id="switch-element" value="month">
-  <gux-switch-item value="week">Week</gux-switch-item>
-  <gux-switch-item value="day">Day</gux-switch-item>
-  <gux-switch-item value="hour">Hour</gux-switch-item>
-  <gux-switch-item value="minute">Minute</gux-switch-item>
-</gux-switch>
-<br />
-<gux-button
-  onclick="(function() {
-  const guxSwitch = document.getElementById('switch-element');
-  const monthElement = window.toHTML(`<gux-switch-item value='month'>Month</gux-switch-item>`)
-
-  guxSwitch.insertBefore(monthElement, guxSwitch.firstChild)
-})()"
-  >Add Month Item</gux-button
->
