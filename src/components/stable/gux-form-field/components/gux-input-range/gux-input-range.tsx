@@ -32,7 +32,7 @@ export class GuxInputRange {
   private valueWatcherId: number;
 
   @Prop()
-  displayTextBox: string = 'true';
+  valueInTooltip: boolean = true;
 
   sliderTooltip: HTMLElement;
   sliderTooltipContainer: HTMLElement;
@@ -82,7 +82,6 @@ export class GuxInputRange {
     this.input = this.root.querySelector('input[slot="input"]');
     this.disabled = this.input.disabled;
     this.value = this.input.value;
-    this.displayTextBox = this.input.getAttribute('display-text-box');
 
     this.disabledObserver = onDisabledChange(
       this.input,
@@ -108,10 +107,6 @@ export class GuxInputRange {
   }
 
   render(): JSX.Element {
-    let shouldDisplayTextBox = true;
-    if (this.displayTextBox === 'false') {
-      shouldDisplayTextBox = false;
-    }
     return (
       <div
         class={{
@@ -135,7 +130,7 @@ export class GuxInputRange {
           <div
             class={
               'gux-range-tooltip-container' +
-              (shouldDisplayTextBox ? ' gux-hidden' : '')
+              (this.valueInTooltip ? ' gux-hidden' : '')
             }
             ref={el => (this.sliderTooltipContainer = el)}
           >
@@ -151,7 +146,7 @@ export class GuxInputRange {
           class={{
             'gux-display': true,
             'gux-active': this.active,
-            'gux-hidden': !shouldDisplayTextBox
+            'gux-hidden': !this.valueInTooltip
           }}
         >
           {this.value}

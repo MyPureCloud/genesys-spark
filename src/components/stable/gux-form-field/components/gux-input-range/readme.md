@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property         | Attribute          | Description | Type     | Default  |
-| ---------------- | ------------------ | ----------- | -------- | -------- |
-| `displayTextBox` | `display-text-box` |             | `string` | `'true'` |
+| Property         | Attribute          | Description | Type      | Default |
+| ---------------- | ------------------ | ----------- | --------- | ------- |
+| `valueInTooltip` | `value-in-tooltip` |             | `boolean` | `true`  |
 
 
 ## Slots
