@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.4](http://inindca///compare/v2.5.3...v2.5.4) (2021-03-16)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** fixed gux-options css issue ([1e54d7f](http://inindca///commit/1e54d7ffcae53571ab32974d4f55e055722e5306))
+
+### [2.5.3](http://inindca///compare/v2.5.2...v2.5.3) (2021-03-15)
+
+
+### Bug Fixes
+
+* **gux-input-text-like:** color updates ([dd9c06a](http://inindca///commit/dd9c06ad979cad8d876048d8fa9a7ad04357e43e))
+* **gux-input-text-like:** remove readme changes ([586a977](http://inindca///commit/586a9778407ae89f9b402b9bd5fba7cf19b1999f))
+
+### [2.5.2](http://inindca///compare/v2.5.1...v2.5.2) (2021-03-12)
+
+
+### Bug Fixes
+
+* **gux-popover:** now using connect and disconnect callbacks instead of willLoad and didUnload ([6545475](http://inindca///commit/65454755079c6b2f1747c316cb150f7d8985bf9c))
+
+### [2.5.1](http://inindca///compare/v2.5.0...v2.5.1) (2021-03-11)
+
+
+### Bug Fixes
+
+* **gux-content-search:** updated colors ([a2df7a5](http://inindca///commit/a2df7a5d26f0c8c0c7daf7165c80dc19952a0a02))
+* **gux-date-picker:** fixed input bugs ([76f53c9](http://inindca///commit/76f53c9113a2403c34f92e11689d24a224d3ded5))
+* **pr-comments:** addressed PR comments ([196e832](http://inindca///commit/196e832da36b82f0e79853079c20d67f76f488f2))
+
 ## [2.5.0](http://inindca///compare/v2.4.2...v2.5.0) (2021-03-05)
 
 

@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property         | Attribute          | Description | Type      | Default |
-| ---------------- | ------------------ | ----------- | --------- | ------- |
-| `valueInTooltip` | `value-in-tooltip` |             | `boolean` | `true`  |
+| Property         | Attribute          | Description | Type      | Default     |
+| ---------------- | ------------------ | ----------- | --------- | ----------- |
+| `displayUnits`   | `display-units`    |             | `string`  | `undefined` |
+| `valueInTooltip` | `value-in-tooltip` |             | `boolean` | `true`      |
 
 
 ## Slots
