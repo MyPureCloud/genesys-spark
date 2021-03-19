@@ -156,7 +156,7 @@ export class GuxFormField {
           case 'color':
             return this.getInputColor();
           case 'range':
-            return this.getInputRange();
+            return this.getInputRange(this.displayUnits);
           case 'email':
           case 'password':
           case 'text':
