@@ -37,7 +37,12 @@ export class GuxFormField {
     const type = this.input.getAttribute('type');
     this.slottedElementType = this.input.tagName.toLowerCase();
 
-    trackComponent(this.root, { variant: type });
+    let variant = this.slottedElementType;
+    if (this.slottedElementType === 'input') {
+      variant = this.slottedElementType.concat('-').concat(type);
+    }
+
+    trackComponent(this.root, { variant });
   }
 
   componentWillRender() {

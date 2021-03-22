@@ -7,9 +7,9 @@
 
 ## Slots
 
-| Slot      | Description                              |
-| --------- | ---------------------------------------- |
-| `"input"` | Required slot for textarea[type="radio"] |
+| Slot      | Description                |
+| --------- | -------------------------- |
+| `"input"` | Required slot for textarea |
 
 
 ## Dependencies
