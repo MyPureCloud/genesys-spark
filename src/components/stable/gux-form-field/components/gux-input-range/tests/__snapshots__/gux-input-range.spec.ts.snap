@@ -9,11 +9,11 @@ exports[`gux-input-range should render 1`] = `
         <div class="gux-progress" style="width: 0%;"></div>
       </div>
       <input slot="input" type="range">
-      <div class="gux-hidden gux-range-tooltip-container">
+      <div class="gux-range-tooltip-container">
         <div class="gux-range-tooltip" style="left: NaN%;"></div>
       </div>
     </div>
-    <div class="gux-display"></div>
+    <div class="gux-display gux-hidden"></div>
   </div>
 </gux-input-range>
 `;

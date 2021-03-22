@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property       | Attribute       | Description | Type      | Default     |
-| -------------- | --------------- | ----------- | --------- | ----------- |
-| `clearable`    | `clearable`     |             | `boolean` | `undefined` |
-| `displayUnits` | `display-units` |             | `string`  | `undefined` |
+| Property         | Attribute          | Description | Type      | Default     |
+| ---------------- | ------------------ | ----------- | --------- | ----------- |
+| `clearable`      | `clearable`        |             | `boolean` | `undefined` |
+| `displayUnits`   | `display-units`    |             | `string`  | `undefined` |
+| `valueInTooltip` | `value-in-tooltip` |             | `boolean` | `undefined` |
 
 
 ## Slots

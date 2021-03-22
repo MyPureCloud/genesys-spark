@@ -10,7 +10,7 @@
 | Property         | Attribute          | Description | Type      | Default     |
 | ---------------- | ------------------ | ----------- | --------- | ----------- |
 | `displayUnits`   | `display-units`    |             | `string`  | `undefined` |
-| `valueInTooltip` | `value-in-tooltip` |             | `boolean` | `true`      |
+| `valueInTooltip` | `value-in-tooltip` |             | `boolean` | `false`     |
 
 
 ## Slots

@@ -35,7 +35,7 @@ export class GuxInputRange {
   private valueWatcherId: number;
 
   @Prop()
-  valueInTooltip: boolean = true;
+  valueInTooltip: boolean = false;
 
   sliderTooltip: HTMLElement;
   sliderTooltipContainer: HTMLElement;
