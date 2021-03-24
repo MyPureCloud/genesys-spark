@@ -43,7 +43,7 @@ export class GuxTabs {
   /**
    * Maximum nuber of tabs created
    */
-  @State() tabLimit: number = 20;
+  @Prop() tabLimit: number = Infinity;
 
   /**
    * Disable new tab button event
@@ -141,15 +141,17 @@ export class GuxTabs {
   }
 
   async componentWillLoad(): Promise<void> {
+    trackComponent(this.root);
+    this.i18n = await buildI18nForComponent(this.root, tabsResources);
+  }
+
+  componentWillRender() {
     const tabs: HTMLGuxTabElement[] = Array.from(
       this.root.querySelectorAll('gux-tab')
     );
     if (tabs.length >= this.tabLimit) {
       this.disableAddTabButton = true;
     }
-
-    trackComponent(this.root);
-    this.i18n = await buildI18nForComponent(this.root, tabsResources);
   }
 
   checkForScrollbarHideOrShow() {
