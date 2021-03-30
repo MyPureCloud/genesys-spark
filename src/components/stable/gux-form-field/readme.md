@@ -26,6 +26,7 @@
 ### Depends on
 
 - [gux-input-checkbox](./components/gux-input-checkbox)
+- [gux-icon](../gux-icon)
 - [gux-input-radio](./components/gux-input-radio)
 - [gux-input-color](./components/gux-input-color)
 - [gux-input-range](./components/gux-input-range)
@@ -36,6 +37,7 @@
 ```mermaid
 graph TD;
   gux-form-field --> gux-input-checkbox
+  gux-form-field --> gux-icon
   gux-form-field --> gux-input-radio
   gux-form-field --> gux-input-color
   gux-form-field --> gux-input-range

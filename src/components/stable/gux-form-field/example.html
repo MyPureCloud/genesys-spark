@@ -45,6 +45,17 @@
       />
       <label slot="label" for="sandwich">Sandwich</label>
     </gux-form-field>
+    <gux-form-field>
+      <input
+        slot="input"
+        type="checkbox"
+        id="required"
+        name="required"
+        value="false"
+      />
+      <label slot="label" for="required">Checkbox with error</label>
+      <span slot="error">Required</span>
+    </gux-form-field>
   </div>
 
   <h1>Radio</h1>
@@ -283,8 +294,25 @@
       <label slot="label">Text</label>
     </gux-form-field>
   </div>
-  <h1>Select</h1>
 
+  <h1>Input with error</h1>
+  <div>
+    <gux-form-field>
+      <input
+        slot="input"
+        name="errorInput"
+        type="text"
+        step="5"
+        min="5"
+        max="100"
+        placeholder="Enter text"
+      />
+      <label slot="label">Input</label>
+      <span slot="error" style="visibility: visible">Field is required</span>
+    </gux-form-field>
+  </div>
+
+  <h1>Select</h1>
   <div>
     <gux-form-field>
       <select slot="input" name="select" type="select">

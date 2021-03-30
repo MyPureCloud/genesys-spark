@@ -24,6 +24,9 @@ export class GuxInputNumber {
   private root: HTMLElement;
 
   @Prop()
+  hasError: boolean;
+
+  @Prop()
   clearable: boolean;
 
   @State()
@@ -143,7 +146,12 @@ export class GuxInputNumber {
           'gux-disabled': this.disabled
         }}
       >
-        <div class="gux-input-container">
+        <div
+          class={{
+            'gux-input-container': true,
+            'gux-input-error': this.hasError
+          }}
+        >
           <slot name="input" />
           {this.renderClearButton()}
         </div>

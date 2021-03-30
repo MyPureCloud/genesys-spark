@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, State } from '@stencil/core';
+import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
 /**
  * @slot input - Required slot for input[type="checkbox"]
@@ -15,6 +15,9 @@ export class GuxInputCheckbox {
   @Element()
   private root: HTMLElement;
 
+  @Prop()
+  hasError: boolean;
+
   @State()
   private checked: boolean;
 
@@ -26,6 +29,7 @@ export class GuxInputCheckbox {
     this.label = this.root.querySelector('label[slot="label"]');
 
     this.setLabelClassForCheckedState();
+    this.setInputClassForErrorState();
 
     this.input.addEventListener('click', (): void => {
       this.setLabelClassForCheckedState();
@@ -39,6 +43,12 @@ export class GuxInputCheckbox {
         <slot name="label" />
       </div>
     );
+  }
+
+  private setInputClassForErrorState(): void {
+    if(this.hasError) {
+      this.input.classList.add('gux-input-error');
+    }
   }
 
   private setLabelClassForCheckedState(): void {
