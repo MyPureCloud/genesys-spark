@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.9.1](http://inindca///compare/v2.9.0...v2.9.1) (2021-03-31)
+
+
+### Bug Fixes
+
+* **gux-pagination:** fixed bug when items per page is changed and total items is 0 ([0434b12](http://inindca///commit/0434b12ee76a5aa1abc81afed531490732c4bb81))
+
 ## [2.9.0](http://inindca///compare/v2.8.0...v2.9.0) (2021-03-26)
 
 
