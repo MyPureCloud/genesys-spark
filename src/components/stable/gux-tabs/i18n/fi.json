@@ -1,5 +1,6 @@
 {
   "createNewTab": "Luo uusi välilehti",
   "scrollLeft": "Vieritä vasemmalle",
-  "scrollRight": "Vieritä oikealle"
+  "scrollRight": "Vieritä oikealle",
+  "disableNewTab": "Luotujen välilehtien enimmäismäärä on saavutettu"
 }

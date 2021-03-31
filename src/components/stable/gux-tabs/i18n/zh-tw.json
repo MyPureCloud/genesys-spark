@@ -1,5 +1,6 @@
 {
   "createNewTab": "建立新索引標籤",
   "scrollLeft": "向左捲動",
-  "scrollRight": "向右捲動"
+  "scrollRight": "向右捲動",
+  "disableNewTab": "建立的頁籤已達到最大數量"
 }
