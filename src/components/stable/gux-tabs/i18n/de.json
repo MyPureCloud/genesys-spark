@@ -1,5 +1,6 @@
 {
   "createNewTab": "Neue Registerkarte erstellen",
   "scrollLeft": "Nach links blättern",
-  "scrollRight": "Nach rechts blättern"
+  "scrollRight": "Nach rechts blättern",
+  "disableNewTab": "Die maximale Anzahl an erstellten Registerkarten wurde erreicht."
 }
