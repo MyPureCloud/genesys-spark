@@ -60,8 +60,8 @@ export class GuxPagination implements ComponentInterface {
   private guxpaginationchange: EventEmitter<GuxPaginationState>;
 
   private setPage(page: number): void {
-    if (page < 1) {
-      this.setPage(1);
+    if (page < 0) {
+      this.setPage(0);
       return;
     }
 
