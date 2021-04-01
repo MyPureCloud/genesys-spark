@@ -23,6 +23,9 @@ export class GuxFormField {
   @Prop()
   displayUnits: string;
 
+  @Prop()
+  valueInTooltip: boolean;
+
   @State()
   private slottedElementType: string = 'input' || 'select' || 'textarea';
 
@@ -85,12 +88,18 @@ export class GuxFormField {
     );
   }
 
-  private getInputRange(displayUnits: string): JSX.Element {
+  private getInputRange(
+    displayUnits: string,
+    valueInTooltip: boolean
+  ): JSX.Element {
     return (
       <div class="guxlabel-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <slot name="label" slot="label" />
-          <gux-input-range display-units={displayUnits}>
+          <gux-input-range
+            display-units={displayUnits}
+            value-in-tooltip={valueInTooltip}
+          >
             <slot name="input" />
           </gux-input-range>
         </div>
@@ -161,7 +170,7 @@ export class GuxFormField {
           case 'color':
             return this.getInputColor();
           case 'range':
-            return this.getInputRange(this.displayUnits);
+            return this.getInputRange(this.displayUnits, this.valueInTooltip);
           case 'email':
           case 'password':
           case 'text':
