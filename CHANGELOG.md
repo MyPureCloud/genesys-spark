@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.10.1](http://inindca///compare/v2.10.0...v2.10.1) (2021-04-02)
+
+
+### Bug Fixes
+
+* **gux-tabs:** fix tabs flickering when changing browser zoom ([8796983](http://inindca///commit/87969833eb88ca185bb07c9c5e787423c856da9f))
+
 ## [2.10.0](http://inindca///compare/v2.9.1...v2.10.0) (2021-04-01)
 
 
