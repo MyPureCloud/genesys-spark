@@ -1,5 +1,6 @@
 {
   "createNewTab": "Opprett ny fane",
   "scrollLeft": "Rull til venstre",
-  "scrollRight": "Rull til høyre"
+  "scrollRight": "Rull til høyre",
+  "disableNewTab": "Maksimalt antall faner som kan opprettes er nådd"
 }
