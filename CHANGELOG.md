@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.10.0](http://inindca///compare/v2.9.1...v2.10.0) (2021-04-01)
+
+
+### Features
+
+* **gux-input-range:** add custom tooltip container back ([44a0be8](http://inindca///commit/44a0be8629905c8a14c137a708f7a6f72d266da7))
+* **gux-input-range:** add option to display or not display range text box ([7b7bfc8](http://inindca///commit/7b7bfc85eb8e0ac1f8a033fc39e1a42378898e72))
+* **gux-input-range:** address feedback ([3d99b9b](http://inindca///commit/3d99b9b0dbaf0a2de55c46c354ef7278f7375998))
+* **gux-input-range:** display tooltip and move with range indicator ([ffebf87](http://inindca///commit/ffebf876a82c29ea9c3360ffcac0b6198c40a8df))
+* **gux-input-range:** remove unused styling ([d80d77a](http://inindca///commit/d80d77a40d6a8defd3c74b8806df786475aeb2a3))
+* **gux-input-range:** valueInTooltip boolean prop, add to test ([06e0bde](http://inindca///commit/06e0bde343fb12d7e78000eeb2961e86c53408e2))
+
+### [2.9.1](http://inindca///compare/v2.9.0...v2.9.1) (2021-03-31)
+
+
+### Bug Fixes
+
+* **gux-pagination:** fixed bug when items per page is changed and total items is 0 ([0434b12](http://inindca///commit/0434b12ee76a5aa1abc81afed531490732c4bb81))
+
 ## [2.9.0](http://inindca///compare/v2.8.0...v2.9.0) (2021-03-26)
 
 

@@ -132,8 +132,13 @@ exports[`gux-form-field #render input tag should render component type "range" 1
               <div class="gux-progress" style="width: NaN%;"></div>
             </div>
             <input id="test" slot="input" type="range" value="test">
+            <div class="gux-range-tooltip-container">
+              <div class="gux-range-tooltip" style="left: NaN%;">
+                test
+              </div>
+            </div>
           </div>
-          <div class="gux-display">
+          <div class="gux-display gux-hidden">
             test
           </div>
         </div>

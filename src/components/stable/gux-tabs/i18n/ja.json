@@ -1,5 +1,6 @@
 {
   "createNewTab": "新規タブを作成",
   "scrollLeft": "左にスクロール",
-  "scrollRight": "右にスクロール"
+  "scrollRight": "右にスクロール",
+  "disableNewTab": "生成されるタブの最大数に達しました"
 }
