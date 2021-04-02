@@ -195,13 +195,15 @@ export class GuxTabs {
         subtree: true
       });
     }
+
+    setTimeout(() => {
+      this.checkForScrollbarHideOrShow();
+    }, 500);
   }
 
   componentDidRender() {
     setTimeout(() => {
       readTask(() => {
-        this.checkForScrollbarHideOrShow();
-
         if (this.value) {
           const activeTab: any = this.root.querySelector(
             `gux-tab[tab-id='${this.value}']`
