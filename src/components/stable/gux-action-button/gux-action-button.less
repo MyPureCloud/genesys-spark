@@ -1,11 +1,12 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/typography.less';
 
 // Variables part
 
 gux-action-button {
   display: inline-block;
   min-width: 128px;
-  font-size: 12px;
+  .body-font();
 
   .gux-action-button-container {
     position: relative;

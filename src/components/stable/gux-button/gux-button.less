@@ -1,5 +1,6 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/typography.less';
 
 // Variables part
 @primary-dark-background-color: @gux-blue-60;
@@ -21,7 +22,8 @@ gux-button {
     height: 32px;
     padding: 0 16px;
     overflow: hidden;
-    font-size: 12px;
+    .body-font();
+
     font-weight: bold;
     text-overflow: ellipsis;
     white-space: nowrap;
