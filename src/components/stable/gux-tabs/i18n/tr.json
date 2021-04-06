@@ -1,5 +1,6 @@
 {
   "createNewTab": "Yeni Sekme Oluştur",
   "scrollLeft": "Sola Kaydır",
-  "scrollRight": "Sağa Kaydır"
+  "scrollRight": "Sağa Kaydır",
+  "disableNewTab": "Maksimum oluşturulan sekme sayısına ulaşıldı"
 }
