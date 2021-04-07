@@ -458,8 +458,8 @@ export class GuxTable {
     const styleElement = document.createElement('style');
     styleElement.id = `${this.tableId}-sortable-styles`;
 
-    const ascArrowIcon = getAssetPath(`./icons/ic-arrow-solid-down.svg`);
-    const descArrowIcon = getAssetPath(`./icons/ic-arrow-solid-up.svg`);
+    const ascArrowIcon = getAssetPath(`./icons/arrow-solid-down.svg`);
+    const descArrowIcon = getAssetPath(`./icons/arrow-solid-up.svg`);
     const sortAscContent = this.i18n('sortAsc');
     const sortDescContent = this.i18n('sortDesc');
 
@@ -606,7 +606,7 @@ export class GuxTable {
             }
           >
             <gux-icon
-              icon-name="ic-chevron-left"
+              icon-name="chevron-left"
               screenreader-text={this.i18n('scrollLeft')}
             />
           </button>
@@ -622,7 +622,7 @@ export class GuxTable {
             onClick={!this.isScrolledToLastCell && this.nextColumn.bind(this)}
           >
             <gux-icon
-              icon-name="ic-chevron-right"
+              icon-name="chevron-right"
               screenreader-text={this.i18n('scrollRight')}
             />
           </button>

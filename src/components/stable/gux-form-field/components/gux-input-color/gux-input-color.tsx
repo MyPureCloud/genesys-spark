@@ -84,7 +84,7 @@ export class GuxInputColor {
             style={{ background: this.color }}
           />
           <div class="gux-input-color-color-name">{this.color}</div>
-          <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+          <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
         </button>
         <gux-color-select
           class={{

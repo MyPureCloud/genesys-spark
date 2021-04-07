@@ -92,7 +92,7 @@ export default class EventsPanel {
 
     const notification = toHTML(`
       <gux-action-toast accent="neutral">
-        <gux-icon slot="icon" icon-name="ic-alert-info" decorative></gux-icon>
+        <gux-icon slot="icon" icon-name="alert-info" decorative></gux-icon>
         <div slot="title">${title}</div>
         <dl slot="message">
           <dt ${data ? '' : 'hidden'}>detail</dt>
