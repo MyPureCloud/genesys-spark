@@ -58,7 +58,7 @@ exports[`gux-tag-beta #render should render component as expected (5) 1`] = `
       navy
     </div>
     <button class="gux-tag-remove-button" type="button">
-      <gux-icon class="gux-tag-remove-icon" icon-name="ic-close" screenreader-text="Remove tag"></gux-icon>
+      <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove tag"></gux-icon>
     </button>
   </div>
 </gux-tag-beta>

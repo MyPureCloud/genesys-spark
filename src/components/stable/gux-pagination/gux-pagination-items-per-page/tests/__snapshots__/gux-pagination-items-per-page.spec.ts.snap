@@ -47,7 +47,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
             <span aria-hidden="true" class="gux-ghost"></span>
             <gux-text-field-legacy class="gux-unclearable" title="25" value="25"></gux-text-field-legacy>
             <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
-              <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
             </button>
           </div>
           <div class="gux-options">
@@ -145,7 +145,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
             <span aria-hidden="true" class="gux-ghost"></span>
             <gux-text-field-legacy class="gux-unclearable" title="50" value="50"></gux-text-field-legacy>
             <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
-              <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
             </button>
           </div>
           <div class="gux-options">
@@ -243,7 +243,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
             <span aria-hidden="true" class="gux-ghost"></span>
             <gux-text-field-legacy class="gux-unclearable" title="75" value="75"></gux-text-field-legacy>
             <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
-              <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
             </button>
           </div>
           <div class="gux-options">
@@ -341,7 +341,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
             <span aria-hidden="true" class="gux-ghost"></span>
             <gux-text-field-legacy class="gux-unclearable" title="100" value="100"></gux-text-field-legacy>
             <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
-              <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
             </button>
           </div>
           <div class="gux-options">
