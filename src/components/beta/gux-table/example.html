@@ -392,3 +392,19 @@
     </tbody>
   </table>
 </gux-table-beta>
+
+<h1>Empty Object table with rows selection</h1>
+<gux-table-beta object-table selectable-rows>
+  <table slot="data">
+    <thead>
+      <tr data-row-id="head">
+        <th><gux-row-select></gux-row-select></th>
+        <th data-column-name="first-name">First name</th>
+        <th data-column-name="last-name">Last name</th>
+        <th data-column-name="age" data-cell-numeric>Age</th>
+        <th data-column-name="action" data-cell-action>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</gux-table-beta>
