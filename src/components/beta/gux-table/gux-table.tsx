@@ -444,11 +444,13 @@ export class GuxTable {
     });
 
     if (headerRowSelectbox) {
-      headerRowSelectbox.selected = dataRowsSelectboxes.every(
-        (dataRowSelectbox: HTMLGuxRowSelectElement) => {
-          return dataRowSelectbox.selected;
-        }
-      );
+      headerRowSelectbox.selected =
+        dataRowsSelectboxes.length > 0 &&
+        dataRowsSelectboxes.every(
+          (dataRowSelectbox: HTMLGuxRowSelectElement) => {
+            return dataRowSelectbox.selected;
+          }
+        );
     }
   }
 
