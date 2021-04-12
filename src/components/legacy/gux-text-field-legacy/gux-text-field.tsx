@@ -29,7 +29,7 @@ export class GuxTextFieldLegacy {
   /**
    * Indicate the input value
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   value: string = '';
 
   /**

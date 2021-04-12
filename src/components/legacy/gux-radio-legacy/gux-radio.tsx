@@ -25,19 +25,19 @@ export class GuxRadioLegacy {
    * The radio group name for this radio button.  Automatically
    * inherited/overwritten by a gux-radio-group-legacy.
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   name: string;
 
   /**
    * The form value to use for the radio button.
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   value: string;
 
   /**
    * Whether or not this radio is checked.
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   checked: boolean = false;
 
   /**

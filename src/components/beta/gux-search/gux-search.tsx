@@ -25,7 +25,7 @@ export class GuxSearch {
   /**
    * Indicate the input search value
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   value: string = '';
 
   /**

@@ -63,7 +63,7 @@ export class GuxInputColor {
     this.color = this.input.value;
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 

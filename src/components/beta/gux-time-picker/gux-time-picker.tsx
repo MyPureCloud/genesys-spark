@@ -25,7 +25,7 @@ export class GuxTimePicker {
   @Element()
   root: HTMLElement;
 
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   value: string = '';
 
   @Prop({ mutable: true })
