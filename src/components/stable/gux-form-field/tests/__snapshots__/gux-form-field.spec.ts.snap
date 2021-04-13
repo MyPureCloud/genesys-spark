@@ -209,22 +209,19 @@ exports[`gux-form-field #render seect tag should render component type "select" 
       <label slot="label">
         Select
       </label>
-      <gux-input-text-like slot="input">
-        <!---->
-        <div class="gux-input-container">
-          <select name="select" slot="input" type="select">
-            <option value="option1">
-              Option 1
-            </option>
-            <option value="option1">
-              Option 2
-            </option>
-            <option value="option1">
-              Option 3
-            </option>
-          </select>
-        </div>
-      </gux-input-text-like>
+      <gux-input-select slot="input">
+        <select name="select" slot="input" type="select">
+          <option value="option1">
+            Option 1
+          </option>
+          <option value="option1">
+            Option 2
+          </option>
+          <option value="option1">
+            Option 3
+          </option>
+        </select>
+      </gux-input-select>
     </div>
     <div class="gux-error"></div>
   </div>

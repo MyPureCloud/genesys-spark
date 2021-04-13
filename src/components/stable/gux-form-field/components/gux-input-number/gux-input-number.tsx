@@ -112,9 +112,7 @@ export class GuxInputNumber {
       modalComponentResources
     );
 
-    this.input = this.root.querySelector(
-      'input[slot="input"], select[slot="input"]'
-    );
+    this.input = this.root.querySelector('input[slot="input"]');
 
     this.setHasContent();
     this.disabled = this.input.disabled;

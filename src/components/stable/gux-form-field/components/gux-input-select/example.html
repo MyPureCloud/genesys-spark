@@ -1,0 +1,26 @@
+<form onchange="notify(event)" oninput="notify(event)">
+  <h1>gux-form-field (Select)</h1>
+
+  <p>slot a select element into a gux-form-field element</p>
+
+  <div>
+    <gux-form-field>
+      <select slot="input" name="select">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Select</label>
+    </gux-form-field>
+  </div>
+
+  <h2>Disabled</h2>
+  <gux-form-field>
+    <select slot="input" name="select" disabled>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+  </gux-form-field>
+</form>
