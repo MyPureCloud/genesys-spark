@@ -38,6 +38,7 @@ gux-input-number {
       background-image: none;
       border: 1px solid @gux-black-100;
       border-radius: 2px;
+      box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
 
       input {
         flex: 1 1 auto;
@@ -50,18 +51,7 @@ gux-input-number {
 
         &::placeholder {
           color: @gux-black-90;
-        }
-
-        &::-webkit-input-placeholder {
-          color: @gux-black-90;
-        }
-
-        &::-ms-input-placeholder {
-          color: @gux-black-90;
-        }
-
-        &::-moz-placeholder {
-          color: @gux-black-90;
+          opacity: 1;
         }
 
         &::-webkit-outer-spin-button,
