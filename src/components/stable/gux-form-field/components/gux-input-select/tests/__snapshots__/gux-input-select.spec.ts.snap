@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-input-select should render 1`] = `
+<gux-input-select>
+  <!---->
+  <!--<gux-input-select-->
+  <div class="gux-input-container">
+    <select slot="input">
+      <option value="option1">
+        Option 1
+      </option>
+      <option value="option2">
+        Option 2
+      </option>
+      <option value="option3">
+        Option 3
+      </option>
+    </select>
+  </div>
+</gux-input-select>
+`;

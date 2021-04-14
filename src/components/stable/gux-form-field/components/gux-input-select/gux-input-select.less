@@ -1,6 +1,6 @@
 @import (reference) '../../../../../style/color.less';
 
-gux-input-text-like {
+gux-input-select {
   position: relative;
   display: block;
 
@@ -29,7 +29,7 @@ gux-input-text-like {
       opacity: 0.5;
     }
 
-    input {
+    select {
       flex: 1 1 auto;
       align-self: auto;
       order: 0;
@@ -40,7 +40,18 @@ gux-input-text-like {
 
       &::placeholder {
         color: @gux-black-90;
-        opacity: 1;
+      }
+
+      &::-webkit-input-placeholder {
+        color: @gux-black-90;
+      }
+
+      &::-ms-input-placeholder {
+        color: @gux-black-90;
+      }
+
+      &::-moz-placeholder {
+        color: @gux-black-90;
       }
     }
 

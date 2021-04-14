@@ -1,12 +1,12 @@
 import { newSpecPage, SpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
-import { GuxInputTextLike } from '../gux-input-text-like';
+import { GuxInputSelect } from '../gux-input-select';
 
-const components = [GuxInputTextLike];
+const components = [GuxInputSelect];
 const language = 'en';
 
-describe('gux-input-text-like', () => {
+describe('gux-input-select', () => {
   let page: SpecPage;
 
   beforeEach(async () => {
@@ -15,16 +15,20 @@ describe('gux-input-text-like', () => {
     page = await newSpecPage({
       components,
       html: `
-        <gux-input-text-like>
-          <input type="text" slot="input"/>
-        </gux-input-text-like>
+        <gux-input-select>
+          <select slot="input">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </<gux-input-select>
       `,
       language
     });
   });
 
   it('should build', async () => {
-    expect(page.rootInstance).toBeInstanceOf(GuxInputTextLike);
+    expect(page.rootInstance).toBeInstanceOf(GuxInputSelect);
   });
 
   it('should render', async () => {
