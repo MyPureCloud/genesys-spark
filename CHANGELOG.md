@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.11.0](http://inindca///compare/v2.10.4...v2.11.0) (2021-04-14)
+
+
+### Features
+
+* **dependencies:** updated all dependencies to wanted ([d69d7cd](http://inindca///commit/d69d7cd285d277fadb34bd9bfc939174a0d3984f))
+
+
+### Bug Fixes
+
+* **color-palette:** added missing colors ([48c3124](http://inindca///commit/48c3124207326077ab674fe213a0a408f54ffc23))
+* **dependencies:** updated code in preparation for stenciljs@v2 update ([cac46d0](http://inindca///commit/cac46d0dc45b921e4f2bcd4c067f2b9b29be3f81))
+* **gux-input-number:** fix styling ([45413a8](http://inindca///commit/45413a8b1c597ce3be4653961a5233d7f28cd676))
+* **gux-input-select:** create gux-input-select component for gux-form-field ([87050f3](http://inindca///commit/87050f3b764c18344fed1bfcf6be2d20f3ac33cd))
+* **pr-comments:** addressed PR comments ([7daa232](http://inindca///commit/7daa232c29c2be41bd7447b35d6b45e0fb315d23))
+
 ### [2.10.4](http://inindca///compare/v2.10.3...v2.10.4) (2021-04-12)
 
 
