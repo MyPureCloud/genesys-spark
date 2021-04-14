@@ -1,10 +1,5 @@
 @import (reference) '../../../../../style/color.less';
 
-// Variables part
-@dark-background-color: @gux-type;
-@dark-text-color: @gux-type-dark;
-@dark-border: @gux-black-30;
-
 gux-input-text-like {
   position: relative;
   display: block;
@@ -46,18 +41,7 @@ gux-input-text-like {
 
       &::placeholder {
         color: @gux-black-90;
-      }
-
-      &::-webkit-input-placeholder {
-        color: @gux-black-90;
-      }
-
-      &::-ms-input-placeholder {
-        color: @gux-black-90;
-      }
-
-      &::-moz-placeholder {
-        color: @gux-black-90;
+        opacity: 1;
       }
     }
 

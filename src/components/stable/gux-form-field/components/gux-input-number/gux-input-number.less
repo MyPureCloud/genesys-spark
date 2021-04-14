@@ -1,10 +1,5 @@
 @import (reference) '../../../../../style/color.less';
 
-// Variables part
-@dark-background-color: @gux-type;
-@dark-text-color: @gux-type-dark;
-@dark-border: @gux-black-30;
-
 gux-input-number {
   position: relative;
   display: block;
@@ -39,33 +34,24 @@ gux-input-number {
       font-size: 12px;
       line-height: 1.66666667;
       color: @gux-black-50;
-      background-color: @gux-grey-100;
+      background-color: @gux-grey-90;
       background-image: none;
-      border: 1px solid @gux-grey-60;
+      border: 1px solid @gux-black-100;
       border-radius: 2px;
+      box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
 
       input {
         flex: 1 1 auto;
         align-self: auto;
         order: 0;
-        background-color: @gux-grey-100;
+        color: @gux-black-50;
+        background-color: @gux-grey-90;
         border: none;
         outline: none;
 
         &::placeholder {
           color: @gux-black-90;
-        }
-
-        &::-webkit-input-placeholder {
-          color: @gux-black-90;
-        }
-
-        &::-ms-input-placeholder {
-          color: @gux-black-90;
-        }
-
-        &::-moz-placeholder {
-          color: @gux-black-90;
+          opacity: 1;
         }
 
         &::-webkit-outer-spin-button,
@@ -138,66 +124,4 @@ gux-input-number {
       }
     }
   }
-}
-
-// Theming
-
-// Dark
-.gux-input-number-dark-theme {
-  .gux-input-number-container {
-    .gux-input-container {
-      color: @dark-text-color;
-      background-color: @dark-background-color;
-      border: 1px solid @dark-border;
-
-      &:focus-within {
-        border: 1px solid @gux-blue-80;
-        outline: 3px @gux-blue-80;
-        box-shadow: none;
-      }
-    }
-  }
-}
-
-.gux-dark-theme {
-  gux-input-number {
-    .gux-input-number-dark-theme();
-  }
-}
-
-gux-input-number.gux-dark-theme {
-  .gux-input-number-dark-theme();
-}
-
-// Light
-.gux-input-number-light-theme {
-  .gux-input-number-container {
-    .gux-input-container {
-      color: @gux-black-50;
-      background-color: @gux-grey-100;
-      border: 1px solid @gux-grey-60;
-    }
-
-    &:focus-within {
-      .gux-input-container {
-        border: 1px solid @gux-blue-60;
-        box-shadow: 0 0 4px fade(@gux-blue-80, 50%);
-      }
-    }
-  }
-}
-
-.gux-light-theme {
-  gux-input-number {
-    .gux-input-number-light-theme();
-  }
-}
-
-gux-input-number.gux-light-theme {
-  .gux-input-number-light-theme();
-}
-
-// Default Theme
-gux-input-number {
-  .gux-input-number-light-theme();
 }
