@@ -80,7 +80,7 @@ export class GuxInputTextLike {
     );
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 

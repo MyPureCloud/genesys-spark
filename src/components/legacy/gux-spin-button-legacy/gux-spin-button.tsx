@@ -32,37 +32,37 @@ export class GuxSpinButtonLegacy {
   /**
    * The minimum number the value can be when using the spin buttons
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   min: number;
 
   /**
    * the maximum number the value can be when using the spin buttons
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   max: number;
 
   /**
    * The number which the value increments / decrements
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   step: number;
 
   /**
    * If the component is disabled or not
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   disabled: boolean;
 
   /**
    * The message shown to the user on an error
    */
-  @Prop({ reflectToAttr: true, mutable: true })
+  @Prop({ reflect: true, mutable: true })
   errorMessage: string;
 
   /**
    * If the component should show validation warnings or not
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   ignoreValidation: boolean;
 
   /**

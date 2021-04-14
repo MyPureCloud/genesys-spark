@@ -130,7 +130,7 @@ export class GuxInputNumber {
     );
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 

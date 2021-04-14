@@ -87,7 +87,7 @@ export class GuxContentSearch {
     this.inputSlottedElement.addEventListener('input', e => this.onInput(e));
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 

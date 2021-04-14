@@ -31,7 +31,7 @@ export class GuxInputTextArea {
     );
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 
