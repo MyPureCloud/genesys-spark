@@ -5,14 +5,13 @@
 </p>
 
 <h1>Accessibility</h1>
-<gux-icon class="example" icon-name="cc-delivery" decorative></gux-icon>
+<gux-icon icon-name="cc-delivery" decorative></gux-icon>
 <p>
   Set the <strong>decorative</strong> attrribute if the icon does not convey
   information about the page and is only for decoration
 </p>
 
 <gux-icon
-  class="example"
   icon-name="add-user"
   screenreader-text="add John Smith to contact list"
 ></gux-icon>
@@ -21,7 +20,7 @@
   information to the user that would not otherwise be available
 </p>
 
-<gux-icon class="example" icon-name="cc-disconnected-system"></gux-icon>
+<gux-icon icon-name="cc-disconnected-system"></gux-icon>
 <p>
   If neither <strong>decorative</strong> or <strong>screenreader-text</strong>
   are set an error will be logged in the console
@@ -36,33 +35,33 @@
 
 <h1>Caching</h1>
 <div>
-  <gux-icon class="example" icon-name="align-left" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative></gux-icon>
+  <gux-icon icon-name="align-left" decorative></gux-icon>
+  <gux-icon icon-name="align-center" decorative></gux-icon>
+  <gux-icon icon-name="align-right" decorative></gux-icon>
 </div>
 <hr />
 <div>
-  <gux-icon class="example" icon-name="align-left" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative></gux-icon>
+  <gux-icon icon-name="align-left" decorative></gux-icon>
+  <gux-icon icon-name="align-center" decorative></gux-icon>
+  <gux-icon icon-name="align-right" decorative></gux-icon>
 </div>
 <hr />
 <div>
-  <gux-icon class="example" icon-name="align-left" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative></gux-icon>
+  <gux-icon icon-name="align-left" decorative></gux-icon>
+  <gux-icon icon-name="align-center" decorative></gux-icon>
+  <gux-icon icon-name="align-right" decorative></gux-icon>
 </div>
 <hr />
 <div>
-  <gux-icon class="example" icon-name="align-left" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative></gux-icon>
+  <gux-icon icon-name="align-left" decorative></gux-icon>
+  <gux-icon icon-name="align-center" decorative></gux-icon>
+  <gux-icon icon-name="align-right" decorative></gux-icon>
 </div>
 <hr />
 <div>
-  <gux-icon class="example" icon-name="align-left" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-center" decorative></gux-icon>
-  <gux-icon class="example" icon-name="align-right" decorative></gux-icon>
+  <gux-icon icon-name="align-left" decorative></gux-icon>
+  <gux-icon icon-name="align-center" decorative></gux-icon>
+  <gux-icon icon-name="align-right" decorative></gux-icon>
 </div>
 <p>Duplicated icons should not require additional network calls</p>
 
@@ -70,7 +69,7 @@
 ${SPARK_ICON_EXAMPLE_LIST}
 
 <h1>Legacy</h1>
-<gux-icon class="example" icon-name="legacy/cc-delivery" decorative></gux-icon>
+<gux-icon icon-name="legacy/cc-delivery" decorative></gux-icon>
 <p>
   After a review of icons in this project many of them were removed as they will
   not be part of the official Spark Design System. You should migrate all usage
@@ -96,14 +95,27 @@ ${LEGACY_ICON_EXAMPLE_LIST}
   shadowRoot.appendChild(guxIcon);
 })()"
 >
+  gux-icon {
+    width: 50px;
+    height: 50px;
+    color: #33383d;
+  }
+
   #styled {
     width: 100px;
     height: 100px;
     color: #ff4f1f;
   }
 
-  .example {
-    width: 50px;
-    height: 50px;
+  .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .icon-example {
+    width: 100px;
+    margin: 5px;
+    text-align: center;
   }
 </style>

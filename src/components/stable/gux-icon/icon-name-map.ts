@@ -259,7 +259,6 @@ export const iconNameMap: Record<string, string> = {
   'ic-timeline': 'timeline',
   history: 'timeline',
   'ic-clock': 'clock-outline',
-  clock: 'clock-outline',
   'ic-clock-b': 'clock',
   'ic-quotes': 'quote-right',
   'robot-head': 'bot',

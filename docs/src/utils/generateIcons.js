@@ -1,17 +1,17 @@
 const { removeDisabledFailures } = require('tslint');
 
 const icons = [
-  { sectionName: 'Agent', iconNames: ['agent', 'agent-group', 'agent-circle'] },
+  { sectionName: 'Agent', iconNames: ['agent', 'agent-circle', 'agent-group'] },
   {
     sectionName: 'User',
     iconNames: [
       'user',
-      'user-interactions',
       'user-add',
-      'user-group',
-      'user-contact-id',
       'user-circle',
+      'user-contact-id',
       'user-directory',
+      'user-group',
+      'user-interactions',
       'user-interactions-disable'
     ]
   },
@@ -20,30 +20,36 @@ const icons = [
     sectionName: 'Faces',
     iconNames: [
       'face-happy',
+      'face-happy-solid',
       'face-neutral',
       'face-sad',
-      'face-happy-solid',
       'face-sad-solid'
     ]
   },
   {
     sectionName: 'CJV',
     iconNames: [
+      'cjv-custom-default',
       'cjv-default-event',
+      'cjv-delivery',
+      'cjv-finance-invoice',
       'cjv-form-abandoned',
       'cjv-form-submitted',
+      'cjv-generic-application',
       'cjv-offer-closed',
       'cjv-offer-ignored',
       'cjv-offer-offered',
       'cjv-offer-opened',
       'cjv-outcome-achieved',
       'cjv-page-view',
+      'cjv-policy-contract',
       'cjv-product-added',
       'cjv-product-purchased',
       'cjv-product-removed',
       'cjv-search',
-      'cjv-segment-assigned',
       'cjv-segment',
+      'cjv-segment-assigned',
+      'cjv-web-session',
       'cjv-webchat-accepted',
       'cjv-webchat-error',
       'cjv-webchat-ignored',
@@ -51,13 +57,7 @@ const icons = [
       'cjv-webchat-rejected',
       'cjv-webchat-requested',
       'cjv-webchat-submitted',
-      'cjv-webchat-timeout',
-      'cjv-custom-default',
-      'cjv-web-session',
-      'cjv-delivery',
-      'cjv-policy-contract',
-      'cjv-generic-application',
-      'cjv-finance-invoice'
+      'cjv-webchat-timeout'
     ]
   },
   {
@@ -67,148 +67,151 @@ const icons = [
   {
     sectionName: 'Left Toolbar',
     iconNames: [
-      'toolbar-interactions',
-      'toolbar-interactions-disable',
+      'toolbar-apps',
+      'toolbar-apps-disable',
       'toolbar-assist',
       'toolbar-assist-disable',
       'toolbar-chat',
       'toolbar-chat-disable',
+      'toolbar-favourite',
+      'toolbar-help',
+      'toolbar-inbox',
+      'toolbar-interactions',
+      'toolbar-interactions-disable',
+      'toolbar-notification',
       'toolbar-phone',
-      'toolbar-phone-disable',
       'toolbar-phone-active-1',
       'toolbar-phone-active-2',
       'toolbar-phone-active-3',
+      'toolbar-phone-disable',
       'toolbar-video',
-      'toolbar-video-disable',
-      'toolbar-apps',
-      'toolbar-apps-disable',
-      'toolbar-favourite',
-      'toolbar-notification',
-      'toolbar-inbox',
-      'toolbar-help'
+      'toolbar-video-disable'
     ]
   },
   {
     sectionName: 'Phone',
     iconNames: [
       'phone',
-      'phone-forward',
       'phone-bell',
-      'phone-voice',
-      'phone-disable',
-      'phone-close',
-      'phone-hold',
-      'phone-conference',
       'phone-call-history',
-      'phone-outbound',
-      'phone-missed-call',
       'phone-callback',
+      'phone-close',
+      'phone-conference',
+      'phone-dialpad',
+      'phone-disable',
+      'phone-forward',
       'phone-hangup',
-      'voicemail',
+      'phone-hold',
       'phone-inbound',
-      'phone-dialpad'
+      'phone-missed-call',
+      'phone-outbound',
+      'phone-voice',
+      'voicemail'
     ]
   },
   {
+    sectionName: 'SMS',
+    iconNames: ['sms', 'sms-close']
+  },
+  {
     sectionName: 'Chat',
-    iconNames: ['chat', 'chat-close', 'chat-disable', 'chat-multi', 'chat-bell']
+    iconNames: ['chat', 'chat-bell', 'chat-close', 'chat-disable', 'chat-multi']
   },
   {
     sectionName: 'Message',
     iconNames: [
+      'attachment',
+      'inbox',
       'message-email',
+      'message-forward',
       'message-reply',
       'message-reply-all',
-      'message-forward',
-      'send',
-      'inbox',
-      'attachment'
+      'send'
     ]
   },
   {
     sectionName: 'Video / Microphone',
     iconNames: [
-      'video',
-      'video-disable',
       'microphone',
       'microphone-disable',
-      'microphone-talking'
+      'microphone-talking',
+      'video',
+      'video-disable',
+      'webcam',
+      'webcam-disable'
     ]
   },
   {
     sectionName: 'Audio',
     iconNames: [
-      'volume-up',
+      'music',
+      'record',
+      'volume-disable',
       'volume-down',
       'volume-none',
-      'volume-disable',
-      'music'
+      'volume-up'
     ]
   },
   {
     sectionName: 'Media PLayer',
     iconNames: [
+      'control-end',
+      'control-pause',
+      'control-play',
       'control-skip-left',
       'control-skip-right',
-      'control-start',
-      'control-end',
-      'control-slide-forward',
       'control-slide-back',
-      'control-play',
-      'control-stop',
-      'control-pause'
+      'control-slide-forward',
+      'control-start',
+      'control-stop'
     ]
   },
   {
     sectionName: 'Devices',
     iconNames: [
-      'device-pc',
-      'webcam',
-      'webcam-disable',
-      'sms',
-      'sms-close',
-      'device-laptop',
-      'device-tablet',
       'device-camera',
-      'device-server',
       'device-cellphone',
-      'device-headphones'
+      'device-headphones',
+      'device-laptop',
+      'device-pc',
+      'device-server',
+      'device-tablet'
     ]
   },
-  { sectionName: 'Folder', iconNames: ['folder', 'folder-open', 'folder-add'] },
+  { sectionName: 'Folder', iconNames: ['folder', 'folder-add', 'folder-open'] },
   {
     sectionName: 'File Types',
     iconNames: [
       'file',
       'file-all',
-      'file-report',
+      'file-audio',
       'file-image-landscape',
       'file-image-portrait',
-      'file-text',
       'file-preview',
-      'file-audio',
+      'file-report',
+      'file-text',
       'file-video'
     ]
   },
   {
     sectionName: 'File Transfer',
-    iconNames: ['upload', 'download', 'export', 'import']
+    iconNames: ['download', 'export', 'import', 'upload']
   },
   { sectionName: 'External Link', iconNames: ['external-link'] },
   {
     sectionName: 'Comments',
-    iconNames: ['comments', 'thumbs-up', 'thumbs-down']
+    iconNames: ['comments', 'comments-disable', 'thumbs-down', 'thumbs-up']
   },
   {
     sectionName: 'Editing',
     iconNames: [
-      'edit',
+      'clipboard',
       'clone',
       'copy',
-      'paste',
-      'clipboard',
       'cut',
       'delete',
+      'edit',
+      'paste',
       'refresh',
       'reset'
     ]
@@ -216,47 +219,47 @@ const icons = [
   {
     sectionName: 'Resizing Controls',
     iconNames: [
-      'window-popout',
+      'window-actual-size',
       'window-contract',
-      'window-fullscreen',
       'window-drag-out',
-      'window-actual-size'
+      'window-fullscreen',
+      'window-popout'
     ]
   },
   {
     sectionName: 'Apps',
-    iconNames: ['app-generic', 'app-chart', 'app-layout', 'app-table']
+    iconNames: ['app-chart', 'app-generic', 'app-layout', 'app-table']
+  },
+  {
+    sectionName: 'Time',
+    iconNames: ['clock', 'clock-outline', 'timeline']
   },
   {
     sectionName: 'Miscellaneous',
     iconNames: [
       'add-circle',
-      'timeline',
-      'clock',
-      'clock-outline',
-      'quote-right',
-      'quote-left',
-      'bot',
-      'skills',
-      'campaign',
       'bolt',
-      'palette',
-      'tenant',
-      'lunch',
-      'configuration',
-      'stamp',
-      'record',
-      'follow',
-      'scripter',
-      'paint',
-      'resource',
-      'post',
-      'fire',
-      'dash',
+      'bot',
       'bus',
-      'notification',
+      'campaign',
+      'configuration',
+      'dash',
+      'fire',
+      'follow',
       'generic',
       'low-bandwidth',
+      'lunch',
+      'paint',
+      'palette',
+      'pin',
+      'post',
+      'quote-left',
+      'quote-right',
+      'resource',
+      'scripter',
+      'skills',
+      'stamp',
+      'tenant',
       'trade',
       'unknown'
     ]
@@ -264,56 +267,56 @@ const icons = [
   {
     sectionName: 'Settings',
     iconNames: [
-      'settings',
-      'lock',
-      'unlock',
-      'link',
-      'unlink',
       'certificate',
-      'key',
-      'sun',
-      'moon',
-      'view-all',
-      'view-cells',
-      'view-lists',
-      'view-list',
-      'view-stacked',
-      'view-grid',
-      'view-roster',
+      'coaching',
       'inspect',
       'inspect-disable',
-      'coaching'
+      'key',
+      'link',
+      'lock',
+      'moon',
+      'settings',
+      'sun',
+      'unlink',
+      'unlock',
+      'view-all',
+      'view-cells',
+      'view-grid',
+      'view-list',
+      'view-lists',
+      'view-roster',
+      'view-stacked'
     ]
   },
   {
     sectionName: 'Social Media',
     iconNames: [
-      'rss',
-      'twitter',
-      'facebook',
-      'viber',
-      'whatsapp',
-      'line-messenger',
-      'wechat',
-      'telegram',
-      'share',
       'at',
-      'retweet'
+      'facebook',
+      'line-messenger',
+      'retweet',
+      'rss',
+      'share',
+      'telegram',
+      'twitter',
+      'viber',
+      'wechat',
+      'whatsapp'
     ]
   },
   {
     sectionName: 'Arrows',
     iconNames: [
-      'arrow-up',
       'arrow-down',
+      'arrow-down-left',
+      'arrow-down-right',
       'arrow-left',
       'arrow-right',
-      'arrow-up-right',
+      'arrow-up',
       'arrow-up-left',
-      'arrow-down-right',
-      'arrow-down-left',
-      'chevron-right',
-      'chevron-left'
+      'arrow-up-right',
+      'chevron-left',
+      'chevron-right'
     ]
   },
   { sectionName: 'Sets', iconNames: ['transfer'] },
@@ -322,70 +325,72 @@ const icons = [
     iconNames: [
       'graph-bar-horizontal',
       'graph-bar-vertical',
-      'graph-line',
-      'graph-chart',
-      'graph-spark',
       'graph-bubble',
-      'graph-pie'
+      'graph-chart',
+      'graph-line',
+      'graph-pie',
+      'graph-spark'
     ]
   },
   {
     sectionName: 'Location',
     iconNames: [
-      'pin-location',
-      'pin',
-      'server',
-      'globe',
-      'home',
       'cloud',
       'cloud-outline',
+      'globe',
+      'home',
+      'pin-location',
+      'server',
       'site'
     ]
   },
   {
     sectionName: 'UI Icons',
     iconNames: [
-      'search',
+      'add',
+      'alert-success',
+      'alert-warning-octogon',
+      'alert-warning-triangle',
+      'arrow-solid-down',
+      'arrow-solid-left',
+      'arrow-solid-right',
+      'arrow-solid-up',
       'calendar',
       'checkbox',
       'checkbox-active',
       'checkbox-partial',
       'checkmark',
-      'radio',
-      'radio-active',
-      'add',
-      'close',
-      'arrow-solid-up',
-      'arrow-solid-down',
-      'arrow-solid-left',
-      'arrow-solid-right',
-      'chevron-small-down',
-      'chevron-small-up',
-      'chevron-small-left',
-      'chevron-small-right',
       'chevron-double-left',
       'chevron-double-right',
-      'menu-kebab-vertical',
-      'menu',
-      'menu-kebab-horizontal',
-      'rating-active',
-      'rating',
-      'rating-partial',
-      'filter',
-      'logout',
-      'alert-success',
-      'alert-warning-triangle',
-      'alert-warning-octogon',
-      'grab-horizontal',
-      'grab-vertical',
+      'chevron-small-down',
+      'chevron-small-left',
+      'chevron-small-right',
+      'chevron-small-up',
+      'close',
       'collapse',
       'expand',
+      'filter',
+      'grab-horizontal',
+      'grab-vertical',
+      'logout',
+      'menu',
+      'menu-kebab-horizontal',
+      'menu-kebab-vertical',
+      'radio',
+      'radio-active',
+      'rating',
+      'rating-active',
+      'rating-partial',
+      'search',
       'tag',
       'tag-add',
       'tag-remove'
     ]
   },
-  { sectionName: 'Alerts', iconNames: ['bell', 'bug', 'alert-info', 'help'] },
+  {
+    sectionName: 'Alerts',
+    iconNames: ['alert-info', 'bell', 'bug', 'help', 'notification']
+  },
   { sectionName: 'Zoom', iconNames: ['zoom-in', 'zoom-out'] }
 ];
 
