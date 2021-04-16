@@ -5,6 +5,7 @@ gux-input-select {
   display: block;
 
   .gux-input-container {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -13,8 +14,6 @@ gux-input-select {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 32px;
-    padding: 4px 12px 4px 12px;
     font-family: inherit;
     font-size: 12px;
     line-height: 1.66666667;
@@ -26,54 +25,44 @@ gux-input-select {
     box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
 
     &.gux-disabled {
+      pointer-events: none;
       opacity: 0.5;
+    }
+
+    &:hover {
+      gux-icon {
+        color: @gux-blue-60;
+      }
     }
 
     select {
       flex: 1 1 auto;
       align-self: auto;
       order: 0;
+      height: 32px;
+      padding: 0 32px 0 12px;
+      margin: 0;
       color: @gux-black-50;
       background-color: @gux-grey-90;
       border: none;
       outline: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
 
       &::placeholder {
         color: @gux-black-90;
       }
-
-      &::-webkit-input-placeholder {
-        color: @gux-black-90;
-      }
-
-      &::-ms-input-placeholder {
-        color: @gux-black-90;
-      }
-
-      &::-moz-placeholder {
-        color: @gux-black-90;
-      }
     }
 
-    .gux-clear-button {
-      flex: 0 1 auto;
-      align-self: auto;
-      order: 0;
-      padding: 2px;
-      color: @gux-black-90;
-      background: transparent;
-      border: none;
-
-      &:not(:disabled):focus,
-      &:not(:disabled):hover {
-        color: @gux-blue-60;
-        cursor: pointer;
-      }
-
-      gux-icon {
-        width: 12px;
-        height: 12px;
-      }
+    gux-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      margin: 8px;
+      pointer-events: none;
     }
 
     &:focus-within {
