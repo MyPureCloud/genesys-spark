@@ -1,7 +1,14 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxAdvancedDropdown } from '../gux-advanced-dropdown';
+import MutationObserver from 'mutation-observer';
 
 describe('gux-advanced-dropdown', () => {
+  beforeEach(async () => {
+    (global as NodeJS.Global & {
+      MutationObserver: any;
+    }).MutationObserver = MutationObserver;
+  });
+
   it('should render', async () => {
     const page = await newSpecPage({
       components: [GuxAdvancedDropdown],

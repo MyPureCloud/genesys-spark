@@ -81,6 +81,10 @@ export class GuxAdvancedDropdown {
   @State()
   selectionOptions: HTMLGuxDropdownOptionElement[];
 
+  slotObserver = new MutationObserver(records =>
+    this.handleSlotChange(records)
+  );
+
   @Watch('disabled')
   watchValue(newValue: boolean) {
     if (this.opened && newValue) {
@@ -118,27 +122,21 @@ export class GuxAdvancedDropdown {
       this.root,
       advancedDropDownResources
     );
+
+    this.handleSelectionChange = this.handleSelectionChange.bind(this);
+    this.updateSelectionState();
   }
 
   componentDidLoad() {
-    this.selectionOptions = this.getSelectionOptions();
-    for (const option of this.selectionOptions) {
-      if (option.selected) {
-        this.currentlySelectedOption = option;
-        this.value = option.text;
-      }
+    this.slotObserver.observe(this.root, {
+      subtree: true,
+      childList: true,
+      attributes: true
+    });
+  }
 
-      option.addEventListener('selectedChanged', async () => {
-        this.value = await option.getDisplayedValue();
-        this.input.emit(option.value);
-        this.closeDropdown(true);
-
-        if (this.currentlySelectedOption) {
-          this.currentlySelectedOption.selected = false;
-        }
-        this.currentlySelectedOption = option;
-      });
-    }
+  disconnectedCallback() {
+    this.slotObserver.disconnect();
   }
 
   render() {
@@ -190,6 +188,43 @@ export class GuxAdvancedDropdown {
         </div>
       </div>
     );
+  }
+
+  private updateSelectionState(): void {
+    this.selectionOptions = this.getSelectionOptions();
+    for (const option of this.selectionOptions) {
+      if (option.selected) {
+        this.currentlySelectedOption = option;
+        this.value = option.text;
+      }
+
+      option.removeEventListener('selectedChanged', this.handleSelectionChange);
+
+      option.addEventListener('selectedChanged', this.handleSelectionChange);
+    }
+  }
+
+  private handleSelectionChange({ target }: CustomEvent): void {
+    const option = target as HTMLGuxDropdownOptionElement;
+
+    this.value = option.text;
+    this.input.emit(option.value);
+    this.closeDropdown(true);
+
+    if (this.currentlySelectedOption) {
+      this.currentlySelectedOption.selected = false;
+    }
+    this.currentlySelectedOption = option;
+  }
+
+  private handleSlotChange(records: MutationRecord[]): void {
+    const isOptionMutation = records.find(
+      record => record.target.nodeName === 'GUX-DROPDOWN-OPTION'
+    );
+
+    if (isOptionMutation) {
+      this.updateSelectionState();
+    }
   }
 
   private getSelectionOptions(): HTMLGuxDropdownOptionElement[] {
