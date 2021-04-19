@@ -71,8 +71,14 @@ export class GuxAdvancedDropdown {
 
   @State()
   opened: boolean;
+
+  @State()
   value: string;
+
+  @State()
   currentlySelectedOption: HTMLGuxDropdownOptionElement;
+
+  @State()
   selectionOptions: HTMLGuxDropdownOptionElement[];
 
   @Watch('disabled')
@@ -119,6 +125,7 @@ export class GuxAdvancedDropdown {
     for (const option of this.selectionOptions) {
       if (option.selected) {
         this.currentlySelectedOption = option;
+        this.value = option.text;
       }
 
       option.addEventListener('selectedChanged', async () => {
