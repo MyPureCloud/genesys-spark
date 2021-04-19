@@ -2,23 +2,25 @@
 
 exports[`gux-advanced-dropdown should render 1`] = `
 <gux-advanced-dropdown lang="en">
-  <!---->
-  <div class="gux-dropdown">
-    <div class="gux-select-field">
-      <a class="gux-select-input" tabindex="0"></a>
-      <div class="gux-icon-wrapper">
-        <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+  <mock:shadow-root>
+    <div class="gux-dropdown">
+      <div class="gux-select-field">
+        <a class="gux-select-input" tabindex="0"></a>
+        <div class="gux-icon-wrapper">
+          <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+        </div>
       </div>
-    </div>
-    <div class="gux-advanced-dropdown-menu">
-      <div class="gux-dropdown-menu-container">
-        <gux-search-beta class="gux-light-theme" dynamic-search="true" searchtimeout="500" srlabel="Search"></gux-search-beta>
-        <div class="gux-dropdown-options">
-          <gux-dropdown-option text="English" value="en"></gux-dropdown-option>
-          <gux-dropdown-option text="Dutch" value="nl"></gux-dropdown-option>
+      <div class="gux-advanced-dropdown-menu">
+        <div class="gux-dropdown-menu-container">
+          <gux-search-beta class="gux-light-theme" dynamic-search="true" searchtimeout="500" srlabel="Search"></gux-search-beta>
+          <div class="gux-dropdown-options">
+            <slot></slot>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </mock:shadow-root>
+  <gux-dropdown-option text="English" value="en"></gux-dropdown-option>
+  <gux-dropdown-option text="Dutch" value="nl"></gux-dropdown-option>
 </gux-advanced-dropdown>
 `;

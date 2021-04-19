@@ -18,7 +18,8 @@ import advancedDropDownResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
-  tag: 'gux-advanced-dropdown'
+  tag: 'gux-advanced-dropdown',
+  shadow: true
 })
 export class GuxAdvancedDropdown {
   @Element()
@@ -185,21 +186,9 @@ export class GuxAdvancedDropdown {
   }
 
   private getSelectionOptions(): HTMLGuxDropdownOptionElement[] {
-    const result: HTMLGuxDropdownOptionElement[] = [];
-    const options: HTMLElement = this.root.getElementsByClassName(
-      'gux-dropdown-options'
-    )[0] as HTMLElement;
+    const options = this.root.querySelectorAll('gux-dropdown-option');
 
-    // Hack around TSX not supporting for..of on HTMLCollection, this
-    // needs to be tested in IE11
-    const childrenElements: any = options.children;
-    for (const child of childrenElements) {
-      if (child.matches('gux-dropdown-option')) {
-        result.push(child as HTMLGuxDropdownOptionElement);
-      }
-    }
-
-    return result;
+    return Array.from(options);
   }
 
   private inputMouseDown() {

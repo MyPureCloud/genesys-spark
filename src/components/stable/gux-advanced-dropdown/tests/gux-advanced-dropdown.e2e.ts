@@ -21,12 +21,15 @@ describe('gux-advanced-dropdown', () => {
     `);
     await page.waitForChanges();
 
-    const element = await page.find('gux-advanced-dropdown');
-    const inputElm = await element.find('.gux-select-input');
+    const inputElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-select-input'
+    );
     inputElm.click();
     await page.waitForChanges();
 
-    const dropMenuElm = await element.find('.gux-advanced-dropdown-menu');
+    const dropMenuElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-advanced-dropdown-menu'
+    );
     expect(dropMenuElm.className.split(' ')).toContain('gux-opened');
   });
 
@@ -43,15 +46,21 @@ describe('gux-advanced-dropdown', () => {
     const element = await page.find('gux-advanced-dropdown');
     const inputSpy = await element.spyOnEvent('input');
 
-    const inputElm = await element.find('.gux-select-input');
+    const inputElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-select-input'
+    );
     inputElm.click();
     await page.waitForChanges();
 
-    let dropMenuElm = await element.find('.gux-advanced-dropdown-menu');
-    const enElm = await dropMenuElm.find('gux-dropdown-option');
+    let dropMenuElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-advanced-dropdown-menu'
+    );
+    const enElm = await element.find('gux-dropdown-option');
     enElm.click();
     await page.waitForChanges();
-    dropMenuElm = await element.find('.gux-advanced-dropdown-menu');
+    dropMenuElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-advanced-dropdown-menu'
+    );
 
     expect(inputSpy).toHaveReceivedEventDetail('en');
     expect(dropMenuElm.className.split(' ')).not.toContain('gux-opened');
@@ -70,11 +79,15 @@ describe('gux-advanced-dropdown', () => {
     const element = await page.find('gux-advanced-dropdown');
     const filterSpy = await element.spyOnEvent('filter');
 
-    const inputElm = await element.find('.gux-select-input');
+    const inputElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-select-input'
+    );
     inputElm.click();
     await page.waitForChanges();
 
-    const guxSearch = await element.find('gux-search-beta');
+    const guxSearch = await page.find(
+      'gux-advanced-dropdown >>> gux-search-beta'
+    );
     guxSearch.setProperty('value', 'en');
     await page.waitForChanges();
 
@@ -96,11 +109,15 @@ describe('gux-advanced-dropdown', () => {
     const element = await page.find('gux-advanced-dropdown');
     const filterSpy = await element.spyOnEvent('filter');
 
-    const inputElm = await element.find('.gux-select-input');
+    const inputElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-select-input'
+    );
     inputElm.click();
     await page.waitForChanges();
 
-    const guxSearch = await element.find('gux-search-beta');
+    const guxSearch = await page.find(
+      'gux-advanced-dropdown >>> gux-search-beta'
+    );
     guxSearch.setProperty('value', 'en');
     await page.waitForChanges();
 
