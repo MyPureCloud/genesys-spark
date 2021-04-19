@@ -124,7 +124,7 @@ export class GuxSearch {
             onKeyDown={e => this._onKeyDown(e)}
           />
           <div class="gux-search-icon">
-            <gux-icon decorative iconName="ic-search"></gux-icon>
+            <gux-icon decorative icon-name="search"></gux-icon>
           </div>
         </div>
       </div>

@@ -489,7 +489,7 @@ export class GuxCalendar {
             tabindex="-1"
             aria-hidden="true"
           >
-            <gux-icon decorative iconName="ic-chevron-small-left"></gux-icon>
+            <gux-icon decorative icon-name="chevron-small-left"></gux-icon>
           </button>
           {this.renderMonthHeader()}
           <button
@@ -499,7 +499,7 @@ export class GuxCalendar {
             tabindex="-1"
             aria-hidden="true"
           >
-            <gux-icon decorative iconName="ic-chevron-small-right"></gux-icon>
+            <gux-icon decorative icon-name="chevron-small-right"></gux-icon>
           </button>
         </div>
         <div class="gux-content">

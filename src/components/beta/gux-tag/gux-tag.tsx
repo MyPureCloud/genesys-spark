@@ -107,7 +107,7 @@ export class GuxTag {
         >
           <gux-icon
             class="gux-tag-remove-icon"
-            icon-name="ic-close"
+            icon-name="close"
             screenreader-text={this.i18n('remove-tag')}
           />
         </button>

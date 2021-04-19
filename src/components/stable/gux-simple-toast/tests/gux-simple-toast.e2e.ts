@@ -7,7 +7,7 @@ describe('gux-simple-toast', () => {
         description: 'should render neutral simple toast',
         html: `
           <gux-simple-toast lang="en" accent="neutral">
-            <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="message">This is the message</div>
           </gux-simple-toast>
         `
@@ -16,7 +16,7 @@ describe('gux-simple-toast', () => {
         description: 'should render positive simple toast',
         html: `
           <gux-simple-toast lang="en" accent="positive">
-            <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="message">This is the message</div>
           </gux-simple-toast>
         `
@@ -25,7 +25,7 @@ describe('gux-simple-toast', () => {
         description: 'should render alert simple toast',
         html: `
           <gux-simple-toast lang="en" accent="alert">
-            <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="message">This is the message</div>
           </gux-simple-toast>
         `
@@ -34,7 +34,7 @@ describe('gux-simple-toast', () => {
         description: 'should render warning simple toast',
         html: `
           <gux-simple-toast lang="en" accent="warning">
-            <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="message">This is the message</div>
           </gux-simple-toast>
         `
@@ -53,7 +53,7 @@ describe('gux-simple-toast', () => {
     it('click dismiss button', async () => {
       const html = `
         <gux-simple-toast lang="en" accent="neutral">
-          <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+          <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
           <div slot="message">This is the message</div>
         </gux-simple-toast>
       `;
@@ -77,7 +77,7 @@ describe('gux-simple-toast', () => {
     it('click dismiss button and prevent default', async () => {
       const html = `
         <gux-simple-toast lang="en" accent="neutral">
-          <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+          <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
           <div slot="message">This is the message</div>
         </gux-simple-toast>
       `;

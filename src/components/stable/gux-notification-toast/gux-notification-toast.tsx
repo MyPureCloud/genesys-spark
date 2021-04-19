@@ -72,7 +72,7 @@ export class GuxNotificationToast {
         >
           <gux-icon
             screenreaderText={this.getI18nValue('dismiss')}
-            iconName="ic-close"
+            icon-name="close"
           ></gux-icon>
         </button>
       </Host>

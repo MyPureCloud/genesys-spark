@@ -21,7 +21,7 @@ export class GuxSidePanelButton {
   render() {
     return (
       <button aria-label={this.altText} class={this.buttonClass}>
-        <gux-icon decorative iconName={this.icon}></gux-icon>
+        <gux-icon decorative icon-name={this.icon}></gux-icon>
       </button>
     );
   }

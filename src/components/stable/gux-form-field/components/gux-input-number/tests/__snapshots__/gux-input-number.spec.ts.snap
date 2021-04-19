@@ -9,10 +9,10 @@ exports[`gux-input-number should render 1`] = `
     </div>
     <div class="gux-step-buttons-container">
       <button class="gux-step-button" title="Increment" type="button">
-        <gux-icon decorative="" iconname="angle-up"></gux-icon>
+        <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
       </button>
       <button class="gux-step-button" title="Decrement" type="button">
-        <gux-icon decorative="" iconname="angle-down"></gux-icon>
+        <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
       </button>
     </div>
   </div>
