@@ -27,9 +27,14 @@ changing error-message attribute.
 
  - [gux-form-field](../..)
 
+### Depends on
+
+- [gux-icon](../../../gux-icon)
+
 ### Graph
 ```mermaid
 graph TD;
+  gux-input-select --> gux-icon
   gux-form-field --> gux-input-select
   style gux-input-select fill:#f9f,stroke:#333,stroke-width:4px
 ```

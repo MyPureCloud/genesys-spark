@@ -31,6 +31,7 @@
  - [gux-error-message-beta](../../beta/gux-error-message-beta)
  - [gux-input-color](../gux-form-field/components/gux-input-color)
  - [gux-input-number](../gux-form-field/components/gux-input-number)
+ - [gux-input-select](../gux-form-field/components/gux-input-select)
  - [gux-input-text-like](../gux-form-field/components/gux-input-text-like)
  - [gux-modal](../gux-modal)
  - [gux-notification-toast](../gux-notification-toast)
@@ -65,6 +66,7 @@ graph TD;
   gux-error-message-beta --> gux-icon
   gux-input-color --> gux-icon
   gux-input-number --> gux-icon
+  gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
   gux-modal --> gux-icon
   gux-notification-toast --> gux-icon
