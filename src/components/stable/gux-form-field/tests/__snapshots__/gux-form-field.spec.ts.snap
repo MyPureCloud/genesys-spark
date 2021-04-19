@@ -7,7 +7,7 @@ exports[`gux-form-field #render input tag should render component type "checkbox
     <!---->
     <div class="gux-input-checkbox-container">
       <input id="test" slot="input" type="checkbox" value="test">
-      <label class="gux-unchecked" for="test" slot="label">
+      <label for="test" slot="label">
         Test
       </label>
     </div>

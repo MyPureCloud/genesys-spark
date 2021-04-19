@@ -26,18 +26,19 @@ describe('gux-input-checkbox', () => {
     `);
     const component = await page.find('gux-input-checkbox');
     const label = await component.find('label');
+    const input = await component.find('input');
 
     await label.click();
     await page.waitForChanges();
-    expect(label.className).toContain('gux-checked');
+    expect(await input.getProperty('checked')).toBe(true);
 
     await label.click();
     await page.waitForChanges();
-    expect(label.className).toContain('gux-unchecked');
+    expect(await input.getProperty('checked')).toBe(false);
 
     await label.click();
     await page.waitForChanges();
-    expect(label.className).toContain('gux-checked');
+    expect(await input.getProperty('checked')).toBe(true);
   });
 
   it('should render the assigned label', async () => {
