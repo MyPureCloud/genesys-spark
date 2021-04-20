@@ -43,7 +43,7 @@ export class GuxDisclosureButton {
    * Indicated image used by button
    */
   @State()
-  icon: string = 'ic-expand-right';
+  icon: string = 'arrow-solid-right';
 
   /**
    * Return the state of the components panel on state change
@@ -68,9 +68,9 @@ export class GuxDisclosureButton {
 
   updateIcon() {
     if (this.position === 'right') {
-      this.icon = this.isOpen ? 'ic-expand-right' : 'ic-expand-left';
+      this.icon = this.isOpen ? 'arrow-solid-right' : 'arrow-solid-left';
     } else {
-      this.icon = this.isOpen ? 'ic-expand-left' : 'ic-expand-right';
+      this.icon = this.isOpen ? 'arrow-solid-left' : 'arrow-solid-right';
     }
   }
 

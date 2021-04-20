@@ -162,7 +162,7 @@ export class GuxAdvancedDropdown {
             {this.value && <span class="gux-select-value">{this.value}</span>}
           </a>
           <div class="gux-icon-wrapper">
-            <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div

@@ -32,7 +32,7 @@ export class GuxInputSelect {
     );
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 
@@ -45,6 +45,7 @@ export class GuxInputSelect {
         }}
       >
         <slot name="input" />
+        <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
       </div>
     );
   }

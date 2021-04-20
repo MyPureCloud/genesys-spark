@@ -7,7 +7,7 @@ exports[`gux-advanced-dropdown should render 1`] = `
       <div class="gux-select-field">
         <a class="gux-select-input" tabindex="0"></a>
         <div class="gux-icon-wrapper">
-          <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
+          <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
         </div>
       </div>
       <div class="gux-advanced-dropdown-menu">

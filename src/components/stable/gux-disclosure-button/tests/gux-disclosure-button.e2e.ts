@@ -43,8 +43,8 @@ describe('gux-disclosure-button', () => {
   });
 
   describe('button icon', () => {
-    const expandRight = 'ic-expand-right';
-    const expandLeft = 'ic-expand-left';
+    const expandRight = 'arrow-solid-right';
+    const expandLeft = 'arrow-solid-left';
 
     const testStates = [
       {

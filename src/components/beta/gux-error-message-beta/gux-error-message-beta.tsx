@@ -20,7 +20,7 @@ export class GuxErrorMessageBeta {
     return (
       <div class="gux-container">
         <div class="gux-icon">
-          <gux-icon icon-name="ic-error-bold" decorative></gux-icon>
+          <gux-icon icon-name="alert-warning-octogon" decorative></gux-icon>
         </div>
         <div class="gux-message">
           <slot slot="error" />

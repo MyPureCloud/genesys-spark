@@ -180,10 +180,7 @@ export class GuxSpinButtonLegacy {
             class="gux-spin-button"
             disabled={this.disabled || this.value >= this.max}
           >
-            <gux-icon
-              decorative
-              iconName="ic-iw-circle-no-chevron-up"
-            ></gux-icon>
+            <gux-icon decorative icon-name="chevron-small-up"></gux-icon>
           </button>
           <button
             id="gux-spin-button-decrement"
@@ -194,10 +191,7 @@ export class GuxSpinButtonLegacy {
             class="gux-spin-button"
             disabled={this.disabled || this.value <= this.min}
           >
-            <gux-icon
-              decorative
-              iconName="ic-iw-circle-no-chevron-down"
-            ></gux-icon>
+            <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
           </button>
         </div>
       </div>

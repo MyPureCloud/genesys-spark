@@ -50,6 +50,7 @@ graph TD;
   gux-input-color --> gux-color-select
   gux-color-select --> gux-input-color-option
   gux-input-number --> gux-icon
+  gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
   style gux-form-field fill:#f9f,stroke:#333,stroke-width:4px
 ```

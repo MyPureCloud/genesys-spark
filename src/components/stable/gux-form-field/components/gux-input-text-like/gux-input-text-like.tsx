@@ -48,7 +48,7 @@ export class GuxInputTextLike {
           disabled={this.disabled}
           onClick={this.clearInput.bind(this)}
         >
-          <gux-icon iconName="ic-close" decorative></gux-icon>
+          <gux-icon icon-name="close" decorative></gux-icon>
         </button>
       );
     }

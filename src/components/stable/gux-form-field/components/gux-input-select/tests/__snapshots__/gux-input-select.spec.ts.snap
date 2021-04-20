@@ -16,6 +16,7 @@ exports[`gux-input-select should render 1`] = `
         Option 3
       </option>
     </select>
+    <gux-icon decorative="" iconname="ic-dropdown-arrow"></gux-icon>
   </div>
 </gux-input-select>
 `;

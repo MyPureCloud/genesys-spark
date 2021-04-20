@@ -131,7 +131,7 @@ exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
         <span class="gux-breadcrumb-content">
           Category
         </span>
-        <gux-icon class="gux-breadcrumb-separator" decorative="" icon-name="ic-chevron-small-right"></gux-icon>
+        <gux-icon class="gux-breadcrumb-separator" decorative="" icon-name="chevron-small-right"></gux-icon>
       </span>
     </gux-breadcrumb-item>
     <gux-breadcrumb-item href="#">
@@ -140,7 +140,7 @@ exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
         <a class="gux-breadcrumb-content gux-link" href="#">
           Parent
         </a>
-        <gux-icon class="gux-breadcrumb-separator" decorative="" icon-name="ic-chevron-small-right"></gux-icon>
+        <gux-icon class="gux-breadcrumb-separator" decorative="" icon-name="chevron-small-right"></gux-icon>
       </span>
     </gux-breadcrumb-item>
     <gux-breadcrumb-item>

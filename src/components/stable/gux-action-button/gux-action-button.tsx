@@ -157,7 +157,7 @@ export class GuxActionButton {
           onKeyUp={e => this.onKeyUpEvent(e)}
           class="gux-dropdown-button"
         >
-          <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+          <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
         </gux-button>
         <gux-list
           class="gux-dropdown-list"

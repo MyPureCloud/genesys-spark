@@ -100,7 +100,7 @@ export class GuxRating {
         return acc.concat(
           <gux-icon
             class="gux-rating-star-half"
-            icon-name="ic-star-half"
+            icon-name="rating-partial"
             decorative
           ></gux-icon>
         );
@@ -108,7 +108,7 @@ export class GuxRating {
         return acc.concat(
           <gux-icon
             class="gux-rating-star-full"
-            icon-name="ic-stars"
+            icon-name="rating-active"
             decorative
           ></gux-icon>
         );
@@ -117,7 +117,7 @@ export class GuxRating {
       return acc.concat(
         <gux-icon
           class="gux-rating-star-empty"
-          icon-name="ic-star-outline"
+          icon-name="rating"
           decorative
         ></gux-icon>
       );

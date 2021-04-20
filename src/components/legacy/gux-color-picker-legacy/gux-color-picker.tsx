@@ -91,7 +91,7 @@ export class GuxColorPickerBeta {
             style={{ background: this.activeColor }}
           />
           <div class="gux-color-picker-color-name">{this.activeColor}</div>
-          <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+          <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
         </button>
         {this.opened && (
           <gux-color-select-legacy
