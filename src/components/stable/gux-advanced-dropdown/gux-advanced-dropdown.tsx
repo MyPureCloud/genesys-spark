@@ -126,6 +126,7 @@ export class GuxAdvancedDropdown {
 
     this.handleSelectionChange = this.handleSelectionChange.bind(this);
     this.updateSelectionState();
+    this.addOptionListeners();
   }
 
   componentDidLoad() {
@@ -193,15 +194,21 @@ export class GuxAdvancedDropdown {
 
   private updateSelectionState(): void {
     this.selectionOptions = this.getSelectionOptions();
-    for (const option of this.selectionOptions) {
-      if (option.selected) {
-        this.currentlySelectedOption = option;
-      }
+    this.currentlySelectedOption = this.selectionOptions.find(
+      option => option.selected
+    );
+  }
 
-      option.removeEventListener('selectedChanged', this.handleSelectionChange);
+  private addOptionListeners(options: Node[] = this.selectionOptions): void {
+    options.forEach(option =>
+      option.addEventListener('selectedChanged', this.handleSelectionChange)
+    );
+  }
 
-      option.addEventListener('selectedChanged', this.handleSelectionChange);
-    }
+  private removeOptionListeners(options: Node[] = this.selectionOptions): void {
+    options.forEach(option =>
+      option.removeEventListener('selectedChanged', this.handleSelectionChange)
+    );
   }
 
   private handleSelectionChange({ target }: CustomEvent): void {
@@ -217,12 +224,38 @@ export class GuxAdvancedDropdown {
   }
 
   private handleSlotChange(records: MutationRecord[]): void {
-    const isOptionMutation = records.find(
-      record => record.target.nodeName === 'GUX-DROPDOWN-OPTION'
+    const OPTION_NAME = 'GUX-DROPDOWN-OPTION';
+    const hasSelectionChanges = records.find(
+      record =>
+        record.target.nodeName === OPTION_NAME &&
+        record.type === 'attributes' &&
+        record.attributeName === 'selected'
     );
 
-    if (isOptionMutation) {
+    const optionAdditions = records
+      .filter(record => record.type === 'childList' && record.addedNodes)
+      .map(record => Array.from(record.addedNodes))
+      .reduce((acc, val) => acc.concat(val), [])
+      .filter(node => node.nodeName === OPTION_NAME);
+
+    const optionRemovals = records
+      .filter(record => record.type === 'childList' && record.removedNodes)
+      .map(record => Array.from(record.removedNodes))
+      .reduce((acc, val) => acc.concat(val), [])
+      .filter(node => node.nodeName === OPTION_NAME);
+
+    if (hasSelectionChanges) {
       this.updateSelectionState();
+    }
+
+    if (optionAdditions) {
+      this.updateSelectionState();
+      this.addOptionListeners(optionAdditions);
+    }
+
+    if (optionRemovals) {
+      this.updateSelectionState();
+      this.removeOptionListeners(optionRemovals);
     }
   }
 
