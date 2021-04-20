@@ -73,9 +73,6 @@ export class GuxAdvancedDropdown {
   opened: boolean;
 
   @State()
-  value: string;
-
-  @State()
   currentlySelectedOption: HTMLGuxDropdownOptionElement;
 
   @State()
@@ -90,6 +87,10 @@ export class GuxAdvancedDropdown {
     if (this.opened && newValue) {
       this.closeDropdown(false);
     }
+  }
+
+  get value(): string {
+    return this.currentlySelectedOption?.text;
   }
 
   /**
@@ -195,7 +196,6 @@ export class GuxAdvancedDropdown {
     for (const option of this.selectionOptions) {
       if (option.selected) {
         this.currentlySelectedOption = option;
-        this.value = option.text;
       }
 
       option.removeEventListener('selectedChanged', this.handleSelectionChange);
@@ -207,7 +207,6 @@ export class GuxAdvancedDropdown {
   private handleSelectionChange({ target }: CustomEvent): void {
     const option = target as HTMLGuxDropdownOptionElement;
 
-    this.value = option.text;
     this.input.emit(option.value);
     this.closeDropdown(true);
 
