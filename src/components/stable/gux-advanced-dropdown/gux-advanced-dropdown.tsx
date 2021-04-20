@@ -244,17 +244,15 @@ export class GuxAdvancedDropdown {
       .reduce((acc, val) => acc.concat(val), [])
       .filter(node => node.nodeName === OPTION_NAME);
 
-    if (hasSelectionChanges) {
+    if (hasSelectionChanges || optionAdditions || optionRemovals) {
       this.updateSelectionState();
     }
 
     if (optionAdditions) {
-      this.updateSelectionState();
       this.addOptionListeners(optionAdditions);
     }
 
     if (optionRemovals) {
-      this.updateSelectionState();
       this.removeOptionListeners(optionRemovals);
     }
   }
