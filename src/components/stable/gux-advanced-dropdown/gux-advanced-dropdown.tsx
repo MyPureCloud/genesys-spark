@@ -126,7 +126,7 @@ export class GuxAdvancedDropdown {
 
     this.handleSelectionChange = this.handleSelectionChange.bind(this);
     this.updateSelectionState();
-    this.addOptionListeners();
+    this.addOptionListener();
   }
 
   componentDidLoad() {
@@ -199,16 +199,8 @@ export class GuxAdvancedDropdown {
     );
   }
 
-  private addOptionListeners(options: Node[] = this.selectionOptions): void {
-    options.forEach(option =>
-      option.addEventListener('selectedChanged', this.handleSelectionChange)
-    );
-  }
-
-  private removeOptionListeners(options: Node[] = this.selectionOptions): void {
-    options.forEach(option =>
-      option.removeEventListener('selectedChanged', this.handleSelectionChange)
-    );
+  private addOptionListener(): void {
+    this.root.addEventListener('selectedChanged', this.handleSelectionChange);
   }
 
   private handleSelectionChange({ target }: CustomEvent): void {
@@ -232,28 +224,14 @@ export class GuxAdvancedDropdown {
         record.attributeName === 'selected'
     );
 
-    const optionAdditions = records
-      .filter(record => record.type === 'childList' && record.addedNodes)
-      .map(record => Array.from(record.addedNodes))
+    const hasOptionDomChanges = records
+      .filter(record => record.type === 'childList')
+      .map(record => Array.from(record.addedNodes || record.removedNodes))
       .reduce((acc, val) => acc.concat(val), [])
-      .filter(node => node.nodeName === OPTION_NAME);
+      .find(node => node.nodeName === OPTION_NAME);
 
-    const optionRemovals = records
-      .filter(record => record.type === 'childList' && record.removedNodes)
-      .map(record => Array.from(record.removedNodes))
-      .reduce((acc, val) => acc.concat(val), [])
-      .filter(node => node.nodeName === OPTION_NAME);
-
-    if (hasSelectionChanges || optionAdditions || optionRemovals) {
+    if (hasSelectionChanges || hasOptionDomChanges) {
       this.updateSelectionState();
-    }
-
-    if (optionAdditions) {
-      this.addOptionListeners(optionAdditions);
-    }
-
-    if (optionRemovals) {
-      this.removeOptionListeners(optionRemovals);
     }
   }
 
