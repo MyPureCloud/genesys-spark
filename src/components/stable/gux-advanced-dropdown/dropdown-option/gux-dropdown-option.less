@@ -2,44 +2,42 @@
 
 @text-color: @gux-type;
 
-:host {
+gux-dropdown-option {
   position: relative;
   display: flex;
   height: 32px;
   padding: 0 16px;
   line-height: 32px;
   cursor: pointer;
-}
 
-:host([disabled]) {
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.5;
-}
+  div {
+    position: relative;
 
-:host([filtered]) {
-  display: none;
-}
+    .gux-ghost {
+      position: absolute;
+    }
+  }
 
-:host(:not([disabled])[selected]) {
-  color: @text-color;
-  background: @gux-blue-100;
-}
+  &[filtered] {
+    display: none;
+  }
 
-:host(:not([disabled]):hover) {
-  color: @gux-type-dark;
-  background: @gux-blue-60;
-}
+  &[disabled] {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+  }
 
-:host(:not([disabled]):focus) {
-  color: @gux-type-dark;
-  background: @gux-blue-60;
-}
+  &:not([disabled]) {
+    &[selected] {
+      color: @text-color;
+      background: @gux-blue-100;
+    }
 
-div {
-  position: relative;
-
-  .gux-ghost {
-    position: absolute;
+    &:hover,
+    &:focus {
+      color: @gux-type-dark;
+      background: @gux-blue-60;
+    }
   }
 }
