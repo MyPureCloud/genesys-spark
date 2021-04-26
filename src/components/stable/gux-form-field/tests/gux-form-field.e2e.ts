@@ -3,7 +3,7 @@ import { newE2EPage } from '@stencil/core/testing';
 describe('gux-form-field', () => {
   it('renders', async () => {
     const html = `
-      <gux-form-field>
+      <gux-form-field lang="en">
         <input slot="input" type="text">
         <label slot="label">Text</label>
       </gux-form-field>
@@ -30,7 +30,7 @@ describe('gux-form-field', () => {
       ].forEach(({ type, value }) => {
         it(`should render component type "${type}"`, async () => {
           const html = `
-            <gux-form-field>
+            <gux-form-field lang="en">
               <input
                 slot="input"
                 type="${type}"
@@ -51,7 +51,7 @@ describe('gux-form-field', () => {
     describe('seect tag', () => {
       it(`should render component type "select"`, async () => {
         const html = `
-          <gux-form-field>
+          <gux-form-field lang="en">
             <select slot="input" name="select" type="select">
               <option value="option1">Option 1</option>
               <option value="option1">Option 2</option>

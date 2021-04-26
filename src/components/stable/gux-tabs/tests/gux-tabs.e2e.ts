@@ -3,7 +3,7 @@ import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
 describe('gux-tabs', () => {
   it('renders', async () => {
     const html = `
-      <gux-tabs id="interactive">
+      <gux-tabs id="interactive" lang="en">
         <gux-tab tab-id="1" tab-icon-name="lock">
           <span slot="title"> Hello World </span>
           <span slot="dropdown-options">
