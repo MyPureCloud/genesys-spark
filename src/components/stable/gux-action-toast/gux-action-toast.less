@@ -1,29 +1,14 @@
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
 
 // Variables part
 // - Colors
 @action-reqired-icon-color: @gux-aqua-green-sec;
-
 @primary-background-color: @gux-blue-60;
-@primary-border-color: @expalette-primary-border-color;
 @primary-color: @gux-type-dark;
-@primary-active-background-color: @expalette-primary-active-background-color;
-
-@primary-dark-background-color: @gux-blue-60;
-@primary-dark-border-color: @gux-black-30;
-@primary-dark-color: @gux-type-dark;
-@primary-dark-hover-background-color: @expalette-primary-dark-hover-background-color;
-
 @secondary-background-color: @gux-border;
-@secondary-border-color: @expalette-secondary-border-color;
 @secondary-color: @gux-type;
-@secondary-active-background-color: @expalette-secondary-active-background-color;
-
-@secondary-dark-background-color: @expalette-background-color-dark;
-@secondary-dark-border-color: @gux-black-30;
-@secondary-dark-color: @gux-type-dark;
-@secondary-dark-hover-background-color: @expalette-secondary-dark-hover-background-color;
 
 gux-action-toast {
   display: flex;
@@ -34,7 +19,7 @@ gux-action-toast {
   justify-content: flex-start;
   width: 300px;
   padding: 20px 24px;
-  border-top: 1px solid;
+  border: 1px solid;
 
   .gux-header {
     display: flex;
@@ -112,7 +97,7 @@ gux-action-toast {
     justify-content: space-between;
     order: 0;
 
-    .gux-negitive-button {
+    .gux-negative-button {
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
@@ -128,191 +113,15 @@ gux-action-toast {
 
 // Theming
 // Light
-.gux-button-light-theme {
-  > button {
-    &.gux-secondary {
-      color: @secondary-dark-color;
-      background-color: @secondary-dark-background-color;
-      border: 1px solid @secondary-dark-border-color;
-
-      &:hover {
-        background-color: @secondary-dark-hover-background-color;
-      }
-
-      &:active {
-        box-shadow: 0 0 0 3px @gux-blue-80;
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
-      }
-
-      &[disabled] {
-        &:hover {
-          background-color: @secondary-dark-background-color;
-        }
-
-        &:active {
-          box-shadow: none;
-        }
-
-        &:focus {
-          box-shadow: none;
-        }
-      }
-    }
-
-    &.gux-primary {
-      color: @primary-dark-color;
-      background-color: @primary-dark-background-color;
-      border: 1px solid @primary-dark-border-color;
-
-      &:hover {
-        background-color: @primary-dark-hover-background-color;
-      }
-
-      &:active {
-        box-shadow: 0 0 0 3px @gux-blue-80;
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
-      }
-
-      &[disabled] {
-        &:hover {
-          background-color: @primary-dark-background-color;
-        }
-
-        &:active {
-          box-shadow: none;
-        }
-
-        &:focus {
-          box-shadow: none;
-        }
-      }
-    }
-  }
-}
 
 .gux-action-toast-light-theme {
-  color: @gux-type-dark;
-  background: @expalette-background-color-dark-2;
-  border-color: @gux-type;
-
-  .gux-message {
-    dt {
-      color: @gux-placeholder;
-    }
-  }
-
-  .gux-action-buttons {
-    .gux-negitive-button {
-      gux-button {
-        .gux-button-light-theme();
-      }
-    }
-
-    .gux-positive-button {
-      gux-button {
-        .gux-button-light-theme();
-      }
-    }
-  }
-}
-
-// Dark
-.gux-button-dark-theme {
-  > button {
-    &.gux-secondary {
-      color: @secondary-color;
-      background-color: @secondary-background-color;
-      border: 1px solid @secondary-border-color;
-
-      &:hover {
-        box-shadow: 0 0 1px 1px fade(@gux-black-30, 24%);
-      }
-
-      &:active {
-        background-color: @secondary-active-background-color;
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
-      }
-
-      &[disabled] {
-        &:hover {
-          box-shadow: none;
-        }
-
-        &:active {
-          background-color: @secondary-background-color;
-        }
-
-        &:focus {
-          box-shadow: none;
-        }
-      }
-    }
-
-    &.gux-primary {
-      color: @primary-color;
-      background-color: @primary-background-color;
-      border: 1px solid @primary-border-color;
-
-      &:hover {
-        box-shadow: 0 0 1px 1px fade(@gux-black-30, 48%);
-      }
-
-      &:active {
-        background-color: @primary-active-background-color;
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
-      }
-
-      &[disabled] {
-        &:hover {
-          box-shadow: none;
-        }
-
-        &:active {
-          background-color: @primary-background-color;
-        }
-
-        &:focus {
-          box-shadow: none;
-        }
-      }
-    }
-  }
-}
-
-.gux-action-toast-dark-theme {
   color: @gux-type;
-  background: @gux-background;
-  border-color: @gux-border;
+  background: @gux-grey-90;
+  border-color: @gux-black-100;
 
   .gux-message {
     dt {
-      color: @gux-black-100;
-    }
-  }
-
-  .gux-action-buttons {
-    .gux-negitive-button {
-      gux-button {
-        .gux-button-dark-theme();
-      }
-    }
-
-    .gux-positive-button {
-      gux-button {
-        .gux-button-dark-theme();
-      }
+      color: @gux-black-50;
     }
   }
 }
@@ -331,17 +140,6 @@ gux-action-toast {
 
 gux-action-toast.gux-light-theme {
   .gux-action-toast-light-theme();
-}
-
-// Dark Theme
-.gux-dark-theme {
-  gux-action-toast {
-    .gux-action-toast-dark-theme();
-  }
-}
-
-gux-action-toast.gux-dark-theme {
-  .gux-action-toast-dark-theme();
 }
 
 // Theming

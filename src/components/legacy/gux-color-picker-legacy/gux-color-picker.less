@@ -1,7 +1,7 @@
 @import (reference) '../../../style/color.less';
 
 // Variables part
-@background: @expalette-dropdown-background-color;
+@background: @gux-grey-90;
 
 // Style
 gux-color-picker-legacy {
@@ -85,40 +85,6 @@ gux-color-picker-legacy {
 }
 
 // Theming
-
-// Dark
-.gux-color-picker-dark-theme {
-  color: @gux-type-dark;
-
-  .gux-color-picker-main-element {
-    background-color: @expalette-background-color-dark;
-    border-color: @gux-black-30;
-  }
-
-  .gux-color-picker-main-element:focus,
-  .gux-color-picker-opened {
-    border-color: @gux-blue-80;
-    box-shadow: none;
-  }
-
-  .gux-color-picker-color-name {
-    color: @gux-type-dark;
-  }
-
-  gux-icon {
-    color: @gux-type-dark;
-  }
-}
-
-.gux-dark-theme {
-  gux-color-picker-legacy {
-    .gux-color-picker-dark-theme();
-  }
-}
-
-gux-color-picker-legacy.gux-dark-theme {
-  .gux-color-picker-dark-theme();
-}
 
 // Light
 .gux-color-picker-light-theme {

@@ -1,26 +1,22 @@
 @import (reference) '../../../style/color.less';
 
 // Variables part
-@background-color: @expalette-dropdown-background-color;
-@background-color-dark-theme: @expalette-background-color-dark;
+@background-color: @gux-grey-90;
 
 @text-color: @gux-type;
-@text-color-dark-theme: @gux-type-dark;
 
 @placeholder: @gux-placeholder;
 
 @border-color: @gux-border;
-@border-color-dark-theme: @gux-black-30;
 
 @focus-outline: fade(@gux-blue-80, 50%);
-@focus-outline-dark-theme: @gux-blue-80;
 @active-border: @gux-blue-60;
 
 @menu-shadow: fade(@gux-black-30, 24%);
 
 @menu-background-color: @gux-type-dark;
 @menu-border-color: @gux-border;
-@divider-color: @expalette-grey-2;
+@divider-color: @gux-grey-40;
 
 // Style
 gux-advanced-dropdown {
@@ -166,44 +162,6 @@ gux-advanced-dropdown {
 }
 
 // Theming
-
-// Dark
-.gux-advanced-dropdown-dark-theme {
-  color: @gux-type-dark;
-
-  div.gux-dropdown {
-    .gux-select-field {
-      a.gux-select-input {
-        color: @text-color-dark-theme;
-        background-color: @background-color-dark-theme;
-        border-color: @border-color-dark-theme;
-
-        &:focus {
-          box-shadow: 0 0 1px 3px @focus-outline-dark-theme;
-        }
-      }
-
-      gux-icon {
-        color: @text-color-dark-theme;
-      }
-    }
-
-    &.gux-active .gux-select-field a.gux-select-input {
-      border-color: @border-color-dark-theme;
-      box-shadow: 0 0 1px 3px @focus-outline-dark-theme;
-    }
-  }
-}
-
-.gux-dark-theme {
-  gux-advanced-dropdown {
-    .gux-advanced-dropdown-dark-theme();
-  }
-}
-
-gux-advanced-dropdown.gux-dark-theme {
-  .gux-advanced-dropdown-dark-theme();
-}
 
 // Light
 .gux-advanced-dropdown-light-theme {

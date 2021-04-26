@@ -10,7 +10,7 @@ describe('gux-action-toast', () => {
             <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
             <div slot="title">Title</div>
             <div slot="message">This is the message</div>
-            <gux-button slot="negitive-button">Reject</gux-button>
+            <gux-button slot="negative-button">Reject</gux-button>
             <gux-button slot="positive-button" accent="primary">Accept</gux-button>
           </gux-action-toast>
         `

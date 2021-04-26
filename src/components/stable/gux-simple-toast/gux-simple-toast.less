@@ -10,7 +10,7 @@ gux-simple-toast {
   justify-content: flex-start;
   width: 336px;
   padding: 8px 12px;
-  border-top: 1px solid;
+  border: 1px solid;
 
   .gux-icon {
     flex: 0 1 auto;
@@ -71,38 +71,9 @@ gux-simple-toast {
 // Theming
 // Light
 .gux-simple-toast-light-theme {
-  color: @gux-type-dark;
-  background: @expalette-background-color-dark-2;
-  border-color: @gux-type;
-
-  .gux-icon {
-    &.gux-alert {
-      color: @gux-alert-dark;
-    }
-
-    &.gux-warning {
-      color: @gux-warning-dark;
-    }
-
-    &.gux-positive {
-      color: @gux-positive-dark;
-    }
-
-    &.gux-neutral {
-      color: @gux-neutral-dark;
-    }
-  }
-
-  .gux-dismiss-button {
-    color: @gux-type-dark;
-  }
-}
-
-// Dark
-.gux-simple-toast-dark-theme {
   color: @gux-type;
-  background: @gux-background;
-  border-color: @gux-border;
+  background: @gux-grey-90;
+  border-color: @gux-black-100;
 
   .gux-icon {
     &.gux-alert {
@@ -141,15 +112,4 @@ gux-simple-toast {
 
 gux-simple-toast.gux-light-theme {
   .gux-simple-toast-light-theme();
-}
-
-// Dark Theme
-.gux-dark-theme {
-  gux-simple-toast {
-    .gux-simple-toast-dark-theme();
-  }
-}
-
-gux-simple-toast.gux-dark-theme {
-  .gux-simple-toast-dark-theme();
 }
