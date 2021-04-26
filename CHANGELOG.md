@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.12.2](http://inindca///compare/v2.12.1...v2.12.2) (2021-04-26)
+
+
+### Bug Fixes
+
+* **tests:** removed error from test logs ([7a23dbf](http://inindca///commit/7a23dbfda1cda20279d01bc6f9fd93575448e134))
+
 ### [2.12.1](http://inindca///compare/v2.12.0...v2.12.1) (2021-04-21)
 
 ## [2.12.0](http://inindca///compare/v2.11.0...v2.12.0) (2021-04-19)
