@@ -43,13 +43,13 @@ export class GuxDropdownOption {
    *
    * Should only be used by internal users.
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   filtered: boolean;
 
   /**
    * If present, this Boolean attribute indicates that the option is currently selected.
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   selected: boolean;
 
   @Prop()

@@ -194,7 +194,12 @@
     </gux-form-field>
 
     <gux-form-field>
-      <input slot="input" name="search" type="search" />
+      <input
+        slot="input"
+        name="search"
+        type="search"
+        placeholder="Enter a search"
+      />
       <label slot="label">Search</label>
     </gux-form-field>
 
@@ -229,6 +234,7 @@
         name="password-clearable"
         type="password"
         placeholder="Enter a password"
+        value="pa$$word"
       />
       <label slot="label">Password</label>
     </gux-form-field>
@@ -239,6 +245,7 @@
         name="text-clearable"
         type="text"
         placeholder="Enter a string"
+        value="text"
       />
       <label slot="label">Text</label>
     </gux-form-field>
@@ -303,8 +310,8 @@
     <gux-form-field>
       <select slot="input" name="select" type="select">
         <option value="option1">Option 1</option>
-        <option value="option1">Option 2</option>
-        <option value="option1">Option 3</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
       </select>
       <label slot="label">Select</label>
     </gux-form-field>
@@ -312,8 +319,8 @@
     <gux-form-field>
       <select slot="input" name="select" type="select" disabled>
         <option value="option1">Option 1</option>
-        <option value="option1">Option 2</option>
-        <option value="option1">Option 3</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
       </select>
       <label slot="label">Select</label>
     </gux-form-field>

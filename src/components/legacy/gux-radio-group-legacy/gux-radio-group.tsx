@@ -35,7 +35,7 @@ export class GuxRadioGroupLegacy {
   /**
    * The selected value of the radio group.
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   value: any;
 
   private radios: GuxRadioLegacy[] = [];

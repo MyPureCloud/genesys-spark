@@ -39,7 +39,7 @@ export class GuxSliderLegacy {
   /**
    * Indicates the value of the slider
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   value: number = 0;
   /**
    * Indicates if the input box will be displayed
@@ -122,7 +122,7 @@ export class GuxSliderLegacy {
     }, 100);
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     clearInterval(this.valueWatcherId);
   }
   /**

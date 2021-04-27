@@ -102,7 +102,7 @@ export class GuxTooltip {
     }
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.forElement.classList.remove('gux-tooltip-for-element');
     this.forElement.removeAttribute('aria-describedby');
 

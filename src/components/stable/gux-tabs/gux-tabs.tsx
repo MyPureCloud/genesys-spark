@@ -245,7 +245,7 @@ export class GuxTabs {
           onClick={() => props.onClick()}
           disabled={this.disableAddTabButton}
         >
-          <gux-icon iconName="ic-add" decorative={true} />
+          <gux-icon icon-name="add" decorative={true} />
         </button>
       );
     };
@@ -258,7 +258,7 @@ export class GuxTabs {
               class="arrow-button"
               onClick={() => this.scrollLeft()}
             >
-              <gux-icon iconName="ic-chevron-left" decorative={true} />
+              <gux-icon icon-name="chevron-left" decorative={true} />
             </button>
           ) : null}
         </div>
@@ -275,7 +275,7 @@ export class GuxTabs {
               class="arrow-button"
               onClick={() => this.scrollRight()}
             >
-              <gux-icon iconName="ic-chevron-right" decorative={true} />
+              <gux-icon icon-name="chevron-right" decorative={true} />
             </button>
           ) : null}
 

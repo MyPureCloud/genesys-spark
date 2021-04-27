@@ -64,7 +64,7 @@ export class GuxBreadcrumbItem {
         return (
           <gux-icon
             class="gux-breadcrumb-separator"
-            icon-name="ic-chevron-small-right"
+            icon-name="chevron-small-right"
             decorative
           ></gux-icon>
         );

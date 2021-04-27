@@ -80,7 +80,7 @@ export class GuxTab {
       >
         {this.tabIconName ? (
           <div class="tab-icon-container">
-            <gux-icon iconName={this.tabIconName} decorative={true}></gux-icon>
+            <gux-icon icon-name={this.tabIconName} decorative={true}></gux-icon>
           </div>
         ) : null}
         <span class="tab-title">
@@ -92,7 +92,10 @@ export class GuxTab {
             class="tab-dropdown-container"
             onClick={() => this.toggleOptions()}
           >
-            <gux-icon iconName="ellipsis-v" decorative={true}></gux-icon>
+            <gux-icon
+              icon-name="menu-kebab-vertical"
+              decorative={true}
+            ></gux-icon>
           </button>
         )}
 

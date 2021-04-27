@@ -5,7 +5,7 @@ exports[`gux-action-toast #render should render action toast 1`] = `
   <!---->
   <div class="gux-header">
     <div class="gux-icon">
-      <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+      <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
     </div>
     <div class="gux-title">
       <div slot="title">

@@ -87,7 +87,7 @@ export class GuxContentSearch {
     this.inputSlottedElement.addEventListener('input', e => this.onInput(e));
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 
@@ -95,7 +95,7 @@ export class GuxContentSearch {
     return (
       <div class={{ 'gux-disabled': this.disabled, 'gux-content': true }}>
         <div class="gux-search-icon">
-          <gux-icon decorative iconName="ic-search"></gux-icon>
+          <gux-icon decorative icon-name="search"></gux-icon>
         </div>
         <slot />
         {this.getNavigationPanel()}
@@ -132,7 +132,7 @@ export class GuxContentSearch {
               onClick={() => this.previousClick()}
               disabled={disableNavigationPanel}
             >
-              <gux-icon decorative iconName="ic-arrow-solid-up"></gux-icon>
+              <gux-icon decorative icon-name="arrow-solid-up"></gux-icon>
             </button>
             <button
               type="button"
@@ -142,7 +142,7 @@ export class GuxContentSearch {
               onClick={() => this.nextClick()}
               disabled={disableNavigationPanel}
             >
-              <gux-icon decorative iconName="ic-arrow-solid-down"></gux-icon>
+              <gux-icon decorative icon-name="arrow-solid-down"></gux-icon>
             </button>
           </div>
           <button
@@ -153,7 +153,7 @@ export class GuxContentSearch {
             onClick={() => this.clear()}
             disabled={this.disabled}
           >
-            <gux-icon decorative iconName="ic-close"></gux-icon>
+            <gux-icon decorative icon-name="close"></gux-icon>
           </button>
         </div>
       );

@@ -23,9 +23,9 @@ changing error-message attribute.
 
 ## Slots
 
-| Slot      | Description                           |
-| --------- | ------------------------------------- |
-| `"input"` | Required slot for input[type="radio"] |
+| Slot      | Description                                                             |
+| --------- | ----------------------------------------------------------------------- |
+| `"input"` | Required slot for input[type="text" \| type="email" \| type="password"] |
 
 
 ## Dependencies

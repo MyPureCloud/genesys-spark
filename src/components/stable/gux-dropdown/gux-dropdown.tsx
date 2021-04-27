@@ -309,7 +309,7 @@ export class GuxDropdown {
               tabindex="-1"
               type="button"
             >
-              <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+              <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
             </button>
           )}
         </div>

@@ -72,7 +72,7 @@ export class GuxInputNumber {
           disabled={this.disabled}
           onClick={this.clearInput.bind(this)}
         >
-          <gux-icon iconName="ic-close" decorative></gux-icon>
+          <gux-icon icon-name="close" decorative></gux-icon>
         </button>
       );
     }
@@ -90,7 +90,7 @@ export class GuxInputNumber {
           disabled={this.disabled}
           onClick={() => this.stepUp()}
         >
-          <gux-icon iconName="angle-up" decorative></gux-icon>
+          <gux-icon icon-name="chevron-small-up" decorative></gux-icon>
         </button>
 
         <button
@@ -100,7 +100,7 @@ export class GuxInputNumber {
           disabled={this.disabled}
           onClick={() => this.stepDown()}
         >
-          <gux-icon iconName="angle-down" decorative></gux-icon>
+          <gux-icon icon-name="chevron-small-down" decorative></gux-icon>
         </button>
       </div>
     );
@@ -112,9 +112,7 @@ export class GuxInputNumber {
       modalComponentResources
     );
 
-    this.input = this.root.querySelector(
-      'input[slot="input"], select[slot="input"]'
-    );
+    this.input = this.root.querySelector('input[slot="input"]');
 
     this.setHasContent();
     this.disabled = this.input.disabled;
@@ -130,7 +128,7 @@ export class GuxInputNumber {
     );
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 

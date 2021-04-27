@@ -7,7 +7,7 @@ import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 import modalComponentResources from './i18n/en.json';
 
 /**
- * @slot input - Required slot for input[type="radio"]
+ * @slot input - Required slot for input[type="text" | type="email" | type="password"]
  */
 @Component({
   styleUrl: 'gux-input-text-like.less',
@@ -48,7 +48,7 @@ export class GuxInputTextLike {
           disabled={this.disabled}
           onClick={this.clearInput.bind(this)}
         >
-          <gux-icon iconName="ic-close" decorative></gux-icon>
+          <gux-icon icon-name="close" decorative></gux-icon>
         </button>
       );
     }
@@ -62,9 +62,7 @@ export class GuxInputTextLike {
       modalComponentResources
     );
 
-    this.input = this.root.querySelector(
-      'input[slot="input"], select[slot="input"]'
-    );
+    this.input = this.root.querySelector('input[slot="input"]');
 
     this.setHasContent();
     this.disabled = this.input.disabled;
@@ -80,7 +78,7 @@ export class GuxInputTextLike {
     );
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.disabledObserver.disconnect();
   }
 

@@ -94,12 +94,24 @@ function generateComponentPage(exampleMarkup) {
   const sanitizedMarkup = exampleMarkup.toString().replace(/`/g, '\\`');
   let withHtml = withCdn.replace('${EXAMPLE_HTML}', sanitizedMarkup);
 
-  if (withHtml.includes('${ICON_EXAMPLE_LIST}')) {
-    const iconScript = require('./src/utils/generateIconsPage');
-    const iconsExamplesHtml = iconScript.generateHTML(
-      '../src/components/stable/gux-icon/icons'
+  if (withHtml.includes('${SPARK_ICON_EXAMPLE_LIST}')) {
+    const iconScript = require('./src/utils/generateIcons');
+    const iconsExamplesHtml = iconScript.generateHTML();
+    withHtml = withHtml.replace(
+      '${SPARK_ICON_EXAMPLE_LIST}',
+      iconsExamplesHtml
     );
-    withHtml = withHtml.replace('${ICON_EXAMPLE_LIST}', iconsExamplesHtml);
+  }
+
+  if (withHtml.includes('${LEGACY_ICON_EXAMPLE_LIST}')) {
+    const iconScript = require('./src/utils/generateLegacyIcons');
+    const iconsExamplesHtml = iconScript.generateHTML(
+      '../src/components/stable/gux-icon/icons/legacy'
+    );
+    withHtml = withHtml.replace(
+      '${LEGACY_ICON_EXAMPLE_LIST}',
+      iconsExamplesHtml
+    );
   }
 
   return withHtml;

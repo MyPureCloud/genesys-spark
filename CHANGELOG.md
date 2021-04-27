@@ -2,6 +2,57 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.12.2](http://inindca///compare/v2.12.1...v2.12.2) (2021-04-26)
+
+
+### Bug Fixes
+
+* **tests:** removed error from test logs ([7a23dbf](http://inindca///commit/7a23dbfda1cda20279d01bc6f9fd93575448e134))
+
+### [2.12.1](http://inindca///compare/v2.12.0...v2.12.1) (2021-04-21)
+
+## [2.12.0](http://inindca///compare/v2.11.0...v2.12.0) (2021-04-19)
+
+
+### Features
+
+* **gux-icon:** added migration guide ([db8d99a](http://inindca///commit/db8d99aa95aaa69993665b828f2c3919e155b5a2))
+* **gux-icon:** code changes for new icons ([e51af16](http://inindca///commit/e51af162b107871eee9a5ff4666ec5089d014761))
+* **gux-icon:** icon-name migrations ([3afb782](http://inindca///commit/3afb782b0029b121af5144ed3b27c0c76f892e1a))
+* **gux-icon:** snapshot updates ([19394c1](http://inindca///commit/19394c14594b1a3058703667303eedab00efde91))
+* **gux-icon:** updated icon svgs ([ae2c37e](http://inindca///commit/ae2c37ee6190d0f5d5338b1360cf150820424793))
+
+
+### Bug Fixes
+
+* **gux-input-checkbox:** fixed issue when input was programatically changed ([997ccdf](http://inindca///commit/997ccdfb4a7b2d95374d907fc13d64a8d2228dc6))
+* **gux-input-select:** gux-input-select is now consistent across browsers ([762cdfb](http://inindca///commit/762cdfb65414c2a10b0c0277e1bf9d083a2bf338))
+* **pr-comment:** addressed PR comments ([cfb4682](http://inindca///commit/cfb468257c3f968112b0e1c0ad12b48149acf5e5))
+* **pr-comments:** addressed PR comments ([cb13037](http://inindca///commit/cb130379ff13b4bded9e36422a563636cdc86496))
+
+## [2.11.0](http://inindca///compare/v2.10.4...v2.11.0) (2021-04-14)
+
+
+### Features
+
+* **dependencies:** updated all dependencies to wanted ([d69d7cd](http://inindca///commit/d69d7cd285d277fadb34bd9bfc939174a0d3984f))
+
+
+### Bug Fixes
+
+* **color-palette:** added missing colors ([48c3124](http://inindca///commit/48c3124207326077ab674fe213a0a408f54ffc23))
+* **dependencies:** updated code in preparation for stenciljs@v2 update ([cac46d0](http://inindca///commit/cac46d0dc45b921e4f2bcd4c067f2b9b29be3f81))
+* **gux-input-number:** fix styling ([45413a8](http://inindca///commit/45413a8b1c597ce3be4653961a5233d7f28cd676))
+* **gux-input-select:** create gux-input-select component for gux-form-field ([87050f3](http://inindca///commit/87050f3b764c18344fed1bfcf6be2d20f3ac33cd))
+* **pr-comments:** addressed PR comments ([7daa232](http://inindca///commit/7daa232c29c2be41bd7447b35d6b45e0fb315d23))
+
+### [2.10.4](http://inindca///compare/v2.10.3...v2.10.4) (2021-04-12)
+
+
+### Bug Fixes
+
+* **gux-table:** all row selector now unchecked when no rows in table ([4963de0](http://inindca///commit/4963de08fed17b8e14a953e079f5397052c80c0c))
+
 ### [2.10.3](http://inindca///compare/v2.10.2...v2.10.3) (2021-04-07)
 
 
