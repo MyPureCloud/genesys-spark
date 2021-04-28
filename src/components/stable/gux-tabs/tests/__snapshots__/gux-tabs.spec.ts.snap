@@ -13,7 +13,7 @@ exports[`gux-tabs should render 1`] = `
   </mock:shadow-root>
   <gux-tab tab-icon-name="lock" tab-id="1">
     <!---->
-    <button class="gux-tab" role="button">
+    <button class="gux-show gux-tab" role="button">
       <div class="tab-icon-container">
         <gux-icon decorative="" icon-name="lock"></gux-icon>
       </div>
@@ -71,7 +71,7 @@ exports[`gux-tabs should render 1`] = `
   </gux-tab>
   <gux-tab tab-icon-name="lock" tab-id="2">
     <!---->
-    <button class="gux-tab show" role="button">
+    <button class="gux-show gux-tab" role="button">
       <div class="tab-icon-container">
         <gux-icon decorative="" icon-name="lock"></gux-icon>
       </div>
