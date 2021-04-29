@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.12.3](http://inindca///compare/v2.12.2...v2.12.3) (2021-04-29)
+
+
+### Bug Fixes
+
+* **colors:** Fix failing gux-tab test. Added 'gux' prefix to 'show' class in tab component ([140a700](http://inindca///commit/140a7002c7602cb77530922b39f41d1305aac96c))
+* **colors:** Replaced old color palette colors with new equivalents provided by UX ([6906215](http://inindca///commit/6906215ccaddc799172f3d1839875d60134b74ba))
+* **colors:** Update snapshot for tab component ([bd25ad7](http://inindca///commit/bd25ad702f8e5af13f300df1c76e08e065f1d260))
+* **gux-tab:** fixed positioning of options popover ([e2ff8cb](http://inindca///commit/e2ff8cbe509ce5636e69da78eeb825a1cc1f0fdf))
+
 ### [2.12.2](http://inindca///compare/v2.12.1...v2.12.2) (2021-04-26)
 
 
