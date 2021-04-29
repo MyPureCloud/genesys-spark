@@ -5,7 +5,7 @@ import { trackComponent } from '../../../usage-tracking';
  * @slot icon - Required slot for gux-icon
  * @slot title - Required slot for the action toast title
  * @slot message - Required slot for the action toast message
- * @slot negitive-button - Required slot for the action toast negitive button
+ * @slot negative-button - Required slot for the action toast negative button
  * @slot positive-button - Required slot for the action toast positive button
  */
 @Component({
@@ -38,8 +38,8 @@ export class GuxActionToast {
         </div>
 
         <div class="gux-action-buttons">
-          <div class="gux-negitive-button">
-            <slot name="negitive-button" />
+          <div class="gux-negative-button">
+            <slot name="negative-button" />
           </div>
 
           <div class="gux-positive-button">

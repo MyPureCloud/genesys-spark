@@ -6,18 +6,11 @@
 @text-color: @gux-type;
 @border: @gux-border;
 @placeholder: @gux-placeholder;
-@icon-color: @expalette-icon-color;
-
-@dark-background-color: @gux-type;
-@dark-text-color: @gux-type-dark;
-@dark-border: @gux-black-30;
-@dark-placeholder: @gux-placeholder;
-@dark-icon-color: @expalette-icon-color;
+@icon-color: @gux-black-90;
 
 @focus-outline: fade(@gux-blue-80, 50%);
 @focus-border: @gux-blue-60;
 @alert-color: @gux-alert;
-@alert-color-dark: @gux-alert-dark;
 
 gux-text-field-legacy {
   display: block;
@@ -95,68 +88,6 @@ gux-text-field-legacy {
 }
 
 // Theming
-
-// Dark
-.gux-text-field-dark-theme {
-  > div {
-    &.gux-error,
-    &.gux-warning {
-      input {
-        border-color: @alert-color-dark;
-        outline: 0;
-
-        &:focus,
-        &:hover {
-          border-color: @alert-color-dark;
-          outline: 0;
-        }
-      }
-
-      .gux-error {
-        color: @alert-color-dark;
-
-        i {
-          margin-right: 4px;
-        }
-      }
-    }
-
-    &.gux-warning {
-      .gux-error {
-        i {
-          color: @gux-warning;
-        }
-      }
-    }
-  }
-
-  .gux-field {
-    input {
-      .gux-input-dark-theme();
-    }
-
-    button {
-      color: @dark-icon-color;
-    }
-  }
-
-  &:not([disabled]):hover,
-  &:not([disabled]):focus {
-    button {
-      opacity: 1;
-    }
-  }
-}
-
-.gux-dark-theme {
-  gux-text-field-legacy {
-    .gux-text-field-dark-theme();
-  }
-}
-
-.gux-text-field.gux-dark-theme {
-  .gux-text-field-dark-theme();
-}
 
 // Light
 .gux-text-field-light-theme {

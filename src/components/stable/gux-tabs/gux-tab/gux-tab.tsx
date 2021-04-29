@@ -101,7 +101,7 @@ export class GuxTab {
   componentDidLoad(): void {
     if (!this.hasAnimated) {
       writeTask(() => {
-        this.root.querySelector('.gux-tab').classList.add('show');
+        this.root.querySelector('.gux-tab').classList.add('gux-show');
         this.hasAnimated = true;
       });
     }
