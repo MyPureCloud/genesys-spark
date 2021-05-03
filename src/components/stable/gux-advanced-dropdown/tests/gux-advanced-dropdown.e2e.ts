@@ -96,7 +96,7 @@ describe('gux-advanced-dropdown', () => {
     expect(filterSpy).toHaveReceivedEventDetail('en');
   });
 
-  it('Should not filter if filterLocal is false', async () => {
+  it('should not filter if filterLocal is false', async () => {
     const page = await newE2EPage();
     await page.setContent(`
       <gux-advanced-dropdown lang="en" filter-debounce-timeout="0" no-filter>
@@ -125,5 +125,31 @@ describe('gux-advanced-dropdown', () => {
 
     expect(items).toHaveLength(2);
     expect(filterSpy).toHaveReceivedEventDetail('en');
+  });
+
+  it('should allow options to be dynamically rendered', async () => {
+    const page = await newE2EPage();
+    await page.setContent(`
+      <gux-advanced-dropdown lang="en" filter-debounce-timeout="0" no-filter>
+        <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
+        <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
+      </gux-advanced-dropdown>
+    `);
+    await page.waitForChanges();
+
+    await page.evaluate(() => {
+      const element = document.querySelector('gux-advanced-dropdown');
+      const option = document.querySelector('gux-dropdown-option');
+
+      element.removeChild(option);
+      element.appendChild(option);
+    });
+    await page.waitForChanges();
+
+    const items = await page.findAll(
+      'gux-advanced-dropdown > gux-dropdown-option'
+    );
+
+    expect(items).toHaveLength(2);
   });
 });
