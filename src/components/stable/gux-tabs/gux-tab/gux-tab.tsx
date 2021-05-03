@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Prop,
   State,
   writeTask
@@ -40,20 +41,20 @@ export class GuxTab {
   @Event()
   private internaltabselected: EventEmitter<void>;
 
-  private get hasDropdownOptions() {
-    return !!this.root.querySelector('[slot="dropdown-options"]');
+  private get hasDropdownOptions(): boolean {
+    return Boolean(this.root.querySelector('[slot="dropdown-options"]'));
   }
 
-  toggleOptions() {
+  private toggleOptions(): void {
     this.popoverHidden = !this.popoverHidden;
   }
 
-  onSelectDropdownOption(e: MouseEvent) {
+  private onSelectDropdownOption(e: MouseEvent): void {
     this.popoverHidden = true;
     e.stopPropagation();
   }
 
-  selectTab(e: MouseEvent) {
+  private selectTab(e: MouseEvent): void {
     if (eventIsFrom('.tab-dropdown-container', e)) {
       return;
     }
@@ -62,18 +63,54 @@ export class GuxTab {
     this.internaltabselected.emit();
   }
 
-  componentDidLoad() {
+  private getDropdownOptions(): JSX.Element {
+    if (this.hasDropdownOptions) {
+      return (
+        <div>
+          <button
+            id={this.tabId}
+            type="button"
+            class="tab-dropdown-container"
+            onClick={() => this.toggleOptions()}
+          >
+            <gux-icon
+              icon-name="menu-kebab-vertical"
+              decorative={true}
+            ></gux-icon>
+          </button>
+
+          <gux-popover
+            position="top-start"
+            for={this.tabId}
+            displayDismissButton={false}
+            hidden={this.popoverHidden}
+            closeOnClickOutside={true}
+            onGuxdismiss={() => (this.popoverHidden = true)}
+          >
+            <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
+              <slot name="dropdown-options" />
+            </div>
+          </gux-popover>
+        </div>
+      );
+    }
+
+    return null;
+  }
+
+  componentDidLoad(): void {
     if (!this.hasAnimated) {
       writeTask(() => {
-        this.root.querySelector('.gux-tab').classList.add('show');
+        this.root.querySelector('.gux-tab').classList.add('gux-show');
         this.hasAnimated = true;
       });
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <button
+        type="button"
         class={`gux-tab ${this.active ? 'selected' : ''}`}
         onClick={e => this.selectTab(e)}
         role="button"
@@ -86,33 +123,8 @@ export class GuxTab {
         <span class="tab-title">
           <slot name="title" />
         </span>
-        {this.hasDropdownOptions && (
-          <button
-            id={this.tabId}
-            class="tab-dropdown-container"
-            onClick={() => this.toggleOptions()}
-          >
-            <gux-icon
-              icon-name="menu-kebab-vertical"
-              decorative={true}
-            ></gux-icon>
-          </button>
-        )}
 
-        {this.hasDropdownOptions && (
-          <gux-popover
-            position="top"
-            for={this.tabId}
-            displayDismissButton={false}
-            hidden={this.popoverHidden}
-            closeOnClickOutside={true}
-            onGuxdismiss={() => (this.popoverHidden = true)}
-          >
-            <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
-              <slot name="dropdown-options" />
-            </div>
-          </gux-popover>
-        )}
+        {this.getDropdownOptions()}
       </button>
     );
   }

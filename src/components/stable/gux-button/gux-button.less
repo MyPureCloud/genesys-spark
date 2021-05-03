@@ -2,16 +2,6 @@
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/typography.less';
 
-// Variables part
-@primary-dark-background-color: @gux-blue-60;
-@primary-dark-border-color: @gux-black-30;
-@primary-dark-color: @gux-type-dark;
-@primary-dark-hover-background-color: @expalette-primary-dark-hover-background-color;
-@secondary-dark-background-color: @expalette-background-color-dark;
-@secondary-dark-border-color: @gux-black-30;
-@secondary-dark-color: @gux-type-dark;
-@secondary-dark-hover-background-color: @expalette-secondary-dark-hover-background-color;
-
 gux-button {
   display: inline-block;
   min-width: 32px;
@@ -44,71 +34,6 @@ gux-button {
 }
 
 // Theming
-.gux-button-dark-theme {
-  > button {
-    color: @secondary-dark-color;
-    background-color: @secondary-dark-background-color;
-    border: 1px solid @secondary-dark-border-color;
-
-    &:hover {
-      background-color: @secondary-dark-hover-background-color;
-    }
-
-    &:active {
-      box-shadow: 0 0 0 3px @gux-blue-80;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
-    }
-
-    &[disabled] {
-      &:hover {
-        background-color: @secondary-dark-background-color;
-      }
-
-      &:active {
-        box-shadow: none;
-      }
-
-      &:focus {
-        box-shadow: none;
-      }
-    }
-
-    &.gux-primary {
-      color: @primary-dark-color;
-      background-color: @primary-dark-background-color;
-      border: 1px solid @primary-dark-border-color;
-
-      &:hover {
-        background-color: @primary-dark-hover-background-color;
-      }
-
-      &:active {
-        box-shadow: 0 0 0 3px @gux-blue-80;
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
-      }
-
-      &[disabled] {
-        &:hover {
-          background-color: @primary-dark-background-color;
-        }
-
-        &:active {
-          box-shadow: none;
-        }
-
-        &:focus {
-          box-shadow: none;
-        }
-      }
-    }
-  }
-}
 
 .gux-button-light-theme {
   > button {
@@ -161,17 +86,6 @@ gux-button {
 // Default Theme
 gux-button {
   .gux-button-light-theme();
-}
-
-// Dark
-.gux-dark-theme {
-  gux-button {
-    .gux-button-dark-theme();
-  }
-}
-
-gux-button.gux-dark-theme {
-  .gux-button-dark-theme();
 }
 
 // Light

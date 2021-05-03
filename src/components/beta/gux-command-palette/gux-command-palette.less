@@ -2,7 +2,6 @@
 
 // Variables part
 @palette-background-color: @gux-type-dark;
-@palette-background-color-dark: @expalette-background-color-dark;
 @palette-border-color: @gux-border;
 @palette-details-color: @gux-black-100;
 @palette-shadow: fade(@gux-black-30, 24%);
@@ -114,41 +113,6 @@ gux-command-palette-beta .gux-command-palette {
 }
 
 // Theming
-
-// Dark
-.gux-command-palette-dark-theme {
-  .gux-command-palette {
-    color: @gux-type-dark;
-    background: @palette-background-color-dark;
-
-    gux-list gux-list-item:focus,
-    gux-list gux-list-item:active,
-    gux-list gux-list-item:hover {
-      .gux-list-item div {
-        color: @gux-type-dark;
-        background: @gux-blue-60;
-      }
-
-      .gux-list-item .gux-details {
-        color: @gux-type-dark;
-      }
-    }
-
-    gux-list gux-list-item .gux-list-item .gux-details {
-      color: @palette-details-color;
-    }
-  }
-}
-
-.gux-dark-theme {
-  gux-command-palette-beta {
-    .gux-command-palette-dark-theme();
-  }
-}
-
-gux-command-palette-beta.gux-dark-theme {
-  .gux-command-palette-dark-theme();
-}
 
 // Light
 .gux-command-palette-light-theme {
