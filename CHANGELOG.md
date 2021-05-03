@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.12.4](http://inindca///compare/v2.12.3...v2.12.4) (2021-05-03)
+
+
+### Bug Fixes
+
+* **gux-tag color type:** fixed a typo in the tag color type ([4a45b5f](http://inindca///commit/4a45b5f3691dd53fbc9d87f8ae14fe85782406a9))
+
 ### [2.12.3](http://inindca///compare/v2.12.2...v2.12.3) (2021-04-29)
 
 
