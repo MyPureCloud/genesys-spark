@@ -15,6 +15,7 @@ import { trackComponent } from '../../../usage-tracking';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import advancedDropDownResources from './i18n/en.json';
+import { onMutation } from '../../../utils/dom/on-mutation';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
@@ -78,9 +79,7 @@ export class GuxAdvancedDropdown {
   @State()
   selectionOptions: HTMLGuxDropdownOptionElement[];
 
-  slotObserver = new MutationObserver(records =>
-    this.handleSlotChange(records)
-  );
+  slotObserver: MutationObserver;
 
   @Watch('disabled')
   watchValue(newValue: boolean) {
@@ -127,14 +126,9 @@ export class GuxAdvancedDropdown {
     this.handleSelectionChange = this.handleSelectionChange.bind(this);
     this.updateSelectionState();
     this.addOptionListener();
-  }
-
-  componentDidLoad() {
-    this.slotObserver.observe(this.root, {
-      subtree: true,
-      childList: true,
-      attributes: true
-    });
+    this.slotObserver = onMutation(this.root, () =>
+      this.updateSelectionState()
+    );
   }
 
   disconnectedCallback() {
@@ -213,26 +207,6 @@ export class GuxAdvancedDropdown {
       this.currentlySelectedOption.selected = false;
     }
     this.currentlySelectedOption = option;
-  }
-
-  private handleSlotChange(records: MutationRecord[]): void {
-    const OPTION_NAME = 'GUX-DROPDOWN-OPTION';
-    const hasSelectionChanges = records.find(
-      record =>
-        record.target.nodeName === OPTION_NAME &&
-        record.type === 'attributes' &&
-        record.attributeName === 'selected'
-    );
-
-    const hasOptionDomChanges = records
-      .filter(record => record.type === 'childList')
-      .map(record => Array.from(record.addedNodes || record.removedNodes))
-      .reduce((acc, val) => acc.concat(val), [])
-      .find(node => node.nodeName === OPTION_NAME);
-
-    if (hasSelectionChanges || hasOptionDomChanges) {
-      this.updateSelectionState();
-    }
   }
 
   private getSelectionOptions(): HTMLGuxDropdownOptionElement[] {
