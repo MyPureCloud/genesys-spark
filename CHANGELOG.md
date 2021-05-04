@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.12.5](http://inindca///compare/v2.12.4...v2.12.5) (2021-05-04)
+
+
+### Bug Fixes
+
+* **advanced-dropdown:** add mutation observer to update option state after dynamic update ([4bad22c](http://inindca///commit/4bad22cd4f78dba5604f33e6809fd7e249cce464))
+* **advanced-dropdown:** convert to shadow DOM to allow dynamic insertion of options ([0762558](http://inindca///commit/0762558eaae3cce699dc315e2d380221b74ca6a7))
+* **advanced-dropdown:** update value and rerender if selected option on initial load ([66c0d5d](http://inindca///commit/66c0d5dadb49d30fa668007082a521052566c71c))
+
 ### [2.12.4](http://inindca///compare/v2.12.3...v2.12.4) (2021-05-03)
 
 
