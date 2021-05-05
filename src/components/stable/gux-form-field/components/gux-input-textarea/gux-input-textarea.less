@@ -16,6 +16,11 @@ gux-input-textarea {
 
     /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
     display: grid;
+    word-break: normal;
+
+    // This is for Safari and is non standard https://www.w3.org/TR/css-text-3/#valdef-word-break-break-word
+    word-break: break-word;
+    overflow-wrap: anywhere;
 
     &::after {
       /* Place on top of each other */
