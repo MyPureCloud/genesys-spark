@@ -1,0 +1,43 @@
+@import (reference) '../../../../style/color.less';
+
+@text-color: @gux-type;
+
+gux-dropdown-option {
+  position: relative;
+  display: flex;
+  height: 32px;
+  padding: 0 16px;
+  line-height: 32px;
+  cursor: pointer;
+
+  div {
+    position: relative;
+
+    .gux-ghost {
+      position: absolute;
+    }
+  }
+
+  &[filtered] {
+    display: none;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:not([disabled]) {
+    &[selected] {
+      color: @text-color;
+      background: @gux-blue-100;
+    }
+
+    &:hover,
+    &:focus {
+      color: @gux-type-dark;
+      background: @gux-blue-60;
+    }
+  }
+}

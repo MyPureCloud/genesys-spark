@@ -154,6 +154,22 @@ export class GuxFormField {
     );
   }
 
+  private getInputSelect(): JSX.Element {
+    return (
+      <div class="gux-label-and-input-and-error-container">
+        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+          <slot name="label" slot="label" />
+          <gux-input-select slot="input">
+            <slot name="input" />
+          </gux-input-select>
+        </div>
+        <div class="gux-error">
+          <slot name="error" />
+        </div>
+      </div>
+    );
+  }
+
   private getInputTextLike(clearable: boolean, hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
@@ -235,7 +251,7 @@ export class GuxFormField {
             );
         }
       case 'select':
-        return this.getInputTextLike(this.clearable, hasError);
+        return this.getInputSelect();
       case 'textarea':
         return this.getInputTextArea(hasError);
       default:

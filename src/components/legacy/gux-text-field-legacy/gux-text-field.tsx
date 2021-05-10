@@ -29,7 +29,7 @@ export class GuxTextFieldLegacy {
   /**
    * Indicate the input value
    */
-  @Prop({ mutable: true, reflectToAttr: true })
+  @Prop({ mutable: true, reflect: true })
   value: string = '';
 
   /**
@@ -257,7 +257,7 @@ export class GuxTextFieldLegacy {
               aria-label={this.i18n('eraseBtnAria')}
               onClick={() => this.clear()}
             >
-              <gux-icon decorative iconName="ic-close"></gux-icon>
+              <gux-icon decorative icon-name="close"></gux-icon>
             </button>
           )}
         </div>
@@ -265,7 +265,7 @@ export class GuxTextFieldLegacy {
           <div class="gux-error">
             <gux-icon
               decorative
-              iconName={this.getIconByMessageType(this.errorMessageType)}
+              icon-name={this.getIconByMessageType(this.errorMessageType)}
             />
             <label>{this.errorMessage}</label>
           </div>

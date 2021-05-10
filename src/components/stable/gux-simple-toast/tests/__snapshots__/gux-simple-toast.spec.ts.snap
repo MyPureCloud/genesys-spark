@@ -4,7 +4,7 @@ exports[`gux-simple-toast #render should render alert simple toast 1`] = `
 <gux-simple-toast accent="alert">
   <!---->
   <div class="gux-alert gux-icon">
-    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+    <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   </div>
   <div class="gux-message">
     <div slot="message">
@@ -12,7 +12,7 @@ exports[`gux-simple-toast #render should render alert simple toast 1`] = `
     </div>
   </div>
   <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+    <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
   </button>
 </gux-simple-toast>
 `;
@@ -21,7 +21,7 @@ exports[`gux-simple-toast #render should render neutral simple toast 1`] = `
 <gux-simple-toast accent="neutral">
   <!---->
   <div class="gux-icon gux-neutral">
-    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+    <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   </div>
   <div class="gux-message">
     <div slot="message">
@@ -29,7 +29,7 @@ exports[`gux-simple-toast #render should render neutral simple toast 1`] = `
     </div>
   </div>
   <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+    <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
   </button>
 </gux-simple-toast>
 `;
@@ -38,7 +38,7 @@ exports[`gux-simple-toast #render should render positive simple toast 1`] = `
 <gux-simple-toast accent="positive">
   <!---->
   <div class="gux-icon gux-positive">
-    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+    <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   </div>
   <div class="gux-message">
     <div slot="message">
@@ -46,7 +46,7 @@ exports[`gux-simple-toast #render should render positive simple toast 1`] = `
     </div>
   </div>
   <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+    <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
   </button>
 </gux-simple-toast>
 `;
@@ -55,7 +55,7 @@ exports[`gux-simple-toast #render should render warning simple toast 1`] = `
 <gux-simple-toast accent="warning">
   <!---->
   <div class="gux-icon gux-warning">
-    <gux-icon decorative="" icon-name="add-user" slot="icon"></gux-icon>
+    <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   </div>
   <div class="gux-message">
     <div slot="message">
@@ -63,7 +63,7 @@ exports[`gux-simple-toast #render should render warning simple toast 1`] = `
     </div>
   </div>
   <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="ic-close" screenreader-text="Dismiss"></gux-icon>
+    <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
   </button>
 </gux-simple-toast>
 `;

@@ -153,7 +153,7 @@ export class GuxFlyoutMenu {
     this.runPopper();
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.destroyPopper();
   }
 

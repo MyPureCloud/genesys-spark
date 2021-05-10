@@ -8,7 +8,7 @@ native input elements and controls.
 
 - [Prefer structured markup](#markdown-header-prefer-structured-markup-over-complex-attributes-over-js-interfaces)
 - [Use a consistent input API](#markdown-header-use-a-consistent-api-for-components-that-accept-input)
-- [Don't use reflectToAttr](#markdown-header-dont-use-reflecttoattr)
+- [Don't use reflect](#markdown-header-dont-use-reflect)
 
 ## Prefer structured markup over complex attributes or js interfaces
 
@@ -78,16 +78,16 @@ those components and for events emitted by the components. In particular compone
 - Should emit the `input` event (at a minimum) with the `detail` property on the event set to the data the
   component is intended to get from the user.
 
-## Don't use reflectToAttr
+## Don't use reflect
 
-Stencil properties can be set with the option `reflectToAttr`. When set, a change in an elements property will
+Stencil properties can be set with the option `reflect`. When set, a change in an elements property will
 also change the value of the attribute in the DOM. For example, when dealing with this input element:
 
 ```html
 <my-custom-input id="myInput" value="default"></my-custom-input>
 ```
 
-If `reflectToAttr` was set on `value`, then calling `document.getElementById("myInput").value = "new value"` would
+If `reflect` was set on `value`, then calling `document.getElementById("myInput").value = "new value"` would
 mean that `document.getElementById("myInput").getAttr("value")` would now return "new value". This is _not_ how
 native browser elements behave. It also puts the internal implementation of the compnent in conflict with the surrounding
 framework used to render it about what the attribute's value should be, since it is being set twice, potentially leading

@@ -15,10 +15,12 @@ import { trackComponent } from '../../../usage-tracking';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import advancedDropDownResources from './i18n/en.json';
+import { onMutation } from '../../../utils/dom/on-mutation';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
-  tag: 'gux-advanced-dropdown'
+  tag: 'gux-advanced-dropdown',
+  shadow: true
 })
 export class GuxAdvancedDropdown {
   @Element()
@@ -70,15 +72,24 @@ export class GuxAdvancedDropdown {
 
   @State()
   opened: boolean;
-  value: string;
+
+  @State()
   currentlySelectedOption: HTMLGuxDropdownOptionElement;
+
+  @State()
   selectionOptions: HTMLGuxDropdownOptionElement[];
+
+  slotObserver: MutationObserver;
 
   @Watch('disabled')
   watchValue(newValue: boolean) {
     if (this.opened && newValue) {
       this.closeDropdown(false);
     }
+  }
+
+  get value(): string {
+    return this.currentlySelectedOption?.text;
   }
 
   /**
@@ -111,26 +122,17 @@ export class GuxAdvancedDropdown {
       this.root,
       advancedDropDownResources
     );
+
+    this.handleSelectionChange = this.handleSelectionChange.bind(this);
+    this.updateSelectionState();
+    this.addOptionListener();
+    this.slotObserver = onMutation(this.root, () =>
+      this.updateSelectionState()
+    );
   }
 
-  componentDidLoad() {
-    this.selectionOptions = this.getSelectionOptions();
-    for (const option of this.selectionOptions) {
-      if (option.selected) {
-        this.currentlySelectedOption = option;
-      }
-
-      option.addEventListener('selectedChanged', async () => {
-        this.value = await option.getDisplayedValue();
-        this.input.emit(option.value);
-        this.closeDropdown(true);
-
-        if (this.currentlySelectedOption) {
-          this.currentlySelectedOption.selected = false;
-        }
-        this.currentlySelectedOption = option;
-      });
-    }
+  disconnectedCallback() {
+    this.slotObserver.disconnect();
   }
 
   render() {
@@ -154,7 +156,7 @@ export class GuxAdvancedDropdown {
             {this.value && <span class="gux-select-value">{this.value}</span>}
           </a>
           <div class="gux-icon-wrapper">
-            <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div
@@ -184,22 +186,33 @@ export class GuxAdvancedDropdown {
     );
   }
 
-  private getSelectionOptions(): HTMLGuxDropdownOptionElement[] {
-    const result: HTMLGuxDropdownOptionElement[] = [];
-    const options: HTMLElement = this.root.getElementsByClassName(
-      'gux-dropdown-options'
-    )[0] as HTMLElement;
+  private updateSelectionState(): void {
+    this.selectionOptions = this.getSelectionOptions();
+    this.currentlySelectedOption = this.selectionOptions.find(
+      option => option.selected
+    );
+  }
 
-    // Hack around TSX not supporting for..of on HTMLCollection, this
-    // needs to be tested in IE11
-    const childrenElements: any = options.children;
-    for (const child of childrenElements) {
-      if (child.matches('gux-dropdown-option')) {
-        result.push(child as HTMLGuxDropdownOptionElement);
-      }
+  private addOptionListener(): void {
+    this.root.addEventListener('selectedChanged', this.handleSelectionChange);
+  }
+
+  private handleSelectionChange({ target }: CustomEvent): void {
+    const option = target as HTMLGuxDropdownOptionElement;
+
+    this.input.emit(option.value);
+    this.closeDropdown(true);
+
+    if (this.currentlySelectedOption) {
+      this.currentlySelectedOption.selected = false;
     }
+    this.currentlySelectedOption = option;
+  }
 
-    return result;
+  private getSelectionOptions(): HTMLGuxDropdownOptionElement[] {
+    const options = this.root.querySelectorAll('gux-dropdown-option');
+
+    return Array.from(options);
   }
 
   private inputMouseDown() {

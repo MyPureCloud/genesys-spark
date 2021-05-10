@@ -19,7 +19,7 @@ describe('gux-input-text-like', () => {
           <input type="text" slot="input"/>
         </gux-input-text-like>
       `,
-      language: 'en'
+      language
     });
   });
 

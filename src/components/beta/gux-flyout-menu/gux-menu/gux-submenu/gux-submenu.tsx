@@ -166,7 +166,7 @@ export class GuxSubmenu {
     this.runPopper();
   }
 
-  componentDidUnload(): void {
+  disconnectedCallback(): void {
     this.destroyPopper();
   }
 

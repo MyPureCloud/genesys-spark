@@ -2,6 +2,99 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.12.5](http://inindca///compare/v2.12.4...v2.12.5) (2021-05-04)
+
+
+### Bug Fixes
+
+* **advanced-dropdown:** add mutation observer to update option state after dynamic update ([4bad22c](http://inindca///commit/4bad22cd4f78dba5604f33e6809fd7e249cce464))
+* **advanced-dropdown:** convert to shadow DOM to allow dynamic insertion of options ([0762558](http://inindca///commit/0762558eaae3cce699dc315e2d380221b74ca6a7))
+* **advanced-dropdown:** update value and rerender if selected option on initial load ([66c0d5d](http://inindca///commit/66c0d5dadb49d30fa668007082a521052566c71c))
+
+### [2.12.4](http://inindca///compare/v2.12.3...v2.12.4) (2021-05-03)
+
+
+### Bug Fixes
+
+* **gux-tag color type:** fixed a typo in the tag color type ([4a45b5f](http://inindca///commit/4a45b5f3691dd53fbc9d87f8ae14fe85782406a9))
+
+### [2.12.3](http://inindca///compare/v2.12.2...v2.12.3) (2021-04-29)
+
+
+### Bug Fixes
+
+* **colors:** Fix failing gux-tab test. Added 'gux' prefix to 'show' class in tab component ([140a700](http://inindca///commit/140a7002c7602cb77530922b39f41d1305aac96c))
+* **colors:** Replaced old color palette colors with new equivalents provided by UX ([6906215](http://inindca///commit/6906215ccaddc799172f3d1839875d60134b74ba))
+* **colors:** Update snapshot for tab component ([bd25ad7](http://inindca///commit/bd25ad702f8e5af13f300df1c76e08e065f1d260))
+* **gux-tab:** fixed positioning of options popover ([e2ff8cb](http://inindca///commit/e2ff8cbe509ce5636e69da78eeb825a1cc1f0fdf))
+
+### [2.12.2](http://inindca///compare/v2.12.1...v2.12.2) (2021-04-26)
+
+
+### Bug Fixes
+
+* **tests:** removed error from test logs ([7a23dbf](http://inindca///commit/7a23dbfda1cda20279d01bc6f9fd93575448e134))
+
+### [2.12.1](http://inindca///compare/v2.12.0...v2.12.1) (2021-04-21)
+
+## [2.12.0](http://inindca///compare/v2.11.0...v2.12.0) (2021-04-19)
+
+
+### Features
+
+* **gux-icon:** added migration guide ([db8d99a](http://inindca///commit/db8d99aa95aaa69993665b828f2c3919e155b5a2))
+* **gux-icon:** code changes for new icons ([e51af16](http://inindca///commit/e51af162b107871eee9a5ff4666ec5089d014761))
+* **gux-icon:** icon-name migrations ([3afb782](http://inindca///commit/3afb782b0029b121af5144ed3b27c0c76f892e1a))
+* **gux-icon:** snapshot updates ([19394c1](http://inindca///commit/19394c14594b1a3058703667303eedab00efde91))
+* **gux-icon:** updated icon svgs ([ae2c37e](http://inindca///commit/ae2c37ee6190d0f5d5338b1360cf150820424793))
+
+
+### Bug Fixes
+
+* **gux-input-checkbox:** fixed issue when input was programatically changed ([997ccdf](http://inindca///commit/997ccdfb4a7b2d95374d907fc13d64a8d2228dc6))
+* **gux-input-select:** gux-input-select is now consistent across browsers ([762cdfb](http://inindca///commit/762cdfb65414c2a10b0c0277e1bf9d083a2bf338))
+* **pr-comment:** addressed PR comments ([cfb4682](http://inindca///commit/cfb468257c3f968112b0e1c0ad12b48149acf5e5))
+* **pr-comments:** addressed PR comments ([cb13037](http://inindca///commit/cb130379ff13b4bded9e36422a563636cdc86496))
+
+## [2.11.0](http://inindca///compare/v2.10.4...v2.11.0) (2021-04-14)
+
+
+### Features
+
+* **dependencies:** updated all dependencies to wanted ([d69d7cd](http://inindca///commit/d69d7cd285d277fadb34bd9bfc939174a0d3984f))
+
+
+### Bug Fixes
+
+* **color-palette:** added missing colors ([48c3124](http://inindca///commit/48c3124207326077ab674fe213a0a408f54ffc23))
+* **dependencies:** updated code in preparation for stenciljs@v2 update ([cac46d0](http://inindca///commit/cac46d0dc45b921e4f2bcd4c067f2b9b29be3f81))
+* **gux-input-number:** fix styling ([45413a8](http://inindca///commit/45413a8b1c597ce3be4653961a5233d7f28cd676))
+* **gux-input-select:** create gux-input-select component for gux-form-field ([87050f3](http://inindca///commit/87050f3b764c18344fed1bfcf6be2d20f3ac33cd))
+* **pr-comments:** addressed PR comments ([7daa232](http://inindca///commit/7daa232c29c2be41bd7447b35d6b45e0fb315d23))
+
+### [2.10.4](http://inindca///compare/v2.10.3...v2.10.4) (2021-04-12)
+
+
+### Bug Fixes
+
+* **gux-table:** all row selector now unchecked when no rows in table ([4963de0](http://inindca///commit/4963de08fed17b8e14a953e079f5397052c80c0c))
+
+### [2.10.3](http://inindca///compare/v2.10.2...v2.10.3) (2021-04-07)
+
+
+### Bug Fixes
+
+* **gux-action-button:** set font-size for gux-action-button ([a28579d](http://inindca///commit/a28579dcc68e5ec1dcc293d268630a2e5aa1d818))
+
+### [2.10.2](http://inindca///compare/v2.10.1...v2.10.2) (2021-04-06)
+
+### [2.10.1](http://inindca///compare/v2.10.0...v2.10.1) (2021-04-02)
+
+
+### Bug Fixes
+
+* **gux-tabs:** fix tabs flickering when changing browser zoom ([8796983](http://inindca///commit/87969833eb88ca185bb07c9c5e787423c856da9f))
+
 ## [2.10.0](http://inindca///compare/v2.9.1...v2.10.0) (2021-04-01)
 
 

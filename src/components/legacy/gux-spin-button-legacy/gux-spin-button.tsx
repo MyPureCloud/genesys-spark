@@ -32,37 +32,37 @@ export class GuxSpinButtonLegacy {
   /**
    * The minimum number the value can be when using the spin buttons
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   min: number;
 
   /**
    * the maximum number the value can be when using the spin buttons
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   max: number;
 
   /**
    * The number which the value increments / decrements
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   step: number;
 
   /**
    * If the component is disabled or not
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   disabled: boolean;
 
   /**
    * The message shown to the user on an error
    */
-  @Prop({ reflectToAttr: true, mutable: true })
+  @Prop({ reflect: true, mutable: true })
   errorMessage: string;
 
   /**
    * If the component should show validation warnings or not
    */
-  @Prop({ reflectToAttr: true })
+  @Prop({ reflect: true })
   ignoreValidation: boolean;
 
   /**
@@ -180,10 +180,7 @@ export class GuxSpinButtonLegacy {
             class="gux-spin-button"
             disabled={this.disabled || this.value >= this.max}
           >
-            <gux-icon
-              decorative
-              iconName="ic-iw-circle-no-chevron-up"
-            ></gux-icon>
+            <gux-icon decorative icon-name="chevron-small-up"></gux-icon>
           </button>
           <button
             id="gux-spin-button-decrement"
@@ -194,10 +191,7 @@ export class GuxSpinButtonLegacy {
             class="gux-spin-button"
             disabled={this.disabled || this.value <= this.min}
           >
-            <gux-icon
-              decorative
-              iconName="ic-iw-circle-no-chevron-down"
-            ></gux-icon>
+            <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
           </button>
         </div>
       </div>

@@ -1,16 +1,8 @@
-import {
-  Component,
-  Element,
-  getAssetPath,
-  h,
-  Prop,
-  State,
-  Watch
-} from '@stencil/core';
+import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
-const svgHTMLCache: Map<string, Promise<string>> = new Map();
+import { getSvgHtml, getRootIconName } from './gux-icon.service';
 
 @Component({
   assetsDirs: ['icons'],
@@ -43,18 +35,25 @@ export class GuxIcon {
   private svgHtml?: string;
 
   @Watch('iconName')
-  async prepIcon(iconName: string) {
+  async prepIcon(iconName: string): Promise<void> {
     if (iconName) {
-      this.svgHtml = await this.loadSvgData(iconName);
+      const rootIconName = getRootIconName(iconName);
+
+      this.svgHtml = await getSvgHtml(
+        rootIconName,
+        this.decorative,
+        this.screenreaderText
+      );
     }
   }
 
-  async componentWillLoad() {
-    trackComponent(this.root, { variant: this.iconName });
+  async componentWillLoad(): Promise<void> {
+    trackComponent(this.root, { variant: getRootIconName(this.iconName) });
+
     await this.prepIcon(this.iconName);
   }
 
-  componentDidLoad() {
+  componentDidLoad(): void {
     if (!this.decorative && !this.screenreaderText) {
       throw new Error(
         '[gux-icon] No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true'
@@ -62,57 +61,11 @@ export class GuxIcon {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       this.svgHtml && (
         <div class="gux-icon-container" innerHTML={this.svgHtml}></div>
       )
     );
-  }
-
-  private loadSvgData(iconName: string): Promise<string> {
-    const id = `${iconName}-${this.decorative}-${this.screenreaderText}`;
-    const cachedSvgElement = svgHTMLCache.get(id);
-
-    if (cachedSvgElement) {
-      return cachedSvgElement;
-    }
-
-    const iconUrl = getAssetPath(`./icons/${this.iconName}.svg`);
-    const getSvgHtml = fetch(iconUrl)
-      .then(response => {
-        if (response.status === 200) {
-          return response.text();
-        }
-        throw new Error(
-          `[gux-icon] fetching failed for icon "${this.iconName}" with status "${response.statusText} (${response.status})".`
-        );
-      })
-      .then(svgText => {
-        const svgElement = new DOMParser().parseFromString(
-          svgText,
-          'image/svg+xml'
-        ).firstChild as SVGElement;
-
-        if (this.decorative) {
-          svgElement.setAttribute('aria-hidden', String(this.decorative));
-        }
-
-        if (this.screenreaderText) {
-          svgElement.setAttribute('aria-label', this.screenreaderText);
-        }
-
-        return svgElement.outerHTML;
-      })
-      .catch(err => {
-        setTimeout(() => {
-          throw err;
-        }, 0);
-        return null;
-      });
-
-    svgHTMLCache.set(id, getSvgHtml);
-
-    return getSvgHtml;
   }
 }

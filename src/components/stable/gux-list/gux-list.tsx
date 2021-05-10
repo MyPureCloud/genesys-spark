@@ -125,7 +125,7 @@ export class GuxList {
     this.observer.observe(this.root, { childList: true, subtree: true });
   }
 
-  componentDidUnload() {
+  disconnectedCallback(): void {
     this.observer.disconnect();
   }
 

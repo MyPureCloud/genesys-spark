@@ -18,7 +18,7 @@ export class GuxTabDropdownOption {
   render() {
     return (
       <button class="tab-dropdown-option">
-        <gux-icon iconName={this.iconName} decorative={true}></gux-icon>
+        <gux-icon icon-name={this.iconName} decorative={true}></gux-icon>
         <span>
           <slot />
         </span>

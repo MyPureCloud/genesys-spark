@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-color-select-legacy #render should render as expected 1`] = `
+<gux-color-select-legacy>
+  <!---->
+  <div>
+    <div class="gux-color-matrix">
+      <gux-color-option-legacy value="#203B73"></gux-color-option-legacy>
+      <gux-color-option-legacy value="#75A8FF"></gux-color-option-legacy>
+      <gux-color-option-legacy value="#8452CF"></gux-color-option-legacy>
+      <gux-color-option-legacy value="#1DA8B3"></gux-color-option-legacy>
+      <gux-color-option-legacy value="#B5B5EB"></gux-color-option-legacy>
+      <gux-color-option-legacy value="#CC3EBE"></gux-color-option-legacy>
+      <gux-color-option-legacy value="#5E6782"></gux-color-option-legacy>
+      <gux-color-option-legacy value="#FF8FDD"></gux-color-option-legacy>
+      <gux-color-option-legacy value="#868C1E"></gux-color-option-legacy>
+      <gux-color-option-legacy value="#DDD933"></gux-color-option-legacy>
+    </div>
+  </div>
+</gux-color-select-legacy>
+`;

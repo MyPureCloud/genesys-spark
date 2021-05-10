@@ -11,7 +11,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | ------------------- | -------------------------------------------------- |
 | `"icon"`            | Required slot for gux-icon                         |
 | `"message"`         | Required slot for the action toast message         |
-| `"negitive-button"` | Required slot for the action toast negitive button |
+| `"negative-button"` | Required slot for the action toast negative button |
 | `"positive-button"` | Required slot for the action toast positive button |
 | `"title"`           | Required slot for the action toast title           |
 

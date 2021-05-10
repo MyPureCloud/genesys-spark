@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Prop,
   State,
   writeTask
@@ -40,20 +41,20 @@ export class GuxTab {
   @Event()
   private internaltabselected: EventEmitter<void>;
 
-  private get hasDropdownOptions() {
-    return !!this.root.querySelector('[slot="dropdown-options"]');
+  private get hasDropdownOptions(): boolean {
+    return Boolean(this.root.querySelector('[slot="dropdown-options"]'));
   }
 
-  toggleOptions() {
+  private toggleOptions(): void {
     this.popoverHidden = !this.popoverHidden;
   }
 
-  onSelectDropdownOption(e: MouseEvent) {
+  private onSelectDropdownOption(e: MouseEvent): void {
     this.popoverHidden = true;
     e.stopPropagation();
   }
 
-  selectTab(e: MouseEvent) {
+  private selectTab(e: MouseEvent): void {
     if (eventIsFrom('.tab-dropdown-container', e)) {
       return;
     }
@@ -62,43 +63,24 @@ export class GuxTab {
     this.internaltabselected.emit();
   }
 
-  componentDidLoad() {
-    if (!this.hasAnimated) {
-      writeTask(() => {
-        this.root.querySelector('.gux-tab').classList.add('show');
-        this.hasAnimated = true;
-      });
-    }
-  }
-
-  render() {
-    return (
-      <button
-        class={`gux-tab ${this.active ? 'selected' : ''}`}
-        onClick={e => this.selectTab(e)}
-        role="button"
-      >
-        {this.tabIconName ? (
-          <div class="tab-icon-container">
-            <gux-icon iconName={this.tabIconName} decorative={true}></gux-icon>
-          </div>
-        ) : null}
-        <span class="tab-title">
-          <slot name="title" />
-        </span>
-        {this.hasDropdownOptions && (
+  private getDropdownOptions(): JSX.Element {
+    if (this.hasDropdownOptions) {
+      return (
+        <div>
           <button
             id={this.tabId}
+            type="button"
             class="tab-dropdown-container"
             onClick={() => this.toggleOptions()}
           >
-            <gux-icon iconName="ellipsis-v" decorative={true}></gux-icon>
+            <gux-icon
+              icon-name="menu-kebab-vertical"
+              decorative={true}
+            ></gux-icon>
           </button>
-        )}
 
-        {this.hasDropdownOptions && (
           <gux-popover
-            position="top"
+            position="top-start"
             for={this.tabId}
             displayDismissButton={false}
             hidden={this.popoverHidden}
@@ -109,7 +91,40 @@ export class GuxTab {
               <slot name="dropdown-options" />
             </div>
           </gux-popover>
-        )}
+        </div>
+      );
+    }
+
+    return null;
+  }
+
+  componentDidLoad(): void {
+    if (!this.hasAnimated) {
+      writeTask(() => {
+        this.root.querySelector('.gux-tab').classList.add('gux-show');
+        this.hasAnimated = true;
+      });
+    }
+  }
+
+  render(): JSX.Element {
+    return (
+      <button
+        type="button"
+        class={`gux-tab ${this.active ? 'selected' : ''}`}
+        onClick={e => this.selectTab(e)}
+        role="button"
+      >
+        {this.tabIconName ? (
+          <div class="tab-icon-container">
+            <gux-icon icon-name={this.tabIconName} decorative={true}></gux-icon>
+          </div>
+        ) : null}
+        <span class="tab-title">
+          <slot name="title" />
+        </span>
+
+        {this.getDropdownOptions()}
       </button>
     );
   }

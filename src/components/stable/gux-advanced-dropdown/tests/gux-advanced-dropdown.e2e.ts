@@ -21,12 +21,15 @@ describe('gux-advanced-dropdown', () => {
     `);
     await page.waitForChanges();
 
-    const element = await page.find('gux-advanced-dropdown');
-    const inputElm = await element.find('.gux-select-input');
+    const inputElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-select-input'
+    );
     inputElm.click();
     await page.waitForChanges();
 
-    const dropMenuElm = await element.find('.gux-advanced-dropdown-menu');
+    const dropMenuElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-advanced-dropdown-menu'
+    );
     expect(dropMenuElm.className.split(' ')).toContain('gux-opened');
   });
 
@@ -43,15 +46,21 @@ describe('gux-advanced-dropdown', () => {
     const element = await page.find('gux-advanced-dropdown');
     const inputSpy = await element.spyOnEvent('input');
 
-    const inputElm = await element.find('.gux-select-input');
+    const inputElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-select-input'
+    );
     inputElm.click();
     await page.waitForChanges();
 
-    let dropMenuElm = await element.find('.gux-advanced-dropdown-menu');
-    const enElm = await dropMenuElm.find('gux-dropdown-option');
+    let dropMenuElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-advanced-dropdown-menu'
+    );
+    const enElm = await element.find('gux-dropdown-option');
     enElm.click();
     await page.waitForChanges();
-    dropMenuElm = await element.find('.gux-advanced-dropdown-menu');
+    dropMenuElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-advanced-dropdown-menu'
+    );
 
     expect(inputSpy).toHaveReceivedEventDetail('en');
     expect(dropMenuElm.className.split(' ')).not.toContain('gux-opened');
@@ -70,11 +79,15 @@ describe('gux-advanced-dropdown', () => {
     const element = await page.find('gux-advanced-dropdown');
     const filterSpy = await element.spyOnEvent('filter');
 
-    const inputElm = await element.find('.gux-select-input');
+    const inputElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-select-input'
+    );
     inputElm.click();
     await page.waitForChanges();
 
-    const guxSearch = await element.find('gux-search-beta');
+    const guxSearch = await page.find(
+      'gux-advanced-dropdown >>> gux-search-beta'
+    );
     guxSearch.setProperty('value', 'en');
     await page.waitForChanges();
 
@@ -83,7 +96,7 @@ describe('gux-advanced-dropdown', () => {
     expect(filterSpy).toHaveReceivedEventDetail('en');
   });
 
-  it('Should not filter if filterLocal is false', async () => {
+  it('should not filter if filterLocal is false', async () => {
     const page = await newE2EPage();
     await page.setContent(`
       <gux-advanced-dropdown lang="en" filter-debounce-timeout="0" no-filter>
@@ -96,11 +109,15 @@ describe('gux-advanced-dropdown', () => {
     const element = await page.find('gux-advanced-dropdown');
     const filterSpy = await element.spyOnEvent('filter');
 
-    const inputElm = await element.find('.gux-select-input');
+    const inputElm = await page.find(
+      'gux-advanced-dropdown >>> .gux-select-input'
+    );
     inputElm.click();
     await page.waitForChanges();
 
-    const guxSearch = await element.find('gux-search-beta');
+    const guxSearch = await page.find(
+      'gux-advanced-dropdown >>> gux-search-beta'
+    );
     guxSearch.setProperty('value', 'en');
     await page.waitForChanges();
 
@@ -108,5 +125,31 @@ describe('gux-advanced-dropdown', () => {
 
     expect(items).toHaveLength(2);
     expect(filterSpy).toHaveReceivedEventDetail('en');
+  });
+
+  it('should allow options to be dynamically rendered', async () => {
+    const page = await newE2EPage();
+    await page.setContent(`
+      <gux-advanced-dropdown lang="en" filter-debounce-timeout="0" no-filter>
+        <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
+        <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
+      </gux-advanced-dropdown>
+    `);
+    await page.waitForChanges();
+
+    await page.evaluate(() => {
+      const element = document.querySelector('gux-advanced-dropdown');
+      const option = document.querySelector('gux-dropdown-option');
+
+      element.removeChild(option);
+      element.appendChild(option);
+    });
+    await page.waitForChanges();
+
+    const items = await page.findAll(
+      'gux-advanced-dropdown > gux-dropdown-option'
+    );
+
+    expect(items).toHaveLength(2);
   });
 });

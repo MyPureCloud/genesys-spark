@@ -11,7 +11,7 @@ gux-notification-toast {
   justify-content: flex-start;
   width: 336px;
   padding: 16px 8px 16px 16px;
-  border-top: 1px solid;
+  border: 1px solid;
 
   .gux-icon {
     flex: 0 1 auto;
@@ -80,46 +80,9 @@ gux-notification-toast {
 // Theming
 // Light
 .gux-notification-toast-light-theme {
-  color: @gux-type-dark;
-  background: @expalette-background-color-dark-2;
-  border-color: @gux-type;
-
-  .gux-icon {
-    &.gux-alert {
-      color: @gux-alert-dark;
-    }
-
-    &.gux-warning {
-      color: @gux-warning-dark;
-    }
-
-    &.gux-positive {
-      color: @gux-positive-dark;
-    }
-
-    &.gux-neutral {
-      color: @gux-neutral-dark;
-    }
-  }
-
-  .gux-title {
-    color: @gux-type-dark;
-  }
-
-  .gux-message {
-    color: @gux-placeholder;
-  }
-
-  .gux-dismiss-button {
-    color: @gux-type-dark;
-  }
-}
-
-// Dark
-.gux-notification-toast-dark-theme {
   color: @gux-type;
-  background: @gux-background;
-  border-color: @gux-border;
+  background: @gux-grey-90;
+  border-color: @gux-black-100;
 
   .gux-icon {
     &.gux-alert {
@@ -144,7 +107,7 @@ gux-notification-toast {
   }
 
   .gux-message {
-    color: @gux-black-100;
+    color: @gux-type;
   }
 
   .gux-dismiss-button {
@@ -166,15 +129,4 @@ gux-notification-toast {
 
 gux-notification-toast.gux-light-theme {
   .gux-notification-toast-light-theme();
-}
-
-// Dark Theme
-.gux-dark-theme {
-  gux-notification-toast {
-    .gux-notification-toast-dark-theme();
-  }
-}
-
-gux-notification-toast.gux-dark-theme {
-  .gux-notification-toast-dark-theme();
 }
