@@ -59,9 +59,29 @@ export class GuxSubmenu {
   onKeydown(event: KeyboardEvent): void {
     menuNavigation(event, this.root);
     switch (event.key) {
-      case 'ArrowRight':
       case 'Enter':
       case ' ':
+        if (!this.isShown) {
+          event.stopPropagation();
+
+          this.show();
+          break;
+        } else {
+          event.stopPropagation();
+          this.guxFocus();
+          this.hide();
+          break;
+        }
+
+      case 'Tab':
+        if (this.isShown) {
+          event.stopPropagation();
+
+          this.focusOnSubmenu();
+        }
+        break;
+
+      case 'ArrowRight':
         event.stopPropagation();
 
         this.show();
@@ -97,16 +117,6 @@ export class GuxSubmenu {
     }
 
     event.stopPropagation();
-  }
-
-  @Listen('focusin')
-  onFocusin() {
-    this.show();
-  }
-
-  @Listen('focusout')
-  onFocusout() {
-    this.hide();
   }
 
   private show(): void {
@@ -176,7 +186,7 @@ export class GuxSubmenu {
         <button
           type="button"
           class="gux-submenu-button"
-          tabIndex={-1}
+          tabIndex={0}
           ref={el => (this.buttonElement = el)}
           aria-haspopup="true"
           aria-expanded={this.isShown}

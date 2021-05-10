@@ -48,6 +48,8 @@ export class GuxFlyoutMenu {
       switch (event.key) {
         case 'Escape':
         case 'ArrowUp':
+        case 'Enter':
+        case ' ':
           this.hide();
           this.root.focus();
           return;
@@ -56,14 +58,14 @@ export class GuxFlyoutMenu {
           this.focusOnMenu();
           return;
       }
-    }
-
-    switch (event.key) {
-      case 'Enter':
-      case 'ArrowDown':
-      case ' ':
-        this.show();
-        return;
+    } else {
+      switch (event.key) {
+        case 'Enter':
+        case ' ':
+        case 'ArrowDown':
+          this.show();
+          return;
+      }
     }
   }
 
@@ -81,16 +83,6 @@ export class GuxFlyoutMenu {
   onClick() {
     this.hide();
     this.root.focus();
-  }
-
-  @Listen('focusin')
-  onFocusin() {
-    this.show();
-  }
-
-  @Listen('focusout')
-  onFocusout() {
-    this.hide();
   }
 
   private show(): void {
@@ -159,12 +151,13 @@ export class GuxFlyoutMenu {
 
   render(): JSX.Element {
     return (
-      <Host tabIndex={1}>
-        <span
-          ref={el => (this.targetElement = el)}
-          aria-haspopup="true"
-          aria-expanded={this.isShown}
-        >
+      <Host
+        tabIndex={0}
+        aria-haspopup="true"
+        ariaExpanded={this.isShown}
+        role="button"
+      >
+        <span ref={el => (this.targetElement = el)}>
           <slot name="target" />
         </span>
         <div
