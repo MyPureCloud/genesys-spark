@@ -22,6 +22,16 @@
     <label slot="label">Disabled</label>
   </gux-form-field>
 
+  <gux-form-field>
+    <textarea
+      style="height: 200px"
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Set to specific height</label>
+  </gux-form-field>
+
   <gux-form-field resize="none">
     <textarea
       slot="input"
@@ -47,5 +57,15 @@
       placeholder="Type here..."
     ></textarea>
     <label slot="label">Auto Resize</label>
+  </gux-form-field>
+
+  <gux-form-field resize="auto">
+    <textarea
+      style="max-height: 200px"
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Auto Resize with max height</label>
   </gux-form-field>
 </form>

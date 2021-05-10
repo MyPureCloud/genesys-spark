@@ -34,6 +34,7 @@ export class GuxInputTextArea {
   private updateHeight(): void {
     if (this.resize === 'auto') {
       this.containerElement.dataset.replicatedValue = this.input.value;
+      this.containerElement.style.maxHeight = this.input.style.maxHeight;
     }
   }
 
