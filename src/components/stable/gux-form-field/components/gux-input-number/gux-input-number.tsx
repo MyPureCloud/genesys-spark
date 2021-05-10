@@ -23,9 +23,6 @@ export class GuxInputNumber {
   private root: HTMLElement;
 
   @Prop()
-  hasError: boolean;
-
-  @Prop()
   clearable: boolean;
 
   @State()

@@ -3,13 +3,6 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property   | Attribute   | Description | Type      | Default     |
-| ---------- | ----------- | ----------- | --------- | ----------- |
-| `hasError` | `has-error` |             | `boolean` | `undefined` |
-
-
 ## Slots
 
 | Slot      | Description                              |

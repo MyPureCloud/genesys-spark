@@ -154,16 +154,24 @@ export class GuxFormField {
     );
   }
 
-  private getInputSelect(): JSX.Element {
+  private getInputSelect(hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <slot name="label" slot="label" />
-          <gux-input-select slot="input">
+          <gux-input-select
+            slot="input"
+            class={{
+              'gux-input-error': hasError
+            }}
+          >
             <slot name="input" />
           </gux-input-select>
         </div>
         <div class="gux-error">
+          {hasError ? (
+            <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
+          ) : null}
           <slot name="error" />
         </div>
       </div>
@@ -251,7 +259,7 @@ export class GuxFormField {
             );
         }
       case 'select':
-        return this.getInputSelect();
+        return this.getInputSelect(hasError);
       case 'textarea':
         return this.getInputTextArea(hasError);
       default:
