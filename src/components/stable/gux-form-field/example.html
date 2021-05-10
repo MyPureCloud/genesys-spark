@@ -120,8 +120,22 @@
 
   <div>
     <gux-form-field>
-      <input slot="input" name="color" type="color" value="#1da8b3" disabled />
+      <input
+        slot="input"
+        name="color-disabled"
+        type="color"
+        value="#1da8b3"
+        disabled
+      />
       <label slot="label">Color</label>
+    </gux-form-field>
+  </div>
+
+  <div>
+    <gux-form-field>
+      <input slot="input" name="color-required" type="color" />
+      <label slot="label">Color</label>
+      <span slot="error">Field is required</span>
     </gux-form-field>
   </div>
 
@@ -180,6 +194,19 @@
       disabled
     />
     <label slot="label">Number</label>
+  </gux-form-field>
+  <gux-form-field>
+    <input
+      slot="input"
+      name="number-error"
+      type="number"
+      step="5"
+      min="5"
+      max="100"
+      placeholder="Enter a number"
+    />
+    <label slot="label">Number</label>
+    <span slot="error">Field is required</span>
   </gux-form-field>
   <h1>Text Like</h1>
 
@@ -308,7 +335,7 @@
         placeholder="Enter text"
       />
       <label slot="label">Input</label>
-      <span slot="error" style="visibility: visible">Field is required</span>
+      <span slot="error">Field is required</span>
     </gux-form-field>
   </div>
 
@@ -322,6 +349,15 @@
         placeholder="Type here..."
       ></textarea>
       <label slot="label">Text Area Label</label>
+    </gux-form-field>
+    <gux-form-field>
+      <textarea
+        slot="input"
+        name="textarea"
+        placeholder="Type here..."
+      ></textarea>
+      <label slot="label">Text Area with Error Label</label>
+      <span slot="error">Field is required</span>
     </gux-form-field>
   </div>
 
@@ -343,6 +379,17 @@
         <option value="option1">Option 3</option>
       </select>
       <label slot="label">Select</label>
+    </gux-form-field>
+
+    <gux-form-field>
+      <select slot="input" name="select-required" type="select">
+        <option value=""></option>
+        <option value="option1">Option 1</option>
+        <option value="option1">Option 2</option>
+        <option value="option1">Option 3</option>
+      </select>
+      <label slot="label">Select</label>
+      <span slot="error">Field is required</span>
     </gux-form-field>
   </div>
 

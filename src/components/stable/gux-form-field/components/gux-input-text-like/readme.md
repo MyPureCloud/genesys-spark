@@ -19,7 +19,6 @@ changing error-message attribute.
 | Property    | Attribute   | Description | Type      | Default     |
 | ----------- | ----------- | ----------- | --------- | ----------- |
 | `clearable` | `clearable` |             | `boolean` | `undefined` |
-| `hasError`  | `has-error` |             | `boolean` | `undefined` |
 
 
 ## Slots

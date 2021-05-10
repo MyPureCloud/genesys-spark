@@ -145,12 +145,7 @@ export class GuxInputNumber {
           'gux-disabled': this.disabled
         }}
       >
-        <div
-          class={{
-            'gux-input-container': true,
-            'gux-input-error': this.hasError
-          }}
-        >
+        <div class="gux-input-container">
           <slot name="input" />
           {this.renderClearButton()}
         </div>

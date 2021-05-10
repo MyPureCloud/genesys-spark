@@ -22,9 +22,6 @@ export class GuxInputTextLike {
   private root: HTMLElement;
 
   @Prop()
-  hasError: boolean;
-
-  @Prop()
   clearable: boolean;
 
   @State()
@@ -92,8 +89,7 @@ export class GuxInputTextLike {
       <div
         class={{
           'gux-input-container': true,
-          'gux-disabled': this.disabled,
-          'gux-input-error': this.hasError
+          'gux-disabled': this.disabled
         }}
       >
         <slot name="input" />

@@ -29,7 +29,6 @@ export class GuxInputCheckbox {
     this.label = this.root.querySelector('label[slot="label"]');
 
     this.setLabelClassForCheckedState();
-    this.setInputClassForErrorState();
 
     this.input.addEventListener('click', (): void => {
       this.setLabelClassForCheckedState();
@@ -43,12 +42,6 @@ export class GuxInputCheckbox {
         <slot name="label" />
       </div>
     );
-  }
-
-  private setInputClassForErrorState(): void {
-    if(this.hasError) {
-      this.input.classList.add('gux-input-error');
-    }
   }
 
   private setLabelClassForCheckedState(): void {
