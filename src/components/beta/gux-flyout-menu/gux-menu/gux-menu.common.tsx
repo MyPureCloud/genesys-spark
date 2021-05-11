@@ -15,20 +15,6 @@ export function menuNavigation(
 
       focusPreviousSiblingLoop(currentElement);
       break;
-    case 'Tab':
-      if (event.shiftKey) {
-        event.stopPropagation();
-        event.preventDefault();
-
-        focusPreviousSiblingLoop(currentElement);
-        break;
-      } else {
-        event.stopPropagation();
-        event.preventDefault();
-
-        focusNextSiblingLoop(currentElement);
-        break;
-      }
 
     case 'ArrowDown':
       event.stopPropagation();

@@ -40,7 +40,8 @@ export class GuxMenuOption {
         type="button"
         class="gux-menu-option-button"
         role="menuitem"
-        tabIndex={0}
+        aria-haspopup="false"
+        tabIndex={-1}
         ref={el => (this.buttonElement = el)}
       >
         <span class="gux-menu-option-button-text">

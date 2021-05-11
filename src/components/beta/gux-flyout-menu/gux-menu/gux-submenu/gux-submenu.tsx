@@ -65,6 +65,11 @@ export class GuxSubmenu {
           event.stopPropagation();
 
           this.show();
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              this.focusOnSubmenu();
+            });
+          });
           break;
         } else {
           event.stopPropagation();
@@ -73,19 +78,15 @@ export class GuxSubmenu {
           break;
         }
 
-      case 'Tab':
-        if (this.isShown) {
-          event.stopPropagation();
-
-          this.focusOnSubmenu();
-        }
-        break;
-
       case 'ArrowRight':
         event.stopPropagation();
 
         this.show();
-        this.focusOnSubmenu();
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            this.focusOnSubmenu();
+          });
+        });
         break;
 
       case 'ArrowLeft':
@@ -186,10 +187,11 @@ export class GuxSubmenu {
         <button
           type="button"
           class="gux-submenu-button"
-          tabIndex={0}
+          role="menuitem"
+          tabIndex={-1}
           ref={el => (this.buttonElement = el)}
           aria-haspopup="true"
-          aria-expanded={this.isShown}
+          aria-expanded={this.isShown.toString()}
         >
           <span class="gux-submenu-button-text">{this.label}</span>
           <gux-icon

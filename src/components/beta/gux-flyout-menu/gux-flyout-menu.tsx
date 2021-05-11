@@ -47,6 +47,7 @@ export class GuxFlyoutMenu {
     if (this.isShown) {
       switch (event.key) {
         case 'Escape':
+        case 'ArrowLeft':
         case 'ArrowUp':
         case 'Enter':
         case ' ':
@@ -57,6 +58,10 @@ export class GuxFlyoutMenu {
         case 'ArrowDown':
           this.focusOnMenu();
           return;
+
+        case 'Tab':
+          this.hide();
+          return;
       }
     } else {
       switch (event.key) {
@@ -64,6 +69,11 @@ export class GuxFlyoutMenu {
         case ' ':
         case 'ArrowDown':
           this.show();
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              this.focusOnMenu();
+            });
+          });
           return;
       }
     }
@@ -154,7 +164,7 @@ export class GuxFlyoutMenu {
       <Host
         tabIndex={0}
         aria-haspopup="true"
-        ariaExpanded={this.isShown}
+        aria-expanded={this.isShown.toString()}
         role="button"
       >
         <span ref={el => (this.targetElement = el)}>
