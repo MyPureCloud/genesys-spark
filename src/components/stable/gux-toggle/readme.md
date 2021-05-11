@@ -12,21 +12,34 @@ A check event is triggered when the state of the component changed.
 
 ## Properties
 
-| Property         | Attribute         | Description                               | Type                | Default     |
-| ---------------- | ----------------- | ----------------------------------------- | ------------------- | ----------- |
-| `checked`        | `checked`         | Indicate if the toggle is checked or not  | `boolean`           | `undefined` |
-| `checkedLabel`   | `checked-label`   | Indicate the checked label                | `string`            | `undefined` |
-| `disabled`       | `disabled`        | Indicate if the toggle is disabled or not | `boolean`           | `undefined` |
-| `labelPosition`  | `label-position`  |                                           | `"left" \| "right"` | `'right'`   |
-| `uncheckedLabel` | `unchecked-label` | Indicate the unchecked label              | `string`            | `undefined` |
+| Property         | Attribute         | Description | Type                | Default     |
+| ---------------- | ----------------- | ----------- | ------------------- | ----------- |
+| `checked`        | `checked`         |             | `boolean`           | `false`     |
+| `checkedLabel`   | `checked-label`   |             | `string`            | `undefined` |
+| `disabled`       | `disabled`        |             | `boolean`           | `false`     |
+| `labelPosition`  | `label-position`  |             | `"left" \| "right"` | `'right'`   |
+| `uncheckedLabel` | `unchecked-label` |             | `string`            | `undefined` |
 
 
 ## Events
 
-| Event   | Description                                        | Type               |
-| ------- | -------------------------------------------------- | ------------------ |
-| `check` | Triggered when the state of the component changed. | `CustomEvent<any>` |
+| Event   | Description | Type                   |
+| ------- | ----------- | ---------------------- |
+| `check` |             | `CustomEvent<boolean>` |
 
+
+## Dependencies
+
+### Depends on
+
+- [gux-toggle-slider](gux-toggle-slider)
+
+### Graph
+```mermaid
+graph TD;
+  gux-toggle --> gux-toggle-slider
+  style gux-toggle fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 
