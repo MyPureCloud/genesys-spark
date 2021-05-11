@@ -88,8 +88,8 @@ gux-input-textarea {
 .gux-textarea-sizing-properties() {
   min-width: 100%;
   max-width: 100%;
-  min-height: (@base-line-height + 1) * 4;
-  padding: 4px 12px 4px 12px;
+  min-height: (@body-font-line-height * 4) + 8 + 2; // 4 lines + padding + border
+  padding: 4px 12px;
   margin: 0;
   border: 1px solid @gux-black-100;
 }
