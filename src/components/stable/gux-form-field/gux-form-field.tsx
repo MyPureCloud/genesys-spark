@@ -1,4 +1,5 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -13,6 +14,7 @@ import { trackComponent } from '../../../usage-tracking';
 export class GuxFormField {
   private input: HTMLInputElement;
   private label: HTMLLabelElement;
+  private errorID = randomHTMLId('gux-form-field');
 
   @Element()
   private root: HTMLElement;
@@ -63,12 +65,15 @@ export class GuxFormField {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class="gux-label-and-input-container">
-          <gux-input-checkbox class={{ 'gux-input-error': hasError }}>
+          <gux-input-checkbox
+            class={{ 'gux-input-error': hasError }}
+            aria-describedby={this.errorID}
+          >
             <slot name="input" />
             <slot name="label" />
           </gux-input-checkbox>
         </div>
-        <div class="gux-error">
+        <div class="gux-error" id={this.errorID}>
           {hasError ? (
             <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
           ) : null}
@@ -96,11 +101,12 @@ export class GuxFormField {
             class={{
               'gux-input-error': hasError
             }}
+            aria-describedby={this.errorID}
           >
             <slot name="input" />
           </gux-input-color>
         </div>
-        <div class="gux-error">
+        <div class="gux-error" id={this.errorID}>
           {hasError ? (
             <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
           ) : null}
@@ -140,11 +146,12 @@ export class GuxFormField {
             }}
             slot="input"
             clearable={clearable}
+            aria-describedby={this.errorID}
           >
             <slot name="input" />
           </gux-input-number>
         </div>
-        <div class="gux-error">
+        <div class="gux-error" id={this.errorID}>
           {hasError ? (
             <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
           ) : null}
@@ -164,11 +171,12 @@ export class GuxFormField {
             class={{
               'gux-input-error': hasError
             }}
+            aria-describedby={this.errorID}
           >
             <slot name="input" />
           </gux-input-select>
         </div>
-        <div class="gux-error">
+        <div class="gux-error" id={this.errorID}>
           {hasError ? (
             <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
           ) : null}
@@ -189,11 +197,12 @@ export class GuxFormField {
             }}
             slot="input"
             clearable={clearable}
+            aria-describedby={this.errorID}
           >
             <slot name="input" />
           </gux-input-text-like>
         </div>
-        <div class="gux-error">
+        <div class="gux-error" id={this.errorID}>
           {hasError ? (
             <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
           ) : null}
@@ -213,11 +222,12 @@ export class GuxFormField {
               'gux-input-error': hasError
             }}
             slot="input"
+            aria-describedby={this.errorID}
           >
             <slot name="input" />
           </gux-input-textarea>
         </div>
-        <div class="gux-error">
+        <div class="gux-error" id={this.errorID}>
           {hasError ? (
             <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
           ) : null}
@@ -274,6 +284,6 @@ export class GuxFormField {
   }
 
   private hasErrorSlot(): boolean {
-    return !!this.root.querySelector('span[slot="error"]');
+    return !!this.root.querySelector('[slot="error"]');
   }
 }

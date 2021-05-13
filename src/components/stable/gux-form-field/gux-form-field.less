@@ -32,16 +32,16 @@ gux-form-field {
       }
 
       .gux-input-error .gux-input-container {
-        border: 1px solid @gux-alert;
+        border-color: @gux-alert;
       }
 
       .gux-input-error .gux-input-color-main-element {
-        border: 1px solid @gux-alert;
+        border-color: @gux-alert;
       }
 
       .gux-input-error {
-        input[type='checkbox'] + label::before {
-          outline: @gux-alert solid 2px;
+        input[type='checkbox'] ~ label::after {
+          border: 2px solid @gux-alert;
         }
       }
     }
