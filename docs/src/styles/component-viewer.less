@@ -31,24 +31,25 @@ body {
     }
   }
 }
-
-.component-viewer > .left-column,
-.component-viewer > .right-column {
-  display: flex;
-  flex-direction: column;
+.component-viewer {
+  height: 100%;
 }
 
 .component-viewer > .left-column {
   flex-grow: 1;
   min-width: 600px;
+  overflow-y: auto;
   border-right: @border;
 
   > .preview {
     position: relative;
-    flex-grow: 1;
+    box-sizing: border-box;
+    height: 40%;
+    min-height: 40%;
     padding: 27px 30px;
     overflow-y: auto;
     color: #ff4f1f;
+    resize: vertical;
     background-color: #fff793;
     border-bottom: @border;
 
@@ -64,13 +65,14 @@ body {
   }
 
   > .editor {
-    flex-grow: 1;
-    max-height: 400px;
+    height: 60%;
+    overflow-y: auto;
   }
 }
 
 .component-viewer .controls-column {
   width: 300px;
+  height: 100%;
   overflow: auto;
   line-height: 1.4em;
   color: #33383d;

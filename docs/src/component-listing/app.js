@@ -13,15 +13,24 @@ export function bootstrap() {
   document.body.appendChild(
     toHTML(`
         <main>
-            <nav>
+            <nav class="components-list">
                 <header>Components</header>
+                <gux-form-field class="component-search-field">
+                  <input
+                    id="component-search-box"
+                    slot="input"
+                    name="search"
+                    type="search"
+                    placeholder="Enter a search"
+                  />
+                </gux-form-field>
                 ${components
                   .map(component => {
                     let name = shortName(component);
                     if (getComponentSpec(component).beta) {
                       name += `<sup> 𝜷</sup>`;
                     }
-                    return `<a href="#${component}">${name}</a>`;
+                    return `<a class="component-item" href="#${component}">${name}</a>`;
                   })
                   .join('')}
             </nav>
@@ -29,6 +38,25 @@ export function bootstrap() {
         </main>
     `)
   );
+
+  const searchHandler = event => {
+    const searchText = event.target.value;
+    console.log(searchText);
+    document
+      .querySelectorAll('.components-list .component-item')
+      .forEach(item => {
+        if (
+          item.textContent.toLowerCase().indexOf(searchText.toLowerCase()) > -1
+        ) {
+          item.classList.remove('hide-item');
+        } else {
+          item.classList.add('hide-item');
+        }
+      });
+  };
+
+  const searchBox = document.getElementById('component-search-box');
+  searchBox.addEventListener('input', searchHandler);
 
   const hashHandler = event => {
     let iframe = document.getElementById('componentFrame');
