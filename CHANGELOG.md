@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.12.7](http://inindca///compare/v2.12.6...v2.12.7) (2021-05-11)
+
+
+### Bug Fixes
+
+* **gux-toggle:** text now wraps as expected ([d52548b](http://inindca///commit/d52548b8b38ea2f6a99c5df95a754da73bdf56d1))
+
+### [2.12.6](http://inindca///compare/v2.12.5...v2.12.6) (2021-05-10)
+
 ### [2.12.5](http://inindca///compare/v2.12.4...v2.12.5) (2021-05-04)
 
 

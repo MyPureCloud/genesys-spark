@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-toggle #render should render component as expected (1) 1`] = `
+<gux-toggle>
+  <div aria-checked="false" aria-label="" class="gux-toggle-container" role="checkbox" tabindex="0">
+    <input type="checkbox">
+    <gux-toggle-slider>
+      <div class="gux-toggle-slider" role="presentation">
+        <div class="gux-slider"></div>
+      </div>
+    </gux-toggle-slider>
+  </div>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render component as expected (2) 1`] = `
+<gux-toggle checked="">
+  <div aria-checked="true" aria-label="" class="gux-checked gux-toggle-container" role="checkbox" tabindex="0">
+    <input checked="" type="checkbox">
+    <gux-toggle-slider>
+      <div class="gux-toggle-slider" role="presentation">
+        <div class="gux-checked gux-slider"></div>
+      </div>
+    </gux-toggle-slider>
+  </div>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render component as expected (3) 1`] = `
+<gux-toggle checked="" disabled="">
+  <div aria-checked="true" aria-label="" class="gux-checked gux-toggle-container" role="checkbox" tabindex="">
+    <input checked="" disabled="" type="checkbox">
+    <gux-toggle-slider>
+      <div class="gux-toggle-slider" role="presentation">
+        <div class="gux-checked gux-slider"></div>
+      </div>
+    </gux-toggle-slider>
+  </div>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render component as expected (4) 1`] = `
+<gux-toggle checked-label="On" unchecked-label="Off">
+  <div aria-checked="false" aria-label="Off" class="gux-toggle-container" role="checkbox" tabindex="0">
+    <input type="checkbox">
+    <gux-toggle-slider>
+      <div class="gux-toggle-slider" role="presentation">
+        <div class="gux-slider"></div>
+      </div>
+    </gux-toggle-slider>
+    <div class="gux-toggle-label">
+      Off
+    </div>
+  </div>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render component as expected (5) 1`] = `
+<gux-toggle checked="" checked-label="on" unchecked-label="off">
+  <div aria-checked="true" aria-label="on" class="gux-checked gux-toggle-container" role="checkbox" tabindex="0">
+    <input checked="" type="checkbox">
+    <gux-toggle-slider>
+      <div class="gux-toggle-slider" role="presentation">
+        <div class="gux-checked gux-slider"></div>
+      </div>
+    </gux-toggle-slider>
+    <div class="gux-checked gux-toggle-label">
+      on
+    </div>
+  </div>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render component as expected (6) 1`] = `
+<gux-toggle checked-label="On" label-position="left" unchecked-label="Off">
+  <div aria-checked="false" aria-label="Off" class="gux-toggle-container gux-toggle-label-left" role="checkbox" tabindex="0">
+    <input type="checkbox">
+    <gux-toggle-slider>
+      <div class="gux-toggle-slider" role="presentation">
+        <div class="gux-slider"></div>
+      </div>
+    </gux-toggle-slider>
+    <div class="gux-toggle-label">
+      Off
+    </div>
+  </div>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render component as expected (7) 1`] = `
+<gux-toggle checked="" checked-label="on" label-position="right" unchecked-label="off">
+  <div aria-checked="true" aria-label="on" class="gux-checked gux-toggle-container" role="checkbox" tabindex="0">
+    <input checked="" type="checkbox">
+    <gux-toggle-slider>
+      <div class="gux-toggle-slider" role="presentation">
+        <div class="gux-checked gux-slider"></div>
+      </div>
+    </gux-toggle-slider>
+    <div class="gux-checked gux-toggle-label">
+      on
+    </div>
+  </div>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render component as expected (8) 1`] = `
+<gux-toggle checked-label="This is a long label for the toggle to test how it works" label-position="left" unchecked-label="This is another long label for the toggle to test how it works">
+  <div aria-checked="false" aria-label="This is another long label for the toggle to test how it works" class="gux-toggle-container gux-toggle-label-left" role="checkbox" tabindex="0">
+    <input type="checkbox">
+    <gux-toggle-slider>
+      <div class="gux-toggle-slider" role="presentation">
+        <div class="gux-slider"></div>
+      </div>
+    </gux-toggle-slider>
+    <div class="gux-toggle-label">
+      This is another long label for the toggle to test how it works
+    </div>
+  </div>
+</gux-toggle>
+`;
+
+exports[`gux-toggle #render should render component as expected (9) 1`] = `
+<gux-toggle checked="" checked-label="This is a long label for the toggle to test how it works" label-position="right" unchecked-label="This is another long label for the toggle to test how it works">
+  <div aria-checked="true" aria-label="This is a long label for the toggle to test how it works" class="gux-checked gux-toggle-container" role="checkbox" tabindex="0">
+    <input checked="" type="checkbox">
+    <gux-toggle-slider>
+      <div class="gux-toggle-slider" role="presentation">
+        <div class="gux-checked gux-slider"></div>
+      </div>
+    </gux-toggle-slider>
+    <div class="gux-checked gux-toggle-label">
+      This is a long label for the toggle to test how it works
+    </div>
+  </div>
+</gux-toggle>
+`;
