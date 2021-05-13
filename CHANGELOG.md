@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.12.8](http://inindca///compare/v2.12.7...v2.12.8) (2021-05-13)
+
+
+### Bug Fixes
+
+* **gux-form-field:** checkbox and radio button icons updated ([a686aa8](http://inindca///commit/a686aa84045db564d4bba07934bfa0c04925b57b))
+
 ### [2.12.7](http://inindca///compare/v2.12.6...v2.12.7) (2021-05-11)
 
 
