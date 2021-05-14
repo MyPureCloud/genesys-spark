@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type                           | Default  |
+| -------- | --------- | ----------- | ------------------------------ | -------- |
+| `resize` | `resize`  |             | `"auto" \| "manual" \| "none"` | `'none'` |
+
+
 ## Slots
 
 | Slot      | Description                |

@@ -1,0 +1,71 @@
+<form onchange="notify(event)" oninput="notify(event)">
+  <h1>gux-form-field (textarea)</h1>
+
+  <p>slot a textarea element into a gux-form-field element</p>
+
+  <gux-form-field>
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Text Area Label</label>
+  </gux-form-field>
+
+  <gux-form-field>
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+      disabled
+    ></textarea>
+    <label slot="label">Disabled</label>
+  </gux-form-field>
+
+  <gux-form-field>
+    <textarea
+      style="height: 200px"
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Set to specific height</label>
+  </gux-form-field>
+
+  <gux-form-field resize="none">
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">No Resize</label>
+  </gux-form-field>
+
+  <gux-form-field resize="manual">
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Manual Resize</label>
+  </gux-form-field>
+
+  <gux-form-field resize="auto">
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Auto Resize</label>
+  </gux-form-field>
+
+  <gux-form-field resize="auto">
+    <textarea
+      style="max-height: 200px"
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Auto Resize with max height</label>
+  </gux-form-field>
+</form>

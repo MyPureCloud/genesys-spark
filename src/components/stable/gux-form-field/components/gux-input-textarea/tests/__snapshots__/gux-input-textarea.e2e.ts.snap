@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-input-textarea #render should render component as expected (1) 1`] = `"<!----><div class=\\"gux-resize-none\\"><textarea type=\\"text\\" slot=\\"input\\"></textarea></div>"`;
+
+exports[`gux-input-textarea #render should render component as expected (2) 1`] = `"<!----><div class=\\"gux-resize-none\\"><textarea type=\\"text\\" slot=\\"input\\"></textarea></div>"`;
+
+exports[`gux-input-textarea #render should render component as expected (3) 1`] = `"<!----><div class=\\"gux-resize-manual\\"><textarea type=\\"text\\" slot=\\"input\\"></textarea></div>"`;
+
+exports[`gux-input-textarea #render should render component as expected (4) 1`] = `"<!----><div class=\\"gux-resize-auto\\" data-replicated-value><textarea type=\\"text\\" slot=\\"input\\"></textarea></div>"`;
+
+exports[`gux-input-textarea #render should render component as expected (5) 1`] = `"<!----><div class=\\"gux-resize-auto\\" data-replicated-value=\\"Test\\"><textarea type=\\"text\\" slot=\\"input\\">Test</textarea></div>"`;
