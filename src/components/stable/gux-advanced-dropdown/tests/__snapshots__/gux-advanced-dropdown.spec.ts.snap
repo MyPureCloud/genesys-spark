@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-advanced-dropdown should render 1`] = `
-<gux-advanced-dropdown lang="en">
+<gux-advanced-dropdown lang="en" style="--max-options: 10;">
   <mock:shadow-root>
     <div class="gux-dropdown">
       <div class="gux-select-field">
