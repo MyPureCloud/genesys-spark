@@ -28,7 +28,7 @@ import simulateNativeEvent from '../../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../../usage-tracking';
 
 /**
- * @slot - collection of gux-option-v3s
+ * @slot - collection of gux-option-v2s
  */
 @Component({
   styleUrl: 'gux-listbox.less',
@@ -43,7 +43,7 @@ export class GuxListbox {
   value: string;
 
   @State()
-  listboxOptions: HTMLGuxOptionV3Element[] = [];
+  listboxOptions: HTMLGuxOptionV2Element[] = [];
 
   @Event()
   internallistboxoptionsupdated: EventEmitter;
@@ -104,9 +104,9 @@ export class GuxListbox {
   @Listen('click')
   onClick(event: MouseEvent): void {
     whenEventIsFrom(
-      'gux-option-v3',
+      'gux-option-v2',
       event,
-      (option: HTMLGuxOptionV3Element) => {
+      (option: HTMLGuxOptionV2Element) => {
         onClickedOption(option, this.updateValue.bind(this));
       }
     );
@@ -115,7 +115,7 @@ export class GuxListbox {
   private setListboxOptions(): void {
     this.listboxOptions = Array.from(
       this.root.children
-    ) as HTMLGuxOptionV3Element[];
+    ) as HTMLGuxOptionV2Element[];
 
     this.internallistboxoptionsupdated.emit();
   }

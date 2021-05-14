@@ -44,21 +44,8 @@ Example with slotting
 
 | Slot | Description                  |
 | ---- | ---------------------------- |
-|      | collection of gux-option-v3s |
+|      | collection of gux-option-v2s |
 
-
-## Dependencies
-
-### Used by
-
- - [gux-dropdown-v3-beta](..)
-
-### Graph
-```mermaid
-graph TD;
-  gux-dropdown-v3-beta --> gux-listbox
-  style gux-listbox fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

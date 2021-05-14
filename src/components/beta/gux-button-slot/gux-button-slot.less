@@ -4,29 +4,30 @@
 gux-button-slot-beta {
   display: inline-block;
   min-width: 32px;
+  vertical-align: middle;
   pointer-events: none;
 
   input[type='button'],
   input[type='submit'],
   button {
     width: 100%;
-    padding: 0 16px;
     height: 32px;
-    border-radius: 2px;
-    border: none;
-    cursor: pointer;
+    padding: 0 16px;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     font-size: 12px;
     font-weight: bold;
-    pointer-events: auto;
-    background-color: @gux-grey-60;
     color: @gux-black-50;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: auto;
+    cursor: pointer;
+    background-color: @gux-grey-60;
+    border: none;
+    border-radius: 2px;
 
     &[disabled] {
-      opacity: 0.5;
       cursor: default;
+      opacity: 0.5;
     }
 
     &:focus {
@@ -50,14 +51,34 @@ gux-button-slot-beta {
     input[type='button'],
     input[type='submit'],
     button {
-      background-color: @gux-blue-60;
       color: @gux-grey-100;
+      background-color: @gux-blue-60;
 
       &:hover:enabled {
         background-color: @gux-blue-50;
       }
 
       &:active:enabled {
+        background-color: @gux-blue-40;
+      }
+    }
+  }
+
+  &[accent='tertiary'] {
+    input[type='button'],
+    input[type='submit'],
+    button {
+      color: @gux-blue-60;
+      background-color: @gux-grey-100;
+      border: 1px solid @gux-blue-60;
+
+      &:hover:enabled {
+        color: @gux-grey-100;
+        background-color: @gux-blue-50;
+      }
+
+      &:active:enabled {
+        color: @gux-grey-100;
         background-color: @gux-blue-40;
       }
     }

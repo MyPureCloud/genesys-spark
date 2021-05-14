@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-button-slot-beta #render should render default button 1`] = `"<gux-button-slot-beta accent=\\"secondary\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Default\\">Button</button></gux-button-slot-beta>"`;
+
+exports[`gux-button-slot-beta #render should render disabled default button 1`] = `"<gux-button-slot-beta accent=\\"secondary\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Default\\" disabled=\\"\\">Button</button></gux-button-slot-beta>"`;
+
+exports[`gux-button-slot-beta #render should render disabled primary button 1`] = `"<gux-button-slot-beta accent=\\"primary\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Primary\\" disabled=\\"\\">Button</button></gux-button-slot-beta>"`;
+
+exports[`gux-button-slot-beta #render should render disabled secondary button 1`] = `"<gux-button-slot-beta accent=\\"secondary\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Secondary\\" disabled=\\"\\">Button</button></gux-button-slot-beta>"`;
+
+exports[`gux-button-slot-beta #render should render disabled tertiary button 1`] = `"<gux-button-slot-beta accent=\\"tertiary\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Tertiary\\" disabled=\\"\\">Button</button></gux-button-slot-beta>"`;
+
+exports[`gux-button-slot-beta #render should render invalid button 1`] = `"<gux-button-slot-beta accent=\\"invalid\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Invalid\\">Button</button></gux-button-slot-beta>"`;
+
+exports[`gux-button-slot-beta #render should render invalid button 2`] = `"<gux-button-slot-beta accent=\\"invalid\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Invalid\\">Button</button></gux-button-slot-beta>"`;
+
+exports[`gux-button-slot-beta #render should render primary button 1`] = `"<gux-button-slot-beta accent=\\"primary\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Primary\\">Button</button></gux-button-slot-beta>"`;
+
+exports[`gux-button-slot-beta #render should render secondary button 1`] = `"<gux-button-slot-beta accent=\\"secondary\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Secondary\\">Button</button></gux-button-slot-beta>"`;
+
+exports[`gux-button-slot-beta #render should render tertiary button 1`] = `"<gux-button-slot-beta accent=\\"tertiary\\" class=\\"hydrated\\"><!----><button type=\\"button\\" title=\\"Tertiary\\">Button</button></gux-button-slot-beta>"`;

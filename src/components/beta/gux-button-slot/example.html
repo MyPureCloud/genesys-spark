@@ -21,6 +21,12 @@
     </button>
   </gux-button-slot-beta>
 
+  <gux-button-slot-beta accent="tertiary">
+    <button type="button" title="Tertiary" onclick="notify(event)">
+      Tertiary
+    </button>
+  </gux-button-slot-beta>
+
   <gux-button-slot-beta>
     <button type="button" title="Slotted element" onclick="notify(event)">
       <span>Text in a span element</span>
@@ -31,6 +37,22 @@
     <button type="button" title="Slotted element" onclick="notify(event)">
       <span>Text in a span element</span>
       <span>More text in a span element</span>
+    </button>
+  </gux-button-slot-beta>
+
+  <gux-button-slot-beta>
+    <button type="button" title="Slotted element" onclick="notify(event)">
+      <gux-icon
+        icon-name="trashcan"
+        screenreader-text="This will be read by a screen reader"
+      ></gux-icon>
+    </button>
+  </gux-button-slot-beta>
+
+  <gux-button-slot-beta>
+    <button type="button" title="Slotted element" onclick="notify(event)">
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
+      <span>Text in a span element</span>
     </button>
   </gux-button-slot-beta>
 </div>
@@ -56,6 +78,12 @@
     </button>
   </gux-button-slot-beta>
 
+  <gux-button-slot-beta accent="tertiary">
+    <button type="button" title="Tertiary" disabled onclick="notify(event)">
+      Tertiary
+    </button>
+  </gux-button-slot-beta>
+
   <gux-button-slot-beta>
     <button
       type="button"
@@ -76,6 +104,32 @@
     >
       <span>Text in a span element</span>
       <span>More text in a span element</span>
+    </button>
+  </gux-button-slot-beta>
+
+  <gux-button-slot-beta>
+    <button
+      type="button"
+      title="Slotted element"
+      disabled
+      onclick="notify(event)"
+    >
+      <gux-icon
+        icon-name="trashcan"
+        screenreader-text="This will be read by a screen reader"
+      ></gux-icon>
+    </button>
+  </gux-button-slot-beta>
+
+  <gux-button-slot-beta>
+    <button
+      type="button"
+      title="Slotted element"
+      disabled
+      onclick="notify(event)"
+    >
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
+      <span>Text in a span element</span>
     </button>
   </gux-button-slot-beta>
 </div>
@@ -111,6 +165,15 @@
       value="Secondary"
     />
   </gux-button-slot-beta>
+
+  <gux-button-slot-beta accent="tertiary">
+    <input
+      type="button"
+      title="Tertiary"
+      onclick="notify(event)"
+      value="Tertiary"
+    />
+  </gux-button-slot-beta>
 </div>
 
 <h4>Disabled</h4>
@@ -143,6 +206,16 @@
       disabled
       onclick="notify(event)"
       value="Secondary"
+    />
+  </gux-button-slot-beta>
+
+  <gux-button-slot-beta accent="tertiary">
+    <input
+      type="button"
+      title="Tertiary"
+      disabled
+      onclick="notify(event)"
+      value="Tertiary"
     />
   </gux-button-slot-beta>
 </div>
@@ -178,6 +251,15 @@
       value="Secondary"
     />
   </gux-button-slot-beta>
+
+  <gux-button-slot-beta accent="tertiary">
+    <input
+      type="submit"
+      title="Tertiary"
+      onclick="notify(event)"
+      value="Tertiary"
+    />
+  </gux-button-slot-beta>
 </div>
 
 <h4>Disabled</h4>
@@ -210,6 +292,16 @@
       disabled
       onclick="notify(event)"
       value="Secondary"
+    />
+  </gux-button-slot-beta>
+
+  <gux-button-slot-beta accent="tertiary">
+    <input
+      type="submit"
+      title="Tertiary"
+      disabled
+      onclick="notify(event)"
+      value="Tertiary"
     />
   </gux-button-slot-beta>
 </div>

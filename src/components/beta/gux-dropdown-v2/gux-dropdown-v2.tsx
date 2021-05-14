@@ -14,18 +14,18 @@ import { ClickOutside } from 'stencil-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../usage-tracking';
-import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 import translationResources from './i18n/en.json';
 
 /**
- * @slot - for list of gux-option-v3
+ * @slot - for gux-list-box
  */
 @Component({
-  styleUrl: 'gux-dropdown-v3.less',
-  tag: 'gux-dropdown-v3-beta'
+  styleUrl: 'gux-dropdown-v2.less',
+  tag: 'gux-dropdown-v2-beta',
+  shadow: true
 })
-export class GuxDropdownV3Beta {
+export class GuxDropdownV2Beta {
   private i18n: GetI18nValue;
   private fieldButtonElement: HTMLElement;
   private listboxElement: HTMLGuxListboxElement;
@@ -59,14 +59,16 @@ export class GuxDropdownV3Beta {
   @Watch('value')
   validateValue(newValue: string) {
     if (newValue === undefined) {
+      this.listboxElement.value = newValue;
       return;
     }
 
     const selectedListboxOptionElement = this.root.querySelector(
-      `gux-option-v3[value="${newValue}"]`
+      `gux-option-v2[value="${newValue}"]`
     );
 
     if (selectedListboxOptionElement) {
+      this.listboxElement.value = newValue;
       return;
     }
 
@@ -96,15 +98,11 @@ export class GuxDropdownV3Beta {
     this.collapseListbox('noFocusChange');
   }
 
-  @OnMutation({ childList: true })
-  onMutation() {
-    forceUpdate(this.root);
-  }
-
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
 
+    this.listboxElement = this.root.querySelector('gux-listbox');
     this.validateValue(this.value);
   }
 
@@ -145,39 +143,6 @@ export class GuxDropdownV3Beta {
     );
   }
 
-  private renderTargetDisplayText(): JSX.Element {
-    const selectedListboxOptionElement = this.root.querySelector(
-      `gux-option-v3[value="${this.value}"]`
-    );
-
-    if (selectedListboxOptionElement) {
-      return (
-        <div class="gux-selected-option">
-          {selectedListboxOptionElement.textContent}
-        </div>
-      );
-    }
-
-    return (
-      <div class="gux-placeholder">
-        {this.placeholder || this.i18n('noSelection')}
-      </div>
-    );
-  }
-
-  private renderPopup(): JSX.Element {
-    return (
-      <div slot="popup" class="gux-listbox-container">
-        <gux-listbox
-          ref={(el: HTMLGuxListboxElement) => (this.listboxElement = el)}
-          value={this.value}
-        >
-          <slot />
-        </gux-listbox>
-      </div>
-    );
-  }
-
   private fieldButtonClick(): void {
     this.expanded = !this.expanded;
   }
@@ -201,6 +166,34 @@ export class GuxDropdownV3Beta {
       simulateNativeEvent(this.root, 'input');
       simulateNativeEvent(this.root, 'change');
     }
+  }
+
+  private renderTargetDisplayText(): JSX.Element {
+    const selectedListboxOptionElement = this.root.querySelector(
+      `gux-option-v2[value="${this.value}"]`
+    );
+
+    if (selectedListboxOptionElement) {
+      return (
+        <div class="gux-selected-option">
+          {selectedListboxOptionElement.textContent}
+        </div>
+      );
+    }
+
+    return (
+      <div class="gux-placeholder">
+        {this.placeholder || this.i18n('noSelection')}
+      </div>
+    );
+  }
+
+  private renderPopup(): JSX.Element {
+    return (
+      <div slot="popup" class="gux-listbox-container">
+        <slot></slot>
+      </div>
+    );
   }
 
   render(): JSX.Element {

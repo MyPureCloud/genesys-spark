@@ -137,27 +137,35 @@ export class GuxActionButton {
       <div class="gux-action-button-container">
         <gux-popup-beta expanded={this.isOpen} disabled={this.disabled}>
           <div slot="target" class="gux-action-button-container">
-            <gux-button
-              type={this.type}
-              accent={this.accent}
-              disabled={this.disabled}
-              onClick={() => this.onActionClick()}
+            <gux-button-slot-beta
               class="gux-action-button"
-              aria-haspopup="listbox"
-              aria-expanded={this.isOpen.toString()}
-            >
-              {this.text}
-            </gux-button>
-            <gux-button
               accent={this.accent}
-              disabled={this.disabled}
-              ref={el => (this.dropdownButton = el)}
-              onClick={() => this.toggle()}
-              onKeyUp={e => this.onKeyUpEvent(e)}
-              class="gux-dropdown-button"
             >
-              <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
-            </gux-button>
+              <button
+                type={this.type}
+                disabled={this.disabled}
+                onClick={() => this.onActionClick()}
+              >
+                {this.text}
+              </button>
+            </gux-button-slot-beta>
+
+            <gux-button-slot-beta
+              class="gux-dropdown-button"
+              accent={this.accent}
+            >
+              <button
+                type={this.type}
+                disabled={this.disabled}
+                ref={el => (this.dropdownButton = el)}
+                onClick={() => this.toggle()}
+                onKeyUp={e => this.onKeyUpEvent(e)}
+                aria-haspopup="listbox"
+                aria-expanded={this.isOpen.toString()}
+              >
+                <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
+              </button>
+            </gux-button-slot-beta>
           </div>
 
           <gux-list

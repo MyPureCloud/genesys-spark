@@ -1,7 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
 
-gux-dropdown-v3-beta {
+:host {
   color: @gux-black-50;
 
   &:focus-within {
@@ -35,6 +35,14 @@ gux-dropdown-v3-beta {
     border: 1px solid @gux-black-100;
     border-radius: 2px;
     box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
+
+    &:focus-within {
+      .focus-ring();
+
+      .gux-expand-icon {
+        color: @gux-blue-60;
+      }
+    }
 
     .gux-selected-option,
     .gux-placeholder {

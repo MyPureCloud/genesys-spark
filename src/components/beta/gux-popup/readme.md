@@ -25,13 +25,13 @@
 ### Used by
 
  - [gux-action-button](../../stable/gux-action-button)
- - [gux-dropdown-v3-beta](../gux-dropdown-v3)
+ - [gux-dropdown-v2-beta](../gux-dropdown-v2)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-action-button --> gux-popup-beta
-  gux-dropdown-v3-beta --> gux-popup-beta
+  gux-dropdown-v2-beta --> gux-popup-beta
   style gux-popup-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -3,10 +3,10 @@ import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
 @Component({
-  styleUrl: 'gux-option-v3.less',
-  tag: 'gux-option-v3'
+  styleUrl: 'gux-option-v2.less',
+  tag: 'gux-option-v2'
 })
-export class GuxOptionV3 {
+export class GuxOptionV2 {
   @Element()
   root: HTMLElement;
 
@@ -32,7 +32,7 @@ export class GuxOptionV3 {
   // }
 
   componentWillLoad(): void {
-    this.root.id = this.root.id || randomHTMLId('gux-option-v3');
+    this.root.id = this.root.id || randomHTMLId('gux-option-v2');
   }
 
   private getAriaSelected(): boolean | string {
@@ -53,7 +53,7 @@ export class GuxOptionV3 {
           'gux-disabled': this.disabled
         }}
         aria-selected={this.getAriaSelected()}
-        aria-disabled={this.disabled}
+        aria-disabled={this.disabled.toString()}
       >
         <slot />
       </Host>

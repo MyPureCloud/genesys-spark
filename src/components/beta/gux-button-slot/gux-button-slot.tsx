@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 
 import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
 
@@ -9,7 +9,7 @@ import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
   styleUrl: 'gux-button-slot.less',
   tag: 'gux-button-slot-beta'
 })
-export class GuxButtonSlotBeta {
+export class GuxButtonSlot {
   @Element() root: HTMLElement;
   /**
    * The component accent.
@@ -36,6 +36,10 @@ export class GuxButtonSlotBeta {
   }
 
   render(): JSX.Element {
-    return <slot />;
+    return (
+      <Host accent={this.accent}>
+        <slot />
+      </Host>
+    );
   }
 }

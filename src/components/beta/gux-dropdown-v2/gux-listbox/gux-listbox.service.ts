@@ -1,22 +1,22 @@
-function getListOptions(list: HTMLGuxListboxElement): HTMLGuxOptionV3Element[] {
-  return Array.from(list.children) as HTMLGuxOptionV3Element[];
+function getListOptions(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element[] {
+  return Array.from(list.children) as HTMLGuxOptionV2Element[];
 }
 
 function getFirstSelectedOption(
   list: HTMLGuxListboxElement
-): HTMLGuxOptionV3Element {
+): HTMLGuxOptionV2Element {
   return getListOptions(list).find(
     option => option.selected && !option.disabled
   );
 }
 
-function getActiveOption(list: HTMLGuxListboxElement): HTMLGuxOptionV3Element {
+function getActiveOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
   return getListOptions(list).find(option => option.active);
 }
 
 function setActiveOption(
   list: HTMLGuxListboxElement,
-  element: HTMLGuxOptionV3Element
+  element: HTMLGuxOptionV2Element
 ): void {
   if (element) {
     getListOptions(list).forEach(option => {
@@ -31,23 +31,23 @@ function setActiveOption(
   }
 }
 
-function getFirstOption(list: HTMLGuxListboxElement): HTMLGuxOptionV3Element {
+function getFirstOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
   let firstOption = getListOptions(list)[0];
 
   while (firstOption && firstOption.disabled) {
-    firstOption = firstOption.nextElementSibling as HTMLGuxOptionV3Element;
+    firstOption = firstOption.nextElementSibling as HTMLGuxOptionV2Element;
   }
 
   return firstOption;
 }
 
-function getNextOption(list: HTMLGuxListboxElement): HTMLGuxOptionV3Element {
+function getNextOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
   if (hasActiveOption(list)) {
     let nextOption = getActiveOption(list)
-      .nextElementSibling as HTMLGuxOptionV3Element;
+      .nextElementSibling as HTMLGuxOptionV2Element;
 
     while (nextOption && nextOption.disabled) {
-      nextOption = nextOption.nextElementSibling as HTMLGuxOptionV3Element;
+      nextOption = nextOption.nextElementSibling as HTMLGuxOptionV2Element;
     }
 
     return nextOption;
@@ -58,13 +58,14 @@ function getNextOption(list: HTMLGuxListboxElement): HTMLGuxOptionV3Element {
 
 function getPreviousOption(
   list: HTMLGuxListboxElement
-): HTMLGuxOptionV3Element {
+): HTMLGuxOptionV2Element {
   if (hasActiveOption(list)) {
     let previousOption = getActiveOption(list)
-      .previousElementSibling as HTMLGuxOptionV3Element;
+      .previousElementSibling as HTMLGuxOptionV2Element;
 
     while (previousOption && previousOption.disabled) {
-      previousOption = previousOption.previousElementSibling as HTMLGuxOptionV3Element;
+      previousOption =
+        previousOption.previousElementSibling as HTMLGuxOptionV2Element;
     }
 
     return previousOption;
@@ -73,13 +74,13 @@ function getPreviousOption(
   return getFirstOption(list);
 }
 
-function getLastOption(list: HTMLGuxListboxElement): HTMLGuxOptionV3Element {
+function getLastOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
   const options = getListOptions(list);
 
   let lastOption = options[options.length - 1];
 
   while (lastOption && lastOption.disabled) {
-    lastOption = lastOption.previousElementSibling as HTMLGuxOptionV3Element;
+    lastOption = lastOption.previousElementSibling as HTMLGuxOptionV2Element;
   }
 
   return lastOption;
@@ -92,7 +93,7 @@ function hasActiveOption(list: HTMLGuxListboxElement): boolean {
 function getSearchOption(
   list: HTMLGuxListboxElement,
   searchString: string
-): HTMLGuxOptionV3Element {
+): HTMLGuxOptionV2Element {
   return getListOptions(list).find(option => {
     return (
       !option.disabled &&
@@ -118,10 +119,6 @@ export function clearActiveOptions(list: HTMLGuxListboxElement): void {
   getListOptions(list).forEach(option => {
     option.active = false;
   });
-}
-
-export function s(list: HTMLGuxListboxElement): void {
-  getListOptions(list).forEach(option => (option.active = false));
 }
 
 export function setInitialActiveOption(list: HTMLGuxListboxElement) {
@@ -154,7 +151,7 @@ export function onEnterList(
 }
 
 export function onClickedOption(
-  option: HTMLGuxOptionV3Element,
+  option: HTMLGuxOptionV2Element,
   handler: (value: string) => void
 ): void {
   handler(option.value);

@@ -1,4 +1,4 @@
-# gux-dropdown-v3-beta
+# gux-dropdown-v2-beta
 
 <!-- Auto Generated Below -->
 
@@ -14,9 +14,9 @@
 
 ## Slots
 
-| Slot | Description               |
-| ---- | ------------------------- |
-|      | for list of gux-option-v3 |
+| Slot | Description      |
+| ---- | ---------------- |
+|      | for gux-list-box |
 
 
 ## Dependencies
@@ -24,16 +24,14 @@
 ### Depends on
 
 - [gux-icon](../../stable/gux-icon)
-- [gux-listbox](gux-listbox)
 - [gux-popup-beta](../gux-popup)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-dropdown-v3-beta --> gux-icon
-  gux-dropdown-v3-beta --> gux-listbox
-  gux-dropdown-v3-beta --> gux-popup-beta
-  style gux-dropdown-v3-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-dropdown-v2-beta --> gux-icon
+  gux-dropdown-v2-beta --> gux-popup-beta
+  style gux-dropdown-v2-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
