@@ -1,3 +1,5 @@
 {
-  "clear": "Tyhjennä"
+  "clear": "Tyhjennä",
+  "increment": "Increment",
+  "decrement": "Decrement"
 }
