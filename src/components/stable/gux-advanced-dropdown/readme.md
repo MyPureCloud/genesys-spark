@@ -13,6 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | `filterDebounceTimeout` | `filter-debounce-timeout` | Timeout between filter input changed and event being emitted. | `number`  | `500`       |
 | `noFilter`              | `no-filter`               | Whether the list should filter its current options.           | `boolean` | `false`     |
 | `placeholder`           | `placeholder`             | The dropdown's placeholder.                                   | `string`  | `undefined` |
+| `size`                  | `size`                    | The max number of options to display without scrolling        | `number`  | `10`        |
 
 
 ## Events

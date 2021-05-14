@@ -56,6 +56,12 @@ export class GuxAdvancedDropdown {
   filterDebounceTimeout: number = 500;
 
   /**
+   * The max number of options to display without scrolling
+   */
+  @Prop()
+  size: number = 10;
+
+  /**
    * Fires when the value of the advanced dropdown changes.
    */
   @Event()
@@ -86,6 +92,11 @@ export class GuxAdvancedDropdown {
     if (this.opened && newValue) {
       this.closeDropdown(false);
     }
+  }
+
+  @Watch('size')
+  updateMaxOptions(newValue: number) {
+    this.setMaxVisibleOptions(newValue);
   }
 
   get value(): string {
@@ -129,6 +140,11 @@ export class GuxAdvancedDropdown {
     this.slotObserver = onMutation(this.root, () =>
       this.updateSelectionState()
     );
+    this.setMaxVisibleOptions(this.size);
+  }
+
+  setMaxVisibleOptions(maxOptions: number) {
+    this.root.style.setProperty('--max-options', maxOptions.toString());
   }
 
   disconnectedCallback() {

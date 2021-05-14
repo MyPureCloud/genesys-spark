@@ -19,7 +19,6 @@
 @divider-color: @gux-grey-40;
 
 // Style
-
 div.gux-dropdown {
   position: relative;
   margin: 4px 0;
@@ -110,9 +109,12 @@ div.gux-dropdown {
   }
 
   .gux-dropdown-options {
+    // Maximum options without scrolling which is controlled by the size property
+    max-height: calc(var(--max-options) * 32px);
     padding: 8px 0;
     margin: 0;
     margin-top: 12px;
+    overflow-y: auto;
     color: @text-color;
     background: @menu-background-color;
     border: 1px solid @menu-border-color;
