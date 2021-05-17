@@ -26,6 +26,7 @@ export class GuxAdvancedDropdown {
   @Element()
   root: HTMLElement;
 
+  wrapperElement: HTMLElement;
   searchElement: HTMLGuxSearchBetaElement;
   inputBox: HTMLElement;
 
@@ -140,11 +141,17 @@ export class GuxAdvancedDropdown {
     this.slotObserver = onMutation(this.root, () =>
       this.updateSelectionState()
     );
+  }
+
+  componentDidLoad() {
     this.setMaxVisibleOptions(this.size);
   }
 
   setMaxVisibleOptions(maxOptions: number) {
-    this.root.style.setProperty('--max-options', maxOptions.toString());
+    this.wrapperElement.style.setProperty(
+      '--max-options',
+      maxOptions.toString()
+    );
   }
 
   disconnectedCallback() {
@@ -157,6 +164,7 @@ export class GuxAdvancedDropdown {
         class={`gux-dropdown
         ${this.disabled ? 'gux-disabled' : ''}
         ${this.opened ? 'gux-active' : ''}`}
+        ref={el => (this.wrapperElement = el)}
       >
         <div class="gux-select-field" onMouseDown={() => this.inputMouseDown()}>
           <a

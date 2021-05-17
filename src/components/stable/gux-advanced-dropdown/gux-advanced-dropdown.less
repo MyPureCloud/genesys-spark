@@ -110,7 +110,9 @@ div.gux-dropdown {
 
   .gux-dropdown-options {
     // Maximum options without scrolling which is controlled by the size property
-    max-height: calc(var(--max-options) * 32px);
+    --option-height: 32px;
+
+    max-height: calc(var(--max-options) * var(--option-height));
     padding: 8px 0;
     margin: 0;
     margin-top: 12px;
