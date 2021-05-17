@@ -35,7 +35,7 @@
     "list-i18n-files": "./scripts/list-i18n-files.js",
     "predev": "npm run i18n",
     "predev.public": "npm run predev",
-    "prepare": "./scripts/prepare-docs.sh && npm run i18n",
+    "prepare": "./scripts/prepare-docs.sh && npm run i18n && husky install",
     "release": "standard-version",
     "stencil": "stencil build --prod",
     "stencil.dev": "stencil build --dev --watch --docs",
@@ -78,7 +78,7 @@
     "file-loader": "^6.2.0",
     "glob": "^7.1.7",
     "handlebars": "^4.7.7",
-    "husky": "^4.3.8",
+    "husky": "^6.0.0",
     "inquirer": "^8.0.0",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
@@ -150,12 +150,6 @@
           ]
         }
       ]
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
