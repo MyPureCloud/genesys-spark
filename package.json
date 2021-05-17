@@ -72,7 +72,7 @@
     "@types/resize-observer-browser": "^0.1.5",
     "@types/sortablejs": "^1.10.6",
     "babel-loader": "^8.2.2",
-    "commitizen": "^4.2.4",
+    "commitizen": "^4.2.3",
     "concurrently": "^6.0.2",
     "cz-conventional-changelog": "^3.3.0",
     "file-loader": "^6.2.0",
