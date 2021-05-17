@@ -41,13 +41,10 @@ export function bootstrap() {
 
   const searchHandler = event => {
     const searchText = event.target.value;
-    console.log(searchText);
     document
       .querySelectorAll('.components-list .component-item')
       .forEach(item => {
-        if (
-          item.textContent.toLowerCase().indexOf(searchText.toLowerCase()) > -1
-        ) {
+        if (item.textContent.toLowerCase().includes(searchText.toLowerCase())) {
           item.classList.remove('hide-item');
         } else {
           item.classList.add('hide-item');
