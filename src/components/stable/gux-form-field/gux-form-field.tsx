@@ -2,6 +2,7 @@ import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
+import { GuxInputTextAreaResize } from './components/gux-input-textarea/gux-input-textarea.types';
 /**
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
@@ -19,6 +20,9 @@ export class GuxFormField {
 
   @Prop()
   clearable: boolean;
+
+  @Prop()
+  resize: GuxInputTextAreaResize;
 
   @Prop()
   displayUnits: string;
@@ -163,7 +167,7 @@ export class GuxFormField {
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <slot name="label" slot="label" />
-          <gux-input-textarea slot="input">
+          <gux-input-textarea slot="input" resize={this.resize}>
             <slot name="input" />
           </gux-input-textarea>
         </div>

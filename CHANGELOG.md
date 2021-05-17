@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.13.0](http://inindca///compare/v2.12.8...v2.13.0) (2021-05-14)
+
+
+### Features
+
+* **gux-input-textarea:** component can now auto resize ([7732c12](http://inindca///commit/7732c12122c403d3df5efb3ff014941e67822f06))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([9ea4539](http://inindca///commit/9ea45392028f967f2bfadfbe06cb162f042e7480))
+* **pr-comment:** addressed PR comment ([a80c709](http://inindca///commit/a80c709f6a22427283516936c677508bd6c897c6))
+* **pr-comments:** addressed PR comments ([6688f54](http://inindca///commit/6688f5410264f0eb6783a60b19b756c0ca36e7c2))
+
+### [2.12.8](http://inindca///compare/v2.12.7...v2.12.8) (2021-05-13)
+
+
+### Bug Fixes
+
+* **gux-form-field:** checkbox and radio button icons updated ([a686aa8](http://inindca///commit/a686aa84045db564d4bba07934bfa0c04925b57b))
+
 ### [2.12.7](http://inindca///compare/v2.12.6...v2.12.7) (2021-05-11)
 
 
