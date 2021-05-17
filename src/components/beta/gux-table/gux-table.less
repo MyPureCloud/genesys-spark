@@ -76,6 +76,7 @@ gux-table-beta {
       cursor: pointer;
       background: @gux-grey-60;
       border: 1px solid @gux-table-scroll-btn-border;
+      border-radius: 4px;
 
       &.disabled {
         color: @gux-table-scroll-btn-disabled-text;
@@ -89,15 +90,15 @@ gux-table-beta {
     }
 
     .gux-table-scroll-left {
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
       box-shadow: @gux-table-scroll-btn-shadow-left;
     }
 
     .gux-table-scroll-right {
       right: 0;
-      border-top-left-radius: 2px;
-      border-bottom-left-radius: 2px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
       box-shadow: @gux-table-scroll-btn-shadow-right;
     }
 

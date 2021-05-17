@@ -1,5 +1,6 @@
 @import (reference) '../../../../../style/color.less';
 @import (reference) '../gux-menu.common.less';
+@import (reference) '../../../../../style/mixins.less';
 
 gux-submenu {
   display: block;
@@ -52,8 +53,9 @@ gux-submenu {
     flex-direction: column;
     padding: 8px 0;
     background-color: @gux-type-dark;
-    border: 1px @gux-border;
-    box-shadow: 0 0 2px fade(@gux-black-30, 24%);
+    border: 1px solid @gux-grey-30;
+    border-radius: 4px;
+    .shadow-20();
 
     &.gux-shown {
       display: flex;
