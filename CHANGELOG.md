@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.14.0](http://inindca///compare/v2.13.0...v2.14.0) (2021-05-18)
+
+
+### Features
+
+* **gux-form-field:** required label is now linked to input element ([93b9c1e](http://inindca///commit/93b9c1ef6ee9447d79ab9d343446f4d87ea4e834))
+
 ## [2.13.0](http://inindca///compare/v2.12.8...v2.13.0) (2021-05-14)
 
 
