@@ -12,6 +12,7 @@
       />
       <label slot="label" for="pizza">Pizza</label>
     </gux-form-field>
+
     <gux-form-field>
       <input
         slot="input"
@@ -23,6 +24,7 @@
       />
       <label slot="label" for="pasta">Pasta</label>
     </gux-form-field>
+
     <gux-form-field>
       <input
         slot="input"
@@ -34,6 +36,7 @@
       />
       <label slot="label" for="hamburger">Hamburger</label>
     </gux-form-field>
+
     <gux-form-field>
       <input
         slot="input"
@@ -102,115 +105,173 @@
 
   <div>
     <gux-form-field>
-      <input slot="input" name="color" type="color" value="#1da8b3" />
-      <label slot="label">Color</label>
+      <input
+        slot="input"
+        id="color"
+        name="color"
+        type="color"
+        value="#1da8b3"
+      />
+      <label slot="label" for="color">Color</label>
     </gux-form-field>
-  </div>
 
-  <div>
     <gux-form-field>
-      <input slot="input" name="color" type="color" value="#1da8b3" disabled />
-      <label slot="label">Color</label>
+      <input
+        slot="input"
+        id="color-disabled"
+        name="color"
+        type="color"
+        value="#1da8b3"
+        disabled
+      />
+      <label slot="label" for="color-disabled">Color Disabled</label>
+    </gux-form-field>
+
+    <gux-form-field>
+      <input
+        slot="input"
+        id="color-required"
+        name="color"
+        type="color"
+        value="#1da8b3"
+        required
+      />
+      <label slot="label" for="color-required">Color</label>
     </gux-form-field>
   </div>
 
   <h1>Number</h1>
-  <gux-form-field>
-    <input
-      slot="input"
-      name="number"
-      type="number"
-      step="5"
-      min="5"
-      max="100"
-      placeholder="Enter a number"
-    />
-    <label slot="label">Number</label>
-  </gux-form-field>
 
-  <gux-form-field clearable>
-    <input
-      slot="input"
-      name="number-clearable"
-      type="number"
-      step="5"
-      min="5"
-      max="100"
-      placeholder="Enter a number"
-      value="50"
-    />
-    <label slot="label">Number</label>
-  </gux-form-field>
+  <div>
+    <gux-form-field>
+      <input
+        slot="input"
+        name="number"
+        type="number"
+        step="5"
+        min="5"
+        max="100"
+        placeholder="Enter a number"
+      />
+      <label slot="label">Number</label>
+    </gux-form-field>
 
-  <gux-form-field>
-    <input
-      slot="input"
-      name="number"
-      type="number"
-      step="5"
-      min="5"
-      max="100"
-      placeholder="Enter a number"
-      disabled
-    />
-    <label slot="label">Number</label>
-  </gux-form-field>
+    <gux-form-field clearable>
+      <input
+        slot="input"
+        name="number-clearable"
+        type="number"
+        step="5"
+        min="5"
+        max="100"
+        placeholder="Enter a number"
+        value="50"
+      />
+      <label slot="label">Number</label>
+    </gux-form-field>
 
-  <gux-form-field clearable>
-    <input
-      slot="input"
-      name="number-clearable"
-      type="number"
-      step="5"
-      min="5"
-      max="100"
-      placeholder="Enter a number"
-      value="50"
-      disabled
-    />
-    <label slot="label">Number</label>
-  </gux-form-field>
+    <gux-form-field>
+      <input
+        slot="input"
+        name="number"
+        type="number"
+        step="5"
+        min="5"
+        max="100"
+        placeholder="Enter a number"
+        disabled
+      />
+      <label slot="label">Number</label>
+    </gux-form-field>
+
+    <gux-form-field clearable>
+      <input
+        slot="input"
+        name="number-clearable"
+        type="number"
+        step="5"
+        min="5"
+        max="100"
+        placeholder="Enter a number"
+        value="50"
+        disabled
+      />
+      <label slot="label">Number</label>
+    </gux-form-field>
+
+    <gux-form-field>
+      <input
+        slot="input"
+        name="number-clearable"
+        type="number"
+        step="5"
+        min="5"
+        max="100"
+        placeholder="Enter a number"
+        value="50"
+        required
+      />
+      <label slot="label">Required Number</label>
+    </gux-form-field>
+  </div>
+
   <h1>Text Like</h1>
 
   <div>
     <gux-form-field>
       <input
         slot="input"
+        id="email"
         name="email"
         type="email"
         placeholder="joe.bloggs@example.com"
       />
-      <label slot="label">Email</label>
+      <label slot="label" for="email">Email</label>
     </gux-form-field>
 
     <gux-form-field>
       <input
         slot="input"
+        id="password"
         name="password"
         type="password"
         placeholder="Enter a password"
       />
-      <label slot="label">Password</label>
+      <label slot="label" for="password">Password</label>
     </gux-form-field>
 
     <gux-form-field>
       <input
         slot="input"
+        id="search"
         name="search"
         type="search"
         placeholder="Enter a search"
       />
-      <label slot="label">Search</label>
+      <label slot="label" for="search">Search</label>
     </gux-form-field>
 
     <gux-form-field>
       <input
         slot="input"
+        id="text"
         name="text"
         type="text"
         placeholder="Enter a string"
       />
-      <label slot="label">Text</label>
+      <label slot="label" for="text">Text</label>
+    </gux-form-field>
+
+    <gux-form-field>
+      <input
+        slot="input"
+        id="text-required"
+        name="text"
+        type="text"
+        placeholder="Enter a string"
+        required
+      />
+      <label slot="label" for="text-required">Required Text</label>
     </gux-form-field>
   </div>
 
@@ -220,34 +281,57 @@
     <gux-form-field clearable>
       <input
         slot="input"
-        name="email-clearable"
+        id="email-clearable"
+        name="email"
         type="email"
         placeholder="joe.bloggs@example.com"
-        value="daragh@example.com"
       />
-      <label slot="label">Email</label>
+      <label slot="label" for="email-clearable">Email</label>
     </gux-form-field>
 
     <gux-form-field clearable>
       <input
         slot="input"
-        name="password-clearable"
+        id="password-clearable"
+        name="password"
         type="password"
         placeholder="Enter a password"
-        value="pa$$word"
       />
-      <label slot="label">Password</label>
+      <label slot="label" for="password-clearable">Password</label>
     </gux-form-field>
 
     <gux-form-field clearable>
       <input
         slot="input"
-        name="text-clearable"
+        id="search-clearable"
+        name="search"
+        type="search"
+        placeholder="Enter a search"
+      />
+      <label slot="label" for="search-clearable">Search</label>
+    </gux-form-field>
+
+    <gux-form-field clearable>
+      <input
+        slot="input"
+        id="text-clearable"
+        name="text"
         type="text"
         placeholder="Enter a string"
-        value="text"
       />
-      <label slot="label">Text</label>
+      <label slot="label" for="text-clearable">Text</label>
+    </gux-form-field>
+
+    <gux-form-field clearable>
+      <input
+        slot="input"
+        id="text-required-clearable"
+        name="text"
+        type="text"
+        placeholder="Enter a string"
+        required
+      />
+      <label slot="label" for="text-required-clearable">Required Text</label>
     </gux-form-field>
   </div>
 
@@ -257,37 +341,40 @@
     <gux-form-field clearable>
       <input
         slot="input"
-        name="email-clearable"
+        id="email-disabled"
+        name="email-disabled"
         type="email"
         placeholder="joe.bloggs@example.com"
         value="me@example.com"
         disabled
       />
-      <label slot="label">Email</label>
+      <label slot="label" for="email-disabled">Email</label>
     </gux-form-field>
 
     <gux-form-field clearable>
       <input
         slot="input"
-        name="password-clearable"
+        id="password-disabled"
+        name="password-disabled"
         type="password"
         placeholder="Enter a password"
         value="password"
         disabled
       />
-      <label slot="label">Password</label>
+      <label slot="label" for="password-disabled">Password</label>
     </gux-form-field>
 
     <gux-form-field clearable>
       <input
         slot="input"
-        name="text-clearable"
+        id="text-disabled"
+        name="text-disabled"
         type="text"
         placeholder="Enter a string"
         value="text"
         disabled
       />
-      <label slot="label">Text</label>
+      <label slot="label" for="text-disabled">Text</label>
     </gux-form-field>
   </div>
 
@@ -297,10 +384,35 @@
     <gux-form-field>
       <textarea
         slot="input"
+        id="textarea"
         name="textarea"
         placeholder="Type here..."
       ></textarea>
-      <label slot="label">Text Area Label</label>
+      <label slot="label" for="textarea">Text Area Label</label>
+    </gux-form-field>
+
+    <gux-form-field>
+      <textarea
+        slot="input"
+        id="textarea-disabled"
+        name="textarea"
+        placeholder="Type here..."
+        disabled
+      ></textarea>
+      <label slot="label" for="textarea-disabled"
+        >Disabled Text Area Label</label
+      >
+    </gux-form-field>
+
+    <gux-form-field>
+      <textarea
+        slot="input"
+        id="textarea-required"
+        name="textarea"
+        placeholder="Type here..."
+        disabled
+      ></textarea>
+      <label slot="label">Disabled</label>
     </gux-form-field>
 
     <gux-form-field>
@@ -308,9 +420,9 @@
         slot="input"
         name="textarea"
         placeholder="Type here..."
-        disabled
+        required
       ></textarea>
-      <label slot="label">Disabled</label>
+      <label slot="label" for="textarea-required">Required Text Area Label</label>
     </gux-form-field>
 
     <gux-form-field resize="none">
@@ -345,21 +457,42 @@
 
   <div>
     <gux-form-field>
-      <select slot="input" name="select" type="select">
+      <select slot="input" id="select" name="select" type="select">
         <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
       </select>
-      <label slot="label">Select</label>
+      <label slot="label" for="select">Select</label>
     </gux-form-field>
 
     <gux-form-field>
-      <select slot="input" name="select" type="select" disabled>
+      <select
+        slot="input"
+        id="select-disabled"
+        name="select"
+        type="select"
+        disabled
+      >
         <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
       </select>
-      <label slot="label">Select</label>
+      <label slot="label" id="select-disabled">Disabled select</label>
+    </gux-form-field>
+
+    <gux-form-field>
+      <select
+        slot="input"
+        id="select-required"
+        name="select"
+        type="select"
+        required
+      >
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label" for="select-required">Required Select</label>
     </gux-form-field>
   </div>
 
@@ -367,38 +500,67 @@
 
   <div>
     <gux-form-field value-in-tooltip>
-      <label slot="label">Range</label>
-      <input slot="input" name="range" type="range" />
+      <label slot="label" for="range-1">Range</label>
+      <input slot="input" id="range-1" name="range" type="range" />
     </gux-form-field>
 
     <gux-form-field display-units="%" value-in-tooltip>
-      <label slot="label">Range</label>
-      <input slot="input" name="range" type="range" />
+      <label slot="label" for="range-2">Range</label>
+      <input slot="input" id="range-2" name="range" type="range" />
     </gux-form-field>
 
     <gux-form-field display-units="px" value-in-tooltip>
-      <label slot="label">Range</label>
-      <input slot="input" name="range" type="range" />
+      <label slot="label" for="range-3">Range</label>
+      <input slot="input" id="range-3" name="range" type="range" />
     </gux-form-field>
 
     <gux-form-field value-in-tooltip>
-      <label slot="label">Range</label>
-      <input slot="input" name="range-disabled" type="range" disabled />
+      <label slot="label" for="range-4">Range</label>
+      <input
+        slot="input"
+        id="range-4"
+        name="range-disabled"
+        type="range"
+        disabled
+      />
     </gux-form-field>
 
     <gux-form-field>
-      <label slot="label">Range with no display text box</label>
-      <input slot="input" name="range-with-tooltip" type="range" />
+      <label slot="label" for="range-5">Range with no display text box</label>
+      <input slot="input" id="range-5" name="range-with-tooltip" type="range" />
     </gux-form-field>
 
     <gux-form-field display-units="%" value-in-tooltip>
-      <label slot="label">Range</label>
-      <input slot="input" name="range-disabled" type="range" disabled />
+      <label slot="label" for="range-6">Range</label>
+      <input
+        slot="input"
+        id="range-6"
+        name="range-disabled"
+        type="range"
+        disabled
+      />
     </gux-form-field>
 
     <gux-form-field display-units="px" value-in-tooltip>
-      <label slot="label">Range</label>
-      <input slot="input" name="range-disabled" type="range" disabled />
+      <label slot="label" for="range-7">Range</label>
+      <input
+        slot="input"
+        id="range-7"
+        name="range-disabled"
+        type="range"
+        disabled
+      />
+    </gux-form-field>
+
+    <gux-form-field>
+      <label slot="label" for="range-8">Required Range</label>
+      <input
+        slot="input"
+        id="range-8"
+        name="range-disabled"
+        type="range"
+        required
+      />
     </gux-form-field>
   </div>
 </form>
