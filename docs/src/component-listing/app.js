@@ -14,16 +14,18 @@ export function bootstrap() {
     toHTML(`
         <main>
             <nav class="components-list">
-                <header>Components</header>
-                <gux-form-field class="component-search-field">
-                  <input
-                    id="component-search-box"
-                    slot="input"
-                    name="search"
-                    type="search"
-                    placeholder="Enter a search"
-                  />
-                </gux-form-field>
+                <div class="sticky-header">
+                    <header>Components</header>
+                    <gux-form-field class="component-search-field">
+                      <input
+                        id="component-search-box"
+                        slot="input"
+                        name="search"
+                        type="search"
+                        placeholder="Enter a search"
+                      />
+                    </gux-form-field>
+                </div>
                 ${components
                   .map(component => {
                     let name = shortName(component);

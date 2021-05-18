@@ -31,9 +31,17 @@ nav {
   overflow-y: auto;
   border-right: 1px solid #dae1e8;
 
-  header {
-    padding: 12px 15px 0 15px;
-    font-size: 16px;
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfdfd;
+
+    header {
+      padding: 12px 15px 0 15px;
+      font-size: 16px;
+    }
   }
 
   .component-search-field {
