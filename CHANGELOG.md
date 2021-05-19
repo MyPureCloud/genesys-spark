@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.14.1](http://inindca///compare/v2.14.0...v2.14.1) (2021-05-19)
+
+
+### Bug Fixes
+
+* **gux-button:** added icon buttons ([56a2386](http://inindca///commit/56a238614afd19e34ec53143f4cf3c7e0ca2424a))
+* **pr-comment:** addressed PR comment ([292e912](http://inindca///commit/292e912d1fbd0306715d972f69716db59014f8e6))
+
 ## [2.14.0](http://inindca///compare/v2.13.0...v2.14.0) (2021-05-18)
 
 
