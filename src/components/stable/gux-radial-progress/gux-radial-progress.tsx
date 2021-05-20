@@ -1,6 +1,10 @@
-import { Component, Element, h, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
+
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import { trackComponent } from '../../../usage-tracking';
+
+import modalComponentResources from './i18n/en.json';
 
 const RADIUS = 23.5;
 const STROKE_DASH = 2 * Math.PI * RADIUS;
@@ -14,6 +18,7 @@ let idCounter = 0;
 export class GuxRadialProgress {
   @Element()
   private root: HTMLElement;
+  private getI18nValue: GetI18nValue;
 
   /**
    * The progress made in the progress spinner compared to the max value
@@ -29,8 +34,13 @@ export class GuxRadialProgress {
 
   private dropshadowId = `dropshadow-${idCounter++}`;
 
-  componentWillLoad(): void {
+  async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
+
+    this.getI18nValue = await buildI18nForComponent(
+      this.root,
+      modalComponentResources
+    );
   }
 
   render(): JSX.Element {
@@ -45,47 +55,55 @@ export class GuxRadialProgress {
 
   private showPercentageState(value, max): JSX.Element {
     return (
-      <div
-        role="progressbar"
-        aria-valuenow={value}
-        aria-valuemin="0"
-        aria-valuemax={max}
-      >
-        <svg
-          class="gux-svg-container"
-          width="60px"
-          height="60px"
-          viewBox="0 0 60 60"
+      <Host>
+        <div
+          role="progressbar"
+          aria-valuenow={value}
+          aria-valuemin="0"
+          aria-valuemax={max}
         >
-          <filter id={this.dropshadowId}>
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
-            <feOffset dx="0" dy="0" result="offsetblur" />
-            <feMerge>
-              <feMergeNode />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-          <circle cx="50%" cy="50%" r={RADIUS} class="gux-static-circle" />
-          <circle
-            cx="50%"
-            cy="50%"
-            r={RADIUS}
-            class="gux-dynamic-circle"
-            stroke-dashoffset={STROKE_DASH * (1 - value / max)}
-            stroke-dasharray={STROKE_DASH}
-            filter={'url(#' + this.dropshadowId + ')'}
-          />
-
-          <text
-            x="50%"
-            y="50%"
-            dominant-baseline="central"
-            class="gux-percentage"
+          <svg
+            class="gux-svg-container"
+            width="60px"
+            height="60px"
+            viewBox="0 0 60 60"
           >
-            {`${Math.round((value / max) * 100)}%`}
-          </text>
-        </svg>
-      </div>
+            <filter id={this.dropshadowId}>
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+              <feOffset dx="0" dy="0" result="offsetblur" />
+              <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <circle cx="50%" cy="50%" r={RADIUS} class="gux-static-circle" />
+            <circle
+              cx="50%"
+              cy="50%"
+              r={RADIUS}
+              class="gux-dynamic-circle"
+              stroke-dashoffset={STROKE_DASH * (1 - value / max)}
+              stroke-dasharray={STROKE_DASH}
+              filter={'url(#' + this.dropshadowId + ')'}
+            />
+
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="central"
+              class="gux-percentage"
+            >
+              {`${Math.round((value / max) * 100)}%`}
+            </text>
+          </svg>
+        </div>
+
+        <span class="gux-progress-alert" role="alert" aria-live="polite">
+          {Math.round((value / max) * 100) < 100
+            ? `${Math.round((value / max) * 100)}%`
+            : this.getI18nValue('loadingComplete')}
+        </span>
+      </Host>
     );
   }
 
