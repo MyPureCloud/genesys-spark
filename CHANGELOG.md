@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.14.2](http://inindca///compare/v2.14.1...v2.14.2) (2021-05-20)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed nesting of elements ([a832a1e](http://inindca///commit/a832a1e92a35697562d8df654ecd7d9cc07305a6))
+
 ### [2.14.1](http://inindca///compare/v2.14.0...v2.14.1) (2021-05-19)
 
 
