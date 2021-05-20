@@ -42,14 +42,19 @@ gux-form-field {
       .gux-input-error .gux-input-color-main-element {
         border-color: @gux-alert;
       }
-
-      .gux-input-error {
-        input[type='checkbox'] ~ label::after {
-          background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13 13H2V2h11v11zm1-12H1v13h13V1z' fill='%23ea0b0b' /%3E%3C/svg%3E");
-        }
-      }
     }
 
+    .gux-error {
+      margin: 4px 0;
+
+      .error-icon {
+        margin: 0 2px;
+        color: @gux-alert;
+      }
+    }
+  }
+
+  .gux-checkbox-and-error-container {
     .gux-error {
       margin: 4px 0;
 
