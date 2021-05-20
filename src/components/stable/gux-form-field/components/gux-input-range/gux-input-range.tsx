@@ -138,17 +138,17 @@ export class GuxInputRange {
           </div>
           <slot name="input" />
           <div
-            class={
-              'gux-range-tooltip-container' +
-              (this.valueInTooltip ? ' gux-hidden' : '')
-            }
+            class={{
+              'gux-range-tooltip-container': true,
+              'gux-hidden': !this.valueInTooltip
+            }}
             ref={el => (this.sliderTooltipContainer = el)}
           >
             <div
               class="gux-range-tooltip"
               ref={el => (this.sliderTooltip = el)}
             >
-              {this.value}
+              {this.getDisplayValue()}
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@ export class GuxInputRange {
           class={{
             'gux-display': true,
             'gux-active': this.active,
-            'gux-hidden': !this.valueInTooltip
+            'gux-hidden': this.valueInTooltip
           }}
         >
           {this.getDisplayValue()}

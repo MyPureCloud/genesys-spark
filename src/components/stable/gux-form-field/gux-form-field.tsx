@@ -1,8 +1,10 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
+import { onRequiredChange } from '../../../utils/dom/on-attribute-change';
 import { trackComponent } from '../../../usage-tracking';
 
+import { GuxInputTextAreaResize } from './components/gux-input-textarea/gux-input-textarea.types';
 /**
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
@@ -14,6 +16,7 @@ import { trackComponent } from '../../../usage-tracking';
 export class GuxFormField {
   private input: HTMLInputElement;
   private label: HTMLLabelElement;
+  private requiredObserver: MutationObserver;
   private errorID = randomHTMLId('gux-form-field');
 
   @Element()
@@ -21,6 +24,9 @@ export class GuxFormField {
 
   @Prop()
   clearable: boolean;
+
+  @Prop()
+  resize: GuxInputTextAreaResize;
 
   @Prop()
   displayUnits: string;
@@ -34,11 +40,15 @@ export class GuxFormField {
   @State()
   private labelPosition: 'above' | 'beside' = 'above';
 
+  @State()
+  private required: boolean = true;
+
   componentWillLoad() {
     this.input = this.root.querySelector(
       'input[slot="input"], select[slot="input"], textarea[slot="input"]'
     );
     this.label = this.root.querySelector('label[slot="label"]');
+
     const type = this.input.getAttribute('type');
     this.slottedElementType = this.input.tagName.toLowerCase();
 
@@ -53,12 +63,25 @@ export class GuxFormField {
     }
 
     trackComponent(this.root, { variant });
+
+    this.required = this.input.required;
+
+    this.requiredObserver = onRequiredChange(
+      this.input,
+      (required: boolean) => {
+        this.required = required;
+      }
+    );
   }
 
   componentWillRender() {
     if (this.label) {
       this.labelPosition = this.label.offsetWidth < 40 ? 'beside' : 'above';
     }
+  }
+
+  disconnectedCallback(): void {
+    this.requiredObserver.disconnect();
   }
 
   private getInputCheckbox(hasError: boolean): JSX.Element {
@@ -94,7 +117,14 @@ export class GuxFormField {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
-          <slot name="label" slot="label" />
+          <div
+            class={{
+              'gux-label-container': true,
+              'gux-required': this.required
+            }}
+          >
+            <slot name="label" slot="label" />
+          </div>
           <gux-input-color
             class={{
               'gux-input-error': hasError
@@ -119,7 +149,14 @@ export class GuxFormField {
     return (
       <div class="guxlabel-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
-          <slot name="label" slot="label" />
+          <div
+            class={{
+              'gux-label-container': true,
+              'gux-required': this.required
+            }}
+          >
+            <slot name="label" slot="label" />
+          </div>
           <gux-input-range
             display-units={displayUnits}
             value-in-tooltip={valueInTooltip}
@@ -135,7 +172,14 @@ export class GuxFormField {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
-          <slot name="label" slot="label" />
+          <div
+            class={{
+              'gux-label-container': true,
+              'gux-required': this.required
+            }}
+          >
+            <slot name="label" slot="label" />
+          </div>
           <gux-input-number
             class={{
               'gux-input-error': hasError
@@ -159,7 +203,14 @@ export class GuxFormField {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
-          <slot name="label" slot="label" />
+          <div
+            class={{
+              'gux-label-container': true,
+              'gux-required': this.required
+            }}
+          >
+            <slot name="label" slot="label" />
+          </div>
           <gux-input-select
             slot="input"
             class={{
@@ -182,7 +233,14 @@ export class GuxFormField {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
-          <slot name="label" slot="label" />
+          <div
+            class={{
+              'gux-label-container': true,
+              'gux-required': this.required
+            }}
+          >
+            <slot name="label" slot="label" />
+          </div>
           <gux-input-text-like
             class={{
               'gux-input-error': hasError
@@ -206,13 +264,21 @@ export class GuxFormField {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
-          <slot name="label" slot="label" />
+          <div
+            class={{
+              'gux-label-container': true,
+              'gux-required': this.required
+            }}
+          >
+            <slot name="label" slot="label" />
+          </div>
           <gux-input-textarea
             class={{
               'gux-input-error': hasError
             }}
             slot="input"
             aria-describedby={this.errorID}
+            resize={this.resize}
           >
             <slot name="input" />
           </gux-input-textarea>

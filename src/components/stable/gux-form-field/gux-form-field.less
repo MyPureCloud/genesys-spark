@@ -19,8 +19,8 @@ gux-form-field {
         flex-direction: row;
         align-items: center;
 
-        label {
-          min-width: 40px;
+        .gux-label-container {
+          min-width: 45px;
           margin-right: 8px;
         }
 
@@ -58,6 +58,11 @@ gux-form-field {
         color: @gux-alert;
       }
     }
+  }
+
+  .gux-required::after {
+    color: @gux-alert-red-60;
+    content: ' *';
   }
 }
 
