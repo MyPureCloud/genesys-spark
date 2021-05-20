@@ -86,7 +86,7 @@ export class GuxFormField {
 
   private getInputCheckbox(hasError: boolean): JSX.Element {
     return (
-      <div class="gux-label-and-input-and-error-container">
+      <div class="gux-checkbox-and-error-container">
         <gux-input-checkbox
           class={{ 'gux-input-error': hasError }}
           aria-describedby={this.errorID}
