@@ -74,9 +74,7 @@ export class GuxFormField {
           </gux-input-checkbox>
         </div>
         <div class="gux-error" id={this.errorID}>
-          {hasError ? (
-            <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
-          ) : null}
+          {this.addErrorIcon(hasError)}
           <slot name="error" />
         </div>
       </div>
@@ -107,9 +105,7 @@ export class GuxFormField {
           </gux-input-color>
         </div>
         <div class="gux-error" id={this.errorID}>
-          {hasError ? (
-            <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
-          ) : null}
+          {this.addErrorIcon(hasError)}
           <slot name="error" />
         </div>
       </div>
@@ -152,9 +148,7 @@ export class GuxFormField {
           </gux-input-number>
         </div>
         <div class="gux-error" id={this.errorID}>
-          {hasError ? (
-            <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
-          ) : null}
+          {this.addErrorIcon(hasError)}
           <slot name="error" />
         </div>
       </div>
@@ -177,9 +171,7 @@ export class GuxFormField {
           </gux-input-select>
         </div>
         <div class="gux-error" id={this.errorID}>
-          {hasError ? (
-            <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
-          ) : null}
+          {this.addErrorIcon(hasError)}
           <slot name="error" />
         </div>
       </div>
@@ -203,9 +195,7 @@ export class GuxFormField {
           </gux-input-text-like>
         </div>
         <div class="gux-error" id={this.errorID}>
-          {hasError ? (
-            <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
-          ) : null}
+          {this.addErrorIcon(hasError)}
           <slot name="error" />
         </div>
       </div>
@@ -228,9 +218,7 @@ export class GuxFormField {
           </gux-input-textarea>
         </div>
         <div class="gux-error" id={this.errorID}>
-          {hasError ? (
-            <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
-          ) : null}
+          {this.addErrorIcon(hasError)}
           <slot name="error" />
         </div>
       </div>
@@ -285,5 +273,11 @@ export class GuxFormField {
 
   private hasErrorSlot(): boolean {
     return !!this.root.querySelector('[slot="error"]');
+  }
+
+  private addErrorIcon(hasError: boolean): JSX.Element {
+    return hasError ? (
+      <gux-icon class="error-icon" decorative iconName="ic-alert-octo" />
+    ) : null;
   }
 }

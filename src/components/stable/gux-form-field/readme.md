@@ -27,7 +27,6 @@
 ### Depends on
 
 - [gux-input-checkbox](./components/gux-input-checkbox)
-- [gux-icon](../gux-icon)
 - [gux-input-radio](./components/gux-input-radio)
 - [gux-input-color](./components/gux-input-color)
 - [gux-input-range](./components/gux-input-range)
@@ -35,12 +34,12 @@
 - [gux-input-select](./components/gux-input-select)
 - [gux-input-text-like](./components/gux-input-text-like)
 - [gux-input-textarea](./components/gux-input-textarea)
+- [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-form-field --> gux-input-checkbox
-  gux-form-field --> gux-icon
   gux-form-field --> gux-input-radio
   gux-form-field --> gux-input-color
   gux-form-field --> gux-input-range
@@ -48,6 +47,7 @@ graph TD;
   gux-form-field --> gux-input-select
   gux-form-field --> gux-input-text-like
   gux-form-field --> gux-input-textarea
+  gux-form-field --> gux-icon
   gux-input-color --> gux-icon
   gux-input-color --> gux-color-select
   gux-color-select --> gux-input-color-option
