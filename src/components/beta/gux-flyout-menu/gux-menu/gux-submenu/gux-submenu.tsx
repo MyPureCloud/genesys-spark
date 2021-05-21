@@ -114,6 +114,7 @@ export class GuxSubmenu {
   @Listen('click')
   onClick(event: MouseEvent) {
     if (this.submenuContentElement.contains(event.target as Node)) {
+      this.hide();
       return;
     }
 
