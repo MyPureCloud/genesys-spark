@@ -42,40 +42,34 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    alias: {
-      'genesys-webcomponents': path.resolve(
-        __dirname,
-        '../dist/genesys-webcomponents'
-      )
-    }
-  },
   plugins: [
     new MonacoWebpackPlugin(),
-    new CopyPlugin([
-      {
-        from: 'src/index.html',
-        flatten: true,
-        transform: injectCdnUrl
-      },
-      { from: '../dist/genesys-webcomponents/**/*' },
-      {
-        from: '../src/components/**/example.html',
-        transformPath(targetPath) {
-          const segments = targetPath.split(path.sep);
-          const component = segments[segments.length - 2];
-          return `${component}.html`;
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'src/index.html',
+          to: '[name][ext]',
+          transform: injectCdnUrl
         },
-        transform: generateComponentPage
-      },
-      {
-        from: '../src/style/examples/*.html',
-        transformPath(targetPath) {
-          return path.basename(targetPath);
+        { from: '../dist/genesys-webcomponents/**/*' },
+        {
+          from: '../src/components/**/example.html',
+          to: ({ context, absoluteFilename }) => {
+            const segments = absoluteFilename.split(path.sep);
+            const component = segments[segments.length - 2];
+            return `${component}.html`;
+          },
+          transform: generateComponentPage
         },
-        transform: generateComponentPage
-      }
-    ])
+        {
+          from: '../src/style/examples/*.html',
+          to: ({ context, absoluteFilename }) => {
+            return path.basename(absoluteFilename);
+          },
+          transform: generateComponentPage
+        }
+      ]
+    })
   ],
   devServer: {
     compress: true,

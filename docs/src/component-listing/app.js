@@ -1,6 +1,5 @@
 import { toHTML } from '../utils/to-html.js';
 import { componentSpecs, getComponentSpec } from '../component-specs.js';
-import 'genesys-webcomponents';
 import '../styles/component-listing.less';
 
 export function bootstrap() {

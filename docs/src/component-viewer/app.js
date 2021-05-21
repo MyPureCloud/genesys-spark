@@ -5,7 +5,6 @@ import { createPreview } from './panels/preview';
 import { createEditor } from './panels/editor';
 import EventsPanel from './panels/events';
 import { toHTML } from '../utils/to-html';
-import 'genesys-webcomponents';
 import '../styles/component-viewer.less';
 
 window.toHTML = toHTML;
