@@ -1,5 +1,6 @@
 // Variables part
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
 
 gux-notification-toast {
   position: relative;
@@ -11,7 +12,10 @@ gux-notification-toast {
   justify-content: flex-start;
   width: 336px;
   padding: 16px 8px 16px 16px;
-  border: 1px solid;
+  margin-bottom: 4px;
+  border: 1px solid @gux-grey-30;
+  border-radius: 4px;
+  .shadow-20();
 
   .gux-icon {
     flex: 0 1 auto;
@@ -82,7 +86,7 @@ gux-notification-toast {
 .gux-notification-toast-light-theme {
   color: @gux-type;
   background: @gux-grey-90;
-  border-color: @gux-black-100;
+  border-color: @gux-grey-30;
 
   .gux-icon {
     &.gux-alert {
