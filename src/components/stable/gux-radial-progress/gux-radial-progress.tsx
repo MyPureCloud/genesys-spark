@@ -1,10 +1,6 @@
 import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-
 import { trackComponent } from '../../../usage-tracking';
-
-import modalComponentResources from './i18n/en.json';
 
 const RADIUS = 23.5;
 const STROKE_DASH = 2 * Math.PI * RADIUS;
@@ -18,7 +14,6 @@ let idCounter = 0;
 export class GuxRadialProgress {
   @Element()
   private root: HTMLElement;
-  private getI18nValue: GetI18nValue;
 
   /**
    * The progress made in the progress spinner compared to the max value
@@ -34,13 +29,8 @@ export class GuxRadialProgress {
 
   private dropshadowId = `dropshadow-${idCounter++}`;
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     trackComponent(this.root);
-
-    this.getI18nValue = await buildI18nForComponent(
-      this.root,
-      modalComponentResources
-    );
   }
 
   render(): JSX.Element {
@@ -99,9 +89,7 @@ export class GuxRadialProgress {
         </div>
 
         <span class="gux-progress-alert" role="alert" aria-live="polite">
-          {Math.round((value / max) * 100) < 100
-            ? `${Math.round((value / max) * 100)}%`
-            : this.getI18nValue('loadingComplete')}
+          {`${Math.round((value / max) * 100)}%`}
         </span>
       </Host>
     );

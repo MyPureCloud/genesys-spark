@@ -35,18 +35,46 @@ describe('gux-radial-progress', () => {
 
     const element = await page.find('gux-radial-progress');
 
-    expect(element.textContent).toEqual(`0%`);
+    const progressSvg = await page.find('gux-radial-progress svg');
+
+    expect(progressSvg.textContent).toEqual(`0%`);
 
     element.setProperty('value', 30);
 
     await page.waitForChanges();
 
-    expect(element.textContent).toEqual(`30%`);
+    expect(progressSvg.textContent).toEqual(`30%`);
 
     element.setProperty('value', 100);
 
     await page.waitForChanges();
 
-    expect(element.textContent).toEqual(`100%`);
+    expect(progressSvg.textContent).toEqual(`100%`);
+  });
+
+  it('should communicate loading progress to assistive technologies', async () => {
+    const page = await newE2EPage();
+
+    await page.setContent(
+      '<gux-radial-progress value="0"></gux-radial-progress>'
+    );
+
+    const element = await page.find('gux-radial-progress');
+
+    const srText = await page.find('gux-radial-progress .gux-progress-alert');
+
+    expect(srText.textContent).toEqual(`0%`);
+
+    element.setProperty('value', 30);
+
+    await page.waitForChanges();
+
+    expect(srText.textContent).toEqual(`30%`);
+
+    element.setProperty('value', 100);
+
+    await page.waitForChanges();
+
+    expect(srText.textContent).toEqual(`100%`);
   });
 });

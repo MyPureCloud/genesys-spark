@@ -36,7 +36,7 @@ export class GuxRadialLoading {
     return (
       <div
         role="alert"
-        aria-live="assertive"
+        aria-live="polite"
         class={`gux-spinner-container gux-${this.context}`}
       >
         <div class="gux-spin-circle" />

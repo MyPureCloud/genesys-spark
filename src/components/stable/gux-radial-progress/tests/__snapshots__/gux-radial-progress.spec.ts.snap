@@ -25,6 +25,9 @@ exports[`gux-radial-progress #render should render component as expected (2) 1`]
       </text>
     </svg>
   </div>
+  <span aria-live="polite" class="gux-progress-alert" role="alert">
+    0%
+  </span>
 </gux-radial-progress>
 `;
 
@@ -47,6 +50,9 @@ exports[`gux-radial-progress #render should render component as expected (3) 1`]
       </text>
     </svg>
   </div>
+  <span aria-live="polite" class="gux-progress-alert" role="alert">
+    10%
+  </span>
 </gux-radial-progress>
 `;
 
@@ -69,6 +75,9 @@ exports[`gux-radial-progress #render should render component as expected (4) 1`]
       </text>
     </svg>
   </div>
+  <span aria-live="polite" class="gux-progress-alert" role="alert">
+    100%
+  </span>
 </gux-radial-progress>
 `;
 
@@ -103,6 +112,9 @@ exports[`gux-radial-progress #render should render component as expected (7) 1`]
       </text>
     </svg>
   </div>
+  <span aria-live="polite" class="gux-progress-alert" role="alert">
+    10%
+  </span>
 </gux-radial-progress>
 `;
 
@@ -125,6 +137,9 @@ exports[`gux-radial-progress #render should render component as expected (8) 1`]
       </text>
     </svg>
   </div>
+  <span aria-live="polite" class="gux-progress-alert" role="alert">
+    100%
+  </span>
 </gux-radial-progress>
 `;
 
