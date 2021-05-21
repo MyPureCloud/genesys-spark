@@ -1,5 +1,6 @@
 @import (reference) '../../../../../style/color.less';
 @import (reference) '../../../../../style/typography.less';
+@import (reference) '../../../../../style/mixins.less';
 
 // Variables part
 @range-active: @gux-blue-60;
@@ -11,7 +12,7 @@
 @track-height: 2px;
 @track-radius: 0;
 @contrast: 5%;
-@slider-border: @gux-grey-60;
+@slider-border: @gux-grey-30;
 
 .gux-track() {
   width: @track-width;
@@ -186,8 +187,8 @@ gux-input-range {
       visibility: hidden;
       background-color: @gux-type-dark;
       border: 1px solid @slider-border;
-      border-radius: 2px;
-      box-shadow: 0 0 2px @slider-border;
+      border-radius: 4px;
+      .shadow-20();
 
       &::after,
       &::before {

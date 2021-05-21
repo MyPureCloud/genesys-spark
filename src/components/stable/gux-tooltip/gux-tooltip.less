@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
 
 gux-tooltip {
   z-index: 1;
@@ -10,8 +11,10 @@ gux-tooltip {
   pointer-events: none;
   visibility: hidden !important;
   background-color: @gux-grey-100;
-  border: 1px solid @gux-black-100;
-  box-shadow: 0 0 2px 0 fade(@gux-black-30, 24%);
+  border: 1px solid @gux-grey-30;
+  border-radius: 4px;
+  .shadow-20();
+
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
 
