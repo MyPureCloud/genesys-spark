@@ -139,7 +139,7 @@ export class GuxFormField {
     valueInTooltip: boolean
   ): JSX.Element {
     return (
-      <div class="guxlabel-and-input-and-error-container">
+      <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <div
             class={{
