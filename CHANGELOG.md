@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.15.1](http://inindca///compare/v2.15.0...v2.15.1) (2021-05-24)
+
+
+### Bug Fixes
+
+* **demos:** fixed module loading script url ([e78ac22](http://inindca///commit/e78ac22bf75868422a87b781e37c78c8f208b1a0))
+
 ## [2.15.0](http://inindca///compare/v2.14.2...v2.15.0) (2021-05-21)
 
 
