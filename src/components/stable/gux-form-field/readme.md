@@ -34,6 +34,7 @@
 - [gux-input-number](./components/gux-input-number)
 - [gux-input-select](./components/gux-input-select)
 - [gux-input-text-like](./components/gux-input-text-like)
+- [gux-input-search](./components/gux-input-search)
 - [gux-input-textarea](./components/gux-input-textarea)
 - [gux-error-message-beta](../../beta/gux-error-message-beta)
 
@@ -47,6 +48,7 @@ graph TD;
   gux-form-field --> gux-input-number
   gux-form-field --> gux-input-select
   gux-form-field --> gux-input-text-like
+  gux-form-field --> gux-input-search
   gux-form-field --> gux-input-textarea
   gux-form-field --> gux-error-message-beta
   gux-input-color --> gux-icon
@@ -55,6 +57,7 @@ graph TD;
   gux-input-number --> gux-icon
   gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
+  gux-input-search --> gux-icon
   gux-error-message-beta --> gux-icon
   style gux-form-field fill:#f9f,stroke:#333,stroke-width:4px
 ```

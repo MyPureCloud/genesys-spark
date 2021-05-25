@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-input-search #render should render component as expected (1) 1`] = `
+<gux-input-search>
+  <!---->
+  <div class="gux-input-container">
+    <gux-icon class="gux-search-icon" decorative="" icon-name="search"></gux-icon>
+    <input name="search" placeholder="Enter a search" type="search">
+  </div>
+</gux-input-search>
+`;
+
+exports[`gux-input-search #render should render component as expected (2) 1`] = `
+<gux-input-search>
+  <!---->
+  <div class="gux-input-container">
+    <gux-icon class="gux-search-icon" decorative="" icon-name="search"></gux-icon>
+    <input name="search" placeholder="Enter a search" type="search" value="test">
+    <button class="gux-clear-button" title="Clear" type="button">
+      <gux-icon decorative="" icon-name="close"></gux-icon>
+    </button>
+  </div>
+</gux-input-search>
+`;
+
+exports[`gux-input-search #render should render component as expected (3) 1`] = `
+<gux-input-search>
+  <!---->
+  <div class="gux-disabled gux-input-container">
+    <gux-icon class="gux-search-icon" decorative="" icon-name="search"></gux-icon>
+    <input disabled="" name="search" placeholder="Enter a search" type="search">
+  </div>
+</gux-input-search>
+`;

@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import { Component, Element, h, JSX, State } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import setInputValue from '../../../../../utils/dom/set-input-value';
@@ -7,22 +7,19 @@ import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 import componentResources from '../../i18n/en.json';
 
 /**
- * @slot input - Required slot for input[type="text" | type="email" | type="password"]
+ * @slot default - slot for input[type="search"]
  */
 @Component({
-  styleUrl: 'gux-input-text-like.less',
-  tag: 'gux-input-text-like'
+  styleUrl: 'gux-input-search.less',
+  tag: 'gux-input-search'
 })
-export class GuxInputTextLike {
+export class GuxInputSearch {
   private input: HTMLInputElement;
   private getI18nValue: GetI18nValue;
   private disabledObserver: MutationObserver;
 
   @Element()
   private root: HTMLElement;
-
-  @Prop()
-  clearable: boolean;
 
   @State()
   private hasContent: boolean = false;
@@ -38,8 +35,18 @@ export class GuxInputTextLike {
     this.hasContent = Boolean(this.input.value);
   }
 
+  private renderSearchIcon(): JSX.Element {
+    return (
+      <gux-icon
+        class="gux-search-icon"
+        icon-name="search"
+        decorative
+      ></gux-icon>
+    );
+  }
+
   private renderClearButton(): JSX.Element {
-    if (this.clearable && this.hasContent && !this.disabled) {
+    if (this.hasContent && !this.disabled) {
       return (
         <button
           class="gux-clear-button"
@@ -62,7 +69,7 @@ export class GuxInputTextLike {
       componentResources
     );
 
-    this.input = this.root.querySelector('input[slot="input"]');
+    this.input = this.root.querySelector('input[type="search"]');
 
     this.setHasContent();
     this.disabled = this.input.disabled;
@@ -90,7 +97,8 @@ export class GuxInputTextLike {
           'gux-disabled': this.disabled
         }}
       >
-        <slot name="input" />
+        {this.renderSearchIcon()}
+        <slot></slot>
         {this.renderClearButton()}
       </div>
     );

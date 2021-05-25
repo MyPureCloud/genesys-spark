@@ -76,7 +76,10 @@ export class GuxFormField {
 
   componentWillRender() {
     if (this.label) {
-      this.labelPosition = this.label.offsetWidth < 40 ? 'beside' : 'above';
+      this.labelPosition =
+        this.label.offsetWidth > 1 && this.label.offsetWidth < 40
+          ? 'beside'
+          : 'above';
     }
   }
 
@@ -243,6 +246,29 @@ export class GuxFormField {
     );
   }
 
+  private getInputSearch(): JSX.Element {
+    return (
+      <div class="gux-label-and-input-and-error-container">
+        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+          <div
+            class={{
+              'gux-label-container': true,
+              'gux-required': this.required
+            }}
+          >
+            <slot name="label" slot="label" />
+          </div>
+          <gux-input-search>
+            <slot name="input" />
+          </gux-input-search>
+        </div>
+        <div class="gux-error">
+          <slot name="error" />
+        </div>
+      </div>
+    );
+  }
+
   private getInputTextArea(hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
@@ -292,7 +318,7 @@ export class GuxFormField {
           case 'number':
             return this.getInputNumber(this.clearable, hasError);
           case 'search':
-            return this.getInputTextLike(false, hasError);
+            return this.getInputSearch();
           default:
             return (
               <div>

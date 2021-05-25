@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.15.1](http://inindca///compare/v2.15.0...v2.15.1) (2021-05-24)
+
+
+### Bug Fixes
+
+* **demos:** fixed module loading script url ([e78ac22](http://inindca///commit/e78ac22bf75868422a87b781e37c78c8f208b1a0))
+
+## [2.15.0](http://inindca///compare/v2.14.2...v2.15.0) (2021-05-21)
+
+
+### Features
+
+* **mixins:** add y offset to box shadows ([be13fcd](http://inindca///commit/be13fcdc54414f9f24e80e6ff5f009c8a03aefbb))
+* **package:** revert committed package changes ([c8ff165](http://inindca///commit/c8ff16511e4b68d9ee697f1a0ddc5430fb67230a))
+* **various components:** implement modernized styling of components ([75e7442](http://inindca///commit/75e74425bfaddb34d76313aa84ea0897c9ab9911))
+
 ### [2.14.2](http://inindca///compare/v2.14.1...v2.14.2) (2021-05-20)
 
 
