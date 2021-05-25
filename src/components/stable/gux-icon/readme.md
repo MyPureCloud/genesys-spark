@@ -29,7 +29,6 @@
  - [gux-disclosure-button](../gux-disclosure-button)
  - [gux-dropdown](../gux-dropdown)
  - [gux-error-message-beta](../../beta/gux-error-message-beta)
- - [gux-form-field](../gux-form-field)
  - [gux-input-color](../gux-form-field/components/gux-input-color)
  - [gux-input-number](../gux-form-field/components/gux-input-number)
  - [gux-input-select](../gux-form-field/components/gux-input-select)
@@ -65,7 +64,6 @@ graph TD;
   gux-disclosure-button --> gux-icon
   gux-dropdown --> gux-icon
   gux-error-message-beta --> gux-icon
-  gux-form-field --> gux-icon
   gux-input-color --> gux-icon
   gux-input-number --> gux-icon
   gux-input-select --> gux-icon
