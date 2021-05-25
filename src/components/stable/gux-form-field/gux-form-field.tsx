@@ -246,7 +246,7 @@ export class GuxFormField {
     );
   }
 
-  private getInputSearch(): JSX.Element {
+  private getInputSearch(hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
@@ -262,9 +262,7 @@ export class GuxFormField {
             <slot name="input" />
           </gux-input-search>
         </div>
-        <div class="gux-error">
-          <slot name="error" />
-        </div>
+        {this.getError(hasError)}
       </div>
     );
   }
@@ -318,7 +316,7 @@ export class GuxFormField {
           case 'number':
             return this.getInputNumber(this.clearable, hasError);
           case 'search':
-            return this.getInputSearch();
+            return this.getInputSearch(hasError);
           default:
             return (
               <div>
