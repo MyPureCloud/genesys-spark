@@ -34,6 +34,7 @@
 - [gux-input-number](./components/gux-input-number)
 - [gux-input-select](./components/gux-input-select)
 - [gux-input-text-like](./components/gux-input-text-like)
+- [gux-input-search](./components/gux-input-search)
 - [gux-input-textarea](./components/gux-input-textarea)
 
 ### Graph
@@ -46,6 +47,7 @@ graph TD;
   gux-form-field --> gux-input-number
   gux-form-field --> gux-input-select
   gux-form-field --> gux-input-text-like
+  gux-form-field --> gux-input-search
   gux-form-field --> gux-input-textarea
   gux-input-color --> gux-icon
   gux-input-color --> gux-color-select
@@ -53,6 +55,7 @@ graph TD;
   gux-input-number --> gux-icon
   gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
+  gux-input-search --> gux-icon
   style gux-form-field fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

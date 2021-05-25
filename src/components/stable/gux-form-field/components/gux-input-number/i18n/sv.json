@@ -1,3 +1,5 @@
 {
-  "clear": "Rensa"
+  "clear": "Rensa",
+  "increment": "Increment",
+  "decrement": "Decrement"
 }

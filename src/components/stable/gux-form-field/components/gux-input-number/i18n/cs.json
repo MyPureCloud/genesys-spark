@@ -1,3 +1,5 @@
 {
-  "clear": "Vymazat"
+  "clear": "Vymazat",
+  "increment": "Increment",
+  "decrement": "Decrement"
 }

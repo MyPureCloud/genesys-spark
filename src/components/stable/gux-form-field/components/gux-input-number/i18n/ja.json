@@ -1,3 +1,5 @@
 {
-  "clear": "クリア"
+  "clear": "クリア",
+  "increment": "Increment",
+  "decrement": "Decrement"
 }

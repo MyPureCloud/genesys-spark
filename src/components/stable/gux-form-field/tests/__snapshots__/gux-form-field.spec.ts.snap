@@ -169,12 +169,9 @@ exports[`gux-form-field #render input tag should render component type "search" 
           Test
         </label>
       </div>
-      <gux-input-text-like slot="input">
-        <!---->
-        <div class="gux-input-container">
-          <input id="test" slot="input" type="search" value="test">
-        </div>
-      </gux-input-text-like>
+      <gux-input-search>
+        <input id="test" slot="input" type="search" value="test">
+      </gux-input-search>
     </div>
     <div class="gux-error"></div>
   </div>
