@@ -1,6 +1,14 @@
 import { newE2EPage } from '@stencil/core/testing';
 
 describe('gux-form-field', () => {
+  beforeEach(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
+  });
+
+  afterEach(() => {
+    jest.spyOn(global.Math, 'random').mockRestore();
+  });
+
   it('renders', async () => {
     const html = `
       <gux-form-field lang="en">
@@ -48,7 +56,7 @@ describe('gux-form-field', () => {
       });
     });
 
-    describe('seect tag', () => {
+    describe('select tag', () => {
       it(`should render component type "select"`, async () => {
         const html = `
           <gux-form-field lang="en">

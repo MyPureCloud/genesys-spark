@@ -22,6 +22,7 @@ const language = 'en';
 describe('gux-form-field', () => {
   beforeEach(async () => {
     global.MutationObserver = MutationObserver;
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
   });
 
   it('should build', async () => {
