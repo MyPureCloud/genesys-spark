@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.16.0](http://inindca///compare/v2.15.1...v2.16.0) (2021-05-26)
+
+
+### Features
+
+* **gux-action-toast:** remove theme styling ([488a532](http://inindca///commit/488a53242a2f3c7a72faeed1ffdfe8fb51a843c8))
+* **gux-input-search:** added new gux-form-field component ([d65faa5](http://inindca///commit/d65faa53c578a611dc5f736ce52b50401ae80c4e))
+* **icons:** added new icons and updated others ([a47ee82](http://inindca///commit/a47ee82649941dc2694ac9b7e8b89a93a1c0689c))
+* **styling:** component modernization for action button and action toast ([2eed637](http://inindca///commit/2eed63737f440f7a4a74a354a9be67ce2c4fd04d))
+
 ### [2.15.1](http://inindca///compare/v2.15.0...v2.15.1) (2021-05-24)
 
 
