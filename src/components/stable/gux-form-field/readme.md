@@ -25,6 +25,11 @@
 
 ## Dependencies
 
+### Used by
+
+ - [gux-advanced-dropdown](../gux-advanced-dropdown)
+ - [gux-command-palette-beta](../../beta/gux-command-palette)
+
 ### Depends on
 
 - [gux-input-checkbox](./components/gux-input-checkbox)
@@ -56,6 +61,8 @@ graph TD;
   gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
   gux-input-search --> gux-icon
+  gux-advanced-dropdown --> gux-form-field
+  gux-command-palette-beta --> gux-form-field
   style gux-form-field fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

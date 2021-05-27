@@ -51,7 +51,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-search-beta](../gux-search)
+- [gux-form-field](../../stable/gux-form-field)
 - [gux-list](../../stable/gux-list)
 - [gux-list-item](../../stable/gux-list/list-item)
 - [gux-text-highlight](../../stable/gux-text-highlight)
@@ -59,13 +59,26 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-command-palette-beta --> gux-search-beta
+  gux-command-palette-beta --> gux-form-field
   gux-command-palette-beta --> gux-list
   gux-command-palette-beta --> gux-list-item
   gux-command-palette-beta --> gux-text-highlight
-  gux-search-beta --> gux-text-field-legacy
-  gux-search-beta --> gux-icon
-  gux-text-field-legacy --> gux-icon
+  gux-form-field --> gux-input-checkbox
+  gux-form-field --> gux-input-radio
+  gux-form-field --> gux-input-color
+  gux-form-field --> gux-input-range
+  gux-form-field --> gux-input-number
+  gux-form-field --> gux-input-select
+  gux-form-field --> gux-input-text-like
+  gux-form-field --> gux-input-search
+  gux-form-field --> gux-input-textarea
+  gux-input-color --> gux-icon
+  gux-input-color --> gux-color-select
+  gux-color-select --> gux-input-color-option
+  gux-input-number --> gux-icon
+  gux-input-select --> gux-icon
+  gux-input-text-like --> gux-icon
+  gux-input-search --> gux-icon
   gux-list-item --> gux-text-highlight
   style gux-command-palette-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

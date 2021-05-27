@@ -74,14 +74,26 @@ export class GuxCommandPalette {
         onKeyDown={e => this.onKeyDown(e)}
         aria-label={this.i18n('title')}
       >
-        <gux-search-beta
-          sr-label={this.i18n('search')}
-          onInput={(e: any) => {
-            this.handleInput(e);
-          }}
-          value={this.filterValue}
-          ref={el => (this.inputElement = el)}
-        />
+        <gux-form-field>
+          <input
+            id="gux-command-palette-search"
+            slot="input"
+            type="search"
+            onInput={(event: InputEvent) => {
+              this.handleInput(event);
+            }}
+            value={this.filterValue}
+            ref={el => (this.inputElement = el)}
+          />
+          <label
+            htmlFor="gux-command-palette-search"
+            slot="label"
+            class="gux-sr-only"
+          >
+            {this.i18n('search')}
+          </label>
+        </gux-form-field>
+
         {this.visible && this.renderLists()}
       </div>
     );
@@ -160,7 +172,7 @@ export class GuxCommandPalette {
     this.visible = true;
 
     setTimeout(() => {
-      this.inputElement.querySelector('input').focus();
+      this.inputElement.focus();
     }, animationDuration);
   }
 
@@ -173,8 +185,8 @@ export class GuxCommandPalette {
     this.visible = false;
   }
 
-  private handleInput(event: any) {
-    this.filterValue = event.target.value;
+  private handleInput(event: InputEvent) {
+    this.filterValue = (event.target as HTMLInputElement).value;
   }
 
   private filterItems(items: HTMLGuxCommandActionElement[]): HTMLElement[] {
@@ -297,7 +309,7 @@ export class GuxCommandPalette {
   }
 
   private elementIsSearch(el: Element): boolean {
-    return el.closest('gux-search-beta') !== null;
+    return el.closest('gux-form-field') !== null;
   }
 
   private getParentGuxList(el: Element): HTMLGuxListElement {
@@ -311,10 +323,7 @@ export class GuxCommandPalette {
       return;
     }
 
-    const searchElement = el as HTMLGuxSearchBetaElement;
-    if (searchElement && searchElement.setInputFocus) {
-      searchElement.setInputFocus();
-    }
+    this.inputElement.focus();
   }
 
   private navigateUp() {
