@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.16.2](http://inindca///compare/v2.16.1...v2.16.2) (2021-05-28)
+
+
+### Bug Fixes
+
+* **gux-button:** button text correctly overflowing with ellipsis ([5bbfa61](http://inindca///commit/5bbfa61a4d1a45462aea354ab5e44c46583a5b34))
+* **gux-tag:** invalid color prop now displays as default ([ba7e1a4](http://inindca///commit/ba7e1a473b319098cea103e80763b779ca69d302))
+
 ### [2.16.1](http://inindca///compare/v2.16.0...v2.16.1) (2021-05-27)
 
 ## [2.16.0](http://inindca///compare/v2.15.1...v2.16.0) (2021-05-26)
