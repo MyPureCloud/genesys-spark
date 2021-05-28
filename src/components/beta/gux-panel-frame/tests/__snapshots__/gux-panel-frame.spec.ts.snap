@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-panel-frame-beta #render should render component as expected (1) 1`] = `
+<gux-panel-frame-beta>
+  <!---->
+  <section class="gux-panel-container">
+    <header class="gux-panel-header">
+      <div slot="header">
+        <h1>
+          Header
+        </h1>
+      </div>
+    </header>
+    <div class="gux-panel-body">
+      <div slot="body">
+        <p>
+          Boby
+        </p>
+      </div>
+    </div>
+    <footer class="gux-panel-footer">
+      <div slot="footer">
+        <footer>
+          footer
+        </footer>
+      </div>
+    </footer>
+  </section>
+</gux-panel-frame-beta>
+`;
+
+exports[`gux-panel-frame-beta #render should render component as expected (2) 1`] = `
+<gux-panel-frame-beta>
+  <!---->
+  <section class="gux-panel-container">
+    <div class="gux-panel-body">
+      <div slot="body">
+        <p>
+          Boby
+        </p>
+      </div>
+    </div>
+    <footer class="gux-panel-footer">
+      <div slot="footer">
+        <footer>
+          footer
+        </footer>
+      </div>
+    </footer>
+  </section>
+</gux-panel-frame-beta>
+`;
+
+exports[`gux-panel-frame-beta #render should render component as expected (3) 1`] = `
+<gux-panel-frame-beta>
+  <!---->
+  <section class="gux-panel-container">
+    <header class="gux-panel-header">
+      <div slot="header">
+        <h1>
+          Header
+        </h1>
+      </div>
+    </header>
+    <div class="gux-panel-body">
+      <div slot="body">
+        <p>
+          Boby
+        </p>
+      </div>
+    </div>
+  </section>
+</gux-panel-frame-beta>
+`;
+
+exports[`gux-panel-frame-beta #render should render component as expected (4) 1`] = `
+<gux-panel-frame-beta>
+  <!---->
+  <section class="gux-panel-container">
+    <header class="gux-panel-header">
+      <div slot="header">
+        <h1>
+          Header
+        </h1>
+      </div>
+    </header>
+    <footer class="gux-panel-footer">
+      <div slot="footer">
+        <footer>
+          footer
+        </footer>
+      </div>
+    </footer>
+  </section>
+</gux-panel-frame-beta>
+`;
+
+exports[`gux-panel-frame-beta #render should render component as expected (5) 1`] = `
+<gux-panel-frame-beta>
+  <!---->
+  <section class="gux-panel-container">
+    <header class="gux-panel-header">
+      <div slot="header">
+        <h1>
+          Header
+        </h1>
+      </div>
+    </header>
+  </section>
+</gux-panel-frame-beta>
+`;
+
+exports[`gux-panel-frame-beta #render should render component as expected (6) 1`] = `
+<gux-panel-frame-beta>
+  <!---->
+  <div hidden="" id="invalid" slot="invalid">
+    <span>
+      Invalid
+    </span>
+  </div>
+  <section class="gux-panel-container">
+    <header class="gux-panel-header">
+      <div slot="header">
+        <h1>
+          Header
+        </h1>
+      </div>
+    </header>
+    <div class="gux-panel-body">
+      <div slot="body">
+        <p>
+          Boby
+        </p>
+      </div>
+    </div>
+    <footer class="gux-panel-footer">
+      <div slot="footer">
+        <footer>
+          footer
+        </footer>
+      </div>
+    </footer>
+  </section>
+</gux-panel-frame-beta>
+`;
