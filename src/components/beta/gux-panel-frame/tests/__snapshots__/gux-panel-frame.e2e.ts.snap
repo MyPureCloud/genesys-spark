@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-panel-frame #render should render component as expected (1) 1`] = `"<!----><section class=\\"gux-panel-container\\"><header class=\\"gux-panel-header\\"><div slot=\\"header\\"><h1>Header</h1></div></header><div class=\\"gux-panel-body\\"><div slot=\\"body\\"><p>Boby</p></div></div><footer class=\\"gux-panel-footer\\"><div slot=\\"footer\\"><footer>footer</footer></div></footer></section>"`;
+
+exports[`gux-panel-frame #render should render component as expected (2) 1`] = `"<!----><section class=\\"gux-panel-container\\"><div class=\\"gux-panel-body\\"><div slot=\\"body\\"><p>Boby</p></div></div><footer class=\\"gux-panel-footer\\"><div slot=\\"footer\\"><footer>footer</footer></div></footer></section>"`;
+
+exports[`gux-panel-frame #render should render component as expected (3) 1`] = `"<!----><section class=\\"gux-panel-container\\"><header class=\\"gux-panel-header\\"><div slot=\\"header\\"><h1>Header</h1></div></header><div class=\\"gux-panel-body\\"><div slot=\\"body\\"><p>Boby</p></div></div></section>"`;
+
+exports[`gux-panel-frame #render should render component as expected (4) 1`] = `"<!----><section class=\\"gux-panel-container\\"><header class=\\"gux-panel-header\\"><div slot=\\"header\\"><h1>Header</h1></div></header><footer class=\\"gux-panel-footer\\"><div slot=\\"footer\\"><footer>footer</footer></div></footer></section>"`;
+
+exports[`gux-panel-frame #render should render component as expected (5) 1`] = `"<!----><section class=\\"gux-panel-container\\"><header class=\\"gux-panel-header\\"><div slot=\\"header\\"><h1>Header</h1></div></header></section>"`;
+
+exports[`gux-panel-frame #render should render component as expected (6) 1`] = `"<!----><div slot=\\"invalid\\" id=\\"invalid\\" hidden=\\"\\"><span>Invalid</span></div><section class=\\"gux-panel-container\\"><header class=\\"gux-panel-header\\"><div slot=\\"header\\"><h1>Header</h1></div></header><div class=\\"gux-panel-body\\"><div slot=\\"body\\"><p>Boby</p></div></div><footer class=\\"gux-panel-footer\\"><div slot=\\"footer\\"><footer>footer</footer></div></footer></section>"`;

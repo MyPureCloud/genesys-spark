@@ -1,39 +1,27 @@
 import { newE2EPage } from '@stencil/core/testing';
 
 describe('gux-panel-frame', () => {
-  it('renders', async () => {
-    const page = await newE2EPage();
+  const headerSlot = '<div slot="header"><h1>Header</h1></div>';
+  const bodySlot = '<div slot="body"><p>Boby</p></div>';
+  const footerSlot = '<div slot="footer"><footer>footer</footer></div>';
+  const invalidSlot =
+    '<div slot="invalid" id="invalid"><span>Invalid</span></div>';
 
-    await page.setContent('<gux-panel-frame-beta></gux-panel-frame-beta>');
-    const element = await page.find('gux-panel-frame-beta');
-    expect(element).toHaveClass('hydrated');
-  });
+  describe('#render', () => {
+    [
+      `<gux-panel-frame-beta>${headerSlot}${bodySlot}${footerSlot}</gux-panel-frame-beta>`,
+      `<gux-panel-frame-beta>${bodySlot}${footerSlot}</gux-panel-frame-beta>`,
+      `<gux-panel-frame-beta>${headerSlot}${bodySlot}</gux-panel-frame-beta>`,
+      `<gux-panel-frame-beta>${headerSlot}${footerSlot}</gux-panel-frame-beta>`,
+      `<gux-panel-frame-beta>${headerSlot}</gux-panel-frame-beta>`,
+      `<gux-panel-frame-beta>${headerSlot}${bodySlot}${invalidSlot}${footerSlot}</gux-panel-frame-beta>`
+    ].forEach((html, index) => {
+      it(`should render component as expected (${index + 1})`, async () => {
+        const page = await newE2EPage({ html });
+        const element = await page.find('gux-panel-frame-beta');
 
-  it('should render all parts', async () => {
-    const page = await newE2EPage();
-
-    await page.setContent(
-      '<gux-panel-frame-beta><div slot="header"></div><div slot="body"></div><div slot="footer"></div></gux-panel-frame-beta>'
-    );
-    const header = await page.find('.gux-panel-header');
-    const body = await page.find('.gux-panel-body');
-    const footer = await page.find('.gux-panel-footer');
-    expect(header).toBeTruthy();
-    expect(body).toBeTruthy();
-    expect(footer).toBeTruthy();
-  });
-
-  it('should not render any part', async () => {
-    const page = await newE2EPage();
-
-    await page.setContent(
-      '<gux-panel-frame-beta><div slot="nothing"></div></gux-panel-frame-beta>'
-    );
-    const header = await page.find('.gux-panel-header');
-    const body = await page.find('.gux-panel-body');
-    const footer = await page.find('.gux-panel-footer');
-    expect(header).toBeFalsy();
-    expect(body).toBeFalsy();
-    expect(footer).toBeFalsy();
+        expect(element.innerHTML).toMatchSnapshot();
+      });
+    });
   });
 });
