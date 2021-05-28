@@ -70,7 +70,7 @@ describe('gux-form-field', () => {
       });
     });
 
-    describe('seect tag', () => {
+    describe('select tag', () => {
       it(`should render component type "select"`, async () => {
         const html = `
           <gux-form-field>
