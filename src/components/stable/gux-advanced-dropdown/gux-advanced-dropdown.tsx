@@ -326,6 +326,7 @@ export class GuxAdvancedDropdown {
   private closeDropdown(focus: boolean) {
     this.opened = false;
     this.searchInput.value = '';
+    this.searchRequested();
 
     if (focus) {
       this.inputBox.focus();
