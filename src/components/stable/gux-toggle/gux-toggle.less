@@ -3,93 +3,50 @@
 @import (reference) '../../../style/spacing.less';
 
 gux-toggle {
-  display: inline-block;
-  height: 16px;
+  display: block;
+  margin: 2px;
   color: @gux-black-50;
 
-  &[disabled] > * {
+  &[disabled] {
+    pointer-events: none;
+    cursor: default;
     opacity: 0.5;
   }
 
-  .gux-switch-container {
+  .gux-toggle-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
-    align-items: center;
-    justify-content: center;
-    height: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
     cursor: pointer;
 
-    &.gux-switch-label-left {
+    &.gux-toggle-label-left {
       flex-direction: row-reverse;
+      text-align: right;
     }
 
-    &.gux-checked > .gux-switch-label {
-      font-weight: bold;
+    input {
+      display: none;
     }
 
-    .gux-switch {
-      position: relative;
-      display: inline-block;
+    gux-toggle-slider {
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
-      width: 30px;
-      height: 16px;
-
-      & input {
-        display: none;
-
-        &:checked + .gux-slider {
-          background-color: @gux-blue-60;
-        }
-
-        &:checked + .gux-slider::before {
-          -webkit-transform: translateX(12px);
-          -ms-transform: translateX(12px);
-          transform: translateX(12px);
-        }
-      }
-
-      .gux-slider {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: @gux-black-100;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-
-        &::before {
-          position: absolute;
-          bottom: 1px;
-          left: 2px;
-          width: 14px;
-          height: 14px;
-          content: '';
-          background-color: @gux-grey-100;
-          -webkit-transition: 0.4s;
-          transition: 0.4s;
-        }
-
-        &.gux-round {
-          border-radius: 34px;
-        }
-
-        &.gux-round::before {
-          border-radius: 50%;
-        }
-      }
     }
 
-    .gux-switch-label {
-      flex: 0 1 auto;
+    .gux-toggle-label {
+      flex: 1 1 auto;
       align-self: auto;
       order: 0;
       padding: 0 @spacing-2xs;
       text-transform: capitalize;
+
+      &.gux-checked {
+        font-weight: bold;
+      }
     }
 
     &:focus {
@@ -99,11 +56,5 @@ gux-toggle {
 
   &:focus-within {
     .focus-ring();
-  }
-
-  &.gux-checked {
-    .gux-slider {
-      background-color: @gux-blue-60;
-    }
   }
 }

@@ -4,7 +4,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import setInputValue from '../../../../../utils/dom/set-input-value';
 import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 
-import modalComponentResources from './i18n/en.json';
+import componentResources from '../../i18n/en.json';
 
 /**
  * @slot input - Required slot for input[type="text" | type="email" | type="password"]
@@ -59,7 +59,7 @@ export class GuxInputTextLike {
   async componentWillLoad(): Promise<void> {
     this.getI18nValue = await buildI18nForComponent(
       this.root,
-      modalComponentResources
+      componentResources
     );
 
     this.input = this.root.querySelector('input[slot="input"]');

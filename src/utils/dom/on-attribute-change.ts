@@ -17,13 +17,30 @@ export function onHiddenChange(
 }
 
 export function onDisabledChange(
-  element: HTMLInputElement,
+  element: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement,
   callback: (disabled: boolean) => void
 ): MutationObserver {
   const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
       if (mutation.attributeName === 'disabled') {
         callback(element.disabled);
+      }
+    });
+  });
+
+  observer.observe(element, { attributes: true });
+
+  return observer;
+}
+
+export function onRequiredChange(
+  element: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement,
+  callback: (disabled: boolean) => void
+): MutationObserver {
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      if (mutation.attributeName === 'required') {
+        callback(element.required);
       }
     });
   });

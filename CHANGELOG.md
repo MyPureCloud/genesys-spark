@@ -2,6 +2,74 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.15.1](http://inindca///compare/v2.15.0...v2.15.1) (2021-05-24)
+
+
+### Bug Fixes
+
+* **demos:** fixed module loading script url ([e78ac22](http://inindca///commit/e78ac22bf75868422a87b781e37c78c8f208b1a0))
+
+## [2.15.0](http://inindca///compare/v2.14.2...v2.15.0) (2021-05-21)
+
+
+### Features
+
+* **mixins:** add y offset to box shadows ([be13fcd](http://inindca///commit/be13fcdc54414f9f24e80e6ff5f009c8a03aefbb))
+* **package:** revert committed package changes ([c8ff165](http://inindca///commit/c8ff16511e4b68d9ee697f1a0ddc5430fb67230a))
+* **various components:** implement modernized styling of components ([75e7442](http://inindca///commit/75e74425bfaddb34d76313aa84ea0897c9ab9911))
+
+### [2.14.2](http://inindca///compare/v2.14.1...v2.14.2) (2021-05-20)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed nesting of elements ([a832a1e](http://inindca///commit/a832a1e92a35697562d8df654ecd7d9cc07305a6))
+
+### [2.14.1](http://inindca///compare/v2.14.0...v2.14.1) (2021-05-19)
+
+
+### Bug Fixes
+
+* **gux-button:** added icon buttons ([56a2386](http://inindca///commit/56a238614afd19e34ec53143f4cf3c7e0ca2424a))
+* **pr-comment:** addressed PR comment ([292e912](http://inindca///commit/292e912d1fbd0306715d972f69716db59014f8e6))
+
+## [2.14.0](http://inindca///compare/v2.13.0...v2.14.0) (2021-05-18)
+
+
+### Features
+
+* **gux-form-field:** required label is now linked to input element ([93b9c1e](http://inindca///commit/93b9c1ef6ee9447d79ab9d343446f4d87ea4e834))
+
+## [2.13.0](http://inindca///compare/v2.12.8...v2.13.0) (2021-05-14)
+
+
+### Features
+
+* **gux-input-textarea:** component can now auto resize ([7732c12](http://inindca///commit/7732c12122c403d3df5efb3ff014941e67822f06))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([9ea4539](http://inindca///commit/9ea45392028f967f2bfadfbe06cb162f042e7480))
+* **pr-comment:** addressed PR comment ([a80c709](http://inindca///commit/a80c709f6a22427283516936c677508bd6c897c6))
+* **pr-comments:** addressed PR comments ([6688f54](http://inindca///commit/6688f5410264f0eb6783a60b19b756c0ca36e7c2))
+
+### [2.12.8](http://inindca///compare/v2.12.7...v2.12.8) (2021-05-13)
+
+
+### Bug Fixes
+
+* **gux-form-field:** checkbox and radio button icons updated ([a686aa8](http://inindca///commit/a686aa84045db564d4bba07934bfa0c04925b57b))
+
+### [2.12.7](http://inindca///compare/v2.12.6...v2.12.7) (2021-05-11)
+
+
+### Bug Fixes
+
+* **gux-toggle:** text now wraps as expected ([d52548b](http://inindca///commit/d52548b8b38ea2f6a99c5df95a754da73bdf56d1))
+
+### [2.12.6](http://inindca///compare/v2.12.5...v2.12.6) (2021-05-10)
+
 ### [2.12.5](http://inindca///compare/v2.12.4...v2.12.5) (2021-05-04)
 
 

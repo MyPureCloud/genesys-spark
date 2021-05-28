@@ -1,5 +1,6 @@
-import { Component, Element, h, JSX, State } from '@stencil/core';
-import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
+
+import { GuxInputTextAreaResize } from './gux-input-textarea.types';
 
 /**
  * @slot input - Required slot for textarea
@@ -9,39 +10,39 @@ import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
   tag: 'gux-input-textarea'
 })
 export class GuxInputTextArea {
-  private input: HTMLInputElement;
-  private disabledObserver: MutationObserver;
+  private input: HTMLTextAreaElement;
+  private containerElement: HTMLDivElement;
 
   @Element()
   private root: HTMLElement;
 
-  @State()
-  private disabled: boolean;
+  @Prop()
+  resize: GuxInputTextAreaResize = 'none';
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     this.input = this.root.querySelector('textarea[slot="input"]');
 
-    this.disabled = this.input.disabled;
-
-    this.disabledObserver = onDisabledChange(
-      this.input,
-      (disabled: boolean) => {
-        this.disabled = disabled;
-      }
-    );
+    this.input.addEventListener('input', () => {
+      this.updateHeight();
+    });
   }
 
-  disconnectedCallback(): void {
-    this.disabledObserver.disconnect();
+  componentDidLoad(): void {
+    this.updateHeight();
+  }
+
+  private updateHeight(): void {
+    if (this.resize === 'auto') {
+      this.containerElement.dataset.replicatedValue = this.input.value;
+      this.containerElement.style.maxHeight = this.input.style.maxHeight;
+    }
   }
 
   render(): JSX.Element {
     return (
       <div
-        class={{
-          'gux-input-container': true,
-          'gux-disabled': this.disabled
-        }}
+        ref={el => (this.containerElement = el)}
+        class={`gux-resize-${this.resize}`}
       >
         <slot name="input" />
       </div>

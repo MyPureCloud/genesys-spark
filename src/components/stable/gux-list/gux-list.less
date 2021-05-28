@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
 
 // Variables part
 @menu-background-color: @gux-type-dark;
@@ -9,51 +10,11 @@ gux-list {
   .gux-list-items-container {
     padding: 8px 0;
     margin: 0;
+    margin-top: 4px;
     list-style: none;
-  }
-}
-
-// Theming
-
-// Dark
-.gux-list-dark-theme {
-  color: @gux-type;
-
-  .gux-list-items-container {
     background: @menu-background-color;
-    box-shadow: 0 0 2px 0 @menu-shadow;
+    border: 1px solid @gux-grey-30;
+    border-radius: 4px;
+    .shadow-20();
   }
-}
-
-.gux-dark-theme {
-  gux-list {
-    .gux-list-dark-theme();
-  }
-}
-
-gux-list.gux-dark-theme {
-  .gux-list-dark-theme();
-}
-
-// Light
-.gux-list-light-theme {
-  .gux-list-items-container {
-    background: @menu-background-color;
-    box-shadow: 0 0 2px 0 @menu-shadow;
-  }
-}
-
-.gux-light-theme {
-  gux-list {
-    .gux-list-light-theme();
-  }
-}
-
-gux-list.gux-light-theme {
-  .gux-list-light-theme();
-}
-
-// Default Theme
-gux-list {
-  .gux-list-light-theme();
 }

@@ -5,43 +5,91 @@ gux-input-textarea {
   position: relative;
   display: block;
 
-  .gux-input-container {
-    border-radius: 2px;
-    outline: none;
+  .gux-resize-none {
+    textarea {
+      resize: none;
+    }
+  }
 
-    &.gux-disabled {
-      opacity: 0.5;
+  .gux-resize-auto {
+    // https://codepen.io/chriscoyier/pen/XWKEVLy
+
+    /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+    display: grid;
+    overflow: hidden;
+    word-break: normal;
+
+    // This is for Safari and is non standard https://www.w3.org/TR/css-text-3/#valdef-word-break-break-word
+    word-break: break-word;
+    overflow-wrap: anywhere;
+
+    &::after {
+      /* Place on top of each other */
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+      /* This is how textarea text behaves */
+      white-space: pre-wrap;
+
+      /* Hidden from view, clicks, and screen readers */
+      visibility: hidden;
+
+      /* Note the weird space! Needed to preventy jumpy behavior */
+      content: attr(data-replicated-value) ' ';
+      .gux-textarea-sizing-properties();
     }
 
     textarea {
-      flex: 1 1 auto;
-      align-self: auto;
-      order: 0;
-      min-width: 100%;
-      max-width: 100%;
-      min-height: @base-line-height * 4;
-      padding: 4px 12px 4px 12px;
-      margin: 0;
-      font-family: inherit;
-      font-size: 12px;
-      line-height: 1.66666667;
-      color: @gux-black-50;
-      background-color: @gux-grey-90;
-      background-image: none;
-      border: 1px solid @gux-black-100;
-      border-radius: 2px;
-      outline: none;
-      box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
+      /* Place on top of each other */
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      overflow-x: hidden;
 
-      &::placeholder {
-        color: @gux-black-90;
-        opacity: 1;
-      }
+      /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+      resize: none;
+    }
+  }
+
+  textarea {
+    flex: 1 1 auto;
+    align-self: auto;
+    order: 0;
+    font-family: inherit;
+    .body-font();
+
+    color: @gux-black-50;
+    background-color: @gux-grey-90;
+    background-image: none;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
+    .gux-textarea-sizing-properties();
+
+    &::placeholder {
+      color: @gux-black-90;
+      opacity: 1;
     }
 
     &:focus-within {
-      border: 1px solid @gux-blue-60;
+      border-color: @gux-blue-60;
       box-shadow: 0 0 4px fade(@gux-blue-80, 50%);
     }
+
+    &[disabled] {
+      opacity: 0.5;
+    }
   }
+}
+
+.gux-textarea-sizing-properties() {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: (@body-font-line-height * 4) + 8 + 2; // 4 lines + padding + border
+  padding: 4px 12px;
+  margin: 0;
+  border: 1px solid @gux-black-100;
 }
