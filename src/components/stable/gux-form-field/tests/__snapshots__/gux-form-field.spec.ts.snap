@@ -240,3 +240,32 @@ exports[`gux-form-field #render seect tag should render component type "select" 
   </div>
 </gux-form-field>
 `;
+
+exports[`gux-form-field #render select tag should render component type "select" 1`] = `
+<gux-form-field>
+  <!---->
+  <div class="gux-label-and-input-and-error-container">
+    <div class="gux-above gux-label-and-input-container">
+      <div class="gux-label-container">
+        <label slot="label">
+          Select
+        </label>
+      </div>
+      <gux-input-select aria-describedby="gux-form-field-i" slot="input">
+        <select name="select" slot="input" type="select">
+          <option value="option1">
+            Option 1
+          </option>
+          <option value="option1">
+            Option 2
+          </option>
+          <option value="option1">
+            Option 3
+          </option>
+        </select>
+      </gux-input-select>
+    </div>
+    <div class="gux-error" id="gux-form-field-i"></div>
+  </div>
+</gux-form-field>
+`;
