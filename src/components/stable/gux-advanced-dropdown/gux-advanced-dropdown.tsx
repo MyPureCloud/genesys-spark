@@ -169,20 +169,20 @@ export class GuxAdvancedDropdown {
           }`}
         >
           <div class="gux-dropdown-menu-container">
-            <gux-form-field>
+            <label htmlFor={this.searchId} class="gux-search-label">
+              {this.i18n('searchAria')}
+            </label>
+
+            <gux-input-search>
               <input
                 id={this.searchId}
-                slot="input"
                 type="search"
                 onInput={(event: InputEvent) => {
                   this.handleSearchInput(event);
                 }}
                 ref={el => (this.searchInput = el)}
               />
-              <label htmlFor={this.searchId} slot="label" class="gux-sr-only">
-                {this.i18n('searchAria')}
-              </label>
-            </gux-form-field>
+            </gux-input-search>
 
             <div
               class="gux-dropdown-options"

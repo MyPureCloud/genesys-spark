@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/typography.less';
 
 // Variables part
 @palette-background-color: @gux-type-dark;
@@ -16,6 +17,10 @@ gux-command-palette-beta .gux-command-palette {
   margin: 0 auto;
   border-color: 1px solid @palette-border-color;
   box-shadow: 0 0 2px 0 @palette-shadow;
+
+  .gux-command-palette-search-label {
+    .gux-sr-only();
+  }
 
   &.gux-hidden {
     top: 0;

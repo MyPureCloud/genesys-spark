@@ -1,5 +1,4 @@
 import { Component, Element, h, Method, State } from '@stencil/core';
-import { KeyCode } from '../../../common-enums';
 import { matchesFuzzy } from '../../../utils/string/search';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import paletteResources from './i18n/en.json';
@@ -74,10 +73,15 @@ export class GuxCommandPalette {
         onKeyDown={e => this.onKeyDown(e)}
         aria-label={this.i18n('title')}
       >
-        <gux-form-field>
+        <label
+          htmlFor="gux-command-palette-search"
+          class="gux-command-palette-search-label"
+        >
+          {this.i18n('search')}
+        </label>
+        <gux-input-search>
           <input
             id="gux-command-palette-search"
-            slot="input"
             type="search"
             onInput={(event: InputEvent) => {
               this.handleInput(event);
@@ -85,14 +89,7 @@ export class GuxCommandPalette {
             value={this.filterValue}
             ref={el => (this.inputElement = el)}
           />
-          <label
-            htmlFor="gux-command-palette-search"
-            slot="label"
-            class="gux-sr-only"
-          >
-            {this.i18n('search')}
-          </label>
-        </gux-form-field>
+        </gux-input-search>
 
         {this.visible && this.renderLists()}
       </div>
@@ -292,24 +289,18 @@ export class GuxCommandPalette {
   }
 
   private onKeyDown(event: KeyboardEvent): void {
-    const validKeys = [KeyCode.Up, KeyCode.Down];
-    const key = event.keyCode;
-    if (validKeys.indexOf(key) === -1) {
-      return;
-    }
-
-    switch (key) {
-      case KeyCode.Up:
+    switch (event.key) {
+      case 'ArrowUp':
         this.navigateUp();
         break;
-      case KeyCode.Down:
+      case 'ArrowDown':
         this.navigateDown();
         break;
     }
   }
 
   private elementIsSearch(el: Element): boolean {
-    return el.closest('gux-form-field') !== null;
+    return el.closest('gux-input-search') !== null;
   }
 
   private getParentGuxList(el: Element): HTMLGuxListElement {
@@ -328,6 +319,7 @@ export class GuxCommandPalette {
 
   private navigateUp() {
     const focusedElement = this.root.querySelector(':focus');
+
     if (this.elementIsSearch(focusedElement)) {
       // Already at the top, don't need to focus elsewhere
       return;
@@ -351,6 +343,7 @@ export class GuxCommandPalette {
 
   private navigateDown() {
     const focusedElement = this.root.querySelector(':focus');
+
     if (this.elementIsSearch(focusedElement)) {
       this.root.querySelector('gux-list').setFocusOnFirstItem();
       return;

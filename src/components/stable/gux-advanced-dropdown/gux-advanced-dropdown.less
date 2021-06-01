@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/typography.less';
 
 // Variables part
 @background-color: @gux-grey-90;
@@ -99,8 +100,8 @@ div.gux-dropdown {
     .gux-dropdown-menu-container {
       padding: 16px;
 
-      gux-search > div {
-        margin: 0;
+      .gux-search-label {
+        .gux-sr-only();
       }
     }
 
