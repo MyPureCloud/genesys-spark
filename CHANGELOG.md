@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.17.0](http://inindca///compare/v2.16.2...v2.17.0) (2021-06-01)
+
+
+### Features
+
+* **gus-search-beta:** removed uses of gux-search-beta in components ([77dabd1](http://inindca///commit/77dabd1001711ed75848240c7c3ca966eb54fa9e))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([6a0059c](http://inindca///commit/6a0059cbbfb0473c06527b962e94834020915507))
+* **pr-comment:** addressed PR comment ([58f71ac](http://inindca///commit/58f71ac0381dc000e2f0dc764aa6acbfc0fda80c))
+
 ### [2.16.2](http://inindca///compare/v2.16.1...v2.16.2) (2021-05-28)
 
 
