@@ -54,6 +54,7 @@ export const config: Config = {
     collectCoverage: true,
     coverageDirectory: 'build/test-reports/coverage',
     coverageReporters: ['json', 'lcov', 'text', 'clover', 'text-summary'],
+    setupFilesAfterEnv: ['<rootDir>/tests/setupTests.js'],
     reporters: [
       'default',
       [

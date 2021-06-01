@@ -14,6 +14,8 @@
 
 ### Used by
 
+ - [gux-advanced-dropdown](../../../gux-advanced-dropdown)
+ - [gux-command-palette-beta](../../../../beta/gux-command-palette)
  - [gux-form-field](../..)
 
 ### Depends on
@@ -24,6 +26,8 @@
 ```mermaid
 graph TD;
   gux-input-search --> gux-icon
+  gux-advanced-dropdown --> gux-input-search
+  gux-command-palette-beta --> gux-input-search
   gux-form-field --> gux-input-search
   style gux-input-search fill:#f9f,stroke:#333,stroke-width:4px
 ```

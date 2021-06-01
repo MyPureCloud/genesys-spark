@@ -154,7 +154,7 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const search = await (await page.find('gux-search-beta')).find('input');
+    const search = await component.find('input');
     await search.press('KeyT');
     await page.waitForChanges();
 
@@ -185,7 +185,7 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const search = await (await page.find('gux-search-beta')).find('input');
+    const search = await component.find('input');
     await search.press('KeyO');
     await search.press('KeyR');
     await page.waitForChanges();
@@ -226,7 +226,7 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const search = await (await page.find('gux-search-beta')).find('input');
+    const search = await component.find('input');
     await search.press('KeyT');
     await page.waitForChanges();
 

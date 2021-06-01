@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-advanced-dropdown should render 1`] = `
-<gux-advanced-dropdown lang="en">
+<gux-advanced-dropdown>
   <mock:shadow-root>
     <div class="gux-dropdown">
       <div class="gux-select-field">
@@ -12,7 +12,12 @@ exports[`gux-advanced-dropdown should render 1`] = `
       </div>
       <div class="gux-advanced-dropdown-menu">
         <div class="gux-dropdown-menu-container">
-          <gux-search-beta class="gux-light-theme" dynamic-search="true" searchtimeout="500" srlabel="Search"></gux-search-beta>
+          <label class="gux-search-label" htmlfor="gux-advanced-dropdown-search-i">
+            Search
+          </label>
+          <gux-input-search>
+            <input id="gux-advanced-dropdown-search-i" type="search">
+          </gux-input-search>
           <div class="gux-dropdown-options">
             <slot></slot>
           </div>
