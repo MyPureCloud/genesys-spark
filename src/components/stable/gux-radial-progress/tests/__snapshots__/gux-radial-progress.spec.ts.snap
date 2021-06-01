@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-radial-progress #render should render component as expected (1) 1`] = `
-<gux-radial-progress>
-  <gux-radial-loading context="modal"></gux-radial-loading>
+<gux-radial-progress screenreader-text="Loading">
+  <gux-radial-loading context="modal" screenreadertext="Loading"></gux-radial-loading>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (2) 1`] = `
-<gux-radial-progress value="0">
-  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar">
-    <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
+<gux-radial-progress screenreader-text="Loading" value="0">
+  <div aria-label="Loading" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar">
+    <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-4">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
@@ -25,16 +25,13 @@ exports[`gux-radial-progress #render should render component as expected (2) 1`]
       </text>
     </svg>
   </div>
-  <span aria-live="polite" class="gux-progress-alert" role="alert">
-    0%
-  </span>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (3) 1`] = `
-<gux-radial-progress value="10">
-  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
-    <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
+<gux-radial-progress screenreader-text="Loading" value="10">
+  <div aria-label="Loading" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
+    <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-6">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
@@ -50,16 +47,13 @@ exports[`gux-radial-progress #render should render component as expected (3) 1`]
       </text>
     </svg>
   </div>
-  <span aria-live="polite" class="gux-progress-alert" role="alert">
-    10%
-  </span>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (4) 1`] = `
-<gux-radial-progress value="100">
-  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">
-    <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
+<gux-radial-progress screenreader-text="Loading" value="100">
+  <div aria-label="Loading" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">
+    <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-8">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
@@ -75,28 +69,25 @@ exports[`gux-radial-progress #render should render component as expected (4) 1`]
       </text>
     </svg>
   </div>
-  <span aria-live="polite" class="gux-progress-alert" role="alert">
-    100%
-  </span>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (5) 1`] = `
-<gux-radial-progress value="123">
-  <gux-radial-loading context="modal"></gux-radial-loading>
+<gux-radial-progress screenreader-text="Loading" value="123">
+  <gux-radial-loading context="modal" screenreadertext="Loading"></gux-radial-loading>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (6) 1`] = `
-<gux-radial-progress value="200">
-  <gux-radial-loading context="modal"></gux-radial-loading>
+<gux-radial-progress screenreader-text="Loading" value="200">
+  <gux-radial-loading context="modal" screenreadertext="Loading"></gux-radial-loading>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (7) 1`] = `
-<gux-radial-progress max="100" value="10">
-  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
-    <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
+<gux-radial-progress max="100" screenreader-text="Loading" value="10">
+  <div aria-label="Loading" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
+    <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-14">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
@@ -112,16 +103,13 @@ exports[`gux-radial-progress #render should render component as expected (7) 1`]
       </text>
     </svg>
   </div>
-  <span aria-live="polite" class="gux-progress-alert" role="alert">
-    10%
-  </span>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (8) 1`] = `
-<gux-radial-progress max="10" value="10">
-  <div aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" role="progressbar">
-    <svg class="gux-svg-container" height="60px" viewBox="0 0 60 60" width="60px">
+<gux-radial-progress max="10" screenreader-text="Loading" value="10">
+  <div aria-label="Loading" aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" role="progressbar">
+    <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
       <filter id="dropshadow-16">
         <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
         <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
@@ -137,32 +125,29 @@ exports[`gux-radial-progress #render should render component as expected (8) 1`]
       </text>
     </svg>
   </div>
-  <span aria-live="polite" class="gux-progress-alert" role="alert">
-    100%
-  </span>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (9) 1`] = `
-<gux-radial-progress max="100" value="test">
-  <gux-radial-loading context="modal"></gux-radial-loading>
+<gux-radial-progress max="100" screenreader-text="Loading" value="test">
+  <gux-radial-loading context="modal" screenreadertext="Loading"></gux-radial-loading>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (10) 1`] = `
-<gux-radial-progress max="100" value="-123">
-  <gux-radial-loading context="modal"></gux-radial-loading>
+<gux-radial-progress max="100" screenreader-text="Loading" value="-123">
+  <gux-radial-loading context="modal" screenreadertext="Loading"></gux-radial-loading>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (11) 1`] = `
-<gux-radial-progress max="100" value="200">
-  <gux-radial-loading context="modal"></gux-radial-loading>
+<gux-radial-progress max="100" screenreader-text="Loading" value="200">
+  <gux-radial-loading context="modal" screenreadertext="Loading"></gux-radial-loading>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (12) 1`] = `
-<gux-radial-progress max="test" value="10">
-  <gux-radial-loading context="modal"></gux-radial-loading>
+<gux-radial-progress max="test" screenreader-text="Loading" value="10">
+  <gux-radial-loading context="modal" screenreadertext="Loading"></gux-radial-loading>
 </gux-radial-progress>
 `;

@@ -20,14 +20,6 @@ export class GuxPageLoadingSpinner {
     trackComponent(this.root);
   }
 
-  componentDidLoad(): void {
-    if (!this.screenreaderText) {
-      throw new Error(
-        '[gux-page-loading-spinner] No screenreader-text provided. Provide a localized screenreader-text property for the component.'
-      );
-    }
-  }
-
   render(): JSX.Element {
     return (
       <gux-radial-loading

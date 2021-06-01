@@ -46,7 +46,10 @@ export class GuxRadialProgress {
   }
 
   componentDidLoad(): void {
-    if (!this.screenreaderText) {
+    if (
+      !this.screenreaderText &&
+      this.canShowPercentage(this.value, this.max)
+    ) {
       throw new Error(
         '[gux-radial-progress] No screenreader-text provided. Provide a localized screenreader-text property for the component.'
       );
