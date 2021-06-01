@@ -51,11 +51,6 @@ Type: `Promise<void>`
 
 ## Dependencies
 
-### Used by
-
- - [gux-advanced-dropdown](../../stable/gux-advanced-dropdown)
- - [gux-command-palette-beta](../gux-command-palette)
-
 ### Depends on
 
 - [gux-text-field-legacy](../../legacy/gux-text-field-legacy)
@@ -67,8 +62,6 @@ graph TD;
   gux-search-beta --> gux-text-field-legacy
   gux-search-beta --> gux-icon
   gux-text-field-legacy --> gux-icon
-  gux-advanced-dropdown --> gux-search-beta
-  gux-command-palette-beta --> gux-search-beta
   style gux-search-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
