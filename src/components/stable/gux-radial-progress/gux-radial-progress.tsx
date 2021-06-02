@@ -111,7 +111,7 @@ export class GuxRadialProgress {
   private showSpinnerState(screenreaderText): JSX.Element {
     return (
       <gux-radial-loading
-        screenreaderText={screenreaderText}
+        screenreader-text={screenreaderText}
         context="modal"
       ></gux-radial-loading>
     );
