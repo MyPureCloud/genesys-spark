@@ -48,6 +48,17 @@
       />
       <label slot="label" for="sandwich">Sandwich</label>
     </gux-form-field>
+    <gux-form-field>
+      <input
+        slot="input"
+        type="checkbox"
+        id="required"
+        name="required"
+        value="false"
+      />
+      <label slot="label" for="required">Checkbox with error - Unchecked</label>
+      <span slot="error">Required</span>
+    </gux-form-field>
   </div>
 
   <h1>Radio</h1>
@@ -137,6 +148,7 @@
         required
       />
       <label slot="label" for="color-required">Color</label>
+      <span slot="error">Field is required</span>
     </gux-form-field>
   </div>
 
@@ -202,7 +214,7 @@
     <gux-form-field>
       <input
         slot="input"
-        name="number-clearable"
+        name="number-required"
         type="number"
         step="5"
         min="5"
@@ -212,6 +224,20 @@
         required
       />
       <label slot="label">Required Number</label>
+    </gux-form-field>
+
+    <gux-form-field>
+      <input
+        slot="input"
+        name="number-error"
+        type="number"
+        step="5"
+        min="5"
+        max="100"
+        placeholder="Enter a number"
+      />
+      <label slot="label">Number</label>
+      <span slot="error">Field has error</span>
     </gux-form-field>
   </div>
 
@@ -356,6 +382,23 @@
     </gux-form-field>
   </div>
 
+  <h1>Input with error</h1>
+  <div>
+    <gux-form-field>
+      <input
+        slot="input"
+        name="errorInput"
+        type="text"
+        step="5"
+        min="5"
+        max="100"
+        placeholder="Enter text"
+      />
+      <label slot="label">Input</label>
+      <span slot="error">Field is required</span>
+    </gux-form-field>
+  </div>
+
   <h1>Text Area</h1>
 
   <div>
@@ -431,10 +474,19 @@
       ></textarea>
       <label slot="label">Auto Resize</label>
     </gux-form-field>
+
+    <gux-form-field>
+      <textarea
+        slot="input"
+        name="textarea"
+        placeholder="Type here..."
+      ></textarea>
+      <label slot="label">Text Area with Error Label</label>
+      <span slot="error">Field is required</span>
+    </gux-form-field>
   </div>
 
   <h1>Select</h1>
-
   <div>
     <gux-form-field>
       <select slot="input" id="select" name="select" type="select">
@@ -457,7 +509,7 @@
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
       </select>
-      <label slot="label" id="select-disabled">Disabled select</label>
+      <label slot="label" for="select-disabled">Disabled select</label>
     </gux-form-field>
 
     <gux-form-field>
@@ -473,6 +525,17 @@
         <option value="option3">Option 3</option>
       </select>
       <label slot="label" for="select-required">Required Select</label>
+    </gux-form-field>
+
+    <gux-form-field>
+      <select slot="input" name="select-required" type="select">
+        <option value=""></option>
+        <option value="option1">Option 1</option>
+        <option value="option1">Option 2</option>
+        <option value="option1">Option 3</option>
+      </select>
+      <label slot="label">Select</label>
+      <span slot="error">Field is required</span>
     </gux-form-field>
   </div>
 

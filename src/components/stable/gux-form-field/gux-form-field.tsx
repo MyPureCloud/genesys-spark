@@ -1,4 +1,5 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
 import { onRequiredChange } from '../../../utils/dom/on-attribute-change';
 import { trackComponent } from '../../../usage-tracking';
@@ -16,6 +17,7 @@ export class GuxFormField {
   private input: HTMLInputElement;
   private label: HTMLLabelElement;
   private requiredObserver: MutationObserver;
+  private errorID = randomHTMLId('gux-form-field');
 
   @Element()
   private root: HTMLElement;
@@ -49,6 +51,12 @@ export class GuxFormField {
 
     const type = this.input.getAttribute('type');
     this.slottedElementType = this.input.tagName.toLowerCase();
+
+    // stops the html5 validation styling
+    this.input.addEventListener('invalid', event => {
+      event.preventDefault();
+    });
+
     let variant = this.slottedElementType;
     if (this.slottedElementType === 'input') {
       variant = this.slottedElementType.concat('-').concat(type);
@@ -79,12 +87,18 @@ export class GuxFormField {
     this.requiredObserver.disconnect();
   }
 
-  private getInputCheckbox(): JSX.Element {
+  private getInputCheckbox(hasError: boolean): JSX.Element {
     return (
-      <gux-input-checkbox>
-        <slot name="input" />
-        <slot name="label" />
-      </gux-input-checkbox>
+      <div>
+        <gux-input-checkbox
+          class={{ 'gux-input-error': hasError }}
+          aria-describedby={this.errorID}
+        >
+          <slot name="input" />
+          <slot name="label" />
+        </gux-input-checkbox>
+        {this.getError(hasError)}
+      </div>
     );
   }
 
@@ -97,7 +111,7 @@ export class GuxFormField {
     );
   }
 
-  private getInputColor(): JSX.Element {
+  private getInputColor(hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
@@ -109,13 +123,16 @@ export class GuxFormField {
           >
             <slot name="label" slot="label" />
           </div>
-          <gux-input-color>
+          <gux-input-color
+            class={{
+              'gux-input-error': hasError
+            }}
+            aria-describedby={this.errorID}
+          >
             <slot name="input" />
           </gux-input-color>
         </div>
-        <div class="gux-error">
-          <slot name="error" />
-        </div>
+        {this.getError(hasError)}
       </div>
     );
   }
@@ -125,7 +142,7 @@ export class GuxFormField {
     valueInTooltip: boolean
   ): JSX.Element {
     return (
-      <div class="guxlabel-and-input-and-error-container">
+      <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
           <div
             class={{
@@ -142,14 +159,11 @@ export class GuxFormField {
             <slot name="input" />
           </gux-input-range>
         </div>
-        <div class="gux-error">
-          <slot name="error" />
-        </div>
       </div>
     );
   }
 
-  private getInputNumber(clearable: boolean): JSX.Element {
+  private getInputNumber(clearable: boolean, hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
@@ -161,18 +175,23 @@ export class GuxFormField {
           >
             <slot name="label" slot="label" />
           </div>
-          <gux-input-number slot="input" clearable={clearable}>
+          <gux-input-number
+            class={{
+              'gux-input-error': hasError
+            }}
+            slot="input"
+            clearable={clearable}
+            aria-describedby={this.errorID}
+          >
             <slot name="input" />
           </gux-input-number>
         </div>
-        <div class="gux-error">
-          <slot name="error" />
-        </div>
+        {this.getError(hasError)}
       </div>
     );
   }
 
-  private getInputSelect(): JSX.Element {
+  private getInputSelect(hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
@@ -184,18 +203,22 @@ export class GuxFormField {
           >
             <slot name="label" slot="label" />
           </div>
-          <gux-input-select slot="input">
+          <gux-input-select
+            slot="input"
+            class={{
+              'gux-input-error': hasError
+            }}
+            aria-describedby={this.errorID}
+          >
             <slot name="input" />
           </gux-input-select>
         </div>
-        <div class="gux-error">
-          <slot name="error" />
-        </div>
+        {this.getError(hasError)}
       </div>
     );
   }
 
-  private getInputTextLike(clearable: boolean): JSX.Element {
+  private getInputTextLike(clearable: boolean, hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
@@ -207,18 +230,23 @@ export class GuxFormField {
           >
             <slot name="label" slot="label" />
           </div>
-          <gux-input-text-like slot="input" clearable={clearable}>
+          <gux-input-text-like
+            class={{
+              'gux-input-error': hasError
+            }}
+            slot="input"
+            clearable={clearable}
+            aria-describedby={this.errorID}
+          >
             <slot name="input" />
           </gux-input-text-like>
         </div>
-        <div class="gux-error">
-          <slot name="error" />
-        </div>
+        {this.getError(hasError)}
       </div>
     );
   }
 
-  private getInputSearch(): JSX.Element {
+  private getInputSearch(hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
@@ -234,14 +262,12 @@ export class GuxFormField {
             <slot name="input" />
           </gux-input-search>
         </div>
-        <div class="gux-error">
-          <slot name="error" />
-        </div>
+        {this.getError(hasError)}
       </div>
     );
   }
 
-  private getInputTextArea(): JSX.Element {
+  private getInputTextArea(hasError: boolean): JSX.Element {
     return (
       <div class="gux-label-and-input-and-error-container">
         <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
@@ -253,57 +279,81 @@ export class GuxFormField {
           >
             <slot name="label" slot="label" />
           </div>
-          <gux-input-textarea slot="input" resize={this.resize}>
+          <gux-input-textarea
+            class={{
+              'gux-input-error': hasError
+            }}
+            slot="input"
+            aria-describedby={this.errorID}
+            resize={this.resize}
+          >
             <slot name="input" />
           </gux-input-textarea>
         </div>
-        <div class="gux-error">
-          <slot name="error" />
-        </div>
+        {this.getError(hasError)}
       </div>
     );
   }
 
   render(): JSX.Element {
     const type = this.input.getAttribute('type');
+    const hasError = this.hasErrorSlot();
     switch (this.slottedElementType) {
       case 'input':
         switch (type) {
           case 'checkbox':
-            return this.getInputCheckbox();
+            return this.getInputCheckbox(hasError);
           case 'radio':
             return this.getInputRadio();
           case 'color':
-            return this.getInputColor();
+            return this.getInputColor(hasError);
           case 'range':
             return this.getInputRange(this.displayUnits, this.valueInTooltip);
           case 'email':
           case 'password':
           case 'text':
-            return this.getInputTextLike(this.clearable);
+            return this.getInputTextLike(this.clearable, hasError);
           case 'number':
-            return this.getInputNumber(this.clearable);
+            return this.getInputNumber(this.clearable, hasError);
           case 'search':
-            return this.getInputSearch();
+            return this.getInputSearch(hasError);
           default:
             return (
               <div>
                 <slot name="label" />
                 <slot name="input" />
+                <slot name="error" />
               </div>
             );
         }
       case 'select':
-        return this.getInputSelect();
+        return this.getInputSelect(hasError);
       case 'textarea':
-        return this.getInputTextArea();
+        return this.getInputTextArea(hasError);
       default:
         return (
           <div>
             <slot name="label" />
             <slot name="input" />
+            <slot name="error" />
           </div>
         );
     }
+  }
+
+  private hasErrorSlot(): boolean {
+    return !!this.root.querySelector('[slot="error"]');
+  }
+
+  private getError(hasError: boolean): JSX.Element {
+    return (
+      <div class="gux-error" id={this.errorID}>
+        {hasError ? (
+          <gux-error-message-beta>
+            <slot name="error" />
+          </gux-error-message-beta>
+        ) : null}
+      </div>
+    );
   }
 }
