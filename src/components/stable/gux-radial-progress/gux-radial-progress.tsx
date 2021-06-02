@@ -28,7 +28,7 @@ export class GuxRadialProgress {
   max: number = 100;
 
   /**
-   * Required localized text to provide screen reader accessible label for the component
+   * Required localized text to provide an accessible label for the component
    */
   @Prop()
   screenreaderText: string = '';

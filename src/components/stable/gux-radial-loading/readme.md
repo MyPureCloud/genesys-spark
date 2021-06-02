@@ -10,10 +10,10 @@ Otherwise, if the loading is unknown, and no percentage is provided, it instead 
 
 ## Properties
 
-| Property           | Attribute           | Description                                                                         | Type                                | Default   |
-| ------------------ | ------------------- | ----------------------------------------------------------------------------------- | ----------------------------------- | --------- |
-| `context`          | `context`           | The display context the component is in.                                            | `"full-page" \| "input" \| "modal"` | `'modal'` |
-| `screenreaderText` | `screenreader-text` | Required localized text to provide screen reader accessible label for the component | `string`                            | `''`      |
+| Property           | Attribute           | Description                                                                                                                                                   | Type                                | Default   |
+| ------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | --------- |
+| `context`          | `context`           | The display context the component is in.                                                                                                                      | `"full-page" \| "input" \| "modal"` | `'modal'` |
+| `screenreaderText` | `screenreader-text` | Localized text to provide an accessible label for the component. If no screenreader text is provided, the localized string "Loading" will be used by default. | `string`                            | `''`      |
 
 
 ## Dependencies

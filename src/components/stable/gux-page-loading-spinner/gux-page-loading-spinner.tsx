@@ -11,7 +11,8 @@ export class GuxPageLoadingSpinner {
   private root: HTMLElement;
 
   /**
-   * Required localized text to provide screen reader accessible label for the component
+   * Localized text to provide an accessible label for the component.
+   * If no screenreader text is provided, the localized string "Loading" will be used by default
    */
   @Prop()
   screenreaderText: string = '';

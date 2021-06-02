@@ -14,7 +14,7 @@ Otherwise, if the progress is unknown, and no percentage is provided, it instead
 | ------------------ | ------------------- | --------------------------------------------------------------------------------------------- | --------- | ----------- |
 | `max`              | `max`               | The max value of the progress spinner                                                         | `number`  | `100`       |
 | `meter`            | `meter`             | Optional value to specify if the component is being used to represent a static meter element. | `boolean` | `false`     |
-| `screenreaderText` | `screenreader-text` | Required localized text to provide screen reader accessible label for the component           | `string`  | `''`        |
+| `screenreaderText` | `screenreader-text` | Required localized text to provide an accessible label for the component                      | `string`  | `''`        |
 | `value`            | `value`             | The progress made in the progress spinner compared to the max value                           | `number`  | `undefined` |
 
 
