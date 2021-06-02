@@ -1,84 +1,40 @@
 @import (reference) '../../../style/color.less';
 
-// Variables part
-
-// Style
 gux-panel-frame-beta {
+  color: @gux-black-50;
+
   .gux-panel-container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: 8px 15px;
-    background-color: @gux-type-dark;
-    border: 1px solid @gux-border;
+    background-color: @gux-grey-100;
+    border: 1px solid @gux-grey-60;
+
+    .gux-panel-header,
+    .gux-panel-body,
+    .gux-panel-footer {
+      box-sizing: border-box;
+      width: 100%;
+    }
 
     .gux-panel-header {
-      box-sizing: border-box;
       flex-shrink: 0;
-      width: 100%;
       padding: 0 8px;
-      border-bottom: 1px solid @gux-border;
+      border-bottom: 1px solid @gux-grey-60;
     }
 
     .gux-panel-body {
-      box-sizing: border-box;
       flex-grow: 1;
-      width: 100%;
       padding: 8px 8px;
       overflow-y: auto;
     }
 
     .gux-panel-footer {
-      box-sizing: border-box;
       flex-shrink: 0;
-      width: 100%;
       padding: 12px 8px;
-      border-top: 1px solid @gux-border;
+      border-top: 1px solid @gux-grey-60;
     }
   }
-}
-
-// Theming
-
-// Dark
-.gux-panel-frame-dark-theme {
-  color: @gux-type-dark;
-
-  > div,
-  .gux-panel-header,
-  .gux-panel-footer {
-    background-color: @gux-black-50;
-    border-color: @gux-black-30;
-  }
-}
-
-.gux-dark-theme {
-  gux-panel-frame-beta {
-    .gux-panel-frame-dark-theme();
-  }
-}
-
-gux-panel-frame-beta.gux-dark-theme {
-  .gux-panel-frame-dark-theme();
-}
-
-// Light
-.gux-panel-frame-light-theme {
-  color: @gux-type;
-}
-
-.gux-light-theme {
-  gux-panel-frame-beta {
-    .gux-panel-frame-light-theme();
-  }
-}
-
-gux-panel-frame-beta.gux-light-theme {
-  .gux-panel-frame-light-theme();
-}
-
-// Default Theme
-gux-panel-frame-beta {
-  .gux-panel-frame-light-theme();
 }

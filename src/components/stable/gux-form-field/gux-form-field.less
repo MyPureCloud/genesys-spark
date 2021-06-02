@@ -4,6 +4,8 @@
 
 // Style
 gux-form-field {
+  color: @gux-black-50;
+
   .gux-label-and-input-and-error-container {
     margin: 16px 0;
 
@@ -19,16 +21,29 @@ gux-form-field {
         flex-direction: row;
         align-items: center;
 
-        label {
-          min-width: 40px;
+        .gux-label-container {
+          min-width: 45px;
           margin-right: 8px;
         }
 
         gux-input-range,
         gux-input-select,
-        gux-input-text-like {
+        gux-input-text-like,
+        gux-input-search {
           flex: 1 1 auto;
         }
+      }
+
+      .gux-input-error .gux-input-container {
+        border-color: @gux-alert;
+      }
+
+      .gux-input-error textarea {
+        border-color: @gux-alert;
+      }
+
+      .gux-input-error .gux-input-color-main-element {
+        border-color: @gux-alert;
       }
     }
 
@@ -36,41 +51,9 @@ gux-form-field {
       margin: 4px 0;
     }
   }
-}
 
-// Theming
-
-// Dark
-.gux-form-field-dark-theme {
-  color: @gux-type-dark;
-}
-
-.gux-dark-theme {
-  gux-form-field {
-    .gux-form-field-dark-theme();
+  .gux-required::after {
+    color: @gux-alert-red-60;
+    content: ' *';
   }
-}
-
-gux-form-field.gux-dark-theme {
-  .gux-form-field-dark-theme();
-}
-
-// Light
-.gux-form-field-light-theme {
-  color: @gux-type;
-}
-
-.gux-light-theme {
-  gux-form-field {
-    .gux-form-field-light-theme();
-  }
-}
-
-gux-form-field.gux-light-theme {
-  .gux-form-field-light-theme();
-}
-
-// Default Theme
-gux-form-field {
-  .gux-form-field-light-theme();
 }

@@ -1,4 +1,11 @@
-<div style="display: flex; justify-content: space-around">
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 250px;
+  "
+>
   <gux-toggle></gux-toggle>
 
   <gux-toggle checked></gux-toggle>
@@ -19,6 +26,19 @@
     checked
     checked-label="on"
     unchecked-label="off"
+    label-position="right"
+  ></gux-toggle>
+
+  <gux-toggle
+    checked-label="This is a long label for the toggle to test how it works"
+    unchecked-label="This is another long label for the toggle to test how it works"
+    label-position="left"
+  ></gux-toggle>
+
+  <gux-toggle
+    checked
+    checked-label="This is a long label for the toggle to test how it works"
+    unchecked-label="This is another long label for the toggle to test how it works"
     label-position="right"
   ></gux-toggle>
 </div>

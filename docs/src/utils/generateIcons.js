@@ -319,7 +319,10 @@ const icons = [
       'chevron-right'
     ]
   },
-  { sectionName: 'Sets', iconNames: ['transfer'] },
+  {
+    sectionName: 'Sets',
+    iconNames: ['transfer', 'close-circle', 'subtract-circle']
+  },
   {
     sectionName: 'Charts',
     iconNames: [

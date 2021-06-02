@@ -477,9 +477,8 @@ export class GuxDatepicker {
       });
     } else {
       const dateValue = fromIsoDate(this.value);
-      const { map: map3, regexp: regexp3 } = this.getMapAndRegexFromField(
-        dateValue
-      );
+      const { map: map3, regexp: regexp3 } =
+        this.getMapAndRegexFromField(dateValue);
       this.formatedValue = this.format.replace(regexp3, match => {
         return map3[match];
       });
@@ -618,19 +617,17 @@ export class GuxDatepicker {
               >
                 <gux-icon decorative icon-name="calendar"></gux-icon>
               </button>
-              <gux-calendar
-                ref={(el: HTMLGuxCalendarElement) =>
-                  (this.calendarElement = el)
-                }
-                value={this.value}
-                mode={this.mode}
-                onInput={(event: CustomEvent) => this.onCalendarSelect(event)}
-                minDate={this.minDate}
-                maxDate={this.maxDate}
-                firstDayOfWeek={this.firstDayOfWeek}
-                numberOfMonths={this.numberOfMonths}
-              />
             </gux-text-field-legacy>
+            <gux-calendar
+              ref={(el: HTMLGuxCalendarElement) => (this.calendarElement = el)}
+              value={this.value}
+              mode={this.mode}
+              onInput={(event: CustomEvent) => this.onCalendarSelect(event)}
+              minDate={this.minDate}
+              maxDate={this.maxDate}
+              firstDayOfWeek={this.firstDayOfWeek}
+              numberOfMonths={this.numberOfMonths}
+            />
           </gux-text-label>
         </div>
         {this.mode === CalendarModes.Range && (

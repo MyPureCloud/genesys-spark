@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
 
 // Style
 gux-popover {
@@ -9,8 +10,9 @@ gux-popover {
     display: flex;
     flex-direction: column;
     background-color: @gux-type-dark;
-    border: 1px @gux-border;
-    box-shadow: 0 0 2px fade(@gux-black-30, 24%);
+    border: 1px solid @gux-grey-30;
+    border-radius: 4px;
+    .shadow-20();
   }
 
   .gux-arrow,
@@ -38,7 +40,7 @@ gux-popover {
 
     .gux-arrow {
       margin-top: -12px;
-      border-bottom-color: @gux-border;
+      border-bottom-color: @gux-grey-30;
 
       &::after {
         margin-top: -2px;
@@ -55,11 +57,11 @@ gux-popover {
 
     .gux-arrow {
       bottom: 0;
-      margin-bottom: -12px;
-      border-top-color: @gux-border;
+      margin-bottom: -11px;
+      border-top-color: @gux-grey-30;
 
       &::after {
-        margin-top: -6px;
+        margin-top: -7px;
         margin-left: -4px;
         border-top-color: @gux-type-dark;
       }
@@ -73,12 +75,12 @@ gux-popover {
 
     .gux-arrow {
       right: 0;
-      margin-right: -12px;
-      border-left-color: @gux-border;
+      margin-right: -11px;
+      border-left-color: @gux-grey-30;
 
       &::after {
         margin-top: -4px;
-        margin-left: -6px;
+        margin-left: -7px;
         border-left-color: @gux-type-dark;
       }
     }
@@ -91,7 +93,7 @@ gux-popover {
 
     .gux-arrow {
       margin-left: -12px;
-      border-right-color: @gux-border;
+      border-right-color: @gux-grey-30;
 
       &::after {
         margin-top: -4px;
