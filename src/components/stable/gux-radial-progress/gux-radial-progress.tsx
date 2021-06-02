@@ -33,12 +33,6 @@ export class GuxRadialProgress {
   @Prop()
   screenreaderText: string = '';
 
-  /**
-   * Optional value to specify if the component is being used to represent a static meter element.
-   */
-  @Prop()
-  meter: boolean = false;
-
   private dropshadowId = `dropshadow-${idCounter++}`;
 
   componentWillLoad(): void {
@@ -58,12 +52,7 @@ export class GuxRadialProgress {
 
   render(): JSX.Element {
     return this.canShowPercentage(this.value, this.max)
-      ? this.showPercentageState(
-          this.value,
-          this.max,
-          this.screenreaderText,
-          this.meter
-        )
+      ? this.showPercentageState(this.value, this.max, this.screenreaderText)
       : this.showSpinnerState(this.screenreaderText);
   }
 
@@ -71,15 +60,10 @@ export class GuxRadialProgress {
     return !(isNaN(value) || isNaN(max) || value > max || value < 0);
   }
 
-  private showPercentageState(
-    value,
-    max,
-    screenreaderText,
-    meter
-  ): JSX.Element {
+  private showPercentageState(value, max, screenreaderText): JSX.Element {
     return (
       <div
-        role={meter ? 'meter' : 'progressbar'}
+        role="progressbar"
         aria-valuenow={value}
         aria-valuemin="0"
         aria-valuemax={max}
