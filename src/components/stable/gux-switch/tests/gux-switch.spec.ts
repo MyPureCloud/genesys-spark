@@ -1,5 +1,4 @@
 import { newSpecPage } from '@stencil/core/testing';
-import '../../../../components';
 
 import { GuxSwitch } from '../gux-switch';
 import { GuxSwitchItem } from '../gux-switch-item/gux-switch-item';

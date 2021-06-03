@@ -1,5 +1,4 @@
 import { newSpecPage } from '@stencil/core/testing';
-import '../../../../components';
 
 import { GuxFlyoutMenu } from '../gux-flyout-menu';
 import { GuxMenu } from '../gux-menu/gux-menu';

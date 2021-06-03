@@ -1,5 +1,4 @@
 import { newE2EPage } from '@stencil/core/testing';
-import '../../../../components';
 
 describe('gux-flyout-menu', () => {
   const html = `
