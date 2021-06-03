@@ -15,6 +15,7 @@ import {
 import {
   HTMLGuxMenuItemElement,
   hideDelay,
+  moveFocusDelay,
   menuNavigation
 } from '../gux-menu.common';
 
@@ -60,16 +61,13 @@ export class GuxSubmenu {
     menuNavigation(event, this.root);
     switch (event.key) {
       case 'Enter':
-      case ' ':
         if (!this.isShown) {
           event.stopPropagation();
-
           this.show();
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              this.focusOnSubmenu();
-            });
-          });
+          this.hideDelayTimeout = setTimeout(() => {
+            this.focusOnSubmenu();
+          }, moveFocusDelay);
+
           break;
         } else {
           event.stopPropagation();
@@ -82,11 +80,9 @@ export class GuxSubmenu {
         event.stopPropagation();
 
         this.show();
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            this.focusOnSubmenu();
-          });
-        });
+        this.hideDelayTimeout = setTimeout(() => {
+          this.focusOnSubmenu();
+        }, moveFocusDelay);
         break;
 
       case 'ArrowLeft':
@@ -98,6 +94,27 @@ export class GuxSubmenu {
         this.guxFocus();
         this.hide();
         break;
+    }
+  }
+
+  @Listen('keyup')
+  onKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case ' ':
+        if (!this.isShown) {
+          event.stopPropagation();
+          this.show();
+          this.hideDelayTimeout = setTimeout(() => {
+            this.focusOnSubmenu();
+          }, moveFocusDelay);
+
+          break;
+        } else {
+          event.stopPropagation();
+          this.guxFocus();
+          this.hide();
+          break;
+        }
     }
   }
 
@@ -119,6 +136,22 @@ export class GuxSubmenu {
     }
 
     event.stopPropagation();
+  }
+
+  @Listen('focusout')
+  onFocusOut(event) {
+    if (!event.relatedTarget) {
+      this.hide();
+    } else if (
+      !(
+        event.relatedTarget.parentElement.nodeName.toLowerCase() ===
+          'gux-submenu' ||
+        event.relatedTarget.parentElement.nodeName.toLowerCase() ===
+          'gux-menu-option'
+      )
+    ) {
+      this.hide();
+    }
   }
 
   private show(): void {

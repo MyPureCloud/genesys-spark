@@ -27,6 +27,15 @@ export class GuxMenuOption {
     switch (event.key) {
       case 'ArrowRight':
       case 'Enter':
+        event.stopPropagation();
+
+        break;
+    }
+  }
+
+  @Listen('keyup')
+  onKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
       case ' ':
         event.stopPropagation();
 

@@ -12,7 +12,11 @@ import {
 
 import { trackComponent } from '../../../usage-tracking';
 
-import { HTMLGuxMenuItemElement, hideDelay } from './gux-menu/gux-menu.common';
+import {
+  HTMLGuxMenuItemElement,
+  hideDelay,
+  moveFocusDelay
+} from './gux-menu/gux-menu.common';
 
 @Component({
   styleUrl: 'gux-flyout-menu.less',
@@ -49,8 +53,6 @@ export class GuxFlyoutMenu {
         case 'Escape':
         case 'ArrowLeft':
         case 'ArrowUp':
-        case 'Enter':
-        case ' ':
           this.hide();
           this.root.focus();
           return;
@@ -66,14 +68,27 @@ export class GuxFlyoutMenu {
     } else {
       switch (event.key) {
         case 'Enter':
-        case ' ':
         case 'ArrowDown':
           this.show();
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              this.focusOnMenu();
-            });
-          });
+          this.hideDelayTimeout = setTimeout(() => {
+            this.focusOnMenu();
+          }, moveFocusDelay);
+          return;
+      }
+    }
+  }
+
+  @Listen('keyup')
+  onKeyup(event: KeyboardEvent): void {
+    event.stopPropagation();
+
+    if (!this.isShown) {
+      switch (event.key) {
+        case ' ':
+          this.show();
+          this.hideDelayTimeout = setTimeout(() => {
+            this.focusOnMenu();
+          }, moveFocusDelay);
           return;
       }
     }
@@ -93,6 +108,22 @@ export class GuxFlyoutMenu {
   onClick() {
     this.hide();
     this.root.focus();
+  }
+
+  @Listen('focusout')
+  onFocusOut(event) {
+    if (!event.relatedTarget) {
+      this.hide();
+    } else if (
+      !(
+        event.relatedTarget.parentElement.nodeName.toLowerCase() ===
+          'gux-submenu' ||
+        event.relatedTarget.parentElement.nodeName.toLowerCase() ===
+          'gux-menu-option'
+      )
+    ) {
+      this.hide();
+    }
   }
 
   private show(): void {
