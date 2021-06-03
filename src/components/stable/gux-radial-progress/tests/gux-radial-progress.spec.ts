@@ -20,18 +20,18 @@ describe('gux-radial-progress', () => {
 
   describe('#render', () => {
     [
-      '<gux-radial-progress screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="0" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="10" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="100" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="123" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="200" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="10" max="100" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="10" max="10" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="test" max="100" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="-123" max="100" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="200" max="100" screenreader-text="Loading"></gux-radial-progress>',
-      '<gux-radial-progress value="10" max="test" screenreader-text="Loading"></gux-radial-progress>'
+      '<gux-radial-progress screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="0" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="10" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="100" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="123" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="200" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="10" max="100" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="10" max="10" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="test" max="100" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="-123" max="100" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="200" max="100" screenreader-text="Uploading file"></gux-radial-progress>',
+      '<gux-radial-progress value="10" max="test" screenreader-text="Uploading file"></gux-radial-progress>'
     ].forEach((input, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({
