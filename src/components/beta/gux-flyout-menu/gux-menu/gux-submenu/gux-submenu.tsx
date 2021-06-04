@@ -61,20 +61,12 @@ export class GuxSubmenu {
     menuNavigation(event, this.root);
     switch (event.key) {
       case 'Enter':
-        if (!this.isShown) {
-          event.stopPropagation();
-          this.show();
-          this.hideDelayTimeout = setTimeout(() => {
-            this.focusOnSubmenu();
-          }, moveFocusDelay);
+        this.hideDelayTimeout = setTimeout(() => {
+          this.focusOnSubmenu();
+        }, moveFocusDelay);
 
-          break;
-        } else {
-          event.stopPropagation();
-          this.guxFocus();
-          this.hide();
-          break;
-        }
+        this.guxFocus();
+        break;
 
       case 'ArrowRight':
         event.stopPropagation();
@@ -87,12 +79,11 @@ export class GuxSubmenu {
 
       case 'ArrowLeft':
       case 'Escape':
-        if (this.isShown) {
+        if (this.submenuContentElement.contains(event.target as Node)) {
           event.stopPropagation();
         }
 
         this.guxFocus();
-        this.hide();
         break;
     }
   }
@@ -101,20 +92,15 @@ export class GuxSubmenu {
   onKeyup(event: KeyboardEvent): void {
     switch (event.key) {
       case ' ':
-        if (!this.isShown) {
-          event.stopPropagation();
-          this.show();
+        event.stopPropagation();
+        if (this.submenuContentElement.contains(document.activeElement)) {
+          this.root.focus();
+        } else {
           this.hideDelayTimeout = setTimeout(() => {
             this.focusOnSubmenu();
           }, moveFocusDelay);
-
-          break;
-        } else {
-          event.stopPropagation();
-          this.guxFocus();
-          this.hide();
-          break;
         }
+        break;
     }
   }
 
@@ -138,20 +124,14 @@ export class GuxSubmenu {
     event.stopPropagation();
   }
 
+  @Listen('focusin')
+  onFocusin() {
+    this.show();
+  }
+
   @Listen('focusout')
-  onFocusOut(event) {
-    if (!event.relatedTarget) {
-      this.hide();
-    } else if (
-      !(
-        event.relatedTarget.parentElement.nodeName.toLowerCase() ===
-          'gux-submenu' ||
-        event.relatedTarget.parentElement.nodeName.toLowerCase() ===
-          'gux-menu-option'
-      )
-    ) {
-      this.hide();
-    }
+  onFocusout() {
+    this.hide();
   }
 
   private show(): void {
