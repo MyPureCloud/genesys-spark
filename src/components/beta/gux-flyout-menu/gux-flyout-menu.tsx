@@ -53,7 +53,6 @@ export class GuxFlyoutMenu {
         case 'Escape':
         case 'ArrowLeft':
         case 'ArrowUp':
-          this.hide();
           this.root.focus();
           return;
 
@@ -61,15 +60,7 @@ export class GuxFlyoutMenu {
           this.focusOnMenu();
           return;
 
-        case 'Tab':
-          this.hide();
-          return;
-      }
-    } else {
-      switch (event.key) {
         case 'Enter':
-        case 'ArrowDown':
-          this.show();
           this.hideDelayTimeout = setTimeout(() => {
             this.focusOnMenu();
           }, moveFocusDelay);
@@ -81,16 +72,12 @@ export class GuxFlyoutMenu {
   @Listen('keyup')
   onKeyup(event: KeyboardEvent): void {
     event.stopPropagation();
-
-    if (!this.isShown) {
-      switch (event.key) {
-        case ' ':
-          this.show();
-          this.hideDelayTimeout = setTimeout(() => {
-            this.focusOnMenu();
-          }, moveFocusDelay);
-          return;
-      }
+    switch (event.key) {
+      case ' ':
+        this.hideDelayTimeout = setTimeout(() => {
+          this.focusOnMenu();
+        }, moveFocusDelay);
+        return;
     }
   }
 
@@ -105,25 +92,21 @@ export class GuxFlyoutMenu {
   }
 
   @Listen('click')
-  onClick() {
-    this.hide();
+  onClick(event) {
+    if (event.detail !== 0) {
+      this.hide();
+    }
     this.root.focus();
   }
 
+  @Listen('focusin')
+  onFocusin() {
+    this.show();
+  }
+
   @Listen('focusout')
-  onFocusOut(event) {
-    if (!event.relatedTarget) {
-      this.hide();
-    } else if (
-      !(
-        event.relatedTarget.parentElement.nodeName.toLowerCase() ===
-          'gux-submenu' ||
-        event.relatedTarget.parentElement.nodeName.toLowerCase() ===
-          'gux-menu-option'
-      )
-    ) {
-      this.hide();
-    }
+  onFocusout() {
+    this.hide();
   }
 
   private show(): void {

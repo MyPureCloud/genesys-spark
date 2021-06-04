@@ -33,16 +33,6 @@ export class GuxMenuOption {
     }
   }
 
-  @Listen('keyup')
-  onKeyup(event: KeyboardEvent): void {
-    switch (event.key) {
-      case ' ':
-        event.stopPropagation();
-
-        break;
-    }
-  }
-
   render(): JSX.Element {
     return (
       <button
