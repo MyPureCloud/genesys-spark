@@ -9,27 +9,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* **gux-form-field:** adding aria-describedby to inputs with errors, small updates based on comments ([500c6ac](http://inindca///commit/500c6ac9382d5c02bb961db5982b27a4d4946cc0))
-* **gux-form-field:** adding error function to new search input ([39ff9c2](http://inindca///commit/39ff9c27a134a08c271e700360432bd7a21865ab))
 * **gux-form-field:** adding error message and styling ([ac4f1b3](http://inindca///commit/ac4f1b327fa88878abde28fefb4a4c16fdedeb4f))
-* **gux-form-field:** adding errors to new select field ([0d93fa9](http://inindca///commit/0d93fa9bf0ab9e3ccd1bcc0a2e9db8ac498eccad))
-* **gux-form-field:** adding fix for e2e tests ([b6ef952](http://inindca///commit/b6ef952be370bd666996e0107d5b5bb67864be2e))
-* **gux-form-field:** adding mock for math.random ([5805a24](http://inindca///commit/5805a24fdeca35ad4071ac8022aa649bd5d1d8a3))
-* **gux-form-field:** fixing checkbox error by building svg with alert fill color ([40e710d](http://inindca///commit/40e710d36ac41523b82299884b069d3e0b09fef8))
-* **gux-form-field:** fixing class on range field ([a75973d](http://inindca///commit/a75973de69597dc3f86ce1f6fd640d0b3e5c4694))
-* **gux-form-field:** fixing spacing issues with checkboxes ([973c2d8](http://inindca///commit/973c2d848094650c1ca10e578e393685ab71c821))
-* **gux-form-field:** fixing spacing issues with checkboxes ([9364c49](http://inindca///commit/9364c49c108d27d5199414443c5e071e93e51014))
-* **gux-form-field:** fixing text area again ([1bf65e4](http://inindca///commit/1bf65e4ab569c304a350f9646dca74b9e94cfc2f))
-* **gux-form-field:** moving error icon logic to separate function, fixing issue with text area ([ecfe8fb](http://inindca///commit/ecfe8fb21bd7dd1e1d78c0067733e0c80f983d34))
-* **gux-form-field:** moving rest of error stuff to new function ([172ad0d](http://inindca///commit/172ad0d5988435e1ff214b7db8ec4509a57444e0))
-* **gux-form-field:** pushing lockfile change ([6c08081](http://inindca///commit/6c080814a606e7197def860da1145155a39c5f00))
-* **gux-form-field:** pushing lockfile change and updated snapshot ([d9a42d4](http://inindca///commit/d9a42d49f28813b660c83243435782624f2403b4))
-* **gux-form-field:** refactoring based on comments, fixing issue with html5 validation popups ([ebe08c1](http://inindca///commit/ebe08c1bc6a9d12ac3abbbf28fe172002005b7e3))
-* **gux-form-field:** removing unused snapshot ([ee86be6](http://inindca///commit/ee86be6da238895622522793cec2e21c4d83718c))
-* **gux-form-field:** switch to using gux-error-message-beta ([e306744](http://inindca///commit/e306744a607390df07145319515a8a5c1973a319))
-* **gux-form-field:** updating snapshots ([3c15a9a](http://inindca///commit/3c15a9a06e8b9c2fd7e16409852193eac29422fa))
-* **gux-form-field:** updating snapshots ([4e63bd3](http://inindca///commit/4e63bd33510dabcf23c6b760f29df3e06135aa7e))
-* **gux-form-field:** updating spec snapshot ([6287adc](http://inindca///commit/6287adc7a4d9b95a9702ba0ebda0f569a2425079))
 
 ## [2.17.0](http://inindca///compare/v2.16.2...v2.17.0) (2021-06-01)
 
