@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.19.0](http://inindca///compare/v2.18.2...v2.19.0) (2021-06-09)
+
+
+### Features
+
+* **gux-radial-loading:** improve accessibility ([5a623e8](http://inindca///commit/5a623e8f1e2c892dc7d3db29d955d66b98a41cc7))
+* **gux-radial-progress:** improve accessibility ([44c057a](http://inindca///commit/44c057afa74e4c43a2fb204f74b1d171636b92ee))
+
+
+### Bug Fixes
+
+* **pr-comments:** addressed PR comments and updated tests ([6e11ba7](http://inindca///commit/6e11ba73ccc36461070e80b6cad672bf6c99d5db))
+
 ### [2.18.2](http://inindca///compare/v2.18.1...v2.18.2) (2021-06-08)
 
 ### [2.18.1](http://inindca///compare/v2.18.0...v2.18.1) (2021-06-03)
