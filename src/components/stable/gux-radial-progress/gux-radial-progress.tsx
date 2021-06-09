@@ -27,35 +27,54 @@ export class GuxRadialProgress {
   @Prop()
   max: number = 100;
 
+  /**
+   * Required localized text to provide an accessible label for the component
+   */
+  @Prop()
+  screenreaderText: string = '';
+
   private dropshadowId = `dropshadow-${idCounter++}`;
 
   componentWillLoad(): void {
     trackComponent(this.root);
   }
 
+  componentDidLoad(): void {
+    if (
+      !this.screenreaderText &&
+      this.canShowPercentage(this.value, this.max)
+    ) {
+      throw new Error(
+        '[gux-radial-progress] No screenreader-text provided. Provide a localized screenreader-text property for the component.'
+      );
+    }
+  }
+
   render(): JSX.Element {
     return this.canShowPercentage(this.value, this.max)
-      ? this.showPercentageState(this.value, this.max)
-      : this.showSpinnerState();
+      ? this.showPercentageState(this.value, this.max, this.screenreaderText)
+      : this.showSpinnerState(this.screenreaderText);
   }
 
   private canShowPercentage(value, max) {
     return !(isNaN(value) || isNaN(max) || value > max || value < 0);
   }
 
-  private showPercentageState(value, max): JSX.Element {
+  private showPercentageState(value, max, screenreaderText): JSX.Element {
     return (
       <div
         role="progressbar"
         aria-valuenow={value}
         aria-valuemin="0"
         aria-valuemax={max}
+        aria-label={screenreaderText}
       >
         <svg
           class="gux-svg-container"
           width="60px"
           height="60px"
           viewBox="0 0 60 60"
+          role="presentation"
         >
           <filter id={this.dropshadowId}>
             <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
@@ -89,7 +108,12 @@ export class GuxRadialProgress {
     );
   }
 
-  private showSpinnerState(): JSX.Element {
-    return <gux-radial-loading context="modal"></gux-radial-loading>;
+  private showSpinnerState(screenreaderText): JSX.Element {
+    return (
+      <gux-radial-loading
+        screenreader-text={screenreaderText}
+        context="modal"
+      ></gux-radial-loading>
+    );
   }
 }

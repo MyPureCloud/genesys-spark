@@ -5,6 +5,13 @@ A simple loading spinner for loading pages.
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property           | Attribute           | Description                                                                                                                                                  | Type     | Default |
+| ------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | ------- |
+| `screenreaderText` | `screenreader-text` | Localized text to provide an accessible label for the component. If no screenreader text is provided, the localized string "Loading" will be used by default | `string` | `''`    |
+
+
 ## Dependencies
 
 ### Depends on
