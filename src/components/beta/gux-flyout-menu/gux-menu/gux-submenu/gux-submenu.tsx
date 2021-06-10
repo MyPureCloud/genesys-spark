@@ -88,6 +88,8 @@ export class GuxSubmenu {
     }
   }
 
+  // Using 'keyup' here because the native click handler behavior
+  // for buttons is triggered on keyup when using the space key
   @Listen('keyup')
   onKeyup(event: KeyboardEvent): void {
     switch (event.key) {

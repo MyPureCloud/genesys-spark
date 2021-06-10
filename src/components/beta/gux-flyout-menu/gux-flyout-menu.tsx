@@ -69,6 +69,8 @@ export class GuxFlyoutMenu {
     }
   }
 
+  // Using 'keyup' here because the native click handler behavior
+  // for buttons is triggered on keyup when using the space key
   @Listen('keyup')
   onKeyup(event: KeyboardEvent): void {
     event.stopPropagation();
