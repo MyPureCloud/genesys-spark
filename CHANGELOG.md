@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.19.1](http://inindca///compare/v2.19.0...v2.19.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **gux-disclosure-button:** gux class name added for the css selector to avoid conflicts ([faa4338](http://inindca///commit/faa43386e1b44fbe0daf0f3481a71225ea7f0f7d))
+* **gux-error-message-beta:** improved error message appearance ([5ee3a63](http://inindca///commit/5ee3a633a35bfb7214f3b5890bae2d1aad171ab8))
+
 ## [2.19.0](http://inindca///compare/v2.18.2...v2.19.0) (2021-06-09)
 
 
