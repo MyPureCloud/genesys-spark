@@ -316,7 +316,7 @@ export class GuxDropdown {
         <div
           class={`gux-options ${this.opened ? 'gux-opened' : ''}`}
           onClick={this._optionClickedHandler.bind(this)}
-          onFocusIn={this._optionFocusedHandler.bind(this)}
+          onFocusin={this._optionFocusedHandler.bind(this)}
           onKeyDown={this._optionKeyDownHandler.bind(this)}
         >
           <slot />
