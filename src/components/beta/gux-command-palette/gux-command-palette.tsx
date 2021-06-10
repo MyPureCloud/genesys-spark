@@ -5,7 +5,7 @@ import paletteResources from './i18n/en.json';
 import { trackComponent } from '../../../usage-tracking';
 
 const filterLimit = 50;
-const animationDuration = 300; // this 300ms duration must be kept in sync with the 300ms transition in the CSS
+const animationDuration = 300; // this 300ms duration must be kept in sync with the 300ms transition in the CSS and delay in the e2e tests
 
 function sortActions(
   items: HTMLGuxCommandActionElement[]
