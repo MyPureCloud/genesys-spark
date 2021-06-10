@@ -113,8 +113,10 @@ export class GuxFormField {
 
   private getInputColor(hasError: boolean): JSX.Element {
     return (
-      <div class="gux-label-and-input-and-error-container">
-        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+      <div
+        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+      >
+        <div class="gux-label-and-input-container">
           <div
             class={{
               'gux-label-container': true,
@@ -142,8 +144,10 @@ export class GuxFormField {
     valueInTooltip: boolean
   ): JSX.Element {
     return (
-      <div class="gux-label-and-input-and-error-container">
-        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+      <div
+        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+      >
+        <div class="gux-label-and-input-container">
           <div
             class={{
               'gux-label-container': true,
@@ -165,8 +169,10 @@ export class GuxFormField {
 
   private getInputNumber(clearable: boolean, hasError: boolean): JSX.Element {
     return (
-      <div class="gux-label-and-input-and-error-container">
-        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+      <div
+        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+      >
+        <div class="gux-label-and-input-container">
           <div
             class={{
               'gux-label-container': true,
@@ -193,8 +199,10 @@ export class GuxFormField {
 
   private getInputSelect(hasError: boolean): JSX.Element {
     return (
-      <div class="gux-label-and-input-and-error-container">
-        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+      <div
+        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+      >
+        <div class="gux-label-and-input-container">
           <div
             class={{
               'gux-label-container': true,
@@ -220,8 +228,10 @@ export class GuxFormField {
 
   private getInputTextLike(clearable: boolean, hasError: boolean): JSX.Element {
     return (
-      <div class="gux-label-and-input-and-error-container">
-        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+      <div
+        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+      >
+        <div class="gux-label-and-input-container">
           <div
             class={{
               'gux-label-container': true,
@@ -248,8 +258,10 @@ export class GuxFormField {
 
   private getInputSearch(hasError: boolean): JSX.Element {
     return (
-      <div class="gux-label-and-input-and-error-container">
-        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+      <div
+        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+      >
+        <div class="gux-label-and-input-container">
           <div
             class={{
               'gux-label-container': true,
@@ -269,8 +281,10 @@ export class GuxFormField {
 
   private getInputTextArea(hasError: boolean): JSX.Element {
     return (
-      <div class="gux-label-and-input-and-error-container">
-        <div class={`gux-label-and-input-container gux-${this.labelPosition}`}>
+      <div
+        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+      >
+        <div class="gux-label-and-input-container">
           <div
             class={{
               'gux-label-container': true,
