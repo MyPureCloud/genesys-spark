@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.19.2](http://inindca///compare/v2.19.1...v2.19.2) (2021-06-11)
+
+
+### Bug Fixes
+
+* **gux-tooltip:** recalculate position before showing ([446250d](http://inindca///commit/446250d72a66a36e183ef91021d1cc1a1ea5be55))
+
 ### [2.19.1](http://inindca///compare/v2.19.0...v2.19.1) (2021-06-10)
 
 
