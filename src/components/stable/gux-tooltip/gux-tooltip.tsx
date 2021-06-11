@@ -53,6 +53,7 @@ export class GuxTooltip {
   }
 
   private show(): void {
+    this.popperInstance.forceUpdate();
     this.delayTimeout = setTimeout(() => {
       this.isShown = true;
     }, 750); // the css transition is 250ms
