@@ -14,9 +14,9 @@
 
 ## Events
 
-| Event                     | Description | Type               |
-| ------------------------- | ----------- | ------------------ |
-| `internalrowselectchange` |             | `CustomEvent<any>` |
+| Event                        | Description | Type               |
+| ---------------------------- | ----------- | ------------------ |
+| `internalallrowselectchange` |             | `CustomEvent<any>` |
 
 
 ## Dependencies
@@ -28,7 +28,7 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-row-select --> gux-form-field
+  gux-all-row-select --> gux-form-field
   gux-form-field --> gux-input-checkbox
   gux-form-field --> gux-input-radio
   gux-form-field --> gux-input-color
@@ -47,7 +47,7 @@ graph TD;
   gux-input-text-like --> gux-icon
   gux-input-search --> gux-icon
   gux-error-message-beta --> gux-icon
-  style gux-row-select fill:#f9f,stroke:#333,stroke-width:4px
+  style gux-all-row-select fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

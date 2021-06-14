@@ -14,21 +14,21 @@ import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 import tableResources from '../i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-row-select.less',
-  tag: 'gux-row-select'
+  styleUrl: 'gux-all-row-select.less',
+  tag: 'gux-all-row-select'
 })
-export class GuxRowSelect {
+export class GuxAllRowSelect {
   @Element()
   root: HTMLElement;
 
-  private id: string = randomHTMLId('gux-row-select');
+  private id: string = randomHTMLId('gux-all-row-select');
   private i18n: GetI18nValue;
 
   @Prop({ mutable: true })
   selected = false;
 
   @Event()
-  internalrowselectchange: EventEmitter;
+  internalallrowselectchange: EventEmitter;
 
   @Listen('input')
   onCheck(event: CustomEvent): void {
@@ -37,7 +37,7 @@ export class GuxRowSelect {
     const input = event.target as HTMLInputElement;
 
     this.selected = input.checked;
-    this.internalrowselectchange.emit();
+    this.internalallrowselectchange.emit();
   }
 
   async componentWillLoad(): Promise<void> {
@@ -55,7 +55,7 @@ export class GuxRowSelect {
         />
         <label slot="label" htmlFor={this.id}>
           &#8203;
-          <span class="gux-label-text">{this.i18n('selectTableRow')}</span>
+          <span class="gux-label-text">{this.i18n('selectAllTableRows')}</span>
         </label>
       </gux-form-field>
     );
