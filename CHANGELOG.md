@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.20.0](http://inindca///compare/v2.19.2...v2.20.0) (2021-06-14)
+
+
+### Features
+
+* **gux-flyout-menu:** improving accessibility ([7cf40d7](http://inindca///commit/7cf40d7708c741d905edee211d0d29e7dabff4ce))
+* **gux-flyout-menu:** improving accessibility ([5242549](http://inindca///commit/5242549c2f976362ef31fd48c42bfa1a2a51d0be))
+
+
+### Bug Fixes
+
+* **gux-flyout-menu:** updating snapshots ([d153ca7](http://inindca///commit/d153ca72dbe5d8dc716dc80831f3ed01d9cd30bf))
+
 ### [2.19.2](http://inindca///compare/v2.19.1...v2.19.2) (2021-06-11)
 
 
