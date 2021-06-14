@@ -15,6 +15,7 @@ import {
 import {
   HTMLGuxMenuItemElement,
   hideDelay,
+  moveFocusDelay,
   menuNavigation
 } from '../gux-menu.common';
 
@@ -59,23 +60,48 @@ export class GuxSubmenu {
   onKeydown(event: KeyboardEvent): void {
     menuNavigation(event, this.root);
     switch (event.key) {
-      case 'ArrowRight':
       case 'Enter':
-      case ' ':
+        this.hideDelayTimeout = setTimeout(() => {
+          this.focusOnSubmenu();
+        }, moveFocusDelay);
+
+        this.guxFocus();
+        break;
+
+      case 'ArrowRight':
         event.stopPropagation();
 
         this.show();
-        this.focusOnSubmenu();
+        this.hideDelayTimeout = setTimeout(() => {
+          this.focusOnSubmenu();
+        }, moveFocusDelay);
         break;
 
       case 'ArrowLeft':
       case 'Escape':
-        if (this.isShown) {
+        if (this.submenuContentElement.contains(event.target as Node)) {
           event.stopPropagation();
         }
 
         this.guxFocus();
-        this.hide();
+        break;
+    }
+  }
+
+  // Using 'keyup' here because the native click handler behavior
+  // for buttons is triggered on keyup when using the space key
+  @Listen('keyup')
+  onKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case ' ':
+        event.stopPropagation();
+        if (this.submenuContentElement.contains(document.activeElement)) {
+          this.root.focus();
+        } else {
+          this.hideDelayTimeout = setTimeout(() => {
+            this.focusOnSubmenu();
+          }, moveFocusDelay);
+        }
         break;
     }
   }
@@ -93,6 +119,7 @@ export class GuxSubmenu {
   @Listen('click')
   onClick(event: MouseEvent) {
     if (this.submenuContentElement.contains(event.target as Node)) {
+      this.hide();
       return;
     }
 
@@ -176,10 +203,11 @@ export class GuxSubmenu {
         <button
           type="button"
           class="gux-submenu-button"
+          role="menuitem"
           tabIndex={-1}
           ref={el => (this.buttonElement = el)}
           aria-haspopup="true"
-          aria-expanded={this.isShown}
+          aria-expanded={this.isShown.toString()}
         >
           <span class="gux-submenu-button-text">{this.label}</span>
           <gux-icon

@@ -5,6 +5,17 @@
 gux-flyout-menu-beta {
   z-index: 2;
   color: @gux-type;
+  cursor: default;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    * [slot='target'] {
+      .focus-ring();
+    }
+  }
 
   .gux-flyout-menu-wrapper {
     display: none;

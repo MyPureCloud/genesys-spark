@@ -26,6 +26,7 @@ export class GuxMenuOption {
 
     switch (event.key) {
       case 'ArrowRight':
+      case 'Enter':
         event.stopPropagation();
 
         break;
@@ -38,6 +39,7 @@ export class GuxMenuOption {
         type="button"
         class="gux-menu-option-button"
         role="menuitem"
+        aria-haspopup="false"
         tabIndex={-1}
         ref={el => (this.buttonElement = el)}
       >

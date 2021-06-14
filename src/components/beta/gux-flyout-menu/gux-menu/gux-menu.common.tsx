@@ -3,6 +3,7 @@ export type HTMLGuxMenuItemElement =
   | HTMLGuxSubmenuElement;
 
 export const hideDelay = 250;
+export const moveFocusDelay = 100;
 
 export function menuNavigation(
   event: KeyboardEvent,
@@ -70,7 +71,8 @@ function focusLastSibling(currentElement: Element): void {
 }
 
 function focusPreviousSiblingLoop(currentElement: Element): void {
-  const previousFocusableElement = currentElement.previousElementSibling as HTMLGuxMenuOptionElement;
+  const previousFocusableElement =
+    currentElement.previousElementSibling as HTMLGuxMenuOptionElement;
 
   if (previousFocusableElement) {
     previousFocusableElement.guxFocus();
@@ -80,7 +82,8 @@ function focusPreviousSiblingLoop(currentElement: Element): void {
 }
 
 function focusNextSiblingLoop(currentElement: Element): void {
-  const nextFocusableElement = currentElement.nextElementSibling as HTMLGuxMenuOptionElement;
+  const nextFocusableElement =
+    currentElement.nextElementSibling as HTMLGuxMenuOptionElement;
 
   if (nextFocusableElement) {
     nextFocusableElement.guxFocus();
