@@ -14,7 +14,7 @@ export function bootstrap() {
         <main>
             <nav class="components-list">
                 <div class="sticky-header">
-                    <header>Components</header>
+                    <h2>Components</h2>
                     <gux-form-field class="component-search-field">
                       <input
                         id="component-search-box"
