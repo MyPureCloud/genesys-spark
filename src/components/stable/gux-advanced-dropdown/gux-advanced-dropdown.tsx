@@ -27,7 +27,6 @@ export class GuxAdvancedDropdown {
   @Element()
   root: HTMLElement;
 
-  wrapperElement: HTMLElement;
   searchInput: HTMLInputElement;
   inputBox: HTMLElement;
   filterDebounceTimer: ReturnType<typeof setTimeout>;
@@ -60,10 +59,10 @@ export class GuxAdvancedDropdown {
   filterDebounceTimeout: number = 500;
 
   /**
-   * The max number of options to display without scrolling
+   * CSS string used to set the maximum height of the dropdown option container. Default is set to 10 options as defined by UX.
    */
   @Prop()
-  size: number = 10;
+  dropdownHeight: string = '320px';
 
   /**
    * Fires when the value of the advanced dropdown changes.
@@ -96,11 +95,6 @@ export class GuxAdvancedDropdown {
     if (this.opened && newValue) {
       this.closeDropdown(false);
     }
-  }
-
-  @Watch('size')
-  updateMaxOptions(newValue: number) {
-    this.setMaxVisibleOptions(newValue);
   }
 
   get value(): string {
@@ -147,17 +141,6 @@ export class GuxAdvancedDropdown {
     );
   }
 
-  componentDidLoad() {
-    this.setMaxVisibleOptions(this.size);
-  }
-
-  setMaxVisibleOptions(maxOptions: number) {
-    this.wrapperElement.style.setProperty(
-      '--max-options',
-      maxOptions.toString()
-    );
-  }
-
   disconnectedCallback() {
     this.slotObserver.disconnect();
   }
@@ -168,7 +151,6 @@ export class GuxAdvancedDropdown {
         class={`gux-dropdown
         ${this.disabled ? 'gux-disabled' : ''}
         ${this.opened ? 'gux-active' : ''}`}
-        ref={el => (this.wrapperElement = el)}
       >
         <div class="gux-select-field" onMouseDown={() => this.inputMouseDown()}>
           <a
@@ -210,6 +192,7 @@ export class GuxAdvancedDropdown {
 
             <div
               class="gux-dropdown-options"
+              style={{ maxHeight: this.dropdownHeight }}
               onKeyDown={e => this.optionsKeyDown(e)}
             >
               <slot />
