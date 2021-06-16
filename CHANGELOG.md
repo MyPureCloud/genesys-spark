@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.21.0](http://inindca///compare/v2.20.1...v2.21.0) (2021-06-16)
+
+
+### Features
+
+* **gux-row-select:** stopped using legacy component ([be2c5c3](http://inindca///commit/be2c5c3d262d21e38279fd613f9fa4e0f13e0fb4))
+
+
+### Bug Fixes
+
+* **gux-button:** rename the title prop to gux-title to prevent conflict with title attribute ([a664905](http://inindca///commit/a664905b921c89cdc54f55470659eafe5ce2217a))
+* **pr-comment:** addressed PR comment ([fd734d2](http://inindca///commit/fd734d266c0bf6f88018edbb50f1cb0d8fee4ac5))
+
 ### [2.20.1](http://inindca///compare/v2.20.0...v2.20.1) (2021-06-15)
 
 ## [2.20.0](http://inindca///compare/v2.19.2...v2.20.0) (2021-06-14)
