@@ -4,7 +4,7 @@ This repo contains a set of custom elements that can be used across Genesys' UIs
 
 ## Updates
 
-If you are a consumer of this library, please subscribe to the "Common UI Development" mailing list to recieve any
+If you are a consumer of this library, please subscribe to the "Common UI Development" mailing list to receive any
 important updates about breaking changes or upcoming releases. You can find instructions on how to subscribe to a
 new mailing list [here](https://intranet.genesys.com/spaces/viewspace.action?key=IC), under "Self-Service Email
 Distribution Groups"
@@ -15,9 +15,9 @@ At any given time there are three types of components present in the library:
 
 - **stable**: Most components fall into this category, and there will be no breaking api changes outside of a major release.
 - **beta**: New components where the API design is still being explored. Breaking changes _may_ happen without a major version change.
-- **legacy**: Old components that have been replaced by a new component, or a newer version of the component witn an incompatible API. These will be removed in the next major release.
+- **legacy**: Old components that have been replaced by a new component, or a newer version of the component with an incompatible API. These will be removed in the next major release.
 
-For more details on the component evolutin process see the full [documentation on the topic](./COMPONENT_EVOLUTION.md)
+For more details on the component evolution process see the full [documentation on the topic](./COMPONENT_EVOLUTION.md)
 
 ## Demo/Documentation
 
@@ -29,7 +29,7 @@ For more details on the component evolutin process see the full [documentation o
 
 Published artifacts are stored in our private artifactory/jfrog registry, so you will need to update your
 [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file to use artifactory. There are some
-[basic instructions](https://confluence.inin.com/display/PureCloud/Setting+up+.npmrc+for+Artifactory) availabe for
+[basic instructions](https://confluence.inin.com/display/PureCloud/Setting+up+.npmrc+for+Artifactory) available for
 this. This registry proxies the main NPM registry, but if you need to also use other private registries some
 manual editing of your configuration may be necessary. Please read up on the npmrc docs or ask around in one of
 the Genesys Cloud UI chat rooms if you need help with that.
