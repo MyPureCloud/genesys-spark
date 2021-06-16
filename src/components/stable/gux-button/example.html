@@ -1,43 +1,46 @@
 <h4>Enabled</h4>
 <div class="container">
-  <gux-button title="default" onclick="notify(event)">Default</gux-button>
-  <gux-button title="Primary" accent="primary" onclick="notify(event)"
+  <gux-button gux-title="default" onclick="notify(event)">Default</gux-button>
+  <gux-button gux-title="Primary" accent="primary" onclick="notify(event)"
     >Primary</gux-button
   >
-  <gux-button title="Secondary" accent="secondary" onclick="notify(event)"
+  <gux-button gux-title="Secondary" accent="secondary" onclick="notify(event)"
     >Secondary</gux-button
   >
-  <gux-button title="Tertiary" accent="tertiary" onclick="notify(event)"
+  <gux-button gux-title="Tertiary" accent="tertiary" onclick="notify(event)"
     >Tertiary</gux-button
   >
-  <gux-button title="Invalid accent" accent="invalid" onclick="notify(event)"
+  <gux-button
+    gux-title="Invalid accent"
+    accent="invalid"
+    onclick="notify(event)"
     >Invalid accent</gux-button
   >
-  <gux-button title="Slotted element" onclick="notify(event)">
+  <gux-button gux-title="Slotted element" onclick="notify(event)">
     <span>Text in a span element</span>
   </gux-button>
-  <gux-button title="Slotted element" onclick="notify(event)">
+  <gux-button gux-title="Slotted element" onclick="notify(event)">
     <gux-icon
       icon-name="trashcan"
       screenreader-text="This will be read by a screen reader"
     ></gux-icon>
   </gux-button>
-  <gux-button title="Slotted element" onclick="notify(event)">
+  <gux-button gux-title="Slotted element" onclick="notify(event)">
     <gux-icon icon-name="trashcan" decorative></gux-icon>
     <span>Text in a span element</span>
   </gux-button>
-  <gux-button title="Slotted element" onclick="notify(event)">
+  <gux-button gux-title="Slotted element" onclick="notify(event)">
     <span>Text in a span element</span>
     <span>More Text in a span element</span>
   </gux-button>
-  <gux-button title="Slotted element" onclick="notify(event)">
+  <gux-button gux-title="Slotted element" onclick="notify(event)">
     <span>
       <span>Text in a span element</span>
       <span>More Text in a span element</span>
     </span>
   </gux-button>
   <gux-button
-    title="Slotted element"
+    gux-title="Slotted element"
     style="width: 100px"
     onclick="notify(event)"
   >
@@ -46,7 +49,7 @@
   </gux-button>
 
   <gux-button
-    title="Slotted element"
+    gux-title="Slotted element"
     style="width: 100px"
     onclick="notify(event)"
   >
@@ -56,58 +59,62 @@
 
 <h4>Disabled</h4>
 <div class="container">
-  <gux-button title="default" disabled onclick="notify(event)"
+  <gux-button gux-title="default" disabled onclick="notify(event)"
     >Default</gux-button
   >
-  <gux-button title="Primary" accent="primary" disabled onclick="notify(event)"
+  <gux-button
+    gux-title="Primary"
+    accent="primary"
+    disabled
+    onclick="notify(event)"
     >Primary</gux-button
   >
   <gux-button
-    title="Secondary"
+    gux-title="Secondary"
     accent="secondary"
     disabled
     onclick="notify(event)"
     >Secondary</gux-button
   >
   <gux-button
-    title="Tertiary"
+    gux-title="Tertiary"
     accent="tertiary"
     disabled
     onclick="notify(event)"
     >Tertiary</gux-button
   >
   <gux-button
-    title="Invalid accent"
+    gux-title="Invalid accent"
     accent="invalid"
     disabled
     onclick="notify(event)"
     >Invalid accent</gux-button
   >
-  <gux-button title="Slotted element" disabled onclick="notify(event)">
+  <gux-button gux-title="Slotted element" disabled onclick="notify(event)">
     <span>Text in a span element</span>
   </gux-button>
-  <gux-button title="Slotted element" disabled onclick="notify(event)">
+  <gux-button gux-title="Slotted element" disabled onclick="notify(event)">
     <gux-icon
       icon-name="trashcan"
       screenreader-text="This will be read by a screen reader"
     ></gux-icon>
   </gux-button>
-  <gux-button title="Slotted element" disabled onclick="notify(event)">
+  <gux-button gux-title="Slotted element" disabled onclick="notify(event)">
     <gux-icon icon-name="trashcan" decorative></gux-icon>
     <span>Text in a span element</span>
   </gux-button>
-  <gux-button title="Slotted element" disabled onclick="notify(event)">
+  <gux-button gux-title="Slotted element" disabled onclick="notify(event)">
     <span>Text in a span element</span>
     <span>More Text in a span element</span>
   </gux-button>
-  <gux-button title="Slotted element" disabled onclick="notify(event)">
+  <gux-button gux-title="Slotted element" disabled onclick="notify(event)">
     <span>
       <span>Text in a span element</span>
       <span>More Text in a span element</span>
     </span>
   </gux-button>
   <gux-button
-    title="Slotted element"
+    gux-title="Slotted element"
     style="width: 100px"
     disabled
     onclick="notify(event)"
@@ -117,7 +124,7 @@
   </gux-button>
 
   <gux-button
-    title="Slotted element"
+    gux-title="Slotted element"
     style="width: 100px"
     disabled
     onclick="notify(event)"
