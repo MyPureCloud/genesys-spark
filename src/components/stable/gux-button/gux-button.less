@@ -1,6 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/spacing.less';
 
 gux-button {
   display: inline-block;
@@ -10,7 +11,7 @@ gux-button {
   > button {
     width: 100%;
     height: 32px;
-    padding: 0 16px;
+    padding: 0 @spacing-medium;
     overflow: hidden;
     .body-font();
 
@@ -20,7 +21,7 @@ gux-button {
     pointer-events: auto;
     cursor: pointer;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
 
     &[disabled] {
       cursor: default;
@@ -29,6 +30,19 @@ gux-button {
 
     &:focus {
       outline: none;
+    }
+
+    gux-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    > * {
+      padding-left: @spacing-2xs;
+    }
+
+    > *:first-child {
+      padding: 0;
     }
   }
 }

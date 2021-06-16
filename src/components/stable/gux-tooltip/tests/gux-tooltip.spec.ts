@@ -7,15 +7,13 @@ const language = 'en';
 
 describe('gux-tooltip', () => {
   beforeEach(() => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
     // popperjs does not work with Stencils MockHTMLElements used in tests
-    jest.spyOn(popperjs, 'createPopper').mockReturnValue(({
+    jest.spyOn(popperjs, 'createPopper').mockReturnValue({
       destroy: jest.fn()
-    } as unknown) as popperjs.Instance);
+    } as unknown as popperjs.Instance);
   });
 
   afterEach(() => {
-    jest.spyOn(global.Math, 'random').mockRestore();
     jest.spyOn(popperjs, 'createPopper').mockRestore();
   });
 

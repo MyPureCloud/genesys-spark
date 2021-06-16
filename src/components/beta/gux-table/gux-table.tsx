@@ -16,6 +16,7 @@ import {
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { trackComponent } from '../../../usage-tracking';
 
 import tableResources from './i18n/en.json';
@@ -43,7 +44,7 @@ export class GuxTable {
   );
   private i18n: GetI18nValue;
   private columnResizeState: GuxTableColumnResizeState | null;
-  private tableId: string = this.generateTableId();
+  private tableId: string = randomHTMLId('gux-table');
   private columnsWidths: object = {};
 
   /**
@@ -112,8 +113,9 @@ export class GuxTable {
 
   @Listen('scroll', { capture: true })
   onScroll(): void {
-    const scrollLeft = this.tableContainer.querySelector('.gux-table-container')
-      .scrollLeft;
+    const scrollLeft = this.tableContainer.querySelector(
+      '.gux-table-container'
+    ).scrollLeft;
     const maxScrollLeft =
       this.tableContainer.querySelector('.gux-table-container').scrollWidth -
       this.tableContainer.querySelector('.gux-table-container').clientWidth;
@@ -123,6 +125,13 @@ export class GuxTable {
     } else if (maxScrollLeft - scrollLeft - this.tableScrollbarConstant === 0) {
       this.isScrolledToLastCell = true;
     }
+  }
+
+  @Listen('internalallrowselectchange')
+  onInternalAllRowSelectChange(event: CustomEvent): void {
+    event.stopPropagation();
+
+    this.handleSelectAllRows();
   }
 
   @Listen('internalrowselectchange')
@@ -144,8 +153,8 @@ export class GuxTable {
   onMouseMove(event: MouseEvent): void {
     if (this.resizableColumns) {
       if (this.columnResizeState) {
-        const columnName = this.columnResizeState.resizableColumn.dataset
-          .columnName;
+        const columnName =
+          this.columnResizeState.resizableColumn.dataset.columnName;
         const columnWidth =
           this.columnResizeState.resizableColumnInitialWidth +
           (event.pageX - this.columnResizeState.columnResizeMouseStartX);
@@ -179,9 +188,8 @@ export class GuxTable {
         this.columnResizeState = {
           resizableColumn,
           columnResizeMouseStartX: event.pageX,
-          resizableColumnInitialWidth: this.getElementComputedWidth(
-            resizableColumn
-          )
+          resizableColumnInitialWidth:
+            this.getElementComputedWidth(resizableColumn)
         };
 
         this.tableContainer.classList.add('column-resizing');
@@ -288,10 +296,6 @@ export class GuxTable {
       .trim();
   }
 
-  private generateTableId(): string {
-    return `gux-table-${Math.random().toString(36).substr(2, 9)}`;
-  }
-
   private previousColumn(): void {
     const columns = Array.from(
       this.tableContainer.querySelectorAll('.gux-table-container thead th')
@@ -330,9 +334,8 @@ export class GuxTable {
      * for the width of last visible column
      */
     const scrollToValue = currentScrollX + containerWidth - columnsWidth;
-    this.tableContainer.querySelector(
-      '.gux-table-container'
-    ).scrollLeft = Math.ceil(currentScrollX - scrollToValue);
+    this.tableContainer.querySelector('.gux-table-container').scrollLeft =
+      Math.ceil(currentScrollX - scrollToValue);
   }
 
   private nextColumn(): void {
@@ -367,9 +370,8 @@ export class GuxTable {
      * Manually increasing scroll position of table container with value,
      * where next partially visible column being fully visible
      */
-    this.tableContainer.querySelector(
-      '.gux-table-container'
-    ).scrollLeft = Math.ceil(columnsWidth - containerWidth);
+    this.tableContainer.querySelector('.gux-table-container').scrollLeft =
+      Math.ceil(columnsWidth - containerWidth);
   }
 
   private checkHorizontalScroll(): void {
@@ -429,9 +431,8 @@ export class GuxTable {
     const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
       this.tableContainer.querySelectorAll('tbody tr td gux-row-select')
     );
-    const headerRowSelectbox: HTMLGuxRowSelectElement = this.tableContainer.querySelector(
-      'thead tr th gux-row-select'
-    );
+    const headerRowSelectbox: HTMLGuxRowSelectElement =
+      this.tableContainer.querySelector('thead tr th gux-row-select');
 
     dataRowsSelectboxes.forEach((dataRowSelectbox: HTMLGuxRowSelectElement) => {
       const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
@@ -564,26 +565,33 @@ export class GuxTable {
     });
   }
 
+  private async handleSelectAllRows(): Promise<void> {
+    const headerRowSelectbox: HTMLGuxRowSelectElement =
+      this.tableContainer.querySelector('thead tr th gux-all-row-select');
+    const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
+      this.tableContainer.querySelectorAll('tbody tr td gux-row-select')
+    );
+
+    this.allRowsSelection(headerRowSelectbox, dataRowsSelectboxes);
+
+    this.guxselectionchanged.emit(await this.getSelected());
+  }
+
   private async handleSelectableRows(rowSelect: EventTarget): Promise<void> {
+    const headerRowSelectbox: HTMLGuxRowSelectElement =
+      this.tableContainer.querySelector('thead tr th gux-all-row-select');
     const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
       this.tableContainer.querySelectorAll('tbody tr td gux-row-select')
     );
     const currentSelectbox = rowSelect as HTMLGuxRowSelectElement;
-    const headerRowSelectbox: HTMLGuxRowSelectElement = this.tableContainer.querySelector(
-      'thead tr th gux-row-select'
+
+    this.rowSelection(currentSelectbox);
+
+    headerRowSelectbox.selected = dataRowsSelectboxes.every(
+      (dataRowSelectbox: HTMLGuxRowSelectElement) => {
+        return dataRowSelectbox.selected;
+      }
     );
-
-    if (currentSelectbox === headerRowSelectbox) {
-      this.allRowsSelection(headerRowSelectbox, dataRowsSelectboxes);
-    } else {
-      this.rowSelection(currentSelectbox);
-
-      headerRowSelectbox.selected = dataRowsSelectboxes.every(
-        (dataRowSelectbox: HTMLGuxRowSelectElement) => {
-          return dataRowSelectbox.selected;
-        }
-      );
-    }
 
     this.guxselectionchanged.emit(await this.getSelected());
   }

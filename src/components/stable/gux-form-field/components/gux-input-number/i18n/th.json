@@ -1,3 +1,5 @@
 {
-  "clear": "ล้าง"
+  "clear": "ล้างค่า",
+  "increment": "เพิ่ม",
+  "decrement": "ลด"
 }

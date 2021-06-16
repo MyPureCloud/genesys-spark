@@ -3,6 +3,7 @@ import { fetchResources, ILocalizedComponentResources } from './fetchResources';
 // If this import is failing, you should run the i18n script to generate the list of locales
 import locales from './locales.json';
 import startOfWeekData from './start-of-week.json';
+import { getClosestElement } from '../utils/dom/get-closest-element';
 
 export type GetI18nValue = (resourceKey: string, context?: any) => string;
 
@@ -77,12 +78,13 @@ export function getDesiredLocale(element: HTMLElement): string {
 }
 
 function findLocaleInDom(element: HTMLElement): string {
-  const closestElement = element.closest('[lang]') as HTMLElement;
+  const closestElement = getClosestElement('[lang]', element) as HTMLElement;
+
   if (closestElement && closestElement.lang) {
     return closestElement.lang.toLowerCase();
   } else {
     console.error(
-      `gux: No language specified on page, defaulting to '${DEFAULT_LOCALE}`
+      `gux: No language specified on page, defaulting to '${DEFAULT_LOCALE}'`
     );
     return DEFAULT_LOCALE;
   }

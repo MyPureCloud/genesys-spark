@@ -154,7 +154,7 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const search = await (await page.find('gux-search-beta')).find('input');
+    const search = await component.find('input');
     await search.press('KeyT');
     await page.waitForChanges();
 
@@ -185,7 +185,7 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const search = await (await page.find('gux-search-beta')).find('input');
+    const search = await component.find('input');
     await search.press('KeyO');
     await search.press('KeyR');
     await page.waitForChanges();
@@ -226,7 +226,7 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const search = await (await page.find('gux-search-beta')).find('input');
+    const search = await component.find('input');
     await search.press('KeyT');
     await page.waitForChanges();
 
@@ -254,11 +254,10 @@ describe('gux-command-palette', () => {
       commandPallete = await page.find('gux-command-palette-beta');
       await commandPallete.callMethod('open');
       await page.waitForChanges();
+      await page.waitFor(500);
     });
 
     it('should navigate to recent list on key down', async () => {
-      await commandPallete.press('ArrowDown');
-      await page.waitForChanges();
       await commandPallete.press('ArrowDown');
       await page.waitForChanges();
 
@@ -267,8 +266,6 @@ describe('gux-command-palette', () => {
     });
 
     it('should navigate to common list on key downs', async () => {
-      await commandPallete.press('ArrowDown');
-      await page.waitForChanges();
       await commandPallete.press('ArrowDown');
       await page.waitForChanges();
       await commandPallete.press('ArrowDown');
@@ -283,17 +280,13 @@ describe('gux-command-palette', () => {
       await page.waitForChanges();
       await commandPallete.press('ArrowDown');
       await page.waitForChanges();
-      await commandPallete.press('ArrowDown');
-      await page.waitForChanges();
-      await commandPallete.press('ArrowUp');
-      await page.waitForChanges();
       await commandPallete.press('ArrowUp');
       await page.waitForChanges();
       await commandPallete.press('ArrowUp');
       await page.waitForChanges();
 
       const focusedELement = await page.find(':focus');
-      expect(focusedELement.nodeName).toContain('INPUT');
+      expect(focusedELement.nodeName).toBe('INPUT');
     });
   });
 });

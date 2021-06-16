@@ -73,7 +73,6 @@ export const legacyIconNames: string[] = [
   'chevron-down',
   'chevron-up',
   'circle',
-  'close-circle',
   'close-preview',
   'close-x',
   'cog',

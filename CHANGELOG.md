@@ -2,6 +2,145 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.20.1](http://inindca///compare/v2.20.0...v2.20.1) (2021-06-15)
+
+## [2.20.0](http://inindca///compare/v2.19.2...v2.20.0) (2021-06-14)
+
+
+### Features
+
+* **gux-flyout-menu:** improving accessibility ([7cf40d7](http://inindca///commit/7cf40d7708c741d905edee211d0d29e7dabff4ce))
+* **gux-flyout-menu:** improving accessibility ([5242549](http://inindca///commit/5242549c2f976362ef31fd48c42bfa1a2a51d0be))
+
+
+### Bug Fixes
+
+* **gux-flyout-menu:** updating snapshots ([d153ca7](http://inindca///commit/d153ca72dbe5d8dc716dc80831f3ed01d9cd30bf))
+
+### [2.19.2](http://inindca///compare/v2.19.1...v2.19.2) (2021-06-11)
+
+
+### Bug Fixes
+
+* **gux-tooltip:** recalculate position before showing ([446250d](http://inindca///commit/446250d72a66a36e183ef91021d1cc1a1ea5be55))
+
+### [2.19.1](http://inindca///compare/v2.19.0...v2.19.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **gux-disclosure-button:** gux class name added for the css selector to avoid conflicts ([faa4338](http://inindca///commit/faa43386e1b44fbe0daf0f3481a71225ea7f0f7d))
+* **gux-error-message-beta:** improved error message appearance ([5ee3a63](http://inindca///commit/5ee3a633a35bfb7214f3b5890bae2d1aad171ab8))
+
+## [2.19.0](http://inindca///compare/v2.18.2...v2.19.0) (2021-06-09)
+
+
+### Features
+
+* **gux-radial-loading:** improve accessibility ([5a623e8](http://inindca///commit/5a623e8f1e2c892dc7d3db29d955d66b98a41cc7))
+* **gux-radial-progress:** improve accessibility ([44c057a](http://inindca///commit/44c057afa74e4c43a2fb204f74b1d171636b92ee))
+
+
+### Bug Fixes
+
+* **pr-comments:** addressed PR comments and updated tests ([6e11ba7](http://inindca///commit/6e11ba73ccc36461070e80b6cad672bf6c99d5db))
+
+### [2.18.2](http://inindca///compare/v2.18.1...v2.18.2) (2021-06-08)
+
+### [2.18.1](http://inindca///compare/v2.18.0...v2.18.1) (2021-06-03)
+
+## [2.18.0](http://inindca///compare/v2.17.0...v2.18.0) (2021-06-02)
+
+
+### Features
+
+* **gux-form-field:** adding error message and styling ([ac4f1b3](http://inindca///commit/ac4f1b327fa88878abde28fefb4a4c16fdedeb4f))
+
+## [2.17.0](http://inindca///compare/v2.16.2...v2.17.0) (2021-06-01)
+
+
+### Features
+
+* **gus-search-beta:** removed uses of gux-search-beta in components ([77dabd1](http://inindca///commit/77dabd1001711ed75848240c7c3ca966eb54fa9e))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([6a0059c](http://inindca///commit/6a0059cbbfb0473c06527b962e94834020915507))
+* **pr-comment:** addressed PR comment ([58f71ac](http://inindca///commit/58f71ac0381dc000e2f0dc764aa6acbfc0fda80c))
+
+### [2.16.2](http://inindca///compare/v2.16.1...v2.16.2) (2021-05-28)
+
+
+### Bug Fixes
+
+* **gux-button:** button text correctly overflowing with ellipsis ([5bbfa61](http://inindca///commit/5bbfa61a4d1a45462aea354ab5e44c46583a5b34))
+* **gux-tag:** invalid color prop now displays as default ([ba7e1a4](http://inindca///commit/ba7e1a473b319098cea103e80763b779ca69d302))
+
+### [2.16.1](http://inindca///compare/v2.16.0...v2.16.1) (2021-05-27)
+
+## [2.16.0](http://inindca///compare/v2.15.1...v2.16.0) (2021-05-26)
+
+
+### Features
+
+* **gux-action-toast:** remove theme styling ([488a532](http://inindca///commit/488a53242a2f3c7a72faeed1ffdfe8fb51a843c8))
+* **gux-input-search:** added new gux-form-field component ([d65faa5](http://inindca///commit/d65faa53c578a611dc5f736ce52b50401ae80c4e))
+* **icons:** added new icons and updated others ([a47ee82](http://inindca///commit/a47ee82649941dc2694ac9b7e8b89a93a1c0689c))
+* **styling:** component modernization for action button and action toast ([2eed637](http://inindca///commit/2eed63737f440f7a4a74a354a9be67ce2c4fd04d))
+
+### [2.15.1](http://inindca///compare/v2.15.0...v2.15.1) (2021-05-24)
+
+
+### Bug Fixes
+
+* **demos:** fixed module loading script url ([e78ac22](http://inindca///commit/e78ac22bf75868422a87b781e37c78c8f208b1a0))
+
+## [2.15.0](http://inindca///compare/v2.14.2...v2.15.0) (2021-05-21)
+
+
+### Features
+
+* **mixins:** add y offset to box shadows ([be13fcd](http://inindca///commit/be13fcdc54414f9f24e80e6ff5f009c8a03aefbb))
+* **package:** revert committed package changes ([c8ff165](http://inindca///commit/c8ff16511e4b68d9ee697f1a0ddc5430fb67230a))
+* **various components:** implement modernized styling of components ([75e7442](http://inindca///commit/75e74425bfaddb34d76313aa84ea0897c9ab9911))
+
+### [2.14.2](http://inindca///compare/v2.14.1...v2.14.2) (2021-05-20)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed nesting of elements ([a832a1e](http://inindca///commit/a832a1e92a35697562d8df654ecd7d9cc07305a6))
+
+### [2.14.1](http://inindca///compare/v2.14.0...v2.14.1) (2021-05-19)
+
+
+### Bug Fixes
+
+* **gux-button:** added icon buttons ([56a2386](http://inindca///commit/56a238614afd19e34ec53143f4cf3c7e0ca2424a))
+* **pr-comment:** addressed PR comment ([292e912](http://inindca///commit/292e912d1fbd0306715d972f69716db59014f8e6))
+
+## [2.14.0](http://inindca///compare/v2.13.0...v2.14.0) (2021-05-18)
+
+
+### Features
+
+* **gux-form-field:** required label is now linked to input element ([93b9c1e](http://inindca///commit/93b9c1ef6ee9447d79ab9d343446f4d87ea4e834))
+
+## [2.13.0](http://inindca///compare/v2.12.8...v2.13.0) (2021-05-14)
+
+
+### Features
+
+* **gux-input-textarea:** component can now auto resize ([7732c12](http://inindca///commit/7732c12122c403d3df5efb3ff014941e67822f06))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([9ea4539](http://inindca///commit/9ea45392028f967f2bfadfbe06cb162f042e7480))
+* **pr-comment:** addressed PR comment ([a80c709](http://inindca///commit/a80c709f6a22427283516936c677508bd6c897c6))
+* **pr-comments:** addressed PR comments ([6688f54](http://inindca///commit/6688f5410264f0eb6783a60b19b756c0ca36e7c2))
+
 ### [2.12.8](http://inindca///compare/v2.12.7...v2.12.8) (2021-05-13)
 
 

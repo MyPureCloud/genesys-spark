@@ -1,12 +1,11 @@
 import { Component, Element, h, Method, State } from '@stencil/core';
-import { KeyCode } from '../../../common-enums';
 import { matchesFuzzy } from '../../../utils/string/search';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import paletteResources from './i18n/en.json';
 import { trackComponent } from '../../../usage-tracking';
 
 const filterLimit = 50;
-const animationDuration = 300; // this 300ms duration must be kept in sync with the 300ms transition in the CSS
+const animationDuration = 300; // this 300ms duration must be kept in sync with the 300ms transition in the CSS and delay in the e2e tests
 
 function sortActions(
   items: HTMLGuxCommandActionElement[]
@@ -74,14 +73,24 @@ export class GuxCommandPalette {
         onKeyDown={e => this.onKeyDown(e)}
         aria-label={this.i18n('title')}
       >
-        <gux-search-beta
-          sr-label={this.i18n('search')}
-          onInput={(e: any) => {
-            this.handleInput(e);
-          }}
-          value={this.filterValue}
-          ref={el => (this.inputElement = el)}
-        />
+        <label
+          htmlFor="gux-command-palette-search"
+          class="gux-command-palette-search-label"
+        >
+          {this.i18n('search')}
+        </label>
+        <gux-input-search>
+          <input
+            id="gux-command-palette-search"
+            type="search"
+            onInput={(event: InputEvent) => {
+              this.handleInput(event);
+            }}
+            value={this.filterValue}
+            ref={el => (this.inputElement = el)}
+          />
+        </gux-input-search>
+
         {this.visible && this.renderLists()}
       </div>
     );
@@ -160,7 +169,7 @@ export class GuxCommandPalette {
     this.visible = true;
 
     setTimeout(() => {
-      this.inputElement.querySelector('input').focus();
+      this.inputElement.focus();
     }, animationDuration);
   }
 
@@ -173,8 +182,8 @@ export class GuxCommandPalette {
     this.visible = false;
   }
 
-  private handleInput(event: any) {
-    this.filterValue = event.target.value;
+  private handleInput(event: InputEvent) {
+    this.filterValue = (event.target as HTMLInputElement).value;
   }
 
   private filterItems(items: HTMLGuxCommandActionElement[]): HTMLElement[] {
@@ -280,24 +289,18 @@ export class GuxCommandPalette {
   }
 
   private onKeyDown(event: KeyboardEvent): void {
-    const validKeys = [KeyCode.Up, KeyCode.Down];
-    const key = event.keyCode;
-    if (validKeys.indexOf(key) === -1) {
-      return;
-    }
-
-    switch (key) {
-      case KeyCode.Up:
+    switch (event.key) {
+      case 'ArrowUp':
         this.navigateUp();
         break;
-      case KeyCode.Down:
+      case 'ArrowDown':
         this.navigateDown();
         break;
     }
   }
 
   private elementIsSearch(el: Element): boolean {
-    return el.closest('gux-search-beta') !== null;
+    return el.closest('gux-input-search') !== null;
   }
 
   private getParentGuxList(el: Element): HTMLGuxListElement {
@@ -311,14 +314,12 @@ export class GuxCommandPalette {
       return;
     }
 
-    const searchElement = el as HTMLGuxSearchBetaElement;
-    if (searchElement && searchElement.setInputFocus) {
-      searchElement.setInputFocus();
-    }
+    this.inputElement.focus();
   }
 
   private navigateUp() {
     const focusedElement = this.root.querySelector(':focus');
+
     if (this.elementIsSearch(focusedElement)) {
       // Already at the top, don't need to focus elsewhere
       return;
@@ -342,6 +343,7 @@ export class GuxCommandPalette {
 
   private navigateDown() {
     const focusedElement = this.root.querySelector(':focus');
+
     if (this.elementIsSearch(focusedElement)) {
       this.root.querySelector('gux-list').setFocusOnFirstItem();
       return;

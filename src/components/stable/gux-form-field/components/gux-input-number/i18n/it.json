@@ -1,3 +1,5 @@
 {
-  "clear": "Cancella"
+  "clear": "Deseleziona",
+  "increment": "Incremento",
+  "decrement": "Diminuzione"
 }

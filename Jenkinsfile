@@ -113,7 +113,7 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           sh "npm run lint"
-          sh "npm run test.unit"
+          sh "npm run test.ci"
         }
       }
     }

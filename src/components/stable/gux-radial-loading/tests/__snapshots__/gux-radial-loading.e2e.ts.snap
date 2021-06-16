@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-radial-loading should display component as expected (1) 1`] = `"<div role=\\"progressbar\\" aria-label=\\"Loading\\" class=\\"gux-spinner-container gux-modal\\"><div role=\\"presentation\\" class=\\"gux-spin-circle\\"></div></div>"`;
+
+exports[`gux-radial-loading should display component as expected (2) 1`] = `"<div role=\\"progressbar\\" aria-label=\\"Loading\\" class=\\"gux-spinner-container gux-modal\\"><div role=\\"presentation\\" class=\\"gux-spin-circle\\"></div></div>"`;
+
+exports[`gux-radial-loading should display component as expected (3) 1`] = `"<div role=\\"progressbar\\" aria-label=\\"Loading\\" class=\\"gux-spinner-container gux-input\\"><div role=\\"presentation\\" class=\\"gux-spin-circle\\"></div></div>"`;
+
+exports[`gux-radial-loading should display component as expected (4) 1`] = `"<div role=\\"progressbar\\" aria-label=\\"Loading\\" class=\\"gux-spinner-container gux-full-page\\"><div role=\\"presentation\\" class=\\"gux-spin-circle\\"></div></div>"`;

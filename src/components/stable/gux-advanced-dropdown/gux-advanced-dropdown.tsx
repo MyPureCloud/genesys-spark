@@ -16,6 +16,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import advancedDropDownResources from './i18n/en.json';
 import { onMutation } from '../../../utils/dom/on-mutation';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
@@ -27,10 +28,12 @@ export class GuxAdvancedDropdown {
   root: HTMLElement;
 
   wrapperElement: HTMLElement;
-  searchElement: HTMLGuxSearchBetaElement;
+  searchInput: HTMLInputElement;
   inputBox: HTMLElement;
+  filterDebounceTimer: ReturnType<typeof setTimeout>;
 
   private i18n: GetI18nValue;
+  private searchId: string = randomHTMLId('gux-advanced-dropdown-search');
 
   /**
    * Disable the input and prevent interactions.
@@ -130,6 +133,7 @@ export class GuxAdvancedDropdown {
 
   async componentWillLoad() {
     trackComponent(this.root);
+
     this.i18n = await buildI18nForComponent(
       this.root,
       advancedDropDownResources
@@ -189,15 +193,21 @@ export class GuxAdvancedDropdown {
           }`}
         >
           <div class="gux-dropdown-menu-container">
-            <gux-search-beta
-              ref={el => (this.searchElement = el as HTMLGuxSearchBetaElement)}
-              class="gux-light-theme"
-              srLabel={this.i18n('searchAria')}
-              dynamic-search="true"
-              onInput={e => e.stopPropagation()}
-              onSearch={e => this.searchRequested(e)}
-              searchTimeout={this.filterDebounceTimeout}
-            />
+            <label htmlFor={this.searchId} class="gux-search-label">
+              {this.i18n('searchAria')}
+            </label>
+
+            <gux-input-search>
+              <input
+                id={this.searchId}
+                type="search"
+                onInput={(event: InputEvent) => {
+                  this.handleSearchInput(event);
+                }}
+                ref={el => (this.searchInput = el)}
+              />
+            </gux-input-search>
+
             <div
               class="gux-dropdown-options"
               onKeyDown={e => this.optionsKeyDown(e)}
@@ -300,12 +310,23 @@ export class GuxAdvancedDropdown {
     }
   }
 
-  private searchRequested(event: CustomEvent) {
-    this.filter.emit(event.detail);
+  private handleSearchInput(event: InputEvent) {
+    event.stopPropagation();
+
+    clearTimeout(this.filterDebounceTimer);
+    this.filterDebounceTimer = setTimeout(
+      this.searchRequested.bind(this),
+      this.filterDebounceTimeout
+    );
+  }
+
+  private searchRequested() {
+    const value = this.searchInput.value;
+    this.filter.emit(value);
 
     if (!this.noFilter) {
       for (const option of this.selectionOptions) {
-        option.shouldFilter(event.detail).then(isFiltered => {
+        option.shouldFilter(value).then(isFiltered => {
           option.filtered = isFiltered;
         });
       }
@@ -314,7 +335,7 @@ export class GuxAdvancedDropdown {
 
   private changeFocusToSearch() {
     setTimeout(() => {
-      this.searchElement.setInputFocus();
+      this.searchInput.focus();
     });
   }
 
@@ -328,7 +349,8 @@ export class GuxAdvancedDropdown {
 
   private closeDropdown(focus: boolean) {
     this.opened = false;
-    this.searchElement.value = '';
+    this.searchInput.value = '';
+    this.searchRequested();
 
     if (focus) {
       this.inputBox.focus();

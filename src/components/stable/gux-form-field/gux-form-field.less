@@ -1,9 +1,15 @@
 @import (reference) '../../../style/color.less';
 
 // Variables part
+@gux-form-beside-label-container-width: 45px;
+@gux-form-beside-label-margin-right: 8px;
+@error-message-offset: @gux-form-beside-label-container-width +
+  @gux-form-beside-label-margin-right;
 
 // Style
 gux-form-field {
+  color: @gux-black-50;
+
   .gux-label-and-input-and-error-container {
     margin: 16px 0;
 
@@ -14,63 +20,53 @@ gux-form-field {
         line-height: 20px;
       }
 
-      &.gux-beside {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+      .gux-input-error .gux-input-container {
+        border-color: @gux-alert;
+      }
 
-        label {
-          min-width: 40px;
-          margin-right: 8px;
-        }
+      .gux-input-error textarea {
+        border-color: @gux-alert;
+      }
 
-        gux-input-range,
-        gux-input-select,
-        gux-input-text-like {
-          flex: 1 1 auto;
-        }
+      .gux-input-error .gux-input-color-main-element {
+        border-color: @gux-alert;
       }
     }
 
     .gux-error {
       margin: 4px 0;
     }
+
+    &.gux-beside {
+      .gux-label-and-input-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .gux-label-container {
+          min-width: @gux-form-beside-label-container-width;
+          margin-right: @gux-form-beside-label-margin-right;
+        }
+
+        gux-input-range,
+        gux-input-select,
+        gux-input-text-like,
+        gux-input-search {
+          flex: 1 1 auto;
+        }
+      }
+
+      gux-error-message-beta {
+        .gux-container {
+          position: relative;
+          left: @error-message-offset;
+        }
+      }
+    }
   }
-}
 
-// Theming
-
-// Dark
-.gux-form-field-dark-theme {
-  color: @gux-type-dark;
-}
-
-.gux-dark-theme {
-  gux-form-field {
-    .gux-form-field-dark-theme();
+  .gux-required::after {
+    color: @gux-alert-red-60;
+    content: ' *';
   }
-}
-
-gux-form-field.gux-dark-theme {
-  .gux-form-field-dark-theme();
-}
-
-// Light
-.gux-form-field-light-theme {
-  color: @gux-type;
-}
-
-.gux-light-theme {
-  gux-form-field {
-    .gux-form-field-light-theme();
-  }
-}
-
-gux-form-field.gux-light-theme {
-  .gux-form-field-light-theme();
-}
-
-// Default Theme
-gux-form-field {
-  .gux-form-field-light-theme();
 }

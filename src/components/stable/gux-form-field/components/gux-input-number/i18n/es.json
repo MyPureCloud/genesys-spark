@@ -1,3 +1,5 @@
 {
-  "clear": "Borrar"
+  "clear": "Borrar",
+  "increment": "Incremento",
+  "decrement": "Decremento"
 }

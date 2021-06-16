@@ -1,3 +1,5 @@
 {
-  "clear": "Löschen"
+  "clear": "Löschen",
+  "increment": "Inkrement",
+  "decrement": "Dekrement"
 }

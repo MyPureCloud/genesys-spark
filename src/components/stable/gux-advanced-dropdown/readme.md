@@ -52,16 +52,14 @@ Type: `Promise<void>`
 ### Depends on
 
 - [gux-icon](../gux-icon)
-- [gux-search-beta](../../beta/gux-search)
+- [gux-input-search](../gux-form-field/components/gux-input-search)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-advanced-dropdown --> gux-icon
-  gux-advanced-dropdown --> gux-search-beta
-  gux-search-beta --> gux-text-field-legacy
-  gux-search-beta --> gux-icon
-  gux-text-field-legacy --> gux-icon
+  gux-advanced-dropdown --> gux-input-search
+  gux-input-search --> gux-icon
   style gux-advanced-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

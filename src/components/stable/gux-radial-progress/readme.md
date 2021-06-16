@@ -10,10 +10,11 @@ Otherwise, if the progress is unknown, and no percentage is provided, it instead
 
 ## Properties
 
-| Property | Attribute | Description                                                         | Type     | Default     |
-| -------- | --------- | ------------------------------------------------------------------- | -------- | ----------- |
-| `max`    | `max`     | The max value of the progress spinner                               | `number` | `100`       |
-| `value`  | `value`   | The progress made in the progress spinner compared to the max value | `number` | `undefined` |
+| Property           | Attribute           | Description                                                              | Type     | Default     |
+| ------------------ | ------------------- | ------------------------------------------------------------------------ | -------- | ----------- |
+| `max`              | `max`               | The max value of the progress spinner                                    | `number` | `100`       |
+| `screenreaderText` | `screenreader-text` | Required localized text to provide an accessible label for the component | `string` | `''`        |
+| `value`            | `value`             | The progress made in the progress spinner compared to the max value      | `number` | `undefined` |
 
 
 ## Dependencies

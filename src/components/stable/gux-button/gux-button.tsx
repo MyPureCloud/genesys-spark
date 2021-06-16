@@ -21,6 +21,12 @@ export class GuxButton {
    * The component title
    */
   @Prop()
+  guxTitle: string;
+
+  /**
+   * Deprecated, use guxTitle instead
+   */
+  @Prop()
   title: string;
 
   /**
@@ -44,7 +50,7 @@ export class GuxButton {
     return (
       <button
         type={this.type}
-        title={this.title}
+        title={this.guxTitle ? this.guxTitle : this.title}
         disabled={this.disabled}
         class={`gux-${this.accent}`}
       >

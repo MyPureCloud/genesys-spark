@@ -1,4 +1,20 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
+
+async function mockRandomForE2ESnapshot({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
+  const page = await newE2EPage();
+
+  await page.evaluateOnNewDocument(() => {
+    Math.random = () => 0.5;
+  });
+  await page.setContent(html);
+  await page.waitForChanges();
+
+  return page;
+}
 
 describe('gux-form-field', () => {
   it('renders', async () => {
@@ -40,7 +56,7 @@ describe('gux-form-field', () => {
               <label slot="label" for="test">Test</label>
             </gux-form-field>
           `;
-          const page = await newE2EPage({ html });
+          const page = await mockRandomForE2ESnapshot({ html });
           const element = await page.find('gux-form-field');
 
           expect(element.innerHTML).toMatchSnapshot();
@@ -48,7 +64,7 @@ describe('gux-form-field', () => {
       });
     });
 
-    describe('seect tag', () => {
+    describe('select tag', () => {
       it(`should render component type "select"`, async () => {
         const html = `
           <gux-form-field lang="en">
@@ -60,7 +76,7 @@ describe('gux-form-field', () => {
             <label slot="label">Select</label>
           </gux-form-field>
         `;
-        const page = await newE2EPage({ html });
+        const page = await mockRandomForE2ESnapshot({ html });
         const element = await page.find('gux-form-field');
 
         expect(element.innerHTML).toMatchSnapshot();

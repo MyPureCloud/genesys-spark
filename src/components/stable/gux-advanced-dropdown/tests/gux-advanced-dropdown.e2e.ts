@@ -1,155 +1,164 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('gux-advanced-dropdown', () => {
-  it('renders', async () => {
-    const page = await newE2EPage();
-
-    await page.setContent(
-      '<gux-advanced-dropdown lang="en"></gux-advanced-dropdown>'
-    );
-    const element = await page.find('gux-advanced-dropdown');
-    expect(element).toHaveClass('hydrated');
-  });
-
-  it('opens drop down on click', async () => {
-    const page = await newE2EPage();
-    await page.setContent(`
-      <gux-advanced-dropdown lang="en">
-        <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
-        <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
-      </gux-advanced-dropdown>
-    `);
-    await page.waitForChanges();
-
-    const inputElm = await page.find(
-      'gux-advanced-dropdown >>> .gux-select-input'
-    );
-    inputElm.click();
-    await page.waitForChanges();
-
-    const dropMenuElm = await page.find(
-      'gux-advanced-dropdown >>> .gux-advanced-dropdown-menu'
-    );
-    expect(dropMenuElm.className.split(' ')).toContain('gux-opened');
-  });
-
-  it('selects an item when an option is clicked', async () => {
-    const page = await newE2EPage();
-    await page.setContent(`
-      <gux-advanced-dropdown lang="en">
-        <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
-        <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
-      </gux-advanced-dropdown>
-    `);
-    await page.waitForChanges();
-
-    const element = await page.find('gux-advanced-dropdown');
-    const inputSpy = await element.spyOnEvent('input');
-
-    const inputElm = await page.find(
-      'gux-advanced-dropdown >>> .gux-select-input'
-    );
-    inputElm.click();
-    await page.waitForChanges();
-
-    let dropMenuElm = await page.find(
-      'gux-advanced-dropdown >>> .gux-advanced-dropdown-menu'
-    );
-    const enElm = await element.find('gux-dropdown-option');
-    enElm.click();
-    await page.waitForChanges();
-    dropMenuElm = await page.find(
-      'gux-advanced-dropdown >>> .gux-advanced-dropdown-menu'
-    );
-
-    expect(inputSpy).toHaveReceivedEventDetail('en');
-    expect(dropMenuElm.className.split(' ')).not.toContain('gux-opened');
-  });
-
-  it('Should fire filter event with a delay', async () => {
-    const page = await newE2EPage();
-    await page.setContent(`
-    <gux-advanced-dropdown lang="en" filter-debounce-timeout="100">
+import { asyncFilter } from '../../../../utils/array/async-filter';
+const html = `
+  <div lang="en">
+    <gux-advanced-dropdown lang="en" filter-debounce-timeout=0>
       <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
       <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
     </gux-advanced-dropdown>
-  `);
-    await page.waitForChanges();
-
+  </div>
+`;
+describe('gux-advanced-dropdown', () => {
+  it('should render', async () => {
+    const page = await newE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
-    const filterSpy = await element.spyOnEvent('filter');
 
-    const inputElm = await page.find(
-      'gux-advanced-dropdown >>> .gux-select-input'
-    );
-    inputElm.click();
-    await page.waitForChanges();
-
-    const guxSearch = await page.find(
-      'gux-advanced-dropdown >>> gux-search-beta'
-    );
-    guxSearch.setProperty('value', 'en');
-    await page.waitForChanges();
-
-    await page.waitFor(200);
-
-    expect(filterSpy).toHaveReceivedEventDetail('en');
+    expect(element).toHaveClass('hydrated');
   });
 
-  it('should not filter if filterLocal is false', async () => {
-    const page = await newE2EPage();
-    await page.setContent(`
+  it('should open the dropdown on click', async () => {
+    const page = await newE2EPage({ html });
+    const element = await page.find('gux-advanced-dropdown');
+    const dropdownElement = await page.find(
+      'gux-advanced-dropdown >>> .gux-dropdown'
+    );
+
+    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+
+    element.click();
+    await page.waitForChanges();
+
+    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+  });
+
+  it('should select an option and closes the dropdown menu when an option is clicked', async () => {
+    const page = await newE2EPage({ html });
+    const element = await page.find('gux-advanced-dropdown');
+    const inputSpy = await element.spyOnEvent('input');
+    const dropdownElement = await page.find(
+      'gux-advanced-dropdown >>> .gux-dropdown'
+    );
+
+    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+
+    element.click();
+    await page.waitForChanges();
+
+    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+
+    const englishDropdownOption = await element.find(
+      'gux-dropdown-option[value="en"]'
+    );
+    englishDropdownOption.click();
+    await page.waitForChanges();
+
+    expect(inputSpy).toHaveReceivedEventDetail('en');
+    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+  });
+
+  it('should fire filter event with a delay', async () => {
+    const page = await newE2EPage({ html });
+    const element = await page.find('gux-advanced-dropdown');
+    const filterSpy = await element.spyOnEvent('filter');
+    const dropdownElement = await page.find(
+      'gux-advanced-dropdown >>> .gux-dropdown'
+    );
+
+    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+
+    element.click();
+    await page.waitForChanges();
+
+    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+
+    const input = await page.find('gux-advanced-dropdown >>> input');
+
+    await input.press('KeyE');
+    await input.press('KeyN');
+    await page.waitForChanges();
+
+    const value = await input.getProperty('value');
+    expect(value).toBe('en');
+
+    await page.waitFor(1000);
+
+    expect(filterSpy).toHaveReceivedEventDetail('en');
+
+    const options = await element.findAll('gux-dropdown-option');
+    const filteredOptions = await asyncFilter(
+      options,
+      async option => !(await option.getProperty('filtered'))
+    );
+
+    expect(filteredOptions.length).toBe(1);
+  });
+
+  it('should not filter if no-filter is true', async () => {
+    const page = await newE2EPage({
+      html: `
       <gux-advanced-dropdown lang="en" filter-debounce-timeout="0" no-filter>
         <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
         <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
       </gux-advanced-dropdown>
-    `);
-    await page.waitForChanges();
-
+    `
+    });
     const element = await page.find('gux-advanced-dropdown');
     const filterSpy = await element.spyOnEvent('filter');
-
-    const inputElm = await page.find(
-      'gux-advanced-dropdown >>> .gux-select-input'
+    const dropdownElement = await page.find(
+      'gux-advanced-dropdown >>> .gux-dropdown'
     );
-    inputElm.click();
+
+    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+
+    element.click();
     await page.waitForChanges();
 
-    const guxSearch = await page.find(
-      'gux-advanced-dropdown >>> gux-search-beta'
-    );
-    guxSearch.setProperty('value', 'en');
+    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+
+    const input = await page.find('gux-advanced-dropdown >>> input');
+
+    await input.press('KeyE');
+    await input.press('KeyN');
     await page.waitForChanges();
 
-    const items = await element.findAll('gux-dropdown-option');
+    const value = await input.getProperty('value');
+    expect(value).toBe('en');
 
-    expect(items).toHaveLength(2);
+    await page.waitFor(1000);
+
     expect(filterSpy).toHaveReceivedEventDetail('en');
+
+    const options = await element.findAll('gux-dropdown-option');
+    const filteredOptions = await asyncFilter(
+      options,
+      async option => !(await option.getProperty('filtered'))
+    );
+
+    expect(filteredOptions.length).toBe(2);
   });
 
   it('should allow options to be dynamically rendered', async () => {
-    const page = await newE2EPage();
-    await page.setContent(`
-      <gux-advanced-dropdown lang="en" filter-debounce-timeout="0" no-filter>
-        <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
-        <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
-      </gux-advanced-dropdown>
-    `);
-    await page.waitForChanges();
+    const page = await newE2EPage({ html });
+    const element = await page.find('gux-advanced-dropdown');
 
     await page.evaluate(() => {
-      const element = document.querySelector('gux-advanced-dropdown');
-      const option = document.querySelector('gux-dropdown-option');
+      const guxAdvancedDropdown = document.querySelector(
+        'gux-advanced-dropdown'
+      );
+      const guxDropdownOption = document.querySelector('gux-dropdown-option');
 
-      element.removeChild(option);
-      element.appendChild(option);
+      guxAdvancedDropdown.removeChild(guxDropdownOption);
+      guxAdvancedDropdown.appendChild(guxDropdownOption);
     });
     await page.waitForChanges();
 
-    const items = await page.findAll(
-      'gux-advanced-dropdown > gux-dropdown-option'
+    const options = await element.findAll('gux-dropdown-option');
+    const filteredOptions = await asyncFilter(
+      options,
+      async option => !(await option.getProperty('filtered'))
     );
 
-    expect(items).toHaveLength(2);
+    expect(filteredOptions.length).toBe(2);
   });
 });

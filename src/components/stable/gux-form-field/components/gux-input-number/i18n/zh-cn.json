@@ -1,3 +1,5 @@
 {
-  "clear": "清除"
+  "clear": "清除",
+  "increment": "增量",
+  "decrement": "减量"
 }

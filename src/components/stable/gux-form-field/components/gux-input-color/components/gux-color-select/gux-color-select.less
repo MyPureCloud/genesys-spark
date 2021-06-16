@@ -1,4 +1,5 @@
 @import (reference) '../../../../../../../style/color.less';
+@import (reference) '../../../../../../../style/mixins.less';
 
 gux-color-select {
   display: inline-block;
@@ -7,9 +8,11 @@ gux-color-select {
   > div {
     box-sizing: border-box;
     padding: 20px 0 12px;
+    margin-top: 4px;
     background-color: @gux-grey-90;
-    border: 1px solid @gux-black-100;
-    box-shadow: 0 0 2px fade(@gux-black-30, 24%);
+    border: 1px solid @gux-grey-30;
+    border-radius: 4px;
+    .shadow-20();
   }
 
   .gux-input-color-matrix {

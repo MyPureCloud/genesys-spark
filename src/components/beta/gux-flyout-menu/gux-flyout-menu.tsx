@@ -12,7 +12,11 @@ import {
 
 import { trackComponent } from '../../../usage-tracking';
 
-import { HTMLGuxMenuItemElement, hideDelay } from './gux-menu/gux-menu.common';
+import {
+  HTMLGuxMenuItemElement,
+  hideDelay,
+  moveFocusDelay
+} from './gux-menu/gux-menu.common';
 
 @Component({
   styleUrl: 'gux-flyout-menu.less',
@@ -47,22 +51,38 @@ export class GuxFlyoutMenu {
     if (this.isShown) {
       switch (event.key) {
         case 'Escape':
+        case 'ArrowLeft':
         case 'ArrowUp':
-          this.hide();
           this.root.focus();
           return;
 
         case 'ArrowDown':
           this.focusOnMenu();
           return;
+
+        case 'Enter':
+          this.hideDelayTimeout = setTimeout(() => {
+            this.focusOnMenu();
+          }, moveFocusDelay);
+          return;
       }
     }
+  }
 
+  // Using 'keyup' here because the native click handler behavior
+  // for buttons is triggered on keyup when using the space key
+  @Listen('keyup')
+  onKeyup(event: KeyboardEvent): void {
+    event.stopPropagation();
     switch (event.key) {
-      case 'Enter':
-      case 'ArrowDown':
       case ' ':
-        this.show();
+        if (this.menuContentElement.contains(document.activeElement)) {
+          this.root.focus();
+        } else {
+          this.hideDelayTimeout = setTimeout(() => {
+            this.focusOnMenu();
+          }, moveFocusDelay);
+        }
         return;
     }
   }
@@ -78,8 +98,10 @@ export class GuxFlyoutMenu {
   }
 
   @Listen('click')
-  onClick() {
-    this.hide();
+  onClick(event) {
+    if (event.detail !== 0) {
+      this.hide();
+    }
     this.root.focus();
   }
 
@@ -159,12 +181,13 @@ export class GuxFlyoutMenu {
 
   render(): JSX.Element {
     return (
-      <Host tabIndex={1}>
-        <span
-          ref={el => (this.targetElement = el)}
-          aria-haspopup="true"
-          aria-expanded={this.isShown}
-        >
+      <Host
+        tabIndex={0}
+        aria-haspopup="true"
+        aria-expanded={this.isShown.toString()}
+        role="button"
+      >
+        <span ref={el => (this.targetElement = el)}>
           <slot name="target" />
         </span>
         <div

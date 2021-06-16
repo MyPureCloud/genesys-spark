@@ -3,8 +3,7 @@
 exports[`gux-input-textarea #render should render component as expected (1) 1`] = `
 <gux-input-textarea>
   <!---->
-  <div class="gux-resize-none">
-    <textarea slot="input" type="test"></textarea>
+  <div class="gux-resize-none"><textarea slot="input" type="test"></textarea>
   </div>
 </gux-input-textarea>
 `;
@@ -12,8 +11,7 @@ exports[`gux-input-textarea #render should render component as expected (1) 1`] 
 exports[`gux-input-textarea #render should render component as expected (2) 1`] = `
 <gux-input-textarea resize="none">
   <!---->
-  <div class="gux-resize-none">
-    <textarea slot="input" type="test"></textarea>
+  <div class="gux-resize-none"><textarea slot="input" type="test"></textarea>
   </div>
 </gux-input-textarea>
 `;
@@ -21,8 +19,7 @@ exports[`gux-input-textarea #render should render component as expected (2) 1`] 
 exports[`gux-input-textarea #render should render component as expected (3) 1`] = `
 <gux-input-textarea resize="manual">
   <!---->
-  <div class="gux-resize-manual">
-    <textarea slot="input" type="test"></textarea>
+  <div class="gux-resize-manual"><textarea slot="input" type="test"></textarea>
   </div>
 </gux-input-textarea>
 `;
@@ -30,8 +27,7 @@ exports[`gux-input-textarea #render should render component as expected (3) 1`] 
 exports[`gux-input-textarea #render should render component as expected (4) 1`] = `
 <gux-input-textarea resize="auto">
   <!---->
-  <div class="gux-resize-auto" data-replicated-value="undefined">
-    <textarea slot="input" type="test"></textarea>
+  <div class="gux-resize-auto" data-replicated-value="undefined"><textarea slot="input" type="test"></textarea>
   </div>
 </gux-input-textarea>
 `;
