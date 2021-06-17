@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.22.0](http://inindca///compare/v2.21.0...v2.22.0) (2021-06-17)
+
+
+### Features
+
+* **gux-action-button:** popup now goes above button it there is not space below ([5ae103e](http://inindca///commit/5ae103e24b5fd97a4886e2edd08f3a12de9ede10))
+* **gux-dropdown-v3:** added new dropdown implementation ([c44af43](http://inindca///commit/c44af43474687946e04418feb9e2838beada0eab))
+* **gux-slot-button:** added new component ([dd22b42](http://inindca///commit/dd22b42b5d5431792f74a5e45917cf1d7d01bdb1))
+* **shadows-styles:** shadows styles are exported and created shadows.html ([7d94791](http://inindca///commit/7d9479114c422bb6fceafd84a2b7621ec8a940ed))
+
+
+### Bug Fixes
+
+* **gux-advanced-dropdown:** text overflow issues are fixed ([5925692](http://inindca///commit/592569282b09fe2bcedeb954fa9d44a556443d82))
+* **gux-dropdown-v2:** fixed missed merge conflict ([1acbfe5](http://inindca///commit/1acbfe55274e0f3ef11e45c596061b4f2fbcbad7))
+* **pr-comment:** addressed PR comment ([ec3ecf6](http://inindca///commit/ec3ecf683aac8b3370f571e79669be4a68682a8e))
+
 ## [2.21.0](http://inindca///compare/v2.20.1...v2.21.0) (2021-06-16)
 
 
