@@ -10,8 +10,11 @@ gux-dropdown-option {
   line-height: 32px;
   cursor: pointer;
 
-  div {
+  div.gux-dropdown-option {
     position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     .gux-ghost {
       position: absolute;

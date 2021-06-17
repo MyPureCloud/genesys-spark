@@ -155,9 +155,15 @@ export class GuxAdvancedDropdown {
             onKeyDown={e => this.inputKeyDown(e)}
           >
             {this.placeholder && !this.value && (
-              <span class="gux-select-placeholder">{this.placeholder}</span>
+              <span class="gux-select-placeholder" title={this.placeholder}>
+                {this.placeholder}
+              </span>
             )}
-            {this.value && <span class="gux-select-value">{this.value}</span>}
+            {this.value && (
+              <span class="gux-select-value" title={this.value}>
+                {this.value}
+              </span>
+            )}
           </a>
           <div class="gux-icon-wrapper">
             <gux-icon decorative icon-name="chevron-small-down"></gux-icon>

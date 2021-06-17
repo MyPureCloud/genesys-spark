@@ -33,7 +33,8 @@ export const config: Config = {
             src: [
               'src/style/color-palette.less',
               'src/style/spacing.less',
-              'src/style/typography.less'
+              'src/style/typography.less',
+              'src/style/shadows.less'
             ],
             dest: 'dist/genesys-webcomponents/less'
           }

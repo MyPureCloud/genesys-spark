@@ -49,6 +49,35 @@ function createLayout() {
   const notification = template.querySelector('.notification');
   const editor = template.querySelector('.editor');
 
+  const setupAccessibilityTool = async () => {
+    const axeLive = await import('axe-live');
+    const accessibilityNode = toHTML(`
+      <details>
+        <summary class="heading">Accessibility</summary>
+        <div class="accessibility">
+          <gux-button accent="primary" id="axe-trigger">Run accessibility tests</gux-button>
+        </div>
+      </details>
+    `);
+    const controlsColumn = document.querySelector('.controls-column');
+    if (controlsColumn) {
+      controlsColumn.appendChild(accessibilityNode);
+    }
+    const axeTriggerButton = template.querySelector('#axe-trigger');
+
+    axeTriggerButton.addEventListener('click', () => {
+      setTimeout(async () => {
+        axeLive.run(preview);
+      }, 100);
+    });
+    console.log('axe-live setup completed');
+  };
+
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Setting up axe-live tool');
+    setupAccessibilityTool();
+  }
+
   return {
     inheritedThemeButton,
     lightThemeButton,

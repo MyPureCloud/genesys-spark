@@ -42,6 +42,11 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    fallback: {
+      crypto: false
+    }
+  },
   plugins: [
     new MonacoWebpackPlugin(),
     new CopyPlugin({

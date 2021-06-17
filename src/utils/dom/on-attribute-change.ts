@@ -1,5 +1,5 @@
 export function onHiddenChange(
-  element: HTMLElement,
+  element: HTMLElement | HTMLSelectElement,
   callback: (hidden: boolean) => void
 ): MutationObserver {
   const observer = new MutationObserver(mutations => {

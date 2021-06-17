@@ -2,6 +2,49 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.21.0](http://inindca///compare/v2.20.1...v2.21.0) (2021-06-16)
+
+
+### Features
+
+* **gux-row-select:** stopped using legacy component ([be2c5c3](http://inindca///commit/be2c5c3d262d21e38279fd613f9fa4e0f13e0fb4))
+
+
+### Bug Fixes
+
+* **gux-button:** rename the title prop to gux-title to prevent conflict with title attribute ([a664905](http://inindca///commit/a664905b921c89cdc54f55470659eafe5ce2217a))
+* **pr-comment:** addressed PR comment ([fd734d2](http://inindca///commit/fd734d266c0bf6f88018edbb50f1cb0d8fee4ac5))
+
+### [2.20.1](http://inindca///compare/v2.20.0...v2.20.1) (2021-06-15)
+
+## [2.20.0](http://inindca///compare/v2.19.2...v2.20.0) (2021-06-14)
+
+
+### Features
+
+* **gux-flyout-menu:** improving accessibility ([7cf40d7](http://inindca///commit/7cf40d7708c741d905edee211d0d29e7dabff4ce))
+* **gux-flyout-menu:** improving accessibility ([5242549](http://inindca///commit/5242549c2f976362ef31fd48c42bfa1a2a51d0be))
+
+
+### Bug Fixes
+
+* **gux-flyout-menu:** updating snapshots ([d153ca7](http://inindca///commit/d153ca72dbe5d8dc716dc80831f3ed01d9cd30bf))
+
+### [2.19.2](http://inindca///compare/v2.19.1...v2.19.2) (2021-06-11)
+
+
+### Bug Fixes
+
+* **gux-tooltip:** recalculate position before showing ([446250d](http://inindca///commit/446250d72a66a36e183ef91021d1cc1a1ea5be55))
+
+### [2.19.1](http://inindca///compare/v2.19.0...v2.19.1) (2021-06-10)
+
+
+### Bug Fixes
+
+* **gux-disclosure-button:** gux class name added for the css selector to avoid conflicts ([faa4338](http://inindca///commit/faa43386e1b44fbe0daf0f3481a71225ea7f0f7d))
+* **gux-error-message-beta:** improved error message appearance ([5ee3a63](http://inindca///commit/5ee3a633a35bfb7214f3b5890bae2d1aad171ab8))
+
 ## [2.19.0](http://inindca///compare/v2.18.2...v2.19.0) (2021-06-09)
 
 

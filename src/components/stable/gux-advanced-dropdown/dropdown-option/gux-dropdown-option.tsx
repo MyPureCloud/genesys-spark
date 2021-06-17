@@ -122,7 +122,11 @@ export class GuxDropdownOption {
   }
 
   render() {
-    return <div>{this.textWithHighlights()}</div>;
+    return (
+      <div class="gux-dropdown-option" title={this.text}>
+        {this.textWithHighlights()}
+      </div>
+    );
   }
 
   private textWithHighlights() {
