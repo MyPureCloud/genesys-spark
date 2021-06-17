@@ -1,0 +1,20 @@
+@import (reference) '../../../style/color.less';
+
+// Style
+gux-popup-beta {
+  .gux-target-container {
+    &.gux-disabled {
+      pointer-events: none;
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+
+  .gux-popup-container {
+    visibility: hidden;
+
+    &.gux-expanded {
+      visibility: visible;
+    }
+  }
+}

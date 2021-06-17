@@ -1,0 +1,147 @@
+<form onchange="notify(event)" oninput="notify(event)">
+  <h3>Single Select</h3>
+  <gux-dropdown-v2-beta value="a">
+    <gux-listbox>
+      <gux-option-v2 value="a" disabled>Ant</gux-option-v2>
+      <gux-option-v2 value="b">Bat</gux-option-v2>
+      <gux-option-v2 value="c">Cat</gux-option-v2>
+      <gux-option-v2 value="d">Dog</gux-option-v2>
+      <gux-option-v2 value="e" disabled>Eel</gux-option-v2>
+      <gux-option-v2 value="f">Frog</gux-option-v2>
+      <gux-option-v2 value="g">Goat</gux-option-v2>
+      <gux-option-v2 value="h" disabled>Horse</gux-option-v2>
+      <gux-option-v2 value="i" disabled>Ibis</gux-option-v2>
+    </gux-listbox>
+  </gux-dropdown-v2-beta>
+
+  <h3>No Value Set</h3>
+  <gux-dropdown-v2-beta>
+    <gux-listbox>
+      <gux-option-v2 value="a">Ant</gux-option-v2>
+      <gux-option-v2 value="b">Bat</gux-option-v2>
+      <gux-option-v2 value="c">Cat</gux-option-v2>
+      <gux-option-v2 value="d">Dog</gux-option-v2>
+      <gux-option-v2 value="e">Eel</gux-option-v2>
+      <gux-option-v2 value="f">Frog</gux-option-v2>
+      <gux-option-v2 value="g">Goat</gux-option-v2>
+      <gux-option-v2 value="h">Horse</gux-option-v2>
+      <gux-option-v2 value="i">Ibis</gux-option-v2>
+    </gux-listbox>
+  </gux-dropdown-v2-beta>
+
+  <h3>Unknown Value Set</h3>
+  <gux-dropdown-v2-beta value="j">
+    <gux-listbox id="unknown-listbox">
+      <gux-option-v2 value="a">Ant</gux-option-v2>
+      <gux-option-v2 value="b">Bat</gux-option-v2>
+      <gux-option-v2 value="c">Cat</gux-option-v2>
+      <gux-option-v2 value="d">Dog</gux-option-v2>
+      <gux-option-v2 value="e">Eel</gux-option-v2>
+      <gux-option-v2 value="f">Frog</gux-option-v2>
+      <gux-option-v2 value="g">Goat</gux-option-v2>
+      <gux-option-v2 value="h">Horse</gux-option-v2>
+      <gux-option-v2 value="i">Ibis</gux-option-v2>
+    </gux-listbox>
+  </gux-dropdown-v2-beta>
+
+  <gux-button
+    onclick="(function() {
+    const newOption = window.toHTML(`<gux-option-v2 value='j'>Jellyfish</gux-option-v2>`);
+    document.getElementById('unknown-listbox').appendChild(newOption);
+  })()"
+    >Add "Jellyfish" Option</gux-button
+  >
+
+  <gux-button
+    onclick="(function() {
+    const option = document.querySelector('#unknown-listbox gux-option-v2[value=j]')
+
+    option && option.remove();
+})()"
+    >Remove "Jellyfish" Option</gux-button
+  >
+
+  <h3>Disabled</h3>
+  <gux-dropdown-v2-beta value="a" disabled>
+    <gux-listbox>
+      <gux-option-v2 value="a">Ant</gux-option-v2>
+      <gux-option-v2 value="b">Bat</gux-option-v2>
+      <gux-option-v2 value="c">Cat</gux-option-v2>
+      <gux-option-v2 value="d">Dog</gux-option-v2>
+    </gux-listbox>
+  </gux-dropdown-v2-beta>
+
+  <h3>Placeholder</h3>
+  <gux-dropdown-v2-beta placeholder="Select an animal">
+    <gux-listbox>
+      <gux-option-v2 value="a">Ant</gux-option-v2>
+      <gux-option-v2 value="b">Bat</gux-option-v2>
+      <gux-option-v2 value="c">Cat</gux-option-v2>
+      <gux-option-v2 value="d">Dog</gux-option-v2>
+    </gux-listbox>
+  </gux-dropdown-v2-beta>
+
+  <h3>Long List</h3>
+  <gux-dropdown-v2-beta placeholder="Select an animal">
+    <gux-listbox>
+      <gux-option-v2 value="a">Ant</gux-option-v2>
+      <gux-option-v2 value="b">Bat</gux-option-v2>
+      <gux-option-v2 value="c">Cat</gux-option-v2>
+      <gux-option-v2 value="d">Dog</gux-option-v2>
+      <gux-option-v2 value="e">Eel</gux-option-v2>
+      <gux-option-v2 value="f">Frog</gux-option-v2>
+      <gux-option-v2 value="g">Goat</gux-option-v2>
+      <gux-option-v2 value="h">Hourse</gux-option-v2>
+      <gux-option-v2 value="i">Ibis</gux-option-v2>
+      <gux-option-v2 value="j">Jellyfish</gux-option-v2>
+      <gux-option-v2 value="k">Kestrel</gux-option-v2>
+      <gux-option-v2 value="l">Lion</gux-option-v2>
+      <gux-option-v2 value="m">Monkey</gux-option-v2>
+      <gux-option-v2 value="n">Narwhal</gux-option-v2>
+      <gux-option-v2 value="o">Otter</gux-option-v2>
+      <gux-option-v2 value="p">Penguin</gux-option-v2>
+      <gux-option-v2 value="q">Quail</gux-option-v2>
+      <gux-option-v2 value="r">Rabbit</gux-option-v2>
+      <gux-option-v2 value="s">Snake</gux-option-v2>
+      <gux-option-v2 value="t">Toad</gux-option-v2>
+      <gux-option-v2 value="u">Urchin</gux-option-v2>
+      <gux-option-v2 value="v">Vulture</gux-option-v2>
+      <gux-option-v2 value="w">Worm</gux-option-v2>
+      <gux-option-v2 value="x">Xerus</gux-option-v2>
+      <gux-option-v2 value="y">Yak</gux-option-v2>
+      <gux-option-v2 value="z">Zebra</gux-option-v2>
+    </gux-listbox>
+  </gux-dropdown-v2-beta>
+
+  <h3>Set list max height</h3>
+  <gux-dropdown-v2-beta placeholder="Select an animal">
+    <gux-listbox style="max-height: 100px">
+      <gux-option-v2 value="a">Ant</gux-option-v2>
+      <gux-option-v2 value="b">Bat</gux-option-v2>
+      <gux-option-v2 value="c">Cat</gux-option-v2>
+      <gux-option-v2 value="d">Dog</gux-option-v2>
+      <gux-option-v2 value="e">Eel</gux-option-v2>
+      <gux-option-v2 value="f">Frog</gux-option-v2>
+      <gux-option-v2 value="g">Goat</gux-option-v2>
+      <gux-option-v2 value="h">Hourse</gux-option-v2>
+      <gux-option-v2 value="i">Ibis</gux-option-v2>
+      <gux-option-v2 value="j">Jellyfish</gux-option-v2>
+      <gux-option-v2 value="k">Kestrel</gux-option-v2>
+      <gux-option-v2 value="l">Lion</gux-option-v2>
+      <gux-option-v2 value="m">Monkey</gux-option-v2>
+      <gux-option-v2 value="n">Narwhal</gux-option-v2>
+      <gux-option-v2 value="o">Otter</gux-option-v2>
+      <gux-option-v2 value="p">Penguin</gux-option-v2>
+      <gux-option-v2 value="q">Quail</gux-option-v2>
+      <gux-option-v2 value="r">Rabbit</gux-option-v2>
+      <gux-option-v2 value="s">Snake</gux-option-v2>
+      <gux-option-v2 value="t">Toad</gux-option-v2>
+      <gux-option-v2 value="u">Urchin</gux-option-v2>
+      <gux-option-v2 value="v">Vulture</gux-option-v2>
+      <gux-option-v2 value="w">Worm</gux-option-v2>
+      <gux-option-v2 value="x">Xerus</gux-option-v2>
+      <gux-option-v2 value="y">Yak</gux-option-v2>
+      <gux-option-v2 value="z">Zebra</gux-option-v2>
+    </gux-listbox>
+  </gux-dropdown-v2-beta>
+</form>
