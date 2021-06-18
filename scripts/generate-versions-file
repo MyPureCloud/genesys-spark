@@ -8,7 +8,7 @@ const version = require('./version-helper');
 const deployVersion = version.getDeployVersion();
 const versionPath = path.join(__dirname, '../docs/dist/versions.json');
 const versionsUrl =
-  'https://app.gmscdev.com/common-ui-docs/genesys-webcomponents/versions.json';
+  'https://apps.inindca.com/common-ui-docs/genesys-webcomponents/versions.json';
 
 generateVersions();
 
