@@ -88,7 +88,7 @@ export class GuxInputRange {
     return this.value;
   }
 
-  connectedCallback(): void {
+  componentWillLoad(): void {
     this.input = this.root.querySelector('input[slot="input"]');
     this.disabled = this.input.disabled;
     this.value = this.input.value;
