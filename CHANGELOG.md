@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.22.2](http://inindca///compare/v2.22.1...v2.22.2) (2021-06-18)
+
+
+### Bug Fixes
+
+* **gux-input-search:** fixed styling issue when rendering for smaller width ([a34202d](http://inindca///commit/a34202d418351b897036315b54666e5ea4678971))
+
 ### [2.22.1](http://inindca///compare/v2.22.0...v2.22.1) (2021-06-18)
 
 
