@@ -53,7 +53,7 @@ function fetchPreviousVersions(callback) {
       console.log(
         `DOCUMENTATION BUILD FAILURE: Unexpeted error generating versions file.`
       );
-      console.error(error);
+      console.error(e);
       process.exit(1);
     });
 }
