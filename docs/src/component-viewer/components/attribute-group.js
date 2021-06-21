@@ -3,7 +3,6 @@ import { getComponentSpec } from '../../component-specs.js';
 import { checkboxAttribute } from './checkbox-attribute';
 import { selectAttribute } from './select-attribute';
 import { textAttribute } from './text-attribute';
-import { jsonAttribute } from './json-attribute';
 
 export const createAttributeGroup = (parent, astNode, renderCallback) => {
   const elementName = astNode.nodeName;
@@ -36,8 +35,5 @@ function handlerFor(type) {
     return textAttribute;
   } else if (type == 'checkbox') {
     return checkboxAttribute;
-  } else if (type == 'json') {
-    //TODO: delete when not needed (see COMUI-122)
-    return jsonAttribute;
   }
 }

@@ -4,10 +4,10 @@ export const checkboxAttribute = (name, astNode, parent, renderCallback) => {
   let matchingAttr = astNode.attrs.find(a => a.name === name);
 
   let element = toHTML(`
-    <label>
-        <span>${name}:</span>
-        <input type="checkbox" ${matchingAttr ? 'checked="checked"' : ''}>
-    </label>`);
+    <gux-form-field>
+      <input slot="input" type="checkbox" value="${name}"}>
+      <label slot="label">${name}:</label>
+    </gux-form-field>`);
 
   element.addEventListener('change', ({ target }) => {
     if (target.checked) {

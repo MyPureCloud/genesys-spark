@@ -25,19 +25,20 @@ function createLayout() {
       </div>
       <gux-disclosure-button position="right">
         <div slot="panel-content" class="controls-column">
-          <details>
-            <summary class="heading">Event Descriptions</summary>
-            <div class="events"></div>
-          </details>
-          <details>
-            <summary class="heading">Attributes</summary>
-            <div class="attributes"></div>
-          </details>
+          <gux-accordion id="accordion" heading-level="4">
+            <div slot="Event Descriptions">
+              <div class="events"></div>
+            </div>
+            <div slot="Attributes">
+              <div class="attributes"></div>
+            </div>
+          </gux-accordion>
         </div>
       </gux-disclosure-button>
       <div class="notification"></div>
     </div>
   `);
+
   document.body.appendChild(template);
 
   const inheritedThemeButton = template.querySelector('.tablinks.inherited');
@@ -52,14 +53,12 @@ function createLayout() {
   const setupAccessibilityTool = async () => {
     const axeLive = await import('axe-live');
     const accessibilityNode = toHTML(`
-      <details>
-        <summary class="heading">Accessibility</summary>
-        <div class="accessibility">
+        <div slot="Accessibility">
           <gux-button accent="primary" id="axe-trigger">Run accessibility tests</gux-button>
         </div>
-      </details>
     `);
-    const controlsColumn = document.querySelector('.controls-column');
+
+    const controlsColumn = document.querySelector('#accordion');
     if (controlsColumn) {
       controlsColumn.appendChild(accessibilityNode);
     }
