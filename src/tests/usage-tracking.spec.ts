@@ -26,9 +26,12 @@ describe('usage-tracking', () => {
       expect(addPageAction.mock.calls[0][0]).toBe('spark-library');
       const versionInfo = addPageAction.mock.calls[0][1];
       expect(versionInfo.fullVersion).toBe(packageInfo.version);
-      expect(
-        `${versionInfo.majorVersion}.${versionInfo.minorVersion}.${versionInfo.patchVersion}`
-      ).toBe(packageInfo.version);
+      expect(packageInfo.version.startsWith(versionInfo.majorVersion)).toBe(
+        true
+      );
+      expect(packageInfo.version.startsWith(versionInfo.minorVersion)).toBe(
+        true
+      );
     });
 
     test('Does not log the library version on subsequent calls', () => {
