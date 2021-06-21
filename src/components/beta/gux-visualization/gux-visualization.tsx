@@ -1,5 +1,5 @@
 import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
-import { default as embed, EmbedOptions, VisualizationSpec } from 'vega-embed';
+import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { getDesiredLocale } from '../../../i18n';
 import { trackComponent } from '../../../usage-tracking';
