@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.22.3](http://inindca///compare/v2.22.2...v2.22.3) (2021-06-22)
+
+
+### Bug Fixes
+
+* **gux-input-range:** fixed bug with gux-input-range race condition ([04a74ef](http://inindca///commit/04a74efb64cfea451530b66e03f7a4ba1b8579f2))
+
 ### [2.22.2](http://inindca///compare/v2.22.1...v2.22.2) (2021-06-18)
 
 
