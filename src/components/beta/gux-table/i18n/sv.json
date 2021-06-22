@@ -2,6 +2,8 @@
   "emptyMessage": "Inga data är tillgängliga",
   "scrollLeft": "Rulla vänster",
   "scrollRight": "Rulla höger",
+  "selectAllTableRows": "Markera alla tabellrader",
+  "selectTableRow": "Markera tabellrad",
   "sortAsc": "Sorterade i stigande ordning",
   "sortDesc": "Sorterade i fallande ordning"
 }
