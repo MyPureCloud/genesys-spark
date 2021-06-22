@@ -102,7 +102,19 @@ export class GuxDropdown {
     if (selectedOptionIndex >= 0) {
       const option = selectionOptions[selectedOptionIndex];
       this.value = option.text;
+      return;
     }
+
+    const selectedOption = selectionOptions.find(
+      selectionOption => this.value === selectionOption.value
+    );
+
+    if (selectedOption) {
+      this.value = selectedOption.text;
+      return;
+    }
+
+    this.value = '';
   }
 
   // TODO: Fix the keyboard navigation I broke
