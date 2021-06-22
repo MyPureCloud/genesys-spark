@@ -2,6 +2,8 @@
   "emptyMessage": "Brak dostępnych danych",
   "scrollLeft": "Przewiń w lewo",
   "scrollRight": "Przewiń w prawo",
+  "selectAllTableRows": "Wybierz wszystkie wiersze tabeli",
+  "selectTableRow": "Wybierz wiersz tabeli",
   "sortAsc": "Sortowane rosnąco",
   "sortDesc": "Sortowane malejąco"
 }

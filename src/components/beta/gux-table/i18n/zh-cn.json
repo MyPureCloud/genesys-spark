@@ -2,6 +2,8 @@
   "emptyMessage": "无可用数据",
   "scrollLeft": "向左滚动",
   "scrollRight": "向右滚动",
+  "selectAllTableRows": "选择所有表行",
+  "selectTableRow": "选择表行",
   "sortAsc": "升序排序",
   "sortDesc": "降序排序"
 }
