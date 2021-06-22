@@ -13,54 +13,49 @@ gux-form-field {
   .gux-label-and-input-and-error-container {
     margin: 16px 0;
 
-    .gux-label-and-input-container {
-      label {
-        font-size: 12px;
-        font-weight: bold;
-        line-height: 20px;
-      }
+    label {
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 20px;
+    }
 
-      .gux-input-error .gux-input-container {
-        border-color: @gux-alert;
-      }
+    .gux-input-error .gux-input-container {
+      border-color: @gux-alert;
+    }
 
-      .gux-input-error textarea {
-        border-color: @gux-alert;
-      }
+    .gux-input-error textarea {
+      border-color: @gux-alert;
+    }
 
-      .gux-input-error .gux-input-color-main-element {
-        border-color: @gux-alert;
-      }
+    .gux-input-error .gux-input-color-main-element {
+      border-color: @gux-alert;
     }
 
     .gux-error {
       margin: 4px 0;
     }
 
+    .gux-input-and-error-container {
+      flex-grow: 1;
+    }
+
     &.gux-beside {
-      .gux-label-and-input-container .labeltag {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+      display: flex;
+      flex-direction: row;
 
-        .gux-label-container {
-          min-width: @gux-form-beside-label-container-width;
-          margin-right: @gux-form-beside-label-margin-right;
-        }
-
-        gux-input-range,
-        gux-input-select,
-        gux-input-text-like,
-        gux-input-search {
-          flex: 1 1 auto;
-        }
+      .gux-label-container {
+        position: relative;
+        top: 7px;
+        width: fit-content;
+        min-width: @gux-form-beside-label-container-width;
+        margin-right: @gux-form-beside-label-margin-right;
       }
 
-      gux-error-message-beta {
-        .gux-container {
-          position: relative;
-          left: @error-message-offset;
-        }
+      gux-input-range,
+      gux-input-select,
+      gux-input-text-like,
+      gux-input-search {
+        flex: 1 1 auto;
       }
     }
   }

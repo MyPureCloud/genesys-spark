@@ -4,17 +4,15 @@ exports[`gux-form-field #render input tag should render component type "checkbox
 <gux-form-field>
   <!---->
   <div>
-    <div class="labeltag">
-      <gux-input-checkbox aria-describedby="gux-form-field-i">
-        <!---->
-        <div class="gux-input-checkbox-container">
-          <input id="test" slot="input" type="checkbox" value="test">
-          <label for="test" slot="label">
-            Test
-          </label>
-        </div>
-      </gux-input-checkbox>
-    </div>
+    <gux-input-checkbox>
+      <!---->
+      <div class="gux-input-checkbox-container">
+        <input aria-describedby="gux-form-field-i" id="test" slot="input" type="checkbox" value="test">
+        <label for="test" slot="label">
+          Test
+        </label>
+      </div>
+    </gux-input-checkbox>
     <div class="gux-error" id="gux-form-field-i"></div>
   </div>
 </gux-form-field>
@@ -24,31 +22,29 @@ exports[`gux-form-field #render input tag should render component type "color" 1
 <gux-form-field>
   <!---->
   <div class="gux-above gux-label-and-input-and-error-container">
-    <div class="gux-label-and-input-container">
-      <div class="labeltag">
-        <div class="gux-label-container">
-          <label for="test" slot="label">
-            Test
-          </label>
-        </div>
-        <gux-input-color aria-describedby="gux-form-field-i">
-          <!---->
-          <section>
-            <button class="gux-input-color-main-element" type="button">
-              <div class="gux-input-color-selected-color" style="background: test;"></div>
-              <div class="gux-input-color-color-name">
-                test
-              </div>
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
-            </button>
-            <gux-color-select class="gux-input-color-color-select">
-              <input id="test" slot="input" type="color" value="test">
-            </gux-color-select>
-          </section>
-        </gux-input-color>
-      </div>
+    <div class="gux-label-container">
+      <label for="test" slot="label">
+        Test
+      </label>
     </div>
-    <div class="gux-error" id="gux-form-field-i"></div>
+    <div class="gux-input-and-error-container">
+      <gux-input-color>
+        <!---->
+        <section>
+          <button class="gux-input-color-main-element" type="button">
+            <div class="gux-input-color-selected-color" style="background: test;"></div>
+            <div class="gux-input-color-color-name">
+              test
+            </div>
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+          </button>
+          <gux-color-select class="gux-input-color-color-select">
+            <input aria-describedby="gux-form-field-i" id="test" slot="input" type="color" value="test">
+          </gux-color-select>
+        </section>
+      </gux-input-color>
+      <div class="gux-error" id="gux-form-field-i"></div>
+    </div>
   </div>
 </gux-form-field>
 `;
@@ -57,22 +53,20 @@ exports[`gux-form-field #render input tag should render component type "email" 1
 <gux-form-field>
   <!---->
   <div class="gux-above gux-label-and-input-and-error-container">
-    <div class="gux-label-and-input-container">
-      <div class="labeltag">
-        <div class="gux-label-container">
-          <label for="test" slot="label">
-            Test
-          </label>
-        </div>
-        <gux-input-text-like aria-describedby="gux-form-field-i" slot="input">
-          <!---->
-          <div class="gux-input-container">
-            <input id="test" slot="input" type="email" value="test">
-          </div>
-        </gux-input-text-like>
-      </div>
+    <div class="gux-label-container">
+      <label for="test" slot="label">
+        Test
+      </label>
     </div>
-    <div class="gux-error" id="gux-form-field-i"></div>
+    <div class="gux-input-and-error-container">
+      <gux-input-text-like slot="input">
+        <!---->
+        <div class="gux-input-container">
+          <input aria-describedby="gux-form-field-i" id="test" slot="input" type="email" value="test">
+        </div>
+      </gux-input-text-like>
+      <div class="gux-error" id="gux-form-field-i"></div>
+    </div>
   </div>
 </gux-form-field>
 `;
@@ -81,19 +75,17 @@ exports[`gux-form-field #render input tag should render component type "number" 
 <gux-form-field>
   <!---->
   <div class="gux-above gux-label-and-input-and-error-container">
-    <div class="gux-label-and-input-container">
-      <div class="labeltag">
-        <div class="gux-label-container">
-          <label for="test" slot="label">
-            Test
-          </label>
-        </div>
-        <gux-input-number aria-describedby="gux-form-field-i" slot="input">
-          <input id="test" slot="input" type="number" value="test">
-        </gux-input-number>
-      </div>
+    <div class="gux-label-container">
+      <label for="test" slot="label">
+        Test
+      </label>
     </div>
-    <div class="gux-error" id="gux-form-field-i"></div>
+    <div class="gux-input-and-error-container">
+      <gux-input-number slot="input">
+        <input aria-describedby="gux-form-field-i" id="test" slot="input" type="number" value="test">
+      </gux-input-number>
+      <div class="gux-error" id="gux-form-field-i"></div>
+    </div>
   </div>
 </gux-form-field>
 `;
@@ -102,22 +94,20 @@ exports[`gux-form-field #render input tag should render component type "password
 <gux-form-field>
   <!---->
   <div class="gux-above gux-label-and-input-and-error-container">
-    <div class="gux-label-and-input-container">
-      <div class="labeltag">
-        <div class="gux-label-container">
-          <label for="test" slot="label">
-            Test
-          </label>
-        </div>
-        <gux-input-text-like aria-describedby="gux-form-field-i" slot="input">
-          <!---->
-          <div class="gux-input-container">
-            <input id="test" slot="input" type="password" value="test">
-          </div>
-        </gux-input-text-like>
-      </div>
+    <div class="gux-label-container">
+      <label for="test" slot="label">
+        Test
+      </label>
     </div>
-    <div class="gux-error" id="gux-form-field-i"></div>
+    <div class="gux-input-and-error-container">
+      <gux-input-text-like slot="input">
+        <!---->
+        <div class="gux-input-container">
+          <input aria-describedby="gux-form-field-i" id="test" slot="input" type="password" value="test">
+        </div>
+      </gux-input-text-like>
+      <div class="gux-error" id="gux-form-field-i"></div>
+    </div>
   </div>
 </gux-form-field>
 `;
@@ -125,17 +115,15 @@ exports[`gux-form-field #render input tag should render component type "password
 exports[`gux-form-field #render input tag should render component type "radio" 1`] = `
 <gux-form-field>
   <!---->
-  <div class="labeltag">
-    <gux-input-radio>
-      <!---->
-      <div class="gux-input-radio-container">
-        <input id="test" slot="input" type="radio" value="test">
-        <label for="test" slot="label">
-          Test
-        </label>
-      </div>
-    </gux-input-radio>
-  </div>
+  <gux-input-radio>
+    <!---->
+    <div class="gux-input-radio-container">
+      <input aria-describedby="gux-form-field-i" id="test" slot="input" type="radio" value="test">
+      <label for="test" slot="label">
+        Test
+      </label>
+    </div>
+  </gux-input-radio>
 </gux-form-field>
 `;
 
@@ -143,34 +131,30 @@ exports[`gux-form-field #render input tag should render component type "range" 1
 <gux-form-field>
   <!---->
   <div class="gux-above gux-label-and-input-and-error-container">
-    <div class="gux-label-and-input-container">
-      <div class="labeltag">
-        <div class="gux-label-container">
-          <label for="test" slot="label">
-            Test
-          </label>
-        </div>
-        <gux-input-range>
-          <!---->
-          <div class="gux-container">
-            <div class="gux-range">
-              <div class="gux-track">
-                <div class="gux-progress" style="width: NaN%;"></div>
-              </div>
-              <input id="test" slot="input" type="range" value="test">
-              <div class="gux-hidden gux-range-tooltip-container">
-                <div class="gux-range-tooltip" style="left: NaN%;">
-                  test
-                </div>
-              </div>
-            </div>
-            <div class="gux-display">
+    <div class="gux-label-container">
+      <label for="test" slot="label">
+        Test
+      </label>
+    </div>
+    <gux-input-range>
+      <!---->
+      <div class="gux-container">
+        <div class="gux-range">
+          <div class="gux-track">
+            <div class="gux-progress" style="width: NaN%;"></div>
+          </div>
+          <input aria-describedby="gux-form-field-i" id="test" slot="input" type="range" value="test">
+          <div class="gux-hidden gux-range-tooltip-container">
+            <div class="gux-range-tooltip" style="left: NaN%;">
               test
             </div>
           </div>
-        </gux-input-range>
+        </div>
+        <div class="gux-display">
+          test
+        </div>
       </div>
-    </div>
+    </gux-input-range>
   </div>
 </gux-form-field>
 `;
@@ -179,19 +163,17 @@ exports[`gux-form-field #render input tag should render component type "search" 
 <gux-form-field>
   <!---->
   <div class="gux-above gux-label-and-input-and-error-container">
-    <div class="gux-label-and-input-container">
-      <div class="labeltag">
-        <div class="gux-label-container">
-          <label for="test" slot="label">
-            Test
-          </label>
-        </div>
-        <gux-input-search>
-          <input id="test" slot="input" type="search" value="test">
-        </gux-input-search>
-      </div>
+    <div class="gux-label-container">
+      <label for="test" slot="label">
+        Test
+      </label>
     </div>
-    <div class="gux-error" id="gux-form-field-i"></div>
+    <div class="gux-input-and-error-container">
+      <gux-input-search>
+        <input aria-describedby="gux-form-field-i" id="test" slot="input" type="search" value="test">
+      </gux-input-search>
+      <div class="gux-error" id="gux-form-field-i"></div>
+    </div>
   </div>
 </gux-form-field>
 `;
@@ -200,22 +182,20 @@ exports[`gux-form-field #render input tag should render component type "text" 1`
 <gux-form-field>
   <!---->
   <div class="gux-above gux-label-and-input-and-error-container">
-    <div class="gux-label-and-input-container">
-      <div class="labeltag">
-        <div class="gux-label-container">
-          <label for="test" slot="label">
-            Test
-          </label>
-        </div>
-        <gux-input-text-like aria-describedby="gux-form-field-i" slot="input">
-          <!---->
-          <div class="gux-input-container">
-            <input id="test" slot="input" type="text" value="test">
-          </div>
-        </gux-input-text-like>
-      </div>
+    <div class="gux-label-container">
+      <label for="test" slot="label">
+        Test
+      </label>
     </div>
-    <div class="gux-error" id="gux-form-field-i"></div>
+    <div class="gux-input-and-error-container">
+      <gux-input-text-like slot="input">
+        <!---->
+        <div class="gux-input-container">
+          <input aria-describedby="gux-form-field-i" id="test" slot="input" type="text" value="test">
+        </div>
+      </gux-input-text-like>
+      <div class="gux-error" id="gux-form-field-i"></div>
+    </div>
   </div>
 </gux-form-field>
 `;
@@ -227,7 +207,7 @@ exports[`gux-form-field #render input tag should render component type "unknown"
     <label for="test" slot="label">
       Test
     </label>
-    <input id="test" slot="input" type="unknown" value="test">
+    <input aria-describedby="gux-form-field-i" id="test" slot="input" type="unknown" value="test">
   </div>
 </gux-form-field>
 `;
@@ -236,29 +216,27 @@ exports[`gux-form-field #render select tag should render component type "select"
 <gux-form-field>
   <!---->
   <div class="gux-above gux-label-and-input-and-error-container">
-    <div class="gux-label-and-input-container">
-      <label class="labeltag">
-        <div class="gux-label-container">
-          <label slot="label">
-            Select
-          </label>
-        </div>
-        <gux-input-select aria-describedby="gux-form-field-i" slot="input">
-          <select name="select" slot="input" type="select">
-            <option value="option1">
-              Option 1
-            </option>
-            <option value="option1">
-              Option 2
-            </option>
-            <option value="option1">
-              Option 3
-            </option>
-          </select>
-        </gux-input-select>
+    <div class="gux-label-container">
+      <label for="gux-form-field-i" slot="label">
+        Select
       </label>
     </div>
-    <div class="gux-error" id="gux-form-field-i"></div>
+    <div class="gux-input-and-error-container">
+      <gux-input-select slot="input">
+        <select aria-describedby="gux-form-field-i" id="gux-form-field-i" name="select" slot="input" type="select">
+          <option value="option1">
+            Option 1
+          </option>
+          <option value="option1">
+            Option 2
+          </option>
+          <option value="option1">
+            Option 3
+          </option>
+        </select>
+      </gux-input-select>
+      <div class="gux-error" id="gux-form-field-i"></div>
+    </div>
   </div>
 </gux-form-field>
 `;

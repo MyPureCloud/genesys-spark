@@ -3,17 +3,51 @@
 
   <p>slot a input[type=color] element into a gux-form-field element</p>
 
+  <h2>Label Position Above</h2>
+
   <div>
-    <gux-form-field>
+    <gux-form-field label-position="above">
       <input slot="input" name="color" type="color" value="#1da8b3" />
       <label slot="label">Color</label>
     </gux-form-field>
   </div>
 
   <div>
-    <gux-form-field>
+    <gux-form-field label-position="above">
       <input slot="input" name="color" type="color" value="#1da8b3" disabled />
       <label slot="label">Color</label>
+    </gux-form-field>
+  </div>
+
+  <div>
+    <gux-form-field label-position="above">
+      <input slot="input" name="color" type="color" value="#1da8b3" />
+      <label slot="label">Color </label>
+      <span slot="error">Required</span>
+    </gux-form-field>
+  </div>
+
+  <h2>Label Position Beside</h2>
+
+  <div>
+    <gux-form-field label-position="beside">
+      <input slot="input" name="color" type="color" value="#1da8b3" />
+      <label slot="label">Color</label>
+    </gux-form-field>
+  </div>
+
+  <div>
+    <gux-form-field label-position="beside">
+      <input slot="input" name="color" type="color" value="#1da8b3" disabled />
+      <label slot="label">Color</label>
+    </gux-form-field>
+  </div>
+
+  <div>
+    <gux-form-field label-position="beside">
+      <input slot="input" name="color" type="color" value="#1da8b3" />
+      <label slot="label">Color</label>
+      <span slot="error">Required</span>
     </gux-form-field>
   </div>
 </form>

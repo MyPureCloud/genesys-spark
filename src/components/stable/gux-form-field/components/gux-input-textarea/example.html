@@ -2,8 +2,8 @@
   <h1>gux-form-field (textarea)</h1>
 
   <p>slot a textarea element into a gux-form-field element</p>
-
-  <gux-form-field>
+  <h2>Label Position Above</h2>
+  <gux-form-field label-position="above">
     <textarea
       slot="input"
       name="textarea"
@@ -12,7 +12,7 @@
     <label slot="label">Text Area Label</label>
   </gux-form-field>
 
-  <gux-form-field>
+  <gux-form-field label-position="above">
     <textarea
       slot="input"
       name="textarea"
@@ -22,7 +22,7 @@
     <label slot="label">Disabled</label>
   </gux-form-field>
 
-  <gux-form-field>
+  <gux-form-field label-position="above">
     <textarea
       style="height: 200px"
       slot="input"
@@ -32,7 +32,7 @@
     <label slot="label">Set to specific height</label>
   </gux-form-field>
 
-  <gux-form-field resize="none">
+  <gux-form-field resize="none" label-position="above">
     <textarea
       slot="input"
       name="textarea"
@@ -41,7 +41,7 @@
     <label slot="label">No Resize</label>
   </gux-form-field>
 
-  <gux-form-field resize="manual">
+  <gux-form-field resize="manual" label-position="above">
     <textarea
       slot="input"
       name="textarea"
@@ -50,7 +50,7 @@
     <label slot="label">Manual Resize</label>
   </gux-form-field>
 
-  <gux-form-field resize="auto">
+  <gux-form-field resize="auto" label-position="above">
     <textarea
       slot="input"
       name="textarea"
@@ -59,7 +59,7 @@
     <label slot="label">Auto Resize</label>
   </gux-form-field>
 
-  <gux-form-field resize="auto">
+  <gux-form-field resize="auto" label-position="above">
     <textarea
       style="max-height: 200px"
       slot="input"
@@ -67,5 +67,74 @@
       placeholder="Type here..."
     ></textarea>
     <label slot="label">Auto Resize with max height</label>
+    <span slot="error" id="test1">Required</span>
+  </gux-form-field>
+
+  <h2>Label Position Beside</h2>
+  <gux-form-field label-position="beside">
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Text Area Label</label>
+  </gux-form-field>
+
+  <gux-form-field label-position="beside">
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+      disabled
+    ></textarea>
+    <label slot="label">Disabled</label>
+  </gux-form-field>
+
+  <gux-form-field label-position="beside">
+    <textarea
+      style="height: 200px"
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Set to specific height</label>
+  </gux-form-field>
+
+  <gux-form-field resize="none" label-position="beside">
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">No Resize</label>
+  </gux-form-field>
+
+  <gux-form-field resize="manual" label-position="beside">
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Manual Resize</label>
+  </gux-form-field>
+
+  <gux-form-field resize="auto" label-position="beside">
+    <textarea
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Auto Resize</label>
+  </gux-form-field>
+
+  <gux-form-field resize="auto" label-position="beside">
+    <textarea
+      style="max-height: 200px"
+      slot="input"
+      name="textarea"
+      placeholder="Type here..."
+    ></textarea>
+    <label slot="label">Auto Resize with max height</label>
+    <span slot="error" id="test1">Required</span>
   </gux-form-field>
 </form>
