@@ -72,10 +72,9 @@ function reportLibraryVersion() {
 
   const [major, minor, patch] = packageInfo.version.split('.');
   newrelic.addPageAction(libraryPageAction, {
-    fullVersion: packageInfo.version,
+    fullVersion: `${major}.${minor}.${patch}`,
     majorVersion: major,
-    minorVersion: minor,
-    patchVersion: patch
+    minorVersion: `${major}.${minor}`
   });
 }
 

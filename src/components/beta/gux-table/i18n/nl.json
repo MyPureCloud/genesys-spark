@@ -2,6 +2,8 @@
   "emptyMessage": "Geen gegevens beschikbaar",
   "scrollLeft": "Naar links schuiven",
   "scrollRight": "Naar rechts schuiven",
+  "selectAllTableRows": "Alle tabrelrijen selecteren",
+  "selectTableRow": "Tabrelrij selecteren",
   "sortAsc": "Oplopend sorteren",
   "sortDesc": "Aflopend sorteren"
 }
