@@ -2,6 +2,8 @@
   "emptyMessage": "Aucune donnée disponible",
   "scrollLeft": "Faire défiler à gauche",
   "scrollRight": "Faire défiler à droite",
+  "selectAllTableRows": "Sélectionner toutes les lignes de la table",
+  "selectTableRow": "Sélectionner une ligne de la table",
   "sortAsc": "Tri croissant",
   "sortDesc": "Tri décroissant"
 }

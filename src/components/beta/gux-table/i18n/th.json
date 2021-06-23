@@ -2,6 +2,8 @@
   "emptyMessage": "ไม่มีข้อมูลที่พร้อมใช้งาน",
   "scrollLeft": "เลื่อนไปทางซ้าย",
   "scrollRight": "เลื่อนไปทางขวา",
+  "selectAllTableRows": "เลือกแถวตารางทั้งหมด",
+  "selectTableRow": "เลือกแถวตาราง",
   "sortAsc": "เรียงจากน้อยไปมากแล้ว",
   "sortDesc": "เรียงจากมากไปน้อยแล้ว"
 }
