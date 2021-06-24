@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.22.4](http://inindca///compare/v2.22.3...v2.22.4) (2021-06-24)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** value attribute now works as expected ([4a60266](http://inindca///commit/4a6026619e34a6e5763f4b8bf5083a1d39a5bf39))
+
 ### [2.22.3](http://inindca///compare/v2.22.2...v2.22.3) (2021-06-22)
 
 
