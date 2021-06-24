@@ -7,13 +7,12 @@ exports[`gux-form-field #render input tag should render component type "checkbox
     <gux-input-checkbox>
       <!---->
       <div class="gux-input-checkbox-container">
-        <input aria-describedby="gux-form-field-i" id="test" slot="input" type="checkbox" value="test">
+        <input id="test" slot="input" type="checkbox" value="test">
         <label for="test" slot="label">
           Test
         </label>
       </div>
     </gux-input-checkbox>
-    <div class="gux-error" id="gux-form-field-i"></div>
   </div>
 </gux-form-field>
 `;
@@ -39,11 +38,10 @@ exports[`gux-form-field #render input tag should render component type "color" 1
             <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </button>
           <gux-color-select class="gux-input-color-color-select">
-            <input aria-describedby="gux-form-field-i" id="test" slot="input" type="color" value="test">
+            <input id="test" slot="input" type="color" value="test">
           </gux-color-select>
         </section>
       </gux-input-color>
-      <div class="gux-error" id="gux-form-field-i"></div>
     </div>
   </div>
 </gux-form-field>
@@ -62,10 +60,9 @@ exports[`gux-form-field #render input tag should render component type "email" 1
       <gux-input-text-like slot="input">
         <!---->
         <div class="gux-input-container">
-          <input aria-describedby="gux-form-field-i" id="test" slot="input" type="email" value="test">
+          <input id="test" slot="input" type="email" value="test">
         </div>
       </gux-input-text-like>
-      <div class="gux-error" id="gux-form-field-i"></div>
     </div>
   </div>
 </gux-form-field>
@@ -82,9 +79,8 @@ exports[`gux-form-field #render input tag should render component type "number" 
     </div>
     <div class="gux-input-and-error-container">
       <gux-input-number slot="input">
-        <input aria-describedby="gux-form-field-i" id="test" slot="input" type="number" value="test">
+        <input id="test" slot="input" type="number" value="test">
       </gux-input-number>
-      <div class="gux-error" id="gux-form-field-i"></div>
     </div>
   </div>
 </gux-form-field>
@@ -103,10 +99,9 @@ exports[`gux-form-field #render input tag should render component type "password
       <gux-input-text-like slot="input">
         <!---->
         <div class="gux-input-container">
-          <input aria-describedby="gux-form-field-i" id="test" slot="input" type="password" value="test">
+          <input id="test" slot="input" type="password" value="test">
         </div>
       </gux-input-text-like>
-      <div class="gux-error" id="gux-form-field-i"></div>
     </div>
   </div>
 </gux-form-field>
@@ -118,7 +113,7 @@ exports[`gux-form-field #render input tag should render component type "radio" 1
   <gux-input-radio>
     <!---->
     <div class="gux-input-radio-container">
-      <input aria-describedby="gux-form-field-i" id="test" slot="input" type="radio" value="test">
+      <input id="test" slot="input" type="radio" value="test">
       <label for="test" slot="label">
         Test
       </label>
@@ -143,7 +138,7 @@ exports[`gux-form-field #render input tag should render component type "range" 1
           <div class="gux-track">
             <div class="gux-progress" style="width: NaN%;"></div>
           </div>
-          <input aria-describedby="gux-form-field-i" id="test" slot="input" type="range" value="test">
+          <input id="test" slot="input" type="range" value="test">
           <div class="gux-hidden gux-range-tooltip-container">
             <div class="gux-range-tooltip" style="left: NaN%;">
               test
@@ -170,9 +165,8 @@ exports[`gux-form-field #render input tag should render component type "search" 
     </div>
     <div class="gux-input-and-error-container">
       <gux-input-search>
-        <input aria-describedby="gux-form-field-i" id="test" slot="input" type="search" value="test">
+        <input id="test" slot="input" type="search" value="test">
       </gux-input-search>
-      <div class="gux-error" id="gux-form-field-i"></div>
     </div>
   </div>
 </gux-form-field>
@@ -191,10 +185,9 @@ exports[`gux-form-field #render input tag should render component type "text" 1`
       <gux-input-text-like slot="input">
         <!---->
         <div class="gux-input-container">
-          <input aria-describedby="gux-form-field-i" id="test" slot="input" type="text" value="test">
+          <input id="test" slot="input" type="text" value="test">
         </div>
       </gux-input-text-like>
-      <div class="gux-error" id="gux-form-field-i"></div>
     </div>
   </div>
 </gux-form-field>
@@ -207,7 +200,7 @@ exports[`gux-form-field #render input tag should render component type "unknown"
     <label for="test" slot="label">
       Test
     </label>
-    <input aria-describedby="gux-form-field-i" id="test" slot="input" type="unknown" value="test">
+    <input id="test" slot="input" type="unknown" value="test">
   </div>
 </gux-form-field>
 `;
@@ -223,7 +216,7 @@ exports[`gux-form-field #render select tag should render component type "select"
     </div>
     <div class="gux-input-and-error-container">
       <gux-input-select slot="input">
-        <select aria-describedby="gux-form-field-i" id="gux-form-field-i" name="select" slot="input" type="select">
+        <select id="gux-form-field-i" name="select" slot="input" type="select">
           <option value="option1">
             Option 1
           </option>
@@ -235,7 +228,6 @@ exports[`gux-form-field #render select tag should render component type "select"
           </option>
         </select>
       </gux-input-select>
-      <div class="gux-error" id="gux-form-field-i"></div>
     </div>
   </div>
 </gux-form-field>

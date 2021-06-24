@@ -100,14 +100,20 @@ export class GuxFormField {
             : 'above';
       }
     }
-    if (!this.inputHasId && this.label) {
+    if (!this.inputHasId && this.labelHasForAttribute) {
+      throw new Error(
+        '[gux-form-field] A "for" attribute has been provided on the label but there is no corresponding id on the input. Either provide an id on the input or omit the "for" attribute from the label. If there is no input id and no "for" attribute provided, the component will automatically generate an id and link it to the "for" attribute.'
+      );
+    } else if (!this.inputHasId && this.label) {
       this.input.setAttribute('id', this.labelId);
       this.label.setAttribute('for', this.labelId);
     } else if (this.inputHasId && !this.labelHasForAttribute) {
       const forId = this.input.getAttribute('id');
       this.label.setAttribute('for', forId);
     }
-    this.input.setAttribute('aria-describedBy', this.errorId);
+    if (this.hasErrorSlot()) {
+      this.input.setAttribute('aria-describedBy', this.errorId);
+    }
   }
 
   disconnectedCallback(): void {
@@ -378,14 +384,14 @@ export class GuxFormField {
   }
 
   private getError(hasError: boolean): JSX.Element {
-    return (
-      <div class="gux-error" id={this.errorId}>
-        {hasError ? (
+    if (hasError) {
+      return (
+        <div class="gux-error" id={this.errorId}>
           <gux-error-message-beta>
             <slot name="error" />
           </gux-error-message-beta>
-        ) : null}
-      </div>
-    );
+        </div>
+      );
+    }
   }
 }
