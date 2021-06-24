@@ -2,6 +2,8 @@
   "emptyMessage": "Kullanılabilir veri yok",
   "scrollLeft": "Sola Kaydır",
   "scrollRight": "Sağa Kaydır",
+  "selectAllTableRows": "Tüm Tablo Satırlarını Seç",
+  "selectTableRow": "Tablo Satırı Seç",
   "sortAsc": "Artan Sıralı",
   "sortDesc": "Azalan Sıralı"
 }

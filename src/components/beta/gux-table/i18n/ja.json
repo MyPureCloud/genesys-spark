@@ -2,6 +2,8 @@
   "emptyMessage": "利用可能なデータがありません",
   "scrollLeft": "左にスクロール",
   "scrollRight": "右にスクロール",
+  "selectAllTableRows": "すべてのテーブル行を選択",
+  "selectTableRow": "テーブル行を選択",
   "sortAsc": "昇順にソート済み",
   "sortDesc": "降順にソート済み"
 }
