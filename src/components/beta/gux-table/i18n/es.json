@@ -2,6 +2,8 @@
   "emptyMessage": "No hay datos disponibles",
   "scrollLeft": "Desplazar a la izquierda",
   "scrollRight": "Desplazar a la derecha",
+  "selectAllTableRows": "Seleccionar todas las filas de la tabla",
+  "selectTableRow": "Seleccionar la fila de la tabla",
   "sortAsc": "En orden ascendente",
   "sortDesc": "En orden descendente"
 }

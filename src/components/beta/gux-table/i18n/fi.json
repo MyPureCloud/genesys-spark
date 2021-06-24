@@ -2,6 +2,8 @@
   "emptyMessage": "Tietoja ei ole saatavissa",
   "scrollLeft": "Vieritä vasemmalle",
   "scrollRight": "Vieritä oikealle",
+  "selectAllTableRows": "Valitse taulukon kaikki rivit",
+  "selectTableRow": "Valitse taulukon rivi",
   "sortAsc": "Lajiteltu nousevaan järjestykseen",
   "sortDesc": "Lajiteltu laskevaan järjestykseen"
 }

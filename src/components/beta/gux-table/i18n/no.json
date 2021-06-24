@@ -2,6 +2,8 @@
   "emptyMessage": "Ingen data tilgjengelig",
   "scrollLeft": "Rull til venstre",
   "scrollRight": "Rull til høyre",
+  "selectAllTableRows": "Velg alle tabellrader",
+  "selectTableRow": "Velg tabellrad",
   "sortAsc": "Sortert stigende",
   "sortDesc": "Sortert synkende"
 }

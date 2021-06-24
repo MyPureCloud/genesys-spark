@@ -2,6 +2,8 @@
   "emptyMessage": "Keine Daten verfügbar",
   "scrollLeft": "Nach links blättern",
   "scrollRight": "Nach rechts blättern",
+  "selectAllTableRows": "Alle Tabellenzeilen auswählen",
+  "selectTableRow": "Tabellenzeile auswählen",
   "sortAsc": "Aufsteigend sortiert",
   "sortDesc": "Absteigend sortiert"
 }
