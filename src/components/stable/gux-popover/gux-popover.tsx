@@ -148,7 +148,9 @@ export class GuxPopover {
     });
 
     this.hidden = this.root.hidden;
+  }
 
+  componentDidLoad(): void {
     this.runPopper();
   }
 
@@ -162,14 +164,12 @@ export class GuxPopover {
       <div class="gux-popover-wrapper">
         <div class="gux-arrow" data-popper-arrow />
         {this.displayDismissButton && (
-          <div class="gux-title-bar">
-            <gux-icon
-              class="gux-dismiss"
-              icon-name="close"
-              screenreader-text={this.i18n('dismiss')}
-              onClick={this.dismiss.bind(this)}
-            />
-          </div>
+          <gux-icon
+            class="gux-dismiss"
+            icon-name="close"
+            screenreader-text={this.i18n('dismiss')}
+            onClick={this.dismiss.bind(this)}
+          />
         )}
         <div class="gux-popover-content">
           <slot />
