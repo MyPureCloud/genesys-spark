@@ -161,6 +161,7 @@ gux-table-beta {
           th {
             position: sticky;
             top: 0;
+            z-index: 1;
             background: @gux-grey-100;
           }
 
@@ -211,12 +212,14 @@ gux-table-beta {
     }
 
     &.horizontal-scroll {
-      thead {
-        th:first-child {
+      tr {
+        th:first-child,
+        td:first-child {
           padding-left: 36px;
         }
 
-        th:last-child {
+        th:last-child,
+        td:last-child {
           padding-right: 48px;
         }
       }
