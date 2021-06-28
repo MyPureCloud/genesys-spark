@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.23.0](http://inindca///compare/v2.22.4...v2.23.0) (2021-06-28)
+
+
+### Features
+
+* **controls-column:** updated controls column to use gux components ([da698b0](http://inindca///commit/da698b04824719926f2888626176574d60f883e0))
+
+
+### Bug Fixes
+
+* **gux-popover:** fixed arrow positioning ([bce954d](http://inindca///commit/bce954d06b0b3ac80bc5c78705645043430d08a0))
+* **gux-table:** fixed display issues related to row selection while scrolling ([859059d](http://inindca///commit/859059d79c8888aef06072ea46b5adb1142d81fc))
+* **pr-comment:** addressed PR comment ([58013e5](http://inindca///commit/58013e52d22e14f0f69d5fe409031fe043e2442b))
+
 ### [2.22.4](http://inindca///compare/v2.22.3...v2.22.4) (2021-06-24)
 
 
