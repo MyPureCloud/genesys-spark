@@ -59,6 +59,12 @@ export class GuxAdvancedDropdown {
   filterDebounceTimeout: number = 500;
 
   /**
+   * CSS string used to set the maximum height of the dropdown option container. Default is set to 10 options as defined by UX.
+   */
+  @Prop()
+  dropdownHeight: string = '320px';
+
+  /**
    * Fires when the value of the advanced dropdown changes.
    */
   @Event()
@@ -192,6 +198,7 @@ export class GuxAdvancedDropdown {
 
             <div
               class="gux-dropdown-options"
+              style={{ maxHeight: this.dropdownHeight }}
               onKeyDown={e => this.optionsKeyDown(e)}
             >
               <slot />
