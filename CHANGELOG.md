@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.24.0](http://inindca///compare/v2.23.0...v2.24.0) (2021-06-29)
+
+
+### Features
+
+* **gux-advanced-dropdown:** add size property to control dropdown max-height ([a60491a](http://inindca///commit/a60491afb0a05c2ac0d5f65fe3c0ed8f466bbbc9))
+
+
+### Bug Fixes
+
+* **gux-advanced-dropdown:** replace size property with dropdownHeight property ([b45290e](http://inindca///commit/b45290ef2e1178650eafe5fba09157a7a473cc10))
+* **gux-advanced-dropdown:** use css variable for option height ([6bdb379](http://inindca///commit/6bdb3791326938247223cd679c0e5b1b2f1455f7))
+
 ## [2.23.0](http://inindca///compare/v2.22.4...v2.23.0) (2021-06-28)
 
 
