@@ -50,10 +50,9 @@ describe('gux-form-field', () => {
               <input
                 slot="input"
                 type="${type}"
-                id="test"
                 value="${value}"
               />
-              <label slot="label" for="test">Test</label>
+              <label slot="label">Test</label>
             </gux-form-field>
           `;
           const page = await mockRandomForE2ESnapshot({ html });
@@ -61,12 +60,31 @@ describe('gux-form-field', () => {
 
           expect(element.innerHTML).toMatchSnapshot();
         });
+
+        it(`should render component type "${type}" with an error slot`, async () => {
+          const html = `
+              <gux-form-field lang="en">
+                <input
+                  slot="input"
+                  type="${type}"
+                  value="${value}"
+                />
+                <label slot="label">Test</label>
+                <span slot="error">Error</span>
+              </gux-form-field>
+            `;
+          const page = await mockRandomForE2ESnapshot({ html });
+          const element = await page.find('gux-form-field');
+
+          expect(element.innerHTML).toMatchSnapshot();
+        });
       });
     });
+  });
 
-    describe('select tag', () => {
-      it(`should render component type "select"`, async () => {
-        const html = `
+  describe('select tag', () => {
+    it(`should render component type "select"`, async () => {
+      const html = `
           <gux-form-field lang="en">
             <select slot="input" name="select" type="select">
               <option value="option1">Option 1</option>
@@ -76,11 +94,27 @@ describe('gux-form-field', () => {
             <label slot="label">Select</label>
           </gux-form-field>
         `;
-        const page = await mockRandomForE2ESnapshot({ html });
-        const element = await page.find('gux-form-field');
+      const page = await mockRandomForE2ESnapshot({ html });
+      const element = await page.find('gux-form-field');
 
-        expect(element.innerHTML).toMatchSnapshot();
-      });
+      expect(element.innerHTML).toMatchSnapshot();
+    });
+    it(`should render component type "select" with an error slot`, async () => {
+      const html = `
+          <gux-form-field lang="en">
+            <select slot="input" name="select" type="select">
+              <option value="option1">Option 1</option>
+              <option value="option1">Option 2</option>
+              <option value="option1">Option 3</option>
+            </select>
+            <label slot="label">Select</label>
+            <span slot="error">Error</span>
+          </gux-form-field>
+        `;
+      const page = await mockRandomForE2ESnapshot({ html });
+      const element = await page.find('gux-form-field');
+
+      expect(element.innerHTML).toMatchSnapshot();
     });
   });
 });

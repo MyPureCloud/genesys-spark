@@ -7,13 +7,13 @@
 
 ## Properties
 
-| Property         | Attribute          | Description | Type                           | Default     |
-| ---------------- | ------------------ | ----------- | ------------------------------ | ----------- |
-| `clearable`      | `clearable`        |             | `boolean`                      | `undefined` |
-| `displayUnits`   | `display-units`    |             | `string`                       | `undefined` |
-| `labelPosition`  | `label-position`   |             | `"above" \| "beside"`          | `undefined` |
-| `resize`         | `resize`           |             | `"auto" \| "manual" \| "none"` | `undefined` |
-| `valueInTooltip` | `value-in-tooltip` |             | `boolean`                      | `undefined` |
+| Property         | Attribute          | Description | Type                                    | Default     |
+| ---------------- | ------------------ | ----------- | --------------------------------------- | ----------- |
+| `clearable`      | `clearable`        |             | `boolean`                               | `undefined` |
+| `displayUnits`   | `display-units`    |             | `string`                                | `undefined` |
+| `labelPosition`  | `label-position`   |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
+| `resize`         | `resize`           |             | `"auto" \| "manual" \| "none"`          | `undefined` |
+| `valueInTooltip` | `value-in-tooltip` |             | `boolean`                               | `undefined` |
 
 
 ## Slots

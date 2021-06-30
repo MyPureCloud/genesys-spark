@@ -1,5 +1,6 @@
+<h1>Form Field</h1>
 <form onchange="notify(event)" oninput="notify(event)">
-  <h1>Checkbox</h1>
+  <h2>Checkbox</h2>
 
   <div>
     <gux-form-field>
@@ -40,7 +41,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Radio</h1>
+  <h2>Radio</h2>
 
   <div>
     <gux-form-field>
@@ -70,7 +71,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Color</h1>
+  <h2>Color</h2>
 
   <div>
     <gux-form-field label-position="beside">
@@ -90,7 +91,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Number</h1>
+  <h2>Number</h2>
 
   <div>
     <gux-form-field label-position="beside">
@@ -179,7 +180,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Text Like</h1>
+  <h2>Text Like</h2>
 
   <div>
     <gux-form-field label-position="beside">
@@ -224,7 +225,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Text Like (clearable)</h1>
+  <h2>Text Like (clearable)</h2>
 
   <div>
     <gux-form-field clearable label-position="beside">
@@ -269,7 +270,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Text Like (disabled)</h1>
+  <h2>Text Like (disabled)</h2>
 
   <div>
     <gux-form-field clearable label-position="beside">
@@ -309,7 +310,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Input with error</h1>
+  <h2>Input with error</h2>
   <div>
     <gux-form-field label-position="beside">
       <input
@@ -326,7 +327,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Text Area</h1>
+  <h2>Text Area</h2>
 
   <div>
     <gux-form-field label-position="above">
@@ -396,7 +397,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Select</h1>
+  <h2>Select</h2>
   <div>
     <gux-form-field label-position="beside">
       <select slot="input" name="select" type="select">
@@ -437,7 +438,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Range</h1>
+  <h2>Range</h2>
 
   <div>
     <gux-form-field label-position="beside">
@@ -476,7 +477,7 @@
     </gux-form-field>
   </div>
 
-  <h1>Search</h1>
+  <h2>Search</h2>
 
   <gux-form-field label-position="beside">
     <input
@@ -488,7 +489,7 @@
     <label slot="label">Search</label>
   </gux-form-field>
 
-  <h2>Disabled</h2>
+  <h3>Disabled</h3>
 
   <gux-form-field label-position="beside">
     <input
@@ -501,17 +502,15 @@
     <label slot="label">Search</label>
   </gux-form-field>
 
-  <h2>No Visible Label</h2>
+  <h3>No Visible Label</h3>
 
-  <gux-form-field>
+  <gux-form-field label-position="screenreader">
     <input
       slot="input"
       name="search"
       type="search"
       placeholder="Enter a search"
     />
-    <label slot="label" class="gux-sr-only"
-      >This will be read by a screenreader</label
-    >
+    <label slot="label">This will be read by a screenreader</label>
   </gux-form-field>
 </form>

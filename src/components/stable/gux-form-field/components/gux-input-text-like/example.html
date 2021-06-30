@@ -205,4 +205,15 @@
       <span slot="error">Required</span>
     </gux-form-field>
   </div>
+
+  <h2>Visually Hidden Label</h2>
+  <gux-form-field clearable label-position="screenreader">
+    <input
+      slot="input"
+      name="text-clearable"
+      type="text"
+      placeholder="Enter a string"
+    />
+    <label slot="label">This will be read by a screenreader</label>
+  </gux-form-field>
 </form>

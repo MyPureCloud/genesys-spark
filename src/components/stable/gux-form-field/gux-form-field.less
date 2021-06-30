@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/typography.less';
 
 // Variables part
 @gux-form-beside-label-container-width: 45px;
@@ -56,6 +57,12 @@ gux-form-field {
       gux-input-text-like,
       gux-input-search {
         flex: 1 1 auto;
+      }
+    }
+
+    &.gux-screenreader-only {
+      label {
+        .gux-sr-only();
       }
     }
   }
