@@ -23,7 +23,7 @@ export function bootstrap() {
                         type="search"
                         placeholder="Enter a search"
                       />
-                      <label slot="label" for="component-search-field">Search for a component</label>
+                      <label slot="label" for="component-search-box">Search for a component</label>
                     </gux-form-field>
                 </div>
                 ${components
