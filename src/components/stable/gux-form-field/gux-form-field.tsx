@@ -1,5 +1,6 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { logError } from '../../../utils/error/log-error';
 
 import { onRequiredChange } from '../../../utils/dom/on-attribute-change';
 import { trackComponent } from '../../../usage-tracking';
@@ -88,7 +89,7 @@ export class GuxFormField {
   }
 
   componentWillRender() {
-    this.computedLabelPosition = this.setComputedLabelPosition(
+    this.computedLabelPosition = this.getComputedLabelPosition(
       this.label,
       this.labelPosition
     );
@@ -106,7 +107,7 @@ export class GuxFormField {
           <slot name="input" />
           <slot name="label" />
         </gux-input-checkbox>
-        {this.getError(hasError)}
+        {this.renderError(hasError)}
       </div>
     );
   }
@@ -125,7 +126,7 @@ export class GuxFormField {
       <div
         class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        {this.getLabel()}
+        {this.renderLabel(this.required)}
         <div class="gux-input-and-error-container">
           <gux-input-color
             class={{
@@ -134,7 +135,7 @@ export class GuxFormField {
           >
             <slot name="input" />
           </gux-input-color>
-          {this.getError(hasError)}
+          {this.renderError(hasError)}
         </div>
       </div>
     );
@@ -148,7 +149,7 @@ export class GuxFormField {
       <div
         class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        {this.getLabel()}
+        {this.renderLabel(this.required)}
 
         <gux-input-range
           display-units={displayUnits}
@@ -165,7 +166,7 @@ export class GuxFormField {
       <div
         class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        {this.getLabel()}
+        {this.renderLabel(this.required)}
         <div class="gux-input-and-error-container">
           <gux-input-number
             class={{
@@ -176,7 +177,7 @@ export class GuxFormField {
           >
             <slot name="input" />
           </gux-input-number>
-          {this.getError(hasError)}
+          {this.renderError(hasError)}
         </div>
       </div>
     );
@@ -187,7 +188,7 @@ export class GuxFormField {
       <div
         class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        {this.getLabel()}
+        {this.renderLabel(this.required)}
         <div class="gux-input-and-error-container">
           <gux-input-select
             slot="input"
@@ -197,7 +198,7 @@ export class GuxFormField {
           >
             <slot name="input" />
           </gux-input-select>
-          {this.getError(hasError)}
+          {this.renderError(hasError)}
         </div>
       </div>
     );
@@ -208,7 +209,7 @@ export class GuxFormField {
       <div
         class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        {this.getLabel()}
+        {this.renderLabel(this.required)}
         <div class="gux-input-and-error-container">
           <gux-input-text-like
             class={{
@@ -219,7 +220,7 @@ export class GuxFormField {
           >
             <slot name="input" />
           </gux-input-text-like>
-          {this.getError(hasError)}
+          {this.renderError(hasError)}
         </div>
       </div>
     );
@@ -230,12 +231,12 @@ export class GuxFormField {
       <div
         class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        {this.getLabel()}
+        {this.renderLabel(this.required)}
         <div class="gux-input-and-error-container">
           <gux-input-search>
             <slot name="input" />
           </gux-input-search>
-          {this.getError(hasError)}
+          {this.renderError(hasError)}
         </div>
       </div>
     );
@@ -246,7 +247,7 @@ export class GuxFormField {
       <div
         class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        {this.getLabel()}
+        {this.renderLabel(this.required)}
         <div class="gux-input-and-error-container">
           <gux-input-textarea
             class={{
@@ -257,7 +258,7 @@ export class GuxFormField {
           >
             <slot name="input" />
           </gux-input-textarea>
-          {this.getError(hasError)}
+          {this.renderError(hasError)}
         </div>
       </div>
     );
@@ -314,8 +315,9 @@ export class GuxFormField {
       const inputHasId = !!this.input.hasAttribute('id');
       const labelHasFor = !!this.label.hasAttribute('for');
       if (!inputHasId && labelHasFor) {
-        throw new Error(
-          '[gux-form-field] A "for" attribute has been provided on the label but there is no corresponding id on the input. Either provide an id on the input or omit the "for" attribute from the label. If there is no input id and no "for" attribute provided, the component will automatically generate an id and link it to the "for" attribute.'
+        logError(
+          'gux-form-field',
+          'A "for" attribute has been provided on the label but there is no corresponding id on the input. Either provide an id on the input or omit the "for" attribute from the label. If there is no input id and no "for" attribute provided, the component will automatically generate an id and link it to the "for" attribute.'
         );
       } else if (!inputHasId) {
         this.input.setAttribute('id', this.defaultLabelId);
@@ -328,13 +330,15 @@ export class GuxFormField {
         labelHasFor &&
         this.input.getAttribute('id') !== this.label.getAttribute('for')
       ) {
-        throw new Error(
-          '[gux-form-field] The input id and label for attribute should match.'
+        logError(
+          'gux-form-field',
+          'The input id and label for attribute should match.'
         );
       }
     } else {
-      throw new Error(
-        '[gux-form-field] A label is required for this component. If a visual label is not needed for this use case, please add localized text for a screenreader and set the label-position attribute to "screenreader" to visually hide the label.'
+      logError(
+        'gux-form-field',
+        'A label is required for this component. If a visual label is not needed for this use case, please add localized text for a screenreader and set the label-position attribute to "screenreader" to visually hide the label.'
       );
     }
     if (this.hasErrorSlot()) {
@@ -349,7 +353,7 @@ export class GuxFormField {
     }
   }
 
-  private setComputedLabelPosition(label, labelPosition) {
+  private getComputedLabelPosition(label, labelPosition) {
     if (label) {
       if (
         labelPosition === 'above' ||
@@ -369,12 +373,12 @@ export class GuxFormField {
     return !!this.root.querySelector('[slot="error"]');
   }
 
-  private getLabel(): JSX.Element {
+  private renderLabel(required): JSX.Element {
     return (
       <div
         class={{
           'gux-label-container': true,
-          'gux-required': this.required
+          'gux-required': required
         }}
       >
         <slot name="label" slot="label" />
@@ -382,7 +386,7 @@ export class GuxFormField {
     );
   }
 
-  private getError(hasError: boolean): JSX.Element {
+  private renderError(hasError: boolean): JSX.Element {
     if (hasError) {
       return (
         <div class="gux-error" id={this.errorId}>
