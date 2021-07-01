@@ -1,0 +1,22 @@
+@import (reference) '../../../style/spacing.less';
+
+gux-tooltip-title-beta {
+  cursor: default;
+
+  .gux-title-container {
+    display: flex;
+    gux-icon {
+      flex-shrink: 0;
+      &.gux-tooltip-icon-decorative {
+        margin-right: @spacing-xs;
+      }
+    }
+    & > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.gux-tooltip-for-element {
+  cursor: default !important;
+}
