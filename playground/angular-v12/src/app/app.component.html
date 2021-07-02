@@ -1,0 +1,18 @@
+<h1>Angular@12</h1>
+<div>
+  <gux-form-field>
+    <input
+      slot="input"
+      name="errorInput"
+      type="text"
+      step="5"
+      min="5"
+      max="100"
+      placeholder="Enter text"
+    />
+    <label slot="label">Input</label>
+    <span *ngIf="hasError" slot="error">Field is required</span>
+  </gux-form-field>
+
+  <gux-button (click)="toggleHasError()">Toggle Has Error</gux-button>
+</div>

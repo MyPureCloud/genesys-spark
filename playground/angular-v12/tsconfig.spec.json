@@ -1,0 +1,185 @@
+{
+  "name": "common-ui-docs/genesys-webcomponents",
+  "version": "2.21.0",
+  "build": "272",
+  "buildDate": "2021-06-16T23:52:15.856Z",
+  "indexFiles": [
+    {
+      "file": "color.html"
+    },
+    {
+      "file": "gux-accordion.html"
+    },
+    {
+      "file": "gux-action-button.html"
+    },
+    {
+      "file": "gux-action-toast.html"
+    },
+    {
+      "file": "gux-advanced-dropdown.html"
+    },
+    {
+      "file": "gux-breadcrumbs.html"
+    },
+    {
+      "file": "gux-button.html"
+    },
+    {
+      "file": "gux-calendar.html"
+    },
+    {
+      "file": "gux-checkbox-legacy.html"
+    },
+    {
+      "file": "gux-color-picker-legacy.html"
+    },
+    {
+      "file": "gux-command-palette.html"
+    },
+    {
+      "file": "gux-content-search.html"
+    },
+    {
+      "file": "gux-datepicker.html"
+    },
+    {
+      "file": "gux-disclosure-button.html"
+    },
+    {
+      "file": "gux-dropdown.html"
+    },
+    {
+      "file": "gux-flyout-menu.html"
+    },
+    {
+      "file": "gux-form-field.html"
+    },
+    {
+      "file": "gux-icon.html"
+    },
+    {
+      "file": "gux-input-checkbox.html"
+    },
+    {
+      "file": "gux-input-color.html"
+    },
+    {
+      "file": "gux-input-number.html"
+    },
+    {
+      "file": "gux-input-radio.html"
+    },
+    {
+      "file": "gux-input-range.html"
+    },
+    {
+      "file": "gux-input-search.html"
+    },
+    {
+      "file": "gux-input-select.html"
+    },
+    {
+      "file": "gux-input-text-like.html"
+    },
+    {
+      "file": "gux-input-textarea.html"
+    },
+    {
+      "file": "gux-list.html"
+    },
+    {
+      "file": "gux-modal.html"
+    },
+    {
+      "file": "gux-notification-toast.html"
+    },
+    {
+      "file": "gux-page-loading-spinner.html"
+    },
+    {
+      "file": "gux-pagination.html"
+    },
+    {
+      "file": "gux-panel-frame.html"
+    },
+    {
+      "file": "gux-popover.html"
+    },
+    {
+      "file": "gux-radial-loading.html"
+    },
+    {
+      "file": "gux-radial-progress.html"
+    },
+    {
+      "file": "gux-radio-group-legacy.html"
+    },
+    {
+      "file": "gux-radio-legacy.html"
+    },
+    {
+      "file": "gux-rating.html"
+    },
+    {
+      "file": "gux-search.html"
+    },
+    {
+      "file": "gux-side-panel.html"
+    },
+    {
+      "file": "gux-simple-toast.html"
+    },
+    {
+      "file": "gux-slider-legacy.html"
+    },
+    {
+      "file": "gux-spin-button-legacy.html"
+    },
+    {
+      "file": "gux-switch-legacy.html"
+    },
+    {
+      "file": "gux-switch.html"
+    },
+    {
+      "file": "gux-table.html"
+    },
+    {
+      "file": "gux-tabs.html"
+    },
+    {
+      "file": "gux-tag.html"
+    },
+    {
+      "file": "gux-text-field-legacy.html"
+    },
+    {
+      "file": "gux-text-highlight.html"
+    },
+    {
+      "file": "gux-text-label.html"
+    },
+    {
+      "file": "gux-time-picker.html"
+    },
+    {
+      "file": "gux-toggle.html"
+    },
+    {
+      "file": "gux-tooltip.html"
+    },
+    {
+      "file": "index.html"
+    },
+    {
+      "file": "spacing.html"
+    },
+    {
+      "file": "typography.html"
+    },
+    {
+      "file": "versions.json"
+    }
+  ]
+}
