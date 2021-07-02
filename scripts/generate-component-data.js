@@ -98,7 +98,7 @@ function parseAttributeTable(mdStr) {
 }
 
 function attributeType(type) {
-  if (type == 'Boolean') {
+  if (type == 'boolean') {
     return 'checkbox';
   } else if (type.startsWith('string') || type == 'number') {
     return 'text';
