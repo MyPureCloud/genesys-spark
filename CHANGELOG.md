@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.24.1](http://inindca///compare/v2.24.0...v2.24.1) (2021-07-02)
+
+
+### Bug Fixes
+
+* **attributes-panel:** boolean attributes will now appear as checkboxes properly ([8548a35](http://inindca///commit/8548a3500a992602be7b97c1cd949e4ea6299932))
+* **gux-form-field:** improve label accessibility ([57a56df](http://inindca///commit/57a56df8bd32b28f532bbb6f5313bd23e685175e))
+
 ## [2.24.0](http://inindca///compare/v2.23.0...v2.24.0) (2021-06-29)
 
 
