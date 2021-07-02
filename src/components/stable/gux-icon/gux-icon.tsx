@@ -1,6 +1,7 @@
 import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
+import { logError } from '../../../utils/error/log-error';
 
 import { getSvgHtml, getRootIconName } from './gux-icon.service';
 
@@ -55,8 +56,9 @@ export class GuxIcon {
 
   componentDidLoad(): void {
     if (!this.decorative && !this.screenreaderText) {
-      throw new Error(
-        '[gux-icon] No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true'
+      logError(
+        'gux-icon',
+        'No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true.'
       );
     }
   }

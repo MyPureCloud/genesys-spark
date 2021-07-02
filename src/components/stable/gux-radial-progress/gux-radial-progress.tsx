@@ -1,6 +1,7 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
+import { logError } from '../../../utils/error/log-error';
 
 const RADIUS = 23.5;
 const STROKE_DASH = 2 * Math.PI * RADIUS;
@@ -44,8 +45,9 @@ export class GuxRadialProgress {
       !this.screenreaderText &&
       this.canShowPercentage(this.value, this.max)
     ) {
-      throw new Error(
-        '[gux-radial-progress] No screenreader-text provided. Provide a localized screenreader-text property for the component.'
+      logError(
+        'gux-radial-progress',
+        'No screenreader-text provided. Provide a localized screenreader-text property for the component.'
       );
     }
   }

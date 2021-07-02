@@ -14,8 +14,8 @@ export function bootstrap() {
         <main>
             <nav class="components-list">
                 <div class="sticky-header">
-                    <header>Components</header>
-                    <gux-form-field class="component-search-field">
+                    <h2>Components</h2>
+                    <gux-form-field class="component-search-field" label-position="screenreader">
                       <input
                         id="component-search-box"
                         slot="input"
@@ -23,6 +23,7 @@ export function bootstrap() {
                         type="search"
                         placeholder="Enter a search"
                       />
+                      <label slot="label" for="component-search-box">Search for a component</label>
                     </gux-form-field>
                 </div>
                 ${components

@@ -1,5 +1,6 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { logError } from '../../../utils/error/log-error';
 
 import { onRequiredChange } from '../../../utils/dom/on-attribute-change';
 import { trackComponent } from '../../../usage-tracking';
@@ -17,7 +18,8 @@ export class GuxFormField {
   private input: HTMLInputElement;
   private label: HTMLLabelElement;
   private requiredObserver: MutationObserver;
-  private errorID = randomHTMLId('gux-form-field');
+  private errorId = randomHTMLId('gux-form-field-error');
+  private defaultLabelId = randomHTMLId('gux-form-field');
 
   @Element()
   private root: HTMLElement;
@@ -34,11 +36,14 @@ export class GuxFormField {
   @Prop()
   valueInTooltip: boolean;
 
+  @Prop()
+  labelPosition: 'above' | 'beside' | 'screenreader';
+
   @State()
   private slottedElementType: string = 'input' || 'select' || 'textarea';
 
   @State()
-  private labelPosition: 'above' | 'beside' = 'above';
+  private computedLabelPosition: 'above' | 'beside' | 'screenreader' = 'above';
 
   @State()
   private required: boolean = true;
@@ -52,6 +57,11 @@ export class GuxFormField {
     const type = this.input.getAttribute('type');
     this.slottedElementType = this.input.tagName.toLowerCase();
 
+    let labelPositionVariant;
+    this.labelPosition
+      ? (labelPositionVariant = this.labelPosition.toLowerCase())
+      : (labelPositionVariant = 'none');
+
     // stops the html5 validation styling
     this.input.addEventListener('invalid', event => {
       event.preventDefault();
@@ -59,7 +69,11 @@ export class GuxFormField {
 
     let variant = this.slottedElementType;
     if (this.slottedElementType === 'input') {
-      variant = this.slottedElementType.concat('-').concat(type);
+      variant = this.slottedElementType
+        .concat('-')
+        .concat(type)
+        .concat('-')
+        .concat(labelPositionVariant);
     }
 
     trackComponent(this.root, { variant });
@@ -75,12 +89,11 @@ export class GuxFormField {
   }
 
   componentWillRender() {
-    if (this.label) {
-      this.labelPosition =
-        this.label.offsetWidth > 1 && this.label.offsetWidth < 40
-          ? 'beside'
-          : 'above';
-    }
+    this.computedLabelPosition = this.getComputedLabelPosition(
+      this.label,
+      this.labelPosition
+    );
+    this.validateFormIds();
   }
 
   disconnectedCallback(): void {
@@ -90,14 +103,11 @@ export class GuxFormField {
   private getInputCheckbox(hasError: boolean): JSX.Element {
     return (
       <div>
-        <gux-input-checkbox
-          class={{ 'gux-input-error': hasError }}
-          aria-describedby={this.errorID}
-        >
+        <gux-input-checkbox class={{ 'gux-input-error': hasError }}>
           <slot name="input" />
           <slot name="label" />
         </gux-input-checkbox>
-        {this.getError(hasError)}
+        {this.renderError(hasError)}
       </div>
     );
   }
@@ -114,27 +124,19 @@ export class GuxFormField {
   private getInputColor(hasError: boolean): JSX.Element {
     return (
       <div
-        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+        class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        <div class="gux-label-and-input-container">
-          <div
-            class={{
-              'gux-label-container': true,
-              'gux-required': this.required
-            }}
-          >
-            <slot name="label" slot="label" />
-          </div>
+        {this.renderLabel(this.required)}
+        <div class="gux-input-and-error-container">
           <gux-input-color
             class={{
               'gux-input-error': hasError
             }}
-            aria-describedby={this.errorID}
           >
             <slot name="input" />
           </gux-input-color>
+          {this.renderError(hasError)}
         </div>
-        {this.getError(hasError)}
       </div>
     );
   }
@@ -145,24 +147,16 @@ export class GuxFormField {
   ): JSX.Element {
     return (
       <div
-        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+        class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        <div class="gux-label-and-input-container">
-          <div
-            class={{
-              'gux-label-container': true,
-              'gux-required': this.required
-            }}
-          >
-            <slot name="label" slot="label" />
-          </div>
-          <gux-input-range
-            display-units={displayUnits}
-            value-in-tooltip={valueInTooltip}
-          >
-            <slot name="input" />
-          </gux-input-range>
-        </div>
+        {this.renderLabel(this.required)}
+
+        <gux-input-range
+          display-units={displayUnits}
+          value-in-tooltip={valueInTooltip}
+        >
+          <slot name="input" />
+        </gux-input-range>
       </div>
     );
   }
@@ -170,29 +164,21 @@ export class GuxFormField {
   private getInputNumber(clearable: boolean, hasError: boolean): JSX.Element {
     return (
       <div
-        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+        class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        <div class="gux-label-and-input-container">
-          <div
-            class={{
-              'gux-label-container': true,
-              'gux-required': this.required
-            }}
-          >
-            <slot name="label" slot="label" />
-          </div>
+        {this.renderLabel(this.required)}
+        <div class="gux-input-and-error-container">
           <gux-input-number
             class={{
               'gux-input-error': hasError
             }}
             slot="input"
             clearable={clearable}
-            aria-describedby={this.errorID}
           >
             <slot name="input" />
           </gux-input-number>
+          {this.renderError(hasError)}
         </div>
-        {this.getError(hasError)}
       </div>
     );
   }
@@ -200,28 +186,20 @@ export class GuxFormField {
   private getInputSelect(hasError: boolean): JSX.Element {
     return (
       <div
-        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+        class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        <div class="gux-label-and-input-container">
-          <div
-            class={{
-              'gux-label-container': true,
-              'gux-required': this.required
-            }}
-          >
-            <slot name="label" slot="label" />
-          </div>
+        {this.renderLabel(this.required)}
+        <div class="gux-input-and-error-container">
           <gux-input-select
             slot="input"
             class={{
               'gux-input-error': hasError
             }}
-            aria-describedby={this.errorID}
           >
             <slot name="input" />
           </gux-input-select>
+          {this.renderError(hasError)}
         </div>
-        {this.getError(hasError)}
       </div>
     );
   }
@@ -229,29 +207,21 @@ export class GuxFormField {
   private getInputTextLike(clearable: boolean, hasError: boolean): JSX.Element {
     return (
       <div
-        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+        class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        <div class="gux-label-and-input-container">
-          <div
-            class={{
-              'gux-label-container': true,
-              'gux-required': this.required
-            }}
-          >
-            <slot name="label" slot="label" />
-          </div>
+        {this.renderLabel(this.required)}
+        <div class="gux-input-and-error-container">
           <gux-input-text-like
             class={{
               'gux-input-error': hasError
             }}
             slot="input"
             clearable={clearable}
-            aria-describedby={this.errorID}
           >
             <slot name="input" />
           </gux-input-text-like>
+          {this.renderError(hasError)}
         </div>
-        {this.getError(hasError)}
       </div>
     );
   }
@@ -259,22 +229,15 @@ export class GuxFormField {
   private getInputSearch(hasError: boolean): JSX.Element {
     return (
       <div
-        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+        class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        <div class="gux-label-and-input-container">
-          <div
-            class={{
-              'gux-label-container': true,
-              'gux-required': this.required
-            }}
-          >
-            <slot name="label" slot="label" />
-          </div>
+        {this.renderLabel(this.required)}
+        <div class="gux-input-and-error-container">
           <gux-input-search>
             <slot name="input" />
           </gux-input-search>
+          {this.renderError(hasError)}
         </div>
-        {this.getError(hasError)}
       </div>
     );
   }
@@ -282,29 +245,21 @@ export class GuxFormField {
   private getInputTextArea(hasError: boolean): JSX.Element {
     return (
       <div
-        class={`gux-label-and-input-and-error-container gux-${this.labelPosition}`}
+        class={`gux-label-and-input-and-error-container gux-${this.computedLabelPosition}`}
       >
-        <div class="gux-label-and-input-container">
-          <div
-            class={{
-              'gux-label-container': true,
-              'gux-required': this.required
-            }}
-          >
-            <slot name="label" slot="label" />
-          </div>
+        {this.renderLabel(this.required)}
+        <div class="gux-input-and-error-container">
           <gux-input-textarea
             class={{
               'gux-input-error': hasError
             }}
             slot="input"
-            aria-describedby={this.errorID}
             resize={this.resize}
           >
             <slot name="input" />
           </gux-input-textarea>
+          {this.renderError(hasError)}
         </div>
-        {this.getError(hasError)}
       </div>
     );
   }
@@ -355,19 +310,91 @@ export class GuxFormField {
     }
   }
 
+  private validateFormIds() {
+    if (this.label) {
+      const inputHasId = !!this.input.hasAttribute('id');
+      const labelHasFor = !!this.label.hasAttribute('for');
+      if (!inputHasId && labelHasFor) {
+        logError(
+          'gux-form-field',
+          'A "for" attribute has been provided on the label but there is no corresponding id on the input. Either provide an id on the input or omit the "for" attribute from the label. If there is no input id and no "for" attribute provided, the component will automatically generate an id and link it to the "for" attribute.'
+        );
+      } else if (!inputHasId) {
+        this.input.setAttribute('id', this.defaultLabelId);
+        this.label.setAttribute('for', this.defaultLabelId);
+      } else if (inputHasId && !labelHasFor) {
+        const forId = this.input.getAttribute('id');
+        this.label.setAttribute('for', forId);
+      } else if (
+        inputHasId &&
+        labelHasFor &&
+        this.input.getAttribute('id') !== this.label.getAttribute('for')
+      ) {
+        logError(
+          'gux-form-field',
+          'The input id and label for attribute should match.'
+        );
+      }
+    } else {
+      logError(
+        'gux-form-field',
+        'A label is required for this component. If a visual label is not needed for this use case, please add localized text for a screenreader and set the label-position attribute to "screenreader" to visually hide the label.'
+      );
+    }
+    if (this.hasErrorSlot()) {
+      this.input.setAttribute('aria-describedby', this.errorId);
+    } else if (
+      this.input.getAttribute('aria-describedby') &&
+      this.input
+        .getAttribute('aria-describedby')
+        .startsWith('gux-form-field-error')
+    ) {
+      this.input.removeAttribute('aria-describedby');
+    }
+  }
+
+  private getComputedLabelPosition(label, labelPosition) {
+    if (label) {
+      if (
+        labelPosition === 'above' ||
+        labelPosition === 'beside' ||
+        labelPosition === 'screenreader'
+      ) {
+        return labelPosition;
+      } else if (label.offsetWidth > 1 && label.offsetWidth < 40) {
+        return 'beside';
+      } else {
+        return 'above';
+      }
+    }
+  }
+
   private hasErrorSlot(): boolean {
     return !!this.root.querySelector('[slot="error"]');
   }
 
-  private getError(hasError: boolean): JSX.Element {
+  private renderLabel(required): JSX.Element {
     return (
-      <div class="gux-error" id={this.errorID}>
-        {hasError ? (
+      <div
+        class={{
+          'gux-label-container': true,
+          'gux-required': required
+        }}
+      >
+        <slot name="label" slot="label" />
+      </div>
+    );
+  }
+
+  private renderError(hasError: boolean): JSX.Element {
+    if (hasError) {
+      return (
+        <div class="gux-error" id={this.errorId}>
           <gux-error-message-beta>
             <slot name="error" />
           </gux-error-message-beta>
-        ) : null}
-      </div>
-    );
+        </div>
+      );
+    }
   }
 }

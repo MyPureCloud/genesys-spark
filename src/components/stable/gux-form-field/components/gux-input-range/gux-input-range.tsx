@@ -88,7 +88,7 @@ export class GuxInputRange {
     return this.value;
   }
 
-  // Using componentWillLoad instead of connectedCallback() here to fix
+  // Using componentWillLoad() instead of connectedCallback() here to fix
   // a bug caused by a race condition. Refer to COMUI-541 for details
   componentWillLoad(): void {
     this.input = this.root.querySelector('input[slot="input"]');

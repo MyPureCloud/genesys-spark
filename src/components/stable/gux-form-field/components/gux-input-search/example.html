@@ -3,59 +3,51 @@
 
   <p>slot an input[type=search] element into a gux-form-field element</p>
 
-  <gux-form-field>
+  <gux-form-field label-position="beside">
     <input
-      id="example-1"
       slot="input"
       name="search"
       type="search"
       placeholder="Enter a search"
     />
-    <label for="example-1" slot="label">Search</label>
+    <label slot="label">Search</label>
   </gux-form-field>
 
   <h2>Disabled</h2>
 
-  <gux-form-field>
+  <gux-form-field label-position="beside">
     <input
-      id="example-2"
       slot="input"
       name="search"
       type="search"
       placeholder="Enter a search"
       disabled
     />
-    <label for="example-2" slot="label">Search</label>
+    <label slot="label">Search</label>
   </gux-form-field>
 
   <h2>No Visible Label</h2>
 
-  <gux-form-field>
+  <gux-form-field label-position="screenreader">
     <input
-      id="example-3"
       slot="input"
       name="search"
       type="search"
       placeholder="Enter a search"
     />
-    <label for="example-3" slot="label" class="gux-sr-only"
-      >This will be read by a screenreader</label
-    >
+    <label slot="label">This will be read by a screenreader</label>
   </gux-form-field>
 
   <h2>With smaller width</h2>
   <div style="width: 120px">
-    <gux-form-field>
+    <gux-form-field label-position="screenreader">
       <input
-        id="example-4"
         slot="input"
         name="search"
         type="search"
         placeholder="Enter a search"
       />
-      <label for="example-4" slot="label" class="gux-sr-only"
-        >This will be read by a screenreader</label
-      >
+      <label slot="label">This will be read by a screenreader</label>
     </gux-form-field>
   </div>
 </form>

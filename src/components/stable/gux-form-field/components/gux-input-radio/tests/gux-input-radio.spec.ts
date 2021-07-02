@@ -9,7 +9,8 @@ describe('gux-input-radio', () => {
       components: [GuxInputRadio],
       html: `
       <gux-input-radio>
-        <input slot="input" type="radio" id="dinner-sandwich" name="dinner" value="sandwich" disabled>
+        <input slot="input" type="radio" name="dinner" value="sandwich" disabled>
+        <label slot="label">Sandwich</label>
       </gux-input-radio>
       `,
       language: 'en'
