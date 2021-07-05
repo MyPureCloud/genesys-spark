@@ -10,9 +10,7 @@ exports[`gux-datepicker #render should render component as expected (1) 1`] = `
           <label class="gux-label" id="gux-text-label-2"></label>
           <div class="gux-labeled-component">
             <gux-text-field-legacy value="08/15/1997">
-              <button aria-hidden="true" tabindex="-1" type="button">
-                <gux-icon decorative="" icon-name="calendar"></gux-icon>
-              </button>
+              <!---->
               <div>
                 <div class="gux-field">
                   <input aria-labelledby="gux-text-label-2" class="gux-text-clearable" type="text" value="08/15/1997">
@@ -21,6 +19,9 @@ exports[`gux-datepicker #render should render component as expected (1) 1`] = `
                   </button>
                 </div>
               </div>
+              <button aria-hidden="true" tabindex="-1" type="button">
+                <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              </button>
             </gux-text-field-legacy>
             <gux-calendar firstdayofweek="0" maxdate="" mindate="" mode="single" numberofmonths="1" value="1997-08-15"></gux-calendar>
           </div>
@@ -41,9 +42,7 @@ exports[`gux-datepicker #render should render component as expected (2) 1`] = `
           <label class="gux-label" id="gux-text-label-3"></label>
           <div class="gux-labeled-component">
             <gux-text-field-legacy value="08/15/97">
-              <button aria-hidden="true" tabindex="-1" type="button">
-                <gux-icon decorative="" icon-name="calendar"></gux-icon>
-              </button>
+              <!---->
               <div>
                 <div class="gux-field">
                   <input aria-labelledby="gux-text-label-3" class="gux-text-clearable" type="text" value="08/15/97">
@@ -52,6 +51,9 @@ exports[`gux-datepicker #render should render component as expected (2) 1`] = `
                   </button>
                 </div>
               </div>
+              <button aria-hidden="true" tabindex="-1" type="button">
+                <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              </button>
             </gux-text-field-legacy>
             <gux-calendar firstdayofweek="0" maxdate="" mindate="" mode="single" numberofmonths="1" value="1997-08-15"></gux-calendar>
           </div>
@@ -72,9 +74,7 @@ exports[`gux-datepicker #render should render component as expected (3) 1`] = `
           <label class="gux-label" id="gux-text-label-4"></label>
           <div class="gux-labeled-component">
             <gux-text-field-legacy value="08.15.1997">
-              <button aria-hidden="true" tabindex="-1" type="button">
-                <gux-icon decorative="" icon-name="calendar"></gux-icon>
-              </button>
+              <!---->
               <div>
                 <div class="gux-field">
                   <input aria-labelledby="gux-text-label-4" class="gux-text-clearable" type="text" value="08.15.1997">
@@ -83,6 +83,9 @@ exports[`gux-datepicker #render should render component as expected (3) 1`] = `
                   </button>
                 </div>
               </div>
+              <button aria-hidden="true" tabindex="-1" type="button">
+                <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              </button>
             </gux-text-field-legacy>
             <gux-calendar firstdayofweek="0" maxdate="" mindate="" mode="single" numberofmonths="1" value="1997-08-15"></gux-calendar>
           </div>
@@ -107,9 +110,7 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
           </label>
           <div class="gux-labeled-component">
             <gux-text-field-legacy value="11/25/2019">
-              <button aria-hidden="true" tabindex="-1" type="button">
-                <gux-icon decorative="" icon-name="calendar"></gux-icon>
-              </button>
+              <!---->
               <div>
                 <div class="gux-field">
                   <input aria-labelledby="gux-text-label-5" class="gux-text-clearable" type="text" value="11/25/2019">
@@ -118,6 +119,9 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
                   </button>
                 </div>
               </div>
+              <button aria-hidden="true" tabindex="-1" type="button">
+                <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              </button>
             </gux-text-field-legacy>
             <gux-calendar firstdayofweek="0" maxdate="" mindate="" mode="range" numberofmonths="2" value="2019-11-25/2019-12-02"></gux-calendar>
           </div>
@@ -135,9 +139,7 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
           </label>
           <div class="gux-labeled-component">
             <gux-text-field-legacy value="12/02/2019">
-              <button aria-hidden="true" tabindex="-1" type="button">
-                <gux-icon decorative="" icon-name="calendar"></gux-icon>
-              </button>
+              <!---->
               <div>
                 <div class="gux-field">
                   <input aria-labelledby="gux-text-label-6" class="gux-text-clearable" type="text" value="12/02/2019">
@@ -146,6 +148,9 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
                   </button>
                 </div>
               </div>
+              <button aria-hidden="true" tabindex="-1" type="button">
+                <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              </button>
             </gux-text-field-legacy>
           </div>
         </div>
@@ -169,9 +174,7 @@ exports[`gux-datepicker #render should render component as expected (5) 1`] = `
           </label>
           <div class="gux-labeled-component">
             <gux-text-field-legacy value="11/25/2019">
-              <button aria-hidden="true" tabindex="-1" type="button">
-                <gux-icon decorative="" icon-name="calendar"></gux-icon>
-              </button>
+              <!---->
               <div>
                 <div class="gux-field">
                   <input aria-labelledby="gux-text-label-7" class="gux-text-clearable" type="text" value="11/25/2019">
@@ -180,6 +183,9 @@ exports[`gux-datepicker #render should render component as expected (5) 1`] = `
                   </button>
                 </div>
               </div>
+              <button aria-hidden="true" tabindex="-1" type="button">
+                <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              </button>
             </gux-text-field-legacy>
             <gux-calendar firstdayofweek="0" maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" value="2019-11-25/2019-12-02"></gux-calendar>
           </div>
@@ -197,9 +203,7 @@ exports[`gux-datepicker #render should render component as expected (5) 1`] = `
           </label>
           <div class="gux-labeled-component">
             <gux-text-field-legacy value="12/02/2019">
-              <button aria-hidden="true" tabindex="-1" type="button">
-                <gux-icon decorative="" icon-name="calendar"></gux-icon>
-              </button>
+              <!---->
               <div>
                 <div class="gux-field">
                   <input aria-labelledby="gux-text-label-8" class="gux-text-clearable" type="text" value="12/02/2019">
@@ -208,6 +212,9 @@ exports[`gux-datepicker #render should render component as expected (5) 1`] = `
                   </button>
                 </div>
               </div>
+              <button aria-hidden="true" tabindex="-1" type="button">
+                <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              </button>
             </gux-text-field-legacy>
           </div>
         </div>
@@ -231,9 +238,7 @@ exports[`gux-datepicker #render should render component as expected (6) 1`] = `
           </label>
           <div class="gux-labeled-component">
             <gux-text-field-legacy value="11.25.2019">
-              <button aria-hidden="true" tabindex="-1" type="button">
-                <gux-icon decorative="" icon-name="calendar"></gux-icon>
-              </button>
+              <!---->
               <div>
                 <div class="gux-field">
                   <input aria-labelledby="gux-text-label-9" class="gux-text-clearable" type="text" value="11.25.2019">
@@ -242,6 +247,9 @@ exports[`gux-datepicker #render should render component as expected (6) 1`] = `
                   </button>
                 </div>
               </div>
+              <button aria-hidden="true" tabindex="-1" type="button">
+                <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              </button>
             </gux-text-field-legacy>
             <gux-calendar firstdayofweek="0" maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" value="2019-11-25/2019-12-02"></gux-calendar>
           </div>
@@ -259,9 +267,7 @@ exports[`gux-datepicker #render should render component as expected (6) 1`] = `
           </label>
           <div class="gux-labeled-component">
             <gux-text-field-legacy value="12.02.2019">
-              <button aria-hidden="true" tabindex="-1" type="button">
-                <gux-icon decorative="" icon-name="calendar"></gux-icon>
-              </button>
+              <!---->
               <div>
                 <div class="gux-field">
                   <input aria-labelledby="gux-text-label-10" class="gux-text-clearable" type="text" value="12.02.2019">
@@ -270,6 +276,9 @@ exports[`gux-datepicker #render should render component as expected (6) 1`] = `
                   </button>
                 </div>
               </div>
+              <button aria-hidden="true" tabindex="-1" type="button">
+                <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              </button>
             </gux-text-field-legacy>
           </div>
         </div>

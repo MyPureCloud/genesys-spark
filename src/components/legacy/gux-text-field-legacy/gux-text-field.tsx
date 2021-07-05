@@ -232,7 +232,7 @@ export class GuxTextFieldLegacy {
   }
 
   render() {
-    return (
+    return [
       <div class={this.getClassList()}>
         <div class="gux-field">
           <input
@@ -270,7 +270,8 @@ export class GuxTextFieldLegacy {
             <label>{this.errorMessage}</label>
           </div>
         )}
-      </div>
-    );
+      </div>,
+      <slot></slot>
+    ];
   }
 }

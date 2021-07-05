@@ -23,6 +23,7 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
                 <div class="gux-select-field">
                   <span aria-hidden="true" class="gux-ghost"></span>
                   <gux-text-field-legacy class="gux-unclearable" title="25" value="25">
+                    <!---->
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="25">
@@ -154,6 +155,7 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
                 <div class="gux-select-field">
                   <span aria-hidden="true" class="gux-ghost"></span>
                   <gux-text-field-legacy class="gux-unclearable" title="50" value="50">
+                    <!---->
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="50">
@@ -285,6 +287,7 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
                 <div class="gux-select-field">
                   <span aria-hidden="true" class="gux-ghost"></span>
                   <gux-text-field-legacy class="gux-unclearable" title="75" value="75">
+                    <!---->
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="75">
@@ -416,6 +419,7 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
                 <div class="gux-select-field">
                   <span aria-hidden="true" class="gux-ghost"></span>
                   <gux-text-field-legacy class="gux-unclearable" title="100" value="100">
+                    <!---->
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="100">
@@ -547,6 +551,7 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
                 <div class="gux-select-field">
                   <span aria-hidden="true" class="gux-ghost"></span>
                   <gux-text-field-legacy class="gux-unclearable" title="25" value="25">
+                    <!---->
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="25">
@@ -678,6 +683,7 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
                 <div class="gux-select-field">
                   <span aria-hidden="true" class="gux-ghost"></span>
                   <gux-text-field-legacy class="gux-unclearable" title="25" value="25">
+                    <!---->
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="25">
@@ -809,6 +815,7 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
                 <div class="gux-select-field">
                   <span aria-hidden="true" class="gux-ghost"></span>
                   <gux-text-field-legacy class="gux-unclearable" title="50" value="50">
+                    <!---->
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="50">
@@ -940,6 +947,7 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
                 <div class="gux-select-field">
                   <span aria-hidden="true" class="gux-ghost"></span>
                   <gux-text-field-legacy class="gux-unclearable" title="75" value="75">
+                    <!---->
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="75">
@@ -1071,6 +1079,7 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
                 <div class="gux-select-field">
                   <span aria-hidden="true" class="gux-ghost"></span>
                   <gux-text-field-legacy class="gux-unclearable" title="100" value="100">
+                    <!---->
                     <div>
                       <div class="gux-field">
                         <input readonly="" type="text" value="100">
