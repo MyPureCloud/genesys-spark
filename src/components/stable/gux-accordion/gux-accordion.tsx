@@ -1,11 +1,11 @@
 import { Component, Element, h, Method, Prop } from '@stencil/core';
-import { KeyCode } from '../../../common-enums';
+
 import { trackComponent } from '../../../usage-tracking';
 
-interface ISection {
-  slotName: string;
-  slotRef: HTMLElement;
-}
+import {
+  GuxAccordiionArrowPosition,
+  IGuxAccordiionSection
+} from './gux-accordion.types';
 
 function getToggleButton(slot: HTMLElement): HTMLElement {
   return slot.children[0].children[0] as HTMLElement;
@@ -19,7 +19,7 @@ export class GuxAccordion {
   @Element()
   root: HTMLElement;
 
-  sections: ISection[] = [];
+  sections: IGuxAccordiionSection[] = [];
 
   /**
    * The heading level within the page the
@@ -29,6 +29,9 @@ export class GuxAccordion {
    */
   @Prop()
   headingLevel: number = null;
+
+  @Prop()
+  arrowPosition: GuxAccordiionArrowPosition = 'default';
 
   initializeSections() {
     const children = Array.from(this.root.children);
@@ -84,7 +87,7 @@ export class GuxAccordion {
     }
   }
 
-  getSectionByName(slot: string): ISection {
+  getSectionByName(slot: string): IGuxAccordiionSection {
     const slotIndex = this.sections
       .map(section => {
         return section.slotName;
@@ -120,20 +123,20 @@ export class GuxAccordion {
   }
 
   onKeyDown(event: KeyboardEvent, slotName: string) {
-    switch (event.keyCode) {
-      case KeyCode.Up:
+    switch (event.key) {
+      case 'ArrowUp':
         const previousSlot = this.getPreviousSlot(slotName);
         getToggleButton(previousSlot).focus();
         break;
-      case KeyCode.Down:
+      case 'ArrowDown':
         const nextSlot = this.getNextSlot(slotName);
         getToggleButton(nextSlot).focus();
         break;
-      case KeyCode.End:
+      case 'End':
         const lastSlot = this.sections[this.sections.length - 1].slotRef;
         getToggleButton(lastSlot).focus();
         break;
-      case KeyCode.Home:
+      case 'Home':
         const firstSlot = this.sections[0].slotRef;
         getToggleButton(firstSlot).focus();
         break;
@@ -154,14 +157,21 @@ export class GuxAccordion {
               aria-level={this.headingLevel}
               class="gux-header"
             >
-              <button type="button" onClick={() => this.toggle(slot.slotName)}>
-                <span class="gux-heading-text">{slot.slotName}</span>
-                <span class="gux-toggle-arrow">
+              <button
+                class="gux-header-button"
+                type="button"
+                onClick={() => this.toggle(slot.slotName)}
+              >
+                <div class="gux-text">{slot.slotName}</div>
+                {this.arrowPosition === 'beside-text' ? null : (
+                  <div class="gux-spacer"></div>
+                )}
+                <div class="gux-toggle-arrow">
                   <gux-icon
                     decorative
                     icon-name="chevron-small-down"
                   ></gux-icon>
-                </span>
+                </div>
               </button>
             </div>
             <div class="gux-content">
