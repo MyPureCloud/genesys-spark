@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.25.0](http://inindca///compare/v2.24.1...v2.25.0) (2021-07-07)
+
+
+### Features
+
+* **spark-logo:** added Spark logo to docs site ([00d02a9](http://inindca///commit/00d02a9c849360ab3a3ac6daa4da96f479447b59))
+
 ### [2.24.1](http://inindca///compare/v2.24.0...v2.24.1) (2021-07-02)
 
 
