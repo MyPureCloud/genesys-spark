@@ -1,6 +1,6 @@
-export type GuxAccordiionArrowPosition = 'beside-text' | 'default';
+export type GuxAccordionArrowPosition = 'beside-text' | 'default';
 
-export interface IGuxAccordiionSection {
+export interface IGuxAccordionSection {
   slotName: string;
   slotRef: HTMLElement;
 }

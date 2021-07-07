@@ -3,8 +3,8 @@ import { Component, Element, h, Method, Prop } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 
 import {
-  GuxAccordiionArrowPosition,
-  IGuxAccordiionSection
+  GuxAccordionArrowPosition,
+  IGuxAccordionSection
 } from './gux-accordion.types';
 
 function getToggleButton(slot: HTMLElement): HTMLElement {
@@ -19,7 +19,7 @@ export class GuxAccordion {
   @Element()
   root: HTMLElement;
 
-  sections: IGuxAccordiionSection[] = [];
+  sections: IGuxAccordionSection[] = [];
 
   /**
    * The heading level within the page the
@@ -31,7 +31,7 @@ export class GuxAccordion {
   headingLevel: number = null;
 
   @Prop()
-  arrowPosition: GuxAccordiionArrowPosition = 'default';
+  arrowPosition: GuxAccordionArrowPosition = 'default';
 
   initializeSections() {
     const children = Array.from(this.root.children);
@@ -87,7 +87,7 @@ export class GuxAccordion {
     }
   }
 
-  getSectionByName(slot: string): IGuxAccordiionSection {
+  getSectionByName(slot: string): IGuxAccordionSection {
     const slotIndex = this.sections
       .map(section => {
         return section.slotName;
