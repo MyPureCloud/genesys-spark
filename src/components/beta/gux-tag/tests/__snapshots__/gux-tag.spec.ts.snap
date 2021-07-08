@@ -63,3 +63,20 @@ exports[`gux-tag-beta #render should render component as expected (5) 1`] = `
   </div>
 </gux-tag-beta>
 `;
+
+exports[`gux-tag-beta #render should render component as expected (6) 1`] = `
+<gux-tag-beta color="navy" disabled="" icon="bolt" removable="" value="3">
+  <!---->
+  <div class="gux-disabled gux-navy gux-tag">
+    <div class="gux-tag-icon-container">
+      <gux-icon class="gux-tag-icon" decorative="" icon-name="bolt"></gux-icon>
+    </div>
+    <div class="gux-tag-text">
+      navy
+    </div>
+    <button class="gux-tag-remove-button" disabled="" type="button">
+      <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove tag"></gux-icon>
+    </button>
+  </div>
+</gux-tag-beta>
+`;
