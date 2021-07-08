@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.26.0](http://inindca///compare/v2.25.0...v2.26.0) (2021-07-08)
+
+
+### Features
+
+* **accordion:** added toggle icon position property ([02aa586](http://inindca///commit/02aa586618ee319bbdb2c1a6215b0807a538fea2))
+* **playground:** added angular 12 playground ([351c8ef](http://inindca///commit/351c8efff0f1bcfa84ae3badf3083261ddd2b00c))
+* **playground:** added vue playgrounds ([09a278c](http://inindca///commit/09a278cce30630aa4f48779869a729792cc23f98))
+* **spark-links:** added a link to spark website for each component ([d3f9597](http://inindca///commit/d3f9597ce1a3960c60753c831bf1e015ba73aea8))
+
+
+### Bug Fixes
+
+* **datepicker:** fixed stacking context of datepicker field icon ([13c132a](http://inindca///commit/13c132aa682fde2c0ccb1c6f44060b5765a995b9))
+* **form-field:** fixed issue with dynamic error slot ([b172c3a](http://inindca///commit/b172c3abfd5e3b0db37130cda35caec50fce3c94))
+* **pr-comment:** addressed PR comment ([b2aad81](http://inindca///commit/b2aad81b4389dbb4e99786f3ca90938068cc2006))
+* **pr-comment:** addressed PR comment ([a918317](http://inindca///commit/a91831739a117d7cb05d77e10eb9653e61d287ce))
+
 ## [2.25.0](http://inindca///compare/v2.24.1...v2.25.0) (2021-07-07)
 
 
