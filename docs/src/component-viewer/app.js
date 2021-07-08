@@ -6,6 +6,7 @@ import { createEditor } from './panels/editor';
 import EventsPanel from './panels/events';
 import { toHTML } from '../utils/to-html';
 import '../styles/component-viewer.less';
+import * as SparkLinks from './components/links.json';
 
 window.toHTML = toHTML;
 window.webcomponentsDocsMain = (example = '', renderCallback = () => {}) =>
@@ -33,6 +34,7 @@ function createLayout() {
               <div class="attributes"></div>
             </div>
           </gux-accordion>
+          <div id="spark-link-container" class="spark-link"></div>
         </div>
       </gux-disclosure-button>
       <div class="notification"></div>
@@ -131,6 +133,23 @@ export const bootstrap = (exampleCode, callback) => {
   const attributesPanel = new AttributesPanel(attribute);
   const eventsPanel = new EventsPanel(events, preview, notification);
   const updatePreview = createPreview(preview);
+
+  // Spark documentation link
+  const sparkLinkElement = document.getElementById('spark-link-container');
+  const url = window.location.href.split('/');
+  const component = url[url.length - 1].replace('.html', '');
+  const sparkLink = SparkLinks[component];
+  let sparkLinkAnchor;
+  if (sparkLink && sparkLink !== '') {
+    sparkLinkAnchor = toHTML(
+      `<a href="${sparkLink}" target="_blank" aria-disabled="false">Link to the Spark design system documentation</a>`
+    );
+  } else {
+    sparkLinkAnchor = toHTML(`
+        <span class="spark-link-disabled">No Spark Documentation available at this time</span>
+      `);
+  }
+  sparkLinkElement.appendChild(sparkLinkAnchor);
 
   const updateCode = createEditor(editor, newCode => {
     let ast = parse5.parseFragment(newCode);
