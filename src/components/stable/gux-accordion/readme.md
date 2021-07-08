@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property       | Attribute       | Description                                                                                                                               | Type     | Default |
-| -------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------- |
-| `headingLevel` | `heading-level` | The heading level within the page the accordion section headers should be set to. heading-level="3" woudl be equivalent to an h3 element. | `number` | `null`  |
+| Property        | Attribute        | Description                                                                                                                               | Type                         | Default     |
+| --------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| `arrowPosition` | `arrow-position` |                                                                                                                                           | `"beside-text" \| "default"` | `'default'` |
+| `headingLevel`  | `heading-level`  | The heading level within the page the accordion section headers should be set to. heading-level="3" woudl be equivalent to an h3 element. | `number`                     | `null`      |
 
 
 ## Methods
