@@ -4,8 +4,6 @@
 // Variables part
 @gux-form-beside-label-container-width: 45px;
 @gux-form-beside-label-margin-right: 8px;
-@error-message-offset: @gux-form-beside-label-container-width +
-  @gux-form-beside-label-margin-right;
 
 // Style
 gux-form-field {
@@ -30,10 +28,6 @@ gux-form-field {
 
     .gux-input-error .gux-input-color-main-element {
       border-color: @gux-alert;
-    }
-
-    .gux-error {
-      margin: 4px 0;
     }
 
     .gux-input-and-error-container {
@@ -70,5 +64,14 @@ gux-form-field {
   .gux-required::after {
     color: @gux-alert-red-60;
     content: ' *';
+  }
+
+  .gux-error {
+    display: none;
+    margin: 4px 0;
+
+    &.gux-show {
+      display: block;
+    }
   }
 }

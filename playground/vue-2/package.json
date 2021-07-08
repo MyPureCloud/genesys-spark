@@ -1,0 +1,13 @@
+{
+  "name": "vue-playground",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
