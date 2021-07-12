@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.26.1](http://inindca///compare/v2.26.0...v2.26.1) (2021-07-12)
+
+
+### Bug Fixes
+
+* **gux-tag:** fixed broken localisation ([d467f3e](http://inindca///commit/d467f3ea43065c86b33c5bf40e3a17aa981244b9))
+
 ## [2.26.0](http://inindca///compare/v2.25.0...v2.26.0) (2021-07-08)
 
 
