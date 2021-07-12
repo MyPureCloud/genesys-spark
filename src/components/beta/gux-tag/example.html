@@ -45,7 +45,7 @@
 </div>
 
 <h1>Removable tags</h1>
-<div id="remove-tag" class="tags">
+<div class="remove-tag" class="tags">
   <gux-tag-beta value="1" removable>default</gux-tag-beta>
   <gux-tag-beta color="default" value="2" removable
     >default (explicit)</gux-tag-beta
@@ -76,7 +76,49 @@
 </div>
 
 <h1>Icons and Removable tags</h1>
-<div id="remove-tag" class="tags">
+<div class="remove-tag" class="tags">
+  <gux-tag-beta icon="bolt" value="1" removable>default</gux-tag-beta>
+  <gux-tag-beta icon="bolt" color="default" value="2" removable
+    >default (explicit)</gux-tag-beta
+  >
+  <gux-tag-beta icon="bolt" color="navy" value="3" removable>navy</gux-tag-beta>
+  <gux-tag-beta icon="bolt" color="blue" value="4" removable>blue</gux-tag-beta>
+  <gux-tag-beta icon="bolt" color="electric-purple" value="5" removable
+    >electric-purple</gux-tag-beta
+  >
+  <gux-tag-beta icon="bolt" color="aqua-green" value="6" removable
+    >aqua-green</gux-tag-beta
+  >
+  <gux-tag-beta icon="bolt" color="fuscha" value="7" removable
+    >fuscha</gux-tag-beta
+  >
+  <gux-tag-beta icon="bolt" color="bubblegum-pink" value="8" removable disabled
+    >bubblegum-pink</gux-tag-beta
+  >
+  <gux-tag-beta icon="bolt" color="dark-purple" value="9" removable disabled
+    >dark purple</gux-tag-beta
+  >
+  <gux-tag-beta icon="bolt" color="olive-green" value="10" removable disabled
+    >olive-green</gux-tag-beta
+  >
+  <gux-tag-beta icon="bolt" color="lilac" value="11" removable disabled
+    >lilac</gux-tag-beta
+  >
+  <gux-tag-beta
+    icon="bolt"
+    color="alert-yellow-green"
+    value="12"
+    removable
+    disabled
+    >alert-yellow-green</gux-tag-beta
+  >
+  <gux-tag-beta icon="bolt" color="invalid" value="13" removable disabled
+    >invalid</gux-tag-beta
+  >
+</div>
+
+<h1>Icons and Removable tags localised</h1>
+<div class="remove-tag" class="tags" lang="de">
   <gux-tag-beta icon="bolt" value="1" removable>default</gux-tag-beta>
   <gux-tag-beta icon="bolt" color="default" value="2" removable
     >default (explicit)</gux-tag-beta
@@ -119,19 +161,21 @@
 
 <style
   onload="(function() {
-  const removeTagElement = document.querySelector('#remove-tag');
+  const removeTagElements = document.getElementsByClassName('remove-tag');
 
-  removeTagElement.addEventListener('guxdelete', (event) => {
-    const valueToRemove = event.detail;
-
-    Array.from(
-      removeTagElement.querySelectorAll('gux-tag-beta')
-    ).forEach((tag) => {
-      if (tag.value === valueToRemove) {
-        tag.remove();
-      }
-    });
-  })
+  Array.from(removeTagElements).forEach(function(removeTagElement) {
+    removeTagElement.addEventListener('guxdelete', (event) => {
+      const valueToRemove = event.detail;
+console.log({ valueToRemove });
+      Array.from(
+        removeTagElement.querySelectorAll('gux-tag-beta')
+      ).forEach((tag) => {
+        if (tag.value === valueToRemove) {
+          tag.remove();
+        }
+      });
+    })
+  });
 })()"
 >
   .tags {

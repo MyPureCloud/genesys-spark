@@ -31,7 +31,7 @@ export async function buildI18nForComponent(
   }, new Map<string, IntlMessageFormat>());
 
   return (resourceKey: string, context?: any): string =>
-    intlFormats.get(resourceKey).format(context) as string;
+    intlFormats.get(resourceKey)?.format(context) as string;
 }
 
 export async function getComponentI18nResources(
