@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.26.2](http://inindca///compare/v2.26.1...v2.26.2) (2021-07-13)
+
+
+### Bug Fixes
+
+* **accordion:** set explicit text color on accordion header text ([4857be8](http://inindca///commit/4857be829c7080b969e6db1709b975b89b81da14))
+
 ### [2.26.1](http://inindca///compare/v2.26.0...v2.26.1) (2021-07-12)
 
 
