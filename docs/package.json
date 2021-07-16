@@ -13,7 +13,7 @@
     "watcherGlob": "**"
   },
   "dependencies": {
-    "iframe-coordinator": "^4.3.0",
+    "iframe-coordinator": "^4.4.0",
     "monaco-editor": "^0.24.0",
     "parse5": "^6.0.1"
   },
@@ -21,14 +21,14 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@stencil/webpack": "0.0.6",
-    "copy-webpack-plugin": "^9.0.0",
-    "css-loader": "^5.2.6",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.7",
     "file-loader": "^6.2.0",
     "less": "^4.1.1",
     "less-loader": "^9.1.0",
     "monaco-editor-webpack-plugin": "^3.1.0",
     "style-loader": "^2.0.0",
-    "webpack": "^5.40.0",
+    "webpack": "^5.44.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   }
