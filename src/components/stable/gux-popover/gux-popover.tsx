@@ -13,11 +13,9 @@ import {
 } from '@stencil/core';
 import { ClickOutside } from 'stencil-click-outside';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { onHiddenChange } from '../../../utils/dom/on-attribute-change';
 import { trackComponent } from '../../../usage-tracking';
 
-import modalComponentResources from './i18n/en.json';
 import { PopperPosition } from './gux-popover.types';
 
 @Component({
@@ -25,7 +23,6 @@ import { PopperPosition } from './gux-popover.types';
   tag: 'gux-popover'
 })
 export class GuxPopover {
-  private i18n: GetI18nValue;
   private popperInstance: Instance;
   private forElement: HTMLElement;
   private hiddenObserver: MutationObserver;
@@ -141,8 +138,6 @@ export class GuxPopover {
 
     this.forElement = document.getElementById(this.for);
 
-    this.i18n = await buildI18nForComponent(this.root, modalComponentResources);
-
     this.hiddenObserver = onHiddenChange(this.root, (hidden: boolean) => {
       this.hidden = hidden;
     });
@@ -163,17 +158,14 @@ export class GuxPopover {
     return (
       <div class="gux-popover-wrapper">
         <div class="gux-arrow" data-popper-arrow />
-        {this.displayDismissButton && (
-          <gux-icon
-            class="gux-dismiss"
-            icon-name="close"
-            screenreader-text={this.i18n('dismiss')}
-            onClick={this.dismiss.bind(this)}
-          />
-        )}
         <div class="gux-popover-content">
           <slot />
         </div>
+        {this.displayDismissButton && (
+          <gux-dismiss-button-beta
+            onClick={this.dismiss.bind(this)}
+          ></gux-dismiss-button-beta>
+        )}
       </div>
     );
   }

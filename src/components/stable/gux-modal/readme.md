@@ -33,12 +33,13 @@ This default behaviour of this componet assumes that `gux-modal` components will
 
 ### Depends on
 
-- [gux-icon](../gux-icon)
+- [gux-dismiss-button-beta](../../beta/gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-modal --> gux-icon
+  gux-modal --> gux-dismiss-button-beta
+  gux-dismiss-button-beta --> gux-icon
   style gux-modal fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
