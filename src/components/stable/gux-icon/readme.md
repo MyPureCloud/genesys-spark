@@ -36,12 +36,10 @@
  - [gux-input-search](../gux-form-field/components/gux-input-search)
  - [gux-input-select](../gux-form-field/components/gux-input-select)
  - [gux-input-text-like](../gux-form-field/components/gux-input-text-like)
- - [gux-notification-toast](../gux-notification-toast)
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-rating](../gux-rating)
  - [gux-search-beta](../../beta/gux-search)
  - [gux-side-panel-button](../../beta/gux-side-panel/buttons)
- - [gux-simple-toast](../gux-simple-toast)
  - [gux-spin-button-legacy](../../legacy/gux-spin-button-legacy)
  - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab](../gux-tabs/gux-tab)
@@ -72,12 +70,10 @@ graph TD;
   gux-input-search --> gux-icon
   gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
-  gux-notification-toast --> gux-icon
   gux-pagination-buttons --> gux-icon
   gux-rating --> gux-icon
   gux-search-beta --> gux-icon
   gux-side-panel-button --> gux-icon
-  gux-simple-toast --> gux-icon
   gux-spin-button-legacy --> gux-icon
   gux-submenu --> gux-icon
   gux-tab --> gux-icon

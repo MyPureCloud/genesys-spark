@@ -18,9 +18,7 @@ exports[`gux-notification-toast #render should render alert notification toast 1
       </div>
     </div>
   </div>
-  <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="close" screenreadertext="Dismiss"></gux-icon>
-  </button>
+  <gux-dismiss-button-beta></gux-dismiss-button-beta>
 </gux-notification-toast>
 `;
 
@@ -42,9 +40,7 @@ exports[`gux-notification-toast #render should render neutral notification toast
       </div>
     </div>
   </div>
-  <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="close" screenreadertext="Dismiss"></gux-icon>
-  </button>
+  <gux-dismiss-button-beta></gux-dismiss-button-beta>
 </gux-notification-toast>
 `;
 
@@ -66,9 +62,7 @@ exports[`gux-notification-toast #render should render positive notification toas
       </div>
     </div>
   </div>
-  <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="close" screenreadertext="Dismiss"></gux-icon>
-  </button>
+  <gux-dismiss-button-beta></gux-dismiss-button-beta>
 </gux-notification-toast>
 `;
 
@@ -90,8 +84,6 @@ exports[`gux-notification-toast #render should render warning notification toast
       </div>
     </div>
   </div>
-  <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="close" screenreadertext="Dismiss"></gux-icon>
-  </button>
+  <gux-dismiss-button-beta></gux-dismiss-button-beta>
 </gux-notification-toast>
 `;
