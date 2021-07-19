@@ -1,6 +1,6 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 
-async function mockRandomForE2ESnapshot({
+async function newNonrandomE2EPage({
   html
 }: {
   html: string;
@@ -55,7 +55,7 @@ describe('gux-form-field', () => {
               <label slot="label">Test</label>
             </gux-form-field>
           `;
-          const page = await mockRandomForE2ESnapshot({ html });
+          const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-form-field');
 
           expect(element.innerHTML).toMatchSnapshot();
@@ -73,7 +73,7 @@ describe('gux-form-field', () => {
                 <span slot="error">Error</span>
               </gux-form-field>
             `;
-          const page = await mockRandomForE2ESnapshot({ html });
+          const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-form-field');
 
           expect(element.innerHTML).toMatchSnapshot();
@@ -94,7 +94,7 @@ describe('gux-form-field', () => {
             <label slot="label">Select</label>
           </gux-form-field>
         `;
-      const page = await mockRandomForE2ESnapshot({ html });
+      const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-form-field');
 
       expect(element.innerHTML).toMatchSnapshot();
@@ -111,7 +111,7 @@ describe('gux-form-field', () => {
             <span slot="error">Error</span>
           </gux-form-field>
         `;
-      const page = await mockRandomForE2ESnapshot({ html });
+      const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-form-field');
 
       expect(element.innerHTML).toMatchSnapshot();

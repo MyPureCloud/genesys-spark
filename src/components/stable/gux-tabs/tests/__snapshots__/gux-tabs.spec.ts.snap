@@ -22,53 +22,51 @@ exports[`gux-tabs should render 1`] = `
           Hello World
         </span>
       </span>
-      <div>
-        <button class="tab-dropdown-container" id="1" type="button">
-          <gux-icon decorative="" icon-name="menu-kebab-vertical"></gux-icon>
-        </button>
-        <gux-popover closeonclickoutside="" for="1" hidden="" position="top-start">
-          <div>
-            <span slot="dropdown-options">
-              <gux-tab-dropdown-option icon-name="edit" onclick="notify(event)" option-id="1">
-                <!---->
-                <button class="tab-dropdown-option">
-                  <gux-icon decorative="" icon-name="edit"></gux-icon>
-                  <span>
-                    Edit
-                  </span>
-                </button>
-              </gux-tab-dropdown-option>
-              <gux-tab-dropdown-option icon-name="clone" onclick="notify(event)" option-id="2">
-                <!---->
-                <button class="tab-dropdown-option">
-                  <gux-icon decorative="" icon-name="clone"></gux-icon>
-                  <span>
-                    Clone
-                  </span>
-                </button>
-              </gux-tab-dropdown-option>
-              <gux-tab-dropdown-option icon-name="share" onclick="notify(event)" option-id="3">
-                <!---->
-                <button class="tab-dropdown-option">
-                  <gux-icon decorative="" icon-name="share"></gux-icon>
-                  <span>
-                    Share
-                  </span>
-                </button>
-              </gux-tab-dropdown-option>
-              <gux-tab-dropdown-option icon-name="download" onclick="notify(event)" option-id="4">
-                <!---->
-                <button class="tab-dropdown-option">
-                  <gux-icon decorative="" icon-name="download"></gux-icon>
-                  <span>
-                    Download
-                  </span>
-                </button>
-              </gux-tab-dropdown-option>
-            </span>
-          </div>
-        </gux-popover>
-      </div>
+      <button class="gux-tab-options-button" id="gux-i" type="button">
+        <gux-icon decorative="" icon-name="menu-kebab-vertical"></gux-icon>
+      </button>
+      <gux-popover closeonclickoutside="" for="gux-i" hidden="" position="top-end">
+        <div>
+          <span slot="dropdown-options">
+            <gux-tab-dropdown-option icon-name="edit" onclick="notify(event)" option-id="1">
+              <!---->
+              <button class="tab-dropdown-option">
+                <gux-icon decorative="" icon-name="edit"></gux-icon>
+                <span>
+                  Edit
+                </span>
+              </button>
+            </gux-tab-dropdown-option>
+            <gux-tab-dropdown-option icon-name="clone" onclick="notify(event)" option-id="2">
+              <!---->
+              <button class="tab-dropdown-option">
+                <gux-icon decorative="" icon-name="clone"></gux-icon>
+                <span>
+                  Clone
+                </span>
+              </button>
+            </gux-tab-dropdown-option>
+            <gux-tab-dropdown-option icon-name="share" onclick="notify(event)" option-id="3">
+              <!---->
+              <button class="tab-dropdown-option">
+                <gux-icon decorative="" icon-name="share"></gux-icon>
+                <span>
+                  Share
+                </span>
+              </button>
+            </gux-tab-dropdown-option>
+            <gux-tab-dropdown-option icon-name="download" onclick="notify(event)" option-id="4">
+              <!---->
+              <button class="tab-dropdown-option">
+                <gux-icon decorative="" icon-name="download"></gux-icon>
+                <span>
+                  Download
+                </span>
+              </button>
+            </gux-tab-dropdown-option>
+          </span>
+        </div>
+      </gux-popover>
     </button>
   </gux-tab>
   <gux-tab tab-icon-name="lock" tab-id="2">

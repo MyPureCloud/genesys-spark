@@ -1,5 +1,21 @@
 import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
 
+async function newNonrandomE2EPage({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
+  const page = await newE2EPage();
+
+  await page.evaluateOnNewDocument(() => {
+    Math.random = () => 0.5;
+  });
+  await page.setContent(html);
+  await page.waitForChanges();
+
+  return page;
+}
+
 describe('gux-tabs', () => {
   it('renders', async () => {
     const html = `
@@ -43,7 +59,7 @@ describe('gux-tabs', () => {
         </gux-tab>
       </gux-tabs>
     `;
-    const page = await newE2EPage({ html });
+    const page = await newNonrandomE2EPage({ html });
     const element = await page.find('gux-tabs');
 
     expect(element.innerHTML).toMatchSnapshot();
