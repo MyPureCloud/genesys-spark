@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.26.6](http://inindca///compare/v2.26.5...v2.26.6) (2021-07-19)
+
+
+### Bug Fixes
+
+* **gux-table:** fixed stacking context ([a873369](http://inindca///commit/a87336977e32790974841b2741bb50e515b70b61))
+* **tabs:** fixed options popup positioning ([5442bab](http://inindca///commit/5442babcaeddab0de10dcfe636f9a73d16de519c))
+
 ### [2.26.5](http://inindca///compare/v2.26.4...v2.26.5) (2021-07-16)
 
 ### [2.26.4](http://inindca///compare/v2.26.3...v2.26.4) (2021-07-15)
