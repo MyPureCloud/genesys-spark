@@ -2,6 +2,8 @@
 
 // Style
 gux-popup-beta {
+  isolation: isolate;
+
   .gux-target-container {
     &.gux-disabled {
       pointer-events: none;
@@ -11,6 +13,7 @@ gux-popup-beta {
   }
 
   .gux-popup-container {
+    z-index: 1;
     visibility: hidden;
 
     &.gux-expanded {

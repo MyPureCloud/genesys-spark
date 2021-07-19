@@ -17,6 +17,7 @@ gux-table-beta * {
 
 gux-table-beta {
   display: block;
+  isolation: isolate;
 
   .gux-table {
     position: relative;
@@ -49,8 +50,8 @@ gux-table-beta {
         text-align: right;
       }
 
-      tr[data-row-id] th:first-child,
-      tr[data-row-id] td:first-child {
+      tr[data-row-id] th,
+      tr[data-row-id] td {
         width: 16px;
         padding-right: 8px;
         padding-left: 12px;
