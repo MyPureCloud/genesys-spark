@@ -1,5 +1,6 @@
 import { Component, Element, h, JSX, Method, Prop, State } from '@stencil/core';
 
+import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 import { logError } from '../../../../utils/error/log-error';
 
 import { GuxAccordionSectionArrowPosition } from './gux-accordion-section.types';
@@ -10,6 +11,8 @@ import { GuxAccordionSectionArrowPosition } from './gux-accordion-section.types'
   shadow: true
 })
 export class GuxAccordionSection {
+  private sectionId: string = randomHTMLId('gux-accordion-section');
+
   @Element()
   root: HTMLElement;
 
@@ -58,7 +61,12 @@ export class GuxAccordionSection {
   render(): JSX.Element {
     return (
       <section>
-        <button class="gux-header" onClick={this.toggle.bind(this)}>
+        <button
+          class="gux-header"
+          aria-expanded={this.expanded.toString()}
+          aria-controls={this.sectionId}
+          onClick={this.toggle.bind(this)}
+        >
           <div class="gux-header-text">
             <slot
               onSlotchange={this.onHeaderSlotChange.bind(this)}
@@ -76,6 +84,7 @@ export class GuxAccordionSection {
           </div>
         </button>
         <div
+          id={this.sectionId}
           class={{
             'gux-content': true,
             'gux-expanded': this.expanded

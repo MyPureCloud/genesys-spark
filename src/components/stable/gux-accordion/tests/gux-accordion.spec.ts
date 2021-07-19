@@ -15,7 +15,7 @@ describe('gux-accordion', () => {
         <p slot="Second Section">I'm a p.</p>
         <span slot="Third Section">I'm a span.</span>
         <span
-          slot="Forth Section has a really really long title to see what it looks like when the title overflows"
+          slot="Fourth Section has a really really long title to see what it looks like when the title overflows"
           >I'm a span.</span
         >
         <h1>I'm an h1, but i'm not a slot.</h1>
