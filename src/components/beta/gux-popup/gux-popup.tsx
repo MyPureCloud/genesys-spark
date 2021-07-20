@@ -29,7 +29,7 @@ export class GuxPopup {
           {
             name: 'offset',
             options: {
-              offset: [0, 1]
+              offset: [-1, 2]
             }
           },
           {

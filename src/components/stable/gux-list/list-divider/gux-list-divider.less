@@ -1,53 +1,14 @@
 @import (reference) '../../../../style/color.less';
 
-// Variables part
-@divider-color: @gux-grey-40;
-
 gux-list-divider {
   position: relative;
   display: flex;
   height: 32px;
   height: 1px;
-  padding: 0 16px;
-  margin: 5px 12px;
+  padding: 0;
+  margin: 16px 0;
   line-height: 32px;
   pointer-events: none;
   cursor: pointer;
-}
-
-// Theming
-
-// Dark
-.gux-list-divider-dark-theme {
-  background-color: @divider-color;
-}
-
-.gux-dark-theme {
-  gux-list-divider {
-    .gux-list-divider-dark-theme();
-  }
-}
-
-gux-list-divider.gux-dark-theme {
-  .gux-list-divider-dark-theme();
-}
-
-// Light
-.gux-list-divider-light-theme {
-  background-color: @divider-color;
-}
-
-.gux-light-theme {
-  gux-list-divider {
-    .gux-list-divider-light-theme();
-  }
-}
-
-gux-list-divider.gux-light-theme {
-  .gux-list-divider-light-theme();
-}
-
-// Default Theme
-gux-list-divider {
-  .gux-list-divider-light-theme();
+  background-color: @gux-grey-40;
 }
