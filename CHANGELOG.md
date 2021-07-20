@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.27.0](https://inindca///compare/v2.26.6...v2.27.0) (2021-07-20)
+
+
+### Features
+
+* **accordion:** added new beta accordion component ([a9473ff](https://inindca///commit/a9473ff6748e8e014513e59921450f14c056d9c5))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comments ([f420d68](https://inindca///commit/f420d68501df102bb171e640e7b8f4a42c025aff))
+
 ### [2.26.6](http://inindca///compare/v2.26.5...v2.26.6) (2021-07-19)
 
 
