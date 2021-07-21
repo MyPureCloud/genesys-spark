@@ -25,7 +25,8 @@ export class GuxFormField {
   private label: HTMLLabelElement;
   private requiredObserver: MutationObserver;
   private errorId = randomHTMLId('gux-form-field-error');
-  private defaultLabelId = randomHTMLId('gux-form-field');
+  private labelId = randomHTMLId('gux-form-field-label');
+  private defaultInputId = randomHTMLId('gux-form-field');
 
   @Element()
   private root: HTMLElement;
@@ -143,6 +144,9 @@ export class GuxFormField {
         {this.renderLabel(this.required)}
         <div class="gux-input-and-error-container">
           <gux-input-color
+            gux-label-id={this.labelId}
+            gux-error-id={this.errorId}
+            gux-required={this.required}
             class={{
               'gux-input-error': hasError
             }}
@@ -335,6 +339,13 @@ export class GuxFormField {
 
   private validateFormIds(): void {
     if (this.label) {
+      if (this.input.getAttribute('type') === 'color') {
+        if (this.label.getAttribute('id')) {
+          this.labelId = this.label.getAttribute('id');
+        }
+        this.label.setAttribute('id', this.labelId);
+        return;
+      }
       const inputHasId = !!this.input.hasAttribute('id');
       const labelHasFor = !!this.label.hasAttribute('for');
       if (!inputHasId && labelHasFor) {
@@ -343,8 +354,8 @@ export class GuxFormField {
           'A "for" attribute has been provided on the label but there is no corresponding id on the input. Either provide an id on the input or omit the "for" attribute from the label. If there is no input id and no "for" attribute provided, the component will automatically generate an id and link it to the "for" attribute.'
         );
       } else if (!inputHasId) {
-        this.input.setAttribute('id', this.defaultLabelId);
-        this.label.setAttribute('for', this.defaultLabelId);
+        this.input.setAttribute('id', this.defaultInputId);
+        this.label.setAttribute('for', this.defaultInputId);
       } else if (inputHasId && !labelHasFor) {
         const forId = this.input.getAttribute('id');
         this.label.setAttribute('for', forId);

@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
+import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
 
 import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 
@@ -15,6 +15,15 @@ export class GuxInputColor {
 
   @Element()
   private root: HTMLElement;
+
+  @Prop()
+  guxLabelId: string;
+
+  @Prop()
+  guxErrorId: string;
+
+  @Prop()
+  guxRequired: boolean;
 
   @State()
   private disabled: boolean;
@@ -71,6 +80,9 @@ export class GuxInputColor {
     return (
       <section>
         <button
+          aria-required={this.guxRequired ? 'true' : 'false'}
+          aria-describedby={`${this.guxLabelId} ${this.guxErrorId}`}
+          aria-expanded={this.opened ? 'true' : 'false'}
           type="button"
           class={{
             'gux-input-color-main-element': true,
