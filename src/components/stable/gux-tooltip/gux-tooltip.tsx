@@ -23,6 +23,7 @@ import { trackComponent } from '../../../usage-tracking';
 export class GuxTooltip {
   private delayTimeout: NodeJS.Timer;
   private forElement: HTMLElement;
+  private tooltipActive: boolean;
   private mouseenterHandler = () => this.show();
   private mouseleaveHandler = () => this.hide();
   private focusinHandler = () => this.show();
@@ -53,13 +54,17 @@ export class GuxTooltip {
   }
 
   private show(): void {
+    this.tooltipActive = true;
     this.popperInstance.forceUpdate();
     this.delayTimeout = setTimeout(() => {
-      this.isShown = true;
+      if (this.tooltipActive) {
+        this.isShown = true;
+      }
     }, 750); // the css transition is 250ms
   }
 
   private hide(): void {
+    this.tooltipActive = false;
     clearTimeout(this.delayTimeout);
     this.isShown = false;
   }
