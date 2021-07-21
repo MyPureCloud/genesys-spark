@@ -49,6 +49,10 @@ export class GuxModal {
     return (
       <div class="gux-modal">
         <div class={`gux-modal-container gux-${this.size}`}>
+          <gux-dismiss-button-beta
+            onClick={this.onDismissClickHandler.bind(this)}
+          ></gux-dismiss-button-beta>
+
           {hasModalTitleSlot && (
             <h1 class="gux-modal-header">
               <slot name="title" />
@@ -77,9 +81,6 @@ export class GuxModal {
               </div>
             </div>
           )}
-          <gux-dismiss-button-beta
-            onClick={this.onDismissClickHandler.bind(this)}
-          ></gux-dismiss-button-beta>
         </div>
       </div>
     );

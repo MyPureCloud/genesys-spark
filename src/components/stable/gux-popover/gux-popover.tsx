@@ -158,14 +158,14 @@ export class GuxPopover {
     return (
       <div class="gux-popover-wrapper">
         <div class="gux-arrow" data-popper-arrow />
-        <div class="gux-popover-content">
-          <slot />
-        </div>
         {this.displayDismissButton && (
           <gux-dismiss-button-beta
             onClick={this.dismiss.bind(this)}
           ></gux-dismiss-button-beta>
         )}
+        <div class="gux-popover-content">
+          <slot />
+        </div>
       </div>
     );
   }
