@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.27.1](https://inindca///compare/v2.27.0...v2.27.1) (2021-07-22)
+
+
+### Bug Fixes
+
+* **dismiss-button:** created dismiss button component ([2f872a4](https://inindca///commit/2f872a464d0d0d690b9a405c26d537468d681ed7))
+* **tooltip:** fixed Tooltip doesn't disappear when button is disabled ([beb6f17](https://inindca///commit/beb6f178b5587cbe583d90f8d9eaa18791e9c046))
+
 ## [2.27.0](https://inindca///compare/v2.26.6...v2.27.0) (2021-07-20)
 
 
