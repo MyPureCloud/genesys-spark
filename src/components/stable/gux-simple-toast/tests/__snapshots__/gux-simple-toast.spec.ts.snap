@@ -11,9 +11,7 @@ exports[`gux-simple-toast #render should render alert simple toast 1`] = `
       This is the message
     </div>
   </div>
-  <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-  </button>
+  <gux-dismiss-button-beta></gux-dismiss-button-beta>
 </gux-simple-toast>
 `;
 
@@ -28,9 +26,7 @@ exports[`gux-simple-toast #render should render neutral simple toast 1`] = `
       This is the message
     </div>
   </div>
-  <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-  </button>
+  <gux-dismiss-button-beta></gux-dismiss-button-beta>
 </gux-simple-toast>
 `;
 
@@ -45,9 +41,7 @@ exports[`gux-simple-toast #render should render positive simple toast 1`] = `
       This is the message
     </div>
   </div>
-  <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-  </button>
+  <gux-dismiss-button-beta></gux-dismiss-button-beta>
 </gux-simple-toast>
 `;
 
@@ -62,8 +56,6 @@ exports[`gux-simple-toast #render should render warning simple toast 1`] = `
       This is the message
     </div>
   </div>
-  <button class="gux-dismiss-button" title="Dismiss">
-    <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-  </button>
+  <gux-dismiss-button-beta></gux-dismiss-button-beta>
 </gux-simple-toast>
 `;

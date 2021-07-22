@@ -48,7 +48,7 @@ describe('gux-toggle', () => {
     });
   });
 
-  describe.only('User Interactions', () => {
+  describe('User Interactions', () => {
     [
       {
         name: 'clicked',

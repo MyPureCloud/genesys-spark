@@ -33,7 +33,7 @@ describe('gux-popover', () => {
     `);
     const component = await page.find('gux-popover');
     const guxdismiss = await component.spyOnEvent('guxdismiss');
-    const button = await page.find('.gux-dismiss');
+    const button = await page.find('gux-dismiss-button-beta');
     await button.click();
     expect(guxdismiss).toHaveReceivedEvent();
   });
@@ -54,7 +54,7 @@ describe('gux-popover', () => {
     const component = await page.find('gux-popover');
     component.setProperty('displayDismissDutton', false);
     await page.waitForChanges();
-    const button = await page.find('.gux-dismiss');
+    const button = await page.find('gux-dismiss-button-beta');
     expect(button).toBeNull();
   });
 });
