@@ -17,9 +17,9 @@ describe('#whenEventIsFrom', () => {
     },
     parentElement
   };
-  const dummyEvent = ({
+  const dummyEvent = {
     target: targetElement
-  } as unknown) as Event;
+  } as unknown as Event;
 
   it('runs the handler when the event target matches the selector', () => {
     const mockHandler = jest.fn();

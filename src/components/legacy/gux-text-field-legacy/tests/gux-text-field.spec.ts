@@ -50,10 +50,10 @@ describe('gux-text-field-legacy', () => {
 
     describe('clear', () => {
       it('should clear value', () => {
-        component.inputElement = ({
+        component.inputElement = {
           focus: () => 'test',
           value: 'test'
-        } as unknown) as HTMLInputElement;
+        } as unknown as HTMLInputElement;
         component.value = 'value';
         component.clear();
         expect(component.value).toBe('');

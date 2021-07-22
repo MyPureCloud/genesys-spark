@@ -61,7 +61,7 @@ export class GuxRadioGroupLegacy {
 
   @Listen('check')
   radioChecked(ev: CustomEvent<boolean>) {
-    const radio = (ev.target as unknown) as GuxRadioLegacy;
+    const radio = ev.target as unknown as GuxRadioLegacy;
     if (!ev.detail) {
       return;
     }

@@ -10,9 +10,9 @@ describe('gux-popover', () => {
   beforeEach(async () => {
     global.MutationObserver = MutationObserver;
     // popperjs does not work with Stencils MockHTMLElements used in tests
-    jest.spyOn(popperjs, 'createPopper').mockReturnValue(({
+    jest.spyOn(popperjs, 'createPopper').mockReturnValue({
       destroy: jest.fn()
-    } as unknown) as popperjs.Instance);
+    } as unknown as popperjs.Instance);
   });
 
   afterEach(async () => {
