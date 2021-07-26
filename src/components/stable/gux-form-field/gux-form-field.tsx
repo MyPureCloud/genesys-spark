@@ -144,8 +144,8 @@ export class GuxFormField {
         {this.renderLabel(this.required)}
         <div class="gux-input-and-error-container">
           <gux-input-color
-            gux-label-id={this.labelId}
-            gux-error-id={this.errorId}
+            gux-label-describedby={this.labelId}
+            gux-error-describedby={this.errorId}
             gux-required={this.required}
             class={{
               'gux-input-error': hasError

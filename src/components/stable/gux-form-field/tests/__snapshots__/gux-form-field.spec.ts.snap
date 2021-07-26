@@ -54,10 +54,13 @@ exports[`gux-form-field #render input tag should render component type "color" 1
       </label>
     </div>
     <div class="gux-input-and-error-container">
-      <gux-input-color gux-error-id="gux-form-field-error-i" gux-label-id="gux-form-field-label-i">
+      <gux-input-color gux-error-describedby="gux-form-field-error-i" gux-label-describedby="gux-form-field-label-i">
         <!---->
         <section>
-          <button aria-describedby="gux-form-field-label-i gux-form-field-error-i" aria-expanded="false" aria-required="false" class="gux-input-color-main-element" type="button">
+          <span class="gux-hidden" id="gux-input-color-required-i">
+            Required
+          </span>
+          <button aria-describedby="gux-form-field-label-i  gux-form-field-error-i" aria-expanded="false" class="gux-input-color-main-element" type="button">
             <div class="gux-input-color-selected-color" style="background: test;"></div>
             <div class="gux-input-color-color-name">
               test
@@ -87,10 +90,13 @@ exports[`gux-form-field #render input tag should render component type "color" w
       </label>
     </div>
     <div class="gux-input-and-error-container">
-      <gux-input-color gux-error-id="gux-form-field-error-i" gux-label-id="gux-form-field-label-i">
+      <gux-input-color gux-error-describedby="gux-form-field-error-i" gux-label-describedby="gux-form-field-label-i">
         <!---->
         <section>
-          <button aria-describedby="gux-form-field-label-i gux-form-field-error-i" aria-expanded="false" aria-required="false" class="gux-input-color-main-element" type="button">
+          <span class="gux-hidden" id="gux-input-color-required-i">
+            Required
+          </span>
+          <button aria-describedby="gux-form-field-label-i  gux-form-field-error-i" aria-expanded="false" class="gux-input-color-main-element" type="button">
             <div class="gux-input-color-selected-color" style="background: test;"></div>
             <div class="gux-input-color-color-name">
               test
