@@ -6,12 +6,22 @@ gux-list-item {
   .gux-list-item {
     display: flex;
     height: max-content;
-    padding: 8px 16px;
+    padding: 0 16px;
+    line-height: 32px;
     word-wrap: break-word;
     cursor: pointer;
 
-    gux-text-highlight {
+    .gux-text {
       width: 100%;
+    }
+  }
+
+  &:focus,
+  &:active,
+  &:hover:not([disabled]) {
+    .gux-list-item {
+      color: @gux-type-dark;
+      background: @gux-blue-60;
     }
   }
 
@@ -22,55 +32,4 @@ gux-list-item {
       opacity: 0.5;
     }
   }
-}
-
-// Theming
-
-// Dark
-.gux-list-item-dark-theme {
-  &:focus,
-  &:active,
-  &:hover:not([disabled]) {
-    .gux-list-item {
-      color: @gux-type-dark;
-      background: @gux-blue-60;
-    }
-  }
-}
-
-.gux-dark-theme {
-  gux-list-item {
-    .gux-list-item-dark-theme();
-  }
-}
-
-gux-list-item.gux-dark-theme {
-  .gux-list-item-dark-theme();
-}
-
-// Light
-.gux-list-item-light-theme {
-  &:focus,
-  &:active,
-  &:hover:not([disabled]) {
-    .gux-list-item {
-      color: @gux-type-dark;
-      background: @gux-blue-60;
-    }
-  }
-}
-
-.gux-light-theme {
-  gux-list-item {
-    .gux-list-item-light-theme();
-  }
-}
-
-gux-list-item.gux-light-theme {
-  .gux-list-item-light-theme();
-}
-
-// Default Theme
-gux-list-item {
-  .gux-list-item-light-theme();
 }
