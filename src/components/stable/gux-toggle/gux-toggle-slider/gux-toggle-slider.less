@@ -1,5 +1,10 @@
 @import (reference) '../../../../style/color.less';
 
+@toggle-height: 16px;
+@toggle-width: 30px;
+@slider-diameter: @toggle-height - 2px;
+@slider-transition: @toggle-width - @toggle-height;
+
 gux-toggle-slider {
   padding: 2px;
 
@@ -9,8 +14,8 @@ gux-toggle-slider {
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
-    width: 30px;
-    height: 16px;
+    width: @toggle-width;
+    height: @toggle-height;
 
     .gux-slider {
       position: absolute;
@@ -19,15 +24,15 @@ gux-toggle-slider {
       bottom: 0;
       left: 0;
       background-color: @gux-black-100;
-      border-radius: 34px;
+      border-radius: @toggle-height / 2;
       transition: 0.4s;
 
       &::before {
         position: absolute;
-        bottom: 1px;
-        left: 2px;
-        width: 14px;
-        height: 14px;
+        bottom: (@toggle-height - @slider-diameter) / 2;
+        left: (@toggle-height - @slider-diameter) / 2;
+        width: @slider-diameter;
+        height: @slider-diameter;
         content: '';
         background-color: @gux-grey-100;
         border-radius: 50%;
@@ -38,7 +43,7 @@ gux-toggle-slider {
         background-color: @gux-blue-60;
 
         &::before {
-          transform: translateX(12px);
+          transform: translateX(@slider-transition);
         }
       }
     }
