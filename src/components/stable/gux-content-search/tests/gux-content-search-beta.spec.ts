@@ -18,8 +18,7 @@ describe('gux-content-search', () => {
       },
       {
         description: 'should render default control no props With placeholder',
-        html:
-          '<gux-content-search><input type="text" placeholder="Search"/></gux-content-search>'
+        html: '<gux-content-search><input type="text" placeholder="Search"/></gux-content-search>'
       },
       {
         description: 'should render default control with all props',

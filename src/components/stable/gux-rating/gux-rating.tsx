@@ -95,33 +95,17 @@ export class GuxRating {
   }
 
   private getRatingStarElements(): JSX.Element {
-    return [...Array(this.maxValue).keys()].reduce((acc, cv) => {
-      if (cv + 0.5 === this.value) {
-        return acc.concat(
-          <gux-icon
-            class="gux-rating-star-half"
-            icon-name="rating-partial"
-            decorative
-          ></gux-icon>
-        );
-      } else if (cv + 1 <= this.value) {
-        return acc.concat(
-          <gux-icon
-            class="gux-rating-star-full"
-            icon-name="rating-active"
-            decorative
-          ></gux-icon>
-        );
-      }
+    return [...Array(this.maxValue).keys()]
+      .reduce((acc, cv) => {
+        if (cv + 0.5 === this.value) {
+          return acc.concat('rating-partial');
+        } else if (cv + 1 <= this.value) {
+          return acc.concat('rating-active');
+        }
 
-      return acc.concat(
-        <gux-icon
-          class="gux-rating-star-empty"
-          icon-name="rating"
-          decorative
-        ></gux-icon>
-      );
-    }, []);
+        return acc.concat('rating');
+      }, [])
+      .map(iconName => <gux-icon icon-name={iconName} decorative></gux-icon>);
   }
 
   private getTabIndex(): number {
