@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.27.2](https://inindca///compare/v2.27.1...v2.27.2) (2021-07-26)
+
+
+### Bug Fixes
+
+* **action-button:** fixed styling ([c825487](https://inindca///commit/c8254873c8c83f6818e4e498eacece7ded1d5d29))
+* **rating:** fixed empty star color ([d99aadd](https://inindca///commit/d99aaddffe32cd6b75820eeaf31b93bdf66205e2))
+* **toggle:** fixed toggle styling ([90300d8](https://inindca///commit/90300d8a80d1ab55d34b2961ffae55e8d7a8c7d2))
+
 ### [2.27.1](https://inindca///compare/v2.27.0...v2.27.1) (2021-07-22)
 
 
