@@ -13,19 +13,73 @@ gux-button {
     height: 32px;
     padding: 0 @spacing-medium;
     overflow: hidden;
-    .body-font();
-
     font-weight: bold;
+    color: @gux-black-50;
     text-overflow: ellipsis;
     white-space: nowrap;
     pointer-events: auto;
     cursor: pointer;
+    background-color: @gux-grey-60;
     border: none;
     border-radius: 4px;
+    .body-font();
 
     &[disabled] {
+      color: fade(@gux-black-50, 50%);
       cursor: default;
-      opacity: 0.5;
+      background-color: fade(@gux-grey-60, 50%);
+    }
+
+    &:hover:enabled {
+      background-color: @gux-grey-50;
+    }
+
+    &:active:enabled {
+      background-color: @gux-grey-40;
+    }
+
+    &:focus:enabled {
+      .focus-ring();
+    }
+
+    &.gux-tertiary {
+      color: @gux-blue-60;
+      background-color: @gux-grey-100;
+      border: 1px solid @gux-blue-60;
+
+      &[disabled] {
+        color: fade(@gux-blue-60, 50%);
+        background-color: fade(@gux-grey-100, 50%);
+        border-color: fade(@gux-blue-60, 50%);
+      }
+
+      &:hover:enabled {
+        color: @gux-grey-100;
+        background-color: @gux-blue-50;
+      }
+
+      &:active:enabled {
+        color: @gux-grey-100;
+        background-color: @gux-blue-40;
+      }
+    }
+
+    &.gux-primary {
+      color: @gux-grey-100;
+      background-color: @gux-blue-60;
+
+      &[disabled] {
+        color: fade(@gux-grey-100, 50%);
+        background-color: fade(@gux-blue-60, 50%);
+      }
+
+      &:hover:enabled {
+        background-color: @gux-blue-50;
+      }
+
+      &:active:enabled {
+        background-color: @gux-blue-40;
+      }
     }
 
     &:focus {
@@ -45,70 +99,4 @@ gux-button {
       padding: 0;
     }
   }
-}
-
-// Theming
-
-.gux-button-light-theme {
-  > button {
-    color: @gux-black-50;
-    background-color: @gux-grey-60;
-
-    &:hover:enabled {
-      background-color: @gux-grey-50;
-    }
-
-    &:active:enabled {
-      background-color: @gux-grey-40;
-    }
-
-    &:focus:enabled {
-      .focus-ring();
-    }
-
-    &.gux-tertiary {
-      color: @gux-blue-60;
-      background-color: @gux-grey-100;
-      border: 1px solid @gux-blue-60;
-
-      &:hover:enabled {
-        color: @gux-grey-100;
-        background-color: @gux-blue-50;
-      }
-
-      &:active:enabled {
-        color: @gux-grey-100;
-        background-color: @gux-blue-40;
-      }
-    }
-
-    &.gux-primary {
-      color: @gux-grey-100;
-      background-color: @gux-blue-60;
-
-      &:hover:enabled {
-        background-color: @gux-blue-50;
-      }
-
-      &:active:enabled {
-        background-color: @gux-blue-40;
-      }
-    }
-  }
-}
-
-// Default Theme
-gux-button {
-  .gux-button-light-theme();
-}
-
-// Light
-.gux-light-theme {
-  gux-button {
-    .gux-button-light-theme();
-  }
-}
-
-gux-button.gux-light-theme {
-  .gux-button-light-theme();
 }
