@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.27.3](https://inindca///compare/v2.27.2...v2.27.3) (2021-07-27)
+
+
+### Bug Fixes
+
+* **gux-input-number:** number input is now aligned to the right ([6401de3](https://inindca///commit/6401de33040f2221c57410938b8ffa84cd51d095))
+
 ### [2.27.2](https://inindca///compare/v2.27.1...v2.27.2) (2021-07-26)
 
 
