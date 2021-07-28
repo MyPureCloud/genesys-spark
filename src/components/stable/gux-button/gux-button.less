@@ -13,7 +13,6 @@ gux-button {
     height: 32px;
     padding: 0 @spacing-medium;
     overflow: hidden;
-    font-weight: bold;
     color: @gux-black-50;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -22,7 +21,7 @@ gux-button {
     background-color: @gux-grey-60;
     border: none;
     border-radius: 4px;
-    .body-font();
+    .body-font-bold();
 
     &[disabled] {
       color: fade(@gux-black-50, 50%);
