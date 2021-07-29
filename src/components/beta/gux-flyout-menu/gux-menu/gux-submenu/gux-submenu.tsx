@@ -158,7 +158,7 @@ export class GuxSubmenu {
           {
             name: 'offset',
             options: {
-              offset: [-8, 5]
+              offset: [-8, 0]
             }
           },
           {
