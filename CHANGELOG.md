@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.27.4](https://inindca///compare/v2.27.3...v2.27.4) (2021-07-29)
+
+
+### Bug Fixes
+
+* **popover:** component now works as expected with angular framework ([11e5f07](https://inindca///commit/11e5f076ca36989977ce7225c4aea3678e85a10e))
+* **pr-comment:** addressed PR comment ([4cdade2](https://inindca///commit/4cdade2ef282c68a10c60ba08c73bc510e6f4ca9))
+
 ### [2.27.3](https://inindca///compare/v2.27.2...v2.27.3) (2021-07-27)
 
 
