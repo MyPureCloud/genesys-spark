@@ -1,12 +1,9 @@
-@import (reference) '../../../../../style/color.less';
+@import (reference) '../../../../../style/color-palette.less';
 @import (reference) '../../../../../style/typography.less';
 @import (reference) '../../../../../style/shadows.less';
 
 // Variables part
 @range-active: @gux-blue-60;
-@range-inactive: @gux-grey-60;
-@range-active-dark: @gux-blue-80;
-@range-inactive-dark: @gux-off-white;
 @thumb-diameter: 12px;
 @track-width: 100%;
 @track-height: 2px;
@@ -54,9 +51,11 @@ gux-input-range {
         width: 100%;
         height: @track-height;
         margin: 6px 0;
+        background-color: @gux-grey-10;
 
         .gux-progress {
           height: @track-height;
+          background-color: @range-active;
         }
       }
 
@@ -85,6 +84,8 @@ gux-input-range {
 
           margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
           -webkit-appearance: none;
+          background: @range-active;
+          border: 0 solid @range-active; // For firefox
         }
 
         &:focus::-webkit-slider-runnable-track {
@@ -101,6 +102,8 @@ gux-input-range {
           .gux-thumb();
 
           margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
+          background: @range-active;
+          border: 0 solid @range-active; // For firefox
         }
 
         &::-ms-track {
@@ -122,6 +125,9 @@ gux-input-range {
 
         &::-ms-thumb {
           .gux-thumb();
+
+          background: @range-active;
+          border: 0 solid @range-active; // For firefox
         }
 
         &:focus::-ms-fill-lower {
@@ -156,10 +162,18 @@ gux-input-range {
       order: 0;
       width: 50px;
       height: 32px;
-      margin: 0 0 0 20px;
+      margin: 0 0 0 16px;
       line-height: 32px;
       text-align: center;
+      background-color: @gux-grey-90;
+      background-image: none;
+      border: 1px solid @gux-black-100;
       border-radius: 4px;
+      box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
+
+      &.gux-active {
+        border-color: @range-active;
+      }
 
       &.gux-hidden {
         display: none;
@@ -186,7 +200,7 @@ gux-input-range {
       height: 32px;
       margin-left: -20px;
       visibility: hidden;
-      background-color: @gux-type-dark;
+      background-color: @gux-grey-100;
       border: 1px solid @slider-border;
       border-radius: 4px;
       .gux-shadow-20();
@@ -206,7 +220,7 @@ gux-input-range {
       &::after {
         margin-left: -4px;
         border-width: 4px;
-        border-top-color: @gux-type-dark;
+        border-top-color: @gux-grey-100;
       }
 
       &::before {
@@ -225,112 +239,4 @@ gux-input-range {
       visibility: visible;
     }
   }
-}
-
-// Theming
-// Light
-.gux-input-range-light-theme {
-  .gux-container {
-    .gux-range {
-      .gux-track {
-        background-color: @range-inactive;
-
-        .gux-progress {
-          background-color: @range-active;
-        }
-      }
-
-      input[type='range'] {
-        &::-webkit-slider-thumb {
-          background: @range-active;
-          border: 0 solid @range-active; // For firefox
-        }
-
-        &::-moz-range-thumb {
-          background: @range-active;
-          border: 0 solid @range-active; // For firefox
-        }
-
-        &::-ms-thumb {
-          background: @range-active;
-          border: 0 solid @range-active; // For firefox
-        }
-      }
-    }
-
-    .gux-display {
-      border: 1px solid @range-inactive;
-
-      &.gux-active {
-        border-color: @range-active;
-      }
-    }
-  }
-}
-
-.gux-light-theme {
-  gux-input-range {
-    .gux-input-range-light-theme();
-  }
-}
-
-gux-input-range.gux-light-theme {
-  .gux-input-range-light-theme();
-}
-
-// Dark
-.gux-input-range-dark-theme {
-  .gux-container {
-    .gux-range {
-      .gux-track {
-        background-color: @range-inactive-dark;
-
-        .gux-progress {
-          background-color: @range-active-dark;
-        }
-      }
-
-      input[type='range'] {
-        &::-webkit-slider-thumb {
-          background: @range-active-dark;
-          border: 0 solid @range-active-dark; // For firefox
-        }
-
-        &::-moz-range-thumb {
-          background: @range-active-dark;
-          border: 0 solid @range-active-dark; // For firefox
-        }
-
-        &::-ms-thumb {
-          background: @range-active-dark;
-          border: 0 solid @range-active-dark; // For firefox
-        }
-      }
-    }
-
-    .gux-display {
-      color: @gux-type;
-      background-color: @range-inactive-dark;
-      border: 1px solid @range-inactive-dark;
-
-      &.gux-active {
-        border-color: @range-active-dark;
-      }
-    }
-  }
-}
-
-.gux-dark-theme {
-  gux-input-range {
-    .gux-input-range-dark-theme();
-  }
-}
-
-gux-input-range.gux-dark-theme {
-  .gux-input-range-dark-theme();
-}
-
-// Default
-gux-input-range {
-  .gux-input-range-light-theme();
 }
