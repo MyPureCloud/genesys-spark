@@ -6,14 +6,19 @@ import { Component } from '@angular/core';
   // styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  secondSectionExists = true;
-  secondSectionExistsBeta = true;
+  target1 = 'id_1';
+  target2 = 'id_2';
+  target3 = 'id_3';
+  target4 = 'id_4';
+  idForPopOver: string | null = null;
 
-  toggleSecondSectionExisting(): void {
-    this.secondSectionExists = !this.secondSectionExists;
+  show(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    const popover = target.nextElementSibling as HTMLElement;
+    popover.hidden = false;
   }
 
-  toggleSecondSectionExistingBeta(): void {
-    this.secondSectionExistsBeta = !this.secondSectionExistsBeta;
+  popOverShown(target: string): boolean {
+    return this.idForPopOver === target;
   }
 }

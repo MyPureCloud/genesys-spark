@@ -24,7 +24,6 @@ import { PopperPosition } from './gux-popover.types';
 })
 export class GuxPopover {
   private popperInstance: Instance;
-  private forElement: HTMLElement;
   private hiddenObserver: MutationObserver;
 
   @Element()
@@ -60,13 +59,6 @@ export class GuxPopover {
   @Event()
   guxdismiss: EventEmitter<void>;
 
-  @Watch('hidden')
-  watchHidden() {
-    if (this.popperInstance) {
-      this.popperInstance.forceUpdate();
-    }
-  }
-
   @State()
   hidden: boolean = true;
 
@@ -83,6 +75,8 @@ export class GuxPopover {
   hiddenHandler(hidden: boolean) {
     if (!hidden && !this.popperInstance) {
       this.runPopper();
+    } else if (!hidden && this.popperInstance) {
+      this.popperInstance.forceUpdate();
     }
   }
 
@@ -94,8 +88,10 @@ export class GuxPopover {
   }
 
   private runPopper(): void {
-    if (this.forElement) {
-      this.popperInstance = createPopper(this.forElement, this.root, {
+    const forElement = document.getElementById(this.for);
+
+    if (forElement) {
+      this.popperInstance = createPopper(forElement, this.root, {
         modifiers: [
           {
             name: 'offset',
@@ -136,17 +132,11 @@ export class GuxPopover {
   async connectedCallback(): Promise<void> {
     trackComponent(this.root, { variant: this.position });
 
-    this.forElement = document.getElementById(this.for);
-
     this.hiddenObserver = onHiddenChange(this.root, (hidden: boolean) => {
       this.hidden = hidden;
     });
 
     this.hidden = this.root.hidden;
-  }
-
-  componentDidLoad(): void {
-    this.runPopper();
   }
 
   disconnectedCallback(): void {
