@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.28.0](https://inindca///compare/v2.27.4...v2.28.0) (2021-07-30)
+
+
+### Features
+
+* **gux-input-color:** improved gux-input-color label and error accessibility ([9ed8022](https://inindca///commit/9ed802212671fd7c0ea00b9070020ee3e13baf68))
+
+
+### Bug Fixes
+
+* **gux-flyout-menu:** fixed styling to align with Spark ([0e9620e](https://inindca///commit/0e9620e4e66cd225a2590ec888335832cc3566f2))
+* **gux-input-color:** fixed styling ([b3cebbd](https://inindca///commit/b3cebbd0cc36abcfc4e8306d17784940ba085d5a))
+* **gux-popover:** fixing styling and arrow placement bug ([6f14097](https://inindca///commit/6f140972b234ba552acf9be848747ff17e1e2e06))
+* **input-range:** fixed styling ([9db34ac](https://inindca///commit/9db34acfb3d7e9f6ba0c91d8d4fd786a131aed75))
+* **radial-progress:** fixed styling ([ea747d3](https://inindca///commit/ea747d393467aea97ccee12cdadb35844c3fbf7e))
+
 ### [2.27.4](https://inindca///compare/v2.27.3...v2.27.4) (2021-07-29)
 
 
