@@ -134,7 +134,7 @@ export class GuxFlyoutMenu {
         {
           name: 'offset',
           options: {
-            offset: [0, 7]
+            offset: [0, 16]
           }
         },
         {

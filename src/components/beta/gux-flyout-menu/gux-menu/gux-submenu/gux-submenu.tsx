@@ -212,7 +212,7 @@ export class GuxSubmenu {
           <span class="gux-submenu-button-text">{this.label}</span>
           <gux-icon
             class="gux-submenu-open-icon"
-            icon-name="chevron-right"
+            icon-name="chevron-small-right"
             decorative
           ></gux-icon>
         </button>
