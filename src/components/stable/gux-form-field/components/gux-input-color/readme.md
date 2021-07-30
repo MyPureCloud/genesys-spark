@@ -5,6 +5,15 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property              | Attribute               | Description | Type      | Default     |
+| --------------------- | ----------------------- | ----------- | --------- | ----------- |
+| `guxErrorDescribedby` | `gux-error-describedby` |             | `string`  | `undefined` |
+| `guxLabelDescribedby` | `gux-label-describedby` |             | `string`  | `undefined` |
+| `guxRequired`         | `gux-required`          |             | `boolean` | `undefined` |
+
+
 ## Slots
 
 | Slot      | Description                           |
