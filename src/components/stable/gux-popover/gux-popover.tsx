@@ -139,6 +139,10 @@ export class GuxPopover {
     this.hidden = this.root.hidden;
   }
 
+  componentDidLoad(): void {
+    this.runPopper();
+  }
+
   disconnectedCallback(): void {
     this.destroyPopper();
     this.hiddenObserver.disconnect();
