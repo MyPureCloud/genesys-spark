@@ -18,8 +18,8 @@
     "parse5": "^6.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
     "@stencil/webpack": "0.0.6",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^5.2.7",
