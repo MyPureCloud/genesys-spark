@@ -1,21 +1,27 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxRadialProgress } from '../gux-radial-progress';
 
+const components = [GuxRadialProgress];
+const language = 'en';
+
 describe('gux-radial-progress', () => {
   let component: GuxRadialProgress;
 
   beforeEach(async () => {
     const page = await newSpecPage({
-      components: [GuxRadialProgress],
+      components,
       html: `<gux-radial-progress></gux-radial-progress>`,
-      language: 'en'
+      language
     });
 
     component = page.rootInstance;
   });
 
   it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxRadialProgress);
+    const html = `<gux-radial-progress></gux-radial-progress>`;
+    const page = await newSpecPage({ components, html, language });
+
+    expect(page.rootInstance).toBeInstanceOf(GuxRadialProgress);
   });
 
   describe('#render', () => {
@@ -32,13 +38,9 @@ describe('gux-radial-progress', () => {
       '<gux-radial-progress value="-123" max="100" screenreader-text="Uploading file"></gux-radial-progress>',
       '<gux-radial-progress value="200" max="100" screenreader-text="Uploading file"></gux-radial-progress>',
       '<gux-radial-progress value="10" max="test" screenreader-text="Uploading file"></gux-radial-progress>'
-    ].forEach((input, index) => {
+    ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newSpecPage({
-          components: [GuxRadialProgress],
-          html: input,
-          language: 'en'
-        });
+        const page = await newSpecPage({ components, html, language });
 
         expect(page.root).toMatchSnapshot();
       });
