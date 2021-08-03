@@ -78,7 +78,7 @@ export class GuxTag {
     this.guxdelete.emit(this.value);
   }
 
-  private getIcon(): JSX.Element {
+  private renderIcon(): JSX.Element {
     if (this.icon) {
       return (
         <div class="gux-tag-icon-container">
@@ -88,7 +88,7 @@ export class GuxTag {
     }
   }
 
-  private getText(): JSX.Element {
+  private renderText(): JSX.Element {
     return (
       <div class="gux-tag-text">
         <slot />
@@ -96,7 +96,7 @@ export class GuxTag {
     );
   }
 
-  private getRemoveButton(): JSX.Element {
+  private renderRemoveButton(): JSX.Element {
     if (this.removable) {
       return (
         <button
@@ -134,9 +134,9 @@ export class GuxTag {
           'gux-disabled': this.disabled
         }}
       >
-        {this.getIcon()}
-        {this.getText()}
-        {this.getRemoveButton()}
+        {this.renderIcon()}
+        {this.renderText()}
+        {this.renderRemoveButton()}
       </div>
     );
   }

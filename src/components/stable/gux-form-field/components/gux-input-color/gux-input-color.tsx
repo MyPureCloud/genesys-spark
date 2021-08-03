@@ -1,5 +1,7 @@
-import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
-
+import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
+import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
+import { randomHTMLId } from '../../../../../utils/dom/random-html-id';
+import colorInputResources from './i18n/en.json';
 import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 
 /**
@@ -12,9 +14,20 @@ import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 export class GuxInputColor {
   private input: HTMLInputElement;
   private disabledObserver: MutationObserver;
+  private i18n: GetI18nValue;
+  private requiredId = randomHTMLId('gux-input-color-required');
 
   @Element()
   private root: HTMLElement;
+
+  @Prop()
+  guxLabelDescribedby: string;
+
+  @Prop()
+  guxErrorDescribedby: string;
+
+  @Prop()
+  guxRequired: boolean;
 
   @State()
   private disabled: boolean;
@@ -43,7 +56,9 @@ export class GuxInputColor {
     this.color = input.value;
   }
 
-  componentWillLoad(): void {
+  async componentWillLoad() {
+    this.i18n = await buildI18nForComponent(this.root, colorInputResources);
+
     this.input = this.root.querySelector('input[slot="input"]');
     this.input.addEventListener('change', (e: MouseEvent) => {
       if (this.opened) {
@@ -70,7 +85,14 @@ export class GuxInputColor {
   render(): JSX.Element {
     return (
       <section>
+        <span class="gux-hidden" id={this.requiredId}>
+          {this.i18n('required')}
+        </span>
         <button
+          aria-describedby={`${this.guxLabelDescribedby} ${
+            this.guxRequired ? this.requiredId : ''
+          } ${this.guxErrorDescribedby}`}
+          aria-expanded={this.opened ? 'true' : 'false'}
           type="button"
           class={{
             'gux-input-color-main-element': true,

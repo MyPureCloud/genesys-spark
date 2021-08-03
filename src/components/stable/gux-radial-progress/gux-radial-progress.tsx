@@ -1,17 +1,19 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
+import { logError } from '../../../utils/error/log-error';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
 const RADIUS = 23.5;
 const STROKE_DASH = 2 * Math.PI * RADIUS;
-
-let idCounter = 0;
 
 @Component({
   styleUrl: 'gux-radial-progress.less',
   tag: 'gux-radial-progress'
 })
 export class GuxRadialProgress {
+  private dropshadowId = randomHTMLId('gux-dropshadow');
+
   @Element()
   private root: HTMLElement;
 
@@ -33,8 +35,6 @@ export class GuxRadialProgress {
   @Prop()
   screenreaderText: string = '';
 
-  private dropshadowId = `dropshadow-${idCounter++}`;
-
   componentWillLoad(): void {
     trackComponent(this.root);
   }
@@ -42,25 +42,30 @@ export class GuxRadialProgress {
   componentDidLoad(): void {
     if (
       !this.screenreaderText &&
-      this.canShowPercentage(this.value, this.max)
+      this.canShowPercentageState(this.value, this.max)
     ) {
-      throw new Error(
-        '[gux-radial-progress] No screenreader-text provided. Provide a localized screenreader-text property for the component.'
+      logError(
+        'gux-radial-progress',
+        'No screenreader-text provided. Provide a localized screenreader-text property for the component.'
       );
     }
   }
 
   render(): JSX.Element {
-    return this.canShowPercentage(this.value, this.max)
-      ? this.showPercentageState(this.value, this.max, this.screenreaderText)
-      : this.showSpinnerState(this.screenreaderText);
+    return this.canShowPercentageState(this.value, this.max)
+      ? this.renderPercentageState(this.value, this.max, this.screenreaderText)
+      : this.renderSpinnerState(this.screenreaderText);
   }
 
-  private canShowPercentage(value, max) {
+  private canShowPercentageState(value: number, max: number): boolean {
     return !(isNaN(value) || isNaN(max) || value > max || value < 0);
   }
 
-  private showPercentageState(value, max, screenreaderText): JSX.Element {
+  private renderPercentageState(
+    value: number,
+    max: number,
+    screenreaderText: string
+  ): JSX.Element {
     return (
       <div
         role="progressbar"
@@ -77,7 +82,7 @@ export class GuxRadialProgress {
           role="presentation"
         >
           <filter id={this.dropshadowId}>
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.4" />
             <feOffset dx="0" dy="0" result="offsetblur" />
             <feMerge>
               <feMergeNode />
@@ -89,10 +94,20 @@ export class GuxRadialProgress {
             cx="50%"
             cy="50%"
             r={RADIUS}
+            class="gux-dynamic-circle-shadow"
+            stroke-dashoffset={STROKE_DASH * (1 - value / max)}
+            stroke-dasharray={STROKE_DASH}
+            stroke-linecap="round"
+            filter={'url(#' + this.dropshadowId + ')'}
+          />
+          <circle
+            cx="50%"
+            cy="50%"
+            r={RADIUS}
             class="gux-dynamic-circle"
             stroke-dashoffset={STROKE_DASH * (1 - value / max)}
             stroke-dasharray={STROKE_DASH}
-            filter={'url(#' + this.dropshadowId + ')'}
+            stroke-linecap="round"
           />
 
           <text
@@ -108,7 +123,7 @@ export class GuxRadialProgress {
     );
   }
 
-  private showSpinnerState(screenreaderText): JSX.Element {
+  private renderSpinnerState(screenreaderText: string): JSX.Element {
     return (
       <gux-radial-loading
         screenreader-text={screenreaderText}

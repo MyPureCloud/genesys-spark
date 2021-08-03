@@ -2,6 +2,8 @@
   "emptyMessage": "Nessun dato disponibile",
   "scrollLeft": "Naviga a sinistra",
   "scrollRight": "Naviga a destra",
+  "selectAllTableRows": "Seleziona tutte le righe delle tabelle",
+  "selectTableRow": "Seleziona riga tabella",
   "sortAsc": "Ordinato in senso crescente",
   "sortDesc": "Ordinato in senso decrescente"
 }

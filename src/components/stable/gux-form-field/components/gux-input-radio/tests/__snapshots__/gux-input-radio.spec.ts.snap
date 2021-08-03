@@ -4,7 +4,10 @@ exports[`gux-input-radio should render 1`] = `
 <gux-input-radio>
   <!---->
   <div class="gux-input-radio-container">
-    <input disabled="" id="dinner-sandwich" name="dinner" slot="input" type="radio" value="sandwich">
+    <input disabled="" name="dinner" slot="input" type="radio" value="sandwich">
+    <label slot="label">
+      Sandwich
+    </label>
   </div>
 </gux-input-radio>
 `;

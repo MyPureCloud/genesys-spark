@@ -141,7 +141,9 @@ describe('gux-modal', () => {
       `;
       const page = await newE2EPage({ html });
       const element = await page.find('gux-modal');
-      const dismissButton = await page.find('.gux-dismiss-button');
+      const dismissButton = await element.find(
+        'gux-dismiss-button-beta >>> button'
+      );
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -172,7 +174,9 @@ describe('gux-modal', () => {
       `;
       const page = await newE2EPage({ html });
       const element = await page.find('gux-modal');
-      const dismissButton = await page.find('.gux-dismiss-button');
+      const dismissButton = (await element.find(
+        'gux-dismiss-button-beta >>> button'
+      )) as HTMLElement;
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 

@@ -5,9 +5,7 @@ exports[`gux-modal #render should render large modal 1`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-large gux-modal-container">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -52,9 +50,7 @@ exports[`gux-modal #render should render large modal 2`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-large gux-modal-container">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -99,9 +95,7 @@ exports[`gux-modal #render should render medium modal 1`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-medium gux-modal-container">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -146,9 +140,7 @@ exports[`gux-modal #render should render medium modal 2`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-medium gux-modal-container">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -193,9 +185,7 @@ exports[`gux-modal #render should render modal with just left align buttons 1`] 
   <!---->
   <div class="gux-modal">
     <div class="gux-modal-container gux-small">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -231,9 +221,7 @@ exports[`gux-modal #render should render modal with just left align buttons 2`] 
   <!---->
   <div class="gux-modal">
     <div class="gux-modal-container gux-small">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -269,9 +257,7 @@ exports[`gux-modal #render should render modal with just right align buttons 1`]
   <!---->
   <div class="gux-modal">
     <div class="gux-modal-container gux-small">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -307,9 +293,7 @@ exports[`gux-modal #render should render modal with just right align buttons 2`]
   <!---->
   <div class="gux-modal">
     <div class="gux-modal-container gux-small">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -345,9 +329,7 @@ exports[`gux-modal #render should render modal without a title 1`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-large gux-modal-container">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <div class="gux-modal-content">
         <p>
           <div slot="content">
@@ -387,9 +369,7 @@ exports[`gux-modal #render should render modal without a title 2`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-large gux-modal-container">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <div class="gux-modal-content">
         <p>
           <div slot="content">
@@ -429,9 +409,7 @@ exports[`gux-modal #render should render modal without buttons 1`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-modal-container gux-small">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -454,9 +432,7 @@ exports[`gux-modal #render should render modal without buttons 2`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-modal-container gux-small">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -479,9 +455,7 @@ exports[`gux-modal #render should render small modal 1`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-modal-container gux-small">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -526,9 +500,7 @@ exports[`gux-modal #render should render small modal 2`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-modal-container gux-small">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -573,9 +545,7 @@ exports[`gux-modal #render should render small modal by default 1`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-dynamic gux-modal-container">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title
@@ -620,9 +590,7 @@ exports[`gux-modal #render should render small modal by default 2`] = `
   <!---->
   <div class="gux-modal">
     <div class="gux-dynamic gux-modal-container">
-      <button class="gux-dismiss-button" title="Dismiss">
-        <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
-      </button>
+      <gux-dismiss-button-beta></gux-dismiss-button-beta>
       <h1 class="gux-modal-header">
         <div slot="title">
           Modal Title

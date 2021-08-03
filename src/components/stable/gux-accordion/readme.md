@@ -7,14 +7,15 @@
 
 ## Properties
 
-| Property       | Attribute       | Description                                                                                                                               | Type     | Default |
-| -------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------- |
-| `headingLevel` | `heading-level` | The heading level within the page the accordion section headers should be set to. heading-level="3" woudl be equivalent to an h3 element. | `number` | `null`  |
+| Property        | Attribute        | Description                                                                                                                               | Type                         | Default     |
+| --------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| `arrowPosition` | `arrow-position` |                                                                                                                                           | `"beside-text" \| "default"` | `'default'` |
+| `headingLevel`  | `heading-level`  | The heading level within the page the accordion section headers should be set to. heading-level="3" woudl be equivalent to an h3 element. | `number`                     | `null`      |
 
 
 ## Methods
 
-### `close(slot: string) => Promise<void>`
+### `close(slotName: string) => Promise<void>`
 
 Closes a section.
 
@@ -24,7 +25,7 @@ Type: `Promise<void>`
 
 
 
-### `open(slot: string) => Promise<void>`
+### `open(slotName: string) => Promise<void>`
 
 Opens a section.
 
@@ -34,7 +35,7 @@ Type: `Promise<void>`
 
 
 
-### `toggle(slot: string) => Promise<void>`
+### `toggle(slotName: string) => Promise<void>`
 
 Toggles a section.
 

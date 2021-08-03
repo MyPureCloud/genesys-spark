@@ -6,10 +6,10 @@ export const textAttribute = (name, astNode, parent, renderCallback) => {
   let value = matchingAttr ? matchingAttr.value : '';
 
   let element = toHTML(`
-    <label>
-        <span>${name}:</span>
-        <input type="text" value="${value}" />
-    </label>`);
+    <gux-form-field>
+      <input slot="input" type="text" value="${value}" />
+      <label slot="label">${name}:</label>
+    </gux-form-field>`);
 
   element.addEventListener(
     'input',

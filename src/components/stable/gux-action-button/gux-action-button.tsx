@@ -121,7 +121,7 @@ export class GuxActionButton {
 
     if (
       key === 'ArrowDown' &&
-      !((this.listElement as any) as HTMLElement).contains(event.target as Node)
+      !(this.listElement as any as HTMLElement).contains(event.target as Node)
     ) {
       this.isOpen = true;
       this.listElement.setFocusOnFirstItem();

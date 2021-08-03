@@ -2,6 +2,8 @@
   "emptyMessage": "無可用資料",
   "scrollLeft": "向左捲動",
   "scrollRight": "向右捲動",
+  "selectAllTableRows": "選擇所有資料表列",
+  "selectTableRow": "選擇資料表列",
   "sortAsc": "遞增排序",
   "sortDesc": "遞減排序"
 }

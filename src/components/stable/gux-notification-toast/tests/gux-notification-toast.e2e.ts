@@ -63,7 +63,10 @@ describe('gux-notification-toast', () => {
         </gux-notification-toast>
       `;
       const page = await newE2EPage({ html });
-      const dismissButton = await page.find('.gux-dismiss-button');
+      const element = await page.find('gux-notification-toast');
+      const dismissButton = await element.find(
+        'gux-dismiss-button-beta >>> button'
+      );
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -88,7 +91,10 @@ describe('gux-notification-toast', () => {
         </gux-notification-toast>
       `;
       const page = await newE2EPage({ html });
-      const dismissButton = await page.find('.gux-dismiss-button');
+      const element = await page.find('gux-notification-toast');
+      const dismissButton = await element.find(
+        'gux-dismiss-button-beta >>> button'
+      );
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 

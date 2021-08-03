@@ -11,12 +11,14 @@ import {
 } from '@stencil/core';
 
 import { eventIsFrom } from '../../../../utils/dom/event-is-from';
+import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
 @Component({
   styleUrl: 'gux-tab.less',
   tag: 'gux-tab'
 })
 export class GuxTab {
+  private dropdownOptionsButtonId: string = randomHTMLId();
   /**
    * unique id for the tab
    */
@@ -55,7 +57,7 @@ export class GuxTab {
   }
 
   private selectTab(e: MouseEvent): void {
-    if (eventIsFrom('.tab-dropdown-container', e)) {
+    if (eventIsFrom('.gux-tab-options-button', e)) {
       return;
     }
 
@@ -65,34 +67,31 @@ export class GuxTab {
 
   private getDropdownOptions(): JSX.Element {
     if (this.hasDropdownOptions) {
-      return (
-        <div>
-          <button
-            id={this.tabId}
-            type="button"
-            class="tab-dropdown-container"
-            onClick={() => this.toggleOptions()}
-          >
-            <gux-icon
-              icon-name="menu-kebab-vertical"
-              decorative={true}
-            ></gux-icon>
-          </button>
-
-          <gux-popover
-            position="top-start"
-            for={this.tabId}
-            displayDismissButton={false}
-            hidden={this.popoverHidden}
-            closeOnClickOutside={true}
-            onGuxdismiss={() => (this.popoverHidden = true)}
-          >
-            <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
-              <slot name="dropdown-options" />
-            </div>
-          </gux-popover>
-        </div>
-      );
+      return [
+        <button
+          id={this.dropdownOptionsButtonId}
+          type="button"
+          class="gux-tab-options-button"
+          onClick={() => this.toggleOptions()}
+        >
+          <gux-icon
+            icon-name="menu-kebab-vertical"
+            decorative={true}
+          ></gux-icon>
+        </button>,
+        <gux-popover
+          position="top-end"
+          for={this.dropdownOptionsButtonId}
+          displayDismissButton={false}
+          hidden={this.popoverHidden}
+          closeOnClickOutside={true}
+          onGuxdismiss={() => (this.popoverHidden = true)}
+        >
+          <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
+            <slot name="dropdown-options" />
+          </div>
+        </gux-popover>
+      ];
     }
 
     return null;

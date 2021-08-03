@@ -1,10 +1,9 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/typography.less';
 
 // Variables part
 @gux-form-beside-label-container-width: 45px;
 @gux-form-beside-label-margin-right: 8px;
-@error-message-offset: @gux-form-beside-label-container-width +
-  @gux-form-beside-label-margin-right;
 
 // Style
 gux-form-field {
@@ -13,54 +12,51 @@ gux-form-field {
   .gux-label-and-input-and-error-container {
     margin: 16px 0;
 
-    .gux-label-and-input-container {
-      label {
-        font-size: 12px;
-        font-weight: bold;
-        line-height: 20px;
-      }
-
-      .gux-input-error .gux-input-container {
-        border-color: @gux-alert;
-      }
-
-      .gux-input-error textarea {
-        border-color: @gux-alert;
-      }
-
-      .gux-input-error .gux-input-color-main-element {
-        border-color: @gux-alert;
-      }
+    label {
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 20px;
     }
 
-    .gux-error {
-      margin: 4px 0;
+    .gux-input-error .gux-input-container {
+      border-color: @gux-alert;
+    }
+
+    .gux-input-error textarea {
+      border-color: @gux-alert;
+    }
+
+    .gux-input-error .gux-input-color-main-element {
+      border-color: @gux-alert;
+    }
+
+    .gux-input-and-error-container {
+      flex-grow: 1;
     }
 
     &.gux-beside {
-      .gux-label-and-input-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+      display: flex;
+      flex-direction: row;
 
-        .gux-label-container {
-          min-width: @gux-form-beside-label-container-width;
-          margin-right: @gux-form-beside-label-margin-right;
-        }
-
-        gux-input-range,
-        gux-input-select,
-        gux-input-text-like,
-        gux-input-search {
-          flex: 1 1 auto;
-        }
+      .gux-label-container {
+        position: relative;
+        top: 7px;
+        width: fit-content;
+        min-width: @gux-form-beside-label-container-width;
+        margin-right: @gux-form-beside-label-margin-right;
       }
 
-      gux-error-message-beta {
-        .gux-container {
-          position: relative;
-          left: @error-message-offset;
-        }
+      gux-input-range,
+      gux-input-select,
+      gux-input-text-like,
+      gux-input-search {
+        flex: 1 1 auto;
+      }
+    }
+
+    &.gux-screenreader {
+      label {
+        .gux-sr-only();
       }
     }
   }
@@ -68,5 +64,14 @@ gux-form-field {
   .gux-required::after {
     color: @gux-alert-red-60;
     content: ' *';
+  }
+
+  .gux-error {
+    display: none;
+    margin: 4px 0;
+
+    &.gux-show {
+      display: block;
+    }
   }
 }

@@ -6,6 +6,7 @@ import { createEditor } from './panels/editor';
 import EventsPanel from './panels/events';
 import { toHTML } from '../utils/to-html';
 import '../styles/component-viewer.less';
+import * as SparkLinks from './components/links.json';
 
 window.toHTML = toHTML;
 window.webcomponentsDocsMain = (example = '', renderCallback = () => {}) =>
@@ -25,19 +26,21 @@ function createLayout() {
       </div>
       <gux-disclosure-button position="right">
         <div slot="panel-content" class="controls-column">
-          <details>
-            <summary class="heading">Event Descriptions</summary>
-            <div class="events"></div>
-          </details>
-          <details>
-            <summary class="heading">Attributes</summary>
-            <div class="attributes"></div>
-          </details>
+          <gux-accordion id="accordion" heading-level="4">
+            <div slot="Event Descriptions">
+              <div class="events"></div>
+            </div>
+            <div slot="Attributes">
+              <div class="attributes"></div>
+            </div>
+          </gux-accordion>
+          <div id="spark-link-container" class="spark-link"></div>
         </div>
       </gux-disclosure-button>
       <div class="notification"></div>
     </div>
   `);
+
   document.body.appendChild(template);
 
   const inheritedThemeButton = template.querySelector('.tablinks.inherited');
@@ -52,14 +55,12 @@ function createLayout() {
   const setupAccessibilityTool = async () => {
     const axeLive = await import('axe-live');
     const accessibilityNode = toHTML(`
-      <details>
-        <summary class="heading">Accessibility</summary>
-        <div class="accessibility">
+        <div slot="Accessibility">
           <gux-button accent="primary" id="axe-trigger">Run accessibility tests</gux-button>
         </div>
-      </details>
     `);
-    const controlsColumn = document.querySelector('.controls-column');
+
+    const controlsColumn = document.querySelector('#accordion');
     if (controlsColumn) {
       controlsColumn.appendChild(accessibilityNode);
     }
@@ -132,6 +133,23 @@ export const bootstrap = (exampleCode, callback) => {
   const attributesPanel = new AttributesPanel(attribute);
   const eventsPanel = new EventsPanel(events, preview, notification);
   const updatePreview = createPreview(preview);
+
+  // Spark documentation link
+  const sparkLinkElement = document.getElementById('spark-link-container');
+  const url = window.location.href.split('/');
+  const component = url[url.length - 1].replace('.html', '');
+  const sparkLink = SparkLinks[component];
+  let sparkLinkAnchor;
+  if (sparkLink && sparkLink !== '') {
+    sparkLinkAnchor = toHTML(
+      `<a href="${sparkLink}" target="_blank" aria-disabled="false">Link to the Spark design system documentation</a>`
+    );
+  } else {
+    sparkLinkAnchor = toHTML(`
+        <span class="spark-link-disabled">No Spark Documentation available at this time</span>
+      `);
+  }
+  sparkLinkElement.appendChild(sparkLinkAnchor);
 
   const updateCode = createEditor(editor, newCode => {
     let ast = parse5.parseFragment(newCode);

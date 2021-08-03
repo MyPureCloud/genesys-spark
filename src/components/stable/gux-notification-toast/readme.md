@@ -30,12 +30,13 @@
 
 ### Depends on
 
-- [gux-icon](../gux-icon)
+- [gux-dismiss-button-beta](../../beta/gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-notification-toast --> gux-icon
+  gux-notification-toast --> gux-dismiss-button-beta
+  gux-dismiss-button-beta --> gux-icon
   style gux-notification-toast fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -5,9 +5,11 @@ describe('gux-rating', () => {
     page: E2EPage
   ): Promise<{ emptyStars: number; halfStars: number; fullStars: number }> {
     return {
-      emptyStars: (await page.findAll('.gux-rating-star-empty')).length,
-      halfStars: (await page.findAll('.gux-rating-star-half')).length,
-      fullStars: (await page.findAll('.gux-rating-star-full')).length
+      emptyStars: (await page.findAll('gux-icon[icon-name="rating"]')).length,
+      halfStars: (await page.findAll('gux-icon[icon-name="rating-partial"]'))
+        .length,
+      fullStars: (await page.findAll('gux-icon[icon-name="rating-active"]'))
+        .length
     };
   }
 

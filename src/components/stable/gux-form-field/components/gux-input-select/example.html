@@ -3,19 +3,58 @@
 
   <p>slot a select element into a gux-form-field element</p>
 
-  <div>
-    <gux-form-field>
-      <select slot="input" name="select">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-      <label slot="label">Select</label>
-    </gux-form-field>
-  </div>
+  <h2>Label Position Above</h2>
 
-  <h2>Disabled</h2>
-  <gux-form-field>
+  <gux-form-field label-position="above">
+    <select slot="input" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+  </gux-form-field>
+
+  <gux-form-field label-position="above">
+    <select slot="input" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+    <span slot="error">Required</span>
+  </gux-form-field>
+
+  <gux-form-field label-position="above">
+    <select slot="input" name="select" disabled>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+  </gux-form-field>
+
+  <h2>Label Position Beside</h2>
+
+  <gux-form-field label-position="beside">
+    <select slot="input" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+  </gux-form-field>
+
+  <gux-form-field label-position="beside">
+    <select slot="input" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+    <span slot="error">Required</span>
+  </gux-form-field>
+
+  <gux-form-field label-position="beside">
     <select slot="input" name="select" disabled>
       <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>

@@ -56,16 +56,20 @@ describe('gux-rating', () => {
       await page.waitForChanges();
     }
 
-    function getStarCounts(
-      document
-    ): { emptyStars: number; halfStars: number; fullStars: number } {
+    function getStarCounts(document): {
+      emptyStars: number;
+      halfStars: number;
+      fullStars: number;
+    } {
       return {
-        emptyStars: document.getElementsByClassName('gux-rating-star-empty')
+        emptyStars: document.querySelectorAll('gux-icon[icon-name="rating"]')
           .length,
-        halfStars: document.getElementsByClassName('gux-rating-star-half')
-          .length,
-        fullStars: document.getElementsByClassName('gux-rating-star-full')
-          .length
+        halfStars: document.querySelectorAll(
+          'gux-icon[icon-name="rating-partial"]'
+        ).length,
+        fullStars: document.querySelectorAll(
+          'gux-icon[icon-name="rating-active"]'
+        ).length
       };
     }
 

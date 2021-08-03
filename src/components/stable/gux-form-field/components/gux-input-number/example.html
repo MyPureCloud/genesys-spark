@@ -3,7 +3,9 @@
 
   <p>slot a input[type=number] element into a gux-form-field element</p>
 
-  <gux-form-field>
+  <h2>Label Position Above</h2>
+
+  <gux-form-field label-position="above">
     <input
       slot="input"
       name="number"
@@ -16,7 +18,7 @@
     <label slot="label">Number</label>
   </gux-form-field>
 
-  <gux-form-field clearable>
+  <gux-form-field clearable label-position="above">
     <input
       slot="input"
       name="number-clearable"
@@ -30,7 +32,7 @@
     <label slot="label">Number</label>
   </gux-form-field>
 
-  <gux-form-field>
+  <gux-form-field label-position="above">
     <input
       slot="input"
       name="number"
@@ -44,7 +46,7 @@
     <label slot="label">Number</label>
   </gux-form-field>
 
-  <gux-form-field clearable>
+  <gux-form-field clearable label-position="above">
     <input
       slot="input"
       name="number-clearable"
@@ -54,8 +56,66 @@
       max="100"
       placeholder="Enter a number"
       value="50"
+    />
+    <label slot="label">Number</label>
+    <span slot="error">Required</span>
+  </gux-form-field>
+
+  <h2>Label Position Beside</h2>
+
+  <gux-form-field label-position="beside">
+    <input
+      slot="input"
+      name="number"
+      type="number"
+      step="5"
+      min="5"
+      max="100"
+      placeholder="Enter a number"
+    />
+    <label slot="label">Number</label>
+  </gux-form-field>
+
+  <gux-form-field clearable label-position="beside">
+    <input
+      slot="input"
+      name="number-clearable"
+      type="number"
+      step="5"
+      min="5"
+      max="100"
+      placeholder="Enter a number"
+      value="50"
+    />
+    <label slot="label">Number</label>
+  </gux-form-field>
+
+  <gux-form-field clearable label-position="beside">
+    <input
+      slot="input"
+      name="number"
+      type="number"
+      step="5"
+      min="5"
+      max="100"
+      placeholder="Enter a number"
       disabled
     />
     <label slot="label">Number</label>
+  </gux-form-field>
+
+  <gux-form-field clearable label-position="beside">
+    <input
+      slot="input"
+      name="number-clearable"
+      type="number"
+      step="5"
+      min="5"
+      max="100"
+      placeholder="Enter a number"
+      value="50"
+    />
+    <label slot="label">Number</label>
+    <span slot="error">Required</span>
   </gux-form-field>
 </form>

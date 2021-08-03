@@ -2,6 +2,8 @@
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/shadows.less';
 
+@gux-arrow-height: 5px;
+
 // Style
 gux-flyout-menu-beta {
   z-index: 2;
@@ -32,92 +34,20 @@ gux-flyout-menu-beta {
   }
 
   .gux-arrow,
-  .gux-arrow::after {
+  .gux-arrow::before {
     position: absolute;
-    width: 0;
-    height: 0;
-    content: ' ';
-    border-color: transparent;
-    border-style: solid;
+    top: -3px;
+    width: @gux-arrow-height * 2;
+    height: @gux-arrow-height * 2;
+    background: inherit;
   }
 
-  .gux-arrow {
-    border-width: 6px;
-  }
-
-  .gux-arrow::after {
-    border-width: 4px;
-  }
-
-  &[data-popper-placement='bottom'],
-  &[data-popper-placement='bottom-start'],
-  &[data-popper-placement='bottom-end'] {
-    margin-top: 6px;
-
-    .gux-arrow {
-      margin-top: -12px;
-      margin-right: -12px;
-      border-bottom-color: @gux-border;
-
-      &::after {
-        margin-top: -2px;
-        margin-left: -4px;
-        border-bottom-color: @gux-type-dark;
-      }
-    }
-  }
-
-  &[data-popper-placement='top'],
-  &[data-popper-placement='top-start'],
-  &[data-popper-placement='top-end'] {
-    margin-bottom: 6px;
-
-    .gux-arrow {
-      bottom: 0;
-      margin-bottom: -12px;
-      border-top-color: @gux-border;
-
-      &::after {
-        margin-top: -6px;
-        margin-left: -4px;
-        border-top-color: @gux-type-dark;
-      }
-    }
-  }
-
-  &[data-popper-placement='left'],
-  &[data-popper-placement='left-start'],
-  &[data-popper-placement='left-end'] {
-    margin-right: 6px;
-
-    .gux-arrow {
-      right: 0;
-      margin-right: -12px;
-      border-left-color: @gux-border;
-
-      &::after {
-        margin-top: -4px;
-        margin-left: -6px;
-        border-left-color: @gux-type-dark;
-      }
-    }
-  }
-
-  &[data-popper-placement='right'],
-  &[data-popper-placement='right-start'],
-  &[data-popper-placement='right-end'] {
-    margin-left: 6px;
-
-    .gux-arrow {
-      margin-left: -12px;
-      border-right-color: @gux-border;
-
-      &::after {
-        margin-top: -4px;
-        margin-left: -2px;
-        border-right-color: @gux-type-dark;
-      }
-    }
+  .gux-arrow::before {
+    visibility: visible;
+    content: '';
+    border-top: 1px solid @gux-grey-30;
+    border-left: 1px solid @gux-grey-30;
+    transform: rotate(45deg);
   }
 
   .gux-flyout-menu-content {

@@ -3,33 +3,77 @@
 
   <p>slot a input[type=range] element into a gux-form-field element</p>
 
-  <gux-form-field>
+  <h2>Label Position Above</h2>
+
+  <gux-form-field label-position="above">
     <label slot="label">Range</label>
     <input slot="input" name="range" type="range" />
   </gux-form-field>
 
-  <gux-form-field display-units="%">
+  <gux-form-field display-units="%" label-position="above">
     <label slot="label">Range</label>
     <input slot="input" name="range" type="range" />
   </gux-form-field>
 
-  <gux-form-field display-units="px">
+  <gux-form-field display-units="px" label-position="above">
     <label slot="label">Range</label>
     <input slot="input" name="range" type="range" />
   </gux-form-field>
 
-  <gux-form-field>
+  <gux-form-field label-position="above">
     <label slot="label">Range</label>
     <input slot="input" name="range-disabled" type="range" disabled />
   </gux-form-field>
 
-  <gux-form-field display-units="%">
+  <gux-form-field display-units="%" label-position="above">
     <label slot="label">Range</label>
     <input slot="input" name="range-disabled" type="range" disabled />
   </gux-form-field>
 
-  <gux-form-field display-units="px">
+  <gux-form-field display-units="px" label-position="above">
     <label slot="label">Range</label>
     <input slot="input" name="range-disabled" type="range" disabled />
+  </gux-form-field>
+
+  <gux-form-field value-in-tooltip label-position="above">
+    <label slot="label">Range (value in tooltip)</label>
+    <input slot="input" name="range" type="range" />
+  </gux-form-field>
+
+  <h2>Label Position Beside</h2>
+
+  <gux-form-field label-position="beside">
+    <label slot="label">Range</label>
+    <input slot="input" name="range" type="range" />
+  </gux-form-field>
+
+  <gux-form-field display-units="%" label-position="beside">
+    <label slot="label">Range</label>
+    <input slot="input" name="range" type="range" />
+  </gux-form-field>
+
+  <gux-form-field display-units="px" label-position="beside">
+    <label slot="label">Range</label>
+    <input slot="input" name="range" type="range" />
+  </gux-form-field>
+
+  <gux-form-field label-position="beside">
+    <label slot="label">Range</label>
+    <input slot="input" name="range-disabled" type="range" disabled />
+  </gux-form-field>
+
+  <gux-form-field display-units="%" label-position="beside">
+    <label slot="label">Range</label>
+    <input slot="input" name="range-disabled" type="range" disabled />
+  </gux-form-field>
+
+  <gux-form-field display-units="px" label-position="beside">
+    <label slot="label">Range</label>
+    <input slot="input" name="range-disabled" type="range" disabled />
+  </gux-form-field>
+
+  <gux-form-field value-in-tooltip label-position="beside">
+    <label slot="label">Range (value in tooltip)</label>
+    <input slot="input" name="range" type="range" />
   </gux-form-field>
 </form>

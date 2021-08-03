@@ -1,4 +1,5 @@
 @import (reference) '../../../../../style/color.less';
+@import (reference) '../../../../../style/typography.less';
 
 gux-input-color {
   color: @gux-black-50;
@@ -41,6 +42,13 @@ gux-input-color {
       pointer-events: none;
       cursor: default;
       opacity: 0.5;
+    }
+
+    &:hover,
+    &:focus {
+      gux-icon {
+        color: @gux-black-50;
+      }
     }
   }
 
@@ -85,5 +93,9 @@ gux-input-color {
     background: none;
     border: none;
     outline: none;
+  }
+
+  .gux-hidden {
+    .gux-sr-only();
   }
 }

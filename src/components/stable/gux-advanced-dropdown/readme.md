@@ -7,12 +7,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property                | Attribute                 | Description                                                   | Type      | Default     |
-| ----------------------- | ------------------------- | ------------------------------------------------------------- | --------- | ----------- |
-| `disabled`              | `disabled`                | Disable the input and prevent interactions.                   | `boolean` | `false`     |
-| `filterDebounceTimeout` | `filter-debounce-timeout` | Timeout between filter input changed and event being emitted. | `number`  | `500`       |
-| `noFilter`              | `no-filter`               | Whether the list should filter its current options.           | `boolean` | `false`     |
-| `placeholder`           | `placeholder`             | The dropdown's placeholder.                                   | `string`  | `undefined` |
+| Property                | Attribute                 | Description                                                                                                                | Type      | Default     |
+| ----------------------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------- | ----------- |
+| `disabled`              | `disabled`                | Disable the input and prevent interactions.                                                                                | `boolean` | `false`     |
+| `dropdownHeight`        | `dropdown-height`         | CSS string used to set the maximum height of the dropdown option container. Default is set to 10 options as defined by UX. | `string`  | `'320px'`   |
+| `filterDebounceTimeout` | `filter-debounce-timeout` | Timeout between filter input changed and event being emitted.                                                              | `number`  | `500`       |
+| `noFilter`              | `no-filter`               | Whether the list should filter its current options.                                                                        | `boolean` | `false`     |
+| `placeholder`           | `placeholder`             | The dropdown's placeholder.                                                                                                | `string`  | `undefined` |
 
 
 ## Events

@@ -17,9 +17,9 @@ describe('#eventIsFrom', () => {
     },
     parentElement
   };
-  const dummyEvent = ({
+  const dummyEvent = {
     target: targetElement
-  } as unknown) as Event;
+  } as unknown as Event;
 
   it('returns true when the event target matches the selector', () => {
     expect(eventIsFrom('.target', dummyEvent)).toBe(true);

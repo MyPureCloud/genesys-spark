@@ -9,10 +9,7 @@ import {
   Prop
 } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '../../../usage-tracking';
-
-import modalComponentResources from './i18n/en.json';
 
 import { GuxNotificationToastAccent } from './gux-notification-toast.types';
 
@@ -35,17 +32,11 @@ export class GuxNotificationToast {
   @Event()
   guxdismiss: EventEmitter<void>;
 
-  private getI18nValue: GetI18nValue;
-
   @Element()
   private root: HTMLElement;
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.accent });
-    this.getI18nValue = await buildI18nForComponent(
-      this.root,
-      modalComponentResources
-    );
   }
 
   render(): JSX.Element {
@@ -65,16 +56,9 @@ export class GuxNotificationToast {
           </div>
         </div>
 
-        <button
-          class="gux-dismiss-button"
-          title={this.getI18nValue('dismiss')}
+        <gux-dismiss-button-beta
           onClick={this.onDismissClickHandler.bind(this)}
-        >
-          <gux-icon
-            screenreaderText={this.getI18nValue('dismiss')}
-            icon-name="close"
-          ></gux-icon>
-        </button>
+        ></gux-dismiss-button-beta>
       </Host>
     );
   }

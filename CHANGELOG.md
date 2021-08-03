@@ -2,6 +2,168 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.28.0](https://inindca///compare/v2.27.4...v2.28.0) (2021-07-30)
+
+
+### Features
+
+* **gux-input-color:** improved gux-input-color label and error accessibility ([9ed8022](https://inindca///commit/9ed802212671fd7c0ea00b9070020ee3e13baf68))
+
+
+### Bug Fixes
+
+* **gux-flyout-menu:** fixed styling to align with Spark ([0e9620e](https://inindca///commit/0e9620e4e66cd225a2590ec888335832cc3566f2))
+* **gux-input-color:** fixed styling ([b3cebbd](https://inindca///commit/b3cebbd0cc36abcfc4e8306d17784940ba085d5a))
+* **gux-popover:** fixing styling and arrow placement bug ([6f14097](https://inindca///commit/6f140972b234ba552acf9be848747ff17e1e2e06))
+* **input-range:** fixed styling ([9db34ac](https://inindca///commit/9db34acfb3d7e9f6ba0c91d8d4fd786a131aed75))
+* **radial-progress:** fixed styling ([ea747d3](https://inindca///commit/ea747d393467aea97ccee12cdadb35844c3fbf7e))
+
+### [2.27.4](https://inindca///compare/v2.27.3...v2.27.4) (2021-07-29)
+
+
+### Bug Fixes
+
+* **popover:** component now works as expected with angular framework ([11e5f07](https://inindca///commit/11e5f076ca36989977ce7225c4aea3678e85a10e))
+* **pr-comment:** addressed PR comment ([4cdade2](https://inindca///commit/4cdade2ef282c68a10c60ba08c73bc510e6f4ca9))
+
+### [2.27.3](https://inindca///compare/v2.27.2...v2.27.3) (2021-07-27)
+
+
+### Bug Fixes
+
+* **gux-input-number:** number input is now aligned to the right ([6401de3](https://inindca///commit/6401de33040f2221c57410938b8ffa84cd51d095))
+
+### [2.27.2](https://inindca///compare/v2.27.1...v2.27.2) (2021-07-26)
+
+
+### Bug Fixes
+
+* **action-button:** fixed styling ([c825487](https://inindca///commit/c8254873c8c83f6818e4e498eacece7ded1d5d29))
+* **rating:** fixed empty star color ([d99aadd](https://inindca///commit/d99aaddffe32cd6b75820eeaf31b93bdf66205e2))
+* **toggle:** fixed toggle styling ([90300d8](https://inindca///commit/90300d8a80d1ab55d34b2961ffae55e8d7a8c7d2))
+
+### [2.27.1](https://inindca///compare/v2.27.0...v2.27.1) (2021-07-22)
+
+
+### Bug Fixes
+
+* **dismiss-button:** created dismiss button component ([2f872a4](https://inindca///commit/2f872a464d0d0d690b9a405c26d537468d681ed7))
+* **tooltip:** fixed Tooltip doesn't disappear when button is disabled ([beb6f17](https://inindca///commit/beb6f178b5587cbe583d90f8d9eaa18791e9c046))
+
+## [2.27.0](https://inindca///compare/v2.26.6...v2.27.0) (2021-07-20)
+
+
+### Features
+
+* **accordion:** added new beta accordion component ([a9473ff](https://inindca///commit/a9473ff6748e8e014513e59921450f14c056d9c5))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comments ([f420d68](https://inindca///commit/f420d68501df102bb171e640e7b8f4a42c025aff))
+
+### [2.26.6](http://inindca///compare/v2.26.5...v2.26.6) (2021-07-19)
+
+
+### Bug Fixes
+
+* **gux-table:** fixed stacking context ([a873369](http://inindca///commit/a87336977e32790974841b2741bb50e515b70b61))
+* **tabs:** fixed options popup positioning ([5442bab](http://inindca///commit/5442babcaeddab0de10dcfe636f9a73d16de519c))
+
+### [2.26.5](http://inindca///compare/v2.26.4...v2.26.5) (2021-07-16)
+
+### [2.26.4](http://inindca///compare/v2.26.3...v2.26.4) (2021-07-15)
+
+### [2.26.3](http://inindca///compare/v2.26.2...v2.26.3) (2021-07-14)
+
+### [2.26.2](http://inindca///compare/v2.26.1...v2.26.2) (2021-07-13)
+
+
+### Bug Fixes
+
+* **accordion:** set explicit text color on accordion header text ([4857be8](http://inindca///commit/4857be829c7080b969e6db1709b975b89b81da14))
+
+### [2.26.1](http://inindca///compare/v2.26.0...v2.26.1) (2021-07-12)
+
+
+### Bug Fixes
+
+* **gux-tag:** fixed broken localisation ([d467f3e](http://inindca///commit/d467f3ea43065c86b33c5bf40e3a17aa981244b9))
+
+## [2.26.0](http://inindca///compare/v2.25.0...v2.26.0) (2021-07-08)
+
+
+### Features
+
+* **accordion:** added toggle icon position property ([02aa586](http://inindca///commit/02aa586618ee319bbdb2c1a6215b0807a538fea2))
+* **playground:** added angular 12 playground ([351c8ef](http://inindca///commit/351c8efff0f1bcfa84ae3badf3083261ddd2b00c))
+* **playground:** added vue playgrounds ([09a278c](http://inindca///commit/09a278cce30630aa4f48779869a729792cc23f98))
+* **spark-links:** added a link to spark website for each component ([d3f9597](http://inindca///commit/d3f9597ce1a3960c60753c831bf1e015ba73aea8))
+
+
+### Bug Fixes
+
+* **datepicker:** fixed stacking context of datepicker field icon ([13c132a](http://inindca///commit/13c132aa682fde2c0ccb1c6f44060b5765a995b9))
+* **form-field:** fixed issue with dynamic error slot ([b172c3a](http://inindca///commit/b172c3abfd5e3b0db37130cda35caec50fce3c94))
+* **pr-comment:** addressed PR comment ([b2aad81](http://inindca///commit/b2aad81b4389dbb4e99786f3ca90938068cc2006))
+* **pr-comment:** addressed PR comment ([a918317](http://inindca///commit/a91831739a117d7cb05d77e10eb9653e61d287ce))
+
+## [2.25.0](http://inindca///compare/v2.24.1...v2.25.0) (2021-07-07)
+
+
+### Features
+
+* **spark-logo:** added Spark logo to docs site ([00d02a9](http://inindca///commit/00d02a9c849360ab3a3ac6daa4da96f479447b59))
+
+### [2.24.1](http://inindca///compare/v2.24.0...v2.24.1) (2021-07-02)
+
+
+### Bug Fixes
+
+* **attributes-panel:** boolean attributes will now appear as checkboxes properly ([8548a35](http://inindca///commit/8548a3500a992602be7b97c1cd949e4ea6299932))
+* **gux-form-field:** improve label accessibility ([57a56df](http://inindca///commit/57a56df8bd32b28f532bbb6f5313bd23e685175e))
+
+## [2.24.0](http://inindca///compare/v2.23.0...v2.24.0) (2021-06-29)
+
+
+### Features
+
+* **gux-advanced-dropdown:** add size property to control dropdown max-height ([a60491a](http://inindca///commit/a60491afb0a05c2ac0d5f65fe3c0ed8f466bbbc9))
+
+
+### Bug Fixes
+
+* **gux-advanced-dropdown:** replace size property with dropdownHeight property ([b45290e](http://inindca///commit/b45290ef2e1178650eafe5fba09157a7a473cc10))
+* **gux-advanced-dropdown:** use css variable for option height ([6bdb379](http://inindca///commit/6bdb3791326938247223cd679c0e5b1b2f1455f7))
+
+## [2.23.0](http://inindca///compare/v2.22.4...v2.23.0) (2021-06-28)
+
+
+### Features
+
+* **controls-column:** updated controls column to use gux components ([da698b0](http://inindca///commit/da698b04824719926f2888626176574d60f883e0))
+
+
+### Bug Fixes
+
+* **gux-popover:** fixed arrow positioning ([bce954d](http://inindca///commit/bce954d06b0b3ac80bc5c78705645043430d08a0))
+* **gux-table:** fixed display issues related to row selection while scrolling ([859059d](http://inindca///commit/859059d79c8888aef06072ea46b5adb1142d81fc))
+* **pr-comment:** addressed PR comment ([58013e5](http://inindca///commit/58013e52d22e14f0f69d5fe409031fe043e2442b))
+
+### [2.22.4](http://inindca///compare/v2.22.3...v2.22.4) (2021-06-24)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** value attribute now works as expected ([4a60266](http://inindca///commit/4a6026619e34a6e5763f4b8bf5083a1d39a5bf39))
+
+### [2.22.3](http://inindca///compare/v2.22.2...v2.22.3) (2021-06-22)
+
+
+### Bug Fixes
+
+* **gux-input-range:** fixed bug with gux-input-range race condition ([04a74ef](http://inindca///commit/04a74efb64cfea451530b66e03f7a4ba1b8579f2))
+
 ### [2.22.2](http://inindca///compare/v2.22.1...v2.22.2) (2021-06-18)
 
 

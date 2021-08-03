@@ -18,7 +18,7 @@ exports[`gux-advanced-dropdown should render 1`] = `
           <gux-input-search>
             <input id="gux-advanced-dropdown-search-i" type="search">
           </gux-input-search>
-          <div class="gux-dropdown-options">
+          <div class="gux-dropdown-options" style="max-height: 320px;">
             <slot></slot>
           </div>
         </div>

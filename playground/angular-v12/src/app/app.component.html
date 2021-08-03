@@ -1,0 +1,45 @@
+<div>
+  <span [id]="target1" (mouseenter)="show($event)">Example Element</span>
+  <gux-popover hidden position="top" [attr.for]="target1">
+    <div>popover content</div>
+  </gux-popover>
+</div>
+
+<div>
+  <span [id]="target2" (mouseenter)="show($event)">Example Element</span>
+  <gux-popover hidden position="top" [attr.for]="target2">
+    <div>popover content</div>
+  </gux-popover>
+</div>
+
+<div>
+  <span
+    [id]="target3"
+    (mouseenter)="idForPopOver = target3; $event.stopPropagation()"
+    >Example Element</span
+  >
+  <gux-popover
+    (guxdismiss)="idForPopOver = null"
+    *ngIf="popOverShown(target3)"
+    position="top"
+    [attr.for]="target3"
+  >
+    <div>popover content</div>
+  </gux-popover>
+</div>
+
+<div>
+  <span
+    [id]="target4"
+    (mouseenter)="idForPopOver = target4; $event.stopPropagation()"
+    >Example Element</span
+  >
+  <gux-popover
+    (guxdismiss)="idForPopOver = null"
+    *ngIf="popOverShown(target4)"
+    position="top"
+    [attr.for]="target4"
+  >
+    <div>popover content</div>
+  </gux-popover>
+</div>

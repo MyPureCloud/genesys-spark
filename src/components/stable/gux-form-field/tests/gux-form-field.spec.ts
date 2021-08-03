@@ -57,10 +57,25 @@ describe('gux-form-field', () => {
               <input
                 slot="input"
                 type="${type}"
-                id="test"
                 value="test"
               />
-              <label slot="label" for="test">Test</label>
+              <label slot="label">Test</label>
+            </gux-form-field>
+          `;
+          const page = await newSpecPage({ components, html, language });
+
+          expect(page.root).toMatchSnapshot();
+        });
+        it(`should render component type "${type}" with an error slot`, async () => {
+          const html = `
+            <gux-form-field>
+              <input
+                slot="input"
+                type="${type}"
+                value="test"
+              />
+              <label slot="label">Test</label>
+              <span slot="error">Error Message</span>
             </gux-form-field>
           `;
           const page = await newSpecPage({ components, html, language });
@@ -84,6 +99,39 @@ describe('gux-form-field', () => {
         `;
         const page = await newSpecPage({ components, html, language });
 
+        expect(page.root).toMatchSnapshot();
+      });
+
+      it(`should render component type "select" with an error slot`, async () => {
+        const html = `
+          <gux-form-field>
+            <select slot="input" name="select" type="select">
+              <option value="option1">Option 1</option>
+              <option value="option1">Option 2</option>
+              <option value="option1">Option 3</option>
+            </select>
+            <label slot="label">Select</label>
+            <span slot="error">Error Message</span>
+          </gux-form-field>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+
+      it(`should render component type "select" and keep user provided id and for attributes`, async () => {
+        const html = `
+          <gux-form-field>
+            <select slot="input" id="test" name="select" type="select">
+              <option value="option1">Option 1</option>
+              <option value="option1">Option 2</option>
+              <option value="option1">Option 3</option>
+            </select>
+            <label for="test" slot="label">Select</label>
+            <span slot="error">Error Message</span>
+          </gux-form-field>
+        `;
+        const page = await newSpecPage({ components, html, language });
         expect(page.root).toMatchSnapshot();
       });
     });

@@ -17,3 +17,31 @@
   value="10"
   max="10"
 ></gux-radial-progress>
+
+<gux-radial-progress
+  id="dynamic"
+  screenreader-text="Uploading file"
+  value="0"
+  max="100"
+></gux-radial-progress>
+
+<style
+  onload="(function () {
+    const dynamicRadialProgress = document.getElementById('dynamic');
+
+    var intervalId = setInterval(() => {
+      const currentValue = dynamicRadialProgress.value;
+
+      if (currentValue === 100) {
+        clearInterval(intervalId);
+      } else {
+        dynamicRadialProgress.value += 1;
+      }
+    }, 100)
+  }
+  )()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>

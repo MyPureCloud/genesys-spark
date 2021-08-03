@@ -1,0 +1,40 @@
+@import (reference) '../../../style/color.less';
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/mixins.less';
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px;
+  color: @gux-black-90;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+
+  &:not(:disabled):focus,
+  &:not(:disabled):hover {
+    color: @gux-black-50;
+    cursor: pointer;
+  }
+
+  gux-icon {
+    width: 15px;
+    height: 15px;
+    margin: @spacing-2xs;
+    border-radius: 4px;
+  }
+
+  &:focus {
+    outline: none;
+    gux-icon {
+      outline: none;
+    }
+  }
+
+  &:focus:enabled {
+    gux-icon {
+      .focus-ring();
+    }
+  }
+}
