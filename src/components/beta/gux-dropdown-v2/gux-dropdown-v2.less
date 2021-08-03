@@ -41,10 +41,6 @@
 
   &:focus-within {
     .focus-ring();
-
-    .gux-expand-icon {
-      color: @gux-blue-60;
-    }
   }
 
   .gux-selected-option,
@@ -68,11 +64,13 @@
     width: 20px;
     height: 20px;
     margin-left: 8px;
+    color: @gux-black-90;
   }
 
+  &:focus,
   &:hover {
     .gux-expand-icon {
-      color: @gux-blue-60;
+      color: @gux-black-50;
     }
   }
 }
