@@ -5,10 +5,9 @@
 // Style
 gux-calendar {
   display: inline-block;
-  margin-top: -4px;
 
   div.gux-calendar {
-    margin-top: 4px;
+    margin-top: 2px;
     border: 1px solid @gux-grey-30;
     .gux-shadow-20();
 
@@ -70,7 +69,7 @@ gux-calendar {
 
     .gux-content {
       display: flex;
-      padding: 16px 22px 20px 22px;
+      padding: 20px 24px;
       color: @gux-black-50;
       background-color: @gux-grey-100;
       border-bottom-right-radius: 3px;
@@ -89,14 +88,15 @@ gux-calendar {
         }
 
         tr {
-          height: 24px;
+          height: 28px;
 
           &:empty {
             display: none;
           }
 
           th {
-            width: 24px;
+            width: 28px;
+            height: 28px;
             margin: 0;
             text-align: center;
             .body-font();
@@ -104,7 +104,8 @@ gux-calendar {
           }
 
           td {
-            width: 24px;
+            width: 28px;
+            height: 28px;
             margin: 0;
             text-align: center;
             cursor: pointer;
@@ -117,11 +118,23 @@ gux-calendar {
             &.gux-selected {
               color: @gux-grey-100;
               background-color: @gux-blue-60;
+              &:not(&.gux-start-date):not(&.gux-end-date) {
+                border-radius: 4px;
+              }
             }
 
-            &:hover {
+            &.gux-start-date {
+              border-radius: 4px 0 0 4px;
+            }
+
+            &.gux-end-date {
+              border-radius: 0 4px 4px 0;
+            }
+
+            &:hover:not(&.gux-start-date):not(&.gux-end-date) {
               color: @gux-grey-100;
               background-color: @gux-blue-60;
+              border-radius: 4px;
             }
 
             &.gux-disabled {

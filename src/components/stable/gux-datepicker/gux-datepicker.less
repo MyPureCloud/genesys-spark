@@ -23,11 +23,10 @@ gux-datepicker {
 
       gux-text-field-legacy {
         position: relative;
-        color: @gux-blue-60;
 
         &:hover {
           > button {
-            color: @gux-blue-60;
+            color: @gux-black-50;
           }
         }
 
@@ -51,8 +50,20 @@ gux-datepicker {
     }
 
     &.gux-active {
-      > div.gux-datepicker-field > gux-text-field-legacy > button {
-        color: @gux-blue-60;
+      .gux-datepicker-field gux-text-field-legacy {
+        &:hover {
+          button {
+            color: @gux-blue-60;
+          }
+        }
+        button {
+          color: @gux-blue-60;
+        }
+        .gux-text-clearable {
+          border: 1px solid @gux-blue-60;
+          outline: none;
+          box-shadow: 0 0 4px @gux-blue-80;
+        }
       }
 
       gux-calendar {
