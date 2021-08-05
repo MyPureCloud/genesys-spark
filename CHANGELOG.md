@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.28.1](https://inindca///compare/v2.28.0...v2.28.1) (2021-08-05)
+
+
+### Bug Fixes
+
+* **modal:** moved primary button in modal and panel-frame to left side in docs examples ([f3d3e64](https://inindca///commit/f3d3e64c1628abdef1013be9296b635777004524))
+
 ## [2.28.0](https://inindca///compare/v2.27.4...v2.28.0) (2021-07-30)
 
 
