@@ -1,4 +1,4 @@
-import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
 import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { getDesiredLocale } from '../../../i18n';
@@ -22,19 +22,30 @@ export class GuxVisualization {
   root: HTMLElement;
 
   @Prop()
-  visualizationSpec: VisualizationSpec;
+  visualizationSpec: string;
 
   @Prop()
   embedOptions: EmbedOptions;
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
+  }
 
+  async componentWillRender(): Promise<void> {
     const locale = getDesiredLocale(this.root);
+
+    let spec = {};
+    if (this.visualizationSpec) {
+      if (typeof this.visualizationSpec === 'string') {
+        spec = JSON.parse(this.visualizationSpec);
+      } else {
+        spec = this.visualizationSpec;
+      }
+    }
 
     embed(
       this.root,
-      Object.assign({}, this.defaultVisualizationSpec, this.visualizationSpec),
+      Object.assign({}, this.defaultVisualizationSpec, spec),
       Object.assign(
         {
           timeFormatLocale: timeFormatLocale[locale]
