@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.28.2](https://inindca///compare/v2.28.1...v2.28.2) (2021-08-10)
+
+
+### Bug Fixes
+
+* **gux-form-field:** fixed form input overflow issue and fixed gux-input-number input alignment ([033b1f6](https://inindca///commit/033b1f638caef0f19c32ce35c196c0a465cadbd1))
+
 ### [2.28.1](https://inindca///compare/v2.28.0...v2.28.1) (2021-08-05)
 
 
