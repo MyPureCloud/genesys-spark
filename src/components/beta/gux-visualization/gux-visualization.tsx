@@ -11,7 +11,7 @@ import { timeFormatLocale } from './gux-visualization.locale';
   tag: 'gux-visualization-beta'
 })
 export class GuxVisualization {
-  // private defaultVisualizationSpec: VisualizationSpec = {};
+  private defaultVisualizationSpec: VisualizationSpec = {};
 
   private defaultEmbedOptions: EmbedOptions = {
     actions: false,
@@ -22,31 +22,30 @@ export class GuxVisualization {
   root: HTMLElement;
 
   @Prop()
-  chartId: string;
-
-  @Prop()
   visualizationSpec: string;
-
-  @Prop({ mutable: true })
-  spec: VisualizationSpec;
 
   @Prop()
   embedOptions: EmbedOptions;
 
-  @Watch('visualizationSpec')
-  parseSpec() {
-    if (this.visualizationSpec) {
-      this.spec = JSON.parse(this.visualizationSpec);
-    }
-  }
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
+  }
 
+  async componentWillRender(): Promise<void> {
     const locale = getDesiredLocale(this.root);
-    this.parseSpec();
+
+    let spec = {};
+    if (this.visualizationSpec) {
+      if (typeof this.visualizationSpec === 'string') {
+        spec = JSON.parse(this.visualizationSpec);
+      } else {
+        spec = this.visualizationSpec;
+      }
+    }
+
     embed(
       this.root,
-      Object.assign({}, this.spec),
+      Object.assign({}, this.defaultVisualizationSpec, spec),
       Object.assign(
         {
           timeFormatLocale: timeFormatLocale[locale]
@@ -58,10 +57,6 @@ export class GuxVisualization {
   }
 
   render(): JSX.Element {
-    return (
-      <Host id={this.chartId}>
-        <div id={this.chartId}></div>
-      </Host>
-    );
+    return <Host></Host>;
   }
 }

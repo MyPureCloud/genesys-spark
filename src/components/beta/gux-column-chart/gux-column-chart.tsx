@@ -1,10 +1,7 @@
 import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
 import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
-import { getDesiredLocale } from '../../../i18n';
 import { trackComponent } from '../../../usage-tracking';
-
-import { timeFormatLocale } from './gux-column-chart.locale';
 
 @Component({
   styleUrl: 'gux-column-chart.less',
@@ -36,17 +33,17 @@ export class GuxColumnChart {
   };
 
   @Prop()
-  data: string;
+  chartData: string;
 
   @Prop()
   embedOptions: EmbedOptions;
 
   columnChartSpec: string;
 
-  @Watch('data')
+  @Watch('chartData')
   parseData() {
-    if (this.data) {
-      const data = JSON.parse(this.data);
+    if (this.chartData) {
+      const data = JSON.parse(this.chartData);
       const chartSpec = Object.assign(this.baseChartSpec, { data });
       this.columnChartSpec = JSON.stringify(chartSpec);
     }
