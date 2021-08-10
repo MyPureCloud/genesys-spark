@@ -118,4 +118,21 @@
     <label slot="label">Number</label>
     <span slot="error">Required</span>
   </gux-form-field>
+
+  <h2>With a smaller width</h2>
+
+  <gux-form-field clearable label-position="above" style="width: 130px">
+    <input
+      slot="input"
+      name="number-clearable"
+      type="number"
+      step="5"
+      min="5"
+      max="100"
+      placeholder="Enter a number"
+      value="50"
+    />
+    <label slot="label">Number</label>
+    <span slot="error">Required</span>
+  </gux-form-field>
 </form>
