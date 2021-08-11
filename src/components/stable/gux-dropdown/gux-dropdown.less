@@ -1,6 +1,8 @@
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/shadows.less';
+@import (reference) '../../../style/mixins.less';
+
 // Style
 gux-dropdown {
   div.gux-dropdown {
@@ -72,7 +74,7 @@ gux-dropdown {
       display: none;
       width: 100%;
       padding: 8px 0;
-      margin-top: 4px;
+      margin-top: 2px;
       color: @gux-black-50;
       background: @gux-grey-100;
       border: 1px solid @gux-grey-30;
@@ -214,6 +216,12 @@ gux-dropdown {
       }
     }
   }
+  &:hover,
+  &:focus {
+    gux-icon {
+      color: @gux-black-50;
+    }
+  }
 }
 // Theming
 // Light
@@ -230,12 +238,12 @@ gux-dropdown {
         border-color: @gux-black-100;
 
         &:focus {
-          box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
+          .focus-ring();
         }
       }
 
       button.gux-dropdown-indicator {
-        color: @gux-black-50;
+        color: @gux-black-90;
       }
     }
 
@@ -245,7 +253,7 @@ gux-dropdown {
           input:focus {
             background-color: @gux-grey-100;
             border: 1px solid @gux-blue-60;
-            box-shadow: 0 0 4px fade(@gux-blue-80, 50%);
+            .focus-ring();
           }
         }
       }
