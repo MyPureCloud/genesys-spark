@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.28.3](https://inindca///compare/v2.28.2...v2.28.3) (2021-08-11)
+
+
+### Bug Fixes
+
+* **dropdown:** fixed styling ([9890d07](https://inindca///commit/9890d07f2d25d19addcc37f4dad5f4b441b38459))
+
 ### [2.28.2](https://inindca///compare/v2.28.1...v2.28.2) (2021-08-10)
 
 
