@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.28.4](https://inindca///compare/v2.28.3...v2.28.4) (2021-08-12)
+
+
+### Bug Fixes
+
+* **text-fields:** fixed styling ([f20ea86](https://inindca///commit/f20ea860544ed2c9c71ca843fd0d8215da707ef6))
+
 ### [2.28.3](https://inindca///compare/v2.28.2...v2.28.3) (2021-08-11)
 
 
