@@ -7,9 +7,7 @@
 
   <gux-simple-toast accent="positive">
     <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-    <div slot="message">
-      This is the message that is versy long but is on one line
-    </div>
+    <div slot="message">This is a message that is long but is on one line</div>
   </gux-simple-toast>
 
   <gux-simple-toast accent="alert">
@@ -17,6 +15,12 @@
     <div slot="message">
       <div>This is the first line</div>
       <div>This is the second line</div>
+    </div>
+  </gux-simple-toast>
+  <gux-simple-toast accent="alert">
+    <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
+    <div slot="message">
+      <div>Toasts should not take up any more than two lines</div>
     </div>
   </gux-simple-toast>
   <gux-simple-toast accent="warning">
