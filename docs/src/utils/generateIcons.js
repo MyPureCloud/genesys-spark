@@ -293,15 +293,21 @@ const icons = [
     iconNames: [
       'at',
       'facebook',
+      'facebook-messenger',
+      'instagram',
       'line-messenger',
+      'linkedin',
       'retweet',
       'rss',
       'share',
+      'slideshare',
       'telegram',
       'twitter',
       'viber',
       'wechat',
-      'whatsapp'
+      'whatsapp',
+      'wordpress',
+      'youtube'
     ]
   },
   {
