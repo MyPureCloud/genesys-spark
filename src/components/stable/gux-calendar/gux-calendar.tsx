@@ -453,7 +453,7 @@ export class GuxCalendar {
 
   renderCalendarTable(index) {
     return (
-      <table cellPadding="0">
+      <table>
         <tr>
           {this.getWeekdays().map(day => (
             <th>{day}</th>

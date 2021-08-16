@@ -98,6 +98,7 @@ gux-calendar {
           td {
             width: 28px;
             height: 28px;
+            padding: 0;
             margin: 0;
             text-align: center;
             .body-font();
@@ -118,14 +119,14 @@ gux-calendar {
               color: @gux-grey-100;
               background-color: @gux-blue-60;
               border-radius: 4px;
-            }
 
-            &.gux-start-date {
-              border-radius: 4px 0 0 4px;
-            }
+              &.gux-start-date {
+                border-radius: 4px 0 0 4px;
+              }
 
-            &.gux-end-date {
-              border-radius: 0 4px 4px 0;
+              &.gux-end-date {
+                border-radius: 0 4px 4px 0;
+              }
             }
 
             &:hover:not(&.gux-start-date):not(&.gux-end-date) {
