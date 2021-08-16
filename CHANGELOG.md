@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.28.5](https://inindca///compare/v2.28.4...v2.28.5) (2021-08-16)
+
+
+### Bug Fixes
+
+* **gux-button:** fixed style ([1c701ee](https://inindca///commit/1c701ee24f2734057c58614c47a07aea3028990d))
+* **gux-table:** fixed style to align with Spark ([3f6ce72](https://inindca///commit/3f6ce723e7459db548b76105f6733f124b7ab33b))
+
 ### [2.28.4](https://inindca///compare/v2.28.3...v2.28.4) (2021-08-12)
 
 
