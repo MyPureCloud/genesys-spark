@@ -94,22 +94,21 @@ gux-calendar {
             display: none;
           }
 
-          th {
-            width: 28px;
-            height: 28px;
-            margin: 0;
-            text-align: center;
-            .body-font();
-            .bold-font();
-          }
-
+          th,
           td {
             width: 28px;
             height: 28px;
             margin: 0;
             text-align: center;
-            cursor: pointer;
             .body-font();
+          }
+
+          th {
+            .bold-font();
+          }
+
+          td {
+            cursor: pointer;
 
             &.gux-hovered {
               background-color: @gux-blue-100;
@@ -118,9 +117,7 @@ gux-calendar {
             &.gux-selected {
               color: @gux-grey-100;
               background-color: @gux-blue-60;
-              &:not(&.gux-start-date):not(&.gux-end-date) {
-                border-radius: 4px;
-              }
+              border-radius: 4px;
             }
 
             &.gux-start-date {
