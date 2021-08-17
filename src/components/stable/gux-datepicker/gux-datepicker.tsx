@@ -601,6 +601,7 @@ export class GuxDatepicker {
         >
           <gux-text-label label={this.getCalendarLabels()[0]} position="beside">
             <gux-text-field-legacy
+              class="gux-datepicker-text-field"
               type="text"
               ref={(el: HTMLGuxTextFieldLegacyElement) =>
                 (this.textFieldElement = el)
@@ -640,6 +641,7 @@ export class GuxDatepicker {
               position="beside"
             >
               <gux-text-field-legacy
+                class="gux-datepicker-text-field"
                 type="text"
                 ref={(el: HTMLGuxTextFieldLegacyElement) =>
                   (this.toTextFieldElement = el)

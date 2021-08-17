@@ -206,12 +206,14 @@ export class GuxCalendar {
         const [start, end] = fromIsoDateRange(this.value);
         const fromTimeStamp = start.getTime();
         const toTimeStamp = end.getTime();
-        if (
-          date.getTime() === fromTimeStamp ||
-          date.getTime() === toTimeStamp
-        ) {
+        if (date.getTime() === fromTimeStamp) {
           isSelected = true;
           classes.push('gux-selected');
+          classes.push('gux-start-date');
+        } else if (date.getTime() === toTimeStamp) {
+          isSelected = true;
+          classes.push('gux-selected');
+          classes.push('gux-end-date');
         }
       } else {
         const selectedTimestamp = fromIsoDate(this.value).getTime();
@@ -451,7 +453,7 @@ export class GuxCalendar {
 
   renderCalendarTable(index) {
     return (
-      <table cellPadding="2">
+      <table>
         <tr>
           {this.getWeekdays().map(day => (
             <th>{day}</th>

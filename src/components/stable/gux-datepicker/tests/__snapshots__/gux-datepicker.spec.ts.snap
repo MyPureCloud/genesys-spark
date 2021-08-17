@@ -9,7 +9,7 @@ exports[`gux-datepicker #render should render component as expected (1) 1`] = `
         <div class="gux-beside gux-text-label-container">
           <label class="gux-label" id="gux-text-label-2"></label>
           <div class="gux-labeled-component">
-            <gux-text-field-legacy value="08/15/1997">
+            <gux-text-field-legacy class="gux-datepicker-text-field" value="08/15/1997">
               <!---->
               <div>
                 <div class="gux-field">
@@ -41,7 +41,7 @@ exports[`gux-datepicker #render should render component as expected (2) 1`] = `
         <div class="gux-beside gux-text-label-container">
           <label class="gux-label" id="gux-text-label-3"></label>
           <div class="gux-labeled-component">
-            <gux-text-field-legacy value="08/15/97">
+            <gux-text-field-legacy class="gux-datepicker-text-field" value="08/15/97">
               <!---->
               <div>
                 <div class="gux-field">
@@ -73,7 +73,7 @@ exports[`gux-datepicker #render should render component as expected (3) 1`] = `
         <div class="gux-beside gux-text-label-container">
           <label class="gux-label" id="gux-text-label-4"></label>
           <div class="gux-labeled-component">
-            <gux-text-field-legacy value="08.15.1997">
+            <gux-text-field-legacy class="gux-datepicker-text-field" value="08.15.1997">
               <!---->
               <div>
                 <div class="gux-field">
@@ -109,7 +109,7 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
             </slot-fb>
           </label>
           <div class="gux-labeled-component">
-            <gux-text-field-legacy value="11/25/2019">
+            <gux-text-field-legacy class="gux-datepicker-text-field" value="11/25/2019">
               <!---->
               <div>
                 <div class="gux-field">
@@ -138,7 +138,7 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
             </slot-fb>
           </label>
           <div class="gux-labeled-component">
-            <gux-text-field-legacy value="12/02/2019">
+            <gux-text-field-legacy class="gux-datepicker-text-field" value="12/02/2019">
               <!---->
               <div>
                 <div class="gux-field">
@@ -173,7 +173,7 @@ exports[`gux-datepicker #render should render component as expected (5) 1`] = `
             </slot-fb>
           </label>
           <div class="gux-labeled-component">
-            <gux-text-field-legacy value="11/25/2019">
+            <gux-text-field-legacy class="gux-datepicker-text-field" value="11/25/2019">
               <!---->
               <div>
                 <div class="gux-field">
@@ -202,7 +202,7 @@ exports[`gux-datepicker #render should render component as expected (5) 1`] = `
             </slot-fb>
           </label>
           <div class="gux-labeled-component">
-            <gux-text-field-legacy value="12/02/2019">
+            <gux-text-field-legacy class="gux-datepicker-text-field" value="12/02/2019">
               <!---->
               <div>
                 <div class="gux-field">
@@ -237,7 +237,7 @@ exports[`gux-datepicker #render should render component as expected (6) 1`] = `
             </slot-fb>
           </label>
           <div class="gux-labeled-component">
-            <gux-text-field-legacy value="11.25.2019">
+            <gux-text-field-legacy class="gux-datepicker-text-field" value="11.25.2019">
               <!---->
               <div>
                 <div class="gux-field">
@@ -266,7 +266,7 @@ exports[`gux-datepicker #render should render component as expected (6) 1`] = `
             </slot-fb>
           </label>
           <div class="gux-labeled-component">
-            <gux-text-field-legacy value="12.02.2019">
+            <gux-text-field-legacy class="gux-datepicker-text-field" value="12.02.2019">
               <!---->
               <div>
                 <div class="gux-field">
