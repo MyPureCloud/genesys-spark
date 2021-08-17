@@ -1,6 +1,7 @@
 @import (reference) '../../../../../style/color-palette.less';
 @import (reference) '../../../../../style/typography.less';
 @import (reference) '../../../../../style/shadows.less';
+@import (reference) '../../../../../style/spacing.less';
 
 // Variables part
 @range-active: @gux-blue-60;
@@ -160,20 +161,10 @@ gux-input-range {
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
-      width: 50px;
       height: 32px;
-      margin: 0 0 0 16px;
+      margin: 0 0 0 @spacing-medium;
       line-height: 32px;
-      text-align: center;
-      background-color: @gux-grey-90;
-      background-image: none;
-      border: 1px solid @gux-black-100;
-      border-radius: 4px;
-      box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
-
-      &.gux-active {
-        border-color: @range-active;
-      }
+      text-align: right;
 
       &.gux-hidden {
         display: none;

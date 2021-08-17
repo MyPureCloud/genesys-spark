@@ -157,7 +157,6 @@ export class GuxInputRange {
         <div
           class={{
             'gux-display': true,
-            'gux-active': this.active,
             'gux-hidden': this.valueInTooltip
           }}
         >
