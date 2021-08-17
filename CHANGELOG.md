@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.28.6](https://inindca///compare/v2.28.5...v2.28.6) (2021-08-17)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed datepicker styling ([d856831](https://inindca///commit/d856831ca13fea12bd8a6cb1f87a98bd39967bed))
+
 ### [2.28.5](https://inindca///compare/v2.28.4...v2.28.5) (2021-08-16)
 
 
