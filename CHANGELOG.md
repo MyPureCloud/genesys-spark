@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.29.0](https://inindca///compare/v2.28.6...v2.29.0) (2021-08-18)
+
+
+### Features
+
+* **gux-icon:** added new and modified some old icons ([f9df9fc](https://inindca///commit/f9df9fc11353fe68d9f0c3114a977717b10dc202))
+
+
+### Bug Fixes
+
+* **range-input:** fixed text display styling ([b0f4bf0](https://inindca///commit/b0f4bf078b745326bbbc273bd132f667afd41d5f))
+
 ### [2.28.6](https://inindca///compare/v2.28.5...v2.28.6) (2021-08-17)
 
 
