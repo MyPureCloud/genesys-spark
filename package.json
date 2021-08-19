@@ -33,6 +33,7 @@
     "lint.svg": "svgo -f ./src/components/stable/gux-icon/icons --multipass -q",
     "lint.ts": "tslint --project .",
     "list-component-tracking": "./scripts/list-component-tracking.js",
+    "list-shadow-dom-enabled": "./scripts/list-shadow-dom-enabled.js",
     "list-i18n-files": "./scripts/list-i18n-files.js",
     "predev": "npm run i18n",
     "predev.public": "npm run predev",
