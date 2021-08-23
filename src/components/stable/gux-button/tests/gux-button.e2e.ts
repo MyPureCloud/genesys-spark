@@ -99,4 +99,17 @@ describe('gux-button', () => {
       expect(onClickSpy).toHaveReceivedEventTimes(0);
     });
   });
+  describe('focus', () => {
+    it('should be programmatically focusable', async () => {
+      const html = '<gux-button>Button</gux-button>';
+      const page = await newE2EPage({ html });
+      const element = await page.find('gux-button');
+
+      await element.callMethod('focusElement');
+      const focusedElement = await page.evaluateHandle(
+        () => document.activeElement.nodeName
+      );
+      expect(await focusedElement.jsonValue()).toBe('BUTTON');
+    });
+  });
 });
