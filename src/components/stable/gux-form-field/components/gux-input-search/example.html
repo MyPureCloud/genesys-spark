@@ -4,12 +4,7 @@
   <p>slot an input[type=search] element into a gux-form-field element</p>
 
   <gux-form-field label-position="beside">
-    <input
-      slot="input"
-      name="search"
-      type="search"
-      placeholder="Enter a search"
-    />
+    <input slot="input" name="search" type="search" placeholder="Search" />
     <label slot="label">Search</label>
   </gux-form-field>
 
@@ -20,7 +15,7 @@
       slot="input"
       name="search"
       type="search"
-      placeholder="Enter a search"
+      placeholder="Search"
       disabled
     />
     <label slot="label">Search</label>
@@ -29,24 +24,14 @@
   <h2>No Visible Label</h2>
 
   <gux-form-field label-position="screenreader">
-    <input
-      slot="input"
-      name="search"
-      type="search"
-      placeholder="Enter a search"
-    />
+    <input slot="input" name="search" type="search" placeholder="Search" />
     <label slot="label">This will be read by a screenreader</label>
   </gux-form-field>
 
   <h2>With smaller width</h2>
   <div style="width: 120px">
     <gux-form-field label-position="screenreader">
-      <input
-        slot="input"
-        name="search"
-        type="search"
-        placeholder="Enter a search"
-      />
+      <input slot="input" name="search" type="search" placeholder="Search" />
       <label slot="label">This will be read by a screenreader</label>
     </gux-form-field>
   </div>

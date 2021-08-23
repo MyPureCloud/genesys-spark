@@ -1,6 +1,8 @@
 // Variables part
 @import (reference) '../../../style/shared/text-input.less';
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/mixins.less';
 
 gux-content-search {
   display: inline-block;
@@ -25,12 +27,12 @@ gux-content-search {
     flex-direction: row;
     width: 100%;
     height: 32px;
-    padding: 4px 0 4px 0;
+    padding: @spacing-2xs 0 @spacing-2xs 0;
     margin: 4px 0;
     background-color: @gux-grey-90;
     background-image: none;
     border: 1px solid @gux-black-100;
-    border-radius: 2px;
+    border-radius: 4px;
 
     &.gux-focused,
     &:focus,
@@ -97,6 +99,7 @@ gux-content-search {
         cursor: pointer;
         background: none;
         border: none;
+        border-radius: 4px;
         outline: none;
 
         &:disabled {
@@ -107,17 +110,21 @@ gux-content-search {
 
         &:not(:disabled):hover,
         &:not(:disabled):focus {
-          color: @gux-blue-60;
+          color: @gux-black-50;
+        }
+
+        &:focus:enabled {
+          .focus-ring();
         }
       }
 
       .gux-clear-button {
         flex-shrink: 0;
         align-items: center;
-        padding-top: 0;
-        padding-right: 8px;
-        padding-bottom: 0;
-        padding-left: 8px;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 8px;
+        margin-left: 8px;
       }
 
       .gux-navigation-disabled {
@@ -135,9 +142,6 @@ gux-content-search {
 
         .gux-navigation-result {
           align-items: center;
-          padding-top: 0;
-          padding-right: 8px;
-          padding-bottom: 0;
           padding-left: 8px;
           font-family: inherit;
           font-size: 12px;
@@ -147,19 +151,17 @@ gux-content-search {
         .gux-previous-button {
           flex-shrink: 0;
           align-items: center;
-          padding-top: 0;
           padding-right: 0;
-          padding-bottom: 0;
           padding-left: 0;
+          margin-left: 4px;
         }
 
         .gux-next-button {
           flex-shrink: 0;
           align-items: center;
-          padding-top: 0;
           padding-right: 0;
-          padding-bottom: 0;
           padding-left: 0;
+          margin-right: 4px;
         }
       }
     }
