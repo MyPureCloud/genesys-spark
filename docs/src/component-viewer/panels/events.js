@@ -106,12 +106,12 @@ export default class EventsPanel {
     `);
 
     setTimeout(function () {
-      notification.classList.add('show');
-    }, 10);
+      notification.classList.add('hide');
+    }, 5000);
 
     setTimeout(function () {
       notification.remove();
-    }, 5000);
+    }, 5500);
 
     return notification;
   }

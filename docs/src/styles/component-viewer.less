@@ -20,15 +20,27 @@ body {
     right: 8px;
     bottom: 0;
     z-index: 1;
-    background-color: #393e45;
 
-    gux-notification-toast {
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
+    gux-action-toast {
+      transition: all 0.5s ease-in-out;
+      animation-name: slidein;
+      animation-duration: 0.5s;
     }
 
-    gux-notification-toast.show {
-      opacity: 1;
+    gux-action-toast.hide {
+      opacity: 0;
+    }
+
+    @keyframes slidein {
+      from {
+        max-height: 0;
+        transform: translateY(300px);
+      }
+
+      to {
+        max-height: 300px;
+        transform: translateY(0);
+      }
     }
   }
 }
