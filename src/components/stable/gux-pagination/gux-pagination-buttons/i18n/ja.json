@@ -1,8 +1,8 @@
 {
   "page": "ページ",
   "totalPages": " / {totalPages, number}",
-  "first": "名",
+  "first": "最初",
   "previous": "前へ",
   "next": "次へ",
-  "last": "姓"
+  "last": "最後"
 }
