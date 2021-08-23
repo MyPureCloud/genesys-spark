@@ -1,4 +1,4 @@
-import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { getDesiredLocale } from '../../../i18n';

@@ -109,8 +109,8 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.9.10",
     "vega": "^5.19.1",
-    "vega-embed": "^6.15.2",
-    "vega-lite": "^5.0.0",
+    "vega-embed": "^6.18.2",
+    "vega-lite": "5.0.0",
     "weekstart": "^1.1.0",
     "xmldom": "^0.6.0"
   },
