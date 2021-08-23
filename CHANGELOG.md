@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.30.0](https://inindca///compare/v2.29.0...v2.30.0) (2021-08-23)
+
+
+### Features
+
+* **button:** add method for programatically focusing ([e3eb93a](https://inindca///commit/e3eb93a6cbb37ea74fe75beab15b499162426f88))
+
+
+### Bug Fixes
+
+* **search:** fixed styling ([500c140](https://inindca///commit/500c1407835f0fcc26f1d75c6f08ebe2f0bfcab3))
+* **toasts:** fixed styling ([28f54f0](https://inindca///commit/28f54f0d567cccb63c3807c455054345e4810cd2))
+
 ## [2.29.0](https://inindca///compare/v2.28.6...v2.29.0) (2021-08-18)
 
 
