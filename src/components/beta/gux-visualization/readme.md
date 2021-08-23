@@ -13,6 +13,14 @@
 | `visualizationSpec` | `visualization-spec` |             | `string`                          | `undefined` |
 
 
+## Events
+
+| Event                 | Description | Type               |
+| --------------------- | ----------- | ------------------ |
+| `chartClicked`        |             | `CustomEvent<any>` |
+| `chartComponentReady` |             | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

@@ -1,5 +1,5 @@
-import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
-import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
+import { Component, Element, h, JSX, Prop, Watch } from '@stencil/core';
+import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -8,13 +8,6 @@ import { trackComponent } from '../../../usage-tracking';
   tag: 'gux-column-chart'
 })
 export class GuxColumnChart {
-  private defaultVisualizationSpec: VisualizationSpec = {};
-
-  private defaultEmbedOptions: EmbedOptions = {
-    actions: false,
-    renderer: 'svg'
-  };
-
   @Element()
   root: HTMLElement;
 
@@ -24,7 +17,7 @@ export class GuxColumnChart {
   @Prop()
   baseChartSpec: VisualizationSpec = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-    mark: 'bar',
+    mark: { type: 'bar', width: 16 },
     encoding: {
       x: { field: 'category', type: 'nominal' },
       y: { field: 'value', type: 'quantitative' },
