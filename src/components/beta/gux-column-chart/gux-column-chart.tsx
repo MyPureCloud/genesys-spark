@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop, Watch } from '@stencil/core';
+import { Component, Element, h, JSX, Prop, Watch, Listen } from '@stencil/core';
 import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
@@ -26,7 +26,10 @@ export class GuxColumnChart {
   };
 
   @Prop()
-  chartData: string;
+  chartData: Record<string, unknown>;
+
+  @Prop()
+  chartLayer: Record<string, unknown>;
 
   @Prop()
   embedOptions: EmbedOptions;
@@ -35,11 +38,17 @@ export class GuxColumnChart {
 
   @Watch('chartData')
   parseData() {
+    let chartData = {};
     if (this.chartData) {
-      const data = JSON.parse(this.chartData);
-      const chartSpec = Object.assign(this.baseChartSpec, { data });
-      this.columnChartSpec = JSON.stringify(chartSpec);
+      chartData = { data: this.chartData };
     }
+
+    let chartLayer = {};
+    if (this.chartLayer) {
+      chartLayer = { layer: this.chartLayer };
+    }
+    const spec = Object.assign(this.baseChartSpec, chartData, chartLayer);
+    this.visualizationSpec = spec;
   }
 
   async componentWillRender(): Promise<void> {
@@ -50,7 +59,7 @@ export class GuxColumnChart {
   render(): JSX.Element {
     return (
       <gux-visualization-beta
-        visualization-spec={this.columnChartSpec}
+        visualizationSpec={this.visualizationSpec}
       ></gux-visualization-beta>
     );
   }

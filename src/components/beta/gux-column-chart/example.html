@@ -1,15 +1,111 @@
 <h1>Default</h1>
-<gux-column-chart
-  chart-data='{
-  "values": [
-    {"category": "a", "value": 4},
-    {"category": "b", "value": 6},
-    {"category": "c", "value": 10},
-    {"category": "d", "value": 3},
-    {"category": "e", "value": 10},
-    {"category": "f", "value": 20}
+<gux-column-chart id="chart-1"> </gux-column-chart>
+
+<h1>Layered</h1>
+<gux-column-chart id="chart-2" on> </gux-column-chart>
+
+<style
+  onload="(function() {
+    const chart1 = document.querySelector('#chart-1');
+    const chart2 = document.querySelector('#chart-2');
+    const chart3 = document.querySelector('#chart-3');
+    const chart4 = document.querySelector('#chart-4');
+    const chart5 = document.querySelector('#chart-5');
+    const chart6 = document.querySelector('#chart-6');
+    const chart7 = document.querySelector('#chart-7');
+    const chart8 = document.querySelector('#chart-8');
+    const chart9 = document.querySelector('#chart-9');
+    const chart10 = document.querySelector('#chart-10');
+    const chart11 = document.querySelector('#chart-11');
+
+    chart1.addEventListener('chartClicked', (event) => console.log(event));
+
+    chart1.chartData = {'values': [
+    {'category': 'a', 'value': 4},
+    {'category': 'b', 'value': 6},
+    {'category': 'c', 'value': 10},
+    {'category': 'd', 'value': 3},
+    {'category': 'e', 'value': 10},
+    {'category': 'f', 'value': 20}
   ]
-}'
-  };
+}
+
+chart2.chartData = { 'values': [
+      {
+        'date': 'Sun May 01 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
+        'value': 5,
+        'series': 'abandon'
+      },
+      {
+        'date': 'Sun May 01 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
+        'value': 10,
+        'series': 'answer'
+      },
+      {
+        'date': 'Sun May 02 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
+        'value': 10,
+        'series': 'answer'
+      },
+      {
+        'date': 'Sun May 03 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
+        'value': 100,
+        'series': 'answer'
+      },
+      {
+        'date': 'Sun May 04 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
+        'value': 0,
+        'series': 'answer'
+      }
+    ]};
+
+chart2.chartLayer = [
+    {
+      'mark': 'bar',
+      'transform': [{
+        'filter': {'field': 'series', 'equal': 'answer'}
+        }],
+      'encoding': {
+          'x': {
+            'timeUnit': 'yearmonthdate',
+            'field': 'date',
+            'type': 'ordinal',
+            'title': 'time',
+            'series': 'answer',
+            'axis': {'format': '%b %e'},
+
+          },
+          'y': {
+            'field': 'value',
+            'type': 'quantitative',
+            'title': null,
+          }
+      }
+    },
+    {
+      'mark': 'bar',
+      'transform': [{
+        'filter': {'field': 'series', 'equal': 'abandon'}
+        }],
+      'encoding': {
+          'x': {
+            'timeUnit': 'yearmonthdate',
+            'field': 'date',
+            'type': 'ordinal',
+            'title': 'time',
+            'series': 'abandon',
+            'axis': {'format': '%b %e'}
+          },
+          'y': {
+            'field': 'value',
+            'type': 'quantitative',
+            'title': null,
+          }
+      }
+    }
+
+  ]
+
+  })()"
 >
-</gux-column-chart>
+  --noop: none;
+</style>
