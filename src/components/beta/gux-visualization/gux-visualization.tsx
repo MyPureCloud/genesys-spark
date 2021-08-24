@@ -37,7 +37,7 @@ export class GuxVisualization {
   root: HTMLElement;
 
   @Prop()
-  visualizationSpec: string;
+  visualizationSpec: VisualizationSpec;
 
   @Prop()
   embedOptions: EmbedOptions;
@@ -53,15 +53,6 @@ export class GuxVisualization {
   async componentWillRender(): Promise<void> {
     const locale = getDesiredLocale(this.root);
 
-    let spec = {};
-    if (this.visualizationSpec) {
-      if (typeof this.visualizationSpec === 'string') {
-        spec = JSON.parse(this.visualizationSpec);
-      } else {
-        spec = this.visualizationSpec;
-      }
-    }
-
     const patchOption = {
       patch: visSpec => {
         if (!visSpec?.signals) {
@@ -75,10 +66,9 @@ export class GuxVisualization {
         return visSpec;
       }
     };
-
     embed(
       this.root,
-      Object.assign({}, this.defaultVisualizationSpec, spec),
+      Object.assign({}, this.defaultVisualizationSpec, this.visualizationSpec),
       Object.assign(
         {
           timeFormatLocale: timeFormatLocale[locale]
