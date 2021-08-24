@@ -4,12 +4,18 @@ describe('gux-rating', () => {
   async function getStarCounts(
     page: E2EPage
   ): Promise<{ emptyStars: number; halfStars: number; fullStars: number }> {
+    const element = await page.find('gux-rating');
+
     return {
-      emptyStars: (await page.findAll('gux-icon[icon-name="rating"]')).length,
-      halfStars: (await page.findAll('gux-icon[icon-name="rating-partial"]'))
-        .length,
-      fullStars: (await page.findAll('gux-icon[icon-name="rating-active"]'))
-        .length
+      emptyStars: element.shadowRoot.querySelectorAll(
+        'gux-icon[icon-name="rating"]'
+      ).length,
+      halfStars: element.shadowRoot.querySelectorAll(
+        'gux-icon[icon-name="rating-partial"]'
+      ).length,
+      fullStars: element.shadowRoot.querySelectorAll(
+        'gux-icon[icon-name="rating-active"]'
+      ).length
     };
   }
 
@@ -101,10 +107,16 @@ describe('gux-rating', () => {
         e2ePage: E2EPage,
         position: number
       ): Promise<void> {
-        const ratingStarElements = await e2ePage.findAll('gux-icon');
-        const ratingElement = ratingStarElements[position - 1];
+        await page.evaluate(ratingElementIndex => {
+          const element = document.querySelector('gux-rating');
+          const ratingStarElements =
+            element.shadowRoot.querySelectorAll('gux-icon');
+          const ratingElement = ratingStarElements[
+            ratingElementIndex
+          ] as HTMLElement;
 
-        ratingElement.click();
+          ratingElement.click();
+        }, position - 1);
 
         await e2ePage.waitForChanges();
       }
@@ -124,6 +136,34 @@ describe('gux-rating', () => {
         { starToClick: 4 },
         { starToClick: 5 }
       ].forEach(({ starToClick }, index) => {
+        it(`should render 0 if star ${starToClick} is clicked but the component is disabled`, async () => {
+          page = await newE2EPage({
+            html: '<gux-rating disabled></gux-rating>'
+          });
+
+          await clickStar(page, starToClick);
+
+          expect(await getStarCounts(page)).toEqual({
+            emptyStars: 5,
+            fullStars: 0,
+            halfStars: 0
+          });
+        });
+
+        it(`should render 0 if star ${starToClick} is clicked but the component is readonly`, async () => {
+          page = await newE2EPage({
+            html: '<gux-rating readonly></gux-rating>'
+          });
+
+          await clickStar(page, starToClick);
+
+          expect(await getStarCounts(page)).toEqual({
+            emptyStars: 5,
+            fullStars: 0,
+            halfStars: 0
+          });
+        });
+
         it(`should render ${
           starToClick - 0.5
         } if star ${starToClick} is clicked`, async () => {
@@ -136,7 +176,7 @@ describe('gux-rating', () => {
           });
         });
 
-        it(`should render ${starToClick} if star ${starToClick} is twice`, async () => {
+        it(`should render ${starToClick} if star ${starToClick} is clicked twice`, async () => {
           await clickStar(page, starToClick);
           await clickStar(page, starToClick);
 
@@ -147,9 +187,7 @@ describe('gux-rating', () => {
           });
         });
 
-        it(`should render ${
-          starToClick - 1
-        } if star ${starToClick} is three times`, async () => {
+        it(`should render 0 if star ${starToClick} is clicked three times`, async () => {
           await clickStar(page, starToClick);
           await clickStar(page, starToClick);
           await clickStar(page, starToClick);

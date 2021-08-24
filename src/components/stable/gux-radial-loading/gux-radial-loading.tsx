@@ -10,12 +10,14 @@ import modalComponentResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-radial-loading.less',
-  tag: 'gux-radial-loading'
+  tag: 'gux-radial-loading',
+  shadow: true
 })
 export class GuxRadialLoading {
+  private getI18nValue: GetI18nValue;
+
   @Element()
   private root: HTMLElement;
-  private getI18nValue: GetI18nValue;
 
   /**
    * The display context the component is in.
@@ -37,17 +39,13 @@ export class GuxRadialLoading {
       this.root,
       modalComponentResources
     );
-
-    if (!this.screenreaderText) {
-      this.screenreaderText = this.getI18nValue('loading');
-    }
   }
 
   render(): JSX.Element {
     return (
       <div
         role="progressbar"
-        aria-label={this.screenreaderText}
+        aria-label={this.screenreaderText || this.getI18nValue('loading')}
         class={`gux-spinner-container gux-${this.context}`}
       >
         <div role="presentation" class="gux-spin-circle" />

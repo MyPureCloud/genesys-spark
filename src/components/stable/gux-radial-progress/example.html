@@ -1,29 +1,40 @@
-<gux-radial-progress screenreader-text="Uploading file"></gux-radial-progress>
-
-<gux-radial-progress
-  screenreader-text="Uploading file"
-  value="0"
-  max="100"
-></gux-radial-progress>
-
-<gux-radial-progress
-  screenreader-text="Uploading file"
-  value="3"
-  max="10"
-></gux-radial-progress>
-
-<gux-radial-progress
-  screenreader-text="Uploading file"
-  value="10"
-  max="10"
-></gux-radial-progress>
-
-<gux-radial-progress
-  id="dynamic"
-  screenreader-text="Uploading file"
-  value="0"
-  max="100"
-></gux-radial-progress>
+<div>
+  <h1>No value set</h1>
+  <gux-radial-progress screenreader-text="Uploading file"></gux-radial-progress>
+</div>
+<div>
+  <h1>Value set to 0</h1>
+  <gux-radial-progress
+    screenreader-text="Uploading file"
+    value="0"
+    max="100"
+  ></gux-radial-progress>
+</div>
+<div>
+  <h1>Value set to 3/10</h1>
+  <gux-radial-progress
+    screenreader-text="Uploading file"
+    value="3"
+    max="10"
+  ></gux-radial-progress>
+</div>
+<div>
+  <h1>Value set to 10/10</h1>
+  <gux-radial-progress
+    screenreader-text="Uploading file"
+    value="10"
+    max="10"
+  ></gux-radial-progress>
+</div>
+<div>
+  <h1>Dynamic</h1>
+  <gux-radial-progress
+    id="dynamic"
+    screenreader-text="Uploading file"
+    value="0"
+    max="100"
+  ></gux-radial-progress>
+</div>
 
 <style
   onload="(function () {

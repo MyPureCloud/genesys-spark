@@ -4,7 +4,8 @@ import { trackComponent } from '../../../usage-tracking';
 
 @Component({
   styleUrl: 'gux-page-loading-spinner.less',
-  tag: 'gux-page-loading-spinner'
+  tag: 'gux-page-loading-spinner',
+  shadow: true
 })
 export class GuxPageLoadingSpinner {
   @Element()
@@ -15,7 +16,7 @@ export class GuxPageLoadingSpinner {
    * If no screenreader text is provided, the localized string "Loading" will be used by default
    */
   @Prop()
-  screenreaderText: string = '';
+  screenreaderText: string;
 
   componentWillLoad(): void {
     trackComponent(this.root);
@@ -24,6 +25,7 @@ export class GuxPageLoadingSpinner {
   render(): JSX.Element {
     return (
       <gux-radial-loading
+        class="gux-spinner"
         screenreader-text={this.screenreaderText}
         context="full-page"
       ></gux-radial-loading>
