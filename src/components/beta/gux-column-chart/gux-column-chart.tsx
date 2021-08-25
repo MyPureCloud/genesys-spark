@@ -1,11 +1,11 @@
-import { Component, Element, h, JSX, Prop, Watch, Listen } from '@stencil/core';
+import { Component, Element, Host, h, JSX, Prop, Watch } from '@stencil/core';
 import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
 
 @Component({
   styleUrl: 'gux-column-chart.less',
-  tag: 'gux-column-chart'
+  tag: 'gux-column-chart-beta'
 })
 export class GuxColumnChart {
   @Element()
@@ -58,9 +58,24 @@ export class GuxColumnChart {
 
   render(): JSX.Element {
     return (
-      <gux-visualization-beta
-        visualizationSpec={this.visualizationSpec}
-      ></gux-visualization-beta>
+      <Host>
+        <gux-visualization-beta
+          visualizationSpec={this.visualizationSpec}
+        ></gux-visualization-beta>
+        <svg>
+          <defs>
+            <pattern
+              id="diagonalHatch0"
+              patternUnits="userSpaceOnUse"
+              width="7"
+              height="4"
+              patternTransform="rotate(45)"
+            >
+              <rect width="2" height="4" fill="#203b73"></rect>
+            </pattern>
+          </defs>
+        </svg>
+      </Host>
     );
   }
 }
