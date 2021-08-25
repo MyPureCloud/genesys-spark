@@ -1,5 +1,14 @@
-import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
-import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
+import {
+  Component,
+  Element,
+  Host,
+  h,
+  JSX,
+  Prop,
+  Watch,
+  Listen
+} from '@stencil/core';
+import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -8,13 +17,6 @@ import { trackComponent } from '../../../usage-tracking';
   tag: 'gux-column-chart'
 })
 export class GuxColumnChart {
-  private defaultVisualizationSpec: VisualizationSpec = {};
-
-  private defaultEmbedOptions: EmbedOptions = {
-    actions: false,
-    renderer: 'svg'
-  };
-
   @Element()
   root: HTMLElement;
 
@@ -24,7 +26,7 @@ export class GuxColumnChart {
   @Prop()
   baseChartSpec: VisualizationSpec = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-    mark: 'bar',
+    mark: { type: 'bar', width: 16 },
     encoding: {
       x: { field: 'category', type: 'nominal' },
       y: { field: 'value', type: 'quantitative' },
@@ -33,7 +35,10 @@ export class GuxColumnChart {
   };
 
   @Prop()
-  chartData: string;
+  chartData: Record<string, unknown>;
+
+  @Prop()
+  chartLayer: Record<string, unknown>;
 
   @Prop()
   embedOptions: EmbedOptions;
@@ -42,11 +47,17 @@ export class GuxColumnChart {
 
   @Watch('chartData')
   parseData() {
+    let chartData = {};
     if (this.chartData) {
-      const data = JSON.parse(this.chartData);
-      const chartSpec = Object.assign(this.baseChartSpec, { data });
-      this.columnChartSpec = JSON.stringify(chartSpec);
+      chartData = { data: this.chartData };
     }
+
+    let chartLayer = {};
+    if (this.chartLayer) {
+      chartLayer = { layer: this.chartLayer };
+    }
+    const spec = Object.assign(this.baseChartSpec, chartData, chartLayer);
+    this.visualizationSpec = spec;
   }
 
   async componentWillRender(): Promise<void> {
@@ -56,9 +67,20 @@ export class GuxColumnChart {
 
   render(): JSX.Element {
     return (
-      <gux-visualization-beta
-        visualization-spec={this.columnChartSpec}
-      ></gux-visualization-beta>
+      <Host>
+        <gux-visualization-beta
+          visualizationSpec={this.visualizationSpec}
+        ></gux-visualization-beta>
+        <pattern
+          id="diagonalHatch0"
+          patternUnits="userSpaceOnUse"
+          width="4"
+          height="4"
+          patternTransform="rotate(45)"
+        >
+          <rect width="2" height="4" fill="#444A52"></rect>
+        </pattern>
+      </Host>
     );
   }
 }

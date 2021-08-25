@@ -31,29 +31,6 @@
 <h1>Line Chart with Tooltips</h1>
 <gux-visualization-beta id="chart-11"> </gux-visualization-beta>
 
-<h1>With visualization-spec attribute</h1>
-<gux-visualization-beta
-  visualization-spec='{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "mark": "bar",
-  "encoding": {
-    "x": { "field": "category", "type": "nominal" },
-    "y": { "field": "value", "type": "quantitative" }
-  },
-  "data": {
-    "values": [
-      {"category": "a", "value": 4},
-      {"category": "b", "value": 6},
-      {"category": "c", "value": 10},
-      {"category": "d", "value": 3},
-      {"category": "e", "value": 10},
-      {"category": "f", "value": 20}
-    ]
-  }
-}'
->
-</gux-visualization-beta>
-
 <style
   onload="(function() {
     const chart1 = document.querySelector('#chart-1');

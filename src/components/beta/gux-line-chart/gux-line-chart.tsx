@@ -1,5 +1,14 @@
-import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
-import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  JSX,
+  Prop,
+  Watch,
+  Listen
+} from '@stencil/core';
+import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -8,13 +17,6 @@ import { trackComponent } from '../../../usage-tracking';
   tag: 'gux-line-chart'
 })
 export class GuxLineChart {
-  private defaultVisualizationSpec: VisualizationSpec = {};
-
-  private defaultEmbedOptions: EmbedOptions = {
-    actions: false,
-    renderer: 'svg'
-  };
-
   @Element()
   root: HTMLElement;
 
@@ -51,20 +53,20 @@ export class GuxLineChart {
   };
 
   @Prop()
-  chartData: string;
+  chartData: Record<string, unknown>;
 
   @Prop()
   embedOptions: EmbedOptions;
 
-  lineChartSpec: string;
-
   @Watch('chartData')
   parseData() {
+    let chartData = {};
     if (this.chartData) {
-      const data = JSON.parse(this.chartData);
-      const chartSpec = Object.assign(this.baseChartSpec, { data });
-      this.lineChartSpec = JSON.stringify(chartSpec);
+      chartData = { data: this.chartData };
     }
+
+    const spec = Object.assign(this.baseChartSpec, chartData);
+    this.visualizationSpec = spec;
   }
 
   async componentWillRender(): Promise<void> {
@@ -74,9 +76,11 @@ export class GuxLineChart {
 
   render(): JSX.Element {
     return (
-      <gux-visualization-beta
-        visualization-spec={this.lineChartSpec}
-      ></gux-visualization-beta>
+      <Host>
+        <gux-visualization-beta
+          visualizationSpec={this.visualizationSpec}
+        ></gux-visualization-beta>
+      </Host>
     );
   }
 }
