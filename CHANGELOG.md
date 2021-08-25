@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.31.0](https://inindca///compare/v2.30.0...v2.31.0) (2021-08-25)
+
+
+### Features
+
+* **shadow-dom:** turned shadow dom on for some stable components ([2944582](https://inindca///commit/2944582d6c020df1b4c48cbf52a1f08da245c548))
+
 ## [2.30.0](https://inindca///compare/v2.29.0...v2.30.0) (2021-08-23)
 
 
