@@ -1,4 +1,4 @@
-import { E2EPage, newE2EPage } from '@stencil/core/testing';
+import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
 
 async function newNonrandomE2EPage({
   html
@@ -14,6 +14,12 @@ async function newNonrandomE2EPage({
   await page.waitForChanges();
 
   return page;
+}
+
+function getInternalProgressBar(radialProgressElement: E2EElement): Element {
+  return radialProgressElement.shadowRoot.querySelector(
+    'div[role="progressbar"]'
+  );
 }
 
 describe('gux-radial-progress', () => {
@@ -35,7 +41,7 @@ describe('gux-radial-progress', () => {
       const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-radial-progress');
 
-      expect(element.innerHTML).toMatchSnapshot();
+      expect(element.outerHTML).toMatchSnapshot();
     });
   });
 
@@ -43,29 +49,32 @@ describe('gux-radial-progress', () => {
     const page = await newNonrandomE2EPage({
       html: '<gux-radial-progress value="0" screenreader-text="Uploading file"></gux-radial-progress>'
     });
-
     const element = await page.find('gux-radial-progress');
+    const progressbar = element.shadowRoot.querySelector(
+      'div[role="progressbar"]'
+    );
 
-    expect(element.textContent).toEqual(`0%`);
+    expect(getInternalProgressBar(element).textContent).toEqual(`0%`);
 
     element.setProperty('value', 30);
     await page.waitForChanges();
 
-    expect(element.textContent).toEqual(`30%`);
+    expect(getInternalProgressBar(element).textContent).toEqual(`30%`);
 
     element.setProperty('value', 100);
     await page.waitForChanges();
 
-    expect(element.textContent).toEqual(`100%`);
+    expect(getInternalProgressBar(element).textContent).toEqual(`100%`);
   });
 
   it('should add an aria-label with the provided screenreader-text to the progressbar', async () => {
     const page = await newNonrandomE2EPage({
       html: '<gux-radial-progress value="0" screenreader-text="Uploading file"></gux-radial-progress>'
     });
+    const element = await page.find('gux-radial-progress');
 
-    const progressbar = await page.find('[role="progressbar"]');
-
-    expect(progressbar.getAttribute('aria-label')).toEqual('Uploading file');
+    expect(getInternalProgressBar(element).getAttribute('aria-label')).toEqual(
+      'Uploading file'
+    );
   });
 });

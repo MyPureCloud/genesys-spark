@@ -1,23 +1,23 @@
 @import (reference) '../../../style/color.less';
 
-gux-rating {
+:host {
   display: inline-flex;
 
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
   }
+}
 
-  .gux-rating-start-container {
-    color: @gux-black-50;
+.gux-rating-start-container {
+  color: @gux-black-50;
 
-    &.gux-disabled {
-      opacity: 0.5;
-    }
+  &.gux-disabled {
+    opacity: 0.5;
+  }
 
-    gux-icon {
-      width: 24px;
-      height: 24px;
-    }
+  gux-icon {
+    width: 24px;
+    height: 24px;
   }
 }
