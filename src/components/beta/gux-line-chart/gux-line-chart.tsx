@@ -39,21 +39,15 @@ export class GuxLineChart {
       y: {
         field: 'value',
         type: 'quantitative'
-      },
-      tooltip: {
-        field: 'value',
-        type: 'quantitative'
-      },
-      color: {
-        field: 'category',
-        type: 'nominal',
-        legend: null
       }
     }
   };
 
   @Prop()
   chartData: Record<string, unknown>;
+
+  @Prop()
+  chartSpecs: Record<string, unknown>;
 
   @Prop()
   embedOptions: EmbedOptions;
@@ -65,7 +59,11 @@ export class GuxLineChart {
       chartData = { data: this.chartData };
     }
 
-    const spec = Object.assign(this.baseChartSpec, chartData);
+    let chartSpecs = {};
+    if (this.chartSpecs) {
+      chartSpecs = this.chartSpecs;
+    }
+    const spec = Object.assign(this.baseChartSpec, chartData, chartSpecs);
     this.visualizationSpec = spec;
   }
 
