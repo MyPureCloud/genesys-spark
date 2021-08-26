@@ -38,7 +38,7 @@ function generateComponentSpec() {
 }
 
 function getComponentName(path) {
-  return path.replace(/.*\//, '').replace(/-beta$/, '');
+  return path.replace(/.*\//, '');
 }
 
 function getComponentMetadata(path) {

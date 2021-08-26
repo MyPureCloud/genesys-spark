@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-tabs-beta should render 1`] = `
+<gux-tabs-beta class="example">
+  <mock:shadow-root>
+    <div class="gux-horizontal gux-left gux-tabs">
+      <slot name="tab-list"></slot>
+      <div class="gux-horizontal gux-left">
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-tab-list-beta slot="tab-list">
+    <!---->
+    <div class="gux-tab-container">
+      <div class="gux-scroll-button-container"></div>
+      <div class="gux-scrollable-section" role="tablist">
+        <gux-tab-beta tab-id="2-1">
+          <!---->
+          <button aria-controls="gux-2-1-panel" aria-selected="false" class="gux-tab" id="gux-2-1-tab" role="tab" tabindex="-1" type="button">
+            <gux-tooltip-title-beta tab-width="122">
+              <span>
+                Tab Header 1
+              </span>
+            </gux-tooltip-title-beta>
+          </button>
+        </gux-tab-beta>
+        <gux-tab-beta tab-id="2-2">
+          <!---->
+          <button aria-controls="gux-2-2-panel" aria-selected="false" class="gux-tab" id="gux-2-2-tab" role="tab" tabindex="-1" type="button">
+            <gux-tooltip-title-beta tab-width="122">
+              <span>
+                Tab Header 2
+              </span>
+            </gux-tooltip-title-beta>
+          </button>
+        </gux-tab-beta>
+        <gux-tab-beta tab-id="2-3">
+          <!---->
+          <button aria-controls="gux-2-3-panel" aria-selected="false" class="gux-tab" id="gux-2-3-tab" role="tab" tabindex="-1" type="button">
+            <gux-tooltip-title-beta tab-width="122">
+              <span>
+                Tab Header 3
+              </span>
+            </gux-tooltip-title-beta>
+          </button>
+        </gux-tab-beta>
+        <gux-tab-beta gux-disabled="" tab-id="2-4">
+          <!---->
+          <button aria-controls="gux-2-4-panel" aria-selected="false" class="gux-disabled gux-tab" disabled="" id="gux-2-4-tab" role="tab" tabindex="-1" type="button">
+            <gux-tooltip-title-beta tab-width="122">
+              <span>
+                Tab Header 4
+              </span>
+            </gux-tooltip-title-beta>
+          </button>
+        </gux-tab-beta>
+        <gux-tab-beta gux-disabled="" tab-id="2-5">
+          <!---->
+          <button aria-controls="gux-2-5-panel" aria-selected="false" class="gux-disabled gux-tab" disabled="" id="gux-2-5-tab" role="tab" tabindex="-1" type="button">
+            <gux-tooltip-title-beta tab-width="122">
+              <span>
+                Tab Header 5
+              </span>
+            </gux-tooltip-title-beta>
+          </button>
+        </gux-tab-beta>
+      </div>
+      <div class="gux-scroll-button-container"></div>
+    </div>
+  </gux-tab-list-beta>
+  <gux-tab-panel-beta tab-id="2-1">
+    <!---->
+    <div aria-labelledby="gux-2-1-tab" hidden="" id="gux-2-1-panel" role="tabpanel" tabindex="0">
+      Tab content 1
+    </div>
+  </gux-tab-panel-beta>
+  <gux-tab-panel-beta tab-id="2-2">
+    <!---->
+    <div aria-labelledby="gux-2-2-tab" hidden="" id="gux-2-2-panel" role="tabpanel" tabindex="0">
+      Tab content 2
+    </div>
+  </gux-tab-panel-beta>
+  <gux-tab-panel-beta tab-id="2-3">
+    <!---->
+    <div aria-labelledby="gux-2-3-tab" hidden="" id="gux-2-3-panel" role="tabpanel" tabindex="0">
+      Tab content 3
+    </div>
+  </gux-tab-panel-beta>
+  <gux-tab-panel-beta tab-id="2-4">
+    <!---->
+    <div aria-labelledby="gux-2-4-tab" hidden="" id="gux-2-4-panel" role="tabpanel" tabindex="0">
+      Tab content 4
+    </div>
+  </gux-tab-panel-beta>
+  <gux-tab-panel-beta tab-id="2-5">
+    <!---->
+    <div aria-labelledby="gux-2-5-tab" hidden="" id="gux-2-5-panel" role="tabpanel" tabindex="0">
+      Tab content 5
+    </div>
+  </gux-tab-panel-beta>
+</gux-tabs-beta>
+`;

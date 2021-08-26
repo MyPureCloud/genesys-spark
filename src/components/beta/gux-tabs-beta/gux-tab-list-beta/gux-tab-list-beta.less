@@ -1,0 +1,107 @@
+@import (reference) '../../../../style/color.less';
+@import (reference) '../../../../style/mixins.less';
+@import (reference) '../../../../style/spacing.less';
+
+// Variables part
+@gux-tabs-background: @gux-grey-60;
+@gux-off-tab-fill: @gux-grey-40;
+
+gux-tabs-beta[orientation='vertical'] {
+  height: 100%;
+  .gux-tab-container {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    max-width: 160px;
+    height: 100%;
+    margin-right: @spacing-medium;
+    border-right: 1px solid @gux-grey-50;
+    .gux-scroll-button-container {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+    .gux-scrollable-section {
+      flex-direction: column;
+      height: 100%;
+      overflow-y: auto;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      scroll-behavior: smooth;
+      &::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}
+
+gux-tabs-beta:not([orientation='vertical']) {
+  .gux-tab-container {
+    height: 40px;
+    margin-bottom: @spacing-medium;
+    border-bottom: 1px solid @gux-grey-50;
+  }
+  .gux-scrollable-section {
+    overflow-x: auto;
+  }
+}
+
+.gux-tab-container {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #fff;
+}
+.gux-scrollable-section {
+  display: flex;
+  flex: 1 1 auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+.gux-scroll-button-container {
+  display: flex;
+  background-color: @gux-off-tab-fill;
+  border-radius: 4px;
+
+  .gux-scroll-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 40px;
+    color: @gux-black-30;
+    background-color: @gux-tabs-background;
+    border: none;
+    border-radius: 4px;
+
+    gux-icon {
+      width: 10px;
+      height: 10px;
+    }
+    &:focus {
+      border: 3px solid @gux-blue-90;
+      outline: none;
+    }
+
+    &:hover {
+      color: @gux-blue-60;
+    }
+
+    &:active {
+      background-color: darken(@gux-tabs-background, 5%);
+    }
+
+    &:focus-visible {
+      .focus-ring();
+    }
+  }
+}
