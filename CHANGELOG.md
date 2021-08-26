@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.32.0](https://inindca///compare/v2.31.0...v2.32.0) (2021-08-26)
+
+
+### Features
+
+* **gux-tabs-beta:** created new tabs component ([dd7a17e](https://inindca///commit/dd7a17ea71729302e1d897f544262446a7133fc3))
+
 ## [2.31.0](https://inindca///compare/v2.30.0...v2.31.0) (2021-08-25)
 
 
