@@ -37,17 +37,25 @@ export class GuxModal {
 
   /**
    * Query selector for the element to initially focus when the modal opens
-   * Defaults to the first tabbable element.
+   * Defaults to the first tabbable element
    */
   @Prop()
   initialFocus?: string | undefined;
 
   private focusTrap: FocusTrap | undefined;
   componentDidLoad() {
+    // Workaround that gux-buttons don't have a native focus method that works
+    // Query the element then find the inner tabbable element
+    let initialFocus = this.initialFocus
+      ? this.root.querySelector<HTMLElement | SVGElement>(this.initialFocus)
+      : undefined;
+    if (initialFocus?.tagName === 'GUX-BUTTON') {
+      initialFocus = initialFocus.querySelector('button');
+    }
     this.focusTrap = createFocusTrap(this.root, {
       escapeDeactivates: false,
       returnFocusOnDeactivate: true,
-      initialFocus: this.initialFocus
+      initialFocus
     });
     this.focusTrap.activate();
   }
