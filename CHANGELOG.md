@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.33.0](https://inindca///compare/v2.32.0...v2.33.0) (2021-08-30)
+
+
+### Features
+
+* **gux-visualization:** allow visualizaton-spec to be passed as an element attribute ([5956f8d](https://inindca///commit/5956f8d7b9ad7f2adcfe90161294b7de4e9527dc))
+* **gux-visualization:** creates initial gux-visualization component ([3aef826](https://inindca///commit/3aef82603f2c46c7150b8bd71207d1ff5966d0f8))
+* **gux-visuzualization:** lock vega-lite to 5.0.0 ([209f320](https://inindca///commit/209f320633a1033810636efbceeb7958a97dd9f0))
+* **gux-visuzualization:** make visualizationSpec object only instead of optionally a string ([c58c7bb](https://inindca///commit/c58c7bb7bd85637507b41384bbdbaa278acec264))
+
+
+### Bug Fixes
+
+* **build:** include allowSyntheticDefaultImports flag ([f02a4a0](https://inindca///commit/f02a4a018a101f007add655e016620c2ca5b95c7))
+
 ## [2.32.0](https://inindca///compare/v2.31.0...v2.32.0) (2021-08-26)
 
 
