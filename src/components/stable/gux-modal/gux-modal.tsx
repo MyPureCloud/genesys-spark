@@ -7,7 +7,7 @@ import {
   JSX,
   Prop
 } from '@stencil/core';
-
+import { createFocusTrap, FocusTrap } from 'focus-trap';
 import { trackComponent } from '../../../usage-tracking';
 
 import { GuxModalSize } from './gux-modal.types';
@@ -34,6 +34,19 @@ export class GuxModal {
    */
   @Event()
   guxdismiss: EventEmitter<void>;
+
+  private focusTrap: FocusTrap | undefined;
+  componentDidLoad() {
+    this.focusTrap = createFocusTrap(this.root, {
+      escapeDeactivates: false,
+      returnFocusOnDeactivate: true
+    });
+    this.focusTrap.activate();
+  }
+  disconnectedCallback() {
+    this.focusTrap?.deactivate();
+    this.focusTrap = undefined;
+  }
 
   @Element()
   private root: HTMLElement;
