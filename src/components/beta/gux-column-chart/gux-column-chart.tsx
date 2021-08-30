@@ -18,6 +18,30 @@ export class GuxColumnChart {
   baseChartSpec: VisualizationSpec = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     mark: { type: 'bar', width: 16 },
+    config: {
+      legend: {
+        symbolType: 'circle'
+      },
+
+      bar: {
+        color: '#203B73'
+      },
+
+      range: {
+        category: [
+          '#203B73',
+          '#1DA8B3',
+          '#75A8FF',
+          '#8452CF',
+          '#B5B5EB',
+          '#CC3EBE',
+          '#5E5782',
+          '#FF8FDD',
+          '#868C1E',
+          '#DDD933'
+        ]
+      }
+    },
     encoding: {
       x: { field: 'category', type: 'nominal' },
       y: { field: 'value', type: 'quantitative' },
@@ -34,6 +58,9 @@ export class GuxColumnChart {
   @Prop()
   embedOptions: EmbedOptions;
 
+  @Prop()
+  chartEncoding: Record<string, unknown>;
+
   columnChartSpec: string;
 
   @Watch('chartData')
@@ -47,7 +74,18 @@ export class GuxColumnChart {
     if (this.chartLayer) {
       chartLayer = { layer: this.chartLayer };
     }
-    const spec = Object.assign(this.baseChartSpec, chartData, chartLayer);
+
+    const chartEncoding = {};
+    if (this.chartEncoding) {
+      chartLayer = { encoding: this.chartEncoding };
+    }
+
+    const spec = Object.assign(
+      this.baseChartSpec,
+      chartData,
+      chartLayer,
+      chartEncoding
+    );
     this.visualizationSpec = spec;
   }
 

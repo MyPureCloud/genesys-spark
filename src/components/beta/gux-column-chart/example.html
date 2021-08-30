@@ -4,10 +4,14 @@
 <h1>Layered</h1>
 <gux-column-chart-beta id="chart-2"> </gux-column-chart-beta>
 
+<h1>Legend</h1>
+<gux-column-chart-beta id="chart-3"> </gux-column-chart-beta>
+
 <style
   onload="(function() {
     const chart1 = document.querySelector('#chart-1');
     const chart2 = document.querySelector('#chart-2');
+    const chart3 = document.querySelector('#chart-3');
 
     chart1.addEventListener('chartClicked', (event) => console.log(event));
 
@@ -95,6 +99,21 @@ chart2.chartLayer = [
     }
 
   ]
+
+  chart3.chartData = {'values': [
+    {'category': 'a', 'value': 4},
+    {'category': 'b', 'value': 6},
+    {'category': 'c', 'value': 10},
+    {'category': 'd', 'value': 3},
+    {'category': 'e', 'value': 10},
+    {'category': 'f', 'value': 20}
+  ]
+}
+  chart3.chartEncoding = {
+      'x': { field: 'category', type: 'nominal' },
+      'y': { field: 'value', type: 'quantitative' },
+      'color': { field: 'category'}
+    }
 
   })()"
 >
