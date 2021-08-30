@@ -35,11 +35,19 @@ export class GuxModal {
   @Event()
   guxdismiss: EventEmitter<void>;
 
+  /**
+   * Query selector for the element to initially focus when the modal opens
+   * Defaults to the first tabbable element.
+   */
+  @Prop()
+  initialFocus?: string | undefined;
+
   private focusTrap: FocusTrap | undefined;
   componentDidLoad() {
     this.focusTrap = createFocusTrap(this.root, {
       escapeDeactivates: false,
-      returnFocusOnDeactivate: true
+      returnFocusOnDeactivate: true,
+      initialFocus: this.initialFocus
     });
     this.focusTrap.activate();
   }
