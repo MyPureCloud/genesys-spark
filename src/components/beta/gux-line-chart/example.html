@@ -1,11 +1,23 @@
 <h1>Default</h1>
-<gux-line-chart id="chart-1"> </gux-line-chart>
+<gux-line-chart-beta id="chart-1"> </gux-line-chart-beta>
+
+<h1>Monotone</h1>
+<gux-line-chart-beta id="chart-2"> </gux-line-chart-beta>
+
+<h1>Legend</h1>
+<gux-line-chart-beta id="chart-3"> </gux-line-chart-beta>
+
+<h1>Dashed</h1>
+<gux-line-chart-beta id="chart-4"> </gux-line-chart-beta>
 
 <style
   onload="(function() {
     const chart1 = document.querySelector('#chart-1');
+    const chart2 = document.querySelector('#chart-2');
+    const chart3 = document.querySelector('#chart-3');
+    const chart4 = document.querySelector('#chart-4');
 
-    chart1.chartData = {'values': [
+    const chartData = {'values': [
       {'date': '2021-01-01', 'value': 9.4, 'category': 'a'},
       {'date': '2021-01-02', 'value': 12.8, 'category': 'a'},
       {'date': '2021-01-03', 'value': 10.6, 'category': 'a'},
@@ -67,11 +79,92 @@
       {'date': '2021-01-28', 'value': 12.2, 'category': 'b'},
       {'date': '2021-01-29', 'value': 12.2, 'category': 'b'},
       {'date': '2021-01-30', 'value': 8.3, 'category': 'b'},
-      {'date': '2021-01-31', 'value': 7.2, 'category': 'b'}
+      {'date': '2021-01-31', 'value': 7.2, 'category': 'b'},
+      {'date': '2021-01-01', 'value': 2.6, 'category': 'c'},
+      {'date': '2021-01-02', 'value': 6.6, 'category': 'c'},
+      {'date': '2021-01-03', 'value': 3, 'category': 'c'},
+      {'date': '2021-01-04', 'value': 1.6, 'category': 'c'},
+      {'date': '2021-01-05', 'value': 14.2, 'category': 'c'},
+      {'date': '2021-01-06', 'value': 11.2, 'category': 'c'},
+      {'date': '2021-01-07', 'value': 7.8, 'category': 'c'},
+      {'date': '2021-01-08', 'value': 6.8, 'category': 'c'},
+      {'date': '2021-01-09', 'value': 5, 'category': 'c'},
+      {'date': '2021-01-10', 'value': 2.8, 'category': 'c'},
+      {'date': '2021-01-11', 'value': 6.4, 'category': 'c'},
+      {'date': '2021-01-12', 'value': 15.1, 'category': 'c'},
+      {'date': '2021-01-13', 'value': 6.4, 'category': 'c'},
+      {'date': '2021-01-14', 'value': 6.1, 'category': 'c'},
+      {'date': '2021-01-15', 'value': 8.8, 'category': 'c'},
+      {'date': '2021-01-16', 'value': 11.7, 'category': 'c'},
+      {'date': '2021-01-17', 'value': 9.3, 'category': 'c'},
+      {'date': '2021-01-18', 'value': 13.9, 'category': 'c'},
+      {'date': '2021-01-19', 'value': 12, 'category': 'c'},
+      {'date': '2021-01-20', 'value': 7, 'category': 'c'},
+      {'date': '2021-01-21', 'value': 5.2, 'category': 'c'},
+      {'date': '2021-01-22', 'value': 9.4, 'category': 'c'},
+      {'date': '2021-01-23', 'value': 13.2, 'category': 'c'},
+      {'date': '2021-01-24', 'value': 10.4, 'category': 'c'},
+      {'date': '2021-01-25', 'value': 8.2, 'category': 'c'},
+      {'date': '2021-01-26', 'value': 11.1, 'category': 'c'},
+      {'date': '2021-01-27', 'value': 16.1, 'category': 'c'},
+      {'date': '2021-01-28', 'value': 9.2, 'category': 'c'},
+      {'date': '2021-01-29', 'value': 5.2, 'category': 'c'},
+      {'date': '2021-01-30', 'value': 11.3, 'category': 'c'},
+      {'date': '2021-01-31', 'value': 8.2, 'category': 'c'},
+      {'date': '2021-01-24', 'value': 10.4, 'category': 'd'},
+      {'date': '2021-01-25', 'value': 11.2, 'category': 'd'},
+      {'date': '2021-01-26', 'value': 5.1, 'category': 'd'},
+      {'date': '2021-01-27', 'value': 9.1, 'category': 'd'},
+      {'date': '2021-01-28', 'value': 12.2, 'category': 'd'},
+      {'date': '2021-01-29', 'value': 6.2, 'category': 'd'},
+      {'date': '2021-01-30', 'value': 13.3, 'category': 'd'},
+      {'date': '2021-01-31', 'value': 4.2, 'category': 'd'}
     ]
   };
 
+  chart1.chartData = {'values': [
+      {'date': '2021-01-01', 'value': 9.4, 'category': 'a'},
+      {'date': '2021-01-02', 'value': 12.8, 'category': 'a'},
+      {'date': '2021-01-03', 'value': 10.6, 'category': 'a'},
+      {'date': '2021-01-04', 'value': 11.7, 'category': 'a'},
+      {'date': '2021-01-05', 'value': 12.2, 'category': 'a'},
+      {'date': '2021-01-06', 'value': 8.9, 'category': 'a'},
+      {'date': '2021-01-07', 'value': 4.4, 'category': 'a'},
+      {'date': '2021-01-08', 'value': 7.2, 'category': 'a'},
+      {'date': '2021-01-09', 'value': 10, 'category': 'a'},
+      {'date': '2021-01-10', 'value': 9.4, 'category': 'a'},
+      {'date': '2021-01-11', 'value': 6.1, 'category': 'a'},
+      {'date': '2021-01-12', 'value': 6.1, 'category': 'a'}
+    ]
+  };
+
+  chart2.chartData = chartData;
+  chart3.chartData = chartData;
+  chart4.chartData = chartData;
+
   chart1.chartSpecs = {
+    'encoding': {
+      'x': {
+        'field': 'date',
+        'type': 'temporal'
+      },
+      'y': {
+        'field': 'value',
+        'type': 'quantitative'
+      },
+      'tooltip': {
+        'field': 'value',
+        'type': 'quantitative'
+      },
+      'color': {
+        'field': 'category',
+        'type': 'nominal',
+        'legend': null
+      }
+    }
+  };
+
+  chart2.chartSpecs = {
     'mark': {
       'type': 'line',
       'interpolate': 'monotone',
@@ -95,6 +188,59 @@
         'type': 'nominal',
         'legend': null
       }
+    }
+  };
+
+  chart3.chartSpecs = {
+    'encoding': {
+      'x': {
+        'field': 'date',
+        'type': 'temporal'
+      },
+      'y': {
+        'field': 'value',
+        'type': 'quantitative'
+      },
+      'tooltip': {
+        'field': 'value',
+        'type': 'quantitative'
+      },
+      'color': {
+        'field': 'category',
+        'type': 'nominal'
+      }
+    }
+  };
+
+  chart4.chartSpecs = {
+    'mark': {
+      'type': 'line',
+      'interpolate': 'linear',
+      'point': false,
+      'shape': 'triangle'
+    },
+    'encoding': {
+      'x': {
+        'field': 'date',
+        'type': 'temporal'
+      },
+      'y': {
+        'field': 'value',
+        'type': 'quantitative'
+      },
+      'tooltip': {
+        'field': 'value',
+        'type': 'quantitative'
+      },
+      'color': {
+        'field': 'category',
+        'type': 'nominal'
+      },
+      'strokeDash': {
+        'field': 'category',
+        'type': 'nominal'
+      }
+
     }
   };
 

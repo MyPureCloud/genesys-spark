@@ -1,20 +1,11 @@
-import {
-  Component,
-  Element,
-  h,
-  Host,
-  JSX,
-  Prop,
-  Watch,
-  Listen
-} from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
 import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
 
 @Component({
   styleUrl: 'gux-line-chart.less',
-  tag: 'gux-line-chart'
+  tag: 'gux-line-chart-beta'
 })
 export class GuxLineChart {
   @Element()
@@ -28,8 +19,27 @@ export class GuxLineChart {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     mark: {
       type: 'line',
-      interpolate: 'monotone',
-      point: true
+      interpolate: 'linear',
+      point: false
+    },
+    config: {
+      legend: {
+        symbolType: 'circle'
+      },
+      range: {
+        category: [
+          '#203B73',
+          '#1DA8B3',
+          '#75A8FF',
+          '#8452CF',
+          '#B5B5EB',
+          '#CC3EBE',
+          '#5E5782',
+          '#FF8FDD',
+          '#868C1E',
+          '#DDD933'
+        ]
+      }
     },
     encoding: {
       x: {
@@ -39,6 +49,24 @@ export class GuxLineChart {
       y: {
         field: 'value',
         type: 'quantitative'
+      },
+      color: {
+        type: 'nominal',
+        field: 'category',
+        scale: {
+          range: [
+            '#203B73',
+            '#1DA8B3',
+            '#75A8FF',
+            '#8452CF',
+            '#B5B5EB',
+            '#CC3EBE',
+            '#5E5782',
+            '#FF8FDD',
+            '#868C1E',
+            '#DDD933'
+          ]
+        }
       }
     }
   };

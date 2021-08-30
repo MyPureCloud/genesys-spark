@@ -1,0 +1,19 @@
+import { newE2EPage } from '@stencil/core/testing';
+
+describe('gux-line-chart-beta', () => {
+  describe('#render', () => {
+    [
+      {
+        description: 'should render chart',
+        html: '<gux-line-chart-beta id="visualization-1"></gux-line-chart-beta>'
+      }
+    ].forEach(({ description, html }) => {
+      it(description, async () => {
+        const page = await newE2EPage({ html });
+        const element = await page.find('gux-line-chart-beta');
+
+        expect(element.outerHTML).toMatchSnapshot();
+      });
+    });
+  });
+});

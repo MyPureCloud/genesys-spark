@@ -25,14 +25,14 @@
 
 ### Used by
 
- - [gux-column-chart](../gux-column-chart)
- - [gux-line-chart](../gux-line-chart)
+ - [gux-column-chart-beta](../gux-column-chart)
+ - [gux-line-chart-beta](../gux-line-chart)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-column-chart --> gux-visualization-beta
-  gux-line-chart --> gux-visualization-beta
+  gux-column-chart-beta --> gux-visualization-beta
+  gux-line-chart-beta --> gux-visualization-beta
   style gux-visualization-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
