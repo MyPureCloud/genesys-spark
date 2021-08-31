@@ -5,6 +5,7 @@ import {
   EventEmitter,
   h,
   JSX,
+  Listen,
   Prop
 } from '@stencil/core';
 import { createFocusTrap, FocusTrap } from 'focus-trap';
@@ -34,6 +35,13 @@ export class GuxModal {
    */
   @Event()
   guxdismiss: EventEmitter<void>;
+
+  @Listen('keydown')
+  protected handleKeyEvent(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      this.onDismissHandler(event);
+    }
+  }
 
   /**
    * Query selector for the element to initially focus when the modal opens
@@ -79,7 +87,7 @@ export class GuxModal {
       <div class="gux-modal">
         <div class={`gux-modal-container gux-${this.size}`}>
           <gux-dismiss-button-beta
-            onClick={this.onDismissClickHandler.bind(this)}
+            onClick={this.onDismissHandler.bind(this)}
           ></gux-dismiss-button-beta>
 
           {hasModalTitleSlot && (
@@ -126,7 +134,7 @@ export class GuxModal {
     );
   }
 
-  private onDismissClickHandler(event: MouseEvent): void {
+  private onDismissHandler(event: Event): void {
     event.stopPropagation();
 
     const dismissEvent = this.guxdismiss.emit();

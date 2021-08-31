@@ -174,9 +174,9 @@ describe('gux-modal', () => {
       `;
       const page = await newE2EPage({ html });
       const element = await page.find('gux-modal');
-      const dismissButton = (await element.find(
+      const dismissButton = await element.find(
         'gux-dismiss-button-beta >>> button'
-      )) as HTMLElement;
+      );
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -196,6 +196,32 @@ describe('gux-modal', () => {
       expect(guxdismissSpy).toHaveReceivedEvent();
       expect(clickSpy).not.toHaveReceivedEvent();
       expect(await page.find('gux-modal')).not.toBeNull();
+    });
+
+    it('escape key dismiss', async () => {
+      const html = `
+        <gux-modal lang="en" size="small">
+          <div slot="title">Modal Title</div>
+          <div slot="content">This contains the modal content.</div>
+          <div slot="left-align-buttons">
+              <gux-button title="Cancel">Cancel</gux-button>
+          </div>
+          <div slot="right-align-buttons">
+            <gux-button title='Button' accent='primary'>Accept</gux-button>
+          </div>
+        </gux-modal>
+      `;
+      const page = await newE2EPage({ html });
+      const guxdismissSpy = await page.spyOnEvent('guxdismiss');
+
+      expect(guxdismissSpy).not.toHaveReceivedEvent();
+      expect(await page.find('gux-modal')).not.toBeNull();
+
+      await page.keyboard.down('Escape');
+      await page.waitForChanges();
+
+      expect(guxdismissSpy).toHaveReceivedEvent();
+      expect(await page.find('gux-modal')).toBeNull();
     });
   });
 });
