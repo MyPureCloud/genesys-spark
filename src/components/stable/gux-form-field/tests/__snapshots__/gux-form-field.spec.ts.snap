@@ -506,7 +506,7 @@ exports[`gux-form-field #render select tag should render component type "select"
     </div>
     <div class="gux-input-and-error-container">
       <gux-input-select slot="input">
-        <select id="gux-form-field-i" name="select" slot="input" type="select">
+        <select id="gux-form-field-i" name="select" slot="input">
           <option value="option1">
             Option 1
           </option>
@@ -537,7 +537,7 @@ exports[`gux-form-field #render select tag should render component type "select"
     </div>
     <div class="gux-input-and-error-container">
       <gux-input-select slot="input">
-        <select aria-describedby="gux-form-field-error-i" id="test" name="select" slot="input" type="select">
+        <select aria-describedby="gux-form-field-error-i" id="test" name="select" slot="input">
           <option value="option1">
             Option 1
           </option>
@@ -572,7 +572,7 @@ exports[`gux-form-field #render select tag should render component type "select"
     </div>
     <div class="gux-input-and-error-container">
       <gux-input-select slot="input">
-        <select aria-describedby="gux-form-field-error-i" id="gux-form-field-i" name="select" slot="input" type="select">
+        <select aria-describedby="gux-form-field-error-i" id="gux-form-field-i" name="select" slot="input">
           <option value="option1">
             Option 1
           </option>
