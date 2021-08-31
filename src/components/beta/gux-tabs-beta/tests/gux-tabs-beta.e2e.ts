@@ -75,6 +75,7 @@ describe('gux-tabs-beta', () => {
       await page.waitForChanges();
 
       expect(spyOnActivePanelChangeEvent.length).toBe(1);
+      expect(spyOnActivePanelChangeEvent.events[0].detail).toBe('2-2');
     });
     it('should not change tabpanel content when tab is disabled', async () => {
       const html = component;
