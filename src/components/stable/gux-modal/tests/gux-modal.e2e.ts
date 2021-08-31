@@ -1,4 +1,4 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
 
 describe('gux-modal', () => {
   describe('#render', () => {
@@ -222,6 +222,96 @@ describe('gux-modal', () => {
 
       expect(guxdismissSpy).toHaveReceivedEvent();
       expect(await page.find('gux-modal')).toBeNull();
+    });
+  });
+
+  describe('focus', () => {
+    const focusModalHtml = (props = '') => `
+      <gux-modal lang="en" size="small" ${props}>
+        <div slot="title">Modal Title</div>
+        <div slot="content">This contains the modal content.</div>
+        <div slot="left-align-buttons">
+            <gux-button id="cancel-button" title="Cancel">Cancel</gux-button>
+        </div>
+        <div slot="right-align-buttons">
+          <gux-button id="accept-button" title='Button' accent='primary'>Accept</gux-button>
+        </div>
+      </gux-modal>
+    `;
+    const modalContainerHtml = `
+      <div id="modal-container"></div>
+      <button id="other-button">Do Nothing</button>
+      <button id="modal-trigger">Open Modal</button>
+    `;
+    const setupContainerPage = async (modalHtml: string) => {
+      const page = await newE2EPage({ html: modalContainerHtml });
+
+      await page.evaluate(html => {
+        document
+          .getElementById('modal-trigger')!
+          .addEventListener('click', () => {
+            document.getElementById('modal-container')!.innerHTML = html;
+          });
+      }, modalHtml);
+      return page;
+    };
+    const getFocusedElementText = (page: E2EPage) =>
+      page.evaluate(() => document.activeElement.textContent);
+
+    it('focuses the first focusable element by default', async () => {
+      const page = await setupContainerPage(focusModalHtml());
+      await page.click('#modal-trigger');
+      await page.waitForChanges();
+
+      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(await getFocusedElementText(page)).toBe('Cancel');
+    });
+    test('can focus a specific focusable element', async () => {
+      const page = await setupContainerPage(
+        focusModalHtml('initial-focus="#accept-button"')
+      );
+      await page.click('#modal-trigger');
+      await page.waitForChanges();
+
+      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(await getFocusedElementText(page)).toBe('Accept');
+    });
+    test('focuses the dismiss button if there are no other focusable elements', async () => {
+      const page = await setupContainerPage(`
+        <gux-modal lang="en" size="small">
+          <div slot="content">This contains the modal content.</div>
+        </gux-modal>
+      `);
+      await page.click('#modal-trigger');
+      await page.waitForChanges();
+
+      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(await page.evaluate(() => document.activeElement.tagName)).toBe(
+        'GUX-DISMISS-BUTTON-BETA'
+      );
+    });
+    test('traps focus in the modal', async () => {
+      const page = await setupContainerPage(focusModalHtml());
+      await page.click('#modal-trigger');
+      await page.waitForChanges();
+
+      expect(await getFocusedElementText(page)).toBe('Cancel');
+      await page.keyboard.press('Tab');
+      expect(await getFocusedElementText(page)).toBe('Accept');
+      await page.keyboard.press('Tab');
+      expect(await getFocusedElementText(page)).toBe('Cancel');
+    });
+    test('returns focus to the originally focused element when the modal closes', async () => {
+      const page = await setupContainerPage(focusModalHtml());
+
+      await page.click('#modal-trigger');
+      await page.waitForChanges();
+
+      expect(await getFocusedElementText(page)).toBe('Cancel');
+      await page.keyboard.down('Escape');
+      await page.waitForChanges();
+
+      expect(await getFocusedElementText(page)).toBe('Open Modal');
     });
   });
 });
