@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "2.33.0",
+  "version": "2.33.1",
   "description": "Common webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",
