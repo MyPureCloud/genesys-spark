@@ -34,7 +34,7 @@ export class GuxTabListBeta {
   tabTriggers: any;
 
   @State()
-  private hasScrollbar: boolean = false;
+  private hasHorizontalScrollbar: boolean = false;
 
   @State()
   private hasVerticalScrollbar: boolean = false;
@@ -52,23 +52,22 @@ export class GuxTabListBeta {
       .join(' ');
   }
 
-  @Listen('keyup')
-  onKeyup(event: KeyboardEvent): void {
-    switch (event.key) {
-      case 'ArrowLeft':
-        this.focusPanel(
-          this.focused ? this.focused - 1 : this.tabTriggers.length - 1
-        );
-        break;
-      case 'ArrowRight':
-        this.focusPanel((this.focused + 1) % this.tabTriggers.length);
-        break;
-    }
-  }
-
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+        event.preventDefault();
+        this.handleKeyboardScroll('forward');
+        break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+        event.preventDefault();
+        this.handleKeyboardScroll('backward');
+        break;
+      case 'Escape':
+        event.preventDefault();
+        this.focusPanel(this.focused);
       case 'Home':
         event.preventDefault();
         this.focusPanel(0);
@@ -101,17 +100,58 @@ export class GuxTabListBeta {
   checkForScrollbarHideOrShow() {
     readTask(() => {
       const el = this.root.querySelector('.gux-scrollable-section');
-      const hasScrollbar = el.clientWidth !== el.scrollWidth;
+      const hasHorizontalScrollbar = el.clientWidth !== el.scrollWidth;
       const hasVerticalScrollbar = el.clientHeight !== el.scrollHeight;
 
-      if (hasScrollbar !== this.hasScrollbar) {
-        this.hasScrollbar = hasScrollbar;
+      if (hasHorizontalScrollbar !== this.hasHorizontalScrollbar) {
+        this.hasHorizontalScrollbar = hasHorizontalScrollbar;
       }
 
       if (hasVerticalScrollbar !== this.hasVerticalScrollbar) {
         this.hasVerticalScrollbar = hasVerticalScrollbar;
       }
     });
+  }
+
+  handleKeyboardScroll(direction): void {
+    const scrollableSection = this.root.querySelector(
+      '.gux-scrollable-section'
+    );
+    const currentTab = this.root.querySelectorAll('gux-tab-beta')[this.focused];
+
+    if (direction === 'forward') {
+      if (this.focused < this.tabTriggers.length - 1) {
+        writeTask(() => {
+          this.hasHorizontalScrollbar
+            ? scrollableSection.scrollBy(currentTab.clientWidth, 0)
+            : scrollableSection.scrollBy(0, currentTab.clientHeight);
+        });
+        this.focusPanel(this.focused + 1);
+      } else {
+        writeTask(() => {
+          this.hasHorizontalScrollbar
+            ? scrollableSection.scrollBy(-scrollableSection.scrollWidth, 0)
+            : scrollableSection.scrollBy(0, -scrollableSection.scrollHeight);
+        });
+        this.focusPanel(0);
+      }
+    } else if (direction === 'backward') {
+      if (this.focused > 0) {
+        writeTask(() => {
+          this.hasHorizontalScrollbar
+            ? scrollableSection.scrollBy(-currentTab.clientWidth, 0)
+            : scrollableSection.scrollBy(0, -currentTab.clientHeight);
+        });
+        this.focusPanel(this.focused - 1);
+      } else {
+        writeTask(() => {
+          this.hasHorizontalScrollbar
+            ? scrollableSection.scrollBy(scrollableSection.scrollWidth, 0)
+            : scrollableSection.scrollBy(0, scrollableSection.scrollHeight);
+        });
+        this.focusPanel(this.tabTriggers.length - 1);
+      }
+    }
   }
 
   disconnectedCallback() {
@@ -190,7 +230,7 @@ export class GuxTabListBeta {
   render(): JSX.Element {
     return (
       <div class="gux-tab-container">
-        {this.hasScrollbar
+        {this.hasHorizontalScrollbar
           ? this.renderScrollButton('scrollLeft')
           : this.renderScrollButton('scrollUp')}
 
@@ -201,7 +241,7 @@ export class GuxTabListBeta {
         >
           <slot></slot>
         </div>
-        {this.hasScrollbar
+        {this.hasHorizontalScrollbar
           ? this.renderScrollButton('scrollRight')
           : this.renderScrollButton('scrollDown')}
       </div>
@@ -211,7 +251,7 @@ export class GuxTabListBeta {
   private renderScrollButton(direction: string): JSX.Element {
     return (
       <div class="gux-scroll-button-container">
-        {this.hasScrollbar || this.hasVerticalScrollbar ? (
+        {this.hasHorizontalScrollbar || this.hasVerticalScrollbar ? (
           <button
             title={this.i18n(direction)}
             aria-label={this.i18n(direction)}
