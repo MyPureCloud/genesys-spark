@@ -63,7 +63,8 @@ export class GuxModal {
     this.focusTrap = createFocusTrap(this.root, {
       escapeDeactivates: false,
       returnFocusOnDeactivate: true,
-      initialFocus
+      initialFocus,
+      fallbackFocus: () => this.root.querySelector('gux-dismiss-button-beta')
     });
     this.focusTrap.activate();
   }
