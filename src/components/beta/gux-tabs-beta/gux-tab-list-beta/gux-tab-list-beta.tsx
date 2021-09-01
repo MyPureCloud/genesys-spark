@@ -67,14 +67,21 @@ export class GuxTabListBeta {
         break;
       case 'Escape':
         event.preventDefault();
-        this.focusPanel(this.focused);
+        this.focusTab(this.focused);
       case 'Home':
         event.preventDefault();
-        this.focusPanel(0);
+        this.focusTab(0);
         break;
       case 'End':
         event.preventDefault();
-        this.focusPanel(this.tabTriggers.length - 1);
+        this.focusTab(this.tabTriggers.length - 1);
+        break;
+      case 'Tab':
+        this.tabTriggers.forEach((tabTrigger, index) => {
+          if (tabTrigger.querySelector('.gux-active')) {
+            this.focused = index;
+          }
+        });
         break;
     }
   }
@@ -92,7 +99,7 @@ export class GuxTabListBeta {
     });
   }
 
-  private focusPanel(index: number): void {
+  private focusTab(index: number): void {
     this.focused = index;
     this.tabTriggers[this.focused].guxFocus();
   }
@@ -126,14 +133,14 @@ export class GuxTabListBeta {
             ? scrollableSection.scrollBy(currentTab.clientWidth, 0)
             : scrollableSection.scrollBy(0, currentTab.clientHeight);
         });
-        this.focusPanel(this.focused + 1);
+        this.focusTab(this.focused + 1);
       } else {
         writeTask(() => {
           this.hasHorizontalScrollbar
             ? scrollableSection.scrollBy(-scrollableSection.scrollWidth, 0)
             : scrollableSection.scrollBy(0, -scrollableSection.scrollHeight);
         });
-        this.focusPanel(0);
+        this.focusTab(0);
       }
     } else if (direction === 'backward') {
       if (this.focused > 0) {
@@ -142,14 +149,14 @@ export class GuxTabListBeta {
             ? scrollableSection.scrollBy(-currentTab.clientWidth, 0)
             : scrollableSection.scrollBy(0, -currentTab.clientHeight);
         });
-        this.focusPanel(this.focused - 1);
+        this.focusTab(this.focused - 1);
       } else {
         writeTask(() => {
           this.hasHorizontalScrollbar
             ? scrollableSection.scrollBy(scrollableSection.scrollWidth, 0)
             : scrollableSection.scrollBy(0, scrollableSection.scrollHeight);
         });
-        this.focusPanel(this.tabTriggers.length - 1);
+        this.focusTab(this.tabTriggers.length - 1);
       }
     }
   }
@@ -253,6 +260,7 @@ export class GuxTabListBeta {
       <div class="gux-scroll-button-container">
         {this.hasHorizontalScrollbar || this.hasVerticalScrollbar ? (
           <button
+            tabindex="-1"
             title={this.i18n(direction)}
             aria-label={this.i18n(direction)}
             class="gux-scroll-button"
