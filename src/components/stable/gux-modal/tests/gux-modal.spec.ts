@@ -1,6 +1,17 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxButton } from '../../gux-button/gux-button';
 import { GuxModal } from '../gux-modal';
+import { MockHTMLElement } from '@stencil/core/mock-doc';
+
+// Monkeypatch a missing function in the stencil mock docs
+if (!('getAttributeNode' in MockHTMLElement.prototype)) {
+  Object.assign(MockHTMLElement.prototype, {
+    // The implementation doesn't have to be right it just can't crash
+    getAttributeNode() {
+      return null;
+    }
+  });
+}
 
 const components = [GuxButton, GuxModal];
 const language = 'en';
