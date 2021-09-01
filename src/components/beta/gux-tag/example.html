@@ -166,7 +166,7 @@
   Array.from(removeTagElements).forEach(function(removeTagElement) {
     removeTagElement.addEventListener('guxdelete', (event) => {
       const valueToRemove = event.detail;
-console.log({ valueToRemove });
+
       Array.from(
         removeTagElement.querySelectorAll('gux-tag-beta')
       ).forEach((tag) => {
