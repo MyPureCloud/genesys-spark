@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.33.2](https://inindca///compare/v2.33.1...v2.33.2) (2021-09-02)
+
+
+### Bug Fixes
+
+* **tabs:** tab options button can now close options menu ([5adb595](https://inindca///commit/5adb595c965e04f377c69ba955b64a3638e9443d))
+
 ### [2.33.1](https://inindca///compare/v2.33.0...v2.33.1) (2021-08-31)
 
 ## [2.33.0](https://inindca///compare/v2.32.0...v2.33.0) (2021-08-30)
