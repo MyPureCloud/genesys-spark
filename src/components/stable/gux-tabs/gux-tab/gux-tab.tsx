@@ -65,6 +65,10 @@ export class GuxTab {
     this.internaltabselected.emit();
   }
 
+  private popoverOnClick(e: MouseEvent): void {
+    e.stopPropagation();
+  }
+
   private getDropdownOptions(): JSX.Element {
     if (this.hasDropdownOptions) {
       return [
@@ -86,6 +90,7 @@ export class GuxTab {
           hidden={this.popoverHidden}
           closeOnClickOutside={true}
           onGuxdismiss={() => (this.popoverHidden = true)}
+          onClick={(e: MouseEvent) => this.popoverOnClick(e)}
         >
           <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
             <slot name="dropdown-options" />

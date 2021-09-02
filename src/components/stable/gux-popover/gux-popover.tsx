@@ -6,7 +6,6 @@ import {
   EventEmitter,
   h,
   JSX,
-  Listen,
   Prop,
   State,
   Watch
@@ -62,15 +61,6 @@ export class GuxPopover {
   @State()
   hidden: boolean = true;
 
-  @Listen('click', { target: 'window' })
-  onClickAway(e: FocusEvent) {
-    if (!this.displayDismissButton && !this.hidden) {
-      if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
-        this.dismiss();
-      }
-    }
-  }
-
   @Watch('hidden')
   hiddenHandler(hidden: boolean) {
     if (!hidden && !this.popperInstance) {
@@ -86,7 +76,7 @@ export class GuxPopover {
     const forElement = document.getElementById(this.for);
     const clickedForElement = clickPath.includes(forElement);
 
-    if (this.closeOnClickOutside && !this.hidden && !clickedForElement) {
+    if ((this.closeOnClickOutside || !this.displayDismissButton) && !this.hidden && !clickedForElement) {
       this.dismiss();
     }
   }
