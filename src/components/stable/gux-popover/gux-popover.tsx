@@ -11,8 +11,8 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import { ClickOutside } from 'stencil-click-outside';
 
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { onHiddenChange } from '../../../utils/dom/on-attribute-change';
 import { trackComponent } from '../../../usage-tracking';
 
@@ -80,9 +80,13 @@ export class GuxPopover {
     }
   }
 
-  @ClickOutside({ triggerEvents: 'mousedown' })
-  checkForClickOutside() {
-    if (this.closeOnClickOutside && !this.hidden) {
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  checkForClickOutside(event: MouseEvent) {
+    const clickPath = event.composedPath();
+    const forElement = document.getElementById(this.for);
+    const clickedForElement = clickPath.includes(forElement);
+
+    if (this.closeOnClickOutside && !this.hidden && !clickedForElement) {
       this.dismiss();
     }
   }
