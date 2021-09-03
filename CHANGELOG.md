@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.33.3](https://inindca///compare/v2.33.2...v2.33.3) (2021-09-03)
+
+
+### Bug Fixes
+
+* **tabs:** fixed tab options button size ([567d127](https://inindca///commit/567d127d2e6ff4e8f6f3662b35ce927a669c34f0))
+
 ### [2.33.2](https://inindca///compare/v2.33.1...v2.33.2) (2021-09-02)
 
 
