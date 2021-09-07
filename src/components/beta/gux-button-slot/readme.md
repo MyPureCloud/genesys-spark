@@ -21,11 +21,13 @@
 ### Used by
 
  - [gux-action-button](../../stable/gux-action-button)
+ - [gux-pagination-cursor-beta](../gux-pagination-cursor)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-action-button --> gux-button-slot-beta
+  gux-pagination-cursor-beta --> gux-button-slot-beta
   style gux-button-slot-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
