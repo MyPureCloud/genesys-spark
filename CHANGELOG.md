@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.34.0](https://inindca///compare/v2.33.4...v2.34.0) (2021-09-07)
+
+
+### Features
+
+* **cursor-pagination:** added cursor pagination component ([8b71e0c](https://inindca///commit/8b71e0cdbb2ba4e45346661aea7b0780368265f3))
+
+
+### Bug Fixes
+
+* **action-button:** fixed action button dropdown positioning ([593712c](https://inindca///commit/593712c4d7c22940dcb40dbff101f26b7b174695))
+* **action-button:** fixed dropdown stacking order ([96d5f36](https://inindca///commit/96d5f36c177fc00c9dd4595068160c9963bd4cf2))
+* **tabs:** fixed tab options click away functionality ([779dda3](https://inindca///commit/779dda3130c82a1d590f65dd9ce0112cf28e71e0))
+
 ### [2.33.4](https://inindca///compare/v2.33.3...v2.33.4) (2021-09-06)
 
 ### [2.33.3](https://inindca///compare/v2.33.2...v2.33.3) (2021-09-03)
