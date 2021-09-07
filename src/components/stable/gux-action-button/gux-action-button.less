@@ -4,21 +4,18 @@
 // Variables part
 
 gux-action-button {
+  display: block;
   .body-font();
 
   .gux-action-button-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    align-items: flex-start;
-    justify-content: flex-start;
     min-width: 128px;
 
+    & > * {
+      vertical-align: middle;
+    }
+
     .gux-action-button {
-      flex: 1 1 auto;
-      align-self: auto;
-      order: 0;
+      width: calc(100% - 33px);
       margin-right: 1px;
 
       button {
@@ -31,10 +28,6 @@ gux-action-button {
     }
 
     .gux-dropdown-button {
-      flex: 0 1 auto;
-      align-self: auto;
-      order: 0;
-
       button {
         width: 32px;
         min-width: 0;
