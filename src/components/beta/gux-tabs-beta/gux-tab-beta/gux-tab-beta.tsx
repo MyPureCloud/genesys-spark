@@ -49,6 +49,11 @@ export class GuxTabBeta {
     this.buttonElement.focus();
   }
 
+  @Method()
+  async guxGetActive() {
+    return this.active;
+  }
+
   render() {
     return (
       <button

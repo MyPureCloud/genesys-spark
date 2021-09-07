@@ -33,6 +33,16 @@ Type: `Promise<void>`
 
 
 
+### `guxGetActive() => Promise<boolean>`
+
+
+
+#### Returns
+
+Type: `Promise<boolean>`
+
+
+
 ### `guxSetActive(active: boolean) => Promise<void>`
 
 

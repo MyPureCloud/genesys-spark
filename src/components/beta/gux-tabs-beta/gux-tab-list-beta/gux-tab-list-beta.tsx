@@ -31,7 +31,7 @@ export class GuxTabListBeta {
   focused: number = 0;
 
   @State()
-  tabTriggers: any;
+  tabTriggers: NodeListOf<HTMLGuxTabBetaElement>;
 
   @State()
   private hasHorizontalScrollbar: boolean = false;
@@ -77,8 +77,9 @@ export class GuxTabListBeta {
         this.focusTab(this.tabTriggers.length - 1);
         break;
       case 'Tab':
-        this.tabTriggers.forEach((tabTrigger, index) => {
-          if (tabTrigger.querySelector('.gux-active')) {
+        this.tabTriggers.forEach(async (tabTrigger, index) => {
+          const activeElement = await tabTrigger.guxGetActive();
+          if (activeElement) {
             this.focused = index;
           }
         });
@@ -120,7 +121,7 @@ export class GuxTabListBeta {
     });
   }
 
-  handleKeyboardScroll(direction): void {
+  handleKeyboardScroll(direction: 'forward' | 'backward'): void {
     const scrollableSection = this.root.querySelector(
       '.gux-scrollable-section'
     );
