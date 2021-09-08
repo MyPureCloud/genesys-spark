@@ -138,6 +138,9 @@ describe('gux-modal', () => {
         await page.waitForChanges();
 
         expect(page.root).toMatchSnapshot();
+
+        // Disconnect so that the focus trap is properly cleaned up
+        page.root!.remove();
       });
     });
   });
@@ -174,6 +177,8 @@ describe('gux-modal', () => {
       expect(guxdismissSpy).toHaveBeenCalled();
       expect(clickSpy).not.toHaveBeenCalled();
       expect(elementRemoveSpy).toBeCalledWith();
+
+      page.root!.remove();
     });
 
     it('click dismiss button and prevent default', async () => {
@@ -204,6 +209,8 @@ describe('gux-modal', () => {
       await page.waitForChanges();
 
       expect(elementRemoveSpy).not.toBeCalled();
+
+      page.root!.remove();
     });
   });
 });
