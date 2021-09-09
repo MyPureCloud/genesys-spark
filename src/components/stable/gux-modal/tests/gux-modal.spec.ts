@@ -1,6 +1,17 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxButton } from '../../gux-button/gux-button';
 import { GuxModal } from '../gux-modal';
+import { MockHTMLElement } from '@stencil/core/mock-doc';
+
+// Monkeypatch a missing function in the stencil mock docs
+if (!('getAttributeNode' in MockHTMLElement.prototype)) {
+  Object.assign(MockHTMLElement.prototype, {
+    // The implementation doesn't have to be right it just can't crash
+    getAttributeNode() {
+      return null;
+    }
+  });
+}
 
 const components = [GuxButton, GuxModal];
 const language = 'en';
@@ -127,6 +138,9 @@ describe('gux-modal', () => {
         await page.waitForChanges();
 
         expect(page.root).toMatchSnapshot();
+
+        // Disconnect so that the focus trap is properly cleaned up
+        page.root!.remove();
       });
     });
   });
@@ -163,6 +177,8 @@ describe('gux-modal', () => {
       expect(guxdismissSpy).toHaveBeenCalled();
       expect(clickSpy).not.toHaveBeenCalled();
       expect(elementRemoveSpy).toBeCalledWith();
+
+      page.root!.remove();
     });
 
     it('click dismiss button and prevent default', async () => {
@@ -193,6 +209,8 @@ describe('gux-modal', () => {
       await page.waitForChanges();
 
       expect(elementRemoveSpy).not.toBeCalled();
+
+      page.root!.remove();
     });
   });
 });

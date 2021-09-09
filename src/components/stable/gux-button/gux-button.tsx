@@ -6,6 +6,9 @@ import { GuxButtonAccent, GuxButtonType } from './gux-button.types';
 @Component({
   styleUrl: 'gux-button.less',
   tag: 'gux-button'
+  // NOTE: In the future if we migrate this to shadowDOM, `delegatesFocus` so .focus() works
+  //   This will let us remove a workaround for gux-buttons in gux-modal.
+  // shadow: { delegatesFocus: true }
 })
 export class GuxButton {
   @Element()

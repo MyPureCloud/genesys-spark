@@ -17,14 +17,14 @@
     accent="primary"
     onClick='(function() {
         const html = window.toHTML(`
-            <gux-modal size="small">
+            <gux-modal initial-focus="#cancel-button" size="small">
                 <div slot="title">Modal Title</div>
                 <div slot="content">This contains the modal content.</div>
                 <div slot="left-align-buttons">
                     <gux-button title="Accept" accent="primary">Accept</gux-button>
                 </div>
                 <div slot="right-align-buttons">
-                    <gux-button title="Cancel">Cancel</gux-button>
+                    <gux-button id="cancel-button" title="Cancel">Cancel</gux-button>
                 </div>
             </gux-modal>
         `);
