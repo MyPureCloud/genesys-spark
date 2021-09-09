@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.35.0](https://inindca///compare/v2.34.0...v2.35.0) (2021-09-09)
+
+
+### Features
+
+* **modal:** add a workaround for gux-elements not supporting .focus() ([3963443](https://inindca///commit/3963443ec2f6c653c5bfdea25965257431fee54a))
+* **modal:** add prop to control initial focus behavior ([15e52c8](https://inindca///commit/15e52c8243d8bba9c9e0fa74e246a01a3d981f19))
+* **modal:** fallback focus to dismiss button for content-only modal ([acad26d](https://inindca///commit/acad26dd9c007f3384f2fe9c3586d8da8820d5cf))
+* **modal:** modal can be dismissed with the escape key ([a3d839f](https://inindca///commit/a3d839f85b41e31d18c23de72cc58cc1a9f5f4df))
+* **modal:** trap focus inside modal when open ([194f89a](https://inindca///commit/194f89acd2cdc293f01803dd46c786aa9c774954))
+
 ## [2.34.0](https://inindca///compare/v2.33.4...v2.34.0) (2021-09-07)
 
 
