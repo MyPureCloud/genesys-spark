@@ -1,17 +1,29 @@
 <h1>Default</h1>
-<gux-column-chart-beta id="chart-1"> </gux-column-chart-beta>
+<gux-column-chart-beta id="chart-1" x-field-name="category">
+</gux-column-chart-beta>
 
 <h1>Layered</h1>
-<gux-column-chart-beta id="chart-2"> </gux-column-chart-beta>
+<gux-column-chart-beta id="chart-2" x-field-name="category">
+</gux-column-chart-beta>
 
 <h1>Legend</h1>
-<gux-column-chart-beta id="chart-3"> </gux-column-chart-beta>
+<gux-column-chart-beta
+  id="chart-3"
+  include-legend="true"
+  x-field-name="category"
+>
+</gux-column-chart-beta>
+
+<h1>Non-default data fields</h1>
+<gux-column-chart-beta id="chart-4" x-field-name="grade" y-field-name="count">
+</gux-column-chart-beta>
 
 <style
   onload="(function() {
     const chart1 = document.querySelector('#chart-1');
     const chart2 = document.querySelector('#chart-2');
     const chart3 = document.querySelector('#chart-3');
+    const chart4 = document.querySelector('#chart-4');
 
     chart1.addEventListener('chartClicked', (event) => console.log(event));
 
@@ -25,82 +37,24 @@
   ]
 }
 
-chart2.chartData = { 'values': [
-      {
-        'date': 'Sun May 01 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
-        'value': 5,
-        'series': 'abandon'
-      },
-      {
-        'date': 'Sun May 01 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
-        'value': 10,
-        'series': 'answer'
-      },
-      {
-        'date': 'Sun May 02 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
-        'value': 10,
-        'series': 'answer'
-      },
-      {
-        'date': 'Sun May 03 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
-        'value': 100,
-        'series': 'answer'
-      },
-      {
-        'date': 'Sun May 04 2021 00:00:00 GMT-0400 (Eastern Daylight Time)',
-        'value': 0,
-        'series': 'answer'
-      }
-    ]};
-
-chart2.chartLayer = [
-    {
-      'mark': 'bar',
-      'transform': [{
-        'filter': {'field': 'series', 'equal': 'answer'}
-        }],
-      'encoding': {
-          'x': {
-            'timeUnit': 'yearmonthdate',
-            'field': 'date',
-            'type': 'ordinal',
-            'title': 'time',
-            'series': 'answer',
-            'axis': {'format': '%b %e'},
-
-          },
-          'y': {
-            'field': 'value',
-            'type': 'quantitative',
-            'title': null,
-          }
-      }
-    },
-    {
-      'mark': 'bar',
-      'transform': [{
-        'filter': {'field': 'series', 'equal': 'abandon'}
-        }],
-      'encoding': {
-          'x': {
-            'timeUnit': 'yearmonthdate',
-            'field': 'date',
-            'type': 'ordinal',
-            'title': 'time',
-            'series': 'abandon',
-            'axis': {'format': '%b %e'}
-          },
-          'y': {
-            'field': 'value',
-            'type': 'quantitative',
-            'title': null,
-          }
-      }
-    }
-
+chart2.chartData = {'values': [
+    {'category': 'a', 'value': 3, 'series': 'group1'},
+    {'category': 'a', 'value': 4, 'series': 'group2'},
+    {'category': 'b', 'value': 1, 'series': 'group1'},
+    {'category': 'b', 'value': 6, 'series': 'group2'},
+    {'category': 'c', 'value': 10, 'series': 'group2'},
+    {'category': 'c', 'value': 7, 'series': 'group1'},
+    {'category': 'd', 'value': 6, 'series': 'group2'},
+    {'category': 'd', 'value': 3, 'series': 'group1'},
+    {'category': 'e', 'value': 14, 'series': 'group2'},
+    {'category': 'e', 'value': 10, 'series': 'group1'},
+    {'category': 'f', 'value': 20, 'series': 'group2'},
+    {'category': 'f', 'value': 2, 'series': 'group1'}
   ]
+}
+chart2.chartLayers = ['group2', 'group1']
 
-  chart3.chartData = {'values': [
+chart3.chartData = {'values': [
     {'category': 'a', 'value': 4},
     {'category': 'b', 'value': 6},
     {'category': 'c', 'value': 10},
@@ -109,11 +63,15 @@ chart2.chartLayer = [
     {'category': 'f', 'value': 20}
   ]
 }
-  chart3.chartEncoding = {
-      'x': { field: 'category', type: 'nominal' },
-      'y': { field: 'value', type: 'quantitative' },
-      'color': { field: 'category'}
-    }
+
+chart4.chartData = {'values': [
+    {'grade': 'A', 'count': 4},
+    {'grade': 'B', 'count': 6},
+    {'grade': 'C', 'count': 10},
+    {'grade': 'D', 'count': 3},
+    {'grade': 'F', 'count': 1}
+  ]
+}
 
   })()"
 >

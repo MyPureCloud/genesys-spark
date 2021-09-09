@@ -3,6 +3,8 @@ import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
 
+const DEFAULT_X_FIELD_NAME = 'date';
+const DEFAULT_Y_FIELD_NAME = 'value';
 @Component({
   styleUrl: 'gux-column-chart.less',
   tag: 'gux-column-chart-beta'
@@ -11,40 +13,22 @@ export class GuxColumnChart {
   @Element()
   root: HTMLElement;
 
-  @Prop()
-  visualizationSpec: VisualizationSpec;
+  private visualizationSpec: VisualizationSpec;
 
-  @Prop()
-  baseChartSpec: VisualizationSpec = {
+  private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     mark: { type: 'bar', width: 16 },
     config: {
       legend: {
         symbolType: 'circle'
       },
-
       bar: {
         color: '#203B73'
-      },
-
-      range: {
-        category: [
-          '#203B73',
-          '#1DA8B3',
-          '#75A8FF',
-          '#8452CF',
-          '#B5B5EB',
-          '#CC3EBE',
-          '#5E5782',
-          '#FF8FDD',
-          '#868C1E',
-          '#DDD933'
-        ]
       }
     },
     encoding: {
-      x: { field: 'category', type: 'nominal' },
-      y: { field: 'value', type: 'quantitative' },
+      x: { field: DEFAULT_X_FIELD_NAME, type: 'nominal' },
+      y: { field: DEFAULT_Y_FIELD_NAME, type: 'quantitative' },
       tooltip: { aggregate: 'count', type: 'quantitative' }
     }
   };
@@ -53,15 +37,19 @@ export class GuxColumnChart {
   chartData: Record<string, unknown>;
 
   @Prop()
-  chartLayer: Record<string, unknown>;
+  includeLegend: boolean;
+
+  @Prop()
+  xFieldName: string;
+
+  @Prop()
+  yFieldName: string;
+
+  @Prop()
+  chartLayers: string[];
 
   @Prop()
   embedOptions: EmbedOptions;
-
-  @Prop()
-  chartEncoding: Record<string, unknown>;
-
-  columnChartSpec: string;
 
   @Watch('chartData')
   parseData() {
@@ -70,22 +58,63 @@ export class GuxColumnChart {
       chartData = { data: this.chartData };
     }
 
-    let chartLayer = {};
-    if (this.chartLayer) {
-      chartLayer = { layer: this.chartLayer };
+    if (this.includeLegend) {
+      this.baseChartSpec.encoding.color = { field: 'category' };
     }
 
-    const chartEncoding = {};
-    if (this.chartEncoding) {
-      chartLayer = { encoding: this.chartEncoding };
+    const xFieldName = this.xFieldName;
+    const yFieldName = this.yFieldName;
+
+    if (this.chartLayers) {
+      const layers = this.chartLayers.map(layerName => {
+        return {
+          mark: 'bar',
+          transform: [
+            {
+              filter: { field: 'series', equal: layerName }
+            }
+          ],
+          encoding: {
+            x: {
+              field: xFieldName || 'category',
+              type: 'nominal'
+            },
+            y: {
+              field: yFieldName || 'value',
+              type: 'quantitative'
+            }
+          }
+        };
+      });
+      this.baseChartSpec.layer = layers;
+    } else {
+      if (xFieldName) {
+        this.baseChartSpec.encoding.x.field = this.xFieldName;
+      }
+
+      if (yFieldName) {
+        this.baseChartSpec.encoding.y.field = this.yFieldName;
+      }
     }
 
-    const spec = Object.assign(
-      this.baseChartSpec,
-      chartData,
-      chartLayer,
-      chartEncoding
-    );
+    // Set up colors for legend and bars
+    const rangeField = this.xFieldName || DEFAULT_X_FIELD_NAME;
+    const rangeConfig = {
+      [rangeField]: [
+        '#203B73',
+        '#1DA8B3',
+        '#75A8FF',
+        '#8452CF',
+        '#B5B5EB',
+        '#CC3EBE',
+        '#5E5782',
+        '#FF8FDD',
+        '#868C1E',
+        '#DDD933'
+      ]
+    };
+    this.baseChartSpec.config.range = rangeConfig;
+    const spec = Object.assign(this.baseChartSpec, chartData);
     this.visualizationSpec = spec;
   }
 
