@@ -33,7 +33,7 @@ export class GuxDropdownV2Beta {
   @Element()
   private root: HTMLElement;
 
-  @Prop()
+  @Prop({ mutable: true })
   value: string;
 
   @Prop()
@@ -63,9 +63,7 @@ export class GuxDropdownV2Beta {
       return;
     }
 
-    const selectedListboxOptionElement = this.root.querySelector(
-      `gux-option-v2[value="${newValue}"]`
-    );
+    const selectedListboxOptionElement = this.getOptionElementByValue(newValue);
 
     if (selectedListboxOptionElement) {
       this.listboxElement.value = newValue;
@@ -121,25 +119,11 @@ export class GuxDropdownV2Beta {
     this.validateValue(this.value);
   }
 
-  private renderTarget(): JSX.Element {
-    return (
-      <button
-        slot="target"
-        type="button"
-        class="gux-field-button"
-        disabled={this.disabled}
-        onClick={this.fieldButtonClick.bind(this)}
-        ref={el => (this.fieldButtonElement = el)}
-        aria-haspopup="listbox"
-        aria-expanded={this.expanded.toString()}
-      >
-        <div class="gux-selected-option">{this.renderTargetDisplayText()}</div>
-        <gux-icon
-          class="gux-expand-icon"
-          decorative
-          iconName="chevron-small-down"
-        ></gux-icon>
-      </button>
+  private getOptionElementByValue(value: string): HTMLGuxOptionV2Element {
+    const listboxOptionElements = this.root.querySelectorAll('gux-option-v2');
+
+    return Array.from(listboxOptionElements).find(
+      listboxOptionElement => listboxOptionElement.value === value
     );
   }
 
@@ -169,8 +153,8 @@ export class GuxDropdownV2Beta {
   }
 
   private renderTargetDisplayText(): JSX.Element {
-    const selectedListboxOptionElement = this.root.querySelector(
-      `gux-option-v2[value="${this.value}"]`
+    const selectedListboxOptionElement = this.getOptionElementByValue(
+      this.value
     );
 
     if (selectedListboxOptionElement) {
@@ -185,6 +169,28 @@ export class GuxDropdownV2Beta {
       <div class="gux-placeholder">
         {this.placeholder || this.i18n('noSelection')}
       </div>
+    );
+  }
+
+  private renderTarget(): JSX.Element {
+    return (
+      <button
+        slot="target"
+        type="button"
+        class="gux-field-button"
+        disabled={this.disabled}
+        onClick={this.fieldButtonClick.bind(this)}
+        ref={el => (this.fieldButtonElement = el)}
+        aria-haspopup="listbox"
+        aria-expanded={this.expanded.toString()}
+      >
+        <div class="gux-selected-option">{this.renderTargetDisplayText()}</div>
+        <gux-icon
+          class="gux-expand-icon"
+          decorative
+          iconName="chevron-small-down"
+        ></gux-icon>
+      </button>
     );
   }
 

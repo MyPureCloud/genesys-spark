@@ -48,10 +48,6 @@ Type: `Promise<void>`
 
 ## Dependencies
 
-### Used by
-
- - [gux-pagination-items-per-page](../gux-pagination/gux-pagination-items-per-page)
-
 ### Depends on
 
 - [gux-text-field-legacy](../../legacy/gux-text-field-legacy)
@@ -63,7 +59,6 @@ graph TD;
   gux-dropdown --> gux-text-field-legacy
   gux-dropdown --> gux-icon
   gux-text-field-legacy --> gux-icon
-  gux-pagination-items-per-page --> gux-dropdown
   style gux-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

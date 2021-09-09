@@ -30,10 +30,6 @@ Type: `Promise<boolean>`
 
 ## Dependencies
 
-### Used by
-
- - [gux-pagination-items-per-page](../../gux-pagination/gux-pagination-items-per-page)
-
 ### Depends on
 
 - [gux-text-highlight](../../gux-text-highlight)
@@ -42,7 +38,6 @@ Type: `Promise<boolean>`
 ```mermaid
 graph TD;
   gux-option --> gux-text-highlight
-  gux-pagination-items-per-page --> gux-option
   style gux-option fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
