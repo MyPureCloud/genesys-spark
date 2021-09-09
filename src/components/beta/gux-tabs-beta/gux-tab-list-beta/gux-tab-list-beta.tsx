@@ -39,6 +39,20 @@ export class GuxTabListBeta {
   @State()
   private hasVerticalScrollbar: boolean = false;
 
+  @Listen('focusout')
+  onFocusout(event: FocusEvent) {
+    if (!this.root.contains(event.relatedTarget as Node)) {
+      this.tabTriggers.forEach(async (tabTrigger, index) => {
+        const activeElement = await tabTrigger.guxGetActive();
+        if (activeElement) {
+          this.focused = index;
+        } else {
+          tabTrigger.querySelector('button').setAttribute('tabindex', '-1');
+        }
+      });
+    }
+  }
+
   private resizeObserver?: ResizeObserver;
 
   private domObserver?: MutationObserver;
@@ -76,14 +90,6 @@ export class GuxTabListBeta {
         event.preventDefault();
         this.focusTab(this.tabTriggers.length - 1);
         break;
-      case 'Tab':
-        this.tabTriggers.forEach(async (tabTrigger, index) => {
-          const activeElement = await tabTrigger.guxGetActive();
-          if (activeElement) {
-            this.focused = index;
-          }
-        });
-        break;
     }
   }
 
@@ -100,8 +106,17 @@ export class GuxTabListBeta {
     });
   }
 
-  private focusTab(index: number): void {
-    this.focused = index;
+  private focusTab(tabIndex: number): void {
+    this.focused = tabIndex;
+    this.tabTriggers.forEach(async (tabTrigger, index) => {
+      const activeElement = await tabTrigger.guxGetActive();
+      if (this.focused !== index && !activeElement) {
+        tabTrigger.querySelector('button').setAttribute('tabindex', '-1');
+      }
+    });
+    this.tabTriggers[this.focused]
+      .querySelector('button')
+      .setAttribute('tabindex', '0');
     this.tabTriggers[this.focused].guxFocus();
   }
 
