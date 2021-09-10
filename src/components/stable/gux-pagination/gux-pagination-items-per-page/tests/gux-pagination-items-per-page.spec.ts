@@ -1,9 +1,15 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page';
-import { GuxDropdown } from '../../../gux-dropdown/gux-dropdown';
-import { GuxOption } from '../../../gux-dropdown/gux-option/gux-option';
+import { GuxDropdownV2Beta } from '../../../../beta/gux-dropdown-v2/gux-dropdown-v2';
+import { GuxListbox } from '../../../../beta/gux-dropdown-v2/gux-listbox/gux-listbox';
+import { GuxOptionV2 } from '../../../../beta/gux-dropdown-v2/gux-option-v2/gux-option-v2';
 
-const components = [GuxPaginationItemsPerPage, GuxDropdown, GuxOption];
+const components = [
+  GuxPaginationItemsPerPage,
+  GuxDropdownV2Beta,
+  GuxListbox,
+  GuxOptionV2
+];
 const language = 'en';
 
 describe('gux-pagination-items-per-page', () => {
@@ -16,11 +22,8 @@ describe('gux-pagination-items-per-page', () => {
     ].forEach(({ itemsPerPage }, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const html = `
-          <gux-pagination-items-per-page items-per-page="${itemsPerPage}">
-            <gux-option value="25">25</gux-option>
-            <gux-option value="50">50</gux-option>
-            <gux-option value="75">75</gux-option>
-            <gux-option value="100">100</gux-option>
+          <gux-pagination-items-per-page
+            items-per-page="${itemsPerPage}">
           </gux-pagination-items-per-page>
         `;
         const page = await newSpecPage({ components, html, language });

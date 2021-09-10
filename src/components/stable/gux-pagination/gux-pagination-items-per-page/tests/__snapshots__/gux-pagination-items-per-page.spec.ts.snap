@@ -2,94 +2,46 @@
 
 exports[`gux-pagination-items-per-page #render should render as expected (1) 1`] = `
 <gux-pagination-items-per-page items-per-page="25">
-  <gux-option tabindex="0" value="25">
-    <!---->
-    <div title="25">
-      <span style="display: none;">
-        25
-      </span>
-      <gux-text-highlight highlight="" text="25"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="50">
-    <!---->
-    <div title="50">
-      <span style="display: none;">
-        50
-      </span>
-      <gux-text-highlight highlight="" text="50"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="75">
-    <!---->
-    <div title="75">
-      <span style="display: none;">
-        75
-      </span>
-      <gux-text-highlight highlight="" text="75"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="100">
-    <!---->
-    <div title="100">
-      <span style="display: none;">
-        100
-      </span>
-      <gux-text-highlight highlight="" text="100"></gux-text-highlight>
-    </div>
-  </gux-option>
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
-      <gux-dropdown>
-        <!---->
-        <div class="gux-default gux-dropdown">
-          <div class="gux-select-field">
-            <span aria-hidden="true" class="gux-ghost"></span>
-            <gux-text-field-legacy class="gux-unclearable" title="25" value="25"></gux-text-field-legacy>
-            <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
-            </button>
-          </div>
-          <div class="gux-options">
-            <gux-option tabindex="0">
-              <!---->
-              <div title="25">
-                <span style="display: none;">
+      <gux-dropdown-v2-beta>
+        <mock:shadow-root>
+          <gux-popup-beta>
+            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
+              <div class="gux-selected-option">
+                <div class="gux-selected-option">
                   25
-                </span>
-                <gux-text-highlight highlight="" text="25"></gux-text-highlight>
+                </div>
               </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="50">
-                <span style="display: none;">
-                  50
-                </span>
-                <gux-text-highlight highlight="" text="50"></gux-text-highlight>
-              </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="75">
-                <span style="display: none;">
-                  75
-                </span>
-                <gux-text-highlight highlight="" text="75"></gux-text-highlight>
-              </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="100">
-                <span style="display: none;">
-                  100
-                </span>
-                <gux-text-highlight highlight="" text="100"></gux-text-highlight>
-              </div>
-            </gux-option>
-          </div>
-        </div>
-      </gux-dropdown>
+              <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+            </button>
+            <div class="gux-listbox-container" slot="popup">
+              <slot></slot>
+            </div>
+          </gux-popup-beta>
+        </mock:shadow-root>
+        <gux-listbox role="listbox" tabindex="0">
+          <mock:shadow-root>
+            <slot></slot>
+          </mock:shadow-root>
+          <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+            <!---->
+            25
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            50
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            75
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            100
+          </gux-option-v2>
+        </gux-listbox>
+      </gux-dropdown-v2-beta>
     </div>
     <div>
       per page
@@ -100,94 +52,46 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
 
 exports[`gux-pagination-items-per-page #render should render as expected (2) 1`] = `
 <gux-pagination-items-per-page items-per-page="50">
-  <gux-option tabindex="0" value="25">
-    <!---->
-    <div title="25">
-      <span style="display: none;">
-        25
-      </span>
-      <gux-text-highlight highlight="" text="25"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="50">
-    <!---->
-    <div title="50">
-      <span style="display: none;">
-        50
-      </span>
-      <gux-text-highlight highlight="" text="50"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="75">
-    <!---->
-    <div title="75">
-      <span style="display: none;">
-        75
-      </span>
-      <gux-text-highlight highlight="" text="75"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="100">
-    <!---->
-    <div title="100">
-      <span style="display: none;">
-        100
-      </span>
-      <gux-text-highlight highlight="" text="100"></gux-text-highlight>
-    </div>
-  </gux-option>
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
-      <gux-dropdown>
-        <!---->
-        <div class="gux-default gux-dropdown">
-          <div class="gux-select-field">
-            <span aria-hidden="true" class="gux-ghost"></span>
-            <gux-text-field-legacy class="gux-unclearable" title="50" value="50"></gux-text-field-legacy>
-            <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
-            </button>
-          </div>
-          <div class="gux-options">
-            <gux-option tabindex="0">
-              <!---->
-              <div title="25">
-                <span style="display: none;">
-                  25
-                </span>
-                <gux-text-highlight highlight="" text="25"></gux-text-highlight>
-              </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="50">
-                <span style="display: none;">
+      <gux-dropdown-v2-beta>
+        <mock:shadow-root>
+          <gux-popup-beta>
+            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
+              <div class="gux-selected-option">
+                <div class="gux-selected-option">
                   50
-                </span>
-                <gux-text-highlight highlight="" text="50"></gux-text-highlight>
+                </div>
               </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="75">
-                <span style="display: none;">
-                  75
-                </span>
-                <gux-text-highlight highlight="" text="75"></gux-text-highlight>
-              </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="100">
-                <span style="display: none;">
-                  100
-                </span>
-                <gux-text-highlight highlight="" text="100"></gux-text-highlight>
-              </div>
-            </gux-option>
-          </div>
-        </div>
-      </gux-dropdown>
+              <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+            </button>
+            <div class="gux-listbox-container" slot="popup">
+              <slot></slot>
+            </div>
+          </gux-popup-beta>
+        </mock:shadow-root>
+        <gux-listbox role="listbox" tabindex="0">
+          <mock:shadow-root>
+            <slot></slot>
+          </mock:shadow-root>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            25
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+            <!---->
+            50
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            75
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            100
+          </gux-option-v2>
+        </gux-listbox>
+      </gux-dropdown-v2-beta>
     </div>
     <div>
       per page
@@ -198,94 +102,46 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
 
 exports[`gux-pagination-items-per-page #render should render as expected (3) 1`] = `
 <gux-pagination-items-per-page items-per-page="75">
-  <gux-option tabindex="0" value="25">
-    <!---->
-    <div title="25">
-      <span style="display: none;">
-        25
-      </span>
-      <gux-text-highlight highlight="" text="25"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="50">
-    <!---->
-    <div title="50">
-      <span style="display: none;">
-        50
-      </span>
-      <gux-text-highlight highlight="" text="50"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="75">
-    <!---->
-    <div title="75">
-      <span style="display: none;">
-        75
-      </span>
-      <gux-text-highlight highlight="" text="75"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="100">
-    <!---->
-    <div title="100">
-      <span style="display: none;">
-        100
-      </span>
-      <gux-text-highlight highlight="" text="100"></gux-text-highlight>
-    </div>
-  </gux-option>
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
-      <gux-dropdown>
-        <!---->
-        <div class="gux-default gux-dropdown">
-          <div class="gux-select-field">
-            <span aria-hidden="true" class="gux-ghost"></span>
-            <gux-text-field-legacy class="gux-unclearable" title="75" value="75"></gux-text-field-legacy>
-            <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
-            </button>
-          </div>
-          <div class="gux-options">
-            <gux-option tabindex="0">
-              <!---->
-              <div title="25">
-                <span style="display: none;">
-                  25
-                </span>
-                <gux-text-highlight highlight="" text="25"></gux-text-highlight>
-              </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="50">
-                <span style="display: none;">
-                  50
-                </span>
-                <gux-text-highlight highlight="" text="50"></gux-text-highlight>
-              </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="75">
-                <span style="display: none;">
+      <gux-dropdown-v2-beta>
+        <mock:shadow-root>
+          <gux-popup-beta>
+            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
+              <div class="gux-selected-option">
+                <div class="gux-selected-option">
                   75
-                </span>
-                <gux-text-highlight highlight="" text="75"></gux-text-highlight>
+                </div>
               </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="100">
-                <span style="display: none;">
-                  100
-                </span>
-                <gux-text-highlight highlight="" text="100"></gux-text-highlight>
-              </div>
-            </gux-option>
-          </div>
-        </div>
-      </gux-dropdown>
+              <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+            </button>
+            <div class="gux-listbox-container" slot="popup">
+              <slot></slot>
+            </div>
+          </gux-popup-beta>
+        </mock:shadow-root>
+        <gux-listbox role="listbox" tabindex="0">
+          <mock:shadow-root>
+            <slot></slot>
+          </mock:shadow-root>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            25
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            50
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+            <!---->
+            75
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            100
+          </gux-option-v2>
+        </gux-listbox>
+      </gux-dropdown-v2-beta>
     </div>
     <div>
       per page
@@ -296,94 +152,46 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
 
 exports[`gux-pagination-items-per-page #render should render as expected (4) 1`] = `
 <gux-pagination-items-per-page items-per-page="100">
-  <gux-option tabindex="0" value="25">
-    <!---->
-    <div title="25">
-      <span style="display: none;">
-        25
-      </span>
-      <gux-text-highlight highlight="" text="25"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="50">
-    <!---->
-    <div title="50">
-      <span style="display: none;">
-        50
-      </span>
-      <gux-text-highlight highlight="" text="50"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="75">
-    <!---->
-    <div title="75">
-      <span style="display: none;">
-        75
-      </span>
-      <gux-text-highlight highlight="" text="75"></gux-text-highlight>
-    </div>
-  </gux-option>
-  <gux-option tabindex="0" value="100">
-    <!---->
-    <div title="100">
-      <span style="display: none;">
-        100
-      </span>
-      <gux-text-highlight highlight="" text="100"></gux-text-highlight>
-    </div>
-  </gux-option>
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
-      <gux-dropdown>
-        <!---->
-        <div class="gux-default gux-dropdown">
-          <div class="gux-select-field">
-            <span aria-hidden="true" class="gux-ghost"></span>
-            <gux-text-field-legacy class="gux-unclearable" title="100" value="100"></gux-text-field-legacy>
-            <button aria-hidden="true" class="gux-dropdown-indicator" tabindex="-1" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
-            </button>
-          </div>
-          <div class="gux-options">
-            <gux-option tabindex="0">
-              <!---->
-              <div title="25">
-                <span style="display: none;">
-                  25
-                </span>
-                <gux-text-highlight highlight="" text="25"></gux-text-highlight>
-              </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="50">
-                <span style="display: none;">
-                  50
-                </span>
-                <gux-text-highlight highlight="" text="50"></gux-text-highlight>
-              </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="75">
-                <span style="display: none;">
-                  75
-                </span>
-                <gux-text-highlight highlight="" text="75"></gux-text-highlight>
-              </div>
-            </gux-option>
-            <gux-option tabindex="0">
-              <!---->
-              <div title="100">
-                <span style="display: none;">
+      <gux-dropdown-v2-beta>
+        <mock:shadow-root>
+          <gux-popup-beta>
+            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
+              <div class="gux-selected-option">
+                <div class="gux-selected-option">
                   100
-                </span>
-                <gux-text-highlight highlight="" text="100"></gux-text-highlight>
+                </div>
               </div>
-            </gux-option>
-          </div>
-        </div>
-      </gux-dropdown>
+              <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+            </button>
+            <div class="gux-listbox-container" slot="popup">
+              <slot></slot>
+            </div>
+          </gux-popup-beta>
+        </mock:shadow-root>
+        <gux-listbox role="listbox" tabindex="0">
+          <mock:shadow-root>
+            <slot></slot>
+          </mock:shadow-root>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            25
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            50
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+            <!---->
+            75
+          </gux-option-v2>
+          <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+            <!---->
+            100
+          </gux-option-v2>
+        </gux-listbox>
+      </gux-dropdown-v2-beta>
     </div>
     <div>
       per page
