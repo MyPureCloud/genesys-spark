@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.35.1](https://inindca///compare/v2.35.0...v2.35.1) (2021-09-10)
+
+
+### Bug Fixes
+
+* **form-field:** fixed readme files ([23d465b](https://inindca///commit/23d465b4f8d47837086b3fdbad638761e3501e47))
+* **pagination:** removed references to legacy components ([acade60](https://inindca///commit/acade6085384ff100b026b8ffe28275ed5d9b9f0))
+* **text-label:** removed references to gux-text-field-legacy ([55f2832](https://inindca///commit/55f283266beb58d9a65760b61124197b042e2e58))
+
 ## [2.35.0](https://inindca///compare/v2.34.0...v2.35.0) (2021-09-09)
 
 
