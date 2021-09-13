@@ -49,6 +49,11 @@ export class GuxTabBeta {
     this.buttonElement.focus();
   }
 
+  @Method()
+  async guxGetActive() {
+    return this.active;
+  }
+
   render() {
     return (
       <button
@@ -58,7 +63,7 @@ export class GuxTabBeta {
           'gux-active': this.active
         }}
         type="button"
-        disabled={this.guxDisabled}
+        aria-disabled={this.guxDisabled.toString()}
         id={`gux-${this.tabId}-tab`}
         role="tab"
         aria-controls={`gux-${this.tabId}-panel`}
