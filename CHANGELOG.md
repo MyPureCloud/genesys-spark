@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.36.0](https://inindca///compare/v2.35.1...v2.36.0) (2021-09-13)
+
+
+### Features
+
+* **gux-button-multi:** added gux-button-multi component ([3f733d5](https://inindca///commit/3f733d54c18f4dec4d95b566f144aaa8e4d9ffff))
+* **gux-tabs-beta:** improving accessibility of gux-tabs-beta ([0b81a22](https://inindca///commit/0b81a22ca8aa7ff91becffaa25e765b0a9d1670d))
+
 ### [2.35.1](https://inindca///compare/v2.35.0...v2.35.1) (2021-09-10)
 
 
