@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxLineChart } from '../gux-line-chart';
+import { GuxLineChart } from '../gux-chart-line';
 
 const components = [GuxLineChart];
 const language = 'en';
@@ -21,9 +21,9 @@ const chartData = {
   ]
 };
 
-describe('gux-line-chart-beta', () => {
+describe('gux-chart-line-beta', () => {
   it('should build', async () => {
-    const html = '<gux-line-chart-beta></gux-line-chart-beta>';
+    const html = '<gux-chart-line-beta></gux-chart-line-beta>';
     const page = await newSpecPage({ components, html, language });
 
     expect(page.rootInstance).toBeInstanceOf(GuxLineChart);
