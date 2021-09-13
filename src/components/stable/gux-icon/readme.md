@@ -23,6 +23,7 @@
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-breadcrumb-item](../gux-breadcrumbs/breadcrumb-item)
+ - [gux-button-multi](../../beta/gux-button-multi)
  - [gux-calendar](../gux-calendar)
  - [gux-color-picker-legacy](../../legacy/gux-color-picker-legacy)
  - [gux-content-search](../gux-content-search)
@@ -60,6 +61,7 @@ graph TD;
   gux-action-button --> gux-icon
   gux-advanced-dropdown --> gux-icon
   gux-breadcrumb-item --> gux-icon
+  gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
   gux-color-picker-legacy --> gux-icon
   gux-content-search --> gux-icon
