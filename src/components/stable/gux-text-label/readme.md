@@ -13,19 +13,6 @@ A styled label element typically used in conjunction with input controls.  The l
 | `position` | `position` | The position of the label relative to its contained element.                                                               | `"above" \| "beside"` | `'above'`   |
 
 
-## Dependencies
-
-### Used by
-
- - [gux-datepicker](../gux-datepicker)
-
-### Graph
-```mermaid
-graph TD;
-  gux-datepicker --> gux-text-label
-  style gux-text-label fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -30,19 +30,14 @@ This is a datepicker component, that allows the user to select a date, or a rang
 
 ### Depends on
 
-- [gux-text-label](../gux-text-label)
-- [gux-text-field-legacy](../../legacy/gux-text-field-legacy)
 - [gux-icon](../gux-icon)
 - [gux-calendar](../gux-calendar)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-datepicker --> gux-text-label
-  gux-datepicker --> gux-text-field-legacy
   gux-datepicker --> gux-icon
   gux-datepicker --> gux-calendar
-  gux-text-field-legacy --> gux-icon
   gux-calendar --> gux-icon
   style gux-datepicker fill:#f9f,stroke:#333,stroke-width:4px
 ```
