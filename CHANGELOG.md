@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.36.1](https://inindca///compare/v2.36.0...v2.36.1) (2021-09-14)
+
+
+### Bug Fixes
+
+* **datepicker:** removed dependency on text-field=legacy component ([a3ac23c](https://inindca///commit/a3ac23ca8889f4003cc27ebd3360a1e46b1c8140))
+
 ## [2.36.0](https://inindca///compare/v2.35.1...v2.36.0) (2021-09-13)
 
 
