@@ -45,81 +45,21 @@ const html = `
 const language = 'en';
 
 describe('gux-flyout-menu', () => {
+  beforeEach(() => {
+    // This is mocked because Popperjs logs an error as the node_env is
+    // set to "test" and // the newSpecPage fails an isHTMLElement check
+    jest.spyOn(console, 'error').mockImplementation();
+  });
+
   describe('#render', () => {
     it(`should render as expected`, async () => {
       const page = await newSpecPage({ components, html, language });
 
       expect(page.rootInstance).toBeInstanceOf(GuxFlyoutMenu);
       expect(page.root).toMatchSnapshot();
+      expect(console.error).toHaveBeenCalledWith(
+        'Popper: "arrow" element must be an HTMLElement (not an SVGElement). To use an SVG arrow, wrap it in an HTMLElement that will be used as the arrow.'
+      );
     });
   });
-
-  // describe('#interactions', () => {
-  //   it(`should change value on gux-switch-item click`, async () => {
-  //     const page = await newSpecPage({ components, html, language });
-  //     const element = page.root as HTMLGuxSwitchBetaElement;
-  //     const guxSwitchItemMinute = page.root.querySelector(
-  //       'gux-switch-item[value=minute]'
-  //     ) as HTMLGuxSwitchItemElement;
-
-  //     expect(element.value).toBe('day');
-
-  //     guxSwitchItemMinute.click();
-  //     await page.waitForChanges();
-
-  //     expect(element.value).toBe(guxSwitchItemMinute.value);
-  //   });
-
-  //   it(`should not change value on gux-switch-item click if it is disabled`, async () => {
-  //     const page = await newSpecPage({ components, html, language });
-  //     const element = page.root as HTMLGuxSwitchBetaElement;
-  //     const guxSwitchItemHour = page.root.querySelector(
-  //       'gux-switch-item[value=hour]'
-  //     ) as HTMLGuxSwitchItemElement;
-  //     const currentValue = element.value;
-
-  //     expect(currentValue).toBe('day');
-
-  //     guxSwitchItemHour.click();
-  //     await page.waitForChanges();
-
-  //     expect(element.value).toBe(currentValue);
-  //   });
-
-  //   it(`should emit a 'guxvaluechanged' event when a new item is selected`, async () => {
-  //     const page = await newSpecPage({ components, html, language });
-  //     const element = page.root as HTMLGuxSwitchBetaElement;
-  //     const guxSwitchItemMinute = page.root.querySelector(
-  //       'gux-switch-item[value=minute]'
-  //     ) as HTMLGuxSwitchItemElement;
-  //     const eventSpy = jest.fn();
-
-  //     element.addEventListener('guxvaluechanged', () => {
-  //       eventSpy();
-  //     });
-
-  //     guxSwitchItemMinute.click();
-  //     await page.waitForChanges();
-
-  //     expect(eventSpy).toHaveBeenCalledWith();
-  //   });
-
-  //   it(`should not emit a 'guxvaluechanged' event when a disabled item is selected`, async () => {
-  //     const page = await newSpecPage({ components, html, language });
-  //     const element = page.root as HTMLGuxSwitchBetaElement;
-  //     const guxSwitchItemHour = page.root.querySelector(
-  //       'gux-switch-item[value=hour]'
-  //     ) as HTMLGuxSwitchItemElement;
-  //     const eventSpy = jest.fn();
-
-  //     element.addEventListener('guxvaluechanged', () => {
-  //       eventSpy();
-  //     });
-
-  //     guxSwitchItemHour.click();
-  //     await page.waitForChanges();
-
-  //     expect(eventSpy).not.toHaveBeenCalled();
-  //   });
-  // });
 });

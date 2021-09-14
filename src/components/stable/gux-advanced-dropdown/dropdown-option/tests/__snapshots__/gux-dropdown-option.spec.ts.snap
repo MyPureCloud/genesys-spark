@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-dropdown-option Class Logic shouldFilter should filter if string is not in the text 1`] = `
+<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+  <div class="gux-dropdown-option" title="TestsAreAwesome">
+    <span>
+      TestsAreAwesome
+    </span>
+  </div>
+</gux-dropdown-option>
+`;
+
+exports[`gux-dropdown-option Class Logic shouldFilter should not filter if case-insensitive string is in the text 1`] = `
+<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+  <div class="gux-dropdown-option" title="TestsAreAwesome">
+    <span>
+      Tests
+      <strong>
+        Are
+      </strong>
+      Awesome
+    </span>
+  </div>
+</gux-dropdown-option>
+`;
+
+exports[`gux-dropdown-option Class Logic shouldFilter should not filter if no search string is provided 1`] = `
+<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+  <div class="gux-dropdown-option" title="TestsAreAwesome">
+    <span>
+      TestsAreAwesome
+    </span>
+  </div>
+</gux-dropdown-option>
+`;
+
+exports[`gux-dropdown-option Class Logic shouldFilter should not filter if string is in the text 1`] = `
+<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+  <div class="gux-dropdown-option" title="TestsAreAwesome">
+    <span>
+      Tests
+      <strong>
+        Are
+      </strong>
+      Awesome
+    </span>
+  </div>
+</gux-dropdown-option>
+`;
+
+exports[`gux-dropdown-option should build 1`] = `
+<gux-dropdown-option tabindex="0" text="TestsAreAwesome">
+  <div class="gux-dropdown-option" title="TestsAreAwesome">
+    <span>
+      TestsAreAwesome
+    </span>
+  </div>
+</gux-dropdown-option>
+`;

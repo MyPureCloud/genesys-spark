@@ -27,7 +27,7 @@ export class GuxList {
   /**
    * The current selection in the list.
    */
-  @Prop()
+  @Prop({ mutable: true })
   value: any;
 
   /**

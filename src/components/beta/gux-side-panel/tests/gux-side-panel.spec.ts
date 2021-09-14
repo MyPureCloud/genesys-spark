@@ -1,65 +1,29 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxSidePanel } from '../gux-side-panel';
 
+const components = [GuxSidePanel];
+const language = 'en';
+
 describe('gux-side-panel', () => {
-  let component: GuxSidePanel;
-
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxSidePanel],
-      html: `<gux-side-panel-beta></gux-side-panel-beta>`,
-      language: 'en'
-    });
-
-    component = page.rootInstance;
-  });
-
   it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxSidePanel);
+    const html = `<gux-side-panel-beta></gux-side-panel-beta>`;
+    const page = await newSpecPage({ components, html, language });
+
+    expect(page.rootInstance).toBeInstanceOf(GuxSidePanel);
   });
 
-  describe('Class Logic', () => {
-    describe('containerClass', () => {
-      it('should return the correct class for closed, left, panels', () => {
-        component.position = 'left';
-        component.isOpen = false;
+  describe('#render', () => {
+    [
+      { position: 'left', isOpen: false },
+      { position: 'left', isOpen: true },
+      { position: 'right', isOpen: false },
+      { position: 'right', isOpen: true }
+    ].forEach(({ position, isOpen }, index) => {
+      it(`should render component as expected (${index + 1})`, async () => {
+        const html = `<gux-side-panel-beta position="${position}" is-open="${isOpen}"></gux-side-panel-beta>`;
+        const page = await newSpecPage({ components, html, language });
 
-        expect(component.containerClass).toEqual('gux-left gux-closed');
-      });
-
-      it('should return the correct class for closed, right, panels', () => {
-        component.position = 'right';
-        component.isOpen = false;
-
-        expect(component.containerClass).toEqual('gux-right gux-closed');
-      });
-
-      it('should return the correct class for open, left, panels', () => {
-        component.position = 'left';
-        component.isOpen = true;
-
-        expect(component.containerClass).toEqual('gux-left gux-open');
-      });
-
-      it('should return the correct class for open, right, panels', () => {
-        component.position = 'right';
-        component.isOpen = true;
-
-        expect(component.containerClass).toEqual('gux-right gux-open');
-      });
-    });
-
-    describe('contentClass', () => {
-      it('should return the correct class for an open panel', () => {
-        component.isOpen = false;
-
-        expect(component.contentClass).toEqual('gux-panel-content gux-closed');
-      });
-
-      it('should return the correct class for closed, right, panels', () => {
-        component.isOpen = true;
-
-        expect(component.contentClass).toEqual('gux-panel-content gux-open');
+        expect(page.root).toMatchSnapshot();
       });
     });
   });

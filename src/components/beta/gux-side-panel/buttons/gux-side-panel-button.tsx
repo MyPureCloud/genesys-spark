@@ -12,7 +12,7 @@ export class GuxSidePanelButton {
   altText: string;
 
   @Prop()
-  isSelected = false;
+  isSelected: boolean = false;
 
   get buttonClass(): string {
     return this.isSelected ? 'selected' : '';

@@ -34,7 +34,7 @@ export class GuxVisualization {
   async componentWillRender(): Promise<void> {
     const locale = getDesiredLocale(this.root);
 
-    embed(
+    await embed(
       this.root,
       Object.assign({}, this.defaultVisualizationSpec, this.visualizationSpec),
       Object.assign(

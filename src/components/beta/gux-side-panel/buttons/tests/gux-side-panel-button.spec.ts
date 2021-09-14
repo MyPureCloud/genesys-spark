@@ -1,34 +1,27 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxSidePanelButton } from '../gux-side-panel-button';
 
+const components = [GuxSidePanelButton];
+const language = 'en';
+
 describe('gux-side-panel-button', () => {
-  let component: GuxSidePanelButton;
-
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxSidePanelButton],
-      html: `<gux-side-panel-button></gux-side-panel-button>`,
-      language: 'en'
-    });
-
-    component = page.rootInstance;
-  });
-
   it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxSidePanelButton);
+    const html = `<gux-side-panel-button></gux-side-panel-button>`;
+    const page = await newSpecPage({ components, html, language });
+
+    expect(page.rootInstance).toBeInstanceOf(GuxSidePanelButton);
   });
 
-  describe('Class Logic', () => {
-    it('should return the correct button class if it is selected', () => {
-      component.isSelected = true;
+  describe('#render', () => {
+    [{ isSelected: false }, { isSelected: true }].forEach(
+      ({ isSelected }, index) => {
+        it(`should render component as expected (${index + 1})`, async () => {
+          const html = `<gux-side-panel-button is-selected="${isSelected}"></gux-side-panel-button>`;
+          const page = await newSpecPage({ components, html, language });
 
-      expect(component.buttonClass).toEqual('selected');
-    });
-
-    it('should return the correct button class if it is not selected', () => {
-      component.isSelected = false;
-
-      expect(component.buttonClass).toEqual('');
-    });
+          expect(page.root).toMatchSnapshot();
+        });
+      }
+    );
   });
 });
