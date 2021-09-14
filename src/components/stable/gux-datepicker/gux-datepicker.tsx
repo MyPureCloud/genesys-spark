@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Listen,
   Prop,
   State,
@@ -47,12 +48,9 @@ import {
 export class GuxDatepicker {
   yearFormat: string = 'yyyy';
   intervalOrder: string[];
-  textFieldElement: HTMLGuxTextFieldLegacyElement;
-  toTextFieldElement: HTMLGuxTextFieldLegacyElement;
   inputElement: HTMLInputElement;
   toInputElement: HTMLInputElement;
   calendarElement: HTMLGuxCalendarElement;
-  fieldDatepickerElement: HTMLDivElement;
   intervalRange: GuxDatepickerIntervalRange;
   focusingRange: boolean = false;
   focusedField: HTMLInputElement;
@@ -583,85 +581,92 @@ export class GuxDatepicker {
   }
 
   componentDidLoad() {
-    this.inputElement = this.textFieldElement.querySelector('input');
-
-    if (this.mode === CalendarModes.Range) {
-      this.toInputElement = this.toTextFieldElement.querySelector('input');
-    }
-
     this.updateDate();
   }
 
-  render() {
+  renderCalendarToggleButton(): JSX.Element {
     return (
-      <div class={`gux-datepicker ${this.active ? 'gux-active' : ''}`}>
-        <div
-          class="gux-datepicker-field"
-          ref={(el: HTMLDivElement) => (this.fieldDatepickerElement = el)}
-        >
-          <gux-text-label label={this.getCalendarLabels()[0]} position="beside">
-            <gux-text-field-legacy
-              class="gux-datepicker-text-field"
+      <button
+        aria-hidden="true"
+        type="button"
+        onClick={() => this.toggleCalendar()}
+        tabindex="-1"
+      >
+        <gux-icon decorative icon-name="calendar"></gux-icon>
+      </button>
+    );
+  }
+
+  renderCalendar(): JSX.Element {
+    return (
+      <gux-calendar
+        ref={(el: HTMLGuxCalendarElement) => (this.calendarElement = el)}
+        value={this.value}
+        mode={this.mode}
+        onInput={(event: CustomEvent) => this.onCalendarSelect(event)}
+        minDate={this.minDate}
+        maxDate={this.maxDate}
+        firstDayOfWeek={this.firstDayOfWeek}
+        numberOfMonths={this.numberOfMonths}
+      />
+    );
+  }
+
+  renderStartDateField(): JSX.Element {
+    return (
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label">
+          {this.getCalendarLabels()[0]}
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input
               type="text"
-              ref={(el: HTMLGuxTextFieldLegacyElement) =>
-                (this.textFieldElement = el)
-              }
+              ref={(el: HTMLInputElement) => (this.inputElement = el)}
               value={this.formatedValue}
-            >
-              <button
-                aria-hidden="true"
-                type="button"
-                onClick={() => {
-                  this.toggleCalendar();
-                }}
-                tabindex="-1"
-              >
-                <gux-icon decorative icon-name="calendar"></gux-icon>
-              </button>
-            </gux-text-field-legacy>
-            <gux-calendar
-              ref={(el: HTMLGuxCalendarElement) => (this.calendarElement = el)}
-              value={this.value}
-              mode={this.mode}
-              onInput={(event: CustomEvent) => this.onCalendarSelect(event)}
-              minDate={this.minDate}
-              maxDate={this.maxDate}
-              firstDayOfWeek={this.firstDayOfWeek}
-              numberOfMonths={this.numberOfMonths}
             />
-          </gux-text-label>
-        </div>
-        {this.mode === CalendarModes.Range && (
-          <div
-            class="gux-datepicker-field"
-            ref={(el: HTMLDivElement) => (this.fieldDatepickerElement = el)}
-          >
-            <gux-text-label
-              label={this.getCalendarLabels()[1]}
-              position="beside"
-            >
-              <gux-text-field-legacy
-                class="gux-datepicker-text-field"
-                type="text"
-                ref={(el: HTMLGuxTextFieldLegacyElement) =>
-                  (this.toTextFieldElement = el)
-                }
-                value={this.toFormatedValue}
-              >
-                <button
-                  aria-hidden="true"
-                  type="button"
-                  onClick={() => {
-                    this.toggleCalendar();
-                  }}
-                  tabindex="-1"
-                >
-                  <gux-icon decorative icon-name="calendar"></gux-icon>
-                </button>
-              </gux-text-field-legacy>
-            </gux-text-label>
+            {this.renderCalendarToggleButton()}
           </div>
-        )}
+          {this.renderCalendar()}
+        </div>
+      </div>
+    );
+  }
+
+  renderEndDateField(): JSX.Element {
+    if (this.mode === CalendarModes.Single) {
+      return null;
+    }
+
+    return (
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label">
+          {this.getCalendarLabels()[1]}
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input
+              type="text"
+              ref={(el: HTMLInputElement) => (this.toInputElement = el)}
+              value={this.toFormatedValue}
+            />
+            {this.renderCalendarToggleButton()}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  render(): JSX.Element {
+    return (
+      <div
+        class={{
+          'gux-datepicker': true,
+          'gux-active': this.active
+        }}
+      >
+        {this.renderStartDateField()}
+        {this.renderEndDateField()}
       </div>
     );
   }

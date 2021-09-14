@@ -1,11 +1,8 @@
 import { newSpecPage } from '@stencil/core/testing';
 
-import { GuxTextFieldLegacy } from '../../../legacy/gux-text-field-legacy/gux-text-field';
-import { GuxTextLabel } from '../../gux-text-label/gux-text-label';
-
 import { GuxDatepicker } from '../gux-datepicker';
 
-const components = [GuxDatepicker, GuxTextFieldLegacy, GuxTextLabel];
+const components = [GuxDatepicker];
 const language = 'en';
 
 describe('gux-datepicker', () => {
