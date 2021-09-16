@@ -15,9 +15,10 @@
 
 ## Slots
 
-| Slot      | Description             |
-| --------- | ----------------------- |
-| `"error"` | Required slot for error |
+| Slot       | Description              |
+| ---------- | ------------------------ |
+| `"popup"`  | Required slot for popup  |
+| `"target"` | Required slot for target |
 
 
 ## Dependencies

@@ -52,6 +52,7 @@
  - [gux-tabs](../gux-tabs)
  - [gux-tag-beta](../../beta/gux-tag)
  - [gux-text-field-legacy](../../legacy/gux-text-field-legacy)
+ - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
 
 ### Graph
 ```mermaid
@@ -90,6 +91,7 @@ graph TD;
   gux-tabs --> gux-icon
   gux-tag-beta --> gux-icon
   gux-text-field-legacy --> gux-icon
+  gux-toggle-slider --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

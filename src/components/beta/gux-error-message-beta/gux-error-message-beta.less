@@ -1,56 +1,28 @@
 @import (reference) '../../../style/color.less';
 
-// Style
-gux-error-message-beta {
-  .gux-container {
-    .gux-icon {
-      position: relative;
-      top: 3px;
-      display: inline;
-      margin: 0 4px;
-      font-size: 16px;
-      color: @gux-alert;
-    }
+.gux-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 11px;
+  color: @gux-black-50;
 
-    .gux-message {
-      display: inline;
-    }
+  gux-icon {
+    flex: 0 1 auto;
+    align-self: auto;
+    order: 0;
+    width: 16px;
+    height: 16px;
+    margin: 0 4px;
+    color: @gux-alert;
   }
-}
 
-// Theming
-
-// Dark
-.gux-error-message-dark-theme {
-  color: @gux-type-dark;
-}
-
-.gux-dark-theme {
-  gux-error-message-beta {
-    .gux-error-message-dark-theme();
+  .gux-message {
+    flex: 0 1 auto;
+    align-self: auto;
+    order: 0;
   }
-}
-
-gux-error-message-beta.gux-dark-theme {
-  .gux-error-message-dark-theme();
-}
-
-// Light
-.gux-error-message-light-theme {
-  color: @gux-type;
-}
-
-.gux-light-theme {
-  gux-error-message-beta {
-    .gux-error-message-light-theme();
-  }
-}
-
-gux-error-message-beta.gux-light-theme {
-  .gux-error-message-light-theme();
-}
-
-// Default Theme
-gux-error-message-beta {
-  .gux-error-message-light-theme();
 }

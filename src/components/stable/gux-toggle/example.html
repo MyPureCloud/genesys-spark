@@ -1,44 +1,57 @@
-<div
-  style="
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 250px;
-  "
->
-  <gux-toggle></gux-toggle>
-
-  <gux-toggle checked></gux-toggle>
-
-  <gux-toggle checked disabled></gux-toggle>
-
+<div class="container">
   <gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>
 
-  <gux-toggle checked checked-label="on" unchecked-label="off"></gux-toggle>
+  <gux-toggle checked-label="On" unchecked-label="Off" checked></gux-toggle>
+
+  <gux-toggle
+    checked-label="Active"
+    unchecked-label="Inactive"
+    label-position="left"
+  ></gux-toggle>
+
+  <gux-toggle checked-label="On" unchecked-label="Off" disabled></gux-toggle>
+
+  <gux-toggle
+    checked-label="Active"
+    unchecked-label="Inactive"
+    loading
+  ></gux-toggle>
+
+  <gux-toggle
+    checked-label="Active"
+    unchecked-label="Inactive"
+    checked
+    loading
+  ></gux-toggle>
+
+  <gux-toggle
+    checked-label="This is another long label for the toggle to show how it works"
+    unchecked-label="This is a long label for the toggle to show how it works"
+  ></gux-toggle>
+
+  <gux-toggle
+    checked-label="On"
+    unchecked-label="Off"
+    error-message="This is an error message"
+  ></gux-toggle>
 
   <gux-toggle
     checked-label="On"
     unchecked-label="Off"
     label-position="left"
-  ></gux-toggle>
-
-  <gux-toggle
-    checked
-    checked-label="on"
-    unchecked-label="off"
-    label-position="right"
-  ></gux-toggle>
-
-  <gux-toggle
-    checked-label="This is a long label for the toggle to test how it works"
-    unchecked-label="This is another long label for the toggle to test how it works"
-    label-position="left"
-  ></gux-toggle>
-
-  <gux-toggle
-    checked
-    checked-label="This is a long label for the toggle to test how it works"
-    unchecked-label="This is another long label for the toggle to test how it works"
-    label-position="right"
+    error-message="This is another error message"
   ></gux-toggle>
 </div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 250px;
+  }
+
+  gux-toggle {
+    margin-bottom: 20px;
+  }
+</style>

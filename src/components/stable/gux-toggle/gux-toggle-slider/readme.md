@@ -5,9 +5,10 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type      | Default     |
-| --------- | --------- | ----------- | --------- | ----------- |
-| `checked` | `checked` |             | `boolean` | `undefined` |
+| Property   | Attribute  | Description | Type      | Default |
+| ---------- | ---------- | ----------- | --------- | ------- |
+| `checked`  | `checked`  |             | `boolean` | `false` |
+| `disabled` | `disabled` |             | `boolean` | `false` |
 
 
 ## Dependencies
@@ -16,9 +17,14 @@
 
  - [gux-toggle](..)
 
+### Depends on
+
+- [gux-icon](../../gux-icon)
+
 ### Graph
 ```mermaid
 graph TD;
+  gux-toggle-slider --> gux-icon
   gux-toggle --> gux-toggle-slider
   style gux-toggle-slider fill:#f9f,stroke:#333,stroke-width:4px
 ```

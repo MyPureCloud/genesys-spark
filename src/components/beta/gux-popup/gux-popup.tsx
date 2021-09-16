@@ -3,7 +3,8 @@ import { Component, h, JSX, Prop, Watch } from '@stencil/core';
 import { createPopper, Instance } from '@popperjs/core';
 
 /**
- * @slot error - Required slot for error
+ * @slot target - Required slot for target
+ * @slot popup - Required slot for popup
  */
 @Component({
   styleUrl: 'gux-popup.less',
