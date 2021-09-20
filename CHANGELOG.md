@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.37.0](https://inindca///compare/v2.36.1...v2.37.0) (2021-09-20)
+
+
+### Features
+
+* **toggle:** added error and loading states ([304160f](https://inindca///commit/304160fabf42bdba912ce957ca4939882e7a67d6))
+
+
+### Bug Fixes
+
+* **tests:** reduced warning logging in test runs ([143e4e7](https://inindca///commit/143e4e7705f6bd6745b6440460b8d2a65b23fa3e))
+
 ### [2.36.1](https://inindca///compare/v2.36.0...v2.36.1) (2021-09-14)
 
 
