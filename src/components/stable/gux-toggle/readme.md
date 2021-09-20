@@ -17,7 +17,9 @@ A check event is triggered when the state of the component changed.
 | `checked`        | `checked`         |             | `boolean`           | `false`     |
 | `checkedLabel`   | `checked-label`   |             | `string`            | `undefined` |
 | `disabled`       | `disabled`        |             | `boolean`           | `false`     |
+| `errorMessage`   | `error-message`   |             | `string`            | `undefined` |
 | `labelPosition`  | `label-position`  |             | `"left" \| "right"` | `'right'`   |
+| `loading`        | `loading`         |             | `boolean`           | `false`     |
 | `uncheckedLabel` | `unchecked-label` |             | `string`            | `undefined` |
 
 
@@ -32,12 +34,18 @@ A check event is triggered when the state of the component changed.
 
 ### Depends on
 
+- [gux-radial-loading](../gux-radial-loading)
+- [gux-error-message-beta](../../beta/gux-error-message-beta)
 - [gux-toggle-slider](gux-toggle-slider)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-toggle --> gux-radial-loading
+  gux-toggle --> gux-error-message-beta
   gux-toggle --> gux-toggle-slider
+  gux-error-message-beta --> gux-icon
+  gux-toggle-slider --> gux-icon
   style gux-toggle fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

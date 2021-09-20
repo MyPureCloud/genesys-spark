@@ -17,6 +17,7 @@
 ### Used by
 
  - [gux-form-field](../../stable/gux-form-field)
+ - [gux-toggle](../../stable/gux-toggle)
 
 ### Depends on
 
@@ -27,6 +28,7 @@
 graph TD;
   gux-error-message-beta --> gux-icon
   gux-form-field --> gux-error-message-beta
+  gux-toggle --> gux-error-message-beta
   style gux-error-message-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

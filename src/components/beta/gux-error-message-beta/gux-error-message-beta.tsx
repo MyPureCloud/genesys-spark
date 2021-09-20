@@ -6,7 +6,8 @@ import { trackComponent } from '../../../usage-tracking';
  */
 @Component({
   styleUrl: 'gux-error-message-beta.less',
-  tag: 'gux-error-message-beta'
+  tag: 'gux-error-message-beta',
+  shadow: true
 })
 export class GuxErrorMessageBeta {
   @Element()
@@ -19,9 +20,7 @@ export class GuxErrorMessageBeta {
   render() {
     return (
       <div class="gux-container">
-        <div class="gux-icon">
-          <gux-icon icon-name="alert-warning-octogon" decorative></gux-icon>
-        </div>
+        <gux-icon icon-name="alert-warning-octogon" decorative></gux-icon>
         <div class="gux-message">
           <slot slot="error" />
         </div>

@@ -12,8 +12,6 @@ export const checkboxAttribute = (name, astNode, parent, renderCallback) => {
       : 'checked'
     : '';
 
-  console.log({ name, isChecked, matchingAttr });
-
   const element = toHTML(`
     <gux-form-field>
       <label slot="label" for="${checkboxId}">${name}</label>
