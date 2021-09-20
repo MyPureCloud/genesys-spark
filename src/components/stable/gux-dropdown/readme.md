@@ -25,7 +25,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Methods
 
-### `setLabeledBy(labeledBy: string) => Promise<void>`
+### `setLabeledBy(id: string) => Promise<void>`
 
 
 
@@ -50,15 +50,15 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-text-field-legacy](../../legacy/gux-text-field-legacy)
+- [gux-input-text-like](../gux-form-field/components/gux-input-text-like)
 - [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-dropdown --> gux-text-field-legacy
+  gux-dropdown --> gux-input-text-like
   gux-dropdown --> gux-icon
-  gux-text-field-legacy --> gux-icon
+  gux-input-text-like --> gux-icon
   style gux-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

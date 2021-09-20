@@ -10,7 +10,6 @@ import {
   State
 } from '@stencil/core';
 
-import { KeyCode } from '../../../common-enums';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 import { trackComponent } from '../../../usage-tracking';
 
@@ -22,7 +21,7 @@ export class GuxDropdown {
   @Element()
   root: HTMLElement;
 
-  textFieldElement: HTMLGuxTextFieldLegacyElement;
+  textFieldElement: HTMLInputElement;
 
   /**
    * Sets the select mode (default, page or palette).
@@ -88,8 +87,8 @@ export class GuxDropdown {
   }
 
   @Method()
-  async setLabeledBy(labeledBy: string): Promise<void> {
-    this.textFieldElement.setLabelledBy(labeledBy);
+  async setLabeledBy(id: string): Promise<void> {
+    this.srLabeledBy = id;
   }
 
   @Method()
@@ -121,13 +120,13 @@ export class GuxDropdown {
   onKeyDown(event: KeyboardEvent) {
     const selectionOptions = this.getSelectionOptions();
     const focusIndex = this.getFocusIndex(selectionOptions);
-    switch (event.keyCode) {
-      case KeyCode.Up:
+    switch (event.key) {
+      case 'ArrowUp':
         if (focusIndex > 0) {
           selectionOptions[focusIndex - 1].focus();
         }
         break;
-      case KeyCode.Down:
+      case 'ArrowDown':
         if (this.inputIsFocused) {
           this.opened = true;
         }
@@ -135,20 +134,20 @@ export class GuxDropdown {
           selectionOptions[focusIndex + 1].focus();
         }
         break;
-      case KeyCode.Home:
+      case 'Home':
         if (!selectionOptions.length) {
           return;
         }
         selectionOptions[0].focus();
         break;
-      case KeyCode.End:
+      case 'End':
         if (!selectionOptions.length) {
           return;
         }
         selectionOptions[selectionOptions.length - 1].focus();
         break;
-      case KeyCode.Enter:
-      case KeyCode.Space:
+      case 'Enter':
+      case 'Space':
         break;
       default:
         this.valueEdited = true;
@@ -209,8 +208,8 @@ export class GuxDropdown {
     this.forcedGhostValue = '';
   }
 
-  _inputHandler(event: CustomEvent) {
-    this.value = event.detail;
+  _inputHandler(inputEvent: Event) {
+    this.value = (inputEvent.target as HTMLInputElement).value;
     this.opened = true;
   }
 
@@ -235,16 +234,21 @@ export class GuxDropdown {
     }
   }
 
-  getGhost() {
+  getSuggestionText(filter: string) {
     this.searchHighlightAndFilter(this.value);
+    const filterLength = filter.length;
     const firstFilteredItem = this.getFilteredItems().length
       ? this.getFilteredItems()[0].text
       : '';
-    const valueGhost =
-      this.value + firstFilteredItem.substring(this.value.length);
-    const ghost = this.forcedGhostValue ? this.forcedGhostValue : valueGhost;
-    const placeholder = !this.value ? this.placeholder : '';
-    return this.opened && this.filterable ? ghost : placeholder;
+    if (filterLength > 0) {
+      const option = firstFilteredItem;
+      if (option) {
+        return this.opened && this.filterable
+          ? option.substring(filterLength)
+          : '';
+      }
+    }
+    return '';
   }
 
   componentWillLoad(): void {
@@ -257,7 +261,7 @@ export class GuxDropdown {
     this.setSelected();
 
     if (!this.filterable) {
-      this.textFieldElement.readonly = true;
+      this.textFieldElement.readOnly = true;
     }
   }
 
@@ -290,30 +294,41 @@ export class GuxDropdown {
         onKeyDown={e => this.onKeyDown(e)}
       >
         <div class="gux-select-field">
-          <span class="gux-ghost" aria-hidden="true">
-            {this.getGhost()}
+          <span
+            class={`gux-filter-suggestion ${this.opened ? 'gux-active' : ''}`}
+            aria-hidden="true"
+          >
+            <span class="gux-filter-text">{this.value}</span>
+            <span class="gux-filter-typeahead">
+              {this.getSuggestionText(this.value)}
+            </span>
           </span>
-          <gux-text-field-legacy
-            title={this.value}
-            ref={el =>
-              (this.textFieldElement = el as HTMLGuxTextFieldLegacyElement)
-            }
-            onMouseDown={() => {
-              this._clickHandler();
-            }}
-            onFocus={() => {
-              this._focusHandler();
-            }}
-            onBlur={() => {
-              this._blurHandler();
-            }}
-            onInput={e => {
-              this._inputHandler(e);
-            }}
-            value={this.value}
-            disabled={this.disabled}
+
+          <gux-input-text-like
             class={this._showDropdownIcon() ? 'gux-unclearable' : ''}
-          />
+            gux-disabled={this.disabled}
+          >
+            <input
+              placeholder={this.placeholder}
+              slot="input"
+              value={this.value}
+              aria-labelledby={this.srLabeledBy}
+              ref={ref => (this.textFieldElement = ref)}
+              onMouseDown={() => {
+                this._clickHandler();
+              }}
+              onFocus={() => {
+                this._focusHandler();
+              }}
+              onBlur={() => {
+                this._blurHandler();
+              }}
+              onInput={e => {
+                this._inputHandler(e);
+              }}
+            />
+          </gux-input-text-like>
+
           {this._showDropdownIcon() && (
             <button
               class="gux-dropdown-indicator"
