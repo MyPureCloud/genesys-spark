@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-side-panel #render should render component as expected (1) 1`] = `
+<gux-side-panel-beta is-open="false" position="left">
+  <!---->
+  <aside class="gux-closed gux-left">
+    <div class="gux-panel-icons"></div>
+    <div class="gux-closed gux-panel-content"></div>
+  </aside>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel #render should render component as expected (2) 1`] = `
+<gux-side-panel-beta is-open="true" position="left">
+  <!---->
+  <aside class="gux-left gux-open">
+    <div class="gux-panel-icons"></div>
+    <div class="gux-open gux-panel-content"></div>
+  </aside>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel #render should render component as expected (3) 1`] = `
+<gux-side-panel-beta is-open="false" position="right">
+  <!---->
+  <aside class="gux-closed gux-right">
+    <div class="gux-panel-icons"></div>
+    <div class="gux-closed gux-panel-content"></div>
+  </aside>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel #render should render component as expected (4) 1`] = `
+<gux-side-panel-beta is-open="true" position="right">
+  <!---->
+  <aside class="gux-open gux-right">
+    <div class="gux-panel-icons"></div>
+    <div class="gux-open gux-panel-content"></div>
+  </aside>
+</gux-side-panel-beta>
+`;

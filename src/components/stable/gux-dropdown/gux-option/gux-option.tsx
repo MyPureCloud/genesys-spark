@@ -37,7 +37,7 @@ export class GuxOption {
    * If this attribute is omitted, the value is taken from the text content of the slot.
    * This attribute takes precedence over slot value
    */
-  @Prop()
+  @Prop({ mutable: true })
   text: string;
 
   @Prop()

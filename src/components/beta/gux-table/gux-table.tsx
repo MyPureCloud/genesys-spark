@@ -489,10 +489,6 @@ export class GuxTable {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, tableResources);
-
-    if (!this.emptyMessage) {
-      this.emptyMessage = this.i18n('emptyMessage');
-    }
   }
 
   componentDidLoad() {
@@ -633,7 +629,7 @@ export class GuxTable {
         )}
         {this.isTableEmpty && (
           <div class="empty-table">
-            <h2>{this.emptyMessage}</h2>
+            <h2>{this.emptyMessage || this.i18n('emptyMessage')}</h2>
           </div>
         )}
       </div>

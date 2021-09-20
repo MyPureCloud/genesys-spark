@@ -1,21 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxSpinButtonLegacy } from '../gux-spin-button';
 
+const components = [GuxSpinButtonLegacy];
+const language = 'en';
+
 describe('gux-spin-button-legacy', () => {
   let component: GuxSpinButtonLegacy;
 
   beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxSpinButtonLegacy],
-      html: `<gux-spin-button-legacy></gux-spin-button-legacy>`,
-      language: 'en'
-    });
+    const html =
+      '<gux-spin-button-legacy min="15" max="60", step="15"></gux-spin-button-legacy>';
+    const page = await newSpecPage({ components, html, language });
 
     component = page.rootInstance;
-
-    component.min = 15;
-    component.max = 60;
-    component.step = 15;
   });
 
   it('should build', async () => {
@@ -120,8 +117,13 @@ describe('gux-spin-button-legacy', () => {
     });
 
     it('validate does not set error message if ignoreValidation set', async () => {
+      const html =
+        '<gux-spin-button-legacy min="15" max="60", step="15"  ignore-validation></gux-spin-button-legacy>';
+      const page = await newSpecPage({ components, html, language });
+
+      component = page.rootInstance;
+
       component.value = NaN;
-      component.ignoreValidation = true;
       const valid = await component.validate();
       expect(valid).toBeFalsy();
       expect(component.errorMessage).toBeFalsy();
