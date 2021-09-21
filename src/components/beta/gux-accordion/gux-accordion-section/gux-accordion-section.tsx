@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Method, Prop, State } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 import { logError } from '../../../../utils/error/log-error';
@@ -19,22 +19,11 @@ export class GuxAccordionSection {
   @Prop()
   arrowPosition: GuxAccordionSectionArrowPosition = 'default';
 
-  @State()
-  private expanded: boolean = false;
+  @Prop({ mutable: true })
+  open: boolean = false;
 
-  @Method()
-  async open() {
-    this.expanded = true;
-  }
-
-  @Method()
-  async close() {
-    this.expanded = false;
-  }
-
-  @Method()
-  async toggle() {
-    this.expanded = !this.expanded;
+  private toggle() {
+    this.open = !this.open;
   }
 
   private onHeaderSlotChange(): void {
@@ -63,7 +52,7 @@ export class GuxAccordionSection {
       <section>
         <button
           class="gux-header"
-          aria-expanded={this.expanded.toString()}
+          aria-expanded={this.open.toString()}
           aria-controls={this.sectionId}
           onClick={this.toggle.bind(this)}
         >
@@ -77,7 +66,7 @@ export class GuxAccordionSection {
           <div
             class={{
               'gux-header-icon': true,
-              'gux-expanded': this.expanded
+              'gux-expanded': this.open
             }}
           >
             <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
@@ -87,7 +76,7 @@ export class GuxAccordionSection {
           id={this.sectionId}
           class={{
             'gux-content': true,
-            'gux-expanded': this.expanded
+            'gux-expanded': this.open
           }}
         >
           <slot name="content"></slot>

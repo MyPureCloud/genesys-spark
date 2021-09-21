@@ -10,39 +10,7 @@
 | Property        | Attribute        | Description | Type                         | Default     |
 | --------------- | ---------------- | ----------- | ---------------------------- | ----------- |
 | `arrowPosition` | `arrow-position` |             | `"beside-text" \| "default"` | `'default'` |
-
-
-## Methods
-
-### `close() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-### `open() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-### `toggle() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| `open`          | `open`           |             | `boolean`                    | `false`     |
 
 
 ## Dependencies
