@@ -2,42 +2,47 @@ import { newE2EPage } from '@stencil/core/testing';
 
 describe('gux-page-loading-spinner', () => {
   it('renders', async () => {
-    const page = await newE2EPage();
-
-    await page.setContent(
-      '<gux-page-loading-spinner></gux-page-loading-spinner>'
-    );
-
+    const html =
+      '<gux-page-loading-spinner lang="en"></gux-page-loading-spinner>';
+    const page = await newE2EPage({ html });
     const element = await page.find('gux-page-loading-spinner');
 
     expect(element.outerHTML).toMatchSnapshot();
   });
 
   it('should add an aria-label with the provided screenreader-text to the progressbar', async () => {
-    const page = await newE2EPage();
+    const html =
+      '<gux-page-loading-spinner lang="en" screenreader-text="Loading Content"></gux-page-loading-spinner>';
+    const page = await newE2EPage({ html });
+    const progressBarAriaLabelValue = await page.evaluate(() => {
+      const element = document.querySelector('gux-page-loading-spinner');
+      const radialLoadingElement =
+        element.shadowRoot.querySelector('gux-radial-loading');
+      const progressBarElement = radialLoadingElement.shadowRoot.querySelector(
+        'div[role="progressbar"]'
+      );
 
-    await page.setContent(
-      '<gux-page-loading-spinner screenreader-text="Loading Content"></gux-page-loading-spinner>'
-    );
+      return progressBarElement.getAttribute('aria-label');
+    });
 
-    const progressbar = await page.find(
-      'gux-radial-loading div[role="progressbar"]'
-    );
-
-    expect(progressbar.getAttribute('aria-label')).toEqual('Loading Content');
+    expect(progressBarAriaLabelValue).toEqual('Loading Content');
   });
 
   it('should add the default aria-label text if no screenreader-text is provided', async () => {
-    const page = await newE2EPage();
+    const html =
+      '<gux-page-loading-spinner lang="en"></gux-page-loading-spinner>';
+    const page = await newE2EPage({ html });
+    const progressBarAriaLabelValue = await page.evaluate(() => {
+      const element = document.querySelector('gux-page-loading-spinner');
+      const radialLoadingElement =
+        element.shadowRoot.querySelector('gux-radial-loading');
+      const progressBarElement = radialLoadingElement.shadowRoot.querySelector(
+        'div[role="progressbar"]'
+      );
 
-    await page.setContent(
-      '<gux-page-loading-spinner></gux-page-loading-spinner>'
-    );
+      return progressBarElement.getAttribute('aria-label');
+    });
 
-    const progressbar = await page.find(
-      'gux-radial-loading div[role="progressbar"]'
-    );
-
-    expect(progressbar.getAttribute('aria-label')).toEqual('Loading');
+    expect(progressBarAriaLabelValue).toEqual('Loading');
   });
 });

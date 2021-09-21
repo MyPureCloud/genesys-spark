@@ -18,13 +18,17 @@ describe('gux-visualization-beta', () => {
     [
       {
         description: 'should render default button',
-        html: '<gux-visualization-beta id="visualization-1"></gux-visualization-beta>'
+        html: '<gux-visualization-beta lang="en" id="visualization-1"></gux-visualization-beta>'
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
         const page = await newE2EPage({ html });
-        const element = await page.find('gux-visualization-beta');
+        const element = (await page.find(
+          'gux-visualization-beta'
+        )) as HTMLGuxVisualizationElement;
         element.visualizationSpec = visualizationSpecLine;
+
+        await page.waitForChanges();
 
         expect(element.outerHTML).toMatchSnapshot();
       });

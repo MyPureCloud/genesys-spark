@@ -18,7 +18,7 @@ describe('gux-datepicker', () => {
     await element.setProperty('value', '1985-12-01');
     await page.waitForChanges();
 
-    const input = await page.find('gux-text-field-legacy input');
+    const input = await page.find('input');
     const value = await input.getProperty('value');
     expect(value).toBe('12/01/1985');
   });

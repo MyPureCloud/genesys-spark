@@ -45,6 +45,10 @@ export class GuxTextLabel {
       typeof labeledComponentSlot.setLabelledBy !== 'function'
     ) {
       // Only set labeled by if its supported by the contained element.
+      (labeledComponentSlot as HTMLElement).setAttribute(
+        'aria-labelledby',
+        this.id
+      );
       return;
     }
 

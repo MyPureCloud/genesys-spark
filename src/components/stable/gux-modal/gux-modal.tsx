@@ -5,9 +5,10 @@ import {
   EventEmitter,
   h,
   JSX,
+  Listen,
   Prop
 } from '@stencil/core';
-
+import { createFocusTrap, FocusTrap } from 'focus-trap';
 import { trackComponent } from '../../../usage-tracking';
 
 import { GuxModalSize } from './gux-modal.types';
@@ -35,6 +36,43 @@ export class GuxModal {
   @Event()
   guxdismiss: EventEmitter<void>;
 
+  @Listen('keydown')
+  protected handleKeyEvent(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      this.onDismissHandler(event);
+    }
+  }
+
+  /**
+   * Query selector for the element to initially focus when the modal opens
+   * Defaults to the first tabbable element
+   */
+  @Prop()
+  initialFocus?: string | undefined;
+
+  private focusTrap: FocusTrap | undefined;
+  componentDidLoad() {
+    // Workaround that gux-buttons don't have a native focus method that works
+    // Query the element then find the inner tabbable element
+    let initialFocus = this.initialFocus
+      ? this.root.querySelector<HTMLElement | SVGElement>(this.initialFocus)
+      : undefined;
+    if (initialFocus?.tagName === 'GUX-BUTTON') {
+      initialFocus = initialFocus.querySelector('button');
+    }
+    this.focusTrap = createFocusTrap(this.root, {
+      escapeDeactivates: false,
+      returnFocusOnDeactivate: true,
+      initialFocus,
+      fallbackFocus: () => this.root.querySelector('gux-dismiss-button-beta')
+    });
+    this.focusTrap.activate();
+  }
+  disconnectedCallback() {
+    this.focusTrap?.deactivate();
+    this.focusTrap = undefined;
+  }
+
   @Element()
   private root: HTMLElement;
 
@@ -50,7 +88,7 @@ export class GuxModal {
       <div class="gux-modal">
         <div class={`gux-modal-container gux-${this.size}`}>
           <gux-dismiss-button-beta
-            onClick={this.onDismissClickHandler.bind(this)}
+            onClick={this.onDismissHandler.bind(this)}
           ></gux-dismiss-button-beta>
 
           {hasModalTitleSlot && (
@@ -97,7 +135,7 @@ export class GuxModal {
     );
   }
 
-  private onDismissClickHandler(event: MouseEvent): void {
+  private onDismissHandler(event: Event): void {
     event.stopPropagation();
 
     const dismissEvent = this.guxdismiss.emit();

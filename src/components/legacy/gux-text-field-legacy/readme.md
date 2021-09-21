@@ -76,7 +76,6 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-datepicker](../../stable/gux-datepicker)
  - [gux-dropdown](../../stable/gux-dropdown)
  - [gux-search-beta](../../beta/gux-search)
  - [gux-spin-button-legacy](../gux-spin-button-legacy)
@@ -89,7 +88,6 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-text-field-legacy --> gux-icon
-  gux-datepicker --> gux-text-field-legacy
   gux-dropdown --> gux-text-field-legacy
   gux-search-beta --> gux-text-field-legacy
   gux-spin-button-legacy --> gux-text-field-legacy

@@ -19,14 +19,14 @@ exports[`gux-action-toast #render should render action toast 1`] = `
     </div>
   </div>
   <div class="gux-action-buttons">
-    <div class="gux-negative-button">
-      <gux-button slot="negative-button">
-        Reject
-      </gux-button>
-    </div>
     <div class="gux-positive-button">
       <gux-button accent="primary" slot="positive-button">
         Accept
+      </gux-button>
+    </div>
+    <div class="gux-negative-button">
+      <gux-button slot="negative-button">
+        Reject
       </gux-button>
     </div>
   </div>

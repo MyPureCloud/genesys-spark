@@ -2,6 +2,8 @@
 
 exports[`gux-page-loading-spinner should render as expected 1`] = `
 <gux-page-loading-spinner>
-  <gux-radial-loading context="full-page" screenreader-text=""></gux-radial-loading>
+  <mock:shadow-root>
+    <gux-radial-loading class="gux-spinner" context="full-page"></gux-radial-loading>
+  </mock:shadow-root>
 </gux-page-loading-spinner>
 `;

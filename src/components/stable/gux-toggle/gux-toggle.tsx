@@ -10,17 +10,15 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
-import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 
 import { GuxToggleLabelPosition } from './gux-toggle.types';
 
 @Component({
   styleUrl: 'gux-toggle.less',
-  tag: 'gux-toggle'
+  tag: 'gux-toggle',
+  shadow: { delegatesFocus: true }
 })
 export class GuxToggle {
-  private checkboxElement: HTMLInputElement;
-
   @Element()
   private root: HTMLElement;
 
@@ -31,6 +29,9 @@ export class GuxToggle {
   disabled: boolean = false;
 
   @Prop()
+  loading: boolean = false;
+
+  @Prop()
   checkedLabel: string;
 
   @Prop()
@@ -38,6 +39,9 @@ export class GuxToggle {
 
   @Prop()
   labelPosition: GuxToggleLabelPosition = 'right';
+
+  @Prop()
+  errorMessage: string;
 
   @Event()
   check: EventEmitter<boolean>;
@@ -52,23 +56,16 @@ export class GuxToggle {
     switch (event.key) {
       case 'Enter':
       case ' ':
+        event.preventDefault();
         this.toggle();
     }
   }
 
-  @Listen('input')
-  onInput(event: InputEvent): void {
-    this.checked = (event.target as HTMLInputElement).checked;
-
-    this.check.emit(this.checked);
-  }
-
   private toggle(): void {
-    if (!this.disabled) {
-      this.checkboxElement.checked = !this.checkboxElement.checked;
+    if (!this.disabled && !this.loading) {
+      this.checked = !this.checked;
 
-      simulateNativeEvent(this.checkboxElement, 'input');
-      simulateNativeEvent(this.checkboxElement, 'change');
+      this.check.emit(this.checked);
     }
   }
 
@@ -85,46 +82,62 @@ export class GuxToggle {
     trackComponent(this.root, { variant });
   }
 
-  private renderLabel(): JSX.Element {
-    if (this.uncheckedLabel && this.checkedLabel) {
-      const labelText = this.checked ? this.checkedLabel : this.uncheckedLabel;
-
+  private renderLoading(): JSX.Element {
+    if (this.loading) {
       return (
-        <div
-          class={{
-            'gux-toggle-label': true,
-            'gux-checked': this.checked
-          }}
-        >
-          {labelText}
+        <div class="gux-toggle-label-loading">
+          <gux-radial-loading context="input"></gux-radial-loading>
         </div>
       );
     }
   }
 
+  private renderLabel(): JSX.Element {
+    if (this.uncheckedLabel && this.checkedLabel) {
+      const labelText = this.checked ? this.checkedLabel : this.uncheckedLabel;
+
+      return (
+        <div class="gux-toggle-label-and-error">
+          <div class="gux-toggle-label">
+            <div class="gux-toggle-label-text">{labelText}</div>
+
+            {this.renderLoading()}
+          </div>
+        </div>
+      );
+    }
+  }
+
+  private renderError(): JSX.Element {
+    if (this.errorMessage) {
+      return (
+        <div class="gux-toggle-error">
+          <gux-error-message-beta>{this.errorMessage}</gux-error-message-beta>
+        </div>
+      );
+    }
+  }
   render(): JSX.Element {
     return (
       <div
         class={{
           'gux-toggle-container': true,
           'gux-toggle-label-left': this.labelPosition === 'left',
-          'gux-checked': this.checked
+          'gux-disabled': this.disabled || this.loading
         }}
-        tabindex={this.disabled ? '' : '0'}
         role="checkbox"
         aria-checked={Boolean(this.checked).toString()}
         aria-label={this.getAriaLabel()}
       >
-        <input
-          type="checkbox"
-          ref={el => (this.checkboxElement = el)}
-          checked={this.checked}
-          disabled={this.disabled}
-        />
+        <div class="gux-toggle-input">
+          <gux-toggle-slider
+            checked={this.checked}
+            disabled={this.disabled || this.loading}
+          ></gux-toggle-slider>
 
-        <gux-toggle-slider checked={this.checked}></gux-toggle-slider>
-
-        {this.renderLabel()}
+          {this.renderLabel()}
+        </div>
+        {this.renderError()}
       </div>
     );
   }

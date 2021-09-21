@@ -2,6 +2,182 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.37.0](https://inindca///compare/v2.36.1...v2.37.0) (2021-09-20)
+
+
+### Features
+
+* **toggle:** added error and loading states ([304160f](https://inindca///commit/304160fabf42bdba912ce957ca4939882e7a67d6))
+
+
+### Bug Fixes
+
+* **tests:** reduced warning logging in test runs ([143e4e7](https://inindca///commit/143e4e7705f6bd6745b6440460b8d2a65b23fa3e))
+
+### [2.36.1](https://inindca///compare/v2.36.0...v2.36.1) (2021-09-14)
+
+
+### Bug Fixes
+
+* **datepicker:** removed dependency on text-field=legacy component ([a3ac23c](https://inindca///commit/a3ac23ca8889f4003cc27ebd3360a1e46b1c8140))
+
+## [2.36.0](https://inindca///compare/v2.35.1...v2.36.0) (2021-09-13)
+
+
+### Features
+
+* **gux-button-multi:** added gux-button-multi component ([3f733d5](https://inindca///commit/3f733d54c18f4dec4d95b566f144aaa8e4d9ffff))
+* **gux-tabs-beta:** improving accessibility of gux-tabs-beta ([0b81a22](https://inindca///commit/0b81a22ca8aa7ff91becffaa25e765b0a9d1670d))
+
+### [2.35.1](https://inindca///compare/v2.35.0...v2.35.1) (2021-09-10)
+
+
+### Bug Fixes
+
+* **form-field:** fixed readme files ([23d465b](https://inindca///commit/23d465b4f8d47837086b3fdbad638761e3501e47))
+* **pagination:** removed references to legacy components ([acade60](https://inindca///commit/acade6085384ff100b026b8ffe28275ed5d9b9f0))
+* **text-label:** removed references to gux-text-field-legacy ([55f2832](https://inindca///commit/55f283266beb58d9a65760b61124197b042e2e58))
+
+## [2.35.0](https://inindca///compare/v2.34.0...v2.35.0) (2021-09-09)
+
+
+### Features
+
+* **modal:** add a workaround for gux-elements not supporting .focus() ([3963443](https://inindca///commit/3963443ec2f6c653c5bfdea25965257431fee54a))
+* **modal:** add prop to control initial focus behavior ([15e52c8](https://inindca///commit/15e52c8243d8bba9c9e0fa74e246a01a3d981f19))
+* **modal:** fallback focus to dismiss button for content-only modal ([acad26d](https://inindca///commit/acad26dd9c007f3384f2fe9c3586d8da8820d5cf))
+* **modal:** modal can be dismissed with the escape key ([a3d839f](https://inindca///commit/a3d839f85b41e31d18c23de72cc58cc1a9f5f4df))
+* **modal:** trap focus inside modal when open ([194f89a](https://inindca///commit/194f89acd2cdc293f01803dd46c786aa9c774954))
+
+## [2.34.0](https://inindca///compare/v2.33.4...v2.34.0) (2021-09-07)
+
+
+### Features
+
+* **cursor-pagination:** added cursor pagination component ([8b71e0c](https://inindca///commit/8b71e0cdbb2ba4e45346661aea7b0780368265f3))
+
+
+### Bug Fixes
+
+* **action-button:** fixed action button dropdown positioning ([593712c](https://inindca///commit/593712c4d7c22940dcb40dbff101f26b7b174695))
+* **action-button:** fixed dropdown stacking order ([96d5f36](https://inindca///commit/96d5f36c177fc00c9dd4595068160c9963bd4cf2))
+* **tabs:** fixed tab options click away functionality ([779dda3](https://inindca///commit/779dda3130c82a1d590f65dd9ce0112cf28e71e0))
+
+### [2.33.4](https://inindca///compare/v2.33.3...v2.33.4) (2021-09-06)
+
+### [2.33.3](https://inindca///compare/v2.33.2...v2.33.3) (2021-09-03)
+
+
+### Bug Fixes
+
+* **tabs:** fixed tab options button size ([567d127](https://inindca///commit/567d127d2e6ff4e8f6f3662b35ce927a669c34f0))
+
+### [2.33.2](https://inindca///compare/v2.33.1...v2.33.2) (2021-09-02)
+
+
+### Bug Fixes
+
+* **tabs:** tab options button can now close options menu ([5adb595](https://inindca///commit/5adb595c965e04f377c69ba955b64a3638e9443d))
+
+### [2.33.1](https://inindca///compare/v2.33.0...v2.33.1) (2021-08-31)
+
+## [2.33.0](https://inindca///compare/v2.32.0...v2.33.0) (2021-08-30)
+
+
+### Features
+
+* **gux-visualization:** allow visualizaton-spec to be passed as an element attribute ([5956f8d](https://inindca///commit/5956f8d7b9ad7f2adcfe90161294b7de4e9527dc))
+* **gux-visualization:** creates initial gux-visualization component ([3aef826](https://inindca///commit/3aef82603f2c46c7150b8bd71207d1ff5966d0f8))
+* **gux-visuzualization:** lock vega-lite to 5.0.0 ([209f320](https://inindca///commit/209f320633a1033810636efbceeb7958a97dd9f0))
+* **gux-visuzualization:** make visualizationSpec object only instead of optionally a string ([c58c7bb](https://inindca///commit/c58c7bb7bd85637507b41384bbdbaa278acec264))
+
+
+### Bug Fixes
+
+* **build:** include allowSyntheticDefaultImports flag ([f02a4a0](https://inindca///commit/f02a4a018a101f007add655e016620c2ca5b95c7))
+
+## [2.32.0](https://inindca///compare/v2.31.0...v2.32.0) (2021-08-26)
+
+
+### Features
+
+* **gux-tabs-beta:** created new tabs component ([dd7a17e](https://inindca///commit/dd7a17ea71729302e1d897f544262446a7133fc3))
+
+## [2.31.0](https://inindca///compare/v2.30.0...v2.31.0) (2021-08-25)
+
+
+### Features
+
+* **shadow-dom:** turned shadow dom on for some stable components ([2944582](https://inindca///commit/2944582d6c020df1b4c48cbf52a1f08da245c548))
+
+## [2.30.0](https://inindca///compare/v2.29.0...v2.30.0) (2021-08-23)
+
+
+### Features
+
+* **button:** add method for programatically focusing ([e3eb93a](https://inindca///commit/e3eb93a6cbb37ea74fe75beab15b499162426f88))
+
+
+### Bug Fixes
+
+* **search:** fixed styling ([500c140](https://inindca///commit/500c1407835f0fcc26f1d75c6f08ebe2f0bfcab3))
+* **toasts:** fixed styling ([28f54f0](https://inindca///commit/28f54f0d567cccb63c3807c455054345e4810cd2))
+
+## [2.29.0](https://inindca///compare/v2.28.6...v2.29.0) (2021-08-18)
+
+
+### Features
+
+* **gux-icon:** added new and modified some old icons ([f9df9fc](https://inindca///commit/f9df9fc11353fe68d9f0c3114a977717b10dc202))
+
+
+### Bug Fixes
+
+* **range-input:** fixed text display styling ([b0f4bf0](https://inindca///commit/b0f4bf078b745326bbbc273bd132f667afd41d5f))
+
+### [2.28.6](https://inindca///compare/v2.28.5...v2.28.6) (2021-08-17)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed datepicker styling ([d856831](https://inindca///commit/d856831ca13fea12bd8a6cb1f87a98bd39967bed))
+
+### [2.28.5](https://inindca///compare/v2.28.4...v2.28.5) (2021-08-16)
+
+
+### Bug Fixes
+
+* **gux-button:** fixed style ([1c701ee](https://inindca///commit/1c701ee24f2734057c58614c47a07aea3028990d))
+* **gux-table:** fixed style to align with Spark ([3f6ce72](https://inindca///commit/3f6ce723e7459db548b76105f6733f124b7ab33b))
+
+### [2.28.4](https://inindca///compare/v2.28.3...v2.28.4) (2021-08-12)
+
+
+### Bug Fixes
+
+* **text-fields:** fixed styling ([f20ea86](https://inindca///commit/f20ea860544ed2c9c71ca843fd0d8215da707ef6))
+
+### [2.28.3](https://inindca///compare/v2.28.2...v2.28.3) (2021-08-11)
+
+
+### Bug Fixes
+
+* **dropdown:** fixed styling ([9890d07](https://inindca///commit/9890d07f2d25d19addcc37f4dad5f4b441b38459))
+
+### [2.28.2](https://inindca///compare/v2.28.1...v2.28.2) (2021-08-10)
+
+
+### Bug Fixes
+
+* **gux-form-field:** fixed form input overflow issue and fixed gux-input-number input alignment ([033b1f6](https://inindca///commit/033b1f638caef0f19c32ce35c196c0a465cadbd1))
+
+### [2.28.1](https://inindca///compare/v2.28.0...v2.28.1) (2021-08-05)
+
+
+### Bug Fixes
+
+* **modal:** moved primary button in modal and panel-frame to left side in docs examples ([f3d3e64](https://inindca///commit/f3d3e64c1628abdef1013be9296b635777004524))
+
 ## [2.28.0](https://inindca///compare/v2.27.4...v2.28.0) (2021-07-30)
 
 

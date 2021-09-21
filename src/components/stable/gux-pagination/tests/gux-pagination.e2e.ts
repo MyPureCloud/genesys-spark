@@ -1,6 +1,22 @@
 import { newE2EPage } from '@stencil/core/testing';
 import { E2EGuxDropdown } from '../../gux-dropdown/gux-dropdown.e2eelement';
 
+async function newNonrandomE2EPage({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
+  const page = await newE2EPage();
+
+  await page.evaluateOnNewDocument(() => {
+    Math.random = () => 0.5;
+  });
+  await page.setContent(html);
+  await page.waitForChanges();
+
+  return page;
+}
+
 describe('gux-pagination', () => {
   describe('#render', () => {
     [
@@ -25,7 +41,7 @@ describe('gux-pagination', () => {
             layout="${layout}"
           ></gux-pagination>
         `;
-        const page = await newE2EPage({ html });
+        const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-pagination');
 
         expect(element.innerHTML).toMatchSnapshot();

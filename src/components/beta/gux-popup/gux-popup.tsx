@@ -1,9 +1,10 @@
-import { Component, h, JSX, Prop } from '@stencil/core';
+import { Component, h, JSX, Prop, Watch } from '@stencil/core';
 
 import { createPopper, Instance } from '@popperjs/core';
 
 /**
- * @slot error - Required slot for error
+ * @slot target - Required slot for target
+ * @slot popup - Required slot for popup
  */
 @Component({
   styleUrl: 'gux-popup.less',
@@ -19,6 +20,13 @@ export class GuxPopup {
 
   @Prop()
   disabled: boolean = false;
+
+  @Watch('expanded')
+  onExpandedChange(expanded: boolean) {
+    if (expanded) {
+      this.popperInstance.forceUpdate();
+    }
+  }
 
   componentDidLoad(): void {
     this.popperInstance = createPopper(

@@ -89,7 +89,7 @@ describe('gux-form-field', () => {
       it(`should render component type "select"`, async () => {
         const html = `
           <gux-form-field>
-            <select slot="input" name="select" type="select">
+            <select slot="input" name="select">
               <option value="option1">Option 1</option>
               <option value="option1">Option 2</option>
               <option value="option1">Option 3</option>
@@ -105,7 +105,7 @@ describe('gux-form-field', () => {
       it(`should render component type "select" with an error slot`, async () => {
         const html = `
           <gux-form-field>
-            <select slot="input" name="select" type="select">
+            <select slot="input" name="select">
               <option value="option1">Option 1</option>
               <option value="option1">Option 2</option>
               <option value="option1">Option 3</option>
@@ -122,7 +122,7 @@ describe('gux-form-field', () => {
       it(`should render component type "select" and keep user provided id and for attributes`, async () => {
         const html = `
           <gux-form-field>
-            <select slot="input" id="test" name="select" type="select">
+            <select slot="input" id="test" name="select">
               <option value="option1">Option 1</option>
               <option value="option1">Option 2</option>
               <option value="option1">Option 3</option>

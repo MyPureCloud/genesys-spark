@@ -9,7 +9,8 @@ const STROKE_DASH = 2 * Math.PI * RADIUS;
 
 @Component({
   styleUrl: 'gux-radial-progress.less',
-  tag: 'gux-radial-progress'
+  tag: 'gux-radial-progress',
+  shadow: true
 })
 export class GuxRadialProgress {
   private dropshadowId = randomHTMLId('gux-dropshadow');

@@ -43,12 +43,11 @@ graph TD;
   gux-pagination --> gux-pagination-item-counts
   gux-pagination --> gux-pagination-items-per-page
   gux-pagination --> gux-pagination-buttons
-  gux-pagination-items-per-page --> gux-dropdown
-  gux-pagination-items-per-page --> gux-option
-  gux-dropdown --> gux-text-field-legacy
-  gux-dropdown --> gux-icon
-  gux-text-field-legacy --> gux-icon
-  gux-option --> gux-text-highlight
+  gux-pagination-items-per-page --> gux-dropdown-v2-beta
+  gux-pagination-items-per-page --> gux-listbox
+  gux-pagination-items-per-page --> gux-option-v2
+  gux-dropdown-v2-beta --> gux-icon
+  gux-dropdown-v2-beta --> gux-popup-beta
   gux-pagination-buttons --> gux-input-text-like
   gux-pagination-buttons --> gux-button
   gux-pagination-buttons --> gux-icon

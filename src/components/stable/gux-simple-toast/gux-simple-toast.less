@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/shadows.less';
 
 gux-simple-toast {
   position: relative;
@@ -8,15 +9,18 @@ gux-simple-toast {
   align-content: stretch;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 336px;
-  padding: 8px 12px;
+  width: 286px;
+  padding: 8px 16px;
+  margin-bottom: 4px;
   border: 1px solid;
+  border-radius: 4px;
+  .gux-shadow-20();
 
   .gux-icon {
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
-    margin: 6px;
+    margin: 6px 0;
 
     &.gux-alert {
       color: @gux-alert;
@@ -50,22 +54,6 @@ gux-simple-toast {
     line-height: 24px;
     text-overflow: ellipsis;
   }
-
-  .gux-dismiss-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 0;
-    font-size: 11px;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-
-    gux-icon {
-      width: 12px;
-      height: 12px;
-    }
-  }
 }
 
 // Theming
@@ -73,7 +61,7 @@ gux-simple-toast {
 .gux-simple-toast-light-theme {
   color: @gux-type;
   background: @gux-grey-90;
-  border-color: @gux-black-100;
+  border-color: @gux-grey-30;
 
   .gux-icon {
     &.gux-alert {

@@ -38,12 +38,12 @@ export class GuxActionToast {
         </div>
 
         <div class="gux-action-buttons">
-          <div class="gux-negative-button">
-            <slot name="negative-button" />
-          </div>
-
           <div class="gux-positive-button">
             <slot name="positive-button" />
+          </div>
+
+          <div class="gux-negative-button">
+            <slot name="negative-button" />
           </div>
         </div>
       </Host>

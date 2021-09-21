@@ -6,7 +6,7 @@ describe('gux-text-label', () => {
 
     await page.setContent(`
       <gux-text-label lang="en" label="Test Item">
-        <gux-text-field-legacy></gux-text-field-legacy>
+        <input type="text">
       </gux-text-label>
     `);
     await page.waitForChanges();
@@ -20,7 +20,7 @@ describe('gux-text-label', () => {
 
     await page.setContent(`
       <gux-text-label lang="en" label="Test Item">
-        <gux-text-field-legacy></gux-text-field-legacy>
+      <input type="text">
       </gux-text-label>
     `);
     await page.waitForChanges();
@@ -35,7 +35,7 @@ describe('gux-text-label', () => {
     await page.setContent(`
       <gux-text-label lang="en">
         <div slot="label">Test Item</div>
-        <gux-text-field-legacy></gux-text-field-legacy>
+        <input type="text">
       </gux-text-label>
     `);
     await page.waitForChanges();
@@ -48,16 +48,14 @@ describe('gux-text-label', () => {
     const page = await newE2EPage();
 
     await page.setContent(
-      '<gux-text-label lang="en" label="Test Item"><gux-text-field-legacy></gux-text-field-legacy></gux-text-label>'
+      '<gux-text-label lang="en" label="Test Item"><input type="text"></gux-text-label>'
     );
     await page.waitForChanges();
 
     const textLabel = await page.find('gux-text-label label');
     const labelId = textLabel.id;
 
-    const textField = await page.find(
-      'gux-text-label gux-text-field-legacy input'
-    );
+    const textField = await page.find('gux-text-label input');
     const label = textField.getAttribute('aria-labelledby');
     expect(label).toEqual(labelId);
   });

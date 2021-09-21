@@ -489,10 +489,6 @@ export class GuxTable {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, tableResources);
-
-    if (!this.emptyMessage) {
-      this.emptyMessage = this.i18n('emptyMessage');
-    }
   }
 
   componentDidLoad() {
@@ -603,12 +599,10 @@ export class GuxTable {
           <slot name="data" />
         </div>
         {this.isHorizontalScroll && (
-          <button
-            class={
-              this.isScrolledToFirstCell
-                ? 'gux-table-scroll-left disabled'
-                : 'gux-table-scroll-left'
-            }
+          <gux-button
+            accent="secondary"
+            class="gux-table-scroll-left"
+            disabled={this.isScrolledToFirstCell}
             onClick={
               !this.isScrolledToFirstCell && this.previousColumn.bind(this)
             }
@@ -617,15 +611,13 @@ export class GuxTable {
               icon-name="chevron-left"
               screenreader-text={this.i18n('scrollLeft')}
             />
-          </button>
+          </gux-button>
         )}
         {this.isHorizontalScroll && (
-          <button
-            class={
-              this.isScrolledToLastCell
-                ? 'gux-table-scroll-right disabled'
-                : 'gux-table-scroll-right'
-            }
+          <gux-button
+            accent="secondary"
+            class="gux-table-scroll-right"
+            disabled={this.isScrolledToLastCell}
             style={{ marginRight: `${this.tableScrollbarConstant}px` }}
             onClick={!this.isScrolledToLastCell && this.nextColumn.bind(this)}
           >
@@ -633,11 +625,11 @@ export class GuxTable {
               icon-name="chevron-right"
               screenreader-text={this.i18n('scrollRight')}
             />
-          </button>
+          </gux-button>
         )}
         {this.isTableEmpty && (
           <div class="empty-table">
-            <h2>{this.emptyMessage}</h2>
+            <h2>{this.emptyMessage || this.i18n('emptyMessage')}</h2>
           </div>
         )}
       </div>

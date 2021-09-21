@@ -1,60 +1,64 @@
 @import (reference) '../../../style/color.less';
-@import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/spacing.less';
 
-gux-toggle {
+:host {
   display: block;
   margin: 2px;
   color: @gux-black-50;
+  outline: none;
+}
 
-  &[disabled] {
+.gux-toggle-container {
+  &.gux-disabled {
     pointer-events: none;
     cursor: default;
-    opacity: 0.5;
+
+    .gux-toggle-input {
+      .gux-toggle-label {
+        .gux-toggle-label-text {
+          opacity: 0.5;
+        }
+      }
+    }
   }
 
-  .gux-toggle-container {
+  &.gux-toggle-label-left {
+    .gux-toggle-input {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    .gux-toggle-error {
+      float: right;
+    }
+  }
+
+  .gux-toggle-input {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     align-items: flex-start;
     justify-content: flex-start;
-    cursor: pointer;
-
-    &.gux-toggle-label-left {
-      flex-direction: row-reverse;
-      text-align: right;
-    }
-
-    input {
-      display: none;
-    }
-
-    gux-toggle-slider {
-      flex: 0 1 auto;
-      align-self: auto;
-      order: 0;
-    }
 
     .gux-toggle-label {
-      flex: 1 1 auto;
-      align-self: auto;
-      order: 0;
+      position: relative;
+      display: inline-block;
       padding: 0 @spacing-2xs;
-      text-transform: capitalize;
 
-      &.gux-checked {
-        font-weight: bold;
+      .gux-toggle-label-loading {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        align-items: center;
+        justify-content: center;
       }
     }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &:focus-within {
-    .focus-ring();
   }
 }

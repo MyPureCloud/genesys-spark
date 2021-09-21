@@ -2,14 +2,14 @@
 
 exports[`gux-error-message-beta #render should render component as expected 1`] = `
 <gux-error-message-beta>
-  <!---->
-  <div class="gux-container">
-    <div class="gux-icon">
+  <mock:shadow-root>
+    <div class="gux-container">
       <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot slot="error"></slot>
+      </div>
     </div>
-    <div class="gux-message">
-      This is an error message
-    </div>
-  </div>
+  </mock:shadow-root>
+  This is an error message
 </gux-error-message-beta>
 `;

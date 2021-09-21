@@ -66,7 +66,7 @@ export class GuxVisualization {
         return visSpec;
       }
     };
-    embed(
+    await embed(
       this.root,
       Object.assign({}, this.defaultVisualizationSpec, this.visualizationSpec),
       Object.assign(

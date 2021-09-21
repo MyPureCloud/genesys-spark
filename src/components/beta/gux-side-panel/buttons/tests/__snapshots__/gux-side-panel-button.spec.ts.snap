@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-side-panel-button #render should render component as expected (1) 1`] = `
+<gux-side-panel-button is-selected="false">
+  <button>
+    <gux-icon decorative=""></gux-icon>
+  </button>
+</gux-side-panel-button>
+`;
+
+exports[`gux-side-panel-button #render should render component as expected (2) 1`] = `
+<gux-side-panel-button is-selected="true">
+  <button class="selected">
+    <gux-icon decorative=""></gux-icon>
+  </button>
+</gux-side-panel-button>
+`;

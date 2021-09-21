@@ -1,49 +1,82 @@
 @import (reference) '../../../../style/color.less';
+@import (reference) '../../../../style/mixins.less';
 
 @toggle-height: 16px;
 @toggle-width: 30px;
 @slider-diameter: @toggle-height - 2px;
 @slider-transition: @toggle-width - @toggle-height;
+@slider-transition-duration: 0.5s;
 
-gux-toggle-slider {
+:host {
   padding: 2px;
+  outline: none;
+}
 
-  .gux-toggle-slider {
-    position: relative;
-    display: inline-block;
-    flex: 0 1 auto;
-    align-self: auto;
-    order: 0;
-    width: @toggle-width;
-    height: @toggle-height;
+.gux-toggle-slider {
+  position: relative;
+  display: inline-block;
+  flex: 0 1 auto;
+  align-self: auto;
+  order: 0;
+  width: @toggle-width;
+  height: @toggle-height;
+  border-radius: @toggle-height / 2;
 
-    .gux-slider {
+  &.gux-disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+    .focus-ring();
+  }
+
+  .gux-slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: @gux-black-100;
+    border-radius: @toggle-height / 2;
+    transition: background-color @slider-transition-duration ease;
+
+    .gux-switch {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: @gux-black-100;
-      border-radius: @toggle-height / 2;
-      transition: 0.4s;
+      bottom: (@toggle-height - @slider-diameter) / 2;
+      left: (@toggle-height - @slider-diameter) / 2;
+      width: @slider-diameter;
+      height: @slider-diameter;
+      content: '';
+      background-color: @gux-grey-100;
+      border-radius: 50%;
+      transition: @slider-transition-duration;
 
-      &::before {
-        position: absolute;
-        bottom: (@toggle-height - @slider-diameter) / 2;
-        left: (@toggle-height - @slider-diameter) / 2;
-        width: @slider-diameter;
-        height: @slider-diameter;
-        content: '';
-        background-color: @gux-grey-100;
-        border-radius: 50%;
-        transition: 0.4s;
+      gux-icon {
+        width: @slider-diameter - 2;
+        height: @slider-diameter - 2;
+        padding: 1px;
+        color: @gux-grey-100;
+        opacity: 0;
+        transition: color @slider-transition-duration linear;
       }
+    }
+  }
 
-      &.gux-checked {
-        background-color: @gux-blue-60;
+  &.gux-checked {
+    .gux-slider {
+      background-color: @gux-blue-60;
 
-        &::before {
-          transform: translateX(@slider-transition);
+      .gux-switch {
+        transform: translateX(@slider-transition);
+
+        gux-icon {
+          color: @gux-blue-60;
+          opacity: 1;
+          transition: opacity @slider-transition-duration / 2 linear;
+          transition-delay: @slider-transition-duration / 2;
         }
       }
     }

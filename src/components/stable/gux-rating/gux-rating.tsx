@@ -6,7 +6,8 @@ import { trackComponent } from '../../../usage-tracking';
 
 @Component({
   styleUrl: 'gux-rating.less',
-  tag: 'gux-rating'
+  tag: 'gux-rating',
+  shadow: true
 })
 export class GuxRating {
   private ratingElement: HTMLDivElement;
@@ -34,7 +35,8 @@ export class GuxRating {
       return;
     }
 
-    const ratingStar = (event.target as HTMLElement).closest('gux-icon');
+    const [clickedElement] = event.composedPath();
+    const ratingStar = (clickedElement as HTMLElement).closest('gux-icon');
     const clickedStarIndex = Array.from(this.ratingElement.children).findIndex(
       child => child === ratingStar
     );

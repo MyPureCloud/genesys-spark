@@ -27,7 +27,7 @@ export const selectAttribute = (
 
   let element = toHTML(`
     <gux-form-field>
-      <select slot="input" name="select" type="select">
+      <select slot="input" name="select">
           ${options.map(
             o => `
               <option value="${o.value}" ${o.selected ? 'selected' : ''}>${

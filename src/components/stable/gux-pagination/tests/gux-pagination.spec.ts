@@ -2,23 +2,26 @@ import { newSpecPage } from '@stencil/core/testing';
 import { GuxPagination } from '../gux-pagination';
 
 import { GuxButton } from '../../gux-button/gux-button';
-import { GuxDropdown } from '../../gux-dropdown/gux-dropdown';
+import { GuxDropdownV2Beta } from '../../../beta/gux-dropdown-v2/gux-dropdown-v2';
+import { GuxListbox } from '../../../beta/gux-dropdown-v2/gux-listbox/gux-listbox';
+import { GuxOptionV2 } from '../../../beta/gux-dropdown-v2/gux-option-v2/gux-option-v2';
 import { GuxOption } from '../../gux-dropdown/gux-option/gux-option';
 import { GuxPaginationButtons } from '../gux-pagination-buttons/gux-pagination-buttons';
 import { GuxPaginationItemCounts } from '../gux-pagination-item-counts/gux-pagination-item-counts';
 import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page/gux-pagination-items-per-page';
-import { GuxTextFieldLegacy } from '../../../legacy/gux-text-field-legacy/gux-text-field';
 
 const components = [
   GuxButton,
-  GuxDropdown,
+  GuxDropdownV2Beta,
+  GuxListbox,
+  GuxOptionV2,
   GuxOption,
   GuxPagination,
   GuxPaginationButtons,
   GuxPaginationItemCounts,
-  GuxPaginationItemsPerPage,
-  GuxTextFieldLegacy
+  GuxPaginationItemsPerPage
 ];
+
 const language = 'en';
 
 describe('gux-pagination', () => {

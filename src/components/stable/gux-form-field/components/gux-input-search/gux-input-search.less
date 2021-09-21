@@ -1,4 +1,6 @@
 @import (reference) '../../../../../style/color.less';
+@import (reference) '../../../../../style/mixins.less';
+@import (reference) '../../../../../style/spacing.less';
 
 gux-input-search {
   position: relative;
@@ -15,7 +17,7 @@ gux-input-search {
     justify-content: center;
     width: 100%;
     height: 32px;
-    padding: 4px 12px 4px 12px;
+    padding: @spacing-2xs @spacing-xs @spacing-2xs @spacing-xs;
     font-family: inherit;
     font-size: 12px;
     line-height: 1.66666667;
@@ -23,7 +25,7 @@ gux-input-search {
     background-color: @gux-grey-90;
     background-image: none;
     border: 1px solid @gux-black-100;
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
 
     &.gux-disabled {
@@ -73,13 +75,24 @@ gux-input-search {
 
       &:not(:disabled):focus,
       &:not(:disabled):hover {
-        color: @gux-blue-60;
+        color: @gux-black-50;
         cursor: pointer;
       }
 
       gux-icon {
         width: 12px;
         height: 12px;
+        border-radius: 4px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus:enabled {
+        gux-icon {
+          .focus-ring();
+        }
       }
     }
 

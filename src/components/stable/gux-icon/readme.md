@@ -23,6 +23,7 @@
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-breadcrumb-item](../gux-breadcrumbs/breadcrumb-item)
+ - [gux-button-multi](../../beta/gux-button-multi)
  - [gux-calendar](../gux-calendar)
  - [gux-color-picker-legacy](../../legacy/gux-color-picker-legacy)
  - [gux-content-search](../gux-content-search)
@@ -38,6 +39,7 @@
  - [gux-input-select](../gux-form-field/components/gux-input-select)
  - [gux-input-text-like](../gux-form-field/components/gux-input-text-like)
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
+ - [gux-pagination-cursor-beta](../../beta/gux-pagination-cursor)
  - [gux-rating](../gux-rating)
  - [gux-search-beta](../../beta/gux-search)
  - [gux-side-panel-button](../../beta/gux-side-panel/buttons)
@@ -45,10 +47,12 @@
  - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab](../gux-tabs/gux-tab)
  - [gux-tab-dropdown-option](../gux-tabs/gux-tab-dropdown-option)
+ - [gux-tab-list-beta](../../beta/gux-tabs-beta/gux-tab-list-beta)
  - [gux-table-beta](../../beta/gux-table)
  - [gux-tabs](../gux-tabs)
  - [gux-tag-beta](../../beta/gux-tag)
  - [gux-text-field-legacy](../../legacy/gux-text-field-legacy)
+ - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
 
 ### Graph
 ```mermaid
@@ -58,6 +62,7 @@ graph TD;
   gux-action-button --> gux-icon
   gux-advanced-dropdown --> gux-icon
   gux-breadcrumb-item --> gux-icon
+  gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
   gux-color-picker-legacy --> gux-icon
   gux-content-search --> gux-icon
@@ -73,6 +78,7 @@ graph TD;
   gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
   gux-pagination-buttons --> gux-icon
+  gux-pagination-cursor-beta --> gux-icon
   gux-rating --> gux-icon
   gux-search-beta --> gux-icon
   gux-side-panel-button --> gux-icon
@@ -80,10 +86,12 @@ graph TD;
   gux-submenu --> gux-icon
   gux-tab --> gux-icon
   gux-tab-dropdown-option --> gux-icon
+  gux-tab-list-beta --> gux-icon
   gux-table-beta --> gux-icon
   gux-tabs --> gux-icon
   gux-tag-beta --> gux-icon
   gux-text-field-legacy --> gux-icon
+  gux-toggle-slider --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

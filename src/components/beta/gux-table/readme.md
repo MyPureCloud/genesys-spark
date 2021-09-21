@@ -40,11 +40,13 @@ Type: `Promise<GuxTableSelectedState>`
 
 ### Depends on
 
+- [gux-button](../../stable/gux-button)
 - [gux-icon](../../stable/gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-table-beta --> gux-button
   gux-table-beta --> gux-icon
   style gux-table-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

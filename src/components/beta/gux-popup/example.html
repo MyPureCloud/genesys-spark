@@ -1,12 +1,10 @@
-<gux-popup-beta id="example">
+<gux-popup-beta>
   <gux-button
     slot="target"
-    onClick='(function() {
-    console.log(this);
-    const popup = document.getElementById("example");
-
-    popup.expanded = !popup.expanded;
-})()'
+    onClick='(function(event) {
+      const popup = event.target.closest("gux-popup-beta");
+      popup.expanded = !popup.expanded;
+    })(event)'
     >Target</gux-button
   >
   <gux-list slot="popup">

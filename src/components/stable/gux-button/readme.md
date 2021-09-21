@@ -17,16 +17,31 @@ You can choose between two type (secondary and primary).
 | `type`     | `type`      | The component button type                    | `"button" \| "reset" \| "submit"`        | `'button'`    |
 
 
+## Methods
+
+### `focusElement() => Promise<void>`
+
+Focus the button
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Dependencies
 
 ### Used by
 
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
+ - [gux-table-beta](../../beta/gux-table)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-pagination-buttons --> gux-button
+  gux-table-beta --> gux-button
   style gux-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

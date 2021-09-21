@@ -93,7 +93,6 @@ export const legacyIconNames: string[] = [
   'ellipsis-v',
   'envelope',
   'eye',
-  'facebook-messenger',
   'fast-backward',
   'fast-forward',
   'favs-alpha',

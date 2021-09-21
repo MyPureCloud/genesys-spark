@@ -9,7 +9,7 @@ import translationResources from './i18n/en.json';
 @Component({
   styleUrl: 'gux-dismiss-button.less',
   tag: 'gux-dismiss-button-beta',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxDismissButton {
   private i18n: GetI18nValue;

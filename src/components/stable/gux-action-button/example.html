@@ -1,13 +1,18 @@
 <div class="layout">
   <div class="row">
-    <div>
+    <div class="overlap">
       <h1>Primary</h1>
-      <gux-action-button
-        id="example-1"
-        text="Primary"
-        accent="primary"
-        is-open="true"
-      >
+      <gux-action-button text="Primary" accent="primary" is-open="true">
+        <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
+        <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
+        <gux-action-item text="test3" onclick="notify(event)"></gux-action-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-action-item onclick="notify(event)"
+          ><span>I am a span</span></gux-action-item
+        >
+      </gux-action-button>
+
+      <gux-action-button text="Primary" accent="primary">
         <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test3" onclick="notify(event)"></gux-action-item>
@@ -19,7 +24,7 @@
     </div>
     <div>
       <h1>Secondary</h1>
-      <gux-action-button id="example-2" text="Secondary" accent="secondary">
+      <gux-action-button text="Secondary" accent="secondary">
         <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
         <gux-action-item
@@ -34,7 +39,7 @@
     </div>
     <div>
       <h1>Tertiary</h1>
-      <gux-action-button id="example-3" text="Tertiary" accent="tertiary">
+      <gux-action-button text="Tertiary" accent="tertiary">
         <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
         <gux-action-item
@@ -49,7 +54,7 @@
     </div>
     <div>
       <h1>Disabled</h1>
-      <gux-action-button id="example-4" text="Disabled" disabled>
+      <gux-action-button class="disable-toggle" text="Disabled" disabled>
         <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test3" onclick="notify(event)"></gux-action-item>
@@ -64,12 +69,7 @@
   <div class="row">
     <div>
       <h1>Primary</h1>
-      <gux-action-button
-        id="example-1"
-        text="Primary"
-        accent="primary"
-        is-open="true"
-      >
+      <gux-action-button text="Primary" accent="primary">
         <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test3" onclick="notify(event)"></gux-action-item>
@@ -81,7 +81,7 @@
     </div>
     <div>
       <h1>Secondary</h1>
-      <gux-action-button id="example-2" text="Secondary" accent="secondary">
+      <gux-action-button text="Secondary" accent="secondary">
         <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
         <gux-action-item
@@ -96,7 +96,7 @@
     </div>
     <div>
       <h1>Tertiary</h1>
-      <gux-action-button id="example-3" text="Tertiary" accent="tertiary">
+      <gux-action-button text="Tertiary" accent="tertiary">
         <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
         <gux-action-item
@@ -111,7 +111,7 @@
     </div>
     <div>
       <h1>Disabled</h1>
-      <gux-action-button id="example-4" text="Disabled" disabled>
+      <gux-action-button class="disable-toggle" text="Disabled" disabled>
         <gux-action-item text="test" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test2" onclick="notify(event)"></gux-action-item>
         <gux-action-item text="test3" onclick="notify(event)"></gux-action-item>
@@ -122,35 +122,40 @@
       </gux-action-button>
     </div>
   </div>
+
+  <style
+    onload="(function () {
+    const disableToggles = document.getElementsByClassName('disable-toggle');
+
+    Array.from(disableToggles).forEach((disableToggle) => {
+      setInterval(() => {
+        disableToggle.disabled = !disableToggle.disabled;
+      }, 5000);
+    });
+  })()"
+  >
+    .layout {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: flex-start;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .overlap gux-action-button {
+      margin-bottom: 4px;
+    }
+  </style>
 </div>
-
-<style
-  onload="(function () {
-    const example4 = document.getElementById('example-4');
-
-    setInterval(() => {
-      example4.disabled = !example4.disabled;
-    }, 5000);
-  }
-  )()"
->
-  .layout {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    align-items: flex-start;
-    justify-content: space-around;
-    width: 100%;
-  }
-</style>
