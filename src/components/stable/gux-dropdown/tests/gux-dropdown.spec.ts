@@ -111,17 +111,15 @@ describe('gux-dropdown', () => {
       });
 
       it('getSuggestionText', () => {
+        const filter = 'Ame';
         component.opened = true;
         component.filterable = true;
-        component.forcedGhostValue = 'Ame';
-        expect(component.getSuggestionText()).toEqual(
-          component.forcedGhostValue
-        );
+        expect(component.getSuggestionText(filter)).toEqual('rican English');
         component.opened = false;
         component.value = '';
         component.filterable = false;
         component.placeholder = 'Select...';
-        expect(component.getSuggestionText()).toEqual(component.placeholder);
+        expect(component.getSuggestionText(filter)).toEqual('');
       });
     });
   });
