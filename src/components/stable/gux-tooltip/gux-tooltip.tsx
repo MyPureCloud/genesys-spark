@@ -18,7 +18,8 @@ import { trackComponent } from '../../../usage-tracking';
  */
 @Component({
   styleUrl: 'gux-tooltip.less',
-  tag: 'gux-tooltip'
+  tag: 'gux-tooltip',
+  shadow: true
 })
 export class GuxTooltip {
   private delayTimeout: NodeJS.Timer;

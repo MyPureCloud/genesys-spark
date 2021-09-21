@@ -1,7 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/shadows.less';
 
-gux-tooltip {
+:host {
   z-index: 1;
   box-sizing: border-box;
   max-width: 250px;
@@ -19,7 +19,7 @@ gux-tooltip {
   transition: opacity 0.25s ease-in-out;
 }
 
-gux-tooltip.gux-show {
+:host(.gux-show) {
   visibility: visible !important;
   opacity: 1;
 }
