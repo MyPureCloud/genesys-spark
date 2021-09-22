@@ -11,7 +11,8 @@ import { trackComponent } from '../../../usage-tracking';
 
 @Component({
   styleUrl: 'gux-color-option.less',
-  tag: 'gux-color-option-legacy'
+  tag: 'gux-color-option-legacy',
+  shadow: false
 })
 export class GuxColorOptionBeta {
   @Element()

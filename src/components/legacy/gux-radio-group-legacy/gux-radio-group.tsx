@@ -14,7 +14,8 @@ import { trackComponent } from '../../../usage-tracking';
 import { GuxRadioLegacy } from '../gux-radio-legacy/gux-radio';
 
 @Component({
-  tag: 'gux-radio-group-legacy'
+  tag: 'gux-radio-group-legacy',
+  shadow: false
 })
 export class GuxRadioGroupLegacy {
   @Element()

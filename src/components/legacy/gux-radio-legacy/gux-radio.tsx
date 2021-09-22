@@ -15,7 +15,8 @@ let nextRadioId = 1;
 
 @Component({
   styleUrl: 'gux-radio.less',
-  tag: 'gux-radio-legacy'
+  tag: 'gux-radio-legacy',
+  shadow: false
 })
 export class GuxRadioLegacy {
   @Element()

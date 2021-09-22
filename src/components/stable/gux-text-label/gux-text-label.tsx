@@ -5,7 +5,8 @@ import { trackComponent } from '../../../usage-tracking';
 let nextLabelId = 1;
 @Component({
   styleUrl: 'gux-text-label.less',
-  tag: 'gux-text-label'
+  tag: 'gux-text-label',
+  shadow: false
 })
 export class GuxTextLabel {
   @Element()

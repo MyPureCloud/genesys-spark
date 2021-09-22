@@ -15,7 +15,8 @@ import { trackComponent } from '../../../usage-tracking';
 
 @Component({
   styleUrl: 'gux-slider.less',
-  tag: 'gux-slider-legacy'
+  tag: 'gux-slider-legacy',
+  shadow: false
 })
 export class GuxSliderLegacy {
   @Element()

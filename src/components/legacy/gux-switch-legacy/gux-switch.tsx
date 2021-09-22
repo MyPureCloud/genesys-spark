@@ -22,7 +22,8 @@ export interface ISwitchItem {
 
 @Component({
   styleUrl: 'gux-switch.less',
-  tag: 'gux-switch-legacy'
+  tag: 'gux-switch-legacy',
+  shadow: false
 })
 export class GuxSwitch {
   @Element()
