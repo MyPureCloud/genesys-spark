@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.38.0](https://inindca///compare/v2.37.1...v2.38.0) (2021-09-22)
+
+
+### Features
+
+* **gux-tooltip:** prep for enabling shadowdom ([ad09581](https://inindca///commit/ad09581f25e100bdd02518172b2f6d85e963441e))
+
+
+### Bug Fixes
+
+* **shadow-dom:** update script ([fc7dce8](https://inindca///commit/fc7dce803b80bf8376d76dc3cc2928baf5300188))
+* **text-highlight:** explicitly set shadow to false ([a3cf33e](https://inindca///commit/a3cf33e6905987ea59d715c47a11e45ee5e6e17e))
+
 ### [2.37.1](https://inindca///compare/v2.37.0...v2.37.1) (2021-09-21)
 
 ## [2.37.0](https://inindca///compare/v2.36.1...v2.37.0) (2021-09-20)
