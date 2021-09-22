@@ -9,7 +9,8 @@ import { trackComponent } from '../../../usage-tracking';
 import { GuxTextHighlightStrategy } from './gux-text-highlight.types';
 
 @Component({
-  tag: 'gux-text-highlight'
+  tag: 'gux-text-highlight',
+  shadow: false
 })
 export class GuxTextHighlight {
   @Element()
