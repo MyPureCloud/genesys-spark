@@ -73,11 +73,6 @@ describe('gux-dropdown', () => {
         expect(component.inputIsFocused).toEqual(false);
         expect(component.forcedGhostValue).toEqual('');
       });
-      // it('_inputHandler', () => {
-      //   const value = 'dummy';
-      //   component._inputHandler({ detail: value } as CustomEvent);
-      //   expect(component.value).toEqual(value);
-      // });
 
       it('getFilteredItems()', () => {
         component.filterable = false;
