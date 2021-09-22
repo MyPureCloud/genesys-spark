@@ -17,7 +17,8 @@ import defaultResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-spin-button.less',
-  tag: 'gux-spin-button-legacy'
+  tag: 'gux-spin-button-legacy',
+  shadow: false
 })
 export class GuxSpinButtonLegacy {
   @Element()
