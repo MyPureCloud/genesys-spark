@@ -3,13 +3,24 @@
 *This migration guide is open to anyone to edit. If you have migrated a component and think it would be helpful to others to document something you encountered please do so. We understand that at the moment because of the need to fork the repo the overhead of making a small contribution is high so feel free to raise an issue on the COMUI board instead it that is more convenient and a core team member will create the PR.*
 
 ## TLDR
-
+* remove `first-day-of-week` property from instances of `gux-calendar`
+* remove `first-day-of-week` property from instances of `gux-datepicker`
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
 * add `-legacy` to components that have been removed from stable
   * `gux-accordion` -> `gux-accordion-legacy`
 * migrate away from usage of legacy components
   * `gux-accordion-legacy` -> `gux-accordion`
+
+## Stable Component Changes
+
+### gux-calendar
+
+'first-day-of-week' property removed. This is now determined via locale.
+
+### gux-datepicker
+
+'first-day-of-week' property removed. This is now determined via locale via the `gux-calendar` component.
 
 ## New Stable Components Promoted from Beta
 

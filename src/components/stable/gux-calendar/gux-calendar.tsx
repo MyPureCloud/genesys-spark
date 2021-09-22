@@ -40,12 +40,6 @@ export class GuxCalendar {
   value: string = '';
 
   /**
-   * The calendar first week day
-   */
-  @Prop()
-  firstDayOfWeek: number;
-
-  /**
    * The min date selectable
    */
   @Prop()
@@ -432,10 +426,7 @@ export class GuxCalendar {
     trackComponent(this.root, { variant: this.mode });
     this.locale = getDesiredLocale(this.root);
 
-    this.startDayOfWeek =
-      this.firstDayOfWeek == null
-        ? getStartOfWeek(this.locale)
-        : this.firstDayOfWeek;
+    this.startDayOfWeek = getStartOfWeek(this.locale);
 
     if (!this.value) {
       const now = new Date();
