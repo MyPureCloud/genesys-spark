@@ -7,9 +7,9 @@
 
 ## Slots
 
-| Slot      | Description             |
-| --------- | ----------------------- |
-| `"error"` | Required slot for error |
+| Slot               | Description             |
+| ------------------ | ----------------------- |
+| `"error(default)"` | Required slot for error |
 
 
 ## Dependencies

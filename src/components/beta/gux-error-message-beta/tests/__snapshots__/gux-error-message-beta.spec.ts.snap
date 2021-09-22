@@ -6,7 +6,8 @@ exports[`gux-error-message-beta #render should render component as expected 1`] 
     <div class="gux-container">
       <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
-        <slot slot="error"></slot>
+        <slot></slot>
+        <slot name="error"></slot>
       </div>
     </div>
   </mock:shadow-root>
