@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  forceUpdate,
   h,
   Listen,
   Method,
@@ -12,6 +13,7 @@ import {
 
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 import { trackComponent } from '../../../usage-tracking';
+import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({
   styleUrl: 'gux-dropdown.less',
@@ -114,6 +116,12 @@ export class GuxDropdown {
     }
 
     this.value = '';
+  }
+
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    forceUpdate(this.root);
+    this.setSelected();
   }
 
   // TODO: Fix the keyboard navigation I broke
@@ -234,7 +242,7 @@ export class GuxDropdown {
     }
   }
 
-  getSuggestionText(filter: string) {
+  getSuggestionText(filter: string = '') {
     this.searchHighlightAndFilter(this.value);
     const filterLength = filter.length;
     const firstFilteredItem = this.getFilteredItems().length

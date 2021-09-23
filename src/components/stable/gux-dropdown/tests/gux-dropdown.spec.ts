@@ -1,4 +1,6 @@
 import { newSpecPage } from '@stencil/core/testing';
+import MutationObserver from 'mutation-observer';
+
 import { GuxDropdown } from '../gux-dropdown';
 import { GuxOption } from '../gux-option/gux-option';
 import { whenEventIsFrom } from '../../../../utils/dom/when-event-is-from';
@@ -7,6 +9,8 @@ describe('gux-dropdown', () => {
   let component: GuxDropdown;
 
   beforeEach(async () => {
+    global.MutationObserver = MutationObserver;
+
     const page = await newSpecPage({
       components: [GuxDropdown, GuxOption],
       html: `
