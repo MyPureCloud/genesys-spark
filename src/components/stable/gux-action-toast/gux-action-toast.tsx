@@ -16,7 +16,7 @@ export class GuxActionToast {
   @Element()
   private root: HTMLElement;
 
-  componentWillLoad() {
+  async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
   }
 
