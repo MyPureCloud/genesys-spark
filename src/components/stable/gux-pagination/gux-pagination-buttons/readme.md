@@ -31,14 +31,14 @@ An internal component used by the gux-pagination component.
 ### Depends on
 
 - [gux-input-text-like](../../gux-form-field/components/gux-input-text-like)
-- [gux-button](../../gux-button)
+- [gux-button-slot-beta](../../../beta/gux-button-slot)
 - [gux-icon](../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-pagination-buttons --> gux-input-text-like
-  gux-pagination-buttons --> gux-button
+  gux-pagination-buttons --> gux-button-slot-beta
   gux-pagination-buttons --> gux-icon
   gux-input-text-like --> gux-icon
   gux-pagination --> gux-pagination-buttons
