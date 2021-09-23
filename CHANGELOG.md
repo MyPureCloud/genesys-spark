@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.39.0](https://inindca///compare/v2.38.0...v2.39.0) (2021-09-23)
+
+
+### Features
+
+* **accordion:** added open prop to accordion section ([f9ad04a](https://inindca///commit/f9ad04aaf801e00ad04c01495b7c21711f4a20cf))
+* **gux-dropdown:** remove gux-text-field-legacy dependency ([14959db](https://inindca///commit/14959db0953453b7844adac3dccd0a2c9a57647f))
+
+
+### Bug Fixes
+
+* **accordion:** explicitly opted out of shadow dom ([e87a0b6](https://inindca///commit/e87a0b680263621c946b2134981f655d9c2915de))
+* **action-toast:** prepare component for enabling shadow dom ([3a2ea8a](https://inindca///commit/3a2ea8af4e8d5ceed9918e93e15721af9a1a24eb))
+* **error-message:** fixed slot issue in form-field component ([2c41eb5](https://inindca///commit/2c41eb57d6152285edca20d55566a1ded2056eda))
+
 ## [2.38.0](https://inindca///compare/v2.37.1...v2.38.0) (2021-09-22)
 
 
