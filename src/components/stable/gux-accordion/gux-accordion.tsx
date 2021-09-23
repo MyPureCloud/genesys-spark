@@ -14,7 +14,8 @@ import {
 
 @Component({
   styleUrl: 'gux-accordion.less',
-  tag: 'gux-accordion'
+  tag: 'gux-accordion',
+  shadow: false
 })
 export class GuxAccordion {
   @Element()
