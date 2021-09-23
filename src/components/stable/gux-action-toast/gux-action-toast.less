@@ -3,14 +3,6 @@
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/shadows.less';
 
-// Variables part
-// - Colors
-@action-reqired-icon-color: @gux-aqua-green-sec;
-@primary-background-color: @gux-blue-60;
-@primary-color: @gux-type-dark;
-@secondary-background-color: @gux-border;
-@secondary-color: @gux-type;
-
 gux-action-toast {
   display: flex;
   flex-direction: column;
@@ -26,7 +18,9 @@ gux-action-toast {
   border: 1px solid @gux-grey-30;
   border-radius: 4px;
   .gux-shadow-20();
+}
 
+gux-action-toast {
   .gux-header {
     display: flex;
     flex: 0 1 auto;
@@ -43,7 +37,7 @@ gux-action-toast {
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
-      color: @action-reqired-icon-color;
+      color: @gux-aqua-green-sec;
 
       gux-icon {
         width: 32px;
