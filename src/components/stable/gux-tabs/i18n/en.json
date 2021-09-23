@@ -1,6 +1,6 @@
 {
-  "createNewTab": "Create New Tab",
   "scrollLeft": "Scroll Left",
   "scrollRight": "Scroll Right",
-  "disableNewTab": "Maximum number of tabs created has been reached"
+  "scrollUp": "Scroll Up",
+  "scrollDown": "Scroll Down"
 }
