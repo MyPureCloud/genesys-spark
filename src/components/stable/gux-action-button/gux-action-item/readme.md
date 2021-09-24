@@ -7,32 +7,19 @@
 
 ## Properties
 
-| Property | Attribute | Description                          | Type     | Default     |
-| -------- | --------- | ------------------------------------ | -------- | ----------- |
-| `text`   | `text`    | The value to display.                | `string` | `undefined` |
-| `value`  | `value`   | The value associated with this item. | `any`    | `undefined` |
+| Property   | Attribute  | Description | Type      | Default     |
+| ---------- | ---------- | ----------- | --------- | ----------- |
+| `disabled` | `disabled` |             | `boolean` | `false`     |
+| `text`     | `text`     |             | `string`  | `undefined` |
+| `value`    | `value`    |             | `any`     | `undefined` |
 
 
 ## Events
 
-| Event   | Description                                   | Type               |
-| ------- | --------------------------------------------- | ------------------ |
-| `press` | Emits when the list item action is triggered. | `CustomEvent<any>` |
+| Event   | Description | Type               |
+| ------- | ----------- | ------------------ |
+| `press` |             | `CustomEvent<any>` |
 
-
-## Dependencies
-
-### Depends on
-
-- [gux-list-item](../../gux-list/list-item)
-
-### Graph
-```mermaid
-graph TD;
-  gux-action-item --> gux-list-item
-  gux-list-item --> gux-text-highlight
-  style gux-action-item fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 
