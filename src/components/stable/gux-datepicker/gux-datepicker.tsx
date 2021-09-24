@@ -13,13 +13,15 @@ import {
 
 import { trackComponent } from '../../../usage-tracking';
 import { CalendarModes } from '../../../common-enums';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+
 import {
   asIsoDateRange,
   asIsoDate,
   fromIsoDateRange,
   fromIsoDate
 } from '../../../utils/date/iso-dates';
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
 import translationResources from './i18n/en.json';
 import {
@@ -252,7 +254,6 @@ export class GuxDatepicker {
         this.format,
         getIntervalLetter(this.format, 0)
       );
-      this.active = false;
     }
   }
 
@@ -275,6 +276,11 @@ export class GuxDatepicker {
       );
       this.setRange();
     }
+  }
+
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside() {
+    this.active = false;
   }
 
   isFocusedFieldEvent(event: Event): boolean {
