@@ -12,10 +12,15 @@ gux-simple-toast {
   width: 286px;
   padding: 8px 16px;
   margin-bottom: 4px;
+  color: @gux-type;
+  background: @gux-grey-90;
   border: 1px solid;
+  border-color: @gux-grey-30;
   border-radius: 4px;
   .gux-shadow-20();
+}
 
+gux-simple-toast {
   .gux-icon {
     flex: 0 1 auto;
     align-self: auto;
@@ -54,50 +59,4 @@ gux-simple-toast {
     line-height: 24px;
     text-overflow: ellipsis;
   }
-}
-
-// Theming
-// Light
-.gux-simple-toast-light-theme {
-  color: @gux-type;
-  background: @gux-grey-90;
-  border-color: @gux-grey-30;
-
-  .gux-icon {
-    &.gux-alert {
-      color: @gux-alert;
-    }
-
-    &.gux-warning {
-      color: @gux-warning;
-    }
-
-    &.gux-positive {
-      color: @gux-positive;
-    }
-
-    &.gux-neutral {
-      color: @gux-neutral;
-    }
-  }
-
-  .gux-dismiss-button {
-    color: @gux-type;
-  }
-}
-
-// Default Theme
-gux-simple-toast {
-  .gux-simple-toast-light-theme();
-}
-
-// Light Theme
-.gux-light-theme {
-  gux-simple-toast {
-    .gux-simple-toast-light-theme();
-  }
-}
-
-gux-simple-toast.gux-light-theme {
-  .gux-simple-toast-light-theme();
 }
