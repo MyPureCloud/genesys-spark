@@ -81,8 +81,6 @@ export class GuxTooltip {
 
   componentDidLoad(): void {
     if (this.forElement) {
-      // 'gux-tooltip-for-element' is defined in /src/style/style.less
-      this.forElement.classList.add('gux-tooltip-for-element');
       this.forElement.setAttribute('aria-describedby', this.id);
 
       this.popperInstance = createPopper(this.forElement, this.root, {
@@ -110,7 +108,6 @@ export class GuxTooltip {
   }
 
   disconnectedCallback(): void {
-    this.forElement.classList.remove('gux-tooltip-for-element');
     this.forElement.removeAttribute('aria-describedby');
 
     if (this.popperInstance) {
