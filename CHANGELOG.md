@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.39.1](https://inindca///compare/v2.39.0...v2.39.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **gux-tabs:** fixed focus styling for tabs ([b14669b](https://inindca///commit/b14669bde1ba84fd7d3b3c3c8598bc53547f3beb))
+* **notification-toast:** prepare component for enabling shadow dom ([ef7252b](https://inindca///commit/ef7252b0e037569cbf3cb341d4f5b10e20158296))
+* **simple-toast:** prepared component for convertion to shadow dom ([39fef58](https://inindca///commit/39fef58fd483c26ef906d32d77491d56722c312a))
+
 ## [2.39.0](https://inindca///compare/v2.38.0...v2.39.0) (2021-09-23)
 
 
