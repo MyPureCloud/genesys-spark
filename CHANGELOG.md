@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.39.2](https://inindca///compare/v2.39.1...v2.39.2) (2021-09-28)
+
+
+### Bug Fixes
+
+* **button:** removed all references to the button title prop ([1688bb4](https://inindca///commit/1688bb4179b9af8000663d93ec4ab53ffc0a6411))
+* **datepicker:** fixed click outside bug ([24db9c9](https://inindca///commit/24db9c9458dde7eb7a8cf7c6b8d01974bcd164f1))
+* **pr-comment:** address PR comment ([59fe4ec](https://inindca///commit/59fe4ec7af42a64b57c8555ba48b635be5ed89a1))
+* **pr-comment:** addressed PR comment ([b20e59f](https://inindca///commit/b20e59f6d4bd0526fe382a80840822a2a8d20362))
+
 ### [2.39.1](https://inindca///compare/v2.39.0...v2.39.1) (2021-09-27)
 
 
