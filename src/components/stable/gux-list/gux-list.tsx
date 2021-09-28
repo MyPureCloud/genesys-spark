@@ -14,7 +14,10 @@ import {
 import { trackComponent } from '../../../usage-tracking';
 import { KeyCode } from '../../../common-enums';
 
-const validChildren = 'gux-list-item:not([disabled])';
+const validChildren = [
+  'gux-list-item:not([disabled])',
+  'gux-action-item:not([disabled])'
+].join(',');
 
 @Component({
   styleUrl: 'gux-list.less',
