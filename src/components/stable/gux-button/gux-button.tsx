@@ -27,12 +27,6 @@ export class GuxButton {
   guxTitle: string;
 
   /**
-   * Deprecated, use guxTitle instead
-   */
-  @Prop()
-  title: string;
-
-  /**
    * Indicate if the button is disabled or not
    */
   @Prop()
@@ -61,7 +55,7 @@ export class GuxButton {
     return (
       <button
         type={this.type}
-        title={this.guxTitle ? this.guxTitle : this.title}
+        title={this.guxTitle}
         disabled={this.disabled}
         class={`gux-${this.accent}`}
       >

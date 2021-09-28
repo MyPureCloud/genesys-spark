@@ -3,6 +3,7 @@
 *This migration guide is open to anyone to edit. If you have migrated a component and think it would be helpful to others to document something you encountered please do so. We understand that at the moment because of the need to fork the repo the overhead of making a small contribution is high so feel free to raise an issue on the COMUI board instead it that is more convenient and a core team member will create the PR.*
 
 ## TLDR
+* rename `title` property to `gux-title` on instances of `gux-button`
 * remove `first-day-of-week` property from instances of `gux-calendar`
 * remove `first-day-of-week` property from instances of `gux-datepicker`
 * remove `-beta` from components that have become stable
@@ -13,6 +14,10 @@
   * `gux-accordion-legacy` -> `gux-accordion`
 
 ## Stable Component Changes
+
+### gux-button
+
+'title' property renamed `gux-title`. This is to fix an accessibility defect.
 
 ### gux-calendar
 
