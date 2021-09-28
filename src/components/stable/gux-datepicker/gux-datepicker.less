@@ -5,6 +5,8 @@ gux-datepicker {
   display: block;
 
   .gux-datepicker {
+    display: inline-block;
+
     .gux-datepicker-field {
       display: inline-flex;
       flex-direction: row;
@@ -12,7 +14,10 @@ gux-datepicker {
       align-content: flex-start;
       align-items: center;
       justify-content: flex-start;
-      margin-right: 20px;
+
+      ~ .gux-datepicker-field {
+        margin-left: 20px;
+      }
 
       .gux-datepicker-field-label {
         flex: 0 1 auto;

@@ -50,6 +50,7 @@ import {
 export class GuxDatepicker {
   yearFormat: string = 'yyyy';
   intervalOrder: string[];
+  datepickerElement: HTMLElement;
   inputElement: HTMLInputElement;
   toInputElement: HTMLInputElement;
   calendarElement: HTMLGuxCalendarElement;
@@ -261,6 +262,20 @@ export class GuxDatepicker {
   onMouseDown(event: MouseEvent) {
     if (this.isFocusedFieldEvent(event)) {
       this.isSelectingRange = true;
+    }
+
+    const target = event.target as HTMLElement;
+    const inDatepicker = this.datepickerElement.contains(target);
+
+    const notToggleButton = Array.from(
+      this.root.querySelectorAll('.gux-calendar-toggle-button')
+    ).every(
+      (toggleButtonElement: HTMLButtonElement) =>
+        !toggleButtonElement.contains(target)
+    );
+
+    if (notToggleButton) {
+      this.active = inDatepicker;
     }
   }
 
@@ -593,6 +608,7 @@ export class GuxDatepicker {
   renderCalendarToggleButton(): JSX.Element {
     return (
       <button
+        class="gux-calendar-toggle-button"
         aria-hidden="true"
         type="button"
         onClick={() => this.toggleCalendar()}
@@ -670,6 +686,7 @@ export class GuxDatepicker {
           'gux-datepicker': true,
           'gux-active': this.active
         }}
+        ref={(el: HTMLElement) => (this.datepickerElement = el)}
       >
         {this.renderStartDateField()}
         {this.renderEndDateField()}
