@@ -195,19 +195,28 @@ export class GuxDropdown {
     });
   }
 
-  private _optionClickedHandler(e: MouseEvent) {
+  private optionSelectedHandler(e: Event) {
     whenEventIsFrom('gux-option', e, elem => {
       const option = elem as HTMLGuxOptionElement;
-      this.setValue(option.text, option.value || option.text);
+      const selectionOptions = this.getSelectionOptions();
+
+      selectionOptions.forEach(selectionOption => {
+        if (selectionOption === option) {
+          selectionOption.selected = true;
+          this.setValue(
+            selectionOption.text,
+            selectionOption.value || selectionOption.text
+          );
+        } else {
+          selectionOption.selected = false;
+        }
+      });
     });
   }
 
-  private _optionKeyDownHandler(e: KeyboardEvent) {
+  private optionKeyDownHandler(e: KeyboardEvent) {
     if (e.key === ' ' || e.key === 'Enter') {
-      whenEventIsFrom('gux-option', e, elem => {
-        const option = elem as HTMLGuxOptionElement;
-        this.setValue(option.text, option.value || option.text);
-      });
+      this.optionSelectedHandler(e);
     }
   }
 
@@ -350,9 +359,9 @@ export class GuxDropdown {
         </div>
         <div
           class={`gux-options ${this.opened ? 'gux-opened' : ''}`}
-          onClick={this._optionClickedHandler.bind(this)}
+          onClick={this.optionSelectedHandler.bind(this)}
           onFocusin={this._optionFocusedHandler.bind(this)}
-          onKeyDown={this._optionKeyDownHandler.bind(this)}
+          onKeyDown={this.optionKeyDownHandler.bind(this)}
         >
           <slot />
         </div>
