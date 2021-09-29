@@ -10,7 +10,8 @@ import { trackComponent } from '../../../usage-tracking';
  */
 @Component({
   styleUrl: 'gux-action-toast.less',
-  tag: 'gux-action-toast'
+  tag: 'gux-action-toast',
+  shadow: true
 })
 export class GuxActionToast {
   @Element()

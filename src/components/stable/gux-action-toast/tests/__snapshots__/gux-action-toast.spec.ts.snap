@@ -2,33 +2,39 @@
 
 exports[`gux-action-toast #render should render action toast 1`] = `
 <gux-action-toast accent="neutral">
-  <!---->
-  <div class="gux-header">
-    <div class="gux-icon">
-      <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
-    </div>
-    <div class="gux-title">
-      <div slot="title">
-        Title
+  <mock:shadow-root>
+    <div class="gux-header">
+      <div class="gux-icon">
+        <slot name="icon"></slot>
+      </div>
+      <div class="gux-title">
+        <slot name="title"></slot>
       </div>
     </div>
-  </div>
-  <div class="gux-message">
-    <div slot="message">
-      This is the message
+    <div class="gux-message">
+      <slot name="message"></slot>
     </div>
-  </div>
-  <div class="gux-action-buttons">
-    <div class="gux-positive-button">
-      <gux-button accent="primary" slot="positive-button">
-        Accept
-      </gux-button>
+    <div class="gux-action-buttons">
+      <div class="gux-positive-button">
+        <slot name="positive-button"></slot>
+      </div>
+      <div class="gux-negative-button">
+        <slot name="negative-button"></slot>
+      </div>
     </div>
-    <div class="gux-negative-button">
-      <gux-button slot="negative-button">
-        Reject
-      </gux-button>
-    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <div slot="title">
+    Title
   </div>
+  <div slot="message">
+    This is the message
+  </div>
+  <gux-button slot="negative-button">
+    Reject
+  </gux-button>
+  <gux-button accent="primary" slot="positive-button">
+    Accept
+  </gux-button>
 </gux-action-toast>
 `;
