@@ -39,7 +39,6 @@ Example of a custom list item with highlighting
 
 ### Used by
 
- - [gux-action-item](../../gux-action-button/gux-action-item)
  - [gux-command-palette-beta](../../../beta/gux-command-palette)
  - [gux-time-picker-beta](../../../beta/gux-time-picker)
 
@@ -51,7 +50,6 @@ Example of a custom list item with highlighting
 ```mermaid
 graph TD;
   gux-list-item --> gux-text-highlight
-  gux-action-item --> gux-list-item
   gux-command-palette-beta --> gux-list-item
   gux-time-picker-beta --> gux-list-item
   style gux-list-item fill:#f9f,stroke:#333,stroke-width:4px

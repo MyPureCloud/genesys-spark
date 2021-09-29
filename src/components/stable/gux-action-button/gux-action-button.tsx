@@ -111,20 +111,17 @@ export class GuxActionButton {
   }
 
   onKeyUpEvent(event: KeyboardEvent) {
-    const key = event.key;
-
-    if (key === 'Escape') {
-      this.isOpen = false;
-      const button = this.dropdownButton.querySelector('button') as HTMLElement;
-      button.focus();
-    }
-
-    if (
-      key === 'ArrowDown' &&
-      !(this.listElement as any as HTMLElement).contains(event.target as Node)
-    ) {
-      this.isOpen = true;
-      this.listElement.setFocusOnFirstItem();
+    switch (event.key) {
+      case 'Escape':
+        this.isOpen = false;
+        this.dropdownButton.focus();
+        break;
+      case 'ArrowDown':
+        if (!this.listElement.contains(event.target as Node)) {
+          this.isOpen = true;
+          this.listElement.setFocusOnFirstItem();
+        }
+        break;
     }
   }
 
