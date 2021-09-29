@@ -53,3 +53,28 @@
     <gux-option>Dutch</gux-option>
   </gux-dropdown>
 </div>
+
+<h3>Dynamic Options</h3>
+<gux-dropdown id="dropdown" placeholder="Select..."> </gux-dropdown>
+
+<gux-button
+  onclick="(function() {
+    const newOptions = [
+      window.toHTML(`<gux-option value='a'>Ant</gux-option>`),
+      window.toHTML(`<gux-option value='b'>Bat</gux-option>`),
+      window.toHTML(`<gux-option value='c'>Cat</gux-option>`),
+      window.toHTML(`<gux-option value='d'>Dog</gux-option>`),
+      window.toHTML(`<gux-option value='e' selected>Eel</gux-option>`),
+      window.toHTML(`<gux-option value='f'>Frog</gux-option>`),
+      window.toHTML(`<gux-option value='g'>Goat</gux-option>`),
+      window.toHTML(`<gux-option value='h'>Horse</gux-option>`),
+      window.toHTML(`<gux-option value='i'>Ibis</gux-option>`),
+      window.toHTML(`<gux-option value='j'>Jellyfish</gux-option>`)
+    ];
+
+    const dropdown = document.getElementById('dropdown');
+
+    newOptions.forEach((newOption) => document.getElementById('dropdown').appendChild(newOption));
+})()"
+  >Add Options</gux-button
+>

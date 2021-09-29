@@ -40,7 +40,7 @@ export class GuxOption {
   @Prop({ mutable: true })
   text: string;
 
-  @Prop()
+  @Prop({ reflect: true })
   selected: boolean;
 
   @State()

@@ -3,6 +3,7 @@ import {
   Element,
   Event,
   EventEmitter,
+  forceUpdate,
   h,
   Listen,
   Method,
@@ -12,6 +13,7 @@ import {
 
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 import { trackComponent } from '../../../usage-tracking';
+import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({
   styleUrl: 'gux-dropdown.less',
@@ -116,6 +118,12 @@ export class GuxDropdown {
     this.value = '';
   }
 
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    forceUpdate(this.root);
+    this.setSelected();
+  }
+
   // TODO: Fix the keyboard navigation I broke
   onKeyDown(event: KeyboardEvent) {
     const selectionOptions = this.getSelectionOptions();
@@ -187,19 +195,28 @@ export class GuxDropdown {
     });
   }
 
-  private _optionClickedHandler(e: MouseEvent) {
+  private optionSelectedHandler(e: Event) {
     whenEventIsFrom('gux-option', e, elem => {
       const option = elem as HTMLGuxOptionElement;
-      this.setValue(option.text, option.value || option.text);
+      const selectionOptions = this.getSelectionOptions();
+
+      selectionOptions.forEach(selectionOption => {
+        if (selectionOption === option) {
+          selectionOption.selected = true;
+          this.setValue(
+            selectionOption.text,
+            selectionOption.value || selectionOption.text
+          );
+        } else {
+          selectionOption.selected = false;
+        }
+      });
     });
   }
 
-  private _optionKeyDownHandler(e: KeyboardEvent) {
+  private optionKeyDownHandler(e: KeyboardEvent) {
     if (e.key === ' ' || e.key === 'Enter') {
-      whenEventIsFrom('gux-option', e, elem => {
-        const option = elem as HTMLGuxOptionElement;
-        this.setValue(option.text, option.value || option.text);
-      });
+      this.optionSelectedHandler(e);
     }
   }
 
@@ -234,7 +251,7 @@ export class GuxDropdown {
     }
   }
 
-  getSuggestionText(filter: string) {
+  getSuggestionText(filter: string = '') {
     this.searchHighlightAndFilter(this.value);
     const filterLength = filter.length;
     const firstFilteredItem = this.getFilteredItems().length
@@ -342,9 +359,9 @@ export class GuxDropdown {
         </div>
         <div
           class={`gux-options ${this.opened ? 'gux-opened' : ''}`}
-          onClick={this._optionClickedHandler.bind(this)}
+          onClick={this.optionSelectedHandler.bind(this)}
           onFocusin={this._optionFocusedHandler.bind(this)}
-          onKeyDown={this._optionKeyDownHandler.bind(this)}
+          onKeyDown={this.optionKeyDownHandler.bind(this)}
         >
           <slot />
         </div>
