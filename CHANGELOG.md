@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.40.0](https://inindca///compare/v2.39.2...v2.40.0) (2021-09-29)
+
+
+### Features
+
+* **dropdown:** setSelection now called on mutation of options ([1c1f695](https://inindca///commit/1c1f69555252ecae7d9d8c9a8200bd73f38eabc2))
+
+
+### Bug Fixes
+
+* **action-item:** fixed action item disabled state ([c6d8b33](https://inindca///commit/c6d8b33726b6b2340d3b4063233101c17ad9087b))
+* **pr-comment:** addressed PR comment ([4a3c685](https://inindca///commit/4a3c685b010c914ec3c102a641a88ecd04437f7b))
+* **pr-comment:** addressed PR comment ([04d7075](https://inindca///commit/04d7075eba6ad0cc072a8bba15992407660f4f3f))
+
 ### [2.39.2](https://inindca///compare/v2.39.1...v2.39.2) (2021-09-28)
 
 
