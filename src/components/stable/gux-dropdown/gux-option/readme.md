@@ -28,19 +28,6 @@ Type: `Promise<boolean>`
 
 
 
-## Dependencies
-
-### Depends on
-
-- [gux-text-highlight](../../gux-text-highlight)
-
-### Graph
-```mermaid
-graph TD;
-  gux-option --> gux-text-highlight
-  style gux-option fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

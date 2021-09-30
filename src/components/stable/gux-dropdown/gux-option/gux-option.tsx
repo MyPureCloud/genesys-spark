@@ -1,12 +1,4 @@
-import {
-  Component,
-  Element,
-  h,
-  Method,
-  Prop,
-  State,
-  Watch
-} from '@stencil/core';
+import { Component, Element, h, Method, Prop, Watch } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-option.less',
@@ -43,9 +35,6 @@ export class GuxOption {
   @Prop({ reflect: true })
   selected: boolean;
 
-  @State()
-  highlight: string;
-
   @Watch('selected')
   updateParentSelection() {
     this.getParentGuxDropdown().setSelected();
@@ -58,7 +47,6 @@ export class GuxOption {
    */
   @Method()
   shouldFilter(searchInput: string): Promise<boolean> {
-    this.highlight = searchInput;
     if (!searchInput) {
       return Promise.resolve(false);
     }
@@ -92,10 +80,7 @@ export class GuxOption {
         >
           <slot />
         </span>
-        <gux-text-highlight
-          text={this.text}
-          highlight={this.highlight ? this.highlight : ''}
-        />
+        {this.text}
       </div>
     );
   }
