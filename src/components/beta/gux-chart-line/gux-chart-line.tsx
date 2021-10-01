@@ -3,21 +3,9 @@ import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
 
-const DEFAULT_X_FIELD_NAME = 'date';
-const DEFAULT_Y_FIELD_NAME = 'value';
+import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
+
 const DEFAULT_COLOR_FIELD_NAME = 'category';
-const DEFAULT_COLOR_SCALE = [
-  '#203B73',
-  '#1DA8B3',
-  '#75A8FF',
-  '#8452CF',
-  '#B5B5EB',
-  '#CC3EBE',
-  '#5E5782',
-  '#FF8FDD',
-  '#868C1E',
-  '#DDD933'
-];
 @Component({
   styleUrl: 'gux-chart-line.less',
   tag: 'gux-chart-line-beta'
@@ -41,12 +29,12 @@ export class GuxLineChart {
       }
     },
     encoding: {
-      x: { field: DEFAULT_X_FIELD_NAME, type: 'nominal' },
-      y: { field: DEFAULT_Y_FIELD_NAME, type: 'quantitative' },
+      x: { type: 'nominal' },
+      y: { type: 'quantitative' },
       color: {
         field: DEFAULT_COLOR_FIELD_NAME,
         type: 'nominal',
-        scale: { range: DEFAULT_COLOR_SCALE },
+        scale: { range: VISUALIZATION_COLORS },
         legend: null
       },
       tooltip: { aggregate: 'count', type: 'quantitative' }
@@ -91,6 +79,12 @@ export class GuxLineChart {
 
   @Watch('chartData')
   parseData() {
+    if (!this.xFieldName || !this.yFieldName) {
+      throw new Error(
+        `[gux-chart-line] requires x-field-name and y-field-name`
+      );
+    }
+
     let chartData = {};
     if (this.chartData) {
       chartData = { data: this.chartData };
@@ -136,7 +130,7 @@ export class GuxLineChart {
 
     if (includeStrokeDash) {
       this.baseChartSpec.encoding.strokeDash = {
-        field: colorFieldName || DEFAULT_COLOR_FIELD_NAME,
+        field: colorFieldName,
         type: 'nominal'
       };
     }

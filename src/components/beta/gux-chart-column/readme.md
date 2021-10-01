@@ -18,7 +18,10 @@
 | `chartLayers`   | --               |             | `string[]`                        | `undefined` |
 | `embedOptions`  | --               |             | `EmbedOptions<string, Renderers>` | `undefined` |
 | `includeLegend` | `include-legend` |             | `boolean`                         | `undefined` |
+| `legendTitle`   | `legend-title`   |             | `string`                          | `undefined` |
+| `xAxisTitle`    | `x-axis-title`   |             | `string`                          | `undefined` |
 | `xFieldName`    | `x-field-name`   |             | `string`                          | `undefined` |
+| `yAxisTitle`    | `y-axis-title`   |             | `string`                          | `undefined` |
 | `yFieldName`    | `y-field-name`   |             | `string`                          | `undefined` |
 
 
@@ -31,8 +34,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-column-chart-beta --> gux-visualization-beta
-  style gux-column-chart-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-chart-column-beta --> gux-visualization-beta
+  style gux-chart-column-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

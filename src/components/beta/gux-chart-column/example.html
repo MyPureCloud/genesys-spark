@@ -1,9 +1,17 @@
 <h1>Default</h1>
-<gux-chart-column-beta id="chart-1" x-field-name="category">
+<gux-chart-column-beta
+  id="chart-1"
+  x-field-name="category"
+  y-field-name="value"
+>
 </gux-chart-column-beta>
 
 <h1>Layered</h1>
-<gux-chart-column-beta id="chart-2" x-field-name="category">
+<gux-chart-column-beta
+  id="chart-2"
+  x-field-name="category"
+  y-field-name="value"
+>
 </gux-chart-column-beta>
 
 <h1>Legend</h1>
@@ -11,11 +19,24 @@
   id="chart-3"
   include-legend="true"
   x-field-name="category"
+  y-field-name="value"
 >
 </gux-chart-column-beta>
 
 <h1>Non-default data fields</h1>
 <gux-chart-column-beta id="chart-4" x-field-name="grade" y-field-name="count">
+</gux-chart-column-beta>
+
+<h1>Custom Labels</h1>
+<gux-chart-column-beta
+  id="chart-5"
+  include-legend="true"
+  x-field-name="category"
+  x-axis-title="Class"
+  y-field-name="value"
+  y-axis-title="Students"
+  legend-title="Class Name"
+>
 </gux-chart-column-beta>
 
 <style
@@ -24,6 +45,7 @@
     const chart2 = document.querySelector('#chart-2');
     const chart3 = document.querySelector('#chart-3');
     const chart4 = document.querySelector('#chart-4');
+    const chart5 = document.querySelector('#chart-5');
 
     chart1.addEventListener('chartClicked', (event) => console.log(event));
 
@@ -70,6 +92,16 @@ chart4.chartData = {'values': [
     {'grade': 'C', 'count': 10},
     {'grade': 'D', 'count': 3},
     {'grade': 'F', 'count': 1}
+  ]
+}
+
+chart5.chartData = {'values': [
+    {'category': 'Biology', 'value': 4},
+    {'category': 'Physics', 'value': 6},
+    {'category': 'Chemistry', 'value': 10},
+    {'category': 'Statistics', 'value': 3},
+    {'category': 'Geometry', 'value': 10},
+    {'category': 'Calculus', 'value': 20}
   ]
 }
 

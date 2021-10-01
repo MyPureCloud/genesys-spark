@@ -3,8 +3,8 @@ import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
 
-const DEFAULT_X_FIELD_NAME = 'date';
-const DEFAULT_Y_FIELD_NAME = 'value';
+import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
+
 @Component({
   styleUrl: 'gux-chart-column.less',
   tag: 'gux-chart-column-beta'
@@ -27,8 +27,8 @@ export class GuxColumnChart {
       }
     },
     encoding: {
-      x: { field: DEFAULT_X_FIELD_NAME, type: 'nominal' },
-      y: { field: DEFAULT_Y_FIELD_NAME, type: 'quantitative' },
+      x: { type: 'nominal' },
+      y: { type: 'quantitative' },
       tooltip: { aggregate: 'count', type: 'quantitative' }
     }
   };
@@ -46,6 +46,15 @@ export class GuxColumnChart {
   yFieldName: string;
 
   @Prop()
+  xAxisTitle: string;
+
+  @Prop()
+  yAxisTitle: string;
+
+  @Prop()
+  legendTitle: string;
+
+  @Prop()
   chartLayers: string[];
 
   @Prop()
@@ -53,6 +62,12 @@ export class GuxColumnChart {
 
   @Watch('chartData')
   parseData() {
+    if (!this.xFieldName || !this.yFieldName) {
+      throw new Error(
+        `[gux-chart-column] requires x-field-name and y-field-name`
+      );
+    }
+
     let chartData = {};
     if (this.chartData) {
       chartData = { data: this.chartData };
@@ -64,6 +79,9 @@ export class GuxColumnChart {
 
     const xFieldName = this.xFieldName;
     const yFieldName = this.yFieldName;
+    const xAxisTitle = this.xAxisTitle;
+    const yAxisTitle = this.yAxisTitle;
+    const legendTitle = this.legendTitle;
 
     if (this.chartLayers) {
       const layers = this.chartLayers.map(layerName => {
@@ -76,11 +94,11 @@ export class GuxColumnChart {
           ],
           encoding: {
             x: {
-              field: xFieldName || 'category',
+              field: xFieldName,
               type: 'nominal'
             },
             y: {
-              field: yFieldName || 'value',
+              field: yFieldName,
               type: 'quantitative'
             }
           }
@@ -89,29 +107,30 @@ export class GuxColumnChart {
       this.baseChartSpec.layer = layers;
     } else {
       if (xFieldName) {
-        this.baseChartSpec.encoding.x.field = this.xFieldName;
+        this.baseChartSpec.encoding.x.field = xFieldName;
       }
 
       if (yFieldName) {
-        this.baseChartSpec.encoding.y.field = this.yFieldName;
+        this.baseChartSpec.encoding.y.field = yFieldName;
+      }
+
+      if (xAxisTitle) {
+        this.baseChartSpec.encoding.x.title = xAxisTitle;
+      }
+
+      if (yAxisTitle) {
+        this.baseChartSpec.encoding.y.title = yAxisTitle;
+      }
+
+      if (legendTitle) {
+        this.baseChartSpec.encoding.color.title = legendTitle;
       }
     }
 
     // Set up colors for legend and bars
-    const rangeField = this.xFieldName || DEFAULT_X_FIELD_NAME;
+    const rangeField = xFieldName;
     const rangeConfig = {
-      [rangeField]: [
-        '#203B73',
-        '#1DA8B3',
-        '#75A8FF',
-        '#8452CF',
-        '#B5B5EB',
-        '#CC3EBE',
-        '#5E5782',
-        '#FF8FDD',
-        '#868C1E',
-        '#DDD933'
-      ]
+      [rangeField]: VISUALIZATION_COLORS
     };
     this.baseChartSpec.config.range = rangeConfig;
     const spec = Object.assign(this.baseChartSpec, chartData);
