@@ -40,11 +40,8 @@ export class GuxIcon {
     if (iconName) {
       const rootIconName = getRootIconName(iconName);
 
-      this.svgHtml = await getSvgHtml(
-        rootIconName,
-        this.decorative,
-        this.screenreaderText
-      );
+      const baseSvgHtml = await getSvgHtml(rootIconName);
+      this.svgHtml = this.getSvgWithAriaAttributes(baseSvgHtml);
     }
   }
 
@@ -61,6 +58,21 @@ export class GuxIcon {
         'No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true.'
       );
     }
+  }
+
+  getSvgWithAriaAttributes(svgText: string) {
+    const svgElement = new DOMParser().parseFromString(svgText, 'image/svg+xml')
+      .firstChild as SVGElement;
+
+    if (this.decorative) {
+      svgElement.setAttribute('aria-hidden', String(this.decorative));
+    }
+
+    if (this.screenreaderText) {
+      svgElement.setAttribute('aria-label', this.screenreaderText);
+    }
+
+    return svgElement.outerHTML;
   }
 
   render(): JSX.Element {

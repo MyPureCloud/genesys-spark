@@ -17,12 +17,8 @@ async function fetchIcon(iconName: string): Promise<string> {
   );
 }
 
-function iconinfoToId(
-  iconName: string,
-  decorative: boolean,
-  screenreaderText: string
-): string {
-  return `${iconName.replace('/', '-')}-${decorative}-${screenreaderText}`;
+function iconInfoToId(iconName: string): string {
+  return iconName.replace('/', '-');
 }
 
 export function getRootIconName(iconName: string): string {
@@ -37,12 +33,8 @@ export function getRootIconName(iconName: string): string {
   return iconName;
 }
 
-export function getSvgHtml(
-  iconName: string,
-  decorative: boolean,
-  screenreaderText: string
-): Promise<string> {
-  const id = iconinfoToId(iconName, decorative, screenreaderText);
+export function getSvgHtml(iconName: string): Promise<string> {
+  const id = iconInfoToId(iconName);
   const cachedSvgElement = svgHTMLCache.get(id);
 
   if (cachedSvgElement) {
@@ -50,27 +42,13 @@ export function getSvgHtml(
   }
 
   const svgHtml = fetchIcon(iconName)
-    .then(svgText => {
-      const svgElement = new DOMParser().parseFromString(
-        svgText,
-        'image/svg+xml'
-      ).firstChild as SVGElement;
-      if (decorative) {
-        svgElement.setAttribute('aria-hidden', String(decorative));
-      }
-
-      if (screenreaderText) {
-        svgElement.setAttribute('aria-label', screenreaderText);
-      }
-
-      return svgElement.outerHTML;
-    })
+    .then(svgText => svgText)
     .catch(err => {
       setTimeout(() => {
         throw err;
       }, 0);
 
-      return getSvgHtml('unknown', decorative, screenreaderText);
+      return getSvgHtml('unknown');
     });
 
   svgHTMLCache.set(id, svgHtml);
