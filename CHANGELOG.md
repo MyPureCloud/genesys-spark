@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.40.1](https://inindca///compare/v2.40.0...v2.40.1) (2021-10-01)
+
+
+### Bug Fixes
+
+* **dropdown:** removed option highlighting ([9bf4102](https://inindca///commit/9bf4102fb49ebe86465106ac6a36f852d5ed08e4))
+* **gux-tooltip:** remove cursor styling form linked element ([f91d8de](https://inindca///commit/f91d8dea3385da57e1ebcd784f4fe93cc87a50f5))
+* **pr-comment:** addressed PR comment ([e44c1f5](https://inindca///commit/e44c1f596b89b2d47ffb1790e9b60fd769b3200b))
+
 ## [2.40.0](https://inindca///compare/v2.39.2...v2.40.0) (2021-09-29)
 
 
