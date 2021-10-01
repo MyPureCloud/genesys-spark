@@ -230,15 +230,6 @@ export class GuxDropdown {
     this.opened = true;
   }
 
-  private _showDropdownIcon() {
-    const selectionOptions = this.getSelectionOptions();
-    const match = selectionOptions.filter(item => {
-      return item.text === this.value;
-    });
-    const filterableBehavior = !this.value || !!match.length;
-    return this.filterable ? filterableBehavior : true;
-  }
-
   getFilteredItems() {
     const selectionOptions = this.getSelectionOptions();
     if (this.filterable) {
@@ -321,10 +312,7 @@ export class GuxDropdown {
             </span>
           </span>
 
-          <gux-input-text-like
-            class={this._showDropdownIcon() ? 'gux-unclearable' : ''}
-            gux-disabled={this.disabled}
-          >
+          <gux-input-text-like>
             <input
               placeholder={this.placeholder}
               slot="input"
@@ -346,16 +334,14 @@ export class GuxDropdown {
             />
           </gux-input-text-like>
 
-          {this._showDropdownIcon() && (
-            <button
-              class="gux-dropdown-indicator"
-              aria-hidden="true"
-              tabindex="-1"
-              type="button"
-            >
-              <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
-            </button>
-          )}
+          <button
+            class="gux-dropdown-indicator"
+            aria-hidden="true"
+            tabindex="-1"
+            type="button"
+          >
+            <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
+          </button>
         </div>
         <div
           class={`gux-options ${this.opened ? 'gux-opened' : ''}`}
