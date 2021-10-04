@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.40.2](https://inindca///compare/v2.40.1...v2.40.2) (2021-10-04)
+
+
+### Bug Fixes
+
+* **gux-icon:** svg icon cache logic has been improved and reduced network calls ([ee9d8b5](https://inindca///commit/ee9d8b58063807ac14201cb197f02d82297ecdb4))
+* **modal:** made dismiss button focusable in modal ([6402eab](https://inindca///commit/6402eabd98718d330847311d095ef5426a47ec8e))
+* **pr-comments:** addressed the PR comments and updated the example ([e1f2611](https://inindca///commit/e1f2611e527363b07d3c260821ba3559a92fc127))
+* **toggle:** fixed checkmark positioning ([8e0fca0](https://inindca///commit/8e0fca06523162486fbd1214a36092e55c83250a))
+
 ### [2.40.1](https://inindca///compare/v2.40.0...v2.40.1) (2021-10-01)
 
 
