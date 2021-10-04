@@ -2,193 +2,236 @@
 
 exports[`gux-breadcrumbs #render should render component as expected (1) 1`] = `
 <gux-breadcrumbs>
-  <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container"></nav>
+  <mock:shadow-root>
+    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
+      <slot></slot>
+    </nav>
+  </mock:shadow-root>
 </gux-breadcrumbs>
 `;
 
 exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
 <gux-breadcrumbs>
-  <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-    <gux-breadcrumb-item>
-      <!---->
+  <mock:shadow-root>
+    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
+      <slot></slot>
+    </nav>
+  </mock:shadow-root>
+  <gux-breadcrumb-item>
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
-          Category
+          <slot></slot>
         </span>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item href="#">
-      <!---->
+    </mock:shadow-root>
+    Category
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item href="#">
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <a class="gux-breadcrumb-content gux-link" href="#">
-          Parent
+          <slot></slot>
         </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item>
-      <!---->
+    </mock:shadow-root>
+    Parent
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item>
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
-          Current
+          <slot></slot>
         </span>
       </span>
-    </gux-breadcrumb-item>
-  </nav>
+    </mock:shadow-root>
+    Current
+  </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;
 
 exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
 <gux-breadcrumbs>
-  <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-    <gux-breadcrumb-item>
-      <!---->
+  <mock:shadow-root>
+    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
+      <slot></slot>
+    </nav>
+  </mock:shadow-root>
+  <gux-breadcrumb-item>
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
-          Category
+          <slot></slot>
         </span>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item href="#">
-      <!---->
+    </mock:shadow-root>
+    Category
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item href="#">
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <a class="gux-breadcrumb-content gux-link" href="#">
-          Parent
+          <slot></slot>
         </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item href="#">
-      <!---->
+    </mock:shadow-root>
+    Parent
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item href="#">
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
-          Current
+          <slot></slot>
         </span>
       </span>
-    </gux-breadcrumb-item>
-  </nav>
+    </mock:shadow-root>
+    Current
+  </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;
 
 exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
 <gux-breadcrumbs accent="primary">
-  <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-    <gux-breadcrumb-item>
-      <!---->
+  <mock:shadow-root>
+    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
+      <slot></slot>
+    </nav>
+  </mock:shadow-root>
+  <gux-breadcrumb-item>
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
-          Category
+          <slot></slot>
         </span>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item href="#">
-      <!---->
+    </mock:shadow-root>
+    Category
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item href="#">
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <a class="gux-breadcrumb-content gux-link" href="#">
-          Parent
+          <slot></slot>
         </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item>
-      <!---->
+    </mock:shadow-root>
+    Parent
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item>
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
-          Current
+          <slot></slot>
         </span>
       </span>
-    </gux-breadcrumb-item>
-  </nav>
+    </mock:shadow-root>
+    Current
+  </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;
 
 exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
 <gux-breadcrumbs accent="secondary">
-  <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-    <gux-breadcrumb-item>
-      <!---->
+  <mock:shadow-root>
+    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
+      <slot></slot>
+    </nav>
+  </mock:shadow-root>
+  <gux-breadcrumb-item>
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-secondary">
         <span class="gux-breadcrumb-content">
-          Category
+          <slot></slot>
         </span>
         <gux-icon class="gux-breadcrumb-separator" decorative="" icon-name="chevron-small-right"></gux-icon>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item href="#">
-      <!---->
+    </mock:shadow-root>
+    Category
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item href="#">
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-secondary">
         <a class="gux-breadcrumb-content gux-link" href="#">
-          Parent
+          <slot></slot>
         </a>
         <gux-icon class="gux-breadcrumb-separator" decorative="" icon-name="chevron-small-right"></gux-icon>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item>
-      <!---->
+    </mock:shadow-root>
+    Parent
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item>
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-secondary">
         <span class="gux-breadcrumb-content">
-          Current
+          <slot></slot>
         </span>
       </span>
-    </gux-breadcrumb-item>
-  </nav>
+    </mock:shadow-root>
+    Current
+  </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;
 
 exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
 <gux-breadcrumbs accent="invalid">
-  <!---->
-  <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-    <gux-breadcrumb-item>
-      <!---->
+  <mock:shadow-root>
+    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
+      <slot></slot>
+    </nav>
+  </mock:shadow-root>
+  <gux-breadcrumb-item>
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-invalid">
         <span class="gux-breadcrumb-content">
-          Category
+          <slot></slot>
         </span>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item href="#">
-      <!---->
+    </mock:shadow-root>
+    Category
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item href="#">
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-invalid">
         <a class="gux-breadcrumb-content gux-link" href="#">
-          Parent
+          <slot></slot>
         </a>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
       </span>
-    </gux-breadcrumb-item>
-    <gux-breadcrumb-item>
-      <!---->
+    </mock:shadow-root>
+    Parent
+  </gux-breadcrumb-item>
+  <gux-breadcrumb-item>
+    <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-invalid">
         <span class="gux-breadcrumb-content">
-          Current
+          <slot></slot>
         </span>
       </span>
-    </gux-breadcrumb-item>
-  </nav>
+    </mock:shadow-root>
+    Current
+  </gux-breadcrumb-item>
 </gux-breadcrumbs>
 `;
