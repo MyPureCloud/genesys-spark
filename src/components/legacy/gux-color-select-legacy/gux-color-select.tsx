@@ -16,7 +16,8 @@ import { defaultColors } from './colors';
 
 @Component({
   styleUrl: 'gux-color-select.less',
-  tag: 'gux-color-select-legacy'
+  tag: 'gux-color-select-legacy',
+  shadow: false
 })
 export class GuxColorSelectBeta {
   @Element()

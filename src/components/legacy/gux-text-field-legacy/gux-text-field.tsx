@@ -18,7 +18,8 @@ import textFieldResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-text-field.less',
-  tag: 'gux-text-field-legacy'
+  tag: 'gux-text-field-legacy',
+  shadow: false
 })
 export class GuxTextFieldLegacy {
   @Element()

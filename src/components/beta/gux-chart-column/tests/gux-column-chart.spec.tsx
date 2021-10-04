@@ -15,7 +15,7 @@ const chartData = {
   ]
 };
 
-describe('guxchart-column-beta', () => {
+describe('gux-chart-column-beta', () => {
   it('should build', async () => {
     const html =
       '<gux-chart-column-beta x-field-name="date" y-field-name="value"></gux-chart-column-beta>';

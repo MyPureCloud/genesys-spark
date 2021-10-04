@@ -27,7 +27,6 @@ describe('gux-tooltip', () => {
         const tooltip = await page.find('gux-tooltip');
 
         expect(element.getAttribute('aria-describedby')).toBe(tooltip.id);
-        expect(element).toHaveClass('gux-tooltip-for-element');
         expect(tooltip.getAttribute('data-popper-placement')).toBe(
           'bottom-start'
         );

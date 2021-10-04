@@ -28,25 +28,21 @@ describe('gux-option', () => {
       it('should not filter if search string starts with Case-sensitive Match', async () => {
         const result = await component.shouldFilter('TestsAre');
         expect(result).toBeFalsy();
-        expect(component.highlight).toBe('TestsAre');
       });
 
       it('should not filter if search string starts with Case-Insensitive Match', async () => {
         const result = await component.shouldFilter('testsAre');
         expect(result).toBeFalsy();
-        expect(component.highlight).toBe('testsAre');
       });
 
       it(`should filter if string doesn't startWith`, async () => {
         const result = await component.shouldFilter('Are');
         expect(result).toBeTruthy();
-        expect(component.highlight).toBe('Are');
       });
 
       it(`should filter if case-insensitive string string doesn't startWith`, async () => {
         const result = await component.shouldFilter('are');
         expect(result).toBeTruthy();
-        expect(component.highlight).toBe('are');
       });
     });
   });

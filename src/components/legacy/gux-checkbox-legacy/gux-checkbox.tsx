@@ -21,7 +21,8 @@ const classForCheckedState = (checked: boolean, indeterminate: boolean) => {
 
 @Component({
   styleUrl: 'gux-checkbox.less',
-  tag: 'gux-checkbox-legacy'
+  tag: 'gux-checkbox-legacy',
+  shadow: false
 })
 export class GuxCheckboxLegacy {
   @Element()

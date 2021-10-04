@@ -76,7 +76,6 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-dropdown](../../stable/gux-dropdown)
  - [gux-search-beta](../../beta/gux-search)
  - [gux-spin-button-legacy](../gux-spin-button-legacy)
 
@@ -88,7 +87,6 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-text-field-legacy --> gux-icon
-  gux-dropdown --> gux-text-field-legacy
   gux-search-beta --> gux-text-field-legacy
   gux-spin-button-legacy --> gux-text-field-legacy
   style gux-text-field-legacy fill:#f9f,stroke:#333,stroke-width:4px

@@ -2,6 +2,78 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.40.1](https://inindca///compare/v2.40.0...v2.40.1) (2021-10-01)
+
+
+### Bug Fixes
+
+* **dropdown:** removed option highlighting ([9bf4102](https://inindca///commit/9bf4102fb49ebe86465106ac6a36f852d5ed08e4))
+* **gux-tooltip:** remove cursor styling form linked element ([f91d8de](https://inindca///commit/f91d8dea3385da57e1ebcd784f4fe93cc87a50f5))
+* **pr-comment:** addressed PR comment ([e44c1f5](https://inindca///commit/e44c1f596b89b2d47ffb1790e9b60fd769b3200b))
+
+## [2.40.0](https://inindca///compare/v2.39.2...v2.40.0) (2021-09-29)
+
+
+### Features
+
+* **dropdown:** setSelection now called on mutation of options ([1c1f695](https://inindca///commit/1c1f69555252ecae7d9d8c9a8200bd73f38eabc2))
+
+
+### Bug Fixes
+
+* **action-item:** fixed action item disabled state ([c6d8b33](https://inindca///commit/c6d8b33726b6b2340d3b4063233101c17ad9087b))
+* **pr-comment:** addressed PR comment ([4a3c685](https://inindca///commit/4a3c685b010c914ec3c102a641a88ecd04437f7b))
+* **pr-comment:** addressed PR comment ([04d7075](https://inindca///commit/04d7075eba6ad0cc072a8bba15992407660f4f3f))
+
+### [2.39.2](https://inindca///compare/v2.39.1...v2.39.2) (2021-09-28)
+
+
+### Bug Fixes
+
+* **button:** removed all references to the button title prop ([1688bb4](https://inindca///commit/1688bb4179b9af8000663d93ec4ab53ffc0a6411))
+* **datepicker:** fixed click outside bug ([24db9c9](https://inindca///commit/24db9c9458dde7eb7a8cf7c6b8d01974bcd164f1))
+* **pr-comment:** address PR comment ([59fe4ec](https://inindca///commit/59fe4ec7af42a64b57c8555ba48b635be5ed89a1))
+* **pr-comment:** addressed PR comment ([b20e59f](https://inindca///commit/b20e59f6d4bd0526fe382a80840822a2a8d20362))
+
+### [2.39.1](https://inindca///compare/v2.39.0...v2.39.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **gux-tabs:** fixed focus styling for tabs ([b14669b](https://inindca///commit/b14669bde1ba84fd7d3b3c3c8598bc53547f3beb))
+* **notification-toast:** prepare component for enabling shadow dom ([ef7252b](https://inindca///commit/ef7252b0e037569cbf3cb341d4f5b10e20158296))
+* **simple-toast:** prepared component for convertion to shadow dom ([39fef58](https://inindca///commit/39fef58fd483c26ef906d32d77491d56722c312a))
+
+## [2.39.0](https://inindca///compare/v2.38.0...v2.39.0) (2021-09-23)
+
+
+### Features
+
+* **accordion:** added open prop to accordion section ([f9ad04a](https://inindca///commit/f9ad04aaf801e00ad04c01495b7c21711f4a20cf))
+* **gux-dropdown:** remove gux-text-field-legacy dependency ([14959db](https://inindca///commit/14959db0953453b7844adac3dccd0a2c9a57647f))
+
+
+### Bug Fixes
+
+* **accordion:** explicitly opted out of shadow dom ([e87a0b6](https://inindca///commit/e87a0b680263621c946b2134981f655d9c2915de))
+* **action-toast:** prepare component for enabling shadow dom ([3a2ea8a](https://inindca///commit/3a2ea8af4e8d5ceed9918e93e15721af9a1a24eb))
+* **error-message:** fixed slot issue in form-field component ([2c41eb5](https://inindca///commit/2c41eb57d6152285edca20d55566a1ded2056eda))
+
+## [2.38.0](https://inindca///compare/v2.37.1...v2.38.0) (2021-09-22)
+
+
+### Features
+
+* **gux-tooltip:** prep for enabling shadowdom ([ad09581](https://inindca///commit/ad09581f25e100bdd02518172b2f6d85e963441e))
+
+
+### Bug Fixes
+
+* **shadow-dom:** update script ([fc7dce8](https://inindca///commit/fc7dce803b80bf8376d76dc3cc2928baf5300188))
+* **text-highlight:** explicitly set shadow to false ([a3cf33e](https://inindca///commit/a3cf33e6905987ea59d715c47a11e45ee5e6e17e))
+
+### [2.37.1](https://inindca///compare/v2.37.0...v2.37.1) (2021-09-21)
+
 ## [2.37.0](https://inindca///compare/v2.36.1...v2.37.0) (2021-09-20)
 
 

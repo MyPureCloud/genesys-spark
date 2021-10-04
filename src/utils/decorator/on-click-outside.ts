@@ -28,14 +28,14 @@ export function OnClickOutside(
 
     const { connectedCallback, disconnectedCallback } = proto;
 
-    proto.componentDidLoad = function () {
+    proto.connectedCallback = function () {
       const host = getElement(this);
       const method = this[methodName];
       registerOnClickOutside(this, host, method, opt);
       return connectedCallback && connectedCallback.call(this);
     };
 
-    proto.componentDidUnload = function () {
+    proto.disconnectedCallback = function () {
       const host = getElement(this);
       const method = this[methodName];
       removeOnClickOutside(this, host, method, opt);

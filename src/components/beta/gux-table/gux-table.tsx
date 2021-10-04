@@ -599,33 +599,38 @@ export class GuxTable {
           <slot name="data" />
         </div>
         {this.isHorizontalScroll && (
-          <gux-button
-            accent="secondary"
-            class="gux-table-scroll-left"
-            disabled={this.isScrolledToFirstCell}
-            onClick={
-              !this.isScrolledToFirstCell && this.previousColumn.bind(this)
-            }
-          >
-            <gux-icon
-              icon-name="chevron-left"
-              screenreader-text={this.i18n('scrollLeft')}
-            />
-          </gux-button>
+          <gux-button-slot-beta accent="secondary">
+            <button
+              class="gux-table-scroll-left"
+              disabled={this.isScrolledToFirstCell}
+              onClick={
+                !this.isScrolledToFirstCell && this.previousColumn.bind(this)
+              }
+            >
+              <gux-icon
+                icon-name="chevron-left"
+                screenreader-text={this.i18n('scrollLeft')}
+              />
+            </button>
+          </gux-button-slot-beta>
         )}
         {this.isHorizontalScroll && (
-          <gux-button
+          <gux-button-slot-beta
             accent="secondary"
-            class="gux-table-scroll-right"
-            disabled={this.isScrolledToLastCell}
             style={{ marginRight: `${this.tableScrollbarConstant}px` }}
-            onClick={!this.isScrolledToLastCell && this.nextColumn.bind(this)}
           >
-            <gux-icon
-              icon-name="chevron-right"
-              screenreader-text={this.i18n('scrollRight')}
-            />
-          </gux-button>
+            <button
+              class="gux-table-scroll-right"
+              disabled={this.isScrolledToLastCell}
+              style={{ marginRight: `${this.tableScrollbarConstant}px` }}
+              onClick={!this.isScrolledToLastCell && this.nextColumn.bind(this)}
+            >
+              <gux-icon
+                icon-name="chevron-right"
+                screenreader-text={this.i18n('scrollRight')}
+              />
+            </button>
+          </gux-button-slot-beta>
         )}
         {this.isTableEmpty && (
           <div class="empty-table">

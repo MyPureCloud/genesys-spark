@@ -22,7 +22,7 @@ exports[`gux-tooltip #remove should remove component as expected (2) 1`] = `
 
 exports[`gux-tooltip #render should render component as expected (1) 1`] = `
 <body>
-  <div aria-describedby="gux-tooltip-i" class="gux-tooltip-for-element">
+  <div aria-describedby="gux-tooltip-i">
     <div>
       Element
     </div>
@@ -37,7 +37,7 @@ exports[`gux-tooltip #render should render component as expected (1) 1`] = `
 exports[`gux-tooltip #render should render component as expected (2) 1`] = `
 <body>
   <div>
-    <div aria-describedby="gux-tooltip-i" class="gux-tooltip-for-element" id="element">
+    <div aria-describedby="gux-tooltip-i" id="element">
       Element
     </div>
     <gux-tooltip for="element" id="gux-tooltip-i" role="tooltip" tabindex="0">

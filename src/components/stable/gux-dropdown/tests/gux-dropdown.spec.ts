@@ -1,4 +1,6 @@
 import { newSpecPage } from '@stencil/core/testing';
+import MutationObserver from 'mutation-observer';
+
 import { GuxDropdown } from '../gux-dropdown';
 import { GuxOption } from '../gux-option/gux-option';
 import { whenEventIsFrom } from '../../../../utils/dom/when-event-is-from';
@@ -7,6 +9,8 @@ describe('gux-dropdown', () => {
   let component: GuxDropdown;
 
   beforeEach(async () => {
+    global.MutationObserver = MutationObserver;
+
     const page = await newSpecPage({
       components: [GuxDropdown, GuxOption],
       html: `
@@ -73,11 +77,6 @@ describe('gux-dropdown', () => {
         expect(component.inputIsFocused).toEqual(false);
         expect(component.forcedGhostValue).toEqual('');
       });
-      it('_inputHandler', () => {
-        const value = 'dummy';
-        component._inputHandler({ detail: value } as CustomEvent);
-        expect(component.value).toEqual(value);
-      });
 
       it('getFilteredItems()', () => {
         component.filterable = false;
@@ -110,16 +109,16 @@ describe('gux-dropdown', () => {
         expect(component.getFilteredItems().map(opt => opt.text)).toEqual([]);
       });
 
-      it('getGhost', () => {
+      it('getSuggestionText', () => {
+        const filter = 'Ame';
         component.opened = true;
         component.filterable = true;
-        component.forcedGhostValue = 'Ame';
-        expect(component.getGhost()).toEqual(component.forcedGhostValue);
+        expect(component.getSuggestionText(filter)).toEqual('rican English');
         component.opened = false;
         component.value = '';
         component.filterable = false;
         component.placeholder = 'Select...';
-        expect(component.getGhost()).toEqual(component.placeholder);
+        expect(component.getSuggestionText(filter)).toEqual('');
       });
     });
   });

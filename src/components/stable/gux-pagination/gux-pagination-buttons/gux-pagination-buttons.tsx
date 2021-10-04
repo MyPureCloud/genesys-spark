@@ -154,43 +154,47 @@ export class GuxPaginationButtons {
     return (
       <div class={`gux-pagination-buttons-container gux-${this.layout}`}>
         <div class="gux-pagination-buttons-group">
-          <gux-button
-            accent="secondary"
-            title={this.i18n('first')}
-            disabled={this.onFirstPage}
-            onClick={this.handleClickFirst.bind(this)}
-          >
-            <gux-icon decorative icon-name="chevron-double-left"></gux-icon>
-          </gux-button>
-          <gux-button
-            accent="secondary"
-            title={this.i18n('previous')}
-            disabled={this.onFirstPage}
-            onClick={this.handleClickPrevious.bind(this)}
-          >
-            <gux-icon decorative icon-name="chevron-small-left"></gux-icon>
-          </gux-button>
+          <gux-button-slot-beta accent="secondary">
+            <button
+              title={this.i18n('first')}
+              disabled={this.onFirstPage}
+              onClick={this.handleClickFirst.bind(this)}
+            >
+              <gux-icon decorative icon-name="chevron-double-left"></gux-icon>
+            </button>
+          </gux-button-slot-beta>
+          <gux-button-slot-beta accent="secondary">
+            <button
+              title={this.i18n('previous')}
+              disabled={this.onFirstPage}
+              onClick={this.handleClickPrevious.bind(this)}
+            >
+              <gux-icon decorative icon-name="chevron-small-left"></gux-icon>
+            </button>
+          </gux-button-slot-beta>
         </div>
 
         {this.getPagePicker(this.layout)}
 
         <div class="gux-pagination-buttons-group">
-          <gux-button
-            accent="secondary"
-            title={this.i18n('next')}
-            disabled={this.onLastPage}
-            onClick={this.handleClickNext.bind(this)}
-          >
-            <gux-icon decorative icon-name="chevron-small-right"></gux-icon>
-          </gux-button>
-          <gux-button
-            accent="secondary"
-            title={this.i18n('last')}
-            disabled={this.onLastPage}
-            onClick={this.handleClickLast.bind(this)}
-          >
-            <gux-icon decorative icon-name="chevron-double-right"></gux-icon>
-          </gux-button>
+          <gux-button-slot-beta accent="secondary">
+            <button
+              title={this.i18n('next')}
+              disabled={this.onLastPage}
+              onClick={this.handleClickNext.bind(this)}
+            >
+              <gux-icon decorative icon-name="chevron-small-right"></gux-icon>
+            </button>
+          </gux-button-slot-beta>
+          <gux-button-slot-beta accent="secondary">
+            <button
+              title={this.i18n('last')}
+              disabled={this.onLastPage}
+              onClick={this.handleClickLast.bind(this)}
+            >
+              <gux-icon decorative icon-name="chevron-double-right"></gux-icon>
+            </button>
+          </gux-button-slot-beta>
         </div>
       </div>
     );
