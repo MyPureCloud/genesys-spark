@@ -3,7 +3,7 @@ import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 import { logError } from '../../../utils/error/log-error';
 
-import { getSvgHtml, getRootIconName } from './gux-icon.service';
+import { getBaseSvgHtml, getRootIconName } from './gux-icon.service';
 
 @Component({
   assetsDirs: ['icons'],
@@ -40,7 +40,7 @@ export class GuxIcon {
     if (iconName) {
       const rootIconName = getRootIconName(iconName);
 
-      const baseSvgHtml = await getSvgHtml(rootIconName);
+      const baseSvgHtml = await getBaseSvgHtml(rootIconName);
       this.svgHtml = this.getSvgWithAriaAttributes(baseSvgHtml);
     }
   }
@@ -60,7 +60,7 @@ export class GuxIcon {
     }
   }
 
-  getSvgWithAriaAttributes(svgText: string) {
+  private getSvgWithAriaAttributes(svgText: string): string {
     const svgElement = new DOMParser().parseFromString(svgText, 'image/svg+xml')
       .firstChild as SVGElement;
 

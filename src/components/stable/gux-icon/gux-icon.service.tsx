@@ -33,7 +33,7 @@ export function getRootIconName(iconName: string): string {
   return iconName;
 }
 
-export function getSvgHtml(iconName: string): Promise<string> {
+export function getBaseSvgHtml(iconName: string): Promise<string> {
   const id = iconInfoToId(iconName);
   const cachedSvgElement = svgHTMLCache.get(id);
 
@@ -48,7 +48,7 @@ export function getSvgHtml(iconName: string): Promise<string> {
         throw err;
       }, 0);
 
-      return getSvgHtml('unknown');
+      return getBaseSvgHtml('unknown');
     });
 
   svgHTMLCache.set(id, svgHtml);
