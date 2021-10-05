@@ -38,9 +38,9 @@
     order: 0;
     color: @gux-aqua-green-sec;
 
-    gux-icon {
-      width: 32px;
-      height: 32px;
+    ::slotted(gux-icon) {
+      width: 32px !important;
+      height: 32px !important;
     }
   }
 
@@ -59,7 +59,7 @@
   margin: 16px 0;
   .body-font();
 
-  dl {
+  ::slotted(dl) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -67,22 +67,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin: 0;
-
-    dt {
-      flex: 0 1 20%;
-      align-self: auto;
-      order: 0;
-      margin: 0;
-      color: @gux-black-50;
-      .bold-font();
-    }
-
-    dd {
-      flex: 0 1 80%;
-      align-self: auto;
-      order: 0;
-      margin: 0;
-    }
   }
 }
 
