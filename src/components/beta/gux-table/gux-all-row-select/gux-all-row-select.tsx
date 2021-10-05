@@ -6,7 +6,8 @@ import {
   EventEmitter,
   JSX,
   Listen,
-  Prop
+  Prop,
+  Method
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
@@ -18,6 +19,8 @@ import tableResources from '../i18n/en.json';
   tag: 'gux-all-row-select'
 })
 export class GuxAllRowSelect {
+  private inputElement: HTMLInputElement;
+
   @Element()
   root: HTMLElement;
 
@@ -40,6 +43,11 @@ export class GuxAllRowSelect {
     this.internalallrowselectchange.emit();
   }
 
+  @Method()
+  async setIndeterminate(indeterminate = true): Promise<void> {
+    this.inputElement.indeterminate = indeterminate;
+  }
+
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, tableResources);
   }
@@ -48,6 +56,7 @@ export class GuxAllRowSelect {
     return (
       <gux-form-field>
         <input
+          ref={el => (this.inputElement = el)}
           slot="input"
           id={this.id}
           type="checkbox"

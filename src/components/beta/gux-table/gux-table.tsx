@@ -500,6 +500,7 @@ export class GuxTable {
     this.prepareSelectableRows();
     this.checkHorizontalScroll();
     this.checkVerticalScroll();
+    this.setHeaderRowSelectboxUI();
 
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() => {
@@ -535,6 +536,33 @@ export class GuxTable {
     }
   }
 
+  private setHeaderRowSelectboxUI(): void {
+    const headerRowSelectbox: HTMLGuxAllRowSelectElement =
+      this.tableContainer.querySelector('thead tr th gux-all-row-select');
+
+    if (headerRowSelectbox) {
+      const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
+        this.tableContainer.querySelectorAll('tbody tr td gux-row-select')
+      );
+
+      const selectedRows = dataRowsSelectboxes.filter(
+        (dataRowSelectbox: HTMLGuxRowSelectElement) => {
+          return dataRowSelectbox.selected;
+        }
+      );
+
+      const hasRows = Boolean(dataRowsSelectboxes.length);
+      const allSelected = selectedRows.length === dataRowsSelectboxes.length;
+      const noneSelected = selectedRows.length === 0;
+
+      headerRowSelectbox.selected = hasRows && allSelected;
+
+      headerRowSelectbox.setIndeterminate(
+        hasRows && !allSelected && !noneSelected
+      );
+    }
+  }
+
   private rowSelection(dataRowSelectbox: HTMLGuxRowSelectElement): void {
     const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
 
@@ -544,6 +572,7 @@ export class GuxTable {
       tableRow.removeAttribute('data-selected-row');
     }
   }
+
   private allRowsSelection(
     allRowSelectbox: HTMLGuxRowSelectElement,
     dataRowsSelectboxes: HTMLGuxRowSelectElement[]
@@ -574,21 +603,8 @@ export class GuxTable {
   }
 
   private async handleSelectableRows(rowSelect: EventTarget): Promise<void> {
-    const headerRowSelectbox: HTMLGuxRowSelectElement =
-      this.tableContainer.querySelector('thead tr th gux-all-row-select');
-    const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
-      this.tableContainer.querySelectorAll('tbody tr td gux-row-select')
-    );
-    const currentSelectbox = rowSelect as HTMLGuxRowSelectElement;
-
-    this.rowSelection(currentSelectbox);
-
-    headerRowSelectbox.selected = dataRowsSelectboxes.every(
-      (dataRowSelectbox: HTMLGuxRowSelectElement) => {
-        return dataRowSelectbox.selected;
-      }
-    );
-
+    this.rowSelection(rowSelect as HTMLGuxRowSelectElement);
+    this.setHeaderRowSelectboxUI();
     this.guxselectionchanged.emit(await this.getSelected());
   }
 
