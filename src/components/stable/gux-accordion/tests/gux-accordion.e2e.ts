@@ -4,21 +4,6 @@ import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 const axeExclusions = [
   {
     issueId: 'aria-valid-attr',
-    target: 'section:nth-child(1) > .gux-header[aria-role="heading"]',
-    exclusionReason: 'Will be addressed in COMUI-608 ticket'
-  },
-  {
-    issueId: 'aria-valid-attr',
-    target: 'section:nth-child(2) > .gux-header[aria-role="heading"]',
-    exclusionReason: 'Will be addressed in COMUI-608 ticket'
-  },
-  {
-    issueId: 'aria-valid-attr',
-    target: 'section:nth-child(3) > .gux-header[aria-role="heading"]',
-    exclusionReason: 'Will be addressed in COMUI-608 ticket'
-  },
-  {
-    issueId: 'aria-valid-attr',
     target: '.gux-header',
     exclusionReason: 'Will be addressed in COMUI-608 ticket'
   }
@@ -62,36 +47,17 @@ describe('gux-accordion', () => {
     </gux-accordion>
     `
     });
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page, axeExclusions, 'before opening accoridon section');
     const element = await page.find('gux-accordion');
     const section = await element.find('.gux-section');
     const header = await section.find('.gux-header');
     expect(section.className).toEqual('gux-section');
     await header.click();
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page, axeExclusions, 'after opening accoridon section');
     expect(section.className).toEqual('gux-section gux-opened');
     await header.click();
     await page.waitForChanges();
     expect(section.className).toEqual('gux-section');
-  });
-  describe('a11y', () => {
-    it('passes axe-core automated tests', async () => {
-      const slots = ['First', 'Second', 'Third'];
-      const page = await newSparkE2EPage({
-        html: `
-        <gux-accordion>
-          <div slot="${slots[0]}">
-            <span>I'm a span in a div.</span>
-            <button>I'm the button.</button>
-          </div>
-          <p slot="${slots[1]}">I'm a p.</p>
-          <span slot="${slots[2]}">I'm a span.</span>
-          <h1>I'm an h1, but i'm not a slot.</h1>
-        </gux-accordion>
-        `
-      });
-      await a11yCheck(page, axeExclusions);
-    });
   });
 });

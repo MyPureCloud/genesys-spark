@@ -1,19 +1,19 @@
 global.beforeEach(() => {
   expect.extend({
-    toHaveNoViolations(axeViolations, exclusions) {
-      return toHaveNoViolations(axeViolations, exclusions);
+    toHaveNoViolations(axeViolations, axeScanDetails) {
+      return toHaveNoViolations(axeViolations, axeScanDetails);
     }
   });
 });
 
-function toHaveNoViolations(axeViolations, exclusions) {
+function toHaveNoViolations(axeViolations, axeScanDetails) {
   let violations = [];
 
   axeViolations.forEach(violation => {
     let violationTargets = [];
     violation.nodes.forEach(violationInstance => {
       let excludedElement = false;
-      exclusions.forEach(exclusion => {
+      axeScanDetails.axeExclusions.forEach(exclusion => {
         if (
           exclusion.issueId === violation.id &&
           (!exclusion.target ||
@@ -31,18 +31,21 @@ function toHaveNoViolations(axeViolations, exclusions) {
       violations.push(violation);
     }
   });
-  const violationMessage = createViolationMessage(violations);
+  const violationMessage = createViolationMessage(violations, axeScanDetails);
   return returnPassOrFail(violations, violationMessage);
 }
 
-function createViolationMessage(violations) {
+function createViolationMessage(violations, axeScanDetails) {
   let violationMessage = '';
   let elementMessage = '';
+  let axeContextMessage = axeScanDetails.axeScanContext
+    ? `Axe scan context:\n${axeScanDetails.axeScanContext}\n`
+    : '';
   violations.forEach(violation => {
     violation.violationInstance.forEach(element => {
       elementMessage += `\n${element.target}\n${element.failureSummary}`;
     });
-    violationMessage += `Violation id:\n${violation.id}\nViolation description:\n${violation.description}
+    violationMessage += `${axeContextMessage}Violation id:\n${violation.id}\nViolation description:\n${violation.description}
     \nAffected Elements (${violation.violationInstance.length}):${elementMessage}\n
     `;
   });
