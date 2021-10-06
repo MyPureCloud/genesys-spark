@@ -307,7 +307,30 @@
   </table>
 </gux-table-beta>
 <h1>Data table with sortable columns</h1>
-<gux-table-beta>
+
+<style
+  onload="(function () {
+    const table = document.querySelector('#sortable-table');
+
+    table.addEventListener('guxsortchanged',
+    (event) => {
+      const {columnName, sortDirection} = event.detail;
+      const column = table.querySelector(`thead tr th[data-column-name='` + columnName + `']`);
+      column.setAttribute('data-sort', sortDirection);
+
+      var tableBody = table.querySelector('tbody');
+      [...tableBody.children]
+        .reverse()
+        .forEach(node=>tableBody.appendChild(node));
+    })
+  })()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>
+
+<gux-table-beta id="sortable-table">
   <table slot="data">
     <thead>
       <tr>
@@ -321,26 +344,26 @@
     </thead>
     <tbody>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
+        <td>Adam</td>
+        <td>Ant</td>
         <td data-cell-numeric>25</td>
         <td data-cell-action>Delete</td>
       </tr>
       <tr>
-        <td>Jane</td>
-        <td>Doe</td>
-        <td data-cell-numeric>23</td>
+        <td>Billy</td>
+        <td>Bat</td>
+        <td data-cell-numeric>28</td>
         <td data-cell-action>Delete</td>
       </tr>
       <tr>
-        <td>Jane</td>
-        <td>Doe</td>
+        <td>Cathy</td>
+        <td>Cat</td>
         <td data-cell-numeric>21</td>
         <td data-cell-action>Delete</td>
       </tr>
       <tr>
-        <td>Jane</td>
-        <td>Doe</td>
+        <td>Debbie</td>
+        <td>Dog</td>
         <td data-cell-numeric>23</td>
         <td data-cell-action>Delete</td>
       </tr>
