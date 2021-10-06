@@ -9,8 +9,8 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import { ClickOutside } from 'stencil-click-outside';
 
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../usage-tracking';
@@ -91,8 +91,8 @@ export class GuxDropdownV2Beta {
     forceUpdate(this.root);
   }
 
-  @ClickOutside({ triggerEvents: 'mousedown' })
-  checkForClickOutside() {
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside() {
     this.collapseListbox('noFocusChange');
   }
 
