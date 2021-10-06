@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.40.3](https://inindca///compare/v2.40.2...v2.40.3) (2021-10-06)
+
+
+### Bug Fixes
+
+* playground/vue-3/package.json & playground/vue-3/package-lock.json to reduce vulnerabilities ([d437cc0](https://inindca///commit/d437cc04f951bd31aea2724987b937d3161c757d))
+* **table:** select all checkbox is now indeterminate if some rows are checked ([6cc343e](https://inindca///commit/6cc343e9e6a3cb1ec68c2199bfd9169d7a114254))
+
 ### [2.40.2](https://inindca///compare/v2.40.1...v2.40.2) (2021-10-04)
 
 
