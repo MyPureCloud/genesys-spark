@@ -74,7 +74,10 @@ function createLayout() {
     console.log('axe-live setup completed');
   };
 
-  if (process.env.NODE_ENV === 'development') {
+  if (
+    process.env.NODE_ENV === 'development' ||
+    window.location.href.indexOf('feature') > -1
+  ) {
     console.log('Setting up axe-live tool');
     setupAccessibilityTool();
   }
