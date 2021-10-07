@@ -5,6 +5,8 @@ import { trackComponent } from '../../../usage-tracking';
 
 import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
 
+import { logError } from '../../../utils/error/log-error';
+
 const DEFAULT_COLOR_FIELD_NAME = 'category';
 @Component({
   styleUrl: 'gux-chart-line.less',
@@ -41,6 +43,10 @@ export class GuxLineChart {
     }
   };
 
+  /**
+   * Data to be rendered in the chart.
+   * Data field names must match the values you set in xFieldName and yFieldName
+   */
   @Prop()
   chartData: Record<string, unknown>;
 
@@ -50,18 +56,35 @@ export class GuxLineChart {
   @Prop()
   includeDataPointMarkers: boolean;
 
+  /**
+   * Name for the data field to use to populate the chart's x-axis
+   * e.g. xFieldName of "category" will map any "category" fields in chartData to the x-axis
+   */
   @Prop()
   xFieldName: string;
 
+  /**
+   * Title to display along the x-axis
+   */
   @Prop()
   xAxisTitle: string;
 
+  /**
+   * Name for the data field to use to populate the chart's x-axis
+   * e.g. yFieldName of "value" will map any "value" fields in chartData to the y-axis
+   */
   @Prop()
   yFieldName: string;
 
+  /**
+   * Title to display along the y-axis
+   */
   @Prop()
   yAxisTitle: string;
 
+  /**
+   * Title to display above the optional legend
+   */
   @Prop()
   legendTitle: string;
 
@@ -80,8 +103,9 @@ export class GuxLineChart {
   @Watch('chartData')
   parseData() {
     if (!this.xFieldName || !this.yFieldName) {
-      throw new Error(
-        `[gux-chart-line] requires x-field-name and y-field-name`
+      logError(
+        'gux-chart-line',
+        '[gux-chart-line] requires x-field-name and y-field-name'
       );
     }
 
@@ -99,7 +123,7 @@ export class GuxLineChart {
     const yFieldName = this.yFieldName;
     const yAxisTitle = this.yAxisTitle;
     const legendTitle = this.legendTitle;
-    const colorFieldName = this.colorFieldName;
+    const colorFieldName = this.colorFieldName || DEFAULT_COLOR_FIELD_NAME;
     const interpolation = this.interpolation;
     const includeStrokeDash = this.includeStrokeDash;
     const includeDataPointMarkers = this.includeDataPointMarkers;
