@@ -254,7 +254,7 @@ describe('gux-command-palette', () => {
       commandPallete = await page.find('gux-command-palette-beta');
       await commandPallete.callMethod('open');
       await page.waitForChanges();
-      await page.waitFor(500);
+      await page.waitForTimeout(500);
     });
 
     it('should navigate to recent list on key down', async () => {
