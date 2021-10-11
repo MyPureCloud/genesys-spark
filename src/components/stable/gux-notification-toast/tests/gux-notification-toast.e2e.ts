@@ -1,4 +1,6 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 describe('gux-notification-toast', () => {
   describe('#render', () => {
@@ -45,9 +47,9 @@ describe('gux-notification-toast', () => {
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-notification-toast');
-
+        await a11yCheck(page, axeExclusions);
         expect(element.outerHTML).toMatchSnapshot();
       });
     });
@@ -62,7 +64,7 @@ describe('gux-notification-toast', () => {
           <div slot="message">This is the message</div>
         </gux-notification-toast>
       `;
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-notification-toast');
       const dismissButton = await element.find(
         'gux-dismiss-button-beta >>> button'
@@ -90,7 +92,7 @@ describe('gux-notification-toast', () => {
           <div slot="message">This is the message</div>
         </gux-notification-toast>
       `;
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-notification-toast');
       const dismissButton = await element.find(
         'gux-dismiss-button-beta >>> button'
