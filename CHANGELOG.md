@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.41.0](https://inindca///compare/v2.40.4...v2.41.0) (2021-10-11)
+
+
+### Features
+
+* **tests:** adding axe-core accessibility testing utils ([04ceb4a](https://inindca///commit/04ceb4aa83b81e702da406f1cb6783cea1adc2de))
+
+
+### Bug Fixes
+
+* **visualization:** remove component ([66bb2ed](https://inindca///commit/66bb2ed1c65c63f63457c47a1475f79bcbeef8ce))
+
 ### [2.40.4](https://inindca///compare/v2.40.3...v2.40.4) (2021-10-07)
 
 ### [2.40.3](https://inindca///compare/v2.40.2...v2.40.3) (2021-10-06)
