@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-visualization-beta #render should render default button 1`] = `<gux-visualization-beta></gux-visualization-beta>`;
