@@ -1,5 +1,4 @@
-import { newSparkE2EPage } from '../../../../../tests/e2eTestUtils';
-import { a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 const axeExclusions = [
   {

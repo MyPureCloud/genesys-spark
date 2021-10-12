@@ -1,4 +1,6 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 describe('gux-action-toast', () => {
   describe('#render', () => {
@@ -17,9 +19,9 @@ describe('gux-action-toast', () => {
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-action-toast');
-
+        await a11yCheck(page, axeExclusions);
         expect(element.outerHTML).toMatchSnapshot();
       });
     });
