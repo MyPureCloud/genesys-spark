@@ -3,6 +3,7 @@
 *This migration guide is open to anyone to edit. If you have migrated a component and think it would be helpful to others to document something you encountered please do so. We understand that at the moment because of the need to fork the repo the overhead of making a small contribution is high so feel free to raise an issue on the COMUI board instead it that is more convenient and a core team member will create the PR.*
 
 ## TLDR
+* Set the `allowSyntheticDefaultImports` compiler option  to `true` in the host apps tsconfig.json.
 * rename `title` property to `gux-title` on instances of `gux-button`
 * remove `first-day-of-week` property from instances of `gux-calendar`
 * remove `first-day-of-week` property from instances of `gux-datepicker`
@@ -15,6 +16,10 @@
 * migrate away from usage of legacy components
   * `gux-accordion-legacy` -> `gux-accordion`
   * `gux-tabs-legacy` -> `gux-tabs-advanced` or `gux-tabs`
+
+## Configuration
+Set the `allowSyntheticDefaultImports` compiler option  to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
+This new requirement is related to the a new dependency (vega-lite) which was added as part of our visualisation work.
 
 ## Stable Component Changes
 

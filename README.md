@@ -44,6 +44,10 @@ or
 
 ## Setting up your App
 
+### Configuration
+Since version 3, you will need to set the "allowSyntheticDefaultImports" compiler option  to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
+This new requirement is related to the a new dependency (vega-lite) which was added as part of our visualisation work.
+
 ### Stylesheets
 
 The library provides a baseline set of CSS styles in the package under `dist/genesys-webcomponents/genesys-webcomponents.css`. The stylesheet provides:
