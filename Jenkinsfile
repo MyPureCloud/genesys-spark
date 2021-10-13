@@ -51,7 +51,7 @@ pipeline {
   }
 
   tools {
-    nodejs: "NodeJS 14.8.0"
+    nodejs "NodeJS 14.8.0"
   }
 
   stages {
