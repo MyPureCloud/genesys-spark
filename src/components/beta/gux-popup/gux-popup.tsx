@@ -65,7 +65,7 @@ export class GuxPopup {
   }
 
   render(): JSX.Element {
-    return [
+    return (
       <div
         class={{
           'gux-target-container': true,
@@ -74,16 +74,16 @@ export class GuxPopup {
         ref={(el: HTMLElement) => (this.targetElementContainer = el)}
       >
         <slot name="target"></slot>
-      </div>,
-      <div
-        class={{
-          'gux-popup-container': true,
-          'gux-expanded': this.expanded && !this.disabled
-        }}
-        ref={(el: HTMLElement) => (this.popupElementContainer = el)}
-      >
-        <slot name="popup"></slot>
+        <div
+          class={{
+            'gux-popup-container': true,
+            'gux-expanded': this.expanded && !this.disabled
+          }}
+          ref={(el: HTMLElement) => (this.popupElementContainer = el)}
+        >
+          <slot name="popup"></slot>
+        </div>
       </div>
-    ];
+    );
   }
 }
