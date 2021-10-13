@@ -81,7 +81,7 @@ describe('gux-advanced-dropdown', () => {
     const value = await input.getProperty('value');
     expect(value).toBe('en');
 
-    await page.waitFor(1000);
+    await page.waitForTimeout(1000);
 
     expect(filterSpy).toHaveReceivedEventDetail('en');
 
@@ -125,7 +125,7 @@ describe('gux-advanced-dropdown', () => {
     const value = await input.getProperty('value');
     expect(value).toBe('en');
 
-    await page.waitFor(1000);
+    await page.waitForTimeout(1000);
 
     expect(filterSpy).toHaveReceivedEventDetail('en');
 
