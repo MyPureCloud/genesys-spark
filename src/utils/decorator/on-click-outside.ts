@@ -86,8 +86,12 @@ function initOnClickOutside(
   callback: OnClickOutsideCallback,
   excludedNodes?: HTMLElement[]
 ) {
-  const target = event.target as HTMLElement;
-  if (!element.contains(target) && !isExcluded(target, excludedNodes)) {
+  const composedPath = event.composedPath();
+
+  if (
+    !composedPath.includes(element) &&
+    !isExcluded(composedPath, excludedNodes)
+  ) {
     callback.call(component, event);
   }
 }
@@ -114,15 +118,11 @@ function getExcludedNodes(opt: OnClickOutsideOptions): HTMLElement[] {
 }
 
 function isExcluded(
-  target: HTMLElement,
+  composedPath: EventTarget[],
   excudedNodes?: HTMLElement[]
 ): boolean {
-  if (target && excudedNodes) {
-    for (const excludedNode of excudedNodes) {
-      if (excludedNode.contains(target)) {
-        return true;
-      }
-    }
+  if (composedPath && excudedNodes) {
+    return excudedNodes.some(excudedNode => composedPath.includes(excudedNode));
   }
 
   return false;
