@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.41.2](https://inindca///compare/v2.41.1...v2.41.2) (2021-10-13)
+
+
+### Bug Fixes
+
+* **jenkins:** fixed typo ([26c3603](https://inindca///commit/26c36038f8234f521089c7b2753f8934d8048717))
+* **pagination:** prepared component for enabling shadow dom ([5cd649f](https://inindca///commit/5cd649ffa5600bb51543c66a5eda5b47ea8c0a4f))
+* **popup:** fixed stacking order bug ([504c30e](https://inindca///commit/504c30e427b3f835453b03927b5a2249e883aba5))
+* **table:** prefixed all classes with gux- ([7135aa5](https://inindca///commit/7135aa5a7a93a103f1e4f2bf1ccd248c6e47bcba))
+
 ### [2.41.1](https://inindca///compare/v2.41.0...v2.41.1) (2021-10-12)
 
 ## [2.41.0](https://inindca///compare/v2.40.4...v2.41.0) (2021-10-11)
