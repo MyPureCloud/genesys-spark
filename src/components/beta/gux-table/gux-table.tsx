@@ -75,7 +75,7 @@ export class GuxTable {
    * Indicates if the mouse is in a position that supports starting resize
    */
   @State()
-  private resizeHover: boolean = false;
+  private columnResizeHover: boolean = false;
 
   /**
    * Indicates table row density style
@@ -144,7 +144,7 @@ export class GuxTable {
   @Listen('mouseup', { capture: true })
   onMouseUp(): void {
     if (this.columnResizeState) {
-      this.tableContainer.classList.remove('column-resizing');
+      this.tableContainer.classList.remove('gux-column-resizing');
       this.columnResizeState = null;
     }
   }
@@ -164,7 +164,7 @@ export class GuxTable {
         }px`;
         this.setResizableColumnsStyles();
       } else {
-        this.resizeHover = false;
+        this.columnResizeHover = false;
         whenEventIsFrom('th', event, (th: HTMLTableCellElement) => {
           const columnsLength = this.tableContainer.querySelectorAll(
             '.gux-table-container thead th'
@@ -172,7 +172,7 @@ export class GuxTable {
           const isLastColumn = columnsLength - 1 === th.cellIndex;
 
           if (this.isInResizeZone(event, th) && !isLastColumn) {
-            this.resizeHover = true;
+            this.columnResizeHover = true;
           }
         });
       }
@@ -192,7 +192,7 @@ export class GuxTable {
             this.getElementComputedWidth(resizableColumn)
         };
 
-        this.tableContainer.classList.add('column-resizing');
+        this.tableContainer.classList.add('gux-column-resizing');
       }
     });
   }
@@ -274,26 +274,22 @@ export class GuxTable {
     return container ? container.offsetWidth - container.clientWidth : 0;
   }
 
-  private get tableClasses(): string {
-    return [
-      'gux-table',
-      this.isVerticalScroll ? 'vertical-scroll' : '',
-      this.isHorizontalScroll ? 'horizontal-scroll' : ''
-    ]
-      .join(' ')
-      .trim();
+  private get tableClasses(): { [k: string]: boolean } {
+    return {
+      'gux-table': true,
+      'gux-vertical-scroll': this.isVerticalScroll,
+      'gux-horizontal-scroll': this.isHorizontalScroll
+    };
   }
 
-  private get tableContainerClasses(): string {
-    return [
-      'gux-table-container',
-      this.compact ? 'compact' : '',
-      this.objectTable ? 'object-table' : '',
-      this.columnResizeState ? 'column-resizing' : '',
-      this.resizeHover ? 'column-resizing-hover' : ''
-    ]
-      .join(' ')
-      .trim();
+  private get tableContainerClasses(): { [k: string]: boolean } {
+    return {
+      'gux-table-container': true,
+      'gux-compact': this.compact,
+      'gux-object-table': this.objectTable,
+      'gux-column-resizing': Boolean(this.columnResizeState),
+      'gux-column-resizing-hover': this.columnResizeHover
+    };
   }
 
   private previousColumn(): void {
@@ -649,7 +645,7 @@ export class GuxTable {
           </gux-button-slot-beta>
         )}
         {this.isTableEmpty && (
-          <div class="empty-table">
+          <div class="gux-empty-table">
             <h2>{this.emptyMessage || this.i18n('emptyMessage')}</h2>
           </div>
         )}
