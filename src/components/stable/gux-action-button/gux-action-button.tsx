@@ -12,6 +12,9 @@ import {
 import { GuxButtonAccent, GuxButtonType } from '../gux-button/gux-button.types';
 import { trackComponent } from '../../../usage-tracking';
 
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import defaultResources from './i18n/en.json';
+
 @Component({
   styleUrl: 'gux-action-button.less',
   tag: 'gux-action-button'
@@ -21,6 +24,7 @@ export class GuxActionButton {
   private root: HTMLElement;
   listElement: HTMLGuxListElement;
   dropdownButton: HTMLElement;
+  private i18n: GetI18nValue;
 
   /**
    * The component button type
@@ -125,8 +129,9 @@ export class GuxActionButton {
     }
   }
 
-  componentWillLoad() {
+  async componentWillLoad() {
     trackComponent(this.root, { variant: this.type });
+    this.i18n = await buildI18nForComponent(this.root, defaultResources);
   }
 
   render() {
@@ -159,6 +164,9 @@ export class GuxActionButton {
                 onKeyUp={e => this.onKeyUpEvent(e)}
                 aria-haspopup="listbox"
                 aria-expanded={this.isOpen.toString()}
+                aria-label={this.i18n('actionButtonDropdown', {
+                  buttonTitle: this.text
+                })}
               >
                 <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
               </button>
