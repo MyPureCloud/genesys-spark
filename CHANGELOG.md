@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.42.0](https://inindca///compare/v2.41.2...v2.42.0) (2021-10-14)
+
+
+### Features
+
+* **gux-icon:** add new icon files ([62ef1de](https://inindca///commit/62ef1de3020773bdba42fd93c334cc52d5fbdd97))
+
+
+### Bug Fixes
+
+* **gux-tabs-beta:** fix vertical buttons shown on non-vertical tabs ([2ac753c](https://inindca///commit/2ac753c536ba94b8c49cbdf52910615c42bdcd72))
+
 ### [2.41.2](https://inindca///compare/v2.41.1...v2.41.2) (2021-10-13)
 
 
