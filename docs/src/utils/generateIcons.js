@@ -35,6 +35,7 @@ const icons = [
     sectionName: 'CJV',
     iconNames: [
       'cjv-custom-default',
+      'cjv-custom-session',
       'cjv-default-event',
       'cjv-delivery',
       'cjv-finance-invoice',
@@ -236,6 +237,7 @@ const icons = [
     sectionName: 'Editing',
     iconNames: [
       'clipboard',
+      'clipboard-error',
       'clone',
       'copy',
       'cut',
@@ -325,14 +327,25 @@ const icons = [
   {
     sectionName: 'Social Media',
     iconNames: [
+      'android',
+      'apple',
       'at',
+      'chrome',
+      'edge',
       'facebook',
       'facebook-messenger',
+      'firefox',
       'instagram',
+      'internet-explorer',
       'line-messenger',
       'linkedin',
+      'linux',
+      'microsoft-teams',
+      'microsoft',
+      'opera',
       'retweet',
       'rss',
+      'safari',
       'share',
       'slideshare',
       'telegram',
@@ -378,13 +391,15 @@ const icons = [
   {
     sectionName: 'Location',
     iconNames: [
+      'branch',
       'cloud',
       'cloud-outline',
       'globe',
       'home',
       'pin-location',
       'server',
-      'site'
+      'site',
+      'web'
     ]
   },
   {
