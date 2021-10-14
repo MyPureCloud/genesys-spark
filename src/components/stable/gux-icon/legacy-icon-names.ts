@@ -863,7 +863,6 @@ export const legacyIconNames: string[] = [
   'video-alpha',
   'video-off-alpha',
   'video-off',
-  'voicemail',
   'volume-off-alt',
   'volume-off',
   'warning',

@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "2.41.2",
+  "version": "2.42.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",
@@ -42,7 +42,7 @@
     "stencil": "stencil build --prod",
     "stencil.dev": "stencil build --dev --watch --docs",
     "test": "stencil test --spec --e2e",
-    "test.ci": "npm run test.ci.spec",
+    "test.ci": "npm run test.ci.spec && npm run test.ci.e2e",
     "test.ci.spec": "stencil test --spec",
     "test.ci.e2e": "stencil test --e2e --max-workers=1",
     "test.e2e": "stencil test --e2e",
