@@ -5,16 +5,14 @@
         slot="input"
         name="errorInput"
         type="text"
-        step="5"
-        min="5"
-        max="100"
         placeholder="Enter text"
       />
       <label slot="label">Label</label>
-      <span v-if="hasError" slot="error">Field is required</span>
+      <span slot="error" v-if="hasError">Field is required</span>
     </gux-form-field>
 
     <gux-button v-on:click="toggleHasError">Toggle Has Error</gux-button>
+    <div>Has Error: {{hasError}}</div>
   </div>
 </template>
 
