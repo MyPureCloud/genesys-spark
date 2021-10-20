@@ -1,4 +1,9 @@
-import { newE2EPage } from '@stencil/core/testing';
+import {
+  newSparkE2EPage,
+  a11yCheck
+} from '../../../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 describe('gux-input-search', () => {
   describe('#render', () => {
@@ -14,8 +19,9 @@ describe('gux-input-search', () => {
       </gux-input-search>`
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-input-search');
+        await a11yCheck(page, axeExclusions);
 
         expect(element.innerHTML).toMatchSnapshot();
       });
@@ -28,10 +34,11 @@ describe('gux-input-search', () => {
       <gux-input-search lang="en">
         <input name="search" type="search" placeholder="Enter a search" />
       </gux-input-search>`;
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-input-search');
 
       const clearButtonNoInput = await element.find('button.gux-clear-button');
+      await a11yCheck(page, axeExclusions, 'Input is empty');
       expect(clearButtonNoInput).toBeNull();
 
       const input = await element.find('input[type="search"]');
@@ -42,6 +49,7 @@ describe('gux-input-search', () => {
       await page.waitForChanges();
 
       const clearButtonInput = await element.find('button.gux-clear-button');
+      await a11yCheck(page, axeExclusions, 'Input contains a value');
       expect(clearButtonInput).not.toBeNull();
 
       const value = await input.getProperty('value');
