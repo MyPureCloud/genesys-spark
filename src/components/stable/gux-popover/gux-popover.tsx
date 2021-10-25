@@ -76,7 +76,11 @@ export class GuxPopover {
     const forElement = document.getElementById(this.for);
     const clickedForElement = clickPath.includes(forElement);
 
-    if ((this.closeOnClickOutside || !this.displayDismissButton) && !this.hidden && !clickedForElement) {
+    if (
+      (this.closeOnClickOutside || !this.displayDismissButton) &&
+      !this.hidden &&
+      !clickedForElement
+    ) {
       this.dismiss();
     }
   }
@@ -104,7 +108,7 @@ export class GuxPopover {
       });
     } else {
       console.error(
-        `GUX-Popover: invalid element supplied to 'for': "${this.for}"`
+        `GUX-Popover: invalid "for" attribute. No element in page with the id "${this.for}"`
       );
     }
   }
