@@ -50,13 +50,9 @@
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
  - [gux-tab-advanced-option](../gux-tabs-advanced/gux-tab-advanced-option)
  - [gux-tab-dropdown-option](../gux-tabs/gux-tab-dropdown-option)
- - [gux-tab-dropdown-option-legacy](../../legacy/gux-tabs-legacy/gux-tab-dropdown-option-legacy)
- - [gux-tab-legacy](../../legacy/gux-tabs-legacy/gux-tab-legacy)
- - [gux-tab-list](../gux-tabs/gux-tab-list)
  - [gux-tab-list-beta](../../beta/gux-tabs-beta/gux-tab-list-beta)
  - [gux-table-beta](../../beta/gux-table)
  - [gux-tabs](../gux-tabs)
- - [gux-tabs-legacy](../../legacy/gux-tabs-legacy)
  - [gux-tag-beta](../../beta/gux-tag)
  - [gux-text-field-legacy](../../legacy/gux-text-field-legacy)
  - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
@@ -96,13 +92,9 @@ graph TD;
   gux-tab-advanced-list --> gux-icon
   gux-tab-advanced-option --> gux-icon
   gux-tab-dropdown-option --> gux-icon
-  gux-tab-dropdown-option-legacy --> gux-icon
-  gux-tab-legacy --> gux-icon
-  gux-tab-list --> gux-icon
   gux-tab-list-beta --> gux-icon
   gux-table-beta --> gux-icon
   gux-tabs --> gux-icon
-  gux-tabs-legacy --> gux-icon
   gux-tag-beta --> gux-icon
   gux-text-field-legacy --> gux-icon
   gux-toggle-slider --> gux-icon

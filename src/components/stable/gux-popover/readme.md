@@ -33,7 +33,6 @@
 
  - [gux-tab](../gux-tabs/gux-tab)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
- - [gux-tab-legacy](../../legacy/gux-tabs-legacy/gux-tab-legacy)
 
 ### Depends on
 
@@ -46,7 +45,6 @@ graph TD;
   gux-dismiss-button-beta --> gux-icon
   gux-tab --> gux-popover
   gux-tab-advanced --> gux-popover
-  gux-tab-legacy --> gux-popover
   style gux-popover fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

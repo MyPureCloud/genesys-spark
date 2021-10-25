@@ -8,10 +8,13 @@
 * remove `first-day-of-week` property from instances of `gux-datepicker`
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
+  * `gux-tabs-beta` -> `gux-tabs`
 * add `-legacy` to components that have been removed from stable
   * `gux-accordion` -> `gux-accordion-legacy`
+  *  `gux-tabs`-> `gux-tabs-legacy`
 * migrate away from usage of legacy components
   * `gux-accordion-legacy` -> `gux-accordion`
+  * `gux-tabs-legacy` -> `gux-tabs-advanced` or `gux-tabs`
 
 ## Stable Component Changes
 
@@ -32,6 +35,7 @@
 The following components have moved from beta to stable without any api changes.
 
 * gux-accordion
+* gux-tabs (v3)
 
 #### Actions
 
@@ -62,6 +66,7 @@ The following components have moved from beta to stable without any api changes.
 The following components have moved from stable to legacy without any api changes.
 
 * gux-accordion
+* gux-tabs (v2)
 
 #### Actions
 
@@ -86,3 +91,6 @@ The following components have moved from stable to legacy without any api change
 ### gux-accordion-legacy
 
 [More details here](gux-accordion-legacy)
+### gux-tabs-legacy
+
+[More details here](gux-tabs-legacy)
