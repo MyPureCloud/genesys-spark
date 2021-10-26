@@ -293,6 +293,7 @@ export class GuxTable {
   }
 
   private previousColumn(): void {
+    let hasWideColumn = false;
     const columns = Array.from(
       this.tableContainer.querySelectorAll('.gux-table-container thead th')
     );
@@ -312,6 +313,16 @@ export class GuxTable {
      */
     for (const column of columns) {
       const columnWidth = column.getBoundingClientRect().width;
+      /**
+       * If a column is wider than the current viewport
+       * the scroll distance will be half the width of the viewport
+       */
+      if (column.getBoundingClientRect().width > containerWidth) {
+        hasWideColumn = true;
+        this.tableContainer.querySelector('.gux-table-container').scrollLeft =
+          currentScrollX - containerWidth / 2;
+        break;
+      }
 
       if (
         columnsWidth + columnWidth <
@@ -329,12 +340,15 @@ export class GuxTable {
      * Manually decreasing scroll position of table container
      * for the width of last visible column
      */
-    const scrollToValue = currentScrollX + containerWidth - columnsWidth;
-    this.tableContainer.querySelector('.gux-table-container').scrollLeft =
-      Math.ceil(currentScrollX - scrollToValue);
+    if (!hasWideColumn) {
+      const scrollToValue = currentScrollX + containerWidth - columnsWidth;
+      this.tableContainer.querySelector('.gux-table-container').scrollLeft =
+        Math.ceil(currentScrollX - scrollToValue);
+    }
   }
 
   private nextColumn(): void {
+    let hasWideColumn = false;
     const columns = Array.from(
       this.tableContainer.querySelectorAll('.gux-table-container thead th')
     );
@@ -356,6 +370,16 @@ export class GuxTable {
      */
     for (const column of columns) {
       columnsWidth += column.getBoundingClientRect().width;
+      /**
+       * If a column is wider than the current viewport
+       * the scroll distance will be half the width of the viewport
+       */
+      if (column.getBoundingClientRect().width > containerWidth) {
+        hasWideColumn = true;
+        this.tableContainer.querySelector('.gux-table-container').scrollLeft =
+          currentScrollX + containerWidth / 2;
+        break;
+      }
 
       if (columnsWidth > containerWidth + currentScrollX) {
         break;
@@ -366,8 +390,10 @@ export class GuxTable {
      * Manually increasing scroll position of table container with value,
      * where next partially visible column being fully visible
      */
-    this.tableContainer.querySelector('.gux-table-container').scrollLeft =
-      Math.ceil(columnsWidth - containerWidth);
+    if (!hasWideColumn) {
+      this.tableContainer.querySelector('.gux-table-container').scrollLeft =
+        Math.ceil(columnsWidth - containerWidth);
+    }
   }
 
   private checkHorizontalScroll(): void {
