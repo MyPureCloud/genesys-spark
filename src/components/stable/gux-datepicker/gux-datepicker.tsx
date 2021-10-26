@@ -13,6 +13,7 @@ import {
 
 import { trackComponent } from '../../../usage-tracking';
 import { CalendarModes } from '../../../common-enums';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import {
@@ -60,6 +61,8 @@ export class GuxDatepicker {
   isSelectingRange: boolean = false;
   lastIntervalRange: GuxDatepickerIntervalRange;
   lastYear: number = new Date().getFullYear();
+  startInputId = randomHTMLId('gux-datepicker');
+  endInputId = randomHTMLId('gux-datepicker');
   i18n: GetI18nValue;
 
   @Element()
@@ -351,7 +354,8 @@ export class GuxDatepicker {
   getCalendarLabels(): string[] {
     return getCalendarLabels([].concat(this.label || []), this.mode, [
       this.i18n('start'),
-      this.i18n('end')
+      this.i18n('end'),
+      this.i18n('datepicker')
     ]);
   }
 
@@ -637,12 +641,18 @@ export class GuxDatepicker {
   renderStartDateField(): JSX.Element {
     return (
       <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label">
+        <label
+          htmlFor={this.startInputId}
+          class={`gux-datepicker-field-label ${
+            this.mode === CalendarModes.Range || this.label ? '' : 'gux-sr-only'
+          }`}
+        >
           {this.getCalendarLabels()[0]}
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input
+              id={this.startInputId}
               type="text"
               ref={(el: HTMLInputElement) => (this.inputElement = el)}
               value={this.formatedValue}
@@ -662,12 +672,13 @@ export class GuxDatepicker {
 
     return (
       <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label">
+        <label htmlFor={this.endInputId} class="gux-datepicker-field-label">
           {this.getCalendarLabels()[1]}
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input
+              id={this.endInputId}
               type="text"
               ref={(el: HTMLInputElement) => (this.toInputElement = el)}
               value={this.toFormatedValue}
