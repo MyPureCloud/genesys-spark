@@ -258,6 +258,7 @@ export class GuxDatepicker {
         this.format,
         getIntervalLetter(this.format, 0)
       );
+      this.active = false;
     }
   }
 

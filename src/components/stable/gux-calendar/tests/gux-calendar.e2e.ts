@@ -3,7 +3,8 @@ import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 const axeExclusions = [
   {
     issueId: 'color-contrast',
-    exclusionReason: 'Need to discuss color contrast for calendar with UX'
+    exclusionReason:
+      'Will consult UX for guidance regarding the color contrast violations in the calendar element'
   }
 ];
 
