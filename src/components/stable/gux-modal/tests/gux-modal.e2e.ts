@@ -227,7 +227,7 @@ describe('gux-modal', () => {
 
   describe('focus', () => {
     const focusModalHtml = (props = '') => `
-      <gux-modal lang="en" size="small" ${props}>
+      <gux-modal lang="en" size="small" trap-focus ${props}>
         <div slot="title">Modal Title</div>
         <div slot="content">This contains the modal content.</div>
         <div slot="left-align-buttons">
