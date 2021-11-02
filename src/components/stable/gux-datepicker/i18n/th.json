@@ -1,5 +1,6 @@
 {
   "start": "เริ่ม",
   "end": "สิ้นสุด",
-  "datepicker": "Datepicker"
+  "datepicker": "Datepicker",
+  "toggleCalendar": "Toggle calendar view"
 }

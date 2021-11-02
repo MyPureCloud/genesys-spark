@@ -192,10 +192,8 @@ export class GuxDatepicker {
           this.active = false;
           break;
         case 'Tab':
-          if (!event.shiftKey) {
-            event.preventDefault();
-            this.calendarElement.focusPreviewDate();
-          }
+          this.isSelectingRange = true;
+          this.setRange();
           break;
         case 'ArrowDown':
           event.preventDefault();
@@ -236,6 +234,20 @@ export class GuxDatepicker {
           });
           this.updateIntervalValue(event);
           this.setCursorRange();
+          break;
+      }
+    } else {
+      switch (event.key) {
+        case 'Enter':
+        case 'Escape':
+        case ' ':
+          this.active = false;
+          const button = this.root.querySelector(
+            '.gux-calendar-toggle-button'
+          ) as HTMLButtonElement;
+          setTimeout(() => {
+            button.focus();
+          });
           break;
       }
     }
@@ -415,7 +427,6 @@ export class GuxDatepicker {
   }
 
   setRange() {
-    this.active = true;
     this.isSelectingRange = false;
     this.setIntervalRange(this.lastIntervalRange);
     this.setCursorRange();
@@ -614,10 +625,10 @@ export class GuxDatepicker {
     return (
       <button
         class="gux-calendar-toggle-button"
-        aria-hidden="true"
         type="button"
         onClick={() => this.toggleCalendar()}
-        tabindex="-1"
+        aria-expanded={this.active.toString()}
+        aria-label={this.i18n('toggleCalendar')}
       >
         <gux-icon decorative icon-name="calendar"></gux-icon>
       </button>

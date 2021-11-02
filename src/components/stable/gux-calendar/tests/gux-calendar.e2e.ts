@@ -1,12 +1,6 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [
-  {
-    issueId: 'color-contrast',
-    exclusionReason:
-      'Will consult UX for guidance regarding the color contrast violations in the calendar element'
-  }
-];
+const axeExclusions = [];
 
 describe('gux-calendar', () => {
   it('renders', async () => {

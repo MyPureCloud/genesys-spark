@@ -1,5 +1,6 @@
 {
   "start": "Začátek",
   "end": "Konec",
-  "datepicker": "Datepicker"
+  "datepicker": "Datepicker",
+  "toggleCalendar": "Toggle calendar view"
 }

@@ -1,5 +1,6 @@
 {
   "start": "Início",
   "end": "Término",
-  "datepicker": "Datepicker"
+  "datepicker": "Datepicker",
+  "toggleCalendar": "Toggle calendar view"
 }

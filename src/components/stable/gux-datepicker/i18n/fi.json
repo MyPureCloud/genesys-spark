@@ -1,5 +1,6 @@
 {
   "start": "Alku",
   "end": "Loppu",
-  "datepicker": "Datepicker"
+  "datepicker": "Datepicker",
+  "toggleCalendar": "Toggle calendar view"
 }
