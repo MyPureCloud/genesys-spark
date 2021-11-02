@@ -5,7 +5,7 @@ exports[`gux-datepicker #render should render component as expected (1) 1`] = `
   <div class="gux-datepicker">
     <div class="gux-datepicker-field">
       <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
-        Datepicker
+        Date
       </label>
       <div class="gux-datepicker-field-input">
         <div class="gux-datepicker-field-text-input">
@@ -26,7 +26,7 @@ exports[`gux-datepicker #render should render component as expected (2) 1`] = `
   <div class="gux-datepicker">
     <div class="gux-datepicker-field">
       <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
-        Datepicker
+        Date
       </label>
       <div class="gux-datepicker-field-input">
         <div class="gux-datepicker-field-text-input">
@@ -47,7 +47,7 @@ exports[`gux-datepicker #render should render component as expected (3) 1`] = `
   <div class="gux-datepicker">
     <div class="gux-datepicker-field">
       <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
-        Datepicker
+        Date
       </label>
       <div class="gux-datepicker-field-input">
         <div class="gux-datepicker-field-text-input">

@@ -73,7 +73,7 @@ describe('gux-datepicker', () => {
     const labels = await page.findAll('.gux-datepicker-field-label');
     await a11yCheck(page, axeExclusions);
     expect(labels.length).toBe(1);
-    expect(labels[0].textContent).toEqual('Datepicker');
+    expect(labels[0].textContent).toEqual('Date');
     expect(labels[0].className).toContain('gux-sr-only');
 
     await element.setAttribute('label', 'test');

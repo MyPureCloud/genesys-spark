@@ -368,7 +368,7 @@ export class GuxDatepicker {
     return getCalendarLabels([].concat(this.label || []), this.mode, [
       this.i18n('start'),
       this.i18n('end'),
-      this.i18n('datepicker')
+      this.i18n('date')
     ]);
   }
 
