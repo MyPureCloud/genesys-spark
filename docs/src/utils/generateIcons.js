@@ -236,6 +236,7 @@ const icons = [
   {
     sectionName: 'Editing',
     iconNames: [
+      'archive',
       'clipboard',
       'clipboard-error',
       'clone',
@@ -278,6 +279,7 @@ const icons = [
       'configuration',
       'customer-journey',
       'dash',
+      'fax',
       'fire',
       'follow',
       'generic',

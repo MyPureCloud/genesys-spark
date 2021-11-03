@@ -98,7 +98,6 @@ export const legacyIconNames: string[] = [
   'favs-alpha',
   'favs-full',
   'favs',
-  'fax',
   'feedback',
   'file-o',
   'files-o',
