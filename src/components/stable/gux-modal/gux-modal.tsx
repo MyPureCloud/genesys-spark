@@ -24,11 +24,23 @@ import { GuxModalSize } from './gux-modal.types';
   tag: 'gux-modal'
 })
 export class GuxModal {
+  private focusTrap: FocusTrap | undefined;
+
   /**
    * Indicates the size of the modal (small, medium or large)
    */
   @Prop()
   size: GuxModalSize = 'dynamic';
+
+  @Prop()
+  trapFocus: boolean = false;
+
+  /**
+   * Query selector for the element to initially focus when the modal opens
+   * Defaults to the first tabbable element
+   */
+  @Prop()
+  initialFocus?: string | undefined;
 
   /**
    * Fired when a user dismisses the modal (The default behaviour is to remove the component from the DOM)
@@ -43,31 +55,23 @@ export class GuxModal {
     }
   }
 
-  /**
-   * Query selector for the element to initially focus when the modal opens
-   * Defaults to the first tabbable element
-   */
-  @Prop()
-  initialFocus?: string | undefined;
-
-  private focusTrap: FocusTrap | undefined;
   componentDidLoad() {
-    // Workaround that gux-buttons don't have a native focus method that works
-    // Query the element then find the inner tabbable element
-    let initialFocus = this.initialFocus
-      ? this.root.querySelector<HTMLElement | SVGElement>(this.initialFocus)
-      : undefined;
-    if (initialFocus?.tagName === 'GUX-BUTTON') {
-      initialFocus = initialFocus.querySelector('button');
-    }
+    const initialFocusElement = this.getInitialFocusElement();
+
     this.focusTrap = createFocusTrap(this.root, {
       escapeDeactivates: false,
       returnFocusOnDeactivate: true,
-      initialFocus,
+      initialFocus: initialFocusElement,
       fallbackFocus: () => this.root.querySelector('gux-dismiss-button-beta')
     });
+
     this.focusTrap.activate();
+
+    if (!this.trapFocus) {
+      this.focusTrap.pause();
+    }
   }
+
   disconnectedCallback() {
     this.focusTrap?.deactivate();
     this.focusTrap = undefined;
@@ -122,6 +126,20 @@ export class GuxModal {
         </div>
       </div>
     );
+  }
+
+  private getInitialFocusElement(): HTMLElement | SVGElement | undefined {
+    // Workaround that gux-buttons don't have a native focus method that works
+    // Query the element then find the inner tabbable element
+    const initialFocusElement = this.initialFocus
+      ? this.root.querySelector<HTMLElement | SVGElement>(this.initialFocus)
+      : undefined;
+
+    if (initialFocusElement?.tagName === 'GUX-BUTTON') {
+      return initialFocusElement.querySelector('button');
+    }
+
+    return initialFocusElement;
   }
 
   private hasModalTitleSlot(): boolean {

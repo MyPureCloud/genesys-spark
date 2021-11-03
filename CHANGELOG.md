@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.43.0](https://inindca///compare/v2.42.6...v2.43.0) (2021-11-02)
+
+
+### Features
+
+* **modal:** added trap-focus property ([c34eef7](https://inindca///commit/c34eef7d687ebeb443f3f0200dcb2e80e70b70a1))
+
+### [2.42.6](https://inindca///compare/v2.42.5...v2.42.6) (2021-11-01)
+
+### [2.42.5](https://inindca///compare/v2.42.4...v2.42.5) (2021-10-28)
+
+### [2.42.4](https://inindca///compare/v2.42.3...v2.42.4) (2021-10-28)
+
+### [2.42.3](https://inindca///compare/v2.42.2...v2.42.3) (2021-10-27)
+
+
+### Bug Fixes
+
+* **gux-form-field:** fixed style inheritance bug for form field inputs ([a376844](https://inindca///commit/a3768444d2c791e8797cf1505dc3a90aed4cd5f8))
+
 ### [2.42.2](https://inindca///compare/v2.42.1...v2.42.2) (2021-10-20)
 
 ### [2.42.1](https://inindca///compare/v2.42.0...v2.42.1) (2021-10-18)

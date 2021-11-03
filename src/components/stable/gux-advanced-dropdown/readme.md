@@ -34,7 +34,7 @@ Gets the currently selected values.
 
 Type: `Promise<string[]>`
 
-
+The array of selected values.
 
 ### `setLabeledBy(id: string) => Promise<void>`
 

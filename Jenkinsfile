@@ -104,7 +104,7 @@ pipeline {
           sh "${env.WORKSPACE}/${env.NPM_UTIL_PATH}/scripts/jenkins-create-npmrc.sh"
           sh "cp .npmrc docs/.npmrc"
           sh "npm ci"
-          sh "npm i --no-save @purecloud/web-app-deploy@latest"
+          sh "npm i --no-save @purecloud/web-app-deploy@6.0"
         }
       }
     }
