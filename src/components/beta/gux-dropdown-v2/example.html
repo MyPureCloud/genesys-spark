@@ -1,7 +1,7 @@
 <form onchange="notify(event)" oninput="notify(event)">
   <h3>Single Select</h3>
   <gux-dropdown-v2-beta value="a">
-    <gux-listbox>
+    <gux-listbox aria-label="Favorite Animal">
       <gux-option-v2 value="a" disabled>Ant</gux-option-v2>
       <gux-option-v2 value="b">Bat</gux-option-v2>
       <gux-option-v2 value="c">Cat</gux-option-v2>
@@ -16,7 +16,7 @@
 
   <h3>No Value Set</h3>
   <gux-dropdown-v2-beta>
-    <gux-listbox>
+    <gux-listbox aria-label="Favorite Animal">
       <gux-option-v2 value="a">Ant</gux-option-v2>
       <gux-option-v2 value="b">Bat</gux-option-v2>
       <gux-option-v2 value="c">Cat</gux-option-v2>
@@ -31,7 +31,7 @@
 
   <h3>Unknown Value Set</h3>
   <gux-dropdown-v2-beta value="j">
-    <gux-listbox id="unknown-listbox">
+    <gux-listbox id="unknown-listbox" aria-label="Favorite Animal">
       <gux-option-v2 value="a">Ant</gux-option-v2>
       <gux-option-v2 value="b">Bat</gux-option-v2>
       <gux-option-v2 value="c">Cat</gux-option-v2>

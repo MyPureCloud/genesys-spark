@@ -1,4 +1,6 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 import { asyncFilter } from '../../../../utils/array/async-filter';
 const html = `
@@ -11,14 +13,14 @@ const html = `
 `;
 describe('gux-advanced-dropdown', () => {
   it('should render', async () => {
-    const page = await newE2EPage({ html });
+    const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
-
+    await a11yCheck(page, axeExclusions);
     expect(element).toHaveClass('hydrated');
   });
 
   it('should open the dropdown on click', async () => {
-    const page = await newE2EPage({ html });
+    const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
     const dropdownElement = await page.find(
       'gux-advanced-dropdown >>> .gux-dropdown'
@@ -28,12 +30,13 @@ describe('gux-advanced-dropdown', () => {
 
     element.click();
     await page.waitForChanges();
+    await a11yCheck(page, axeExclusions);
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(true);
   });
 
   it('should select an option and closes the dropdown menu when an option is clicked', async () => {
-    const page = await newE2EPage({ html });
+    const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
     const inputSpy = await element.spyOnEvent('input');
     const dropdownElement = await page.find(
@@ -58,7 +61,7 @@ describe('gux-advanced-dropdown', () => {
   });
 
   it('should fire filter event with a delay', async () => {
-    const page = await newE2EPage({ html });
+    const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
     const filterSpy = await element.spyOnEvent('filter');
     const dropdownElement = await page.find(
@@ -95,7 +98,7 @@ describe('gux-advanced-dropdown', () => {
   });
 
   it('should not filter if no-filter is true', async () => {
-    const page = await newE2EPage({
+    const page = await newSparkE2EPage({
       html: `
       <gux-advanced-dropdown lang="en" filter-debounce-timeout="0" no-filter>
         <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
@@ -139,7 +142,7 @@ describe('gux-advanced-dropdown', () => {
   });
 
   it('should allow options to be dynamically rendered', async () => {
-    const page = await newE2EPage({ html });
+    const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
 
     await page.evaluate(() => {
