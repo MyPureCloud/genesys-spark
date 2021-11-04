@@ -1,6 +1,6 @@
 <form onchange="notify(event)" oninput="notify(event)">
   <h3>Typical</h3>
-  <gux-listbox tabindex="0" value="b">
+  <gux-listbox tabindex="0" value="b" aria-label="Animals">
     <gux-option-v2 value="a" disabled>Ant</gux-option-v2>
     <gux-option-v2 value="b">Bat</gux-option-v2>
     <gux-option-v2 value="c">Cat</gux-option-v2>
@@ -13,7 +13,7 @@
   </gux-listbox>
 
   <h3>Disabled</h3>
-  <gux-listbox tabindex="0" value="a">
+  <gux-listbox tabindex="0" value="a" aria-label="Animals">
     <gux-option-v2 value="a" disabled>Ant</gux-option-v2>
     <gux-option-v2 value="b">Bat</gux-option-v2>
     <gux-option-v2 value="c">Cat</gux-option-v2>
@@ -26,7 +26,7 @@
   </gux-listbox>
 
   <h3>Ids</h3>
-  <gux-listbox tabindex="0">
+  <gux-listbox tabindex="0" aria-label="Animals">
     <gux-option-v2 id="ant" value="a">Ant</gux-option-v2>
     <gux-option-v2 id="bat" value="b">Bat</gux-option-v2>
     <gux-option-v2 id="cat" value="c">Cat</gux-option-v2>

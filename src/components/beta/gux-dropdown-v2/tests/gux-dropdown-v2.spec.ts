@@ -7,7 +7,7 @@ import { GuxOptionV2 } from '../gux-option-v2/gux-option-v2';
 const components = [GuxDropdownV2Beta, GuxListbox, GuxOptionV2];
 const html = `
 <gux-dropdown-v2-beta lang="en" value="j">
-  <gux-listbox>
+  <gux-listbox aria-label="Animals">
     <gux-option-v2 value="a">Ant</gux-option-v2>
     <gux-option-v2 value="b">Bat</gux-option-v2>
     <gux-option-v2 value="c">Cat</gux-option-v2>

@@ -26,6 +26,7 @@ import {
 import { whenEventIsFrom } from '../../../../utils/dom/when-event-is-from';
 import simulateNativeEvent from '../../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../../usage-tracking';
+import { logError } from '../../../../utils/error/log-error';
 
 /**
  * @slot - collection of gux-option-v2s
@@ -133,6 +134,20 @@ export class GuxListbox {
     trackComponent(this.root);
 
     this.setListboxOptions();
+  }
+
+  componentDidLoad(): void {
+    if (
+      !(
+        this.root.getAttribute('aria-label') ||
+        this.root.getAttribute('aria-labelledby')
+      )
+    ) {
+      logError(
+        'gux-listbox',
+        '`gux-listbox` requires a label. Either provide a label and associate it with the listbox using `aria-labelledby` or add an `aria-label` attribute to the gux-listbox element.'
+      );
+    }
   }
 
   componentWillRender(): void {

@@ -17,7 +17,7 @@ exports[`gux-dropdown-menu-v2 #render should render as expected 1`] = `
       </div>
     </gux-popup-beta>
   </mock:shadow-root>
-  <gux-listbox role="listbox" tabindex="0">
+  <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
     <mock:shadow-root>
       <slot></slot>
     </mock:shadow-root>

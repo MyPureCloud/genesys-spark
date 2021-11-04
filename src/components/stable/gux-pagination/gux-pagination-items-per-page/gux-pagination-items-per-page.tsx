@@ -50,7 +50,7 @@ export class GuxPaginationItemsPerPage implements ComponentInterface {
         ref={el => (this.dropdownElement = el)}
         value={`${this.itemsPerPage}`}
       >
-        <gux-listbox>
+        <gux-listbox aria-label={this.i18n('itemsPerPage')}>
           <gux-option-v2 value="25">25</gux-option-v2>
           <gux-option-v2 value="50">50</gux-option-v2>
           <gux-option-v2 value="75">75</gux-option-v2>
