@@ -320,7 +320,7 @@ export class GuxTable {
       if (column.getBoundingClientRect().width > containerWidth) {
         hasWideColumn = true;
         this.tableContainer.querySelector('.gux-table-container').scrollLeft =
-          currentScrollX - containerWidth / 2;
+          currentScrollX - containerWidth * 0.9;
         break;
       }
 
@@ -377,7 +377,7 @@ export class GuxTable {
       if (column.getBoundingClientRect().width > containerWidth) {
         hasWideColumn = true;
         this.tableContainer.querySelector('.gux-table-container').scrollLeft =
-          currentScrollX + containerWidth / 2;
+          currentScrollX + containerWidth * 0.9;
         break;
       }
 
