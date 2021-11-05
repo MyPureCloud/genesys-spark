@@ -659,9 +659,10 @@ export class GuxDatepicker {
       <div class="gux-datepicker-field">
         <label
           htmlFor={this.startInputId}
-          class={`gux-datepicker-field-label ${
-            this.mode === CalendarModes.Range || this.label ? '' : 'gux-sr-only'
-          }`}
+          class={{
+            'gux-datepicker-field-label': true,
+            'gux-sr-only': this.mode === CalendarModes.Single && !this.label
+          }}
         >
           {this.getCalendarLabels()[0]}
         </label>
