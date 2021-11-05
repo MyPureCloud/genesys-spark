@@ -249,6 +249,11 @@ export class GuxDatepicker {
             button.focus();
           });
           break;
+        case 'Tab':
+          if (this.active) {
+            this.active = false;
+          }
+          break;
       }
     }
   }
@@ -270,7 +275,6 @@ export class GuxDatepicker {
         this.format,
         getIntervalLetter(this.format, 0)
       );
-      this.active = false;
     }
   }
 
