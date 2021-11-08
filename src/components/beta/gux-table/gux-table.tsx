@@ -315,7 +315,7 @@ export class GuxTable {
       const columnWidth = column.getBoundingClientRect().width;
       /**
        * If a column is wider than the current viewport
-       * the scroll distance will be half the width of the viewport
+       * the scroll distance will be a fixed fraction of the viewport
        */
       if (column.getBoundingClientRect().width > containerWidth) {
         hasWideColumn = true;
@@ -372,7 +372,7 @@ export class GuxTable {
       columnsWidth += column.getBoundingClientRect().width;
       /**
        * If a column is wider than the current viewport
-       * the scroll distance will be half the width of the viewport
+       * the scroll distance will be a fixed fraction of the viewport
        */
       if (column.getBoundingClientRect().width > containerWidth) {
         hasWideColumn = true;
