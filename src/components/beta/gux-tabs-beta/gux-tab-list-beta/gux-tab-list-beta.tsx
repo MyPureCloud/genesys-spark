@@ -22,7 +22,6 @@ import tabsResources from '../i18n/en.json';
 })
 export class GuxTabListBeta {
   private i18n: GetI18nValue;
-  private triggerIds: string;
 
   @Element()
   root: HTMLElement;
@@ -38,6 +37,9 @@ export class GuxTabListBeta {
 
   @State()
   private hasVerticalScrollbar: boolean = false;
+
+  @State()
+  private triggerIds: string;
 
   @Listen('focusout')
   onFocusout(event: FocusEvent) {
@@ -59,11 +61,7 @@ export class GuxTabListBeta {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.triggerIds = Array.from(
-      this.root.querySelector('.gux-scrollable-section').children
-    )
-      .map(trigger => `gux-${trigger.getAttribute('tab-id')}-tab`)
-      .join(' ');
+    this.setTriggerIds();
   }
 
   @Listen('keydown')
@@ -118,6 +116,14 @@ export class GuxTabListBeta {
       .querySelector('button')
       .setAttribute('tabindex', '0');
     this.tabTriggers[this.focused].guxFocus();
+  }
+
+  setTriggerIds() {
+    if (this.tabTriggers.length) {
+      this.triggerIds = Array.from(this.tabTriggers)
+        .map(trigger => `gux-${trigger.getAttribute('tab-id')}-tab`)
+        .join(' ');
+    }
   }
 
   checkForScrollbarHideOrShow() {
