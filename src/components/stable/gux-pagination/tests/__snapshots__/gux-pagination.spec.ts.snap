@@ -33,7 +33,7 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
                   </div>
                 </gux-popup-beta>
               </mock:shadow-root>
-              <gux-listbox role="listbox" tabindex="0">
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                 <mock:shadow-root>
                   <slot></slot>
                 </mock:shadow-root>
@@ -142,7 +142,7 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
                   </div>
                 </gux-popup-beta>
               </mock:shadow-root>
-              <gux-listbox role="listbox" tabindex="0">
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                 <mock:shadow-root>
                   <slot></slot>
                 </mock:shadow-root>
@@ -251,7 +251,7 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
                   </div>
                 </gux-popup-beta>
               </mock:shadow-root>
-              <gux-listbox role="listbox" tabindex="0">
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                 <mock:shadow-root>
                   <slot></slot>
                 </mock:shadow-root>
@@ -360,7 +360,7 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
                   </div>
                 </gux-popup-beta>
               </mock:shadow-root>
-              <gux-listbox role="listbox" tabindex="0">
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                 <mock:shadow-root>
                   <slot></slot>
                 </mock:shadow-root>
@@ -469,7 +469,7 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
                   </div>
                 </gux-popup-beta>
               </mock:shadow-root>
-              <gux-listbox role="listbox" tabindex="0">
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                 <mock:shadow-root>
                   <slot></slot>
                 </mock:shadow-root>
@@ -578,7 +578,7 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
                   </div>
                 </gux-popup-beta>
               </mock:shadow-root>
-              <gux-listbox role="listbox" tabindex="0">
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                 <mock:shadow-root>
                   <slot></slot>
                 </mock:shadow-root>
@@ -687,7 +687,7 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
                   </div>
                 </gux-popup-beta>
               </mock:shadow-root>
-              <gux-listbox role="listbox" tabindex="0">
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                 <mock:shadow-root>
                   <slot></slot>
                 </mock:shadow-root>
@@ -796,7 +796,7 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
                   </div>
                 </gux-popup-beta>
               </mock:shadow-root>
-              <gux-listbox role="listbox" tabindex="0">
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                 <mock:shadow-root>
                   <slot></slot>
                 </mock:shadow-root>
@@ -905,7 +905,7 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
                   </div>
                 </gux-popup-beta>
               </mock:shadow-root>
-              <gux-listbox role="listbox" tabindex="0">
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                 <mock:shadow-root>
                   <slot></slot>
                 </mock:shadow-root>

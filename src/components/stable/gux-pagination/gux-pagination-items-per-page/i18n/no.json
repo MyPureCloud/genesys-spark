@@ -1,3 +1,4 @@
 {
-  "perPage": "per side"
+  "perPage": "per side",
+  "itemsPerPage": "Items per page"
 }

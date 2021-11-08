@@ -1,4 +1,6 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 describe('gux-flyout-menu', () => {
   const html = `
@@ -40,10 +42,39 @@ describe('gux-flyout-menu', () => {
 
   describe('#render', () => {
     it(`should render as expected`, async () => {
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-flyout-menu-beta');
+      await a11yCheck(page, axeExclusions);
 
       expect(element.outerHTML).toMatchSnapshot();
+    });
+  });
+
+  describe('hover', () => {
+    it('opens flyout menu', async () => {
+      const page = await newSparkE2EPage({ html });
+      const element = await page.find('gux-flyout-menu-beta');
+      const menuWrapper = await page.find('.gux-flyout-menu-wrapper');
+
+      expect(menuWrapper).not.toHaveClass('gux-shown');
+      await element.hover();
+      await page.waitForChanges();
+      await a11yCheck(page, axeExclusions);
+
+      expect(menuWrapper).toHaveClass('gux-shown');
+    });
+    it('opens submenus', async () => {
+      const page = await newSparkE2EPage({ html });
+      const element = await page.find('gux-flyout-menu-beta');
+      await element.hover();
+      await page.waitForChanges();
+      const submenu = await page.find('gux-submenu');
+      const submenuWrapper = await page.find('.gux-submenu-wrapper');
+      await submenu.hover();
+      await page.waitForChanges();
+      await a11yCheck(page, axeExclusions);
+
+      expect(submenuWrapper).toHaveClass('gux-shown');
     });
   });
 });
