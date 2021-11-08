@@ -1,4 +1,6 @@
 {
   "start": "開始",
-  "end": "終了"
+  "end": "終了",
+  "date": "Date",
+  "toggleCalendar": "Toggle calendar view"
 }

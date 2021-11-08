@@ -1,4 +1,6 @@
 {
   "start": "Alku",
-  "end": "Loppu"
+  "end": "Loppu",
+  "date": "Date",
+  "toggleCalendar": "Toggle calendar view"
 }

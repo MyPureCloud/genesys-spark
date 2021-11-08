@@ -1,4 +1,4 @@
-import { CalendarModes, KeyCode } from '../../../../common-enums';
+import { CalendarModes } from '../../../../common-enums';
 import * as utils from '../../../../utils/dom/manipulate-elements-classes';
 import { GuxCalendar } from '../gux-calendar';
 
@@ -171,25 +171,25 @@ describe('gux-calendar', () => {
         const initialPreviewValue = rangeEnd;
         component.previewValue = new Date(rangeEnd);
         const days = initialPreviewValue.getDate();
-        let event = { keyCode: KeyCode.Down } as KeyboardEvent;
+        let event = new KeyboardEvent('keydown', { key: 'ArrowDown' });
         component.onKeyDown(event);
         expect(component.previewValue.getDate()).toEqual(days + 7);
-        event = { keyCode: KeyCode.Up } as KeyboardEvent;
+        event = new KeyboardEvent('keydown', { key: 'ArrowUp' });
         component.onKeyDown(event);
         expect(component.previewValue.getDate()).toEqual(days);
-        event = { keyCode: KeyCode.Left } as KeyboardEvent;
+        event = new KeyboardEvent('keydown', { key: 'ArrowLeft' });
         component.onKeyDown(event);
         expect(component.previewValue.getDate()).toEqual(days - 1);
-        event = { keyCode: KeyCode.Right } as KeyboardEvent;
+        event = new KeyboardEvent('keydown', { key: 'ArrowRight' });
         component.onKeyDown(event);
         expect(component.previewValue.getDate()).toEqual(days);
-        event = { keyCode: KeyCode.PageUp } as KeyboardEvent;
+        event = new KeyboardEvent('keydown', { key: 'PageUp' });
         component.onKeyDown(event);
         expect(component.incrementPreviewDateByMonth).toHaveBeenCalledWith(1);
-        event = { keyCode: KeyCode.PageDown } as KeyboardEvent;
+        event = new KeyboardEvent('keydown', { key: 'PageDown' });
         component.onKeyDown(event);
         expect(component.incrementPreviewDateByMonth).toHaveBeenCalledWith(-1);
-        event = { keyCode: KeyCode.Enter } as KeyboardEvent;
+        event = new KeyboardEvent('keydown', { key: 'Enter' });
         component.onKeyDown(event);
         expect(component.setValue).toHaveBeenCalledWith(initialPreviewValue);
         expect(component.emitInput).toHaveBeenCalled();

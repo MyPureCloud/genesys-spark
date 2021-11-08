@@ -13,6 +13,7 @@ import {
 
 import { trackComponent } from '../../../usage-tracking';
 import { CalendarModes } from '../../../common-enums';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import {
@@ -60,6 +61,8 @@ export class GuxDatepicker {
   isSelectingRange: boolean = false;
   lastIntervalRange: GuxDatepickerIntervalRange;
   lastYear: number = new Date().getFullYear();
+  startInputId = randomHTMLId('gux-datepicker');
+  endInputId = randomHTMLId('gux-datepicker');
   i18n: GetI18nValue;
 
   @Element()
@@ -189,10 +192,8 @@ export class GuxDatepicker {
           this.active = false;
           break;
         case 'Tab':
-          if (!event.shiftKey) {
-            event.preventDefault();
-            this.calendarElement.focusPreviewDate();
-          }
+          this.isSelectingRange = true;
+          this.setRange();
           break;
         case 'ArrowDown':
           event.preventDefault();
@@ -233,6 +234,25 @@ export class GuxDatepicker {
           });
           this.updateIntervalValue(event);
           this.setCursorRange();
+          break;
+      }
+    } else {
+      switch (event.key) {
+        case 'Enter':
+        case 'Escape':
+        case ' ':
+          this.active = false;
+          const button = this.root.querySelector(
+            '.gux-calendar-toggle-button'
+          ) as HTMLButtonElement;
+          setTimeout(() => {
+            button.focus();
+          });
+          break;
+        case 'Tab':
+          if (this.active) {
+            this.active = false;
+          }
           break;
       }
     }
@@ -351,7 +371,8 @@ export class GuxDatepicker {
   getCalendarLabels(): string[] {
     return getCalendarLabels([].concat(this.label || []), this.mode, [
       this.i18n('start'),
-      this.i18n('end')
+      this.i18n('end'),
+      this.i18n('date')
     ]);
   }
 
@@ -410,7 +431,6 @@ export class GuxDatepicker {
   }
 
   setRange() {
-    this.active = true;
     this.isSelectingRange = false;
     this.setIntervalRange(this.lastIntervalRange);
     this.setCursorRange();
@@ -609,10 +629,10 @@ export class GuxDatepicker {
     return (
       <button
         class="gux-calendar-toggle-button"
-        aria-hidden="true"
         type="button"
         onClick={() => this.toggleCalendar()}
-        tabindex="-1"
+        aria-expanded={this.active.toString()}
+        aria-label={this.i18n('toggleCalendar')}
       >
         <gux-icon decorative icon-name="calendar"></gux-icon>
       </button>
@@ -637,12 +657,19 @@ export class GuxDatepicker {
   renderStartDateField(): JSX.Element {
     return (
       <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label">
+        <label
+          htmlFor={this.startInputId}
+          class={{
+            'gux-datepicker-field-label': true,
+            'gux-sr-only': this.mode === CalendarModes.Single && !this.label
+          }}
+        >
           {this.getCalendarLabels()[0]}
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input
+              id={this.startInputId}
               type="text"
               ref={(el: HTMLInputElement) => (this.inputElement = el)}
               value={this.formatedValue}
@@ -662,12 +689,13 @@ export class GuxDatepicker {
 
     return (
       <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label">
+        <label htmlFor={this.endInputId} class="gux-datepicker-field-label">
           {this.getCalendarLabels()[1]}
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input
+              id={this.endInputId}
               type="text"
               ref={(el: HTMLInputElement) => (this.toInputElement = el)}
               value={this.toFormatedValue}
