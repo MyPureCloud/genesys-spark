@@ -7,26 +7,31 @@ import {
   Host,
   JSX,
   Listen,
+  Method,
   Prop,
   State
 } from '@stencil/core';
 
 import {
+  actOnActiveOption,
   clearActiveOptions,
-  setInitialActiveOption,
-  setFirstOptionActive,
-  setNextOptionActive,
-  setPreviousOptionActive,
-  setLastOptionActive,
-  onEnterList,
+  goToOption,
+  hasPreviousOption,
   onClickedOption,
-  goToOption
+  setFirstOptionActive,
+  setInitialActiveOption,
+  setLastOptionActive,
+  setNextOptionActive,
+  setPreviousOptionActive
 } from './gux-listbox.service';
 
+import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import { whenEventIsFrom } from '../../../../utils/dom/when-event-is-from';
 import simulateNativeEvent from '../../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../../usage-tracking';
 import { logWarn } from '../../../../utils/error/log-error';
+
+import translationResources from './i18n/en.json';
 
 /**
  * @slot - collection of gux-option-v2s
@@ -37,14 +42,22 @@ import { logWarn } from '../../../../utils/error/log-error';
   shadow: true
 })
 export class GuxListbox {
+  private i18n: GetI18nValue;
+
   @Element()
   root: HTMLGuxListboxElement;
 
   @Prop({ mutable: true })
   value: string;
 
+  @Prop()
+  filter: string = '';
+
   @State()
   listboxOptions: HTMLGuxOptionV2Element[] = [];
+
+  @State()
+  allListboxOptionsFiltered: boolean;
 
   @Event()
   internallistboxoptionsupdated: EventEmitter;
@@ -61,15 +74,10 @@ export class GuxListbox {
 
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
-    if (event.key.length === 1) {
-      goToOption(this.root, event.key);
-      return;
-    }
-
     switch (event.key) {
       case 'Enter':
         event.preventDefault();
-        onEnterList(this.root, this.updateValue.bind(this));
+        actOnActiveOption(this.root, this.updateValue.bind(this));
         return;
 
       case 'ArrowDown':
@@ -79,7 +87,10 @@ export class GuxListbox {
 
       case 'ArrowUp': {
         event.preventDefault();
-        setPreviousOptionActive(this.root);
+        if (hasPreviousOption(this.root)) {
+          event.stopPropagation();
+          setPreviousOptionActive(this.root);
+        }
         return;
       }
 
@@ -94,6 +105,25 @@ export class GuxListbox {
         setLastOptionActive(this.root);
         return;
       }
+
+      case ' ': {
+        event.preventDefault();
+        return;
+      }
+    }
+
+    if (event.key.length === 1) {
+      goToOption(this.root, event.key);
+      return;
+    }
+  }
+
+  @Listen('keyup')
+  onKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case ' ':
+        actOnActiveOption(this.root, this.updateValue.bind(this));
+        return;
     }
   }
 
@@ -113,6 +143,11 @@ export class GuxListbox {
     );
   }
 
+  @Method()
+  async guxSelectActive(): Promise<void> {
+    actOnActiveOption(this.root, this.updateValue.bind(this));
+  }
+
   private setListboxOptions(): void {
     this.listboxOptions = Array.from(
       this.root.children
@@ -130,8 +165,9 @@ export class GuxListbox {
     }
   }
 
-  componentWillLoad(): void {
+  async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
 
     this.setListboxOptions();
   }
@@ -153,13 +189,31 @@ export class GuxListbox {
   componentWillRender(): void {
     this.listboxOptions.forEach(listboxOption => {
       listboxOption.selected = listboxOption.value === this.value;
+      listboxOption.filtered = !listboxOption.textContent
+        .toLowerCase()
+        .startsWith(this.filter.toLowerCase());
     });
+
+    this.allListboxOptionsFiltered =
+      this.listboxOptions.filter(listboxOption => !listboxOption.filtered)
+        .length === 0;
+
+    if (this.filter) {
+      setFirstOptionActive(this.root);
+    }
+  }
+
+  renderAllListboxOptionsFiltered(): JSX.Element {
+    if (this.allListboxOptionsFiltered) {
+      return <div class="gux-no-matches">{this.i18n('noMatches')}</div>;
+    }
   }
 
   render(): JSX.Element {
     return (
       <Host role="listbox" tabIndex={0}>
         <slot onSlotchange={() => this.setListboxOptions()} />
+        {this.renderAllListboxOptionsFiltered()}
       </Host>
     );
   }

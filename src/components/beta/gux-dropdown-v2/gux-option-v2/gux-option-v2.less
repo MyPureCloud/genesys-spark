@@ -20,8 +20,12 @@ gux-option-v2 {
   }
 
   &.gux-active,
-  &:hover:not([disabled]) {
+  &.gux-hovered:not([disabled]) {
     color: @gux-grey-100;
     background: @gux-blue-60;
+  }
+
+  &.gux-filtered {
+    display: none;
   }
 }

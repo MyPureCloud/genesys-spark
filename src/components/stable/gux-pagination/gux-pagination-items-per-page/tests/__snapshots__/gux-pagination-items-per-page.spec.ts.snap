@@ -8,9 +8,9 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
         <mock:shadow-root>
           <gux-popup-beta>
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-              <div class="gux-selected-option">
-                <div class="gux-selected-option">
-                  25
+              <div class="gux-field-button-content">
+                <div class="gux-placeholder">
+                  Select...
                 </div>
               </div>
               <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
@@ -58,9 +58,9 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
         <mock:shadow-root>
           <gux-popup-beta>
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-              <div class="gux-selected-option">
-                <div class="gux-selected-option">
-                  50
+              <div class="gux-field-button-content">
+                <div class="gux-placeholder">
+                  Select...
                 </div>
               </div>
               <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
@@ -108,9 +108,9 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
         <mock:shadow-root>
           <gux-popup-beta>
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-              <div class="gux-selected-option">
-                <div class="gux-selected-option">
-                  75
+              <div class="gux-field-button-content">
+                <div class="gux-placeholder">
+                  Select...
                 </div>
               </div>
               <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
@@ -158,9 +158,9 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
         <mock:shadow-root>
           <gux-popup-beta>
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-              <div class="gux-selected-option">
-                <div class="gux-selected-option">
-                  100
+              <div class="gux-field-button-content">
+                <div class="gux-placeholder">
+                  Select...
                 </div>
               </div>
               <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
