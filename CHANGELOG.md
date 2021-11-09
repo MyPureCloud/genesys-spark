@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.45.0](https://inindca///compare/v2.44.0...v2.45.0) (2021-11-09)
+
+
+### Features
+
+* **gux-datepicker:** add a11y e2e tests and fix violations ([92d57c3](https://inindca///commit/92d57c3d876e66d28b964b9176690ff07f08ed8c))
+* **gux-dropdown:** add a11y tests to gux-dropdown and flyout menu e2e tests ([c26818b](https://inindca///commit/c26818ba538d538cb68728dc8cae5f0be4ee1780))
+* **gux-dropdown:** added filter to new gux-dropdown component ([2f5c44d](https://inindca///commit/2f5c44d8304c4a88d87e58ec5f04e50ab9ae98be))
+
+
+### Bug Fixes
+
+* **gux-table:** fix scrolling for tables with wide columns ([74a66ed](https://inindca///commit/74a66edbf5ddb97ab88004c5fc13d89f7342fd09))
+
 ## [2.44.0](https://inindca///compare/v2.43.0...v2.44.0) (2021-11-03)
 
 
