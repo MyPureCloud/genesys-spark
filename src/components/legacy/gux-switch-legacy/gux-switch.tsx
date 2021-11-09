@@ -10,8 +10,6 @@ import { JSXBase } from '@stencil/core/internal';
 
 import { trackComponent } from '../../../usage-tracking';
 
-import { KeyCode } from '../../../common-enums';
-
 export type AllowedLayouts = 'small' | 'medium' | 'large';
 
 export interface ISwitchItem {
@@ -62,7 +60,7 @@ export class GuxSwitch {
   onKeyDownAtIndex(index: number, event: KeyboardEvent) {
     if (this.items[index].isDisabled) {
       event.stopPropagation();
-    } else if ([KeyCode.Enter, KeyCode.Space].includes(event.keyCode)) {
+    } else if (['Enter', ' '].includes(event.key)) {
       this.selectSwitchAtIndex(index);
     }
   }
