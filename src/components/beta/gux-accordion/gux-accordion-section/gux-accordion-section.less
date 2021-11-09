@@ -14,6 +14,15 @@
   }
 }
 
+section.gux-disabled {
+  cursor: default;
+  opacity: 50%;
+
+  > * {
+    pointer-events: none;
+  }
+}
+
 .gux-header {
   all: unset;
   box-sizing: border-box;
@@ -43,6 +52,7 @@
       all: unset !important; // The need for this !important was interesting so I added this comment for the PR :) https://stackoverflow.com/questions/54884345/css-precendence-in-shadow-dom-style
     }
   }
+
   .gux-header-spacer {
     flex: 1 1 auto;
     align-self: auto;
