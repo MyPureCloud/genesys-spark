@@ -123,6 +123,8 @@ export class GuxTabListBeta {
       this.triggerIds = Array.from(this.tabTriggers)
         .map(trigger => `gux-${trigger.getAttribute('tab-id')}-tab`)
         .join(' ');
+    } else {
+      this.triggerIds = '';
     }
   }
 
