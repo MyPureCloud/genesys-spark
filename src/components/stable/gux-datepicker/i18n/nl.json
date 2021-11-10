@@ -1,6 +1,4 @@
 {
   "start": "Begin",
-  "end": "Einde",
-  "date": "Date",
-  "toggleCalendar": "Toggle calendar view"
+  "end": "Einde"
 }
