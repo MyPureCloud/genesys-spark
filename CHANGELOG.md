@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.45.1](https://inindca///compare/v2.45.0...v2.45.1) (2021-11-10)
+
+
+### Bug Fixes
+
+* **gux-tab-list-beta:** changed how trigger id string for aria owns attribute is set on the tablist ([9ac4feb](https://inindca///commit/9ac4feb4eb213ae3419e81fa2755d59de5de1db5))
+
 ## [2.45.0](https://inindca///compare/v2.44.0...v2.45.0) (2021-11-09)
 
 
