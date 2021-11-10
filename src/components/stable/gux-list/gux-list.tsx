@@ -12,7 +12,6 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
-import { KeyCode } from '../../../common-enums';
 
 const validChildren = [
   'gux-list-item:not([disabled])',
@@ -148,34 +147,33 @@ export class GuxList {
   }
 
   private onKeyDown(event: KeyboardEvent): void {
-    const validKeys = [KeyCode.Up, KeyCode.Down, KeyCode.End, KeyCode.Home];
-    const key = event.keyCode;
-    if (validKeys.indexOf(key) === -1) {
+    const validKeys = ['ArrowUp', 'ArrowDown', 'End', 'Home'];
+    if (!validKeys.includes(event.key)) {
       return;
     }
 
     const filteredList = this.root.querySelectorAll(validChildren);
 
     let newIndex = -1;
-    switch (key) {
-      case KeyCode.Up:
+    switch (event.key) {
+      case 'ArrowUp':
         if (this.selectedIndex) {
           newIndex = this.selectedIndex - 1;
           event.stopPropagation();
         }
         break;
-      case KeyCode.Home:
+      case 'Home':
         if (this.selectedIndex) {
           newIndex = 0;
         }
         break;
-      case KeyCode.Down:
+      case 'ArrowDown':
         if (this.selectedIndex !== filteredList.length - 1) {
           newIndex = this.selectedIndex + 1;
           event.stopPropagation();
         }
         break;
-      case KeyCode.End:
+      case 'End':
         if (this.selectedIndex !== filteredList.length - 1) {
           newIndex = filteredList.length - 1;
         }

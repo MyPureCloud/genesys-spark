@@ -1,5 +1,4 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KeyCode } from '../../../../common-enums';
 import { GuxSwitch } from '../gux-switch';
 import { ISwitchItem } from '../gux-switch.constants';
 
@@ -60,7 +59,7 @@ describe('gux-switch', () => {
 
     describe('onKeyDownAtIndex', () => {
       it('should set the `selectedValue` property on keypress only if the key is enter', () => {
-        const event = { keyCode: KeyCode.Enter } as KeyboardEvent;
+        const event = { key: 'Enter' } as KeyboardEvent;
         const changedSpy = jest.fn();
         component.selectionChanged = {
           emit: changedSpy
@@ -78,7 +77,7 @@ describe('gux-switch', () => {
       });
 
       it('should set the `selectedValue` property on keypress only if the key is space', () => {
-        const event = { keyCode: KeyCode.Space } as KeyboardEvent;
+        const event = { key: ' ' } as KeyboardEvent;
         const changedSpy = jest.fn();
         component.selectionChanged = {
           emit: changedSpy
@@ -96,7 +95,7 @@ describe('gux-switch', () => {
       });
 
       it('should not change the `selectedValue` property on keypress it is not enter/space', () => {
-        const event = { keyCode: KeyCode.Up } as KeyboardEvent;
+        const event = { key: 'ArrowUp' } as KeyboardEvent;
         const changedSpy = jest.fn();
         component.selectionChanged = {
           emit: changedSpy
@@ -113,7 +112,7 @@ describe('gux-switch', () => {
 
       it('should not change the `selectedValue` property on keypress it is disabled', () => {
         const event = {
-          keyCode: KeyCode.Up,
+          key: 'ArrowUp',
           stopPropagation: jest.fn()
         } as any;
         const changedSpy = jest.fn();

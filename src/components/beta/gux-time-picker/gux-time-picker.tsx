@@ -9,7 +9,7 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import { KeyCode } from '../../../common-enums';
+
 import { fromIsoTime } from '../../../utils/date/from-iso-time-string';
 import { trackComponent } from '../../../usage-tracking';
 
@@ -65,30 +65,30 @@ export class GuxTimePicker {
   onKeyDown(e: KeyboardEvent) {
     this.focusedField = e.target as HTMLInputElement;
     if (this.focusedField === this.inputElement) {
-      switch (e.keyCode) {
-        case KeyCode.Enter:
-        case KeyCode.Esc:
+      switch (e.key) {
+        case 'Enter':
+        case 'Escape':
           this.focusedField.blur();
           break;
-        case KeyCode.Backsp:
+        case 'Backspace':
           e.preventDefault();
           this.handleBackspace();
           break;
-        case KeyCode.Tab:
+        case 'Tab':
           break;
-        case KeyCode.Down:
+        case 'ArrowDown':
           if (this.dropdownList) {
             this.dropdownList.setFocusOnFirstItem();
           }
           break;
-        case KeyCode.Up:
-        case KeyCode.Right:
-        case KeyCode.Left:
+        case 'ArrowUp':
+        case 'ArrowRight':
+        case 'ArrowLeft':
           e.preventDefault();
           break;
         default:
           e.preventDefault();
-          if (48 <= e.keyCode && e.keyCode <= 57) {
+          if ('0' <= e.key && e.key <= '9') {
             this.openDropdown = true;
             if (this.focusedField.value.length < 8) {
               let newValue = this.focusedField.value + parseInt(e.key, 10);
