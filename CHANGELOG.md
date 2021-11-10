@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.45.2](https://inindca///compare/v2.45.1...v2.45.2) (2021-11-10)
+
+
+### Bug Fixes
+
+* **gux-dropdown-v2:** fixed issue where gux-pagination not showing items per page value in dropdown ([867e5c2](https://inindca///commit/867e5c2b07c1f6a502bc8b7d64e10a4dce420579))
+
 ### [2.45.1](https://inindca///compare/v2.45.0...v2.45.1) (2021-11-10)
 
 
