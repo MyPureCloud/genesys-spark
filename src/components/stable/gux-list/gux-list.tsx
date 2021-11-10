@@ -148,7 +148,7 @@ export class GuxList {
 
   private onKeyDown(event: KeyboardEvent): void {
     const validKeys = ['ArrowUp', 'ArrowDown', 'End', 'Home'];
-    if (validKeys.includes(event.key)) {
+    if (!validKeys.includes(event.key)) {
       return;
     }
 
