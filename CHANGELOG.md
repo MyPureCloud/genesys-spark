@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.0](https://inindca///compare/v2.45.2...v3.0.0-alpha.0) (2021-11-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **calendar:** removed prop
+
+COMUI-453
+
+### Features
+
+* **accordion:** sections can now be disabled ([2de4958](https://inindca///commit/2de4958c63a8498fc36cb8947461013be323e2c2))
+* **action-toast:** enabled shadow dom ([9ab9db5](https://inindca///commit/9ab9db5b6bd96fe6a7aadc5d0938141edcd4ca99))
+* **breadcrumbs:** enabled shadow dom ([c3866ad](https://inindca///commit/c3866ad64cb521a9fc7928ee6275ad7d5fdffd76))
+* **breadcrumbs:** enabled shadow dom ([2a17ba6](https://inindca///commit/2a17ba6521dccf1ade8a7dde321e01f6bc496043))
+* **button:** removed title property ([bae547e](https://inindca///commit/bae547eaa0f8980acd841188a71f051bf9e85795))
+* **calendar:** removed first-day-of-week prop ([4561855](https://inindca///commit/4561855b07730bbc9e03480875a1cff820325151))
+* **gux-tabs-advanced:** adding gux-tabs-advanced component ([dcc17f6](https://inindca///commit/dcc17f6fe944b066530bf6c5de52403cb9a53d05))
+* **gux-tabs:** unify tab component APIs ([a3410cd](https://inindca///commit/a3410cd3e6ac8868de3284de94a132d89544f987))
+* **migration-guide:** added accordion to migration guide ([8186023](https://inindca///commit/8186023fdddef55f1c3c0c086b2d30ffb2546f37))
+* **notification-toast:** enabled shadow dom ([6cbe990](https://inindca///commit/6cbe990bcfa1eeba3a465acf704968b5419ea2cf))
+* **pagination:** enabled shadow dom ([ed0bcda](https://inindca///commit/ed0bcdadacb7bab88ed17ede51c6f0cf5664c8f7))
+* **pagination:** enabled shadow dom ([5c6ec6c](https://inindca///commit/5c6ec6c93a72728db3daaeedd358f1115666be38))
+* **release:** prepare for alpha releases of v3 ([896eaea](https://inindca///commit/896eaea701bea32fc4fca8c0086210d0ce30b553))
+* **simple-toast:** enabled shadowdom ([2f11316](https://inindca///commit/2f11316e6b1ccaa7a922ed79861d697b90bd66fd))
+* **tooltip:** enabled shadow dom ([4de306b](https://inindca///commit/4de306bc3a0d0e9907459efdf3cbebcaab0225c1))
+* **visualization:** component moved to v3 ([48285a2](https://inindca///commit/48285a20478b25a29b4124494c7095bc5fc6df55))
+
+
+### Bug Fixes
+
+* **keycode:** removed usage of event.keyCode ([42b6115](https://inindca///commit/42b6115926ac85e9a9e449f6a03f840506878840))
+* **pr-comment:** addressed PR comment ([edf2768](https://inindca///commit/edf2768b2b65a722197624d639e2979466324cc4))
+* **pr-comment:** addressed PR comment ([8f86598](https://inindca///commit/8f865988face852503adcf27c1e6c74bd050673f))
+* **pr-comment:** addressed PR comment ([fd42ce1](https://inindca///commit/fd42ce18cd5f92d21993f73250d4adddce0f1dfe))
+* **pr-comment:** addressed PR comment ([ee79b77](https://inindca///commit/ee79b77d7d1be2ca6ab98d7a51271a6efb02059a))
+
 ### [2.45.2](https://inindca///compare/v2.45.1...v2.45.2) (2021-11-10)
 
 
