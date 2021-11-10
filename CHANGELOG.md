@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.46.0](https://inindca///compare/v2.45.2...v2.46.0) (2021-11-10)
+
+
+### Features
+
+* **accordion:** sections can now be disabled ([2de4958](https://inindca///commit/2de4958c63a8498fc36cb8947461013be323e2c2))
+
 ### [2.45.2](https://inindca///compare/v2.45.1...v2.45.2) (2021-11-10)
 
 
