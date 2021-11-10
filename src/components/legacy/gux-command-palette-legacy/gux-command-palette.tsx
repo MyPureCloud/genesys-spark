@@ -38,7 +38,8 @@ function sortActions(
 
 @Component({
   styleUrl: 'gux-command-palette.less',
-  tag: 'gux-command-palette-legacy'
+  tag: 'gux-command-palette-legacy',
+  shadow: false
 })
 export class GuxCommandPaletteLegacy {
   @Element()

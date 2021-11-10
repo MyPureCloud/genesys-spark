@@ -12,7 +12,8 @@ import { GuxTextHighlightStrategy } from '../../gux-text-highlight/gux-text-high
 
 @Component({
   styleUrl: 'gux-list-item.less',
-  tag: 'gux-list-item'
+  tag: 'gux-list-item',
+  shadow: true
 })
 export class GuxListItem {
   /**

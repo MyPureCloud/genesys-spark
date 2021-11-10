@@ -1,6 +1,37 @@
+import { E2EPage } from '@stencil/core/testing';
+
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 const axeExclusions = [];
+
+async function clickActionButton(page: E2EPage): Promise<void> {
+  return await page.evaluate(() => {
+    const element = document.querySelector('gux-action-button');
+    const actionButton = element.shadowRoot.querySelector(
+      '.gux-action-button > button'
+    ) as HTMLButtonElement;
+
+    actionButton.click();
+  });
+}
+
+async function clickDropdownButton(page: E2EPage): Promise<void> {
+  return await page.evaluate(() => {
+    const element = document.querySelector('gux-action-button');
+    const dropdownButton = element.shadowRoot.querySelector(
+      '.gux-dropdown-button > button'
+    ) as HTMLButtonElement;
+
+    dropdownButton.click();
+  });
+}
+
+async function clickActionItemButton(page: E2EPage): Promise<void> {
+  return await page.evaluate(() => {
+    const element = document.querySelector('gux-action-item') as HTMLElement;
+    element.click();
+  });
+}
 
 describe('gux-action-button', () => {
   const html = `
@@ -14,58 +45,79 @@ describe('gux-action-button', () => {
   `;
   it('renders', async () => {
     const page = await newSparkE2EPage({ html });
-
     const element = await page.find('gux-action-button');
-    await a11yCheck(page, axeExclusions);
+
+    await a11yCheck(page, axeExclusions, 'closed');
+    await clickDropdownButton(page);
+    await a11yCheck(page, axeExclusions, 'open');
+
     expect(element).toHaveClass('hydrated');
   });
 
-  it('Should fire actionClick event if not disabled', async () => {
+  it('should fire actionClick event if not disabled', async () => {
     const page = await newSparkE2EPage({ html });
+    const onActionClick = await page.spyOnEvent('actionClick');
 
-    const element = await page.find('gux-action-button');
-    const onActionClick = await element.spyOnEvent('actionClick');
-    const button = await page.find('.gux-action-button');
-    await button.click();
+    await clickActionButton(page);
+
     expect(onActionClick).toHaveReceivedEventTimes(1);
   });
 
-  it('Should not fire actionClick event if disabled', async () => {
+  it('should not fire actionClick event if disabled', async () => {
     const page = await newSparkE2EPage({ html });
-
+    const onActionClick = await page.spyOnEvent('actionClick');
     const element = await page.find('gux-action-button');
-    const onActionClick = await element.spyOnEvent('actionClick');
     element.setAttribute('disabled', 'disabled');
     await page.waitForChanges();
-    expect(element).toHaveAttribute('disabled');
-    expect(element).toEqualAttribute('disabled', 'disabled');
-    const button = await page.find('.gux-action-button');
-    await button.click();
+
+    await clickActionButton(page);
+
     expect(onActionClick).toHaveReceivedEventTimes(0);
   });
 
-  it('Should fire open event if not disabled', async () => {
+  it('should fire open and close events if not disabled', async () => {
     const page = await newSparkE2EPage({ html });
+    const onOpen = await page.spyOnEvent('open');
+    const onClose = await page.spyOnEvent('close');
 
-    const element = await page.find('gux-action-button');
-    const onOpen = await element.spyOnEvent('open');
-    const dropdownElm = await element.find('.gux-dropdown-button');
-    await dropdownElm.click();
-    await a11yCheck(page, axeExclusions);
+    await clickDropdownButton(page);
+    await clickDropdownButton(page);
+
     expect(onOpen).toHaveReceivedEventTimes(1);
+    expect(onClose).toHaveReceivedEventTimes(1);
   });
 
-  it('Should not fire open event if disabled', async () => {
+  it('should not fire open event if disabled', async () => {
     const page = await newSparkE2EPage({ html });
-
+    const onOpen = await page.spyOnEvent('open');
     const element = await page.find('gux-action-button');
-    const onOpen = await element.spyOnEvent('open');
     element.setAttribute('disabled', 'disabled');
     await page.waitForChanges();
-    expect(element).toHaveAttribute('disabled');
-    expect(element).toEqualAttribute('disabled', 'disabled');
-    const dropdownElm = await element.find('.gux-dropdown-button');
-    await dropdownElm.click();
+
+    await clickDropdownButton(page);
+
     expect(onOpen).toHaveReceivedEventTimes(0);
+  });
+
+  it('should fire press event if action-item not disabled', async () => {
+    const page = await newSparkE2EPage({ html });
+    const onPress = await page.spyOnEvent('press');
+
+    await clickActionItemButton(page);
+
+    expect(onPress).toHaveReceivedEventTimes(1);
+  });
+
+  it('should not fire press event if action-item disabled', async () => {
+    const page = await newSparkE2EPage({ html });
+    const onPress = await page.spyOnEvent('press');
+
+    const element = await page.find('gux-action-item');
+    element.setAttribute('disabled', 'disabled');
+    await page.waitForChanges();
+
+    await clickActionItemButton(page);
+
+    expect(onPress).toHaveReceivedEventTimes(0);
   });
 });

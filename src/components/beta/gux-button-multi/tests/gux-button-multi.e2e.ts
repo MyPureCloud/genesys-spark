@@ -1,6 +1,19 @@
+import { E2EPage } from '@stencil/core/testing';
+
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 const axeExclusions = [];
+
+async function clickDropdownButton(page: E2EPage): Promise<void> {
+  return await page.evaluate(() => {
+    const element = document.querySelector('gux-button-multi');
+    const dropdownButton = element.shadowRoot.querySelector(
+      '.gux-dropdown-button > button'
+    ) as HTMLButtonElement;
+
+    dropdownButton.click();
+  });
+}
 
 describe('gux-button-multi', () => {
   const html = `
@@ -20,29 +33,27 @@ describe('gux-button-multi', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('Should fire open event if not disabled', async () => {
+  it('should fire open and close events if not disabled', async () => {
     const page = await newSparkE2EPage({ html });
+    const onOpen = await page.spyOnEvent('open');
+    const onClose = await page.spyOnEvent('close');
 
-    const element = await page.find('gux-button-multi');
-    const onOpen = await element.spyOnEvent('open');
-    const dropdownElm = await element.find('.gux-dropdown-button');
-    await dropdownElm.click();
-    await a11yCheck(page, axeExclusions);
+    await clickDropdownButton(page);
+    await clickDropdownButton(page);
+
     expect(onOpen).toHaveReceivedEventTimes(1);
+    expect(onClose).toHaveReceivedEventTimes(1);
   });
 
-  it('Should not fire open event if disabled', async () => {
+  it('should not fire open event if disabled', async () => {
     const page = await newSparkE2EPage({ html });
-
+    const onOpen = await page.spyOnEvent('open');
     const element = await page.find('gux-button-multi');
-    const onOpen = await element.spyOnEvent('open');
     element.setAttribute('disabled', 'disabled');
     await page.waitForChanges();
-    expect(element).toHaveAttribute('disabled');
-    expect(element).toEqualAttribute('disabled', 'disabled');
-    const dropdownElm = await element.find('.gux-dropdown-button');
-    await dropdownElm.click();
-    await a11yCheck(page, axeExclusions);
+
+    await clickDropdownButton(page);
+
     expect(onOpen).toHaveReceivedEventTimes(0);
   });
 });
