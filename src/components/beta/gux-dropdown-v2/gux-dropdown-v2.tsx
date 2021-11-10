@@ -221,9 +221,9 @@ export class GuxDropdownV2Beta {
   }
 
   private renderTargetDisplay(): JSX.Element {
-    const selectedListboxOptionElement =
-      this.root.querySelector(`gux-option-v2[value="${this.value}"]`) ||
-      this.getOptionElementByValue(this.value);
+    const selectedListboxOptionElement = this.getOptionElementByValue(
+      this.value
+    );
 
     if (this.expanded && this.filterable) {
       return (
