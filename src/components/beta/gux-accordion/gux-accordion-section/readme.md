@@ -10,6 +10,7 @@
 | Property        | Attribute        | Description | Type                         | Default     |
 | --------------- | ---------------- | ----------- | ---------------------------- | ----------- |
 | `arrowPosition` | `arrow-position` |             | `"beside-text" \| "default"` | `'default'` |
+| `disabled`      | `disabled`       |             | `boolean`                    | `false`     |
 | `open`          | `open`           |             | `boolean`                    | `false`     |
 
 

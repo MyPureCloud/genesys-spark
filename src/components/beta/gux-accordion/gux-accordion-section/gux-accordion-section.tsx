@@ -22,6 +22,9 @@ export class GuxAccordionSection {
   @Prop({ mutable: true })
   open: boolean = false;
 
+  @Prop()
+  disabled: boolean = false;
+
   private toggle() {
     this.open = !this.open;
   }
@@ -49,11 +52,12 @@ export class GuxAccordionSection {
 
   render(): JSX.Element {
     return (
-      <section>
+      <section class={{ 'gux-disabled': this.disabled }}>
         <button
           class="gux-header"
           aria-expanded={this.open.toString()}
           aria-controls={this.sectionId}
+          disabled={this.disabled}
           onClick={this.toggle.bind(this)}
         >
           <div class="gux-header-text">

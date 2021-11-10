@@ -40,7 +40,7 @@
 <h1>New Beta Component</h1>
 
 <gux-accordion-beta>
-  <gux-accordion-section>
+  <gux-accordion-section disabled>
     <h2 slot="header">First Section Beta</h2>
     <div slot="content">
       <span>I'm a span in a div.</span>
@@ -121,7 +121,7 @@
 <h1>New Beta Component with all sections initially open</h1>
 
 <gux-accordion-beta arrow-position="beside-text">
-  <gux-accordion-section open>
+  <gux-accordion-section class="blocked" disabled open>
     <h2 slot="header">First Section Beta</h2>
     <div slot="content">
       <span>I'm a span in a div.</span>
@@ -144,3 +144,9 @@
     <span slot="content">I'm a span.</span>
   </gux-accordion-section>
 </gux-accordion-beta>
+
+<style>
+  .blocked {
+    --gux-disabled-cursor: not-allowed;
+  }
+</style>
