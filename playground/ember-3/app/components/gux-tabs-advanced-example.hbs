@@ -1,0 +1,31 @@
+<div style='margin: 20px; padding: 20px; border: 2px solid grey'>
+
+  <h2>gux-tabs-advanced playgroud</h2>
+
+  <div style='margin: 10px 0'>
+    <gux-button {{on 'click' this.selectTabFive}}>Select tab 5</gux-button>
+    <gux-button {{on 'click' this.addNewTabToEnd}}>Add new tab to end</gux-button>
+    <gux-button {{on 'click' this.addNewTabToMiddle}}>Add new tab after 3rd tab</gux-button>
+    <gux-button {{on 'click' this.reverseTabOrder}}>Reverse tabs</gux-button>
+  </div>
+
+  <gux-tabs-advanced id='interactive1'>
+    <gux-tab-advanced-list
+      slot='tab-list'
+      {{on 'sortChanged' this.onSortChanged}}
+      allow-sort='true'
+    >
+      {{#each this.tabs as |tab|}}
+        <gux-tab-advanced tab-id={{tab.id}} tab-icon-name='lock'>
+          <span slot='title'>{{tab.title}}</span>
+        </gux-tab-advanced>
+      {{/each}}
+    </gux-tab-advanced-list>
+  </gux-tabs-advanced>
+  <br />
+  <h3>Tab order:</h3>
+  {{#each this.tabs as |tab|}}
+    <div style='margin-top: 3px; font-weight:bold'>{{tab.id}}</div>
+  {{/each}}
+
+</div>
