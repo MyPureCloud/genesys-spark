@@ -20,7 +20,8 @@ import {
 
 @Component({
   styleUrl: 'gux-pagination.less',
-  tag: 'gux-pagination'
+  tag: 'gux-pagination',
+  shadow: true
 })
 export class GuxPagination implements ComponentInterface {
   @Element()

@@ -1,4 +1,4 @@
-# gux-tab
+# gux-tabs-list
 
 
 
@@ -7,34 +7,64 @@
 
 ## Properties
 
-| Property      | Attribute       | Description                                                                                         | Type      | Default     |
-| ------------- | --------------- | --------------------------------------------------------------------------------------------------- | --------- | ----------- |
-| `active`      | `active`        | indicates whether or not the tab is selected                                                        | `boolean` | `false`     |
-| `tabIconName` | `tab-icon-name` | indicates the gux-icon to display on the left side of the tab (similar to a favicon in the browser) | `string`  | `undefined` |
-| `tabId`       | `tab-id`        | unique id for the tab                                                                               | `string`  | `undefined` |
+| Property      | Attribute      | Description                                | Type      | Default     |
+| ------------- | -------------- | ------------------------------------------ | --------- | ----------- |
+| `guxDisabled` | `gux-disabled` | Specifies if tab is disabled               | `boolean` | `false`     |
+| `iconOnly`    | `icon-only`    | Specifies if the tab title is just an icon | `boolean` | `false`     |
+| `tabId`       | `tab-id`       | Tab id for the tab                         | `string`  | `undefined` |
 
 
 ## Events
 
-| Event                 | Description | Type                |
-| --------------------- | ----------- | ------------------- |
-| `internaltabselected` |             | `CustomEvent<void>` |
+| Event                      | Description | Type                  |
+| -------------------------- | ----------- | --------------------- |
+| `internalactivatetabpanel` |             | `CustomEvent<string>` |
+
+
+## Methods
+
+### `guxFocus() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `guxGetActive() => Promise<boolean>`
+
+
+
+#### Returns
+
+Type: `Promise<boolean>`
+
+
+
+### `guxSetActive(active: boolean) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies
 
 ### Depends on
 
-- [gux-icon](../../gux-icon)
-- [gux-popover](../../gux-popover)
+- [gux-tooltip-title-beta](../../../beta/gux-tooltip-title)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-tab --> gux-icon
-  gux-tab --> gux-popover
-  gux-popover --> gux-dismiss-button-beta
-  gux-dismiss-button-beta --> gux-icon
+  gux-tab --> gux-tooltip-title-beta
+  gux-tooltip-title-beta --> gux-tooltip
   style gux-tab fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

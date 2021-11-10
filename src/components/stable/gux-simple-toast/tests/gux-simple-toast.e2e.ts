@@ -1,6 +1,19 @@
+import {E2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 const axeExclusions = [];
+
+async function clickDismissButton(page: E2EPage) {
+  await page.evaluate(async () => {
+    const element = document.querySelector('gux-simple-toast');
+    const dismissButtonElement = element.shadowRoot.querySelector(
+      'gux-dismiss-button-beta'
+    );
+    const button = dismissButtonElement.shadowRoot.querySelector('button');
+
+    button.click();
+  });
+}
 
 describe('gux-simple-toast', () => {
   describe('#render', () => {
@@ -62,9 +75,6 @@ describe('gux-simple-toast', () => {
       `;
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-simple-toast');
-      const dismissButton = await element.find(
-        'gux-dismiss-button-beta >>> button'
-      );
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -72,7 +82,7 @@ describe('gux-simple-toast', () => {
       expect(clickSpy).not.toHaveReceivedEvent();
       expect(await page.find('gux-simple-toast')).not.toBeNull();
 
-      await dismissButton.click();
+      await clickDismissButton(page);
       await page.waitForChanges();
 
       expect(guxdismissSpy).toHaveReceivedEvent();
@@ -89,9 +99,6 @@ describe('gux-simple-toast', () => {
       `;
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-simple-toast');
-      const dismissButton = await element.find(
-        'gux-dismiss-button-beta >>> button'
-      );
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -105,7 +112,7 @@ describe('gux-simple-toast', () => {
       expect(clickSpy).not.toHaveReceivedEvent();
       expect(await page.find('gux-simple-toast')).not.toBeNull();
 
-      await dismissButton.click();
+      await clickDismissButton(page);
       await page.waitForChanges();
 
       expect(guxdismissSpy).toHaveReceivedEvent();

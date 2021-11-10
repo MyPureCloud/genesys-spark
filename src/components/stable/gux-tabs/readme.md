@@ -1,4 +1,4 @@
-# gux-tabs
+# gux-tabs-beta
 
 
 
@@ -7,35 +7,32 @@
 
 ## Properties
 
-| Property           | Attribute             | Description                         | Type      | Default    |
-| ------------------ | --------------------- | ----------------------------------- | --------- | ---------- |
-| `allowSort`        | `allow-sort`          | Enable tab sorting by drag/drop     | `boolean` | `false`    |
-| `showNewTabButton` | `show-new-tab-button` | Enable new tab button               | `boolean` | `false`    |
-| `tabLimit`         | `tab-limit`           | Maximum nuber of tabs created       | `number`  | `Infinity` |
-| `value`            | `value`               | tabId of the currently selected tab | `string`  | `''`       |
+| Property      | Attribute     | Description                                          | Type                                | Default        |
+| ------------- | ------------- | ---------------------------------------------------- | ----------------------------------- | -------------- |
+| `activeTab`   | `active-tab`  | tabId of the currently selected tab                  | `string`                            | `undefined`    |
+| `alignment`   | `alignment`   | Specifies left aligned, centered, or full width tabs | `"center" \| "fullWidth" \| "left"` | `'left'`       |
+| `orientation` | `orientation` | Specifies horizontal or vertical orientation of tabs | `"horizontal" \| "vertical"`        | `'horizontal'` |
 
 
 ## Events
 
-| Event         | Description                                       | Type                    |
-| ------------- | ------------------------------------------------- | ----------------------- |
-| `input`       | Triggers when a tab is selected.                  | `CustomEvent<any>`      |
-| `newTab`      | Triggers when the new tab button is selected.     | `CustomEvent<any>`      |
-| `sortChanged` | Triggers when the sorting of the tabs is changed. | `CustomEvent<string[]>` |
+| Event                | Description                           | Type                  |
+| -------------------- | ------------------------------------- | --------------------- |
+| `guxactivetabchange` | Triggers when the active tab changes. | `CustomEvent<string>` |
 
 
-## Dependencies
+## Methods
 
-### Depends on
+### `guxActivate(tabId: string) => Promise<void>`
 
-- [gux-icon](../gux-icon)
 
-### Graph
-```mermaid
-graph TD;
-  gux-tabs --> gux-icon
-  style gux-tabs fill:#f9f,stroke:#333,stroke-width:4px
-```
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 
 ----------------------------------------------
 

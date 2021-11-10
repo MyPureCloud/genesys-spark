@@ -1,68 +1,68 @@
-import { newSpecPage, SpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
+import MutationObserver from 'mutation-observer';
 
 import { GuxTabs } from '../gux-tabs';
 import { GuxTab } from '../gux-tab/gux-tab';
-import { GuxTabDropdownOption } from '../gux-tab-dropdown-option/gux-tab-dropdown-option';
+import { GuxTabList } from '../gux-tab-list/gux-tab-list';
+import { GuxTabPanel } from '../gux-tab-panel/gux-tab-panel';
 
-const components = [GuxTabs, GuxTab, GuxTabDropdownOption];
+const components = [GuxTabs, GuxTab, GuxTabList, GuxTabPanel];
+const tablistHtml = `
+    <gux-tab-list slot="tab-list">
+      <gux-tab tab-id="2-1"><span>Tab Header 1</span></gux-tab>
+      <gux-tab tab-id="2-2"><span>Tab Header 2</span></gux-tab>
+      <gux-tab tab-id="2-3"><span>Tab Header 3</span></gux-tab>
+      <gux-tab gux-disabled tab-id="2-4"
+        ><span>Tab Header 4</span></gux-tab
+      >
+      <gux-tab gux-disabled tab-id="2-5"
+        ><span>Tab Header 5</span></gux-tab
+      >
+    </gux-tab-list>
+    <gux-tab-panel tab-id="2-1">Tab content 1</gux-tab-panel>
+    <gux-tab-panel tab-id="2-2">Tab content 2</gux-tab-panel>
+    <gux-tab-panel tab-id="2-3">Tab content 3</gux-tab-panel>
+    <gux-tab-panel tab-id="2-4">Tab content 4</gux-tab-panel>
+    <gux-tab-panel tab-id="2-5">Tab content 5</gux-tab-panel>
+`;
+const tabsHtml = `
+  <gux-tabs class="example">
+    ${tablistHtml}
+  </gux-tabs> 
+`;
 const language = 'en';
 
 describe('gux-tabs', () => {
-  let page: SpecPage;
-
   beforeEach(async () => {
-    page = await newSpecPage({
-      components,
-      html: `
-        <gux-tabs id="interactive">
-          <gux-tab tab-id="1" tab-icon-name="lock">
-            <span slot="title"> Hello World </span>
-            <span slot="dropdown-options">
-              <gux-tab-dropdown-option
-                option-id="1"
-                icon-name="edit"
-                onclick="notify(event)"
-              >
-                Edit
-              </gux-tab-dropdown-option>
-              <gux-tab-dropdown-option
-                option-id="2"
-                icon-name="clone"
-                onclick="notify(event)"
-              >
-                Clone
-              </gux-tab-dropdown-option>
-              <gux-tab-dropdown-option
-                option-id="3"
-                icon-name="share"
-                onclick="notify(event)"
-              >
-                Share
-              </gux-tab-dropdown-option>
-              <gux-tab-dropdown-option
-                option-id="4"
-                icon-name="download"
-                onclick="notify(event)"
-              >
-                Download
-              </gux-tab-dropdown-option>
-            </span>
-          </gux-tab>
-
-          <gux-tab tab-id="2" tab-icon-name="lock">
-            <span slot="title"> Hello World 2 </span>
-          </gux-tab>
-        </gux-tabs>
-      `,
-      language
+    (
+      global as NodeJS.Global & {
+        MutationObserver: any;
+      }
+    ).MutationObserver = MutationObserver;
+  });
+  describe('#render', () => {
+    it(`should render as expected`, async () => {
+      const html = tabsHtml;
+      const page = await newSpecPage({
+        components,
+        html,
+        language
+      });
+      expect(page.rootInstance).toBeInstanceOf(GuxTabs);
+      expect(page.root).toMatchSnapshot();
     });
-  });
-
-  it('should build', async () => {
-    expect(page.rootInstance).toBeInstanceOf(GuxTabs);
-  });
-
-  it('should render', async () => {
-    expect(page.root).toMatchSnapshot();
+    it(`should render vertical tabs as expected`, async () => {
+      const html = `
+        <gux-tabs orientation='vertical'>
+          ${tablistHtml}
+        </gux-tabs>
+      `;
+      const page = await newSpecPage({
+        components,
+        html,
+        language
+      });
+      expect(page.root).toMatchSnapshot();
+    });
   });
 });

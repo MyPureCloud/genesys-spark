@@ -8,7 +8,6 @@ import {
   Prop
 } from '@stencil/core';
 
-import { KeyCode } from '../../../../common-enums';
 import { GuxTextHighlightStrategy } from '../../gux-text-highlight/gux-text-highlight.types';
 
 @Component({
@@ -47,7 +46,7 @@ export class GuxListItem {
 
   @Listen('keydown')
   handleKeyDown(event: KeyboardEvent): void {
-    if (event.keyCode === KeyCode.Enter || event.keyCode === KeyCode.Space) {
+    if (event.key === 'Enter' || event.key === ' ') {
       this.onItemClicked();
     }
   }

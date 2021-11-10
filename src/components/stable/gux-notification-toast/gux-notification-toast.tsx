@@ -20,7 +20,8 @@ import { GuxNotificationToastAccent } from './gux-notification-toast.types';
  */
 @Component({
   styleUrl: 'gux-notification-toast.less',
-  tag: 'gux-notification-toast'
+  tag: 'gux-notification-toast',
+  shadow: true
 })
 export class GuxNotificationToast {
   /**

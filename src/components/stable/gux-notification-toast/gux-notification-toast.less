@@ -2,7 +2,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/shadows.less';
 
-gux-notification-toast {
+:host {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -21,84 +21,66 @@ gux-notification-toast {
   .gux-shadow-20();
 }
 
-gux-notification-toast {
-  .gux-icon {
-    flex: 0 1 auto;
-    align-self: auto;
-    order: 0;
-    margin: 4px;
+.gux-icon {
+  flex: 0 1 auto;
+  align-self: auto;
+  order: 0;
+  margin: 4px;
 
-    gux-icon {
-      width: 24px;
-      height: 24px;
-    }
-
-    &.gux-alert {
-      color: @gux-alert;
-    }
-
-    &.gux-warning {
-      color: @gux-warning;
-    }
-
-    &.gux-positive {
-      color: @gux-positive;
-    }
-
-    &.gux-neutral {
-      color: @gux-neutral;
-    }
+  ::slotted(gux-icon) {
+    width: 24px !important;
+    height: 24px !important;
   }
 
-  .gux-content {
-    display: flex;
+  &.gux-alert {
+    color: @gux-alert;
+  }
+
+  &.gux-warning {
+    color: @gux-warning;
+  }
+
+  &.gux-positive {
+    color: @gux-positive;
+  }
+
+  &.gux-neutral {
+    color: @gux-neutral;
+  }
+}
+
+.gux-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-start;
+  align-self: auto;
+  justify-content: flex-start;
+  order: 0;
+
+  .gux-title {
     flex: 1 1 auto;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    align-items: flex-start;
     align-self: auto;
-    justify-content: flex-start;
     order: 0;
-
-    .gux-title {
-      flex: 1 1 auto;
-      align-self: auto;
-      order: 0;
-      max-height: 48px;
-      margin: 0 12px 0 8px;
-      overflow: hidden;
-      font-size: 14px;
-      line-height: 20px;
-      color: @gux-type;
-      text-overflow: ellipsis;
-    }
-
-    .gux-message {
-      flex: 1 1 auto;
-      align-self: auto;
-      order: 0;
-      max-height: 24px;
-      margin: 0 12px 0 8px;
-      overflow: hidden;
-      line-height: 24px;
-      text-overflow: ellipsis;
-    }
+    max-height: 48px;
+    margin: 0 12px 0 8px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 20px;
+    color: @gux-type;
+    text-overflow: ellipsis;
   }
 
-  .gux-dismiss-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 0;
-    font-size: 11px;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-
-    gux-icon {
-      width: 12px;
-      height: 12px;
-    }
+  .gux-message {
+    flex: 1 1 auto;
+    align-self: auto;
+    order: 0;
+    max-height: 24px;
+    margin: 0 12px 0 8px;
+    overflow: hidden;
+    line-height: 24px;
+    text-overflow: ellipsis;
   }
 }

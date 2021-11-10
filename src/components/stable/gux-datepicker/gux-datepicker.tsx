@@ -111,12 +111,6 @@ export class GuxDatepicker {
   format: string = 'mm/dd/yyyy';
 
   /**
-   * The datepicker first week day (default to 0 (sunday))
-   */
-  @Prop()
-  firstDayOfWeek: number = 0;
-
-  /**
    * The datepicker current value
    */
   @State()
@@ -648,7 +642,6 @@ export class GuxDatepicker {
         onInput={(event: CustomEvent) => this.onCalendarSelect(event)}
         minDate={this.minDate}
         maxDate={this.maxDate}
-        firstDayOfWeek={this.firstDayOfWeek}
         numberOfMonths={this.numberOfMonths}
       />
     );

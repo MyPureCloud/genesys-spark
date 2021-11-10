@@ -8,7 +8,8 @@ import { GuxBreadcrumbAccent } from './gux-breadcrumbs.types';
 
 @Component({
   styleUrl: 'gux-breadcrumbs.less',
-  tag: 'gux-breadcrumbs'
+  tag: 'gux-breadcrumbs',
+  shadow: true
 })
 export class GuxBreadcrumbs {
   private i18n: GetI18nValue;

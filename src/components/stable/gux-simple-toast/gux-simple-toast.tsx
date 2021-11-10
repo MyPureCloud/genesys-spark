@@ -19,7 +19,8 @@ import { GuxSimpleToastAccent } from './gux-simple-toast.types';
  */
 @Component({
   styleUrl: 'gux-simple-toast.less',
-  tag: 'gux-simple-toast'
+  tag: 'gux-simple-toast',
+  shadow: true
 })
 export class GuxSimpleToast {
   /**

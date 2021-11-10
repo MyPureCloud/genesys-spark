@@ -3,7 +3,7 @@
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/shadows.less';
 
-gux-action-toast {
+:host {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -20,94 +20,100 @@ gux-action-toast {
   .gux-shadow-20();
 }
 
-gux-action-toast {
-  .gux-header {
-    display: flex;
-    flex: 0 1 auto;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    align-items: center;
-    align-self: auto;
-    justify-content: flex-start;
-    order: 0;
-    .h2();
+.gux-header {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  align-self: auto;
+  justify-content: flex-start;
+  order: 0;
+  .h2();
 
-    .gux-icon {
-      flex: 0 1 auto;
-      align-self: auto;
-      order: 0;
-      color: @gux-aqua-green-sec;
-
-      gux-icon {
-        width: 32px;
-        height: 32px;
-      }
-    }
-
-    .gux-title {
-      flex: 1 1 auto;
-      align-self: auto;
-      order: 0;
-      margin: 0 0 0 8px;
-    }
-  }
-
-  .gux-message {
+  .gux-icon {
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
-    margin: 16px 0;
-    .body-font();
+    color: @gux-aqua-green-sec;
 
-    dl {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-content: stretch;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin: 0;
-
-      dt {
-        flex: 0 1 20%;
-        align-self: auto;
-        order: 0;
-        margin: 0;
-        color: @gux-black-50;
-        .bold-font();
-      }
-
-      dd {
-        flex: 0 1 80%;
-        align-self: auto;
-        order: 0;
-        margin: 0;
-      }
+    ::slotted(gux-icon) {
+      width: 32px !important;
+      height: 32px !important;
     }
   }
 
-  .gux-action-buttons {
+  .gux-title {
+    flex: 1 1 auto;
+    align-self: auto;
+    order: 0;
+    margin: 0 0 0 8px;
+  }
+}
+
+.gux-message {
+  flex: 0 1 auto;
+  align-self: auto;
+  order: 0;
+  margin: 16px 0;
+  .body-font();
+
+  ::slotted(dl) {
     display: flex;
-    flex: 0 1 auto;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-content: stretch;
     align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+  }
+}
+
+.gux-action-buttons {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-start;
+  align-self: auto;
+  justify-content: space-between;
+  order: 0;
+
+  .gux-negative-button {
+    flex: 0 1 auto;
     align-self: auto;
-    justify-content: space-between;
     order: 0;
+  }
 
-    .gux-negative-button {
-      flex: 0 1 auto;
-      align-self: auto;
-      order: 0;
-    }
+  .gux-positive-button {
+    flex: 0 1 auto;
+    align-self: auto;
+    order: 0;
+  }
+}
 
-    .gux-positive-button {
-      flex: 0 1 auto;
-      align-self: auto;
-      order: 0;
-    }
+.gux-action-buttons {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-start;
+  align-self: auto;
+  justify-content: space-between;
+  order: 0;
+
+  .gux-negative-button {
+    flex: 0 1 auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  .gux-positive-button {
+    flex: 0 1 auto;
+    align-self: auto;
+    order: 0;
   }
 }
