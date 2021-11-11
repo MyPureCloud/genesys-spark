@@ -8,8 +8,12 @@ String[] mailingList = [
 ]
 
 
-def isActiveReleaseBranch() {
+def isMasterBranch() {
   return env.SHORT_BRANCH.equals('master');
+}
+
+def isActiveReleaseBranch() {
+  return env.SHORT_BRANCH.equals('maintenance/v2');
 }
 
 def isMaintenanceReleaseBranch() {
@@ -21,7 +25,7 @@ def isFeatureBranch() {
 }
 
 def isReleaseBranch() {
-  return isActiveReleaseBranch() || isMaintenanceReleaseBranch();
+  return isMasterBranch() || isActiveReleaseBranch() || isMaintenanceReleaseBranch();
 }
 
 
