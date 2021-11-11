@@ -1,4 +1,8 @@
-import { trackComponent, trackAction } from '../usage-tracking';
+import {
+  trackComponent,
+  trackAction,
+  getVersionObject
+} from '../usage-tracking';
 import packageInfo from '../../package.json';
 
 const component = document.createElement('gux-button');
@@ -80,6 +84,49 @@ describe('usage-tracking', () => {
         action: 'click',
         strength: 'real hard'
       });
+    });
+  });
+});
+
+describe('getVersionObject', () => {
+  [
+    {
+      packageLockVersion: '0.0.1',
+      expectedVersionObject: {
+        fullVersion: '0.0.1',
+        majorVersion: '0',
+        minorVersion: '0.0'
+      }
+    },
+    {
+      packageLockVersion: '0.1.1',
+      expectedVersionObject: {
+        fullVersion: '0.1.1',
+        majorVersion: '0',
+        minorVersion: '0.1'
+      }
+    },
+    {
+      packageLockVersion: '1.1.1',
+      expectedVersionObject: {
+        fullVersion: '1.1.1',
+        majorVersion: '1',
+        minorVersion: '1.1'
+      }
+    },
+    {
+      packageLockVersion: '2.0.0-alpha.0',
+      expectedVersionObject: {
+        fullVersion: '2.0.0-alpha.0',
+        majorVersion: '2',
+        minorVersion: '2.0'
+      }
+    }
+  ].forEach(({ packageLockVersion, expectedVersionObject }, index) => {
+    it(`should return expected versionObject (${index + 1})`, async () => {
+      const versionObject = getVersionObject(packageLockVersion);
+
+      expect(versionObject).toEqual(expectedVersionObject);
     });
   });
 });
