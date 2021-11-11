@@ -70,9 +70,9 @@ function reportLibraryVersion() {
     return;
   }
 
-  const [major, minor, patch] = packageInfo.version.split('.');
+  const [major, minor, ...patch] = packageInfo.version.split('.');
   newrelic.addPageAction(libraryPageAction, {
-    fullVersion: `${major}.${minor}.${patch}`,
+    fullVersion: `${major}.${minor}.${patch.join('.')}`,
     majorVersion: major,
     minorVersion: `${major}.${minor}`
   });
