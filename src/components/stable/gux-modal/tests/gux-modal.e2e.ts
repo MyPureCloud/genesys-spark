@@ -1,4 +1,7 @@
-import { E2EPage, newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { E2EPage } from '@stencil/core/testing';
+
+const axeExclusions = [];
 
 describe('gux-modal', () => {
   describe('#render', () => {
@@ -112,13 +115,14 @@ describe('gux-modal', () => {
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-modal');
 
         expect(element.outerHTML).toMatchSnapshot();
 
         element.setAttribute('hidden', true);
         await page.waitForChanges();
+        await a11yCheck(page, axeExclusions);
 
         expect(element.outerHTML).toMatchSnapshot();
       });
@@ -139,7 +143,7 @@ describe('gux-modal', () => {
           </div>
         </gux-modal>
       `;
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-modal');
       const dismissButton = await element.find('gux-dismiss-button >>> button');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
@@ -170,7 +174,7 @@ describe('gux-modal', () => {
           </div>
         </gux-modal>
       `;
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-modal');
       const dismissButton = await element.find('gux-dismiss-button >>> button');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
@@ -207,7 +211,7 @@ describe('gux-modal', () => {
           </div>
         </gux-modal>
       `;
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
 
       expect(guxdismissSpy).not.toHaveReceivedEvent();
@@ -240,7 +244,7 @@ describe('gux-modal', () => {
       <button id="modal-trigger">Open Modal</button>
     `;
     const setupContainerPage = async (modalHtml: string) => {
-      const page = await newE2EPage({ html: modalContainerHtml });
+      const page = await newSparkE2EPage({ html: modalContainerHtml });
 
       await page.evaluate(html => {
         document

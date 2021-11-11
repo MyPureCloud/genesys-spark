@@ -1,10 +1,11 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 describe('gux-popover', () => {
   it('renders', async () => {
-    const page = await newE2EPage();
-
-    await page.setContent(`
+    const page = await newSparkE2EPage({
+      html: `
       <div lang="en">
         <div id="popover-target">
           Example Element
@@ -13,15 +14,17 @@ describe('gux-popover', () => {
           <div>popover content</div>
         </gux-popover>
       </div>
-    `);
+      `
+    });
+
     const element = await page.find('gux-popover');
+    await a11yCheck(page, axeExclusions);
     expect(element).toHaveClass('hydrated');
   });
 
   it('Should trigger guxdismiss event on popover dismiss button click', async () => {
-    const page = await newE2EPage();
-
-    await page.setContent(`
+    const page = await newSparkE2EPage({
+      html: `
       <div lang="en">
         <div id="popover-target">
           Example Element
@@ -30,7 +33,9 @@ describe('gux-popover', () => {
           <div>popover content</div>
         </gux-popover>
       </div>
-    `);
+      `
+    });
+
     const component = await page.find('gux-popover');
     const guxdismiss = await component.spyOnEvent('guxdismiss');
     const button = await page.find('gux-dismiss-button');
@@ -39,9 +44,8 @@ describe('gux-popover', () => {
   });
 
   it('Supports hiding the close button', async () => {
-    const page = await newE2EPage();
-
-    await page.setContent(`
+    const page = await newSparkE2EPage({
+      html: `
       <div lang="en">
         <div id="popover-target">
           Example Element
@@ -50,11 +54,14 @@ describe('gux-popover', () => {
           <div>popover content</div>
         </gux-popover>
       </div>
-    `);
+      `
+    });
+
     const component = await page.find('gux-popover');
     component.setProperty('displayDismissDutton', false);
     await page.waitForChanges();
-    const button = await page.find('gux-dismiss-button');
+    const button = await page.find('gux-dismiss-button-beta');
+    await a11yCheck(page, axeExclusions);
     expect(button).toBeNull();
   });
 });
