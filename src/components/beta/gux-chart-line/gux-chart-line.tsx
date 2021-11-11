@@ -92,7 +92,7 @@ export class GuxLineChart {
   colorFieldName: string;
 
   @Prop()
-  includeStrokeDash: boolean;
+  strokeDash: boolean;
 
   @Prop()
   interpolation: string;
@@ -125,7 +125,7 @@ export class GuxLineChart {
     const legendTitle = this.legendTitle;
     const colorFieldName = this.colorFieldName || DEFAULT_COLOR_FIELD_NAME;
     const interpolation = this.interpolation;
-    const includeStrokeDash = this.includeStrokeDash;
+    const strokeDash = this.strokeDash;
     const includeDataPointMarkers = this.includeDataPointMarkers;
 
     if (xFieldName) {
@@ -152,7 +152,7 @@ export class GuxLineChart {
       this.baseChartSpec.encoding.color.title = legendTitle;
     }
 
-    if (includeStrokeDash) {
+    if (strokeDash) {
       this.baseChartSpec.encoding.strokeDash = {
         field: colorFieldName,
         type: 'nominal'
