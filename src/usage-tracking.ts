@@ -61,6 +61,16 @@ export function trackAction(
   });
 }
 
+export function getVersionObject(packageInfoVersion: string) {
+  const [major, minor, ...patch] = packageInfoVersion.split('.');
+
+  return {
+    fullVersion: `${major}.${minor}.${patch.join('.')}`,
+    majorVersion: major,
+    minorVersion: `${major}.${minor}`
+  };
+}
+
 /**
  * Sends a library usage page action the first time it is called, does nothing afterward.
  */
@@ -70,12 +80,9 @@ function reportLibraryVersion() {
     return;
   }
 
-  const [major, minor, patch] = packageInfo.version.split('.');
-  newrelic.addPageAction(libraryPageAction, {
-    fullVersion: `${major}.${minor}.${patch}`,
-    majorVersion: major,
-    minorVersion: `${major}.${minor}`
-  });
+  const versionObject = getVersionObject(packageInfo.version);
+
+  newrelic.addPageAction(libraryPageAction, versionObject);
 }
 
 // Get NewRelic types working
