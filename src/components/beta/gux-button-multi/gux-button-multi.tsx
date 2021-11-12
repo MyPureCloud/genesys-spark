@@ -110,8 +110,8 @@ export class GuxButtonMulti {
     }
   }
 
-  private onListElementFocusout(): void {
-    if (!this.root.matches(':focus-within')) {
+  private onListElementFocusout(event: FocusEvent): void {
+    if (event.relatedTarget !== null && !this.root.matches(':focus-within')) {
       this.isOpen = false;
     }
   }

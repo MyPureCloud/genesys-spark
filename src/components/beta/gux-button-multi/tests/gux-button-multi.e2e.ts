@@ -39,6 +39,9 @@ describe('gux-button-multi', () => {
     const onClose = await page.spyOnEvent('close');
 
     await clickDropdownButton(page);
+
+    await a11yCheck(page, axeExclusions);
+
     await clickDropdownButton(page);
 
     expect(onOpen).toHaveReceivedEventTimes(1);
@@ -53,6 +56,8 @@ describe('gux-button-multi', () => {
     await page.waitForChanges();
 
     await clickDropdownButton(page);
+
+    await a11yCheck(page, axeExclusions);
 
     expect(onOpen).toHaveReceivedEventTimes(0);
   });
