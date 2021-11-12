@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.46.1](https://inindca///compare/v2.46.0...v2.46.1) (2021-11-12)
+
+
+### Bug Fixes
+
+* **docs:** v2 should still be the deployed  branch for now ([7a73e88](https://inindca///commit/7a73e8804144bded4f21513bf3c4d2111fd6fa96))
+
 ## [2.46.0](https://inindca///compare/v2.45.2...v2.46.0) (2021-11-10)
 
 
