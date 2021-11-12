@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.1](https://inindca///compare/v3.0.0-alpha.0...v3.0.0-alpha.1) (2021-11-12)
+
+
+### Bug Fixes
+
+* **docs:** v2 should still be the deployed  branch for now ([4631432](https://inindca///commit/4631432bf4096c96659eefe3ad889a3258a90807))
+* **dropdown:** removed unnecessary code ([49589b8](https://inindca///commit/49589b89ff23d7f5bff0285fb6dbdceeea29d718))
+* **pr comment:** addressd PR comment ([e35845f](https://inindca///commit/e35845fd7d6898300fe21b86201a49598d8b3a0e))
+* **usage-tracking:** fixed library version calculation to account for alpha builds ([a524d14](https://inindca///commit/a524d149e48de7a5bdaaae56e17bd6aac029821e))
+
 ## [3.0.0-alpha.0](https://inindca///compare/v2.45.2...v3.0.0-alpha.0) (2021-11-10)
 
 
