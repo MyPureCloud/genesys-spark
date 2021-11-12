@@ -6,9 +6,8 @@ const axeExclusions = [];
 async function clickDismissButton(page: E2EPage) {
   await page.evaluate(async () => {
     const element = document.querySelector('gux-notification-toast');
-    const dismissButtonElement = element.shadowRoot.querySelector(
-      'gux-dismiss-button-beta'
-    );
+    const dismissButtonElement =
+      element.shadowRoot.querySelector('gux-dismiss-button');
     const button = dismissButtonElement.shadowRoot.querySelector('button');
 
     button.click();

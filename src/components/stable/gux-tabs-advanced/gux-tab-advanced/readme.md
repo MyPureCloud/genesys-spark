@@ -66,8 +66,8 @@ Type: `Promise<void>`
 graph TD;
   gux-tab-advanced --> gux-icon
   gux-tab-advanced --> gux-popover
-  gux-popover --> gux-dismiss-button-beta
-  gux-dismiss-button-beta --> gux-icon
+  gux-popover --> gux-dismiss-button
+  gux-dismiss-button --> gux-icon
   style gux-tab-advanced fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

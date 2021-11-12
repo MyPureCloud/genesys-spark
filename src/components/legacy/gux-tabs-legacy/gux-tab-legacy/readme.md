@@ -33,8 +33,8 @@
 graph TD;
   gux-tab-legacy --> gux-icon
   gux-tab-legacy --> gux-popover
-  gux-popover --> gux-dismiss-button-beta
-  gux-dismiss-button-beta --> gux-icon
+  gux-popover --> gux-dismiss-button
+  gux-dismiss-button --> gux-icon
   style gux-tab-legacy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

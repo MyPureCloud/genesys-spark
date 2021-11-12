@@ -151,9 +151,9 @@ export class GuxPopover {
       <div class="gux-popover-wrapper">
         <div class="gux-arrow" data-popper-arrow />
         {this.displayDismissButton && (
-          <gux-dismiss-button-beta
+          <gux-dismiss-button
             onClick={this.dismiss.bind(this)}
-          ></gux-dismiss-button-beta>
+          ></gux-dismiss-button>
         )}
         <div class="gux-popover-content">
           <slot />

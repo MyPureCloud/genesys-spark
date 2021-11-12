@@ -1,4 +1,4 @@
-import {E2EPage } from '@stencil/core/testing';
+import { E2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 const axeExclusions = [];
@@ -6,9 +6,8 @@ const axeExclusions = [];
 async function clickDismissButton(page: E2EPage) {
   await page.evaluate(async () => {
     const element = document.querySelector('gux-simple-toast');
-    const dismissButtonElement = element.shadowRoot.querySelector(
-      'gux-dismiss-button-beta'
-    );
+    const dismissButtonElement =
+      element.shadowRoot.querySelector('gux-dismiss-button');
     const button = dismissButtonElement.shadowRoot.querySelector('button');
 
     button.click();

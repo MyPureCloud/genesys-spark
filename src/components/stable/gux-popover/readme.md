@@ -36,13 +36,13 @@
 
 ### Depends on
 
-- [gux-dismiss-button-beta](../../beta/gux-dismiss-button)
+- [gux-dismiss-button](../gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-popover --> gux-dismiss-button-beta
-  gux-dismiss-button-beta --> gux-icon
+  gux-popover --> gux-dismiss-button
+  gux-dismiss-button --> gux-icon
   gux-tab-advanced --> gux-popover
   gux-tab-legacy --> gux-popover
   style gux-popover fill:#f9f,stroke:#333,stroke-width:4px

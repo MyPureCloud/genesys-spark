@@ -1551,8 +1551,8 @@ COMUI-343
 
 
 * The following tags have been renamed using our new beta naming scheme. Consumers using these tags will need to update their repos to use the new tag names:
-  * gux-command-palette -> gux-command-palette-beta
-  * gux-panel-frame -> gux-panel-frame-beta
+  * gux-command-palette -> gux-command-palette-legacy
+  * gux-panel-frame -> gux-panel-frame-legacy
   * gux-rating -> gux-rating-beta
   * gux-search -> gux-search-beta
   * gux-side-panel -> gux-side-panel-beta
