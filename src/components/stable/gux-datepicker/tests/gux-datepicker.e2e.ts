@@ -65,6 +65,21 @@ describe('gux-datepicker', () => {
     expect(datepicker.className).not.toContain('gux-active');
   });
 
+  it('should not open the calendar when the input or button is clicked when disabled', async () => {
+    const page = await newSparkE2EPage({
+      html: `<gux-datepicker lang="en" disabled></gux-datepicker>`
+    });
+    const datepicker = await page.find('.gux-datepicker');
+    const input = await page.find('input');
+    await input.click();
+    await page.waitForChanges();
+    expect(datepicker.className).not.toContain('gux-active');
+    const button = await page.find('.gux-calendar-toggle-button');
+    await button.click();
+    await page.waitForChanges();
+    expect(datepicker.className).not.toContain('gux-active');
+  });
+
   it('provides the correct label in single date mode', async () => {
     const page = await newSparkE2EPage({
       html: `<gux-datepicker lang="en"></gux-datepicker>`

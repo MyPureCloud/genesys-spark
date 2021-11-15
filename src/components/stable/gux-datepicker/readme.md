@@ -9,6 +9,7 @@ This is a datepicker component, that allows the user to select a date, or a rang
 
 | Property         | Attribute          | Description                                                                                 | Type                                          | Default                |
 | ---------------- | ------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------- | ---------------------- |
+| `disabled`       | `disabled`         | Disable the input and prevent interactions.                                                 | `boolean`                                     | `false`                |
 | `format`         | `format`           | The datepicker date format (default to mm/dd/yyyy, or specified)                            | `string`                                      | `'mm/dd/yyyy'`         |
 | `label`          | `label`            | The datepicker label (can be a single label, or an array of two if it's a range datepicker) | `string \| string[]`                          | `''`                   |
 | `maxDate`        | `max-date`         | The max date selectable                                                                     | `string`                                      | `''`                   |
