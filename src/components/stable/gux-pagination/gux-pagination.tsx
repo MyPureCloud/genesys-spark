@@ -61,7 +61,12 @@ export class GuxPagination implements ComponentInterface {
 
   private setPage(page: number): void {
     if (page < 0) {
-      this.setPage(0);
+      if (this.totalPages > 0) {
+        this.setPage(1);
+      } else {
+        this.setPage(0);
+      }
+
       return;
     }
 
@@ -80,6 +85,15 @@ export class GuxPagination implements ComponentInterface {
 
   private calculatTotalPages(): number {
     return Math.ceil(this.totalItems / this.itemsPerPage);
+  }
+
+  private calculateCurrentPage(): number {
+    const minCurrentPage = this.totalPages > 0 ? 1 : 0;
+
+    return Math.max(
+      minCurrentPage,
+      Math.min(this.currentPage, this.totalPages)
+    );
   }
 
   private handleInternalitemsperpagechange(event: CustomEvent): void {
@@ -124,7 +138,7 @@ export class GuxPagination implements ComponentInterface {
 
   componentWillRender(): void {
     this.totalPages = this.calculatTotalPages();
-    this.currentPage = Math.min(this.currentPage, this.totalPages);
+    this.currentPage = this.calculateCurrentPage();
   }
 
   render(): JSX.Element {

@@ -1032,11 +1032,70 @@ exports[`gux-pagination #render should render as expected (10) 1`] = `
 `;
 
 exports[`gux-pagination #render should render as expected (11) 1`] = `
-<gux-pagination current-page="1" items-per-page="25" layout="expanded" total-items="1000">
+<gux-pagination current-page="-3" items-per-page="25" layout="full" total-items="1000">
   <div class="gux-pagination-container">
+    <div class="gux-pagination-info">
+      <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="1000">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            1 - 25
+          </span>
+          <span>
+            of 1,000
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="25">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown-v2-beta>
+              <mock:shadow-root>
+                <gux-popup-beta>
+                  <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
+                    <div class="gux-field-button-content">
+                      <div class="gux-selected-option">
+                        25
+                      </div>
+                    </div>
+                    <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+                  </button>
+                  <div class="gux-listbox-container" slot="popup">
+                    <slot></slot>
+                  </div>
+                </gux-popup-beta>
+              </mock:shadow-root>
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
+                <mock:shadow-root>
+                  <slot></slot>
+                </mock:shadow-root>
+                <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  <!---->
+                  25
+                </gux-option-v2>
+                <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <!---->
+                  50
+                </gux-option-v2>
+                <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <!---->
+                  75
+                </gux-option-v2>
+                <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <!---->
+                  100
+                </gux-option-v2>
+              </gux-listbox>
+            </gux-dropdown-v2-beta>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
     <div class="gux-pagination-change">
       <gux-pagination-buttons current-page="1" total-pages="40">
-        <div class="gux-expanded gux-pagination-buttons-container">
+        <div class="gux-full gux-pagination-buttons-container">
           <div class="gux-pagination-buttons-group">
             <gux-button-slot-beta accent="secondary">
               <button disabled="" title="First">
@@ -1049,31 +1108,18 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
               </button>
             </gux-button-slot-beta>
           </div>
-          <div class="gux-pagination-buttons-list-container">
-            <button class="gux-pagination-buttons-list-current">
-              1
-            </button>
-            <button class="gux-pagination-buttons-list-target">
-              2
-            </button>
-            <button class="gux-pagination-buttons-list-target">
-              3
-            </button>
-            <button class="gux-pagination-buttons-list-target">
-              4
-            </button>
-            <button class="gux-pagination-buttons-list-target">
-              5
-            </button>
-            <button class="gux-pagination-buttons-list-target">
-              6
-            </button>
-            <button class="gux-pagination-buttons-list-target">
-              ...
-            </button>
-            <button class="gux-pagination-buttons-list-target">
-              40
-            </button>
+          <div class="gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-input-text-like>
+                <input slot="input" value="1">
+              </gux-input-text-like>
+            </div>
+            <div>
+              of 40
+            </div>
           </div>
           <div class="gux-pagination-buttons-group">
             <gux-button-slot-beta accent="secondary">
@@ -1083,6 +1129,115 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
             </gux-button-slot-beta>
             <gux-button-slot-beta accent="secondary">
               <button title="Last">
+                <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+              </button>
+            </gux-button-slot-beta>
+          </div>
+        </div>
+      </gux-pagination-buttons>
+    </div>
+  </div>
+</gux-pagination>
+`;
+
+exports[`gux-pagination #render should render as expected (12) 1`] = `
+<gux-pagination current-page="-3" items-per-page="25" layout="full" total-items="0">
+  <div class="gux-pagination-container">
+    <div class="gux-pagination-info">
+      <gux-pagination-item-counts current-page="0" items-per-page="25" total-items="0">
+        <div class="gux-pagination-item-counts-container">
+          <span class="gux-pagination-item-counts-range">
+            0 - 0
+          </span>
+          <span>
+            of 0
+          </span>
+        </div>
+      </gux-pagination-item-counts>
+      <gux-pagination-items-per-page items-per-page="25">
+        <div class="gux-pagination-items-per-page-container">
+          <div class="gux-pagination-items-per-page-picker">
+            <gux-dropdown-v2-beta>
+              <mock:shadow-root>
+                <gux-popup-beta>
+                  <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
+                    <div class="gux-field-button-content">
+                      <div class="gux-selected-option">
+                        25
+                      </div>
+                    </div>
+                    <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+                  </button>
+                  <div class="gux-listbox-container" slot="popup">
+                    <slot></slot>
+                  </div>
+                </gux-popup-beta>
+              </mock:shadow-root>
+              <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
+                <mock:shadow-root>
+                  <slot></slot>
+                </mock:shadow-root>
+                <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  <!---->
+                  25
+                </gux-option-v2>
+                <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <!---->
+                  50
+                </gux-option-v2>
+                <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <!---->
+                  75
+                </gux-option-v2>
+                <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <!---->
+                  100
+                </gux-option-v2>
+              </gux-listbox>
+            </gux-dropdown-v2-beta>
+          </div>
+          <div>
+            per page
+          </div>
+        </div>
+      </gux-pagination-items-per-page>
+    </div>
+    <div class="gux-pagination-change">
+      <gux-pagination-buttons current-page="0" total-pages="0">
+        <div class="gux-full gux-pagination-buttons-container">
+          <div class="gux-pagination-buttons-group">
+            <gux-button-slot-beta accent="secondary">
+              <button disabled="" title="First">
+                <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+              </button>
+            </gux-button-slot-beta>
+            <gux-button-slot-beta accent="secondary">
+              <button disabled="" title="Previous">
+                <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+              </button>
+            </gux-button-slot-beta>
+          </div>
+          <div class="gux-pagination-buttons-input-container">
+            <div>
+              Page
+            </div>
+            <div class="gux-pagination-buttons-input">
+              <gux-input-text-like>
+                <input slot="input" value="0">
+              </gux-input-text-like>
+            </div>
+            <div>
+              of 0
+            </div>
+          </div>
+          <div class="gux-pagination-buttons-group">
+            <gux-button-slot-beta accent="secondary">
+              <button disabled="" title="Next">
+                <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+              </button>
+            </gux-button-slot-beta>
+            <gux-button-slot-beta accent="secondary">
+              <button disabled="" title="Last">
                 <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
               </button>
             </gux-button-slot-beta>
