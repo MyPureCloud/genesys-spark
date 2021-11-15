@@ -1,7 +1,0 @@
-{
-  "validation.max": "不能大於 {max, number}",
-  "validation.min": "不能小於 {min, number}",
-  "validation.increment": "必須為 {increment, number} 的倍數",
-  "increment": "遞增",
-  "decrement": "遞減"
-}

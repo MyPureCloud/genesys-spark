@@ -1,7 +1,0 @@
-{
-  "validation.max": "Не может превышать {max, number}",
-  "validation.min": "Должно соответствовать {min, number} или превышать это число",
-  "validation.increment": "Должно быть кратно {increment, number}",
-  "increment": "инкремент",
-  "decrement": "декремент"
-}

@@ -80,9 +80,9 @@ export class GuxTab {
         tabIndex={this.active ? 0 : -1}
         ref={el => (this.buttonElement = el)}
       >
-        <gux-tooltip-title-beta tab-width={122}>
+        <gux-tooltip-title tab-width={122}>
           <slot />
-        </gux-tooltip-title-beta>
+        </gux-tooltip-title>
       </button>
     );
   }

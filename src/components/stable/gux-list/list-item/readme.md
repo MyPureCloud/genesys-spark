@@ -39,7 +39,7 @@ Example of a custom list item with highlighting
 
 ### Used by
 
- - [gux-command-palette-beta](../../../beta/gux-command-palette)
+ - [gux-command-palette-legacy](../../../legacy/gux-command-palette-legacy)
  - [gux-time-picker-beta](../../../beta/gux-time-picker)
 
 ### Depends on
@@ -50,7 +50,7 @@ Example of a custom list item with highlighting
 ```mermaid
 graph TD;
   gux-list-item --> gux-text-highlight
-  gux-command-palette-beta --> gux-list-item
+  gux-command-palette-legacy --> gux-list-item
   gux-time-picker-beta --> gux-list-item
   style gux-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```

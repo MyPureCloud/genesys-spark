@@ -62,7 +62,7 @@ export class GuxModal {
       escapeDeactivates: false,
       returnFocusOnDeactivate: true,
       initialFocus: initialFocusElement,
-      fallbackFocus: () => this.root.querySelector('gux-dismiss-button-beta')
+      fallbackFocus: () => this.root.querySelector('gux-dismiss-button')
     });
 
     this.focusTrap.activate();
@@ -91,9 +91,9 @@ export class GuxModal {
     return (
       <div class="gux-modal">
         <div class={`gux-modal-container gux-${this.size}`}>
-          <gux-dismiss-button-beta
+          <gux-dismiss-button
             onClick={this.onDismissHandler.bind(this)}
-          ></gux-dismiss-button-beta>
+          ></gux-dismiss-button>
 
           {hasModalTitleSlot && (
             <h1 class="gux-modal-header">

@@ -31,13 +31,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Depends on
 
-- [gux-dismiss-button-beta](../../beta/gux-dismiss-button)
+- [gux-dismiss-button](../gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-simple-toast --> gux-dismiss-button-beta
-  gux-dismiss-button-beta --> gux-icon
+  gux-simple-toast --> gux-dismiss-button
+  gux-dismiss-button --> gux-icon
   style gux-simple-toast fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

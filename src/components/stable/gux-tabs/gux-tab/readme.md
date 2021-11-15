@@ -58,13 +58,13 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-tooltip-title-beta](../../../beta/gux-tooltip-title)
+- [gux-tooltip-title](../../gux-tooltip-title)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-tab --> gux-tooltip-title-beta
-  gux-tooltip-title-beta --> gux-tooltip
+  gux-tab --> gux-tooltip-title
+  gux-tooltip-title --> gux-tooltip
   style gux-tab fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
