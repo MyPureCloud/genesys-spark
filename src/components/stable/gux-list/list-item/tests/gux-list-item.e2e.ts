@@ -10,13 +10,15 @@ describe('gux-list-item', () => {
   });
 
   it('should have the correct display', async () => {
-    const page = await newE2EPage();
-    await page.setContent('<gux-list-item text="testing" value="testing"/>');
+    const page = await newE2EPage({
+      html: '<gux-list-item text="testing" value="testing"/>'
+    });
 
     const component = await page.find('gux-list-item');
+    const shadowDom = component.shadowRoot.querySelector('*');
 
     expect(component.getAttribute('role')).toBe('listitem');
-    expect(component.innerText.trim()).toBe('testing');
+    expect(shadowDom.textContent).toBe('testing');
   });
 
   it('should correctly slot elements', async () => {

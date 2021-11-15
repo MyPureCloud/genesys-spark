@@ -1,4 +1,13 @@
-import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  JSX,
+  Prop,
+  Event,
+  EventEmitter
+} from '@stencil/core';
 import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { getDesiredLocale } from '../../../i18n';
@@ -18,6 +27,12 @@ export class GuxVisualization {
     renderer: 'svg'
   };
 
+  @Event()
+  chartComponentReady: EventEmitter;
+
+  @Event()
+  chartClicked: EventEmitter;
+
   @Element()
   root: HTMLElement;
 
@@ -31,9 +46,26 @@ export class GuxVisualization {
     trackComponent(this.root);
   }
 
+  handleChartClick(_name: string, value) {
+    this.chartClicked.emit(value);
+  }
+
   async componentWillRender(): Promise<void> {
     const locale = getDesiredLocale(this.root);
 
+    const patchOption = {
+      patch: visSpec => {
+        if (!visSpec?.signals) {
+          visSpec.signals = [];
+        }
+        visSpec.signals.push({
+          name: 'chartClick',
+          value: 0,
+          on: [{ events: 'rect:mousedown', update: 'datum' }]
+        });
+        return visSpec;
+      }
+    };
     await embed(
       this.root,
       Object.assign({}, this.defaultVisualizationSpec, this.visualizationSpec),
@@ -42,9 +74,19 @@ export class GuxVisualization {
           timeFormatLocale: timeFormatLocale[locale]
         },
         this.defaultEmbedOptions,
-        this.embedOptions
+        this.embedOptions,
+        patchOption
       )
-    );
+    ).then(result => {
+      result.view.addSignalListener(
+        'chartClick',
+        this.handleChartClick.bind(this)
+      );
+    });
+  }
+
+  componentDidLoad() {
+    this.chartComponentReady.emit();
   }
 
   render(): JSX.Element {

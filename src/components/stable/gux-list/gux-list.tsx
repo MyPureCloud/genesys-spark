@@ -20,7 +20,8 @@ const validChildren = [
 
 @Component({
   styleUrl: 'gux-list.less',
-  tag: 'gux-list'
+  tag: 'gux-list',
+  shadow: true
 })
 export class GuxList {
   @Element()
@@ -93,7 +94,7 @@ export class GuxList {
    */
   @Method()
   async setFocusOnLastItem(): Promise<void> {
-    const filteredList = this.root.querySelectorAll(validChildren);
+    const filteredList = this.getFilteredList();
     this.selectedIndex = filteredList.length - 1;
     this.updateTabIndexes();
   }
@@ -103,7 +104,7 @@ export class GuxList {
    */
   @Method()
   async isLastItemSelected(): Promise<boolean> {
-    const filteredList = this.root.querySelectorAll(validChildren);
+    const filteredList = this.getFilteredList();
     return this.selectedIndex === filteredList.length - 1;
   }
 
@@ -152,7 +153,7 @@ export class GuxList {
       return;
     }
 
-    const filteredList = this.root.querySelectorAll(validChildren);
+    const filteredList = this.getFilteredList();
 
     let newIndex = -1;
     switch (event.key) {
@@ -186,7 +187,7 @@ export class GuxList {
   }
 
   private updateTabIndexes(): void {
-    const children = this.root.querySelectorAll(validChildren);
+    const children = this.getFilteredList();
 
     if (!children || this.selectedIndex === -1) {
       return;
@@ -215,5 +216,17 @@ export class GuxList {
     items.forEach((element: HTMLGuxTextHighlightElement) => {
       element.highlight = value;
     });
+  }
+
+  private getFilteredList(): Element[] {
+    const slot = this.root.querySelector('slot') as HTMLSlotElement;
+
+    if (slot) {
+      return slot
+        .assignedElements()
+        .filter(element => element.matches(validChildren));
+    }
+
+    return Array.from(this.root.querySelectorAll(validChildren));
   }
 }

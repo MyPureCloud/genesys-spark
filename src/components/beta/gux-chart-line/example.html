@@ -1,0 +1,233 @@
+<h1>Default</h1>
+<gux-chart-line-beta id="chart-1" x-field-name="date" y-field-name="value">
+</gux-chart-line-beta>
+
+<h1>Monotone</h1>
+<gux-chart-line-beta
+  id="chart-2"
+  x-field-name="date"
+  y-field-name="value"
+  interpolation="monotone"
+>
+</gux-chart-line-beta>
+
+<h1>Legend</h1>
+<gux-chart-line-beta
+  id="chart-3"
+  x-field-name="date"
+  y-field-name="value"
+  include-legend="true"
+>
+</gux-chart-line-beta>
+
+<h1>Dashed</h1>
+<gux-chart-line-beta
+  id="chart-4"
+  x-field-name="date"
+  y-field-name="value"
+  include-legend="true"
+  stroke-Dash="true"
+>
+</gux-chart-line-beta>
+
+<h1>Point Markers</h1>
+<gux-chart-line-beta
+  id="chart-5"
+  x-field-name="date"
+  y-field-name="value"
+  include-legend="true"
+  include-data-point-markers="true"
+>
+</gux-chart-line-beta>
+
+<h1>Custom Titles</h1>
+<gux-chart-line-beta
+  id="chart-6"
+  x-field-name="date"
+  y-field-name="value"
+  include-legend="true"
+  x-axis-title="Date"
+  y-axis-title="Rain (inches)"
+  legend-title="Location"
+>
+</gux-chart-line-beta>
+
+<h1>Alternate Color Field</h1>
+<gux-chart-line-beta
+  id="chart-7"
+  x-field-name="date"
+  y-field-name="time"
+  color-field-name="statistic"
+  y-axis-title="Time (seconds)"
+>
+</gux-chart-line-beta>
+
+<style
+  onload="(function() {
+    const chart1 = document.querySelector('#chart-1');
+    const chart2 = document.querySelector('#chart-2');
+    const chart3 = document.querySelector('#chart-3');
+    const chart4 = document.querySelector('#chart-4');
+    const chart5 = document.querySelector('#chart-5');
+    const chart6 = document.querySelector('#chart-6');
+    const chart7 = document.querySelector('#chart-7');
+
+    const chartData = {'values': [
+      {'date': '2021-01-01', 'value': 9.4, 'category': 'Jupiter'},
+      {'date': '2021-01-02', 'value': 12.8, 'category': 'Jupiter'},
+      {'date': '2021-01-03', 'value': 10.6, 'category': 'Jupiter'},
+      {'date': '2021-01-04', 'value': 11.7, 'category': 'Jupiter'},
+      {'date': '2021-01-05', 'value': 12.2, 'category': 'Jupiter'},
+      {'date': '2021-01-06', 'value': 8.9, 'category': 'Jupiter'},
+      {'date': '2021-01-07', 'value': 4.4, 'category': 'Jupiter'},
+      {'date': '2021-01-08', 'value': 7.2, 'category': 'Jupiter'},
+      {'date': '2021-01-09', 'value': 10, 'category': 'Jupiter'},
+      {'date': '2021-01-10', 'value': 9.4, 'category': 'Jupiter'},
+      {'date': '2021-01-11', 'value': 6.1, 'category': 'Jupiter'},
+      {'date': '2021-01-12', 'value': 6.1, 'category': 'Jupiter'},
+      {'date': '2021-01-13', 'value': 6.1, 'category': 'Jupiter'},
+      {'date': '2021-01-14', 'value': 5, 'category': 'Jupiter'},
+      {'date': '2021-01-15', 'value': 4.4, 'category': 'Jupiter'},
+      {'date': '2021-01-16', 'value': 1.1, 'category': 'Jupiter'},
+      {'date': '2021-01-17', 'value': 1.7, 'category': 'Jupiter'},
+      {'date': '2021-01-18', 'value': 3.3, 'category': 'Jupiter'},
+      {'date': '2021-01-19', 'value': 0, 'category': 'Jupiter'},
+      {'date': '2021-01-20', 'value': -1.1, 'category': 'Jupiter'},
+      {'date': '2021-01-21', 'value': 7.2, 'category': 'Jupiter'},
+      {'date': '2021-01-22', 'value': 8.3, 'category': 'Jupiter'},
+      {'date': '2021-01-23', 'value': 6.7, 'category': 'Jupiter'},
+      {'date': '2021-01-24', 'value': 8.3, 'category': 'Jupiter'},
+      {'date': '2021-01-25', 'value': 10, 'category': 'Jupiter'},
+      {'date': '2021-01-26', 'value': 8.9, 'category': 'Jupiter'},
+      {'date': '2021-01-27', 'value': 8.9, 'category': 'Jupiter'},
+      {'date': '2021-01-28', 'value': 6.7, 'category': 'Jupiter'},
+      {'date': '2021-01-29', 'value': 6.7, 'category': 'Jupiter'},
+      {'date': '2021-01-30', 'value': 9.4, 'category': 'Jupiter'},
+      {'date': '2021-01-31', 'value': 8.3, 'category': 'Jupiter'},
+      {'date': '2021-01-01', 'value': 5.6, 'category': 'Venus'},
+      {'date': '2021-01-02', 'value': 5.6, 'category': 'Venus'},
+      {'date': '2021-01-03', 'value': 5, 'category': 'Venus'},
+      {'date': '2021-01-04', 'value': 10.6, 'category': 'Venus'},
+      {'date': '2021-01-05', 'value': 12.2, 'category': 'Venus'},
+      {'date': '2021-01-06', 'value': 12.2, 'category': 'Venus'},
+      {'date': '2021-01-07', 'value': 7.8, 'category': 'Venus'},
+      {'date': '2021-01-08', 'value': 7.8, 'category': 'Venus'},
+      {'date': '2021-01-09', 'value': 10, 'category': 'Venus'},
+      {'date': '2021-01-10', 'value': 7.8, 'category': 'Venus'},
+      {'date': '2021-01-11', 'value': 9.4, 'category': 'Venus'},
+      {'date': '2021-01-12', 'value': 11.1, 'category': 'Venus'},
+      {'date': '2021-01-13', 'value': 9.4, 'category': 'Venus'},
+      {'date': '2021-01-14', 'value': 6.1, 'category': 'Venus'},
+      {'date': '2021-01-15', 'value': 7.8, 'category': 'Venus'},
+      {'date': '2021-01-16', 'value': 11.7, 'category': 'Venus'},
+      {'date': '2021-01-17', 'value': 13.3, 'category': 'Venus'},
+      {'date': '2021-01-18', 'value': 13.9, 'category': 'Venus'},
+      {'date': '2021-01-19', 'value': 10, 'category': 'Venus'},
+      {'date': '2021-01-20', 'value': 10, 'category': 'Venus'},
+      {'date': '2021-01-21', 'value': 7.2, 'category': 'Venus'},
+      {'date': '2021-01-22', 'value': 9.4, 'category': 'Venus'},
+      {'date': '2021-01-23', 'value': 12.2, 'category': 'Venus'},
+      {'date': '2021-01-24', 'value': 14.4, 'category': 'Venus'},
+      {'date': '2021-01-25', 'value': 17.2, 'category': 'Venus'},
+      {'date': '2021-01-26', 'value': 16.1, 'category': 'Venus'},
+      {'date': '2021-01-27', 'value': 11.1, 'category': 'Venus'},
+      {'date': '2021-01-28', 'value': 12.2, 'category': 'Venus'},
+      {'date': '2021-01-29', 'value': 12.2, 'category': 'Venus'},
+      {'date': '2021-01-30', 'value': 8.3, 'category': 'Venus'},
+      {'date': '2021-01-31', 'value': 7.2, 'category': 'Venus'},
+      {'date': '2021-01-01', 'value': 2.6, 'category': 'Saturn'},
+      {'date': '2021-01-02', 'value': 6.6, 'category': 'Saturn'},
+      {'date': '2021-01-03', 'value': 3, 'category': 'Saturn'},
+      {'date': '2021-01-04', 'value': 1.6, 'category': 'Saturn'},
+      {'date': '2021-01-05', 'value': 14.2, 'category': 'Saturn'},
+      {'date': '2021-01-06', 'value': 11.2, 'category': 'Saturn'},
+      {'date': '2021-01-07', 'value': 7.8, 'category': 'Saturn'},
+      {'date': '2021-01-08', 'value': 6.8, 'category': 'Saturn'},
+      {'date': '2021-01-09', 'value': 5, 'category': 'Saturn'},
+      {'date': '2021-01-10', 'value': 2.8, 'category': 'Saturn'},
+      {'date': '2021-01-11', 'value': 6.4, 'category': 'Saturn'},
+      {'date': '2021-01-12', 'value': 15.1, 'category': 'Saturn'},
+      {'date': '2021-01-13', 'value': 6.4, 'category': 'Saturn'},
+      {'date': '2021-01-14', 'value': 6.1, 'category': 'Saturn'},
+      {'date': '2021-01-15', 'value': 8.8, 'category': 'Saturn'},
+      {'date': '2021-01-16', 'value': 11.7, 'category': 'Saturn'},
+      {'date': '2021-01-17', 'value': 9.3, 'category': 'Saturn'},
+      {'date': '2021-01-18', 'value': 13.9, 'category': 'Saturn'},
+      {'date': '2021-01-19', 'value': 12, 'category': 'Saturn'},
+      {'date': '2021-01-20', 'value': 7, 'category': 'Saturn'},
+      {'date': '2021-01-21', 'value': 5.2, 'category': 'Saturn'},
+      {'date': '2021-01-22', 'value': 9.4, 'category': 'Saturn'},
+      {'date': '2021-01-23', 'value': 13.2, 'category': 'Saturn'},
+      {'date': '2021-01-24', 'value': 10.4, 'category': 'Saturn'},
+      {'date': '2021-01-25', 'value': 8.2, 'category': 'Saturn'},
+      {'date': '2021-01-26', 'value': 11.1, 'category': 'Saturn'},
+      {'date': '2021-01-27', 'value': 16.1, 'category': 'Saturn'},
+      {'date': '2021-01-28', 'value': 9.2, 'category': 'Saturn'},
+      {'date': '2021-01-29', 'value': 5.2, 'category': 'Saturn'},
+      {'date': '2021-01-30', 'value': 11.3, 'category': 'Saturn'},
+      {'date': '2021-01-31', 'value': 8.2, 'category': 'Saturn'},
+      {'date': '2021-01-24', 'value': 10.4, 'category': 'Neptune'},
+      {'date': '2021-01-25', 'value': 11.2, 'category': 'Neptune'},
+      {'date': '2021-01-26', 'value': 5.1, 'category': 'Neptune'},
+      {'date': '2021-01-27', 'value': 9.1, 'category': 'Neptune'},
+      {'date': '2021-01-28', 'value': 12.2, 'category': 'Neptune'},
+      {'date': '2021-01-29', 'value': 6.2, 'category': 'Neptune'},
+      {'date': '2021-01-30', 'value': 13.3, 'category': 'Neptune'},
+      {'date': '2021-01-31', 'value': 4.2, 'category': 'Neptune'}
+    ]
+  };
+
+  chart1.chartData = {'values': [
+      {'date': '2021-01-01', 'value': 9.4, 'category': 'a'},
+      {'date': '2021-01-02', 'value': 12.8, 'category': 'a'},
+      {'date': '2021-01-03', 'value': 10.6, 'category': 'a'},
+      {'date': '2021-01-04', 'value': 11.7, 'category': 'a'},
+      {'date': '2021-01-05', 'value': 12.2, 'category': 'a'},
+      {'date': '2021-01-06', 'value': 8.9, 'category': 'a'},
+      {'date': '2021-01-07', 'value': 4.4, 'category': 'a'},
+      {'date': '2021-01-08', 'value': 7.2, 'category': 'a'},
+      {'date': '2021-01-09', 'value': 10, 'category': 'a'},
+      {'date': '2021-01-10', 'value': 9.4, 'category': 'a'},
+      {'date': '2021-01-11', 'value': 6.1, 'category': 'a'},
+      {'date': '2021-01-12', 'value': 6.1, 'category': 'a'}
+    ]
+  };
+
+  chart2.chartData = chartData;
+  chart3.chartData = chartData;
+  chart4.chartData = chartData;
+  chart5.chartData = chartData;
+  chart6.chartData = chartData;
+
+  chart7.chartData = {'values': [
+      {'date': '2021-01-01', 'time': 9.4, 'statistic': 'ASA'},
+      {'date': '2021-01-02', 'time': 12.8, 'statistic': 'ASA'},
+      {'date': '2021-01-03', 'time': 10.6, 'statistic': 'ASA'},
+      {'date': '2021-01-04', 'time': 11.7, 'statistic': 'ASA'},
+      {'date': '2021-01-05', 'time': 12.2, 'statistic': 'ASA'},
+      {'date': '2021-01-06', 'time': 8.9, 'statistic': 'ASA'},
+      {'date': '2021-01-07', 'time': 4.4, 'statistic': 'ASA'},
+      {'date': '2021-01-08', 'time': 7.2, 'statistic': 'ASA'},
+      {'date': '2021-01-09', 'time': 10, 'statistic': 'ASA'},
+      {'date': '2021-01-10', 'time': 9.4, 'statistic': 'ASA'},
+      {'date': '2021-01-11', 'time': 6.1, 'statistic': 'ASA'},
+      {'date': '2021-01-12', 'time': 6.1, 'statistic': 'ASA'},
+      {'date': '2021-01-01', 'time': 13.4, 'statistic': 'ACW'},
+      {'date': '2021-01-02', 'time': 3.8, 'statistic': 'ACW'},
+      {'date': '2021-01-03', 'time': 7.6, 'statistic': 'ACW'},
+      {'date': '2021-01-04', 'time': 21.7, 'statistic': 'ACW'},
+      {'date': '2021-01-05', 'time': 2.2, 'statistic': 'ACW'},
+      {'date': '2021-01-06', 'time': 18.9, 'statistic': 'ACW'},
+      {'date': '2021-01-07', 'time': 14.4, 'statistic': 'ACW'},
+      {'date': '2021-01-08', 'time': 17.2, 'statistic': 'ACW'},
+      {'date': '2021-01-09', 'time': 20, 'statistic': 'ACW'},
+      {'date': '2021-01-10', 'time': 19.4, 'statistic': 'ACW'},
+      {'date': '2021-01-11', 'time': 6.1, 'statistic': 'ACW'},
+      {'date': '2021-01-12', 'time': 16.1, 'statistic': 'ACW'}
+    ]
+  };
+
+  })()"
+>
+  --noop: none;
+</style>
