@@ -1,8 +1,8 @@
 {
   "page": "Sivu",
   "totalPages": " / {totalPages, number}",
-  "first": "Etunimi",
+  "first": "Ensimmäinen",
   "previous": "Edellinen",
   "next": "Seuraava",
-  "last": "Sukunimi"
+  "last": "Viimeinen"
 }

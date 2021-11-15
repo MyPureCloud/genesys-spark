@@ -1,7 +1,0 @@
-{
-  "validation.max": "มากกว่า {max, number} ไม่ได้",
-  "validation.min": "น้อยกว่า {min, number} ไม่ได้",
-  "validation.increment": "ต้องมี {increment, number} หลายรายการ",
-  "increment": "เพิ่ม",
-  "decrement": "ลด"
-}

@@ -30,6 +30,7 @@ Example with slotting
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
+| `filter` | `filter`  |             | `string` | `''`        |
 | `value`  | `value`   |             | `string` | `undefined` |
 
 
@@ -38,6 +39,19 @@ Example with slotting
 | Event                           | Description | Type               |
 | ------------------------------- | ----------- | ------------------ |
 | `internallistboxoptionsupdated` |             | `CustomEvent<any>` |
+
+
+## Methods
+
+### `guxSelectActive() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Slots

@@ -18,7 +18,7 @@ describe('gux-popover', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('Should trigger guxdismiss event on popover dismiss button click', async () => {
+  it('should trigger guxdismiss event on popover dismiss button click', async () => {
     const page = await newE2EPage();
 
     await page.setContent(`
@@ -33,7 +33,7 @@ describe('gux-popover', () => {
     `);
     const component = await page.find('gux-popover');
     const guxdismiss = await component.spyOnEvent('guxdismiss');
-    const button = await page.find('gux-dismiss-button-beta');
+    const button = await page.find('gux-dismiss-button');
     await button.click();
     expect(guxdismiss).toHaveReceivedEvent();
   });
@@ -54,7 +54,7 @@ describe('gux-popover', () => {
     const component = await page.find('gux-popover');
     component.setProperty('displayDismissDutton', false);
     await page.waitForChanges();
-    const button = await page.find('gux-dismiss-button-beta');
+    const button = await page.find('gux-dismiss-button');
     expect(button).toBeNull();
   });
 });

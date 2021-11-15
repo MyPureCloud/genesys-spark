@@ -1,4 +1,4 @@
-import { Component, Element, h } from '@stencil/core';
+import { Component, Element, h, JSX } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 
 /**
@@ -17,7 +17,7 @@ export class GuxErrorMessageBeta {
     trackComponent(this.root);
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div class="gux-container">
         <gux-icon icon-name="alert-warning-octogon" decorative></gux-icon>

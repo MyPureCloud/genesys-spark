@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Listen,
   Prop,
   Watch
@@ -11,10 +12,12 @@ import {
 
 import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
 import { trackComponent } from '../../../usage-tracking';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
 @Component({
   styleUrl: 'gux-button-multi.less',
-  tag: 'gux-button-multi'
+  tag: 'gux-button-multi',
+  shadow: true
 })
 export class GuxButtonMulti {
   @Element()
@@ -58,65 +61,66 @@ export class GuxButtonMulti {
   @Prop({ mutable: true })
   isOpen: boolean = false;
 
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    const composedPath = event.composedPath();
 
-  @Listen('focusout')
-  handleFocusOut(e: FocusEvent) {
-    if (!this.root.contains(e.relatedTarget as Node)) {
-      this.isOpen = false;
-    }
-  }
+    switch (event.key) {
+      case 'Escape':
+        this.isOpen = false;
 
-  @Listen('click')
-  @Listen('keydown')
-  handleKeyDown(e) {
-    if (this.root.contains(e.target)) {
-      return;
+        if (composedPath.includes(this.listElement)) {
+          this.dropdownButton.focus();
+        }
+
+        break;
+      case 'ArrowDown':
+        if (!composedPath.includes(this.listElement)) {
+          this.isOpen = true;
+          this.listElement.setFocusOnFirstItem();
+        }
+        break;
     }
-    this.isOpen = false;
   }
 
   @Watch('disabled')
-  watchDisabled(disabled: boolean) {
+  watchDisabled(disabled: boolean): void {
     if (disabled) {
       this.isOpen = false;
     }
   }
 
   @Watch('isOpen')
-  watchValue(newValue: boolean) {
-    if (newValue) {
+  watchValue(isOpen: boolean): void {
+    if (isOpen) {
       this.open.emit();
     } else {
       this.close.emit();
     }
   }
 
-  onKeyUpEvent(event: KeyboardEvent) {
-    const key = event.key;
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside(): void {
+    this.isOpen = false;
+  }
 
-    if (key === 'Escape') {
-      this.isOpen = false;
-      const button = this.dropdownButton.querySelector('button') as HTMLElement;
-      button.focus();
-    }
-
-    if (
-      key === 'ArrowDown' &&
-      !(this.listElement as any as HTMLElement).contains(event.target as Node)
-    ) {
-      this.isOpen = true;
-      this.listElement.setFocusOnFirstItem();
+  private toggle(): void {
+    if (!this.disabled) {
+      this.isOpen = !this.isOpen;
     }
   }
 
-  componentWillLoad() {
+  private onListElementFocusout(event: FocusEvent): void {
+    if (event.relatedTarget !== null && !this.root.matches(':focus-within')) {
+      this.isOpen = false;
+    }
+  }
+
+  componentWillLoad(): void {
     trackComponent(this.root, { variant: this.accent });
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <gux-popup-beta expanded={this.isOpen} disabled={this.disabled}>
         <div slot="target" class="gux-button-multi-container">
@@ -129,7 +133,6 @@ export class GuxButtonMulti {
               disabled={this.disabled}
               ref={el => (this.dropdownButton = el)}
               onClick={() => this.toggle()}
-              onKeyUp={e => this.onKeyUpEvent(e)}
               aria-haspopup="listbox"
               aria-expanded={this.isOpen.toString()}
             >
@@ -141,6 +144,7 @@ export class GuxButtonMulti {
 
         <gux-list
           slot="popup"
+          onFocusout={this.onListElementFocusout.bind(this)}
           ref={el => (this.listElement = el as HTMLGuxListElement)}
         >
           <slot />

@@ -15,6 +15,10 @@ const icons = [
       'user-interactions-disable'
     ]
   },
+  {
+    sectionName: 'Badge',
+    iconNames: ['badge-amount', 'badge-check', 'badge-edit', 'badge-pause']
+  },
   { sectionName: 'Co-Browse', iconNames: ['cobrowse'] },
   {
     sectionName: 'Faces',
@@ -22,6 +26,7 @@ const icons = [
       'face-happy',
       'face-happy-solid',
       'face-neutral',
+      'face-neutral-solid',
       'face-sad',
       'face-sad-solid'
     ]
@@ -30,6 +35,7 @@ const icons = [
     sectionName: 'CJV',
     iconNames: [
       'cjv-custom-default',
+      'cjv-custom-session',
       'cjv-default-event',
       'cjv-delivery',
       'cjv-finance-invoice',
@@ -110,6 +116,31 @@ const icons = [
     ]
   },
   {
+    sectionName: 'Roster',
+    iconNames: [
+      'roster-chat',
+      'roster-chat-disable',
+      'roster-email',
+      'roster-email-disable',
+      'roster-line',
+      'roster-line-disable',
+      'roster-message',
+      'roster-message-disable',
+      'roster-messenger',
+      'roster-messenger-disable',
+      'roster-phone',
+      'roster-phone-disable',
+      'roster-sms',
+      'roster-sms-disable',
+      'roster-twitter',
+      'roster-twitter-disable',
+      'roster-wechat',
+      'roster-wechat-disable',
+      'roster-whatsapp',
+      'roster-whatsapp-disable'
+    ]
+  },
+  {
     sectionName: 'SMS',
     iconNames: ['sms', 'sms-close']
   },
@@ -153,7 +184,7 @@ const icons = [
     ]
   },
   {
-    sectionName: 'Media PLayer',
+    sectionName: 'Media Player',
     iconNames: [
       'control-end',
       'control-pause',
@@ -205,7 +236,9 @@ const icons = [
   {
     sectionName: 'Editing',
     iconNames: [
+      'archive',
       'clipboard',
+      'clipboard-error',
       'clone',
       'copy',
       'cut',
@@ -242,13 +275,17 @@ const icons = [
       'bot',
       'bus',
       'campaign',
+      'close-circle',
       'configuration',
+      'customer-journey',
       'dash',
+      'fax',
       'fire',
       'follow',
       'generic',
       'low-bandwidth',
       'lunch',
+      'notes',
       'paint',
       'palette',
       'pin',
@@ -259,6 +296,7 @@ const icons = [
       'scripter',
       'skills',
       'stamp',
+      'subtract-circle',
       'tenant',
       'trade',
       'unknown'
@@ -291,14 +329,25 @@ const icons = [
   {
     sectionName: 'Social Media',
     iconNames: [
+      'android',
+      'apple',
       'at',
+      'chrome',
+      'edge',
       'facebook',
       'facebook-messenger',
+      'firefox',
       'instagram',
+      'internet-explorer',
       'line-messenger',
       'linkedin',
+      'linux',
+      'microsoft-teams',
+      'microsoft',
+      'opera',
       'retweet',
       'rss',
+      'safari',
       'share',
       'slideshare',
       'telegram',
@@ -327,7 +376,7 @@ const icons = [
   },
   {
     sectionName: 'Sets',
-    iconNames: ['transfer', 'close-circle', 'subtract-circle']
+    iconNames: ['transfer']
   },
   {
     sectionName: 'Charts',
@@ -344,13 +393,15 @@ const icons = [
   {
     sectionName: 'Location',
     iconNames: [
+      'branch',
       'cloud',
       'cloud-outline',
       'globe',
       'home',
       'pin-location',
       'server',
-      'site'
+      'site',
+      'web'
     ]
   },
   {

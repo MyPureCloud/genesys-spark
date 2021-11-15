@@ -20,7 +20,8 @@ import { GuxNotificationToastAccent } from './gux-notification-toast.types';
  */
 @Component({
   styleUrl: 'gux-notification-toast.less',
-  tag: 'gux-notification-toast'
+  tag: 'gux-notification-toast',
+  shadow: true
 })
 export class GuxNotificationToast {
   /**
@@ -56,9 +57,9 @@ export class GuxNotificationToast {
           </div>
         </div>
 
-        <gux-dismiss-button-beta
+        <gux-dismiss-button
           onClick={this.onDismissClickHandler.bind(this)}
-        ></gux-dismiss-button-beta>
+        ></gux-dismiss-button>
       </Host>
     );
   }

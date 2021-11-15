@@ -20,7 +20,8 @@ import {
 
 @Component({
   styleUrl: 'gux-pagination.less',
-  tag: 'gux-pagination'
+  tag: 'gux-pagination',
+  shadow: true
 })
 export class GuxPagination implements ComponentInterface {
   @Element()
@@ -108,7 +109,7 @@ export class GuxPagination implements ComponentInterface {
       content.push(
         <gux-pagination-items-per-page
           items-per-page={this.itemsPerPage}
-          on-internalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
+          onInternalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
             this
           )}
         ></gux-pagination-items-per-page>
@@ -136,7 +137,7 @@ export class GuxPagination implements ComponentInterface {
             layout={this.layout}
             current-page={this.currentPage}
             total-pages={this.totalPages}
-            on-internalcurrentpagechange={this.handleInternalcurrentpagechange.bind(
+            onInternalcurrentpagechange={this.handleInternalcurrentpagechange.bind(
               this
             )}
           />

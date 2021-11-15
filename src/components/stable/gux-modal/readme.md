@@ -11,6 +11,7 @@ This default behaviour of this componet assumes that `gux-modal` components will
 | -------------- | --------------- | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ----------- |
 | `initialFocus` | `initial-focus` | Query selector for the element to initially focus when the modal opens Defaults to the first tabbable element | `string`                                      | `undefined` |
 | `size`         | `size`          | Indicates the size of the modal (small, medium or large)                                                      | `"dynamic" \| "large" \| "medium" \| "small"` | `'dynamic'` |
+| `trapFocus`    | `trap-focus`    |                                                                                                               | `boolean`                                     | `false`     |
 
 
 ## Events
@@ -34,13 +35,13 @@ This default behaviour of this componet assumes that `gux-modal` components will
 
 ### Depends on
 
-- [gux-dismiss-button-beta](../../beta/gux-dismiss-button)
+- [gux-dismiss-button](../gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-modal --> gux-dismiss-button-beta
-  gux-dismiss-button-beta --> gux-icon
+  gux-modal --> gux-dismiss-button
+  gux-dismiss-button --> gux-icon
   style gux-modal fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

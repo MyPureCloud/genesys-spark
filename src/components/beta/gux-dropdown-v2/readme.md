@@ -8,6 +8,7 @@
 | Property      | Attribute     | Description | Type      | Default     |
 | ------------- | ------------- | ----------- | --------- | ----------- |
 | `disabled`    | `disabled`    |             | `boolean` | `false`     |
+| `filterable`  | `filterable`  |             | `boolean` | `false`     |
 | `placeholder` | `placeholder` |             | `string`  | `undefined` |
 | `value`       | `value`       |             | `string`  | `undefined` |
 

@@ -1,16 +1,20 @@
-import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
+import { E2EElement, E2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 async function newNonrandomE2EPage({
   html
 }: {
   html: string;
 }): Promise<E2EPage> {
-  const page = await newE2EPage();
+  const page = await newSparkE2EPage({
+    html: `<div lang="en">${html}</div>`
+  });
 
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
   });
-  await page.setContent(`<div lang="en">${html}</div>`);
   await page.waitForChanges();
 
   return page;
@@ -40,6 +44,7 @@ describe('gux-radial-progress', () => {
     it(`should display component as expected (${index + 1})`, async () => {
       const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-radial-progress');
+      await a11yCheck(page, axeExclusions);
 
       expect(element.outerHTML).toMatchSnapshot();
     });
@@ -58,12 +63,10 @@ describe('gux-radial-progress', () => {
 
     element.setProperty('value', 30);
     await page.waitForChanges();
-
     expect(getInternalProgressBar(element).textContent).toEqual(`30%`);
 
     element.setProperty('value', 100);
     await page.waitForChanges();
-
     expect(getInternalProgressBar(element).textContent).toEqual(`100%`);
   });
 
@@ -72,6 +75,7 @@ describe('gux-radial-progress', () => {
       html: '<gux-radial-progress value="0" screenreader-text="Uploading file"></gux-radial-progress>'
     });
     const element = await page.find('gux-radial-progress');
+    await a11yCheck(page, axeExclusions);
 
     expect(getInternalProgressBar(element).getAttribute('aria-label')).toEqual(
       'Uploading file'

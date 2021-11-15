@@ -11,7 +11,8 @@ import {
 
 @Component({
   styleUrl: 'gux-action-item.less',
-  tag: 'gux-action-item'
+  tag: 'gux-action-item',
+  shadow: true
 })
 export class GuxActionItem {
   @Prop()
@@ -50,7 +51,12 @@ export class GuxActionItem {
   render(): JSX.Element {
     return (
       <Host role="listitem">
-        <span class="gux-action-item">
+        <span
+          class={{
+            'gux-action-item': true,
+            'gux-disabled': this.disabled
+          }}
+        >
           {this.text}
           <slot />
         </span>

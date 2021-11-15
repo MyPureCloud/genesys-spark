@@ -13,7 +13,13 @@
       <label slot="label">Pasta</label>
     </gux-form-field>
     <gux-form-field>
-      <input slot="input" type="checkbox" name="food" value="hamburger" />
+      <input
+        slot="input"
+        type="checkbox"
+        name="food"
+        value="hamburger"
+        id="hamburger"
+      />
       <label slot="label">Hamburger</label>
     </gux-form-field>
     <gux-form-field>
@@ -33,3 +39,13 @@
     </gux-form-field>
   </div>
 </form>
+
+<style
+  onload="(function () {
+  document.getElementById('hamburger').indeterminate = true;
+})()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>

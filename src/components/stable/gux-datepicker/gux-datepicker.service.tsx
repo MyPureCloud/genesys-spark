@@ -9,6 +9,8 @@ export function getCalendarLabels(
 ) {
   if (mode === CalendarModes.Range) {
     return [labels[0] || defaultLabels[0], labels[1] || defaultLabels[1]];
+  } else if (mode !== CalendarModes.Range && !labels[0]) {
+    return [defaultLabels[2]];
   }
 
   return [labels[0]];

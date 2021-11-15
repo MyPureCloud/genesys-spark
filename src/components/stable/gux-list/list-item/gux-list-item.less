@@ -2,20 +2,7 @@
 
 // Variables part
 
-gux-list-item {
-  .gux-list-item {
-    display: flex;
-    height: max-content;
-    padding: 0 16px;
-    line-height: 32px;
-    word-wrap: break-word;
-    cursor: pointer;
-
-    .gux-text {
-      width: 100%;
-    }
-  }
-
+:host {
   &:focus,
   &:active,
   &:hover:not([disabled]) {
@@ -24,12 +11,34 @@ gux-list-item {
       background: @gux-blue-60;
     }
   }
+}
 
-  &[disabled] {
-    .gux-list-item {
-      pointer-events: none;
-      cursor: default;
-      opacity: 0.5;
-    }
+:host(:focus),
+:host(:active),
+:host(:hover:not([disabled])) {
+  .gux-list-item {
+    color: @gux-type-dark;
+    background: @gux-blue-60;
+  }
+}
+
+:host([disabled]) {
+  .gux-list-item {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.gux-list-item {
+  display: flex;
+  height: max-content;
+  padding: 0 16px;
+  line-height: 32px;
+  word-wrap: break-word;
+  cursor: pointer;
+
+  .gux-text {
+    width: 100%;
   }
 }

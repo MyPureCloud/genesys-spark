@@ -1,7 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/shadows.less';
 
-gux-simple-toast {
+:host {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -20,43 +20,41 @@ gux-simple-toast {
   .gux-shadow-20();
 }
 
-gux-simple-toast {
-  .gux-icon {
-    flex: 0 1 auto;
-    align-self: auto;
-    order: 0;
-    margin: 6px 0;
+.gux-icon {
+  flex: 0 1 auto;
+  align-self: auto;
+  order: 0;
+  margin: 6px 0;
 
-    &.gux-alert {
-      color: @gux-alert;
-    }
-
-    &.gux-warning {
-      color: @gux-warning;
-    }
-
-    &.gux-positive {
-      color: @gux-positive;
-    }
-
-    &.gux-neutral {
-      color: @gux-neutral;
-    }
-
-    gux-icon {
-      width: 12px;
-      height: 12px;
-    }
+  &.gux-alert {
+    color: @gux-alert;
   }
 
-  .gux-message {
-    flex: 1 1 auto;
-    align-self: auto;
-    order: 0;
-    max-height: 48px;
-    margin: 0 12px 0 8px;
-    overflow: hidden;
-    line-height: 24px;
-    text-overflow: ellipsis;
+  &.gux-warning {
+    color: @gux-warning;
   }
+
+  &.gux-positive {
+    color: @gux-positive;
+  }
+
+  &.gux-neutral {
+    color: @gux-neutral;
+  }
+
+  gux-icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.gux-message {
+  flex: 1 1 auto;
+  align-self: auto;
+  order: 0;
+  max-height: 48px;
+  margin: 0 12px 0 8px;
+  overflow: hidden;
+  line-height: 24px;
+  text-overflow: ellipsis;
 }

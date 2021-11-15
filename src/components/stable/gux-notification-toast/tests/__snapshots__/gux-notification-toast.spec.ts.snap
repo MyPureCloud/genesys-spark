@@ -2,88 +2,104 @@
 
 exports[`gux-notification-toast #render should render alert notification toast 1`] = `
 <gux-notification-toast accent="alert">
-  <!---->
-  <div class="gux-alert gux-icon">
-    <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
-  </div>
-  <div class="gux-content">
-    <div class="gux-title">
-      <div slot="title">
-        Title
+  <mock:shadow-root>
+    <div class="gux-alert gux-icon">
+      <slot name="icon"></slot>
+    </div>
+    <div class="gux-content">
+      <div class="gux-title">
+        <slot name="title"></slot>
+      </div>
+      <div class="gux-message">
+        <slot name="message"></slot>
       </div>
     </div>
-    <div class="gux-message">
-      <div slot="message">
-        This is the message
-      </div>
-    </div>
+    <gux-dismiss-button></gux-dismiss-button>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <div slot="title">
+    Title
   </div>
-  <gux-dismiss-button-beta></gux-dismiss-button-beta>
+  <div slot="message">
+    This is the message
+  </div>
 </gux-notification-toast>
 `;
 
 exports[`gux-notification-toast #render should render neutral notification toast 1`] = `
 <gux-notification-toast accent="neutral">
-  <!---->
-  <div class="gux-icon gux-neutral">
-    <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
-  </div>
-  <div class="gux-content">
-    <div class="gux-title">
-      <div slot="title">
-        Title
+  <mock:shadow-root>
+    <div class="gux-icon gux-neutral">
+      <slot name="icon"></slot>
+    </div>
+    <div class="gux-content">
+      <div class="gux-title">
+        <slot name="title"></slot>
+      </div>
+      <div class="gux-message">
+        <slot name="message"></slot>
       </div>
     </div>
-    <div class="gux-message">
-      <div slot="message">
-        This is the message
-      </div>
-    </div>
+    <gux-dismiss-button></gux-dismiss-button>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <div slot="title">
+    Title
   </div>
-  <gux-dismiss-button-beta></gux-dismiss-button-beta>
+  <div slot="message">
+    This is the message
+  </div>
 </gux-notification-toast>
 `;
 
 exports[`gux-notification-toast #render should render positive notification toast 1`] = `
 <gux-notification-toast accent="positive">
-  <!---->
-  <div class="gux-icon gux-positive">
-    <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
-  </div>
-  <div class="gux-content">
-    <div class="gux-title">
-      <div slot="title">
-        Title
+  <mock:shadow-root>
+    <div class="gux-icon gux-positive">
+      <slot name="icon"></slot>
+    </div>
+    <div class="gux-content">
+      <div class="gux-title">
+        <slot name="title"></slot>
+      </div>
+      <div class="gux-message">
+        <slot name="message"></slot>
       </div>
     </div>
-    <div class="gux-message">
-      <div slot="message">
-        This is the message
-      </div>
-    </div>
+    <gux-dismiss-button></gux-dismiss-button>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <div slot="title">
+    Title
   </div>
-  <gux-dismiss-button-beta></gux-dismiss-button-beta>
+  <div slot="message">
+    This is the message
+  </div>
 </gux-notification-toast>
 `;
 
 exports[`gux-notification-toast #render should render warning notification toast 1`] = `
 <gux-notification-toast accent="warning">
-  <!---->
-  <div class="gux-icon gux-warning">
-    <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
-  </div>
-  <div class="gux-content">
-    <div class="gux-title">
-      <div slot="title">
-        Title
+  <mock:shadow-root>
+    <div class="gux-icon gux-warning">
+      <slot name="icon"></slot>
+    </div>
+    <div class="gux-content">
+      <div class="gux-title">
+        <slot name="title"></slot>
+      </div>
+      <div class="gux-message">
+        <slot name="message"></slot>
       </div>
     </div>
-    <div class="gux-message">
-      <div slot="message">
-        This is the message
-      </div>
-    </div>
+    <gux-dismiss-button></gux-dismiss-button>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <div slot="title">
+    Title
   </div>
-  <gux-dismiss-button-beta></gux-dismiss-button-beta>
+  <div slot="message">
+    This is the message
+  </div>
 </gux-notification-toast>
 `;

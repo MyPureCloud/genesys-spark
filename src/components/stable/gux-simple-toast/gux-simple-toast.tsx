@@ -19,7 +19,8 @@ import { GuxSimpleToastAccent } from './gux-simple-toast.types';
  */
 @Component({
   styleUrl: 'gux-simple-toast.less',
-  tag: 'gux-simple-toast'
+  tag: 'gux-simple-toast',
+  shadow: true
 })
 export class GuxSimpleToast {
   /**
@@ -49,9 +50,9 @@ export class GuxSimpleToast {
           <slot name="message" />
         </div>
 
-        <gux-dismiss-button-beta
+        <gux-dismiss-button
           onClick={this.onDismissClickHandler.bind(this)}
-        ></gux-dismiss-button-beta>
+        ></gux-dismiss-button>
       </Host>
     );
   }

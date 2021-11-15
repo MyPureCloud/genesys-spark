@@ -4,23 +4,32 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Listen,
   Prop,
   Watch
 } from '@stencil/core';
 
-import { GuxButtonAccent, GuxButtonType } from '../gux-button/gux-button.types';
 import { trackComponent } from '../../../usage-tracking';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { GuxButtonAccent, GuxButtonType } from '../gux-button/gux-button.types';
+
+import defaultResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-action-button.less',
-  tag: 'gux-action-button'
+  tag: 'gux-action-button',
+  shadow: true
 })
 export class GuxActionButton {
+  private listElement: HTMLGuxListElement;
+  private dropdownButton: HTMLElement;
+  private i18n: GetI18nValue;
+
   @Element()
   private root: HTMLElement;
-  listElement: HTMLGuxListElement;
-  dropdownButton: HTMLElement;
 
   /**
    * The component button type
@@ -70,54 +79,21 @@ export class GuxActionButton {
   @Prop({ mutable: true })
   isOpen: boolean = false;
 
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    const composedPath = event.composedPath();
 
-  @Listen('focusout')
-  handleFocusOut(e: FocusEvent) {
-    if (!this.root.contains(e.relatedTarget as Node)) {
-      this.isOpen = false;
-    }
-  }
-
-  @Listen('click')
-  @Listen('keydown')
-  handleKeyDown(e) {
-    if (this.root.contains(e.target)) {
-      return;
-    }
-    this.isOpen = false;
-  }
-
-  @Watch('disabled')
-  watchDisabled(disabled: boolean) {
-    if (disabled) {
-      this.isOpen = false;
-    }
-  }
-
-  @Watch('isOpen')
-  watchValue(newValue: boolean) {
-    if (newValue) {
-      this.open.emit();
-    } else {
-      this.close.emit();
-    }
-  }
-
-  onActionClick() {
-    this.actionClick.emit();
-  }
-
-  onKeyUpEvent(event: KeyboardEvent) {
     switch (event.key) {
       case 'Escape':
         this.isOpen = false;
-        this.dropdownButton.focus();
+
+        if (composedPath.includes(this.listElement)) {
+          this.dropdownButton.focus();
+        }
+
         break;
       case 'ArrowDown':
-        if (!this.listElement.contains(event.target as Node)) {
+        if (!composedPath.includes(this.listElement)) {
           this.isOpen = true;
           this.listElement.setFocusOnFirstItem();
         }
@@ -125,11 +101,52 @@ export class GuxActionButton {
     }
   }
 
-  componentWillLoad() {
-    trackComponent(this.root, { variant: this.type });
+  @Watch('disabled')
+  watchDisabled(disabled: boolean): void {
+    if (disabled) {
+      this.isOpen = false;
+    }
   }
 
-  render() {
+  @Watch('isOpen')
+  watchValue(isOpen: boolean): void {
+    if (isOpen) {
+      this.open.emit();
+    } else {
+      this.close.emit();
+    }
+  }
+
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside(): void {
+    this.isOpen = false;
+  }
+
+  private toggle(): void {
+    if (!this.disabled) {
+      this.isOpen = !this.isOpen;
+    }
+  }
+
+  private onActionClick(): void {
+    if (!this.disabled) {
+      this.isOpen = false;
+      this.actionClick.emit();
+    }
+  }
+
+  private onListElementFocusout(event: FocusEvent): void {
+    if (event.relatedTarget !== null && !this.root.matches(':focus-within')) {
+      this.isOpen = false;
+    }
+  }
+
+  async componentWillLoad(): Promise<void> {
+    trackComponent(this.root, { variant: this.type });
+    this.i18n = await buildI18nForComponent(this.root, defaultResources);
+  }
+
+  render(): JSX.Element {
     return (
       <div class="gux-action-button-container">
         <gux-popup-beta expanded={this.isOpen} disabled={this.disabled}>
@@ -156,9 +173,11 @@ export class GuxActionButton {
                 disabled={this.disabled}
                 ref={el => (this.dropdownButton = el)}
                 onClick={() => this.toggle()}
-                onKeyUp={e => this.onKeyUpEvent(e)}
                 aria-haspopup="listbox"
                 aria-expanded={this.isOpen.toString()}
+                aria-label={this.i18n('actionButtonDropdown', {
+                  buttonTitle: this.text
+                })}
               >
                 <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
               </button>
@@ -167,6 +186,7 @@ export class GuxActionButton {
 
           <gux-list
             slot="popup"
+            onFocusout={this.onListElementFocusout.bind(this)}
             ref={el => (this.listElement = el as HTMLGuxListElement)}
           >
             <slot />

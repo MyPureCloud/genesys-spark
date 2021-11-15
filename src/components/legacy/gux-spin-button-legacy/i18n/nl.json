@@ -1,7 +1,0 @@
-{
-  "validation.max": "Mag niet meer zijn dan {max, number}",
-  "validation.min": "Mag niet minder zijn dan {min, number}",
-  "validation.increment": "Moet een veelvoud zijn van {increment, number}",
-  "increment": "verhogen",
-  "decrement": "verlagen"
-}

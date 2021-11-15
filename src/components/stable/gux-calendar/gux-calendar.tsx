@@ -10,7 +10,7 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
-import { CalendarModes, KeyCode } from '../../../common-enums';
+import { CalendarModes } from '../../../common-enums';
 import {
   asIsoDateRange,
   asIsoDate,
@@ -38,12 +38,6 @@ export class GuxCalendar {
    */
   @Prop({ mutable: true })
   value: string = '';
-
-  /**
-   * The calendar first week day
-   */
-  @Prop()
-  firstDayOfWeek: number;
 
   /**
    * The min date selectable
@@ -75,6 +69,7 @@ export class GuxCalendar {
   @State()
   previewValue: Date = new Date();
 
+  @State()
   selectingDate: Date | null = null;
 
   /**
@@ -317,7 +312,7 @@ export class GuxCalendar {
         if (this.selectingDate === null) {
           // First click
           removeClassToElements(this.getAllDatesElements(), 'gux-hovered');
-          this.selectingDate = date;
+          this.selectingDate = new Date(date.valueOf());
           this.value = asIsoDateRange(date, date);
         } else {
           // Second click
@@ -329,10 +324,10 @@ export class GuxCalendar {
           }
           this.updateRangeElements();
           this.setValueAndEmit([this.selectingDate, date]);
+          this.previewValue = date;
           this.selectingDate = null;
         }
       }
-      this.focusPreviewDate();
     }
   }
 
@@ -352,45 +347,58 @@ export class GuxCalendar {
     }
   }
 
-  onKeyDown(e: KeyboardEvent) {
-    switch (e.keyCode) {
-      case KeyCode.Enter:
-      case KeyCode.Space:
+  onKeyDown(event: KeyboardEvent) {
+    switch (event.key) {
+      case ' ':
+      case 'Enter':
+        event.preventDefault();
         this.onDateClick(this.previewValue);
         break;
-      case KeyCode.Down:
+      case 'ArrowDown':
+        event.preventDefault();
         this.previewValue = new Date(
           this.previewValue.setDate(this.previewValue.getDate() + 7)
         );
         this.onDateMouseEnter(this.previewValue);
-        this.focusPreviewDate();
+        setTimeout(() => {
+          this.focusPreviewDate();
+        });
         break;
-      case KeyCode.Up:
+      case 'ArrowUp':
+        event.preventDefault();
         this.previewValue = new Date(
           this.previewValue.setDate(this.previewValue.getDate() - 7)
         );
         this.onDateMouseEnter(this.previewValue);
-        this.focusPreviewDate();
+        setTimeout(() => {
+          this.focusPreviewDate();
+        });
         break;
-      case KeyCode.Left:
+      case 'ArrowLeft':
+        event.preventDefault();
         this.previewValue = new Date(
           this.previewValue.setDate(this.previewValue.getDate() - 1)
         );
         this.onDateMouseEnter(this.previewValue);
-        this.focusPreviewDate();
+        setTimeout(() => {
+          this.focusPreviewDate();
+        });
         break;
-      case KeyCode.Right:
+      case 'ArrowRight':
+        event.preventDefault();
         this.previewValue = new Date(
           this.previewValue.setDate(this.previewValue.getDate() + 1)
         );
         this.onDateMouseEnter(this.previewValue);
-        this.focusPreviewDate();
+        setTimeout(() => {
+          this.focusPreviewDate();
+        });
         break;
-      case KeyCode.PageUp:
+      case 'PageUp':
         this.incrementPreviewDateByMonth(1);
         this.onDateMouseEnter(this.previewValue);
         break;
-      case KeyCode.PageDown:
+      case 'PageDown':
         this.incrementPreviewDateByMonth(-1);
         this.onDateMouseEnter(this.previewValue);
         break;
@@ -418,10 +426,7 @@ export class GuxCalendar {
     trackComponent(this.root, { variant: this.mode });
     this.locale = getDesiredLocale(this.root);
 
-    this.startDayOfWeek =
-      this.firstDayOfWeek == null
-        ? getStartOfWeek(this.locale)
-        : this.firstDayOfWeek;
+    this.startDayOfWeek = getStartOfWeek(this.locale);
 
     if (!this.value) {
       const now = new Date();
@@ -472,6 +477,9 @@ export class GuxCalendar {
                 onKeyDown={e => this.onKeyDown(e)}
               >
                 {day.date.getDate()}
+                <span class="gux-sr-only">
+                  {this.getMonthLabel(index)} {this.previewValue.getFullYear()}
+                </span>
               </td>
             ))}
           </tr>

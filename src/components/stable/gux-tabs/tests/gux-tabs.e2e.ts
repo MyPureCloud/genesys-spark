@@ -17,51 +17,75 @@ async function newNonrandomE2EPage({
 }
 
 describe('gux-tabs', () => {
-  it('renders', async () => {
-    const html = `
-      <gux-tabs id="interactive" lang="en">
-        <gux-tab tab-id="1" tab-icon-name="lock">
-          <span slot="title"> Hello World </span>
-          <span slot="dropdown-options">
-            <gux-tab-dropdown-option
-              option-id="1"
-              icon-name="edit"
-              onclick="notify(event)"
-            >
-              Edit
-            </gux-tab-dropdown-option>
-            <gux-tab-dropdown-option
-              option-id="2"
-              icon-name="clone"
-              onclick="notify(event)"
-            >
-              Clone
-            </gux-tab-dropdown-option>
-            <gux-tab-dropdown-option
-              option-id="3"
-              icon-name="share"
-              onclick="notify(event)"
-            >
-              Share
-            </gux-tab-dropdown-option>
-            <gux-tab-dropdown-option
-              option-id="4"
-              icon-name="download"
-              onclick="notify(event)"
-            >
-              Download
-            </gux-tab-dropdown-option>
-          </span>
-        </gux-tab>
+  const html = `
+    <gux-tabs lang="en">
+      <gux-tab-list slot="tab-list">
+          <gux-tab tab-id="2-1"><span>Tab Header 1</span></gux-tab>
+          <gux-tab tab-id="2-2"><span>Tab Header 2</span></gux-tab>
+          <gux-tab tab-id="2-3"><span>Tab Header 3</span></gux-tab>
+          <gux-tab gux-disabled tab-id="2-4"
+            ><span>Tab Header 4</span></gux-tab
+          >
+          <gux-tab gux-disabled tab-id="2-5"
+            ><span>Tab Header 5</span></gux-tab
+          >
+      </gux-tab-list>
+      <gux-tab-panel tab-id="2-1">Tab content 1</gux-tab-panel>
+      <gux-tab-panel tab-id="2-2">Tab content 2</gux-tab-panel>
+      <gux-tab-panel tab-id="2-3">Tab content 3</gux-tab-panel>
+      <gux-tab-panel tab-id="2-4">Tab content 4</gux-tab-panel>
+      <gux-tab-panel tab-id="2-5">Tab content 5</gux-tab-panel>
+    </gux-tabs>
+`;
+  describe('#render', () => {
+    it('renders', async () => {
+      const page = await newNonrandomE2EPage({ html });
+      const element = await page.find('gux-tabs');
 
-        <gux-tab tab-id="2" tab-icon-name="lock">
-          <span slot="title"> Hello World 2 </span>
-        </gux-tab>
-      </gux-tabs>
-    `;
-    const page = await newNonrandomE2EPage({ html });
-    const element = await page.find('gux-tabs');
+      expect(element.outerHTML).toMatchSnapshot();
+    });
 
-    expect(element.innerHTML).toMatchSnapshot();
+    it('does not render the scroll buttons when tabs fit container', async () => {
+      const page = await newNonrandomE2EPage({ html });
+      const scrollButtons = await page.findAll('.gux-scroll-button');
+      expect(scrollButtons.length).toBe(0);
+    });
+
+    it('renders scroll buttons when tabs overflow container', async () => {
+      const restrictedWidthHtml = `<div style="width: 500px">${html}</div>`;
+      const page = await newNonrandomE2EPage({ html: restrictedWidthHtml });
+      const scrollButtons = await page.findAll('.gux-scroll-button');
+      expect(scrollButtons.length).toBe(2);
+    });
+  });
+
+  describe('#interactions', () => {
+    it('should change tabpanel content when tab is changed', async () => {
+      const page = await newNonrandomE2EPage({ html });
+      const tabTarget = await page.find('gux-tab[tab-id="2-2"]');
+      const tabPanel = await page.find('gux-tab-panel[tab-id="2-2"]');
+      const spyOnActivePanelChangeEvent = await tabPanel.spyOnEvent(
+        'guxactivepanelchange'
+      );
+
+      tabTarget.click();
+      await page.waitForChanges();
+
+      expect(spyOnActivePanelChangeEvent.length).toBe(1);
+      expect(spyOnActivePanelChangeEvent.events[0].detail).toBe('2-2');
+    });
+    it('should not change tabpanel content when tab is disabled', async () => {
+      const page = await newNonrandomE2EPage({ html });
+      const tabTarget = await page.find('gux-tab[tab-id="2-4"]');
+      const tabPanel = await page.find('gux-tab-panel[tab-id="2-4"]');
+      const spyOnActivePanelChangeEvent = await tabPanel.spyOnEvent(
+        'guxactivepanelchange'
+      );
+
+      tabTarget.click();
+      await page.waitForChanges();
+
+      expect(spyOnActivePanelChangeEvent.length).toBe(0);
+    });
   });
 });

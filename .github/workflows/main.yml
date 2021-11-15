@@ -29,7 +29,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '14'
       # Can't use npm ci, because it fails on missing optional dependencies
       - run: npm install
 

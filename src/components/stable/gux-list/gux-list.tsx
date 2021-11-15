@@ -12,7 +12,6 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
-import { KeyCode } from '../../../common-enums';
 
 const validChildren = [
   'gux-list-item:not([disabled])',
@@ -21,7 +20,8 @@ const validChildren = [
 
 @Component({
   styleUrl: 'gux-list.less',
-  tag: 'gux-list'
+  tag: 'gux-list',
+  shadow: true
 })
 export class GuxList {
   @Element()
@@ -94,7 +94,7 @@ export class GuxList {
    */
   @Method()
   async setFocusOnLastItem(): Promise<void> {
-    const filteredList = this.root.querySelectorAll(validChildren);
+    const filteredList = this.getFilteredList();
     this.selectedIndex = filteredList.length - 1;
     this.updateTabIndexes();
   }
@@ -104,7 +104,7 @@ export class GuxList {
    */
   @Method()
   async isLastItemSelected(): Promise<boolean> {
-    const filteredList = this.root.querySelectorAll(validChildren);
+    const filteredList = this.getFilteredList();
     return this.selectedIndex === filteredList.length - 1;
   }
 
@@ -148,34 +148,33 @@ export class GuxList {
   }
 
   private onKeyDown(event: KeyboardEvent): void {
-    const validKeys = [KeyCode.Up, KeyCode.Down, KeyCode.End, KeyCode.Home];
-    const key = event.keyCode;
-    if (validKeys.indexOf(key) === -1) {
+    const validKeys = ['ArrowUp', 'ArrowDown', 'End', 'Home'];
+    if (!validKeys.includes(event.key)) {
       return;
     }
 
-    const filteredList = this.root.querySelectorAll(validChildren);
+    const filteredList = this.getFilteredList();
 
     let newIndex = -1;
-    switch (key) {
-      case KeyCode.Up:
+    switch (event.key) {
+      case 'ArrowUp':
         if (this.selectedIndex) {
           newIndex = this.selectedIndex - 1;
           event.stopPropagation();
         }
         break;
-      case KeyCode.Home:
+      case 'Home':
         if (this.selectedIndex) {
           newIndex = 0;
         }
         break;
-      case KeyCode.Down:
+      case 'ArrowDown':
         if (this.selectedIndex !== filteredList.length - 1) {
           newIndex = this.selectedIndex + 1;
           event.stopPropagation();
         }
         break;
-      case KeyCode.End:
+      case 'End':
         if (this.selectedIndex !== filteredList.length - 1) {
           newIndex = filteredList.length - 1;
         }
@@ -188,7 +187,7 @@ export class GuxList {
   }
 
   private updateTabIndexes(): void {
-    const children = this.root.querySelectorAll(validChildren);
+    const children = this.getFilteredList();
 
     if (!children || this.selectedIndex === -1) {
       return;
@@ -217,5 +216,17 @@ export class GuxList {
     items.forEach((element: HTMLGuxTextHighlightElement) => {
       element.highlight = value;
     });
+  }
+
+  private getFilteredList(): Element[] {
+    const slot = this.root.querySelector('slot') as HTMLSlotElement;
+
+    if (slot) {
+      return slot
+        .assignedElements()
+        .filter(element => element.matches(validChildren));
+    }
+
+    return Array.from(this.root.querySelectorAll(validChildren));
   }
 }

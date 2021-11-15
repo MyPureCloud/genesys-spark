@@ -19,6 +19,19 @@
 | `internalallrowselectchange` |             | `CustomEvent<any>` |
 
 
+## Methods
+
+### `setIndeterminate(indeterminate?: boolean) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Dependencies
 
 ### Depends on

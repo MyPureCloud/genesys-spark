@@ -2,6 +2,168 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.1](https://inindca///compare/v3.0.0-alpha.0...v3.0.0-alpha.1) (2021-11-12)
+
+
+### Bug Fixes
+
+* **docs:** v2 should still be the deployed  branch for now ([4631432](https://inindca///commit/4631432bf4096c96659eefe3ad889a3258a90807))
+* **dropdown:** removed unnecessary code ([49589b8](https://inindca///commit/49589b89ff23d7f5bff0285fb6dbdceeea29d718))
+* **pr comment:** addressd PR comment ([e35845f](https://inindca///commit/e35845fd7d6898300fe21b86201a49598d8b3a0e))
+* **usage-tracking:** fixed library version calculation to account for alpha builds ([a524d14](https://inindca///commit/a524d149e48de7a5bdaaae56e17bd6aac029821e))
+
+## [3.0.0-alpha.0](https://inindca///compare/v2.45.2...v3.0.0-alpha.0) (2021-11-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **calendar:** removed prop
+
+COMUI-453
+
+### Features
+
+* **accordion:** sections can now be disabled ([2de4958](https://inindca///commit/2de4958c63a8498fc36cb8947461013be323e2c2))
+* **action-toast:** enabled shadow dom ([9ab9db5](https://inindca///commit/9ab9db5b6bd96fe6a7aadc5d0938141edcd4ca99))
+* **breadcrumbs:** enabled shadow dom ([c3866ad](https://inindca///commit/c3866ad64cb521a9fc7928ee6275ad7d5fdffd76))
+* **breadcrumbs:** enabled shadow dom ([2a17ba6](https://inindca///commit/2a17ba6521dccf1ade8a7dde321e01f6bc496043))
+* **button:** removed title property ([bae547e](https://inindca///commit/bae547eaa0f8980acd841188a71f051bf9e85795))
+* **calendar:** removed first-day-of-week prop ([4561855](https://inindca///commit/4561855b07730bbc9e03480875a1cff820325151))
+* **gux-tabs-advanced:** adding gux-tabs-advanced component ([dcc17f6](https://inindca///commit/dcc17f6fe944b066530bf6c5de52403cb9a53d05))
+* **gux-tabs:** unify tab component APIs ([a3410cd](https://inindca///commit/a3410cd3e6ac8868de3284de94a132d89544f987))
+* **migration-guide:** added accordion to migration guide ([8186023](https://inindca///commit/8186023fdddef55f1c3c0c086b2d30ffb2546f37))
+* **notification-toast:** enabled shadow dom ([6cbe990](https://inindca///commit/6cbe990bcfa1eeba3a465acf704968b5419ea2cf))
+* **pagination:** enabled shadow dom ([ed0bcda](https://inindca///commit/ed0bcdadacb7bab88ed17ede51c6f0cf5664c8f7))
+* **pagination:** enabled shadow dom ([5c6ec6c](https://inindca///commit/5c6ec6c93a72728db3daaeedd358f1115666be38))
+* **release:** prepare for alpha releases of v3 ([896eaea](https://inindca///commit/896eaea701bea32fc4fca8c0086210d0ce30b553))
+* **simple-toast:** enabled shadowdom ([2f11316](https://inindca///commit/2f11316e6b1ccaa7a922ed79861d697b90bd66fd))
+* **tooltip:** enabled shadow dom ([4de306b](https://inindca///commit/4de306bc3a0d0e9907459efdf3cbebcaab0225c1))
+* **visualization:** component moved to v3 ([48285a2](https://inindca///commit/48285a20478b25a29b4124494c7095bc5fc6df55))
+
+
+### Bug Fixes
+
+* **keycode:** removed usage of event.keyCode ([42b6115](https://inindca///commit/42b6115926ac85e9a9e449f6a03f840506878840))
+* **pr-comment:** addressed PR comment ([edf2768](https://inindca///commit/edf2768b2b65a722197624d639e2979466324cc4))
+* **pr-comment:** addressed PR comment ([8f86598](https://inindca///commit/8f865988face852503adcf27c1e6c74bd050673f))
+* **pr-comment:** addressed PR comment ([fd42ce1](https://inindca///commit/fd42ce18cd5f92d21993f73250d4adddce0f1dfe))
+* **pr-comment:** addressed PR comment ([ee79b77](https://inindca///commit/ee79b77d7d1be2ca6ab98d7a51271a6efb02059a))
+
+### [2.45.2](https://inindca///compare/v2.45.1...v2.45.2) (2021-11-10)
+
+
+### Bug Fixes
+
+* **gux-dropdown-v2:** fixed issue where gux-pagination not showing items per page value in dropdown ([867e5c2](https://inindca///commit/867e5c2b07c1f6a502bc8b7d64e10a4dce420579))
+
+### [2.45.1](https://inindca///compare/v2.45.0...v2.45.1) (2021-11-10)
+
+
+### Bug Fixes
+
+* **gux-tab-list-beta:** changed how trigger id string for aria owns attribute is set on the tablist ([9ac4feb](https://inindca///commit/9ac4feb4eb213ae3419e81fa2755d59de5de1db5))
+
+## [2.45.0](https://inindca///compare/v2.44.0...v2.45.0) (2021-11-09)
+
+
+### Features
+
+* **gux-datepicker:** add a11y e2e tests and fix violations ([92d57c3](https://inindca///commit/92d57c3d876e66d28b964b9176690ff07f08ed8c))
+* **gux-dropdown:** add a11y tests to gux-dropdown and flyout menu e2e tests ([c26818b](https://inindca///commit/c26818ba538d538cb68728dc8cae5f0be4ee1780))
+* **gux-dropdown:** added filter to new gux-dropdown component ([2f5c44d](https://inindca///commit/2f5c44d8304c4a88d87e58ec5f04e50ab9ae98be))
+
+
+### Bug Fixes
+
+* **gux-table:** fix scrolling for tables with wide columns ([74a66ed](https://inindca///commit/74a66edbf5ddb97ab88004c5fc13d89f7342fd09))
+
+## [2.44.0](https://inindca///compare/v2.43.0...v2.44.0) (2021-11-03)
+
+
+### Features
+
+* **icon:** updated and added some icons ([ed91036](https://inindca///commit/ed910363542c509ba5c502986533efc4c03785c7))
+
+## [2.43.0](https://inindca///compare/v2.42.6...v2.43.0) (2021-11-02)
+
+
+### Features
+
+* **modal:** added trap-focus property ([c34eef7](https://inindca///commit/c34eef7d687ebeb443f3f0200dcb2e80e70b70a1))
+
+### [2.42.6](https://inindca///compare/v2.42.5...v2.42.6) (2021-11-01)
+
+### [2.42.5](https://inindca///compare/v2.42.4...v2.42.5) (2021-10-28)
+
+### [2.42.4](https://inindca///compare/v2.42.3...v2.42.4) (2021-10-28)
+
+### [2.42.3](https://inindca///compare/v2.42.2...v2.42.3) (2021-10-27)
+
+
+### Bug Fixes
+
+* **gux-form-field:** fixed style inheritance bug for form field inputs ([a376844](https://inindca///commit/a3768444d2c791e8797cf1505dc3a90aed4cd5f8))
+
+### [2.42.2](https://inindca///compare/v2.42.1...v2.42.2) (2021-10-20)
+
+### [2.42.1](https://inindca///compare/v2.42.0...v2.42.1) (2021-10-18)
+
+## [2.42.0](https://inindca///compare/v2.41.2...v2.42.0) (2021-10-14)
+
+
+### Features
+
+* **gux-icon:** add new icon files ([62ef1de](https://inindca///commit/62ef1de3020773bdba42fd93c334cc52d5fbdd97))
+
+
+### Bug Fixes
+
+* **gux-tabs-beta:** fix vertical buttons shown on non-vertical tabs ([2ac753c](https://inindca///commit/2ac753c536ba94b8c49cbdf52910615c42bdcd72))
+
+### [2.41.2](https://inindca///compare/v2.41.1...v2.41.2) (2021-10-13)
+
+
+### Bug Fixes
+
+* **jenkins:** fixed typo ([26c3603](https://inindca///commit/26c36038f8234f521089c7b2753f8934d8048717))
+* **pagination:** prepared component for enabling shadow dom ([5cd649f](https://inindca///commit/5cd649ffa5600bb51543c66a5eda5b47ea8c0a4f))
+* **popup:** fixed stacking order bug ([504c30e](https://inindca///commit/504c30e427b3f835453b03927b5a2249e883aba5))
+* **table:** prefixed all classes with gux- ([7135aa5](https://inindca///commit/7135aa5a7a93a103f1e4f2bf1ccd248c6e47bcba))
+
+### [2.41.1](https://inindca///compare/v2.41.0...v2.41.1) (2021-10-12)
+
+## [2.41.0](https://inindca///compare/v2.40.4...v2.41.0) (2021-10-11)
+
+
+### Features
+
+* **tests:** adding axe-core accessibility testing utils ([04ceb4a](https://inindca///commit/04ceb4aa83b81e702da406f1cb6783cea1adc2de))
+
+
+### Bug Fixes
+
+* **visualization:** remove component ([66bb2ed](https://inindca///commit/66bb2ed1c65c63f63457c47a1475f79bcbeef8ce))
+
+### [2.40.4](https://inindca///compare/v2.40.3...v2.40.4) (2021-10-07)
+
+### [2.40.3](https://inindca///compare/v2.40.2...v2.40.3) (2021-10-06)
+
+
+### Bug Fixes
+
+* playground/vue-3/package.json & playground/vue-3/package-lock.json to reduce vulnerabilities ([d437cc0](https://inindca///commit/d437cc04f951bd31aea2724987b937d3161c757d))
+* **table:** select all checkbox is now indeterminate if some rows are checked ([6cc343e](https://inindca///commit/6cc343e9e6a3cb1ec68c2199bfd9169d7a114254))
+
+### [2.40.2](https://inindca///compare/v2.40.1...v2.40.2) (2021-10-04)
+
+
+### Bug Fixes
+
+* **gux-icon:** svg icon cache logic has been improved and reduced network calls ([ee9d8b5](https://inindca///commit/ee9d8b58063807ac14201cb197f02d82297ecdb4))
+* **modal:** made dismiss button focusable in modal ([6402eab](https://inindca///commit/6402eabd98718d330847311d095ef5426a47ec8e))
+* **pr-comments:** addressed the PR comments and updated the example ([e1f2611](https://inindca///commit/e1f2611e527363b07d3c260821ba3559a92fc127))
+* **toggle:** fixed checkmark positioning ([8e0fca0](https://inindca///commit/8e0fca06523162486fbd1214a36092e55c83250a))
+
 ### [2.40.1](https://inindca///compare/v2.40.0...v2.40.1) (2021-10-01)
 
 
@@ -1399,8 +1561,8 @@ COMUI-343
 
 
 * The following tags have been renamed using our new beta naming scheme. Consumers using these tags will need to update their repos to use the new tag names:
-  * gux-command-palette -> gux-command-palette-beta
-  * gux-panel-frame -> gux-panel-frame-beta
+  * gux-command-palette -> gux-command-palette-legacy
+  * gux-panel-frame -> gux-panel-frame-legacy
   * gux-rating -> gux-rating-beta
   * gux-search -> gux-search-beta
   * gux-side-panel -> gux-side-panel-beta

@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-dropdown-menu-v2 #render should render as expected 1`] = `
+<gux-dropdown-v2-beta lang="en" value="j">
+  <mock:shadow-root>
+    <gux-popup-beta>
+      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
+        <div class="gux-field-button-content">
+          <div class="gux-placeholder">
+            Select...
+          </div>
+        </div>
+        <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+      </button>
+      <div class="gux-listbox-container" slot="popup">
+        <slot></slot>
+      </div>
+    </gux-popup-beta>
+  </mock:shadow-root>
+  <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option" value="a">
+      <!---->
+      Ant
+    </gux-option-v2>
+    <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option" value="b">
+      <!---->
+      Bat
+    </gux-option-v2>
+    <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option" value="c">
+      <!---->
+      Cat
+    </gux-option-v2>
+    <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option" value="d">
+      <!---->
+      Dog
+    </gux-option-v2>
+    <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option" value="e">
+      <!---->
+      Eel
+    </gux-option-v2>
+    <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option" value="f">
+      <!---->
+      Frog
+    </gux-option-v2>
+    <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option" value="g">
+      <!---->
+      Goat
+    </gux-option-v2>
+    <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option" value="h">
+      <!---->
+      Horse
+    </gux-option-v2>
+    <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option" value="i">
+      <!---->
+      Ibis
+    </gux-option-v2>
+  </gux-listbox>
+</gux-dropdown-v2-beta>
+`;

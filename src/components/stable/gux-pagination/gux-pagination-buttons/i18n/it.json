@@ -1,8 +1,8 @@
 {
   "page": "Pagina",
   "totalPages": " di {totalPages, number}",
-  "first": "Primo",
+  "first": "Prima",
   "previous": "Precedente",
-  "next": "Successivo",
-  "last": "Ultimo"
+  "next": "Successiva",
+  "last": "Ultima"
 }

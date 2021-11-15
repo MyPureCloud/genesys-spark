@@ -1,4 +1,6 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 describe('gux-breadcrumbs', () => {
   [
@@ -38,13 +40,13 @@ describe('gux-breadcrumbs', () => {
         <gux-breadcrumb-item>Current</gux-breadcrumb-item>
       </gux-breadcrumbs>
     `
-  ].forEach((content, index) => {
+  ].forEach((html, index) => {
     it(`should display component as expected (${index + 1})`, async () => {
-      const page = await newE2EPage();
-
-      await page.setContent(content);
+      const page = await newSparkE2EPage({ html });
 
       const element = await page.find('gux-breadcrumbs');
+
+      await a11yCheck(page, axeExclusions);
 
       expect(element.outerHTML).toMatchSnapshot();
     });

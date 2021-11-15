@@ -9,13 +9,15 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import { ClickOutside } from 'stencil-click-outside';
 
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
+
+import { getSearchOption } from './gux-listbox/gux-listbox.service';
 
 /**
  * @slot - for gux-list-box
@@ -28,6 +30,7 @@ import translationResources from './i18n/en.json';
 export class GuxDropdownV2Beta {
   private i18n: GetI18nValue;
   private fieldButtonElement: HTMLElement;
+  private filterElement: HTMLInputElement;
   private listboxElement: HTMLGuxListboxElement;
 
   @Element()
@@ -42,8 +45,14 @@ export class GuxDropdownV2Beta {
   @Prop()
   placeholder: string;
 
+  @Prop()
+  filterable: boolean = false;
+
   @State()
   private expanded: boolean = false;
+
+  @State()
+  private filter: string = '';
 
   @Watch('expanded')
   focusSelectedItemAfterRender(expanded: boolean) {
@@ -51,8 +60,16 @@ export class GuxDropdownV2Beta {
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           this.listboxElement.focus();
+
+          if (this.filterable) {
+            this.filterElement.focus();
+          }
         });
       });
+    }
+
+    if (!expanded) {
+      this.filter = '';
     }
   }
 
@@ -77,10 +94,22 @@ export class GuxDropdownV2Beta {
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Escape':
+        if (this.filterable) {
+          if (document.activeElement === this.listboxElement) {
+            return this.filterElement.focus();
+          }
+        }
         this.collapseListbox('focusFieldButton');
         return;
       case 'Tab':
         this.collapseListbox('noFocusChange');
+        return;
+      case 'ArrowUp':
+        if (this.filterable) {
+          if (document.activeElement === this.listboxElement) {
+            return this.filterElement.focus();
+          }
+        }
         return;
     }
   }
@@ -91,8 +120,8 @@ export class GuxDropdownV2Beta {
     forceUpdate(this.root);
   }
 
-  @ClickOutside({ triggerEvents: 'mousedown' })
-  checkForClickOutside() {
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside() {
     this.collapseListbox('noFocusChange');
   }
 
@@ -117,6 +146,7 @@ export class GuxDropdownV2Beta {
 
   componentWillRender(): void {
     this.validateValue(this.value);
+    this.listboxElement.filter = this.filter;
   }
 
   private getOptionElementByValue(value: string): HTMLGuxOptionV2Element {
@@ -129,6 +159,31 @@ export class GuxDropdownV2Beta {
 
   private fieldButtonClick(): void {
     this.expanded = !this.expanded;
+  }
+
+  private filterInput(): void {
+    this.filter = this.filterElement.value;
+  }
+
+  private filterKeydown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'ArrowDown':
+        event.stopImmediatePropagation();
+        this.listboxElement.focus();
+        return;
+      case 'Enter':
+        this.listboxElement.guxSelectActive();
+        event.preventDefault();
+        return;
+    }
+  }
+
+  private filterKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case ' ':
+        event.preventDefault();
+        return;
+    }
   }
 
   private collapseListbox(
@@ -152,10 +207,44 @@ export class GuxDropdownV2Beta {
     }
   }
 
-  private renderTargetDisplayText(): JSX.Element {
+  private getSuggestionText(filter: string): string {
+    const filterLength = filter.length;
+    if (filterLength > 0) {
+      const option = getSearchOption(this.listboxElement, filter);
+
+      if (option) {
+        return option.textContent.substring(filterLength);
+      }
+    }
+
+    return '';
+  }
+
+  private renderTargetDisplay(): JSX.Element {
     const selectedListboxOptionElement = this.getOptionElementByValue(
       this.value
     );
+
+    if (this.expanded && this.filterable) {
+      return (
+        <div class="gux-filter">
+          <div class="gux-filter-display">
+            <span class="gux-filter-text">{this.filter}</span>
+            <span class="gux-filter-suggestion">
+              {this.getSuggestionText(this.filter)}
+            </span>
+          </div>
+          <input
+            class="gux-filter-input"
+            type="text"
+            ref={el => (this.filterElement = el)}
+            onInput={this.filterInput.bind(this)}
+            onKeyDown={this.filterKeydown.bind(this)}
+            onKeyUp={this.filterKeyup.bind(this)}
+          ></input>
+        </div>
+      );
+    }
 
     if (selectedListboxOptionElement) {
       return (
@@ -184,7 +273,7 @@ export class GuxDropdownV2Beta {
         aria-haspopup="listbox"
         aria-expanded={this.expanded.toString()}
       >
-        <div class="gux-selected-option">{this.renderTargetDisplayText()}</div>
+        <div class="gux-field-button-content">{this.renderTargetDisplay()}</div>
         <gux-icon
           class="gux-expand-icon"
           decorative

@@ -1,4 +1,7 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
+import { a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 async function newNonrandomE2EPage({
   html
@@ -11,6 +14,10 @@ async function newNonrandomE2EPage({
     Math.random = () => 0.5;
   });
   await page.setContent(html);
+  await page.waitForChanges();
+  await page.addScriptTag({
+    path: 'node_modules/axe-core/axe.min.js'
+  });
   await page.waitForChanges();
 
   return page;
@@ -57,6 +64,7 @@ describe('gux-form-field', () => {
           `;
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-form-field');
+          await a11yCheck(page, axeExclusions);
 
           expect(element.innerHTML).toMatchSnapshot();
         });
@@ -75,6 +83,7 @@ describe('gux-form-field', () => {
             `;
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-form-field');
+          await a11yCheck(page, axeExclusions);
 
           expect(element.innerHTML).toMatchSnapshot();
         });
@@ -96,6 +105,7 @@ describe('gux-form-field', () => {
         `;
       const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-form-field');
+      await a11yCheck(page, axeExclusions);
 
       expect(element.innerHTML).toMatchSnapshot();
     });
@@ -113,6 +123,7 @@ describe('gux-form-field', () => {
         `;
       const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-form-field');
+      await a11yCheck(page, axeExclusions);
 
       expect(element.innerHTML).toMatchSnapshot();
     });

@@ -4,7 +4,8 @@ import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 
 @Component({
   styleUrl: 'gux-breadcrumb-item.less',
-  tag: 'gux-breadcrumb-item'
+  tag: 'gux-breadcrumb-item',
+  shadow: true
 })
 export class GuxBreadcrumbItem {
   @Element()

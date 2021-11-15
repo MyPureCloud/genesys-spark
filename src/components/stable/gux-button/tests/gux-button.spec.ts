@@ -4,7 +4,7 @@ import { GuxButton } from '../../gux-button/gux-button';
 const components = [GuxButton];
 const language = 'en';
 
-describe('gux-modal', () => {
+describe('gux-button', () => {
   describe('#render', () => {
     [
       {

@@ -18,18 +18,17 @@
 
 ### Used by
 
- - [gux-accordion](../gux-accordion)
- - [gux-accordion-section](../../beta/gux-accordion/gux-accordion-section)
+ - [gux-accordion-legacy](../../legacy/gux-accordion-legacy)
+ - [gux-accordion-section](../gux-accordion/gux-accordion-section)
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-breadcrumb-item](../gux-breadcrumbs/breadcrumb-item)
  - [gux-button-multi](../../beta/gux-button-multi)
  - [gux-calendar](../gux-calendar)
- - [gux-color-picker-legacy](../../legacy/gux-color-picker-legacy)
  - [gux-content-search](../gux-content-search)
  - [gux-datepicker](../gux-datepicker)
  - [gux-disclosure-button](../gux-disclosure-button)
- - [gux-dismiss-button-beta](../../beta/gux-dismiss-button)
+ - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-dropdown](../gux-dropdown)
  - [gux-dropdown-v2-beta](../../beta/gux-dropdown-v2)
  - [gux-error-message-beta](../../beta/gux-error-message-beta)
@@ -41,34 +40,33 @@
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-cursor-beta](../../beta/gux-pagination-cursor)
  - [gux-rating](../gux-rating)
- - [gux-search-beta](../../beta/gux-search)
  - [gux-side-panel-button](../../beta/gux-side-panel/buttons)
- - [gux-spin-button-legacy](../../legacy/gux-spin-button-legacy)
  - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
- - [gux-tab](../gux-tabs/gux-tab)
- - [gux-tab-dropdown-option](../gux-tabs/gux-tab-dropdown-option)
- - [gux-tab-list-beta](../../beta/gux-tabs-beta/gux-tab-list-beta)
+ - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
+ - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
+ - [gux-tab-advanced-option](../gux-tabs-advanced/gux-tab-advanced-option)
+ - [gux-tab-dropdown-option-legacy](../../legacy/gux-tabs-legacy/gux-tab-dropdown-option-legacy)
+ - [gux-tab-legacy](../../legacy/gux-tabs-legacy/gux-tab-legacy)
+ - [gux-tab-list](../gux-tabs/gux-tab-list)
  - [gux-table-beta](../../beta/gux-table)
- - [gux-tabs](../gux-tabs)
+ - [gux-tabs-legacy](../../legacy/gux-tabs-legacy)
  - [gux-tag-beta](../../beta/gux-tag)
- - [gux-text-field-legacy](../../legacy/gux-text-field-legacy)
  - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-accordion --> gux-icon
+  gux-accordion-legacy --> gux-icon
   gux-accordion-section --> gux-icon
   gux-action-button --> gux-icon
   gux-advanced-dropdown --> gux-icon
   gux-breadcrumb-item --> gux-icon
   gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
-  gux-color-picker-legacy --> gux-icon
   gux-content-search --> gux-icon
   gux-datepicker --> gux-icon
   gux-disclosure-button --> gux-icon
-  gux-dismiss-button-beta --> gux-icon
+  gux-dismiss-button --> gux-icon
   gux-dropdown --> gux-icon
   gux-dropdown-v2-beta --> gux-icon
   gux-error-message-beta --> gux-icon
@@ -80,17 +78,17 @@ graph TD;
   gux-pagination-buttons --> gux-icon
   gux-pagination-cursor-beta --> gux-icon
   gux-rating --> gux-icon
-  gux-search-beta --> gux-icon
   gux-side-panel-button --> gux-icon
-  gux-spin-button-legacy --> gux-icon
   gux-submenu --> gux-icon
-  gux-tab --> gux-icon
-  gux-tab-dropdown-option --> gux-icon
-  gux-tab-list-beta --> gux-icon
+  gux-tab-advanced --> gux-icon
+  gux-tab-advanced-list --> gux-icon
+  gux-tab-advanced-option --> gux-icon
+  gux-tab-dropdown-option-legacy --> gux-icon
+  gux-tab-legacy --> gux-icon
+  gux-tab-list --> gux-icon
   gux-table-beta --> gux-icon
-  gux-tabs --> gux-icon
+  gux-tabs-legacy --> gux-icon
   gux-tag-beta --> gux-icon
-  gux-text-field-legacy --> gux-icon
   gux-toggle-slider --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -4,20 +4,18 @@ import {
   Event,
   EventEmitter,
   h,
+  Host,
+  JSX,
   Listen,
+  Method,
   Prop,
-  readTask,
   State,
-  Watch,
-  writeTask
+  Watch
 } from '@stencil/core';
-import Sortable, { MoveEvent } from 'sortablejs';
 
 import { trackComponent } from '../../../usage-tracking';
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 
-import tabsResources from './i18n/en.json';
+import { GuxTabsOrientation, GuxTabsAlignment } from './gux-tabs-types';
 
 @Component({
   styleUrl: 'gux-tabs.less',
@@ -25,265 +23,95 @@ import tabsResources from './i18n/en.json';
   shadow: true
 })
 export class GuxTabs {
-  /**
-   * Enable tab sorting by drag/drop
-   */
-  @Prop() allowSort: boolean = false;
-
-  /**
-   * Enable new tab button
-   */
-  @Prop() showNewTabButton: boolean = false;
+  @Element()
+  root: HTMLElement;
 
   /**
    * tabId of the currently selected tab
    */
-  @Prop() value: string = '';
+  @Prop({ mutable: true })
+  activeTab: string;
+  /**
+   * Specifies horizontal or vertical orientation of tabs
+   */
+  @Prop()
+  orientation: GuxTabsOrientation = 'horizontal';
 
   /**
-   * Maximum nuber of tabs created
+   * Specifies left aligned, centered, or full width tabs
    */
-  @Prop() tabLimit: number = Infinity;
+  @Prop()
+  alignment: GuxTabsAlignment = 'left';
+
+  @State()
+  tabList: HTMLGuxTabListElement;
+
+  @State()
+  tabPanels: HTMLGuxTabPanelElement[] = [];
 
   /**
-   * Disable new tab button event
+   * Triggers when the active tab changes.
    */
-  @State() disableAddTabButton: boolean = false;
+  @Event()
+  guxactivetabchange: EventEmitter<string>;
 
-  /**
-   * Triggers when the new tab button is selected.
-   */
-  @Event() newTab: EventEmitter;
+  @Watch('activeTab')
+  watchActiveTab(newValue: string) {
+    this.guxactivetabchange.emit(newValue);
+  }
 
-  /**
-   * Triggers when a tab is selected.
-   */
-  @Event() input: EventEmitter;
+  @Listen('internalactivatetabpanel')
+  onInternalActivateTabPanel(event: CustomEvent): void {
+    event.stopPropagation();
 
-  /**
-   * Triggers when the sorting of the tabs is changed.
-   */
-  @Event() sortChanged: EventEmitter<string[]>;
+    this.activateTab(event.detail, this.tabList, this.tabPanels);
+  }
 
-  @Element()
-  private root: HTMLElement;
+  @Method()
+  async guxActivate(tabId: string): Promise<void> {
+    this.activateTab(tabId, this.tabList, this.tabPanels);
+  }
 
-  @State() private hasScrollbar: boolean = false;
-
-  private i18n: GetI18nValue;
-
-  private sortableInstance?: Sortable;
-
-  private resizeObserver?: ResizeObserver;
-
-  private domObserver?: MutationObserver;
-
-  @Watch('value')
-  watchHandler(newValue: string) {
-    const tabs: HTMLGuxTabElement[] = Array.from(
-      this.root.querySelectorAll('gux-tab')
+  private onSlotchange(): void {
+    const [tabListSlot, defaultSlot] = Array.from(
+      this.root.shadowRoot.querySelectorAll('slot')
     );
 
-    for (const tab of tabs) {
-      tab.active = tab.tabId === newValue;
-    }
+    this.tabList = tabListSlot.assignedElements()[0] as HTMLGuxTabListElement;
+    this.tabPanels = defaultSlot.assignedElements() as HTMLGuxTabPanelElement[];
+
+    this.activateTab(this.activeTab, this.tabList, this.tabPanels);
   }
 
-  @Listen('internaltabselected')
-  internaltabselectedHandler(e: CustomEvent) {
-    whenEventIsFrom('gux-tab', e, elem => {
-      const tab = elem as HTMLGuxTabElement;
-      if (!tab.active) {
-        this.value = tab.tabId;
-        this.input.emit();
-      }
-    });
-  }
-
-  createSortable() {
-    this.sortableInstance = new Sortable(this.root, {
-      animation: 250,
-      draggable: 'gux-tab',
-      filter: '.ignore-sort',
-      onMove: (event: MoveEvent) => {
-        return !event.related.classList.contains('ignore-sort');
-      },
-      onUpdate: () => {
-        const tabIds = Array.from(this.root.querySelectorAll('gux-tab')).map(
-          tabElement => tabElement.tabId
-        );
-        this.sortChanged.emit(tabIds);
-      }
-    });
-  }
-
-  destroySortable() {
-    if (this.sortableInstance) {
-      this.sortableInstance.destroy();
-      this.sortableInstance = null;
-    }
-  }
-
-  disconnectedCallback() {
-    if (this.sortableInstance) {
-      this.destroySortable();
+  private activateTab(
+    tabId: string,
+    tabList: HTMLGuxTabListElement,
+    panels: HTMLGuxTabPanelElement[]
+  ): void {
+    if (tabId) {
+      this.activeTab = tabId;
+    } else {
+      this.activeTab = panels[0].tabId;
     }
 
-    if (this.resizeObserver) {
-      this.resizeObserver.unobserve(
-        this.root.shadowRoot.querySelector('.gux-tabs')
-      );
-    }
-
-    if (this.domObserver) {
-      this.domObserver.disconnect();
-    }
+    tabList.guxSetActive(this.activeTab);
+    panels.forEach(panel => panel.guxSetActive(panel.tabId === this.activeTab));
   }
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     trackComponent(this.root);
-    this.i18n = await buildI18nForComponent(this.root, tabsResources);
   }
 
-  componentWillRender() {
-    const tabs: HTMLGuxTabElement[] = Array.from(
-      this.root.querySelectorAll('gux-tab')
-    );
-    if (tabs.length >= this.tabLimit) {
-      this.disableAddTabButton = true;
-    }
-  }
-
-  checkForScrollbarHideOrShow() {
-    readTask(() => {
-      const el = this.root.shadowRoot.querySelector('.scrollable-section');
-      const hasScrollbar = el.clientWidth !== el.scrollWidth;
-
-      if (hasScrollbar !== this.hasScrollbar) {
-        this.hasScrollbar = hasScrollbar;
-      }
-    });
-  }
-
-  componentDidLoad() {
-    if (this.allowSort && !this.sortableInstance) {
-      this.createSortable();
-    }
-
-    if (!this.resizeObserver && window.ResizeObserver) {
-      this.resizeObserver = new ResizeObserver(
-        this.checkForScrollbarHideOrShow.bind(this)
-      );
-    }
-
-    if (this.resizeObserver) {
-      this.resizeObserver.observe(
-        this.root.shadowRoot.querySelector('.gux-tabs')
-      );
-    }
-
-    if (!this.domObserver && window.MutationObserver) {
-      this.domObserver = new MutationObserver(
-        this.checkForScrollbarHideOrShow.bind(this)
-      );
-    }
-
-    if (this.domObserver) {
-      this.domObserver.observe(this.root, {
-        childList: true,
-        attributes: false,
-        subtree: true
-      });
-    }
-
-    setTimeout(() => {
-      this.checkForScrollbarHideOrShow();
-    }, 500);
-  }
-
-  componentDidRender() {
-    setTimeout(() => {
-      readTask(() => {
-        if (this.value) {
-          const activeTab: any = this.root.querySelector(
-            `gux-tab[tab-id='${this.value}']`
-          );
-          if (activeTab) {
-            activeTab.active = true;
-          }
-        }
-      });
-    }, 500);
-  }
-
-  scrollLeft() {
-    writeTask(() => {
-      this.root.shadowRoot
-        .querySelector('.scrollable-section')
-        .scrollBy(-100, 0);
-    });
-  }
-
-  scrollRight() {
-    writeTask(() => {
-      this.root.shadowRoot
-        .querySelector('.scrollable-section')
-        .scrollBy(100, 0);
-    });
-  }
-
-  render() {
-    const AddNewTabButton = (props: { onClick: () => void }) => {
-      return (
-        <button
-          title={
-            this.disableAddTabButton
-              ? this.i18n('disableNewTab')
-              : this.i18n('createNewTab')
-          }
-          class="add-tab"
-          onClick={() => props.onClick()}
-          disabled={this.disableAddTabButton}
-        >
-          <gux-icon icon-name="add" decorative={true} />
-        </button>
-      );
-    };
+  render(): JSX.Element {
     return (
-      <div class="gux-tabs">
-        <div class="action-button-container">
-          {this.hasScrollbar ? (
-            <button
-              title={this.i18n('scrollLeft')}
-              class="arrow-button"
-              onClick={() => this.scrollLeft()}
-            >
-              <gux-icon icon-name="chevron-left" decorative={true} />
-            </button>
-          ) : null}
+      <Host>
+        <div class={`gux-tabs gux-${this.alignment} gux-${this.orientation}`}>
+          <slot name="tab-list"></slot>
+          <div class={`gux-${this.alignment} gux-${this.orientation}`}>
+            <slot onSlotchange={this.onSlotchange.bind(this)}></slot>
+          </div>
         </div>
-        <div class="scrollable-section">
-          <slot />
-          {this.showNewTabButton && !this.hasScrollbar ? (
-            <AddNewTabButton onClick={() => this.newTab.emit()} />
-          ) : null}
-        </div>
-        <div class="action-button-container">
-          {this.hasScrollbar ? (
-            <button
-              title={this.i18n('scrollRight')}
-              class="arrow-button"
-              onClick={() => this.scrollRight()}
-            >
-              <gux-icon icon-name="chevron-right" decorative={true} />
-            </button>
-          ) : null}
-
-          {this.showNewTabButton && this.hasScrollbar ? (
-            <AddNewTabButton onClick={() => this.newTab.emit()} />
-          ) : null}
-        </div>
-      </div>
+      </Host>
     );
   }
 }

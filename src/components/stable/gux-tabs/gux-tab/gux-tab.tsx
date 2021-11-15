@@ -1,134 +1,88 @@
 import {
   Component,
-  Element,
   Event,
   EventEmitter,
   h,
-  JSX,
+  Listen,
+  Method,
   Prop,
-  State,
-  writeTask
+  State
 } from '@stencil/core';
-
-import { eventIsFrom } from '../../../../utils/dom/event-is-from';
-import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
 @Component({
   styleUrl: 'gux-tab.less',
-  tag: 'gux-tab'
+  tag: 'gux-tab',
+  shadow: false
 })
 export class GuxTab {
-  private dropdownOptionsButtonId: string = randomHTMLId();
-  /**
-   * unique id for the tab
-   */
-  @Prop() tabId: string;
+  private buttonElement: HTMLButtonElement;
 
   /**
-   * indicates whether or not the tab is selected
+   * Tab id for the tab
    */
-  @Prop() active: boolean = false;
+  @Prop()
+  tabId: string;
 
   /**
-   * indicates the gux-icon to display on the left side of the tab (similar to a favicon in the browser)
+   * Specifies if tab is disabled
    */
-  @Prop() tabIconName: string;
+  @Prop()
+  guxDisabled: boolean = false;
 
-  @State() private popoverHidden: boolean = true;
-  @State() private hasAnimated: boolean = false;
+  /**
+   * Specifies if the tab title is just an icon
+   */
+  @Prop()
+  iconOnly: boolean = false;
 
-  @Element()
-  private root: HTMLElement;
+  @State()
+  active: boolean = false;
+
+  @Listen('click')
+  onClick() {
+    if (!this.active && !this.guxDisabled) {
+      this.internalactivatetabpanel.emit(this.tabId);
+    }
+  }
 
   @Event()
-  private internaltabselected: EventEmitter<void>;
+  internalactivatetabpanel: EventEmitter<string>;
 
-  private get hasDropdownOptions(): boolean {
-    return Boolean(this.root.querySelector('[slot="dropdown-options"]'));
+  @Method()
+  async guxSetActive(active: boolean): Promise<void> {
+    this.active = active;
   }
 
-  private toggleOptions(): void {
-    this.popoverHidden = !this.popoverHidden;
+  @Method()
+  async guxFocus(): Promise<void> {
+    this.buttonElement.focus();
   }
 
-  private onSelectDropdownOption(e: MouseEvent): void {
-    this.popoverHidden = true;
-    e.stopPropagation();
+  @Method()
+  async guxGetActive() {
+    return this.active;
   }
 
-  private selectTab(e: MouseEvent): void {
-    if (eventIsFrom('.gux-tab-options-button', e)) {
-      return;
-    }
-
-    this.popoverHidden = true;
-    this.internaltabselected.emit();
-  }
-
-  private popoverOnClick(e: MouseEvent): void {
-    e.stopPropagation();
-  }
-
-  private getDropdownOptions(): JSX.Element {
-    if (this.hasDropdownOptions) {
-      return [
-        <button
-          id={this.dropdownOptionsButtonId}
-          type="button"
-          class="gux-tab-options-button"
-          onClick={() => this.toggleOptions()}
-        >
-          <gux-icon
-            icon-name="menu-kebab-vertical"
-            decorative={true}
-          ></gux-icon>
-        </button>,
-        <gux-popover
-          position="top-end"
-          for={this.dropdownOptionsButtonId}
-          displayDismissButton={false}
-          hidden={this.popoverHidden}
-          closeOnClickOutside={true}
-          onGuxdismiss={() => (this.popoverHidden = true)}
-          onClick={(e: MouseEvent) => this.popoverOnClick(e)}
-        >
-          <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
-            <slot name="dropdown-options" />
-          </div>
-        </gux-popover>
-      ];
-    }
-
-    return null;
-  }
-
-  componentDidLoad(): void {
-    if (!this.hasAnimated) {
-      writeTask(() => {
-        this.root.querySelector('.gux-tab').classList.add('gux-show');
-        this.hasAnimated = true;
-      });
-    }
-  }
-
-  render(): JSX.Element {
+  render() {
     return (
       <button
+        class={{
+          'gux-disabled': this.guxDisabled,
+          'gux-tab': true,
+          'gux-active': this.active
+        }}
         type="button"
-        class={`gux-tab ${this.active ? 'selected' : ''}`}
-        onClick={e => this.selectTab(e)}
-        role="button"
+        aria-disabled={this.guxDisabled.toString()}
+        id={`gux-${this.tabId}-tab`}
+        role="tab"
+        aria-controls={`gux-${this.tabId}-panel`}
+        aria-selected={this.active.toString()}
+        tabIndex={this.active ? 0 : -1}
+        ref={el => (this.buttonElement = el)}
       >
-        {this.tabIconName ? (
-          <div class="tab-icon-container">
-            <gux-icon icon-name={this.tabIconName} decorative={true}></gux-icon>
-          </div>
-        ) : null}
-        <span class="tab-title">
-          <slot name="title" />
-        </span>
-
-        {this.getDropdownOptions()}
+        <gux-tooltip-title tab-width={122}>
+          <slot />
+        </gux-tooltip-title>
       </button>
     );
   }

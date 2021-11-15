@@ -1,4 +1,6 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 describe('gux-button', () => {
   describe('#render', () => {
@@ -55,11 +57,12 @@ describe('gux-button', () => {
       }
     ].forEach(({ description, html, clickable }) => {
       it(description, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-button');
         const onClickSpy = await element.spyOnEvent('click');
         const expectOnclickEvents = clickable ? 1 : 0;
 
+        await a11yCheck(page, axeExclusions);
         expect(element.outerHTML).toMatchSnapshot();
 
         await element.click();
@@ -74,7 +77,7 @@ describe('gux-button', () => {
     it('should fire a click event when an enabled button slot content is clicked', async () => {
       const html =
         '<gux-button gux-title="default"><span>Span</span></gux-button>';
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-button');
       const onClickSpy = await element.spyOnEvent('click');
       const span = await page.find('span');
@@ -88,7 +91,7 @@ describe('gux-button', () => {
     it('should not fire a click event when a disabled button slot content is clicked', async () => {
       const html =
         '<gux-button gux-title="default" disabled><span>Span</span></gux-button>';
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-button');
       const onClickSpy = await element.spyOnEvent('click');
       const span = await page.find('span');
@@ -102,7 +105,7 @@ describe('gux-button', () => {
   describe('focus', () => {
     it('should be programmatically focusable', async () => {
       const html = '<gux-button>Button</gux-button>';
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-button');
 
       await element.callMethod('focusElement');

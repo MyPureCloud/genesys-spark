@@ -8,8 +8,12 @@ String[] mailingList = [
 ]
 
 
-def isActiveReleaseBranch() {
+def isMasterBranch() {
   return env.SHORT_BRANCH.equals('master');
+}
+
+def isActiveReleaseBranch() {
+  return env.SHORT_BRANCH.equals('maintenance/v2');
 }
 
 def isMaintenanceReleaseBranch() {
@@ -21,7 +25,7 @@ def isFeatureBranch() {
 }
 
 def isReleaseBranch() {
-  return isActiveReleaseBranch() || isMaintenanceReleaseBranch();
+  return isMasterBranch() || isActiveReleaseBranch() || isMaintenanceReleaseBranch();
 }
 
 
@@ -51,7 +55,7 @@ pipeline {
   }
 
   tools {
-    nodejs "NodeJS 12.13.0"
+    nodejs "NodeJS 14.8.0"
   }
 
   stages {
@@ -104,7 +108,7 @@ pipeline {
           sh "${env.WORKSPACE}/${env.NPM_UTIL_PATH}/scripts/jenkins-create-npmrc.sh"
           sh "cp .npmrc docs/.npmrc"
           sh "npm ci"
-          sh "npm i --no-save @purecloud/web-app-deploy@latest"
+          sh "npm i --no-save @purecloud/web-app-deploy@6.0"
         }
       }
     }
@@ -113,7 +117,7 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           sh "npm run lint"
-          sh "npm run test.ci"
+          sh "npm run test.ci.spec"
         }
       }
     }
@@ -175,7 +179,7 @@ pipeline {
       steps {
         dir(env.REPO_DIR) {
           script {
-            sh "npm publish"
+            sh "npm publish --tag alpha"
             sshagent(credentials: ['3aa16916-868b-4290-a9ee-b1a05343667e']) {
               sh "git push --follow-tags -u origin ${env.SHORT_BRANCH}"
             }

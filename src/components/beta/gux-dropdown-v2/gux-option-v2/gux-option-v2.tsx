@@ -1,4 +1,4 @@
-import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, Host, JSX, Listen, Prop } from '@stencil/core';
 
 import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
@@ -9,10 +9,6 @@ import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 export class GuxOptionV2 {
   @Element()
   root: HTMLElement;
-
-  // text prop removed
-  // @Prop()
-  // text: string;
 
   @Prop()
   value: string;
@@ -26,10 +22,21 @@ export class GuxOptionV2 {
   @Prop()
   disabled: boolean = false;
 
-  // shouldFilter method removed
-  // @Method()
-  // shouldFilter(searchInput: string): Promise<boolean> {
-  // }
+  @Prop()
+  filtered: boolean = false;
+
+  @Prop({ mutable: true })
+  hovered: boolean = false;
+
+  @Listen('mouseenter')
+  onmouseenter() {
+    this.hovered = true;
+  }
+
+  @Listen('mouseleave')
+  onMouseleave() {
+    this.hovered = false;
+  }
 
   componentWillLoad(): void {
     this.root.id = this.root.id || randomHTMLId('gux-option-v2');
@@ -49,8 +56,10 @@ export class GuxOptionV2 {
         role="option"
         class={{
           'gux-active': this.active,
-          'gux-selected': this.selected,
-          'gux-disabled': this.disabled
+          'gux-disabled': this.disabled,
+          'gux-filtered': this.filtered,
+          'gux-hovered': this.hovered,
+          'gux-selected': this.selected
         }}
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}

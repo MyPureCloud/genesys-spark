@@ -1,45 +1,51 @@
-<div>
-  <span [id]="target1" (mouseenter)="show($event)">Example Element</span>
-  <gux-popover hidden position="top" [attr.for]="target1">
-    <div>popover content</div>
-  </gux-popover>
-</div>
+<form [formGroup]="editConfigurationForm" (ngSubmit)="onFormSubmit()">
+  <gux-form-field label-position="above" clearable>
+    <input
+      id="config-name"
+      slot="input"
+      name="name"
+      type="text"
+      formControlName="name"
+      value=""
+      placeholder="Please enter a configuration name"
+    />
+    <label slot="label" for="config-name">Name</label>
+    <span *ngIf="showNameError" slot="error">This is a required field</span>
+  </gux-form-field>
 
-<div>
-  <span [id]="target2" (mouseenter)="show($event)">Example Element</span>
-  <gux-popover hidden position="top" [attr.for]="target2">
-    <div>popover content</div>
-  </gux-popover>
-</div>
+  <gux-form-field label-position="above" clearable>
+    <input
+      id="config-description"
+      slot="input"
+      name="description"
+      type="text"
+      formControlName="description"
+      placeholder="Please enter a configuration description"
+    />
+    <label slot="label" for="config-description">Description</label>
+    <span *ngIf="showDescriptionError" slot="error"
+      >This is a required field</span
+    >
+  </gux-form-field>
 
-<div>
-  <span
-    [id]="target3"
-    (mouseenter)="idForPopOver = target3; $event.stopPropagation()"
-    >Example Element</span
-  >
-  <gux-popover
-    (guxdismiss)="idForPopOver = null"
-    *ngIf="popOverShown(target3)"
-    position="top"
-    [attr.for]="target3"
-  >
-    <div>popover content</div>
-  </gux-popover>
-</div>
+  <gux-form-field label-position="above" clearable>
+    <input
+      id="text-1"
+      slot="input"
+      name="text-1"
+      type="text"
+      formControlName="text-1"
+      placeholder="Please enter a value"
+    />
+    <label slot="label" for="text-1">Text 1</label>
+    <span *ngIf="showText1Error" slot="error">This is a required field</span>
+  </gux-form-field>
 
-<div>
-  <span
-    [id]="target4"
-    (mouseenter)="idForPopOver = target4; $event.stopPropagation()"
-    >Example Element</span
-  >
-  <gux-popover
-    (guxdismiss)="idForPopOver = null"
-    *ngIf="popOverShown(target4)"
-    position="top"
-    [attr.for]="target4"
-  >
-    <div>popover content</div>
-  </gux-popover>
-</div>
+  <div>showNameError: {{ showNameError }}</div>
+  <div>showDescriptionError: {{ showDescriptionError }}</div>
+  <div>showText1Error: {{ showText1Error }}</div>
+
+  <div *ngIf="showNameError">Name</div>
+  <div *ngIf="showDescriptionError">Description</div>
+  <div *ngIf="showText1Error">Text 1</div>
+</form>
