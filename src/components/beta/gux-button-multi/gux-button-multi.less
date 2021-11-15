@@ -1,24 +1,22 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/typography.less';
 
-// Variables part
-
-gux-button-multi {
+:host {
   display: block;
   .body-font();
+}
 
-  .gux-button-multi-container {
-    .gux-dropdown-button {
-      button {
-        & > * {
-          vertical-align: middle;
-        }
+.gux-button-multi-container {
+  .gux-dropdown-button {
+    button {
+      & > * {
+        vertical-align: middle;
+      }
 
-        gux-icon {
-          width: 16px;
-          height: 16px;
-          margin-left: 8px;
-        }
+      gux-icon {
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
       }
     }
   }

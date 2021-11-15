@@ -17,7 +17,7 @@ function toHaveNoViolations(axeViolations, axeScanDetails) {
         if (
           exclusion.issueId === violation.id &&
           (!exclusion.target ||
-            exclusion.target === violationInstance.target[0])
+            exclusion.target === violationInstance.target[0].toString())
         ) {
           excludedElement = true;
         }
