@@ -666,7 +666,11 @@ export class GuxDatepicker {
         >
           {this.getCalendarLabels()[0]}
         </label>
-        <div class="gux-datepicker-field-input">
+        <div
+          class={`gux-datepicker-field-input ${
+            this.disabled ? 'gux-disabled' : ''
+          }`}
+        >
           <div class="gux-datepicker-field-text-input">
             <input
               id={this.startInputId}
@@ -693,7 +697,11 @@ export class GuxDatepicker {
         <label htmlFor={this.endInputId} class="gux-datepicker-field-label">
           {this.getCalendarLabels()[1]}
         </label>
-        <div class="gux-datepicker-field-input">
+        <div
+          class={`gux-datepicker-field-input ${
+            this.disabled ? 'gux-disabled' : ''
+          }`}
+        >
           <div class="gux-datepicker-field-text-input">
             <input
               id={this.endInputId}

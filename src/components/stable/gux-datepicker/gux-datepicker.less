@@ -10,7 +10,6 @@ gux-datepicker {
     &.gux-disabled {
       pointer-events: none;
       cursor: default;
-      opacity: 0.5;
     }
 
     .gux-datepicker-field {
@@ -41,6 +40,10 @@ gux-datepicker {
         align-self: auto;
         order: 0;
         margin: 4px 0;
+
+        &.gux-disabled {
+          opacity: 0.5;
+        }
 
         .gux-datepicker-field-text-input {
           box-sizing: border-box;
