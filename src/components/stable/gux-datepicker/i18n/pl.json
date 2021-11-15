@@ -1,4 +1,6 @@
 {
   "start": "Rozpoczęcie",
-  "end": "Zakończenie"
+  "end": "Zakończenie",
+  "date": "Data",
+  "toggleCalendar": "Przełącz widok kalendarza"
 }
