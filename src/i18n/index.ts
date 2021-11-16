@@ -30,8 +30,24 @@ export async function buildI18nForComponent(
     return map;
   }, new Map<string, IntlMessageFormat>());
 
-  return (resourceKey: string, context?: any): string =>
-    intlFormats.get(resourceKey)?.format(context) as string;
+  const defaultFormats = Object.entries(defaultResources).reduce(
+    (map, [key, val]) => {
+      map.set(key, new IntlMessageFormat(val, DEFAULT_LOCALE));
+      return map;
+    },
+    new Map<string, IntlMessageFormat>()
+  );
+
+  return (resourceKey: string, context?: any): string => {
+    let i18nString = intlFormats.get(resourceKey)?.format(context) as string;
+    if (!i18nString) {
+      i18nString = defaultFormats.get(resourceKey)?.format(context) as string;
+      console.warn(
+        `No localized string available for "${i18nString}" for "${locale}" locale. Falling back to English translation.`
+      );
+    }
+    return i18nString;
+  };
 }
 
 export async function getComponentI18nResources(

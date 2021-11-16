@@ -122,6 +122,10 @@ export class GuxPaginationButtons {
         <div class="gux-pagination-buttons-input">
           <gux-input-text-like>
             <input
+              aria-label={this.i18n('pageInputLabel', {
+                currentPage: this.currentPage,
+                totalPages: this.totalPages
+              })}
               slot="input"
               value={String(this.currentPage)}
               ref={ref => (this.textFieldRef = ref)}

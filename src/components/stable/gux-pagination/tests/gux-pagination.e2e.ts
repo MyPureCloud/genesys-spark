@@ -1,5 +1,13 @@
-import { newE2EPage } from '@stencil/core/testing';
-import { E2EGuxDropdown } from '../../gux-dropdown/gux-dropdown.e2eelement';
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
+import { a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [
+  {
+    issueId: 'duplicate-id',
+    exclusionReason:
+      'Test uses seeded value for Math.random, so duplicate ids are expected'
+  }
+];
 
 async function newNonrandomE2EPage({
   html
@@ -12,6 +20,10 @@ async function newNonrandomE2EPage({
     Math.random = () => 0.5;
   });
   await page.setContent(html);
+  await page.waitForChanges();
+  await page.addScriptTag({
+    path: 'node_modules/axe-core/axe.min.js'
+  });
   await page.waitForChanges();
 
   return page;
@@ -43,8 +55,9 @@ describe('gux-pagination', () => {
         `;
         const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-pagination');
+        await a11yCheck(page, axeExclusions);
 
-        expect(element.innerHTML).toMatchSnapshot();
+        expect(element.outerHTML).toMatchSnapshot();
       });
     });
   });

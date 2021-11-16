@@ -84,7 +84,7 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="1">
+                  <input aria-label="Page 1 of 40" slot="input" value="1">
                 </gux-input-text-like>
               </div>
               <div>
@@ -195,7 +195,7 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="1">
+                  <input aria-label="Page 1 of 20" slot="input" value="1">
                 </gux-input-text-like>
               </div>
               <div>
@@ -306,7 +306,7 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="1">
+                  <input aria-label="Page 1 of 14" slot="input" value="1">
                 </gux-input-text-like>
               </div>
               <div>
@@ -417,7 +417,7 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="1">
+                  <input aria-label="Page 1 of 10" slot="input" value="1">
                 </gux-input-text-like>
               </div>
               <div>
@@ -528,7 +528,7 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="1">
+                  <input aria-label="Page 1 of 40" slot="input" value="1">
                 </gux-input-text-like>
               </div>
               <div>
@@ -639,7 +639,7 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="10">
+                  <input aria-label="Page 10 of 40" slot="input" value="10">
                 </gux-input-text-like>
               </div>
               <div>
@@ -750,7 +750,7 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="10">
+                  <input aria-label="Page 10 of 20" slot="input" value="10">
                 </gux-input-text-like>
               </div>
               <div>
@@ -861,7 +861,7 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="10">
+                  <input aria-label="Page 10 of 14" slot="input" value="10">
                 </gux-input-text-like>
               </div>
               <div>
@@ -972,7 +972,7 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="10">
+                  <input aria-label="Page 10 of 10" slot="input" value="10">
                 </gux-input-text-like>
               </div>
               <div>
