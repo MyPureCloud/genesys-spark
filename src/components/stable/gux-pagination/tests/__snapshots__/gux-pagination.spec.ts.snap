@@ -1135,7 +1135,7 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="1">
+                  <input aria-label="Page 1 of 40" slot="input" value="1">
                 </gux-input-text-like>
               </div>
               <div>
@@ -1246,7 +1246,7 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
               </div>
               <div class="gux-pagination-buttons-input">
                 <gux-input-text-like>
-                  <input slot="input" value="0">
+                  <input aria-label="Page 0 of 0" slot="input" value="0">
                 </gux-input-text-like>
               </div>
               <div>
