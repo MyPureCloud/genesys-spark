@@ -1,39 +1,38 @@
 @import (reference) '../../../style/color.less';
 
-// Variables part
+:host {
+  height: 100%;
+  color: @gux-type;
+}
 
-// Style
-gux-disclosure-button {
+.gux-disclosure-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   height: 100%;
 
-  .gux-disclosure-button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    height: 100%;
+  &.gux-right {
+    justify-content: flex-end;
+  }
 
-    &.gux-right {
-      justify-content: flex-end;
+  button.gux-disclosure-button {
+    width: 16px;
+    padding: 0;
+    margin: 0;
+    color: @gux-type;
+    background: transparent;
+    border-top: none;
+    border-right: 1px solid @gux-border;
+    border-bottom: none;
+    border-left: 1px solid @gux-border;
+
+    gux-icon {
+      width: 12px;
+      height: 12px;
     }
 
-    button.gux-disclosure-button {
-      width: 16px;
-      padding: 0;
-      margin: 0;
-      background: transparent;
-      border-top: none;
-      border-right: 1px solid;
-      border-bottom: none;
-      border-left: 1px solid;
-
-      gux-icon {
-        width: 12px;
-        height: 12px;
-      }
-
-      &:focus {
-        outline: none;
-      }
+    &:focus {
+      outline: none;
     }
   }
 
@@ -50,51 +49,4 @@ gux-disclosure-button {
       display: block;
     }
   }
-}
-
-// Theming
-
-// Dark
-.gux-disclosure-button-dark-theme {
-  color: @gux-type-dark;
-
-  .gux-disclosure-button-container button {
-    color: @gux-type-dark;
-    border-color: @gux-black-30;
-  }
-}
-
-.gux-dark-theme {
-  gux-disclosure-button {
-    .gux-disclosure-button-dark-theme();
-  }
-}
-
-gux-disclosure-button.gux-dark-theme {
-  .gux-disclosure-button-dark-theme();
-}
-
-// Light
-.gux-disclosure-button-light-theme {
-  color: @gux-type;
-
-  .gux-disclosure-button-container button.gux-disclosure-button {
-    color: @gux-type;
-    border-color: @gux-border;
-  }
-}
-
-.gux-light-theme {
-  gux-disclosure-button {
-    .gux-disclosure-button-light-theme();
-  }
-}
-
-gux-disclosure-button.gux-light-theme {
-  .gux-disclosure-button-light-theme();
-}
-
-// Default Theme
-gux-disclosure-button {
-  .gux-disclosure-button-light-theme();
 }
