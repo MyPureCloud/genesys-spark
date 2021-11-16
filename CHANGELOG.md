@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.2](https://inindca///compare/v3.0.0-alpha.1...v3.0.0-alpha.2) (2021-11-16)
+
+
+### Features
+
+* **gux column chart:** attempt diagonal hatching ([e03e6c8](https://inindca///commit/e03e6c8614a9fa6d214e02e39915ff6d20d6440f))
+* **gux column chart:** attempt diagonal hatching ([febbc44](https://inindca///commit/febbc442d8d6d9e3fef5308a307f793444349977))
+* **gux-chart-column, gux-chart-line:** rename & update props for charts ([8c4f3f4](https://inindca///commit/8c4f3f4c366f961ac9c6fee217c50121624e8b31))
+* **gux-chart:** extract defaults, throw errors without required fields, extract colors, examples ([cb7665d](https://inindca///commit/cb7665daa5ef5f98252b0c4e58a9588700703514))
+* **gux-chart:** fix failing chart tests ([d3a3f2f](https://inindca///commit/d3a3f2f15f3a2ce0906d7a076b76dffd2c305b43))
+* **gux-chart:** remove flaky test (chart width differs in jenkins env) ([9f90e31](https://inindca///commit/9f90e31a1a88c5ed96dd77489c229209d43dc656))
+* **gux-chart:** update stroke dash references to strokeDash ([8da5fed](https://inindca///commit/8da5fed53f92c1e4192482f601788cbda049d154))
+* **gux-chart:** use constants for all chart colors; add documentation for props ([0325ae6](https://inindca///commit/0325ae6bcfb7a8293ef637283427f9ee88fa076d))
+* **gux-column-chart:** additional column chart work ([58bdf05](https://inindca///commit/58bdf05fad111bc117ecc022b121ee3c579a9405))
+* **gux-column-chart:** better handling of default bar colors ([21f1e32](https://inindca///commit/21f1e327d9168ad5b8715905c2e8b96cc01b46d9))
+* **gux-column-chart:** creates initial gux-column-chart component ([6ef596e](https://inindca///commit/6ef596e9cab728470b26e40f53af52ce2f56d63f))
+* **gux-column-chart:** do not allow consumers to set chart encoding ([04ae254](https://inindca///commit/04ae254defd34c0106864ade961170a64640f004))
+* **gux-column-chart:** layered chart example ([d2fc9ab](https://inindca///commit/d2fc9aba5328af51af511f658118de361c3988e1))
+* **gux-line-chart:** add line chart component ([e37ee30](https://inindca///commit/e37ee305a20b59f511a2539d81f3a68eddf50fc3))
+* **gux-line-chart:** add line chart component ([9eaa0a1](https://inindca///commit/9eaa0a19bedd78b1f6c34d3032018af018692c5b))
+* **gux-line-chart:** add variation and color scale ([0f59eed](https://inindca///commit/0f59eedbc598b9e41a5aaad85ac97239b3dfd3f0))
+* **gux-line-chart:** extract chart details ([934c681](https://inindca///commit/934c6813c10568ef468320698e2cdd4f0375cefb))
+* **gux-line-chart:** update for consistency with column chart ([51f3fa5](https://inindca///commit/51f3fa5a2cf52589af72f2c49cf27a7ce51d640d))
+* **list:** explicitly set shadow dom on list component and dependencies ([c792179](https://inindca///commit/c792179e910d9ebd841760cbf963a1f11cc28cd9))
+* **stability-stage:** moved components to their v3 stability stage ([8c92642](https://inindca///commit/8c9264275d72a38b7620210df946670a592f11b2))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([21d1f47](https://inindca///commit/21d1f47a1dee47598597abcce0de11a981eca952))
+* **pr-comment:** addressed PR comments ([1d4c993](https://inindca///commit/1d4c993abab8ed43d456a9a13114c40969b54c25))
+
 ## [3.0.0-alpha.1](https://inindca///compare/v3.0.0-alpha.0...v3.0.0-alpha.1) (2021-11-12)
 
 
