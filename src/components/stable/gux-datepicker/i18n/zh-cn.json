@@ -1,4 +1,6 @@
 {
   "start": "开始",
-  "end": "结束"
+  "end": "结束",
+  "date": "日期",
+  "toggleCalendar": "切换日历视图"
 }

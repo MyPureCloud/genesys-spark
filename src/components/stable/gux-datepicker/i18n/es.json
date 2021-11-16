@@ -1,4 +1,6 @@
 {
   "start": "Inicio",
-  "end": "Fin"
+  "end": "Fin",
+  "date": "Fecha",
+  "toggleCalendar": "Alternar vista de calendario"
 }
