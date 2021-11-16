@@ -243,29 +243,36 @@ export class GuxTabAdvanced {
 
   render(): JSX.Element {
     return [
-      <button
-        type="button"
-        class={`gux-tab ${this.active ? 'selected' : ''}`}
-        role="tab"
-        aria-grabbed="true"
-        aria-selected={this.active.toString()}
+      <div
+        class={`gux-tab ${this.active ? 'gux-selected' : ''}`}
         aria-disabled={this.guxDisabled.toString()}
-        aria-controls={`gux-${this.tabId}-panel`}
-        ref={el => (this.buttonElement = el)}
-        tabIndex={this.active ? 0 : -1}
-        id={`gux-${this.tabId}-tab`}
       >
-        {this.tabIconName ? (
-          <div class="tab-icon-container">
-            <gux-icon icon-name={this.tabIconName} decorative={true}></gux-icon>
-          </div>
-        ) : null}
-        <span class="tab-title">
-          <slot name="title" />
-        </span>
+        <button
+          class="gux-tab-button"
+          type="button"
+          role="tab"
+          aria-grabbed="true"
+          aria-selected={this.active.toString()}
+          aria-controls={`gux-${this.tabId}-panel`}
+          ref={el => (this.buttonElement = el)}
+          tabIndex={this.active ? 0 : -1}
+          id={`gux-${this.tabId}-tab`}
+        >
+          {this.tabIconName ? (
+            <div class="tab-icon-container">
+              <gux-icon
+                icon-name={this.tabIconName}
+                decorative={true}
+              ></gux-icon>
+            </div>
+          ) : null}
+          <span class="tab-title">
+            <slot name="title" />
+          </span>
+        </button>
 
         {this.getDropdownOptions()}
-      </button>
+      </div>
     ];
   }
 }
