@@ -1,4 +1,6 @@
 {
   "start": "Start",
-  "end": "Ende"
+  "end": "Ende",
+  "date": "Datum",
+  "toggleCalendar": "Kalenderansicht umschalten"
 }
