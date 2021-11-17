@@ -30,61 +30,60 @@ async function newNonrandomE2EPage({
 describe('gux-tabs-advanced', () => {
   const html = `
     <gux-tabs-advanced lang="en" id="interactive">
-    <gux-tab-advanced-list slot="tab-list" show-new-tab-button="true">
-      <gux-tab-advanced tab-id="1-1" tab-icon-name="lock">
-        <span slot="title"> Hello World </span>
-        <span slot="dropdown-options">
-          <gux-tab-advanced-option
-            option-id="1"
-            icon-name="edit"
-            onclick="notify(event)"
-          >
-            Edit
-          </gux-tab-advanced-option>
-          <gux-tab-advanced-option
-            option-id="2"
-            icon-name="clone"
-            onclick="notify(event)"
-          >
-            Clone
-          </gux-tab-advanced-option>
-          <gux-tab-advanced-option
-            option-id="3"
-            icon-name="share"
-            onclick="notify(event)"
-          >
-            Share
-          </gux-tab-advanced-option>
-          <gux-tab-advanced-option
-            option-id="4"
-            icon-name="download"
-            onclick="notify(event)"
-          >
-            Download
-          </gux-tab-advanced-option>
-        </span>
+      <gux-tab-advanced-list slot="tab-list" show-new-tab-button="true">
+        <gux-tab-advanced tab-id="1-1" tab-icon-name="lock">
+          <span slot="title"> Hello World </span>
+          <span slot="dropdown-options">
+            <gux-tab-advanced-option
+              option-id="1"
+              icon-name="edit"
+              onclick="notify(event)"
+            >
+              Edit
+            </gux-tab-advanced-option>
+            <gux-tab-advanced-option
+              option-id="2"
+              icon-name="clone"
+              onclick="notify(event)"
+            >
+              Clone
+            </gux-tab-advanced-option>
+            <gux-tab-advanced-option
+              option-id="3"
+              icon-name="share"
+              onclick="notify(event)"
+            >
+              Share
+            </gux-tab-advanced-option>
+            <gux-tab-advanced-option
+              option-id="4"
+              icon-name="download"
+              onclick="notify(event)"
+            >
+              Download
+            </gux-tab-advanced-option>
+          </span>
+        </gux-tab-advanced>
+        <gux-tab-advanced tab-id="1-2" tab-icon-name="lock">
+          <span slot="title"> Hello World 2 </span>
+        </gux-tab-advanced>
+        <gux-tab-advanced gux-disabled tab-id="1-3" tab-icon-name="lock">
+        <span slot="title"> Hello World 3 </span>
       </gux-tab-advanced>
-      <gux-tab-advanced tab-id="1-2" tab-icon-name="lock">
-        <span slot="title"> Hello World 2 </span>
-      </gux-tab-advanced>
-      <gux-tab-advanced gux-disabled tab-id="1-3" tab-icon-name="lock">
-      <span slot="title"> Hello World 3 </span>
-    </gux-tab-advanced>
-    </gux-tab-advanced-list>
-    <gux-tab-advanced-panel tab-id="1-1">
-      <span>Tab content 1</span>
-      <div>The current time is: <span id="currentTime"></span></div>
-      <div>
-        The current selected panel tab-id is: <span id="currenttab-id"></span>
-      </div>
+      </gux-tab-advanced-list>
+      <gux-tab-advanced-panel tab-id="1-1">
+        <span>Tab content 1</span>
+        <div>The current time is: <span id="currentTime"></span></div>
+        <div>
+          The current selected panel tab-id is: <span id="currenttab-id"></span>
+        </div>
+      </gux-tab-advanced-panel>
+      <gux-tab-advanced-panel tab-id="1-2">
+        <span>Tab content 2</span>
+      </gux-tab-advanced-panel>
+      <gux-tab-advanced-panel tab-id="1-3">
+      <span>Tab content 3</span>
     </gux-tab-advanced-panel>
-    <gux-tab-advanced-panel tab-id="1-2">
-      <span>Tab content 2</span>
-    </gux-tab-advanced-panel>
-    <gux-tab-advanced-panel tab-id="1-3">
-    <span>Tab content 3</span>
-  </gux-tab-advanced-panel>
-
   </gux-tabs-advanced>
 `;
   describe('#render', () => {
@@ -141,6 +140,29 @@ describe('gux-tabs-advanced', () => {
       await page.waitForChanges();
 
       expect(spyOnActivePanelChangeEvent.length).toBe(0);
+    });
+    it('should open and close options popup on click', async () => {
+      const page = await newNonrandomE2EPage({ html });
+      const optionPopoverTarget = await page.find(
+        'gux-tab-advanced[tab-id="1-1"] .gux-tab-options-button'
+      );
+
+      optionPopoverTarget.click();
+      await page.waitForChanges();
+      await a11yCheck(page, axeExclusions, 'options popover expanded');
+
+      const optionPopover = await page.find(
+        'gux-tab-advanced[tab-id="1-1"] gux-popover'
+      );
+      let optionPopoverHidden = await optionPopover.getAttribute('hidden');
+
+      expect(optionPopoverHidden).toBe(null);
+
+      optionPopoverTarget.click();
+      await page.waitForChanges();
+      optionPopoverHidden = await optionPopover.getAttribute('hidden');
+
+      expect(optionPopoverHidden).toBe('');
     });
   });
 });
