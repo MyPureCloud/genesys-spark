@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.46.2](https://inindca///compare/v2.46.1...v2.46.2) (2021-11-17)
+
+
+### Bug Fixes
+
+* **i18n:** added a fallback for missing translations ([a02fb39](https://inindca///commit/a02fb391d9ea43d157c09478f0bafbca6bb2a6bf))
+* **pagination:** better handle invalid current page values ([ea5b87b](https://inindca///commit/ea5b87ba4a79e21bc4acd6abd746851bbffd574e))
+
 ### [2.46.1](https://inindca///compare/v2.46.0...v2.46.1) (2021-11-12)
 
 
