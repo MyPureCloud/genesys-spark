@@ -1,4 +1,6 @@
 {
   "start": "Başlangıç",
-  "end": "Bitiş"
+  "end": "Bitiş",
+  "date": "Tarih",
+  "toggleCalendar": "Takvim görünümünü değiştir"
 }

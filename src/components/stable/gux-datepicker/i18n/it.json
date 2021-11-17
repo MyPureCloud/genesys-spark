@@ -1,4 +1,6 @@
 {
   "start": "Inizio",
-  "end": "Fine"
+  "end": "Fine",
+  "date": "Data",
+  "toggleCalendar": "Attiva/disattiva vista calendario"
 }
