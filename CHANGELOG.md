@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.3](https://inindca///compare/v3.0.0-alpha.2...v3.0.0-alpha.3) (2021-11-17)
+
+
+### Features
+
+* **gux-pagination:** tests for modal, pagination and popover, add fallback for missing translations ([0666441](https://inindca///commit/0666441457fa5563a69de894d23fd1fbe7d63e45))
+* **playground:** add ember playground ([72fbd00](https://inindca///commit/72fbd00c3ccad7923b51784a870742d04c6fa81f))
+
+
+### Bug Fixes
+
+* **pagination:** better handle invalid current page values ([842ed55](https://inindca///commit/842ed5557686c680dbe2e17884d78b3c74885b4b))
+
 ## [3.0.0-alpha.2](https://inindca///compare/v3.0.0-alpha.1...v3.0.0-alpha.2) (2021-11-16)
 
 
