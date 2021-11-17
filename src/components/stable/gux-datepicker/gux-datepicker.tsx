@@ -111,6 +111,12 @@ export class GuxDatepicker {
   format: string = 'mm/dd/yyyy';
 
   /**
+   * Disable the input and prevent interactions.
+   */
+  @Prop()
+  disabled: boolean = false;
+
+  /**
    * The datepicker first week day (default to 0 (sunday))
    */
   @Prop()
@@ -633,6 +639,7 @@ export class GuxDatepicker {
         onClick={() => this.toggleCalendar()}
         aria-expanded={this.active.toString()}
         aria-label={this.i18n('toggleCalendar')}
+        disabled={this.disabled}
       >
         <gux-icon decorative icon-name="calendar"></gux-icon>
       </button>
@@ -673,6 +680,7 @@ export class GuxDatepicker {
               type="text"
               ref={(el: HTMLInputElement) => (this.inputElement = el)}
               value={this.formatedValue}
+              disabled={this.disabled}
             />
             {this.renderCalendarToggleButton()}
           </div>
@@ -699,6 +707,7 @@ export class GuxDatepicker {
               type="text"
               ref={(el: HTMLInputElement) => (this.toInputElement = el)}
               value={this.toFormatedValue}
+              disabled={this.disabled}
             />
             {this.renderCalendarToggleButton()}
           </div>
@@ -712,7 +721,8 @@ export class GuxDatepicker {
       <div
         class={{
           'gux-datepicker': true,
-          'gux-active': this.active
+          'gux-active': this.active,
+          'gux-disabled': this.disabled
         }}
         ref={(el: HTMLElement) => (this.datepickerElement = el)}
       >
