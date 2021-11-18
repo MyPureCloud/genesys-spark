@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.47.0](https://inindca///compare/v2.46.2...v2.47.0) (2021-11-18)
+
+
+### Features
+
+* **gux-datepicker:** added disabled prop ([c529bb0](https://inindca///commit/c529bb0a51e41f09003dffe2953751570a7f270c))
+
+
+### Bug Fixes
+
+* **gux-tabs-beta:** fix gux-tab-beta console errors ([92c9e6f](https://inindca///commit/92c9e6f1c3fd5f2e3a22812b62485a244d3d54f9))
+
 ### [2.46.2](https://inindca///compare/v2.46.1...v2.46.2) (2021-11-17)
 
 
