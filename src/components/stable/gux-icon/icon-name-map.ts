@@ -344,7 +344,6 @@ export const iconNameMap: Record<string, string> = {
   'ic-chevron-right': 'chevron-right',
   'ic-transfer': 'transfer',
   exchange: 'transfer',
-  trade: 'transfer',
 
   // Charts
   'ic-bar-graph-variable-1': 'graph-bar-horizontal',
