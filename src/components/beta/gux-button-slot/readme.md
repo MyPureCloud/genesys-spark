@@ -1,12 +1,12 @@
-# gux-button-switch
+# gux-button-slot
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-| Property | Attribute | Description           | Type                                     | Default       |
-| -------- | --------- | --------------------- | ---------------------------------------- | ------------- |
-| `accent` | `accent`  | The component accent. | `"primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| Property | Attribute | Description | Type                                     | Default       |
+| -------- | --------- | ----------- | ---------------------------------------- | ------------- |
+| `accent` | `accent`  |             | `"primary" \| "secondary" \| "tertiary"` | `'secondary'` |
 
 
 ## Slots
