@@ -29,7 +29,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import { whenEventIsFrom } from '../../../../utils/dom/when-event-is-from';
 import simulateNativeEvent from '../../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../../usage-tracking';
-import { logWarn } from '../../../../utils/error/log-error';
+import { logError } from '../../../../utils/error/log-error';
 
 import translationResources from './i18n/en.json';
 
@@ -179,7 +179,7 @@ export class GuxListbox {
         this.root.getAttribute('aria-labelledby')
       )
     ) {
-      logWarn(
+      logError(
         'gux-listbox',
         '`gux-listbox` requires a label. Either provide a label and associate it with the listbox using `aria-labelledby` or add an `aria-label` attribute to the gux-listbox element.'
       );

@@ -1,4 +1,6 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 describe('gux-panel-frame', () => {
   const headerSlot = '<div slot="header"><h1>Header</h1></div>';
@@ -17,8 +19,9 @@ describe('gux-panel-frame', () => {
       `<gux-panel-frame-beta>${headerSlot}${bodySlot}${invalidSlot}${footerSlot}</gux-panel-frame-beta>`
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-panel-frame-beta');
+        await a11yCheck(page, axeExclusions);
 
         expect(element.innerHTML).toMatchSnapshot();
       });

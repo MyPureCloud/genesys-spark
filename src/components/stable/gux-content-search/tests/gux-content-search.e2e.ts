@@ -1,4 +1,13 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [
+  {
+    issueId: 'color-contrast',
+    target: 'span',
+    exclusionReason:
+      'WCAG 1.4.3 Contrast (Minimum), inactive user interface components do not need to meet contrast minimum'
+  }
+];
 
 describe('gux-content-search', () => {
   describe('#render', () => {
@@ -97,13 +106,14 @@ describe('gux-content-search', () => {
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-content-search');
         const previousButton = await page.find('.gux-previous-button');
         const nextButton = await page.find('.gux-next-button');
         const clearButton = await page.find('.gux-clear-button');
         const input = await element.find('input');
         await page.waitForChanges();
+        a11yCheck(page, axeExclusions);
         expect(element.outerHTML).toMatchSnapshot();
 
         await previousButton.click();
@@ -130,11 +140,12 @@ describe('gux-content-search', () => {
 
   describe('clear button', () => {
     it('should appear when the value is not empty', async () => {
-      const page = await newE2EPage();
-
-      await page.setContent(
-        '<gux-content-search lang="en" current-match="1" match-count="20"><input type="text" /></gux-content-search>'
-      );
+      const page = await newSparkE2EPage({
+        html: `
+        <gux-content-search lang="en" current-match="1" match-count="20">
+          <input type="text" />
+        </gux-content-search>`
+      });
 
       let element = await page.find('gux-content-search');
       let clearButton = await page.find('.gux-clear-button');
@@ -178,11 +189,13 @@ describe('gux-content-search', () => {
       expect(matchCount).toBe(0);
     });
     it('should not clickable when the disable is true', async () => {
-      const page = await newE2EPage();
-
-      await page.setContent(
-        '<gux-content-search lang="en" current-match="1" match-count="20" ><input type="text" disabled="true" value="TEST" /></gux-content-search>'
-      );
+      const page = await newSparkE2EPage({
+        html: `
+        <gux-content-search lang="en" current-match="1" match-count="20" >
+          <input type="text" disabled="true" value="TEST" />
+        </gux-content-search>
+        `
+      });
 
       const element = await page.find('gux-content-search');
       const clearButton = await page.find('.gux-clear-button');
@@ -219,11 +232,11 @@ describe('gux-content-search', () => {
 
   describe('navigate buttons', () => {
     it('should appear when the value is not empty', async () => {
-      const page = await newE2EPage();
-
-      await page.setContent(
-        '<gux-content-search lang="en" current-match="1" match-count="3"><input type="text" value="Test"/></gux-content-search>'
-      );
+      const page = await newSparkE2EPage({
+        html: `
+        <gux-content-search lang="en" current-match="1" match-count="3"><input type="text" value="Test"/></gux-content-search>
+        `
+      });
 
       let element = await page.find('gux-content-search');
       let clearButton = await page.find('.gux-clear-button');
@@ -423,11 +436,9 @@ describe('gux-content-search', () => {
     });
 
     it('should be disabled when the match is zero', async () => {
-      const page = await newE2EPage();
-
-      await page.setContent(
-        '<gux-content-search lang="en" current-match="0" match-count="0"><input type="text" value="Test"/></gux-content-search>'
-      );
+      const page = await newSparkE2EPage({
+        html: `<gux-content-search lang="en" current-match="0" match-count="0"><input type="text" value="Test"/></gux-content-search>`
+      });
 
       let element = await page.find('gux-content-search');
       let clearButton = await page.find('.gux-clear-button');
@@ -501,11 +512,11 @@ describe('gux-content-search', () => {
     });
 
     it('should be disabled when the disabled is true', async () => {
-      const page = await newE2EPage();
-
-      await page.setContent(
-        '<gux-content-search lang="en" current-match="1" match-count="1"><input type="text" disabled="true" value="Test"/></gux-content-search>'
-      );
+      const page = await newSparkE2EPage({
+        html: `
+          <gux-content-search lang="en" current-match="1" match-count="1"><input type="text" disabled="true" value="Test"/></gux-content-search>
+        `
+      });
 
       let element = await page.find('gux-content-search');
       let clearButton = await page.find('.gux-clear-button');
@@ -584,11 +595,12 @@ describe('gux-content-search', () => {
 
   describe('Input Field', () => {
     it('should not allow key entry when disabled true', async () => {
-      const page = await newE2EPage();
+      const page = await newSparkE2EPage({
+        html: `
+        <gux-content-search lang="en" current-match="1" match-count="20"><input type="text" disabled="true" value="" /></gux-content-search>
+        `
+      });
 
-      await page.setContent(
-        '<gux-content-search lang="en" current-match="1" match-count="20"><input type="text" disabled="true" value="" /></gux-content-search>'
-      );
       const element = await page.find('gux-content-search');
       const clearButton = await page.find('.gux-clear-button');
       const input = await element.find('input');

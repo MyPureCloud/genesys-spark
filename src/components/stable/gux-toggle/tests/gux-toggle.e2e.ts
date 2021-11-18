@@ -1,8 +1,22 @@
-import { newE2EPage, E2EElement } from '@stencil/core/testing';
+import { E2EElement } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [
+  {
+    issueId: 'nested-interactive',
+    exclusionReason: 'Will be addressed in COMUI-732'
+  },
+  {
+    issueId: 'color-contrast',
+    target: '#disabledToggle,.gux-toggle-label-text',
+    exclusionReason:
+      'WCAG 1.4.3 Contrast (Minimum), inactive user interface components do not need to meet contrast minimum'
+  }
+];
 
 describe('gux-toggle', () => {
   it('should build', async () => {
-    const page = await newE2EPage({ html: `<gux-toggle></gux-toggle>` });
+    const page = await newSparkE2EPage({ html: `<gux-toggle></gux-toggle>` });
 
     const element = await page.find('gux-toggle');
 
@@ -11,11 +25,10 @@ describe('gux-toggle', () => {
 
   describe('#render', () => {
     [
-      '<gux-toggle></gux-toggle>',
-      '<gux-toggle checked></gux-toggle>',
-      '<gux-toggle checked disabled></gux-toggle>',
       '<gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>',
       '<gux-toggle checked checked-label="on" unchecked-label="off"></gux-toggle>',
+      '<gux-toggle id="disabledToggle" checked-label="On" unchecked-label="Off" disabled></gux-toggle>',
+      '<gux-toggle id="disabledToggle" checked checked-label="on" unchecked-label="off" disabled></gux-toggle>',
       `<gux-toggle
         checked-label="On"
         unchecked-label="Off"
@@ -40,8 +53,9 @@ describe('gux-toggle', () => {
       ></gux-toggle>`
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-toggle');
+        await a11yCheck(page, axeExclusions);
 
         expect(element.innerHTML).toMatchSnapshot();
       });
@@ -59,7 +73,7 @@ describe('gux-toggle', () => {
         it(`should not fire a check event when an enabled toggle is disabled and ${name}`, async () => {
           const html =
             '<gux-toggle disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
-          const page = await newE2EPage({ html });
+          const page = await newSparkE2EPage({ html });
           const element = await page.find('gux-toggle');
           const checkSpy = await element.spyOnEvent('check');
 
@@ -72,7 +86,7 @@ describe('gux-toggle', () => {
         it(`should fire a check event when an enabled toggle is ${name}`, async () => {
           const html =
             '<gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>';
-          const page = await newE2EPage({ html });
+          const page = await newSparkE2EPage({ html });
           const element = await page.find('gux-toggle');
           const checkSpy = await element.spyOnEvent('check');
 
@@ -85,7 +99,7 @@ describe('gux-toggle', () => {
         it(`should check an unchecked toggle when ${name}`, async () => {
           const html =
             '<gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>';
-          const page = await newE2EPage({ html });
+          const page = await newSparkE2EPage({ html });
           const element = await page.find('gux-toggle');
 
           expect(await element.getProperty('checked')).toBe(false);
@@ -99,10 +113,8 @@ describe('gux-toggle', () => {
         it(`should uncheck a checked toggle when ${name}`, async () => {
           const html =
             '<gux-toggle checked checked-label="On" unchecked-label="Off"></gux-toggle>';
-          const page = await newE2EPage({ html });
-          const element = (await page.find(
-            'gux-toggle'
-          )) as HTMLGuxToggleElement;
+          const page = await newSparkE2EPage({ html });
+          const element = await page.find('gux-toggle');
 
           expect(await element.getProperty('checked')).toBe(true);
 
@@ -115,10 +127,8 @@ describe('gux-toggle', () => {
         it(`should not check an unchecked toggle when disabled and ${name}`, async () => {
           const html =
             '<gux-toggle disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
-          const page = await newE2EPage({ html });
-          const element = (await page.find(
-            'gux-toggle'
-          )) as HTMLGuxToggleElement;
+          const page = await newSparkE2EPage({ html });
+          const element = await page.find('gux-toggle');
 
           expect(await element.getProperty('checked')).toBe(false);
 
@@ -131,10 +141,8 @@ describe('gux-toggle', () => {
         it(`should not uncheck a checked toggle when disabled and ${name}`, async () => {
           const html =
             '<gux-toggle checked disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
-          const page = await newE2EPage({ html });
-          const element = (await page.find(
-            'gux-toggle'
-          )) as HTMLGuxToggleElement;
+          const page = await newSparkE2EPage({ html });
+          const element = await page.find('gux-toggle');
 
           expect(await element.getProperty('checked')).toBe(true);
 
