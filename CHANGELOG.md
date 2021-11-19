@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.5](https://inindca///compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2021-11-19)
+
+
+### Features
+
+* **disclosure-button:** enabled shadow dom ([d7e179d](https://inindca///commit/d7e179db9af6397451a5901caab3e27f48b9ff78))
+* **icon:** enable shadow dom ([a2d07e1](https://inindca///commit/a2d07e15ef6966fc7d57e9bf09dd1d41daa224e1))
+
+
+### Bug Fixes
+
+* **gux-form-field:** added translations for gux-input-text-like and gux-input-search ([9aa91c8](https://inindca///commit/9aa91c8235523ce9006ce841e4be4cf2ea358cad))
+* **gux-icon:** remap trade icon to use correct icon ([d3c7010](https://inindca///commit/d3c7010d38755163ed2825a90b48c488c9d88cf4))
+* **input-range:** small styling change ([b255312](https://inindca///commit/b2553122f7b87156277de594adbd7eebc382f654))
+
 ## [3.0.0-alpha.4](https://inindca///compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2021-11-18)
 
 
