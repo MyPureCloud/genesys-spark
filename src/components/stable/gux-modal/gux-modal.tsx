@@ -34,7 +34,7 @@ export class GuxModal {
   size: GuxModalSize = 'dynamic';
 
   @Prop()
-  trapFocus: boolean = false;
+  trapFocus: boolean = true;
 
   /**
    * Query selector for the element to initially focus when the modal opens
