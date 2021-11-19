@@ -6,7 +6,8 @@ import {
   h,
   JSX,
   Listen,
-  Prop
+  Prop,
+  Watch
 } from '@stencil/core';
 import { createFocusTrap, FocusTrap } from 'focus-trap';
 import { trackComponent } from '../../../usage-tracking';
@@ -47,6 +48,15 @@ export class GuxModal {
    */
   @Event()
   guxdismiss: EventEmitter<void>;
+
+  @Watch('trapFocus')
+  watchTrapFocus(trapFocus: boolean): void {
+    if (trapFocus) {
+      this.focusTrap?.unpause();
+    } else {
+      this.focusTrap?.pause();
+    }
+  }
 
   @Listen('keydown')
   protected handleKeyEvent(event: KeyboardEvent) {
