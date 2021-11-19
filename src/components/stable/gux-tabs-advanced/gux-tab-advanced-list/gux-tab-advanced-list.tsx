@@ -112,7 +112,7 @@ export class GuxTabAdvancedList {
       eventIsFrom('.gux-scrollable-section', event) &&
       !this.keyboardSort
     ) {
-      this.ariaLiveAlert = 'sortInstructions';
+      this.ariaLiveAlert = 'toggleSort';
     }
   }
 

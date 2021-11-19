@@ -251,7 +251,6 @@ export class GuxTabAdvanced {
           class="gux-tab-button"
           type="button"
           role="tab"
-          aria-grabbed="true"
           aria-selected={this.active.toString()}
           aria-controls={`gux-${this.tabId}-panel`}
           ref={el => (this.buttonElement = el)}
