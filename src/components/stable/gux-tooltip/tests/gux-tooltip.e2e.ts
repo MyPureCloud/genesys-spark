@@ -1,4 +1,6 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -21,10 +23,11 @@ describe('gux-tooltip', () => {
       `
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
 
         const element = await page.find('#element');
         const tooltip = await page.find('gux-tooltip');
+        await a11yCheck(page, axeExclusions);
 
         expect(element.getAttribute('aria-describedby')).toBe(tooltip.id);
         expect(tooltip.getAttribute('data-popper-placement')).toBe(

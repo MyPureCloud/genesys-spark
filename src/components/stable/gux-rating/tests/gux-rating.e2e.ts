@@ -1,4 +1,7 @@
-import { E2EPage, newE2EPage } from '@stencil/core/testing';
+import { E2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+
+const axeExclusions = [];
 
 describe('gux-rating', () => {
   async function getStarCounts(
@@ -22,78 +25,79 @@ describe('gux-rating', () => {
   describe('#render', () => {
     [
       {
-        html: '<gux-rating></gux-rating>',
+        html: '<gux-rating aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 5, fullStars: 0, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="0"></gux-rating>',
+        html: '<gux-rating value="0" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 5, fullStars: 0, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="0.5"></gux-rating>',
+        html: '<gux-rating value="0.5" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 4, fullStars: 0, halfStars: 1 }
       },
       {
-        html: '<gux-rating value="1"></gux-rating>',
+        html: '<gux-rating value="1" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 4, fullStars: 1, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="1.5"></gux-rating>',
+        html: '<gux-rating value="1.5" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 3, fullStars: 1, halfStars: 1 }
       },
       {
-        html: '<gux-rating value="2"></gux-rating>',
+        html: '<gux-rating value="2" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="2.5"></gux-rating>',
+        html: '<gux-rating value="2.5" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 2, fullStars: 2, halfStars: 1 }
       },
       {
-        html: '<gux-rating value="3"></gux-rating>',
+        html: '<gux-rating value="3" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 2, fullStars: 3, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="3.5"></gux-rating>',
+        html: '<gux-rating value="3.5" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 1, fullStars: 3, halfStars: 1 }
       },
       {
-        html: '<gux-rating value="4"></gux-rating>',
+        html: '<gux-rating value="4" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 1, fullStars: 4, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="4.5"></gux-rating>',
+        html: '<gux-rating value="4.5" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 0, fullStars: 4, halfStars: 1 }
       },
       {
-        html: '<gux-rating value="5"></gux-rating>',
+        html: '<gux-rating value="5" aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 0, fullStars: 5, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="0" max-value=10></gux-rating>',
+        html: '<gux-rating value="0" max-value=10 aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 10, fullStars: 0, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="5" max-value=10></gux-rating>',
+        html: '<gux-rating value="5" max-value=10 aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 5, fullStars: 5, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="10" max-value=10></gux-rating>',
+        html: '<gux-rating value="10" max-value=10 aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 0, fullStars: 10, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="3" disabled></gux-rating>',
+        html: '<gux-rating value="3" disabled aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 2, fullStars: 3, halfStars: 0 }
       },
       {
-        html: '<gux-rating value="3" readonly></gux-rating>',
+        html: '<gux-rating value="3" readonly aria-label="Feedback"></gux-rating>',
         expctedStarCounts: { emptyStars: 2, fullStars: 3, halfStars: 0 }
       }
     ].forEach(({ html, expctedStarCounts }, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
 
         const element = await page.find('gux-rating');
+        await a11yCheck(page, axeExclusions);
 
         expect(element).toBeDefined();
         expect(await getStarCounts(page)).toEqual(expctedStarCounts);
@@ -124,8 +128,8 @@ describe('gux-rating', () => {
       let page: E2EPage;
 
       beforeEach(async () => {
-        page = await newE2EPage({
-          html: '<gux-rating></gux-rating>'
+        page = await newSparkE2EPage({
+          html: '<gux-rating aria-label="Feedback"></gux-rating>'
         });
       });
 
@@ -137,8 +141,8 @@ describe('gux-rating', () => {
         { starToClick: 5 }
       ].forEach(({ starToClick }, index) => {
         it(`should render 0 if star ${starToClick} is clicked but the component is disabled`, async () => {
-          page = await newE2EPage({
-            html: '<gux-rating disabled></gux-rating>'
+          page = await newSparkE2EPage({
+            html: '<gux-rating disabled aria-label="Feedback"></gux-rating>'
           });
 
           await clickStar(page, starToClick);
@@ -151,8 +155,8 @@ describe('gux-rating', () => {
         });
 
         it(`should render 0 if star ${starToClick} is clicked but the component is readonly`, async () => {
-          page = await newE2EPage({
-            html: '<gux-rating readonly></gux-rating>'
+          page = await newSparkE2EPage({
+            html: '<gux-rating readonly aria-label="Feedback"></gux-rating>'
           });
 
           await clickStar(page, starToClick);
@@ -205,8 +209,8 @@ describe('gux-rating', () => {
       let page: E2EPage;
 
       beforeEach(async () => {
-        page = await newE2EPage({
-          html: '<gux-rating value="2.5"></gux-rating>'
+        page = await newSparkE2EPage({
+          html: '<gux-rating value="2.5" aria-label="Feedback"></gux-rating>'
         });
       });
 

@@ -3,6 +3,7 @@ import { Component, Element, h, Host, Listen, JSX, Prop } from '@stencil/core';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import clamp from '../../../utils/number/clamp';
 import { trackComponent } from '../../../usage-tracking';
+import { logError } from '../../../utils/error/log-error';
 
 @Component({
   styleUrl: 'gux-rating.less',
@@ -118,12 +119,26 @@ export class GuxRating {
     trackComponent(this.root);
   }
 
+  componentDidLoad(): void {
+    if (
+      !(
+        this.root.getAttribute('aria-label') ||
+        this.root.getAttribute('aria-labelledby')
+      )
+    ) {
+      logError(
+        'gux-rating',
+        '`gux-rating` requires a label. Either provide a label and associate it with the gux-rating element using `aria-labelledby` or add an `aria-label` attribute to the gux-rating element.'
+      );
+    }
+  }
+
   render(): JSX.Element {
     return (
       <Host
         role="spinbutton"
         tabindex={this.getTabIndex()}
-        aria-readonly={this.readonly}
+        aria-readonly={this.readonly.toString()}
         aria-valuenow={this.value}
         aria-valuemin="0"
         aria-valuemax={this.maxValue}
