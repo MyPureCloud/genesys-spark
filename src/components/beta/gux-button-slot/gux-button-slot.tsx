@@ -1,5 +1,7 @@
 import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 
+import { trackComponent } from '../../../usage-tracking';
+import { logError } from '../../../utils/error/log-error';
 import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
 
 /**
@@ -7,32 +9,39 @@ import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
  */
 @Component({
   styleUrl: 'gux-button-slot.less',
-  tag: 'gux-button-slot-beta'
+  tag: 'gux-button-slot-beta',
+  shadow: true
 })
 export class GuxButtonSlot {
   @Element() root: HTMLElement;
-  /**
-   * The component accent.
-   */
+
   @Prop()
   accent: GuxButtonAccent = 'secondary';
 
-  componentWillLoad(): void {
-    const slottedTagName = this.root.children[0].tagName;
+  private validateSlotContent(): void {
+    const slottedElement = this.root.children[0];
+    const slottedTagName = slottedElement.tagName;
 
     if (slottedTagName === 'BUTTON') {
       return;
     } else if (slottedTagName === 'INPUT') {
-      const slottedInputType = this.root.children[0].getAttribute('type');
+      const slottedType = slottedElement.getAttribute('type');
 
-      if (slottedInputType === 'button' || slottedInputType === 'submit') {
+      if (slottedType === 'button' || slottedType === 'submit') {
         return;
       }
     }
 
-    console.error(
-      'gux-button-slot: You must slot a button, input[type="button"] or input[type="submit"] tag.'
+    logError(
+      'gux-button-slot',
+      'You must slot a button, input[type="button"] or input[type="submit"] element.'
     );
+  }
+
+  componentWillLoad(): void {
+    trackComponent(this.root);
+
+    this.validateSlotContent();
   }
 
   render(): JSX.Element {
