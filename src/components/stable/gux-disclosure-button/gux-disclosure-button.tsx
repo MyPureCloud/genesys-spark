@@ -11,7 +11,9 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
+import translationResources from './i18n/en.json';
 import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
 
 @Component({
@@ -20,6 +22,8 @@ import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
   shadow: true
 })
 export class GuxDisclosureButton {
+  private i18n: GetI18nValue;
+
   @Element()
   private root: HTMLElement;
 
@@ -33,7 +37,7 @@ export class GuxDisclosureButton {
    * Indicates the label for the disclosure button
    */
   @Prop()
-  label: string = 'open';
+  label: string;
 
   /**
    * Used to open or close the disclosure panel
@@ -55,20 +59,20 @@ export class GuxDisclosureButton {
   active: EventEmitter<boolean>;
 
   @Watch('isOpen')
-  watchIsOpen() {
+  watchIsOpen(): void {
     this.updateIcon();
   }
 
-  changeState() {
+  changeState(): void {
     this.togglePanel();
     this.active.emit(this.isOpen);
   }
 
-  togglePanel() {
+  togglePanel(): void {
     this.isOpen = !this.isOpen;
   }
 
-  updateIcon() {
+  updateIcon(): void {
     if (this.position === 'right') {
       this.icon = this.isOpen ? 'arrow-solid-right' : 'arrow-solid-left';
     } else {
@@ -76,8 +80,11 @@ export class GuxDisclosureButton {
     }
   }
 
-  componentWillLoad() {
+  async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.position });
+
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
+
     this.updateIcon();
   }
 
@@ -91,7 +98,7 @@ export class GuxDisclosureButton {
         >
           <gux-icon
             icon-name={`${this.icon}`}
-            screenreader-text={this.label}
+            screenreader-text={this.label || this.i18n('defaultLabel')}
           ></gux-icon>
         </button>
         <div class={`gux-disclosure-panel gux-${this.position} ${activeClass}`}>

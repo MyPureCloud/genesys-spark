@@ -5,7 +5,7 @@ const axeExclusions = [];
 describe('gux-disclosure-button', () => {
   it('should build', async () => {
     const page = await newSparkE2EPage({
-      html: `<gux-disclosure-button></gux-disclosure-button>`
+      html: `<gux-disclosure-button lang="en"></gux-disclosure-button>`
     });
     const element = await page.find('gux-disclosure-button');
 
@@ -14,13 +14,13 @@ describe('gux-disclosure-button', () => {
 
   describe('#render', () => {
     [
-      '<gux-disclosure-button></gux-disclosure-button>',
-      '<gux-disclosure-button is-open></gux-disclosure-button>',
-      '<gux-disclosure-button position="left"></gux-disclosure-button>',
-      '<gux-disclosure-button is-open position="left"></gux-disclosure-button>',
-      '<gux-disclosure-button position="right"></gux-disclosure-button>',
-      '<gux-disclosure-button is-open position="right"></gux-disclosure-button>',
-      '<gux-disclosure-button label="More Info"></gux-disclosure-button>'
+      '<gux-disclosure-button lang="en"></gux-disclosure-button>',
+      '<gux-disclosure-button lang="en" is-open></gux-disclosure-button>',
+      '<gux-disclosure-button lang="en" position="left"></gux-disclosure-button>',
+      '<gux-disclosure-button lang="en" is-open position="left"></gux-disclosure-button>',
+      '<gux-disclosure-button lang="en" position="right"></gux-disclosure-button>',
+      '<gux-disclosure-button lang="en" is-open position="right"></gux-disclosure-button>',
+      '<gux-disclosure-button lang="en" label="More Info"></gux-disclosure-button>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
@@ -39,7 +39,7 @@ describe('gux-disclosure-button', () => {
     describe('active', () => {
       it('should open when clicked', async () => {
         const page = await newSparkE2EPage({
-          html: '<gux-disclosure-button></gux-disclosure-button>'
+          html: '<gux-disclosure-button lang="en"></gux-disclosure-button>'
         });
         const element = (await page.find(
           'gux-disclosure-button'
@@ -72,7 +72,7 @@ describe('gux-disclosure-button', () => {
   describe('A11Y', () => {
     it('should be accessible when closed', async () => {
       const page = await newSparkE2EPage({
-        html: `<gux-disclosure-button></gux-disclosure-button>`
+        html: `<gux-disclosure-button lang="en"></gux-disclosure-button>`
       });
 
       await a11yCheck(page, axeExclusions);
@@ -80,7 +80,7 @@ describe('gux-disclosure-button', () => {
 
     it('should be accessible when open', async () => {
       const page = await newSparkE2EPage({
-        html: `<gux-disclosure-button is-open></gux-disclosure-button>`
+        html: `<gux-disclosure-button lang="en" is-open></gux-disclosure-button>`
       });
 
       await a11yCheck(page, axeExclusions);

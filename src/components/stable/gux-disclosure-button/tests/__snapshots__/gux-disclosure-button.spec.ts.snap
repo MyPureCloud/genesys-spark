@@ -5,7 +5,7 @@ exports[`gux-disclosure-button #render should render component as expected (1) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
       <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-right" screenreader-text="open"></gux-icon>
+        <gux-icon icon-name="arrow-solid-right" screenreader-text="Open"></gux-icon>
       </button>
       <div class="gux-disclosure-panel gux-left">
         <slot name="panel-content"></slot>
@@ -20,7 +20,7 @@ exports[`gux-disclosure-button #render should render component as expected (2) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
       <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-left" screenreader-text="open"></gux-icon>
+        <gux-icon icon-name="arrow-solid-left" screenreader-text="Open"></gux-icon>
       </button>
       <div class="gux-active gux-disclosure-panel gux-left">
         <slot name="panel-content"></slot>
@@ -35,7 +35,7 @@ exports[`gux-disclosure-button #render should render component as expected (3) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
       <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-right" screenreader-text="open"></gux-icon>
+        <gux-icon icon-name="arrow-solid-right" screenreader-text="Open"></gux-icon>
       </button>
       <div class="gux-disclosure-panel gux-left">
         <slot name="panel-content"></slot>
@@ -50,7 +50,7 @@ exports[`gux-disclosure-button #render should render component as expected (4) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
       <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-left" screenreader-text="open"></gux-icon>
+        <gux-icon icon-name="arrow-solid-left" screenreader-text="Open"></gux-icon>
       </button>
       <div class="gux-active gux-disclosure-panel gux-left">
         <slot name="panel-content"></slot>
@@ -65,7 +65,7 @@ exports[`gux-disclosure-button #render should render component as expected (5) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-right">
       <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-left" screenreader-text="open"></gux-icon>
+        <gux-icon icon-name="arrow-solid-left" screenreader-text="Open"></gux-icon>
       </button>
       <div class="gux-disclosure-panel gux-right">
         <slot name="panel-content"></slot>
@@ -80,7 +80,7 @@ exports[`gux-disclosure-button #render should render component as expected (6) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-right">
       <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-right" screenreader-text="open"></gux-icon>
+        <gux-icon icon-name="arrow-solid-right" screenreader-text="Open"></gux-icon>
       </button>
       <div class="gux-active gux-disclosure-panel gux-right">
         <slot name="panel-content"></slot>
