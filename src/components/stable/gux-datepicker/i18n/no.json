@@ -1,4 +1,6 @@
 {
   "start": "Start",
-  "end": "Slutt"
+  "end": "Slutt",
+  "date": "Dato",
+  "toggleCalendar": "Veksle kalendervisning"
 }
