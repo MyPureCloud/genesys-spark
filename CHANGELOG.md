@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.47.1](https://inindca///compare/v2.47.0...v2.47.1) (2021-11-19)
+
+
+### Bug Fixes
+
+* **gux-icon:** remap trade icon to use correct icon ([f76ec10](https://inindca///commit/f76ec10881b4792cc3520274f1d0a67ee81dd537))
+* **input-range:** small styling change ([be35a8c](https://inindca///commit/be35a8c48f76b06295329e32a90bec51310bf322))
+
 ## [2.47.0](https://inindca///compare/v2.46.2...v2.47.0) (2021-11-18)
 
 
