@@ -119,7 +119,7 @@ export class GuxTabList {
   }
 
   setTriggerIds() {
-    if (this.tabTriggers.length) {
+    if (this.tabTriggers) {
       this.triggerIds = Array.from(this.tabTriggers)
         .map(trigger => `gux-${trigger.getAttribute('tab-id')}-tab`)
         .join(' ');

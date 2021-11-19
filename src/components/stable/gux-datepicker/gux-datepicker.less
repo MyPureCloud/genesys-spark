@@ -7,6 +7,17 @@ gux-datepicker {
   .gux-datepicker {
     display: inline-block;
 
+    &.gux-disabled {
+      pointer-events: none;
+      cursor: default;
+
+      .gux-datepicker-field {
+        .gux-datepicker-field-input {
+          opacity: 0.5;
+        }
+      }
+    }
+
     .gux-datepicker-field {
       display: inline-flex;
       flex-direction: row;

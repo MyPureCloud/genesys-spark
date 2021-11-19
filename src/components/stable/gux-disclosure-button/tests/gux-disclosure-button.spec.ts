@@ -1,31 +1,113 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxDisclosureButton } from '../gux-disclosure-button';
 
+const components = [GuxDisclosureButton];
+const language = 'en';
+
 describe('gux-disclosure-button', () => {
-  let component: GuxDisclosureButton;
-
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxDisclosureButton],
-      html: `<gux-disclosure-button></gux-disclosure-button>`,
-      language: 'en'
-    });
-
-    component = page.rootInstance;
-  });
-
   it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxDisclosureButton);
+    const page = await newSpecPage({
+      components,
+      html: '<gux-disclosure-button></gux-disclosure-button>',
+      language
+    });
+    expect(page.rootInstance).toBeInstanceOf(GuxDisclosureButton);
   });
 
-  describe('Class Logic', () => {
-    describe('togglePanel', () => {
-      it('should toggle the isOpen property', async () => {
-        expect(component.isOpen).toBe(false);
+  describe('#render', () => {
+    [
+      '<gux-disclosure-button></gux-disclosure-button>',
+      '<gux-disclosure-button is-open></gux-disclosure-button>',
+      '<gux-disclosure-button position="left"></gux-disclosure-button>',
+      '<gux-disclosure-button is-open position="left"></gux-disclosure-button>',
+      '<gux-disclosure-button position="right"></gux-disclosure-button>',
+      '<gux-disclosure-button is-open position="right"></gux-disclosure-button>',
+      '<gux-disclosure-button label="More Info"></gux-disclosure-button>'
+    ].forEach((html, index) => {
+      it(`should render component as expected (${index + 1})`, async () => {
+        const page = await newSpecPage({ components, html, language });
 
-        component.togglePanel();
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+  });
 
-        expect(component.isOpen).toBe(true);
+  describe('events', () => {
+    describe('active', () => {
+      it('should open when clicked', async () => {
+        const page = await newSpecPage({
+          components,
+          html: '<gux-disclosure-button></gux-disclosure-button>',
+          language
+        });
+        const element = page.root as HTMLGuxDisclosureButtonElement;
+        const button = element.shadowRoot.querySelector(
+          '.gux-disclosure-button'
+        ) as HTMLButtonElement;
+        const panel = element.shadowRoot.querySelector(
+          '.gux-disclosure-panel'
+        ) as HTMLElement;
+        const icon = element.shadowRoot.querySelector(
+          'gux-icon'
+        ) as HTMLGuxIconElement;
+
+        const activeEventSpy = jest.fn();
+        element.addEventListener('active', activeEventSpy);
+
+        expect(element.isOpen).toBe(false);
+        expect(panel).not.toHaveClass('gux-active');
+        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-right');
+
+        button.click();
+
+        await page.waitForChanges();
+
+        expect(element.isOpen).toBe(true);
+        expect(panel).toHaveClass('gux-active');
+        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-left');
+        expect(activeEventSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            detail: true
+          })
+        );
+      });
+
+      it('should close when clicked', async () => {
+        const page = await newSpecPage({
+          components,
+          html: '<gux-disclosure-button is-open></gux-disclosure-button>',
+          language
+        });
+        const element = page.root as HTMLGuxDisclosureButtonElement;
+        const button = element.shadowRoot.querySelector(
+          '.gux-disclosure-button'
+        ) as HTMLButtonElement;
+        const panel = element.shadowRoot.querySelector(
+          '.gux-disclosure-panel'
+        ) as HTMLElement;
+        const icon = element.shadowRoot.querySelector(
+          'gux-icon'
+        ) as HTMLGuxIconElement;
+
+        const activeEventSpy = jest.fn();
+        element.addEventListener('active', activeEventSpy);
+
+        expect(element.isOpen).toBe(true);
+        expect(panel).toHaveClass('gux-active');
+        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-left');
+
+        button.click();
+
+        await page.waitForChanges();
+
+        expect(element.isOpen).toBe(false);
+        expect(panel).not.toHaveClass('gux-active');
+        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-right');
+        expect(activeEventSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            detail: false
+          })
+        );
       });
     });
   });

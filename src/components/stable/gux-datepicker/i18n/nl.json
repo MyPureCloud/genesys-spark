@@ -1,4 +1,6 @@
 {
   "start": "Begin",
-  "end": "Einde"
+  "end": "Einde",
+  "date": "Datum",
+  "toggleCalendar": "Agendaweergave in-/uitschakelen"
 }

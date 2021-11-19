@@ -4,7 +4,7 @@ const axeExclusions = [
   {
     issueId: 'aria-valid-attr',
     target: '.gux-header',
-    exclusionReason: 'Will be addressed in COMUI-608 ticket'
+    exclusionReason: 'Violation is addressed in the stable accordion component'
   }
 ];
 

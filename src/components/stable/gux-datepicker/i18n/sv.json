@@ -1,4 +1,6 @@
 {
   "start": "Start",
-  "end": "Slut"
+  "end": "Slut",
+  "date": "Datum",
+  "toggleCalendar": "Växla kalendervy"
 }

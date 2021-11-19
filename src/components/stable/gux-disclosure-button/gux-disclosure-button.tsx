@@ -15,7 +15,8 @@ import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
 
 @Component({
   styleUrl: 'gux-disclosure-button.less',
-  tag: 'gux-disclosure-button'
+  tag: 'gux-disclosure-button',
+  shadow: true
 })
 export class GuxDisclosureButton {
   @Element()
@@ -50,7 +51,7 @@ export class GuxDisclosureButton {
    * @return the panel state
    */
   @Event()
-  active: EventEmitter;
+  active: EventEmitter<boolean>;
 
   @Watch('isOpen')
   watchIsOpen() {

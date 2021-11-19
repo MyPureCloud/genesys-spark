@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.5](https://inindca///compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2021-11-19)
+
+
+### Features
+
+* **disclosure-button:** enabled shadow dom ([d7e179d](https://inindca///commit/d7e179db9af6397451a5901caab3e27f48b9ff78))
+* **icon:** enable shadow dom ([a2d07e1](https://inindca///commit/a2d07e15ef6966fc7d57e9bf09dd1d41daa224e1))
+
+
+### Bug Fixes
+
+* **gux-form-field:** added translations for gux-input-text-like and gux-input-search ([9aa91c8](https://inindca///commit/9aa91c8235523ce9006ce841e4be4cf2ea358cad))
+* **gux-icon:** remap trade icon to use correct icon ([d3c7010](https://inindca///commit/d3c7010d38755163ed2825a90b48c488c9d88cf4))
+* **input-range:** small styling change ([b255312](https://inindca///commit/b2553122f7b87156277de594adbd7eebc382f654))
+
+## [3.0.0-alpha.4](https://inindca///compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2021-11-18)
+
+
+### Features
+
+* **gux-datepicker:** added disabled prop ([71fbc45](https://inindca///commit/71fbc458bb1ffbd1b80e490419c41cc1e38aaf5e))
+
+
+### Bug Fixes
+
+* **gux-tabs:** fix gux-tab-beta console errors ([be969d1](https://inindca///commit/be969d1ec2b7ade18b8a3d3d4f3ab617493462b7))
+
+## [3.0.0-alpha.3](https://inindca///compare/v3.0.0-alpha.2...v3.0.0-alpha.3) (2021-11-17)
+
+
+### Features
+
+* **gux-pagination:** tests for modal, pagination and popover, add fallback for missing translations ([0666441](https://inindca///commit/0666441457fa5563a69de894d23fd1fbe7d63e45))
+* **playground:** add ember playground ([72fbd00](https://inindca///commit/72fbd00c3ccad7923b51784a870742d04c6fa81f))
+
+
+### Bug Fixes
+
+* **pagination:** better handle invalid current page values ([842ed55](https://inindca///commit/842ed5557686c680dbe2e17884d78b3c74885b4b))
+
 ## [3.0.0-alpha.2](https://inindca///compare/v3.0.0-alpha.1...v3.0.0-alpha.2) (2021-11-16)
 
 

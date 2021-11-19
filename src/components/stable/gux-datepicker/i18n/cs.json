@@ -1,4 +1,6 @@
 {
   "start": "Začátek",
-  "end": "Konec"
+  "end": "Konec",
+  "date": "Datum",
+  "toggleCalendar": "Přepnout zobrazení kalendáře"
 }
