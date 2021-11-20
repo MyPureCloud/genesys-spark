@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.6](https://inindca///compare/v3.0.0-alpha.5...v3.0.0-alpha.6) (2021-11-20)
+
+
+### Features
+
+* **button-slot:** enabled shadow dom ([872f681](https://inindca///commit/872f681284dfd6e8117875994c6e251c53159872))
+* **tests:** add a11y tests and fix violations or create tickets ([37630b2](https://inindca///commit/37630b258c94df23fcd505d27e718173e2a86ed7))
+
 ## [3.0.0-alpha.5](https://inindca///compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2021-11-19)
 
 
