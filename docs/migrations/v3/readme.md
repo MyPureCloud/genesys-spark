@@ -7,6 +7,7 @@
 * rename `title` property to `gux-title` on instances of `gux-button`
 * remove `first-day-of-week` property from instances of `gux-calendar`
 * remove `first-day-of-week` property from instances of `gux-datepicker`
+* `trap-focus` property on instances of `gux-modal` now default to true
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
   * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
@@ -42,6 +43,28 @@ This new requirement is related to the a new dependency (vega-lite) which was ad
 ### gux-datepicker
 
 'first-day-of-week' property removed. This is now determined via locale via the `gux-calendar` component.
+
+### gux-modal
+
+'trap-focus' property now defaults to true.
+
+#### V2
+
+```html
+<gux-modal id="example-1"> ... </gux-modal>
+<gux-modal id="example-2" trap-focus> ... </gux-modal>
+<gux-modal id="example-3" trap-focus="true"> ... </gux-modal>
+<gux-modal id="example-4" trap-focus="false"> ... </gux-modal>
+```
+
+#### V3
+
+```html
+<gux-modal id="example-1" trap-focus="false"> ... </gux-modal>
+<gux-modal id="example-2"> ... </gux-modal>
+<gux-modal id="example-3" trap-focus="true"> ... </gux-modal>
+<gux-modal id="example-4" trap-focus="false"> ... </gux-modal>
+```
 
 ## New Stable Components Promoted from Beta
 
