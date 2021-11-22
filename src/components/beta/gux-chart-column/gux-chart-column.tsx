@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
-import { Component, Element, Host, h, JSX, Prop, Watch } from '@stencil/core';
+import { Component, Element, h, JSX, Prop, Watch } from '@stencil/core';
 import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
@@ -9,7 +9,8 @@ import { logError } from '../../../utils/error/log-error';
 
 @Component({
   styleUrl: 'gux-chart-column.less',
-  tag: 'gux-chart-column-beta'
+  tag: 'gux-chart-column-beta',
+  shadow: true
 })
 export class GuxColumnChart {
   @Element()
@@ -174,24 +175,9 @@ export class GuxColumnChart {
 
   render(): JSX.Element {
     return (
-      <Host>
-        <gux-visualization-beta
-          visualizationSpec={this.visualizationSpec}
-        ></gux-visualization-beta>
-        <svg>
-          <defs>
-            <pattern
-              id="diagonalHatch0"
-              patternUnits="userSpaceOnUse"
-              width="7"
-              height="4"
-              patternTransform="rotate(45)"
-            >
-              <rect width="2" height="4" fill={VISUALIZATION_COLORS[0]}></rect>
-            </pattern>
-          </defs>
-        </svg>
-      </Host>
+      <gux-visualization-beta
+        visualizationSpec={this.visualizationSpec}
+      ></gux-visualization-beta>
     ) as JSX.Element;
   }
 }
