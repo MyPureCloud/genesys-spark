@@ -112,7 +112,7 @@ export class GuxTabAdvancedList {
       eventIsFrom('.gux-scrollable-section', event) &&
       !this.keyboardSort
     ) {
-      this.ariaLiveAlert = 'sortInstructions';
+      this.ariaLiveAlert = 'toggleSort';
     }
   }
 
@@ -129,7 +129,9 @@ export class GuxTabAdvancedList {
         if (activeElement) {
           this.focused = index;
         } else {
-          tabTrigger.querySelector('.gux-tab').setAttribute('tabindex', '-1');
+          tabTrigger
+            .querySelector('.gux-tab-button')
+            .setAttribute('tabindex', '-1');
           if (tabTrigger.querySelector('.gux-tab-options-button')) {
             tabTrigger
               .querySelector('.gux-tab-options-button')
@@ -316,7 +318,7 @@ export class GuxTabAdvancedList {
             this.focusTab(this.focused);
           } else {
             this.keyboardSort = true;
-            this.sortTarget = (event.target as Element).parentNode;
+            this.sortTarget = (event.target as Element).parentNode.parentNode;
             this.tabTriggers.forEach((tabTrigger, index) => {
               const active =
                 tabTrigger.tabId ===
@@ -349,7 +351,9 @@ export class GuxTabAdvancedList {
     this.tabTriggers.forEach(async (tabTrigger, index) => {
       const activeElement = await tabTrigger.guxGetActive();
       if (this.focused !== index && !activeElement) {
-        tabTrigger.querySelector('.gux-tab').setAttribute('tabindex', '-1');
+        tabTrigger
+          .querySelector('.gux-tab-button')
+          .setAttribute('tabindex', '-1');
         if (tabTrigger.querySelector('.gux-tab-options-button')) {
           tabTrigger
             .querySelector('.gux-tab-options-button')

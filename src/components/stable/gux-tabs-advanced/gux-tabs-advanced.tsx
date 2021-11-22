@@ -78,7 +78,9 @@ export class GuxTabsAdvanced {
     if (tabId) {
       this.activeTab = tabId;
     } else {
-      this.activeTab = panels[0].tabId;
+      this.activeTab = tabList
+        .querySelector('gux-tab-advanced')
+        .getAttribute('tab-id');
     }
 
     tabList.guxSetActive(this.activeTab);

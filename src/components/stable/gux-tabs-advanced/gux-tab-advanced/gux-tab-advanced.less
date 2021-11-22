@@ -4,7 +4,7 @@
 
 // Style
 .gux-tab-sorting {
-  :focus:not(.gux-tab-options-button) {
+  :focus-within {
     margin-bottom: 4px;
   }
 }
@@ -23,16 +23,29 @@ gux-tab-advanced {
     align-items: center;
     width: 0;
     height: 36px;
-    padding: 3px;
     margin-left: 4px;
     overflow: hidden;
     border: none;
     transition: width 0.4s ease-out;
 
-    &:focus-visible {
-      padding: 0;
-      border: 3px solid @gux-blue-90;
-      outline: none;
+    .gux-tab-button {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 36px;
+      padding: 3px;
+      background-color: inherit;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        padding: 0;
+        border: 3px solid @gux-blue-90;
+        outline: none;
+      }
     }
 
     &.gux-show {
@@ -102,7 +115,7 @@ gux-tab-advanced {
       }
     }
 
-    &.selected {
+    &.gux-selected {
       .tab-title {
         font-weight: bold;
       }
@@ -143,8 +156,12 @@ gux-tab-advanced {
       color: @gux-type;
     }
 
-    &.selected {
+    &.gux-selected {
       background-color: @gux-type-dark;
+
+      .gux-tab-button {
+        background-color: @gux-type-dark;
+      }
 
       &:active {
         background-color: @gux-type-dark;
