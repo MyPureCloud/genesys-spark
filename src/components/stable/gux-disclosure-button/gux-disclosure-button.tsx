@@ -10,8 +10,11 @@ import {
   Watch
 } from '@stencil/core';
 
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { trackComponent } from '../../../usage-tracking';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { ILocalizedComponentResources } from '../../../i18n/fetchResources';
 
 import translationResources from './i18n/en.json';
 import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
@@ -23,6 +26,7 @@ import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
 })
 export class GuxDisclosureButton {
   private i18n: GetI18nValue;
+  private panelId: string = randomHTMLId('gux-disclosure-button-panel');
 
   @Element()
   private root: HTMLElement;
@@ -37,7 +41,8 @@ export class GuxDisclosureButton {
    * Indicates the label for the disclosure button
    */
   @Prop()
-  label: string;
+  label: string = (translationResources as ILocalizedComponentResources)
+    .defaultLabel;
 
   /**
    * Used to open or close the disclosure panel
@@ -89,19 +94,25 @@ export class GuxDisclosureButton {
   }
 
   render(): JSX.Element {
-    const activeClass = this.isOpen ? 'gux-active' : '';
     return (
       <div class={`gux-disclosure-button-container gux-${this.position}`}>
         <button
           class="gux-disclosure-button"
           onClick={() => this.changeState()}
+          aria-controls={this.panelId}
+          aria-expanded={this.isOpen.toString()}
+          aria-label={this.label || this.i18n('defaultLabel')}
         >
-          <gux-icon
-            icon-name={`${this.icon}`}
-            screenreader-text={this.label || this.i18n('defaultLabel')}
-          ></gux-icon>
+          <gux-icon icon-name={`${this.icon}`} decorative></gux-icon>
         </button>
-        <div class={`gux-disclosure-panel gux-${this.position} ${activeClass}`}>
+        <div
+          id={this.panelId}
+          class={{
+            'gux-disclosure-panel': true,
+            'gux-active': this.isOpen
+          }}
+          role="region"
+        >
           <slot name="panel-content" />
         </div>
       </div>

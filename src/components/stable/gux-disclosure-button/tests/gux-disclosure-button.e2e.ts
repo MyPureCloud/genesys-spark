@@ -1,10 +1,31 @@
-import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
+import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 const axeExclusions = [];
 
+async function newNonrandomE2EPage({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
+  const page = await newE2EPage();
+
+  await page.evaluateOnNewDocument(() => {
+    Math.random = () => 0.5;
+  });
+  await page.setContent(html);
+  await page.waitForChanges();
+  await page.addScriptTag({
+    path: 'node_modules/axe-core/axe.min.js'
+  });
+  await page.waitForChanges();
+
+  return page;
+}
+
 describe('gux-disclosure-button', () => {
   it('should build', async () => {
-    const page = await newSparkE2EPage({
+    const page = await newNonrandomE2EPage({
       html: `<gux-disclosure-button lang="en"></gux-disclosure-button>`
     });
     const element = await page.find('gux-disclosure-button');
@@ -23,7 +44,7 @@ describe('gux-disclosure-button', () => {
       '<gux-disclosure-button lang="en" label="More Info"></gux-disclosure-button>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newSparkE2EPage({ html });
+        const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-disclosure-button');
         const elementShadowDom = await element.find(
           'pierce/.gux-disclosure-button-container'
@@ -38,7 +59,7 @@ describe('gux-disclosure-button', () => {
   describe.skip('events', () => {
     describe('active', () => {
       it('should open when clicked', async () => {
-        const page = await newSparkE2EPage({
+        const page = await newNonrandomE2EPage({
           html: '<gux-disclosure-button lang="en"></gux-disclosure-button>'
         });
         const element = (await page.find(
@@ -71,7 +92,7 @@ describe('gux-disclosure-button', () => {
 
   describe('A11Y', () => {
     it('should be accessible when closed', async () => {
-      const page = await newSparkE2EPage({
+      const page = await newNonrandomE2EPage({
         html: `<gux-disclosure-button lang="en"></gux-disclosure-button>`
       });
 
@@ -79,7 +100,7 @@ describe('gux-disclosure-button', () => {
     });
 
     it('should be accessible when open', async () => {
-      const page = await newSparkE2EPage({
+      const page = await newNonrandomE2EPage({
         html: `<gux-disclosure-button lang="en" is-open></gux-disclosure-button>`
       });
 

@@ -2,7 +2,7 @@
 
 :host {
   height: 100%;
-  color: @gux-type;
+  color: @gux-black-50;
 }
 
 .gux-disclosure-button-container {
@@ -11,20 +11,16 @@
   justify-content: flex-start;
   height: 100%;
 
-  &.gux-right {
-    justify-content: flex-end;
-  }
-
-  button.gux-disclosure-button {
+  .gux-disclosure-button {
     width: 16px;
     padding: 0;
     margin: 0;
-    color: @gux-type;
+    color: @gux-black-50;
     background: transparent;
     border-top: none;
-    border-right: 1px solid @gux-border;
+    border-right: 1px solid @gux-grey-60;
     border-bottom: none;
-    border-left: 1px solid @gux-border;
+    border-left: 1px solid @gux-grey-60;
 
     gux-icon {
       width: 12px;
@@ -41,12 +37,16 @@
     order: -1;
     width: 100%;
 
-    &.gux-right {
-      order: 1;
-    }
-
     &.gux-active {
       display: block;
+    }
+  }
+
+  &.gux-right {
+    justify-content: flex-end;
+
+    .gux-disclosure-panel {
+      order: 1;
     }
   }
 }
