@@ -2,5 +2,11 @@
   "createNewTab": "Crea nuova scheda",
   "scrollLeft": "Naviga a sinistra",
   "scrollRight": "Naviga a destra",
-  "disableNewTab": "È stato raggiunto il numero massimo di schede create"
+  "options": "Opzioni scheda per {tabTitle}",
+  "disableNewTab": "È stato raggiunto il numero massimo di schede create",
+  "toggleSortInstructions": "Attiva/Disattiva modalità ordinamento mediante Spazio",
+  "sortInstructions": "Modalità ordinamento attivata, utilizzare i tasti freccia sinistra e destra per riordinare le schede. Premere il tasto Spazio o Invio per completare l'ordinamento. Premere il tasto Esc per annullare l'ordinamento",
+  "sortModeOn": "Modalità ordinamento attivata",
+  "sortComplete": "Ordinamento completato",
+  "sortCancelled": "Ordinamento annullato"
 }
