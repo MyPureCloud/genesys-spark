@@ -11,7 +11,7 @@ import { logError } from '../../../utils/error/log-error';
   shadow: true
 })
 export class GuxRating {
-  private ratingElement: HTMLDivElement;
+  private starContainer: HTMLDivElement;
 
   @Element()
   root: HTMLElement;
@@ -37,9 +37,9 @@ export class GuxRating {
     }
 
     const [clickedElement] = event.composedPath();
-    const ratingStar = (clickedElement as HTMLElement).closest('gux-icon');
-    const clickedStarIndex = Array.from(this.ratingElement.children).findIndex(
-      child => child === ratingStar
+    const ratingStar = (clickedElement as HTMLElement).getRootNode();
+    const clickedStarIndex = Array.from(this.starContainer.children).findIndex(
+      child => child.shadowRoot === ratingStar
     );
     const clickedStarNominalValue = clickedStarIndex + 1;
 
@@ -86,7 +86,7 @@ export class GuxRating {
     const validatedNewValue = clamp(
       newValue,
       0,
-      Array.from(this.ratingElement.children).length
+      Array.from(this.starContainer.children).length
     );
 
     if (this.value !== validatedNewValue) {
@@ -144,9 +144,9 @@ export class GuxRating {
         aria-valuemax={this.maxValue}
       >
         <div
-          ref={(el: HTMLDivElement) => (this.ratingElement = el)}
+          ref={(el: HTMLDivElement) => (this.starContainer = el)}
           class={{
-            'gux-rating-start-container': true,
+            'gux-rating-star-container': true,
             'gux-disabled': this.disabled
           }}
         >
