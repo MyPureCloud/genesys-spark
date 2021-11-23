@@ -1,6 +1,6 @@
 {
-  "createNewTab": "Opret ny fane",
   "scrollLeft": "Rul til venstre",
   "scrollRight": "Rul til højre",
-  "disableNewTab": "Det maksimale antal oprettede faner er nået"
+  "scrollUp": "Rul op",
+  "scrollDown": "Rul ned"
 }
