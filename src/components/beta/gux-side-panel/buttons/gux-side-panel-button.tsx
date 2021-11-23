@@ -2,7 +2,8 @@ import { Component, h, JSX, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-side-panel-button.less',
-  tag: 'gux-side-panel-button'
+  tag: 'gux-side-panel-button',
+  shadow: false
 })
 export class GuxSidePanelButton {
   @Prop()
