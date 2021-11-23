@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.7](https://inindca///compare/v3.0.0-alpha.6...v3.0.0-alpha.7) (2021-11-23)
+
+
+### Features
+
+* **gux-tabs:** add tests and fix a11y violations ([56abee3](https://inindca///commit/56abee3856ca8c7a8a25ed8dcc1619956f007c65))
+* **modal:** focus-trap is now mutable ([6138966](https://inindca///commit/6138966dd1d26dc14ad33cf2a7b1d418d8ef45d7))
+* **modal:** trap-focus prop now defaults to true ([d14db24](https://inindca///commit/d14db240bfda7168caf552ae44d41d4b6efc6563))
+
+
+### Bug Fixes
+
+* **gux-rating:** fixed star selection bug caused by switch to shadow dom ([cd9a6cd](https://inindca///commit/cd9a6cde9d62c9671ce44104ff7baa8d54423215))
+
 ## [3.0.0-alpha.6](https://inindca///compare/v3.0.0-alpha.5...v3.0.0-alpha.6) (2021-11-20)
 
 
