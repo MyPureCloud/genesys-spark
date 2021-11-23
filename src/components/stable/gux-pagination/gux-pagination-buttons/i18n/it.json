@@ -4,5 +4,6 @@
   "first": "Prima",
   "previous": "Precedente",
   "next": "Successiva",
-  "last": "Ultima"
+  "last": "Ultima",
+  "pageInputLabel": "Pagina {currentPage, number} di {totalPages, number}"
 }
