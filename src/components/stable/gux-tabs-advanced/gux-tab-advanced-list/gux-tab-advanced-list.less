@@ -1,6 +1,7 @@
 @import (reference) '../../../../style/color.less';
 @import (reference) '../../../../style/mixins.less';
 @import (reference) '../../../../style/spacing.less';
+@import (reference) '../../../../style/typography.less';
 
 // Variables part
 @gux-tabs-background: @gux-grey-60;
@@ -157,5 +158,9 @@ gux-tab-advanced-list {
         height: 0;
       }
     }
+  }
+
+  .gux-sr-only {
+    .gux-sr-only();
   }
 }
