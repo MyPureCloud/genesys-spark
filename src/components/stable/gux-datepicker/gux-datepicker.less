@@ -1,5 +1,6 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/typography.less';
 
 gux-datepicker {
   display: block;
@@ -144,5 +145,9 @@ gux-datepicker {
         }
       }
     }
+  }
+
+  .gux-sr-only {
+    .gux-sr-only();
   }
 }
