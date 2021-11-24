@@ -2,5 +2,11 @@
   "createNewTab": "새 탭 만들기",
   "scrollLeft": "왼쪽으로 스크롤",
   "scrollRight": "오른쪽으로 스크롤",
-  "disableNewTab": "생성된 최대 탭 수에 도달했습니다."
+  "options": "{tabTitle}의 탭 옵션",
+  "disableNewTab": "생성된 최대 탭 수에 도달했습니다.",
+  "toggleSortInstructions": "스페이스를 사용한 정렬 모드 토글",
+  "sortInstructions": "정렬 모드를 켰습니다. 왼쪽과 오른쪽 화살표 키를 사용하여 탭을 재정렬하십시오. 스페이스 또는 엔터 키를 눌러 정렬을 완료합니다. ESC 키를 누르면 정렬을 취소합니다.",
+  "sortModeOn": "정렬 모드 켬",
+  "sortComplete": "정렬 완료",
+  "sortCancelled": "정렬 취소함"
 }

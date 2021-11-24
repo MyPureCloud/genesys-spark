@@ -2,5 +2,11 @@
   "createNewTab": "Yeni Sekme Oluştur",
   "scrollLeft": "Sola Kaydır",
   "scrollRight": "Sağa Kaydır",
-  "disableNewTab": "Maksimum oluşturulan sekme sayısına ulaşıldı"
+  "options": "{tabTitle} için Sekme Seçenekleri",
+  "disableNewTab": "Maksimum oluşturulan sekme sayısına ulaşıldı",
+  "toggleSortInstructions": "Boşluk kullanarak sıralama modunu açın/kapayın",
+  "sortInstructions": "Sıralama modu açık, sekmeleri tekrar sıralamak için sol ve sağ ok tuşlarını kullanın. Sıralamayı tamamlamak için Space veya Enter tuşuna basın. Sıralamayı iptal etmek için Escape tuşuna basın",
+  "sortModeOn": "Sıralama modu açık",
+  "sortComplete": "Sıralama tamamlandı",
+  "sortCancelled": "Sıralama iptal edildi"
 }

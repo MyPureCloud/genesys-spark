@@ -2,5 +2,11 @@
   "createNewTab": "Vytvořit novou kartu",
   "scrollLeft": "Posunout doleva",
   "scrollRight": "Posunout doprava",
-  "disableNewTab": "Bylo dosaženo maximálního počtu vytvořených karet."
+  "options": "Možnosti karty {tabTitle}",
+  "disableNewTab": "Bylo dosaženo maximálního počtu vytvořených karet.",
+  "toggleSortInstructions": "Stiskem mezerníku aktivujte režim třídění.",
+  "sortInstructions": "Režim třídění je zapnutý. Pomocí šipek doleva a doprava můžete změnit pořadí karet. Stiskem mezerníku nebo klávesy Enter pořadí potvrdíte. Stiskem klávesy ESC třídění zrušíte.",
+  "sortModeOn": "Režim třídění zapnutý",
+  "sortComplete": "Třídění dokončeno",
+  "sortCancelled": "Třídění zrušeno"
 }
