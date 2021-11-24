@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.47.2](https://inindca///compare/v2.47.1...v2.47.2) (2021-11-24)
+
+
+### Bug Fixes
+
+* **css:** global gux-sr-only is not used by components anymore ([c9cff86](https://inindca///commit/c9cff86f3c60857feea324ee5617b02338acab87))
+
 ### [2.47.1](https://inindca///compare/v2.47.0...v2.47.1) (2021-11-19)
 
 
