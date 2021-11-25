@@ -2,5 +2,11 @@
   "createNewTab": "新規タブを作成",
   "scrollLeft": "左にスクロール",
   "scrollRight": "右にスクロール",
-  "disableNewTab": "生成されるタブの最大数に達しました"
+  "options": "{tabTitle} のタブ オプション",
+  "disableNewTab": "生成されるタブの最大数に達しました",
+  "toggleSortInstructions": "スペース キーでソート モードを切り替え",
+  "sortInstructions": "ソート モード オンでは、左右の矢印キーを使用してタブの順序を並べ替えます。スペースキーまたは Enter キーを押してソートを完了します。Escape キーを押してソートをキャンセルします。",
+  "sortModeOn": "ソート モード オン",
+  "sortComplete": "ソート完了",
+  "sortCancelled": "ソートがキャンセルされました"
 }
