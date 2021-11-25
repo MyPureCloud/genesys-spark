@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.9](https://inindca///compare/v3.0.0-alpha.8...v3.0.0-alpha.9) (2021-11-25)
+
+
+### Bug Fixes
+
+* **css:** global gux-sr-only is not used by components anymore ([24c1ee3](https://inindca///commit/24c1ee35f4c29a0203b3191dde42c589d1b473c1))
+
 ## [3.0.0-alpha.8](https://inindca///compare/v3.0.0-alpha.7...v3.0.0-alpha.8) (2021-11-24)
 
 ## [3.0.0-alpha.7](https://inindca///compare/v3.0.0-alpha.6...v3.0.0-alpha.7) (2021-11-23)
