@@ -2,5 +2,11 @@
   "createNewTab": "建立新索引標籤",
   "scrollLeft": "向左捲動",
   "scrollRight": "向右捲動",
-  "disableNewTab": "建立的頁籤已達到最大數量"
+  "options": "{tabTitle} 的標籤選項",
+  "disableNewTab": "建立的頁籤已達到最大數量",
+  "toggleSortInstructions": "使用空格鍵切換排序模式",
+  "sortInstructions": "排序模式開啟，請使用左右方向鍵將標籤重新排序。按空格或 Enter 鍵以完成排序。按 Escape 以取消排序",
+  "sortModeOn": "排序模式開啟",
+  "sortComplete": "排序完成",
+  "sortCancelled": "排序已取消"
 }

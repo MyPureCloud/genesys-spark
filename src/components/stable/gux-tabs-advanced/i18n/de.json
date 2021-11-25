@@ -2,5 +2,11 @@
   "createNewTab": "Neue Registerkarte erstellen",
   "scrollLeft": "Nach links blättern",
   "scrollRight": "Nach rechts blättern",
-  "disableNewTab": "Die maximale Anzahl an erstellten Registerkarten wurde erreicht."
+  "options": "Registerkartenoptionen für {tabTitle}",
+  "disableNewTab": "Die maximale Anzahl an erstellten Registerkarten wurde erreicht.",
+  "toggleSortInstructions": "Sortiermodus mit Leerzeichen ein-/ausschalten",
+  "sortInstructions": "Verwenden Sie bei eingeschaltetem Sortiermodus die linken und rechten Pfeiltasten, um die Registerkarten neu anzuordnen. Drücken Sie die Leer- oder Eingabetaste, um das Sortieren abzuschließen. Drücken Sie die Escape-Taste, um das Sortieren abzubrechen.",
+  "sortModeOn": "Sortiermodus ein",
+  "sortComplete": "Sortieren abgeschlossen",
+  "sortCancelled": "Sortieren abgebrochen"
 }
