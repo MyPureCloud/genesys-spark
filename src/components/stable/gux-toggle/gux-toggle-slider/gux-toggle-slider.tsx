@@ -29,6 +29,6 @@ export class GuxToggleSlider {
           </div>
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

@@ -29,6 +29,6 @@ export class GuxPageLoadingSpinner {
         screenreader-text={this.screenreaderText}
         context="full-page"
       ></gux-radial-loading>
-    );
+    ) as JSX.Element;
   }
 }

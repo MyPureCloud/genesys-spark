@@ -70,6 +70,6 @@ export class GuxSwitch {
       <Host role="group" class={`gux-${this.layout}`}>
         <slot onSlotchange={() => this.slotChanged()} />
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

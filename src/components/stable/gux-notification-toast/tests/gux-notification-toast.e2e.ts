@@ -76,7 +76,6 @@ describe('gux-notification-toast', () => {
         </gux-notification-toast>
       `;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-notification-toast');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -101,7 +100,6 @@ describe('gux-notification-toast', () => {
         </gux-notification-toast>
       `;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-notification-toast');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 

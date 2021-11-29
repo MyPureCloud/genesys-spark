@@ -7,9 +7,9 @@ const axeExclusions = [];
 async function clickDropdownButton(page: E2EPage): Promise<void> {
   return await page.evaluate(() => {
     const element = document.querySelector('gux-button-multi');
-    const dropdownButton = element.shadowRoot.querySelector(
+    const dropdownButton: HTMLButtonElement = element.shadowRoot.querySelector(
       '.gux-dropdown-button > button'
-    ) as HTMLButtonElement;
+    );
 
     dropdownButton.click();
   });

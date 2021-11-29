@@ -46,6 +46,6 @@ export class GuxInputTextArea {
       >
         <slot name="input" />
       </div>
-    );
+    ) as JSX.Element;
   }
 }

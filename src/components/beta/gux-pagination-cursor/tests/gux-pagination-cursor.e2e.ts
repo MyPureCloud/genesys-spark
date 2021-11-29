@@ -8,7 +8,7 @@ async function clickButton(page: E2EPage, buttonToClick: 'previous' | 'next') {
     const element = document.querySelector('gux-pagination-cursor-beta');
     const [previousButton, nextButton] = Array.from(
       element.shadowRoot.querySelectorAll('button')
-    ) as HTMLButtonElement[];
+    );
 
     if (button === 'next') {
       nextButton.click();
@@ -41,7 +41,6 @@ describe('gux-pagination-cursor-beta', () => {
       const html =
         '<gux-pagination-cursor-beta lang="en" has-previous></gux-pagination-cursor-beta>';
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-pagination-cursor-beta');
       const guxPaginationCursorchangeSpy = await page.spyOnEvent(
         'guxPaginationCursorchange'
       );
@@ -58,7 +57,6 @@ describe('gux-pagination-cursor-beta', () => {
       const html =
         '<gux-pagination-cursor-beta lang="en" has-next></gux-pagination-cursor-beta>';
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-pagination-cursor-beta');
       const guxPaginationCursorchangeSpy = await page.spyOnEvent(
         'guxPaginationCursorchange'
       );
@@ -73,7 +71,6 @@ describe('gux-pagination-cursor-beta', () => {
       const html =
         '<gux-pagination-cursor-beta lang="en"></gux-pagination-cursor-beta>';
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-pagination-cursor-beta');
       const guxPaginationCursorchangeSpy = await page.spyOnEvent(
         'guxPaginationCursorchange'
       );
@@ -89,7 +86,6 @@ describe('gux-pagination-cursor-beta', () => {
       const html =
         '<gux-pagination-cursor-beta lang="en"></gux-pagination-cursor-beta>';
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-pagination-cursor-beta');
       const guxPaginationCursorchangeSpy = await page.spyOnEvent(
         'guxPaginationCursorchange'
       );

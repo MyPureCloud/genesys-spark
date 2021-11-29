@@ -147,7 +147,7 @@ describe('gux-button-slot-beta', () => {
 
   describe('slot content', () => {
     it('should not log an error if a button element is slotted', async () => {
-      const page = await newSpecPage({
+      await newSpecPage({
         components,
         html: '<gux-button-slot-beta><button type="button" title="Default">Button</button></gux-button-slot-beta>',
         language
@@ -157,7 +157,7 @@ describe('gux-button-slot-beta', () => {
     });
 
     it('should not log an error if an input[type=button] element is slotted', async () => {
-      const page = await newSpecPage({
+      await newSpecPage({
         components,
         html: '<gux-button-slot-beta><input type="button" title="Default" value="Button"/></gux-button-slot-beta>',
         language
@@ -167,7 +167,7 @@ describe('gux-button-slot-beta', () => {
     });
 
     it('should not log an error if an input[type=submit] element is slotted', async () => {
-      const page = await newSpecPage({
+      await newSpecPage({
         components,
         html: '<gux-button-slot-beta><input type="submit" title="Default" value="Button"/></gux-button-slot-beta>',
         language
@@ -177,7 +177,7 @@ describe('gux-button-slot-beta', () => {
     });
 
     it('should not log an error if an input[type=text] element is slotted', async () => {
-      const page = await newSpecPage({
+      await newSpecPage({
         components,
         html: '<gux-button-slot-beta><input type="text" title="Default" value="Button"/></gux-button-slot-beta>',
         language
@@ -190,7 +190,7 @@ describe('gux-button-slot-beta', () => {
     });
 
     it('should not log an error if a button element is slotted', async () => {
-      const page = await newSpecPage({
+      await newSpecPage({
         components,
         html: '<gux-button-slot-beta><div>Not a button</div></gux-button-slot-beta>',
         language

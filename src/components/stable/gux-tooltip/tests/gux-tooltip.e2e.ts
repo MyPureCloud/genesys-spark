@@ -2,10 +2,6 @@ import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 const axeExclusions = [];
 
-function sleep(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 describe('gux-tooltip', () => {
   describe('#render', () => {
     [

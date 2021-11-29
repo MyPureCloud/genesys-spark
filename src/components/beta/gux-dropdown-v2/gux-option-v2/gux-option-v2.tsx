@@ -66,6 +66,6 @@ export class GuxOptionV2 {
       >
         <slot />
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

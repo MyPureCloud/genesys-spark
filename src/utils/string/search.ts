@@ -12,7 +12,7 @@ export function matchesFuzzy(sourceWord: string, targetWord: string): boolean {
   return exp.test(targetWord);
 }
 
-export function getFuzzyReplacements(sourceWord: string): any[] {
+export function getFuzzyReplacements(sourceWord: string): RegExp[] {
   return sourceWord
     .split(conversion)
     .map(makeRegexSafe)

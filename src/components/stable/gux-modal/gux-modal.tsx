@@ -90,7 +90,7 @@ export class GuxModal {
   @Element()
   private root: HTMLElement;
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     trackComponent(this.root, { variant: this.size });
   }
 
@@ -135,7 +135,7 @@ export class GuxModal {
           )}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private getInitialFocusElement(): HTMLElement | SVGElement | undefined {

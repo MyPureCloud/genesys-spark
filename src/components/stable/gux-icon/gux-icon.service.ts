@@ -33,9 +33,9 @@ export function getRootIconName(iconName: string): string {
   return iconName;
 }
 
-export function getBaseSvgHtml(iconName: string): Promise<string> {
+export async function getBaseSvgHtml(iconName: string): Promise<string> {
   const id = iconInfoToId(iconName);
-  const cachedSvgElement = svgHTMLCache.get(id);
+  const cachedSvgElement = await svgHTMLCache.get(id);
 
   if (cachedSvgElement) {
     return cachedSvgElement;

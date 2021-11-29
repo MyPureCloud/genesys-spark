@@ -130,7 +130,7 @@ describe('datepicker.service', () => {
       }
     ].forEach(
       ({ increment, numberOfIncrements, inputDate, expectedOutput }) => {
-        it(`should output ${expectedOutput} for ${inputDate} and an increment of ${increment} ${numberOfIncrements} times`, () => {
+        it(`should output ${expectedOutput.toISOString()} for ${inputDate.toISOString()} and an increment of ${increment} ${numberOfIncrements} times`, () => {
           let date = inputDate;
           for (let i = 0; i < numberOfIncrements; i++) {
             date = incrementDay(increment, date);
@@ -184,7 +184,7 @@ describe('datepicker.service', () => {
         expectedOutput: new Date(2022, 1, 28)
       }
     ].forEach(({ increment, inputDate, expectedOutput }) => {
-      it(`should output ${expectedOutput} for ${inputDate} and an increment of ${increment}`, () => {
+      it(`should output ${expectedOutput.toISOString()} for ${inputDate.toISOString()} and an increment of ${increment}`, () => {
         expect(incrementMonth(increment, inputDate)).toEqual(expectedOutput);
       });
     });
@@ -203,7 +203,7 @@ describe('datepicker.service', () => {
         expectedOutput: new Date(2020, 0, 1)
       }
     ].forEach(({ increment, inputDate, expectedOutput }) => {
-      it(`should output ${expectedOutput} for ${inputDate} and an increment of ${increment}`, () => {
+      it(`should output ${expectedOutput.toISOString()} for ${inputDate.toISOString()} and an increment of ${increment}`, () => {
         expect(incrementYear(increment, inputDate)).toEqual(expectedOutput);
       });
     });
@@ -242,7 +242,7 @@ describe('datepicker.service', () => {
         expectedOutput: '2021.03.31'
       }
     ].forEach(({ inputDate, format, expectedOutput }) => {
-      it(`should output ${expectedOutput} for ${inputDate} and a format of ${format}`, () => {
+      it(`should output ${expectedOutput} for ${inputDate.toISOString()} and a format of ${format}`, () => {
         expect(getFormattedDate(inputDate, format)).toEqual(expectedOutput);
       });
     });

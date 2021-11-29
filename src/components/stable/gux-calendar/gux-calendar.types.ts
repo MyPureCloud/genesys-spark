@@ -6,5 +6,6 @@ export interface IDateElement {
   class: string;
   date: Date;
   selected: boolean;
+  disabled: boolean;
   hidden: boolean;
 }

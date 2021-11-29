@@ -28,17 +28,17 @@ Example with slotting
 
 ## Properties
 
-| Property    | Attribute   | Description                        | Type     | Default     |
-| ----------- | ----------- | ---------------------------------- | -------- | ----------- |
-| `highlight` | `highlight` | The highlight value                | `string` | `undefined` |
-| `value`     | `value`     | The current selection in the list. | `any`    | `undefined` |
+| Property    | Attribute   | Description                        | Type      | Default     |
+| ----------- | ----------- | ---------------------------------- | --------- | ----------- |
+| `highlight` | `highlight` | The highlight value                | `string`  | `undefined` |
+| `value`     | --          | The current selection in the list. | `unknown` | `undefined` |
 
 
 ## Events
 
-| Event     | Description                                     | Type               |
-| --------- | ----------------------------------------------- | ------------------ |
-| `changed` | Triggered when the list's selection is changed. | `CustomEvent<any>` |
+| Event     | Description                                     | Type                   |
+| --------- | ----------------------------------------------- | ---------------------- |
+| `changed` | Triggered when the list's selection is changed. | `CustomEvent<unknown>` |
 
 
 ## Methods

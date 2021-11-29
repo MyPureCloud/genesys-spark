@@ -40,38 +40,40 @@ describe('gux-calendar', () => {
     };
     // Public
     describe('public', () => {
-      it('setValue with single mode', () => {
-        component.setValue(testDate);
+      it('setValue with single mode', async () => {
+        await component.setValue(testDate);
         expect(component.previewValue).toEqual(testDate);
         expect(component.value).toEqual(testDateIso);
       });
-      it('setValue with range mode from-to', () => {
+      it('setValue with range mode from-to', async () => {
         component.mode = CalendarModes.Range;
-        component.setValue([rangeStart, rangeEnd]);
+        await component.setValue([rangeStart, rangeEnd]);
         expect(component.previewValue).toEqual(rangeStart);
         expect(component.value).toEqual(rangeIso);
       });
-      it('setValue with range mode to-from', () => {
+      it('setValue with range mode to-from', async () => {
         component.mode = CalendarModes.Range;
-        component.setValue([rangeEnd, rangeStart]);
+        await component.setValue([rangeEnd, rangeStart]);
         expect(component.previewValue).toEqual(rangeStart);
         expect(component.value).toEqual(rangeIso);
       });
-      it('focusPreviewDate', () => {
-        component.focusPreviewDate();
+      it('focusPreviewDate', async () => {
+        await component.focusPreviewDate();
         expect(spyEl.focus).not.toHaveBeenCalled();
         componentRoot.querySelector = () => {
           return spyEl;
         };
-        component.focusPreviewDate();
+        await component.focusPreviewDate();
         expect(spyEl.focus).toHaveBeenCalled();
       });
     });
     // Private
     describe('private', () => {
       it('incrementPreviewDateByMonth', () => {
+        jest.useFakeTimers();
         const startingMonth = component.previewValue.getMonth();
         component.incrementPreviewDateByMonth(3);
+        jest.runAllTimers();
         expect(component.previewValue.getMonth()).toEqual(
           (startingMonth + 3) % 12
         );
@@ -119,18 +121,18 @@ describe('gux-calendar', () => {
         );
         expect(result.length).toEqual(6);
       });
-      it('onDateClick with single mode', () => {
+      it('onDateClick with single mode', async () => {
         spyOn(component, 'setValue').and.callFake(() => {
           return;
         });
         spyOn(component, 'emitInput').and.callFake(() => {
           return;
         });
-        component.onDateClick(testDate);
+        await component.onDateClick(testDate);
         expect(component.setValue).toHaveBeenCalledWith(testDate);
         expect(component.emitInput).toHaveBeenCalled();
       });
-      it('onDateClick with range mode', () => {
+      it('onDateClick with range mode', async () => {
         component.mode = CalendarModes.Range;
         spyOn(component, 'getAllDatesElements').and.callFake(() => {
           return;
@@ -144,8 +146,8 @@ describe('gux-calendar', () => {
         spyOn(component, 'updateRangeElements').and.callFake(() => {
           return;
         });
-        component.onDateClick(rangeStart);
-        component.onDateClick(rangeEnd);
+        await component.onDateClick(rangeStart);
+        await component.onDateClick(rangeEnd);
         expect(component.emitInput).toHaveBeenCalled();
       });
       it('onDateMouseEnter', () => {
@@ -158,7 +160,8 @@ describe('gux-calendar', () => {
         expect(component.value.split('/')[1]).toEqual(rangeIso.split('/')[1]);
         expect(component.updateRangeElements).toHaveBeenCalled();
       });
-      it('onKeyDown', () => {
+      it('onKeyDown', async () => {
+        jest.useFakeTimers();
         spyOn(component, 'incrementPreviewDateByMonth').and.callFake(() => {
           return;
         });
@@ -172,25 +175,32 @@ describe('gux-calendar', () => {
         component.previewValue = new Date(rangeEnd);
         const days = initialPreviewValue.getDate();
         let event = new KeyboardEvent('keydown', { key: 'ArrowDown' });
-        component.onKeyDown(event);
+        await component.onKeyDown(event);
+        jest.runAllTimers();
         expect(component.previewValue.getDate()).toEqual(days + 7);
         event = new KeyboardEvent('keydown', { key: 'ArrowUp' });
-        component.onKeyDown(event);
+        await component.onKeyDown(event);
+        jest.runAllTimers();
         expect(component.previewValue.getDate()).toEqual(days);
         event = new KeyboardEvent('keydown', { key: 'ArrowLeft' });
-        component.onKeyDown(event);
+        await component.onKeyDown(event);
+        jest.runAllTimers();
         expect(component.previewValue.getDate()).toEqual(days - 1);
         event = new KeyboardEvent('keydown', { key: 'ArrowRight' });
-        component.onKeyDown(event);
+        await component.onKeyDown(event);
+        jest.runAllTimers();
         expect(component.previewValue.getDate()).toEqual(days);
         event = new KeyboardEvent('keydown', { key: 'PageUp' });
-        component.onKeyDown(event);
+        await component.onKeyDown(event);
+        jest.runAllTimers();
         expect(component.incrementPreviewDateByMonth).toHaveBeenCalledWith(1);
         event = new KeyboardEvent('keydown', { key: 'PageDown' });
-        component.onKeyDown(event);
+        await component.onKeyDown(event);
+        jest.runAllTimers();
         expect(component.incrementPreviewDateByMonth).toHaveBeenCalledWith(-1);
         event = new KeyboardEvent('keydown', { key: 'Enter' });
-        component.onKeyDown(event);
+        await component.onKeyDown(event);
+        jest.runAllTimers();
         expect(component.setValue).toHaveBeenCalledWith(initialPreviewValue);
         expect(component.emitInput).toHaveBeenCalled();
       });

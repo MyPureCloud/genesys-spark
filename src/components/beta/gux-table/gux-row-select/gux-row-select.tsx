@@ -25,7 +25,7 @@ export class GuxRowSelect {
   private i18n: GetI18nValue;
 
   @Prop({ mutable: true })
-  selected = false;
+  selected: boolean = false;
 
   @Event()
   internalrowselectchange: EventEmitter;
@@ -58,6 +58,6 @@ export class GuxRowSelect {
           <span class="gux-label-text">{this.i18n('selectTableRow')}</span>
         </label>
       </gux-form-field>
-    );
+    ) as JSX.Element;
   }
 }

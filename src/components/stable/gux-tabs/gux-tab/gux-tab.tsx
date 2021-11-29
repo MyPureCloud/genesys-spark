@@ -3,6 +3,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Listen,
   Method,
   Prop,
@@ -48,22 +49,25 @@ export class GuxTab {
   @Event()
   internalactivatetabpanel: EventEmitter<string>;
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxSetActive(active: boolean): Promise<void> {
     this.active = active;
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxFocus(): Promise<void> {
     this.buttonElement.focus();
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxGetActive() {
     return this.active;
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <button
         class={{
@@ -84,6 +88,6 @@ export class GuxTab {
           <slot />
         </gux-tooltip-title>
       </button>
-    );
+    ) as JSX.Element;
   }
 }

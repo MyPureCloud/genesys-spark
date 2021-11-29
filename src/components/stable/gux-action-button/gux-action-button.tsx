@@ -95,7 +95,7 @@ export class GuxActionButton {
       case 'ArrowDown':
         if (!composedPath.includes(this.listElement)) {
           this.isOpen = true;
-          this.listElement.setFocusOnFirstItem();
+          void this.listElement.setFocusOnFirstItem();
         }
         break;
     }
@@ -187,12 +187,12 @@ export class GuxActionButton {
           <gux-list
             slot="popup"
             onFocusout={this.onListElementFocusout.bind(this)}
-            ref={el => (this.listElement = el as HTMLGuxListElement)}
+            ref={el => (this.listElement = el)}
           >
             <slot />
           </gux-list>
         </gux-popup-beta>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

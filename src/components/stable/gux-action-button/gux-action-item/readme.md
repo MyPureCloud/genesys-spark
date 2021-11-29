@@ -11,14 +11,14 @@
 | ---------- | ---------- | ----------- | --------- | ----------- |
 | `disabled` | `disabled` |             | `boolean` | `false`     |
 | `text`     | `text`     |             | `string`  | `undefined` |
-| `value`    | `value`    |             | `any`     | `undefined` |
+| `value`    | --         |             | `unknown` | `undefined` |
 
 
 ## Events
 
-| Event   | Description | Type               |
-| ------- | ----------- | ------------------ |
-| `press` |             | `CustomEvent<any>` |
+| Event   | Description | Type                   |
+| ------- | ----------- | ---------------------- |
+| `press` |             | `CustomEvent<unknown>` |
 
 
 ----------------------------------------------

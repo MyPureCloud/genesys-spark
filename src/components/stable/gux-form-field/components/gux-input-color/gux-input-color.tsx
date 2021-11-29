@@ -15,7 +15,7 @@ export class GuxInputColor {
   private input: HTMLInputElement;
   private disabledObserver: MutationObserver;
   private i18n: GetI18nValue;
-  private requiredId = randomHTMLId('gux-input-color-required');
+  private requiredId: string = randomHTMLId('gux-input-color-required');
 
   @Element()
   private root: HTMLElement;
@@ -117,7 +117,7 @@ export class GuxInputColor {
           <slot name="input" slot="input" />
         </gux-color-select>
       </section>
-    );
+    ) as JSX.Element;
   }
 
   private setOpened(opened: boolean): void {

@@ -66,7 +66,7 @@ describe('gux-tooltip', () => {
         const page = await newSpecPage({ components, html, language });
 
         page.root.remove();
-        page.waitForChanges();
+        await page.waitForChanges();
 
         expect(page.body).toMatchSnapshot();
       });

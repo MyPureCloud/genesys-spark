@@ -61,12 +61,12 @@ export class GuxTooltipTitle {
         <slot />
       </span>,
       this.renderTooltip()
-    ];
+    ] as JSX.Element;
   }
 
-  private renderTooltip() {
+  private renderTooltip(): JSX.Element {
     if (this.showTooltip) {
-      return <gux-tooltip>{this.titleName}</gux-tooltip>;
+      return (<gux-tooltip>{this.titleName}</gux-tooltip>) as JSX.Element;
     }
   }
 }

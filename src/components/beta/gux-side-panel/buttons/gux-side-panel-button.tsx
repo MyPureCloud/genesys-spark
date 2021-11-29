@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, JSX, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-side-panel-button.less',
@@ -18,11 +18,11 @@ export class GuxSidePanelButton {
     return this.isSelected ? 'selected' : '';
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <button aria-label={this.altText} class={this.buttonClass}>
         <gux-icon decorative icon-name={this.icon}></gux-icon>
       </button>
-    );
+    ) as JSX.Element;
   }
 }

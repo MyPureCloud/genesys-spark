@@ -69,9 +69,8 @@ describe('gux-notification-toast', () => {
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const dismissButton = element.shadowRoot.querySelector(
-        'gux-dismiss-button'
-      ) as HTMLElement;
+      const dismissButton =
+        element.shadowRoot.querySelector('gux-dismiss-button');
       const guxdismissSpy = jest.fn();
       const clickSpy = jest.fn();
       const elementRemoveSpy = jest.spyOn(element, 'remove');
@@ -97,9 +96,8 @@ describe('gux-notification-toast', () => {
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const dismissButton = element.shadowRoot.querySelector(
-        'gux-dismiss-button'
-      ) as HTMLElement;
+      const dismissButton =
+        element.shadowRoot.querySelector('gux-dismiss-button');
       const elementRemoveSpy = jest.spyOn(element, 'remove');
 
       page.win.addEventListener('guxdismiss', (event: Event) => {

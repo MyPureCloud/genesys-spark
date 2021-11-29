@@ -45,9 +45,11 @@ export class GuxPopup {
             enabled: true,
             phase: 'beforeWrite',
             requires: ['computeStyles'],
+            // eslint-disable-next-line @typescript-eslint/typedef
             fn({ state }) {
               state.styles.popper.width = `${state.rects.reference.width}px`;
             },
+            // eslint-disable-next-line @typescript-eslint/typedef
             effect({ state }) {
               state.elements.popper.style.width = `${
                 state.elements.reference.getBoundingClientRect().width
@@ -84,6 +86,6 @@ export class GuxPopup {
           <slot name="popup"></slot>
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

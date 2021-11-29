@@ -22,6 +22,7 @@ export class GuxTabAdvancedPanel {
   @State()
   active: boolean = false;
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxSetActive(active: boolean): Promise<void> {
     this.active = active;
@@ -49,6 +50,6 @@ export class GuxTabAdvancedPanel {
       >
         <slot></slot>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

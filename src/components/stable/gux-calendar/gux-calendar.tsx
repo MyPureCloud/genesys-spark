@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Method,
   Prop,
   State
@@ -87,6 +88,7 @@ export class GuxCalendar {
   /**
    * Sets new value and rerender the calendar
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async setValue(value: Date | [Date, Date]) {
     if (this.mode === CalendarModes.Range && value instanceof Array) {
@@ -103,6 +105,7 @@ export class GuxCalendar {
   /**
    * Focus the preview date
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async focusPreviewDate() {
     const target: HTMLTableCellElement = this.root.querySelector(
@@ -124,12 +127,12 @@ export class GuxCalendar {
     );
     // Wait for render before focusing preview date
     setTimeout(() => {
-      this.focusPreviewDate();
+      void this.focusPreviewDate();
     });
   }
 
   async setValueAndEmit(value: Date | [Date, Date]) {
-    this.setValue(value);
+    await this.setValue(value);
     this.emitInput();
   }
 
@@ -160,7 +163,7 @@ export class GuxCalendar {
     startDate: Date,
     length: number
   ): IDateElement[] {
-    const arr = [];
+    const arr: IDateElement[] = [];
     const currentDate = new Date(
       startDate.getFullYear(),
       startDate.getMonth(),
@@ -229,8 +232,8 @@ export class GuxCalendar {
     return arr;
   }
 
-  create2DArray(arr: any[], chunkSize: number): IDateElement[][] {
-    const result = [];
+  create2DArray(arr: IDateElement[], chunkSize: number): IDateElement[][] {
+    const result: IDateElement[][] = [];
     for (let i = 0; i < chunkSize - 1; i++) {
       const week = arr.slice(i * chunkSize, i * chunkSize + chunkSize);
       if (this.weekShouldBeDisplayed(week)) {
@@ -263,21 +266,19 @@ export class GuxCalendar {
     return newDate;
   }
 
-  getAllDatesElements(): HTMLTableDataCellElement[] {
+  getAllDatesElements(): HTMLTableCellElement[] {
     const targets = this.root.querySelectorAll('td');
     return Array.from(targets);
   }
 
-  getAllSelectableDatesElements(): HTMLTableDataCellElement[] {
-    const targets = this.root.querySelectorAll(
-      'td[tabindex="0"]'
-    ) as NodeListOf<HTMLTableDataCellElement>;
-    return Array.from(targets);
+  getAllSelectableDatesElements(): HTMLTableCellElement[] {
+    const targets = this.root.querySelectorAll('td[tabindex="0"]');
+    return Array.from(targets) as HTMLTableCellElement[];
   }
 
   getRangeDatesElements(from: Date, to: Date): HTMLTableCellElement[] {
-    const elements = [];
-    let rangeDates;
+    const elements: HTMLTableCellElement[] = [];
+    let rangeDates: Date[];
     if (to < from) {
       rangeDates = this.getRangeDates(to, from);
     } else {
@@ -295,7 +296,7 @@ export class GuxCalendar {
   }
 
   getRangeDates(from: Date, to: Date): Date[] {
-    const array = [];
+    const array: Date[] = [];
     let currentDate = from;
     while (currentDate <= to) {
       array.push(new Date(currentDate));
@@ -304,10 +305,10 @@ export class GuxCalendar {
     return array;
   }
 
-  onDateClick(date: Date) {
+  async onDateClick(date: Date): Promise<void> {
     if (!this.outOfBounds(date)) {
       if (this.mode !== CalendarModes.Range) {
-        this.setValueAndEmit(date);
+        await this.setValueAndEmit(date);
       } else {
         if (this.selectingDate === null) {
           // First click
@@ -323,7 +324,7 @@ export class GuxCalendar {
             target.classList.add('gux-selected');
           }
           this.updateRangeElements();
-          this.setValueAndEmit([this.selectingDate, date]);
+          await this.setValueAndEmit([this.selectingDate, date]);
           this.previewValue = date;
           this.selectingDate = null;
         }
@@ -347,12 +348,12 @@ export class GuxCalendar {
     }
   }
 
-  onKeyDown(event: KeyboardEvent) {
+  async onKeyDown(event: KeyboardEvent) {
     switch (event.key) {
       case ' ':
       case 'Enter':
         event.preventDefault();
-        this.onDateClick(this.previewValue);
+        await this.onDateClick(this.previewValue);
         break;
       case 'ArrowDown':
         event.preventDefault();
@@ -361,7 +362,7 @@ export class GuxCalendar {
         );
         this.onDateMouseEnter(this.previewValue);
         setTimeout(() => {
-          this.focusPreviewDate();
+          void this.focusPreviewDate();
         });
         break;
       case 'ArrowUp':
@@ -371,7 +372,7 @@ export class GuxCalendar {
         );
         this.onDateMouseEnter(this.previewValue);
         setTimeout(() => {
-          this.focusPreviewDate();
+          void this.focusPreviewDate();
         });
         break;
       case 'ArrowLeft':
@@ -381,7 +382,7 @@ export class GuxCalendar {
         );
         this.onDateMouseEnter(this.previewValue);
         setTimeout(() => {
-          this.focusPreviewDate();
+          void this.focusPreviewDate();
         });
         break;
       case 'ArrowRight':
@@ -391,7 +392,7 @@ export class GuxCalendar {
         );
         this.onDateMouseEnter(this.previewValue);
         setTimeout(() => {
-          this.focusPreviewDate();
+          void this.focusPreviewDate();
         });
         break;
       case 'PageUp':
@@ -411,7 +412,7 @@ export class GuxCalendar {
   }
 
   getWeekdays(): string[] {
-    const days = [];
+    const days: string[] = [];
     // Sunday
     const day = new Date(1970, 0, 4);
     for (let i = 0; i < 7; i++) {
@@ -447,45 +448,53 @@ export class GuxCalendar {
   renderMonthHeader() {
     return (
       <div class="gux-month-list">
-        {Array.from(Array(this.numberOfMonths).keys()).map(index => (
-          <label>
-            {this.getMonthLabel(index)} {this.previewValue.getFullYear()}
-          </label>
-        ))}
+        {Array.from(Array(this.numberOfMonths).keys()).map(
+          index =>
+            (
+              <label>
+                {this.getMonthLabel(index)} {this.previewValue.getFullYear()}
+              </label>
+            ) as JSX.Element
+        )}
       </div>
-    );
+    ) as JSX.Element;
   }
 
-  renderCalendarTable(index) {
+  renderCalendarTable(index: number) {
     return (
       <table>
         <tr>
-          {this.getWeekdays().map(day => (
-            <th>{day}</th>
-          ))}
+          {this.getWeekdays().map(day => (<th>{day}</th>) as JSX.Element)}
         </tr>
-        {this.getMonthDays(index).map(week => (
-          <tr>
-            {week.map(day => (
-              <td
-                tabindex={day.selected ? '0' : '-1'}
-                class={day.class}
-                aria-hidden={day.hidden ? 'true' : 'false'}
-                data-date={day.date.getTime()}
-                onClick={() => this.onDateClick(day.date)}
-                onMouseEnter={() => this.onDateMouseEnter(day.date)}
-                onKeyDown={e => this.onKeyDown(e)}
-              >
-                {day.date.getDate()}
-                <span class="gux-sr-only">
-                  {this.getMonthLabel(index)} {this.previewValue.getFullYear()}
-                </span>
-              </td>
-            ))}
-          </tr>
-        ))}
+        {this.getMonthDays(index).map(
+          week =>
+            (
+              <tr>
+                {week.map(
+                  day =>
+                    (
+                      <td
+                        tabindex={day.selected ? '0' : '-1'}
+                        class={day.class}
+                        aria-hidden={day.hidden ? 'true' : 'false'}
+                        data-date={day.date.getTime()}
+                        onClick={() => void this.onDateClick(day.date)}
+                        onMouseEnter={() => this.onDateMouseEnter(day.date)}
+                        onKeyDown={e => void this.onKeyDown(e)}
+                      >
+                        {day.date.getDate()}
+                        <span class="gux-sr-only">
+                          {this.getMonthLabel(index)}{' '}
+                          {this.previewValue.getFullYear()}
+                        </span>
+                      </td>
+                    ) as JSX.Element
+                )}
+              </tr>
+            ) as JSX.Element
+        )}
       </table>
-    );
+    ) as JSX.Element;
   }
 
   render() {
@@ -518,6 +527,6 @@ export class GuxCalendar {
           )}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

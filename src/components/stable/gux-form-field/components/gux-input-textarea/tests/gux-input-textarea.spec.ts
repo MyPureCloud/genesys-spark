@@ -1,4 +1,4 @@
-import { newSpecPage, SpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
 
 import { GuxInputTextArea } from '../gux-input-textarea';
 

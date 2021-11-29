@@ -74,7 +74,7 @@ export class GuxInputNumber {
         >
           <gux-icon icon-name="close" decorative></gux-icon>
         </button>
-      );
+      ) as JSX.Element;
     }
 
     return null;
@@ -103,7 +103,7 @@ export class GuxInputNumber {
           <gux-icon icon-name="chevron-small-down" decorative></gux-icon>
         </button>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   async componentWillLoad(): Promise<void> {
@@ -146,6 +146,6 @@ export class GuxInputNumber {
         </div>
         {this.renderStepButtons()}
       </div>
-    );
+    ) as JSX.Element;
   }
 }

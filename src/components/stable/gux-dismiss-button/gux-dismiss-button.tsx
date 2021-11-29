@@ -32,6 +32,6 @@ export class GuxDismissButton {
           ></gux-icon>
         </button>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

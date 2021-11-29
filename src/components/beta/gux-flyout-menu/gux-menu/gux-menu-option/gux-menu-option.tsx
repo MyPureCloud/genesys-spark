@@ -15,6 +15,7 @@ export class GuxMenuOption {
   /**
    * Focus on the components button element
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxFocus(): Promise<void> {
     this.buttonElement.focus();
@@ -47,6 +48,6 @@ export class GuxMenuOption {
           <slot />
         </span>
       </button>
-    );
+    ) as JSX.Element;
   }
 }

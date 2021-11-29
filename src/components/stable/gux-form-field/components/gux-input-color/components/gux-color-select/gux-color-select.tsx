@@ -49,16 +49,19 @@ export class GuxColorSelect {
       <div>
         <div class="gux-input-color-matrix">{this.renderDefaultTiles()}</div>
       </div>
-    ];
+    ] as JSX.Element;
   }
 
   private renderDefaultTiles(): HTMLGuxInputColorOptionElement[] {
-    return defaultColors.map((color, index) => (
-      <gux-input-color-option
-        key={`${color}-${index}`}
-        value={color}
-        active={this.color.toLowerCase() === color.toLowerCase()}
-      />
-    ));
+    return defaultColors.map(
+      (color, index) =>
+        (
+          <gux-input-color-option
+            key={`${color}-${index}`}
+            value={color}
+            active={this.color.toLowerCase() === color.toLowerCase()}
+          />
+        ) as HTMLGuxInputColorOptionElement
+    );
   }
 }

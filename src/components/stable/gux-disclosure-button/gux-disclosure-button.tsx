@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Prop,
   State,
   Watch
@@ -80,7 +81,7 @@ export class GuxDisclosureButton {
     this.updateIcon();
   }
 
-  render() {
+  render(): JSX.Element {
     const activeClass = this.isOpen ? 'gux-active' : '';
     return (
       <div class={`gux-disclosure-button-container gux-${this.position}`}>
@@ -97,6 +98,6 @@ export class GuxDisclosureButton {
           <slot name="panel-content" />
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

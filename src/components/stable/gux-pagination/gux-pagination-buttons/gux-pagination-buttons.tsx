@@ -86,25 +86,29 @@ export class GuxPaginationButtons {
     ).reduce((acc, cv) => {
       if (cv.current) {
         return acc.concat(
-          <button class="gux-pagination-buttons-list-current">
-            {cv.display}
-          </button>
+          (
+            <button class="gux-pagination-buttons-list-current">
+              {cv.display}
+            </button>
+          ) as JSX.Element
         );
       }
 
       return acc.concat(
-        <button
-          class="gux-pagination-buttons-list-target"
-          onClick={() => this.handleClickPage(cv.pageNumber)}
-        >
-          {cv.display}
-        </button>
+        (
+          <button
+            class="gux-pagination-buttons-list-target"
+            onClick={() => this.handleClickPage(cv.pageNumber)}
+          >
+            {cv.display}
+          </button>
+        ) as JSX.Element
       );
-    }, []);
+    }, [] as JSX.Element[]);
   }
 
   private getSmallPagePicker(): JSX.Element {
-    return <div class={'gux-pagination-buttons-spacer'}></div>;
+    return (<div class={'gux-pagination-buttons-spacer'}></div>) as JSX.Element;
   }
 
   private getExpandedPagePicker(): JSX.Element {
@@ -112,7 +116,7 @@ export class GuxPaginationButtons {
       <div class="gux-pagination-buttons-list-container">
         {this.getPageListEnteries(this.currentPage, this.totalPages)}
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private getFullPagePicker(): JSX.Element {
@@ -135,7 +139,7 @@ export class GuxPaginationButtons {
         </div>
         <div>{this.i18n('totalPages', { totalPages: this.totalPages })}</div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private getPagePicker(layout: GuxPaginationLayout): JSX.Element {
@@ -201,6 +205,6 @@ export class GuxPaginationButtons {
           </gux-button-slot-beta>
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

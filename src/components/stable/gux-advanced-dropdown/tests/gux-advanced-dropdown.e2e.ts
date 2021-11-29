@@ -28,7 +28,7 @@ describe('gux-advanced-dropdown', () => {
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(false);
 
-    element.click();
+    await element.click();
     await page.waitForChanges();
     await a11yCheck(page, axeExclusions);
 
@@ -45,7 +45,7 @@ describe('gux-advanced-dropdown', () => {
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(false);
 
-    element.click();
+    await element.click();
     await page.waitForChanges();
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(true);
@@ -53,7 +53,7 @@ describe('gux-advanced-dropdown', () => {
     const englishDropdownOption = await element.find(
       'gux-dropdown-option[value="en"]'
     );
-    englishDropdownOption.click();
+    await englishDropdownOption.click();
     await page.waitForChanges();
 
     expect(inputSpy).toHaveReceivedEventDetail('en');
@@ -70,7 +70,7 @@ describe('gux-advanced-dropdown', () => {
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(false);
 
-    element.click();
+    await element.click();
     await page.waitForChanges();
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(true);
@@ -114,7 +114,7 @@ describe('gux-advanced-dropdown', () => {
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(false);
 
-    element.click();
+    await element.click();
     await page.waitForChanges();
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(true);

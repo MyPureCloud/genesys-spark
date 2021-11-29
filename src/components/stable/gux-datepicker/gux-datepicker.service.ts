@@ -173,7 +173,7 @@ export function getIntervalOrder(format: string): string[] {
 
   return format
     .split(formatSeperator)
-    .reduce((acc, cv) => acc.concat(cv[0]), []);
+    .reduce((acc, cv) => acc.concat(cv[0]), [] as string[]);
 }
 
 export function getIntervalRange(

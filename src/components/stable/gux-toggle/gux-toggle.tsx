@@ -88,7 +88,7 @@ export class GuxToggle {
         <div class="gux-toggle-label-loading">
           <gux-radial-loading context="input"></gux-radial-loading>
         </div>
-      );
+      ) as JSX.Element;
     }
   }
 
@@ -104,7 +104,7 @@ export class GuxToggle {
             {this.renderLoading()}
           </div>
         </div>
-      );
+      ) as JSX.Element;
     }
   }
 
@@ -114,7 +114,7 @@ export class GuxToggle {
         <div class="gux-toggle-error">
           <gux-error-message-beta>{this.errorMessage}</gux-error-message-beta>
         </div>
-      );
+      ) as JSX.Element;
     }
   }
   render(): JSX.Element {
@@ -139,6 +139,6 @@ export class GuxToggle {
         </div>
         {this.renderError()}
       </div>
-    );
+    ) as JSX.Element;
   }
 }

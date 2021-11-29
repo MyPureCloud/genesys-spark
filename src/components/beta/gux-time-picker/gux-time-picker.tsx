@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Listen,
   Prop,
   State,
@@ -47,7 +48,7 @@ export class GuxTimePicker {
   suggestion: string = '00';
 
   @Event()
-  changed: EventEmitter<any>;
+  changed: EventEmitter<string>;
 
   inputElement: HTMLInputElement;
   focusedField: HTMLInputElement;
@@ -57,7 +58,7 @@ export class GuxTimePicker {
   isPressEvent: boolean = false;
 
   @Watch('value')
-  watchValue(newValue) {
+  watchValue(newValue: string) {
     this.changed.emit(newValue);
   }
 
@@ -78,7 +79,7 @@ export class GuxTimePicker {
           break;
         case 'ArrowDown':
           if (this.dropdownList) {
-            this.dropdownList.setFocusOnFirstItem();
+            void this.dropdownList.setFocusOnFirstItem();
           }
           break;
         case 'ArrowUp':
@@ -91,7 +92,8 @@ export class GuxTimePicker {
           if ('0' <= e.key && e.key <= '9') {
             this.openDropdown = true;
             if (this.focusedField.value.length < 8) {
-              let newValue = this.focusedField.value + parseInt(e.key, 10);
+              let newValue =
+                this.focusedField.value + String(parseInt(e.key, 10));
               const arr = newValue.split(':');
               if (newValue.length > 6 && Number(arr[2].padEnd(2, '0')) > 59) {
                 return;
@@ -137,7 +139,7 @@ export class GuxTimePicker {
   onPress(e: CustomEvent) {
     this.isPressEvent = true;
     const chosenTimeOption = e.target as HTMLGuxListItemElement;
-    this.inputElement.value = chosenTimeOption.value;
+    this.inputElement.value = chosenTimeOption.value as string;
     this.updateChosenValue();
   }
 
@@ -238,7 +240,7 @@ export class GuxTimePicker {
     return regex.test(value);
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div>
         <div class="gux-input">
@@ -256,13 +258,13 @@ export class GuxTimePicker {
               {this.buildDropdownOptions().map(value => {
                 return (
                   <gux-list-item value={value} text={value}></gux-list-item>
-                );
+                ) as JSX.Element;
               })}
             </gux-list>
           </div>
         )}
       </div>
-    );
+    ) as JSX.Element;
   }
 
   buildDropdownOptions(): string[] {

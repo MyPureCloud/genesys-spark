@@ -4,17 +4,6 @@ import { GuxColumnChart } from '../gux-chart-column';
 const components = [GuxColumnChart];
 const language = 'en';
 
-const chartData = {
-  values: [
-    { category: 'a', value: 4 },
-    { category: 'b', value: 6 },
-    { category: 'c', value: 10 },
-    { category: 'd', value: 3 },
-    { category: 'e', value: 10 },
-    { category: 'f', value: 20 }
-  ]
-};
-
 describe('gux-chart-column-beta', () => {
   it('should build', async () => {
     const html =

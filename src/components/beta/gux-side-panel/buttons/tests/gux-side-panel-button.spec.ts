@@ -13,7 +13,7 @@ describe('gux-side-panel-button', () => {
   });
 
   describe('#render', () => {
-    [{ isSelected: false }, { isSelected: true }].forEach(
+    [{ isSelected: 'false' }, { isSelected: 'true' }].forEach(
       ({ isSelected }, index) => {
         it(`should render component as expected (${index + 1})`, async () => {
           const html = `<gux-side-panel-button is-selected="${isSelected}"></gux-side-panel-button>`;

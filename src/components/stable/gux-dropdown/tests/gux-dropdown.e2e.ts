@@ -29,7 +29,7 @@ describe('gux-dropdown', () => {
     await a11yCheck(page, axeExclusions, 'before opening dropdown');
     const element = await page.find('gux-dropdown');
     const inputElm = await element.find('gux-input-text-like');
-    inputElm.click();
+    await inputElm.click();
     await page.waitForChanges();
     await a11yCheck(page, axeExclusions, 'after opening dropdown');
 
@@ -55,12 +55,12 @@ describe('gux-dropdown', () => {
     const changeSpy = await element.spyOnEvent('change');
 
     const inputElm = await element.find('gux-input-text-like');
-    inputElm.click();
+    await inputElm.click();
     await page.waitForChanges();
 
     let dropMenu = await element.find('.gux-dropdown');
     const enElm = await dropMenu.find('gux-option');
-    enElm.click();
+    await enElm.click();
     await page.waitForChanges();
     dropMenu = await element.find('.gux-dropdown');
 

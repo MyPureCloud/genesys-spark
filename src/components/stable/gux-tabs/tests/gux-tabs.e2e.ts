@@ -79,7 +79,7 @@ describe('gux-tabs', () => {
         'guxactivepanelchange'
       );
 
-      tabTarget.click();
+      await tabTarget.click();
       await page.waitForChanges();
 
       expect(spyOnActivePanelChangeEvent.length).toBe(1);
@@ -93,7 +93,7 @@ describe('gux-tabs', () => {
         'guxactivepanelchange'
       );
 
-      tabTarget.click();
+      await tabTarget.click();
       await page.waitForChanges();
 
       expect(spyOnActivePanelChangeEvent.length).toBe(0);

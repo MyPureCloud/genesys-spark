@@ -36,6 +36,6 @@ export class GuxBreadcrumbs {
       >
         <slot />
       </nav>
-    );
+    ) as JSX.Element;
   }
 }

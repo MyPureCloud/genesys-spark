@@ -47,7 +47,7 @@ export class GuxAccordionSection {
       return null;
     }
 
-    return <div class="gux-header-spacer"></div>;
+    return (<div class="gux-header-spacer"></div>) as JSX.Element;
   }
 
   render(): JSX.Element {
@@ -86,6 +86,6 @@ export class GuxAccordionSection {
           <slot name="content"></slot>
         </div>
       </section>
-    );
+    ) as JSX.Element;
   }
 }

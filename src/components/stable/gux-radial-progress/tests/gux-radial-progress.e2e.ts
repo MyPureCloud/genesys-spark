@@ -55,9 +55,6 @@ describe('gux-radial-progress', () => {
       html: '<gux-radial-progress value="0" screenreader-text="Uploading file"></gux-radial-progress>'
     });
     const element = await page.find('gux-radial-progress');
-    const progressbar = element.shadowRoot.querySelector(
-      'div[role="progressbar"]'
-    );
 
     expect(getInternalProgressBar(element).textContent).toEqual(`0%`);
 

@@ -33,6 +33,10 @@ jobs:
       # Can't use npm ci, because it fails on missing optional dependencies
       - run: npm install
 
+      # Build
+      - name: Build
+        run: npm run build
+
       # Run linting
       - name: Lint
         run: npm run lint
@@ -40,7 +44,3 @@ jobs:
       # Runs tests
       - name: Test
         run: npm run test.ci
-
-      # Build
-      - name: Build
-        run: npm run build

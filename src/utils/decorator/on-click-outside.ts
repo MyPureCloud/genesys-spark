@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/unbound-method */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
 import { Build as BUILD, ComponentInterface, getElement } from '@stencil/core';
 
 declare type OnClickOutsideDecorator = (
@@ -26,11 +31,13 @@ export function OnClickOutside(
     (BUILD as any).connectedCallback = true;
     (BUILD as any).disconnectedCallback = true;
 
+    // eslint-disable-next-line
     const { connectedCallback, disconnectedCallback } = proto;
 
     proto.connectedCallback = function () {
       const host = getElement(this);
       const method = this[methodName];
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       registerOnClickOutside(this, host, method, opt);
       return connectedCallback && connectedCallback.call(this);
     };
@@ -38,6 +45,7 @@ export function OnClickOutside(
     proto.disconnectedCallback = function () {
       const host = getElement(this);
       const method = this[methodName];
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       removeOnClickOutside(this, host, method, opt);
       return disconnectedCallback && disconnectedCallback.call(this);
     };

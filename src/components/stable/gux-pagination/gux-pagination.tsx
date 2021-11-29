@@ -98,15 +98,15 @@ export class GuxPagination implements ComponentInterface {
   }
 
   private handleInternalitemsperpagechange(event: CustomEvent): void {
-    this.itemsPerPage = event.detail;
+    this.itemsPerPage = event.detail as GuxItemsPerPage;
     this.setPage(1);
   }
 
   private handleInternalcurrentpagechange(event: CustomEvent): void {
-    this.setPage(event.detail);
+    this.setPage(event.detail as number);
   }
 
-  private getPaginationInfoElement(layout: GuxPaginationLayout): JSX.Element[] {
+  private getPaginationInfoElement(layout: GuxPaginationLayout): JSX.Element {
     if (layout === 'expanded') {
       return null;
     }
@@ -130,7 +130,7 @@ export class GuxPagination implements ComponentInterface {
       );
     }
 
-    return <div class="gux-pagination-info">{content}</div>;
+    return (<div class="gux-pagination-info">{content}</div>) as JSX.Element;
   }
 
   componentWillLoad(): void {
@@ -157,6 +157,6 @@ export class GuxPagination implements ComponentInterface {
           />
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }
