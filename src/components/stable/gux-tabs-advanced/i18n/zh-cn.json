@@ -4,9 +4,8 @@
   "scrollRight": "向右滚动",
   "options": "{tabTitle} 的选项卡选项",
   "disableNewTab": "已达到创建选项卡的最大数量",
-  "toggleSortInstructions": "使用空格切换排序模式",
-  "sortInstructions": "排序模式已打开，可使用左箭头和右箭头键对选项卡重新排序。按空格键或 Enter 键可完成排序。按 Esc 键可取消排序。",
-  "sortModeOn": "排序模式已打开",
+  "toggleSort": "使用空格切换排序模式",
+  "sortModeOn": "排序模式已打开，可使用左箭头和右箭头键对选项卡重新排序。按空格键或 Enter 键可完成排序。按 Esc 键可取消排序。",
   "sortComplete": "排序已完成",
   "sortCancelled": "排序已取消"
 }

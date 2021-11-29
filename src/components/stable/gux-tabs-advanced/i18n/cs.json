@@ -4,9 +4,8 @@
   "scrollRight": "Posunout doprava",
   "options": "Možnosti karty {tabTitle}",
   "disableNewTab": "Bylo dosaženo maximálního počtu vytvořených karet.",
-  "toggleSortInstructions": "Stiskem mezerníku aktivujte režim třídění.",
-  "sortInstructions": "Režim třídění je zapnutý. Pomocí šipek doleva a doprava můžete změnit pořadí karet. Stiskem mezerníku nebo klávesy Enter pořadí potvrdíte. Stiskem klávesy ESC třídění zrušíte.",
-  "sortModeOn": "Režim třídění zapnutý",
+  "toggleSort": "Stiskem mezerníku můžete přepnout režim třídění.",
+  "sortModeOn": "Režim třídění je zapnutý. Pomocí šipek doleva a doprava můžete změnit pořadí karet. Stiskem mezerníku nebo klávesy Enter pořadí potvrdíte. Stiskem klávesy ESC třídění zrušíte.",
   "sortComplete": "Třídění dokončeno",
   "sortCancelled": "Třídění zrušeno"
 }
