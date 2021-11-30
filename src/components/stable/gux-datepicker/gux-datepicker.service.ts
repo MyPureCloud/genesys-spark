@@ -3,10 +3,12 @@ import { CalendarModes } from '../../../common-enums';
 import { GuxDatepickerIntervalRange } from './gux-datepicker.types';
 
 export function getCalendarLabels(
-  labels: string[],
+  labelString: string,
   mode: string,
   defaultLabels: string[]
 ) {
+  const labels = labelString.split(',').map(label => label.trim());
+
   if (mode === CalendarModes.Range) {
     return [labels[0] || defaultLabels[0], labels[1] || defaultLabels[1]];
   } else if (mode !== CalendarModes.Range && !labels[0]) {

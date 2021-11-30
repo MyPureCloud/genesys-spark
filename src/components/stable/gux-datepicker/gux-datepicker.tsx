@@ -75,10 +75,10 @@ export class GuxDatepicker {
   value: string;
 
   /**
-   * The datepicker label (can be a single label, or an array of two if it's a range datepicker)
+   * The datepicker label (can be a single label, or two seperated by a comma if it's a range datepicker)
    */
   @Prop()
-  label: string | string[] = '';
+  label: string = '';
 
   /**
    * The datepicker number of months displayed
@@ -372,11 +372,11 @@ export class GuxDatepicker {
   }
 
   getCalendarLabels(): string[] {
-    return getCalendarLabels(
-      ([] as string[]).concat(this.label || []),
-      this.mode,
-      [this.i18n('start'), this.i18n('end'), this.i18n('date')]
-    );
+    return getCalendarLabels(this.label, this.mode, [
+      this.i18n('start'),
+      this.i18n('end'),
+      this.i18n('date')
+    ]);
   }
 
   stringToDate(stringDate: string) {

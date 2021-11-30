@@ -7,6 +7,7 @@
 * rename `title` property to `gux-title` on instances of `gux-button`
 * remove `first-day-of-week` property from instances of `gux-calendar`
 * remove `first-day-of-week` property from instances of `gux-datepicker`
+* `label` property on instances of `gux-datepicker` now only accepts `string`.
 * `trap-focus` property on instances of `gux-modal` now default to true
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
@@ -27,7 +28,7 @@
   * `gux-text-label-legacy` -> Contact the Core UI team if you need help migrating away from this component.
 
 ## Configuration
-Set the `allowSyntheticDefaultImports` compiler option  to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.  
+Set the `allowSyntheticDefaultImports` compiler option  to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
 This new requirement is related to the a new dependency (vega-lite) which was added as part of our visualisation work.
 (`allowSyntheticDefaultImports: true` is implied by `esModuleInterop: true`, so if the `esModuleInterop` is already enabled, `allowSyntheticDefaultImports` does not need to be explicitly added)
 
@@ -35,19 +36,26 @@ This new requirement is related to the a new dependency (vega-lite) which was ad
 
 ### gux-button
 
-'title' property renamed `gux-title`. This is to fix an accessibility defect.
+  * 'title' property renamed `gux-title`. This is to fix an accessibility defect.
 
 ### gux-calendar
 
-'first-day-of-week' property removed. This is now determined via locale.
+  * 'first-day-of-week' property removed. This is now determined via locale.
 
 ### gux-datepicker
 
-'first-day-of-week' property removed. This is now determined via locale via the `gux-calendar` component.
+  * 'first-day-of-week' property removed. This is now determined via locale via the `gux-calendar` component.
+  * `label` property on instances of `gux-datepicker` now only accepts `string`. For range labels use a comma seperate list.
+
+#### V3
+
+```html
+<gux-datepicker mode="range" label="Start,End"></gux-datepicker>
+```
 
 ### gux-modal
 
-'trap-focus' property now defaults to true.
+  * 'trap-focus' property now defaults to true.
 
 #### V2
 
