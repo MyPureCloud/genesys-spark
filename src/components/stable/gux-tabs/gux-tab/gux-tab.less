@@ -67,22 +67,6 @@ gux-tab {
   display: flex;
   max-width: 160px;
 
-  .gux-disabled {
-    gux-tooltip-title {
-      opacity: 50%;
-    }
-  }
-
-  gux-tooltip-title {
-    max-width: 160px;
-    overflow: hidden;
-    font-size: 14px;
-    color: @gux-type;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: default;
-  }
-
   .gux-tab {
     display: flex;
     align-items: center;
@@ -90,14 +74,34 @@ gux-tab {
     max-width: 160px;
     height: 40px;
     padding: 0 @spacing-medium;
+    cursor: pointer;
     background-color: #fff;
     border: none;
+
+    &.gux-disabled {
+      cursor: default;
+
+      gux-tooltip-title {
+        cursor: default;
+        opacity: 50%;
+      }
+    }
 
     &:focus-visible {
       padding: 0 13px 3px 13px;
       border: 3px solid @gux-blue-90;
       border-radius: 5px;
       outline: none;
+    }
+
+    gux-tooltip-title {
+      max-width: 160px;
+      overflow: hidden;
+      font-size: 14px;
+      color: @gux-type;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
     }
   }
 }

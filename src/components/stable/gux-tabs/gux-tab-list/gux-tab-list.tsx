@@ -39,6 +39,12 @@ export class GuxTabList {
   private hasVerticalScrollbar: boolean = false;
 
   @State()
+  private isScrolledToBeginning: boolean = false;
+
+  @State()
+  private isScrolledToEnd: boolean = false;
+
+  @State()
   private triggerIds: string;
 
   @Listen('focusout')
@@ -53,6 +59,11 @@ export class GuxTabList {
         }
       });
     }
+  }
+
+  @Listen('scroll', { capture: true })
+  onScroll(): void {
+    void this.checkDisabledScrollButtons();
   }
 
   private resizeObserver?: ResizeObserver;
@@ -131,6 +142,7 @@ export class GuxTabList {
   }
 
   checkForScrollbarHideOrShow() {
+    this.checkDisabledScrollButtons();
     readTask(() => {
       const el = this.root.querySelector('.gux-scrollable-section');
       const hasHorizontalScrollbar = el.clientWidth !== el.scrollWidth;
@@ -236,6 +248,36 @@ export class GuxTabList {
     }, 500);
   }
 
+  checkDisabledScrollButtons() {
+    const scrollContainer = this.root.querySelector('.gux-scrollable-section');
+    if (this.hasHorizontalScrollbar) {
+      const scrollLeft = scrollContainer.scrollLeft;
+      const scrollLeftMax =
+        scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+      if (scrollLeft === 0) {
+        this.isScrolledToBeginning = true;
+      } else if (scrollLeftMax - scrollLeft === 0) {
+        this.isScrolledToEnd = true;
+      } else {
+        this.isScrolledToBeginning = false;
+        this.isScrolledToEnd = false;
+      }
+    } else if (this.hasVerticalScrollbar) {
+      const scrollTop = scrollContainer.scrollTop;
+      const scrollTopMax =
+        scrollContainer.scrollHeight - scrollContainer.clientHeight;
+      if (scrollTop === 0) {
+        this.isScrolledToBeginning = true;
+      } else if (scrollTopMax - scrollTop === 0) {
+        this.isScrolledToEnd = true;
+      } else {
+        this.isScrolledToBeginning = false;
+        this.isScrolledToEnd = false;
+      }
+    }
+  }
+
   scrollLeft() {
     writeTask(() => {
       this.root.querySelector('.gux-scrollable-section').scrollBy(-100, 0);
@@ -286,6 +328,7 @@ export class GuxTabList {
       <div class="gux-scroll-button-container">
         {this.hasHorizontalScrollbar || this.hasVerticalScrollbar ? (
           <button
+            disabled={this.getButtonDisabled(direction)}
             tabindex="-1"
             title={this.i18n(direction)}
             aria-label={this.i18n(direction)}
@@ -300,6 +343,22 @@ export class GuxTabList {
         ) : null}
       </div>
     ) as JSX.Element;
+  }
+
+  private getButtonDisabled(direction: string): boolean {
+    switch (direction) {
+      case 'scrollLeft':
+        return this.isScrolledToBeginning;
+
+      case 'scrollRight':
+        return this.isScrolledToEnd;
+
+      case 'scrollUp':
+        return this.isScrolledToBeginning;
+
+      case 'scrollDown':
+        return this.isScrolledToEnd;
+    }
   }
 
   private getScrollDirection(direction: string): void {
