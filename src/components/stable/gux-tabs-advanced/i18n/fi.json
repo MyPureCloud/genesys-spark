@@ -4,9 +4,8 @@
   "scrollRight": "Vieritä oikealle",
   "options": "Välilehtivaihtoehdot kohteelle {tabTitle}",
   "disableNewTab": "Luotujen välilehtien enimmäismäärä on saavutettu",
-  "toggleSortInstructions": "Valitse lajittelutila välilyöntinäppäimen avulla",
-  "sortInstructions": "Voit järjestää välilehdet uudelleen lajittelutilassa vasemmalla ja oikealla nuolinäppäimellä. Voit suorittaa lajittelun loppuun painamalla välilyönti- tai Enter-näppäintä. Voit peruuttaa lajittelun painamalla Esc-näppäintä",
-  "sortModeOn": "Lajittelutila päällä",
+  "toggleSort": "Valitse lajittelutila välilyöntinäppäimen avulla",
+  "sortModeOn": "Voit järjestää välilehdet uudelleen lajittelutilassa vasemmalla ja oikealla nuolinäppäimellä. Voit suorittaa lajittelun loppuun painamalla välilyönti- tai Enter-näppäintä. Voit peruuttaa lajittelun painamalla Esc-näppäintä",
   "sortComplete": "Lajittelu on valmis",
   "sortCancelled": "Lajittelu peruutettu"
 }
