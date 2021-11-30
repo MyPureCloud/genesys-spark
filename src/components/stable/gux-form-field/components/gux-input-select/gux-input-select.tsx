@@ -19,7 +19,7 @@ export class GuxInputSelect {
   @State()
   private disabled: boolean;
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     this.input = this.root.querySelector('select[slot="input"]');
 
     this.disabled = this.input.disabled;
@@ -47,6 +47,6 @@ export class GuxInputSelect {
         <slot name="input" />
         <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

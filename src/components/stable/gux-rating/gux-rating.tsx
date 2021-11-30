@@ -107,8 +107,11 @@ export class GuxRating {
         }
 
         return acc.concat('rating');
-      }, [])
-      .map(iconName => <gux-icon icon-name={iconName} decorative></gux-icon>);
+      }, [] as string[])
+      .map(
+        iconName =>
+          (<gux-icon icon-name={iconName} decorative></gux-icon>) as JSX.Element
+      );
   }
 
   private getTabIndex(): number {
@@ -153,6 +156,6 @@ export class GuxRating {
           {this.getRatingStarElements()}
         </div>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

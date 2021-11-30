@@ -24,7 +24,7 @@ export class E2EGuxDropdown {
   }
 
   async select(value: string): Promise<void> {
-    (await this.element).click();
+    await (await this.element).click();
 
     const option = await this.optionWithValue(value);
     await option.click();

@@ -37,7 +37,7 @@
 ### During Review
 
 - Open a Pull Request on the repo. Please do not remove any of the default reviewers.
-- Tests, tslint and commitlint must be passing
+- Tests and linters must be passing
 - Review will be thorough - problems in these components will have a widespread impact.
 - If your review is completed and you don't have merge rights for master, reach out to the [Common UI Dev Team](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b) and one of us will get it merged.
 

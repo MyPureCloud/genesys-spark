@@ -127,7 +127,7 @@ export class GuxPopover {
     }
   }
 
-  async connectedCallback(): Promise<void> {
+  connectedCallback(): void {
     trackComponent(this.root, { variant: this.position });
 
     this.hiddenObserver = onHiddenChange(this.root, (hidden: boolean) => {
@@ -159,6 +159,6 @@ export class GuxPopover {
           <slot />
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

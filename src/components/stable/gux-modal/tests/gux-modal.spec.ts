@@ -134,13 +134,13 @@ describe('gux-modal', () => {
 
         expect(page.root).toMatchSnapshot();
 
-        page.rootInstance.hidden = true;
+        (page.rootInstance as HTMLGuxModalElement).hidden = true;
         await page.waitForChanges();
 
         expect(page.root).toMatchSnapshot();
 
         // Disconnect so that the focus trap is properly cleaned up
-        page.root!.remove();
+        page.root.remove();
       });
     });
   });
@@ -161,9 +161,7 @@ describe('gux-modal', () => {
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const dismissButton = page.root.querySelector(
-        'gux-dismiss-button'
-      ) as HTMLElement;
+      const dismissButton = page.root.querySelector('gux-dismiss-button');
       const guxdismissSpy = jest.fn();
       const clickSpy = jest.fn();
       const elementRemoveSpy = jest.spyOn(element, 'remove');
@@ -178,7 +176,7 @@ describe('gux-modal', () => {
       expect(clickSpy).not.toHaveBeenCalled();
       expect(elementRemoveSpy).toBeCalledWith();
 
-      page.root!.remove();
+      page.root.remove();
     });
 
     it('click dismiss button and prevent default', async () => {
@@ -196,9 +194,7 @@ describe('gux-modal', () => {
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const dismissButton = page.root.querySelector(
-        'gux-dismiss-button'
-      ) as HTMLElement;
+      const dismissButton = page.root.querySelector('gux-dismiss-button');
       const elementRemoveSpy = jest.spyOn(element, 'remove');
 
       page.win.addEventListener('guxdismiss', (event: Event) => {
@@ -210,7 +206,7 @@ describe('gux-modal', () => {
 
       expect(elementRemoveSpy).not.toBeCalled();
 
-      page.root!.remove();
+      page.root.remove();
     });
   });
 });

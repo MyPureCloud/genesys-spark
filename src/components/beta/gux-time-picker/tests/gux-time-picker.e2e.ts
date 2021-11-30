@@ -30,6 +30,7 @@ describe('gux-time-picker-beta', () => {
 
     // Validate
     const input = await page.find('gux-time-picker-beta input');
+    expect(input).toHaveClass('gux-focused');
   });
 
   it('Type a valid value', async () => {

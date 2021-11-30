@@ -22,9 +22,9 @@ A check event is triggered when the state of the component changed.
 
 ## Events
 
-| Event     | Description | Type               |
-| --------- | ----------- | ------------------ |
-| `changed` |             | `CustomEvent<any>` |
+| Event     | Description | Type                  |
+| --------- | ----------- | --------------------- |
+| `changed` |             | `CustomEvent<string>` |
 
 
 ## Dependencies

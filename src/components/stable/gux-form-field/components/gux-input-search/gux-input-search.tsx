@@ -42,7 +42,7 @@ export class GuxInputSearch {
         icon-name="search"
         decorative
       ></gux-icon>
-    );
+    ) as JSX.Element;
   }
 
   private renderClearButton(): JSX.Element {
@@ -57,7 +57,7 @@ export class GuxInputSearch {
         >
           <gux-icon icon-name="close" decorative></gux-icon>
         </button>
-      );
+      ) as JSX.Element;
     }
 
     return null;
@@ -101,6 +101,6 @@ export class GuxInputSearch {
         <slot></slot>
         {this.renderClearButton()}
       </div>
-    );
+    ) as JSX.Element;
   }
 }

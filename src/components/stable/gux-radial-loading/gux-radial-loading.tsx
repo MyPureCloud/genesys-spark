@@ -50,6 +50,6 @@ export class GuxRadialLoading {
       >
         <div role="presentation" class="gux-spin-circle" />
       </div>
-    );
+    ) as JSX.Element;
   }
 }

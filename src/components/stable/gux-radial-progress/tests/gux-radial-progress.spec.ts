@@ -5,21 +5,12 @@ const components = [GuxRadialProgress];
 const language = 'en';
 
 describe('gux-radial-progress', () => {
-  let component: GuxRadialProgress;
-
-  beforeEach(async () => {
+  it('should build', async () => {
     const page = await newSpecPage({
       components,
       html: `<gux-radial-progress></gux-radial-progress>`,
       language
     });
-
-    component = page.rootInstance;
-  });
-
-  it('should build', async () => {
-    const html = `<gux-radial-progress></gux-radial-progress>`;
-    const page = await newSpecPage({ components, html, language });
 
     expect(page.rootInstance).toBeInstanceOf(GuxRadialProgress);
   });

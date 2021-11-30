@@ -13,7 +13,7 @@ const STROKE_DASH = 2 * Math.PI * RADIUS;
   shadow: true
 })
 export class GuxRadialProgress {
-  private dropshadowId = randomHTMLId('gux-dropshadow');
+  private dropshadowId: string = randomHTMLId('gux-dropshadow');
 
   @Element()
   private root: HTMLElement;
@@ -121,7 +121,7 @@ export class GuxRadialProgress {
           </text>
         </svg>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderSpinnerState(screenreaderText: string): JSX.Element {
@@ -130,6 +130,6 @@ export class GuxRadialProgress {
         screenreader-text={screenreaderText}
         context="modal"
       ></gux-radial-loading>
-    );
+    ) as JSX.Element;
   }
 }

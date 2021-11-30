@@ -6,12 +6,12 @@ import {
 } from './manipulate-elements-classes';
 
 describe('manipulate elements classes', () => {
-  let dom;
-  let element1;
-  let element2;
-  let element3;
-  let element4;
-  let element5;
+  let dom: JSDOM;
+  let element1: HTMLElement;
+  let element2: HTMLElement;
+  let element3: HTMLElement;
+  let element4: HTMLElement;
+  let element5: HTMLElement;
 
   beforeEach(() => {
     dom = new JSDOM(`

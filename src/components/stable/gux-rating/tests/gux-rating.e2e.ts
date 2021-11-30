@@ -119,7 +119,7 @@ describe('gux-rating', () => {
           const starElements = starContainer.children;
           const ratingElement = starElements[
             ratingElementIndex
-          ].shadowRoot.querySelector('.gux-icon-container') as HTMLElement;
+          ].shadowRoot.querySelector('.gux-icon-container');
 
           ratingElement.click();
         }, position - 1);
@@ -141,7 +141,7 @@ describe('gux-rating', () => {
         { starToClick: 3 },
         { starToClick: 4 },
         { starToClick: 5 }
-      ].forEach(({ starToClick }, index) => {
+      ].forEach(({ starToClick }) => {
         it(`should render 0 if star ${starToClick} is clicked but the component is disabled`, async () => {
           page = await newSparkE2EPage({
             html: '<gux-rating disabled aria-label="Feedback"></gux-rating>'

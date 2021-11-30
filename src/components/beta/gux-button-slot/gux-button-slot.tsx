@@ -49,6 +49,6 @@ export class GuxButtonSlot {
       <Host accent={this.accent}>
         <slot />
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

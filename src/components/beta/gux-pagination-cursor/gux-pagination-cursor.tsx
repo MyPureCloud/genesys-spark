@@ -71,6 +71,6 @@ export class GuxPaginationCursor {
           <gux-icon decorative iconName="ic-chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot-beta>
-    ];
+    ] as JSX.Element;
   }
 }

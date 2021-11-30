@@ -56,7 +56,7 @@ function focusFirstSibling(currentElement: Element): void {
   ) as HTMLGuxMenuOptionElement;
 
   if (firstFocusableElement) {
-    firstFocusableElement.guxFocus();
+    void firstFocusableElement.guxFocus();
   }
 }
 
@@ -66,7 +66,7 @@ function focusLastSibling(currentElement: Element): void {
   ) as HTMLGuxMenuOptionElement;
 
   if (lastFocusableElement) {
-    lastFocusableElement.guxFocus();
+    void lastFocusableElement.guxFocus();
   }
 }
 
@@ -75,7 +75,7 @@ function focusPreviousSiblingLoop(currentElement: Element): void {
     currentElement.previousElementSibling as HTMLGuxMenuOptionElement;
 
   if (previousFocusableElement) {
-    previousFocusableElement.guxFocus();
+    void previousFocusableElement.guxFocus();
   } else {
     focusLastSibling(currentElement);
   }
@@ -86,7 +86,7 @@ function focusNextSiblingLoop(currentElement: Element): void {
     currentElement.nextElementSibling as HTMLGuxMenuOptionElement;
 
   if (nextFocusableElement) {
-    nextFocusableElement.guxFocus();
+    void nextFocusableElement.guxFocus();
   } else {
     focusFirstSibling(currentElement);
   }

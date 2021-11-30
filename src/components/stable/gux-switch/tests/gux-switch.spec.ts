@@ -33,7 +33,7 @@ describe('gux-switch', () => {
       const element = page.root as HTMLGuxSwitchElement;
       const guxSwitchItemMinute = page.root.querySelector(
         'gux-switch-item[value=minute]'
-      ) as HTMLGuxSwitchItemElement;
+      );
 
       expect(element.value).toBe('day');
 
@@ -48,7 +48,7 @@ describe('gux-switch', () => {
       const element = page.root as HTMLGuxSwitchElement;
       const guxSwitchItemHour = page.root.querySelector(
         'gux-switch-item[value=hour]'
-      ) as HTMLGuxSwitchItemElement;
+      );
       const currentValue = element.value;
 
       expect(currentValue).toBe('day');
@@ -64,7 +64,7 @@ describe('gux-switch', () => {
       const element = page.root as HTMLGuxSwitchElement;
       const guxSwitchItemMinute = page.root.querySelector(
         'gux-switch-item[value=minute]'
-      ) as HTMLGuxSwitchItemElement;
+      );
       const changeEventSpy = jest.fn();
       const inputEventSpy = jest.fn();
 
@@ -87,7 +87,7 @@ describe('gux-switch', () => {
       const element = page.root as HTMLGuxSwitchElement;
       const guxSwitchItemHour = page.root.querySelector(
         'gux-switch-item[value=hour]'
-      ) as HTMLGuxSwitchItemElement;
+      );
       const changeEventSpy = jest.fn();
       const inputEventSpy = jest.fn();
 
@@ -117,7 +117,7 @@ describe('gux-switch', () => {
 
       const daySwitchItem = page.root.querySelector(
         'gux-switch-item[value=day]'
-      ) as HTMLGuxSwitchItemElement;
+      );
 
       expect(daySwitchItem.selected).toBe(true);
     });

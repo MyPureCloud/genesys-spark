@@ -39,14 +39,14 @@ export class GuxBreadcrumbItem {
         <span class="gux-breadcrumb-content">
           <slot />
         </span>
-      );
+      ) as JSX.Element;
     }
 
     return (
       <a class="gux-breadcrumb-content gux-link" href={this.href}>
         <slot />
       </a>
-    );
+    ) as JSX.Element;
   }
 
   private getSeparatorIcon(accent: GuxBreadcrumbAccent): JSX.Element {
@@ -60,7 +60,7 @@ export class GuxBreadcrumbItem {
           <span class="gux-breadcrumb-separator" aria-hidden="true">
             /
           </span>
-        );
+        ) as JSX.Element;
       case 'secondary':
         return (
           <gux-icon
@@ -68,13 +68,13 @@ export class GuxBreadcrumbItem {
             icon-name="chevron-small-right"
             decorative
           ></gux-icon>
-        );
+        ) as JSX.Element;
       default:
         return (
           <span class="gux-breadcrumb-separator" aria-hidden="true">
             /
           </span>
-        );
+        ) as JSX.Element;
     }
   }
 
@@ -86,6 +86,6 @@ export class GuxBreadcrumbItem {
         {this.getBreadcrumb()}
         {this.getSeparatorIcon(accent)}
       </span>
-    );
+    ) as JSX.Element;
   }
 }

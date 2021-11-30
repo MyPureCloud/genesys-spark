@@ -113,7 +113,7 @@ describe('gux-content-search', () => {
         const clearButton = await page.find('.gux-clear-button');
         const input = await element.find('input');
         await page.waitForChanges();
-        a11yCheck(page, axeExclusions);
+        await a11yCheck(page, axeExclusions);
         expect(element.outerHTML).toMatchSnapshot();
 
         await previousButton.click();
@@ -169,7 +169,7 @@ describe('gux-content-search', () => {
       element = await page.find('gux-content-search');
       expect(clearButton).not.toBeNull();
 
-      let value = await input.getProperty('value');
+      let value: string = await input.getProperty('value');
       let currentMatch = await element.getProperty('currentMatch');
       let matchCount = await element.getProperty('matchCount');
       expect(value).toBe('test');
@@ -177,7 +177,7 @@ describe('gux-content-search', () => {
       expect(matchCount).toBe(20);
       expect(inputSpy).toHaveReceivedEventTimes(4);
 
-      clearButton.click();
+      await clearButton.click();
       await page.waitForChanges();
       value = await input.getProperty('value');
       currentMatch = await element.getProperty('currentMatch');
@@ -216,7 +216,7 @@ describe('gux-content-search', () => {
       expect(matchCount).toBe(20);
       expect(clearButton).toHaveAttribute('disabled');
 
-      clearButton.click();
+      await clearButton.click();
       await page.waitForChanges();
 
       value = await input.getProperty('value');
@@ -245,7 +245,6 @@ describe('gux-content-search', () => {
       let resultSpan = await page.find('.gux-navigation-result');
       let matchCount = await element.getProperty('matchCount');
       let currentMatch = await element.getProperty('currentMatch');
-      const input = await element.find('input');
       const guxCurrentMatchChangedSpy = await page.spyOnEvent(
         'guxcurrentmatchchanged'
       );
@@ -447,7 +446,6 @@ describe('gux-content-search', () => {
       let resultSpan = await page.find('.gux-navigation-result');
       let matchCount = await element.getProperty('matchCount');
       let currentMatch = await element.getProperty('currentMatch');
-      const input = await element.find('input');
       const guxCurrentMatchChangedSpy = await page.spyOnEvent(
         'guxcurrentmatchchanged'
       );
@@ -525,7 +523,6 @@ describe('gux-content-search', () => {
       let resultSpan = await page.find('.gux-navigation-result');
       let matchCount = await element.getProperty('matchCount');
       let currentMatch = await element.getProperty('currentMatch');
-      const input = await element.find('input');
       const guxCurrentMatchChangedSpy = await page.spyOnEvent(
         'guxcurrentmatchchanged'
       );
@@ -608,7 +605,7 @@ describe('gux-content-search', () => {
         'guxcurrentmatchchanged'
       );
       const inputSpy = await page.spyOnEvent('input');
-      let value = await input.getAttribute('value');
+      let value = input.getAttribute('value');
 
       expect(input).toHaveAttribute('disabled');
       expect(clearButton).toBeNull();

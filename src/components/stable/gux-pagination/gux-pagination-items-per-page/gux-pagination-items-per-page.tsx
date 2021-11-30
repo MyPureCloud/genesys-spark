@@ -57,7 +57,7 @@ export class GuxPaginationItemsPerPage implements ComponentInterface {
           <gux-option-v2 value="100">100</gux-option-v2>
         </gux-listbox>
       </gux-dropdown-v2-beta>
-    );
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
@@ -68,6 +68,6 @@ export class GuxPaginationItemsPerPage implements ComponentInterface {
         </div>
         <div>{this.i18n('perPage')}</div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

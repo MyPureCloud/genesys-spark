@@ -73,7 +73,6 @@ describe('gux-simple-toast', () => {
         </gux-simple-toast>
       `;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-simple-toast');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -97,7 +96,6 @@ describe('gux-simple-toast', () => {
         </gux-simple-toast>
       `;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-simple-toast');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 

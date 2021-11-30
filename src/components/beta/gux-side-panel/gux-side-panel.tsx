@@ -1,4 +1,4 @@
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -11,7 +11,7 @@ export class GuxSidePanel {
   private root: HTMLElement;
 
   @Prop()
-  isOpen = false;
+  isOpen: boolean = false;
 
   @Prop()
   position: 'left' | 'right' = 'left';
@@ -28,7 +28,7 @@ export class GuxSidePanel {
     trackComponent(this.root, { variant: this.position });
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <aside class={this.containerClass}>
         <div class="gux-panel-icons">
@@ -38,6 +38,6 @@ export class GuxSidePanel {
           <slot name="side-panel-content" />
         </div>
       </aside>
-    );
+    ) as JSX.Element;
   }
 }

@@ -15,6 +15,6 @@ export class GuxInputRadio {
         <slot name="input" />
         <slot name="label" />
       </div>
-    );
+    ) as JSX.Element;
   }
 }

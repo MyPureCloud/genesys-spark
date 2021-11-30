@@ -137,7 +137,7 @@ export class GuxDropdownV2Beta {
     this.listboxElement.addEventListener('input', (event: InputEvent) => {
       event.stopPropagation();
 
-      this.updateValue((event.target as HTMLGuxListElement).value);
+      this.updateValue((event.target as HTMLGuxListboxElement).value);
     });
     this.listboxElement.addEventListener('change', (event: InputEvent) => {
       event.stopPropagation();
@@ -172,7 +172,7 @@ export class GuxDropdownV2Beta {
         this.listboxElement.focus();
         return;
       case 'Enter':
-        this.listboxElement.guxSelectActive();
+        void this.listboxElement.guxSelectActive();
         event.preventDefault();
         return;
     }
@@ -243,7 +243,7 @@ export class GuxDropdownV2Beta {
             onKeyUp={this.filterKeyup.bind(this)}
           ></input>
         </div>
-      );
+      ) as JSX.Element;
     }
 
     if (selectedListboxOptionElement) {
@@ -251,14 +251,14 @@ export class GuxDropdownV2Beta {
         <div class="gux-selected-option">
           {selectedListboxOptionElement.textContent}
         </div>
-      );
+      ) as JSX.Element;
     }
 
     return (
       <div class="gux-placeholder">
         {this.placeholder || this.i18n('noSelection')}
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderTarget(): JSX.Element {
@@ -280,7 +280,7 @@ export class GuxDropdownV2Beta {
           iconName="chevron-small-down"
         ></gux-icon>
       </button>
-    );
+    ) as JSX.Element;
   }
 
   private renderPopup(): JSX.Element {
@@ -288,7 +288,7 @@ export class GuxDropdownV2Beta {
       <div slot="popup" class="gux-listbox-container">
         <slot></slot>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
@@ -297,6 +297,6 @@ export class GuxDropdownV2Beta {
         {this.renderTarget()}
         {this.renderPopup()}
       </gux-popup-beta>
-    );
+    ) as JSX.Element;
   }
 }

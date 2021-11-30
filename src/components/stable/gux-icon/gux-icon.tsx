@@ -77,10 +77,8 @@ export class GuxIcon {
   }
 
   render(): JSX.Element {
-    return (
-      this.svgHtml && (
-        <div class="gux-icon-container" innerHTML={this.svgHtml}></div>
-      )
-    );
+    return (this.svgHtml && (
+      <div class="gux-icon-container" innerHTML={this.svgHtml}></div>
+    )) as JSX.Element;
   }
 }

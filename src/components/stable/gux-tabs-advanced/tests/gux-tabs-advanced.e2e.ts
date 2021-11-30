@@ -122,7 +122,7 @@ describe('gux-tabs-advanced', () => {
         'guxactivepanelchange'
       );
 
-      tabTarget.click();
+      await tabTarget.click();
       await page.waitForChanges();
 
       expect(spyOnActivePanelChangeEvent.length).toBe(1);
@@ -136,7 +136,7 @@ describe('gux-tabs-advanced', () => {
         'guxactivepanelchange'
       );
 
-      tabTarget.click();
+      await tabTarget.click();
       await page.waitForChanges();
 
       expect(spyOnActivePanelChangeEvent.length).toBe(0);
@@ -147,20 +147,20 @@ describe('gux-tabs-advanced', () => {
         'gux-tab-advanced[tab-id="1-1"] .gux-tab-options-button'
       );
 
-      optionPopoverTarget.click();
+      await optionPopoverTarget.click();
       await page.waitForChanges();
       await a11yCheck(page, axeExclusions, 'options popover expanded');
 
       const optionPopover = await page.find(
         'gux-tab-advanced[tab-id="1-1"] gux-popover'
       );
-      let optionPopoverHidden = await optionPopover.getAttribute('hidden');
+      let optionPopoverHidden = optionPopover.getAttribute('hidden');
 
       expect(optionPopoverHidden).toBe(null);
 
-      optionPopoverTarget.click();
+      await optionPopoverTarget.click();
       await page.waitForChanges();
-      optionPopoverHidden = await optionPopover.getAttribute('hidden');
+      optionPopoverHidden = optionPopover.getAttribute('hidden');
 
       expect(optionPopoverHidden).toBe('');
     });

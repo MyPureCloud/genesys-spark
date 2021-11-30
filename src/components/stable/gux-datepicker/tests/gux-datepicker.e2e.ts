@@ -30,7 +30,7 @@ describe('gux-datepicker', () => {
 
     const element = await page.find('gux-datepicker');
 
-    await element.setProperty('value', '1985-12-01');
+    element.setProperty('value', '1985-12-01');
     await page.waitForChanges();
 
     const input = await page.find('input');
@@ -91,7 +91,7 @@ describe('gux-datepicker', () => {
     expect(labels[0].textContent).toEqual('Date');
     expect(labels[0].className).toContain('gux-sr-only');
 
-    await element.setAttribute('label', 'test');
+    element.setAttribute('label', 'test');
     await page.waitForChanges();
     await a11yCheck(page, axeExclusions);
     expect(labels[0].textContent).toEqual('test');
@@ -106,7 +106,6 @@ describe('gux-datepicker', () => {
       number-of-months="2"
       ></gux-datepicker>`
     });
-    const element = await page.find('gux-datepicker');
     const labels = await page.findAll('.gux-datepicker-field-label');
     await page.waitForChanges();
     await a11yCheck(page, axeExclusions);

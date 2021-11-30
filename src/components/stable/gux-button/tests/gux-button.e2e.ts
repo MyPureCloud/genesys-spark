@@ -82,7 +82,7 @@ describe('gux-button', () => {
       const onClickSpy = await element.spyOnEvent('click');
       const span = await page.find('span');
 
-      span.click();
+      await span.click();
       await page.waitForChanges();
 
       expect(onClickSpy).toHaveReceivedEventTimes(1);
@@ -96,7 +96,7 @@ describe('gux-button', () => {
       const onClickSpy = await element.spyOnEvent('click');
       const span = await page.find('span');
 
-      span.click();
+      await span.click();
       await page.waitForChanges();
 
       expect(onClickSpy).toHaveReceivedEventTimes(0);

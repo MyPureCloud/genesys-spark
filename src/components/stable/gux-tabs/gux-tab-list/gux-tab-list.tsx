@@ -80,6 +80,7 @@ export class GuxTabList {
       case 'Escape':
         event.preventDefault();
         this.focusTab(this.focused);
+        break;
       case 'Home':
         event.preventDefault();
         this.focusTab(0);
@@ -91,12 +92,13 @@ export class GuxTabList {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxSetActive(activeTab: string): Promise<void> {
     this.tabTriggers.forEach((tabTrigger, index) => {
       const active = tabTrigger.tabId === activeTab;
 
-      tabTrigger.guxSetActive(active);
+      void tabTrigger.guxSetActive(active);
 
       if (active) {
         this.focused = index;
@@ -115,7 +117,7 @@ export class GuxTabList {
     this.tabTriggers[this.focused]
       .querySelector('button')
       .setAttribute('tabindex', '0');
-    this.tabTriggers[this.focused].guxFocus();
+    void this.tabTriggers[this.focused].guxFocus();
   }
 
   setTriggerIds() {
@@ -204,8 +206,8 @@ export class GuxTabList {
 
   componentDidLoad() {
     if (!this.resizeObserver && window.ResizeObserver) {
-      this.resizeObserver = new ResizeObserver(
-        this.checkForScrollbarHideOrShow.bind(this)
+      this.resizeObserver = new ResizeObserver(() =>
+        this.checkForScrollbarHideOrShow()
       );
     }
 
@@ -216,8 +218,8 @@ export class GuxTabList {
     }
 
     if (!this.domObserver && window.MutationObserver) {
-      this.domObserver = new MutationObserver(
-        this.checkForScrollbarHideOrShow.bind(this)
+      this.domObserver = new MutationObserver(() =>
+        this.checkForScrollbarHideOrShow()
       );
     }
 
@@ -276,7 +278,7 @@ export class GuxTabList {
           ? this.renderScrollButton('scrollRight')
           : this.renderScrollButton('scrollDown')}
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderScrollButton(direction: string): JSX.Element {
@@ -297,7 +299,7 @@ export class GuxTabList {
           </button>
         ) : null}
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private getScrollDirection(direction: string): void {

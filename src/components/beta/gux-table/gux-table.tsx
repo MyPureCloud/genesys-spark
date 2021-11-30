@@ -37,10 +37,8 @@ export class GuxTable {
   root: HTMLElement;
 
   private resizeObserver: ResizeObserver;
-  private slotObserver = new MutationObserver(
-    function () {
-      forceUpdate(this);
-    }.bind(this)
+  private slotObserver: MutationObserver = new MutationObserver(() =>
+    forceUpdate(this)
   );
   private i18n: GetI18nValue;
   private columnResizeState: GuxTableColumnResizeState | null;
@@ -131,14 +129,14 @@ export class GuxTable {
   onInternalAllRowSelectChange(event: CustomEvent): void {
     event.stopPropagation();
 
-    this.handleSelectAllRows();
+    void this.handleSelectAllRows();
   }
 
   @Listen('internalrowselectchange')
   onInternalRowSelectChange(event: CustomEvent): void {
     event.stopPropagation();
 
-    this.handleSelectableRows(event.target);
+    void this.handleSelectableRows(event.target);
   }
 
   @Listen('mouseup', { capture: true })
@@ -200,6 +198,7 @@ export class GuxTable {
   /*
    * returns the selected rows Ids.
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async getSelected(): Promise<GuxTableSelectedState> {
     const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
@@ -217,7 +216,7 @@ export class GuxTable {
 
         return selectedDataRowsIds;
       },
-      []
+      [] as string[]
     );
 
     return { selectedRowIds };
@@ -268,9 +267,9 @@ export class GuxTable {
   }
 
   private get tableScrollbarConstant(): number {
-    const container = this.tableContainer.querySelector(
+    const container: HTMLElement = this.tableContainer.querySelector(
       '.gux-table-container'
-    ) as HTMLElement;
+    );
     return container ? container.offsetWidth - container.clientWidth : 0;
   }
 
@@ -424,7 +423,7 @@ export class GuxTable {
     this.setSortableColumnsStyles();
 
     columnsElements.forEach((column: HTMLElement) => {
-      if (column.dataset.hasOwnProperty('sortable')) {
+      if (Object.prototype.hasOwnProperty.call(column.dataset, 'sortable')) {
         column.onclick = (event: MouseEvent) => {
           const columnElement = event.target as HTMLElement;
           const sortDirection = columnElement.dataset.sort || '';
@@ -502,7 +501,11 @@ export class GuxTable {
     let columnsStyles = '';
 
     Object.keys(this.columnsWidths).forEach((column: string) => {
-      columnsStyles += `#${this.tableId} th[data-column-name="${column}"]{width:${this.columnsWidths[column]};min-width:${this.columnsWidths[column]};}`;
+      columnsStyles += `#${
+        this.tableId
+      } th[data-column-name="${column}"]{width:${String(
+        this.columnsWidths[column]
+      )};min-width:${String(this.columnsWidths[column])};}`;
     });
 
     styleElement.innerHTML = columnsStyles;
@@ -579,7 +582,7 @@ export class GuxTable {
 
       headerRowSelectbox.selected = hasRows && allSelected;
 
-      headerRowSelectbox.setIndeterminate(
+      void headerRowSelectbox.setIndeterminate(
         hasRows && !allSelected && !noneSelected
       );
     }
@@ -676,6 +679,6 @@ export class GuxTable {
           </div>
         )}
       </div>
-    );
+    ) as JSX.Element;
   }
 }

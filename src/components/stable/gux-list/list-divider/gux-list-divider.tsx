@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, JSX } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-list-divider.less',
@@ -6,13 +6,13 @@ import { Component, h } from '@stencil/core';
   shadow: true
 })
 export class GuxListDivider {
-  render() {
+  render(): JSX.Element {
     return (
       <span
         role="presentation"
         class="gux-list-item gux-divider"
         tabindex={-1}
       />
-    );
+    ) as JSX.Element;
   }
 }

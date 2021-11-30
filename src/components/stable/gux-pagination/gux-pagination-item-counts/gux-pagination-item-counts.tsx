@@ -60,6 +60,6 @@ export class GuxPaginationItemCounts implements ComponentInterface {
         </span>
         <span>{this.i18n('totalItems', { totalItems: this.totalItems })}</span>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

@@ -28,19 +28,19 @@ export class GuxPanelFrame {
             <header class="gux-panel-header">
               <slot name={`${slotName}`} />
             </header>
-          );
+          ) as JSX.Element;
         case 'body':
           return (
             <div class="gux-panel-body">
               <slot name={`${slotName}`} />
             </div>
-          );
+          ) as JSX.Element;
         case 'footer':
           return (
             <footer class="gux-panel-footer">
               <slot name={`${slotName}`} />
             </footer>
-          );
+          ) as JSX.Element;
       }
     }
   }
@@ -52,6 +52,6 @@ export class GuxPanelFrame {
         {this.renderOptionalSlot('body')}
         {this.renderOptionalSlot('footer')}
       </section>
-    );
+    ) as JSX.Element;
   }
 }

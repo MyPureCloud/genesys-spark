@@ -77,7 +77,7 @@ export class GuxListbox {
     switch (event.key) {
       case 'Enter':
         event.preventDefault();
-        actOnActiveOption(this.root, this.updateValue.bind(this));
+        actOnActiveOption(this.root, value => this.updateValue(value));
         return;
 
       case 'ArrowDown':
@@ -122,7 +122,7 @@ export class GuxListbox {
   onKeyup(event: KeyboardEvent): void {
     switch (event.key) {
       case ' ':
-        actOnActiveOption(this.root, this.updateValue.bind(this));
+        actOnActiveOption(this.root, value => this.updateValue(value));
         return;
     }
   }
@@ -138,21 +138,21 @@ export class GuxListbox {
       'gux-option-v2',
       event,
       (option: HTMLGuxOptionV2Element) => {
-        onClickedOption(option, this.updateValue.bind(this));
+        onClickedOption(option, value => this.updateValue(value));
       }
     );
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxSelectActive(): Promise<void> {
-    actOnActiveOption(this.root, this.updateValue.bind(this));
+    actOnActiveOption(this.root, value => this.updateValue(value));
   }
 
   private setListboxOptions(): void {
     this.listboxOptions = Array.from(
       this.root.children
     ) as HTMLGuxOptionV2Element[];
-
     this.internallistboxoptionsupdated.emit();
   }
 
@@ -205,7 +205,9 @@ export class GuxListbox {
 
   renderAllListboxOptionsFiltered(): JSX.Element {
     if (this.allListboxOptionsFiltered) {
-      return <div class="gux-no-matches">{this.i18n('noMatches')}</div>;
+      return (
+        <div class="gux-no-matches">{this.i18n('noMatches')}</div>
+      ) as JSX.Element;
     }
   }
 
@@ -215,6 +217,6 @@ export class GuxListbox {
         <slot onSlotchange={() => this.setListboxOptions()} />
         {this.renderAllListboxOptionsFiltered()}
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

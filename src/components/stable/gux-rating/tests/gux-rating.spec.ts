@@ -2,7 +2,7 @@ jest.mock('../../../../utils/dom/random-html-id', () => ({
   randomHTMLId: () => 'random'
 }));
 
-import { newSpecPage, SpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
 import { GuxRating } from '../gux-rating';
 
 global.InputEvent = Event;

@@ -25,7 +25,7 @@ import tabsResources from '../i18n/en.json';
 export class GuxTabAdvanced {
   private buttonElement: HTMLButtonElement;
   private dropdownOptionsButtonId: string = randomHTMLId();
-  private moveFocusDelay = 100;
+  private moveFocusDelay: number = 100;
   private tabTitle: string = '';
   /**
    * unique id for the tab
@@ -153,16 +153,19 @@ export class GuxTabAdvanced {
   @Event()
   internalactivatetabpanel: EventEmitter<string>;
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxSetActive(active: boolean): Promise<void> {
     this.active = active;
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxGetActive() {
     return this.active;
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxFocus(): Promise<void> {
     this.buttonElement.focus();
@@ -226,7 +229,7 @@ export class GuxTabAdvanced {
             <slot name="dropdown-options" />
           </div>
         </gux-popover>
-      ];
+      ] as JSX.Element;
     }
 
     return null;
@@ -272,6 +275,6 @@ export class GuxTabAdvanced {
 
         {this.getDropdownOptions()}
       </div>
-    ];
+    ] as JSX.Element;
   }
 }

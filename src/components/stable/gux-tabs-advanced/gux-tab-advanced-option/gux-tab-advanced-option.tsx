@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, JSX } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-tab-advanced-option.less',
@@ -17,7 +17,7 @@ export class GuxTabAdvancedOption {
   @Prop()
   iconName: string;
 
-  render() {
+  render(): JSX.Element {
     return (
       <button tabindex="-1" class="tab-dropdown-option">
         <gux-icon icon-name={this.iconName} decorative={true}></gux-icon>
@@ -25,6 +25,6 @@ export class GuxTabAdvancedOption {
           <slot />
         </span>
       </button>
-    );
+    ) as JSX.Element;
   }
 }

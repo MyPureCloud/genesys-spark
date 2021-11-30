@@ -2,10 +2,16 @@ import IntlMessageFormat from 'intl-messageformat';
 import { fetchResources, ILocalizedComponentResources } from './fetchResources';
 // If this import is failing, you should run the i18n script to generate the list of locales
 import locales from './locales.json';
-import startOfWeekData from './start-of-week.json';
+import * as startOfWeekDataUntyped from './start-of-week.json';
 import { getClosestElement } from '../utils/dom/get-closest-element';
 
-export type GetI18nValue = (resourceKey: string, context?: any) => string;
+type StartOfWeek = { [key: string]: number };
+type I18nValueContext = { [key: string]: string | number };
+
+export type GetI18nValue = (
+  resourceKey: string,
+  context?: I18nValueContext
+) => string;
 
 const DEFAULT_LOCALE = 'en';
 
@@ -38,7 +44,7 @@ export async function buildI18nForComponent(
     new Map<string, IntlMessageFormat>()
   );
 
-  return (resourceKey: string, context?: any): string => {
+  return (resourceKey: string, context?: I18nValueContext): string => {
     let i18nString = intlFormats.get(resourceKey)?.format(context) as string;
     if (!i18nString) {
       i18nString = defaultFormats.get(resourceKey)?.format(context) as string;
@@ -107,6 +113,7 @@ function findLocaleInDom(element: HTMLElement): string {
 }
 
 export function getStartOfWeek(locale: string = DEFAULT_LOCALE): number {
+  const startOfWeekData: StartOfWeek = startOfWeekDataUntyped;
   return startOfWeekData[locale]
     ? startOfWeekData[locale]
     : startOfWeekData[DEFAULT_LOCALE];

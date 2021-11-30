@@ -21,9 +21,7 @@ describe('gux-tab-list', () => {
     component = page.rootInstance;
   });
 
-  describe('Class Logic', () => {
-    it('should pass', () => {
-      expect(true).toBeTruthy();
-    });
+  it('should build', async () => {
+    expect(component).toBeInstanceOf(GuxTabList);
   });
 });

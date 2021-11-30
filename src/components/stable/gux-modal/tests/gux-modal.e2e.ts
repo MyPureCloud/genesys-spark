@@ -248,9 +248,10 @@ describe('gux-modal', () => {
 
       await page.evaluate(html => {
         document
-          .getElementById('modal-trigger')!
-          .addEventListener('click', () => {
-            document.getElementById('modal-container')!.innerHTML = html;
+          .getElementById('modal-trigger')
+          ?.addEventListener('click', () => {
+            if (document.getElementById('modal-container'))
+              document.getElementById('modal-container').innerHTML = html;
           });
       }, modalHtml);
       return page;

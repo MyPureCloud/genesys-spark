@@ -32,7 +32,7 @@ describe('gux-switch', () => {
 
       expect(await element.getProperty('value')).toBe('day');
 
-      guxSwitchItemMinute.click();
+      await guxSwitchItemMinute.click();
       await page.waitForChanges();
 
       expect(await element.getProperty('value')).toBe(
@@ -48,7 +48,7 @@ describe('gux-switch', () => {
 
       expect(currentValue).toBe('day');
 
-      guxSwitchItemHour.click();
+      await guxSwitchItemHour.click();
       await page.waitForChanges();
 
       expect(await element.getProperty('value')).toBe(currentValue);
@@ -64,7 +64,7 @@ describe('gux-switch', () => {
       const spyOnInputEvent = await element.spyOnEvent('input');
       const spyOnChangeEvent = await element.spyOnEvent('change');
 
-      guxSwitchItemMinute.click();
+      await guxSwitchItemMinute.click();
       await page.waitForChanges();
 
       expect(spyOnInputEvent.length).toBe(1);
@@ -79,7 +79,7 @@ describe('gux-switch', () => {
       const spyOnInputEvent = await element.spyOnEvent('input');
       const spyOnChangeEvent = await element.spyOnEvent('change');
 
-      guxSwitchItemHour.click();
+      await guxSwitchItemHour.click();
       await page.waitForChanges();
 
       expect(spyOnInputEvent.length).toBe(0);

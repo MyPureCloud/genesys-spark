@@ -28,6 +28,6 @@ export class GuxSwitchItem {
           <slot />
         </button>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }
