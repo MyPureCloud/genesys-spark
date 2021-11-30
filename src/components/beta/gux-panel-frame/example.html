@@ -6,14 +6,31 @@
   </div>
   <div slot="body">
     <div style="display: flex; flex-direction: column">
-      <gux-text-label label="Event Name">
-        <gux-text-field></gux-text-field>
-      </gux-text-label>
-      <gux-rating-beta></gux-rating-beta>
-      <gux-text-label label="Comment">
-        <gux-text-field></gux-text-field>
-      </gux-text-label>
-      <gux-toggle></gux-toggle>
+      <gux-form-field>
+        <input
+          slot="input"
+          name="text"
+          type="text"
+          placeholder="Enter an event name"
+        />
+        <label slot="label">Event Name</label>
+      </gux-form-field>
+
+      <gux-form-field>
+        <input
+          slot="input"
+          name="text"
+          type="text"
+          placeholder="Enter a comment"
+        />
+        <label slot="label">Comment</label>
+      </gux-form-field>
+
+      <gux-toggle
+        checked-label="Active"
+        unchecked-label="Inactive"
+        label-position="left"
+      ></gux-toggle>
     </div>
   </div>
   <div slot="footer">

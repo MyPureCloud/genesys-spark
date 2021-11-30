@@ -21,9 +21,14 @@ describe('gux-panel-frame', () => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-panel-frame-beta');
-        await a11yCheck(page, axeExclusions);
+        const elementShadowDom = await element.find(
+          'pierce/.gux-panel-container'
+        );
 
-        expect(element.innerHTML).toMatchSnapshot();
+        expect(element.outerHTML).toMatchSnapshot();
+        expect(elementShadowDom).toMatchSnapshot();
+
+        await a11yCheck(page, axeExclusions);
       });
     });
   });
