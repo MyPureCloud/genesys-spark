@@ -64,9 +64,9 @@ export class GuxTabs {
   onInternalActivateTabPanel(event: CustomEvent): void {
     event.stopPropagation();
 
-    const tadbId = event.detail as string;
+    const tabId = event.detail as string;
 
-    this.activateTab(tadbId, this.tabList, this.tabPanels);
+    this.activateTab(tabId, this.tabList, this.tabPanels);
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await

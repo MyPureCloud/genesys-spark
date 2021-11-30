@@ -106,7 +106,6 @@ describe('gux-datepicker', () => {
       number-of-months="2"
       ></gux-datepicker>`
     });
-    // const element = await page.find('gux-datepicker');
     const labels = await page.findAll('.gux-datepicker-field-label');
     await page.waitForChanges();
     await a11yCheck(page, axeExclusions);
