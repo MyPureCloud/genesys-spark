@@ -4,9 +4,8 @@
   "scrollRight": "Desplazar a la derecha",
   "options": "Opciones de pestaña para {tabTitle}",
   "disableNewTab": "Se alcanzó el número máximo de pestañas creadas",
-  "toggleSortInstructions": "Alternar modo de ordenación mediante la barra espaciadora",
-  "sortInstructions": "Modo de ordenación activado, utilice las teclas de flecha izquierda y derecha para reordenar las pestañas. Pulse la barra espaciadora o la tecla Intro para completar la ordenación. Pulse la tecla de escape para cancelar la ordenación.",
-  "sortModeOn": "Modo de ordenación activado",
+  "toggleSort": "Alternar modo de ordenación mediante la barra espaciadora",
+  "sortModeOn": "Modo de ordenación activado, utilice las teclas de flecha izquierda y derecha para reordenar las pestañas. Pulse la barra espaciadora o la tecla Intro para completar la ordenación. Pulse la tecla de escape para cancelar la ordenación.",
   "sortComplete": "Ordenación completada",
   "sortCancelled": "Ordenación cancelada"
 }

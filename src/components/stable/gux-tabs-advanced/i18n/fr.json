@@ -4,9 +4,8 @@
   "scrollRight": "Faire défiler à droite",
   "options": "Options d'onglet pour {tabTitle}",
   "disableNewTab": "Vous avez atteint le nombre maximal d'onglets.",
-  "toggleSortInstructions": "Activer/désactiver le mode de tri à l'aide de la barre d'espace",
-  "sortInstructions": "Mode de tri activé : utilisez les flèches droite et gauche pour réorganiser les onglets. Appuyez sur la touche Espace ou Entrée pour terminer le tri. Appuyez sur la touche Échap pour annuler le tri.",
-  "sortModeOn": "Mode de tri activé",
+  "toggleSort": "Activer/désactiver le mode de tri à l'aide de la barre d'espace",
+  "sortModeOn": "Mode de tri activé : utilisez les flèches droite et gauche pour réorganiser les onglets. Appuyez sur la touche Espace ou Entrée pour terminer le tri. Appuyez sur la touche Échap pour annuler le tri.",
   "sortComplete": "Tri terminé",
   "sortCancelled": "Tri annulé"
 }
