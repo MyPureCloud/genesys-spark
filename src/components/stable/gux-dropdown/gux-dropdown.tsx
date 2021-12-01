@@ -321,6 +321,7 @@ export class GuxDropdown {
               slot="input"
               value={this.value}
               aria-labelledby={this.srLabeledBy}
+              disabled={this.disabled}
               ref={ref => (this.textFieldElement = ref)}
               onMouseDown={() => {
                 this._clickHandler();
