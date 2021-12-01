@@ -3,11 +3,11 @@
 exports[`gux-toggle #render should render component as expected (1) 1`] = `
 <gux-toggle>
   <mock:shadow-root>
-    <div aria-checked="false" aria-label="" class="gux-toggle-container" role="checkbox">
+    <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <mock:shadow-root>
-            <div class="gux-toggle-slider" role="presentation" tabindex="0">
+            <div aria-checked="false" aria-label="" class="gux-toggle-slider" role="checkbox" tabindex="0">
               <div class="gux-slider">
                 <div class="gux-switch">
                   <gux-icon decorative="" icon-name="checkmark"></gux-icon>
@@ -25,11 +25,11 @@ exports[`gux-toggle #render should render component as expected (1) 1`] = `
 exports[`gux-toggle #render should render component as expected (2) 1`] = `
 <gux-toggle checked="">
   <mock:shadow-root>
-    <div aria-checked="true" aria-label="" class="gux-toggle-container" role="checkbox">
+    <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <mock:shadow-root>
-            <div class="gux-checked gux-toggle-slider" role="presentation" tabindex="0">
+            <div aria-checked="true" aria-label="" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
               <div class="gux-slider">
                 <div class="gux-switch">
                   <gux-icon decorative="" icon-name="checkmark"></gux-icon>
@@ -47,11 +47,11 @@ exports[`gux-toggle #render should render component as expected (2) 1`] = `
 exports[`gux-toggle #render should render component as expected (3) 1`] = `
 <gux-toggle checked="" disabled="">
   <mock:shadow-root>
-    <div aria-checked="true" aria-label="" class="gux-disabled gux-toggle-container" role="checkbox">
+    <div class="gux-disabled gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <mock:shadow-root>
-            <div class="gux-checked gux-disabled gux-toggle-slider" role="presentation" tabindex="">
+            <div aria-checked="true" aria-label="" class="gux-checked gux-disabled gux-toggle-slider" role="checkbox" tabindex="">
               <div class="gux-slider">
                 <div class="gux-switch">
                   <gux-icon decorative="" icon-name="checkmark"></gux-icon>
@@ -69,11 +69,11 @@ exports[`gux-toggle #render should render component as expected (3) 1`] = `
 exports[`gux-toggle #render should render component as expected (4) 1`] = `
 <gux-toggle checked-label="On" unchecked-label="Off">
   <mock:shadow-root>
-    <div aria-checked="false" aria-label="Off" class="gux-toggle-container" role="checkbox">
+    <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <mock:shadow-root>
-            <div class="gux-toggle-slider" role="presentation" tabindex="0">
+            <div aria-checked="false" aria-label="Off" class="gux-toggle-slider" role="checkbox" tabindex="0">
               <div class="gux-slider">
                 <div class="gux-switch">
                   <gux-icon decorative="" icon-name="checkmark"></gux-icon>
@@ -98,11 +98,11 @@ exports[`gux-toggle #render should render component as expected (4) 1`] = `
 exports[`gux-toggle #render should render component as expected (5) 1`] = `
 <gux-toggle checked="" checked-label="on" unchecked-label="off">
   <mock:shadow-root>
-    <div aria-checked="true" aria-label="on" class="gux-toggle-container" role="checkbox">
+    <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <mock:shadow-root>
-            <div class="gux-checked gux-toggle-slider" role="presentation" tabindex="0">
+            <div aria-checked="true" aria-label="on" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
               <div class="gux-slider">
                 <div class="gux-switch">
                   <gux-icon decorative="" icon-name="checkmark"></gux-icon>
@@ -127,11 +127,11 @@ exports[`gux-toggle #render should render component as expected (5) 1`] = `
 exports[`gux-toggle #render should render component as expected (6) 1`] = `
 <gux-toggle checked-label="On" label-position="left" unchecked-label="Off">
   <mock:shadow-root>
-    <div aria-checked="false" aria-label="Off" class="gux-toggle-container gux-toggle-label-left" role="checkbox">
+    <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <mock:shadow-root>
-            <div class="gux-toggle-slider" role="presentation" tabindex="0">
+            <div aria-checked="false" aria-label="Off" class="gux-toggle-slider" role="checkbox" tabindex="0">
               <div class="gux-slider">
                 <div class="gux-switch">
                   <gux-icon decorative="" icon-name="checkmark"></gux-icon>
@@ -156,11 +156,11 @@ exports[`gux-toggle #render should render component as expected (6) 1`] = `
 exports[`gux-toggle #render should render component as expected (7) 1`] = `
 <gux-toggle checked="" checked-label="on" label-position="right" unchecked-label="off">
   <mock:shadow-root>
-    <div aria-checked="true" aria-label="on" class="gux-toggle-container" role="checkbox">
+    <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <mock:shadow-root>
-            <div class="gux-checked gux-toggle-slider" role="presentation" tabindex="0">
+            <div aria-checked="true" aria-label="on" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
               <div class="gux-slider">
                 <div class="gux-switch">
                   <gux-icon decorative="" icon-name="checkmark"></gux-icon>
@@ -185,11 +185,11 @@ exports[`gux-toggle #render should render component as expected (7) 1`] = `
 exports[`gux-toggle #render should render component as expected (8) 1`] = `
 <gux-toggle checked-label="This is a long label for the toggle to test how it works" label-position="left" unchecked-label="This is another long label for the toggle to test how it works">
   <mock:shadow-root>
-    <div aria-checked="false" aria-label="This is another long label for the toggle to test how it works" class="gux-toggle-container gux-toggle-label-left" role="checkbox">
+    <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <mock:shadow-root>
-            <div class="gux-toggle-slider" role="presentation" tabindex="0">
+            <div aria-checked="false" aria-label="This is another long label for the toggle to test how it works" class="gux-toggle-slider" role="checkbox" tabindex="0">
               <div class="gux-slider">
                 <div class="gux-switch">
                   <gux-icon decorative="" icon-name="checkmark"></gux-icon>
@@ -214,11 +214,11 @@ exports[`gux-toggle #render should render component as expected (8) 1`] = `
 exports[`gux-toggle #render should render component as expected (9) 1`] = `
 <gux-toggle checked="" checked-label="This is a long label for the toggle to test how it works" label-position="right" unchecked-label="This is another long label for the toggle to test how it works">
   <mock:shadow-root>
-    <div aria-checked="true" aria-label="This is a long label for the toggle to test how it works" class="gux-toggle-container" role="checkbox">
+    <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
           <mock:shadow-root>
-            <div class="gux-checked gux-toggle-slider" role="presentation" tabindex="0">
+            <div aria-checked="true" aria-label="This is a long label for the toggle to test how it works" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
               <div class="gux-slider">
                 <div class="gux-switch">
                   <gux-icon decorative="" icon-name="checkmark"></gux-icon>

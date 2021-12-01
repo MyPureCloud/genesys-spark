@@ -12,6 +12,9 @@ export class GuxToggleSlider {
   @Prop()
   disabled: boolean = false;
 
+  @Prop()
+  ariaLabel: string = '';
+
   render(): JSX.Element {
     return (
       <div
@@ -20,8 +23,10 @@ export class GuxToggleSlider {
           'gux-checked': this.checked,
           'gux-disabled': this.disabled
         }}
+        aria-label={this.ariaLabel}
+        role="checkbox"
+        aria-checked={Boolean(this.checked).toString()}
         tabindex={this.disabled ? '' : '0'}
-        role="presentation"
       >
         <div class="gux-slider">
           <div class="gux-switch">

@@ -125,14 +125,12 @@ export class GuxToggle {
           'gux-toggle-label-left': this.labelPosition === 'left',
           'gux-disabled': this.disabled || this.loading
         }}
-        role="checkbox"
-        aria-checked={Boolean(this.checked).toString()}
-        aria-label={this.getAriaLabel()}
       >
         <div class="gux-toggle-input">
           <gux-toggle-slider
             checked={this.checked}
             disabled={this.disabled || this.loading}
+            ariaLabel={this.getAriaLabel()}
           ></gux-toggle-slider>
 
           {this.renderLabel()}

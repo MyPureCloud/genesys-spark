@@ -3,10 +3,6 @@ import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 const axeExclusions = [
   {
-    issueId: 'nested-interactive',
-    exclusionReason: 'Will be addressed in COMUI-732'
-  },
-  {
     issueId: 'color-contrast',
     target: '#disabledToggle,.gux-toggle-label-text',
     exclusionReason:
