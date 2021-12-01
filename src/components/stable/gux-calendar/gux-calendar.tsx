@@ -119,6 +119,14 @@ export class GuxCalendar {
     }
   }
 
+  /**
+   * Reset calendar view to show first selected date
+   */
+  @Method()
+  async resetCalendarView(value: Date): Promise<void> {
+    this.previewValue = value;
+  }
+
   incrementPreviewDateByMonth(increment: number) {
     this.previewValue = new Date(
       this.previewValue.getFullYear(),
@@ -291,7 +299,7 @@ export class GuxCalendar {
     }
     for (const date of rangeDates) {
       const target: HTMLTableCellElement = this.root.querySelector(
-        `td[data-date="${date.getTime()}"]:not(.hidden)`
+        `td[data-date="${date.getTime()}"]:not(.gux-hidden)`
       );
       if (target) {
         elements.push(target);
