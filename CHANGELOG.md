@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.12](https://inindca///compare/v3.0.0-alpha.11...v3.0.0-alpha.12) (2021-12-01)
+
+
+### Features
+
+* **datepicker:** label prop now only accepts a string ([0bc437e](https://inindca///commit/0bc437ee7eccb08db7d029e15c0ea2b17bafdb7c))
+* **eslint:** migrated from TSLint to ESLint ([d13ff27](https://inindca///commit/d13ff2746b3c0da45066cf03a6a3665797fa08ee))
+* **panel-frame:** enabled shadow dom ([566ca8c](https://inindca///commit/566ca8c3bec49d3441ce0fe3979b334465310110))
+* **side-panel:** explicitly set shadow to false ([ad0ad6e](https://inindca///commit/ad0ad6ed6b9525c236ddf82ae6532285e0b7823a))
+
+
+### Bug Fixes
+
+* **disclosure-button:** localised default label text ([e2c4177](https://inindca///commit/e2c41771c1e5ca2a802f67c5ef9eb589fa58c7d8))
+* **pr-comment:** addressed PR comment ([20cca2d](https://inindca///commit/20cca2d33ad5451a0dc0c8706d32f6b0b34a7c8c))
+* **pr-comment:** addressed PR comment ([30e07d8](https://inindca///commit/30e07d8017a05c9c51a30bf31de3acd3a8c5073b))
+
 ## [3.0.0-alpha.11](https://inindca///compare/v3.0.0-alpha.10...v3.0.0-alpha.11) (2021-11-27)
 
 ## [3.0.0-alpha.10](https://inindca///compare/v3.0.0-alpha.9...v3.0.0-alpha.10) (2021-11-26)
