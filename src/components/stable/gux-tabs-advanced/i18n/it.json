@@ -4,9 +4,8 @@
   "scrollRight": "Naviga a destra",
   "options": "Opzioni scheda per {tabTitle}",
   "disableNewTab": "È stato raggiunto il numero massimo di schede create",
-  "toggleSortInstructions": "Attiva/Disattiva modalità ordinamento mediante Spazio",
-  "sortInstructions": "Modalità ordinamento attivata, utilizzare i tasti freccia sinistra e destra per riordinare le schede. Premere il tasto Spazio o Invio per completare l'ordinamento. Premere il tasto Esc per annullare l'ordinamento",
-  "sortModeOn": "Modalità ordinamento attivata",
+  "toggleSort": "Attiva/Disattiva modalità ordinamento mediante Spazio",
+  "sortModeOn": "Modalità ordinamento attivata, utilizzare i tasti freccia sinistra e destra per riordinare le schede. Premere il tasto Spazio o Invio per completare l'ordinamento. Premere il tasto Esc per annullare l'ordinamento",
   "sortComplete": "Ordinamento completato",
   "sortCancelled": "Ordinamento annullato"
 }

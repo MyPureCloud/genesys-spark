@@ -1,6 +1,6 @@
 {
+  "createNewTab": "Opprett ny fane",
   "scrollLeft": "Rull til venstre",
   "scrollRight": "Rull til høyre",
-  "scrollUp": "Bla opp",
-  "scrollDown": "Bla ned"
+  "disableNewTab": "Maksimalt antall faner som kan opprettes er nådd"
 }

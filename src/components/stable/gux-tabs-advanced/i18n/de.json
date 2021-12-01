@@ -4,9 +4,8 @@
   "scrollRight": "Nach rechts blättern",
   "options": "Registerkartenoptionen für {tabTitle}",
   "disableNewTab": "Die maximale Anzahl an erstellten Registerkarten wurde erreicht.",
-  "toggleSortInstructions": "Sortiermodus mit Leerzeichen ein-/ausschalten",
-  "sortInstructions": "Verwenden Sie bei eingeschaltetem Sortiermodus die linken und rechten Pfeiltasten, um die Registerkarten neu anzuordnen. Drücken Sie die Leer- oder Eingabetaste, um das Sortieren abzuschließen. Drücken Sie die Escape-Taste, um das Sortieren abzubrechen.",
-  "sortModeOn": "Sortiermodus ein",
+  "toggleSort": "Sortiermodus mit Leerzeichen ein-/ausschalten",
+  "sortModeOn": "Verwenden Sie bei eingeschaltetem Sortiermodus die linken und rechten Pfeiltasten, um die Registerkarten neu anzuordnen. Drücken Sie die Leer- oder Eingabetaste, um das Sortieren abzuschließen. Drücken Sie die Escape-Taste, um das Sortieren abzubrechen.",
   "sortComplete": "Sortieren abgeschlossen",
   "sortCancelled": "Sortieren abgebrochen"
 }
