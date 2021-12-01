@@ -174,6 +174,15 @@ export class GuxDatepicker {
     );
   }
 
+  @Watch('active')
+  watchActiveCalendar(active: boolean) {
+    if (active === true) {
+      const startDateValue = fromIsoDate(this.value.split('/')[0]);
+      // calendar should open to month containing the start date
+      void this.calendarElement.resetCalendarView(startDateValue);
+    }
+  }
+
   /**
    * Triggered when user selects a date
    */
