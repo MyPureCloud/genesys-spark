@@ -261,8 +261,8 @@ describe('gux-command-palette', () => {
       await commandPallete.press('ArrowDown');
       await page.waitForChanges();
 
-      const focusedELement = await page.find(':focus');
-      expect(focusedELement.outerHTML).toContain('recent');
+      const focusedElement = await page.find(':focus');
+      expect(focusedElement.outerHTML).toContain('recent');
     });
 
     it('should navigate to common list on key downs', async () => {
@@ -271,8 +271,8 @@ describe('gux-command-palette', () => {
       await commandPallete.press('ArrowDown');
       await page.waitForChanges();
 
-      const focusedELement = await page.find(':focus');
-      expect(focusedELement.outerHTML).toContain('common');
+      const focusedElement = await page.find(':focus');
+      expect(focusedElement.outerHTML).toContain('common');
     });
 
     it('should navigate back to search on key up', async () => {
@@ -285,8 +285,8 @@ describe('gux-command-palette', () => {
       await commandPallete.press('ArrowUp');
       await page.waitForChanges();
 
-      const focusedELement = await page.find(':focus');
-      expect(focusedELement.nodeName).toBe('INPUT');
+      const focusedElement = await page.find(':focus');
+      expect(focusedElement.nodeName).toBe('INPUT');
     });
   });
 });
