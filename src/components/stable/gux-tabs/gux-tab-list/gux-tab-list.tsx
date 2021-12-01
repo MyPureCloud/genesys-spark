@@ -61,6 +61,11 @@ export class GuxTabList {
     }
   }
 
+  @Listen('hasVerticalScrollbar')
+  onHasVerticalScrollBar() {
+    void this.checkDisabledScrollButtons();
+  }
+
   @Listen('scroll', { capture: true })
   onScroll(): void {
     void this.checkDisabledScrollButtons();
@@ -142,7 +147,6 @@ export class GuxTabList {
   }
 
   checkForScrollbarHideOrShow() {
-    this.checkDisabledScrollButtons();
     readTask(() => {
       const el = this.root.querySelector('.gux-scrollable-section');
       const hasHorizontalScrollbar = el.clientWidth !== el.scrollWidth;
@@ -155,6 +159,7 @@ export class GuxTabList {
       if (hasVerticalScrollbar !== this.hasVerticalScrollbar) {
         this.hasVerticalScrollbar = hasVerticalScrollbar;
       }
+      this.checkDisabledScrollButtons();
     });
   }
 
@@ -380,13 +385,13 @@ export class GuxTabList {
   private getChevronIconName(direction: string): string {
     switch (direction) {
       case 'scrollLeft':
-        return 'chevron-left';
+        return 'chevron-small-left';
       case 'scrollRight':
-        return 'chevron-right';
+        return 'chevron-small-right';
       case 'scrollUp':
-        return 'chevron-up';
+        return 'chevron-small-up';
       case 'scrollDown':
-        return 'chevron-down';
+        return 'chevron-small-down';
     }
   }
 }
