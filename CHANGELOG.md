@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.13](https://inindca///compare/v3.0.0-alpha.12...v3.0.0-alpha.13) (2021-12-02)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed datepicker date selection bugs ([c13e775](https://inindca///commit/c13e7758e237ddd8616fea4d40aaa4c928d0b359))
+* **gux-dropdown:** now not focusable when disabled ([7b65819](https://inindca///commit/7b658199de63b6cbb927a91c2bb036484d4b421f))
+
 ## [3.0.0-alpha.12](https://inindca///compare/v3.0.0-alpha.11...v3.0.0-alpha.12) (2021-12-01)
 
 
