@@ -37,7 +37,7 @@ export function bootstrap() {
                   })
                   .join('')}
             </nav>
-            <iframe id="componentFrame" />
+            <iframe id="componentFrame" title="Component Examples"/>
         </main>
     `)
   );
