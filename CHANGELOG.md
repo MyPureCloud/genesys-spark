@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.48.0](https://inindca///compare/v2.47.2...v2.48.0) (2021-12-02)
+
+
+### Features
+
+* **gux-modal:** focusTrap prop is now updatable ([7de03c8](https://inindca///commit/7de03c8f3ff555a0d165861a80b2565f27c41343))
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed datepicker date selection bugs v2 backport ([b3631a0](https://inindca///commit/b3631a0c378061db4e84ef91dd860cdb50c1ba8e))
+
 ### [2.47.2](https://inindca///compare/v2.47.1...v2.47.2) (2021-11-24)
 
 
