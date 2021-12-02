@@ -8,7 +8,8 @@ import { getBaseSvgHtml, getRootIconName } from './gux-icon.service';
 @Component({
   assetsDirs: ['icons'],
   styleUrl: 'gux-icon.less',
-  tag: 'gux-icon'
+  tag: 'gux-icon',
+  shadow: true
 })
 export class GuxIcon {
   @Element()
