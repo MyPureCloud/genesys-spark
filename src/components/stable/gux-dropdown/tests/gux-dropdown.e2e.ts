@@ -67,4 +67,108 @@ describe('gux-dropdown', () => {
     expect(changeSpy).toHaveReceivedEventDetail('en-US');
     expect(dropMenu.className.split(' ')).not.toContain('gux-active');
   });
+
+  it('can be tabbed to when filterable and not disabled', async () => {
+    const page = await newSparkE2EPage({
+      html: `<gux-dropdown lang="en" placeholder="Select..." filterable=true>
+        <gux-option value="en-US">American English</gux-option>
+        <gux-option value="es">Latin American Spanish</gux-option>
+        <gux-option value="es-ES">European Spanish</gux-option>
+        <gux-option value="en-UK">UK English</gux-option>
+        <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
+        <gux-option value="fr" text="European French"></gux-option>
+        <gux-option>Dutch</gux-option>
+      </gux-dropdown>
+      `
+    });
+
+    const element = await page.find('gux-dropdown');
+    const focusedBeforeTab = await page.find(':focus');
+
+    await page.keyboard.press('Tab');
+    await page.waitForChanges();
+
+    const focusedAfterTab = await page.find(':focus');
+
+    expect(focusedBeforeTab).toBeNull();
+    expect(focusedAfterTab).not.toBeNull();
+    expect(element.outerHTML).toContain(focusedAfterTab.outerHTML);
+  });
+
+  it('can be tabbed to when not filterable and not disabled', async () => {
+    const page = await newSparkE2EPage({
+      html: `<gux-dropdown lang="en" placeholder="Select...">
+        <gux-option value="en-US">American English</gux-option>
+        <gux-option value="es">Latin American Spanish</gux-option>
+        <gux-option value="es-ES">European Spanish</gux-option>
+        <gux-option value="en-UK">UK English</gux-option>
+        <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
+        <gux-option value="fr" text="European French"></gux-option>
+        <gux-option>Dutch</gux-option>
+      </gux-dropdown>
+      `
+    });
+
+    const element = await page.find('gux-dropdown');
+    const focusedBeforeTab = await page.find(':focus');
+
+    await page.keyboard.press('Tab');
+    await page.waitForChanges();
+
+    const focusedAfterTab = await page.find(':focus');
+
+    expect(focusedBeforeTab).toBeNull();
+    expect(focusedAfterTab).not.toBeNull();
+    expect(element.outerHTML).toContain(focusedAfterTab.outerHTML);
+  });
+
+  it('can not be tabbed to when filterable and disabled', async () => {
+    const page = await newSparkE2EPage({
+      html: `<gux-dropdown lang="en" placeholder="Select..." filterable=true disabled>
+        <gux-option value="en-US">American English</gux-option>
+        <gux-option value="es">Latin American Spanish</gux-option>
+        <gux-option value="es-ES">European Spanish</gux-option>
+        <gux-option value="en-UK">UK English</gux-option>
+        <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
+        <gux-option value="fr" text="European French"></gux-option>
+        <gux-option>Dutch</gux-option>
+      </gux-dropdown>
+      `
+    });
+
+    const focusedBeforeTab = await page.find(':focus');
+
+    await page.keyboard.press('Tab');
+    await page.waitForChanges();
+
+    const focusedAfterTab = await page.find(':focus');
+
+    expect(focusedBeforeTab).toBeNull();
+    expect(focusedAfterTab).toBeNull();
+  });
+
+  it('can not be tabbed to when not filterable and disabled', async () => {
+    const page = await newSparkE2EPage({
+      html: `<gux-dropdown lang="en" placeholder="Select..." disabled>
+        <gux-option value="en-US">American English</gux-option>
+        <gux-option value="es">Latin American Spanish</gux-option>
+        <gux-option value="es-ES">European Spanish</gux-option>
+        <gux-option value="en-UK">UK English</gux-option>
+        <gux-option value="fr-CA" text= "Canadian French">American French</gux-option>
+        <gux-option value="fr" text="European French"></gux-option>
+        <gux-option>Dutch</gux-option>
+      </gux-dropdown>
+      `
+    });
+
+    const focusedBeforeTab = await page.find(':focus');
+
+    await page.keyboard.press('Tab');
+    await page.waitForChanges();
+
+    const focusedAfterTab = await page.find(':focus');
+
+    expect(focusedBeforeTab).toBeNull();
+    expect(focusedAfterTab).toBeNull();
+  });
 });

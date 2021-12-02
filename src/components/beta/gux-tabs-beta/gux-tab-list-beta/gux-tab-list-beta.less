@@ -8,6 +8,7 @@
 
 gux-tabs-beta[orientation='vertical'] {
   height: 100%;
+
   .gux-tab-container {
     display: flex;
     flex-direction: column;
@@ -16,12 +17,15 @@ gux-tabs-beta[orientation='vertical'] {
     height: 100%;
     margin-right: @spacing-medium;
     border-right: 1px solid @gux-grey-50;
+
     .gux-scroll-button-container {
       width: 100%;
+
       button {
         width: 100%;
       }
     }
+
     .gux-scrollable-section {
       flex-direction: column;
       height: 100%;
@@ -29,6 +33,7 @@ gux-tabs-beta[orientation='vertical'] {
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none; /* Internet Explorer 10+ */
       scroll-behavior: smooth;
+
       &::-webkit-scrollbar {
         /* WebKit */
         width: 0;
@@ -44,6 +49,7 @@ gux-tabs-beta:not([orientation='vertical']) {
     margin-bottom: @spacing-medium;
     border-bottom: 1px solid @gux-grey-50;
   }
+
   .gux-scrollable-section {
     overflow-x: auto;
   }
@@ -57,6 +63,7 @@ gux-tabs-beta:not([orientation='vertical']) {
   overflow-y: hidden;
   background-color: #fff;
 }
+
 .gux-scrollable-section {
   display: flex;
   flex: 1 1 auto;
@@ -88,6 +95,7 @@ gux-tabs-beta:not([orientation='vertical']) {
       width: 10px;
       height: 10px;
     }
+
     &:focus {
       border: 3px solid @gux-blue-90;
       outline: none;
