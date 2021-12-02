@@ -62,13 +62,13 @@ export class GuxTabList {
   }
 
   @Listen('hasVerticalScrollbar')
-  onHasVerticalScrollBar() {
-    void this.checkDisabledScrollButtons();
+  onHasVerticalScrollBar(): void {
+    this.checkDisabledScrollButtons();
   }
 
   @Listen('scroll', { capture: true })
   onScroll(): void {
-    void this.checkDisabledScrollButtons();
+    this.checkDisabledScrollButtons();
   }
 
   private resizeObserver?: ResizeObserver;
@@ -259,27 +259,14 @@ export class GuxTabList {
       const scrollLeft = scrollContainer.scrollLeft;
       const scrollLeftMax =
         scrollContainer.scrollWidth - scrollContainer.clientWidth;
-
-      if (scrollLeft === 0) {
-        this.isScrolledToBeginning = true;
-      } else if (scrollLeftMax - scrollLeft === 0) {
-        this.isScrolledToEnd = true;
-      } else {
-        this.isScrolledToBeginning = false;
-        this.isScrolledToEnd = false;
-      }
-    } else if (this.hasVerticalScrollbar) {
+      this.isScrolledToBeginning = scrollLeft === 0;
+      this.isScrolledToEnd = scrollLeftMax - scrollLeft === 0;
+    } else {
       const scrollTop = scrollContainer.scrollTop;
       const scrollTopMax =
         scrollContainer.scrollHeight - scrollContainer.clientHeight;
-      if (scrollTop === 0) {
-        this.isScrolledToBeginning = true;
-      } else if (scrollTopMax - scrollTop === 0) {
-        this.isScrolledToEnd = true;
-      } else {
-        this.isScrolledToBeginning = false;
-        this.isScrolledToEnd = false;
-      }
+      this.isScrolledToBeginning = scrollTop === 0;
+      this.isScrolledToEnd = scrollTopMax - scrollTop === 0;
     }
   }
 
@@ -353,14 +340,10 @@ export class GuxTabList {
   private getButtonDisabled(direction: string): boolean {
     switch (direction) {
       case 'scrollLeft':
-        return this.isScrolledToBeginning;
-
-      case 'scrollRight':
-        return this.isScrolledToEnd;
-
       case 'scrollUp':
         return this.isScrolledToBeginning;
 
+      case 'scrollRight':
       case 'scrollDown':
         return this.isScrolledToEnd;
     }
