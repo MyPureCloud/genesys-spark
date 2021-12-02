@@ -4,9 +4,8 @@
   "scrollRight": "右にスクロール",
   "options": "{tabTitle} のタブ オプション",
   "disableNewTab": "生成されるタブの最大数に達しました",
-  "toggleSortInstructions": "スペース キーでソート モードを切り替え",
-  "sortInstructions": "ソート モード オンでは、左右の矢印キーを使用してタブの順序を並べ替えます。スペースキーまたは Enter キーを押してソートを完了します。Escape キーを押してソートをキャンセルします。",
-  "sortModeOn": "ソート モード オン",
+  "toggleSort": "スペース キーでソート モードを切り替え",
+  "sortModeOn": "ソート モード オンでは、左右の矢印キーを使用してタブの順序を並べ替えます。スペースキーまたは Enter キーを押してソートを完了します。Escape キーを押してソートをキャンセルします。",
   "sortComplete": "ソート完了",
   "sortCancelled": "ソートがキャンセルされました"
 }
