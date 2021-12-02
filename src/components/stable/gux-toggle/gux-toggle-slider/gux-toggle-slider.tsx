@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop } from '@stencil/core';
+import { Component, h, JSX, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-toggle-slider.less',
