@@ -1,11 +1,13 @@
-import { Component, h, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-toggle-slider.less',
   tag: 'gux-toggle-slider',
-  shadow: { delegatesFocus: true }
+  shadow: false
 })
 export class GuxToggleSlider {
+  private checkboxElement: HTMLElement;
+
   @Prop()
   checked: boolean = false;
 
@@ -13,7 +15,24 @@ export class GuxToggleSlider {
   disabled: boolean = false;
 
   @Prop()
-  ariaLabel: string = '';
+  guxAriaLabel: string = '';
+
+  @Prop()
+  labelId: string = '';
+
+  @Prop()
+  errorId: string = '';
+
+  componentDidLoad(): void {
+    if (this.labelId) {
+      this.checkboxElement?.setAttribute('aria-labelledby', this.labelId);
+    } else {
+      this.checkboxElement?.setAttribute('aria-label', this.guxAriaLabel);
+    }
+    if (this.errorId) {
+      this.checkboxElement?.setAttribute('aria-describedby', this.errorId);
+    }
+  }
 
   render(): JSX.Element {
     return (
@@ -23,10 +42,10 @@ export class GuxToggleSlider {
           'gux-checked': this.checked,
           'gux-disabled': this.disabled
         }}
-        aria-label={this.ariaLabel}
         role="checkbox"
-        aria-checked={Boolean(this.checked).toString()}
+        aria-checked={this.checked.toString()}
         tabindex={this.disabled ? '' : '0'}
+        ref={el => (this.checkboxElement = el)}
       >
         <div class="gux-slider">
           <div class="gux-switch">

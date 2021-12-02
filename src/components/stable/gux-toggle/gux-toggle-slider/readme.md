@@ -5,11 +5,13 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type      | Default |
-| ----------- | ------------ | ----------- | --------- | ------- |
-| `ariaLabel` | `aria-label` |             | `string`  | `''`    |
-| `checked`   | `checked`    |             | `boolean` | `false` |
-| `disabled`  | `disabled`   |             | `boolean` | `false` |
+| Property       | Attribute        | Description | Type      | Default |
+| -------------- | ---------------- | ----------- | --------- | ------- |
+| `checked`      | `checked`        |             | `boolean` | `false` |
+| `disabled`     | `disabled`       |             | `boolean` | `false` |
+| `errorId`      | `error-id`       |             | `string`  | `''`    |
+| `guxAriaLabel` | `gux-aria-label` |             | `string`  | `''`    |
+| `labelId`      | `label-id`       |             | `string`  | `''`    |
 
 
 ## Dependencies
