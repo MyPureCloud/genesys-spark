@@ -39,6 +39,12 @@ export class GuxTabList {
   private hasVerticalScrollbar: boolean = false;
 
   @State()
+  private isScrolledToBeginning: boolean = false;
+
+  @State()
+  private isScrolledToEnd: boolean = false;
+
+  @State()
   private triggerIds: string;
 
   @Listen('focusout')
@@ -53,6 +59,16 @@ export class GuxTabList {
         }
       });
     }
+  }
+
+  @Listen('hasVerticalScrollbar')
+  onHasVerticalScrollBar(): void {
+    this.checkDisabledScrollButtons();
+  }
+
+  @Listen('scroll', { capture: true })
+  onScroll(): void {
+    this.checkDisabledScrollButtons();
   }
 
   private resizeObserver?: ResizeObserver;
@@ -143,6 +159,7 @@ export class GuxTabList {
       if (hasVerticalScrollbar !== this.hasVerticalScrollbar) {
         this.hasVerticalScrollbar = hasVerticalScrollbar;
       }
+      this.checkDisabledScrollButtons();
     });
   }
 
@@ -236,6 +253,23 @@ export class GuxTabList {
     }, 500);
   }
 
+  checkDisabledScrollButtons() {
+    const scrollContainer = this.root.querySelector('.gux-scrollable-section');
+    if (this.hasHorizontalScrollbar) {
+      const scrollLeft = scrollContainer.scrollLeft;
+      const scrollLeftMax =
+        scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      this.isScrolledToBeginning = scrollLeft === 0;
+      this.isScrolledToEnd = scrollLeftMax - scrollLeft === 0;
+    } else {
+      const scrollTop = scrollContainer.scrollTop;
+      const scrollTopMax =
+        scrollContainer.scrollHeight - scrollContainer.clientHeight;
+      this.isScrolledToBeginning = scrollTop === 0;
+      this.isScrolledToEnd = scrollTopMax - scrollTop === 0;
+    }
+  }
+
   scrollLeft() {
     writeTask(() => {
       this.root.querySelector('.gux-scrollable-section').scrollBy(-100, 0);
@@ -286,6 +320,7 @@ export class GuxTabList {
       <div class="gux-scroll-button-container">
         {this.hasHorizontalScrollbar || this.hasVerticalScrollbar ? (
           <button
+            disabled={this.getButtonDisabled(direction)}
             tabindex="-1"
             title={this.i18n(direction)}
             aria-label={this.i18n(direction)}
@@ -300,6 +335,18 @@ export class GuxTabList {
         ) : null}
       </div>
     ) as JSX.Element;
+  }
+
+  private getButtonDisabled(direction: string): boolean {
+    switch (direction) {
+      case 'scrollLeft':
+      case 'scrollUp':
+        return this.isScrolledToBeginning;
+
+      case 'scrollRight':
+      case 'scrollDown':
+        return this.isScrolledToEnd;
+    }
   }
 
   private getScrollDirection(direction: string): void {
@@ -321,13 +368,13 @@ export class GuxTabList {
   private getChevronIconName(direction: string): string {
     switch (direction) {
       case 'scrollLeft':
-        return 'chevron-left';
+        return 'chevron-small-left';
       case 'scrollRight':
-        return 'chevron-right';
+        return 'chevron-small-right';
       case 'scrollUp':
-        return 'chevron-up';
+        return 'chevron-small-up';
       case 'scrollDown':
-        return 'chevron-down';
+        return 'chevron-small-down';
     }
   }
 }
