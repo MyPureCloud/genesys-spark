@@ -11,9 +11,15 @@ export class GuxSidePanel {
   @Element()
   private root: HTMLElement;
 
+  /**
+   * Open or close the content
+   */
   @Prop()
   isOpen: boolean = false;
 
+  /**
+   * The position of the side panel
+   */
   @Prop()
   position: 'left' | 'right' = 'left';
 
