@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.14](https://inindca///compare/v3.0.0-alpha.13...v3.0.0-alpha.14) (2021-12-03)
+
+
+### Bug Fixes
+
+* **gux-tabs:** update gux-tabs to match Spark guidelines ([a474be8](https://inindca///commit/a474be8710e9f9004c1157b2283c6c55a51fcbb7))
+* **gux-toggle:** fix nested interactive a11y violation ([360580e](https://inindca///commit/360580e65d6cd76daf78e85574a763ee6c3bc54c))
+* **gux-toggle:** linked label and error message to checkbox using aria-labelledby, aria-describedby ([daf8c16](https://inindca///commit/daf8c160dee0a7a5de97cca13104500b343ab858))
+
 ## [3.0.0-alpha.13](https://inindca///compare/v3.0.0-alpha.12...v3.0.0-alpha.13) (2021-12-02)
 
 
