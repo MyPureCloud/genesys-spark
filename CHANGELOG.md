@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.49.0](https://inindca///compare/v2.48.0...v2.49.0) (2021-12-03)
+
+
+### Features
+
+* **icon:** enable shadow dom ([acdc860](https://inindca///commit/acdc860a5e458d0d605d3a274a926d59c33b8007))
+
+
+### Bug Fixes
+
+* **gux-dropdown:** now not focusable when disabled ([e666581](https://inindca///commit/e666581554221297a981710e5454e29c2218d424))
+
 ## [2.48.0](https://inindca///compare/v2.47.2...v2.48.0) (2021-12-02)
 
 
