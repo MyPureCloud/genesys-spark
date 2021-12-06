@@ -1,12 +1,7 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [
-  {
-    issueId: 'scrollable-region-focusable',
-    exclusionReason: 'Will be addressed in COMUI-735 ticket'
-  }
-];
+const axeExclusions = [];
 
 async function newNonrandomE2EPage({
   html

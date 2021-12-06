@@ -636,7 +636,11 @@ export class GuxTable {
   render(): JSX.Element {
     return (
       <div class={this.tableClasses}>
-        <div id={this.tableId} class={this.tableContainerClasses}>
+        <div
+          tabindex={this.isVerticalScroll ? '0' : '-1'}
+          id={this.tableId}
+          class={this.tableContainerClasses}
+        >
           <slot name="data" />
         </div>
         {this.isHorizontalScroll && (
