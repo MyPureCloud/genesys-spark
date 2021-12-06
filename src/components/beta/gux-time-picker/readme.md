@@ -12,13 +12,13 @@ A check event is triggered when the state of the component changed.
 
 ## Properties
 
-| Property       | Attribute        | Description | Type     | Default            |
-| -------------- | ---------------- | ----------- | -------- | ------------------ |
-| `guxAriaLabel` | `gux-aria-label` |             | `string` | `''`               |
-| `interval`     | `interval`       |             | `number` | `DEFAULT_INTERVAL` |
-| `max`          | `max`            |             | `string` | `MAX_TIME`         |
-| `min`          | `min`            |             | `string` | `MIN_TIME`         |
-| `value`        | `value`          |             | `string` | `''`               |
+| Property   | Attribute  | Description | Type     | Default            |
+| ---------- | ---------- | ----------- | -------- | ------------------ |
+| `interval` | `interval` |             | `number` | `DEFAULT_INTERVAL` |
+| `label`    | `label`    |             | `string` | `''`               |
+| `max`      | `max`      |             | `string` | `MAX_TIME`         |
+| `min`      | `min`      |             | `string` | `MIN_TIME`         |
+| `value`    | `value`    |             | `string` | `''`               |
 
 
 ## Events

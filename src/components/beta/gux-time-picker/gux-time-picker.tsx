@@ -45,7 +45,7 @@ export class GuxTimePicker {
   min: string = MIN_TIME;
 
   @Prop()
-  guxAriaLabel: string = '';
+  label: string = '';
 
   @State()
   active: boolean = false;
@@ -259,7 +259,7 @@ export class GuxTimePicker {
             value={this.value}
             size={9}
             class={this.active ? 'gux-focused' : ''}
-            aria-label={this.guxAriaLabel || this.i18n('defaultAriaLabel')}
+            aria-label={this.label || this.i18n('defaultAriaLabel')}
             ref={el => (this.inputElement = el)}
           ></input>
         </div>
