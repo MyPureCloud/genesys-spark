@@ -14,6 +14,10 @@ import {
 import { fromIsoTime } from '../../../utils/date/from-iso-time-string';
 import { trackComponent } from '../../../usage-tracking';
 
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+
+import translationResources from './i18n/en.json';
+
 const MAX_TIME: string = '23:59:59';
 const MIN_TIME: string = '00:00:00';
 const DEFAULT_INTERVAL: number = 15;
@@ -23,6 +27,8 @@ const DEFAULT_INTERVAL: number = 15;
   tag: 'gux-time-picker-beta'
 })
 export class GuxTimePicker {
+  private i18n: GetI18nValue;
+
   @Element()
   root: HTMLElement;
 
@@ -37,6 +43,9 @@ export class GuxTimePicker {
 
   @Prop({ mutable: true })
   min: string = MIN_TIME;
+
+  @Prop()
+  label: string = '';
 
   @State()
   active: boolean = false;
@@ -229,8 +238,9 @@ export class GuxTimePicker {
     return validatedValue;
   }
 
-  componentWillLoad() {
+  async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.validateBounds();
     this.value = this.validateValue(this.value);
   }
@@ -249,6 +259,7 @@ export class GuxTimePicker {
             value={this.value}
             size={9}
             class={this.active ? 'gux-focused' : ''}
+            aria-label={this.label || this.i18n('defaultAriaLabel')}
             ref={el => (this.inputElement = el)}
           ></input>
         </div>

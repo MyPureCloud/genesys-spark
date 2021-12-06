@@ -1,12 +1,6 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [
-  {
-    issueId: 'label',
-    target: 'input',
-    exclusionReason: 'will be addressed in COMUI-733'
-  }
-];
+const axeExclusions = [];
 
 describe('gux-time-picker-beta', () => {
   it('renders', async () => {

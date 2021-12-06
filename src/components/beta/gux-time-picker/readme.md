@@ -15,6 +15,7 @@ A check event is triggered when the state of the component changed.
 | Property   | Attribute  | Description | Type     | Default            |
 | ---------- | ---------- | ----------- | -------- | ------------------ |
 | `interval` | `interval` |             | `number` | `DEFAULT_INTERVAL` |
+| `label`    | `label`    |             | `string` | `''`               |
 | `max`      | `max`      |             | `string` | `MAX_TIME`         |
 | `min`      | `min`      |             | `string` | `MIN_TIME`         |
 | `value`    | `value`    |             | `string` | `''`               |
