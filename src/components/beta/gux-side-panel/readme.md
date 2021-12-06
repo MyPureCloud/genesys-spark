@@ -7,10 +7,10 @@ See the code in the story.tsx file for an example of how to build this component
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                | Default  |
-| ---------- | ---------- | ----------- | ------------------- | -------- |
-| `isOpen`   | `is-open`  |             | `boolean`           | `false`  |
-| `position` | `position` |             | `"left" \| "right"` | `'left'` |
+| Property   | Attribute  | Description                    | Type                | Default  |
+| ---------- | ---------- | ------------------------------ | ------------------- | -------- |
+| `isOpen`   | `is-open`  | Open or close the content      | `boolean`           | `false`  |
+| `position` | `position` | The position of the side panel | `"left" \| "right"` | `'left'` |
 
 
 ----------------------------------------------
