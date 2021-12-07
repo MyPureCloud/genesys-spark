@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.15](https://inindca///compare/v3.0.0-alpha.14...v3.0.0-alpha.15) (2021-12-07)
+
+
+### Bug Fixes
+
+* **gux-time-picker:** gave gux-time picker an aria-label attribute ([5b37a5d](https://inindca///commit/5b37a5d5e65203ae0d283a383e96b8f3376240c2))
+
 ## [3.0.0-alpha.14](https://inindca///compare/v3.0.0-alpha.13...v3.0.0-alpha.14) (2021-12-03)
 
 
