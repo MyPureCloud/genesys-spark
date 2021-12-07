@@ -1,55 +1,80 @@
 <h1>gux-radial-progress</h1>
 <div>
-  <h2>No value set</h2>
+  <h2>Value</h2>
+  <h3>No value set</h3>
   <gux-radial-progress screenreader-text="Uploading file"></gux-radial-progress>
-</div>
-<div>
-  <h2>Value set to 0</h2>
+
+  <h3>Set to 0</h3>
   <gux-radial-progress
     screenreader-text="Uploading file"
     value="0"
     max="100"
   ></gux-radial-progress>
-</div>
-<div>
-  <h2>Value set to 3/10</h2>
+
+  <h3>Set to 3/10</h3>
   <gux-radial-progress
     screenreader-text="Uploading file"
     value="3"
     max="10"
   ></gux-radial-progress>
-</div>
-<div>
-  <h2>Value set to 10/10</h2>
+
+  <h3>Set to 10/10</h3>
   <gux-radial-progress
     screenreader-text="Uploading file"
     value="10"
     max="10"
   ></gux-radial-progress>
 </div>
+
 <div>
   <h2>Dynamic</h2>
+  <h3>Scale set to 0</h3>
   <gux-radial-progress
-    id="dynamic"
+    class="dynamic"
     screenreader-text="Uploading file"
     value="0"
     max="100"
   ></gux-radial-progress>
+
+  <h3>Scale set to 1</h3>
+  <gux-radial-progress
+    class="dynamic"
+    screenreader-text="Uploading file"
+    value="0"
+    max="100"
+    scale="1"
+  >
+  </gux-radial-progress>
+
+  <h3>Scale set to 2</h3>
+  <gux-radial-progress
+    class="dynamic"
+    screenreader-text="Uploading file"
+    value="0"
+    max="100"
+    scale="2"
+  >
+  </gux-radial-progress>
 </div>
 
 <style
   onload="(function () {
-    const dynamicRadialProgress = document.getElementById('dynamic');
+    const dynamicRadialProgressElements = Array.from(document.getElementsByClassName('dynamic'));
 
-    var intervalId = setInterval(() => {
-      const currentValue = dynamicRadialProgress.value;
+    dynamicRadialProgressElements.forEach((dynamicRadialProgressElement) => {
+      const intervalId = setInterval(() => {
+        const currentValue = dynamicRadialProgressElement.value;
 
-      if (currentValue === 100) {
-        clearInterval(intervalId);
-      } else {
-        dynamicRadialProgress.value += 1;
-      }
-    }, 100)
+        const change = Math.random();
+
+        if (currentValue + change > 100) {
+          dynamicRadialProgressElement.value = 0;
+        } else {
+          dynamicRadialProgressElement.value += change;
+        }
+      }, 100)
+    });
+
   }
   )()"
 >
