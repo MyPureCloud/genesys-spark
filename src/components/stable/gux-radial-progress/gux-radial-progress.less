@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/typography.less';
 
 :host {
   display: inline-block;
@@ -30,8 +31,13 @@
   }
 
   .gux-percentage {
-    font-size: 12px;
+    .body-font();
+
     text-anchor: middle;
     fill: @gux-black-50;
+
+    &.gux-small {
+      .gux-small-text();
+    }
   }
 }
