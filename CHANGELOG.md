@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.16](https://inindca///compare/v3.0.0-alpha.15...v3.0.0-alpha.16) (2021-12-08)
+
+
+### Features
+
+* **gux-radial-progress:** added scale prop ([6c2344f](https://inindca///commit/6c2344f2fabf6b4173e84bc1548ba08853a6d061))
+
+
+### Bug Fixes
+
+* **gux-table:** fix gux-table scrollable-region-focusable a11y violation ([4568bff](https://inindca///commit/4568bff6c00501fb5a55567c19ebe52e7312c5c4))
+
 ## [3.0.0-alpha.15](https://inindca///compare/v3.0.0-alpha.14...v3.0.0-alpha.15) (2021-12-07)
 
 
