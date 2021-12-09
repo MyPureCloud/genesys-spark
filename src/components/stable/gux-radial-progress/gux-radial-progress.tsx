@@ -4,8 +4,13 @@ import { trackComponent } from '../../../usage-tracking';
 import { logError } from '../../../utils/error/log-error';
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
-const RADIUS = 23.5;
-const STROKE_DASH = 2 * Math.PI * RADIUS;
+import {
+  canShowPercentageState,
+  getPercentageString,
+  RADIUS,
+  STROKE_DASH
+} from './gux-radial-progress.service';
+import { GuxRadialProgressScale } from './gux-radial-progress.types';
 
 @Component({
   styleUrl: 'gux-radial-progress.less',
@@ -31,6 +36,12 @@ export class GuxRadialProgress {
   max: number = 100;
 
   /**
+   * The max number of decimal places that will be displayed
+   */
+  @Prop()
+  scale: GuxRadialProgressScale = 0;
+
+  /**
    * Required localized text to provide an accessible label for the component
    */
   @Prop()
@@ -43,7 +54,7 @@ export class GuxRadialProgress {
   componentDidLoad(): void {
     if (
       !this.screenreaderText &&
-      this.canShowPercentageState(this.value, this.max)
+      canShowPercentageState(this.value, this.max)
     ) {
       logError(
         'gux-radial-progress',
@@ -53,18 +64,20 @@ export class GuxRadialProgress {
   }
 
   render(): JSX.Element {
-    return this.canShowPercentageState(this.value, this.max)
-      ? this.renderPercentageState(this.value, this.max, this.screenreaderText)
+    return canShowPercentageState(this.value, this.max)
+      ? this.renderPercentageState(
+          this.value,
+          this.max,
+          this.scale,
+          this.screenreaderText
+        )
       : this.renderSpinnerState(this.screenreaderText);
-  }
-
-  private canShowPercentageState(value: number, max: number): boolean {
-    return !(isNaN(value) || isNaN(max) || value > max || value < 0);
   }
 
   private renderPercentageState(
     value: number,
     max: number,
+    scale: GuxRadialProgressScale,
     screenreaderText: string
   ): JSX.Element {
     return (
@@ -115,9 +128,12 @@ export class GuxRadialProgress {
             x="50%"
             y="50%"
             dominant-baseline="central"
-            class="gux-percentage"
+            class={{
+              'gux-percentage': true,
+              'gux-small': ![0, 1].includes(this.scale)
+            }}
           >
-            {`${Math.round((value / max) * 100)}%`}
+            {getPercentageString(value, max, scale)}
           </text>
         </svg>
       </div>
