@@ -1,0 +1,55 @@
+<h1>gux-chart-donut-beta</h1>
+<h2>Pie</h2>
+<gux-chart-donut-beta id="chart-1" label-radius="110" label-field="value">
+</gux-chart-donut-beta>
+
+<h2>Donut</h2>
+<gux-chart-donut-beta id="chart-2" label-radius="110" label-field="value">
+</gux-chart-donut-beta>
+
+<h2>Pie with Legend</h2>
+<gux-chart-donut-beta
+  id="chart-3"
+  label-radius="110"
+  label-field="value"
+  include-legend="true"
+  legend-title="Media Type"
+>
+</gux-chart-donut-beta>
+
+<h2>Pie with Hidden Values</h2>
+<gux-chart-donut-beta id="chart-4" label-field="value"> </gux-chart-donut-beta>
+
+<style
+  onload="(function() {
+    const chart1 = document.querySelector('#chart-1');
+    const chart2 = document.querySelector('#chart-2');
+    const chart3 = document.querySelector('#chart-3');
+    const chart4 = document.querySelector('#chart-4');
+
+    const chartData = {'values': [
+        {'category': 'Voice', 'value': 4},
+        {'category': 'Callback', 'value': 6},
+        {'category': 'Chat', 'value': 10},
+        {'category': 'Email', 'value': 3},
+        {'category': 'Messaging', 'value': 7},
+        {'category': 'Wuphf', 'value': 8}
+      ]
+    }
+
+    chart1.chartData = chartData
+    chart1.chartLayers = [{ 'outerRadius': 100 }]
+    
+    chart2.chartData = chartData
+    chart2.chartLayers = [{ 'outerRadius': 80, 'innerRadius': 20 }, { 'innerRadius': 20, stroke: '#fff' }]
+
+    chart3.chartData = chartData
+    chart3.chartLayers = [{ 'outerRadius': 100 }]
+
+    chart4.chartData = chartData
+    chart4.chartLayers = [{ 'outerRadius': 100 }]    
+
+  })()"
+>
+  --noop: none;
+</style>
