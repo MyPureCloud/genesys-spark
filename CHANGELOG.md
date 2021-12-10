@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.50.0](https://inindca///compare/v2.49.0...v2.50.0) (2021-12-10)
+
+
+### Features
+
+* **gux-radial-progress:** added scale prop ([90f8914](https://inindca///commit/90f89140923d03a069256275d5a1040f69fb36a5))
+
+
+### Bug Fixes
+
+* **gux-dropdown-v2:** fixed selected item overflow ([98f48d5](https://inindca///commit/98f48d57cc2e0fbf8cef04a14beb5b3559932538))
+
 ## [2.49.0](https://inindca///compare/v2.48.0...v2.49.0) (2021-12-03)
 
 
