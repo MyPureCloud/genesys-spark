@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.17](https://inindca///compare/v3.0.0-alpha.16...v3.0.0-alpha.17) (2021-12-10)
+
+
+### Bug Fixes
+
+* **gux-dropdown-v2:** fixed selected item overflow ([5361819](https://inindca///commit/5361819effe167ed8e66d95478fc5228abe5db7f))
+
 ## [3.0.0-alpha.16](https://inindca///compare/v3.0.0-alpha.15...v3.0.0-alpha.16) (2021-12-08)
 
 
