@@ -1,0 +1,44 @@
+@import (reference) '../../../../../style/color-palette.less';
+@import (reference) '../../../../../style/spacing.less';
+@import (reference) '../../../../../style/variables.less';
+@import (reference)
+  '../../functional-components/gux-form-field-error/gux-form-field-error.less';
+
+.GuxFormFieldErrorStyle();
+
+:host {
+  display: block;
+  color: @gux-black-50;
+}
+
+.gux-input {
+  position: relative;
+  padding-left: @gux-icon-size-default-global + (2 * @spacing-2xs);
+  line-height: @gux-icon-size-default-global + (2 * @spacing-2xs);
+}
+
+::slotted(input) {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+::slotted(label) {
+  display: inline-block;
+  font-size: 12px;
+}
+
+::slotted(label:hover) {
+  cursor: pointer;
+}
+
+::slotted(label)::after {
+  position: absolute;
+  top: @spacing-2xs;
+  left: @spacing-2xs;
+  display: block;
+  width: @gux-icon-size-default-global;
+  height: @gux-icon-size-default-global;
+  content: '';
+  border-radius: 15%;
+}
