@@ -34,6 +34,7 @@
     "lint.svg": "svgo -f ./src/components/stable/gux-icon/icons --multipass -q",
     "lint.ts": "TIMING=1 eslint --ext .ts,.tsx ./src",
     "list-component-tracking": "./scripts/list-component-tracking.js",
+    "list-checked-a11y-components": "node scripts/list-checked-a11y-components.js",
     "list-shadow-explicitly-set": "./scripts/list-shadow-explicitly-set.js",
     "list-i18n-files": "./scripts/list-i18n-files.js",
     "predev": "npm run i18n",
