@@ -1,9 +1,12 @@
 import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
-import { logError } from '../../../utils/error/log-error';
 
-import { getBaseSvgHtml, getRootIconName } from './gux-icon.service';
+import {
+  getBaseSvgHtml,
+  getRootIconName,
+  validateProps
+} from './gux-icon.service';
 
 @Component({
   assetsDirs: ['icons'],
@@ -46,6 +49,16 @@ export class GuxIcon {
     }
   }
 
+  @Watch('decorative')
+  watchDecorative(decorative: boolean): void {
+    validateProps(decorative, this.screenreaderText);
+  }
+
+  @Watch('screenreaderText')
+  watchScreenreaderText(screenreaderText: string): void {
+    validateProps(this.decorative, screenreaderText);
+  }
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: getRootIconName(this.iconName) });
 
@@ -53,12 +66,7 @@ export class GuxIcon {
   }
 
   componentDidLoad(): void {
-    if (!this.decorative && !this.screenreaderText) {
-      logError(
-        'gux-icon',
-        'No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true.'
-      );
-    }
+    validateProps(this.decorative, this.screenreaderText);
   }
 
   private getSvgWithAriaAttributes(svgText: string): string {
