@@ -2,14 +2,6 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
 
-let componentName = '';
-let componentStability = '';
-let markdownContent = '';
-
-let betaComponents = createComponentList('beta');
-let stableComponents = createComponentList('stable');
-let legacyComponents = createComponentList('legacy');
-
 // The description of each success criterion is copied directly from the WCAG Understanding Success Criteria pages
 const a11yRules = [
   {
@@ -95,50 +87,34 @@ const componentStabilityQuestion = [
 ];
 
 function getComponentNameList(answers) {
-  const componentStability = answers.componentStability;
-  let componentList = [];
-  switch (componentStability) {
-    case 'stable':
-      componentList = stableComponents;
-      break;
-    case 'beta':
-      componentList = betaComponents;
-      break;
-    case 'legacy':
-      componentList = legacyComponents;
-  }
   return [
     {
       name: 'componentName',
       message: 'What is the name of the component?',
       type: 'list',
-      choices: componentList
+      choices: createComponentList(answers.componentStability)
     }
   ];
 }
 
 function getA11yRuleQuestions() {
-  const a11yRuleQuestions = [];
-  a11yRules.forEach(rule => {
-    const a11yCheckId = rule.id;
-    const a11yCheckTitle = rule.title;
-    const a11yCheckDescripton = rule.description;
+  return a11yRules.reduce((ruleQuestions, rule) => {
+    const { id, title, description } = rule;
 
-    a11yRuleQuestions.push(
+    return ruleQuestions.concat([
       {
-        name: `a11yCheck.${a11yCheckId}.success`,
+        name: `a11yCheck.${id}.success`,
         type: 'confirm',
-        message: `${a11yCheckTitle}: \n${a11yCheckDescripton}`
+        message: `${title}: \n${description}`
       },
       {
-        name: `a11yCheck.${a11yCheckId}.details`,
-        message: `If needed, add a note with details about ${a11yCheckTitle} compliance for this component`,
+        name: `a11yCheck.${id}.details`,
+        message: `If needed, add a note with details about ${title} compliance for this component`,
         type: 'input',
         default: '-'
       }
-    );
-  });
-  return a11yRuleQuestions;
+    ]);
+  }, []);
 }
 
 function createComponentList(componentStability) {
@@ -154,38 +130,47 @@ function createComponentList(componentStability) {
   return componentList;
 }
 
+function getMarkdown(componentName, a11yRuleAnswers) {
+  let markdown = `# ${componentName} manual accessibility testing status\n**Last Updated:** ${new Date().toString()}\n| Pass | WCAG Success Criterion | Notes |\n| --- | --- | --- |`;
+  a11yRules.forEach(rule => {
+    const testSuccess = a11yRuleAnswers.a11yCheck[rule.id].success
+      ? '✅'
+      : '❌';
+    const testDetails = a11yRuleAnswers.a11yCheck[rule.id].details;
+    markdown += `\n| ${testSuccess} | [${rule.title}](${rule.link}) | ${testDetails} |`;
+  });
+  return markdown;
+}
+
+function outputFile(componentStability, componentName, markdownContent) {
+  const targetPath = path.join(
+    __dirname,
+    `../src/components/${componentStability}/${componentName}/a11yManualChecklist.md`
+  );
+  fs.writeFileSync(targetPath, markdownContent);
+  console.info(
+    `A markdown file containing the manual testing results has been added to ../src/components/${componentStability}/${componentName}`
+  );
+}
+
 inquirer
   .prompt(accessibilityChangeQuestion)
   .then(accessibilityChangeAnswers => {
     if (!accessibilityChangeAnswers.isA11yChange) {
-      console.log('Exiting...');
+      console.info('Exiting...');
       return;
     }
     inquirer
       .prompt(componentStabilityQuestion)
       .then(componentStabilityAnswers => {
-        componentStability = componentStabilityAnswers.componentStability;
+        const { componentStability } = componentStabilityAnswers;
         inquirer
           .prompt(getComponentNameList(componentStabilityAnswers))
           .then(componentNameAnswers => {
-            componentName = componentNameAnswers.componentName;
-            markdownContent = `# ${componentName} manual accessibility testing status\n**Last Updated:** ${new Date().toString()}\n| Pass | WCAG Success Criterion | Notes |\n| --- | --- | --- |`;
+            const { componentName } = componentNameAnswers;
             inquirer.prompt(getA11yRuleQuestions()).then(a11yRuleAnswers => {
-              a11yRules.forEach(rule => {
-                const testSuccess = a11yRuleAnswers.a11yCheck[rule.id].success
-                  ? '✅'
-                  : '❌';
-                const testDetails = a11yRuleAnswers.a11yCheck[rule.id].details;
-                markdownContent += `\n| ${testSuccess} | [${rule.title}](${rule.link}) | ${testDetails} |`;
-              });
-              const targetPath = path.join(
-                __dirname,
-                `../src/components/${componentStability}/${componentName}/a11yManualChecklist.md`
-              );
-              fs.writeFileSync(targetPath, markdownContent);
-              console.log(
-                `A markdown file containing the manual testing results has been added to ../src/components/${componentStability}/${componentName}`
-              );
+              const markdown = getMarkdown(componentName, a11yRuleAnswers);
+              outputFile(componentStability, componentName, markdown);
             });
           });
       });
