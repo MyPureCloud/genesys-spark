@@ -5,11 +5,10 @@ import { logError } from '../../../utils/error/log-error';
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
 import {
-  canShowPercentageState,
-  getPercentageString,
-  RADIUS,
-  STROKE_DASH
-} from './gux-radial-progress.service';
+  GuxPercentageState,
+  GuxSpinnerState
+} from './gux-radial-progress.functional';
+import { canShowPercentageState } from './gux-radial-progress.service';
 import { GuxRadialProgressScale } from './gux-radial-progress.types';
 
 @Component({
@@ -65,87 +64,17 @@ export class GuxRadialProgress {
 
   render(): JSX.Element {
     return canShowPercentageState(this.value, this.max)
-      ? this.renderPercentageState(
-          this.value,
-          this.max,
-          this.scale,
-          this.screenreaderText
-        )
-      : this.renderSpinnerState(this.screenreaderText);
-  }
-
-  private renderPercentageState(
-    value: number,
-    max: number,
-    scale: GuxRadialProgressScale,
-    screenreaderText: string
-  ): JSX.Element {
-    return (
-      <div
-        role="progressbar"
-        aria-valuenow={value}
-        aria-valuemin="0"
-        aria-valuemax={max}
-        aria-label={screenreaderText}
-      >
-        <svg
-          class="gux-svg-container"
-          width="60px"
-          height="60px"
-          viewBox="0 0 60 60"
-          role="presentation"
-        >
-          <filter id={this.dropshadowId}>
-            <feGaussianBlur in="SourceGraphic" stdDeviation="1.4" />
-            <feOffset dx="0" dy="0" result="offsetblur" />
-            <feMerge>
-              <feMergeNode />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-          <circle cx="50%" cy="50%" r={RADIUS} class="gux-static-circle" />
-          <circle
-            cx="50%"
-            cy="50%"
-            r={RADIUS}
-            class="gux-dynamic-circle-shadow"
-            stroke-dashoffset={STROKE_DASH * (1 - value / max)}
-            stroke-dasharray={STROKE_DASH}
-            stroke-linecap="round"
-            filter={'url(#' + this.dropshadowId + ')'}
+      ? ((
+          <GuxPercentageState
+            value={this.value}
+            max={this.max}
+            scale={this.scale}
+            dropshadowId={this.dropshadowId}
+            screenreaderText={this.screenreaderText}
           />
-          <circle
-            cx="50%"
-            cy="50%"
-            r={RADIUS}
-            class="gux-dynamic-circle"
-            stroke-dashoffset={STROKE_DASH * (1 - value / max)}
-            stroke-dasharray={STROKE_DASH}
-            stroke-linecap="round"
-          />
-
-          <text
-            x="50%"
-            y="50%"
-            dominant-baseline="central"
-            class={{
-              'gux-percentage': true,
-              'gux-small': ![0, 1].includes(this.scale)
-            }}
-          >
-            {getPercentageString(value, max, scale)}
-          </text>
-        </svg>
-      </div>
-    ) as JSX.Element;
-  }
-
-  private renderSpinnerState(screenreaderText: string): JSX.Element {
-    return (
-      <gux-radial-loading
-        screenreader-text={screenreaderText}
-        context="modal"
-      ></gux-radial-loading>
-    ) as JSX.Element;
+        ) as JSX.Element)
+      : ((
+          <GuxSpinnerState screenreaderText={this.screenreaderText} />
+        ) as JSX.Element);
   }
 }

@@ -1,10 +1,21 @@
+jest.mock('../../../../utils/error/log-error', () => ({
+  __esModule: true,
+  logError: jest.fn()
+}));
+
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxRadialProgress } from '../gux-radial-progress';
+
+import { logError } from '../../../../utils/error/log-error';
 
 const components = [GuxRadialProgress];
 const language = 'en';
 
 describe('gux-radial-progress', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should build', async () => {
     const page = await newSpecPage({
       components,
@@ -35,6 +46,28 @@ describe('gux-radial-progress', () => {
 
         expect(page.root).toMatchSnapshot();
       });
+    });
+  });
+
+  describe('Screenreader text requirements', () => {
+    it('should log an error if displaying progress and no screenreader text is passed in', async () => {
+      await newSpecPage({
+        components,
+        html: '<gux-radial-progress value="10" max="10"></gux-radial-progress>',
+        language
+      });
+
+      expect(logError).toHaveBeenCalled();
+    });
+
+    it('should not log an error if displaying progress and screenreader text is passed in', async () => {
+      await newSpecPage({
+        components,
+        html: '<gux-radial-progress value="10" max="10" screenreader-text="Uploading file"></gux-radial-progress>',
+        language
+      });
+
+      expect(logError).not.toHaveBeenCalled();
     });
   });
 });
