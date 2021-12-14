@@ -1,23 +1,19 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/typography.less';
 
-// Variables part
 @background-color: @gux-grey-90;
-
-@text-color: @gux-type;
-
-@placeholder: @gux-placeholder;
-
 @border-color: @gux-border;
-
-@focus-outline: fade(@gux-blue-80, 50%);
 @active-border: @gux-blue-60;
-
 @menu-shadow: fade(@gux-black-30, 24%);
-
 @menu-background-color: @gux-type-dark;
 @menu-border-color: @gux-border;
 @divider-color: @gux-grey-40;
+
+:host {
+  color: @gux-black-50;
+}
 
 // Style
 div.gux-dropdown {
@@ -41,13 +37,17 @@ div.gux-dropdown {
       right: 0;
       bottom: 0;
       left: 0;
-      padding: 5px 24px 4px 12px;
+      padding: 6px 24px 6px 12px;
       overflow: hidden;
+      color: @gux-black-50;
       text-overflow: ellipsis;
       white-space: nowrap;
       cursor: pointer;
-      border: 1px solid @border-color;
-      border-radius: 2px;
+      background-color: @gux-grey-90;
+      background-image: none;
+      border: 1px solid @gux-black-100;
+      border-radius: 4px;
+      box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
 
       .gux-select-placeholder,
       .gux-select-value {
@@ -55,7 +55,7 @@ div.gux-dropdown {
       }
 
       .gux-select-placeholder {
-        color: @placeholder;
+        color: @gux-black-90;
       }
 
       &:focus {
@@ -68,6 +68,7 @@ div.gux-dropdown {
       gux-icon {
         width: 16px;
         height: 16px;
+        color: @gux-black-90;
       }
 
       position: absolute;
@@ -79,31 +80,45 @@ div.gux-dropdown {
       overflow: hidden;
       cursor: pointer;
     }
+
+    &:hover {
+      .gux-icon-wrapper {
+        gux-icon {
+          color: @gux-black-50;
+        }
+      }
+    }
   }
 
   &.gux-active .gux-select-field .gux-select-input {
     border: 1px solid @active-border;
     outline: none;
-    box-shadow: 0 0 4px @focus-outline;
+    .focus-ring();
 
     &:focus {
-      box-shadow: 0 0 4px @focus-outline;
+      .focus-ring();
     }
   }
 
   .gux-advanced-dropdown-menu {
     position: absolute;
+    top: 36px;
     z-index: 1;
     display: none;
     width: 100%;
     background: @gux-background;
+    border: 1px solid @gux-grey-30;
+    border-radius: 4px;
     box-shadow: 0 0 2px 0 @menu-shadow;
+    .gux-shadow-20();
 
     .gux-dropdown-menu-container {
-      padding: 16px;
-
       .gux-search-label {
         .gux-sr-only();
+      }
+
+      gux-input-search {
+        margin: 8px 16px;
       }
     }
 
@@ -115,54 +130,10 @@ div.gux-dropdown {
   .gux-dropdown-options {
     padding: 8px 0;
     margin: 0;
-    margin-top: 12px;
     overflow-y: auto;
-    color: @text-color;
+    color: @gux-black-50;
     background: @menu-background-color;
-    border: 1px solid @menu-border-color;
+    border-radius: 4px;
     box-shadow: none;
   }
-}
-
-// Theming
-
-// Light
-.gux-advanced-dropdown-light-theme {
-  color: @gux-type;
-
-  div.gux-dropdown {
-    .gux-select-field {
-      a.gux-select-input {
-        color: @text-color;
-        background-color: @background-color;
-        border-color: @border-color;
-      }
-
-      gux-icon {
-        color: @text-color;
-      }
-    }
-
-    &.gux-active {
-      .gux-select-field a.gux-select-input {
-        border: 1px solid @active-border;
-        box-shadow: 0 0 4px @focus-outline;
-      }
-    }
-  }
-}
-
-.gux-light-theme {
-  :host {
-    .gux-advanced-dropdown-light-theme();
-  }
-}
-
-:host.gux-light-theme {
-  .gux-advanced-dropdown-light-theme();
-}
-
-// Default Theme
-:host {
-  .gux-advanced-dropdown-light-theme();
 }
