@@ -12,10 +12,10 @@ import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
 const DEFAULT_COLOR_FIELD_NAME = 'category';
 const DEFAULT_LABEL_FIELD_NAME = 'value';
 @Component({
-  styleUrl: 'gux-chart-donut.less',
-  tag: 'gux-chart-donut-beta'
+  styleUrl: 'gux-chart-pie.less',
+  tag: 'gux-chart-pie-beta'
 })
-export class GuxDonutChart {
+export class GuxPieChart {
   @Element()
   root: HTMLElement;
 
@@ -69,9 +69,6 @@ export class GuxDonutChart {
   outerRadius: number;
 
   @Prop()
-  innerRadius: number;
-
-  @Prop()
   labelRadius: number;
 
   @Prop()
@@ -82,11 +79,8 @@ export class GuxDonutChart {
 
   @Watch('chartData')
   parseData() {
-    if (!this.outerRadius || !this.innerRadius) {
-      logError(
-        'gux-chart-donut',
-        '[gux-chart-donut] requires outer-radius and inner-radius'
-      );
+    if (!this.outerRadius) {
+      logError('gux-chart-pie', '[gux-chart-pie] requires outer-radius');
     }
 
     let chartData = {};
@@ -110,14 +104,10 @@ export class GuxDonutChart {
     }
 
     const outerRadius = this.outerRadius;
-    const innerRadius = this.innerRadius;
 
     this.baseChartSpec.layer = [
       {
-        mark: { type: 'arc', outerRadius, innerRadius }
-      },
-      {
-        mark: { type: 'arc', innerRadius, stroke: '#fff' }
+        mark: { type: 'arc', outerRadius }
       }
     ];
 

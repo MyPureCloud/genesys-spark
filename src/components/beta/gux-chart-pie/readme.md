@@ -13,7 +13,6 @@
 | `colorFieldName` | `color-field-name` |                                                                                                               | `string`                          | `undefined` |
 | `embedOptions`   | --                 |                                                                                                               | `EmbedOptions<string, Renderers>` | `undefined` |
 | `includeLegend`  | `include-legend`   |                                                                                                               | `boolean`                         | `undefined` |
-| `innerRadius`    | `inner-radius`     |                                                                                                               | `number`                          | `undefined` |
 | `labelField`     | `label-field`      |                                                                                                               | `string`                          | `undefined` |
 | `labelRadius`    | `label-radius`     |                                                                                                               | `number`                          | `undefined` |
 | `legendTitle`    | `legend-title`     |                                                                                                               | `string`                          | `undefined` |
@@ -29,8 +28,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-chart-donut-beta --> gux-visualization-beta
-  style gux-chart-donut-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-chart-pie-beta --> gux-visualization-beta
+  style gux-chart-pie-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
