@@ -30,7 +30,7 @@ gux-dropdown {
         box-sizing: border-box;
         width: 100%;
         height: 32px;
-        padding: 5px 25px 4px 14px;
+        padding: 6px 25px 6px 14px;
         overflow: hidden;
         font-size: 12px;
         line-height: 1.66666667;
@@ -80,6 +80,21 @@ gux-dropdown {
         background: none;
         border: none;
         outline: none;
+
+        gux-icon {
+          width: 16px;
+          height: 16px;
+          color: @gux-black-90;
+        }
+      }
+
+      &:hover,
+      &:focus-within {
+        button.gux-dropdown-indicator {
+          gux-icon {
+            color: @gux-black-50;
+          }
+        }
       }
     }
 
