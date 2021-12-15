@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.18](https://inindca///compare/v3.0.0-alpha.17...v3.0.0-alpha.18) (2021-12-15)
+
+
+### Features
+
+* **tests:** adding new tool for manual accessibility testing ([0a637d3](https://inindca///commit/0a637d39b99f3c6690d90d12a601e9d4e4f4f6e5))
+
+
+### Bug Fixes
+
+* **icon:** props now validated when they change not just on initialisation ([10bbd0a](https://inindca///commit/10bbd0ac26e43f20b23783f7c808512f3b65c9a5))
+
 ## [3.0.0-alpha.17](https://inindca///compare/v3.0.0-alpha.16...v3.0.0-alpha.17) (2021-12-10)
 
 
