@@ -3,118 +3,118 @@
 @import (reference) '../../../style/spacing.less';
 
 // Style
-gux-tag-beta {
+:host {
   display: inline-block;
+}
 
-  .gux-tag {
+.gux-tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: flex-start;
+  color: @gux-grey-100;
+  background-color: @gux-black-50;
+  border-radius: @spacing-2xs;
+
+  &:focus-within {
+    .focus-ring();
+  }
+
+  .gux-tag-icon-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: stretch;
+    flex: 0 1 auto;
+    align-content: center;
     align-items: center;
-    justify-content: flex-start;
-    color: @gux-grey-100;
+    align-self: auto;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: (-1 * @spacing-xs);
+
+    .gux-tag-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .gux-tag-text {
+    flex: 0 1 auto;
+    align-self: auto;
+    padding: 0 @spacing-xs;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  .gux-tag-remove-button {
+    all: unset;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-left: (-1 * @spacing-xs);
+    overflow: hidden;
+
+    &:not(:disabled):hover {
+      cursor: pointer;
+    }
+
+    .gux-tag-remove-icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &.gux-disabled {
+    opacity: 0.5;
+  }
+
+  &.gux-default {
     background-color: @gux-black-50;
-    border-radius: @spacing-2xs;
+  }
 
-    &:focus-within {
-      .focus-ring();
-    }
+  &.gux-navy {
+    background-color: @gux-navy-sec;
+  }
 
-    .gux-tag-icon-container {
-      display: flex;
-      flex: 0 1 auto;
-      align-content: center;
-      align-items: center;
-      align-self: auto;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
-      margin-right: (-1 * @spacing-xs);
+  &.gux-blue {
+    background-color: @gux-blue-sec;
+  }
 
-      .gux-tag-icon {
-        width: 16px;
-        height: 16px;
-      }
-    }
+  &.gux-electric-purple {
+    background-color: @gux-electric-purple-sec;
+  }
 
-    .gux-tag-text {
-      flex: 0 1 auto;
-      align-self: auto;
-      padding: 0 @spacing-xs;
-      line-height: 24px;
-      white-space: nowrap;
-    }
+  &.gux-aqua-green {
+    background-color: @gux-aqua-green-sec;
+  }
 
-    .gux-tag-remove-button {
-      all: unset;
-      display: flex;
-      align-content: center;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
-      margin-left: (-1 * @spacing-xs);
-      overflow: hidden;
+  &.gux-fuscha {
+    background-color: @gux-fuscha-sec;
+  }
 
-      &:not(:disabled):hover {
-        cursor: pointer;
-      }
+  &.gux-dark-purple {
+    background-color: @gux-dark-purple-sec;
+  }
 
-      .gux-tag-remove-icon {
-        width: 12px;
-        height: 12px;
-      }
-    }
+  &.gux-bubblegum-pink {
+    background-color: @gux-bubblegum-pink-sec;
+  }
 
-    &.gux-disabled {
-      opacity: 0.5;
-    }
+  &.gux-olive-green {
+    background-color: @gux-olive-green-sec;
+  }
 
-    &.gux-default {
-      background-color: @gux-black-50;
-    }
+  &.gux-lilac {
+    color: @gux-black-50;
+    background-color: @gux-lilac-sec;
+  }
 
-    &.gux-navy {
-      background-color: @gux-navy-sec;
-    }
-
-    &.gux-blue {
-      background-color: @gux-blue-sec;
-    }
-
-    &.gux-electric-purple {
-      background-color: @gux-electric-purple-sec;
-    }
-
-    &.gux-aqua-green {
-      background-color: @gux-aqua-green-sec;
-    }
-
-    &.gux-fuscha {
-      background-color: @gux-fuscha-sec;
-    }
-
-    &.gux-dark-purple {
-      background-color: @gux-dark-purple-sec;
-    }
-
-    &.gux-bubblegum-pink {
-      background-color: @gux-bubblegum-pink-sec;
-    }
-
-    &.gux-olive-green {
-      background-color: @gux-olive-green-sec;
-    }
-
-    &.gux-lilac {
-      color: @gux-black-50;
-      background-color: @gux-lilac-sec;
-    }
-
-    &.gux-alert-yellow-green {
-      color: @gux-black-50;
-      background-color: @gux-alert-yellow-green-sec;
-    }
+  &.gux-alert-yellow-green {
+    color: @gux-black-50;
+    background-color: @gux-alert-yellow-green-sec;
   }
 }
