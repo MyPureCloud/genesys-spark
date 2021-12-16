@@ -54,36 +54,29 @@ describe('gux-disclosure-button', () => {
     });
   });
 
-  describe.skip('events', () => {
+  describe('events', () => {
     describe('active', () => {
       it('should open when clicked', async () => {
         const page = await newNonrandomE2EPage({
           html: '<gux-disclosure-button lang="en"></gux-disclosure-button>'
         });
-        const element = (await page.find(
-          'gux-disclosure-button'
-        )) as HTMLGuxDisclosureButtonElement;
+        const element = await page.find('gux-disclosure-button');
         const button = await element.find('pierce/.gux-disclosure-button');
         const panel = await element.find('pierce/.gux-disclosure-panel');
         const icon = await element.find('pierce/gux-icon');
         const onActive = await page.spyOnEvent('active');
 
-        expect(element.isOpen).toBe(false);
+        expect(await element.getProperty('isOpen')).toBe(false);
         expect(panel).not.toHaveClass('gux-active');
         expect(icon).toEqualAttribute('icon-name', 'arrow-solid-right');
 
-        button.click();
-
+        await button.click();
         await page.waitForChanges();
 
-        expect(element.isOpen).toBe(true);
+        expect(await element.getProperty('isOpen')).toBe(true);
         expect(panel).toHaveClass('gux-active');
         expect(icon).toEqualAttribute('icon-name', 'arrow-solid-left');
-        expect(onActive).toHaveBeenCalledWith(
-          expect.objectContaining({
-            detail: true
-          })
-        );
+        expect(onActive).toHaveReceivedEventDetail(true);
       });
     });
   });

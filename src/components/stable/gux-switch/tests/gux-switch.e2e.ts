@@ -104,10 +104,9 @@ describe('gux-switch', () => {
           'gux-switch-item[value=week]'
         );
 
-        const template = document.createElement('template');
-        template.innerHTML =
-          '<gux-switch-item value="month">Month</gux-switch-item>';
-        const monthElement = template.content.firstChild as Element;
+        const monthElement = document.createElement('gux-switch-item');
+        monthElement.appendChild(document.createTextNode('Month'));
+        monthElement.setAttribute('value', 'month');
 
         weekElement.insertAdjacentElement('beforebegin', monthElement);
       });

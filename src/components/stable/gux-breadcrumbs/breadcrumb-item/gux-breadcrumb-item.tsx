@@ -1,5 +1,7 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
+import { logError } from '../../../../utils/error/log-error';
+
 import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 
 @Component({
@@ -20,8 +22,9 @@ export class GuxBreadcrumbItem {
     if (container) {
       return container.accent;
     } else {
-      console.error(
-        `gux-breadcrumb-item: must be within a gux-breadcrumbs component`
+      logError(
+        'gux-breadcrumb-item',
+        'This component must be a child of a gux-breadcrumbs component.'
       );
     }
   }
