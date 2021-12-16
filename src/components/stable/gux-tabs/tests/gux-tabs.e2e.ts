@@ -1,8 +1,6 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 async function newNonrandomE2EPage({
   html
 }: {
@@ -55,7 +53,7 @@ describe('gux-tabs', () => {
     it('does not render the scroll buttons when tabs fit container', async () => {
       const page = await newNonrandomE2EPage({ html });
       const scrollButtons = await page.findAll('.gux-scroll-button');
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
 
       expect(scrollButtons.length).toBe(0);
     });
@@ -64,7 +62,7 @@ describe('gux-tabs', () => {
       const restrictedWidthHtml = `<div style="width: 500px">${html}</div>`;
       const page = await newNonrandomE2EPage({ html: restrictedWidthHtml });
       const scrollButtons = await page.findAll('.gux-scroll-button');
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
 
       expect(scrollButtons.length).toBe(2);
     });

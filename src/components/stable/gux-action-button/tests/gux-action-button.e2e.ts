@@ -2,8 +2,6 @@ import { E2EPage } from '@stencil/core/testing';
 
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 async function clickActionButton(page: E2EPage): Promise<void> {
   return await page.evaluate(() => {
     const element = document.querySelector('gux-action-button');
@@ -47,9 +45,9 @@ describe('gux-action-button', () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-action-button');
 
-    await a11yCheck(page, axeExclusions, 'closed');
+    await a11yCheck(page, [], 'closed');
     await clickDropdownButton(page);
-    await a11yCheck(page, axeExclusions, 'open');
+    await a11yCheck(page, [], 'open');
 
     expect(element).toHaveClass('hydrated');
   });

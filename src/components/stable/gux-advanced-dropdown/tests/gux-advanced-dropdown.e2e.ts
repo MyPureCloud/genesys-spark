@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 import { asyncFilter } from '../../../../utils/array/async-filter';
 const html = `
   <div lang="en">
@@ -15,7 +13,7 @@ describe('gux-advanced-dropdown', () => {
   it('should render', async () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
     expect(element).toHaveClass('hydrated');
   });
 
@@ -30,7 +28,7 @@ describe('gux-advanced-dropdown', () => {
 
     await element.click();
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(true);
   });

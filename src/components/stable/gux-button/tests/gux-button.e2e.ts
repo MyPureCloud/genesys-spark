@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-button', () => {
   describe('#render', () => {
     [
@@ -62,7 +60,7 @@ describe('gux-button', () => {
         const onClickSpy = await element.spyOnEvent('click');
         const expectOnclickEvents = clickable ? 1 : 0;
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
         expect(element.outerHTML).toMatchSnapshot();
 
         await element.click();

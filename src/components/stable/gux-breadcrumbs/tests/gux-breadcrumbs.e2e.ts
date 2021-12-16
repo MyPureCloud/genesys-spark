@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-breadcrumbs', () => {
   [
     `<gux-breadcrumbs lang="en"></gux-breadcrumbs>`,
@@ -46,7 +44,7 @@ describe('gux-breadcrumbs', () => {
 
       const element = await page.find('gux-breadcrumbs');
 
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
 
       expect(element.outerHTML).toMatchSnapshot();
     });

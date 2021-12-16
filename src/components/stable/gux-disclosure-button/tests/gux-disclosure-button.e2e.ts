@@ -1,8 +1,6 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 async function newNonrandomE2EPage({
   html
 }: {
@@ -96,7 +94,7 @@ describe('gux-disclosure-button', () => {
         html: `<gux-disclosure-button lang="en"></gux-disclosure-button>`
       });
 
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
     });
 
     it('should be accessible when open', async () => {
@@ -104,7 +102,7 @@ describe('gux-disclosure-button', () => {
         html: `<gux-disclosure-button lang="en" is-open></gux-disclosure-button>`
       });
 
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
     });
   });
 });

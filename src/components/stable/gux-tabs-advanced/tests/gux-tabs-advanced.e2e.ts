@@ -149,7 +149,7 @@ describe('gux-tabs-advanced', () => {
 
       await optionPopoverTarget.click();
       await page.waitForChanges();
-      await a11yCheck(page, axeExclusions, 'options popover expanded');
+      await a11yCheck(page, [], 'options popover expanded');
 
       const optionPopover = await page.find(
         'gux-tab-advanced[tab-id="1-1"] gux-popover'

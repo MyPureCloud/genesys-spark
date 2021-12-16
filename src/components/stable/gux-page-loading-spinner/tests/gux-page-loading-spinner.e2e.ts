@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-page-loading-spinner', () => {
   it('renders', async () => {
     const html =
@@ -26,7 +24,7 @@ describe('gux-page-loading-spinner', () => {
 
       return progressBarElement.getAttribute('aria-label');
     });
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(progressBarAriaLabelValue).toEqual('Loading Content');
   });
@@ -45,7 +43,7 @@ describe('gux-page-loading-spinner', () => {
 
       return progressBarElement.getAttribute('aria-label');
     });
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(progressBarAriaLabelValue).toEqual('Loading');
   });

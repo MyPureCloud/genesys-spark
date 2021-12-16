@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-radial-progress', () => {
   [
     '<gux-tag-beta lang="en">default</gux-tag-beta>',
@@ -13,7 +11,7 @@ describe('gux-radial-progress', () => {
     it(`should display component as expected (${index + 1})`, async () => {
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-tag-beta');
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
 
       expect(element.outerHTML).toMatchSnapshot();
     });

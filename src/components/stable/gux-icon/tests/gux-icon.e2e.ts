@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-icon', () => {
   it('renders', async () => {
     const page = await newSparkE2EPage({
@@ -9,7 +7,7 @@ describe('gux-icon', () => {
     });
 
     const element = await page.find('gux-icon');
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(element).toHaveClass('hydrated');
   });

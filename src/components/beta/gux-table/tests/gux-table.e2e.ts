@@ -1,8 +1,6 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 async function newNonrandomE2EPage({
   html
 }: {
@@ -128,7 +126,7 @@ describe('gux-table-beta', () => {
       it(description, async () => {
         const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-table-beta');
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
 
         expect(element).toHaveClass('hydrated');
         expect(element.outerHTML).toMatchSnapshot();

@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-dropdown-v2', () => {
   const html = `<gux-dropdown-v2-beta lang="en" value="j">
       <gux-listbox aria-label="Favorite Animal">
@@ -29,13 +27,13 @@ describe('gux-dropdown-v2', () => {
     it('opens drop down on click', async () => {
       const page = await newSparkE2EPage({ html });
       await page.waitForChanges();
-      await a11yCheck(page, axeExclusions, 'before opening dropdown');
+      await a11yCheck(page, [], 'before opening dropdown');
       const dropdownButtonElm = await page.find(
         'gux-dropdown-v2-beta >>> .gux-field-button'
       );
       await dropdownButtonElm.click();
       await page.waitForChanges();
-      await a11yCheck(page, axeExclusions, 'after opening dropdown');
+      await a11yCheck(page, [], 'after opening dropdown');
 
       const dropMenu = await page.find(
         'gux-dropdown-v2-beta >>> .gux-popup-container'

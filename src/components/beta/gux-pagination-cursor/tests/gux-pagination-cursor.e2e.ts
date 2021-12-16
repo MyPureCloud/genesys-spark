@@ -1,8 +1,6 @@
 import { E2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 async function clickButton(page: E2EPage, buttonToClick: 'previous' | 'next') {
   await page.evaluate(button => {
     const element = document.querySelector('gux-pagination-cursor-beta');
@@ -29,7 +27,7 @@ describe('gux-pagination-cursor-beta', () => {
       it(`should render as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-pagination-cursor-beta');
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
 
         expect(element.outerHTML).toMatchSnapshot();
       });

@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-panel-frame', () => {
   const headerSlot = '<div slot="header"><h1>Header</h1></div>';
   const bodySlot = '<div slot="body"><p>Boby</p></div>';
@@ -28,7 +26,7 @@ describe('gux-panel-frame', () => {
         expect(element.outerHTML).toMatchSnapshot();
         expect(elementShadowDom).toMatchSnapshot();
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
       });
     });
   });
