@@ -1,5 +1,5 @@
 # gux-toggle manual accessibility testing status
-**Last Updated:** Tue Dec 14 2021 16:36:56 GMT-0500 (Eastern Standard Time)
+**Last Updated:** Thu Dec 16 2021 12:10:21 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) | - |
@@ -11,5 +11,5 @@
 | ✅ | [3.2.2 On Input](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html) | - |
 | ✅ | [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html) | - |
 | ✅ | [3.2.2 Labels or Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html) | - |
-| ❌ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) | COMUI-791 |
-| ❌ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html) | COMUI-791 |
+| ❌ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) | COMUI-791 disabled state is not communicated to the screenreader |
+| ❌ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html) | COMUI-791 loading indicator should have aria-live attribute |
