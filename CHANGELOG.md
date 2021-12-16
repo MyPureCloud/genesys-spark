@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.19](https://inindca///compare/v3.0.0-alpha.18...v3.0.0-alpha.19) (2021-12-16)
+
+
+### Bug Fixes
+
+* **dropdowns:** fixed styling differences between dropdown components ([d57cece](https://inindca///commit/d57cece6be887d0bba91df72f42da0f548b09f26))
+
 ## [3.0.0-alpha.18](https://inindca///compare/v3.0.0-alpha.17...v3.0.0-alpha.18) (2021-12-15)
 
 
