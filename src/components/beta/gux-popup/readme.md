@@ -27,6 +27,7 @@
 
  - [gux-action-button](../../stable/gux-action-button)
  - [gux-button-multi](../gux-button-multi)
+ - [gux-country-select](../gux-phone-input/components/gux-country-select)
  - [gux-dropdown-v2-beta](../gux-dropdown-v2)
 
 ### Graph
@@ -34,6 +35,7 @@
 graph TD;
   gux-action-button --> gux-popup-beta
   gux-button-multi --> gux-popup-beta
+  gux-country-select --> gux-popup-beta
   gux-dropdown-v2-beta --> gux-popup-beta
   style gux-popup-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

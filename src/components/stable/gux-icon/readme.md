@@ -26,6 +26,7 @@
  - [gux-button-multi](../../beta/gux-button-multi)
  - [gux-calendar](../gux-calendar)
  - [gux-content-search](../gux-content-search)
+ - [gux-country-select](../../beta/gux-phone-input/components/gux-country-select)
  - [gux-datepicker](../gux-datepicker)
  - [gux-disclosure-button](../gux-disclosure-button)
  - [gux-dismiss-button](../gux-dismiss-button)
@@ -64,6 +65,7 @@ graph TD;
   gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
   gux-content-search --> gux-icon
+  gux-country-select --> gux-icon
   gux-datepicker --> gux-icon
   gux-disclosure-button --> gux-icon
   gux-dismiss-button --> gux-icon
