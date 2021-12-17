@@ -23,6 +23,7 @@ import { getSearchOption } from './gux-listbox/gux-listbox.service';
  * @slot - for gux-list-box
  */
 @Component({
+  styleUrl: 'gux-dropdown-v2.less',
   tag: 'gux-dropdown-v2-beta',
   shadow: true
 })
