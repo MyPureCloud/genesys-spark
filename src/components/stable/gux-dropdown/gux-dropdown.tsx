@@ -5,6 +5,7 @@ import {
   EventEmitter,
   forceUpdate,
   h,
+  JSX,
   Listen,
   Method,
   Prop,
@@ -88,11 +89,13 @@ export class GuxDropdown {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async setLabeledBy(id: string): Promise<void> {
     this.srLabeledBy = id;
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async setSelected(): Promise<void> {
     const selectionOptions = this.getSelectionOptions();
@@ -121,7 +124,7 @@ export class GuxDropdown {
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     forceUpdate(this.root);
-    this.setSelected();
+    void this.setSelected();
   }
 
   // TODO: Fix the keyboard navigation I broke
@@ -266,7 +269,7 @@ export class GuxDropdown {
   }
 
   componentDidLoad(): void {
-    this.setSelected();
+    void this.setSelected();
 
     if (!this.filterable) {
       this.textFieldElement.readOnly = true;
@@ -282,18 +285,18 @@ export class GuxDropdown {
     if (!options) {
       return [];
     }
-    // Hack around TSX not supporting for..of on HTMLCollection, this
-    // needs to be tested in IE11
-    const childrenElements: any = options.children;
-    for (const child of childrenElements) {
+
+    const childrenElements = Array.from(options.children);
+    childrenElements.forEach(child => {
       if (child.matches('gux-option')) {
         result.push(child as HTMLGuxOptionElement);
       }
-    }
+    });
+
     return result;
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div
         class={`gux-dropdown gux-${this.mode} ${
@@ -318,6 +321,7 @@ export class GuxDropdown {
               slot="input"
               value={this.value}
               aria-labelledby={this.srLabeledBy}
+              disabled={this.disabled}
               ref={ref => (this.textFieldElement = ref)}
               onMouseDown={() => {
                 this._clickHandler();
@@ -352,7 +356,7 @@ export class GuxDropdown {
           <slot />
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private getFocusIndex(selectionOptions: HTMLGuxOptionElement[]): number {
@@ -365,7 +369,7 @@ export class GuxDropdown {
     const selectionOptions = this.getSelectionOptions();
     if (selectionOptions) {
       for (const option of selectionOptions) {
-        option.shouldFilter(searchInput).then(isFiltered => {
+        void option.shouldFilter(searchInput).then(isFiltered => {
           if (this.filterable && isFiltered && this.valueEdited) {
             option.classList.add('gux-filtered');
           } else {

@@ -19,13 +19,13 @@ export class GuxActionItem {
   text: string;
 
   @Prop()
-  value: any;
+  value: unknown;
 
   @Prop()
   disabled: boolean = false;
 
   @Event()
-  press: EventEmitter<any>;
+  press: EventEmitter<unknown>;
 
   @Listen('click')
   handleClick() {
@@ -61,6 +61,6 @@ export class GuxActionItem {
           <slot />
         </span>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

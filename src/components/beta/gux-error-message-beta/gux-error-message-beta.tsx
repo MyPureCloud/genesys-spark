@@ -26,6 +26,6 @@ export class GuxErrorMessageBeta {
           <slot name="error" />
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

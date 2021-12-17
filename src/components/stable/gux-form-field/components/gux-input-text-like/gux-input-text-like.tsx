@@ -50,7 +50,7 @@ export class GuxInputTextLike {
         >
           <gux-icon icon-name="close" decorative></gux-icon>
         </button>
-      );
+      ) as JSX.Element;
     }
 
     return null;
@@ -93,6 +93,6 @@ export class GuxInputTextLike {
         <slot name="input" />
         {this.renderClearButton()}
       </div>
-    );
+    ) as JSX.Element;
   }
 }

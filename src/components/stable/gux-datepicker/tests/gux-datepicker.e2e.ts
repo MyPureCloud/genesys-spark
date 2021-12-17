@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-datepicker', () => {
   it('renders', async () => {
     const page = await newSparkE2EPage({
@@ -30,12 +28,12 @@ describe('gux-datepicker', () => {
 
     const element = await page.find('gux-datepicker');
 
-    await element.setProperty('value', '1985-12-01');
+    element.setProperty('value', '1985-12-01');
     await page.waitForChanges();
 
     const input = await page.find('input');
     const value = await input.getProperty('value');
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
     expect(value).toBe('12/01/1985');
   });
 
@@ -47,7 +45,7 @@ describe('gux-datepicker', () => {
     const input = await page.find('input');
     await input.click();
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
     expect(datepicker.className).toContain('gux-active');
   });
 
@@ -86,14 +84,14 @@ describe('gux-datepicker', () => {
     });
     const element = await page.find('gux-datepicker');
     const labels = await page.findAll('.gux-datepicker-field-label');
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
     expect(labels.length).toBe(1);
     expect(labels[0].textContent).toEqual('Date');
     expect(labels[0].className).toContain('gux-sr-only');
 
-    await element.setAttribute('label', 'test');
+    element.setAttribute('label', 'test');
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
     expect(labels[0].textContent).toEqual('test');
     expect(labels[0].className).not.toContain('gux-sr-only');
   });
@@ -106,10 +104,9 @@ describe('gux-datepicker', () => {
       number-of-months="2"
       ></gux-datepicker>`
     });
-    const element = await page.find('gux-datepicker');
     const labels = await page.findAll('.gux-datepicker-field-label');
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
     expect(labels.length).toBe(2);
     expect(labels[0].textContent).toBe('Start');
     expect(labels[0].className).not.toContain('gux-sr-only');

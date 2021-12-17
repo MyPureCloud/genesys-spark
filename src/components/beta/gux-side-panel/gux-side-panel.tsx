@@ -1,18 +1,25 @@
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
 @Component({
   styleUrl: 'gux-side-panel.less',
-  tag: 'gux-side-panel-beta'
+  tag: 'gux-side-panel-beta',
+  shadow: false
 })
 export class GuxSidePanel {
   @Element()
   private root: HTMLElement;
 
+  /**
+   * Open or close the content
+   */
   @Prop()
-  isOpen = false;
+  isOpen: boolean = false;
 
+  /**
+   * The position of the side panel
+   */
   @Prop()
   position: 'left' | 'right' = 'left';
 
@@ -28,7 +35,7 @@ export class GuxSidePanel {
     trackComponent(this.root, { variant: this.position });
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <aside class={this.containerClass}>
         <div class="gux-panel-icons">
@@ -38,6 +45,6 @@ export class GuxSidePanel {
           <slot name="side-panel-content" />
         </div>
       </aside>
-    );
+    ) as JSX.Element;
   }
 }

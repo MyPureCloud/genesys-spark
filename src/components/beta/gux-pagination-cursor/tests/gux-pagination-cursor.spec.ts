@@ -27,7 +27,7 @@ describe('gux-pagination-cursor-beta', () => {
         '<gux-pagination-cursor-beta has-previous></gux-pagination-cursor-beta>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const [previousButton, nextButton] = Array.from(
+      const [previousButton] = Array.from(
         element.shadowRoot.querySelectorAll('button')
       ) as HTMLElement[];
       const guxPaginationCursorchangeSpy = jest.fn();
@@ -50,7 +50,7 @@ describe('gux-pagination-cursor-beta', () => {
         '<gux-pagination-cursor-beta has-next></gux-pagination-cursor-beta>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const [previousButton, nextButton] = Array.from(
+      const [, nextButton] = Array.from(
         element.shadowRoot.querySelectorAll('button')
       ) as HTMLElement[];
       const guxPaginationCursorchangeSpy = jest.fn();
@@ -72,7 +72,7 @@ describe('gux-pagination-cursor-beta', () => {
       const html = '<gux-pagination-cursor-beta></gux-pagination-cursor-beta>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const [previousButton, nextButton] = Array.from(
+      const [previousButton] = Array.from(
         element.shadowRoot.querySelectorAll('button')
       ) as HTMLElement[];
       const guxPaginationCursorchangeSpy = jest.fn();
@@ -92,7 +92,7 @@ describe('gux-pagination-cursor-beta', () => {
       const html = '<gux-pagination-cursor-beta></gux-pagination-cursor-beta>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const [previousButton, nextButton] = Array.from(
+      const [, nextButton] = Array.from(
         element.shadowRoot.querySelectorAll('button')
       ) as HTMLElement[];
       const guxPaginationCursorchangeSpy = jest.fn();

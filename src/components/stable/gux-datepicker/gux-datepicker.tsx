@@ -61,8 +61,8 @@ export class GuxDatepicker {
   isSelectingRange: boolean = false;
   lastIntervalRange: GuxDatepickerIntervalRange;
   lastYear: number = new Date().getFullYear();
-  startInputId = randomHTMLId('gux-datepicker');
-  endInputId = randomHTMLId('gux-datepicker');
+  startInputId: string = randomHTMLId('gux-datepicker');
+  endInputId: string = randomHTMLId('gux-datepicker');
   i18n: GetI18nValue;
 
   @Element()
@@ -75,10 +75,10 @@ export class GuxDatepicker {
   value: string;
 
   /**
-   * The datepicker label (can be a single label, or an array of two if it's a range datepicker)
+   * The datepicker label (can be a single label, or two seperated by a comma if it's a range datepicker)
    */
   @Prop()
-  label: string | string[] = '';
+  label: string = '';
 
   /**
    * The datepicker number of months displayed
@@ -174,6 +174,15 @@ export class GuxDatepicker {
     );
   }
 
+  @Watch('active')
+  watchActiveCalendar(active: boolean) {
+    if (active === true) {
+      const startDateValue = fromIsoDate(this.value.split('/')[0]);
+      // calendar should open to month containing the start date
+      void this.calendarElement.resetCalendarView(startDateValue);
+    }
+  }
+
   /**
    * Triggered when user selects a date
    */
@@ -205,7 +214,7 @@ export class GuxDatepicker {
           this.increment(1);
           this.setCursorRange();
           break;
-        case 'ArrowLeft':
+        case 'ArrowLeft': {
           event.preventDefault();
 
           const previousIntervalRange = getPreviousIntervalRange(
@@ -215,7 +224,8 @@ export class GuxDatepicker {
           this.setIntervalRange(previousIntervalRange);
           this.setCursorRange();
           break;
-        case 'ArrowRight':
+        }
+        case 'ArrowRight': {
           event.preventDefault();
 
           const nextIntervalRange = getNextIntervalRange(
@@ -225,6 +235,7 @@ export class GuxDatepicker {
           this.setIntervalRange(nextIntervalRange);
           this.setCursorRange();
           break;
+        }
         default:
           event.preventDefault();
 
@@ -240,15 +251,16 @@ export class GuxDatepicker {
       switch (event.key) {
         case 'Enter':
         case 'Escape':
-        case ' ':
+        case ' ': {
           this.active = false;
-          const button = this.root.querySelector(
+          const button: HTMLButtonElement = this.root.querySelector(
             '.gux-calendar-toggle-button'
-          ) as HTMLButtonElement;
+          );
           setTimeout(() => {
             button.focus();
           });
           break;
+        }
         case 'Tab':
           if (this.active) {
             this.active = false;
@@ -369,7 +381,7 @@ export class GuxDatepicker {
   }
 
   getCalendarLabels(): string[] {
-    return getCalendarLabels([].concat(this.label || []), this.mode, [
+    return getCalendarLabels(this.label, this.mode, [
       this.i18n('start'),
       this.i18n('end'),
       this.i18n('date')
@@ -420,12 +432,12 @@ export class GuxDatepicker {
       const toValue = this.stringToDate(this.toInputElement.value);
       this.value = asIsoDateRange(fromValue, toValue);
       this.updateDate();
-      this.calendarElement.setValue([fromValue, toValue]);
+      void this.calendarElement.setValue([fromValue, toValue]);
     } else {
       const date = this.stringToDate(this.inputElement.value);
       this.value = asIsoDate(date);
       this.updateDate();
-      this.calendarElement.setValue(date);
+      void this.calendarElement.setValue(date);
     }
     this.input.emit(this.value);
   }
@@ -460,7 +472,7 @@ export class GuxDatepicker {
       switch (
         getIntervalLetter(this.format, this.focusedField.selectionStart)
       ) {
-        case 'd':
+        case 'd': {
           const dateValue = fromIsoDate(this.value);
           if (
             newValue <=
@@ -473,6 +485,7 @@ export class GuxDatepicker {
             return true;
           }
           break;
+        }
         case 'm':
           if (newValue <= 12) {
             return true;
@@ -487,7 +500,12 @@ export class GuxDatepicker {
   }
 
   getMapAndRegexFromField(value: Date) {
-    const map: any = {
+    const map: {
+      dd: string;
+      mm: string;
+      yy?: string;
+      yyyy?: string;
+    } = {
       dd: `0${value.getDate()}`.slice(-2),
       mm: `0${value.getMonth() + 1}`.slice(-2)
     };
@@ -508,18 +526,18 @@ export class GuxDatepicker {
       const [from, to] = fromIsoDateRange(this.value);
       const { map: map1, regexp: regexp1 } = this.getMapAndRegexFromField(from);
       this.formatedValue = this.format.replace(regexp1, match => {
-        return map1[match];
+        return map1[match] as string;
       });
       const { map: map2, regexp: regexp2 } = this.getMapAndRegexFromField(to);
       this.toFormatedValue = this.format.replace(regexp2, match => {
-        return map2[match];
+        return map2[match] as string;
       });
     } else {
       const dateValue = fromIsoDate(this.value);
       const { map: map3, regexp: regexp3 } =
         this.getMapAndRegexFromField(dateValue);
       this.formatedValue = this.format.replace(regexp3, match => {
-        return map3[match];
+        return map3[match] as string;
       });
     }
   }
@@ -538,7 +556,7 @@ export class GuxDatepicker {
     if (this.active) {
       // Wait for render before focusing preview date
       setTimeout(() => {
-        this.calendarElement.focusPreviewDate();
+        void this.calendarElement.focusPreviewDate();
       });
     }
   }
@@ -637,7 +655,7 @@ export class GuxDatepicker {
       >
         <gux-icon decorative icon-name="calendar"></gux-icon>
       </button>
-    );
+    ) as JSX.Element;
   }
 
   renderCalendar(): JSX.Element {
@@ -651,7 +669,7 @@ export class GuxDatepicker {
         maxDate={this.maxDate}
         numberOfMonths={this.numberOfMonths}
       />
-    );
+    ) as JSX.Element;
   }
 
   renderStartDateField(): JSX.Element {
@@ -680,7 +698,7 @@ export class GuxDatepicker {
           {this.renderCalendar()}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   renderEndDateField(): JSX.Element {
@@ -706,7 +724,7 @@ export class GuxDatepicker {
           </div>
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
@@ -722,6 +740,6 @@ export class GuxDatepicker {
         {this.renderStartDateField()}
         {this.renderEndDateField()}
       </div>
-    );
+    ) as JSX.Element;
   }
 }

@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Method,
   Prop,
   State
@@ -11,7 +12,7 @@ import {
 
 // RegExp escape string from http://stackoverflow.com/a/3561711/23528
 const escapeRegexStr = /[-/\\^$*+?.()|[\]{}]/g;
-function escapeRegex(input) {
+function escapeRegex(input: string) {
   return input.replace(escapeRegexStr, '\\$&');
 }
 
@@ -121,21 +122,21 @@ export class GuxDropdownOption {
     };
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div class="gux-dropdown-option" title={this.text}>
         {this.textWithHighlights()}
       </div>
-    );
+    ) as JSX.Element;
   }
 
-  private textWithHighlights() {
+  private textWithHighlights(): JSX.Element {
     if (!this.highlight || !this.text) {
-      return <span>{this.text}</span>;
+      return (<span>{this.text}</span>) as JSX.Element;
     }
 
     if (this.highlightIndex < 0) {
-      return <span>{this.text}</span>;
+      return (<span>{this.text}</span>) as JSX.Element;
     }
 
     const preface = this.text.substring(0, this.highlightIndex);
@@ -151,7 +152,7 @@ export class GuxDropdownOption {
         <strong>{actualHighlight}</strong>
         {suffix}
       </span>
-    );
+    ) as JSX.Element;
   }
 
   private onItemClicked() {

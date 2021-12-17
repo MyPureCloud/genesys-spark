@@ -2,5 +2,10 @@
   "createNewTab": "Nieuw tabblad maken",
   "scrollLeft": "Naar links schuiven",
   "scrollRight": "Naar rechts schuiven",
-  "disableNewTab": "Het maximum aantal gemaakte tabs is bereikt."
+  "options": "Tabbladopties voor {tabTitle}",
+  "disableNewTab": "Maximale aantal gemaakte tabbladen is bereikt",
+  "toggleSort": "Sorteermodus met spatiebalk in-/uitschakelen",
+  "sortModeOn": "De sorteermodus is ingeschakeld, gebruik de pijltoetsen naar links en rechts om de volgorde van tabbladen te wijzigen. Druk op de spatiebalk of op Enter om het sorteren te voltooien. Druk op Escape om het sorteren te annuleren",
+  "sortComplete": "Sorteren voltooid",
+  "sortCancelled": "Sorteren geannuleerd"
 }

@@ -25,12 +25,12 @@ export class GuxTooltip {
   private delayTimeout: NodeJS.Timer;
   private forElement: HTMLElement;
   private tooltipActive: boolean;
-  private mouseenterHandler = () => this.show();
-  private mouseleaveHandler = () => this.hide();
-  private focusinHandler = () => this.show();
-  private focusoutHandler = () => this.hide();
+  private mouseenterHandler: () => void = () => this.show();
+  private mouseleaveHandler: () => void = () => this.hide();
+  private focusinHandler: () => void = () => this.show();
+  private focusoutHandler: () => void = () => this.hide();
   private popperInstance: Instance;
-  private id = randomHTMLId('gux-tooltip');
+  private id: string = randomHTMLId('gux-tooltip');
 
   @Element()
   private root: HTMLElement;
@@ -45,7 +45,7 @@ export class GuxTooltip {
    * If tooltip is shown or not
    */
   @State()
-  isShown = false;
+  isShown: boolean = false;
 
   @Listen('keydown', { target: 'window', passive: true })
   handleKeyDown(event: KeyboardEvent) {
@@ -132,6 +132,6 @@ export class GuxTooltip {
       >
         <slot />
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

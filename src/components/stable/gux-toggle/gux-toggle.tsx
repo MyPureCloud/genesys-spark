@@ -10,6 +10,10 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+
+import translationResources from './i18n/en.json';
 
 import { GuxToggleLabelPosition } from './gux-toggle.types';
 
@@ -19,8 +23,13 @@ import { GuxToggleLabelPosition } from './gux-toggle.types';
   shadow: { delegatesFocus: true }
 })
 export class GuxToggle {
+  private i18n: GetI18nValue;
+
   @Element()
   private root: HTMLElement;
+
+  private labelId: string = randomHTMLId('gux-toggle-label');
+  private errorId: string = randomHTMLId('gux-toggle-error');
 
   @Prop({ mutable: true })
   checked: boolean = false;
@@ -70,12 +79,16 @@ export class GuxToggle {
   }
 
   private getAriaLabel(): string {
-    const label = this.checked ? this.checkedLabel : this.uncheckedLabel;
-
-    return label || this.root.getAttribute('aria-label') || this.root.title;
+    return (
+      this.root.getAttribute('aria-label') ||
+      this.root.title ||
+      this.i18n('defaultAriaLabel')
+    );
   }
 
-  componentWillLoad(): void {
+  async componentWillLoad(): Promise<void> {
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
+
     const variant =
       this.checkedLabel || this.uncheckedLabel ? 'labled' : 'unlabled';
 
@@ -88,7 +101,7 @@ export class GuxToggle {
         <div class="gux-toggle-label-loading">
           <gux-radial-loading context="input"></gux-radial-loading>
         </div>
-      );
+      ) as JSX.Element;
     }
   }
 
@@ -99,24 +112,27 @@ export class GuxToggle {
       return (
         <div class="gux-toggle-label-and-error">
           <div class="gux-toggle-label">
-            <div class="gux-toggle-label-text">{labelText}</div>
+            <div id={this.labelId} class="gux-toggle-label-text">
+              {labelText}
+            </div>
 
             {this.renderLoading()}
           </div>
         </div>
-      );
+      ) as JSX.Element;
     }
   }
 
   private renderError(): JSX.Element {
     if (this.errorMessage) {
       return (
-        <div class="gux-toggle-error">
+        <div id={this.errorId} class="gux-toggle-error">
           <gux-error-message-beta>{this.errorMessage}</gux-error-message-beta>
         </div>
-      );
+      ) as JSX.Element;
     }
   }
+
   render(): JSX.Element {
     return (
       <div
@@ -125,20 +141,21 @@ export class GuxToggle {
           'gux-toggle-label-left': this.labelPosition === 'left',
           'gux-disabled': this.disabled || this.loading
         }}
-        role="checkbox"
-        aria-checked={Boolean(this.checked).toString()}
-        aria-label={this.getAriaLabel()}
       >
         <div class="gux-toggle-input">
           <gux-toggle-slider
             checked={this.checked}
             disabled={this.disabled || this.loading}
+            guxAriaLabel={this.getAriaLabel()}
+            labelId={
+              this.checkedLabel && this.uncheckedLabel ? this.labelId : ''
+            }
+            errorId={this.errorMessage ? this.errorId : ''}
           ></gux-toggle-slider>
-
           {this.renderLabel()}
         </div>
         {this.renderError()}
       </div>
-    );
+    ) as JSX.Element;
   }
 }

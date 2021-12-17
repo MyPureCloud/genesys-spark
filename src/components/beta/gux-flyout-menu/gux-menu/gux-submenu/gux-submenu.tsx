@@ -43,7 +43,7 @@ export class GuxSubmenu {
   forceUpdate(isShown: boolean) {
     if (isShown) {
       if (this.popperInstance) {
-        this.popperInstance.update();
+        void this.popperInstance.update();
       }
     }
   }
@@ -51,6 +51,7 @@ export class GuxSubmenu {
   /**
    * Focus on the components button element
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxFocus(): Promise<void> {
     this.buttonElement.focus();
@@ -65,7 +66,7 @@ export class GuxSubmenu {
           this.focusOnSubmenu();
         }, moveFocusDelay);
 
-        this.guxFocus();
+        void this.guxFocus();
         break;
 
       case 'ArrowRight':
@@ -83,7 +84,7 @@ export class GuxSubmenu {
           event.stopPropagation();
         }
 
-        this.guxFocus();
+        void this.guxFocus();
         break;
     }
   }
@@ -186,7 +187,7 @@ export class GuxSubmenu {
     const menuItems = Array.from(this.submenuContentElement.children);
     const nextFocusableElement = menuItems[0] as HTMLGuxMenuItemElement;
 
-    nextFocusableElement.guxFocus();
+    void nextFocusableElement.guxFocus();
   }
 
   componentDidLoad(): void {
@@ -232,6 +233,6 @@ export class GuxSubmenu {
           </div>
         </div>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

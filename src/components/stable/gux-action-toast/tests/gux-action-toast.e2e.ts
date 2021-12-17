@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-action-toast', () => {
   describe('#render', () => {
     [
@@ -21,7 +19,7 @@ describe('gux-action-toast', () => {
       it(description, async () => {
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-action-toast');
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
         expect(element.outerHTML).toMatchSnapshot();
       });
     });

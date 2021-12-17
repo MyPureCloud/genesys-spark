@@ -1,4 +1,4 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 describe('gux-switch', () => {
   const html = `
@@ -12,8 +12,9 @@ describe('gux-switch', () => {
 `;
   describe('#render', () => {
     it(`should render as expected`, async () => {
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-switch');
+      await a11yCheck(page);
 
       expect(element.outerHTML).toMatchSnapshot();
     });
@@ -21,7 +22,7 @@ describe('gux-switch', () => {
 
   describe('#interactions', () => {
     it(`should change value on gux-switch-item click`, async () => {
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-switch');
       const guxSwitchItemMinute = await page.find(
         'gux-switch-item[value=minute]'
@@ -29,7 +30,7 @@ describe('gux-switch', () => {
 
       expect(await element.getProperty('value')).toBe('day');
 
-      guxSwitchItemMinute.click();
+      await guxSwitchItemMinute.click();
       await page.waitForChanges();
 
       expect(await element.getProperty('value')).toBe(
@@ -38,21 +39,21 @@ describe('gux-switch', () => {
     });
 
     it(`should not change value on gux-switch-item click if it is disabled`, async () => {
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-switch');
       const guxSwitchItemHour = await page.find('gux-switch-item[value=hour]');
       const currentValue = await element.getProperty('value');
 
       expect(currentValue).toBe('day');
 
-      guxSwitchItemHour.click();
+      await guxSwitchItemHour.click();
       await page.waitForChanges();
 
       expect(await element.getProperty('value')).toBe(currentValue);
     });
 
     it(`should emit a 'change' and 'input' event when a new item is selected`, async () => {
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-switch');
       const guxSwitchItemMinute = await page.find(
         'gux-switch-item[value=minute]'
@@ -61,7 +62,7 @@ describe('gux-switch', () => {
       const spyOnInputEvent = await element.spyOnEvent('input');
       const spyOnChangeEvent = await element.spyOnEvent('change');
 
-      guxSwitchItemMinute.click();
+      await guxSwitchItemMinute.click();
       await page.waitForChanges();
 
       expect(spyOnInputEvent.length).toBe(1);
@@ -69,14 +70,14 @@ describe('gux-switch', () => {
     });
 
     it(`should not emit a 'change' or 'input' event when a disabled item is selected`, async () => {
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-switch');
       const guxSwitchItemHour = await page.find('gux-switch-item[value=hour]');
 
       const spyOnInputEvent = await element.spyOnEvent('input');
       const spyOnChangeEvent = await element.spyOnEvent('change');
 
-      guxSwitchItemHour.click();
+      await guxSwitchItemHour.click();
       await page.waitForChanges();
 
       expect(spyOnInputEvent.length).toBe(0);
@@ -86,7 +87,7 @@ describe('gux-switch', () => {
 
   describe('onSlotchange', () => {
     it(`should set selected item as expected`, async () => {
-      const page = await newE2EPage({
+      const page = await newSparkE2EPage({
         html: `
         <gux-switch lang-"en" layout="small" value="month">
           <gux-switch-item value="week">Week</gux-switch-item>
@@ -103,10 +104,9 @@ describe('gux-switch', () => {
           'gux-switch-item[value=week]'
         );
 
-        const template = document.createElement('template');
-        template.innerHTML =
-          '<gux-switch-item value="month">Month</gux-switch-item>';
-        const monthElement = template.content.firstChild as Element;
+        const monthElement = document.createElement('gux-switch-item');
+        monthElement.appendChild(document.createTextNode('Month'));
+        monthElement.setAttribute('value', 'month');
 
         weekElement.insertAdjacentElement('beforebegin', monthElement);
       });

@@ -10,6 +10,6 @@ export class GuxMenu {
       <Host role="menu">
         <slot />
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

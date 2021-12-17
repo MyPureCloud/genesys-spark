@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Listen,
   Prop,
   State,
@@ -12,6 +13,10 @@ import {
 
 import { fromIsoTime } from '../../../utils/date/from-iso-time-string';
 import { trackComponent } from '../../../usage-tracking';
+
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+
+import translationResources from './i18n/en.json';
 
 const MAX_TIME: string = '23:59:59';
 const MIN_TIME: string = '00:00:00';
@@ -22,6 +27,8 @@ const DEFAULT_INTERVAL: number = 15;
   tag: 'gux-time-picker-beta'
 })
 export class GuxTimePicker {
+  private i18n: GetI18nValue;
+
   @Element()
   root: HTMLElement;
 
@@ -37,6 +44,9 @@ export class GuxTimePicker {
   @Prop({ mutable: true })
   min: string = MIN_TIME;
 
+  @Prop()
+  label: string = '';
+
   @State()
   active: boolean = false;
 
@@ -47,7 +57,7 @@ export class GuxTimePicker {
   suggestion: string = '00';
 
   @Event()
-  changed: EventEmitter<any>;
+  changed: EventEmitter<string>;
 
   inputElement: HTMLInputElement;
   focusedField: HTMLInputElement;
@@ -57,7 +67,7 @@ export class GuxTimePicker {
   isPressEvent: boolean = false;
 
   @Watch('value')
-  watchValue(newValue) {
+  watchValue(newValue: string) {
     this.changed.emit(newValue);
   }
 
@@ -78,7 +88,7 @@ export class GuxTimePicker {
           break;
         case 'ArrowDown':
           if (this.dropdownList) {
-            this.dropdownList.setFocusOnFirstItem();
+            void this.dropdownList.setFocusOnFirstItem();
           }
           break;
         case 'ArrowUp':
@@ -91,7 +101,8 @@ export class GuxTimePicker {
           if ('0' <= e.key && e.key <= '9') {
             this.openDropdown = true;
             if (this.focusedField.value.length < 8) {
-              let newValue = this.focusedField.value + parseInt(e.key, 10);
+              let newValue =
+                this.focusedField.value + String(parseInt(e.key, 10));
               const arr = newValue.split(':');
               if (newValue.length > 6 && Number(arr[2].padEnd(2, '0')) > 59) {
                 return;
@@ -137,7 +148,7 @@ export class GuxTimePicker {
   onPress(e: CustomEvent) {
     this.isPressEvent = true;
     const chosenTimeOption = e.target as HTMLGuxListItemElement;
-    this.inputElement.value = chosenTimeOption.value;
+    this.inputElement.value = chosenTimeOption.value as string;
     this.updateChosenValue();
   }
 
@@ -227,8 +238,9 @@ export class GuxTimePicker {
     return validatedValue;
   }
 
-  componentWillLoad() {
+  async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.validateBounds();
     this.value = this.validateValue(this.value);
   }
@@ -238,7 +250,7 @@ export class GuxTimePicker {
     return regex.test(value);
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div>
         <div class="gux-input">
@@ -247,6 +259,7 @@ export class GuxTimePicker {
             value={this.value}
             size={9}
             class={this.active ? 'gux-focused' : ''}
+            aria-label={this.label || this.i18n('defaultAriaLabel')}
             ref={el => (this.inputElement = el)}
           ></input>
         </div>
@@ -256,13 +269,13 @@ export class GuxTimePicker {
               {this.buildDropdownOptions().map(value => {
                 return (
                   <gux-list-item value={value} text={value}></gux-list-item>
-                );
+                ) as JSX.Element;
               })}
             </gux-list>
           </div>
         )}
       </div>
-    );
+    ) as JSX.Element;
   }
 
   buildDropdownOptions(): string[] {

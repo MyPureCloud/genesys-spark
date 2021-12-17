@@ -2,5 +2,10 @@
   "createNewTab": "Skapa ny flik",
   "scrollLeft": "Rulla vänster",
   "scrollRight": "Rulla höger",
-  "disableNewTab": "Det maximala antalet flikar har uppnåtts"
+  "options": "Flikalternativ för {tabTitle}",
+  "disableNewTab": "Det maximala antalet flikar har uppnåtts",
+  "toggleSort": "Växla sorteringsläge med blanksteg",
+  "sortModeOn": "Sorteringsläge är på. Använd vänster- och högerpiltangenterna för att arrangera om flikarna. Tryck på blanksteg eller retur för att slutföra sorteringen. Tryck på Esc-tangenten för att avbryta sorteringen.",
+  "sortComplete": "Sortering klar",
+  "sortCancelled": "Sortering avbruten"
 }

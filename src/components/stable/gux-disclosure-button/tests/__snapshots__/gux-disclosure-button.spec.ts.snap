@@ -4,10 +4,10 @@ exports[`gux-disclosure-button #render should render component as expected (1) 1
 <gux-disclosure-button>
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
-      <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-right" screenreader-text="open"></gux-icon>
+      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
+        <gux-icon decorative="" icon-name="arrow-solid-right"></gux-icon>
       </button>
-      <div class="gux-disclosure-panel gux-left">
+      <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
       </div>
     </div>
@@ -19,10 +19,10 @@ exports[`gux-disclosure-button #render should render component as expected (2) 1
 <gux-disclosure-button is-open="">
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
-      <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-left" screenreader-text="open"></gux-icon>
+      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
+        <gux-icon decorative="" icon-name="arrow-solid-left"></gux-icon>
       </button>
-      <div class="gux-active gux-disclosure-panel gux-left">
+      <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
       </div>
     </div>
@@ -34,10 +34,10 @@ exports[`gux-disclosure-button #render should render component as expected (3) 1
 <gux-disclosure-button position="left">
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
-      <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-right" screenreader-text="open"></gux-icon>
+      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
+        <gux-icon decorative="" icon-name="arrow-solid-right"></gux-icon>
       </button>
-      <div class="gux-disclosure-panel gux-left">
+      <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
       </div>
     </div>
@@ -49,10 +49,10 @@ exports[`gux-disclosure-button #render should render component as expected (4) 1
 <gux-disclosure-button is-open="" position="left">
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
-      <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-left" screenreader-text="open"></gux-icon>
+      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
+        <gux-icon decorative="" icon-name="arrow-solid-left"></gux-icon>
       </button>
-      <div class="gux-active gux-disclosure-panel gux-left">
+      <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
       </div>
     </div>
@@ -64,10 +64,10 @@ exports[`gux-disclosure-button #render should render component as expected (5) 1
 <gux-disclosure-button position="right">
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-right">
-      <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-left" screenreader-text="open"></gux-icon>
+      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
+        <gux-icon decorative="" icon-name="arrow-solid-left"></gux-icon>
       </button>
-      <div class="gux-disclosure-panel gux-right">
+      <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
       </div>
     </div>
@@ -79,10 +79,10 @@ exports[`gux-disclosure-button #render should render component as expected (6) 1
 <gux-disclosure-button is-open="" position="right">
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-right">
-      <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-right" screenreader-text="open"></gux-icon>
+      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
+        <gux-icon decorative="" icon-name="arrow-solid-right"></gux-icon>
       </button>
-      <div class="gux-active gux-disclosure-panel gux-right">
+      <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
       </div>
     </div>
@@ -94,10 +94,10 @@ exports[`gux-disclosure-button #render should render component as expected (7) 1
 <gux-disclosure-button label="More Info">
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
-      <button class="gux-disclosure-button">
-        <gux-icon icon-name="arrow-solid-right" screenreader-text="More Info"></gux-icon>
+      <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="More Info" class="gux-disclosure-button">
+        <gux-icon decorative="" icon-name="arrow-solid-right"></gux-icon>
       </button>
-      <div class="gux-disclosure-panel gux-left">
+      <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
       </div>
     </div>

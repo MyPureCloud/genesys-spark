@@ -29,7 +29,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import { whenEventIsFrom } from '../../../../utils/dom/when-event-is-from';
 import simulateNativeEvent from '../../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../../usage-tracking';
-import { logWarn } from '../../../../utils/error/log-error';
+import { logError } from '../../../../utils/error/log-error';
 
 import translationResources from './i18n/en.json';
 
@@ -77,7 +77,7 @@ export class GuxListbox {
     switch (event.key) {
       case 'Enter':
         event.preventDefault();
-        actOnActiveOption(this.root, this.updateValue.bind(this));
+        actOnActiveOption(this.root, value => this.updateValue(value));
         return;
 
       case 'ArrowDown':
@@ -122,7 +122,7 @@ export class GuxListbox {
   onKeyup(event: KeyboardEvent): void {
     switch (event.key) {
       case ' ':
-        actOnActiveOption(this.root, this.updateValue.bind(this));
+        actOnActiveOption(this.root, value => this.updateValue(value));
         return;
     }
   }
@@ -138,21 +138,21 @@ export class GuxListbox {
       'gux-option-v2',
       event,
       (option: HTMLGuxOptionV2Element) => {
-        onClickedOption(option, this.updateValue.bind(this));
+        onClickedOption(option, value => this.updateValue(value));
       }
     );
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxSelectActive(): Promise<void> {
-    actOnActiveOption(this.root, this.updateValue.bind(this));
+    actOnActiveOption(this.root, value => this.updateValue(value));
   }
 
   private setListboxOptions(): void {
     this.listboxOptions = Array.from(
       this.root.children
     ) as HTMLGuxOptionV2Element[];
-
     this.internallistboxoptionsupdated.emit();
   }
 
@@ -179,7 +179,7 @@ export class GuxListbox {
         this.root.getAttribute('aria-labelledby')
       )
     ) {
-      logWarn(
+      logError(
         'gux-listbox',
         '`gux-listbox` requires a label. Either provide a label and associate it with the listbox using `aria-labelledby` or add an `aria-label` attribute to the gux-listbox element.'
       );
@@ -205,7 +205,9 @@ export class GuxListbox {
 
   renderAllListboxOptionsFiltered(): JSX.Element {
     if (this.allListboxOptionsFiltered) {
-      return <div class="gux-no-matches">{this.i18n('noMatches')}</div>;
+      return (
+        <div class="gux-no-matches">{this.i18n('noMatches')}</div>
+      ) as JSX.Element;
     }
   }
 
@@ -215,6 +217,6 @@ export class GuxListbox {
         <slot onSlotchange={() => this.setListboxOptions()} />
         {this.renderAllListboxOptionsFiltered()}
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

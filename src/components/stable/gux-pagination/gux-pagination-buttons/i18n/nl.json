@@ -4,5 +4,6 @@
   "first": "Voornaam",
   "previous": "Vorige",
   "next": "Volgende",
-  "last": "Achternaam"
+  "last": "Achternaam",
+  "pageInputLabel": "Pagina {currentPage, number} van {totalPages, number}"
 }

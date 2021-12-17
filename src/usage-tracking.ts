@@ -33,7 +33,7 @@ export function trackComponent(
   // }
 
   if (!libVersionReported) {
-    reportLibraryVersion();
+    reportLibraryVersion(newrelic);
     libVersionReported = true;
   }
 
@@ -74,12 +74,7 @@ export function getVersionObject(packageInfoVersion: string) {
 /**
  * Sends a library usage page action the first time it is called, does nothing afterward.
  */
-function reportLibraryVersion() {
-  const newrelic = window.newrelic;
-  if (!newrelic) {
-    return;
-  }
-
+function reportLibraryVersion(newrelic: typeof NewRelicBrowser) {
   const versionObject = getVersionObject(packageInfo.version);
 
   newrelic.addPageAction(libraryPageAction, versionObject);

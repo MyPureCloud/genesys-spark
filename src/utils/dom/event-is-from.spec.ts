@@ -1,11 +1,6 @@
 import { eventIsFrom } from './event-is-from';
 
 describe('#eventIsFrom', () => {
-  const currentTarget = {
-    matches: selector => {
-      return selector === '.currentTarget';
-    }
-  };
   const parentElement = {
     matches: selector => {
       return selector === '.parent';

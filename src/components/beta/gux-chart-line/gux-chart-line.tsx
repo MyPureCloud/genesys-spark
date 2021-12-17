@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
 import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
 import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
@@ -18,6 +20,7 @@ export class GuxLineChart {
 
   private visualizationSpec: VisualizationSpec;
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     mark: {
@@ -48,7 +51,8 @@ export class GuxLineChart {
    * Data field names must match the values you set in xFieldName and yFieldName
    */
   @Prop()
-  chartData: Record<string, unknown>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  chartData: Record<string, any>;
 
   @Prop()
   includeLegend: boolean;
@@ -171,7 +175,7 @@ export class GuxLineChart {
     this.visualizationSpec = spec;
   }
 
-  async componentWillRender(): Promise<void> {
+  componentWillRender(): void {
     trackComponent(this.root);
     this.parseData();
   }
@@ -183,6 +187,6 @@ export class GuxLineChart {
           visualizationSpec={this.visualizationSpec}
         ></gux-visualization-beta>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

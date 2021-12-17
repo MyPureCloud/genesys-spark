@@ -50,7 +50,7 @@ export class GuxTextHighlight {
       }
     }
 
-    return <span>{this.text}</span>;
+    return (<span>{this.text}</span>) as JSX.Element;
   }
 
   private renderStartsWith(): HTMLSpanElement {
@@ -63,10 +63,10 @@ export class GuxTextHighlight {
           <mark>{highlight}</mark>
           {after}
         </span>
-      );
+      ) as HTMLSpanElement;
     }
 
-    return <span>{this.text}</span>;
+    return (<span>{this.text}</span>) as HTMLSpanElement;
   }
 
   private renderContains(): HTMLSpanElement {
@@ -90,34 +90,36 @@ export class GuxTextHighlight {
       html.remaining = html.remaining.substring(index + highlight.length);
     }
 
-    return <span innerHTML={html.highlighted + html.remaining} />;
+    return (
+      <span innerHTML={html.highlighted + html.remaining} />
+    ) as HTMLSpanElement;
   }
 
   private renderFuzzy(): HTMLSpanElement {
     if (matchesFuzzy(this.highlight, this.text)) {
-      const html = getFuzzyReplacements(this.highlight).reduce(
-        (acc, needle) => {
-          const {
-            0: highlight,
-            index,
-            input
-          } = (acc.remaining as string).match(needle);
-          const before = input.substring(0, index);
-          const highlighted =
-            acc.highlighted + before + `<mark>${highlight}</mark>`;
-          const remaining = input.substring(index + highlight.length);
+      const html: { highlighted: string; remaining: string } =
+        getFuzzyReplacements(this.highlight).reduce(
+          (acc, needle) => {
+            const { 0: highlight, index, input } = acc.remaining.match(needle);
+            const before = input.substring(0, index);
+            const highlighted = `${
+              acc.highlighted + before
+            }<mark>${highlight}</mark>`;
+            const remaining = input.substring(index + highlight.length);
 
-          return { highlighted, remaining };
-        },
-        {
-          highlighted: '',
-          remaining: this.text
-        }
-      );
+            return { highlighted, remaining };
+          },
+          {
+            highlighted: '',
+            remaining: this.text
+          }
+        );
 
-      return <span innerHTML={html.highlighted + html.remaining} />;
+      return (
+        <span innerHTML={html.highlighted + html.remaining} />
+      ) as HTMLSpanElement;
     }
 
-    return <span>{this.text}</span>;
+    return (<span>{this.text}</span>) as HTMLSpanElement;
   }
 }

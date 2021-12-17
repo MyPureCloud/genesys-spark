@@ -1,4 +1,4 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 describe('gux-highlight', () => {
   describe('#render', () => {
@@ -138,8 +138,9 @@ describe('gux-highlight', () => {
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-text-highlight');
+        await a11yCheck(page);
 
         expect(element.outerHTML).toMatchSnapshot();
       });

@@ -33,6 +33,10 @@ jobs:
       # Can't use npm ci, because it fails on missing optional dependencies
       - run: npm install
 
+      # This created the component specific types that are needed for eslint
+      - name: Stencil
+        run: npm run stencil
+
       # Run linting
       - name: Lint
         run: npm run lint

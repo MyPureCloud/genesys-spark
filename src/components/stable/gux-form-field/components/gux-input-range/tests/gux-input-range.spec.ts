@@ -19,7 +19,7 @@ describe('gux-input-range', () => {
           <input type="range" slot="input"/>
         </gux-input-range>
       `,
-      language: 'en'
+      language
     });
   });
 

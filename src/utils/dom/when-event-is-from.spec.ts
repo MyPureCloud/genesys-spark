@@ -1,11 +1,6 @@
 import { whenEventIsFrom } from './when-event-is-from';
 
 describe('#whenEventIsFrom', () => {
-  const currentTarget = {
-    matches: selector => {
-      return selector === '.currentTarget';
-    }
-  };
   const parentElement = {
     matches: selector => {
       return selector === '.parent';

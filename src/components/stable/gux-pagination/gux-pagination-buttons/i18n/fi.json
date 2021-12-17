@@ -4,5 +4,6 @@
   "first": "Ensimmäinen",
   "previous": "Edellinen",
   "next": "Seuraava",
-  "last": "Viimeinen"
+  "last": "Viimeinen",
+  "pageInputLabel": "Sivu {currentPage, number} / {lastPage, number})"
 }

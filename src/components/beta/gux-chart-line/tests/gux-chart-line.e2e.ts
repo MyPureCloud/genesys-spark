@@ -5,7 +5,7 @@ describe('gux-chart-line-beta', () => {
     [
       {
         description: 'should render chart',
-        html: '<gux-chart-line-beta id="visualization-1"></gux-chart-line-beta>'
+        html: '<gux-chart-line-beta x-field-name="date" y-field-name="value"></gux-chart-line-beta>'
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {

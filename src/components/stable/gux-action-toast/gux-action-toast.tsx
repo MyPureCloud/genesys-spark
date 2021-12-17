@@ -17,7 +17,7 @@ export class GuxActionToast {
   @Element()
   private root: HTMLElement;
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     trackComponent(this.root);
   }
 
@@ -48,6 +48,6 @@ export class GuxActionToast {
           </div>
         </div>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

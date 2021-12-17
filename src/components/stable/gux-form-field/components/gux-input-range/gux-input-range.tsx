@@ -163,6 +163,6 @@ export class GuxInputRange {
           {this.getDisplayValue()}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

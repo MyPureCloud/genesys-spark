@@ -1,4 +1,4 @@
-import { Component, Element, h } from '@stencil/core';
+import { Component, Element, h, JSX } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -15,7 +15,7 @@ export class GuxAccordion {
     trackComponent(this.root);
   }
 
-  render() {
-    return <slot></slot>;
+  render(): JSX.Element {
+    return (<slot></slot>) as JSX.Element;
   }
 }

@@ -1,5 +1,7 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
+import { logError } from '../../../../utils/error/log-error';
+
 import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 
 @Component({
@@ -20,8 +22,9 @@ export class GuxBreadcrumbItem {
     if (container) {
       return container.accent;
     } else {
-      console.error(
-        `gux-breadcrumb-item: must be within a gux-breadcrumbs component`
+      logError(
+        'gux-breadcrumb-item',
+        'This component must be a child of a gux-breadcrumbs component.'
       );
     }
   }
@@ -39,14 +42,14 @@ export class GuxBreadcrumbItem {
         <span class="gux-breadcrumb-content">
           <slot />
         </span>
-      );
+      ) as JSX.Element;
     }
 
     return (
       <a class="gux-breadcrumb-content gux-link" href={this.href}>
         <slot />
       </a>
-    );
+    ) as JSX.Element;
   }
 
   private getSeparatorIcon(accent: GuxBreadcrumbAccent): JSX.Element {
@@ -60,7 +63,7 @@ export class GuxBreadcrumbItem {
           <span class="gux-breadcrumb-separator" aria-hidden="true">
             /
           </span>
-        );
+        ) as JSX.Element;
       case 'secondary':
         return (
           <gux-icon
@@ -68,13 +71,13 @@ export class GuxBreadcrumbItem {
             icon-name="chevron-small-right"
             decorative
           ></gux-icon>
-        );
+        ) as JSX.Element;
       default:
         return (
           <span class="gux-breadcrumb-separator" aria-hidden="true">
             /
           </span>
-        );
+        ) as JSX.Element;
     }
   }
 
@@ -86,6 +89,6 @@ export class GuxBreadcrumbItem {
         {this.getBreadcrumb()}
         {this.getSeparatorIcon(accent)}
       </span>
-    );
+    ) as JSX.Element;
   }
 }

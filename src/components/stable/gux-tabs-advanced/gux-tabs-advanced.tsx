@@ -5,6 +5,7 @@ import {
   EventEmitter,
   h,
   Host,
+  JSX,
   Listen,
   Method,
   Prop,
@@ -49,9 +50,12 @@ export class GuxTabsAdvanced {
   onInternalActivateTabPanel(event: CustomEvent): void {
     event.stopPropagation();
 
-    this.activateTab(event.detail, this.tabList, this.tabPanels);
+    const tabId = event.detail as string;
+
+    this.activateTab(tabId, this.tabList, this.tabPanels);
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxActivate(tabId: string): Promise<void> {
     this.activateTab(tabId, this.tabList, this.tabPanels);
@@ -78,18 +82,22 @@ export class GuxTabsAdvanced {
     if (tabId) {
       this.activeTab = tabId;
     } else {
-      this.activeTab = panels[0].tabId;
+      this.activeTab = tabList
+        .querySelector('gux-tab-advanced')
+        .getAttribute('tab-id');
     }
 
-    tabList.guxSetActive(this.activeTab);
-    panels.forEach(panel => panel.guxSetActive(panel.tabId === this.activeTab));
+    void tabList.guxSetActive(this.activeTab);
+    panels.forEach(
+      panel => void panel.guxSetActive(panel.tabId === this.activeTab)
+    );
   }
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     trackComponent(this.root);
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Host>
         <div class="gux-tabs">
@@ -99,6 +107,6 @@ export class GuxTabsAdvanced {
           </div>
         </div>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

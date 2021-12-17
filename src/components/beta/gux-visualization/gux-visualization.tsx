@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+
 import {
   Component,
   Element,
@@ -9,6 +11,7 @@ import {
   EventEmitter
 } from '@stencil/core';
 import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
+import { Spec as VgSpec } from 'vega';
 
 import { getDesiredLocale } from '../../../i18n';
 import { trackComponent } from '../../../usage-tracking';
@@ -42,11 +45,11 @@ export class GuxVisualization {
   @Prop()
   embedOptions: EmbedOptions;
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     trackComponent(this.root);
   }
 
-  handleChartClick(_name: string, value) {
+  handleChartClick(_name: string, value: unknown) {
     this.chartClicked.emit(value);
   }
 
@@ -54,10 +57,11 @@ export class GuxVisualization {
     const locale = getDesiredLocale(this.root);
 
     const patchOption = {
-      patch: visSpec => {
+      patch: (visSpec: VgSpec): VgSpec => {
         if (!visSpec?.signals) {
           visSpec.signals = [];
         }
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         visSpec.signals.push({
           name: 'chartClick',
           value: 0,
@@ -78,9 +82,8 @@ export class GuxVisualization {
         patchOption
       )
     ).then(result => {
-      result.view.addSignalListener(
-        'chartClick',
-        this.handleChartClick.bind(this)
+      result.view.addSignalListener('chartClick', (name, value) =>
+        this.handleChartClick(name, value)
       );
     });
   }
@@ -90,6 +93,6 @@ export class GuxVisualization {
   }
 
   render(): JSX.Element {
-    return <Host></Host>;
+    return (<Host></Host>) as JSX.Element;
   }
 }

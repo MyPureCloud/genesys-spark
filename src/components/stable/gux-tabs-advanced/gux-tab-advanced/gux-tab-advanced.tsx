@@ -25,7 +25,7 @@ import tabsResources from '../i18n/en.json';
 export class GuxTabAdvanced {
   private buttonElement: HTMLButtonElement;
   private dropdownOptionsButtonId: string = randomHTMLId();
-  private moveFocusDelay = 100;
+  private moveFocusDelay: number = 100;
   private tabTitle: string = '';
   /**
    * unique id for the tab
@@ -153,16 +153,19 @@ export class GuxTabAdvanced {
   @Event()
   internalactivatetabpanel: EventEmitter<string>;
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxSetActive(active: boolean): Promise<void> {
     this.active = active;
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxGetActive() {
     return this.active;
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxFocus(): Promise<void> {
     this.buttonElement.focus();
@@ -226,7 +229,7 @@ export class GuxTabAdvanced {
             <slot name="dropdown-options" />
           </div>
         </gux-popover>
-      ];
+      ] as JSX.Element;
     }
 
     return null;
@@ -243,29 +246,35 @@ export class GuxTabAdvanced {
 
   render(): JSX.Element {
     return [
-      <button
-        type="button"
-        class={`gux-tab ${this.active ? 'selected' : ''}`}
-        role="tab"
-        aria-grabbed="true"
-        aria-selected={this.active.toString()}
+      <div
+        class={`gux-tab ${this.active ? 'gux-selected' : ''}`}
         aria-disabled={this.guxDisabled.toString()}
-        aria-controls={`gux-${this.tabId}-panel`}
-        ref={el => (this.buttonElement = el)}
-        tabIndex={this.active ? 0 : -1}
-        id={`gux-${this.tabId}-tab`}
       >
-        {this.tabIconName ? (
-          <div class="tab-icon-container">
-            <gux-icon icon-name={this.tabIconName} decorative={true}></gux-icon>
-          </div>
-        ) : null}
-        <span class="tab-title">
-          <slot name="title" />
-        </span>
+        <button
+          class="gux-tab-button"
+          type="button"
+          role="tab"
+          aria-selected={this.active.toString()}
+          aria-controls={`gux-${this.tabId}-panel`}
+          ref={el => (this.buttonElement = el)}
+          tabIndex={this.active ? 0 : -1}
+          id={`gux-${this.tabId}-tab`}
+        >
+          {this.tabIconName ? (
+            <div class="tab-icon-container">
+              <gux-icon
+                icon-name={this.tabIconName}
+                decorative={true}
+              ></gux-icon>
+            </div>
+          ) : null}
+          <span class="tab-title">
+            <slot name="title" />
+          </span>
+        </button>
 
         {this.getDropdownOptions()}
-      </button>
-    ];
+      </div>
+    ] as JSX.Element;
   }
 }

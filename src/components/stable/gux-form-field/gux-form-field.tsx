@@ -24,9 +24,9 @@ export class GuxFormField {
   private input: HTMLInputElement;
   private label: HTMLLabelElement;
   private requiredObserver: MutationObserver;
-  private errorId = randomHTMLId('gux-form-field-error');
-  private labelId = randomHTMLId('gux-form-field-label');
-  private defaultInputId = randomHTMLId('gux-form-field');
+  private errorId: string = randomHTMLId('gux-form-field-error');
+  private labelId: string = randomHTMLId('gux-form-field-label');
+  private defaultInputId: string = randomHTMLId('gux-form-field');
 
   @Element()
   private root: HTMLElement;
@@ -124,7 +124,7 @@ export class GuxFormField {
         </gux-input-checkbox>
         {this.renderError(hasError)}
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderInputRadio(): JSX.Element {
@@ -133,7 +133,7 @@ export class GuxFormField {
         <slot name="input" />
         <slot name="label" />
       </gux-input-radio>
-    );
+    ) as JSX.Element;
   }
 
   private renderInputColor(hasError: boolean): JSX.Element {
@@ -156,7 +156,7 @@ export class GuxFormField {
           {this.renderError(hasError)}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderInputRange(
@@ -176,7 +176,7 @@ export class GuxFormField {
           <slot name="input" />
         </gux-input-range>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderInputNumber(
@@ -201,7 +201,7 @@ export class GuxFormField {
           {this.renderError(hasError)}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderInputSelect(hasError: boolean): JSX.Element {
@@ -222,7 +222,7 @@ export class GuxFormField {
           {this.renderError(hasError)}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderInputTextLike(
@@ -247,7 +247,7 @@ export class GuxFormField {
           {this.renderError(hasError)}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderInputSearch(hasError: boolean): JSX.Element {
@@ -263,7 +263,7 @@ export class GuxFormField {
           {this.renderError(hasError)}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderInputTextArea(hasError: boolean): JSX.Element {
@@ -285,7 +285,7 @@ export class GuxFormField {
           {this.renderError(hasError)}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
@@ -320,7 +320,7 @@ export class GuxFormField {
                 <slot name="input" />
                 <slot name="error" />
               </div>
-            );
+            ) as JSX.Element;
         }
       case 'select':
         return this.renderInputSelect(this.hasError);
@@ -333,7 +333,7 @@ export class GuxFormField {
             <slot name="input" />
             <slot name="error" />
           </div>
-        );
+        ) as JSX.Element;
     }
   }
 
@@ -416,7 +416,7 @@ export class GuxFormField {
       >
         <slot name="label" slot="label" />
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderError(hasError: boolean): JSX.Element {
@@ -432,6 +432,6 @@ export class GuxFormField {
           <slot name="error" />
         </gux-error-message-beta>
       </div>
-    );
+    ) as JSX.Element;
   }
 }

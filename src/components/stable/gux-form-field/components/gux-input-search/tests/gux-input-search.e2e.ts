@@ -3,8 +3,6 @@ import {
   a11yCheck
 } from '../../../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-input-search', () => {
   describe('#render', () => {
     [
@@ -21,7 +19,7 @@ describe('gux-input-search', () => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-input-search');
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
 
         expect(element.innerHTML).toMatchSnapshot();
       });
@@ -38,7 +36,7 @@ describe('gux-input-search', () => {
       const element = await page.find('gux-input-search');
 
       const clearButtonNoInput = await element.find('button.gux-clear-button');
-      await a11yCheck(page, axeExclusions, 'Input is empty');
+      await a11yCheck(page, [], 'Input is empty');
       expect(clearButtonNoInput).toBeNull();
 
       const input = await element.find('input[type="search"]');
@@ -49,7 +47,7 @@ describe('gux-input-search', () => {
       await page.waitForChanges();
 
       const clearButtonInput = await element.find('button.gux-clear-button');
-      await a11yCheck(page, axeExclusions, 'Input contains a value');
+      await a11yCheck(page, [], 'Input contains a value');
       expect(clearButtonInput).not.toBeNull();
 
       const value = await input.getProperty('value');

@@ -84,7 +84,7 @@ export class GuxTag {
         <div class="gux-tag-icon-container">
           <gux-icon class="gux-tag-icon" icon-name={this.icon} decorative />
         </div>
-      );
+      ) as JSX.Element;
     }
   }
 
@@ -93,7 +93,7 @@ export class GuxTag {
       <div class="gux-tag-text">
         <slot />
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private renderRemoveButton(): JSX.Element {
@@ -111,7 +111,7 @@ export class GuxTag {
             screenreader-text={this.i18n('remove-tag')}
           />
         </button>
-      );
+      ) as JSX.Element;
     }
   }
 
@@ -138,6 +138,6 @@ export class GuxTag {
         {this.renderText()}
         {this.renderRemoveButton()}
       </div>
-    );
+    ) as JSX.Element;
   }
 }

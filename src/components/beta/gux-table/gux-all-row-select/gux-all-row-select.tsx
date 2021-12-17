@@ -28,7 +28,7 @@ export class GuxAllRowSelect {
   private i18n: GetI18nValue;
 
   @Prop({ mutable: true })
-  selected = false;
+  selected: boolean = false;
 
   @Event()
   internalallrowselectchange: EventEmitter;
@@ -43,8 +43,9 @@ export class GuxAllRowSelect {
     this.internalallrowselectchange.emit();
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
-  async setIndeterminate(indeterminate = true): Promise<void> {
+  async setIndeterminate(indeterminate: boolean = true): Promise<void> {
     this.inputElement.indeterminate = indeterminate;
   }
 
@@ -67,6 +68,6 @@ export class GuxAllRowSelect {
           <span class="gux-label-text">{this.i18n('selectAllTableRows')}</span>
         </label>
       </gux-form-field>
-    );
+    ) as JSX.Element;
   }
 }

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-rating #render should render component as expected (1) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" role="spinbutton" tabindex="0">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" role="spinbutton" tabindex="0">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
@@ -15,9 +15,9 @@ exports[`gux-rating #render should render component as expected (1) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (2) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" role="spinbutton" tabindex="0" value="0">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" role="spinbutton" tabindex="0" value="0">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
@@ -29,9 +29,9 @@ exports[`gux-rating #render should render component as expected (2) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (3) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="0.5" role="spinbutton" tabindex="0" value="0.5">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="0.5" role="spinbutton" tabindex="0" value="0.5">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-partial"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
@@ -43,9 +43,9 @@ exports[`gux-rating #render should render component as expected (3) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (4) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="1" role="spinbutton" tabindex="0" value="1">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="1" role="spinbutton" tabindex="0" value="1">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
@@ -57,9 +57,9 @@ exports[`gux-rating #render should render component as expected (4) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (5) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="1.5" role="spinbutton" tabindex="0" value="1.5">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="1.5" role="spinbutton" tabindex="0" value="1.5">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-partial"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
@@ -71,9 +71,9 @@ exports[`gux-rating #render should render component as expected (5) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (6) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="2" role="spinbutton" tabindex="0" value="2">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="2" role="spinbutton" tabindex="0" value="2">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
@@ -85,9 +85,9 @@ exports[`gux-rating #render should render component as expected (6) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (7) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="2.5" role="spinbutton" tabindex="0" value="2.5">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="2.5" role="spinbutton" tabindex="0" value="2.5">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-partial"></gux-icon>
@@ -99,9 +99,9 @@ exports[`gux-rating #render should render component as expected (7) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (8) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" role="spinbutton" tabindex="0" value="3">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" role="spinbutton" tabindex="0" value="3">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
@@ -113,9 +113,9 @@ exports[`gux-rating #render should render component as expected (8) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (9) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="3.5" role="spinbutton" tabindex="0" value="3.5">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3.5" role="spinbutton" tabindex="0" value="3.5">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
@@ -127,9 +127,9 @@ exports[`gux-rating #render should render component as expected (9) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (10) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="4" role="spinbutton" tabindex="0" value="4">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="4" role="spinbutton" tabindex="0" value="4">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
@@ -141,9 +141,9 @@ exports[`gux-rating #render should render component as expected (10) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (11) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="4.5" role="spinbutton" tabindex="0" value="4.5">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="4.5" role="spinbutton" tabindex="0" value="4.5">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
@@ -155,9 +155,9 @@ exports[`gux-rating #render should render component as expected (11) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (12) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="spinbutton" tabindex="0" value="5">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="spinbutton" tabindex="0" value="5">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
@@ -169,9 +169,9 @@ exports[`gux-rating #render should render component as expected (12) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (13) 1`] = `
-<gux-rating aria-valuemax="10" aria-valuemin="0" aria-valuenow="0" max-value="10" role="spinbutton" tabindex="0" value="0">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="10" aria-valuemin="0" aria-valuenow="0" max-value="10" role="spinbutton" tabindex="0" value="0">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
       <gux-icon decorative="" icon-name="rating"></gux-icon>
@@ -188,9 +188,9 @@ exports[`gux-rating #render should render component as expected (13) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (14) 1`] = `
-<gux-rating aria-valuemax="10" aria-valuemin="0" aria-valuenow="5" max-value="10" role="spinbutton" tabindex="0" value="5">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="10" aria-valuemin="0" aria-valuenow="5" max-value="10" role="spinbutton" tabindex="0" value="5">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
@@ -207,9 +207,9 @@ exports[`gux-rating #render should render component as expected (14) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (15) 1`] = `
-<gux-rating aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" max-value="10" role="spinbutton" tabindex="0" value="10">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" max-value="10" role="spinbutton" tabindex="0" value="10">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
@@ -226,9 +226,9 @@ exports[`gux-rating #render should render component as expected (15) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (16) 1`] = `
-<gux-rating aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" disabled="" role="spinbutton" tabindex="-1" value="3">
+<gux-rating aria-label="Feedback" aria-readonly="false" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" disabled="" role="spinbutton" tabindex="-1" value="3">
   <mock:shadow-root>
-    <div class="gux-disabled gux-rating-start-container">
+    <div class="gux-disabled gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
@@ -240,9 +240,9 @@ exports[`gux-rating #render should render component as expected (16) 1`] = `
 `;
 
 exports[`gux-rating #render should render component as expected (17) 1`] = `
-<gux-rating aria-readonly="" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" readonly="" role="spinbutton" tabindex="0" value="3">
+<gux-rating aria-label="Feedback" aria-readonly="true" aria-valuemax="5" aria-valuemin="0" aria-valuenow="3" readonly="" role="spinbutton" tabindex="0" value="3">
   <mock:shadow-root>
-    <div class="gux-rating-start-container">
+    <div class="gux-rating-star-container">
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>
       <gux-icon decorative="" icon-name="rating-active"></gux-icon>

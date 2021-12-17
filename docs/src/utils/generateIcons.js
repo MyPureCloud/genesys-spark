@@ -1,5 +1,3 @@
-const { removeDisabledFailures } = require('tslint');
-
 const icons = [
   { sectionName: 'Agent', iconNames: ['agent', 'agent-circle', 'agent-group'] },
   {

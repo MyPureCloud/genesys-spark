@@ -78,7 +78,6 @@ gux-tabs {
 
   .gux-scroll-button-container {
     display: flex;
-    background-color: @gux-off-tab-fill;
     border-radius: 4px;
 
     .gux-scroll-button {
@@ -88,30 +87,28 @@ gux-tabs {
       width: 28px;
       height: 40px;
       color: @gux-black-30;
+      cursor: pointer;
+      background-color: @gux-off-tab-fill;
       background-color: @gux-tabs-background;
       border: none;
       border-radius: 4px;
 
       gux-icon {
-        width: 10px;
-        height: 10px;
+        width: 16px;
+        height: 16px;
       }
 
-      &:focus {
-        border: 3px solid @gux-blue-90;
-        outline: none;
+      &:hover:not(:disabled) {
+        background-color: @gux-grey-50;
       }
 
-      &:hover {
-        color: @gux-blue-60;
-      }
-
-      &:active {
+      &:active:not(:disabled) {
         background-color: darken(@gux-tabs-background, 5%);
       }
 
-      &:focus-visible {
-        .focus-ring();
+      &:disabled {
+        cursor: default;
+        opacity: 50%;
       }
     }
   }

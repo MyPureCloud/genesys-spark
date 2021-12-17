@@ -3,8 +3,6 @@ import {
   a11yCheck
 } from '../../../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-input-radio', () => {
   it('renders', async () => {
     const page = await newSparkE2EPage({
@@ -39,7 +37,7 @@ describe('gux-input-radio', () => {
 
     const pizzaInput = await page.find('#dinner-pizza');
     const pastaInput = await page.find('#dinner-pasta');
-    await a11yCheck(page, axeExclusions, 'Before input is checked');
+    await a11yCheck(page, [], 'Before input is checked');
 
     expect(await pizzaInput.getProperty('checked')).toEqual(false);
     expect(await pastaInput.getProperty('checked')).toEqual(false);
@@ -49,7 +47,7 @@ describe('gux-input-radio', () => {
 
     expect(await pizzaInput.getProperty('checked')).toEqual(true);
     expect(await pastaInput.getProperty('checked')).toEqual(false);
-    await a11yCheck(page, axeExclusions, 'After input is checked');
+    await a11yCheck(page, [], 'After input is checked');
 
     await pastaInput.click();
     await page.waitForChanges();
@@ -70,7 +68,7 @@ describe('gux-input-radio', () => {
 
     const component = await page.find('gux-input-radio');
     const label = await component.find('label');
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(label.textContent).toContain('Pizza');
   });

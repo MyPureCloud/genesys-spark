@@ -3,8 +3,6 @@ import {
   a11yCheck
 } from '../../../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-input-color', () => {
   it('renders', async () => {
     const html =
@@ -25,13 +23,13 @@ describe('gux-input-color', () => {
 
     await inputColorButton.click();
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions, 'When input color popup is expanded');
+    await a11yCheck(page, [], 'When input color popup is expanded');
 
     expect(inputColorPopup).toHaveClass('gux-opened');
 
     await inputColorButton.click();
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions, 'When input color popup is collapsed');
+    await a11yCheck(page, [], 'When input color popup is collapsed');
 
     expect(inputColorPopup).not.toHaveClass('gux-opened');
   });

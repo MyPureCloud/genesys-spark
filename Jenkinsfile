@@ -109,6 +109,7 @@ pipeline {
           sh "cp .npmrc docs/.npmrc"
           sh "npm ci"
           sh "npm i --no-save @purecloud/web-app-deploy@6.0"
+          sh "npm run stencil"
         }
       }
     }

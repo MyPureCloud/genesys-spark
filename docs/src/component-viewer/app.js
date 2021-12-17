@@ -27,12 +27,14 @@ function createLayout() {
       <gux-disclosure-button position="right">
         <div slot="panel-content" class="controls-column">
           <gux-accordion id="accordion" heading-level="4">
-            <div slot="Event Descriptions">
-              <div class="events"></div>
-            </div>
-            <div slot="Attributes">
-              <div class="attributes"></div>
-            </div>
+            <gux-accordion-section>
+              <h2 slot="header">Event Descriptions</h2>
+              <div slot="content" class="events"></div>
+            </gux-accordion-section>
+            <gux-accordion-section>
+              <h2 slot="header">Attributes</h2>
+              <div slot="content" class="attributes"></div>
+            </gux-accordion-section>
           </gux-accordion>
           <div id="spark-link-container" class="spark-link"></div>
         </div>
@@ -55,9 +57,12 @@ function createLayout() {
   const setupAccessibilityTool = async () => {
     const axeLive = await import('axe-live');
     const accessibilityNode = toHTML(`
-        <div slot="Accessibility">
+      <gux-accordion-section>
+        <h2 slot="header">Accessibility</h2>
+        <div slot="content">
           <gux-button accent="primary" id="axe-trigger">Run accessibility tests</gux-button>
         </div>
+      </gux-accordion-section>
     `);
 
     const controlsColumn = document.querySelector('#accordion');

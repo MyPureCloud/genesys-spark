@@ -4,6 +4,7 @@ import {
   EventEmitter,
   h,
   Host,
+  JSX,
   Listen,
   Prop
 } from '@stencil/core';
@@ -26,6 +27,7 @@ export class GuxListItem {
    * The value associated with this item.
    */
   @Prop()
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   value: any;
 
   /**
@@ -38,6 +40,7 @@ export class GuxListItem {
    * Emits when the list item is clicked, or enter/space is pressed.
    */
   @Event()
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   press: EventEmitter<any>;
 
   @Listen('click')
@@ -52,7 +55,7 @@ export class GuxListItem {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Host role="listitem">
         <span class="gux-list-item">
@@ -66,7 +69,7 @@ export class GuxListItem {
           <slot />
         </span>
       </Host>
-    );
+    ) as JSX.Element;
   }
 
   private onItemClicked(): void {

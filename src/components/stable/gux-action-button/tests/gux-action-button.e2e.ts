@@ -2,14 +2,12 @@ import { E2EPage } from '@stencil/core/testing';
 
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 async function clickActionButton(page: E2EPage): Promise<void> {
   return await page.evaluate(() => {
     const element = document.querySelector('gux-action-button');
     const actionButton = element.shadowRoot.querySelector(
       '.gux-action-button > button'
-    ) as HTMLButtonElement;
+    );
 
     actionButton.click();
   });
@@ -20,7 +18,7 @@ async function clickDropdownButton(page: E2EPage): Promise<void> {
     const element = document.querySelector('gux-action-button');
     const dropdownButton = element.shadowRoot.querySelector(
       '.gux-dropdown-button > button'
-    ) as HTMLButtonElement;
+    );
 
     dropdownButton.click();
   });
@@ -28,7 +26,7 @@ async function clickDropdownButton(page: E2EPage): Promise<void> {
 
 async function clickActionItemButton(page: E2EPage): Promise<void> {
   return await page.evaluate(() => {
-    const element = document.querySelector('gux-action-item') as HTMLElement;
+    const element = document.querySelector('gux-action-item');
     element.click();
   });
 }
@@ -47,9 +45,9 @@ describe('gux-action-button', () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-action-button');
 
-    await a11yCheck(page, axeExclusions, 'closed');
+    await a11yCheck(page, [], 'closed');
     await clickDropdownButton(page);
-    await a11yCheck(page, axeExclusions, 'open');
+    await a11yCheck(page, [], 'open');
 
     expect(element).toHaveClass('hydrated');
   });

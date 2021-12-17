@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Listen,
   Method,
   Prop,
@@ -113,6 +114,7 @@ export class GuxAdvancedDropdown {
     return Promise.resolve([this.value]);
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async setLabeledBy(id: string) {
     this.srLabelledby = id;
@@ -145,7 +147,7 @@ export class GuxAdvancedDropdown {
     this.slotObserver.disconnect();
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div
         class={`gux-dropdown
@@ -206,7 +208,7 @@ export class GuxAdvancedDropdown {
           </div>
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private updateSelectionState(): void {
@@ -217,7 +219,9 @@ export class GuxAdvancedDropdown {
   }
 
   private addOptionListener(): void {
-    this.root.addEventListener('selectedChanged', this.handleSelectionChange);
+    this.root.addEventListener('selectedChanged', (event: CustomEvent) =>
+      this.handleSelectionChange(event)
+    );
   }
 
   private handleSelectionChange({ target }: CustomEvent): void {
@@ -304,7 +308,7 @@ export class GuxAdvancedDropdown {
 
     clearTimeout(this.filterDebounceTimer);
     this.filterDebounceTimer = setTimeout(
-      this.searchRequested.bind(this),
+      () => this.searchRequested(),
       this.filterDebounceTimeout
     );
   }
@@ -315,7 +319,7 @@ export class GuxAdvancedDropdown {
 
     if (!this.noFilter) {
       for (const option of this.selectionOptions) {
-        option.shouldFilter(value).then(isFiltered => {
+        void option.shouldFilter(value).then(isFiltered => {
           option.filtered = isFiltered;
         });
       }

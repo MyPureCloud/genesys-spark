@@ -64,9 +64,12 @@ export class GuxTabs {
   onInternalActivateTabPanel(event: CustomEvent): void {
     event.stopPropagation();
 
-    this.activateTab(event.detail, this.tabList, this.tabPanels);
+    const tabId = event.detail as string;
+
+    this.activateTab(tabId, this.tabList, this.tabPanels);
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxActivate(tabId: string): Promise<void> {
     this.activateTab(tabId, this.tabList, this.tabPanels);
@@ -94,8 +97,10 @@ export class GuxTabs {
       this.activeTab = panels[0].tabId;
     }
 
-    tabList.guxSetActive(this.activeTab);
-    panels.forEach(panel => panel.guxSetActive(panel.tabId === this.activeTab));
+    void tabList.guxSetActive(this.activeTab);
+    panels.forEach(
+      panel => void panel.guxSetActive(panel.tabId === this.activeTab)
+    );
   }
 
   componentWillLoad(): void {
@@ -112,6 +117,6 @@ export class GuxTabs {
           </div>
         </div>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

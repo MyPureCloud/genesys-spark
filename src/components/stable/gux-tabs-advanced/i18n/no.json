@@ -2,5 +2,10 @@
   "createNewTab": "Opprett ny fane",
   "scrollLeft": "Rull til venstre",
   "scrollRight": "Rull til høyre",
-  "disableNewTab": "Maksimalt antall faner som kan opprettes er nådd"
+  "options": "Fanealternativer for {tabTitle}",
+  "disableNewTab": "Maksimalt antall faner som kan opprettes er nådd",
+  "toggleSort": "Vis/skjul sorteringsmodus med mellomromstasten",
+  "sortModeOn": "Sorteringsmodus er på, bruk høyre og venstre piltaster for å endre rekkefølgen på fanene. Trykk på mellomromstasten for å fullføre sortering. Trykk på Esc-tasten for å avbryte sortering",
+  "sortComplete": "Sortering fullført",
+  "sortCancelled": "Sortering avbrutt"
 }

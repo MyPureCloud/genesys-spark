@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-tabs-advanced #render should render as expected 1`] = `
+<gux-tabs-advanced id="interactive" lang="en">
+  <mock:shadow-root>
+    <div class="gux-tabs">
+      <slot name="tab-list"></slot>
+      <div>
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-tab-advanced-list show-new-tab-button="true" slot="tab-list">
+    <!---->
+    <span aria-live="polite" class="gux-aria-live-region gux-sr-only"></span>
+    <div class="gux-tab-container">
+      <div class="action-button-container">
+        <div class="gux-scroll-button-container"></div>
+      </div>
+      <div class="gux-scrollable-section" role="tablist">
+        <gux-tab-advanced tab-icon-name="lock" tab-id="1-1">
+          <!---->
+          <div aria-disabled="false" class="gux-show gux-tab">
+            <button aria-controls="gux-1-1-panel" aria-selected="false" class="gux-tab-button" id="gux-1-1-tab" role="tab" tabindex="-1" type="button">
+              <div class="tab-icon-container">
+                <gux-icon decorative="" icon-name="lock"></gux-icon>
+              </div>
+              <span class="tab-title">
+                <span slot="title">
+                  Hello World
+                </span>
+              </span>
+            </button>
+            <button aria-expanded="false" class="gux-tab-options-button" id="gux-i" tabindex="-1" type="button">
+              <gux-icon icon-name="menu-kebab-vertical" screenreader-text="Tab Options for Hello World"></gux-icon>
+            </button>
+            <gux-popover closeonclickoutside="" for="gux-i" hidden="" position="top-end">
+              <div class="gux-dropdown-option-container">
+                <span slot="dropdown-options">
+                  <gux-tab-advanced-option icon-name="edit" onclick="notify(event)" option-id="1">
+                    Edit
+                  </gux-tab-advanced-option>
+                  <gux-tab-advanced-option icon-name="clone" onclick="notify(event)" option-id="2">
+                    Clone
+                  </gux-tab-advanced-option>
+                  <gux-tab-advanced-option icon-name="share" onclick="notify(event)" option-id="3">
+                    Share
+                  </gux-tab-advanced-option>
+                  <gux-tab-advanced-option icon-name="download" onclick="notify(event)" option-id="4">
+                    Download
+                  </gux-tab-advanced-option>
+                </span>
+              </div>
+            </gux-popover>
+          </div>
+        </gux-tab-advanced>
+        <gux-tab-advanced tab-icon-name="lock" tab-id="1-2">
+          <!---->
+          <div aria-disabled="false" class="gux-show gux-tab">
+            <button aria-controls="gux-1-2-panel" aria-selected="false" class="gux-tab-button" id="gux-1-2-tab" role="tab" tabindex="-1" type="button">
+              <div class="tab-icon-container">
+                <gux-icon decorative="" icon-name="lock"></gux-icon>
+              </div>
+              <span class="tab-title">
+                <span slot="title">
+                  Hello World 2
+                </span>
+              </span>
+            </button>
+          </div>
+        </gux-tab-advanced>
+        <gux-tab-advanced gux-disabled="" tab-icon-name="lock" tab-id="1-3">
+          <!---->
+          <div aria-disabled="true" class="gux-show gux-tab">
+            <button aria-controls="gux-1-3-panel" aria-selected="false" class="gux-tab-button" id="gux-1-3-tab" role="tab" tabindex="-1" type="button">
+              <div class="tab-icon-container">
+                <gux-icon decorative="" icon-name="lock"></gux-icon>
+              </div>
+              <span class="tab-title">
+                <span slot="title">
+                  Hello World 3
+                </span>
+              </span>
+            </button>
+          </div>
+        </gux-tab-advanced>
+      </div>
+      <div class="new-tab">
+        <button class="add-tab" title="Create New Tab">
+          <gux-icon decorative="" icon-name="add"></gux-icon>
+        </button>
+      </div>
+      <div class="action-button-container">
+        <div class="gux-scroll-button-container"></div>
+      </div>
+    </div>
+  </gux-tab-advanced-list>
+  <gux-tab-advanced-panel tab-id="1-1">
+    <!---->
+    <div aria-labelledby="gux-1-1-tab" aria-live="assertive" hidden="" id="gux-1-1-panel" role="tabpanel" tabindex="0">
+      <span>
+        Tab content 1
+      </span>
+      <div>
+        The current time is:
+        <span id="currentTime"></span>
+      </div>
+      <div>
+        The current selected panel tab-id is:
+        <span id="currenttab-id"></span>
+      </div>
+    </div>
+  </gux-tab-advanced-panel>
+  <gux-tab-advanced-panel tab-id="1-2">
+    <!---->
+    <div aria-labelledby="gux-1-2-tab" aria-live="assertive" hidden="" id="gux-1-2-panel" role="tabpanel" tabindex="0">
+      <span>
+        Tab content 2
+      </span>
+    </div>
+  </gux-tab-advanced-panel>
+  <gux-tab-advanced-panel tab-id="1-3">
+    <!---->
+    <div aria-labelledby="gux-1-3-tab" aria-live="assertive" hidden="" id="gux-1-3-panel" role="tabpanel" tabindex="0">
+      <span>
+        Tab content 3
+      </span>
+    </div>
+  </gux-tab-advanced-panel>
+</gux-tabs-advanced>
+`;

@@ -1,3 +1,4 @@
+<h1>gux-dropdown</h1>
 <div style="width: 100px">
   <gux-dropdown placeholder="Select..." filterable="true">
     <gux-option value="en-US">American English</gux-option>
@@ -14,6 +15,20 @@
 
 <div>
   <gux-dropdown placeholder="Select..." filterable="true">
+    <gux-option value="en-US">American English</gux-option>
+    <gux-option value="es">Latin American Spanish</gux-option>
+    <gux-option value="es-ES">European Spanish</gux-option>
+    <gux-option value="en-UK">UK English</gux-option>
+    <gux-option value="fr-CA" text="Canadian French"
+      >American French</gux-option
+    >
+    <gux-option value="fr" text="European French"></gux-option>
+    <gux-option>Dutch</gux-option>
+  </gux-dropdown>
+</div>
+
+<div>
+  <gux-dropdown placeholder="Select..." filterable="true" disabled>
     <gux-option value="en-US">American English</gux-option>
     <gux-option value="es">Latin American Spanish</gux-option>
     <gux-option value="es-ES">European Spanish</gux-option>
@@ -40,6 +55,20 @@
   </gux-dropdown>
 </div>
 
+<div>
+  <gux-dropdown placeholder="Select..." disabled>
+    <gux-option value="en-US">American English</gux-option>
+    <gux-option value="es">Latin American Spanish</gux-option>
+    <gux-option value="es-ES" selected>European Spanish</gux-option>
+    <gux-option value="en-UK">UK English</gux-option>
+    <gux-option value="fr-CA" text="Canadian French"
+      >American French</gux-option
+    >
+    <gux-option value="fr" text="European French"></gux-option>
+    <gux-option>Dutch</gux-option>
+  </gux-dropdown>
+</div>
+
 <div style="width: 100px">
   <gux-dropdown placeholder="Select..." value="en-US" filterable="true">
     <gux-option value="en-US">American English</gux-option>
@@ -54,7 +83,7 @@
   </gux-dropdown>
 </div>
 
-<h3>Dynamic Options</h3>
+<h2>Dynamic Options</h2>
 <gux-dropdown id="dropdown" placeholder="Select..."> </gux-dropdown>
 
 <gux-button

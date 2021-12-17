@@ -15,6 +15,6 @@ export class GuxInputCheckbox {
         <slot name="input" />
         <slot name="label" />
       </div>
-    );
+    ) as JSX.Element;
   }
 }

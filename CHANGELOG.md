@@ -2,6 +2,135 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.19](https://inindca///compare/v3.0.0-alpha.18...v3.0.0-alpha.19) (2021-12-16)
+
+
+### Bug Fixes
+
+* **dropdowns:** fixed styling differences between dropdown components ([d57cece](https://inindca///commit/d57cece6be887d0bba91df72f42da0f548b09f26))
+
+## [3.0.0-alpha.18](https://inindca///compare/v3.0.0-alpha.17...v3.0.0-alpha.18) (2021-12-15)
+
+
+### Features
+
+* **tests:** adding new tool for manual accessibility testing ([0a637d3](https://inindca///commit/0a637d39b99f3c6690d90d12a601e9d4e4f4f6e5))
+
+
+### Bug Fixes
+
+* **icon:** props now validated when they change not just on initialisation ([10bbd0a](https://inindca///commit/10bbd0ac26e43f20b23783f7c808512f3b65c9a5))
+
+## [3.0.0-alpha.17](https://inindca///compare/v3.0.0-alpha.16...v3.0.0-alpha.17) (2021-12-10)
+
+
+### Bug Fixes
+
+* **gux-dropdown-v2:** fixed selected item overflow ([5361819](https://inindca///commit/5361819effe167ed8e66d95478fc5228abe5db7f))
+
+## [3.0.0-alpha.16](https://inindca///compare/v3.0.0-alpha.15...v3.0.0-alpha.16) (2021-12-08)
+
+
+### Features
+
+* **gux-radial-progress:** added scale prop ([6c2344f](https://inindca///commit/6c2344f2fabf6b4173e84bc1548ba08853a6d061))
+
+
+### Bug Fixes
+
+* **gux-table:** fix gux-table scrollable-region-focusable a11y violation ([4568bff](https://inindca///commit/4568bff6c00501fb5a55567c19ebe52e7312c5c4))
+
+## [3.0.0-alpha.15](https://inindca///compare/v3.0.0-alpha.14...v3.0.0-alpha.15) (2021-12-07)
+
+
+### Bug Fixes
+
+* **gux-time-picker:** gave gux-time picker an aria-label attribute ([5b37a5d](https://inindca///commit/5b37a5d5e65203ae0d283a383e96b8f3376240c2))
+
+## [3.0.0-alpha.14](https://inindca///compare/v3.0.0-alpha.13...v3.0.0-alpha.14) (2021-12-03)
+
+
+### Bug Fixes
+
+* **gux-tabs:** update gux-tabs to match Spark guidelines ([a474be8](https://inindca///commit/a474be8710e9f9004c1157b2283c6c55a51fcbb7))
+* **gux-toggle:** fix nested interactive a11y violation ([360580e](https://inindca///commit/360580e65d6cd76daf78e85574a763ee6c3bc54c))
+* **gux-toggle:** linked label and error message to checkbox using aria-labelledby, aria-describedby ([daf8c16](https://inindca///commit/daf8c160dee0a7a5de97cca13104500b343ab858))
+
+## [3.0.0-alpha.13](https://inindca///compare/v3.0.0-alpha.12...v3.0.0-alpha.13) (2021-12-02)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fixed datepicker date selection bugs ([c13e775](https://inindca///commit/c13e7758e237ddd8616fea4d40aaa4c928d0b359))
+* **gux-dropdown:** now not focusable when disabled ([7b65819](https://inindca///commit/7b658199de63b6cbb927a91c2bb036484d4b421f))
+
+## [3.0.0-alpha.12](https://inindca///compare/v3.0.0-alpha.11...v3.0.0-alpha.12) (2021-12-01)
+
+
+### Features
+
+* **datepicker:** label prop now only accepts a string ([0bc437e](https://inindca///commit/0bc437ee7eccb08db7d029e15c0ea2b17bafdb7c))
+* **eslint:** migrated from TSLint to ESLint ([d13ff27](https://inindca///commit/d13ff2746b3c0da45066cf03a6a3665797fa08ee))
+* **panel-frame:** enabled shadow dom ([566ca8c](https://inindca///commit/566ca8c3bec49d3441ce0fe3979b334465310110))
+* **side-panel:** explicitly set shadow to false ([ad0ad6e](https://inindca///commit/ad0ad6ed6b9525c236ddf82ae6532285e0b7823a))
+
+
+### Bug Fixes
+
+* **disclosure-button:** localised default label text ([e2c4177](https://inindca///commit/e2c41771c1e5ca2a802f67c5ef9eb589fa58c7d8))
+* **pr-comment:** addressed PR comment ([20cca2d](https://inindca///commit/20cca2d33ad5451a0dc0c8706d32f6b0b34a7c8c))
+* **pr-comment:** addressed PR comment ([30e07d8](https://inindca///commit/30e07d8017a05c9c51a30bf31de3acd3a8c5073b))
+
+## [3.0.0-alpha.11](https://inindca///compare/v3.0.0-alpha.10...v3.0.0-alpha.11) (2021-11-27)
+
+## [3.0.0-alpha.10](https://inindca///compare/v3.0.0-alpha.9...v3.0.0-alpha.10) (2021-11-26)
+
+## [3.0.0-alpha.9](https://inindca///compare/v3.0.0-alpha.8...v3.0.0-alpha.9) (2021-11-25)
+
+
+### Bug Fixes
+
+* **css:** global gux-sr-only is not used by components anymore ([24c1ee3](https://inindca///commit/24c1ee35f4c29a0203b3191dde42c589d1b473c1))
+
+## [3.0.0-alpha.8](https://inindca///compare/v3.0.0-alpha.7...v3.0.0-alpha.8) (2021-11-24)
+
+## [3.0.0-alpha.7](https://inindca///compare/v3.0.0-alpha.6...v3.0.0-alpha.7) (2021-11-23)
+
+
+### Features
+
+* **gux-tabs:** add tests and fix a11y violations ([56abee3](https://inindca///commit/56abee3856ca8c7a8a25ed8dcc1619956f007c65))
+* **modal:** focus-trap is now mutable ([6138966](https://inindca///commit/6138966dd1d26dc14ad33cf2a7b1d418d8ef45d7))
+* **modal:** trap-focus prop now defaults to true ([d14db24](https://inindca///commit/d14db240bfda7168caf552ae44d41d4b6efc6563))
+
+
+### Bug Fixes
+
+* **gux-rating:** fixed star selection bug caused by switch to shadow dom ([cd9a6cd](https://inindca///commit/cd9a6cde9d62c9671ce44104ff7baa8d54423215))
+
+## [3.0.0-alpha.6](https://inindca///compare/v3.0.0-alpha.5...v3.0.0-alpha.6) (2021-11-20)
+
+
+### Features
+
+* **button-slot:** enabled shadow dom ([872f681](https://inindca///commit/872f681284dfd6e8117875994c6e251c53159872))
+* **tests:** add a11y tests and fix violations or create tickets ([37630b2](https://inindca///commit/37630b258c94df23fcd505d27e718173e2a86ed7))
+
+## [3.0.0-alpha.5](https://inindca///compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2021-11-19)
+
+
+### Features
+
+* **disclosure-button:** enabled shadow dom ([d7e179d](https://inindca///commit/d7e179db9af6397451a5901caab3e27f48b9ff78))
+* **icon:** enable shadow dom ([a2d07e1](https://inindca///commit/a2d07e15ef6966fc7d57e9bf09dd1d41daa224e1))
+
+
+### Bug Fixes
+
+* **gux-form-field:** added translations for gux-input-text-like and gux-input-search ([9aa91c8](https://inindca///commit/9aa91c8235523ce9006ce841e4be4cf2ea358cad))
+* **gux-icon:** remap trade icon to use correct icon ([d3c7010](https://inindca///commit/d3c7010d38755163ed2825a90b48c488c9d88cf4))
+* **input-range:** small styling change ([b255312](https://inindca///commit/b2553122f7b87156277de594adbd7eebc382f654))
+
 ## [3.0.0-alpha.4](https://inindca///compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2021-11-18)
 
 

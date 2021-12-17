@@ -2,5 +2,10 @@
   "createNewTab": "Criar nova guia",
   "scrollLeft": "Rolar para a esquerda",
   "scrollRight": "Rolar para a direita",
-  "disableNewTab": "Número máximo de guias criadas alcançado"
+  "options": "Opções de guia para {tabTitle}",
+  "disableNewTab": "Número máximo de guias criadas alcançado",
+  "toggleSort": "Alternar o modo de classificação usando a tecla de Espaço",
+  "sortModeOn": "Modo de classificação ativo, use as setas esquerda e direita para reordenar as guias. Pressione a tecla de Espaço ou Enter para concluir a classificação. Pressione a tecla Escape para cancelar a classificação",
+  "sortComplete": "Classificação concluída",
+  "sortCancelled": "Classificação cancelada"
 }

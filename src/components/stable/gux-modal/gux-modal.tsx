@@ -6,7 +6,8 @@ import {
   h,
   JSX,
   Listen,
-  Prop
+  Prop,
+  Watch
 } from '@stencil/core';
 import { createFocusTrap, FocusTrap } from 'focus-trap';
 import { trackComponent } from '../../../usage-tracking';
@@ -33,7 +34,7 @@ export class GuxModal {
   size: GuxModalSize = 'dynamic';
 
   @Prop()
-  trapFocus: boolean = false;
+  trapFocus: boolean = true;
 
   /**
    * Query selector for the element to initially focus when the modal opens
@@ -47,6 +48,15 @@ export class GuxModal {
    */
   @Event()
   guxdismiss: EventEmitter<void>;
+
+  @Watch('trapFocus')
+  watchTrapFocus(trapFocus: boolean): void {
+    if (trapFocus) {
+      this.focusTrap?.unpause();
+    } else {
+      this.focusTrap?.pause();
+    }
+  }
 
   @Listen('keydown')
   protected handleKeyEvent(event: KeyboardEvent) {
@@ -80,7 +90,7 @@ export class GuxModal {
   @Element()
   private root: HTMLElement;
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     trackComponent(this.root, { variant: this.size });
   }
 
@@ -125,7 +135,7 @@ export class GuxModal {
           )}
         </div>
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private getInitialFocusElement(): HTMLElement | SVGElement | undefined {

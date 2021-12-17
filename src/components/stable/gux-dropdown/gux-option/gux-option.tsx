@@ -1,4 +1,4 @@
-import { Component, Element, h, Method, Prop, Watch } from '@stencil/core';
+import { Component, Element, h, JSX, Method, Prop, Watch } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-option.less',
@@ -37,7 +37,7 @@ export class GuxOption {
 
   @Watch('selected')
   updateParentSelection() {
-    this.getParentGuxDropdown().setSelected();
+    void this.getParentGuxDropdown().setSelected();
   }
 
   /**
@@ -71,7 +71,7 @@ export class GuxOption {
     };
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <div title={this.text}>
         <span
@@ -82,6 +82,6 @@ export class GuxOption {
         </span>
         {this.text}
       </div>
-    );
+    ) as JSX.Element;
   }
 }

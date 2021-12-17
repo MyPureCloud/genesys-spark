@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 import { asyncFilter } from '../../../../utils/array/async-filter';
 const html = `
   <div lang="en">
@@ -15,7 +13,7 @@ describe('gux-advanced-dropdown', () => {
   it('should render', async () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
     expect(element).toHaveClass('hydrated');
   });
 
@@ -28,9 +26,9 @@ describe('gux-advanced-dropdown', () => {
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(false);
 
-    element.click();
+    await element.click();
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(true);
   });
@@ -45,7 +43,7 @@ describe('gux-advanced-dropdown', () => {
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(false);
 
-    element.click();
+    await element.click();
     await page.waitForChanges();
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(true);
@@ -53,7 +51,7 @@ describe('gux-advanced-dropdown', () => {
     const englishDropdownOption = await element.find(
       'gux-dropdown-option[value="en"]'
     );
-    englishDropdownOption.click();
+    await englishDropdownOption.click();
     await page.waitForChanges();
 
     expect(inputSpy).toHaveReceivedEventDetail('en');
@@ -70,7 +68,7 @@ describe('gux-advanced-dropdown', () => {
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(false);
 
-    element.click();
+    await element.click();
     await page.waitForChanges();
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(true);
@@ -114,7 +112,7 @@ describe('gux-advanced-dropdown', () => {
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(false);
 
-    element.click();
+    await element.click();
     await page.waitForChanges();
 
     expect(dropdownElement.classList.contains('gux-active')).toBe(true);

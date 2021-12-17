@@ -3,6 +3,7 @@ import { Component, Element, h, Host, Listen, JSX, Prop } from '@stencil/core';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import clamp from '../../../utils/number/clamp';
 import { trackComponent } from '../../../usage-tracking';
+import { logError } from '../../../utils/error/log-error';
 
 @Component({
   styleUrl: 'gux-rating.less',
@@ -10,7 +11,7 @@ import { trackComponent } from '../../../usage-tracking';
   shadow: true
 })
 export class GuxRating {
-  private ratingElement: HTMLDivElement;
+  private starContainer: HTMLDivElement;
 
   @Element()
   root: HTMLElement;
@@ -36,9 +37,9 @@ export class GuxRating {
     }
 
     const [clickedElement] = event.composedPath();
-    const ratingStar = (clickedElement as HTMLElement).closest('gux-icon');
-    const clickedStarIndex = Array.from(this.ratingElement.children).findIndex(
-      child => child === ratingStar
+    const ratingStar = (clickedElement as HTMLElement).getRootNode();
+    const clickedStarIndex = Array.from(this.starContainer.children).findIndex(
+      child => child.shadowRoot === ratingStar
     );
     const clickedStarNominalValue = clickedStarIndex + 1;
 
@@ -85,7 +86,7 @@ export class GuxRating {
     const validatedNewValue = clamp(
       newValue,
       0,
-      Array.from(this.ratingElement.children).length
+      Array.from(this.starContainer.children).length
     );
 
     if (this.value !== validatedNewValue) {
@@ -106,8 +107,11 @@ export class GuxRating {
         }
 
         return acc.concat('rating');
-      }, [])
-      .map(iconName => <gux-icon icon-name={iconName} decorative></gux-icon>);
+      }, [] as string[])
+      .map(
+        iconName =>
+          (<gux-icon icon-name={iconName} decorative></gux-icon>) as JSX.Element
+      );
   }
 
   private getTabIndex(): number {
@@ -118,26 +122,40 @@ export class GuxRating {
     trackComponent(this.root);
   }
 
+  componentDidLoad(): void {
+    if (
+      !(
+        this.root.getAttribute('aria-label') ||
+        this.root.getAttribute('aria-labelledby')
+      )
+    ) {
+      logError(
+        'gux-rating',
+        '`gux-rating` requires a label. Either provide a label and associate it with the gux-rating element using `aria-labelledby` or add an `aria-label` attribute to the gux-rating element.'
+      );
+    }
+  }
+
   render(): JSX.Element {
     return (
       <Host
         role="spinbutton"
         tabindex={this.getTabIndex()}
-        aria-readonly={this.readonly}
+        aria-readonly={this.readonly.toString()}
         aria-valuenow={this.value}
         aria-valuemin="0"
         aria-valuemax={this.maxValue}
       >
         <div
-          ref={(el: HTMLDivElement) => (this.ratingElement = el)}
+          ref={(el: HTMLDivElement) => (this.starContainer = el)}
           class={{
-            'gux-rating-start-container': true,
+            'gux-rating-star-container': true,
             'gux-disabled': this.disabled
           }}
         >
           {this.getRatingStarElements()}
         </div>
       </Host>
-    );
+    ) as JSX.Element;
   }
 }

@@ -1,9 +1,10 @@
-import { newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 describe('gux-time-picker-beta', () => {
   it('renders', async () => {
-    const page = await newE2EPage();
-    await page.setContent('<gux-time-picker-beta></gux-time-picker-beta>');
+    const page = await newSparkE2EPage({
+      html: `<gux-time-picker-beta></gux-time-picker-beta>`
+    });
     const element = await page.find('gux-time-picker-beta');
 
     expect(element).toHaveClass('hydrated');
@@ -11,9 +12,9 @@ describe('gux-time-picker-beta', () => {
 
   it('Active class on focus', async () => {
     // Setup
-    const page = await newE2EPage();
-    await page.setContent('<gux-time-picker-beta></gux-time-picker-beta>');
-    await page.waitForChanges();
+    const page = await newSparkE2EPage({
+      html: `<gux-time-picker-beta></gux-time-picker-beta>`
+    });
 
     // Run
     await page.focus('input');
@@ -21,12 +22,14 @@ describe('gux-time-picker-beta', () => {
 
     // Validate
     const input = await page.find('gux-time-picker-beta input');
+    expect(input).toHaveClass('gux-focused');
   });
 
   it('Type a valid value', async () => {
-    const page = await newE2EPage();
-    await page.setContent('<gux-time-picker-beta></gux-time-picker-beta>');
-    await page.waitForChanges();
+    const page = await newSparkE2EPage({
+      html: `<gux-time-picker-beta></gux-time-picker-beta>`
+    });
+    await a11yCheck(page, [], 'dropdown closed');
 
     // Focus in
     const input = await page.find('gux-time-picker-beta input');
@@ -36,6 +39,7 @@ describe('gux-time-picker-beta', () => {
     // Type
     await input.type('00:55:00');
     let list = await page.find('gux-time-picker-beta gux-list');
+    await a11yCheck(page, [], 'dropdown opened');
     expect(input).toHaveClass('gux-focused');
     expect(list).not.toBeNull();
 
@@ -49,9 +53,9 @@ describe('gux-time-picker-beta', () => {
   });
 
   it('Type an invalid value', async () => {
-    const page = await newE2EPage();
-    await page.setContent('<gux-time-picker-beta></gux-time-picker-beta>');
-    await page.waitForChanges();
+    const page = await newSparkE2EPage({
+      html: `<gux-time-picker-beta></gux-time-picker-beta>`
+    });
 
     // Focus in
     const input = await page.find('gux-time-picker-beta input');

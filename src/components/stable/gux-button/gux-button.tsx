@@ -30,7 +30,7 @@ export class GuxButton {
    * Indicate if the button is disabled or not
    */
   @Prop()
-  disabled = false;
+  disabled: boolean = false;
 
   /**
    * The component accent (secondary or primary).
@@ -41,6 +41,7 @@ export class GuxButton {
   /**
    * Focus the button
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async focusElement() {
     this.root.querySelector('button').focus();
@@ -61,7 +62,7 @@ export class GuxButton {
       >
         <slot />
       </button>
-    );
+    ) as JSX.Element;
   }
 
   private makeSlotContentDisableable() {

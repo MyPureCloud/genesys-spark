@@ -62,7 +62,7 @@ describe('gux-button', () => {
       const html = '<gux-button gux-title="default">Button</gux-button>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const button = page.root.querySelector('button') as HTMLButtonElement;
+      const button = page.root.querySelector('button');
       const clickSpy = jest.fn();
 
       element.addEventListener('click', clickSpy);

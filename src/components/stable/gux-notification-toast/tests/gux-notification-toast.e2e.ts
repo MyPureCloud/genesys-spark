@@ -1,8 +1,6 @@
 import { E2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 async function clickDismissButton(page: E2EPage) {
   await page.evaluate(async () => {
     const element = document.querySelector('gux-notification-toast');
@@ -60,7 +58,7 @@ describe('gux-notification-toast', () => {
       it(description, async () => {
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-notification-toast');
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
         expect(element.outerHTML).toMatchSnapshot();
       });
     });
@@ -76,7 +74,6 @@ describe('gux-notification-toast', () => {
         </gux-notification-toast>
       `;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-notification-toast');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -101,7 +98,6 @@ describe('gux-notification-toast', () => {
         </gux-notification-toast>
       `;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-notification-toast');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 

@@ -34,7 +34,7 @@ export class GuxInputColorOption {
         title={this.value}
         onClick={this.onColorOptionClickHandler.bind(this)}
       />
-    );
+    ) as JSX.Element;
   }
 
   private onColorOptionClickHandler(): void {

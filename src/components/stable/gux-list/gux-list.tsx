@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  JSX,
   Listen,
   Method,
   Prop,
@@ -31,7 +32,7 @@ export class GuxList {
    * The current selection in the list.
    */
   @Prop({ mutable: true })
-  value: any;
+  value: unknown;
 
   /**
    * The highlight value
@@ -49,7 +50,7 @@ export class GuxList {
    * Triggered when the list's selection is changed.
    */
   @Event()
-  changed: EventEmitter<any>;
+  changed: EventEmitter<unknown>;
 
   /**
    * Using a mutation observer because component loading order is not quite right.
@@ -62,12 +63,12 @@ export class GuxList {
     this.performHighlight(this.highlight);
   });
 
-  emitChanged(value: any) {
+  emitChanged(value: unknown) {
     this.changed.emit(value);
   }
 
   @Listen('selected')
-  itemSelected(ev: CustomEvent<any>) {
+  itemSelected(ev: CustomEvent<unknown>) {
     if (!ev.detail) {
       return;
     }
@@ -76,13 +77,14 @@ export class GuxList {
   }
 
   @Watch('value')
-  valueHandler(newValue) {
+  valueHandler(newValue: unknown) {
     this.emitChanged(newValue);
   }
 
   /*
    * Sets focus to the fist item in the list.
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async setFocusOnFirstItem(): Promise<void> {
     this.selectedIndex = 0;
@@ -92,6 +94,7 @@ export class GuxList {
   /*
    * Sets focus to the last item in the list.
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async setFocusOnLastItem(): Promise<void> {
     const filteredList = this.getFilteredList();
@@ -102,6 +105,7 @@ export class GuxList {
   /**
    * Returns whether the last item in the list is selected.
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async isLastItemSelected(): Promise<boolean> {
     const filteredList = this.getFilteredList();
@@ -111,6 +115,7 @@ export class GuxList {
   /**
    * Returns whether the first item in the list is selected.
    */
+  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async isFirstItemSelected(): Promise<boolean> {
     return this.selectedIndex <= 0;
@@ -132,7 +137,7 @@ export class GuxList {
     this.observer.disconnect();
   }
 
-  render() {
+  render(): JSX.Element {
     this.performHighlight(this.highlight);
     this.updateTabIndexes();
     return (
@@ -144,7 +149,7 @@ export class GuxList {
       >
         <slot />
       </div>
-    );
+    ) as JSX.Element;
   }
 
   private onKeyDown(event: KeyboardEvent): void {
@@ -219,7 +224,7 @@ export class GuxList {
   }
 
   private getFilteredList(): Element[] {
-    const slot = this.root.querySelector('slot') as HTMLSlotElement;
+    const slot = this.root.querySelector('slot');
 
     if (slot) {
       return slot

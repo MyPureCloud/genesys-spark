@@ -41,15 +41,11 @@ describe('gux-disclosure-button', () => {
           language
         });
         const element = page.root as HTMLGuxDisclosureButtonElement;
-        const button = element.shadowRoot.querySelector(
+        const button: HTMLButtonElement = element.shadowRoot.querySelector(
           '.gux-disclosure-button'
-        ) as HTMLButtonElement;
-        const panel = element.shadowRoot.querySelector(
-          '.gux-disclosure-panel'
-        ) as HTMLElement;
-        const icon = element.shadowRoot.querySelector(
-          'gux-icon'
-        ) as HTMLGuxIconElement;
+        );
+        const panel = element.shadowRoot.querySelector('.gux-disclosure-panel');
+        const icon = element.shadowRoot.querySelector('gux-icon');
 
         const activeEventSpy = jest.fn();
         element.addEventListener('active', activeEventSpy);
@@ -79,15 +75,11 @@ describe('gux-disclosure-button', () => {
           language
         });
         const element = page.root as HTMLGuxDisclosureButtonElement;
-        const button = element.shadowRoot.querySelector(
+        const button: HTMLButtonElement = element.shadowRoot.querySelector(
           '.gux-disclosure-button'
-        ) as HTMLButtonElement;
-        const panel = element.shadowRoot.querySelector(
-          '.gux-disclosure-panel'
-        ) as HTMLElement;
-        const icon = element.shadowRoot.querySelector(
-          'gux-icon'
-        ) as HTMLGuxIconElement;
+        );
+        const panel = element.shadowRoot.querySelector('.gux-disclosure-panel');
+        const icon = element.shadowRoot.querySelector('gux-icon');
 
         const activeEventSpy = jest.fn();
         element.addEventListener('active', activeEventSpy);

@@ -36,7 +36,7 @@ export class GuxNotificationToast {
   @Element()
   private root: HTMLElement;
 
-  async componentWillLoad(): Promise<void> {
+  componentWillLoad(): void {
     trackComponent(this.root, { variant: this.accent });
   }
 
@@ -61,7 +61,7 @@ export class GuxNotificationToast {
           onClick={this.onDismissClickHandler.bind(this)}
         ></gux-dismiss-button>
       </Host>
-    );
+    ) as JSX.Element;
   }
 
   private onDismissClickHandler(event: MouseEvent): void {

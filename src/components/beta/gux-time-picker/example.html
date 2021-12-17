@@ -1,9 +1,26 @@
+<h1>gux-time-picker-beta</h1>
+<h2>Set value</h2>
 <div>
   <gux-time-picker-beta value="03:40:32"></gux-time-picker-beta>
 </div>
+<h2>Min and max range</h2>
 <div>
   <gux-time-picker-beta min="02:00:00" max="22:00:00"></gux-time-picker-beta>
 </div>
+<h2>Interval</h2>
+<span>Default interval is 15</span>
 <div>
   <gux-time-picker-beta interval="10"></gux-time-picker-beta>
+</div>
+<h2>aria-label</h2>
+<span
+  >Providing a descriptive string for the label attribute is highly recommended
+  for accessibility reasons. If none is specified, the default aria-label is
+  'Time Picker'.</span
+>
+<div>
+  <gux-time-picker-beta
+    value="03:40:32"
+    label="Lunch start time"
+  ></gux-time-picker-beta>
 </div>
