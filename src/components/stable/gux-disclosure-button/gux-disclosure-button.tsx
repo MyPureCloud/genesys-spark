@@ -14,7 +14,6 @@ import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { trackComponent } from '../../../usage-tracking';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { ILocalizedComponentResources } from '../../../i18n/fetchResources';
 
 import translationResources from './i18n/en.json';
 import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
@@ -41,8 +40,7 @@ export class GuxDisclosureButton {
    * Indicates the label for the disclosure button
    */
   @Prop()
-  label: string = (translationResources as ILocalizedComponentResources)
-    .defaultLabel;
+  label: string;
 
   /**
    * Used to open or close the disclosure panel

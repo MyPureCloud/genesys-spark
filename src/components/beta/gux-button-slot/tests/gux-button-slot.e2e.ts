@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-button-slot-beta', () => {
   describe('#render', () => {
     [
@@ -130,7 +128,7 @@ describe('gux-button-slot-beta', () => {
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-button-slot-beta');
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
         expect(element.outerHTML).toMatchSnapshot();
       });
     });

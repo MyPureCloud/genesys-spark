@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-flyout-menu', () => {
   const html = `
     <gux-flyout-menu-beta>
@@ -44,7 +42,7 @@ describe('gux-flyout-menu', () => {
     it(`should render as expected`, async () => {
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-flyout-menu-beta');
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
 
       expect(element.outerHTML).toMatchSnapshot();
     });
@@ -59,7 +57,7 @@ describe('gux-flyout-menu', () => {
       expect(menuWrapper).not.toHaveClass('gux-shown');
       await element.hover();
       await page.waitForChanges();
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
 
       expect(menuWrapper).toHaveClass('gux-shown');
     });
@@ -72,7 +70,7 @@ describe('gux-flyout-menu', () => {
       const submenuWrapper = await page.find('.gux-submenu-wrapper');
       await submenu.hover();
       await page.waitForChanges();
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
 
       expect(submenuWrapper).toHaveClass('gux-shown');
     });

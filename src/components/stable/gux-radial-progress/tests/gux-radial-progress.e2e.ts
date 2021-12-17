@@ -1,8 +1,6 @@
 import { E2EElement, E2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 async function newNonrandomE2EPage({
   html
 }: {
@@ -44,7 +42,7 @@ describe('gux-radial-progress', () => {
     it(`should display component as expected (${index + 1})`, async () => {
       const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-radial-progress');
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
 
       expect(element.outerHTML).toMatchSnapshot();
     });
@@ -72,7 +70,7 @@ describe('gux-radial-progress', () => {
       html: '<gux-radial-progress value="0" screenreader-text="Uploading file"></gux-radial-progress>'
     });
     const element = await page.find('gux-radial-progress');
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(getInternalProgressBar(element).getAttribute('aria-label')).toEqual(
       'Uploading file'

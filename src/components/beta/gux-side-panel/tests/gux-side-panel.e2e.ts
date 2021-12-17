@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-side-panel', () => {
   it('renders', async () => {
     const page = await newSparkE2EPage({
@@ -33,7 +31,7 @@ describe('gux-side-panel', () => {
     component.setProperty('isOpen', true);
     await page.waitForChanges();
     const computedStyles = await contentElement.getComputedStyle();
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(computedStyles.display).toEqual('block');
   });
@@ -50,7 +48,7 @@ describe('gux-side-panel', () => {
         <div slot="side-panel-content">
           <span>I will be visible when the panel is open!</span>
         </div>
-      </gux-side-panel-beta> 
+      </gux-side-panel-beta>
       `
     });
 
@@ -61,7 +59,7 @@ describe('gux-side-panel', () => {
     component.setProperty('isOpen', false);
     await page.waitForChanges();
     const computedStyles = await contentElement.getComputedStyle();
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(computedStyles.display).toEqual('none');
   });

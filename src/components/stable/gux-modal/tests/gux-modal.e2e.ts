@@ -1,8 +1,6 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 import { E2EPage } from '@stencil/core/testing';
 
-const axeExclusions = [];
-
 describe('gux-modal', () => {
   describe('#render', () => {
     [
@@ -122,7 +120,7 @@ describe('gux-modal', () => {
 
         element.setAttribute('hidden', true);
         await page.waitForChanges();
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
 
         expect(element.outerHTML).toMatchSnapshot();
       });

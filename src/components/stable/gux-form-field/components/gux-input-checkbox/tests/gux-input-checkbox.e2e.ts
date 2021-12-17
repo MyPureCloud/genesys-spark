@@ -3,8 +3,6 @@ import {
   a11yCheck
 } from '../../../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-input-checkbox', () => {
   it('renders', async () => {
     const page = await newSparkE2EPage({
@@ -35,12 +33,12 @@ describe('gux-input-checkbox', () => {
     const label = await component.find('label');
     const input = await component.find('input');
 
-    await a11yCheck(page, axeExclusions, 'Before checking checkbox');
+    await a11yCheck(page, [], 'Before checking checkbox');
     await label.click();
     await page.waitForChanges();
     expect(await input.getProperty('checked')).toBe(true);
 
-    await a11yCheck(page, axeExclusions, 'After checking checkbox');
+    await a11yCheck(page, [], 'After checking checkbox');
     await label.click();
     await page.waitForChanges();
     expect(await input.getProperty('checked')).toBe(false);

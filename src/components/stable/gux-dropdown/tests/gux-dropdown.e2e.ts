@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-dropdown', () => {
   it('renders', async () => {
     const page = await newSparkE2EPage({
@@ -26,12 +24,12 @@ describe('gux-dropdown', () => {
     `
     });
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions, 'before opening dropdown');
+    await a11yCheck(page, [], 'before opening dropdown');
     const element = await page.find('gux-dropdown');
     const inputElm = await element.find('gux-input-text-like');
     await inputElm.click();
     await page.waitForChanges();
-    await a11yCheck(page, axeExclusions, 'after opening dropdown');
+    await a11yCheck(page, [], 'after opening dropdown');
 
     const dropMenu = await element.find('.gux-dropdown');
     expect(dropMenu.className.split(' ')).toContain('gux-active');

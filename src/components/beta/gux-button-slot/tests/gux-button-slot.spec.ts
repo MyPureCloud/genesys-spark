@@ -13,6 +13,10 @@ const components = [GuxButtonSlot];
 const language = 'en';
 
 describe('gux-button-slot-beta', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   describe('#render', () => {
     [
       {

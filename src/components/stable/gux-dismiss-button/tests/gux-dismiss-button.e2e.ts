@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-dismiss-button', () => {
   it('should build', async () => {
     const page = await newSparkE2EPage({
@@ -19,7 +17,7 @@ describe('gux-dismiss-button', () => {
         it(`should render component as expected (${index + 1})`, async () => {
           const page = await newSparkE2EPage({ html });
           const element = await page.find('gux-dismiss-button');
-          await a11yCheck(page, axeExclusions);
+          await a11yCheck(page);
           expect(element.innerHTML).toMatchSnapshot();
         });
       }

@@ -41,7 +41,7 @@ describe('gux-disclosure-button', () => {
           language
         });
         const element = page.root as HTMLGuxDisclosureButtonElement;
-        const button = element.shadowRoot.querySelector(
+        const button: HTMLButtonElement = element.shadowRoot.querySelector(
           '.gux-disclosure-button'
         );
         const panel = element.shadowRoot.querySelector('.gux-disclosure-panel');
@@ -75,7 +75,7 @@ describe('gux-disclosure-button', () => {
           language
         });
         const element = page.root as HTMLGuxDisclosureButtonElement;
-        const button = element.shadowRoot.querySelector(
+        const button: HTMLButtonElement = element.shadowRoot.querySelector(
           '.gux-disclosure-button'
         );
         const panel = element.shadowRoot.querySelector('.gux-disclosure-panel');

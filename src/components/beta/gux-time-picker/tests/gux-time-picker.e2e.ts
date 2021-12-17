@@ -1,7 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 describe('gux-time-picker-beta', () => {
   it('renders', async () => {
     const page = await newSparkE2EPage({
@@ -31,7 +29,7 @@ describe('gux-time-picker-beta', () => {
     const page = await newSparkE2EPage({
       html: `<gux-time-picker-beta></gux-time-picker-beta>`
     });
-    await a11yCheck(page, axeExclusions, 'dropdown closed');
+    await a11yCheck(page, [], 'dropdown closed');
 
     // Focus in
     const input = await page.find('gux-time-picker-beta input');
@@ -41,7 +39,7 @@ describe('gux-time-picker-beta', () => {
     // Type
     await input.type('00:55:00');
     let list = await page.find('gux-time-picker-beta gux-list');
-    await a11yCheck(page, axeExclusions, 'dropdown opened');
+    await a11yCheck(page, [], 'dropdown opened');
     expect(input).toHaveClass('gux-focused');
     expect(list).not.toBeNull();
 

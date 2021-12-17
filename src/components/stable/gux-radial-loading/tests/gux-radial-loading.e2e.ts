@@ -1,8 +1,6 @@
 import { E2EElement } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusions = [];
-
 function getInternalProgressBar(radialLoadingElement: E2EElement): Element {
   return radialLoadingElement.shadowRoot.querySelector(
     'div[role="progressbar"]'
@@ -20,7 +18,7 @@ describe('gux-radial-loading', () => {
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-radial-loading');
 
-      await a11yCheck(page, axeExclusions);
+      await a11yCheck(page);
       expect(element.innerHTML).toMatchSnapshot();
     });
   });
@@ -30,7 +28,7 @@ describe('gux-radial-loading', () => {
       '<gux-radial-loading lang="en" screenreader-text="Loading Content"></gux-radial-loading>';
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-radial-loading');
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(getInternalProgressBar(element).getAttribute('aria-label')).toEqual(
       'Loading Content'
@@ -41,7 +39,7 @@ describe('gux-radial-loading', () => {
     const html = '<gux-radial-loading lang="en"></gux-radial-loading>';
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-radial-loading');
-    await a11yCheck(page, axeExclusions);
+    await a11yCheck(page);
 
     expect(getInternalProgressBar(element).getAttribute('aria-label')).toEqual(
       'Loading'
