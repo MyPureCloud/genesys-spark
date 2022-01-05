@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 import { less as stencilLess } from '@stencil/less';
 import copy from 'rollup-plugin-copy';
 import generateMetadata from './scripts/generate-component-data';
+import { reactOutputTarget } from '@stencil/react-output-target';
 
 const CDN_URL = process.env.CDN_URL || '';
 
@@ -18,7 +19,12 @@ export const config: Config = {
     },
     {
       type: 'docs-readme'
-    }
+    },
+    reactOutputTarget({
+      componentCorePackage: '@genesys/common-webcomponents',
+      proxiesFile: './common-webcomponents-react/index.ts'
+      // includeDefineCustomElements: true,
+    })
   ],
   plugins: [
     stencilLess({

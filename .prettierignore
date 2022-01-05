@@ -1,5 +1,6 @@
 package-lock.json
 /src/components.d.ts
+common-webcomponents-react
 
 build/
 dist/

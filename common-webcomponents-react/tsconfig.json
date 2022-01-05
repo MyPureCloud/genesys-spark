@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {     "declaration": true,
+    "rootDir": ".",
+    "jsxFactory": "React.createElement",
+    "outDir": "dist"
+  },
+  "include": ["index.ts", "react-component-lib"]
+}
