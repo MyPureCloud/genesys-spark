@@ -81,9 +81,12 @@ describe('gux-tag-beta', () => {
         const html = `<gux-tag-beta lang="en" icon="bolt" color="navy" value="3" removable>navy</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag-beta');
+        const deleteButton = await element.find(
+          'pierce/.gux-tag-remove-button'
+        );
         const guxdeleteSpy = await page.spyOnEvent('guxdelete');
 
-        await element.press('Delete');
+        await deleteButton.press('Delete');
         await page.waitForChanges();
 
         expect(guxdeleteSpy).toHaveReceivedEvent();
@@ -93,36 +96,15 @@ describe('gux-tag-beta', () => {
         const html = `<gux-tag-beta lang="en" icon="bolt" color="navy" value="3" removable>navy</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag-beta');
+        const deleteButton = await element.find(
+          'pierce/.gux-tag-remove-button'
+        );
         const guxdeleteSpy = await page.spyOnEvent('guxdelete');
 
-        await element.press('Backspace');
+        await deleteButton.press('Backspace');
         await page.waitForChanges();
 
         expect(guxdeleteSpy).toHaveReceivedEvent();
-      });
-
-      it('should not emit guxdelete if tag is focused and not removable and "Delete" is pressed', async () => {
-        const html = `<gux-tag-beta lang="en" icon="bolt" color="navy" value="3">navy</gux-tag-beta>`;
-        const page = await newSparkE2EPage({ html });
-        const element = await page.find('gux-tag-beta');
-        const guxdeleteSpy = await page.spyOnEvent('guxdelete');
-
-        await element.press('Delete');
-        await page.waitForChanges();
-
-        expect(guxdeleteSpy).not.toHaveReceivedEvent();
-      });
-
-      it('should not emit guxdelete if tag is focused and not removable and "Backspace" is pressed', async () => {
-        const html = `<gux-tag-beta lang="en" icon="bolt" color="navy" value="3">navy</gux-tag-beta>`;
-        const page = await newSparkE2EPage({ html });
-        const element = await page.find('gux-tag-beta');
-        const guxdeleteSpy = await page.spyOnEvent('guxdelete');
-
-        await element.press('Backspace');
-        await page.waitForChanges();
-
-        expect(guxdeleteSpy).not.toHaveReceivedEvent();
       });
     });
   });

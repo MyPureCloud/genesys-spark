@@ -18,9 +18,7 @@ import { GuxTagColor } from './gux-tag.types';
 @Component({
   styleUrl: 'gux-tag.less',
   tag: 'gux-tag-beta',
-  shadow: {
-    delegatesFocus: true
-  }
+  shadow: true
 })
 export class GuxTag {
   private i18n: GetI18nValue;
