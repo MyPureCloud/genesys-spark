@@ -13,6 +13,9 @@ async function listCheckedA11yComponents() {
       );
       const hasA11yChecklistFile = !!a11yChecklistFiles[0];
       let hasPassingA11yChecks = '--';
+      if (component.includes('legacy')) {
+        hasPassingA11yChecks = 'N/A';
+      }
       if (hasA11yChecklistFile) {
         const contents = await fs.readFile(a11yChecklistFiles[0], 'utf8');
         hasPassingA11yChecks = contents.includes('❌') ? '❌' : '✅';
