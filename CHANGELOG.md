@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.21](https://inindca///compare/v3.0.0-alpha.20...v3.0.0-alpha.21) (2022-01-07)
+
+
+### Bug Fixes
+
+* **gux-modal:** fix max-height typo for modal sizes ([d95dc71](https://inindca///commit/d95dc71865765af395e9cd2b6e1bbc9fdeedb993))
+
 ## [3.0.0-alpha.20](https://inindca///compare/v3.0.0-alpha.19...v3.0.0-alpha.20) (2021-12-18)
 
 ## [3.0.0-alpha.19](https://inindca///compare/v3.0.0-alpha.18...v3.0.0-alpha.19) (2021-12-16)
