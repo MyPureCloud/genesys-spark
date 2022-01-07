@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.50.1](https://inindca///compare/v2.50.0...v2.50.1) (2022-01-07)
+
+
+### Bug Fixes
+
+* **gux-modal:** fix max-height style ([3fbd20c](https://inindca///commit/3fbd20cd327f08c3a7cc581c2f4e93e6a455f9c4))
+* **gux-pagination:** backport pagination input label fix ([32c2067](https://inindca///commit/32c2067b29f8b8b8e7b7cd0ac3da52d572215aed))
+
 ## [2.50.0](https://inindca///compare/v2.49.0...v2.50.0) (2021-12-10)
 
 
