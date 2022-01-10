@@ -11,6 +11,8 @@ import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
 
 const DEFAULT_COLOR_FIELD_NAME = 'category';
 const DEFAULT_LABEL_FIELD_NAME = 'value';
+const DEFAULT_RING_WIDTH = 32;
+
 @Component({
   styleUrl: 'gux-chart-donut.less',
   tag: 'gux-chart-donut-beta'
@@ -82,10 +84,10 @@ export class GuxDonutChart {
 
   @Watch('chartData')
   parseData() {
-    if (!this.outerRadius || !this.innerRadius) {
+    if (!this.outerRadius && !this.innerRadius) {
       logError(
         'gux-chart-donut',
-        '[gux-chart-donut] requires outer-radius and inner-radius'
+        '[gux-chart-donut] requires at least one of outer-radius or inner-radius'
       );
     }
 
@@ -109,8 +111,15 @@ export class GuxDonutChart {
       this.baseChartSpec.encoding.color.title = legendTitle;
     }
 
-    const outerRadius = this.outerRadius;
-    const innerRadius = this.innerRadius;
+    let outerRadius = this.outerRadius;
+    let innerRadius = this.innerRadius;
+
+    if (!outerRadius) {
+      outerRadius = innerRadius + DEFAULT_RING_WIDTH;
+    }
+    if (!innerRadius) {
+      innerRadius = outerRadius - DEFAULT_RING_WIDTH;
+    }
 
     this.baseChartSpec.layer = [
       {
@@ -132,6 +141,8 @@ export class GuxDonutChart {
         }
       });
     }
+
+    this.baseChartSpec.encoding.tooltip.field = labelField;
 
     const spec = Object.assign(this.baseChartSpec, chartData);
     this.visualizationSpec = spec;
