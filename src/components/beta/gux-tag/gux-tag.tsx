@@ -17,7 +17,8 @@ import { GuxTagColor } from './gux-tag.types';
 
 @Component({
   styleUrl: 'gux-tag.less',
-  tag: 'gux-tag-beta'
+  tag: 'gux-tag-beta',
+  shadow: true
 })
 export class GuxTag {
   private i18n: GetI18nValue;
@@ -71,7 +72,7 @@ export class GuxTag {
   }
 
   private removeTag(): void {
-    if (this.disabled) {
+    if (this.disabled || !this.removable) {
       return;
     }
 
