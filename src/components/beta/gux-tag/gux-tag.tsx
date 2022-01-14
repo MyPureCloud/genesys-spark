@@ -109,7 +109,9 @@ export class GuxTag {
           <gux-icon
             class="gux-tag-remove-icon"
             icon-name="close"
-            screenreader-text={this.i18n('remove-tag')}
+            screenreader-text={this.i18n('remove-tag', {
+              label: this.root.textContent
+            })}
           />
         </button>
       ) as JSX.Element;
@@ -134,6 +136,7 @@ export class GuxTag {
           [`gux-${this.color}`]: true,
           'gux-disabled': this.disabled
         }}
+        aria-disabled={this.disabled.toString()}
       >
         {this.renderIcon()}
         {this.renderText()}
