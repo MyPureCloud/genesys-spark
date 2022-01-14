@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.22](https://inindca///compare/v3.0.0-alpha.21...v3.0.0-alpha.22) (2022-01-14)
+
+
+### Features
+
+* **tag-beta:** enabled shadow dom ([3292c83](https://inindca///commit/3292c83804bad03609eba25b20e6f6ded59f03ff))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([eba9912](https://inindca///commit/eba9912ae8bfa083eeb75c52548388c57ea8f934))
+
 ## [3.0.0-alpha.21](https://inindca///compare/v3.0.0-alpha.20...v3.0.0-alpha.21) (2022-01-07)
 
 
