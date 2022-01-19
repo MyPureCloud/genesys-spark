@@ -11,5 +11,5 @@
 | ✅ | [3.2.2 On Input](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html) | - |
 | ✅ | [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html) | - |
 | ✅ | [3.2.2 Labels or Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html) | - |
-| ❌ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) | COMUI-796 use of 'title' attribute for buttons used within the modals on the docs site may be redundant |
+| ✅ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) | - |
 | ✅ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html) | - |

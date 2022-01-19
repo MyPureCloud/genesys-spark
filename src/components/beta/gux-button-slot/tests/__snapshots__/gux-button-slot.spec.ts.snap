@@ -5,7 +5,7 @@ exports[`gux-button-slot-beta #render should render button with invalid accent 1
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button title="Invalid" type="button">
+  <button accent="primary" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -16,7 +16,7 @@ exports[`gux-button-slot-beta #render should render default button 1`] = `
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button title="Default" type="button">
+  <button accent="primary" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -27,7 +27,7 @@ exports[`gux-button-slot-beta #render should render default input[type=button] 1
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Default" type="button" value="Button">
+  <input accent="primary" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -36,7 +36,7 @@ exports[`gux-button-slot-beta #render should render default input[type=submit] 1
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Default" type="submit" value="Button">
+  <input accent="primary" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -45,7 +45,7 @@ exports[`gux-button-slot-beta #render should render disabled default button 1`] 
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button disabled="" title="Default" type="button">
+  <button accent="primary" disabled="" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -56,7 +56,7 @@ exports[`gux-button-slot-beta #render should render disabled default input[type=
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input disabled="" title="Default" type="button" value="Button">
+  <input accent="primary" disabled="" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -65,7 +65,7 @@ exports[`gux-button-slot-beta #render should render disabled default input[type=
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input disabled="" title="Default" type="submit" value="Button">
+  <input accent="primary" disabled="" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -74,7 +74,7 @@ exports[`gux-button-slot-beta #render should render disabled primary button 1`] 
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button disabled="" title="Primary" type="button">
+  <button accent="primary" disabled="" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -85,7 +85,7 @@ exports[`gux-button-slot-beta #render should render disabled primary input[type=
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input disabled="" title="Primary" type="button" value="Button">
+  <input accent="primary" disabled="" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -94,7 +94,7 @@ exports[`gux-button-slot-beta #render should render disabled primary input[type=
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input disabled="" title="Primary" type="submit" value="Button">
+  <input accent="primary" disabled="" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -103,7 +103,7 @@ exports[`gux-button-slot-beta #render should render disabled secondary button 1`
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button disabled="" title="Secondary" type="button">
+  <button accent="primary" disabled="" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -114,7 +114,7 @@ exports[`gux-button-slot-beta #render should render disabled secondary input[typ
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input disabled="" title="Secondary" type="button" value="Button">
+  <input accent="primary" disabled="" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -123,7 +123,7 @@ exports[`gux-button-slot-beta #render should render disabled secondary input[typ
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input disabled="" title="Secondary" type="submit" value="Button">
+  <input accent="primary" disabled="" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -132,7 +132,7 @@ exports[`gux-button-slot-beta #render should render disabled tertiary button 1`]
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button disabled="" title="Tertiary" type="button">
+  <button accent="primary" disabled="" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -143,7 +143,7 @@ exports[`gux-button-slot-beta #render should render disabled tertiary input[type
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input disabled="" title="Tertiary" type="button" value="Button">
+  <input accent="primary" disabled="" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -152,7 +152,7 @@ exports[`gux-button-slot-beta #render should render disabled tertiary input[type
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input disabled="" title="Tertiary" type="submit" value="Button">
+  <input accent="primary" disabled="" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -161,7 +161,7 @@ exports[`gux-button-slot-beta #render should render input[type=button] with inva
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Invalid" type="button" value="Button">
+  <input accent="primary" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -170,7 +170,7 @@ exports[`gux-button-slot-beta #render should render input[type=submit] with inva
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Invalid" type="submit" value="Button">
+  <input accent="primary" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -179,7 +179,7 @@ exports[`gux-button-slot-beta #render should render invalid button 1`] = `
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button title="Invalid" type="button">
+  <button accent="primary" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -190,7 +190,7 @@ exports[`gux-button-slot-beta #render should render invalid input[type=button] 1
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Invalid" type="button" value="Button">
+  <input accent="primary" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -199,7 +199,7 @@ exports[`gux-button-slot-beta #render should render invalid input[type=submit] 1
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Invalid" type="submit" value="Button">
+  <input accent="primary" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -208,7 +208,7 @@ exports[`gux-button-slot-beta #render should render primary button 1`] = `
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button title="Primary" type="button">
+  <button accent="primary" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -219,7 +219,7 @@ exports[`gux-button-slot-beta #render should render primary input[type=button] 1
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Primary" type="button" value="Button">
+  <input accent="primary" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -228,7 +228,7 @@ exports[`gux-button-slot-beta #render should render primary input[type=submit] 1
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Primary" type="submit" value="Button">
+  <input accent="primary" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -237,7 +237,7 @@ exports[`gux-button-slot-beta #render should render secondary button 1`] = `
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button title="Secondary" type="button">
+  <button accent="primary" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -248,7 +248,7 @@ exports[`gux-button-slot-beta #render should render secondary input[type=button]
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Secondary" type="button" value="Button">
+  <input accent="primary" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -257,7 +257,7 @@ exports[`gux-button-slot-beta #render should render secondary input[type=submit]
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Secondary" type="submit" value="Button">
+  <input accent="primary" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -266,7 +266,7 @@ exports[`gux-button-slot-beta #render should render tertiary button 1`] = `
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <button title="Tertiary" type="button">
+  <button accent="primary" type="button">
     Button
   </button>
 </gux-button-slot-beta>
@@ -277,7 +277,7 @@ exports[`gux-button-slot-beta #render should render tertiary input[type=button] 
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Tertiary" type="button" value="Button">
+  <input accent="primary" type="button" value="Button">
 </gux-button-slot-beta>
 `;
 
@@ -286,6 +286,6 @@ exports[`gux-button-slot-beta #render should render tertiary input[type=submit] 
   <mock:shadow-root>
     <slot></slot>
   </mock:shadow-root>
-  <input title="Tertiary" type="submit" value="Button">
+  <input accent="primary" type="submit" value="Button">
 </gux-button-slot-beta>
 `;

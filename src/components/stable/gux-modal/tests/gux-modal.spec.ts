@@ -26,10 +26,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -41,10 +41,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -56,10 +56,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -70,10 +70,10 @@ describe('gux-modal', () => {
           <gux-modal size="large">
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -94,7 +94,7 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
           </gux-modal>
         `
@@ -106,7 +106,7 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -118,10 +118,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -152,10 +152,10 @@ describe('gux-modal', () => {
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
-              <gux-button gux-title="Cancel">Cancel</gux-button>
+              <gux-button>Cancel</gux-button>
           </div>
           <div slot="right-align-buttons">
-            <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+            <gux-button accent='primary'>Accept</gux-button>
           </div>
         </gux-modal>
       `;
@@ -185,10 +185,10 @@ describe('gux-modal', () => {
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
-              <gux-button gux-title="Cancel">Cancel</gux-button>
+              <gux-button>Cancel</gux-button>
           </div>
           <div slot="right-align-buttons">
-            <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+            <gux-button accent='primary'>Accept</gux-button>
           </div>
         </gux-modal>
       `;

@@ -21,9 +21,9 @@ exports[`gux-modal #render should render large modal 1`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -31,9 +31,9 @@ exports[`gux-modal #render should render large modal 1`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -66,9 +66,9 @@ exports[`gux-modal #render should render large modal 2`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -76,9 +76,9 @@ exports[`gux-modal #render should render large modal 2`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -111,9 +111,9 @@ exports[`gux-modal #render should render medium modal 1`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -121,9 +121,9 @@ exports[`gux-modal #render should render medium modal 1`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -156,9 +156,9 @@ exports[`gux-modal #render should render medium modal 2`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -166,9 +166,9 @@ exports[`gux-modal #render should render medium modal 2`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -201,9 +201,9 @@ exports[`gux-modal #render should render modal with just left align buttons 1`] 
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -237,9 +237,9 @@ exports[`gux-modal #render should render modal with just left align buttons 2`] 
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -274,9 +274,9 @@ exports[`gux-modal #render should render modal with just right align buttons 1`]
         <div class="gux-left-align-buttons"></div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -310,9 +310,9 @@ exports[`gux-modal #render should render modal with just right align buttons 2`]
         <div class="gux-left-align-buttons"></div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -340,9 +340,9 @@ exports[`gux-modal #render should render modal without a title 1`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -350,9 +350,9 @@ exports[`gux-modal #render should render modal without a title 1`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -380,9 +380,9 @@ exports[`gux-modal #render should render modal without a title 2`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -390,9 +390,9 @@ exports[`gux-modal #render should render modal without a title 2`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -471,9 +471,9 @@ exports[`gux-modal #render should render small modal 1`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -481,9 +481,9 @@ exports[`gux-modal #render should render small modal 1`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -516,9 +516,9 @@ exports[`gux-modal #render should render small modal 2`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -526,9 +526,9 @@ exports[`gux-modal #render should render small modal 2`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -561,9 +561,9 @@ exports[`gux-modal #render should render small modal by default 1`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -571,9 +571,9 @@ exports[`gux-modal #render should render small modal by default 1`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
@@ -606,9 +606,9 @@ exports[`gux-modal #render should render small modal by default 2`] = `
       <div class="gux-button-footer">
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
-            <gux-button gux-title="Cancel">
+            <gux-button>
               <!---->
-              <button class="gux-secondary" title="Cancel" type="button">
+              <button class="gux-secondary" type="button">
                 Cancel
               </button>
             </gux-button>
@@ -616,9 +616,9 @@ exports[`gux-modal #render should render small modal by default 2`] = `
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
-            <gux-button accent="primary" gux-title="Button">
+            <gux-button accent="primary">
               <!---->
-              <button class="gux-primary" title="Button" type="button">
+              <button class="gux-primary" type="button">
                 Accept
               </button>
             </gux-button>
