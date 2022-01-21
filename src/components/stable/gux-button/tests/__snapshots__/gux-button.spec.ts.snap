@@ -1,90 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-button #render should render default button 1`] = `
-<gux-button gux-title="default">
+<gux-button>
   <!---->
-  <button class="gux-secondary" title="default" type="button">
+  <button class="gux-secondary" type="button">
     Button
   </button>
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled default button 1`] = `
-<gux-button disabled="" gux-title="default">
+<gux-button disabled="">
   <!---->
-  <button class="gux-secondary" disabled="" title="default" type="button">
+  <button class="gux-secondary" disabled="" type="button">
     Button
   </button>
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled invalid accent button 1`] = `
-<gux-button accent="invalid" disabled="" gux-title="Invalid accent">
+<gux-button accent="invalid" disabled="">
   <!---->
-  <button class="gux-invalid" disabled="" title="Invalid accent" type="button">
+  <button class="gux-invalid" disabled="" type="button">
     Invalid accent
   </button>
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled primary button 1`] = `
-<gux-button accent="primary" disabled="" gux-title="Primary">
+<gux-button accent="primary" disabled="">
   <!---->
-  <button class="gux-primary" disabled="" title="Primary" type="button">
+  <button class="gux-primary" disabled="" type="button">
     Button
   </button>
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled secondary button 1`] = `
-<gux-button accent="secondary" disabled="" gux-title="Secondary">
+<gux-button accent="secondary" disabled="">
   <!---->
-  <button class="gux-secondary" disabled="" title="Secondary" type="button">
+  <button class="gux-secondary" disabled="" type="button">
     Button
   </button>
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled tertiary button 1`] = `
-<gux-button accent="tertiary" disabled="" gux-title="Tertiary">
+<gux-button accent="tertiary" disabled="">
   <!---->
-  <button class="gux-tertiary" disabled="" title="Tertiary" type="button">
+  <button class="gux-tertiary" disabled="" type="button">
     Button
   </button>
 </gux-button>
 `;
 
 exports[`gux-button #render should render invalid accent button 1`] = `
-<gux-button accent="invalid" gux-title="Invalid accent">
+<gux-button accent="invalid">
   <!---->
-  <button class="gux-invalid" title="Invalid accent" type="button">
+  <button class="gux-invalid" type="button">
     Invalid accent
   </button>
 </gux-button>
 `;
 
 exports[`gux-button #render should render primary button 1`] = `
-<gux-button accent="primary" gux-title="Primary">
+<gux-button accent="primary">
   <!---->
-  <button class="gux-primary" title="Primary" type="button">
+  <button class="gux-primary" type="button">
     Button
   </button>
 </gux-button>
 `;
 
 exports[`gux-button #render should render secondary button 1`] = `
-<gux-button accent="secondary" gux-title="Secondary">
+<gux-button accent="secondary">
   <!---->
-  <button class="gux-secondary" title="Secondary" type="button">
+  <button class="gux-secondary" type="button">
     Button
   </button>
 </gux-button>
 `;
 
 exports[`gux-button #render should render tertiary button 1`] = `
-<gux-button accent="tertiary" gux-title="Tertiary">
+<gux-button accent="tertiary">
   <!---->
-  <button class="gux-tertiary" title="Tertiary" type="button">
+  <button class="gux-tertiary" type="button">
     Button
   </button>
 </gux-button>
