@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Keyboard users, screen reader users, and mouse users should all have a similar experience when interacting with an interface. All content and interactive elements should be accessible to all users. There are several cases to keep in mind when building accessible interfaces:
+Keyboard users, screen reader users, and mouse users should all have equal access to features and a similar level of user experience quality when interacting with an interface. All content and interactive elements should be accessible to all users. There are several cases to keep in mind when building accessible interfaces:
 
 1. Users who can see the screen and primarily use a mouse to navigate the page
 2. Users who can see the screen, but use a keyboard or other non-mouse device to navigate the page
@@ -22,7 +22,7 @@ Add `await a11yCheck(page, axeExclusions, description);` to an e2e test to run a
 - `page` (required): e2ePage,
 - `axeExclusions` (optional): a violation that is to be ignored for this test. If the violation needs to be addressed, please create a ticket and add the ticket number to the 'exclusion reason'. If the violation has been deemed to be a non-issue, add the reason why it is not an issue to the 'exclusion reason'.
 
-  Here is an example of axeExclusions:
+  Here is an example exclusion:
 
   ```
   const axeExclusions = [
@@ -46,6 +46,8 @@ Many accessibility violations can be identified through automated accessibility 
 You will primarily use the `Focus` mode, which involves using the `tab` key to navigate to focusable elements. A list of common patterns for interacting with elements using a keyboard can be found on [WebAIM](https://webaim.org/techniques/keyboard/#testing).
 
 The `Browse` mode will read through all the elements of the page, even the elements that are not focusable. Using `Browse` mode can help you discover bugs and elements inaccessible to a screen reader.
+
+Screen readers offer additional modes and shortcuts for navigating specific types of elements, such as tables. If an element has correct markup but seems inaccessible during manual testing, check the screen reader docs for that type of element. There may be another strategy for accessing that element with a screen reader.
 
 To learn more about how to use a screen reader, please view the following resources:
 
