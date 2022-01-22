@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.23](https://inindca///compare/v3.0.0-alpha.22...v3.0.0-alpha.23) (2022-01-22)
+
+
+### Bug Fixes
+
+* **title-attribute:** removed redundant title attributes ([92e35eb](https://inindca///commit/92e35eba1ec2d8dcdd57f689ff6920ac21390a1e))
+
 ## [3.0.0-alpha.22](https://inindca///compare/v3.0.0-alpha.21...v3.0.0-alpha.22) (2022-01-14)
 
 
