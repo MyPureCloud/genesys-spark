@@ -24,7 +24,7 @@ export class Gux {
 
   render(): JSX.Element {
     return (
-      <button type="button" title={this.i18n('clear')}>
+      <button tabIndex={-1} type="button" title={this.i18n('clear')}>
         <gux-icon icon-name="close" decorative></gux-icon>
       </button>
     ) as JSX.Element;

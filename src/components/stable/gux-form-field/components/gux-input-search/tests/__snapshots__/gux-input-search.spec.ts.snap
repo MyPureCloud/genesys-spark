@@ -16,7 +16,7 @@ exports[`gux-input-search #render should render component as expected (2) 1`] = 
   <div class="gux-input-container">
     <gux-icon class="gux-search-icon" decorative="" icon-name="search"></gux-icon>
     <input name="search" placeholder="Enter a search" type="search" value="test">
-    <button class="gux-clear-button" title="Clear" type="button">
+    <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
       <gux-icon decorative="" icon-name="close"></gux-icon>
     </button>
   </div>
