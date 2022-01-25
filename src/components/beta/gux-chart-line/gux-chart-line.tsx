@@ -175,7 +175,7 @@ export class GuxLineChart {
     this.visualizationSpec = spec;
   }
 
-  componentWillRender(): void {
+  componentWillLoad(): void {
     trackComponent(this.root);
     this.parseData();
   }

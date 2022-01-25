@@ -1,0 +1,50 @@
+<h1>gux-chart-donut-beta</h1>
+<h2>Donut</h2>
+<gux-chart-donut-beta
+  id="chart-1"
+  label-radius="110"
+  label-field="value"
+  outer-radius="80"
+  inner-radius="68"
+>
+</gux-chart-donut-beta>
+
+<h2>Donut with Legend</h2>
+<gux-chart-donut-beta
+  id="chart-2"
+  label-radius="110"
+  label-field="value"
+  include-legend="true"
+  legend-title="Media Type"
+  outer-radius="100"
+>
+</gux-chart-donut-beta>
+
+<h2>Donut with Hidden Values</h2>
+<gux-chart-donut-beta id="chart-3" label-field="value" inner-radius="68">
+</gux-chart-donut-beta>
+
+<style
+  onload="(function() {
+    const chart1 = document.querySelector('#chart-1');
+    const chart2 = document.querySelector('#chart-2');
+    const chart3 = document.querySelector('#chart-3');
+
+    const chartData = {'values': [
+        {'category': 'Voice', 'value': 4},
+        {'category': 'Callback', 'value': 6},
+        {'category': 'Chat', 'value': 10},
+        {'category': 'Email', 'value': 3},
+        {'category': 'Messaging', 'value': 7},
+        {'category': 'Wuphf', 'value': 8}
+      ]
+    }
+
+    chart1.chartData = chartData
+    chart2.chartData = chartData
+    chart3.chartData = chartData
+
+  })()"
+>
+  --noop: none;
+</style>

@@ -167,7 +167,7 @@ export class GuxColumnChart {
     this.visualizationSpec = spec;
   }
 
-  componentWillRender(): void {
+  componentWillLoad(): void {
     trackComponent(this.root);
     this.parseData();
   }
