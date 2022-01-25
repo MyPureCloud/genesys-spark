@@ -93,6 +93,9 @@ export class GuxTag {
     return (
       <div class="gux-tag-text">
         <slot />
+
+        {!this.disabled && <span class="gux-sr-only"> tag</span>}
+        {this.disabled && <span class="gux-sr-only"> tag disabled</span>}
       </div>
     ) as JSX.Element;
   }

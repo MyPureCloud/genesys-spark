@@ -1,6 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/typography.less';
 
 // Style
 :host {
@@ -41,6 +42,10 @@
     padding: 0 @spacing-xs;
     line-height: 24px;
     white-space: nowrap;
+
+    .gux-sr-only {
+      .gux-sr-only-clip();
+    }
   }
 
   .gux-tag-remove-button {

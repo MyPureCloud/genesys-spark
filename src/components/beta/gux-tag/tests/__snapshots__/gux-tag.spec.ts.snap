@@ -6,6 +6,9 @@ exports[`gux-tag-beta #render should render component as expected (1) 1`] = `
     <div aria-disabled="false" class="gux-default gux-tag">
       <div class="gux-tag-text">
         <slot></slot>
+        <span class="gux-sr-only">
+          tag
+        </span>
       </div>
     </div>
   </mock:shadow-root>
@@ -19,6 +22,9 @@ exports[`gux-tag-beta #render should render component as expected (2) 1`] = `
     <div aria-disabled="false" class="gux-default gux-tag">
       <div class="gux-tag-text">
         <slot></slot>
+        <span class="gux-sr-only">
+          tag
+        </span>
       </div>
     </div>
   </mock:shadow-root>
@@ -32,6 +38,9 @@ exports[`gux-tag-beta #render should render component as expected (3) 1`] = `
     <div aria-disabled="false" class="gux-navy gux-tag">
       <div class="gux-tag-text">
         <slot></slot>
+        <span class="gux-sr-only">
+          tag
+        </span>
       </div>
     </div>
   </mock:shadow-root>
@@ -48,6 +57,9 @@ exports[`gux-tag-beta #render should render component as expected (4) 1`] = `
       </div>
       <div class="gux-tag-text">
         <slot></slot>
+        <span class="gux-sr-only">
+          tag
+        </span>
       </div>
     </div>
   </mock:shadow-root>
@@ -64,6 +76,9 @@ exports[`gux-tag-beta #render should render component as expected (5) 1`] = `
       </div>
       <div class="gux-tag-text">
         <slot></slot>
+        <span class="gux-sr-only">
+          tag
+        </span>
       </div>
       <button class="gux-tag-remove-button" type="button">
         <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove navy tag"></gux-icon>
@@ -83,6 +98,9 @@ exports[`gux-tag-beta #render should render component as expected (6) 1`] = `
       </div>
       <div class="gux-tag-text">
         <slot></slot>
+        <span class="gux-sr-only">
+          tag disabled
+        </span>
       </div>
       <button class="gux-tag-remove-button" disabled="" type="button">
         <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove navy tag"></gux-icon>
