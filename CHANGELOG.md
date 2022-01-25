@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.24](https://inindca///compare/v3.0.0-alpha.23...v3.0.0-alpha.24) (2022-01-25)
+
+
+### Bug Fixes
+
+* **gux-popup:** fix popup alignment ([e32bddd](https://inindca///commit/e32bddd59984c2901f38a4fe75826616b09d1324))
+
 ## [3.0.0-alpha.23](https://inindca///compare/v3.0.0-alpha.22...v3.0.0-alpha.23) (2022-01-22)
 
 
