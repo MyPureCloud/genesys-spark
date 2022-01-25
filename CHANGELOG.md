@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.50.2](https://inindca///compare/v2.50.1...v2.50.2) (2022-01-25)
+
+
+### Bug Fixes
+
+* **gux-popup:** fix alignment of popup, backport to v2 ([dcfa6a5](https://inindca///commit/dcfa6a59508ea282153777cc166e9a82764e9d37))
+
 ### [2.50.1](https://inindca///compare/v2.50.0...v2.50.1) (2022-01-07)
 
 
