@@ -6,12 +6,12 @@ import {
   forceUpdate,
   h,
   JSX,
-  Listen,
   Method,
   Prop,
   State
 } from '@stencil/core';
 
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 import { trackComponent } from '../../../usage-tracking';
 import { OnMutation } from '../../../utils/decorator/on-mutation';
@@ -74,8 +74,8 @@ export class GuxDropdown {
     this.change.emit(value);
   }
 
-  @Listen('focusout')
-  onFocusOut(e: FocusEvent) {
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside(e: MouseEvent) {
     if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
       this.opened = false;
       this.forcedGhostValue = '';
@@ -133,11 +133,13 @@ export class GuxDropdown {
     const focusIndex = this.getFocusIndex(selectionOptions);
     switch (event.key) {
       case 'ArrowUp':
+        event.preventDefault();
         if (focusIndex > 0) {
           selectionOptions[focusIndex - 1].focus();
         }
         break;
       case 'ArrowDown':
+        event.preventDefault();
         if (this.inputIsFocused) {
           this.opened = true;
         }
@@ -156,6 +158,14 @@ export class GuxDropdown {
           return;
         }
         selectionOptions[selectionOptions.length - 1].focus();
+        break;
+      case 'Escape':
+        this.textFieldElement.focus();
+        this.opened = false;
+        break;
+      case 'Tab':
+        this.textFieldElement.focus();
+        this.opened = false;
         break;
       case 'Enter':
       case 'Space':
