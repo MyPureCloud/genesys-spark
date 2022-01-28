@@ -26,21 +26,6 @@ Example with slotting
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property    | Attribute   | Description                        | Type      | Default     |
-| ----------- | ----------- | ---------------------------------- | --------- | ----------- |
-| `highlight` | `highlight` | The highlight value                | `string`  | `undefined` |
-| `value`     | --          | The current selection in the list. | `unknown` | `undefined` |
-
-
-## Events
-
-| Event     | Description                                     | Type                   |
-| --------- | ----------------------------------------------- | ---------------------- |
-| `changed` | Triggered when the list's selection is changed. | `CustomEvent<unknown>` |
-
-
 ## Methods
 
 ### `isFirstItemSelected() => Promise<boolean>`
@@ -88,15 +73,15 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-command-palette-legacy](../../legacy/gux-command-palette-legacy)
- - [gux-time-picker-beta](../../beta/gux-time-picker)
+ - [gux-action-button](../../stable/gux-action-button)
+ - [gux-button-multi](../gux-button-multi)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-command-palette-legacy --> gux-list
-  gux-time-picker-beta --> gux-list
-  style gux-list fill:#f9f,stroke:#333,stroke-width:4px
+  gux-action-button --> gux-action-list
+  gux-button-multi --> gux-action-list
+  style gux-action-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
