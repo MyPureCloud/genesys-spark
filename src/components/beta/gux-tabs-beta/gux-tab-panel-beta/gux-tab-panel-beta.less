@@ -1,3 +1,13 @@
+@import (reference) '../../../../style/mixins.less';
+
 gux-tab-panel-beta {
-  -custom-noop: noop;
+  div[role='tabpanel'] {
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      .focus-ring();
+    }
+  }
 }
