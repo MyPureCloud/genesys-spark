@@ -133,12 +133,14 @@ export class GuxDropdown {
     const focusIndex = this.getFocusIndex(selectionOptions);
     switch (event.key) {
       case 'ArrowUp':
+        // prevent arrow key from triggering a page scroll
         event.preventDefault();
         if (focusIndex > 0) {
           selectionOptions[focusIndex - 1].focus();
         }
         break;
       case 'ArrowDown':
+        // prevent arrow key from triggering a page scroll
         event.preventDefault();
         if (this.inputIsFocused) {
           this.opened = true;
