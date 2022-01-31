@@ -6,7 +6,8 @@ import {
   h,
   JSX,
   Listen,
-  Prop
+  Prop,
+  State
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
@@ -62,6 +63,9 @@ export class GuxTag {
   @Prop()
   icon: string;
 
+  @State()
+  label: string;
+
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
@@ -79,6 +83,12 @@ export class GuxTag {
     this.guxdelete.emit(this.value);
   }
 
+  private onSlotChange(event: Event) {
+    this.label = (
+      event.composedPath()[0] as HTMLSlotElement
+    ).assignedNodes()[0].textContent;
+  }
+
   private renderIcon(): JSX.Element {
     if (this.icon) {
       return (
@@ -92,10 +102,18 @@ export class GuxTag {
   private renderText(): JSX.Element {
     return (
       <div class="gux-tag-text">
-        <slot />
+        <slot aria-hidden="true" onSlotchange={this.onSlotChange.bind(this)} />
 
-        {!this.disabled && <span class="gux-sr-only"> tag</span>}
-        {this.disabled && <span class="gux-sr-only"> tag disabled</span>}
+        {!this.disabled && (
+          <div class="gux-sr-only">
+            {this.i18n('tag', { label: this.label })}
+          </div>
+        )}
+        {this.disabled && (
+          <div class="gux-sr-only">
+            {this.i18n('tag-disabled', { label: this.label })}
+          </div>
+        )}
       </div>
     ) as JSX.Element;
   }
@@ -113,7 +131,7 @@ export class GuxTag {
             class="gux-tag-remove-icon"
             icon-name="close"
             screenreader-text={this.i18n('remove-tag', {
-              label: this.root.textContent
+              label: this.label
             })}
           />
         </button>
