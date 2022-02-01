@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.27](https://inindca///compare/v3.0.0-alpha.26...v3.0.0-alpha.27) (2022-02-01)
+
+
+### Bug Fixes
+
+* **scripts:** fixed generate-versions-file script ([f9dc706](https://inindca///commit/f9dc70619ddbed21e94c30af76ad1c0b626a13e6))
+
 ## [3.0.0-alpha.26](https://inindca///compare/v3.0.0-alpha.25...v3.0.0-alpha.26) (2022-01-29)
 
 
