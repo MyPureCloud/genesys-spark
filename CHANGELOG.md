@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.50.3](https://inindca///compare/v2.50.2...v2.50.3) (2022-02-01)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** gux-dropdown within a gux-panel closes on scroll button click ([bf903ad](https://inindca///commit/bf903ad1f972d823a3757ba328ac1a8ec019adc2))
+* **gux-tab-panel-beta:** fixed tabpanel outline shown on click in safari ([189f67c](https://inindca///commit/189f67c031a82c02d0c72ed14db9c3f1febcf954))
+
 ### [2.50.2](https://inindca///compare/v2.50.1...v2.50.2) (2022-01-25)
 
 
