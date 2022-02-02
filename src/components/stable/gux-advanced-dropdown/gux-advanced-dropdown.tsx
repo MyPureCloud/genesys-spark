@@ -263,6 +263,7 @@ export class GuxAdvancedDropdown {
   private optionsKeyDown(event: KeyboardEvent) {
     switch (event.key) {
       case 'ArrowUp': {
+        event.preventDefault();
         const focusIndex = this.getFocusIndex();
         if (focusIndex > 0) {
           this.selectionOptions[focusIndex - 1].focus();
@@ -270,6 +271,7 @@ export class GuxAdvancedDropdown {
         break;
       }
       case 'ArrowDown': {
+        event.preventDefault();
         const focusIndex = this.getFocusIndex();
         if (focusIndex < this.selectionOptions.length - 1) {
           this.selectionOptions[focusIndex + 1].focus();

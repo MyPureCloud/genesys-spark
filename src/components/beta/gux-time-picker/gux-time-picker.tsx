@@ -87,6 +87,7 @@ export class GuxTimePicker {
         case 'Tab':
           break;
         case 'ArrowDown':
+          e.preventDefault();
           if (this.dropdownList) {
             void this.dropdownList.setFocusOnFirstItem();
           }

@@ -17,7 +17,7 @@ import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
 
-import { getSearchOption } from './gux-listbox/gux-listbox.service';
+import { getSearchOption } from '../gux-listbox/gux-listbox.service';
 
 /**
  * @slot - for gux-list-box
@@ -102,13 +102,20 @@ export class GuxDropdownV2Beta {
         this.collapseListbox('focusFieldButton');
         return;
       case 'Tab':
-        this.collapseListbox('noFocusChange');
+        if (
+          !(
+            event.shiftKey &&
+            this.filterable &&
+            document.activeElement === this.listboxElement
+          )
+        ) {
+          this.collapseListbox('noFocusChange');
+        }
         return;
-      case 'ArrowUp':
-        if (this.filterable) {
-          if (document.activeElement === this.listboxElement) {
-            return this.filterElement.focus();
-          }
+      case 'ArrowDown':
+        if (document.activeElement !== this.listboxElement) {
+          event.preventDefault();
+          this.expanded = !this.expanded;
         }
         return;
     }
@@ -225,27 +232,6 @@ export class GuxDropdownV2Beta {
       this.value
     );
 
-    if (this.expanded && this.filterable) {
-      return (
-        <div class="gux-filter">
-          <div class="gux-filter-display">
-            <span class="gux-filter-text">{this.filter}</span>
-            <span class="gux-filter-suggestion">
-              {this.getSuggestionText(this.filter)}
-            </span>
-          </div>
-          <input
-            class="gux-filter-input"
-            type="text"
-            ref={el => (this.filterElement = el)}
-            onInput={this.filterInput.bind(this)}
-            onKeyDown={this.filterKeydown.bind(this)}
-            onKeyUp={this.filterKeyup.bind(this)}
-          ></input>
-        </div>
-      ) as JSX.Element;
-    }
-
     if (selectedListboxOptionElement) {
       return (
         <div class="gux-selected-option">
@@ -261,26 +247,35 @@ export class GuxDropdownV2Beta {
     ) as JSX.Element;
   }
 
-  private renderTarget(): JSX.Element {
-    return (
-      <button
-        slot="target"
-        type="button"
-        class="gux-field-button"
-        disabled={this.disabled}
-        onClick={this.fieldButtonClick.bind(this)}
-        ref={el => (this.fieldButtonElement = el)}
-        aria-haspopup="listbox"
-        aria-expanded={this.expanded.toString()}
-      >
-        <div class="gux-field-button-content">{this.renderTargetDisplay()}</div>
-        <gux-icon
-          class="gux-expand-icon"
-          decorative
-          iconName="chevron-small-down"
-        ></gux-icon>
-      </button>
-    ) as JSX.Element;
+  private renderFilterInputField() {
+    if (this.expanded && this.filterable) {
+      return [
+        <div class="gux-field">
+          <div class="gux-field-content">
+            <div class="gux-filter">
+              <div class="gux-filter-display">
+                <span class="gux-filter-text">{this.filter}</span>
+                <span class="gux-filter-suggestion">
+                  {this.getSuggestionText(this.filter)}
+                </span>
+              </div>
+              <div class="input-and-dropdown-button">
+                <input
+                  onClick={this.fieldButtonClick.bind(this)}
+                  class="gux-filter-input"
+                  type="text"
+                  aria-label={this.i18n('filterResults')}
+                  ref={el => (this.filterElement = el)}
+                  onInput={this.filterInput.bind(this)}
+                  onKeyDown={this.filterKeydown.bind(this)}
+                  onKeyUp={this.filterKeyup.bind(this)}
+                ></input>
+              </div>
+            </div>
+          </div>
+        </div>
+      ] as JSX.Element;
+    }
   }
 
   private renderPopup(): JSX.Element {
@@ -291,12 +286,63 @@ export class GuxDropdownV2Beta {
     ) as JSX.Element;
   }
 
-  render(): JSX.Element {
+  private renderTarget(): JSX.Element {
     return (
+      <button
+        type="button"
+        class={{
+          'gux-field': true,
+          'gux-field-button-collapsed': !(this.expanded && this.filterable),
+          'gux-field-button-expanded': this.expanded && this.filterable
+        }}
+        disabled={this.disabled}
+        onClick={this.fieldButtonClick.bind(this)}
+        ref={el => (this.fieldButtonElement = el)}
+        aria-haspopup="listbox"
+        aria-expanded={this.expanded.toString()}
+      >
+        {this.renderTargetContent()}
+      </button>
+    ) as JSX.Element;
+  }
+  private renderTargetContent(): JSX.Element {
+    if (this.expanded && this.filterable) {
+      return (
+        <gux-icon
+          class={{
+            'gux-expand-icon': true,
+            'gux-expand-icon-expanded': this.expanded && this.filterable
+          }}
+          screenreader-text={this.i18n('dropdown')}
+          iconName="chevron-small-down"
+        ></gux-icon>
+      ) as JSX.Element;
+    } else {
+      return [
+        <div class="gux-field-content">{this.renderTargetDisplay()}</div>,
+        <gux-icon
+          class="gux-expand-icon"
+          decorative
+          iconName="chevron-small-down"
+        ></gux-icon>
+      ] as JSX.Element;
+    }
+  }
+
+  render(): JSX.Element {
+    return [
       <gux-popup-beta expanded={this.expanded} disabled={this.disabled}>
-        {this.renderTarget()}
+        <div
+          class={{
+            'gux-target-container-expanded': this.expanded && this.filterable
+          }}
+          slot="target"
+        >
+          {this.renderFilterInputField()}
+          {this.renderTarget()}
+        </div>
         {this.renderPopup()}
       </gux-popup-beta>
-    ) as JSX.Element;
+    ] as JSX.Element;
   }
 }

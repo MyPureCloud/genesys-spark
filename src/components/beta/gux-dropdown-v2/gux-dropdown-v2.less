@@ -6,19 +6,65 @@
 :host {
   color: @gux-black-50;
   isolation: isolate;
+}
+
+.gux-target-container-expanded {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 32px;
+  padding: 6px 8px 6px 6px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.66666667;
+  cursor: pointer;
+  background-color: @gux-grey-90;
+  background-image: none;
+  border: 1px solid @gux-black-100;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
+
+  .gux-field {
+    height: 30px;
+  }
 
   &:focus-within {
-    .gux-field-button {
-      .focus-ring();
+    .focus-ring();
+  }
 
-      .gux-expand-icon {
-        color: @gux-blue-60;
-      }
+  .gux-filter-input {
+    background-color: inherit;
+    border: none;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  .gux-field-button-expanded {
+    width: auto;
+    height: 30px;
+    padding: 0;
+    margin: 0 0 0 @spacing-xs;
+    background: inherit;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
     }
   }
 }
 
-.gux-field-button {
+.gux-field {
   all: unset;
   box-sizing: border-box;
   display: flex;
@@ -36,15 +82,8 @@
   cursor: pointer;
   background-color: @gux-grey-90;
   background-image: none;
-  border: 1px solid @gux-black-100;
-  border-radius: 4px;
-  box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
 
-  &:focus-within {
-    .focus-ring();
-  }
-
-  .gux-field-button-content {
+  .gux-field-content {
     display: flex;
     flex: 1 1 0;
     flex-direction: row;
@@ -116,15 +155,22 @@
   }
 }
 
+.gux-field-button-collapsed {
+  border: 1px solid @gux-black-100;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
+
+  &:focus {
+    .focus-ring();
+
+    .gux-expand-icon {
+      color: @gux-blue-60;
+    }
+  }
+}
+
 .gux-listbox-container {
   box-sizing: border-box;
-  padding: 8px 0;
   margin: 0;
-  overflow-y: auto;
   color: @gux-black-50;
-  background: @gux-grey-100;
-  border: 1px solid @gux-grey-30;
-  border-radius: 4px;
-
-  .gux-shadow-20();
 }

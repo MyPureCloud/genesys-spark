@@ -159,6 +159,21 @@ export function hasPreviousOption(list: HTMLGuxListboxElement): boolean {
   return false;
 }
 
+export function hasNextOption(list: HTMLGuxListboxElement): boolean {
+  if (hasActiveOption(list)) {
+    let nextOption = getActiveOption(list)
+      .nextElementSibling as HTMLGuxOptionV2Element;
+
+    while (nextOption && (nextOption.disabled || nextOption.filtered)) {
+      nextOption = nextOption.nextElementSibling as HTMLGuxOptionV2Element;
+    }
+
+    return Boolean(nextOption);
+  }
+
+  return false;
+}
+
 export function setFirstOptionActive(list: HTMLGuxListboxElement): void {
   setActiveOption(list, getFirstOption(list));
 }
