@@ -1,6 +1,7 @@
 import { Component, Element, h, Host, JSX, State } from '@stencil/core';
 
 import { OnMutation } from '../../../../../utils/decorator/on-mutation';
+import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 import { preventBrowserValidationStyling } from '../../../../../utils/dom/prevent-browser-validation-styling';
 import { trackComponent } from '../../../../../usage-tracking';
 
@@ -20,9 +21,13 @@ import { hasErrorSlot, validateFormIds } from '../../gux-form-field.servce';
 })
 export class GuxFormFieldRadio {
   private input: HTMLInputElement;
+  private disabledObserver: MutationObserver;
 
   @Element()
   private root: HTMLElement;
+
+  @State()
+  private disabled: boolean;
 
   @State()
   private hasError: boolean = false;
@@ -40,9 +45,18 @@ export class GuxFormFieldRadio {
     trackComponent(this.root);
   }
 
+  disconnectedCallback(): void {
+    this.disabledObserver.disconnect();
+  }
+
   render(): JSX.Element {
     return (
-      <Host class={{ 'gux-input-error': this.hasError }}>
+      <Host
+        class={{
+          'gux-input-error': this.hasError,
+          'gux-disabled': this.disabled
+        }}
+      >
         <div class="gux-form-field-container">
           <div class="gux-input">
             <slot name="input" onSlotchange={() => this.setInput()} />
@@ -60,6 +74,15 @@ export class GuxFormFieldRadio {
     this.input = this.root.querySelector('input[type="radio"][slot="input"]');
 
     preventBrowserValidationStyling(this.input);
+
+    this.disabled = this.input.disabled;
+
+    this.disabledObserver = onDisabledChange(
+      this.input,
+      (disabled: boolean) => {
+        this.disabled = disabled;
+      }
+    );
 
     validateFormIds(this.root, this.input);
   }

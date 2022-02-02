@@ -17,7 +17,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
 </div>
 `;
 
-exports[`gux-form-field-radio-beta #render should render component as expected (2) 1`] = `"<gux-form-field-radio-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"radio\\" name=\\"food-1\\" value=\\"pizza\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> </gux-form-field-radio-beta>"`;
+exports[`gux-form-field-radio-beta #render should render component as expected (2) 1`] = `"<gux-form-field-radio-beta class=\\"gux-disabled hydrated\\"> <input slot=\\"input\\" type=\\"radio\\" name=\\"food-1\\" value=\\"pizza\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> </gux-form-field-radio-beta>"`;
 
 exports[`gux-form-field-radio-beta #render should render component as expected (2) 2`] = `
 <div class="gux-form-field-container">

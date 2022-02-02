@@ -24,7 +24,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 `;
 
 exports[`gux-form-field-checkbox-beta #render should render component as expected (2) 1`] = `
-<gux-form-field-checkbox-beta>
+<gux-form-field-checkbox-beta class="gux-disabled">
   <mock:shadow-root>
     <div class="gux-form-field-container">
       <div class="gux-input">
