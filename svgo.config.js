@@ -1,4 +1,6 @@
 module.exports = {
+  multipass: true,
+  quiet: true,
   plugins: [
     { name: 'removeStyleElement' },
     {
