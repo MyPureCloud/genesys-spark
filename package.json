@@ -30,7 +30,7 @@
     "lint.commit": "commitlint -f 811627c6ed30490b975acc4cbc2c2f4bac32e8ae",
     "lint.css": "npx stylelint '**/*.{css,html,less}' --fix",
     "lint.fix": "npm run lint.commit && npm run lint.ts -- --fix && npm run lint.css -- --fix",
-    "lint.svg": "svgo -f ./src/components/stable/gux-icon/icons --multipass -q",
+    "lint.svg": "svgo -f ./src/components/stable/gux-icon/icons",
     "lint.ts": "tslint --project .",
     "list-component-tracking": "./scripts/list-component-tracking.js",
     "list-shadow-explicitly-set": "./scripts/list-shadow-explicitly-set.js",
