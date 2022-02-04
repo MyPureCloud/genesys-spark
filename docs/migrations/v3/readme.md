@@ -3,6 +3,7 @@
 *This migration guide is open to anyone to edit. If you have migrated a component and think it would be helpful to others to document something you encountered please do so. We understand that at the moment because of the need to fork the repo the overhead of making a small contribution is high so feel free to raise an issue on the COMUI board instead it that is more convenient and a core team member will create the PR.*
 
 ## TLDR
+* Typescript updated to v4
 * Set the `allowSyntheticDefaultImports` (or `esModuleInterop`) compiler option  to `true` in the host apps tsconfig.json.
 * rename `title` property to `gux-title` on instances of `gux-button`
 * replace the `focusElement` method with the `focus` method on instances of `gux-button`
