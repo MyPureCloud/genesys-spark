@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.51.0](https://inindca///compare/v2.50.3...v2.51.0) (2022-02-04)
+
+
+### Features
+
+* **icon:** added new icons ([11e4f79](https://inindca///commit/11e4f79a4a76e3864c1462f1a124eaa70c14e9d1))
+
+
+### Bug Fixes
+
+* **button:** added specificity to secondary button css ([ee1ee2f](https://inindca///commit/ee1ee2fdef8620ae032139e5e8fb8a0f36292cb3))
+
 ### [2.50.3](https://inindca///compare/v2.50.2...v2.50.3) (2022-02-01)
 
 
