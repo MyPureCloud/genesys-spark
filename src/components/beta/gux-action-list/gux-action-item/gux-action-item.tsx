@@ -53,7 +53,7 @@ export class GuxActionItem {
     return (
       <Host role="listitem">
         <button
-          tabindex="-1"
+          disabled={this.disabled}
           onClick={() => this.onItemClicked()}
           class={{
             'gux-action-item': true,

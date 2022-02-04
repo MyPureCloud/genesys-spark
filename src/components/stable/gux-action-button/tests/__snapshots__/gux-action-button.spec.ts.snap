@@ -25,7 +25,7 @@ exports[`gux-action-button renders 1`] = `
   </mock:shadow-root>
   <gux-action-item role="listitem" text="test">
     <mock:shadow-root>
-      <button class="gux-action-item" tabindex="-1">
+      <button class="gux-action-item">
         test
         <slot></slot>
       </button>
@@ -33,7 +33,7 @@ exports[`gux-action-button renders 1`] = `
   </gux-action-item>
   <gux-action-item role="listitem" text="test2">
     <mock:shadow-root>
-      <button class="gux-action-item" tabindex="-1">
+      <button class="gux-action-item">
         test2
         <slot></slot>
       </button>
@@ -41,7 +41,7 @@ exports[`gux-action-button renders 1`] = `
   </gux-action-item>
   <gux-action-item role="listitem" text="test3">
     <mock:shadow-root>
-      <button class="gux-action-item" tabindex="-1">
+      <button class="gux-action-item">
         test3
         <slot></slot>
       </button>
@@ -50,7 +50,7 @@ exports[`gux-action-button renders 1`] = `
   <gux-list-divider></gux-list-divider>
   <gux-action-item role="listitem">
     <mock:shadow-root>
-      <button class="gux-action-item" tabindex="-1">
+      <button class="gux-action-item">
         <slot></slot>
       </button>
     </mock:shadow-root>
