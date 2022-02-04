@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.28](https://inindca///compare/v3.0.0-alpha.27...v3.0.0-alpha.28) (2022-02-04)
+
+
+### Features
+
+* **icon:** added new icons ([3227b1e](https://inindca///commit/3227b1e79b3ae95cb12d5b3827d095d49b0075e5))
+
 ## [3.0.0-alpha.27](https://inindca///compare/v3.0.0-alpha.26...v3.0.0-alpha.27) (2022-02-01)
 
 
