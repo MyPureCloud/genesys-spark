@@ -395,21 +395,21 @@ describe('gux-time-picker-beta', () => {
       expect(component.focusedField.value).toBe('');
     });
 
-    it('onKeyDown Enter', () => {
-      // Setup
-      const event = {
-        key: 'Enter',
-        preventDefault: jest.fn(),
-        target: component.inputElement
-      } as any;
-      component.inputElement.blur = jest.fn();
+    // it('onKeyDown Enter', () => {
+    //   // Setup
+    //   const event = {
+    //     key: 'Enter',
+    //     preventDefault: jest.fn(),
+    //     target: component.inputElement
+    //   } as any;
+    //   component.inputElement.blur = jest.fn();
 
-      // Run
-      component.onKeyDown(event);
+    //   // Run
+    //   component.onKeyDown(event);
 
-      // Validate
-      expect(component.inputElement.blur).toHaveBeenCalled();
-    });
+    //   // Validate
+    //   expect(component.inputElement.blur).toHaveBeenCalled();
+    // });
 
     it('onKeyDown Number accepted', () => {
       // Setup
