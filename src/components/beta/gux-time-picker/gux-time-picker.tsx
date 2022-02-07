@@ -267,7 +267,6 @@ export class GuxTimePicker {
             type="text"
             value={this.value}
             size={9}
-            class={this.active ? 'gux-focused' : ''}
             aria-label={this.label || this.i18n('defaultAriaLabel')}
             ref={el => (this.inputElement = el)}
           ></input>
