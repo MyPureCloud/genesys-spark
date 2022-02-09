@@ -25,6 +25,7 @@
     "format.check": "npm run format -- --check",
     "format.fix": "npm run format -- --write",
     "generate-start-of-week-file": "./scripts/generate-start-of-week-file.js",
+    "generate-versions-file": "./scripts/generate-versions-file.mjs",
     "i18n": "npm run generate-start-of-week-file && ./scripts/build-i18n.js",
     "lint": "npm run lint.commit && npm run lint.ts && npm run lint.css && npm run lint.svg",
     "lint.commit": "commitlint -f 811627c6ed30490b975acc4cbc2c2f4bac32e8ae",
@@ -57,7 +58,9 @@
     "@popperjs/core": "^2.10.2",
     "focus-trap": "^6.6.1",
     "intl-messageformat": "~9.4.9",
+    "node-fetch": "^3.2.0",
     "requestanimationframe-timer": "^3.0.3",
+    "semver-sort": "^1.0.0",
     "sortablejs": "^1.14.0",
     "stencil-click-outside": "^1.7.1"
   },
