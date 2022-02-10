@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.51.1](https://inindca///compare/v2.51.0...v2.51.1) (2022-02-10)
+
+
+### Bug Fixes
+
+* **scripts:** fixed generate-versions-file script, backport to v2 ([269e0e4](https://inindca///commit/269e0e4cbcf41acbd44db4adbddc141d2b2444bd))
+
 ## [2.51.0](https://inindca///compare/v2.50.3...v2.51.0) (2022-02-04)
 
 
