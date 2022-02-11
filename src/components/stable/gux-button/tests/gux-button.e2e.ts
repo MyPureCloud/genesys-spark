@@ -104,11 +104,11 @@ describe('gux-button', () => {
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-button');
 
-      await element.callMethod('focusElement');
+      await element.callMethod('focus');
       const focusedElement = await page.evaluateHandle(
         () => document.activeElement.nodeName
       );
-      expect(await focusedElement.jsonValue()).toBe('BUTTON');
+      expect(await focusedElement.jsonValue()).toBe('GUX-BUTTON');
     });
   });
 });
