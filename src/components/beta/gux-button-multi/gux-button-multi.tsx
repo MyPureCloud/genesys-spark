@@ -60,7 +60,7 @@ export class GuxButtonMulti {
    * It is used to open or not the list.
    */
   @Prop({ mutable: true })
-  expanded: boolean = false;
+  isOpen: boolean = false;
 
   @Listen('keydown')
   handleKeydown(event: KeyboardEvent): void {
@@ -68,7 +68,7 @@ export class GuxButtonMulti {
 
     switch (event.key) {
       case 'Escape':
-        this.expanded = false;
+        this.isOpen = false;
 
         if (composedPath.includes(this.actionListElement)) {
           this.dropdownButton.focus();
@@ -76,13 +76,13 @@ export class GuxButtonMulti {
 
         break;
       case 'Tab': {
-        this.expanded = false;
+        this.isOpen = false;
         break;
       }
       case 'Enter':
         event.preventDefault();
         if (composedPath.includes(this.dropdownButton)) {
-          this.expanded = true;
+          this.isOpen = true;
           setTimeout(() => {
             void this.actionListElement.setFocusOnFirstItem();
           }, this.moveFocusDelay);
@@ -91,7 +91,7 @@ export class GuxButtonMulti {
       case 'ArrowDown':
         event.preventDefault();
         if (composedPath.includes(this.dropdownButton)) {
-          this.expanded = true;
+          this.isOpen = true;
           setTimeout(() => {
             void this.actionListElement.setFocusOnFirstItem();
           }, this.moveFocusDelay);
@@ -108,7 +108,7 @@ export class GuxButtonMulti {
       case ' ':
         event.preventDefault();
         if (composedPath.includes(this.dropdownButton)) {
-          this.expanded = true;
+          this.isOpen = true;
           setTimeout(() => {
             void this.actionListElement.setFocusOnFirstItem();
           }, this.moveFocusDelay);
@@ -120,13 +120,13 @@ export class GuxButtonMulti {
   @Watch('disabled')
   watchDisabled(disabled: boolean): void {
     if (disabled) {
-      this.expanded = false;
+      this.isOpen = false;
     }
   }
 
-  @Watch('expanded')
-  watchValue(expanded: boolean): void {
-    if (expanded) {
+  @Watch('isOpen')
+  watchValue(isOpen: boolean): void {
+    if (isOpen) {
       this.open.emit();
     } else {
       this.close.emit();
@@ -135,12 +135,12 @@ export class GuxButtonMulti {
 
   @OnClickOutside({ triggerEvents: 'mousedown' })
   onClickOutside(): void {
-    this.expanded = false;
+    this.isOpen = false;
   }
 
   private toggle(): void {
     if (!this.disabled) {
-      this.expanded = !this.expanded;
+      this.isOpen = !this.isOpen;
     }
   }
 
@@ -150,7 +150,7 @@ export class GuxButtonMulti {
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta expanded={this.expanded} disabled={this.disabled}>
+      <gux-popup-beta expanded={this.isOpen} disabled={this.disabled}>
         <div slot="target" class="gux-button-multi-container">
           <gux-button-slot-beta
             class="gux-dropdown-button"
@@ -162,7 +162,7 @@ export class GuxButtonMulti {
               ref={el => (this.dropdownButton = el)}
               onClick={() => this.toggle()}
               aria-haspopup="true"
-              aria-expanded={this.expanded.toString()}
+              aria-expanded={this.isOpen.toString()}
             >
               <span>{this.text}</span>
               <gux-icon decorative icon-name="chevron-small-down"></gux-icon>

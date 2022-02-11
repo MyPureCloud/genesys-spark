@@ -78,7 +78,7 @@ export class GuxActionButton {
    * It is used to open or not the list.
    */
   @Prop({ mutable: true })
-  expanded: boolean = false;
+  isOpen: boolean = false;
 
   @Listen('keydown')
   handleKeydown(event: KeyboardEvent): void {
@@ -86,19 +86,19 @@ export class GuxActionButton {
 
     switch (event.key) {
       case 'Escape':
-        this.expanded = false;
+        this.isOpen = false;
         if (composedPath.includes(this.actionListElement)) {
           this.dropdownButton.focus();
         }
         break;
       case 'Tab': {
-        this.expanded = false;
+        this.isOpen = false;
         break;
       }
       case 'ArrowDown':
         event.preventDefault();
         if (composedPath.includes(this.dropdownButton)) {
-          this.expanded = true;
+          this.isOpen = true;
           setTimeout(() => {
             void this.actionListElement.setFocusOnFirstItem();
           }, this.moveFocusDelay);
@@ -106,7 +106,7 @@ export class GuxActionButton {
         break;
       case 'Enter':
         if (composedPath.includes(this.dropdownButton)) {
-          this.expanded = true;
+          this.isOpen = true;
           setTimeout(() => {
             void this.actionListElement.setFocusOnFirstItem();
           }, this.moveFocusDelay);
@@ -123,7 +123,7 @@ export class GuxActionButton {
       case ' ':
         if (composedPath.includes(this.dropdownButton)) {
           event.preventDefault();
-          this.expanded = true;
+          this.isOpen = true;
           setTimeout(() => {
             void this.actionListElement.setFocusOnFirstItem();
           }, this.moveFocusDelay);
@@ -135,13 +135,13 @@ export class GuxActionButton {
   @Watch('disabled')
   watchDisabled(disabled: boolean): void {
     if (disabled) {
-      this.expanded = false;
+      this.isOpen = false;
     }
   }
 
-  @Watch('expanded')
-  watchValue(expanded: boolean): void {
-    if (expanded) {
+  @Watch('isOpen')
+  watchValue(isOpen: boolean): void {
+    if (isOpen) {
       this.open.emit();
     } else {
       this.close.emit();
@@ -151,19 +151,19 @@ export class GuxActionButton {
   @OnClickOutside({ triggerEvents: 'click' })
   onClickOutside(event: MouseEvent): void {
     if (event.relatedTarget === null) {
-      this.expanded = false;
+      this.isOpen = false;
     }
   }
 
   private toggle(): void {
     if (!this.disabled) {
-      this.expanded = !this.expanded;
+      this.isOpen = !this.isOpen;
     }
   }
 
   private onActionClick(): void {
     if (!this.disabled) {
-      this.expanded = false;
+      this.isOpen = false;
       this.actionClick.emit();
     }
   }
@@ -176,7 +176,7 @@ export class GuxActionButton {
   render(): JSX.Element {
     return (
       <div class="gux-action-button-container">
-        <gux-popup-beta expanded={this.expanded} disabled={this.disabled}>
+        <gux-popup-beta expanded={this.isOpen} disabled={this.disabled}>
           <div slot="target" class="gux-action-button-container">
             <gux-button-slot-beta
               class="gux-action-button"
@@ -201,7 +201,7 @@ export class GuxActionButton {
                 ref={el => (this.dropdownButton = el)}
                 onClick={() => this.toggle()}
                 aria-haspopup="true"
-                aria-expanded={this.expanded.toString()}
+                aria-expanded={this.isOpen.toString()}
                 aria-label={this.i18n('actionButtonDropdown', {
                   buttonTitle: this.text
                 })}
