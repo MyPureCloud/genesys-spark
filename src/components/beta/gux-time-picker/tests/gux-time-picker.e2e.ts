@@ -23,7 +23,7 @@ describe('gux-time-picker-beta', () => {
     // Validate
     const input = await page.find('gux-time-picker-beta input');
     const focusedElement = await page.find(':focus');
-    expect(focusedElement).toBe(input);
+    expect(focusedElement.outerHTML).toEqual(input.outerHTML);
   });
 
   it('Type a valid value', async () => {
@@ -36,14 +36,14 @@ describe('gux-time-picker-beta', () => {
     const input = await page.find('gux-time-picker-beta input');
     await input.focus();
     let focusedElement = await page.find(':focus');
-    expect(focusedElement.outerHTML).toBe(input.outerHTML);
+    expect(focusedElement.outerHTML).toEqual(input.outerHTML);
 
     // Type
     await input.type('00:55:00');
     let list = await page.find('gux-time-picker-beta gux-list');
     await a11yCheck(page, [], 'dropdown opened');
     focusedElement = await page.find(':focus');
-    expect(focusedElement.outerHTML).toBe(input.outerHTML);
+    expect(focusedElement.outerHTML).toEqual(input.outerHTML);
 
     expect(list).not.toBeNull();
 
@@ -52,7 +52,7 @@ describe('gux-time-picker-beta', () => {
     const timePicker = await page.find('gux-time-picker-beta');
     list = await page.find('gux-time-picker-beta gux-list');
     focusedElement = await page.find(':focus');
-    expect(focusedElement.outerHTML).toBe(input.outerHTML);
+    expect(focusedElement.outerHTML).toEqual(input.outerHTML);
     expect(list).toBeNull();
     expect(await timePicker.getProperty('value')).toEqual('00:55:00');
   });
@@ -66,13 +66,13 @@ describe('gux-time-picker-beta', () => {
     const input = await page.find('gux-time-picker-beta input');
     await input.focus();
     let focusedElement = await page.find(':focus');
-    expect(focusedElement.outerHTML).toBe(input.outerHTML);
+    expect(focusedElement.outerHTML).toEqual(input.outerHTML);
 
     // Type
     await input.type('00:55:0');
     let list = await page.find('gux-time-picker-beta gux-list');
     focusedElement = await page.find(':focus');
-    expect(focusedElement.outerHTML).toBe(input.outerHTML);
+    expect(focusedElement.outerHTML).toEqual(input.outerHTML);
     // expect(input).toHaveFocus();
     expect(list).not.toBeNull();
 
@@ -81,7 +81,7 @@ describe('gux-time-picker-beta', () => {
     const timePicker = await page.find('gux-time-picker-beta');
     list = await page.find('gux-time-picker-beta gux-list');
     focusedElement = await page.find(':focus');
-    expect(focusedElement.outerHTML).toBe(input.outerHTML);
+    expect(focusedElement.outerHTML).toEqual(input.outerHTML);
     expect(list).toBeNull();
     expect(await timePicker.getProperty('value')).toEqual('');
   });
@@ -95,7 +95,7 @@ describe('gux-time-picker-beta', () => {
     const input = await page.find('gux-time-picker-beta input');
     await input.click();
     const focusedElement = await page.find(':focus');
-    expect(focusedElement.outerHTML).toBe(input.outerHTML);
+    expect(focusedElement.outerHTML).toEqual(input.outerHTML);
 
     // Type
     await input.type('00:00:00');
