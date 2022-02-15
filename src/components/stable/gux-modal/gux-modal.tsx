@@ -6,10 +6,8 @@ import {
   h,
   JSX,
   Listen,
-  Prop,
-  Watch
+  Prop
 } from '@stencil/core';
-import { createFocusTrap, FocusTrap } from 'focus-trap';
 import { trackComponent } from '../../../usage-tracking';
 
 import { GuxModalSize } from './gux-modal.types';
@@ -22,11 +20,10 @@ import { GuxModalSize } from './gux-modal.types';
  */
 @Component({
   styleUrl: 'gux-modal.less',
-  tag: 'gux-modal'
+  tag: 'gux-modal',
+  shadow: true
 })
 export class GuxModal {
-  private focusTrap: FocusTrap | undefined;
-
   /**
    * Indicates the size of the modal (small, medium or large)
    */
@@ -49,12 +46,10 @@ export class GuxModal {
   @Event()
   guxdismiss: EventEmitter<void>;
 
-  @Watch('trapFocus')
-  watchTrapFocus(trapFocus: boolean): void {
-    if (trapFocus) {
-      this.focusTrap?.unpause();
-    } else {
-      this.focusTrap?.pause();
+  @Listen('transitionend')
+  onTransitionend(): void {
+    if (this.trapFocus) {
+      this.root.shadowRoot.querySelector('gux-dismiss-button').focus();
     }
   }
 
@@ -67,24 +62,14 @@ export class GuxModal {
 
   componentDidLoad() {
     const initialFocusElement = this.getInitialFocusElement();
-
-    this.focusTrap = createFocusTrap(this.root, {
-      escapeDeactivates: false,
-      returnFocusOnDeactivate: true,
-      initialFocus: initialFocusElement,
-      fallbackFocus: () => this.root.querySelector('gux-dismiss-button')
-    });
-
-    this.focusTrap.activate();
-
-    if (!this.trapFocus) {
-      this.focusTrap.pause();
+    const dismissButton =
+      this.root.shadowRoot.querySelector('gux-dismiss-button');
+    if (initialFocusElement) {
+      initialFocusElement.focus();
+    } 
+    else if (dismissButton) {
+      dismissButton.focus();
     }
-  }
-
-  disconnectedCallback() {
-    this.focusTrap?.deactivate();
-    this.focusTrap = undefined;
   }
 
   @Element()

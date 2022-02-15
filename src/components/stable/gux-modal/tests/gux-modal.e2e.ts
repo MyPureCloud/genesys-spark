@@ -143,7 +143,10 @@ describe('gux-modal', () => {
       `;
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-modal');
-      const dismissButton = await element.find('gux-dismiss-button >>> button');
+      const dismissButtonElement = await element.find(
+        'pierce/gux-dismiss-button'
+      );
+      const dismissButton = await dismissButtonElement.find('pierce/button');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -174,7 +177,10 @@ describe('gux-modal', () => {
       `;
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-modal');
-      const dismissButton = await element.find('gux-dismiss-button >>> button');
+      const dismissButtonElement = await element.find(
+        'pierce/gux-dismiss-button'
+      );
+      const dismissButton = await dismissButtonElement.find('pierce/button');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -292,7 +298,7 @@ describe('gux-modal', () => {
       expect(await getFocusedElementTagName(page)).toBe('GUX-DISMISS-BUTTON');
     });
 
-    // Moving gux-button to shadow dom will breaks this test
+    // Moving gux-button to shadow dom will break this test
     // COMUI-893 update trap focus to work with shadow dom elements
 
     // test('traps focus in the modal', async () => {

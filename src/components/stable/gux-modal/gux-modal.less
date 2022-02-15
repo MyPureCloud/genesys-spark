@@ -4,7 +4,8 @@
 @import (reference) '../../../style/shadows.less';
 
 // Style
-gux-modal {
+:host {
+  background-color: rgba(1, 0, 0, 0) !important;
   .gux-modal {
     position: fixed;
     top: 0;
@@ -102,23 +103,7 @@ gux-modal {
   }
 }
 
-// Theming
-
-// Dark
-.gux-modal-dark-theme {
-  color: @gux-type-dark;
-
-  .gux-modal-container {
-    background: @gux-black-50;
-  }
-}
-
-.gux-dark-theme {
-  gux-modal {
-    .gux-modal-dark-theme();
-  }
-}
-
-gux-modal.gux-dark-theme {
-  .gux-modal-dark-theme();
+:host(:not(:focus-within)) {
+  background-color: rgba(0, 0, 0, 0) !important;
+  transition: background-color 0.01s;
 }
