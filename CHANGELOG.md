@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.29](https://inindca///compare/v3.0.0-alpha.28...v3.0.0-alpha.29) (2022-02-15)
+
+
+### Bug Fixes
+
+* **gux-time-picker:** fixed on click bug ([51d595f](https://inindca///commit/51d595f1a18b6fdd88237e6cd60ea255468b73ac))
+
 ## [3.0.0-alpha.28](https://inindca///compare/v3.0.0-alpha.27...v3.0.0-alpha.28) (2022-02-04)
 
 
