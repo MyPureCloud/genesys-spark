@@ -22,20 +22,24 @@ exports[`gux-modal #render should render large modal 1`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -67,20 +71,24 @@ exports[`gux-modal #render should render large modal 2`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -112,20 +120,24 @@ exports[`gux-modal #render should render medium modal 1`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -157,20 +169,24 @@ exports[`gux-modal #render should render medium modal 2`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -202,10 +218,12 @@ exports[`gux-modal #render should render modal with just left align buttons 1`] 
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
@@ -238,10 +256,12 @@ exports[`gux-modal #render should render modal with just left align buttons 2`] 
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
@@ -275,10 +295,12 @@ exports[`gux-modal #render should render modal with just right align buttons 1`]
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -311,10 +333,12 @@ exports[`gux-modal #render should render modal with just right align buttons 2`]
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -341,20 +365,24 @@ exports[`gux-modal #render should render modal without a title 1`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -381,20 +409,24 @@ exports[`gux-modal #render should render modal without a title 2`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -472,20 +504,24 @@ exports[`gux-modal #render should render small modal 1`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -517,20 +553,24 @@ exports[`gux-modal #render should render small modal 2`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -562,20 +602,24 @@ exports[`gux-modal #render should render small modal by default 1`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>
@@ -607,20 +651,24 @@ exports[`gux-modal #render should render small modal by default 2`] = `
         <div class="gux-left-align-buttons">
           <div slot="left-align-buttons">
             <gux-button>
-              <!---->
-              <button class="gux-secondary" type="button">
-                Cancel
-              </button>
+              <mock:shadow-root>
+                <button class="gux-secondary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Cancel
             </gux-button>
           </div>
         </div>
         <div class="gux-right-align-buttons">
           <div slot="right-align-buttons">
             <gux-button accent="primary">
-              <!---->
-              <button class="gux-primary" type="button">
-                Accept
-              </button>
+              <mock:shadow-root>
+                <button class="gux-primary" type="button">
+                  <slot></slot>
+                </button>
+              </mock:shadow-root>
+              Accept
             </gux-button>
           </div>
         </div>

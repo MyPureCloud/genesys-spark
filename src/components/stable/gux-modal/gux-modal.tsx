@@ -139,17 +139,9 @@ export class GuxModal {
   }
 
   private getInitialFocusElement(): HTMLElement | SVGElement | undefined {
-    // Workaround that gux-buttons don't have a native focus method that works
-    // Query the element then find the inner tabbable element
-    const initialFocusElement = this.initialFocus
+    return this.initialFocus
       ? this.root.querySelector<HTMLElement | SVGElement>(this.initialFocus)
       : undefined;
-
-    if (initialFocusElement?.tagName === 'GUX-BUTTON') {
-      return initialFocusElement.querySelector('button');
-    }
-
-    return initialFocusElement;
   }
 
   private hasModalTitleSlot(): boolean {
