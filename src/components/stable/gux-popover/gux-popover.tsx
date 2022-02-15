@@ -19,11 +19,13 @@ import { PopperPosition } from './gux-popover.types';
 
 @Component({
   styleUrl: 'gux-popover.less',
-  tag: 'gux-popover'
+  tag: 'gux-popover',
+  shadow: true
 })
 export class GuxPopover {
   private popperInstance: Instance;
   private hiddenObserver: MutationObserver;
+  private popupElement: HTMLDivElement;
 
   @Element()
   private root: HTMLElement;
@@ -88,8 +90,12 @@ export class GuxPopover {
   private runPopper(): void {
     const forElement = document.getElementById(this.for);
 
-    if (forElement) {
-      this.popperInstance = createPopper(forElement, this.root, {
+    if (!forElement) {
+      console.error(
+        `gux-popover: invalid "for" attribute. No element in page with the id "${this.for}"`
+      );
+    } else if (this.popupElement) {
+      this.popperInstance = createPopper(forElement, this.popupElement, {
         modifiers: [
           {
             name: 'offset',
@@ -106,10 +112,6 @@ export class GuxPopover {
         ],
         placement: this.position
       });
-    } else {
-      console.error(
-        `GUX-Popover: invalid "for" attribute. No element in page with the id "${this.for}"`
-      );
     }
   }
 
@@ -148,7 +150,10 @@ export class GuxPopover {
 
   render(): JSX.Element {
     return (
-      <div class="gux-popover-wrapper">
+      <div
+        ref={(el: HTMLDivElement) => (this.popupElement = el)}
+        class="gux-popover-wrapper"
+      >
         <div class="gux-arrow" data-popper-arrow />
         {this.displayDismissButton && (
           <gux-dismiss-button
