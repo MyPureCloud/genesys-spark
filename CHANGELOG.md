@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.30](https://inindca///compare/v3.0.0-alpha.29...v3.0.0-alpha.30) (2022-02-16)
+
+
+### Features
+
+* **gux-button:** migrate gux-button to shadow dom ([de5b0e6](https://inindca///commit/de5b0e6bebd4aabfc2b09e572521300a6801e328))
+* **gux-popover:** migrate gux-popover to shadow dom ([f0541cb](https://inindca///commit/f0541cbe39313a8a4581e81c4ca2004c5c4817ca))
+
 ## [3.0.0-alpha.29](https://inindca///compare/v3.0.0-alpha.28...v3.0.0-alpha.29) (2022-02-15)
 
 
