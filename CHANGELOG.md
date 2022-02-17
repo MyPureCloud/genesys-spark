@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.31](https://inindca///compare/v3.0.0-alpha.30...v3.0.0-alpha.31) (2022-02-17)
+
+
+### Features
+
+* **icon:** added run and message-email-outbound icons ([1b6db76](https://inindca///commit/1b6db768b3ceac0e7c323c9aa6b6c999394806dd))
+
 ## [3.0.0-alpha.30](https://inindca///compare/v3.0.0-alpha.29...v3.0.0-alpha.30) (2022-02-16)
 
 
