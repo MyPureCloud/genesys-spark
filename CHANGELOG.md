@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.52.0](https://inindca///compare/v2.51.1...v2.52.0) (2022-02-17)
+
+
+### Features
+
+* **icon:** added run and message-email-outbound icons ([0119a4e](https://inindca///commit/0119a4ee09e62e76dd618e2ec040a77201e7ec91))
+
 ### [2.51.1](https://inindca///compare/v2.51.0...v2.51.1) (2022-02-10)
 
 
