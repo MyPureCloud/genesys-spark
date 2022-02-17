@@ -1,6 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/typography.less';
 
 // Style
 :host {
@@ -17,10 +18,6 @@
   color: @gux-grey-100;
   background-color: @gux-black-50;
   border-radius: @spacing-2xs;
-
-  &:focus-within {
-    .focus-ring();
-  }
 
   .gux-tag-icon-container {
     display: flex;
@@ -45,6 +42,10 @@
     padding: 0 @spacing-xs;
     line-height: 24px;
     white-space: nowrap;
+
+    .gux-sr-only {
+      .gux-sr-only-clip();
+    }
   }
 
   .gux-tag-remove-button {
@@ -65,6 +66,13 @@
     .gux-tag-remove-icon {
       width: 12px;
       height: 12px;
+      border-radius: 25%;
+    }
+
+    &:focus-within {
+      .gux-tag-remove-icon {
+        .focus-ring-small();
+      }
     }
   }
 
@@ -81,6 +89,7 @@
   }
 
   &.gux-blue {
+    color: @gux-black-50;
     background-color: @gux-blue-sec;
   }
 
@@ -89,10 +98,12 @@
   }
 
   &.gux-aqua-green {
+    color: @gux-black-40;
     background-color: @gux-aqua-green-sec;
   }
 
   &.gux-fuscha {
+    color: @gux-black-10;
     background-color: @gux-fuscha-sec;
   }
 
@@ -101,10 +112,12 @@
   }
 
   &.gux-bubblegum-pink {
+    color: @gux-black-50;
     background-color: @gux-bubblegum-pink-sec;
   }
 
   &.gux-olive-green {
+    color: @gux-black-20;
     background-color: @gux-olive-green-sec;
   }
 
