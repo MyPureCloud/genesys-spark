@@ -46,13 +46,6 @@ export class GuxModal {
   @Event()
   guxdismiss: EventEmitter<void>;
 
-  @Listen('transitionend')
-  onTransitionend(): void {
-    if (this.trapFocus) {
-      this.root.shadowRoot.querySelector('gux-dismiss-button').focus();
-    }
-  }
-
   @Listen('keydown')
   protected handleKeyEvent(event: KeyboardEvent) {
     if (event.key === 'Escape') {
@@ -66,8 +59,7 @@ export class GuxModal {
       this.root.shadowRoot.querySelector('gux-dismiss-button');
     if (initialFocusElement) {
       initialFocusElement.focus();
-    } 
-    else if (dismissButton) {
+    } else if (dismissButton) {
       dismissButton.focus();
     }
   }
@@ -88,8 +80,8 @@ export class GuxModal {
         <div class={`gux-modal-container gux-${this.size}`}>
           <gux-dismiss-button
             onClick={this.onDismissHandler.bind(this)}
+            onKeyDown={this.onModalTopFocus.bind(this)}
           ></gux-dismiss-button>
-
           {hasModalTitleSlot && (
             <h1 class="gux-modal-header">
               <slot name="title" />
@@ -118,6 +110,8 @@ export class GuxModal {
               </div>
             </div>
           )}
+          {/* Putting focus on this element immediately moves focus to the dismiss button at the top of the modal */}
+          <span onFocus={this.onModalEndFocus.bind(this)} tabindex="0"></span>
         </div>
       </div>
     ) as JSX.Element;
@@ -147,5 +141,20 @@ export class GuxModal {
     if (!dismissEvent.defaultPrevented) {
       this.root.remove();
     }
+  }
+
+  private onModalTopFocus(event: KeyboardEvent): void {
+    if (event.shiftKey && event.key === 'Tab') {
+      const dismissButton =
+        this.root.shadowRoot.querySelector('gux-dismiss-button');
+      event.preventDefault();
+      dismissButton?.focus();
+    }
+  }
+
+  private onModalEndFocus(): void {
+    const dismissButton =
+      this.root.shadowRoot.querySelector('gux-dismiss-button');
+    dismissButton?.focus();
   }
 }
