@@ -12,9 +12,7 @@ import { GuxFormFieldLabel } from '../../functional-components/gux-form-field-la
 
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
-  clearInput,
   hasErrorSlot,
-  hasContent,
   getComputedLabelPosition,
   validateFormIds
 } from '../../gux-form-field.servce';
@@ -39,9 +37,6 @@ export class GuxFormFieldColor {
   private root: HTMLElement;
 
   @Prop()
-  clearable: boolean = false;
-
-  @Prop()
   labelPosition: GuxFormFieldLabelPosition;
 
   @State()
@@ -52,9 +47,6 @@ export class GuxFormFieldColor {
 
   @State()
   private required: boolean;
-
-  @State()
-  private hasContent: boolean = false;
 
   @State()
   private hasError: boolean = false;
@@ -101,11 +93,6 @@ export class GuxFormFieldColor {
               }}
             >
               <slot name="input" onSlotchange={() => this.setInput()} />
-              {this.clearable && this.hasContent && !this.disabled && (
-                <gux-form-field-input-clear-button
-                  onClick={() => clearInput(this.input)}
-                ></gux-form-field-input-clear-button>
-              )}
             </div>
           </div>
           <GuxFormFieldError hasError={this.hasError}>
@@ -117,24 +104,13 @@ export class GuxFormFieldColor {
   }
 
   private get variant(): string {
-    const labelPositionVariant = this.labelPosition
-      ? this.labelPosition.toLowerCase()
-      : 'none';
-    const clearableVariant = this.clearable ? 'clearable' : 'unclearable';
-
-    return `${clearableVariant}-${labelPositionVariant}`;
+    return this.labelPosition ? this.labelPosition.toLowerCase() : 'none';
   }
 
   private setInput(): void {
     this.input = this.root.querySelector('input[type="color"][slot="input"]');
 
-    this.hasContent = hasContent(this.input);
-
     preventBrowserValidationStyling(this.input);
-
-    this.input.addEventListener('input', () => {
-      this.hasContent = hasContent(this.input);
-    });
 
     this.disabled = this.input.disabled;
     this.required = this.input.required;

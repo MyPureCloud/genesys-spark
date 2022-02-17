@@ -40,7 +40,6 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
@@ -70,7 +69,6 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">

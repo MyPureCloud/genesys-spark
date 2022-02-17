@@ -9,7 +9,6 @@
 
 ### Used by
 
- - [gux-form-field-color-beta](../../components/gux-form-field-color)
  - [gux-form-field-number-beta](../../components/gux-form-field-number)
  - [gux-form-field-search-beta](../../components/gux-form-field-search)
  - [gux-form-field-text-like-beta](../../components/gux-form-field-text-like)
@@ -22,7 +21,6 @@
 ```mermaid
 graph TD;
   gux-form-field-input-clear-button --> gux-icon
-  gux-form-field-color-beta --> gux-form-field-input-clear-button
   gux-form-field-number-beta --> gux-form-field-input-clear-button
   gux-form-field-search-beta --> gux-form-field-input-clear-button
   gux-form-field-text-like-beta --> gux-form-field-input-clear-button
