@@ -6,7 +6,8 @@ import {
   h,
   JSX,
   Listen,
-  Prop
+  Prop,
+  State
 } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 
@@ -41,6 +42,13 @@ export class GuxModal {
   initialFocus?: string | undefined;
 
   /**
+   * The element that was last focused before opening the modal
+   * Focus is redirected back to this element when the modal is closed
+   */
+  @State()
+  triggerElement: HTMLElement;
+
+  /**
    * Fired when a user dismisses the modal (The default behaviour is to remove the component from the DOM)
    */
   @Event()
@@ -68,6 +76,7 @@ export class GuxModal {
   private root: HTMLElement;
 
   componentWillLoad(): void {
+    this.triggerElement = document.activeElement as HTMLElement;
     trackComponent(this.root, { variant: this.size });
   }
 
@@ -140,6 +149,7 @@ export class GuxModal {
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
       this.root.remove();
+      this.triggerElement?.focus();
     }
   }
 
