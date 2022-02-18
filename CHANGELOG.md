@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.52.1](https://inindca///compare/v2.52.0...v2.52.1) (2022-02-18)
+
+
+### Bug Fixes
+
+* **gux-form-field:** added translations for gux-input-text-like and gux-input-search ([44fa23a](https://inindca///commit/44fa23aed1c27ca6b9a2d4fcdf3f7394e6ff045f))
+
 ## [2.52.0](https://inindca///compare/v2.51.1...v2.52.0) (2022-02-17)
 
 
