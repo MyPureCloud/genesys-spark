@@ -6,8 +6,7 @@ import {
   h,
   JSX,
   Listen,
-  Prop,
-  State
+  Prop
 } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 
@@ -25,6 +24,12 @@ import { GuxModalSize } from './gux-modal.types';
   shadow: true
 })
 export class GuxModal {
+  private dismissButton: HTMLGuxDismissButtonElement;
+  private triggerElement: HTMLElement;
+
+  @Element()
+  private root: HTMLElement;
+
   /**
    * Indicates the size of the modal (small, medium or large)
    */
@@ -42,13 +47,6 @@ export class GuxModal {
   initialFocus?: string | undefined;
 
   /**
-   * The element that was last focused before opening the modal
-   * Focus is redirected back to this element when the modal is closed
-   */
-  @State()
-  triggerElement: HTMLElement;
-
-  /**
    * Fired when a user dismisses the modal (The default behaviour is to remove the component from the DOM)
    */
   @Event()
@@ -61,7 +59,15 @@ export class GuxModal {
     }
   }
 
-  componentDidLoad() {
+  connectedCallback(): void {
+    this.triggerElement = document.activeElement as HTMLElement;
+  }
+
+  componentWillLoad(): void {
+    trackComponent(this.root, { variant: this.size });
+  }
+
+  componentDidLoad(): void {
     const initialFocusElement = this.getInitialFocusElement();
     const dismissButton =
       this.root.shadowRoot.querySelector('gux-dismiss-button');
@@ -70,14 +76,6 @@ export class GuxModal {
     } else if (dismissButton) {
       dismissButton.focus();
     }
-  }
-
-  @Element()
-  private root: HTMLElement;
-
-  componentWillLoad(): void {
-    this.triggerElement = document.activeElement as HTMLElement;
-    trackComponent(this.root, { variant: this.size });
   }
 
   render(): JSX.Element {
@@ -90,6 +88,7 @@ export class GuxModal {
           <gux-dismiss-button
             onClick={this.onDismissHandler.bind(this)}
             onKeyDown={this.onModalTopFocus.bind(this)}
+            ref={el => (this.dismissButton = el)}
           ></gux-dismiss-button>
           {hasModalTitleSlot && (
             <h1 class="gux-modal-header">
@@ -119,11 +118,20 @@ export class GuxModal {
               </div>
             </div>
           )}
-          {/* Putting focus on this element immediately moves focus to the dismiss button at the top of the modal */}
-          <span onFocus={this.onModalEndFocus.bind(this)} tabindex="0"></span>
+          {this.renderModalEndFocusEl()}
         </div>
       </div>
     ) as JSX.Element;
+  }
+
+  // When trap-focus is enabled, focusing this element
+  // will immediately redirect focus back to the dismiss button at the top of the modal.
+  private renderModalEndFocusEl(): JSX.Element {
+    if (this.trapFocus) {
+      return (
+        <span onFocus={this.onModalEndFocus.bind(this)} tabindex="0"></span>
+      ) as JSX.Element;
+    }
   }
 
   private getInitialFocusElement(): HTMLElement | SVGElement | undefined {
@@ -154,17 +162,13 @@ export class GuxModal {
   }
 
   private onModalTopFocus(event: KeyboardEvent): void {
-    if (event.shiftKey && event.key === 'Tab') {
-      const dismissButton =
-        this.root.shadowRoot.querySelector('gux-dismiss-button');
+    if (this.trapFocus && event.shiftKey && event.key === 'Tab') {
       event.preventDefault();
-      dismissButton?.focus();
+      this.dismissButton.focus();
     }
   }
 
   private onModalEndFocus(): void {
-    const dismissButton =
-      this.root.shadowRoot.querySelector('gux-dismiss-button');
-    dismissButton?.focus();
+    this.dismissButton.focus();
   }
 }

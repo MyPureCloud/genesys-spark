@@ -1,16 +1,5 @@
 <h1>gux-modal</h1>
-<div id="modal-container">
-  <gux-modal initial-focus="#cancel-button" size="small">
-    <div slot="title">Modal Title</div>
-    <div slot="content">This contains the modal content.</div>
-    <div slot="left-align-buttons">
-      <gux-button type="button" accent="primary">Accept</gux-button>
-    </div>
-    <div slot="right-align-buttons">
-      <gux-button id="cancel-button" type="button">Cancel</gux-button>
-    </div>
-  </gux-modal>
-</div>
+<div id="modal-container"></div>
 
 <div>
   <h2>Typical Modal</h2>
@@ -18,7 +7,7 @@
     accent="primary"
     onClick='(function() {
         const html = window.toHTML(`
-            <gux-modal initial-focus="#cancel-button" size="small">
+            <gux-modal initial-focus="#cancel-button" size="small" trap-focus="false">
                 <div slot="title">Modal Title</div>
                 <div slot="content">This contains the modal content.</div>
                 <div slot="left-align-buttons">
