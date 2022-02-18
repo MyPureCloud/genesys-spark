@@ -206,12 +206,14 @@ export class GuxTabAdvanced {
           onClick={() => this.toggleOptions()}
           tabIndex={this.active ? 0 : -1}
         >
-          <gux-icon
-            icon-name="menu-kebab-vertical"
-            screenreader-text={this.i18n('options', {
-              tabTitle: this.tabTitle
-            })}
-          ></gux-icon>
+          <div class="gux-menu-kebab-padding">
+            <gux-icon
+              icon-name="menu-kebab-vertical"
+              screenreader-text={this.i18n('options', {
+                tabTitle: this.tabTitle
+              })}
+            ></gux-icon>
+          </div>
         </button>,
         <gux-popover
           position="top-end"
@@ -232,7 +234,7 @@ export class GuxTabAdvanced {
       ] as JSX.Element;
     }
 
-    return null;
+    return [<div class="gux-tab-options-button-placeholder" />] as JSX.Element;
   }
 
   componentDidLoad(): void {
@@ -247,8 +249,11 @@ export class GuxTabAdvanced {
   render(): JSX.Element {
     return [
       <div
-        class={`gux-tab ${this.active ? 'gux-selected' : ''}`}
+        class={`gux-tab ${this.active ? 'gux-selected' : ''} ${
+          this.hasDropdownOptions ? '' : 'gux-no-dropdown-options'
+        }`}
         aria-disabled={this.guxDisabled.toString()}
+        tabIndex={this.hasDropdownOptions ? -1 : 0}
       >
         <button
           class="gux-tab-button"

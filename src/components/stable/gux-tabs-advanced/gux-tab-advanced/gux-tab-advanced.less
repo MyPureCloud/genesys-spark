@@ -19,31 +19,62 @@ gux-tab-advanced {
   }
 
   .gux-tab {
-    display: flex;
-    align-items: center;
-    width: 0;
-    height: 36px;
-    margin-left: 4px;
-    overflow: hidden;
-    border: none;
-    transition: width 0.4s ease-out;
-
-    .gux-tab-button {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      height: 36px;
-      padding: 3px;
-      background-color: inherit;
-      border: none;
-
+    &.gux-no-dropdown-options {
       &:focus {
         outline: none;
       }
 
       &:focus-visible {
-        padding: 0;
+        height: 90%;
         border: 3px solid @gux-blue-90;
+        border-radius: 5px;
+        outline: none;
+      }
+    }
+
+    &:not(.gux-no-dropdown-options) {
+      .gux-tab-button {
+        &:focus {
+          outline: none;
+        }
+
+        &:focus-visible {
+          height: 100%;
+          border: 3px solid @gux-blue-90;
+          border-radius: 5px;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .gux-tab {
+    display: flex;
+    align-items: center;
+    width: 126px;
+    height: 50px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    transition: width 0.4s ease-out;
+    // border-right: 1px solid @gux-grey-50;
+
+    &:focus {
+      outline: none;
+    }
+
+    .gux-tab-button {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      width: 125px;
+      height: 50px;
+      padding-right: 0;
+      padding-left: 16px;
+      background-color: @gux-grey-90;
+      border: none;
+
+      &:focus {
         outline: none;
       }
     }
@@ -54,51 +85,66 @@ gux-tab-advanced {
 
     .tab-title {
       position: relative;
-      flex: 1 1 auto;
-      height: 14px;
-      padding-bottom: 2px;
+      padding-top: 2px;
       overflow: hidden;
-      font-size: 12px;
-      text-align: left;
+      font-size: 14px;
+      text-overflow: ellipsis;
       white-space: nowrap;
       cursor: default;
-
-      &::after {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        display: block;
-        width: 14px;
-        height: 15px;
-        content: '';
-      }
     }
+
+    // &:not(.gux-selected) {
+    //   .gux-tab-options-button {
+    //     .gux-menu-kebab-padding {
+    //       height: 30px;
+    //       display: flex;
+    //       align-items: center;
+    //       justify-content: center;
+    //       border-right: 1px solid @gux-grey-50;
+    //     }
+    //   }
+    // }
 
     .gux-tab-options-button {
       z-index: 1;
-      display: flex;
-      flex: 0 0 29px;
       align-items: center;
       justify-content: center;
+      width: 35px;
       height: 100%;
       padding: 0;
       cursor: pointer;
-      background: none;
+      background-color: @gux-grey-90;
       border: none;
+
+      .gux-menu-kebab-padding {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        border-right: 1px solid @gux-grey-50;
+      }
 
       &:focus-visible {
         outline: none;
 
         gux-icon {
           border: 3px solid @gux-blue-90;
+          border-radius: 5px;
         }
       }
 
       gux-icon {
-        width: 12px;
-        height: 12px;
+        width: 16px;
+        height: 16px;
         transition: color 0.25s;
       }
+    }
+
+    .gux-tab-options-button-placeholder {
+      width: 35px;
+      height: 30px;
+      border-right: 1px solid @gux-grey-50;
+      // visibility: hidden;
     }
 
     .tab-icon-container {
@@ -107,8 +153,7 @@ gux-tab-advanced {
       align-items: center;
       justify-content: center;
       height: 14px;
-      padding-bottom: 2px;
-      margin: 0 10px 0 7px;
+      margin-right: 8px;
 
       gux-icon {
         width: 100%;
@@ -116,91 +161,23 @@ gux-tab-advanced {
     }
 
     &.gux-selected {
-      .tab-title {
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-// Theming
-// Light
-.gux-tab-light-theme {
-  .gux-tab {
-    background-color: @gux-off-tab-fill;
-
-    .tab-title {
-      color: @gux-type;
-
-      &::after {
-        background: linear-gradient(
-          90deg,
-          fade(@gux-off-tab-fill, 0%),
-          @gux-off-tab-fill
-        );
-      }
-    }
-
-    .gux-tab-options-button {
-      color: @gux-type;
-
-      &:hover,
-      &:focus {
-        gux-icon {
-          color: @gux-blue-60;
-        }
-      }
-    }
-
-    .tab-icon-container {
-      color: @gux-type;
-    }
-
-    &.gux-selected {
-      background-color: @gux-type-dark;
+      padding-bottom: 0;
+      background-color: @gux-grey-100;
+      border-bottom: 2px solid #2a60c8;
 
       .gux-tab-button {
-        background-color: @gux-type-dark;
-      }
-
-      &:active {
-        background-color: @gux-type-dark;
-      }
-
-      .tab-title {
-        color: @gux-type;
-
-        &::after {
-          background: linear-gradient(
-            90deg,
-            fade(@gux-off-white, 0%),
-            @gux-off-white
-          );
-        }
+        background-color: @gux-grey-100;
       }
 
       .gux-tab-options-button {
-        color: @gux-type;
-      }
-
-      .tab-icon-container {
-        color: @gux-blue-60;
+        background-color: @gux-grey-100;
       }
     }
+
+    &:hover:not(.gux-selected):not(.gux-disabled),
+    &:focus-visible {
+      padding-bottom: 0;
+      border-bottom: 2px solid @gux-grey-10;
+    }
   }
-}
-
-.gux-light-theme {
-  gux-tab-advanced {
-    .gux-tab-light-theme();
-  }
-}
-
-gux-tab-advanced.gux-light-theme {
-  .gux-tab-light-theme();
-}
-
-// Default
-gux-tab-advanced {
-  .gux-tab-light-theme();
 }
