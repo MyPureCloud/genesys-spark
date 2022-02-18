@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.32](https://inindca///compare/v3.0.0-alpha.31...v3.0.0-alpha.32) (2022-02-18)
+
+
+### Features
+
+* **visualization:** enabled shadow dom ([04f147c](https://inindca///commit/04f147c49e0239c32eb2cf9a73ce422359e497ba))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([ca7ecbb](https://inindca///commit/ca7ecbb5b705250e8eecf2448593fac37522c45d))
+* **pr-comment:** addressed PR comment ([36e04e2](https://inindca///commit/36e04e22acbb10555918c5daeb1361e00316cc22))
+* **pr-comment:** addressed PR comments ([6af4f77](https://inindca///commit/6af4f77229cff1854f72fd676b81a7030e6736dc))
+* **tag:** improved components accessibility ([e5fe7a3](https://inindca///commit/e5fe7a3b231d610dc2624ad328d81d63c293abe9))
+
 ## [3.0.0-alpha.31](https://inindca///compare/v3.0.0-alpha.30...v3.0.0-alpha.31) (2022-02-17)
 
 
