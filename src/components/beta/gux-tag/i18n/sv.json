@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Ta bort tagg"
+  "tag": "tagga med etikett: {label}",
+  "tag-disabled": "inaktiverad tagg med etikett: {label}",
+  "remove-tag": "Ta bort tagg med etikett: {label}"
 }
