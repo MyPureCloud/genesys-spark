@@ -3,7 +3,7 @@ import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 const axeExclusions = [
   {
     issueId: 'color-contrast',
-    target: 'span',
+    target: 'gux-content-search,span',
     exclusionReason:
       'WCAG 1.4.3 Contrast (Minimum), inactive user interface components do not need to meet contrast minimum'
   }
@@ -108,10 +108,13 @@ describe('gux-content-search', () => {
       it(description, async () => {
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-content-search');
-        const previousButton = await page.find('.gux-previous-button');
-        const nextButton = await page.find('.gux-next-button');
-        const clearButton = await page.find('.gux-clear-button');
+        const previousButton = await element.find(
+          'pierce/.gux-previous-button'
+        );
+        const nextButton = await element.find('pierce/.gux-next-button');
+        const clearButton = await element.find('pierce/.gux-clear-button');
         const input = await element.find('input');
+
         await page.waitForChanges();
         await a11yCheck(page, axeExclusions);
         expect(element.outerHTML).toMatchSnapshot();
@@ -148,7 +151,7 @@ describe('gux-content-search', () => {
       });
 
       let element = await page.find('gux-content-search');
-      let clearButton = await page.find('.gux-clear-button');
+      let clearButton = await element.find('pierce/.gux-clear-button');
       const input = await element.find('input');
       const guxCurrentMatchChangedSpy = await page.spyOnEvent(
         'guxcurrentmatchchanged'
@@ -165,8 +168,8 @@ describe('gux-content-search', () => {
       await page.waitForChanges();
       expect(inputSpy).toHaveReceivedEventTimes(4);
       expect(guxCurrentMatchChangedSpy).not.toHaveReceivedEvent();
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
+      clearButton = await element.find('pierce/.gux-clear-button');
       expect(clearButton).not.toBeNull();
 
       let value: string = await input.getProperty('value');
@@ -198,7 +201,7 @@ describe('gux-content-search', () => {
       });
 
       const element = await page.find('gux-content-search');
-      const clearButton = await page.find('.gux-clear-button');
+      const clearButton = await element.find('pierce/.gux-clear-button');
       const input = await element.find('input');
       const guxCurrentMatchChangedSpy = await page.spyOnEvent(
         'guxcurrentmatchchanged'
@@ -239,10 +242,10 @@ describe('gux-content-search', () => {
       });
 
       let element = await page.find('gux-content-search');
-      let clearButton = await page.find('.gux-clear-button');
-      let nextButton = await page.find('.gux-next-button');
-      let previousButton = await page.find('.gux-previous-button');
-      let resultSpan = await page.find('.gux-navigation-result');
+      let clearButton = await element.find('pierce/.gux-clear-button');
+      let nextButton = await element.find('pierce/.gux-next-button');
+      let previousButton = await element.find('pierce/.gux-previous-button');
+      let resultSpan = await element.find('pierce/.gux-navigation-result');
       let matchCount = await element.getProperty('matchCount');
       let currentMatch = await element.getProperty('currentMatch');
       const guxCurrentMatchChangedSpy = await page.spyOnEvent(
@@ -262,11 +265,11 @@ describe('gux-content-search', () => {
       await nextButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -284,11 +287,11 @@ describe('gux-content-search', () => {
       await nextButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -306,11 +309,11 @@ describe('gux-content-search', () => {
       await nextButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -328,11 +331,11 @@ describe('gux-content-search', () => {
       await previousButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -350,11 +353,11 @@ describe('gux-content-search', () => {
       await previousButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -372,11 +375,11 @@ describe('gux-content-search', () => {
       await previousButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -394,11 +397,11 @@ describe('gux-content-search', () => {
       await previousButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -416,11 +419,11 @@ describe('gux-content-search', () => {
       await clearButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -440,10 +443,10 @@ describe('gux-content-search', () => {
       });
 
       let element = await page.find('gux-content-search');
-      let clearButton = await page.find('.gux-clear-button');
-      let nextButton = await page.find('.gux-next-button');
-      let previousButton = await page.find('.gux-previous-button');
-      let resultSpan = await page.find('.gux-navigation-result');
+      let clearButton = await element.find('pierce/.gux-clear-button');
+      let nextButton = await element.find('pierce/.gux-next-button');
+      let previousButton = await element.find('pierce/.gux-previous-button');
+      let resultSpan = await element.find('pierce/.gux-navigation-result');
       let matchCount = await element.getProperty('matchCount');
       let currentMatch = await element.getProperty('currentMatch');
       const guxCurrentMatchChangedSpy = await page.spyOnEvent(
@@ -465,11 +468,11 @@ describe('gux-content-search', () => {
       await nextButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -488,11 +491,11 @@ describe('gux-content-search', () => {
       await previousButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -517,10 +520,10 @@ describe('gux-content-search', () => {
       });
 
       let element = await page.find('gux-content-search');
-      let clearButton = await page.find('.gux-clear-button');
-      let nextButton = await page.find('.gux-next-button');
-      let previousButton = await page.find('.gux-previous-button');
-      let resultSpan = await page.find('.gux-navigation-result');
+      let clearButton = await element.find('pierce/.gux-clear-button');
+      let nextButton = await element.find('pierce/.gux-next-button');
+      let previousButton = await element.find('pierce/.gux-previous-button');
+      let resultSpan = await element.find('pierce/.gux-navigation-result');
       let matchCount = await element.getProperty('matchCount');
       let currentMatch = await element.getProperty('currentMatch');
       const guxCurrentMatchChangedSpy = await page.spyOnEvent(
@@ -543,11 +546,11 @@ describe('gux-content-search', () => {
       await nextButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -567,11 +570,11 @@ describe('gux-content-search', () => {
       await previousButton.click();
       await page.waitForChanges();
 
-      clearButton = await page.find('.gux-clear-button');
       element = await page.find('gux-content-search');
-      nextButton = await page.find('.gux-next-button');
-      previousButton = await page.find('.gux-previous-button');
-      resultSpan = await page.find('.gux-navigation-result');
+      clearButton = await element.find('pierce/.gux-clear-button');
+      nextButton = await element.find('pierce/.gux-next-button');
+      previousButton = await element.find('pierce/.gux-previous-button');
+      resultSpan = await element.find('pierce/.gux-navigation-result');
       matchCount = await element.getProperty('matchCount');
       currentMatch = await element.getProperty('currentMatch');
 
@@ -599,7 +602,7 @@ describe('gux-content-search', () => {
       });
 
       const element = await page.find('gux-content-search');
-      const clearButton = await page.find('.gux-clear-button');
+      const clearButton = await element.find('pierce/.gux-clear-button');
       const input = await element.find('input');
       const guxCurrentMatchChangedSpy = await page.spyOnEvent(
         'guxcurrentmatchchanged'
