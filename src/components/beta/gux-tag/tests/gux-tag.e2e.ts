@@ -1,14 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const axeExclusionsIfDisabled = [
-  {
-    issueId: 'color-contrast',
-    target: 'gux-tag-beta,.gux-tag-text',
-    exclusionReason:
-      'WCAG 1.4.3 Contrast (Minimum), inactive user interface components do not need to meet contrast minimum'
-  }
-];
-
 describe('gux-tag-beta', () => {
   describe('#render', () => {
     [
@@ -22,10 +13,8 @@ describe('gux-tag-beta', () => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag-beta');
-        const elementIsDisabled = await element.getProperty('disabled');
-        const axeExclusions = elementIsDisabled ? axeExclusionsIfDisabled : [];
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
 
         expect(element.outerHTML).toMatchSnapshot();
       });
@@ -126,23 +115,15 @@ describe('gux-tag-beta', () => {
       it(`should be accessible when color is "${color}"`, async () => {
         const html = `<gux-tag-beta lang="en" icon="bolt" color="${color}" value="3" removable>navy</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
-        const axeExclusions = [
-          {
-            issueId: 'color-contrast',
-            target: 'gux-tag-beta,.gux-tag-text',
-            exclusionReason:
-              'Specified in Spark. May be addressed by https://inindca.atlassian.net/browse/COMUI-794'
-          }
-        ];
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
       });
 
       it(`should be accessible when disabled and color is "${color}"`, async () => {
         const html = `<gux-tag-beta lang="en" icon="bolt" color="${color}" value="3" removable disabled>navy</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
 
-        await a11yCheck(page, axeExclusionsIfDisabled);
+        await a11yCheck(page);
       });
     });
   });

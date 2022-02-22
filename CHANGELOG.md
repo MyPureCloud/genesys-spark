@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.32](https://inindca///compare/v3.0.0-alpha.31...v3.0.0-alpha.32) (2022-02-18)
+
+
+### Features
+
+* **visualization:** enabled shadow dom ([04f147c](https://inindca///commit/04f147c49e0239c32eb2cf9a73ce422359e497ba))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([ca7ecbb](https://inindca///commit/ca7ecbb5b705250e8eecf2448593fac37522c45d))
+* **pr-comment:** addressed PR comment ([36e04e2](https://inindca///commit/36e04e22acbb10555918c5daeb1361e00316cc22))
+* **pr-comment:** addressed PR comments ([6af4f77](https://inindca///commit/6af4f77229cff1854f72fd676b81a7030e6736dc))
+* **tag:** improved components accessibility ([e5fe7a3](https://inindca///commit/e5fe7a3b231d610dc2624ad328d81d63c293abe9))
+
+## [3.0.0-alpha.31](https://inindca///compare/v3.0.0-alpha.30...v3.0.0-alpha.31) (2022-02-17)
+
+
+### Features
+
+* **icon:** added run and message-email-outbound icons ([1b6db76](https://inindca///commit/1b6db768b3ceac0e7c323c9aa6b6c999394806dd))
+
+## [3.0.0-alpha.30](https://inindca///compare/v3.0.0-alpha.29...v3.0.0-alpha.30) (2022-02-16)
+
+
+### Features
+
+* **gux-button:** migrate gux-button to shadow dom ([de5b0e6](https://inindca///commit/de5b0e6bebd4aabfc2b09e572521300a6801e328))
+* **gux-popover:** migrate gux-popover to shadow dom ([f0541cb](https://inindca///commit/f0541cbe39313a8a4581e81c4ca2004c5c4817ca))
+
+## [3.0.0-alpha.29](https://inindca///compare/v3.0.0-alpha.28...v3.0.0-alpha.29) (2022-02-15)
+
+
+### Bug Fixes
+
+* **gux-time-picker:** fixed on click bug ([51d595f](https://inindca///commit/51d595f1a18b6fdd88237e6cd60ea255468b73ac))
+
+## [3.0.0-alpha.28](https://inindca///compare/v3.0.0-alpha.27...v3.0.0-alpha.28) (2022-02-04)
+
+
+### Features
+
+* **icon:** added new icons ([3227b1e](https://inindca///commit/3227b1e79b3ae95cb12d5b3827d095d49b0075e5))
+
 ## [3.0.0-alpha.27](https://inindca///compare/v3.0.0-alpha.26...v3.0.0-alpha.27) (2022-02-01)
 
 

@@ -4,18 +4,18 @@
 
 @gux-arrow-height: 5px;
 
-gux-popover {
+:host {
   z-index: 2;
   color: @gux-black-50;
+}
 
-  .gux-popover-wrapper {
-    display: inline-block;
-    padding: @spacing-medium;
-    background-color: @gux-grey-100;
-    border: 1px solid @gux-grey-30;
-    border-radius: @spacing-2xs;
-    .gux-shadow-20();
-  }
+.gux-popover-wrapper {
+  display: inline-block;
+  padding: @spacing-medium;
+  background-color: @gux-grey-100;
+  border: 1px solid @gux-grey-30;
+  border-radius: @spacing-2xs;
+  .gux-shadow-20();
 
   .gux-arrow,
   .gux-arrow::before {

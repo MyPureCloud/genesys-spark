@@ -402,13 +402,31 @@ describe('gux-time-picker-beta', () => {
         preventDefault: jest.fn(),
         target: component.inputElement
       } as any;
-      component.inputElement.blur = jest.fn();
+      component.updateChosenValue = jest.fn();
+      component.inputElement.focus = jest.fn();
 
       // Run
       component.onKeyDown(event);
 
       // Validate
-      expect(component.inputElement.blur).toHaveBeenCalled();
+      expect(component.inputElement.focus).toHaveBeenCalled();
+      expect(component.updateChosenValue).toHaveBeenCalled();
+    });
+
+    it('onKeyDown Tab', () => {
+      // Setup
+      const event = {
+        key: 'Tab',
+        preventDefault: jest.fn(),
+        target: component.inputElement
+      } as any;
+      component.updateChosenValue = jest.fn();
+
+      // Run
+      component.onKeyDown(event);
+
+      // Validate
+      expect(component.updateChosenValue).toHaveBeenCalled();
     });
 
     it('onKeyDown Number accepted', () => {

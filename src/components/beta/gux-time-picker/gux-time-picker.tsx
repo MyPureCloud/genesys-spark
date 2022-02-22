@@ -11,6 +11,7 @@ import {
   Watch
 } from '@stencil/core';
 
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { fromIsoTime } from '../../../utils/date/from-iso-time-string';
 import { trackComponent } from '../../../usage-tracking';
 
@@ -77,14 +78,15 @@ export class GuxTimePicker {
     if (this.focusedField === this.inputElement) {
       switch (e.key) {
         case 'Enter':
-        case 'Escape':
-          this.focusedField.blur();
+          this.updateChosenValue();
+          this.inputElement.focus();
           break;
         case 'Backspace':
           e.preventDefault();
           this.handleBackspace();
           break;
         case 'Tab':
+          this.updateChosenValue();
           break;
         case 'ArrowDown':
           e.preventDefault();
@@ -118,6 +120,16 @@ export class GuxTimePicker {
               this.suggestion = arr[0].padEnd(2, '0');
             }
           }
+      }
+    } else {
+      switch (e.key) {
+        case 'Enter':
+          this.inputElement.focus();
+          break;
+        case 'Escape':
+          this.updateChosenValue();
+          this.inputElement.focus();
+          break;
       }
     }
   }
@@ -153,12 +165,9 @@ export class GuxTimePicker {
     this.updateChosenValue();
   }
 
-  @Listen('focusout')
-  onFocusOut(e: FocusEvent) {
-    if (!this.isPressEvent && !this.root.contains(e.relatedTarget as Node)) {
-      this.updateChosenValue();
-    }
-    this.isPressEvent = false;
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside() {
+    this.updateChosenValue();
   }
 
   updateChosenValue() {
@@ -259,7 +268,6 @@ export class GuxTimePicker {
             type="text"
             value={this.value}
             size={9}
-            class={this.active ? 'gux-focused' : ''}
             aria-label={this.label || this.i18n('defaultAriaLabel')}
             ref={el => (this.inputElement = el)}
           ></input>

@@ -4,7 +4,6 @@ import {
   Component,
   Element,
   h,
-  Host,
   JSX,
   Prop,
   Event,
@@ -20,9 +19,11 @@ import { timeFormatLocale } from './gux-visualization.locale';
 
 @Component({
   styleUrl: 'gux-visualization.less',
-  tag: 'gux-visualization-beta'
+  tag: 'gux-visualization-beta',
+  shadow: true
 })
 export class GuxVisualization {
+  private chartContainer: HTMLDivElement;
   private defaultVisualizationSpec: VisualizationSpec = {};
 
   private defaultEmbedOptions: EmbedOptions = {
@@ -53,7 +54,7 @@ export class GuxVisualization {
     this.chartClicked.emit(value);
   }
 
-  async componentWillRender(): Promise<void> {
+  async componentDidRender(): Promise<void> {
     const locale = getDesiredLocale(this.root);
 
     const patchOption = {
@@ -71,7 +72,7 @@ export class GuxVisualization {
       }
     };
     await embed(
-      this.root,
+      this.chartContainer,
       Object.assign({}, this.defaultVisualizationSpec, this.visualizationSpec),
       Object.assign(
         {
@@ -93,6 +94,6 @@ export class GuxVisualization {
   }
 
   render(): JSX.Element {
-    return (<Host></Host>) as JSX.Element;
+    return (<div ref={el => (this.chartContainer = el)}></div>) as JSX.Element;
   }
 }
