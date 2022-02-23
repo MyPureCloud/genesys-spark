@@ -21,7 +21,8 @@ import { onDisabledChange } from '../../../utils/dom/on-attribute-change';
 
 @Component({
   styleUrl: 'gux-content-search.less',
-  tag: 'gux-content-search'
+  tag: 'gux-content-search',
+  shadow: true
 })
 export class GuxContentSearch {
   private inputSlottedElement: HTMLInputElement;
@@ -96,7 +97,12 @@ export class GuxContentSearch {
 
   render(): JSX.Element {
     return (
-      <div class={{ 'gux-disabled': this.disabled, 'gux-content': true }}>
+      <div
+        class={{
+          'gux-content-search': true,
+          'gux-disabled': this.disabled
+        }}
+      >
         <div class="gux-search-icon">
           <gux-icon decorative icon-name="search"></gux-icon>
         </div>
