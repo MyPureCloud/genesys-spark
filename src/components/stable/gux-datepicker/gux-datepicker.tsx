@@ -46,7 +46,8 @@ import {
 
 @Component({
   styleUrl: 'gux-datepicker.less',
-  tag: 'gux-datepicker'
+  tag: 'gux-datepicker',
+  shadow: true
 })
 export class GuxDatepicker {
   yearFormat: string = 'yyyy';
@@ -253,7 +254,7 @@ export class GuxDatepicker {
         case 'Escape':
         case ' ': {
           this.active = false;
-          const button: HTMLButtonElement = this.root.querySelector(
+          const button: HTMLButtonElement = this.root.shadowRoot.querySelector(
             '.gux-calendar-toggle-button'
           );
           setTimeout(() => {
@@ -282,7 +283,9 @@ export class GuxDatepicker {
 
   @Listen('focusout')
   onFocusOut(event: FocusEvent) {
-    if (!this.root.contains(event.relatedTarget as Node)) {
+    const composedPath = event.composedPath();
+
+    if (!composedPath.includes(this.root)) {
       this.lastIntervalRange = getIntervalRange(
         this.format,
         getIntervalLetter(this.format, 0)
@@ -296,14 +299,14 @@ export class GuxDatepicker {
       this.isSelectingRange = true;
     }
 
-    const target = event.target as HTMLElement;
-    const inDatepicker = this.datepickerElement.contains(target);
+    const composedPath = event.composedPath();
+    const inDatepicker = composedPath.includes(this.datepickerElement);
 
     const notToggleButton = Array.from(
-      this.root.querySelectorAll('.gux-calendar-toggle-button')
+      this.root.shadowRoot.querySelectorAll('.gux-calendar-toggle-button')
     ).every(
       (toggleButtonElement: HTMLButtonElement) =>
-        !toggleButtonElement.contains(target)
+        !composedPath.includes(toggleButtonElement)
     );
 
     if (notToggleButton) {
@@ -331,13 +334,18 @@ export class GuxDatepicker {
   }
 
   isFocusedFieldEvent(event: Event): boolean {
+    const composedPath = event.composedPath();
+
     return (
-      event.target === this.inputElement || event.target === this.toInputElement
+      composedPath.includes(this.inputElement) ||
+      composedPath.includes(this.toInputElement)
     );
   }
 
   getInputFieldFromEvent(event: Event): HTMLInputElement {
-    return event.target as HTMLInputElement;
+    const composedPath = event.composedPath();
+
+    return composedPath[0] as HTMLInputElement;
   }
 
   updateIntervalValue(event: KeyboardEvent): void {
