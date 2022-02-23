@@ -64,17 +64,17 @@ export class GuxModal {
   }
 
   componentWillLoad(): void {
-    trackComponent(this.root, { variant: this.size });
+    const trapFocusVariant = this.trapFocus ? 'trapfocuson' : 'trapfocusoff';
+    const componentVariant = `${this.size}-${trapFocusVariant}`;
+    trackComponent(this.root, { variant: componentVariant });
   }
 
   componentDidLoad(): void {
     const initialFocusElement = this.getInitialFocusElement();
-    const dismissButton =
-      this.root.shadowRoot.querySelector('gux-dismiss-button');
     if (initialFocusElement) {
       initialFocusElement.focus();
-    } else if (dismissButton) {
-      dismissButton.focus();
+    } else if (this.dismissButton) {
+      this.dismissButton.focus();
     }
   }
 
@@ -85,9 +85,9 @@ export class GuxModal {
     return (
       <div class="gux-modal">
         <div class={`gux-modal-container gux-${this.size}`}>
+          {this.renderModalTrapFocusEl()}
           <gux-dismiss-button
             onClick={this.onDismissHandler.bind(this)}
-            onKeyDown={this.onModalTopFocus.bind(this)}
             ref={el => (this.dismissButton = el)}
           ></gux-dismiss-button>
           {hasModalTitleSlot && (
@@ -118,7 +118,7 @@ export class GuxModal {
               </div>
             </div>
           )}
-          {this.renderModalEndFocusEl()}
+          {this.renderModalTrapFocusEl()}
         </div>
       </div>
     ) as JSX.Element;
@@ -126,10 +126,10 @@ export class GuxModal {
 
   // When trap-focus is enabled, focusing this element
   // will immediately redirect focus back to the dismiss button at the top of the modal.
-  private renderModalEndFocusEl(): JSX.Element {
+  private renderModalTrapFocusEl(): JSX.Element {
     if (this.trapFocus) {
       return (
-        <span onFocus={this.onModalEndFocus.bind(this)} tabindex="0"></span>
+        <span onFocus={() => this.dismissButton.focus()} tabindex="0"></span>
       ) as JSX.Element;
     }
   }
@@ -159,16 +159,5 @@ export class GuxModal {
       this.root.remove();
       this.triggerElement?.focus();
     }
-  }
-
-  private onModalTopFocus(event: KeyboardEvent): void {
-    if (this.trapFocus && event.shiftKey && event.key === 'Tab') {
-      event.preventDefault();
-      this.dismissButton.focus();
-    }
-  }
-
-  private onModalEndFocus(): void {
-    this.dismissButton.focus();
   }
 }
