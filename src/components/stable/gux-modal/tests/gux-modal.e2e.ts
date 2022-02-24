@@ -216,10 +216,11 @@ describe('gux-modal', () => {
         </gux-modal>
       `;
       const page = await newSparkE2EPage({ html });
+      const modalEl = await page.find('gux-modal');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
 
       expect(guxdismissSpy).not.toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(modalEl).not.toBeNull();
 
       await page.keyboard.down('Escape');
       await page.waitForChanges();
@@ -231,7 +232,7 @@ describe('gux-modal', () => {
 
   describe('focus', () => {
     const focusModalHtml = (props = '') => `
-      <gux-modal lang="en" size="small" trap-focus ${props}>
+      <gux-modal lang="en" size="small" trap-focus="true" ${props}>
         <div slot="title">Modal Title</div>
         <div slot="content">This contains the modal content.</div>
         <div slot="left-align-buttons">
@@ -260,20 +261,33 @@ describe('gux-modal', () => {
       }, modalHtml);
       return page;
     };
+
     const getFocusedElementText = (page: E2EPage) =>
       page.evaluate(() => document.activeElement.textContent);
-    const getFocusedElementTagName = (page: E2EPage) =>
-      page.evaluate(() => document.activeElement.tagName);
+    const getFocusedShadowElementText = (page: E2EPage) =>
+      page.evaluate(
+        () =>
+          document.querySelector('gux-modal').shadowRoot.activeElement
+            .textContent
+      );
+    const getFocusedShadowElementTagName = (page: E2EPage) =>
+      page.evaluate(
+        () =>
+          document.querySelector('gux-modal').shadowRoot.activeElement.tagName
+      );
 
-    it('focuses the first focusable element by default', async () => {
+    it('focuses the dismiss button by defualt', async () => {
       const page = await setupContainerPage(focusModalHtml());
       await page.click('#modal-trigger');
       await page.waitForChanges();
 
       expect(await page.find('gux-modal')).not.toBeNull();
-      expect(await getFocusedElementText(page)).toBe('');
-      expect(await getFocusedElementTagName(page)).toBe('GUX-DISMISS-BUTTON');
+      expect(await getFocusedShadowElementText(page)).toBe('');
+      expect(await getFocusedShadowElementTagName(page)).toBe(
+        'GUX-DISMISS-BUTTON'
+      );
     });
+
     test('can focus a specific focusable element', async () => {
       const page = await setupContainerPage(
         focusModalHtml('initial-focus="#accept-button"')
@@ -284,6 +298,7 @@ describe('gux-modal', () => {
       expect(await page.find('gux-modal')).not.toBeNull();
       expect(await getFocusedElementText(page)).toBe('Accept');
     });
+
     test('focuses the dismiss button if there are no other focusable elements', async () => {
       const page = await setupContainerPage(`
         <gux-modal lang="en" size="small">
@@ -294,28 +309,45 @@ describe('gux-modal', () => {
       await page.waitForChanges();
 
       expect(await page.find('gux-modal')).not.toBeNull();
-      expect(await getFocusedElementText(page)).toBe('');
-      expect(await getFocusedElementTagName(page)).toBe('GUX-DISMISS-BUTTON');
+      expect(await getFocusedShadowElementText(page)).toBe('');
+      expect(await getFocusedShadowElementTagName(page)).toBe(
+        'GUX-DISMISS-BUTTON'
+      );
     });
 
-    // Moving gux-button to shadow dom will break this test
-    // COMUI-893 update trap focus to work with shadow dom elements
+    test('traps focus in the modal', async () => {
+      const page = await setupContainerPage(focusModalHtml());
+      await page.click('#modal-trigger');
+      await page.waitForChanges();
 
-    // test('traps focus in the modal', async () => {
-    //   const page = await setupContainerPage(focusModalHtml());
-    //   await page.click('#modal-trigger');
-    //   await page.waitForChanges();
+      expect(await getFocusedShadowElementText(page)).toBe('');
+      expect(await getFocusedShadowElementTagName(page)).toBe(
+        'GUX-DISMISS-BUTTON'
+      );
 
-    //   expect(await getFocusedElementText(page)).toBe('');
-    //   expect(await getFocusedElementTagName(page)).toBe('GUX-DISMISS-BUTTON');
-    //   await page.keyboard.press('Tab');
-    //   expect(await getFocusedElementText(page)).toBe('Cancel');
-    //   await page.keyboard.press('Tab');
-    //   expect(await getFocusedElementText(page)).toBe('Accept');
-    //   await page.keyboard.press('Tab');
-    //   expect(await getFocusedElementText(page)).toBe('');
-    //   expect(await getFocusedElementTagName(page)).toBe('GUX-DISMISS-BUTTON');
-    // });
+      await page.keyboard.press('Tab');
+
+      expect(await getFocusedElementText(page)).toBe('Cancel');
+
+      await page.keyboard.press('Tab');
+
+      expect(await getFocusedElementText(page)).toBe('Accept');
+
+      await page.keyboard.press('Tab');
+
+      expect(await getFocusedShadowElementText(page)).toBe('');
+      expect(await getFocusedShadowElementTagName(page)).toBe(
+        'GUX-DISMISS-BUTTON'
+      );
+
+      await page.keyboard.down('Shift');
+      await page.keyboard.press('Tab');
+
+      expect(await getFocusedShadowElementText(page)).toBe('');
+      expect(await getFocusedShadowElementTagName(page)).toBe(
+        'GUX-DISMISS-BUTTON'
+      );
+    });
 
     test('returns focus to the originally focused element when the modal closes', async () => {
       const page = await setupContainerPage(focusModalHtml());
@@ -323,8 +355,11 @@ describe('gux-modal', () => {
       await page.click('#modal-trigger');
       await page.waitForChanges();
 
-      expect(await getFocusedElementText(page)).toBe('');
-      expect(await getFocusedElementTagName(page)).toBe('GUX-DISMISS-BUTTON');
+      expect(await getFocusedShadowElementText(page)).toBe('');
+      expect(await getFocusedShadowElementTagName(page)).toBe(
+        'GUX-DISMISS-BUTTON'
+      );
+
       await page.keyboard.down('Escape');
       await page.waitForChanges();
 

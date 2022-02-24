@@ -72,9 +72,11 @@ export class GuxModal {
   componentDidLoad(): void {
     const initialFocusElement = this.getInitialFocusElement();
     if (initialFocusElement) {
-      initialFocusElement.focus();
+      // using .focus?.() instead of .focus() as a workaround for a Stencil bug in unit tests
+      // https://github.com/ionic-team/stencil/issues/1964
+      initialFocusElement.focus?.();
     } else if (this.dismissButton) {
-      this.dismissButton.focus();
+      this.dismissButton.focus?.();
     }
   }
 
