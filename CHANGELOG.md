@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.34](https://inindca///compare/v3.0.0-alpha.33...v3.0.0-alpha.34) (2022-02-24)
+
+
+### Features
+
+* **chart:** enabled shadow dom ([6892237](https://inindca///commit/6892237fbd7187108f3f844d6c97b1ec34c65c93))
+* **content-search:** enabled shadow dom ([6ba68ea](https://inindca///commit/6ba68ea1943a4c5a1b9931df0e3c770ada20e8b2))
+* **datepicker:** enabled shadow dom ([2303b73](https://inindca///commit/2303b739c8782f006c55218355d1bbe2041d20c9))
+
 ## [3.0.0-alpha.33](https://inindca///compare/v3.0.0-alpha.32...v3.0.0-alpha.33) (2022-02-23)
 
 ## [3.0.0-alpha.32](https://inindca///compare/v3.0.0-alpha.31...v3.0.0-alpha.32) (2022-02-18)
