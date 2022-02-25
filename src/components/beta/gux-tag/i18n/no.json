@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Fjern kode"
+  "tag": "tag med etikett: {label}",
+  "tag-disabled": "deaktivert tag med etikett: {label}",
+  "remove-tag": "Fjern tag med etikett: {label}"
 }
