@@ -35,10 +35,7 @@ export class GuxLineChart {
       }
     },
     encoding: {
-      x: {
-        type: 'nominal',
-        axis: { labelAngle: 0 } // horizontal x axis ticks by default
-      },
+      x: { type: 'nominal' },
       y: { type: 'quantitative' },
       color: {
         field: DEFAULT_COLOR_FIELD_NAME,
@@ -57,12 +54,6 @@ export class GuxLineChart {
   @Prop()
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   chartData: Record<string, any>;
-
-  /**
-   * if true, then make Axis tick label 45 degrees
-   */
-  @Prop()
-  xTickLabelSlant: boolean;
 
   @Prop()
   includeLegend: boolean;
@@ -126,10 +117,6 @@ export class GuxLineChart {
     let chartData = {};
     if (this.chartData) {
       chartData = { data: this.chartData };
-    }
-
-    if (this.xTickLabelSlant) {
-      this.baseChartSpec.encoding.x.axis.labelAngle = 45;
     }
 
     if (this.includeLegend) {
