@@ -59,7 +59,7 @@ export class GuxLineChart {
   chartData: Record<string, any>;
 
   /**
-   * if true, then make Axis tick label 45 degrees
+   * If true, then make Axis tick label 45 degrees
    */
   @Prop()
   xTickLabelSlant: boolean;
