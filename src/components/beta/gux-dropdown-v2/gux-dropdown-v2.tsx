@@ -102,18 +102,12 @@ export class GuxDropdownV2Beta {
         this.collapseListbox('focusFieldButton');
         return;
       case 'Tab':
-        if (
-          !(
-            event.shiftKey &&
-            this.filterable &&
-            document.activeElement === this.listboxElement
-          )
-        ) {
+        if (this.shiftTabFromFilterableList(event)) {
           this.collapseListbox('noFocusChange');
         }
         return;
       case 'ArrowDown':
-        if (document.activeElement !== this.listboxElement) {
+        if (this.activeElementNotListbox()) {
           event.preventDefault();
           this.expanded = !this.expanded;
         }
@@ -170,6 +164,20 @@ export class GuxDropdownV2Beta {
 
   private filterInput(): void {
     this.filter = this.filterElement.value;
+  }
+
+  private shiftTabFromFilterableList(event: KeyboardEvent): boolean {
+    return !(
+      event.shiftKey &&
+      this.filterable &&
+      document.activeElement === this.listboxElement
+    )
+      ? true
+      : false;
+  }
+
+  private activeElementNotListbox(): boolean {
+    return document.activeElement !== this.listboxElement ? true : false;
   }
 
   private filterKeydown(event: KeyboardEvent): void {
@@ -247,9 +255,9 @@ export class GuxDropdownV2Beta {
     ) as JSX.Element;
   }
 
-  private renderFilterInputField() {
+  private renderFilterInputField(): JSX.Element {
     if (this.expanded && this.filterable) {
-      return [
+      return (
         <div class="gux-field">
           <div class="gux-field-content">
             <div class="gux-filter">
@@ -274,7 +282,7 @@ export class GuxDropdownV2Beta {
             </div>
           </div>
         </div>
-      ] as JSX.Element;
+      ) as JSX.Element;
     }
   }
 
@@ -288,21 +296,29 @@ export class GuxDropdownV2Beta {
 
   private renderTarget(): JSX.Element {
     return (
-      <button
-        type="button"
+      <div
         class={{
-          'gux-field': true,
-          'gux-field-button-collapsed': !(this.expanded && this.filterable),
-          'gux-field-button-expanded': this.expanded && this.filterable
+          'gux-target-container-expanded': this.expanded && this.filterable
         }}
-        disabled={this.disabled}
-        onClick={this.fieldButtonClick.bind(this)}
-        ref={el => (this.fieldButtonElement = el)}
-        aria-haspopup="listbox"
-        aria-expanded={this.expanded.toString()}
+        slot="target"
       >
-        {this.renderTargetContent()}
-      </button>
+        {this.renderFilterInputField()}
+        <button
+          type="button"
+          class={{
+            'gux-field': true,
+            'gux-field-button-collapsed': !(this.expanded && this.filterable),
+            'gux-field-button-expanded': this.expanded && this.filterable
+          }}
+          disabled={this.disabled}
+          onClick={this.fieldButtonClick.bind(this)}
+          ref={el => (this.fieldButtonElement = el)}
+          aria-haspopup="listbox"
+          aria-expanded={this.expanded.toString()}
+        >
+          {this.renderTargetContent()}
+        </button>
+      </div>
     ) as JSX.Element;
   }
   private renderTargetContent(): JSX.Element {
@@ -310,8 +326,7 @@ export class GuxDropdownV2Beta {
       return (
         <gux-icon
           class={{
-            'gux-expand-icon': true,
-            'gux-expand-icon-expanded': this.expanded && this.filterable
+            'gux-expand-icon': true
           }}
           screenreader-text={this.i18n('dropdown')}
           iconName="chevron-small-down"
@@ -330,19 +345,11 @@ export class GuxDropdownV2Beta {
   }
 
   render(): JSX.Element {
-    return [
+    return (
       <gux-popup-beta expanded={this.expanded} disabled={this.disabled}>
-        <div
-          class={{
-            'gux-target-container-expanded': this.expanded && this.filterable
-          }}
-          slot="target"
-        >
-          {this.renderFilterInputField()}
-          {this.renderTarget()}
-        </div>
+        {this.renderTarget()}
         {this.renderPopup()}
       </gux-popup-beta>
-    ] as JSX.Element;
+    ) as JSX.Element;
   }
 }

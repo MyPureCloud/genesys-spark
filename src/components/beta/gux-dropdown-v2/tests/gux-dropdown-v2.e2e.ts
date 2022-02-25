@@ -28,16 +28,12 @@ describe('gux-dropdown-v2', () => {
       const page = await newSparkE2EPage({ html });
       await page.waitForChanges();
       await a11yCheck(page, [], 'before opening dropdown');
-      const dropdownButtonElement = await page.find(
-        'gux-dropdown-v2-beta >>> .gux-field'
-      );
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.click();
       await page.waitForChanges();
       await a11yCheck(page, [], 'after opening dropdown');
 
-      const dropMenu = await page.find(
-        'gux-dropdown-v2-beta >>> .gux-popup-container'
-      );
+      const dropMenu = await page.find('pierce/.gux-popup-container');
 
       expect(dropMenu.className.split(' ')).toContain('gux-expanded');
     });
@@ -47,14 +43,10 @@ describe('gux-dropdown-v2', () => {
     it('opens and closes dropdown on keypress', async () => {
       const page = await newSparkE2EPage({ html });
       await page.waitForChanges();
-      const dropdownButtonElement = await page.find(
-        'gux-dropdown-v2-beta >>> .gux-field'
-      );
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.press('ArrowDown');
 
-      const dropdownMenu = await page.find(
-        'gux-dropdown-v2-beta >>> .gux-popup-container'
-      );
+      const dropdownMenu = await page.find('pierce/.gux-popup-container');
 
       expect(dropdownMenu.className.split(' ')).toContain('gux-expanded');
 
@@ -65,9 +57,7 @@ describe('gux-dropdown-v2', () => {
     it('focuses the listbox when down arrow is pressed', async () => {
       const page = await newSparkE2EPage({ html });
       await page.waitForChanges();
-      const dropdownButtonElement = await page.find(
-        'gux-dropdown-v2-beta >>> .gux-field'
-      );
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.press('ArrowDown');
 
       const listbox = await page.find('gux-dropdown-v2-beta gux-listbox');
@@ -80,9 +70,7 @@ describe('gux-dropdown-v2', () => {
     it('moves between options when arrow keys are pressed', async () => {
       const page = await newSparkE2EPage({ html });
       await page.waitForChanges();
-      const dropdownButtonElement = await page.find(
-        'gux-dropdown-v2-beta >>> .gux-field'
-      );
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.press('ArrowDown');
 
       const listbox = await page.find('gux-dropdown-v2-beta gux-listbox');
@@ -104,9 +92,7 @@ describe('gux-dropdown-v2', () => {
     it('selects listbox options on keypress', async () => {
       const page = await newSparkE2EPage({ html });
       await page.waitForChanges();
-      const dropdownButtonElement = await page.find(
-        'gux-dropdown-v2-beta >>> .gux-field'
-      );
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.press('ArrowDown');
 
       let listboxItems = await page.findAll(
