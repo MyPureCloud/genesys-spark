@@ -4,7 +4,7 @@
 @import (reference) '../../../style/shadows.less';
 
 // Style
-gux-modal {
+:host {
   .gux-modal {
     position: fixed;
     top: 0;
@@ -100,25 +100,4 @@ gux-modal {
       }
     }
   }
-}
-
-// Theming
-
-// Dark
-.gux-modal-dark-theme {
-  color: @gux-type-dark;
-
-  .gux-modal-container {
-    background: @gux-black-50;
-  }
-}
-
-.gux-dark-theme {
-  gux-modal {
-    .gux-modal-dark-theme();
-  }
-}
-
-gux-modal.gux-dark-theme {
-  .gux-modal-dark-theme();
 }

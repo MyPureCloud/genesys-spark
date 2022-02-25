@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-dismiss-button #render should render component as expected (1) 1`] = `
-<gux-dismiss-button tabindex="0">
+<gux-dismiss-button>
   <mock:shadow-root>
     <button title="Dismiss" type="button">
       <gux-icon icon-name="close" screenreader-text="Dismiss"></gux-icon>
