@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.35](https://inindca///compare/v3.0.0-alpha.34...v3.0.0-alpha.35) (2022-02-25)
+
 ## [3.0.0-alpha.34](https://inindca///compare/v3.0.0-alpha.33...v3.0.0-alpha.34) (2022-02-24)
 
 
