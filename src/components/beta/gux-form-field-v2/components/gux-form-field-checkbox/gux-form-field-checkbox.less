@@ -1,0 +1,90 @@
+@import (reference) '../../../../../style/color-palette.less';
+@import (reference) '../../../../../style/spacing.less';
+@import (reference) '../../../../../style/variables.less';
+@import (reference)
+  '../../functional-components/gux-form-field-error/gux-form-field-error.less';
+
+.GuxFormFieldErrorStyle();
+
+@gux-icon-checkbox-unchecked: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M11.138 2.467a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h7m0-1h-7a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h7a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3z' fill='%2377828f' /%3E%3C/svg%3E");
+@gux-icon-checkbox-unchecked-hover: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M11.138 2.467a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h7m0-1h-7a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h7a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3z' fill='%232a60c8' /%3E%3C/svg%3E");
+@gux-icon-checkbox-unchecked-error: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M11.138 2.467a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h7m0-1h-7a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h7a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3z' fill='%23ea0b0b' /%3E%3C/svg%3E");
+@gux-icon-checkbox-checked: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M11.138 1.467h-7a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h7a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM6.8 11 3.638 7.941l.89-.932L6.8 9.2l3.947-3.861.891.932z' fill='%232a60c8' /%3E%3C/svg%3E");
+@gux-icon-checkbox-mixed: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.138 8.467h7v-1h-7zm7-7h-7a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h7a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zm2 10a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2z' fill='%232a60c8' /%3E%3C/svg%3E");
+
+:host {
+  display: block;
+  color: @gux-black-50;
+}
+
+:host(.gux-input-error) {
+  ::slotted(input[type='checkbox']:not(:checked))::before {
+    background-image: @gux-icon-checkbox-unchecked-error;
+  }
+}
+
+:host(.gux-disabled) {
+  cursor: not-allowed;
+  opacity: 0.5;
+
+  ::slotted(label) {
+    cursor: not-allowed;
+  }
+}
+
+.gux-input {
+  position: relative;
+  height: @gux-icon-size-default-global + (2 * @spacing-2xs);
+  line-height: @gux-icon-size-default-global + (2 * @spacing-2xs);
+}
+
+::slotted(input[type='checkbox']) {
+  display: inline-grid;
+  width: @gux-icon-size-default-global;
+  height: @gux-icon-size-default-global;
+  margin: 4px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+::slotted(input[type='checkbox'])::before {
+  grid-area: 1/1;
+  content: '';
+  border-radius: 15%;
+}
+
+::slotted(input[type='checkbox']:focus-within)::before {
+  box-shadow: 0 0 2px 1px @gux-blue-90, inset 0 0 2px 1px @gux-blue-90;
+}
+
+::slotted(input[type='checkbox']:not(:checked))::before {
+  background-image: @gux-icon-checkbox-unchecked;
+}
+
+::slotted(input[type='checkbox']:not(:checked):not(:disabled):not(:indeterminate):hover)::before {
+  background-image: @gux-icon-checkbox-unchecked-hover;
+}
+
+::slotted(input[type='checkbox']:checked)::before {
+  background-image: @gux-icon-checkbox-checked;
+}
+
+::slotted(input[type='checkbox']:indeterminate)::before {
+  background-image: @gux-icon-checkbox-mixed;
+}
+
+::slotted(input[type='checkbox']:disabled)::before {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+::slotted(label) {
+  display: inline-block;
+  font-size: 12px;
+  line-height: @gux-icon-size-default-global + 8px;
+  vertical-align: middle;
+}

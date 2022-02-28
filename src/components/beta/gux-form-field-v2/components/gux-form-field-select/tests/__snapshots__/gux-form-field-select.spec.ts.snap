@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-select-beta #render input attributes should render component as expected (1) 1`] = `
+<gux-form-field-select-beta>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <select id="gux-form-field-input-i" name="lp-1" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+</gux-form-field-select-beta>
+`;
+
+exports[`gux-form-field-select-beta #render input attributes should render component as expected (2) 1`] = `
+<gux-form-field-select-beta>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <select disabled="" id="gux-form-field-input-i" name="lp-1" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+</gux-form-field-select-beta>
+`;
+
+exports[`gux-form-field-select-beta #render input attributes should render component as expected (3) 1`] = `
+<gux-form-field-select-beta>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <select id="gux-form-field-input-i" name="lp-1" required="" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+</gux-form-field-select-beta>
+`;
+
+exports[`gux-form-field-select-beta #render label-position should render component as expected (1) 1`] = `
+<gux-form-field-select-beta>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <select id="gux-form-field-input-i" name="lp-1" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+</gux-form-field-select-beta>
+`;
+
+exports[`gux-form-field-select-beta #render label-position should render component as expected (2) 1`] = `
+<gux-form-field-select-beta label-position="above">
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <select id="gux-form-field-input-i" name="lp-1" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+</gux-form-field-select-beta>
+`;
+
+exports[`gux-form-field-select-beta #render label-position should render component as expected (3) 1`] = `
+<gux-form-field-select-beta label-position="beside">
+  <mock:shadow-root>
+    <div class="gux-beside gux-form-field-container">
+      <div class="gux-beside gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <select id="gux-form-field-input-i" name="lp-1" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+</gux-form-field-select-beta>
+`;
+
+exports[`gux-form-field-select-beta #render label-position should render component as expected (4) 1`] = `
+<gux-form-field-select-beta label-position="screenreader">
+  <mock:shadow-root>
+    <div class="gux-form-field-container gux-screenreader">
+      <div class="gux-form-field-label gux-screenreader">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <select id="gux-form-field-input-i" name="lp-1" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+</gux-form-field-select-beta>
+`;
