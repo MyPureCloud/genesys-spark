@@ -22,6 +22,7 @@
     * `gux-tab`-> `gux-tab-legacy`
 * change `-beta` to `-legacy` for components that have been removed from beta
   * `gux-command-palette-beta` -> `gux-command-palette-legacy`
+  * `gux-command-palette-beta` -> `gux-command-palette-legacy`
 * migrate away from usage of legacy components
   * `gux-accordion-legacy` -> `gux-accordion`
   * `gux-command-palette-legacy` -> Contact the Core UI team if you need help migrating away from this component.
