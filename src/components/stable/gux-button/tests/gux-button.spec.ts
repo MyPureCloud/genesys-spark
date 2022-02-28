@@ -62,12 +62,11 @@ describe('gux-button', () => {
       const html = '<gux-button>Button</gux-button>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const button = page.root.querySelector('button');
       const clickSpy = jest.fn();
 
       element.addEventListener('click', clickSpy);
 
-      button.click();
+      element.click();
       await page.waitForChanges();
 
       expect(clickSpy).toHaveBeenCalled();
@@ -92,7 +91,7 @@ describe('gux-button', () => {
       const html = '<gux-button disabled><span>Span</span></gux-button>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const span = page.root.querySelector('span') as HTMLButtonElement;
+      const span = page.root.querySelector('span') as HTMLElement;
       const clickSpy = jest.fn();
 
       element.addEventListener('click', clickSpy);

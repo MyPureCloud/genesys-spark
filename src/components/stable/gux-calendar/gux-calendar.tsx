@@ -28,7 +28,8 @@ import { GuxCalendarMode, IDateElement } from './gux-calendar.types';
 
 @Component({
   styleUrl: 'gux-calendar.less',
-  tag: 'gux-calendar'
+  tag: 'gux-calendar',
+  shadow: true
 })
 export class GuxCalendar {
   @Element()
@@ -108,7 +109,7 @@ export class GuxCalendar {
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async focusPreviewDate() {
-    const target: HTMLTableCellElement = this.root.querySelector(
+    const target: HTMLTableCellElement = this.root.shadowRoot.querySelector(
       `td[data-date="${this.previewValue.getTime()}"]`
     );
     if (target) {
@@ -276,12 +277,12 @@ export class GuxCalendar {
   }
 
   getAllDatesElements(): HTMLTableCellElement[] {
-    const targets = this.root.querySelectorAll('td');
+    const targets = this.root.shadowRoot.querySelectorAll('td');
     return Array.from(targets);
   }
 
   getAllSelectableDatesElements(): HTMLTableCellElement[] {
-    const targets = this.root.querySelectorAll('td[tabindex="0"]');
+    const targets = this.root.shadowRoot.querySelectorAll('td[tabindex="0"]');
     return Array.from(targets) as HTMLTableCellElement[];
   }
 
@@ -294,7 +295,7 @@ export class GuxCalendar {
       rangeDates = this.getRangeDates(from, to);
     }
     for (const date of rangeDates) {
-      const target: HTMLTableCellElement = this.root.querySelector(
+      const target: HTMLTableCellElement = this.root.shadowRoot.querySelector(
         `td[data-date="${date.getTime()}"]:not(.gux-hidden)`
       );
       if (target) {
@@ -326,9 +327,10 @@ export class GuxCalendar {
           this.value = asIsoDateRange(date, date);
         } else {
           // Second click
-          const target: HTMLTableCellElement = this.root.querySelector(
-            `td[data-date="${date.getTime()}"]`
-          );
+          const target: HTMLTableCellElement =
+            this.root.shadowRoot.querySelector(
+              `td[data-date="${date.getTime()}"]`
+            );
           if (target) {
             target.classList.add('gux-selected');
           }

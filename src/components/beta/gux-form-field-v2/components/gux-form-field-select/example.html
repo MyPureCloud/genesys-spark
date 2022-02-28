@@ -1,0 +1,143 @@
+<h1>gux-form-field-select-beta</h1>
+
+<p>slot a select element into a gux-form-field-select-beta element</p>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Label Position</legend>
+
+    <gux-form-field-select-beta>
+      <select slot="input" name="lp-1">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Default</label>
+    </gux-form-field-select-beta>
+
+    <gux-form-field-select-beta>
+      <select slot="input" name="lp-2">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Default long label</label>
+    </gux-form-field-select-beta>
+
+    <gux-form-field-select-beta label-position="above">
+      <select slot="input" name="lp-3">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Above</label>
+    </gux-form-field-select-beta>
+
+    <gux-form-field-select-beta label-position="beside">
+      <select slot="input" name="lp-4">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Beside</label>
+    </gux-form-field-select-beta>
+
+    <gux-form-field-select-beta label-position="screenreader">
+      <select slot="input" name="lp-5">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Screenreader</label>
+    </gux-form-field-select-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Input attributes</legend>
+
+    <gux-form-field-select-beta>
+      <select slot="input" name="a-1" disabled>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Disabled</label>
+    </gux-form-field-select-beta>
+
+    <gux-form-field-select-beta>
+      <select slot="input" name="a-2" required>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Required</label>
+    </gux-form-field-select-beta>
+
+    <gux-form-field-select-beta>
+      <select slot="input" name="a-3">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3" selected>Option 3</option>
+      </select>
+      <label slot="label">Preset</label>
+    </gux-form-field-select-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+
+    <gux-form-field-select-beta>
+      <select slot="input" name="e-1">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Default</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-select-beta>
+  </fieldset>
+</form>
+
+<h2>gux-form-field examples for comparison</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <gux-form-field label-position="beside">
+      <select slot="input" name="select">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Select</label>
+    </gux-form-field>
+
+    <gux-form-field label-position="beside">
+      <select slot="input" name="select" disabled>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Disabled select</label>
+    </gux-form-field>
+
+    <gux-form-field label-position="above">
+      <select slot="input" name="select" required>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Required Select</label>
+    </gux-form-field>
+
+    <gux-form-field label-position="above">
+      <select slot="input" name="select-required" required>
+        <option value=""></option>
+        <option value="option1">Option 1</option>
+        <option value="option1">Option 2</option>
+        <option value="option1">Option 3</option>
+      </select>
+      <label slot="label">Select</label>
+      <span slot="error">Field is required</span>
+    </gux-form-field>
+  </fieldset>
+</form>

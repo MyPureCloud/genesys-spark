@@ -1,14 +1,12 @@
-import { Component, Element, h, JSX, Method, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 import { GuxButtonAccent, GuxButtonType } from './gux-button.types';
 
 @Component({
   styleUrl: 'gux-button.less',
-  tag: 'gux-button'
-  // NOTE: In the future if we migrate this to shadowDOM, `delegatesFocus` so .focus() works
-  //   This will let us remove a workaround for gux-buttons in gux-modal.
-  // shadow: { delegatesFocus: true }
+  tag: 'gux-button',
+  shadow: { delegatesFocus: true }
 })
 export class GuxButton {
   @Element()
@@ -38,20 +36,10 @@ export class GuxButton {
   @Prop()
   accent: GuxButtonAccent = 'secondary';
 
-  /**
-   * Focus the button
-   */
-  // eslint-disable-next-line @typescript-eslint/require-await
-  @Method()
-  async focusElement() {
-    this.root.querySelector('button').focus();
-  }
-
   componentWillLoad() {
     trackComponent(this.root, { variant: this.accent });
     this.makeSlotContentDisableable();
   }
-
   render(): JSX.Element {
     return (
       <button
@@ -66,6 +54,16 @@ export class GuxButton {
   }
 
   private makeSlotContentDisableable() {
+    this.root.shadowRoot.addEventListener(
+      'click',
+      (event: MouseEvent): void => {
+        if (this.disabled) {
+          event.stopImmediatePropagation();
+          event.stopPropagation();
+          event.preventDefault();
+        }
+      }
+    );
     Array.from(this.root.children).forEach(slotElement => {
       slotElement.addEventListener('click', (event: MouseEvent): void => {
         if (this.disabled) {

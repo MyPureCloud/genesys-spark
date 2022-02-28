@@ -15,7 +15,8 @@ const DEFAULT_RING_WIDTH = 32;
 
 @Component({
   styleUrl: 'gux-chart-donut.less',
-  tag: 'gux-chart-donut-beta'
+  tag: 'gux-chart-donut-beta',
+  shadow: true
 })
 export class GuxDonutChart {
   @Element()

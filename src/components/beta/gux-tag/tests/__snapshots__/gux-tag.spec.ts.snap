@@ -3,9 +3,12 @@
 exports[`gux-tag-beta #render should render component as expected (1) 1`] = `
 <gux-tag-beta>
   <mock:shadow-root>
-    <div class="gux-default gux-tag">
+    <div aria-disabled="false" class="gux-default gux-tag">
       <div class="gux-tag-text">
-        <slot></slot>
+        <slot aria-hidden="true"></slot>
+        <div class="gux-sr-only">
+          tag with label:
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -16,9 +19,12 @@ exports[`gux-tag-beta #render should render component as expected (1) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (2) 1`] = `
 <gux-tag-beta color="default">
   <mock:shadow-root>
-    <div class="gux-default gux-tag">
+    <div aria-disabled="false" class="gux-default gux-tag">
       <div class="gux-tag-text">
-        <slot></slot>
+        <slot aria-hidden="true"></slot>
+        <div class="gux-sr-only">
+          tag with label:
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -29,9 +35,12 @@ exports[`gux-tag-beta #render should render component as expected (2) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (3) 1`] = `
 <gux-tag-beta color="navy">
   <mock:shadow-root>
-    <div class="gux-navy gux-tag">
+    <div aria-disabled="false" class="gux-navy gux-tag">
       <div class="gux-tag-text">
-        <slot></slot>
+        <slot aria-hidden="true"></slot>
+        <div class="gux-sr-only">
+          tag with label:
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -42,12 +51,15 @@ exports[`gux-tag-beta #render should render component as expected (3) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (4) 1`] = `
 <gux-tag-beta color="navy" icon="bolt">
   <mock:shadow-root>
-    <div class="gux-navy gux-tag">
+    <div aria-disabled="false" class="gux-navy gux-tag">
       <div class="gux-tag-icon-container">
         <gux-icon class="gux-tag-icon" decorative="" icon-name="bolt"></gux-icon>
       </div>
       <div class="gux-tag-text">
-        <slot></slot>
+        <slot aria-hidden="true"></slot>
+        <div class="gux-sr-only">
+          tag with label:
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -58,15 +70,18 @@ exports[`gux-tag-beta #render should render component as expected (4) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (5) 1`] = `
 <gux-tag-beta color="navy" icon="bolt" removable="" value="3">
   <mock:shadow-root>
-    <div class="gux-navy gux-tag">
+    <div aria-disabled="false" class="gux-navy gux-tag">
       <div class="gux-tag-icon-container">
         <gux-icon class="gux-tag-icon" decorative="" icon-name="bolt"></gux-icon>
       </div>
       <div class="gux-tag-text">
-        <slot></slot>
+        <slot aria-hidden="true"></slot>
+        <div class="gux-sr-only">
+          tag with label:
+        </div>
       </div>
       <button class="gux-tag-remove-button" type="button">
-        <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove tag"></gux-icon>
+        <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove tag with label: "></gux-icon>
       </button>
     </div>
   </mock:shadow-root>
@@ -77,15 +92,18 @@ exports[`gux-tag-beta #render should render component as expected (5) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (6) 1`] = `
 <gux-tag-beta color="navy" disabled="" icon="bolt" removable="" value="3">
   <mock:shadow-root>
-    <div class="gux-disabled gux-navy gux-tag">
+    <div aria-disabled="true" class="gux-disabled gux-navy gux-tag">
       <div class="gux-tag-icon-container">
         <gux-icon class="gux-tag-icon" decorative="" icon-name="bolt"></gux-icon>
       </div>
       <div class="gux-tag-text">
-        <slot></slot>
+        <slot aria-hidden="true"></slot>
+        <div class="gux-sr-only">
+          disabled tag with label:
+        </div>
       </div>
       <button class="gux-tag-remove-button" disabled="" type="button">
-        <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove tag"></gux-icon>
+        <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove tag with label: "></gux-icon>
       </button>
     </div>
   </mock:shadow-root>

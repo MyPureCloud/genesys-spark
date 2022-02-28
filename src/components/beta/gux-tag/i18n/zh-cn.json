@@ -1,3 +1,5 @@
 {
-  "remove-tag": "删除标签"
+  "tag": "使用以下标签的标记：{label}",
+  "tag-disabled": "使用以下标签的禁用标记：{label}",
+  "remove-tag": "移除使用以下标签的标记：{label}"
 }

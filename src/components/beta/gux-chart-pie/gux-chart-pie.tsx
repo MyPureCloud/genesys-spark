@@ -13,7 +13,8 @@ const DEFAULT_COLOR_FIELD_NAME = 'category';
 const DEFAULT_LABEL_FIELD_NAME = 'value';
 @Component({
   styleUrl: 'gux-chart-pie.less',
-  tag: 'gux-chart-pie-beta'
+  tag: 'gux-chart-pie-beta',
+  shadow: true
 })
 export class GuxPieChart {
   @Element()

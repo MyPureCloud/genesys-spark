@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Tag entfernen"
+  "tag": "Tag mit Bezeichnung: {label}",
+  "tag-disabled": "Deaktiviertes Tag mit Bezeichnung: {label}",
+  "remove-tag": "Tag mit Bezeichnung entfernen: {label}"
 }

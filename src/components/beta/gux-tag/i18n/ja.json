@@ -1,3 +1,5 @@
 {
-  "remove-tag": "タグを削除"
+  "tag": "ラベル付きタグ: {label}",
+  "tag-disabled": "無効化されたラベル付きタグ: {label}",
+  "remove-tag": "ラベル付きタグを削除: {label}"
 }

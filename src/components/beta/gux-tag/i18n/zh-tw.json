@@ -1,3 +1,5 @@
 {
-  "remove-tag": "移除標籤"
+  "tag": "標記帶有標籤：{label}",
+  "tag-disabled": "停用的標記帶有標籤：{label}",
+  "remove-tag": "移除帶有以下標籤的標記：{label}"
 }
