@@ -258,7 +258,7 @@ export class GuxDropdownV2Beta {
   private renderFilterInputField(): JSX.Element {
     if (this.expanded && this.filterable) {
       return (
-        <div class="gux-field">
+        <div class="gux-field gux-input-field">
           <div class="gux-field-content">
             <div class="gux-filter">
               <div class="gux-filter-display">
@@ -298,18 +298,15 @@ export class GuxDropdownV2Beta {
     return (
       <div
         class={{
-          'gux-target-container-expanded': this.expanded && this.filterable
+          'gux-target-container-expanded': this.expanded && this.filterable,
+          'gux-target-container-collapsed': !(this.expanded && this.filterable)
         }}
         slot="target"
       >
         {this.renderFilterInputField()}
         <button
           type="button"
-          class={{
-            'gux-field': true,
-            'gux-field-button-collapsed': !(this.expanded && this.filterable),
-            'gux-field-button-expanded': this.expanded && this.filterable
-          }}
+          class="gux-field gux-field-button"
           disabled={this.disabled}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
