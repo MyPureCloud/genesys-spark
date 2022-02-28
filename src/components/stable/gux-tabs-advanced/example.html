@@ -31,7 +31,7 @@
       <span slot="title"> Tab Header 1 </span>
     </gux-tab-advanced>
     <gux-tab-advanced tab-id="2-2">
-      <span slot="title"> Tab Header 2 </span>
+      <span slot="title"> Long tab header title </span>
     </gux-tab-advanced>
     <gux-tab-advanced tab-id="2-3">
       <span slot="title"> Tab Header 3 </span>
@@ -98,7 +98,7 @@
 <gux-tabs-advanced id="interactive" tab-limit="10">
   <gux-tab-advanced-list
     slot="tab-list"
-    allow-sort="false"
+    allow-sort="true"
     show-new-tab-button="true"
   >
     <gux-tab-advanced tab-id="4-1">
@@ -221,7 +221,7 @@
         </gux-tab-advanced-option>
       </span>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="4-4">
+    <gux-tab-advanced gux-disabled tab-id="4-4">
       <span slot="title"> Tab Header 4 </span>
       <span slot="dropdown-options">
         <gux-tab-advanced-option
@@ -261,7 +261,7 @@
         </gux-tab-advanced-option>
       </span>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="4-5">
+    <gux-tab-advanced gux-disabled tab-id="4-5">
       <span slot="title"> Tab Header 5 </span>
       <span slot="dropdown-options">
         <gux-tab-advanced-option
@@ -332,7 +332,7 @@
     <gux-tab-advanced tab-id="5-2" tab-icon-name="message-email">
       <span slot="title"> Email </span>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="5-3" tab-icon-name="phone">
+    <gux-tab-advanced gux-disabled tab-id="5-3" tab-icon-name="phone">
       <span slot="title"> Phone </span>
     </gux-tab-advanced>
     <gux-tab-advanced tab-id="5-4" tab-icon-name="attachment">
@@ -370,7 +370,7 @@
       <span slot="title"> Tab Header 1 </span>
     </gux-tab-advanced>
     <gux-tab-advanced tab-id="6-2">
-      <span slot="title"> Tab Header 2 </span>
+      <span slot="title"> Long tab header title </span>
       <span slot="dropdown-options">
         <gux-tab-advanced-option
           option-id="1"

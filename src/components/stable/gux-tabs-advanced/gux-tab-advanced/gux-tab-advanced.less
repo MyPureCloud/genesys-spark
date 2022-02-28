@@ -19,36 +19,6 @@ gux-tab-advanced {
   }
 
   .gux-tab {
-    &.gux-no-dropdown-options {
-      &:focus {
-        outline: none;
-      }
-
-      &:focus-visible {
-        height: 90%;
-        border: 3px solid @gux-blue-90;
-        border-radius: 5px;
-        outline: none;
-      }
-    }
-
-    &:not(.gux-no-dropdown-options) {
-      .gux-tab-button {
-        &:focus {
-          outline: none;
-        }
-
-        &:focus-visible {
-          height: 100%;
-          border: 3px solid @gux-blue-90;
-          border-radius: 5px;
-          outline: none;
-        }
-      }
-    }
-  }
-
-  .gux-tab {
     display: flex;
     align-items: center;
     width: 126px;
@@ -57,9 +27,15 @@ gux-tab-advanced {
     overflow: hidden;
     border-radius: 4px 4px 0 0;
     transition: width 0.4s ease-out;
-    // border-right: 1px solid @gux-grey-50;
 
     &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      height: 90%;
+      border: 3px solid @gux-blue-90;
+      border-radius: 5px;
       outline: none;
     }
 
@@ -81,29 +57,16 @@ gux-tab-advanced {
 
     &.gux-show {
       width: 160px;
-    }
+      background-color: @gux-grey-90;
 
-    .tab-title {
-      position: relative;
-      padding-top: 2px;
-      overflow: hidden;
-      font-size: 14px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      cursor: default;
-    }
+      &.gux-disabled {
+        opacity: 0.5;
 
-    // &:not(.gux-selected) {
-    //   .gux-tab-options-button {
-    //     .gux-menu-kebab-padding {
-    //       height: 30px;
-    //       display: flex;
-    //       align-items: center;
-    //       justify-content: center;
-    //       border-right: 1px solid @gux-grey-50;
-    //     }
-    //   }
-    // }
+        .gux-tab-options-button {
+          pointer-events: none;
+        }
+      }
+    }
 
     .gux-tab-options-button {
       z-index: 1;
@@ -144,7 +107,6 @@ gux-tab-advanced {
       width: 35px;
       height: 30px;
       border-right: 1px solid @gux-grey-50;
-      // visibility: hidden;
     }
 
     .tab-icon-container {
@@ -174,10 +136,19 @@ gux-tab-advanced {
       }
     }
 
-    &:hover:not(.gux-selected):not(.gux-disabled),
-    &:focus-visible {
+    &:hover:not(.gux-selected):not(.gux-disabled) {
       padding-bottom: 0;
       border-bottom: 2px solid @gux-grey-10;
+    }
+
+    gux-tooltip-title {
+      position: relative;
+      padding-top: 2px;
+      overflow: hidden;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: default;
     }
   }
 }

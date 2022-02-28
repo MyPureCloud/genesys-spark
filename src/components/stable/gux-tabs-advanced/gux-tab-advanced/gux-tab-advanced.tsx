@@ -249,11 +249,14 @@ export class GuxTabAdvanced {
   render(): JSX.Element {
     return [
       <div
-        class={`gux-tab ${this.active ? 'gux-selected' : ''} ${
-          this.hasDropdownOptions ? '' : 'gux-no-dropdown-options'
-        }`}
+        class={{
+          'gux-tab': true,
+          'gux-selected': this.active,
+          'gux-no-dropdown-options': this.hasDropdownOptions,
+          'gux-disabled': this.guxDisabled
+        }}
         aria-disabled={this.guxDisabled.toString()}
-        tabIndex={this.hasDropdownOptions ? -1 : 0}
+        tabIndex={this.active ? 0 : -1}
       >
         <button
           class="gux-tab-button"
@@ -262,7 +265,7 @@ export class GuxTabAdvanced {
           aria-selected={this.active.toString()}
           aria-controls={`gux-${this.tabId}-panel`}
           ref={el => (this.buttonElement = el)}
-          tabIndex={this.active ? 0 : -1}
+          tabIndex={-1}
           id={`gux-${this.tabId}-tab`}
         >
           {this.tabIconName ? (
@@ -273,9 +276,9 @@ export class GuxTabAdvanced {
               ></gux-icon>
             </div>
           ) : null}
-          <span class="tab-title">
+          <gux-tooltip-title tab-width={109}>
             <slot name="title" />
-          </span>
+          </gux-tooltip-title>
         </button>
 
         {this.getDropdownOptions()}

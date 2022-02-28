@@ -60,14 +60,17 @@ Type: `Promise<void>`
 
 - [gux-icon](../../gux-icon)
 - [gux-popover](../../gux-popover)
+- [gux-tooltip-title](../../gux-tooltip-title)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-tab-advanced --> gux-icon
   gux-tab-advanced --> gux-popover
+  gux-tab-advanced --> gux-tooltip-title
   gux-popover --> gux-dismiss-button
   gux-dismiss-button --> gux-icon
+  gux-tooltip-title --> gux-tooltip
   style gux-tab-advanced fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
