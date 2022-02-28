@@ -111,404 +111,7 @@ export class GuxTable {
   @Prop()
   resizableColumns: boolean;
 
-  /******************************* Event Listeners *******************************/
-
-  @Listen('scroll', { capture: true })
-  onScroll(): void {
-    const scrollLeft = this.tableContainer.scrollLeft;
-    const maxScrollLeft =
-      this.tableContainer.scrollWidth - this.tableContainer.clientWidth;
-
-    if (scrollLeft === 0) {
-      this.isScrolledToFirstCell = true;
-    } else if (maxScrollLeft - scrollLeft - this.tableScrollbarConstant === 0) {
-      this.isScrolledToLastCell = true;
-    }
-  }
-
-  @Listen('internalallrowselectchange')
-  onInternalAllRowSelectChange(event: CustomEvent): void {
-    event.stopPropagation();
-
-    void this.handleSelectAllRows();
-  }
-
-  @Listen('internalrowselectchange')
-  onInternalRowSelectChange(event: CustomEvent): void {
-    event.stopPropagation();
-
-    void this.handleSelectableRows(event.target);
-  }
-
-  @Listen('mouseup', { capture: true })
-  onMouseUp(): void {
-    if (this.columnResizeState) {
-      this.guxTableContainer.classList.remove('gux-column-resizing');
-      this.columnResizeState = null;
-    }
-  }
-
-  @Listen('mousemove', { capture: true })
-  onMouseMove(event: MouseEvent): void {
-    if (this.resizableColumns) {
-      if (this.columnResizeState) {
-        const columnName =
-          this.columnResizeState.resizableColumn.dataset.columnName;
-        const columnWidth =
-          this.columnResizeState.resizableColumnInitialWidth +
-          (event.pageX - this.columnResizeState.columnResizeMouseStartX);
-
-        this.columnsWidths[columnName] = `${
-          columnWidth > 1 ? columnWidth : 1
-        }px`;
-        this.setResizableColumnsStyles();
-      } else {
-        this.columnResizeHover = false;
-        whenEventIsFrom('th', event, (th: HTMLTableCellElement) => {
-          const columnsLength = this.tableColumns.length;
-          const isLastColumn = columnsLength - 1 === th.cellIndex;
-
-          if (this.isInResizeZone(event, th) && !isLastColumn) {
-            this.columnResizeHover = true;
-          }
-        });
-      }
-    }
-  }
-
-  @Listen('mousedown')
-  onMouseDown(event: MouseEvent): void {
-    whenEventIsFrom('th', event, th => {
-      if (this.resizableColumns && this.isInResizeZone(event, th)) {
-        const resizableColumn = th;
-
-        this.columnResizeState = {
-          resizableColumn,
-          columnResizeMouseStartX: event.pageX,
-          resizableColumnInitialWidth:
-            this.getElementComputedWidth(resizableColumn)
-        };
-      }
-    });
-  }
-
-  /*
-   * returns the selected rows Ids.
-   */
-  // eslint-disable-next-line @typescript-eslint/require-await
-  @Method()
-  async getSelected(): Promise<GuxTableSelectedState> {
-    const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
-      this.rowCheckboxes
-    );
-    const selectedRowIds: string[] = dataRowsSelectboxes.reduce(
-      (selectedDataRowsIds, dataRowSelectbox: HTMLGuxRowSelectElement) => {
-        if (dataRowSelectbox.selected) {
-          const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
-
-          return selectedDataRowsIds.concat(
-            tableRow.getAttribute('data-row-id')
-          );
-        }
-
-        return selectedDataRowsIds;
-      },
-      [] as string[]
-    );
-
-    return { selectedRowIds };
-  }
-
-  private getElementComputedWidth(element: HTMLElement): number {
-    return parseInt(
-      window.getComputedStyle(element).getPropertyValue('width').split('px')[0],
-      10
-    );
-  }
-
-  private isInResizeZone(event: MouseEvent, header: HTMLElement): boolean {
-    return (
-      header.getBoundingClientRect().right - event.clientX <
-      COL_RESIZE_HANDLE_WIDTH
-    );
-  }
-
-  private prepareResizableColumns(): void {
-    const styleElement = document.createElement('style');
-    styleElement.id = `${this.tableId}-resizable-styles`;
-    document.querySelector('head').appendChild(styleElement);
-
-    const columns = Array.from(this.tableColumns);
-    columns.pop();
-
-    columns.forEach((column: HTMLElement) => {
-      this.columnsWidths[
-        column.dataset.columnName
-      ] = `${this.getElementComputedWidth(column)}px`;
-    });
-
-    this.setResizableColumnsStyles();
-  }
-
-  private get guxTableContainer(): HTMLElement {
-    return this.root.shadowRoot.querySelector('.gux-table');
-  }
-
-  private get tableRows(): NodeListOf<HTMLElement> {
-    return this.slottedTable.querySelectorAll('tbody tr');
-  }
-
-  private get isTableEmpty(): boolean {
-    return !this.root.children[0] || this.tableRows.length < 1;
-  }
-
-  private get tableScrollbarConstant(): number {
-    const container: HTMLElement = this.tableContainer;
-    return container ? container.offsetWidth - container.clientWidth : 0;
-  }
-
-  private get tableClasses(): { [k: string]: boolean } {
-    return {
-      'gux-table': true,
-      'gux-vertical-scroll': this.isVerticalScroll,
-      'gux-horizontal-scroll': this.isHorizontalScroll
-    };
-  }
-
-  private get tableContainerClasses(): { [k: string]: boolean } {
-    return {
-      'gux-table-container': true,
-      'gux-compact': this.compact,
-      'gux-object-table': this.objectTable,
-      'gux-column-resizing': Boolean(this.columnResizeState),
-      'gux-column-resizing-hover': this.columnResizeHover
-    };
-  }
-
-  private get tableColumns(): NodeListOf<Element> {
-    return this.slottedTable.querySelectorAll('thead th');
-  }
-
-  private previousColumn(): void {
-    let hasWideColumn = false;
-    const columns = Array.from(this.tableColumns);
-
-    /**
-     * Get current horizontal scroll postion
-     */
-    const currentScrollX = this.tableContainer.scrollLeft;
-    const containerWidth = this.root.getBoundingClientRect().width;
-    let columnsWidth = 0;
-
-    /**
-     * Adding up all of the column widths until we get
-     * to a column that is previous for the last visible
-     */
-    for (const column of columns) {
-      const columnWidth = column.getBoundingClientRect().width;
-      /**
-       * If a column is wider than the current viewport
-       * the scroll distance will be a fixed fraction of the viewport
-       */
-      if (column.getBoundingClientRect().width > containerWidth) {
-        hasWideColumn = true;
-        this.tableContainer.scrollLeft = currentScrollX - containerWidth * 0.9;
-        break;
-      }
-
-      if (
-        columnsWidth + columnWidth <
-        containerWidth + Math.floor(currentScrollX - 1)
-      ) {
-        columnsWidth += columnWidth;
-      } else {
-        break;
-      }
-    }
-
-    this.isScrolledToLastCell = false;
-
-    /**
-     * Manually decreasing scroll position of table container
-     * for the width of last visible column
-     */
-    if (!hasWideColumn) {
-      const scrollToValue = currentScrollX + containerWidth - columnsWidth;
-      this.tableContainer.scrollLeft = Math.ceil(
-        currentScrollX - scrollToValue
-      );
-    }
-  }
-
-  private nextColumn(): void {
-    let hasWideColumn = false;
-    const columns = Array.from(this.tableColumns);
-
-    /**
-     * Get current horizontal scroll postion
-     */
-    const currentScrollX = this.tableContainer.scrollLeft;
-    const containerWidth = this.root.getBoundingClientRect().width;
-    let columnsWidth = 0;
-
-    this.isScrolledToFirstCell = false;
-
-    /**
-     * Adding up all of the column widths until we get to a column
-     * that overflows current viewport for the table
-     */
-    for (const column of columns) {
-      columnsWidth += column.getBoundingClientRect().width;
-      /**
-       * If a column is wider than the current viewport
-       * the scroll distance will be a fixed fraction of the viewport
-       */
-      if (column.getBoundingClientRect().width > containerWidth) {
-        hasWideColumn = true;
-        this.tableContainer.scrollLeft = currentScrollX + containerWidth * 0.9;
-        break;
-      }
-
-      if (columnsWidth > containerWidth + currentScrollX) {
-        break;
-      }
-    }
-
-    /**
-     * Manually increasing scroll position of table container with value,
-     * where next partially visible column being fully visible
-     */
-    if (!hasWideColumn) {
-      this.tableContainer.scrollLeft = Math.ceil(columnsWidth - containerWidth);
-    }
-  }
-
-  private get slottedTable(): HTMLElement {
-    return this.root.querySelector('table[slot="data"]');
-  }
-
-  private checkHorizontalScroll(): void {
-    const tableWidth = this.slottedTable.getBoundingClientRect().width;
-    const containerWidth = this.root.getBoundingClientRect().width;
-
-    if (tableWidth <= containerWidth) {
-      this.isHorizontalScroll = false;
-    } else {
-      this.isHorizontalScroll = true;
-    }
-  }
-
-  private get tableContainer(): HTMLElement {
-    return this.root.shadowRoot.querySelector('.gux-table-container');
-  }
-
-  private checkVerticalScroll(): void {
-    const tableContainerElement = this.tableContainer;
-    this.isVerticalScroll =
-      tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
-  }
-
-  private prepareSortableColumns(): void {
-    const columnsElements = Array.from(this.tableColumns);
-    this.setSortableColumnsStyles();
-
-    columnsElements.forEach((column: HTMLElement) => {
-      if (Object.prototype.hasOwnProperty.call(column.dataset, 'sortable')) {
-        column.onclick = (event: MouseEvent) => {
-          const columnElement = event.target as HTMLElement;
-          const sortDirection = columnElement.dataset.sort || '';
-          let newSortDirection = null;
-
-          switch (sortDirection) {
-            case '':
-            case 'desc':
-              newSortDirection = 'asc';
-              break;
-            case 'asc':
-              newSortDirection = 'desc';
-              break;
-          }
-
-          this.guxsortchanged.emit({
-            columnName: columnElement.dataset.columnName,
-            sortDirection: newSortDirection
-          });
-        };
-      }
-    });
-  }
-
-  private get rowCheckboxes(): NodeListOf<HTMLGuxRowSelectElement> {
-    return this.slottedTable.querySelectorAll('tbody tr td gux-row-select');
-  }
-
-  private get selectAllCheckbox(): HTMLGuxAllRowSelectElement {
-    return this.slottedTable.querySelector('thead tr th gux-all-row-select');
-  }
-
-  private prepareSelectableRows(): void {
-    const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
-      this.rowCheckboxes
-    );
-    const headerRowSelectbox: HTMLGuxRowSelectElement = this.selectAllCheckbox;
-
-    dataRowsSelectboxes.forEach((dataRowSelectbox: HTMLGuxRowSelectElement) => {
-      const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
-
-      if (dataRowSelectbox.selected) {
-        tableRow.setAttribute('data-selected-row', '');
-      } else {
-        tableRow.removeAttribute('data-selected-row');
-      }
-    });
-
-    if (headerRowSelectbox) {
-      headerRowSelectbox.selected =
-        dataRowsSelectboxes.length > 0 &&
-        dataRowsSelectboxes.every(
-          (dataRowSelectbox: HTMLGuxRowSelectElement) => {
-            return dataRowSelectbox.selected;
-          }
-        );
-    }
-  }
-
-  private setSortableColumnsStyles(): void {
-    const styleElement = document.createElement('style');
-    styleElement.id = `${this.tableId}-sortable-styles`;
-
-    const ascArrowIcon = getAssetPath(`./icons/arrow-solid-down.svg`);
-    const descArrowIcon = getAssetPath(`./icons/arrow-solid-up.svg`);
-    const sortAscContent = this.i18n('sortAsc');
-    const sortDescContent = this.i18n('sortDesc');
-
-    //TODO: I think this doesn't need to be set per table? Looks like there's no table specific selectors.
-    styleElement.innerHTML = `
-      th[data-sortable]:hover:after{content: "${sortAscContent}";background-image: url("${ascArrowIcon}");}
-      th[data-sort="asc"]:after{background-image:url("${ascArrowIcon}")!important;content:"${sortAscContent}"!important;}
-      th[data-sort="desc"]:after{background-image:url("${descArrowIcon}")!important;content:"${sortDescContent}"!important;}
-    `;
-
-    document.querySelector('head').appendChild(styleElement);
-  }
-
-  private setResizableColumnsStyles(): void {
-    const styleElement = document.getElementById(
-      `${this.tableId}-resizable-styles`
-    );
-    let columnsStyles = '';
-
-    Object.keys(this.columnsWidths).forEach((column: string) => {
-      columnsStyles += `[gs-table-id=${
-        this.tableId
-      }] th[data-column-name="${column}"]{
-        width:${String(this.columnsWidths[column])};
-        min-width:${String(this.columnsWidths[column])};
-      }`;
-    });
-
-    styleElement.innerHTML = columnsStyles;
-  }
+  /******************************* Lifcycle Hooks *******************************/
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
@@ -524,7 +127,6 @@ export class GuxTable {
     this.prepareSelectableRows();
     this.checkHorizontalScroll();
     this.checkVerticalScroll();
-    this.setHeaderRowSelectboxUI();
 
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() => {
@@ -552,40 +154,155 @@ export class GuxTable {
 
     if (this.resizableColumns) {
       document.getElementById(`${this.tableId}-resizable-styles`).remove();
-      document.getElementById(`${this.tableId}-sortable-styles`).remove();
     }
   }
 
-  private setHeaderRowSelectboxUI(): void {
-    const headerRowSelectbox: HTMLGuxAllRowSelectElement =
-      this.selectAllCheckbox;
+  /******************************* Event Listeners *******************************/
 
-    if (headerRowSelectbox) {
-      const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
-        this.rowCheckboxes
-      );
+  @Listen('scroll', { capture: true })
+  onScroll(): void {
+    this.updateScrollState();
+  }
 
-      const selectedRows = dataRowsSelectboxes.filter(
-        (dataRowSelectbox: HTMLGuxRowSelectElement) => {
-          return dataRowSelectbox.selected;
-        }
-      );
+  @Listen('internalallrowselectchange')
+  onInternalAllRowSelectChange(event: CustomEvent): void {
+    event.stopPropagation();
+    this.handleSelectAllRows();
+  }
 
-      const hasRows = Boolean(dataRowsSelectboxes.length);
-      const allSelected = selectedRows.length === dataRowsSelectboxes.length;
+  @Listen('internalrowselectchange')
+  onInternalRowSelectChange(event: CustomEvent): void {
+    event.stopPropagation();
+    this.handleRowSelection(event.target);
+  }
+
+  @Listen('mousemove', { capture: true })
+  onMouseMove(event: MouseEvent): void {
+    if (this.resizableColumns) {
+      this.updateResizeState(event);
+    }
+  }
+
+  @Listen('mousedown')
+  onMouseDown(event: MouseEvent): void {
+    if (this.resizableColumns) {
+      this.maybeStartResizing(event);
+    }
+  }
+
+  @Listen('mouseup', { capture: true })
+  onMouseUp(): void {
+    if (this.resizableColumns) {
+      this.stopResizing();
+    }
+  }
+
+  /******************************* Element Getters *******************************/
+  // Add new query selectors here with meaningful names
+
+  private get tableContainer(): HTMLElement {
+    return this.root.shadowRoot.querySelector('.gux-table-container');
+  }
+
+  private get slottedTable(): HTMLElement {
+    return this.root.querySelector('table[slot="data"]');
+  }
+
+  private get tableRows(): NodeListOf<HTMLElement> {
+    return this.slottedTable.querySelectorAll('tbody tr');
+  }
+
+  private get tableColumns(): NodeListOf<HTMLElement> {
+    return this.slottedTable.querySelectorAll('thead th');
+  }
+
+  private get rowCheckboxes(): NodeListOf<HTMLGuxRowSelectElement> {
+    return this.slottedTable.querySelectorAll('tbody tr td gux-row-select');
+  }
+
+  private get selectAllCheckbox(): HTMLGuxAllRowSelectElement {
+    return this.slottedTable.querySelector('thead tr th gux-all-row-select');
+  }
+
+  /******************************* Row Selection *******************************/
+
+  /**
+   * Returns the selected rows Ids.
+   */
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async getSelected(): Promise<GuxTableSelectedState> {
+    return this.getSelectedInternal();
+  }
+
+  // Internal synchronous method for getting currently selected rows
+  // The public method is forced to be async by Stencil's lazy-loading.
+  private getSelectedInternal(): GuxTableSelectedState {
+    const rowCheckboxes = Array.from(this.rowCheckboxes);
+    const selectedRowIds = rowCheckboxes
+      .filter(box => box.selected)
+      .map(box => box.closest('tr').getAttribute('data-row-id'));
+
+    return { selectedRowIds };
+  }
+
+  // Set up initial selectable row states
+  private prepareSelectableRows(): void {
+    const rowCheckboxes = Array.from(this.rowCheckboxes);
+    rowCheckboxes.forEach(rowCheckbox => {
+      this.updateRowSelection(rowCheckbox);
+    });
+
+    this.updateSelectAllBoxState();
+  }
+
+  // Update the checked/interminate state of the select all checkbox
+  private updateSelectAllBoxState(): void {
+    const selectAllCheckbox = this.selectAllCheckbox;
+
+    if (selectAllCheckbox) {
+      const rowCheckboxes = Array.from(this.rowCheckboxes);
+      const selectedRows = rowCheckboxes.filter(box => box.selected);
+
+      const hasRows = Boolean(rowCheckboxes.length);
+      const allSelected = selectedRows.length === rowCheckboxes.length;
       const noneSelected = selectedRows.length === 0;
 
-      headerRowSelectbox.selected = hasRows && allSelected;
+      selectAllCheckbox.selected = hasRows && allSelected;
 
-      void headerRowSelectbox.setIndeterminate(
+      void selectAllCheckbox.setIndeterminate(
         hasRows && !allSelected && !noneSelected
       );
     }
   }
 
-  private rowSelection(dataRowSelectbox: HTMLGuxRowSelectElement): void {
-    const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
+  // Handle a change in state of the select all checkbox
+  private handleSelectAllRows(): void {
+    const selectAllCheckbox = this.selectAllCheckbox;
+    const rowCheckboxes = Array.from(this.rowCheckboxes);
 
+    rowCheckboxes.forEach(rowBox => {
+      rowBox.selected = selectAllCheckbox.selected;
+      this.updateRowSelection(rowBox);
+    });
+
+    this.emitSelectionEvent();
+  }
+
+  // Handle a change in state of an individual row selection checkbox
+  private handleRowSelection(rowCheckbox: EventTarget): void {
+    this.updateRowSelection(rowCheckbox as HTMLGuxRowSelectElement);
+    this.updateSelectAllBoxState();
+    this.emitSelectionEvent();
+  }
+
+  private emitSelectionEvent(): void {
+    this.guxselectionchanged.emit(this.getSelectedInternal());
+  }
+
+  // Make sure a selected row is tagged/displayed correctly at the row level
+  private updateRowSelection(dataRowSelectbox: HTMLGuxRowSelectElement): void {
+    const tableRow = dataRowSelectbox.closest('tr');
     if (dataRowSelectbox.selected) {
       tableRow.setAttribute('data-selected-row', '');
     } else {
@@ -593,38 +310,251 @@ export class GuxTable {
     }
   }
 
-  private allRowsSelection(
-    allRowSelectbox: HTMLGuxRowSelectElement,
-    dataRowsSelectboxes: HTMLGuxRowSelectElement[]
-  ): void {
-    dataRowsSelectboxes.forEach((dataRowSelectbox: HTMLGuxRowSelectElement) => {
-      const tableRow: HTMLTableRowElement = dataRowSelectbox.closest('tr');
+  /******************************* Scrolling *******************************/
 
-      if (allRowSelectbox.selected) {
-        dataRowSelectbox.selected = true;
-        tableRow.setAttribute('data-selected-row', '');
-      } else {
-        dataRowSelectbox.selected = false;
-        tableRow.removeAttribute('data-selected-row');
+  private nextColumn(): void {
+    const columns = Array.from(this.tableColumns);
+    const viewportBounds = this.tableContainer.getBoundingClientRect();
+
+    // The last column who's right side is out of the viewport
+    // or the last element if we can't find one.
+    const lastVisibleColumn =
+      columns.find(
+        col => col.getBoundingClientRect().right > viewportBounds.right
+      ) || columns[columns.length - 1];
+
+    const lastColumnBounds = lastVisibleColumn.getBoundingClientRect();
+    let distanceToScroll = lastColumnBounds.right - viewportBounds.right;
+
+    // Don't scroll the whole viewport away if there is a very long column
+    if (distanceToScroll > viewportBounds.width) {
+      distanceToScroll = viewportBounds.width * 0.9;
+    }
+
+    // Always try to scroll a little bit extra to make sure we aren't caught out by
+    // funny floating-point pixel math behavior.
+    this.tableContainer.scrollLeft += Math.ceil(distanceToScroll);
+    this.updateScrollState();
+  }
+
+  private previousColumn(): void {
+    const columns = Array.from(this.tableColumns);
+    const viewportBounds = this.tableContainer.getBoundingClientRect();
+
+    // The first column who's left side is out of the viewport
+    // or the first element if we can't find one.
+    const firstVisibleColumn =
+      columns
+        .reverse()
+        .find(col => col.getBoundingClientRect().left < viewportBounds.left) ||
+      columns[0];
+
+    const firstColumnBounds = firstVisibleColumn.getBoundingClientRect();
+    let distanceToScroll = viewportBounds.left - firstColumnBounds.left;
+
+    // Don't scroll the whole viewport away if there is a very long column
+    if (distanceToScroll > viewportBounds.width) {
+      distanceToScroll = viewportBounds.width * 0.9;
+    }
+
+    // Always try to scroll a little bit extra to make sure we aren't caught out by
+    // funny floating-point pixel math behavior.
+    this.tableContainer.scrollLeft += -Math.ceil(distanceToScroll);
+    this.updateScrollState();
+  }
+
+  updateScrollState(): void {
+    const scrollLeft = this.tableContainer.scrollLeft;
+    const maxScrollLeft =
+      this.tableContainer.scrollWidth - this.tableContainer.clientWidth;
+
+    this.isScrolledToFirstCell = scrollLeft === 0;
+    this.isScrolledToLastCell =
+      maxScrollLeft - scrollLeft - this.tableScrollbarConstant === 0;
+  }
+
+  private checkHorizontalScroll(): void {
+    const tableWidth = this.slottedTable.getBoundingClientRect().width;
+    const containerWidth = this.root.getBoundingClientRect().width;
+
+    this.isHorizontalScroll = tableWidth > containerWidth;
+  }
+
+  private checkVerticalScroll(): void {
+    const tableContainerElement = this.tableContainer;
+    this.isVerticalScroll =
+      tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
+  }
+
+  private get tableScrollbarConstant(): number {
+    const container: HTMLElement = this.tableContainer;
+    return container ? container.offsetWidth - container.clientWidth : 0;
+  }
+
+  /******************************* Resizeable Columns *******************************/
+
+  private prepareResizableColumns(): void {
+    const styleElement = document.createElement('style');
+    styleElement.id = `${this.tableId}-resizable-styles`;
+    document.querySelector('head').appendChild(styleElement);
+
+    const columns = Array.from(this.tableColumns);
+    columns.pop();
+
+    columns.forEach((column: HTMLElement) => {
+      this.columnsWidths[
+        column.dataset.columnName
+      ] = `${this.getElementComputedWidth(column)}px`;
+    });
+
+    this.setResizableColumnsStyles();
+  }
+
+  private updateResizeState(event: MouseEvent): void {
+    if (this.columnResizeState) {
+      const columnName =
+        this.columnResizeState.resizableColumn.dataset.columnName;
+      const columnWidth =
+        this.columnResizeState.resizableColumnInitialWidth +
+        (event.pageX - this.columnResizeState.columnResizeMouseStartX);
+
+      this.columnsWidths[columnName] = `${columnWidth > 1 ? columnWidth : 1}px`;
+      this.setResizableColumnsStyles();
+    } else {
+      this.columnResizeHover = false;
+      whenEventIsFrom('th', event, (th: HTMLTableCellElement) => {
+        const columnsLength = this.tableColumns.length;
+        const isLastColumn = columnsLength - 1 === th.cellIndex;
+
+        if (!isLastColumn && this.isInResizeZone(event, th)) {
+          this.columnResizeHover = true;
+        }
+      });
+    }
+  }
+
+  private maybeStartResizing(event: MouseEvent): void {
+    whenEventIsFrom('th', event, th => {
+      if (this.isInResizeZone(event, th)) {
+        const resizableColumn = th;
+
+        this.columnResizeState = {
+          resizableColumn,
+          columnResizeMouseStartX: event.pageX,
+          resizableColumnInitialWidth:
+            this.getElementComputedWidth(resizableColumn)
+        };
       }
     });
   }
 
-  private async handleSelectAllRows(): Promise<void> {
-    const headerRowSelectbox: HTMLGuxRowSelectElement = this.selectAllCheckbox;
-    const dataRowsSelectboxes: HTMLGuxRowSelectElement[] = Array.from(
-      this.rowCheckboxes
-    );
-
-    this.allRowsSelection(headerRowSelectbox, dataRowsSelectboxes);
-
-    this.guxselectionchanged.emit(await this.getSelected());
+  private stopResizing(): void {
+    if (this.columnResizeState) {
+      this.columnResizeState = null;
+    }
   }
 
-  private async handleSelectableRows(rowSelect: EventTarget): Promise<void> {
-    this.rowSelection(rowSelect as HTMLGuxRowSelectElement);
-    this.setHeaderRowSelectboxUI();
-    this.guxselectionchanged.emit(await this.getSelected());
+  private isInResizeZone(event: MouseEvent, header: HTMLElement): boolean {
+    return (
+      header.getBoundingClientRect().right - event.clientX <
+      COL_RESIZE_HANDLE_WIDTH
+    );
+  }
+
+  private getElementComputedWidth(element: HTMLElement): number {
+    return parseInt(
+      window.getComputedStyle(element).getPropertyValue('width').split('px')[0],
+      10
+    );
+  }
+
+  /******************************* Sortable Columns *******************************/
+
+  private prepareSortableColumns(): void {
+    const columnsElements = Array.from(this.tableColumns);
+    this.prepareSortableColumnsStyles();
+
+    columnsElements.forEach((column: HTMLElement) => {
+      if (Object.prototype.hasOwnProperty.call(column.dataset, 'sortable')) {
+        column.onclick = (event: MouseEvent) => {
+          const columnElement = event.target as HTMLElement;
+          const sortDirection = columnElement.dataset.sort || '';
+          let newSortDirection = null;
+
+          switch (sortDirection) {
+            case '':
+            case 'desc':
+              newSortDirection = 'asc';
+              break;
+            case 'asc':
+              newSortDirection = 'desc';
+              break;
+          }
+
+          this.guxsortchanged.emit({
+            columnName: columnElement.dataset.columnName,
+            sortDirection: newSortDirection
+          });
+        };
+      }
+    });
+  }
+
+  /**
+   * Create sort styles if they don't exist. We can't make these static because we need to look up
+   * asset paths to generate the urls
+   */
+  private prepareSortableColumnsStyles(): void {
+    const styleId = 'gux-table-sortable-styles';
+    if (document.getElementById(styleId) == null) {
+      const styleElement = document.createElement('style');
+      styleElement.id = styleId;
+
+      const ascArrowIcon = getAssetPath(`./icons/arrow-solid-down.svg`);
+      const descArrowIcon = getAssetPath(`./icons/arrow-solid-up.svg`);
+      const sortAscContent = this.i18n('sortAsc');
+      const sortDescContent = this.i18n('sortDesc');
+
+      styleElement.innerHTML = `
+      th[data-sortable]:hover:after{content: "${sortAscContent}";background-image: url("${ascArrowIcon}");}
+      th[data-sort="asc"]:after{background-image:url("${ascArrowIcon}")!important;content:"${sortAscContent}"!important;}
+      th[data-sort="desc"]:after{background-image:url("${descArrowIcon}")!important;content:"${sortDescContent}"!important;}
+    `;
+
+      document.querySelector('head').appendChild(styleElement);
+    }
+  }
+
+  private setResizableColumnsStyles(): void {
+    const styleElement = document.getElementById(
+      `${this.tableId}-resizable-styles`
+    );
+    let columnsStyles = '';
+
+    Object.keys(this.columnsWidths).forEach((column: string) => {
+      columnsStyles += `[gs-table-id=${
+        this.tableId
+      }] th[data-column-name="${column}"]{
+        width:${String(this.columnsWidths[column])};
+        min-width:${String(this.columnsWidths[column])};
+      }`;
+    });
+
+    styleElement.innerHTML = columnsStyles;
+  }
+
+  /******************************* Rendering *******************************/
+
+  private get isTableEmpty(): boolean {
+    return !this.root.children[0] || this.tableRows.length < 1;
+  }
+
+  private get tableContainerClasses(): { [k: string]: boolean } {
+    return {
+      'gux-table-container': true,
+      'gux-column-resizing': Boolean(this.columnResizeState),
+      'gux-column-resizing-hover': this.columnResizeHover
+    };
   }
 
   render(): JSX.Element {
@@ -636,7 +566,7 @@ export class GuxTable {
         gs-obj-table={this.objectTable}
         gs-compact={this.compact}
       >
-        <div class={this.tableClasses}>
+        <div class="gux-table">
           <div
             tabindex={this.isVerticalScroll ? '0' : '-1'}
             id={this.tableId}
