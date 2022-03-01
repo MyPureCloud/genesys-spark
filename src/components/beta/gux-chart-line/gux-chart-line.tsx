@@ -35,8 +35,8 @@ export class GuxLineChart {
       }
     },
     encoding: {
-      x: { type: 'nominal' },
-      y: { type: 'quantitative' },
+      x: { type: 'nominal', axis: { titlePadding: 8 } },
+      y: { type: 'quantitative', axis: { titlePadding: 8 } },
       color: {
         field: DEFAULT_COLOR_FIELD_NAME,
         type: 'nominal',

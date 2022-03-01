@@ -31,8 +31,8 @@ export class GuxColumnChart {
       }
     },
     encoding: {
-      x: { type: 'nominal' },
-      y: { type: 'quantitative' },
+      x: { type: 'nominal', axis: { titlePadding: 8 } },
+      y: { type: 'quantitative', axis: { titlePadding: 8 } },
       tooltip: { aggregate: 'count', type: 'quantitative' }
     }
   };
@@ -126,11 +126,13 @@ export class GuxColumnChart {
           encoding: {
             x: {
               field: xFieldName,
-              type: 'nominal'
+              type: 'nominal',
+              axis: { titlePadding: 8 }
             },
             y: {
               field: yFieldName,
-              type: 'quantitative'
+              type: 'quantitative',
+              axis: { titlePadding: 8 }
             }
           }
         };
