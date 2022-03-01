@@ -256,7 +256,6 @@ export class GuxTabAdvanced {
           'gux-disabled': this.guxDisabled
         }}
         aria-disabled={this.guxDisabled.toString()}
-        tabIndex={this.active ? 0 : -1}
       >
         <button
           class="gux-tab-button"
@@ -265,7 +264,7 @@ export class GuxTabAdvanced {
           aria-selected={this.active.toString()}
           aria-controls={`gux-${this.tabId}-panel`}
           ref={el => (this.buttonElement = el)}
-          tabIndex={-1}
+          tabIndex={this.active ? 0 : -1}
           id={`gux-${this.tabId}-tab`}
         >
           {this.tabIconName ? (

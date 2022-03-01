@@ -20,17 +20,6 @@ gux-tab-advanced {
     border-radius: 4px 4px 0 0;
     transition: width 0.4s ease-out;
 
-    &:focus {
-      outline: none;
-    }
-
-    &:focus-visible {
-      height: 90%;
-      border: 3px solid @gux-blue-90;
-      border-radius: 5px;
-      outline: none;
-    }
-
     .gux-tab-button {
       display: flex;
       align-items: center;
@@ -42,7 +31,10 @@ gux-tab-advanced {
       background-color: @gux-grey-90;
       border: none;
 
-      &:focus {
+      &:focus-visible {
+        height: 90%;
+        border: 3px solid @gux-blue-90;
+        border-radius: 5px;
         outline: none;
       }
     }
