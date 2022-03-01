@@ -1,4 +1,4 @@
-import { Component, Element, h, Host, JSX } from '@stencil/core';
+import { Component, Element, h, JSX } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -24,14 +24,12 @@ export class GuxDismissButton {
 
   render(): JSX.Element {
     return (
-      <Host tabIndex={0}>
-        <button type="button" title={this.i18n('dismiss')}>
-          <gux-icon
-            icon-name="close"
-            screenreader-text={this.i18n('dismiss')}
-          ></gux-icon>
-        </button>
-      </Host>
+      <button type="button" title={this.i18n('dismiss')}>
+        <gux-icon
+          icon-name="close"
+          screenreader-text={this.i18n('dismiss')}
+        ></gux-icon>
+      </button>
     ) as JSX.Element;
   }
 }

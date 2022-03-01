@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Etiketi kaldır"
+  "tag": "şunu içeren etiket: {label}",
+  "tag-disabled": "şunu içeren etiket devre dışı: {label}",
+  "remove-tag": "Şunu içeren etiketi kaldır: {label}"
 }

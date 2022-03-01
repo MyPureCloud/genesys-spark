@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Eliminar etiqueta"
+  "tag": "etiqueta con: {label}",
+  "tag-disabled": "se desactivó la etiqueta con: {label}",
+  "remove-tag": "Eliminar etiqueta con: {label}"
 }

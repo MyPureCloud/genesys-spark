@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Usuń tag"
+  "tag": "tag z etykietą: {label}",
+  "tag-disabled": "zablokowano tag z etykietą: {label}",
+  "remove-tag": "Usuń tag z etykietą: {label}"
 }

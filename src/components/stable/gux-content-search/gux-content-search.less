@@ -4,164 +4,169 @@
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/mixins.less';
 
-gux-content-search {
+:host {
   display: inline-block;
   width: 300px;
   min-width: 300px;
   color: @gux-black-90;
+}
 
-  gux-icon {
-    width: 16px;
-    height: 16px;
+::slotted(input) {
+  .gux-input-style();
+
+  flex-basis: 100%;
+  flex-shrink: 1;
+  min-width: 0;
+  height: 22px;
+  padding: 0;
+  color: @gux-black-50;
+  background-color: @gux-grey-90;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+
+  &.gux-focused,
+  &:focus {
+    border: 0;
+    outline: none;
+    box-shadow: none;
   }
+}
 
-  .gux-disabled {
+.gux-content-search {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 32px;
+  padding: @spacing-2xs 0 @spacing-2xs 0;
+  margin: 4px 0;
+  background-color: @gux-grey-90;
+  background-image: none;
+  .form-field-border();
+
+  &.gux-disabled {
     pointer-events: none;
     cursor: default;
     opacity: 0.5;
   }
 
-  .gux-content {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 32px;
-    padding: @spacing-2xs 0 @spacing-2xs 0;
-    margin: 4px 0;
-    background-color: @gux-grey-90;
-    background-image: none;
-    .form-field-border();
+  &:focus,
+  &:focus-within {
+    border: 1px solid @gux-blue-60;
+    outline: none;
+    box-shadow: 0 0 4px @gux-blue-80;
+  }
 
-    &.gux-focused,
-    &:focus,
-    &:focus-within {
-      border: 1px solid @gux-blue-60;
-      outline: none;
-      box-shadow: 0 0 4px @gux-blue-80;
+  .gux-search-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    padding-top: 0;
+    padding-right: 4px;
+    padding-bottom: 0;
+    padding-left: 8px;
+
+    &:disabled {
+      pointer-events: none;
+      cursor: default;
+      opacity: 0.5;
     }
 
-    .gux-search-icon {
-      display: flex;
-      flex-shrink: 0;
+    gux-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .gux-content-control-panel {
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    height: 22px;
+    padding: 0;
+    line-height: 1.66666667;
+
+    button {
+      display: block;
       align-items: center;
-      padding-top: 0;
-      padding-right: 4px;
-      padding-bottom: 0;
-      padding-left: 8px;
+      overflow: hidden;
+      color: @gux-black-90;
+      cursor: pointer;
+      background: none;
+      border: none;
+      border-radius: 4px;
+      outline: none;
 
       &:disabled {
         pointer-events: none;
         cursor: default;
         opacity: 0.5;
       }
-    }
 
-    input {
-      .gux-input-style();
+      &:not(:disabled):hover,
+      &:not(:disabled):focus {
+        color: @gux-black-50;
+      }
 
-      flex-basis: 100%;
-      flex-shrink: 1;
-      min-width: 0;
-      height: 22px;
-      padding: 0;
-      color: @gux-black-50;
-      background-color: @gux-grey-90;
-      border: 0;
-      border-radius: 0;
+      &:focus:enabled {
+        .focus-ring();
+      }
 
-      &.gux-focused,
-      &:focus {
-        border: 0;
-        outline: none;
-        box-shadow: none;
+      gux-icon {
+        width: 16px;
+        height: 16px;
       }
     }
 
-    .gux-content-control-panel {
-      box-sizing: border-box;
-      display: flex;
-      flex-grow: 1;
+    .gux-clear-button {
       flex-shrink: 0;
+      align-items: center;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+
+    .gux-navigation-disabled {
+      pointer-events: auto;
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    .gux-navigation-panel {
+      display: flex;
       align-content: center;
       align-items: center;
       justify-content: flex-end;
-      height: 22px;
-      padding: 0;
-      line-height: 1.66666667;
+      border-right: 1px solid @gux-black-90;
 
-      button {
-        display: block;
+      .gux-navigation-result {
         align-items: center;
-        overflow: hidden;
-        color: @gux-black-90;
-        cursor: pointer;
-        background: none;
-        border: none;
-        border-radius: 4px;
-        outline: none;
-
-        &:disabled {
-          pointer-events: none;
-          cursor: default;
-          opacity: 0.5;
-        }
-
-        &:not(:disabled):hover,
-        &:not(:disabled):focus {
-          color: @gux-black-50;
-        }
-
-        &:focus:enabled {
-          .focus-ring();
-        }
+        padding-left: 8px;
+        font-family: inherit;
+        font-size: 12px;
+        white-space: nowrap;
       }
 
-      .gux-clear-button {
+      .gux-previous-button {
         flex-shrink: 0;
         align-items: center;
         padding-right: 0;
         padding-left: 0;
-        margin-right: 8px;
-        margin-left: 8px;
+        margin-left: 4px;
       }
 
-      .gux-navigation-disabled {
-        pointer-events: auto;
-        cursor: default;
-        opacity: 0.5;
-      }
-
-      .gux-navigation-panel {
-        display: flex;
-        align-content: center;
+      .gux-next-button {
+        flex-shrink: 0;
         align-items: center;
-        justify-content: flex-end;
-        border-right: 1px solid @gux-black-90;
-
-        .gux-navigation-result {
-          align-items: center;
-          padding-left: 8px;
-          font-family: inherit;
-          font-size: 12px;
-          white-space: nowrap;
-        }
-
-        .gux-previous-button {
-          flex-shrink: 0;
-          align-items: center;
-          padding-right: 0;
-          padding-left: 0;
-          margin-left: 4px;
-        }
-
-        .gux-next-button {
-          flex-shrink: 0;
-          align-items: center;
-          padding-right: 0;
-          padding-left: 0;
-          margin-right: 4px;
-        }
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 4px;
       }
     }
   }
