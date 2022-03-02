@@ -32,11 +32,17 @@ export class GuxLineChart {
     config: {
       legend: {
         symbolType: 'circle'
+      },
+      axis: {
+        titlePadding: 8
+      },
+      axisX: {
+        labelAngle: 0
       }
     },
     encoding: {
-      x: { type: 'nominal', axis: { titlePadding: 8, labelAngle: 0 } }, // horizontal x axis ticks by default
-      y: { type: 'quantitative', axis: { titlePadding: 8 } },
+      x: { type: 'nominal' },
+      y: { type: 'quantitative' },
       color: {
         field: DEFAULT_COLOR_FIELD_NAME,
         type: 'nominal',
@@ -126,7 +132,7 @@ export class GuxLineChart {
     }
 
     if (this.xTickLabelSlant) {
-      this.baseChartSpec.encoding.x.axis.labelAngle = 45;
+      this.baseChartSpec.config.axisX.labelAngle = 45;
     }
 
     if (this.includeLegend) {
