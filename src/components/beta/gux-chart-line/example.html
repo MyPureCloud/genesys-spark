@@ -28,6 +28,17 @@
 >
 </gux-chart-line-beta>
 
+<h2>Custom legend position</h2>
+<gux-chart-line-beta
+  id="chart-8"
+  x-field-name="date"
+  x-tick-label-slant="true"
+  y-field-name="value"
+  include-legend="true"
+  legend-position="left"
+>
+</gux-chart-line-beta>
+
 <h2>Dashed</h2>
 <gux-chart-line-beta
   id="chart-4"
@@ -83,6 +94,7 @@
     const chart5 = document.querySelector('#chart-5');
     const chart6 = document.querySelector('#chart-6');
     const chart7 = document.querySelector('#chart-7');
+    const chart8 = document.querySelector('#chart-8');
 
     const chartData = {'values': [
       {'date': '2021-01-01', 'value': 9.4, 'category': 'Jupiter'},
@@ -210,6 +222,7 @@
   chart4.chartData = chartData;
   chart5.chartData = chartData;
   chart6.chartData = chartData;
+  chart8.chartData = chartData;
 
   chart7.chartData = {'values': [
       {'date': '2021-01-01', 'time': 9.4, 'statistic': 'ASA'},
