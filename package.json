@@ -1,6 +1,6 @@
 {
   "name": "@genesys/common-webcomponents",
-  "version": "3.0.0-alpha.34",
+  "version": "3.0.0-alpha.38",
   "description": "Common webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",
@@ -59,7 +59,6 @@
   "dependencies": {
     "@popperjs/core": "^2.10.2",
     "eslint-plugin-jest": "^25.3.0",
-    "focus-trap": "^6.6.1",
     "intl-messageformat": "~9.4.9",
     "requestanimationframe-timer": "^3.0.3",
     "sortablejs": "^1.14.0",

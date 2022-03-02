@@ -1,0 +1,150 @@
+<h1>gux-form-field-range-beta</h1>
+
+<p>slot a input[type=range] element into a gux-form-field-range-beta element</p>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Display units</legend>
+
+    <gux-form-field-range-beta>
+      <input slot="input" type="range" name="du-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta display-units="%">
+      <input slot="input" type="range" name="du-2" />
+      <label slot="label">Percentage</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta display-units="px">
+      <input slot="input" type="range" name="du-3" disabled />
+      <label slot="label">Pixels</label>
+    </gux-form-field-range-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Value in tooltip</legend>
+
+    <gux-form-field-range-beta value-in-tooltip>
+      <input slot="input" type="range" name="du-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta value-in-tooltip display-units="%">
+      <input slot="input" type="range" name="du-2" />
+      <label slot="label">Percentage</label>
+    </gux-form-field-range-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Label Position</legend>
+
+    <gux-form-field-range-beta>
+      <input slot="input" type="range" name="lp-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta>
+      <input slot="input" type="range" name="lp-2" />
+      <label slot="label">Default long label</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta label-position="above">
+      <input slot="input" type="range" name="lp-3" />
+      <label slot="label">Above</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta label-position="beside">
+      <input slot="input" type="range" name="lp-4" />
+      <label slot="label">Beside</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta label-position="screenreader">
+      <input slot="input" type="range" name="lp-5" />
+      <label slot="label">Screenreader</label>
+    </gux-form-field-range-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Input attributes</legend>
+
+    <gux-form-field-range-beta>
+      <input slot="input" type="range" name="a-1" disabled />
+      <label slot="label">Disabled</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta value-in-tooltip>
+      <input slot="input" type="range" name="a-1" disabled />
+      <label slot="label">Disabled and value in tooltip</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta>
+      <input slot="input" type="range" name="a-2" required />
+      <label slot="label">Required</label>
+    </gux-form-field-range-beta>
+
+    <gux-form-field-range-beta>
+      <input
+        slot="input"
+        type="range"
+        name="a-2"
+        value="10"
+        step="5"
+        min="-25"
+        max="25"
+      />
+      <label slot="label">Step / Min / Max</label>
+    </gux-form-field-range-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+
+    <gux-form-field-range-beta>
+      <input slot="input" type="range" name="e-1" />
+      <label slot="label">Default</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-range-beta>
+  </fieldset>
+</form>
+
+<h2>gux-form-field examples for comparison</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <gux-form-field label-position="beside">
+      <label slot="label">Range</label>
+      <input slot="input" name="range" type="range" />
+    </gux-form-field>
+
+    <gux-form-field display-units="%" label-position="beside">
+      <label slot="label">Range</label>
+      <input slot="input" name="range" type="range" />
+    </gux-form-field>
+
+    <gux-form-field display-units="px" label-position="beside">
+      <label slot="label">Range</label>
+      <input slot="input" name="range" type="range" />
+    </gux-form-field>
+
+    <gux-form-field label-position="beside">
+      <label slot="label">Range</label>
+      <input slot="input" name="range-disabled" type="range" disabled />
+    </gux-form-field>
+
+    <gux-form-field display-units="%" value-in-tooltip label-position="above">
+      <label slot="label">Range with value in tooltip</label>
+      <input slot="input" name="range-with-tooltip" type="range" />
+    </gux-form-field>
+
+    <gux-form-field display-units="px" value-in-tooltip label-position="above">
+      <label slot="label">Range (disabled)</label>
+      <input slot="input" name="range-disabled" type="range" disabled />
+    </gux-form-field>
+
+    <gux-form-field value-in-tooltip label-position="above">
+      <label slot="label">Required Range</label>
+      <input slot="input" name="range-disabled" type="range" required />
+    </gux-form-field>
+  </fieldset>
+</form>

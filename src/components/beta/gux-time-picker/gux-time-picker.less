@@ -1,32 +1,24 @@
 @import (reference) '../../../style/shared/text-input.less';
 
-gux-time-picker-beta {
+:host {
   display: inline-block;
-
-  input {
-    .gux-input-style();
-
-    text-align: right;
-  }
-
-  .gux-list-container {
-    position: relative;
-
-    gux-list {
-      position: absolute;
-      width: 100%;
-
-      gux-list-item {
-        text-align: right;
-      }
-    }
-  }
 }
 
-.gux-dark-theme {
-  gux-time-picker-beta {
-    input {
-      .gux-input-dark-theme();
+input {
+  .gux-input-style();
+
+  text-align: right;
+}
+
+.gux-list-container {
+  position: relative;
+
+  gux-list {
+    position: absolute;
+    width: 100%;
+
+    gux-list-item {
+      text-align: right;
     }
   }
 }

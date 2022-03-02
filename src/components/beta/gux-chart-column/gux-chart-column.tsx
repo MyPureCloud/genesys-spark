@@ -21,8 +21,12 @@ export class GuxColumnChart {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-    mark: { type: 'bar', width: 16 },
+    mark: { type: 'bar' },
     config: {
+      scale: {
+        bandPaddingInner: 0.4, // padding between columns / bars
+        bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
+      },
       legend: {
         symbolType: 'circle'
       },
@@ -31,7 +35,7 @@ export class GuxColumnChart {
       }
     },
     encoding: {
-      x: { type: 'nominal', axis: { titlePadding: 8 } },
+      x: { type: 'nominal', axis: { titlePadding: 8, labelAngle: 0 } }, // horizontal x axis ticks by default
       y: { type: 'quantitative', axis: { titlePadding: 8 } },
       tooltip: { aggregate: 'count', type: 'quantitative' }
     }
@@ -44,6 +48,12 @@ export class GuxColumnChart {
   @Prop()
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   chartData: Record<string, any>;
+
+  /**
+   * If true, then make Axis tick label 45 degrees
+   */
+  @Prop()
+  xTickLabelSlant: boolean;
 
   @Prop()
   includeLegend: boolean;
@@ -104,6 +114,10 @@ export class GuxColumnChart {
       chartData = { data: this.chartData };
     }
 
+    if (this.xTickLabelSlant) {
+      this.baseChartSpec.encoding.x.axis.labelAngle = 45;
+    }
+
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color = { field: 'category' };
     }
@@ -127,7 +141,10 @@ export class GuxColumnChart {
             x: {
               field: xFieldName,
               type: 'nominal',
-              axis: { titlePadding: 8 }
+              axis: {
+                titlePadding: 8,
+                labelAngle: this.xTickLabelSlant ? 45 : 0
+              } // horizontal x axis ticks by default
             },
             y: {
               field: yFieldName,
