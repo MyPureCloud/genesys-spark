@@ -150,8 +150,7 @@ export class GuxColumnChart {
             },
             y: {
               field: yFieldName,
-              type: 'quantitative',
-              axis: { titlePadding: 8 }
+              type: 'quantitative'
             }
           }
         };
