@@ -27,6 +27,11 @@ export class GuxDonutChart {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+    config: {
+      legend: {
+        symbolType: 'circle'
+      }
+    },
     encoding: {
       theta: { field: 'value', type: 'quantitative', stack: true },
       color: {
