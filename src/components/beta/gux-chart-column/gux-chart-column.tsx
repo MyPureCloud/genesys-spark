@@ -31,7 +31,10 @@ export class GuxColumnChart {
       }
     },
     encoding: {
-      x: { type: 'nominal' },
+      x: {
+        type: 'nominal',
+        axis: { labelAngle: 0 } // horizontal x axis ticks by default
+      },
       y: { type: 'quantitative' },
       tooltip: { aggregate: 'count', type: 'quantitative' }
     }
@@ -44,6 +47,12 @@ export class GuxColumnChart {
   @Prop()
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   chartData: Record<string, any>;
+
+  /**
+   * If true, then make Axis tick label 45 degrees
+   */
+  @Prop()
+  xTickLabelSlant: boolean;
 
   @Prop()
   includeLegend: boolean;
@@ -104,6 +113,10 @@ export class GuxColumnChart {
       chartData = { data: this.chartData };
     }
 
+    if (this.xTickLabelSlant) {
+      this.baseChartSpec.encoding.x.axis.labelAngle = 45;
+    }
+
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color = { field: 'category' };
     }
@@ -126,7 +139,8 @@ export class GuxColumnChart {
           encoding: {
             x: {
               field: xFieldName,
-              type: 'nominal'
+              type: 'nominal',
+              axis: { labelAngle: this.xTickLabelSlant ? 45 : 0 } // horizontal x axis ticks by default
             },
             y: {
               field: yFieldName,
