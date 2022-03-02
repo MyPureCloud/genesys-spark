@@ -206,14 +206,12 @@ export class GuxTabAdvanced {
           onClick={() => this.toggleOptions()}
           tabIndex={this.active ? 0 : -1}
         >
-          <div class="gux-menu-kebab-padding">
-            <gux-icon
-              icon-name="menu-kebab-vertical"
-              screenreader-text={this.i18n('options', {
-                tabTitle: this.tabTitle
-              })}
-            ></gux-icon>
-          </div>
+          <gux-icon
+            icon-name="menu-kebab-vertical"
+            screenreader-text={this.i18n('options', {
+              tabTitle: this.tabTitle
+            })}
+          ></gux-icon>
         </button>,
         <gux-popover
           position="top-end"

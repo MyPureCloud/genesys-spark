@@ -63,18 +63,12 @@ gux-tab-advanced {
       background-color: @gux-grey-90;
       border: none;
 
-      .gux-menu-kebab-padding {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 30px;
-        border-right: 1px solid @gux-grey-50;
-      }
-
       &:focus-visible {
         outline: none;
 
         gux-icon {
+          padding-right: 0;
+          padding-left: 0;
           border: 3px solid @gux-blue-90;
           border-radius: 5px;
         }
@@ -82,7 +76,10 @@ gux-tab-advanced {
 
       gux-icon {
         width: 16px;
-        height: 16px;
+        height: 30px;
+        padding-right: 10px;
+        padding-left: 8px;
+        border-right: 1px solid @gux-grey-50;
         transition: color 0.25s;
       }
     }
