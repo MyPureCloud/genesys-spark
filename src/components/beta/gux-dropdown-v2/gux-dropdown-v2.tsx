@@ -102,7 +102,13 @@ export class GuxDropdownV2Beta {
         this.collapseListbox('focusFieldButton');
         return;
       case 'Tab':
-        if (this.shiftTabFromFilterableList(event)) {
+        if (this.shiftTabFromFilterListbox(event)) {
+          event.preventDefault();
+          return this.filterElement.focus();
+        } else if (this.shiftTabFromExpandedFilterInput(event)) {
+          event.preventDefault();
+          return this.collapseListbox('focusFieldButton');
+        } else {
           this.collapseListbox('noFocusChange');
         }
         return;
@@ -162,18 +168,26 @@ export class GuxDropdownV2Beta {
     this.expanded = !this.expanded;
   }
 
-  private filterInput(): void {
+  private filterInput(event: InputEvent): void {
+    event.stopPropagation();
     this.filter = this.filterElement.value;
   }
 
-  private shiftTabFromFilterableList(event: KeyboardEvent): boolean {
-    return !(
+  private shiftTabFromExpandedFilterInput(event: KeyboardEvent): boolean {
+    return (
+      event.shiftKey &&
+      this.filterable &&
+      this.expanded &&
+      !(document.activeElement === this.listboxElement)
+    );
+  }
+
+  private shiftTabFromFilterListbox(event: KeyboardEvent): boolean {
+    return (
       event.shiftKey &&
       this.filterable &&
       document.activeElement === this.listboxElement
-    )
-      ? true
-      : false;
+    );
   }
 
   private activeElementNotListbox(): boolean {
@@ -314,30 +328,22 @@ export class GuxDropdownV2Beta {
           aria-expanded={this.expanded.toString()}
         >
           {this.renderTargetContent()}
+          <gux-icon
+            class={{
+              'gux-expand-icon': true
+            }}
+            screenreader-text={this.i18n('dropdown')}
+            iconName="chevron-small-down"
+          ></gux-icon>
         </button>
       </div>
     ) as JSX.Element;
   }
   private renderTargetContent(): JSX.Element {
-    if (this.expanded && this.filterable) {
+    if (!(this.expanded && this.filterable)) {
       return (
-        <gux-icon
-          class={{
-            'gux-expand-icon': true
-          }}
-          screenreader-text={this.i18n('dropdown')}
-          iconName="chevron-small-down"
-        ></gux-icon>
+        <div class="gux-field-content">{this.renderTargetDisplay()}</div>
       ) as JSX.Element;
-    } else {
-      return [
-        <div class="gux-field-content">{this.renderTargetDisplay()}</div>,
-        <gux-icon
-          class="gux-expand-icon"
-          decorative
-          iconName="chevron-small-down"
-        ></gux-icon>
-      ] as JSX.Element;
     }
   }
 
