@@ -30,15 +30,18 @@ export class GuxLineChart {
       point: false
     },
     config: {
+      axis: {
+        ticks: false
+      },
+      axisX: {
+        labelAngle: 0
+      },
       legend: {
         symbolType: 'circle'
       }
     },
     encoding: {
-      x: {
-        type: 'nominal',
-        axis: { labelAngle: 0 } // horizontal x axis ticks by default
-      },
+      x: { type: 'nominal' },
       y: { type: 'quantitative' },
       color: {
         field: DEFAULT_COLOR_FIELD_NAME,
@@ -129,7 +132,7 @@ export class GuxLineChart {
     }
 
     if (this.xTickLabelSlant) {
-      this.baseChartSpec.encoding.x.axis.labelAngle = 45;
+      this.baseChartSpec.config.axisX.labelAngle = 45;
     }
 
     if (this.includeLegend) {

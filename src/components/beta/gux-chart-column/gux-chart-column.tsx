@@ -23,6 +23,12 @@ export class GuxColumnChart {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     mark: { type: 'bar' },
     config: {
+      axis: {
+        ticks: false
+      },
+      axisX: {
+        labelAngle: 0
+      },
       scale: {
         bandPaddingInner: 0.4, // padding between columns / bars
         bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
@@ -36,8 +42,7 @@ export class GuxColumnChart {
     },
     encoding: {
       x: {
-        type: 'nominal',
-        axis: { labelAngle: 0 } // horizontal x axis ticks by default
+        type: 'nominal'
       },
       y: { type: 'quantitative' },
       tooltip: { aggregate: 'count', type: 'quantitative' }
@@ -118,7 +123,7 @@ export class GuxColumnChart {
     }
 
     if (this.xTickLabelSlant) {
-      this.baseChartSpec.encoding.x.axis.labelAngle = 45;
+      this.baseChartSpec.config.axisX.labelAngle = 45;
     }
 
     if (this.includeLegend) {
@@ -143,8 +148,7 @@ export class GuxColumnChart {
           encoding: {
             x: {
               field: xFieldName,
-              type: 'nominal',
-              axis: { labelAngle: this.xTickLabelSlant ? 45 : 0 } // horizontal x axis ticks by default
+              type: 'nominal'
             },
             y: {
               field: yFieldName,
