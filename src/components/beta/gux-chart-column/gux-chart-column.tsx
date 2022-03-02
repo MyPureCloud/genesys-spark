@@ -21,8 +21,12 @@ export class GuxColumnChart {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-    mark: { type: 'bar', width: 16 },
+    mark: { type: 'bar' },
     config: {
+      scale: {
+        bandPaddingInner: 0.4, // padding between columns / bars
+        bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
+      },
       legend: {
         symbolType: 'circle'
       },
