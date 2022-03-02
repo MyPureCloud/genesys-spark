@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.38](https://inindca///compare/v3.0.0-alpha.37...v3.0.0-alpha.38) (2022-03-02)
+
+
+### Bug Fixes
+
+* **gux-tooltip-title:** long text no longer overflows tab tooltip ([d7be354](https://inindca///commit/d7be35449c130905626868796e9c6f43ef620e11))
+
 ## [3.0.0-alpha.37](https://inindca///compare/v3.0.0-alpha.36...v3.0.0-alpha.37) (2022-03-01)
 
 
