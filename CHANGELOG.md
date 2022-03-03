@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.52.2](https://inindca///compare/v2.52.1...v2.52.2) (2022-03-03)
+
+
+### Bug Fixes
+
+* **gux-tabs-beta:** long text no longer overflows tab tooltip, backport to v2 ([b2f7a25](https://inindca///commit/b2f7a25e1645a8c467a58ff823601a8977af283d))
+
 ### [2.52.1](https://inindca///compare/v2.52.0...v2.52.1) (2022-02-18)
 
 
