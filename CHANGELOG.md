@@ -2,6 +2,117 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.39](https://inindca///compare/v3.0.0-alpha.38...v3.0.0-alpha.39) (2022-03-03)
+
+
+### Features
+
+* **column and line chart:** x axis label tick orientation ([b6fb7c7](https://inindca///commit/b6fb7c7f011a8c7d0abcb6899b0a6b9606456197))
+* **column-chart:** bar/column and axes padding ([5b4599d](https://inindca///commit/5b4599dd2d3d6ca728854e59a9fd089bee971513))
+* **gux-visualization:** change color of Axes ([ba36f29](https://inindca///commit/ba36f291301e40d63acb012dac0153b34b3b6869))
+* **line chart, column chart:** x axis tick label orientation ([2521a75](https://inindca///commit/2521a755a8a12a70f3f57fb0dc55f2a5f3b63340))
+
+## [3.0.0-alpha.38](https://inindca///compare/v3.0.0-alpha.37...v3.0.0-alpha.38) (2022-03-02)
+
+
+### Bug Fixes
+
+* **gux-tooltip-title:** long text no longer overflows tab tooltip ([d7be354](https://inindca///commit/d7be35449c130905626868796e9c6f43ef620e11))
+
+## [3.0.0-alpha.37](https://inindca///compare/v3.0.0-alpha.36...v3.0.0-alpha.37) (2022-03-01)
+
+
+### Features
+
+* **form-field:** added new individual form-field elements ([c0881e1](https://inindca///commit/c0881e15b14f9827c36a1cc342d71db10f2a59cf))
+* **time-picker:** enabled shadow dom ([edb02cd](https://inindca///commit/edb02cda9a14bca4fee09965d8e09ad7ba39bef6))
+
+
+### Bug Fixes
+
+* **firefox:** fixed firefox issue ([137ed64](https://inindca///commit/137ed644262d6e6dba3f9faf02977013665937f6))
+* **pr-comment:** addressed PR comment ([1986739](https://inindca///commit/1986739ff0a71aef9265869324eac76eaf707625))
+* **pr-comments:** addessed PR comments ([82c619c](https://inindca///commit/82c619c8aa1d49204e5ed6f9aa3f43182900729f))
+
+## [3.0.0-alpha.36](https://inindca///compare/v3.0.0-alpha.35...v3.0.0-alpha.36) (2022-02-26)
+
+
+### Features
+
+* **gux-modal:** migrate gux-modal to shadow dom, trap focus POC ([214ef05](https://inindca///commit/214ef058a002944b0f4aef0a826b54b86f7d5051))
+
+## [3.0.0-alpha.35](https://inindca///compare/v3.0.0-alpha.34...v3.0.0-alpha.35) (2022-02-25)
+
+## [3.0.0-alpha.34](https://inindca///compare/v3.0.0-alpha.33...v3.0.0-alpha.34) (2022-02-24)
+
+
+### Features
+
+* **chart:** enabled shadow dom ([6892237](https://inindca///commit/6892237fbd7187108f3f844d6c97b1ec34c65c93))
+* **content-search:** enabled shadow dom ([6ba68ea](https://inindca///commit/6ba68ea1943a4c5a1b9931df0e3c770ada20e8b2))
+* **datepicker:** enabled shadow dom ([2303b73](https://inindca///commit/2303b739c8782f006c55218355d1bbe2041d20c9))
+
+## [3.0.0-alpha.33](https://inindca///compare/v3.0.0-alpha.32...v3.0.0-alpha.33) (2022-02-23)
+
+## [3.0.0-alpha.32](https://inindca///compare/v3.0.0-alpha.31...v3.0.0-alpha.32) (2022-02-18)
+
+
+### Features
+
+* **visualization:** enabled shadow dom ([04f147c](https://inindca///commit/04f147c49e0239c32eb2cf9a73ce422359e497ba))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([ca7ecbb](https://inindca///commit/ca7ecbb5b705250e8eecf2448593fac37522c45d))
+* **pr-comment:** addressed PR comment ([36e04e2](https://inindca///commit/36e04e22acbb10555918c5daeb1361e00316cc22))
+* **pr-comment:** addressed PR comments ([6af4f77](https://inindca///commit/6af4f77229cff1854f72fd676b81a7030e6736dc))
+* **tag:** improved components accessibility ([e5fe7a3](https://inindca///commit/e5fe7a3b231d610dc2624ad328d81d63c293abe9))
+
+## [3.0.0-alpha.31](https://inindca///compare/v3.0.0-alpha.30...v3.0.0-alpha.31) (2022-02-17)
+
+
+### Features
+
+* **icon:** added run and message-email-outbound icons ([1b6db76](https://inindca///commit/1b6db768b3ceac0e7c323c9aa6b6c999394806dd))
+
+## [3.0.0-alpha.30](https://inindca///compare/v3.0.0-alpha.29...v3.0.0-alpha.30) (2022-02-16)
+
+
+### Features
+
+* **gux-button:** migrate gux-button to shadow dom ([de5b0e6](https://inindca///commit/de5b0e6bebd4aabfc2b09e572521300a6801e328))
+* **gux-popover:** migrate gux-popover to shadow dom ([f0541cb](https://inindca///commit/f0541cbe39313a8a4581e81c4ca2004c5c4817ca))
+
+## [3.0.0-alpha.29](https://inindca///compare/v3.0.0-alpha.28...v3.0.0-alpha.29) (2022-02-15)
+
+
+### Bug Fixes
+
+* **gux-time-picker:** fixed on click bug ([51d595f](https://inindca///commit/51d595f1a18b6fdd88237e6cd60ea255468b73ac))
+
+## [3.0.0-alpha.28](https://inindca///compare/v3.0.0-alpha.27...v3.0.0-alpha.28) (2022-02-04)
+
+
+### Features
+
+* **icon:** added new icons ([3227b1e](https://inindca///commit/3227b1e79b3ae95cb12d5b3827d095d49b0075e5))
+
+## [3.0.0-alpha.27](https://inindca///compare/v3.0.0-alpha.26...v3.0.0-alpha.27) (2022-02-01)
+
+
+### Bug Fixes
+
+* **scripts:** fixed generate-versions-file script ([f9dc706](https://inindca///commit/f9dc70619ddbed21e94c30af76ad1c0b626a13e6))
+
+## [3.0.0-alpha.26](https://inindca///compare/v3.0.0-alpha.25...v3.0.0-alpha.26) (2022-01-29)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** gux-dropdown within a gux-panel closes when scroll button is clicked ([2d538dd](https://inindca///commit/2d538dd1ae56c9757691f6e010830238740accef))
+* **gux-tab-panel:** fixed tabpanel outline shown on click in safari ([4cbbc58](https://inindca///commit/4cbbc586438f3265d005818a247e217fb36d5e59))
+
 ## [3.0.0-alpha.25](https://inindca///compare/v3.0.0-alpha.24...v3.0.0-alpha.25) (2022-01-26)
 
 

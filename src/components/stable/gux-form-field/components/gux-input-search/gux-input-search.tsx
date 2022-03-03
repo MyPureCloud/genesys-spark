@@ -50,6 +50,7 @@ export class GuxInputSearch {
       return (
         <button
           class="gux-clear-button"
+          tabIndex={-1}
           type="button"
           title={this.getI18nValue('clear')}
           disabled={this.disabled}

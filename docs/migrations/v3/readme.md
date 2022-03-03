@@ -5,6 +5,7 @@
 ## TLDR
 * Set the `allowSyntheticDefaultImports` (or `esModuleInterop`) compiler option  to `true` in the host apps tsconfig.json.
 * rename `title` property to `gux-title` on instances of `gux-button`
+* replace the `focusElement` method with the `focus` method on instances of `gux-button`
 * remove `first-day-of-week` property from instances of `gux-calendar`
 * remove `first-day-of-week` property from instances of `gux-datepicker`
 * `label` property on instances of `gux-datepicker` now only accepts `string`.
@@ -37,6 +38,7 @@ This new requirement is related to the a new dependency (vega-lite) which was ad
 ### gux-button
 
   * 'title' property renamed `gux-title`. This is to fix an accessibility defect.
+  * The `focusElement` method has been removed. Use the `focus` method instead. The migration to Shadow DOM made it possible to use the `focus` method, so the `focusElement` method is no longer necessary.
 
 ### gux-calendar
 

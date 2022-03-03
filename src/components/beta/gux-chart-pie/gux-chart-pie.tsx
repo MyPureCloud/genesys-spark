@@ -13,7 +13,8 @@ const DEFAULT_COLOR_FIELD_NAME = 'category';
 const DEFAULT_LABEL_FIELD_NAME = 'value';
 @Component({
   styleUrl: 'gux-chart-pie.less',
-  tag: 'gux-chart-pie-beta'
+  tag: 'gux-chart-pie-beta',
+  shadow: true
 })
 export class GuxPieChart {
   @Element()
@@ -24,6 +25,11 @@ export class GuxPieChart {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+    config: {
+      legend: {
+        symbolType: 'circle'
+      }
+    },
     encoding: {
       theta: { field: 'value', type: 'quantitative', stack: true },
       color: {
@@ -60,6 +66,18 @@ export class GuxPieChart {
   includeLegend: boolean;
 
   @Prop()
+  legendPosition:
+    | 'left'
+    | 'right'
+    | 'top'
+    | 'bottom'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'none' = 'right';
+
+  @Prop()
   legendTitle: string;
 
   @Prop()
@@ -90,6 +108,10 @@ export class GuxPieChart {
 
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color.legend = true;
+    }
+
+    if (this.legendPosition) {
+      this.baseChartSpec.config.legend.orient = this.legendPosition;
     }
 
     const colorFieldName = this.colorFieldName || DEFAULT_COLOR_FIELD_NAME;

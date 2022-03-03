@@ -1,3 +1,5 @@
 {
-  "remove-tag": "태그 제거"
+  "tag": "레이블이 있는 태그: {label}",
+  "tag-disabled": "레이블이 있는 비활성화된 태그: {label}",
+  "remove-tag": "레이블이 있는 태그 제거: {label}"
 }

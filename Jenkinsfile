@@ -55,7 +55,7 @@ pipeline {
   }
 
   tools {
-    nodejs "NodeJS 14.8.0"
+    nodejs "NodeJS 14.16.1"
   }
 
   stages {
@@ -201,7 +201,7 @@ pipeline {
       steps {
         sh "echo Uploading release!"
         dir (env.REPO_DIR) {
-          sh './scripts/generate-versions-file'
+          sh "npm run generate-versions-file"
           sh """
              npx upload \
                 ${uploadVersionOverride()} \
