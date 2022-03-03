@@ -4,13 +4,13 @@ import { GuxPaginationCursor } from '../gux-pagination-cursor';
 const components = [GuxPaginationCursor];
 const language = 'en';
 
-describe('gux-pagination-cursor-beta', () => {
+describe('gux-pagination-cursor', () => {
   describe('#render', () => {
     [
-      '<gux-pagination-cursor-beta></gux-pagination-cursor-beta>',
-      '<gux-pagination-cursor-beta has-next></gux-pagination-cursor-beta>',
-      '<gux-pagination-cursor-beta has-previous has-next></gux-pagination-cursor-beta>',
-      '<gux-pagination-cursor-beta has-previous></gux-pagination-cursor-beta>'
+      '<gux-pagination-cursor></gux-pagination-cursor>',
+      '<gux-pagination-cursor has-next></gux-pagination-cursor>',
+      '<gux-pagination-cursor has-previous has-next></gux-pagination-cursor>',
+      '<gux-pagination-cursor has-previous></gux-pagination-cursor>'
     ].forEach((html, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
@@ -24,7 +24,7 @@ describe('gux-pagination-cursor-beta', () => {
   describe('guxPaginationCursorchange', () => {
     it('should fire guxPaginationCursorchange(previous) event when enabled previous button is clicked', async () => {
       const html =
-        '<gux-pagination-cursor-beta has-previous></gux-pagination-cursor-beta>';
+        '<gux-pagination-cursor has-previous></gux-pagination-cursor>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
       const [previousButton] = Array.from(
@@ -46,8 +46,7 @@ describe('gux-pagination-cursor-beta', () => {
     });
 
     it('should fire guxPaginationCursorchange(next) event when enabled next button is clicked', async () => {
-      const html =
-        '<gux-pagination-cursor-beta has-next></gux-pagination-cursor-beta>';
+      const html = '<gux-pagination-cursor has-next></gux-pagination-cursor>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
       const [, nextButton] = Array.from(
@@ -69,7 +68,7 @@ describe('gux-pagination-cursor-beta', () => {
     });
 
     it('should not fire guxPaginationCursorchange(previous) event when disabled previous button is clicked', async () => {
-      const html = '<gux-pagination-cursor-beta></gux-pagination-cursor-beta>';
+      const html = '<gux-pagination-cursor></gux-pagination-cursor>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
       const [previousButton] = Array.from(
@@ -89,7 +88,7 @@ describe('gux-pagination-cursor-beta', () => {
     });
 
     it('should not fire guxPaginationCursorchange(next) event when disabled next button is clicked', async () => {
-      const html = '<gux-pagination-cursor-beta></gux-pagination-cursor-beta>';
+      const html = '<gux-pagination-cursor></gux-pagination-cursor>';
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
       const [, nextButton] = Array.from(

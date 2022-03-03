@@ -16,7 +16,7 @@ import { GuxPaginationCursorDetail } from './gux-pagination-cursor.types';
 
 @Component({
   styleUrl: 'gux-pagination-cursor.less',
-  tag: 'gux-pagination-cursor-beta',
+  tag: 'gux-pagination-cursor',
   shadow: true
 })
 export class GuxPaginationCursor {
