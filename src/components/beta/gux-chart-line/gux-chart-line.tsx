@@ -71,6 +71,18 @@ export class GuxLineChart {
   includeLegend: boolean;
 
   @Prop()
+  legendPosition:
+    | 'left'
+    | 'right'
+    | 'top'
+    | 'bottom'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'none' = 'right';
+
+  @Prop()
   includeDataPointMarkers: boolean;
 
   /**
@@ -137,6 +149,10 @@ export class GuxLineChart {
 
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color.legend = true;
+    }
+
+    if (this.legendPosition) {
+      this.baseChartSpec.config.legend.orient = this.legendPosition;
     }
 
     const xFieldName = this.xFieldName;
