@@ -14,7 +14,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
                     25
                   </div>
                 </div>
-                <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+                <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
             <div class="gux-listbox-container" slot="popup">
@@ -66,7 +66,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
                     50
                   </div>
                 </div>
-                <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+                <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
             <div class="gux-listbox-container" slot="popup">
@@ -118,7 +118,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
                     75
                   </div>
                 </div>
-                <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+                <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
             <div class="gux-listbox-container" slot="popup">
@@ -170,7 +170,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
                     100
                   </div>
                 </div>
-                <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+                <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
             <div class="gux-listbox-container" slot="popup">

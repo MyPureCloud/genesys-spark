@@ -11,7 +11,7 @@ exports[`gux-dropdown-menu-v2 #render should render as expected 1`] = `
               Select...
             </div>
           </div>
-          <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
+          <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
         </button>
       </div>
       <div class="gux-listbox-container" slot="popup">
