@@ -115,7 +115,7 @@ export class GuxDropdownV2Beta {
       case 'ArrowDown':
         if (this.activeElementNotListbox()) {
           event.preventDefault();
-          this.expanded = !this.expanded;
+          this.expanded = true;
         }
         return;
     }
