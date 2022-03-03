@@ -191,7 +191,7 @@ export class GuxDropdownV2Beta {
   }
 
   private activeElementNotListbox(): boolean {
-    return document.activeElement !== this.listboxElement ? true : false;
+    return document.activeElement !== this.listboxElement;
   }
 
   private filterKeydown(event: KeyboardEvent): void {
