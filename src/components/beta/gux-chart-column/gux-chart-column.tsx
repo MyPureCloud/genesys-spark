@@ -32,13 +32,16 @@ export class GuxColumnChart {
       },
       bar: {
         color: VISUALIZATION_COLORS[0]
+      },
+      axis: {
+        titlePadding: 8
+      },
+      axisX: {
+        labelAngle: 0
       }
     },
     encoding: {
-      x: {
-        type: 'nominal',
-        axis: { labelAngle: 0 } // horizontal x axis ticks by default
-      },
+      x: { type: 'nominal' },
       y: { type: 'quantitative' },
       tooltip: { aggregate: 'count', type: 'quantitative' }
     }
@@ -118,7 +121,7 @@ export class GuxColumnChart {
     }
 
     if (this.xTickLabelSlant) {
-      this.baseChartSpec.encoding.x.axis.labelAngle = 45;
+      this.baseChartSpec.config.axisX.labelAngle = 45;
     }
 
     if (this.includeLegend) {
@@ -143,8 +146,7 @@ export class GuxColumnChart {
           encoding: {
             x: {
               field: xFieldName,
-              type: 'nominal',
-              axis: { labelAngle: this.xTickLabelSlant ? 45 : 0 } // horizontal x axis ticks by default
+              type: 'nominal'
             },
             y: {
               field: yFieldName,

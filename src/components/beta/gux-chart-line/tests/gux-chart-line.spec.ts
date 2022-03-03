@@ -19,13 +19,13 @@ describe('gux-chart-line-beta', () => {
     let page = await newSpecPage({ components, html, language });
 
     expect(page.rootInstance.xTickLabelSlant).toBeUndefined();
-    expect(page.rootInstance.baseChartSpec.encoding.x.axis.labelAngle).toBe(0);
+    expect(page.rootInstance.baseChartSpec.config.axisX.labelAngle).toBe(0);
 
     html =
       '<gux-chart-line-beta x-field-name="date" y-field-name="value" x-tick-label-slant="true"></gux-chart-line-beta>';
     page = await newSpecPage({ components, html, language });
 
     expect(page.rootInstance.xTickLabelSlant).toBeTruthy();
-    expect(page.rootInstance.baseChartSpec.encoding.x.axis.labelAngle).toBe(45);
+    expect(page.rootInstance.baseChartSpec.config.axisX.labelAngle).toBe(45);
   });
 });
