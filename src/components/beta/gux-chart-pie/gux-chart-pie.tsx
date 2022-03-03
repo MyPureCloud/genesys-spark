@@ -25,6 +25,11 @@ export class GuxPieChart {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+    config: {
+      legend: {
+        symbolType: 'circle'
+      }
+    },
     encoding: {
       theta: { field: 'value', type: 'quantitative', stack: true },
       color: {
@@ -61,6 +66,18 @@ export class GuxPieChart {
   includeLegend: boolean;
 
   @Prop()
+  legendPosition:
+    | 'left'
+    | 'right'
+    | 'top'
+    | 'bottom'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'none' = 'right';
+
+  @Prop()
   legendTitle: string;
 
   @Prop()
@@ -91,6 +108,10 @@ export class GuxPieChart {
 
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color.legend = true;
+    }
+
+    if (this.legendPosition) {
+      this.baseChartSpec.config.legend.orient = this.legendPosition;
     }
 
     const colorFieldName = this.colorFieldName || DEFAULT_COLOR_FIELD_NAME;

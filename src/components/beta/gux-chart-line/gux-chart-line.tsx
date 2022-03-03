@@ -32,6 +32,12 @@ export class GuxLineChart {
     config: {
       legend: {
         symbolType: 'circle'
+      },
+      axis: {
+        titlePadding: 8
+      },
+      axisX: {
+        labelAngle: 0
       }
     },
     encoding: {
@@ -55,8 +61,26 @@ export class GuxLineChart {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   chartData: Record<string, any>;
 
+  /**
+   * If true, then make Axis tick label 45 degrees
+   */
+  @Prop()
+  xTickLabelSlant: boolean;
+
   @Prop()
   includeLegend: boolean;
+
+  @Prop()
+  legendPosition:
+    | 'left'
+    | 'right'
+    | 'top'
+    | 'bottom'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'none' = 'right';
 
   @Prop()
   includeDataPointMarkers: boolean;
@@ -119,8 +143,16 @@ export class GuxLineChart {
       chartData = { data: this.chartData };
     }
 
+    if (this.xTickLabelSlant) {
+      this.baseChartSpec.config.axisX.labelAngle = 45;
+    }
+
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color.legend = true;
+    }
+
+    if (this.legendPosition) {
+      this.baseChartSpec.config.legend.orient = this.legendPosition;
     }
 
     const xFieldName = this.xFieldName;

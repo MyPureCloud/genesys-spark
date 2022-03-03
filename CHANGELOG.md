@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.39](https://inindca///compare/v3.0.0-alpha.38...v3.0.0-alpha.39) (2022-03-03)
+
+
+### Features
+
+* **column and line chart:** x axis label tick orientation ([b6fb7c7](https://inindca///commit/b6fb7c7f011a8c7d0abcb6899b0a6b9606456197))
+* **column-chart:** bar/column and axes padding ([5b4599d](https://inindca///commit/5b4599dd2d3d6ca728854e59a9fd089bee971513))
+* **gux-visualization:** change color of Axes ([ba36f29](https://inindca///commit/ba36f291301e40d63acb012dac0153b34b3b6869))
+* **line chart, column chart:** x axis tick label orientation ([2521a75](https://inindca///commit/2521a755a8a12a70f3f57fb0dc55f2a5f3b63340))
+
+## [3.0.0-alpha.38](https://inindca///compare/v3.0.0-alpha.37...v3.0.0-alpha.38) (2022-03-02)
+
+
+### Bug Fixes
+
+* **gux-tooltip-title:** long text no longer overflows tab tooltip ([d7be354](https://inindca///commit/d7be35449c130905626868796e9c6f43ef620e11))
+
+## [3.0.0-alpha.37](https://inindca///compare/v3.0.0-alpha.36...v3.0.0-alpha.37) (2022-03-01)
+
+
+### Features
+
+* **form-field:** added new individual form-field elements ([c0881e1](https://inindca///commit/c0881e15b14f9827c36a1cc342d71db10f2a59cf))
+* **time-picker:** enabled shadow dom ([edb02cd](https://inindca///commit/edb02cda9a14bca4fee09965d8e09ad7ba39bef6))
+
+
+### Bug Fixes
+
+* **firefox:** fixed firefox issue ([137ed64](https://inindca///commit/137ed644262d6e6dba3f9faf02977013665937f6))
+* **pr-comment:** addressed PR comment ([1986739](https://inindca///commit/1986739ff0a71aef9265869324eac76eaf707625))
+* **pr-comments:** addessed PR comments ([82c619c](https://inindca///commit/82c619c8aa1d49204e5ed6f9aa3f43182900729f))
+
 ## [3.0.0-alpha.36](https://inindca///compare/v3.0.0-alpha.35...v3.0.0-alpha.36) (2022-02-26)
 
 

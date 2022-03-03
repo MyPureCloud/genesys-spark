@@ -21,13 +21,23 @@ export class GuxColumnChart {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-    mark: { type: 'bar', width: 16 },
+    mark: { type: 'bar' },
     config: {
+      scale: {
+        bandPaddingInner: 0.4, // padding between columns / bars
+        bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
+      },
       legend: {
         symbolType: 'circle'
       },
       bar: {
         color: VISUALIZATION_COLORS[0]
+      },
+      axis: {
+        titlePadding: 8
+      },
+      axisX: {
+        labelAngle: 0
       }
     },
     encoding: {
@@ -44,6 +54,12 @@ export class GuxColumnChart {
   @Prop()
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   chartData: Record<string, any>;
+
+  /**
+   * If true, then make Axis tick label 45 degrees
+   */
+  @Prop()
+  xTickLabelSlant: boolean;
 
   @Prop()
   includeLegend: boolean;
@@ -80,6 +96,18 @@ export class GuxColumnChart {
   @Prop()
   legendTitle: string;
 
+  @Prop()
+  legendPosition:
+    | 'left'
+    | 'right'
+    | 'top'
+    | 'bottom'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'none' = 'right';
+
   /**
    * List specifying the order of optional chart layers.
    * For correct chart layering, each chartData entry must also include a "series" field with a value indicating which layer the entry belongs to, e.g 'series': 'group1'
@@ -104,8 +132,16 @@ export class GuxColumnChart {
       chartData = { data: this.chartData };
     }
 
+    if (this.xTickLabelSlant) {
+      this.baseChartSpec.config.axisX.labelAngle = 45;
+    }
+
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color = { field: 'category' };
+    }
+
+    if (this.legendPosition) {
+      this.baseChartSpec.config.legend.orient = this.legendPosition;
     }
 
     const xFieldName = this.xFieldName;
