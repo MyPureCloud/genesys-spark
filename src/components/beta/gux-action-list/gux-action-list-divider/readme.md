@@ -1,5 +1,5 @@
-# gux-list-divider
-A divider to display in a list.
+# gux-action-list-divider
+A divider to display in an action list.
 
 
 <!-- Auto Generated Below -->

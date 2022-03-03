@@ -36,6 +36,15 @@ export class GuxActionItem {
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Enter':
+        event.preventDefault();
+        this.onItemClicked();
+        return;
+    }
+  }
+
+  @Listen('keyup')
+  onKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
       case ' ':
         event.preventDefault();
         this.onItemClicked();

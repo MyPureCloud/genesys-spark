@@ -17,9 +17,7 @@ async function pressDropdownButton(
   page: E2EPage,
   keypress: string
 ): Promise<void> {
-  const element = await page.find(
-    'gux-button-multi >>> .gux-dropdown-button button'
-  );
+  const element = await page.find('pierce/.gux-dropdown-button button');
   await element.press(keypress);
 }
 
@@ -27,8 +25,9 @@ async function pressActionItemButton(
   page: E2EPage,
   keypress: string
 ): Promise<void> {
-  const element = await page.find('gux-action-item >>> button');
-  await element.press(keypress);
+  const element = await page.find('gux-action-item');
+  const actionItemButton = await element.find('pierce/button');
+  await actionItemButton.press(keypress);
 }
 
 describe('gux-button-multi', () => {

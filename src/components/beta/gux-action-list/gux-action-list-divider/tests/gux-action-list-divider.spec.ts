@@ -1,20 +1,13 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxActionListDivider } from '../gux-action-list-divider';
 
-describe('gux-list-divider', () => {
-  let component: GuxActionListDivider;
+const components = [GuxActionListDivider];
+const language = 'en';
 
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components: [GuxActionListDivider],
-      html: `<gux-action-list-divider></gux-action-list-divider>`,
-      language: 'en'
-    });
-
-    component = page.rootInstance;
-  });
-
+describe('gux-action-list-divider', () => {
   it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxActionListDivider);
+    const html = `<gux-action-list-divider></gux-action-list-divider>`;
+    const page = await newSpecPage({ components, html, language });
+    expect(page.rootInstance).toBeInstanceOf(GuxActionListDivider);
   });
 });
