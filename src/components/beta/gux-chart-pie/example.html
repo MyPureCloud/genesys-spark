@@ -19,6 +19,18 @@
 >
 </gux-chart-pie-beta>
 
+<h2>Pie with custom legend position</h2>
+<gux-chart-pie-beta
+  id="chart-4"
+  label-radius="110"
+  label-field="value"
+  include-legend="true"
+  legend-position="left"
+  legend-title="Media Type"
+  outer-radius="100"
+>
+</gux-chart-pie-beta>
+
 <h2>Pie with Hidden Values</h2>
 <gux-chart-pie-beta id="chart-3" label-field="value" outer-radius="100">
 </gux-chart-pie-beta>
@@ -28,6 +40,7 @@
     const chart1 = document.querySelector('#chart-1');
     const chart2 = document.querySelector('#chart-2');
     const chart3 = document.querySelector('#chart-3');
+    const chart4 = document.querySelector('#chart-4');
 
     const chartData = {'values': [
         {'category': 'Voice', 'value': 4},
@@ -42,6 +55,7 @@
     chart1.chartData = chartData
     chart2.chartData = chartData
     chart3.chartData = chartData
+    chart4.chartData = chartData
 
   })()"
 >

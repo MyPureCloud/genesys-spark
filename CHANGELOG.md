@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.39](https://inindca///compare/v3.0.0-alpha.38...v3.0.0-alpha.39) (2022-03-03)
+
+
+### Features
+
+* **column and line chart:** x axis label tick orientation ([b6fb7c7](https://inindca///commit/b6fb7c7f011a8c7d0abcb6899b0a6b9606456197))
+* **column-chart:** bar/column and axes padding ([5b4599d](https://inindca///commit/5b4599dd2d3d6ca728854e59a9fd089bee971513))
+* **gux-visualization:** change color of Axes ([ba36f29](https://inindca///commit/ba36f291301e40d63acb012dac0153b34b3b6869))
+* **line chart, column chart:** x axis tick label orientation ([2521a75](https://inindca///commit/2521a755a8a12a70f3f57fb0dc55f2a5f3b63340))
+
 ## [3.0.0-alpha.38](https://inindca///compare/v3.0.0-alpha.37...v3.0.0-alpha.38) (2022-03-02)
 
 

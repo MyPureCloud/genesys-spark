@@ -24,7 +24,8 @@ export class GuxColumnChart {
     mark: { type: 'bar' },
     config: {
       axis: {
-        ticks: false
+        ticks: false,
+        titlePadding: 8
       },
       axisX: {
         labelAngle: 0
@@ -41,9 +42,7 @@ export class GuxColumnChart {
       }
     },
     encoding: {
-      x: {
-        type: 'nominal'
-      },
+      x: { type: 'nominal' },
       y: { type: 'quantitative' },
       tooltip: { aggregate: 'count', type: 'quantitative' }
     }
@@ -98,6 +97,18 @@ export class GuxColumnChart {
   @Prop()
   legendTitle: string;
 
+  @Prop()
+  legendPosition:
+    | 'left'
+    | 'right'
+    | 'top'
+    | 'bottom'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'none' = 'right';
+
   /**
    * List specifying the order of optional chart layers.
    * For correct chart layering, each chartData entry must also include a "series" field with a value indicating which layer the entry belongs to, e.g 'series': 'group1'
@@ -128,6 +139,10 @@ export class GuxColumnChart {
 
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color = { field: 'category' };
+    }
+
+    if (this.legendPosition) {
+      this.baseChartSpec.config.legend.orient = this.legendPosition;
     }
 
     const xFieldName = this.xFieldName;
