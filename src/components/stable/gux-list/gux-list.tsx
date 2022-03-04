@@ -167,7 +167,7 @@ export class GuxList {
           event.preventDefault();
           newIndex = this.selectedIndex - 1;
           event.stopPropagation();
-        } else if (!this.root.classList.contains('gux-command-palette-list')) {
+        } else if (!this.isCommandPaletteList()) {
           event.preventDefault();
           newIndex = filteredList.length - 1;
         }
@@ -182,7 +182,7 @@ export class GuxList {
           event.preventDefault();
           newIndex = this.selectedIndex + 1;
           event.stopPropagation();
-        } else if (!this.root.classList.contains('gux-command-palette-list')) {
+        } else if (!this.isCommandPaletteList()) {
           event.preventDefault();
           newIndex = 0;
           event.stopPropagation();
@@ -198,6 +198,11 @@ export class GuxList {
     if (newIndex !== -1) {
       this.selectedIndex = newIndex;
     }
+  }
+
+  // delete this once gux-command-palette-legacy is removed from library
+  private isCommandPaletteList(): boolean {
+    return Boolean(this.root.closest('gux-command-palette-legacy'));
   }
 
   private updateTabIndexes(): void {
