@@ -1,4 +1,4 @@
-# gux-pagination-cursor-beta
+# gux-pagination-cursor
 
 
 
@@ -24,15 +24,15 @@
 
 ### Depends on
 
-- [gux-button-slot-beta](../gux-button-slot)
-- [gux-icon](../../stable/gux-icon)
+- [gux-button-slot-beta](../../beta/gux-button-slot)
+- [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-pagination-cursor-beta --> gux-button-slot-beta
-  gux-pagination-cursor-beta --> gux-icon
-  style gux-pagination-cursor-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-pagination-cursor --> gux-button-slot-beta
+  gux-pagination-cursor --> gux-icon
+  style gux-pagination-cursor fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

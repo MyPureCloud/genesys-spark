@@ -13,6 +13,7 @@
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
   * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
+  * `gux-pagination-cursor-beta` ->  `gux-pagination-cursor`
   * `gux-tabs-beta` -> `gux-tabs`
   * `gux-tooltip-title-beta` ->  `gux-tooltip-title`
 * add `-legacy` to components that have been removed from stable
