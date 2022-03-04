@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.40](https://inindca///compare/v3.0.0-alpha.39...v3.0.0-alpha.40) (2022-03-04)
+
+
+### Features
+
+* **column and line chart:** axis label and title padding ([a2b3c0e](https://inindca///commit/a2b3c0e5df219f159084fe69851744eaa28008d6))
+* **column, line, pie, donut:** alt legend position ([5694eae](https://inindca///commit/5694eaefad95a19d25cb605fc782ea4aa11da4b8))
+
 ## [3.0.0-alpha.39](https://inindca///compare/v3.0.0-alpha.38...v3.0.0-alpha.39) (2022-03-03)
 
 
