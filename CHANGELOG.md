@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.52.3](https://inindca///compare/v2.52.2...v2.52.3) (2022-03-04)
+
+
+### Bug Fixes
+
+* **dependencies:** node-fetch and semver-sort should be in dev dependencies ([b6c90b4](https://inindca///commit/b6c90b43c1ee32a61c45ac98099f0a13f21fab15))
+
 ### [2.52.2](https://inindca///compare/v2.52.1...v2.52.2) (2022-03-03)
 
 
