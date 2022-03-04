@@ -30,14 +30,15 @@ export class GuxLineChart {
       point: false
     },
     config: {
-      legend: {
-        symbolType: 'circle'
-      },
       axis: {
+        ticks: false,
         titlePadding: 8
       },
       axisX: {
         labelAngle: 0
+      },
+      legend: {
+        symbolType: 'circle'
       }
     },
     encoding: {

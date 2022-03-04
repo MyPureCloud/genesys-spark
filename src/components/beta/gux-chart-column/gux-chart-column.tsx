@@ -23,6 +23,13 @@ export class GuxColumnChart {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     mark: { type: 'bar' },
     config: {
+      axis: {
+        ticks: false,
+        titlePadding: 8
+      },
+      axisX: {
+        labelAngle: 0
+      },
       scale: {
         bandPaddingInner: 0.4, // padding between columns / bars
         bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
@@ -32,12 +39,6 @@ export class GuxColumnChart {
       },
       bar: {
         color: VISUALIZATION_COLORS[0]
-      },
-      axis: {
-        titlePadding: 8
-      },
-      axisX: {
-        labelAngle: 0
       }
     },
     encoding: {
