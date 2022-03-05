@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.41](https://inindca///compare/v3.0.0-alpha.40...v3.0.0-alpha.41) (2022-03-05)
+
+
+### Features
+
+* **line and column chart:** remove ticks ([71a8a1d](https://inindca///commit/71a8a1de6158d46d9150c4dd69a0d7659bdaa1cf))
+* **pagination-cursor:** moved to stable ([c947c2d](https://inindca///commit/c947c2d00eee96173cb389112b51490f3342d1dd))
+
 ## [3.0.0-alpha.40](https://inindca///compare/v3.0.0-alpha.39...v3.0.0-alpha.40) (2022-03-04)
 
 
