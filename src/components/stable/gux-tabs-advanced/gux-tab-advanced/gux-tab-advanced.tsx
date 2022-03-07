@@ -232,7 +232,7 @@ export class GuxTabAdvanced {
       ] as JSX.Element;
     }
 
-    return [<div class="gux-tab-options-button-placeholder" />] as JSX.Element;
+    return null;
   }
 
   componentDidLoad(): void {
@@ -250,7 +250,7 @@ export class GuxTabAdvanced {
         class={{
           'gux-tab': true,
           'gux-selected': this.active,
-          'gux-no-dropdown-options': this.hasDropdownOptions,
+          'gux-dropdown-options': this.hasDropdownOptions,
           'gux-disabled': this.guxDisabled
         }}
         aria-disabled={this.guxDisabled.toString()}

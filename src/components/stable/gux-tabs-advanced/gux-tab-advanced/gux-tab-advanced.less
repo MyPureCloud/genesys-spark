@@ -84,10 +84,19 @@ gux-tab-advanced {
       }
     }
 
-    .gux-tab-options-button-placeholder {
-      width: 35px;
-      height: 30px;
-      border-right: 1px solid @gux-grey-50;
+    &:not(.gux-dropdown-options) {
+      .gux-tab-button {
+        width: 160px;
+        height: 30px;
+        border-right: 1px solid @gux-grey-50;
+
+        &:focus-visible {
+          height: 90%;
+          border: 3px solid @gux-blue-90;
+          border-radius: 5px;
+          outline: none;
+        }
+      }
     }
 
     .tab-icon-container {
