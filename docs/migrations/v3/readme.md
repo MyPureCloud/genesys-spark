@@ -10,6 +10,7 @@
 * remove `first-day-of-week` property from instances of `gux-datepicker`
 * `label` property on instances of `gux-datepicker` now only accepts `string`.
 * `trap-focus` property on instances of `gux-modal` now default to true
+* replace `gux-list-divider` with `gux-action-list-divider` in `gux-action-button` and `gux-button-multi` components
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
   * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
