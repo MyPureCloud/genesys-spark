@@ -67,6 +67,7 @@ export class GuxInputNumber {
       return (
         <button
           class="gux-clear-button"
+          tabIndex={-1}
           type="button"
           title={this.getI18nValue('clear')}
           disabled={this.disabled}
@@ -85,6 +86,7 @@ export class GuxInputNumber {
       <div class="gux-step-buttons-container">
         <button
           class="gux-step-button"
+          tabIndex={-1}
           type="button"
           title={this.getI18nValue('increment')}
           disabled={this.disabled}
@@ -95,6 +97,7 @@ export class GuxInputNumber {
 
         <button
           class="gux-step-button"
+          tabIndex={-1}
           type="button"
           title={this.getI18nValue('decrement')}
           disabled={this.disabled}
