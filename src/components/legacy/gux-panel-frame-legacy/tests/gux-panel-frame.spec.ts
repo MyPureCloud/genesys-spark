@@ -1,7 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxPanelFrame } from '../gux-panel-frame';
 
-describe('gux-panel-frame-beta', () => {
+describe('gux-panel-frame-legacy', () => {
   const components = [GuxPanelFrame];
   const language = 'en';
 
@@ -12,7 +12,7 @@ describe('gux-panel-frame-beta', () => {
     '<div slot="invalid" id="invalid"><span>Invalid</span></div>';
 
   it('should build', async () => {
-    const html = `<gux-panel-frame-beta>${headerSlot}${bodySlot}${footerSlot}</gux-panel-frame-beta>`;
+    const html = `<gux-panel-frame-legacy>${headerSlot}${bodySlot}${footerSlot}</gux-panel-frame-legacy>`;
     const page = await newSpecPage({ components, html, language });
 
     expect(page.rootInstance).toBeInstanceOf(GuxPanelFrame);
@@ -20,12 +20,12 @@ describe('gux-panel-frame-beta', () => {
 
   describe('#render', () => {
     [
-      `<gux-panel-frame-beta>${headerSlot}${bodySlot}${footerSlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${bodySlot}${footerSlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${headerSlot}${bodySlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${headerSlot}${footerSlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${headerSlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${headerSlot}${bodySlot}${invalidSlot}${footerSlot}</gux-panel-frame-beta>`
+      `<gux-panel-frame-legacy>${headerSlot}${bodySlot}${footerSlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${bodySlot}${footerSlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${headerSlot}${bodySlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${headerSlot}${footerSlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${headerSlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${headerSlot}${bodySlot}${invalidSlot}${footerSlot}</gux-panel-frame-legacy>`
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });

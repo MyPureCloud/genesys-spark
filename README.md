@@ -7,7 +7,7 @@ This repo contains a set of custom elements that can be used across Genesys' UIs
 If you are a consumer of this library, please subscribe to the "Common UI Development" mailing list to receive any
 important updates about breaking changes or upcoming releases. You can request membership to the Common UI Development group on the Genesys Service Now [Group Membership Request Add](https://genesys.service-now.com/sp_genesys?id=user_profile) page.
 
-You may also want to join the chat room for the Genesys Cloud [Common UI Development](https://apps.mypurecloud.com/directory/#/group/3fd509fa-c20b-4cfe-ab01-f81588d2a510)
+You may also want to join the chat room for the Genesys Cloud [Common UI Development](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b)
 
 At any given time there are three types of components present in the library:
 
@@ -43,7 +43,8 @@ or
 ## Setting up your App
 
 ### Configuration
-Since version 3, you will need to set the "allowSyntheticDefaultImports" compiler option  to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
+
+Since version 3, you will need to set the "allowSyntheticDefaultImports" compiler option to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
 This new requirement is related to the a new dependency (vega-lite) which was added as part of our visualisation work.
 
 ### Stylesheets
@@ -116,7 +117,7 @@ with the team to implement it yourself. You can see the current backlog of ticke
 
 - THIS IS THE MOST IMPORTANT PART: Read the [Contributing Guidelines](./CONTRIBUTING.md) before starting development work.
 - [Request access to GenesysCloud Resources](https://confluence.inin.com/display/PureCloud/How+to+Request+Access+to+Genesys+Cloud+Resources)
-- Join the chat room for the Genesys Cloud [Common UI Development Group](https://apps.mypurecloud.com/directory/#/group/3fd509fa-c20b-4cfe-ab01-f81588d2a510) and let us know what you're working on!
+- Join the chat room for the Genesys Cloud [Common UI Development Group](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b) and let us know what you're working on!
 
 ### Serving component and docs
 
@@ -154,4 +155,3 @@ npm run test.watch
 To document a component, add an entry under `docs/src/components-spec.json` describing any attributes and events
 for your component, and place an `example.html` file in the component directory the demonstrates the use of
 the component. Afterward, it will show up in the documentation site.
-

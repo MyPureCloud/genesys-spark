@@ -6,7 +6,7 @@ const language = 'en';
 
 describe('gux-side-panel', () => {
   it('should build', async () => {
-    const html = `<gux-side-panel-beta></gux-side-panel-beta>`;
+    const html = `<gux-side-panel-legacy></gux-side-panel-legacy>`;
     const page = await newSpecPage({ components, html, language });
 
     expect(page.rootInstance).toBeInstanceOf(GuxSidePanel);
@@ -20,7 +20,7 @@ describe('gux-side-panel', () => {
       { position: 'right', isOpen: 'true' }
     ].forEach(({ position, isOpen }, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const html = `<gux-side-panel-beta position="${position}" is-open="${isOpen}"></gux-side-panel-beta>`;
+        const html = `<gux-side-panel-legacy position="${position}" is-open="${isOpen}"></gux-side-panel-legacy>`;
         const page = await newSpecPage({ components, html, language });
 
         expect(page.root).toMatchSnapshot();

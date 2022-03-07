@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-panel-frame #render should render component as expected (1) 1`] = `"<gux-panel-frame-beta class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div><div slot=\\"body\\"><p>Boby</p></div><div slot=\\"footer\\"><footer>footer</footer></div></gux-panel-frame-beta>"`;
+exports[`gux-panel-frame #render should render component as expected (1) 1`] = `"<gux-panel-frame-legacy class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div><div slot=\\"body\\"><p>Boby</p></div><div slot=\\"footer\\"><footer>footer</footer></div></gux-panel-frame-legacy>"`;
 
 exports[`gux-panel-frame #render should render component as expected (1) 2`] = `
 <section class="gux-panel-container">
@@ -16,7 +16,7 @@ exports[`gux-panel-frame #render should render component as expected (1) 2`] = `
 </section>
 `;
 
-exports[`gux-panel-frame #render should render component as expected (2) 1`] = `"<gux-panel-frame-beta class=\\"hydrated\\"><div slot=\\"body\\"><p>Boby</p></div><div slot=\\"footer\\"><footer>footer</footer></div></gux-panel-frame-beta>"`;
+exports[`gux-panel-frame #render should render component as expected (2) 1`] = `"<gux-panel-frame-legacy class=\\"hydrated\\"><div slot=\\"body\\"><p>Boby</p></div><div slot=\\"footer\\"><footer>footer</footer></div></gux-panel-frame-legacy>"`;
 
 exports[`gux-panel-frame #render should render component as expected (2) 2`] = `
 <section class="gux-panel-container">
@@ -29,7 +29,7 @@ exports[`gux-panel-frame #render should render component as expected (2) 2`] = `
 </section>
 `;
 
-exports[`gux-panel-frame #render should render component as expected (3) 1`] = `"<gux-panel-frame-beta class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div><div slot=\\"body\\"><p>Boby</p></div></gux-panel-frame-beta>"`;
+exports[`gux-panel-frame #render should render component as expected (3) 1`] = `"<gux-panel-frame-legacy class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div><div slot=\\"body\\"><p>Boby</p></div></gux-panel-frame-legacy>"`;
 
 exports[`gux-panel-frame #render should render component as expected (3) 2`] = `
 <section class="gux-panel-container">
@@ -42,7 +42,7 @@ exports[`gux-panel-frame #render should render component as expected (3) 2`] = `
 </section>
 `;
 
-exports[`gux-panel-frame #render should render component as expected (4) 1`] = `"<gux-panel-frame-beta class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div><div slot=\\"footer\\"><footer>footer</footer></div></gux-panel-frame-beta>"`;
+exports[`gux-panel-frame #render should render component as expected (4) 1`] = `"<gux-panel-frame-legacy class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div><div slot=\\"footer\\"><footer>footer</footer></div></gux-panel-frame-legacy>"`;
 
 exports[`gux-panel-frame #render should render component as expected (4) 2`] = `
 <section class="gux-panel-container">
@@ -55,7 +55,7 @@ exports[`gux-panel-frame #render should render component as expected (4) 2`] = `
 </section>
 `;
 
-exports[`gux-panel-frame #render should render component as expected (5) 1`] = `"<gux-panel-frame-beta class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div></gux-panel-frame-beta>"`;
+exports[`gux-panel-frame #render should render component as expected (5) 1`] = `"<gux-panel-frame-legacy class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div></gux-panel-frame-legacy>"`;
 
 exports[`gux-panel-frame #render should render component as expected (5) 2`] = `
 <section class="gux-panel-container">
@@ -65,7 +65,7 @@ exports[`gux-panel-frame #render should render component as expected (5) 2`] = `
 </section>
 `;
 
-exports[`gux-panel-frame #render should render component as expected (6) 1`] = `"<gux-panel-frame-beta class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div><div slot=\\"body\\"><p>Boby</p></div><div slot=\\"invalid\\" id=\\"invalid\\"><span>Invalid</span></div><div slot=\\"footer\\"><footer>footer</footer></div></gux-panel-frame-beta>"`;
+exports[`gux-panel-frame #render should render component as expected (6) 1`] = `"<gux-panel-frame-legacy class=\\"hydrated\\"><div slot=\\"header\\"><h1>Header</h1></div><div slot=\\"body\\"><p>Boby</p></div><div slot=\\"invalid\\" id=\\"invalid\\"><span>Invalid</span></div><div slot=\\"footer\\"><footer>footer</footer></div></gux-panel-frame-legacy>"`;
 
 exports[`gux-panel-frame #render should render component as expected (6) 2`] = `
 <section class="gux-panel-container">

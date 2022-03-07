@@ -10,7 +10,7 @@ import { trackComponent } from '../../../usage-tracking';
  */
 @Component({
   styleUrl: 'gux-panel-frame.less',
-  tag: 'gux-panel-frame-beta',
+  tag: 'gux-panel-frame-legacy',
   shadow: true
 })
 export class GuxPanelFrame {
