@@ -10,6 +10,20 @@
 }
 
 gux-tab-advanced {
+  &:last-child {
+    .gux-tab {
+      .gux-tab-button {
+        border-right: none !important;
+      }
+
+      .gux-tab-options-button {
+        gux-icon {
+          border-right: none !important;
+        }
+      }
+    }
+  }
+
   .gux-tab {
     display: flex;
     align-items: center;
@@ -41,7 +55,6 @@ gux-tab-advanced {
 
     &.gux-show {
       width: 160px;
-      background-color: @gux-grey-90;
 
       &.gux-disabled {
         opacity: 0.5;
@@ -88,6 +101,7 @@ gux-tab-advanced {
       .gux-tab-button {
         width: 160px;
         height: 30px;
+        padding-right: 16px;
         border-right: 1px solid @gux-grey-50;
 
         &:focus-visible {
