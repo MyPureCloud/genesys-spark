@@ -34,7 +34,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
             <button aria-expanded="false" class="gux-tab-options-button" id="gux-i" tabindex="-1" type="button">
               <gux-icon icon-name="menu-kebab-vertical" screenreader-text="Tab Options for Hello World"></gux-icon>
             </button>
-            <gux-popover closeonclickoutside="" for="gux-i" hidden="" position="top-end">
+            <gux-popover-list closeonclickoutside="" for="gux-i" hidden="" position="top-end">
               <div class="gux-dropdown-option-container">
                 <span slot="dropdown-options">
                   <gux-tab-advanced-option icon-name="edit" onclick="notify(event)" option-id="1">
@@ -51,7 +51,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
                   </gux-tab-advanced-option>
                 </span>
               </div>
-            </gux-popover>
+            </gux-popover-list>
           </div>
         </gux-tab-advanced>
         <gux-tab-advanced tab-icon-name="lock" tab-id="1-2">

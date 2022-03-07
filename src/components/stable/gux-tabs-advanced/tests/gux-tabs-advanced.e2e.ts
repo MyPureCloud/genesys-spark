@@ -152,7 +152,7 @@ describe('gux-tabs-advanced', () => {
       await a11yCheck(page, [], 'options popover expanded');
 
       const optionPopover = await page.find(
-        'gux-tab-advanced[tab-id="1-1"] gux-popover'
+        'gux-tab-advanced[tab-id="1-1"] gux-popover-list'
       );
       let optionPopoverHidden = optionPopover.getAttribute('hidden');
 

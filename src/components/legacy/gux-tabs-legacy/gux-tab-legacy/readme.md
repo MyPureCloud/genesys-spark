@@ -26,14 +26,14 @@
 ### Depends on
 
 - [gux-icon](../../../stable/gux-icon)
-- [gux-popover](../../../stable/gux-popover)
+- [gux-popover-list](../../../beta/gux-popover-list)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-tab-legacy --> gux-icon
-  gux-tab-legacy --> gux-popover
-  gux-popover --> gux-dismiss-button
+  gux-tab-legacy --> gux-popover-list
+  gux-popover-list --> gux-dismiss-button
   gux-dismiss-button --> gux-icon
   style gux-tab-legacy fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -50,7 +50,7 @@
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-cursor](../gux-pagination-cursor)
  - [gux-rating](../gux-rating)
- - [gux-side-panel-button](../../legacy/gux-side-panel/buttons)
+ - [gux-side-panel-button](../../legacy/gux-side-panel-legacy/buttons)
  - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)

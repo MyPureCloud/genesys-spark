@@ -1,11 +1,4 @@
-# gux-popover
-
-## Possible Improvements
-
-- add a dark theme. There is currently none in the style guide (No Jira)
-- add a gux-popover-paragraph component with title and content slots (No Jira)
-- add a gux-popover-list component and gux-popover-list-option component (No Jira)
-  - It may be possible to use gux-list for this.
+# gux-popover-list
 
 <!-- Auto Generated Below -->
 
@@ -29,16 +22,23 @@
 
 ## Dependencies
 
+### Used by
+
+ - [gux-tab-advanced](../../stable/gux-tabs-advanced/gux-tab-advanced)
+ - [gux-tab-legacy](../../legacy/gux-tabs-legacy/gux-tab-legacy)
+
 ### Depends on
 
-- [gux-dismiss-button](../gux-dismiss-button)
+- [gux-dismiss-button](../../stable/gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-popover --> gux-dismiss-button
+  gux-popover-list --> gux-dismiss-button
   gux-dismiss-button --> gux-icon
-  style gux-popover fill:#f9f,stroke:#333,stroke-width:4px
+  gux-tab-advanced --> gux-popover-list
+  gux-tab-legacy --> gux-popover-list
+  style gux-popover-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
