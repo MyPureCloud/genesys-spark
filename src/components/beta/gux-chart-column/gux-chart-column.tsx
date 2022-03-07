@@ -23,6 +23,13 @@ export class GuxColumnChart {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     mark: { type: 'bar' },
     config: {
+      axis: {
+        ticks: false,
+        titlePadding: 8
+      },
+      axisX: {
+        labelAngle: 0
+      },
       scale: {
         bandPaddingInner: 0.4, // padding between columns / bars
         bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
@@ -35,10 +42,7 @@ export class GuxColumnChart {
       }
     },
     encoding: {
-      x: {
-        type: 'nominal',
-        axis: { labelAngle: 0 } // horizontal x axis ticks by default
-      },
+      x: { type: 'nominal' },
       y: { type: 'quantitative' },
       tooltip: { aggregate: 'count', type: 'quantitative' }
     }
@@ -93,6 +97,18 @@ export class GuxColumnChart {
   @Prop()
   legendTitle: string;
 
+  @Prop()
+  legendPosition:
+    | 'left'
+    | 'right'
+    | 'top'
+    | 'bottom'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'none' = 'right';
+
   /**
    * List specifying the order of optional chart layers.
    * For correct chart layering, each chartData entry must also include a "series" field with a value indicating which layer the entry belongs to, e.g 'series': 'group1'
@@ -118,11 +134,15 @@ export class GuxColumnChart {
     }
 
     if (this.xTickLabelSlant) {
-      this.baseChartSpec.encoding.x.axis.labelAngle = 45;
+      this.baseChartSpec.config.axisX.labelAngle = 45;
     }
 
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color = { field: 'category' };
+    }
+
+    if (this.legendPosition) {
+      this.baseChartSpec.config.legend.orient = this.legendPosition;
     }
 
     const xFieldName = this.xFieldName;
@@ -143,8 +163,7 @@ export class GuxColumnChart {
           encoding: {
             x: {
               field: xFieldName,
-              type: 'nominal',
-              axis: { labelAngle: this.xTickLabelSlant ? 45 : 0 } // horizontal x axis ticks by default
+              type: 'nominal'
             },
             y: {
               field: yFieldName,

@@ -4,7 +4,7 @@ import { trackComponent } from '../../../usage-tracking';
 
 @Component({
   styleUrl: 'gux-side-panel.less',
-  tag: 'gux-side-panel-beta',
+  tag: 'gux-side-panel-legacy',
   shadow: false
 })
 export class GuxSidePanel {

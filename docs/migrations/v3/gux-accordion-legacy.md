@@ -1,6 +1,6 @@
 # gux-accordion-legacy
 
-[Back to main guide](readme)
+[Back to main guide](./readme)
 
 ## V2 Example
 

@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-pagination-cursor-beta #render should render as expected (1) 1`] = `"<gux-pagination-cursor-beta lang=\\"en\\" class=\\"hydrated\\"></gux-pagination-cursor-beta>"`;
-
-exports[`gux-pagination-cursor-beta #render should render as expected (2) 1`] = `"<gux-pagination-cursor-beta lang=\\"en\\" has-next=\\"\\" class=\\"hydrated\\"></gux-pagination-cursor-beta>"`;
-
-exports[`gux-pagination-cursor-beta #render should render as expected (3) 1`] = `"<gux-pagination-cursor-beta lang=\\"en\\" has-previous=\\"\\" has-next=\\"\\" class=\\"hydrated\\"></gux-pagination-cursor-beta>"`;
-
-exports[`gux-pagination-cursor-beta #render should render as expected (4) 1`] = `"<gux-pagination-cursor-beta lang=\\"en\\" has-previous=\\"\\" class=\\"hydrated\\"></gux-pagination-cursor-beta>"`;

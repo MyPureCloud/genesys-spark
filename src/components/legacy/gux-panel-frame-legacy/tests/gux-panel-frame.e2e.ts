@@ -9,16 +9,16 @@ describe('gux-panel-frame', () => {
 
   describe('#render', () => {
     [
-      `<gux-panel-frame-beta>${headerSlot}${bodySlot}${footerSlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${bodySlot}${footerSlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${headerSlot}${bodySlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${headerSlot}${footerSlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${headerSlot}</gux-panel-frame-beta>`,
-      `<gux-panel-frame-beta>${headerSlot}${bodySlot}${invalidSlot}${footerSlot}</gux-panel-frame-beta>`
+      `<gux-panel-frame-legacy>${headerSlot}${bodySlot}${footerSlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${bodySlot}${footerSlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${headerSlot}${bodySlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${headerSlot}${footerSlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${headerSlot}</gux-panel-frame-legacy>`,
+      `<gux-panel-frame-legacy>${headerSlot}${bodySlot}${invalidSlot}${footerSlot}</gux-panel-frame-legacy>`
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
-        const element = await page.find('gux-panel-frame-beta');
+        const element = await page.find('gux-panel-frame-legacy');
         const elementShadowDom = await element.find(
           'pierce/.gux-panel-container'
         );

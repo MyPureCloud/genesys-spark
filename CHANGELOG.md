@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.41](https://inindca///compare/v3.0.0-alpha.40...v3.0.0-alpha.41) (2022-03-05)
+
+
+### Features
+
+* **line and column chart:** remove ticks ([71a8a1d](https://inindca///commit/71a8a1de6158d46d9150c4dd69a0d7659bdaa1cf))
+* **pagination-cursor:** moved to stable ([c947c2d](https://inindca///commit/c947c2d00eee96173cb389112b51490f3342d1dd))
+
+## [3.0.0-alpha.40](https://inindca///compare/v3.0.0-alpha.39...v3.0.0-alpha.40) (2022-03-04)
+
+
+### Features
+
+* **column and line chart:** axis label and title padding ([a2b3c0e](https://inindca///commit/a2b3c0e5df219f159084fe69851744eaa28008d6))
+* **column, line, pie, donut:** alt legend position ([5694eae](https://inindca///commit/5694eaefad95a19d25cb605fc782ea4aa11da4b8))
+
+## [3.0.0-alpha.39](https://inindca///compare/v3.0.0-alpha.38...v3.0.0-alpha.39) (2022-03-03)
+
+
+### Features
+
+* **column and line chart:** x axis label tick orientation ([b6fb7c7](https://inindca///commit/b6fb7c7f011a8c7d0abcb6899b0a6b9606456197))
+* **column-chart:** bar/column and axes padding ([5b4599d](https://inindca///commit/5b4599dd2d3d6ca728854e59a9fd089bee971513))
+* **gux-visualization:** change color of Axes ([ba36f29](https://inindca///commit/ba36f291301e40d63acb012dac0153b34b3b6869))
+* **line chart, column chart:** x axis tick label orientation ([2521a75](https://inindca///commit/2521a755a8a12a70f3f57fb0dc55f2a5f3b63340))
+
 ## [3.0.0-alpha.38](https://inindca///compare/v3.0.0-alpha.37...v3.0.0-alpha.38) (2022-03-02)
 
 

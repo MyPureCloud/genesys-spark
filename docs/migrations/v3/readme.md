@@ -13,6 +13,7 @@
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
   * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
+  * `gux-pagination-cursor-beta` ->  `gux-pagination-cursor`
   * `gux-tabs-beta` -> `gux-tabs`
   * `gux-tooltip-title-beta` ->  `gux-tooltip-title`
 * add `-legacy` to components that have been removed from stable
@@ -22,9 +23,13 @@
     * `gux-tab`-> `gux-tab-legacy`
 * change `-beta` to `-legacy` for components that have been removed from beta
   * `gux-command-palette-beta` -> `gux-command-palette-legacy`
+  * `gux-panel-frame-beta` -> `gux-panel-frame-legacy`
+  * `gux-side-panel-beta` -> `gux-side-panel-legacy`
 * migrate away from usage of legacy components
   * `gux-accordion-legacy` -> `gux-accordion`
   * `gux-command-palette-legacy` -> Contact the Core UI team if you need help migrating away from this component.
+  * `gux-panel-frame-legacy` -> Contact the Core UI team if you need help migrating away from this component.
+  * `gux-side-panel-legacy` -> Contact the Core UI team if you need help migrating away from this component.
   * `gux-tabs-legacy` -> `gux-tabs-advanced` or `gux-tabs`
   * `gux-text-label-legacy` -> Contact the Core UI team if you need help migrating away from this component.
 
@@ -137,15 +142,23 @@ The following components have moved from stable to legacy without any api change
 
 ### gux-accordion-legacy
 
-[More details here](gux-accordion-legacy)
+[More details here](./gux-accordion-legacy)
 
 ### gux-command-palette-legacy
 
 Contact the Core UI team if you need help migrating away from this component.
 
+### gux-panel-frame-legacy
+
+Contact the Core UI team if you need help migrating away from this component.
+
+### gux-side-panel-legacy
+
+Contact the Core UI team if you need help migrating away from this component.
+
 ### gux-tabs-legacy (and gux-tab-legacy and gux-tab-dropdown-option-legacy)
 
-[More details here](gux-tabs-legacy)
+[More details here](./gux-tabs-legacy)
 
 ### gux-text-label-legacy
 
