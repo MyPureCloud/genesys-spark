@@ -142,7 +142,7 @@ The following components have moved from stable to legacy without any api change
 
 ### gux-accordion-legacy
 
-[More details here](gux-accordion-legacy)
+[More details here](./gux-accordion-legacy)
 
 ### gux-command-palette-legacy
 
@@ -158,7 +158,7 @@ Contact the Core UI team if you need help migrating away from this component.
 
 ### gux-tabs-legacy (and gux-tab-legacy and gux-tab-dropdown-option-legacy)
 
-[More details here](gux-tabs-legacy)
+[More details here](./gux-tabs-legacy)
 
 ### gux-text-label-legacy
 

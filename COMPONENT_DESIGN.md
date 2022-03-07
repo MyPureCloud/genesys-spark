@@ -6,9 +6,9 @@ The general principle at work in this document is that our presentational compon
 consistent with native browser elements. They should feel familiar to users who are comfortable working with
 native input elements and controls.
 
-- [Prefer structured markup](#markdown-header-prefer-structured-markup-over-complex-attributes-over-js-interfaces)
-- [Use a consistent input API](#markdown-header-use-a-consistent-api-for-components-that-accept-input)
-- [Don't use reflect](#markdown-header-dont-use-reflect)
+- [Prefer structured markup](#prefer-structured-markup-over-complex-attributes-or-js-interfaces)
+- [Use a consistent input API](#use-a-consistent-api-for-components-that-accept-input)
+- [Don't use reflect](#dont-use-reflect)
 
 ## Prefer structured markup over complex attributes or js interfaces
 
@@ -89,6 +89,6 @@ also change the value of the attribute in the DOM. For example, when dealing wit
 
 If `reflect` was set on `value`, then calling `document.getElementById("myInput").value = "new value"` would
 mean that `document.getElementById("myInput").getAttr("value")` would now return "new value". This is _not_ how
-native browser elements behave. It also puts the internal implementation of the compnent in conflict with the surrounding
+native browser elements behave. It also puts the internal implementation of the component in conflict with the surrounding
 framework used to render it about what the attribute's value should be, since it is being set twice, potentially leading
 to bugs.
