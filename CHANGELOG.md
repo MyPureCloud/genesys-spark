@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.42](https://inindca///compare/v3.0.0-alpha.41...v3.0.0-alpha.42) (2022-03-08)
+
+
+### Features
+
+* **branch-name:** prepare for master branch rename to main ([d54ee2b](https://inindca///commit/d54ee2b521d2c5b964d3559665e0bda932b8e11b))
+* **panel-frame:** moved component to legacy ([b1804e0](https://inindca///commit/b1804e0c7bd3e6c33863b6986d44cc66f0751f6f))
+* **side-panel:** moved to legacy ([9f1b6c0](https://inindca///commit/9f1b6c0e6344960729162fff03b48742094a5f0e))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([f76823e](https://inindca///commit/f76823e14b35964d5ae4f43edbca7c6243824200))
+
 ## [3.0.0-alpha.41](https://inindca///compare/v3.0.0-alpha.40...v3.0.0-alpha.41) (2022-03-05)
 
 
