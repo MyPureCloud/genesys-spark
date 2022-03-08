@@ -1,5 +1,16 @@
 <template>
   <div class="container">
+    <gux-form-field>
+      <input
+        slot="input"
+        name="errorInput"
+        type="text"
+        placeholder="Enter text"
+      />
+      <label slot="label">gux-form-field</label>
+      <span slot="error" v-if="hasError">Field is required</span>
+    </gux-form-field>
+
     <gux-form-field-text-like-beta>
       <input
         slot="input"
@@ -7,7 +18,7 @@
         type="text"
         placeholder="Enter text"
       />
-      <label slot="label">Label</label>
+      <label slot="label">gux-form-field-text-like-beta</label>
       <span slot="error" v-if="hasError">Field is required</span>
     </gux-form-field-text-like-beta>
 
