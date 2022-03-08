@@ -14,7 +14,7 @@ exports[`gux-tabs #render should render as expected 1`] = `
     <!---->
     <div class="gux-tab-container">
       <div class="gux-scroll-button-container"></div>
-      <div class="gux-scrollable-section" role="tablist">
+      <div aria-owns="gux-2-1-tab gux-2-2-tab gux-2-3-tab gux-2-4-tab gux-2-5-tab" class="gux-scrollable-section" role="tablist">
         <gux-tab tab-id="2-1">
           <!---->
           <button aria-controls="gux-2-1-panel" aria-disabled="false" aria-selected="false" class="gux-tab" id="gux-2-1-tab" role="tab" tabindex="-1" type="button">
@@ -116,7 +116,7 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
     <!---->
     <div class="gux-tab-container">
       <div class="gux-scroll-button-container"></div>
-      <div class="gux-scrollable-section" role="tablist">
+      <div aria-owns="gux-2-1-tab gux-2-2-tab gux-2-3-tab gux-2-4-tab gux-2-5-tab" class="gux-scrollable-section" role="tablist">
         <gux-tab tab-id="2-1">
           <!---->
           <button aria-controls="gux-2-1-panel" aria-disabled="false" aria-selected="false" class="gux-tab" id="gux-2-1-tab" role="tab" tabindex="-1" type="button">
