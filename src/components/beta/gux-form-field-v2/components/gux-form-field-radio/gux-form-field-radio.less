@@ -1,4 +1,5 @@
 @import (reference) '../../../../../style/color-palette.less';
+@import (reference) '../../../../../style/mixins.less';
 @import (reference) '../../../../../style/spacing.less';
 @import (reference) '../../../../../style/variables.less';
 @import (reference)
@@ -41,6 +42,7 @@
   border: 0;
   -webkit-appearance: none;
   appearance: none;
+  outline: none;
 }
 
 ::slotted(input[type='radio'])::before {
@@ -50,7 +52,11 @@
 }
 
 ::slotted(input[type='radio']:focus-within)::before {
-  box-shadow: 0 0 2px 1px @gux-blue-90, inset 0 0 2px 1px @gux-blue-90;
+  .focus-ring();
+
+  margin: -1px;
+  // TODO https://inindca.atlassian.net/browse/COMUI-946
+  box-shadow: 0 0 0 1px @gux-grey-100 inset, 0 0 0 4px @gux-blue-90 inset;
 }
 
 ::slotted(input[type='radio']:not(:checked))::before {
