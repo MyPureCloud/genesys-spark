@@ -1,4 +1,5 @@
-import { E2EPage, newE2EPage } from '@stencil/core/testing';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { E2EPage } from '@stencil/core/testing';
 
 describe('gux-modal', () => {
   describe('#render', () => {
@@ -10,10 +11,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent="primary">Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -25,10 +26,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent="primary">Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -40,10 +41,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent="primary">Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -54,10 +55,10 @@ describe('gux-modal', () => {
           <gux-modal lang="en" size="large">
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent="primary">Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -78,7 +79,7 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
           </gux-modal>
         `
@@ -90,7 +91,7 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="right-align-buttons">
-              <gux-button title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent="primary">Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -102,23 +103,24 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent="primary">Accept</gux-button>
             </div>
           </gux-modal>
         `
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
-        const page = await newE2EPage({ html });
+        const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-modal');
 
         expect(element.outerHTML).toMatchSnapshot();
 
         element.setAttribute('hidden', true);
         await page.waitForChanges();
+        await a11yCheck(page);
 
         expect(element.outerHTML).toMatchSnapshot();
       });
@@ -132,18 +134,19 @@ describe('gux-modal', () => {
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
-              <gux-button title="Cancel">Cancel</gux-button>
+              <gux-button>Cancel</gux-button>
           </div>
           <div slot="right-align-buttons">
-            <gux-button title='Button' accent='primary'>Accept</gux-button>
+            <gux-button accent="primary">Accept</gux-button>
           </div>
         </gux-modal>
       `;
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-modal');
-      const dismissButton = await element.find(
-        'gux-dismiss-button-beta >>> button'
+      const dismissButtonElement = await element.find(
+        'gux-dismiss-button-beta'
       );
+      const dismissButton = await dismissButtonElement.find('pierce/button');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -165,18 +168,19 @@ describe('gux-modal', () => {
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
-              <gux-button title="Cancel">Cancel</gux-button>
+              <gux-button>Cancel</gux-button>
           </div>
           <div slot="right-align-buttons">
-            <gux-button title='Button' accent='primary'>Accept</gux-button>
+            <gux-button accent="primary">Accept</gux-button>
           </div>
         </gux-modal>
       `;
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-modal');
-      const dismissButton = await element.find(
-        'gux-dismiss-button-beta >>> button'
+      const dismissButtonElement = await element.find(
+        'gux-dismiss-button-beta'
       );
+      const dismissButton = await dismissButtonElement.find('pierce/button');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
 
@@ -204,18 +208,19 @@ describe('gux-modal', () => {
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
-              <gux-button title="Cancel">Cancel</gux-button>
+              <gux-button>Cancel</gux-button>
           </div>
           <div slot="right-align-buttons">
-            <gux-button title='Button' accent='primary'>Accept</gux-button>
+            <gux-button accent="primary">Accept</gux-button>
           </div>
         </gux-modal>
       `;
-      const page = await newE2EPage({ html });
+      const page = await newSparkE2EPage({ html });
+      const modalEl = await page.find('gux-modal');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
 
       expect(guxdismissSpy).not.toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(modalEl).not.toBeNull();
 
       await page.keyboard.down('Escape');
       await page.waitForChanges();
@@ -227,14 +232,14 @@ describe('gux-modal', () => {
 
   describe('focus', () => {
     const focusModalHtml = (props = '') => `
-      <gux-modal lang="en" size="small" trap-focus ${props}>
+      <gux-modal lang="en" size="small" trap-focus="true" ${props}>
         <div slot="title">Modal Title</div>
         <div slot="content">This contains the modal content.</div>
         <div slot="left-align-buttons">
-            <gux-button id="cancel-button" title="Cancel">Cancel</gux-button>
+            <gux-button id="cancel-button">Cancel</gux-button>
         </div>
         <div slot="right-align-buttons">
-          <gux-button id="accept-button" title='Button' accent='primary'>Accept</gux-button>
+          <gux-button id="accept-button" accent="primary">Accept</gux-button>
         </div>
       </gux-modal>
     `;
@@ -244,23 +249,36 @@ describe('gux-modal', () => {
       <button id="modal-trigger">Open Modal</button>
     `;
     const setupContainerPage = async (modalHtml: string) => {
-      const page = await newE2EPage({ html: modalContainerHtml });
+      const page = await newSparkE2EPage({ html: modalContainerHtml });
 
       await page.evaluate(html => {
         document
-          .getElementById('modal-trigger')!
-          .addEventListener('click', () => {
-            document.getElementById('modal-container')!.innerHTML = html;
+          .getElementById('modal-trigger')
+          ?.addEventListener('click', () => {
+            if (document.getElementById('modal-container'))
+              document.getElementById('modal-container').innerHTML = html;
           });
       }, modalHtml);
       return page;
     };
+
     const getFocusedElementText = (page: E2EPage) =>
       page.evaluate(() => document.activeElement.textContent);
     const getFocusedElementTagName = (page: E2EPage) =>
       page.evaluate(() => document.activeElement.tagName);
+    // const getFocusedShadowElementText = (page: E2EPage) =>
+    //   page.evaluate(
+    //     () =>
+    //       document.querySelector('gux-modal').shadowRoot.activeElement
+    //         .textContent
+    //   );
+    // const getFocusedShadowElementTagName = (page: E2EPage) =>
+    //   page.evaluate(
+    //     () =>
+    //       document.querySelector('gux-modal').shadowRoot.activeElement.tagName
+    //   );
 
-    it('focuses the first focusable element by default', async () => {
+    it('focuses the dismiss button by defualt', async () => {
       const page = await setupContainerPage(focusModalHtml());
       await page.click('#modal-trigger');
       await page.waitForChanges();
@@ -271,6 +289,7 @@ describe('gux-modal', () => {
         'GUX-DISMISS-BUTTON-BETA'
       );
     });
+
     test('can focus a specific focusable element', async () => {
       const page = await setupContainerPage(
         focusModalHtml('initial-focus="#accept-button"')
@@ -296,6 +315,7 @@ describe('gux-modal', () => {
         'GUX-DISMISS-BUTTON-BETA'
       );
     });
+
     test('traps focus in the modal', async () => {
       const page = await setupContainerPage(focusModalHtml());
       await page.click('#modal-trigger');
@@ -305,16 +325,31 @@ describe('gux-modal', () => {
       expect(await getFocusedElementTagName(page)).toBe(
         'GUX-DISMISS-BUTTON-BETA'
       );
+
       await page.keyboard.press('Tab');
+
       expect(await getFocusedElementText(page)).toBe('Cancel');
+
       await page.keyboard.press('Tab');
+
       expect(await getFocusedElementText(page)).toBe('Accept');
+
       await page.keyboard.press('Tab');
+
+      expect(await getFocusedElementText(page)).toBe('');
+      expect(await getFocusedElementTagName(page)).toBe(
+        'GUX-DISMISS-BUTTON-BETA'
+      );
+
+      await page.keyboard.down('Shift');
+      await page.keyboard.press('Tab');
+
       expect(await getFocusedElementText(page)).toBe('');
       expect(await getFocusedElementTagName(page)).toBe(
         'GUX-DISMISS-BUTTON-BETA'
       );
     });
+
     test('returns focus to the originally focused element when the modal closes', async () => {
       const page = await setupContainerPage(focusModalHtml());
 
@@ -325,6 +360,7 @@ describe('gux-modal', () => {
       expect(await getFocusedElementTagName(page)).toBe(
         'GUX-DISMISS-BUTTON-BETA'
       );
+
       await page.keyboard.down('Escape');
       await page.waitForChanges();
 

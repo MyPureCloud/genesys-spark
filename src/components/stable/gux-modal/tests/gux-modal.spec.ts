@@ -1,19 +1,9 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxButton } from '../../gux-button/gux-button';
 import { GuxModal } from '../gux-modal';
-import { MockHTMLElement } from '@stencil/core/mock-doc';
+import { GuxDismissButton } from '../../../beta/gux-dismiss-button/gux-dismiss-button';
 
-// Monkeypatch a missing function in the stencil mock docs
-if (!('getAttributeNode' in MockHTMLElement.prototype)) {
-  Object.assign(MockHTMLElement.prototype, {
-    // The implementation doesn't have to be right it just can't crash
-    getAttributeNode() {
-      return null;
-    }
-  });
-}
-
-const components = [GuxButton, GuxModal];
+const components = [GuxButton, GuxModal, GuxDismissButton];
 const language = 'en';
 
 describe('gux-modal', () => {
@@ -22,14 +12,14 @@ describe('gux-modal', () => {
       {
         description: 'should render small modal',
         html: `
-          <gux-modal size="small">
+          <gux-modal trap-focus="true" size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -37,14 +27,14 @@ describe('gux-modal', () => {
       {
         description: 'should render medium modal',
         html: `
-          <gux-modal size="medium">
+          <gux-modal trap-focus="true" size="medium">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -52,14 +42,14 @@ describe('gux-modal', () => {
       {
         description: 'should render large modal',
         html: `
-          <gux-modal size="large">
+          <gux-modal trap-focus="true" size="large">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -67,13 +57,13 @@ describe('gux-modal', () => {
       {
         description: 'should render modal without a title',
         html: `
-          <gux-modal size="large">
+          <gux-modal trap-focus="true" size="large">
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -81,7 +71,7 @@ describe('gux-modal', () => {
       {
         description: 'should render modal without buttons',
         html: `
-          <gux-modal size="small">
+          <gux-modal trap-focus="true" size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
           </gux-modal>
@@ -90,11 +80,11 @@ describe('gux-modal', () => {
       {
         description: 'should render modal with just left align buttons',
         html: `
-          <gux-modal size="small">
+          <gux-modal trap-focus="true" size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
           </gux-modal>
         `
@@ -102,11 +92,27 @@ describe('gux-modal', () => {
       {
         description: 'should render modal with just right align buttons',
         html: `
-          <gux-modal size="small">
+          <gux-modal trap-focus="true" size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
+            </div>
+          </gux-modal>
+        `
+      },
+      {
+        description:
+          'should render modal with a specified initial focus element',
+        html: `
+          <gux-modal trap-focus="true" initial-focus="#cancelButton">
+            <div slot="title">Modal Title</div>
+            <div slot="content">This contains the modal content.</div>
+            <div slot="left-align-buttons">
+                <gux-button id="cancelButton">Cancel</gux-button>
+            </div>
+            <div slot="right-align-buttons">
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -114,14 +120,14 @@ describe('gux-modal', () => {
       {
         description: 'should render small modal by default',
         html: `
-          <gux-modal>
+          <gux-modal trap-focus="true">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -134,13 +140,13 @@ describe('gux-modal', () => {
 
         expect(page.root).toMatchSnapshot();
 
-        page.rootInstance.hidden = true;
+        (page.rootInstance as HTMLGuxModalElement).hidden = true;
         await page.waitForChanges();
 
         expect(page.root).toMatchSnapshot();
 
         // Disconnect so that the focus trap is properly cleaned up
-        page.root!.remove();
+        page.root.remove();
       });
     });
   });
@@ -148,14 +154,14 @@ describe('gux-modal', () => {
   describe('dismiss', () => {
     it('click dismiss button', async () => {
       const html = `
-        <gux-modal size="small">
+        <gux-modal trap-focus="true" size="small">
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
-              <gux-button gux-title="Cancel">Cancel</gux-button>
+              <gux-button>Cancel</gux-button>
           </div>
           <div slot="right-align-buttons">
-            <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+            <gux-button accent='primary'>Accept</gux-button>
           </div>
         </gux-modal>
       `;
@@ -178,19 +184,19 @@ describe('gux-modal', () => {
       expect(clickSpy).not.toHaveBeenCalled();
       expect(elementRemoveSpy).toBeCalledWith();
 
-      page.root!.remove();
+      page.root.remove();
     });
 
     it('click dismiss button and prevent default', async () => {
       const html = `
-        <gux-modal size="small">
+        <gux-modal trap-focus="true" size="small">
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
-              <gux-button gux-title="Cancel">Cancel</gux-button>
+              <gux-button>Cancel</gux-button>
           </div>
           <div slot="right-align-buttons">
-            <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+            <gux-button accent='primary'>Accept</gux-button>
           </div>
         </gux-modal>
       `;
@@ -210,7 +216,7 @@ describe('gux-modal', () => {
 
       expect(elementRemoveSpy).not.toBeCalled();
 
-      page.root!.remove();
+      page.root.remove();
     });
   });
 });
