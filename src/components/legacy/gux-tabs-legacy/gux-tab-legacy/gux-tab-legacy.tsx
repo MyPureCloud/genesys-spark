@@ -83,7 +83,7 @@ export class GuxTabLegacy {
             decorative={true}
           ></gux-icon>
         </button>,
-        <gux-popover
+        <gux-popover-list
           position="top-end"
           for={this.dropdownOptionsButtonId}
           displayDismissButton={false}
@@ -95,7 +95,7 @@ export class GuxTabLegacy {
           <div onClick={(e: MouseEvent) => this.onSelectDropdownOption(e)}>
             <slot name="dropdown-options" />
           </div>
-        </gux-popover>
+        </gux-popover-list>
       ];
     }
 

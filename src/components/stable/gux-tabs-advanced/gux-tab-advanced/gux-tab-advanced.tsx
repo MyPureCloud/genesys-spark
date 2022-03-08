@@ -213,7 +213,7 @@ export class GuxTabAdvanced {
             })}
           ></gux-icon>
         </button>,
-        <gux-popover
+        <gux-popover-list
           position="top-end"
           for={this.dropdownOptionsButtonId}
           displayDismissButton={false}
@@ -228,7 +228,7 @@ export class GuxTabAdvanced {
           >
             <slot name="dropdown-options" />
           </div>
-        </gux-popover>
+        </gux-popover-list>
       ] as JSX.Element;
     }
 
