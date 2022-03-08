@@ -1,6 +1,6 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxActionButton } from '../gux-action-button';
-import { GuxActionItem } from '../gux-action-item/gux-action-item';
+import { GuxActionItem } from '../../../beta/gux-action-list/gux-action-item/gux-action-item';
 
 const components = [GuxActionButton, GuxActionItem];
 const html = `

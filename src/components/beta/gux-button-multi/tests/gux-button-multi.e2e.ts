@@ -13,6 +13,23 @@ async function clickDropdownButton(page: E2EPage): Promise<void> {
   });
 }
 
+async function pressDropdownButton(
+  page: E2EPage,
+  keypress: string
+): Promise<void> {
+  const element = await page.find('pierce/.gux-dropdown-button button');
+  await element.press(keypress);
+}
+
+async function pressActionItemButton(
+  page: E2EPage,
+  keypress: string
+): Promise<void> {
+  const element = await page.find('gux-action-item');
+  const actionItemButton = await element.find('pierce/button');
+  await actionItemButton.press(keypress);
+}
+
 describe('gux-button-multi', () => {
   const html = `
   <gux-button-multi lang="en" text="Primary" accent="primary">
@@ -31,7 +48,7 @@ describe('gux-button-multi', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('should fire open and close events if not disabled', async () => {
+  it('should fire open and close events if not disabled on click', async () => {
     const page = await newSparkE2EPage({ html });
     const onOpen = await page.spyOnEvent('open');
     const onClose = await page.spyOnEvent('close');
@@ -46,7 +63,19 @@ describe('gux-button-multi', () => {
     expect(onClose).toHaveReceivedEventTimes(1);
   });
 
-  it('should not fire open event if disabled', async () => {
+  it('should fire open and close events if not disabled using the keyboard', async () => {
+    const page = await newSparkE2EPage({ html });
+    const onOpen = await page.spyOnEvent('open');
+    const onClose = await page.spyOnEvent('close');
+
+    await pressDropdownButton(page, 'ArrowDown');
+    await pressActionItemButton(page, 'Escape');
+
+    expect(onOpen).toHaveReceivedEventTimes(1);
+    expect(onClose).toHaveReceivedEventTimes(1);
+  });
+
+  it('should not fire open event if disabled on click', async () => {
     const page = await newSparkE2EPage({ html });
     const onOpen = await page.spyOnEvent('open');
     const element = await page.find('gux-button-multi');
@@ -56,6 +85,18 @@ describe('gux-button-multi', () => {
     await clickDropdownButton(page);
 
     await a11yCheck(page);
+
+    expect(onOpen).toHaveReceivedEventTimes(0);
+  });
+
+  it('should not fire open event if disabled using the keyboard', async () => {
+    const page = await newSparkE2EPage({ html });
+    const onOpen = await page.spyOnEvent('open');
+    const element = await page.find('gux-button-multi');
+    element.setAttribute('disabled', 'disabled');
+    await page.waitForChanges();
+
+    await pressDropdownButton(page, 'ArrowDown');
 
     expect(onOpen).toHaveReceivedEventTimes(0);
   });

@@ -12,47 +12,47 @@ exports[`gux-action-button renders 1`] = `
             </button>
           </gux-button-slot-beta>
           <gux-button-slot-beta accent="primary" class="gux-dropdown-button">
-            <button aria-expanded="false" aria-haspopup="listbox" aria-label="Dropdown for Primary" type="button">
+            <button aria-expanded="false" aria-haspopup="true" aria-label="Dropdown for Primary" type="button">
               <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
             </button>
           </gux-button-slot-beta>
         </div>
-        <gux-list slot="popup">
+        <gux-action-list slot="popup">
           <slot></slot>
-        </gux-list>
+        </gux-action-list>
       </gux-popup-beta>
     </div>
   </mock:shadow-root>
   <gux-action-item role="listitem" text="test">
     <mock:shadow-root>
-      <span class="gux-action-item">
+      <button class="gux-action-item">
         test
         <slot></slot>
-      </span>
+      </button>
     </mock:shadow-root>
   </gux-action-item>
   <gux-action-item role="listitem" text="test2">
     <mock:shadow-root>
-      <span class="gux-action-item">
+      <button class="gux-action-item">
         test2
         <slot></slot>
-      </span>
+      </button>
     </mock:shadow-root>
   </gux-action-item>
   <gux-action-item role="listitem" text="test3">
     <mock:shadow-root>
-      <span class="gux-action-item">
+      <button class="gux-action-item">
         test3
         <slot></slot>
-      </span>
+      </button>
     </mock:shadow-root>
   </gux-action-item>
   <gux-list-divider></gux-list-divider>
   <gux-action-item role="listitem">
     <mock:shadow-root>
-      <span class="gux-action-item">
+      <button class="gux-action-item">
         <slot></slot>
-      </span>
+      </button>
     </mock:shadow-root>
     <span>
       I am a span
