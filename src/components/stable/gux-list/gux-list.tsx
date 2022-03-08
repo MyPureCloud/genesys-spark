@@ -163,9 +163,13 @@ export class GuxList {
     let newIndex = -1;
     switch (event.key) {
       case 'ArrowUp':
-        if (this.selectedIndex) {
+        if (this.selectedIndex !== 0) {
+          event.preventDefault();
           newIndex = this.selectedIndex - 1;
           event.stopPropagation();
+        } else if (!this.isCommandPaletteList()) {
+          event.preventDefault();
+          newIndex = filteredList.length - 1;
         }
         break;
       case 'Home':
@@ -175,7 +179,12 @@ export class GuxList {
         break;
       case 'ArrowDown':
         if (this.selectedIndex !== filteredList.length - 1) {
+          event.preventDefault();
           newIndex = this.selectedIndex + 1;
+          event.stopPropagation();
+        } else if (!this.isCommandPaletteList()) {
+          event.preventDefault();
+          newIndex = 0;
           event.stopPropagation();
         }
         break;
@@ -189,6 +198,11 @@ export class GuxList {
     if (newIndex !== -1) {
       this.selectedIndex = newIndex;
     }
+  }
+
+  // delete this once gux-command-palette-legacy is removed from library
+  private isCommandPaletteList(): boolean {
+    return Boolean(this.root.closest('gux-command-palette-legacy'));
   }
 
   private updateTabIndexes(): void {

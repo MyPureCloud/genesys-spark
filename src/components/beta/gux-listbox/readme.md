@@ -65,7 +65,7 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-pagination-items-per-page](../../../stable/gux-pagination/gux-pagination-items-per-page)
+ - [gux-pagination-items-per-page](../../stable/gux-pagination/gux-pagination-items-per-page)
 
 ### Graph
 ```mermaid

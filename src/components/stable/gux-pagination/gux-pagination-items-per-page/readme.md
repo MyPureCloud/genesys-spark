@@ -29,8 +29,8 @@ An internal component used by the gux-pagination component.
 ### Depends on
 
 - [gux-dropdown-v2-beta](../../../beta/gux-dropdown-v2)
-- [gux-listbox](../../../beta/gux-dropdown-v2/gux-listbox)
-- [gux-option-v2](../../../beta/gux-dropdown-v2/gux-option-v2)
+- [gux-listbox](../../../beta/gux-listbox)
+- [gux-option-v2](../../../beta/gux-listbox/gux-option-v2)
 
 ### Graph
 ```mermaid

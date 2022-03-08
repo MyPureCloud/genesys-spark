@@ -21,14 +21,16 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          25
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            25
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -132,14 +134,16 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          50
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            50
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -243,14 +247,16 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          75
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            75
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -354,14 +360,16 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          100
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            100
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -465,14 +473,16 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          25
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            25
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -576,14 +586,16 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          25
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            25
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -687,14 +699,16 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          50
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            50
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -798,14 +812,16 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          75
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            75
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -909,14 +925,16 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          100
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            100
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -1072,14 +1090,16 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          25
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            25
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
@@ -1183,14 +1203,16 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
               <gux-dropdown-v2-beta>
                 <mock:shadow-root>
                   <gux-popup-beta>
-                    <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-                      <div class="gux-field-button-content">
-                        <div class="gux-selected-option">
-                          25
+                    <div class="gux-target-container-collapsed" slot="target">
+                      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                        <div class="gux-field-content">
+                          <div class="gux-selected-option">
+                            25
+                          </div>
                         </div>
-                      </div>
-                      <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-                    </button>
+                        <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                      </button>
+                    </div>
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
