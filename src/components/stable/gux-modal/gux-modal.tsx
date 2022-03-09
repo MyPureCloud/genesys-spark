@@ -6,10 +6,8 @@ import {
   h,
   JSX,
   Listen,
-  Prop,
-  Watch
+  Prop
 } from '@stencil/core';
-import { createFocusTrap, FocusTrap } from 'focus-trap';
 import { trackComponent } from '../../../usage-tracking';
 
 import { GuxModalSize } from './gux-modal.types';
@@ -25,7 +23,11 @@ import { GuxModalSize } from './gux-modal.types';
   tag: 'gux-modal'
 })
 export class GuxModal {
-  private focusTrap: FocusTrap | undefined;
+  private dismissButton: HTMLGuxDismissButtonBetaElement;
+  private triggerElement: HTMLElement;
+
+  @Element()
+  private root: HTMLElement;
 
   /**
    * Indicates the size of the modal (small, medium or large)
@@ -49,15 +51,6 @@ export class GuxModal {
   @Event()
   guxdismiss: EventEmitter<void>;
 
-  @Watch('trapFocus')
-  watchTrapFocus(trapFocus: boolean): void {
-    if (trapFocus) {
-      this.focusTrap?.unpause();
-    } else {
-      this.focusTrap?.pause();
-    }
-  }
-
   @Listen('keydown')
   protected handleKeyEvent(event: KeyboardEvent) {
     if (event.key === 'Escape') {
@@ -65,33 +58,28 @@ export class GuxModal {
     }
   }
 
-  componentDidLoad() {
+  connectedCallback(): void {
+    this.triggerElement = document.activeElement as HTMLElement;
+  }
+
+  componentWillLoad(): void {
+    const trapFocusVariant = this.trapFocus ? 'trapfocuson' : 'trapfocusoff';
+    const componentVariant = `${this.size}-${trapFocusVariant}`;
+    trackComponent(this.root, { variant: componentVariant });
+  }
+
+  componentDidLoad(): void {
     const initialFocusElement = this.getInitialFocusElement();
-
-    this.focusTrap = createFocusTrap(this.root, {
-      escapeDeactivates: false,
-      returnFocusOnDeactivate: true,
-      initialFocus: initialFocusElement,
-      fallbackFocus: () => this.root.querySelector('gux-dismiss-button-beta')
-    });
-
-    this.focusTrap.activate();
-
-    if (!this.trapFocus) {
-      this.focusTrap.pause();
+    if (initialFocusElement) {
+      if (initialFocusElement.tagName === 'GUX-BUTTON') {
+        (initialFocusElement as HTMLGuxButtonElement).focusElement();
+      }
+      // using .focus?.() instead of .focus() as a workaround for a Stencil bug in unit tests
+      // https://github.com/ionic-team/stencil/issues/1964
+      initialFocusElement.focus?.();
+    } else if (this.dismissButton) {
+      this.dismissButton.focus?.();
     }
-  }
-
-  disconnectedCallback() {
-    this.focusTrap?.deactivate();
-    this.focusTrap = undefined;
-  }
-
-  @Element()
-  private root: HTMLElement;
-
-  async componentWillLoad(): Promise<void> {
-    trackComponent(this.root, { variant: this.size });
   }
 
   render(): JSX.Element {
@@ -101,10 +89,11 @@ export class GuxModal {
     return (
       <div class="gux-modal">
         <div class={`gux-modal-container gux-${this.size}`}>
+          {this.renderModalTrapFocusEl()}
           <gux-dismiss-button-beta
             onClick={this.onDismissHandler.bind(this)}
+            ref={el => (this.dismissButton = el)}
           ></gux-dismiss-button-beta>
-
           {hasModalTitleSlot && (
             <h1 class="gux-modal-header">
               <slot name="title" />
@@ -133,23 +122,26 @@ export class GuxModal {
               </div>
             </div>
           )}
+          {this.renderModalTrapFocusEl()}
         </div>
       </div>
-    );
+    ) as JSX.Element;
+  }
+
+  // When trap-focus is enabled, focusing this element
+  // will immediately redirect focus back to the dismiss button at the top of the modal.
+  private renderModalTrapFocusEl(): JSX.Element {
+    if (this.trapFocus) {
+      return (
+        <span onFocus={() => this.dismissButton.focus()} tabindex="0"></span>
+      ) as JSX.Element;
+    }
   }
 
   private getInitialFocusElement(): HTMLElement | SVGElement | undefined {
-    // Workaround that gux-buttons don't have a native focus method that works
-    // Query the element then find the inner tabbable element
-    const initialFocusElement = this.initialFocus
+    return this.initialFocus
       ? this.root.querySelector<HTMLElement | SVGElement>(this.initialFocus)
       : undefined;
-
-    if (initialFocusElement?.tagName === 'GUX-BUTTON') {
-      return initialFocusElement.querySelector('button');
-    }
-
-    return initialFocusElement;
   }
 
   private hasModalTitleSlot(): boolean {
@@ -169,6 +161,7 @@ export class GuxModal {
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
       this.root.remove();
+      this.triggerElement?.focus();
     }
   }
 }
