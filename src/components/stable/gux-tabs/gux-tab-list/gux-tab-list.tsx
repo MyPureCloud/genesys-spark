@@ -128,7 +128,8 @@ export class GuxTabList {
     void this.tabTriggers[this.focused].guxFocus();
   }
 
-  private setTriggerIds(): void {
+  private setTabTriggers(): void {
+    this.tabTriggers = this.root.querySelectorAll('gux-tab');
     if (this.tabTriggers) {
       this.triggerIds = Array.from(this.tabTriggers)
         .map(trigger => `gux-${trigger.getAttribute('tab-id')}-tab`)
@@ -209,8 +210,7 @@ export class GuxTabList {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.tabTriggers = this.root.querySelectorAll('gux-tab');
-    this.setTriggerIds();
+    this.setTabTriggers();
     this.i18n = await buildI18nForComponent(this.root, tabsResources);
   }
 
