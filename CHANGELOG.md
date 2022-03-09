@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.43](https://inindca///compare/v3.0.0-alpha.42...v3.0.0-alpha.43) (2022-03-09)
+
+
+### Features
+
+* **gux-popover-list:** add new gux-popover-list component ([56c8cc0](https://inindca///commit/56c8cc0a2be620d9d4d55c36a1d558b2ee19fd15))
+
+
+### Bug Fixes
+
+* **form-field:** fixed focus states ([226f44b](https://inindca///commit/226f44b989a19bf653c36cd875fadfff7cf0c52b))
+* **gux-action-button:** update gux-action-button and gux-button-multi to improve accessibility ([3b977ea](https://inindca///commit/3b977ea5af3f593590a7663cb1b0b2bf0ff895a8))
+* **gux-dropdown:** address dropdown a11y violations ([4d044bc](https://inindca///commit/4d044bc0cd6a404cbea76072e10c57f512247b56))
+
 ## [3.0.0-alpha.42](https://inindca///compare/v3.0.0-alpha.41...v3.0.0-alpha.42) (2022-03-08)
 
 
