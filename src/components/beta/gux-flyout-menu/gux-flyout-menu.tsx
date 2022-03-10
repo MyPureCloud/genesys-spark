@@ -20,7 +20,8 @@ import {
 
 @Component({
   styleUrl: 'gux-flyout-menu.less',
-  tag: 'gux-flyout-menu-beta'
+  tag: 'gux-flyout-menu-beta',
+  shadow: true
 })
 export class GuxFlyoutMenu {
   private hideDelayTimeout: NodeJS.Timer;
@@ -161,7 +162,7 @@ export class GuxFlyoutMenu {
       return;
     }
 
-    const menu = this.menuContentElement.querySelector('gux-menu');
+    const menu = this.root.querySelector('gux-menu');
     const menuItems = Array.from(menu.children);
     const nextFocusableElement = menuItems[0] as HTMLGuxMenuItemElement;
 
