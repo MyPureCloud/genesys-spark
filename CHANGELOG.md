@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.52.6](https://inindca///compare/v2.52.5...v2.52.6) (2022-03-10)
+
+
+### Bug Fixes
+
+* **gux-modal:** new trap-focus implementation ([c9073f4](https://inindca///commit/c9073f412b6535158db9f9a0bd5548cf8ecc9ab9))
+
 ### [2.52.5](https://inindca///compare/v2.52.4...v2.52.5) (2022-03-09)
 
 ### [2.52.4](https://inindca///compare/v2.52.3...v2.52.4) (2022-03-08)
