@@ -19,7 +19,8 @@ import {
  */
 @Component({
   styleUrl: 'gux-form-field.less',
-  tag: 'gux-form-field'
+  tag: 'gux-form-field',
+  shadow: false
 })
 export class GuxFormField {
   private input: HTMLInputElement;
