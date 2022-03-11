@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.44](https://inindca///compare/v3.0.0-alpha.43...v3.0.0-alpha.44) (2022-03-11)
+
+
+### Bug Fixes
+
+* **gux-tabs:** fixed inconsistant aria-owns attribute bug on tablist ([290cd9d](https://inindca///commit/290cd9dbead8aaf0be6fd5d1dd2b6ada71750c35))
+
 ## [3.0.0-alpha.43](https://inindca///compare/v3.0.0-alpha.42...v3.0.0-alpha.43) (2022-03-09)
 
 
