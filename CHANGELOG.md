@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.45](https://inindca///compare/v3.0.0-alpha.44...v3.0.0-alpha.45) (2022-03-14)
+
+
+### Bug Fixes
+
+* **gux-input-range:** round tooltip position to prevent snapshot inconsistencies ([4e632f9](https://inindca///commit/4e632f9d6cb2d00befe13b4dc4ca90a55532eef2))
+
 ## [3.0.0-alpha.44](https://inindca///compare/v3.0.0-alpha.43...v3.0.0-alpha.44) (2022-03-11)
 
 
