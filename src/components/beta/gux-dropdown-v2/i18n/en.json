@@ -1,3 +1,5 @@
 {
-  "noSelection": "Select..."
+  "filterResults": "Type to filter dropdown results",
+  "noSelection": "Select...",
+  "dropdown": "Dropdown"
 }

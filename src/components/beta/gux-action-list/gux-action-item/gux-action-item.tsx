@@ -36,7 +36,17 @@ export class GuxActionItem {
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Enter':
-      case 'Space':
+        event.preventDefault();
+        this.onItemClicked();
+        return;
+    }
+  }
+
+  @Listen('keyup')
+  onKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case ' ':
+        event.preventDefault();
         this.onItemClicked();
         return;
     }
@@ -51,7 +61,9 @@ export class GuxActionItem {
   render(): JSX.Element {
     return (
       <Host role="listitem">
-        <span
+        <button
+          disabled={this.disabled}
+          onClick={() => this.onItemClicked()}
           class={{
             'gux-action-item': true,
             'gux-disabled': this.disabled
@@ -59,7 +71,7 @@ export class GuxActionItem {
         >
           {this.text}
           <slot />
-        </span>
+        </button>
       </Host>
     ) as JSX.Element;
   }

@@ -4,14 +4,16 @@ exports[`gux-dropdown-menu-v2 #render should render as expected 1`] = `
 <gux-dropdown-v2-beta lang="en" value="j">
   <mock:shadow-root>
     <gux-popup-beta>
-      <button aria-expanded="false" aria-haspopup="listbox" class="gux-field-button" slot="target" type="button">
-        <div class="gux-field-button-content">
-          <div class="gux-placeholder">
-            Select...
+      <div class="gux-target-container-collapsed" slot="target">
+        <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+          <div class="gux-field-content">
+            <div class="gux-placeholder">
+              Select...
+            </div>
           </div>
-        </div>
-        <gux-icon class="gux-expand-icon" decorative="" iconname="chevron-small-down"></gux-icon>
-      </button>
+          <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+        </button>
+      </div>
       <div class="gux-listbox-container" slot="popup">
         <slot></slot>
       </div>

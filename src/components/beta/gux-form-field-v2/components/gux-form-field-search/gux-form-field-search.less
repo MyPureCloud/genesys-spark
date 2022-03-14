@@ -54,12 +54,6 @@
     align-content: stretch;
     align-items: center;
 
-    &.gux-input-error {
-      .gux-input-container {
-        border-color: @gux-alert-red-60;
-      }
-    }
-
     .gux-input-container {
       box-sizing: border-box;
       display: flex;
@@ -98,9 +92,14 @@
       }
 
       &:focus-within {
-        border: 1px solid @gux-blue-60;
-        outline: none;
-        box-shadow: 0 0 4px @gux-blue-80;
+        border-color: @gux-blue-60;
+        .focus-ring();
+      }
+    }
+
+    &.gux-input-error {
+      .gux-input-container {
+        border-color: @gux-alert-red-60;
       }
     }
   }

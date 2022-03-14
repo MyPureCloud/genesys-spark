@@ -88,16 +88,12 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-action-button](../gux-action-button)
- - [gux-button-multi](../../beta/gux-button-multi)
  - [gux-command-palette-legacy](../../legacy/gux-command-palette-legacy)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-action-button --> gux-list
-  gux-button-multi --> gux-list
   gux-command-palette-legacy --> gux-list
   gux-time-picker-beta --> gux-list
   style gux-list fill:#f9f,stroke:#333,stroke-width:4px

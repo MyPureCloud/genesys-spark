@@ -4,22 +4,27 @@
   outline: none;
 }
 
-:host(:focus:not([disabled])),
-:host(:active:not([disabled])),
-:host(:hover:not([disabled])) {
-  .gux-action-item {
-    color: @gux-type-dark;
-    background: @gux-blue-60;
-  }
-}
-
 .gux-action-item {
   display: flex;
+  width: 100%;
   height: max-content;
   padding: 0 16px;
+  font-family: inherit;
+  font-size: inherit;
   line-height: 32px;
+  text-align: left;
   word-wrap: break-word;
   cursor: pointer;
+  background-color: inherit;
+  border: none;
+
+  &:focus-within:not([disabled]),
+  &:active:not([disabled]),
+  &:hover:not([disabled]) {
+    color: @gux-type-dark;
+    background: @gux-blue-60;
+    outline: none;
+  }
 
   .gux-text {
     width: 100%;
@@ -28,6 +33,5 @@
   &.gux-disabled {
     pointer-events: none;
     cursor: default;
-    opacity: 0.5;
   }
 }

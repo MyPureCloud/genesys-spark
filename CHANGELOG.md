@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.44](https://inindca///compare/v3.0.0-alpha.43...v3.0.0-alpha.44) (2022-03-11)
+
+
+### Bug Fixes
+
+* **gux-tabs:** fixed inconsistant aria-owns attribute bug on tablist ([290cd9d](https://inindca///commit/290cd9dbead8aaf0be6fd5d1dd2b6ada71750c35))
+
+## [3.0.0-alpha.43](https://inindca///compare/v3.0.0-alpha.42...v3.0.0-alpha.43) (2022-03-09)
+
+
+### Features
+
+* **gux-popover-list:** add new gux-popover-list component ([56c8cc0](https://inindca///commit/56c8cc0a2be620d9d4d55c36a1d558b2ee19fd15))
+
+
+### Bug Fixes
+
+* **form-field:** fixed focus states ([226f44b](https://inindca///commit/226f44b989a19bf653c36cd875fadfff7cf0c52b))
+* **gux-action-button:** update gux-action-button and gux-button-multi to improve accessibility ([3b977ea](https://inindca///commit/3b977ea5af3f593590a7663cb1b0b2bf0ff895a8))
+* **gux-dropdown:** address dropdown a11y violations ([4d044bc](https://inindca///commit/4d044bc0cd6a404cbea76072e10c57f512247b56))
+
+## [3.0.0-alpha.42](https://inindca///compare/v3.0.0-alpha.41...v3.0.0-alpha.42) (2022-03-08)
+
+
+### Features
+
+* **branch-name:** prepare for master branch rename to main ([d54ee2b](https://inindca///commit/d54ee2b521d2c5b964d3559665e0bda932b8e11b))
+* **panel-frame:** moved component to legacy ([b1804e0](https://inindca///commit/b1804e0c7bd3e6c33863b6986d44cc66f0751f6f))
+* **side-panel:** moved to legacy ([9f1b6c0](https://inindca///commit/9f1b6c0e6344960729162fff03b48742094a5f0e))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([f76823e](https://inindca///commit/f76823e14b35964d5ae4f43edbca7c6243824200))
+
 ## [3.0.0-alpha.41](https://inindca///compare/v3.0.0-alpha.40...v3.0.0-alpha.41) (2022-03-05)
 
 

@@ -72,8 +72,11 @@ export class GuxInputRange {
 
     if (this.sliderTooltip) {
       const width = this.sliderTooltipContainer.offsetWidth;
+      // Round tooltip position to the tenths place to prevent snapshot inconsistencies
       const offset =
-        placementPercentage - (placementPercentage / 8 / width) * 100;
+        Math.round(
+          (placementPercentage / 100 - placementPercentage / 8 / width) * 1000
+        ) / 10;
       this.sliderTooltip.style.left = `${offset}%`;
     }
 

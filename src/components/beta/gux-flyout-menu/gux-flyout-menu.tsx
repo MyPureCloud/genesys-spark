@@ -57,6 +57,7 @@ export class GuxFlyoutMenu {
           return;
 
         case 'ArrowDown':
+          event.preventDefault();
           this.focusOnMenu();
           return;
 

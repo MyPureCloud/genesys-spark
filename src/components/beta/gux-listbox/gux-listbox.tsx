@@ -17,6 +17,7 @@ import {
   clearActiveOptions,
   goToOption,
   hasPreviousOption,
+  hasNextOption,
   onClickedOption,
   setFirstOptionActive,
   setInitialActiveOption,
@@ -25,11 +26,11 @@ import {
   setPreviousOptionActive
 } from './gux-listbox.service';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
-import { whenEventIsFrom } from '../../../../utils/dom/when-event-is-from';
-import simulateNativeEvent from '../../../../utils/dom/simulate-native-event';
-import { trackComponent } from '../../../../usage-tracking';
-import { logError } from '../../../../utils/error/log-error';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
+import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import { trackComponent } from '../../../usage-tracking';
+import { logError } from '../../../utils/error/log-error';
 
 import translationResources from './i18n/en.json';
 
@@ -82,7 +83,12 @@ export class GuxListbox {
 
       case 'ArrowDown':
         event.preventDefault();
-        setNextOptionActive(this.root);
+        if (hasNextOption(this.root)) {
+          event.stopPropagation();
+          setNextOptionActive(this.root);
+        } else {
+          setFirstOptionActive(this.root);
+        }
         return;
 
       case 'ArrowUp': {
@@ -90,6 +96,8 @@ export class GuxListbox {
         if (hasPreviousOption(this.root)) {
           event.stopPropagation();
           setPreviousOptionActive(this.root);
+        } else {
+          setLastOptionActive(this.root);
         }
         return;
       }
@@ -213,7 +221,7 @@ export class GuxListbox {
 
   render(): JSX.Element {
     return (
-      <Host role="listbox" tabIndex={0}>
+      <Host role="listbox" tabindex={0}>
         <slot onSlotchange={() => this.setListboxOptions()} />
         {this.renderAllListboxOptionsFiltered()}
       </Host>
