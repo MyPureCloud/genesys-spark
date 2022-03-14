@@ -133,11 +133,13 @@ export class GuxTable {
         readTask(() => {
           this.checkHorizontalScroll();
           this.checkVerticalScroll();
+          this.updateScrollState();
         });
       });
     }
 
     if (this.resizeObserver) {
+      this.resizeObserver.observe(this.tableContainer);
       this.resizeObserver.observe(this.slottedTable);
     }
 
@@ -149,6 +151,7 @@ export class GuxTable {
 
   disconnectedCallback(): void {
     if (this.resizeObserver) {
+      this.resizeObserver.unobserve(this.tableContainer);
       this.resizeObserver.unobserve(this.slottedTable);
     }
 
@@ -208,16 +211,18 @@ export class GuxTable {
     return this.root.querySelector('table[slot="data"]');
   }
 
-  private get tableRows(): NodeListOf<HTMLElement> {
-    return this.slottedTable.querySelectorAll('tbody tr');
+  private get tableRows(): Array<HTMLElement> {
+    return Array.from(this.slottedTable.querySelectorAll('tbody tr'));
   }
 
-  private get tableColumns(): NodeListOf<HTMLElement> {
-    return this.slottedTable.querySelectorAll('thead th');
+  private get tableColumns(): Array<HTMLElement> {
+    return Array.from(this.slottedTable.querySelectorAll('thead th'));
   }
 
-  private get rowCheckboxes(): NodeListOf<HTMLGuxRowSelectElement> {
-    return this.slottedTable.querySelectorAll('tbody tr td gux-row-select');
+  private get rowCheckboxes(): Array<HTMLGuxRowSelectElement> {
+    return Array.from(
+      this.slottedTable.querySelectorAll('tbody tr td gux-row-select')
+    );
   }
 
   private get selectAllCheckbox(): HTMLGuxAllRowSelectElement {
@@ -248,7 +253,7 @@ export class GuxTable {
 
   // Set up initial selectable row states
   private prepareSelectableRows(): void {
-    const rowCheckboxes = Array.from(this.rowCheckboxes);
+    const rowCheckboxes = this.rowCheckboxes;
     rowCheckboxes.forEach(rowCheckbox => {
       this.updateRowSelection(rowCheckbox);
     });
@@ -261,7 +266,7 @@ export class GuxTable {
     const selectAllCheckbox = this.selectAllCheckbox;
 
     if (selectAllCheckbox) {
-      const rowCheckboxes = Array.from(this.rowCheckboxes);
+      const rowCheckboxes = this.rowCheckboxes;
       const selectedRows = rowCheckboxes.filter(box => box.selected);
 
       const hasRows = Boolean(rowCheckboxes.length);
@@ -279,7 +284,7 @@ export class GuxTable {
   // Handle a change in state of the select all checkbox
   private handleSelectAllRows(): void {
     const selectAllCheckbox = this.selectAllCheckbox;
-    const rowCheckboxes = Array.from(this.rowCheckboxes);
+    const rowCheckboxes = this.rowCheckboxes;
 
     rowCheckboxes.forEach(rowBox => {
       rowBox.selected = selectAllCheckbox.selected;
@@ -313,7 +318,7 @@ export class GuxTable {
   /******************************* Scrolling *******************************/
 
   private nextColumn(): void {
-    const columns = Array.from(this.tableColumns);
+    const columns = this.tableColumns;
     const viewportBounds = this.tableContainer.getBoundingClientRect();
 
     // The last column who's right side is out of the viewport
@@ -338,7 +343,7 @@ export class GuxTable {
   }
 
   private previousColumn(): void {
-    const columns = Array.from(this.tableColumns);
+    const columns = this.tableColumns;
     const viewportBounds = this.tableContainer.getBoundingClientRect();
 
     // The first column who's left side is out of the viewport
@@ -370,7 +375,8 @@ export class GuxTable {
 
     this.isScrolledToFirstCell = scrollLeft === 0;
     this.isScrolledToLastCell =
-      maxScrollLeft - scrollLeft - this.tableScrollbarConstant === 0;
+      // sometimes this can go less than zero due to the scrollbar constant
+      maxScrollLeft - scrollLeft - this.tableScrollbarConstant <= 0;
   }
 
   private checkHorizontalScroll(): void {
@@ -398,7 +404,7 @@ export class GuxTable {
     styleElement.id = `${this.tableId}-resizable-styles`;
     document.querySelector('head').appendChild(styleElement);
 
-    const columns = Array.from(this.tableColumns);
+    const columns = this.tableColumns;
     columns.pop();
 
     columns.forEach((column: HTMLElement) => {
@@ -471,7 +477,7 @@ export class GuxTable {
   /******************************* Sortable Columns *******************************/
 
   private prepareSortableColumns(): void {
-    const columnsElements = Array.from(this.tableColumns);
+    const columnsElements = this.tableColumns;
     this.prepareSortableColumnsStyles();
 
     columnsElements.forEach((column: HTMLElement) => {
@@ -612,7 +618,7 @@ export class GuxTable {
           )}
           {this.isTableEmpty && (
             <div class="gux-empty-table">
-              <h2>{this.emptyMessage || this.i18n('emptyMessage')}</h2>
+              {this.emptyMessage || this.i18n('emptyMessage')}
             </div>
           )}
         </div>
