@@ -1,51 +1,84 @@
-<form [formGroup]="editConfigurationForm" (ngSubmit)="onFormSubmit()">
-  <gux-form-field-text-like-beta label-position="above" clearable>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="form-element">
+    <label for="firstname">First Name </label>
     <input
-      id="config-name"
-      slot="input"
-      name="name"
       type="text"
-      formControlName="name"
-      value=""
-      placeholder="Please enter a configuration name"
+      id="firstname"
+      name="firstname"
+      formControlName="firstname"
     />
-    <label slot="label" for="config-name">Name</label>
-    <span *ngIf="showNameError" slot="error">This is a required field</span>
-  </gux-form-field-text-like-beta>
+    <div>
+      <small *ngIf="showRequiredErrorMessage('firstname')"
+        >This field is required.</small
+      >
+    </div>
+  </div>
 
-  <gux-form-field-text-like-beta label-position="above" clearable>
+  <div class="form-element">
+    <label for="lastname">Last Name </label>
     <input
-      id="config-description"
-      slot="input"
-      name="description"
       type="text"
-      formControlName="description"
-      placeholder="Please enter a configuration description"
+      id="lastname"
+      name="lastname"
+      formControlName="lastname"
     />
-    <label slot="label" for="config-description">Description</label>
-    <span *ngIf="showDescriptionError" slot="error"
-      >This is a required field</span
+    <div>
+      <small *ngIf="showRequiredErrorMessage('lastname')"
+        >This field is required.</small
+      >
+    </div>
+  </div>
+
+  <div class="form-element">
+    <label for="country">Country </label>
+    <select id="country" name="country" formControlName="country">
+      <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{ c.name }}
+      </option>
+    </select>
+    <div>
+      <small *ngIf="showRequiredErrorMessage('country')"
+        >This field is required.</small
+      >
+    </div>
+  </div>
+
+  <div class="form-element">
+    <label for="pet">Pet </label>
+    <gux-dropdown-v2-beta
+      id="pet"
+      name="pet"
+      formControlName="pet"
+      placeholder="Select an pet"
+      ngDefaultControl
     >
-  </gux-form-field-text-like-beta>
+      <gux-listbox aria-label="Pets">
+        <gux-option-v2 [value]="p.id" *ngFor="let p of petList">
+          {{ p.name }}
+        </gux-option-v2>
+      </gux-listbox>
+    </gux-dropdown-v2-beta>
+    <div>
+      <small *ngIf="showRequiredErrorMessage('pet')"
+        >This field is required.</small
+      >
+    </div>
+  </div>
 
-  <gux-form-field-text-like-beta label-position="above" clearable>
-    <input
-      id="text-1"
-      slot="input"
-      name="text-1"
-      type="text"
-      formControlName="text-1"
-      placeholder="Please enter a value"
-    />
-    <label slot="label" for="text-1">Text 1</label>
-    <span *ngIf="showText1Error" slot="error">This is a required field</span>
-  </gux-form-field-text-like-beta>
+  <div class="form-element">
+    <label for="email">Email </label>
+    <input type="text" id="email" name="email" formControlName="email" />
+    <div>
+      <small *ngIf="showRequiredErrorMessage('email')"
+        >This field is required.</small
+      >
+      <small *ngIf="showEmailErrorMessage('email')"
+        >This field must contain an email addess.</small
+      >
+    </div>
+  </div>
 
-  <div>showNameError: {{ showNameError }}</div>
-  <div>showDescriptionError: {{ showDescriptionError }}</div>
-  <div>showText1Error: {{ showText1Error }}</div>
-
-  <div *ngIf="showNameError">Name</div>
-  <div *ngIf="showDescriptionError">Description</div>
-  <div *ngIf="showText1Error">Text 1</div>
+  <div>
+    <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+  </div>
 </form>
