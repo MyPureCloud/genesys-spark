@@ -68,7 +68,7 @@ function createLayout() {
 
     axeTriggerButton.addEventListener('click', () => {
       setTimeout(async () => {
-        axeLive.run(preview);
+        axeLive.watch(preview);
       }, 100);
     });
     console.log('axe-live setup completed');
