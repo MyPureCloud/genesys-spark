@@ -1,3 +1,5 @@
 {
-  "noSelection": "Selecteren..."
+  "filterResults": "Voer tekst in om resultaten van vervolgkeuzelijst te filteren",
+  "noSelection": "Selecteren...",
+  "dropdown": "Vervolgkeuzelijst"
 }
