@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.46](https://inindca///compare/v3.0.0-alpha.45...v3.0.0-alpha.46) (2022-03-15)
+
+
+### Bug Fixes
+
+* **axe-live:** fixed call to axe-live in docs ([1ebd74a](https://inindca///commit/1ebd74abc7537dfe7b306676c17541ce2e0f531e))
+
 ## [3.0.0-alpha.45](https://inindca///compare/v3.0.0-alpha.44...v3.0.0-alpha.45) (2022-03-14)
 
 
