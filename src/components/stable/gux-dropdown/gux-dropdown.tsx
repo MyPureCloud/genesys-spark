@@ -18,8 +18,7 @@ import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({
   styleUrl: 'gux-dropdown.less',
-  tag: 'gux-dropdown',
-  shadow: false
+  tag: 'gux-dropdown'
 })
 export class GuxDropdown {
   @Element()
