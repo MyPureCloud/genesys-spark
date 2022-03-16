@@ -12,7 +12,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: 'tsconfig.json',
+    project: ['tsconfig.json', 'playground/angular-v12/tsconfig.json'],
     sourceType: 'module'
   },
   plugins: [
@@ -39,6 +39,12 @@ module.exports = {
     }
   ],
   rules: {
+    '@typescript-eslint/unbound-method': [
+      'error',
+      {
+        ignoreStatic: true
+      }
+    ],
     '@typescript-eslint/typedef': [
       'error',
       {

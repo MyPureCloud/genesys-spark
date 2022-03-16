@@ -127,6 +127,26 @@ export class GuxDropdownV2Beta {
     forceUpdate(this.root);
   }
 
+  @Listen('blur')
+  onBlur(event: FocusEvent): void {
+    this.stopPropagationOfInternalFocusEvents(event);
+  }
+
+  @Listen('focus')
+  onFocus(event: FocusEvent): void {
+    this.stopPropagationOfInternalFocusEvents(event);
+  }
+
+  @Listen('focusout')
+  onFocusout(event: FocusEvent): void {
+    this.stopPropagationOfInternalFocusEvents(event);
+  }
+
+  @Listen('focusin')
+  onFocusin(event: FocusEvent): void {
+    this.stopPropagationOfInternalFocusEvents(event);
+  }
+
   @OnClickOutside({ triggerEvents: 'mousedown' })
   onClickOutside() {
     this.collapseListbox('noFocusChange');
@@ -154,6 +174,12 @@ export class GuxDropdownV2Beta {
   componentWillRender(): void {
     this.validateValue(this.value);
     this.listboxElement.filter = this.filter;
+  }
+
+  private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
+    if (this.root.contains(event.relatedTarget as Node)) {
+      return event.stopImmediatePropagation();
+    }
   }
 
   private getOptionElementByValue(value: string): HTMLGuxOptionV2Element {
