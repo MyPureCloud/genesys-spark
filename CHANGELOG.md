@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.47](https://inindca///compare/v3.0.0-alpha.46...v3.0.0-alpha.47) (2022-03-16)
+
+
+### Bug Fixes
+
+* **advanced-dropdown:** deselect not possible any more and filter event not firing on close ([8f492b0](https://inindca///commit/8f492b0c13f7bf4da6ef78fcf38b8df5ff4ad3a7))
+* **dropdown-v2:** stopped emitting internal focus events outside the component ([fe25b70](https://inindca///commit/fe25b70abbcb0be1d9a9f1128c2b07fa7de2ee97))
+* **pr-comment:** adressed PR comment ([37e0632](https://inindca///commit/37e063225fb6a3a3dd60a080ddff36606091d18e))
+
 ## [3.0.0-alpha.46](https://inindca///compare/v3.0.0-alpha.45...v3.0.0-alpha.46) (2022-03-15)
 
 
