@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.52.7](https://inindca///compare/v2.52.6...v2.52.7) (2022-03-16)
+
+
+### Bug Fixes
+
+* **axe-live:** fixed call to axe-live in docs ([d058b63](https://inindca///commit/d058b6312c3a1d2837a0716f17273ca5b25ff4e6))
+
 ### [2.52.6](https://inindca///compare/v2.52.5...v2.52.6) (2022-03-10)
 
 
