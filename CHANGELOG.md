@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.48](https://inindca///compare/v3.0.0-alpha.47...v3.0.0-alpha.48) (2022-03-21)
+
+
+### Features
+
+* **form-field:** explicitly set shadowDOM to false ([b53b9c6](https://inindca///commit/b53b9c6fc1ed4951485930ed3fb1168455e99469))
+
 ## [3.0.0-alpha.47](https://inindca///compare/v3.0.0-alpha.46...v3.0.0-alpha.47) (2022-03-16)
 
 
