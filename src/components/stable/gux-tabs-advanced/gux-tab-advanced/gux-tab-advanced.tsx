@@ -205,6 +205,7 @@ export class GuxTabAdvanced {
           class="gux-tab-options-button"
           onClick={() => this.toggleOptions()}
           tabIndex={this.active ? 0 : -1}
+          disabled={this.guxDisabled}
         >
           <gux-icon
             icon-name="menu-kebab-vertical"
@@ -253,13 +254,13 @@ export class GuxTabAdvanced {
           'gux-dropdown-options': this.hasDropdownOptions,
           'gux-disabled': this.guxDisabled
         }}
-        aria-disabled={this.guxDisabled.toString()}
       >
         <button
           class="gux-tab-button"
           type="button"
           role="tab"
           aria-selected={this.active.toString()}
+          aria-disabled={this.guxDisabled.toString()}
           aria-controls={`gux-${this.tabId}-panel`}
           ref={el => (this.buttonElement = el)}
           tabIndex={this.active ? 0 : -1}
