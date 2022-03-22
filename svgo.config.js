@@ -3,6 +3,8 @@ module.exports = {
   quiet: true,
   plugins: [
     { name: 'removeStyleElement' },
+    { name: 'collapseGroups' },
+    { name: 'removeComments' },
     {
       name: 'removeAttrs',
       params: {
