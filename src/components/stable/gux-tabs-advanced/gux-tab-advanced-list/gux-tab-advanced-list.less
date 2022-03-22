@@ -12,28 +12,29 @@ gux-tab-advanced-list {
     display: flex;
     align-items: flex-end;
     width: 100%;
-    height: 40px;
-    overflow-x: hidden;
+    height: 50px;
+    margin-bottom: @spacing-medium;
+    overflow-x: auto;
     overflow-y: hidden;
-    background-color: @gux-tabs-background;
+    background-color: @gux-grey-90;
+    border-bottom: 1px solid @gux-grey-50;
+    border-radius: 4px 4px 0 0;
 
     .action-button-container {
       display: flex;
-      border-radius: 2px;
+      border-radius: 4px;
 
       .add-tab {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
-        padding: 0;
-        color: @gux-black-30;
-        background-color: @gux-tabs-background;
-        border-color: @gux-off-tab-fill;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: 2px;
+        width: 35px;
+        height: 50px;
+        margin-left: @spacing-3xs;
+        color: @gux-black-50;
+        background-color: @gux-grey-60;
+        border: none;
+        border-radius: 4px;
         transition: color 0.25s;
 
         &:disabled {
@@ -41,11 +42,16 @@ gux-tab-advanced-list {
         }
 
         &:hover {
-          color: @gux-blue-60;
+          background-color: @gux-grey-50;
         }
 
         &:active {
-          background-color: darken(@gux-tabs-background, 5%);
+          background-color: @gux-grey-40;
+        }
+
+        &:focus {
+          border: 3px solid @gux-blue-90;
+          outline: none;
         }
 
         &:focus-visible {
@@ -62,22 +68,19 @@ gux-tab-advanced-list {
 
       .gux-scroll-button-container {
         display: flex;
-        background-color: @gux-off-tab-fill;
         border-radius: 4px;
 
         .gux-scroll-button {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 24px;
-          height: 40px;
+          width: 28px;
+          height: 50px;
           padding: 0;
-          color: @gux-black-30;
-          background-color: @gux-tabs-background;
-          border-color: @gux-off-tab-fill;
-          border-style: solid;
-          border-width: 1px;
-          border-radius: 2px;
+          color: @gux-black-50;
+          background-color: @gux-grey-60;
+          border: none;
+          border-radius: 4px;
           transition: color 0.25s;
 
           &:focus-visible {
@@ -87,8 +90,8 @@ gux-tab-advanced-list {
           }
 
           gux-icon {
-            width: 10px;
-            height: 10px;
+            width: 16px;
+            height: 16px;
           }
 
           &:focus {
@@ -97,11 +100,11 @@ gux-tab-advanced-list {
           }
 
           &:hover {
-            color: @gux-blue-60;
+            background-color: @gux-grey-50;
           }
 
           &:active {
-            background-color: darken(@gux-tabs-background, 5%);
+            background-color: @gux-grey-40;
           }
 
           &:focus-visible {
@@ -116,22 +119,26 @@ gux-tab-advanced-list {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 36px;
-        min-width: 36px;
-        height: 36px;
+        width: 35px;
+        height: 50px;
         padding: 0;
-        margin-left: 4px;
-        color: @gux-black-30;
-        background-color: @gux-off-tab-fill;
+        color: @gux-black-50;
+        background-color: @gux-grey-60;
         border: none;
+        border-radius: 4px;
         transition: color 0.25s;
 
         &:hover {
-          color: @gux-blue-60;
+          background-color: @gux-grey-50;
         }
 
         &:active {
-          background-color: darken(@gux-off-tab-fill, 5%);
+          background-color: @gux-grey-40;
+        }
+
+        &:focus {
+          border: 3px solid @gux-blue-90;
+          outline: none;
         }
 
         &:focus-visible {
@@ -150,6 +157,7 @@ gux-tab-advanced-list {
     .gux-scrollable-section {
       display: flex;
       align-items: flex-end;
+      height: 50px;
       overflow-x: auto;
       scroll-behavior: smooth;
       scrollbar-width: none;
