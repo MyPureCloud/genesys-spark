@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.49](https://inindca///compare/v3.0.0-alpha.48...v3.0.0-alpha.49) (2022-03-22)
+
+
+### Features
+
+* **gux-tabs-advanced:** added tooltip when tab title overflows ([cd11010](https://inindca///commit/cd11010b86a6fa6430f03542e2e0a38bb101a3d7))
+* **gux-tabs-advanced:** rework focus styling and keyboard accessibility ([a0c8744](https://inindca///commit/a0c87444bf0cd7dd6692b32074120c0e3efe53f6))
+* **gux-tabs-advanced:** update test ([2604ab5](https://inindca///commit/2604ab5884441c838cc5e865001f3479d1bde6c6))
+* **gux-tabs-advanced:** updated styling to new designs and changed examples ([3c32b61](https://inindca///commit/3c32b61aa680e45b473272ab533cf408ee97de5d))
+* **gux-tabs-advanced:** updated tests ([91c02ee](https://inindca///commit/91c02ee03876aa94bf61e11495196183942728a4))
+
+
+### Bug Fixes
+
+* **gux-tabs-advanced:** remove empty styling div ([74f475d](https://inindca///commit/74f475d629cf091a7671c4500a80b25614ac5a91))
+* **gux-tabs-advanced:** remove menu kebab padding ([463e7ab](https://inindca///commit/463e7ab7b4d24289d9b51df68abddf52617fa4e7))
+* **gux-tabs-advanced:** style updates and changes to examples ([476f9fe](https://inindca///commit/476f9fe045055321c6e927abf3aacd8cb1b2d86e))
+* **gux-tabs-advanced:** test snapshot update ([74a43f1](https://inindca///commit/74a43f18ccafbaaa553f05c95629b1cbbecd0519))
+* **gux-tabs-advanced:** test update ([d09b8ad](https://inindca///commit/d09b8ad78c20eff3a62f6b7a84ee32a66cc08a22))
+* **gux-tabs-advanced:** use spacing variables ([ad1d1ed](https://inindca///commit/ad1d1ed1e52e1e0224e3fcfb0353698d2dc7991d))
+
 ## [3.0.0-alpha.48](https://inindca///compare/v3.0.0-alpha.47...v3.0.0-alpha.48) (2022-03-21)
 
 
