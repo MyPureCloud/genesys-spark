@@ -13,8 +13,8 @@ export const config: Config = {
   },
   outputTargets: [
     {
-      dir: 'dist',
-      type: 'dist'
+      type: 'dist',
+      dir: 'dist'
     },
     {
       type: 'docs-readme'

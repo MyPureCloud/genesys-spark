@@ -1,13 +1,8 @@
-# Genesys Web Components
+# Spark Web Components
 
-This repo contains a set of custom elements that can be used across Genesys' UIs to provide a common user experience.
+This repo contains the CSS and custom elements that make up Genesys' design system, [Spark](https://spark.genesys.com).
 
-## Updates
-
-If you are a consumer of this library, please subscribe to the "Common UI Development" mailing list to receive any
-important updates about breaking changes or upcoming releases. You can request membership to the Common UI Development group on the Genesys Service Now [Group Membership Request Add](https://genesys.service-now.com/sp_genesys?id=user_profile) page.
-
-You may also want to join the chat room for the Genesys Cloud [Common UI Development](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b)
+## Component Evolution
 
 At any given time there are three types of components present in the library:
 
@@ -23,29 +18,20 @@ For more details on the component evolution process see the full [documentation 
 
 ## Installing the library
 
-### Prerequisites
-
-Published artifacts are stored in our private artifactory/jfrog registry, so you will need to update your
-[.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file to use artifactory. There are some
-[basic instructions](https://confluence.inin.com/display/PureCloud/Setting+up+.npmrc+for+Artifactory) available for
-this. This registry proxies the main NPM registry, but if you need to also use other private registries some
-manual editing of your configuration may be necessary. Please read up on the npmrc docs or ask around in one of
-the Genesys Cloud UI chat rooms if you need help with that.
-
 ### Install
 
-`npm install @genesys/common-webcomponents`
+`npm install genesys-spark-components`
 
 or
 
-`yarn add @genesys/common-webcomponents`
+`yarn add genesys-spark-components`
 
 ## Setting up your App
 
 ### Configuration
 
 Since version 3, you will need to set the "allowSyntheticDefaultImports" compiler option to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
-This new requirement is related to the a new dependency (vega-lite) which was added as part of our visualisation work.
+This new requirement is related to a new dependency (vega-lite) which was added as part of our visualisation work.
 
 ### Stylesheets
 
@@ -66,53 +52,40 @@ Genesys Cloud applications, or other always-online apps should import the librar
 `registerElements` early during application bootstrap to register the components with the browser.
 
 ```javascript
-import { registerElements } from '@genesys/common-webcomponents';
+import { registerElements } from 'genesys-spark-components';
 registerElements();
 ```
 
-This will register the custom elements and automatically configure stencil to load icons and internationalization files from our CDN.
-You shouldn't need to bundle any additional assets into your application.
-
-### Premise/Hybrid applications
-
-If your application runs on local networks and needs to work when the general internet is inaccessible, you'll want to directly use
-stencil's loader.
-
-```javascript
-import { defineCustomElements } from '@genesys/common-webcomponents/loader';
-defineCustomElements();
-// for optional lazy-loaded custom resource location:
-// defineCustomElements(window, { resourcesUrl: 'path/to/deployed/resources' });
-```
-
-You'll also need to make sure the contents of `@genesys/common-webcomponents/dist/genesys-webcomponents/` are deployed with your
-application so that stencil's lazy-loading can fetch those resources. See the stencil [integration docs](https://stenciljs.com/docs/overview)
-for more details.
+This will register the custom elements and automatically configure stencil to load icons and
+internationalization files from our CDN. You shouldn't need to bundle any additional assets
+into your application.
 
 ### Localization
 
-You will need to set a lang attribute on the Gux component or one of its ancestor elements and the Gux component will use that to decide what language to use.
-For example you could set it on the page somewhere at a high level, e.g. `<html lang="en">` or `<body lang="en">` and all the Gux components will use that to decide what language to use.
+You will need to set a lang attribute on the a component or one of its ancestor elements to trigger localization.
+Normally, you should set it on the page somewhere at a high level, e.g. `<html lang="en">` or `<body lang="en">`
+and the components will localize based on that. If no language is set, the components default to English.
 
-### Framework Integrations
+### Framework Integration Notes
 
 - [React](./REACT_INTEGRATION.md)
 
 ## Development and Contribution
 
-The common component library has a very small set of developers, who also work on other projects, so
+The common component library has a small set of developers, who also work on other projects, so
 contribution from users is welcome. If you need a new feature, the best way to get it is to work
-with the team to implement it yourself. You can see the current backlog of tickets in the [COMUI JIRA project](https://inindca.atlassian.net/projects/COMUI).
+with the team to implement it yourself. Please reach out to discuss your work _before_ opening a PR.
+An early conversation is the best way to avoid duplicated effort.
 
-### Prerequisites
-
-- THIS IS THE MOST IMPORTANT PART: Read the [Contributing Guidelines](./CONTRIBUTING.md) before starting development work.
-- [Request access to GenesysCloud Resources](https://confluence.inin.com/display/PureCloud/How+to+Request+Access+to+Genesys+Cloud+Resources)
-- Join the chat room for the Genesys Cloud [Common UI Development Group](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b) and let us know what you're working on!
+Also, be sure to read the [Contributing Guidelines](./CONTRIBUTING.md) before starting development work.
 
 ### Serving component and docs
 
-Once you've checked out the project, this is the easiest way to see your component as you work on it.
+Once you've checked out the project, install the local dependencies and start the dev server.
+
+```sh
+npm install
+```
 
 ```sh
 npm run dev
@@ -143,6 +116,10 @@ npm run test.watch
 
 ### Documenting your component
 
-To document a component, add an entry under `docs/src/components-spec.json` describing any attributes and events
-for your component, and place an `example.html` file in the component directory the demonstrates the use of
-the component. Afterward, it will show up in the documentation site.
+Add an `example.html` file to your component's implementation directory with some examples.
+
+## Notes for external users
+
+Currently this project is primarily use for internal Genesys projects, so most of our issue tracking and planning
+is done in internal tools. We do still look at GitHub isssues, but please understand that we're a small team and
+may not be able to address items right away, depending on internal priorities.

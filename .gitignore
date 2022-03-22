@@ -1,8 +1,6 @@
 build/
 dist/
 .docs/
-.npmrc
-./docs/.npmrc
 src/i18n/locales.json
 
 *~
