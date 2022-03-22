@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.52.9](https://inindca///compare/v2.52.8...v2.52.9) (2022-03-22)
+
+
+### Bug Fixes
+
+* **dropdown-v2:** stopped emitting internal focus events outside the component ([01fa65f](https://inindca///commit/01fa65fc4f5bffc1acda36df60af4c1fdf46174e))
+
 ### [2.52.8](https://inindca///compare/v2.52.7...v2.52.8) (2022-03-17)
 
 
