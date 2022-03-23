@@ -27,7 +27,7 @@
 
 ### `getSelected() => Promise<GuxTableSelectedState>`
 
-
+Returns the selected rows Ids.
 
 #### Returns
 
