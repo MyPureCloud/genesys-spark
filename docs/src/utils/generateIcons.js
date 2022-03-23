@@ -298,6 +298,8 @@ const icons = [
       'resource',
       'run',
       'scripter',
+      'shield-outline',
+      'shield-solid',
       'skills',
       'stamp',
       'subtract-circle',
