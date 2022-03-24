@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.51](https://inindca///compare/v3.0.0-alpha.50...v3.0.0-alpha.51) (2022-03-24)
+
+
+### Features
+
+* **popup:** enabled shadowDOM ([4417291](https://inindca///commit/44172917a681874aca74910a95d774932d533534))
+
+
+### Bug Fixes
+
+* **gux-tabs-advanced:** addressed a few style issues that still needed attention after redesign ([e02e46a](https://inindca///commit/e02e46ad4e2578113fc4a599a9ad4a373b3aa1ca))
+* **pr-comment:** addressd PR comment ([8e8fb99](https://inindca///commit/8e8fb99714ce820bd5ed0bafe28f2a5442065e08))
+
 ## [3.0.0-alpha.50](https://inindca///compare/v3.0.0-alpha.49...v3.0.0-alpha.50) (2022-03-23)
 
 
