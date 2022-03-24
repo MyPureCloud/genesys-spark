@@ -5,7 +5,9 @@ const glob = require('glob');
 const path = require('path');
 
 async function listShadowExplicitlySet() {
-  const files = glob.sync('src/components/@(beta|stable|legacy)/*/*.tsx');
+  const files = glob.sync('src/components/@(beta|stable|legacy)/*/*.tsx', {
+    ignore: 'src/components/@(beta|stable|legacy)/*/*.functional.tsx'
+  });
 
   const output = await Promise.all(
     files.map(async file => {
