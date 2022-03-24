@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.53.0](https://inindca///compare/v2.52.9...v2.53.0) (2022-03-24)
+
+
+### Features
+
+* **gux-icon:** added shield-solid and shield-outline icons ([aa4172e](https://inindca///commit/aa4172ea01f4b610365f3b5cbbd826b777dc95e5))
+
 ### [2.52.9](https://inindca///compare/v2.52.8...v2.52.9) (2022-03-22)
 
 
