@@ -5,7 +5,7 @@
 <gux-tabs class="example" active-tab="1-2">
   <gux-tab-list slot="tab-list">
     <gux-tab tab-id="1-1">
-      <span>Tab Header 1</span>
+      <span id="tabTitle1">Tab Header 1</span>
     </gux-tab>
     <gux-tab tab-id="1-2">
       <span>Tab Header 2</span>
@@ -47,6 +47,7 @@
     <div>
       The current selected panel tab-id is: <span id="currenttab-id"></span>
     </div>
+    <gux-button id="changeTabTitle"> Change Tab Name</gux-button>
   </gux-tab-panel>
   <gux-tab-panel tab-id="1-2">
     <span>Tab content 2</span>
@@ -254,6 +255,17 @@
       const currentTime = new Date().toLocaleTimeString();
       document.querySelector('#currentTime').innerHTML = currentTime;
       document.querySelector('#currenttab-id').innerHTML = event.detail;
+    })
+    document.querySelector(`#changeTabTitle`).addEventListener('click',
+    () => {
+      const tabTitle1 = document.querySelector(`#tabTitle1`);
+      if (tabTitle1.innerText === 'Tab Header 1') {
+        tabTitle1.innerText = 'Long title long title long title long title'
+      } else if (tabTitle1.innerText === 'Long title long title long title long title') {
+        tabTitle1.innerText = 'Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1'
+      } else {
+        tabTitle1.innerText = 'Tab Header 1'
+      }
     })
   }
   )()"

@@ -3,7 +3,7 @@
 <gux-tabs-advanced>
   <gux-tab-advanced-list slot="tab-list" show-new-tab-button="false">
     <gux-tab-advanced tab-id="1-1">
-      <span slot="title">Tab Header 1</span>
+      <span id="tabTitle1" slot="title">Tab Header 1</span>
     </gux-tab-advanced>
     <gux-tab-advanced tab-id="1-2">
       <span slot="title">Tab Header 2</span>
@@ -18,9 +18,13 @@
     <div>
       The current selected panel tab-id is: <span id="currenttab-id"></span>
     </div>
+    <gux-button id="changeTabTitle"> Change Tab Name</gux-button>
   </gux-tab-advanced-panel>
   <gux-tab-advanced-panel tab-id="1-2">
     <span>Tab content 2</span>
+  </gux-tab-advanced-panel>
+  <gux-tab-advanced-panel tab-id="1-3">
+    <span>Tab content 3</span>
   </gux-tab-advanced-panel>
 </gux-tabs-advanced>
 
@@ -409,6 +413,17 @@
       const currentTime = new Date().toLocaleTimeString();
       document.querySelector('#currentTime').innerHTML = currentTime;
       document.querySelector('#currenttab-id').innerHTML = event.detail;
+    })
+    document.querySelector(`#changeTabTitle`).addEventListener('click',
+    () => {
+      const tabTitle1 = document.querySelector(`#tabTitle1`);
+      if (tabTitle1.innerText === 'Tab Header 1') {
+        tabTitle1.innerText = 'Long title long title long title long title'
+      } else if (tabTitle1.innerText === 'Long title long title long title long title') {
+        tabTitle1.innerText = 'Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1'
+      } else {
+        tabTitle1.innerText = 'Tab Header 1'
+      }
     })
   }
   )()"
