@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.53.1](https://inindca///compare/v2.53.0...v2.53.1) (2022-03-25)
+
 ## [2.53.0](https://inindca///compare/v2.52.9...v2.53.0) (2022-03-24)
 
 
