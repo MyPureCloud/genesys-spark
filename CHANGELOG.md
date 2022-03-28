@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.51](https://inindca///compare/v3.0.0-alpha.50...v3.0.0-alpha.51) (2022-03-24)
+
+
+### Features
+
+* **popup:** enabled shadowDOM ([4417291](https://inindca///commit/44172917a681874aca74910a95d774932d533534))
+
+
+### Bug Fixes
+
+* **gux-tabs-advanced:** addressed a few style issues that still needed attention after redesign ([e02e46a](https://inindca///commit/e02e46ad4e2578113fc4a599a9ad4a373b3aa1ca))
+* **pr-comment:** addressd PR comment ([8e8fb99](https://inindca///commit/8e8fb99714ce820bd5ed0bafe28f2a5442065e08))
+
+## [3.0.0-alpha.50](https://inindca///compare/v3.0.0-alpha.49...v3.0.0-alpha.50) (2022-03-23)
+
+
+### Features
+
+* **gux-icon:** add shield outline and shield solid svgs ([3535c0d](https://inindca///commit/3535c0db0e0477ae677bb011dc7f01f35ef5e680))
+* **table:** better no-content style and fixed scroll corner cases ([4290da6](https://inindca///commit/4290da627a34c7a7155080b7804fe8a102c0a539))
+* **table:** Enable shadow DOM for gux-table ([05c53ad](https://inindca///commit/05c53ada3d9dcb1eaca013c895906e24be470940))
+
 ## [3.0.0-alpha.49](https://inindca///compare/v3.0.0-alpha.48...v3.0.0-alpha.49) (2022-03-22)
 
 

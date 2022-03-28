@@ -5,7 +5,7 @@
   "bracketSpacing": true,
   "trailingComma": "none",
   "arrowParens": "avoid",
-  "jsxBracketSameLine": false,
+  "bracketSameLine": false,
   "printWidth": 80,
   "useTabs": false,
   "proseWrap": "preserve",
