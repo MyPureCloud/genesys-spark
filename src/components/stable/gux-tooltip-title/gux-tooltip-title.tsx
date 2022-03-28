@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
+import { Component, Element, h, JSX, State } from '@stencil/core';
 import { logError } from '../../../utils/error/log-error';
 import { OnMutation } from '../../../utils/decorator/on-mutation';
 
@@ -11,23 +11,16 @@ export class GuxTooltipTitle {
   @Element()
   private root: HTMLElement;
 
-  @Prop()
-  tabWidth: number;
-
   @State()
   private showTooltip: boolean = true;
 
   @State()
   private titleName: string = '';
 
-  @Watch('titleName')
-  updateTooltipHideOrShow() {
-    this.checkForTooltipHideOrShow();
-  }
-
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.titleName = this.setTooltipText();
+    this.checkForTooltipHideOrShow();
   }
 
   componentWillLoad() {
@@ -96,13 +89,17 @@ export class GuxTooltipTitle {
   }
 
   private checkForTooltipHideOrShow(): void {
-    const clientWidth = this.root.clientWidth;
+    const titleContainer: HTMLSpanElement = this.root.querySelector(
+      '.gux-title-container'
+    );
+    this.root.classList.remove('gux-overflow-hidden');
     if (this.hasIconSrText()) {
       this.showTooltip = true;
-    } else if (this.tabWidth && clientWidth < this.tabWidth) {
-      this.showTooltip = false;
-    } else {
+    } else if (titleContainer?.scrollWidth > titleContainer?.offsetWidth) {
+      this.root.classList.add('gux-overflow-hidden');
       this.showTooltip = true;
+    } else {
+      this.showTooltip = false;
     }
   }
 
