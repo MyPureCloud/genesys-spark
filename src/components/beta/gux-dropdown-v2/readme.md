@@ -25,6 +25,7 @@
 ### Used by
 
  - [gux-pagination-items-per-page](../../stable/gux-pagination/gux-pagination-items-per-page)
+ - [gux-pagination-items-per-page-beta](../gux-pagination-beta/gux-pagination-items-per-page-beta)
 
 ### Depends on
 
@@ -37,6 +38,7 @@ graph TD;
   gux-dropdown-v2-beta --> gux-icon
   gux-dropdown-v2-beta --> gux-popup-beta
   gux-pagination-items-per-page --> gux-dropdown-v2-beta
+  gux-pagination-items-per-page-beta --> gux-dropdown-v2-beta
   style gux-dropdown-v2-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

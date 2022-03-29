@@ -1,0 +1,9 @@
+{
+  "page": "Stránka",
+  "totalPages": " z {totalPages, number}",
+  "first": "První",
+  "previous": "Předchozí",
+  "next": "Další",
+  "last": "Poslední",
+  "pageInputLabel": "Strana {currentPage, number}/{totalPages, number}"
+}
