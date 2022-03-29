@@ -23,6 +23,7 @@
  - [gux-action-button](../../stable/gux-action-button)
  - [gux-button-multi](../gux-button-multi)
  - [gux-pagination-buttons](../../stable/gux-pagination/gux-pagination-buttons)
+ - [gux-pagination-buttons-beta](../gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-cursor](../../stable/gux-pagination-cursor)
  - [gux-table-beta](../gux-table)
 
@@ -32,6 +33,7 @@ graph TD;
   gux-action-button --> gux-button-slot-beta
   gux-button-multi --> gux-button-slot-beta
   gux-pagination-buttons --> gux-button-slot-beta
+  gux-pagination-buttons-beta --> gux-button-slot-beta
   gux-pagination-cursor --> gux-button-slot-beta
   gux-table-beta --> gux-button-slot-beta
   style gux-button-slot-beta fill:#f9f,stroke:#333,stroke-width:4px

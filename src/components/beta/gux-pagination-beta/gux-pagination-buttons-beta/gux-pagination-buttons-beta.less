@@ -1,0 +1,92 @@
+@import (reference) '../../../../style/color-palette.less';
+
+gux-pagination-buttons-beta {
+  color: @gux-black-50;
+
+  .gux-pagination-buttons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    justify-content: flex-end;
+
+    & > div {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+    }
+
+    .gux-pagination-buttons-group {
+      white-space: nowrap;
+
+      gux-button-slot-beta:not(:first-of-type) {
+        margin-left: 8px;
+      }
+    }
+
+    .gux-pagination-buttons-input-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: center;
+      justify-content: center;
+      margin: 0 16px;
+
+      & > div {
+        flex: 0 1 auto;
+        align-self: auto;
+        order: 0;
+        white-space: nowrap;
+      }
+
+      .gux-pagination-buttons-input {
+        width: 60px;
+        margin: 0 8px;
+
+        input {
+          width: inherit;
+          text-align: center;
+        }
+      }
+    }
+
+    .gux-pagination-buttons-list-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: center;
+      justify-content: center;
+
+      .gux-pagination-buttons-list-current,
+      .gux-pagination-buttons-list-target {
+        height: 32px;
+        padding: 0 8px;
+        margin: 0;
+        background: inherit;
+        border: none;
+
+        &:focus-visible {
+          border: 3px solid @gux-blue-90;
+          border-radius: 5px;
+          outline: none;
+        }
+      }
+
+      .gux-pagination-buttons-list-current {
+        font-weight: 600;
+      }
+
+      .gux-pagination-buttons-list-target {
+        color: @gux-blue-60;
+        cursor: pointer;
+      }
+    }
+
+    .gux-pagination-buttons-spacer {
+      width: 8px;
+    }
+  }
+}

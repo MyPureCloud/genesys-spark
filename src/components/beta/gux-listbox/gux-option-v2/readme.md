@@ -20,11 +20,13 @@
 ### Used by
 
  - [gux-pagination-items-per-page](../../../stable/gux-pagination/gux-pagination-items-per-page)
+ - [gux-pagination-items-per-page-beta](../../gux-pagination-beta/gux-pagination-items-per-page-beta)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-pagination-items-per-page --> gux-option-v2
+  gux-pagination-items-per-page-beta --> gux-option-v2
   style gux-option-v2 fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
