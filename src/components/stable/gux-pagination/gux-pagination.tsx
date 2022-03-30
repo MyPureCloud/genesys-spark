@@ -10,6 +10,8 @@ import {
   State
 } from '@stencil/core';
 
+import { logWarn } from '../../../utils/error/log-error';
+
 import { trackComponent } from '../../../usage-tracking';
 
 import {
@@ -135,6 +137,22 @@ export class GuxPagination implements ComponentInterface {
 
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.layout });
+    if (this.layout === 'full') {
+      logWarn(
+        'gux-pagination',
+        'Pagination "full" layout will be deprecated. Use gux-pagination-beta "advanced" layout instead.'
+      );
+    } else if (this.layout === 'expanded') {
+      logWarn(
+        'gux-pagination',
+        'Pagination "expanded" layout will be deprecated. Use gux-pagination-beta "advanced" layout instead.'
+      );
+    } else if (this.layout === 'small') {
+      logWarn(
+        'gux-pagination',
+        'Pagination "small" layout will be deprecated. Use gux-pagination-beta "simple" layout instead.'
+      );
+    }
   }
 
   componentWillRender(): void {
