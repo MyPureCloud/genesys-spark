@@ -1,3 +1,5 @@
+@import (reference) '../../../style/color.less';
+@import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/spacing.less';
 
 gux-tooltip-title {
@@ -27,7 +29,35 @@ gux-tooltip-title {
     }
   }
 
-  .gux-hide-tooltip {
-    display: none;
+  .gux-tooltip-text {
+    &:not(.gux-show-tooltip) {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &.gux-show-tooltip {
+      position: absolute;
+      z-index: 1;
+      box-sizing: border-box;
+      max-width: 250px;
+      height: auto;
+      padding: (3 * @spacing-3xs) @spacing-small;
+      margin-top: @spacing-medium;
+      font-size: 12px;
+      color: @gux-black-50;
+      text-align: left;
+      overflow-wrap: break-word;
+      white-space: normal;
+      pointer-events: none;
+      visibility: visible;
+      background-color: @gux-grey-100;
+      border: 1px solid @gux-grey-30;
+      border-radius: 4px;
+      opacity: 1;
+      transition: opacity 0.25s ease-in-out;
+      .gux-shadow-20();
+    }
   }
 }

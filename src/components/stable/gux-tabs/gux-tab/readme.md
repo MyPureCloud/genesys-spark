@@ -64,7 +64,6 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-tab --> gux-tooltip-title
-  gux-tooltip-title --> gux-tooltip
   style gux-tab fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
