@@ -5,13 +5,6 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property   | Attribute   | Description | Type     | Default     |
-| ---------- | ----------- | ----------- | -------- | ----------- |
-| `tabWidth` | `tab-width` |             | `number` | `undefined` |
-
-
 ## Dependencies
 
 ### Used by

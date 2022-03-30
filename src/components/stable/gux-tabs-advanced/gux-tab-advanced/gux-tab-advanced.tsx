@@ -266,16 +266,8 @@ export class GuxTabAdvanced {
           tabIndex={this.active ? 0 : -1}
           id={`gux-${this.tabId}-tab`}
         >
-          {this.tabIconName ? (
-            <div class="tab-icon-container">
-              <gux-icon
-                icon-name={this.tabIconName}
-                decorative={true}
-              ></gux-icon>
-            </div>
-          ) : null}
-          <gux-tooltip-title tab-width={109}>
-            <slot name="title" />
+          <gux-tooltip-title>
+            <slot />
           </gux-tooltip-title>
         </button>
 

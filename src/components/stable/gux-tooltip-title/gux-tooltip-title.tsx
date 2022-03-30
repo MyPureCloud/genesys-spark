@@ -1,5 +1,6 @@
-import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import { Component, Element, h, JSX, State } from '@stencil/core';
 import { logError } from '../../../utils/error/log-error';
+import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({
   styleUrl: 'gux-tooltip-title.less',
@@ -7,51 +8,98 @@ import { logError } from '../../../utils/error/log-error';
   shadow: false
 })
 export class GuxTooltipTitle {
-  private titleName: string = '';
-
   @Element()
   private root: HTMLElement;
 
-  @Prop()
-  tabWidth: number;
+  @State()
+  private showTooltip: boolean = true;
 
-  @State() private showTooltip: boolean = true;
+  @State()
+  private titleName: string = '';
+
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    this.titleName = this.setTooltipText();
+    this.checkForTooltipHideOrShow();
+  }
 
   componentWillLoad() {
-    if (
+    this.titleName = this.setTooltipText();
+  }
+
+  componentDidLoad() {
+    this.logErrorNoIconSrText();
+  }
+
+  private isIconOnlyTitle(): boolean {
+    return !!(
       this.root.querySelector('gux-icon') &&
-      this.root.children.length === 1
-    ) {
-      if (
-        this.root.querySelector('gux-icon').hasAttribute('screenreader-text')
-      ) {
-        this.titleName = this.root
-          .querySelector('gux-icon')
-          .getAttribute('screenreader-text');
-      } else {
-        logError(
-          'gux-tooltip-title',
-          'No screenreader-text provided. Provide a localized screenreader-text property for the gux-icon. The screenreader-text property is used for the icon screenreader text and the tooltip.'
-        );
-      }
-    } else {
-      const children = Array.from(this.root.children);
-      children.map(element => {
-        if (element.tagName !== 'GUX-ICON') {
-          this.titleName += element.innerHTML;
-        } else {
-          element.classList.add('gux-tooltip-icon-decorative');
-        }
-      });
-      this.checkForTooltipHideOrShow();
+      this.root.querySelector('.gux-title-container')?.children.length === 1
+    );
+  }
+
+  private hasIconSrText(): boolean {
+    return !!(
+      this.isIconOnlyTitle() &&
+      this.root.querySelector('gux-icon')?.hasAttribute('screenreader-text')
+    );
+  }
+
+  private getIconOnlyTooltipText(): string {
+    if (this.isIconOnlyTitle()) {
+      return this.root
+        .querySelector('gux-icon')
+        .getAttribute('screenreader-text');
     }
   }
 
-  private checkForTooltipHideOrShow() {
-    const clientWidth = this.root.clientWidth;
-    if (this.tabWidth && clientWidth < this.tabWidth) {
+  private logErrorNoIconSrText(): void {
+    if (this.isIconOnlyTitle() && !this.hasIconSrText()) {
+      logError(
+        'gux-tooltip-title',
+        'No screenreader-text provided. Provide a localized screenreader-text property for the gux-icon. The screenreader-text property is used for the icon screenreader text and the tooltip.'
+      );
+    }
+  }
+
+  private addIconDecorative(element: HTMLElement): void {
+    element.classList.add('gux-tooltip-icon-decorative');
+  }
+
+  private setTooltipText(): string {
+    if (this.isIconOnlyTitle()) {
+      return this.getIconOnlyTooltipText();
+    } else {
+      return this.setTooltipTitleText();
+    }
+  }
+
+  private setTooltipTitleText(): string {
+    const children = Array.from(this.root.children);
+    let titleNameText = '';
+    children.map(element => {
+      if (element.tagName !== 'GUX-ICON' && element.tagName !== 'GUX-TOOLTIP') {
+        titleNameText += element.textContent;
+      } else {
+        this.addIconDecorative(element as HTMLElement);
+      }
+    });
+
+    return titleNameText;
+  }
+
+  private checkForTooltipHideOrShow(): void {
+    const titleContainer: HTMLSpanElement = this.root.querySelector(
+      '.gux-title-container'
+    );
+    this.root.classList.remove('gux-overflow-hidden');
+    if (this.hasIconSrText()) {
+      this.showTooltip = true;
+    } else if (titleContainer?.scrollWidth > titleContainer?.offsetWidth) {
+      this.root.classList.add('gux-overflow-hidden');
+      this.showTooltip = true;
+    } else {
       this.showTooltip = false;
-      return;
     }
   }
 
