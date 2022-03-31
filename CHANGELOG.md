@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.54](https://inindca///compare/v3.0.0-alpha.53...v3.0.0-alpha.54) (2022-03-31)
+
+
+### Features
+
+* **gux-dropdown:** explicitly set shadowDOM to false ([6d22c6f](https://inindca///commit/6d22c6f1d932da7daf120b8839a426b1c8c9c54e))
+
 ## [3.0.0-alpha.53](https://inindca///compare/v3.0.0-alpha.52...v3.0.0-alpha.53) (2022-03-30)
 
 
