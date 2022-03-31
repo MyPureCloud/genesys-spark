@@ -98,10 +98,7 @@ export class GuxTooltipTitle {
     const children = Array.from(this.root.children);
     let titleNameText = '';
     children.map(element => {
-      if (
-        element.tagName !== 'GUX-ICON' &&
-        !element.classList.contains('gux-tooltip-text')
-      ) {
+      if (element.tagName !== 'GUX-ICON' && element.tagName !== 'GUX-TOOLTIP') {
         titleNameText += element.textContent;
       } else {
         this.addIconDecorative(element as HTMLElement);
@@ -138,14 +135,7 @@ export class GuxTooltipTitle {
   private renderTooltip(): JSX.Element {
     if (this.hasTooltip) {
       return (
-        <div
-          class={{
-            'gux-tooltip-text': true,
-            'gux-show-tooltip': this.showTooltip
-          }}
-        >
-          {this.titleName}
-        </div>
+        <gux-tooltip hidden={!this.showTooltip}>{this.titleName}</gux-tooltip>
       ) as JSX.Element;
     }
   }
