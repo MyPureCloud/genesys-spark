@@ -23,27 +23,21 @@ the pagination state.
 | `totalItems`   | `total-items`    | The total number of items in the data set. Used to calculate total page count   | `number`                 | `0`          |
 
 
-## Events
-
-| Event                 | Description | Type                                                          |
-| --------------------- | ----------- | ------------------------------------------------------------- |
-| `guxpaginationchange` |             | `CustomEvent<{ currentPage: number; itemsPerPage: number; }>` |
-
-
 ## Dependencies
 
 ### Depends on
 
-- [gux-pagination-item-counts-beta](gux-pagination-item-counts-beta)
-- [gux-pagination-items-per-page-beta](gux-pagination-items-per-page-beta)
-- [gux-pagination-buttons-beta](gux-pagination-buttons-beta)
+- [gux-pagination-advanced-beta](gux-pagination-advanced-beta)
+- [gux-pagination-simple-beta](gux-pagination-simple-beta)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-pagination-beta --> gux-pagination-item-counts-beta
-  gux-pagination-beta --> gux-pagination-items-per-page-beta
-  gux-pagination-beta --> gux-pagination-buttons-beta
+  gux-pagination-beta --> gux-pagination-advanced-beta
+  gux-pagination-beta --> gux-pagination-simple-beta
+  gux-pagination-advanced-beta --> gux-pagination-item-counts-beta
+  gux-pagination-advanced-beta --> gux-pagination-items-per-page-beta
+  gux-pagination-advanced-beta --> gux-pagination-buttons-beta
   gux-pagination-items-per-page-beta --> gux-dropdown-v2-beta
   gux-pagination-items-per-page-beta --> gux-listbox
   gux-pagination-items-per-page-beta --> gux-option-v2
@@ -51,6 +45,8 @@ graph TD;
   gux-dropdown-v2-beta --> gux-popup-beta
   gux-pagination-buttons-beta --> gux-button-slot-beta
   gux-pagination-buttons-beta --> gux-icon
+  gux-pagination-simple-beta --> gux-pagination-item-counts-beta
+  gux-pagination-simple-beta --> gux-pagination-buttons-beta
   style gux-pagination-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

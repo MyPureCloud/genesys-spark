@@ -1,11 +1,11 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page-beta';
+import { GuxPaginationItemsPerPageBeta } from '../gux-pagination-items-per-page-beta';
 import { GuxDropdownV2Beta } from '../../../gux-dropdown-v2/gux-dropdown-v2';
 import { GuxListbox } from '../../../gux-listbox/gux-listbox';
 import { GuxOptionV2 } from '../../../gux-listbox/gux-option-v2/gux-option-v2';
 
 const components = [
-  GuxPaginationItemsPerPage,
+  GuxPaginationItemsPerPageBeta,
   GuxDropdownV2Beta,
   GuxListbox,
   GuxOptionV2
@@ -28,7 +28,7 @@ describe('gux-pagination-items-per-page', () => {
         `;
         const page = await newSpecPage({ components, html, language });
 
-        expect(page.rootInstance).toBeInstanceOf(GuxPaginationItemsPerPage);
+        expect(page.rootInstance).toBeInstanceOf(GuxPaginationItemsPerPageBeta);
 
         expect(page.root).toMatchSnapshot();
       });

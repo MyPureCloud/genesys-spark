@@ -2,8 +2,6 @@ import {
   Component,
   ComponentInterface,
   Element,
-  Event,
-  EventEmitter,
   h,
   JSX,
   Prop,
@@ -14,16 +12,20 @@ import { trackComponent } from '../../../usage-tracking';
 
 import {
   GuxItemsPerPage,
-  GuxPaginationLayoutBeta,
-  GuxPaginationState
+  GuxPaginationLayoutBeta
 } from './gux-pagination-beta.types';
+
+import {
+  calculateTotalPages,
+  calculateCurrentPage
+} from './gux-pagination-beta.service';
 
 @Component({
   styleUrl: 'gux-pagination-beta.less',
   tag: 'gux-pagination-beta',
   shadow: true
 })
-export class GuxPagination implements ComponentInterface {
+export class GuxPaginationBeta implements ComponentInterface {
   @Element()
   private root: HTMLElement;
 
@@ -63,105 +65,45 @@ export class GuxPagination implements ComponentInterface {
   @State()
   private totalPages: number;
 
-  @Event()
-  private guxpaginationchange: EventEmitter<GuxPaginationState>;
-
-  private setPage(page: number): void {
-    if (page < 0) {
-      if (this.totalPages > 0) {
-        this.setPage(1);
-      } else {
-        this.setPage(0);
-      }
-
-      return;
-    }
-
-    const totalPages = this.calculatTotalPages();
-    if (page > totalPages) {
-      this.setPage(totalPages);
-      return;
-    }
-
-    this.currentPage = page;
-    this.guxpaginationchange.emit({
-      currentPage: this.currentPage,
-      itemsPerPage: this.itemsPerPage
-    });
-  }
-
-  private calculatTotalPages(): number {
-    return Math.ceil(this.totalItems / this.itemsPerPage);
-  }
-
-  private calculateCurrentPage(): number {
-    const minCurrentPage = this.totalPages > 0 ? 1 : 0;
-
-    return Math.max(
-      minCurrentPage,
-      Math.min(this.currentPage, this.totalPages)
-    );
-  }
-
-  private handleInternalitemsperpagechange(event: CustomEvent): void {
-    this.itemsPerPage = event.detail as GuxItemsPerPage;
-    this.setPage(1);
-  }
-
-  private handleInternalcurrentpagechange(event: CustomEvent): void {
-    this.setPage(event.detail as number);
-  }
-
-  private getPaginationInfoElement(
-    layout: GuxPaginationLayoutBeta
-  ): JSX.Element {
-    const content = [
-      <gux-pagination-item-counts-beta
-        total-items={this.totalItems}
-        current-page={this.currentPage}
-        items-per-page={this.itemsPerPage}
-        pages-unknown={this.pagesUnknown}
-      />
-    ];
-
-    if (layout === 'advanced') {
-      content.push(
-        <gux-pagination-items-per-page-beta
-          items-per-page={this.itemsPerPage}
-          onInternalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
-            this
-          )}
-        ></gux-pagination-items-per-page-beta>
-      );
-    }
-
-    return (<div class="gux-pagination-info">{content}</div>) as JSX.Element;
-  }
-
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.layout });
   }
 
   componentWillRender(): void {
-    this.totalPages = this.calculatTotalPages();
-    this.currentPage = this.calculateCurrentPage();
+    this.totalPages = calculateTotalPages(this.totalItems, this.itemsPerPage);
+    this.currentPage = calculateCurrentPage(this.totalPages, this.currentPage);
+  }
+
+  private renderAdvancedPagination(): JSX.Element {
+    return (
+      <gux-pagination-advanced-beta
+        total-items={this.totalItems}
+        current-page={this.currentPage}
+        items-per-page={this.itemsPerPage}
+        pages-unknown={this.pagesUnknown}
+        total-pages={this.totalPages}
+      ></gux-pagination-advanced-beta>
+    ) as JSX.Element;
+  }
+
+  private renderSimplePagination(): JSX.Element {
+    return (
+      <gux-pagination-simple-beta
+        total-items={this.totalItems}
+        current-page={this.currentPage}
+        items-per-page={this.itemsPerPage}
+        pages-unknown={this.pagesUnknown}
+        total-pages={this.totalPages}
+      ></gux-pagination-simple-beta>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
-    return (
-      <div class="gux-pagination-container">
-        {this.getPaginationInfoElement(this.layout)}
-        <div class="gux-pagination-change">
-          <gux-pagination-buttons-beta
-            layout={this.layout}
-            current-page={this.currentPage}
-            total-pages={this.totalPages}
-            onInternalcurrentpagechange={this.handleInternalcurrentpagechange.bind(
-              this
-            )}
-          />
-        </div>
-      </div>
-    ) as JSX.Element;
+    switch (this.layout) {
+      case 'advanced':
+        return this.renderAdvancedPagination();
+      case 'simple':
+        return this.renderSimplePagination();
+    }
   }
 }

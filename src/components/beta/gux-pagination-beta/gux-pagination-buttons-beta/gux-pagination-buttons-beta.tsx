@@ -18,7 +18,7 @@ import { GuxPaginationButtonsService } from './gux-pagination-button-beta.servic
   styleUrl: 'gux-pagination-buttons-beta.less',
   tag: 'gux-pagination-buttons-beta'
 })
-export class GuxPaginationButtons {
+export class GuxPaginationButtonsBeta {
   @Element()
   private root: HTMLElement;
 

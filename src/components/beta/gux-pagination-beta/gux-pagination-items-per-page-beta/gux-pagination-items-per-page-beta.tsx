@@ -19,7 +19,7 @@ import { GuxItemsPerPage } from '../gux-pagination-beta.types';
   styleUrl: 'gux-pagination-items-per-page-beta.less',
   tag: 'gux-pagination-items-per-page-beta'
 })
-export class GuxPaginationItemsPerPage implements ComponentInterface {
+export class GuxPaginationItemsPerPageBeta implements ComponentInterface {
   private i18n: GetI18nValue;
   private dropdownElement: HTMLGuxDropdownV2BetaElement;
 
