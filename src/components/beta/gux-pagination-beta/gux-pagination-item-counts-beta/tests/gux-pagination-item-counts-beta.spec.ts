@@ -1,7 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxPaginationItemCounts } from '../gux-pagination-item-counts-beta';
+import { GuxPaginationItemCountsBeta } from '../gux-pagination-item-counts-beta';
 
-const components = [GuxPaginationItemCounts];
+const components = [GuxPaginationItemCountsBeta];
 const language = 'en';
 
 describe('gux-pagination-item-counts', () => {
@@ -25,7 +25,7 @@ describe('gux-pagination-item-counts', () => {
         `;
         const page = await newSpecPage({ components, html, language });
 
-        expect(page.rootInstance).toBeInstanceOf(GuxPaginationItemCounts);
+        expect(page.rootInstance).toBeInstanceOf(GuxPaginationItemCountsBeta);
 
         expect(page.root).toMatchSnapshot();
       });

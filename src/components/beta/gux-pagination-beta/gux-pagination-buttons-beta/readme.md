@@ -26,7 +26,8 @@ An internal component used by the gux-pagination component.
 
 ### Used by
 
- - [gux-pagination-beta](..)
+ - [gux-pagination-advanced-beta](../gux-pagination-advanced-beta)
+ - [gux-pagination-simple-beta](../gux-pagination-simple-beta)
 
 ### Depends on
 
@@ -38,7 +39,8 @@ An internal component used by the gux-pagination component.
 graph TD;
   gux-pagination-buttons-beta --> gux-button-slot-beta
   gux-pagination-buttons-beta --> gux-icon
-  gux-pagination-beta --> gux-pagination-buttons-beta
+  gux-pagination-advanced-beta --> gux-pagination-buttons-beta
+  gux-pagination-simple-beta --> gux-pagination-buttons-beta
   style gux-pagination-buttons-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

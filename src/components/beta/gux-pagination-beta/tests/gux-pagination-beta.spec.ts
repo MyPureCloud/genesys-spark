@@ -1,14 +1,14 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxPagination } from '../gux-pagination-beta';
+import { GuxPaginationBeta } from '../gux-pagination-beta';
 
 import { GuxButton } from '../../../stable/gux-button/gux-button';
 import { GuxDropdownV2Beta } from '../../gux-dropdown-v2/gux-dropdown-v2';
 import { GuxListbox } from '../../gux-listbox/gux-listbox';
 import { GuxOptionV2 } from '../../gux-listbox/gux-option-v2/gux-option-v2';
 import { GuxOption } from '../../../stable/gux-dropdown/gux-option/gux-option';
-import { GuxPaginationButtons } from '../gux-pagination-buttons-beta/gux-pagination-buttons-beta';
-import { GuxPaginationItemCounts } from '../gux-pagination-item-counts-beta/gux-pagination-item-counts-beta';
-import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page-beta/gux-pagination-items-per-page-beta';
+import { GuxPaginationButtonsBeta } from '../gux-pagination-buttons-beta/gux-pagination-buttons-beta';
+import { GuxPaginationItemCountsBeta } from '../gux-pagination-item-counts-beta/gux-pagination-item-counts-beta';
+import { GuxPaginationItemsPerPageBeta } from '../gux-pagination-items-per-page-beta/gux-pagination-items-per-page-beta';
 
 const components = [
   GuxButton,
@@ -16,10 +16,10 @@ const components = [
   GuxListbox,
   GuxOptionV2,
   GuxOption,
-  GuxPagination,
-  GuxPaginationButtons,
-  GuxPaginationItemCounts,
-  GuxPaginationItemsPerPage
+  GuxPaginationBeta,
+  GuxPaginationButtonsBeta,
+  GuxPaginationItemCountsBeta,
+  GuxPaginationItemsPerPageBeta
 ];
 
 const language = 'en';
@@ -101,7 +101,7 @@ describe('gux-pagination', () => {
         `;
         const page = await newSpecPage({ components, html, language });
 
-        expect(page.rootInstance).toBeInstanceOf(GuxPagination);
+        expect(page.rootInstance).toBeInstanceOf(GuxPaginationBeta);
 
         expect(page.root).toMatchSnapshot();
       });

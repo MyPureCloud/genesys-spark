@@ -1,11 +1,11 @@
 import { newSpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
-import { GuxPaginationButtons } from '../gux-pagination-buttons-beta';
+import { GuxPaginationButtonsBeta } from '../gux-pagination-buttons-beta';
 import { GuxButton } from '../../../../stable/gux-button/gux-button';
 import { GuxInputTextLike } from '../../../../stable/gux-form-field/components/gux-input-text-like/gux-input-text-like';
 
-const components = [GuxPaginationButtons, GuxButton, GuxInputTextLike];
+const components = [GuxPaginationButtonsBeta, GuxButton, GuxInputTextLike];
 const language = 'en';
 
 describe('gux-pagination-item-counts', () => {
@@ -37,7 +37,7 @@ describe('gux-pagination-item-counts', () => {
         `;
         const page = await newSpecPage({ components, html, language });
 
-        expect(page.rootInstance).toBeInstanceOf(GuxPaginationButtons);
+        expect(page.rootInstance).toBeInstanceOf(GuxPaginationButtonsBeta);
 
         expect(page.root).toMatchSnapshot();
       });

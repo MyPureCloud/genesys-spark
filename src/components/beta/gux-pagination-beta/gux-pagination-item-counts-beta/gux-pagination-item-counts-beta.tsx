@@ -14,7 +14,7 @@ import paginationResources from './i18n/en.json';
   styleUrl: 'gux-pagination-item-counts-beta.less',
   tag: 'gux-pagination-item-counts-beta'
 })
-export class GuxPaginationItemCounts implements ComponentInterface {
+export class GuxPaginationItemCountsBeta implements ComponentInterface {
   @Element()
   private root: HTMLElement;
 
