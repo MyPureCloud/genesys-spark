@@ -4,7 +4,7 @@ exports[`gux-action-button renders 1`] = `
 <gux-action-button accent="primary" lang="en" text="Primary">
   <mock:shadow-root>
     <div class="gux-action-button-container">
-      <gux-popup-beta>
+      <gux-popup>
         <div class="gux-action-button-container" slot="target">
           <gux-button-slot-beta accent="primary" class="gux-action-button">
             <button type="button">
@@ -20,7 +20,7 @@ exports[`gux-action-button renders 1`] = `
         <gux-action-list slot="popup">
           <slot></slot>
         </gux-action-list>
-      </gux-popup-beta>
+      </gux-popup>
     </div>
   </mock:shadow-root>
   <gux-action-item role="listitem" text="test">
