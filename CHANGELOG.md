@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.55](https://inindca///compare/v3.0.0-alpha.54...v3.0.0-alpha.55) (2022-04-04)
+
+
+### Bug Fixes
+
+* **gux-tooltip-title:** gux-advanced tabs tooltip sort issue ([61ea65d](https://inindca///commit/61ea65d679e667f5d36b2b10493c37ce65ed3bfb))
+
 ## [3.0.0-alpha.54](https://inindca///compare/v3.0.0-alpha.53...v3.0.0-alpha.54) (2022-03-31)
 
 
