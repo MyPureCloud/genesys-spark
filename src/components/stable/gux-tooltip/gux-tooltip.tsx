@@ -70,9 +70,7 @@ export class GuxTooltip {
     this.isShown = false;
   }
 
-  componentWillLoad(): void {
-    trackComponent(this.root);
-
+  private getForElement(): void {
     if (this.for) {
       this.forElement = document.getElementById(this.for);
     } else {
@@ -80,7 +78,15 @@ export class GuxTooltip {
     }
   }
 
-  componentDidLoad(): void {
+  private logForAttributeError(): void {
+    console.error(
+      `gux-tooltip: invalid element supplied to 'for': "${this.for}"`
+    );
+  }
+
+  connectedCallback(): void {
+    this.getForElement();
+
     if (this.forElement) {
       this.forElement.setAttribute('aria-describedby', this.id);
 
@@ -102,10 +108,12 @@ export class GuxTooltip {
       this.forElement.addEventListener('focusin', this.focusinHandler);
       this.forElement.addEventListener('focusout', this.focusoutHandler);
     } else {
-      console.error(
-        `gux-tooltip: invalid element supplied to 'for': "${this.for}"`
-      );
+      this.logForAttributeError();
     }
+  }
+
+  componentWillLoad(): void {
+    trackComponent(this.root);
   }
 
   disconnectedCallback(): void {

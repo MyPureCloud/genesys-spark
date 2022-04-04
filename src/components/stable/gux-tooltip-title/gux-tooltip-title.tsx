@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, State } from '@stencil/core';
+import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
 import { logError } from '../../../utils/error/log-error';
 import { OnMutation } from '../../../utils/decorator/on-mutation';
 
@@ -12,10 +12,30 @@ export class GuxTooltipTitle {
   private root: HTMLElement;
 
   @State()
-  private showTooltip: boolean = true;
+  private hasTooltip: boolean = false;
+
+  @State()
+  private showTooltip: boolean = false;
 
   @State()
   private titleName: string = '';
+
+  @Listen('mouseenter')
+  onmouseenter(event: MouseEvent) {
+    if (!event.buttons) {
+      this.showTooltip = true;
+    }
+  }
+
+  @Listen('mouseleave')
+  onmouseleave() {
+    this.showTooltip = false;
+  }
+
+  @Listen('mousedown')
+  onmousedown() {
+    this.showTooltip = false;
+  }
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
@@ -94,12 +114,12 @@ export class GuxTooltipTitle {
     );
     this.root.classList.remove('gux-overflow-hidden');
     if (this.hasIconSrText()) {
-      this.showTooltip = true;
+      this.hasTooltip = true;
     } else if (titleContainer?.scrollWidth > titleContainer?.offsetWidth) {
       this.root.classList.add('gux-overflow-hidden');
-      this.showTooltip = true;
+      this.hasTooltip = true;
     } else {
-      this.showTooltip = false;
+      this.hasTooltip = false;
     }
   }
 
@@ -113,8 +133,10 @@ export class GuxTooltipTitle {
   }
 
   private renderTooltip(): JSX.Element {
-    if (this.showTooltip) {
-      return (<gux-tooltip>{this.titleName}</gux-tooltip>) as JSX.Element;
+    if (this.hasTooltip) {
+      return (
+        <gux-tooltip hidden={!this.showTooltip}>{this.titleName}</gux-tooltip>
+      ) as JSX.Element;
     }
   }
 }
