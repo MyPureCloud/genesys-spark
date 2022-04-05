@@ -126,7 +126,7 @@ export class GuxTooltipTitle {
     children.map(element => {
       if (element.tagName !== 'GUX-ICON' && element.tagName !== 'GUX-TOOLTIP') {
         titleNameText += element.textContent;
-      } else {
+      } else if (children.length > 1) {
         this.addIconDecorative(element as HTMLElement);
       }
     });
