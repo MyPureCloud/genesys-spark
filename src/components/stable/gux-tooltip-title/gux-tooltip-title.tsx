@@ -1,4 +1,12 @@
-import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Method,
+  State
+} from '@stencil/core';
 import { logError } from '../../../utils/error/log-error';
 import { OnMutation } from '../../../utils/decorator/on-mutation';
 
@@ -8,6 +16,8 @@ import { OnMutation } from '../../../utils/decorator/on-mutation';
   shadow: false
 })
 export class GuxTooltipTitle {
+  private tooltipElement: HTMLGuxTooltipElement;
+
   @Element()
   private root: HTMLElement;
 
@@ -35,6 +45,22 @@ export class GuxTooltipTitle {
   @Listen('mousedown')
   onmousedown() {
     this.showTooltip = false;
+  }
+
+  @Method()
+  async setShowTooltip() {
+    if (this.tooltipElement) {
+      this.showTooltip = true;
+      await this.tooltipElement.showTooltip();
+    }
+  }
+
+  @Method()
+  async setHideTooltip() {
+    if (this.tooltipElement) {
+      this.showTooltip = false;
+      await this.tooltipElement.hideTooltip();
+    }
   }
 
   @OnMutation({ childList: true, subtree: true })
@@ -135,7 +161,13 @@ export class GuxTooltipTitle {
   private renderTooltip(): JSX.Element {
     if (this.hasTooltip) {
       return (
-        <gux-tooltip hidden={!this.showTooltip}>{this.titleName}</gux-tooltip>
+        <gux-tooltip
+          aria-hidden="true"
+          ref={el => (this.tooltipElement = el)}
+          hidden={!this.showTooltip}
+        >
+          {this.titleName}
+        </gux-tooltip>
       ) as JSX.Element;
     }
   }

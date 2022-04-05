@@ -24,9 +24,12 @@ import tabsResources from '../i18n/en.json';
 })
 export class GuxTabAdvanced {
   private buttonElement: HTMLButtonElement;
+  private tooltipTitleElement: HTMLGuxTooltipTitleElement;
   private dropdownOptionsButtonId: string = randomHTMLId();
   private moveFocusDelay: number = 100;
   private tabTitle: string = '';
+  private focusinFromClick: boolean = false;
+
   /**
    * unique id for the tab
    */
@@ -60,13 +63,22 @@ export class GuxTabAdvanced {
   @Element()
   private root: HTMLElement;
 
+  @Listen('focusin')
+  onFocusin() {
+    if (!this.focusinFromClick) {
+      void this.tooltipTitleElement.setShowTooltip();
+    }
+  }
+
   @Listen('focusout')
   onFocusout(event: FocusEvent) {
     if (
       !this.root.querySelector('.gux-tab').contains(event.relatedTarget as Node)
     ) {
       this.popoverHidden = true;
+      void this.tooltipTitleElement.setHideTooltip();
     }
+    this.focusinFromClick = false;
   }
 
   @Listen('keydown')
@@ -148,6 +160,11 @@ export class GuxTabAdvanced {
     if (!this.active && !this.guxDisabled) {
       this.internalactivatetabpanel.emit(this.tabId);
     }
+  }
+
+  @Listen('mousedown')
+  onMouseDown() {
+    this.focusinFromClick = true;
   }
 
   @Event()
@@ -266,7 +283,7 @@ export class GuxTabAdvanced {
           tabIndex={this.active ? 0 : -1}
           id={`gux-${this.tabId}-tab`}
         >
-          <gux-tooltip-title>
+          <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
             <slot />
           </gux-tooltip-title>
         </button>
