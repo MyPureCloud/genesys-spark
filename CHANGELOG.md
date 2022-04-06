@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.57](https://inindca///compare/v3.0.0-alpha.56...v3.0.0-alpha.57) (2022-04-06)
+
+
+### Features
+
+* **gux-tooltip:** add methods to hide and show tooltip, show/hide tooltip on focus to tabs ([db9d7d0](https://inindca///commit/db9d7d059e5b26edbaadd215dbd254631d1c68a5))
+
 ## [3.0.0-alpha.56](https://inindca///compare/v3.0.0-alpha.55...v3.0.0-alpha.56) (2022-04-05)
 
 
