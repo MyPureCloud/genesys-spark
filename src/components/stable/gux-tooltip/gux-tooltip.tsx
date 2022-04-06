@@ -6,6 +6,7 @@ import {
   Host,
   Listen,
   JSX,
+  Method,
   Prop,
   State
 } from '@stencil/core';
@@ -24,7 +25,6 @@ import { trackComponent } from '../../../usage-tracking';
 export class GuxTooltip {
   private delayTimeout: NodeJS.Timer;
   private forElement: HTMLElement;
-  private tooltipActive: boolean;
   private mouseenterHandler: () => void = () => this.show();
   private mouseleaveHandler: () => void = () => this.hide();
   private focusinHandler: () => void = () => this.show();
@@ -54,18 +54,32 @@ export class GuxTooltip {
     }
   }
 
+  /*
+   * Show tooltip
+   */
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async showTooltip(): Promise<void> {
+    this.show();
+  }
+
+  /*
+   * Hide tooltip
+   */
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async hideTooltip(): Promise<void> {
+    this.hide();
+  }
+
   private show(): void {
-    this.tooltipActive = true;
     this.popperInstance.forceUpdate();
     this.delayTimeout = setTimeout(() => {
-      if (this.tooltipActive) {
-        this.isShown = true;
-      }
+      this.isShown = true;
     }, 750); // the css transition is 250ms
   }
 
   private hide(): void {
-    this.tooltipActive = false;
     clearTimeout(this.delayTimeout);
     this.isShown = false;
   }
@@ -132,12 +146,7 @@ export class GuxTooltip {
 
   render(): JSX.Element {
     return (
-      <Host
-        id={this.id}
-        class={{ 'gux-show': this.isShown }}
-        tabindex="0"
-        role="tooltip"
-      >
+      <Host id={this.id} class={{ 'gux-show': this.isShown }} role="tooltip">
         <slot />
       </Host>
     ) as JSX.Element;

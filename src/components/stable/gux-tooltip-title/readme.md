@@ -5,6 +5,29 @@
 <!-- Auto Generated Below -->
 
 
+## Methods
+
+### `setHideTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `setShowTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Dependencies
 
 ### Used by
