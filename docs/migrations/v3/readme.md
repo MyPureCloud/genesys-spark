@@ -16,6 +16,7 @@
   * `gux-accordion-beta` ->  `gux-accordion`
   * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
   * `gux-pagination-cursor-beta` ->  `gux-pagination-cursor`
+  * `gux-popup-beta` ->  `gux-popup`
   * `gux-tabs-beta` -> `gux-tabs`
   * `gux-tooltip-title-beta` ->  `gux-tooltip-title`
 * add `-legacy` to components that have been removed from stable
@@ -89,7 +90,11 @@ This new requirement is related to the a new dependency (vega-lite) which was ad
 The following components have moved from beta to stable without any api changes.
 
 * gux-accordion
+* gux-dismiss-button
+* gux-pagination-cursor
+* gux-popup
 * gux-tabs (v3)
+* gux-tooltip-title
 
 #### Actions
 

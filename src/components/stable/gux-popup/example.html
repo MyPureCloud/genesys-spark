@@ -1,9 +1,9 @@
-<h1>gux-popup-beta</h1>
-<gux-popup-beta>
+<h1>gux-popup</h1>
+<gux-popup>
   <gux-button
     slot="target"
     onClick='(function(event) {
-      const popup = event.target.closest("gux-popup-beta");
+      const popup = event.target.closest("gux-popup");
       popup.expanded = !popup.expanded;
     })(event)'
     >Target</gux-button
@@ -16,4 +16,4 @@
     <gux-list-item>Item 5</gux-list-item>
     <gux-list-item>Item 6</gux-list-item>
   </gux-list>
-</gux-popup-beta>
+</gux-popup>

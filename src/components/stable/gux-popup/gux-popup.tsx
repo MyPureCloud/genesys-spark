@@ -8,7 +8,7 @@ import { createPopper, Instance } from '@popperjs/core';
  */
 @Component({
   styleUrl: 'gux-popup.less',
-  tag: 'gux-popup-beta',
+  tag: 'gux-popup',
   shadow: true
 })
 export class GuxPopup {
