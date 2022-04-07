@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-tag-beta #render should render component as expected (1) 1`] = `"<gux-tag-beta lang=\\"en\\" class=\\"hydrated\\">default</gux-tag-beta>"`;
+exports[`gux-tag-beta #render should render component as expected (1) 1`] = `"<gux-tag-beta lang=\\"en\\" class=\\"hydrated\\"><span>default</span></gux-tag-beta>"`;
 
-exports[`gux-tag-beta #render should render component as expected (2) 1`] = `"<gux-tag-beta lang=\\"en\\" color=\\"default\\" class=\\"hydrated\\">default (explicit)</gux-tag-beta>"`;
+exports[`gux-tag-beta #render should render component as expected (2) 1`] = `"<gux-tag-beta lang=\\"en\\" color=\\"default\\" class=\\"hydrated\\"><span>default (explicit)</span></gux-tag-beta>"`;
 
-exports[`gux-tag-beta #render should render component as expected (3) 1`] = `"<gux-tag-beta lang=\\"en\\" color=\\"navy\\" class=\\"hydrated\\">navy</gux-tag-beta>"`;
+exports[`gux-tag-beta #render should render component as expected (3) 1`] = `"<gux-tag-beta lang=\\"en\\" color=\\"navy\\" class=\\"hydrated\\"><span>navy</span></gux-tag-beta>"`;
 
-exports[`gux-tag-beta #render should render component as expected (4) 1`] = `"<gux-tag-beta lang=\\"en\\" icon=\\"bolt\\" color=\\"navy\\" class=\\"hydrated\\">navy</gux-tag-beta>"`;
+exports[`gux-tag-beta #render should render component as expected (4) 1`] = `"<gux-tag-beta lang=\\"en\\" color=\\"navy\\" class=\\"hydrated\\"><gux-icon icon-name=\\"bolt\\" decorative=\\"true\\" class=\\"hydrated gux-tooltip-icon-decorative\\"></gux-icon><span>navy</span></gux-tag-beta>"`;
 
-exports[`gux-tag-beta #render should render component as expected (5) 1`] = `"<gux-tag-beta lang=\\"en\\" icon=\\"bolt\\" color=\\"navy\\" value=\\"3\\" removable=\\"\\" class=\\"hydrated\\">navy</gux-tag-beta>"`;
+exports[`gux-tag-beta #render should render component as expected (5) 1`] = `"<gux-tag-beta lang=\\"en\\" color=\\"navy\\" value=\\"3\\" removable=\\"\\" class=\\"hydrated\\"><gux-icon icon-name=\\"bolt\\" decorative=\\"true\\" class=\\"hydrated gux-tooltip-icon-decorative\\"></gux-icon><span>navy<span></span></span></gux-tag-beta>"`;
 
-exports[`gux-tag-beta #render should render component as expected (6) 1`] = `"<gux-tag-beta lang=\\"en\\" icon=\\"bolt\\" color=\\"navy\\" value=\\"3\\" removable=\\"\\" disabled=\\"\\" class=\\"hydrated\\">navy</gux-tag-beta>"`;
+exports[`gux-tag-beta #render should render component as expected (6) 1`] = `"<gux-tag-beta lang=\\"en\\" color=\\"navy\\" value=\\"3\\" removable=\\"\\" disabled=\\"\\" class=\\"hydrated\\"><gux-icon icon-name=\\"bolt\\" decorative=\\"true\\" class=\\"hydrated gux-tooltip-icon-decorative\\"></gux-icon><span>navy</span></gux-tag-beta>"`;

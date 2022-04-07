@@ -121,7 +121,10 @@ export class GuxTooltipTitle {
   }
 
   private setTooltipTitleText(): string {
-    const children = Array.from(this.root.children);
+    const slot = this.root.querySelector('slot');
+    const children = slot
+      ? slot.assignedElements()
+      : Array.from(this.root.children);
     let titleNameText = '';
     children.map(element => {
       if (element.tagName !== 'GUX-ICON' && element.tagName !== 'GUX-TOOLTIP') {

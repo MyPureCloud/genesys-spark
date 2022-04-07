@@ -3,27 +3,38 @@
 gux-tooltip-title {
   overflow: hidden;
   cursor: default;
+}
 
-  gux-tooltip {
-    text-align: left;
-    overflow-wrap: break-word;
-    white-space: normal;
+gux-tooltip {
+  line-height: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.gux-title-container {
+  display: flex;
+}
+
+.gux-overflow-hidden .gux-title-container ::slotted(span) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gux-overflow-hidden .gux-title-container > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gux-title-container {
+  display: flex;
+
+  gux-icon,
+  ::slotted(gux-icon) {
+    flex-shrink: 0;
   }
 
-  &.gux-overflow-hidden .gux-title-container > * {
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .gux-title-container {
-    display: flex;
-
-    gux-icon {
-      flex-shrink: 0;
-
-      &.gux-tooltip-icon-decorative {
-        margin-right: @spacing-xs;
-      }
-    }
+  .gux-tooltip-icon-decorative {
+    margin-right: @spacing-xs;
   }
 }
