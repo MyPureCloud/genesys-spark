@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.58](https://inindca///compare/v3.0.0-alpha.57...v3.0.0-alpha.58) (2022-04-07)
+
+
+### Features
+
+* **popup:** moved gux-popup to stable ([46dfb23](https://inindca///commit/46dfb23c70f38d9dd9f59dedd1a0dc9ceea7af6a))
+
 ## [3.0.0-alpha.57](https://inindca///compare/v3.0.0-alpha.56...v3.0.0-alpha.57) (2022-04-06)
 
 
