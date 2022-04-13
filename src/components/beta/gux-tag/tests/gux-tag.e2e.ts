@@ -110,7 +110,8 @@ describe('gux-tag-beta', () => {
       'bubblegum-pink',
       'olive-green',
       'lilac',
-      'alert-yellow-green'
+      'alert-yellow-green',
+      'subtle'
     ].forEach(color => {
       it(`should be accessible when color is "${color}"`, async () => {
         const html = `<gux-tag-beta lang="en" icon="bolt" color="${color}" value="3" removable>navy</gux-tag-beta>`;
