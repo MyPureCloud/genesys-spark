@@ -22,7 +22,7 @@ describe('gux-input-textarea', () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-input-textarea');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   describe('#render', () => {

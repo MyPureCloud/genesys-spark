@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-color-beta #render clearable should render component as expected (1) 1`] = `"<gux-form-field-color-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render clearable should render component as expected (1) 1`] = `"<gux-form-field-color-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render clearable should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -14,7 +14,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -23,7 +23,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render clearable should render component as expected (2) 1`] = `"<gux-form-field-color-beta clearable=\\"\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render clearable should render component as expected (2) 1`] = `"<gux-form-field-color-beta clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render clearable should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -37,7 +37,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -46,7 +46,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render clearable should render component as expected (3) 1`] = `"<gux-form-field-color-beta clearable=\\"true\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render clearable should render component as expected (3) 1`] = `"<gux-form-field-color-beta clearable=\\"true\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render clearable should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -60,7 +60,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -69,7 +69,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render clearable should render component as expected (4) 1`] = `"<gux-form-field-color-beta clearable=\\"false\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render clearable should render component as expected (4) 1`] = `"<gux-form-field-color-beta clearable=\\"false\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render clearable should render component as expected (4) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -83,7 +83,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -92,7 +92,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render clearable should render component as expected (5) 1`] = `"<gux-form-field-color-beta clearable=\\"\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render clearable should render component as expected (5) 1`] = `"<gux-form-field-color-beta clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render clearable should render component as expected (5) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -106,7 +106,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -115,7 +115,7 @@ exports[`gux-form-field-color-beta #render clearable should render component as 
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-color-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-color-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -129,7 +129,7 @@ exports[`gux-form-field-color-beta #render input attributes should render compon
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -138,7 +138,7 @@ exports[`gux-form-field-color-beta #render input attributes should render compon
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-color-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-color-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -152,7 +152,7 @@ exports[`gux-form-field-color-beta #render input attributes should render compon
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -161,7 +161,7 @@ exports[`gux-form-field-color-beta #render input attributes should render compon
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-color-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" required=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-color-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" required=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -175,7 +175,7 @@ exports[`gux-form-field-color-beta #render input attributes should render compon
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -184,7 +184,7 @@ exports[`gux-form-field-color-beta #render input attributes should render compon
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render label-position should render component as expected (1) 1`] = `"<gux-form-field-color-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render label-position should render component as expected (1) 1`] = `"<gux-form-field-color-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -198,7 +198,7 @@ exports[`gux-form-field-color-beta #render label-position should render componen
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -207,7 +207,7 @@ exports[`gux-form-field-color-beta #render label-position should render componen
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render label-position should render component as expected (2) 1`] = `"<gux-form-field-color-beta label-position=\\"above\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render label-position should render component as expected (2) 1`] = `"<gux-form-field-color-beta label-position=\\"above\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
@@ -221,7 +221,7 @@ exports[`gux-form-field-color-beta #render label-position should render componen
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -230,7 +230,7 @@ exports[`gux-form-field-color-beta #render label-position should render componen
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render label-position should render component as expected (3) 1`] = `"<gux-form-field-color-beta label-position=\\"beside\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render label-position should render component as expected (3) 1`] = `"<gux-form-field-color-beta label-position=\\"beside\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -244,7 +244,7 @@ exports[`gux-form-field-color-beta #render label-position should render componen
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -253,7 +253,7 @@ exports[`gux-form-field-color-beta #render label-position should render componen
 </div>
 `;
 
-exports[`gux-form-field-color-beta #render label-position should render component as expected (4) 1`] = `"<gux-form-field-color-beta label-position=\\"screenreader\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
+exports[`gux-form-field-color-beta #render label-position should render component as expected (4) 1`] = `"<gux-form-field-color-beta label-position=\\"screenreader\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color-beta>"`;
 
 exports[`gux-form-field-color-beta #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">
@@ -267,7 +267,7 @@ exports[`gux-form-field-color-beta #render label-position should render componen
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>

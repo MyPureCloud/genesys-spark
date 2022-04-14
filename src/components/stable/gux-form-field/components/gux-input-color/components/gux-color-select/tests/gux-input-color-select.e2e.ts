@@ -7,6 +7,6 @@ describe('gux-color-select', () => {
     const page = await newE2EPage({ html });
     const element = await page.find('gux-color-select');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

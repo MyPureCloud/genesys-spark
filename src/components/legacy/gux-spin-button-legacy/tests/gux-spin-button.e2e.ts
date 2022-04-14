@@ -19,7 +19,7 @@ describe('wem-annotations', () => {
 
   it('renders', async () => {
     const element = await page.find('gux-spin-button-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
   it('should disable the decrement button', async () => {
     const decrementButton = await page.find('#gux-spin-button-decrement');

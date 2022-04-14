@@ -12,7 +12,7 @@ describe('gux-input-color', () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-input-color');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('Opens and closes the color picker popup on click', async () => {

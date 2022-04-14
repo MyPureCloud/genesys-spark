@@ -8,7 +8,7 @@ describe('gux-color-picker-legacy', () => {
       '<gux-color-picker-legacy></gux-color-picker-legacy>'
     );
     const element = await page.find('gux-color-picker-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('should open dropdown when clicked', async () => {

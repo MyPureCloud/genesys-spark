@@ -17,7 +17,7 @@ describe('gux-button-multi', () => {
 
     const element = await page.find('gux-button-multi');
     await a11yCheck(page, axeExclusions);
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('Should fire open event if not disabled', async () => {

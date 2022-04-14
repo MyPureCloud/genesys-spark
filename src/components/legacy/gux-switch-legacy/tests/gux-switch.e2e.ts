@@ -6,6 +6,6 @@ describe('gux-switch', () => {
 
     await page.setContent('<gux-switch-legacy></gux-switch-legacy>');
     const element = await page.find('gux-switch-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

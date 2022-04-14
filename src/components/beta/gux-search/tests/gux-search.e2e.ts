@@ -6,7 +6,7 @@ describe('gux-search', () => {
 
     await page.setContent('<gux-search-beta lang="en"></gux-search-beta>');
     const element = await page.find('gux-search-beta');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   describe('clear button', () => {

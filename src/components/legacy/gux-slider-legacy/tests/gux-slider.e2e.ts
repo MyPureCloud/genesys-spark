@@ -6,7 +6,7 @@ describe('gux-slider-legacy', () => {
 
     await page.setContent('<gux-slider-legacy lang="en"></gux-slider-legacy>');
     const element = await page.find('gux-slider-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('renders changes when value is incremented', async () => {

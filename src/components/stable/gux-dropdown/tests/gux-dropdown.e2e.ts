@@ -8,7 +8,7 @@ describe('gux-dropdown', () => {
       html: `<gux-dropdown lang="en"></gux-dropdown>`
     });
     const element = await page.find('gux-dropdown');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('opens drop down on click', async () => {

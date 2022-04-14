@@ -6,7 +6,7 @@ describe('gux-time-picker-beta', () => {
     await page.setContent('<gux-time-picker-beta></gux-time-picker-beta>');
     const element = await page.find('gux-time-picker-beta');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('Active class on focus', async () => {

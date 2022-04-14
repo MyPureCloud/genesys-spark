@@ -18,7 +18,7 @@ describe('gux-input-checkbox', () => {
 
     const element = await page.find('gux-input-checkbox');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('switches between states when clicked', async () => {

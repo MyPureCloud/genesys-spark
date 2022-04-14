@@ -8,7 +8,7 @@ describe('gux-color-option-legacy', () => {
       '<gux-color-option-legacy></gux-color-option-legacy>'
     );
     const element = await page.find('gux-color-option-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('should be active', async () => {

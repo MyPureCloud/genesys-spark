@@ -17,7 +17,7 @@ describe('gux-input-radio', () => {
     });
     const element = await page.find('gux-input-radio');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('switches between states when clicking different radios', async () => {

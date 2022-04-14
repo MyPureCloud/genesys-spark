@@ -10,7 +10,7 @@ describe('gux-text-field-legacy', () => {
     const element = await page.find('gux-text-field-legacy');
     const clearButton = await element.find('gux-text-field-legacy button');
     expect(clearButton).toBe(null);
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
   describe('clear button', () => {
     it('should appear when the value is not empty', async () => {
@@ -23,7 +23,7 @@ describe('gux-text-field-legacy', () => {
       let clearButton = await element.find('gux-text-field-legacy button');
       const input = await element.find('gux-text-field-legacy input');
       expect(clearButton).toBeNull();
-      expect(element).toHaveClass('hydrated');
+      expect(element).toHaveAttribute('hydrated');
       await input.press('KeyT');
       await input.press('KeyE');
       await input.press('KeyS');

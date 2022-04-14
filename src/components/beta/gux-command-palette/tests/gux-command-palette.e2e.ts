@@ -8,7 +8,7 @@ describe('gux-command-palette', () => {
       '<gux-command-palette-beta lang="en"></gux-command-palette-beta>'
     );
     const element = await page.find('gux-command-palette-beta');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('shows the palette when opened', async () => {

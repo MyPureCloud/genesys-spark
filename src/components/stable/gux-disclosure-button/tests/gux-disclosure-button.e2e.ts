@@ -10,7 +10,7 @@ describe('gux-disclosure-button', () => {
 
     const element = await page.find('gux-disclosure-button');
     await a11yCheck(page, axeExclusions);
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('renders panel when button pressed', async () => {

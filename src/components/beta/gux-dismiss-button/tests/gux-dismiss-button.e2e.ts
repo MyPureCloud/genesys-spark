@@ -10,7 +10,7 @@ describe('gux-dismiss-button-beta', () => {
 
     const element = await page.find('gux-dismiss-button-beta');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   describe('#render', () => {

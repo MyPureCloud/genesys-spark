@@ -34,7 +34,7 @@ describe('gux-form-field', () => {
     const page = await newE2EPage({ html });
 
     const element = await page.find('gux-form-field');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   describe('#render', () => {

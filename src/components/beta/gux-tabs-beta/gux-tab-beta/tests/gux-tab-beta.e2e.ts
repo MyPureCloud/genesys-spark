@@ -13,6 +13,6 @@ describe('gux-tab-beta', () => {
     <gux-tab-beta></gux-tab-beta>
     `);
     element = await page.find('gux-tab-beta');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

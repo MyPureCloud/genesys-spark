@@ -6,7 +6,7 @@ describe('gux-radio-group-legacy', () => {
 
     await page.setContent('<gux-radio-group-legacy></gux-radio-group-legacy>');
     const element = await page.find('gux-radio-group-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('switches between states when clicking different radios', async () => {
