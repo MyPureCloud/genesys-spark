@@ -1,5 +1,6 @@
 export type GuxTagColor =
   | 'default'
+  | 'default-subtle'
   | 'navy'
   | 'blue'
   | 'electric-purple'
@@ -9,5 +10,4 @@ export type GuxTagColor =
   | 'bubblegum-pink'
   | 'olive-green'
   | 'lilac'
-  | 'alert-yellow-green'
-  | 'subtle';
+  | 'alert-yellow-green';
