@@ -8,7 +8,7 @@ describe('gux-dismiss-button', () => {
 
     const element = await page.find('gux-dismiss-button');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   describe('#render', () => {

@@ -13,6 +13,6 @@ describe('gux-tab-dropdown-option-legacy', () => {
     <gux-tab-dropdown-option-legacy></gux-tab-dropdown-option-legacy>
     `);
     element = await page.find('gux-tab-dropdown-option-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

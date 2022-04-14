@@ -45,7 +45,7 @@ describe('gux-button-multi', () => {
 
     const element = await page.find('gux-button-multi');
     await a11yCheck(page);
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('should fire open and close events if not disabled on click', async () => {

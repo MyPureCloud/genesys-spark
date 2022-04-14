@@ -8,6 +8,6 @@ describe('gux-calendar', () => {
     const element = await page.find('gux-calendar');
     await a11yCheck(page);
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-button #render should render default button 1`] = `"<gux-button class=\\"hydrated\\">Button</gux-button>"`;
+exports[`gux-button #render should render default button 1`] = `"<gux-button hydrated=\\"\\">Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled default button 1`] = `"<gux-button disabled=\\"\\" class=\\"hydrated\\">Button</gux-button>"`;
+exports[`gux-button #render should render disabled default button 1`] = `"<gux-button disabled=\\"\\" hydrated=\\"\\">Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled invalid button 1`] = `"<gux-button accent=\\"invalid\\" disabled=\\"\\" class=\\"hydrated\\">Invalid accent</gux-button>"`;
+exports[`gux-button #render should render disabled invalid button 1`] = `"<gux-button accent=\\"invalid\\" disabled=\\"\\" hydrated=\\"\\">Invalid accent</gux-button>"`;
 
-exports[`gux-button #render should render disabled primary button 1`] = `"<gux-button accent=\\"primary\\" disabled=\\"\\" class=\\"hydrated\\">Button</gux-button>"`;
+exports[`gux-button #render should render disabled primary button 1`] = `"<gux-button accent=\\"primary\\" disabled=\\"\\" hydrated=\\"\\">Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled secondary button 1`] = `"<gux-button accent=\\"secondary\\" disabled=\\"\\" class=\\"hydrated\\">Button</gux-button>"`;
+exports[`gux-button #render should render disabled secondary button 1`] = `"<gux-button accent=\\"secondary\\" disabled=\\"\\" hydrated=\\"\\">Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled tertiary button 1`] = `"<gux-button accent=\\"tertiary\\" disabled=\\"\\" class=\\"hydrated\\">Button</gux-button>"`;
+exports[`gux-button #render should render disabled tertiary button 1`] = `"<gux-button accent=\\"tertiary\\" disabled=\\"\\" hydrated=\\"\\">Button</gux-button>"`;
 
-exports[`gux-button #render should render invalid button 1`] = `"<gux-button accent=\\"invalid\\" class=\\"hydrated\\">Invalid accent</gux-button>"`;
+exports[`gux-button #render should render invalid button 1`] = `"<gux-button accent=\\"invalid\\" hydrated=\\"\\">Invalid accent</gux-button>"`;
 
-exports[`gux-button #render should render primary button 1`] = `"<gux-button accent=\\"primary\\" class=\\"hydrated\\">Button</gux-button>"`;
+exports[`gux-button #render should render primary button 1`] = `"<gux-button accent=\\"primary\\" hydrated=\\"\\">Button</gux-button>"`;
 
-exports[`gux-button #render should render secondary button 1`] = `"<gux-button accent=\\"secondary\\" class=\\"hydrated\\">Button</gux-button>"`;
+exports[`gux-button #render should render secondary button 1`] = `"<gux-button accent=\\"secondary\\" hydrated=\\"\\">Button</gux-button>"`;
 
-exports[`gux-button #render should render tertiary button 1`] = `"<gux-button accent=\\"tertiary\\" class=\\"hydrated\\">Button</gux-button>"`;
+exports[`gux-button #render should render tertiary button 1`] = `"<gux-button accent=\\"tertiary\\" hydrated=\\"\\">Button</gux-button>"`;
