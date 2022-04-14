@@ -259,7 +259,7 @@ export class GuxDatepicker {
           );
           setTimeout(() => {
             button.focus();
-          });
+          }, 100);
           break;
         }
         case 'Tab':
@@ -565,7 +565,7 @@ export class GuxDatepicker {
       // Wait for render before focusing preview date
       setTimeout(() => {
         void this.calendarElement.focusPreviewDate();
-      });
+      }, 100);
     }
   }
 
