@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX } from '@stencil/core';
+import { Component, Element, h, JSX, Listen, Prop } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -11,8 +11,44 @@ export class GuxAccordion {
   @Element()
   root: HTMLElement;
 
+  @Prop()
+  singleOpenSection: boolean = false;
+
+  @Listen('internalsectionopened')
+  handleInternalsectionopened(event: CustomEvent) {
+    event.stopImmediatePropagation();
+
+    if (this.singleOpenSection) {
+      this.getAccordionSections().forEach(section => {
+        if (section !== event.target) {
+          this.closeSection(section);
+        }
+      });
+    }
+  }
+
   componentWillLoad() {
+    if (this.singleOpenSection) {
+      this.getAccordionSections().reduceRight((openFound, section) => {
+        if (openFound) {
+          this.closeSection(section);
+        }
+
+        return openFound || section.open;
+      }, false);
+    }
+
     trackComponent(this.root);
+  }
+
+  private getAccordionSections(): HTMLGuxAccordionSectionElement[] {
+    return Array.from(this.root.children) as HTMLGuxAccordionSectionElement[];
+  }
+
+  private closeSection(section: HTMLGuxAccordionSectionElement): void {
+    if (!section.disabled) {
+      section.setAttribute('open', 'false');
+    }
   }
 
   render(): JSX.Element {

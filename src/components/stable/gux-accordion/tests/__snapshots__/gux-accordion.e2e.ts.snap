@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-accordion renders 1`] = `"<gux-accordion lang=\\"en\\" text=\\"Primary\\" accent=\\"primary\\" class=\\"hydrated\\"> <gux-accordion class=\\"hydrated\\"> <gux-accordion-section class=\\"hydrated\\"> <h2 slot=\\"header\\">First Section</h2> <div slot=\\"content\\">Sample Content</div> </gux-accordion-section> <gux-accordion-section class=\\"hydrated\\"> <h2 slot=\\"header\\">Second Section</h2> <div slot=\\"content\\">Sample Content</div> </gux-accordion-section> <gux-accordion-section class=\\"hydrated\\"> <h2 slot=\\"header\\">Third Section</h2> <div slot=\\"content\\">Sample Content</div> </gux-accordion-section> </gux-accordion> </gux-accordion>"`;
