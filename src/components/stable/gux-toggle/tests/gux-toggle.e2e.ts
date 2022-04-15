@@ -38,7 +38,7 @@ describe('gux-toggle', () => {
 
     const element = await page.find('gux-toggle');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   describe('#render', () => {

@@ -7,7 +7,7 @@ describe('gux-side-panel', () => {
     });
 
     const element = await page.find('gux-side-panel-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('shows the panel content when it is open', async () => {

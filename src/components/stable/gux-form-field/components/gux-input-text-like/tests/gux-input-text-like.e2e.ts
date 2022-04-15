@@ -23,6 +23,6 @@ describe('gux-input-text-like', () => {
     const element = await page.find('gux-input-text-like');
     await a11yCheck(page, axeExclusions);
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

@@ -14,7 +14,7 @@ describe('gux-accordion-legacy', () => {
       html: `<gux-accordion-legacy></gux-accordion-legacy>`
     });
     const element = await page.find('gux-accordion-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
   it('sets sections', async () => {
     const slots = ['First', 'Second', 'Third'];
