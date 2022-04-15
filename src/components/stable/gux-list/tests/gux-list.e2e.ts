@@ -17,7 +17,7 @@ describe('gux-list', () => {
       html: `<gux-list></gux-list>`
     });
     const element = await page.find('gux-list');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('should select the next item on down arrow', async () => {

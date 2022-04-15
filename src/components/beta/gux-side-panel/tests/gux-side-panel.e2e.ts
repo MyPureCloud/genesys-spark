@@ -6,7 +6,7 @@ describe('gux-side-panel', () => {
 
     await page.setContent('<gux-side-panel-beta></gux-side-panel-beta>');
     const element = await page.find('gux-side-panel-beta');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('shows the panel content when it is open', async () => {

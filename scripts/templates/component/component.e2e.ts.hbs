@@ -6,7 +6,7 @@ describe('{{componentName}}', () => {
 
     await page.setContent('<{{componentName}}></{{componentName}}>');
     const element = await page.find('{{componentName}}');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('renders changes to the name data', async () => {

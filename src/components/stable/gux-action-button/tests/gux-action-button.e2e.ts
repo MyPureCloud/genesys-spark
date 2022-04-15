@@ -17,7 +17,7 @@ describe('gux-action-button', () => {
 
     const element = await page.find('gux-action-button');
     await a11yCheck(page, axeExclusions);
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('Should fire actionClick event if not disabled', async () => {

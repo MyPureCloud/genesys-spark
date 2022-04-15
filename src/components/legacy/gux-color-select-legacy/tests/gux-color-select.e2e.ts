@@ -8,7 +8,7 @@ describe('gux-color-select-legacy', () => {
       '<gux-color-select-legacy></gux-color-select-legacy>'
     );
     const element = await page.find('gux-color-select-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('should switch activeColor on click', async () => {

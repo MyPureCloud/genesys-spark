@@ -14,7 +14,7 @@ describe('gux-accordion', () => {
       html: `<gux-accordion></gux-accordion>`
     });
     const element = await page.find('gux-accordion');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
   it('sets sections', async () => {
     const slots = ['First', 'Second', 'Third'];

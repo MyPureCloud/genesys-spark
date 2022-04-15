@@ -145,7 +145,7 @@ describe('gux-content-search', () => {
       const inputSpy = await page.spyOnEvent('input');
 
       expect(clearButton).toBeNull();
-      expect(element).toHaveClass('hydrated');
+      expect(element).toHaveAttribute('hydrated');
 
       await input.press('KeyT');
       await input.press('KeyE');
@@ -195,7 +195,7 @@ describe('gux-content-search', () => {
       let currentMatch = await element.getProperty('currentMatch');
       let matchCount = await element.getProperty('matchCount');
 
-      expect(element).toHaveClass('hydrated');
+      expect(element).toHaveAttribute('hydrated');
       expect(clearButton).not.toBeNull();
 
       expect(value).toBe('TEST');
@@ -238,7 +238,7 @@ describe('gux-content-search', () => {
       );
       const inputSpy = await page.spyOnEvent('input');
 
-      expect(element).toHaveClass('hydrated');
+      expect(element).toHaveAttribute('hydrated');
       expect(clearButton).not.toBeNull();
       expect(nextButton).not.toBeNull();
       expect(previousButton).not.toBeNull();
@@ -442,7 +442,7 @@ describe('gux-content-search', () => {
       );
       const inputSpy = await page.spyOnEvent('input');
 
-      expect(element).toHaveClass('hydrated');
+      expect(element).toHaveAttribute('hydrated');
       expect(clearButton).not.toBeNull();
       expect(nextButton).not.toBeNull();
       expect(previousButton).not.toBeNull();
@@ -520,7 +520,7 @@ describe('gux-content-search', () => {
       );
       const inputSpy = await page.spyOnEvent('input');
 
-      expect(element).toHaveClass('hydrated');
+      expect(element).toHaveAttribute('hydrated');
       expect(clearButton).not.toBeNull();
       expect(nextButton).not.toBeNull();
       expect(previousButton).not.toBeNull();

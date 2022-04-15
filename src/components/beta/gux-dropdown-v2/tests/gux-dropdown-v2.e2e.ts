@@ -21,7 +21,7 @@ describe('gux-dropdown-v2', () => {
     it('renders', async () => {
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-dropdown-v2-beta');
-      expect(element).toHaveClass('hydrated');
+      expect(element).toHaveAttribute('hydrated');
     });
   });
 

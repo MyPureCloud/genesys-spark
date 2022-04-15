@@ -29,6 +29,6 @@ describe('gux-table-beta', () => {
     `);
     element = await page.find('gux-table-beta');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

@@ -15,7 +15,7 @@ describe('gux-popover', () => {
       </div>
     `);
     const element = await page.find('gux-popover');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('Should trigger guxdismiss event on popover dismiss button click', async () => {

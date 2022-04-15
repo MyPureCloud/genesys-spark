@@ -8,7 +8,7 @@ describe('gux-datepicker', () => {
       html: `<gux-datepicker lang="en"></gux-datepicker>`
     });
     const element = await page.find('gux-datepicker');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('renders a datepicker for range of dates', async () => {
@@ -20,7 +20,7 @@ describe('gux-datepicker', () => {
         ></gux-datepicker>`
     });
     const element = await page.find('gux-datepicker');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('updates the text input state when the datepicker’s value property is set', async () => {

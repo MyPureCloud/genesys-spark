@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-number-beta #render clearable should render component as expected (1) 1`] = `"<gux-form-field-number-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render clearable should render component as expected (1) 1`] = `"<gux-form-field-number-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render clearable should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -14,15 +14,15 @@ exports[`gux-form-field-number-beta #render clearable should render component as
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -31,7 +31,7 @@ exports[`gux-form-field-number-beta #render clearable should render component as
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render clearable should render component as expected (2) 1`] = `"<gux-form-field-number-beta clearable=\\"\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render clearable should render component as expected (2) 1`] = `"<gux-form-field-number-beta clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render clearable should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -42,19 +42,19 @@ exports[`gux-form-field-number-beta #render clearable should render component as
     <div class="gux-input">
       <div class="gux-clear gux-input-container">
         <slot name="input"></slot>
-        <gux-form-field-input-clear-button class="hydrated"></gux-form-field-input-clear-button>
+        <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -63,7 +63,7 @@ exports[`gux-form-field-number-beta #render clearable should render component as
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render clearable should render component as expected (3) 1`] = `"<gux-form-field-number-beta clearable=\\"true\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render clearable should render component as expected (3) 1`] = `"<gux-form-field-number-beta clearable=\\"true\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render clearable should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -74,19 +74,19 @@ exports[`gux-form-field-number-beta #render clearable should render component as
     <div class="gux-input">
       <div class="gux-clear gux-input-container">
         <slot name="input"></slot>
-        <gux-form-field-input-clear-button class="hydrated"></gux-form-field-input-clear-button>
+        <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -95,7 +95,7 @@ exports[`gux-form-field-number-beta #render clearable should render component as
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render clearable should render component as expected (4) 1`] = `"<gux-form-field-number-beta clearable=\\"false\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render clearable should render component as expected (4) 1`] = `"<gux-form-field-number-beta clearable=\\"false\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render clearable should render component as expected (4) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -109,15 +109,15 @@ exports[`gux-form-field-number-beta #render clearable should render component as
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -126,7 +126,7 @@ exports[`gux-form-field-number-beta #render clearable should render component as
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render clearable should render component as expected (5) 1`] = `"<gux-form-field-number-beta clearable=\\"\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render clearable should render component as expected (5) 1`] = `"<gux-form-field-number-beta clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render clearable should render component as expected (5) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -140,15 +140,15 @@ exports[`gux-form-field-number-beta #render clearable should render component as
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -157,7 +157,7 @@ exports[`gux-form-field-number-beta #render clearable should render component as
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-number-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-number-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -171,15 +171,15 @@ exports[`gux-form-field-number-beta #render input attributes should render compo
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -188,7 +188,7 @@ exports[`gux-form-field-number-beta #render input attributes should render compo
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-number-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-number-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -202,15 +202,15 @@ exports[`gux-form-field-number-beta #render input attributes should render compo
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -219,7 +219,7 @@ exports[`gux-form-field-number-beta #render input attributes should render compo
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-number-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" required=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-number-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" required=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -233,15 +233,15 @@ exports[`gux-form-field-number-beta #render input attributes should render compo
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -250,7 +250,7 @@ exports[`gux-form-field-number-beta #render input attributes should render compo
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render label-position should render component as expected (1) 1`] = `"<gux-form-field-number-beta class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render label-position should render component as expected (1) 1`] = `"<gux-form-field-number-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -264,15 +264,15 @@ exports[`gux-form-field-number-beta #render label-position should render compone
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -281,7 +281,7 @@ exports[`gux-form-field-number-beta #render label-position should render compone
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render label-position should render component as expected (2) 1`] = `"<gux-form-field-number-beta label-position=\\"above\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render label-position should render component as expected (2) 1`] = `"<gux-form-field-number-beta label-position=\\"above\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
@@ -295,15 +295,15 @@ exports[`gux-form-field-number-beta #render label-position should render compone
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -312,7 +312,7 @@ exports[`gux-form-field-number-beta #render label-position should render compone
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render label-position should render component as expected (3) 1`] = `"<gux-form-field-number-beta label-position=\\"beside\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render label-position should render component as expected (3) 1`] = `"<gux-form-field-number-beta label-position=\\"beside\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -326,15 +326,15 @@ exports[`gux-form-field-number-beta #render label-position should render compone
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -343,7 +343,7 @@ exports[`gux-form-field-number-beta #render label-position should render compone
 </div>
 `;
 
-exports[`gux-form-field-number-beta #render label-position should render component as expected (4) 1`] = `"<gux-form-field-number-beta label-position=\\"screenreader\\" class=\\"hydrated\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
+exports[`gux-form-field-number-beta #render label-position should render component as expected (4) 1`] = `"<gux-form-field-number-beta label-position=\\"screenreader\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number-beta>"`;
 
 exports[`gux-form-field-number-beta #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">
@@ -357,15 +357,15 @@ exports[`gux-form-field-number-beta #render label-position should render compone
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-up"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-up"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon class="hydrated" icon-name="chevron-small-down"></gux-icon>
+          <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>

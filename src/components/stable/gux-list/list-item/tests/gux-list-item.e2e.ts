@@ -6,7 +6,7 @@ describe('gux-list-item', () => {
 
     await page.setContent('<gux-list-item text="testing" value="testing"/>');
     const element = await page.find('gux-list-item');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('should have the correct display', async () => {

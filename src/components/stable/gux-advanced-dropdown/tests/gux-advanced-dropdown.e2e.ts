@@ -16,7 +16,7 @@ describe('gux-advanced-dropdown', () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
     await a11yCheck(page, axeExclusions);
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('should open the dropdown on click', async () => {

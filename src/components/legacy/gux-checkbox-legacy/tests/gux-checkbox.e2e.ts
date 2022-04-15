@@ -6,7 +6,7 @@ describe('gux-checkbox-legacy', () => {
 
     await page.setContent('<gux-checkbox-legacy></gux-checkbox-legacy>');
     const element = await page.find('gux-checkbox-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('renders the three checkbox states', async () => {

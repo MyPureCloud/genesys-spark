@@ -30,7 +30,7 @@ describe('gux-tooltip', () => {
         expect(tooltip.getAttribute('data-popper-placement')).toBe(
           'bottom-start'
         );
-        expect(tooltip).toHaveClass('hydrated');
+        expect(tooltip).toHaveAttribute('hydrated');
       });
     });
   });
