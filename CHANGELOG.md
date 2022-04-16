@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.53.2](https://inindca///compare/v2.53.1...v2.53.2) (2022-04-16)
+
+
+### Bug Fixes
+
+* **stencil:** use attribute for component hydration instead of class ([b791993](https://inindca///commit/b7919932da248ca46f6ec9111aefdc62431ccf03))
+
 ### [2.53.1](https://inindca///compare/v2.53.0...v2.53.1) (2022-03-25)
 
 ## [2.53.0](https://inindca///compare/v2.52.9...v2.53.0) (2022-03-24)
