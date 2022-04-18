@@ -3,6 +3,19 @@
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
 
+// Secondary Palette Disabled
+@gux-navy-sec-disabled: fade(@gux-navy-sec, 50%);
+@gux-blue-sec-disabled: fade(@gux-blue-sec, 50%);
+@gux-electric-purple-sec-disabled: fade(@gux-electric-purple-sec, 50%);
+@gux-plum-sec-disabled: fade(@gux-plum-sec, 50%);
+@gux-lilac-sec-disabled: fade(@gux-lilac-sec, 50%);
+@gux-fuscha-sec-disabled: fade(@gux-fuscha-sec, 50%);
+@gux-bubblegum-pink-sec-disabled: fade(@gux-bubblegum-pink-sec, 50%);
+@gux-aqua-green-sec-disabled: fade(@gux-aqua-green-sec, 50%);
+@gux-olive-green-sec-disabled: fade(@gux-olive-green-sec, 50%);
+@gux-alert-yellow-green-sec-disabled: fade(@gux-alert-yellow-green-sec, 50%);
+@gux-dark-purple-sec-disabled: fade(@gux-dark-purple-sec, 50%);
+
 // Style
 :host {
   display: inline-block;
@@ -15,7 +28,6 @@
   align-content: stretch;
   align-items: center;
   justify-content: flex-start;
-  max-width: 100px;
   padding: @spacing-3xs @spacing-xs;
   color: @gux-grey-100;
   background-color: @gux-black-50;
@@ -68,14 +80,14 @@
   }
 
   &.gux-disabled {
-    background-color: #969ba4;
+    background-color: fade(@gux-black-50, 50%);
   }
 
   &.gux-default {
     background-color: @gux-black-50;
 
     &.gux-disabled {
-      background-color: #969ba4;
+      background-color: fade(@gux-black-50, 50%);
     }
   }
 
@@ -83,7 +95,7 @@
     background-color: @gux-navy-sec;
 
     &.gux-disabled {
-      background-color: #909cb9;
+      background-color: @gux-navy-sec-disabled;
     }
   }
 
@@ -92,8 +104,8 @@
     background-color: @gux-blue-sec;
 
     &.gux-disabled {
-      color: #969ba4;
-      background-color: #bad3ff;
+      color: fade(@gux-black-50, 50%);
+      background-color: @gux-blue-sec-disabled;
     }
   }
 
@@ -101,7 +113,7 @@
     background-color: @gux-electric-purple-sec;
 
     &.gux-disabled {
-      background-color: #c1a8e7;
+      background-color: @gux-electric-purple-sec-disabled;
     }
   }
 
@@ -110,8 +122,8 @@
     background-color: @gux-aqua-green-sec;
 
     &.gux-disabled {
-      color: #8f939a;
-      background-color: #9bd4d8;
+      color: fade(@gux-black-30, 50%);
+      background-color: @gux-aqua-green-sec-disabled;
     }
   }
 
@@ -120,8 +132,8 @@
     background-color: @gux-fuscha-sec;
 
     &.gux-disabled {
-      color: #7f7f7f;
-      background-color: #e7a0df;
+      color: fade(@gux-black-10, 50%);
+      background-color: @gux-fuscha-sec-disabled;
     }
   }
 
@@ -129,7 +141,7 @@
     background-color: @gux-dark-purple-sec;
 
     &.gux-disabled {
-      background-color: #aeaac0;
+      background-color: @gux-dark-purple-sec-disabled;
     }
   }
 
@@ -138,8 +150,8 @@
     background-color: @gux-bubblegum-pink-sec;
 
     &.gux-disabled {
-      color: #969ba4;
-      background-color: #ffc7ed;
+      color: fade(@gux-black-50, 50%);
+      background-color: @gux-bubblegum-pink-sec-disabled;
     }
   }
 
@@ -148,8 +160,8 @@
     background-color: @gux-olive-green-sec;
 
     &.gux-disabled {
-      color: #8a8d92;
-      background-color: #c1c594;
+      color: fade(@gux-black-20, 50%);
+      background-color: @gux-olive-green-sec-disabled;
     }
   }
 
@@ -158,8 +170,8 @@
     background-color: @gux-lilac-sec;
 
     &.gux-disabled {
-      color: #969ba4;
-      background-color: #d9d9f4;
+      color: fade(@gux-black-50, 50%);
+      background-color: @gux-lilac-sec-disabled;
     }
   }
 
@@ -168,8 +180,8 @@
     background-color: @gux-alert-yellow-green-sec;
 
     &.gux-disabled {
-      color: #969ba4;
-      background-color: #edeba2;
+      color: fade(@gux-black-50, 50%);
+      background-color: @gux-alert-yellow-green-sec-disabled;
     }
   }
 }
