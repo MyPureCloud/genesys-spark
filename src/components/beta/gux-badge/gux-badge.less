@@ -1,0 +1,78 @@
+@import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/typography.less';
+
+// Style
+:host {
+  display: inline-block;
+}
+
+.gux-badge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: flex-start;
+  height: 20px;
+  padding: @spacing-3xs @spacing-xs;
+  color: @gux-grey-100;
+  background-color: @gux-black-50;
+  border-radius: @spacing-2xs;
+  .gux-label();
+
+  gux-tooltip-title {
+    white-space: nowrap;
+    cursor: default;
+
+    ::slotted(gux-icon) {
+      height: 16px;
+      font-size: 16px;
+    }
+  }
+
+  .gux-sr-only {
+    .gux-sr-only-clip();
+  }
+
+  &.gux-neutral {
+    color: @gux-black-50;
+    background-color: @gux-grey-60;
+
+    &.gux-bold {
+      color: @gux-grey-100;
+      background-color: @gux-black-50;
+    }
+  }
+
+  &.gux-red {
+    color: @gux-alert-red-30;
+    background-color: @gux-alert-red-100;
+
+    &.gux-bold {
+      color: @gux-grey-100;
+      background-color: @gux-alert-red-60;
+    }
+  }
+
+  &.gux-yellow {
+    color: @gux-alert-yellow-30;
+    background-color: @gux-alert-yellow-100;
+
+    &.gux-bold {
+      color: @gux-black-50;
+      background-color: @gux-alert-yellow-60;
+    }
+  }
+
+  &.gux-green {
+    color: @gux-alert-green-30;
+    background-color: @gux-alert-green-100;
+
+    &.gux-bold {
+      color: @gux-grey-100;
+      background-color: @gux-alert-green-60;
+    }
+  }
+}
