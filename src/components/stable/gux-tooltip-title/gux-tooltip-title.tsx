@@ -28,6 +28,9 @@ export class GuxTooltipTitle {
   private showTooltip: boolean = false;
 
   @State()
+  private iconOnly: boolean = false;
+
+  @State()
   private titleName: string = '';
 
   @Listen('mouseenter')
@@ -65,42 +68,20 @@ export class GuxTooltipTitle {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.titleName = this.setTooltipText();
+    this.titleName = this.setTooltipTitleText();
     this.checkForTooltipHideOrShow();
   }
 
   componentWillLoad() {
-    this.titleName = this.setTooltipText();
+    this.titleName = this.setTooltipTitleText();
   }
 
   componentDidLoad() {
     this.logErrorNoIconSrText();
   }
 
-  private isIconOnlyTitle(): boolean {
-    return !!(
-      this.root.querySelector('gux-icon') &&
-      this.root.querySelector('.gux-title-container')?.children.length === 1
-    );
-  }
-
-  private hasIconSrText(): boolean {
-    return !!(
-      this.isIconOnlyTitle() &&
-      this.root.querySelector('gux-icon')?.hasAttribute('screenreader-text')
-    );
-  }
-
-  private getIconOnlyTooltipText(): string {
-    if (this.isIconOnlyTitle()) {
-      return this.root
-        .querySelector('gux-icon')
-        .getAttribute('screenreader-text');
-    }
-  }
-
   private logErrorNoIconSrText(): void {
-    if (this.isIconOnlyTitle() && !this.hasIconSrText()) {
+    if (this.iconOnly && !this.titleName) {
       logError(
         'gux-tooltip-title',
         'No screenreader-text provided. Provide a localized screenreader-text property for the gux-icon. The screenreader-text property is used for the icon screenreader text and the tooltip.'
@@ -112,25 +93,27 @@ export class GuxTooltipTitle {
     element.classList.add('gux-tooltip-icon-decorative');
   }
 
-  private setTooltipText(): string {
-    if (this.isIconOnlyTitle()) {
-      return this.getIconOnlyTooltipText();
-    } else {
-      return this.setTooltipTitleText();
+  private getTitleContent(): Array<Element> {
+    const slot = this.root.querySelector('slot');
+    const target = this.root.querySelector('.gux-title-container')?.children;
+    if (slot) {
+      return slot.assignedElements();
+    } else if (target) {
+      return Array.from(target);
     }
+    return [];
   }
 
   private setTooltipTitleText(): string {
-    const slot = this.root.querySelector('slot');
-    const children = slot
-      ? slot.assignedElements()
-      : Array.from(this.root.children);
     let titleNameText = '';
-    children.map(element => {
-      if (element.tagName !== 'GUX-ICON' && element.tagName !== 'GUX-TOOLTIP') {
+    this.getTitleContent().map(element => {
+      if (element.tagName !== 'GUX-ICON') {
         titleNameText += element.textContent;
-      } else if (children.length > 1) {
+      } else if (this.getTitleContent().length > 1) {
         this.addIconDecorative(element as HTMLElement);
+      } else if (element.tagName === 'GUX-ICON') {
+        this.iconOnly = true;
+        titleNameText = element.getAttribute('screenreader-text');
       }
     });
 
@@ -142,7 +125,7 @@ export class GuxTooltipTitle {
       '.gux-title-container'
     );
     this.root.classList.remove('gux-overflow-hidden');
-    if (this.hasIconSrText()) {
+    if (this.iconOnly && this.titleName) {
       this.hasTooltip = true;
     } else if (titleContainer?.scrollWidth > titleContainer?.offsetWidth) {
       this.root.classList.add('gux-overflow-hidden');

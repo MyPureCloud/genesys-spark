@@ -247,8 +247,53 @@
   </gux-tag-beta>
 </div>
 
-<style
-  onload="(function() {
+<h2>Icon only (Only for POC, not UX approved)</h2>
+
+<div class="remove-tag" class="tags">
+  <gux-tag-beta value="1" removable>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="default" value="2" removable>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="navy" value="3" removable>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="blue" value="4" removable>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="electric-purple" value="5" removable>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="aqua-green" value="6" removable>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="fuscha" value="7" removable>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="bubblegum-pink" value="8" removable disabled>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="dark-purple" value="9" removable disabled>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon
+    ><span>dark purple</span>
+  </gux-tag-beta>
+  <gux-tag-beta color="olive-green" value="10" removable disabled>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="lilac" value="11" removable disabled>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <gux-tag-beta color="alert-yellow-green" value="12" removable disabled>
+    <gux-icon icon-name="bolt" screenreader-text="Bolt"></gux-icon>
+  </gux-tag-beta>
+  <!-- no screenreader text specified, should raise error -->
+  <gux-tag-beta color="invalid" value="13" removable disabled>
+    <gux-icon icon-name="bolt"></gux-icon>
+  </gux-tag-beta>
+
+  <style
+    onload="(function() {
   const removeTagElements = document.getElementsByClassName('remove-tag');
 
   Array.from(removeTagElements).forEach(function(removeTagElement) {
@@ -265,16 +310,17 @@
     })
   });
 })()"
->
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    border: 1px solid var(--gux-charcoal-grey);
-  }
+  >
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      border: 1px solid var(--gux-charcoal-grey);
+    }
 
-  gux-tag-beta {
-    max-width: 100px;
-    margin: 4px;
-  }
-</style>
+    gux-tag-beta {
+      max-width: 100px;
+      margin: 4px;
+    }
+  </style>
+</div>
