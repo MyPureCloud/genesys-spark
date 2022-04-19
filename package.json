@@ -29,7 +29,7 @@
     "generate-versions-file": "./scripts/generate-versions-file.mjs",
     "i18n": "npm run generate-start-of-week-file && ./scripts/build-i18n.js",
     "lint": "npm run lint.commit && npm run lint.ts && npm run lint.css && npm run lint.svg",
-    "lint.commit": "commitlint -f 811627c6ed30490b975acc4cbc2c2f4bac32e8ae",
+    "lint.commit": "commitlint -f 43dc1fd5fddb6f601d5acc8b2a3db65aeef8bcfc",
     "lint.css": "npx stylelint '**/*.{css,html,less}' --fix",
     "lint.fix": "npm run lint.commit && npm run lint.ts -- --fix && npm run lint.css -- --fix",
     "lint.svg": "svgo -f ./src/components/stable/gux-icon/icons",
