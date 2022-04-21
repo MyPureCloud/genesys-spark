@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.61](https://inindca///compare/v3.0.0-alpha.60...v3.0.0-alpha.61) (2022-04-21)
+
+
+### Features
+
+* **gux-card:** addition of card component ([e5482a8](https://inindca///commit/e5482a816ac5fb88f3aad67cf7687f4cc9f47f20))
+
 ## [3.0.0-alpha.60](https://inindca///compare/v3.0.0-alpha.59...v3.0.0-alpha.60) (2022-04-19)
 
 
