@@ -13,6 +13,6 @@ describe('gux-tab-legacy', () => {
     <gux-tab-legacy></gux-tab-legacy>
     `);
     element = await page.find('gux-tab-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

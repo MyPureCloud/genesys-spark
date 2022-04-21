@@ -146,7 +146,7 @@ describe('gux-tabs-advanced', () => {
         show-new-tab-button="true"
       >
         <gux-tab-advanced tab-id="1-1">
-          <span>Tab Header 1 long long</span>
+          <span>Tab Header 1</span>
         </gux-tab-advanced>
         <gux-tab-advanced tab-id="1-2">
           <gux-icon icon-name="user-directory" decorative="true"></gux-icon>

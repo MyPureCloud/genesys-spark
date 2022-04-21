@@ -9,6 +9,9 @@ const CDN_URL = process.env.CDN_URL || '';
 export const config: Config = {
   namespace: 'genesys-webcomponents',
   globalStyle: 'src/style/style.less',
+  hydratedFlag: {
+    selector: 'attribute'
+  },
   outputTargets: [
     {
       dir: 'dist',
@@ -55,7 +58,10 @@ export const config: Config = {
     collectCoverage: true,
     coverageDirectory: 'build/test-reports/coverage',
     coverageReporters: ['json', 'lcov', 'text', 'clover', 'text-summary'],
-    setupFilesAfterEnv: ['<rootDir>/tests/setupTests.js', '<rootDir>/tests/setupAxeTests.js'],
+    setupFilesAfterEnv: [
+      '<rootDir>/tests/setupTests.js',
+      '<rootDir>/tests/setupAxeTests.js'
+    ],
     reporters: [
       'default',
       [

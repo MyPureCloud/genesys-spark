@@ -70,7 +70,7 @@ describe('gux-action-button', () => {
     await clickDropdownButton(page);
     await a11yCheck(page, [], 'open');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('should fire actionClick event if not disabled', async () => {

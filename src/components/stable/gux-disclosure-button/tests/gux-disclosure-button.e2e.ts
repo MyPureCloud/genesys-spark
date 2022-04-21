@@ -28,7 +28,7 @@ describe('gux-disclosure-button', () => {
     });
     const element = await page.find('gux-disclosure-button');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   describe('#render', () => {

@@ -101,6 +101,7 @@ describe('gux-tag-beta', () => {
   describe('a11y', () => {
     [
       'default',
+      'default-subtle',
       'navy',
       'blue',
       'electric-purple',
