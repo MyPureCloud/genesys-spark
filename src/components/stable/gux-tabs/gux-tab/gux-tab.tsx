@@ -96,7 +96,9 @@ export class GuxTab {
         ref={el => (this.buttonElement = el)}
       >
         <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
-          <slot />
+          <span>
+            <slot />
+          </span>
         </gux-tooltip-title>
       </button>
     ) as JSX.Element;

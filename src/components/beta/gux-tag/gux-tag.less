@@ -16,6 +16,8 @@
   align-items: center;
   justify-content: flex-start;
   padding: @spacing-3xs @spacing-xs;
+  font-size: 12px;
+  font-weight: bold;
   color: @gux-grey-100;
   background-color: @gux-black-50;
   border-radius: @spacing-2xs;
@@ -24,15 +26,8 @@
     white-space: nowrap;
     cursor: default;
 
-    ::slotted(span) {
-      align-items: center;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
     ::slotted(gux-icon) {
       height: 20px;
-      margin-right: @spacing-2xs;
       font-size: 16px;
     }
   }

@@ -89,13 +89,15 @@ export class GuxTooltipTitle {
     }
   }
 
-  private addIconDecorative(element: HTMLElement): void {
-    element.classList.add('gux-tooltip-icon-decorative');
+  private addIconDecorative(): void {
+    this.root.classList.add('gux-tooltip-icon-decorative');
   }
 
-  private getTitleContent(): Array<Element> {
+  private getTitleElements(): Array<Element> {
     const slot = this.root.querySelector('slot');
-    const target = this.root.querySelector('.gux-title-container')?.children;
+    const target = this.root.querySelector(
+      '.gux-title-container span'
+    )?.children;
     if (slot) {
       return slot.assignedElements();
     } else if (target) {
@@ -104,20 +106,31 @@ export class GuxTooltipTitle {
     return [];
   }
 
+  private getTitleTextContent(): string {
+    if (this.root.querySelector('slot')) {
+      return this.root
+        .querySelector('slot')
+        .assignedNodes()
+        .map(node => node.textContent)
+        .join('')
+        .trim();
+    } else if (this.root.querySelector('.gux-title-container')) {
+      return this.root.querySelector('.gux-title-container').textContent.trim();
+    }
+    return '';
+  }
+
   private setTooltipTitleText(): string {
-    let titleNameText = '';
-    this.getTitleContent().map(element => {
-      if (element.tagName !== 'GUX-ICON') {
-        titleNameText += element.textContent;
-      } else if (this.getTitleContent().length > 1) {
-        this.addIconDecorative(element as HTMLElement);
-      } else if (element.tagName === 'GUX-ICON') {
+    let tooltipTitleText = this.getTitleTextContent();
+    this.getTitleElements().forEach(element => {
+      if (element.tagName === 'GUX-ICON' && !this.getTitleTextContent()) {
         this.iconOnly = true;
-        titleNameText = element.getAttribute('screenreader-text');
+        tooltipTitleText = element.getAttribute('screenreader-text');
+      } else if (element.tagName === 'GUX-ICON' && this.getTitleTextContent()) {
+        this.addIconDecorative();
       }
     });
-
-    return titleNameText;
+    return tooltipTitleText;
   }
 
   private checkForTooltipHideOrShow(): void {

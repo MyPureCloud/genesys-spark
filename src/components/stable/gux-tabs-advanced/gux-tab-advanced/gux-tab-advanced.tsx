@@ -205,7 +205,7 @@ export class GuxTabAdvanced {
 
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, tabsResources);
-    this.tabTitle = this.root.querySelector('span').textContent.trim();
+    this.tabTitle = this.root.textContent.trim();
   }
 
   private popoverOnClick(e: MouseEvent): void {
@@ -284,7 +284,9 @@ export class GuxTabAdvanced {
           id={`gux-${this.tabId}-tab`}
         >
           <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
-            <slot />
+            <span>
+              <slot />
+            </span>
           </gux-tooltip-title>
         </button>
 

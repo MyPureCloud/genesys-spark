@@ -6,14 +6,11 @@ gux-tooltip-title {
 }
 
 gux-tooltip {
+  font-weight: normal;
   line-height: normal;
   text-align: left;
   overflow-wrap: break-word;
   white-space: normal;
-}
-
-.gux-title-container {
-  display: flex;
 }
 
 .gux-overflow-hidden .gux-title-container ::slotted(span) {
@@ -29,13 +26,18 @@ gux-tooltip {
 .gux-title-container {
   display: flex;
   pointer-events: none;
+}
 
-  gux-icon,
-  ::slotted(gux-icon) {
-    flex-shrink: 0;
-  }
+.gux-tooltip-icon-decorative {
+  .gux-title-container {
+    position: relative;
+    margin-left: calc(1rem + @spacing-2xs);
 
-  .gux-tooltip-icon-decorative {
-    margin-right: @spacing-xs;
+    gux-icon,
+    ::slotted(gux-icon) {
+      position: absolute;
+      left: calc(-1rem - @spacing-2xs);
+      flex-shrink: 0;
+    }
   }
 }

@@ -5,7 +5,9 @@ exports[`gux-tag-beta #render should render component as expected (1) 1`] = `
   <mock:shadow-root>
     <div aria-disabled="false" class="gux-default gux-tag">
       <gux-tooltip-title>
-        <slot aria-hidden="true"></slot>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         tag with label:
@@ -23,7 +25,9 @@ exports[`gux-tag-beta #render should render component as expected (2) 1`] = `
   <mock:shadow-root>
     <div aria-disabled="false" class="gux-default gux-tag">
       <gux-tooltip-title>
-        <slot aria-hidden="true"></slot>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         tag with label:
@@ -41,7 +45,9 @@ exports[`gux-tag-beta #render should render component as expected (3) 1`] = `
   <mock:shadow-root>
     <div aria-disabled="false" class="gux-navy gux-tag">
       <gux-tooltip-title>
-        <slot aria-hidden="true"></slot>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         tag with label:
@@ -57,7 +63,9 @@ exports[`gux-tag-beta #render should render component as expected (4) 1`] = `
   <mock:shadow-root>
     <div aria-disabled="false" class="gux-navy gux-tag">
       <gux-tooltip-title>
-        <slot aria-hidden="true"></slot>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         tag with label:
@@ -74,7 +82,9 @@ exports[`gux-tag-beta #render should render component as expected (5) 1`] = `
   <mock:shadow-root>
     <div aria-disabled="false" class="gux-navy gux-tag">
       <gux-tooltip-title>
-        <slot aria-hidden="true"></slot>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         tag with label:
@@ -96,7 +106,9 @@ exports[`gux-tag-beta #render should render component as expected (6) 1`] = `
   <mock:shadow-root>
     <div aria-disabled="true" class="gux-disabled gux-navy gux-tag">
       <gux-tooltip-title>
-        <slot aria-hidden="true"></slot>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
         disabled tag with label:

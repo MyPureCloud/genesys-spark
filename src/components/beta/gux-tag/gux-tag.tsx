@@ -87,18 +87,20 @@ export class GuxTag {
     const slotAssignedNodes = (
       event.composedPath()[0] as HTMLSlotElement
     ).assignedNodes();
-    slotAssignedNodes.forEach(nodeItem => {
-      if (nodeItem.textContent) {
-        this.label = nodeItem.textContent;
-        return;
-      }
-    });
+    this.label = slotAssignedNodes
+      .map(nodeItem => nodeItem.textContent)
+      .join('');
   }
 
   private renderTagTitle(): JSX.Element {
     return (
       <gux-tooltip-title>
-        <slot aria-hidden="true" onSlotchange={this.onSlotChange.bind(this)} />
+        <span>
+          <slot
+            aria-hidden="true"
+            onSlotchange={this.onSlotChange.bind(this)}
+          />
+        </span>
       </gux-tooltip-title>
     ) as JSX.Element;
   }
