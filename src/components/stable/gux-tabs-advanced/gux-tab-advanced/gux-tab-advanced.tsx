@@ -205,7 +205,18 @@ export class GuxTabAdvanced {
 
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, tabsResources);
-    this.tabTitle = this.root.textContent.trim();
+  }
+
+  componentDidLoad(): void {
+    this.tabTitle = this.root
+      .querySelector('gux-tooltip-title')
+      .textContent.trim();
+    if (!this.hasAnimated) {
+      writeTask(() => {
+        this.root.querySelector('.gux-tab').classList.add('gux-show');
+        this.hasAnimated = true;
+      });
+    }
   }
 
   private popoverOnClick(e: MouseEvent): void {
@@ -251,15 +262,6 @@ export class GuxTabAdvanced {
     }
 
     return null;
-  }
-
-  componentDidLoad(): void {
-    if (!this.hasAnimated) {
-      writeTask(() => {
-        this.root.querySelector('.gux-tab').classList.add('gux-show');
-        this.hasAnimated = true;
-      });
-    }
   }
 
   render(): JSX.Element {
