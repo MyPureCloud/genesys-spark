@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '../../../../../node_modules/@stencil/core/testing';
 import { GuxPaginationBeta } from '../gux-pagination-beta';
 
 import { GuxButton } from '../../../stable/gux-button/gux-button';

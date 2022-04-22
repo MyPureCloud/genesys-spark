@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color-palette.less';
+@import (reference) '../../../style/spacing.less';
 
 :host {
   display: block;
@@ -13,7 +14,8 @@
   align-items: center;
   justify-content: space-between;
   height: 32px;
-  margin: 12px 12px 0 12px;
+  margin: @spacing-small @spacing-small 0 @spacing-small;
+  overflow: scroll;
 
   .gux-pagination-info {
     display: flex;
@@ -37,7 +39,7 @@
     flex: 1 1 auto;
     align-self: auto;
     order: 0;
-    margin-left: 24px;
+    margin-left: @spacing-large;
   }
 
   .gux-pagination-change:first-child {

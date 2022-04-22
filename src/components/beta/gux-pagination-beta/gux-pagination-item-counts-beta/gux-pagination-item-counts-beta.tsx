@@ -30,7 +30,7 @@ export class GuxPaginationItemCountsBeta implements ComponentInterface {
   itemsPerPage: number = 25;
 
   @Prop()
-  pagesUnknown: boolean = false;
+  totalPagesUnknown: boolean = false;
 
   private get firstItem(): number {
     if (this.totalItems < 1) {
@@ -53,12 +53,11 @@ export class GuxPaginationItemCountsBeta implements ComponentInterface {
   }
 
   private getPaginationItemCountsRange(): JSX.Element {
-    if (this.pagesUnknown) {
-      return (<span></span>) as JSX.Element;
+    if (!this.totalPagesUnknown) {
+      return (
+        <span>{this.i18n('totalItems', { totalItems: this.totalItems })}</span>
+      ) as JSX.Element;
     }
-    return (
-      <span>{this.i18n('totalItems', { totalItems: this.totalItems })}</span>
-    ) as JSX.Element;
   }
 
   render(): JSX.Element {

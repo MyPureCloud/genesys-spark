@@ -1,9 +1,0 @@
-{
-  "page": "Sivu",
-  "totalPages": " / {totalPages, number}",
-  "first": "Ensimmäinen",
-  "previous": "Edellinen",
-  "next": "Seuraava",
-  "last": "Viimeinen",
-  "pageInputLabel": "Sivu {currentPage, number} / {lastPage, number})"
-}

@@ -24,7 +24,7 @@ An internal component used by the gux-pagination component.
 
 ### Used by
 
- - [gux-pagination-advanced-beta](../gux-pagination-advanced-beta)
+ - [gux-pagination-beta](..)
 
 ### Depends on
 
@@ -39,8 +39,8 @@ graph TD;
   gux-pagination-items-per-page-beta --> gux-listbox
   gux-pagination-items-per-page-beta --> gux-option-v2
   gux-dropdown-v2-beta --> gux-icon
-  gux-dropdown-v2-beta --> gux-popup-beta
-  gux-pagination-advanced-beta --> gux-pagination-items-per-page-beta
+  gux-dropdown-v2-beta --> gux-popup
+  gux-pagination-beta --> gux-pagination-items-per-page-beta
   style gux-pagination-items-per-page-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -23,7 +23,7 @@
  - [gux-action-button](../../stable/gux-action-button)
  - [gux-button-multi](../gux-button-multi)
  - [gux-pagination-buttons](../../stable/gux-pagination/gux-pagination-buttons)
- - [gux-pagination-buttons-beta](../gux-pagination/gux-pagination-buttons)
+ - [gux-pagination-buttons-beta](../gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-cursor](../../stable/gux-pagination-cursor)
  - [gux-table-beta](../gux-table)
 
