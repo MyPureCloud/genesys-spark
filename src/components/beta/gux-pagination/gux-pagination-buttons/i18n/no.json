@@ -1,0 +1,9 @@
+{
+  "page": "Side",
+  "totalPages": " av {totalPages, number}",
+  "first": "Første",
+  "previous": "Forrige",
+  "next": "Neste",
+  "last": "Siste",
+  "pageInputLabel": "Side {currentPage, number} av {totalPages, number}"
+}

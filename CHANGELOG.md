@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.57](https://inindca///compare/v3.0.0-alpha.56...v3.0.0-alpha.57) (2022-04-06)
+
+
+### Features
+
+* **gux-tooltip:** add methods to hide and show tooltip, show/hide tooltip on focus to tabs ([db9d7d0](https://inindca///commit/db9d7d059e5b26edbaadd215dbd254631d1c68a5))
+
+## [3.0.0-alpha.56](https://inindca///compare/v3.0.0-alpha.55...v3.0.0-alpha.56) (2022-04-05)
+
+
+### Features
+
+* **color-palette:** checked beta/stable components for discrepancies in styling ([c5eb212](https://inindca///commit/c5eb212a7cc330433c5179519b2cc147144a17d1))
+* **color-palette:** updating black and grey palettes for consistency ([4efe4ac](https://inindca///commit/4efe4acf38ee18191ba6bc1f9ef9606553c8ddf5))
+* **gux-tag:** aqua-green not passing accesibility checks changed text color to gux-black-30 ([47bc416](https://inindca///commit/47bc41658953d9523f08dcf387e83211440cef3a))
+
+## [3.0.0-alpha.55](https://inindca///compare/v3.0.0-alpha.54...v3.0.0-alpha.55) (2022-04-04)
+
+
+### Bug Fixes
+
+* **gux-tooltip-title:** gux-advanced tabs tooltip sort issue ([61ea65d](https://inindca///commit/61ea65d679e667f5d36b2b10493c37ce65ed3bfb))
+
+## [3.0.0-alpha.54](https://inindca///compare/v3.0.0-alpha.53...v3.0.0-alpha.54) (2022-03-31)
+
+
+### Features
+
+* **gux-dropdown:** explicitly set shadowDOM to false ([6d22c6f](https://inindca///commit/6d22c6f1d932da7daf120b8839a426b1c8c9c54e))
+
+## [3.0.0-alpha.53](https://inindca///compare/v3.0.0-alpha.52...v3.0.0-alpha.53) (2022-03-30)
+
+
+### Bug Fixes
+
+* **gux-tooltip-title:** fix dynamic tooltip text bug ([c5bd4cb](https://inindca///commit/c5bd4cbe6c58b5bf89df1691b168d1d5175999a3))
+* **gux-tooltip-title:** remove need for hard coding tab width, update title slot API for adv. tabs ([00a49dd](https://inindca///commit/00a49dd5039aefa9fe2d355674535c55fdea465b))
+
 ## [3.0.0-alpha.52](https://inindca///compare/v3.0.0-alpha.51...v3.0.0-alpha.52) (2022-03-28)
 
 ## [3.0.0-alpha.51](https://inindca///compare/v3.0.0-alpha.50...v3.0.0-alpha.51) (2022-03-24)

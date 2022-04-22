@@ -24,9 +24,12 @@ import tabsResources from '../i18n/en.json';
 })
 export class GuxTabAdvanced {
   private buttonElement: HTMLButtonElement;
+  private tooltipTitleElement: HTMLGuxTooltipTitleElement;
   private dropdownOptionsButtonId: string = randomHTMLId();
   private moveFocusDelay: number = 100;
   private tabTitle: string = '';
+  private focusinFromClick: boolean = false;
+
   /**
    * unique id for the tab
    */
@@ -60,13 +63,24 @@ export class GuxTabAdvanced {
   @Element()
   private root: HTMLElement;
 
+  @Listen('focusin')
+  onFocusin() {
+    if (!this.focusinFromClick) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+      void this.tooltipTitleElement.setShowTooltip();
+    }
+  }
+
   @Listen('focusout')
   onFocusout(event: FocusEvent) {
     if (
       !this.root.querySelector('.gux-tab').contains(event.relatedTarget as Node)
     ) {
       this.popoverHidden = true;
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+      void this.tooltipTitleElement.setHideTooltip();
     }
+    this.focusinFromClick = false;
   }
 
   @Listen('keydown')
@@ -148,6 +162,11 @@ export class GuxTabAdvanced {
     if (!this.active && !this.guxDisabled) {
       this.internalactivatetabpanel.emit(this.tabId);
     }
+  }
+
+  @Listen('mousedown')
+  onMouseDown() {
+    this.focusinFromClick = true;
   }
 
   @Event()
@@ -266,16 +285,8 @@ export class GuxTabAdvanced {
           tabIndex={this.active ? 0 : -1}
           id={`gux-${this.tabId}-tab`}
         >
-          {this.tabIconName ? (
-            <div class="tab-icon-container">
-              <gux-icon
-                icon-name={this.tabIconName}
-                decorative={true}
-              ></gux-icon>
-            </div>
-          ) : null}
-          <gux-tooltip-title tab-width={109}>
-            <slot name="title" />
+          <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
+            <slot />
           </gux-tooltip-title>
         </button>
 

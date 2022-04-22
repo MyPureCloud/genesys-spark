@@ -1,12 +1,18 @@
 @import (reference) '../../../style/spacing.less';
 
 gux-tooltip-title {
+  overflow: hidden;
   cursor: default;
 
   gux-tooltip {
     text-align: left;
     overflow-wrap: break-word;
     white-space: normal;
+  }
+
+  &.gux-overflow-hidden .gux-title-container > * {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .gux-title-container {
@@ -18,11 +24,6 @@ gux-tooltip-title {
       &.gux-tooltip-icon-decorative {
         margin-right: @spacing-xs;
       }
-    }
-
-    & > * {
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
   }
 }

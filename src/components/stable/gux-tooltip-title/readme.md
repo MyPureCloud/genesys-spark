@@ -5,11 +5,27 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
+## Methods
 
-| Property   | Attribute   | Description | Type     | Default     |
-| ---------- | ----------- | ----------- | -------- | ----------- |
-| `tabWidth` | `tab-width` |             | `number` | `undefined` |
+### `setHideTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `setShowTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies

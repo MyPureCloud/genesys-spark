@@ -16,7 +16,7 @@ const html = `
   <gux-tabs-advanced lang="en" id="interactive">
     <gux-tab-advanced-list slot="tab-list" show-new-tab-button="true">
       <gux-tab-advanced tab-id="1-1" tab-icon-name="lock">
-        <span slot="title"> Hello World </span>
+        <span>Hello World</span>
         <span slot="dropdown-options">
           <gux-tab-advanced-option
             option-id="1"
@@ -48,19 +48,16 @@ const html = `
           </gux-tab-advanced-option>
         </span>
       </gux-tab-advanced>
-      <gux-tab-advanced tab-id="1-2" tab-icon-name="lock">
-        <span slot="title"> Hello World 2 </span>
+      <gux-tab-advanced tab-id="1-2">
+        <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+        <span>Hello World 2 long long long long long</span>
       </gux-tab-advanced>
-      <gux-tab-advanced gux-disabled tab-id="1-3" tab-icon-name="lock">
-      <span slot="title"> Hello World 3 </span>
+      <gux-tab-advanced gux-disabled tab-id="1-3">
+      <span>Hello World 3</span>
     </gux-tab-advanced>
     </gux-tab-advanced-list>
     <gux-tab-advanced-panel tab-id="1-1">
       <span>Tab content 1</span>
-      <div>The current time is: <span id="currentTime"></span></div>
-      <div>
-        The current selected panel tab-id is: <span id="currenttab-id"></span>
-      </div>
     </gux-tab-advanced-panel>
     <gux-tab-advanced-panel tab-id="1-2">
       <span>Tab content 2</span>
