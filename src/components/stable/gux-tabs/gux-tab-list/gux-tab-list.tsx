@@ -10,7 +10,6 @@ import {
   writeTask
 } from '@stencil/core';
 
-import { OnMutation } from '../../../../utils/decorator/on-mutation';
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 
 import tabsResources from '../i18n/en.json';
@@ -22,6 +21,7 @@ import tabsResources from '../i18n/en.json';
 })
 export class GuxTabList {
   private i18n: GetI18nValue;
+  private triggerIds: string;
 
   @Element()
   root: HTMLElement;
@@ -43,9 +43,6 @@ export class GuxTabList {
 
   @State()
   private isScrolledToEnd: boolean = false;
-
-  @State()
-  private triggerIds: string;
 
   @Listen('focusout')
   onFocusout(event: FocusEvent) {
@@ -74,11 +71,6 @@ export class GuxTabList {
   private resizeObserver?: ResizeObserver;
 
   private domObserver?: MutationObserver;
-
-  @OnMutation({ childList: true, subtree: true })
-  onMutation(): void {
-    this.setTriggerIds();
-  }
 
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
@@ -136,7 +128,8 @@ export class GuxTabList {
     void this.tabTriggers[this.focused].guxFocus();
   }
 
-  setTriggerIds() {
+  private setTabTriggers(): void {
+    this.tabTriggers = this.root.querySelectorAll('gux-tab');
     if (this.tabTriggers) {
       this.triggerIds = Array.from(this.tabTriggers)
         .map(trigger => `gux-${trigger.getAttribute('tab-id')}-tab`)
@@ -217,7 +210,7 @@ export class GuxTabList {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.tabTriggers = this.root.querySelectorAll('gux-tab');
+    this.setTabTriggers();
     this.i18n = await buildI18nForComponent(this.root, tabsResources);
   }
 

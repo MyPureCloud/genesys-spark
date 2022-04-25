@@ -1,19 +1,9 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxButton } from '../../gux-button/gux-button';
 import { GuxModal } from '../gux-modal';
-import { MockHTMLElement } from '@stencil/core/mock-doc';
+import { GuxDismissButton } from '../../../stable/gux-dismiss-button/gux-dismiss-button';
 
-// Monkeypatch a missing function in the stencil mock docs
-if (!('getAttributeNode' in MockHTMLElement.prototype)) {
-  Object.assign(MockHTMLElement.prototype, {
-    // The implementation doesn't have to be right it just can't crash
-    getAttributeNode() {
-      return null;
-    }
-  });
-}
-
-const components = [GuxButton, GuxModal];
+const components = [GuxButton, GuxModal, GuxDismissButton];
 const language = 'en';
 
 describe('gux-modal', () => {
@@ -26,10 +16,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -41,10 +31,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -56,10 +46,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -70,10 +60,10 @@ describe('gux-modal', () => {
           <gux-modal size="large">
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -94,7 +84,7 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
           </gux-modal>
         `
@@ -106,7 +96,23 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
+            </div>
+          </gux-modal>
+        `
+      },
+      {
+        description:
+          'should render modal with a specified initial focus element',
+        html: `
+          <gux-modal initial-focus="#cancelButton">
+            <div slot="title">Modal Title</div>
+            <div slot="content">This contains the modal content.</div>
+            <div slot="left-align-buttons">
+                <gux-button id="cancelButton">Cancel</gux-button>
+            </div>
+            <div slot="right-align-buttons">
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -118,10 +124,10 @@ describe('gux-modal', () => {
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
-                <gux-button gux-title="Cancel">Cancel</gux-button>
+                <gux-button>Cancel</gux-button>
             </div>
             <div slot="right-align-buttons">
-              <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+              <gux-button accent='primary'>Accept</gux-button>
             </div>
           </gux-modal>
         `
@@ -152,16 +158,17 @@ describe('gux-modal', () => {
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
-              <gux-button gux-title="Cancel">Cancel</gux-button>
+              <gux-button>Cancel</gux-button>
           </div>
           <div slot="right-align-buttons">
-            <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+            <gux-button accent='primary'>Accept</gux-button>
           </div>
         </gux-modal>
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const dismissButton = page.root.querySelector('gux-dismiss-button');
+      const dismissButton =
+        page.root.shadowRoot.querySelector('gux-dismiss-button');
       const guxdismissSpy = jest.fn();
       const clickSpy = jest.fn();
       const elementRemoveSpy = jest.spyOn(element, 'remove');
@@ -185,16 +192,17 @@ describe('gux-modal', () => {
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
-              <gux-button gux-title="Cancel">Cancel</gux-button>
+              <gux-button>Cancel</gux-button>
           </div>
           <div slot="right-align-buttons">
-            <gux-button gux-title='Button' accent='primary'>Accept</gux-button>
+            <gux-button accent='primary'>Accept</gux-button>
           </div>
         </gux-modal>
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
-      const dismissButton = page.root.querySelector('gux-dismiss-button');
+      const dismissButton =
+        page.root.shadowRoot.querySelector('gux-dismiss-button');
       const elementRemoveSpy = jest.spyOn(element, 'remove');
 
       page.win.addEventListener('guxdismiss', (event: Event) => {

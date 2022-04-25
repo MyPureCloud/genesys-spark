@@ -3,15 +3,20 @@
 *This migration guide is open to anyone to edit. If you have migrated a component and think it would be helpful to others to document something you encountered please do so. We understand that at the moment because of the need to fork the repo the overhead of making a small contribution is high so feel free to raise an issue on the COMUI board instead it that is more convenient and a core team member will create the PR.*
 
 ## TLDR
+* Typescript updated to v4
 * Set the `allowSyntheticDefaultImports` (or `esModuleInterop`) compiler option  to `true` in the host apps tsconfig.json.
 * rename `title` property to `gux-title` on instances of `gux-button`
+* replace the `focusElement` method with the `focus` method on instances of `gux-button`
 * remove `first-day-of-week` property from instances of `gux-calendar`
 * remove `first-day-of-week` property from instances of `gux-datepicker`
 * `label` property on instances of `gux-datepicker` now only accepts `string`.
 * `trap-focus` property on instances of `gux-modal` now default to true
+* replace `gux-list-divider` with `gux-action-list-divider` in `gux-action-button` and `gux-button-multi` components
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
   * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
+  * `gux-pagination-cursor-beta` ->  `gux-pagination-cursor`
+  * `gux-popup-beta` ->  `gux-popup`
   * `gux-tabs-beta` -> `gux-tabs`
   * `gux-tooltip-title-beta` ->  `gux-tooltip-title`
 * add `-legacy` to components that have been removed from stable
@@ -21,9 +26,13 @@
     * `gux-tab`-> `gux-tab-legacy`
 * change `-beta` to `-legacy` for components that have been removed from beta
   * `gux-command-palette-beta` -> `gux-command-palette-legacy`
+  * `gux-panel-frame-beta` -> `gux-panel-frame-legacy`
+  * `gux-side-panel-beta` -> `gux-side-panel-legacy`
 * migrate away from usage of legacy components
   * `gux-accordion-legacy` -> `gux-accordion`
   * `gux-command-palette-legacy` -> Contact the Core UI team if you need help migrating away from this component.
+  * `gux-panel-frame-legacy` -> Contact the Core UI team if you need help migrating away from this component.
+  * `gux-side-panel-legacy` -> Contact the Core UI team if you need help migrating away from this component.
   * `gux-tabs-legacy` -> `gux-tabs-advanced` or `gux-tabs`
   * `gux-text-label-legacy` -> Contact the Core UI team if you need help migrating away from this component.
 
@@ -37,6 +46,7 @@ This new requirement is related to the a new dependency (vega-lite) which was ad
 ### gux-button
 
   * 'title' property renamed `gux-title`. This is to fix an accessibility defect.
+  * The `focusElement` method has been removed. Use the `focus` method instead. The migration to Shadow DOM made it possible to use the `focus` method, so the `focusElement` method is no longer necessary.
 
 ### gux-calendar
 
@@ -80,7 +90,11 @@ This new requirement is related to the a new dependency (vega-lite) which was ad
 The following components have moved from beta to stable without any api changes.
 
 * gux-accordion
+* gux-dismiss-button
+* gux-pagination-cursor
+* gux-popup
 * gux-tabs (v3)
+* gux-tooltip-title
 
 #### Actions
 
@@ -135,15 +149,23 @@ The following components have moved from stable to legacy without any api change
 
 ### gux-accordion-legacy
 
-[More details here](gux-accordion-legacy)
+[More details here](./gux-accordion-legacy)
 
 ### gux-command-palette-legacy
 
 Contact the Core UI team if you need help migrating away from this component.
 
+### gux-panel-frame-legacy
+
+Contact the Core UI team if you need help migrating away from this component.
+
+### gux-side-panel-legacy
+
+Contact the Core UI team if you need help migrating away from this component.
+
 ### gux-tabs-legacy (and gux-tab-legacy and gux-tab-dropdown-option-legacy)
 
-[More details here](gux-tabs-legacy)
+[More details here](./gux-tabs-legacy)
 
 ### gux-text-label-legacy
 

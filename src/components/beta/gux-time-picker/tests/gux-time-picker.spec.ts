@@ -300,17 +300,15 @@ describe('gux-time-picker-beta', () => {
   describe('onMouseUp listner', () => {
     it('onMouseUp Select end of input', () => {
       // Setup
-      const event = new MouseEvent('mouseup', {
-        bubbles: true,
-        cancelable: true,
-        view: window
-      });
+      const event = {
+        composedPath: jest.fn(() => [component.inputElement])
+      } as any;
       component.inputElement.setSelectionRange = jest.fn();
       component.inputElement.value = '00:00';
       component.inputElement.selectionEnd = 5;
 
       // Run
-      component.inputElement.dispatchEvent(event);
+      component.onMouseUp(event);
 
       // Validate
       expect(component.inputElement.setSelectionRange).toHaveBeenCalledWith(
@@ -321,17 +319,15 @@ describe('gux-time-picker-beta', () => {
 
     it('onMouseUp select middle of input', () => {
       // Setup
-      const event = new MouseEvent('mouseup', {
-        bubbles: true,
-        cancelable: true,
-        view: window
-      });
+      const event = {
+        composedPath: jest.fn(() => [component.inputElement])
+      } as any;
       component.inputElement.setSelectionRange = jest.fn();
       component.inputElement.value = '00:00';
       component.inputElement.selectionEnd = 2;
 
       // Run
-      component.inputElement.dispatchEvent(event);
+      component.onMouseUp(event);
 
       // Validate
       expect(component.inputElement.setSelectionRange).toHaveBeenCalledWith(
@@ -347,7 +343,7 @@ describe('gux-time-picker-beta', () => {
       const event = {
         key: 'Backspace',
         preventDefault: jest.fn(),
-        target: component.inputElement
+        composedPath: jest.fn(() => [component.inputElement])
       } as any;
       component.inputElement.value = '00:0';
 
@@ -364,7 +360,7 @@ describe('gux-time-picker-beta', () => {
       const event = {
         key: 'Backspace',
         preventDefault: jest.fn(),
-        target: component.inputElement
+        composedPath: jest.fn(() => [component.inputElement])
       } as any;
       component.inputElement.value = '00:';
 
@@ -381,7 +377,7 @@ describe('gux-time-picker-beta', () => {
       const event = {
         key: 'Backspace',
         preventDefault: jest.fn(),
-        target: component.inputElement
+        composedPath: jest.fn(() => [component.inputElement])
       } as any;
       component.inputElement.selectionStart = 0;
       component.inputElement.selectionEnd = 3;
@@ -400,15 +396,33 @@ describe('gux-time-picker-beta', () => {
       const event = {
         key: 'Enter',
         preventDefault: jest.fn(),
-        target: component.inputElement
+        composedPath: jest.fn(() => [component.inputElement])
       } as any;
-      component.inputElement.blur = jest.fn();
+      component.updateChosenValue = jest.fn();
+      component.inputElement.focus = jest.fn();
 
       // Run
       component.onKeyDown(event);
 
       // Validate
-      expect(component.inputElement.blur).toHaveBeenCalled();
+      expect(component.inputElement.focus).toHaveBeenCalled();
+      expect(component.updateChosenValue).toHaveBeenCalled();
+    });
+
+    it('onKeyDown Tab', () => {
+      // Setup
+      const event = {
+        key: 'Tab',
+        preventDefault: jest.fn(),
+        composedPath: jest.fn(() => [component.inputElement])
+      } as any;
+      component.updateChosenValue = jest.fn();
+
+      // Run
+      component.onKeyDown(event);
+
+      // Validate
+      expect(component.updateChosenValue).toHaveBeenCalled();
     });
 
     it('onKeyDown Number accepted', () => {
@@ -416,7 +430,7 @@ describe('gux-time-picker-beta', () => {
       const event = {
         key: '0',
         preventDefault: jest.fn(),
-        target: component.inputElement
+        composedPath: jest.fn(() => [component.inputElement])
       } as any;
 
       // Run
@@ -433,7 +447,7 @@ describe('gux-time-picker-beta', () => {
       const event = {
         key: '0',
         preventDefault: jest.fn(),
-        target: component.inputElement
+        composedPath: jest.fn(() => [component.inputElement])
       } as any;
       component.inputElement.value = '00:0';
 
@@ -451,7 +465,7 @@ describe('gux-time-picker-beta', () => {
       const event = {
         key: '3',
         preventDefault: jest.fn(),
-        target: component.inputElement
+        composedPath: jest.fn(() => [component.inputElement])
       } as any;
 
       // Run
@@ -468,7 +482,7 @@ describe('gux-time-picker-beta', () => {
       const event = {
         key: '9',
         preventDefault: jest.fn(),
-        target: component.inputElement
+        composedPath: jest.fn(() => [component.inputElement])
       } as any;
       component.inputElement.value = '00:00:';
 

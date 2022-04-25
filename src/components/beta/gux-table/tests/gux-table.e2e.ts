@@ -128,7 +128,7 @@ describe('gux-table-beta', () => {
         const element = await page.find('gux-table-beta');
         await a11yCheck(page);
 
-        expect(element).toHaveClass('hydrated');
+        expect(element).toHaveAttribute('hydrated');
         expect(element.outerHTML).toMatchSnapshot();
       });
     });

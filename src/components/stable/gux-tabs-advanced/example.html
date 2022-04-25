@@ -1,42 +1,15 @@
 <h1>gux-tabs-advanced</h1>
-<h2>Example 1</h2>
-<gux-tabs-advanced id="interactive">
-  <gux-tab-advanced-list slot="tab-list" show-new-tab-button="true">
-    <gux-tab-advanced tab-id="1-1" tab-icon-name="lock">
-      <span slot="title"> Hello World </span>
-      <span slot="dropdown-options">
-        <gux-tab-advanced-option
-          option-id="1"
-          icon-name="edit"
-          onclick="notify(event)"
-        >
-          Edit
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="2"
-          icon-name="clone"
-          onclick="notify(event)"
-        >
-          Clone
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="3"
-          icon-name="share"
-          onclick="notify(event)"
-        >
-          Share
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="4"
-          icon-name="download"
-          onclick="notify(event)"
-        >
-          Download
-        </gux-tab-advanced-option>
-      </span>
+<h2>Example 1 - no add tab button</h2>
+<gux-tabs-advanced>
+  <gux-tab-advanced-list slot="tab-list" show-new-tab-button="false">
+    <gux-tab-advanced tab-id="1-1">
+      <span id="tabTitle1">Tab Header 1</span>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="1-2" tab-icon-name="lock">
-      <span slot="title"> Hello World 2 </span>
+    <gux-tab-advanced tab-id="1-2">
+      <span>Tab Header 2</span>
+    </gux-tab-advanced>
+    <gux-tab-advanced tab-id="1-3">
+      <span>Tab Header 3</span>
     </gux-tab-advanced>
   </gux-tab-advanced-list>
   <gux-tab-advanced-panel tab-id="1-1">
@@ -45,201 +18,39 @@
     <div>
       The current selected panel tab-id is: <span id="currenttab-id"></span>
     </div>
+    <gux-button id="changeTabTitle"> Change Tab Name</gux-button>
   </gux-tab-advanced-panel>
   <gux-tab-advanced-panel tab-id="1-2">
     <span>Tab content 2</span>
   </gux-tab-advanced-panel>
+  <gux-tab-advanced-panel tab-id="1-3">
+    <span>Tab content 3</span>
+  </gux-tab-advanced-panel>
 </gux-tabs-advanced>
 
-<h2>Example 2</h2>
-<gux-tabs-advanced id="interactive">
-  <gux-tab-advanced-list slot="tab-list" allow-sort="true">
-    <gux-tab-advanced tab-id="2-1" tab-icon-name="lock">
-      <span slot="title"> Hello World 3 </span>
-      <span slot="dropdown-options">
-        <gux-tab-advanced-option
-          option-id="1"
-          icon-name="edit"
-          onclick="notify(event)"
-        >
-          Edit
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="2"
-          icon-name="clone"
-          onclick="notify(event)"
-        >
-          Clone
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="3"
-          icon-name="share"
-          onclick="notify(event)"
-        >
-          Share
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="4"
-          icon-name="download"
-          onclick="notify(event)"
-        >
-          Download
-        </gux-tab-advanced-option>
-      </span>
+<h2>Example 2 - add tab button</h2>
+<gux-tabs-advanced>
+  <gux-tab-advanced-list slot="tab-list">
+    <gux-tab-advanced tab-id="2-1">
+      <span>Tab Header 1</span>
     </gux-tab-advanced>
-
-    <gux-tab-advanced tab-id="2-2" tab-icon-name="lock">
-      <span slot="title"> Hello World 4 </span>
-      <span slot="dropdown-options">
-        <gux-tab-advanced-option
-          option-id="1"
-          icon-name="edit"
-          onclick="notify(event)"
-        >
-          Edit
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="2"
-          icon-name="clone"
-          onclick="notify(event)"
-        >
-          Clone
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="3"
-          icon-name="share"
-          onclick="notify(event)"
-        >
-          Share
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="4"
-          icon-name="download"
-          onclick="notify(event)"
-        >
-          Download
-        </gux-tab-advanced-option>
-      </span>
+    <gux-tab-advanced tab-id="2-2">
+      <span
+        >Tab Header 2 really long long long long long long long long long long
+        long long long</span
+      >
     </gux-tab-advanced>
-
-    <gux-tab-advanced tab-id="2-3" tab-icon-name="lock">
-      <span slot="title"> Hello World 5 </span>
-      <span slot="dropdown-options">
-        <gux-tab-advanced-option
-          option-id="1"
-          icon-name="edit"
-          onclick="notify(event)"
-        >
-          Edit
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="2"
-          icon-name="clone"
-          onclick="notify(event)"
-        >
-          Clone
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="3"
-          icon-name="share"
-          onclick="notify(event)"
-        >
-          Share
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="4"
-          icon-name="download"
-          onclick="notify(event)"
-        >
-          Download
-        </gux-tab-advanced-option>
-      </span>
+    <gux-tab-advanced tab-id="2-3">
+      <span>Tab Header 3</span>
     </gux-tab-advanced>
-
-    <gux-tab-advanced tab-id="2-4" tab-icon-name="lock">
-      <span slot="title"> Hello World 6 </span>
-      <span slot="dropdown-options">
-        <gux-tab-advanced-option
-          option-id="1"
-          icon-name="edit"
-          onclick="notify(event)"
-        >
-          Edit
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="2"
-          icon-name="clone"
-          onclick="notify(event)"
-        >
-          Clone
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="3"
-          icon-name="share"
-          onclick="notify(event)"
-        >
-          Share
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="4"
-          icon-name="download"
-          onclick="notify(event)"
-        >
-          Download
-        </gux-tab-advanced-option>
-      </span>
+    <gux-tab-advanced tab-id="2-4">
+      <span>Tab Header 4</span>
     </gux-tab-advanced>
-
-    <gux-tab-advanced tab-id="2-5" tab-icon-name="lock">
-      <span slot="title"> Hello World 7 </span>
-      <span slot="dropdown-options">
-        <gux-tab-advanced-option
-          option-id="1"
-          icon-name="edit"
-          onclick="notify(event)"
-        >
-          Edit
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="2"
-          icon-name="clone"
-          onclick="notify(event)"
-        >
-          Clone
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="3"
-          icon-name="share"
-          onclick="notify(event)"
-        >
-          Share
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option
-          option-id="4"
-          icon-name="download"
-          onclick="notify(event)"
-        >
-          Download
-        </gux-tab-advanced-option>
-      </span>
+    <gux-tab-advanced tab-id="2-5">
+      <span>Tab Header 5</span>
     </gux-tab-advanced>
-
-    <gux-tab-advanced tab-id="2-6" tab-icon-name="lock">
-      <span slot="title"> Hello World 8 </span>
-      <span slot="dropdown-options">
-        <gux-tab-advanced-option option-id="1" icon-name="edit">
-          Edit
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option option-id="2" icon-name="clone">
-          Clone
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option option-id="3" icon-name="share">
-          Share
-        </gux-tab-advanced-option>
-        <gux-tab-advanced-option option-id="4" icon-name="download">
-          Download
-        </gux-tab-advanced-option>
-      </span>
+    <gux-tab-advanced tab-id="2-6">
+      <span>Tab Header 6</span>
     </gux-tab-advanced>
   </gux-tab-advanced-list>
   <gux-tab-advanced-panel tab-id="2-1">
@@ -260,89 +71,383 @@
   <gux-tab-advanced-panel tab-id="2-6">
     <span>Tab content 6</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="2-7">
-    <span>Tab content 7</span>
+</gux-tabs-advanced>
+
+<h2>Example 3 - tab overflow</h2>
+<div
+  style="width: 300px; overflow: auto; resize: both; border: 1px dotted black"
+>
+  <gux-tabs-advanced>
+    <gux-tab-advanced-list slot="tab-list">
+      <gux-tab-advanced tab-id="3-1">
+        <span>Tab Header 1</span>
+      </gux-tab-advanced>
+      <gux-tab-advanced tab-id="3-2">
+        <span>Tab Header 2</span>
+      </gux-tab-advanced>
+      <gux-tab-advanced tab-id="3-3">
+        <span>Tab Header 3</span>
+      </gux-tab-advanced>
+    </gux-tab-advanced-list>
+    <gux-tab-advanced-panel tab-id="3-1">
+      <span>Tab content 1</span>
+    </gux-tab-advanced-panel>
+    <gux-tab-advanced-panel tab-id="3-2">
+      <span>Tab content 2</span>
+    </gux-tab-advanced-panel>
+    <gux-tab-advanced-panel tab-id="3-3">
+      <span>Tab content 3</span>
+    </gux-tab-advanced-panel>
+  </gux-tabs-advanced>
+</div>
+
+<h2>Example 4 - dropdown options</h2>
+<gux-tabs-advanced tab-limit="10">
+  <gux-tab-advanced-list
+    slot="tab-list"
+    allow-sort="true"
+    show-new-tab-button="true"
+  >
+    <gux-tab-advanced tab-id="4-1">
+      <span>Tab Header 1</span>
+      <span slot="dropdown-options">
+        <gux-tab-advanced-option
+          option-id="1"
+          icon-name="edit"
+          onclick="notify(event)"
+        >
+          Edit
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="2"
+          icon-name="clone"
+          onclick="notify(event)"
+        >
+          Clone
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="3"
+          icon-name="share"
+          onclick="notify(event)"
+        >
+          Share
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="4"
+          icon-name="download"
+          onclick="notify(event)"
+        >
+          Download
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="5"
+          icon-name="close"
+          onclick="notify(event)"
+        >
+          Close
+        </gux-tab-advanced-option>
+      </span>
+    </gux-tab-advanced>
+    <gux-tab-advanced tab-id="4-2">
+      <span>Tab Header 2</span>
+      <span slot="dropdown-options">
+        <gux-tab-advanced-option
+          option-id="1"
+          icon-name="edit"
+          onclick="notify(event)"
+        >
+          Edit
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="2"
+          icon-name="clone"
+          onclick="notify(event)"
+        >
+          Clone
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="3"
+          icon-name="share"
+          onclick="notify(event)"
+        >
+          Share
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="4"
+          icon-name="download"
+          onclick="notify(event)"
+        >
+          Download
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="5"
+          icon-name="close"
+          onclick="notify(event)"
+        >
+          Close
+        </gux-tab-advanced-option>
+      </span>
+    </gux-tab-advanced>
+    <gux-tab-advanced tab-id="4-3">
+      <span>Tab Header 3</span>
+      <span slot="dropdown-options">
+        <gux-tab-advanced-option
+          option-id="1"
+          icon-name="edit"
+          onclick="notify(event)"
+        >
+          Edit
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="2"
+          icon-name="clone"
+          onclick="notify(event)"
+        >
+          Clone
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="3"
+          icon-name="share"
+          onclick="notify(event)"
+        >
+          Share
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="4"
+          icon-name="download"
+          onclick="notify(event)"
+        >
+          Download
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="5"
+          icon-name="close"
+          onclick="notify(event)"
+        >
+          Close
+        </gux-tab-advanced-option>
+      </span>
+    </gux-tab-advanced>
+    <gux-tab-advanced gux-disabled tab-id="4-4">
+      <span>Tab Header 4</span>
+      <span slot="dropdown-options">
+        <gux-tab-advanced-option
+          option-id="1"
+          icon-name="edit"
+          onclick="notify(event)"
+        >
+          Edit
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="2"
+          icon-name="clone"
+          onclick="notify(event)"
+        >
+          Clone
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="3"
+          icon-name="share"
+          onclick="notify(event)"
+        >
+          Share
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="4"
+          icon-name="download"
+          onclick="notify(event)"
+        >
+          Download
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="5"
+          icon-name="close"
+          onclick="notify(event)"
+        >
+          Close
+        </gux-tab-advanced-option>
+      </span>
+    </gux-tab-advanced>
+    <gux-tab-advanced gux-disabled tab-id="4-5">
+      <span>Tab Header 5</span>
+      <span slot="dropdown-options">
+        <gux-tab-advanced-option
+          option-id="1"
+          icon-name="edit"
+          onclick="notify(event)"
+        >
+          Edit
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="2"
+          icon-name="clone"
+          onclick="notify(event)"
+        >
+          Clone
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="3"
+          icon-name="share"
+          onclick="notify(event)"
+        >
+          Share
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="4"
+          icon-name="download"
+          onclick="notify(event)"
+        >
+          Download
+        </gux-tab-advanced-option>
+        <gux-tab-advanced-option
+          option-id="5"
+          icon-name="close"
+          onclick="notify(event)"
+        >
+          Close
+        </gux-tab-advanced-option>
+      </span>
+    </gux-tab-advanced>
+  </gux-tab-advanced-list>
+  <gux-tab-advanced-panel tab-id="4-1">
+    <span>Tab content 1</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="2-8">
-    <span>Tab content 8</span>
+  <gux-tab-advanced-panel tab-id="4-2">
+    <span>Tab content 2</span>
+  </gux-tab-advanced-panel>
+  <gux-tab-advanced-panel tab-id="4-3">
+    <span>Tab content 3</span>
+  </gux-tab-advanced-panel>
+  <gux-tab-advanced-panel tab-id="4-4">
+    <span>Tab content 4</span>
+  </gux-tab-advanced-panel>
+  <gux-tab-advanced-panel tab-id="4-5">
+    <span>Tab content 5</span>
   </gux-tab-advanced-panel>
 </gux-tabs-advanced>
 
-<h2>Example 3</h2>
-<gux-tabs-advanced id="interactive" tab-limit="10">
+<h2>Example 5 - label with icon</h2>
+<gux-tabs-advanced tab-limit="10">
   <gux-tab-advanced-list
     slot="tab-list"
     allow-sort="false"
-    show-new-tab-button="false"
+    show-new-tab-button="true"
   >
-    <gux-tab-advanced tab-id="3-1" tab-icon-name="lock">
-      <span slot="title"> Hello 1 </span>
+    <gux-tab-advanced tab-id="5-1">
+      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+      <span>Lock</span>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="3-2" tab-icon-name="lock">
-      <span slot="title"> Hello 2 </span>
+    <gux-tab-advanced tab-id="5-2">
+      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+      <span>Email</span>
+      <span slot="dropdown-options">
+        <gux-tab-advanced-option
+          option-id="1"
+          icon-name="close"
+          onclick="notify(event)"
+        >
+          Close
+        </gux-tab-advanced-option>
+      </span>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="3-3" tab-icon-name="lock">
-      <span slot="title"> Hello 3 </span>
+    <gux-tab-advanced gux-disabled tab-id="5-3">
+      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+      <span>Phone</span>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="3-4" tab-icon-name="lock">
-      <span slot="title"> Hello 4 </span>
+
+    <gux-tab-advanced tab-id="5-4">
+      <gux-icon icon-name="attachment" decorative="true"></gux-icon>
+      <span>Attachment</span>
+      <span slot="dropdown-options">
+        <gux-tab-advanced-option
+          option-id="1"
+          icon-name="close"
+          onclick="notify(event)"
+        >
+          Close
+        </gux-tab-advanced-option>
+      </span>
     </gux-tab-advanced>
-    <gux-tab-advanced tab-id="3-5" tab-icon-name="lock">
-      <span slot="title"> Hello 5 </span>
-    </gux-tab-advanced>
-    <gux-tab-advanced tab-id="3-6" tab-icon-name="lock">
-      <span slot="title"> Hello 6 </span>
-    </gux-tab-advanced>
-    <gux-tab-advanced tab-id="3-7" tab-icon-name="lock">
-      <span slot="title"> Hello 7 </span>
-    </gux-tab-advanced>
-    <gux-tab-advanced tab-id="3-8" tab-icon-name="lock">
-      <span slot="title"> Hello 8 </span>
-    </gux-tab-advanced>
-    <gux-tab-advanced tab-id="3-9" tab-icon-name="lock">
-      <span slot="title"> Hello 9 </span>
-    </gux-tab-advanced>
-    <gux-tab-advanced tab-id="3-10" tab-icon-name="lock">
-      <span slot="title"> Hello 10 </span>
+    <gux-tab-advanced tab-id="5-5">
+      <gux-icon icon-name="export" decorative="true"></gux-icon>
+      <span>Export</span>
     </gux-tab-advanced>
   </gux-tab-advanced-list>
-  <gux-tab-advanced-panel tab-id="3-1">
+  <gux-tab-advanced-panel tab-id="5-1">
     <span>Tab content 1</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="3-2">
+  <gux-tab-advanced-panel tab-id="5-2">
     <span>Tab content 2</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="3-3">
+  <gux-tab-advanced-panel tab-id="5-3">
     <span>Tab content 3</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="3-4">
+  <gux-tab-advanced-panel tab-id="5-4">
     <span>Tab content 4</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="3-5">
+  <gux-tab-advanced-panel tab-id="5-5">
     <span>Tab content 5</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="3-6">
-    <span>Tab content 6</span>
+</gux-tabs-advanced>
+
+<h2>Example 6 - dropdown options and no dropdown options</h2>
+<gux-tabs-advanced tab-limit="10">
+  <gux-tab-advanced-list
+    slot="tab-list"
+    allow-sort="false"
+    show-new-tab-button="true"
+  >
+    <gux-tab-advanced tab-id="6-1">
+      <span>Tab Header 1 long long</span>
+    </gux-tab-advanced>
+    <gux-tab-advanced tab-id="6-2">
+      <span
+        >Tab Header 2
+        longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong</span
+      >
+      <span slot="dropdown-options">
+        <gux-tab-advanced-option
+          option-id="1"
+          icon-name="close"
+          onclick="notify(event)"
+        >
+          Close
+        </gux-tab-advanced-option>
+      </span>
+    </gux-tab-advanced>
+    <gux-tab-advanced tab-id="6-3">
+      <span>Tab Header 3</span>
+    </gux-tab-advanced>
+  </gux-tab-advanced-list>
+  <gux-tab-advanced-panel tab-id="6-1">
+    <span>Tab content 1</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="3-7">
-    <span>Tab content 7</span>
+  <gux-tab-advanced-panel tab-id="6-2">
+    <span>Tab content 2</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="3-8">
-    <span>Tab content 8</span>
+  <gux-tab-advanced-panel tab-id="6-3">
+    <span>Tab content 3</span>
   </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="3-9">
-    <span>Tab content 9</span>
-  </gux-tab-advanced-panel>
-  <gux-tab-advanced-panel tab-id="3-10">Tab content 10</gux-tab-advanced-panel>
 </gux-tabs-advanced>
 
 <style
   onload="(function () {
-    document.querySelector(`gux-tab-advanced-panel[tab-id='1-1']`).addEventListener('guxactivepanelchange', 
+    document.querySelector(`gux-tab-advanced-panel[tab-id='1-1']`).addEventListener('guxactivepanelchange',
     (event) => {
       const currentTime = new Date().toLocaleTimeString();
       document.querySelector('#currentTime').innerHTML = currentTime;
       document.querySelector('#currenttab-id').innerHTML = event.detail;
+    })
+    document.querySelector(`#changeTabTitle`).addEventListener('click',
+    () => {
+      const tabTitle1 = document.querySelector(`#tabTitle1`);
+      if (tabTitle1.innerText === 'Tab Header 1') {
+        tabTitle1.innerText = 'Long title long title long title long title'
+      } else if (tabTitle1.innerText === 'Long title long title long title long title') {
+        tabTitle1.innerText = 'Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1'
+      } else {
+        tabTitle1.innerText = 'Tab Header 1'
+      }
     })
   }
   )()"

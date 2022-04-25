@@ -1,91 +1,111 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-button #render should render default button 1`] = `
-<gux-button gux-title="default">
-  <!---->
-  <button class="gux-secondary" title="default" type="button">
-    Button
-  </button>
+<gux-button>
+  <mock:shadow-root>
+    <button class="gux-secondary" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled default button 1`] = `
-<gux-button disabled="" gux-title="default">
-  <!---->
-  <button class="gux-secondary" disabled="" title="default" type="button">
-    Button
-  </button>
+<gux-button disabled="">
+  <mock:shadow-root>
+    <button class="gux-secondary" disabled="" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled invalid accent button 1`] = `
-<gux-button accent="invalid" disabled="" gux-title="Invalid accent">
-  <!---->
-  <button class="gux-invalid" disabled="" title="Invalid accent" type="button">
-    Invalid accent
-  </button>
+<gux-button accent="invalid" disabled="">
+  <mock:shadow-root>
+    <button class="gux-invalid" disabled="" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Invalid accent
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled primary button 1`] = `
-<gux-button accent="primary" disabled="" gux-title="Primary">
-  <!---->
-  <button class="gux-primary" disabled="" title="Primary" type="button">
-    Button
-  </button>
+<gux-button accent="primary" disabled="">
+  <mock:shadow-root>
+    <button class="gux-primary" disabled="" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled secondary button 1`] = `
-<gux-button accent="secondary" disabled="" gux-title="Secondary">
-  <!---->
-  <button class="gux-secondary" disabled="" title="Secondary" type="button">
-    Button
-  </button>
+<gux-button accent="secondary" disabled="">
+  <mock:shadow-root>
+    <button class="gux-secondary" disabled="" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled tertiary button 1`] = `
-<gux-button accent="tertiary" disabled="" gux-title="Tertiary">
-  <!---->
-  <button class="gux-tertiary" disabled="" title="Tertiary" type="button">
-    Button
-  </button>
+<gux-button accent="tertiary" disabled="">
+  <mock:shadow-root>
+    <button class="gux-tertiary" disabled="" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render invalid accent button 1`] = `
-<gux-button accent="invalid" gux-title="Invalid accent">
-  <!---->
-  <button class="gux-invalid" title="Invalid accent" type="button">
-    Invalid accent
-  </button>
+<gux-button accent="invalid">
+  <mock:shadow-root>
+    <button class="gux-invalid" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Invalid accent
 </gux-button>
 `;
 
 exports[`gux-button #render should render primary button 1`] = `
-<gux-button accent="primary" gux-title="Primary">
-  <!---->
-  <button class="gux-primary" title="Primary" type="button">
-    Button
-  </button>
+<gux-button accent="primary">
+  <mock:shadow-root>
+    <button class="gux-primary" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render secondary button 1`] = `
-<gux-button accent="secondary" gux-title="Secondary">
-  <!---->
-  <button class="gux-secondary" title="Secondary" type="button">
-    Button
-  </button>
+<gux-button accent="secondary">
+  <mock:shadow-root>
+    <button class="gux-secondary" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render tertiary button 1`] = `
-<gux-button accent="tertiary" gux-title="Tertiary">
-  <!---->
-  <button class="gux-tertiary" title="Tertiary" type="button">
-    Button
-  </button>
+<gux-button accent="tertiary">
+  <mock:shadow-root>
+    <button class="gux-tertiary" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
 </gux-button>
 `;

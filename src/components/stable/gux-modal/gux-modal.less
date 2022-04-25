@@ -4,7 +4,7 @@
 @import (reference) '../../../style/shadows.less';
 
 // Style
-gux-modal {
+:host {
   .gux-modal {
     position: fixed;
     top: 0;
@@ -38,12 +38,12 @@ gux-modal {
 
       &.gux-medium {
         width: 672px;
-        max-height: e(%('min(640, 100vh - 2 * %s)', @spacing-large));
+        max-height: e(%('min(640px, 100vh - 2 * %s)', @spacing-large));
       }
 
       &.gux-large {
         width: 940px;
-        max-height: e(%('min(640, 100vh - 2 * %s)', @spacing-large));
+        max-height: e(%('min(640px, 100vh - 2 * %s)', @spacing-large));
       }
 
       &.gux-dynamic {
@@ -63,7 +63,7 @@ gux-modal {
 
       .gux-modal-content {
         max-height: 432px;
-        margin: 0 8px 24px 8px;
+        margin: 0 8px 24px;
         overflow-y: auto;
 
         &.gux-no-buttons {
@@ -100,25 +100,4 @@ gux-modal {
       }
     }
   }
-}
-
-// Theming
-
-// Dark
-.gux-modal-dark-theme {
-  color: @gux-type-dark;
-
-  .gux-modal-container {
-    background: @gux-black-50;
-  }
-}
-
-.gux-dark-theme {
-  gux-modal {
-    .gux-modal-dark-theme();
-  }
-}
-
-gux-modal.gux-dark-theme {
-  .gux-modal-dark-theme();
 }

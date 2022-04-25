@@ -4,6 +4,7 @@ import { OnMutation } from '../../../utils/decorator/on-mutation';
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { logError } from '../../../utils/error/log-error';
 import { onRequiredChange } from '../../../utils/dom/on-attribute-change';
+import { preventBrowserValidationStyling } from '../../../utils/dom/prevent-browser-validation-styling';
 import { trackComponent } from '../../../usage-tracking';
 
 import { GuxInputTextAreaResize } from './components/gux-input-textarea/gux-input-textarea.types';
@@ -18,7 +19,8 @@ import {
  */
 @Component({
   styleUrl: 'gux-form-field.less',
-  tag: 'gux-form-field'
+  tag: 'gux-form-field',
+  shadow: false
 })
 export class GuxFormField {
   private input: HTMLInputElement;
@@ -81,10 +83,7 @@ export class GuxFormField {
       }
     );
 
-    // stops the html5 validation styling
-    this.input.addEventListener('invalid', event => {
-      event.preventDefault();
-    });
+    preventBrowserValidationStyling(this.input);
 
     const labelPositionVariant = this.labelPosition
       ? this.labelPosition.toLowerCase()

@@ -27,6 +27,6 @@ describe('gux-input-select', () => {
     const element = await page.find('gux-input-select');
     await a11yCheck(page, axeExclusions);
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

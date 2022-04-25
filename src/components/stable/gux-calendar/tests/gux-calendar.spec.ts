@@ -5,16 +5,21 @@ import { GuxCalendar } from '../gux-calendar';
 describe('gux-calendar', () => {
   let component: GuxCalendar;
   let componentRoot: any;
+  let componentShadowRoot: any;
+
   beforeEach(async () => {
     component = new GuxCalendar();
     component.input = {
       emit: jest.fn()
     };
     componentRoot = component.root as any;
-    componentRoot.querySelector = () => {
+    componentShadowRoot = {} as any;
+    componentRoot.shadowRoot = componentShadowRoot;
+
+    componentShadowRoot.querySelector = () => {
       return null;
     };
-    componentRoot.querySelectorAll = () => {
+    componentShadowRoot.querySelectorAll = () => {
       return [];
     };
   });
@@ -60,7 +65,7 @@ describe('gux-calendar', () => {
       it('focusPreviewDate', async () => {
         await component.focusPreviewDate();
         expect(spyEl.focus).not.toHaveBeenCalled();
-        componentRoot.querySelector = () => {
+        componentShadowRoot.querySelector = () => {
           return spyEl;
         };
         await component.focusPreviewDate();
@@ -98,7 +103,7 @@ describe('gux-calendar', () => {
       });
       it('getAllDatesElements', () => {
         const dummy = ['one', 'two'];
-        componentRoot.querySelectorAll = () => {
+        componentShadowRoot.querySelectorAll = () => {
           return dummy;
         };
         const result = component.getAllDatesElements();
@@ -111,7 +116,7 @@ describe('gux-calendar', () => {
           rangeStart,
           rangeEnd
         );
-        componentRoot.querySelector = () => {
+        componentShadowRoot.querySelector = () => {
           return 'dummy';
         };
         const result = component.getRangeDatesElements(rangeEnd, rangeStart);

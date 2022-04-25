@@ -15,6 +15,8 @@ import {
   shadow: true
 })
 export class GuxIcon {
+  private baseSvgHtml: string;
+
   @Element()
   private root: HTMLElement;
 
@@ -37,26 +39,30 @@ export class GuxIcon {
   screenreaderText: string = '';
 
   @State()
-  private svgHtml?: string;
+  private svgHtml: string;
 
   @Watch('iconName')
   async prepIcon(iconName: string): Promise<void> {
     if (iconName) {
       const rootIconName = getRootIconName(iconName);
 
-      const baseSvgHtml = await getBaseSvgHtml(rootIconName);
-      this.svgHtml = this.getSvgWithAriaAttributes(baseSvgHtml);
+      this.baseSvgHtml = await getBaseSvgHtml(rootIconName);
+      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
     }
   }
 
   @Watch('decorative')
   watchDecorative(decorative: boolean): void {
     validateProps(decorative, this.screenreaderText);
+
+    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
   }
 
   @Watch('screenreaderText')
   watchScreenreaderText(screenreaderText: string): void {
     validateProps(this.decorative, screenreaderText);
+
+    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
   }
 
   async componentWillLoad(): Promise<void> {
@@ -75,10 +81,14 @@ export class GuxIcon {
 
     if (this.decorative) {
       svgElement.setAttribute('aria-hidden', String(this.decorative));
+    } else {
+      svgElement.setAttribute('aria-hidden', 'false');
     }
 
     if (this.screenreaderText) {
       svgElement.setAttribute('aria-label', this.screenreaderText);
+    } else {
+      svgElement.removeAttribute('aria-label');
     }
 
     return svgElement.outerHTML;

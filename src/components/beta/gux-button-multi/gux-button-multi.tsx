@@ -22,8 +22,9 @@ import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 export class GuxButtonMulti {
   @Element()
   private root: HTMLElement;
-  listElement: HTMLGuxListElement;
+  actionListElement: HTMLGuxActionListElement;
   dropdownButton: HTMLElement;
+  private moveFocusDelay: number = 100;
 
   /**
    * Triggered when the menu is open
@@ -61,23 +62,56 @@ export class GuxButtonMulti {
   @Prop({ mutable: true })
   isOpen: boolean = false;
 
-  @Listen('keyup')
-  handleKeyup(event: KeyboardEvent): void {
+  @Listen('keydown')
+  handleKeydown(event: KeyboardEvent): void {
     const composedPath = event.composedPath();
 
     switch (event.key) {
       case 'Escape':
         this.isOpen = false;
 
-        if (composedPath.includes(this.listElement)) {
+        if (composedPath.includes(this.actionListElement)) {
           this.dropdownButton.focus();
         }
 
         break;
-      case 'ArrowDown':
-        if (!composedPath.includes(this.listElement)) {
+      case 'Tab': {
+        this.isOpen = false;
+        break;
+      }
+      case 'Enter':
+        event.preventDefault();
+        if (composedPath.includes(this.dropdownButton)) {
           this.isOpen = true;
-          void this.listElement.setFocusOnFirstItem();
+          setTimeout(() => {
+            void this.actionListElement.setFocusOnFirstItem();
+          }, this.moveFocusDelay);
+        }
+        break;
+      case 'ArrowDown':
+        event.preventDefault();
+        if (composedPath.includes(this.dropdownButton)) {
+          this.isOpen = true;
+          setTimeout(() => {
+            void this.actionListElement.setFocusOnFirstItem();
+          }, this.moveFocusDelay);
+        }
+        break;
+    }
+  }
+
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    const composedPath = event.composedPath();
+
+    switch (event.key) {
+      case ' ':
+        event.preventDefault();
+        if (composedPath.includes(this.dropdownButton)) {
+          this.isOpen = true;
+          setTimeout(() => {
+            void this.actionListElement.setFocusOnFirstItem();
+          }, this.moveFocusDelay);
         }
         break;
     }
@@ -110,19 +144,13 @@ export class GuxButtonMulti {
     }
   }
 
-  private onListElementFocusout(event: FocusEvent): void {
-    if (event.relatedTarget !== null && !this.root.matches(':focus-within')) {
-      this.isOpen = false;
-    }
-  }
-
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.accent });
   }
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta expanded={this.isOpen} disabled={this.disabled}>
+      <gux-popup expanded={this.isOpen} disabled={this.disabled}>
         <div slot="target" class="gux-button-multi-container">
           <gux-button-slot-beta
             class="gux-dropdown-button"
@@ -133,7 +161,7 @@ export class GuxButtonMulti {
               disabled={this.disabled}
               ref={el => (this.dropdownButton = el)}
               onClick={() => this.toggle()}
-              aria-haspopup="listbox"
+              aria-haspopup="true"
               aria-expanded={this.isOpen.toString()}
             >
               <span>{this.text}</span>
@@ -141,15 +169,10 @@ export class GuxButtonMulti {
             </button>
           </gux-button-slot-beta>
         </div>
-
-        <gux-list
-          slot="popup"
-          onFocusout={this.onListElementFocusout.bind(this)}
-          ref={el => (this.listElement = el)}
-        >
+        <gux-action-list slot="popup" ref={el => (this.actionListElement = el)}>
           <slot />
-        </gux-list>
-      </gux-popup-beta>
+        </gux-action-list>
+      </gux-popup>
     ) as JSX.Element;
   }
 }

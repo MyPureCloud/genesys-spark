@@ -1,57 +1,47 @@
 import { Component } from '@angular/core';
-import {
-  AbstractControl,
-  FormGroup,
-  FormControl,
-  Validators
-} from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
+import { countryList } from '../data/country-list';
+import { petList } from '../data/pet-list';
+
+type SelectOption = {
+  id: string;
+  name: string;
+};
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
-  // styleUrls: ['./app.component.less']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  editConfigurationForm = new FormGroup({
-    name: new FormControl('', { validators: [Validators.minLength(5)] }),
-    description: new FormControl('', Validators.maxLength(1)),
-    'text-1': new FormControl('r', { validators: [Validators.minLength(5)] })
+  contactForm: FormGroup = new FormGroup({
+    firstname: new FormControl(null, Validators.required),
+    lastname: new FormControl(null, Validators.required),
+    country: new FormControl(null, Validators.required),
+    pet: new FormControl(null, Validators.required),
+    email: new FormControl('daragh.king@example.com', [
+      Validators.email,
+      Validators.required
+    ])
   });
 
-  get name(): AbstractControl | null {
-    return this.editConfigurationForm.get('name');
+  countryList: SelectOption[] = countryList;
+  petList: SelectOption[] = petList;
+
+  showRequiredErrorMessage(formControlName: string): boolean {
+    const control = this.contactForm.get(formControlName);
+
+    return Boolean(control?.hasError('required') && control?.touched);
   }
 
-  get description(): AbstractControl | null {
-    return this.editConfigurationForm.get('description');
+  showEmailErrorMessage(formControlName: string): boolean {
+    const control = this.contactForm.get(formControlName);
+
+    return Boolean(control?.hasError('email') && control?.touched);
   }
 
-  get text1(): AbstractControl | null {
-    return this.editConfigurationForm.get('text-1');
-  }
-
-  hasError(control: AbstractControl | null): boolean {
-    const invalid = control?.invalid;
-    const touched = control?.touched;
-    const dirty = control?.dirty;
-
-    return Boolean(invalid && (touched || dirty));
-  }
-
-  get showNameError(): boolean {
-    return this.hasError(this.name);
-  }
-
-  get showDescriptionError(): boolean {
-    return this.hasError(this.description);
-  }
-
-  get showText1Error(): boolean {
-    return this.hasError(this.text1);
-  }
-
-  onFormSubmit(): void {
-    console.info('Name:' + this.name?.value);
-    console.info('Description:' + this.description?.value);
+  onSubmit() {
+    console.log(this.contactForm.value);
   }
 }

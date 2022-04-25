@@ -11,6 +11,7 @@ import {
   Watch
 } from '@stencil/core';
 
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { fromIsoTime } from '../../../utils/date/from-iso-time-string';
 import { trackComponent } from '../../../usage-tracking';
 
@@ -24,7 +25,8 @@ const DEFAULT_INTERVAL: number = 15;
 
 @Component({
   styleUrl: 'gux-time-picker.less',
-  tag: 'gux-time-picker-beta'
+  tag: 'gux-time-picker-beta',
+  shadow: true
 })
 export class GuxTimePicker {
   private i18n: GetI18nValue;
@@ -71,22 +73,29 @@ export class GuxTimePicker {
     this.changed.emit(newValue);
   }
 
+  private getShadowDomEventTarget(event: Event): EventTarget {
+    return event.composedPath()[0];
+  }
+
   @Listen('keydown', { passive: false })
   onKeyDown(e: KeyboardEvent) {
-    this.focusedField = e.target as HTMLInputElement;
+    this.focusedField = this.getShadowDomEventTarget(e) as HTMLInputElement;
+
     if (this.focusedField === this.inputElement) {
       switch (e.key) {
         case 'Enter':
-        case 'Escape':
-          this.focusedField.blur();
+          this.updateChosenValue();
+          this.inputElement.focus();
           break;
         case 'Backspace':
           e.preventDefault();
           this.handleBackspace();
           break;
         case 'Tab':
+          this.updateChosenValue();
           break;
         case 'ArrowDown':
+          e.preventDefault();
           if (this.dropdownList) {
             void this.dropdownList.setFocusOnFirstItem();
           }
@@ -118,6 +127,16 @@ export class GuxTimePicker {
             }
           }
       }
+    } else {
+      switch (e.key) {
+        case 'Enter':
+          this.inputElement.focus();
+          break;
+        case 'Escape':
+          this.updateChosenValue();
+          this.inputElement.focus();
+          break;
+      }
     }
   }
 
@@ -147,17 +166,17 @@ export class GuxTimePicker {
   @Listen('press', { passive: false })
   onPress(e: CustomEvent) {
     this.isPressEvent = true;
-    const chosenTimeOption = e.target as HTMLGuxListItemElement;
+
+    const chosenTimeOption = this.getShadowDomEventTarget(
+      e
+    ) as HTMLGuxListItemElement;
     this.inputElement.value = chosenTimeOption.value as string;
     this.updateChosenValue();
   }
 
-  @Listen('focusout')
-  onFocusOut(e: FocusEvent) {
-    if (!this.isPressEvent && !this.root.contains(e.relatedTarget as Node)) {
-      this.updateChosenValue();
-    }
-    this.isPressEvent = false;
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside() {
+    this.updateChosenValue();
   }
 
   updateChosenValue() {
@@ -169,7 +188,7 @@ export class GuxTimePicker {
 
   @Listen('mouseup')
   onMouseUp(e: MouseEvent) {
-    this.focusedField = e.target as HTMLInputElement;
+    this.focusedField = this.getShadowDomEventTarget(e) as HTMLInputElement;
     if (this.focusedField === this.inputElement) {
       if (this.focusedField.selectionEnd !== this.inputElement.value.length) {
         this.inputElement.setSelectionRange(0, this.inputElement.value.length);
@@ -184,7 +203,7 @@ export class GuxTimePicker {
 
   @Listen('focusin')
   onFocusIn(e: FocusEvent) {
-    this.focusedField = e.target as HTMLInputElement;
+    this.focusedField = this.getShadowDomEventTarget(e) as HTMLInputElement;
     this.active = true;
   }
 
@@ -258,7 +277,6 @@ export class GuxTimePicker {
             type="text"
             value={this.value}
             size={9}
-            class={this.active ? 'gux-focused' : ''}
             aria-label={this.label || this.i18n('defaultAriaLabel')}
             ref={el => (this.inputElement = el)}
           ></input>

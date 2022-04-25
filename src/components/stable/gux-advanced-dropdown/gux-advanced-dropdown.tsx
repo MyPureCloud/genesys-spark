@@ -227,13 +227,17 @@ export class GuxAdvancedDropdown {
   private handleSelectionChange({ target }: CustomEvent): void {
     const option = target as HTMLGuxDropdownOptionElement;
 
-    this.input.emit(option.value);
     this.closeDropdown(true);
+
+    if (this.currentlySelectedOption === option) {
+      return;
+    }
 
     if (this.currentlySelectedOption) {
       this.currentlySelectedOption.selected = false;
     }
     this.currentlySelectedOption = option;
+    this.input.emit(option.value);
   }
 
   private getSelectionOptions(): HTMLGuxDropdownOptionElement[] {
@@ -263,6 +267,7 @@ export class GuxAdvancedDropdown {
   private optionsKeyDown(event: KeyboardEvent) {
     switch (event.key) {
       case 'ArrowUp': {
+        event.preventDefault();
         const focusIndex = this.getFocusIndex();
         if (focusIndex > 0) {
           this.selectionOptions[focusIndex - 1].focus();
@@ -270,6 +275,7 @@ export class GuxAdvancedDropdown {
         break;
       }
       case 'ArrowDown': {
+        event.preventDefault();
         const focusIndex = this.getFocusIndex();
         if (focusIndex < this.selectionOptions.length - 1) {
           this.selectionOptions[focusIndex + 1].focus();
@@ -317,6 +323,12 @@ export class GuxAdvancedDropdown {
     const value = this.searchInput.value;
     this.filter.emit(value);
 
+    this.setFilteredOptions();
+  }
+
+  private setFilteredOptions() {
+    const value = this.searchInput.value;
+
     if (!this.noFilter) {
       for (const option of this.selectionOptions) {
         void option.shouldFilter(value).then(isFiltered => {
@@ -343,7 +355,7 @@ export class GuxAdvancedDropdown {
   private closeDropdown(focus: boolean) {
     this.opened = false;
     this.searchInput.value = '';
-    this.searchRequested();
+    this.setFilteredOptions();
 
     if (focus) {
       this.inputBox.focus();

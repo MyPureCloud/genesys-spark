@@ -17,6 +17,7 @@ import {
 })
 export class GuxTab {
   private buttonElement: HTMLButtonElement;
+  private tooltipTitleElement: HTMLGuxTooltipTitleElement;
 
   /**
    * Tab id for the tab
@@ -44,6 +45,16 @@ export class GuxTab {
     if (!this.active && !this.guxDisabled) {
       this.internalactivatetabpanel.emit(this.tabId);
     }
+  }
+
+  @Listen('focusin')
+  onFocusin() {
+    void this.tooltipTitleElement.setShowTooltip();
+  }
+
+  @Listen('focusout')
+  onFocusout() {
+    void this.tooltipTitleElement.setHideTooltip();
   }
 
   @Event()
@@ -84,7 +95,7 @@ export class GuxTab {
         tabIndex={this.active ? 0 : -1}
         ref={el => (this.buttonElement = el)}
       >
-        <gux-tooltip-title tab-width={122}>
+        <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
           <slot />
         </gux-tooltip-title>
       </button>

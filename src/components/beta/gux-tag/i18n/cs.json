@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Odebrat štítek"
+  "tag": "štítek s názvem: {label}",
+  "tag-disabled": "zakázaný štítek s názvem: {label}",
+  "remove-tag": "Odebrat štítek s názvem: {label}"
 }

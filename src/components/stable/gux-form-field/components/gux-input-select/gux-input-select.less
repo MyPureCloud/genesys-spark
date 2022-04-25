@@ -1,4 +1,5 @@
 @import (reference) '../../../../../style/color.less';
+@import (reference) '../../../../../style/mixins.less';
 
 gux-input-select {
   position: relative;
@@ -16,12 +17,11 @@ gux-input-select {
     width: 100%;
     font-family: inherit;
     font-size: 12px;
-    line-height: 1.66666667;
+    line-height: 1.6667;
     color: @gux-black-50;
     background-color: @gux-grey-90;
     background-image: none;
-    border: 1px solid @gux-black-100;
-    border-radius: 4px;
+    .form-field-border();
 
     &.gux-disabled {
       pointer-events: none;

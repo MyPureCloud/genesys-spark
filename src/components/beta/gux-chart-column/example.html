@@ -24,6 +24,16 @@
 >
 </gux-chart-column-beta>
 
+<h2>Custom legend position</h2>
+<gux-chart-column-beta
+  id="chart-6"
+  include-legend="true"
+  legend-position="left"
+  x-field-name="category"
+  y-field-name="value"
+>
+</gux-chart-column-beta>
+
 <h2>Non-default data fields</h2>
 <gux-chart-column-beta id="chart-4" x-field-name="grade" y-field-name="count">
 </gux-chart-column-beta>
@@ -33,6 +43,7 @@
   id="chart-5"
   include-legend="true"
   x-field-name="category"
+  x-tick-label-slant="true"
   x-axis-title="Class"
   y-field-name="value"
   y-axis-title="Students"
@@ -47,6 +58,7 @@
     const chart3 = document.querySelector('#chart-3');
     const chart4 = document.querySelector('#chart-4');
     const chart5 = document.querySelector('#chart-5');
+    const chart6 = document.querySelector('#chart-6');
 
     chart1.addEventListener('chartClicked', (event) => console.log(event));
 
@@ -77,7 +89,7 @@ chart2.chartData = {'values': [
 }
 chart2.chartLayers = ['group2', 'group1']
 
-chart3.chartData = {'values': [
+chart3.chartData = chart6.chartData = {'values': [
     {'category': 'a', 'value': 4},
     {'category': 'b', 'value': 6},
     {'category': 'c', 'value': 10},
@@ -105,8 +117,9 @@ chart5.chartData = {'values': [
     {'category': 'Calculus', 'value': 20}
   ]
 }
-
   })()"
 >
-  --noop: none;
+  .not-used {
+    -custom-noop: noop;
+  }
 </style>

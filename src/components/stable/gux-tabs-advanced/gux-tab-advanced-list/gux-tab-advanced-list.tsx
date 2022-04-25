@@ -150,11 +150,7 @@ export class GuxTabAdvancedList {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.triggerIds = Array.from(
-      this.root.querySelector('.gux-scrollable-section').children
-    )
-      .map(trigger => `gux-${trigger.getAttribute('tab-id')}-tab`)
-      .join(' ');
+    this.setTabTriggers();
   }
 
   @Listen('keydown')
@@ -375,6 +371,17 @@ export class GuxTabAdvancedList {
     void this.tabTriggers[this.focused].guxFocus();
   }
 
+  private setTabTriggers(): void {
+    this.tabTriggers = this.root.querySelectorAll('gux-tab-advanced');
+    if (this.tabTriggers) {
+      this.triggerIds = Array.from(this.tabTriggers)
+        .map(trigger => `gux-${trigger.getAttribute('tab-id')}-tab`)
+        .join(' ');
+    } else {
+      this.triggerIds = '';
+    }
+  }
+
   createSortable() {
     this.sortableInstance = new Sortable(
       this.root.querySelector('.gux-scrollable-section'),
@@ -471,7 +478,7 @@ export class GuxTabAdvancedList {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.tabTriggers = this.root.querySelectorAll('gux-tab-advanced');
+    this.setTabTriggers();
     this.i18n = await buildI18nForComponent(this.root, tabsResources);
   }
 

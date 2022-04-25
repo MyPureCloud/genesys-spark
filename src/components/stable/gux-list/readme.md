@@ -88,8 +88,6 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-action-button](../gux-action-button)
- - [gux-button-multi](../../beta/gux-button-multi)
  - [gux-command-palette-legacy](../../legacy/gux-command-palette-legacy)
  - [gux-country-select](../../beta/gux-phone-input/components/gux-country-select)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
@@ -97,8 +95,6 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-action-button --> gux-list
-  gux-button-multi --> gux-list
   gux-command-palette-legacy --> gux-list
   gux-country-select --> gux-list
   gux-time-picker-beta --> gux-list

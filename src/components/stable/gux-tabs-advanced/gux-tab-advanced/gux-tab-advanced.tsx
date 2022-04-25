@@ -24,9 +24,12 @@ import tabsResources from '../i18n/en.json';
 })
 export class GuxTabAdvanced {
   private buttonElement: HTMLButtonElement;
+  private tooltipTitleElement: HTMLGuxTooltipTitleElement;
   private dropdownOptionsButtonId: string = randomHTMLId();
   private moveFocusDelay: number = 100;
   private tabTitle: string = '';
+  private focusinFromClick: boolean = false;
+
   /**
    * unique id for the tab
    */
@@ -60,13 +63,22 @@ export class GuxTabAdvanced {
   @Element()
   private root: HTMLElement;
 
+  @Listen('focusin')
+  onFocusin() {
+    if (!this.focusinFromClick) {
+      void this.tooltipTitleElement.setShowTooltip();
+    }
+  }
+
   @Listen('focusout')
   onFocusout(event: FocusEvent) {
     if (
       !this.root.querySelector('.gux-tab').contains(event.relatedTarget as Node)
     ) {
       this.popoverHidden = true;
+      void this.tooltipTitleElement.setHideTooltip();
     }
+    this.focusinFromClick = false;
   }
 
   @Listen('keydown')
@@ -150,6 +162,11 @@ export class GuxTabAdvanced {
     }
   }
 
+  @Listen('mousedown')
+  onMouseDown() {
+    this.focusinFromClick = true;
+  }
+
   @Event()
   internalactivatetabpanel: EventEmitter<string>;
 
@@ -205,6 +222,7 @@ export class GuxTabAdvanced {
           class="gux-tab-options-button"
           onClick={() => this.toggleOptions()}
           tabIndex={this.active ? 0 : -1}
+          disabled={this.guxDisabled}
         >
           <gux-icon
             icon-name="menu-kebab-vertical"
@@ -213,7 +231,7 @@ export class GuxTabAdvanced {
             })}
           ></gux-icon>
         </button>,
-        <gux-popover
+        <gux-popover-list
           position="top-end"
           for={this.dropdownOptionsButtonId}
           displayDismissButton={false}
@@ -228,7 +246,7 @@ export class GuxTabAdvanced {
           >
             <slot name="dropdown-options" />
           </div>
-        </gux-popover>
+        </gux-popover-list>
       ] as JSX.Element;
     }
 
@@ -247,30 +265,27 @@ export class GuxTabAdvanced {
   render(): JSX.Element {
     return [
       <div
-        class={`gux-tab ${this.active ? 'gux-selected' : ''}`}
-        aria-disabled={this.guxDisabled.toString()}
+        class={{
+          'gux-tab': true,
+          'gux-selected': this.active,
+          'gux-dropdown-options': this.hasDropdownOptions,
+          'gux-disabled': this.guxDisabled
+        }}
       >
         <button
           class="gux-tab-button"
           type="button"
           role="tab"
           aria-selected={this.active.toString()}
+          aria-disabled={this.guxDisabled.toString()}
           aria-controls={`gux-${this.tabId}-panel`}
           ref={el => (this.buttonElement = el)}
           tabIndex={this.active ? 0 : -1}
           id={`gux-${this.tabId}-tab`}
         >
-          {this.tabIconName ? (
-            <div class="tab-icon-container">
-              <gux-icon
-                icon-name={this.tabIconName}
-                decorative={true}
-              ></gux-icon>
-            </div>
-          ) : null}
-          <span class="tab-title">
-            <slot name="title" />
-          </span>
+          <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
+            <slot />
+          </gux-tooltip-title>
         </button>
 
         {this.getDropdownOptions()}

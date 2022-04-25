@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Remove tag"
+  "tag": "tag with label: {label}",
+  "tag-disabled": "disabled tag with label: {label}",
+  "remove-tag": "Remove tag with label: {label}"
 }

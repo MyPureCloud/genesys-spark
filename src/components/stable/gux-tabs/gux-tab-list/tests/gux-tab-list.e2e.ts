@@ -13,6 +13,6 @@ describe('gux-tab-list', () => {
     <gux-tab-list lang="en"></gux-tab-list>
     `);
     element = await page.find('gux-tab-list');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

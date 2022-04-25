@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Rimuovi contrassegno"
+  "tag": "tag con etichetta: {label}",
+  "tag-disabled": "tag disabilitato con etichetta: {label}",
+  "remove-tag": "Rimuovi tag con etichetta: {label}"
 }

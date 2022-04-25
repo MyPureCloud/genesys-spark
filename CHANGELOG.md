@@ -2,6 +2,357 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.61](https://inindca///compare/v3.0.0-alpha.60...v3.0.0-alpha.61) (2022-04-21)
+
+
+### Features
+
+* **gux-card:** addition of card component ([e5482a8](https://inindca///commit/e5482a816ac5fb88f3aad67cf7687f4cc9f47f20))
+
+## [3.0.0-alpha.60](https://inindca///compare/v3.0.0-alpha.59...v3.0.0-alpha.60) (2022-04-19)
+
+
+### Features
+
+* **gux-tag:** addition of default-subtle styling, updating tests ([ea0d5ae](https://inindca///commit/ea0d5ae1b8fdc98871b7ac096b4d19880633e642))
+* **gux-tag:** addition of subtle styling, updating e2e tests ([348b620](https://inindca///commit/348b6203790a1c6e404608b5b2307d1f7634a5c6))
+
+
+### Bug Fixes
+
+* **datepicker:** toggle focus is now working ([5ffa2c0](https://inindca///commit/5ffa2c007c7cebf0f74d6526fe0885323a406576))
+* **snapshot:** updated snapshot ([01f2bbf](https://inindca///commit/01f2bbf598046a0b503f79374d24ebd5608cdfe2))
+* **stencil:** use attribute for component hydration instead of class ([6a31389](https://inindca///commit/6a3138970b01c3c1c59050be40fb26a5c0866c10))
+
+## [3.0.0-alpha.59](https://inindca///compare/v3.0.0-alpha.58...v3.0.0-alpha.59) (2022-04-11)
+
+## [3.0.0-alpha.58](https://inindca///compare/v3.0.0-alpha.57...v3.0.0-alpha.58) (2022-04-07)
+
+
+### Features
+
+* **popup:** moved gux-popup to stable ([46dfb23](https://inindca///commit/46dfb23c70f38d9dd9f59dedd1a0dc9ceea7af6a))
+
+## [3.0.0-alpha.57](https://inindca///compare/v3.0.0-alpha.56...v3.0.0-alpha.57) (2022-04-06)
+
+
+### Features
+
+* **gux-tooltip:** add methods to hide and show tooltip, show/hide tooltip on focus to tabs ([db9d7d0](https://inindca///commit/db9d7d059e5b26edbaadd215dbd254631d1c68a5))
+
+## [3.0.0-alpha.56](https://inindca///compare/v3.0.0-alpha.55...v3.0.0-alpha.56) (2022-04-05)
+
+
+### Features
+
+* **color-palette:** checked beta/stable components for discrepancies in styling ([c5eb212](https://inindca///commit/c5eb212a7cc330433c5179519b2cc147144a17d1))
+* **color-palette:** updating black and grey palettes for consistency ([4efe4ac](https://inindca///commit/4efe4acf38ee18191ba6bc1f9ef9606553c8ddf5))
+* **gux-tag:** aqua-green not passing accesibility checks changed text color to gux-black-30 ([47bc416](https://inindca///commit/47bc41658953d9523f08dcf387e83211440cef3a))
+
+## [3.0.0-alpha.55](https://inindca///compare/v3.0.0-alpha.54...v3.0.0-alpha.55) (2022-04-04)
+
+
+### Bug Fixes
+
+* **gux-tooltip-title:** gux-advanced tabs tooltip sort issue ([61ea65d](https://inindca///commit/61ea65d679e667f5d36b2b10493c37ce65ed3bfb))
+
+## [3.0.0-alpha.54](https://inindca///compare/v3.0.0-alpha.53...v3.0.0-alpha.54) (2022-03-31)
+
+
+### Features
+
+* **gux-dropdown:** explicitly set shadowDOM to false ([6d22c6f](https://inindca///commit/6d22c6f1d932da7daf120b8839a426b1c8c9c54e))
+
+## [3.0.0-alpha.53](https://inindca///compare/v3.0.0-alpha.52...v3.0.0-alpha.53) (2022-03-30)
+
+
+### Bug Fixes
+
+* **gux-tooltip-title:** fix dynamic tooltip text bug ([c5bd4cb](https://inindca///commit/c5bd4cbe6c58b5bf89df1691b168d1d5175999a3))
+* **gux-tooltip-title:** remove need for hard coding tab width, update title slot API for adv. tabs ([00a49dd](https://inindca///commit/00a49dd5039aefa9fe2d355674535c55fdea465b))
+
+## [3.0.0-alpha.52](https://inindca///compare/v3.0.0-alpha.51...v3.0.0-alpha.52) (2022-03-28)
+
+## [3.0.0-alpha.51](https://inindca///compare/v3.0.0-alpha.50...v3.0.0-alpha.51) (2022-03-24)
+
+
+### Features
+
+* **popup:** enabled shadowDOM ([4417291](https://inindca///commit/44172917a681874aca74910a95d774932d533534))
+
+
+### Bug Fixes
+
+* **gux-tabs-advanced:** addressed a few style issues that still needed attention after redesign ([e02e46a](https://inindca///commit/e02e46ad4e2578113fc4a599a9ad4a373b3aa1ca))
+* **pr-comment:** addressd PR comment ([8e8fb99](https://inindca///commit/8e8fb99714ce820bd5ed0bafe28f2a5442065e08))
+
+## [3.0.0-alpha.50](https://inindca///compare/v3.0.0-alpha.49...v3.0.0-alpha.50) (2022-03-23)
+
+
+### Features
+
+* **gux-icon:** add shield outline and shield solid svgs ([3535c0d](https://inindca///commit/3535c0db0e0477ae677bb011dc7f01f35ef5e680))
+* **table:** better no-content style and fixed scroll corner cases ([4290da6](https://inindca///commit/4290da627a34c7a7155080b7804fe8a102c0a539))
+* **table:** Enable shadow DOM for gux-table ([05c53ad](https://inindca///commit/05c53ada3d9dcb1eaca013c895906e24be470940))
+
+## [3.0.0-alpha.49](https://inindca///compare/v3.0.0-alpha.48...v3.0.0-alpha.49) (2022-03-22)
+
+
+### Features
+
+* **gux-tabs-advanced:** added tooltip when tab title overflows ([cd11010](https://inindca///commit/cd11010b86a6fa6430f03542e2e0a38bb101a3d7))
+* **gux-tabs-advanced:** rework focus styling and keyboard accessibility ([a0c8744](https://inindca///commit/a0c87444bf0cd7dd6692b32074120c0e3efe53f6))
+* **gux-tabs-advanced:** update test ([2604ab5](https://inindca///commit/2604ab5884441c838cc5e865001f3479d1bde6c6))
+* **gux-tabs-advanced:** updated styling to new designs and changed examples ([3c32b61](https://inindca///commit/3c32b61aa680e45b473272ab533cf408ee97de5d))
+* **gux-tabs-advanced:** updated tests ([91c02ee](https://inindca///commit/91c02ee03876aa94bf61e11495196183942728a4))
+
+
+### Bug Fixes
+
+* **gux-tabs-advanced:** remove empty styling div ([74f475d](https://inindca///commit/74f475d629cf091a7671c4500a80b25614ac5a91))
+* **gux-tabs-advanced:** remove menu kebab padding ([463e7ab](https://inindca///commit/463e7ab7b4d24289d9b51df68abddf52617fa4e7))
+* **gux-tabs-advanced:** style updates and changes to examples ([476f9fe](https://inindca///commit/476f9fe045055321c6e927abf3aacd8cb1b2d86e))
+* **gux-tabs-advanced:** test snapshot update ([74a43f1](https://inindca///commit/74a43f18ccafbaaa553f05c95629b1cbbecd0519))
+* **gux-tabs-advanced:** test update ([d09b8ad](https://inindca///commit/d09b8ad78c20eff3a62f6b7a84ee32a66cc08a22))
+* **gux-tabs-advanced:** use spacing variables ([ad1d1ed](https://inindca///commit/ad1d1ed1e52e1e0224e3fcfb0353698d2dc7991d))
+
+## [3.0.0-alpha.48](https://inindca///compare/v3.0.0-alpha.47...v3.0.0-alpha.48) (2022-03-21)
+
+
+### Features
+
+* **form-field:** explicitly set shadowDOM to false ([b53b9c6](https://inindca///commit/b53b9c6fc1ed4951485930ed3fb1168455e99469))
+
+## [3.0.0-alpha.47](https://inindca///compare/v3.0.0-alpha.46...v3.0.0-alpha.47) (2022-03-16)
+
+
+### Bug Fixes
+
+* **advanced-dropdown:** deselect not possible any more and filter event not firing on close ([8f492b0](https://inindca///commit/8f492b0c13f7bf4da6ef78fcf38b8df5ff4ad3a7))
+* **dropdown-v2:** stopped emitting internal focus events outside the component ([fe25b70](https://inindca///commit/fe25b70abbcb0be1d9a9f1128c2b07fa7de2ee97))
+* **pr-comment:** adressed PR comment ([37e0632](https://inindca///commit/37e063225fb6a3a3dd60a080ddff36606091d18e))
+
+## [3.0.0-alpha.46](https://inindca///compare/v3.0.0-alpha.45...v3.0.0-alpha.46) (2022-03-15)
+
+
+### Bug Fixes
+
+* **axe-live:** fixed call to axe-live in docs ([1ebd74a](https://inindca///commit/1ebd74abc7537dfe7b306676c17541ce2e0f531e))
+
+## [3.0.0-alpha.45](https://inindca///compare/v3.0.0-alpha.44...v3.0.0-alpha.45) (2022-03-14)
+
+
+### Bug Fixes
+
+* **gux-input-range:** round tooltip position to prevent snapshot inconsistencies ([4e632f9](https://inindca///commit/4e632f9d6cb2d00befe13b4dc4ca90a55532eef2))
+
+## [3.0.0-alpha.44](https://inindca///compare/v3.0.0-alpha.43...v3.0.0-alpha.44) (2022-03-11)
+
+
+### Bug Fixes
+
+* **gux-tabs:** fixed inconsistant aria-owns attribute bug on tablist ([290cd9d](https://inindca///commit/290cd9dbead8aaf0be6fd5d1dd2b6ada71750c35))
+
+## [3.0.0-alpha.43](https://inindca///compare/v3.0.0-alpha.42...v3.0.0-alpha.43) (2022-03-09)
+
+
+### Features
+
+* **gux-popover-list:** add new gux-popover-list component ([56c8cc0](https://inindca///commit/56c8cc0a2be620d9d4d55c36a1d558b2ee19fd15))
+
+
+### Bug Fixes
+
+* **form-field:** fixed focus states ([226f44b](https://inindca///commit/226f44b989a19bf653c36cd875fadfff7cf0c52b))
+* **gux-action-button:** update gux-action-button and gux-button-multi to improve accessibility ([3b977ea](https://inindca///commit/3b977ea5af3f593590a7663cb1b0b2bf0ff895a8))
+* **gux-dropdown:** address dropdown a11y violations ([4d044bc](https://inindca///commit/4d044bc0cd6a404cbea76072e10c57f512247b56))
+
+## [3.0.0-alpha.42](https://inindca///compare/v3.0.0-alpha.41...v3.0.0-alpha.42) (2022-03-08)
+
+
+### Features
+
+* **branch-name:** prepare for master branch rename to main ([d54ee2b](https://inindca///commit/d54ee2b521d2c5b964d3559665e0bda932b8e11b))
+* **panel-frame:** moved component to legacy ([b1804e0](https://inindca///commit/b1804e0c7bd3e6c33863b6986d44cc66f0751f6f))
+* **side-panel:** moved to legacy ([9f1b6c0](https://inindca///commit/9f1b6c0e6344960729162fff03b48742094a5f0e))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([f76823e](https://inindca///commit/f76823e14b35964d5ae4f43edbca7c6243824200))
+
+## [3.0.0-alpha.41](https://inindca///compare/v3.0.0-alpha.40...v3.0.0-alpha.41) (2022-03-05)
+
+
+### Features
+
+* **line and column chart:** remove ticks ([71a8a1d](https://inindca///commit/71a8a1de6158d46d9150c4dd69a0d7659bdaa1cf))
+* **pagination-cursor:** moved to stable ([c947c2d](https://inindca///commit/c947c2d00eee96173cb389112b51490f3342d1dd))
+
+## [3.0.0-alpha.40](https://inindca///compare/v3.0.0-alpha.39...v3.0.0-alpha.40) (2022-03-04)
+
+
+### Features
+
+* **column and line chart:** axis label and title padding ([a2b3c0e](https://inindca///commit/a2b3c0e5df219f159084fe69851744eaa28008d6))
+* **column, line, pie, donut:** alt legend position ([5694eae](https://inindca///commit/5694eaefad95a19d25cb605fc782ea4aa11da4b8))
+
+## [3.0.0-alpha.39](https://inindca///compare/v3.0.0-alpha.38...v3.0.0-alpha.39) (2022-03-03)
+
+
+### Features
+
+* **column and line chart:** x axis label tick orientation ([b6fb7c7](https://inindca///commit/b6fb7c7f011a8c7d0abcb6899b0a6b9606456197))
+* **column-chart:** bar/column and axes padding ([5b4599d](https://inindca///commit/5b4599dd2d3d6ca728854e59a9fd089bee971513))
+* **gux-visualization:** change color of Axes ([ba36f29](https://inindca///commit/ba36f291301e40d63acb012dac0153b34b3b6869))
+* **line chart, column chart:** x axis tick label orientation ([2521a75](https://inindca///commit/2521a755a8a12a70f3f57fb0dc55f2a5f3b63340))
+
+## [3.0.0-alpha.38](https://inindca///compare/v3.0.0-alpha.37...v3.0.0-alpha.38) (2022-03-02)
+
+
+### Bug Fixes
+
+* **gux-tooltip-title:** long text no longer overflows tab tooltip ([d7be354](https://inindca///commit/d7be35449c130905626868796e9c6f43ef620e11))
+
+## [3.0.0-alpha.37](https://inindca///compare/v3.0.0-alpha.36...v3.0.0-alpha.37) (2022-03-01)
+
+
+### Features
+
+* **form-field:** added new individual form-field elements ([c0881e1](https://inindca///commit/c0881e15b14f9827c36a1cc342d71db10f2a59cf))
+* **time-picker:** enabled shadow dom ([edb02cd](https://inindca///commit/edb02cda9a14bca4fee09965d8e09ad7ba39bef6))
+
+
+### Bug Fixes
+
+* **firefox:** fixed firefox issue ([137ed64](https://inindca///commit/137ed644262d6e6dba3f9faf02977013665937f6))
+* **pr-comment:** addressed PR comment ([1986739](https://inindca///commit/1986739ff0a71aef9265869324eac76eaf707625))
+* **pr-comments:** addessed PR comments ([82c619c](https://inindca///commit/82c619c8aa1d49204e5ed6f9aa3f43182900729f))
+
+## [3.0.0-alpha.36](https://inindca///compare/v3.0.0-alpha.35...v3.0.0-alpha.36) (2022-02-26)
+
+
+### Features
+
+* **gux-modal:** migrate gux-modal to shadow dom, trap focus POC ([214ef05](https://inindca///commit/214ef058a002944b0f4aef0a826b54b86f7d5051))
+
+## [3.0.0-alpha.35](https://inindca///compare/v3.0.0-alpha.34...v3.0.0-alpha.35) (2022-02-25)
+
+## [3.0.0-alpha.34](https://inindca///compare/v3.0.0-alpha.33...v3.0.0-alpha.34) (2022-02-24)
+
+
+### Features
+
+* **chart:** enabled shadow dom ([6892237](https://inindca///commit/6892237fbd7187108f3f844d6c97b1ec34c65c93))
+* **content-search:** enabled shadow dom ([6ba68ea](https://inindca///commit/6ba68ea1943a4c5a1b9931df0e3c770ada20e8b2))
+* **datepicker:** enabled shadow dom ([2303b73](https://inindca///commit/2303b739c8782f006c55218355d1bbe2041d20c9))
+
+## [3.0.0-alpha.33](https://inindca///compare/v3.0.0-alpha.32...v3.0.0-alpha.33) (2022-02-23)
+
+## [3.0.0-alpha.32](https://inindca///compare/v3.0.0-alpha.31...v3.0.0-alpha.32) (2022-02-18)
+
+
+### Features
+
+* **visualization:** enabled shadow dom ([04f147c](https://inindca///commit/04f147c49e0239c32eb2cf9a73ce422359e497ba))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([ca7ecbb](https://inindca///commit/ca7ecbb5b705250e8eecf2448593fac37522c45d))
+* **pr-comment:** addressed PR comment ([36e04e2](https://inindca///commit/36e04e22acbb10555918c5daeb1361e00316cc22))
+* **pr-comment:** addressed PR comments ([6af4f77](https://inindca///commit/6af4f77229cff1854f72fd676b81a7030e6736dc))
+* **tag:** improved components accessibility ([e5fe7a3](https://inindca///commit/e5fe7a3b231d610dc2624ad328d81d63c293abe9))
+
+## [3.0.0-alpha.31](https://inindca///compare/v3.0.0-alpha.30...v3.0.0-alpha.31) (2022-02-17)
+
+
+### Features
+
+* **icon:** added run and message-email-outbound icons ([1b6db76](https://inindca///commit/1b6db768b3ceac0e7c323c9aa6b6c999394806dd))
+
+## [3.0.0-alpha.30](https://inindca///compare/v3.0.0-alpha.29...v3.0.0-alpha.30) (2022-02-16)
+
+
+### Features
+
+* **gux-button:** migrate gux-button to shadow dom ([de5b0e6](https://inindca///commit/de5b0e6bebd4aabfc2b09e572521300a6801e328))
+* **gux-popover:** migrate gux-popover to shadow dom ([f0541cb](https://inindca///commit/f0541cbe39313a8a4581e81c4ca2004c5c4817ca))
+
+## [3.0.0-alpha.29](https://inindca///compare/v3.0.0-alpha.28...v3.0.0-alpha.29) (2022-02-15)
+
+
+### Bug Fixes
+
+* **gux-time-picker:** fixed on click bug ([51d595f](https://inindca///commit/51d595f1a18b6fdd88237e6cd60ea255468b73ac))
+
+## [3.0.0-alpha.28](https://inindca///compare/v3.0.0-alpha.27...v3.0.0-alpha.28) (2022-02-04)
+
+
+### Features
+
+* **icon:** added new icons ([3227b1e](https://inindca///commit/3227b1e79b3ae95cb12d5b3827d095d49b0075e5))
+
+## [3.0.0-alpha.27](https://inindca///compare/v3.0.0-alpha.26...v3.0.0-alpha.27) (2022-02-01)
+
+
+### Bug Fixes
+
+* **scripts:** fixed generate-versions-file script ([f9dc706](https://inindca///commit/f9dc70619ddbed21e94c30af76ad1c0b626a13e6))
+
+## [3.0.0-alpha.26](https://inindca///compare/v3.0.0-alpha.25...v3.0.0-alpha.26) (2022-01-29)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** gux-dropdown within a gux-panel closes when scroll button is clicked ([2d538dd](https://inindca///commit/2d538dd1ae56c9757691f6e010830238740accef))
+* **gux-tab-panel:** fixed tabpanel outline shown on click in safari ([4cbbc58](https://inindca///commit/4cbbc586438f3265d005818a247e217fb36d5e59))
+
+## [3.0.0-alpha.25](https://inindca///compare/v3.0.0-alpha.24...v3.0.0-alpha.25) (2022-01-26)
+
+
+### Features
+
+* **chart-donut:** extract chart-pie out of chart-donut ([87d4c9d](https://inindca///commit/87d4c9d19d314e2e6f6a046964f769601bec9358))
+* **gux-chart-donut:** add default ring size to match spec ([7d1eb62](https://inindca///commit/7d1eb6248792b754146cd593dfa904a59c510bd6))
+* **gux-chart-donut:** add donut and pie chart ([2bfef7d](https://inindca///commit/2bfef7de448ac68140fe0e89c444163943b53f48))
+* **radial-progress:** now using Stencil functional components internally ([678860b](https://inindca///commit/678860b8a3ebd9064cf464c7fd849fcd545c28f8))
+
+## [3.0.0-alpha.24](https://inindca///compare/v3.0.0-alpha.23...v3.0.0-alpha.24) (2022-01-25)
+
+
+### Bug Fixes
+
+* **gux-popup:** fix popup alignment ([e32bddd](https://inindca///commit/e32bddd59984c2901f38a4fe75826616b09d1324))
+
+## [3.0.0-alpha.23](https://inindca///compare/v3.0.0-alpha.22...v3.0.0-alpha.23) (2022-01-22)
+
+
+### Bug Fixes
+
+* **title-attribute:** removed redundant title attributes ([92e35eb](https://inindca///commit/92e35eba1ec2d8dcdd57f689ff6920ac21390a1e))
+
+## [3.0.0-alpha.22](https://inindca///compare/v3.0.0-alpha.21...v3.0.0-alpha.22) (2022-01-14)
+
+
+### Features
+
+* **tag-beta:** enabled shadow dom ([3292c83](https://inindca///commit/3292c83804bad03609eba25b20e6f6ded59f03ff))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([eba9912](https://inindca///commit/eba9912ae8bfa083eeb75c52548388c57ea8f934))
+
+## [3.0.0-alpha.21](https://inindca///compare/v3.0.0-alpha.20...v3.0.0-alpha.21) (2022-01-07)
+
+
+### Bug Fixes
+
+* **gux-modal:** fix max-height typo for modal sizes ([d95dc71](https://inindca///commit/d95dc71865765af395e9cd2b6e1bbc9fdeedb993))
+
+## [3.0.0-alpha.20](https://inindca///compare/v3.0.0-alpha.19...v3.0.0-alpha.20) (2021-12-18)
+
 ## [3.0.0-alpha.19](https://inindca///compare/v3.0.0-alpha.18...v3.0.0-alpha.19) (2021-12-16)
 
 

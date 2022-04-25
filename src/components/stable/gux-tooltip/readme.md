@@ -30,6 +30,29 @@ If there is not enough space on the bottom, or right of the component, the toolt
 | `for`    | `for`     | Indicates the id of the element the popover should anchor to. (If not supplied the parent element is used) | `string` | `undefined` |
 
 
+## Methods
+
+### `hideTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `showTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Slots
 
 | Slot | Description            |

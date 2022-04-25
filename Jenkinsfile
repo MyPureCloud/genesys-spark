@@ -8,8 +8,8 @@ String[] mailingList = [
 ]
 
 
-def isMasterBranch() {
-  return env.SHORT_BRANCH.equals('master');
+def isMainBranch() {
+  return env.SHORT_BRANCH.equals('main') || env.SHORT_BRANCH.equals('master');
 }
 
 def isActiveReleaseBranch() {
@@ -25,7 +25,7 @@ def isFeatureBranch() {
 }
 
 def isReleaseBranch() {
-  return isMasterBranch() || isActiveReleaseBranch() || isMaintenanceReleaseBranch();
+  return isMainBranch() || isActiveReleaseBranch() || isMaintenanceReleaseBranch();
 }
 
 
@@ -55,7 +55,7 @@ pipeline {
   }
 
   tools {
-    nodejs "NodeJS 14.8.0"
+    nodejs "NodeJS 14.16.1"
   }
 
   stages {
@@ -201,7 +201,7 @@ pipeline {
       steps {
         sh "echo Uploading release!"
         dir (env.REPO_DIR) {
-          sh './scripts/generate-versions-file'
+          sh "npm run generate-versions-file"
           sh """
              npx upload \
                 ${uploadVersionOverride()} \

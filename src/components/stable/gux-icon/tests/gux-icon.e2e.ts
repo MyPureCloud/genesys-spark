@@ -9,6 +9,6 @@ describe('gux-icon', () => {
     const element = await page.find('gux-icon');
     await a11yCheck(page);
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });

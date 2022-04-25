@@ -16,19 +16,6 @@ You can choose between two type (secondary and primary).
 | `type`     | `type`      | The component button type                    | `"button" \| "reset" \| "submit"`        | `'button'`    |
 
 
-## Methods
-
-### `focusElement() => Promise<void>`
-
-Focus the button
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

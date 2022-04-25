@@ -90,6 +90,18 @@ h6,
   overflow: hidden;
 }
 
+.gux-sr-only-clip {
+  &:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
 /* Helpers */
 
 .base-font() {
@@ -115,7 +127,7 @@ h6,
 
 /* roboto-300 - latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 300;
   src: url('./fonts/roboto-v20-latin-300.eot'); /* IE9 Compat Modes */
@@ -132,7 +144,7 @@ h6,
 
 /* roboto-regular - latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 400;
   src: url('./fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
@@ -150,7 +162,7 @@ h6,
 
 /* roboto-italic - latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: italic;
   font-weight: 400;
   src: url('./fonts/roboto-v20-latin-italic.eot'); /* IE9 Compat Modes */
@@ -168,7 +180,7 @@ h6,
 
 /* roboto-700 - latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 700;
   src: url('./fonts/roboto-v20-latin-700.eot'); /* IE9 Compat Modes */

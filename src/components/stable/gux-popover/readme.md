@@ -29,11 +29,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
- - [gux-tab-legacy](../../legacy/gux-tabs-legacy/gux-tab-legacy)
-
 ### Depends on
 
 - [gux-dismiss-button](../gux-dismiss-button)
@@ -43,8 +38,6 @@
 graph TD;
   gux-popover --> gux-dismiss-button
   gux-dismiss-button --> gux-icon
-  gux-tab-advanced --> gux-popover
-  gux-tab-legacy --> gux-popover
   style gux-popover fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

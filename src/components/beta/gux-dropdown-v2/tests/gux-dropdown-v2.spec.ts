@@ -1,8 +1,8 @@
 import { newSpecPage } from '@stencil/core/testing';
 
 import { GuxDropdownV2Beta } from '../gux-dropdown-v2';
-import { GuxListbox } from '../gux-listbox/gux-listbox';
-import { GuxOptionV2 } from '../gux-option-v2/gux-option-v2';
+import { GuxListbox } from '../../gux-listbox/gux-listbox';
+import { GuxOptionV2 } from '../../gux-listbox/gux-option-v2/gux-option-v2';
 
 const components = [GuxDropdownV2Beta, GuxListbox, GuxOptionV2];
 const html = `
