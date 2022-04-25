@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.61](https://inindca///compare/v3.0.0-alpha.60...v3.0.0-alpha.61) (2022-04-21)
+
+
+### Features
+
+* **gux-card:** addition of card component ([e5482a8](https://inindca///commit/e5482a816ac5fb88f3aad67cf7687f4cc9f47f20))
+
+## [3.0.0-alpha.60](https://inindca///compare/v3.0.0-alpha.59...v3.0.0-alpha.60) (2022-04-19)
+
+
+### Features
+
+* **gux-tag:** addition of default-subtle styling, updating tests ([ea0d5ae](https://inindca///commit/ea0d5ae1b8fdc98871b7ac096b4d19880633e642))
+* **gux-tag:** addition of subtle styling, updating e2e tests ([348b620](https://inindca///commit/348b6203790a1c6e404608b5b2307d1f7634a5c6))
+
+
+### Bug Fixes
+
+* **datepicker:** toggle focus is now working ([5ffa2c0](https://inindca///commit/5ffa2c007c7cebf0f74d6526fe0885323a406576))
+* **snapshot:** updated snapshot ([01f2bbf](https://inindca///commit/01f2bbf598046a0b503f79374d24ebd5608cdfe2))
+* **stencil:** use attribute for component hydration instead of class ([6a31389](https://inindca///commit/6a3138970b01c3c1c59050be40fb26a5c0866c10))
+
+## [3.0.0-alpha.59](https://inindca///compare/v3.0.0-alpha.58...v3.0.0-alpha.59) (2022-04-11)
+
+## [3.0.0-alpha.58](https://inindca///compare/v3.0.0-alpha.57...v3.0.0-alpha.58) (2022-04-07)
+
+
+### Features
+
+* **popup:** moved gux-popup to stable ([46dfb23](https://inindca///commit/46dfb23c70f38d9dd9f59dedd1a0dc9ceea7af6a))
+
 ## [3.0.0-alpha.57](https://inindca///compare/v3.0.0-alpha.56...v3.0.0-alpha.57) (2022-04-06)
 
 

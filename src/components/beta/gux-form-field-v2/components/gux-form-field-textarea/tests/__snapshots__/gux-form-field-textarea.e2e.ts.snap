@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-textarea-beta #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-textarea-beta class=\\"hydrated\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-textarea-beta hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -12,7 +12,7 @@ exports[`gux-form-field-textarea-beta #render input attributes should render com
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -21,7 +21,7 @@ exports[`gux-form-field-textarea-beta #render input attributes should render com
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-textarea-beta class=\\"hydrated\\"> <textarea slot=\\"input\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-textarea-beta hydrated=\\"\\"> <textarea slot=\\"input\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -33,7 +33,7 @@ exports[`gux-form-field-textarea-beta #render input attributes should render com
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -42,7 +42,7 @@ exports[`gux-form-field-textarea-beta #render input attributes should render com
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-textarea-beta class=\\"hydrated\\"> <textarea slot=\\"input\\" required=\\"\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-textarea-beta hydrated=\\"\\"> <textarea slot=\\"input\\" required=\\"\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -54,7 +54,7 @@ exports[`gux-form-field-textarea-beta #render input attributes should render com
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -63,7 +63,7 @@ exports[`gux-form-field-textarea-beta #render input attributes should render com
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render label-position should render component as expected (1) 1`] = `"<gux-form-field-textarea-beta class=\\"hydrated\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render label-position should render component as expected (1) 1`] = `"<gux-form-field-textarea-beta hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -75,7 +75,7 @@ exports[`gux-form-field-textarea-beta #render label-position should render compo
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -84,7 +84,7 @@ exports[`gux-form-field-textarea-beta #render label-position should render compo
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render label-position should render component as expected (2) 1`] = `"<gux-form-field-textarea-beta label-position=\\"above\\" class=\\"hydrated\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render label-position should render component as expected (2) 1`] = `"<gux-form-field-textarea-beta label-position=\\"above\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
@@ -96,7 +96,7 @@ exports[`gux-form-field-textarea-beta #render label-position should render compo
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -105,7 +105,7 @@ exports[`gux-form-field-textarea-beta #render label-position should render compo
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render label-position should render component as expected (3) 1`] = `"<gux-form-field-textarea-beta label-position=\\"beside\\" class=\\"hydrated\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render label-position should render component as expected (3) 1`] = `"<gux-form-field-textarea-beta label-position=\\"beside\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -117,7 +117,7 @@ exports[`gux-form-field-textarea-beta #render label-position should render compo
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -126,7 +126,7 @@ exports[`gux-form-field-textarea-beta #render label-position should render compo
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render label-position should render component as expected (4) 1`] = `"<gux-form-field-textarea-beta label-position=\\"screenreader\\" class=\\"hydrated\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render label-position should render component as expected (4) 1`] = `"<gux-form-field-textarea-beta label-position=\\"screenreader\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">
@@ -138,7 +138,7 @@ exports[`gux-form-field-textarea-beta #render label-position should render compo
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -147,7 +147,7 @@ exports[`gux-form-field-textarea-beta #render label-position should render compo
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render resize should render component as expected (1) 1`] = `"<gux-form-field-textarea-beta class=\\"hydrated\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render resize should render component as expected (1) 1`] = `"<gux-form-field-textarea-beta hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render resize should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -159,7 +159,7 @@ exports[`gux-form-field-textarea-beta #render resize should render component as 
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -168,7 +168,7 @@ exports[`gux-form-field-textarea-beta #render resize should render component as 
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render resize should render component as expected (2) 1`] = `"<gux-form-field-textarea-beta resize=\\"auto\\" class=\\"hydrated\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render resize should render component as expected (2) 1`] = `"<gux-form-field-textarea-beta resize=\\"auto\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render resize should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -180,7 +180,7 @@ exports[`gux-form-field-textarea-beta #render resize should render component as 
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -189,7 +189,7 @@ exports[`gux-form-field-textarea-beta #render resize should render component as 
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render resize should render component as expected (3) 1`] = `"<gux-form-field-textarea-beta resize=\\"manual\\" class=\\"hydrated\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render resize should render component as expected (3) 1`] = `"<gux-form-field-textarea-beta resize=\\"manual\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render resize should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -201,7 +201,7 @@ exports[`gux-form-field-textarea-beta #render resize should render component as 
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -210,7 +210,7 @@ exports[`gux-form-field-textarea-beta #render resize should render component as 
 </div>
 `;
 
-exports[`gux-form-field-textarea-beta #render resize should render component as expected (4) 1`] = `"<gux-form-field-textarea-beta resize=\\"none\\" class=\\"hydrated\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
+exports[`gux-form-field-textarea-beta #render resize should render component as expected (4) 1`] = `"<gux-form-field-textarea-beta resize=\\"none\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea-beta>"`;
 
 exports[`gux-form-field-textarea-beta #render resize should render component as expected (4) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -222,7 +222,7 @@ exports[`gux-form-field-textarea-beta #render resize should render component as 
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon class="hydrated" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>

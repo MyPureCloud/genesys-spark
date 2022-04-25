@@ -1,5 +1,6 @@
 export type GuxTagColor =
   | 'default'
+  | 'default-subtle'
   | 'navy'
   | 'blue'
   | 'electric-purple'

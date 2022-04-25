@@ -23,6 +23,6 @@ describe('gux-input-radio', () => {
     const element = await page.find('gux-input-radio');
     await a11yCheck(page, axeExclusions);
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 });
