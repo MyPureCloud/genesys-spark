@@ -32,7 +32,7 @@ async function newNonrandomE2EPage({
   return page;
 }
 
-describe('gux-pagination', () => {
+describe('gux-pagination-beta', () => {
   describe('#render', () => {
     [
       {

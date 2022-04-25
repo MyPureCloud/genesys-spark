@@ -24,7 +24,7 @@ const components = [
 
 const language = 'en';
 
-describe('gux-pagination', () => {
+describe('gux-pagination-beta', () => {
   describe('#render', () => {
     [
       {

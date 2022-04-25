@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-pagination #render should render as expected (1) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (1) 1`] = `
 <gux-pagination-beta current-page="1" items-per-page="25" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -126,7 +126,7 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (2) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (2) 1`] = `
 <gux-pagination-beta current-page="1" items-per-page="50" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -252,7 +252,7 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (3) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (3) 1`] = `
 <gux-pagination-beta current-page="1" items-per-page="75" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -378,7 +378,7 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (4) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (4) 1`] = `
 <gux-pagination-beta current-page="1" items-per-page="100" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -510,7 +510,7 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (5) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (5) 1`] = `
 <gux-pagination-beta current-page="1" items-per-page="25" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -636,7 +636,7 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (6) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (6) 1`] = `
 <gux-pagination-beta current-page="10" items-per-page="25" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -765,7 +765,7 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (7) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (7) 1`] = `
 <gux-pagination-beta current-page="10" items-per-page="50" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -894,7 +894,7 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (8) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (8) 1`] = `
 <gux-pagination-beta current-page="10" items-per-page="75" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -1020,7 +1020,7 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (9) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (9) 1`] = `
 <gux-pagination-beta current-page="10" items-per-page="100" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -1152,7 +1152,7 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (10) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (10) 1`] = `
 <gux-pagination-beta current-page="1" items-per-page="25" layout="simple" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -1204,7 +1204,7 @@ exports[`gux-pagination #render should render as expected (10) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (11) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (11) 1`] = `
 <gux-pagination-beta current-page="-3" items-per-page="25" layout="advanced" total-items="1000">
   <mock:shadow-root>
     <div class="gux-pagination-container">
@@ -1330,7 +1330,7 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
 </gux-pagination-beta>
 `;
 
-exports[`gux-pagination #render should render as expected (12) 1`] = `
+exports[`gux-pagination-beta #render should render as expected (12) 1`] = `
 <gux-pagination-beta current-page="-3" items-per-page="25" layout="advanced" total-items="0">
   <mock:shadow-root>
     <div class="gux-pagination-container">
