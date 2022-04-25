@@ -176,7 +176,8 @@ describe('gux-tabs-advanced', () => {
     </gux-tabs-advanced>
     `;
   describe('#render', () => {
-    it('renders', async () => {
+    // This test is flaky
+    it.skip('renders', async () => {
       const page = await newNonrandomE2EPage({ html: htmlExample2 });
       const element = await page.find('gux-tabs-advanced');
       await a11yCheck(page, axeExclusions);

@@ -106,7 +106,8 @@ function findLocaleInDom(element: HTMLElement): string {
     return closestElement.lang.toLowerCase();
   } else {
     console.error(
-      `gux: No language specified on page, defaulting to '${DEFAULT_LOCALE}'`
+      `gux: No language specified on page, defaulting to '${DEFAULT_LOCALE}'`,
+      element.tagName
     );
     return DEFAULT_LOCALE;
   }

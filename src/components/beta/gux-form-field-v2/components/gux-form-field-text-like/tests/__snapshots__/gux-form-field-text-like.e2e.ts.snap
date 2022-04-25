@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-text-like-beta #render clearable should render component as expected (1) 1`] = `"<gux-form-field-text-like-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render clearable should render component as expected (1) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render clearable should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -23,7 +23,7 @@ exports[`gux-form-field-text-like-beta #render clearable should render component
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render clearable should render component as expected (2) 1`] = `"<gux-form-field-text-like-beta clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render clearable should render component as expected (2) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render clearable should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -47,7 +47,7 @@ exports[`gux-form-field-text-like-beta #render clearable should render component
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render clearable should render component as expected (3) 1`] = `"<gux-form-field-text-like-beta clearable=\\"true\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render clearable should render component as expected (3) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" clearable=\\"true\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render clearable should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -71,7 +71,7 @@ exports[`gux-form-field-text-like-beta #render clearable should render component
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render clearable should render component as expected (4) 1`] = `"<gux-form-field-text-like-beta clearable=\\"false\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render clearable should render component as expected (4) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" clearable=\\"false\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render clearable should render component as expected (4) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -94,7 +94,7 @@ exports[`gux-form-field-text-like-beta #render clearable should render component
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render clearable should render component as expected (5) 1`] = `"<gux-form-field-text-like-beta clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render clearable should render component as expected (5) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render clearable should render component as expected (5) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -117,7 +117,7 @@ exports[`gux-form-field-text-like-beta #render clearable should render component
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render input type attribute should render component as expected (1) 1`] = `"<gux-form-field-text-like-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"email\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render input type attribute should render component as expected (1) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"email\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render input type attribute should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -140,7 +140,7 @@ exports[`gux-form-field-text-like-beta #render input type attribute should rende
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render input type attribute should render component as expected (2) 1`] = `"<gux-form-field-text-like-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"password\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render input type attribute should render component as expected (2) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"password\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render input type attribute should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -163,7 +163,7 @@ exports[`gux-form-field-text-like-beta #render input type attribute should rende
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render input type attribute should render component as expected (3) 1`] = `"<gux-form-field-text-like-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render input type attribute should render component as expected (3) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render input type attribute should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -186,7 +186,7 @@ exports[`gux-form-field-text-like-beta #render input type attribute should rende
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render label-position should render component as expected (1) 1`] = `"<gux-form-field-text-like-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render label-position should render component as expected (1) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -209,7 +209,7 @@ exports[`gux-form-field-text-like-beta #render label-position should render comp
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render label-position should render component as expected (2) 1`] = `"<gux-form-field-text-like-beta label-position=\\"above\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render label-position should render component as expected (2) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" label-position=\\"above\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
@@ -232,7 +232,7 @@ exports[`gux-form-field-text-like-beta #render label-position should render comp
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render label-position should render component as expected (3) 1`] = `"<gux-form-field-text-like-beta label-position=\\"beside\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render label-position should render component as expected (3) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" label-position=\\"beside\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -255,7 +255,7 @@ exports[`gux-form-field-text-like-beta #render label-position should render comp
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta #render label-position should render component as expected (4) 1`] = `"<gux-form-field-text-like-beta label-position=\\"screenreader\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta #render label-position should render component as expected (4) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" label-position=\\"screenreader\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">
@@ -278,7 +278,7 @@ exports[`gux-form-field-text-like-beta #render label-position should render comp
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta input attributes should render component as expected (1) 1`] = `"<gux-form-field-text-like-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta input attributes should render component as expected (1) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -301,7 +301,7 @@ exports[`gux-form-field-text-like-beta input attributes should render component 
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta input attributes should render component as expected (2) 1`] = `"<gux-form-field-text-like-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta input attributes should render component as expected (2) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -324,7 +324,7 @@ exports[`gux-form-field-text-like-beta input attributes should render component 
 </div>
 `;
 
-exports[`gux-form-field-text-like-beta input attributes should render component as expected (3) 1`] = `"<gux-form-field-text-like-beta hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" required=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
+exports[`gux-form-field-text-like-beta input attributes should render component as expected (3) 1`] = `"<gux-form-field-text-like-beta lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" required=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like-beta>"`;
 
 exports[`gux-form-field-text-like-beta input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">

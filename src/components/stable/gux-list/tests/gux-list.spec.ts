@@ -1,23 +1,26 @@
 import { newSpecPage } from '@stencil/core/testing';
-import MutationObserver from 'mutation-observer';
 import { GuxList } from '../gux-list';
+import { GuxListDivider } from '../gux-list-divider/gux-list-divider';
+import { GuxListItem } from '../gux-list-item/gux-list-item';
+
+const components = [GuxList, GuxListDivider, GuxListItem];
+const language = 'en';
 
 describe('gux-list', () => {
-  let component: GuxList;
+  describe('#render', () => {
+    it('should render component as expected', async () => {
+      const html = `
+        <gux-list id="list">
+          <gux-list-item>Test1</gux-list-item>
+          <gux-list-divider></gux-list-divider>
+          <gux-list-item>Test2</gux-list-item>
+          <gux-list-item>Test3</gux-list-item>
+          <gux-list-item>Test4</gux-list-item>
+        </gux-list>
+      `;
+      const page = await newSpecPage({ components, html, language });
 
-  beforeEach(async () => {
-    global.MutationObserver = MutationObserver;
-
-    const page = await newSpecPage({
-      components: [GuxList],
-      html: `<gux-list></gux-list>`,
-      language: 'en'
+      expect(page.root).toMatchSnapshot();
     });
-
-    component = page.rootInstance;
-  });
-
-  it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxList);
   });
 });
