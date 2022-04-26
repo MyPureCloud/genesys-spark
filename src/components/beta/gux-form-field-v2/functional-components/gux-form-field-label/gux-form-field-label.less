@@ -1,5 +1,6 @@
 @import (reference) '../../../../../style/color-palette.less';
 @import (reference) '../../../../../style/typography.less';
+@import (reference) '../../../../../style/spacing.less';
 
 /* stylelint-disable-next-line selector-class-pattern */
 .GuxFormFieldLabelStyle {
@@ -17,7 +18,11 @@
       top: 7px;
       width: fit-content;
       min-width: 45px;
-      margin-right: 8px;
+      margin-right: @spacing-xs;
+    }
+
+    &.gux-above {
+      margin-bottom: @spacing-xs;
     }
 
     &.gux-screenreader {
