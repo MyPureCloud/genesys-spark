@@ -98,6 +98,52 @@ describe('gux-tag-beta', () => {
     });
   });
 
+  describe('tooltip', () => {
+    describe('hover', () => {
+      it('should show the tooltip on hover for tags with overflow text', async () => {
+        const html = `<gux-tag-beta style="width:100px" lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>Long long long long long long long</gux-tag-beta>`;
+        const page = await newSparkE2EPage({ html });
+        const element = await page.find('gux-tag-beta');
+        const deleteButton = await element.find(
+          'pierce/.gux-tag-remove-button'
+        );
+        const titleElement = await element.find('pierce/gux-tooltip-title');
+        const tooltipElement = await titleElement.find('gux-tooltip');
+        expect(tooltipElement).not.toBeNull();
+        expect(tooltipElement).toHaveAttribute('hidden');
+        expect(tooltipElement.textContent).toEqual(
+          'Long long long long long long long'
+        );
+        await titleElement.hover();
+        await page.waitForChanges();
+        expect(tooltipElement).not.toHaveAttribute('hidden');
+        await deleteButton.hover();
+        await page.waitForChanges();
+        expect(tooltipElement).toHaveAttribute('hidden');
+      });
+
+      it('should show the tooltip on hover for tags with icon only', async () => {
+        const html = `<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" screenreader-text="test tag"></gux-icon></gux-tag-beta>`;
+        const page = await newSparkE2EPage({ html });
+        const element = await page.find('gux-tag-beta');
+        const deleteButton = await element.find(
+          'pierce/.gux-tag-remove-button'
+        );
+        const titleElement = await element.find('pierce/gux-tooltip-title');
+        const tooltipElement = await titleElement.find('gux-tooltip');
+        expect(tooltipElement).not.toBeNull();
+        expect(tooltipElement).toHaveAttribute('hidden');
+        expect(tooltipElement.textContent).toEqual('test tag');
+        await titleElement.hover();
+        await page.waitForChanges();
+        expect(tooltipElement).not.toHaveAttribute('hidden');
+        await deleteButton.hover();
+        await page.waitForChanges();
+        expect(tooltipElement).toHaveAttribute('hidden');
+      });
+    });
+  });
+
   describe('a11y', () => {
     [
       'default',
@@ -126,6 +172,18 @@ describe('gux-tag-beta', () => {
 
         await a11yCheck(page);
       });
+    });
+    it('should be accessible when the text overflows the tag', async () => {
+      const html = `<gux-tag-beta style="width:100px" lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>Long long long long long long long</gux-tag-beta>`;
+      const page = await newSparkE2EPage({ html });
+
+      await a11yCheck(page);
+    });
+    it('should be accessible when there is an icon only tag', async () => {
+      const html = `<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" screenreader-text="test tag"></gux-icon></gux-tag-beta>`;
+      const page = await newSparkE2EPage({ html });
+
+      await a11yCheck(page);
     });
   });
 });
