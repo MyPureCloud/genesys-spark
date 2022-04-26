@@ -56,11 +56,14 @@ gux-tab-advanced {
       width: 160px;
 
       &.gux-disabled {
-        opacity: 0.5;
+        .gux-tab-button {
+          color: fade(@gux-black-10, 50%);
+        }
 
         .gux-tab-options-button {
-          color: @gux-black-50;
+          color: fade(@gux-black-50, 50%);
           pointer-events: none;
+          cursor: default;
         }
       }
     }

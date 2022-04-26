@@ -7,12 +7,12 @@ const language = 'en';
 describe('gux-tag-beta', () => {
   describe('#render', () => {
     [
-      '<gux-tag-beta><span>default</span></gux-tag-beta>',
-      '<gux-tag-beta color="default"><span>default (explicit)</span></gux-tag-beta>',
+      '<gux-tag-beta>default</gux-tag-beta>',
+      '<gux-tag-beta color="default">default (explicit)</gux-tag-beta>',
       '<gux-tag-beta color="navy">navy</gux-tag-beta>',
       '<gux-tag-beta color="navy"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>',
-      '<gux-tag-beta color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy</span></gux-tag-beta>',
-      '<gux-tag-beta color="navy" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy</span></gux-tag-beta>'
+      '<gux-tag-beta color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>',
+      '<gux-tag-beta color="navy" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
@@ -28,7 +28,7 @@ describe('gux-tag-beta', () => {
         const html = `
           <gux-tag-beta color="navy" value="3">
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
-            <span>navy</span>
+            navy
           </gux-tag-beta>
         `;
         const page = await newSpecPage({ components, html, language });
@@ -43,7 +43,7 @@ describe('gux-tag-beta', () => {
         const html = `
           <gux-tag-beta color="navy" value="3" removable>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
-            <span>navy</span>
+            navy
           </gux-tag-beta>
         `;
         const page = await newSpecPage({ components, html, language });
@@ -66,7 +66,7 @@ describe('gux-tag-beta', () => {
         const html = `
           <gux-tag-beta color="navy" value="3" removable disabled>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
-            <span>navy</span>
+            navy
           </gux-tag-beta>
         `;
         const page = await newSpecPage({ components, html, language });
@@ -89,7 +89,7 @@ describe('gux-tag-beta', () => {
         const html = `
           <gux-tag-beta color="navy" value="3" removable>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
-            <span>navy</span>
+            navy
           </gux-tag-beta>
         `;
         const page = await newSpecPage({ components, html, language });
@@ -110,7 +110,7 @@ describe('gux-tag-beta', () => {
         const html = `
           <gux-tag-beta color="navy" value="3" removable>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
-            <span>navy</span>
+            navy
           </gux-tag-beta>`;
         const page = await newSpecPage({ components, html, language });
         const element = page.root as HTMLElement;
@@ -132,7 +132,7 @@ describe('gux-tag-beta', () => {
         const html = `
           <gux-tag-beta color="navy" value="3">
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
-            <span>navy</span>
+            navy
           </gux-tag-beta>
         `;
         const page = await newSpecPage({ components, html, language });
@@ -151,7 +151,7 @@ describe('gux-tag-beta', () => {
         const html = `
           <gux-tag-beta color="navy" value="3">
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
-            <span>navy</span>
+            navy
           </gux-tag-beta>
         `;
         const page = await newSpecPage({ components, html, language });

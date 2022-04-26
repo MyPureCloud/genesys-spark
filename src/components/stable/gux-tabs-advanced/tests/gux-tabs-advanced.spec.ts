@@ -16,7 +16,7 @@ const html = `
   <gux-tabs-advanced lang="en" id="interactive">
     <gux-tab-advanced-list slot="tab-list" show-new-tab-button="true">
       <gux-tab-advanced tab-id="1-1" tab-icon-name="lock">
-        <span>Hello World</span>
+        Hello World
         <span slot="dropdown-options">
           <gux-tab-advanced-option
             option-id="1"
@@ -50,10 +50,10 @@ const html = `
       </gux-tab-advanced>
       <gux-tab-advanced tab-id="1-2">
         <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
-        <span>Hello World 2 long long long long long</span>
+        Hello World 2 long long long long long
       </gux-tab-advanced>
       <gux-tab-advanced gux-disabled tab-id="1-3">
-      <span>Hello World 3</span>
+      Hello World 3
     </gux-tab-advanced>
     </gux-tab-advanced-list>
     <gux-tab-advanced-panel tab-id="1-1">

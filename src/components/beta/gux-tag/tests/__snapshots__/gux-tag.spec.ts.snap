@@ -14,9 +14,7 @@ exports[`gux-tag-beta #render should render component as expected (1) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  <span>
-    default
-  </span>
+  default
 </gux-tag-beta>
 `;
 
@@ -34,9 +32,7 @@ exports[`gux-tag-beta #render should render component as expected (2) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  <span>
-    default (explicit)
-  </span>
+  default (explicit)
 </gux-tag-beta>
 `;
 
@@ -95,9 +91,7 @@ exports[`gux-tag-beta #render should render component as expected (5) 1`] = `
     </div>
   </mock:shadow-root>
   <gux-icon decorative="true" icon-name="bolt"></gux-icon>
-  <span>
-    navy
-  </span>
+  navy
 </gux-tag-beta>
 `;
 
@@ -119,8 +113,6 @@ exports[`gux-tag-beta #render should render component as expected (6) 1`] = `
     </div>
   </mock:shadow-root>
   <gux-icon decorative="true" icon-name="bolt"></gux-icon>
-  <span>
-    navy
-  </span>
+  navy
 </gux-tag-beta>
 `;

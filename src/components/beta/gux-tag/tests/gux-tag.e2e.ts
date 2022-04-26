@@ -3,12 +3,12 @@ import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 describe('gux-tag-beta', () => {
   describe('#render', () => {
     [
-      '<gux-tag-beta lang="en"><span>default</span></gux-tag-beta>',
-      '<gux-tag-beta lang="en" color="default"><span>default (explicit)</span></gux-tag-beta>',
-      '<gux-tag-beta lang="en" color="navy"><span>navy</span></gux-tag-beta>',
-      '<gux-tag-beta lang="en" color="navy"><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy</span></gux-tag-beta>',
-      '<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy<span></gux-tag-beta>',
-      '<gux-tag-beta lang="en" color="navy" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy</span></gux-tag-beta>'
+      '<gux-tag-beta lang="en">default</gux-tag-beta>',
+      '<gux-tag-beta lang="en" color="default">default (explicit)</gux-tag-beta>',
+      '<gux-tag-beta lang="en" color="navy">navy</gux-tag-beta>',
+      '<gux-tag-beta lang="en" color="navy"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>',
+      '<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>',
+      '<gux-tag-beta lang="en" color="navy" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
@@ -24,7 +24,7 @@ describe('gux-tag-beta', () => {
   describe('delete', () => {
     describe('click', () => {
       it('should not have a delete button if tag is not removable', async () => {
-        const html = `<gux-tag-beta lang="en" color="navy" value="3"><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy</span></gux-tag-beta>`;
+        const html = `<gux-tag-beta lang="en" color="navy" value="3"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag-beta');
         const deleteButton = await element.find(
@@ -35,7 +35,7 @@ describe('gux-tag-beta', () => {
       });
 
       it('should emit guxdelete if tag is removable and not disabled', async () => {
-        const html = `<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy</span></gux-tag-beta>`;
+        const html = `<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag-beta');
         const deleteButton = await element.find(
@@ -50,7 +50,7 @@ describe('gux-tag-beta', () => {
       });
 
       it('should not emit guxdelete if tag is removable and disabled', async () => {
-        const html = `<gux-tag-beta lang="en" color="navy" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy</span></gux-tag-beta>`;
+        const html = `<gux-tag-beta lang="en" color="navy" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag-beta');
         const deleteButton = await element.find(
@@ -67,7 +67,7 @@ describe('gux-tag-beta', () => {
 
     describe('keypress', () => {
       it('should emit guxdelete if tag is focused and removable and "Delete" is pressed', async () => {
-        const html = `<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy</span></gux-tag-beta>`;
+        const html = `<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag-beta');
         const deleteButton = await element.find(
@@ -82,7 +82,7 @@ describe('gux-tag-beta', () => {
       });
 
       it('should emit guxdelete if tag is focused and removable and "Backspace" is pressed', async () => {
-        const html = `<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>navy</span></gux-tag-beta>`;
+        const html = `<gux-tag-beta lang="en" color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag-beta');
         const deleteButton = await element.find(
@@ -114,14 +114,14 @@ describe('gux-tag-beta', () => {
       'alert-yellow-green'
     ].forEach(color => {
       it(`should be accessible when color is "${color}"`, async () => {
-        const html = `<gux-tag-beta lang="en" color="${color}" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>tag</span></gux-tag-beta>`;
+        const html = `<gux-tag-beta lang="en" color="${color}" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
 
         await a11yCheck(page);
       });
 
       it(`should be accessible when disabled and color is "${color}"`, async () => {
-        const html = `<gux-tag-beta lang="en" color="${color}" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon><span>tag</span></gux-tag-beta>`;
+        const html = `<gux-tag-beta lang="en" color="${color}" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag-beta>`;
         const page = await newSparkE2EPage({ html });
 
         await a11yCheck(page);

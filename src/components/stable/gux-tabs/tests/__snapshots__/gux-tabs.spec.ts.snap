@@ -20,9 +20,7 @@ exports[`gux-tabs #render should render as expected 1`] = `
           <button aria-controls="gux-2-1-panel" aria-disabled="false" aria-selected="false" class="gux-tab" id="gux-2-1-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 1
-                </span>
+                Tab Header 1
               </span>
             </gux-tooltip-title>
           </button>
@@ -32,9 +30,7 @@ exports[`gux-tabs #render should render as expected 1`] = `
           <button aria-controls="gux-2-2-panel" aria-disabled="false" aria-selected="false" class="gux-tab" id="gux-2-2-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 2
-                </span>
+                Tab Header 2
               </span>
             </gux-tooltip-title>
           </button>
@@ -44,9 +40,7 @@ exports[`gux-tabs #render should render as expected 1`] = `
           <button aria-controls="gux-2-3-panel" aria-disabled="false" aria-selected="false" class="gux-tab" id="gux-2-3-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 3
-                </span>
+                Tab Header 3
               </span>
             </gux-tooltip-title>
           </button>
@@ -56,9 +50,7 @@ exports[`gux-tabs #render should render as expected 1`] = `
           <button aria-controls="gux-2-4-panel" aria-disabled="true" aria-selected="false" class="gux-disabled gux-tab" id="gux-2-4-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 4
-                </span>
+                Tab Header 4
               </span>
             </gux-tooltip-title>
           </button>
@@ -68,9 +60,7 @@ exports[`gux-tabs #render should render as expected 1`] = `
           <button aria-controls="gux-2-5-panel" aria-disabled="true" aria-selected="false" class="gux-disabled gux-tab" id="gux-2-5-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 5
-                </span>
+                Tab Header 5
               </span>
             </gux-tooltip-title>
           </button>
@@ -132,9 +122,7 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
           <button aria-controls="gux-2-1-panel" aria-disabled="false" aria-selected="false" class="gux-tab" id="gux-2-1-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 1
-                </span>
+                Tab Header 1
               </span>
             </gux-tooltip-title>
           </button>
@@ -144,9 +132,7 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
           <button aria-controls="gux-2-2-panel" aria-disabled="false" aria-selected="false" class="gux-tab" id="gux-2-2-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 2
-                </span>
+                Tab Header 2
               </span>
             </gux-tooltip-title>
           </button>
@@ -156,9 +142,7 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
           <button aria-controls="gux-2-3-panel" aria-disabled="false" aria-selected="false" class="gux-tab" id="gux-2-3-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 3
-                </span>
+                Tab Header 3
               </span>
             </gux-tooltip-title>
           </button>
@@ -168,9 +152,7 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
           <button aria-controls="gux-2-4-panel" aria-disabled="true" aria-selected="false" class="gux-disabled gux-tab" id="gux-2-4-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 4
-                </span>
+                Tab Header 4
               </span>
             </gux-tooltip-title>
           </button>
@@ -180,9 +162,7 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
           <button aria-controls="gux-2-5-panel" aria-disabled="true" aria-selected="false" class="gux-disabled gux-tab" id="gux-2-5-tab" role="tab" tabindex="-1" type="button">
             <gux-tooltip-title>
               <span>
-                <span>
-                  Tab Header 5
-                </span>
+                Tab Header 5
               </span>
             </gux-tooltip-title>
           </button>
