@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.62](https://inindca///compare/v3.0.0-alpha.61...v3.0.0-alpha.62) (2022-04-26)
+
+
+### Bug Fixes
+
+* **calendar:** addition of getYearLabel() to fix wrong year displaying ([fb842c7](https://inindca///commit/fb842c794169c578ac1d15732bf9f0d95bc4072f))
+* **form-field-v2:** addition of gux-above class to label functional component styling ([15e93d8](https://inindca///commit/15e93d88a89cc85b173d439ca4e1f189e031ccb9))
+
 ## [3.0.0-alpha.61](https://inindca///compare/v3.0.0-alpha.60...v3.0.0-alpha.61) (2022-04-21)
 
 
