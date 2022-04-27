@@ -74,6 +74,8 @@ gux-tab {
     max-width: 160px;
     height: 40px;
     padding: 0 @spacing-medium;
+    font-size: 14px;
+    color: @gux-black-50;
     cursor: pointer;
     background-color: #fff;
     border: none;
@@ -82,8 +84,8 @@ gux-tab {
       cursor: default;
 
       gux-tooltip-title {
+        color: fade(@gux-black-50, 50%);
         cursor: default;
-        opacity: 0.5;
       }
     }
 
@@ -96,8 +98,6 @@ gux-tab {
 
     gux-tooltip-title {
       max-width: 160px;
-      font-size: 14px;
-      color: @gux-black-50;
       white-space: nowrap;
       cursor: pointer;
     }

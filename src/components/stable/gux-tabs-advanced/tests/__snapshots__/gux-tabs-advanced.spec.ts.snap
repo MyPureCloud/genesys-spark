@@ -56,8 +56,8 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
           <div class="gux-show gux-tab">
             <button aria-controls="gux-1-2-panel" aria-disabled="false" aria-selected="false" class="gux-tab-button" id="gux-1-2-tab" role="tab" tabindex="-1" type="button">
               <gux-tooltip-title>
-                <gux-icon decorative="true" icon-name="user-directory"></gux-icon>
                 <span>
+                  <gux-icon decorative="true" icon-name="user-directory"></gux-icon>
                   Hello World 2 long long long long long
                 </span>
               </gux-tooltip-title>
