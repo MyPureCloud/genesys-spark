@@ -1,0 +1,63 @@
+<h1>gux-link-beta</h1>
+
+<h2>Enabled</h2>
+<gux-link-beta href="#" link-text="Enabled Link"></gux-link-beta>
+
+<h2>Disabled</h2>
+<gux-link-beta disabled href="#" link-text="Disabled Link"></gux-link-beta>
+
+<h2>Target</h2>
+<gux-link-beta
+  href="#"
+  link-text="Open in current window"
+  target="_self"
+></gux-link-beta>
+<gux-link-beta
+  href="#"
+  link-text="Open in new tab"
+  target="_blank"
+></gux-link-beta>
+
+<h2>External Link (Icon)</h2>
+<gux-link-beta
+  href="#"
+  link-text="External Link"
+  is-external-link="true"
+  target="_blank"
+></gux-link-beta>
+
+<h2>In Table Cell Link</h2>
+
+<gux-table-beta>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th data-column-name="first-name">First and Last Name</th>
+        <th data-column-name="last-name">Biography</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>
+          <gux-link-beta
+            href="#"
+            link-text="John Doe Biography"
+            table-cell-link="true"
+          ></gux-link-beta>
+        </td>
+      </tr>
+      <tr>
+        <td>Jane Doe</td>
+        <td>
+          <gux-link-beta
+            disabled
+            href="#"
+            link-text="Jane Doe Biography"
+            table-cell-link="true"
+          ></gux-link-beta>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table-beta>

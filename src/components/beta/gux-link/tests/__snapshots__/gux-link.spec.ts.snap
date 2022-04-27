@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-link-beta #render should render component as expected (1) 1`] = `
+<gux-link-beta href="#" link-text="Enabled Link">
+  <mock:shadow-root>
+    <div class="gux-link-container">
+      <a class="gux-link" href="#" target="_self">
+        Enabled Link
+      </a>
+    </div>
+  </mock:shadow-root>
+</gux-link-beta>
+`;
+
+exports[`gux-link-beta #render should render component as expected (2) 1`] = `
+<gux-link-beta disabled="" href="#" link-text="Disabled Link">
+  <mock:shadow-root>
+    <div class="gux-disabled gux-link-container">
+      <a class="gux-disabled gux-link" href="#" target="_self">
+        Disabled Link
+      </a>
+    </div>
+  </mock:shadow-root>
+</gux-link-beta>
+`;
+
+exports[`gux-link-beta #render should render component as expected (3) 1`] = `
+<gux-link-beta href="#" link-text="Open in new tab" target="_blank">
+  <mock:shadow-root>
+    <div class="gux-link-container">
+      <a class="gux-link" href="#" target="_blank">
+        Open in new tab
+      </a>
+    </div>
+  </mock:shadow-root>
+</gux-link-beta>
+`;
+
+exports[`gux-link-beta #render should render component as expected (4) 1`] = `
+<gux-link-beta href="#" is-external-link="true" link-text="External Link" target="_blank">
+  <mock:shadow-root>
+    <div class="gux-link-container">
+      <span>
+        <gux-icon icon-name="external-link" screenreader-text="External link icon"></gux-icon>
+      </span>
+      <a class="gux-link" href="#" target="_blank">
+        External Link
+      </a>
+    </div>
+  </mock:shadow-root>
+</gux-link-beta>
+`;
+
+exports[`gux-link-beta #render should render component as expected (5) 1`] = `
+<gux-link-beta href="#" link-text="Table Cell Link" table-cell-link="true">
+  <mock:shadow-root>
+    <div class="gux-link-container">
+      <a class="gux-link gux-link-table" href="#" target="_self">
+        Table Cell Link
+      </a>
+    </div>
+  </mock:shadow-root>
+</gux-link-beta>
+`;
