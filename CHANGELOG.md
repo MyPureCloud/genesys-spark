@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.63](https://inindca///compare/v3.0.0-alpha.62...v3.0.0-alpha.63) (2022-04-27)
+
+
+### Features
+
+* **gux-tooltip-title:** update tooltip-title for use in tag ([28bb4f7](https://inindca///commit/28bb4f7af5bf63479badbe19b6c09d62f08e5a48))
+* **icon:** added new icons ([8bbd6a6](https://inindca///commit/8bbd6a6f2a2bfb5e48f6c492d25a4f62d3a2110d))
+
+
+### Bug Fixes
+
+* **table:** updating specific pixel sizes to set spacing variables ([c63766b](https://inindca///commit/c63766bbde2123ae7f56b5f4b48a04f8e7316309))
+
 ## [3.0.0-alpha.62](https://inindca///compare/v3.0.0-alpha.61...v3.0.0-alpha.62) (2022-04-26)
 
 
