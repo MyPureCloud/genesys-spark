@@ -5,6 +5,7 @@ const icons = [
   {
     sectionName: 'User',
     iconNames: [
+      'people',
       'user',
       'user-add',
       'user-circle',
@@ -120,10 +121,15 @@ const icons = [
   {
     sectionName: 'Roster',
     iconNames: [
+      'chat-notification-score',
+      'email-notification-score',
+      'phone-notification-score',
       'roster-chat',
       'roster-chat-disable',
       'roster-email',
       'roster-email-disable',
+      'roster-instagram',
+      'roster-instagram-disabled',
       'roster-line',
       'roster-line-disable',
       'roster-message',
@@ -221,6 +227,7 @@ const icons = [
       'file-audio',
       'file-image-landscape',
       'file-image-portrait',
+      'file-pdf',
       'file-preview',
       'file-report',
       'file-text',
@@ -275,6 +282,7 @@ const icons = [
     sectionName: 'Miscellaneous',
     iconNames: [
       'add-circle',
+      'ban-outline',
       'bolt',
       'bot',
       'bus',
@@ -426,6 +434,7 @@ const icons = [
       'arrow-solid-left',
       'arrow-solid-right',
       'arrow-solid-up',
+      'backspace',
       'calendar',
       'calendar-add',
       'checkbox',
