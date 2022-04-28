@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-anchor-beta #render should render component as expected (1) 1`] = `
+<gux-anchor-beta>
+  <mock:shadow-root>
+    <gux-icon icon-name="external-link" screenreader-text="External link icon"></gux-icon>
+    <slot></slot>
+  </mock:shadow-root>
+  <a href="#">
+    Default Link
+  </a>
+</gux-anchor-beta>
+`;
+
+exports[`gux-anchor-beta #render should render component as expected (2) 1`] = `
+<gux-anchor-beta>
+  <mock:shadow-root>
+    <gux-icon icon-name="external-link" screenreader-text="External link icon"></gux-icon>
+    <slot></slot>
+  </mock:shadow-root>
+  <a href="#" target="_blank">
+    Open in new tab
+  </a>
+</gux-anchor-beta>
+`;
+
+exports[`gux-anchor-beta #render should render component as expected (3) 1`] = `
+<gux-anchor-beta>
+  <mock:shadow-root>
+    <gux-icon icon-name="external-link" screenreader-text="External link icon"></gux-icon>
+    <slot></slot>
+  </mock:shadow-root>
+  <a href="https://spark.genesys.com/" target="_blank">
+    External Link
+  </a>
+</gux-anchor-beta>
+`;
+
+exports[`gux-anchor-beta #render should render component as expected (4) 1`] = `
+<gux-anchor-beta table="">
+  <mock:shadow-root>
+    <gux-icon icon-name="external-link" screenreader-text="External link icon"></gux-icon>
+    <slot></slot>
+  </mock:shadow-root>
+  <a href="#">
+    Tabel Cell Link
+  </a>
+</gux-anchor-beta>
+`;

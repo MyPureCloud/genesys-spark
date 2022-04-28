@@ -22,6 +22,7 @@
  - [gux-accordion-section](../gux-accordion/gux-accordion-section)
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
+ - [gux-anchor-beta](../../beta/gux-anchor)
  - [gux-breadcrumb-item](../gux-breadcrumbs/breadcrumb-item)
  - [gux-button-multi](../../beta/gux-button-multi)
  - [gux-calendar](../gux-calendar)
@@ -47,7 +48,6 @@
  - [gux-input-search](../gux-form-field/components/gux-input-search)
  - [gux-input-select](../gux-form-field/components/gux-input-select)
  - [gux-input-text-like](../gux-form-field/components/gux-input-text-like)
- - [gux-link-beta](../../beta/gux-link)
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-cursor](../gux-pagination-cursor)
  - [gux-rating](../gux-rating)
@@ -71,6 +71,7 @@ graph TD;
   gux-accordion-section --> gux-icon
   gux-action-button --> gux-icon
   gux-advanced-dropdown --> gux-icon
+  gux-anchor-beta --> gux-icon
   gux-breadcrumb-item --> gux-icon
   gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
@@ -96,7 +97,6 @@ graph TD;
   gux-input-search --> gux-icon
   gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
-  gux-link-beta --> gux-icon
   gux-pagination-buttons --> gux-icon
   gux-pagination-cursor --> gux-icon
   gux-rating --> gux-icon
