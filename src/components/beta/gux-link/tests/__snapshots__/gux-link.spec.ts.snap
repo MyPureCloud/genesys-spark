@@ -12,7 +12,7 @@ exports[`gux-link-beta #render should render component as expected (1) 1`] = `
 </gux-link-beta>
 `;
 
-exports[`gux-link-beta #render should render component as expected (3) 1`] = `
+exports[`gux-link-beta #render should render component as expected (2) 1`] = `
 <gux-link-beta href="#" link-text="Open in new tab" target="_blank">
   <mock:shadow-root>
     <div class="gux-link-container">
@@ -24,7 +24,7 @@ exports[`gux-link-beta #render should render component as expected (3) 1`] = `
 </gux-link-beta>
 `;
 
-exports[`gux-link-beta #render should render component as expected (4) 1`] = `
+exports[`gux-link-beta #render should render component as expected (3) 1`] = `
 <gux-link-beta href="#" is-external-link="true" link-text="External Link" target="_blank">
   <mock:shadow-root>
     <div class="gux-link-container">
@@ -39,7 +39,7 @@ exports[`gux-link-beta #render should render component as expected (4) 1`] = `
 </gux-link-beta>
 `;
 
-exports[`gux-link-beta #render should render component as expected (5) 1`] = `
+exports[`gux-link-beta #render should render component as expected (4) 1`] = `
 <gux-link-beta href="#" link-text="Table Cell Link" table-cell-link="true">
   <mock:shadow-root>
     <div class="gux-link-container">
