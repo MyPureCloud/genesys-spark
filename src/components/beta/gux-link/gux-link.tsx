@@ -45,12 +45,6 @@ export class GuxLink {
   @Prop()
   tableCellLink: boolean = false;
 
-  /**
-   * Indicate if the link is disabled or not
-   */
-  @Prop()
-  disabled: boolean = false;
-
   async componentWillLoad() {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
@@ -71,12 +65,7 @@ export class GuxLink {
 
   render(): JSX.Element {
     return (
-      <div
-        class={{
-          'gux-link-container': true,
-          'gux-disabled': this.disabled
-        }}
-      >
+      <div class="gux-link-container">
         {this.renderExternalLinkIcon()}
         <a
           class={{

@@ -12,18 +12,6 @@ exports[`gux-link-beta #render should render component as expected (1) 1`] = `
 </gux-link-beta>
 `;
 
-exports[`gux-link-beta #render should render component as expected (2) 1`] = `
-<gux-link-beta disabled="" href="#" link-text="Disabled Link">
-  <mock:shadow-root>
-    <div class="gux-disabled gux-link-container">
-      <a class="gux-link" href="#" target="_self">
-        Disabled Link
-      </a>
-    </div>
-  </mock:shadow-root>
-</gux-link-beta>
-`;
-
 exports[`gux-link-beta #render should render component as expected (3) 1`] = `
 <gux-link-beta href="#" link-text="Open in new tab" target="_blank">
   <mock:shadow-root>

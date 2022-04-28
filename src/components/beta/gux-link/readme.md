@@ -9,7 +9,6 @@
 
 | Property         | Attribute          | Description                                          | Type                                         | Default     |
 | ---------------- | ------------------ | ---------------------------------------------------- | -------------------------------------------- | ----------- |
-| `disabled`       | `disabled`         | Indicate if the link is disabled or not              | `boolean`                                    | `false`     |
 | `href`           | `href`             | The href                                             | `string`                                     | `undefined` |
 | `isExternalLink` | `is-external-link` | Show external icon if external link                  | `boolean`                                    | `false`     |
 | `linkText`       | `link-text`        | The text for the link                                | `string`                                     | `undefined` |
