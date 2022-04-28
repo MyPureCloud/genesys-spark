@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.64](https://inindca///compare/v3.0.0-alpha.63...v3.0.0-alpha.64) (2022-04-28)
+
+
+### Features
+
+* **gux-button-slot-beta:** added ghost button styling ([76613ed](https://inindca///commit/76613edeb76f07da99b7b21216003251d2826246))
+* **gux-button:** add ghost button ([e9748f9](https://inindca///commit/e9748f9b342eba7141bc28129e269e48239653c5))
+
 ## [3.0.0-alpha.63](https://inindca///compare/v3.0.0-alpha.62...v3.0.0-alpha.63) (2022-04-27)
 
 
