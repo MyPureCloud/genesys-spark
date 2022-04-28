@@ -47,7 +47,7 @@ export class GuxAccordion {
 
   private closeSection(section: HTMLGuxAccordionSectionElement): void {
     if (!section.disabled) {
-      section.setAttribute('open', 'false');
+      section.open = false;
     }
   }
 
