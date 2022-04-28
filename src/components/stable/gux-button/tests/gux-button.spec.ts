@@ -24,6 +24,10 @@ describe('gux-button', () => {
         html: '<gux-button accent="tertiary">Button</gux-button>'
       },
       {
+        description: 'should render ghost button',
+        html: '<gux-button accent="ghost">Button</gux-button>'
+      },
+      {
         description: 'should render invalid accent button',
         html: '<gux-button accent="invalid">Invalid accent</gux-button>'
       },
@@ -42,6 +46,10 @@ describe('gux-button', () => {
       {
         description: 'should render disabled tertiary button',
         html: '<gux-button accent="tertiary" disabled>Button</gux-button>'
+      },
+      {
+        description: 'should render disabled ghost button',
+        html: '<gux-button accent="ghost" disabled>Button</gux-button>'
       },
       {
         description: 'should render disabled invalid accent button',

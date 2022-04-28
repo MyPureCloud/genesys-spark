@@ -86,6 +86,26 @@ button {
     }
   }
 
+  &.gux-ghost {
+    color: @gux-blue-60;
+    background: none;
+    border: none;
+
+    &[disabled] {
+      color: fade(@gux-blue-60, 50%);
+    }
+
+    &:hover:enabled {
+      color: @gux-blue-50;
+      background: none;
+    }
+
+    &:active:enabled {
+      color: @gux-blue-40;
+      background: none;
+    }
+  }
+
   &.gux-primary {
     color: @gux-grey-100;
     background-color: @gux-blue-60;

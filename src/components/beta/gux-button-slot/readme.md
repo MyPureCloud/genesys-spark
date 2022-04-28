@@ -4,9 +4,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                     | Default       |
-| -------- | --------- | ----------- | ---------------------------------------- | ------------- |
-| `accent` | `accent`  |             | `"primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| Property | Attribute | Description | Type                                                | Default       |
+| -------- | --------- | ----------- | --------------------------------------------------- | ------------- |
+| `accent` | `accent`  |             | `"ghost" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
 
 
 ## Slots
