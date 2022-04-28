@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.54.0](https://inindca///compare/v2.53.2...v2.54.0) (2022-04-28)
+
+
+### Features
+
+* **icon:** added new icons ([171e6e1](https://inindca///commit/171e6e13dde28f859b07d88b61ca384a0cd2d2ea))
+
 ### [2.53.2](https://inindca///compare/v2.53.1...v2.53.2) (2022-04-16)
 
 
