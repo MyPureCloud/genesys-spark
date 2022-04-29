@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.65](https://inindca///compare/v3.0.0-alpha.64...v3.0.0-alpha.65) (2022-04-29)
+
+
+### Features
+
+* **badge:** added new badge component ([1dcb067](https://inindca///commit/1dcb067f9fa0d6947f371e7770d2dbe91fdc6aaf))
+
 ## [3.0.0-alpha.64](https://inindca///compare/v3.0.0-alpha.63...v3.0.0-alpha.64) (2022-04-28)
 
 
