@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run i18n && npm run stencil && npm run docs && npm run build-wrapper",
+    "build:react": "cd ./common-webcomponents-react && npm run build",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "check-a11y": "node scripts/check-a11y.js",
     "check-readmes": "./scripts/check-readmes.sh",

@@ -22,8 +22,8 @@ export const config: Config = {
     },
     reactOutputTarget({
       componentCorePackage: '@genesys/common-webcomponents',
-      proxiesFile: './common-webcomponents-react/index.ts'
-      // includeDefineCustomElements: true,
+      proxiesFile:
+        './common-webcomponents-react/src/components/stencil-generated/index.ts'
     })
   ],
   plugins: [

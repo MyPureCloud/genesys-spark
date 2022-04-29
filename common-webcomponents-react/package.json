@@ -4,6 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -r ./dist || true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

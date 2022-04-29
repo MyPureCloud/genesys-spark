@@ -1,9 +1,12 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {     "declaration": true,
-    "rootDir": ".",
+    "rootDir": "./src/components/stencil-generated/react-component-lib",
     "jsxFactory": "React.createElement",
-    "outDir": "dist"
+    "outDir": "dist",
+    "paths": {
+      "@genesys/common-webcomponents": ["../dist/types"]
+    }
   },
-  "include": ["index.ts", "react-component-lib"]
+  "include": ["src/components/stencil-generated/react-component-lib"]
 }
