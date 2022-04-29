@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-anchor-beta #render should render component as expected (1) 1`] = `"<gux-anchor-beta hydrated=\\"\\"><a href=\\"#\\">Default Link</a></gux-anchor-beta>"`;
+exports[`gux-anchor-beta #render should render component as expected (1) 1`] = `"<gux-anchor-beta table=\\"false\\" hydrated=\\"\\"><a href=\\"#\\">Default Link</a></gux-anchor-beta>"`;
 
-exports[`gux-anchor-beta #render should render component as expected (2) 1`] = `"<gux-anchor-beta hydrated=\\"\\"><a href=\\"#\\" target=\\"_blank\\">Open in new tab</a></gux-anchor-beta>"`;
+exports[`gux-anchor-beta #render should render component as expected (2) 1`] = `"<gux-anchor-beta table=\\"false\\" hydrated=\\"\\"><a href=\\"#\\" target=\\"_blank\\">Open in new tab</a></gux-anchor-beta>"`;
 
-exports[`gux-anchor-beta #render should render component as expected (3) 1`] = `"<gux-anchor-beta hydrated=\\"\\"><a href=\\"https://spark.genesys.com/\\" target=\\"_blank\\">External Link</a></gux-anchor-beta>"`;
+exports[`gux-anchor-beta #render should render component as expected (3) 1`] = `"<gux-anchor-beta table=\\"false\\" hydrated=\\"\\"><a href=\\"https://spark.genesys.com/\\" target=\\"_blank\\">External Link</a></gux-anchor-beta>"`;
 
-exports[`gux-anchor-beta #render should render component as expected (4) 1`] = `"<gux-anchor-beta table=\\"\\" hydrated=\\"\\"><a href=\\"#\\">Tabel Cell Link</a></gux-anchor-beta>"`;
+exports[`gux-anchor-beta #render should render component as expected (4) 1`] = `"<gux-anchor-beta table=\\"true\\" hydrated=\\"\\"><a href=\\"#\\">Tabel Cell Link</a></gux-anchor-beta>"`;

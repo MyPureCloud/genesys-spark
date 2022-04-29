@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-anchor-beta #render should render component as expected (1) 1`] = `
-<gux-anchor-beta>
+<gux-anchor-beta table="false">
   <mock:shadow-root>
-    <gux-icon icon-name="external-link" screenreader-text="External link icon"></gux-icon>
+    <gux-icon decorative="" icon-name="external-link"></gux-icon>
     <slot></slot>
   </mock:shadow-root>
   <a href="#">
@@ -13,9 +13,9 @@ exports[`gux-anchor-beta #render should render component as expected (1) 1`] = `
 `;
 
 exports[`gux-anchor-beta #render should render component as expected (2) 1`] = `
-<gux-anchor-beta>
+<gux-anchor-beta table="false">
   <mock:shadow-root>
-    <gux-icon icon-name="external-link" screenreader-text="External link icon"></gux-icon>
+    <gux-icon decorative="" icon-name="external-link"></gux-icon>
     <slot></slot>
   </mock:shadow-root>
   <a href="#" target="_blank">
@@ -25,9 +25,9 @@ exports[`gux-anchor-beta #render should render component as expected (2) 1`] = `
 `;
 
 exports[`gux-anchor-beta #render should render component as expected (3) 1`] = `
-<gux-anchor-beta>
+<gux-anchor-beta table="false">
   <mock:shadow-root>
-    <gux-icon icon-name="external-link" screenreader-text="External link icon"></gux-icon>
+    <gux-icon decorative="" icon-name="external-link"></gux-icon>
     <slot></slot>
   </mock:shadow-root>
   <a href="https://spark.genesys.com/" target="_blank">
@@ -37,9 +37,9 @@ exports[`gux-anchor-beta #render should render component as expected (3) 1`] = `
 `;
 
 exports[`gux-anchor-beta #render should render component as expected (4) 1`] = `
-<gux-anchor-beta table="">
+<gux-anchor-beta table="true">
   <mock:shadow-root>
-    <gux-icon icon-name="external-link" screenreader-text="External link icon"></gux-icon>
+    <gux-icon decorative="" icon-name="external-link"></gux-icon>
     <slot></slot>
   </mock:shadow-root>
   <a href="#">

@@ -1,3 +1,6 @@
+@import (reference) './color.less';
+@import (reference) './mixins.less';
+
 /*
  * Typography styles and mixins.
  */
@@ -103,7 +106,22 @@ h6,
 }
 
 .gux-anchor {
+  color: @gux-blue-60;
   text-decoration: underline;
+}
+
+.gux-anchor-hover {
+  color: @gux-blue-50;
+}
+
+.gux-anchor-active {
+  color: @gux-blue-40;
+}
+
+.gux-anchor-focus {
+  .focus-ring();
+
+  border-radius: 2px;
 }
 
 .gux-anchor-table {

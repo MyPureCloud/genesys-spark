@@ -1,44 +1,38 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/spacing.less';
 
 :host {
   display: flex;
   align-items: center;
 }
 
-::slotted(a) {
-  color: @gux-blue-60;
-  .gux-anchor();
-}
-
-::slotted(a:hover) {
-  color: @gux-blue-50;
-}
-
-::slotted(a:active) {
-  color: @gux-blue-40;
-}
-
-::slotted(a:focus) {
-  .focus-ring();
-
-  border-radius: 2px;
-}
-
-:host([table]) {
+:host([table='true']) {
   ::slotted(a) {
     .gux-anchor-table();
   }
+}
 
-  ::slotted(a:hover),
-  ::slotted(a:active),
-  ::slotted(a:focus) {
+:host {
+  ::slotted(a) {
     .gux-anchor();
+  }
+
+  ::slotted(a:hover) {
+    .gux-anchor-hover();
+  }
+
+  ::slotted(a:active) {
+    .gux-anchor-active();
+  }
+
+  ::slotted(a:focus) {
+    .gux-anchor-focus();
   }
 }
 
 gux-icon {
-  padding-right: 8px;
+  padding-right: @spacing-xs;
   color: @gux-blue-60;
 }

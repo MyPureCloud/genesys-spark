@@ -1,4 +1,4 @@
-# gux-link
+# gux-anchor
 
 
 
@@ -10,6 +10,13 @@
 | Property | Attribute | Description                                            | Type      | Default |
 | -------- | --------- | ------------------------------------------------------ | --------- | ------- |
 | `table`  | `table`   | True when anchor component is used within a table cell | `boolean` | `false` |
+
+
+## Slots
+
+| Slot | Description    |
+| ---- | -------------- |
+|      | Anchor element |
 
 
 ## Dependencies
