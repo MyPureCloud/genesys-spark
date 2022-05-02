@@ -412,7 +412,7 @@ export class GuxTabAdvancedList {
   checkForScrollbarHideOrShow() {
     readTask(() => {
       const el = this.root.querySelector('.gux-scrollable-section');
-      const hasScrollbar = el.clientWidth !== el.scrollWidth;
+      const hasScrollbar = el.clientWidth < el.scrollWidth;
 
       if (hasScrollbar !== this.hasScrollbar) {
         this.hasScrollbar = hasScrollbar;
