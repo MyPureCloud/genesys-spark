@@ -46,7 +46,7 @@ describe('gux-tabs-advanced', () => {
         Tab Header 1
         <gux-list slot="dropdown-options">
           <gux-list-item>
-            <gux-icon icon-name="Close" decorative="true"></gux-icon>
+            <gux-icon icon-name="close" decorative="true"></gux-icon>
             Close
           </gux-list-item>
         </gux-list>
