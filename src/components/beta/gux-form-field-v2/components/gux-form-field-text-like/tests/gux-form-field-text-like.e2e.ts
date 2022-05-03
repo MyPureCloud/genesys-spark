@@ -33,7 +33,7 @@ describe('gux-form-field-text-like-beta', () => {
         { componentAttribute: 'clearable', inputAttribute: 'disabled' }
       ].forEach(({ componentAttribute, inputAttribute }, index) => {
         const html = `
-          <gux-form-field-text-like-beta ${componentAttribute}>
+          <gux-form-field-text-like-beta lang="en" ${componentAttribute}>
             <input slot="input" type="text" value="Sample text" ${inputAttribute}/>
             <label slot="label">Label</label>
           </gux-form-field-text-like-beta>
@@ -66,7 +66,7 @@ describe('gux-form-field-text-like-beta', () => {
         'label-position="screenreader"'
       ].forEach((componentAttribute, index) => {
         const html = `
-          <gux-form-field-text-like-beta ${componentAttribute}>
+          <gux-form-field-text-like-beta lang="en" ${componentAttribute}>
             <input slot="input" type="text" value="Sample text"/>
             <label slot="label">Label</label>
           </gux-form-field-text-like-beta>
@@ -94,7 +94,7 @@ describe('gux-form-field-text-like-beta', () => {
     describe('input type attribute', () => {
       ['email', 'password', 'text'].forEach((inputTypeAttribute, index) => {
         const html = `
-          <gux-form-field-text-like-beta>
+          <gux-form-field-text-like-beta lang="en">
             <input slot="input" type="${inputTypeAttribute}" value="Sample text" />
             <label slot="label">Label</label>
           </gux-form-field-text-like-beta>
@@ -123,7 +123,7 @@ describe('gux-form-field-text-like-beta', () => {
   describe('input attributes', () => {
     ['', 'disabled', 'required'].forEach((inputAttribute, index) => {
       const html = `
-          <gux-form-field-text-like-beta>
+          <gux-form-field-text-like-beta lang="en">
             <input slot="input" type="text" value="Sample text" ${inputAttribute}/>
             <label slot="label">Label</label>
           </gux-form-field-text-like-beta>

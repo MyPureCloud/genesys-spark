@@ -53,33 +53,33 @@ gux-command-palette-legacy .gux-command-palette {
     margin-bottom: 8px;
   }
 
-  gux-list {
+  gux-list-legacy {
     display: block;
     margin-top: 4px;
   }
 
-  gux-list > strong {
+  gux-list-legacy > strong {
     height: 32px;
     padding: 0 16px;
     line-height: 32px;
   }
 
   gux-text-field,
-  gux-list > div[role='list'] {
+  gux-list-legacy > div[role='list'] {
     margin-bottom: 12px;
   }
 
-  gux-list + gux-list {
+  gux-list-legacy + gux-list-legacy {
     margin-bottom: 0;
   }
 
-  gux-list gux-list-item.gux-has-details {
+  gux-list-legacy gux-list-item-legacy.gux-has-details {
     .gux-list-item {
       line-height: 16px;
     }
   }
 
-  gux-list gux-list-item {
+  gux-list-legacy gux-list-item-legacy {
     .gux-list-item {
       display: block;
       line-height: 32px;
@@ -131,9 +131,9 @@ gux-command-palette-legacy .gux-command-palette {
     color: @gux-type;
     background: @palette-background-color;
 
-    gux-list gux-list-item:focus,
-    gux-list gux-list-item:active,
-    gux-list gux-list-item:hover {
+    gux-list-legacy gux-list-item-legacy:focus,
+    gux-list-legacy gux-list-item-legacy:active,
+    gux-list-legacy gux-list-item-legacy:hover {
       .gux-list-item div {
         color: @gux-type-dark;
         background: @gux-blue-60;
@@ -144,7 +144,7 @@ gux-command-palette-legacy .gux-command-palette {
       }
     }
 
-    gux-list gux-list-item .gux-list-item .gux-details {
+    gux-list-legacy gux-list-item-legacy .gux-list-item .gux-details {
       color: @palette-details-color;
     }
   }

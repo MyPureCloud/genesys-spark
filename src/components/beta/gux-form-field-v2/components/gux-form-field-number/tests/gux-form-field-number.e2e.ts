@@ -33,7 +33,7 @@ describe('gux-form-field-number-beta', () => {
         { componentAttribute: 'clearable', inputAttribute: 'disabled' }
       ].forEach(({ componentAttribute, inputAttribute }, index) => {
         const html = `
-          <gux-form-field-number-beta ${componentAttribute}>
+          <gux-form-field-number-beta lang="en" ${componentAttribute}>
             <input slot="input" type="number" value="10" ${inputAttribute}/>
             <label slot="label">Label</label>
           </gux-form-field-number-beta>
@@ -66,7 +66,7 @@ describe('gux-form-field-number-beta', () => {
         'label-position="screenreader"'
       ].forEach((componentAttribute, index) => {
         const html = `
-          <gux-form-field-number-beta ${componentAttribute}>
+          <gux-form-field-number-beta lang="en" ${componentAttribute}>
             <input slot="input" type="number" value="10"/>
             <label slot="label">Label</label>
           </gux-form-field-number-beta>
@@ -94,7 +94,7 @@ describe('gux-form-field-number-beta', () => {
     describe('input attributes', () => {
       ['', 'disabled', 'required'].forEach((inputAttribute, index) => {
         const html = `
-          <gux-form-field-number-beta>
+          <gux-form-field-number-beta lang="en">
             <input slot="input" type="number" value="10" ${inputAttribute}/>
             <label slot="label">Label</label>
           </gux-form-field-number-beta>

@@ -22,7 +22,7 @@ import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 export class GuxButtonMulti {
   @Element()
   private root: HTMLElement;
-  actionListElement: HTMLGuxActionListElement;
+  listElement: HTMLGuxListElement;
   dropdownButton: HTMLElement;
   private moveFocusDelay: number = 100;
 
@@ -70,7 +70,8 @@ export class GuxButtonMulti {
       case 'Escape':
         this.isOpen = false;
 
-        if (composedPath.includes(this.actionListElement)) {
+        if (composedPath.includes(this.listElement)) {
+          event.preventDefault();
           this.dropdownButton.focus();
         }
 
@@ -79,22 +80,12 @@ export class GuxButtonMulti {
         this.isOpen = false;
         break;
       }
-      case 'Enter':
-        event.preventDefault();
-        if (composedPath.includes(this.dropdownButton)) {
-          this.isOpen = true;
-          setTimeout(() => {
-            void this.actionListElement.setFocusOnFirstItem();
-          }, this.moveFocusDelay);
-        }
-        break;
       case 'ArrowDown':
-        event.preventDefault();
+      case 'Enter':
         if (composedPath.includes(this.dropdownButton)) {
+          event.preventDefault();
           this.isOpen = true;
-          setTimeout(() => {
-            void this.actionListElement.setFocusOnFirstItem();
-          }, this.moveFocusDelay);
+          this.focusFirstItemInPopupList();
         }
         break;
     }
@@ -102,18 +93,16 @@ export class GuxButtonMulti {
 
   @Listen('keyup')
   handleKeyup(event: KeyboardEvent): void {
-    const composedPath = event.composedPath();
-
     switch (event.key) {
-      case ' ':
-        event.preventDefault();
+      case ' ': {
+        const composedPath = event.composedPath();
+
         if (composedPath.includes(this.dropdownButton)) {
           this.isOpen = true;
-          setTimeout(() => {
-            void this.actionListElement.setFocusOnFirstItem();
-          }, this.moveFocusDelay);
+          this.focusFirstItemInPopupList();
         }
         break;
+      }
     }
   }
 
@@ -141,7 +130,22 @@ export class GuxButtonMulti {
   private toggle(): void {
     if (!this.disabled) {
       this.isOpen = !this.isOpen;
+      if (this.isOpen) {
+        this.focusPopupList();
+      }
     }
+  }
+
+  private focusPopupList(): void {
+    setTimeout(() => {
+      this.listElement.focus();
+    }, this.moveFocusDelay);
+  }
+
+  private focusFirstItemInPopupList(): void {
+    setTimeout(() => {
+      void this.listElement.guxFocusFirstItem();
+    }, this.moveFocusDelay);
   }
 
   componentWillLoad(): void {
@@ -160,7 +164,7 @@ export class GuxButtonMulti {
               type="button"
               disabled={this.disabled}
               ref={el => (this.dropdownButton = el)}
-              onClick={() => this.toggle()}
+              onMouseUp={() => this.toggle()}
               aria-haspopup="true"
               aria-expanded={this.isOpen.toString()}
             >
@@ -169,9 +173,11 @@ export class GuxButtonMulti {
             </button>
           </gux-button-slot-beta>
         </div>
-        <gux-action-list slot="popup" ref={el => (this.actionListElement = el)}>
-          <slot />
-        </gux-action-list>
+        <div class="gux-list-container" slot="popup">
+          <gux-list ref={el => (this.listElement = el)}>
+            <slot />
+          </gux-list>
+        </div>
       </gux-popup>
     ) as JSX.Element;
   }

@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  h,
+  JSX,
+  Prop,
+  Watch
+} from '@stencil/core';
 
 import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 import { logError } from '../../../../utils/error/log-error';
@@ -24,6 +33,16 @@ export class GuxAccordionSection {
 
   @Prop()
   disabled: boolean = false;
+
+  @Event()
+  internalsectionopened: EventEmitter<void>;
+
+  @Watch('open')
+  watchOpen(open: boolean): void {
+    if (open) {
+      this.internalsectionopened.emit();
+    }
+  }
 
   private toggle() {
     this.open = !this.open;

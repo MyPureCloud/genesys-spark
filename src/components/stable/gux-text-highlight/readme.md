@@ -19,13 +19,13 @@
 ### Used by
 
  - [gux-command-palette-legacy](../../legacy/gux-command-palette-legacy)
- - [gux-list-item](../gux-list/list-item)
+ - [gux-list-item-legacy](../../legacy/gux-list-legacy/list-item)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-command-palette-legacy --> gux-text-highlight
-  gux-list-item --> gux-text-highlight
+  gux-list-item-legacy --> gux-text-highlight
   style gux-text-highlight fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

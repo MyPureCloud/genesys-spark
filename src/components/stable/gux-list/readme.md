@@ -5,75 +5,30 @@ A list element. In order to use this element list contents must be slotted in.
 Example usage
 
 ```html
-<gux-list>
-  <gux-list-item value="test" text="test1" />
-  <gux-list-divider />
-  <gux-list-item value="test" text="test2" />
-  <gux-list-item value="test" text="test3" />
-</gux-list>
+<gux-action-list>
+  <gux-action-list-item value="test" text="test1" />
+  <gux-action-list-divider />
+  <gux-action-list-item value="test" text="test2" />
+  <gux-action-list-item value="test" text="test3" />
+</gux-action-list>
 ```
 
 Example with slotting
 
 ```html
-<gux-list>
-  <gux-list-item
+<gux-action-list>
+  <gux-action-list-item
     ><span>⌘</span><gux-text-highlight text="test"
-  /></gux-list-item>
-</gux-list>
+  /></gux-action-list-item>
+</gux-action-list>
 ```
 
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property    | Attribute   | Description                        | Type      | Default     |
-| ----------- | ----------- | ---------------------------------- | --------- | ----------- |
-| `highlight` | `highlight` | The highlight value                | `string`  | `undefined` |
-| `value`     | --          | The current selection in the list. | `unknown` | `undefined` |
-
-
-## Events
-
-| Event     | Description                                     | Type                   |
-| --------- | ----------------------------------------------- | ---------------------- |
-| `changed` | Triggered when the list's selection is changed. | `CustomEvent<unknown>` |
-
-
 ## Methods
 
-### `isFirstItemSelected() => Promise<boolean>`
-
-Returns whether the first item in the list is selected.
-
-#### Returns
-
-Type: `Promise<boolean>`
-
-
-
-### `isLastItemSelected() => Promise<boolean>`
-
-Returns whether the last item in the list is selected.
-
-#### Returns
-
-Type: `Promise<boolean>`
-
-
-
-### `setFocusOnFirstItem() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-### `setFocusOnLastItem() => Promise<void>`
+### `guxFocusFirstItem() => Promise<void>`
 
 
 
@@ -88,13 +43,15 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-command-palette-legacy](../../legacy/gux-command-palette-legacy)
+ - [gux-action-button](../gux-action-button)
+ - [gux-button-multi](../../beta/gux-button-multi)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-command-palette-legacy --> gux-list
+  gux-action-button --> gux-list
+  gux-button-multi --> gux-list
   gux-time-picker-beta --> gux-list
   style gux-list fill:#f9f,stroke:#333,stroke-width:4px
 ```

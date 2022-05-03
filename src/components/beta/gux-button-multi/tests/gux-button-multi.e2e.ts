@@ -3,14 +3,7 @@ import { E2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 async function clickDropdownButton(page: E2EPage): Promise<void> {
-  return await page.evaluate(() => {
-    const element = document.querySelector('gux-button-multi');
-    const dropdownButton: HTMLButtonElement = element.shadowRoot.querySelector(
-      '.gux-dropdown-button > button'
-    );
-
-    dropdownButton.click();
-  });
+  return await page.click('pierce/.gux-dropdown-button > button');
 }
 
 async function pressDropdownButton(

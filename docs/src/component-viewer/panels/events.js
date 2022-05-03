@@ -41,7 +41,7 @@ export default class EventsPanel {
     });
   }
 
-  notifyEvent(e) {
+  notifyEvent(e, text) {
     let notificationPanelEl = this.notificationPanel;
     const detail = e ? e.detail : e;
     const target = e ? e.currentTarget : '';
@@ -52,10 +52,11 @@ export default class EventsPanel {
       currentNotifications[0].remove();
       currentNotifications = notificationPanelEl.children;
     }
+
     notificationPanelEl.appendChild(
       EventsPanel.getNotificationToast(
         e.type,
-        detail,
+        text || detail,
         `${target.tagName.toLowerCase()}${target.id ? '#' + target.id : ''}`
       )
     );

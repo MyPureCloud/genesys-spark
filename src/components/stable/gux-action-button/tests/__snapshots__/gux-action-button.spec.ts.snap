@@ -17,46 +17,52 @@ exports[`gux-action-button renders 1`] = `
             </button>
           </gux-button-slot-beta>
         </div>
-        <gux-action-list slot="popup">
-          <slot></slot>
-        </gux-action-list>
+        <div class="gux-list-container" slot="popup">
+          <gux-list role="list">
+            <mock:shadow-root>
+              <span tabindex="-1"></span>
+              <slot></slot>
+            </mock:shadow-root>
+            <slot></slot>
+          </gux-list>
+        </div>
       </gux-popup>
     </div>
   </mock:shadow-root>
-  <gux-action-item role="listitem" text="test">
+  <gux-list-item onclick="notify(event)" role="listitem">
     <mock:shadow-root>
-      <button class="gux-action-item">
-        test
+      <button tabindex="-1" type="button">
         <slot></slot>
       </button>
     </mock:shadow-root>
-  </gux-action-item>
-  <gux-action-item role="listitem" text="test2">
+    Test 1
+  </gux-list-item>
+  <gux-list-item onclick="notify(event)" role="listitem">
     <mock:shadow-root>
-      <button class="gux-action-item">
-        test2
+      <button tabindex="-1" type="button">
         <slot></slot>
       </button>
     </mock:shadow-root>
-  </gux-action-item>
-  <gux-action-item role="listitem" text="test3">
+    Test 2
+  </gux-list-item>
+  <gux-list-item onclick="notify(event)" role="listitem">
     <mock:shadow-root>
-      <button class="gux-action-item">
-        test3
+      <button tabindex="-1" type="button">
         <slot></slot>
       </button>
     </mock:shadow-root>
-  </gux-action-item>
-  <gux-list-divider></gux-list-divider>
-  <gux-action-item role="listitem">
+    Test 3
+  </gux-list-item>
+  <gux-list-divider role="presentation">
+    <mock:shadow-root></mock:shadow-root>
+  </gux-list-divider>
+  <gux-list-item onclick="notify(event)" role="listitem">
     <mock:shadow-root>
-      <button class="gux-action-item">
+      <button tabindex="-1" type="button">
         <slot></slot>
       </button>
     </mock:shadow-root>
-    <span>
-      I am a span
-    </span>
-  </gux-action-item>
+    Test 4
+  </gux-list-item>
 </gux-action-button>
 `;

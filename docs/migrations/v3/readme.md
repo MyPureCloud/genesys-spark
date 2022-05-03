@@ -12,6 +12,7 @@
 * `label` property on instances of `gux-datepicker` now only accepts `string`.
 * `trap-focus` property on instances of `gux-modal` now default to true
 * replace `gux-list-divider` with `gux-action-list-divider` in `gux-action-button` and `gux-button-multi` components
+* remove the `icon` property from `gux-tag-beta` and slot in the icon instead
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
   * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
@@ -21,6 +22,10 @@
   * `gux-tooltip-title-beta` ->  `gux-tooltip-title`
 * add `-legacy` to components that have been removed from stable
   * `gux-accordion` -> `gux-accordion-legacy`
+  * `gux-action-button` -> `gux-action-button-legacy`
+  * `gux-action-list` -> `gux-action-list-legacy`
+  * `gux-button-multi` -> `gux-button-multi-legacy`
+  * `gux-list` -> `gux-list-legacy`
   * `gux-tabs`-> `gux-tabs-legacy`
     * `gux-tab-dropdown-option`-> `gux-tab-dropdown-option-legacy`
     * `gux-tab`-> `gux-tab-legacy`
@@ -30,6 +35,11 @@
   * `gux-side-panel-beta` -> `gux-side-panel-legacy`
 * migrate away from usage of legacy components
   * `gux-accordion-legacy` -> `gux-accordion`
+  * `gux-action-button-legacy` -> `gux-action-button`
+    * `gux-action-item` -> `gux-list-item`
+  * `gux-button-multi-legacy` -> `gux-button-multi`
+    * `gux-action-item` -> `gux-list-item`
+  * `gux-list-legacy` -> `gux-list`
   * `gux-command-palette-legacy` -> Contact the Core UI team if you need help migrating away from this component.
   * `gux-panel-frame-legacy` -> Contact the Core UI team if you need help migrating away from this component.
   * `gux-side-panel-legacy` -> Contact the Core UI team if you need help migrating away from this component.
@@ -125,6 +135,10 @@ The following components have moved from beta to stable without any api changes.
 The following components have moved from stable to legacy without any api changes.
 
 * gux-accordion
+* gux-action-button
+* gux-action-list
+* gux-button-multi
+* gux-list
 * gux-tabs (v2)
 
 #### Actions
@@ -151,9 +165,25 @@ The following components have moved from stable to legacy without any api change
 
 [More details here](./gux-accordion-legacy)
 
+### gux-action-button-legacy
+
+[More details here](./gux-list-legacy)
+
+### gux-action-list-legacy
+
+Contact the Core UI team if you need help migrating away from this component.
+
+### gux-button-multi-legacy
+
+[More details here](./gux-list-legacy)
+
 ### gux-command-palette-legacy
 
 Contact the Core UI team if you need help migrating away from this component.
+
+### gux-list-legacy
+
+[More details here](./gux-list-legacy)
 
 ### gux-panel-frame-legacy
 
