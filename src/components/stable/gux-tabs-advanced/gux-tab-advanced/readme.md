@@ -7,11 +7,10 @@
 
 ## Properties
 
-| Property      | Attribute       | Description                                                                                         | Type      | Default     |
-| ------------- | --------------- | --------------------------------------------------------------------------------------------------- | --------- | ----------- |
-| `guxDisabled` | `gux-disabled`  |                                                                                                     | `boolean` | `false`     |
-| `tabIconName` | `tab-icon-name` | indicates the gux-icon to display on the left side of the tab (similar to a favicon in the browser) | `string`  | `undefined` |
-| `tabId`       | `tab-id`        | unique id for the tab                                                                               | `string`  | `undefined` |
+| Property      | Attribute      | Description           | Type      | Default     |
+| ------------- | -------------- | --------------------- | --------- | ----------- |
+| `guxDisabled` | `gux-disabled` |                       | `boolean` | `false`     |
+| `tabId`       | `tab-id`       | unique id for the tab | `string`  | `undefined` |
 
 
 ## Events

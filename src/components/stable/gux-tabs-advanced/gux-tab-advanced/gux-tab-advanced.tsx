@@ -51,12 +51,6 @@ export class GuxTabAdvanced {
   @State()
   active: boolean = false;
 
-  /**
-   * indicates the gux-icon to display on the left side of the tab (similar to a favicon in the browser)
-   */
-  @Prop()
-  tabIconName: string;
-
   @Prop()
   guxDisabled: boolean = false;
 
