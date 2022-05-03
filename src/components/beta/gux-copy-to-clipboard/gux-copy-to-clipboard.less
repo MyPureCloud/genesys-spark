@@ -1,0 +1,71 @@
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/color-palette.less';
+@import (reference) '../../../style/mixins.less';
+
+.gux-copy-to-clipboard-wrapper {
+  display: inline-flex;
+  align-items: center;
+
+  .gux-copy-content {
+    display: inherit;
+    align-items: inherit;
+    cursor: pointer;
+
+    ::slotted(*) {
+      padding: 0 @spacing-3xs 0 @spacing-3xs;
+    }
+
+    &:hover {
+      .focus-and-hover-copy-content();
+    }
+
+    gux-icon {
+      width: 16px;
+      height: 16px;
+      color: @gux-black-100;
+      visibility: hidden;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    .focus-and-hover-copy-content();
+  }
+
+  gux-tooltip {
+    display: inline-flex;
+    align-items: center;
+
+    gux-icon {
+      width: 16px;
+      height: 16px;
+      padding-right: @spacing-xs;
+
+      &[icon-name='badge-check'] {
+        color: @gux-alert-green-60;
+      }
+
+      &[icon-name='badge-x'] {
+        color: @gux-alert-red-60;
+      }
+    }
+  }
+}
+
+.focus-and-hover-copy-content {
+  ::slotted(*) {
+    background-color: @gux-blue-100;
+    border-radius: 4px;
+  }
+
+  .gux-icon-container {
+    padding-left: @spacing-2xs;
+
+    gux-icon {
+      padding: @spacing-3xs;
+      visibility: visible;
+      background-color: @gux-blue-100;
+      border-radius: 4px;
+    }
+  }
+}

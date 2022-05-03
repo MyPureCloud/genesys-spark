@@ -25,9 +25,10 @@ If there is not enough space on the bottom, or right of the component, the toolt
 
 ## Properties
 
-| Property | Attribute | Description                                                                                                | Type     | Default     |
-| -------- | --------- | ---------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| `for`    | `for`     | Indicates the id of the element the popover should anchor to. (If not supplied the parent element is used) | `string` | `undefined` |
+| Property    | Attribute   | Description                                                                                                | Type                                                                                                                                                                                                         | Default          |
+| ----------- | ----------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| `for`       | `for`       | Indicates the id of the element the popover should anchor to. (If not supplied the parent element is used) | `string`                                                                                                                                                                                                     | `undefined`      |
+| `placement` | `placement` | Placement of the tooltip. Default is bottom-start                                                          | `"auto" \| "auto-end" \| "auto-start" \| "bottom" \| "bottom-end" \| "bottom-start" \| "left" \| "left-end" \| "left-start" \| "right" \| "right-end" \| "right-start" \| "top" \| "top-end" \| "top-start"` | `'bottom-start'` |
 
 
 ## Methods
@@ -64,11 +65,13 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [gux-copy-to-clipboard-beta](../../beta/gux-copy-to-clipboard)
  - [gux-tooltip-title](../gux-tooltip-title)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-copy-to-clipboard-beta --> gux-tooltip
   gux-tooltip-title --> gux-tooltip
   style gux-tooltip fill:#f9f,stroke:#333,stroke-width:4px
 ```

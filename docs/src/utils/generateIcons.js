@@ -15,7 +15,13 @@ const icons = [
   },
   {
     sectionName: 'Badge',
-    iconNames: ['badge-amount', 'badge-check', 'badge-edit', 'badge-pause']
+    iconNames: [
+      'badge-amount',
+      'badge-check',
+      'badge-edit',
+      'badge-pause',
+      'badge-x'
+    ]
   },
   { sectionName: 'Co-Browse', iconNames: ['cobrowse'] },
   {
