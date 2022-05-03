@@ -3,11 +3,13 @@ An action button. In order to use this element toggle children must be slotted i
 
 Example usage
 ```html
-<gux-action-button text="Button Text">
-  <gux-action-item value="test" text="test"/>
-  <gux-action-item value="test2" text="test2"/>
-  <gux-action-item value="test3" text="test3"/>
-</gux-action-button>
+  <gux-action-button text="Primary" accent="primary">
+    <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+    <gux-list-divider></gux-list-divider>
+    <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+  </gux-action-button>
 ```
 
 <!-- Auto Generated Below -->
@@ -40,7 +42,7 @@ Example usage
 - [gux-popup](../gux-popup)
 - [gux-button-slot-beta](../../beta/gux-button-slot)
 - [gux-icon](../gux-icon)
-- [gux-action-list](../../beta/gux-action-list)
+- [gux-list](../gux-list)
 
 ### Graph
 ```mermaid
@@ -48,7 +50,7 @@ graph TD;
   gux-action-button --> gux-popup
   gux-action-button --> gux-button-slot-beta
   gux-action-button --> gux-icon
-  gux-action-button --> gux-action-list
+  gux-action-button --> gux-list
   style gux-action-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

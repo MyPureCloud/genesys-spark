@@ -1,4 +1,5 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/typography.less';
 
 :host {
@@ -20,4 +21,14 @@
       }
     }
   }
+}
+
+.gux-list-container {
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  background-color: @gux-type-dark;
+  border: 1px solid @gux-grey-30;
+  border-radius: 4px;
+  .gux-shadow-20();
 }
