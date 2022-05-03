@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.66](https://inindca///compare/v3.0.0-alpha.65...v3.0.0-alpha.66) (2022-05-03)
+
+
+### Features
+
+* **accordion:** option to only have one section open at a time added ([e9c348b](https://inindca///commit/e9c348b192b8a77a162161a8e75314ae212e3e63))
+* **list:** added updated list component ([6604de4](https://inindca///commit/6604de4994196f58271d2e2429ff6f5fc3068fc2))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([6a8df16](https://inindca///commit/6a8df16a260086a24f993390b3b6a0493014694b))
+
 ## [3.0.0-alpha.65](https://inindca///compare/v3.0.0-alpha.64...v3.0.0-alpha.65) (2022-04-29)
 
 
