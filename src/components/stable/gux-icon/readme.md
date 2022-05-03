@@ -24,7 +24,7 @@
  - [gux-action-button-legacy](../../legacy/gux-action-button-legacy)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-breadcrumb-item](../gux-breadcrumbs/breadcrumb-item)
- - [gux-button-multi](../../beta/gux-button-multi)
+ - [gux-button-multi](../gux-button-multi)
  - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
  - [gux-calendar](../gux-calendar)
  - [gux-content-search](../gux-content-search)

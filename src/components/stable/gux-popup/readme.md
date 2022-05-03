@@ -27,7 +27,7 @@
 
  - [gux-action-button](../gux-action-button)
  - [gux-action-button-legacy](../../legacy/gux-action-button-legacy)
- - [gux-button-multi](../../beta/gux-button-multi)
+ - [gux-button-multi](../gux-button-multi)
  - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
  - [gux-dropdown-v2-beta](../../beta/gux-dropdown-v2)
 
