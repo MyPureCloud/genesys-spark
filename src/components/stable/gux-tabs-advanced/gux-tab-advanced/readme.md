@@ -54,6 +54,14 @@ Type: `Promise<void>`
 
 
 
+## Slots
+
+| Slot                 | Description                                                                             |
+| -------------------- | --------------------------------------------------------------------------------------- |
+| `"default"`          | gux-icon (optional) and text node (required)                                            |
+| `"dropdown-options"` | optional slot for tab options, must slot a gux-list element with gux-list-item children |
+
+
 ## Dependencies
 
 ### Depends on
