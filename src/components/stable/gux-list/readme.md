@@ -44,7 +44,7 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-action-button](../gux-action-button)
- - [gux-button-multi](../../beta/gux-button-multi)
+ - [gux-button-multi](../gux-button-multi)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
 
 ### Graph
