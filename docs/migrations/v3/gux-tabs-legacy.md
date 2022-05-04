@@ -124,42 +124,35 @@ There are now two new stable versions of tabs available to use in v3: gux-tabs a
 ```html
   <gux-tabs-advanced>
     <gux-tab-advanced-list slot="tab-list" show-new-tab-button="true" allow-sort="true">
-      <gux-tab-advanced tab-id="1" tab-icon-name="agent">
-        <span slot="title">Tab Header 1</span>
-        <span slot="dropdown-options">
-          <gux-tab-advanced-option
-            option-id="1"
-            icon-name="edit"
-          >
+      <gux-tab-advanced tab-id="1">
+        <gux-icon icon-name="agent" decorative="true"></gux-icon>
+        Tab Header 1
+        <gux-list slot="dropdown-options">
+          <gux-list-item>
+            <gux-icon icon-name="edit" decorative="true"></gux-icon>
             Edit
-          </gux-tab-advanced-option>
-          <gux-tab-advanced-option
-            option-id="2"
-            icon-name="clone"
-          >
+          </gux-list-item>
+          <gux-list-item>
+            <gux-icon icon-name="clone" decorative="true"></gux-icon>
             Clone
-          </gux-tab-advanced-option>
-          <gux-tab-advanced-option
-            option-id="3"
-            icon-name="share"
-          >
+          </gux-list-item>
+          <gux-list-item>
+            <gux-icon icon-name="share" decorative="true"></gux-icon>
             Share
-          </gux-tab-advanced-option>
-          <gux-tab-advanced-option
-            option-id="4"
-            icon-name="download"
-          >
+          </gux-list-item>
+          <gux-list-item>
+          <gux-icon icon-name="download" decorative="true"></gux-icon>
             Download
-          </gux-tab-advanced-option>
-        </span>
+          </gux-list-item>
+        </gux-list>
       </gux-tab-advanced>
-      <gux-tab-advanced tab-id="2" tab-icon-name="user-directory">
-        <span slot="title">Tab Header 2</span>
+      <gux-tab-advanced tab-id="2">
+        <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+        Tab Header 2
       </gux-tab-advanced>
     </gux-tab-advanced-list>
     <gux-tab-advanced-panel tab-id="1">
       <span>Tab content 1</span>
-
     </gux-tab-advanced-panel>
     <gux-tab-advanced-panel tab-id="2">
       <span>Tab content 2</span>
@@ -180,12 +173,13 @@ There are now two new stable versions of tabs available to use in v3: gux-tabs a
   * methods
     * guxSetActive
 * gux-tab-advanced
-  * methods
-    * guxFocus
-* gux-tab-advanced-option
   * properties
-    * icon-name
-    * option-id
+    * tab-id
+    * gux-disabled
+  * methods
+    * guxSetActive
+    * guxGetActive
+    * guxFocus
 * gux-tab-advanced-panel
   * properties
     * tab-id
@@ -198,12 +192,12 @@ There are now two new stable versions of tabs available to use in v3: gux-tabs a
   <gux-tabs active-tab="1">
     <gux-tab-list slot="tab-list">
       <gux-tab tab-id="1">
-      <gux-icon icon-name="agent" decorative="true"></gux-icon>
-        <span>Tab Header 1</span>
+        <gux-icon icon-name="agent" decorative="true"></gux-icon>
+        Tab Header 1
       </gux-tab>
       <gux-tab tab-id="2">
         <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
-        <span>Tab Header 2</span>
+        Tab Header 2
       </gux-tab>
     </gux-tab-list>
     <gux-tab-panel tab-id="1">
@@ -228,10 +222,11 @@ There are now two new stable versions of tabs available to use in v3: gux-tabs a
 * gux-tab
   * properties
     * gux-disabled
-    * icon-only
     * tab-id
   * methods
     * guxFocus
+    * guxSetActive
+    * guxGetActive
 * gux-tab-panel
   * properties
     * tab-id

@@ -182,7 +182,7 @@ export class GuxTabAdvancedList {
           this.tabTriggers.forEach((tabTrigger, index) => {
             const active =
               tabTrigger.tabId ===
-              (this.sortTarget as Element).getAttribute('tab-id');
+              (this.sortTarget as Element)?.getAttribute('tab-id');
             if (active) {
               this.focused = index;
             }
@@ -216,7 +216,7 @@ export class GuxTabAdvancedList {
           this.tabTriggers.forEach((tabTrigger, index) => {
             const active =
               tabTrigger.tabId ===
-              (this.sortTarget as Element).getAttribute('tab-id');
+              (this.sortTarget as Element)?.getAttribute('tab-id');
             if (active) {
               this.focused = index;
             }
@@ -244,7 +244,7 @@ export class GuxTabAdvancedList {
         this.tabTriggers.forEach((tabTrigger, index) => {
           const active =
             tabTrigger.tabId ===
-            (this.sortTarget as Element).getAttribute('tab-id');
+            (this.sortTarget as Element)?.getAttribute('tab-id');
           if (active) {
             this.focused = index;
           }
@@ -264,7 +264,7 @@ export class GuxTabAdvancedList {
           this.tabTriggers.forEach((tabTrigger, index) => {
             const active =
               tabTrigger.tabId ===
-              (this.sortTarget as Element).getAttribute('tab-id');
+              (this.sortTarget as Element)?.getAttribute('tab-id');
             if (active) {
               this.focused = index;
             }
@@ -295,7 +295,7 @@ export class GuxTabAdvancedList {
         if (
           eventIsFrom('.gux-tab', event) &&
           !eventIsFrom('.gux-tab-options-button', event) &&
-          !eventIsFrom('gux-popover', event) &&
+          !eventIsFrom('gux-popover-list', event) &&
           this.allowSort
         ) {
           event.preventDefault();
@@ -306,7 +306,7 @@ export class GuxTabAdvancedList {
             this.tabTriggers.forEach((tabTrigger, index) => {
               const active =
                 tabTrigger.tabId ===
-                (this.sortTarget as Element).getAttribute('tab-id');
+                (this.sortTarget as Element)?.getAttribute('tab-id');
               if (active) {
                 this.focused = index;
               }
@@ -318,7 +318,7 @@ export class GuxTabAdvancedList {
             this.tabTriggers.forEach((tabTrigger, index) => {
               const active =
                 tabTrigger.tabId ===
-                (this.sortTarget as Element).getAttribute('tab-id');
+                (this.sortTarget as Element)?.getAttribute('tab-id');
               if (active) {
                 this.initialSortIndex = index;
               }

@@ -44,15 +44,12 @@ describe('gux-tabs-advanced', () => {
     >
       <gux-tab-advanced tab-id="1-1">
         Tab Header 1
-        <span slot="dropdown-options">
-          <gux-tab-advanced-option
-            option-id="1"
-            icon-name="close"
-            onclick="notify(event)"
-          >
+        <gux-list slot="dropdown-options">
+          <gux-list-item>
+            <gux-icon icon-name="close" decorative="true"></gux-icon>
             Close
-          </gux-tab-advanced-option>
-        </span>
+          </gux-list-item>
+        </gux-list>
       </gux-tab-advanced>
       <gux-tab-advanced tab-id="1-2">
         <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
@@ -70,40 +67,31 @@ describe('gux-tabs-advanced', () => {
       <gux-tab-advanced tab-id="1-6">
         <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
         Tab Header 6
-        <span slot="dropdown-options">
-          <gux-tab-advanced-option
-            option-id="1"
-            icon-name="close"
-            onclick="notify(event)"
-          >
+        <gux-list slot="dropdown-options">
+          <gux-list-item>
+            <gux-icon icon-name="close" decorative="true"></gux-icon>
             Close
-          </gux-tab-advanced-option>
-        </span>
+          </gux-list-item>
+        </gux-list>
       </gux-tab-advanced>
       <gux-tab-advanced tab-id="1-7">
         <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
         Tab Header 7 long long long
-        <span slot="dropdown-options">
-          <gux-tab-advanced-option
-            option-id="1"
-            icon-name="close"
-            onclick="notify(event)"
-          >
+        <gux-list slot="dropdown-options">
+          <gux-list-item>
+            <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
             Close
-          </gux-tab-advanced-option>
-        </span>
+          </gux-list-item>
+        </gux-list>
       </gux-tab-advanced>
       <gux-tab-advanced tab-id="1-8">
       Tab Header 8 longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong
-      <span slot="dropdown-options">
-        <gux-tab-advanced-option
-          option-id="1"
-          icon-name="close"
-          onclick="notify(event)"
-        >
+      <gux-list slot="dropdown-options">
+        <gux-list-item>
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
           Close
-        </gux-tab-advanced-option>
-      </span>
+        </gux-list-item>
+      </gux-list>
     </gux-tab-advanced>
       <gux-tab-advanced gux-disabled tab-id="1-9">
         Tab Header 9 long long long
@@ -158,7 +146,6 @@ describe('gux-tabs-advanced', () => {
         <gux-tab-advanced tab-id="1-4">
           Tab Header 4
         </gux-tab-advanced>
-
       </gux-tab-advanced-list>
     <gux-tab-advanced-panel tab-id="1-1">
       <span>Tab content 1</span>
