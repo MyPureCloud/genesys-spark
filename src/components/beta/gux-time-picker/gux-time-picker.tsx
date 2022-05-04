@@ -63,7 +63,7 @@ export class GuxTimePicker {
 
   inputElement: HTMLInputElement;
   focusedField: HTMLInputElement;
-  dropdownList: HTMLGuxListElement;
+  listElement: HTMLGuxListElement;
   maxTimeObj: Date;
   minTimeObj: Date;
   isPressEvent: boolean = false;
@@ -96,8 +96,8 @@ export class GuxTimePicker {
           break;
         case 'ArrowDown':
           e.preventDefault();
-          if (this.dropdownList) {
-            void this.dropdownList.setFocusOnFirstItem();
+          if (this.listElement) {
+            void this.listElement.guxFocusFirstItem();
           }
           break;
         case 'ArrowUp':
@@ -129,9 +129,6 @@ export class GuxTimePicker {
       }
     } else {
       switch (e.key) {
-        case 'Enter':
-          this.inputElement.focus();
-          break;
         case 'Escape':
           this.updateChosenValue();
           this.inputElement.focus();
@@ -163,15 +160,10 @@ export class GuxTimePicker {
     }
   }
 
-  @Listen('press', { passive: false })
-  onPress(e: CustomEvent) {
-    this.isPressEvent = true;
-
-    const chosenTimeOption = this.getShadowDomEventTarget(
-      e
-    ) as HTMLGuxListItemElement;
-    this.inputElement.value = chosenTimeOption.value as string;
+  onListItemClick(value: string) {
+    this.inputElement.value = value;
     this.updateChosenValue();
+    this.inputElement.focus();
   }
 
   @OnClickOutside({ triggerEvents: 'mousedown' })
@@ -283,10 +275,12 @@ export class GuxTimePicker {
         </div>
         {this.openDropdown === true && (
           <div class="gux-list-container">
-            <gux-list ref={el => (this.dropdownList = el)}>
+            <gux-list ref={el => (this.listElement = el)}>
               {this.buildDropdownOptions().map(value => {
                 return (
-                  <gux-list-item value={value} text={value}></gux-list-item>
+                  <gux-list-item onClick={() => this.onListItemClick(value)}>
+                    {value}
+                  </gux-list-item>
                 ) as JSX.Element;
               })}
             </gux-list>

@@ -1,0 +1,51 @@
+@import (reference) '../../../../style/color.less';
+@import (reference) '../../../../style/mixins.less';
+
+:host {
+  width: 100%;
+  outline: none;
+}
+
+:host([disabled]) {
+  pointer-events: none;
+}
+
+::slotted(gux-icon) {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 32px;
+  padding: 8px 16px;
+  color: @gux-black-50;
+  word-wrap: break-word;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &:focus:not(:disabled) {
+    color: @gux-grey-100;
+    background: @gux-blue-60;
+  }
+
+  &:hover:not(:disabled) {
+    color: @gux-grey-100;
+    background: @gux-blue-50;
+  }
+
+  &:active:not(:disabled) {
+    color: @gux-grey-100;
+    background: @gux-blue-40;
+  }
+
+  &:disabled {
+    color: fade(@gux-black-50, 50%);
+    cursor: default;
+  }
+}

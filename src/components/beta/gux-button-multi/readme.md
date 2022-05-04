@@ -15,12 +15,12 @@ Example usage
 
 ## Properties
 
-| Property   | Attribute  | Description                                  | Type                                     | Default       |
-| ---------- | ---------- | -------------------------------------------- | ---------------------------------------- | ------------- |
-| `accent`   | `accent`   | The component accent (secondary or primary). | `"primary" \| "secondary" \| "tertiary"` | `'secondary'` |
-| `disabled` | `disabled` | Disables the action button.                  | `boolean`                                | `false`       |
-| `isOpen`   | `is-open`  | It is used to open or not the list.          | `boolean`                                | `false`       |
-| `text`     | `text`     | The component text.                          | `string`                                 | `undefined`   |
+| Property   | Attribute  | Description                                  | Type                                                | Default       |
+| ---------- | ---------- | -------------------------------------------- | --------------------------------------------------- | ------------- |
+| `accent`   | `accent`   | The component accent (secondary or primary). | `"ghost" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| `disabled` | `disabled` | Disables the action button.                  | `boolean`                                           | `false`       |
+| `isOpen`   | `is-open`  | It is used to open or not the list.          | `boolean`                                           | `false`       |
+| `text`     | `text`     | The component text.                          | `string`                                            | `undefined`   |
 
 
 ## Events
@@ -38,7 +38,7 @@ Example usage
 - [gux-popup](../../stable/gux-popup)
 - [gux-button-slot-beta](../gux-button-slot)
 - [gux-icon](../../stable/gux-icon)
-- [gux-action-list](../gux-action-list)
+- [gux-list](../../stable/gux-list)
 
 ### Graph
 ```mermaid
@@ -46,7 +46,7 @@ graph TD;
   gux-button-multi --> gux-popup
   gux-button-multi --> gux-button-slot-beta
   gux-button-multi --> gux-icon
-  gux-button-multi --> gux-action-list
+  gux-button-multi --> gux-list
   style gux-button-multi fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -4,9 +4,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                     | Default       |
-| -------- | --------- | ----------- | ---------------------------------------- | ------------- |
-| `accent` | `accent`  |             | `"primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| Property | Attribute | Description | Type                                                | Default       |
+| -------- | --------- | ----------- | --------------------------------------------------- | ------------- |
+| `accent` | `accent`  |             | `"ghost" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
 
 
 ## Slots
@@ -21,7 +21,9 @@
 ### Used by
 
  - [gux-action-button](../../stable/gux-action-button)
+ - [gux-action-button-legacy](../../legacy/gux-action-button-legacy)
  - [gux-button-multi](../gux-button-multi)
+ - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
  - [gux-pagination-buttons](../../stable/gux-pagination/gux-pagination-buttons)
  - [gux-pagination-cursor](../../stable/gux-pagination-cursor)
  - [gux-table-beta](../gux-table)
@@ -30,7 +32,9 @@
 ```mermaid
 graph TD;
   gux-action-button --> gux-button-slot-beta
+  gux-action-button-legacy --> gux-button-slot-beta
   gux-button-multi --> gux-button-slot-beta
+  gux-button-multi-legacy --> gux-button-slot-beta
   gux-pagination-buttons --> gux-button-slot-beta
   gux-pagination-cursor --> gux-button-slot-beta
   gux-table-beta --> gux-button-slot-beta

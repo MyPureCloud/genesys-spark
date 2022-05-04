@@ -153,6 +153,13 @@ export class GuxCalendar {
     return monthName.charAt(0).toUpperCase() + monthName.slice(1);
   }
 
+  getYearLabel(index: number) {
+    const month = new Date(this.previewValue.getTime());
+    month.setMonth(month.getMonth() + index);
+    const year = month.getFullYear();
+    return year;
+  }
+
   firstDateInMonth(month: number, year: number) {
     const startDate = new Date(year, month, 1, 0, 0, 0, 0);
     const firstDayOfMonth = startDate.getDay();
@@ -463,7 +470,7 @@ export class GuxCalendar {
           index =>
             (
               <label>
-                {this.getMonthLabel(index)} {this.previewValue.getFullYear()}
+                {this.getMonthLabel(index)} {this.getYearLabel(index)}
               </label>
             ) as JSX.Element
         )}
@@ -495,8 +502,7 @@ export class GuxCalendar {
                       >
                         {day.date.getDate()}
                         <span class="gux-sr-only">
-                          {this.getMonthLabel(index)}{' '}
-                          {this.previewValue.getFullYear()}
+                          {this.getMonthLabel(index)} {day.date.getFullYear()}
                         </span>
                       </td>
                     ) as JSX.Element

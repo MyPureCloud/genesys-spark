@@ -21,9 +21,11 @@
  - [gux-accordion-legacy](../../legacy/gux-accordion-legacy)
  - [gux-accordion-section](../gux-accordion/gux-accordion-section)
  - [gux-action-button](../gux-action-button)
+ - [gux-action-button-legacy](../../legacy/gux-action-button-legacy)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-breadcrumb-item](../gux-breadcrumbs/breadcrumb-item)
  - [gux-button-multi](../../beta/gux-button-multi)
+ - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
  - [gux-calendar](../gux-calendar)
  - [gux-content-search](../gux-content-search)
  - [gux-country-select](../../beta/gux-phone-input/components/gux-country-select)
@@ -56,7 +58,6 @@
  - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
- - [gux-tab-advanced-option](../gux-tabs-advanced/gux-tab-advanced-option)
  - [gux-tab-dropdown-option-legacy](../../legacy/gux-tabs-legacy/gux-tab-dropdown-option-legacy)
  - [gux-tab-legacy](../../legacy/gux-tabs-legacy/gux-tab-legacy)
  - [gux-tab-list](../gux-tabs/gux-tab-list)
@@ -71,9 +72,11 @@ graph TD;
   gux-accordion-legacy --> gux-icon
   gux-accordion-section --> gux-icon
   gux-action-button --> gux-icon
+  gux-action-button-legacy --> gux-icon
   gux-advanced-dropdown --> gux-icon
   gux-breadcrumb-item --> gux-icon
   gux-button-multi --> gux-icon
+  gux-button-multi-legacy --> gux-icon
   gux-calendar --> gux-icon
   gux-content-search --> gux-icon
   gux-country-select --> gux-icon
@@ -106,7 +109,6 @@ graph TD;
   gux-submenu --> gux-icon
   gux-tab-advanced --> gux-icon
   gux-tab-advanced-list --> gux-icon
-  gux-tab-advanced-option --> gux-icon
   gux-tab-dropdown-option-legacy --> gux-icon
   gux-tab-legacy --> gux-icon
   gux-tab-list --> gux-icon

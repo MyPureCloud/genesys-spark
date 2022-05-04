@@ -102,7 +102,7 @@ export class GuxCommandPaletteLegacy {
     const recentItems = allItems.filter(item => item.recent);
     const commonItems = allItems.filter(item => item.common);
     let filteredItems = this.filterItems(allItems);
-    let commonList: HTMLGuxListElement;
+    let commonList: HTMLGuxListLegacyElement;
 
     if (commonItems.length) {
       commonList = this.createList(
@@ -119,9 +119,9 @@ export class GuxCommandPaletteLegacy {
       }
 
       const filterList = [
-        <gux-list tabindex="-1" highlight={this.filterValue}>
+        <gux-list-legacy tabindex="-1" highlight={this.filterValue}>
           {filteredItems}
-        </gux-list>
+        </gux-list-legacy>
       ];
 
       if (filterExceeded) {
@@ -153,9 +153,9 @@ export class GuxCommandPaletteLegacy {
 
     if (!lists.length) {
       return (
-        <gux-list tabindex="-1">
+        <gux-list-legacy tabindex="-1">
           {this.transformCommands(sortActions(allItems))}
-        </gux-list>
+        </gux-list-legacy>
       );
     }
 
@@ -203,9 +203,9 @@ export class GuxCommandPaletteLegacy {
 
   private createShortcutItem(
     command: HTMLGuxCommandActionElement
-  ): HTMLGuxListItemElement {
+  ): HTMLGuxListItemLegacyElement {
     return (
-      <gux-list-item
+      <gux-list-item-legacy
         value={command.text}
         onPress={this.handlePress(command)}
         class={(command.details && 'gux-has-details') || ''}
@@ -221,15 +221,15 @@ export class GuxCommandPaletteLegacy {
             strategy="fuzzy"
           />
         )}
-      </gux-list-item>
+      </gux-list-item-legacy>
     );
   }
 
   private createStandardItem(
     command: HTMLGuxCommandActionElement
-  ): HTMLGuxListItemElement {
+  ): HTMLGuxListItemLegacyElement {
     return (
-      <gux-list-item
+      <gux-list-item-legacy
         value={command.text}
         onPress={this.handlePress(command)}
         class={(command.details && 'gux-has-details') || ''}
@@ -242,7 +242,7 @@ export class GuxCommandPaletteLegacy {
             strategy="fuzzy"
           />
         )}
-      </gux-list-item>
+      </gux-list-item-legacy>
     );
   }
 
@@ -281,15 +281,15 @@ export class GuxCommandPaletteLegacy {
     items: HTMLGuxCommandActionElement[],
     filter: string,
     header?: string
-  ): HTMLGuxListElement {
+  ): HTMLGuxListLegacyElement {
     return (
-      <gux-list
+      <gux-list-legacy
         class="gux-command-palette-list"
         highlight={filter}
         tabindex="-1"
       >
         {this.transformCommands(sortActions(items), header)}
-      </gux-list>
+      </gux-list-legacy>
     );
   }
 
@@ -310,12 +310,12 @@ export class GuxCommandPaletteLegacy {
     return el.closest('gux-input-search') !== null;
   }
 
-  private getParentGuxList(el: Element): HTMLGuxListElement {
-    return el.closest('gux-list');
+  private getParentGuxList(el: Element): HTMLGuxListLegacyElement {
+    return el.closest('gux-list-legacy');
   }
 
   private setFocusOnElement(el: Element): void {
-    const listElement = el as HTMLGuxListElement;
+    const listElement = el as HTMLGuxListLegacyElement;
     if (listElement && listElement.setFocusOnLastItem) {
       listElement.setFocusOnLastItem();
       return;
@@ -352,7 +352,7 @@ export class GuxCommandPaletteLegacy {
     const focusedElement = this.root.querySelector(':focus');
 
     if (this.elementIsSearch(focusedElement)) {
-      this.root.querySelector('gux-list').setFocusOnFirstItem();
+      this.root.querySelector('gux-list-legacy').setFocusOnFirstItem();
       return;
     }
 

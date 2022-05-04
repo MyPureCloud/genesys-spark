@@ -142,8 +142,8 @@ export class GuxTabList {
   checkForScrollbarHideOrShow() {
     readTask(() => {
       const el = this.root.querySelector('.gux-scrollable-section');
-      const hasHorizontalScrollbar = el.clientWidth !== el.scrollWidth;
-      const hasVerticalScrollbar = el.clientHeight !== el.scrollHeight;
+      const hasHorizontalScrollbar = el.clientWidth < el.scrollWidth;
+      const hasVerticalScrollbar = el.clientHeight < el.scrollHeight;
 
       if (hasHorizontalScrollbar !== this.hasHorizontalScrollbar) {
         this.hasHorizontalScrollbar = hasHorizontalScrollbar;

@@ -84,36 +84,33 @@ export class GuxTag {
   }
 
   private onSlotChange(event: Event) {
-    this.label = (
+    const slotAssignedNodes = (
       event.composedPath()[0] as HTMLSlotElement
-    ).assignedNodes()[0].textContent;
+    ).assignedNodes();
+    this.label = slotAssignedNodes
+      .map(nodeItem => nodeItem.textContent)
+      .join('');
   }
 
-  private renderIcon(): JSX.Element {
-    if (this.icon) {
-      return (
-        <div class="gux-tag-icon-container">
-          <gux-icon class="gux-tag-icon" icon-name={this.icon} decorative />
-        </div>
-      ) as JSX.Element;
-    }
-  }
-
-  private renderText(): JSX.Element {
+  private renderTagTitle(): JSX.Element {
     return (
-      <div class="gux-tag-text">
-        <slot aria-hidden="true" onSlotchange={this.onSlotChange.bind(this)} />
+      <gux-tooltip-title>
+        <span>
+          <slot
+            aria-hidden="true"
+            onSlotchange={this.onSlotChange.bind(this)}
+          />
+        </span>
+      </gux-tooltip-title>
+    ) as JSX.Element;
+  }
 
-        {!this.disabled && (
-          <div class="gux-sr-only">
-            {this.i18n('tag', { label: this.label })}
-          </div>
-        )}
-        {this.disabled && (
-          <div class="gux-sr-only">
-            {this.i18n('tag-disabled', { label: this.label })}
-          </div>
-        )}
+  private renderSrText(): JSX.Element {
+    return (
+      <div class="gux-sr-only">
+        {this.disabled
+          ? this.i18n('tag-disabled', { label: this.label })
+          : this.i18n('tag', { label: this.label })}
       </div>
     ) as JSX.Element;
   }
@@ -159,8 +156,8 @@ export class GuxTag {
         }}
         aria-disabled={this.disabled.toString()}
       >
-        {this.renderIcon()}
-        {this.renderText()}
+        {this.renderTagTitle()}
+        {this.renderSrText()}
         {this.renderRemoveButton()}
       </div>
     ) as JSX.Element;

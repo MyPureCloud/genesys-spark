@@ -27,12 +27,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Depends on
 
+- [gux-tooltip-title](../../stable/gux-tooltip-title)
 - [gux-icon](../../stable/gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-tag-beta --> gux-tooltip-title
   gux-tag-beta --> gux-icon
+  gux-tooltip-title --> gux-tooltip
   style gux-tag-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -32,7 +32,7 @@ describe('gux-form-field-search-beta', () => {
         'label-position="screenreader"'
       ].forEach((componentAttribute, index) => {
         const html = `
-          <gux-form-field-search-beta ${componentAttribute}>
+          <gux-form-field-search-beta lang="en" ${componentAttribute}>
             <input slot="input" type="search" value="Sample search"/>
             <label slot="label">Label</label>
           </gux-form-field-search-beta>
@@ -60,7 +60,7 @@ describe('gux-form-field-search-beta', () => {
     describe('input attributes', () => {
       ['', 'disabled', 'required'].forEach((inputAttribute, index) => {
         const html = `
-          <gux-form-field-search-beta>
+          <gux-form-field-search-beta lang="en">
             <input slot="input" type="search" value="Sample search" ${inputAttribute}/>
             <label slot="label">Label</label>
           </gux-form-field-search-beta>

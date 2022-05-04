@@ -15,37 +15,25 @@
   align-content: stretch;
   align-items: center;
   justify-content: flex-start;
+  padding: @spacing-3xs @spacing-xs;
+  font-size: 12px;
+  font-weight: bold;
   color: @gux-grey-100;
   background-color: @gux-black-50;
   border-radius: @spacing-2xs;
 
-  .gux-tag-icon-container {
-    display: flex;
-    flex: 0 1 auto;
-    align-content: center;
-    align-items: center;
-    align-self: auto;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    margin-right: (-1 * @spacing-xs);
+  gux-tooltip-title {
+    white-space: nowrap;
+    cursor: default;
 
-    .gux-tag-icon {
-      width: 16px;
-      height: 16px;
+    ::slotted(gux-icon) {
+      height: 20px;
+      font-size: 16px;
     }
   }
 
-  .gux-tag-text {
-    flex: 0 1 auto;
-    align-self: auto;
-    padding: 0 @spacing-xs;
-    line-height: 24px;
-    white-space: nowrap;
-
-    .gux-sr-only {
-      .gux-sr-only-clip();
-    }
+  .gux-sr-only {
+    .gux-sr-only-clip();
   }
 
   .gux-tag-remove-button {
@@ -54,18 +42,15 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
-    margin-left: (-1 * @spacing-xs);
-    overflow: hidden;
+    margin-left: @spacing-xs;
 
     &:not(:disabled):hover {
       cursor: pointer;
     }
 
     .gux-tag-remove-icon {
-      width: 12px;
-      height: 12px;
+      width: 16px;
+      height: 16px;
       border-radius: 25%;
     }
 
@@ -77,62 +62,118 @@
   }
 
   &.gux-disabled {
-    opacity: 0.5;
+    background-color: fade(@gux-black-50, 50%);
   }
 
   &.gux-default {
     background-color: @gux-black-50;
+
+    &.gux-disabled {
+      background-color: fade(@gux-black-50, 50%);
+    }
   }
 
   &.gux-default-subtle {
     color: @gux-black-50;
     background-color: @gux-grey-60;
+
+    &.gux-disabled {
+      color: fade(@gux-black-50, 50%);
+      background-color: fade(@gux-grey-60, 50%);
+    }
   }
 
   &.gux-navy {
     background-color: @gux-navy-sec;
+
+    &.gux-disabled {
+      background-color: fade(@gux-navy-sec, 50%);
+    }
   }
 
   &.gux-blue {
     color: @gux-black-50;
     background-color: @gux-blue-sec;
+
+    &.gux-disabled {
+      color: fade(@gux-black-50, 50%);
+      background-color: fade(@gux-blue-sec, 50%);
+    }
   }
 
   &.gux-electric-purple {
     background-color: @gux-electric-purple-sec;
+
+    &.gux-disabled {
+      background-color: fade(@gux-electric-purple-sec, 50%);
+    }
   }
 
   &.gux-aqua-green {
     color: @gux-black-30;
     background-color: @gux-aqua-green-sec;
+
+    &.gux-disabled {
+      color: fade(@gux-black-30, 50%);
+      background-color: fade(@gux-aqua-green-sec, 50%);
+    }
   }
 
   &.gux-fuscha {
     color: @gux-black-10;
     background-color: @gux-fuscha-sec;
+
+    &.gux-disabled {
+      color: fade(@gux-black-10, 50%);
+      background-color: fade(@gux-fuscha-sec, 50%);
+    }
   }
 
   &.gux-dark-purple {
     background-color: @gux-dark-purple-sec;
+
+    &.gux-disabled {
+      background-color: fade(@gux-dark-purple-sec, 50%);
+    }
   }
 
   &.gux-bubblegum-pink {
     color: @gux-black-50;
     background-color: @gux-bubblegum-pink-sec;
+
+    &.gux-disabled {
+      color: fade(@gux-black-50, 50%);
+      background-color: fade(@gux-bubblegum-pink-sec, 50%);
+    }
   }
 
   &.gux-olive-green {
     color: @gux-black-20;
     background-color: @gux-olive-green-sec;
+
+    &.gux-disabled {
+      color: fade(@gux-black-20, 50%);
+      background-color: fade(@gux-olive-green-sec, 50%);
+    }
   }
 
   &.gux-lilac {
     color: @gux-black-50;
     background-color: @gux-lilac-sec;
+
+    &.gux-disabled {
+      color: fade(@gux-black-50, 50%);
+      background-color: fade(@gux-lilac-sec, 50%);
+    }
   }
 
   &.gux-alert-yellow-green {
     color: @gux-black-50;
     background-color: @gux-alert-yellow-green-sec;
+
+    &.gux-disabled {
+      color: fade(@gux-black-50, 50%);
+      background-color: fade(@gux-alert-yellow-green-sec, 50%);
+    }
   }
 }

@@ -36,6 +36,10 @@ describe('gux-button-slot-beta', () => {
         html: '<gux-button-slot-beta accent="tertiary"><button type="button"accent="primary">Button</button></gux-button-slot-beta>'
       },
       {
+        description: 'should render ghost button',
+        html: '<gux-button-slot-beta accent="ghost"><button type="button"accent="primary">Button</button></gux-button-slot-beta>'
+      },
+      {
         description: 'should render invalid button',
         html: '<gux-button-slot-beta accent="invalid"><button type="button"accent="primary">Button</button></gux-button-slot-beta>'
       },
@@ -54,6 +58,10 @@ describe('gux-button-slot-beta', () => {
       {
         description: 'should render disabled tertiary button',
         html: '<gux-button-slot-beta accent="tertiary"><button type="button"accent="primary" disabled>Button</button></gux-button-slot-beta>'
+      },
+      {
+        description: 'should render disabled ghost button',
+        html: '<gux-button-slot-beta accent="ghost"><button type="button"accent="primary" disabled>Button</button></gux-button-slot-beta>'
       },
       {
         description: 'should render button with invalid accent',
@@ -76,6 +84,10 @@ describe('gux-button-slot-beta', () => {
         html: '<gux-button-slot-beta accent="tertiary"><input type="button"accent="primary" value="Button"/></gux-button-slot-beta>'
       },
       {
+        description: 'should render ghost input[type=button]',
+        html: '<gux-button-slot-beta accent="ghost"><input type="button"accent="primary" value="Button"/></gux-button-slot-beta>'
+      },
+      {
         description: 'should render invalid input[type=button]',
         html: '<gux-button-slot-beta accent="invalid"><input type="button"accent="primary" value="Button"/></gux-button-slot-beta>'
       },
@@ -94,6 +106,10 @@ describe('gux-button-slot-beta', () => {
       {
         description: 'should render disabled tertiary input[type=button]',
         html: '<gux-button-slot-beta accent="tertiary"><input type="button"accent="primary" disabled value="Button"/></gux-button-slot-beta>'
+      },
+      {
+        description: 'should render disabled ghost input[type=button]',
+        html: '<gux-button-slot-beta accent="ghost"><input type="button"accent="primary" disabled value="Button"/></gux-button-slot-beta>'
       },
       {
         description: 'should render input[type=button] with invalid accent',
@@ -116,6 +132,10 @@ describe('gux-button-slot-beta', () => {
         html: '<gux-button-slot-beta accent="tertiary"><input type="submit"accent="primary" value="Button"/></gux-button-slot-beta>'
       },
       {
+        description: 'should render ghost input[type=submit]',
+        html: '<gux-button-slot-beta accent="ghost"><input type="submit"accent="primary" value="Button"/></gux-button-slot-beta>'
+      },
+      {
         description: 'should render invalid input[type=submit]',
         html: '<gux-button-slot-beta accent="invalid"><input type="submit"accent="primary" value="Button"/></gux-button-slot-beta>'
       },
@@ -134,6 +154,10 @@ describe('gux-button-slot-beta', () => {
       {
         description: 'should render disabled tertiary input[type=submit]',
         html: '<gux-button-slot-beta accent="tertiary"><input type="submit"accent="primary" disabled value="Button"/></gux-button-slot-beta>'
+      },
+      {
+        description: 'should render disabled ghost input[type=submit]',
+        html: '<gux-button-slot-beta accent="ghost"><input type="submit"accent="primary" disabled value="Button"/></gux-button-slot-beta>'
       },
       {
         description: 'should render input[type=submit] with invalid accent',
