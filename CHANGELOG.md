@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.67](https://inindca///compare/v3.0.0-alpha.66...v3.0.0-alpha.67) (2022-05-04)
+
+
+### Features
+
+* **button-multi:** move component folder to stable ([ea04d6c](https://inindca///commit/ea04d6ca07ff74c92e26ffaa7a88f664471a48e3))
+* **gux-tabs-advanced:** add gux-list to gux-tabs-advanced ([80c1eaa](https://inindca///commit/80c1eaa14a172dae6e623cbf254a53296fcaf896))
+
+
+### Bug Fixes
+
+* **datepicker:** implemented popper js within datepicker component ([ccbb67f](https://inindca///commit/ccbb67f22607441db7a6ebf5973472e5e7148f97))
+* **gux-tabs:** fix gux-tabs and gux-tabs-advanced scroll button bug ([5169126](https://inindca///commit/5169126e91993588807f7ca0765102bf3b619107))
+* **typo:** fixed icon name typo ([28b231e](https://inindca///commit/28b231eef8bbae936076b115358f4d81ea11055b))
+
 ## [3.0.0-alpha.66](https://inindca///compare/v3.0.0-alpha.65...v3.0.0-alpha.66) (2022-05-03)
 
 
