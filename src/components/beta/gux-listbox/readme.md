@@ -65,11 +65,13 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [gux-country-select](../gux-phone-input/components/gux-country-select)
  - [gux-pagination-items-per-page](../../stable/gux-pagination/gux-pagination-items-per-page)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-country-select --> gux-listbox
   gux-pagination-items-per-page --> gux-listbox
   style gux-listbox fill:#f9f,stroke:#333,stroke-width:4px
 ```

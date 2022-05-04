@@ -7,9 +7,11 @@ Input for international phone numbers
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `value`  | `value`   |             | `string` | `undefined` |
+| Property             | Attribute              | Description | Type                                    | Default     |
+| -------------------- | ---------------------- | ----------- | --------------------------------------- | ----------- |
+| `defaultCountryCode` | `default-country-code` |             | `string`                                | `undefined` |
+| `labelPosition`      | `label-position`       |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
+| `labelText`          | `label-text`           |             | `string`                                | `undefined` |
 
 
 ## Dependencies
@@ -17,17 +19,18 @@ Input for international phone numbers
 ### Depends on
 
 - [gux-country-select](./components/gux-country-select)
+- [gux-icon](../../stable/gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-phone-input-beta --> gux-country-select
-  gux-country-select --> gux-list-item
-  gux-country-select --> gux-country-icon
-  gux-country-select --> gux-popup-beta
+  gux-phone-input-beta --> gux-icon
   gux-country-select --> gux-icon
-  gux-country-select --> gux-list
-  gux-list-item --> gux-text-highlight
+  gux-country-select --> gux-country-icon
+  gux-country-select --> gux-option-v2
+  gux-country-select --> gux-listbox
+  gux-country-select --> gux-popup
   style gux-phone-input-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

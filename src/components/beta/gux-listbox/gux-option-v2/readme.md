@@ -19,11 +19,13 @@
 
 ### Used by
 
+ - [gux-country-select](../../gux-phone-input/components/gux-country-select)
  - [gux-pagination-items-per-page](../../../stable/gux-pagination/gux-pagination-items-per-page)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-country-select --> gux-option-v2
   gux-pagination-items-per-page --> gux-option-v2
   style gux-option-v2 fill:#f9f,stroke:#333,stroke-width:4px
 ```

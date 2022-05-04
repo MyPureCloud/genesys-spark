@@ -89,14 +89,12 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-command-palette-legacy](../../legacy/gux-command-palette-legacy)
- - [gux-country-select](../../beta/gux-phone-input/components/gux-country-select)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-command-palette-legacy --> gux-list
-  gux-country-select --> gux-list
   gux-time-picker-beta --> gux-list
   style gux-list fill:#f9f,stroke:#333,stroke-width:4px
 ```

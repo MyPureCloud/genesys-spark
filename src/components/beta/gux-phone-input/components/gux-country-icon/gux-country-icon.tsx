@@ -33,6 +33,6 @@ export class GuxCountryIcon {
   }
 
   render(): JSX.Element {
-    return <img src={this.imgSrc} alt={this.countryName} />;
+    return (<img src={this.imgSrc} alt={this.countryName} />) as JSX.Element;
   }
 }

@@ -7,10 +7,12 @@
 
 ## Properties
 
-| Property         | Attribute         | Description | Type     | Default     |
-| ---------------- | ----------------- | ----------- | -------- | ----------- |
-| `countryCode`    | `country-code`    |             | `string` | `undefined` |
-| `defaultCountry` | `default-country` |             | `string` | `undefined` |
+| Property         | Attribute         | Description | Type      | Default     |
+| ---------------- | ----------------- | ----------- | --------- | ----------- |
+| `countryCode`    | `country-code`    |             | `string`  | `undefined` |
+| `defaultCountry` | `default-country` |             | `string`  | `'us'`      |
+| `disabled`       | `disabled`        |             | `boolean` | `false`     |
+| `labelId`        | `label-id`        |             | `string`  | `undefined` |
 
 
 ## Dependencies
@@ -21,21 +23,20 @@
 
 ### Depends on
 
-- [gux-list-item](../../../../stable/gux-list/list-item)
-- [gux-country-icon](../gux-country-icon)
-- [gux-popup-beta](../../../gux-popup)
 - [gux-icon](../../../../stable/gux-icon)
-- [gux-list](../../../../stable/gux-list)
+- [gux-country-icon](../gux-country-icon)
+- [gux-option-v2](../../../gux-listbox/gux-option-v2)
+- [gux-listbox](../../../gux-listbox)
+- [gux-popup](../../../../stable/gux-popup)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-country-select --> gux-list-item
-  gux-country-select --> gux-country-icon
-  gux-country-select --> gux-popup-beta
   gux-country-select --> gux-icon
-  gux-country-select --> gux-list
-  gux-list-item --> gux-text-highlight
+  gux-country-select --> gux-country-icon
+  gux-country-select --> gux-option-v2
+  gux-country-select --> gux-listbox
+  gux-country-select --> gux-popup
   gux-phone-input-beta --> gux-country-select
   style gux-country-select fill:#f9f,stroke:#333,stroke-width:4px
 ```

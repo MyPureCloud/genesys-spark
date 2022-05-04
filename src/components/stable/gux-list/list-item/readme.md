@@ -40,7 +40,6 @@ Example of a custom list item with highlighting
 ### Used by
 
  - [gux-command-palette-legacy](../../../legacy/gux-command-palette-legacy)
- - [gux-country-select](../../../beta/gux-phone-input/components/gux-country-select)
  - [gux-time-picker-beta](../../../beta/gux-time-picker)
 
 ### Depends on
@@ -52,7 +51,6 @@ Example of a custom list item with highlighting
 graph TD;
   gux-list-item --> gux-text-highlight
   gux-command-palette-legacy --> gux-list-item
-  gux-country-select --> gux-list-item
   gux-time-picker-beta --> gux-list-item
   style gux-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
