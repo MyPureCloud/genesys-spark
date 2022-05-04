@@ -1,0 +1,104 @@
+<h1>gux-form-field-color</h1>
+
+<p>slot a input[type=color] element into a gux-form-field-color element</p>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Clearable</legend>
+
+    <gux-form-field-color>
+      <input slot="input" type="color" name="c-1" value="#5d3d5e" />
+      <label slot="label">Default</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color clearable>
+      <input slot="input" type="color" name="c-2" value="#5d3d5e" />
+      <label slot="label">True</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color clearable>
+      <input slot="input" type="color" name="c-3" value="#5d3d5e" disabled />
+      <label slot="label">True and disabled</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color clearable="false">
+      <input slot="input" type="color" name="c-4" value="#5d3d5e" />
+      <label slot="label">False</label>
+    </gux-form-field-color>
+  </fieldset>
+
+  <fieldset>
+    <legend>Label Position</legend>
+
+    <gux-form-field-color>
+      <input slot="input" type="color" name="lp-1" value="#ff4f1f" />
+      <label slot="label">Default</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color>
+      <input slot="input" type="color" name="lp-2" value="#ff4f1f" />
+      <label slot="label">Default long label</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color label-position="above">
+      <input slot="input" type="color" name="lp-3" value="#ff4f1f" />
+      <label slot="label">Above</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color label-position="beside">
+      <input slot="input" type="color" name="lp-4" value="#ff4f1f" />
+      <label slot="label">Beside</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color label-position="screenreader">
+      <input slot="input" type="color" name="lp-5" value="#ff4f1f" />
+      <label slot="label">Screenreader</label>
+    </gux-form-field-color>
+  </fieldset>
+
+  <fieldset>
+    <legend>Input attributes</legend>
+
+    <gux-form-field-color>
+      <input slot="input" type="color" name="d-1" value="#203b73" disabled />
+      <label slot="label">True</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color>
+      <input slot="input" type="color" name="r-1" value="#8452cf" required />
+      <label slot="label">True</label>
+    </gux-form-field-color>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+
+    <gux-form-field-color>
+      <input slot="input" type="color" name="e-1" value="#cc3ebe" />
+      <label slot="label">Default</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-color>
+  </fieldset>
+</form>
+
+<h2>gux-form-field examples for comparison</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <gux-form-field label-position="beside">
+      <input slot="input" name="color" type="color" value="#1da8b3" required />
+      <label slot="label">Color</label>
+    </gux-form-field>
+
+    <gux-form-field label-position="above">
+      <input slot="input" name="color" type="color" value="#1da8b3" disabled />
+      <label slot="label">Color Disabled</label>
+    </gux-form-field>
+
+    <gux-form-field label-position="beside">
+      <input slot="input" name="color" type="color" value="#1da8b3" required />
+      <label slot="label">Color</label>
+      <span slot="error">Field is required</span>
+    </gux-form-field>
+  </fieldset>
+</form>

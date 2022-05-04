@@ -16,6 +16,15 @@
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
   * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
+  * `gux-form-field-checkbox-beta` ->  `gux-form-field-checkbox`
+  * `gux-form-field-color-beta` ->  `gux-form-field-color`
+  * `gux-form-field-number-beta` ->  `gux-form-field-number`
+  * `gux-form-field-radio-beta` ->  `gux-form-field-radio`
+  * `gux-form-field-range-beta` ->  `gux-form-field-range`
+  * `gux-form-field-search-beta` ->  `gux-form-field-search`
+  * `gux-form-field-select-beta` ->  `gux-form-field-select`
+  * `gux-form-field-text-like-beta` ->  `gux-form-field-text-like`
+  * `gux-form-field-textarea-beta` ->  `gux-form-field-textarea`
   * `gux-pagination-cursor-beta` ->  `gux-pagination-cursor`
   * `gux-popup-beta` ->  `gux-popup`
   * `gux-tabs-beta` -> `gux-tabs`
@@ -101,6 +110,15 @@ The following components have moved from beta to stable without any api changes.
 
 * gux-accordion
 * gux-dismiss-button
+* gux-form-field-checkbox
+* gux-form-field-color
+* gux-form-field-number
+* gux-form-field-radio
+* gux-form-field-range
+* gux-form-field-search
+* gux-form-field-select
+* gux-form-field-text-like
+* gux-form-field-textarea
 * gux-pagination-cursor
 * gux-popup
 * gux-tabs (v3)
