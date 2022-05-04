@@ -129,7 +129,7 @@ const icons = [
       'roster-email',
       'roster-email-disable',
       'roster-instagram',
-      'roster-instagram-disabled',
+      'roster-instagram-disable',
       'roster-line',
       'roster-line-disable',
       'roster-message',
