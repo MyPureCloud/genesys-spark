@@ -1,13 +1,13 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxOption } from '../gux-option';
+import { GuxOptionLegacy } from '../gux-option';
 
 describe('gux-option', () => {
-  let component: GuxOption;
+  let component: GuxOptionLegacy;
 
   beforeEach(async () => {
     const page = await newSpecPage({
-      components: [GuxOption],
-      html: `<gux-option>TestsAreAwesome</gux-option>`,
+      components: [GuxOptionLegacy],
+      html: `<gux-option-legacy>TestsAreAwesome</gux-option-legacy>`,
       language: 'en'
     });
 
@@ -15,7 +15,7 @@ describe('gux-option', () => {
   });
 
   it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxOption);
+    expect(component).toBeInstanceOf(GuxOptionLegacy);
   });
 
   describe('Class Logic', () => {

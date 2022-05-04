@@ -1,4 +1,4 @@
-# gux-option
+# gux-option-legacy
 
 
 

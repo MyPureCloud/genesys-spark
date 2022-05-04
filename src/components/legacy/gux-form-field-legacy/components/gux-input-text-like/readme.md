@@ -21,7 +21,7 @@
 
 ### Used by
 
- - [gux-dropdown](../../../../stable/gux-dropdown)
+ - [gux-dropdown-legacy](../../../gux-dropdown-legacy)
  - [gux-form-field-legacy](../..)
 
 ### Depends on
@@ -32,7 +32,7 @@
 ```mermaid
 graph TD;
   gux-input-text-like --> gux-icon
-  gux-dropdown --> gux-input-text-like
+  gux-dropdown-legacy --> gux-input-text-like
   gux-form-field-legacy --> gux-input-text-like
   style gux-input-text-like fill:#f9f,stroke:#333,stroke-width:4px
 ```

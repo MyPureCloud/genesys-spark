@@ -1,8 +1,8 @@
-function getListOptions(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element[] {
-  return Array.from(list.children) as HTMLGuxOptionV2Element[];
+function getListOptions(list: HTMLGuxListboxElement): HTMLGuxOptionElement[] {
+  return Array.from(list.children) as HTMLGuxOptionElement[];
 }
 
-function getHoveredOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
+function getHoveredOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
   return getListOptions(list).find(
     option => option.hovered && !option.disabled && !option.filtered
   );
@@ -10,19 +10,19 @@ function getHoveredOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
 
 function getFirstSelectedOption(
   list: HTMLGuxListboxElement
-): HTMLGuxOptionV2Element {
+): HTMLGuxOptionElement {
   return getListOptions(list).find(
     option => option.selected && !option.disabled && !option.filtered
   );
 }
 
-function getActiveOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
+function getActiveOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
   return getListOptions(list).find(option => option.active);
 }
 
 function setActiveOption(
   list: HTMLGuxListboxElement,
-  element: HTMLGuxOptionV2Element
+  element: HTMLGuxOptionElement
 ): void {
   if (element) {
     getListOptions(list).forEach(option => {
@@ -38,23 +38,23 @@ function setActiveOption(
   }
 }
 
-function getFirstOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
+function getFirstOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
   let firstOption = getListOptions(list)[0];
 
   while (firstOption && (firstOption.disabled || firstOption.filtered)) {
-    firstOption = firstOption.nextElementSibling as HTMLGuxOptionV2Element;
+    firstOption = firstOption.nextElementSibling as HTMLGuxOptionElement;
   }
 
   return firstOption;
 }
 
-function getNextOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
+function getNextOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
   if (hasActiveOption(list)) {
     let nextOption = getActiveOption(list)
-      .nextElementSibling as HTMLGuxOptionV2Element;
+      .nextElementSibling as HTMLGuxOptionElement;
 
     while (nextOption && (nextOption.disabled || nextOption.filtered)) {
-      nextOption = nextOption.nextElementSibling as HTMLGuxOptionV2Element;
+      nextOption = nextOption.nextElementSibling as HTMLGuxOptionElement;
     }
 
     return nextOption;
@@ -63,19 +63,17 @@ function getNextOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
   return getFirstOption(list);
 }
 
-function getPreviousOption(
-  list: HTMLGuxListboxElement
-): HTMLGuxOptionV2Element {
+function getPreviousOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
   if (hasActiveOption(list)) {
     let previousOption = getActiveOption(list)
-      .previousElementSibling as HTMLGuxOptionV2Element;
+      .previousElementSibling as HTMLGuxOptionElement;
 
     while (
       previousOption &&
       (previousOption.disabled || previousOption.filtered)
     ) {
       previousOption =
-        previousOption.previousElementSibling as HTMLGuxOptionV2Element;
+        previousOption.previousElementSibling as HTMLGuxOptionElement;
     }
 
     return previousOption;
@@ -84,13 +82,13 @@ function getPreviousOption(
   return getFirstOption(list);
 }
 
-function getLastOption(list: HTMLGuxListboxElement): HTMLGuxOptionV2Element {
+function getLastOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
   const options = getListOptions(list);
 
   let lastOption = options[options.length - 1];
 
   while (lastOption && (lastOption.disabled || lastOption.filtered)) {
-    lastOption = lastOption.previousElementSibling as HTMLGuxOptionV2Element;
+    lastOption = lastOption.previousElementSibling as HTMLGuxOptionElement;
   }
 
   return lastOption;
@@ -103,7 +101,7 @@ function hasActiveOption(list: HTMLGuxListboxElement): boolean {
 export function getSearchOption(
   list: HTMLGuxListboxElement,
   searchString: string
-): HTMLGuxOptionV2Element {
+): HTMLGuxOptionElement {
   return getListOptions(list).find(option => {
     return (
       (!option.disabled || !option.filtered) &&
@@ -143,14 +141,14 @@ export function setInitialActiveOption(list: HTMLGuxListboxElement) {
 export function hasPreviousOption(list: HTMLGuxListboxElement): boolean {
   if (hasActiveOption(list)) {
     let previousOption = getActiveOption(list)
-      .previousElementSibling as HTMLGuxOptionV2Element;
+      .previousElementSibling as HTMLGuxOptionElement;
 
     while (
       previousOption &&
       (previousOption.disabled || previousOption.filtered)
     ) {
       previousOption =
-        previousOption.previousElementSibling as HTMLGuxOptionV2Element;
+        previousOption.previousElementSibling as HTMLGuxOptionElement;
     }
 
     return Boolean(previousOption);
@@ -162,10 +160,10 @@ export function hasPreviousOption(list: HTMLGuxListboxElement): boolean {
 export function hasNextOption(list: HTMLGuxListboxElement): boolean {
   if (hasActiveOption(list)) {
     let nextOption = getActiveOption(list)
-      .nextElementSibling as HTMLGuxOptionV2Element;
+      .nextElementSibling as HTMLGuxOptionElement;
 
     while (nextOption && (nextOption.disabled || nextOption.filtered)) {
-      nextOption = nextOption.nextElementSibling as HTMLGuxOptionV2Element;
+      nextOption = nextOption.nextElementSibling as HTMLGuxOptionElement;
     }
 
     return Boolean(nextOption);
@@ -200,7 +198,7 @@ export function actOnActiveOption(
 }
 
 export function onClickedOption(
-  option: HTMLGuxOptionV2Element,
+  option: HTMLGuxOptionElement,
   handler: (value: string) => void
 ): void {
   handler(option.value);

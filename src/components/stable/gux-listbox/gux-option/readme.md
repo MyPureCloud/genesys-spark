@@ -1,4 +1,4 @@
-# gux-option-v2
+# gux-option
 
 <!-- Auto Generated Below -->
 
@@ -19,13 +19,13 @@
 
 ### Used by
 
- - [gux-pagination-items-per-page](../../../stable/gux-pagination/gux-pagination-items-per-page)
+ - [gux-pagination-items-per-page](../../gux-pagination/gux-pagination-items-per-page)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-pagination-items-per-page --> gux-option-v2
-  style gux-option-v2 fill:#f9f,stroke:#333,stroke-width:4px
+  gux-pagination-items-per-page --> gux-option
+  style gux-option fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

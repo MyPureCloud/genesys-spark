@@ -16,6 +16,7 @@
 * remove `-beta` from components that have become stable
   * `gux-accordion-beta` ->  `gux-accordion`
   * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
+  * `gux-dropdown-v2-beta` ->  `gux-dropdown`
   * `gux-form-field-checkbox-beta` ->  `gux-form-field-checkbox`
   * `gux-form-field-color-beta` ->  `gux-form-field-color`
   * `gux-form-field-number-beta` ->  `gux-form-field-number`
@@ -34,6 +35,7 @@
   * `gux-action-button` -> `gux-action-button-legacy`
   * `gux-action-list` -> `gux-action-list-legacy`
   * `gux-button-multi` -> `gux-button-multi-legacy`
+  * `gux-dropdown` ->  `gux-dropdown-legacy`
   * `gux-form-field` -> `gux-form-field-legacy`
   * `gux-list` -> `gux-list-legacy`
   * `gux-tabs`-> `gux-tabs-legacy`
@@ -49,6 +51,8 @@
     * `gux-action-item` -> `gux-list-item`
   * `gux-button-multi-legacy` -> `gux-button-multi`
     * `gux-action-item` -> `gux-list-item`
+  * `gux-dropdown-legacy` -> `gux-dropdown`
+    * `gux-option-legacy` -> `gux-listbox` & `gux-option`
   * `gux-form-field-legacy` -> `gux-form-field-{type}`
     * `gux-form-field-checkbox`
     * `gux-form-field-color`
@@ -120,6 +124,7 @@ The following components have moved from beta to stable without any api changes.
 
 * gux-accordion
 * gux-dismiss-button
+* gux-dropdown-v2-beta
 * gux-form-field-checkbox
 * gux-form-field-color
 * gux-form-field-number
@@ -166,6 +171,7 @@ The following components have moved from stable to legacy without any api change
 * gux-action-button
 * gux-action-list
 * gux-button-multi
+* gux-dropdown
 * gux-list
 * gux-tabs (v2)
 
@@ -208,6 +214,10 @@ Contact the Core UI team if you need help migrating away from this component.
 ### gux-command-palette-legacy
 
 Contact the Core UI team if you need help migrating away from this component.
+
+### gux-dropdown-legacy
+
+[More details here](./gux-dropdown-legacy)
 
 ### gux-form-field-legacy
 

@@ -21,7 +21,7 @@ import { GuxItemsPerPage } from '../gux-pagination.types';
 })
 export class GuxPaginationItemsPerPage implements ComponentInterface {
   private i18n: GetI18nValue;
-  private dropdownElement: HTMLGuxDropdownV2BetaElement;
+  private dropdownElement: HTMLGuxDropdownElement;
 
   @Element()
   private root: HTMLElement;
@@ -46,17 +46,17 @@ export class GuxPaginationItemsPerPage implements ComponentInterface {
 
   private getDropdown(): JSX.Element {
     return (
-      <gux-dropdown-v2-beta
+      <gux-dropdown
         ref={el => (this.dropdownElement = el)}
         value={`${this.itemsPerPage}`}
       >
         <gux-listbox aria-label={this.i18n('itemsPerPage')}>
-          <gux-option-v2 value="25">25</gux-option-v2>
-          <gux-option-v2 value="50">50</gux-option-v2>
-          <gux-option-v2 value="75">75</gux-option-v2>
-          <gux-option-v2 value="100">100</gux-option-v2>
+          <gux-option value="25">25</gux-option>
+          <gux-option value="50">50</gux-option>
+          <gux-option value="75">75</gux-option>
+          <gux-option value="100">100</gux-option>
         </gux-listbox>
-      </gux-dropdown-v2-beta>
+      </gux-dropdown>
     ) as JSX.Element;
   }
 

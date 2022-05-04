@@ -18,7 +18,7 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
         <gux-pagination-items-per-page items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -40,24 +40,24 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -134,7 +134,7 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
         <gux-pagination-items-per-page items-per-page="50">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -156,24 +156,24 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -250,7 +250,7 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
         <gux-pagination-items-per-page items-per-page="75">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -272,24 +272,24 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -366,7 +366,7 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
         <gux-pagination-items-per-page items-per-page="100">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -388,24 +388,24 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -482,7 +482,7 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
         <gux-pagination-items-per-page items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -504,24 +504,24 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -598,7 +598,7 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
         <gux-pagination-items-per-page items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -620,24 +620,24 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -714,7 +714,7 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
         <gux-pagination-items-per-page items-per-page="50">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -736,24 +736,24 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -830,7 +830,7 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
         <gux-pagination-items-per-page items-per-page="75">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -852,24 +852,24 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -946,7 +946,7 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
         <gux-pagination-items-per-page items-per-page="100">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -968,24 +968,24 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -1114,7 +1114,7 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
         <gux-pagination-items-per-page items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -1136,24 +1136,24 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
@@ -1230,7 +1230,7 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
         <gux-pagination-items-per-page items-per-page="25">
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
-              <gux-dropdown-v2-beta>
+              <gux-dropdown>
                 <mock:shadow-root>
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
@@ -1252,24 +1252,24 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
                   <mock:shadow-root>
                     <slot></slot>
                   </mock:shadow-root>
-                  <gux-option-v2 aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-v2-i" role="option">
+                  <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <!---->
                     25
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     50
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     75
-                  </gux-option-v2>
-                  <gux-option-v2 aria-disabled="false" aria-selected="false" id="gux-option-v2-i" role="option">
+                  </gux-option>
+                  <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <!---->
                     100
-                  </gux-option-v2>
+                  </gux-option>
                 </gux-listbox>
-              </gux-dropdown-v2-beta>
+              </gux-dropdown>
             </div>
             <div>
               per page
