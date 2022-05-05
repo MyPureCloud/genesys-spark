@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.68](https://inindca///compare/v3.0.0-alpha.67...v3.0.0-alpha.68) (2022-05-05)
+
+
+### Features
+
+* **form-field-v2:** moved components to stable ([333564a](https://inindca///commit/333564a6bd840802d333992c16923127003c4f30))
+
+
+### Bug Fixes
+
+* **gux-popover:** fix z-index for Safari stacking context bug ([24eb8cf](https://inindca///commit/24eb8cf08253384e98b918232890b1bda8b7f4c5))
+
 ## [3.0.0-alpha.67](https://inindca///compare/v3.0.0-alpha.66...v3.0.0-alpha.67) (2022-05-04)
 
 
