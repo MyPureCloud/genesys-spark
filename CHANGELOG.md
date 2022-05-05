@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.54.1](https://inindca///compare/v2.54.0...v2.54.1) (2022-05-05)
+
+
+### Bug Fixes
+
+* **gux-tabs-beta:** fix scrollbar button bug ([3d8490e](https://inindca///commit/3d8490e609e9bb3e194a9f857fee3b20d0fe1b6a))
+* **typo:** fixed icon name typo ([ba6e7f5](https://inindca///commit/ba6e7f503f760cd05f10c67602d61664cb780950))
+
 ## [2.54.0](https://inindca///compare/v2.53.2...v2.54.0) (2022-04-28)
 
 
