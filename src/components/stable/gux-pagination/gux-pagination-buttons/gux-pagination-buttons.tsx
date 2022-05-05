@@ -124,18 +124,21 @@ export class GuxPaginationButtons {
       <div class="gux-pagination-buttons-input-container">
         <div>{this.i18n('page')}</div>
         <div class="gux-pagination-buttons-input">
-          <gux-input-text-like>
-            <input
-              aria-label={this.i18n('pageInputLabel', {
+          <gux-form-field-text-like label-position="screenreader">
+            <label slot="label">
+              {this.i18n('pageInputLabel', {
                 currentPage: this.currentPage,
                 totalPages: this.totalPages
               })}
+            </label>
+            <input
+              type="text"
               slot="input"
               value={String(this.currentPage)}
               ref={ref => (this.textFieldRef = ref)}
               onChange={() => this.setPageFromInput(this.textFieldRef.value)}
             />
-          </gux-input-text-like>
+          </gux-form-field-text-like>
         </div>
         <div>{this.i18n('totalPages', { totalPages: this.totalPages })}</div>
       </div>

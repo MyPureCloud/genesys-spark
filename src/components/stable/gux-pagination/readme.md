@@ -48,10 +48,12 @@ graph TD;
   gux-pagination-items-per-page --> gux-option-v2
   gux-dropdown-v2-beta --> gux-icon
   gux-dropdown-v2-beta --> gux-popup
-  gux-pagination-buttons --> gux-input-text-like
+  gux-pagination-buttons --> gux-form-field-text-like
   gux-pagination-buttons --> gux-button-slot-beta
   gux-pagination-buttons --> gux-icon
-  gux-input-text-like --> gux-icon
+  gux-form-field-text-like --> gux-form-field-input-clear-button
+  gux-form-field-text-like --> gux-icon
+  gux-form-field-input-clear-button --> gux-icon
   style gux-pagination fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

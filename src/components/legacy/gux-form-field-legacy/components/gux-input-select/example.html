@@ -1,0 +1,75 @@
+<form onchange="notify(event)" oninput="notify(event)">
+  <h1>gux-form-field-legacy (Select)</h1>
+
+  <p>slot a select element into a gux-form-field-legacy element</p>
+
+  <h2>Label Position Above</h2>
+
+  <gux-form-field-legacy label-position="above">
+    <select slot="input" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+  </gux-form-field-legacy>
+
+  <gux-form-field-legacy label-position="above">
+    <select slot="input" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+    <span slot="error">Required</span>
+  </gux-form-field-legacy>
+
+  <gux-form-field-legacy label-position="above">
+    <select slot="input" name="select" disabled>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+  </gux-form-field-legacy>
+
+  <h2>Label Position Beside</h2>
+
+  <gux-form-field-legacy label-position="beside">
+    <select slot="input" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+  </gux-form-field-legacy>
+
+  <gux-form-field-legacy label-position="beside">
+    <select slot="input" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+    <span slot="error">Required</span>
+  </gux-form-field-legacy>
+
+  <gux-form-field-legacy label-position="beside">
+    <select slot="input" name="select" disabled>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+  </gux-form-field-legacy>
+
+  <h2>With a smaller width</h2>
+  <gux-form-field-legacy label-position="above" style="width: 120px">
+    <select slot="input" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <label slot="label">Select</label>
+  </gux-form-field-legacy>
+</form>
