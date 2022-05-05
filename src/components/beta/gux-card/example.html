@@ -2,7 +2,7 @@
 <h2>Outline Card</h2>
 <gux-card-beta>
   <h2>Outcome Details</h2>
-  <gux-form-field-text-like-beta label-position="above">
+  <gux-form-field-text-like label-position="above">
     <input
       slot="input"
       type="text"
@@ -11,8 +11,8 @@
       required
     />
     <label slot="label">Name</label>
-  </gux-form-field-text-like-beta>
-  <gux-form-field-text-like-beta label-position="above">
+  </gux-form-field-text-like>
+  <gux-form-field-text-like label-position="above">
     <input
       slot="input"
       type="text"
@@ -20,7 +20,7 @@
       placeholder="Please enter a description"
     />
     <label slot="label">Description</label>
-  </gux-form-field-text-like-beta>
+  </gux-form-field-text-like>
   <gux-card-beta accent="filled">
     <div class="card-content">
       <label>Status</label>
@@ -36,28 +36,28 @@
   <h2>Define your outcome conditions</h2>
   <gux-card-beta accent="filled">
     <p>What activity type should be used to achieve this outcome?</p>
-    <gux-form-field-select-beta label-position="beside">
+    <gux-form-field-select label-position="beside">
       <select slot="input" name="lp-1">
         <option value="option1">Session 1</option>
         <option value="option2">Session 2</option>
         <option value="option3">Session 3</option>
       </select>
       <label slot="label">Session Type</label>
-    </gux-form-field-select-beta>
+    </gux-form-field-select>
   </gux-card-beta>
   <gux-button class="button-styling">Add Event</gux-button>
 </gux-card-beta>
 <h2>Filled Card</h2>
 <gux-card-beta accent="filled">
   <p>What session type is required for this action to be performed?</p>
-  <gux-form-field-select-beta label-position="beside">
+  <gux-form-field-select label-position="beside">
     <select slot="input" name="lp-1">
       <option value="option1">Session 1</option>
       <option value="option2">Session 2</option>
       <option value="option3">Session 3</option>
     </select>
     <label slot="label">Session Type</label>
-  </gux-form-field-select-beta>
+  </gux-form-field-select>
 </gux-card-beta>
 <h2>Raised Card</h2>
 <gux-card-beta accent="raised">
@@ -69,7 +69,7 @@
 </gux-card-beta>
 
 <style>
-  gux-form-field-text-like-beta {
+  gux-form-field-text-like {
     width: 700px;
   }
 

@@ -28,7 +28,7 @@
   <body>
     <h1>Vue@3</h1>
     <div id="app">
-      <gux-form-field-text-like-beta>
+      <gux-form-field-text-like>
         <input
           slot="input"
           name="errorInput"
@@ -37,7 +37,7 @@
         />
         <label slot="label">Input</label>
         <span v-if="hasError" slot="error">Field is required</span>
-      </gux-form-field-text-like-beta>
+      </gux-form-field-text-like>
 
       <gux-button v-on:click="toggleHasError">Toggle Has Error</gux-button>
     </div>

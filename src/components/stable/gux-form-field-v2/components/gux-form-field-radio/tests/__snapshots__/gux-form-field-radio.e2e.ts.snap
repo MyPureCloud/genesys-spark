@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-radio #render should render component as expected (1) 1`] = `"<gux-form-field-radio hydrated=\\"\\"> <input slot=\\"input\\" type=\\"radio\\" name=\\"food-1\\" value=\\"pizza\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> </gux-form-field-radio>"`;
+
+exports[`gux-form-field-radio #render should render component as expected (1) 2`] = `
+<div class="gux-form-field-container">
+  <div class="gux-input">
+    <slot name="input"></slot>
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (2) 1`] = `"<gux-form-field-radio class=\\"gux-disabled\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"radio\\" name=\\"food-1\\" value=\\"pizza\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> </gux-form-field-radio>"`;
+
+exports[`gux-form-field-radio #render should render component as expected (2) 2`] = `
+<div class="gux-form-field-container">
+  <div class="gux-input">
+    <slot name="input"></slot>
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (3) 1`] = `"<gux-form-field-radio class=\\"gux-input-error\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"radio\\" name=\\"food-1\\" value=\\"pizza\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-error-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> <span slot=\\"error\\" id=\\"gux-form-field-error-i\\">This is an error message</span> </gux-form-field-radio>"`;
+
+exports[`gux-form-field-radio #render should render component as expected (3) 2`] = `
+<div class="gux-form-field-container">
+  <div class="gux-input">
+    <slot name="input"></slot>
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-form-field-error gux-show">
+    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (4) 1`] = `"<gux-form-field-radio hydrated=\\"\\"> <input slot=\\"input\\" type=\\"radio\\" name=\\"food-1\\" value=\\"pizza\\" checked=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> </gux-form-field-radio>"`;
+
+exports[`gux-form-field-radio #render should render component as expected (4) 2`] = `
+<div class="gux-form-field-container">
+  <div class="gux-input">
+    <slot name="input"></slot>
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (5) 1`] = `"<gux-form-field-radio class=\\"gux-input-error\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"radio\\" name=\\"food-1\\" value=\\"pizza\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-error-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> <span slot=\\"error\\" id=\\"gux-form-field-error-i\\">Error message</span> </gux-form-field-radio>"`;
+
+exports[`gux-form-field-radio #render should render component as expected (5) 2`] = `
+<div class="gux-form-field-container">
+  <div class="gux-input">
+    <slot name="input"></slot>
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-form-field-error gux-show">
+    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+</div>
+`;

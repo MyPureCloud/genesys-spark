@@ -1,0 +1,79 @@
+<h1>gux-form-field-search</h1>
+
+<p>slot a input[type=search] element into a gux-form-field-search element</p>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Label Position</legend>
+
+    <gux-form-field-search>
+      <input slot="input" type="search" name="lp-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-search>
+
+    <gux-form-field-search>
+      <input slot="input" type="search" name="lp-2" />
+      <label slot="label">Default long label</label>
+    </gux-form-field-search>
+
+    <gux-form-field-search label-position="above">
+      <input slot="input" type="search" name="lp-3" />
+      <label slot="label">Above</label>
+    </gux-form-field-search>
+
+    <gux-form-field-search label-position="beside">
+      <input slot="input" type="search" name="lp-4" />
+      <label slot="label">Beside</label>
+    </gux-form-field-search>
+
+    <gux-form-field-search label-position="screenreader">
+      <input slot="input" type="search" name="lp-5" />
+      <label slot="label">Screenreader</label>
+    </gux-form-field-search>
+  </fieldset>
+
+  <fieldset>
+    <legend>Input attributes</legend>
+
+    <gux-form-field-search>
+      <input slot="input" type="search" name="a-1" disabled />
+      <label slot="label">Disabled</label>
+    </gux-form-field-search>
+
+    <gux-form-field-search>
+      <input slot="input" type="search" name="a-2" required />
+      <label slot="label">Required</label>
+    </gux-form-field-search>
+
+    <gux-form-field-search>
+      <input slot="input" type="search" name="a-3" placeholder="Enter search" />
+      <label slot="label">Placeholder</label>
+    </gux-form-field-search>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+
+    <gux-form-field-search>
+      <input slot="input" type="search" name="e-1" />
+      <label slot="label">Default</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-search>
+  </fieldset>
+</form>
+
+<h2>gux-form-field examples for comparison</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <gux-form-field label-position="beside">
+      <input slot="input" type="search" placeholder="Enter a search" disabled />
+      <label slot="label">Search</label>
+    </gux-form-field>
+
+    <gux-form-field label-position="screenreader">
+      <input slot="input" type="search" placeholder="Enter a search" />
+      <label slot="label">This will be read by a screenreader</label>
+    </gux-form-field>
+  </fieldset>
+</form>
