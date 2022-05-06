@@ -27,7 +27,6 @@ export class GuxFlyoutMenu {
   private hideDelayTimeout: NodeJS.Timer;
   private popperInstance: Instance;
   private targetElement: HTMLSpanElement;
-  private menuElement: HTMLDivElement;
   private menuContentElement: HTMLDivElement;
 
   @Element()
@@ -131,23 +130,27 @@ export class GuxFlyoutMenu {
   }
 
   private runPopper(): void {
-    this.popperInstance = createPopper(this.targetElement, this.menuElement, {
-      modifiers: [
-        {
-          name: 'offset',
-          options: {
-            offset: [0, 16]
+    this.popperInstance = createPopper(
+      this.targetElement,
+      document.querySelector('gux-menu'),
+      {
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, 16]
+            }
+          },
+          {
+            name: 'arrow',
+            options: {
+              padding: 16 // 16px from the edges of the popper
+            }
           }
-        },
-        {
-          name: 'arrow',
-          options: {
-            padding: 16 // 16px from the edges of the popper
-          }
-        }
-      ],
-      placement: 'bottom-start'
-    });
+        ],
+        placement: 'bottom-start'
+      }
+    );
   }
 
   private destroyPopper(): void {
@@ -192,19 +195,13 @@ export class GuxFlyoutMenu {
           <slot name="target" />
         </span>
         <div
-          ref={el => (this.menuElement = el)}
           class={{
-            'gux-flyout-menu-wrapper': true,
+            'gux-flyout-menu-content': true,
             'gux-shown': this.isShown
           }}
+          ref={el => (this.menuContentElement = el)}
         >
-          <div
-            class="gux-flyout-menu-content"
-            ref={el => (this.menuContentElement = el)}
-          >
-            <slot name="menu" />
-          </div>
-          <div class="gux-arrow" data-popper-arrow />
+          <slot name="menu" />
         </div>
       </Host>
     ) as JSX.Element;

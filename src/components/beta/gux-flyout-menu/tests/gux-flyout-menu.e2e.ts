@@ -52,7 +52,7 @@ describe('gux-flyout-menu', () => {
     it('opens flyout menu', async () => {
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-flyout-menu-beta');
-      const menuWrapper = await element.find('pierce/.gux-flyout-menu-wrapper');
+      const menuWrapper = await element.find('pierce/.gux-flyout-menu-content');
 
       expect(menuWrapper).not.toHaveClass('gux-shown');
       await element.hover();
