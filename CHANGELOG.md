@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.69](https://inindca///compare/v3.0.0-alpha.68...v3.0.0-alpha.69) (2022-05-06)
+
+
+### Features
+
+* **gux-form-field:** moved gux-form-field to legacy ([e8abf31](https://inindca///commit/e8abf31f34f734820b2685e5ac115d324da0cfa9))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([a57f17e](https://inindca///commit/a57f17e4b847b858a32a245712b622f9a511aef4))
+
 ## [3.0.0-alpha.68](https://inindca///compare/v3.0.0-alpha.67...v3.0.0-alpha.68) (2022-05-05)
 
 
