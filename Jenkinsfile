@@ -82,12 +82,13 @@ webappPipeline {
             }
                 def publishedVersion = sh(script: 'node -e "console.log(require(\'./package.json\').version)"', returnStdout: true).trim()
                 currentBuild.description = publishedVersion
-                
+
                 // Compile react components to JS, match version to parent lib, publish
                 sh """
                   cd common-webcomponents-react
-                  npm run build && \
-                    npm version ${publishedVersion} && \
+                  npm install --production --legacy-peer-deps --no-progress &&
+                    npm run build &&
+                    npm version ${publishedVersion} &&
                     npm publish
                   # We've modified the package.json / package-lock.json version but don't want to commit them (version left as empty in checked-in version)
                   # Clear those changes so we aren't causing issues with uncommited changes downstream
