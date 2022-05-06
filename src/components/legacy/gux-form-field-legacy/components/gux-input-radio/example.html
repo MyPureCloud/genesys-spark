@@ -1,0 +1,24 @@
+<form onchange="notify(event)" oninput="notify(event)">
+  <h1>gux-form-field-legacy (Radio)</h1>
+
+  <p>slot a input[type=radio] element into a gux-form-field-legacy element</p>
+
+  <div>
+    <gux-form-field-legacy>
+      <input slot="input" type="radio" name="food" value="pizza" />
+      <label slot="label">Pizza</label>
+    </gux-form-field-legacy>
+    <gux-form-field-legacy>
+      <input slot="input" type="radio" name="food" value="pasta" checked />
+      <label slot="label">Pasta</label>
+    </gux-form-field-legacy>
+    <gux-form-field-legacy>
+      <input slot="input" type="radio" name="food" value="hamburger" />
+      <label slot="label">Hamburger</label>
+    </gux-form-field-legacy>
+    <gux-form-field-legacy>
+      <input slot="input" type="radio" name="food" value="sandwich" disabled />
+      <label slot="label">Sandwich</label>
+    </gux-form-field-legacy>
+  </div>
+</form>

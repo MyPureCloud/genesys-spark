@@ -50,7 +50,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-input-text-like](../gux-form-field/components/gux-input-text-like)
+- [gux-input-text-like](../../legacy/gux-form-field-legacy/components/gux-input-text-like)
 - [gux-icon](../gux-icon)
 
 ### Graph

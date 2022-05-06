@@ -34,6 +34,7 @@
   * `gux-action-button` -> `gux-action-button-legacy`
   * `gux-action-list` -> `gux-action-list-legacy`
   * `gux-button-multi` -> `gux-button-multi-legacy`
+  * `gux-form-field` -> `gux-form-field-legacy`
   * `gux-list` -> `gux-list-legacy`
   * `gux-tabs`-> `gux-tabs-legacy`
     * `gux-tab-dropdown-option`-> `gux-tab-dropdown-option-legacy`
@@ -48,7 +49,16 @@
     * `gux-action-item` -> `gux-list-item`
   * `gux-button-multi-legacy` -> `gux-button-multi`
     * `gux-action-item` -> `gux-list-item`
-  * `gux-list-legacy` -> `gux-list`
+  * `gux-form-field-legacy` -> `gux-form-field-{type}`
+    * `gux-form-field-checkbox`
+    * `gux-form-field-color`
+    * `gux-form-field-number`
+    * `gux-form-field-radio`
+    * `gux-form-field-range`
+    * `gux-form-field-search`
+    * `gux-form-field-select`
+    * `gux-form-field-text-like`
+    * `gux-form-field-textarea`
   * `gux-command-palette-legacy` -> Contact the Core UI team if you need help migrating away from this component.
   * `gux-panel-frame-legacy` -> Contact the Core UI team if you need help migrating away from this component.
   * `gux-side-panel-legacy` -> Contact the Core UI team if you need help migrating away from this component.
@@ -198,6 +208,10 @@ Contact the Core UI team if you need help migrating away from this component.
 ### gux-command-palette-legacy
 
 Contact the Core UI team if you need help migrating away from this component.
+
+### gux-form-field-legacy
+
+[More details here](./gux-form-field-legacy)
 
 ### gux-list-legacy
 

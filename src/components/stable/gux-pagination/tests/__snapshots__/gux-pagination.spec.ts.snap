@@ -85,9 +85,12 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 1 of 40" slot="input" value="1">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 1 of 40
+                  </label>
+                  <input slot="input" type="text" value="1">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 40
@@ -198,9 +201,12 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 1 of 20" slot="input" value="1">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 1 of 20
+                  </label>
+                  <input slot="input" type="text" value="1">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 20
@@ -311,9 +317,12 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 1 of 14" slot="input" value="1">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 1 of 14
+                  </label>
+                  <input slot="input" type="text" value="1">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 14
@@ -424,9 +433,12 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 1 of 10" slot="input" value="1">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 1 of 10
+                  </label>
+                  <input slot="input" type="text" value="1">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 10
@@ -537,9 +549,12 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 1 of 40" slot="input" value="1">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 1 of 40
+                  </label>
+                  <input slot="input" type="text" value="1">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 40
@@ -650,9 +665,12 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 10 of 40" slot="input" value="10">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 10 of 40
+                  </label>
+                  <input slot="input" type="text" value="10">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 40
@@ -763,9 +781,12 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 10 of 20" slot="input" value="10">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 10 of 20
+                  </label>
+                  <input slot="input" type="text" value="10">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 20
@@ -876,9 +897,12 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 10 of 14" slot="input" value="10">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 10 of 14
+                  </label>
+                  <input slot="input" type="text" value="10">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 14
@@ -989,9 +1013,12 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 10 of 10" slot="input" value="10">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 10 of 10
+                  </label>
+                  <input slot="input" type="text" value="10">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 10
@@ -1154,9 +1181,12 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 1 of 40" slot="input" value="1">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 1 of 40
+                  </label>
+                  <input slot="input" type="text" value="1">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 40
@@ -1267,9 +1297,12 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
                 Page
               </div>
               <div class="gux-pagination-buttons-input">
-                <gux-input-text-like>
-                  <input aria-label="Page 0 of 0" slot="input" value="0">
-                </gux-input-text-like>
+                <gux-form-field-text-like label-position="screenreader">
+                  <label slot="label">
+                    Page 0 of 0
+                  </label>
+                  <input slot="input" type="text" value="0">
+                </gux-form-field-text-like>
               </div>
               <div>
                 of 0

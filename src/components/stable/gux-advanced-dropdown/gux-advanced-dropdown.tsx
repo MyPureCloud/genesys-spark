@@ -17,7 +17,6 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import advancedDropDownResources from './i18n/en.json';
 import { onMutation } from '../../../utils/dom/on-mutation';
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
@@ -33,7 +32,6 @@ export class GuxAdvancedDropdown {
   filterDebounceTimer: ReturnType<typeof setTimeout>;
 
   private i18n: GetI18nValue;
-  private searchId: string = randomHTMLId('gux-advanced-dropdown-search');
 
   /**
    * Disable the input and prevent interactions.
@@ -183,20 +181,17 @@ export class GuxAdvancedDropdown {
           }`}
         >
           <div class="gux-dropdown-menu-container">
-            <label htmlFor={this.searchId} class="gux-search-label">
-              {this.i18n('searchAria')}
-            </label>
-
-            <gux-input-search>
+            <gux-form-field-search label-position="screenreader">
+              <label slot="label">{this.i18n('searchAria')}</label>
               <input
-                id={this.searchId}
+                slot="input"
                 type="search"
                 onInput={(event: InputEvent) => {
                   this.handleSearchInput(event);
                 }}
                 ref={el => (this.searchInput = el)}
               />
-            </gux-input-search>
+            </gux-form-field-search>
 
             <div
               class="gux-dropdown-options"
