@@ -5,19 +5,37 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
+## Methods
 
-| Property   | Attribute   | Description | Type     | Default     |
-| ---------- | ----------- | ----------- | -------- | ----------- |
-| `tabWidth` | `tab-width` |             | `number` | `undefined` |
+### `setHideTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `setShowTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies
 
 ### Used by
 
+ - [gux-badge-beta](../../beta/gux-badge)
  - [gux-tab](../gux-tabs/gux-tab)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
+ - [gux-tag-beta](../../beta/gux-tag)
 
 ### Depends on
 
@@ -27,8 +45,10 @@
 ```mermaid
 graph TD;
   gux-tooltip-title --> gux-tooltip
+  gux-badge-beta --> gux-tooltip-title
   gux-tab --> gux-tooltip-title
   gux-tab-advanced --> gux-tooltip-title
+  gux-tag-beta --> gux-tooltip-title
   style gux-tooltip-title fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

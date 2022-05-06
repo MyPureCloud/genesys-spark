@@ -22,6 +22,17 @@ exports[`gux-button #render should render disabled default button 1`] = `
 </gux-button>
 `;
 
+exports[`gux-button #render should render disabled ghost button 1`] = `
+<gux-button accent="ghost" disabled="">
+  <mock:shadow-root>
+    <button class="gux-ghost" disabled="" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
+</gux-button>
+`;
+
 exports[`gux-button #render should render disabled invalid accent button 1`] = `
 <gux-button accent="invalid" disabled="">
   <mock:shadow-root>
@@ -59,6 +70,17 @@ exports[`gux-button #render should render disabled tertiary button 1`] = `
 <gux-button accent="tertiary" disabled="">
   <mock:shadow-root>
     <button class="gux-tertiary" disabled="" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
+</gux-button>
+`;
+
+exports[`gux-button #render should render ghost button 1`] = `
+<gux-button accent="ghost">
+  <mock:shadow-root>
+    <button class="gux-ghost" type="button">
       <slot></slot>
     </button>
   </mock:shadow-root>

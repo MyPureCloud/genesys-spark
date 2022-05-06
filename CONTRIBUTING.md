@@ -49,3 +49,7 @@
 
 - Package version is determined at publish time through the commit types specified.
 - The package will be bumped, a changelog file will be generated, the changes will be committed, and a version tag will be added
+
+### Known Issues
+
+- The Jest CLI short alias for updating snapshots `-u` is not working but the long form `--updateSnapshot` still is.

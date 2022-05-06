@@ -1,0 +1,162 @@
+<h1>gux-form-field-text-like</h1>
+
+<p>
+  slot a input[type=email] / input[type=password] / input[type=text] element
+  into a gux-form-field-text-like element
+</p>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Input types</legend>
+
+    <gux-form-field-text-like>
+      <input slot="input" type="text" name="t-1" value="Sample text" />
+      <label slot="label">Text</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like>
+      <input slot="input" type="password" name="t-2" value="Pa55word" />
+      <label slot="label">Password</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like>
+      <input
+        slot="input"
+        type="email"
+        name="t-3"
+        value="joe.bloggs@example.com"
+      />
+      <label slot="label">Email</label>
+    </gux-form-field-text-like>
+  </fieldset>
+
+  <fieldset>
+    <legend>Clearable</legend>
+
+    <gux-form-field-text-like>
+      <input slot="input" type="text" name="c-1" value="Sample text" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like clearable>
+      <input slot="input" type="text" name="c-2" value="Sample text" />
+      <label slot="label">True</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like clearable>
+      <input slot="input" type="text" name="c-3" disabled value="Sample text" />
+      <label slot="label">True and disabled</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like clearable="false">
+      <input slot="input" type="text" name="c-4" value="Sample text" />
+      <label slot="label">False</label>
+    </gux-form-field-text-like>
+  </fieldset>
+
+  <fieldset>
+    <legend>Label Position</legend>
+
+    <gux-form-field-text-like>
+      <input slot="input" type="text" name="lp-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like>
+      <input slot="input" type="text" name="lp-2" />
+      <label slot="label">Default long label</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like label-position="above">
+      <input slot="input" type="text" name="lp-3" />
+      <label slot="label">Above</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like label-position="beside">
+      <input slot="input" type="text" name="lp-4" />
+      <label slot="label">Beside</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like label-position="screenreader">
+      <input slot="input" type="text" name="lp-5" />
+      <label slot="label">Screenreader</label>
+    </gux-form-field-text-like>
+  </fieldset>
+
+  <fieldset>
+    <legend>Input attributes</legend>
+
+    <gux-form-field-text-like>
+      <input slot="input" type="text" name="a-1" disabled />
+      <label slot="label">Disabled</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like>
+      <input slot="input" type="text" name="a-2" required />
+      <label slot="label">Required</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like>
+      <input slot="input" type="text" name="a-3" placeholder="Enter number" />
+      <label slot="label">Placeholder</label>
+    </gux-form-field-text-like>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+
+    <gux-form-field-text-like>
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-text-like>
+  </fieldset>
+</form>
+
+<h2>gux-form-field examples for comparison</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <gux-form-field label-position="beside" clearable>
+      <input
+        slot="input"
+        name="email"
+        type="email"
+        placeholder="joe.bloggs@example.com"
+      />
+      <label slot="label">Email</label>
+    </gux-form-field>
+
+    <gux-form-field label-position="beside">
+      <input
+        slot="input"
+        name="password"
+        type="password"
+        placeholder="Enter a password"
+        disabled
+      />
+      <label slot="label">Password</label>
+    </gux-form-field>
+
+    <gux-form-field label-position="above" clearable>
+      <input
+        slot="input"
+        name="text"
+        type="text"
+        placeholder="Enter a string"
+      />
+      <label slot="label">Text</label>
+    </gux-form-field>
+
+    <gux-form-field label-position="above">
+      <input
+        slot="input"
+        name="text"
+        type="text"
+        placeholder="Enter a string"
+        required
+      />
+      <label slot="label">Required Text</label>
+    </gux-form-field>
+  </fieldset>
+</form>

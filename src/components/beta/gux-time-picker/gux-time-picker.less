@@ -1,4 +1,5 @@
 @import (reference) '../../../style/shared/text-input.less';
+@import (reference) '../../../style/shadows.less';
 
 :host {
   display: inline-block;
@@ -11,14 +12,11 @@ input {
 }
 
 .gux-list-container {
-  position: relative;
-
-  gux-list {
-    position: absolute;
-    width: 100%;
-
-    gux-list-item {
-      text-align: right;
-    }
-  }
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  background-color: @gux-type-dark;
+  border: 1px solid @gux-grey-30;
+  border-radius: 4px;
+  .gux-shadow-20();
 }

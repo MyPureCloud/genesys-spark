@@ -56,11 +56,14 @@ gux-tab-advanced {
       width: 160px;
 
       &.gux-disabled {
-        opacity: 0.5;
+        .gux-tab-button {
+          color: fade(@gux-black-10, 50%);
+        }
 
         .gux-tab-options-button {
-          color: @gux-black-50;
+          color: fade(@gux-black-50, 50%);
           pointer-events: none;
+          cursor: default;
         }
       }
     }
@@ -127,7 +130,7 @@ gux-tab-advanced {
     &.gux-selected {
       padding-bottom: 0;
       background-color: @gux-grey-100;
-      border-bottom: 2px solid #2a60c8;
+      border-bottom: 2px solid @gux-blue-60;
 
       .gux-tab-button {
         background-color: @gux-grey-100;
@@ -144,11 +147,8 @@ gux-tab-advanced {
     }
 
     gux-tooltip-title {
-      position: relative;
       padding-top: 2px;
-      overflow: hidden;
       font-size: 14px;
-      text-overflow: ellipsis;
       white-space: nowrap;
       cursor: default;
     }

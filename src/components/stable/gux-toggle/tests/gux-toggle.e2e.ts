@@ -33,37 +33,37 @@ async function newNonrandomE2EPage({
 describe('gux-toggle', () => {
   it('should build', async () => {
     const page = await newNonrandomE2EPage({
-      html: `<gux-toggle></gux-toggle>`
+      html: `<gux-toggle lang="en"></gux-toggle>`
     });
 
     const element = await page.find('gux-toggle');
 
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   describe('#render', () => {
     [
-      '<gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>',
-      '<gux-toggle checked checked-label="on" unchecked-label="off"></gux-toggle>',
-      '<gux-toggle id="disabledToggle" checked-label="On" unchecked-label="Off" disabled></gux-toggle>',
-      '<gux-toggle id="disabledToggle" checked checked-label="on" unchecked-label="off" disabled></gux-toggle>',
-      `<gux-toggle
+      '<gux-toggle lang="en" checked-label="On" unchecked-label="Off"></gux-toggle>',
+      '<gux-toggle lang="en" checked checked-label="on" unchecked-label="off"></gux-toggle>',
+      '<gux-toggle lang="en" id="disabledToggle" checked-label="On" unchecked-label="Off" disabled></gux-toggle>',
+      '<gux-toggle lang="en" id="disabledToggle" checked checked-label="on" unchecked-label="off" disabled></gux-toggle>',
+      `<gux-toggle lang="en"
         checked-label="On"
         unchecked-label="Off"
         label-position="left"
       ></gux-toggle>`,
-      `<gux-toggle
+      `<gux-toggle lang="en"
         checked
         checked-label="on"
         unchecked-label="off"
         label-position="right"
       ></gux-toggle>`,
-      `<gux-toggle
+      `<gux-toggle lang="en"
         checked-label="This is a long label for the toggle to test how it works"
         unchecked-label="This is another long label for the toggle to test how it works"
         label-position="left"
       ></gux-toggle>`,
-      `<gux-toggle
+      `<gux-toggle lang="en"
         checked
         checked-label="This is a long label for the toggle to test how it works"
         unchecked-label="This is another long label for the toggle to test how it works"
@@ -90,7 +90,7 @@ describe('gux-toggle', () => {
       describe(name, () => {
         it(`should not fire a check event when an enabled toggle is disabled and ${name}`, async () => {
           const html =
-            '<gux-toggle disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
+            '<gux-toggle lang="en" disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
           const checkSpy = await element.spyOnEvent('check');
@@ -103,7 +103,7 @@ describe('gux-toggle', () => {
 
         it(`should fire a check event when an enabled toggle is ${name}`, async () => {
           const html =
-            '<gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>';
+            '<gux-toggle lang="en" checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
           const checkSpy = await element.spyOnEvent('check');
@@ -116,7 +116,7 @@ describe('gux-toggle', () => {
 
         it(`should check an unchecked toggle when ${name}`, async () => {
           const html =
-            '<gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>';
+            '<gux-toggle lang="en" checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newSparkE2EPage({ html });
           const element = await page.find('gux-toggle');
 
@@ -130,7 +130,7 @@ describe('gux-toggle', () => {
 
         it(`should uncheck a checked toggle when ${name}`, async () => {
           const html =
-            '<gux-toggle checked checked-label="On" unchecked-label="Off"></gux-toggle>';
+            '<gux-toggle lang="en" checked checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
 
@@ -144,7 +144,7 @@ describe('gux-toggle', () => {
 
         it(`should not check an unchecked toggle when disabled and ${name}`, async () => {
           const html =
-            '<gux-toggle disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
+            '<gux-toggle lang="en" disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
 
@@ -158,7 +158,7 @@ describe('gux-toggle', () => {
 
         it(`should not uncheck a checked toggle when disabled and ${name}`, async () => {
           const html =
-            '<gux-toggle checked disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
+            '<gux-toggle lang="en" checked disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
 

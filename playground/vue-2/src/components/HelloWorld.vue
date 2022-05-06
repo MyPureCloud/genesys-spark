@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <gux-form-field-text-like-beta>
+    <gux-form-field-text-like>
       <input
         slot="input"
         name="errorInput"
@@ -9,7 +9,7 @@
       />
       <label slot="label">Label</label>
       <span slot="error" v-if="hasError">Field is required</span>
-    </gux-form-field-text-like-beta>
+    </gux-form-field-text-like>
 
     <gux-button v-on:click="toggleHasError">Toggle Has Error</gux-button>
     <div>Has Error: {{hasError}}</div>

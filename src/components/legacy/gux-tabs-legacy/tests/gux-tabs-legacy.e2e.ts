@@ -1,4 +1,4 @@
-import { E2EElement, E2EPage, newE2EPage } from '@stencil/core/testing';
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
 
 async function newNonrandomE2EPage({
   html

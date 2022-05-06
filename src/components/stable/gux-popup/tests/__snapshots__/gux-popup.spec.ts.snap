@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-popup #render should render component as expected (1) 1`] = `
+<gux-popup>
+  <mock:shadow-root>
+    <div class="gux-target-container">
+      <slot name="target"></slot>
+      <div class="gux-popup-container" style="width: 0px; position: absolute; left: 0; top: 0; margin: 0;">
+        <slot name="popup"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-button slot="target">
+    Target
+  </gux-button>
+  <gux-list slot="popup">
+    <gux-list-item>
+      Item 1
+    </gux-list-item>
+    <gux-list-item>
+      Item 2
+    </gux-list-item>
+    <gux-list-item>
+      Item 3
+    </gux-list-item>
+  </gux-list>
+</gux-popup>
+`;
+
+exports[`gux-popup #render should render component as expected (2) 1`] = `
+<gux-popup expanded="">
+  <mock:shadow-root>
+    <div class="gux-target-container">
+      <slot name="target"></slot>
+      <div class="gux-expanded gux-popup-container" style="width: 0px; position: absolute; left: 0; top: 0; margin: 0;">
+        <slot name="popup"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-button slot="target">
+    Target
+  </gux-button>
+  <gux-list slot="popup">
+    <gux-list-item>
+      Item 1
+    </gux-list-item>
+    <gux-list-item>
+      Item 2
+    </gux-list-item>
+    <gux-list-item>
+      Item 3
+    </gux-list-item>
+  </gux-list>
+</gux-popup>
+`;
+
+exports[`gux-popup #render should render component as expected (3) 1`] = `
+<gux-popup disabled="">
+  <mock:shadow-root>
+    <div class="gux-disabled gux-target-container">
+      <slot name="target"></slot>
+      <div class="gux-popup-container" style="width: 0px; position: absolute; left: 0; top: 0; margin: 0;">
+        <slot name="popup"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-button slot="target">
+    Target
+  </gux-button>
+  <gux-list slot="popup">
+    <gux-list-item>
+      Item 1
+    </gux-list-item>
+    <gux-list-item>
+      Item 2
+    </gux-list-item>
+    <gux-list-item>
+      Item 3
+    </gux-list-item>
+  </gux-list>
+</gux-popup>
+`;
+
+exports[`gux-popup #render should render component as expected (4) 1`] = `
+<gux-popup disabled="" expanded="">
+  <mock:shadow-root>
+    <div class="gux-disabled gux-target-container">
+      <slot name="target"></slot>
+      <div class="gux-popup-container" style="width: 0px; position: absolute; left: 0; top: 0; margin: 0;">
+        <slot name="popup"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-button slot="target">
+    Target
+  </gux-button>
+  <gux-list slot="popup">
+    <gux-list-item>
+      Item 1
+    </gux-list-item>
+    <gux-list-item>
+      Item 2
+    </gux-list-item>
+    <gux-list-item>
+      Item 3
+    </gux-list-item>
+  </gux-list>
+</gux-popup>
+`;

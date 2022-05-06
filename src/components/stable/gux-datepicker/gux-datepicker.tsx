@@ -44,6 +44,8 @@ import {
   getIntervalRange
 } from './gux-datepicker.service';
 
+import { createPopper, Instance } from '@popperjs/core';
+
 @Component({
   styleUrl: 'gux-datepicker.less',
   tag: 'gux-datepicker',
@@ -65,6 +67,8 @@ export class GuxDatepicker {
   startInputId: string = randomHTMLId('gux-datepicker');
   endInputId: string = randomHTMLId('gux-datepicker');
   i18n: GetI18nValue;
+
+  private popperInstance: Instance;
 
   @Element()
   root: HTMLElement;
@@ -259,7 +263,7 @@ export class GuxDatepicker {
           );
           setTimeout(() => {
             button.focus();
-          });
+          }, 100);
           break;
         }
         case 'Tab':
@@ -565,7 +569,7 @@ export class GuxDatepicker {
       // Wait for render before focusing preview date
       setTimeout(() => {
         void this.calendarElement.focusPreviewDate();
-      });
+      }, 100);
     }
   }
 
@@ -649,6 +653,30 @@ export class GuxDatepicker {
 
   componentDidLoad() {
     this.updateDate();
+
+    this.popperInstance = createPopper(
+      this.datepickerElement,
+      this.calendarElement,
+      {
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, -3]
+            }
+          }
+        ],
+        placement: 'bottom-start'
+      }
+    );
+  }
+
+  componentDidUpdate() {
+    this.popperInstance.forceUpdate();
+  }
+
+  disconnectedCallback(): void {
+    this.popperInstance.destroy();
   }
 
   renderCalendarToggleButton(): JSX.Element {

@@ -12,7 +12,7 @@ describe('gux-text-label-legacy', () => {
     await page.waitForChanges();
 
     const element = await page.find('gux-text-label-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('uses the correct label when simple label value provided', async () => {

@@ -19,7 +19,7 @@ describe('gux-dropdown-v2', () => {
     it('renders', async () => {
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-dropdown-v2-beta');
-      expect(element).toHaveClass('hydrated');
+      expect(element).toHaveAttribute('hydrated');
     });
   });
 
@@ -64,7 +64,6 @@ describe('gux-dropdown-v2', () => {
       const focusEl = await page.find(':focus');
 
       expect(listbox.outerHTML).toContain(focusEl.outerHTML);
-      console.log(focusEl.outerHTML);
     });
 
     it('moves between options when arrow keys are pressed', async () => {

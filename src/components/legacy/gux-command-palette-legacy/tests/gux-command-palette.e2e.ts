@@ -8,7 +8,7 @@ describe('gux-command-palette', () => {
       '<gux-command-palette-legacy lang="en"></gux-command-palette-legacy>'
     );
     const element = await page.find('gux-command-palette-legacy');
-    expect(element).toHaveClass('hydrated');
+    expect(element).toHaveAttribute('hydrated');
   });
 
   it('shows the palette when opened', async () => {
@@ -43,10 +43,10 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const lists = await page.findAll('gux-list');
+    const lists = await page.findAll('gux-list-legacy');
 
     expect(lists.length).toBe(1);
-    const items = await page.findAll('gux-list-item');
+    const items = await page.findAll('gux-list-item-legacy');
 
     expect(items.length).toBe(1);
     expect(items[0].innerText).toBe('test');
@@ -69,10 +69,10 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const lists = await page.findAll('gux-list');
+    const lists = await page.findAll('gux-list-legacy');
 
     expect(lists.length).toBe(1);
-    const items = await page.findAll('gux-list-item');
+    const items = await page.findAll('gux-list-item-legacy');
 
     expect(items.length).toBe(1);
     expect(items[0].innerText).toBe('test');
@@ -96,10 +96,10 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const lists = await page.findAll('gux-list');
+    const lists = await page.findAll('gux-list-legacy');
 
     expect(lists.length).toBe(2);
-    const items = await page.findAll('gux-list-item');
+    const items = await page.findAll('gux-list-item-legacy');
 
     expect(items.length).toBe(2);
     expect(items[0].innerText).toBe('test2');
@@ -125,10 +125,10 @@ describe('gux-command-palette', () => {
     await component.callMethod('open');
     await page.waitForChanges();
 
-    const lists = await page.findAll('gux-list');
+    const lists = await page.findAll('gux-list-legacy');
 
     expect(lists.length).toBe(1);
-    const items = await page.findAll('gux-list-item');
+    const items = await page.findAll('gux-list-item-legacy');
 
     expect(items.length).toBe(2);
     expect(items[0].innerText).toBe('test');
@@ -158,10 +158,10 @@ describe('gux-command-palette', () => {
     await search.press('KeyT');
     await page.waitForChanges();
 
-    const lists = await page.findAll('gux-list');
+    const lists = await page.findAll('gux-list-legacy');
 
     expect(lists.length).toBe(2);
-    const items = await page.findAll('gux-list-item');
+    const items = await page.findAll('gux-list-item-legacy');
 
     expect(items.length).toBe(4);
     expect(items[0].innerText).toBe('test3');
@@ -190,10 +190,10 @@ describe('gux-command-palette', () => {
     await search.press('KeyR');
     await page.waitForChanges();
 
-    const lists = await page.findAll('gux-list');
+    const lists = await page.findAll('gux-list-legacy');
 
     expect(lists.length).toBe(1);
-    const items = await page.findAll('gux-list-item');
+    const items = await page.findAll('gux-list-item-legacy');
 
     expect(items.length).toBe(1);
     expect(items[0].innerText).toBe('orange');

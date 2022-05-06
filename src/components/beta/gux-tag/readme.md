@@ -7,13 +7,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Properties
 
-| Property    | Attribute   | Description           | Type                                                                                                                                                                      | Default     |
-| ----------- | ----------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `color`     | `color`     | Tag background color. | `"alert-yellow-green" \| "aqua-green" \| "blue" \| "bubblegum-pink" \| "dark-purple" \| "default" \| "electric-purple" \| "fuscha" \| "lilac" \| "navy" \| "olive-green"` | `'default'` |
-| `disabled`  | `disabled`  | Tag is removable.     | `boolean`                                                                                                                                                                 | `false`     |
-| `icon`      | `icon`      | Tag icon name.        | `string`                                                                                                                                                                  | `undefined` |
-| `removable` | `removable` | Tag is removable.     | `boolean`                                                                                                                                                                 | `false`     |
-| `value`     | `value`     | Index for remove tag  | `string`                                                                                                                                                                  | `undefined` |
+| Property    | Attribute   | Description           | Type                                                                                                                                                                                          | Default     |
+| ----------- | ----------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `color`     | `color`     | Tag background color. | `"alert-yellow-green" \| "aqua-green" \| "blue" \| "bubblegum-pink" \| "dark-purple" \| "default" \| "default-subtle" \| "electric-purple" \| "fuscha" \| "lilac" \| "navy" \| "olive-green"` | `'default'` |
+| `disabled`  | `disabled`  | Tag is removable.     | `boolean`                                                                                                                                                                                     | `false`     |
+| `icon`      | `icon`      | Tag icon name.        | `string`                                                                                                                                                                                      | `undefined` |
+| `removable` | `removable` | Tag is removable.     | `boolean`                                                                                                                                                                                     | `false`     |
+| `value`     | `value`     | Index for remove tag  | `string`                                                                                                                                                                                      | `undefined` |
 
 
 ## Events
@@ -27,12 +27,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Depends on
 
+- [gux-tooltip-title](../../stable/gux-tooltip-title)
 - [gux-icon](../../stable/gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-tag-beta --> gux-tooltip-title
   gux-tag-beta --> gux-icon
+  gux-tooltip-title --> gux-tooltip
   style gux-tag-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
