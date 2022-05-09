@@ -20,7 +20,7 @@ import translationResources from './i18n/en.json';
 import { getSearchOption } from '../gux-listbox/gux-listbox.service';
 
 /**
- * @slot - for gux-list-box
+ * @slot - for a gux-listbox containing gux-option children
  */
 @Component({
   styleUrl: 'gux-dropdown.less',

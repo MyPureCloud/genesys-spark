@@ -1,4 +1,4 @@
-# gux-accordion-legacy
+# gux-dropdown-legacy
 
 [Back to main guide](./readme)
 

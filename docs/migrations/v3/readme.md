@@ -14,28 +14,29 @@
 * replace `gux-list-divider` with `gux-action-list-divider` in `gux-action-button` and `gux-button-multi` components
 * remove the `icon` property from `gux-tag-beta` and slot in the icon instead
 * remove `-beta` from components that have become stable
-  * `gux-accordion-beta` ->  `gux-accordion`
-  * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
-  * `gux-dropdown-v2-beta` ->  `gux-dropdown`
-  * `gux-form-field-checkbox-beta` ->  `gux-form-field-checkbox`
-  * `gux-form-field-color-beta` ->  `gux-form-field-color`
-  * `gux-form-field-number-beta` ->  `gux-form-field-number`
-  * `gux-form-field-radio-beta` ->  `gux-form-field-radio`
-  * `gux-form-field-range-beta` ->  `gux-form-field-range`
-  * `gux-form-field-search-beta` ->  `gux-form-field-search`
-  * `gux-form-field-select-beta` ->  `gux-form-field-select`
-  * `gux-form-field-text-like-beta` ->  `gux-form-field-text-like`
-  * `gux-form-field-textarea-beta` ->  `gux-form-field-textarea`
-  * `gux-pagination-cursor-beta` ->  `gux-pagination-cursor`
-  * `gux-popup-beta` ->  `gux-popup`
+  * `gux-accordion-beta` -> `gux-accordion`
+  * `gux-dismiss-button-beta` -> `gux-dismiss-button`
+  * `gux-dropdown-v2-beta` -> `gux-dropdown`
+  * `gux-form-field-checkbox-beta` -> `gux-form-field-checkbox`
+  * `gux-form-field-color-beta` -> `gux-form-field-color`
+  * `gux-form-field-number-beta` -> `gux-form-field-number`
+  * `gux-form-field-radio-beta` -> `gux-form-field-radio`
+  * `gux-form-field-range-beta` -> `gux-form-field-range`
+  * `gux-form-field-search-beta` -> `gux-form-field-search`
+  * `gux-form-field-select-beta` -> `gux-form-field-select`
+  * `gux-form-field-text-like-beta` -> `gux-form-field-text-like`
+  * `gux-form-field-textarea-beta` -> `gux-form-field-textarea`
+  * `gux-option-v2` -> `gux-option` (child of `gux-listbox`)
+  * `gux-pagination-cursor-beta` -> `gux-pagination-cursor`
+  * `gux-popup-beta` -> `gux-popup`
   * `gux-tabs-beta` -> `gux-tabs`
-  * `gux-tooltip-title-beta` ->  `gux-tooltip-title`
+  * `gux-tooltip-title-beta` -> `gux-tooltip-title`
 * add `-legacy` to components that have been removed from stable
   * `gux-accordion` -> `gux-accordion-legacy`
   * `gux-action-button` -> `gux-action-button-legacy`
   * `gux-action-list` -> `gux-action-list-legacy`
   * `gux-button-multi` -> `gux-button-multi-legacy`
-  * `gux-dropdown` ->  `gux-dropdown-legacy`
+  * `gux-dropdown` -> `gux-dropdown-legacy`
   * `gux-form-field` -> `gux-form-field-legacy`
   * `gux-list` -> `gux-list-legacy`
   * `gux-tabs`-> `gux-tabs-legacy`

@@ -35,7 +35,7 @@ import { logError } from '../../../utils/error/log-error';
 import translationResources from './i18n/en.json';
 
 /**
- * @slot - collection of gux-option's
+ * @slot - collection of gux-option elements
  */
 @Component({
   styleUrl: 'gux-listbox.less',
