@@ -5,6 +5,7 @@ exports[`gux-anchor-beta #render should render component as expected (1) 1`] = `
   <mock:shadow-root>
     <gux-icon decorative="" icon-name="external-link"></gux-icon>
     <slot></slot>
+    <slot></slot>
   </mock:shadow-root>
   <a href="#">
     Default Link
@@ -16,6 +17,7 @@ exports[`gux-anchor-beta #render should render component as expected (2) 1`] = `
 <gux-anchor-beta table="false">
   <mock:shadow-root>
     <gux-icon decorative="" icon-name="external-link"></gux-icon>
+    <slot></slot>
     <slot></slot>
   </mock:shadow-root>
   <a href="#" target="_blank">
@@ -29,6 +31,7 @@ exports[`gux-anchor-beta #render should render component as expected (3) 1`] = `
   <mock:shadow-root>
     <gux-icon decorative="" icon-name="external-link"></gux-icon>
     <slot></slot>
+    <slot></slot>
   </mock:shadow-root>
   <a href="https://spark.genesys.com/" target="_blank">
     External Link
@@ -40,6 +43,7 @@ exports[`gux-anchor-beta #render should render component as expected (4) 1`] = `
 <gux-anchor-beta table="true">
   <mock:shadow-root>
     <gux-icon decorative="" icon-name="external-link"></gux-icon>
+    <slot></slot>
     <slot></slot>
   </mock:shadow-root>
   <a href="#">
