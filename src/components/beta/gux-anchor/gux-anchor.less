@@ -6,6 +6,11 @@
 :host {
   display: flex;
   align-items: center;
+
+  ::slotted(gux-icon) {
+    padding-right: @spacing-xs;
+    color: @gux-blue-60;
+  }
 }
 
 :host([table='true']) {

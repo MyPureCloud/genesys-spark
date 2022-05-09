@@ -36,6 +36,7 @@ export class GuxAnchor {
       <Host table={this.table.toString()}>
         {this.renderExternalLinkIcon()}
         <slot />
+        <slot />
       </Host>
     ) as JSX.Element;
   }
