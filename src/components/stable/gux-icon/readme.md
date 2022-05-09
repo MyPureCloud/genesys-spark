@@ -32,7 +32,7 @@
  - [gux-disclosure-button](../gux-disclosure-button)
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-dropdown](../gux-dropdown)
- - [gux-dropdown-v2-beta](../../beta/gux-dropdown-v2)
+ - [gux-dropdown-legacy](../../legacy/gux-dropdown-legacy)
  - [gux-error-message-beta](../../beta/gux-error-message-beta)
  - [gux-form-field-checkbox](../gux-form-field/components/gux-form-field-checkbox)
  - [gux-form-field-color](../gux-form-field/components/gux-form-field-color)
@@ -81,7 +81,7 @@ graph TD;
   gux-disclosure-button --> gux-icon
   gux-dismiss-button --> gux-icon
   gux-dropdown --> gux-icon
-  gux-dropdown-v2-beta --> gux-icon
+  gux-dropdown-legacy --> gux-icon
   gux-error-message-beta --> gux-icon
   gux-form-field-checkbox --> gux-icon
   gux-form-field-color --> gux-icon

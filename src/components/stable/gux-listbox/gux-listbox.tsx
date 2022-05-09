@@ -35,7 +35,7 @@ import { logError } from '../../../utils/error/log-error';
 import translationResources from './i18n/en.json';
 
 /**
- * @slot - collection of gux-option-v2s
+ * @slot - collection of gux-option elements
  */
 @Component({
   styleUrl: 'gux-listbox.less',
@@ -55,7 +55,7 @@ export class GuxListbox {
   filter: string = '';
 
   @State()
-  listboxOptions: HTMLGuxOptionV2Element[] = [];
+  listboxOptions: HTMLGuxOptionElement[] = [];
 
   @State()
   allListboxOptionsFiltered: boolean;
@@ -142,13 +142,9 @@ export class GuxListbox {
 
   @Listen('click')
   onClick(event: MouseEvent): void {
-    whenEventIsFrom(
-      'gux-option-v2',
-      event,
-      (option: HTMLGuxOptionV2Element) => {
-        onClickedOption(option, value => this.updateValue(value));
-      }
-    );
+    whenEventIsFrom('gux-option', event, (option: HTMLGuxOptionElement) => {
+      onClickedOption(option, value => this.updateValue(value));
+    });
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await
@@ -160,7 +156,7 @@ export class GuxListbox {
   private setListboxOptions(): void {
     this.listboxOptions = Array.from(
       this.root.children
-    ) as HTMLGuxOptionV2Element[];
+    ) as HTMLGuxOptionElement[];
     this.internallistboxoptionsupdated.emit();
   }
 

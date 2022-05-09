@@ -33,16 +33,16 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot | Description                  |
-| ---- | ---------------------------- |
-|      | collection of gux-option-v2s |
+| Slot | Description                |
+| ---- | -------------------------- |
+|      | collection of gux-option's |
 
 
 ## Dependencies
 
 ### Used by
 
- - [gux-pagination-items-per-page](../../stable/gux-pagination/gux-pagination-items-per-page)
+ - [gux-pagination-items-per-page](../gux-pagination/gux-pagination-items-per-page)
 
 ### Graph
 ```mermaid

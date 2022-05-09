@@ -2,9 +2,9 @@ import { Component, Element, h, JSX, Method, Prop, Watch } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-option.less',
-  tag: 'gux-option'
+  tag: 'gux-option-legacy'
 })
-export class GuxOption {
+export class GuxOptionLegacy {
   @Element()
   root: HTMLElement;
   slotContent: HTMLElement;
@@ -55,8 +55,8 @@ export class GuxOption {
     );
   }
 
-  private getParentGuxDropdown(): HTMLGuxDropdownElement {
-    return this.root.closest('gux-dropdown');
+  private getParentGuxDropdown(): HTMLGuxDropdownLegacyElement {
+    return this.root.closest('gux-dropdown-legacy');
   }
 
   componentWillLoad() {

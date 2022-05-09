@@ -12,7 +12,7 @@ export class E2EGuxDropdown {
   }
 
   get options(): Promise<E2EElement[]> {
-    return this.element.then(el => el.findAll('gux-option'));
+    return this.element.then(el => el.findAll('gux-option-legacy'));
   }
 
   get currentValue(): Promise<string> {

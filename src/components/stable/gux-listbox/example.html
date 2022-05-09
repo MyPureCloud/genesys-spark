@@ -1,0 +1,36 @@
+<h1>gux-listbox</h1>
+<form onchange="notify(event)" oninput="notify(event)">
+  <h3>Typical</h3>
+  <gux-listbox tabindex="0" value="b" aria-label="Animals">
+    <gux-option value="a" disabled>Ant</gux-option>
+    <gux-option value="b">Bat</gux-option>
+    <gux-option value="c">Cat</gux-option>
+    <gux-option value="d">Dog</gux-option>
+    <gux-option value="e" disabled>Eel</gux-option>
+    <gux-option value="f">Frog</gux-option>
+    <gux-option value="g">Goat</gux-option>
+    <gux-option value="h" disabled>Horse</gux-option>
+    <gux-option value="i" disabled>Ibis</gux-option>
+  </gux-listbox>
+
+  <h3>Disabled</h3>
+  <gux-listbox tabindex="0" value="a" aria-label="Animals">
+    <gux-option value="a" disabled>Ant</gux-option>
+    <gux-option value="b">Bat</gux-option>
+    <gux-option value="c">Cat</gux-option>
+    <gux-option value="d">Dog</gux-option>
+    <gux-option value="e" disabled>Eel</gux-option>
+    <gux-option value="f">Frog</gux-option>
+    <gux-option value="g">Goat</gux-option>
+    <gux-option value="h" disabled>Horse</gux-option>
+    <gux-option value="i" disabled>Ibis</gux-option>
+  </gux-listbox>
+
+  <h3>Ids</h3>
+  <gux-listbox tabindex="0" aria-label="Animals">
+    <gux-option id="ant" value="a">Ant</gux-option>
+    <gux-option id="bat" value="b">Bat</gux-option>
+    <gux-option id="cat" value="c">Cat</gux-option>
+    <gux-option id="dog" value="d">Dog</gux-option>
+  </gux-listbox>
+</form>
