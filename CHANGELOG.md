@@ -2,6 +2,106 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.70](https://inindca///compare/v3.0.0-alpha.69...v3.0.0-alpha.70) (2022-05-09)
+
+
+### Features
+
+* **dropdown:** moved new dropdown component to stable ([87a8729](https://inindca///commit/87a87297d64d7913fb9d1e836447c1c591958e22))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comments ([8f9fc9b](https://inindca///commit/8f9fc9bab0963e56cb52f7e26c1b144a4ccfc7dc))
+
+## [3.0.0-alpha.69](https://inindca///compare/v3.0.0-alpha.68...v3.0.0-alpha.69) (2022-05-06)
+
+
+### Features
+
+* **gux-form-field:** moved gux-form-field to legacy ([e8abf31](https://inindca///commit/e8abf31f34f734820b2685e5ac115d324da0cfa9))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([a57f17e](https://inindca///commit/a57f17e4b847b858a32a245712b622f9a511aef4))
+
+## [3.0.0-alpha.68](https://inindca///compare/v3.0.0-alpha.67...v3.0.0-alpha.68) (2022-05-05)
+
+
+### Features
+
+* **form-field-v2:** moved components to stable ([333564a](https://inindca///commit/333564a6bd840802d333992c16923127003c4f30))
+
+
+### Bug Fixes
+
+* **gux-popover:** fix z-index for Safari stacking context bug ([24eb8cf](https://inindca///commit/24eb8cf08253384e98b918232890b1bda8b7f4c5))
+
+## [3.0.0-alpha.67](https://inindca///compare/v3.0.0-alpha.66...v3.0.0-alpha.67) (2022-05-04)
+
+
+### Features
+
+* **button-multi:** move component folder to stable ([ea04d6c](https://inindca///commit/ea04d6ca07ff74c92e26ffaa7a88f664471a48e3))
+* **gux-tabs-advanced:** add gux-list to gux-tabs-advanced ([80c1eaa](https://inindca///commit/80c1eaa14a172dae6e623cbf254a53296fcaf896))
+
+
+### Bug Fixes
+
+* **datepicker:** implemented popper js within datepicker component ([ccbb67f](https://inindca///commit/ccbb67f22607441db7a6ebf5973472e5e7148f97))
+* **gux-tabs:** fix gux-tabs and gux-tabs-advanced scroll button bug ([5169126](https://inindca///commit/5169126e91993588807f7ca0765102bf3b619107))
+* **typo:** fixed icon name typo ([28b231e](https://inindca///commit/28b231eef8bbae936076b115358f4d81ea11055b))
+
+## [3.0.0-alpha.66](https://inindca///compare/v3.0.0-alpha.65...v3.0.0-alpha.66) (2022-05-03)
+
+
+### Features
+
+* **accordion:** option to only have one section open at a time added ([e9c348b](https://inindca///commit/e9c348b192b8a77a162161a8e75314ae212e3e63))
+* **list:** added updated list component ([6604de4](https://inindca///commit/6604de4994196f58271d2e2429ff6f5fc3068fc2))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([6a8df16](https://inindca///commit/6a8df16a260086a24f993390b3b6a0493014694b))
+
+## [3.0.0-alpha.65](https://inindca///compare/v3.0.0-alpha.64...v3.0.0-alpha.65) (2022-04-29)
+
+
+### Features
+
+* **badge:** added new badge component ([1dcb067](https://inindca///commit/1dcb067f9fa0d6947f371e7770d2dbe91fdc6aaf))
+
+## [3.0.0-alpha.64](https://inindca///compare/v3.0.0-alpha.63...v3.0.0-alpha.64) (2022-04-28)
+
+
+### Features
+
+* **gux-button-slot-beta:** added ghost button styling ([76613ed](https://inindca///commit/76613edeb76f07da99b7b21216003251d2826246))
+* **gux-button:** add ghost button ([e9748f9](https://inindca///commit/e9748f9b342eba7141bc28129e269e48239653c5))
+
+## [3.0.0-alpha.63](https://inindca///compare/v3.0.0-alpha.62...v3.0.0-alpha.63) (2022-04-27)
+
+
+### Features
+
+* **gux-tooltip-title:** update tooltip-title for use in tag ([28bb4f7](https://inindca///commit/28bb4f7af5bf63479badbe19b6c09d62f08e5a48))
+* **icon:** added new icons ([8bbd6a6](https://inindca///commit/8bbd6a6f2a2bfb5e48f6c492d25a4f62d3a2110d))
+
+
+### Bug Fixes
+
+* **table:** updating specific pixel sizes to set spacing variables ([c63766b](https://inindca///commit/c63766bbde2123ae7f56b5f4b48a04f8e7316309))
+
+## [3.0.0-alpha.62](https://inindca///compare/v3.0.0-alpha.61...v3.0.0-alpha.62) (2022-04-26)
+
+
+### Bug Fixes
+
+* **calendar:** addition of getYearLabel() to fix wrong year displaying ([fb842c7](https://inindca///commit/fb842c794169c578ac1d15732bf9f0d95bc4072f))
+* **form-field-v2:** addition of gux-above class to label functional component styling ([15e93d8](https://inindca///commit/15e93d88a89cc85b173d439ca4e1f189e031ccb9))
+
 ## [3.0.0-alpha.61](https://inindca///compare/v3.0.0-alpha.60...v3.0.0-alpha.61) (2022-04-21)
 
 

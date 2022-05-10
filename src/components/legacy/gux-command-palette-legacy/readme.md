@@ -31,20 +31,20 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-input-search](../../stable/gux-form-field/components/gux-input-search)
-- [gux-list](../../stable/gux-list)
-- [gux-list-item](../../stable/gux-list/list-item)
+- [gux-input-search](../gux-form-field-legacy/components/gux-input-search)
+- [gux-list-legacy](../gux-list-legacy)
+- [gux-list-item-legacy](../gux-list-legacy/list-item)
 - [gux-text-highlight](../../stable/gux-text-highlight)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-command-palette-legacy --> gux-input-search
-  gux-command-palette-legacy --> gux-list
-  gux-command-palette-legacy --> gux-list-item
+  gux-command-palette-legacy --> gux-list-legacy
+  gux-command-palette-legacy --> gux-list-item-legacy
   gux-command-palette-legacy --> gux-text-highlight
   gux-input-search --> gux-icon
-  gux-list-item --> gux-text-highlight
+  gux-list-item-legacy --> gux-text-highlight
   style gux-command-palette-legacy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

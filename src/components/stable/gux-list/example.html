@@ -1,10 +1,61 @@
 <h1>gux-list</h1>
-<gux-list>
-  <gux-list-item value="test" text="test"></gux-list-item>
-  <gux-list-divider></gux-list-divider>
-  <gux-list-item value="test2">Some detail</gux-list-item>
-  <gux-list-item text="test3" value="test3" disabled></gux-list-item>
-  <gux-list-item value="test4">
+
+<div class="list-container">
+  <gux-list id="list">
+    <gux-list-item onclick="notify(event, 'test')">Test</gux-list-item>
+    <gux-list-divider></gux-list-divider>
+    <gux-list-item onclick="notify(event, 'test2')">Some detail</gux-list-item>
+    <gux-list-item onclick="notify(event, 'test3')" disabled
+      >Test3</gux-list-item
+    >
+    <gux-list-item onclick="notify(event, 'test4')">
+      <gux-icon
+        class="example"
+        icon-name="user-add"
+        decorative="true"
+      ></gux-icon>
+      <span>Add User</span>
+    </gux-list-item>
+  </gux-list>
+</div>
+
+<hr />
+
+<gux-button-slot>
+  <button
+    type="button"
+    onclick="(function() {
+      document.querySelector('#list').focus();
+    })()"
+  >
+    Focus List
+  </button>
+</gux-button-slot>
+
+<gux-button-slot>
+  <button
+    type="button"
+    onclick="(function() {
+      document.querySelector('#list').guxFocusFirstItem();
+    })()"
+  >
+    Focus First Item
+  </button>
+</gux-button-slot>
+
+<hr />
+
+<h2>Legacy</h2>
+<gux-list-legacy>
+  <gux-list-item-legacy value="test" text="test"></gux-list-item-legacy>
+  <gux-list-divider-legacy></gux-list-divider-legacy>
+  <gux-list-item-legacy value="test2">Some detail</gux-list-item-legacy>
+  <gux-list-item-legacy
+    text="test3"
+    value="test3"
+    disabled
+  ></gux-list-item-legacy>
+  <gux-list-item-legacy value="test4">
     <div>
       <gux-icon
         class="example"
@@ -13,5 +64,24 @@
       ></gux-icon>
       Add User
     </div>
-  </gux-list-item>
-</gux-list>
+  </gux-list-item-legacy>
+</gux-list-legacy>
+
+<style
+  onload="(function() {
+  Array.from(document.querySelectorAll('gux-list-item-legacy')).forEach(
+    (item) => {
+      item.addEventListener('press', notify);
+    }
+  );
+})()"
+>
+  .list-container {
+    width: 200px;
+    border: 1px solid black;
+  }
+
+  .list-container:focus-within {
+    border-color: blue;
+  }
+</style>

@@ -1,0 +1,43 @@
+<h1>gux-badge-beta</h1>
+<h2>Badges</h2>
+
+<h2>Subtle</h2>
+<div class="badges">
+  <gux-badge-beta>No Impact</gux-badge-beta>
+  <gux-badge-beta color="neutral">No Impact (explicit)</gux-badge-beta>
+  <gux-badge-beta color="green">Resolved</gux-badge-beta>
+  <gux-badge-beta color="yellow">Medium Impact</gux-badge-beta>
+  <gux-badge-beta color="red">High Impact</gux-badge-beta>
+</div>
+
+<h2>Bold</h2>
+<div class="badges">
+  <gux-badge-beta bold color="neutral">No Impact</gux-badge-beta>
+  <gux-badge-beta bold color="green">Resolved</gux-badge-beta>
+  <gux-badge-beta bold color="yellow">Medium Impact</gux-badge-beta>
+  <gux-badge-beta bold color="red">High Impact</gux-badge-beta>
+</div>
+
+<h2>Icon + Label</h2>
+<div class="badges">
+  <gux-badge-beta color="neutral">
+    <gux-icon icon-name="subtract" decorative></gux-icon>No Impact
+  </gux-badge-beta>
+  <gux-badge-beta bold color="neutral">
+    <gux-icon icon-name="subtract" decorative></gux-icon>No Impact
+  </gux-badge-beta>
+</div>
+
+<style>
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 1px solid var(--gux-charcoal-grey);
+  }
+
+  gux-badge-beta {
+    max-width: 100px;
+    margin: 4px;
+  }
+</style>

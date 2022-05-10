@@ -18,17 +18,26 @@ import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
 import tabsResources from '../i18n/en.json';
 
+/**
+ * @slot default - gux-icon (optional) and text node (required)
+ * @slot dropdown-options - optional slot for tab options, must slot a gux-list element with gux-list-item children
+ */
+
 @Component({
   styleUrl: 'gux-tab-advanced.less',
   tag: 'gux-tab-advanced'
 })
 export class GuxTabAdvanced {
   private buttonElement: HTMLButtonElement;
+  private tabOptionsButtonElement: HTMLButtonElement;
   private tooltipTitleElement: HTMLGuxTooltipTitleElement;
   private dropdownOptionsButtonId: string = randomHTMLId();
   private moveFocusDelay: number = 100;
   private tabTitle: string = '';
   private focusinFromClick: boolean = false;
+
+  @Element()
+  private root: HTMLElement;
 
   /**
    * unique id for the tab
@@ -42,12 +51,6 @@ export class GuxTabAdvanced {
   @State()
   active: boolean = false;
 
-  /**
-   * indicates the gux-icon to display on the left side of the tab (similar to a favicon in the browser)
-   */
-  @Prop()
-  tabIconName: string;
-
   @Prop()
   guxDisabled: boolean = false;
 
@@ -57,16 +60,12 @@ export class GuxTabAdvanced {
   @State()
   private hasAnimated: boolean = false;
 
-  @State()
-  private focusedOptionIndex: number = 0;
-
-  @Element()
-  private root: HTMLElement;
-
   @Listen('focusin')
-  onFocusin() {
-    if (!this.focusinFromClick) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+  onFocusin(event: FocusEvent) {
+    if (
+      !this.focusinFromClick &&
+      (event.target as HTMLElement).classList.contains('gux-tab-button')
+    ) {
       void this.tooltipTitleElement.setShowTooltip();
     }
   }
@@ -77,7 +76,8 @@ export class GuxTabAdvanced {
       !this.root.querySelector('.gux-tab').contains(event.relatedTarget as Node)
     ) {
       this.popoverHidden = true;
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+    }
+    if ((event.target as HTMLElement).classList.contains('gux-tab-button')) {
       void this.tooltipTitleElement.setHideTooltip();
     }
     this.focusinFromClick = false;
@@ -87,51 +87,18 @@ export class GuxTabAdvanced {
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'ArrowDown':
+      case 'Enter':
         if (eventIsFrom('.gux-tab-options-button', event)) {
           this.popoverHidden = false;
-          setTimeout(() => {
-            (
-              this.root.querySelectorAll(
-                '.tab-dropdown-option'
-              )[0] as HTMLElement
-            ).focus();
-          }, this.moveFocusDelay);
-        }
-        if (
-          eventIsFrom('.gux-dropdown-option-container', event) &&
-          this.focusedOptionIndex <
-            this.root.querySelectorAll('.tab-dropdown-option').length - 1
-        ) {
-          this.focusedOptionIndex++;
-          (
-            this.root.querySelectorAll('.tab-dropdown-option')[
-              this.focusedOptionIndex
-            ] as HTMLElement
-          ).focus();
-        }
-        break;
-      case 'ArrowUp':
-        if (
-          eventIsFrom('.gux-dropdown-option-container', event) &&
-          this.focusedOptionIndex > 0
-        ) {
-          this.focusedOptionIndex--;
-          (
-            this.root.querySelectorAll('.tab-dropdown-option')[
-              this.focusedOptionIndex
-            ] as HTMLElement
-          ).focus();
+          this.focusFirstItemInPopupList();
         }
         break;
       case 'Escape':
-        if (eventIsFrom('.gux-dropdown-option-container', event)) {
+        if (eventIsFrom('gux-list[slot="dropdown-options"]', event)) {
+          event.stopPropagation();
           this.popoverHidden = true;
           setTimeout(() => {
-            (
-              this.root.querySelectorAll(
-                '.gux-tab-options-button'
-              )[0] as HTMLElement
-            ).focus();
+            this.tabOptionsButtonElement?.focus();
           }, this.moveFocusDelay);
         }
         break;
@@ -143,13 +110,7 @@ export class GuxTabAdvanced {
     switch (event.key) {
       case ' ':
         if (eventIsFrom('.gux-tab-options-button', event)) {
-          setTimeout(() => {
-            (
-              this.root.querySelectorAll(
-                '.tab-dropdown-option'
-              )[0] as HTMLElement
-            ).focus();
-          }, this.moveFocusDelay);
+          this.focusFirstItemInPopupList();
         }
     }
   }
@@ -191,7 +152,18 @@ export class GuxTabAdvanced {
   }
 
   private get hasDropdownOptions(): boolean {
-    return Boolean(this.root.querySelector('[slot="dropdown-options"]'));
+    return Boolean(
+      this.root.querySelector('gux-list[slot="dropdown-options"]')
+    );
+  }
+
+  private focusFirstItemInPopupList(): void {
+    const listElement: HTMLGuxListElement = this.root.querySelector(
+      'gux-list[slot="dropdown-options"]'
+    );
+    setTimeout(() => {
+      void listElement?.guxFocusFirstItem();
+    }, this.moveFocusDelay);
   }
 
   private toggleOptions(): void {
@@ -201,13 +173,27 @@ export class GuxTabAdvanced {
   private onSelectDropdownOption(e: MouseEvent): void {
     this.popoverHidden = true;
     e.stopPropagation();
+    setTimeout(() => {
+      this.tabOptionsButtonElement.focus();
+    }, this.moveFocusDelay);
   }
 
   private i18n: GetI18nValue;
 
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, tabsResources);
-    this.tabTitle = this.root.querySelector('span').textContent.trim();
+  }
+
+  componentDidLoad(): void {
+    this.tabTitle = this.root
+      .querySelector('gux-tooltip-title')
+      .textContent.trim();
+    if (!this.hasAnimated) {
+      writeTask(() => {
+        this.root.querySelector('.gux-tab').classList.add('gux-show');
+        this.hasAnimated = true;
+      });
+    }
   }
 
   private popoverOnClick(e: MouseEvent): void {
@@ -222,6 +208,7 @@ export class GuxTabAdvanced {
           aria-expanded={(!this.popoverHidden).toString()}
           type="button"
           class="gux-tab-options-button"
+          ref={el => (this.tabOptionsButtonElement = el)}
           onClick={() => this.toggleOptions()}
           tabIndex={this.active ? 0 : -1}
           disabled={this.guxDisabled}
@@ -255,15 +242,6 @@ export class GuxTabAdvanced {
     return null;
   }
 
-  componentDidLoad(): void {
-    if (!this.hasAnimated) {
-      writeTask(() => {
-        this.root.querySelector('.gux-tab').classList.add('gux-show');
-        this.hasAnimated = true;
-      });
-    }
-  }
-
   render(): JSX.Element {
     return [
       <div
@@ -286,7 +264,9 @@ export class GuxTabAdvanced {
           id={`gux-${this.tabId}-tab`}
         >
           <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
-            <slot />
+            <span>
+              <slot />
+            </span>
           </gux-tooltip-title>
         </button>
 

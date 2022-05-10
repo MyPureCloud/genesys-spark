@@ -31,12 +31,6 @@ export class GuxTab {
   @Prop()
   guxDisabled: boolean = false;
 
-  /**
-   * Specifies if the tab title is just an icon
-   */
-  @Prop()
-  iconOnly: boolean = false;
-
   @State()
   active: boolean = false;
 
@@ -98,7 +92,9 @@ export class GuxTab {
         ref={el => (this.buttonElement = el)}
       >
         <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
-          <slot />
+          <span>
+            <slot />
+          </span>
         </gux-tooltip-title>
       </button>
     ) as JSX.Element;

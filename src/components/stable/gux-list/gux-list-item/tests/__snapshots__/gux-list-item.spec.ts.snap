@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-list-item #render should render component as expected (1) 1`] = `
+<gux-list-item role="listitem">
+  <mock:shadow-root>
+    <button tabindex="-1" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Item
+</gux-list-item>
+`;

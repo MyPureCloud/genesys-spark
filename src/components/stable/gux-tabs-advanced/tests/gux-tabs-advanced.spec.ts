@@ -15,45 +15,34 @@ const components = [
 const html = `
   <gux-tabs-advanced lang="en" id="interactive">
     <gux-tab-advanced-list slot="tab-list" show-new-tab-button="true">
-      <gux-tab-advanced tab-id="1-1" tab-icon-name="lock">
-        <span>Hello World</span>
-        <span slot="dropdown-options">
-          <gux-tab-advanced-option
-            option-id="1"
-            icon-name="edit"
-            onclick="notify(event)"
-          >
+      <gux-tab-advanced tab-id="1-1">
+        <gux-icon icon-name="lock" decorative="true"></gux-icon>
+        Hello World
+        <gux-list slot="dropdown-options">
+          <gux-list-item>
+            <gux-icon icon-name="edit" decorative="true"></gux-icon>
             Edit
-          </gux-tab-advanced-option>
-          <gux-tab-advanced-option
-            option-id="2"
-            icon-name="clone"
-            onclick="notify(event)"
-          >
+          </gux-list-item>
+          <gux-list-item>
+            <gux-icon icon-name="clone" decorative="true"></gux-icon>
             Clone
-          </gux-tab-advanced-option>
-          <gux-tab-advanced-option
-            option-id="3"
-            icon-name="share"
-            onclick="notify(event)"
-          >
+          </gux-list-item>
+          <gux-list-item>
+            <gux-icon icon-name="share" decorative="true"></gux-icon>
             Share
-          </gux-tab-advanced-option>
-          <gux-tab-advanced-option
-            option-id="4"
-            icon-name="download"
-            onclick="notify(event)"
-          >
+          </gux-list-item>
+          <gux-list-item>
+            <gux-icon icon-name="download" decorative="true"></gux-icon>
             Download
-          </gux-tab-advanced-option>
-        </span>
+          </gux-list-item>
+        </gux-list>
       </gux-tab-advanced>
       <gux-tab-advanced tab-id="1-2">
         <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
-        <span>Hello World 2 long long long long long</span>
+        Hello World 2 long long long long long
       </gux-tab-advanced>
       <gux-tab-advanced gux-disabled tab-id="1-3">
-      <span>Hello World 3</span>
+      Hello World 3
     </gux-tab-advanced>
     </gux-tab-advanced-list>
     <gux-tab-advanced-panel tab-id="1-1">

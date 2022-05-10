@@ -25,6 +25,33 @@
   </gux-accordion-section>
 </gux-accordion>
 
+<h2>Single Open Section</h2>
+
+<gux-accordion arrow-position="beside-text" single-open-section>
+  <gux-accordion-section>
+    <h2 slot="header">First Section Beta</h2>
+    <div slot="content">
+      <span>I'm a span in a div.</span>
+      <button>I'm the button.</button>
+    </div>
+  </gux-accordion-section>
+  <gux-accordion-section>
+    <h2 slot="header">Second Section Beta</h2>
+    <p slot="content">I'm a p.</p>
+  </gux-accordion-section>
+  <gux-accordion-section>
+    <h2 slot="header">Third Section Beta</h2>
+    <span slot="content">I'm a span.</span>
+  </gux-accordion-section>
+  <gux-accordion-section>
+    <h2 slot="header">
+      Fourth Section Beta has a really really long title to see what it looks
+      like when the title overflows
+    </h2>
+    <span slot="content">I'm a span.</span>
+  </gux-accordion-section>
+</gux-accordion>
+
 <h2>Beside Text Arrow Positioning</h2>
 
 <gux-accordion arrow-position="beside-text">
@@ -82,6 +109,32 @@
 <h2>All sections initially open</h2>
 
 <gux-accordion arrow-position="beside-text">
+  <gux-accordion-section class="blocked" disabled open>
+    <h2 slot="header">First Section Beta</h2>
+    <div slot="content">
+      <span>I'm a span in a div.</span>
+      <button>I'm the button.</button>
+    </div>
+  </gux-accordion-section>
+  <gux-accordion-section open>
+    <h2 slot="header">Second Section Beta</h2>
+    <p slot="content">I'm a p.</p>
+  </gux-accordion-section>
+  <gux-accordion-section open>
+    <h2 slot="header">Third Section Beta</h2>
+    <span slot="content">I'm a span.</span>
+  </gux-accordion-section>
+  <gux-accordion-section open>
+    <h2 slot="header">
+      Fourth Section Beta has a really really long title to see what it looks
+      like when the title overflows
+    </h2>
+    <span slot="content">I'm a span.</span>
+  </gux-accordion-section>
+</gux-accordion>
+<h2>All sections initially open but single section open set</h2>
+
+<gux-accordion arrow-position="beside-text" single-open-section>
   <gux-accordion-section class="blocked" disabled open>
     <h2 slot="header">First Section Beta</h2>
     <div slot="content">

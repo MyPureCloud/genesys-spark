@@ -1,15 +1,17 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxActionButton } from '../gux-action-button';
-import { GuxActionItem } from '../../../beta/gux-action-list/gux-action-item/gux-action-item';
+import { GuxList } from '../../gux-list/gux-list';
+import { GuxListDivider } from '../../gux-list/gux-list-divider/gux-list-divider';
+import { GuxListItem } from '../../gux-list/gux-list-item/gux-list-item';
 
-const components = [GuxActionButton, GuxActionItem];
+const components = [GuxActionButton, GuxList, GuxListDivider, GuxListItem];
 const html = `
 <gux-action-button lang="en" text="Primary" accent="primary">
-  <gux-action-item text="test"></gux-action-item>
-  <gux-action-item text="test2"></gux-action-item>
-  <gux-action-item text="test3"></gux-action-item>
+  <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+  <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+  <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
   <gux-list-divider></gux-list-divider>
-  <gux-action-item><span>I am a span</span></gux-action-item>
+  <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
 </gux-action-button>
 `;
 const language = 'en';
@@ -46,11 +48,11 @@ describe('gux-action-button', () => {
   it('should not fire actionClick event if disabled', async () => {
     const disableHtml = `
     <gux-action-button lang="en" text="Primary" accent="primary" disabled>
-      <gux-action-item text="test"></gux-action-item>
-      <gux-action-item text="test2"></gux-action-item>
-      <gux-action-item text="test3"></gux-action-item>
+      <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+      <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+      <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
       <gux-list-divider></gux-list-divider>
-      <gux-action-item><span>I am a span</span></gux-action-item>
+      <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
     </gux-action-button>
     `;
     const page = await newSpecPage({ components, html: disableHtml, language });
@@ -69,6 +71,7 @@ describe('gux-action-button', () => {
   });
 
   it('should fire open and close events if not disabled', async () => {
+    jest.useFakeTimers();
     const page = await newSpecPage({ components, html, language });
     const openSpy = jest.fn();
     const closeSpy = jest.fn();
@@ -81,8 +84,21 @@ describe('gux-action-button', () => {
       '.gux-dropdown-button > button'
     );
 
-    dropdownButton.click();
-    dropdownButton.click();
+    dropdownButton.dispatchEvent(
+      new MouseEvent('mouseup', {
+        bubbles: true,
+        cancelable: true
+      })
+    );
+    jest.runAllTimers();
+
+    dropdownButton.dispatchEvent(
+      new MouseEvent('mouseup', {
+        bubbles: true,
+        cancelable: true
+      })
+    );
+    jest.runAllTimers();
 
     expect(openSpy).toHaveBeenCalledTimes(1);
     expect(closeSpy).toHaveBeenCalledTimes(1);
@@ -91,11 +107,11 @@ describe('gux-action-button', () => {
   it('should not fire open event if disabled', async () => {
     const disableHtml = `
     <gux-action-button lang="en" text="Primary" accent="primary" disabled>
-      <gux-action-item text="test"></gux-action-item>
-      <gux-action-item text="test2"></gux-action-item>
-      <gux-action-item text="test3"></gux-action-item>
+      <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+      <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+      <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
       <gux-list-divider></gux-list-divider>
-      <gux-action-item><span>I am a span</span></gux-action-item>
+      <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
     </gux-action-button>
     `;
     const page = await newSpecPage({ components, html: disableHtml, language });
@@ -111,38 +127,5 @@ describe('gux-action-button', () => {
     dropdownButton.click();
 
     expect(openSpy).toHaveBeenCalledTimes(0);
-  });
-
-  it('should fire press event if action-item not disabled', async () => {
-    const page = await newSpecPage({ components, html, language });
-    const pressSpy = jest.fn();
-
-    page.win.addEventListener('press', pressSpy);
-
-    const actionItem = document.querySelector('gux-action-item') as HTMLElement;
-    actionItem.click();
-
-    expect(pressSpy).toHaveBeenCalledTimes(1);
-  });
-
-  it('should not fire press event if action-item disabled', async () => {
-    const disableHtml = `
-    <gux-action-button lang="en" text="Primary" accent="primary">
-      <gux-action-item text="test" disabled></gux-action-item>
-      <gux-action-item text="test2"></gux-action-item>
-      <gux-action-item text="test3"></gux-action-item>
-      <gux-list-divider></gux-list-divider>
-      <gux-action-item><span>I am a span</span></gux-action-item>
-    </gux-action-button>
-    `;
-    const page = await newSpecPage({ components, html: disableHtml, language });
-    const pressSpy = jest.fn();
-
-    page.win.addEventListener('press', pressSpy);
-
-    const actionItem = document.querySelector('gux-action-item') as HTMLElement;
-    actionItem.click();
-
-    expect(pressSpy).toHaveBeenCalledTimes(0);
   });
 });

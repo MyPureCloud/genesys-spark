@@ -12,15 +12,33 @@
 * `label` property on instances of `gux-datepicker` now only accepts `string`.
 * `trap-focus` property on instances of `gux-modal` now default to true
 * replace `gux-list-divider` with `gux-action-list-divider` in `gux-action-button` and `gux-button-multi` components
+* remove the `icon` property from `gux-tag-beta` and slot in the icon instead
 * remove `-beta` from components that have become stable
-  * `gux-accordion-beta` ->  `gux-accordion`
-  * `gux-dismiss-button-beta` ->  `gux-dismiss-button`
-  * `gux-pagination-cursor-beta` ->  `gux-pagination-cursor`
-  * `gux-popup-beta` ->  `gux-popup`
+  * `gux-accordion-beta` -> `gux-accordion`
+  * `gux-dismiss-button-beta` -> `gux-dismiss-button`
+  * `gux-dropdown-v2-beta` -> `gux-dropdown`
+  * `gux-form-field-checkbox-beta` -> `gux-form-field-checkbox`
+  * `gux-form-field-color-beta` -> `gux-form-field-color`
+  * `gux-form-field-number-beta` -> `gux-form-field-number`
+  * `gux-form-field-radio-beta` -> `gux-form-field-radio`
+  * `gux-form-field-range-beta` -> `gux-form-field-range`
+  * `gux-form-field-search-beta` -> `gux-form-field-search`
+  * `gux-form-field-select-beta` -> `gux-form-field-select`
+  * `gux-form-field-text-like-beta` -> `gux-form-field-text-like`
+  * `gux-form-field-textarea-beta` -> `gux-form-field-textarea`
+  * `gux-option-v2` -> `gux-option` (child of `gux-listbox`)
+  * `gux-pagination-cursor-beta` -> `gux-pagination-cursor`
+  * `gux-popup-beta` -> `gux-popup`
   * `gux-tabs-beta` -> `gux-tabs`
-  * `gux-tooltip-title-beta` ->  `gux-tooltip-title`
+  * `gux-tooltip-title-beta` -> `gux-tooltip-title`
 * add `-legacy` to components that have been removed from stable
   * `gux-accordion` -> `gux-accordion-legacy`
+  * `gux-action-button` -> `gux-action-button-legacy`
+  * `gux-action-list` -> `gux-action-list-legacy`
+  * `gux-button-multi` -> `gux-button-multi-legacy`
+  * `gux-dropdown` -> `gux-dropdown-legacy`
+  * `gux-form-field` -> `gux-form-field-legacy`
+  * `gux-list` -> `gux-list-legacy`
   * `gux-tabs`-> `gux-tabs-legacy`
     * `gux-tab-dropdown-option`-> `gux-tab-dropdown-option-legacy`
     * `gux-tab`-> `gux-tab-legacy`
@@ -30,6 +48,22 @@
   * `gux-side-panel-beta` -> `gux-side-panel-legacy`
 * migrate away from usage of legacy components
   * `gux-accordion-legacy` -> `gux-accordion`
+  * `gux-action-button-legacy` -> `gux-action-button`
+    * `gux-action-item` -> `gux-list-item`
+  * `gux-button-multi-legacy` -> `gux-button-multi`
+    * `gux-action-item` -> `gux-list-item`
+  * `gux-dropdown-legacy` -> `gux-dropdown`
+    * `gux-option-legacy` -> `gux-listbox` & `gux-option`
+  * `gux-form-field-legacy` -> `gux-form-field-{type}`
+    * `gux-form-field-checkbox`
+    * `gux-form-field-color`
+    * `gux-form-field-number`
+    * `gux-form-field-radio`
+    * `gux-form-field-range`
+    * `gux-form-field-search`
+    * `gux-form-field-select`
+    * `gux-form-field-text-like`
+    * `gux-form-field-textarea`
   * `gux-command-palette-legacy` -> Contact the Core UI team if you need help migrating away from this component.
   * `gux-panel-frame-legacy` -> Contact the Core UI team if you need help migrating away from this component.
   * `gux-side-panel-legacy` -> Contact the Core UI team if you need help migrating away from this component.
@@ -91,6 +125,16 @@ The following components have moved from beta to stable without any api changes.
 
 * gux-accordion
 * gux-dismiss-button
+* gux-dropdown-v2-beta
+* gux-form-field-checkbox
+* gux-form-field-color
+* gux-form-field-number
+* gux-form-field-radio
+* gux-form-field-range
+* gux-form-field-search
+* gux-form-field-select
+* gux-form-field-text-like
+* gux-form-field-textarea
 * gux-pagination-cursor
 * gux-popup
 * gux-tabs (v3)
@@ -125,6 +169,11 @@ The following components have moved from beta to stable without any api changes.
 The following components have moved from stable to legacy without any api changes.
 
 * gux-accordion
+* gux-action-button
+* gux-action-list
+* gux-button-multi
+* gux-dropdown
+* gux-list
 * gux-tabs (v2)
 
 #### Actions
@@ -151,9 +200,33 @@ The following components have moved from stable to legacy without any api change
 
 [More details here](./gux-accordion-legacy)
 
+### gux-action-button-legacy
+
+[More details here](./gux-list-legacy)
+
+### gux-action-list-legacy
+
+Contact the Core UI team if you need help migrating away from this component.
+
+### gux-button-multi-legacy
+
+[More details here](./gux-list-legacy)
+
 ### gux-command-palette-legacy
 
 Contact the Core UI team if you need help migrating away from this component.
+
+### gux-dropdown-legacy
+
+[More details here](./gux-dropdown-legacy)
+
+### gux-form-field-legacy
+
+[More details here](./gux-form-field-legacy)
+
+### gux-list-legacy
+
+[More details here](./gux-list-legacy)
 
 ### gux-panel-frame-legacy
 

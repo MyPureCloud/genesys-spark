@@ -14,6 +14,13 @@
 | `open`          | `open`           |             | `boolean`                    | `false`     |
 
 
+## Events
+
+| Event                   | Description | Type                |
+| ----------------------- | ----------- | ------------------- |
+| `internalsectionopened` |             | `CustomEvent<void>` |
+
+
 ## Dependencies
 
 ### Depends on

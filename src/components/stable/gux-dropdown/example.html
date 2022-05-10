@@ -1,109 +1,417 @@
 <h1>gux-dropdown</h1>
-<div style="width: 100px">
-  <gux-dropdown placeholder="Select..." filterable="true">
-    <gux-option value="en-US">American English</gux-option>
-    <gux-option value="es">Latin American Spanish</gux-option>
-    <gux-option value="es-ES">European Spanish</gux-option>
-    <gux-option value="en-UK">UK English</gux-option>
-    <gux-option value="fr-CA" text="Canadian French"
-      >American French</gux-option
-    >
-    <gux-option value="fr" text="European French"></gux-option>
-    <gux-option>Dutch</gux-option>
+<form onchange="notify(event)" oninput="notify(event)">
+  <h2>Filterable Long List</h2>
+  <gux-dropdown filterable placeholder="Select a country">
+    <gux-listbox aria-label="Countries">
+      <gux-option value="AFG">Afghanistan</gux-option>
+      <gux-option value="ALA">Åland Islands</gux-option>
+      <gux-option value="ALB">Albania</gux-option>
+      <gux-option value="DZA">Algeria</gux-option>
+      <gux-option value="ASM">American Samoa</gux-option>
+      <gux-option value="AND">Andorra</gux-option>
+      <gux-option value="AGO">Angola</gux-option>
+      <gux-option value="AIA">Anguilla</gux-option>
+      <gux-option value="ATA">Antarctica</gux-option>
+      <gux-option value="ATG">Antigua and Barbuda</gux-option>
+      <gux-option value="ARG">Argentina</gux-option>
+      <gux-option value="ARM">Armenia</gux-option>
+      <gux-option value="ABW">Aruba</gux-option>
+      <gux-option value="AUS">Australia</gux-option>
+      <gux-option value="AUT">Austria</gux-option>
+      <gux-option value="AZE">Azerbaijan</gux-option>
+      <gux-option value="BHR">Bahrain</gux-option>
+      <gux-option value="BGD">Bangladesh</gux-option>
+      <gux-option value="BRB">Barbados</gux-option>
+      <gux-option value="BLR">Belarus</gux-option>
+      <gux-option value="BEL">Belgium</gux-option>
+      <gux-option value="BLZ">Belize</gux-option>
+      <gux-option value="BEN">Benin</gux-option>
+      <gux-option value="BMU">Bermuda</gux-option>
+      <gux-option value="BTN">Bhutan</gux-option>
+      <gux-option value="BOL">Bolivia</gux-option>
+      <gux-option value="BIH">Bosnia and Herzegovina</gux-option>
+      <gux-option value="BWA">Botswana</gux-option>
+      <gux-option value="BVT">Bouvet Island</gux-option>
+      <gux-option value="BRA">Brazil</gux-option>
+      <gux-option value="IOT">British Indian Ocean Territory</gux-option>
+      <gux-option value="VGB">British Virgin Islands</gux-option>
+      <gux-option value="BRN">Brunei</gux-option>
+      <gux-option value="BGR">Bulgaria</gux-option>
+      <gux-option value="BFA">Burkina Faso</gux-option>
+      <gux-option value="BDI">Burundi</gux-option>
+      <gux-option value="KHM">Cambodia</gux-option>
+      <gux-option value="CMR">Cameroon</gux-option>
+      <gux-option value="CAN">Canada</gux-option>
+      <gux-option value="CPV">Cape Verde</gux-option>
+      <gux-option value="BES"
+        >Caribbean Netherlands: Bonaire, Sint Eustatius and Saba</gux-option
+      >
+      <gux-option value="CYM">Cayman Islands</gux-option>
+      <gux-option value="CAF">Central African Republic</gux-option>
+      <gux-option value="TCD">Chad</gux-option>
+      <gux-option value="CHL">Chile</gux-option>
+      <gux-option value="CHN">China, People"s Republic of</gux-option>
+      <gux-option value="CXR">Christmas Island</gux-option>
+      <gux-option value="CCK">Cocos (Keeling) Islands</gux-option>
+      <gux-option value="COL">Colombia</gux-option>
+      <gux-option value="COM">Comoros</gux-option>
+      <gux-option value="COD">Congo, Democratic Republic of the</gux-option>
+      <gux-option value="COG">Congo, Republic of the</gux-option>
+      <gux-option value="COK">Cook Islands</gux-option>
+      <gux-option value="CRI">Costa Rica</gux-option>
+      <gux-option value="CIV">Côte d"Ivoire</gux-option>
+      <gux-option value="HRV">Croatia</gux-option>
+      <gux-option value="CUB">Cuba</gux-option>
+      <gux-option value="CUW">Curaçao</gux-option>
+      <gux-option value="CYP">Cyprus</gux-option>
+      <gux-option value="CZE">Czech Republic</gux-option>
+      <gux-option value="DNK">Denmark</gux-option>
+      <gux-option value="DJI">Djibouti</gux-option>
+      <gux-option value="DMA">Dominica</gux-option>
+      <gux-option value="DOM">Dominican Republic</gux-option>
+      <gux-option value="ECU">Ecuador</gux-option>
+      <gux-option value="EGY">Egypt</gux-option>
+      <gux-option value="SLV">El Salvador</gux-option>
+      <gux-option value="GNQ">Equatorial Guinea</gux-option>
+      <gux-option value="ERI">Eritrea</gux-option>
+      <gux-option value="EST">Estonia</gux-option>
+      <gux-option value="SWZ">Eswatini</gux-option>
+      <gux-option value="ETH">Ethiopia</gux-option>
+      <gux-option value="FLK">Falkland Islands</gux-option>
+      <gux-option value="FRO">Faroe Islands</gux-option>
+      <gux-option value="FJI">Fiji</gux-option>
+      <gux-option value="FIN">Finland</gux-option>
+      <gux-option value="FRA">France</gux-option>
+      <gux-option value="GUF">French Guiana</gux-option>
+      <gux-option value="PYF">French Polynesia</gux-option>
+      <gux-option value="ATF">French Southern and Antarctic Lands</gux-option>
+      <gux-option value="GAB">Gabon</gux-option>
+      <gux-option value="GEO">Georgia</gux-option>
+      <gux-option value="DEU">Germany</gux-option>
+      <gux-option value="GHA">Ghana</gux-option>
+      <gux-option value="GIB">Gibraltar</gux-option>
+      <gux-option value="GRC">Greece</gux-option>
+      <gux-option value="GRL">Greenland</gux-option>
+      <gux-option value="GRD">Grenada</gux-option>
+      <gux-option value="GLP">Guadeloupe</gux-option>
+      <gux-option value="GUM">Guam</gux-option>
+      <gux-option value="GTM">Guatemala</gux-option>
+      <gux-option value="GGY">Guernsey</gux-option>
+      <gux-option value="GIN">Guinea</gux-option>
+      <gux-option value="GNB">Guinea-Bissau</gux-option>
+      <gux-option value="GUY">Guyana</gux-option>
+      <gux-option value="HTI">Haiti</gux-option>
+      <gux-option value="HMD">Heard Island and McDonald Islands</gux-option>
+      <gux-option value="HND">Honduras</gux-option>
+      <gux-option value="HKG">Hong Kong</gux-option>
+      <gux-option value="HUN">Hungary</gux-option>
+      <gux-option value="ISL">Iceland</gux-option>
+      <gux-option value="IND">India</gux-option>
+      <gux-option value="IDN">Indonesia</gux-option>
+      <gux-option value="IRN">Iran</gux-option>
+      <gux-option value="IRQ">Iraq</gux-option>
+      <gux-option value="IRL">Ireland</gux-option>
+      <gux-option value="IMN">Isle of Man</gux-option>
+      <gux-option value="ISR">Israel</gux-option>
+      <gux-option value="ITA">Italy</gux-option>
+      <gux-option value="JAM">Jamaica</gux-option>
+      <gux-option value="JPN">Japan</gux-option>
+      <gux-option value="JEY">Jersey</gux-option>
+      <gux-option value="JOR">Jordan</gux-option>
+      <gux-option value="KAZ">Kazakhstan</gux-option>
+      <gux-option value="KEN">Kenya</gux-option>
+      <gux-option value="KIR">Kiribati</gux-option>
+      <gux-option value="PRK"
+        >Korea, Democratic People"s Rep. (North)</gux-option
+      >
+      <gux-option value="KOR">Korea, Republic of (South)</gux-option>
+      <gux-option value="KWT">Kuwait</gux-option>
+      <gux-option value="KGZ">Kyrgyzstan</gux-option>
+      <gux-option value="LAO">Laos</gux-option>
+      <gux-option value="LVA">Latvia</gux-option>
+      <gux-option value="LBN">Lebanon</gux-option>
+      <gux-option value="LSO">Lesotho</gux-option>
+      <gux-option value="LBR">Liberia</gux-option>
+      <gux-option value="LBY">Libya</gux-option>
+      <gux-option value="LIE">Liechtenstein</gux-option>
+      <gux-option value="LTU">Lithuania</gux-option>
+      <gux-option value="LUX">Luxembourg</gux-option>
+      <gux-option value="MAC">Macau</gux-option>
+      <gux-option value="MDG">Madagascar</gux-option>
+      <gux-option value="MWI">Malawi</gux-option>
+      <gux-option value="MYS">Malaysia</gux-option>
+      <gux-option value="MDV">Maldives</gux-option>
+      <gux-option value="MLI">Mali</gux-option>
+      <gux-option value="MLT">Malta</gux-option>
+      <gux-option value="MHL">Marshall Islands</gux-option>
+      <gux-option value="MTQ">Martinique</gux-option>
+      <gux-option value="MRT">Mauritania</gux-option>
+      <gux-option value="MUS">Mauritius</gux-option>
+      <gux-option value="MYT">Mayotte</gux-option>
+      <gux-option value="MEX">Mexico</gux-option>
+      <gux-option value="FSM">Micronesia, Federated States of</gux-option>
+      <gux-option value="MDA">Moldova</gux-option>
+      <gux-option value="MCO">Monaco</gux-option>
+      <gux-option value="MNG">Mongolia</gux-option>
+      <gux-option value="MNE">Montenegro</gux-option>
+      <gux-option value="MSR">Montserrat</gux-option>
+      <gux-option value="MAR">Morocco</gux-option>
+      <gux-option value="MOZ">Mozambique</gux-option>
+      <gux-option value="MMR">Myanmar</gux-option>
+      <gux-option value="NAM">Namibia</gux-option>
+      <gux-option value="NRU">Nauru</gux-option>
+      <gux-option value="NPL">Nepal</gux-option>
+      <gux-option value="NLD">Netherlands</gux-option>
+      <gux-option value="NCL">New Caledonia</gux-option>
+      <gux-option value="NZL">New Zealand</gux-option>
+      <gux-option value="NIC">Nicaragua</gux-option>
+      <gux-option value="NER">Niger</gux-option>
+      <gux-option value="NGA">Nigeria</gux-option>
+      <gux-option value="NIU">Niue</gux-option>
+      <gux-option value="NFK">Norfolk Island</gux-option>
+      <gux-option value="MKD">North Macedonia</gux-option>
+      <gux-option value="MNP">Northern Mariana Islands</gux-option>
+      <gux-option value="NOR">Norway</gux-option>
+      <gux-option value="OMN">Oman</gux-option>
+      <gux-option value="PAK">Pakistan</gux-option>
+      <gux-option value="PLW">Palau</gux-option>
+      <gux-option value="PAN">Panama</gux-option>
+      <gux-option value="PNG">Papua New Guinea</gux-option>
+      <gux-option value="PRY">Paraguay</gux-option>
+      <gux-option value="PER">Peru</gux-option>
+      <gux-option value="PHL">Philippines</gux-option>
+      <gux-option value="PCN">Pitcairn Islands</gux-option>
+      <gux-option value="POL">Poland</gux-option>
+      <gux-option value="PRT">Portugal</gux-option>
+      <gux-option value="PRI">Puerto Rico</gux-option>
+      <gux-option value="QAT">Qatar</gux-option>
+      <gux-option value="REU">Réunion</gux-option>
+      <gux-option value="ROU">Romania</gux-option>
+      <gux-option value="RUS">Russian Federation</gux-option>
+      <gux-option value="RWA">Rwanda</gux-option>
+      <gux-option value="BLM">Saint Barthélemy</gux-option>
+      <gux-option value="SHN"
+        >Saint Helena, Ascension and Tristan da Cunha</gux-option
+      >
+      <gux-option value="KNA">Saint Kitts and Nevis</gux-option>
+      <gux-option value="LCA">Saint Lucia</gux-option>
+      <gux-option value="MAF">Saint Martin (French part)</gux-option>
+      <gux-option value="SPM">Saint Pierre and Miquelon</gux-option>
+      <gux-option value="VCT">Saint Vincent and the Grenadines</gux-option>
+      <gux-option value="WSM">Samoa</gux-option>
+      <gux-option value="SMR">San Marino</gux-option>
+      <gux-option value="STP">São Tomé and Príncipe</gux-option>
+      <gux-option value="SAU">Saudi Arabia</gux-option>
+      <gux-option value="SEN">Senegal</gux-option>
+      <gux-option value="SRB">Serbia</gux-option>
+      <gux-option value="SYC">Seychelles</gux-option>
+      <gux-option value="SLE">Sierra Leone</gux-option>
+      <gux-option value="SGP">Singapore</gux-option>
+      <gux-option value="SXM">Sint Maarten (Dutch part)</gux-option>
+      <gux-option value="SVK">Slovakia</gux-option>
+      <gux-option value="SVN">Slovenia</gux-option>
+      <gux-option value="SLB">Solomon Islands</gux-option>
+      <gux-option value="SOM">Somalia</gux-option>
+      <gux-option value="ZAF">South Africa</gux-option>
+      <gux-option value="SGS"
+        >South Georgia and the South Sandwich Islands</gux-option
+      >
+      <gux-option value="SSD">South Sudan</gux-option>
+      <gux-option value="ESP">Spain</gux-option>
+      <gux-option value="LKA">Sri Lanka</gux-option>
+      <gux-option value="PSE">State of Palestine</gux-option>
+      <gux-option value="SDN">Sudan</gux-option>
+      <gux-option value="SUR">Suriname</gux-option>
+      <gux-option value="SJM">Svalbard and Jan Mayen</gux-option>
+      <gux-option value="SWE">Sweden</gux-option>
+      <gux-option value="CHE">Switzerland</gux-option>
+      <gux-option value="SYR">Syria</gux-option>
+      <gux-option value="TWN">Taiwan</gux-option>
+      <gux-option value="TJK">Tajikistan</gux-option>
+      <gux-option value="TZA">Tanzania</gux-option>
+      <gux-option value="THA">Thailand</gux-option>
+      <gux-option value="BHS">The Bahamas</gux-option>
+      <gux-option value="GMB">The Gambia</gux-option>
+      <gux-option value="TLS">Timor-Leste[18]</gux-option>
+      <gux-option value="TGO">Togo</gux-option>
+      <gux-option value="TKL">Tokelau</gux-option>
+      <gux-option value="TON">Tonga</gux-option>
+      <gux-option value="TTO">Trinidad and Tobago</gux-option>
+      <gux-option value="TUN">Tunisia</gux-option>
+      <gux-option value="TUR">Turkey</gux-option>
+      <gux-option value="TKM">Turkmenistan</gux-option>
+      <gux-option value="TCA">Turks and Caicos Islands</gux-option>
+      <gux-option value="TUV">Tuvalu</gux-option>
+      <gux-option value="UGA">Uganda</gux-option>
+      <gux-option value="UKR">Ukraine</gux-option>
+      <gux-option value="ARE">United Arab Emirates</gux-option>
+      <gux-option value="GBR">United Kingdom</gux-option>
+      <gux-option value="USA">United States</gux-option>
+      <gux-option value="UMI">United States Minor Outlying Islands</gux-option>
+      <gux-option value="VIR">United States Virgin Islands[20]</gux-option>
+      <gux-option value="URY">Uruguay</gux-option>
+      <gux-option value="UZB">Uzbekistan</gux-option>
+      <gux-option value="VUT">Vanuatu</gux-option>
+      <gux-option value="VAT">Vatican City State</gux-option>
+      <gux-option value="VEN">Venezuela</gux-option>
+      <gux-option value="VNM">Vietnam</gux-option>
+      <gux-option value="WLF">Wallis and Futuna</gux-option>
+      <gux-option value="ESH">Western Sahara</gux-option>
+      <gux-option value="YEM">Yemen</gux-option>
+      <gux-option value="ZMB">Zambia</gux-option>
+      <gux-option value="ZWE">Zimbabwe</gux-option>
+    </gux-listbox>
   </gux-dropdown>
-</div>
 
-<div>
-  <gux-dropdown placeholder="Select..." filterable="true">
-    <gux-option value="en-US">American English</gux-option>
-    <gux-option value="es">Latin American Spanish</gux-option>
-    <gux-option value="es-ES">European Spanish</gux-option>
-    <gux-option value="en-UK">UK English</gux-option>
-    <gux-option value="fr-CA" text="Canadian French"
-      >American French</gux-option
-    >
-    <gux-option value="fr" text="European French"></gux-option>
-    <gux-option>Dutch</gux-option>
+  <h2>Value Set</h2>
+  <gux-dropdown value="a">
+    <gux-listbox aria-label="Animals">
+      <gux-option value="a" disabled>Ant</gux-option>
+      <gux-option value="b">Bat</gux-option>
+      <gux-option value="c">Cat</gux-option>
+      <gux-option value="d">Dog</gux-option>
+      <gux-option value="e" disabled>Eel</gux-option>
+      <gux-option value="f">Frog</gux-option>
+      <gux-option value="g">Goat</gux-option>
+      <gux-option value="h" disabled>Horse</gux-option>
+      <gux-option value="i" disabled>Ibis</gux-option>
+    </gux-listbox>
   </gux-dropdown>
-</div>
 
-<div>
-  <gux-dropdown placeholder="Select..." filterable="true" disabled>
-    <gux-option value="en-US">American English</gux-option>
-    <gux-option value="es">Latin American Spanish</gux-option>
-    <gux-option value="es-ES">European Spanish</gux-option>
-    <gux-option value="en-UK">UK English</gux-option>
-    <gux-option value="fr-CA" text="Canadian French"
-      >American French</gux-option
-    >
-    <gux-option value="fr" text="European French"></gux-option>
-    <gux-option>Dutch</gux-option>
+  <h2>No Value Set</h2>
+  <gux-dropdown>
+    <gux-listbox aria-label="Animals">
+      <gux-option value="a">Ant</gux-option>
+      <gux-option value="b">Bat</gux-option>
+      <gux-option value="c">Cat</gux-option>
+      <gux-option value="d">Dog</gux-option>
+      <gux-option value="e">Eel</gux-option>
+      <gux-option value="f">Frog</gux-option>
+      <gux-option value="g">Goat</gux-option>
+      <gux-option value="h">Horse</gux-option>
+      <gux-option value="i">Ibis</gux-option>
+    </gux-listbox>
   </gux-dropdown>
-</div>
 
-<div>
-  <gux-dropdown placeholder="Select...">
-    <gux-option value="en-US">American English</gux-option>
-    <gux-option value="es">Latin American Spanish</gux-option>
-    <gux-option value="es-ES" selected>European Spanish</gux-option>
-    <gux-option value="en-UK">UK English</gux-option>
-    <gux-option value="fr-CA" text="Canadian French"
-      >American French</gux-option
-    >
-    <gux-option value="fr" text="European French"></gux-option>
-    <gux-option>Dutch</gux-option>
+  <h2>Unknown Value Set</h2>
+  <gux-dropdown value="j">
+    <gux-listbox id="unknown-listbox" aria-label="Animals">
+      <gux-option value="a">Ant</gux-option>
+      <gux-option value="b">Bat</gux-option>
+      <gux-option value="c">Cat</gux-option>
+      <gux-option value="d">Dog</gux-option>
+      <gux-option value="e">Eel</gux-option>
+      <gux-option value="f">Frog</gux-option>
+      <gux-option value="g">Goat</gux-option>
+      <gux-option value="h">Horse</gux-option>
+      <gux-option value="i">Ibis</gux-option>
+    </gux-listbox>
   </gux-dropdown>
-</div>
 
-<div>
-  <gux-dropdown placeholder="Select..." disabled>
-    <gux-option value="en-US">American English</gux-option>
-    <gux-option value="es">Latin American Spanish</gux-option>
-    <gux-option value="es-ES" selected>European Spanish</gux-option>
-    <gux-option value="en-UK">UK English</gux-option>
-    <gux-option value="fr-CA" text="Canadian French"
-      >American French</gux-option
-    >
-    <gux-option value="fr" text="European French"></gux-option>
-    <gux-option>Dutch</gux-option>
-  </gux-dropdown>
-</div>
+  <gux-button
+    onclick="(function() {
+    const newOption = window.toHTML(`<gux-option value='j'>Jellyfish</gux-option>`);
+    document.getElementById('unknown-listbox').appendChild(newOption);
+  })()"
+    >Add "Jellyfish" Option</gux-button
+  >
 
-<div style="width: 100px">
-  <gux-dropdown placeholder="Select..." value="en-US" filterable="true">
-    <gux-option value="en-US">American English</gux-option>
-    <gux-option value="es">Latin American Spanish</gux-option>
-    <gux-option value="es-ES">European Spanish</gux-option>
-    <gux-option value="en-UK">UK English</gux-option>
-    <gux-option value="fr-CA" text="Canadian French"
-      >American French</gux-option
-    >
-    <gux-option value="fr" text="European French"></gux-option>
-    <gux-option>Dutch</gux-option>
-  </gux-dropdown>
-</div>
+  <gux-button
+    onclick="(function() {
+    const option = document.querySelector('#unknown-listbox gux-option[value=j]')
 
-<h2>Dynamic Options</h2>
-<gux-dropdown id="dropdown" placeholder="Select..."> </gux-dropdown>
-
-<gux-button
-  onclick="(function() {
-    const newOptions = [
-      window.toHTML(`<gux-option value='a'>Ant</gux-option>`),
-      window.toHTML(`<gux-option value='b'>Bat</gux-option>`),
-      window.toHTML(`<gux-option value='c'>Cat</gux-option>`),
-      window.toHTML(`<gux-option value='d'>Dog</gux-option>`),
-      window.toHTML(`<gux-option value='e' selected>Eel</gux-option>`),
-      window.toHTML(`<gux-option value='f'>Frog</gux-option>`),
-      window.toHTML(`<gux-option value='g'>Goat</gux-option>`),
-      window.toHTML(`<gux-option value='h'>Horse</gux-option>`),
-      window.toHTML(`<gux-option value='i'>Ibis</gux-option>`),
-      window.toHTML(`<gux-option value='j'>Jellyfish</gux-option>`)
-    ];
-
-    const dropdown = document.getElementById('dropdown');
-
-    newOptions.forEach((newOption) => document.getElementById('dropdown').appendChild(newOption));
+    option && option.remove();
 })()"
-  >Add Options</gux-button
->
+    >Remove "Jellyfish" Option</gux-button
+  >
+
+  <h2>Disabled</h2>
+  <gux-dropdown value="a" disabled>
+    <gux-listbox aria-label="Animals">
+      <gux-option value="a">Ant</gux-option>
+      <gux-option value="b">Bat</gux-option>
+      <gux-option value="c">Cat</gux-option>
+      <gux-option value="d">Dog</gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+
+  <h2>Placeholder</h2>
+  <gux-dropdown placeholder="Select an animal">
+    <gux-listbox aria-label="Animals">
+      <gux-option value="a">Ant</gux-option>
+      <gux-option value="b">Bat</gux-option>
+      <gux-option value="c">Cat</gux-option>
+      <gux-option value="d">Dog</gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+
+  <h2>Long List</h2>
+  <gux-dropdown placeholder="Select an animal">
+    <gux-listbox aria-label="Animals">
+      <gux-option value="a">Ant</gux-option>
+      <gux-option value="b">Bat</gux-option>
+      <gux-option value="c">Cat</gux-option>
+      <gux-option value="d">Dog</gux-option>
+      <gux-option value="e">Eel</gux-option>
+      <gux-option value="f">Frog</gux-option>
+      <gux-option value="g">Goat</gux-option>
+      <gux-option value="h">Hourse</gux-option>
+      <gux-option value="i">Ibis</gux-option>
+      <gux-option value="j">Jellyfish</gux-option>
+      <gux-option value="k">Kestrel</gux-option>
+      <gux-option value="l">Lion</gux-option>
+      <gux-option value="m">Monkey</gux-option>
+      <gux-option value="n">Narwhal</gux-option>
+      <gux-option value="o">Otter</gux-option>
+      <gux-option value="p">Penguin</gux-option>
+      <gux-option value="q">Quail</gux-option>
+      <gux-option value="r">Rabbit</gux-option>
+      <gux-option value="s">Snake</gux-option>
+      <gux-option value="t">Toad</gux-option>
+      <gux-option value="u">Urchin</gux-option>
+      <gux-option value="v">Vulture</gux-option>
+      <gux-option value="w">Worm</gux-option>
+      <gux-option value="x">Xerus</gux-option>
+      <gux-option value="y">Yak</gux-option>
+      <gux-option value="z">Zebra</gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+
+  <h2>Set list max height</h2>
+  <gux-dropdown placeholder="Select an animal">
+    <gux-listbox style="max-height: 100px" aria-label="Animals">
+      <gux-option value="a">Ant</gux-option>
+      <gux-option value="b">Bat</gux-option>
+      <gux-option value="c">Cat</gux-option>
+      <gux-option value="d">Dog</gux-option>
+      <gux-option value="e">Eel</gux-option>
+      <gux-option value="f">Frog</gux-option>
+      <gux-option value="g">Goat</gux-option>
+      <gux-option value="h">Hourse</gux-option>
+      <gux-option value="i">Ibis</gux-option>
+      <gux-option value="j">Jellyfish</gux-option>
+      <gux-option value="k">Kestrel</gux-option>
+      <gux-option value="l">Lion</gux-option>
+      <gux-option value="m">Monkey</gux-option>
+      <gux-option value="n">Narwhal</gux-option>
+      <gux-option value="o">Otter</gux-option>
+      <gux-option value="p">Penguin</gux-option>
+      <gux-option value="q">Quail</gux-option>
+      <gux-option value="r">Rabbit</gux-option>
+      <gux-option value="s">Snake</gux-option>
+      <gux-option value="t">Toad</gux-option>
+      <gux-option value="u">Urchin</gux-option>
+      <gux-option value="v">Vulture</gux-option>
+      <gux-option value="w">Worm</gux-option>
+      <gux-option value="x">Xerus</gux-option>
+      <gux-option value="y">Yak</gux-option>
+      <gux-option value="z">Zebra</gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+</form>
+
+<style>
+  form {
+    width: 200px;
+  }
+</style>

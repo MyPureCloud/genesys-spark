@@ -7,11 +7,10 @@
 
 ## Properties
 
-| Property      | Attribute      | Description                                | Type      | Default     |
-| ------------- | -------------- | ------------------------------------------ | --------- | ----------- |
-| `guxDisabled` | `gux-disabled` | Specifies if tab is disabled               | `boolean` | `false`     |
-| `iconOnly`    | `icon-only`    | Specifies if the tab title is just an icon | `boolean` | `false`     |
-| `tabId`       | `tab-id`       | Tab id for the tab                         | `string`  | `undefined` |
+| Property      | Attribute      | Description                  | Type      | Default     |
+| ------------- | -------------- | ---------------------------- | --------- | ----------- |
+| `guxDisabled` | `gux-disabled` | Specifies if tab is disabled | `boolean` | `false`     |
+| `tabId`       | `tab-id`       | Tab id for the tab           | `string`  | `undefined` |
 
 
 ## Events
