@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.71](https://inindca///compare/v3.0.0-alpha.70...v3.0.0-alpha.71) (2022-05-10)
+
+
+### Features
+
+* **flyout-menu:** enabled shadowDOM ([4125b5c](https://inindca///commit/4125b5c76f6213ab2befce705a1faff355e24826))
+
+
+### Bug Fixes
+
+* **table:** if cursor is in resize state then dont perform sorting action onclick ([47cf913](https://inindca///commit/47cf9139faf6d3012a28a5978ed5d2f285af0aea))
+* **translations:** added missing translation files ([af8fb0c](https://inindca///commit/af8fb0c280db5b57f0967e5ae13b47e64a2e7c9d))
+
 ## [3.0.0-alpha.70](https://inindca///compare/v3.0.0-alpha.69...v3.0.0-alpha.70) (2022-05-09)
 
 
