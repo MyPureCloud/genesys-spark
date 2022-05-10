@@ -37,6 +37,23 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: #fdfdfd;
+    box-shadow: 0 0 10px rgb(32 41 55 / 20%);
+
+    h2 {
+      padding: 10px 15px;
+      margin: 0;
+    }
+  }
+
+  .sticky-footer {
+    // border-top: 1px solid #202937;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 10px rgb(32 41 55 / 20%);
 
     h2 {
       padding: 10px 15px;
@@ -45,7 +62,7 @@ nav {
   }
 
   .component-search-field {
-    padding: 0 4px;
+    padding: 0 16px;
   }
 
   .hide-item {
@@ -58,13 +75,24 @@ nav {
     padding: 30px 25px;
   }
 
-  a {
+  .resources-link {
+    padding: 0 16px;
+  }
+
+  .component-item {
     padding: 0 16px;
     font-size: 12px;
     line-height: 32px;
     color: #33383d;
     text-decoration: none;
     white-space: nowrap;
+    border-top: 1px solid #e8ecf2;
+    border-bottom: 1px solid #e8ecf2;
+
+    &.active-component {
+      color: #fdfdfd;
+      background-color: #2a60c8;
+    }
 
     &:hover {
       color: #fdfdfd;
