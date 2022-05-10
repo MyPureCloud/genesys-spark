@@ -483,24 +483,26 @@ export class GuxTable {
     columnsElements.forEach((column: HTMLElement) => {
       if (Object.prototype.hasOwnProperty.call(column.dataset, 'sortable')) {
         column.onclick = (event: MouseEvent) => {
-          const columnElement = event.target as HTMLElement;
-          const sortDirection = columnElement.dataset.sort || '';
-          let newSortDirection = null;
+          if (!this.columnResizeHover) {
+            const columnElement = event.target as HTMLElement;
+            const sortDirection = columnElement.dataset.sort || '';
+            let newSortDirection = null;
 
-          switch (sortDirection) {
-            case '':
-            case 'desc':
-              newSortDirection = 'asc';
-              break;
-            case 'asc':
-              newSortDirection = 'desc';
-              break;
+            switch (sortDirection) {
+              case '':
+              case 'desc':
+                newSortDirection = 'asc';
+                break;
+              case 'asc':
+                newSortDirection = 'desc';
+                break;
+            }
+
+            this.guxsortchanged.emit({
+              columnName: columnElement.dataset.columnName,
+              sortDirection: newSortDirection
+            });
           }
-
-          this.guxsortchanged.emit({
-            columnName: columnElement.dataset.columnName,
-            sortDirection: newSortDirection
-          });
         };
       }
     });
