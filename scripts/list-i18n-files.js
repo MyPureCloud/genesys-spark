@@ -10,6 +10,9 @@ const output = files.map(file => {
   const component = folder.replace('/i18n', '');
   const numberOfTranslations = fs.readdirSync(folder).length;
 
+  if (numberOfTranslations === 1) {
+    return { component, numberOfTranslations, translationsFound: false };
+  }
   const otherLanguageFile = file.replace('/en.json', '/ja.json');
 
   const englishFileContent = fs.readFileSync(file, {
