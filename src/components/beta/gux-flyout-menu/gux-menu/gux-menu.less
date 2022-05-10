@@ -1,12 +1,31 @@
+@import (reference) '../../../../style/color.less';
+@import (reference) '../../../../style/mixins.less';
+@import (reference) '../../../../style/shadows.less';
+@gux-arrow-height: 5px;
+
 gux-menu {
-  display: block;
-  display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  align-items: stretch;
-  justify-content: flex-start;
   width: fit-content;
   padding: 8px 0;
-  overflow: hidden;
+  background-color: @gux-type-dark;
+  border: 1px solid @gux-grey-30;
+  border-radius: 4px;
+  .gux-shadow-20();
+
+  .gux-arrow,
+  .gux-arrow::before {
+    position: absolute;
+    top: -3px;
+    width: @gux-arrow-height * 2;
+    height: @gux-arrow-height * 2;
+    background: inherit;
+  }
+
+  .gux-arrow::before {
+    visibility: visible;
+    content: '';
+    border-top: 1px solid @gux-grey-30;
+    border-left: 1px solid @gux-grey-30;
+    transform: rotate(45deg);
+  }
 }

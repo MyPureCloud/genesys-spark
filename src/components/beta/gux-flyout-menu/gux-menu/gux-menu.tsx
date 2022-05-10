@@ -9,6 +9,7 @@ export class GuxMenu {
     return (
       <Host role="menu">
         <slot />
+        <div class="gux-arrow" data-popper-arrow />
       </Host>
     ) as JSX.Element;
   }
