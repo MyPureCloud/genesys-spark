@@ -3,7 +3,7 @@ import MutationObserver from 'mutation-observer';
 
 import { GuxPaginationButtonsBeta } from '../gux-pagination-buttons-beta';
 import { GuxButton } from '../../../../stable/gux-button/gux-button';
-import { GuxInputTextLike } from '../../../../stable/gux-form-field/components/gux-input-text-like/gux-input-text-like';
+import { GuxInputTextLike } from '../../../../legacy/gux-form-field-legacy/components/gux-input-text-like/gux-input-text-like';
 
 const components = [GuxPaginationButtonsBeta, GuxButton, GuxInputTextLike];
 const language = 'en';
