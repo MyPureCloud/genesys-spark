@@ -100,28 +100,70 @@
   </fieldset>
 </form>
 
-<h2>gux-form-field-legacy examples for comparison</h2>
-<form onchange="notify(event)" oninput="notify(event)">
-  <fieldset>
-    <gux-form-field-legacy label-position="beside">
-      <input slot="input" name="number" type="number" value="10" />
-      <label slot="label">Default</label>
-    </gux-form-field-legacy>
+<h2>Setting the input size.</h2>
+<p>
+  To set the size of an input create a class with the desired width and apply
+  this class to the input element.
+</p>
+<div>
+  <div class="form-container">
+    <div class="inner-container">
+      <gux-form-field-number label-position="beside">
+        <input class="width" slot="input" type="number" name="e-1" value="10" />
+        <label slot="label">I am long label</label>
+        <span slot="error">Short error message</span>
+      </gux-form-field-number>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="form-container">
+    <div class="inner-container">
+      <gux-form-field-number label-position="beside">
+        <input class="width" slot="input" type="number" name="e-1" value="10" />
+        <label slot="label">I am long label</label>
+        <span slot="error"
+          >This is an error message with a very long text message very very
+          long</span
+        >
+      </gux-form-field-number>
+    </div>
+  </div>
 
-    <gux-form-field-legacy label-position="above" clearable>
-      <input slot="input" name="number" type="number" value="10" />
-      <label slot="label">Clearable</label>
-    </gux-form-field-legacy>
+  <style>
+    .form-container {
+      display: inline-flex;
+      flex-direction: column;
+    }
 
-    <gux-form-field-legacy label-position="above">
-      <input slot="input" name="number" type="number" value="10" disabled />
-      <label slot="label">Disabled</label>
-    </gux-form-field-legacy>
+    .width {
+      width: 108px;
+    }
+  </style>
 
-    <gux-form-field-legacy label-position="beside">
-      <input slot="input" name="number" type="number" value="10" required />
-      <label slot="label">Required</label>
-      <span slot="error">Field is required</span>
-    </gux-form-field-legacy>
-  </fieldset>
-</form>
+  <h2>gux-form-field-legacy examples for comparison</h2>
+  <form onchange="notify(event)" oninput="notify(event)">
+    <fieldset>
+      <gux-form-field-legacy label-position="beside">
+        <input slot="input" name="number" type="number" value="10" />
+        <label slot="label">Default</label>
+      </gux-form-field-legacy>
+
+      <gux-form-field-legacy label-position="above" clearable>
+        <input slot="input" name="number" type="number" value="10" />
+        <label slot="label">Clearable</label>
+      </gux-form-field-legacy>
+
+      <gux-form-field-legacy label-position="above">
+        <input slot="input" name="number" type="number" value="10" disabled />
+        <label slot="label">Disabled</label>
+      </gux-form-field-legacy>
+
+      <gux-form-field-legacy label-position="beside">
+        <input slot="input" name="number" type="number" value="10" required />
+        <label slot="label">Required</label>
+        <span slot="error">Field is required</span>
+      </gux-form-field-legacy>
+    </fieldset>
+  </form>
+</div>
