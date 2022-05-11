@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.72](https://inindca///compare/v3.0.0-alpha.71...v3.0.0-alpha.72) (2022-05-11)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** fix stacking context bug ([078d4e0](https://inindca///commit/078d4e0cad431197a96554da4e280038187a3065))
+
 ## [3.0.0-alpha.71](https://inindca///compare/v3.0.0-alpha.70...v3.0.0-alpha.71) (2022-05-10)
 
 
