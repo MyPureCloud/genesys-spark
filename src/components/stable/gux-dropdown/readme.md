@@ -15,9 +15,9 @@
 
 ## Slots
 
-| Slot | Description      |
-| ---- | ---------------- |
-|      | for gux-list-box |
+| Slot | Description                                      |
+| ---- | ------------------------------------------------ |
+|      | for a gux-listbox containing gux-option children |
 
 
 ## Dependencies

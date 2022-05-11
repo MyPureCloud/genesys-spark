@@ -1,4 +1,3 @@
-import replace from '@rollup/plugin-replace';
 import { Config } from '@stencil/core';
 import { less as stencilLess } from '@stencil/less';
 import copy from 'rollup-plugin-copy';
