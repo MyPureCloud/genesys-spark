@@ -33,9 +33,9 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot | Description                |
-| ---- | -------------------------- |
-|      | collection of gux-option's |
+| Slot | Description                       |
+| ---- | --------------------------------- |
+|      | collection of gux-option elements |
 
 
 ## Dependencies
