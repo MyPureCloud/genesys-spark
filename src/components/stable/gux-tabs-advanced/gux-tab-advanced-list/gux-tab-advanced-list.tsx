@@ -40,6 +40,12 @@ export class GuxTabAdvancedList {
   showNewTabButton: boolean = true;
 
   /**
+   * Text for new tab button
+   */
+  @Prop()
+  newTabButtonText: string = '';
+
+  /**
    * Maximum nuber of tabs created
    */
   @Prop()
@@ -560,11 +566,19 @@ export class GuxTabAdvancedList {
               ? this.i18n('disableNewTab')
               : this.i18n('createNewTab')
           }
-          class="add-tab"
+          class={{
+            'add-tab': true,
+            'new-tab-button-text': this.newTabButtonText.length > 0
+          }}
           onClick={() => props.onClick()}
           disabled={this.disableAddTabButton}
         >
           <gux-icon icon-name="add" decorative={true} />
+          {this.newTabButtonText.length ? (
+            <span>{this.newTabButtonText}</span>
+          ) : (
+            ''
+          )}
         </button>
       ) as JSX.Element;
     };
