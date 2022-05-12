@@ -345,7 +345,7 @@ describe('gux-time-picker-beta', () => {
     it('onKeyDown backspace delete from end without semicolon', () => {
       // Setup
       const event = {
-        keyCode: KeyCode.Backsp,
+        key: 'Backspace',
         preventDefault: jest.fn(),
         target: component.inputElement
       } as any;
@@ -362,7 +362,7 @@ describe('gux-time-picker-beta', () => {
     it('onKeyDown backspace delete from end with semicolon', () => {
       // Setup
       const event = {
-        keyCode: KeyCode.Backsp,
+        key: 'Backspace',
         preventDefault: jest.fn(),
         target: component.inputElement
       } as any;
@@ -379,7 +379,7 @@ describe('gux-time-picker-beta', () => {
     it('onKeyDown backspace delete all', () => {
       // Setup
       const event = {
-        keyCode: KeyCode.Backsp,
+        key: 'Backspace',
         preventDefault: jest.fn(),
         target: component.inputElement
       } as any;
@@ -398,7 +398,7 @@ describe('gux-time-picker-beta', () => {
     it('onKeyDown Enter', () => {
       // Setup
       const event = {
-        keyCode: KeyCode.Enter,
+        key: 'Enter',
         preventDefault: jest.fn(),
         target: component.inputElement
       } as any;
@@ -415,7 +415,6 @@ describe('gux-time-picker-beta', () => {
       // Setup
       const event = {
         key: '0',
-        keyCode: 48,
         preventDefault: jest.fn(),
         target: component.inputElement
       } as any;
@@ -433,7 +432,6 @@ describe('gux-time-picker-beta', () => {
       // Setup
       const event = {
         key: '0',
-        keyCode: 48,
         preventDefault: jest.fn(),
         target: component.inputElement
       } as any;
@@ -452,7 +450,6 @@ describe('gux-time-picker-beta', () => {
       // Setup
       const event = {
         key: '3',
-        keyCode: 51,
         preventDefault: jest.fn(),
         target: component.inputElement
       } as any;
@@ -470,7 +467,6 @@ describe('gux-time-picker-beta', () => {
       // Setup
       const event = {
         key: '9',
-        keyCode: 57,
         preventDefault: jest.fn(),
         target: component.inputElement
       } as any;
