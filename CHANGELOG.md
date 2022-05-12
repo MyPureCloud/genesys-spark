@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.55.0](https://inindca///compare/v2.54.1...v2.55.0) (2022-05-12)
+
+
+### Features
+
+* **icon:** added shield-lock icon ([b12c851](https://inindca///commit/b12c851093903d679cf850997ce0bc2d13a8af34))
+
+
+### Bug Fixes
+
+* **gux-dropdown-v2:** fix stacking context bug showing in newest version of Chrome ([9d73f0c](https://inindca///commit/9d73f0c467f27bc8bde55a5600bca59eb99645b3))
+
 ### [2.54.1](https://inindca///compare/v2.54.0...v2.54.1) (2022-05-05)
 
 
