@@ -229,12 +229,12 @@ export class GuxCountrySelect {
     for (const [key, val] of Object.entries(countryCodeMap)) {
       const countryName = this.i18n(key);
       options.push(
-        <gux-option-v2 value={key}>
+        <gux-option value={key}>
           <span>
             <gux-country-icon countryCode={key} countryName={countryName} />
             <span>{`+${val}`}</span>
           </span>
-        </gux-option-v2>
+        </gux-option>
       );
     }
     return (

@@ -11,9 +11,9 @@ import {
 } from '@stencil/core';
 import libphonenumber, { PhoneNumberFormat } from 'google-libphonenumber';
 import { trackComponent } from '../../../usage-tracking';
-import { GuxFormFieldLabel } from '../gux-form-field-v2/functional-components/gux-form-field-label/gux-form-field-label';
-import { GuxFormFieldContainer } from '../gux-form-field-v2/functional-components/gux-form-field-container/gux-form-field-container';
-import { GuxFormFieldLabelPosition } from '../gux-form-field-v2/gux-form-field.types';
+import { GuxFormFieldLabel } from '../../stable/gux-form-field/functional-components/gux-form-field-label/gux-form-field-label';
+import { GuxFormFieldContainer } from '../../stable/gux-form-field/functional-components/gux-form-field-container/gux-form-field-container';
+import { GuxFormFieldLabelPosition } from '../../stable/gux-form-field/gux-form-field.types';
 import { preventBrowserValidationStyling } from '../../../utils/dom/prevent-browser-validation-styling';
 import {
   onDisabledChange,
@@ -22,8 +22,8 @@ import {
 import {
   getComputedLabelPosition,
   validateFormIds
-} from '../gux-form-field-v2/gux-form-field.servce';
-import { GuxFormFieldError } from '../gux-form-field-v2/functional-components/gux-form-field-error/gux-form-field-error';
+} from '../../stable/gux-form-field/gux-form-field.servce';
+import { GuxFormFieldError } from '../../stable/gux-form-field/functional-components/gux-form-field-error/gux-form-field-error';
 
 @Component({
   styleUrl: 'gux-phone-input.less',
