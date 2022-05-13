@@ -3,7 +3,15 @@
 
 :host {
   display: block;
+  overflow-x: auto;
   border-top: 1px solid @gux-grey-60;
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+  }
 }
 
 .gux-pagination-container {
@@ -15,14 +23,6 @@
   justify-content: space-between;
   height: 40px;
   margin: @spacing-small @spacing-small 0 @spacing-small;
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-
-  &::-webkit-scrollbar {
-    /* WebKit */
-    width: 0;
-    height: 0;
-  }
 
   .gux-pagination-info {
     display: flex;

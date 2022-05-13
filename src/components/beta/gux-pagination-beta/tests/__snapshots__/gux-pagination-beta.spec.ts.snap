@@ -1340,9 +1340,6 @@ exports[`gux-pagination-beta #render should render as expected (12) 1`] = `
             <span class="gux-pagination-item-counts-range">
               0 - 0
             </span>
-            <span>
-              of 0
-            </span>
           </div>
         </gux-pagination-item-counts-beta>
         <gux-pagination-items-per-page-beta items-per-page="25">

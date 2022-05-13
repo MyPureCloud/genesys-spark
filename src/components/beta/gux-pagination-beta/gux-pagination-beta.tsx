@@ -52,12 +52,6 @@ export class GuxPaginationBeta implements ComponentInterface {
   itemsPerPage: GuxItemsPerPage = 25;
 
   /**
-   * True when the total number of pages is unknown.
-   */
-  @Prop()
-  totalPagesUnknown: boolean = false;
-
-  /**
    * The total number of pages needed for the the data set.
    */
   @State()
@@ -141,7 +135,6 @@ export class GuxPaginationBeta implements ComponentInterface {
             total-items={this.totalItems}
             current-page={this.currentPage}
             items-per-page={this.itemsPerPage}
-            pages-unknown={this.totalPagesUnknown}
           />
           {this.layout === 'advanced' && (
             <gux-pagination-items-per-page-beta
