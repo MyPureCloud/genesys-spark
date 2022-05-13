@@ -1,4 +1,15 @@
-import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  h,
+  JSX,
+  Listen,
+  Prop,
+  State
+} from '@stencil/core';
+import libphonenumber, { PhoneNumberFormat } from 'google-libphonenumber';
 import { trackComponent } from '../../../usage-tracking';
 import { GuxFormFieldLabel } from '../gux-form-field-v2/functional-components/gux-form-field-label/gux-form-field-label';
 import { GuxFormFieldContainer } from '../gux-form-field-v2/functional-components/gux-form-field-container/gux-form-field-container';
@@ -24,12 +35,14 @@ export class GuxPhoneInput {
   private label: HTMLLabelElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
+  private phoneUtil: libphonenumber.PhoneNumberUtil =
+    libphonenumber.PhoneNumberUtil.getInstance();
 
   @Element()
   private root: HTMLElement;
 
   @Prop()
-  defaultCountryCode: string;
+  defaultRegion: string = 'us';
 
   @Prop()
   labelPosition: GuxFormFieldLabelPosition;
@@ -37,8 +50,11 @@ export class GuxPhoneInput {
   @Prop()
   labelText: string;
 
+  @Prop()
+  value: string;
+
   @State()
-  private countryCode: string;
+  phone: libphonenumber.PhoneNumber;
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';
@@ -52,8 +68,22 @@ export class GuxPhoneInput {
   @State()
   private hasError: boolean = false;
 
+  @Event()
+  phoneUpdated: EventEmitter;
+
+  @Listen('internalregionupdated')
+  updateCountry(event: CustomEvent) {
+    this.phone.setCountryCode(event.detail as number);
+    if (this.phone.hasNationalNumber()) {
+      this.validatePhoneNumber();
+    }
+  }
+
   componentWillRender(): void {
     trackComponent(this.root);
+    this.phone = this.value
+      ? this.phoneUtil.parse(this.value)
+      : this.phoneUtil.parse('', this.defaultRegion);
   }
 
   componentDidLoad(): void {
@@ -64,6 +94,21 @@ export class GuxPhoneInput {
   disconnectedCallback(): void {
     this.disabledObserver.disconnect();
     this.requiredObserver.disconnect();
+  }
+
+  private onInputChange(newValue: string): void {
+    this.phone = this.phoneUtil.parse(
+      `+${this.phone.getCountryCode()}${newValue}`
+    );
+  }
+
+  private validatePhoneNumber(): void {
+    this.hasError =
+      this.phone &&
+      !this.phoneUtil.isValidNumberForRegion(
+        this.phone,
+        this.phoneUtil.getRegionCodeForNumber(this.phone)
+      );
   }
 
   render(): JSX.Element {
@@ -79,8 +124,12 @@ export class GuxPhoneInput {
           <div class="gux-input-and-select-container">
             <div class="country-select-container">
               <gux-country-select
-                countryCode={this.countryCode}
-                defaultCountry={this.defaultCountryCode}
+                region={
+                  this.phone
+                    ? this.phoneUtil.getRegionCodeForNumber(this.phone)
+                    : ''
+                }
+                defaultRegion={this.defaultRegion}
                 disabled={this.disabled}
               />
             </div>
@@ -90,7 +139,15 @@ export class GuxPhoneInput {
                 'gux-input-error': this.hasError
               }}
             >
-              <input id={'tel-input'} class="phone-input" type="tel" />
+              <input
+                id={'tel-input'}
+                class="phone-input"
+                type="tel"
+                value={this.phoneUtil.format(
+                  this.phone,
+                  PhoneNumberFormat.NATIONAL
+                )}
+              />
             </div>
           </div>
           {this.hasError ? (
@@ -110,6 +167,10 @@ export class GuxPhoneInput {
 
     preventBrowserValidationStyling(this.input);
 
+    this.input.addEventListener('focusout', (event: FocusEvent) => {
+      event.stopPropagation();
+      this.onInputChange(this.input.value);
+    });
     this.disabledObserver = onDisabledChange(
       this.input,
       (disabled: boolean) => {

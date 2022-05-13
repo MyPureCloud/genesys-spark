@@ -1,6 +1,8 @@
 import {
   Component,
   Element,
+  Event,
+  EventEmitter,
   forceUpdate,
   h,
   JSX,
@@ -14,7 +16,6 @@ import { countryCodeMap } from './CountryCodeMap';
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import countryResources from '../../i18n/en.json';
 import { OnClickOutside } from '../../../../../utils/decorator/on-click-outside';
-import simulateNativeEvent from '../../../../../utils/dom/simulate-native-event';
 
 @Component({
   styleUrl: 'gux-country-select.less',
@@ -30,10 +31,10 @@ export class GuxCountrySelect {
   root: HTMLElement;
 
   @Prop({ mutable: true })
-  countryCode: string;
+  region: string;
 
   @Prop()
-  defaultCountry: string = 'us';
+  defaultRegion: string = 'us';
 
   @Prop()
   labelId: string;
@@ -43,6 +44,9 @@ export class GuxCountrySelect {
 
   @State()
   private expanded: boolean = false;
+
+  @Event()
+  internalregionupdated: EventEmitter;
 
   @Watch('expanded')
   focusSelectedItemAfterRender(expanded: boolean) {
@@ -58,7 +62,7 @@ export class GuxCountrySelect {
   @Watch('countryCode')
   validateValue(newValue: string) {
     if (newValue === undefined) {
-      this.countryCode = this.defaultCountry;
+      this.region = this.defaultRegion;
       return;
     }
 
@@ -69,7 +73,7 @@ export class GuxCountrySelect {
       return;
     }
 
-    this.countryCode = this.defaultCountry;
+    this.region = this.defaultRegion;
   }
 
   @Listen('internallistboxoptionsupdated')
@@ -118,7 +122,7 @@ export class GuxCountrySelect {
     this.listboxElement.addEventListener('input', (event: InputEvent) => {
       event.stopPropagation();
 
-      this.updateCountryCode((event.target as HTMLGuxListboxElement).value);
+      this.updateRegion((event.target as HTMLGuxListboxElement).value);
     });
     this.listboxElement.addEventListener('change', (event: InputEvent) => {
       event.stopPropagation();
@@ -126,7 +130,7 @@ export class GuxCountrySelect {
   }
 
   componentWillRender(): void {
-    this.validateValue(this.countryCode);
+    this.validateValue(this.region);
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -160,12 +164,12 @@ export class GuxCountrySelect {
     }
   }
 
-  private updateCountryCode(newValue: string): void {
-    if (this.countryCode !== newValue) {
-      this.countryCode = newValue;
+  private updateRegion(newValue: string): void {
+    if (this.region !== newValue) {
+      this.region = newValue;
       this.collapseListbox('focusFieldButton');
-      simulateNativeEvent(this.root, 'input');
-      simulateNativeEvent(this.root, 'change');
+      console.log(countryCodeMap[this.region]);
+      this.internalregionupdated.emit(countryCodeMap[this.region]);
     }
   }
 
@@ -203,17 +207,17 @@ export class GuxCountrySelect {
 
   private renderTargetDisplay(): JSX.Element {
     const selectedListboxOptionElement = this.getOptionElementByValue(
-      this.countryCode
+      this.region
     );
 
-    const selectedCountry =
-      selectedListboxOptionElement?.value || this.defaultCountry;
-    const countryName = this.i18n(selectedCountry);
+    const selectedRegion =
+      selectedListboxOptionElement?.value || this.defaultRegion;
+    const countryName = this.i18n(selectedRegion);
 
     return (
       <div class="gux-selected-option">
         <gux-country-icon
-          countryCode={selectedCountry}
+          countryCode={selectedRegion}
           countryName={countryName}
         />
       </div>
@@ -228,7 +232,7 @@ export class GuxCountrySelect {
         <gux-option-v2 value={key}>
           <span>
             <gux-country-icon countryCode={key} countryName={countryName} />
-            <span>{val}</span>
+            <span>{`+${val}`}</span>
           </span>
         </gux-option-v2>
       );

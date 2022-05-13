@@ -7,11 +7,19 @@ Input for international phone numbers
 
 ## Properties
 
-| Property             | Attribute              | Description | Type                                    | Default     |
-| -------------------- | ---------------------- | ----------- | --------------------------------------- | ----------- |
-| `defaultCountryCode` | `default-country-code` |             | `string`                                | `undefined` |
-| `labelPosition`      | `label-position`       |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
-| `labelText`          | `label-text`           |             | `string`                                | `undefined` |
+| Property        | Attribute        | Description | Type                                    | Default     |
+| --------------- | ---------------- | ----------- | --------------------------------------- | ----------- |
+| `defaultRegion` | `default-region` |             | `string`                                | `'us'`      |
+| `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
+| `labelText`     | `label-text`     |             | `string`                                | `undefined` |
+| `value`         | `value`          |             | `string`                                | `undefined` |
+
+
+## Events
+
+| Event          | Description | Type               |
+| -------------- | ----------- | ------------------ |
+| `phoneUpdated` |             | `CustomEvent<any>` |
 
 
 ## Dependencies

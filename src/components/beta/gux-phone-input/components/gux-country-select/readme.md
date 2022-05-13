@@ -7,12 +7,19 @@
 
 ## Properties
 
-| Property         | Attribute         | Description | Type      | Default     |
-| ---------------- | ----------------- | ----------- | --------- | ----------- |
-| `countryCode`    | `country-code`    |             | `string`  | `undefined` |
-| `defaultCountry` | `default-country` |             | `string`  | `'us'`      |
-| `disabled`       | `disabled`        |             | `boolean` | `false`     |
-| `labelId`        | `label-id`        |             | `string`  | `undefined` |
+| Property        | Attribute        | Description | Type      | Default     |
+| --------------- | ---------------- | ----------- | --------- | ----------- |
+| `defaultRegion` | `default-region` |             | `string`  | `'us'`      |
+| `disabled`      | `disabled`       |             | `boolean` | `false`     |
+| `labelId`       | `label-id`       |             | `string`  | `undefined` |
+| `region`        | `region`         |             | `string`  | `undefined` |
+
+
+## Events
+
+| Event                   | Description | Type               |
+| ----------------------- | ----------- | ------------------ |
+| `internalregionupdated` |             | `CustomEvent<any>` |
 
 
 ## Dependencies
