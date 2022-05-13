@@ -52,7 +52,7 @@ describe('gux-flyout-menu', () => {
     it('opens flyout menu', async () => {
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-flyout-menu-beta');
-      const menuWrapper = await page.find('.gux-flyout-menu-wrapper');
+      const menuWrapper = await element.find('pierce/.gux-flyout-menu-content');
 
       expect(menuWrapper).not.toHaveClass('gux-shown');
       await element.hover();
@@ -67,7 +67,7 @@ describe('gux-flyout-menu', () => {
       await element.hover();
       await page.waitForChanges();
       const submenu = await page.find('gux-submenu');
-      const submenuWrapper = await page.find('.gux-submenu-wrapper');
+      const submenuWrapper = await submenu.find('pierce/.gux-submenu-wrapper');
       await submenu.hover();
       await page.waitForChanges();
       await a11yCheck(page);

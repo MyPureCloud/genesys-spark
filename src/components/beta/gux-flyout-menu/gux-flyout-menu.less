@@ -5,52 +5,42 @@
 @gux-arrow-height: 5px;
 
 // Style
-gux-flyout-menu-beta {
+:host {
   z-index: 2;
   color: @gux-type;
   cursor: default;
+}
 
-  &:focus {
-    outline: none;
+:host(:focus) {
+  outline: none;
+}
+
+:host(:focus-visible) {
+  .focus-ring();
+}
+
+.gux-flyout-menu-content {
+  display: none;
+  margin: 0;
+
+  &.gux-shown {
+    display: flex;
   }
+}
 
-  &:focus-visible {
-    * [slot='target'] {
-      .focus-ring();
-    }
-  }
+.gux-arrow,
+.gux-arrow::before {
+  position: absolute;
+  top: -3px;
+  width: @gux-arrow-height * 2;
+  height: @gux-arrow-height * 2;
+  background: inherit;
+}
 
-  .gux-flyout-menu-wrapper {
-    display: none;
-    flex-direction: column;
-    background-color: @gux-type-dark;
-    border: 1px solid @gux-grey-30;
-    border-radius: 4px;
-    .gux-shadow-20();
-
-    &.gux-shown {
-      display: flex;
-    }
-  }
-
-  .gux-arrow,
-  .gux-arrow::before {
-    position: absolute;
-    top: -3px;
-    width: @gux-arrow-height * 2;
-    height: @gux-arrow-height * 2;
-    background: inherit;
-  }
-
-  .gux-arrow::before {
-    visibility: visible;
-    content: '';
-    border-top: 1px solid @gux-grey-30;
-    border-left: 1px solid @gux-grey-30;
-    transform: rotate(45deg);
-  }
-
-  .gux-flyout-menu-content {
-    margin: 0;
-  }
+.gux-arrow::before {
+  visibility: visible;
+  content: '';
+  border-top: 1px solid @gux-grey-30;
+  border-left: 1px solid @gux-grey-30;
+  transform: rotate(45deg);
 }

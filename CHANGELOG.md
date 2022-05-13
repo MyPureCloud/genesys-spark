@@ -2,6 +2,77 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-alpha.72](https://inindca///compare/v3.0.0-alpha.71...v3.0.0-alpha.72) (2022-05-11)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** fix stacking context bug ([078d4e0](https://inindca///commit/078d4e0cad431197a96554da4e280038187a3065))
+
+## [3.0.0-alpha.71](https://inindca///compare/v3.0.0-alpha.70...v3.0.0-alpha.71) (2022-05-10)
+
+
+### Features
+
+* **flyout-menu:** enabled shadowDOM ([4125b5c](https://inindca///commit/4125b5c76f6213ab2befce705a1faff355e24826))
+
+
+### Bug Fixes
+
+* **table:** if cursor is in resize state then dont perform sorting action onclick ([47cf913](https://inindca///commit/47cf9139faf6d3012a28a5978ed5d2f285af0aea))
+* **translations:** added missing translation files ([af8fb0c](https://inindca///commit/af8fb0c280db5b57f0967e5ae13b47e64a2e7c9d))
+
+## [3.0.0-alpha.70](https://inindca///compare/v3.0.0-alpha.69...v3.0.0-alpha.70) (2022-05-09)
+
+
+### Features
+
+* **dropdown:** moved new dropdown component to stable ([87a8729](https://inindca///commit/87a87297d64d7913fb9d1e836447c1c591958e22))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comments ([8f9fc9b](https://inindca///commit/8f9fc9bab0963e56cb52f7e26c1b144a4ccfc7dc))
+
+## [3.0.0-alpha.69](https://inindca///compare/v3.0.0-alpha.68...v3.0.0-alpha.69) (2022-05-06)
+
+
+### Features
+
+* **gux-form-field:** moved gux-form-field to legacy ([e8abf31](https://inindca///commit/e8abf31f34f734820b2685e5ac115d324da0cfa9))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([a57f17e](https://inindca///commit/a57f17e4b847b858a32a245712b622f9a511aef4))
+
+## [3.0.0-alpha.68](https://inindca///compare/v3.0.0-alpha.67...v3.0.0-alpha.68) (2022-05-05)
+
+
+### Features
+
+* **form-field-v2:** moved components to stable ([333564a](https://inindca///commit/333564a6bd840802d333992c16923127003c4f30))
+
+
+### Bug Fixes
+
+* **gux-popover:** fix z-index for Safari stacking context bug ([24eb8cf](https://inindca///commit/24eb8cf08253384e98b918232890b1bda8b7f4c5))
+
+## [3.0.0-alpha.67](https://inindca///compare/v3.0.0-alpha.66...v3.0.0-alpha.67) (2022-05-04)
+
+
+### Features
+
+* **button-multi:** move component folder to stable ([ea04d6c](https://inindca///commit/ea04d6ca07ff74c92e26ffaa7a88f664471a48e3))
+* **gux-tabs-advanced:** add gux-list to gux-tabs-advanced ([80c1eaa](https://inindca///commit/80c1eaa14a172dae6e623cbf254a53296fcaf896))
+
+
+### Bug Fixes
+
+* **datepicker:** implemented popper js within datepicker component ([ccbb67f](https://inindca///commit/ccbb67f22607441db7a6ebf5973472e5e7148f97))
+* **gux-tabs:** fix gux-tabs and gux-tabs-advanced scroll button bug ([5169126](https://inindca///commit/5169126e91993588807f7ca0765102bf3b619107))
+* **typo:** fixed icon name typo ([28b231e](https://inindca///commit/28b231eef8bbae936076b115358f4d81ea11055b))
+
 ## [3.0.0-alpha.66](https://inindca///compare/v3.0.0-alpha.65...v3.0.0-alpha.66) (2022-05-03)
 
 

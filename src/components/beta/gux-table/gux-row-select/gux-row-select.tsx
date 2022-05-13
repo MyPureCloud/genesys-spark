@@ -46,7 +46,7 @@ export class GuxRowSelect {
 
   render(): JSX.Element {
     return (
-      <gux-form-field>
+      <gux-form-field-checkbox>
         <input
           slot="input"
           id={this.id}
@@ -57,7 +57,7 @@ export class GuxRowSelect {
           &#8203;
           <span class="gux-label-text">{this.i18n('selectTableRow')}</span>
         </label>
-      </gux-form-field>
+      </gux-form-field-checkbox>
     ) as JSX.Element;
   }
 }

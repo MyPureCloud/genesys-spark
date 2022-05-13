@@ -1,14 +1,14 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page';
-import { GuxDropdownV2Beta } from '../../../../beta/gux-dropdown-v2/gux-dropdown-v2';
-import { GuxListbox } from '../../../../beta/gux-listbox/gux-listbox';
-import { GuxOptionV2 } from '../../../../beta/gux-listbox/gux-option-v2/gux-option-v2';
+import { GuxDropdown } from '../../../gux-dropdown/gux-dropdown';
+import { GuxListbox } from '../../../gux-listbox/gux-listbox';
+import { GuxOption } from '../../../gux-listbox/gux-option/gux-option';
 
 const components = [
   GuxPaginationItemsPerPage,
-  GuxDropdownV2Beta,
+  GuxDropdown,
   GuxListbox,
-  GuxOptionV2
+  GuxOption
 ];
 const language = 'en';
 

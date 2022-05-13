@@ -22,7 +22,7 @@
 
  - [gux-action-button](../../stable/gux-action-button)
  - [gux-action-button-legacy](../../legacy/gux-action-button-legacy)
- - [gux-button-multi](../gux-button-multi)
+ - [gux-button-multi](../../stable/gux-button-multi)
  - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
  - [gux-pagination-buttons](../../stable/gux-pagination/gux-pagination-buttons)
  - [gux-pagination-cursor](../../stable/gux-pagination-cursor)

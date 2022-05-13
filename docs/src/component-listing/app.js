@@ -15,7 +15,7 @@ export function bootstrap() {
             <nav class="components-list">
                 <div class="sticky-header">
                     <div class="logo">${sparkLogo}</div>
-                    <gux-form-field class="component-search-field" label-position="screenreader">
+                    <gux-form-field-legacy class="component-search-field" label-position="screenreader">
                       <input
                         id="component-search-box"
                         slot="input"
@@ -24,7 +24,7 @@ export function bootstrap() {
                         placeholder="Enter a search"
                       />
                       <label slot="label" for="component-search-box">Search for a component</label>
-                    </gux-form-field>
+                    </gux-form-field-legacy>
                     <h2>Components</h2>
                 </div>
                 ${components
