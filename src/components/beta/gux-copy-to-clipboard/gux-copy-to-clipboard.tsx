@@ -69,8 +69,7 @@ export class GuxCopyToClipboard {
 
   render(): JSX.Element {
     return (
-      <div
-        tabIndex={0}
+      <button
         onClick={this.onCopyToClipboard.bind(this)}
         class="gux-copy-to-clipboard-wrapper"
       >
@@ -88,7 +87,7 @@ export class GuxCopyToClipboard {
           )}
           {this.tooltipText}
         </gux-tooltip>
-      </div>
+      </button>
     ) as JSX.Element;
   }
 }
