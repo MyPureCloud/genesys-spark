@@ -1,9 +1,12 @@
 # V3 Migration Guide
 
 *This migration guide is open to anyone to edit. If you have migrated a component and think it would be helpful to others to document something you encountered please do so. We understand that at the moment because of the need to fork the repo the overhead of making a small contribution is high so feel free to raise an issue on the COMUI board instead it that is more convenient and a core team member will create the PR.*
+
 ## Breaking changes at a glance
 * Typescript updated to v4
 * Set the `allowSyntheticDefaultImports` (or `esModuleInterop`) compiler option  to `true` in the host apps tsconfig.json (See [configuration](#configuration))
+* The stylesheet provided by the library is now manditory  (See [configuration](#configuration)).
+* Componets now use a Shadow DOM to encapsulate their DOM and CSS implementation  (See [Encapsulation](#Encapsulation)).
 * remove `-beta` from components that have been [promoted to stable](#v2-beta-components-promoted-to-stable-in-v3)
 * add `-legacy` to components that have been [removed from stable](#v2-stable-components-archived-to-legacy-in-v3)
 * change `-beta` to `-legacy` for components that have been [removed from beta](#v2-beta-components-archived-to-legacy-in-v3)
@@ -21,9 +24,10 @@
 * Set the `allowSyntheticDefaultImports` compiler option  to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
 This new requirement is related to the a new dependency (vega-lite) which was added as part of our visualization work.
 (`allowSyntheticDefaultImports: true` is implied by `esModuleInterop: true`, so if the `esModuleInterop` is already enabled, `allowSyntheticDefaultImports` does not need to be explicitly added)
-* **Add section on required CSS inclusion here**
+* The stylesheet provided by the library is now manditory. The library provides a baseline set of CSS styles in this stylesheet in the package under `dist/genesys-webcomponents/genesys-webcomponents.css`. In previous versions the inclusion of this stylesheet was strongly recommended but now due to limitation in css selectors for slotted elements the stylesheet is manditory.
+
 ## V2 Beta Components Promoted to Stable in V3
-Action: *(required)* remove `-beta` from the tag name of the component. 
+Action: *(required)* remove `-beta` from the tag name of the component.
 ```diff
 - <gux-accordion-beta>
 + <gux-accordion>
@@ -50,7 +54,8 @@ There have been no API changes in these components.
 | gux-pagination-cursor-beta    | gux-pagination-cursor    |
 | gux-popup-beta                | gux-popup                |
 | gux-tabs-beta                 | gux-tabs                 |
-## V2 Stable Components Archived to Legacy in V3 
+
+## V2 Stable Components Archived to Legacy in V3
 
 | V2 tag name       | V3 tag name              | V3 stable equivalent (requires API changes) | Migration Guide                       |
 |-------------------|--------------------------|---------------------------------------------|---------------------------------------|
@@ -64,7 +69,7 @@ There have been no API changes in these components.
 | gux-form-field    | gux-form-field-legacy    | gux-form-field-{type}                       | [link](./gux-form-field-legacy.md)    |
 | gux-text-label    | gux-text-label-legacy    | gux-form-field-{type}                       | [link](./gux-form-field-legacy.md)    |
 
-Action: *(required)* add `-legacy` to the tag name of the component.  
+Action: *(required)* add `-legacy` to the tag name of the component.
 ```diff
 - <gux-accordion heading-level="2" arrow-position="beside-text">
 + <gux-accordion-legacy heading-level="2" arrow-position="beside-text">
@@ -73,6 +78,7 @@ Action: *(required)* add `-legacy` to the tag name of the component.
 + </gux-accordion-legacy>
 ```
 If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of adding `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released.
+
 ## V2 Beta Components Archived to Legacy in V3
 
  V2 tag name               | V3 tag name                |
@@ -81,7 +87,7 @@ If possible, avoid the usage of legacy components and do a full migration to a s
 | gux-panel-frame-beta     | gux-action-button-legacy   |
 | gux-side-panel-beta      | gux-side-panel-legacy      |
 
-Action: *(required)* remove the `-beta` tag and add `-legacy` to the tag name of the component.  
+Action: *(required)* remove the `-beta` tag and add `-legacy` to the tag name of the component.
 ```diff
 - <gux-command-palette-beta>
 + <gux-command-palette-legacy>
@@ -90,6 +96,7 @@ Action: *(required)* remove the `-beta` tag and add `-legacy` to the tag name of
 + </gux-command-palette-legacy>
 ```
 If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of replacing the `-beta` suffix with `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released. Contact the Core UI team if you need help migrating away from these components.
+
 ## Stable Component Changes
 ### gux-button
 * `title` property was named to `gux-title`
@@ -142,10 +149,11 @@ New stable components have been added that provide major accessibility improveme
 
 We have added automated and manual testing processes to identify existing issues and prevent regressions. See the [Building and Testing Components with Accessibility in Mind](https://github.com/MyPureCloud/genesys-webcomponents/blob/main/A11Y_TESTING.md) documentation to read more about how we test accessibility in our components.
 
-### ShadowDOM
-**Add explanation about Shadow DOM here**
-* What is Shadow DOM
-* Why did it change, what value does it add
+### Encapsulation
+Migrating our webcomponents to use a Shadow DOM was another major focus for v3. A Shadow DOM allows the webcomponent to compartmentalize its DOM and CSS implemenation details away from web apps that uses it. We believe that this compartmentalization will reduce the number of bugs where the webcomponents were unexpectatly interacting with the DOM and CSS of the host web app. This type of bug while often subtle would lead to a very bad developer experience where a small change (often only a patch semver change) to the internal implementation of a webcomponent would break a host apps UI. We believe with more encapsulation we can give more confidence to developers that upgrading your version of the webcomponents will not be a large development effort.
+
+We are aware that there are some teams who were leveraging the fact that webcomponets were not using a Shadow DOM for encapsulation to modify the styling of webcomponents. This was always discouraged by the CORE UI team as we only guaranteed that the public API of the components would be consistent not the internal implementation details. Please reach out to the CORE UI team if you feel your migration to v3 of the webcomponets is blocked by this new Eecapsulation and we will work with you to support your use case via the components public API.
+
 ### New components
 * gux-visualization
   * chart-column
