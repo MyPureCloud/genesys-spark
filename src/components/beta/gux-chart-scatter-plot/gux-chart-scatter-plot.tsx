@@ -48,6 +48,7 @@ export class GuxScatterPlotChart {
     encoding: {
       x: { type: 'nominal' },
       y: { type: 'quantitative' },
+
       color: {
         field: DEFAULT_COLOR_FIELD_NAME,
         type: 'nominal',
@@ -60,6 +61,16 @@ export class GuxScatterPlotChart {
             value: '#33383D'
           }
         ]
+      },
+      size: {
+        condition: [
+          {
+            param: 'onHover',
+            empty: false,
+            value: 100
+          }
+        ],
+        value: 40
       }
     }
   };
@@ -197,13 +208,12 @@ export class GuxScatterPlotChart {
     if (legendTitle) {
       this.baseChartSpec.encoding.color.title = legendTitle;
     }
-
+    this.baseChartSpec.mark = { type: useShape, filled: true };
     this.baseChartSpec.config.legend.symbolType = useShape;
     this.baseChartSpec.encoding.shape = {
       field: colorFieldName,
       type: 'nominal'
     };
-    this.baseChartSpec.mark = { type: useShape, filled: 'true', size: 40 };
     this.baseChartSpec.encoding.tooltip = [
       { field: xFieldName, type: 'nominal', title: xAxisTitle },
       { field: yFieldName, type: 'quantitative', title: yAxisTitle },
