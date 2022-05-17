@@ -87,7 +87,7 @@ export class GuxPaginationButtons {
       if (cv.current) {
         return acc.concat(
           (
-            <button class="gux-pagination-buttons-list-current">
+            <button class="gux-pagination-buttons-list-button gux-current">
               {cv.display}
             </button>
           ) as JSX.Element
@@ -97,7 +97,7 @@ export class GuxPaginationButtons {
       return acc.concat(
         (
           <button
-            class="gux-pagination-buttons-list-target"
+            class="gux-pagination-buttons-list-button gux-target"
             onClick={() => this.handleClickPage(cv.pageNumber)}
           >
             {cv.display}
