@@ -1,3 +1,5 @@
 {
-  "noSelection": "Selecione..."
+  "filterResults": "Digite para filtrar os resultados da lista suspensa",
+  "noSelection": "Selecione...",
+  "dropdown": "Lista suspensa"
 }

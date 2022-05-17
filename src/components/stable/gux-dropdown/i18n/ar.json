@@ -1,3 +1,5 @@
 {
-  "noSelection": "Select..."
+  "filterResults": "اكتب لتصفية نتائج القائمة المنسدلة",
+  "noSelection": "تحديد...",
+  "dropdown": "قائمة منسدلة"
 }
