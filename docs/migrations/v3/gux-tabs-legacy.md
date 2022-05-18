@@ -132,11 +132,11 @@ Steps:
   * The `tab-icon-name` property has been removed. Slot the icon in the `gux-tab-advanced` component instead. 
   * The `title` named slot has been removed. Slot the text directly into the `gux-tab-advanced` component.
   ```diff
-  - <gux-tab tab-id="1" tab-icon-name="lock">
+  - <gux-tab tab-id="1" tab-icon-name="agent">
   -   <span slot="title">Tab Header 1</span>
   - </gux-tab>
   + <gux-tab-advanced tab-id="1">
-  +   <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+  +   <gux-icon icon-name="agent" decorative="true"></gux-icon>
   +   Tab Header 1
   + </gux-tab-advanced>
   ```
@@ -159,7 +159,7 @@ Steps:
   + </gux-list>
 
   ```
-* Nest the `gux-tab-advanced` components within `gux-tab-list-advanced`. The `show-new-tab-button` and `allow-sort `properties should be set on the `gux-tab-advanced-list` component.
+* Nest the `gux-tab-advanced` components within `gux-tab-advanced-list`. The `show-new-tab-button` and `allow-sort `properties should be set on the `gux-tab-advanced-list` component.
 
   ```diff
   <gux-tabs-advanced>
@@ -250,11 +250,11 @@ Steps:
 * The `tab-icon-name` property has been removed. Slot the icon in the `gux-tab` component.
 * The `title` named slot has been removed. Slot the text directly into the `gux-tab` component
 ```diff
-- <gux-tab tab-id="1" tab-icon-name="lock">
+- <gux-tab tab-id="1" tab-icon-name="agent">
 -   <span slot="title">Tab Header 1</span>
 - </gux-tab>
 + <gux-tab tab-id="1">
-+   <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
++   <gux-icon icon-name="agent" decorative="true"></gux-icon>
 +   Tab Header 1
 + </gux-tab>
 ```
@@ -264,8 +264,8 @@ Steps:
 <gux-tabs>
 + <gux-tab-advanced-list slot="tab-list" show-new-tab-button="true" allow-sort="true">
     <gux-tab tab-id="1">
-      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
-      Tab Header 2
+      <gux-icon icon-name="agent" decorative="true"></gux-icon>
+      Tab Header 1
     </gux-tab>
     ...
 + </gux-tab-advanced-list>

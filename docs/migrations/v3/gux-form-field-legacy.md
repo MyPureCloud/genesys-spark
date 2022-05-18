@@ -36,21 +36,26 @@ For slotted inputs that mapping is as follows:
 * input[type="range"] => `gux-form-field-range`
 ```diff
 - <gux-form-field>
-+ <gux-form-field-color>
-    <input slot="input" name="color" type="color" value="#1da8b3" />
-    <label slot="label">Color</label>
++ <gux-form-field-range>
+    <input slot="input" type="range" name="du-1" />
+    <label slot="label">Default</label>
 - </gux-form-field>
-+ </gux-form-field-color>
++ </gux-form-field-range>
 ```
 
 * input[type="email"] => `gux-form-field-text-like`
 ```diff
 - <gux-form-field>
-+ <gux-form-field-color>
-    <input slot="input" type="color" value="#1da8b3" />
-    <label slot="label">Color</label>
++ <gux-form-field-text-like>
+      <input
+        slot="input"
+        type="email"
+        name="t-3"
+        value="joe.bloggs@example.com"
+      />
+      <label slot="label">Email</label>
 - </gux-form-field>
-+ </gux-form-field-color>
++ </gux-form-field-text-like>
 ```
 
 * input[type="password"] => `gux-form-field-text-like`
