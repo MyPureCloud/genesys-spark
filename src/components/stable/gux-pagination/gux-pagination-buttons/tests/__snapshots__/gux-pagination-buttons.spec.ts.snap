@@ -285,34 +285,34 @@ exports[`gux-pagination-item-counts #render should render as expected (8) 1`] = 
       </gux-button-slot-beta>
     </div>
     <div class="gux-pagination-buttons-list-container">
-      <button class="gux-pagination-buttons-list-current">
+      <button class="gux-current gux-pagination-buttons-list-button">
         1
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         2
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         3
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         4
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         5
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         6
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         7
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         8
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         9
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         10
       </button>
     </div>
@@ -348,34 +348,34 @@ exports[`gux-pagination-item-counts #render should render as expected (9) 1`] = 
       </gux-button-slot-beta>
     </div>
     <div class="gux-pagination-buttons-list-container">
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         1
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         2
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         3
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         4
       </button>
-      <button class="gux-pagination-buttons-list-current">
+      <button class="gux-current gux-pagination-buttons-list-button">
         5
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         6
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         7
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         8
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         9
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         10
       </button>
     </div>
