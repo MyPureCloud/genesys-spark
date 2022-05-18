@@ -49,7 +49,7 @@ This new requirement is related to the a new dependency (vega-lite) which was ad
 
 ### Stylesheets
 
-The library requires the inclustion of a baseline set of CSS styles that it provides in the package under `dist/genesys-webcomponents/genesys-webcomponents.css` in apps that use the webcomponents. The stylesheet provides:
+The library requires the inclusion of a baseline set of CSS styles that it provides in the package under `dist/genesys-webcomponents/genesys-webcomponents.css` in apps that use the webcomponents. The stylesheet provides:
 
 - Baseline styles for browser elements
 - Classes for specific typography patterns
@@ -123,7 +123,7 @@ with the team to implement it yourself. You can see the current backlog of ticke
 
 ### Serving component and docs
 
-Once you've checked out the project, this is the easist way to see your component as you work on it.
+Once you've checked out the project, this is the easiest way to see your component as you work on it.
 
 ```sh
 npm run dev

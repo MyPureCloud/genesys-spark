@@ -5,8 +5,8 @@
 ## Breaking changes at a glance
 * Typescript updated to v4
 * Set the `allowSyntheticDefaultImports` (or `esModuleInterop`) compiler option  to `true` in the host apps tsconfig.json (See [configuration](#configuration))
-* The stylesheet provided by the library is now manditory  (See [configuration](#configuration)).
-* Componets now use a Shadow DOM to encapsulate their DOM and CSS implementation  (See [Encapsulation](#Encapsulation)).
+* The stylesheet provided by the library is now mandatory  (See [configuration](#configuration)).
+* Components now use a Shadow DOM to encapsulate their DOM and CSS implementation  (See [Encapsulation](#Encapsulation)).
 * remove `-beta` from components that have been [promoted to stable](#v2-beta-components-promoted-to-stable-in-v3)
 * add `-legacy` to components that have been [removed from stable](#v2-stable-components-archived-to-legacy-in-v3)
 * change `-beta` to `-legacy` for components that have been [removed from beta](#v2-beta-components-archived-to-legacy-in-v3)
@@ -24,7 +24,7 @@
 * Set the `allowSyntheticDefaultImports` compiler option  to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
 This new requirement is related to the a new dependency (vega-lite) which was added as part of our visualization work.
 (`allowSyntheticDefaultImports: true` is implied by `esModuleInterop: true`, so if the `esModuleInterop` is already enabled, `allowSyntheticDefaultImports` does not need to be explicitly added)
-* The stylesheet provided by the library is now manditory. The library provides a baseline set of CSS styles in this stylesheet in the package under `dist/genesys-webcomponents/genesys-webcomponents.css`. In previous versions the inclusion of this stylesheet was strongly recommended but now due to limitation in css selectors for slotted elements the stylesheet is manditory.
+* The stylesheet provided by the library is now mandatory. The library provides a baseline set of CSS styles in this stylesheet in the package under `dist/genesys-webcomponents/genesys-webcomponents.css`. In previous versions the inclusion of this stylesheet was strongly recommended but now due to limitation in css selectors for slotted elements the stylesheet is mandatory.
 
 ## V2 Beta Components Promoted to Stable in V3
 Action: *(required)* remove `-beta` from the tag name of the component.
@@ -150,9 +150,9 @@ New stable components have been added that provide major accessibility improveme
 We have added automated and manual testing processes to identify existing issues and prevent regressions. See the [Building and Testing Components with Accessibility in Mind](https://github.com/MyPureCloud/genesys-webcomponents/blob/main/A11Y_TESTING.md) documentation to read more about how we test accessibility in our components.
 
 ### Encapsulation
-Migrating our webcomponents to use a Shadow DOM was another major focus for v3. A Shadow DOM allows the webcomponent to compartmentalize its DOM and CSS implemenation details away from web apps that uses it. We believe that this compartmentalization will reduce the number of bugs where the webcomponents were unexpectatly interacting with the DOM and CSS of the host web app. This type of bug while often subtle would lead to a very bad developer experience where a small change (often only a patch semver change) to the internal implementation of a webcomponent would break a host apps UI. We believe with more encapsulation we can give more confidence to developers that upgrading your version of the webcomponents will not be a large development effort.
+Migrating our webcomponents to use a Shadow DOM was another major focus for v3. A Shadow DOM allows the webcomponent to compartmentalize its DOM and CSS implementation details away from web apps that uses it. We believe that this compartmentalization will reduce the number of bugs where the webcomponents were unexpectedly interacting with the DOM and CSS of the host web app. This type of bug while often subtle would lead to a very bad developer experience where a small change (often only a patch semver change) to the internal implementation of a webcomponent would break a host apps UI. We believe with more encapsulation we can give more confidence to developers that upgrading your version of the webcomponents will not be a large development effort.
 
-We are aware that there are some teams who were leveraging the fact that webcomponets were not using a Shadow DOM for encapsulation to modify the styling of webcomponents. This was always discouraged by the CORE UI team as we only guaranteed that the public API of the components would be consistent not the internal implementation details. Please reach out to the CORE UI team if you feel your migration to v3 of the webcomponets is blocked by this new Eecapsulation and we will work with you to support your use case via the components public API.
+We are aware that there are some teams who were leveraging the fact that webcomponents were not using a Shadow DOM for encapsulation to modify the styling of webcomponents. This was always discouraged by the CORE UI team as we only guaranteed that the public API of the components would be consistent not the internal implementation details. Please reach out to the CORE UI team if you feel your migration to v3 of the webcomponents is blocked by this new encapsulation and we will work with you to support your use case via the components public API.
 
 ### New components
 * gux-visualization
