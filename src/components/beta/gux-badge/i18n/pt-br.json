@@ -1,10 +1,10 @@
 {
-  "neutral": "badge with label: {label}, color: neutral",
-  "neutral-bold": "badge with label: {label}, color: neutral bold",
-  "green": "badge with label: {label}, color: green",
-  "green-bold": "badge with label: {label}, color: green bold",
-  "yellow": "badge with label: {label}, color: yellow",
-  "yellow-bold": "badge with label: {label}, color: yellow bold",
-  "red": "badge with label: {label}, color: red",
-  "red-bold": "badge with label: {label}, color: red bold"
+  "neutral": "selo com etiqueta: {label}, cor: neutro",
+  "neutral-bold": "selo com etiqueta: {label}, cor: neutro em negrito",
+  "green": "selo com etiqueta: {label}, cor: verde",
+  "green-bold": "selo com etiqueta: {label}, cor: verde em negrito",
+  "yellow": "selo com etiqueta: {label}, cor: amarelo",
+  "yellow-bold": "selo com etiqueta: {label}, cor: amarelo em negrito",
+  "red": "selo com etiqueta: {label}, cor: vermelho",
+  "red-bold": "selo com etiqueta: {label}, cor: vermelho em negrito"
 }
