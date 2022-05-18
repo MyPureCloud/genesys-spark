@@ -1,10 +1,10 @@
 {
-  "neutral": "badge with label: {label}, color: neutral",
-  "neutral-bold": "badge with label: {label}, color: neutral bold",
-  "green": "badge with label: {label}, color: green",
-  "green-bold": "badge with label: {label}, color: green bold",
-  "yellow": "badge with label: {label}, color: yellow",
-  "yellow-bold": "badge with label: {label}, color: yellow bold",
-  "red": "badge with label: {label}, color: red",
-  "red-bold": "badge with label: {label}, color: red bold"
+  "neutral": "شارة مع التسمية: {label}، اللون: محايد",
+  "neutral-bold": "شارة مع التسمية: {label}، اللون: محايد سميك",
+  "green": "شارة مع التسمية: {label}، اللون: أخضر",
+  "green-bold": "شارة مع التسمية: {label}، اللون: أخضر سميك",
+  "yellow": "شارة مع التسمية: {label}، اللون: أصفر",
+  "yellow-bold": "شارة مع التسمية: {label}، اللون: أصفر سميك",
+  "red": "شارة مع التسمية: {label}، اللون: أحمر",
+  "red-bold": "شارة مع التسمية: {label}، اللون: أحمر سميك"
 }
