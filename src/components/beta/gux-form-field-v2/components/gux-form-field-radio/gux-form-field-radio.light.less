@@ -3,6 +3,7 @@
 //  - https://bugs.webkit.org/show_bug.cgi?id=178237#attach_442680
 
 @import (reference) '../../../../../style/color-palette.less';
+@import (reference) '../../../../../style/mixins.less';
 
 @gux-icon-radio-unchecked: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 3.062C5.239 3.062 3 5.273 3 8s2.239 4.938 5 4.938c2.762 0 5-2.211 5-4.938s-2.238-4.938-5-4.938zm0 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z' fill-rule='evenodd' clip-rule='evenodd' fill='%2377828f'/%3E%3C/svg%3E");
 @gux-icon-radio-unchecked-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 3.062C5.239 3.062 3 5.273 3 8s2.239 4.938 5 4.938c2.762 0 5-2.211 5-4.938s-2.238-4.938-5-4.938zm0 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z' fill-rule='evenodd' clip-rule='evenodd' fill='%232a60c8'/%3E%3C/svg%3E");
@@ -16,7 +17,11 @@ gux-form-field-radio-beta {
   }
 
   input[type='radio']:focus-within::before {
-    box-shadow: 0 0 2px 1px @gux-blue-90, inset 0 0 2px 1px @gux-blue-90;
+    .focus-ring();
+
+    margin: -1px;
+    // TODO https://inindca.atlassian.net/browse/COMUI-946
+    box-shadow: 0 0 0 1px @gux-grey-100 inset, 0 0 0 4px @gux-blue-90 inset;
   }
 
   input[type='radio']:not(:checked)::before {
