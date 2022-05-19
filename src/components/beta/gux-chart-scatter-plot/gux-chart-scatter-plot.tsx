@@ -53,14 +53,7 @@ export class GuxScatterPlotChart {
         field: DEFAULT_COLOR_FIELD_NAME,
         type: 'nominal',
         scale: { range: VISUALIZATION_COLORS },
-        legend: null,
-        condition: [
-          {
-            param: 'onHover',
-            empty: false,
-            value: '#33383D'
-          }
-        ]
+        legend: null
       },
       size: {
         condition: [
@@ -217,7 +210,7 @@ export class GuxScatterPlotChart {
     this.baseChartSpec.encoding.tooltip = [
       { field: xFieldName, type: 'nominal', title: xAxisTitle },
       { field: yFieldName, type: 'quantitative', title: yAxisTitle },
-      { field: colorFieldName, type: 'nominal', title: legendTitle }
+      { field: colorFieldName, type: 'nominal' }
     ];
 
     const spec = Object.assign(this.baseChartSpec, chartData);
