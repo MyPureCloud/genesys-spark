@@ -1,10 +1,10 @@
 {
-  "neutral": "badge with label: {label}, color: neutral",
-  "neutral-bold": "badge with label: {label}, color: neutral bold",
-  "green": "badge with label: {label}, color: green",
-  "green-bold": "badge with label: {label}, color: green bold",
-  "yellow": "badge with label: {label}, color: yellow",
-  "yellow-bold": "badge with label: {label}, color: yellow bold",
-  "red": "badge with label: {label}, color: red",
-  "red-bold": "badge with label: {label}, color: red bold"
+  "neutral": "märke med etikett: {label}, färg: neutral",
+  "neutral-bold": "märke med etikett: {label}, färg: neutral fet stil",
+  "green": "märke med etikett: {label}, färg: grön",
+  "green-bold": "märke med etikett: {label}, färg: grön fet stil",
+  "yellow": "märke med etikett: {label}, färg: gul",
+  "yellow-bold": "märke med etikett: {label}, färg: gul fet stil",
+  "red": "märke med etikett: {label}, färg: röd",
+  "red-bold": "märke med etikett: {label}, färg: röd fet stil"
 }
