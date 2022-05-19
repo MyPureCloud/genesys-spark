@@ -3,6 +3,7 @@
 *This migration guide is open to anyone to edit. If you have migrated a component and think it would be helpful to others to document something you encountered please do so. We understand that at the moment because of the need to fork the repo the overhead of making a small contribution is high so feel free to raise an issue on the COMUI board instead it that is more convenient and a core team member will create the PR.*
 
 ## Breaking changes at a glance
+* New package name on public NPM: `genesys-spark-components`
 * Typescript updated to v4
 * Set the `allowSyntheticDefaultImports` (or `esModuleInterop`) compiler option  to `true` in the host apps tsconfig.json (See [configuration](#configuration))
 * The stylesheet provided by the library is now mandatory  (See [configuration](#configuration)).
@@ -19,6 +20,19 @@
   * `label` property on instances of `gux-datepicker` now only accepts `string`.
   * `trap-focus` property on instances of `gux-modal` now default to true
 * remove the `icon` property from `gux-tag-beta` and slot in the icon instead
+
+## Move to the new public NPM package
+
+`npm uninstall @genesys/common-webcomponents`
+
+`npm install genesys-spark-components`
+
+or
+
+`yarn remove @genesys/common-webcomponents`
+
+`yarn add genesys-spark-components`
+
 
 ## Configuration
 * Set the `allowSyntheticDefaultImports` compiler option  to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.

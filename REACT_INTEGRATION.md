@@ -7,7 +7,7 @@ When working with web components, react, and typescript you will need to help th
 Below is a working example of a file that will put all gux web components into the type system making everyone happy.
 
 ```typescript
-import { JSX as LocalJSX } from "@genesys/common-webcomponents";
+import { JSX as LocalJSX } from "genesys-spark-components";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 /**
@@ -40,6 +40,6 @@ declare global {
     }
 }
 
-export { registerElements } from "@genesys/common-webcomponents";
+export { registerElements } from "genesys-spark-components";
 
 ```

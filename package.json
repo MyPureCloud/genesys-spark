@@ -1,5 +1,5 @@
 {
-  "name": "@genesys/common-webcomponents",
+  "name": "genesys-spark-components",
   "version": "3.0.0-alpha.72",
   "description": "Common webcomponents",
   "license": "MIT",
@@ -128,10 +128,6 @@
     "weekstart": "^1.1.0",
     "xmldom": "^0.6.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+bitbucket.org:inindca/genesys-webcomponents.git"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -223,5 +219,8 @@
     ],
     "*.{js,jsx,json}": "prettier --write",
     "*.svg": "svgo -i"
+  },
+  "volta": {
+    "node": "14.19.1"
   }
 }
