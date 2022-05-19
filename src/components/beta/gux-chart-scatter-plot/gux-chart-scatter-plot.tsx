@@ -210,7 +210,7 @@ export class GuxScatterPlotChart {
     this.baseChartSpec.encoding.tooltip = [
       { field: xFieldName, type: 'nominal', title: xAxisTitle },
       { field: yFieldName, type: 'quantitative', title: yAxisTitle },
-      { field: colorFieldName, type: 'nominal' }
+      { field: colorFieldName, type: 'nominal', title: legendTitle }
     ];
 
     const spec = Object.assign(this.baseChartSpec, chartData);
