@@ -1,4 +1,4 @@
-@Library('pipeline-library@COMUI-857')
+@Library('pipeline-library')
 
 def isMainBranch = {
     return env.BRANCH_NAME.equals('main')
@@ -73,7 +73,7 @@ webappPipeline {
             ]) {
                     sh('''
                   echo ".npmrc" >> .npmignore
-                  npm publish --dry-run
+                  npm publish
                 ''')
             }
                 def publishedVersion = sh(script: 'node -e "console.log(require(\'./package.json\').version)"', returnStdout: true).trim()
@@ -82,7 +82,7 @@ webappPipeline {
 
             stage('Push Changes') {
                 sshagent(credentials: [constants.credentials.github.inin_dev_evangelists]) {
-                    sh "git push --dry-run --follow-tags -u origin ${env.BRANCH_NAME}"
+                    sh "git push --follow-tags -u origin ${env.BRANCH_NAME}"
                 }
             }
         }
