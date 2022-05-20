@@ -41,7 +41,7 @@
     "predev": "npm run i18n",
     "predev.public": "npm run predev",
     "prepare": "./scripts/prepare-docs.sh && npm run i18n && husky install",
-    "release": "standard-version --prerelease alpha",
+    "release": "standard-version",
     "stencil": "stencil build --prod",
     "stencil.dev": "stencil build --dev --watch --docs",
     "test": "stencil test --spec --e2e",
