@@ -55,11 +55,14 @@ webappPipeline {
           npm run lint
           npm run test.ci.spec
         ''')
-    }
-    buildStep = { assetPrefix ->
+
+        // Run in CI step so we only run once
+        // (builds happen twice, legacy and FedRAMP)
         if (isReleaseBranch()) {
             sh('npm run release')
         }
+    }
+    buildStep = { assetPrefix ->
         sh("""
           export CDN_URL=${assetPrefix}
           npm run build
@@ -72,6 +75,7 @@ webappPipeline {
               string(credentialsId: constants.credentials.npm,  variable: 'NPM_TOKEN')
             ]) {
                     sh('''
+                  echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./.npmrc
                   echo ".npmrc" >> .npmignore
                   npm publish
                 ''')
