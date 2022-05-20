@@ -1,4 +1,5 @@
 @import (reference) '../../../../../style/color-palette.less';
+@import (reference) '../../../../../style/mixins.less';
 @import (reference) '../../../../../style/spacing.less';
 @import (reference) '../../../../../style/variables.less';
 @import (reference)
@@ -42,13 +43,14 @@
   display: inline-grid;
   width: @gux-icon-size-default-global;
   height: @gux-icon-size-default-global;
-  margin: 4px;
+  margin: @spacing-2xs;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
   border: 0;
   -webkit-appearance: none;
   appearance: none;
+  outline: none;
 }
 
 ::slotted(input[type='checkbox'])::before {
@@ -58,7 +60,8 @@
 }
 
 ::slotted(input[type='checkbox']:focus-within)::before {
-  box-shadow: 0 0 2px 1px @gux-blue-90, inset 0 0 2px 1px @gux-blue-90;
+  .focus-ring();
+  // TODO https://inindca.atlassian.net/browse/COMUI-946
 }
 
 ::slotted(input[type='checkbox']:not(:checked))::before {
