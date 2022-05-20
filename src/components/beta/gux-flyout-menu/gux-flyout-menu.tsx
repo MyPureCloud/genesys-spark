@@ -186,11 +186,7 @@ export class GuxFlyoutMenu {
 
   render(): JSX.Element {
     return (
-      <Host
-        tabIndex={0}
-        aria-haspopup="true"
-        aria-expanded={this.isShown.toString()}
-      >
+      <Host tabIndex={0} aria-haspopup="true">
         <span ref={el => (this.targetElement = el)}>
           <slot name="target" />
         </span>
