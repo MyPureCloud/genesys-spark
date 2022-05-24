@@ -58,6 +58,7 @@
  - [gux-pagination-cursor](../gux-pagination-cursor)
  - [gux-rating](../gux-rating)
  - [gux-side-panel-button](../../legacy/gux-side-panel-legacy/buttons)
+ - [gux-sort-control](../../beta/gux-table/gux-sort-control)
  - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
@@ -112,6 +113,7 @@ graph TD;
   gux-pagination-cursor --> gux-icon
   gux-rating --> gux-icon
   gux-side-panel-button --> gux-icon
+  gux-sort-control --> gux-icon
   gux-submenu --> gux-icon
   gux-tab-advanced --> gux-icon
   gux-tab-advanced-list --> gux-icon

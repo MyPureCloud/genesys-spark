@@ -349,12 +349,12 @@
 <style
   onload="(function () {
     const table = document.querySelector('#sortable-table');
-
+    
     table.addEventListener('guxsortchanged',
     (event) => {
       const {columnName, sortDirection} = event.detail;
       const column = table.querySelector(`thead tr th[data-column-name='` + columnName + `']`);
-      column.setAttribute('data-sort', sortDirection);
+      column.setAttribute('aria-sort', sortDirection);
 
       var tableBody = table.querySelector('tbody');
       [...tableBody.children]
@@ -372,8 +372,9 @@
   <table slot="data">
     <thead>
       <tr>
-        <th data-column-name="first-name" data-sortable data-sort="asc">
-          <span>First name</span>
+        <th data-column-name="first-name" aria-sort="ascending">
+          First Name
+          <gux-sort-control />
         </th>
         <th data-column-name="last-name">Last name</th>
         <th data-column-name="age" data-cell-numeric>Age</th>

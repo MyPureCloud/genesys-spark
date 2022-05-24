@@ -150,7 +150,7 @@ describe('gux-table-beta', () => {
     <table slot="data">
       <thead>
         <tr>
-          <th data-column-name="first-name" data-sortable data-sort="asc">
+          <th data-column-name="first-name" data-sortable aria-sort="ascending">
             <span>First name</span>
           </th>
           <th data-column-name="last-name">Last name</th>
@@ -196,7 +196,7 @@ describe('gux-table-beta', () => {
 
     expect(columnSortSpy).toHaveReceivedEventDetail({
       columnName: 'first-name',
-      sortDirection: 'desc'
+      sortDirection: 'descending'
     });
   });
 
@@ -205,7 +205,7 @@ describe('gux-table-beta', () => {
     <table slot="data">
       <thead>
         <tr>
-          <th data-column-name="first-name" data-sortable data-sort="asc">
+          <th data-column-name="first-name" data-sortable aria-sort="ascending">
             First name
           </th>
           <th data-column-name="last-name">Last name</th>
@@ -252,7 +252,7 @@ describe('gux-table-beta', () => {
 
     expect(columnSortEvent).toHaveReceivedEventDetail({
       columnName: 'first-name',
-      sortDirection: 'desc'
+      sortDirection: 'descending'
     });
   });
 
