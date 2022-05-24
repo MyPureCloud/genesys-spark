@@ -25,7 +25,7 @@ def isPublicBranch = {
 }
 
 webappPipeline {
-    projectName = 'common-ui-docs/spark-components'
+    projectName = 'common-ui-docs/genesys-webcomponents'
     team = 'Core UI'
     mailer = 'CoreUI@genesys.com'
     nodeVersion = '14.x'
@@ -35,6 +35,7 @@ webappPipeline {
         sh('./scripts/generate-manifest')
         readJSON(file: 'docs-manifest.json')
     }
+    skipCommitsFrom = []
     buildType = {
         if(isReleaseBranch()) {
             return 'MAINLINE'
@@ -53,7 +54,7 @@ webappPipeline {
         }
         sh("""
           npm ci
-          export CDN_URL=${assetPrefix}
+          export DOCS_CDN_URL=${assetPrefix}
           npm run build
           npm run generate-versions-file
         """)
