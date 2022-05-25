@@ -12,10 +12,6 @@ def isMasterBranch() {
   return env.SHORT_BRANCH.equals('master');
 }
 
-def isActiveReleaseBranch() {
-  return env.SHORT_BRANCH.equals('maintenance/v2');
-}
-
 def isMaintenanceReleaseBranch() {
   return env.SHORT_BRANCH.startsWith('maintenance/');
 }
@@ -25,7 +21,7 @@ def isFeatureBranch() {
 }
 
 def isReleaseBranch() {
-  return isMasterBranch() || isActiveReleaseBranch() || isMaintenanceReleaseBranch();
+  return isMasterBranch() || isMaintenanceReleaseBranch();
 }
 
 
@@ -208,23 +204,6 @@ pipeline {
                 --manifest docs-manifest.json \
                 --source-dir ./docs/dist
           """
-        }
-      }
-    }
-
-
-    stage('Deploy Docs') {
-      when {
-        expression { isActiveReleaseBranch() }
-      }
-      steps {
-        dir (env.REPO_DIR) {
-          sh '''
-             npx deploy \
-                --ecosystem pc \
-                --manifest docs-manifest.json \
-                --dest-env dev
-          '''
         }
       }
     }
