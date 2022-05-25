@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.55.1](https://inindca///compare/v2.55.0...v2.55.1) (2022-05-25)
+
+
+### Bug Fixes
+
+* **form-field:** fixed focus states ([683accd](https://inindca///commit/683accda15bbb9108a3f8430fc1f5d51b09d2195))
+* **time-picker:** now using event.key so numpad works on firefox and safari ([4a5f97b](https://inindca///commit/4a5f97b8f222ede097e2ac651c60b75afb12abbd))
+
 ## [2.55.0](https://inindca///compare/v2.54.1...v2.55.0) (2022-05-12)
 
 
