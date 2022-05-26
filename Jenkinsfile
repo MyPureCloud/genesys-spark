@@ -4,10 +4,6 @@ def isMainBranch = {
     return env.BRANCH_NAME.equals('main')
 }
 
-def isActiveReleaseBranch = {
-    return env.BRANCH_NAME.equals('maintenance/v2')
-}
-
 def isMaintenanceReleaseBranch = {
     return env.BRANCH_NAME.startsWith('maintenance/')
 }
@@ -17,7 +13,7 @@ def isFeatureBranch = {
 }
 
 def isReleaseBranch = {
-    return isMainBranch() || isActiveReleaseBranch() || isMaintenanceReleaseBranch()
+    return isMainBranch() || isMaintenanceReleaseBranch()
 }
 
 def isPublicBranch = {
@@ -47,6 +43,10 @@ webappPipeline {
     checkoutStep = {
         checkout(scm)
         sh("git checkout ${env.BRANCH_NAME}")
+        // Make sure we have tags, which are required for version bumps
+        sshagent(credentials: [constants.credentials.github.inin_dev_evangelists]) {
+          sh('git fetch --tags')
+        }
     }
     ciTests = {
         sh('npm ci')
@@ -92,9 +92,9 @@ webappPipeline {
         }
 
         stage('Run Docs Build') {
-            if (isFeatureBranch() || isReleaseBranch()) {
+            if (isPublicBranch()) {
                 build(job: 'spark-component-docs',
-                  parameters: [string(name: 'BRANCH_NAME', value: env.BRANCH_NAME )],
+                  parameters: [string(name: 'BRANCH_NAME', value: env.BRANCH_NAME)],
                   propagate: false,
                   wait: false
             )
