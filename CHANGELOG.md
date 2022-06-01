@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.1...v3.0.2) (2022-06-01)
+
+
+### Bug Fixes
+
+* **table:** applied currentTarget property to event object to retrieve parent element ([d0cd4f7](https://github.com/MyPureCloud/genesys-webcomponents/commit/d0cd4f72e37e32d8a8bef455aba4a4029b9bedf7))
+
 ### [3.0.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.0...v3.0.1) (2022-05-25)
 
 ## [3.0.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.0-alpha.72...v3.0.0) (2022-05-25)
