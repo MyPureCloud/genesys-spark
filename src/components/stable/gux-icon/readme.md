@@ -70,6 +70,8 @@
  - [gux-tab-list](../gux-tabs/gux-tab-list)
  - [gux-table-beta](../../beta/gux-table)
  - [gux-table-select-menu](../../beta/gux-table/gux-table-select-menu)
+ - [gux-table-toolbar-action](../../beta/gux-table-toolbar/gux-table-toolbar-action)
+ - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-tabs-legacy](../../legacy/gux-tabs-legacy)
  - [gux-tag-beta](../../beta/gux-tag)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
@@ -130,6 +132,8 @@ graph TD;
   gux-tab-list --> gux-icon
   gux-table-beta --> gux-icon
   gux-table-select-menu --> gux-icon
+  gux-table-toolbar-action --> gux-icon
+  gux-table-toolbar-menu-button --> gux-icon
   gux-tabs-legacy --> gux-icon
   gux-tag-beta --> gux-icon
   gux-time-picker-beta --> gux-icon

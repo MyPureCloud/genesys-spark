@@ -1,0 +1,18 @@
+@import (reference) '../../../../style/typography.less';
+@import (reference) '../../../../style/spacing.less';
+
+.gux-sr-only {
+  .gux-sr-only-clip();
+}
+
+.gux-action-title {
+  display: flex;
+  flex-direction: row;
+  gap: @spacing-xs;
+  align-items: center;
+
+  slot[name='icon']::slotted(gux-icon) {
+    width: 16px;
+    height: 16px;
+  }
+}

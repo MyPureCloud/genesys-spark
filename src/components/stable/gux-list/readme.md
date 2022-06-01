@@ -45,6 +45,7 @@ Type: `Promise<void>`
 
  - [gux-action-button](../gux-action-button)
  - [gux-button-multi](../gux-button-multi)
+ - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
 
 ### Graph
@@ -52,6 +53,7 @@ Type: `Promise<void>`
 graph TD;
   gux-action-button --> gux-list
   gux-button-multi --> gux-list
+  gux-table-toolbar-menu-button --> gux-list
   gux-time-picker-beta --> gux-list
   style gux-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
