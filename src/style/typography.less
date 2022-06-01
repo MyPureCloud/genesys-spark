@@ -1,5 +1,6 @@
 @import (reference) './color.less';
 @import (reference) './mixins.less';
+@import (reference) './spacing.less';
 
 /*
  * Typography styles and mixins.
@@ -61,6 +62,19 @@ h6,
   line-height: 20px;
 }
 
+/* Anchor */
+a {
+  .gux-anchor();
+
+  gux-icon {
+    padding-right: @spacing-xs;
+  }
+}
+
+table a {
+  .gux-anchor-table();
+}
+
 /* Custom Styles */
 
 .gux-large-text {
@@ -108,24 +122,37 @@ h6,
 .gux-anchor {
   color: @gux-blue-60;
   text-decoration: underline;
-}
-
-.gux-anchor-hover {
-  color: @gux-blue-50;
-}
-
-.gux-anchor-active {
-  color: @gux-blue-40;
-}
-
-.gux-anchor-focus {
-  .focus-ring();
-
   border-radius: 2px;
+
+  &:hover {
+    color: @gux-blue-50;
+  }
+
+  &:active {
+    color: @gux-blue-40;
+  }
+
+  &:focus {
+    .focus-ring();
+  }
 }
 
 .gux-anchor-table {
+  .gux-anchor();
+
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 /* Helpers */
