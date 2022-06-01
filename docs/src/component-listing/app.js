@@ -102,9 +102,6 @@ function shortName(component) {
 var sparkLogo = `
 <svg role="img" aria-label="Spark" viewBox="0 0 89.99 23.98" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style type="text/css">
-       @import url('https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic');
-    </style>
     <style>
       .cls-1{fill:#f0522a;}
       .cls-2,
