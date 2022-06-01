@@ -225,4 +225,30 @@ describe('gux-calendar', () => {
       expect(component.input.emit).toHaveBeenCalledWith(value);
     });
   });
+
+  describe('check that when the clocks go forward at the end of march that april days are aligned correctly', () => {
+    it('checks to see if the first day of april is a friday', async () => {
+      //create date object that facilitates the extra hour for DST.
+      const apr = new Date(2022, 3, 1, 1, 0, 0, 0);
+      //set the components value to the apr date.
+      await component.setValue(apr);
+      //the expected value for the day should be equal to 5 which is Friday.
+      const expectedDay = 5;
+      //compare calendar component with expected value.
+      expect(component.previewValue.getDay()).toEqual(expectedDay);
+    });
+  });
+
+  describe('check that when the clocks fall back at the end of october that november days are aligned correctly', () => {
+    it('checks to see if the first day of november is a tuesday', async () => {
+      //create date object that facilitates the extra hour for DST.
+      const nov = new Date(2022, 10, 1, 1, 0, 0, 0);
+      //set the components value to the nov date.
+      await component.setValue(nov);
+      //the expected value for the day should be equal to 2 which is Tuesday.
+      const expectedDay = 2;
+      //compare calendar component with expected value.
+      expect(component.previewValue.getDay()).toEqual(expectedDay);
+    });
+  });
 });
