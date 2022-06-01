@@ -133,4 +133,115 @@ describe('gux-table-beta', () => {
       });
     });
   });
+
+  it('should sort table if table header nested element is wrapped in a span tag', async () => {
+    const html = `<gux-table-beta lang="en">
+    <table slot="data">
+      <thead>
+        <tr>
+          <th data-column-name="first-name" data-sortable data-sort="asc">
+            <span>First name</span>
+          </th>
+          <th data-column-name="last-name">Last name</th>
+          <th data-column-name="age" data-cell-numeric>Age</th>
+          <th data-column-name="action" data-cell-action>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Adam</td>
+          <td>Ant</td>
+          <td data-cell-numeric>25</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Billy</td>
+          <td>Bat</td>
+          <td data-cell-numeric>28</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Cathy</td>
+          <td>Cat</td>
+          <td data-cell-numeric>21</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Debbie</td>
+          <td>Dog</td>
+          <td data-cell-numeric>23</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </gux-table-beta>`;
+
+    const page = await newE2EPage({ html });
+
+    const columnSortSpy = await page.spyOnEvent('guxsortchanged');
+    const headerElement = await page.find('th span');
+    await headerElement.click();
+    await page.waitForChanges();
+
+    expect(columnSortSpy).toHaveReceivedEventDetail({
+      columnName: 'first-name',
+      sortDirection: 'desc'
+    });
+  });
+
+  it('should sort table if table header nested element is not wrapped in a span tag', async () => {
+    const html = `<gux-table-beta lang="en">
+    <table slot="data">
+      <thead>
+        <tr>
+          <th data-column-name="first-name" data-sortable data-sort="asc">
+            First name
+          </th>
+          <th data-column-name="last-name">Last name</th>
+          <th data-column-name="age" data-cell-numeric>Age</th>
+          <th data-column-name="action" data-cell-action>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Adam</td>
+          <td>Ant</td>
+          <td data-cell-numeric>25</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Billy</td>
+          <td>Bat</td>
+          <td data-cell-numeric>28</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Cathy</td>
+          <td>Cat</td>
+          <td data-cell-numeric>21</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Debbie</td>
+          <td>Dog</td>
+          <td data-cell-numeric>23</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </gux-table-beta>`;
+
+    const page = await newE2EPage({ html });
+
+    const columnSortEvent = await page.spyOnEvent('guxsortchanged');
+    const headerElement = await page.find('th');
+    await headerElement.click();
+
+    await page.waitForChanges();
+
+    expect(columnSortEvent).toHaveReceivedEventDetail({
+      columnName: 'first-name',
+      sortDirection: 'desc'
+    });
+  });
 });
