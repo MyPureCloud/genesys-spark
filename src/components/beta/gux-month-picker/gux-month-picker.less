@@ -1,0 +1,70 @@
+@import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/spacing.less';
+
+:host {
+  display: inline-block;
+}
+
+.gux-target {
+  display: inline-flex;
+  padding: @spacing-2xs @spacing-xs @spacing-2xs @spacing-small;
+  cursor: pointer;
+  background-color: @gux-grey-90;
+  .form-field-border();
+
+  .gux-display {
+    display: inline-flex;
+    min-width: 100px;
+    padding-right: @spacing-xs;
+    color: @gux-black-50;
+
+    .gux-spinner {
+      outline: none;
+
+      &:not(:first-child) {
+        margin-left: @spacing-2xs;
+      }
+
+      &:focus {
+        background: @gux-blue-100;
+      }
+
+      &.gux-empty {
+        color: @gux-black-90;
+      }
+    }
+  }
+
+  .gux-popup-toggle {
+    justify-content: right;
+    padding: 2px;
+    color: @gux-black-90;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+
+    &:focus {
+      .focus-ring();
+    }
+
+    &:not(:disabled):focus,
+    &:not(:disabled):hover {
+      color: @gux-black-50;
+      cursor: pointer;
+    }
+
+    gux-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.gux-expanded {
+      color: @gux-blue-60;
+
+      &:not(:disabled):focus,
+      &:not(:disabled):hover {
+        color: @gux-blue-60;
+      }
+    }
+  }
+}

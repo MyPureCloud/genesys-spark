@@ -8,41 +8,49 @@ import {
   Method
 } from '@stencil/core';
 
-import { first, last, next, previous } from './gux-list.service';
+import {
+  first,
+  focusMove,
+  last,
+  next,
+  previous
+} from '../../../../stable/gux-list/gux-list.service';
 
-import { trackComponent } from '../../../usage-tracking';
-
-const validFocusableItems = ['gux-list-item'];
+const validFocusableItems = ['gux-month-list-item'];
 
 @Component({
-  styleUrl: 'gux-list.less',
-  tag: 'gux-list',
+  styleUrl: 'gux-month-list.less',
+  tag: 'gux-month-list',
   shadow: {
     delegatesFocus: true
   }
 })
-export class GuxList {
+export class GuxMonthList {
   @Element()
   root: HTMLElement;
-
-  componentWillLoad(): void {
-    trackComponent(this.root);
-  }
 
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'ArrowUp':
         event.preventDefault();
+        focusMove(this.root, validFocusableItems, -3);
+        break;
+      case 'ArrowDown':
+        event.preventDefault();
+        focusMove(this.root, validFocusableItems, 3);
+        break;
+      case 'ArrowLeft':
+        event.preventDefault();
         previous(this.root, validFocusableItems);
+        break;
+      case 'ArrowRight':
+        event.preventDefault();
+        next(this.root, validFocusableItems);
         break;
       case 'Home':
         event.preventDefault();
         first(this.root, validFocusableItems);
-        break;
-      case 'ArrowDown':
-        event.preventDefault();
-        next(this.root, validFocusableItems);
         break;
       case 'End':
         event.preventDefault();
@@ -58,7 +66,7 @@ export class GuxList {
   }
 
   private renderFocusTarget(): JSX.Element {
-    return (<span tabindex="-1"></span>) as JSX.Element;
+    return (<span tabindex="1"></span>) as JSX.Element;
   }
 
   render(): JSX.Element {
