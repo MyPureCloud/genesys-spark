@@ -16,18 +16,21 @@ button {
     cursor: pointer;
 
     ::slotted(*) {
-      padding: 0 @spacing-3xs 0 @spacing-3xs;
+      padding: 0 @spacing-3xs;
+      margin-right: @spacing-2xs;
     }
 
     &:hover {
       .focus-and-hover-copy-content();
     }
 
-    gux-icon {
+    gux-icon[icon-name='copy'] {
       width: 16px;
       height: 16px;
-      color: @gux-black-100;
+      padding: @spacing-3xs;
       visibility: hidden;
+      background-color: @gux-blue-100;
+      border-radius: 4px;
     }
   }
 
@@ -62,14 +65,7 @@ button {
     border-radius: 4px;
   }
 
-  .gux-icon-container {
-    padding-left: @spacing-2xs;
-
-    gux-icon {
-      padding: @spacing-3xs;
-      visibility: visible;
-      background-color: @gux-blue-100;
-      border-radius: 4px;
-    }
+  gux-icon[icon-name='copy'] {
+    visibility: visible;
   }
 }

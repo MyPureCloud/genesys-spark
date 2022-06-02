@@ -5,14 +5,6 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property      | Attribute      | Description | Type     | Default     |
-| ------------- | -------------- | ----------- | -------- | ----------- |
-| `icon`        | `icon`         |             | `string` | `undefined` |
-| `tooltipText` | `tooltip-text` |             | `string` | `undefined` |
-
-
 ## Dependencies
 
 ### Depends on

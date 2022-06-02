@@ -13,7 +13,7 @@ import {
 
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { trackComponent } from '../../../usage-tracking';
-import { Placements } from './gux-tooltip.types';
+import { GuxTooltipPlacements } from './gux-tooltip.types';
 
 /**
  * @slot - Content of the tooltip
@@ -46,7 +46,7 @@ export class GuxTooltip {
    * Placement of the tooltip. Default is bottom-start
    */
   @Prop({ mutable: true })
-  placement: Placements = 'bottom-start';
+  placement: GuxTooltipPlacements = 'bottom-start';
 
   /**
    * If tooltip is shown or not
@@ -153,12 +153,7 @@ export class GuxTooltip {
 
   render(): JSX.Element {
     return (
-      <Host
-        id={this.id}
-        class={{ 'gux-show': this.isShown }}
-        placement={this.placement}
-        role="tooltip"
-      >
+      <Host id={this.id} class={{ 'gux-show': this.isShown }} role="tooltip">
         <slot />
       </Host>
     ) as JSX.Element;

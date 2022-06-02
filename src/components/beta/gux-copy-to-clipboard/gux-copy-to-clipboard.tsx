@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop, Listen } from '@stencil/core';
+import { Component, Element, h, JSX, State, Listen } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
@@ -14,21 +14,8 @@ export class GuxCopyToClipboard {
   @Element()
   private root: HTMLElement;
 
-  @Prop({ mutable: true })
-  tooltipText: string;
-
-  @Prop({ mutable: true })
-  icon: string;
-
-  @Listen('keydown')
-  onKeydown(event: KeyboardEvent): void {
-    switch (event.key) {
-      case 'Enter':
-        event.preventDefault();
-        this.onCopyToClipboard();
-        return;
-    }
-  }
+  @State()
+  tooltipContent: string = 'offerClick';
 
   @Listen('mouseleave')
   onMouseleave() {
@@ -40,9 +27,14 @@ export class GuxCopyToClipboard {
     this.resetTooltip();
   }
 
+  @Listen('focus')
+  onFocus() {
+    // when element is focused by keyboard
+    this.tooltipContent = 'offerEnter';
+  }
+
   private resetTooltip() {
-    this.tooltipText = this.i18n('clickToCopy');
-    this.icon = '';
+    this.tooltipContent = 'offerClick';
   }
 
   private onCopyToClipboard() {
@@ -51,20 +43,16 @@ export class GuxCopyToClipboard {
     navigator.clipboard
       .writeText(copyText)
       .then(() => {
-        this.tooltipText = this.i18n('copySuccess');
-        this.icon = 'badge-check';
+        this.tooltipContent = 'success';
       })
       .catch(() => {
-        this.tooltipText = this.i18n('copyFailure');
-        this.icon = 'badge-x';
+        this.tooltipContent = 'error';
       });
   }
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-
-    this.tooltipText = this.i18n('clickToCopy');
   }
 
   render(): JSX.Element {
@@ -74,18 +62,27 @@ export class GuxCopyToClipboard {
         class="gux-copy-to-clipboard-wrapper"
       >
         <div class="gux-copy-content">
-          <slot />
-          <div class="gux-icon-container">
-            <gux-icon icon-name="copy" decorative></gux-icon>
-          </div>
+          <slot name="content" />
+          <gux-icon icon-name="copy" decorative></gux-icon>
         </div>
         <gux-tooltip placement="bottom-end">
-          {this.icon ? (
-            <gux-icon icon-name={this.icon} decorative></gux-icon>
+          {/* Icon */}
+          {this.tooltipContent === 'success' ? (
+            <gux-icon icon-name="badge-check" decorative></gux-icon>
           ) : (
             ''
           )}
-          {this.tooltipText}
+          {this.tooltipContent === 'error' ? (
+            <gux-icon icon-name="badge-x" decorative></gux-icon>
+          ) : (
+            ''
+          )}
+
+          {/* Tooltip Text */}
+          {this.tooltipContent === 'offerClick' ? this.i18n('clickToCopy') : ''}
+          {this.tooltipContent === 'offerEnter' ? this.i18n('enterToCopy') : ''}
+          {this.tooltipContent === 'success' ? this.i18n('copySuccess') : ''}
+          {this.tooltipContent === 'error' ? this.i18n('copyFailure') : ''}
         </gux-tooltip>
       </button>
     ) as JSX.Element;

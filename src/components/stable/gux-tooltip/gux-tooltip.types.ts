@@ -1,4 +1,4 @@
-export type Placements =
+export type GuxTooltipPlacements =
   | 'top'
   | 'top-start'
   | 'top-end'
