@@ -1,14 +1,14 @@
 # React Integration
 
-This package generates a set of react wrapper elements which are published in `@genesys/common-webcomponents-react` and should be used in favor of directly using the custom elements in a React app.
+This package generates a set of react wrapper elements which are published in `genesys-spark-components-react` and should be used in favor of directly using the custom elements in a React app.
 
-The react package should be installed alongside `@genesys/common-webcomponents`, with matching version numbers, and the web-components will still need to be registered (e.g. via `registerElements()`)
+The react package should be installed alongside `genesys-spark-components`, with matching version numbers, and the web-components will still need to be registered (e.g. via `registerElements()`)
 
 ## Example
 
 ```ts
 import { registerElements } from 'genesys-spark-components';
-import { GuxButton } from '@genesys/common-webcomponents-react';
+import { GuxButton } from 'genesys-spark-components-react';
 registerElements(); // Realistically this would probably be in something like index.tsx
 
 const MyReactComponent = () => {

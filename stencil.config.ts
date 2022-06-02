@@ -21,7 +21,7 @@ export const config: Config = {
       type: 'docs-readme'
     },
     reactOutputTarget({
-      componentCorePackage: '@genesys/common-webcomponents',
+      componentCorePackage: 'genesys-spark-components',
       proxiesFile:
         './common-webcomponents-react/src/components/stencil-generated/index.ts'
     })
