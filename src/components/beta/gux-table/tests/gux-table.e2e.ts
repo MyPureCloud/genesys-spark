@@ -1,17 +1,22 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-async function newNonrandomE2EPage({
-  html
-}: {
-  html: string;
-}): Promise<E2EPage> {
-  const page = await newE2EPage();
+async function newNonrandomE2EPage(
+  {
+    html
+  }: {
+    html: string;
+  },
+  lang: string = 'en'
+): Promise<E2EPage> {
+  const page = await newE2EPage({
+    failOnConsoleError: true
+  });
 
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
   });
-  await page.setContent(html);
+  await page.setContent(`<div lang=${lang}>${html}</div>`);
   await page.waitForChanges();
   await page.addScriptTag({
     path: 'node_modules/axe-core/axe.min.js'
@@ -66,7 +71,7 @@ describe('gux-table-beta', () => {
       {
         description: 'empty table',
         html: `
-        <gux-table-beta lang="en">
+        <gux-table-beta>
           <table slot="data">
             <thead>
               <tr>
@@ -82,33 +87,33 @@ describe('gux-table-beta', () => {
       },
       {
         description: 'should render data table',
-        html: `<gux-table-beta lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta>${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render compact data table',
-        html: `<gux-table-beta compact lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta compact>${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render object table',
-        html: `<gux-table-beta object-table lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta object-table>${tableContent}</gux-table-beta>`
       },
 
       {
         description: 'should render table with vertical scroll',
-        html: `<gux-table-beta style="height: 150px" lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta style="height: 150px">${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render table with horizontal scroll',
-        html: `<gux-table-beta style="width: 300px" lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta style="width: 300px">${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render table with rows selection',
-        html: `<gux-table-beta object-table selectable-rows lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta object-table selectable-rows>${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render empty table with rows selection',
         html: `
-          <gux-table-beta object-table selectable-rows lang="en">
+          <gux-table-beta object-table selectable-rows>
             <table slot="data">
               <thead>
                 <tr>
@@ -131,11 +136,19 @@ describe('gux-table-beta', () => {
         expect(element).toHaveAttribute('hydrated');
         expect(element.outerHTML).toMatchSnapshot();
       });
+      it(`${description} with i18n strings`, async () => {
+        const page = await newNonrandomE2EPage({ html }, 'ja');
+        const element = await page.find('gux-table-beta');
+        await a11yCheck(page);
+
+        expect(element).toHaveAttribute('hydrated');
+        expect(element.outerHTML).toMatchSnapshot();
+      });
     });
   });
 
   it('should sort table if table header nested element is wrapped in a span tag', async () => {
-    const html = `<gux-table-beta lang="en">
+    const html = `<gux-table-beta>
     <table slot="data">
       <thead>
         <tr>
@@ -190,7 +203,7 @@ describe('gux-table-beta', () => {
   });
 
   it('should sort table if table header nested element is not wrapped in a span tag', async () => {
-    const html = `<gux-table-beta lang="en">
+    const html = `<gux-table-beta>
     <table slot="data">
       <thead>
         <tr>

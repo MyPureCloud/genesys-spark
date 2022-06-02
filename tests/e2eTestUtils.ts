@@ -3,8 +3,12 @@ import { axeConfig } from './axeConfig';
 
 export async function a11yCheck(
   page: E2EPage,
-  axeExclusions = [],
-  axeScanContext = ''
+  axeExclusions: {
+    issueId: string;
+    target: string;
+    exclusionReason: string;
+  }[] = [],
+  axeScanContext: string = ''
 ) {
   const axeScanDetails = {
     axeExclusions,
@@ -13,12 +17,22 @@ export async function a11yCheck(
   const axeResults = await page.evaluate(
     `window.axe.run('body > *', ${JSON.stringify(axeConfig)})`
   );
+  // eslint-disable-next-line
   expect(axeResults.violations).toHaveNoViolations(axeScanDetails);
 }
 
-export async function newSparkE2EPage({ html }): Promise<E2EPage> {
-  const page = await newE2EPage();
-  await page.setContent(html);
+export async function newSparkE2EPage(
+  {
+    html
+  }: {
+    html: string;
+  },
+  lang: string = 'en'
+): Promise<E2EPage> {
+  const page = await newE2EPage({
+    failOnConsoleError: true
+  });
+  await page.setContent(`<div lang=${lang}>${html}</div>`);
   await page.addScriptTag({
     path: 'node_modules/axe-core/axe.min.js'
   });

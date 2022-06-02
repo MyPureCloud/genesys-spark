@@ -17,7 +17,8 @@ const DEFAULT_LOCALE = 'en';
 
 export async function buildI18nForComponent(
   component: HTMLElement,
-  defaultResources: ILocalizedComponentResources
+  defaultResources: ILocalizedComponentResources,
+  parentComponent?: string
 ): Promise<GetI18nValue> {
   let resources = defaultResources;
   let locale = 'en';
@@ -27,7 +28,8 @@ export async function buildI18nForComponent(
     resources = await getComponentI18nResources(
       component,
       defaultResources,
-      locale
+      locale,
+      parentComponent
     );
   }
 
@@ -59,11 +61,12 @@ export async function buildI18nForComponent(
 export async function getComponentI18nResources(
   component: HTMLElement,
   defaultResources: ILocalizedComponentResources,
-  locale: string
+  locale: string,
+  parentComponent?: string
 ): Promise<ILocalizedComponentResources> {
-  const componentName = component.tagName
-    .toLocaleLowerCase()
-    .replace(/-beta$/, '');
+  const componentName =
+    parentComponent ||
+    component.tagName.toLocaleLowerCase().replace(/-beta$/, '');
 
   let resources: ILocalizedComponentResources;
   if (component['i18n-resources']) {
@@ -73,6 +76,11 @@ export async function getComponentI18nResources(
       resources = await fetchResources(componentName, locale);
     } catch (_) {
       resources = null;
+    }
+    if (!resources) {
+      console.error(
+        `No localized string available for "${componentName}" for "${locale}" locale. Falling back to English translation.`
+      );
     }
   }
 

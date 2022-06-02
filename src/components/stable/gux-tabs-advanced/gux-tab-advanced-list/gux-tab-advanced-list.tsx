@@ -479,7 +479,11 @@ export class GuxTabAdvancedList {
 
   async componentWillLoad(): Promise<void> {
     this.setTabTriggers();
-    this.i18n = await buildI18nForComponent(this.root, tabsResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      tabsResources,
+      'gux-tabs-advanced'
+    );
   }
 
   componentDidLoad() {

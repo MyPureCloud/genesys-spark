@@ -14,17 +14,22 @@ const axeExclusions = [
   }
 ];
 
-async function newNonrandomE2EPage({
-  html
-}: {
-  html: string;
-}): Promise<E2EPage> {
-  const page = await newE2EPage();
+async function newNonrandomE2EPage(
+  {
+    html
+  }: {
+    html: string;
+  },
+  lang: string = 'en'
+): Promise<E2EPage> {
+  const page = await newE2EPage({
+    failOnConsoleError: true
+  });
 
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
   });
-  await page.setContent(html);
+  await page.setContent(`<div lang=${lang}>${html}</div>`);
   await page.waitForChanges();
   await page.addScriptTag({
     path: 'node_modules/axe-core/axe.min.js'
@@ -36,7 +41,7 @@ async function newNonrandomE2EPage({
 
 describe('gux-tabs-advanced', () => {
   const htmlExample1 = `
-  <gux-tabs-advanced lang="en">
+  <gux-tabs-advanced>
     <gux-tab-advanced-list
       slot="tab-list"
       allow-sort="false"
@@ -127,7 +132,7 @@ describe('gux-tabs-advanced', () => {
   </gux-tabs-advanced>
 `;
   const htmlExample2 = `
-    <gux-tabs-advanced lang="en">
+    <gux-tabs-advanced>
       <gux-tab-advanced-list
         slot="tab-list"
         allow-sort="false"
@@ -164,10 +169,21 @@ describe('gux-tabs-advanced', () => {
     `;
   describe('#render', () => {
     // This test is flaky
-    it.skip('renders', async () => {
+    it('renders', async () => {
       const page = await newNonrandomE2EPage({ html: htmlExample2 });
       const element = await page.find('gux-tabs-advanced');
       await a11yCheck(page, axeExclusions);
+
+      expect(element.outerHTML).toMatchSnapshot();
+    });
+
+    it('renders i18n strings', async () => {
+      const restrictedWidthHtml = `<div style="width: 200px">${htmlExample2}</div>`;
+      const page = await newNonrandomE2EPage(
+        { html: restrictedWidthHtml },
+        'ja'
+      );
+      const element = await page.find('gux-tabs-advanced');
 
       expect(element.outerHTML).toMatchSnapshot();
     });
