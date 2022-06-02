@@ -40,12 +40,6 @@ export class GuxTabAdvancedList {
   showNewTabButton: boolean = true;
 
   /**
-   * Text for new tab button
-   */
-  @Prop()
-  newTabButtonText: string = '';
-
-  /**
    * Maximum nuber of tabs created
    */
   @Prop()
@@ -98,6 +92,18 @@ export class GuxTabAdvancedList {
    */
   @State()
   private ariaLiveAlert: string = '';
+
+  /**
+   * Icon for add tab button. Defaults to 'add'
+   */
+  @State()
+  private addTabIconName: string = 'add';
+
+  /**
+   * Text for add tab button
+   */
+  @State()
+  private addTabText: string = '';
 
   /**
    * Triggers when the new tab button is selected.
@@ -486,6 +492,12 @@ export class GuxTabAdvancedList {
   async componentWillLoad(): Promise<void> {
     this.setTabTriggers();
     this.i18n = await buildI18nForComponent(this.root, tabsResources);
+
+    const addTabSlot = this.root.querySelector('div[slot="add-tab"]');
+    if (addTabSlot && addTabSlot.querySelector('gux-icon')) {
+      this.addTabIconName = addTabSlot.querySelector('gux-icon').iconName;
+      this.addTabText = addTabSlot.textContent.trim();
+    }
   }
 
   componentDidLoad() {
@@ -568,17 +580,13 @@ export class GuxTabAdvancedList {
           }
           class={{
             'add-tab': true,
-            'new-tab-button-text': this.newTabButtonText.length > 0
+            'add-tab-text': this.addTabText.length > 0
           }}
           onClick={() => props.onClick()}
           disabled={this.disableAddTabButton}
         >
-          <gux-icon icon-name="add" decorative={true} />
-          {this.newTabButtonText.length ? (
-            <span>{this.newTabButtonText}</span>
-          ) : (
-            ''
-          )}
+          <gux-icon icon-name={this.addTabIconName} decorative={true} />
+          {this.addTabText}
         </button>
       ) as JSX.Element;
     };

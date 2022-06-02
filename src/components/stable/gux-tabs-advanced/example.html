@@ -26,7 +26,7 @@
 
 <h2>Example 2 - add tab button (with text)</h2>
 <gux-tabs-advanced>
-  <gux-tab-advanced-list slot="tab-list" new-tab-button-text="Add Tab">
+  <gux-tab-advanced-list slot="tab-list">
     <gux-tab-advanced tab-id="2-1">Tab Header 1</gux-tab-advanced>
     <gux-tab-advanced tab-id="2-2">
       <span
@@ -38,6 +38,10 @@
     <gux-tab-advanced tab-id="2-4">Tab Header 4</gux-tab-advanced>
     <gux-tab-advanced tab-id="2-5">Tab Header 5</gux-tab-advanced>
     <gux-tab-advanced tab-id="2-6">Tab Header 6</gux-tab-advanced>
+    <div slot="add-tab">
+      <gux-icon icon-name="add" decorative></gux-icon>
+      Add Tab
+    </div>
   </gux-tab-advanced-list>
   <gux-tab-advanced-panel tab-id="2-1">
     <span>Tab content 1</span>
@@ -275,6 +279,10 @@
       <gux-icon icon-name="export" decorative="true"></gux-icon>
       Export
     </gux-tab-advanced>
+    <div slot="add-tab">
+      <gux-icon icon-name="file-preview" decorative></gux-icon>
+      Add View
+    </div>
   </gux-tab-advanced-list>
   <gux-tab-advanced-panel tab-id="5-1">
     <span>Tab content 1</span>

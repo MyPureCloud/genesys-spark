@@ -10,7 +10,6 @@
 | Property           | Attribute             | Description                     | Type      | Default    |
 | ------------------ | --------------------- | ------------------------------- | --------- | ---------- |
 | `allowSort`        | `allow-sort`          | Enable tab sorting by drag/drop | `boolean` | `true`     |
-| `newTabButtonText` | `new-tab-button-text` | Text for new tab button         | `string`  | `''`       |
 | `showNewTabButton` | `show-new-tab-button` | Enable new tab button           | `boolean` | `true`     |
 | `tabLimit`         | `tab-limit`           | Maximum nuber of tabs created   | `number`  | `Infinity` |
 
