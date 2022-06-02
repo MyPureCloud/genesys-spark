@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.5...v3.1.0) (2022-06-02)
+
+
+### Features
+
+* **gux-anchor-beta:** add slot for icon ([a8338ef](https://github.com/MyPureCloud/genesys-webcomponents/commit/a8338ef16ae2cc08c6f653c9ba0945d6063f0fe6))
+* **gux-anchor-beta:** address pr feedback ([016552b](https://github.com/MyPureCloud/genesys-webcomponents/commit/016552b1b6c88cee0580322f5574d4794cc542df))
+* **gux-anchor-beta:** change gux-link to gux-anchor ([1f1bb99](https://github.com/MyPureCloud/genesys-webcomponents/commit/1f1bb99bb2c012eb04ee481456707a2cd023cc22))
+* **gux-anchor-beta:** update snapshot ([edbb261](https://github.com/MyPureCloud/genesys-webcomponents/commit/edbb26133912e14755f30fea4a14405db11ae487))
+* **gux-link-beta:** add link component ([ee28e51](https://github.com/MyPureCloud/genesys-webcomponents/commit/ee28e510197956990731d8a7f6aa71aff414d596))
+* **gux-link-beta:** add underline to in table link states ([b61a668](https://github.com/MyPureCloud/genesys-webcomponents/commit/b61a668ea5b49afece29544989375a0f6683cd8b))
+* **gux-link-beta:** remove disabled state ([17de01e](https://github.com/MyPureCloud/genesys-webcomponents/commit/17de01e615a159c026a5842a3d4e949692266413))
+* **gux-link-beta:** update snapshot ([c1fb1d5](https://github.com/MyPureCloud/genesys-webcomponents/commit/c1fb1d55e1c735878ea24467a81cc014194f3833))
+* **gux-link-beta:** update snapshot ([e90ed36](https://github.com/MyPureCloud/genesys-webcomponents/commit/e90ed36d216af44bf834fad13017942622e0f96a))
+* **typography:** add anchor styling to typography and add examples ([ef7de00](https://github.com/MyPureCloud/genesys-webcomponents/commit/ef7de005276637d95254494ccdba41538c9665a5))
+
 ### [3.0.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.4...v3.0.5) (2022-06-01)
 
 
