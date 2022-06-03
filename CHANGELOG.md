@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.1.0...v3.1.1) (2022-06-03)
+
+
+### Bug Fixes
+
+* **gux-form-field:** fix label alignment ([32926e2](https://github.com/MyPureCloud/genesys-webcomponents/commit/32926e247f62e5dd24a7af0864ad7fd7a6ed5f70))
+
 ## [3.1.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.5...v3.1.0) (2022-06-02)
 
 
