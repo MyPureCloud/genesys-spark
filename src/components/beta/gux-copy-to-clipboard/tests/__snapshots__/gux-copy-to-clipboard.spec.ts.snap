@@ -3,20 +3,18 @@
 exports[`gux-copy-to-clipboard-beta #render should render copy to clipboard 1`] = `
 <gux-copy-to-clipboard-beta>
   <mock:shadow-root>
-    <button class="gux-copy-to-clipboard-wrapper">
+    <button aria-label="Copy to clipboard" class="gux-copy-to-clipboard-wrapper">
       <div class="gux-copy-content">
-        <slot></slot>
-        <div class="gux-icon-container">
-          <gux-icon decorative="" icon-name="copy"></gux-icon>
-        </div>
+        <slot name="content"></slot>
+        <gux-icon decorative="" icon-name="copy"></gux-icon>
       </div>
       <gux-tooltip placement="bottom-end">
-        Click or Press Enter to Copy
+        Click to Copy
       </gux-tooltip>
     </button>
   </mock:shadow-root>
-  <span>
+  <div slot="content">
     Test
-  </span>
+  </div>
 </gux-copy-to-clipboard-beta>
 `;
