@@ -5,6 +5,7 @@ import {
   Event,
   EventEmitter,
   h,
+  readTask,
   JSX,
   Prop,
   State
@@ -26,6 +27,8 @@ import { GuxPaginationLayoutBeta } from './gux-pagination-beta.types';
 export class GuxPaginationBeta implements ComponentInterface {
   @Element()
   private root: HTMLElement;
+
+  private resizeObserver?: ResizeObserver;
 
   /**
    * The pagination component can have different layouts to suit the available space
@@ -56,6 +59,12 @@ export class GuxPaginationBeta implements ComponentInterface {
    */
   @State()
   private totalPages: number;
+
+  /**
+   * Previous pagination layout - for resize observer
+   */
+  @State()
+  previousLayout: GuxPaginationLayoutBeta;
 
   @Event()
   private guxpaginationchange: EventEmitter<GuxPaginationState>;
@@ -112,6 +121,20 @@ export class GuxPaginationBeta implements ComponentInterface {
     return Math.max(minCurrentPage, Math.min(currentPage, totalPages));
   }
 
+  private checkPaginationContainerWidthForLayout() {
+    readTask(() => {
+      const el = this.root.shadowRoot.querySelector(
+        '.gux-pagination-container'
+      );
+      const paginationContainerWidth = el.clientWidth;
+      if (paginationContainerWidth < 810) {
+        this.layout = 'simple';
+      } else {
+        this.layout = this.previousLayout;
+      }
+    });
+  }
+
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.layout });
   }
@@ -125,6 +148,34 @@ export class GuxPaginationBeta implements ComponentInterface {
       this.totalPages,
       this.currentPage
     );
+  }
+
+  disconnectedCallback() {
+    if (this.resizeObserver) {
+      this.resizeObserver.unobserve(
+        this.root.shadowRoot.querySelector('.gux-pagination-container')
+      );
+    }
+  }
+
+  componentDidLoad() {
+    this.previousLayout = this.layout;
+
+    if (!this.resizeObserver && window.ResizeObserver) {
+      this.resizeObserver = new ResizeObserver(() =>
+        this.checkPaginationContainerWidthForLayout()
+      );
+    }
+
+    if (this.resizeObserver) {
+      this.resizeObserver.observe(
+        this.root.shadowRoot.querySelector('.gux-pagination-container')
+      );
+    }
+
+    setTimeout(() => {
+      this.checkPaginationContainerWidthForLayout();
+    }, 500);
   }
 
   render(): JSX.Element {
