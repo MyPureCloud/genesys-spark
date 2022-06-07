@@ -14,9 +14,7 @@
   },
   "dependencies": {
     "iframe-coordinator": "^4.4.3",
-    "install": "^0.13.0",
     "monaco-editor": "^0.29.1",
-    "npm": "^8.1.0",
     "parse5": "^6.0.1"
   },
   "devDependencies": {
