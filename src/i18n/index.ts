@@ -77,11 +77,6 @@ export async function getComponentI18nResources(
     } catch (_) {
       resources = null;
     }
-    if (!resources) {
-      console.error(
-        `No localized string available for "${componentName}" for "${locale}" locale. Falling back to English translation.`
-      );
-    }
   }
 
   if (!resources) {
@@ -100,9 +95,6 @@ export function getDesiredLocale(element: HTMLElement): string {
   } else if (locales.indexOf(lang) >= 0) {
     return lang;
   } else {
-    console.error(
-      `gux: No translation locale found for ${locale}, defaulting to '${DEFAULT_LOCALE}'`
-    );
     return DEFAULT_LOCALE;
   }
 }
@@ -113,10 +105,6 @@ function findLocaleInDom(element: HTMLElement): string {
   if (closestElement && closestElement.lang) {
     return closestElement.lang.toLowerCase();
   } else {
-    console.error(
-      `gux: No language specified on page, defaulting to '${DEFAULT_LOCALE}'`,
-      element.tagName
-    );
     return DEFAULT_LOCALE;
   }
 }

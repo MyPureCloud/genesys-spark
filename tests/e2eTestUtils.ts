@@ -29,9 +29,7 @@ export async function newSparkE2EPage(
   },
   lang: string = 'en'
 ): Promise<E2EPage> {
-  const page = await newE2EPage({
-    failOnConsoleError: true
-  });
+  const page = await newE2EPage();
   await page.setContent(`<div lang=${lang}>${html}</div>`);
   await page.addScriptTag({
     path: 'node_modules/axe-core/axe.min.js'

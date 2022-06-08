@@ -9,9 +9,7 @@ async function newNonrandomE2EPage(
   },
   lang: string = 'en'
 ): Promise<E2EPage> {
-  const page = await newE2EPage({
-    failOnConsoleError: true
-  });
+  const page = await newE2EPage();
 
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
