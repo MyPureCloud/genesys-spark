@@ -61,10 +61,10 @@ export class GuxPaginationBeta implements ComponentInterface {
   private totalPages: number;
 
   /**
-   * Previous pagination layout - for resize observer
+   * Pagination layout to display based on resize observer
    */
   @State()
-  previousLayout: GuxPaginationLayoutBeta;
+  displayedLayout: GuxPaginationLayoutBeta;
 
   @Event()
   private guxpaginationchange: EventEmitter<GuxPaginationState>;
@@ -128,9 +128,9 @@ export class GuxPaginationBeta implements ComponentInterface {
       );
       const paginationContainerWidth = el.clientWidth;
       if (paginationContainerWidth < 810) {
-        this.layout = 'simple';
+        this.displayedLayout = 'simple';
       } else {
-        this.layout = this.previousLayout;
+        this.displayedLayout = this.layout;
       }
     });
   }
@@ -159,8 +159,6 @@ export class GuxPaginationBeta implements ComponentInterface {
   }
 
   componentDidLoad() {
-    this.previousLayout = this.layout;
-
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() =>
         this.checkPaginationContainerWidthForLayout()
@@ -187,7 +185,7 @@ export class GuxPaginationBeta implements ComponentInterface {
             current-page={this.currentPage}
             items-per-page={this.itemsPerPage}
           />
-          {this.layout === 'advanced' && (
+          {this.displayedLayout === 'advanced' && (
             <gux-pagination-items-per-page-beta
               items-per-page={this.itemsPerPage}
               onInternalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
@@ -198,7 +196,7 @@ export class GuxPaginationBeta implements ComponentInterface {
         </div>
         <div class="gux-pagination-change">
           <gux-pagination-buttons-beta
-            layout={this.layout}
+            layout={this.displayedLayout}
             current-page={this.currentPage}
             total-pages={this.totalPages}
             onInternalcurrentpagechange={this.handleInternalcurrentpagechange.bind(
