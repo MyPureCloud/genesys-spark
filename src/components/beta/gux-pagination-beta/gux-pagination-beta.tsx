@@ -19,6 +19,14 @@ import { trackComponent } from '../../../usage-tracking';
 
 import { GuxPaginationLayoutBeta } from './gux-pagination-beta.types';
 
+/**
+ * The minimum size in px at which the advanced layout will display.
+ * Below this size we switch to the simple layout.
+ * This was chosen based on the width required for 3-digit page numbers, so
+ * page counts that go into 4 digits could overflow at small sizes.
+ */
+const MIN_ADVANCED_SIZE = 810;
+
 @Component({
   styleUrl: 'gux-pagination-beta.less',
   tag: 'gux-pagination-beta',
@@ -127,7 +135,7 @@ export class GuxPaginationBeta implements ComponentInterface {
         '.gux-pagination-container'
       );
       const paginationContainerWidth = el.clientWidth;
-      if (paginationContainerWidth < 810) {
+      if (paginationContainerWidth < MIN_ADVANCED_SIZE) {
         this.displayedLayout = 'simple';
       } else {
         this.displayedLayout = this.layout;
