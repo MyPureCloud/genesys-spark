@@ -49,7 +49,11 @@ export class GuxAllRowSelect {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.root, tableResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      tableResources,
+      'gux-table'
+    );
   }
 
   render(): JSX.Element {
