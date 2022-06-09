@@ -1,17 +1,20 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-async function newNonrandomE2EPage({
-  html
-}: {
-  html: string;
-}): Promise<E2EPage> {
+async function newNonrandomE2EPage(
+  {
+    html
+  }: {
+    html: string;
+  },
+  lang: string = 'en'
+): Promise<E2EPage> {
   const page = await newE2EPage();
 
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
   });
-  await page.setContent(html);
+  await page.setContent(`<div lang=${lang}>${html}</div>`);
   await page.waitForChanges();
   await page.addScriptTag({
     path: 'node_modules/axe-core/axe.min.js'
@@ -23,7 +26,7 @@ async function newNonrandomE2EPage({
 
 describe('gux-tabs', () => {
   const html = `
-    <gux-tabs lang="en">
+    <gux-tabs>
       <gux-tab-list slot="tab-list">
           <gux-tab tab-id="2-1">Tab Header 1</gux-tab>
           <gux-tab tab-id="2-2">Tab Header 2</gux-tab>
@@ -45,6 +48,17 @@ describe('gux-tabs', () => {
   describe('#render', () => {
     it('renders', async () => {
       const page = await newNonrandomE2EPage({ html });
+      const element = await page.find('gux-tabs');
+
+      expect(element.outerHTML).toMatchSnapshot();
+    });
+
+    it('renders i18n strings', async () => {
+      const restrictedWidthHtml = `<div style="width: 500px">${html}</div>`;
+      const page = await newNonrandomE2EPage(
+        { html: restrictedWidthHtml },
+        'ja'
+      );
       const element = await page.find('gux-tabs');
 
       expect(element.outerHTML).toMatchSnapshot();
