@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run i18n && npm run stencil && npm run docs && npm run build-wrapper",
+    "build:react": "cd ./common-webcomponents-react && npm run build",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "check-a11y": "node scripts/check-a11y.js",
     "check-readmes": "./scripts/check-readmes.sh",
@@ -73,6 +74,7 @@
     "@commitlint/config-conventional": "^17.0.2",
     "@stencil/core": "^2.16.1",
     "@stencil/less": "^1.0.0",
+    "@stencil/react-output-target": "^0.3.1",
     "@stencil/utils": "0.0.5",
     "@types/jest": "^27.5.2",
     "@types/new-relic-browser": "^0.1118.2",
