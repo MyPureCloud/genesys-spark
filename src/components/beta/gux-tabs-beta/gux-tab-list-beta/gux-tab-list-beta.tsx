@@ -199,7 +199,11 @@ export class GuxTabListBeta {
 
   async componentWillLoad(): Promise<void> {
     this.tabTriggers = this.root.querySelectorAll('gux-tab-beta');
-    this.i18n = await buildI18nForComponent(this.root, tabsResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      tabsResources,
+      'gux-tabs'
+    );
   }
 
   componentDidLoad() {
