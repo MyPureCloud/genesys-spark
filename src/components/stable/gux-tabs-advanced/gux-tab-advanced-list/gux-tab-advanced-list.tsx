@@ -94,18 +94,6 @@ export class GuxTabAdvancedList {
   private ariaLiveAlert: string = '';
 
   /**
-   * Icon for add tab button. Defaults to 'add'
-   */
-  @State()
-  private addTabIconName: string = 'add';
-
-  /**
-   * Text for add tab button
-   */
-  @State()
-  private addTabText: string = '';
-
-  /**
    * Triggers when the new tab button is selected.
    */
   @Event()
@@ -492,12 +480,6 @@ export class GuxTabAdvancedList {
   async componentWillLoad(): Promise<void> {
     this.setTabTriggers();
     this.i18n = await buildI18nForComponent(this.root, tabsResources);
-
-    const addTabSlot = this.root.querySelector('div[slot="add-tab"]');
-    if (addTabSlot && addTabSlot.querySelector('gux-icon')) {
-      this.addTabIconName = addTabSlot.querySelector('gux-icon').iconName;
-      this.addTabText = addTabSlot.textContent.trim();
-    }
   }
 
   componentDidLoad() {
@@ -578,15 +560,13 @@ export class GuxTabAdvancedList {
               ? this.i18n('disableNewTab')
               : this.i18n('createNewTab')
           }
-          class={{
-            'add-tab': true,
-            'add-tab-text': this.addTabText.length > 0
-          }}
+          class="add-tab-button"
           onClick={() => props.onClick()}
           disabled={this.disableAddTabButton}
         >
-          <gux-icon icon-name={this.addTabIconName} decorative={true} />
-          {this.addTabText}
+          <slot name="add-tab">
+            <gux-icon icon-name="add" decorative></gux-icon>
+          </slot>
         </button>
       ) as JSX.Element;
     };
@@ -610,18 +590,13 @@ export class GuxTabAdvancedList {
         >
           <slot></slot>
         </div>
-        <div class="new-tab">
-          {this.showNewTabButton && !this.hasScrollbar ? (
-            <AddNewTabButton onClick={() => this.newTab.emit()} />
-          ) : null}
-        </div>
 
         <div class="action-button-container">
           {this.hasScrollbar
             ? this.renderScrollButton('scrollRight')
             : this.renderScrollButton('scrollDown')}
 
-          {this.showNewTabButton && this.hasScrollbar ? (
+          {this.showNewTabButton ? (
             <AddNewTabButton onClick={() => this.newTab.emit()} />
           ) : null}
         </div>
