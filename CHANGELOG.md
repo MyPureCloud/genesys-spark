@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.55.3](https://inindca///compare/v2.55.2...v2.55.3) (2022-06-10)
+
+
+### Bug Fixes
+
+* **gux-tabs-beta:** fix untranslated subcomponent i18n strings ([bed6f9e](https://inindca///commit/bed6f9e88f58eda46196e9567e169cd6417e8b69))
+
 ### [2.55.2](https://inindca///compare/v2.55.1...v2.55.2) (2022-05-25)
 
 ### [2.55.1](https://inindca///compare/v2.55.0...v2.55.1) (2022-05-25)
