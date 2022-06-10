@@ -1,10 +1,10 @@
 {
-  "neutral": "badge with label: {label}, color: neutral",
-  "neutral-bold": "badge with label: {label}, color: neutral bold",
-  "green": "badge with label: {label}, color: green",
-  "green-bold": "badge with label: {label}, color: green bold",
-  "yellow": "badge with label: {label}, color: yellow",
-  "yellow-bold": "badge with label: {label}, color: yellow bold",
-  "red": "badge with label: {label}, color: red",
-  "red-bold": "badge with label: {label}, color: red bold"
+  "neutral": "rozet ile etiket: {label}, renk: nötr",
+  "neutral-bold": "rozet ile etiket: {label}, renk: nötr kalın",
+  "green": "rozet ile etiket: {label}, renk: yeşil",
+  "green-bold": "rozet ile etiket: {label}, renk: yeşil kalın",
+  "yellow": "rozet ile etiket: {label}, renk: sarı",
+  "yellow-bold": "rozet ile etiket: {label}, renk: sarı kalın",
+  "red": "rozet ile etiket: {label}, renk: kırmızı",
+  "red-bold": "rozet ile etiket: {label}, renk: kırmızı kalın"
 }

@@ -181,7 +181,11 @@ export class GuxTabAdvanced {
   private i18n: GetI18nValue;
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.root, tabsResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      tabsResources,
+      'gux-tabs-advanced'
+    );
   }
 
   componentDidLoad(): void {

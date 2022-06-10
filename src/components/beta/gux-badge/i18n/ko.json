@@ -1,10 +1,10 @@
 {
-  "neutral": "badge with label: {label}, color: neutral",
-  "neutral-bold": "badge with label: {label}, color: neutral bold",
-  "green": "badge with label: {label}, color: green",
-  "green-bold": "badge with label: {label}, color: green bold",
-  "yellow": "badge with label: {label}, color: yellow",
-  "yellow-bold": "badge with label: {label}, color: yellow bold",
-  "red": "badge with label: {label}, color: red",
-  "red-bold": "badge with label: {label}, color: red bold"
+  "neutral": "레이블 있는 배지: {label}, 색상: 중립",
+  "neutral-bold": "레이블 있는 배지: {label}, 색상: 중립 굵게",
+  "green": "레이블 있는 배지: {label}, 색상: 초록색",
+  "green-bold": "레이블 있는 배지: {label}, 색상: 초록색 굵게",
+  "yellow": "레이블 있는 배지: {label}, 색상: 노란색",
+  "yellow-bold": "레이블 있는 배지: {label}, 색상: 노란색 굵게",
+  "red": "레이블 있는 배지: {label}, 색상: 빨간색",
+  "red-bold": "레이블 있는 배지: {label}, 색상: 빨간색 굵게"
 }

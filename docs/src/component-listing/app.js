@@ -15,7 +15,7 @@ export function bootstrap() {
             <nav class="components-list">
                 <div class="sticky-header">
                     <div class="logo">${sparkLogo}</div>
-                    <gux-form-field-legacy class="component-search-field" label-position="screenreader">
+                    <gux-form-field-search class="component-search-field" label-position="screenreader">
                       <input
                         id="component-search-box"
                         slot="input"
@@ -23,8 +23,8 @@ export function bootstrap() {
                         type="search"
                         placeholder="Enter a search"
                       />
-                      <label slot="label" for="component-search-box">Search for a component</label>
-                    </gux-form-field-legacy>
+                      <label slot="label">Search for a component</label>
+                    </gux-form-field-search>
                     <h2>Components</h2>
                 </div>
                 ${components
@@ -33,9 +33,15 @@ export function bootstrap() {
                     if (getComponentSpec(component).beta) {
                       name += `<sup> 𝜷</sup>`;
                     }
-                    return `<a class="component-item" href="#${component}">${name}</a>`;
+                    return `<a data-id="${component}" class="component-item" href="#${component}">${name}</a>`;
                   })
                   .join('')}
+                  <div class="sticky-footer">
+                  <h2>Resources</h2>
+                    <a class="resources-link" href="https://github.com/MyPureCloud/genesys-webcomponents/tree/main/docs/migrations/v3">V2 -> V3 Migration Guide</a>
+                    <a class="resources-link" href="https://spark.genesys.com">Spark UX Documentation</a>
+                    <a class="resources-link" href="https://github.com/MyPureCloud/genesys-webcomponents/blob/main/README.md#genesys-web-components">Web Components README</a>
+                  </div>
             </nav>
             <iframe id="componentFrame" title="Component Examples"/>
         </main>
@@ -55,18 +61,38 @@ export function bootstrap() {
       });
   };
 
+  function getActiveComponent() {
+    let hash = window.location.hash || `#${components[0]}`;
+    document
+      .querySelectorAll('.components-list .component-item')
+      .forEach(item => {
+        if (item.getAttribute('data-id') === hash.slice(1).toLowerCase()) {
+          item.classList.add('active-component');
+          item.setAttribute('aria-current', 'page');
+        } else {
+          item.classList.remove('active-component');
+          item.removeAttribute('aria-current');
+        }
+      });
+  }
+
   const searchBox = document.getElementById('component-search-box');
   searchBox.addEventListener('input', searchHandler);
 
-  const hashHandler = event => {
+  function hashHandler() {
     let iframe = document.getElementById('componentFrame');
     let hash = window.location.hash || `#${components[0]}`;
 
     iframe.src = `./${hash.slice(1)}.html`;
-  };
+  }
 
-  window.addEventListener('hashchange', hashHandler);
-  hashHandler();
+  function onHashChange() {
+    hashHandler();
+    getActiveComponent();
+  }
+
+  window.addEventListener('hashchange', onHashChange);
+  onHashChange();
 }
 
 function shortName(component) {
@@ -76,9 +102,6 @@ function shortName(component) {
 var sparkLogo = `
 <svg role="img" aria-label="Spark" viewBox="0 0 89.99 23.98" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style type="text/css">
-       @import url('https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic');
-    </style>
     <style>
       .cls-1{fill:#f0522a;}
       .cls-2,

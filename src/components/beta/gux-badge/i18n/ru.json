@@ -1,10 +1,10 @@
 {
-  "neutral": "badge with label: {label}, color: neutral",
-  "neutral-bold": "badge with label: {label}, color: neutral bold",
-  "green": "badge with label: {label}, color: green",
-  "green-bold": "badge with label: {label}, color: green bold",
-  "yellow": "badge with label: {label}, color: yellow",
-  "yellow-bold": "badge with label: {label}, color: yellow bold",
-  "red": "badge with label: {label}, color: red",
-  "red-bold": "badge with label: {label}, color: red bold"
+  "neutral": "значок с меткой: {label}, цвет: нейтральный",
+  "neutral-bold": "значок с меткой: {label}, цвет: нейтральный, полужирный",
+  "green": "значок с меткой: {label}, цвет: зеленый",
+  "green-bold": "значок с меткой: {label}, цвет: зеленый, полужирный",
+  "yellow": "значок с меткой: {label}, цвет: желтый",
+  "yellow-bold": "значок с меткой: {label}, цвет: желтый, полужирный",
+  "red": "значок с меткой: {label}, цвет: красный",
+  "red-bold": "значок с меткой: {label}, цвет: красный, полужирный"
 }

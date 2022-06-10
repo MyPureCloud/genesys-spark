@@ -1,10 +1,10 @@
 {
-  "neutral": "badge with label: {label}, color: neutral",
-  "neutral-bold": "badge with label: {label}, color: neutral bold",
-  "green": "badge with label: {label}, color: green",
-  "green-bold": "badge with label: {label}, color: green bold",
-  "yellow": "badge with label: {label}, color: yellow",
-  "yellow-bold": "badge with label: {label}, color: yellow bold",
-  "red": "badge with label: {label}, color: red",
-  "red-bold": "badge with label: {label}, color: red bold"
+  "neutral": "odznaka z etykietą: {label}, kolor: neutralny",
+  "neutral-bold": "odznaka z etykietą: {label}, kolor: neutralny pogrubiony",
+  "green": "odznaka z etykietą: {label}, kolor: zielony",
+  "green-bold": "odznaka z etykietą: {label}, kolor: zielony pogrubiony",
+  "yellow": "odznaka z etykietą: {label}, kolor: żółty",
+  "yellow-bold": "odznaka z etykietą: {label}, kolor: żółty pogrubiony",
+  "red": "odznaka z etykietą: {label}, kolor: czerwony",
+  "red-bold": "odznaka z etykietą: {label}, kolor: czerwony pogrubiony"
 }

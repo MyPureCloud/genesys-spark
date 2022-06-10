@@ -36,10 +36,10 @@
 
 ### During Review
 
-- Open a Pull Request on the repo. Add CORE UI team members as reviewers.
+- Open a Pull Request on the repo. Add Core UI team members as reviewers.
 - Tests and linters must be passing
 - Review will be thorough - problems in these components will have a widespread impact.
-- If your review is completed and you don't have merge rights for main, reach out to a member of the CORE UI team or post in the [Common UI Development](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b) and one of us will get it merged.
+- If your review is completed and you don't have merge rights for main, reach out to a member of the Core UI team or post in the [Common UI Development](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b) and one of us will get it merged.
 
 ### After Merging
 

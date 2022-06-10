@@ -1,10 +1,10 @@
 {
-  "neutral": "badge with label: {label}, color: neutral",
-  "neutral-bold": "badge with label: {label}, color: neutral bold",
-  "green": "badge with label: {label}, color: green",
-  "green-bold": "badge with label: {label}, color: green bold",
-  "yellow": "badge with label: {label}, color: yellow",
-  "yellow-bold": "badge with label: {label}, color: yellow bold",
-  "red": "badge with label: {label}, color: red",
-  "red-bold": "badge with label: {label}, color: red bold"
+  "neutral": "徽章含標籤：{label}，色彩：中性",
+  "neutral-bold": "徽章含標籤：{label}，色彩：中性大膽",
+  "green": "徽章含標籤：{label}，色彩：綠",
+  "green-bold": "徽章含標籤：{label}，色彩：大膽綠色",
+  "yellow": "徽章含標籤：{label}，色彩：黃",
+  "yellow-bold": "徽章含標籤：{label}，色彩：大膽黃色",
+  "red": "徽章含標籤：{label}，色彩：紅",
+  "red-bold": "徽章含標籤：{label}，色彩：大膽紅色"
 }

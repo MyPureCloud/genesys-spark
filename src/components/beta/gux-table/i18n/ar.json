@@ -2,6 +2,8 @@
   "emptyMessage": "لا توجد بيانات متاحة",
   "scrollLeft": "تنقل لليسار",
   "scrollRight": "تنقل لليمين",
+  "selectAllTableRows": "حدد جميع صفوف الجدول",
+  "selectTableRow": "حدد صف الجدول",
   "sortAsc": "تم الفرز تصاعديًا",
   "sortDesc": "تم الفرز تنازليًا"
 }

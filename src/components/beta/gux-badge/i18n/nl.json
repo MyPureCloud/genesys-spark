@@ -1,10 +1,10 @@
 {
-  "neutral": "badge with label: {label}, color: neutral",
-  "neutral-bold": "badge with label: {label}, color: neutral bold",
-  "green": "badge with label: {label}, color: green",
-  "green-bold": "badge with label: {label}, color: green bold",
-  "yellow": "badge with label: {label}, color: yellow",
-  "yellow-bold": "badge with label: {label}, color: yellow bold",
-  "red": "badge with label: {label}, color: red",
-  "red-bold": "badge with label: {label}, color: red bold"
+  "neutral": "badge met label: {label}, kleur: neutraal",
+  "neutral-bold": "badge met label: {label}, kleur: neutraal vet",
+  "green": "badge met label: {label}, kleur: groen",
+  "green-bold": "badge met label: {label}, kleur: groen vet",
+  "yellow": "badge met label: {label}, kleur: geel",
+  "yellow-bold": "badge met label: {label}, kleur: geel vet",
+  "red": "badge met label: {label}, kleur: rood",
+  "red-bold": "badge met label: {label}, kleur: rood vet"
 }

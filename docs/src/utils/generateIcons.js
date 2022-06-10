@@ -306,6 +306,7 @@ const icons = [
       'resource',
       'run',
       'scripter',
+      'shield-lock',
       'shield-outline',
       'shield-solid',
       'skills',
