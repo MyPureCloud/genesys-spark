@@ -50,6 +50,7 @@
  - [gux-input-select](../../legacy/gux-form-field-legacy/components/gux-input-select)
  - [gux-input-text-like](../../legacy/gux-form-field-legacy/components/gux-input-text-like)
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
+ - [gux-pagination-buttons-beta](../../beta/gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-cursor](../gux-pagination-cursor)
  - [gux-rating](../gux-rating)
  - [gux-side-panel-button](../../legacy/gux-side-panel-legacy/buttons)
@@ -99,6 +100,7 @@ graph TD;
   gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
   gux-pagination-buttons --> gux-icon
+  gux-pagination-buttons-beta --> gux-icon
   gux-pagination-cursor --> gux-icon
   gux-rating --> gux-icon
   gux-side-panel-button --> gux-icon

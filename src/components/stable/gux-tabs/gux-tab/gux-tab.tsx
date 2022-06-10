@@ -43,11 +43,13 @@ export class GuxTab {
 
   @Listen('focusin')
   onFocusin() {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     void this.tooltipTitleElement.setShowTooltip();
   }
 
   @Listen('focusout')
   onFocusout() {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     void this.tooltipTitleElement.setHideTooltip();
   }
 
