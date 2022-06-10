@@ -12,10 +12,6 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
   </mock:shadow-root>
   <gux-tab-advanced-list show-new-tab-button="true" slot="tab-list">
     <!---->
-    <div hidden="" slot="add-tab">
-      <gux-icon decorative="" icon-name="file-preview"></gux-icon>
-      Add View
-    </div>
     <span aria-live="polite" class="gux-aria-live-region gux-sr-only"></span>
     <div class="gux-tab-container">
       <div class="action-button-container">
@@ -86,14 +82,17 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
           </div>
         </gux-tab-advanced>
       </div>
-      <div class="new-tab">
-        <button class="add-tab add-tab-text" title="Create New Tab">
-          <gux-icon decorative=""></gux-icon>
-          Add View
-        </button>
-      </div>
       <div class="action-button-container">
         <div class="gux-scroll-button-container"></div>
+        <button class="add-tab-button" title="Create New Tab">
+          <div slot="add-tab">
+            <gux-icon decorative="" icon-name="file-preview"></gux-icon>
+            Add View
+          </div>
+          <slot-fb hidden="" name="add-tab">
+            <gux-icon decorative="" icon-name="add"></gux-icon>
+          </slot-fb>
+        </button>
       </div>
     </div>
   </gux-tab-advanced-list>
