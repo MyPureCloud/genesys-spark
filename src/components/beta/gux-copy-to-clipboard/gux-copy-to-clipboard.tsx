@@ -60,6 +60,7 @@ export class GuxCopyToClipboard {
       <button
         onClick={this.onCopyToClipboard.bind(this)}
         class="gux-copy-to-clipboard-wrapper"
+        title={this.i18n('copyToClipboard')}
       >
         <div class="gux-copy-content">
           <slot name="content" />
