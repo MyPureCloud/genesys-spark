@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.1.2...v3.3.0) (2022-06-13)
+
+
+### Features
+
+* generate react bindings ([3e5f00f](https://github.com/MyPureCloud/genesys-webcomponents/commit/3e5f00f0ee6d5b11a464185a48c6669aac04f1c1))
+* **gux-chart-scatter-plot:** add scatter plot chart ([e276486](https://github.com/MyPureCloud/genesys-webcomponents/commit/e2764867cf5ce9649f5b17d273b5acde0fbe4ff5))
+* **gux-chart-scatter-plot:** add tooltip size ([195bec0](https://github.com/MyPureCloud/genesys-webcomponents/commit/195bec0ba967404402210e72f07110014cbc2c3b))
+* **gux-chart-scatter-plot:** adding custom legend title ([45c3ec0](https://github.com/MyPureCloud/genesys-webcomponents/commit/45c3ec0bbd5abd765b3bebbed8a6d8d5965b37ed))
+* **gux-chart-scatter-plot:** remove color change on hover ([c697b6a](https://github.com/MyPureCloud/genesys-webcomponents/commit/c697b6a70942bbe0321bbe7d75591923b1442c90))
+* **gux-pagination-beta:** add example for pagination layout resize ([b37e263](https://github.com/MyPureCloud/genesys-webcomponents/commit/b37e2631f3d2da85239257dcc68ad4d68e909054))
+* **gux-pagination-beta:** addressed pr feedback ([773adb1](https://github.com/MyPureCloud/genesys-webcomponents/commit/773adb147120334ca7e900904c2bf1dc73f5373c))
+* **gux-pagination-beta:** created pagination beta component with simple and advanced layout options ([e3df705](https://github.com/MyPureCloud/genesys-webcomponents/commit/e3df70522e5fee24938c0e9dab7dfe9184f929d6))
+* **gux-pagination-beta:** created pagination beta component with simple and advanced layout options ([acd0070](https://github.com/MyPureCloud/genesys-webcomponents/commit/acd0070f3a400d047f85137efadcc4c0a1f6322a))
+* **gux-pagination-beta:** fix button focus styling ([a081e0f](https://github.com/MyPureCloud/genesys-webcomponents/commit/a081e0f6acd41c3153dd2c5ea7a5c3bb663cf298))
+* **gux-pagination-beta:** hide overflow scroll bar ([8fd08d8](https://github.com/MyPureCloud/genesys-webcomponents/commit/8fd08d8e571b07a915f3c6ca3d47e0de2880f3d1))
+* **gux-pagination-beta:** log warnings to use updated pagination layouts ([e098ab2](https://github.com/MyPureCloud/genesys-webcomponents/commit/e098ab222bc7b6ab7a22dd7b7a48e6a26c429054))
+* **gux-pagination-beta:** log warnings to use updated pagination layouts ([52e2f5d](https://github.com/MyPureCloud/genesys-webcomponents/commit/52e2f5d6321bd5a84f06769d60429bb2fd9c912e))
+* **gux-pagination-beta:** pagination options separate components, created pagination beta service ([16c5458](https://github.com/MyPureCloud/genesys-webcomponents/commit/16c5458da244ba62c28d40901e1e0d2e49d5ae66))
+* **gux-pagination-beta:** pagination options separate components, created pagination beta service ([40e08c5](https://github.com/MyPureCloud/genesys-webcomponents/commit/40e08c522783d411a80212a823f47a533558fef1))
+* **gux-pagination-beta:** update dropdown and option ([cf64099](https://github.com/MyPureCloud/genesys-webcomponents/commit/cf640993723d43310c1f8d854ab9e481ae5b360b))
+* **gux-pagination-beta:** update test snapshots ([0dafe7c](https://github.com/MyPureCloud/genesys-webcomponents/commit/0dafe7ca98b650a526b42c30d091562859fc2702))
+* **react-wrapper:** add script for linking the main package from the react-wrapper ([79fffc9](https://github.com/MyPureCloud/genesys-webcomponents/commit/79fffc9c5d68ed118e8692b1b08964e65b26aeda))
+* **react-wrapper:** update version to match main package ([599b1ec](https://github.com/MyPureCloud/genesys-webcomponents/commit/599b1ec69c6b4aba7c72fe71a451b2794a4181e7))
+
+
+### Bug Fixes
+
+* **gux-tabs:** fix untranslated subcomponent i18n strings ([cd22c15](https://github.com/MyPureCloud/genesys-webcomponents/commit/cd22c15147ae21a4495dd2055ec84f8807f1b61d))
+* **pagination:** reduced code duplication and renamed some files ([16171e9](https://github.com/MyPureCloud/genesys-webcomponents/commit/16171e9e802ea7f6156f55cc89efea7e6a49bfec))
+* **pr-comment:** add resize observer for layout ([a4b7b2e](https://github.com/MyPureCloud/genesys-webcomponents/commit/a4b7b2ecd497be7e6e2fc291fab92801dc516221))
+* **pr-comment:** define min advanced size constant ([031b58e](https://github.com/MyPureCloud/genesys-webcomponents/commit/031b58e1d9935cfb9a6a46f2b14eacaa5b885366))
+* **pr-comment:** remove pages unknown prop ([c812f4c](https://github.com/MyPureCloud/genesys-webcomponents/commit/c812f4c3b774cb146899f9d5baae32d7fd95a169))
+* **pr-comment:** use displayedLayout state ([7409091](https://github.com/MyPureCloud/genesys-webcomponents/commit/74090919205101dfa638059546fc329c12858a69))
+
 ## [3.2.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.1.2...v3.2.0) (2022-06-13)
 
 
