@@ -60,7 +60,6 @@ export class GuxCopyToClipboard {
       <button
         onClick={this.onCopyToClipboard.bind(this)}
         class="gux-copy-to-clipboard-wrapper"
-        aria-label={this.i18n('copyToClipboard')}
       >
         <div class="gux-copy-content">
           <slot name="content" />
