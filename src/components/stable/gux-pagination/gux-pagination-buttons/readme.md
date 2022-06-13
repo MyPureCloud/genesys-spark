@@ -30,17 +30,19 @@ An internal component used by the gux-pagination component.
 
 ### Depends on
 
-- [gux-input-text-like](../../gux-form-field/components/gux-input-text-like)
+- [gux-form-field-text-like](../../gux-form-field/components/gux-form-field-text-like)
 - [gux-button-slot-beta](../../../beta/gux-button-slot)
 - [gux-icon](../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-pagination-buttons --> gux-input-text-like
+  gux-pagination-buttons --> gux-form-field-text-like
   gux-pagination-buttons --> gux-button-slot-beta
   gux-pagination-buttons --> gux-icon
-  gux-input-text-like --> gux-icon
+  gux-form-field-text-like --> gux-form-field-input-clear-button
+  gux-form-field-text-like --> gux-icon
+  gux-form-field-input-clear-button --> gux-icon
   gux-pagination --> gux-pagination-buttons
   style gux-pagination-buttons fill:#f9f,stroke:#333,stroke-width:4px
 ```

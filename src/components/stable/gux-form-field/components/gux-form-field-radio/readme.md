@@ -1,0 +1,32 @@
+# gux-form-field-radio
+
+
+
+<!-- Auto Generated Below -->
+
+
+## Slots
+
+| Slot      | Description                     |
+| --------- | ------------------------------- |
+| `"error"` | Optional slot for error message |
+| `"input"` | Required slot for input tag     |
+| `"label"` | Required slot for label tag     |
+
+
+## Dependencies
+
+### Depends on
+
+- [gux-icon](../../../gux-icon)
+
+### Graph
+```mermaid
+graph TD;
+  gux-form-field-radio --> gux-icon
+  style gux-form-field-radio fill:#f9f,stroke:#333,stroke-width:4px
+```
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

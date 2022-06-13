@@ -1,0 +1,10 @@
+{
+  "neutral": "märke med etikett: {label}, färg: neutral",
+  "neutral-bold": "märke med etikett: {label}, färg: neutral fet stil",
+  "green": "märke med etikett: {label}, färg: grön",
+  "green-bold": "märke med etikett: {label}, färg: grön fet stil",
+  "yellow": "märke med etikett: {label}, färg: gul",
+  "yellow-bold": "märke med etikett: {label}, färg: gul fet stil",
+  "red": "märke med etikett: {label}, färg: röd",
+  "red-bold": "märke med etikett: {label}, färg: röd fet stil"
+}

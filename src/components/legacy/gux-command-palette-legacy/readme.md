@@ -31,7 +31,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-input-search](../../stable/gux-form-field/components/gux-input-search)
+- [gux-input-search](../gux-form-field-legacy/components/gux-input-search)
 - [gux-list-legacy](../gux-list-legacy)
 - [gux-list-item-legacy](../gux-list-legacy/list-item)
 - [gux-text-highlight](../../stable/gux-text-highlight)

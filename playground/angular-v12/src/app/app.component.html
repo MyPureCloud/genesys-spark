@@ -45,7 +45,7 @@
 
   <div class="form-element">
     <label for="pet">Pet </label>
-    <gux-dropdown-v2-beta
+    <gux-dropdown
       id="pet"
       name="pet"
       formControlName="pet"
@@ -53,11 +53,11 @@
       ngDefaultControl
     >
       <gux-listbox aria-label="Pets">
-        <gux-option-v2 [value]="p.id" *ngFor="let p of petList">
+        <gux-option [value]="p.id" *ngFor="let p of petList">
           {{ p.name }}
-        </gux-option-v2>
+        </gux-option>
       </gux-listbox>
-    </gux-dropdown-v2-beta>
+    </gux-dropdown>
     <div>
       <small *ngIf="showRequiredErrorMessage('pet')"
         >This field is required.</small

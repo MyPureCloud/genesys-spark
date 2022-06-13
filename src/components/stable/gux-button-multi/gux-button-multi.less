@@ -1,0 +1,36 @@
+@import (reference) '../../../style/color.less';
+@import (reference) '../../../style/shadows.less';
+@import (reference) '../../../style/typography.less';
+
+:host {
+  display: block;
+  -webkit-user-select: none;
+  user-select: none;
+  .body-font();
+}
+
+.gux-button-multi-container {
+  .gux-dropdown-button {
+    button {
+      & > * {
+        vertical-align: middle;
+      }
+
+      gux-icon {
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.gux-list-container {
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  background-color: @gux-type-dark;
+  border: 1px solid @gux-grey-30;
+  border-radius: 4px;
+  .gux-shadow-20();
+}

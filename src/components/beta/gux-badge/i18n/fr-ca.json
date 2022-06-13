@@ -1,0 +1,10 @@
+{
+  "neutral": "badge avec étiquette : {label}, couleur : neutre",
+  "neutral-bold": "badge avec étiquette : {label}, couleur : neutre vif",
+  "green": "badge avec étiquette : {label}, couleur : vert",
+  "green-bold": "badge avec étiquette : {label}, couleur : vert vif",
+  "yellow": "badge avec étiquette : {label}, couleur : jaune",
+  "yellow-bold": "badge avec étiquette : {label}, couleur : jaune vif",
+  "red": "badge avec étiquette : {label}, couleur : rouge",
+  "red-bold": "badge avec étiquette : {label}, couleur : rouge vif"
+}

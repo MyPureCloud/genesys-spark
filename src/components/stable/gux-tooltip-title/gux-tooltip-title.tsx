@@ -54,6 +54,7 @@ export class GuxTooltipTitle {
   async setShowTooltip() {
     if (this.tooltipElement) {
       this.showTooltip = true;
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       await this.tooltipElement.showTooltip();
     }
   }
@@ -62,6 +63,7 @@ export class GuxTooltipTitle {
   async setHideTooltip() {
     if (this.tooltipElement) {
       this.showTooltip = false;
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       await this.tooltipElement.hideTooltip();
     }
   }

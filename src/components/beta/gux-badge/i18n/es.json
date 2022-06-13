@@ -1,0 +1,10 @@
+{
+  "neutral": "insignia con la etiqueta: {label}, color: neutro",
+  "neutral-bold": "insignia con la etiqueta: {label}, color: neutro en negrita",
+  "green": "insignia con la etiqueta: {label}, color: verde",
+  "green-bold": "insignia con la etiqueta: {label}, color: verde en negrita",
+  "yellow": "insignia con la etiqueta: {label}, color: amarillo",
+  "yellow-bold": "insignia con la etiqueta: {label}, color: amarillo en negrita",
+  "red": "insignia con la etiqueta: {label}, color: rojo",
+  "red-bold": "insignia con la etiqueta: {label}, color: rojo en negrita"
+}

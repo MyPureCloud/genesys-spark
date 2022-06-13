@@ -14,17 +14,20 @@ const axeExclusions = [
   }
 ];
 
-async function newNonrandomE2EPage({
-  html
-}: {
-  html: string;
-}): Promise<E2EPage> {
+async function newNonrandomE2EPage(
+  {
+    html
+  }: {
+    html: string;
+  },
+  lang: string = 'en'
+): Promise<E2EPage> {
   const page = await newE2EPage();
 
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
   });
-  await page.setContent(html);
+  await page.setContent(`<div lang=${lang}>${html}</div>`);
   await page.waitForChanges();
   await page.addScriptTag({
     path: 'node_modules/axe-core/axe.min.js'
@@ -36,7 +39,7 @@ async function newNonrandomE2EPage({
 
 describe('gux-tabs-advanced', () => {
   const htmlExample1 = `
-  <gux-tabs-advanced lang="en">
+  <gux-tabs-advanced>
     <gux-tab-advanced-list
       slot="tab-list"
       allow-sort="false"
@@ -44,15 +47,12 @@ describe('gux-tabs-advanced', () => {
     >
       <gux-tab-advanced tab-id="1-1">
         Tab Header 1
-        <span slot="dropdown-options">
-          <gux-tab-advanced-option
-            option-id="1"
-            icon-name="close"
-            onclick="notify(event)"
-          >
+        <gux-list slot="dropdown-options">
+          <gux-list-item>
+            <gux-icon icon-name="close" decorative="true"></gux-icon>
             Close
-          </gux-tab-advanced-option>
-        </span>
+          </gux-list-item>
+        </gux-list>
       </gux-tab-advanced>
       <gux-tab-advanced tab-id="1-2">
         <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
@@ -70,40 +70,31 @@ describe('gux-tabs-advanced', () => {
       <gux-tab-advanced tab-id="1-6">
         <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
         Tab Header 6
-        <span slot="dropdown-options">
-          <gux-tab-advanced-option
-            option-id="1"
-            icon-name="close"
-            onclick="notify(event)"
-          >
+        <gux-list slot="dropdown-options">
+          <gux-list-item>
+            <gux-icon icon-name="close" decorative="true"></gux-icon>
             Close
-          </gux-tab-advanced-option>
-        </span>
+          </gux-list-item>
+        </gux-list>
       </gux-tab-advanced>
       <gux-tab-advanced tab-id="1-7">
         <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
         Tab Header 7 long long long
-        <span slot="dropdown-options">
-          <gux-tab-advanced-option
-            option-id="1"
-            icon-name="close"
-            onclick="notify(event)"
-          >
+        <gux-list slot="dropdown-options">
+          <gux-list-item>
+            <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
             Close
-          </gux-tab-advanced-option>
-        </span>
+          </gux-list-item>
+        </gux-list>
       </gux-tab-advanced>
       <gux-tab-advanced tab-id="1-8">
       Tab Header 8 longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong
-      <span slot="dropdown-options">
-        <gux-tab-advanced-option
-          option-id="1"
-          icon-name="close"
-          onclick="notify(event)"
-        >
+      <gux-list slot="dropdown-options">
+        <gux-list-item>
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
           Close
-        </gux-tab-advanced-option>
-      </span>
+        </gux-list-item>
+      </gux-list>
     </gux-tab-advanced>
       <gux-tab-advanced gux-disabled tab-id="1-9">
         Tab Header 9 long long long
@@ -139,7 +130,7 @@ describe('gux-tabs-advanced', () => {
   </gux-tabs-advanced>
 `;
   const htmlExample2 = `
-    <gux-tabs-advanced lang="en">
+    <gux-tabs-advanced>
       <gux-tab-advanced-list
         slot="tab-list"
         allow-sort="false"
@@ -158,7 +149,6 @@ describe('gux-tabs-advanced', () => {
         <gux-tab-advanced tab-id="1-4">
           Tab Header 4
         </gux-tab-advanced>
-
       </gux-tab-advanced-list>
     <gux-tab-advanced-panel tab-id="1-1">
       <span>Tab content 1</span>
@@ -177,10 +167,21 @@ describe('gux-tabs-advanced', () => {
     `;
   describe('#render', () => {
     // This test is flaky
-    it.skip('renders', async () => {
+    it('renders', async () => {
       const page = await newNonrandomE2EPage({ html: htmlExample2 });
       const element = await page.find('gux-tabs-advanced');
       await a11yCheck(page, axeExclusions);
+
+      expect(element.outerHTML).toMatchSnapshot();
+    });
+
+    it('renders i18n strings', async () => {
+      const restrictedWidthHtml = `<div style="width: 200px">${htmlExample2}</div>`;
+      const page = await newNonrandomE2EPage(
+        { html: restrictedWidthHtml },
+        'ja'
+      );
+      const element = await page.find('gux-tabs-advanced');
 
       expect(element.outerHTML).toMatchSnapshot();
     });

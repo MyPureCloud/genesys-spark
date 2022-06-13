@@ -1,0 +1,10 @@
+{
+  "neutral": "selitteellinen merkki: {label}, väri: neutraali",
+  "neutral-bold": "selitteellinen merkki: {label}, väri: neutraali voimakas",
+  "green": "selitteellinen merkki: {label}, väri: vihreä",
+  "green-bold": "selitteellinen merkki: {label}, väri: voimakas vihreä",
+  "yellow": "selitteellinen merkki: {label}, väri: keltainen",
+  "yellow-bold": "selitteellinen merkki: {label}, väri: voimakas keltainen",
+  "red": "selitteellinen merkki: {label}, väri: punainen",
+  "red-bold": "selitteellinen merkki: {label}, väri: voimakas punainen"
+}

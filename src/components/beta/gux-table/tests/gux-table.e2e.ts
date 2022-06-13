@@ -1,17 +1,20 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-async function newNonrandomE2EPage({
-  html
-}: {
-  html: string;
-}): Promise<E2EPage> {
+async function newNonrandomE2EPage(
+  {
+    html
+  }: {
+    html: string;
+  },
+  lang: string = 'en'
+): Promise<E2EPage> {
   const page = await newE2EPage();
 
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
   });
-  await page.setContent(html);
+  await page.setContent(`<div lang=${lang}>${html}</div>`);
   await page.waitForChanges();
   await page.addScriptTag({
     path: 'node_modules/axe-core/axe.min.js'
@@ -66,7 +69,7 @@ describe('gux-table-beta', () => {
       {
         description: 'empty table',
         html: `
-        <gux-table-beta lang="en">
+        <gux-table-beta>
           <table slot="data">
             <thead>
               <tr>
@@ -82,33 +85,33 @@ describe('gux-table-beta', () => {
       },
       {
         description: 'should render data table',
-        html: `<gux-table-beta lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta>${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render compact data table',
-        html: `<gux-table-beta compact lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta compact>${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render object table',
-        html: `<gux-table-beta object-table lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta object-table>${tableContent}</gux-table-beta>`
       },
 
       {
         description: 'should render table with vertical scroll',
-        html: `<gux-table-beta style="height: 150px" lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta style="height: 150px">${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render table with horizontal scroll',
-        html: `<gux-table-beta style="width: 300px" lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta style="width: 300px">${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render table with rows selection',
-        html: `<gux-table-beta object-table selectable-rows lang="en">${tableContent}</gux-table-beta>`
+        html: `<gux-table-beta object-table selectable-rows>${tableContent}</gux-table-beta>`
       },
       {
         description: 'should render empty table with rows selection',
         html: `
-          <gux-table-beta object-table selectable-rows lang="en">
+          <gux-table-beta object-table selectable-rows>
             <table slot="data">
               <thead>
                 <tr>
@@ -131,6 +134,125 @@ describe('gux-table-beta', () => {
         expect(element).toHaveAttribute('hydrated');
         expect(element.outerHTML).toMatchSnapshot();
       });
+      it(`${description} with i18n strings`, async () => {
+        const page = await newNonrandomE2EPage({ html }, 'ja');
+        const element = await page.find('gux-table-beta');
+        await a11yCheck(page);
+
+        expect(element).toHaveAttribute('hydrated');
+        expect(element.outerHTML).toMatchSnapshot();
+      });
+    });
+  });
+
+  it('should sort table if table header nested element is wrapped in a span tag', async () => {
+    const html = `<gux-table-beta>
+    <table slot="data">
+      <thead>
+        <tr>
+          <th data-column-name="first-name" data-sortable data-sort="asc">
+            <span>First name</span>
+          </th>
+          <th data-column-name="last-name">Last name</th>
+          <th data-column-name="age" data-cell-numeric>Age</th>
+          <th data-column-name="action" data-cell-action>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Adam</td>
+          <td>Ant</td>
+          <td data-cell-numeric>25</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Billy</td>
+          <td>Bat</td>
+          <td data-cell-numeric>28</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Cathy</td>
+          <td>Cat</td>
+          <td data-cell-numeric>21</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Debbie</td>
+          <td>Dog</td>
+          <td data-cell-numeric>23</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </gux-table-beta>`;
+
+    const page = await newE2EPage({ html });
+
+    const columnSortSpy = await page.spyOnEvent('guxsortchanged');
+    const headerElement = await page.find('th span');
+    await headerElement.click();
+    await page.waitForChanges();
+
+    expect(columnSortSpy).toHaveReceivedEventDetail({
+      columnName: 'first-name',
+      sortDirection: 'desc'
+    });
+  });
+
+  it('should sort table if table header nested element is not wrapped in a span tag', async () => {
+    const html = `<gux-table-beta>
+    <table slot="data">
+      <thead>
+        <tr>
+          <th data-column-name="first-name" data-sortable data-sort="asc">
+            First name
+          </th>
+          <th data-column-name="last-name">Last name</th>
+          <th data-column-name="age" data-cell-numeric>Age</th>
+          <th data-column-name="action" data-cell-action>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Adam</td>
+          <td>Ant</td>
+          <td data-cell-numeric>25</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Billy</td>
+          <td>Bat</td>
+          <td data-cell-numeric>28</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Cathy</td>
+          <td>Cat</td>
+          <td data-cell-numeric>21</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr>
+          <td>Debbie</td>
+          <td>Dog</td>
+          <td data-cell-numeric>23</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </gux-table-beta>`;
+
+    const page = await newE2EPage({ html });
+
+    const columnSortEvent = await page.spyOnEvent('guxsortchanged');
+    const headerElement = await page.find('th');
+    await headerElement.click();
+
+    await page.waitForChanges();
+
+    expect(columnSortEvent).toHaveReceivedEventDetail({
+      columnName: 'first-name',
+      sortDirection: 'desc'
     });
   });
 });

@@ -161,7 +161,7 @@ export class GuxCalendar {
   }
 
   firstDateInMonth(month: number, year: number) {
-    const startDate = new Date(year, month, 1, 0, 0, 0, 0);
+    const startDate = new Date(year, month, 1, 1, 0, 0, 0);
     const firstDayOfMonth = startDate.getDay();
     const firstDayOffset =
       (-1 * (this.startDayOfWeek - firstDayOfMonth - 7)) % 7;

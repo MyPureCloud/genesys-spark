@@ -1,45 +1,27 @@
 # React Integration
 
-## Typescript
+This package generates a set of react wrapper elements which are published in `genesys-spark-components-react` and should be used in favor of directly using the custom elements in a React app.
 
-When working with web components, react, and typescript you will need to help the type system out a bit getting the web components in.
+The react package should be installed alongside `genesys-spark-components`, with matching version numbers, and the web-components will still need to be registered (e.g. via `registerElements()`)
 
-Below is a working example of a file that will put all gux web components into the type system making everyone happy.
+## Example
 
-```typescript
-import { JSX as LocalJSX } from "@genesys/common-webcomponents";
-import { DetailedHTMLProps, HTMLAttributes } from "react";
+```ts
+import { registerElements } from 'genesys-spark-components';
+import { GuxButton } from 'genesys-spark-components-react';
+registerElements(); // Realistically this would probably be in something like index.tsx
 
-/**
- * NOTES: Had to move them away from [P in keyof T]? because typescript was not happy with the undefined. 
- * It produced this error for memo and lazy react calls:
- *  - produces a union type that is too complex to represent
- * We are kinda lying here about the types because the gux elements have to be loaded in to exist. I think this lie is fine
- * because if you use the web components and did not load them in you will find out quickly during development and then 
- * add the one line to register them.
- */
+const MyReactComponent = () => {
+  const [counter, setCounter] = useState(0);
 
-type StencilProps<T> = {
-    [P in keyof T]: Omit<T[P], "ref">;
+  return (
+    <GuxButton onClick={() => setCounter(x => x + 1)}>
+      You have clicked {counter} times
+    </GuxButton>
+  );
 };
-
-type ReactProps<T> = {
-    [P in keyof T]: DetailedHTMLProps<HTMLAttributes<T[P]>, T[P]>;
-};
-
-// These lines below restrict to pulling in just the gux prefex web components.
-// You need typescript 4.1 or above
-type IsGux<K> = K extends `gux${infer _}` ? K : never;
-type GuxKeys<T> = Pick<T, IsGux<keyof T>>; 
-
-type StencilToReact = StencilProps<GuxKeys<LocalJSX.IntrinsicElements>> & ReactProps<GuxKeys<HTMLElementTagNameMap>>;
-
-declare global {
-    export namespace JSX {
-        interface IntrinsicElements extends StencilToReact {}
-    }
-}
-
-export { registerElements } from "@genesys/common-webcomponents";
-
 ```
+
+## Events
+
+If a stencil component defines an event called `eventname`, then the React wrapper element will have a corresponding `onEventname` prop. For example, `<GuxModal>` has `onGuxdismiss` corresponding to the `guxdismiss` event from `<gux-modal>`.

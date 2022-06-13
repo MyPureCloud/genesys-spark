@@ -2,6 +2,149 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.1.1...v3.1.2) (2022-06-08)
+
+### [3.1.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.1.0...v3.1.1) (2022-06-03)
+
+
+### Bug Fixes
+
+* **gux-form-field:** fix label alignment ([32926e2](https://github.com/MyPureCloud/genesys-webcomponents/commit/32926e247f62e5dd24a7af0864ad7fd7a6ed5f70))
+
+## [3.1.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.5...v3.1.0) (2022-06-02)
+
+
+### Features
+
+* **gux-anchor-beta:** add slot for icon ([a8338ef](https://github.com/MyPureCloud/genesys-webcomponents/commit/a8338ef16ae2cc08c6f653c9ba0945d6063f0fe6))
+* **gux-anchor-beta:** address pr feedback ([016552b](https://github.com/MyPureCloud/genesys-webcomponents/commit/016552b1b6c88cee0580322f5574d4794cc542df))
+* **gux-anchor-beta:** change gux-link to gux-anchor ([1f1bb99](https://github.com/MyPureCloud/genesys-webcomponents/commit/1f1bb99bb2c012eb04ee481456707a2cd023cc22))
+* **gux-anchor-beta:** update snapshot ([edbb261](https://github.com/MyPureCloud/genesys-webcomponents/commit/edbb26133912e14755f30fea4a14405db11ae487))
+* **gux-link-beta:** add link component ([ee28e51](https://github.com/MyPureCloud/genesys-webcomponents/commit/ee28e510197956990731d8a7f6aa71aff414d596))
+* **gux-link-beta:** add underline to in table link states ([b61a668](https://github.com/MyPureCloud/genesys-webcomponents/commit/b61a668ea5b49afece29544989375a0f6683cd8b))
+* **gux-link-beta:** remove disabled state ([17de01e](https://github.com/MyPureCloud/genesys-webcomponents/commit/17de01e615a159c026a5842a3d4e949692266413))
+* **gux-link-beta:** update snapshot ([c1fb1d5](https://github.com/MyPureCloud/genesys-webcomponents/commit/c1fb1d55e1c735878ea24467a81cc014194f3833))
+* **gux-link-beta:** update snapshot ([e90ed36](https://github.com/MyPureCloud/genesys-webcomponents/commit/e90ed36d216af44bf834fad13017942622e0f96a))
+* **typography:** add anchor styling to typography and add examples ([ef7de00](https://github.com/MyPureCloud/genesys-webcomponents/commit/ef7de005276637d95254494ccdba41538c9665a5))
+
+### [3.0.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.4...v3.0.5) (2022-06-01)
+
+
+### Bug Fixes
+
+* **calendar:** addition of 1 hour to day to facilitate daylight saving hours ([05042ab](https://github.com/MyPureCloud/genesys-webcomponents/commit/05042ab904a7c0c72704ac2cf17e9d725a8471dc))
+
+### [3.0.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.3...v3.0.4) (2022-06-01)
+
+### [3.0.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.2...v3.0.3) (2022-06-01)
+
+### [3.0.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.1...v3.0.2) (2022-06-01)
+
+
+### Bug Fixes
+
+* **table:** applied currentTarget property to event object to retrieve parent element ([d0cd4f7](https://github.com/MyPureCloud/genesys-webcomponents/commit/d0cd4f72e37e32d8a8bef455aba4a4029b9bedf7))
+
+### [3.0.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.0...v3.0.1) (2022-05-25)
+
+## [3.0.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.0.0-alpha.72...v3.0.0) (2022-05-25)
+
+
+### Features
+
+* **icon:** added shield-lock icon ([20ac56c](https://github.com/MyPureCloud/genesys-webcomponents/commit/20ac56c3cb567ca67f6dd501325023d8b66ae04f))
+
+
+### Bug Fixes
+
+* **doc:** added migration info ([0831155](https://github.com/MyPureCloud/genesys-webcomponents/commit/0831155cff7263c1563f8831d59f36fe784f5639))
+* **pagination:** fixed focus style of button list ([9aaebf9](https://github.com/MyPureCloud/genesys-webcomponents/commit/9aaebf9cdb1472c2fbe18d40185e5fc1497ef818))
+* **pr-comment:** addressed PR comment ([7552845](https://github.com/MyPureCloud/genesys-webcomponents/commit/75528451600e3d0b06ef24c098965133181b000f))
+
+## [3.0.0-alpha.72](https://inindca///compare/v3.0.0-alpha.71...v3.0.0-alpha.72) (2022-05-11)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** fix stacking context bug ([078d4e0](https://inindca///commit/078d4e0cad431197a96554da4e280038187a3065))
+
+## [3.0.0-alpha.71](https://inindca///compare/v3.0.0-alpha.70...v3.0.0-alpha.71) (2022-05-10)
+
+
+### Features
+
+* **flyout-menu:** enabled shadowDOM ([4125b5c](https://inindca///commit/4125b5c76f6213ab2befce705a1faff355e24826))
+
+
+### Bug Fixes
+
+* **table:** if cursor is in resize state then dont perform sorting action onclick ([47cf913](https://inindca///commit/47cf9139faf6d3012a28a5978ed5d2f285af0aea))
+* **translations:** added missing translation files ([af8fb0c](https://inindca///commit/af8fb0c280db5b57f0967e5ae13b47e64a2e7c9d))
+
+## [3.0.0-alpha.70](https://inindca///compare/v3.0.0-alpha.69...v3.0.0-alpha.70) (2022-05-09)
+
+
+### Features
+
+* **dropdown:** moved new dropdown component to stable ([87a8729](https://inindca///commit/87a87297d64d7913fb9d1e836447c1c591958e22))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comments ([8f9fc9b](https://inindca///commit/8f9fc9bab0963e56cb52f7e26c1b144a4ccfc7dc))
+
+## [3.0.0-alpha.69](https://inindca///compare/v3.0.0-alpha.68...v3.0.0-alpha.69) (2022-05-06)
+
+
+### Features
+
+* **gux-form-field:** moved gux-form-field to legacy ([e8abf31](https://inindca///commit/e8abf31f34f734820b2685e5ac115d324da0cfa9))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([a57f17e](https://inindca///commit/a57f17e4b847b858a32a245712b622f9a511aef4))
+
+## [3.0.0-alpha.68](https://inindca///compare/v3.0.0-alpha.67...v3.0.0-alpha.68) (2022-05-05)
+
+
+### Features
+
+* **form-field-v2:** moved components to stable ([333564a](https://inindca///commit/333564a6bd840802d333992c16923127003c4f30))
+
+
+### Bug Fixes
+
+* **gux-popover:** fix z-index for Safari stacking context bug ([24eb8cf](https://inindca///commit/24eb8cf08253384e98b918232890b1bda8b7f4c5))
+
+## [3.0.0-alpha.67](https://inindca///compare/v3.0.0-alpha.66...v3.0.0-alpha.67) (2022-05-04)
+
+
+### Features
+
+* **button-multi:** move component folder to stable ([ea04d6c](https://inindca///commit/ea04d6ca07ff74c92e26ffaa7a88f664471a48e3))
+* **gux-tabs-advanced:** add gux-list to gux-tabs-advanced ([80c1eaa](https://inindca///commit/80c1eaa14a172dae6e623cbf254a53296fcaf896))
+
+
+### Bug Fixes
+
+* **datepicker:** implemented popper js within datepicker component ([ccbb67f](https://inindca///commit/ccbb67f22607441db7a6ebf5973472e5e7148f97))
+* **gux-tabs:** fix gux-tabs and gux-tabs-advanced scroll button bug ([5169126](https://inindca///commit/5169126e91993588807f7ca0765102bf3b619107))
+* **typo:** fixed icon name typo ([28b231e](https://inindca///commit/28b231eef8bbae936076b115358f4d81ea11055b))
+
+## [3.0.0-alpha.66](https://inindca///compare/v3.0.0-alpha.65...v3.0.0-alpha.66) (2022-05-03)
+
+
+### Features
+
+* **accordion:** option to only have one section open at a time added ([e9c348b](https://inindca///commit/e9c348b192b8a77a162161a8e75314ae212e3e63))
+* **list:** added updated list component ([6604de4](https://inindca///commit/6604de4994196f58271d2e2429ff6f5fc3068fc2))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([6a8df16](https://inindca///commit/6a8df16a260086a24f993390b3b6a0493014694b))
+
 ## [3.0.0-alpha.65](https://inindca///compare/v3.0.0-alpha.64...v3.0.0-alpha.65) (2022-04-29)
 
 

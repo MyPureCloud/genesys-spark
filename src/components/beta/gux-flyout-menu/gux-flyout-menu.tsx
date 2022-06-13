@@ -20,13 +20,13 @@ import {
 
 @Component({
   styleUrl: 'gux-flyout-menu.less',
-  tag: 'gux-flyout-menu-beta'
+  tag: 'gux-flyout-menu-beta',
+  shadow: true
 })
 export class GuxFlyoutMenu {
   private hideDelayTimeout: NodeJS.Timer;
   private popperInstance: Instance;
   private targetElement: HTMLSpanElement;
-  private menuElement: HTMLDivElement;
   private menuContentElement: HTMLDivElement;
 
   @Element()
@@ -130,23 +130,27 @@ export class GuxFlyoutMenu {
   }
 
   private runPopper(): void {
-    this.popperInstance = createPopper(this.targetElement, this.menuElement, {
-      modifiers: [
-        {
-          name: 'offset',
-          options: {
-            offset: [0, 16]
+    this.popperInstance = createPopper(
+      this.targetElement,
+      document.querySelector('gux-menu'),
+      {
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, 16]
+            }
+          },
+          {
+            name: 'arrow',
+            options: {
+              padding: 16 // 16px from the edges of the popper
+            }
           }
-        },
-        {
-          name: 'arrow',
-          options: {
-            padding: 16 // 16px from the edges of the popper
-          }
-        }
-      ],
-      placement: 'bottom-start'
-    });
+        ],
+        placement: 'bottom-start'
+      }
+    );
   }
 
   private destroyPopper(): void {
@@ -161,7 +165,7 @@ export class GuxFlyoutMenu {
       return;
     }
 
-    const menu = this.menuContentElement.querySelector('gux-menu');
+    const menu = this.root.querySelector('gux-menu');
     const menuItems = Array.from(menu.children);
     const nextFocusableElement = menuItems[0] as HTMLGuxMenuItemElement;
 
@@ -182,28 +186,18 @@ export class GuxFlyoutMenu {
 
   render(): JSX.Element {
     return (
-      <Host
-        tabIndex={0}
-        aria-haspopup="true"
-        aria-expanded={this.isShown.toString()}
-      >
+      <Host tabIndex={0} aria-haspopup="true">
         <span ref={el => (this.targetElement = el)}>
           <slot name="target" />
         </span>
         <div
-          ref={el => (this.menuElement = el)}
           class={{
-            'gux-flyout-menu-wrapper': true,
+            'gux-flyout-menu-content': true,
             'gux-shown': this.isShown
           }}
+          ref={el => (this.menuContentElement = el)}
         >
-          <div
-            class="gux-flyout-menu-content"
-            ref={el => (this.menuContentElement = el)}
-          >
-            <slot name="menu" />
-          </div>
-          <div class="gux-arrow" data-popper-arrow />
+          <slot name="menu" />
         </div>
       </Host>
     ) as JSX.Element;
