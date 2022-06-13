@@ -1,0 +1,10 @@
+{
+  "neutral": "badge med etiket: {label}, farve: neutral",
+  "neutral-bold": "badge med etiket: {label}, farve: neutral fed",
+  "green": "badge med etiket: {label}, farve: grøn",
+  "green-bold": "badge med etiket: {label}, farve: grøn fed",
+  "yellow": "badge med etiket: {label}, farve: gul",
+  "yellow-bold": "badge med etiket: {label}, farve: gul fed",
+  "red": "badge med etiket: {label}, farve: rød",
+  "red-bold": "badge med etiket: {label}, farve: rød fed"
+}

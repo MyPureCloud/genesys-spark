@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "rootDir": "./src/components/stencil-generated",
+    "jsxFactory": "React.createElement",
+    "outDir": "dist",
+    "paths": {
+      "genesys-spark-components": ["../dist/types"]
+    }
+  },
+  "include": ["src/components/stencil-generated"]
+}

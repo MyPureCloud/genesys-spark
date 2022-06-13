@@ -12,12 +12,12 @@ exports[`gux-advanced-dropdown should render 1`] = `
       </div>
       <div class="gux-advanced-dropdown-menu">
         <div class="gux-dropdown-menu-container">
-          <label class="gux-search-label" htmlfor="gux-advanced-dropdown-search-i">
-            Search
-          </label>
-          <gux-input-search>
-            <input id="gux-advanced-dropdown-search-i" type="search">
-          </gux-input-search>
+          <gux-form-field-search label-position="screenreader">
+            <label slot="label">
+              Search
+            </label>
+            <input slot="input" type="search">
+          </gux-form-field-search>
           <div class="gux-dropdown-options" style="max-height: 320px;">
             <slot></slot>
           </div>

@@ -31,12 +31,6 @@ export class GuxTab {
   @Prop()
   guxDisabled: boolean = false;
 
-  /**
-   * Specifies if the tab title is just an icon
-   */
-  @Prop()
-  iconOnly: boolean = false;
-
   @State()
   active: boolean = false;
 
@@ -49,11 +43,13 @@ export class GuxTab {
 
   @Listen('focusin')
   onFocusin() {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     void this.tooltipTitleElement.setShowTooltip();
   }
 
   @Listen('focusout')
   onFocusout() {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     void this.tooltipTitleElement.setHideTooltip();
   }
 

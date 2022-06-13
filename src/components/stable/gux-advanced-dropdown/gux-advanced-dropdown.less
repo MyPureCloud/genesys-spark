@@ -111,12 +111,17 @@ div.gux-dropdown {
     .gux-shadow-20();
 
     .gux-dropdown-menu-container {
-      .gux-search-label {
-        .gux-sr-only();
-      }
-
-      gux-input-search {
+      gux-form-field-search {
         margin: 8px 16px;
+
+        input {
+          &::-webkit-search-cancel-button,
+          &::-webkit-search-results-button,
+          &::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+          }
+        }
       }
     }
 

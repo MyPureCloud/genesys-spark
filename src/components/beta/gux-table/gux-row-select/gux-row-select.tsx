@@ -41,12 +41,16 @@ export class GuxRowSelect {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.root, tableResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      tableResources,
+      'gux-table'
+    );
   }
 
   render(): JSX.Element {
     return (
-      <gux-form-field>
+      <gux-form-field-checkbox>
         <input
           slot="input"
           id={this.id}
@@ -57,7 +61,7 @@ export class GuxRowSelect {
           &#8203;
           <span class="gux-label-text">{this.i18n('selectTableRow')}</span>
         </label>
-      </gux-form-field>
+      </gux-form-field-checkbox>
     ) as JSX.Element;
   }
 }

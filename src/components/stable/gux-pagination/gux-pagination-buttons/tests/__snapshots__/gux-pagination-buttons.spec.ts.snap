@@ -20,12 +20,12 @@ exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = 
         Page
       </div>
       <div class="gux-pagination-buttons-input">
-        <gux-input-text-like>
-          <!---->
-          <div class="gux-input-container">
-            <input aria-label="Page 0 of 0" slot="input" value="0">
-          </div>
-        </gux-input-text-like>
+        <gux-form-field-text-like label-position="screenreader">
+          <label slot="label">
+            Page 0 of 0
+          </label>
+          <input slot="input" type="text" value="0">
+        </gux-form-field-text-like>
       </div>
       <div>
         of 0
@@ -67,12 +67,12 @@ exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = 
         Page
       </div>
       <div class="gux-pagination-buttons-input">
-        <gux-input-text-like>
-          <!---->
-          <div class="gux-input-container">
-            <input aria-label="Page 1 of 10" slot="input" value="1">
-          </div>
-        </gux-input-text-like>
+        <gux-form-field-text-like label-position="screenreader">
+          <label slot="label">
+            Page 1 of 10
+          </label>
+          <input slot="input" type="text" value="1">
+        </gux-form-field-text-like>
       </div>
       <div>
         of 10
@@ -114,12 +114,12 @@ exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = 
         Page
       </div>
       <div class="gux-pagination-buttons-input">
-        <gux-input-text-like>
-          <!---->
-          <div class="gux-input-container">
-            <input aria-label="Page 5 of 10" slot="input" value="5">
-          </div>
-        </gux-input-text-like>
+        <gux-form-field-text-like label-position="screenreader">
+          <label slot="label">
+            Page 5 of 10
+          </label>
+          <input slot="input" type="text" value="5">
+        </gux-form-field-text-like>
       </div>
       <div>
         of 10
@@ -285,34 +285,34 @@ exports[`gux-pagination-item-counts #render should render as expected (8) 1`] = 
       </gux-button-slot-beta>
     </div>
     <div class="gux-pagination-buttons-list-container">
-      <button class="gux-pagination-buttons-list-current">
+      <button class="gux-current gux-pagination-buttons-list-button">
         1
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         2
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         3
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         4
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         5
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         6
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         7
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         8
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         9
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         10
       </button>
     </div>
@@ -348,34 +348,34 @@ exports[`gux-pagination-item-counts #render should render as expected (9) 1`] = 
       </gux-button-slot-beta>
     </div>
     <div class="gux-pagination-buttons-list-container">
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         1
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         2
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         3
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         4
       </button>
-      <button class="gux-pagination-buttons-list-current">
+      <button class="gux-current gux-pagination-buttons-list-button">
         5
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         6
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         7
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         8
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         9
       </button>
-      <button class="gux-pagination-buttons-list-target">
+      <button class="gux-pagination-buttons-list-button gux-target">
         10
       </button>
     </div>

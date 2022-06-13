@@ -1,0 +1,10 @@
+{
+  "neutral": "odznak s popiskem: {label}, barva: neutrální",
+  "neutral-bold": "odznak s popiskem: {label}, barva: neutrální sytá",
+  "green": "odznak s popiskem: {label}, barva: zelená",
+  "green-bold": "odznak s popiskem: {label}, barva: sytě zelená",
+  "yellow": "odznak s popiskem: {label}, barva: žlutá",
+  "yellow-bold": "odznak s popiskem: {label}, barva: sytě žlutá",
+  "red": "odznak s popiskem: {label}, barva: červená",
+  "red-bold": "odznak s popiskem: {label}, barva: sytě červená"
+}

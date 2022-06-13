@@ -1,3 +1,5 @@
 {
-  "remove-tag": "Remove tag"
+  "tag": "وضع علامة مع التسمية: {label}",
+  "tag-disabled": "تعطيل العلامة مع التسمية: {label}",
+  "remove-tag": "إزالة علامة مع التسمية: {label}"
 }

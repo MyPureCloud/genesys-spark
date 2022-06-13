@@ -16,7 +16,7 @@
 
 ### Used by
 
- - [gux-form-field](../../stable/gux-form-field)
+ - [gux-form-field-legacy](../../legacy/gux-form-field-legacy)
  - [gux-toggle](../../stable/gux-toggle)
 
 ### Depends on
@@ -27,7 +27,7 @@
 ```mermaid
 graph TD;
   gux-error-message-beta --> gux-icon
-  gux-form-field --> gux-error-message-beta
+  gux-form-field-legacy --> gux-error-message-beta
   gux-toggle --> gux-error-message-beta
   style gux-error-message-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

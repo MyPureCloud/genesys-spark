@@ -1,248 +1,116 @@
 @Library('pipeline-library')
-import com.genesys.jenkins.Service
 
-def notifications = null
-String[] mailingList = [
-  "Matthew.Cheely@genesys.com",
-  "Daragh.King@genesys.com"
-]
-
-
-def isMainBranch() {
-  return env.SHORT_BRANCH.equals('main') || env.SHORT_BRANCH.equals('master');
+def isMainBranch = {
+    return env.BRANCH_NAME.equals('main')
 }
 
-def isActiveReleaseBranch() {
-  return env.SHORT_BRANCH.equals('maintenance/v2');
+def isMaintenanceReleaseBranch = {
+    return env.BRANCH_NAME.startsWith('maintenance/')
 }
 
-def isMaintenanceReleaseBranch() {
-  return env.SHORT_BRANCH.startsWith('maintenance/');
+def isFeatureBranch = {
+    return env.BRANCH_NAME.startsWith('feature/')
 }
 
-def isFeatureBranch() {
-  return env.SHORT_BRANCH.startsWith('feature/');
+def isReleaseBranch = {
+    return isMainBranch() || isMaintenanceReleaseBranch()
 }
 
-def isReleaseBranch() {
-  return isMainBranch() || isActiveReleaseBranch() || isMaintenanceReleaseBranch();
+def isPublicBranch = {
+    isReleaseBranch() || isFeatureBranch()
 }
 
-
-def isPublicBranch() {
-  isReleaseBranch() || isFeatureBranch();
-}
-
-def uploadVersionOverride() {
-    if (isFeatureBranch()) {
-        return "--version ${env.SHORT_BRANCH}"
-    } else {
-        return ""
+webappPipeline {
+    projectName = 'spark-components'
+    team = 'Core UI'
+    mailer = 'CoreUI@genesys.com'
+    nodeVersion = '14.x'
+    testJob = 'no-tests'
+    deployConfig = [:]
+    manifest = customManifest('./dist') {
+        sh('./scripts/generate-manifest')
+        readJSON(file: 'library-manifest.json')
     }
-}
-
-pipeline {
-  agent { label 'dev_mesos_v2' }
-  options {
-    quietPeriod(480)
-    disableConcurrentBuilds()
-  }
-
-  environment {
-    NPM_UTIL_PATH = "npm-utils"
-    REPO_DIR = "repo"
-    SHORT_BRANCH = env.GIT_BRANCH.replaceFirst(/^origin\//, '');
-  }
-
-  tools {
-    nodejs "NodeJS 14.16.1"
-  }
-
-  stages {
-    stage('Import notifications lib') {
-      steps {
-        script {
-          // clone pipelines repo
-          dir('pipelines') {
-            git branch: 'master',
-                url: 'git@bitbucket.org:inindca/pipeline-library.git',
-                changelog: false
-
-            notifications = load 'src/com/genesys/jenkins/Notifications.groovy'
-          }
+    buildType = {
+        if (isReleaseBranch()) {
+            return 'MAINLINE'
+        } else if (isFeatureBranch()) {
+            return 'FEATURE'
+        } else {
+            return 'CI'
         }
-      }
     }
-
-    stage('Checkout') {
-      steps {
-        deleteDir()
-        dir(env.REPO_DIR) {
-          checkout scm
-          // Make a local branch so we can work with history and push (there's probably a better way to do this)
-          sh "git checkout -b ${env.SHORT_BRANCH}"
+    checkoutStep = {
+        checkout(scm)
+        sh("git checkout ${env.BRANCH_NAME}")
+        // Make sure we have tags, which are required for version bumps
+        sshagent(credentials: [constants.credentials.github.inin_dev_evangelists]) {
+          sh('git fetch --tags')
         }
-      }
     }
+    ciTests = {
+        sh('npm ci')
+        sh('stencil build') // Required for lint to pass
+        sh('''
+          npm run lint
+          npm run test.ci.spec
+        ''')
 
-
-    stage('Avoid Build Loop') {
-      steps {
-        script {
-          dir(env.REPO_DIR) {
-            def lastCommit = sh(script: 'git log -n 1 --format=%s', returnStdout: true).trim()
-            if (lastCommit.startsWith('chore(release)')) {
-              currentBuild.description = 'Skipped'
-              currentBuild.result = 'ABORTED'
-              error('Last commit was a release, exiting build process.')
+        // Run in CI step so we only run once
+        // (builds happen twice, legacy and FedRAMP)
+        if (isReleaseBranch()) {
+            sh('npm run release')
+        }
+    }
+    buildStep = { assetPrefix ->
+        sh("""
+          export CDN_URL=${assetPrefix}
+          npm run build
+        """)
+    }
+    onSuccess = {
+        if (isReleaseBranch()) {
+            stage('NPM Publish') {
+                withCredentials([
+              string(credentialsId: constants.credentials.npm,  variable: 'NPM_TOKEN')
+            ]) {
+                    sh('''
+                  echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./.npmrc
+                  echo ".npmrc" >> .npmignore
+                  npm publish
+                ''')
             }
-          }
-        }
-      }
-    }
+                def publishedVersion = sh(script: 'node -e "console.log(require(\'./package.json\').version)"', returnStdout: true).trim()
+                currentBuild.description = publishedVersion
 
-    stage('Prep') {
-      steps {
-        sh "git clone --single-branch -b master --depth=1 git@bitbucket.org:inindca/npm-utils.git ${env.NPM_UTIL_PATH}"
-        dir(env.REPO_DIR) {
-          sh "${env.WORKSPACE}/${env.NPM_UTIL_PATH}/scripts/jenkins-create-npmrc.sh"
-          sh "cp .npmrc docs/.npmrc"
-          sh "npm ci"
-          sh "npm i --no-save @purecloud/web-app-deploy@6.0"
-          sh "npm run stencil"
-        }
-      }
-    }
-
-    stage('Check') {
-      steps {
-        dir(env.REPO_DIR) {
-          sh "npm run lint"
-          sh "npm run test.ci.spec"
-        }
-      }
-    }
-
-    stage('Bump Version') {
-      when {
-        expression { isReleaseBranch() }
-      }
-      steps {
-        dir(env.REPO_DIR) {
-          script {
-            sh "npm run release"
-          }
-        }
-      }
-    }
-
-    stage('Build') {
-      steps {
-        dir(env.REPO_DIR) {
-          // Generate manifest file with deployment metadata
-          sh './scripts/generate-manifest'
-          // Generate the CDN_URL for use in the docs and build everything.
-          sh """
-            export DOCS_CDN_URL=\$(npx cdn ${uploadVersionOverride()} --ecosystem pc --manifest docs-manifest.json)
-            export CDN_URL=\$(npx cdn ${uploadVersionOverride()} --ecosystem pc --manifest library-manifest.json)
-
-            npm run build
-          """
-          // Re-generate manifest file after building docs - required to find *.html in docs
-          sh './scripts/generate-manifest'
-        }
-      }
-    }
-
-    stage('Upload Assets') {
-      when {
-        expression { isPublicBranch() }
-      }
-      steps {
-        dir(env.REPO_DIR) {
-          sh "echo Uploading static assets!"
-          sh """
-             npx upload \
-                ${uploadVersionOverride()} \
-                --ecosystem pc \
-                --manifest library-manifest.json \
-                --source-dir ./dist/genesys-webcomponents
-          """
-        }
-      }
-    }
-
-
-    stage('Publish Library') {
-      when {
-        expression { isReleaseBranch()  }
-      }
-      steps {
-        dir(env.REPO_DIR) {
-          script {
-            sh "npm publish --tag alpha"
-            sshagent(credentials: ['3aa16916-868b-4290-a9ee-b1a05343667e']) {
-              sh "git push --follow-tags -u origin ${env.SHORT_BRANCH}"
+                // Compile react components to JS, match version to parent lib, publish
+                sh """
+                  cd common-webcomponents-react
+                  npm install --production --legacy-peer-deps --no-progress &&
+                    npm run build &&
+                    npm version ${publishedVersion} &&
+                    npm publish
+                  # We've modified the package.json / package-lock.json version but don't want to commit them (version left as empty in checked-in version)
+                  # Clear those changes so we aren't causing issues with uncommited changes downstream
+                  git checkout -- package.json package-lock.json
+                """
             }
-          }
-          script {
-            publishedVersion = sh(script: 'node -e "console.log(require(\'./package.json\').version)"', returnStdout: true).trim()
-            currentBuild.description = publishedVersion
-          }
+
+            stage('Push Changes') {
+                sshagent(credentials: [constants.credentials.github.inin_dev_evangelists]) {
+                    sh "git push --follow-tags -u origin ${env.BRANCH_NAME}"
+                }
+            }
         }
-      }
-    }
 
-
-    stage('Upload Docs') {
-      when {
-        expression { isPublicBranch() }
-      }
-      steps {
-        sh "echo Uploading release!"
-        dir (env.REPO_DIR) {
-          sh "npm run generate-versions-file"
-          sh """
-             npx upload \
-                ${uploadVersionOverride()} \
-                --ecosystem pc \
-                --manifest docs-manifest.json \
-                --source-dir ./docs/dist
-          """
+        stage('Run Docs Build') {
+            if (isPublicBranch()) {
+                build(job: 'spark-component-docs',
+                  parameters: [string(name: 'BRANCH_NAME', value: env.BRANCH_NAME)],
+                  propagate: false,
+                  wait: false
+            )
+            }
         }
-      }
     }
-
-
-    stage('Deploy Docs') {
-      when {
-        expression { isActiveReleaseBranch() }
-      }
-      steps {
-        dir (env.REPO_DIR) {
-          sh '''
-             npx deploy \
-                --ecosystem pc \
-                --manifest docs-manifest.json \
-                --dest-env dev
-          '''
-        }
-      }
-    }
-  }
-
-  post {
-    fixed {
-      script {
-        notifications.emailResults(mailingList.join(" "))
-      }
-    }
-
-    failure {
-      script {
-        notifications.emailResults(mailingList.join(" "))
-      }
-    }
-  }
-
 }

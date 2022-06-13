@@ -1,0 +1,9 @@
+{
+  "page": "Pagina",
+  "totalPages": " van {totalPages, number}",
+  "first": "Voornaam",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "last": "Achternaam",
+  "pageInputLabel": "Pagina {currentPage, number} van {totalPages, number}"
+}

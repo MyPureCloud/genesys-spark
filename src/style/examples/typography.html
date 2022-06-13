@@ -28,3 +28,69 @@
   This is useful when the logical heading level, which is important for
   accessibility, is different than the desired visual style
 </p>
+
+<hr />
+
+<h2>Anchor Styling</h2>
+
+<h3>Default</h3>
+<a href="#">Default link</a>
+
+<h3>With Icon</h3>
+<a href="#"
+  ><gux-icon icon-name="external-link" decorative></gux-icon>Link with an
+  icon</a
+>
+
+<h3>In Text</h3>
+<p>
+  Maecenas accumsan nulla et maximus tempor. Morbi consectetur accumsan
+  lobortis. Duis bibendum fermentum lorem. Proin at facilisis dolor.
+  <a href="#">Example link</a>
+  Proin non sem tempor ex elementum porttitor at non elit. Nulla faucibus,
+  libero sed porta eleifend, nisl mauris ultrices augue, ut interdum massa dui
+  eu metus. Sed porta blandit dolor non eleifend.
+</p>
+
+<p>
+  Maecenas accumsan nulla et maximus tempor. Morbi consectetur accumsan
+  lobortis. Duis bibendum fermentum lorem. Proin at facilisis dolor.
+  <a href="#"
+    ><gux-icon icon-name="external-link" decorative></gux-icon>Link with an
+    icon</a
+  >
+  Proin non sem tempor ex elementum porttitor at non elit. Nulla faucibus,
+  libero sed porta eleifend, nisl mauris ultrices augue, ut interdum massa dui
+  eu metus. Sed porta blandit dolor non eleifend.
+</p>
+
+<h2>In Table</h2>
+<gux-table-beta>
+  <table slot="data">
+    <tbody>
+      <tr>
+        <td><a href="#">Link</a></td>
+      </tr>
+      <tr>
+        <td>Example abc</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://spark.genesys.com/" target="_blank"
+            ><gux-icon icon-name="external-link" decorative></gux-icon>External
+            link</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table-beta>
+
+<style>
+  .table,
+  .tr,
+  .td {
+    padding: 5px;
+    border: 1px solid black;
+  }
+</style>
