@@ -86,6 +86,7 @@ webappPipeline {
                     // Compile react components to JS, match version to parent lib, publish
                     sh """
                       cd common-webcomponents-react
+                      echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./.npmrc
                       npm install --production --legacy-peer-deps --no-progress &&
                         npm run build &&
                         npm version ${publishedVersion} &&
