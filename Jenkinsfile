@@ -72,28 +72,29 @@ webappPipeline {
         if (isReleaseBranch()) {
             stage('NPM Publish') {
                 withCredentials([
-              string(credentialsId: constants.credentials.npm,  variable: 'NPM_TOKEN')
-            ]) {
+                  string(credentialsId: constants.credentials.npm,  variable: 'NPM_TOKEN')
+                ]) {
                     sh('''
-                  echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./.npmrc
-                  echo ".npmrc" >> .npmignore
-                  npm publish
-                ''')
-            }
-                def publishedVersion = sh(script: 'node -e "console.log(require(\'./package.json\').version)"', returnStdout: true).trim()
-                currentBuild.description = publishedVersion
+                      echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./.npmrc
+                      echo ".npmrc" >> .npmignore
+                      npm publish
+                    ''')
 
-                // Compile react components to JS, match version to parent lib, publish
-                sh """
-                  cd common-webcomponents-react
-                  npm install --production --legacy-peer-deps --no-progress &&
-                    npm run build &&
-                    npm version ${publishedVersion} &&
-                    npm publish
-                  # We've modified the package.json / package-lock.json version but don't want to commit them (version left as empty in checked-in version)
-                  # Clear those changes so we aren't causing issues with uncommited changes downstream
-                  git checkout -- package.json package-lock.json
-                """
+                    def publishedVersion = sh(script: 'node -e "console.log(require(\'./package.json\').version)"', returnStdout: true).trim()
+                    currentBuild.description = publishedVersion
+
+                    // Compile react components to JS, match version to parent lib, publish
+                    sh """
+                      cd common-webcomponents-react
+                      npm install --production --legacy-peer-deps --no-progress &&
+                        npm run build &&
+                        npm version ${publishedVersion} &&
+                        npm publish
+                      # We've modified the package.json / package-lock.json version but don't want to commit them (version left as empty in checked-in version)
+                      # Clear those changes so we aren't causing issues with uncommited changes downstream
+                      git checkout -- package.json package-lock.json
+                    """
+                }
             }
 
             stage('Push Changes') {
