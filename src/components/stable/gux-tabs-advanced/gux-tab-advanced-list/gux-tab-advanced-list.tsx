@@ -562,6 +562,8 @@ export class GuxTabAdvancedList {
           title={
             this.disableAddTabButton
               ? this.i18n('disableNewTab')
+              : this.root.querySelector('[slot="add-tab"]')
+              ? this.root.querySelector('[slot="add-tab"]').textContent.trim()
               : this.i18n('createNewTab')
           }
           class="add-tab-button"
