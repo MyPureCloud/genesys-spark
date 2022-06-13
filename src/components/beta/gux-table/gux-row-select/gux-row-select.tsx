@@ -27,6 +27,9 @@ export class GuxRowSelect {
   @Prop({ mutable: true })
   selected: boolean = false;
 
+  @Prop()
+  disabled: boolean;
+
   @Event()
   internalrowselectchange: EventEmitter;
 
@@ -56,6 +59,7 @@ export class GuxRowSelect {
           id={this.id}
           type="checkbox"
           checked={this.selected}
+          disabled={this.disabled}
         />
         <label slot="label" htmlFor={this.id}>
           &#8203;
