@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.1.2...v3.2.0) (2022-06-13)
+
+
+### Features
+
+* generate react bindings ([3e5f00f](https://github.com/MyPureCloud/genesys-webcomponents/commit/3e5f00f0ee6d5b11a464185a48c6669aac04f1c1))
+* **react-wrapper:** add script for linking the main package from the react-wrapper ([79fffc9](https://github.com/MyPureCloud/genesys-webcomponents/commit/79fffc9c5d68ed118e8692b1b08964e65b26aeda))
+* **react-wrapper:** update version to match main package ([599b1ec](https://github.com/MyPureCloud/genesys-webcomponents/commit/599b1ec69c6b4aba7c72fe71a451b2794a4181e7))
+
 ### [3.1.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.1.1...v3.1.2) (2022-06-08)
 
 ### [3.1.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.1.0...v3.1.1) (2022-06-03)
