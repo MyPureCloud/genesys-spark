@@ -287,8 +287,10 @@ export class GuxTable {
     const rowCheckboxes = this.rowCheckboxes;
 
     rowCheckboxes.forEach(rowBox => {
-      rowBox.selected = selectAllCheckbox.selected;
-      this.updateRowSelection(rowBox);
+      if (!rowBox.hasAttribute('disabled')) {
+        rowBox.selected = selectAllCheckbox.selected;
+        this.updateRowSelection(rowBox);
+      }
     });
 
     this.emitSelectionEvent();
