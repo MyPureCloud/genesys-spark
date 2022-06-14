@@ -312,4 +312,62 @@ describe('gux-table-beta', () => {
       selectedRowIds: ['person-id-2', 'person-id-4']
     });
   });
+
+  it('should return the disabled selected element even if the select all input has been unselected.', async () => {
+    const html = `<gux-table-beta object-table selectable-rows>
+    <table slot="data">
+      <thead>
+        <tr data-row-id="head">
+          <th><gux-all-row-select></gux-all-row-select></th>
+          <th data-column-name="first-name">First name</th>
+          <th data-column-name="last-name">Last name</th>
+          <th data-column-name="age" data-cell-numeric>Age</th>
+          <th data-column-name="action" data-cell-action>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-row-id="person-id-1">
+          <td><gux-row-select selected disabled></gux-row-select></td>
+          <td>John</td>
+          <td>Doe</td>
+          <td data-cell-numeric>25</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr data-row-id="person-id-2">
+          <td><gux-row-select></gux-row-select></td>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td data-cell-numeric>23</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr data-row-id="person-id-3">
+          <td><gux-row-select disabled></gux-row-select></td>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td data-cell-numeric>21</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+        <tr data-row-id="person-id-4">
+          <td><gux-row-select></gux-row-select></td>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td data-cell-numeric>23</td>
+          <td data-cell-action>Delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </gux-table-beta>`;
+
+    const page = await newE2EPage({ html });
+    const selectAllEvent = await page.spyOnEvent('guxselectionchanged');
+    const selectAllElement = await page.find('thead tr th gux-all-row-select');
+    const inputElement = await selectAllElement.find('input');
+    await inputElement.click();
+    await page.waitForChanges();
+    await inputElement.click();
+    await page.waitForChanges();
+    expect(selectAllEvent).toHaveReceivedEventDetail({
+      selectedRowIds: ['person-id-1']
+    });
+  });
 });
