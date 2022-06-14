@@ -256,7 +256,7 @@ describe('gux-table-beta', () => {
     });
   });
 
-  it('should return an object with two elements as two of the rows are disabled.', async () => {
+  it('should return two elements as two of the rows are disabled.', async () => {
     const html = `<gux-table-beta object-table selectable-rows>
     <table slot="data">
       <thead>
