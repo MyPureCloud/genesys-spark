@@ -3,8 +3,6 @@
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/spacing.less';
 
-@ghost-button-hover-fill: #f5f8ff;
-
 :host {
   display: inline-block;
   min-width: 32px;
@@ -148,7 +146,7 @@
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
     color: @gux-blue-50;
-    background-color: @ghost-button-hover-fill;
+    background-color: fade(@gux-blue-100, 33%);
   }
 
   ::slotted(input[type='button']:active:enabled),
