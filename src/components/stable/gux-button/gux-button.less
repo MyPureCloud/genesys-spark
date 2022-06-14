@@ -3,6 +3,8 @@
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/spacing.less';
 
+@ghost-button-hover-fill: #f5f8ff;
+
 :host {
   display: inline-block;
   min-width: 32px;
@@ -99,12 +101,12 @@ button {
 
     &:hover:enabled {
       color: @gux-blue-50;
-      background: none;
+      background-color: @ghost-button-hover-fill;
     }
 
     &:active:enabled {
-      color: @gux-blue-40;
-      background: none;
+      color: @gux-blue-50;
+      background-color: @gux-blue-100;
     }
   }
 
