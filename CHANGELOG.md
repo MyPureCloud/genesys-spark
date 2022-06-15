@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.3.1...v3.3.2) (2022-06-15)
+
+
+### Bug Fixes
+
+* **build:** fix assets url generation during build process ([efcdce9](https://github.com/MyPureCloud/genesys-webcomponents/commit/efcdce941da3e20ba0fec9458524be45cb94aac2))
+
 ### [3.3.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.3.0...v3.3.1) (2022-06-15)
 
 ## [3.3.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.1.2...v3.3.0) (2022-06-13)
