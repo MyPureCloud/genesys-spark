@@ -44,6 +44,10 @@ const html = `
       <gux-tab-advanced gux-disabled tab-id="1-3">
       Hello World 3
     </gux-tab-advanced>
+    <div slot="add-tab">
+      <gux-icon icon-name="file-preview" decorative></gux-icon>
+      Add View
+    </div>
     </gux-tab-advanced-list>
     <gux-tab-advanced-panel tab-id="1-1">
       <span>Tab content 1</span>

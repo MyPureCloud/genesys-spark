@@ -82,13 +82,17 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
           </div>
         </gux-tab-advanced>
       </div>
-      <div class="new-tab">
-        <button class="add-tab" title="Create New Tab">
-          <gux-icon decorative="" icon-name="add"></gux-icon>
-        </button>
-      </div>
       <div class="action-button-container">
         <div class="gux-scroll-button-container"></div>
+        <button class="add-tab-button" title="Add View">
+          <div slot="add-tab">
+            <gux-icon decorative="" icon-name="file-preview"></gux-icon>
+            Add View
+          </div>
+          <slot-fb hidden="" name="add-tab">
+            <gux-icon decorative="" icon-name="add"></gux-icon>
+          </slot-fb>
+        </button>
       </div>
     </div>
   </gux-tab-advanced-list>
