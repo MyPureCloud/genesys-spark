@@ -63,8 +63,16 @@ webappPipeline {
         }
     }
     buildStep = { assetPrefix ->
+        String cdnUrl = assetPrefix
+        // This is a bit of a kludge, but the build pipeline is intended for apps, which 
+        // can use relative URLs to load assets. Because the components are running inside
+        // apps, they have to load their assets from a full URL on the new UI hosting stack.
+        if (assetPrefix.startsWith('/')) {
+            cdnUrl = "https://app.mypurecloud.com${assetPrefix}genesys-webcomponents/"
+        }
+
         sh("""
-          export CDN_URL=${assetPrefix}
+          export CDN_URL=${cdnUrl}
           npm run build
         """)
     }
