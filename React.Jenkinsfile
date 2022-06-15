@@ -18,12 +18,21 @@ node(nodelabels.getCombinedExecutorLabelForEnv('dev')) {
 
             // Compile react components to JS, match version to parent lib, publish
             sh """
+                # Set up node with the provided version
+                source ./npm-utils/scripts/install-node.sh 14.16.1
+                
+                # install and build spark
+                npm ci
+                npm run build
+            
+                # Install and build react binding
                 cd common-webcomponents-react
+                # Set public npmjs registry with creds
                 echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./.npmrc
                 npm install --legacy-peer-deps --no-progress &&
                 npm run build &&
-                npm version ${publishedVersion}
-                # && npm publish
+                npm version ${publishedVersion} && 
+                npm publish
             """
         }
     }
