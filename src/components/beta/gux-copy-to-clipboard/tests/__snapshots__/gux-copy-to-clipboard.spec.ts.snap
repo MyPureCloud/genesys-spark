@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-copy-to-clipboard-beta #render should render copy to clipboard 1`] = `
+<gux-copy-to-clipboard-beta>
+  <mock:shadow-root>
+    <button class="gux-copy-to-clipboard-wrapper" title="Copy to clipboard">
+      <div class="gux-copy-content">
+        <slot name="content"></slot>
+        <gux-icon decorative="" icon-name="copy"></gux-icon>
+      </div>
+      <gux-tooltip placement="bottom-end">
+        Click to Copy
+      </gux-tooltip>
+    </button>
+  </mock:shadow-root>
+  <div slot="content">
+    Test
+  </div>
+</gux-copy-to-clipboard-beta>
+`;
