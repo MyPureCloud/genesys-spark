@@ -65,6 +65,12 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-unsafe-assignment': 'off', // 47
-    '@typescript-eslint/no-inferrable-types': 'off'
+    '@typescript-eslint/no-inferrable-types': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        varsIgnorePattern: '^h$'
+      }
+    ]
   }
 };
