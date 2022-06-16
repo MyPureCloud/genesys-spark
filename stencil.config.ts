@@ -76,5 +76,8 @@ export const config: Config = {
         }
       ]
     ]
+  },
+  extras: {
+    experimentalImportInjection: true
   }
 };
