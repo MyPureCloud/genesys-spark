@@ -146,11 +146,13 @@
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
     color: @gux-blue-50;
+    background-color: fade(@gux-blue-100, 33%);
   }
 
   ::slotted(input[type='button']:active:enabled),
   ::slotted(input[type='submit']:active:enabled),
   ::slotted(button:active:enabled) {
-    color: @gux-blue-40;
+    color: @gux-blue-50;
+    background-color: @gux-blue-100;
   }
 }
