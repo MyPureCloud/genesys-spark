@@ -5,7 +5,7 @@ import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '../../../usage-tracking';
 
-import { logError, logWarn } from '../../../utils/error/log-error';
+import { logError } from '../../../utils/error/log-error';
 
 import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
 
@@ -23,7 +23,6 @@ export class GuxDonutChart {
   root: HTMLElement;
 
   private visualizationSpec: VisualizationSpec;
-  private tooltipSpec: EmbedOptions;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
@@ -40,7 +39,8 @@ export class GuxDonutChart {
         type: 'nominal',
         scale: { range: VISUALIZATION_COLORS },
         legend: null
-      }
+      },
+      tooltip: { aggregate: 'count', type: 'quantitative' }
     },
     layer: [
       {
@@ -98,24 +98,6 @@ export class GuxDonutChart {
   labelField: string;
 
   @Prop()
-  progressive: boolean;
-
-  @Prop()
-  centerText: string;
-
-  @Prop()
-  centerSubText: string;
-
-  @Prop()
-  tooltipOptions: any;
-
-  @Prop()
-  useCustomColor: boolean;
-
-  @Prop()
-  customColorField: string;
-
-  @Prop()
   embedOptions: EmbedOptions;
 
   @Watch('chartData')
@@ -132,26 +114,18 @@ export class GuxDonutChart {
       chartData = { data: this.chartData };
     }
 
-    if (this.useCustomColor) {
-      const customColorField = this.customColorField;
-      if (!customColorField) {
-        logWarn(
-          'gux-chart-donut',
-          '[gux-chart-donut] requires custome-color-field-name'
-        );
-      } else {
-        this.baseChartSpec.encoding.color.scale = {
-          range: { field: customColorField }
-        };
-      }
-    }
-
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color.legend = true;
     }
 
     if (this.legendPosition) {
       this.baseChartSpec.config.legend.orient = this.legendPosition;
+    }
+
+    const colorFieldName = this.colorFieldName || DEFAULT_COLOR_FIELD_NAME;
+
+    if (colorFieldName) {
+      this.baseChartSpec.encoding.color.field = colorFieldName;
     }
 
     const legendTitle = this.legendTitle;
@@ -169,64 +143,14 @@ export class GuxDonutChart {
       innerRadius = outerRadius - DEFAULT_RING_WIDTH;
     }
 
-    if (this.progressive) {
-      this.baseChartSpec.layer = [
-        {
-          data: { values: [{ default: 'default', value: 100 }] },
-          mark: { type: 'arc', innerRadius },
-          encoding: {
-            theta: { field: 'value', type: 'quantitative' },
-            color: { value: '#EFF1F5', legend: null }
-          }
-        },
-        {
-          mark: { type: 'arc', outerRadius, innerRadius }
-        },
-        {
-          mark: { type: 'arc', innerRadius, stroke: '#fff' }
-        }
-      ];
-    } else {
-      this.baseChartSpec.layer = [
-        {
-          mark: { type: 'arc', outerRadius, innerRadius }
-        },
-        {
-          mark: { type: 'arc', innerRadius, stroke: '#fff' }
-        }
-      ];
-    }
-
-    const centerText = this.centerText;
-    if (centerText) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      this.baseChartSpec.layer.push({
-        data: { values: [{ centerText: centerText, value: 0 }] },
-        mark: { align: 'center', type: 'text', baseline: 'middle' },
-        encoding: {
-          text: { value: centerText },
-          size: { value: { expr: 'height * 0.1' } }
-        }
-      });
-    }
-
-    const centerSubText = this.centerSubText;
-    if (centerSubText) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      this.baseChartSpec.layer.push({
-        data: { values: [{ centerSubText: centerSubText, value: 0 }] },
-        mark: {
-          align: 'center',
-          type: 'text',
-          baseline: 'middle',
-          y: { expr: 'height/2 + 20' }
-        },
-        encoding: {
-          text: { value: centerSubText },
-          size: { value: { expr: 'height * 0.07' } }
-        }
-      });
-    }
+    this.baseChartSpec.layer = [
+      {
+        mark: { type: 'arc', outerRadius, innerRadius }
+      },
+      {
+        mark: { type: 'arc', innerRadius, stroke: '#fff' }
+      }
+    ];
 
     const labelRadius = this.labelRadius;
     const labelField = this.labelField || DEFAULT_LABEL_FIELD_NAME;
@@ -240,22 +164,7 @@ export class GuxDonutChart {
       });
     }
 
-    if (this.tooltipOptions) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      this.baseChartSpec.layer.push({
-        mark: { type: 'arc', innerRadius, tooltip: { content: 'data' } }
-      });
-      this.tooltipSpec = {
-        actions: false,
-        tooltip: this.tooltipOptions
-      };
-    } else {
-      this.baseChartSpec.encoding.tooltip = {
-        field: labelField,
-        aggregate: 'count',
-        type: 'quantitative'
-      };
-    }
+    this.baseChartSpec.encoding.tooltip.field = labelField;
 
     const spec = Object.assign(this.baseChartSpec, chartData);
     this.visualizationSpec = spec;
@@ -270,7 +179,6 @@ export class GuxDonutChart {
     return (
       <gux-visualization-beta
         visualizationSpec={this.visualizationSpec}
-        embedOptions={this.tooltipSpec}
       ></gux-visualization-beta>
     ) as JSX.Element;
   }
