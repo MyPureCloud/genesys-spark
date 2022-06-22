@@ -175,6 +175,7 @@
     "rules": {
       "no-descending-specificity": null,
       "no-duplicate-selectors": null,
+      "value-no-vendor-prefix": null,
       "property-no-vendor-prefix": null,
       "selector-type-no-unknown": [
         true,
