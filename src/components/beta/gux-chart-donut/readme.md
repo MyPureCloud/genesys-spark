@@ -9,6 +9,8 @@
 
 | Property         | Attribute          | Description                                                                                                   | Type                                                                                                               | Default     |
 | ---------------- | ------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------- |
+| `centerSubText`  | `center-sub-text`  |                                                                                                               | `string`                                                                                                           | `undefined` |
+| `centerText`     | `center-text`      |                                                                                                               | `string`                                                                                                           | `undefined` |
 | `chartData`      | --                 | Data to be rendered in the chart. Data field names must match the values you set in xFieldName and yFieldName | `{ [x: string]: any; }`                                                                                            | `undefined` |
 | `colorFieldName` | `color-field-name` |                                                                                                               | `string`                                                                                                           | `undefined` |
 | `embedOptions`   | --                 |                                                                                                               | `EmbedOptions<string, Renderers>`                                                                                  | `undefined` |
@@ -19,6 +21,8 @@
 | `legendPosition` | `legend-position`  |                                                                                                               | `"bottom" \| "bottom-left" \| "bottom-right" \| "left" \| "none" \| "right" \| "top" \| "top-left" \| "top-right"` | `'right'`   |
 | `legendTitle`    | `legend-title`     |                                                                                                               | `string`                                                                                                           | `undefined` |
 | `outerRadius`    | `outer-radius`     |                                                                                                               | `number`                                                                                                           | `undefined` |
+| `progressive`    | `progressive`      |                                                                                                               | `boolean`                                                                                                          | `undefined` |
+| `tooltipOptions` | `tooltip-options`  |                                                                                                               | `any`                                                                                                              | `undefined` |
 
 
 ## Dependencies
