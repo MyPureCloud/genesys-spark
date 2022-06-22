@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.4.2...v3.5.0) (2022-06-22)
+
+
+### Features
+
+* **row-select:** addition of disabled property and addition of disabled rows to example file ([6224b61](https://github.com/MyPureCloud/genesys-webcomponents/commit/6224b6132e5306a6132d8b689377396a6b5a8b3c))
+* **row-select:** addition of extra test for edge case ([b4d347c](https://github.com/MyPureCloud/genesys-webcomponents/commit/b4d347c5186d0689ed33508c5941884c5c735d24))
+* **row-select:** check if row-select has disabled attribute ([755cb10](https://github.com/MyPureCloud/genesys-webcomponents/commit/755cb100b333891eb0d22e17c8ab18fd0d2f53b4))
+* **row-select:** filter out disabled rows ([d37452d](https://github.com/MyPureCloud/genesys-webcomponents/commit/d37452d18cb9aecfb46fe0a6db21cd814573fbeb))
+
+
+### Bug Fixes
+
+* **config:** add experimentalImportInjection flag to fix lazy load issue with Vite bundler ([b33ccb6](https://github.com/MyPureCloud/genesys-webcomponents/commit/b33ccb616fb7e58b88418baff7a98e3b12cd798c))
+
 ### [3.4.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.4.1...v3.4.2) (2022-06-22)
 
 ### [3.4.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.4.0...v3.4.1) (2022-06-17)
