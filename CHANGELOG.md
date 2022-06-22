@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.4.1...v3.4.2) (2022-06-22)
+
+### [3.4.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.4.0...v3.4.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* **pr-comment:** use gux-blue-100 with fade for hover color ([99696e1](https://github.com/MyPureCloud/genesys-webcomponents/commit/99696e17729723e508bc2dcdf46379a44b7ba354))
+
 ## [3.4.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.3.2...v3.4.0) (2022-06-15)
 
 
