@@ -162,7 +162,8 @@ export class GuxDonutChart {
           mark: { type: 'arc', innerRadius },
           encoding: {
             theta: { field: 'value', type: 'quantitative' },
-            color: { value: '#EFF1F5', legend: null }
+            color: { value: '#E4E9EF' },
+            tooltip: null
           }
         },
         {
@@ -191,7 +192,7 @@ export class GuxDonutChart {
         mark: { align: 'center', type: 'text', baseline: 'middle' },
         encoding: {
           text: { value: centerText },
-          size: { value: { expr: 'height * 0.1' } }
+          size: { value: { expr: 'height * 0.09' } }
         }
       });
     }
@@ -209,7 +210,7 @@ export class GuxDonutChart {
         },
         encoding: {
           text: { value: centerSubText },
-          size: { value: { expr: 'height * 0.07' } }
+          size: { value: { expr: 'height * 0.06' } }
         }
       });
     }
