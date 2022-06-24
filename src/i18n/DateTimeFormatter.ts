@@ -1,9 +1,9 @@
 import locales from './locales.json';
 
 export class DateTimeFormatter {
-    locale: string;
+    locale: typeof locales[number];
 
-    constructor(locale: string) {
+    constructor(locale: typeof locales[number]) {
         if (locales.includes(locale)) {
             this.locale = locale;
         } else {
