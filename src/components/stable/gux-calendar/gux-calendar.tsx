@@ -149,6 +149,7 @@ export class GuxCalendar {
 
   getMonthLabel(index: number) {
     const month = new Date(this.previewValue.getTime());
+    month.setDate(1);
     month.setMonth(month.getMonth() + index);
     const monthName = month.toLocaleString(this.locale, { month: 'long' });
     return monthName.charAt(0).toUpperCase() + monthName.slice(1);
@@ -263,6 +264,7 @@ export class GuxCalendar {
 
   getMonthDays(index: number): IDateElement[][] {
     const month = new Date(this.previewValue.getTime());
+    month.setDate(1);
     month.setMonth(month.getMonth() + index);
     const monthIndex = month.getMonth();
     const year = month.getFullYear();
