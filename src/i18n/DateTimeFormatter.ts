@@ -14,7 +14,7 @@ export class DateTimeFormatter {
 
     formatDate(datetime: Date, format: string) : string {
         const options: any = { dateStyle: format };
-        return new Intl.DateTimeFormat(this.locale, {dateStyle: format }).format(datetime);
+        return new Intl.DateTimeFormat(this.locale, options).format(datetime);
     }
 
     formatTime(datetime: Date, format: string) : string {
