@@ -160,11 +160,11 @@ export class GuxDonutChart {
     if (this.progressive) {
       this.baseChartSpec.layer = [
         {
-          data: { values: [{ default: 'default', value: 100 }] },
+          data: { values: [{ progress: 'default', value: 100 }] },
           mark: { type: 'arc', innerRadius },
           encoding: {
             theta: { field: 'value', type: 'quantitative' },
-            color: { value: '#E4E9EF' },
+            color: { value: '#E4E9F0' },
             tooltip: null
           }
         },
@@ -194,7 +194,7 @@ export class GuxDonutChart {
         data: { values: [{ centerText: centerText, value: 0 }] },
         mark: { align: 'center', type: 'text', baseline: 'middle' },
         encoding: {
-          color: { value: '#33383D' },
+          color: {},
           text: { field: 'centerText' },
           size: { value: { expr: 'height * 0.09' } },
           tooltip: null
@@ -214,7 +214,7 @@ export class GuxDonutChart {
           y: { expr: 'height/2 + 20' }
         },
         encoding: {
-          color: { value: '#33383D' }, //vhrvk
+          color: {},
           text: { field: 'centerSubText' },
           size: { value: { expr: 'height * 0.06' } },
           tooltip: null
