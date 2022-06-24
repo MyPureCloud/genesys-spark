@@ -127,7 +127,7 @@ export class GuxDonutChart {
     }
 
     if (this.includeLegend) {
-      this.baseChartSpec.encoding.color.legend = true;
+      this.baseChartSpec.encoding.color.legend = {};
     }
 
     if (this.legendPosition) {
@@ -155,6 +155,8 @@ export class GuxDonutChart {
       innerRadius = outerRadius - DEFAULT_RING_WIDTH;
     }
 
+    let layerFiels = 1;
+
     if (this.progressive) {
       this.baseChartSpec.layer = [
         {
@@ -173,6 +175,7 @@ export class GuxDonutChart {
           mark: { type: 'arc', innerRadius, stroke: '#fff' }
         }
       ];
+      layerFiels = 2;
     } else {
       this.baseChartSpec.layer = [
         {
@@ -191,8 +194,10 @@ export class GuxDonutChart {
         data: { values: [{ centerText: centerText, value: 0 }] },
         mark: { align: 'center', type: 'text', baseline: 'middle' },
         encoding: {
-          text: { value: centerText },
-          size: { value: { expr: 'height * 0.09' } }
+          color: { value: '#33383D' },
+          text: { field: 'centerText' },
+          size: { value: { expr: 'height * 0.09' } },
+          tooltip: null
         }
       });
     }
@@ -209,8 +214,10 @@ export class GuxDonutChart {
           y: { expr: 'height/2 + 20' }
         },
         encoding: {
-          text: { value: centerSubText },
-          size: { value: { expr: 'height * 0.06' } }
+          color: { value: '#33383D' }, //vhrvk
+          text: { field: 'centerSubText' },
+          size: { value: { expr: 'height * 0.06' } },
+          tooltip: null
         }
       });
     }
@@ -229,7 +236,7 @@ export class GuxDonutChart {
 
     if (this.tooltipOptions) {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      this.baseChartSpec.layer[1].mark.tooltip = { content: 'data' };
+      this.baseChartSpec.layer[layerFiels].mark.tooltip = { content: 'data' };
       this.tooltipSpec = {
         actions: false,
         tooltip: this.tooltipOptions
