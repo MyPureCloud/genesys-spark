@@ -144,7 +144,7 @@ export class GuxDonutChart {
         this.baseChartSpec.encoding.color.legend.legendX = this.legendX;
       }
       if (this.legendY) {
-        this.baseChartSpec.encoding.color.legend.legendy = this.legendY;
+        this.baseChartSpec.encoding.color.legend.legendY = this.legendY;
       }
       if (this.legendFontSize) {
         this.baseChartSpec.encoding.color.legend.labelFontSize =
