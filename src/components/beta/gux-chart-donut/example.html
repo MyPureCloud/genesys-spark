@@ -16,6 +16,7 @@
   label-radius="110"
   label-field="value"
   include-legend="true"
+  legend-position="right"
   legend-title="Media Type"
   outer-radius="100"
 >
@@ -41,9 +42,16 @@
   id="chart-5"
   label-radius="110"
   label-field="value"
+  include-legend="true"
   outer-radius="80"
   inner-radius="68"
   progressive="true"
+  center-text="38%"
+  center-sub-text="Total Percentage"
+  legend-x="300"
+  legend-y="0"
+  legend-font-size="12"
+  legend-symbol-size="150"
 >
 </gux-chart-donut-beta>
 
@@ -55,7 +63,7 @@
   outer-radius="80"
   inner-radius="68"
   center-text="38%"
-  center-sub-text="Total Percentage"
+  center-sub-text="Total"
 >
 </gux-chart-donut-beta>
 
@@ -101,6 +109,7 @@
     chart3.chartData = chartData
     chart4.chartData = chartData
     chart5.chartData = chartData
+    chart5.tooltipOptions = tooltipOptions
     chart6.chartData = chartData
     chart7.chartData = chartData
     chart7.tooltipOptions = tooltipOptions

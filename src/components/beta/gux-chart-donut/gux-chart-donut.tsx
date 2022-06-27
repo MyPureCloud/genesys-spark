@@ -77,7 +77,7 @@ export class GuxDonutChart {
     | 'top-right'
     | 'bottom-left'
     | 'bottom-right'
-    | 'none' = 'right';
+    | 'none' = 'none';
 
   @Prop()
   legendTitle: string;
@@ -107,7 +107,19 @@ export class GuxDonutChart {
   centerSubText: string;
 
   @Prop()
-  tooltipOptions: any;
+  tooltipOptions: EmbedOptions;
+
+  @Prop()
+  legendX: number;
+
+  @Prop()
+  legendY: number;
+
+  @Prop()
+  legendFontSize: number;
+
+  @Prop()
+  legendSymbolSize: number;
 
   @Prop()
   embedOptions: EmbedOptions;
@@ -128,6 +140,20 @@ export class GuxDonutChart {
 
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color.legend = {};
+      if (this.legendX) {
+        this.baseChartSpec.encoding.color.legend.legendX = this.legendX;
+      }
+      if (this.legendY) {
+        this.baseChartSpec.encoding.color.legend.legendy = this.legendY;
+      }
+      if (this.legendFontSize) {
+        this.baseChartSpec.encoding.color.legend.labelFontSize =
+          this.legendFontSize;
+      }
+      if (this.legendSymbolSize) {
+        this.baseChartSpec.encoding.color.legend.symbolSize =
+          this.legendSymbolSize;
+      }
     }
 
     if (this.legendPosition) {
@@ -143,6 +169,8 @@ export class GuxDonutChart {
     const legendTitle = this.legendTitle;
     if (legendTitle) {
       this.baseChartSpec.encoding.color.title = legendTitle;
+    } else {
+      this.baseChartSpec.encoding.color.title = '';
     }
 
     let outerRadius = this.outerRadius;
