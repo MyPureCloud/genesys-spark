@@ -194,7 +194,7 @@ export class GuxDonutChart {
         data: { values: [{ centerText: centerText, value: 0 }] },
         mark: { align: 'center', type: 'text', baseline: 'middle' },
         encoding: {
-          color: {},
+          color: { value: '#4C5054' },
           text: { field: 'centerText' },
           size: { value: { expr: 'height * 0.09' } },
           tooltip: null
@@ -214,7 +214,7 @@ export class GuxDonutChart {
           y: { expr: 'height/2 + 20' }
         },
         encoding: {
-          color: {},
+          color: { value: '#6A6D70' },
           text: { field: 'centerSubText' },
           size: { value: { expr: 'height * 0.06' } },
           tooltip: null
