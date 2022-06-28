@@ -77,7 +77,7 @@ export class GuxDonutChart {
     | 'top-right'
     | 'bottom-left'
     | 'bottom-right'
-    | 'none' = 'none';
+    | 'none' = 'right';
 
   @Prop()
   legendTitle: string;
@@ -138,13 +138,21 @@ export class GuxDonutChart {
       chartData = { data: this.chartData };
     }
 
+    if (this.legendPosition) {
+      this.baseChartSpec.config.legend.orient = this.legendPosition;
+    }
+
     if (this.includeLegend) {
       this.baseChartSpec.encoding.color.legend = {};
-      if (this.legendX) {
-        this.baseChartSpec.encoding.color.legend.legendX = this.legendX;
-      }
-      if (this.legendY) {
-        this.baseChartSpec.encoding.color.legend.legendY = this.legendY;
+
+      if (this.legendX || this.legendY) {
+        this.baseChartSpec.config.legend.orient = 'none';
+        if (this.legendX) {
+          this.baseChartSpec.encoding.color.legend.legendX = this.legendX;
+        }
+        if (this.legendY) {
+          this.baseChartSpec.encoding.color.legend.legendY = this.legendY;
+        }
       }
       if (this.legendFontSize) {
         this.baseChartSpec.encoding.color.legend.labelFontSize =
@@ -154,10 +162,6 @@ export class GuxDonutChart {
         this.baseChartSpec.encoding.color.legend.symbolSize =
           this.legendSymbolSize;
       }
-    }
-
-    if (this.legendPosition) {
-      this.baseChartSpec.config.legend.orient = this.legendPosition;
     }
 
     const colorFieldName = this.colorFieldName || DEFAULT_COLOR_FIELD_NAME;

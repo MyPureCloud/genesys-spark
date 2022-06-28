@@ -16,7 +16,6 @@
   label-radius="110"
   label-field="value"
   include-legend="true"
-  legend-position="right"
   legend-title="Media Type"
   outer-radius="100"
 >
@@ -37,7 +36,7 @@
 <gux-chart-donut-beta id="chart-3" label-field="value" inner-radius="68">
 </gux-chart-donut-beta>
 
-<h2>progressive Donut</h2>
+<h2>Progressive Donut</h2>
 <gux-chart-donut-beta
   id="chart-5"
   label-radius="110"
@@ -67,7 +66,7 @@
 >
 </gux-chart-donut-beta>
 
-<h2>Donut with custome tooltip</h2>
+<h2>Donut with custom tooltip</h2>
 <gux-chart-donut-beta
   id="chart-7"
   label-radius="110"
@@ -100,7 +99,7 @@
     const tooltipOptions = {
         theme: 'custom',
         formatTooltip: (tool) => {
-            return `<div><b>\${tool.category}</b>: \${tool.value}</div>`;
+          return `<div><b>\${tool.category}</b>: \${tool.value}</div>`;
         }
     }
 
