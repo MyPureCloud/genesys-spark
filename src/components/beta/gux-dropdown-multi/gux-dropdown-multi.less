@@ -1,0 +1,172 @@
+@import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/shadows.less';
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/typography.less';
+
+:host {
+  color: @gux-black-50;
+}
+
+.gux-dropdown-container {
+  position: relative;
+}
+
+gux-dropdown-multi-tag {
+  position: absolute;
+  right: 32px;
+  bottom: 4px;
+}
+
+.gux-field,
+.gux-target-container-expanded {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 32px;
+  padding: 6px 0 6px 6px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6667;
+  cursor: pointer;
+  background-color: @gux-grey-90;
+}
+
+.gux-field {
+  &.gux-input-field {
+    height: 30px;
+    cursor: text;
+  }
+
+  .gux-field-content {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 0;
+    height: 100%;
+
+    .gux-filter,
+    .gux-selected-option,
+    .gux-placeholder {
+      flex: 1 1 auto;
+      align-self: auto;
+      order: 0;
+      padding-left: 6px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .gux-sr-only {
+        .gux-sr-only-clip();
+      }
+    }
+
+    .gux-filter {
+      position: relative;
+      height: 100%;
+      padding-left: 0;
+
+      .gux-filter-input {
+        all: unset;
+        width: 100%;
+        caret-color: @gux-black-50;
+      }
+
+      .gux-filter-display {
+        .gux-filter-text {
+          color: @gux-black-50;
+        }
+
+        .gux-filter-suggestion {
+          color: @gux-black-90;
+        }
+      }
+
+      .gux-filter-input,
+      .gux-filter-display {
+        position: absolute;
+      }
+    }
+
+    .gux-placeholder {
+      color: @gux-black-90;
+    }
+  }
+
+  .gux-expand-icon {
+    flex: 0 0 auto;
+    align-self: auto;
+    order: 0;
+    width: 16px;
+    height: 16px;
+    padding: 0 @spacing-xs;
+    color: @gux-black-90;
+  }
+}
+
+.gux-target-container-expanded {
+  .form-field-border();
+
+  &:focus-within {
+    .focus-ring();
+  }
+
+  .gux-filter-input {
+    background-color: inherit;
+    border: none;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  .gux-field-button {
+    width: auto;
+    height: 30px;
+    padding: 0 0 0 @spacing-xs;
+    margin: 0;
+    background: inherit;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.gux-target-container-collapsed .gux-field-button {
+  .form-field-border();
+
+  &:focus {
+    .focus-ring();
+  }
+}
+
+.gux-listbox-container {
+  box-sizing: border-box;
+  margin: 0;
+  color: @gux-black-50;
+}
+
+.gux-error-message-container {
+  display: none;
+  margin: 4px 0;
+
+  &.gux-show {
+    display: flex;
+  }
+}

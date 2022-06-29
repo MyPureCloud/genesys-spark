@@ -43,6 +43,9 @@ export class GuxDropdown {
   disabled: boolean = false;
 
   @Prop()
+  required: boolean = false;
+
+  @Prop()
   placeholder: string;
 
   @Prop()

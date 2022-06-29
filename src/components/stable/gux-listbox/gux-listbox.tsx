@@ -30,7 +30,6 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../usage-tracking';
-import { logError } from '../../../utils/error/log-error';
 
 import translationResources from './i18n/en.json';
 
@@ -53,6 +52,9 @@ export class GuxListbox {
 
   @Prop()
   filter: string = '';
+
+  @State()
+  selectedValues: string[] = [];
 
   @State()
   listboxOptions: HTMLGuxOptionElement[] = [];
@@ -154,6 +156,9 @@ export class GuxListbox {
   }
 
   private setListboxOptions(): void {
+    if (this.value) {
+      this.selectedValues = this.value.split(',');
+    }
     this.listboxOptions = Array.from(
       this.root.children
     ) as HTMLGuxOptionElement[];
@@ -163,10 +168,10 @@ export class GuxListbox {
   private updateValue(newValue: string): void {
     if (this.value !== newValue) {
       this.value = newValue;
-
-      simulateNativeEvent(this.root, 'input');
-      simulateNativeEvent(this.root, 'change');
     }
+
+    simulateNativeEvent(this.root, 'input');
+    simulateNativeEvent(this.root, 'change');
   }
 
   async componentWillLoad(): Promise<void> {
@@ -176,23 +181,10 @@ export class GuxListbox {
     this.setListboxOptions();
   }
 
-  componentDidLoad(): void {
-    if (
-      !(
-        this.root.getAttribute('aria-label') ||
-        this.root.getAttribute('aria-labelledby')
-      )
-    ) {
-      logError(
-        'gux-listbox',
-        '`gux-listbox` requires a label. Either provide a label and associate it with the listbox using `aria-labelledby` or add an `aria-label` attribute to the gux-listbox element.'
-      );
-    }
-  }
-
   componentWillRender(): void {
     this.listboxOptions.forEach(listboxOption => {
       listboxOption.selected = listboxOption.value === this.value;
+
       listboxOption.filtered = !listboxOption.textContent
         .toLowerCase()
         .startsWith(this.filter.toLowerCase());

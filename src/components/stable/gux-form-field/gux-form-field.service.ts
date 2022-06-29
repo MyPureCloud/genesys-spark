@@ -35,7 +35,12 @@ export function getComputedLabelPosition(
 
 export function validateFormIds(
   root: HTMLElement,
-  input: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+  input:
+    | HTMLInputElement
+    | HTMLSelectElement
+    | HTMLTextAreaElement
+    | HTMLGuxListboxElement
+    | HTMLGuxListboxMultiElement
 ): void {
   if (hasLabelSlot(root)) {
     const label: HTMLLabelElement = root.querySelector('label[slot="label"]');

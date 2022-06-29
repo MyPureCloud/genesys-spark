@@ -7,7 +7,7 @@ import { trackComponent } from '../../../../../usage-tracking';
 
 import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';
 
-import { hasErrorSlot, validateFormIds } from '../../gux-form-field.servce';
+import { hasErrorSlot, validateFormIds } from '../../gux-form-field.service';
 
 /**
  * @slot input - Required slot for input tag

@@ -15,7 +15,7 @@ import {
   hasErrorSlot,
   getComputedLabelPosition,
   validateFormIds
-} from '../../gux-form-field.servce';
+} from '../../gux-form-field.service';
 
 import { GuxFormFieldTextAreaResize } from './gux-form-field-textarea.types';
 /**

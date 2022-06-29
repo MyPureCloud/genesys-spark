@@ -10,6 +10,7 @@
 | `disabled`    | `disabled`    |             | `boolean` | `false`     |
 | `filterable`  | `filterable`  |             | `boolean` | `false`     |
 | `placeholder` | `placeholder` |             | `string`  | `undefined` |
+| `required`    | `required`    |             | `boolean` | `false`     |
 | `value`       | `value`       |             | `string`  | `undefined` |
 
 

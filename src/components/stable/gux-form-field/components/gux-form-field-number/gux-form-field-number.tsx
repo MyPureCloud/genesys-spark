@@ -21,7 +21,7 @@ import {
   hasContent,
   getComputedLabelPosition,
   validateFormIds
-} from '../../gux-form-field.servce';
+} from '../../gux-form-field.service';
 
 import componentResources from './i18n/en.json';
 

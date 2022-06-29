@@ -1,0 +1,277 @@
+<h1>gux-form-field-dropdown</h1>
+
+<p>
+  slot a gux-dropdown or gux-dropdown-multi-beta element into a
+  gux-form-field-dropdown element
+</p>
+
+<form onchange="notify(event)" oninput="notify(event)" style="max-width: 400px">
+  <h2>Dropdown (single select)</h2>
+  <p>slot a gux-dropdown into a gux-form-field-dropdown element</p>
+  <fieldset>
+    <legend>Label Position</legend>
+    <gux-form-field-dropdown>
+      <gux-dropdown>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Default</label>
+    </gux-form-field-dropdown>
+
+    <gux-form-field-dropdown>
+      <gux-dropdown>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Default Long Label</label>
+    </gux-form-field-dropdown>
+
+    <gux-form-field-dropdown label-position="above">
+      <gux-dropdown>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Above</label>
+    </gux-form-field-dropdown>
+
+    <gux-form-field-dropdown label-position="beside">
+      <gux-dropdown>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Beside</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown label-position="screenreader">
+      <gux-dropdown>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">This will be read by a screen reader</label>
+    </gux-form-field-dropdown>
+  </fieldset>
+  <fieldset>
+    <legend>Input Attributes</legend>
+    <gux-form-field-dropdown>
+      <gux-dropdown disabled>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Disabled</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown required>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Required</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown value="c">
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Value Set</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown filterable>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+          <gux-option value="d">Dog</gux-option>
+          <gux-option value="e" disabled>Eel</gux-option>
+          <gux-option value="f">Frog</gux-option>
+          <gux-option value="g">Goat</gux-option>
+          <gux-option value="h" disabled>Horse</gux-option>
+          <gux-option value="i" disabled>Ibis</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Filterable</label>
+    </gux-form-field-dropdown>
+  </fieldset>
+  <fieldset>
+    <legend>Error</legend>
+    <gux-form-field-dropdown>
+      <gux-dropdown>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Default</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown required>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Required</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-dropdown>
+  </fieldset>
+
+  <h2>Dropdown (multi select)</h2>
+  <p>
+    slot a gux-dropdown-multi-beta element into a gux-form-field-dropdown
+    element
+  </p>
+  <fieldset>
+    <legend>Label Position</legend>
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Default</label>
+    </gux-form-field-dropdown>
+
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Default Long Label</label>
+    </gux-form-field-dropdown>
+
+    <gux-form-field-dropdown label-position="above">
+      <gux-dropdown-multi-beta>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Above</label>
+    </gux-form-field-dropdown>
+
+    <gux-form-field-dropdown label-position="beside">
+      <gux-dropdown-multi-beta>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Beside</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown label-position="screenreader">
+      <gux-dropdown-multi-beta>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">This will be read by a screen reader</label>
+    </gux-form-field-dropdown>
+  </fieldset>
+  <fieldset>
+    <legend>Input Attributes</legend>
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta disabled>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Disabled</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta required>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Required</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta value="b,c">
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Value Set</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta filterable>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+          <gux-option-multi value="d">Dog</gux-option-multi>
+          <gux-option-multi value="e" disabled>Eel</gux-option-multi>
+          <gux-option-multi value="f">Frog</gux-option-multi>
+          <gux-option-multi value="g">Goat</gux-option-multi>
+          <gux-option-multi value="h" disabled>Horse</gux-option-multi>
+          <gux-option-multi value="i" disabled>Ibis</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Filterable</label>
+    </gux-form-field-dropdown>
+  </fieldset>
+  <fieldset>
+    <legend>Error</legend>
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Default</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta required>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Required</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-dropdown>
+  </fieldset>
+</form>

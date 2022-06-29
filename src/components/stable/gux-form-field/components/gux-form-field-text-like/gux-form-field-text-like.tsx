@@ -17,7 +17,7 @@ import {
   hasContent,
   getComputedLabelPosition,
   validateFormIds
-} from '../../gux-form-field.servce';
+} from '../../gux-form-field.service';
 
 /**
  * @slot input - Required slot for input tag

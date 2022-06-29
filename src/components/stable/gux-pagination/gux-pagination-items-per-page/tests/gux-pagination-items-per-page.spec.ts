@@ -1,4 +1,6 @@
 import { newSpecPage } from '@stencil/core/testing';
+import MutationObserver from 'mutation-observer';
+
 import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page';
 import { GuxDropdown } from '../../../gux-dropdown/gux-dropdown';
 import { GuxListbox } from '../../../gux-listbox/gux-listbox';
@@ -13,6 +15,13 @@ const components = [
 const language = 'en';
 
 describe('gux-pagination-items-per-page', () => {
+  beforeEach(() => {
+    (
+      global as NodeJS.Global & {
+        MutationObserver: any;
+      }
+    ).MutationObserver = MutationObserver;
+  });
   describe('#render', () => {
     [
       { itemsPerPage: 25 },
