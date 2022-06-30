@@ -98,8 +98,9 @@
 
     const tooltipOptions = {
         theme: 'custom',
-        formatTooltip: (tool) => {
-          return `<div><b>\${tool.category}</b>: \${tool.value}</div>`;
+        // Make sure to sanitize user data to prevent XSS
+        formatTooltip: (tool, sanitize) => {
+          return `<div><b>\${sanitize(tool.category)}</b>: \${sanitize(tool.value)}</div>`;
         }
     }
 
