@@ -1,0 +1,41 @@
+@import (reference) '../../../../style/typography.less';
+@import (reference) '../../../../style/color-mixins.less';
+@import (reference) '../../../../style/spacing.less';
+@import (reference) '../../../../style/mixins.less';
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: inline;
+  width: 100%;
+  height: 100%;
+  padding: @spacing-2xs;
+  margin: 1px;
+  font-size: 100%;
+  font-weight: bold;
+  color: @gux-black-50;
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  gux-icon {
+    float: right;
+    width: 16px;
+    height: 16px;
+    padding-right: 8.5px;
+  }
+}
+
+button:focus {
+  border-bottom: 3px solid @gux-blue-80;
+}
+
+.gux-sr-only {
+  .gux-sr-only-clip();
+}
