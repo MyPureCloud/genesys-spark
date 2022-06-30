@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.7.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.7.0...v3.7.1) (2022-06-30)
+
+
+### Bug Fixes
+
+* **gux-tabs:** update tab trigger list on mutation ([#815](https://github.com/MyPureCloud/genesys-webcomponents/issues/815)) ([5a05a6e](https://github.com/MyPureCloud/genesys-webcomponents/commit/5a05a6e826fe548a6bebd0f17410bcea3dedbf6f))
+
 ## [3.7.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.6.0...v3.7.0) (2022-06-30)
 
 
