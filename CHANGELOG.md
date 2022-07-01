@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.55.5](https://inindca///compare/v2.55.4...v2.55.5) (2022-07-01)
+
+
+### Bug Fixes
+
+* **calendar:** fix bug where datepicker behaves wrongly when we move to 31st of a month ([6343e05](https://inindca///commit/6343e05304a7b9fae239129caebe65380d256c3b))
+
 ### [2.55.4](https://inindca///compare/v2.55.3...v2.55.4) (2022-06-30)
 
 ### [2.55.3](https://inindca///compare/v2.55.2...v2.55.3) (2022-06-10)
