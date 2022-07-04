@@ -162,6 +162,8 @@ export class GuxDonutChart {
         this.baseChartSpec.encoding.color.legend.symbolSize =
           this.legendSymbolSize;
       }
+    } else {
+      this.baseChartSpec.encoding.color.legend = null;
     }
 
     const colorFieldName = this.colorFieldName || DEFAULT_COLOR_FIELD_NAME;
