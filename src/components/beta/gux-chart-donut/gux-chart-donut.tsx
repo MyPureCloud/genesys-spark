@@ -98,7 +98,7 @@ export class GuxDonutChart {
   labelField: string;
 
   @Prop()
-  progressive: boolean;
+  gauge: boolean;
 
   @Prop()
   centerText: string;
@@ -191,7 +191,7 @@ export class GuxDonutChart {
 
     let layerFiels = 1;
 
-    if (this.progressive) {
+    if (this.gauge) {
       this.baseChartSpec.layer = [
         {
           data: { values: [{ progress: 'default', value: 100 }] },
