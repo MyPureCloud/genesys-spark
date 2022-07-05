@@ -1,6 +1,6 @@
 import locales from './locales.json';
 
-export type FormatOptions = 'full' | 'long' | 'short';
+export type FormatOptions = 'full' | 'long' | 'medium' | 'short';
 
 export class DateTimeFormatter {
     locale: typeof locales[number];
@@ -15,14 +15,14 @@ export class DateTimeFormatter {
     }
 
     formatDate(datetime: Date, format: FormatOptions) : string {
-        return new Intl.DateTimeFormat(this.locale, { dateStyle: format }).format(datetime);
+        return datetime.toLocaleDateString(this.locale, { dateStyle: format });
     }
 
     formatTime(datetime: Date, format: FormatOptions) : string {
-        return new Intl.DateTimeFormat(this.locale, { timeStyle: format }).format(datetime);
+        return datetime.toLocaleTimeString(this.locale, { timeStyle: format });
     }
 
     formatDateTime(datetime: Date, format: FormatOptions) : string {
-        return new Intl.DateTimeFormat(this.locale, { dateStyle: format, timeStyle: format }).format(datetime);
+        return datetime.toLocaleString(this.locale, { dateStyle: format, timeStyle: format });
     }
 }
