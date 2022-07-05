@@ -9,10 +9,16 @@ import {
   Watch
 } from '@stencil/core';
 
-import { randomHTMLId } from '../../../../utils/dom/random-html-id';
-import { logError } from '../../../../utils/error/log-error';
+import { randomHTMLId } from '@utils/dom/random-html-id';
+import { logError } from '@utils/error/log-error';
 
 import { GuxAccordionSectionArrowPosition } from './gux-accordion-section.types';
+
+/**
+ * @slot header - Required slot for the heading
+ * @slot subheader - Optional slot for a subheader
+ * * @slot icon - Optional slot for an icon
+ */
 
 @Component({
   styleUrl: 'gux-accordion-section.less',
@@ -21,6 +27,7 @@ import { GuxAccordionSectionArrowPosition } from './gux-accordion-section.types'
 })
 export class GuxAccordionSection {
   private sectionId: string = randomHTMLId('gux-accordion-section');
+  private hasIconSlot: boolean;
 
   @Element()
   root: HTMLElement;
@@ -33,6 +40,9 @@ export class GuxAccordionSection {
 
   @Prop()
   disabled: boolean = false;
+
+  @Prop()
+  reverseHeadings: boolean = false;
 
   @Event()
   internalsectionopened: EventEmitter<void>;
@@ -48,44 +58,55 @@ export class GuxAccordionSection {
     this.open = !this.open;
   }
 
-  private onHeaderSlotChange(): void {
-    const header = this.root.querySelector('[slot="header"]');
+  private isArrowPositionedBesideText(): boolean {
+    return this.arrowPosition === 'beside-text';
+  }
 
-    if (!header || !/^H[1-6]$/.test(header.nodeName)) {
+  private handleSlotChange(slotname: string): void {
+    const slot = this.root.querySelector(`[slot="${slotname}"]`);
+
+    if (!slot || !/^H[1-6]$/.test(slot.nodeName)) {
       logError(
         'gux-accordion-section',
-        'For accessibility reasons the header slot should be filled with a HTML heading tag (h1 - h6).'
+        `For accessibility reasons the ${slotname} slot should be filled with a HTML heading tag (h1 - h6).`
       );
     }
   }
 
-  private renderHeaderSpacer(
-    arrowPosition: GuxAccordionSectionArrowPosition
-  ): JSX.Element {
-    if (arrowPosition === 'beside-text') {
-      return null;
-    }
-
-    return (<div class="gux-header-spacer"></div>) as JSX.Element;
+  componentWillLoad() {
+    this.hasIconSlot = !!this.root.querySelector('[slot="icon"]');
   }
 
   render(): JSX.Element {
     return (
       <section class={{ 'gux-disabled': this.disabled }}>
         <button
-          class="gux-header"
+          class={{
+            'gux-header': true,
+            'gux-reverse-headings': this.reverseHeadings
+          }}
           aria-expanded={this.open.toString()}
           aria-controls={this.sectionId}
           disabled={this.disabled}
           onClick={this.toggle.bind(this)}
         >
-          <div class="gux-header-text">
+          {this.hasIconSlot && <slot name="icon"></slot>}
+
+          <div
+            class={{
+              'gux-header-text': true,
+              'gux-arrow-position-beside': this.isArrowPositionedBesideText()
+            }}
+          >
             <slot
-              onSlotchange={this.onHeaderSlotChange.bind(this)}
+              onSlotchange={() => this.handleSlotChange('header')}
               name="header"
             ></slot>
+            <slot
+              onSlotchange={() => this.handleSlotChange('subheader')}
+              name="subheader"
+            ></slot>
           </div>
-          {this.renderHeaderSpacer(this.arrowPosition)}
           <div
             class={{
               'gux-header-icon': true,
