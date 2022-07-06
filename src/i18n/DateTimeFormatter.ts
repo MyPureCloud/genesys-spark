@@ -1,6 +1,6 @@
 import locales from './locales.json';
 
-export type FormatOptions = 'full' | 'long' | 'medium' | 'short';
+export type GuxDateTimeFormat = 'full' | 'long' | 'medium' | 'short';
 
 export class DateTimeFormatter {
     locale: typeof locales[number];
@@ -14,15 +14,15 @@ export class DateTimeFormatter {
         }
     }
 
-    formatDate(datetime: Date, format: FormatOptions) : string {
+    formatDate(datetime: Date, format: GuxDateTimeFormat) : string {
         return datetime.toLocaleDateString(this.locale, { dateStyle: format });
     }
 
-    formatTime(datetime: Date, format: FormatOptions) : string {
+    formatTime(datetime: Date, format: GuxDateTimeFormat) : string {
         return datetime.toLocaleTimeString(this.locale, { timeStyle: format });
     }
 
-    formatDateTime(datetime: Date, format: FormatOptions) : string {
+    formatDateTime(datetime: Date, format: GuxDateTimeFormat) : string {
         return datetime.toLocaleString(this.locale, { dateStyle: format, timeStyle: format });
     }
 }
