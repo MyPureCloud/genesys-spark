@@ -1,0 +1,44 @@
+<h1>gux-date-beta</h1>
+
+<h2>Dates</h2>
+
+<h3>Short</h3>
+<gux-date-beta id="date-1" locale="en" format="short"></gux-date-beta>
+
+<h3>Medium</h3>
+<gux-date-beta id="date-2" locale="en" format="medium"></gux-date-beta>
+
+<h3>Long</h3>
+<gux-date-beta id="date-3" locale="en" format="long"></gux-date-beta>
+
+<h3>Full</h3>
+<gux-date-beta id="date-4" locale="en" format="full"></gux-date-beta>
+
+<h2>Languages</h2>
+
+<h3>French</h3>
+<gux-date-beta id="date-5" locale="fr" format="full"></gux-date-beta>
+
+<h3>Chinese Simplified</h3>
+<gux-date-beta id="date-6" locale="zh-cn" format="full"></gux-date-beta>
+
+<style
+  onload="(function() {
+    const date1 = document.querySelector('#date-1');
+    const date2 = document.querySelector('#date-2');
+    const date3 = document.querySelector('#date-3');
+    const date4 = document.querySelector('#date-4');
+    const date5 = document.querySelector('#date-5');
+    const date6 = document.querySelector('#date-6');
+
+    const date = Date.now();
+
+    date1.date = date;
+    date2.date = date;
+    date3.date = date;
+    date4.date = date;
+    date5.date = date;
+    date6.date = date;
+  })()"
+>
+</style>

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-date-beta #render should render component as expected (1) 1`] = `"<gux-date-beta locale=\\"en\\" date=\\"1657166400000\\" format=\\"short\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render should render component as expected (2) 1`] = `"<gux-date-beta locale=\\"en\\" date=\\"1657166400000\\" format=\\"medium\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render should render component as expected (3) 1`] = `"<gux-date-beta locale=\\"en\\" date=\\"1657166400000\\" format=\\"long\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render should render component as expected (4) 1`] = `"<gux-date-beta locale=\\"en\\" date=\\"1657166400000\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
