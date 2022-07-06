@@ -1,4 +1,5 @@
 <h1>gux-chart-donut-beta</h1>
+
 <h2>Donut</h2>
 <gux-chart-donut-beta
   id="chart-1"
@@ -19,7 +20,6 @@
   outer-radius="100"
 >
 </gux-chart-donut-beta>
-
 <h2>Donut with custom legend position</h2>
 <gux-chart-donut-beta
   id="chart-4"
@@ -36,12 +36,55 @@
 <gux-chart-donut-beta id="chart-3" label-field="value" inner-radius="68">
 </gux-chart-donut-beta>
 
+<h2>Gauge Donut</h2>
+<gux-chart-donut-beta
+  id="chart-5"
+  label-radius="110"
+  label-field="value"
+  include-legend="true"
+  outer-radius="80"
+  inner-radius="68"
+  gauge="true"
+  center-text="38%"
+  center-sub-text="Total Percentage"
+  legend-x="300"
+  legend-y="0"
+  legend-font-size="12"
+  legend-symbol-size="150"
+>
+</gux-chart-donut-beta>
+
+<h2>Donut with center text</h2>
+<gux-chart-donut-beta
+  id="chart-6"
+  label-radius="110"
+  label-field="value"
+  outer-radius="80"
+  inner-radius="68"
+  center-text="38%"
+  center-sub-text="Total"
+>
+</gux-chart-donut-beta>
+
+<h2>Donut with custom tooltip</h2>
+<gux-chart-donut-beta
+  id="chart-7"
+  label-radius="110"
+  label-field="value"
+  outer-radius="80"
+  inner-radius="68"
+>
+</gux-chart-donut-beta>
+
 <style
   onload="(function() {
     const chart1 = document.querySelector('#chart-1');
     const chart2 = document.querySelector('#chart-2');
     const chart3 = document.querySelector('#chart-3');
     const chart4 = document.querySelector('#chart-4');
+    const chart5 = document.querySelector('#chart-5');
+    const chart6 = document.querySelector('#chart-6');
+    const chart7 = document.querySelector('#chart-7');
 
     const chartData = {'values': [
         {'category': 'Voice', 'value': 4},
@@ -53,10 +96,24 @@
       ]
     }
 
+    const tooltipOptions = {
+        theme: 'custom',
+        // Make sure to sanitize user data to prevent XSS
+        formatTooltip: (tool, sanitize) => {
+          return `<div><b>\${sanitize(tool.category)}</b>: \${sanitize(tool.value)}</div>`;
+        }
+    }
+
     chart1.chartData = chartData
     chart2.chartData = chartData
     chart3.chartData = chartData
     chart4.chartData = chartData
+    chart5.chartData = chartData
+    chart5.tooltipOptions = tooltipOptions
+    chart6.chartData = chartData
+    chart7.chartData = chartData
+    chart7.tooltipOptions = tooltipOptions
+
 
   })()"
 >
