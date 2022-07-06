@@ -1,2 +1,9 @@
 {
+  "emptyMessage": "אין נתונים זמינים",
+  "scrollLeft": "גלול שמאלה",
+  "scrollRight": "גלול ימינה",
+  "selectAllTableRows": "בחר את כל השורות בטבלה",
+  "selectTableRow": "בחר שורה בטבלה",
+  "sortAsc": "מיון בסדר עולה",
+  "sortDesc": "מיון בסדר יורד"
 }

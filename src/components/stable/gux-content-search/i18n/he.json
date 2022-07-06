@@ -1,2 +1,6 @@
 {
+  "eraseBtnAria": "נקה",
+  "navigateNextBtn": "הבא",
+  "navigatePreviousBtn": "הקודם",
+  "totalMatches": "{currentMatch, number} מתוך {matchCount, number}"
 }

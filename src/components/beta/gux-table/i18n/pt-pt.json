@@ -1,2 +1,9 @@
 {
+  "emptyMessage": "Nenhum dado disponível",
+  "scrollLeft": "Deslocar para a esquerda",
+  "scrollRight": "Deslocar para a direita",
+  "selectAllTableRows": "Selecionar todas as linhas da tabela",
+  "selectTableRow": "Selecionar linha da tabela",
+  "sortAsc": "Colocado por ordem ascendente",
+  "sortDesc": "Colocado por ordem descendente"
 }
