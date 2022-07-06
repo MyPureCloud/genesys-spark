@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.7.2...v3.8.0) (2022-07-06)
+
+
+### Features
+
+* **gux-chart-donut:** added colouring to centre text and subtext ([eec1957](https://github.com/MyPureCloud/genesys-webcomponents/commit/eec19578b7409c6159c7026c9cb85bd4d75e8ba8))
+* **gux-chart-donut:** added progressive, centertext, centersubtext and custom tooltip chart ([66d03a8](https://github.com/MyPureCloud/genesys-webcomponents/commit/66d03a8189b32d736294f1a8a166afafc133bba5))
+* **gux-chart-donut:** added x, y, fontsize and icon size to legend ([636c3df](https://github.com/MyPureCloud/genesys-webcomponents/commit/636c3df5c72d04b9d1a862c0c296cf8e1d2e5bfa))
+* **gux-donut:** adding center and sub text ([b548bb9](https://github.com/MyPureCloud/genesys-webcomponents/commit/b548bb9b04153d48d26638692ecd40f9bc8939e6))
+
+
+### Bug Fixes
+
+* **gux-chart-donut:** centre text and subtext layering multiple times ([0fd3b2a](https://github.com/MyPureCloud/genesys-webcomponents/commit/0fd3b2a1c3f1607802053a9fb489b5087f9b930c))
+* **gux-chart-donut:** fix tooltip in progressive chart ([6255ba8](https://github.com/MyPureCloud/genesys-webcomponents/commit/6255ba82ec0f8bdabae7b97462780c1cb8d1e743))
+* **gux-chart-donut:** fixed a issue legend not resetting ([adf6d8a](https://github.com/MyPureCloud/genesys-webcomponents/commit/adf6d8adbd410f20cb21b399b8b83e5cb12f0474))
+* **gux-chart-donut:** grammatical mistake ([c68132b](https://github.com/MyPureCloud/genesys-webcomponents/commit/c68132bfb39d048529b63da84f4e01ca9610cfe0))
+* **gux-donut-chart:** fix for progressive chart ([599c0bc](https://github.com/MyPureCloud/genesys-webcomponents/commit/599c0bc6026adc37a413e9172b3e0f4a4b676ae2))
+* **gux-donut-chart:** fix XSS error ([a7a146e](https://github.com/MyPureCloud/genesys-webcomponents/commit/a7a146e572c8e7be26be2a8aab7a93315c971ff0))
+
 ### [3.7.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.7.1...v3.7.2) (2022-07-06)
 
 ### [3.7.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.7.0...v3.7.1) (2022-06-30)
