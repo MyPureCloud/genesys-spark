@@ -1,0 +1,64 @@
+@import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/color-mixins.less';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gux-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  ::slotted(gux-icon) {
+    width: 48px;
+    height: 48px;
+    color: @gux-grey-40;
+  }
+
+  slot[name='primary-message'] {
+    color: @gux-black-60;
+    text-align: center;
+    .h3();
+  }
+
+  slot[name='additional-guidance'] {
+    color: @gux-black-60;
+    text-align: center;
+    .gux-small-text();
+  }
+
+  &.gux-small,
+  &.gux-medium {
+    .gux-message-container {
+      padding: @spacing-xs 0 @spacing-2xs;
+    }
+
+    .gux-guidance-container {
+      padding-bottom: @spacing-xs;
+    }
+  }
+
+  &.gux-large {
+    .gux-message-container {
+      padding: @spacing-medium 0 @spacing-2xs;
+
+      slot[name='primary-message'] {
+        .h1();
+      }
+    }
+
+    .gux-guidance-container {
+      padding-bottom: @spacing-medium;
+
+      slot[name='additional-guidance'] {
+        .gux-large-text();
+      }
+    }
+  }
+}
