@@ -80,6 +80,12 @@ export class GuxList {
     byClosestId(this.root, validFocusableItems, id);
   }
 
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async guxFocusLastItem(): Promise<void> {
+    last(this.root, validFocusableItems);
+  }
+
   private renderFocusTarget(): JSX.Element {
     return (<span tabindex="-1"></span>) as JSX.Element;
   }

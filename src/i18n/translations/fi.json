@@ -42,7 +42,7 @@
     "previous": "Edellinen",
     "next": "Seuraava",
     "last": "Viimeinen",
-    "pageInputLabel": "Sivu {currentPage, number} / {lastPage, number})"
+    "pageInputLabel": "Sivu {currentPage, number} / {totalPages, number})"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
