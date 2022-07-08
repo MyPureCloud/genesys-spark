@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  forceUpdate,
+  h,
+  JSX,
+  Method,
+  Prop,
+  State
+} from '@stencil/core';
 
 import { OnMutation } from '../../../../../utils/decorator/on-mutation';
 import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
@@ -62,6 +71,15 @@ export class GuxFormFieldTextLike {
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.hasError = hasErrorSlot(this.root);
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async guxForceUpdate(): Promise<void> {
+    this.hasContent = hasContent(this.input);
+    this.hasError = hasErrorSlot(this.root);
+
+    forceUpdate(this.root);
   }
 
   componentWillLoad(): void {
