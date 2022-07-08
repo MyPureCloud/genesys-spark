@@ -3,11 +3,11 @@ import { trackComponent } from '../../../usage-tracking';
 import { DateTimeFormatter, GuxDateTimeFormat } from '../../../i18n/DateTimeFormatter';
 
 @Component({
-  styleUrl: 'gux-date.less',
-  tag: 'gux-date-beta',
+  styleUrl: 'gux-time.less',
+  tag: 'gux-time-beta',
   shadow: true
 })
-export class GuxDate {
+export class GuxTime {
   private formatter : DateTimeFormatter;
 
   @Element()
@@ -28,6 +28,6 @@ export class GuxDate {
   }
 
   render(): JSX.Element {
-    return (<div>{ this.formatter.formatDate(new Date(this.date), this.format) }</div>) as JSX.Element;
+    return (<div>{ this.formatter.formatTime(new Date(this.date), this.format) }</div>) as JSX.Element;
   }
 }
