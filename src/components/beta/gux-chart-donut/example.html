@@ -76,6 +76,36 @@
 >
 </gux-chart-donut-beta>
 
+<h2>Gauge Donut with empty data</h2>
+<gux-chart-donut-beta
+  id="chart-8"
+  showTooltip="false"
+  outer-radius="80"
+  inner-radius="68"
+  gauge="true"
+  legend-x="300"
+  legend-y="0"
+  legend-font-size="12"
+  legend-symbol-size="150"
+>
+</gux-chart-donut-beta>
+
+<h2>Donut with tootip disabled</h2>
+<gux-chart-donut-beta
+  id="chart-9"
+  show-tooltip="false"
+  outer-radius="80"
+  inner-radius="68"
+  gauge="true"
+  legend-x="300"
+  legend-y="0"
+  legend-font-size="12"
+  legend-symbol-size="150"
+  center-text="38%"
+  center-sub-text="Total Percentage"
+>
+</gux-chart-donut-beta>
+
 <style
   onload="(function() {
     const chart1 = document.querySelector('#chart-1');
@@ -85,6 +115,8 @@
     const chart5 = document.querySelector('#chart-5');
     const chart6 = document.querySelector('#chart-6');
     const chart7 = document.querySelector('#chart-7');
+    const chart8 = document.querySelector('#chart-8');
+    const chart9 = document.querySelector('#chart-9');
 
     const chartData = {'values': [
         {'category': 'Voice', 'value': 4},
@@ -93,6 +125,11 @@
         {'category': 'Email', 'value': 3},
         {'category': 'Messaging', 'value': 7},
         {'category': 'Wuphf', 'value': 8}
+      ]
+    }
+
+    const chartData2 = {'values': [
+        {'category': 'Voice', 'value': 0}
       ]
     }
 
@@ -113,6 +150,8 @@
     chart6.chartData = chartData
     chart7.chartData = chartData
     chart7.tooltipOptions = tooltipOptions
+    chart8.chartData = chartData2
+    chart9.chartData = chartData
 
 
   })()"

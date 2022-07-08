@@ -26,6 +26,7 @@
 | `legendX`          | `legend-x`           |                                                                                                               | `number`                                                                                                           | `undefined` |
 | `legendY`          | `legend-y`           |                                                                                                               | `number`                                                                                                           | `undefined` |
 | `outerRadius`      | `outer-radius`       |                                                                                                               | `number`                                                                                                           | `undefined` |
+| `showTooltip`      | `show-tooltip`       |                                                                                                               | `boolean`                                                                                                          | `true`      |
 | `tooltipOptions`   | --                   |                                                                                                               | `EmbedOptions<string, Renderers>`                                                                                  | `undefined` |
 
 
