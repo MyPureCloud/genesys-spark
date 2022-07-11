@@ -5,5 +5,6 @@
   "selectAllTableRows": "选择所有表行",
   "selectTableRow": "选择表行",
   "sortAsc": "升序排序",
-  "sortDesc": "降序排序"
+  "sortDesc": "降序排序",
+  "colSortDirection": "{colLabel}，排序  {colSortDirection}"
 }
