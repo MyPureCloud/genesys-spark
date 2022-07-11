@@ -107,6 +107,9 @@ export class GuxDonutChart {
   centerSubText: string;
 
   @Prop()
+  showTooltip: boolean = true;
+
+  @Prop()
   tooltipOptions: EmbedOptions;
 
   @Prop()
@@ -203,10 +206,10 @@ export class GuxDonutChart {
           }
         },
         {
-          mark: { type: 'arc', outerRadius, innerRadius }
+          mark: { type: 'arc', outerRadius, innerRadius, padAngle: 0.01 }
         },
         {
-          mark: { type: 'arc', innerRadius, stroke: '#fff' }
+          mark: { type: 'arc', innerRadius, padAngle: 0.01 }
         }
       ];
       layerFiels = 2;
@@ -268,19 +271,21 @@ export class GuxDonutChart {
       });
     }
 
-    if (this.tooltipOptions) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      this.baseChartSpec.layer[layerFiels].mark.tooltip = { content: 'data' };
-      this.tooltipSpec = {
-        actions: false,
-        tooltip: this.tooltipOptions
-      };
-    } else {
-      this.baseChartSpec.encoding.tooltip = {
-        field: labelField,
-        aggregate: 'count',
-        type: 'quantitative'
-      };
+    if (this.showTooltip) {
+      if (this.tooltipOptions) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+        this.baseChartSpec.layer[layerFiels].mark.tooltip = { content: 'data' };
+        this.tooltipSpec = {
+          actions: false,
+          tooltip: this.tooltipOptions
+        };
+      } else {
+        this.baseChartSpec.encoding.tooltip = {
+          field: labelField,
+          aggregate: 'count',
+          type: 'quantitative'
+        };
+      }
     }
 
     const spec = Object.assign(this.baseChartSpec, chartData);
