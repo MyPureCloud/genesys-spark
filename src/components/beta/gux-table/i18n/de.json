@@ -5,5 +5,6 @@
   "selectAllTableRows": "Alle Tabellenzeilen auswählen",
   "selectTableRow": "Tabellenzeile auswählen",
   "sortAsc": "Aufsteigend sortiert",
-  "sortDesc": "Absteigend sortiert"
+  "sortDesc": "Absteigend sortiert",
+  "colSortDirection": "{colLabel}, {colSortDirection} sortieren"
 }

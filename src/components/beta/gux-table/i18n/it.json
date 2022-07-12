@@ -5,5 +5,6 @@
   "selectAllTableRows": "Seleziona tutte le righe delle tabelle",
   "selectTableRow": "Seleziona riga tabella",
   "sortAsc": "Ordinato in senso crescente",
-  "sortDesc": "Ordinato in senso decrescente"
+  "sortDesc": "Ordinato in senso decrescente",
+  "colSortDirection": "{colLabel} , ordine {colSortDirection}"
 }
