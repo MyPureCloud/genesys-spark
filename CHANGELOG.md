@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.8.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.4...v3.8.5) (2022-07-12)
+
+
+### Bug Fixes
+
+* **gux-calendar:** fix start of week bug for hyphenated lang codes ([#831](https://github.com/MyPureCloud/genesys-webcomponents/issues/831)) ([12625ea](https://github.com/MyPureCloud/genesys-webcomponents/commit/12625ea16de5e29bfb3ad8272d3ee8f2a5628a00))
+
 ### [3.8.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.3...v3.8.4) (2022-07-12)
 
 ### [3.8.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.2...v3.8.3) (2022-07-11)
