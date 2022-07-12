@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.8.7](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.6...v3.8.7) (2022-07-12)
+
+
+### Bug Fixes
+
+* **typo:** fixed typo of fuchsia ([419a3b7](https://github.com/MyPureCloud/genesys-webcomponents/commit/419a3b7cf2c3f4a696a8ff72be1a66f0cd791023))
+
 ### [3.8.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.5...v3.8.6) (2022-07-12)
 
 ### [3.8.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.4...v3.8.5) (2022-07-12)
