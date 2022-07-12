@@ -5,5 +5,6 @@
   "selectAllTableRows": "Alle tabrelrijen selecteren",
   "selectTableRow": "Tabrelrij selecteren",
   "sortAsc": "Oplopend sorteren",
-  "sortDesc": "Aflopend sorteren"
+  "sortDesc": "Aflopend sorteren",
+  "colSortDirection": "{colLabel} , sortering {colSortDirection}"
 }
