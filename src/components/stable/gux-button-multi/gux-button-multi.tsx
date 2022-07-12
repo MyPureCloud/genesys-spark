@@ -168,7 +168,8 @@ export class GuxButtonMulti {
               aria-haspopup="true"
               aria-expanded={this.isOpen.toString()}
             >
-              <span>{this.text}</span>
+              <slot name="icon" />
+              <slot name="text">{this.text}</slot>
               <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
             </button>
           </gux-button-slot-beta>
