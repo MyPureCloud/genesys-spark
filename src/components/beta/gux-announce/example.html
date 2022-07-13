@@ -1,0 +1,70 @@
+<h1>gux-announce-beta</h1>
+
+<gux-announce-beta id="announce"> This is some text to read </gux-announce-beta>
+
+<h2>Quotes Announced</h2>
+<div id="announced-list"></div>
+
+<hr />
+
+<div class="control">
+  <gux-dropdown value="additive" id="update-type">
+    <gux-listbox aria-label="Update type">
+      <gux-option value="additive">Additive slot content</gux-option>
+      <gux-option value="replace">Replace slot content</gux-option>
+      <gux-option value="method">Element method</gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+
+  <gux-button
+    onclick="(function() {
+    const quotes = [
+      `1. The greatest glory in living lies not in never falling, but in rising every time we fall.`,
+      `2. The way to get started is to quit talking and begin doing.`,
+      `3. Life is what happens when you're busy making other plans.`
+    ];
+
+    const announce = document.getElementById('announce');
+    const announcedList = document.getElementById('announced-list');
+    const updateType = document.getElementById('update-type');
+
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    const quoteElement = document.createElement('div');
+    quoteElement.innerText = quote;
+
+    switch (updateType.value) {
+      case 'method': {
+        announce.guxAnnounce(quote);
+        break
+      }
+      case 'replace': {
+        while (announce.firstChild) {
+          announce.removeChild(announce.lastChild);
+        }
+
+        const info = document.createElement('h3');
+        info.innerText = 'Removed all slotted content';
+        announcedList.appendChild(info.cloneNode(true));
+
+        announce.appendChild(quoteElement.cloneNode(true));
+        break;
+      }
+      case 'additive': {
+        announce.appendChild(quoteElement.cloneNode(true));
+        break;
+      }
+    }
+
+    announcedList.appendChild(quoteElement.cloneNode(true));
+  })()"
+    >Announce Quote</gux-button
+  >
+</div>
+
+<style>
+  .control {
+    display: flex;
+    gap: 10px;
+  }
+</style>
