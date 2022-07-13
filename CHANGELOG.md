@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.9.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.8...v3.9.0) (2022-07-13)
+
+
+### Features
+
+* **accordion:** add optional subheadings & icons ([3374c50](https://github.com/MyPureCloud/genesys-webcomponents/commit/3374c502817f77913c820dd522b30232dbc186fe))
+
 ### [3.8.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.7...v3.8.8) (2022-07-13)
 
 ### [3.8.7](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.6...v3.8.7) (2022-07-12)
