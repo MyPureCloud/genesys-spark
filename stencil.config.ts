@@ -59,6 +59,10 @@ export const config: Config = {
   },
   testing: {
     browserArgs: ['--no-sandbox'],
+    moduleDirectories: ['node_modules', 'src'],
+    moduleNameMapper: {
+      '@utils/(.*)': '<rootDir>/src/utils/$1'
+    },
     browserHeadless: true,
     collectCoverage: true,
     coverageDirectory: 'build/test-reports/coverage',
