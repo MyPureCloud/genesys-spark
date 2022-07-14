@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.9.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.9.1...v3.9.2) (2022-07-14)
+
+
+### Bug Fixes
+
+* **gux-toggle:** add option to display gux-toggle inline ([#838](https://github.com/MyPureCloud/genesys-webcomponents/issues/838)) ([8f53c50](https://github.com/MyPureCloud/genesys-webcomponents/commit/8f53c503e27937f840dc08dbf61df24dfd425f71))
+
 ### [3.9.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.9.0...v3.9.1) (2022-07-14)
 
 ## [3.9.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.8.8...v3.9.0) (2022-07-13)
