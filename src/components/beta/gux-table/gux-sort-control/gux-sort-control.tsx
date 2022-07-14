@@ -30,12 +30,15 @@ export class GuxSortControl {
   private renderSrText(): JSX.Element {
     return (
       <div class="gux-sr-only">
-        {this.i18n('colSortDirection', {
-          colLabel: this.colLabel,
-          colSortDirection: this.colSortDirection
+        {this.i18n(this.getSrTextLocalisationKey(), {
+          colLabel: this.colLabel
         })}
       </div>
     ) as JSX.Element;
+  }
+
+  private getSrTextLocalisationKey(): string {
+    return `${this.colSortDirection}ColumnSort`;
   }
 
   async componentWillRender(): Promise<void> {
