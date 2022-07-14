@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.9.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.9.2...v3.9.3) (2022-07-14)
+
+
+### Bug Fixes
+
+* **sort-control:** optimizing localisations ([6490cd2](https://github.com/MyPureCloud/genesys-webcomponents/commit/6490cd2a7bd42c2f1dd5f8a66c2c5a1eacf46eeb))
+
 ### [3.9.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.9.1...v3.9.2) (2022-07-14)
 
 
