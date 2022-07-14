@@ -4,6 +4,7 @@ import {
   Event,
   EventEmitter,
   h,
+  Host,
   JSX,
   Listen,
   Prop
@@ -51,6 +52,9 @@ export class GuxToggle {
 
   @Prop()
   errorMessage: string;
+
+  @Prop()
+  displayInline: boolean = false;
 
   @Event()
   check: EventEmitter<boolean>;
@@ -112,11 +116,18 @@ export class GuxToggle {
       return (
         <div class="gux-toggle-label-and-error">
           <div class="gux-toggle-label">
-            <div id={this.labelId} class="gux-toggle-label-text">
-              {labelText}
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id={this.labelId}>{labelText}</span>
+                {this.renderLoading()}
+              </span>
+              <span class="gux-toggle-label-text-inner gux-hidden">
+                {this.checkedLabel}
+              </span>
+              <span class="gux-toggle-label-text-inner gux-hidden">
+                {this.uncheckedLabel}
+              </span>
             </div>
-
-            {this.renderLoading()}
           </div>
         </div>
       ) as JSX.Element;
@@ -135,27 +146,29 @@ export class GuxToggle {
 
   render(): JSX.Element {
     return (
-      <div
-        class={{
-          'gux-toggle-container': true,
-          'gux-toggle-label-left': this.labelPosition === 'left',
-          'gux-disabled': this.disabled || this.loading
-        }}
-      >
-        <div class="gux-toggle-input">
-          <gux-toggle-slider
-            checked={this.checked}
-            disabled={this.disabled || this.loading}
-            guxAriaLabel={this.getAriaLabel()}
-            labelId={
-              this.checkedLabel && this.uncheckedLabel ? this.labelId : ''
-            }
-            errorId={this.errorMessage ? this.errorId : ''}
-          ></gux-toggle-slider>
-          {this.renderLabel()}
+      <Host class={{ 'gux-display-inline': this.displayInline }}>
+        <div
+          class={{
+            'gux-toggle-container': true,
+            'gux-toggle-label-left': this.labelPosition === 'left',
+            'gux-disabled': this.disabled || this.loading
+          }}
+        >
+          <div class="gux-toggle-input">
+            <gux-toggle-slider
+              checked={this.checked}
+              disabled={this.disabled || this.loading}
+              guxAriaLabel={this.getAriaLabel()}
+              labelId={
+                this.checkedLabel && this.uncheckedLabel ? this.labelId : ''
+              }
+              errorId={this.errorMessage ? this.errorId : ''}
+            ></gux-toggle-slider>
+            {this.renderLabel()}
+          </div>
+          {this.renderError()}
         </div>
-        {this.renderError()}
-      </div>
+      </Host>
     ) as JSX.Element;
   }
 }

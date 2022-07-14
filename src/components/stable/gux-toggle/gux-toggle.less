@@ -8,6 +8,10 @@
   outline: none;
 }
 
+:host(.gux-display-inline) {
+  display: inline-block;
+}
+
 .gux-toggle-container {
   &.gux-disabled {
     pointer-events: none;
@@ -25,7 +29,12 @@
   &.gux-toggle-label-left {
     .gux-toggle-input {
       flex-direction: row-reverse;
-      text-align: right;
+
+      .gux-toggle-label {
+        .gux-toggle-label-text {
+          place-items: end;
+        }
+      }
     }
 
     .gux-toggle-error {
@@ -45,6 +54,21 @@
       position: relative;
       display: inline-block;
       padding: 0 @spacing-2xs;
+
+      .gux-toggle-label-text {
+        display: grid;
+        grid-template-areas: 'inner-div';
+        place-items: start;
+
+        .gux-toggle-label-text-inner {
+          position: relative;
+          grid-area: inner-div;
+
+          &.gux-hidden {
+            visibility: hidden;
+          }
+        }
+      }
 
       .gux-toggle-label-loading {
         position: absolute;
