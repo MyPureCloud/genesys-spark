@@ -5,5 +5,6 @@
   "selectAllTableRows": "เลือกแถวตารางทั้งหมด",
   "selectTableRow": "เลือกแถวตาราง",
   "sortAsc": "เรียงจากน้อยไปมากแล้ว",
-  "sortDesc": "เรียงจากมากไปน้อยแล้ว"
+  "sortDesc": "เรียงจากมากไปน้อยแล้ว",
+  "colSortDirection": "{colLabel} , เรียง {colSortDirection}"
 }
