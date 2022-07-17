@@ -31,6 +31,14 @@ Example usage
 | `open`  | Triggered when the menu is open  | `CustomEvent<any>` |
 
 
+## Slots
+
+| Slot     | Description            |
+| -------- | ---------------------- |
+| `"icon"` | optional slot for icon |
+| `"text"` | slot for button text   |
+
+
 ## Dependencies
 
 ### Depends on

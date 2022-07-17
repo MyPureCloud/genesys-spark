@@ -14,6 +14,10 @@ import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
 import { trackComponent } from '../../../usage-tracking';
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
+/**
+ * @slot icon - optional slot for icon
+ * @slot text - slot for button text
+ */
 @Component({
   styleUrl: 'gux-button-multi.less',
   tag: 'gux-button-multi',
