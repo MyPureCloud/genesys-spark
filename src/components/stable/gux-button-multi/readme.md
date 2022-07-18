@@ -33,10 +33,9 @@ Example usage
 
 ## Slots
 
-| Slot     | Description            |
-| -------- | ---------------------- |
-| `"icon"` | optional slot for icon |
-| `"text"` | slot for button text   |
+| Slot        | Description                            |
+| ----------- | -------------------------------------- |
+| `"content"` | slot for optional icon and button text |
 
 
 ## Dependencies
