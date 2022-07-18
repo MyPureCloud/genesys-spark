@@ -5,5 +5,6 @@
   "selectAllTableRows": "בחר את כל השורות בטבלה",
   "selectTableRow": "בחר שורה בטבלה",
   "sortAsc": "מיון בסדר עולה",
-  "sortDesc": "מיון בסדר יורד"
+  "sortDesc": "מיון בסדר יורד",
+  "colSortDirection": "{colLabel} , מיון {colSortDirection}"
 }
