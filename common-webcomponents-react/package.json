@@ -22,7 +22,7 @@
   },
   "peerDependencies": {
     "genesys-spark-components": "3",
-    "react": "16 - 17",
-    "react-dom": "16 - 17"
+    "react": "16 - 18",
+    "react-dom": "16 - 18"
   }
 }
