@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.10.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.9.5...v3.10.0) (2022-07-19)
+
+
+### Features
+
+* **loading-message:** addition of loading message component ([e6ead4f](https://github.com/MyPureCloud/genesys-webcomponents/commit/e6ead4f705b64d737292353f2c0f32b4f21fbe97))
+
 ### [3.9.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.9.4...v3.9.5) (2022-07-19)
 
 
