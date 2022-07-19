@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.10.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.10.0...v3.10.1) (2022-07-19)
+
+
+### Bug Fixes
+
+* **tracking:** update usage tracking to batch and limit the number of events sent ([4a10594](https://github.com/MyPureCloud/genesys-webcomponents/commit/4a1059414c85140af9e49c693a800be5046a3219))
+
 ## [3.10.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.9.5...v3.10.0) (2022-07-19)
 
 
