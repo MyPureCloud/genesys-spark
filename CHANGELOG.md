@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.11.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.10.1...v3.11.0) (2022-07-21)
+
+
+### Features
+
+* added DateTimeFormatter class ([28f6cd1](https://github.com/MyPureCloud/genesys-webcomponents/commit/28f6cd11dcc6cc402331bc15686ceb62e1fd07db))
+* **datetimeformatter:** added format types ([1462ed8](https://github.com/MyPureCloud/genesys-webcomponents/commit/1462ed898f8aa0dda37064fe8a6147e3de6c6e13))
+* **datetimeformatter:** addressed PR comments ([0029415](https://github.com/MyPureCloud/genesys-webcomponents/commit/002941556e1782003ad4843948fedfd9b2d0b91d))
+* **datetimeformatter:** changed type of locale ([c03fd5b](https://github.com/MyPureCloud/genesys-webcomponents/commit/c03fd5bdb1864abb928bb6df839083a6de20b1ec))
+* **datetimeformatter:** updated format type name ([c4a4559](https://github.com/MyPureCloud/genesys-webcomponents/commit/c4a4559310554fed85a9dd6e9f484a64aca05768))
+* **datetimeformatter:** using the options variable ([08e9711](https://github.com/MyPureCloud/genesys-webcomponents/commit/08e9711e88c912dfd3649f8521c5f4f092765115))
+
 ### [3.10.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.10.0...v3.10.1) (2022-07-19)
 
 
