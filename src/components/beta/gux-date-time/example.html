@@ -3,24 +3,16 @@
 <h2>Date and Time</h2>
 
 <h3>Short</h3>
-<gux-date-time-beta id="time-1" locale="en" format="short"></gux-date-time-beta>
+<gux-date-time-beta id="time-1" format="short"></gux-date-time-beta>
 
 <h3>Medium</h3>
-<gux-date-time-beta id="time-2" locale="en" format="medium"></gux-date-time-beta>
+<gux-date-time-beta id="time-2" format="medium"></gux-date-time-beta>
 
 <h3>Long</h3>
-<gux-date-time-beta id="time-3" locale="en" format="long"></gux-date-time-beta>
+<gux-date-time-beta id="time-3" format="long"></gux-date-time-beta>
 
 <h3>Full</h3>
-<gux-date-time-beta id="time-4" locale="en" format="full"></gux-date-time-beta>
-
-<h2>Languages</h2>
-
-<h3>French</h3>
-<gux-date-time-beta id="time-5" locale="fr" format="full"></gux-date-time-beta>
-
-<h3>Chinese Simplified</h3>
-<gux-date-time-beta id="time-6" locale="zh-cn" format="full"></gux-date-time-beta>
+<gux-date-time-beta id="time-4" format="full"></gux-date-time-beta>
 
 <style
   onload="(function() {
@@ -28,17 +20,16 @@
     const time2 = document.querySelector('#time-2');
     const time3 = document.querySelector('#time-3');
     const time4 = document.querySelector('#time-4');
-    const time5 = document.querySelector('#time-5');
-    const time6 = document.querySelector('#time-6');
 
-    const date = Date.now();
+    const date = new Date();
 
     time1.date = date;
     time2.date = date;
     time3.date = date;
     time4.date = date;
-    time5.date = date;
-    time6.date = date;
   })()"
 >
+  .not-used {
+    -custom-noop: noop;
+  }
 </style>

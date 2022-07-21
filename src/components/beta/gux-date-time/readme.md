@@ -7,11 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                      | Default      |
-| -------- | --------- | ----------- | ----------------------------------------- | ------------ |
-| `date`   | `date`    |             | `number`                                  | `Date.now()` |
-| `format` | `format`  |             | `"full" \| "long" \| "medium" \| "short"` | `undefined`  |
-| `locale` | `locale`  |             | `string`                                  | `'en'`       |
+| Property | Attribute | Description               | Type                                      | Default      |
+| -------- | --------- | ------------------------- | ----------------------------------------- | ------------ |
+| `date`   | --        | The Date object to format | `Date`                                    | `new Date()` |
+| `format` | `format`  | Format option type             | `"full" \| "long" \| "medium" \| "short"` | `'full'`     |
 
 
 ----------------------------------------------

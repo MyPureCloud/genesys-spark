@@ -1,6 +1,7 @@
-import { Component, h, JSX, Prop, Element } from '@stencil/core';
+import { Component, h, Prop, Element } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 import { DateTimeFormatter, GuxDateTimeFormat } from '../../../i18n/DateTimeFormatter';
+import { getDesiredLocale } from '../../../i18n/index';
 
 @Component({
   styleUrl: 'gux-date.less',
@@ -10,24 +11,30 @@ import { DateTimeFormatter, GuxDateTimeFormat } from '../../../i18n/DateTimeForm
 export class GuxDate {
   private formatter : DateTimeFormatter;
 
+  /**
+   * Reference to the host element.
+   */
   @Element()
   root: HTMLElement;
-  
-  @Prop()
-  locale: string = 'en';
 
+  /**
+   * The Date object to format 
+   */
   @Prop()
-  date: number = Date.now();
+  date: Date = new Date();
 
+  /**
+   * Format option type 
+   */
   @Prop()
-  format: GuxDateTimeFormat;
+  format: GuxDateTimeFormat = 'full';
 
   componentWillLoad(): void {
     trackComponent(this.root);
-    this.formatter = new DateTimeFormatter(this.locale);
+    this.formatter = new DateTimeFormatter(getDesiredLocale(this.root));
   }
 
-  render(): JSX.Element {
-    return (<div>{ this.formatter.formatDate(new Date(this.date), this.format) }</div>) as JSX.Element;
+  render() {
+    return (<span>{ this.formatter.formatDate(this.date, this.format) }</span>);
   }
 }

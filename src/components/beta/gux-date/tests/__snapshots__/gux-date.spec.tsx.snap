@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#render different datetime formats eg(short,medium,full,long) should render component as expected (1) 1`] = `
+<gux-date-beta>
+  <mock:shadow-root>
+    <span>
+      7/7/22
+    </span>
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`#render different datetime formats eg(short,medium,full,long) should render component as expected (2) 1`] = `
+<gux-date-beta>
+  <mock:shadow-root>
+    <span>
+      Jul 7, 2022
+    </span>
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`#render different datetime formats eg(short,medium,full,long) should render component as expected (3) 1`] = `
+<gux-date-beta>
+  <mock:shadow-root>
+    <span>
+      Thursday, July 7, 2022
+    </span>
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`#render different datetime formats eg(short,medium,full,long) should render component as expected (4) 1`] = `
+<gux-date-beta>
+  <mock:shadow-root>
+    <span>
+      July 7, 2022
+    </span>
+  </mock:shadow-root>
+</gux-date-beta>
+`;
