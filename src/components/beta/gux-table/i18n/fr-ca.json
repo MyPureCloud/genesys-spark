@@ -6,5 +6,6 @@
   "selectTableRow": "Sélectionner une ligne de la table",
   "sortAsc": "Tri croissant",
   "sortDesc": "Tri décroissant",
-  "colSortDirection": "{colLabel} , trier {colSortDirection}"
+  "ascendingColumnSort": "{colLabel}, tri croissant",
+  "descendingColumnSort": "{colLabel}, tri décroissant"
 }
