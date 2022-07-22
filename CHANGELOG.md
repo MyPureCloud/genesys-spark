@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.12.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.11.1...v3.12.0) (2022-07-22)
+
+
+### Features
+
+* **css:** add gux-prefixed spacing variables ([5526c38](https://github.com/MyPureCloud/genesys-webcomponents/commit/5526c3882d5bfd269a83dfe30f9bfd486a1a6a91))
+
 ### [3.11.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.11.0...v3.11.1) (2022-07-22)
 
 ## [3.11.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.10.1...v3.11.0) (2022-07-21)
