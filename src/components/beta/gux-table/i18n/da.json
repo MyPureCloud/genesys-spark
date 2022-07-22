@@ -6,5 +6,6 @@
   "selectTableRow": "Vælg tabelrække",
   "sortAsc": "Sorteret stigende",
   "sortDesc": "Sorteret faldende",
-  "colSortDirection": "{colLabel} , sortér {colSortDirection}"
+  "ascendingColumnSort": "{colLabel}, Sortér stigende",
+  "descendingColumnSort": "{colLabel}, Sortér faldende"
 }

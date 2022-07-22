@@ -6,5 +6,6 @@
   "selectTableRow": "選擇資料表列",
   "sortAsc": "遞增排序",
   "sortDesc": "遞減排序",
-  "colSortDirection": "{colLabel}，{colSortDirection}排序"
+  "ascendingColumnSort": "{colLabel}，遞增排序",
+  "descendingColumnSort": "{colLabel}，遞減排序"
 }

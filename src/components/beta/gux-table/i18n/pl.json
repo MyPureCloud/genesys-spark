@@ -6,5 +6,6 @@
   "selectTableRow": "Wybierz wiersz tabeli",
   "sortAsc": "Sortowane rosnąco",
   "sortDesc": "Sortowane malejąco",
-  "colSortDirection": "{colLabel} , sort. {colSortDirection}"
+  "ascendingColumnSort": "{colLabel}, sortowanie rosnąco",
+  "descendingColumnSort": "{colLabel}, sortowanie malejąco"
 }

@@ -6,5 +6,6 @@
   "selectTableRow": "Valitse taulukon rivi",
   "sortAsc": "Lajiteltu nousevaan järjestykseen",
   "sortDesc": "Lajiteltu laskevaan järjestykseen",
-  "colSortDirection": "{colLabel}, lajittele {colSortDirection}"
+  "ascendingColumnSort": "{colLabel}, lajittele nousevaan järjestykseen",
+  "descendingColumnSort": "{colLabel}, lajittele laskevaan järjestykseen"
 }

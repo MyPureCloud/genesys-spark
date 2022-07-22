@@ -6,5 +6,6 @@
   "selectTableRow": "テーブル行を選択",
   "sortAsc": "昇順にソート済み",
   "sortDesc": "降順にソート済み",
-  "colSortDirection": "{colLabel} ,  {colSortDirection}にソート"
+  "ascendingColumnSort": "{colLabel}, 昇順ソート",
+  "descendingColumnSort": "{colLabel}, 降順ソート"
 }

@@ -6,5 +6,6 @@
   "selectTableRow": "Vybrat řádek tabulky",
   "sortAsc": "Seřazeno vzestupně",
   "sortDesc": "Seřazeno sestupně",
-  "colSortDirection": "{colLabel}, řazení {colSortDirection}"
+  "ascendingColumnSort": "{colLabel}, řadit vzestupně",
+  "descendingColumnSort": "{colLabel}, řadit sestupně"
 }

@@ -6,5 +6,6 @@
   "selectTableRow": "테이블 행 선택",
   "sortAsc": "오름차순으로 정렬됨",
   "sortDesc": "내림차순으로 정렬됨",
-  "colSortDirection": "{colLabel}, {colSortDirection}(으)로 정렬"
+  "ascendingColumnSort": "{colLabel}, 오름차순으로 정렬",
+  "descendingColumnSort": "{colLabel}, 내림차순으로 정렬"
 }

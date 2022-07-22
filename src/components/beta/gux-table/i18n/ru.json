@@ -6,5 +6,6 @@
   "selectTableRow": "Выбрать строку таблицы",
   "sortAsc": "Сортировка по возрастанию",
   "sortDesc": "Сортировка по убыванию",
-  "colSortDirection": "{colLabel}, сортировка по {colSortDirection}"
+  "ascendingColumnSort": "{colLabel}, по возрастанию",
+  "descendingColumnSort": "{colLabel}, по убыванию"
 }
