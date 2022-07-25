@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.13.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.12.1...v3.13.0) (2022-07-25)
+
+
+### Features
+
+* **gux-accordion:** add new option for accordion section with no padding ([#847](https://github.com/MyPureCloud/genesys-webcomponents/issues/847)) ([23e4ec4](https://github.com/MyPureCloud/genesys-webcomponents/commit/23e4ec42fa4ddc4803f442976eb45e3e45830dff))
+* **gux-table-header-menu:** add new table header menu ([#804](https://github.com/MyPureCloud/genesys-webcomponents/issues/804)) ([823d391](https://github.com/MyPureCloud/genesys-webcomponents/commit/823d3919fe3f44987dafbe73c8f67ec110dcd004))
+
 ### [3.12.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.12.0...v3.12.1) (2022-07-25)
 
 ## [3.12.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.11.1...v3.12.0) (2022-07-22)
