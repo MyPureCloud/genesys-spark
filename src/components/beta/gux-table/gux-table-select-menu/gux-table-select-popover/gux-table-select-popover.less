@@ -1,0 +1,17 @@
+@import (reference) '../../../../../style/color.less';
+@import (reference) '../../../../../style/shadows.less';
+@import (reference) '../../../../../style/spacing.less';
+
+:host {
+  color: @gux-black-50;
+}
+
+.gux-popover-wrapper {
+  z-index: 2;
+  display: inline-block;
+  padding: @spacing-xs 0;
+  background-color: @gux-grey-100;
+  border: 1px solid @gux-grey-30;
+  border-radius: @spacing-2xs;
+  .gux-shadow-20();
+}

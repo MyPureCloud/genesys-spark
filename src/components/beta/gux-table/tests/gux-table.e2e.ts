@@ -1,6 +1,14 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
+const axeExclusions = [
+  {
+    issueId: 'duplicate-id-aria',
+    exclusionReason:
+      'Test uses seeded value for Math.random, so duplicate ids are expected'
+  }
+];
+
 async function newNonrandomE2EPage(
   {
     html
@@ -124,12 +132,74 @@ describe('gux-table-beta', () => {
             </table>
           </gux-table-beta>
         `
+      },
+      {
+        description: 'should render a gux-table-select menu',
+        html: `
+          <gux-table-beta>
+            <table slot="data">
+              <thead>
+                <tr data-row-id="head">
+                  <th>
+                  <gux-table-select-menu>
+                  <gux-all-row-select></gux-all-row-select>
+                  <gux-list slot="select-menu-options">
+                    <gux-list-item onclick="notify(event)">
+                      All on page
+                    </gux-list-item>
+                    <gux-list-item onclick="notify(event)"> None </gux-list-item>
+                    <gux-list-item onclick="notify(event)">
+                      Bring selected to top
+                    </gux-list-item>
+                  </gux-list>
+                </gux-table-select-menu>
+      
+                  </th>
+                  <th data-column-name="first-name">First name</th>
+                  <th data-column-name="last-name">Last name</th>
+                  <th data-column-name="age" data-cell-numeric>Age</th>
+                  <th data-column-name="action" data-cell-action>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-row-id="person-id-1">
+                  <td><gux-row-select disabled></gux-row-select></td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td data-cell-numeric>25</td>
+                  <td data-cell-action>Delete</td>
+                </tr>
+                <tr data-row-id="person-id-2">
+                  <td><gux-row-select></gux-row-select></td>
+                  <td>Jane</td>
+                  <td>Doe</td>
+                  <td data-cell-numeric>23</td>
+                  <td data-cell-action>Delete</td>
+                </tr>
+                <tr data-row-id="person-id-3">
+                  <td><gux-row-select disabled></gux-row-select></td>
+                  <td>Jane</td>
+                  <td>Doe</td>
+                  <td data-cell-numeric>21</td>
+                  <td data-cell-action>Delete</td>
+                </tr>
+                <tr data-row-id="person-id-4">
+                  <td><gux-row-select></gux-row-select></td>
+                  <td>Jane</td>
+                  <td>Doe</td>
+                  <td data-cell-numeric>23</td>
+                  <td data-cell-action>Delete</td>
+                </tr>
+              </tbody>
+            </table>
+          </gux-table-beta>
+        `
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
         const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-table-beta');
-        await a11yCheck(page);
+        await a11yCheck(page, axeExclusions);
 
         expect(element).toHaveAttribute('hydrated');
         expect(element.outerHTML).toMatchSnapshot();
@@ -137,7 +207,7 @@ describe('gux-table-beta', () => {
       it(`${description} with i18n strings`, async () => {
         const page = await newNonrandomE2EPage({ html }, 'ja');
         const element = await page.find('gux-table-beta');
-        await a11yCheck(page);
+        await a11yCheck(page, axeExclusions);
 
         expect(element).toHaveAttribute('hydrated');
         expect(element.outerHTML).toMatchSnapshot();
@@ -433,5 +503,83 @@ describe('gux-table-beta', () => {
     await page.waitForChanges();
 
     expect(inputElement.getProperty('checked')).toBeTruthy();
+  });
+  it('should open and close the table select menu', async () => {
+    const html = `
+      <gux-table-beta>
+        <table slot="data">
+          <thead>
+            <tr data-row-id="head">
+              <th>
+                <gux-table-select-menu>
+                  <gux-all-row-select></gux-all-row-select>
+                  <gux-list slot="select-menu-options">
+                    <gux-list-item onclick="notify(event)">
+                      All on page
+                    </gux-list-item>
+                    <gux-list-item onclick="notify(event)"> None </gux-list-item>
+                    <gux-list-item onclick="notify(event)">
+                      Bring selected to top
+                    </gux-list-item>
+                  </gux-list>
+                </gux-table-select-menu>
+
+              </th>
+              <th data-column-name="first-name">First name</th>
+              <th data-column-name="last-name">Last name</th>
+              <th data-column-name="age" data-cell-numeric>Age</th>
+              <th data-column-name="action" data-cell-action>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-row-id="person-id-1">
+              <td><gux-row-select disabled></gux-row-select></td>
+              <td>John</td>
+              <td>Doe</td>
+              <td data-cell-numeric>25</td>
+              <td data-cell-action>Delete</td>
+            </tr>
+            <tr data-row-id="person-id-2">
+              <td><gux-row-select></gux-row-select></td>
+              <td>Jane</td>
+              <td>Doe</td>
+              <td data-cell-numeric>23</td>
+              <td data-cell-action>Delete</td>
+            </tr>
+            <tr data-row-id="person-id-3">
+              <td><gux-row-select disabled></gux-row-select></td>
+              <td>Jane</td>
+              <td>Doe</td>
+              <td data-cell-numeric>21</td>
+              <td data-cell-action>Delete</td>
+            </tr>
+            <tr data-row-id="person-id-4">
+              <td><gux-row-select></gux-row-select></td>
+              <td>Jane</td>
+              <td>Doe</td>
+              <td data-cell-numeric>23</td>
+              <td data-cell-action>Delete</td>
+            </tr>
+          </tbody>
+        </table>
+      </gux-table-beta>
+    `;
+
+    const page = await newE2EPage({ html });
+
+    const tableSelectMenuElement = await page.find('gux-table-select-menu');
+    const tableSelectMenuButton = await tableSelectMenuElement.find(
+      '.gux-select-menu-button'
+    );
+    const tableSelectPopover = await tableSelectMenuElement.find(
+      'gux-table-select-popover'
+    );
+
+    expect(tableSelectPopover.getAttribute('hidden')).toBe('');
+
+    await tableSelectMenuButton.click();
+    await page.waitForChanges();
+
+    expect(tableSelectPopover.getAttribute('hidden')).toBe(null);
   });
 });

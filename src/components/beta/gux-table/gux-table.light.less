@@ -49,10 +49,12 @@ gux-table-beta {
     }
 
     thead {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+
       th {
-        position: sticky;
-        top: 0;
-        z-index: 1;
+        position: relative;
         background: @gux-grey-100;
       }
 

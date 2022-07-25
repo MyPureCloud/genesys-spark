@@ -5,7 +5,7 @@ export async function a11yCheck(
   page: E2EPage,
   axeExclusions: {
     issueId: string;
-    target: string;
+    target?: string;
     exclusionReason: string;
   }[] = [],
   axeScanContext: string = ''
