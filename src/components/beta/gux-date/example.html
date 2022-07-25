@@ -2,6 +2,9 @@
 
 <h2>Dates</h2>
 
+<h3>Default</h3>
+<gux-date-beta></gux-date-beta>
+
 <h3>Short</h3>
 <gux-date-beta id="date-1" format="short"></gux-date-beta>
 
@@ -21,7 +24,7 @@
     const date3 = document.querySelector('#date-3');
     const date4 = document.querySelector('#date-4');
 
-    const date = new Date();
+    const date = new Date().toISOString();
 
     date1.date = date;
     date2.date = date;

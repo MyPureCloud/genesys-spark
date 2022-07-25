@@ -2,6 +2,9 @@
 
 <h2>Times</h2>
 
+<h3>Default</h3>
+<gux-time-beta></gux-time-beta>
+
 <h3>Short</h3>
 <gux-time-beta id="time-1" format="short"></gux-time-beta>
 
@@ -21,12 +24,12 @@
     const time3 = document.querySelector('#time-3');
     const time4 = document.querySelector('#time-4');
 
-    const date = new Date();
+    const date = new Date().toISOString();
 
-    time1.date = date;
-    time2.date = date;
-    time3.date = date;
-    time4.date = date;
+    time1.time = date;
+    time2.time = date;
+    time3.time = date;
+    time4.time = date;
   })()"
 >
   .not-used {

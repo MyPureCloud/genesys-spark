@@ -1,4 +1,4 @@
-import { Component, h, Prop, Element } from '@stencil/core';
+import { Component, h, Host, Prop, Element } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 import { DateTimeFormatter, GuxDateTimeFormat } from '../../../i18n/DateTimeFormatter';
 import { getDesiredLocale } from '../../../i18n/index';
@@ -18,10 +18,10 @@ export class GuxDate {
   root: HTMLElement;
 
   /**
-   * The Date object to format 
+   * The ISO string representation of the date to format 
    */
   @Prop()
-  date: Date = new Date();
+  date: string = new Date().toISOString();
 
   /**
    * Format option type 
@@ -35,6 +35,6 @@ export class GuxDate {
   }
 
   render() {
-    return (<span>{ this.formatter.formatDate(this.date, this.format) }</span>);
+    return (<Host class="gux-date">{ this.formatter.formatDate(new Date(this.date), this.format) }</Host>);
   }
 }
