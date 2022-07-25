@@ -12,7 +12,10 @@ import {
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { logError } from '@utils/error/log-error';
 
-import { GuxAccordionSectionArrowPosition } from './gux-accordion-section.types';
+import {
+  GuxAccordionSectionArrowPosition,
+  GuxAccordionSectionContentLayout
+} from './gux-accordion-section.types';
 
 /**
  * @slot header - Required slot for the heading
@@ -34,6 +37,9 @@ export class GuxAccordionSection {
 
   @Prop()
   arrowPosition: GuxAccordionSectionArrowPosition = 'default';
+
+  @Prop()
+  contentLayout: GuxAccordionSectionContentLayout = 'text';
 
   @Prop({ mutable: true })
   open: boolean = false;
@@ -120,7 +126,8 @@ export class GuxAccordionSection {
           id={this.sectionId}
           class={{
             'gux-content': true,
-            'gux-expanded': this.open
+            'gux-expanded': this.open,
+            'gux-text-content-layout': this.contentLayout === 'text'
           }}
         >
           <slot name="content"></slot>

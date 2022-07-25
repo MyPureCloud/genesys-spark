@@ -17,7 +17,7 @@ exports[`gux-accordion renders 1`] = `
             <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </button>
-        <div class="gux-content" id="gux-accordion-section-i">
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
           <slot name="content"></slot>
         </div>
       </section>
@@ -41,7 +41,7 @@ exports[`gux-accordion renders 1`] = `
             <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </button>
-        <div class="gux-content" id="gux-accordion-section-i">
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
           <slot name="content"></slot>
         </div>
       </section>
@@ -65,7 +65,7 @@ exports[`gux-accordion renders 1`] = `
             <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </button>
-        <div class="gux-content" id="gux-accordion-section-i">
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
           <slot name="content"></slot>
         </div>
       </section>
@@ -93,7 +93,7 @@ exports[`gux-accordion renders 1`] = `
             <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </button>
-        <div class="gux-content" id="gux-accordion-section-i">
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
           <slot name="content"></slot>
         </div>
       </section>
@@ -122,7 +122,7 @@ exports[`gux-accordion renders 1`] = `
             <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </button>
-        <div class="gux-content" id="gux-accordion-section-i">
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
           <slot name="content"></slot>
         </div>
       </section>

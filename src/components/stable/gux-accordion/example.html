@@ -159,6 +159,39 @@
   </gux-accordion-section>
 </gux-accordion>
 
+<h2>Sections with custom content layout (no padding)</h2>
+
+<gux-accordion>
+  <gux-accordion-section content-layout="custom">
+    <h2 slot="header">First Section</h2>
+    <span slot="content">
+      <gux-form-field-textarea>
+        <textarea slot="input" name="textarea"></textarea>
+        <label slot="label">Type response here</label>
+      </gux-form-field-textarea>
+    </span>
+  </gux-accordion-section>
+  <gux-accordion-section open content-layout="custom">
+    <h2 slot="header">Second Section</h2>
+    <span slot="content">
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="options" value="1" />
+        <label slot="label">Option 1</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="options" value="2" checked />
+        <label slot="label">Option 2</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="options" value="3" />
+        <label slot="label">Option 3</label>
+      </gux-form-field-radio>
+    </span>
+  </gux-accordion-section>
+</gux-accordion>
+
 <h2>With icons & subheaders</h2>
 <gux-accordion>
   <gux-accordion-section>

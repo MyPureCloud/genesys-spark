@@ -8,6 +8,7 @@
 | Property          | Attribute          | Description | Type                         | Default     |
 | ----------------- | ------------------ | ----------- | ---------------------------- | ----------- |
 | `arrowPosition`   | `arrow-position`   |             | `"beside-text" \| "default"` | `'default'` |
+| `contentLayout`   | `content-layout`   |             | `"custom" \| "text"`         | `'text'`    |
 | `disabled`        | `disabled`         |             | `boolean`                    | `false`     |
 | `open`            | `open`             |             | `boolean`                    | `false`     |
 | `reverseHeadings` | `reverse-headings` |             | `boolean`                    | `false`     |
