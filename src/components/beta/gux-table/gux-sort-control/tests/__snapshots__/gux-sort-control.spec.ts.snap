@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-sort-control #render Not sorted 1`] = `
+<gux-sort-control>
+  <mock:shadow-root>
+    <button class="gux-sort" type="button">
+      <span class="gux-sr-only">
+        Column Header 1 . The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order
+      </span>
+    </button>
+    <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+  </mock:shadow-root>
+</gux-sort-control>
+`;
+
+exports[`gux-sort-control #render Sorted ascending 1`] = `
+<gux-sort-control>
+  <mock:shadow-root>
+    <button class="gux-active gux-sort" type="button">
+      <span class="gux-sr-only">
+        Column Header 1 . The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order
+      </span>
+    </button>
+    <gux-icon class="gux-active" decorative="" icon-name="arrow-solid-down"></gux-icon>
+  </mock:shadow-root>
+</gux-sort-control>
+`;
+
+exports[`gux-sort-control #render Sorted descending 1`] = `
+<gux-sort-control>
+  <mock:shadow-root>
+    <button class="gux-active gux-sort" type="button">
+      <span class="gux-sr-only">
+        Column Header 1 . The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order
+      </span>
+    </button>
+    <gux-icon class="gux-active" decorative="" icon-name="arrow-solid-up"></gux-icon>
+  </mock:shadow-root>
+</gux-sort-control>
+`;
+
+exports[`gux-sort-control #render Sorted descending, unsorted allowed 1`] = `
+<gux-sort-control include-unsorted="">
+  <mock:shadow-root>
+    <button class="gux-active gux-sort" type="button">
+      <span class="gux-sr-only">
+        Column Header 1 . The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column
+      </span>
+    </button>
+    <gux-icon class="gux-active" decorative="" icon-name="arrow-solid-up"></gux-icon>
+  </mock:shadow-root>
+</gux-sort-control>
+`;

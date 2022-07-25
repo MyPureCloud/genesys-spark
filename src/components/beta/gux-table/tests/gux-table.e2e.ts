@@ -220,8 +220,9 @@ describe('gux-table-beta', () => {
     <table slot="data">
       <thead>
         <tr>
-          <th data-column-name="first-name" data-sortable aria-sort="ascending">
+          <th data-column-name="first-name" aria-sort="ascending">
             <span>First name</span>
+            <gux-sort-control />
           </th>
           <th data-column-name="last-name">Last name</th>
           <th data-column-name="age" data-cell-numeric>Age</th>
@@ -275,8 +276,9 @@ describe('gux-table-beta', () => {
     <table slot="data">
       <thead>
         <tr>
-          <th data-column-name="first-name" data-sortable aria-sort="ascending">
+          <th data-column-name="first-name" aria-sort="ascending">
             First name
+            <gux-sort-control />
           </th>
           <th data-column-name="last-name">Last name</th>
           <th data-column-name="age" data-cell-numeric>Age</th>

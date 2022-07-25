@@ -345,22 +345,50 @@
     </tbody>
   </table>
 </gux-table-beta>
+
 <h2>Data table with sortable columns</h2>
 
 <style
   onload="(function () {
+    function ascending( a, b ) {
+      if ( a.textContent < b.textContent ){
+        return -1;
+      }
+      if ( a.textContent > b.textContent ){
+        return 1;
+      }
+      return 0;
+    }
+
+    function shuffle( a, b ) {
+      return 0.5 - Math.random();
+    }
+
     const table = document.querySelector('#sortable-table');
-    
+
     table.addEventListener('guxsortchanged',
     (event) => {
       const {columnName, sortDirection} = event.detail;
+
+      const columns = Array.from(table.querySelectorAll('thead tr th')).forEach((column) => column.removeAttribute('aria-sort'));
       const column = table.querySelector(`thead tr th[data-column-name='` + columnName + `']`);
       column.setAttribute('aria-sort', sortDirection);
 
-      var tableBody = table.querySelector('tbody');
-      [...tableBody.children]
-        .reverse()
-        .forEach(node=>tableBody.appendChild(node));
+      const tableBody = table.querySelector('tbody');
+
+      switch (sortDirection) {
+        case 'ascending':
+          [...tableBody.children].sort(ascending).forEach(node=>tableBody.appendChild(node));
+          break;
+        case 'descending':
+          [...tableBody.children].sort(ascending).reverse().forEach(node=>tableBody.appendChild(node));
+          break;
+        default:
+          [...tableBody.children].sort(shuffle).forEach(node=>tableBody.appendChild(node));
+          break;
+      }
+
+
     })
   })()"
 >
@@ -377,8 +405,14 @@
           First Name
           <gux-sort-control />
         </th>
-        <th data-column-name="last-name">Last name</th>
-        <th data-column-name="age" data-cell-numeric>Age</th>
+        <th data-column-name="last-name">
+          Last name
+          <gux-sort-control include-unsorted />
+        </th>
+        <th data-column-name="age" data-cell-numeric>
+          Age
+          <gux-sort-control />
+        </th>
         <th data-column-name="action" data-cell-action>Action</th>
       </tr>
     </thead>
@@ -398,13 +432,13 @@
       <tr>
         <td>Cathy</td>
         <td>Cat</td>
-        <td data-cell-numeric>21</td>
+        <td data-cell-numeric>31</td>
         <td data-cell-action>Delete</td>
       </tr>
       <tr>
         <td>Debbie</td>
         <td>Dog</td>
-        <td data-cell-numeric>23</td>
+        <td data-cell-numeric>33</td>
         <td data-cell-action>Delete</td>
       </tr>
     </tbody>

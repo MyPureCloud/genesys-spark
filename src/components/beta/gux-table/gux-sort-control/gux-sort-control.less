@@ -1,5 +1,5 @@
 @import (reference) '../../../../style/typography.less';
-@import (reference) '../../../../style/color-mixins.less';
+@import (reference) '../../../../style/color-palette.less';
 @import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/mixins.less';
 
@@ -22,18 +22,25 @@ button {
   cursor: pointer;
   background: transparent;
   border: none;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
   outline: none;
 
-  gux-icon {
-    float: right;
-    width: 16px;
-    height: 16px;
-    padding-right: 8.5px;
+  &:focus {
+    border-bottom-color: @gux-blue-80;
   }
 }
 
-button:focus {
-  border-bottom: 3px solid @gux-blue-80;
+gux-icon {
+  float: right;
+  width: 16px;
+  height: 16px;
+  padding-left: 8px;
+  color: @gux-grey-50;
+
+  &.gux-active {
+    color: @gux-black-50;
+  }
 }
 
 .gux-sr-only {

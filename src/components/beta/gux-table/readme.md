@@ -1,6 +1,59 @@
 # gux-table-beta
 
+## Breaking Changes during the beta period
 
+### Sorting API Change
+To improve the accessibility of the table sorting functionality we needed
+to make an API change. To make a table sortable by a particular column you now
+need to use a `gux-sort-control` component in that columns `<th>` element.
+Previously you needed to add a `data-sortable` attribute in that columns `<th>`
+element.
+
+#### Migration Example
+
+Before:
+```
+<gux-table-beta>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th data-sortable data-column-name="c1" aria-sort="ascending">Column 1 Header</th>
+        <th data-sortable data-column-name="c2">Column 2 Header</th>
+        <th>Column 3 Header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Column 1, Row 1</td>
+        <td>Column 2, Row 1</td>
+        <td>Column 3, Row 1</td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table-beta>
+```
+
+After:
+```
+<gux-table-beta>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th data-column-name="c1" aria-sort="ascending">Column 1 Header <gux-sort-control /></th>
+        <th data-column-name="c2">Column 2 Header <gux-sort-control /></th>
+        <th>Column 3 Header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Column 1, Row 1</td>
+        <td>Column 2, Row 1</td>
+        <td>Column 3, Row 1</td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table-beta>
+```
 
 <!-- Auto Generated Below -->
 
