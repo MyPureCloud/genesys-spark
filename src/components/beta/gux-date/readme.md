@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description                                         | Type                                      | Default                    |
-| -------- | --------- | --------------------------------------------------- | ----------------------------------------- | -------------------------- |
-| `date`   | `date`    | The ISO string representation of the date to format | `string`                                  | `new Date().toISOString()` |
-| `format` | `format`  | Format option type                                  | `"full" \| "long" \| "medium" \| "short"` | `'full'`                   |
+| Property   | Attribute  | Description                                         | Type                                      | Default                    |
+| ---------- | ---------- | --------------------------------------------------- | ----------------------------------------- | -------------------------- |
+| `datetime` | `datetime` | The ISO string representation of the date to format | `string`                                  | `new Date().toISOString()` |
+| `format`   | `format`   | Format option type                                  | `"full" \| "long" \| "medium" \| "short"` | `'short'`                  |
 
 
 ----------------------------------------------

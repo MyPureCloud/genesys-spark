@@ -4,7 +4,6 @@ import { DateTimeFormatter, GuxDateTimeFormat } from '../../../i18n/DateTimeForm
 import { getDesiredLocale } from '../../../i18n/index';
 
 @Component({
-  styleUrl: 'gux-date.less',
   tag: 'gux-date-beta',
   shadow: true
 })
@@ -21,13 +20,13 @@ export class GuxDate {
    * The ISO string representation of the date to format 
    */
   @Prop()
-  date: string = new Date().toISOString();
+  datetime: string = new Date().toISOString();
 
   /**
    * Format option type 
    */
   @Prop()
-  format: GuxDateTimeFormat = 'full';
+  format: GuxDateTimeFormat = 'short';
 
   componentWillLoad(): void {
     trackComponent(this.root);
@@ -35,6 +34,6 @@ export class GuxDate {
   }
 
   render() {
-    return (<Host class="gux-date">{ this.formatter.formatDate(new Date(this.date), this.format) }</Host>);
+    return (<Host>{ this.formatter.formatDate(new Date(this.datetime), this.format) }</Host>);
   }
 }

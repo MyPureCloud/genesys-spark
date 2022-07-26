@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#render different time formats eg(short,medium,full,long) should render component as expected (1) 1`] = `
-<gux-time-beta class="gux-time" format="short" time="2022-07-07T13:35:30.100Z">
+<gux-time-beta class="gux-time" datetime="2022-07-07T13:35:30.100Z" format="short">
   <mock:shadow-root>
-    9:35 AM
+    Invalid Date
   </mock:shadow-root>
 </gux-time-beta>
 `;
 
 exports[`#render different time formats eg(short,medium,full,long) should render component as expected (2) 1`] = `
-<gux-time-beta class="gux-time" format="medium" time="2022-07-07T13:35:30.100Z">
+<gux-time-beta class="gux-time" datetime="2022-07-07T13:35:30.100Z" format="medium">
   <mock:shadow-root>
-    9:35:30 AM
+    Invalid Date
   </mock:shadow-root>
 </gux-time-beta>
 `;
 
 exports[`#render different time formats eg(short,medium,full,long) should render component as expected (3) 1`] = `
-<gux-time-beta class="gux-time" format="full" time="2022-07-07T13:35:30.100Z">
+<gux-time-beta class="gux-time" datetime="2022-07-07T13:35:30.100Z" format="full">
   <mock:shadow-root>
-    9:35:30 AM GMT-04:00
+    Invalid Date
   </mock:shadow-root>
 </gux-time-beta>
 `;
 
 exports[`#render different time formats eg(short,medium,full,long) should render component as expected (4) 1`] = `
-<gux-time-beta class="gux-time" format="long" time="2022-07-07T13:35:30.100Z">
+<gux-time-beta class="gux-time" datetime="2022-07-07T13:35:30.100Z" format="long">
   <mock:shadow-root>
-    9:35:30 AM GMT-4
+    Invalid Date
   </mock:shadow-root>
 </gux-time-beta>
 `;
