@@ -12,21 +12,25 @@ describe('gux-accordion', () => {
           <h2 slot="header">Second Section</h2>
           <div slot="content">Sample Content</div>
         </gux-accordion-section>
-        <gux-accordion-section content-layout="custom">
+        <gux-accordion-section arrow-position="before-text">
           <h2 slot="header">Third Section</h2>
           <div slot="content">Sample Content</div>
         </gux-accordion-section>
-        <gux-accordion-section content-layout="text">
+        <gux-accordion-section content-layout="custom">
           <h2 slot="header">Fourth Section</h2>
           <div slot="content">Sample Content</div>
         </gux-accordion-section>
-        <gux-accordion-section disabled>
+        <gux-accordion-section content-layout="text">
           <h2 slot="header">Fifth Section</h2>
+          <div slot="content">Sample Content</div>
+        </gux-accordion-section>
+        <gux-accordion-section disabled>
+          <h2 slot="header">Sixth Section</h2>
           <h3 slot="subheader">This is the subheader</h3>
           <div slot="content">Sample Content</div>
         </gux-accordion-section>
         <gux-accordion-section>
-          <h2 slot="header">Sixth Section</h2>
+          <h2 slot="header">Seventh Section</h2>
           <h3 slot="subheader">This is the subheader</h3>
           <gux-icon
             slot="icon"
@@ -36,7 +40,7 @@ describe('gux-accordion', () => {
           <div slot="content">Sample Content</div>
         </gux-accordion-section>
         <gux-accordion-section reverse-headings="true">
-          <h2 slot="header">Seventh Section</h2>
+          <h2 slot="header">Eighth Section</h2>
           <h3 slot="subheader">This is the subheader</h3>
           <gux-icon
             slot="icon"

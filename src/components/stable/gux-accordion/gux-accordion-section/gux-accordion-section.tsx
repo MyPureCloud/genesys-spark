@@ -35,9 +35,15 @@ export class GuxAccordionSection {
   @Element()
   root: HTMLElement;
 
+  /**
+   * Position of the arrow chevron icon. Position can be 'default' or 'before-text'.  'beside-text' is deprecated and will be removed in v4.
+   */
   @Prop()
   arrowPosition: GuxAccordionSectionArrowPosition = 'default';
 
+  /**
+   * The content layout used in the accordion section. 'text' layout provides default padding, 'custom' removes default padding.
+   */
   @Prop()
   contentLayout: GuxAccordionSectionContentLayout = 'text';
 
@@ -64,6 +70,11 @@ export class GuxAccordionSection {
     this.open = !this.open;
   }
 
+  private isArrowPositionBeforeText(): boolean {
+    return this.arrowPosition === 'before-text';
+  }
+
+  // arrow position 'beside-text' will be removed in v4 (COMUI-1128)
   private isArrowPositionedBesideText(): boolean {
     return this.arrowPosition === 'beside-text';
   }
@@ -116,7 +127,8 @@ export class GuxAccordionSection {
           <div
             class={{
               'gux-header-icon': true,
-              'gux-expanded': this.open
+              'gux-expanded': this.open,
+              'gux-arrow-position-before-text': this.isArrowPositionBeforeText()
             }}
           >
             <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
