@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-time-beta #render should render component as expected (1) 1`] = `"<gux-time-beta datetime=\\"2022-07-07T13:35:30.100Z\\" format=\\"short\\" class=\\"gux-time\\" hydrated=\\"\\"></gux-time-beta>"`;
+exports[`gux-time-beta #render should render component as expected (1) 1`] = `"<gux-time-beta datetime=\\"2022-07-07T13:35:30.100Z\\" format=\\"short\\" hydrated=\\"\\"></gux-time-beta>"`;
 
-exports[`gux-time-beta #render should render component as expected (2) 1`] = `"<gux-time-beta datetime=\\"2022-07-07T13:35:30.100Z\\" format=\\"medium\\" class=\\"gux-time\\" hydrated=\\"\\"></gux-time-beta>"`;
+exports[`gux-time-beta #render should render component as expected (2) 1`] = `"<gux-time-beta datetime=\\"2022-07-07T13:35:30.100Z\\" format=\\"medium\\" hydrated=\\"\\"></gux-time-beta>"`;
 
-exports[`gux-time-beta #render should render component as expected (3) 1`] = `"<gux-time-beta datetime=\\"2022-07-07T13:35:30.100Z\\" format=\\"long\\" class=\\"gux-time\\" hydrated=\\"\\"></gux-time-beta>"`;
+exports[`gux-time-beta #render should render component as expected (3) 1`] = `"<gux-time-beta datetime=\\"2022-07-07T13:35:30.100Z\\" format=\\"long\\" hydrated=\\"\\"></gux-time-beta>"`;
 
-exports[`gux-time-beta #render should render component as expected (4) 1`] = `"<gux-time-beta datetime=\\"2022-07-07T13:35:30.100Z\\" format=\\"full\\" class=\\"gux-time\\" hydrated=\\"\\"></gux-time-beta>"`;
+exports[`gux-time-beta #render should render component as expected (4) 1`] = `"<gux-time-beta datetime=\\"2022-07-07T13:35:30.100Z\\" format=\\"full\\" hydrated=\\"\\"></gux-time-beta>"`;

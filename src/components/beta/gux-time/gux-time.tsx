@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop, Element } from '@stencil/core';
+import { Component, JSX, h, Host, Prop, Element } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 import { DateTimeFormatter, GuxDateTimeFormat } from '../../../i18n/DateTimeFormatter';
 import { getDesiredLocale } from '../../../i18n/index';
@@ -34,6 +34,6 @@ export class GuxTime {
   }
 
   render() {
-    return (<Host>{ this.formatter.formatTime(new Date(this.datetime), this.format) }</Host>);
+    return (<Host>{ this.formatter.formatTime(new Date(this.datetime), this.format) }</Host>) as JSX.Element;
   }
 }
