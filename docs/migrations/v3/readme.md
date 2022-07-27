@@ -11,6 +11,7 @@
 * remove `-beta` from components that have been [promoted to stable](#v2-beta-components-promoted-to-stable-in-v3)
 * add `-legacy` to components that have been [removed from stable](#v2-stable-components-archived-to-legacy-in-v3)
 * change `-beta` to `-legacy` for components that have been [removed from beta](#v2-beta-components-archived-to-legacy-in-v3)
+* implement a new solution for components[removed from v3](#v2-beta-components-removed-from-v3)
 * migrate away from usage of legacy components
 * [Stable component changes](#stable-component-changes):
   * rename `title` property to `gux-title` on instances of `gux-button`
@@ -110,6 +111,14 @@ Action: *(required)* remove the `-beta` tag and add `-legacy` to the tag name of
 + </gux-command-palette-legacy>
 ```
 If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of replacing the `-beta` suffix with `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released. Contact the Core UI team if you need help migrating away from these components.
+
+## V2 Beta Components Removed from V3
+
+### gux-search-beta
+
+Action: *(required)* implement a new solution for your use case.
+
+There is no universal migration path away from this component. We expect `gux-form-field-search` to be sufficient for most use cases but that may still require your application to implement additional functionality that was previously provided by the component.
 
 ## Stable Component Changes
 ### gux-button
