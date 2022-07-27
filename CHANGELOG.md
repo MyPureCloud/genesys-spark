@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.14.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.13.1...v3.14.0) (2022-07-27)
+
+
+### Features
+
+* **gux-accordion:** add before-text arrow position option for accordion section ([#855](https://github.com/MyPureCloud/genesys-webcomponents/issues/855)) ([088fa64](https://github.com/MyPureCloud/genesys-webcomponents/commit/088fa6414b9c62b8aca2b0f56cf1737261c877bd))
+
 ### [3.13.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.13.0...v3.13.1) (2022-07-27)
 
 ## [3.13.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.12.1...v3.13.0) (2022-07-25)
