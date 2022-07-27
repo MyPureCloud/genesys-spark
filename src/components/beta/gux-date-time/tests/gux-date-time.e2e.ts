@@ -1,6 +1,6 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-const date = new Date(2022, 6, 7, 9, 35, 30, 100).toISOString();
+const date = '2022-07-07T13:35:30.100Z';
 
 describe('gux-date-time-beta', () => {
   describe('#render', () => {

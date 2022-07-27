@@ -3,7 +3,7 @@ import { GuxDate } from '../gux-date';
 
 const components = [GuxDate];
 const language = 'en';
-const date = new Date(2022, 6, 7, 9, 35, 30, 100).toISOString();
+const date = '2022-07-07T13:35:30.100Z';
 
 describe('#render different datetime formats eg(short,medium,full,long)', () => {
   [
