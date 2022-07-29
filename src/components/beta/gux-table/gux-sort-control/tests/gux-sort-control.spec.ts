@@ -45,8 +45,13 @@ describe('gux-sort-control', () => {
           const guxsortchangedSpy = jest.fn();
           page.win.addEventListener('guxsortchanged', guxsortchangedSpy);
 
-          const th = document.querySelector('th[data-column-name="c1"]');
-          th.click();
+          const sortControl = document.querySelector(
+            'th[data-column-name="c1"] > gux-sort-control'
+          );
+          const sortButton = sortControl.shadowRoot.querySelector(
+            'button.gux-sort-button'
+          );
+          sortButton.click();
 
           expect(guxsortchangedSpy).toHaveBeenCalledWith(
             expect.objectContaining({

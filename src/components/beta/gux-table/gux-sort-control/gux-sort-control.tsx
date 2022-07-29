@@ -3,7 +3,6 @@ import {
   Element,
   Event,
   EventEmitter,
-  Host,
   JSX,
   Prop,
   State,
@@ -44,6 +43,9 @@ export class GuxSortControl {
   @State()
   sort: GuxTableSortDirection = 'none';
 
+  @State()
+  isLeftAlignIcon: boolean = false;
+
   @Event()
   guxsortchanged: EventEmitter<GuxTableSortState>;
 
@@ -60,12 +62,7 @@ export class GuxSortControl {
       'th',
       this.root
     ) as HTMLTableCellElement;
-    this.tableHeader.addEventListener('click', () => {
-      this.guxsortchanged.emit({
-        columnName: this.tableHeader.dataset.columnName,
-        sortDirection: this.getNextSort(this.sort)
-      });
-    });
+
     this.thObserver = onMutation(
       this.tableHeader,
       () => {
@@ -85,8 +82,19 @@ export class GuxSortControl {
     this.thObserver.disconnect();
   }
 
+  private onClick(): void {
+    this.guxsortchanged.emit({
+      columnName: this.tableHeader.dataset.columnName,
+      sortDirection: this.getNextSort(this.sort)
+    });
+  }
+
   private setState() {
     this.headerContent = this.tableHeader.textContent;
+
+    this.isLeftAlignIcon =
+      this.tableHeader.hasAttribute('data-cell-numeric') ||
+      this.tableHeader.hasAttribute('data-cell-action');
 
     const ariaSort = this.tableHeader.getAttribute('aria-sort');
 
@@ -156,24 +164,28 @@ export class GuxSortControl {
 
   render(): JSX.Element {
     return (
-      <Host>
+      <div class="gux-container">
         <button
           class={{
-            'gux-sort': true,
+            'gux-sort-button': true,
             'gux-active': this.active
           }}
           type="button"
+          onClick={() => this.onClick()}
         >
           <span class="gux-sr-only">{this.getSRText(this.sort)}</span>
+          <gux-icon
+            class={{
+              'gux-sort-icon': true,
+              'gux-left': this.isLeftAlignIcon
+            }}
+            icon-name={this.getIconName(this.sort)}
+            decorative
+          ></gux-icon>
         </button>
-        <gux-icon
-          class={{
-            'gux-active': this.active
-          }}
-          icon-name={this.getIconName(this.sort)}
-          decorative
-        ></gux-icon>
-      </Host>
+
+        <div class="gux-resize-spacer"></div>
+      </div>
     ) as JSX.Element;
   }
 }
