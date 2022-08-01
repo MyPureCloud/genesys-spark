@@ -6,6 +6,7 @@
   "selectTableRow": "Seleziona riga tabella",
   "sortAsc": "Ordinato in senso crescente",
   "sortDesc": "Ordinato in senso decrescente",
+  "tableOptions": "Opzioni tabella",
   "ascendingColumnSort": "{colLabel}, ordine crescente",
   "descendingColumnSort": "{colLabel}, ordine decrescente"
 }
