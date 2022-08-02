@@ -4,7 +4,6 @@ import {
   Element,
   Event,
   EventEmitter,
-  getAssetPath,
   h,
   JSX,
   Listen,
@@ -123,7 +122,6 @@ export class GuxTable {
       this.prepareResizableColumns();
     }
 
-    this.prepareSortableColumns();
     this.prepareSelectableRows();
     this.checkHorizontalScroll();
     this.checkVerticalScroll();
@@ -217,18 +215,6 @@ export class GuxTable {
 
   private get tableColumns(): Array<HTMLElement> {
     return Array.from(this.slottedTable.querySelectorAll('thead th'));
-  }
-
-  private get tableColumnsDataSortable(): Array<HTMLElement> {
-    return Array.from(
-      this.slottedTable.querySelectorAll('thead th[data-sortable]')
-    );
-  }
-
-  private get sortControlCol(): Array<HTMLElement> {
-    return Array.from(
-      this.slottedTable.querySelectorAll('thead th gux-sort-control')
-    );
   }
 
   private get rowCheckboxes(): Array<HTMLGuxRowSelectElement> {
@@ -488,76 +474,6 @@ export class GuxTable {
       window.getComputedStyle(element).getPropertyValue('width').split('px')[0],
       10
     );
-  }
-
-  /******************************* Sortable Columns *******************************/
-
-  private prepareSortableColumns(): void {
-    let sortControlSelected = [];
-    const sortControl = document.querySelector('gux-sort-control');
-    sortControl
-      ? (sortControlSelected = this.sortControlCol)
-      : (sortControlSelected = this.tableColumnsDataSortable);
-
-    /* Only apply sortable styles if the data-sortable way of sorting is being used(ie the old way) and not the <gux-sort-control /> */
-    this.tableColumnsDataSortable.forEach((tableHeader: HTMLElement) => {
-      if (tableHeader.hasAttribute('data-sortable')) {
-        this.prepareSortableColumnsStyles();
-      }
-    });
-
-    sortControlSelected.forEach((column: HTMLElement) => {
-      column.onclick = (event: MouseEvent) => {
-        if (!this.columnResizeHover) {
-          const button = event.target as HTMLElement;
-          const columnElement = column.hasAttribute('data-sortable')
-            ? (event.currentTarget as HTMLElement)
-            : button.parentElement;
-          const sortDirection = columnElement.getAttribute('aria-sort') || '';
-          let newSortDirection = null;
-
-          switch (sortDirection) {
-            case '':
-            case 'descending':
-              newSortDirection = 'ascending';
-              break;
-            case 'ascending':
-              newSortDirection = 'descending';
-              break;
-          }
-
-          this.guxsortchanged.emit({
-            columnName: columnElement.dataset.columnName,
-            sortDirection: newSortDirection
-          });
-        }
-      };
-    });
-  }
-
-  /**
-   * Create sort styles if they don't exist. We can't make these static because we need to look up
-   * asset paths to generate the urls
-   */
-  private prepareSortableColumnsStyles(): void {
-    const styleId = 'gux-table-sortable-styles';
-    if (document.getElementById(styleId) == null) {
-      const styleElement = document.createElement('style');
-      styleElement.id = styleId;
-
-      const ascArrowIcon = getAssetPath(`./icons/arrow-solid-down.svg`);
-      const descArrowIcon = getAssetPath(`./icons/arrow-solid-up.svg`);
-      const sortAscContent = this.i18n('sortAsc');
-      const sortDescContent = this.i18n('sortDesc');
-
-      styleElement.innerHTML = `
-      th[data-sortable]:focus-within:after{content: "${sortAscContent}";background-image: url("${ascArrowIcon}");}
-      th[aria-sort="ascending"]:after{background-image:url("${ascArrowIcon}")!important;content:"${sortAscContent}"!important;}
-      th[aria-sort="descending"]:after{background-image:url("${descArrowIcon}")!important;content:"${sortDescContent}"!important;}
-    `;
-
-      document.querySelector('head').appendChild(styleElement);
-    }
   }
 
   private setResizableColumnsStyles(): void {

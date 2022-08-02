@@ -1,39 +1,59 @@
 @import (reference) '../../../../style/typography.less';
-@import (reference) '../../../../style/color-mixins.less';
+@import (reference) '../../../../style/color-palette.less';
 @import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/mixins.less';
 
-button {
+.gux-container {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
-  display: inline;
-  width: 100%;
-  height: 100%;
-  padding: @spacing-2xs;
-  margin: 1px;
-  font-size: 100%;
-  font-weight: bold;
-  color: @gux-black-50;
-  text-align: left;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  outline: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 
-  gux-icon {
-    float: right;
-    width: 16px;
-    height: 16px;
-    padding-right: 8.5px;
+  &:focus-within {
+    border-bottom-color: @gux-blue-80;
   }
-}
 
-button:focus {
-  border-bottom: 3px solid @gux-blue-80;
+  .gux-sort-button {
+    all: unset;
+    flex: 1 1 auto;
+    align-self: stretch;
+    order: 0;
+    cursor: pointer;
+
+    .gux-sort-icon {
+      float: right;
+      width: 16px;
+      height: 16px;
+      margin: @gux-spacing-xs;
+      color: @gux-grey-50;
+
+      &.gux-left {
+        float: left;
+      }
+    }
+
+    &.gux-active {
+      .gux-sort-icon {
+        color: @gux-black-50;
+      }
+    }
+  }
+
+  .gux-resize-spacer {
+    flex: 0 1 auto;
+    align-self: stretch;
+    order: 0;
+    width: 2px;
+  }
 }
 
 .gux-sr-only {

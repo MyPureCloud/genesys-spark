@@ -5,6 +5,20 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property          | Attribute          | Description | Type      | Default |
+| ----------------- | ------------------ | ----------- | --------- | ------- |
+| `includeUnsorted` | `include-unsorted` |             | `boolean` | `false` |
+
+
+## Events
+
+| Event            | Description | Type                             |
+| ---------------- | ----------- | -------------------------------- |
+| `guxsortchanged` |             | `CustomEvent<GuxTableSortState>` |
+
+
 ## Dependencies
 
 ### Depends on
