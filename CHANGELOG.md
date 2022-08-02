@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.14.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.14.1...v3.14.2) (2022-08-02)
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([eb2b94e](https://github.com/MyPureCloud/genesys-webcomponents/commit/eb2b94edc9790f3c0027909438edac31b7108215))
+* **table:** fixed sorting UI bugs ([83d809f](https://github.com/MyPureCloud/genesys-webcomponents/commit/83d809f5509a8a3b1fe8890a5cf46845e19ed84a))
+
 ### [3.14.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.14.0...v3.14.1) (2022-07-27)
 
 ## [3.14.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.13.1...v3.14.0) (2022-07-27)
