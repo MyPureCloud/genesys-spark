@@ -6,6 +6,7 @@
   "selectTableRow": "Tabellenzeile auswählen",
   "sortAsc": "Aufsteigend sortiert",
   "sortDesc": "Absteigend sortiert",
+  "tableOptions": "Tabellenoptionen",
   "ascendingColumnSort": "{colLabel}, aufsteigend sortieren",
   "descendingColumnSort": "{colLabel}, absteigend sortieren"
 }

@@ -6,6 +6,7 @@
   "selectTableRow": "选择表行",
   "sortAsc": "升序排序",
   "sortDesc": "降序排序",
+  "tableOptions": "表格选项",
   "ascendingColumnSort": "{colLabel}，升序排序",
   "descendingColumnSort": "{colLabel}，降序排序"
 }
