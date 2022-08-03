@@ -6,6 +6,7 @@
   "selectTableRow": "Markera tabellrad",
   "sortAsc": "Sorterade i stigande ordning",
   "sortDesc": "Sorterade i fallande ordning",
+  "tableOptions": "Tabellalternativ",
   "ascendingColumnSort": "{colLabel}, sortera stigande",
   "descendingColumnSort": "{colLabel}, sortera fallande"
 }

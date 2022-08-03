@@ -6,6 +6,7 @@
   "selectTableRow": "Tabrelrij selecteren",
   "sortAsc": "Oplopend sorteren",
   "sortDesc": "Aflopend sorteren",
+  "tableOptions": "Tabelopties",
   "ascendingColumnSort": "{colLabel}, oplopend sorteren",
   "descendingColumnSort": "{colLabel}, aflopend sorteren"
 }

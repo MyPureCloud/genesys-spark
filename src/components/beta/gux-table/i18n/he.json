@@ -6,6 +6,7 @@
   "selectTableRow": "בחר שורה בטבלה",
   "sortAsc": "מיון בסדר עולה",
   "sortDesc": "מיון בסדר יורד",
+  "tableOptions": "אפשרויות טבלה",
   "ascendingColumnSort": "{colLabel}, מיון בסדר עולה",
   "descendingColumnSort": "{colLabel}, מיון בסדר יורד"
 }
