@@ -9,9 +9,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -80,10 +78,8 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
         <slot name="label"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-disabled gux-dropdown-container">
-            <slot></slot>
-          </div>
+        <div class="gux-disabled gux-input">
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -153,9 +149,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -225,9 +219,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -297,9 +289,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -369,9 +359,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -441,9 +429,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -513,9 +499,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -576,10 +560,8 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         <slot name="label"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-disabled gux-dropdown-container">
-            <slot></slot>
-          </div>
+        <div class="gux-disabled gux-input">
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -641,9 +623,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -705,9 +685,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -769,9 +747,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -833,9 +809,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -897,9 +871,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
-          <div class="gux-dropdown-container">
-            <slot></slot>
-          </div>
+          <slot></slot>
         </div>
         <div class="gux-form-field-error">
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>

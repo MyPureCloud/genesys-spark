@@ -24,40 +24,6 @@ async function newNonrandomE2EPage({
 
 describe('gux-form-field-color', () => {
   describe('#render', () => {
-    describe('clearable', () => {
-      [
-        { componentAttribute: '', inputAttribute: '' },
-        { componentAttribute: 'clearable', inputAttribute: '' },
-        { componentAttribute: 'clearable="true"', inputAttribute: '' },
-        { componentAttribute: 'clearable="false"', inputAttribute: '' },
-        { componentAttribute: 'clearable', inputAttribute: 'disabled' }
-      ].forEach(({ componentAttribute, inputAttribute }, index) => {
-        const html = `
-          <gux-form-field-color ${componentAttribute}>
-            <input slot="input" type="color" value="#ff0000" ${inputAttribute}/>
-            <label slot="label">Label</label>
-          </gux-form-field-color>
-        `;
-
-        it(`should render component as expected (${index + 1})`, async () => {
-          const page = await newNonrandomE2EPage({ html });
-          const element = await page.find('gux-form-field-color');
-          const elementShadowDom = await element.find(
-            'pierce/.gux-form-field-container'
-          );
-
-          expect(element.outerHTML).toMatchSnapshot();
-          expect(elementShadowDom).toMatchSnapshot();
-        });
-
-        it(`should be accessible (${index + 1})`, async () => {
-          const page = await newSparkE2EPage({ html });
-
-          await a11yCheck(page, axeExclusions);
-        });
-      });
-    });
-
     describe('label-position', () => {
       [
         '',
