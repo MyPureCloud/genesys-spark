@@ -6,6 +6,7 @@
   "selectTableRow": "Velg tabellrad",
   "sortAsc": "Sortert stigende",
   "sortDesc": "Sortert synkende",
+  "tableOptions": "Tabellalternativer",
   "ascendingColumnSort": "{colLabel}, sorter stigende",
   "descendingColumnSort": "{colLabel}, sorter synkende"
 }
