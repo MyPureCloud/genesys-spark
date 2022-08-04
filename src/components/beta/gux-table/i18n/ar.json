@@ -6,6 +6,7 @@
   "selectTableRow": "حدد صف الجدول",
   "sortAsc": "تم الفرز تصاعديًا",
   "sortDesc": "تم الفرز تنازليًا",
+  "tableOptions": "خيارات الجدول",
   "ascendingColumnSort": "{colLabel}، الفرز تصاعديًا",
   "descendingColumnSort": "{colLabel}، الفرز تنازليًا"
 }
