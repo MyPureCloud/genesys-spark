@@ -6,6 +6,7 @@
   "selectTableRow": "Tablo Satırı Seç",
   "sortAsc": "Artan Sıralı",
   "sortDesc": "Azalan Sıralı",
+  "tableOptions": "Tablo Seçenekleri",
   "ascendingColumnSort": "{colLabel}, Artan Sıralama",
   "descendingColumnSort": "{colLabel}, Azalan Sıralama"
 }
