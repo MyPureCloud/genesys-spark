@@ -119,6 +119,7 @@ Notes:
 * There is no longer a custom `press` event. You can use a `click` event on `gux-list-item` or `gux-action-item`.
 * `gux-list-item` or `gux-action-item` no longer has a `text` property and all content must be slotted.
 * `gux-list-item` or `gux-action-item` no longer has a `value` property so this information will have to be passed to your `click` handler directly
+* The unused interface `IListItem` is no longer exported.
 * Custom methods have been renamed and native ones supported.
   e.g.
    * `setFocusOnFirstItem` -> `guxFocusFirstItem`
