@@ -7,6 +7,8 @@
   "sortAsc": "מיון בסדר עולה",
   "sortDesc": "מיון בסדר יורד",
   "tableOptions": "אפשרויות טבלה",
-  "ascendingColumnSort": "{colLabel}, מיון בסדר עולה",
-  "descendingColumnSort": "{colLabel}, מיון בסדר יורד"
+  "noColumnSort": "{headerContent}. הטבלה אינה ממוינת כעת לפי עמודה זו. לחץ על כותרת העמודה כדי למיין את הטבלה לפי עמודה זו בסדר עולה",
+  "ascendingColumnSort": "{headerContent}. הטבלה ממוינת כעת לפי עמודה זו בסדר עולה. לחץ על כותרת העמודה כדי למיין את הטבלה לפי עמודה זו בסדר יורד",
+  "descendingColumnSort": "{headerContent}. הטבלה ממוינת כעת לפי עמודה זו בסדר יורד. לחץ על כותרת העמודה כדי למיין את הטבלה לפי עמודה זו בסדר עולה",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. הטבלה ממוינת כעת לפי עמודה זו בסדר יורד. לחץ על כותרת העמודה כדי לא למיין את הטבלה לפי עמודה זו"
 }

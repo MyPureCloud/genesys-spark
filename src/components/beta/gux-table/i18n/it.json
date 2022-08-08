@@ -7,6 +7,8 @@
   "sortAsc": "Ordinato in senso crescente",
   "sortDesc": "Ordinato in senso decrescente",
   "tableOptions": "Opzioni tabella",
-  "ascendingColumnSort": "{colLabel}, ordine crescente",
-  "descendingColumnSort": "{colLabel}, ordine decrescente"
+  "noColumnSort": "{headerContent}. La tabella non è attualmente ordinata per questa colonna. Fare clic sull'intestazione della colonna per ordinare la tabella in base a questa colonna in ordine crescente",
+  "ascendingColumnSort": "{headerContent}. La tabella è attualmente ordinata per questa colonna in ordine crescente. Fare clic sull'intestazione della colonna per ordinare la tabella in base a questa colonna in ordine decrescente",
+  "descendingColumnSort": "{headerContent}. La tabella è attualmente ordinata per questa colonna in ordine decrescente. Fare clic sull'intestazione della colonna per ordinare la tabella in base a questa colonna in ordine crescente",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. La tabella è attualmente ordinata per questa colonna in ordine decrescente. Fare clic sull'intestazione della colonna per non ordinare la tabella in base a questa colonna"
 }

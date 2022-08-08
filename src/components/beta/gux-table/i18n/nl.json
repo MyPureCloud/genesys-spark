@@ -7,6 +7,8 @@
   "sortAsc": "Oplopend sorteren",
   "sortDesc": "Aflopend sorteren",
   "tableOptions": "Tabelopties",
-  "ascendingColumnSort": "{colLabel}, oplopend sorteren",
-  "descendingColumnSort": "{colLabel}, aflopend sorteren"
+  "noColumnSort": "{headerContent}. De tabel is momenteel niet gesorteerd op deze kolom. Klik op de kolomkop om de tabel in oplopende volgorde te sorteren op deze kolom",
+  "ascendingColumnSort": "{headerContent}. De tabel is momenteel in oplopende volgorde gesorteerd op deze kolom. Klik op de kolomkop om de tabel in aflopende volgorde te sorteren op deze kolom",
+  "descendingColumnSort": "{headerContent}. De tabel is momenteel in aflopende volgorde gesorteerd op deze kolom. Klik op de kolomkop om de tabel in oplopende volgorde te sorteren op deze kolom",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. De tabel is momenteel in aflopende volgorde gesorteerd op deze kolom. Klik op de kolomkop om de tabel niet te sorteren op deze kolom"
 }
