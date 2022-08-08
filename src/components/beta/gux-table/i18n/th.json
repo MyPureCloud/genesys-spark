@@ -6,6 +6,7 @@
   "selectTableRow": "เลือกแถวตาราง",
   "sortAsc": "เรียงจากน้อยไปมากแล้ว",
   "sortDesc": "เรียงจากมากไปน้อยแล้ว",
+  "tableOptions": "ตัวเลือกตาราง",
   "ascendingColumnSort": "{colLabel}, เรียงจากน้อยไปมาก",
   "descendingColumnSort": "{colLabel}, เรียงจากมากไปน้อย"
 }
