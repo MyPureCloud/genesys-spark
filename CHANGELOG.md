@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.15.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.14.5...v3.15.0) (2022-08-08)
+
+
+### Features
+
+* **anchor-style:** updated in table anchor styles ([4104d6a](https://github.com/MyPureCloud/genesys-webcomponents/commit/4104d6a4115b057b4ed03f596e4d8a1eb432be37))
+
+
+### Bug Fixes
+
+* **translations:** added missing translation files ([fae59c9](https://github.com/MyPureCloud/genesys-webcomponents/commit/fae59c94fdfd06d097464b426bb8ccb1a86c8e4b))
+* **v3-migration:** added info on IListItem removal ([242c1d8](https://github.com/MyPureCloud/genesys-webcomponents/commit/242c1d83568ac3e3d56773cdfeafb098d839de0b))
+
 ### [3.14.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.14.4...v3.14.5) (2022-08-04)
 
 ### [3.14.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.14.3...v3.14.4) (2022-08-03)
