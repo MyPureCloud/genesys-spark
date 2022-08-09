@@ -171,6 +171,47 @@
   </table>
 </gux-table-beta>
 
+<h2>Table with gux-truncate-beta</h2>
+<gux-table-beta>
+  <table style="width: 100%; table-layout: fixed" slot="data">
+    <thead>
+      <tr>
+        <th data-column-name="first-name">First name</th>
+        <th data-column-name="last-name">Last name</th>
+        <th data-colum-name="summary">Summary</th>
+        <th data-column-name="age" data-cell-numeric>Age</th>
+        <th data-column-name="action" data-cell-action>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>
+          <gux-truncate-beta
+            >This is a long text that is truncated using
+            gux-truncate-beta.</gux-truncate-beta
+          >
+        </td>
+        <td data-cell-numeric>25</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>
+          <gux-truncate-beta
+            >This is a long text that is truncated using
+            gux-truncate-beta.</gux-truncate-beta
+          >
+        </td>
+        <td data-cell-numeric>23</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table-beta>
+
 <h2>Data table with scroll</h2>
 <gux-table-beta style="height: 150px">
   <table slot="data">
