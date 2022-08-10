@@ -145,7 +145,7 @@ export class GuxDropdownMulti {
   onGuxclearselected(event: CustomEvent): void {
     event.stopPropagation();
 
-    this.value = '';
+    this.updateValue('');
     if (this.listboxElement) {
       this.listboxElement.value = undefined;
     }
