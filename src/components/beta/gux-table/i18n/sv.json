@@ -7,6 +7,8 @@
   "sortAsc": "Sorterade i stigande ordning",
   "sortDesc": "Sorterade i fallande ordning",
   "tableOptions": "Tabellalternativ",
-  "ascendingColumnSort": "{colLabel}, sortera stigande",
-  "descendingColumnSort": "{colLabel}, sortera fallande"
+  "noColumnSort": "{headerContent}. Tabellen är för närvarande inte sorterad efter denna kolumn. Klicka på kolumnrubriken för att sortera tabellen efter denna kolumn i stigande ordning",
+  "ascendingColumnSort": "{headerContent}. Tabellen är för närvarande sorterad efter denna kolumn i stigande ordning. Klicka på kolumnrubriken för att sortera tabellen efter denna kolumn i fallande ordning",
+  "descendingColumnSort": "{headerContent}. Tabellen är för närvarande sorterad efter denna kolumn i fallande ordning. Klicka på kolumnrubriken för att sortera tabellen efter denna kolumn i stigande ordning",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabellen är för närvarande sorterad efter denna kolumn i fallande ordning. Klicka på kolumnrubriken för att inte sortera tabellen efter denna kolumn"
 }
