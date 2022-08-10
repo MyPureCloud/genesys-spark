@@ -7,6 +7,8 @@
   "sortAsc": "Artan Sıralı",
   "sortDesc": "Azalan Sıralı",
   "tableOptions": "Tablo Seçenekleri",
-  "ascendingColumnSort": "{colLabel}, Artan Sıralama",
-  "descendingColumnSort": "{colLabel}, Azalan Sıralama"
+  "noColumnSort": "{headerContent}. Tablo şu anda bu sütuna göre sıralanmıyor. Tablonun bu sütuna göre artan sırada sıralanması için sütun üst bilgisine tıklayın",
+  "ascendingColumnSort": "{headerContent}. Tablo şu anda bu sütuna göre artan sırada sıralanıyor. Tablonun bu sütuna göre azalan sırada sıralanması için sütun üst bilgisine tıklayın",
+  "descendingColumnSort": "{headerContent}. Tablo şu anda bu sütuna göre azalan sırada sıralanıyor. Tablonun bu sütuna göre artan sırada sıralanması için sütun üst bilgisine tıklayın",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Tablo şu anda bu sütuna göre azalan sırada sıralanıyor. Tablonun bu sütuna göre sıralanmaması için sütun üst bilgisine tıklayın"
 }
