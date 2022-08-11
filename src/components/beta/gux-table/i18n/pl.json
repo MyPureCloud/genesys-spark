@@ -7,6 +7,8 @@
   "sortAsc": "Sortowane rosnąco",
   "sortDesc": "Sortowane malejąco",
   "tableOptions": "Opcje tabeli",
-  "ascendingColumnSort": "{colLabel}, sortowanie rosnąco",
-  "descendingColumnSort": "{colLabel}, sortowanie malejąco"
+  "noColumnSort": "{headerContent}. Tabela nie jest aktualnie posortowania wg tej kolumny. Kliknij nagłówek kolumny, aby posortować tabelę rosnąco wg tej kolumny",
+  "ascendingColumnSort": "{headerContent}. Tabela jest aktualnie posortowania rosnąco wg tej kolumny. Kliknij nagłówek kolumny, aby posortować tabelę malejąco wg tej kolumny",
+  "descendingColumnSort": "{headerContent}. Tabela jest aktualnie posortowania malejąco wg tej kolumny. Kliknij nagłówek kolumny, aby posortować tabelę rosnąco wg tej kolumny",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabela jest aktualnie posortowania malejąco wg tej kolumny. Kliknij nagłówek kolumny, aby nie sortować tej tabeli wg tej kolumny"
 }

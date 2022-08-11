@@ -7,6 +7,8 @@
   "sortAsc": "昇順にソート済み",
   "sortDesc": "降順にソート済み",
   "tableOptions": "テーブル オプション",
-  "ascendingColumnSort": "{colLabel}, 昇順ソート",
-  "descendingColumnSort": "{colLabel}, 降順ソート"
+  "noColumnSort": "{headerContent}。テーブルは現在この列で並べ替えられていません。列ヘッダーをクリックして、この列で昇順にテーブルを並べ替えます",
+  "ascendingColumnSort": "{headerContent}。テーブルは現在この列で昇順に並べ替えられています。列ヘッダーをクリックして、この列で降順にテーブルを並べ替えます",
+  "descendingColumnSort": "{headerContent}。テーブルは現在この列で降順に並べ替えられています。列ヘッダーをクリックして、この列で昇順にテーブルを並べ替えます",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}。テーブルは現在この列で降順に並べ替えられています。列ヘッダーをクリックして、この列でテーブルを並べ替えないようにします"
 }

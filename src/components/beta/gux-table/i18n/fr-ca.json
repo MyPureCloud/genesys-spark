@@ -7,6 +7,8 @@
   "sortAsc": "Tri croissant",
   "sortDesc": "Tri décroissant",
   "tableOptions": "Options de table",
-  "ascendingColumnSort": "{colLabel}, tri croissant",
-  "descendingColumnSort": "{colLabel}, tri décroissant"
+  "noColumnSort": "{headerContent}. Cette table n'est actuellement pas triée selon cette colonne. Cliquez sur l'en-tête de colonne pour trier la table selon cette colonne par ordre croissant",
+  "ascendingColumnSort": "{headerContent}. Cette table n'est actuellement pas triée par ordre croissant selon cette colonne. Cliquez sur l'en-tête de colonne pour trier la table selon cette colonne par ordre décroissant",
+  "descendingColumnSort": "{headerContent}. Cette table n'est actuellement pas triée par ordre décroissant selon cette colonne. Cliquez sur l'en-tête de colonne pour trier la table selon cette colonne par ordre croissant",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Cette table n'est actuellement pas triée par ordre décroissant selon cette colonne. Cliquez sur l'en-tête de colonne pour ne pas trier la table selon cette colonne"
 }

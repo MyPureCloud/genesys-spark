@@ -7,6 +7,8 @@
   "sortAsc": "遞增排序",
   "sortDesc": "遞減排序",
   "tableOptions": "表格選項",
-  "ascendingColumnSort": "{colLabel}，遞增排序",
-  "descendingColumnSort": "{colLabel}，遞減排序"
+  "noColumnSort": "{headerContent}。表格目前未依此欄排序。按一下欄標頭即可按照遞增順序依此欄為表格排序",
+  "ascendingColumnSort": "{headerContent}。表格目前按照遞增順序依此欄排序。按一下欄標頭即可按照遞減順序依此欄為表格排序",
+  "descendingColumnSort": "{headerContent}。表格目前按照遞減順序依此欄排序。按一下欄標頭即可按照遞增順序依此欄為表格排序",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}。表格目前按照遞減順序依此欄排序。按一下欄標頭即可不依此欄為表格排序"
 }
