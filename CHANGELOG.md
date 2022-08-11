@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.17.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.17.0...v3.17.1) (2022-08-11)
+
+
+### Bug Fixes
+
+* **dropdown-mutli:** addition of event when clearing options from dropdown multi ([f450656](https://github.com/MyPureCloud/genesys-webcomponents/commit/f450656cba1d37bcd399eac4fb00a04c47ec24b3))
+
 ## [3.17.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.16.1...v3.17.0) (2022-08-11)
 
 
