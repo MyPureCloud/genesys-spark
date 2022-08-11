@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.18.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.17.1...v3.18.0) (2022-08-11)
+
+
+### Features
+
+* **form-field:** form fields not work as expected in a disabled fieldset ([25dc1a5](https://github.com/MyPureCloud/genesys-webcomponents/commit/25dc1a52d08076d8b16d02114994ac270cc3018b))
+
 ### [3.17.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.17.0...v3.17.1) (2022-08-11)
 
 
