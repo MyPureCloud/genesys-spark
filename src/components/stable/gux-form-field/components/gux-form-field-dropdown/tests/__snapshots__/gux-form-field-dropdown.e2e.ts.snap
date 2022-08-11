@@ -9,9 +9,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error gux-show">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -32,9 +30,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error gux-show">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -55,9 +51,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error gux-show">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -78,9 +72,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error gux-show">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -101,9 +93,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -123,10 +113,8 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
     <slot name="label"></slot>
   </div>
   <div class="gux-input-and-error-container">
-    <div class="gux-input">
-      <div class="gux-disabled gux-dropdown-container">
-        <slot></slot>
-      </div>
+    <div class="gux-disabled gux-input">
+      <slot></slot>
     </div>
     <div class="gux-form-field-error">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -147,9 +135,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -170,9 +156,7 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -192,10 +176,8 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
     <slot name="label"></slot>
   </div>
   <div class="gux-input-and-error-container">
-    <div class="gux-input">
-      <div class="gux-disabled gux-dropdown-container">
-        <slot></slot>
-      </div>
+    <div class="gux-disabled gux-input">
+      <slot></slot>
     </div>
     <div class="gux-form-field-error">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -216,9 +198,7 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -239,9 +219,7 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error gux-show">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -262,9 +240,7 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error gux-show">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -285,9 +261,7 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error gux-show">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
@@ -308,9 +282,7 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
-      <div class="gux-dropdown-container">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
     <div class="gux-form-field-error gux-show">
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>

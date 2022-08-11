@@ -13,6 +13,8 @@ import {
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import { calculateInputDisabledState } from '../../../utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '../../../utils/dom/on-input-disabled-state-change';
 import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
@@ -34,7 +36,7 @@ export class GuxDropdown {
   private listboxElement: HTMLGuxListboxElement;
 
   @Element()
-  private root: HTMLElement;
+  private root: HTMLGuxDropdownElement;
 
   @Prop({ mutable: true })
   value: string;
@@ -161,6 +163,10 @@ export class GuxDropdown {
 
     this.listboxElement = this.root.querySelector('gux-listbox');
     this.validateValue(this.value);
+
+    onInputDisabledStateChange(this.root, () => {
+      forceUpdate(this.root);
+    });
   }
 
   componentDidLoad(): void {
@@ -350,7 +356,7 @@ export class GuxDropdown {
         <button
           type="button"
           class="gux-field gux-field-button"
-          disabled={this.disabled}
+          disabled={calculateInputDisabledState(this.root)}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
           aria-haspopup="listbox"

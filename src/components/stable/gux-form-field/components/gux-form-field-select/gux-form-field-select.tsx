@@ -1,7 +1,8 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
+import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
 import { OnMutation } from '../../../../../utils/decorator/on-mutation';
-import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 import { onRequiredChange } from '../../../../../utils/dom/on-attribute-change';
 import { preventBrowserValidationStyling } from '../../../../../utils/dom/prevent-browser-validation-styling';
 import { trackComponent } from '../../../../../usage-tracking';
@@ -119,10 +120,10 @@ export class GuxFormFieldSelect {
 
     preventBrowserValidationStyling(this.input);
 
-    this.disabled = this.input.disabled;
+    this.disabled = calculateInputDisabledState(this.input);
     this.required = this.input.required;
 
-    this.disabledObserver = onDisabledChange(
+    this.disabledObserver = onInputDisabledStateChange(
       this.input,
       (disabled: boolean) => {
         this.disabled = disabled;

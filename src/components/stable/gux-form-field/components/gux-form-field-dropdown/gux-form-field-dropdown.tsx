@@ -1,7 +1,8 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
+import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
 import { OnMutation } from '../../../../../utils/decorator/on-mutation';
-import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 import { onRequiredChange } from '../../../../../utils/dom/on-attribute-change';
 import { trackComponent } from '../../../../../usage-tracking';
 
@@ -85,17 +86,11 @@ export class GuxFormFieldDropdown {
           <div
             class={{
               'gux-input': true,
-              'gux-input-error': this.hasError
+              'gux-input-error': this.hasError,
+              'gux-disabled': this.disabled
             }}
           >
-            <div
-              class={{
-                'gux-dropdown-container': true,
-                'gux-disabled': this.disabled
-              }}
-            >
-              <slot />
-            </div>
+            <slot />
           </div>
           <GuxFormFieldError hasError={this.hasError}>
             <slot name="error" />
@@ -123,10 +118,10 @@ export class GuxFormFieldDropdown {
       this.root.querySelector('gux-listbox') ||
       this.root.querySelector('gux-listbox-multi');
 
-    this.disabled = this.dropdownElement.disabled;
+    this.disabled = calculateInputDisabledState(this.dropdownElement);
     this.required = this.dropdownElement.required;
 
-    this.disabledObserver = onDisabledChange(
+    this.disabledObserver = onInputDisabledStateChange(
       this.dropdownElement,
       (disabled: boolean) => {
         this.disabled = disabled;
