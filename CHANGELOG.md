@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.19.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.18.0...v3.19.0) (2022-08-11)
+
+
+### Features
+
+* **gux-form-field-text-like:** support for prefix and suffix for a text input ([#814](https://github.com/MyPureCloud/genesys-webcomponents/issues/814)) ([5696a9f](https://github.com/MyPureCloud/genesys-webcomponents/commit/5696a9f145cce193aaaad59a5af04245840c7943))
+
 ## [3.18.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.17.1...v3.18.0) (2022-08-11)
 
 
