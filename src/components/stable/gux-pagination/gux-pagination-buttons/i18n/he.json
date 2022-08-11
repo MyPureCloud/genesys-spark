@@ -1,0 +1,9 @@
+{
+  "page": "עמוד",
+  "totalPages": "מתוך {totalPages, number}",
+  "first": "ראשון",
+  "previous": "הקודם",
+  "next": "הבא",
+  "last": "אחרון",
+  "pageInputLabel": "עמוד {currentPage, number} מתוך {totalPages, number}"
+}

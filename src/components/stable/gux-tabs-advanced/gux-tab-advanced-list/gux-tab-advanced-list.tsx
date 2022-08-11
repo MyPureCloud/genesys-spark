@@ -479,7 +479,11 @@ export class GuxTabAdvancedList {
 
   async componentWillLoad(): Promise<void> {
     this.setTabTriggers();
-    this.i18n = await buildI18nForComponent(this.root, tabsResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      tabsResources,
+      'gux-tabs-advanced'
+    );
   }
 
   componentDidLoad() {
@@ -558,13 +562,17 @@ export class GuxTabAdvancedList {
           title={
             this.disableAddTabButton
               ? this.i18n('disableNewTab')
+              : this.root.querySelector('[slot="add-tab"]')
+              ? this.root.querySelector('[slot="add-tab"]').textContent.trim()
               : this.i18n('createNewTab')
           }
-          class="add-tab"
+          class="add-tab-button"
           onClick={() => props.onClick()}
           disabled={this.disableAddTabButton}
         >
-          <gux-icon icon-name="add" decorative={true} />
+          <slot name="add-tab">
+            <gux-icon icon-name="add" decorative></gux-icon>
+          </slot>
         </button>
       ) as JSX.Element;
     };
@@ -588,18 +596,13 @@ export class GuxTabAdvancedList {
         >
           <slot></slot>
         </div>
-        <div class="new-tab">
-          {this.showNewTabButton && !this.hasScrollbar ? (
-            <AddNewTabButton onClick={() => this.newTab.emit()} />
-          ) : null}
-        </div>
 
         <div class="action-button-container">
           {this.hasScrollbar
             ? this.renderScrollButton('scrollRight')
             : this.renderScrollButton('scrollDown')}
 
-          {this.showNewTabButton && this.hasScrollbar ? (
+          {this.showNewTabButton ? (
             <AddNewTabButton onClick={() => this.newTab.emit()} />
           ) : null}
         </div>

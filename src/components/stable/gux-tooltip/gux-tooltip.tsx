@@ -13,6 +13,7 @@ import {
 
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { trackComponent } from '../../../usage-tracking';
+import { GuxTooltipPlacements } from './gux-tooltip.types';
 
 /**
  * @slot - Content of the tooltip
@@ -40,6 +41,12 @@ export class GuxTooltip {
    */
   @Prop()
   for: string;
+
+  /**
+   * Placement of the tooltip. Default is bottom-start
+   */
+  @Prop({ mutable: true })
+  placement: GuxTooltipPlacements = 'bottom-start';
 
   /**
    * If tooltip is shown or not
@@ -113,7 +120,7 @@ export class GuxTooltip {
             }
           }
         ],
-        placement: 'bottom-start',
+        placement: this.placement,
         strategy: 'fixed'
       });
 

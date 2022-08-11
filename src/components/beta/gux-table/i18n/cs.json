@@ -5,5 +5,8 @@
   "selectAllTableRows": "Vybrat všechny řádky tabulky",
   "selectTableRow": "Vybrat řádek tabulky",
   "sortAsc": "Seřazeno vzestupně",
-  "sortDesc": "Seřazeno sestupně"
+  "sortDesc": "Seřazeno sestupně",
+  "tableOptions": "Možnosti tabulky",
+  "ascendingColumnSort": "{colLabel}, řadit vzestupně",
+  "descendingColumnSort": "{colLabel}, řadit sestupně"
 }

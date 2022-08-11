@@ -1,17 +1,20 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
-async function newNonrandomE2EPage({
-  html
-}: {
-  html: string;
-}): Promise<E2EPage> {
+async function newNonrandomE2EPage(
+  {
+    html
+  }: {
+    html: string;
+  },
+  lang: string = 'en'
+): Promise<E2EPage> {
   const page = await newE2EPage();
 
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
   });
-  await page.setContent(html);
+  await page.setContent(`<div lang=${lang}>${html}</div>`);
   await page.waitForChanges();
   await page.addScriptTag({
     path: 'node_modules/axe-core/axe.min.js'
@@ -23,7 +26,7 @@ async function newNonrandomE2EPage({
 
 describe('gux-tabs', () => {
   const html = `
-    <gux-tabs lang="en">
+    <gux-tabs>
       <gux-tab-list slot="tab-list">
           <gux-tab tab-id="2-1">Tab Header 1</gux-tab>
           <gux-tab tab-id="2-2">Tab Header 2</gux-tab>
@@ -50,6 +53,17 @@ describe('gux-tabs', () => {
       expect(element.outerHTML).toMatchSnapshot();
     });
 
+    it('renders i18n strings', async () => {
+      const restrictedWidthHtml = `<div style="width: 500px">${html}</div>`;
+      const page = await newNonrandomE2EPage(
+        { html: restrictedWidthHtml },
+        'ja'
+      );
+      const element = await page.find('gux-tabs');
+
+      expect(element.outerHTML).toMatchSnapshot();
+    });
+
     it('does not render the scroll buttons when tabs fit container', async () => {
       const page = await newNonrandomE2EPage({ html });
       const scrollButtons = await page.findAll('.gux-scroll-button');
@@ -65,6 +79,51 @@ describe('gux-tabs', () => {
       await a11yCheck(page);
 
       expect(scrollButtons.length).toBe(2);
+    });
+    it('should update the tab trigger list if a new tab is added', async () => {
+      const page = await newNonrandomE2EPage({ html });
+      await page.evaluate(() => {
+        const tabListElement = document.querySelector('gux-tab-list');
+        const tabElement = document.createElement('gux-tab');
+        tabElement.innerText = 'Tab Header 6';
+        tabElement.setAttribute('tab-id', '2-6');
+        tabListElement.append(tabElement);
+      });
+      await page.waitForChanges();
+
+      const tablist = await page.find(
+        'pierce/gux-tab-list .gux-scrollable-section'
+      );
+      const tabTarget = await page.find('gux-tab[tab-id="2-6"]');
+
+      expect(tablist.getAttribute('aria-owns')).toEqual(
+        'gux-2-1-tab gux-2-2-tab gux-2-3-tab gux-2-4-tab gux-2-5-tab gux-2-6-tab'
+      );
+
+      await tabTarget.click();
+      await page.waitForChanges();
+
+      const tabTargetButton = await tabTarget.find('.gux-tab');
+      expect(tabTargetButton.classList.contains('gux-active')).toBe(true);
+    });
+
+    it('should update the tab trigger list if a tab is removed', async () => {
+      const page = await newNonrandomE2EPage({ html });
+      await page.evaluate(() => {
+        const tabElement = document.querySelector('gux-tab[tab-id="2-2"]');
+        if (tabElement.parentNode) {
+          tabElement.parentNode.removeChild(tabElement);
+        }
+      });
+      await page.waitForChanges();
+
+      const tablist = await page.find(
+        'pierce/gux-tab-list .gux-scrollable-section'
+      );
+
+      expect(tablist.getAttribute('aria-owns')).toEqual(
+        'gux-2-1-tab gux-2-3-tab gux-2-4-tab gux-2-5-tab'
+      );
     });
   });
 

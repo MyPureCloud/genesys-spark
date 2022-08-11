@@ -27,7 +27,7 @@
 
 <h2>Single Open Section</h2>
 
-<gux-accordion arrow-position="beside-text" single-open-section>
+<gux-accordion single-open-section>
   <gux-accordion-section>
     <h2 slot="header">First Section Beta</h2>
     <div slot="content">
@@ -52,25 +52,25 @@
   </gux-accordion-section>
 </gux-accordion>
 
-<h2>Beside Text Arrow Positioning</h2>
+<h2>Arrow Position Before Text</h2>
 
-<gux-accordion arrow-position="beside-text">
-  <gux-accordion-section>
+<gux-accordion>
+  <gux-accordion-section arrow-position="before-text">
     <h2 slot="header">First Section Beta</h2>
     <div slot="content">
       <span>I'm a span in a div.</span>
       <button>I'm the button.</button>
     </div>
   </gux-accordion-section>
-  <gux-accordion-section>
+  <gux-accordion-section arrow-position="before-text">
     <h2 slot="header">Second Section Beta</h2>
     <p slot="content">I'm a p.</p>
   </gux-accordion-section>
-  <gux-accordion-section>
+  <gux-accordion-section arrow-position="before-text">
     <h2 slot="header">Third Section Beta</h2>
     <span slot="content">I'm a span.</span>
   </gux-accordion-section>
-  <gux-accordion-section>
+  <gux-accordion-section arrow-position="before-text">
     <h2 slot="header">
       Fourth Section Beta has a really really long title to see what it looks
       like when the title overflows
@@ -82,22 +82,22 @@
 <h2>Invalid Headers</h2>
 
 <gux-accordion>
-  <gux-accordion-section arrow-position="beside-text">
+  <gux-accordion-section>
     <div slot="header">First Section Beta</div>
     <div slot="content">
       <span>I'm a span in a div.</span>
       <button>I'm the button.</button>
     </div>
   </gux-accordion-section>
-  <gux-accordion-section arrow-position="beside-text">
+  <gux-accordion-section>
     <div slot="header">Second Section Beta</div>
     <p slot="content">I'm a p.</p>
   </gux-accordion-section>
-  <gux-accordion-section arrow-position="beside-text">
+  <gux-accordion-section>
     <div slot="header">Third Section Beta</div>
     <span slot="content">I'm a span.</span>
   </gux-accordion-section>
-  <gux-accordion-section arrow-position="beside-text">
+  <gux-accordion-section>
     <div slot="header">
       Fourth Section Beta has a really really long title to see what it looks
       like when the title overflows
@@ -108,7 +108,7 @@
 
 <h2>All sections initially open</h2>
 
-<gux-accordion arrow-position="beside-text">
+<gux-accordion>
   <gux-accordion-section class="blocked" disabled open>
     <h2 slot="header">First Section Beta</h2>
     <div slot="content">
@@ -134,7 +134,7 @@
 </gux-accordion>
 <h2>All sections initially open but single section open set</h2>
 
-<gux-accordion arrow-position="beside-text" single-open-section>
+<gux-accordion single-open-section>
   <gux-accordion-section class="blocked" disabled open>
     <h2 slot="header">First Section Beta</h2>
     <div slot="content">
@@ -156,5 +156,88 @@
       like when the title overflows
     </h2>
     <span slot="content">I'm a span.</span>
+  </gux-accordion-section>
+</gux-accordion>
+
+<h2>Sections with custom content layout (no padding)</h2>
+
+<gux-accordion>
+  <gux-accordion-section content-layout="custom">
+    <h2 slot="header">First Section</h2>
+    <span slot="content">
+      <gux-form-field-textarea>
+        <textarea slot="input" name="textarea"></textarea>
+        <label slot="label">Type response here</label>
+      </gux-form-field-textarea>
+    </span>
+  </gux-accordion-section>
+  <gux-accordion-section open content-layout="custom">
+    <h2 slot="header">Second Section</h2>
+    <span slot="content">
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="options" value="1" />
+        <label slot="label">Option 1</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="options" value="2" checked />
+        <label slot="label">Option 2</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="options" value="3" />
+        <label slot="label">Option 3</label>
+      </gux-form-field-radio>
+    </span>
+  </gux-accordion-section>
+</gux-accordion>
+
+<h2>With icons & subheaders</h2>
+<gux-accordion>
+  <gux-accordion-section>
+    <h2 slot="header">Section with subheader</h2>
+    <h3 slot="subheader">This is the subheader</h3>
+    <div slot="content">
+      <span>I'm a span in a div.</span>
+      <button>I'm the button.</button>
+    </div>
+  </gux-accordion-section>
+
+  <gux-accordion-section reverse-headings="true">
+    <h2 slot="header">Section with heading position reversed</h2>
+    <h3 slot="subheader">This is the subheader</h3>
+    <div slot="content">
+      <span>I'm a span in a div.</span>
+      <button>I'm the button.</button>
+    </div>
+  </gux-accordion-section>
+
+  <gux-accordion-section>
+    <h2 slot="header">Section with icon</h2>
+    <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+    <div slot="content">
+      <span>I'm a span in a div.</span>
+      <button>I'm the button.</button>
+    </div>
+  </gux-accordion-section>
+
+  <gux-accordion-section>
+    <h2 slot="header">Section with icon & subheader</h2>
+    <h3 slot="subheader">This is the subheader</h3>
+    <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+    <div slot="content">
+      <span>I'm a span in a div.</span>
+      <button>I'm the button.</button>
+    </div>
+  </gux-accordion-section>
+
+  <gux-accordion-section reverse-headings="true">
+    <h2 slot="header">Section with icon & heading position reversed</h2>
+    <h3 slot="subheader">This is the subheader</h3>
+    <gux-icon slot="icon" icon-name="add-user" decorative></gux-icon>
+    <div slot="content">
+      <span>I'm a span in a div.</span>
+      <button>I'm the button.</button>
+    </div>
   </gux-accordion-section>
 </gux-accordion>

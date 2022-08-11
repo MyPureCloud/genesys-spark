@@ -5,5 +5,8 @@
   "selectAllTableRows": "Vælg alle tabelrækker",
   "selectTableRow": "Vælg tabelrække",
   "sortAsc": "Sorteret stigende",
-  "sortDesc": "Sorteret faldende"
+  "sortDesc": "Sorteret faldende",
+  "tableOptions": "Tabelvalgmuligheder",
+  "ascendingColumnSort": "{colLabel}, Sortér stigende",
+  "descendingColumnSort": "{colLabel}, Sortér faldende"
 }

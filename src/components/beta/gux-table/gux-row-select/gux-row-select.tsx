@@ -27,6 +27,9 @@ export class GuxRowSelect {
   @Prop({ mutable: true })
   selected: boolean = false;
 
+  @Prop()
+  disabled: boolean;
+
   @Event()
   internalrowselectchange: EventEmitter;
 
@@ -41,7 +44,11 @@ export class GuxRowSelect {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.root, tableResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      tableResources,
+      'gux-table'
+    );
   }
 
   render(): JSX.Element {
@@ -52,6 +59,7 @@ export class GuxRowSelect {
           id={this.id}
           type="checkbox"
           checked={this.selected}
+          disabled={this.disabled}
         />
         <label slot="label" htmlFor={this.id}>
           &#8203;

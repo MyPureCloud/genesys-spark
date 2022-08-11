@@ -1,0 +1,161 @@
+<h1>gux-chart-scatter-plot-beta</h1>
+<h2>Default Plot</h2>
+<gux-chart-scatter-plot-beta
+  id="chart-1"
+  x-field-name="date"
+  y-field-name="value"
+  x-tick-label-slant="true"
+>
+</gux-chart-scatter-plot-beta>
+
+<h2>With Legend</h2>
+<gux-chart-scatter-plot-beta
+  id="chart-2"
+  x-field-name="date"
+  x-tick-label-slant="true"
+  y-field-name="value"
+  include-legend="true"
+>
+</gux-chart-scatter-plot-beta>
+
+<h2>Custom legend position</h2>
+<gux-chart-scatter-plot-beta
+  id="chart-3"
+  x-field-name="date"
+  x-tick-label-slant="true"
+  y-field-name="value"
+  include-legend="true"
+  legend-position="bottom"
+>
+</gux-chart-scatter-plot-beta>
+
+<h2>Multiple symbols</h2>
+<gux-chart-scatter-plot-beta
+  id="chart-4"
+  x-field-name="date"
+  x-tick-label-slant="true"
+  y-field-name="value"
+  include-legend="true"
+  use-shape="point"
+>
+</gux-chart-scatter-plot-beta>
+
+<h2>Custom Titles</h2>
+<gux-chart-scatter-plot-beta
+  id="chart-5"
+  x-field-name="date"
+  x-tick-label-slant="true"
+  y-field-name="value"
+  include-legend="true"
+  x-axis-title="Date"
+  y-axis-title="Rain (inches)"
+  legend-title="Location"
+>
+</gux-chart-scatter-plot-beta>
+
+<h2>Alternate Date Fields</h2>
+<gux-chart-scatter-plot-beta
+  id="chart-6"
+  x-field-name="date"
+  x-tick-label-slant="true"
+  y-field-name="time"
+  color-field-name="statistic"
+  y-axis-title="Time (seconds)"
+>
+</gux-chart-scatter-plot-beta>
+
+<h2>Custom shape</h2>
+<gux-chart-scatter-plot-beta
+  id="chart-7"
+  x-field-name="date"
+  x-tick-label-slant="true"
+  y-field-name="value"
+  include-legend="true"
+  legend-position="bottom"
+  use-shape="square"
+>
+</gux-chart-scatter-plot-beta>
+
+<style
+  onload="(function() {
+    const chart1 = document.querySelector('#chart-1');
+    const chart2 = document.querySelector('#chart-2');
+    const chart3 = document.querySelector('#chart-3');
+    const chart4 = document.querySelector('#chart-4');
+    const chart5 = document.querySelector('#chart-5');
+    const chart6 = document.querySelector('#chart-6');
+    const chart7 = document.querySelector('#chart-7');
+
+    const chartData = {'values': [
+      {'date': '2021-01-01', 'value': 9.4, 'category': 'Jupiter'},
+      {'date': '2021-01-02', 'value': 12.8, 'category': 'Jupiter'},
+      {'date': '2021-01-03', 'value': 10.6, 'category': 'Jupiter'},
+      {'date': '2021-01-23', 'value': 6.7, 'category': 'Jupiter'},
+      {'date': '2021-01-24', 'value': 8.3, 'category': 'Jupiter'},
+      {'date': '2021-01-25', 'value': 10, 'category': 'Jupiter'},
+      {'date': '2021-01-26', 'value': 8.9, 'category': 'Jupiter'},
+      {'date': '2021-01-27', 'value': 8.9, 'category': 'Jupiter'},
+      {'date': '2021-01-28', 'value': 6.7, 'category': 'Jupiter'},
+      {'date': '2021-01-29', 'value': 6.7, 'category': 'Jupiter'},
+      {'date': '2021-01-30', 'value': 9.4, 'category': 'Jupiter'},
+      {'date': '2021-01-31', 'value': 8.3, 'category': 'Jupiter'},
+      {'date': '2021-01-01', 'value': 5.6, 'category': 'Venus'},
+      {'date': '2021-01-02', 'value': 5.6, 'category': 'Venus'},
+      {'date': '2021-01-03', 'value': 5, 'category': 'Venus'},
+      {'date': '2021-01-17', 'value': 9.3, 'category': 'Saturn'},
+      {'date': '2021-01-18', 'value': 13.9, 'category': 'Saturn'},
+      {'date': '2021-01-19', 'value': 12, 'category': 'Saturn'},
+      {'date': '2021-01-20', 'value': 7, 'category': 'Saturn'},
+      {'date': '2021-01-21', 'value': 5.2, 'category': 'Saturn'},
+      {'date': '2021-01-22', 'value': 9.4, 'category': 'Saturn'},
+      {'date': '2021-01-23', 'value': 13.2, 'category': 'Saturn'},
+      {'date': '2021-01-24', 'value': 10.4, 'category': 'Saturn'},
+      {'date': '2021-01-25', 'value': 8.2, 'category': 'Saturn'},
+      {'date': '2021-01-26', 'value': 11.1, 'category': 'Saturn'},
+      {'date': '2021-01-27', 'value': 16.1, 'category': 'Saturn'},
+      {'date': '2021-01-28', 'value': 9.2, 'category': 'Saturn'},
+      {'date': '2021-01-29', 'value': 5.2, 'category': 'Saturn'},
+      {'date': '2021-01-30', 'value': 11.3, 'category': 'Saturn'},
+      {'date': '2021-01-31', 'value': 8.2, 'category': 'Saturn'},
+      {'date': '2021-01-24', 'value': 10.4, 'category': 'Neptune'},
+      {'date': '2021-01-30', 'value': 13.3, 'category': 'Neptune'},
+      {'date': '2021-01-31', 'value': 4.2, 'category': 'Neptune'}
+    ]
+  };
+
+  chart1.chartData = {'values': [
+      {'date': '2021-01-01', 'value': 9.4, 'category': 'a'},
+      {'date': '2021-01-02', 'value': 12.8, 'category': 'a'},
+      {'date': '2021-01-03', 'value': 10.6, 'category': 'a'},
+      {'date': '2021-01-04', 'value': 11.7, 'category': 'a'},
+      {'date': '2021-01-05', 'value': 12.2, 'category': 'a'},
+      {'date': '2021-01-06', 'value': 8.9, 'category': 'a'}
+    ]
+  };
+
+  chart2.chartData = chartData;
+  chart3.chartData = chartData;
+  chart4.chartData = chartData;
+  chart5.chartData = chartData;
+  chart7.chartData = chartData;
+
+  chart6.chartData = {'values': [
+      {'date': '2021-01-01', 'time': 9.4, 'statistic': 'ASA'},
+      {'date': '2021-01-02', 'time': 12.8, 'statistic': 'ASA'},
+      {'date': '2021-01-03', 'time': 10.6, 'statistic': 'ASA'},
+      {'date': '2021-01-04', 'time': 11.7, 'statistic': 'ASA'},
+      {'date': '2021-01-01', 'time': 13.4, 'statistic': 'ACW'},
+      {'date': '2021-01-02', 'time': 3.8, 'statistic': 'ACW'},
+      {'date': '2021-01-03', 'time': 7.6, 'statistic': 'ACW'},
+      {'date': '2021-01-04', 'time': 21.7, 'statistic': 'ACW'},
+      {'date': '2021-01-09', 'time': 20, 'statistic': 'ACW'},
+      {'date': '2021-01-10', 'time': 19.4, 'statistic': 'ACW'},
+      {'date': '2021-01-11', 'time': 6.1, 'statistic': 'ACW'},
+      {'date': '2021-01-12', 'time': 16.1, 'statistic': 'ACW'}
+    ]
+  };
+
+  })()"
+>
+  --noop: none;
+</style>

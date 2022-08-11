@@ -1,0 +1,5 @@
+{
+  "tag": "marca com etiqueta: {label}",
+  "tag-disabled": "marca desativada com etiqueta: {label}",
+  "remove-tag": "Remover marca com etiqueta: {label}"
+}

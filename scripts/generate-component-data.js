@@ -2,7 +2,7 @@
 const glob = require('glob');
 const fs = require('fs');
 const path = require('path');
-const marked = require('marked');
+const { marked } = require('marked');
 
 const projectPath = path.join(__dirname, '..');
 const specDestination = path.join(projectPath, 'docs/component-specs.json');

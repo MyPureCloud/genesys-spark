@@ -11,6 +11,7 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
+import { OnMutation } from '../../../../utils/decorator/on-mutation';
 
 import tabsResources from '../i18n/en.json';
 
@@ -98,6 +99,11 @@ export class GuxTabList {
         this.focusTab(this.tabTriggers.length - 1);
         break;
     }
+  }
+
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    this.setTabTriggers();
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await
@@ -211,7 +217,11 @@ export class GuxTabList {
 
   async componentWillLoad(): Promise<void> {
     this.setTabTriggers();
-    this.i18n = await buildI18nForComponent(this.root, tabsResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      tabsResources,
+      'gux-tabs'
+    );
   }
 
   componentDidLoad() {

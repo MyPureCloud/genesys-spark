@@ -1,0 +1,71 @@
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/color-palette.less';
+@import (reference) '../../../style/mixins.less';
+
+button {
+  all: unset;
+}
+
+.gux-copy-to-clipboard-wrapper {
+  display: inline-flex;
+  align-items: center;
+
+  .gux-copy-content {
+    display: inherit;
+    align-items: inherit;
+    cursor: pointer;
+
+    ::slotted(*) {
+      padding: 0 @spacing-3xs;
+      margin-right: @spacing-2xs;
+    }
+
+    &:hover {
+      .focus-and-hover-copy-content();
+    }
+
+    gux-icon[icon-name='copy'] {
+      width: 16px;
+      height: 16px;
+      padding: @spacing-3xs;
+      visibility: hidden;
+      background-color: @gux-blue-100;
+      border-radius: 4px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    .focus-and-hover-copy-content();
+  }
+
+  gux-tooltip {
+    display: inline-flex;
+    align-items: center;
+
+    gux-icon {
+      width: 16px;
+      height: 16px;
+      padding-right: @spacing-xs;
+
+      &[icon-name='badge-check'] {
+        color: @gux-alert-green-60;
+      }
+
+      &[icon-name='badge-x'] {
+        color: @gux-alert-red-60;
+      }
+    }
+  }
+}
+
+.focus-and-hover-copy-content {
+  ::slotted(*) {
+    background-color: @gux-blue-100;
+    border-radius: 4px;
+  }
+
+  gux-icon[icon-name='copy'] {
+    visibility: visible;
+  }
+}

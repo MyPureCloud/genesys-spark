@@ -1,0 +1,39 @@
+@import (reference) '../../../style/spacing.less';
+
+gux-truncate-beta {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: inherit;
+}
+
+.gux-truncate-multi-line {
+  white-space: normal;
+
+  .gux-truncate-slot-container {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+}
+
+gux-tooltip {
+  font-weight: normal;
+  line-height: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.gux-truncate-slot-container > * {
+  display: inline;
+}
+
+.gux-truncate-slot-container {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}

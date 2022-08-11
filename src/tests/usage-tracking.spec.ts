@@ -1,7 +1,7 @@
 import {
   trackComponent,
   trackAction,
-  getVersionObject
+  getVersionEvent
 } from '../usage-tracking';
 import packageInfo from '../../package.json';
 
@@ -9,11 +9,16 @@ const component = document.createElement('gux-button');
 const addPageAction = jest.fn();
 
 describe('usage-tracking', () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+  });
+
   beforeEach(() => {
     addPageAction.mockClear();
     window.newrelic = {
       addPageAction
     };
+    window.document.contains = jest.fn().mockReturnValue(true);
   });
 
   describe('Component usage tracking', () => {
@@ -24,8 +29,9 @@ describe('usage-tracking', () => {
       }).not.toThrow();
     });
 
-    test('Logs the libarary version when first called', () => {
+    test('Logs the library after the first component loads', () => {
       trackComponent(component);
+      jest.runOnlyPendingTimers();
       expect(addPageAction).toHaveBeenCalledTimes(2);
       expect(addPageAction.mock.calls[0][0]).toBe('spark-library');
       const versionInfo = addPageAction.mock.calls[0][1];
@@ -38,25 +44,24 @@ describe('usage-tracking', () => {
       );
     });
 
-    test('Does not log the library version on subsequent calls', () => {
+    test('Logs the tag name when a component is tracked', () => {
       trackComponent(component);
-      expect(addPageAction).toHaveBeenCalledTimes(1);
-    });
-
-    test('Logs the tag name and library version when', () => {
-      trackComponent(component);
+      jest.runOnlyPendingTimers();
       expect(addPageAction).toHaveBeenCalledWith('spark-component', {
         component: 'gux-button',
-        version: packageInfo.version
+        version: packageInfo.version,
+        queueDepth: 0
       });
     });
 
     test('Optionally logs a tag variant', () => {
       trackComponent(component, { variant: 'test' });
+      jest.runOnlyPendingTimers();
       expect(addPageAction).toHaveBeenCalledWith('spark-component', {
         component: 'gux-button',
         version: packageInfo.version,
-        variant: 'test'
+        variant: 'test',
+        queueDepth: 0
       });
     });
   });
@@ -65,24 +70,28 @@ describe('usage-tracking', () => {
     test("Doesn't throw when newrelic is not present", () => {
       window.newrelic = undefined;
       expect(() => {
-        trackAction(component);
+        trackAction(component, 'click');
       }).not.toThrow();
     });
 
     test('Logs the component tag and action', () => {
       trackAction(component, 'click');
+      jest.runOnlyPendingTimers();
       expect(addPageAction).toHaveBeenCalledWith('spark-action', {
         component: 'gux-button',
-        action: 'click'
+        action: 'click',
+        queueDepth: 0
       });
     });
 
     test('Optionally logs metadata', () => {
       trackAction(component, 'click', { strength: 'real hard' });
+      jest.runOnlyPendingTimers();
       expect(addPageAction).toHaveBeenCalledWith('spark-action', {
         component: 'gux-button',
         action: 'click',
-        strength: 'real hard'
+        strength: 'real hard',
+        queueDepth: 0
       });
     });
   });
@@ -124,9 +133,9 @@ describe('getVersionObject', () => {
     }
   ].forEach(({ packageLockVersion, expectedVersionObject }, index) => {
     it(`should return expected versionObject (${index + 1})`, async () => {
-      const versionObject = getVersionObject(packageLockVersion);
+      const versionEvent = getVersionEvent(packageLockVersion);
 
-      expect(versionObject).toEqual(expectedVersionObject);
+      expect(versionEvent.metadata).toEqual(expectedVersionObject);
     });
   });
 });

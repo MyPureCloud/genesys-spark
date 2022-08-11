@@ -4,9 +4,11 @@ export interface GuxTableColumnResizeState {
   columnResizeMouseStartX: number;
 }
 
+export type GuxTableSortDirection = 'ascending' | 'descending' | 'none';
+
 export interface GuxTableSortState {
   columnName: string;
-  sortDirection: string;
+  sortDirection: GuxTableSortDirection;
 }
 
 export interface GuxTableSelectedState {

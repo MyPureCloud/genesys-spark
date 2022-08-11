@@ -5,5 +5,10 @@
   "selectAllTableRows": "Select All Table Rows",
   "selectTableRow": "Select Table Row",
   "sortAsc": "Sorted Ascending",
-  "sortDesc": "Sorted Descending"
+  "sortDesc": "Sorted Descending",
+  "tableOptions": "Table Options",
+  "noColumnSort": "{headerContent}. The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order",
+  "ascendingColumnSort": "{headerContent}. The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order",
+  "descendingColumnSort": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column"
 }

@@ -28,3 +28,54 @@
   This is useful when the logical heading level, which is important for
   accessibility, is different than the desired visual style
 </p>
+
+<hr />
+
+<h2>Anchor Styling</h2>
+
+<h3>Default</h3>
+<a href="#">Default link</a>
+
+<h3>With Icon</h3>
+<a href="#"
+  ><gux-icon icon-name="external-link" decorative></gux-icon>External link</a
+>
+
+<h3>In Text</h3>
+<p>
+  Maecenas accumsan nulla et maximus tempor.
+  <a href="#">Example link</a>
+  Proin non sem tempor ex elementum porttitor at non elit.
+  <a href="#"
+    ><gux-icon icon-name="external-link" decorative></gux-icon>External link</a
+  >
+  Maecenas ex elementum accumsan at nonr.
+</p>
+
+<h3>In Table</h3>
+<gux-table-beta>
+  <table slot="data">
+    <tbody>
+      <tr>
+        <td>
+          <a href="#">Example In Table Link</a>
+        </td>
+        <td>
+          <a href="#">
+            <gux-icon icon-name="external-link" decorative></gux-icon>Example
+            External In Table Link
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table-beta>
+
+<style>
+  .table,
+  .tr,
+  .td {
+    padding: 5px;
+    border: 1px solid black;
+  }
+</style>

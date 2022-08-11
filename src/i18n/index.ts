@@ -2,7 +2,7 @@ import IntlMessageFormat from 'intl-messageformat';
 import { fetchResources, ILocalizedComponentResources } from './fetchResources';
 // If this import is failing, you should run the i18n script to generate the list of locales
 import locales from './locales.json';
-import * as startOfWeekDataUntyped from './start-of-week.json';
+import startOfWeekDataUntyped from './start-of-week.json';
 import { getClosestElement } from '../utils/dom/get-closest-element';
 
 type StartOfWeek = { [key: string]: number };
@@ -17,7 +17,8 @@ const DEFAULT_LOCALE = 'en';
 
 export async function buildI18nForComponent(
   component: HTMLElement,
-  defaultResources: ILocalizedComponentResources
+  defaultResources: ILocalizedComponentResources,
+  parentComponent?: string
 ): Promise<GetI18nValue> {
   let resources = defaultResources;
   let locale = 'en';
@@ -27,7 +28,8 @@ export async function buildI18nForComponent(
     resources = await getComponentI18nResources(
       component,
       defaultResources,
-      locale
+      locale,
+      parentComponent
     );
   }
 
@@ -59,11 +61,12 @@ export async function buildI18nForComponent(
 export async function getComponentI18nResources(
   component: HTMLElement,
   defaultResources: ILocalizedComponentResources,
-  locale: string
+  locale: string,
+  parentComponent?: string
 ): Promise<ILocalizedComponentResources> {
-  const componentName = component.tagName
-    .toLocaleLowerCase()
-    .replace(/-beta$/, '');
+  const componentName =
+    parentComponent ||
+    component.tagName.toLocaleLowerCase().replace(/-beta$/, '');
 
   let resources: ILocalizedComponentResources;
   if (component['i18n-resources']) {
@@ -92,9 +95,6 @@ export function getDesiredLocale(element: HTMLElement): string {
   } else if (locales.indexOf(lang) >= 0) {
     return lang;
   } else {
-    console.error(
-      `gux: No translation locale found for ${locale}, defaulting to '${DEFAULT_LOCALE}'`
-    );
     return DEFAULT_LOCALE;
   }
 }
@@ -105,10 +105,6 @@ function findLocaleInDom(element: HTMLElement): string {
   if (closestElement && closestElement.lang) {
     return closestElement.lang.toLowerCase();
   } else {
-    console.error(
-      `gux: No language specified on page, defaulting to '${DEFAULT_LOCALE}'`,
-      element.tagName
-    );
     return DEFAULT_LOCALE;
   }
 }

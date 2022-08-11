@@ -27,7 +27,7 @@
 
   <gux-toggle
     checked-label="This is another long label for the toggle to show how it works"
-    unchecked-label="This is a long label for the toggle to show how it works"
+    unchecked-label="This is short"
   ></gux-toggle>
 
   <gux-toggle
@@ -42,6 +42,36 @@
     label-position="left"
     error-message="This is another error message"
   ></gux-toggle>
+
+  <!-- inline gux-toggle -->
+  <div>
+    <gux-toggle
+      display-inline
+      checked-label="On"
+      unchecked-label="Off is long"
+    ></gux-toggle>
+    <gux-toggle
+      display-inline
+      checked-label="On"
+      unchecked-label="Off is long"
+      checked
+    ></gux-toggle>
+  </div>
+  <div>
+    <gux-toggle
+      display-inline
+      label-position="left"
+      checked-label="On"
+      unchecked-label="Off is long"
+    ></gux-toggle>
+    <gux-toggle
+      display-inline
+      label-position="left"
+      checked-label="On"
+      unchecked-label="Off is long"
+      checked
+    ></gux-toggle>
+  </div>
 </div>
 
 <style>

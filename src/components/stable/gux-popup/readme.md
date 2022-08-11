@@ -31,6 +31,7 @@
  - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
  - [gux-country-select](../../beta/gux-phone-input/components/gux-country-select)
  - [gux-dropdown](../gux-dropdown)
+ - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
 
 ### Graph
 ```mermaid
@@ -41,6 +42,7 @@ graph TD;
   gux-button-multi-legacy --> gux-popup
   gux-country-select --> gux-popup
   gux-dropdown --> gux-popup
+  gux-dropdown-multi-beta --> gux-popup
   style gux-popup fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

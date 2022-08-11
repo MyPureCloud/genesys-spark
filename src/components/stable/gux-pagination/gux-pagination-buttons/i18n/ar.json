@@ -4,5 +4,6 @@
   "first": "الأول",
   "previous": "السابق",
   "next": "التالي",
-  "last": "الأخير"
+  "last": "الأخير",
+  "pageInputLabel": "صفحة {currentPage, number} من {totalPages, number}"
 }

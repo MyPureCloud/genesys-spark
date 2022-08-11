@@ -1,6 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/spacing.less';
 
 :host {
   display: block;
@@ -12,21 +13,20 @@
 .gux-button-multi-container {
   .gux-dropdown-button {
     button {
-      & > * {
-        vertical-align: middle;
-      }
+      display: inline-flex;
+      align-items: center;
 
       gux-icon {
         width: 16px;
         height: 16px;
-        margin-left: 8px;
+        margin-left: @spacing-xs;
       }
     }
   }
 }
 
 .gux-list-container {
-  padding: 8px 0;
+  padding: @spacing-xs 0;
   margin: 0;
   list-style: none;
   background-color: @gux-type-dark;

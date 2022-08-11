@@ -5,6 +5,7 @@
     "declaration": false,
     "experimentalDecorators": true,
     "lib": ["dom", "es2017", "ES2020.Intl"],
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es2017",
@@ -12,7 +13,11 @@
     "noUnusedParameters": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@utils/*": ["utils/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"],

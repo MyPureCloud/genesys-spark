@@ -1,0 +1,9 @@
+{
+  "page": "Pagina",
+  "totalPages": " di {totalPages, number}",
+  "first": "Prima",
+  "previous": "Precedente",
+  "next": "Successiva",
+  "last": "Ultima",
+  "pageInputLabel": "Pagina {currentPage, number} di {totalPages, number}"
+}

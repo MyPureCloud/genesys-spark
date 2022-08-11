@@ -57,12 +57,6 @@ export class GuxTag {
   @Prop()
   removable: boolean = false;
 
-  /**
-   * Tag icon name.
-   */
-  @Prop()
-  icon: string;
-
   @State()
   label: string;
 
