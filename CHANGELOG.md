@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.17.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.16.1...v3.17.0) (2022-08-11)
+
+
+### Features
+
+* **gux-button-multi:** add icon option to multi button ([fd36d9b](https://github.com/MyPureCloud/genesys-webcomponents/commit/fd36d9b034a9e0140a5d9316489b3fca7dbf6ea0))
+* **gux-button-multi:** use a single slot for icon and text ([3706e25](https://github.com/MyPureCloud/genesys-webcomponents/commit/3706e25a3ff088dda3f807307bb07097456b03c8))
+
+
+### Bug Fixes
+
+* **pr-comment:** address feedback ([fa638b3](https://github.com/MyPureCloud/genesys-webcomponents/commit/fa638b3ed05e6c0e0b442598b2ecbaa93b3adb9a))
+* **pr-comment:** one slot for icon and text ([5fc73a9](https://github.com/MyPureCloud/genesys-webcomponents/commit/5fc73a9569ee74714c6c20874e09f9d793eec4d6))
+
 ### [3.16.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.16.0...v3.16.1) (2022-08-10)
 
 ## [3.16.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.15.1...v3.16.0) (2022-08-09)
