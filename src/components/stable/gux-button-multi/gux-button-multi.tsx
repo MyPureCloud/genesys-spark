@@ -14,6 +14,9 @@ import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
 import { trackComponent } from '../../../usage-tracking';
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
+/**
+ * @slot title - slot for icon and button text
+ */
 @Component({
   styleUrl: 'gux-button-multi.less',
   tag: 'gux-button-multi',
@@ -168,7 +171,7 @@ export class GuxButtonMulti {
               aria-haspopup="true"
               aria-expanded={this.isOpen.toString()}
             >
-              <span>{this.text}</span>
+              <slot name="title">{this.text}</slot>
               <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
             </button>
           </gux-button-slot-beta>
