@@ -7,6 +7,8 @@
   "sortAsc": "Sorteret stigende",
   "sortDesc": "Sorteret faldende",
   "tableOptions": "Tabelvalgmuligheder",
-  "ascendingColumnSort": "{colLabel}, Sortér stigende",
-  "descendingColumnSort": "{colLabel}, Sortér faldende"
+  "noColumnSort": "{headerContent}. Tabellen er ikke sorteret efter denne kolonne i øjeblikket. Klik på kolonneoverskriften for at sortere tabellen efter denne kolonne i stigende rækkefølge",
+  "ascendingColumnSort": "{headerContent}. Tabellen er i øjeblikket sorteret efter denne kolonne i stigende rækkefølge. Klik på kolonneoverskriften for at sortere tabellen efter denne kolonne i faldende rækkefølge",
+  "descendingColumnSort": "{headerContent}. Tabellen er i øjeblikket sorteret efter denne kolonne i faldende rækkefølge. Klik på kolonneoverskriften for at sortere tabellen efter denne kolonne i stigende rækkefølge",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabellen er i øjeblikket sorteret efter denne kolonne i faldende rækkefølge. Klik på kolonneoverskriften for ikke at sortere tabellen efter denne kolonne"
 }
