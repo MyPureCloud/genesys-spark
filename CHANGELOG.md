@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.20.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.19.0...v3.20.0) (2022-08-15)
+
+
+### Features
+
+* **skip-links:** added new skip-navigation component ([#867](https://github.com/MyPureCloud/genesys-webcomponents/issues/867)) ([b41356e](https://github.com/MyPureCloud/genesys-webcomponents/commit/b41356e263f3b3605b2694aa0a4b4bae0a3e310b))
+
 ## [3.19.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.18.0...v3.19.0) (2022-08-11)
 
 
