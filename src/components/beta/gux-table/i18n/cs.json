@@ -7,6 +7,8 @@
   "sortAsc": "Seřazeno vzestupně",
   "sortDesc": "Seřazeno sestupně",
   "tableOptions": "Možnosti tabulky",
-  "ascendingColumnSort": "{colLabel}, řadit vzestupně",
-  "descendingColumnSort": "{colLabel}, řadit sestupně"
+  "noColumnSort": "{headerContent}. Tabulka není aktuálně řazena podle tohoto sloupce. Pokud chcete tabulku seřadit podle tohoto sloupce vzestupně, klikněte na záhlaví sloupce",
+  "ascendingColumnSort": "{headerContent}. Tabulka je aktuálně řazena vzestupně podle tohoto sloupce. Pokud chcete tabulku seřadit podle tohoto sloupce sestupně, klikněte na záhlaví sloupce",
+  "descendingColumnSort": "{headerContent}. Tabulka je aktuálně řazena sestupně podle tohoto sloupce. Pokud chcete tabulku seřadit podle tohoto sloupce vzestupně, klikněte na záhlaví sloupce",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabulka je aktuálně řazena sestupně podle tohoto sloupce. Pokud chcete tabulku seřadit podle tohoto sloupce vzestupně, klikněte na záhlaví sloupce"
 }
