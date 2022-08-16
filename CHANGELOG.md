@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.56.0](https://inindca///compare/v2.55.5...v2.56.0) (2022-08-16)
+
+
+### Features
+
+* **gux-skip-navigation-list:** backport component to v2 ([#883](https://inindca//null/issues/883)) ([0fc2d73](https://inindca///commit/0fc2d731ba4cd2823dd728c4d694c90e55075991))
+
 ### [2.55.5](https://inindca///compare/v2.55.4...v2.55.5) (2022-07-01)
 
 
