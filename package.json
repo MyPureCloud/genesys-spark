@@ -45,7 +45,7 @@
     "release": "standard-version",
     "stencil": "stencil build --prod",
     "stencil.dev": "stencil build --dev --watch --docs",
-    "test": "stencil test --spec --e2e",
+    "test": "TZ=UTC stencil test --spec --e2e",
     "test.ci": "npm run test.ci.spec && npm run test.ci.e2e",
     "test.ci.e2e": "stencil test --e2e --max-workers=1",
     "test.ci.spec": "stencil test --spec",
