@@ -16,6 +16,7 @@
     "clean": "rm -r ./dist || true",
     "commit": "git-cz",
     "create-component": "node scripts/create-component.js",
+    "create-non-en-i18n-files": "node scripts/create-non-en-i18n-files.js",
     "dev": "npx concurrently  \"npm run stencil.dev\" \"npm run docs.dev\"",
     "dev.public": "npx concurrently  \"npm run stencil.dev\" \"npm run docs.dev.public\"",
     "docs": "cd ./docs && npm run build",
