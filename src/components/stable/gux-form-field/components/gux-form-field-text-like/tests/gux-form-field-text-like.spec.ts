@@ -51,6 +51,36 @@ describe('gux-form-field-text-like', () => {
       });
     });
 
+    describe('prefix', () => {
+      it('should render component as expected', async () => {
+        const html = `
+          <gux-form-field-text-like>
+            <span slot="prefix">Prefix</span>
+            <input slot="input" type="text" value="Sample text"/>
+            <label slot="label">Label</label>
+          </gux-form-field-text-like>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
+    describe('suffix', () => {
+      it('should render component as expected', async () => {
+        const html = `
+          <gux-form-field-text-like>
+            <input slot="input" type="text" value="Sample text"/>
+            <span slot="suffix">Suffix</span>
+            <label slot="label">Label</label>
+          </gux-form-field-text-like>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     describe('label-position', () => {
       [
         '',

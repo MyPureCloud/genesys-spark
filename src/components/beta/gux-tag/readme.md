@@ -1,19 +1,16 @@
-# gux-advanced-dropdown
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+# gux-tag-beta
 
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-| Property    | Attribute   | Description           | Type                                                                                                                                                                                          | Default     |
-| ----------- | ----------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `color`     | `color`     | Tag background color. | `"alert-yellow-green" \| "aqua-green" \| "blue" \| "bubblegum-pink" \| "dark-purple" \| "default" \| "default-subtle" \| "electric-purple" \| "fuscha" \| "lilac" \| "navy" \| "olive-green"` | `'default'` |
-| `disabled`  | `disabled`  | Tag is removable.     | `boolean`                                                                                                                                                                                     | `false`     |
-| `icon`      | `icon`      | Tag icon name.        | `string`                                                                                                                                                                                      | `undefined` |
-| `removable` | `removable` | Tag is removable.     | `boolean`                                                                                                                                                                                     | `false`     |
-| `value`     | `value`     | Index for remove tag  | `string`                                                                                                                                                                                      | `undefined` |
+| Property    | Attribute   | Description           | Type                                                                                                                                                                                                       | Default     |
+| ----------- | ----------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `color`     | `color`     | Tag background color. | `"alert-yellow-green" \| "aqua-green" \| "blue" \| "bubblegum-pink" \| "dark-purple" \| "default" \| "default-subtle" \| "electric-purple" \| "fuchsia" \| "fuscha" \| "lilac" \| "navy" \| "olive-green"` | `'default'` |
+| `disabled`  | `disabled`  | Tag is removable.     | `boolean`                                                                                                                                                                                                  | `false`     |
+| `removable` | `removable` | Tag is removable.     | `boolean`                                                                                                                                                                                                  | `false`     |
+| `value`     | `value`     | Index for remove tag  | `string`                                                                                                                                                                                                   | `undefined` |
 
 
 ## Events

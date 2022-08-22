@@ -2,8 +2,9 @@ import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
+import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
 import { OnMutation } from '../../../../../utils/decorator/on-mutation';
-import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 import { onRequiredChange } from '../../../../../utils/dom/on-attribute-change';
 import { preventBrowserValidationStyling } from '../../../../../utils/dom/prevent-browser-validation-styling';
 import { trackComponent } from '../../../../../usage-tracking';
@@ -17,11 +18,11 @@ import { GuxFormFieldLabel } from '../../functional-components/gux-form-field-la
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
   clearInput,
-  hasErrorSlot,
-  hasContent,
   getComputedLabelPosition,
+  hasContent,
+  hasErrorSlot,
   validateFormIds
-} from '../../gux-form-field.servce';
+} from '../../gux-form-field.service';
 
 import componentResources from './i18n/en.json';
 
@@ -156,10 +157,10 @@ export class GuxFormFieldNumber {
       this.hasContent = hasContent(this.input);
     });
 
-    this.disabled = this.input.disabled;
+    this.disabled = calculateInputDisabledState(this.input);
     this.required = this.input.required;
 
-    this.disabledObserver = onDisabledChange(
+    this.disabledObserver = onInputDisabledStateChange(
       this.input,
       (disabled: boolean) => {
         this.disabled = disabled;

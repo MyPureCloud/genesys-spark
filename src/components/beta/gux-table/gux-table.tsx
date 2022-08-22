@@ -4,7 +4,6 @@ import {
   Element,
   Event,
   EventEmitter,
-  getAssetPath,
   h,
   JSX,
   Listen,
@@ -123,7 +122,6 @@ export class GuxTable {
       this.prepareResizableColumns();
     }
 
-    this.prepareSortableColumns();
     this.prepareSelectableRows();
     this.checkHorizontalScroll();
     this.checkVerticalScroll();
@@ -476,65 +474,6 @@ export class GuxTable {
       window.getComputedStyle(element).getPropertyValue('width').split('px')[0],
       10
     );
-  }
-
-  /******************************* Sortable Columns *******************************/
-
-  private prepareSortableColumns(): void {
-    const columnsElements = this.tableColumns;
-    this.prepareSortableColumnsStyles();
-
-    columnsElements.forEach((column: HTMLElement) => {
-      if (Object.prototype.hasOwnProperty.call(column.dataset, 'sortable')) {
-        column.onclick = (event: MouseEvent) => {
-          if (!this.columnResizeHover) {
-            const columnElement = event.currentTarget as HTMLElement;
-            const sortDirection = columnElement.dataset.sort || '';
-            let newSortDirection = null;
-
-            switch (sortDirection) {
-              case '':
-              case 'desc':
-                newSortDirection = 'asc';
-                break;
-              case 'asc':
-                newSortDirection = 'desc';
-                break;
-            }
-
-            this.guxsortchanged.emit({
-              columnName: columnElement.dataset.columnName,
-              sortDirection: newSortDirection
-            });
-          }
-        };
-      }
-    });
-  }
-
-  /**
-   * Create sort styles if they don't exist. We can't make these static because we need to look up
-   * asset paths to generate the urls
-   */
-  private prepareSortableColumnsStyles(): void {
-    const styleId = 'gux-table-sortable-styles';
-    if (document.getElementById(styleId) == null) {
-      const styleElement = document.createElement('style');
-      styleElement.id = styleId;
-
-      const ascArrowIcon = getAssetPath(`./icons/arrow-solid-down.svg`);
-      const descArrowIcon = getAssetPath(`./icons/arrow-solid-up.svg`);
-      const sortAscContent = this.i18n('sortAsc');
-      const sortDescContent = this.i18n('sortDesc');
-
-      styleElement.innerHTML = `
-      th[data-sortable]:hover:after{content: "${sortAscContent}";background-image: url("${ascArrowIcon}");}
-      th[data-sort="asc"]:after{background-image:url("${ascArrowIcon}")!important;content:"${sortAscContent}"!important;}
-      th[data-sort="desc"]:after{background-image:url("${descArrowIcon}")!important;content:"${sortDescContent}"!important;}
-    `;
-
-      document.querySelector('head').appendChild(styleElement);
-    }
   }
 
   private setResizableColumnsStyles(): void {

@@ -1,13 +1,14 @@
 import { Component, Element, h, Host, JSX, State } from '@stencil/core';
 
+import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
 import { OnMutation } from '../../../../../utils/decorator/on-mutation';
-import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 import { preventBrowserValidationStyling } from '../../../../../utils/dom/prevent-browser-validation-styling';
 import { trackComponent } from '../../../../../usage-tracking';
 
 import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';
 
-import { hasErrorSlot, validateFormIds } from '../../gux-form-field.servce';
+import { hasErrorSlot, validateFormIds } from '../../gux-form-field.service';
 
 /**
  * @slot input - Required slot for input tag
@@ -77,9 +78,9 @@ export class GuxFormFieldCheckbox {
 
     preventBrowserValidationStyling(this.input);
 
-    this.disabled = this.input.disabled;
+    this.disabled = calculateInputDisabledState(this.input);
 
-    this.disabledObserver = onDisabledChange(
+    this.disabledObserver = onInputDisabledStateChange(
       this.input,
       (disabled: boolean) => {
         this.disabled = disabled;

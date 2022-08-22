@@ -1,0 +1,58 @@
+@import (reference) '../../../../style/color.less';
+@import (reference) '../../../../style/mixins.less';
+@import (reference) '../../../../style/spacing.less';
+@import (reference) '../../../../style/typography.less';
+
+// Style
+:host {
+  display: inline-block;
+}
+
+.gux-tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: flex-start;
+  padding: @spacing-3xs @spacing-2xs @spacing-3xs @spacing-xs;
+  font-size: 12px;
+  font-weight: bold;
+  color: @gux-black-50;
+  background-color: @gux-grey-60;
+  border-radius: @spacing-2xs;
+
+  .gux-sr-only {
+    .gux-sr-only-clip();
+  }
+
+  .gux-tag-remove-button {
+    all: unset;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+
+    &:not(:disabled):hover {
+      cursor: pointer;
+    }
+
+    .gux-tag-remove-icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 25%;
+    }
+
+    &:focus-within {
+      .gux-tag-remove-icon {
+        .focus-ring-small();
+      }
+    }
+  }
+
+  &.gux-disabled {
+    color: fade(@gux-black-50, 50%);
+    background-color: fade(@gux-grey-60, 50%);
+  }
+}

@@ -2,7 +2,7 @@ import IntlMessageFormat from 'intl-messageformat';
 import { fetchResources, ILocalizedComponentResources } from './fetchResources';
 // If this import is failing, you should run the i18n script to generate the list of locales
 import locales from './locales.json';
-import * as startOfWeekDataUntyped from './start-of-week.json';
+import startOfWeekDataUntyped from './start-of-week.json';
 import { getClosestElement } from '../utils/dom/get-closest-element';
 
 type StartOfWeek = { [key: string]: number };

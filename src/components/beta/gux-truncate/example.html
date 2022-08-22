@@ -1,0 +1,148 @@
+<h1>Truncation</h1>
+<span>A tooltip with the full text shows on hover</span>
+<h2>Text node slot</h2>
+<div class="example">
+  <gux-truncate-beta style="width: 40px">
+    Some text to truncate
+  </gux-truncate-beta>
+</div>
+
+<h2>Span slot</h2>
+<div class="example">
+  <gux-truncate-beta style="width: 40px">
+    <span>Some text to truncate in a span</span>
+  </gux-truncate-beta>
+</div>
+
+<h2>Div slot</h2>
+<div class="example">
+  <gux-truncate-beta style="width: 40px">
+    <div>Div <span>with a span</span> inside</div>
+  </gux-truncate-beta>
+</div>
+
+<h2>Multi line truncation</h2>
+<div
+  class="example"
+  style="width: 100px; padding: 1px; border: 1px solid black"
+>
+  <gux-truncate-beta max-lines="3">
+    This is a long text that should be truncated after three lines of wrapped
+    text
+  </gux-truncate-beta>
+</div>
+
+<h2>Resizable examples</h2>
+
+<div class="example" style="width: 100px">
+  <gux-truncate-beta
+    style="overflow: hidden; resize: horizontal; border: 1px dotted"
+  >
+    <span>Resize this long text within a span</span>
+  </gux-truncate-beta>
+</div>
+
+<div class="example" style="width: 100px">
+  <gux-truncate-beta
+    max-lines="3"
+    style="overflow: hidden; resize: both; border: 1px dotted"
+  >
+    Resize this long text. This is a long text that should be truncated after
+    three lines of wrapped text
+  </gux-truncate-beta>
+</div>
+
+<h2>Within a Table</h2>
+<gux-table-beta>
+  <table style="width: 100%; table-layout: fixed" slot="data">
+    <thead>
+      <tr>
+        <th data-column-name="first-name">First name</th>
+        <th data-column-name="last-name">Last name</th>
+        <th data-colum-name="summary">Summary</th>
+        <th data-column-name="age" data-cell-numeric>Age</th>
+        <th data-column-name="action" data-cell-action>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>
+          <gux-truncate-beta
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.</gux-truncate-beta
+          >
+        </td>
+        <td data-cell-numeric>25</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>
+          <gux-truncate-beta
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.</gux-truncate-beta
+          >
+        </td>
+        <td data-cell-numeric>23</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table-beta>
+
+<h2>Tooltip in sync with slotted content</h2>
+<div class="example">
+  <gux-truncate-beta style="width: 100px">
+    <span id="changeContentExample">Change Me</span>
+  </gux-truncate-beta>
+
+  <gux-button id="changeContentExampleTarget">change content</gux-button>
+</div>
+
+<h2>Programmatically show tooltip</h2>
+<div class="example">
+  <gux-truncate-beta id="onFocusExampleTarget" style="width: 70px">
+    Programmatically show and hide tooltip
+  </gux-truncate-beta>
+  <gux-button id="showTooltipButton">Show Tooltip</gux-button>
+  <gux-button id="hideTooltipButton">Hide Tooltip</gux-button>
+</div>
+
+<style
+  onload="(function () {
+
+    document.querySelector(`#changeContentExampleTarget`).addEventListener('click',
+    () => {
+      const changeContentExample = document.querySelector(`#changeContentExample`);
+      if (changeContentExample.innerText === 'Change Me') {
+        changeContentExample.innerText = 'Long title long title long title long title'
+      } else if (changeContentExample.innerText === 'Long title long title long title long title') {
+        changeContentExample.innerText = 'Example 1 Example 1 Example 1 Example 1 Example 1 Example 1 Example 1 Example 1'
+      } else {
+        changeContentExample.innerText = 'Change Me'
+      }
+    })
+    document.querySelector(`#showTooltipButton`).addEventListener('click',
+    () => {
+      const onFocusExampleTarget = document.querySelector(`#onFocusExampleTarget`);
+      onFocusExampleTarget.setShowTooltip();
+    })
+    document.querySelector(`#hideTooltipButton`).addEventListener('click',
+    () => {
+      const onFocusExampleTarget = document.querySelector(`#onFocusExampleTarget`);
+      onFocusExampleTarget.setHideTooltip();
+    })
+  }
+  )()"
+>
+  .example {
+    margin-top: 10px;
+  }
+</style>

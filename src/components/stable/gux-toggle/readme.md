@@ -17,6 +17,7 @@ A check event is triggered when the state of the component changed.
 | `checked`        | `checked`         |             | `boolean`           | `false`     |
 | `checkedLabel`   | `checked-label`   |             | `string`            | `undefined` |
 | `disabled`       | `disabled`        |             | `boolean`           | `false`     |
+| `displayInline`  | `display-inline`  |             | `boolean`           | `false`     |
 | `errorMessage`   | `error-message`   |             | `string`            | `undefined` |
 | `labelPosition`  | `label-position`  |             | `"left" \| "right"` | `'right'`   |
 | `loading`        | `loading`         |             | `boolean`           | `false`     |

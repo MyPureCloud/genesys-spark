@@ -34,9 +34,12 @@
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-dropdown](../gux-dropdown)
  - [gux-dropdown-legacy](../../legacy/gux-dropdown-legacy)
+ - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
+ - [gux-dropdown-multi-tag](../../beta/gux-dropdown-multi/gux-dropdown-multi-tag)
  - [gux-error-message-beta](../../beta/gux-error-message-beta)
  - [gux-form-field-checkbox](../gux-form-field/components/gux-form-field-checkbox)
  - [gux-form-field-color](../gux-form-field/components/gux-form-field-color)
+ - [gux-form-field-dropdown](../gux-form-field/components/gux-form-field-dropdown)
  - [gux-form-field-input-clear-button](../gux-form-field/helper-components/gux-form-field-input-clear-button)
  - [gux-form-field-number](../gux-form-field/components/gux-form-field-number)
  - [gux-form-field-radio](../gux-form-field/components/gux-form-field-radio)
@@ -55,6 +58,7 @@
  - [gux-pagination-cursor](../gux-pagination-cursor)
  - [gux-rating](../gux-rating)
  - [gux-side-panel-button](../../legacy/gux-side-panel-legacy/buttons)
+ - [gux-sort-control](../../beta/gux-table/gux-sort-control)
  - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
@@ -62,6 +66,7 @@
  - [gux-tab-legacy](../../legacy/gux-tabs-legacy/gux-tab-legacy)
  - [gux-tab-list](../gux-tabs/gux-tab-list)
  - [gux-table-beta](../../beta/gux-table)
+ - [gux-table-select-menu](../../beta/gux-table/gux-table-select-menu)
  - [gux-tabs-legacy](../../legacy/gux-tabs-legacy)
  - [gux-tag-beta](../../beta/gux-tag)
  - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
@@ -85,9 +90,12 @@ graph TD;
   gux-dismiss-button --> gux-icon
   gux-dropdown --> gux-icon
   gux-dropdown-legacy --> gux-icon
+  gux-dropdown-multi-beta --> gux-icon
+  gux-dropdown-multi-tag --> gux-icon
   gux-error-message-beta --> gux-icon
   gux-form-field-checkbox --> gux-icon
   gux-form-field-color --> gux-icon
+  gux-form-field-dropdown --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
   gux-form-field-number --> gux-icon
   gux-form-field-radio --> gux-icon
@@ -106,6 +114,7 @@ graph TD;
   gux-pagination-cursor --> gux-icon
   gux-rating --> gux-icon
   gux-side-panel-button --> gux-icon
+  gux-sort-control --> gux-icon
   gux-submenu --> gux-icon
   gux-tab-advanced --> gux-icon
   gux-tab-advanced-list --> gux-icon
@@ -113,6 +122,7 @@ graph TD;
   gux-tab-legacy --> gux-icon
   gux-tab-list --> gux-icon
   gux-table-beta --> gux-icon
+  gux-table-select-menu --> gux-icon
   gux-tabs-legacy --> gux-icon
   gux-tag-beta --> gux-icon
   gux-toggle-slider --> gux-icon

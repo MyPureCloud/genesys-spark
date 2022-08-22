@@ -1,7 +1,8 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
+import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
 import { OnMutation } from '../../../../../utils/decorator/on-mutation';
-import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 import { onRequiredChange } from '../../../../../utils/dom/on-attribute-change';
 import { preventBrowserValidationStyling } from '../../../../../utils/dom/prevent-browser-validation-styling';
 import { trackComponent } from '../../../../../usage-tracking';
@@ -16,12 +17,15 @@ import {
   hasErrorSlot,
   hasContent,
   getComputedLabelPosition,
-  validateFormIds
-} from '../../gux-form-field.servce';
+  validateFormIds,
+  setSlotAriaDescribedby
+} from '../../gux-form-field.service';
 
 /**
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
+ * @slot prefix - Optional slot for prefix
+ * @slot suffix - Optional slot for suffix
  * @slot error - Optional slot for error message
  */
 @Component({
@@ -43,6 +47,12 @@ export class GuxFormFieldTextLike {
 
   @Prop()
   labelPosition: GuxFormFieldLabelPosition;
+
+  @State()
+  private hasPrefix: boolean;
+
+  @State()
+  private hasSuffix: boolean;
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';
@@ -69,6 +79,16 @@ export class GuxFormFieldTextLike {
     this.setLabel();
 
     this.hasError = hasErrorSlot(this.root);
+    this.hasPrefix = Boolean(this.root.querySelector('[slot="prefix"]'));
+    this.hasSuffix = Boolean(this.root.querySelector('[slot="suffix"]'));
+
+    if (this.hasPrefix) {
+      setSlotAriaDescribedby(this.root, this.input, 'prefix');
+    }
+
+    if (this.hasSuffix) {
+      setSlotAriaDescribedby(this.root, this.input, 'suffix');
+    }
 
     trackComponent(this.root, { variant: this.variant });
   }
@@ -97,10 +117,14 @@ export class GuxFormFieldTextLike {
             <div
               class={{
                 'gux-input-container': true,
-                'gux-disabled': this.disabled
+                'gux-disabled': this.disabled,
+                'gux-has-prefix': this.hasPrefix,
+                'gux-has-suffix': this.hasSuffix
               }}
             >
+              <slot name="prefix" />
               <slot name="input" />
+              <slot name="suffix" />
               {this.clearable && this.hasContent && !this.disabled && (
                 <gux-form-field-input-clear-button
                   onClick={() => clearInput(this.input)}
@@ -139,10 +163,10 @@ export class GuxFormFieldTextLike {
       this.hasContent = hasContent(this.input);
     });
 
-    this.disabled = this.input.disabled;
+    this.disabled = calculateInputDisabledState(this.input);
     this.required = this.input.required;
 
-    this.disabledObserver = onDisabledChange(
+    this.disabledObserver = onInputDisabledStateChange(
       this.input,
       (disabled: boolean) => {
         this.disabled = disabled;

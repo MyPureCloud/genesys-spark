@@ -35,7 +35,12 @@ export function getComputedLabelPosition(
 
 export function validateFormIds(
   root: HTMLElement,
-  input: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+  input:
+    | HTMLInputElement
+    | HTMLSelectElement
+    | HTMLTextAreaElement
+    | HTMLGuxListboxElement
+    | HTMLGuxListboxMultiElement
 ): void {
   if (hasLabelSlot(root)) {
     const label: HTMLLabelElement = root.querySelector('label[slot="label"]');
@@ -74,15 +79,44 @@ export function validateFormIds(
   if (hasErrorSlot(root)) {
     const error = root.querySelector('[slot="error"]');
     const errorId = randomHTMLId('gux-form-field-error');
+    const describedByIds =
+      input
+        .getAttribute('aria-describedby')
+        ?.split(' ')
+        .filter(id => !id.startsWith(`gux-form-field-error`)) || [];
 
     error.setAttribute('id', errorId);
-    input.setAttribute('aria-describedby', errorId);
-  } else if (
-    input.getAttribute('aria-describedby') &&
-    input.getAttribute('aria-describedby').startsWith('gux-form-field-error')
-  ) {
-    input.removeAttribute('aria-describedby');
+    describedByIds.push(errorId);
+
+    describedByIds &&
+      input.setAttribute('aria-describedby', describedByIds.join(' '));
+  } else if (input.getAttribute('aria-describedby')) {
+    const describedByIds =
+      input
+        .getAttribute('aria-describedby')
+        ?.split(' ')
+        .filter(id => !id.startsWith(`gux-form-field-error`)) || [];
+    input.setAttribute('aria-describedby', describedByIds.join(' '));
   }
+}
+
+export function setSlotAriaDescribedby(
+  root: HTMLElement,
+  input: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement,
+  slotName: string
+) {
+  const slottedElement = root.querySelector(`[slot=${slotName}]`);
+  const randomId = randomHTMLId(`gux-${slotName}`);
+  const describedByIds =
+    input
+      .getAttribute('aria-describedby')
+      ?.split(' ')
+      .filter(id => !id.startsWith(`gux-${slotName}`)) || [];
+  slottedElement.setAttribute('id', randomId);
+  describedByIds?.push(randomId);
+
+  describedByIds &&
+    input.setAttribute('aria-describedby', describedByIds.join(' '));
 }
 
 function hasLabelSlot(root: HTMLElement): boolean {

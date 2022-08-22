@@ -76,8 +76,18 @@ exports[`gux-toggle #render should render component as expected (4) 1`] = `
         </gux-toggle-slider>
         <div class="gux-toggle-label-and-error">
           <div class="gux-toggle-label">
-            <div class="gux-toggle-label-text" id="gux-toggle-label-i">
-              Off
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  Off
+                </span>
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                On
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                Off
+              </span>
             </div>
           </div>
         </div>
@@ -103,8 +113,18 @@ exports[`gux-toggle #render should render component as expected (5) 1`] = `
         </gux-toggle-slider>
         <div class="gux-toggle-label-and-error">
           <div class="gux-toggle-label">
-            <div class="gux-toggle-label-text" id="gux-toggle-label-i">
-              on
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  on
+                </span>
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                on
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                off
+              </span>
             </div>
           </div>
         </div>
@@ -130,8 +150,18 @@ exports[`gux-toggle #render should render component as expected (6) 1`] = `
         </gux-toggle-slider>
         <div class="gux-toggle-label-and-error">
           <div class="gux-toggle-label">
-            <div class="gux-toggle-label-text" id="gux-toggle-label-i">
-              Off
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  Off
+                </span>
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                On
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                Off
+              </span>
             </div>
           </div>
         </div>
@@ -157,8 +187,18 @@ exports[`gux-toggle #render should render component as expected (7) 1`] = `
         </gux-toggle-slider>
         <div class="gux-toggle-label-and-error">
           <div class="gux-toggle-label">
-            <div class="gux-toggle-label-text" id="gux-toggle-label-i">
-              on
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  on
+                </span>
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                on
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                off
+              </span>
             </div>
           </div>
         </div>
@@ -184,8 +224,18 @@ exports[`gux-toggle #render should render component as expected (8) 1`] = `
         </gux-toggle-slider>
         <div class="gux-toggle-label-and-error">
           <div class="gux-toggle-label">
-            <div class="gux-toggle-label-text" id="gux-toggle-label-i">
-              This is another long label for the toggle to test how it works
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  This is another long label for the toggle to test how it works
+                </span>
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                This is a long label for the toggle to test how it works
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                This is another long label for the toggle to test how it works
+              </span>
             </div>
           </div>
         </div>
@@ -211,8 +261,18 @@ exports[`gux-toggle #render should render component as expected (9) 1`] = `
         </gux-toggle-slider>
         <div class="gux-toggle-label-and-error">
           <div class="gux-toggle-label">
-            <div class="gux-toggle-label-text" id="gux-toggle-label-i">
-              This is a long label for the toggle to test how it works
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id="gux-toggle-label-i">
+                  This is a long label for the toggle to test how it works
+                </span>
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                This is a long label for the toggle to test how it works
+              </span>
+              <span class="gux-hidden gux-toggle-label-text-inner">
+                This is another long label for the toggle to test how it works
+              </span>
             </div>
           </div>
         </div>

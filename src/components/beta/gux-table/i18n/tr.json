@@ -5,5 +5,10 @@
   "selectAllTableRows": "Tüm Tablo Satırlarını Seç",
   "selectTableRow": "Tablo Satırı Seç",
   "sortAsc": "Artan Sıralı",
-  "sortDesc": "Azalan Sıralı"
+  "sortDesc": "Azalan Sıralı",
+  "tableOptions": "Tablo Seçenekleri",
+  "noColumnSort": "{headerContent}. Tablo şu anda bu sütuna göre sıralanmıyor. Tablonun bu sütuna göre artan sırada sıralanması için sütun üst bilgisine tıklayın",
+  "ascendingColumnSort": "{headerContent}. Tablo şu anda bu sütuna göre artan sırada sıralanıyor. Tablonun bu sütuna göre azalan sırada sıralanması için sütun üst bilgisine tıklayın",
+  "descendingColumnSort": "{headerContent}. Tablo şu anda bu sütuna göre azalan sırada sıralanıyor. Tablonun bu sütuna göre artan sırada sıralanması için sütun üst bilgisine tıklayın",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Tablo şu anda bu sütuna göre azalan sırada sıralanıyor. Tablonun bu sütuna göre sıralanmaması için sütun üst bilgisine tıklayın"
 }

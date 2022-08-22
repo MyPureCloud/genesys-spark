@@ -11,13 +11,13 @@ exports[`gux-accordion renders 1`] = `
         <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header">
           <div class="gux-header-text">
             <slot name="header"></slot>
+            <slot name="subheader"></slot>
           </div>
-          <div class="gux-header-spacer"></div>
           <div class="gux-header-icon">
             <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </button>
-        <div class="gux-content" id="gux-accordion-section-i">
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
           <slot name="content"></slot>
         </div>
       </section>
@@ -29,19 +29,19 @@ exports[`gux-accordion renders 1`] = `
       Sample Content
     </div>
   </gux-accordion-section>
-  <gux-accordion-section>
+  <gux-accordion-section arrow-position="beside-text">
     <mock:shadow-root>
       <section>
         <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header">
-          <div class="gux-header-text">
+          <div class="gux-arrow-position-beside gux-header-text">
             <slot name="header"></slot>
+            <slot name="subheader"></slot>
           </div>
-          <div class="gux-header-spacer"></div>
           <div class="gux-header-icon">
             <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </button>
-        <div class="gux-content" id="gux-accordion-section-i">
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
           <slot name="content"></slot>
         </div>
       </section>
@@ -53,19 +53,19 @@ exports[`gux-accordion renders 1`] = `
       Sample Content
     </div>
   </gux-accordion-section>
-  <gux-accordion-section>
+  <gux-accordion-section disabled="">
     <mock:shadow-root>
-      <section>
-        <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header">
+      <section class="gux-disabled">
+        <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" disabled="">
           <div class="gux-header-text">
             <slot name="header"></slot>
+            <slot name="subheader"></slot>
           </div>
-          <div class="gux-header-spacer"></div>
           <div class="gux-header-icon">
             <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </button>
-        <div class="gux-content" id="gux-accordion-section-i">
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
           <slot name="content"></slot>
         </div>
       </section>
@@ -73,6 +73,67 @@ exports[`gux-accordion renders 1`] = `
     <h2 slot="header">
       Third Section
     </h2>
+    <h3 slot="subheader">
+      This is the subheader
+    </h3>
+    <div slot="content">
+      Sample Content
+    </div>
+  </gux-accordion-section>
+  <gux-accordion-section>
+    <mock:shadow-root>
+      <section>
+        <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header">
+          <slot name="icon"></slot>
+          <div class="gux-header-text">
+            <slot name="header"></slot>
+            <slot name="subheader"></slot>
+          </div>
+          <div class="gux-header-icon">
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+          </div>
+        </button>
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
+          <slot name="content"></slot>
+        </div>
+      </section>
+    </mock:shadow-root>
+    <h2 slot="header">
+      Fourth Section
+    </h2>
+    <h3 slot="subheader">
+      This is the subheader
+    </h3>
+    <gux-icon icon-name="add-user" screenreader-text="add John Smith to contact list" slot="icon"></gux-icon>
+    <div slot="content">
+      Sample Content
+    </div>
+  </gux-accordion-section>
+  <gux-accordion-section reverse-headings="true">
+    <mock:shadow-root>
+      <section>
+        <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header gux-reverse-headings">
+          <slot name="icon"></slot>
+          <div class="gux-header-text">
+            <slot name="header"></slot>
+            <slot name="subheader"></slot>
+          </div>
+          <div class="gux-header-icon">
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+          </div>
+        </button>
+        <div class="gux-content gux-text-content-layout" id="gux-accordion-section-i">
+          <slot name="content"></slot>
+        </div>
+      </section>
+    </mock:shadow-root>
+    <h2 slot="header">
+      Fourth Section
+    </h2>
+    <h3 slot="subheader">
+      This is the subheader
+    </h3>
+    <gux-icon icon-name="add-user" screenreader-text="add John Smith to contact list" slot="icon"></gux-icon>
     <div slot="content">
       Sample Content
     </div>
