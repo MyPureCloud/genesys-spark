@@ -10,6 +10,10 @@
   pointer-events: none;
 }
 
+:host([disabled='false']) {
+  pointer-events: auto;
+}
+
 ::slotted(gux-icon) {
   width: 16px;
   height: 16px;

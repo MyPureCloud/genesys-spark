@@ -11,7 +11,7 @@ import { getClosestElement } from '../../../../utils/dom/get-closest-element';
 })
 export class GuxListItem {
   @Element()
-  root: HTMLElement;
+  root: HTMLGuxListItemElement;
 
   @Prop()
   disabled: boolean = false;
