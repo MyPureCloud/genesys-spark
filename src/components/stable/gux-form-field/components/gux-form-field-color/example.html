@@ -5,6 +5,30 @@
 <h2>Examples</h2>
 <form onchange="notify(event)" oninput="notify(event)">
   <fieldset>
+    <legend>Clearable</legend>
+
+    <gux-form-field-color>
+      <input slot="input" type="color" name="c-1" value="#5d3d5e" />
+      <label slot="label">Default</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color clearable>
+      <input slot="input" type="color" name="c-2" value="#5d3d5e" />
+      <label slot="label">True</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color clearable>
+      <input slot="input" type="color" name="c-3" value="#5d3d5e" disabled />
+      <label slot="label">True and disabled</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color clearable="false">
+      <input slot="input" type="color" name="c-4" value="#5d3d5e" />
+      <label slot="label">False</label>
+    </gux-form-field-color>
+  </fieldset>
+
+  <fieldset>
     <legend>Label Position</legend>
 
     <gux-form-field-color>

@@ -98,46 +98,6 @@
       <span slot="error">This is an error message</span>
     </gux-form-field-number>
   </fieldset>
-
-  <fieldset>
-    <legend>Programmatically set value</legend>
-
-    <gux-form-field-number id="p" clearable>
-      <input slot="input" type="number" name="p-1" />
-      <label slot="label">Random number</label>
-    </gux-form-field-number>
-
-    <gux-button-slot-beta>
-      <button
-        type="button"
-        onclick="(function () {
-          const formField = document.getElementById('p');
-          const input = document.querySelector('[name=p-1]');
-
-          input.value = '';
-          formField.guxForceUpdate();
-        })()"
-      >
-        Clear field
-      </button>
-    </gux-button-slot-beta>
-
-    <gux-button-slot-beta>
-      <button
-        type="button"
-        onclick="(function () {
-          const randomNumber = Math.floor(Math.random() * 10000);
-          const formField = document.getElementById('p');
-          const input = document.querySelector('[name=p-1]');
-
-          input.value = randomNumber;
-          formField.guxForceUpdate();
-        })()"
-      >
-        Set field to random number
-      </button>
-    </gux-button-slot-beta>
-  </fieldset>
 </form>
 
 <h2>Setting the input size.</h2>
