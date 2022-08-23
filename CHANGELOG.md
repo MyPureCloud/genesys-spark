@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.21.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.3...v3.21.0) (2022-08-23)
+
+
+### Features
+
+* **form-field:** added set input method to field with a clearable property ([87ec757](https://github.com/MyPureCloud/genesys-webcomponents/commit/87ec757012d6f11adb3b2199492609358117e9fc))
+
 ### [3.20.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.2...v3.20.3) (2022-08-23)
 
 
