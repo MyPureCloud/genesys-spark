@@ -91,6 +91,60 @@ describe('gux-form-field-text-like', () => {
       });
     });
 
+    describe('prefix', () => {
+      const html = `
+        <gux-form-field-text-like lang="en">
+          <span slot="prefix">Prefix</span>
+          <input slot="input" type="text" value="Sample text"/>
+          <label slot="label">Label</label>
+        </gux-form-field-text-like>
+      `;
+
+      it('should render component as expected', async () => {
+        const page = await newNonrandomE2EPage({ html });
+        const element = await page.find('gux-form-field-text-like');
+        const elementShadowDom = await element.find(
+          'pierce/.gux-form-field-container'
+        );
+
+        expect(element.outerHTML).toMatchSnapshot();
+        expect(elementShadowDom).toMatchSnapshot();
+      });
+
+      it('should be accessible', async () => {
+        const page = await newSparkE2EPage({ html });
+
+        await a11yCheck(page, axeExclusions);
+      });
+    });
+
+    describe('suffix', () => {
+      const html = `
+        <gux-form-field-text-like lang="en">
+          <input slot="input" type="text" value="Sample text"/>
+          <span slot="suffix">Suffix</span>
+          <label slot="label">Label</label>
+        </gux-form-field-text-like>
+      `;
+
+      it('should render component as expected', async () => {
+        const page = await newNonrandomE2EPage({ html });
+        const element = await page.find('gux-form-field-text-like');
+        const elementShadowDom = await element.find(
+          'pierce/.gux-form-field-container'
+        );
+
+        expect(element.outerHTML).toMatchSnapshot();
+        expect(elementShadowDom).toMatchSnapshot();
+      });
+
+      it('should be accessible', async () => {
+        const page = await newSparkE2EPage({ html });
+
+        await a11yCheck(page, axeExclusions);
+      });
+    });
+
     describe('input type attribute', () => {
       ['email', 'password', 'text'].forEach((inputTypeAttribute, index) => {
         const html = `

@@ -17,12 +17,15 @@ import {
   hasErrorSlot,
   hasContent,
   getComputedLabelPosition,
-  validateFormIds
+  validateFormIds,
+  setSlotAriaDescribedby
 } from '../../gux-form-field.service';
 
 /**
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
+ * @slot prefix - Optional slot for prefix
+ * @slot suffix - Optional slot for suffix
  * @slot error - Optional slot for error message
  */
 @Component({
@@ -44,6 +47,12 @@ export class GuxFormFieldTextLike {
 
   @Prop()
   labelPosition: GuxFormFieldLabelPosition;
+
+  @State()
+  private hasPrefix: boolean;
+
+  @State()
+  private hasSuffix: boolean;
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';
@@ -70,6 +79,16 @@ export class GuxFormFieldTextLike {
     this.setLabel();
 
     this.hasError = hasErrorSlot(this.root);
+    this.hasPrefix = Boolean(this.root.querySelector('[slot="prefix"]'));
+    this.hasSuffix = Boolean(this.root.querySelector('[slot="suffix"]'));
+
+    if (this.hasPrefix) {
+      setSlotAriaDescribedby(this.root, this.input, 'prefix');
+    }
+
+    if (this.hasSuffix) {
+      setSlotAriaDescribedby(this.root, this.input, 'suffix');
+    }
 
     trackComponent(this.root, { variant: this.variant });
   }
@@ -98,10 +117,14 @@ export class GuxFormFieldTextLike {
             <div
               class={{
                 'gux-input-container': true,
-                'gux-disabled': this.disabled
+                'gux-disabled': this.disabled,
+                'gux-has-prefix': this.hasPrefix,
+                'gux-has-suffix': this.hasSuffix
               }}
             >
+              <slot name="prefix" />
               <slot name="input" />
+              <slot name="suffix" />
               {this.clearable && this.hasContent && !this.disabled && (
                 <gux-form-field-input-clear-button
                   onClick={() => clearInput(this.input)}

@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.21.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.0...v3.21.1) (2022-08-23)
+
+## [3.21.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.3...v3.21.0) (2022-08-23)
+
+
+### Features
+
+* **form-field:** added set input method to field with a clearable property ([87ec757](https://github.com/MyPureCloud/genesys-webcomponents/commit/87ec757012d6f11adb3b2199492609358117e9fc))
+
+### [3.20.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.2...v3.20.3) (2022-08-23)
+
+
+### Bug Fixes
+
+* **list:** addition of styling for when false value is assigned to disabled attribute ([8485010](https://github.com/MyPureCloud/genesys-webcomponents/commit/8485010c9b68055276dfb8c407b46c68fd0fceea))
+
+### [3.20.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.1...v3.20.2) (2022-08-18)
+
+### [3.20.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.0...v3.20.1) (2022-08-16)
+
+## [3.20.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.19.0...v3.20.0) (2022-08-15)
+
+
+### Features
+
+* **skip-links:** added new skip-navigation component ([#867](https://github.com/MyPureCloud/genesys-webcomponents/issues/867)) ([b41356e](https://github.com/MyPureCloud/genesys-webcomponents/commit/b41356e263f3b3605b2694aa0a4b4bae0a3e310b))
+
+## [3.19.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.18.0...v3.19.0) (2022-08-11)
+
+
+### Features
+
+* **gux-form-field-text-like:** support for prefix and suffix for a text input ([#814](https://github.com/MyPureCloud/genesys-webcomponents/issues/814)) ([5696a9f](https://github.com/MyPureCloud/genesys-webcomponents/commit/5696a9f145cce193aaaad59a5af04245840c7943))
+
 ## [3.18.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.17.1...v3.18.0) (2022-08-11)
 
 

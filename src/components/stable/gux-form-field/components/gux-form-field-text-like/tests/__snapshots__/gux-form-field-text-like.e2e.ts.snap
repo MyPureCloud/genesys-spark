@@ -10,7 +10,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -33,7 +35,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
         <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
       </div>
     </div>
@@ -57,7 +61,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
         <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
       </div>
     </div>
@@ -81,7 +87,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -104,7 +112,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-disabled gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -127,7 +137,9 @@ exports[`gux-form-field-text-like #render input type attribute should render com
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -150,7 +162,9 @@ exports[`gux-form-field-text-like #render input type attribute should render com
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -173,7 +187,9 @@ exports[`gux-form-field-text-like #render input type attribute should render com
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -196,7 +212,9 @@ exports[`gux-form-field-text-like #render label-position should render component
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -219,7 +237,9 @@ exports[`gux-form-field-text-like #render label-position should render component
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -242,7 +262,9 @@ exports[`gux-form-field-text-like #render label-position should render component
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -265,7 +287,59 @@ exports[`gux-form-field-text-like #render label-position should render component
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-text-like #render prefix should render component as expected 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <span slot=\\"prefix\\" id=\\"gux-prefix-i\\">Prefix</span> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-prefix-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+
+exports[`gux-form-field-text-like #render prefix should render component as expected 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-has-prefix gux-input-container">
+        <slot name="prefix"></slot>
+        <slot name="input"></slot>
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-text-like #render suffix should render component as expected 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-suffix-i\\"> <span slot=\\"suffix\\" id=\\"gux-suffix-i\\">Suffix</span> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+
+exports[`gux-form-field-text-like #render suffix should render component as expected 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-has-suffix gux-input-container">
+        <slot name="prefix"></slot>
+        <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -288,7 +362,9 @@ exports[`gux-form-field-text-like input attributes should render component as ex
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -311,7 +387,9 @@ exports[`gux-form-field-text-like input attributes should render component as ex
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-disabled gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">
@@ -334,7 +412,9 @@ exports[`gux-form-field-text-like input attributes should render component as ex
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <div class="gux-input-container">
+        <slot name="prefix"></slot>
         <slot name="input"></slot>
+        <slot name="suffix"></slot>
       </div>
     </div>
     <div class="gux-form-field-error">

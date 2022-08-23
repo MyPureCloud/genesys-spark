@@ -7,6 +7,8 @@
   "sortAsc": "Sortert stigende",
   "sortDesc": "Sortert synkende",
   "tableOptions": "Tabellalternativer",
-  "ascendingColumnSort": "{colLabel}, sorter stigende",
-  "descendingColumnSort": "{colLabel}, sorter synkende"
+  "noColumnSort": "{headerContent}. Tabellen er for øyeblikket sortert etter denne kolonnen. Klikk på kolonneoverskriften for å sortere tabellen etter denne kolonnen i stigende rekkefølge",
+  "ascendingColumnSort": "{headerContent}. Tabellen er for øyeblikket sortert etter denne kolonnen i stigende rekkefølge. Klikk på kolonneoverskriften for å sortere tabellen etter denne kolonnen i synkende rekkefølge",
+  "descendingColumnSort": "{headerContent}. Tabellen er for øyeblikket sortert etter denne kolonnen i synkende rekkefølge. Klikk på kolonneoverskriften for å sortere tabellen etter denne kolonnen i stigende rekkefølge",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabellen er for øyeblikket sortert etter denne kolonnen i synkende rekkefølge. Klikk på kolonneoverskriften for å ikke sortere tabellen etter denne kolonnen"
 }
