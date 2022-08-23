@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.20.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.2...v3.20.3) (2022-08-23)
+
+
+### Bug Fixes
+
+* **list:** addition of styling for when false value is assigned to disabled attribute ([8485010](https://github.com/MyPureCloud/genesys-webcomponents/commit/8485010c9b68055276dfb8c407b46c68fd0fceea))
+
 ### [3.20.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.1...v3.20.2) (2022-08-18)
 
 ### [3.20.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.0...v3.20.1) (2022-08-16)
