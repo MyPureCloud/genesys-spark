@@ -265,10 +265,10 @@ export class GuxDropdown {
   private updateValue(newValue: string): void {
     if (this.value !== newValue) {
       this.value = newValue;
-      this.collapseListbox('focusFieldButton');
       simulateNativeEvent(this.root, 'input');
       simulateNativeEvent(this.root, 'change');
     }
+    this.collapseListbox('focusFieldButton');
   }
 
   private getSuggestionText(filter: string): string {
