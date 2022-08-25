@@ -4,14 +4,18 @@ exports[`gux-form-field-checkbox #render should render component as expected (1)
 
 exports[`gux-form-field-checkbox #render should render component as expected (1) 2`] = `
 <div class="gux-form-field-container">
-  <div class="gux-input">
-    <slot name="input"></slot>
-    <slot name="label"></slot>
-  </div>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-label">
+    <div class="gux-input">
+      <slot name="input"></slot>
+    </div>
+    <div class="gux-label">
+      <slot name="label"></slot>
+      <div class="gux-form-field-error">
+        <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+        <div class="gux-message">
+          <slot name="error"></slot>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -21,14 +25,18 @@ exports[`gux-form-field-checkbox #render should render component as expected (2)
 
 exports[`gux-form-field-checkbox #render should render component as expected (2) 2`] = `
 <div class="gux-form-field-container">
-  <div class="gux-input">
-    <slot name="input"></slot>
-    <slot name="label"></slot>
-  </div>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-label">
+    <div class="gux-input">
+      <slot name="input"></slot>
+    </div>
+    <div class="gux-label">
+      <slot name="label"></slot>
+      <div class="gux-form-field-error">
+        <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+        <div class="gux-message">
+          <slot name="error"></slot>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -38,14 +46,18 @@ exports[`gux-form-field-checkbox #render should render component as expected (3)
 
 exports[`gux-form-field-checkbox #render should render component as expected (3) 2`] = `
 <div class="gux-form-field-container">
-  <div class="gux-input">
-    <slot name="input"></slot>
-    <slot name="label"></slot>
-  </div>
-  <div class="gux-form-field-error gux-show">
-    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-label">
+    <div class="gux-input">
+      <slot name="input"></slot>
+    </div>
+    <div class="gux-label">
+      <slot name="label"></slot>
+      <div class="gux-form-field-error gux-show">
+        <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+        <div class="gux-message">
+          <slot name="error"></slot>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -55,14 +67,18 @@ exports[`gux-form-field-checkbox #render should render component as expected (4)
 
 exports[`gux-form-field-checkbox #render should render component as expected (4) 2`] = `
 <div class="gux-form-field-container">
-  <div class="gux-input">
-    <slot name="input"></slot>
-    <slot name="label"></slot>
-  </div>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-label">
+    <div class="gux-input">
+      <slot name="input"></slot>
+    </div>
+    <div class="gux-label">
+      <slot name="label"></slot>
+      <div class="gux-form-field-error">
+        <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+        <div class="gux-message">
+          <slot name="error"></slot>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -72,14 +88,18 @@ exports[`gux-form-field-checkbox #render should render component as expected (5)
 
 exports[`gux-form-field-checkbox #render should render component as expected (5) 2`] = `
 <div class="gux-form-field-container">
-  <div class="gux-input">
-    <slot name="input"></slot>
-    <slot name="label"></slot>
-  </div>
-  <div class="gux-form-field-error gux-show">
-    <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-label">
+    <div class="gux-input">
+      <slot name="input"></slot>
+    </div>
+    <div class="gux-label">
+      <slot name="label"></slot>
+      <div class="gux-form-field-error gux-show">
+        <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+        <div class="gux-message">
+          <slot name="error"></slot>
+        </div>
+      </div>
     </div>
   </div>
 </div>
