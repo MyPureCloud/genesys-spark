@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.21.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.2...v3.21.3) (2022-08-25)
+
+
+### Bug Fixes
+
+* **dropdown:** dropdown will now close if same value is reselected from the dropdown ([b00a1e1](https://github.com/MyPureCloud/genesys-webcomponents/commit/b00a1e1e82ad5894f1cfdb4f208905cec87a9922))
+
 ### [3.21.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.1...v3.21.2) (2022-08-24)
 
 ### [3.21.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.0...v3.21.1) (2022-08-23)
