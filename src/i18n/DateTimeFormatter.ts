@@ -9,13 +9,13 @@ export type GuxDateTimeFormat = 'full' | 'long' | 'medium' | 'short';
  * @class A class that implements the method needed to format dates and times depending on locales
  */
 export class DateTimeFormatter {
-    locale: typeof locales[number];
+    locale: string;
 
     /**
      * @constructor  
      * @param locale A locale string is required to initialize a DateTimeFormatter class instance
      */
-    constructor(locale: typeof locales[number]) {
+    constructor(locale: string) {
         if (locales.includes(locale)) {
             this.locale = locale;
         } else {
