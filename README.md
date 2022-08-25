@@ -41,10 +41,24 @@ The library requires the inclusion of a baseline set of CSS styles that it provi
 - Classes for specific typography patterns
 - CSS variables for colors
 - CSS variables for spacing
+- CSS variables for z-index of "floating" non-flow content like menus, tooltips, popovers, or modals
 
 The best mechanism for importing the stylesheet into your project will depend on how you handle CSS in your project in general. Reach out to the Common UI Development group if you're having trouble with your specific integration.
 
 **Note: Since v3 this baseline stylesheet is required.**
+
+#### Contextual z-index overrides
+
+In complex layouts you may find that your app's use of `z-index` conflicts with the default `z-index` applied to raised content like dropdown menus, tooltips, popovers, or modals.
+
+Components with layered content elements like menus or popovers use CSS variables for their `z-index`, and you can override the default z-index in your app's stylesheet for the specific context where you have a conflict.
+
+```css
+.myApp .someElementThatHasContentWithCustomZIndexes {
+  /* Provide higher z-index for dropdowns in this part of my app so they appear above the surrounding content */
+  --gux-zindex-popup: 100;
+}
+```
 
 ### Genesys Cloud applications
 

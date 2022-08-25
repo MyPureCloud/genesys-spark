@@ -1,5 +1,6 @@
 @import (reference) '../../../../../style/color.less';
 @import (reference) '../../../../../style/typography.less';
+@import (reference) '../../../../../style/zindex.less';
 
 gux-input-color {
   color: @gux-black-50;
@@ -68,7 +69,7 @@ gux-input-color {
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1;
+    z-index: var(--gux-zindex-popup, @gux-zindex-popup);
     display: none;
     width: 100%;
 
