@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.22.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.3...v3.22.0) (2022-08-25)
+
+
+### Features
+
+* **datetimeformatter:** merged from beta/COMUI-1084 to add doc comments ([92ed95e](https://github.com/MyPureCloud/genesys-webcomponents/commit/92ed95ef035f4c9bcd9ca4e81ff0202b40ab9cba))
+* **gux-date-time:** added new gux-date-time component ([639d640](https://github.com/MyPureCloud/genesys-webcomponents/commit/639d64020caef83c55f93135b733e2068bdc32f2))
+* **gux-date-time:** addressed PR comments ([3f5a60c](https://github.com/MyPureCloud/genesys-webcomponents/commit/3f5a60cc1b877fed759efcc4d3e1b0127665d328))
+* **gux-date-time:** addressed PR comments ([f02ada7](https://github.com/MyPureCloud/genesys-webcomponents/commit/f02ada777f9824119048dd9baa9a95148e61afab))
+* **gux-date-time:** fixed test snapshots and lint issues ([9573617](https://github.com/MyPureCloud/genesys-webcomponents/commit/9573617c5cf20b7f58afac52b7a76ee59aa4d1ec))
+* **gux-date-time:** pR comments ([4428fd6](https://github.com/MyPureCloud/genesys-webcomponents/commit/4428fd659f54c85cb05840211ebe749acd3253d9))
+* **gux-date:** added new gux-date component ([e2d1ea7](https://github.com/MyPureCloud/genesys-webcomponents/commit/e2d1ea70a4e6e0a73c1d208c21de7d870ad8bced))
+* **gux-time:** added new gux-time component ([f735e75](https://github.com/MyPureCloud/genesys-webcomponents/commit/f735e75b10403ac5f8f3da14427eb13be789de35))
+
+
+### Bug Fixes
+
+* **color-palette:** update Red 70 color to match Spark color system ([369686c](https://github.com/MyPureCloud/genesys-webcomponents/commit/369686c551123605fdf04d1c6a67e228b34d76e0))
+* **gux-date-time:** changed locale type ([ee433c4](https://github.com/MyPureCloud/genesys-webcomponents/commit/ee433c49be99408deddd67658fa5e99e0cabb606))
+* **gux-date-time:** fixed timezone issues in snapshots when running Github actions ([363613c](https://github.com/MyPureCloud/genesys-webcomponents/commit/363613c738946a6a9ca69ac1702b7f57181ca163))
+
 ### [3.21.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.2...v3.21.3) (2022-08-25)
 
 
