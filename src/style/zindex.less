@@ -12,12 +12,14 @@
 // LESS variables are here to avoid duplicating the static defaults which will be inlined into the
 // resulting CSS.
 
-// Changing any of these values should be considered a breaking change for semver.
+// Changing default z-index values could be a breaking change for dependent apps. Be mindful!
 
 // Values here are somewhat arbitrary as these variables were factored out of existing usages that
 // used these values directly. A future breaking change should consider making the defaults higher,
-// e.g. starting at 100 so apps can use z-index 0-99 for their own content without risk of conflict.
-// See: https://inindca.atlassian.net/browse/COMUI-1171
+// and connect clearly to the existing documentation about elevation:
+// e.g. start z-indexes at 100 so apps can use 0-99 for their own content without risk of conflict
+// Elevation doc: https://spark.genesys.com/7978beca0/p/121ce3-shadows--elevation
+// https://inindca.atlassian.net/browse/COMUI-1171
 @gux-zindex-modal: 1;
 @gux-zindex-popover: 2;
 // "popup" covers any interactive picker component, e.g. dropdowns, color selectors, date pickers, etc.
