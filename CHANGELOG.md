@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.23.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.22.0...v3.23.0) (2022-08-29)
+
+
+### Features
+
+* **form-field:** added set input method to field with a clearable property ([0a9ad7c](https://github.com/MyPureCloud/genesys-webcomponents/commit/0a9ad7c17f660ab33c748026308ad2b83fdee1d2))
+
+
+### Bug Fixes
+
+* **dropdown:** added missing if guard ([2a20090](https://github.com/MyPureCloud/genesys-webcomponents/commit/2a20090e0841e7586c758d86b4192ae2518d41b1))
+
 ## [3.22.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.3...v3.22.0) (2022-08-25)
 
 
