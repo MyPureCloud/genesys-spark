@@ -76,7 +76,9 @@ export class GuxDropdownV2Beta {
   @Watch('value')
   validateValue(newValue: string) {
     if (newValue === undefined) {
-      this.listboxElement.value = newValue;
+      if (this.listboxElement) {
+        this.listboxElement.value = newValue;
+      }
       return;
     }
 
