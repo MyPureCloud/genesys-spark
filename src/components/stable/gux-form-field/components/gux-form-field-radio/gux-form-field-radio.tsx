@@ -59,13 +59,17 @@ export class GuxFormFieldRadio {
         }}
       >
         <div class="gux-form-field-container">
-          <div class="gux-input">
-            <slot name="input" onSlotchange={() => this.setInput()} />
-            <slot name="label" />
+          <div class="gux-input-label">
+            <div class="gux-input">
+              <slot name="input" onSlotchange={() => this.setInput()} />
+            </div>
+            <div class="gux-label">
+              <slot name="label" />
+              <GuxFormFieldError hasError={this.hasError}>
+                <slot name="error" />
+              </GuxFormFieldError>
+            </div>
           </div>
-          <GuxFormFieldError hasError={this.hasError}>
-            <slot name="error" />
-          </GuxFormFieldError>
         </div>
       </Host>
     ) as JSX.Element;
