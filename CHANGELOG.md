@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.24.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.23.1...v3.24.0) (2022-08-30)
+
+
+### Features
+
+* **css:** overridable z-index variables ([0c1746c](https://github.com/MyPureCloud/genesys-webcomponents/commit/0c1746ca6f2077676872daea112f1074a9c6ec9f))
+
 ### [3.23.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.23.0...v3.23.1) (2022-08-30)
 
 
