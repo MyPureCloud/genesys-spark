@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.56.2](https://inindca///compare/v2.56.1...v2.56.2) (2022-08-30)
+
+
+### Bug Fixes
+
+* **dropdown_v2:** added missing if guard ([df7b0d8](https://inindca///commit/df7b0d8f45f56f02d9fb3cd43e2a127e34862066))
+
 ### [2.56.1](https://inindca///compare/v2.56.0...v2.56.1) (2022-08-23)
 
 
