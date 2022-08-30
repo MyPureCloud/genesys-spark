@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.23.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.23.0...v3.23.1) (2022-08-30)
+
+
+### Bug Fixes
+
+* **tooltip:** Do not show tooltip when clicking on element ([07d29d6](https://github.com/MyPureCloud/genesys-webcomponents/commit/07d29d62aeabe5fa07be907f4045557122cb3e63))
+
 ## [3.23.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.22.0...v3.23.0) (2022-08-29)
 
 
