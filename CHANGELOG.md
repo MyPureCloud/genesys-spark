@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.24.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.24.1...v3.24.2) (2022-08-31)
+
+
+### Bug Fixes
+
+* **option/dropdown-option:** fix where disabled="false" was creating a partially disabled state ([8eb4e51](https://github.com/MyPureCloud/genesys-webcomponents/commit/8eb4e51f9fea5ce2b3d8a1ee91f77b55ae38c12a))
+
 ### [3.24.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.24.0...v3.24.1) (2022-08-31)
 
 ## [3.24.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.23.1...v3.24.0) (2022-08-30)
