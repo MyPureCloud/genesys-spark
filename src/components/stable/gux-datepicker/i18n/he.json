@@ -1,6 +1,6 @@
 {
-  "start": "Start",
-  "end": "End",
-  "date": "Date",
-  "toggleCalendar": "Toggle calendar view"
+  "start": "התחלה",
+  "end": "סיום",
+  "date": "תאריך",
+  "toggleCalendar": "שנה את תצוגת לוח השנה"
 }

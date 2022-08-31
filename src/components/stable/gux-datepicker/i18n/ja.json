@@ -1,6 +1,6 @@
 {
   "start": "開始",
   "end": "終了",
-  "date": "Date",
-  "toggleCalendar": "Toggle calendar view"
+  "date": "日付",
+  "toggleCalendar": "カレンダー表示を切り替える"
 }

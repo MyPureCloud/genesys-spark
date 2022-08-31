@@ -5,5 +5,10 @@
   "selectAllTableRows": "选择所有表行",
   "selectTableRow": "选择表行",
   "sortAsc": "升序排序",
-  "sortDesc": "降序排序"
+  "sortDesc": "降序排序",
+  "tableOptions": "表格选项",
+  "noColumnSort": "{headerContent}。此表当前未按此列排序。单击列标题可按此列对表格进行升序排序",
+  "ascendingColumnSort": "{headerContent}。此表当前按此列升序排序。单击列标题可按此列对表格进行降序排序",
+  "descendingColumnSort": "{headerContent}。此表当前按此列降序排序。单击列标题可按此列对表格进行升序排序",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}。此表当前按此列降序排序。单击列标题可不按此列对表格进行排序"
 }

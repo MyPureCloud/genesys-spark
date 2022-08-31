@@ -5,5 +5,10 @@
   "selectAllTableRows": "Selecionar todas as linhas da tabela",
   "selectTableRow": "Selecionar linha da tabela",
   "sortAsc": "Organizar em ordem ascendente",
-  "sortDesc": "Organizar em ordem descendente"
+  "sortDesc": "Organizar em ordem descendente",
+  "tableOptions": "Opções da tabela",
+  "noColumnSort": "{headerContent}. A tabela não está atualmente classificada por esta coluna. Clique no cabeçalho da coluna para classificar a tabela por esta coluna em ordem crescente",
+  "ascendingColumnSort": "{headerContent}. A tabela está atualmente classificada por esta coluna por ordem crescente. Clique no cabeçalho da coluna para classificar a tabela por esta coluna em ordem decrescente",
+  "descendingColumnSort": "{headerContent}. A tabela está atualmente classificada por esta coluna em ordem decrescente. Clique no cabeçalho da coluna para classificar a tabela por esta coluna em ordem crescente",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. A coluna está atualmente classificada por esta coluna em ordem decrescente. Clique no cabeçalho da coluna para não classificar a tabela por esta coluna"
 }

@@ -5,5 +5,10 @@
   "selectAllTableRows": "Seleccionar todas las filas de la tabla",
   "selectTableRow": "Seleccionar la fila de la tabla",
   "sortAsc": "En orden ascendente",
-  "sortDesc": "En orden descendente"
+  "sortDesc": "En orden descendente",
+  "tableOptions": "Opciones de tabla",
+  "noColumnSort": "{headerContent}. Actualmente la tabla no está ordenada a partir de esta columna. Haga clic en el encabezado de la columna para ordenar la tabla a partir de esta columna en orden ascendente",
+  "ascendingColumnSort": "{headerContent}. Actualmente la tabla no está ordenada a partir de esta columna en orden ascendente. Haga clic en el encabezado de la columna para ordenar la tabla a partir de esta columna en orden descendente",
+  "descendingColumnSort": "{headerContent}. Actualmente la tabla está ordenada a partir de esta columna en orden descendente. Haga clic en el encabezado de la columna para ordenar la tabla a partir de esta columna en orden ascendente",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Actualmente la tabla está ordenada a partir de esta columna en orden descendente. Haga clic en el encabezado de la columna para no ordenar la tabla a partir de esta columna"
 }

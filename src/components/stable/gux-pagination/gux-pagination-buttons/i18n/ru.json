@@ -4,5 +4,6 @@
   "first": "Первая",
   "previous": "Предыдущая",
   "next": "Следующая",
-  "last": "Последняя"
+  "last": "Последняя",
+  "pageInputLabel": "Страница {currentPage, number} из {totalPages, number}"
 }

@@ -5,5 +5,10 @@
   "selectAllTableRows": "Valitse taulukon kaikki rivit",
   "selectTableRow": "Valitse taulukon rivi",
   "sortAsc": "Lajiteltu nousevaan järjestykseen",
-  "sortDesc": "Lajiteltu laskevaan järjestykseen"
+  "sortDesc": "Lajiteltu laskevaan järjestykseen",
+  "tableOptions": "Taulukkovaihtoehdot",
+  "noColumnSort": "{headerContent}. Taulukkoa ei tällä hetkellä lajitella tässä sarakkeessa. Napsauttamalla sarakkeen otsaketta voit lajitella taulukon tässä sarakkeessa nousevassa järjestyksessä",
+  "ascendingColumnSort": "{headerContent}. Taulukkoa ei tällä hetkellä lajitella tässä sarakkeessa nousevassa järjestyksessä. Napsauttamalla sarakkeen otsaketta voit lajitella taulukon tässä sarakkeessa laskevassa järjestyksessä",
+  "descendingColumnSort": "{headerContent}. Taulukko lajitellaan tällä hetkellä tässä sarakkeessa laskevassa järjestyksessä. Napsauttamalla sarakkeen otsaketta voit lajitella taulukon tässä sarakkeessa nousevassa järjestyksessä",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Taulukko lajitellaan tällä hetkellä tässä sarakkeessa laskevassa järjestyksessä. Napsauttamalla sarakkeen otsaketta jättää taulukon lajittelematta tässä sarakkeessa"
 }

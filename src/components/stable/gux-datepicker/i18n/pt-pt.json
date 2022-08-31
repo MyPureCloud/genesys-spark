@@ -1,6 +1,6 @@
 {
-  "start": "Start",
-  "end": "End",
-  "date": "Date",
-  "toggleCalendar": "Toggle calendar view"
+  "start": "Início",
+  "end": "Fim",
+  "date": "Data",
+  "toggleCalendar": "Alternar visualização de calendário"
 }

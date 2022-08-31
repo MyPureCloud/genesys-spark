@@ -1,3 +1,5 @@
 {
-  "noSelection": "Select..."
+  "filterResults": "タイプしてドロップダウンの結果をフィルター",
+  "noSelection": "選択する ...",
+  "dropdown": "ドロップダウン"
 }

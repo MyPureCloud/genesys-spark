@@ -1,3 +1,5 @@
 {
-  "noSelection": "Select..."
+  "filterResults": "Kirjoittamalla voit suodattaa avattavan valikon tulokset",
+  "noSelection": "Valitse...",
+  "dropdown": "Avattava valikko"
 }

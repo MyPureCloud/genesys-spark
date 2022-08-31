@@ -1,3 +1,5 @@
 {
-  "noSelection": "Select..."
+  "filterResults": "輸入以篩選下拉式清單中的結果",
+  "noSelection": "選擇...",
+  "dropdown": "下拉"
 }

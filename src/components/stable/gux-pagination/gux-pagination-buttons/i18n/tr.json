@@ -4,5 +4,6 @@
   "first": "İlk",
   "previous": "Önceki",
   "next": "Sonraki",
-  "last": "Son"
+  "last": "Son",
+  "pageInputLabel": "Sayfa {currentPage, number}/{totalPages, number}"
 }
