@@ -19,8 +19,15 @@ export class GuxButtonSlot {
   accent: GuxButtonAccent = 'secondary';
 
   private validateSlotContent(): void {
-    const slottedElement = this.root.children[0];
-    const slottedTagName = slottedElement.tagName;
+    let slottedElement = this.root.children[0];
+    let slottedTagName = slottedElement.tagName;
+
+    if (slottedTagName === 'SLOT') {
+      slottedElement = (
+        slottedElement as HTMLSlotElement
+      ).assignedNodes()[0] as HTMLElement;
+      slottedTagName = slottedElement.tagName;
+    }
 
     if (slottedTagName === 'BUTTON') {
       return;
