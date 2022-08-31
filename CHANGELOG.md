@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.25.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.24.2...v3.25.0) (2022-08-31)
+
+
+### Features
+
+* **blank-state:** addition of blank state component ([acf97e2](https://github.com/MyPureCloud/genesys-webcomponents/commit/acf97e2480970dbc26bb7b7d9b5f245c6883526c))
+
+
+### Bug Fixes
+
+* **gux-form-field-dropdown:** add red border when there is an error ([#893](https://github.com/MyPureCloud/genesys-webcomponents/issues/893)) ([80cc5c1](https://github.com/MyPureCloud/genesys-webcomponents/commit/80cc5c169147aea8e575e01af8e9bbe4d70d3fba))
+
 ### [3.24.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.24.1...v3.24.2) (2022-08-31)
 
 
