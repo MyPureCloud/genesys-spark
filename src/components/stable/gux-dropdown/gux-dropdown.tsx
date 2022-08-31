@@ -53,6 +53,9 @@ export class GuxDropdown {
   @Prop()
   filterable: boolean = false;
 
+  @Prop()
+  hasError: boolean = false;
+
   @State()
   private expanded: boolean = false;
 
@@ -350,7 +353,8 @@ export class GuxDropdown {
       <div
         class={{
           'gux-target-container-expanded': this.expanded && this.filterable,
-          'gux-target-container-collapsed': !(this.expanded && this.filterable)
+          'gux-target-container-collapsed': !(this.expanded && this.filterable),
+          'gux-error': this.hasError
         }}
         slot="target"
       >

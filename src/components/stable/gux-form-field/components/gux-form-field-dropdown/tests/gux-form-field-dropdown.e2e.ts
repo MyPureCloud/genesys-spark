@@ -57,6 +57,17 @@ describe('gux-form-field-dropdown', () => {
             expect(elementShadowDom).toMatchSnapshot();
           });
 
+          it(`should show error style`, async () => {
+            const page = await newNonrandomE2EPage({ html });
+            const element = await page.find('gux-form-field-dropdown');
+            const dropdownElement = await element.find('gux-dropdown');
+            const popupElement = await dropdownElement.find('pierce/gux-popup');
+            const targetElement = await popupElement.find(
+              '.gux-target-container-collapsed'
+            );
+            expect(targetElement).toHaveClass('gux-error');
+          });
+
           it(`should be accessible (${index + 1})`, async () => {
             const page = await newSparkE2EPage({ html });
 
@@ -89,6 +100,17 @@ describe('gux-form-field-dropdown', () => {
 
             expect(element.outerHTML).toMatchSnapshot();
             expect(elementShadowDom).toMatchSnapshot();
+          });
+
+          it(`should not show error style`, async () => {
+            const page = await newNonrandomE2EPage({ html });
+            const element = await page.find('gux-form-field-dropdown');
+            const dropdownElement = await element.find('gux-dropdown');
+            const popupElement = await dropdownElement.find('pierce/gux-popup');
+            const targetElement = await popupElement.find(
+              '.gux-target-container-collapsed'
+            );
+            expect(targetElement).not.toHaveClass('gux-error');
           });
 
           it(`should be accessible (${index + 1})`, async () => {
@@ -132,6 +154,19 @@ describe('gux-form-field-dropdown', () => {
             expect(elementShadowDom).toMatchSnapshot();
           });
 
+          it(`should show error style`, async () => {
+            const page = await newNonrandomE2EPage({ html });
+            const element = await page.find('gux-form-field-dropdown');
+            const dropdownElement = await element.find(
+              'gux-dropdown-multi-beta'
+            );
+            const popupElement = await dropdownElement.find('pierce/gux-popup');
+            const targetElement = await popupElement.find(
+              '.gux-target-container-collapsed'
+            );
+            expect(targetElement).toHaveClass('gux-error');
+          });
+
           it(`should be accessible (${index + 1})`, async () => {
             const page = await newSparkE2EPage({ html });
 
@@ -162,6 +197,17 @@ describe('gux-form-field-dropdown', () => {
 
           expect(element.outerHTML).toMatchSnapshot();
           expect(elementShadowDom).toMatchSnapshot();
+        });
+
+        it(`should not show error style`, async () => {
+          const page = await newNonrandomE2EPage({ html });
+          const element = await page.find('gux-form-field-dropdown');
+          const dropdownElement = await element.find('gux-dropdown-multi-beta');
+          const popupElement = await dropdownElement.find('pierce/gux-popup');
+          const targetElement = await popupElement.find(
+            '.gux-target-container-collapsed'
+          );
+          expect(targetElement).not.toHaveClass('gux-error');
         });
 
         it(`should be accessible (${index + 1})`, async () => {
