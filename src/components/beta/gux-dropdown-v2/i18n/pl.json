@@ -1,3 +1,5 @@
 {
-  "noSelection": "Select..."
+  "filterResults": "Zacznij pisać, aby filtrować wyniki na liście",
+  "noSelection": "Wybierz...",
+  "dropdown": "Lista rozwijana"
 }

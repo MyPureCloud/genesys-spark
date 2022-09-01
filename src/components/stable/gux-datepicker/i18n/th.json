@@ -1,6 +1,6 @@
 {
   "start": "เริ่ม",
   "end": "สิ้นสุด",
-  "date": "Date",
-  "toggleCalendar": "Toggle calendar view"
+  "date": "วันที่",
+  "toggleCalendar": "สลับมุมมองปฏิทิน"
 }

@@ -1,6 +1,6 @@
 {
-  "createNewTab": "Create New Tab",
-  "scrollLeft": "Scroll Left",
-  "scrollRight": "Scroll Right",
-  "disableNewTab": "Maximum number of tabs created has been reached"
+  "createNewTab": "Criar novo separador",
+  "scrollLeft": "Deslocar para a esquerda",
+  "scrollRight": "Deslocar para a direita",
+  "disableNewTab": "Número máximo de separadores criados alcançado"
 }

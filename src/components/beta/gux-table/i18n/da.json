@@ -5,5 +5,10 @@
   "selectAllTableRows": "Vælg alle tabelrækker",
   "selectTableRow": "Vælg tabelrække",
   "sortAsc": "Sorteret stigende",
-  "sortDesc": "Sorteret faldende"
+  "sortDesc": "Sorteret faldende",
+  "tableOptions": "Tabelvalgmuligheder",
+  "noColumnSort": "{headerContent}. Tabellen er ikke sorteret efter denne kolonne i øjeblikket. Klik på kolonneoverskriften for at sortere tabellen efter denne kolonne i stigende rækkefølge",
+  "ascendingColumnSort": "{headerContent}. Tabellen er i øjeblikket sorteret efter denne kolonne i stigende rækkefølge. Klik på kolonneoverskriften for at sortere tabellen efter denne kolonne i faldende rækkefølge",
+  "descendingColumnSort": "{headerContent}. Tabellen er i øjeblikket sorteret efter denne kolonne i faldende rækkefølge. Klik på kolonneoverskriften for at sortere tabellen efter denne kolonne i stigende rækkefølge",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabellen er i øjeblikket sorteret efter denne kolonne i faldende rækkefølge. Klik på kolonneoverskriften for ikke at sortere tabellen efter denne kolonne"
 }

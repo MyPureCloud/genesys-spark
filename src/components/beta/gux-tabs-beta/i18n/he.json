@@ -1,6 +1,6 @@
 {
-  "scrollLeft": "Scroll Left",
-  "scrollRight": "Scroll Right",
-  "scrollUp": "Scroll Up",
-  "scrollDown": "Scroll Down"
+  "scrollLeft": "גלול שמאלה",
+  "scrollRight": "גלול ימינה",
+  "scrollUp": "גלול למעלה",
+  "scrollDown": "גלול למטה"
 }

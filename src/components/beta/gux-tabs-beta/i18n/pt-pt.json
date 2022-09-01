@@ -1,6 +1,6 @@
 {
-  "scrollLeft": "Scroll Left",
-  "scrollRight": "Scroll Right",
-  "scrollUp": "Scroll Up",
-  "scrollDown": "Scroll Down"
+  "scrollLeft": "Deslocar para a esquerda",
+  "scrollRight": "Deslocar para a direita",
+  "scrollUp": "Deslocar para cima",
+  "scrollDown": "Deslocar para baixo"
 }

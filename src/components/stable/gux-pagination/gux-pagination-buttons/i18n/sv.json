@@ -4,5 +4,6 @@
   "first": "Första",
   "previous": "Föregående",
   "next": "Nästa",
-  "last": "Sista"
+  "last": "Sista",
+  "pageInputLabel": "Sida {currentPage, number} av {totalPages, number}"
 }

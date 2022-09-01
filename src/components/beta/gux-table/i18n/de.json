@@ -5,5 +5,10 @@
   "selectAllTableRows": "Alle Tabellenzeilen auswählen",
   "selectTableRow": "Tabellenzeile auswählen",
   "sortAsc": "Aufsteigend sortiert",
-  "sortDesc": "Absteigend sortiert"
+  "sortDesc": "Absteigend sortiert",
+  "tableOptions": "Tabellenoptionen",
+  "noColumnSort": "{headerContent}. Die Tabelle ist derzeit nicht nach dieser Spalte sortiert. Klicken Sie auf die Spaltenkopfzeile, um die Tabelle nach dieser Spalte in aufsteigender Reihenfolge zu sortieren.",
+  "ascendingColumnSort": "{headerContent}. Die Tabelle ist derzeit nach dieser Spalte in aufsteigender Reihenfolge sortiert. Klicken Sie auf die Spaltenkopfzeile, um die Tabelle nach dieser Spalte in absteigender Reihenfolge zu sortieren.",
+  "descendingColumnSort": "{headerContent}. Die Tabelle ist derzeit nach dieser Spalte in absteigender Reihenfolge sortiert. Klicken Sie auf die Spaltenkopfzeile, um die Tabelle nach dieser Spalte in aufsteigender Reihenfolge zu sortieren.",
+  "descendingColumnSortIncludeUnsorted": "{headerContent}. Die Tabelle ist derzeit nach dieser Spalte in absteigender Reihenfolge sortiert. Klicken Sie auf die Spaltenkopfzeile, um die Tabelle nicht nach dieser Spalte zu sortieren."
 }

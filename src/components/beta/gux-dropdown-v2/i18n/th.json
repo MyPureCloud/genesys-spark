@@ -1,3 +1,5 @@
 {
-  "noSelection": "Select..."
+  "filterResults": "พิมพ์เพื่อกรองผลลัพธ์ในดรอปดาวน์",
+  "noSelection": "เลือก...",
+  "dropdown": "ดรอปดาวน์"
 }

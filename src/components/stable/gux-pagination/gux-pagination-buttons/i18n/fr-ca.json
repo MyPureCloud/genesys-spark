@@ -2,7 +2,8 @@
   "page": "Page",
   "totalPages": " sur {totalPages, number}",
   "first": "Première",
-  "previous": "Précédent",
-  "next": "Suivant",
-  "last": "Dernière"
+  "previous": "Précédente",
+  "next": "Suivante",
+  "last": "Dernière",
+  "pageInputLabel": "Page {currentPage, number} sur {totalPages, number}"
 }

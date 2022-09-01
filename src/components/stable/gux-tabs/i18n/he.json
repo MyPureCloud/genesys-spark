@@ -1,6 +1,6 @@
 {
-  "createNewTab": "Create New Tab",
-  "scrollLeft": "Scroll Left",
-  "scrollRight": "Scroll Right",
-  "disableNewTab": "Maximum number of tabs created has been reached"
+  "createNewTab": "צור כרטיסייה חדשה",
+  "scrollLeft": "גלול שמאלה",
+  "scrollRight": "גלול ימינה",
+  "disableNewTab": "הגעת למספר הכרטיסיות המרבי"
 }

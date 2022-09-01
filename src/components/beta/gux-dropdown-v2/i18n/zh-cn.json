@@ -1,3 +1,5 @@
 {
-  "noSelection": "Select..."
+  "filterResults": "输入以过滤下拉结果",
+  "noSelection": "选择...",
+  "dropdown": "下拉"
 }

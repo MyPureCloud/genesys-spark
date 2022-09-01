@@ -1,6 +1,6 @@
 {
   "start": "시작",
   "end": "종료",
-  "date": "Date",
-  "toggleCalendar": "Toggle calendar view"
+  "date": "날짜",
+  "toggleCalendar": "달력 보기 전환"
 }
