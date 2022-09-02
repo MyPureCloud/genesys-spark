@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.26.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.25.0...v3.26.0) (2022-09-02)
+
+
+### Features
+
+* **css:** add CSS variables for .gux-form-field-container margins ([e812b27](https://github.com/MyPureCloud/genesys-webcomponents/commit/e812b2790ecc658fd8665818bf92c358f75e5c04))
+
+
+### Bug Fixes
+
+* **knockout:** added knockout playground ([5ac5890](https://github.com/MyPureCloud/genesys-webcomponents/commit/5ac58903ddbd40d05888e3f72ff460d8dd51c3ed))
+
 ## [3.25.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.24.2...v3.25.0) (2022-08-31)
 
 
