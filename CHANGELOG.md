@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.56.3](https://inindca///compare/v2.56.2...v2.56.3) (2022-09-02)
+
+
+### Bug Fixes
+
+* **translations:** updated translations from main ([45f4f55](https://inindca///commit/45f4f55a89b2e39de6b94b8861481d7c7beafbad))
+
 ### [2.56.2](https://inindca///compare/v2.56.1...v2.56.2) (2022-08-30)
 
 
