@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.26.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.0...v3.26.1) (2022-09-02)
+
+
+### Bug Fixes
+
+* **form-fields:** updated checkbox and radio icons ([53b0e4b](https://github.com/MyPureCloud/genesys-webcomponents/commit/53b0e4b2eb69afb5ebdf7d65645237fd6dc6291e))
+
 ## [3.26.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.25.0...v3.26.0) (2022-09-02)
 
 
