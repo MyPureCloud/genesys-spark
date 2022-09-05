@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.26.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.1...v3.26.2) (2022-09-05)
+
+
+### Bug Fixes
+
+* **form-field-error:** adding line-height to correctly allign icon and text, removal of 4px spacing ([d5970a8](https://github.com/MyPureCloud/genesys-webcomponents/commit/d5970a8491ad6450c07856430ebaa4c913d7f96a))
+
 ### [3.26.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.0...v3.26.1) (2022-09-02)
 
 
