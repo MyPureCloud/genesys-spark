@@ -35,6 +35,13 @@ Type: `Promise<void>`
 | `"label"` | Required slot for label tag     |
 
 
+## Shadow Parts
+
+| Part                  | Description           |
+| --------------------- | --------------------- |
+| `"gux-input-section"` | Style input container |
+
+
 ## Dependencies
 
 ### Depends on
