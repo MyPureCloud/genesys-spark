@@ -162,7 +162,9 @@ export class GuxTooltip {
   render(): JSX.Element {
     return (
       <Host id={this.id} class={{ 'gux-show': this.isShown }} role="tooltip">
-        <slot />
+        <div class="gux-container">
+          <slot />
+        </div>
       </Host>
     ) as JSX.Element;
   }
