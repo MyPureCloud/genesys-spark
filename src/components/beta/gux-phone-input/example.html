@@ -1,10 +1,10 @@
 <h1>Phone Input with Country Selector</h1>
-<form onchange="notify(event)" oninput="notify(event)">
+<div>
   <gux-phone-input-beta
     default-country-code="us"
     label-position="above"
-    label-id="countries"
-    label-text="blah"
     value="+11234567890"
-  ></gux-phone-input-beta>
-</form>
+  >
+    <label slot="label">Blah</label>
+  </gux-phone-input-beta>
+</div>

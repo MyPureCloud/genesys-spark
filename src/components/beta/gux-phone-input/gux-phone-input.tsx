@@ -14,16 +14,15 @@ import { trackComponent } from '../../../usage-tracking';
 import { GuxFormFieldLabel } from '../../stable/gux-form-field/functional-components/gux-form-field-label/gux-form-field-label';
 import { GuxFormFieldContainer } from '../../stable/gux-form-field/functional-components/gux-form-field-container/gux-form-field-container';
 import { GuxFormFieldLabelPosition } from '../../stable/gux-form-field/gux-form-field.types';
-import { preventBrowserValidationStyling } from '../../../utils/dom/prevent-browser-validation-styling';
+import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
 import {
   onDisabledChange,
   onRequiredChange
-} from '../../../utils/dom/on-attribute-change';
+} from '@utils/dom/on-attribute-change';
 import {
   getComputedLabelPosition,
   validateFormIds
-} from '../../stable/gux-form-field/gux-form-field.servce';
-import { GuxFormFieldError } from '../../stable/gux-form-field/functional-components/gux-form-field-error/gux-form-field-error';
+} from '../../stable/gux-form-field/gux-form-field.service';
 
 @Component({
   styleUrl: 'gux-phone-input.less',
@@ -31,12 +30,14 @@ import { GuxFormFieldError } from '../../stable/gux-form-field/functional-compon
   shadow: true
 })
 export class GuxPhoneInput {
-  private input: HTMLInputElement;
-  private label: HTMLLabelElement;
+  private inputWrapperElement: HTMLDivElement;
+  private inputElement: HTMLInputElement;
+  private labelElement: HTMLLabelElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
   private phoneUtil: libphonenumber.PhoneNumberUtil =
     libphonenumber.PhoneNumberUtil.getInstance();
+  private numberText: string;
 
   @Element()
   private root: HTMLElement;
@@ -47,14 +48,11 @@ export class GuxPhoneInput {
   @Prop()
   labelPosition: GuxFormFieldLabelPosition;
 
-  @Prop()
-  labelText: string;
-
-  @Prop()
+  @Prop({ mutable: true })
   value: string;
 
   @State()
-  phone: libphonenumber.PhoneNumber;
+  countryCode: number;
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';
@@ -69,24 +67,49 @@ export class GuxPhoneInput {
   private hasError: boolean = false;
 
   @Event()
-  phoneUpdated: EventEmitter;
+  input: EventEmitter<string>;
+
+  @Event()
+  error: EventEmitter<boolean>;
 
   @Listen('internalregionupdated')
   updateCountry(event: CustomEvent) {
-    this.phone.setCountryCode(event.detail as number);
-    if (this.phone.hasNationalNumber()) {
-      this.validatePhoneNumber();
+    this.countryCode = event.detail as number;
+    if (this.numberText) {
+      this.phoneNumberUpdated();
     }
   }
 
   componentWillRender(): void {
     trackComponent(this.root);
-    this.phone = this.value
-      ? this.phoneUtil.parse(this.value)
-      : this.phoneUtil.parse('', this.defaultRegion);
+    if (this.value) {
+      try {
+        const phone = this.phoneUtil.parse(this.value);
+        this.numberText = this.phoneUtil.format(
+          phone,
+          PhoneNumberFormat.NATIONAL
+        );
+        this.countryCode = phone.getCountryCode();
+      } catch (e) {
+        if (this.numberText === undefined) {
+          // only show error on initial render
+          console.error('Number cannot be parsed');
+          this.numberText = '';
+          this.countryCode = this.phoneUtil.getCountryCodeForRegion(
+            this.defaultRegion
+          );
+        }
+      }
+    } else {
+      this.numberText = '';
+      this.countryCode = this.phoneUtil.getCountryCodeForRegion(
+        this.defaultRegion
+      );
+    }
   }
 
   componentDidLoad(): void {
+    this.setValidation();
     this.setInput();
     this.setLabel();
   }
@@ -96,19 +119,37 @@ export class GuxPhoneInput {
     this.requiredObserver.disconnect();
   }
 
-  private onInputChange(newValue: string): void {
-    this.phone = this.phoneUtil.parse(
-      `+${this.phone.getCountryCode()}${newValue}`
-    );
+  private onInputChange(number: string): void {
+    this.numberText = number;
   }
 
   private validatePhoneNumber(): void {
-    this.hasError =
-      this.phone &&
-      !this.phoneUtil.isValidNumberForRegion(
-        this.phone,
-        this.phoneUtil.getRegionCodeForNumber(this.phone)
-      );
+    if (this.value) {
+      try {
+        const phone = this.phoneUtil.parse(this.value);
+        const isValid =
+          phone &&
+          this.phoneUtil.isValidNumberForRegion(
+            phone,
+            this.phoneUtil.getRegionCodeForNumber(phone)
+          );
+        this.error.emit(!isValid);
+        this.hasError = !isValid;
+      } catch (e) {
+        console.error('Number cannot be parsed');
+        this.error.emit(true);
+      }
+    } else {
+      this.error.emit(this.required);
+      this.hasError = this.required;
+    }
+  }
+
+  private phoneNumberUpdated(): void {
+    this.value = this.numberText
+      ? `+${this.countryCode}${this.numberText.replace(/\D/, '')}`
+      : '';
+    this.input.emit(this.value);
   }
 
   render(): JSX.Element {
@@ -118,80 +159,82 @@ export class GuxPhoneInput {
           position={this.computedLabelPosition}
           required={this.required}
         >
-          <label htmlFor={'tel-input'}>{this.labelText}</label>
+          <slot name="label" onSlotchange={() => this.setLabel()} />
         </GuxFormFieldLabel>
-        <div class="gux-phone-container-and-error">
-          <div class="gux-input-and-select-container">
-            <div class="country-select-container">
-              <gux-country-select
-                region={
-                  this.phone
-                    ? this.phoneUtil.getRegionCodeForNumber(this.phone)
-                    : ''
-                }
-                defaultRegion={this.defaultRegion}
-                disabled={this.disabled}
-              />
-            </div>
-            <div
-              class={{
-                'gux-phone-input-container': true,
-                'gux-input-error': this.hasError
-              }}
-            >
-              <input
-                id={'tel-input'}
-                class="phone-input"
-                type="tel"
-                value={this.phoneUtil.format(
-                  this.phone,
-                  PhoneNumberFormat.NATIONAL
-                )}
-              />
-            </div>
+        <div class="gux-input-and-error-container">
+          <div
+            class={{
+              'gux-input-container': true,
+              'gux-input-error': this.hasError
+            }}
+          >
+            <gux-country-select
+              region={
+                this.value
+                  ? this.phoneUtil.getRegionCodeForCountryCode(this.countryCode)
+                  : ''
+              }
+              defaultRegion={this.defaultRegion}
+              disabled={this.disabled}
+            />
+            <input
+              id={'tel-input'}
+              class="phone-input"
+              type="tel"
+              value={this.numberText}
+            />
           </div>
-          {this.hasError ? (
-            <GuxFormFieldError hasError={this.hasError}>
-              <span>This has an Error</span>
-            </GuxFormFieldError>
-          ) : (
-            ''
-          )}
         </div>
       </GuxFormFieldContainer>
     ) as JSX.Element;
   }
 
+  private setValidation(): void {
+    this.inputWrapperElement = this.root.shadowRoot.querySelector(
+      'div[class="gux-input-container"]'
+    );
+
+    this.inputWrapperElement.addEventListener(
+      'focusout',
+      (event: FocusEvent) => {
+        event.stopPropagation();
+        this.validatePhoneNumber();
+      }
+    );
+  }
+
   private setInput(): void {
-    this.input = this.root.shadowRoot.querySelector('input[type="tel"]');
+    this.inputElement = this.root.shadowRoot.querySelector('input[type="tel"]');
 
-    preventBrowserValidationStyling(this.input);
+    preventBrowserValidationStyling(this.inputElement);
 
-    this.input.addEventListener('focusout', (event: FocusEvent) => {
+    this.inputElement.addEventListener('input', (event: InputEvent) => {
       event.stopPropagation();
-      this.onInputChange(this.input.value);
+      this.onInputChange(this.inputElement.value);
     });
     this.disabledObserver = onDisabledChange(
-      this.input,
+      this.inputElement,
       (disabled: boolean) => {
         this.disabled = disabled;
       }
     );
     this.requiredObserver = onRequiredChange(
-      this.input,
+      this.inputElement,
       (required: boolean) => {
         this.required = required;
       }
     );
 
-    validateFormIds(this.root, this.input);
+    validateFormIds(this.root, this.inputElement);
   }
 
   private setLabel(): void {
-    this.label = this.root.shadowRoot.querySelector('label');
+    this.labelElement = this.root.shadowRoot.querySelector(
+      'label[slot="label"]'
+    );
 
     this.computedLabelPosition = getComputedLabelPosition(
-      this.label,
+      this.labelElement,
       this.labelPosition
     );
   }

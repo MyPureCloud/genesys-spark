@@ -15,7 +15,7 @@ import { trackComponent } from '../../../../../usage-tracking';
 import { countryCodeMap } from './CountryCodeMap';
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import countryResources from '../../i18n/en.json';
-import { OnClickOutside } from '../../../../../utils/decorator/on-click-outside';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
 
 @Component({
   styleUrl: 'gux-country-select.less',
@@ -59,7 +59,7 @@ export class GuxCountrySelect {
     }
   }
 
-  @Watch('countryCode')
+  // @Watch('countryCode')
   validateValue(newValue: string) {
     if (newValue === undefined) {
       this.region = this.defaultRegion;
@@ -139,9 +139,9 @@ export class GuxCountrySelect {
     }
   }
 
-  private getOptionElementByValue(value: string): HTMLGuxOptionV2Element {
+  private getOptionElementByValue(value: string): HTMLGuxOptionElement {
     const listboxOptionElements =
-      this.root.shadowRoot.querySelectorAll('gux-option-v2');
+      this.root.shadowRoot.querySelectorAll('gux-option');
 
     return Array.from(listboxOptionElements).find(
       listboxOptionElement => listboxOptionElement.value === value
@@ -175,33 +175,25 @@ export class GuxCountrySelect {
 
   private renderTarget(): JSX.Element {
     return (
-      <div
-        class={{
-          'gux-target-container': true,
-          'gux-target-container-expanded': this.expanded,
-          'gux-target-container-collapsed': !this.expanded
-        }}
+      <button
+        type="button"
+        class="gux-field gux-field-button"
+        disabled={this.disabled}
+        onClick={this.fieldButtonClick.bind(this)}
+        ref={el => (this.fieldButtonElement = el)}
+        aria-haspopup="listbox"
+        aria-expanded={this.expanded.toString()}
         slot="target"
       >
-        <button
-          type="button"
-          class="gux-field gux-field-button"
-          disabled={this.disabled}
-          onClick={this.fieldButtonClick.bind(this)}
-          ref={el => (this.fieldButtonElement = el)}
-          aria-haspopup="listbox"
-          aria-expanded={this.expanded.toString()}
-        >
-          <div class="gux-field-content">{this.renderTargetDisplay()}</div>
-          <gux-icon
-            class={{
-              'gux-expand-icon': true
-            }}
-            iconName="chevron-small-down"
-            decorative
-          />
-        </button>
-      </div>
+        <div class="gux-field-content">{this.renderTargetDisplay()}</div>
+        <gux-icon
+          class={{
+            'gux-expand-icon': true
+          }}
+          iconName="chevron-small-down"
+          decorative
+        />
+      </button>
     ) as JSX.Element;
   }
 

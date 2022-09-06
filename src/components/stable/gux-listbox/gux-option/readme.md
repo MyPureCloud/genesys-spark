@@ -19,14 +19,14 @@
 
 ### Used by
 
- - [gux-country-select](../../gux-phone-input/components/gux-country-select)
+ - [gux-country-select](../../../beta/gux-phone-input/components/gux-country-select)
  - [gux-pagination-items-per-page](../../gux-pagination/gux-pagination-items-per-page)
  - [gux-pagination-items-per-page-beta](../../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-country-select --> gux-option-v2
+  gux-country-select --> gux-option
   gux-pagination-items-per-page --> gux-option
   gux-pagination-items-per-page-beta --> gux-option
   style gux-option fill:#f9f,stroke:#333,stroke-width:4px

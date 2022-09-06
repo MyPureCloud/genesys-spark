@@ -32,8 +32,8 @@
 
 - [gux-icon](../../../../stable/gux-icon)
 - [gux-country-icon](../gux-country-icon)
-- [gux-option-v2](../../../gux-listbox/gux-option-v2)
-- [gux-listbox](../../../gux-listbox)
+- [gux-option](../../../../stable/gux-listbox/gux-option)
+- [gux-listbox](../../../../stable/gux-listbox)
 - [gux-popup](../../../../stable/gux-popup)
 
 ### Graph
@@ -41,7 +41,7 @@
 graph TD;
   gux-country-select --> gux-icon
   gux-country-select --> gux-country-icon
-  gux-country-select --> gux-option-v2
+  gux-country-select --> gux-option
   gux-country-select --> gux-listbox
   gux-country-select --> gux-popup
   gux-phone-input-beta --> gux-country-select

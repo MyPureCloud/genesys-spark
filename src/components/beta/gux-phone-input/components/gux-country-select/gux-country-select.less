@@ -8,10 +8,7 @@
   isolation: isolate;
 }
 
-.gux-field,
-.gux-target-container {
-  //all: unset;
-  box-sizing: border-box;
+.gux-field {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -19,13 +16,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 32px;
+  height: 30px;
   padding: 6px 8px 6px 6px;
   font-family: inherit;
   font-size: 12px;
   line-height: 1.6667;
   cursor: pointer;
-  background-color: @gux-grey-90;
+  border-radius: 4px;
 }
 
 .gux-field {
@@ -68,31 +65,9 @@
   }
 }
 
-.gux-target-container-expanded {
-  .form-field-border();
-
-  &:focus-within {
-    .focus-ring();
-  }
-
-  .gux-field-button {
-    width: auto;
-    height: 30px;
-    padding: 0 0 0 @spacing-xs;
-    margin: 0;
-    background: inherit;
-    border: none;
-    outline: none;
-    box-shadow: none;
-
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
-.gux-target-container-collapsed .gux-field-button {
-  .form-field-border();
+.gux-field-button {
+  border: none;
+  outline: inherit;
 
   &:focus {
     .focus-ring();

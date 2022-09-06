@@ -42,7 +42,7 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-country-select](../gux-phone-input/components/gux-country-select)
+ - [gux-country-select](../../beta/gux-phone-input/components/gux-country-select)
  - [gux-pagination-items-per-page](../gux-pagination/gux-pagination-items-per-page)
  - [gux-pagination-items-per-page-beta](../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
 
