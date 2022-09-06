@@ -2,6 +2,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/zindex.less';
 
 // Style
 
@@ -100,7 +101,7 @@ gux-dropdown-legacy {
 
     .gux-options {
       position: absolute;
-      z-index: 1;
+      z-index: var(--gux-zindex-popup, @gux-zindex-popup);
       display: none;
       width: 100%;
       padding: 8px 0;

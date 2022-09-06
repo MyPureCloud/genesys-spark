@@ -31,7 +31,13 @@ gux-dropdown-option {
     opacity: 0.5;
   }
 
-  &:not([disabled]) {
+  &[disabled='false'] {
+    pointer-events: auto;
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  &:not(:disabled) {
     &[selected] {
       color: @text-color;
       background: @gux-blue-100;

@@ -53,6 +53,9 @@ export class GuxDropdown {
   @Prop()
   filterable: boolean = false;
 
+  @Prop()
+  hasError: boolean = false;
+
   @State()
   private expanded: boolean = false;
 
@@ -81,7 +84,9 @@ export class GuxDropdown {
   @Watch('value')
   validateValue(newValue: string) {
     if (newValue === undefined) {
-      this.listboxElement.value = newValue;
+      if (this.listboxElement) {
+        this.listboxElement.value = newValue;
+      }
       return;
     }
 
@@ -265,10 +270,10 @@ export class GuxDropdown {
   private updateValue(newValue: string): void {
     if (this.value !== newValue) {
       this.value = newValue;
-      this.collapseListbox('focusFieldButton');
       simulateNativeEvent(this.root, 'input');
       simulateNativeEvent(this.root, 'change');
     }
+    this.collapseListbox('focusFieldButton');
   }
 
   private getSuggestionText(filter: string): string {
@@ -348,7 +353,8 @@ export class GuxDropdown {
       <div
         class={{
           'gux-target-container-expanded': this.expanded && this.filterable,
-          'gux-target-container-collapsed': !(this.expanded && this.filterable)
+          'gux-target-container-collapsed': !(this.expanded && this.filterable),
+          'gux-error': this.hasError
         }}
         slot="target"
       >

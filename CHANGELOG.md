@@ -2,6 +2,116 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.26.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.2...v3.26.3) (2022-09-06)
+
+
+### Bug Fixes
+
+* **tooltip:** isolated tooltip styling ([ad6cf24](https://github.com/MyPureCloud/genesys-webcomponents/commit/ad6cf244e75d24c432eacb2f9e881c178c617002))
+
+### [3.26.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.1...v3.26.2) (2022-09-05)
+
+
+### Bug Fixes
+
+* **form-field-error:** adding line-height to correctly allign icon and text, removal of 4px spacing ([d5970a8](https://github.com/MyPureCloud/genesys-webcomponents/commit/d5970a8491ad6450c07856430ebaa4c913d7f96a))
+
+### [3.26.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.0...v3.26.1) (2022-09-02)
+
+
+### Bug Fixes
+
+* **form-fields:** updated checkbox and radio icons ([53b0e4b](https://github.com/MyPureCloud/genesys-webcomponents/commit/53b0e4b2eb69afb5ebdf7d65645237fd6dc6291e))
+
+## [3.26.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.25.0...v3.26.0) (2022-09-02)
+
+
+### Features
+
+* **css:** add CSS variables for .gux-form-field-container margins ([e812b27](https://github.com/MyPureCloud/genesys-webcomponents/commit/e812b2790ecc658fd8665818bf92c358f75e5c04))
+
+
+### Bug Fixes
+
+* **knockout:** added knockout playground ([5ac5890](https://github.com/MyPureCloud/genesys-webcomponents/commit/5ac58903ddbd40d05888e3f72ff460d8dd51c3ed))
+
+## [3.25.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.24.2...v3.25.0) (2022-08-31)
+
+
+### Features
+
+* **blank-state:** addition of blank state component ([acf97e2](https://github.com/MyPureCloud/genesys-webcomponents/commit/acf97e2480970dbc26bb7b7d9b5f245c6883526c))
+
+
+### Bug Fixes
+
+* **gux-form-field-dropdown:** add red border when there is an error ([#893](https://github.com/MyPureCloud/genesys-webcomponents/issues/893)) ([80cc5c1](https://github.com/MyPureCloud/genesys-webcomponents/commit/80cc5c169147aea8e575e01af8e9bbe4d70d3fba))
+
+### [3.24.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.24.1...v3.24.2) (2022-08-31)
+
+
+### Bug Fixes
+
+* **option/dropdown-option:** fix where disabled="false" was creating a partially disabled state ([8eb4e51](https://github.com/MyPureCloud/genesys-webcomponents/commit/8eb4e51f9fea5ce2b3d8a1ee91f77b55ae38c12a))
+
+### [3.24.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.24.0...v3.24.1) (2022-08-31)
+
+## [3.24.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.23.1...v3.24.0) (2022-08-30)
+
+
+### Features
+
+* **css:** overridable z-index variables ([0c1746c](https://github.com/MyPureCloud/genesys-webcomponents/commit/0c1746ca6f2077676872daea112f1074a9c6ec9f))
+
+### [3.23.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.23.0...v3.23.1) (2022-08-30)
+
+
+### Bug Fixes
+
+* **tooltip:** Do not show tooltip when clicking on element ([07d29d6](https://github.com/MyPureCloud/genesys-webcomponents/commit/07d29d62aeabe5fa07be907f4045557122cb3e63))
+
+## [3.23.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.22.0...v3.23.0) (2022-08-29)
+
+
+### Features
+
+* **form-field:** added set input method to field with a clearable property ([0a9ad7c](https://github.com/MyPureCloud/genesys-webcomponents/commit/0a9ad7c17f660ab33c748026308ad2b83fdee1d2))
+
+
+### Bug Fixes
+
+* **dropdown:** added missing if guard ([2a20090](https://github.com/MyPureCloud/genesys-webcomponents/commit/2a20090e0841e7586c758d86b4192ae2518d41b1))
+
+## [3.22.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.3...v3.22.0) (2022-08-25)
+
+
+### Features
+
+* **datetimeformatter:** merged from beta/COMUI-1084 to add doc comments ([92ed95e](https://github.com/MyPureCloud/genesys-webcomponents/commit/92ed95ef035f4c9bcd9ca4e81ff0202b40ab9cba))
+* **gux-date-time:** added new gux-date-time component ([639d640](https://github.com/MyPureCloud/genesys-webcomponents/commit/639d64020caef83c55f93135b733e2068bdc32f2))
+* **gux-date-time:** addressed PR comments ([3f5a60c](https://github.com/MyPureCloud/genesys-webcomponents/commit/3f5a60cc1b877fed759efcc4d3e1b0127665d328))
+* **gux-date-time:** addressed PR comments ([f02ada7](https://github.com/MyPureCloud/genesys-webcomponents/commit/f02ada777f9824119048dd9baa9a95148e61afab))
+* **gux-date-time:** fixed test snapshots and lint issues ([9573617](https://github.com/MyPureCloud/genesys-webcomponents/commit/9573617c5cf20b7f58afac52b7a76ee59aa4d1ec))
+* **gux-date-time:** pR comments ([4428fd6](https://github.com/MyPureCloud/genesys-webcomponents/commit/4428fd659f54c85cb05840211ebe749acd3253d9))
+* **gux-date:** added new gux-date component ([e2d1ea7](https://github.com/MyPureCloud/genesys-webcomponents/commit/e2d1ea70a4e6e0a73c1d208c21de7d870ad8bced))
+* **gux-time:** added new gux-time component ([f735e75](https://github.com/MyPureCloud/genesys-webcomponents/commit/f735e75b10403ac5f8f3da14427eb13be789de35))
+
+
+### Bug Fixes
+
+* **color-palette:** update Red 70 color to match Spark color system ([369686c](https://github.com/MyPureCloud/genesys-webcomponents/commit/369686c551123605fdf04d1c6a67e228b34d76e0))
+* **gux-date-time:** changed locale type ([ee433c4](https://github.com/MyPureCloud/genesys-webcomponents/commit/ee433c49be99408deddd67658fa5e99e0cabb606))
+* **gux-date-time:** fixed timezone issues in snapshots when running Github actions ([363613c](https://github.com/MyPureCloud/genesys-webcomponents/commit/363613c738946a6a9ca69ac1702b7f57181ca163))
+
+### [3.21.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.2...v3.21.3) (2022-08-25)
+
+
+### Bug Fixes
+
+* **dropdown:** dropdown will now close if same value is reselected from the dropdown ([b00a1e1](https://github.com/MyPureCloud/genesys-webcomponents/commit/b00a1e1e82ad5894f1cfdb4f208905cec87a9922))
+
+### [3.21.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.1...v3.21.2) (2022-08-24)
+
 ### [3.21.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.21.0...v3.21.1) (2022-08-23)
 
 ## [3.21.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.20.3...v3.21.0) (2022-08-23)

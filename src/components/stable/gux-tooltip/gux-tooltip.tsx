@@ -24,10 +24,9 @@ import { GuxTooltipPlacements } from './gux-tooltip.types';
   shadow: true
 })
 export class GuxTooltip {
-  private delayTimeout: NodeJS.Timer;
   private forElement: HTMLElement;
-  private mouseenterHandler: () => void = () => this.show();
-  private mouseleaveHandler: () => void = () => this.hide();
+  private pointerenterHandler: () => void = () => this.show();
+  private pointerleaveHandler: () => void = () => this.hide();
   private focusinHandler: () => void = () => this.show();
   private focusoutHandler: () => void = () => this.hide();
   private popperInstance: Instance;
@@ -81,13 +80,10 @@ export class GuxTooltip {
 
   private show(): void {
     this.popperInstance.forceUpdate();
-    this.delayTimeout = setTimeout(() => {
-      this.isShown = true;
-    }, 750); // the css transition is 250ms
+    this.isShown = true;
   }
 
   private hide(): void {
-    clearTimeout(this.delayTimeout);
     this.isShown = false;
   }
 
@@ -124,8 +120,14 @@ export class GuxTooltip {
         strategy: 'fixed'
       });
 
-      this.forElement.addEventListener('mouseenter', this.mouseenterHandler);
-      this.forElement.addEventListener('mouseleave', this.mouseleaveHandler);
+      this.forElement.addEventListener(
+        'pointerenter',
+        this.pointerenterHandler
+      );
+      this.forElement.addEventListener(
+        'pointerleave',
+        this.pointerleaveHandler
+      );
       this.forElement.addEventListener('focusin', this.focusinHandler);
       this.forElement.addEventListener('focusout', this.focusoutHandler);
     } else {
@@ -145,8 +147,14 @@ export class GuxTooltip {
       this.popperInstance = null;
     }
 
-    this.forElement.removeEventListener('mouseenter', this.mouseenterHandler);
-    this.forElement.removeEventListener('mouseleave', this.mouseleaveHandler);
+    this.forElement.removeEventListener(
+      'pointerenter',
+      this.pointerenterHandler
+    );
+    this.forElement.removeEventListener(
+      'pointerleave',
+      this.pointerleaveHandler
+    );
     this.forElement.removeEventListener('focusin', this.focusinHandler);
     this.forElement.removeEventListener('focusout', this.focusoutHandler);
   }
@@ -154,7 +162,9 @@ export class GuxTooltip {
   render(): JSX.Element {
     return (
       <Host id={this.id} class={{ 'gux-show': this.isShown }} role="tooltip">
-        <slot />
+        <div class="gux-container">
+          <slot />
+        </div>
       </Host>
     ) as JSX.Element;
   }

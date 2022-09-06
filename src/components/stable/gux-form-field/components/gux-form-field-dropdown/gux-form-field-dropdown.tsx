@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
@@ -53,6 +53,16 @@ export class GuxFormFieldDropdown {
 
   @State()
   private hasError: boolean = false;
+
+  @Watch('hasError')
+  watchValue(hasError: boolean): void {
+    const dropdownSlot =
+      this.root.querySelector('gux-dropdown') ||
+      this.root.querySelector('gux-dropdown-multi-beta');
+    if (dropdownSlot) {
+      dropdownSlot.hasError = hasError;
+    }
+  }
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {

@@ -25,10 +25,20 @@
   }
 }
 
-.gux-input {
-  position: relative;
-  height: @gux-icon-size-default-global + (2 * @spacing-2xs);
-  line-height: @gux-icon-size-default-global + (2 * @spacing-2xs);
+.gux-input-label {
+  display: flex;
+  flex-direction: row;
+
+  .gux-input {
+    position: relative;
+    height: @gux-icon-size-default-global + (2 * @spacing-2xs);
+    line-height: @gux-icon-size-default-global + (2 * @spacing-2xs);
+  }
+
+  .gux-label {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 ::slotted(input[type='radio']) {
@@ -53,10 +63,6 @@
 
 ::slotted(input[type='radio']:focus-within)::before {
   .focus-ring();
-
-  margin: -1px;
-  // TODO https://inindca.atlassian.net/browse/COMUI-946
-  box-shadow: 0 0 0 1px @gux-grey-100 inset, 0 0 0 4px @gux-blue-90 inset;
 }
 
 ::slotted(input[type='radio']:not(:checked))::before {

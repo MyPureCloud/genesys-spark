@@ -52,6 +52,9 @@ export class GuxDropdownMulti {
   @Prop()
   filterable: boolean = false;
 
+  @Prop()
+  hasError: boolean = false;
+
   @State()
   private expanded: boolean = false;
 
@@ -395,7 +398,8 @@ export class GuxDropdownMulti {
         class={{
           'gux-target-container': true,
           'gux-target-container-expanded': this.expanded && this.filterable,
-          'gux-target-container-collapsed': !(this.expanded && this.filterable)
+          'gux-target-container-collapsed': !(this.expanded && this.filterable),
+          'gux-error': this.hasError
         }}
         slot="target"
       >

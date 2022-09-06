@@ -4,14 +4,18 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
 <gux-form-field-radio>
   <mock:shadow-root>
     <div class="gux-form-field-container">
-      <div class="gux-input">
-        <slot name="input"></slot>
-        <slot name="label"></slot>
-      </div>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+      <div class="gux-input-label">
+        <div class="gux-input">
+          <slot name="input"></slot>
+        </div>
+        <div class="gux-label">
+          <slot name="label"></slot>
+          <div class="gux-form-field-error">
+            <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+            <div class="gux-message">
+              <slot name="error"></slot>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -27,14 +31,18 @@ exports[`gux-form-field-radio #render should render component as expected (2) 1`
 <gux-form-field-radio class="gux-disabled">
   <mock:shadow-root>
     <div class="gux-form-field-container">
-      <div class="gux-input">
-        <slot name="input"></slot>
-        <slot name="label"></slot>
-      </div>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+      <div class="gux-input-label">
+        <div class="gux-input">
+          <slot name="input"></slot>
+        </div>
+        <div class="gux-label">
+          <slot name="label"></slot>
+          <div class="gux-form-field-error">
+            <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+            <div class="gux-message">
+              <slot name="error"></slot>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -50,14 +58,18 @@ exports[`gux-form-field-radio #render should render component as expected (3) 1`
 <gux-form-field-radio class="gux-input-error">
   <mock:shadow-root>
     <div class="gux-form-field-container">
-      <div class="gux-input">
-        <slot name="input"></slot>
-        <slot name="label"></slot>
-      </div>
-      <div class="gux-form-field-error gux-show">
-        <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+      <div class="gux-input-label">
+        <div class="gux-input">
+          <slot name="input"></slot>
+        </div>
+        <div class="gux-label">
+          <slot name="label"></slot>
+          <div class="gux-form-field-error gux-show">
+            <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+            <div class="gux-message">
+              <slot name="error"></slot>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -76,14 +88,18 @@ exports[`gux-form-field-radio #render should render component as expected (4) 1`
 <gux-form-field-radio>
   <mock:shadow-root>
     <div class="gux-form-field-container">
-      <div class="gux-input">
-        <slot name="input"></slot>
-        <slot name="label"></slot>
-      </div>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+      <div class="gux-input-label">
+        <div class="gux-input">
+          <slot name="input"></slot>
+        </div>
+        <div class="gux-label">
+          <slot name="label"></slot>
+          <div class="gux-form-field-error">
+            <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+            <div class="gux-message">
+              <slot name="error"></slot>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -99,14 +115,18 @@ exports[`gux-form-field-radio #render should render component as expected (5) 1`
 <gux-form-field-radio class="gux-input-error">
   <mock:shadow-root>
     <div class="gux-form-field-container">
-      <div class="gux-input">
-        <slot name="input"></slot>
-        <slot name="label"></slot>
-      </div>
-      <div class="gux-form-field-error gux-show">
-        <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+      <div class="gux-input-label">
+        <div class="gux-input">
+          <slot name="input"></slot>
+        </div>
+        <div class="gux-label">
+          <slot name="label"></slot>
+          <div class="gux-form-field-error gux-show">
+            <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+            <div class="gux-message">
+              <slot name="error"></slot>
+            </div>
+          </div>
         </div>
       </div>
     </div>
