@@ -169,6 +169,25 @@ describe('gux-toggle', () => {
 
           expect(await element.getProperty('checked')).toBe(true);
         });
+
+        it(`should not check the toggle if preventDefault is called on the event`, async () => {
+          const html =
+            '<gux-toggle lang="en" checked-label="On" unchecked-label="Off"></gux-toggle>';
+          const page: E2EPage = await newNonrandomE2EPage({ html });
+          const element: E2EElement = await page.find('gux-toggle');
+          await page.evaluate(() => {
+            document.addEventListener('check', event => {
+              event.preventDefault();
+            });
+          });
+
+          expect(await element.getProperty('checked')).toBe(false);
+
+          await userInteraction(element);
+          await page.waitForChanges();
+
+          expect(await element.getProperty('checked')).toBe(false);
+        });
       });
     });
   });
