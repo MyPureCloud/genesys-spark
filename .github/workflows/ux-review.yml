@@ -1,0 +1,26 @@
+name: UX Review
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  pull_request:
+    types: [labeled]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  uxReview:
+    if: github.event.label.name == 'ux review'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mshick/add-pr-comment@v1
+        with:
+          message: "🧐 This PR is ready for UX review!\n
+            UX Reviewers Assemble!\n
+              - @conor-darcy\n
+              - @joyshaffer\n
+            \n
+            Demo @ https://apps.inindca.com/common-ui-docs/genesys-webcomponents/${{ github.head_ref }}
+          "
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token-user-login: 'github-actions[bot]'
+          
