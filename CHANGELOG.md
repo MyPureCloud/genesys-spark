@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.27.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.27.1...v3.27.2) (2022-09-09)
+
+
+### Bug Fixes
+
+* **form-field:** removed unnecessary css stlyes ([9b0034d](https://github.com/MyPureCloud/genesys-webcomponents/commit/9b0034d566a2f446c176e9b65db29ea8d9679781))
+
 ### [3.27.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.27.0...v3.27.1) (2022-09-09)
 
 ## [3.27.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.5...v3.27.0) (2022-09-09)
