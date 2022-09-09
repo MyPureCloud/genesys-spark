@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.26.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.4...v3.26.5) (2022-09-09)
+
+
+### Bug Fixes
+
+* **script:** updated list-i18n-files script to give clearer output ([ba526b9](https://github.com/MyPureCloud/genesys-webcomponents/commit/ba526b951c3811e8b72ac01eb6b63d4b009a6cbd))
+
 ### [3.26.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.3...v3.26.4) (2022-09-07)
 
 ### [3.26.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.2...v3.26.3) (2022-09-06)
