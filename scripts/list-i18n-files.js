@@ -2,35 +2,43 @@
 
 const fs = require('fs');
 const glob = require('glob');
+const locales = require('../src/i18n/locales.json');
 
 const files = glob.sync('src/components/**/i18n/en.json');
 
 const output = files.map(file => {
   const folder = file.replace('/en.json', '');
-  const component = folder.replace('/i18n', '');
-  const numberOfTranslations = fs.readdirSync(folder).length;
+  const component = folder.replace('/i18n', '').split('/').pop();
 
-  if (numberOfTranslations === 1) {
-    return { component, numberOfTranslations, translationsFound: false };
-  }
-  const otherLanguageFile = file.replace('/en.json', '/ja.json');
-
-  const englishFileContent = fs.readFileSync(file, {
+  const englishFileRaw = fs.readFileSync(file, {
     encoding: 'utf8',
     flag: 'r'
   });
-  const otherLanguageFileContent = fs.readFileSync(otherLanguageFile, {
-    encoding: 'utf8',
-    flag: 'r'
-  });
+  const englishFileJson = JSON.parse(englishFileRaw);
 
-  const translationsFound = englishFileContent !== otherLanguageFileContent;
+  const translationsFound = locales.reduce((acc, cv) => {
+    const otherLanguageFile = file.replace('/en.json', `/${cv}.json`);
+    const otherLanguageRaw = fs.readFileSync(otherLanguageFile, {
+      encoding: 'utf8',
+      flag: 'r'
+    });
+    const otherLanguageJson = JSON.parse(otherLanguageRaw);
 
-  return { component, numberOfTranslations, translationsFound };
+    const numberOfUntranslatedKeys = Object.keys(englishFileJson).reduce(
+      (count, key) => {
+        return englishFileJson[key] !== otherLanguageJson[key] || cv === 'en'
+          ? count
+          : count + 1;
+      },
+      0
+    );
+
+    return Object.assign(acc, {
+      [cv]: numberOfUntranslatedKeys ? numberOfUntranslatedKeys : '✅'
+    });
+  }, {});
+
+  return Object.assign({ component }, translationsFound);
 });
 
-console.table(output, [
-  'component',
-  'numberOfTranslations',
-  'translationsFound'
-]);
+console.table(output, ['component'].concat(locales));
