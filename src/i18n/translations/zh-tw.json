@@ -1,0 +1,187 @@
+{
+  "gux-badge": {
+    "neutral": "徽章含標籤：{label}，色彩：中性",
+    "neutral-bold": "徽章含標籤：{label}，色彩：中性大膽",
+    "green": "徽章含標籤：{label}，色彩：綠",
+    "green-bold": "徽章含標籤：{label}，色彩：大膽綠色",
+    "yellow": "徽章含標籤：{label}，色彩：黃",
+    "yellow-bold": "徽章含標籤：{label}，色彩：大膽黃色",
+    "red": "徽章含標籤：{label}，色彩：紅",
+    "red-bold": "徽章含標籤：{label}，色彩：大膽紅色"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "頁面",
+    "totalPages": " / {totalPages, number}",
+    "first": "第一",
+    "previous": "上一步",
+    "next": "下一步",
+    "last": "最後",
+    "pageInputLabel": "第 {currentPage, number} 頁，共 {totalPages, number} 頁"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " 共 {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "每一頁",
+    "itemsPerPage": "每頁項目數"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "無可用資料",
+    "scrollLeft": "向左捲動",
+    "scrollRight": "向右捲動",
+    "selectAllTableRows": "選擇所有資料表列",
+    "selectTableRow": "選擇資料表列",
+    "sortAsc": "遞增排序",
+    "sortDesc": "遞減排序",
+    "tableOptions": "表格選項",
+    "noColumnSort": "{headerContent}。表格目前未依此欄排序。按一下欄標頭即可按照遞增順序依此欄為表格排序",
+    "ascendingColumnSort": "{headerContent}。表格目前按照遞增順序依此欄排序。按一下欄標頭即可按照遞減順序依此欄為表格排序",
+    "descendingColumnSort": "{headerContent}。表格目前按照遞減順序依此欄排序。按一下欄標頭即可按照遞增順序依此欄為表格排序",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}。表格目前按照遞減順序依此欄排序。按一下欄標頭即可不依此欄為表格排序"
+  },
+  "gux-tag": {
+    "tag": "標記帶有標籤：{label}",
+    "tag-disabled": "停用的標記帶有標籤：{label}",
+    "remove-tag": "移除帶有以下標籤的標記：{label}"
+  },
+  "gux-time-picker": {
+    "defaultAriaLabel": "Time Picker"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "{buttonTitle}下拉式清單"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "最近搜尋：",
+    "commonSearch": "一般搜尋：",
+    "limited": "結果有限，請精緻化您的搜尋以取得更多命令。",
+    "search": "搜尋命令。",
+    "title": "命令面板"
+  },
+  "gux-input-color": {
+    "required": "必需"
+  },
+  "gux-input-number": {
+    "clear": "清除",
+    "increment": "增量",
+    "decrement": "遞減"
+  },
+  "gux-input-search": {
+    "clear": "清除"
+  },
+  "gux-input-text-like": {
+    "clear": "清除"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "建立新索引標籤",
+    "scrollLeft": "向左捲動",
+    "scrollRight": "向右捲動",
+    "disableNewTab": "建立的頁籤已達到最大數量"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "{buttonTitle}下拉式清單"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "搜尋"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "階層連結"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "清除",
+    "navigateNextBtn": "下一步",
+    "navigatePreviousBtn": "上一步",
+    "totalMatches": "{matchCount, number} 之 {currentMatch, number}"
+  },
+  "gux-datepicker": {
+    "start": "開始",
+    "end": "結束",
+    "date": "日期",
+    "toggleCalendar": "切換日曆檢視"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "關閉"
+  },
+  "gux-dropdown": {
+    "filterResults": "輸入以篩選下拉式清單中的結果",
+    "noSelection": "選擇...",
+    "dropdown": "下拉"
+  },
+  "gux-form-field-number": {
+    "increment": "增量",
+    "decrement": "遞減"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "清除"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "無相符"
+  },
+  "gux-listbox": {
+    "noMatches": "無相符"
+  },
+  "gux-pagination-cursor": {
+    "previous": "上一頁",
+    "next": "下一頁"
+  },
+  "gux-pagination-buttons": {
+    "page": "頁面",
+    "totalPages": " / {totalPages, number}",
+    "first": "第一",
+    "previous": "上一步",
+    "next": "下一步",
+    "last": "最後",
+    "pageInputLabel": "第 {currentPage, number} 頁，共 {totalPages, number} 頁"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " 共 {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "每一頁",
+    "itemsPerPage": "每頁項目數"
+  },
+  "gux-radial-loading": {
+    "loading": "正在載入"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "建立新索引標籤",
+    "scrollLeft": "向左捲動",
+    "scrollRight": "向右捲動",
+    "options": "{tabTitle} 的標籤選項",
+    "disableNewTab": "建立的頁籤已達到最大數量",
+    "toggleSort": "使用空格鍵切換排序模式",
+    "sortModeOn": "排序模式開啟，請使用左右方向鍵將標籤重新排序。按空格或 Enter 鍵以完成排序。按 Escape 以取消排序",
+    "sortComplete": "排序完成",
+    "sortCancelled": "排序已取消"
+  },
+  "gux-tabs": {
+    "scrollLeft": "向左捲動",
+    "scrollRight": "向右捲動",
+    "scrollUp": "向上捲動",
+    "scrollDown": "向下捲動"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "切換開關"
+  }
+}

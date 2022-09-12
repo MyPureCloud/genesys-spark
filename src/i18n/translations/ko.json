@@ -1,0 +1,187 @@
+{
+  "gux-badge": {
+    "neutral": "레이블 있는 배지: {label}, 색상: 중립",
+    "neutral-bold": "레이블 있는 배지: {label}, 색상: 중립 굵게",
+    "green": "레이블 있는 배지: {label}, 색상: 초록색",
+    "green-bold": "레이블 있는 배지: {label}, 색상: 초록색 굵게",
+    "yellow": "레이블 있는 배지: {label}, 색상: 노란색",
+    "yellow-bold": "레이블 있는 배지: {label}, 색상: 노란색 굵게",
+    "red": "레이블 있는 배지: {label}, 색상: 빨간색",
+    "red-bold": "레이블 있는 배지: {label}, 색상: 빨간색 굵게"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "페이지",
+    "totalPages": " / 총 {totalPages, number}",
+    "first": "첫 번째",
+    "previous": "이전",
+    "next": "다음",
+    "last": "마지막",
+    "pageInputLabel": "페이지 {totalPages, number} 중 {currentPage, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": "/{totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "페이지당",
+    "itemsPerPage": "페이지당 항목"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "사용할 수 있는 데이터 없음",
+    "scrollLeft": "왼쪽으로 스크롤",
+    "scrollRight": "오른쪽으로 스크롤",
+    "selectAllTableRows": "모든 테이블 행 선택",
+    "selectTableRow": "테이블 행 선택",
+    "sortAsc": "오름차순으로 정렬됨",
+    "sortDesc": "내림차순으로 정렬됨",
+    "tableOptions": "테이블 옵션",
+    "noColumnSort": "{headerContent}. 테이블이 현재 이 열을 기준으로 정렬되지 않았습니다. 테이블을 이 열을 기준으로 오름차순으로 정렬하려면 열 헤더를 클릭하십시오.",
+    "ascendingColumnSort": "{headerContent}. 테이블이 현재 이 열을 기준으로 오름차순으로 정렬되었습니다. 테이블을 이 열을 기준으로 내림차순으로 정렬하려면 열 헤더를 클릭하십시오.",
+    "descendingColumnSort": "{headerContent}. 테이블이 현재 이 열을 기준으로 내림차순으로 정렬되었습니다. 테이블을 이 열을 기준으로 오름차순으로 정렬하려면 열 헤더를 클릭하십시오.",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. 테이블이 현재 이 열을 기준으로 내림차순으로 정렬되었습니다. 테이블을 이 열을 기준으로 정렬하지 않으려면 열 헤더를 클릭하십시오."
+  },
+  "gux-tag": {
+    "tag": "레이블이 있는 태그: {label}",
+    "tag-disabled": "레이블이 있는 비활성화된 태그: {label}",
+    "remove-tag": "레이블이 있는 태그 제거: {label}"
+  },
+  "gux-time-picker": {
+    "defaultAriaLabel": "Time Picker"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "{buttonTitle}에 드롭다운"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "최근 검색:",
+    "commonSearch": "공통 검색:",
+    "limited": "결과가 제한되었습니다. 더 많은 명령어로 검색 범위를 좁히십시오.",
+    "search": "명령어 검색",
+    "title": "명령 팔레트"
+  },
+  "gux-input-color": {
+    "required": "요구됨"
+  },
+  "gux-input-number": {
+    "clear": "투명",
+    "increment": "증가",
+    "decrement": "감소"
+  },
+  "gux-input-search": {
+    "clear": "투명"
+  },
+  "gux-input-text-like": {
+    "clear": "투명"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "새 탭 만들기",
+    "scrollLeft": "왼쪽으로 스크롤",
+    "scrollRight": "오른쪽으로 스크롤",
+    "disableNewTab": "생성된 최대 탭 수에 도달했습니다."
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "{buttonTitle}에 드롭다운"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "검색"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "사이트 이동 경로"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "지우기",
+    "navigateNextBtn": "다음",
+    "navigatePreviousBtn": "이전",
+    "totalMatches": "{matchCount, number}개 중 {currentMatch, number}개"
+  },
+  "gux-datepicker": {
+    "start": "시작",
+    "end": "종료",
+    "date": "날짜",
+    "toggleCalendar": "달력 보기 전환"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "해제"
+  },
+  "gux-dropdown": {
+    "filterResults": "드롭다운 결과를 필터링하려면 입력하십시오.",
+    "noSelection": "선택...",
+    "dropdown": "드롭다운"
+  },
+  "gux-form-field-number": {
+    "increment": "증가",
+    "decrement": "감소"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "투명"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "일치 없음"
+  },
+  "gux-listbox": {
+    "noMatches": "일치 없음"
+  },
+  "gux-pagination-cursor": {
+    "previous": "이전",
+    "next": "다음"
+  },
+  "gux-pagination-buttons": {
+    "page": "페이지",
+    "totalPages": " / 총 {totalPages, number}",
+    "first": "첫 번째",
+    "previous": "이전",
+    "next": "다음",
+    "last": "마지막",
+    "pageInputLabel": "페이지 {totalPages, number} 중 {currentPage, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": "/{totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "페이지당",
+    "itemsPerPage": "페이지당 항목"
+  },
+  "gux-radial-loading": {
+    "loading": "로드 중"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "새 탭 만들기",
+    "scrollLeft": "왼쪽으로 스크롤",
+    "scrollRight": "오른쪽으로 스크롤",
+    "options": "{tabTitle}의 탭 옵션",
+    "disableNewTab": "생성된 최대 탭 수에 도달했습니다.",
+    "toggleSort": "스페이스를 사용한 정렬 모드 토글",
+    "sortModeOn": "정렬 모드를 켰습니다. 왼쪽과 오른쪽 화살표 키를 사용하여 탭을 재정렬하십시오. 스페이스 또는 엔터 키를 눌러 정렬을 완료합니다. ESC 키를 누르면 정렬을 취소합니다.",
+    "sortComplete": "정렬 완료",
+    "sortCancelled": "정렬 취소함"
+  },
+  "gux-tabs": {
+    "scrollLeft": "왼쪽으로 스크롤",
+    "scrollRight": "오른쪽으로 스크롤",
+    "scrollUp": "위로 스크롤",
+    "scrollDown": "아래로 스크롤"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "스위치 전환"
+  }
+}

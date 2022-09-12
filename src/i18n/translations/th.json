@@ -1,0 +1,187 @@
+{
+  "gux-badge": {
+    "neutral": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: กลาง",
+    "neutral-bold": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: กลางหนา",
+    "green": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: เขียว",
+    "green-bold": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: เขียวหนา",
+    "yellow": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: เหลือง",
+    "yellow-bold": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: เหลืองหนา",
+    "red": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: แรง",
+    "red-bold": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: แดงหนา"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "หน้า",
+    "totalPages": " จาก {totalPages, number}",
+    "first": "แรก",
+    "previous": "ก่อนหน้า",
+    "next": "ถัดไป",
+    "last": "สุดท้าย",
+    "pageInputLabel": "หน้า {currentPage, number} จาก {totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": "จาก {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "ต่อหน้า",
+    "itemsPerPage": "รายการต่อหน้า"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "ไม่มีข้อมูลที่พร้อมใช้งาน",
+    "scrollLeft": "เลื่อนไปทางซ้าย",
+    "scrollRight": "เลื่อนไปทางขวา",
+    "selectAllTableRows": "เลือกแถวตารางทั้งหมด",
+    "selectTableRow": "เลือกแถวตาราง",
+    "sortAsc": "เรียงจากน้อยไปมากแล้ว",
+    "sortDesc": "เรียงจากมากไปน้อยแล้ว",
+    "tableOptions": "ตัวเลือกตาราง",
+    "noColumnSort": "{headerContent} ตารางไม่ได้เรียงตามคอลัมน์นี้ คลิกส่วนหัวของคอลัมน์เพื่อเรียงตารางตามคอลัมน์นี้จากน้อยไปมาก",
+    "ascendingColumnSort": "{headerContent} ตารางเรียงตามคอลัมน์นี้จากน้อยไปมาก คลิกส่วนหัวของคอลัมน์เพื่อเรียงตารางตามคอลัมน์นี้จากมากไปน้อย",
+    "descendingColumnSort": "{headerContent} ตารางเรียงตามคอลัมน์นี้จากมากไปน้อย คลิกส่วนหัวของคอลัมน์เพื่อเรียงตารางตามคอลัมน์นี้จากน้อยไปมาก",
+    "descendingColumnSortIncludeUnsorted": "{headerContent} ตารางเรียงตามคอลัมน์นี้จากมากไปน้อย คลิกส่วนหัวของคอลัมน์เพื่อเรียงตารางตามคอลัมน์นี้"
+  },
+  "gux-tag": {
+    "tag": "แท็กที่มีป้ายกำกับ: {label}",
+    "tag-disabled": "ปิดใช้งานแท็กที่มีป้ายกำกับแล้ว: {label}",
+    "remove-tag": "นำแท็กที่มีป้ายกำกับออก: {label}"
+  },
+  "gux-time-picker": {
+    "defaultAriaLabel": "Time Picker"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "รายการเลือกแบบดึงลงสำหรับ {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "ค้นหาล่าสุด:",
+    "commonSearch": "การค้นหาทั่วไป:",
+    "limited": "ผลลัพธ์จำกัด ปรับปรุงการค้นหาเพื่อให้มีคำสั่งมากขึ้น",
+    "search": "ค้นหาคำสั่ง",
+    "title": "ชุดคำสั่ง"
+  },
+  "gux-input-color": {
+    "required": "จำเป็น"
+  },
+  "gux-input-number": {
+    "clear": "ล้างค่า",
+    "increment": "เพิ่ม",
+    "decrement": "ลด"
+  },
+  "gux-input-search": {
+    "clear": "ล้าง"
+  },
+  "gux-input-text-like": {
+    "clear": "ล้าง"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "สร้างแท็บใหม่",
+    "scrollLeft": "เลื่อนไปทางซ้าย",
+    "scrollRight": "เลื่อนไปทางขวา",
+    "disableNewTab": "ถึงจำนวนแท็บสูงสุดที่สร้างได้แล้ว"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "รายการเลือกแบบดึงลงสำหรับ {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "ค้นหา"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "การแสดงเส้นทาง"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "ล้าง",
+    "navigateNextBtn": "ถัดไป",
+    "navigatePreviousBtn": "ก่อนหน้า",
+    "totalMatches": "{currentMatch, number} จาก {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "เริ่ม",
+    "end": "สิ้นสุด",
+    "date": "วันที่",
+    "toggleCalendar": "สลับมุมมองปฏิทิน"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "ละทิ้ง"
+  },
+  "gux-dropdown": {
+    "filterResults": "พิมพ์เพื่อกรองผลลัพธ์ในดรอปดาวน์",
+    "noSelection": "เลือก...",
+    "dropdown": "ดรอปดาวน์"
+  },
+  "gux-form-field-number": {
+    "increment": "เพิ่ม",
+    "decrement": "ลด"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "ล้าง"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "ไม่มีที่ตรงกัน"
+  },
+  "gux-listbox": {
+    "noMatches": "ไม่มีที่ตรงกัน"
+  },
+  "gux-pagination-cursor": {
+    "previous": "ก่อนหน้า",
+    "next": "ถัดไป"
+  },
+  "gux-pagination-buttons": {
+    "page": "หน้า",
+    "totalPages": " จาก {totalPages, number}",
+    "first": "แรก",
+    "previous": "ก่อนหน้า",
+    "next": "ถัดไป",
+    "last": "สุดท้าย",
+    "pageInputLabel": "หน้า {currentPage, number} จาก {totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": "จาก {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "ต่อหน้า",
+    "itemsPerPage": "รายการต่อหน้า"
+  },
+  "gux-radial-loading": {
+    "loading": "กำลังโหลด"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "สร้างแท็บใหม่",
+    "scrollLeft": "เลื่อนไปทางซ้าย",
+    "scrollRight": "เลื่อนไปทางขวา",
+    "options": "ตัวเลือกแท็บสำหรับ {tabTitle}",
+    "disableNewTab": "ถึงจำนวนแท็บสูงสุดที่สร้างได้แล้ว",
+    "toggleSort": "เปิด/ปิดโหมดเรียงโดยใช้แป้น Space",
+    "sortModeOn": "โหมดเรียงเปิดอยู่ ใช้ปุ่มลูกศรซ้ายขวาเพื่อเรียงลำดับแท็บ กดแป้น Space หรือปุ่ม Enter เพื่อเรียง ถ้าจะยกเลิกการเรียง ให้กดปุ่ม Escape",
+    "sortComplete": "เรียงเสร็จแล้ว",
+    "sortCancelled": "ยกเลิกการเรียงแล้ว"
+  },
+  "gux-tabs": {
+    "scrollLeft": "เลื่อนไปทางซ้าย",
+    "scrollRight": "เลื่อนไปทางขวา",
+    "scrollUp": "เลื่อนขึ้น",
+    "scrollDown": "เลื่อนลง"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "สลับสวิตช์"
+  }
+}
