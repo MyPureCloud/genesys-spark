@@ -33,7 +33,10 @@ describe('gux-sort-control', () => {
       markup.notSorted,
       markup.sortedAscending,
       markup.sortedDescending,
-      markup.sortedDescendingUnsortedAllowed
+      markup.sortedDescendingUnsortedAllowed,
+      markup.resizableNoDataCell,
+      markup.resizableDataCellNumeric,
+      markup.resizableDataCellAction
     ].forEach(({ description, html }) => {
       it(description, async () => {
         const page = await newNonrandomE2EPage({ html });

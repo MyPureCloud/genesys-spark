@@ -18,7 +18,10 @@ describe('gux-sort-control', () => {
       markup.notSorted,
       markup.sortedAscending,
       markup.sortedDescending,
-      markup.sortedDescendingUnsortedAllowed
+      markup.sortedDescendingUnsortedAllowed,
+      markup.resizableNoDataCell,
+      markup.resizableDataCellAction,
+      markup.resizableDataCellNumeric
     ].forEach(({ description, html }) => {
       it(description, async () => {
         const page = await newSpecPage({ components, html, language });

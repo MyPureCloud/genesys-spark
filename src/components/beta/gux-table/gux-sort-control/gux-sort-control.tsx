@@ -26,6 +26,7 @@ import tableResources from '../i18n/en.json';
 })
 export class GuxSortControl {
   private tableHeader: HTMLTableCellElement;
+  private guxTable: HTMLGuxTableBetaElement;
   private thObserver: MutationObserver;
   private i18n: GetI18nValue;
 
@@ -63,6 +64,11 @@ export class GuxSortControl {
       this.root
     ) as HTMLTableCellElement;
 
+    this.guxTable = getClosestElement(
+      'gux-table-beta',
+      this.root
+    ) as HTMLGuxTableBetaElement;
+
     this.thObserver = onMutation(
       this.tableHeader,
       () => {
@@ -76,10 +82,27 @@ export class GuxSortControl {
     );
 
     this.setState();
+
+    if (this.guxTable.hasAttribute('resizable-columns')) {
+      this.renderSpanSeperator();
+    }
   }
 
   disconnectedCallback() {
     this.thObserver.disconnect();
+  }
+
+  private renderSpanSeperator(): void {
+    if (this.tableHeader) {
+      const spanSeperator = document.createElement('span');
+      spanSeperator.ariaHidden = 'true';
+      if (this.isLeftAlignIcon) {
+        spanSeperator.setAttribute('style', 'float:left;padding-right:42px');
+      } else {
+        spanSeperator.setAttribute('style', 'padding-left:24px');
+      }
+      this.tableHeader.appendChild(spanSeperator);
+    }
   }
 
   private onClick(): void {
