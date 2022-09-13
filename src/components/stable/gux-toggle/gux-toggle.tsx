@@ -63,9 +63,10 @@ export class GuxToggle {
 
   private toggle(): void {
     if (!this.disabled && !this.loading) {
-      this.checked = !this.checked;
-
-      this.check.emit(this.checked);
+      const checkEvent = this.check.emit(this.checked);
+      if (!checkEvent.defaultPrevented) {
+        this.checked = !this.checked;
+      }
     }
   }
 
