@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.28.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.27.2...v3.28.0) (2022-09-13)
+
+
+### Features
+
+* **gux-toggle:** enable preventDefault on check events ([6a16f61](https://github.com/MyPureCloud/genesys-webcomponents/commit/6a16f61cdd01a88822946aa4fcacdaec60ab8a6b))
+
+
+### Bug Fixes
+
+* **calendar:** calendar skipping month for some dates ([d1d8ee7](https://github.com/MyPureCloud/genesys-webcomponents/commit/d1d8ee73789b431ce029bf8f221ec17a2364d17d))
+
 ### [3.27.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.27.1...v3.27.2) (2022-09-09)
 
 
