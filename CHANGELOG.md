@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.28.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.27.2...v3.28.0) (2022-09-13)
+
+
+### Features
+
+* **gux-toggle:** enable preventDefault on check events ([6a16f61](https://github.com/MyPureCloud/genesys-webcomponents/commit/6a16f61cdd01a88822946aa4fcacdaec60ab8a6b))
+
+
+### Bug Fixes
+
+* **calendar:** calendar skipping month for some dates ([d1d8ee7](https://github.com/MyPureCloud/genesys-webcomponents/commit/d1d8ee73789b431ce029bf8f221ec17a2364d17d))
+
+### [3.27.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.27.1...v3.27.2) (2022-09-09)
+
+
+### Bug Fixes
+
+* **form-field:** removed unnecessary css stlyes ([9b0034d](https://github.com/MyPureCloud/genesys-webcomponents/commit/9b0034d566a2f446c176e9b65db29ea8d9679781))
+
+### [3.27.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.27.0...v3.27.1) (2022-09-09)
+
+## [3.27.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.5...v3.27.0) (2022-09-09)
+
+
+### Features
+
+* **announce:** added new component ([b713766](https://github.com/MyPureCloud/genesys-webcomponents/commit/b7137660e4089fe8fbc1669c2e0680a7b1232d27))
+
+### [3.26.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.4...v3.26.5) (2022-09-09)
+
+
+### Bug Fixes
+
+* **script:** updated list-i18n-files script to give clearer output ([ba526b9](https://github.com/MyPureCloud/genesys-webcomponents/commit/ba526b951c3811e8b72ac01eb6b63d4b009a6cbd))
+
+### [3.26.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.3...v3.26.4) (2022-09-07)
+
 ### [3.26.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.26.2...v3.26.3) (2022-09-06)
 
 
