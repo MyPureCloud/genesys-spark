@@ -9,7 +9,7 @@ Input for international phone numbers
 
 | Property        | Attribute        | Description | Type                                    | Default     |
 | --------------- | ---------------- | ----------- | --------------------------------------- | ----------- |
-| `defaultRegion` | `default-region` |             | `string`                                | `'us'`      |
+| `defaultRegion` | `default-region` |             | `string`                                | `'US'`      |
 | `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
 | `value`         | `value`          |             | `string`                                | `undefined` |
 

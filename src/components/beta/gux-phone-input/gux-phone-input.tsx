@@ -43,7 +43,7 @@ export class GuxPhoneInput {
   private root: HTMLElement;
 
   @Prop()
-  defaultRegion: string = 'us';
+  defaultRegion: string = 'US';
 
   @Prop()
   labelPosition: GuxFormFieldLabelPosition;
@@ -52,7 +52,7 @@ export class GuxPhoneInput {
   value: string;
 
   @State()
-  countryCode: number;
+  private region: string;
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';
@@ -74,14 +74,13 @@ export class GuxPhoneInput {
 
   @Listen('internalregionupdated')
   updateCountry(event: CustomEvent) {
-    this.countryCode = event.detail as number;
+    this.region = event.detail as string;
     if (this.numberText) {
       this.phoneNumberUpdated();
     }
   }
 
-  componentWillRender(): void {
-    trackComponent(this.root);
+  componentWillLoad(): void {
     if (this.value) {
       try {
         const phone = this.phoneUtil.parse(this.value);
@@ -89,23 +88,23 @@ export class GuxPhoneInput {
           phone,
           PhoneNumberFormat.NATIONAL
         );
-        this.countryCode = phone.getCountryCode();
+        this.region = this.phoneUtil.getRegionCodeForNumber(phone);
       } catch (e) {
         if (this.numberText === undefined) {
           // only show error on initial render
           console.error('Number cannot be parsed');
           this.numberText = '';
-          this.countryCode = this.phoneUtil.getCountryCodeForRegion(
-            this.defaultRegion
-          );
+          this.region = this.defaultRegion.toUpperCase();
         }
       }
     } else {
       this.numberText = '';
-      this.countryCode = this.phoneUtil.getCountryCodeForRegion(
-        this.defaultRegion
-      );
+      this.region = this.defaultRegion.toUpperCase();
     }
+  }
+
+  componentWillRender(): void {
+    trackComponent(this.root);
   }
 
   componentDidLoad(): void {
@@ -121,6 +120,7 @@ export class GuxPhoneInput {
 
   private onInputChange(number: string): void {
     this.numberText = number;
+    this.phoneNumberUpdated();
   }
 
   private validatePhoneNumber(): void {
@@ -136,8 +136,11 @@ export class GuxPhoneInput {
         this.error.emit(!isValid);
         this.hasError = !isValid;
       } catch (e) {
-        console.error('Number cannot be parsed');
-        this.error.emit(true);
+        if (this.required || this.numberText) {
+          console.error('Number cannot be parsed');
+          this.error.emit(true);
+          this.hasError = true;
+        }
       }
     } else {
       this.error.emit(this.required);
@@ -146,9 +149,9 @@ export class GuxPhoneInput {
   }
 
   private phoneNumberUpdated(): void {
-    this.value = this.numberText
-      ? `+${this.countryCode}${this.numberText.replace(/\D/, '')}`
-      : '';
+    this.value = `+${this.phoneUtil.getCountryCodeForRegion(
+      this.region
+    )}${this.numberText.replace(/\D/, '')}`;
     this.input.emit(this.value);
   }
 
@@ -168,19 +171,15 @@ export class GuxPhoneInput {
               'gux-input-error': this.hasError
             }}
           >
-            <gux-country-select
-              region={
-                this.value
-                  ? this.phoneUtil.getRegionCodeForCountryCode(this.countryCode)
-                  : ''
-              }
-              defaultRegion={this.defaultRegion}
-              disabled={this.disabled}
-            />
+            <gux-country-select region={this.region} disabled={this.disabled} />
             <input
               id={'tel-input'}
               class="phone-input"
               type="tel"
+              placeholder={this.phoneUtil.format(
+                this.phoneUtil.getExampleNumber(this.region),
+                PhoneNumberFormat.NATIONAL
+              )}
               value={this.numberText}
             />
           </div>

@@ -11,6 +11,7 @@ import {
   State,
   Watch
 } from '@stencil/core';
+import libphonenumber from 'google-libphonenumber';
 import { trackComponent } from '../../../../../usage-tracking';
 import { countryCodeMap } from './CountryCodeMap';
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
@@ -26,15 +27,14 @@ export class GuxCountrySelect {
   private i18n: GetI18nValue;
   private listboxElement: HTMLGuxListboxElement;
   private fieldButtonElement: HTMLElement;
+  private phoneUtil: libphonenumber.PhoneNumberUtil =
+    libphonenumber.PhoneNumberUtil.getInstance();
 
   @Element()
   root: HTMLElement;
 
-  @Prop({ mutable: true })
-  region: string;
-
   @Prop()
-  defaultRegion: string = 'us';
+  region: string;
 
   @Prop()
   labelId: string;
@@ -59,21 +59,13 @@ export class GuxCountrySelect {
     }
   }
 
-  // @Watch('countryCode')
-  validateValue(newValue: string) {
-    if (newValue === undefined) {
-      this.region = this.defaultRegion;
-      return;
-    }
-
+  private validateValue(newValue: string) {
     const selectedListboxOptionElement = this.getOptionElementByValue(newValue);
 
     if (selectedListboxOptionElement) {
       this.listboxElement.value = newValue;
       return;
     }
-
-    this.region = this.defaultRegion;
   }
 
   @Listen('internallistboxoptionsupdated')
@@ -166,10 +158,8 @@ export class GuxCountrySelect {
 
   private updateRegion(newValue: string): void {
     if (this.region !== newValue) {
-      this.region = newValue;
       this.collapseListbox('focusFieldButton');
-      console.log(countryCodeMap[this.region]);
-      this.internalregionupdated.emit(countryCodeMap[this.region]);
+      this.internalregionupdated.emit(newValue);
     }
   }
 
@@ -202,9 +192,9 @@ export class GuxCountrySelect {
       this.region
     );
 
-    const selectedRegion =
-      selectedListboxOptionElement?.value || this.defaultRegion;
+    const selectedRegion = selectedListboxOptionElement?.value;
     const countryName = this.i18n(selectedRegion);
+    const countryCode: string = countryCodeMap[selectedRegion] || '';
 
     return (
       <div class="gux-selected-option">
@@ -212,6 +202,7 @@ export class GuxCountrySelect {
           countryCode={selectedRegion}
           countryName={countryName}
         />
+        <span>{`+${countryCode}`}</span>
       </div>
     ) as JSX.Element;
   }
@@ -220,14 +211,17 @@ export class GuxCountrySelect {
     const options = [];
     for (const [key, val] of Object.entries(countryCodeMap)) {
       const countryName = this.i18n(key);
-      options.push(
-        <gux-option value={key}>
-          <span>
-            <gux-country-icon countryCode={key} countryName={countryName} />
-            <span>{`+${val}`}</span>
-          </span>
-        </gux-option>
-      );
+      if (this.phoneUtil.getSupportedRegions().indexOf(key) > -1) {
+        options.push(
+          <gux-option value={key}>
+            <span class="option-content">
+              <gux-country-icon countryCode={key} countryName={countryName} />
+              <span>{countryName}</span>
+              <span class="country-code">{`+${val}`}</span>
+            </span>
+          </gux-option>
+        );
+      }
     }
     return (
       <div slot="popup" class="gux-listbox-container">

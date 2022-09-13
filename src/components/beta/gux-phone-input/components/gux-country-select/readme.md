@@ -7,12 +7,11 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type      | Default     |
-| --------------- | ---------------- | ----------- | --------- | ----------- |
-| `defaultRegion` | `default-region` |             | `string`  | `'us'`      |
-| `disabled`      | `disabled`       |             | `boolean` | `false`     |
-| `labelId`       | `label-id`       |             | `string`  | `undefined` |
-| `region`        | `region`         |             | `string`  | `undefined` |
+| Property   | Attribute  | Description | Type      | Default     |
+| ---------- | ---------- | ----------- | --------- | ----------- |
+| `disabled` | `disabled` |             | `boolean` | `false`     |
+| `labelId`  | `label-id` |             | `string`  | `undefined` |
+| `region`   | `region`   |             | `string`  | `undefined` |
 
 
 ## Events
