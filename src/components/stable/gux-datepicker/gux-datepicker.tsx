@@ -309,7 +309,8 @@ export class GuxDatepicker {
   onInputFocusIn(event: FocusEvent) {
     this.focusedField = this.getInputFieldFromEvent(event);
     if (!this.isSelectingRangeWithMouse) {
-      this.setRange();
+      // When focusing the input the Safari browser will fight for control of the cursor unless it is done asynchronously
+      setTimeout(() => this.setRange());
     }
   }
 
