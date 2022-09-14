@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.28.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.28.0...v3.28.1) (2022-09-14)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fix cursor selection in safari ([9bf0adc](https://github.com/MyPureCloud/genesys-webcomponents/commit/9bf0adc84d4ea52eaddad8da49d213456765cded))
+* **gux-datepicker:** fix input, state, and focus bugs ([01c3af7](https://github.com/MyPureCloud/genesys-webcomponents/commit/01c3af7770aba53573de5a5751d5e9f4318ead5d))
+
 ## [3.28.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.27.2...v3.28.0) (2022-09-13)
 
 
