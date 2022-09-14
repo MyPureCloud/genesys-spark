@@ -3,14 +3,14 @@
 exports[`gux-advanced-dropdown should render 1`] = `
 <gux-advanced-dropdown>
   <mock:shadow-root>
-    <div class="gux-dropdown">
-      <div class="gux-select-field">
+    <gux-popup>
+      <div class="gux-select-field" slot="target">
         <a class="gux-select-input" tabindex="0"></a>
         <div class="gux-icon-wrapper">
           <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
         </div>
       </div>
-      <div class="gux-advanced-dropdown-menu">
+      <div class="gux-advanced-dropdown-menu" slot="popup">
         <div class="gux-dropdown-menu-container">
           <gux-form-field-search label-position="screenreader">
             <label slot="label">
@@ -23,7 +23,7 @@ exports[`gux-advanced-dropdown should render 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </gux-popup>
   </mock:shadow-root>
   <gux-dropdown-option text="English" value="en"></gux-dropdown-option>
   <gux-dropdown-option text="Dutch" value="nl"></gux-dropdown-option>

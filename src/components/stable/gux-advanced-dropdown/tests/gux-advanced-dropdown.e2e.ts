@@ -20,29 +20,29 @@ describe('gux-advanced-dropdown', () => {
   it('should open the dropdown on click', async () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
-    const dropdownElement = await element.find('pierce/.gux-dropdown');
+    const dropdownElement = await element.find('pierce/.gux-popup-container');
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
 
     await element.click();
     await page.waitForChanges();
     await a11yCheck(page);
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(true);
   });
 
   it('should select an option and closes the dropdown menu when an option is clicked', async () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
     const inputSpy = await element.spyOnEvent('input');
-    const dropdownElement = await element.find('pierce/.gux-dropdown');
+    const dropdownElement = await element.find('pierce/.gux-popup-container');
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
 
     await element.click();
     await page.waitForChanges();
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(true);
 
     const englishDropdownOption = await element.find(
       'gux-dropdown-option[value="en"]'
@@ -51,21 +51,21 @@ describe('gux-advanced-dropdown', () => {
     await page.waitForChanges();
 
     expect(inputSpy).toHaveReceivedEventDetail('en');
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
   });
 
   it('should fire filter event with a delay', async () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
     const filterSpy = await element.spyOnEvent('filter');
-    const dropdownElement = await element.find('pierce/.gux-dropdown');
+    const dropdownElement = await element.find('pierce/.gux-popup-container');
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
 
     await element.click();
     await page.waitForChanges();
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(true);
 
     const input = await element.find('pierce/input');
 
@@ -100,14 +100,14 @@ describe('gux-advanced-dropdown', () => {
     });
     const element = await page.find('gux-advanced-dropdown');
     const filterSpy = await element.spyOnEvent('filter');
-    const dropdownElement = await element.find('pierce/.gux-dropdown');
+    const dropdownElement = await element.find('pierce/.gux-popup-container');
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
 
     await element.click();
     await page.waitForChanges();
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(true);
 
     const input = await element.find('pierce/input');
 
@@ -166,14 +166,14 @@ describe('gux-advanced-dropdown', () => {
     });
     const element = await page.find('gux-advanced-dropdown');
     const filterSpy = await element.spyOnEvent('filter');
-    const dropdownElement = await element.find('pierce/.gux-dropdown');
+    const dropdownElement = await element.find('pierce/.gux-popup-container');
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
 
     await element.click();
     await page.waitForChanges();
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(true);
 
     const englishDropdownOption = await element.find(
       'gux-dropdown-option[value="en"]'
@@ -181,7 +181,7 @@ describe('gux-advanced-dropdown', () => {
     await englishDropdownOption.click();
     await page.waitForChanges();
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
 
     expect(filterSpy).not.toHaveReceivedEvent();
   });
@@ -190,34 +190,34 @@ describe('gux-advanced-dropdown', () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-advanced-dropdown');
 
-    const dropdownElement = await element.find('pierce/.gux-dropdown');
+    const dropdownElement = await element.find('pierce/.gux-popup-container');
     const englishDropdownOption = await element.find(
       'gux-dropdown-option[value="en"]'
     );
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
 
     await element.click();
     await page.waitForChanges();
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(true);
 
     await englishDropdownOption.click();
     await page.waitForChanges();
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
 
     const inputSpy = await element.spyOnEvent('input');
 
     await element.click();
     await page.waitForChanges();
 
-    expect(dropdownElement.classList.contains('gux-active')).toBe(true);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(true);
 
     await englishDropdownOption.click();
     await page.waitForChanges();
 
     expect(inputSpy).not.toHaveReceivedEvent();
-    expect(dropdownElement.classList.contains('gux-active')).toBe(false);
+    expect(dropdownElement.classList.contains('gux-expanded')).toBe(false);
   });
 });

@@ -27,6 +27,7 @@
 
  - [gux-action-button](../gux-action-button)
  - [gux-action-button-legacy](../../legacy/gux-action-button-legacy)
+ - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-button-multi](../gux-button-multi)
  - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
  - [gux-dropdown](../gux-dropdown)
@@ -37,6 +38,7 @@
 graph TD;
   gux-action-button --> gux-popup
   gux-action-button-legacy --> gux-popup
+  gux-advanced-dropdown --> gux-popup
   gux-button-multi --> gux-popup
   gux-button-multi-legacy --> gux-popup
   gux-dropdown --> gux-popup

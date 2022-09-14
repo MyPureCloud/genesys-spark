@@ -36,6 +36,12 @@ export class GuxPopup {
       {
         modifiers: [
           {
+            name: 'flip',
+            options: {
+              boundary: []
+            }
+          },
+          {
             name: 'offset',
             options: {
               offset: [0, 2]
