@@ -15,6 +15,7 @@ import {
   getDesiredLocale
 } from '../../../../i18n';
 import simulateNativeEvent from '../../../../utils/dom/simulate-native-event';
+import { afterRender } from '../../../../utils/dom/after-render';
 import {
   GuxISOYearMonth,
   getISOYearMonth,
@@ -80,16 +81,14 @@ export class GuxMonthCalendar {
     const { year } = getYearMonthObject(iSOYearMonth);
     this.year = year;
 
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        const target: HTMLButtonElement = this.root.shadowRoot.querySelector(
-          `gux-month-list-item[value="${iSOYearMonth}"]`
-        );
-
-        if (target) {
-          target.focus();
-        }
-      });
+    afterRender(() => {
+      const target: HTMLButtonElement = this.root.shadowRoot.querySelector(
+        `gux-month-list-item[value="${iSOYearMonth}"]`
+      );
+      console.log({ target });
+      if (target) {
+        target.focus();
+      }
     });
   }
 

@@ -186,10 +186,35 @@ export class GuxMonthPicker {
         event.preventDefault();
         nextFocusElement.focus();
         break;
+      case 'Enter':
+        event.preventDefault();
+        this.expanded = true;
+        afterRender(() => {
+          void this.monthCalendarElement.guxFocus(this.value);
+        });
+        break;
+      case ' ':
+        event.preventDefault();
+        break;
+    }
+  }
+
+  private onSpinnerKeyUp(event: KeyboardEvent): void {
+    event.stopPropagation();
+
+    switch (event.key) {
+      case ' ':
+        event.preventDefault();
+        this.expanded = true;
+        afterRender(() => {
+          void this.monthCalendarElement.guxFocus(this.value);
+        });
+        break;
     }
   }
 
   private onSpinnerClick(): void {
+    console.log('onSpinnerClick');
     this.expanded = true;
   }
 
@@ -239,6 +264,7 @@ export class GuxMonthPicker {
             this.yearSpinnerElement
           )
         }
+        onKeyUp={(e: KeyboardEvent) => this.onSpinnerKeyUp(e)}
         onClick={() => this.onSpinnerClick()}
         ref={(el: HTMLElement) => (this.monthSpinnerElement = el)}
         aria-valuenow={this.getSpinnerValueNow('month')}
@@ -268,6 +294,7 @@ export class GuxMonthPicker {
             this.monthSpinnerElement
           )
         }
+        onKeyUp={(e: KeyboardEvent) => this.onSpinnerKeyUp(e)}
         onClick={() => this.onSpinnerClick()}
         ref={(el: HTMLElement) => (this.yearSpinnerElement = el)}
         aria-valuenow={this.getSpinnerValueNow('year')}
