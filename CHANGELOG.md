@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.57.0](https://inindca///compare/v2.56.3...v2.57.0) (2022-09-14)
+
+
+### Features
+
+* **gux-toggle:** enable preventDefault on check events ([ba62af1](https://inindca///commit/ba62af12cc4293cb011d8637dac206a16dc5ad18))
+
 ### [2.56.3](https://inindca///compare/v2.56.2...v2.56.3) (2022-09-02)
 
 
