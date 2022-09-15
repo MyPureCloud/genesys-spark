@@ -39,7 +39,7 @@ import componentResources from './i18n/en.json';
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
- * @part gux-input-section - Style input container
+ * @part input-section - Style input container
  */
 @Component({
   styleUrl: 'gux-form-field-number.less',
@@ -127,7 +127,7 @@ export class GuxFormFieldNumber {
               'gux-input': true,
               'gux-input-error': this.hasError
             }}
-            part="gux-input-section"
+            part="input-section"
           >
             <div
               class={{
