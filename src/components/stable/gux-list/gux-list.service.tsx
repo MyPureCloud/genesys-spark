@@ -1,36 +1,48 @@
-const validFocusableItems = ['gux-list-item'];
-
 function getRootChildren(root: HTMLElement): Element[] {
   const slot = root.querySelector('slot');
 
   return slot ? slot.assignedElements() : Array.from(root.children);
 }
 
-function getGuxListFocusableItems(root: HTMLElement): HTMLGuxListItemElement[] {
+function getGuxListFocusableItems(
+  root: HTMLElement,
+  validFocusableItems: string[]
+): HTMLElement[] {
   return getRootChildren(root).filter(cv => {
     if (validFocusableItems.includes(cv.tagName.toLowerCase())) {
-      return !(cv as HTMLGuxListItemElement).disabled;
+      return !(cv as HTMLOptionElement).disabled;
     }
 
     return false;
-  }) as HTMLGuxListItemElement[];
+  }) as HTMLElement[];
 }
 
-function getCurrentFocusIndex(root: HTMLElement): number {
-  return getGuxListFocusableItems(root).findIndex(cv =>
+function getCurrentFocusIndex(
+  root: HTMLElement,
+  validFocusableItems: string[]
+): number {
+  return getGuxListFocusableItems(root, validFocusableItems).findIndex(cv =>
     cv.matches(':focus-within')
   );
 }
 
-function focusMove(root: HTMLElement, delta: number) {
-  const currentFocusIndex = getCurrentFocusIndex(root);
-  const maxIndex = getGuxListFocusableItems(root).length;
+export function focusMove(
+  root: HTMLElement,
+  validFocusableItems: string[],
+  delta: number
+) {
+  const currentFocusIndex = getCurrentFocusIndex(root, validFocusableItems);
+  const maxIndex = getGuxListFocusableItems(root, validFocusableItems).length;
 
-  focusIndex(root, (currentFocusIndex + delta) % maxIndex);
+  focusIndex(root, validFocusableItems, (currentFocusIndex + delta) % maxIndex);
 }
 
-function focusIndex(root: HTMLElement, focusIndex: number) {
-  const items = getGuxListFocusableItems(root);
+function focusIndex(
+  root: HTMLElement,
+  validFocusableItems: string[],
+  focusIndex: number
+) {
+  const items = getGuxListFocusableItems(root, validFocusableItems);
 
   while (focusIndex < 0) {
     focusIndex += items.length;
@@ -39,22 +51,32 @@ function focusIndex(root: HTMLElement, focusIndex: number) {
   items[focusIndex]?.focus();
 }
 
-function getLastChildIndex(root: HTMLElement): number {
-  return getGuxListFocusableItems(root).length - 1;
+function getLastChildIndex(
+  root: HTMLElement,
+  validFocusableItems: string[]
+): number {
+  return getGuxListFocusableItems(root, validFocusableItems).length - 1;
 }
 
-export function first(root: HTMLElement): void {
-  focusIndex(root, 0);
+export function first(root: HTMLElement, validFocusableItems: string[]): void {
+  focusIndex(root, validFocusableItems, 0);
 }
 
-export function last(root: HTMLElement): void {
-  focusIndex(root, getLastChildIndex(root));
+export function last(root: HTMLElement, validFocusableItems: string[]): void {
+  focusIndex(
+    root,
+    validFocusableItems,
+    getLastChildIndex(root, validFocusableItems)
+  );
 }
 
-export function next(root: HTMLElement): void {
-  focusMove(root, 1);
+export function next(root: HTMLElement, validFocusableItems: string[]): void {
+  focusMove(root, validFocusableItems, 1);
 }
 
-export function previous(root: HTMLElement): void {
-  focusMove(root, -1);
+export function previous(
+  root: HTMLElement,
+  validFocusableItems: string[]
+): void {
+  focusMove(root, validFocusableItems, -1);
 }

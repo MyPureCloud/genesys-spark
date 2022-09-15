@@ -53,6 +53,8 @@
  - [gux-input-search](../../legacy/gux-form-field-legacy/components/gux-input-search)
  - [gux-input-select](../../legacy/gux-form-field-legacy/components/gux-input-select)
  - [gux-input-text-like](../../legacy/gux-form-field-legacy/components/gux-input-text-like)
+ - [gux-month-calendar](../../beta/gux-month-picker/gux-month-calendar)
+ - [gux-month-picker-beta](../../beta/gux-month-picker)
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-beta](../../beta/gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-cursor](../gux-pagination-cursor)
@@ -109,6 +111,8 @@ graph TD;
   gux-input-search --> gux-icon
   gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
+  gux-month-calendar --> gux-icon
+  gux-month-picker-beta --> gux-icon
   gux-pagination-buttons --> gux-icon
   gux-pagination-buttons-beta --> gux-icon
   gux-pagination-cursor --> gux-icon
