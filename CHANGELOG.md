@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.29.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.28.1...v3.29.0) (2022-09-15)
+
+
+### Features
+
+* **gux-month-picker:** created month picker component ([2471571](https://github.com/MyPureCloud/genesys-webcomponents/commit/247157135d5529c5f96acac07d24f581eeacec96))
+
+
+### Bug Fixes
+
+* **pr-comments:** addressed PR comments ([efff66c](https://github.com/MyPureCloud/genesys-webcomponents/commit/efff66c4e4a3c308051435eba17c6a6211ac7b13))
+
 ### [3.28.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.28.0...v3.28.1) (2022-09-14)
 
 
