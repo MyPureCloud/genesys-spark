@@ -34,6 +34,7 @@ export class GuxPopup {
       this.targetElementContainer,
       this.popupElementContainer,
       {
+        strategy: 'fixed',
         modifiers: [
           {
             name: 'flip',
