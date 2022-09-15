@@ -5,7 +5,6 @@ import {
   EventEmitter,
   h,
   JSX,
-  Listen,
   Method,
   Prop,
   State,
@@ -17,6 +16,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import advancedDropDownResources from './i18n/en.json';
 import { onMutation } from '../../../utils/dom/on-mutation';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
@@ -118,11 +118,9 @@ export class GuxAdvancedDropdown {
     this.srLabelledby = id;
   }
 
-  @Listen('focusout')
-  onFocusOut(e: FocusEvent) {
-    if (!e.relatedTarget || !this.root.contains(e.relatedTarget as Node)) {
-      this.closeDropdown(false);
-    }
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside() {
+    this.closeDropdown(false);
   }
 
   async componentWillLoad() {
@@ -147,12 +145,12 @@ export class GuxAdvancedDropdown {
 
   render(): JSX.Element {
     return (
-      <div
-        class={`gux-dropdown
-        ${this.disabled ? 'gux-disabled' : ''}
-        ${this.opened ? 'gux-active' : ''}`}
-      >
-        <div class="gux-select-field" onMouseDown={() => this.inputMouseDown()}>
+      <gux-popup expanded={this.opened} disabled={this.disabled}>
+        <div
+          slot="target"
+          class="gux-select-field"
+          onMouseDown={() => this.inputMouseDown()}
+        >
           <a
             ref={el => (this.inputBox = el)}
             class="gux-select-input"
@@ -175,11 +173,7 @@ export class GuxAdvancedDropdown {
             <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
-        <div
-          class={`gux-advanced-dropdown-menu ${
-            this.opened ? 'gux-opened' : ''
-          }`}
-        >
+        <div slot="popup" class="gux-advanced-dropdown-menu">
           <div class="gux-dropdown-menu-container">
             <gux-form-field-search label-position="screenreader">
               <label slot="label">{this.i18n('searchAria')}</label>
@@ -202,7 +196,7 @@ export class GuxAdvancedDropdown {
             </div>
           </div>
         </div>
-      </div>
+      </gux-popup>
     ) as JSX.Element;
   }
 
