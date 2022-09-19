@@ -56,7 +56,7 @@
     "test.unit": "TZ=UTC stencil build dev && stencil test --spec",
     "test.unit.update-snapshot": "TZ=UTC stencil test --spec --updateSnapshot",
     "test.update-snapshot": "TZ=UTC stencil test --spec --e2e --updateSnapshot",
-    "test.watch": "TZ=UTC stencil test --spec --e2e --watchAll"
+    "test.watch": "TZ=UTC stencil test --spec --e2e --watch"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
@@ -106,6 +106,7 @@
     "jest-config": "^27.5.1",
     "jest-environment-node": "^27.5.1",
     "jest-junit": "^13.2.0",
+    "jest-silent-reporter": "^0.5.0",
     "jsdom": "^19.0.0",
     "lint-staged": "^12.5.0",
     "marked": "^4.1.0",
