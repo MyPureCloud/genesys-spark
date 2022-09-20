@@ -33,6 +33,7 @@
  - [gux-dropdown](../gux-dropdown)
  - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
  - [gux-month-picker-beta](../../beta/gux-month-picker)
+ - [gux-time-picker-beta](../../beta/gux-time-picker)
 
 ### Graph
 ```mermaid
@@ -45,6 +46,7 @@ graph TD;
   gux-dropdown --> gux-popup
   gux-dropdown-multi-beta --> gux-popup
   gux-month-picker-beta --> gux-popup
+  gux-time-picker-beta --> gux-popup
   style gux-popup fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

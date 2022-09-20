@@ -1,0 +1,120 @@
+<h1>gux-form-field-time-picker</h1>
+
+<p>
+  slot a gux-time-picker-beta element into a gux-form-field-time-picker element
+</p>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>12 Hour</legend>
+    <gux-form-field-time-picker label-position="above">
+      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <label slot="label">Select Time</label>
+    </gux-form-field-time-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>24 Hour</legend>
+    <gux-form-field-time-picker label-position="above">
+      <gux-time-picker-beta
+        value="09:00"
+        clock-type="24h"
+      ></gux-time-picker-beta>
+      <label slot="label">Select Time</label>
+    </gux-form-field-time-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>24 Hour (calculated from locale)</legend>
+    <gux-form-field-time-picker lang="ja" label-position="above">
+      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <label slot="label">Select Time</label>
+    </gux-form-field-time-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>Interval=15</legend>
+    <gux-form-field-time-picker>
+      <gux-time-picker-beta value="13:00" interval="15"></gux-time-picker-beta>
+      <label slot="label">Select Time</label>
+    </gux-form-field-time-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>Interval=30</legend>
+    <gux-form-field-time-picker>
+      <gux-time-picker-beta value="07:00" interval="30"></gux-time-picker-beta>
+      <label slot="label">Select Time</label>
+    </gux-form-field-time-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>Screen reader only label</legend>
+    <gux-form-field-time-picker label-position="screenreader">
+      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <label slot="label">Select Time</label>
+    </gux-form-field-time-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>Disabled</legend>
+    <gux-form-field-time-picker>
+      <gux-time-picker-beta value="09:00" disabled></gux-time-picker-beta>
+      <label slot="label">Select Time</label>
+    </gux-form-field-time-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+    <gux-form-field-time-picker>
+      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <label slot="label">Select Time</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-time-picker>
+  </fieldset>
+</form>
+
+<h2>Languages</h2>
+<div id="languages-container">
+  <div id="sample"></div>
+</div>
+
+<style
+  onload="(function () {
+    const languagesContainer = document.getElementById('languages-container');
+
+    [
+      'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+      'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+      'pt-pt', 'ru', 'sv', 'th', 'tr', 'zh-cn', 'zh-tw'
+    ].forEach((lang) => {
+      const html = window.toHTML([
+        '<div class=language lang=' + lang + '>',
+          '<h3>' + lang + '</h3>',
+          '<div class=group>',
+            '<div class=example>',
+              '<h4>Value Set</h4>',
+              '<gux-form-field-time-picker>',
+                '<gux-time-picker-beta></gux-time-picker-beta>',
+                  '<label slot=label>Select Time</label>',
+                '</gux-form-field-time-picker>',
+              '</gux-form-field-time-picker>',
+            '</div>',
+          '</div>',
+        '</div>'
+      ].join(''));
+
+      languagesContainer.appendChild(html);
+    });
+})()"
+>
+  #languages-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .group {
+    display: flex;
+  }
+</style>
