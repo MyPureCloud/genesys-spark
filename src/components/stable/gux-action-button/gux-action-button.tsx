@@ -177,6 +177,7 @@ export class GuxActionButton {
   private onListClick(event: MouseEvent): void {
     whenEventIsFrom('gux-list-item', event, () => {
       this.isOpen = false;
+      this.dropdownButton.focus();
     });
   }
 
