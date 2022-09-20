@@ -139,6 +139,32 @@
     </gux-form-field-dropdown>
   </fieldset>
 
+  <fieldset>
+    <legend>Help</legend>
+    <gux-form-field-dropdown>
+      <gux-dropdown>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Default</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown required>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Required</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-dropdown>
+  </fieldset>
+
   <h2>Dropdown (multi select)</h2>
   <p>
     slot a gux-dropdown-multi-beta element into a gux-form-field-dropdown
@@ -272,6 +298,32 @@
       </gux-dropdown-multi-beta>
       <label slot="label">Required</label>
       <span slot="error">This is an error message</span>
+    </gux-form-field-dropdown>
+  </fieldset>
+
+  <fieldset>
+    <legend>Help</legend>
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Default</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi-beta required>
+        <gux-listbox-multi>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Required</label>
+      <span slot="help">This is a help message</span>
     </gux-form-field-dropdown>
   </fieldset>
 </form>

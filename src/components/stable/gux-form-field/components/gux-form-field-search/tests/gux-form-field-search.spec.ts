@@ -65,5 +65,20 @@ describe('gux-form-field-search', () => {
         });
       });
     });
+
+    describe('help', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-search>
+        <input slot="input" type="search" name="e-1" />
+        <label slot="label">Default</label>
+        <span slot="help">This is a help message</span>
+      </gux-form-field-search>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });

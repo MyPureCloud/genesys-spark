@@ -145,6 +145,33 @@ describe('gux-form-field-text-like', () => {
       });
     });
 
+    describe('help', () => {
+      const html = `
+        <gux-form-field-text-like>
+        <input slot="input" type="text" name="e-1" />
+        <label slot="label">Default</label>
+        <span slot="help">This is a help message</span>
+      </gux-form-field-text-like>
+      `;
+
+      it('should render component as expected', async () => {
+        const page = await newNonrandomE2EPage({ html });
+        const element = await page.find('gux-form-field-text-like');
+        const elementShadowDom = await element.find(
+          'pierce/.gux-form-field-container'
+        );
+
+        expect(element.outerHTML).toMatchSnapshot();
+        expect(elementShadowDom).toMatchSnapshot();
+      });
+
+      it('should be accessible', async () => {
+        const page = await newSparkE2EPage({ html });
+
+        await a11yCheck(page, axeExclusions);
+      });
+    });
+
     describe('input type attribute', () => {
       ['email', 'password', 'text'].forEach((inputTypeAttribute, index) => {
         const html = `

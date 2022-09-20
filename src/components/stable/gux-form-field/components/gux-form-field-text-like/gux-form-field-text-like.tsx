@@ -9,26 +9,29 @@ import {
   State
 } from '@stencil/core';
 
-import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
-import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
-import { OnMutation } from '../../../../../utils/decorator/on-mutation';
-import { onRequiredChange } from '../../../../../utils/dom/on-attribute-change';
-import { preventBrowserValidationStyling } from '../../../../../utils/dom/prevent-browser-validation-styling';
-import { trackComponent } from '../../../../../usage-tracking';
+import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
+import { OnMutation } from '@utils/decorator/on-mutation';
+import { onRequiredChange } from '@utils/dom/on-attribute-change';
+import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
+import { hasSlot } from '@utils/dom/has-slot';
 
-import { GuxFormFieldContainer } from '../../functional-components/gux-form-field-container/gux-form-field-container';
-import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';
-import { GuxFormFieldLabel } from '../../functional-components/gux-form-field-label/gux-form-field-label';
+import {
+  GuxFormFieldHelp,
+  GuxFormFieldError,
+  GuxFormFieldLabel,
+  GuxFormFieldContainer
+} from '../../functional-components/functional-components';
 
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
   clearInput,
-  hasErrorSlot,
   hasContent,
   getComputedLabelPosition,
   validateFormIds,
   setSlotAriaDescribedby
 } from '../../gux-form-field.service';
+import { trackComponent } from '../../../../../usage-tracking';
 
 /**
  * @slot input - Required slot for input tag
@@ -36,6 +39,7 @@ import {
  * @slot prefix - Optional slot for prefix
  * @slot suffix - Optional slot for suffix
  * @slot error - Optional slot for error message
+ * @slot help - Optional slot for help message
  */
 @Component({
   styleUrl: 'gux-form-field-text-like.less',
@@ -78,16 +82,21 @@ export class GuxFormFieldTextLike {
   @State()
   private hasError: boolean = false;
 
+  @State()
+  private hasHelp: boolean = false;
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxForceUpdate(): Promise<void> {
     this.hasContent = hasContent(this.input);
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
 
     forceUpdate(this.root);
   }
@@ -96,7 +105,8 @@ export class GuxFormFieldTextLike {
     this.setInput();
     this.setLabel();
 
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
     this.hasPrefix = Boolean(this.root.querySelector('[slot="prefix"]'));
     this.hasSuffix = Boolean(this.root.querySelector('[slot="suffix"]'));
 
@@ -150,9 +160,12 @@ export class GuxFormFieldTextLike {
               )}
             </div>
           </div>
-          <GuxFormFieldError hasError={this.hasError}>
+          <GuxFormFieldError show={this.hasError}>
             <slot name="error" />
           </GuxFormFieldError>
+          <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+            <slot name="help" />
+          </GuxFormFieldHelp>
         </div>
       </GuxFormFieldContainer>
     ) as JSX.Element;

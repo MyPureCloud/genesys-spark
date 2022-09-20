@@ -1,21 +1,20 @@
 import { FunctionalComponent, h, VNode } from '@stencil/core';
 
-interface GuxFormFieldErrorProps {
+interface GuxFormFieldHelpProps {
   show: boolean;
 }
 
-export const GuxFormFieldError: FunctionalComponent<GuxFormFieldErrorProps> = (
+export const GuxFormFieldHelp: FunctionalComponent<GuxFormFieldHelpProps> = (
   { show },
   children
 ): VNode => {
   return (
     <div
       class={{
-        'gux-form-field-error': true,
+        'gux-form-field-help': true,
         'gux-show': show
       }}
     >
-      <gux-icon icon-name="alert-warning-octogon" decorative></gux-icon>
       <div class="gux-message">{children}</div>
     </div>
   ) as VNode;

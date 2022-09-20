@@ -68,5 +68,20 @@ describe('gux-form-field-time-picker', () => {
         }
       );
     });
+
+    describe('help', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-time-picker>
+        <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+        <label slot="label">Select Time</label>
+        <span slot="help">This is a help message</span>
+      </gux-form-field-time-picker>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });

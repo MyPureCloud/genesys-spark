@@ -86,5 +86,32 @@ describe('gux-form-field-time-picker', () => {
         }
       );
     });
+
+    describe('help', () => {
+      const html = `
+      <gux-form-field-time-picker>
+      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <label slot="label">Select Time</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-time-picker>
+      `;
+
+      it('should render component as expected', async () => {
+        const page = await newNonrandomE2EPage({ html });
+        const element = await page.find('gux-form-field-time-picker');
+        const elementShadowDom = await element.find(
+          'pierce/.gux-form-field-container'
+        );
+
+        expect(element.outerHTML).toMatchSnapshot();
+        expect(elementShadowDom).toMatchSnapshot();
+      });
+
+      it('should be accessible', async () => {
+        const page = await newSparkE2EPage({ html });
+
+        await a11yCheck(page, axeExclusions);
+      });
+    });
   });
 });

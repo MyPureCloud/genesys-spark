@@ -1,19 +1,24 @@
 import { Component, Element, h, Host, JSX, State } from '@stencil/core';
 
-import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
-import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
-import { OnMutation } from '../../../../../utils/decorator/on-mutation';
-import { preventBrowserValidationStyling } from '../../../../../utils/dom/prevent-browser-validation-styling';
+import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
+import { OnMutation } from '@utils/decorator/on-mutation';
+import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
+import { hasSlot } from '@utils/dom/has-slot';
+
+import {
+  GuxFormFieldError,
+  GuxFormFieldHelp
+} from '../../functional-components/functional-components';
+
+import { validateFormIds } from '../../gux-form-field.service';
 import { trackComponent } from '../../../../../usage-tracking';
-
-import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';
-
-import { hasErrorSlot, validateFormIds } from '../../gux-form-field.service';
 
 /**
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
+ * @slot help - Optional slot for help message
  */
 @Component({
   styleUrl: 'gux-form-field-radio.less',
@@ -33,15 +38,20 @@ export class GuxFormFieldRadio {
   @State()
   private hasError: boolean = false;
 
+  @State()
+  private hasHelp: boolean = false;
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
   }
 
   componentWillLoad(): void {
     this.setInput();
 
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
 
     trackComponent(this.root);
   }
@@ -65,9 +75,12 @@ export class GuxFormFieldRadio {
             </div>
             <div class="gux-label">
               <slot name="label" />
-              <GuxFormFieldError hasError={this.hasError}>
+              <GuxFormFieldError show={this.hasError}>
                 <slot name="error" />
               </GuxFormFieldError>
+              <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+                <slot name="help" />
+              </GuxFormFieldHelp>
             </div>
           </div>
         </div>
