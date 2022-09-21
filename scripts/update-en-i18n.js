@@ -42,7 +42,7 @@ function composeI18nFileFromComponents(locale) {
 
     fs.writeFileSync(
       path.join(translationsFolder, `${locale}.json`),
-      JSON.stringify(translations, null, 2)
+      JSON.stringify(translations, null, 2) + '\n'
     );
   });
 }
