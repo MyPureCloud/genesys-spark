@@ -12,6 +12,7 @@ import {
 
 import { trackComponent } from '../../../usage-tracking';
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { GuxButtonAccent, GuxButtonType } from '../gux-button/gux-button.types';
@@ -173,6 +174,13 @@ export class GuxActionButton {
     }
   }
 
+  private onListClick(event: MouseEvent): void {
+    whenEventIsFrom('gux-list-item', event, () => {
+      this.isOpen = false;
+      this.dropdownButton.focus();
+    });
+  }
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.type });
     this.i18n = await buildI18nForComponent(this.root, defaultResources);
@@ -217,7 +225,10 @@ export class GuxActionButton {
           </div>
 
           <div class="gux-list-container" slot="popup">
-            <gux-list ref={el => (this.listElement = el)}>
+            <gux-list
+              onClick={(e: MouseEvent) => this.onListClick(e)}
+              ref={el => (this.listElement = el)}
+            >
               <slot />
             </gux-list>
           </div>
