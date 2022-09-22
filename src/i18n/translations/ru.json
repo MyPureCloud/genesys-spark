@@ -1,0 +1,187 @@
+{
+  "gux-badge": {
+    "neutral": "значок с меткой: {label}, цвет: нейтральный",
+    "neutral-bold": "значок с меткой: {label}, цвет: нейтральный, полужирный",
+    "green": "значок с меткой: {label}, цвет: зеленый",
+    "green-bold": "значок с меткой: {label}, цвет: зеленый, полужирный",
+    "yellow": "значок с меткой: {label}, цвет: желтый",
+    "yellow-bold": "значок с меткой: {label}, цвет: желтый, полужирный",
+    "red": "значок с меткой: {label}, цвет: красный",
+    "red-bold": "значок с меткой: {label}, цвет: красный, полужирный"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Страница",
+    "totalPages": " из {totalPages, number}",
+    "first": "Первая",
+    "previous": "Предыдущая",
+    "next": "Следующая",
+    "last": "Последняя",
+    "pageInputLabel": "Страница {currentPage, number} из {totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} – {lastItem, number}",
+    "totalItems": " из {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "на странице",
+    "itemsPerPage": "Элементов на странице"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "Данные недоступны",
+    "scrollLeft": "Прокрутить влево",
+    "scrollRight": "Прокрутить вправо",
+    "selectAllTableRows": "Выбрать все строки таблицы",
+    "selectTableRow": "Выбрать строку таблицы",
+    "sortAsc": "Сортировка по возрастанию",
+    "sortDesc": "Сортировка по убыванию",
+    "tableOptions": "Параметры таблицы",
+    "noColumnSort": "{headerContent}. В данный момент таблица не отсортирована по этому столбцу. Нажмите на заголовок столбца, чтобы отсортировать таблицу по этому столбцу в порядке возрастания",
+    "ascendingColumnSort": "{headerContent}. В данный момент таблица отсортирована по этому столбцу в порядке возрастания. Нажмите на заголовок столбца, чтобы отсортировать таблицу по этому столбцу в порядке убывания",
+    "descendingColumnSort": "{headerContent}. В данный момент таблица отсортирована по этому столбцу в порядке убывания. Нажмите на заголовок столбца, чтобы отсортировать таблицу по этому столбцу в порядке возрастания",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. В данный момент таблица отсортирована по этому столбцу в порядке убывания. Нажмите на заголовок столбца, чтобы не сортировать таблицу по этому столбцу"
+  },
+  "gux-tag": {
+    "tag": "Тег с меткой: {label}",
+    "tag-disabled": "Отключенный тег с меткой: {label}",
+    "remove-tag": "Удалить тег с меткой: {label}"
+  },
+  "gux-time-picker": {
+    "defaultAriaLabel": "Time Picker"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "Раскрывающийся список для {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Недавние запросы поиска:",
+    "commonSearch": "Частые запросы поиска:",
+    "limited": "Результаты ограничены; уточните условия поиска для получения большего кол-ва команд.",
+    "search": "Поиск команд.",
+    "title": "Панель команд"
+  },
+  "gux-input-color": {
+    "required": "Обязательно"
+  },
+  "gux-input-number": {
+    "clear": "Очистить",
+    "increment": "Увеличить",
+    "decrement": "Уменьшить"
+  },
+  "gux-input-search": {
+    "clear": "Очистить"
+  },
+  "gux-input-text-like": {
+    "clear": "Очистить"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Создать новую вкладку",
+    "scrollLeft": "Прокрутить влево",
+    "scrollRight": "Прокрутить вправо",
+    "disableNewTab": "Достигнуто максимальное количество созданных вкладок"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "Раскрывающийся список для {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Поиск"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Навигация"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Очистить",
+    "navigateNextBtn": "Далее",
+    "navigatePreviousBtn": "Назад",
+    "totalMatches": "{currentMatch, number} из {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "Начало",
+    "end": "Конец",
+    "date": "Дата",
+    "toggleCalendar": "Переключить представление календаря"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "Игнорировать"
+  },
+  "gux-dropdown": {
+    "filterResults": "Начните ввод для фильтрации результатов раскрывающегося списка",
+    "noSelection": "Выбрать...",
+    "dropdown": "Раскрывающийся список"
+  },
+  "gux-form-field-number": {
+    "increment": "Увеличить",
+    "decrement": "Уменьшить"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Очистить"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "Нет совпадений"
+  },
+  "gux-listbox": {
+    "noMatches": "Нет совпадений"
+  },
+  "gux-pagination-cursor": {
+    "previous": "Назад",
+    "next": "Далее"
+  },
+  "gux-pagination-buttons": {
+    "page": "Страница",
+    "totalPages": " из {totalPages, number}",
+    "first": "Первая",
+    "previous": "Предыдущая",
+    "next": "Следующая",
+    "last": "Последняя",
+    "pageInputLabel": "Страница {currentPage, number} из {totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} – {lastItem, number}",
+    "totalItems": " из {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "на странице",
+    "itemsPerPage": "Элементов на странице"
+  },
+  "gux-radial-loading": {
+    "loading": "Загрузка"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Создать новую вкладку",
+    "scrollLeft": "Прокрутить влево",
+    "scrollRight": "Прокрутить вправо",
+    "options": "Параметры для вкладки {tabTitle}",
+    "disableNewTab": "Достигнуто максимальное количество созданных вкладок",
+    "toggleSort": "Переключение режима сортировки по нажатию клавиши ПРОБЕЛ",
+    "sortModeOn": "Режим сортировки включен, используйте клавиши СТРЕЛКА ВЛЕВО и СТРЕЛКА ВПРАВО для изменения порядка вкладок. Нажмите клавишу ПРОБЕЛ или ВВОД, чтобы завершить сортировку. Нажмите клавишу ESC, чтобы отменить сортировку",
+    "sortComplete": "Сортировка завершена",
+    "sortCancelled": "Сортировка отменена"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Прокрутить влево",
+    "scrollRight": "Прокрутить вправо",
+    "scrollUp": "Прокрутить вверх",
+    "scrollDown": "Прокрутить вниз"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Переключатель"
+  }
+}

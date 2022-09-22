@@ -1,0 +1,187 @@
+{
+  "gux-badge": {
+    "neutral": "selitteellinen merkki: {label}, väri: neutraali",
+    "neutral-bold": "selitteellinen merkki: {label}, väri: neutraali voimakas",
+    "green": "selitteellinen merkki: {label}, väri: vihreä",
+    "green-bold": "selitteellinen merkki: {label}, väri: voimakas vihreä",
+    "yellow": "selitteellinen merkki: {label}, väri: keltainen",
+    "yellow-bold": "selitteellinen merkki: {label}, väri: voimakas keltainen",
+    "red": "selitteellinen merkki: {label}, väri: punainen",
+    "red-bold": "selitteellinen merkki: {label}, väri: voimakas punainen"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Sivu",
+    "totalPages": " / {totalPages, number}",
+    "first": "Ensimmäinen",
+    "previous": "Edellinen",
+    "next": "Seuraava",
+    "last": "Viimeinen",
+    "pageInputLabel": "Sivu {currentPage, number} / {lastPage, number})"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": "/ {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "sivulla",
+    "itemsPerPage": "Nimikettä sivulla"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "Tietoja ei ole saatavissa",
+    "scrollLeft": "Vieritä vasemmalle",
+    "scrollRight": "Vieritä oikealle",
+    "selectAllTableRows": "Valitse taulukon kaikki rivit",
+    "selectTableRow": "Valitse taulukon rivi",
+    "sortAsc": "Lajiteltu nousevaan järjestykseen",
+    "sortDesc": "Lajiteltu laskevaan järjestykseen",
+    "tableOptions": "Taulukkovaihtoehdot",
+    "noColumnSort": "{headerContent}. Taulukkoa ei tällä hetkellä lajitella tässä sarakkeessa. Napsauttamalla sarakkeen otsaketta voit lajitella taulukon tässä sarakkeessa nousevassa järjestyksessä",
+    "ascendingColumnSort": "{headerContent}. Taulukkoa ei tällä hetkellä lajitella tässä sarakkeessa nousevassa järjestyksessä. Napsauttamalla sarakkeen otsaketta voit lajitella taulukon tässä sarakkeessa laskevassa järjestyksessä",
+    "descendingColumnSort": "{headerContent}. Taulukko lajitellaan tällä hetkellä tässä sarakkeessa laskevassa järjestyksessä. Napsauttamalla sarakkeen otsaketta voit lajitella taulukon tässä sarakkeessa nousevassa järjestyksessä",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. Taulukko lajitellaan tällä hetkellä tässä sarakkeessa laskevassa järjestyksessä. Napsauttamalla sarakkeen otsaketta jättää taulukon lajittelematta tässä sarakkeessa"
+  },
+  "gux-tag": {
+    "tag": "selitteellinen tunniste: {label}",
+    "tag-disabled": "käytöstä poistettu selitteellinen tunniste: {label}",
+    "remove-tag": "Poista selitteellinen tunniste: {label}"
+  },
+  "gux-time-picker": {
+    "defaultAriaLabel": "Time Picker"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "Avattava valikko: {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Viimeaikaiset haut:",
+    "commonSearch": "Yleiset haut:",
+    "limited": "Tuloksia on rajattu. Saat lisää komentoja tarkentamalla hakua.",
+    "search": "Hae komentoja.",
+    "title": "Komentovalikoima"
+  },
+  "gux-input-color": {
+    "required": "Pakollinen"
+  },
+  "gux-input-number": {
+    "clear": "Tyhjennä",
+    "increment": "kasvava",
+    "decrement": "Vähennä joukosta"
+  },
+  "gux-input-search": {
+    "clear": "Tyhjennä"
+  },
+  "gux-input-text-like": {
+    "clear": "Tyhjennä"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Luo uusi välilehti",
+    "scrollLeft": "Vieritä vasemmalle",
+    "scrollRight": "Vieritä oikealle",
+    "disableNewTab": "Luotujen välilehtien enimmäismäärä on saavutettu"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "Avattava valikko: {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Haku"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Navigointilinkit"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Tyhjennä",
+    "navigateNextBtn": "Seuraava",
+    "navigatePreviousBtn": "Edellinen",
+    "totalMatches": "{currentMatch, number}/{matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "Alku",
+    "end": "Loppu",
+    "date": "Päivämäärä",
+    "toggleCalendar": "Valitse kalenterinäkymä"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "Hylkää"
+  },
+  "gux-dropdown": {
+    "filterResults": "Kirjoittamalla voit suodattaa avattavan valikon tulokset",
+    "noSelection": "Valitse...",
+    "dropdown": "Avattava valikko"
+  },
+  "gux-form-field-number": {
+    "increment": "Lisäys",
+    "decrement": "Vähennys"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Tyhjennä"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "Ei vastaavuuksia"
+  },
+  "gux-listbox": {
+    "noMatches": "Ei vastaavuuksia"
+  },
+  "gux-pagination-cursor": {
+    "previous": "Edellinen",
+    "next": "Seuraava"
+  },
+  "gux-pagination-buttons": {
+    "page": "Sivu",
+    "totalPages": " / {totalPages, number}",
+    "first": "Ensimmäinen",
+    "previous": "Edellinen",
+    "next": "Seuraava",
+    "last": "Viimeinen",
+    "pageInputLabel": "Sivu {currentPage, number} / {lastPage, number})"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": "/ {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "sivulla",
+    "itemsPerPage": "Nimikettä sivulla"
+  },
+  "gux-radial-loading": {
+    "loading": "Ladataan"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Luo uusi välilehti",
+    "scrollLeft": "Vieritä vasemmalle",
+    "scrollRight": "Vieritä oikealle",
+    "options": "Välilehtivaihtoehdot kohteelle {tabTitle}",
+    "disableNewTab": "Luotujen välilehtien enimmäismäärä on saavutettu",
+    "toggleSort": "Valitse lajittelutila välilyöntinäppäimen avulla",
+    "sortModeOn": "Voit järjestää välilehdet uudelleen lajittelutilassa vasemmalla ja oikealla nuolinäppäimellä. Voit suorittaa lajittelun loppuun painamalla välilyönti- tai Enter-näppäintä. Voit peruuttaa lajittelun painamalla Esc-näppäintä",
+    "sortComplete": "Lajittelu on valmis",
+    "sortCancelled": "Lajittelu peruutettu"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Vieritä vasemmalle",
+    "scrollRight": "Vieritä oikealle",
+    "scrollUp": "Vieritä ylös",
+    "scrollDown": "Vieritä alas"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Vaihtopainike"
+  }
+}

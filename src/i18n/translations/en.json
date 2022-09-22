@@ -1,0 +1,189 @@
+{
+  "gux-badge": {
+    "neutral": "badge with label: {label}, color: neutral",
+    "neutral-bold": "badge with label: {label}, color: neutral bold",
+    "green": "badge with label: {label}, color: green",
+    "green-bold": "badge with label: {label}, color: green bold",
+    "yellow": "badge with label: {label}, color: yellow",
+    "yellow-bold": "badge with label: {label}, color: yellow bold",
+    "red": "badge with label: {label}, color: red",
+    "red-bold": "badge with label: {label}, color: red bold"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Page",
+    "totalPages": " of {totalPages, number}",
+    "first": "First",
+    "previous": "Previous",
+    "next": "Next",
+    "last": "Last",
+    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " of {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "per page",
+    "itemsPerPage": "Items per page"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "No data available",
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "selectAllTableRows": "Select All Table Rows",
+    "selectTableRow": "Select Table Row",
+    "sortAsc": "Sorted Ascending",
+    "sortDesc": "Sorted Descending",
+    "tableOptions": "Table Options",
+    "noColumnSort": "{headerContent}. The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order",
+    "ascendingColumnSort": "{headerContent}. The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order",
+    "descendingColumnSort": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column"
+  },
+  "gux-tag": {
+    "tag": "tag with label: {label}",
+    "tag-disabled": "disabled tag with label: {label}",
+    "remove-tag": "Remove tag with label: {label}"
+  },
+  "gux-time-picker": {
+    "defaultAriaLabel": "Time Picker"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "Dropdown for {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Recently Searched:",
+    "commonSearch": "Common Searches:",
+    "limited": "Results limited, refine your search for more commands.",
+    "search": "Search for commands.",
+    "title": "Command Palette"
+  },
+  "gux-input-color": {
+    "required": "Required"
+  },
+  "gux-input-number": {
+    "clear": "Clear",
+    "increment": "Increment",
+    "decrement": "Decrement"
+  },
+  "gux-input-search": {
+    "clear": "Clear"
+  },
+  "gux-input-text-like": {
+    "clear": "Clear"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Create New Tab",
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "disableNewTab": "Maximum number of tabs created has been reached"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "Dropdown for {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Search"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Breadcrumbs"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Clear",
+    "navigateNextBtn": "Next",
+    "navigatePreviousBtn": "Previous",
+    "totalMatches": "{currentMatch, number} of {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "Start",
+    "end": "End",
+    "date": "Date",
+    "toggleCalendar": "Toggle calendar view"
+  },
+  "gux-disclosure-button": {
+    "defaultLabel": "Disclosure button"
+  },
+  "gux-dismiss-button": {
+    "dismiss": "Dismiss"
+  },
+  "gux-dropdown": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown"
+  },
+  "gux-form-field-number": {
+    "increment": "Increment",
+    "decrement": "Decrement"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Clear"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "No matches"
+  },
+  "gux-listbox": {
+    "noMatches": "No matches"
+  },
+  "gux-pagination-cursor": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "gux-pagination-buttons": {
+    "page": "Page",
+    "totalPages": " of {totalPages, number}",
+    "first": "First",
+    "previous": "Previous",
+    "next": "Next",
+    "last": "Last",
+    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " of {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "per page",
+    "itemsPerPage": "Items per page"
+  },
+  "gux-radial-loading": {
+    "loading": "Loading"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Create New Tab",
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "options": "Tab Options for {tabTitle}",
+    "disableNewTab": "Maximum number of tabs created has been reached",
+    "toggleSort": "Toggle sort mode using space",
+    "sortModeOn": "Sort mode on, use the left and right arrow keys to reorder tabs. Press space or enter key to complete sort. Press escape key to cancel sort",
+    "sortComplete": "Sort complete",
+    "sortCancelled": "Sort cancelled"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "scrollUp": "Scroll Up",
+    "scrollDown": "Scroll Down"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Toggle Switch"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "gux-badge": {
+    "neutral": "Badge mit Bezeichnung: {label}, Farbe: neutral",
+    "neutral-bold": "Badge mit Bezeichnung: {label}, Farbe: neutral fett",
+    "green": "Badge mit Bezeichnung: {label}, Farbe: grün",
+    "green-bold": "Badge mit Bezeichnung: {label}, Farbe: grün fett",
+    "yellow": "Badge mit Bezeichnung: {label}, Farbe: gelb",
+    "yellow-bold": "Badge mit Bezeichnung: {label}, Farbe: gelb fett",
+    "red": "Badge mit Bezeichnung: {label}, Farbe: rot",
+    "red-bold": "Badge mit Bezeichnung: {label}, Farbe: rot fett"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Seite",
+    "totalPages": " von {totalPages, number}",
+    "first": "Erste",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "last": "Letzte",
+    "pageInputLabel": "Seite {currentPage, number} von {totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " von {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "pro Seite",
+    "itemsPerPage": "Elemente pro Seite"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "Keine Daten verfügbar",
+    "scrollLeft": "Nach links blättern",
+    "scrollRight": "Nach rechts blättern",
+    "selectAllTableRows": "Alle Tabellenzeilen auswählen",
+    "selectTableRow": "Tabellenzeile auswählen",
+    "sortAsc": "Aufsteigend sortiert",
+    "sortDesc": "Absteigend sortiert",
+    "tableOptions": "Tabellenoptionen",
+    "noColumnSort": "{headerContent}. Die Tabelle ist derzeit nicht nach dieser Spalte sortiert. Klicken Sie auf die Spaltenkopfzeile, um die Tabelle nach dieser Spalte in aufsteigender Reihenfolge zu sortieren.",
+    "ascendingColumnSort": "{headerContent}. Die Tabelle ist derzeit nach dieser Spalte in aufsteigender Reihenfolge sortiert. Klicken Sie auf die Spaltenkopfzeile, um die Tabelle nach dieser Spalte in absteigender Reihenfolge zu sortieren.",
+    "descendingColumnSort": "{headerContent}. Die Tabelle ist derzeit nach dieser Spalte in absteigender Reihenfolge sortiert. Klicken Sie auf die Spaltenkopfzeile, um die Tabelle nach dieser Spalte in aufsteigender Reihenfolge zu sortieren.",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. Die Tabelle ist derzeit nach dieser Spalte in absteigender Reihenfolge sortiert. Klicken Sie auf die Spaltenkopfzeile, um die Tabelle nicht nach dieser Spalte zu sortieren."
+  },
+  "gux-tag": {
+    "tag": "Tag mit Bezeichnung: {label}",
+    "tag-disabled": "Deaktiviertes Tag mit Bezeichnung: {label}",
+    "remove-tag": "Tag mit Bezeichnung entfernen: {label}"
+  },
+  "gux-time-picker": {
+    "defaultAriaLabel": "Time Picker"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "Listenfeld für {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Kürzlich gesucht:",
+    "commonSearch": "Häufige Suchanfragen:",
+    "limited": "Ergebnisse eingeschränkt, verfeinern Sie Ihre Suche für weitere Befehle.",
+    "search": "Suchen Sie nach Befehlen.",
+    "title": "Befehlspalette"
+  },
+  "gux-input-color": {
+    "required": "Erforderlich"
+  },
+  "gux-input-number": {
+    "clear": "Löschen",
+    "increment": "Inkrement",
+    "decrement": "Dekrement"
+  },
+  "gux-input-search": {
+    "clear": "Löschen"
+  },
+  "gux-input-text-like": {
+    "clear": "Löschen"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Neue Registerkarte erstellen",
+    "scrollLeft": "Nach links blättern",
+    "scrollRight": "Nach rechts blättern",
+    "disableNewTab": "Die maximale Anzahl an erstellten Registerkarten wurde erreicht."
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "Listenfeld für {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Suche"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Breadcrumbs"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Löschen",
+    "navigateNextBtn": "Weiter",
+    "navigatePreviousBtn": "Zurück",
+    "totalMatches": "{currentMatch, number} von {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "Start",
+    "end": "Ende",
+    "date": "Datum",
+    "toggleCalendar": "Kalenderansicht umschalten"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "Ablehnen"
+  },
+  "gux-dropdown": {
+    "filterResults": "Tippen Sie, um Listenfeldergebnisse zu filtern",
+    "noSelection": "Auswählen...",
+    "dropdown": "Listenfeld"
+  },
+  "gux-form-field-number": {
+    "increment": "Inkrement",
+    "decrement": "Dekrement"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Löschen"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "Keine Übereinstimmungen"
+  },
+  "gux-listbox": {
+    "noMatches": "Keine Übereinstimmungen"
+  },
+  "gux-pagination-cursor": {
+    "previous": "Zurück",
+    "next": "Weiter"
+  },
+  "gux-pagination-buttons": {
+    "page": "Seite",
+    "totalPages": " von {totalPages, number}",
+    "first": "Erste",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "last": "Letzte",
+    "pageInputLabel": "Seite {currentPage, number} von {totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " von {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "pro Seite",
+    "itemsPerPage": "Elemente pro Seite"
+  },
+  "gux-radial-loading": {
+    "loading": "Ladevorgang läuft"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Neue Registerkarte erstellen",
+    "scrollLeft": "Nach links blättern",
+    "scrollRight": "Nach rechts blättern",
+    "options": "Registerkartenoptionen für {tabTitle}",
+    "disableNewTab": "Die maximale Anzahl an erstellten Registerkarten wurde erreicht.",
+    "toggleSort": "Sortiermodus mit Leerzeichen ein-/ausschalten",
+    "sortModeOn": "Verwenden Sie bei eingeschaltetem Sortiermodus die linken und rechten Pfeiltasten, um die Registerkarten neu anzuordnen. Drücken Sie die Leer- oder Eingabetaste, um das Sortieren abzuschließen. Drücken Sie die Escape-Taste, um das Sortieren abzubrechen.",
+    "sortComplete": "Sortieren abgeschlossen",
+    "sortCancelled": "Sortieren abgebrochen"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Nach links blättern",
+    "scrollRight": "Nach rechts blättern",
+    "scrollUp": "Nach oben blättern",
+    "scrollDown": "Nach unten blättern"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Umschalter"
+  }
+}

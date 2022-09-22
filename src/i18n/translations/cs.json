@@ -1,0 +1,187 @@
+{
+  "gux-badge": {
+    "neutral": "odznak s popiskem: {label}, barva: neutrální",
+    "neutral-bold": "odznak s popiskem: {label}, barva: neutrální sytá",
+    "green": "odznak s popiskem: {label}, barva: zelená",
+    "green-bold": "odznak s popiskem: {label}, barva: sytě zelená",
+    "yellow": "odznak s popiskem: {label}, barva: žlutá",
+    "yellow-bold": "odznak s popiskem: {label}, barva: sytě žlutá",
+    "red": "odznak s popiskem: {label}, barva: červená",
+    "red-bold": "odznak s popiskem: {label}, barva: sytě červená"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Stránka",
+    "totalPages": " z {totalPages, number}",
+    "first": "První",
+    "previous": "Předchozí",
+    "next": "Další",
+    "last": "Poslední",
+    "pageInputLabel": "Strana {currentPage, number}/{totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} až {lastItem, number}",
+    "totalItems": "z {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "na stránku",
+    "itemsPerPage": "Položek na stránku"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "Nejsou dostupná žádná data",
+    "scrollLeft": "Posunout doleva",
+    "scrollRight": "Posunout doprava",
+    "selectAllTableRows": "Vybrat všechny řádky tabulky",
+    "selectTableRow": "Vybrat řádek tabulky",
+    "sortAsc": "Seřazeno vzestupně",
+    "sortDesc": "Seřazeno sestupně",
+    "tableOptions": "Možnosti tabulky",
+    "noColumnSort": "{headerContent}. Tabulka není aktuálně řazena podle tohoto sloupce. Pokud chcete tabulku seřadit podle tohoto sloupce vzestupně, klikněte na záhlaví sloupce",
+    "ascendingColumnSort": "{headerContent}. Tabulka je aktuálně řazena vzestupně podle tohoto sloupce. Pokud chcete tabulku seřadit podle tohoto sloupce sestupně, klikněte na záhlaví sloupce",
+    "descendingColumnSort": "{headerContent}. Tabulka je aktuálně řazena sestupně podle tohoto sloupce. Pokud chcete tabulku seřadit podle tohoto sloupce vzestupně, klikněte na záhlaví sloupce",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabulka je aktuálně řazena sestupně podle tohoto sloupce. Pokud chcete tabulku seřadit podle tohoto sloupce vzestupně, klikněte na záhlaví sloupce"
+  },
+  "gux-tag": {
+    "tag": "štítek s názvem: {label}",
+    "tag-disabled": "zakázaný štítek s názvem: {label}",
+    "remove-tag": "Odebrat štítek s názvem: {label}"
+  },
+  "gux-time-picker": {
+    "defaultAriaLabel": "Time Picker"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "Rozevírací seznam pro tlačítko {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Nedávno hledané:",
+    "commonSearch": "Často hledané:",
+    "limited": "Výsledky jsou omezené. Upravte parametry hledání a zobrazí se více příkazů.",
+    "search": "Hledání příkazů.",
+    "title": "Paleta příkazů"
+  },
+  "gux-input-color": {
+    "required": "Povinné"
+  },
+  "gux-input-number": {
+    "clear": "Vymazat",
+    "increment": "Zvýšení",
+    "decrement": "Snížení"
+  },
+  "gux-input-search": {
+    "clear": "Vymazat"
+  },
+  "gux-input-text-like": {
+    "clear": "Vymazat"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Vytvořit novou kartu",
+    "scrollLeft": "Posunout doleva",
+    "scrollRight": "Posunout doprava",
+    "disableNewTab": "Bylo dosaženo maximálního počtu vytvořených karet."
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "Rozevírací seznam pro tlačítko {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Hledat"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Popisy cest"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Vymazat",
+    "navigateNextBtn": "Další",
+    "navigatePreviousBtn": "Předchozí",
+    "totalMatches": "{currentMatch, number} z {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "Začátek",
+    "end": "Konec",
+    "date": "Datum",
+    "toggleCalendar": "Přepnout zobrazení kalendáře"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "Zavřít"
+  },
+  "gux-dropdown": {
+    "filterResults": "Psaním můžete filtrovat výsledky rozevíracího seznamu",
+    "noSelection": "Vybrat…",
+    "dropdown": "Rozevírací seznam"
+  },
+  "gux-form-field-number": {
+    "increment": "Zvýšení",
+    "decrement": "Snížení"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Vymazat"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "Žádné shody"
+  },
+  "gux-listbox": {
+    "noMatches": "Žádné shody"
+  },
+  "gux-pagination-cursor": {
+    "previous": "Předchozí",
+    "next": "Další"
+  },
+  "gux-pagination-buttons": {
+    "page": "Stránka",
+    "totalPages": " z {totalPages, number}",
+    "first": "První",
+    "previous": "Předchozí",
+    "next": "Další",
+    "last": "Poslední",
+    "pageInputLabel": "Strana {currentPage, number}/{totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} až {lastItem, number}",
+    "totalItems": "z {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "na stránku",
+    "itemsPerPage": "Položek na stránku"
+  },
+  "gux-radial-loading": {
+    "loading": "Načítání"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Vytvořit novou kartu",
+    "scrollLeft": "Posunout doleva",
+    "scrollRight": "Posunout doprava",
+    "options": "Možnosti karty {tabTitle}",
+    "disableNewTab": "Bylo dosaženo maximálního počtu vytvořených karet.",
+    "toggleSort": "Stiskem mezerníku můžete přepnout režim třídění.",
+    "sortModeOn": "Režim třídění je zapnutý. Pomocí šipek doleva a doprava můžete změnit pořadí karet. Stiskem mezerníku nebo klávesy Enter pořadí potvrdíte. Stiskem klávesy ESC třídění zrušíte.",
+    "sortComplete": "Třídění dokončeno",
+    "sortCancelled": "Třídění zrušeno"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Posunout doleva",
+    "scrollRight": "Posunout doprava",
+    "scrollUp": "Posunout nahoru",
+    "scrollDown": "Posunout dolů"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Přepínač"
+  }
+}

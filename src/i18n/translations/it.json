@@ -1,0 +1,187 @@
+{
+  "gux-badge": {
+    "neutral": "badge con etichetta: {label}, colore: neutro",
+    "neutral-bold": "badge con etichetta: {label}, colore: neutro accentuato",
+    "green": "badge con etichetta: {label}, colore: verde",
+    "green-bold": "badge con etichetta: {label}, colore: verde accentuato",
+    "yellow": "badge con etichetta: {label}, colore: giallo",
+    "yellow-bold": "badge con etichetta: {label}, colore: giallo accentuato",
+    "red": "badge con etichetta: {label}, colore: rosso",
+    "red-bold": "badge con etichetta: {label}, colore: rosso accentuato"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Pagina",
+    "totalPages": " di {totalPages, number}",
+    "first": "Prima",
+    "previous": "Precedente",
+    "next": "Successiva",
+    "last": "Ultima",
+    "pageInputLabel": "Pagina {currentPage, number} di {totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " di {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "per pagina",
+    "itemsPerPage": "Elementi per pagina"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "Nessun dato disponibile",
+    "scrollLeft": "Naviga a sinistra",
+    "scrollRight": "Naviga a destra",
+    "selectAllTableRows": "Seleziona tutte le righe delle tabelle",
+    "selectTableRow": "Seleziona riga tabella",
+    "sortAsc": "Ordinato in senso crescente",
+    "sortDesc": "Ordinato in senso decrescente",
+    "tableOptions": "Opzioni tabella",
+    "noColumnSort": "{headerContent}. La tabella non è attualmente ordinata per questa colonna. Fare clic sull'intestazione della colonna per ordinare la tabella in base a questa colonna in ordine crescente",
+    "ascendingColumnSort": "{headerContent}. La tabella è attualmente ordinata per questa colonna in ordine crescente. Fare clic sull'intestazione della colonna per ordinare la tabella in base a questa colonna in ordine decrescente",
+    "descendingColumnSort": "{headerContent}. La tabella è attualmente ordinata per questa colonna in ordine decrescente. Fare clic sull'intestazione della colonna per ordinare la tabella in base a questa colonna in ordine crescente",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. La tabella è attualmente ordinata per questa colonna in ordine decrescente. Fare clic sull'intestazione della colonna per non ordinare la tabella in base a questa colonna"
+  },
+  "gux-tag": {
+    "tag": "tag con etichetta: {label}",
+    "tag-disabled": "tag disabilitato con etichetta: {label}",
+    "remove-tag": "Rimuovi tag con etichetta: {label}"
+  },
+  "gux-time-picker": {
+    "defaultAriaLabel": "Time Picker"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "Elenco a discesa per {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Ricerche recenti:",
+    "commonSearch": "Ricerche comuni:",
+    "limited": "Risultati limitati, restringere la ricerca per ulteriori comandi.",
+    "search": "Ricercare comandi.",
+    "title": "Riquadro comandi"
+  },
+  "gux-input-color": {
+    "required": "Richiesto"
+  },
+  "gux-input-number": {
+    "clear": "Deseleziona",
+    "increment": "Incremento",
+    "decrement": "Diminuzione"
+  },
+  "gux-input-search": {
+    "clear": "Deseleziona"
+  },
+  "gux-input-text-like": {
+    "clear": "Deseleziona"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Crea nuova scheda",
+    "scrollLeft": "Naviga a sinistra",
+    "scrollRight": "Naviga a destra",
+    "disableNewTab": "È stato raggiunto il numero massimo di schede create"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "Elenco a discesa per {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Cerca"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Barra di navigazione"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Cancella",
+    "navigateNextBtn": "Successivo",
+    "navigatePreviousBtn": "Precedente",
+    "totalMatches": "{currentMatch, number} di {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "Inizio",
+    "end": "Fine",
+    "date": "Data",
+    "toggleCalendar": "Attiva/disattiva vista calendario"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "Elimina"
+  },
+  "gux-dropdown": {
+    "filterResults": "Digitare per filtrare i risultati dell'elenco a discesa",
+    "noSelection": "Selezionare...",
+    "dropdown": "A discesa"
+  },
+  "gux-form-field-number": {
+    "increment": "Incremento",
+    "decrement": "Diminuzione"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Deseleziona"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "Nessuna corrispondenza"
+  },
+  "gux-listbox": {
+    "noMatches": "Nessuna corrispondenza"
+  },
+  "gux-pagination-cursor": {
+    "previous": "Precedente",
+    "next": "Avanti"
+  },
+  "gux-pagination-buttons": {
+    "page": "Pagina",
+    "totalPages": " di {totalPages, number}",
+    "first": "Prima",
+    "previous": "Precedente",
+    "next": "Successiva",
+    "last": "Ultima",
+    "pageInputLabel": "Pagina {currentPage, number} di {totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " di {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "per pagina",
+    "itemsPerPage": "Elementi per pagina"
+  },
+  "gux-radial-loading": {
+    "loading": "Caricamento"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Crea nuova scheda",
+    "scrollLeft": "Naviga a sinistra",
+    "scrollRight": "Naviga a destra",
+    "options": "Opzioni scheda per {tabTitle}",
+    "disableNewTab": "È stato raggiunto il numero massimo di schede create",
+    "toggleSort": "Attiva/Disattiva modalità ordinamento mediante Spazio",
+    "sortModeOn": "Modalità ordinamento attivata, utilizzare i tasti freccia sinistra e destra per riordinare le schede. Premere il tasto Spazio o Invio per completare l'ordinamento. Premere il tasto Esc per annullare l'ordinamento",
+    "sortComplete": "Ordinamento completato",
+    "sortCancelled": "Ordinamento annullato"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Naviga a sinistra",
+    "scrollRight": "Naviga a destra",
+    "scrollUp": "Naviga in alto",
+    "scrollDown": "Naviga in basso"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Selettore"
+  }
+}
