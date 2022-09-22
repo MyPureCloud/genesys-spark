@@ -56,6 +56,14 @@ gux-table-beta {
       th {
         position: relative;
         background: @gux-grey-100;
+
+        &.sortable-right-aligned {
+          padding-right: 35px;
+        }
+
+        &.sortable-left-aligned {
+          padding-left: 35px;
+        }
       }
     }
 
@@ -117,4 +125,13 @@ gux-table-beta {
       }
     }
   }
+}
+
+th:not([data-cell-action], [data-cell-numeric]):has(> gux-sort-control) {
+  padding-right: 35px !important;
+}
+
+th[data-cell-numeric]:has(> gux-sort-control),
+th[data-cell-action]:has(> gux-sort-control) {
+  padding-left: 35px !important;
 }
