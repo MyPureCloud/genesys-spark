@@ -66,13 +66,13 @@ export const config: Config = {
     browserHeadless: true,
     collectCoverage: true,
     coverageDirectory: 'build/test-reports/coverage',
-    coverageReporters: ['json', 'lcov', 'text', 'clover', 'text-summary'],
+    coverageReporters: ['json', 'lcov', 'clover'],
     setupFilesAfterEnv: [
       '<rootDir>/tests/setupTests.js',
       '<rootDir>/tests/setupAxeTests.js'
     ],
     reporters: [
-      'default',
+      ['jest-silent-reporter', { useDots: true }],
       [
         'jest-junit',
         {
