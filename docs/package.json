@@ -13,13 +13,13 @@
     "watcherGlob": "**"
   },
   "dependencies": {
-    "iframe-coordinator": "^4.6.0",
+    "iframe-coordinator": "^4.6.1",
     "monaco-editor": "^0.29.1",
     "parse5": "^6.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
     "@stencil/webpack": "0.0.6",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^5.2.7",
@@ -30,6 +30,6 @@
     "style-loader": "^3.3.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3"
+    "webpack-dev-server": "^4.11.1"
   }
 }

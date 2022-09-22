@@ -37,9 +37,9 @@ Type: `Promise<void>`
 
 ## Shadow Parts
 
-| Part                  | Description           |
-| --------------------- | --------------------- |
-| `"gux-input-section"` | Style input container |
+| Part              | Description           |
+| ----------------- | --------------------- |
+| `"input-section"` | Style input container |
 
 
 ## Dependencies
