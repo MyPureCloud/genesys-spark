@@ -14,6 +14,7 @@ import {
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import { afterNextRender } from '../../../utils/dom/after-next-render';
 import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
@@ -64,14 +65,12 @@ export class GuxDropdownMulti {
   @Watch('expanded')
   focusSelectedItemAfterRender(expanded: boolean) {
     if (expanded && this.listboxElement) {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          this.listboxElement.focus();
+      afterNextRender(() => {
+        this.listboxElement.focus();
 
-          if (this.filterable) {
-            this.filterElement.focus();
-          }
-        });
+        if (this.filterable) {
+          this.filterElement.focus();
+        }
       });
     }
 

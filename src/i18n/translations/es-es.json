@@ -25,6 +25,15 @@
     "dropdown": "Dropdown",
     "numberSelected": "{numberSelected} selected"
   },
+  "gux-month-calendar": {
+    "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
+  },
+  "gux-month-picker": {
+    "toggleCalendar": "Toggle month calendar view",
+    "month": "Month",
+    "year": "Year",
+    "unset": "Unset"
+  },
   "gux-pagination-buttons-beta": {
     "page": "Página",
     "totalPages": " de {totalPages, number}",
