@@ -6,6 +6,14 @@ exports[`gux-form-field-time-picker #render intervals should render component as
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
       </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -35,6 +43,14 @@ exports[`gux-form-field-time-picker #render intervals should render component as
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
       </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -64,6 +80,14 @@ exports[`gux-form-field-time-picker #render intervals should render component as
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
       </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -93,6 +117,14 @@ exports[`gux-form-field-time-picker #render label-position should render compone
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
       </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -122,6 +154,14 @@ exports[`gux-form-field-time-picker #render label-position should render compone
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
       </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -151,6 +191,14 @@ exports[`gux-form-field-time-picker #render label-position should render compone
     <fieldset class="gux-beside gux-form-field-fieldset-container">
       <legend class="gux-beside gux-form-field-legend-label">
         <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
       </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -180,6 +228,14 @@ exports[`gux-form-field-time-picker #render label-position should render compone
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
       <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
       </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">

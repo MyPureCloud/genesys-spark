@@ -25,6 +25,15 @@
     "dropdown": "Dropdown",
     "numberSelected": "{numberSelected} selected"
   },
+  "gux-month-calendar": {
+    "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
+  },
+  "gux-month-picker": {
+    "toggleCalendar": "Toggle month calendar view",
+    "month": "Month",
+    "year": "Year",
+    "unset": "Unset"
+  },
   "gux-pagination-buttons-beta": {
     "page": "Página",
     "totalPages": " de {totalPages, number}",
@@ -65,7 +74,14 @@
     "remove-tag": "Remover marca com etiqueta: {label}"
   },
   "gux-time-picker": {
-    "defaultAriaLabel": "Time Picker"
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
   },
   "gux-action-button-legacy": {
     "actionButtonDropdown": "Menu suspenso para {buttonTitle}"
@@ -130,6 +146,9 @@
   "gux-form-field-number": {
     "increment": "Incremento",
     "decrement": "Decremento"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
   },
   "gux-form-field-input-clear-button": {
     "clear": "Limpar"

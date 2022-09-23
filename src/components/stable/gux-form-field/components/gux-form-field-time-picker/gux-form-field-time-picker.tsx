@@ -17,6 +17,7 @@ import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
   hasErrorSlot,
   getComputedLabelPosition,
+  getErrorSlotTextContent,
   validateFormIds
 } from '../../gux-form-field.service';
 
@@ -97,7 +98,14 @@ export class GuxFormFieldTimePicker {
           required={this.required}
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
-          {this.renderRequiredSrText(this.getI18nValue)}
+          {this.renderScreenReaderText(
+            this.getI18nValue('required'),
+            this.required
+          )}
+          {this.renderScreenReaderText(
+            getErrorSlotTextContent(this.root),
+            this.hasError
+          )}
         </GuxFormFieldLegendLabel>
         <div class="gux-input-and-error-container">
           <div
@@ -123,10 +131,13 @@ export class GuxFormFieldTimePicker {
     ) as JSX.Element;
   }
 
-  private renderRequiredSrText(getI18nValue: GetI18nValue): JSX.Element {
-    if (this.required) {
+  private renderScreenReaderText(
+    text: string,
+    condition: boolean = true
+  ): JSX.Element {
+    if (condition) {
       return (
-        <span class="gux-sr-only">{getI18nValue('required')}</span>
+        <gux-screen-reader-beta>{text}</gux-screen-reader-beta>
       ) as JSX.Element;
     }
   }

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-screen-reader-beta #render should render component as expected 1`] = `
+<gux-screen-reader-beta>
+  <mock:shadow-root>
+    <span class="gux-sr-only">
+      <slot></slot>
+    </span>
+  </mock:shadow-root>
+  This is content
+</gux-screen-reader-beta>
+`;

@@ -25,11 +25,13 @@
 
 ### Depends on
 
+- [gux-screen-reader-beta](../../../../beta/gux-screen-reader)
 - [gux-icon](../../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-form-field-time-picker --> gux-screen-reader-beta
   gux-form-field-time-picker --> gux-icon
   style gux-form-field-time-picker fill:#f9f,stroke:#333,stroke-width:4px
 ```
