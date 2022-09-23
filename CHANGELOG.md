@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.58.0](https://inindca///compare/v2.57.0...v2.58.0) (2022-09-23)
+
+
+### Features
+
+* **icon:** added badge-x icon ([06a251b](https://inindca///commit/06a251bb8e2fdf7e721deb231152ca1d8852d076))
+
 ## [2.57.0](https://inindca///compare/v2.56.3...v2.57.0) (2022-09-14)
 
 
