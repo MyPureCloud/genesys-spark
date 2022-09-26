@@ -110,7 +110,7 @@ export class GuxTable {
   @Prop()
   resizableColumns: boolean;
 
-  /******************************* Lifcycle Hooks *******************************/
+  /******************************* Lifecycle Hooks *******************************/
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
@@ -259,7 +259,7 @@ export class GuxTable {
     this.updateSelectAllBoxState();
   }
 
-  // Update the checked/interminate state of the select all checkbox
+  // Update the checked/indeterminate state of the select all checkbox
   private updateSelectAllBoxState(): void {
     const selectAllCheckbox = this.selectAllCheckbox;
 
@@ -399,34 +399,43 @@ export class GuxTable {
     return container ? container.offsetWidth - container.clientWidth : 0;
   }
 
-  /******************************* Resizeable Columns *******************************/
+  /******************************* Resizable Columns *******************************/
 
   private prepareResizableColumns(): void {
     const styleElement = document.createElement('style');
     styleElement.id = `${this.tableId}-resizable-styles`;
     document.querySelector('head').appendChild(styleElement);
 
-    const columns = this.tableColumns;
-    columns.pop();
+    const columnWidths = this.calculateColumnWidths(this.tableColumns);
 
-    columns.forEach((column: HTMLElement) => {
-      this.columnsWidths[
-        column.dataset.columnName
-      ] = `${this.getElementComputedWidth(column)}px`;
-    });
+    this.calculateColumnPercentWidth(columnWidths)
+      // Exclude the last column to allow it to fill the remaining space naturally
+      .filter((_c, index, arr) => index !== arr.length - 1)
+      .forEach(c => (this.columnsWidths[c.name] = c.width));
 
     this.setResizableColumnsStyles();
   }
 
   private updateResizeState(event: MouseEvent): void {
     if (this.columnResizeState) {
+      const minimumWidth = 1;
       const columnName =
         this.columnResizeState.resizableColumn.dataset.columnName;
-      const columnWidth =
-        this.columnResizeState.resizableColumnInitialWidth +
-        (event.pageX - this.columnResizeState.columnResizeMouseStartX);
+      const delta =
+        event.pageX - this.columnResizeState.columnResizeMouseStartX;
+      const initialWidth = this.columnResizeState.resizableColumnInitialWidth;
+      const proposedWidth = initialWidth + delta;
 
-      this.columnsWidths[columnName] = `${columnWidth > 1 ? columnWidth : 1}px`;
+      const columnWidth =
+        proposedWidth > minimumWidth ? proposedWidth : minimumWidth;
+      const columnWidths = this.calculateColumnWidths(this.tableColumns).map(
+        c => (c.name === columnName ? { ...c, width: columnWidth } : c)
+      );
+
+      this.columnsWidths[columnName] = this.calculateColumnPercentWidth(
+        columnWidths
+      ).find(c => c.name === columnName).width;
+
       this.setResizableColumnsStyles();
     } else {
       this.columnResizeHover = false;
@@ -470,10 +479,34 @@ export class GuxTable {
   }
 
   private getElementComputedWidth(element: HTMLElement): number {
-    return parseInt(
-      window.getComputedStyle(element).getPropertyValue('width').split('px')[0],
-      10
+    return (
+      element.clientWidth -
+      parseInt(window.getComputedStyle(element).paddingLeft) -
+      parseInt(window.getComputedStyle(element).paddingRight)
     );
+  }
+
+  /** Calculates column width minus padding in pixels */
+  private calculateColumnWidths(
+    columns: HTMLElement[]
+  ): { name: string; width: number }[] {
+    return columns.map(c => ({
+      name: c.dataset.columnName,
+      width: this.getElementComputedWidth(c)
+    }));
+  }
+
+  /** Converts pixel columns widths to percentage widths */
+  private calculateColumnPercentWidth(
+    columns: { name: string; width: number }[]
+  ): { name: string; width: string }[] {
+    const calcTableWidth = (items: { width: number }[]) =>
+      items.reduce((prev, curr) => prev + curr.width, 0);
+
+    return columns.map((c, _, arr) => ({
+      ...c,
+      width: ((c.width / calcTableWidth(arr)) * 100).toFixed(2) + '%'
+    }));
   }
 
   private setResizableColumnsStyles(): void {
