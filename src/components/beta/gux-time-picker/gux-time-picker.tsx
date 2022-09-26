@@ -1,13 +1,4 @@
-import {
-  Component,
-  Element,
-  h,
-  JSX,
-  Listen,
-  Prop,
-  State,
-  Watch
-} from '@stencil/core';
+import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
@@ -46,7 +37,7 @@ export class GuxTimePickerBeta {
   private minuteInputElement: HTMLInputElement;
   private moveFocusDelay: number = 100;
   private i18n: GetI18nValue;
-  private valueOnFocus: GuxISOHourMinute;
+  private valueLastChange: GuxISOHourMinute;
 
   @Element()
   private root: HTMLElement;
@@ -74,12 +65,12 @@ export class GuxTimePickerBeta {
 
   @Listen('focus')
   onFocus() {
-    this.valueOnFocus = this.value;
+    this.valueLastChange = this.value;
   }
 
   @Listen('blur')
   onBlur() {
-    if (this.valueOnFocus !== this.value) {
+    if (this.valueLastChange !== this.value) {
       simulateNativeEvent(this.root, 'change');
     }
   }
@@ -87,11 +78,6 @@ export class GuxTimePickerBeta {
   @OnClickOutside({ triggerEvents: 'mousedown' })
   onClickOutside() {
     this.expanded = false;
-  }
-
-  @Watch('value')
-  watchValue(): void {
-    simulateNativeEvent(this.root, 'input');
   }
 
   @Listen('keydown')
@@ -111,6 +97,23 @@ export class GuxTimePickerBeta {
     this.clockType = this.clockType || getLocaleClockType(this.root);
   }
 
+  private updateValue(
+    value: GuxISOHourMinute,
+    fireChange: boolean = false
+  ): void {
+    if (value !== this.value) {
+      this.value = value;
+      simulateNativeEvent(this.root, 'input');
+
+      if (fireChange) {
+        if (this.valueLastChange !== this.value) {
+          simulateNativeEvent(this.root, 'change');
+          this.valueLastChange = this.value;
+        }
+      }
+    }
+  }
+
   private focusFirstItemInPopupList(): void {
     setTimeout(() => {
       void this.listElement.guxFocusFirstItem();
@@ -128,7 +131,7 @@ export class GuxTimePickerBeta {
   private handleClickDropdownValue(displayValue: GuxISOHourMinute) {
     const value = getValue(displayValue, this.clockType, isAm(this.value));
 
-    this.value = value;
+    this.updateValue(value, true);
     this.clockButton.focus();
     this.expanded = false;
   }
@@ -142,12 +145,12 @@ export class GuxTimePickerBeta {
         break;
       case 'ArrowDown':
         event.preventDefault();
-        this.value = incrementHour(this.value, -1);
+        this.updateValue(incrementHour(this.value, -1));
 
         break;
       case 'ArrowUp':
         event.preventDefault();
-        this.value = incrementHour(this.value, 1);
+        this.updateValue(incrementHour(this.value, 1));
         break;
       case 'Backspace':
       case '0':
@@ -161,11 +164,13 @@ export class GuxTimePickerBeta {
       case '8':
       case '9': {
         event.preventDefault();
-        this.value = getValidValueHourChange(
-          this.value,
-          this.clockType,
-          event.key,
-          this.hourInputElement.selectionStart
+        this.updateValue(
+          getValidValueHourChange(
+            this.value,
+            this.clockType,
+            event.key,
+            this.hourInputElement.selectionStart
+          )
         );
         break;
       }
@@ -183,12 +188,12 @@ export class GuxTimePickerBeta {
         break;
       case 'ArrowDown':
         event.preventDefault();
-        this.value = incrementMinute(this.value, -1);
+        this.updateValue(incrementMinute(this.value, -1));
 
         break;
       case 'ArrowUp':
         event.preventDefault();
-        this.value = incrementMinute(this.value, 1);
+        this.updateValue(incrementMinute(this.value, 1));
         break;
       case 'Backspace':
       case '0':
@@ -202,10 +207,12 @@ export class GuxTimePickerBeta {
       case '8':
       case '9': {
         event.preventDefault();
-        this.value = getValidValueMinuteChange(
-          this.value,
-          event.key,
-          this.minuteInputElement.selectionStart
+        this.updateValue(
+          getValidValueMinuteChange(
+            this.value,
+            event.key,
+            this.minuteInputElement.selectionStart
+          )
         );
         break;
       }
@@ -234,7 +241,7 @@ export class GuxTimePickerBeta {
 
   private toggleAmPm(event: Event) {
     event.preventDefault();
-    this.value = incrementHour(this.value, 12);
+    this.updateValue(incrementHour(this.value, 12), true);
   }
 
   private getAmPmString(): string {

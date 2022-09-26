@@ -62,10 +62,11 @@
     .gux-input-time-am-pm-selector {
       padding: 0 0 0 @spacing-xs;
       font-size: 12px;
-      // font-weight: bold;
+      font-weight: bold;
       color: @gux-black-50;
       background: transparent;
       border: none;
+      outline: none;
 
       &:not(:disabled):hover {
         color: @gux-blue-60;
@@ -73,9 +74,7 @@
       }
 
       &:focus-visible {
-        .focus-ring-small();
-
-        border-radius: 4px;
+        color: @gux-blue-60;
       }
     }
 
