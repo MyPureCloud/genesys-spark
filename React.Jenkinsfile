@@ -20,18 +20,20 @@ node(nodelabels.getCombinedExecutorLabelForEnv('dev')) {
             sh """
                 # Set up node with the provided version
                 source ./npm-utils/scripts/install-node.sh 14.16.1
-                
+
                 # install and build spark
                 npm ci
                 npm run build
-            
+
                 # Install and build react binding
                 cd common-webcomponents-react
                 # Set public npmjs registry with creds
                 echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./.npmrc
-                npm install --legacy-peer-deps --no-progress &&
+
+                # Set the package.json dependency on genesys-spark-components to the current version that's being published
+                npm install --legacy-peer-deps --no-progress --save --save-exact genesys-spark-components@${publishedVersion} &&
                 npm run build &&
-                npm version ${publishedVersion} && 
+                npm version ${publishedVersion} &&
                 npm publish
             """
         }
