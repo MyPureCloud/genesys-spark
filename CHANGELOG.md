@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.31.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.29.0...v3.31.0) (2022-09-26)
+
+
+### Features
+
+* **form-field:** add part to style input container width ([c8a0d68](https://github.com/MyPureCloud/genesys-webcomponents/commit/c8a0d685cd48f69e1bee0a9a122d50d1f6ae837e))
+* **translations:** moved translations out of component folders ([0449299](https://github.com/MyPureCloud/genesys-webcomponents/commit/04492990188eb7852d18739261f4197271dbb1cb))
+
+
+### Bug Fixes
+
+* **action-button:** action and multi button now close when list item clicked ([af23c98](https://github.com/MyPureCloud/genesys-webcomponents/commit/af23c988e91662ed75e787237fb307577a0e0d93))
+* **advanced-dropdown:** fixed advanced dropdown popup ([ec0fc46](https://github.com/MyPureCloud/genesys-webcomponents/commit/ec0fc463d8d795a5830394caa054b31d1d5df124))
+* **pr-comment:** addressed PR comment ([332a2d9](https://github.com/MyPureCloud/genesys-webcomponents/commit/332a2d9bbd35e1edafa0ef0c43afcd221d29e12d))
+* **pr-comment:** addressed PR comment ([7a5940f](https://github.com/MyPureCloud/genesys-webcomponents/commit/7a5940fdb682237b0276dbe83b9dbf24bd064560))
+* **pr-comment:** addressed PR comment ([17ef30a](https://github.com/MyPureCloud/genesys-webcomponents/commit/17ef30a54201d83e049c5b19f73baaa383383ce1))
+* **pr-comment:** addressed PR comment ([97fa6b3](https://github.com/MyPureCloud/genesys-webcomponents/commit/97fa6b3151f83cfd00a92126cb14dafc2ec64ceb))
+* **sort-control:** addition of span seperator for when resizing action occurs ([ae42ced](https://github.com/MyPureCloud/genesys-webcomponents/commit/ae42cedd54e3ec7837a9aad1806cd2ac3ffa7031))
+* **typography:** remove icon padding from universal anchor styles ([#929](https://github.com/MyPureCloud/genesys-webcomponents/issues/929)) ([7204f9c](https://github.com/MyPureCloud/genesys-webcomponents/commit/7204f9cd14a1e69fde9344971977cf95af754a9a))
+* **version:** bumping version after failed automated bump broke build ([4e6e11c](https://github.com/MyPureCloud/genesys-webcomponents/commit/4e6e11cd974c0c60e6c87a2cf7b5f0bdc83b3516))
+
 ## [3.29.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.28.1...v3.29.0) (2022-09-15)
 
 
