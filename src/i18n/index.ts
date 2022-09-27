@@ -8,6 +8,8 @@ import { getClosestElement } from '../utils/dom/get-closest-element';
 type StartOfWeek = { [key: string]: number };
 type I18nValueContext = { [key: string]: string | number };
 
+export { ILocalizedComponentResources } from './fetchResources';
+
 export type GetI18nValue = (
   resourceKey: string,
   context?: I18nValueContext

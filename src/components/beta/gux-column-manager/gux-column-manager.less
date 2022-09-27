@@ -1,0 +1,21 @@
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/color-palette.less';
+
+.gux-container {
+  width: 320px; // TODO Remove this when I add the modal part
+  min-width: 320px;
+
+  .gux-search {
+    gux-content-search {
+      width: 100%;
+    }
+  }
+
+  .gux-select {
+    padding: @gux-spacing-xs 0 @gux-spacing-xs @gux-spacing-medium;
+    margin: @gux-spacing-2xs 0;
+    color: @gux-black-90;
+    background-color: @gux-grey-90;
+    border-radius: 4px;
+  }
+}

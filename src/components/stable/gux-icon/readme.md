@@ -27,6 +27,7 @@
  - [gux-button-multi](../gux-button-multi)
  - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
  - [gux-calendar](../gux-calendar)
+ - [gux-column-manager-item](../../beta/gux-column-manager/gux-column-manager-item)
  - [gux-content-search](../gux-content-search)
  - [gux-context-menu-beta](../../beta/gux-context-menu)
  - [gux-copy-to-clipboard-beta](../../beta/gux-copy-to-clipboard)
@@ -92,6 +93,7 @@ graph TD;
   gux-button-multi --> gux-icon
   gux-button-multi-legacy --> gux-icon
   gux-calendar --> gux-icon
+  gux-column-manager-item --> gux-icon
   gux-content-search --> gux-icon
   gux-context-menu-beta --> gux-icon
   gux-copy-to-clipboard-beta --> gux-icon

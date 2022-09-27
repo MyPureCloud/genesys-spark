@@ -15,6 +15,10 @@
     "red": "badge with label: {label}, color: red",
     "red-bold": "badge with label: {label}, color: red bold"
   },
+  "gux-column-manager": {
+    "search": "Search",
+    "selectedColumnCount": "{count}/{total} Columns Selected"
+  },
   "gux-context-menu": {
     "contextMenuScreenreaderText": "Context menu"
   },

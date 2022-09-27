@@ -70,8 +70,8 @@ export class GuxContentSearch {
     this.matchCount = 0;
     this.currentMatch = 0;
     this.value = '';
-    this.emitCurrentMatchChanged();
     this.resetInputSlottedElement();
+    this.emitCurrentMatchChanged();
   }
 
   async componentWillLoad() {
