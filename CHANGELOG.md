@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.32.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.31.1...v3.32.0) (2022-09-27)
+
+
+### Features
+
+* **time picker:** added time picker components ([2c03248](https://github.com/MyPureCloud/genesys-webcomponents/commit/2c03248e7d0ac01ccc069afbdfb16689d2f164ac))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([2350336](https://github.com/MyPureCloud/genesys-webcomponents/commit/2350336912c95c759ab031ecc310133539a4f357))
+* **pr-comments:** addressed PR comments ([0d7e388](https://github.com/MyPureCloud/genesys-webcomponents/commit/0d7e38867f926665a55b9b8536a56a86ad406f5a))
+
 ### [3.31.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.31.0...v3.31.1) (2022-09-27)
 
 
