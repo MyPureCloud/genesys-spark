@@ -410,7 +410,7 @@ export class GuxTable {
 
     this.calculateColumnPercentWidth(columnWidths)
       // Exclude the last column to allow it to fill the remaining space naturally
-      .filter((_c, index, arr) => index !== arr.length - 1)
+      .slice(0, -1)
       .forEach(c => (this.columnsWidths[c.name] = c.width));
 
     this.setResizableColumnsStyles();
@@ -429,7 +429,12 @@ export class GuxTable {
       const columnWidth =
         proposedWidth > minimumWidth ? proposedWidth : minimumWidth;
       const columnWidths = this.calculateColumnWidths(this.tableColumns).map(
-        c => (c.name === columnName ? { ...c, width: columnWidth } : c)
+        c => {
+          if (c.name === columnName) {
+            return { ...c, width: columnWidth };
+          }
+          return c;
+        }
       );
 
       this.columnsWidths[columnName] = this.calculateColumnPercentWidth(
@@ -496,16 +501,20 @@ export class GuxTable {
     }));
   }
 
+  /** Convert column pixel width to css string for percentage width */
+  private pixelsToCSSPercent(columnWidth: number, tableWidth: number): string {
+    return ((columnWidth / tableWidth) * 100).toFixed(2) + '%';
+  }
+
   /** Converts pixel columns widths to percentage widths */
   private calculateColumnPercentWidth(
     columns: { name: string; width: number }[]
   ): { name: string; width: string }[] {
-    const calcTableWidth = (items: { width: number }[]) =>
-      items.reduce((prev, curr) => prev + curr.width, 0);
+    const tablePxWidth = columns.reduce((prev, curr) => prev + curr.width, 0);
 
-    return columns.map((c, _, arr) => ({
+    return columns.map(c => ({
       ...c,
-      width: ((c.width / calcTableWidth(arr)) * 100).toFixed(2) + '%'
+      width: this.pixelsToCSSPercent(c.width, tablePxWidth)
     }));
   }
 
