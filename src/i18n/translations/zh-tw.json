@@ -74,7 +74,14 @@
     "remove-tag": "移除帶有以下標籤的標記：{label}"
   },
   "gux-time-picker": {
-    "defaultAriaLabel": "Time Picker"
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
   },
   "gux-action-button-legacy": {
     "actionButtonDropdown": "{buttonTitle}下拉式清單"
@@ -139,6 +146,9 @@
   "gux-form-field-number": {
     "increment": "增量",
     "decrement": "遞減"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
   },
   "gux-form-field-input-clear-button": {
     "clear": "清除"

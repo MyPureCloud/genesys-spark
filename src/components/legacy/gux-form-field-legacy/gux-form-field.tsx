@@ -6,7 +6,6 @@ import { logError } from '../../../utils/error/log-error';
 import { onRequiredChange } from '../../../utils/dom/on-attribute-change';
 import { preventBrowserValidationStyling } from '../../../utils/dom/prevent-browser-validation-styling';
 import { trackComponent } from '../../../usage-tracking';
-
 import { GuxInputTextAreaResize } from './components/gux-input-textarea/gux-input-textarea.types';
 import {
   GuxFormFieldSlottedElementType,

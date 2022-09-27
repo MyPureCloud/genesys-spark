@@ -73,7 +73,16 @@
     "tag-disabled": "תג מושבת עם תווית: {label}",
     "remove-tag": "הסר תג עם תווית: {label}"
   },
-  "gux-time-picker": {},
+  "gux-time-picker": {
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
+  },
   "gux-action-button-legacy": {
     "actionButtonDropdown": "רשימה נפתחת עבור {buttonTitle}"
   },
@@ -137,6 +146,9 @@
   "gux-form-field-number": {
     "increment": "העלה",
     "decrement": "הורד"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
   },
   "gux-form-field-input-clear-button": {
     "clear": "נקה"

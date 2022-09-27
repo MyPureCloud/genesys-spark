@@ -74,7 +74,14 @@
     "remove-tag": "레이블이 있는 태그 제거: {label}"
   },
   "gux-time-picker": {
-    "defaultAriaLabel": "Time Picker"
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
   },
   "gux-action-button-legacy": {
     "actionButtonDropdown": "{buttonTitle}에 드롭다운"
@@ -139,6 +146,9 @@
   "gux-form-field-number": {
     "increment": "증가",
     "decrement": "감소"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
   },
   "gux-form-field-input-clear-button": {
     "clear": "투명"

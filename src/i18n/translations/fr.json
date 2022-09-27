@@ -74,7 +74,14 @@
     "remove-tag": "Supprimer la balise avec étiquette : {label}"
   },
   "gux-time-picker": {
-    "defaultAriaLabel": "Time Picker"
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
   },
   "gux-action-button-legacy": {
     "actionButtonDropdown": "Liste déroulante pour {buttonTitle}"
@@ -139,6 +146,9 @@
   "gux-form-field-number": {
     "increment": "Incrémenter",
     "decrement": "Décrémenter"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
   },
   "gux-form-field-input-clear-button": {
     "clear": "Effacer"
