@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.31.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.31.0...v3.31.1) (2022-09-27)
+
+
+### Bug Fixes
+
+* **react-wrapper:** depend directly on exact version of base package ([aaaefc0](https://github.com/MyPureCloud/genesys-webcomponents/commit/aaaefc01eaeed25cd807102991e23144e50ee414))
+* **react-wrapper:** take @types/react as a peerDependency ([ea8002b](https://github.com/MyPureCloud/genesys-webcomponents/commit/ea8002ba11f21feac62743cfd0dca2f52881ca38))
+
 ## [3.31.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.29.0...v3.31.0) (2022-09-26)
 
 
