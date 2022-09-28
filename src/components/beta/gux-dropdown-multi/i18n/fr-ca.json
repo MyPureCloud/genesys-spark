@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "Entrer des caractères pour filtrer les résultats de la liste déroulante",
+  "noSelection": "Sélectionner...",
+  "dropdown": "Liste déroulante",
+  "numberSelected": "{numberSelected} sélectionnés"
 }

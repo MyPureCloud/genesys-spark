@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "Digitare per filtrare i risultati dell'elenco a discesa",
+  "noSelection": "Selezionare...",
+  "dropdown": "A discesa",
+  "numberSelected": "{numberSelected} selezionato/i"
 }

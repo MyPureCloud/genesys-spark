@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "Skriv för att filtrera resultatet i listrutan",
+  "noSelection": "Välj...",
+  "dropdown": "Listruta",
+  "numberSelected": "{numberSelected} valda"
 }

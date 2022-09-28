@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "Cliquer pour copier",
+  "copyToClipboard": "Copier dans le Presse-papiers",
+  "enterToCopy": "Appuyer sur Entrée pour copier",
+  "copySuccess": "Copiés dans le Presse-Papiers",
+  "copyFailure": "Erreur. Réessayez."
 }

@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "Kopioi napsauttamalla tätä",
+  "copyToClipboard": "Kopioi leikepöydälle",
+  "enterToCopy": "Kopioi painamalla Enter",
+  "copySuccess": "Kopioitu leikepöydälle",
+  "copyFailure": "Virhe. Yritä uudelleen."
 }

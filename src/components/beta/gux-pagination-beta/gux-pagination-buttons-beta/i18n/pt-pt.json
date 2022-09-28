@@ -1,9 +1,9 @@
 {
-  "page": "Page",
-  "totalPages": " of {totalPages, number}",
-  "first": "First",
-  "previous": "Previous",
-  "next": "Next",
-  "last": "Last",
-  "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
+  "page": "Página",
+  "totalPages": " de {totalPages, number}",
+  "first": "Primeiro",
+  "previous": "Anterior",
+  "next": "Seguinte",
+  "last": "Último",
+  "pageInputLabel": "Página {currentPage, number} de {totalPages, number}"
 }

@@ -1,9 +1,9 @@
 {
-  "page": "Page",
-  "totalPages": " of {totalPages, number}",
-  "first": "First",
-  "previous": "Previous",
-  "next": "Next",
-  "last": "Last",
-  "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
+  "page": "עמוד",
+  "totalPages": "מתוך {totalPages, number}",
+  "first": "ראשון",
+  "previous": "הקודם",
+  "next": "הבא",
+  "last": "אחרון",
+  "pageInputLabel": "עמוד {currentPage, number} מתוך {totalPages, number}"
 }
