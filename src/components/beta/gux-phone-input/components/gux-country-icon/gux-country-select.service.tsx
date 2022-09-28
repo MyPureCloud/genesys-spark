@@ -16,8 +16,8 @@ async function fetchImage(imgName: string): Promise<string> {
   );
 }
 
-export function getImgSource(imgName: string): Promise<string> {
-  const cachedImageSrc = imgSrcCache.get(imgName);
+export async function getImgSource(imgName: string): Promise<string> {
+  const cachedImageSrc = await imgSrcCache.get(imgName);
 
   if (cachedImageSrc) {
     return cachedImageSrc;
