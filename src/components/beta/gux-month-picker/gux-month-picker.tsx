@@ -18,7 +18,7 @@ import {
   getDesiredLocale
 } from '../../../i18n';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
-import { afterRender } from '../../../utils/dom/after-render';
+import { afterNextRender } from '../../../utils/dom/after-next-render';
 import {
   GuxISOYearMonth,
   getCurrentISOYearMonth,
@@ -127,7 +127,7 @@ export class GuxMonthPicker {
     this.expanded = !this.expanded;
 
     if (this.expanded) {
-      afterRender(() => {
+      afterNextRender(() => {
         void this.monthCalendarElement.guxFocus(this.value);
       });
     }
@@ -189,7 +189,7 @@ export class GuxMonthPicker {
       case 'Enter':
         event.preventDefault();
         this.expanded = true;
-        afterRender(() => {
+        afterNextRender(() => {
           void this.monthCalendarElement.guxFocus(this.value);
         });
         break;
@@ -206,7 +206,7 @@ export class GuxMonthPicker {
       case ' ':
         event.preventDefault();
         this.expanded = true;
-        afterRender(() => {
+        afterNextRender(() => {
           void this.monthCalendarElement.guxFocus(this.value);
         });
         break;

@@ -15,7 +15,7 @@ import {
   getDesiredLocale
 } from '../../../../i18n';
 import simulateNativeEvent from '../../../../utils/dom/simulate-native-event';
-import { afterRender } from '../../../../utils/dom/after-render';
+import { afterNextRender } from '../../../../utils/dom/after-next-render';
 import {
   GuxISOYearMonth,
   getISOYearMonth,
@@ -81,7 +81,7 @@ export class GuxMonthCalendar {
     const { year } = getYearMonthObject(iSOYearMonth);
     this.year = year;
 
-    afterRender(() => {
+    afterNextRender(() => {
       const target: HTMLButtonElement = this.root.shadowRoot.querySelector(
         `gux-month-list-item[value="${iSOYearMonth}"]`
       );
