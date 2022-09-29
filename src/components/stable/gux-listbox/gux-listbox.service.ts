@@ -105,7 +105,7 @@ export function getSearchOption(
   return getListOptions(list).find(option => {
     return (
       (!option.disabled || !option.filtered) &&
-      option.textContent.toLowerCase().startsWith(searchString.toLowerCase())
+      matchOption(option, searchString)
     );
   });
 }
@@ -216,4 +216,15 @@ export function goToOption(list: HTMLGuxListboxElement, letter: string): void {
     setSearchOptionActive(list, searchStringState);
     searchStringState = '';
   }, searchDebounceInterval);
+}
+
+export function matchOption(
+  option: HTMLGuxOptionElement,
+  matchString: string
+): boolean {
+  //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
+  return option.textContent
+    .trim()
+    .toLowerCase()
+    .startsWith(matchString.toLowerCase());
 }

@@ -281,7 +281,8 @@ export class GuxDropdown {
       const option = getSearchOption(this.listboxElement, filter);
 
       if (option) {
-        return option.textContent.substring(filterLength);
+        //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
+        return option.textContent.trim().substring(filterLength);
       }
     }
 
