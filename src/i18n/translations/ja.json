@@ -10,20 +10,20 @@
     "red-bold": "ラベル付きバッジ: {label}、色: レッド ボールド"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "クリックしてコピー",
+    "copyToClipboard": "クリップボードにコピー",
+    "enterToCopy": "Enter キーを押してコピー",
+    "copySuccess": "クリップボードにコピー",
+    "copyFailure": "エラーです。もう一度試してください。"
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "{numberSelected} 件の選択済みアイテムをクリア"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "タイプしてドロップダウンの結果をフィルター",
+    "noSelection": "選択する ...",
+    "dropdown": "ドロップダウン",
+    "numberSelected": "{numberSelected} 件選択"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "件ずつ表示"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "リンクのスキップ操作"
   },
   "gux-table": {
     "emptyMessage": "利用可能なデータがありません",

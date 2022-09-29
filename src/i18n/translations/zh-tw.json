@@ -10,20 +10,20 @@
     "red-bold": "徽章含標籤：{label}，色彩：大膽紅色"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "按下以複製",
+    "copyToClipboard": "複製到剪貼簿",
+    "enterToCopy": "按 Enter 鍵複製",
+    "copySuccess": "已複製到剪貼簿",
+    "copyFailure": "發生錯誤，請再試一次。"
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "清除 {numberSelected} 個已選項目"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "輸入以篩選下拉式清單中的結果",
+    "noSelection": "選擇...",
+    "dropdown": "下拉式清單",
+    "numberSelected": "已選 {numberSelected}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "每頁項目數"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "略過連結導覽"
   },
   "gux-table": {
     "emptyMessage": "無可用資料",
@@ -154,7 +154,7 @@
     "clear": "清除"
   },
   "gux-listbox-multi": {
-    "noMatches": "無相符"
+    "noMatches": "無相符項"
   },
   "gux-listbox": {
     "noMatches": "無相符"

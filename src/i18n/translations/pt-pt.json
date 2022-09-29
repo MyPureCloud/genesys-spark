@@ -35,21 +35,21 @@
     "unset": "Unset"
   },
   "gux-pagination-buttons-beta": {
-    "page": "Page",
-    "totalPages": " of {totalPages, number}",
-    "first": "First",
-    "previous": "Previous",
-    "next": "Next",
-    "last": "Last",
-    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
+    "page": "Página",
+    "totalPages": " de {totalPages, number}",
+    "first": "Primeiro",
+    "previous": "Anterior",
+    "next": "Seguinte",
+    "last": "Último",
+    "pageInputLabel": "Página {currentPage, number} de {totalPages, number}"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
     "totalItems": " of {totalItems, number}"
   },
   "gux-pagination-items-per-page-beta": {
-    "perPage": "per page",
-    "itemsPerPage": "Items per page"
+    "perPage": "por página",
+    "itemsPerPage": "Itens por página"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
