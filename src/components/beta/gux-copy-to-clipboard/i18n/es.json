@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "Haga clic para copiar",
+  "copyToClipboard": "Copiar al portapapeles",
+  "enterToCopy": "Pulse Intro para copiar",
+  "copySuccess": "Copiado al portapapeles",
+  "copyFailure": "Error. Vuelva a intentarlo."
 }

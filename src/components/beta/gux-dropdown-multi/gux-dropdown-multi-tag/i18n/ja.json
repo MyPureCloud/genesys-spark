@@ -1,3 +1,3 @@
 {
-  "clearSelection": "Clear {numberSelected} selected items"
+  "clearSelection": "{numberSelected} 件の選択済みアイテムをクリア"
 }

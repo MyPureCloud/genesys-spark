@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "Kliknutím zkopírujte",
+  "copyToClipboard": "Kopírovat do schránky",
+  "enterToCopy": "Zkopírujte stiskem klávesy Enter",
+  "copySuccess": "Zkopírováno do schránky",
+  "copyFailure": "Chyba. Zkuste to znovu."
 }

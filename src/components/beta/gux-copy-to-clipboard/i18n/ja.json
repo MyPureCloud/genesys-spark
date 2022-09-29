@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "クリックしてコピー",
+  "copyToClipboard": "クリップボードにコピー",
+  "enterToCopy": "Enter キーを押してコピー",
+  "copySuccess": "クリップボードにコピー",
+  "copyFailure": "エラーです。もう一度試してください。"
 }

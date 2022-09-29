@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "คลิกเพื่อคัดลอก",
+  "copyToClipboard": "คัดลอกไปยังคลิปบอร์ด",
+  "enterToCopy": "กด Enter เพื่อคัดลอก",
+  "copySuccess": "คัดลอกไปที่คลิปบอร์ดแล้ว",
+  "copyFailure": "มีข้อผิดพลาด โปรดลองอีกครั้ง"
 }

@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "הקלד כדי לסנן תוצאות ברשימה נפתחת",
+  "noSelection": "בחר...",
+  "dropdown": "רשימה נפתחת",
+  "numberSelected": "{numberSelected} נבחרו"
 }

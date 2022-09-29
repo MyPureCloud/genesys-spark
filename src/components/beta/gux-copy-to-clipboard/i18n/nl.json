@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "Klikken om te kopiëren",
+  "copyToClipboard": "Kopiëren naar Klembord",
+  "enterToCopy": "Op Enter drukken om te kopiëren",
+  "copySuccess": "Gekopieerd naar Klembord",
+  "copyFailure": "Fout. Probeer het opnieuw."
 }
