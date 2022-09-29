@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.32.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.2...v3.32.3) (2022-09-29)
+
+
+### Bug Fixes
+
+* **dropdown:** remove whitespace from input ([d3cd413](https://github.com/MyPureCloud/genesys-webcomponents/commit/d3cd413bd70afa9e7d736311f04cbd50a04fa0d4))
+
 ### [3.32.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.1...v3.32.2) (2022-09-29)
 
 ### [3.32.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.0...v3.32.1) (2022-09-28)
