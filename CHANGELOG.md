@@ -2,6 +2,79 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.32.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.2...v3.32.3) (2022-09-29)
+
+
+### Bug Fixes
+
+* **dropdown:** remove whitespace from input ([d3cd413](https://github.com/MyPureCloud/genesys-webcomponents/commit/d3cd413bd70afa9e7d736311f04cbd50a04fa0d4))
+
+### [3.32.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.1...v3.32.2) (2022-09-29)
+
+### [3.32.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.0...v3.32.1) (2022-09-28)
+
+## [3.32.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.31.1...v3.32.0) (2022-09-27)
+
+
+### Features
+
+* **time picker:** added time picker components ([2c03248](https://github.com/MyPureCloud/genesys-webcomponents/commit/2c03248e7d0ac01ccc069afbdfb16689d2f164ac))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([2350336](https://github.com/MyPureCloud/genesys-webcomponents/commit/2350336912c95c759ab031ecc310133539a4f357))
+* **pr-comments:** addressed PR comments ([0d7e388](https://github.com/MyPureCloud/genesys-webcomponents/commit/0d7e38867f926665a55b9b8536a56a86ad406f5a))
+
+### [3.31.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.31.0...v3.31.1) (2022-09-27)
+
+
+### Bug Fixes
+
+* **react-wrapper:** depend directly on exact version of base package ([aaaefc0](https://github.com/MyPureCloud/genesys-webcomponents/commit/aaaefc01eaeed25cd807102991e23144e50ee414))
+* **react-wrapper:** take @types/react as a peerDependency ([ea8002b](https://github.com/MyPureCloud/genesys-webcomponents/commit/ea8002ba11f21feac62743cfd0dca2f52881ca38))
+
+## [3.31.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.29.0...v3.31.0) (2022-09-26)
+
+
+### Features
+
+* **form-field:** add part to style input container width ([c8a0d68](https://github.com/MyPureCloud/genesys-webcomponents/commit/c8a0d685cd48f69e1bee0a9a122d50d1f6ae837e))
+* **translations:** moved translations out of component folders ([0449299](https://github.com/MyPureCloud/genesys-webcomponents/commit/04492990188eb7852d18739261f4197271dbb1cb))
+
+
+### Bug Fixes
+
+* **action-button:** action and multi button now close when list item clicked ([af23c98](https://github.com/MyPureCloud/genesys-webcomponents/commit/af23c988e91662ed75e787237fb307577a0e0d93))
+* **advanced-dropdown:** fixed advanced dropdown popup ([ec0fc46](https://github.com/MyPureCloud/genesys-webcomponents/commit/ec0fc463d8d795a5830394caa054b31d1d5df124))
+* **pr-comment:** addressed PR comment ([332a2d9](https://github.com/MyPureCloud/genesys-webcomponents/commit/332a2d9bbd35e1edafa0ef0c43afcd221d29e12d))
+* **pr-comment:** addressed PR comment ([7a5940f](https://github.com/MyPureCloud/genesys-webcomponents/commit/7a5940fdb682237b0276dbe83b9dbf24bd064560))
+* **pr-comment:** addressed PR comment ([17ef30a](https://github.com/MyPureCloud/genesys-webcomponents/commit/17ef30a54201d83e049c5b19f73baaa383383ce1))
+* **pr-comment:** addressed PR comment ([97fa6b3](https://github.com/MyPureCloud/genesys-webcomponents/commit/97fa6b3151f83cfd00a92126cb14dafc2ec64ceb))
+* **sort-control:** addition of span seperator for when resizing action occurs ([ae42ced](https://github.com/MyPureCloud/genesys-webcomponents/commit/ae42cedd54e3ec7837a9aad1806cd2ac3ffa7031))
+* **typography:** remove icon padding from universal anchor styles ([#929](https://github.com/MyPureCloud/genesys-webcomponents/issues/929)) ([7204f9c](https://github.com/MyPureCloud/genesys-webcomponents/commit/7204f9cd14a1e69fde9344971977cf95af754a9a))
+* **version:** bumping version after failed automated bump broke build ([4e6e11c](https://github.com/MyPureCloud/genesys-webcomponents/commit/4e6e11cd974c0c60e6c87a2cf7b5f0bdc83b3516))
+
+## [3.29.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.28.1...v3.29.0) (2022-09-15)
+
+
+### Features
+
+* **gux-month-picker:** created month picker component ([2471571](https://github.com/MyPureCloud/genesys-webcomponents/commit/247157135d5529c5f96acac07d24f581eeacec96))
+
+
+### Bug Fixes
+
+* **pr-comments:** addressed PR comments ([efff66c](https://github.com/MyPureCloud/genesys-webcomponents/commit/efff66c4e4a3c308051435eba17c6a6211ac7b13))
+
+### [3.28.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.28.0...v3.28.1) (2022-09-14)
+
+
+### Bug Fixes
+
+* **gux-datepicker:** fix cursor selection in safari ([9bf0adc](https://github.com/MyPureCloud/genesys-webcomponents/commit/9bf0adc84d4ea52eaddad8da49d213456765cded))
+* **gux-datepicker:** fix input, state, and focus bugs ([01c3af7](https://github.com/MyPureCloud/genesys-webcomponents/commit/01c3af7770aba53573de5a5751d5e9f4318ead5d))
+
 ## [3.28.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.27.2...v3.28.0) (2022-09-13)
 
 

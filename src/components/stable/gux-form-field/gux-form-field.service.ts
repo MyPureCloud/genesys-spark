@@ -12,6 +12,10 @@ export function hasErrorSlot(root: HTMLElement): boolean {
   return Boolean(root.querySelector('[slot="error"]'));
 }
 
+export function getErrorSlotTextContent(root: HTMLElement): string {
+  return root.querySelector('[slot="error"]')?.textContent;
+}
+
 export function hasContent(
   input: HTMLInputElement | HTMLTextAreaElement
 ): boolean {
@@ -41,6 +45,7 @@ export function validateFormIds(
     | HTMLTextAreaElement
     | HTMLGuxListboxElement
     | HTMLGuxListboxMultiElement
+    | HTMLGuxTimePickerBetaElement
 ): void {
   if (hasLabelSlot(root)) {
     const label: HTMLLabelElement = root.querySelector('label[slot="label"]');

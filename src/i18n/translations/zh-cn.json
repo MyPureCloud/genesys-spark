@@ -1,0 +1,206 @@
+{
+  "gux-badge": {
+    "neutral": "标签为 {label}，颜色为中性的徽章",
+    "neutral-bold": "标签为 {label}，颜色为中性亮色的徽章",
+    "green": "标签为 {label}，颜色为绿色的徽章",
+    "green-bold": "标签为 {label}，颜色为亮绿色的徽章",
+    "yellow": "标签为 {label}，颜色为黄色的徽章",
+    "yellow-bold": "标签为 {label}，颜色为亮黄色的徽章",
+    "red": "标签为 {label}，颜色为红色的徽章",
+    "red-bold": "标签为 {label}，颜色为亮红色的徽章"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-month-calendar": {
+    "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
+  },
+  "gux-month-picker": {
+    "toggleCalendar": "Toggle month calendar view",
+    "month": "Month",
+    "year": "Year",
+    "unset": "Unset"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "页面",
+    "totalPages": " / {totalPages, number}",
+    "first": "首页",
+    "previous": "上一页",
+    "next": "下一页",
+    "last": "末页",
+    "pageInputLabel": "第 {currentPage, number} 页（共 {totalPages, number} 页）"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " / {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "每页",
+    "itemsPerPage": "每页项目数"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "无可用数据",
+    "scrollLeft": "向左滚动",
+    "scrollRight": "向右滚动",
+    "selectAllTableRows": "选择所有表行",
+    "selectTableRow": "选择表行",
+    "sortAsc": "升序排序",
+    "sortDesc": "降序排序",
+    "tableOptions": "表格选项",
+    "noColumnSort": "{headerContent}。此表当前未按此列排序。单击列标题可按此列对表格进行升序排序",
+    "ascendingColumnSort": "{headerContent}。此表当前按此列升序排序。单击列标题可按此列对表格进行降序排序",
+    "descendingColumnSort": "{headerContent}。此表当前按此列降序排序。单击列标题可按此列对表格进行升序排序",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}。此表当前按此列降序排序。单击列标题可不按此列对表格进行排序"
+  },
+  "gux-tag": {
+    "tag": "使用以下标签的标记：{label}",
+    "tag-disabled": "使用以下标签的禁用标记：{label}",
+    "remove-tag": "移除使用以下标签的标记：{label}"
+  },
+  "gux-time-picker": {
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "{buttonTitle} 的下拉菜单"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "最近搜索：",
+    "commonSearch": "普通搜索：",
+    "limited": "结果有限，请细化搜索以获取更多命令。",
+    "search": "搜索命令。",
+    "title": "命令面板"
+  },
+  "gux-input-color": {
+    "required": "必需"
+  },
+  "gux-input-number": {
+    "clear": "清除",
+    "increment": "增量",
+    "decrement": "减量"
+  },
+  "gux-input-search": {
+    "clear": "清除"
+  },
+  "gux-input-text-like": {
+    "clear": "清除"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "新建选项卡",
+    "scrollLeft": "向左滚动",
+    "scrollRight": "向右滚动",
+    "disableNewTab": "已达到创建选项卡的最大数量"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "{buttonTitle} 的下拉菜单"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "搜索"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "面包屑"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "清除",
+    "navigateNextBtn": "下一步",
+    "navigatePreviousBtn": "上一步",
+    "totalMatches": "{currentMatch, number}（共 {matchCount, number} 个）"
+  },
+  "gux-datepicker": {
+    "start": "开始",
+    "end": "结束",
+    "date": "日期",
+    "toggleCalendar": "切换日历视图"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "清除"
+  },
+  "gux-dropdown": {
+    "filterResults": "输入以过滤下拉结果",
+    "noSelection": "选择...",
+    "dropdown": "下拉"
+  },
+  "gux-form-field-number": {
+    "increment": "增量",
+    "decrement": "减量"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "清除"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "无匹配"
+  },
+  "gux-listbox": {
+    "noMatches": "无匹配"
+  },
+  "gux-pagination-cursor": {
+    "previous": "上一步",
+    "next": "下一步"
+  },
+  "gux-pagination-buttons": {
+    "page": "页面",
+    "totalPages": " / {totalPages, number}",
+    "first": "首页",
+    "previous": "上一页",
+    "next": "下一页",
+    "last": "末页",
+    "pageInputLabel": "第 {currentPage, number} 页（共 {totalPages, number} 页）"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " / {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "每页",
+    "itemsPerPage": "每页项目数"
+  },
+  "gux-radial-loading": {
+    "loading": "正在加载"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "新建选项卡",
+    "scrollLeft": "向左滚动",
+    "scrollRight": "向右滚动",
+    "options": "{tabTitle} 的选项卡选项",
+    "disableNewTab": "已达到创建选项卡的最大数量",
+    "toggleSort": "使用空格切换排序模式",
+    "sortModeOn": "排序模式已打开，可使用左箭头和右箭头键对选项卡重新排序。按空格键或 Enter 键可完成排序。按 Esc 键可取消排序。",
+    "sortComplete": "排序已完成",
+    "sortCancelled": "排序已取消"
+  },
+  "gux-tabs": {
+    "scrollLeft": "向左滚动",
+    "scrollRight": "向右滚动",
+    "scrollUp": "向上滚动",
+    "scrollDown": "向下滚动"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "切换开关"
+  }
+}

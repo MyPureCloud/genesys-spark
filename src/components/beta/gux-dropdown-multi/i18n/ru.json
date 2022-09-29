@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "Начните ввод для фильтрации результатов раскрывающегося списка",
+  "noSelection": "Выбрать...",
+  "dropdown": "Раскрывающийся список",
+  "numberSelected": "Выбрано {numberSelected}"
 }

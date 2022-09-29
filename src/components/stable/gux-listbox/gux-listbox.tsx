@@ -23,7 +23,8 @@ import {
   setInitialActiveOption,
   setLastOptionActive,
   setNextOptionActive,
-  setPreviousOptionActive
+  setPreviousOptionActive,
+  matchOption
 } from './gux-listbox.service';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
@@ -184,10 +185,7 @@ export class GuxListbox {
   componentWillRender(): void {
     this.listboxOptions.forEach(listboxOption => {
       listboxOption.selected = listboxOption.value === this.value;
-
-      listboxOption.filtered = !listboxOption.textContent
-        .toLowerCase()
-        .startsWith(this.filter.toLowerCase());
+      listboxOption.filtered = !matchOption(listboxOption, this.filter);
     });
 
     this.allListboxOptionsFiltered =

@@ -1,0 +1,204 @@
+{
+  "gux-badge": {
+    "neutral": "شارة مع التسمية: {label}، اللون: محايد",
+    "neutral-bold": "شارة مع التسمية: {label}، اللون: محايد سميك",
+    "green": "شارة مع التسمية: {label}، اللون: أخضر",
+    "green-bold": "شارة مع التسمية: {label}، اللون: أخضر سميك",
+    "yellow": "شارة مع التسمية: {label}، اللون: أصفر",
+    "yellow-bold": "شارة مع التسمية: {label}، اللون: أصفر سميك",
+    "red": "شارة مع التسمية: {label}، اللون: أحمر",
+    "red-bold": "شارة مع التسمية: {label}، اللون: أحمر سميك"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-month-calendar": {
+    "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
+  },
+  "gux-month-picker": {
+    "toggleCalendar": "Toggle month calendar view",
+    "month": "Month",
+    "year": "Year",
+    "unset": "Unset"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "صفحة",
+    "totalPages": " من {totalPages, number}",
+    "first": "الأول",
+    "previous": "السابق",
+    "next": "التالي",
+    "last": "الأخير"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " من {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "لكل صفحة"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "لا توجد بيانات متاحة",
+    "scrollLeft": "تنقل لليسار",
+    "scrollRight": "تنقل لليمين",
+    "selectAllTableRows": "حدد جميع صفوف الجدول",
+    "selectTableRow": "حدد صف الجدول",
+    "sortAsc": "تم الفرز تصاعديًا",
+    "sortDesc": "تم الفرز تنازليًا",
+    "tableOptions": "خيارات الجدول",
+    "noColumnSort": "{headerContent}. لم يتم فرز الجدول حاليًا حسب هذا العمود. انقر فوق رأس العمود لفرز الجدول حسب هذا العمود بترتيب تصاعدي",
+    "ascendingColumnSort": "{headerContent}. تم فرز الجدول حاليًا حسب هذا العمود بترتيب تصاعدي. انقر فوق رأس العمود لفرز الجدول حسب هذا العمود بترتيب تنازلي",
+    "descendingColumnSort": "{headerContent}. تم فرز الجدول حاليًا حسب هذا العمود بترتيب تنازلي. انقر فوق رأس العمود لفرز الجدول حسب هذا العمود بترتيب تصاعدي",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. تم فرز الجدول حاليًا حسب هذا العمود بترتيب تنازلي. انقر فوق رأس العمود لعدم فرز الجدول حسب هذا العمود"
+  },
+  "gux-tag": {
+    "tag": "وضع علامة مع التسمية: {label}",
+    "tag-disabled": "تعطيل العلامة مع التسمية: {label}",
+    "remove-tag": "إزالة علامة مع التسمية: {label}"
+  },
+  "gux-time-picker": {
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "قائمة منسدلة لـ {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "عمليات البحث الأخيرة:",
+    "commonSearch": "عمليات بحث مشتركة:",
+    "limited": "محدودة بالنتائج، نقح بحثك لمزيد من الأوامر.",
+    "search": "بحث عن الأوامر.",
+    "title": "لوح ألون الأمر"
+  },
+  "gux-input-color": {
+    "required": "مطلوب"
+  },
+  "gux-input-number": {
+    "clear": "مسح",
+    "increment": "زيادة",
+    "decrement": "تخفيض"
+  },
+  "gux-input-search": {
+    "clear": "مسح"
+  },
+  "gux-input-text-like": {
+    "clear": "مسح"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "إنشاء تبويب جديد",
+    "scrollLeft": "تنقل لليسار",
+    "scrollRight": "تنقل لليمين",
+    "disableNewTab": "تم الوصول إلى الحد الأقصى لعدد علامات التبويب التي تم إنشاؤها"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "قائمة منسدلة لـ {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "بحث"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "عناصر التنقل"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "مسح",
+    "navigateNextBtn": "التالي",
+    "navigatePreviousBtn": "السابق",
+    "totalMatches": "{currentMatch, number} من {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "بدء",
+    "end": "إنهاء",
+    "date": "التاريخ",
+    "toggleCalendar": "تبديل عرض التقويم"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "رفض"
+  },
+  "gux-dropdown": {
+    "filterResults": "اكتب لتصفية نتائج القائمة المنسدلة",
+    "noSelection": "تحديد...",
+    "dropdown": "قائمة منسدلة"
+  },
+  "gux-form-field-number": {
+    "increment": "زيادة",
+    "decrement": "تخفيض"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "مسح"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "No matches"
+  },
+  "gux-listbox": {
+    "noMatches": "لا توجد تطابقات"
+  },
+  "gux-pagination-cursor": {
+    "previous": "السابق",
+    "next": "التالي"
+  },
+  "gux-pagination-buttons": {
+    "page": "صفحة",
+    "totalPages": " من {totalPages, number}",
+    "first": "الأول",
+    "previous": "السابق",
+    "next": "التالي",
+    "last": "الأخير",
+    "pageInputLabel": "صفحة {currentPage, number} من {totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " من {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "لكل صفحة",
+    "itemsPerPage": "عناصر لكل صفحة"
+  },
+  "gux-radial-loading": {
+    "loading": "تحميل"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "إنشاء تبويب جديد",
+    "scrollLeft": "تنقل لليسار",
+    "scrollRight": "تنقل لليمين",
+    "options": "خيارات علامة التبويب لـ {tabTitle}",
+    "disableNewTab": "تم الوصول إلى الحد الأقصى لعدد علامات التبويب التي تم إنشاؤها",
+    "toggleSort": "تبديل وضع الفرز باستخدام المسافة",
+    "sortModeOn": "وضع الفرز قيد التشغيل، استخدم مفتاحي الأسهم الأيمن والأيسر لإعادة ترتيب علامات التبويب. اضغط على مسافة أو أدخل مفتاح لإكمال الفرز. اضغط على مفتاح \"خروج\" لإلغاء الفرز",
+    "sortComplete": "اكتمال الفرز",
+    "sortCancelled": "إلغاء الفرز"
+  },
+  "gux-tabs": {
+    "scrollLeft": "تنقل لليسار",
+    "scrollRight": "تنقل لليمين",
+    "scrollUp": "مرر لأعلى",
+    "scrollDown": "مرر لأسفل"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "تبديل التحويل"
+  }
+}

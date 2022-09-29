@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-month-picker-beta #render should render the component as expected 1`] = `
+<gux-month-picker-beta value="2022-01">
+  <mock:shadow-root>
+    <gux-popup>
+      <div class="gux-target" slot="target">
+        <span class="gux-display">
+          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="January 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            January
+          </div>
+          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="January 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            2022
+          </div>
+        </span>
+        <button class="gux-popup-toggle" type="button">
+          <gux-icon icon-name="calendar" screenreader-text="Toggle month calendar view"></gux-icon>
+        </button>
+      </div>
+      <gux-month-calendar slot="popup">
+        <mock:shadow-root>
+          <div class="gux-month-calendar">
+            <div class="gux-year-header">
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="chevron-small-left" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+              </button>
+              <div class="gux-year">
+                2022
+              </div>
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="chevron-small-right" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+              </button>
+            </div>
+            <gux-month-list role="list" tabindex="1">
+              <mock:shadow-root>
+                <span tabindex="1"></span>
+                <slot></slot>
+              </mock:shadow-root>
+              <gux-month-list-item aria-label="January 2022" aria-selected="true" role="listitem" value="2022-01">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button class="gux-selected" tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Jan
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="February 2022" role="listitem" value="2022-02">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Feb
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="March 2022" role="listitem" value="2022-03">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Mar
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="April 2022" role="listitem" value="2022-04">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Apr
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="May 2022" role="listitem" value="2022-05">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                May
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="June 2022" role="listitem" value="2022-06">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Jun
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="July 2022" role="listitem" value="2022-07">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Jul
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="August 2022" role="listitem" value="2022-08">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Aug
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="September 2022" role="listitem" value="2022-09">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Sep
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="October 2022" role="listitem" value="2022-10">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Oct
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="November 2022" role="listitem" value="2022-11">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Nov
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="December 2022" role="listitem" value="2022-12">
+                <mock:shadow-root>
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </mock:shadow-root>
+                Dec
+              </gux-month-list-item>
+            </gux-month-list>
+            <span tabindex="0"></span>
+          </div>
+        </mock:shadow-root>
+      </gux-month-calendar>
+    </gux-popup>
+  </mock:shadow-root>
+</gux-month-picker-beta>
+`;

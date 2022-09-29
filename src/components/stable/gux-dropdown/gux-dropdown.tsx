@@ -15,6 +15,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { calculateInputDisabledState } from '../../../utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '../../../utils/dom/on-input-disabled-state-change';
+import { afterNextRender } from '../../../utils/dom/after-next-render';
 import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
@@ -65,14 +66,12 @@ export class GuxDropdown {
   @Watch('expanded')
   focusSelectedItemAfterRender(expanded: boolean) {
     if (expanded && this.listboxElement) {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          this.listboxElement.focus();
+      afterNextRender(() => {
+        this.listboxElement.focus();
 
-          if (this.filterable) {
-            this.filterElement.focus();
-          }
-        });
+        if (this.filterable) {
+          this.filterElement.focus();
+        }
       });
     }
 
@@ -282,7 +281,8 @@ export class GuxDropdown {
       const option = getSearchOption(this.listboxElement, filter);
 
       if (option) {
-        return option.textContent.substring(filterLength);
+        //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
+        return option.textContent.trim().substring(filterLength);
       }
     }
 

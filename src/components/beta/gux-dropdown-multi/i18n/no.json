@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "Skriv for å filtrere resultater fra nedtrekkslisten",
+  "noSelection": "Velg ...",
+  "dropdown": "Rullegardinliste",
+  "numberSelected": "{numberSelected} valgt"
 }

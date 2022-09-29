@@ -1,26 +1,82 @@
 <h1>gux-time-picker-beta</h1>
-<h2>Set value</h2>
-<div>
-  <gux-time-picker-beta value="03:40:32"></gux-time-picker-beta>
+
+<form onchange="notify(event)" oninput="notify(event)">
+  <h2>Examples</h2>
+
+  <h3>12 Hour Time Format</h3>
+  <gux-time-picker-beta></gux-time-picker-beta>
+  <gux-time-picker-beta clock-type="12h"></gux-time-picker-beta>
+
+  <h3>24 Hour Time Format</h3>
+  <gux-time-picker-beta value="15:00" clock-type="24h"></gux-time-picker-beta>
+  <gux-time-picker-beta value="15:00" lang="ja"></gux-time-picker-beta>
+
+  <h3>15 Min Interval</h3>
+  <gux-time-picker-beta interval="15"></gux-time-picker-beta>
+
+  <h3>30 Min Interval</h3>
+  <gux-time-picker-beta value="13:00" interval="30"></gux-time-picker-beta>
+
+  <h3>Disabled</h3>
+  <gux-time-picker-beta disabled></gux-time-picker-beta>
+
+  <h3>Has Error</h3>
+  <gux-time-picker-beta has-error></gux-time-picker-beta>
+</form>
+
+<h2>Languages</h2>
+<div id="languages-container">
+  <div id="sample"></div>
 </div>
-<h2>Min and max range</h2>
-<div>
-  <gux-time-picker-beta min="02:00:00" max="22:00:00"></gux-time-picker-beta>
-</div>
-<h2>Interval</h2>
-<span>Default interval is 15</span>
-<div>
-  <gux-time-picker-beta interval="10"></gux-time-picker-beta>
-</div>
-<h2>aria-label</h2>
-<span
-  >Providing a descriptive string for the label attribute is highly recommended
-  for accessibility reasons. If none is specified, the default aria-label is
-  'Time Picker'.</span
+
+<style
+  onload="(function () {
+  const languagesContainer = document.getElementById('languages-container');
+  [
+    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+    'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+    'pt-pt', 'ru', 'sv', 'th', 'tr', 'zh-cn', 'zh-tw'
+  ].forEach((lang) => {
+    const date = new Date('January 19, 1975 15:00:00 UTC+00:00')
+    const time = new Intl.DateTimeFormat(lang, { timeStyle: 'short', timeZone: 'UTC' }).format(date)
+
+    const html = window.toHTML([
+      '<div class=language lang=' + lang + '>',
+        '<h3>' + lang + '</h3>',
+        '<div class=group>',
+          '<div class=example>',
+            '<h4>Value Set</h4>',
+            '<gux-time-picker-beta value=15:00></gux-time-picker-beta>',
+          '</div>',
+          '<div class=example>',
+            '<h4>Blank</h4>',
+            '<gux-time-picker-beta></gux-time-picker-beta>',
+          '</div>',
+          '<div class=example>',
+            '<h4>Sample</h4>',
+            '<div>', time, '</div>',
+          '</div>',
+        '</div>',
+      '</div>'
+    ].join(''));
+    languagesContainer.appendChild(html);
+  });
+})()"
 >
-<div>
-  <gux-time-picker-beta
-    value="03:40:32"
-    label="Lunch start time"
-  ></gux-time-picker-beta>
-</div>
+  #languages-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .language {
+    padding: 10px 25px;
+  }
+
+  .group {
+    display: flex;
+  }
+
+  .example {
+    padding-right: 10px;
+  }
+</style>

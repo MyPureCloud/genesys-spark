@@ -1,0 +1,68 @@
+<h1>gux-month-picker-beta</h1>
+
+<div onchange="notify(event)" oninput="notify(event)">
+  <h2>Default</h2>
+  <gux-month-picker-beta value="2022-01"></gux-month-picker-beta>
+
+  <h2>Disabled</h2>
+  <gux-month-picker-beta value="2022-01" disabled></gux-month-picker-beta>
+
+  <h2>Min & Max</h2>
+  <gux-month-picker-beta
+    value="2022-01"
+    min="2021-03"
+    max="2023-09"
+  ></gux-month-picker-beta>
+
+  <h2>Languages</h2>
+  <div id="languages-container">
+    <div id="sample"></div>
+  </div>
+</div>
+
+<style
+  onload="(function () {
+    const languagesContainer = document.getElementById('languages-container');
+
+    [
+      'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+      'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+      'pt-pt', 'ru', 'sv', 'th', 'tr', 'zh-cn', 'zh-tw'
+    ].forEach((lang) => {
+      const html = window.toHTML([
+        '<div class=language lang=' + lang + '>',
+          '<h3>' + lang + '</h3>',
+          '<div class=group>',
+            '<div class=example>',
+              '<h4>Value Set</h4>',
+              '<gux-month-picker-beta value=2022-01></gux-month-picker-beta>',
+            '</div>',
+            '<div class=example>',
+              '<h4>Blank</h4>',
+              '<gux-month-picker-beta></gux-month-picker-beta>',
+            '</div>',
+          '</div>',
+        '</div>'
+      ].join(''));
+
+      languagesContainer.appendChild(html);
+    });
+})()"
+>
+  #languages-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .language {
+    padding: 10px 25px;
+  }
+
+  .group {
+    display: flex;
+  }
+
+  .example {
+    padding-right: 10px;
+  }
+</style>

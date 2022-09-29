@@ -1,6 +1,7 @@
 import { Component, Element, h, Host, JSX, Method, Prop } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
+import { afterNextRender } from '../../../utils/dom/after-next-render';
 
 import { GuxAnnouncePoliteness } from './gux-announce.types';
 
@@ -24,10 +25,8 @@ export class GuxAnnounce {
   @Method()
   async guxAnnounce(text: string): Promise<void> {
     this.containerElement.innerText = '';
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        this.containerElement.innerText = text;
-      });
+    afterNextRender(() => {
+      this.containerElement.innerText = text;
     });
   }
 

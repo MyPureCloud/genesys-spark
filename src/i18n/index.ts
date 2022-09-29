@@ -51,7 +51,7 @@ export async function buildI18nForComponent(
     if (!i18nString) {
       i18nString = defaultFormats.get(resourceKey)?.format(context) as string;
       console.warn(
-        `No localized string available for "${i18nString}" for "${locale}" locale. Falling back to English translation.`
+        `No localized string available for "${resourceKey}-${i18nString}" for "${locale}" locale. Falling back to English translation.`
       );
     }
     return i18nString;

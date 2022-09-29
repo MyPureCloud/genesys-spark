@@ -1,0 +1,206 @@
+{
+  "gux-badge": {
+    "neutral": "badge med etiket: {label}, farve: neutral",
+    "neutral-bold": "badge med etiket: {label}, farve: neutral fed",
+    "green": "badge med etiket: {label}, farve: grøn",
+    "green-bold": "badge med etiket: {label}, farve: grøn fed",
+    "yellow": "badge med etiket: {label}, farve: gul",
+    "yellow-bold": "badge med etiket: {label}, farve: gul fed",
+    "red": "badge med etiket: {label}, farve: rød",
+    "red-bold": "badge med etiket: {label}, farve: rød fed"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-month-calendar": {
+    "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
+  },
+  "gux-month-picker": {
+    "toggleCalendar": "Toggle month calendar view",
+    "month": "Month",
+    "year": "Year",
+    "unset": "Unset"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Side",
+    "totalPages": " af {totalPages, number}",
+    "first": "Første",
+    "previous": "Forrige",
+    "next": "Næste",
+    "last": "Sidste",
+    "pageInputLabel": "Side {currentPage, number} af {totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " af {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "pr. side",
+    "itemsPerPage": "Elementer pr. side"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "Ingen tilgængelige data",
+    "scrollLeft": "Rul til venstre",
+    "scrollRight": "Rul til højre",
+    "selectAllTableRows": "Vælg alle tabelrækker",
+    "selectTableRow": "Vælg tabelrække",
+    "sortAsc": "Sorteret stigende",
+    "sortDesc": "Sorteret faldende",
+    "tableOptions": "Tabelvalgmuligheder",
+    "noColumnSort": "{headerContent}. Tabellen er ikke sorteret efter denne kolonne i øjeblikket. Klik på kolonneoverskriften for at sortere tabellen efter denne kolonne i stigende rækkefølge",
+    "ascendingColumnSort": "{headerContent}. Tabellen er i øjeblikket sorteret efter denne kolonne i stigende rækkefølge. Klik på kolonneoverskriften for at sortere tabellen efter denne kolonne i faldende rækkefølge",
+    "descendingColumnSort": "{headerContent}. Tabellen er i øjeblikket sorteret efter denne kolonne i faldende rækkefølge. Klik på kolonneoverskriften for at sortere tabellen efter denne kolonne i stigende rækkefølge",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabellen er i øjeblikket sorteret efter denne kolonne i faldende rækkefølge. Klik på kolonneoverskriften for ikke at sortere tabellen efter denne kolonne"
+  },
+  "gux-tag": {
+    "tag": "tag med etiket: {label}",
+    "tag-disabled": "deaktiveret tag med etiket: {label}",
+    "remove-tag": "Fjern tag med etiket: {label}"
+  },
+  "gux-time-picker": {
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "Rullemenu for {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Seneste søgninger:",
+    "commonSearch": "Almindelige søgninger:",
+    "limited": "Resultater begrænset. Præciser din søgning for at se flere kommandoer.",
+    "search": "Søg efter kommandoer.",
+    "title": "Kommandopalet"
+  },
+  "gux-input-color": {
+    "required": "Påkrævet"
+  },
+  "gux-input-number": {
+    "clear": "Ryd",
+    "increment": "Stigning",
+    "decrement": "Reducer"
+  },
+  "gux-input-search": {
+    "clear": "Ryd"
+  },
+  "gux-input-text-like": {
+    "clear": "Ryd"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Opret ny fane",
+    "scrollLeft": "Rul til venstre",
+    "scrollRight": "Rul til højre",
+    "disableNewTab": "Det maksimale antal oprettede faner er nået"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "Rullemenu for {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Søg"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Brødkrummer"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Ryd",
+    "navigateNextBtn": "Næste",
+    "navigatePreviousBtn": "Forrige",
+    "totalMatches": "{currentMatch, number} af {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "Start",
+    "end": "Slut",
+    "date": "Dato",
+    "toggleCalendar": "Slå kalendervisning til/fra"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "Luk"
+  },
+  "gux-dropdown": {
+    "filterResults": "Indtast for at filtrere rullelisteresultater",
+    "noSelection": "Vælg...",
+    "dropdown": "Rullemenu"
+  },
+  "gux-form-field-number": {
+    "increment": "Stigning",
+    "decrement": "Reduktion"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Ryd"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "Ingen matches"
+  },
+  "gux-listbox": {
+    "noMatches": "Ingen matches"
+  },
+  "gux-pagination-cursor": {
+    "previous": "Forrige",
+    "next": "Næste"
+  },
+  "gux-pagination-buttons": {
+    "page": "Side",
+    "totalPages": " af {totalPages, number}",
+    "first": "Første",
+    "previous": "Forrige",
+    "next": "Næste",
+    "last": "Sidste",
+    "pageInputLabel": "Side {currentPage, number} af {totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " af {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "pr. side",
+    "itemsPerPage": "Elementer pr. side"
+  },
+  "gux-radial-loading": {
+    "loading": "Indlæser"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Opret ny fane",
+    "scrollLeft": "Rul til venstre",
+    "scrollRight": "Rul til højre",
+    "options": "Faneindstillinger for {tabTitle}",
+    "disableNewTab": "Det maksimale antal oprettede faner er nået",
+    "toggleSort": "Slå sorteringstilstand til/fra ved hjælp af mellemrum",
+    "sortModeOn": "Sorteringstilstand til, brug venstre og højre piletast til at omarrangere faner. Tryk på mellemrums- eller Enter-tasten for at gennemføre sortering. Tryk på Esc-tasten for at annullere sortering",
+    "sortComplete": "Sortering gennemført",
+    "sortCancelled": "Sortering annulleret"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Rul til venstre",
+    "scrollRight": "Rul til højre",
+    "scrollUp": "Rul op",
+    "scrollDown": "Rul ned"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Til/fra-knap"
+  }
+}

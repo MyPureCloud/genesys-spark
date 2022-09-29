@@ -49,11 +49,14 @@
  - [gux-form-field-select](../gux-form-field/components/gux-form-field-select)
  - [gux-form-field-text-like](../gux-form-field/components/gux-form-field-text-like)
  - [gux-form-field-textarea](../gux-form-field/components/gux-form-field-textarea)
+ - [gux-form-field-time-picker](../gux-form-field/components/gux-form-field-time-picker)
  - [gux-input-color](../../legacy/gux-form-field-legacy/components/gux-input-color)
  - [gux-input-number](../../legacy/gux-form-field-legacy/components/gux-input-number)
  - [gux-input-search](../../legacy/gux-form-field-legacy/components/gux-input-search)
  - [gux-input-select](../../legacy/gux-form-field-legacy/components/gux-input-select)
  - [gux-input-text-like](../../legacy/gux-form-field-legacy/components/gux-input-text-like)
+ - [gux-month-calendar](../../beta/gux-month-picker/gux-month-calendar)
+ - [gux-month-picker-beta](../../beta/gux-month-picker)
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-beta](../../beta/gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-cursor](../gux-pagination-cursor)
@@ -70,6 +73,7 @@
  - [gux-table-select-menu](../../beta/gux-table/gux-table-select-menu)
  - [gux-tabs-legacy](../../legacy/gux-tabs-legacy)
  - [gux-tag-beta](../../beta/gux-tag)
+ - [gux-time-picker-beta](../../beta/gux-time-picker)
  - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
 
 ### Graph
@@ -106,11 +110,14 @@ graph TD;
   gux-form-field-select --> gux-icon
   gux-form-field-text-like --> gux-icon
   gux-form-field-textarea --> gux-icon
+  gux-form-field-time-picker --> gux-icon
   gux-input-color --> gux-icon
   gux-input-number --> gux-icon
   gux-input-search --> gux-icon
   gux-input-select --> gux-icon
   gux-input-text-like --> gux-icon
+  gux-month-calendar --> gux-icon
+  gux-month-picker-beta --> gux-icon
   gux-pagination-buttons --> gux-icon
   gux-pagination-buttons-beta --> gux-icon
   gux-pagination-cursor --> gux-icon
@@ -127,6 +134,7 @@ graph TD;
   gux-table-select-menu --> gux-icon
   gux-tabs-legacy --> gux-icon
   gux-tag-beta --> gux-icon
+  gux-time-picker-beta --> gux-icon
   gux-toggle-slider --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```

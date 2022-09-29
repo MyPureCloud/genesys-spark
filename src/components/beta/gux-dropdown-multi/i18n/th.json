@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "พิมพ์เพื่อกรองผลลัพธ์ในดรอปดาวน์",
+  "noSelection": "เลือก...",
+  "dropdown": "ดรอปดาวน์",
+  "numberSelected": "เลือกแล้ว {numberSelected} รายการ"
 }

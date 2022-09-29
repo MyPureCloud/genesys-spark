@@ -13,6 +13,7 @@ import {
 import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
 import { trackComponent } from '../../../usage-tracking';
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 
 /**
  * @slot title - slot for icon and button text
@@ -151,6 +152,13 @@ export class GuxButtonMulti {
     }, this.moveFocusDelay);
   }
 
+  private onListClick(event: MouseEvent): void {
+    whenEventIsFrom('gux-list-item', event, () => {
+      this.isOpen = false;
+      this.dropdownButton.focus();
+    });
+  }
+
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.accent });
   }
@@ -176,8 +184,12 @@ export class GuxButtonMulti {
             </button>
           </gux-button-slot-beta>
         </div>
+
         <div class="gux-list-container" slot="popup">
-          <gux-list ref={el => (this.listElement = el)}>
+          <gux-list
+            onClick={(e: MouseEvent) => this.onListClick(e)}
+            ref={el => (this.listElement = el)}
+          >
             <slot />
           </gux-list>
         </div>

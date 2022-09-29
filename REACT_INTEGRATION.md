@@ -2,7 +2,13 @@
 
 This package generates a set of react wrapper elements which are published in `genesys-spark-components-react` and should be used in favor of directly using the custom elements in a React app.
 
-The react package should be installed alongside `genesys-spark-components`, with matching version numbers, and the web-components will still need to be registered (e.g. via `registerElements()`)
+## Installation
+
+Install `genesys-spark-components-react` with same version as the desired `genesys-spark-components` version. (e.g. `genesys-spark-components-react@X.Y.Z` will install `genesys-spark-components@X.Y.Z`). To avoid version conflicts, remove the direct dependency on `genesys-spark-components` if adding to an existing consumer of the spark components.
+
+## Usage
+
+Native React elements are imported from `genesys-spark-components-react`, the custom elements still need to be registered as before, (e.g. with `registerElements` imported from `genesys-spark-components`).
 
 ## Example
 

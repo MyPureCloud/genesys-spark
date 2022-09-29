@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "انقر للنسخ ",
+  "copyToClipboard": "نسخ إلى الحافظة",
+  "enterToCopy": "اضغط على Enter للنسخ",
+  "copySuccess": "تم النسخ إلى الحافظة",
+  "copyFailure": "خطأ. حاول مرة أخرى."
 }

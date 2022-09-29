@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "Kopyalamak İçin Tıklayın",
+  "copyToClipboard": "Panoya kopyala",
+  "enterToCopy": "Kopyalamak İçin Enter Tuşuna Basın",
+  "copySuccess": "Panoya Kopyalandı",
+  "copyFailure": "Hata. Lütfen Tekrar Deneyin."
 }

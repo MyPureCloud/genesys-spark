@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-month-picker-beta renders with no value set 1`] = `""`;
+
+exports[`gux-month-picker-beta renders with value set 1`] = `""`;

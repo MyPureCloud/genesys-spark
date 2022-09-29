@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "Klicka för att kopiera",
+  "copyToClipboard": "Kopiera till Urklipp",
+  "enterToCopy": "Tryck på Retur för att kopiera",
+  "copySuccess": "Kopierad till Urklipp",
+  "copyFailure": "Fel. Försök igen."
 }

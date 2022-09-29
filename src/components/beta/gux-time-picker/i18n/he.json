@@ -1,1 +1,10 @@
-{}
+{
+  "am": "AM",
+  "time-separator": ":",
+  "clockButton": "Toggle suggested times",
+  "hoursInput": "Input hours",
+  "minutesInput": "Input minutes",
+  "pm": "PM",
+  "timeOptionsState": "Time options open: {state}",
+  "toggleAmPM": "{amOrPm} selected, click to toggle"
+}

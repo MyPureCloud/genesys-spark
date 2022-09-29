@@ -17,15 +17,9 @@
 }
 
 // Style
-div.gux-dropdown {
-  position: relative;
+gux-popup {
+  display: block;
   margin: 4px 0;
-
-  &.gux-disabled {
-    pointer-events: none;
-    cursor: default;
-    opacity: 0.5;
-  }
 
   .gux-select-field {
     position: relative;
@@ -89,21 +83,7 @@ div.gux-dropdown {
     }
   }
 
-  &.gux-active .gux-select-field .gux-select-input {
-    border: 1px solid @active-border;
-    outline: none;
-    .focus-ring();
-
-    &:focus {
-      .focus-ring();
-    }
-  }
-
   .gux-advanced-dropdown-menu {
-    position: absolute;
-    top: 36px;
-    z-index: var(--gux-zindex-popup, @gux-zindex-popup);
-    display: none;
     width: 100%;
     background: @gux-background;
     border: 1px solid @gux-grey-30;
@@ -124,10 +104,6 @@ div.gux-dropdown {
           }
         }
       }
-    }
-
-    &.gux-opened {
-      display: block;
     }
   }
 

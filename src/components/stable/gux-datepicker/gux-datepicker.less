@@ -71,6 +71,11 @@
         background-image: none;
         .form-field-border();
 
+        &:focus-within {
+          border-color: @gux-blue-60;
+          .focus-ring();
+        }
+
         input {
           flex: 1 1 auto;
           align-self: auto;

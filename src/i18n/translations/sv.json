@@ -1,0 +1,206 @@
+{
+  "gux-badge": {
+    "neutral": "märke med etikett: {label}, färg: neutral",
+    "neutral-bold": "märke med etikett: {label}, färg: neutral fet stil",
+    "green": "märke med etikett: {label}, färg: grön",
+    "green-bold": "märke med etikett: {label}, färg: grön fet stil",
+    "yellow": "märke med etikett: {label}, färg: gul",
+    "yellow-bold": "märke med etikett: {label}, färg: gul fet stil",
+    "red": "märke med etikett: {label}, färg: röd",
+    "red-bold": "märke med etikett: {label}, färg: röd fet stil"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-month-calendar": {
+    "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
+  },
+  "gux-month-picker": {
+    "toggleCalendar": "Toggle month calendar view",
+    "month": "Month",
+    "year": "Year",
+    "unset": "Unset"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Sida",
+    "totalPages": " av {totalPages, number}",
+    "first": "Första",
+    "previous": "Föregående",
+    "next": "Nästa",
+    "last": "Sista",
+    "pageInputLabel": "Sida {currentPage, number} av {totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " av {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "per sida",
+    "itemsPerPage": "Objekt per sida"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "Inga data är tillgängliga",
+    "scrollLeft": "Rulla vänster",
+    "scrollRight": "Rulla höger",
+    "selectAllTableRows": "Markera alla tabellrader",
+    "selectTableRow": "Markera tabellrad",
+    "sortAsc": "Sorterade i stigande ordning",
+    "sortDesc": "Sorterade i fallande ordning",
+    "tableOptions": "Tabellalternativ",
+    "noColumnSort": "{headerContent}. Tabellen är för närvarande inte sorterad efter denna kolumn. Klicka på kolumnrubriken för att sortera tabellen efter denna kolumn i stigande ordning",
+    "ascendingColumnSort": "{headerContent}. Tabellen är för närvarande sorterad efter denna kolumn i stigande ordning. Klicka på kolumnrubriken för att sortera tabellen efter denna kolumn i fallande ordning",
+    "descendingColumnSort": "{headerContent}. Tabellen är för närvarande sorterad efter denna kolumn i fallande ordning. Klicka på kolumnrubriken för att sortera tabellen efter denna kolumn i stigande ordning",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabellen är för närvarande sorterad efter denna kolumn i fallande ordning. Klicka på kolumnrubriken för att inte sortera tabellen efter denna kolumn"
+  },
+  "gux-tag": {
+    "tag": "tagga med etikett: {label}",
+    "tag-disabled": "inaktiverad tagg med etikett: {label}",
+    "remove-tag": "Ta bort tagg med etikett: {label}"
+  },
+  "gux-time-picker": {
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "Listruta för {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Senaste sökningar:",
+    "commonSearch": "Vanliga sökningar:",
+    "limited": "Begränsade resultat. Förfina din sökning för fler kommandon.",
+    "search": "Sök efter kommandon.",
+    "title": "Kommandopalett"
+  },
+  "gux-input-color": {
+    "required": "Obligatoriskt"
+  },
+  "gux-input-number": {
+    "clear": "Rensa",
+    "increment": "Ökning",
+    "decrement": "Minskning"
+  },
+  "gux-input-search": {
+    "clear": "Rensa"
+  },
+  "gux-input-text-like": {
+    "clear": "Rensa"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Skapa ny flik",
+    "scrollLeft": "Rulla vänster",
+    "scrollRight": "Rulla höger",
+    "disableNewTab": "Det maximala antalet flikar har uppnåtts"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "Listruta för {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Sök"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Navigeringssökvägar"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Rensa",
+    "navigateNextBtn": "Nästa",
+    "navigatePreviousBtn": "Föregående",
+    "totalMatches": "{currentMatch, number} av {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "Start",
+    "end": "Slut",
+    "date": "Datum",
+    "toggleCalendar": "Växla kalendervy"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "Avslå"
+  },
+  "gux-dropdown": {
+    "filterResults": "Skriv för att filtrera resultatet i listrutan",
+    "noSelection": "Välj...",
+    "dropdown": "Listruta"
+  },
+  "gux-form-field-number": {
+    "increment": "Ökning",
+    "decrement": "Minskning"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Rensa"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "Inga matchningar"
+  },
+  "gux-listbox": {
+    "noMatches": "Inga matchningar"
+  },
+  "gux-pagination-cursor": {
+    "previous": "Föregående",
+    "next": "Nästa"
+  },
+  "gux-pagination-buttons": {
+    "page": "Sida",
+    "totalPages": " av {totalPages, number}",
+    "first": "Första",
+    "previous": "Föregående",
+    "next": "Nästa",
+    "last": "Sista",
+    "pageInputLabel": "Sida {currentPage, number} av {totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " av {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "per sida",
+    "itemsPerPage": "Objekt per sida"
+  },
+  "gux-radial-loading": {
+    "loading": "Läser in"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Skapa ny flik",
+    "scrollLeft": "Rulla vänster",
+    "scrollRight": "Rulla höger",
+    "options": "Flikalternativ för {tabTitle}",
+    "disableNewTab": "Det maximala antalet flikar har uppnåtts",
+    "toggleSort": "Växla sorteringsläge med blanksteg",
+    "sortModeOn": "Sorteringsläge är på. Använd vänster- och högerpiltangenterna för att arrangera om flikarna. Tryck på blanksteg eller retur för att slutföra sorteringen. Tryck på Esc-tangenten för att avbryta sorteringen.",
+    "sortComplete": "Sortering klar",
+    "sortCancelled": "Sortering avbruten"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Rulla vänster",
+    "scrollRight": "Rulla höger",
+    "scrollUp": "Rulla upp",
+    "scrollDown": "Rulla ner"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Växlingskontroll "
+  }
+}

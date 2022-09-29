@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "Psaním můžete filtrovat výsledky rozevíracího seznamu",
+  "noSelection": "Vybrat…",
+  "dropdown": "Rozevírací seznam",
+  "numberSelected": "Vybráno {numberSelected}"
 }

@@ -140,47 +140,45 @@
   </fieldset>
 </form>
 
-<h2>Setting the input size.</h2>
-<p>
-  To set the size of an input create a class with the desired width and apply
-  this class to the input element.
-</p>
+<fieldset>
+  <legend>Setting the input size</legend>
+  <p>
+    To set the size of an input create a class with the desired width and apply
+    this class to the input element.
+  </p>
+
+  <gux-form-field-number class="width" label-position="beside">
+    <input slot="input" type="number" name="e-1" value="10" />
+    <label slot="label">I am long label</label>
+    <span slot="error">Short error message</span>
+  </gux-form-field-number>
+
+  <gux-form-field-number label-position="beside">
+    <input
+      style="width: 200px"
+      slot="input"
+      type="number"
+      name="e-1"
+      value="10"
+    />
+    <label slot="label">I am long label</label>
+    <span slot="error"
+      >This is an error message with a very long text message very very
+      long</span
+    >
+  </gux-form-field-number>
+
+  <gux-form-field-number label-position="beside">
+    <input slot="input" type="number" name="e-1" value="10" />
+    <label slot="label">I am long label</label>
+    <span slot="error"
+      >This is an error message with a very long text message very very
+      long</span
+    >
+  </gux-form-field-number>
+</fieldset>
+
 <div>
-  <div class="form-container">
-    <div class="inner-container">
-      <gux-form-field-number label-position="beside">
-        <input class="width" slot="input" type="number" name="e-1" value="10" />
-        <label slot="label">I am long label</label>
-        <span slot="error">Short error message</span>
-      </gux-form-field-number>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="form-container">
-    <div class="inner-container">
-      <gux-form-field-number label-position="beside">
-        <input class="width" slot="input" type="number" name="e-1" value="10" />
-        <label slot="label">I am long label</label>
-        <span slot="error"
-          >This is an error message with a very long text message very very
-          long</span
-        >
-      </gux-form-field-number>
-    </div>
-  </div>
-
-  <style>
-    .form-container {
-      display: inline-flex;
-      flex-direction: column;
-    }
-
-    .width {
-      width: 108px;
-    }
-  </style>
-
   <h2>gux-form-field-legacy examples for comparison</h2>
   <form onchange="notify(event)" oninput="notify(event)">
     <fieldset>
@@ -207,3 +205,14 @@
     </fieldset>
   </form>
 </div>
+
+<style>
+  .form-container {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .width::part(input-section) {
+    width: 108px;
+  }
+</style>

@@ -1,7 +1,7 @@
 {
-  "clickToCopy": "Click to Copy",
-  "copyToClipboard": "Copy to clipboard",
-  "enterToCopy": "Press Enter to Copy",
-  "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "clickToCopy": "לחץ כדי להעתיק",
+  "copyToClipboard": "העתק ללוח",
+  "enterToCopy": "הקש Enter כדי להעתיק",
+  "copySuccess": "הועתק ללוח",
+  "copyFailure": "שגיאה. נסה שוב."
 }

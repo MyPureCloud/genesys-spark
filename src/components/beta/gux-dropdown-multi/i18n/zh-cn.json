@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "输入以过滤下拉结果",
+  "noSelection": "选择...",
+  "dropdown": "下拉菜单",
+  "numberSelected": "已选择 {numberSelected} 个"
 }

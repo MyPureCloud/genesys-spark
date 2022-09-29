@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "タイプしてドロップダウンの結果をフィルター",
+  "noSelection": "選択する ...",
+  "dropdown": "ドロップダウン",
+  "numberSelected": "{numberSelected} 件選択"
 }

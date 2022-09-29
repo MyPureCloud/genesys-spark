@@ -1,0 +1,206 @@
+{
+  "gux-badge": {
+    "neutral": "rozet ile etiket: {label}, renk: nötr",
+    "neutral-bold": "rozet ile etiket: {label}, renk: nötr kalın",
+    "green": "rozet ile etiket: {label}, renk: yeşil",
+    "green-bold": "rozet ile etiket: {label}, renk: yeşil kalın",
+    "yellow": "rozet ile etiket: {label}, renk: sarı",
+    "yellow-bold": "rozet ile etiket: {label}, renk: sarı kalın",
+    "red": "rozet ile etiket: {label}, renk: kırmızı",
+    "red-bold": "rozet ile etiket: {label}, renk: kırmızı kalın"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "copyToClipboard": "Copy to clipboard",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected"
+  },
+  "gux-month-calendar": {
+    "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
+  },
+  "gux-month-picker": {
+    "toggleCalendar": "Toggle month calendar view",
+    "month": "Month",
+    "year": "Year",
+    "unset": "Unset"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Sayfa",
+    "totalPages": " / {totalPages, number}",
+    "first": "İlk",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "last": "Son",
+    "pageInputLabel": "Sayfa {currentPage, number}/{totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": "{totalItems, number} içinde"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "sayfa başına",
+    "itemsPerPage": "Sayfa başına öğeler"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "Kullanılabilir veri yok",
+    "scrollLeft": "Sola Kaydır",
+    "scrollRight": "Sağa Kaydır",
+    "selectAllTableRows": "Tüm Tablo Satırlarını Seç",
+    "selectTableRow": "Tablo Satırı Seç",
+    "sortAsc": "Artan Sıralı",
+    "sortDesc": "Azalan Sıralı",
+    "tableOptions": "Tablo Seçenekleri",
+    "noColumnSort": "{headerContent}. Tablo şu anda bu sütuna göre sıralanmıyor. Tablonun bu sütuna göre artan sırada sıralanması için sütun üst bilgisine tıklayın",
+    "ascendingColumnSort": "{headerContent}. Tablo şu anda bu sütuna göre artan sırada sıralanıyor. Tablonun bu sütuna göre azalan sırada sıralanması için sütun üst bilgisine tıklayın",
+    "descendingColumnSort": "{headerContent}. Tablo şu anda bu sütuna göre azalan sırada sıralanıyor. Tablonun bu sütuna göre artan sırada sıralanması için sütun üst bilgisine tıklayın",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. Tablo şu anda bu sütuna göre azalan sırada sıralanıyor. Tablonun bu sütuna göre sıralanmaması için sütun üst bilgisine tıklayın"
+  },
+  "gux-tag": {
+    "tag": "şunu içeren etiket: {label}",
+    "tag-disabled": "şunu içeren etiket devre dışı: {label}",
+    "remove-tag": "Şunu içeren etiketi kaldır: {label}"
+  },
+  "gux-time-picker": {
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "{buttonTitle} için açılır liste"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Son Dönemde Arananlar:",
+    "commonSearch": "Sık Yapılan Aramalar:",
+    "limited": "Sonuçlar sınırlanmıştır, daha fazla komut için aramanızı daraltın.",
+    "search": "Komut arayın.",
+    "title": "Komut Paleti"
+  },
+  "gux-input-color": {
+    "required": "Gerekli"
+  },
+  "gux-input-number": {
+    "clear": "Temizle",
+    "increment": "Artım",
+    "decrement": "Azalım"
+  },
+  "gux-input-search": {
+    "clear": "Temizle"
+  },
+  "gux-input-text-like": {
+    "clear": "Temizle"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Yeni Sekme Oluştur",
+    "scrollLeft": "Sola Kaydır",
+    "scrollRight": "Sağa Kaydır",
+    "disableNewTab": "Maksimum oluşturulan sekme sayısına ulaşıldı"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "{buttonTitle} için açılır liste"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Ara"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "İçerik haritası"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Temizle",
+    "navigateNextBtn": "Sonraki",
+    "navigatePreviousBtn": "Önceki",
+    "totalMatches": "{matchCount, number} içerisinde {currentMatch, number}"
+  },
+  "gux-datepicker": {
+    "start": "Başlangıç",
+    "end": "Bitiş",
+    "date": "Tarih",
+    "toggleCalendar": "Takvim görünümünü değiştir"
+  },
+  "gux-disclosure-button": {},
+  "gux-dismiss-button": {
+    "dismiss": "Kapat"
+  },
+  "gux-dropdown": {
+    "filterResults": "Açılır liste sonuçlarını filtrelemek için yazın",
+    "noSelection": "Seç...",
+    "dropdown": "Açılır liste"
+  },
+  "gux-form-field-number": {
+    "increment": "Artım",
+    "decrement": "Azalım"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Temizle"
+  },
+  "gux-listbox-multi": {
+    "noMatches": "Eşleşme yok"
+  },
+  "gux-listbox": {
+    "noMatches": "Eşleşme yok"
+  },
+  "gux-pagination-cursor": {
+    "previous": "Önceki",
+    "next": "Sonraki"
+  },
+  "gux-pagination-buttons": {
+    "page": "Sayfa",
+    "totalPages": " / {totalPages, number}",
+    "first": "İlk",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "last": "Son",
+    "pageInputLabel": "Sayfa {currentPage, number}/{totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": "{totalItems, number} içinde"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "sayfa başına",
+    "itemsPerPage": "Sayfa başına öğeler"
+  },
+  "gux-radial-loading": {
+    "loading": "Yükleniyor"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Yeni Sekme Oluştur",
+    "scrollLeft": "Sola Kaydır",
+    "scrollRight": "Sağa Kaydır",
+    "options": "{tabTitle} için Sekme Seçenekleri",
+    "disableNewTab": "Maksimum oluşturulan sekme sayısına ulaşıldı",
+    "toggleSort": "Boşluk kullanarak sıralama modunu açın/kapayın",
+    "sortModeOn": "Sıralama modu açık, sekmeleri tekrar sıralamak için sol ve sağ ok tuşlarını kullanın. Sıralamayı tamamlamak için Space veya Enter tuşuna basın. Sıralamayı iptal etmek için Escape tuşuna basın",
+    "sortComplete": "Sıralama tamamlandı",
+    "sortCancelled": "Sıralama iptal edildi"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Sola Kaydır",
+    "scrollRight": "Sağa Kaydır",
+    "scrollUp": "Yukarı Kaydır",
+    "scrollDown": "Aşağı Kaydır"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Geçiş Anahtarı"
+  }
+}
