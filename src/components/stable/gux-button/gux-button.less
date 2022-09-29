@@ -2,6 +2,7 @@
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/color-mixins.less';
 
 :host {
   display: inline-block;
@@ -109,8 +110,7 @@ button {
   }
 
   &.gux-primary {
-    color: @gux-grey-100;
-    background-color: @gux-blue-60;
+    .gux-blue-60();
 
     &[disabled] {
       color: fade(@gux-grey-100, 50%);
@@ -123,6 +123,23 @@ button {
 
     &:active:enabled {
       background-color: @gux-blue-40;
+    }
+  }
+
+  &.gux-danger {
+    .gux-alert-red-60();
+
+    &[disabled] {
+      color: fade(@gux-grey-100, 50%);
+      background-color: fade(@gux-alert-red-60, 50%);
+    }
+
+    &:hover:enabled {
+      background-color: @gux-alert-red-50;
+    }
+
+    &:active:enabled {
+      background-color: @gux-alert-red-40;
     }
   }
 }

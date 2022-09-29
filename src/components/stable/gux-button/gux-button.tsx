@@ -30,9 +30,6 @@ export class GuxButton {
   @Prop()
   disabled: boolean = false;
 
-  /**
-   * The component accent (secondary or primary).
-   */
   @Prop()
   accent: GuxButtonAccent = 'secondary';
 

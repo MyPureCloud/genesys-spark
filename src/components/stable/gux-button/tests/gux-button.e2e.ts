@@ -30,6 +30,11 @@ describe('gux-button', () => {
       },
       {
         clickable: true,
+        description: 'should render danger button',
+        html: '<gux-button accent="danger">Danger accent</gux-button>'
+      },
+      {
+        clickable: true,
         description: 'should render invalid button',
         html: '<gux-button accent="invalid">Invalid accent</gux-button>'
       },
@@ -57,6 +62,11 @@ describe('gux-button', () => {
         clickable: false,
         description: 'should render disabled ghost button',
         html: '<gux-button accent="ghost" disabled>Button</gux-button>'
+      },
+      {
+        clickable: false,
+        description: 'should render disabled danger button',
+        html: '<gux-button accent="danger" disabled>Danger accent</gux-button>'
       },
       {
         clickable: false,

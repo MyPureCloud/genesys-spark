@@ -15,12 +15,12 @@ Example usage
 
 ## Properties
 
-| Property   | Attribute  | Description                                  | Type                                                | Default       |
-| ---------- | ---------- | -------------------------------------------- | --------------------------------------------------- | ------------- |
-| `accent`   | `accent`   | The component accent (secondary or primary). | `"ghost" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
-| `disabled` | `disabled` | Disables the action button.                  | `boolean`                                           | `false`       |
-| `isOpen`   | `is-open`  | It is used to open or not the list.          | `boolean`                                           | `false`       |
-| `text`     | `text`     | The component text.                          | `string`                                            | `undefined`   |
+| Property   | Attribute  | Description                         | Type                                                            | Default       |
+| ---------- | ---------- | ----------------------------------- | --------------------------------------------------------------- | ------------- |
+| `accent`   | `accent`   |                                     | `"danger" \| "ghost" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| `disabled` | `disabled` | Disables the action button.         | `boolean`                                                       | `false`       |
+| `isOpen`   | `is-open`  | It is used to open or not the list. | `boolean`                                                       | `false`       |
+| `text`     | `text`     | The component text.                 | `string`                                                        | `undefined`   |
 
 
 ## Events
