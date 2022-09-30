@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.33.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.33.0...v3.33.1) (2022-09-30)
+
+
+### Bug Fixes
+
+* **toggle:** fixed check event detail ([c2b7cdd](https://github.com/MyPureCloud/genesys-webcomponents/commit/c2b7cdd5aeabecabe05542b5e5e2b6b3e5c28779))
+
 ## [3.33.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.3...v3.33.0) (2022-09-30)
 
 
