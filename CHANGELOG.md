@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.33.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.33.1...v3.33.2) (2022-09-30)
+
+
+### Bug Fixes
+
+* **popup:** popup now sets up popper on connectedCallback ([051baef](https://github.com/MyPureCloud/genesys-webcomponents/commit/051baefc68600da63c2a4cfe9138ddaad504285b))
+
 ### [3.33.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.33.0...v3.33.1) (2022-09-30)
 
 
