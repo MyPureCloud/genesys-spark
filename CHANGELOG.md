@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.33.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.3...v3.33.0) (2022-09-30)
+
+
+### Features
+
+* **form-field:** addition of help slot ([1e3d0ff](https://github.com/MyPureCloud/genesys-webcomponents/commit/1e3d0ff99b68a325c9039ada89c3652aef25b047))
+
 ### [3.32.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.2...v3.32.3) (2022-09-29)
 
 
