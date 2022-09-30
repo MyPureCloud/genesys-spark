@@ -6,12 +6,10 @@ on:
   push:
     branches:
       - main
-      - master
       - maintenance/**
   pull_request:
     branches:
       - main
-      - master
       - maintenance/**
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -50,13 +48,13 @@ jobs:
       # Build
       - name: Build
         run: npm run build
-  
+
   prComment:
     if: startsWith(github.head_ref, 'feature/')
     runs-on: ubuntu-latest
     steps:
       - uses: mshick/add-pr-comment@v1
-        with: 
-          message: "Demo will be published at https://apps.inindca.com/common-ui-docs/genesys-webcomponents/${{ github.head_ref}}"
+        with:
+          message: 'Demo will be published at https://apps.inindca.com/common-ui-docs/genesys-webcomponents/${{ github.head_ref}}'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: 'github-actions[bot]'
