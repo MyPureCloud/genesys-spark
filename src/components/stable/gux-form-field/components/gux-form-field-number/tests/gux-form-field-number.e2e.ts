@@ -118,5 +118,32 @@ describe('gux-form-field-number', () => {
         });
       });
     });
+
+    describe('help', () => {
+      const html = `
+      <gux-form-field-number>
+      <input slot="input" type="number" name="e-1" value="10" />
+      <label slot="label">Default</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-number>
+      `;
+
+      it('should render component as expected', async () => {
+        const page = await newNonrandomE2EPage({ html });
+        const element = await page.find('gux-form-field-number');
+        const elementShadowDom = await element.find(
+          'pierce/.gux-form-field-container'
+        );
+
+        expect(element.outerHTML).toMatchSnapshot();
+        expect(elementShadowDom).toMatchSnapshot();
+      });
+
+      it('should be accessible', async () => {
+        const page = await newSparkE2EPage({ html });
+
+        await a11yCheck(page, axeExclusions);
+      });
+    });
   });
 });

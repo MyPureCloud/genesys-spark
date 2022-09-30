@@ -21,6 +21,11 @@ exports[`gux-form-field-text-like #render clearable should render component as e
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -45,6 +50,11 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -73,6 +83,11 @@ exports[`gux-form-field-text-like #render clearable should render component as e
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -96,6 +111,11 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -123,6 +143,41 @@ exports[`gux-form-field-text-like #render clearable should render component as e
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-text-like #render help should render component as expected 1`] = `"<gux-form-field-text-like hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" name=\\"e-1\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Default</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-text-like>"`;
+
+exports[`gux-form-field-text-like #render help should render component as expected 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <slot name="prefix"></slot>
+        <slot name="input"></slot>
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help gux-show">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -146,6 +201,11 @@ exports[`gux-form-field-text-like #render input type attribute should render com
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -173,6 +233,11 @@ exports[`gux-form-field-text-like #render input type attribute should render com
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -196,6 +261,11 @@ exports[`gux-form-field-text-like #render input type attribute should render com
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -223,6 +293,11 @@ exports[`gux-form-field-text-like #render label-position should render component
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -246,6 +321,11 @@ exports[`gux-form-field-text-like #render label-position should render component
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -273,6 +353,11 @@ exports[`gux-form-field-text-like #render label-position should render component
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -296,6 +381,11 @@ exports[`gux-form-field-text-like #render label-position should render component
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -323,6 +413,11 @@ exports[`gux-form-field-text-like #render prefix should render component as expe
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -346,6 +441,11 @@ exports[`gux-form-field-text-like #render suffix should render component as expe
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -373,6 +473,11 @@ exports[`gux-form-field-text-like input attributes should render component as ex
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -398,6 +503,11 @@ exports[`gux-form-field-text-like input attributes should render component as ex
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -421,6 +531,11 @@ exports[`gux-form-field-text-like input attributes should render component as ex
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>

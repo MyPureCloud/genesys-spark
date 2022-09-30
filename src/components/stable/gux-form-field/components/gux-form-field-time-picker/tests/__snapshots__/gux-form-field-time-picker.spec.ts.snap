@@ -1,5 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`gux-form-field-time-picker #render help should render component as expected 1`] = `
+<gux-form-field-time-picker>
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-time-picker-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-picker-beta aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" value="09:00"></gux-time-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Select Time
+  </label>
+  <span id="gux-form-field-help-i" slot="help">
+    This is a help message
+  </span>
+</gux-form-field-time-picker>
+`;
+
 exports[`gux-form-field-time-picker #render intervals should render component as expected (1) 1`] = `
 <gux-form-field-time-picker>
   <mock:shadow-root>
@@ -25,6 +70,11 @@ exports[`gux-form-field-time-picker #render intervals should render component as
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -64,6 +114,11 @@ exports[`gux-form-field-time-picker #render intervals should render component as
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </fieldset>
   </mock:shadow-root>
@@ -99,6 +154,11 @@ exports[`gux-form-field-time-picker #render intervals should render component as
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -138,6 +198,11 @@ exports[`gux-form-field-time-picker #render label-position should render compone
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </fieldset>
   </mock:shadow-root>
@@ -173,6 +238,11 @@ exports[`gux-form-field-time-picker #render label-position should render compone
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -212,6 +282,11 @@ exports[`gux-form-field-time-picker #render label-position should render compone
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </fieldset>
   </mock:shadow-root>
@@ -247,6 +322,11 @@ exports[`gux-form-field-time-picker #render label-position should render compone
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>

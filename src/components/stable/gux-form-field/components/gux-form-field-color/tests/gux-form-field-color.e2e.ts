@@ -84,5 +84,32 @@ describe('gux-form-field-color', () => {
         });
       });
     });
+
+    describe('help', () => {
+      const html = `
+      <gux-form-field-color>
+      <input slot="input" type="color" name="e-1" value="#cc3ebe" />
+      <label slot="label">Default</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-color>
+      `;
+
+      it('should render component as expected', async () => {
+        const page = await newNonrandomE2EPage({ html });
+        const element = await page.find('gux-form-field-color');
+        const elementShadowDom = await element.find(
+          'pierce/.gux-form-field-container'
+        );
+
+        expect(element.outerHTML).toMatchSnapshot();
+        expect(elementShadowDom).toMatchSnapshot();
+      });
+
+      it('should be accessible', async () => {
+        const page = await newSparkE2EPage({ html });
+
+        await a11yCheck(page, axeExclusions);
+      });
+    });
   });
 });

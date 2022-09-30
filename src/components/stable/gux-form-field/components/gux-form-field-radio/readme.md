@@ -10,6 +10,7 @@
 | Slot      | Description                     |
 | --------- | ------------------------------- |
 | `"error"` | Optional slot for error message |
+| `"help"`  | Optional slot for help message  |
 | `"input"` | Required slot for input tag     |
 | `"label"` | Required slot for label tag     |
 

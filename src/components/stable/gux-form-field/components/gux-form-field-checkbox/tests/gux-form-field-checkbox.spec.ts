@@ -60,7 +60,14 @@ describe('gux-form-field-checkbox', () => {
           <label slot="label">Pizza</label>
           <span slot="error">Error message</span>
         </gux-form-field-checkbox>
+      `,
       `
+      <gux-form-field-checkbox>
+        <input slot="input" type="checkbox" name="food-1[]" value="pizza"/>
+        <label slot="label">Pizza</label>
+        <span slot="help">This is a help message</span>
+      </gux-form-field-checkbox>
+    `
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
