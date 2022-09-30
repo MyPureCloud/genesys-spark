@@ -45,6 +45,7 @@ export class GuxTable {
   private columnResizeState: GuxTableColumnResizeState | null;
   private tableId: string = randomHTMLId('gux-table');
   private columnsWidths: object = {};
+  private tableWidth: number = this.getElementComputedWidth(this.slottedTable);
 
   /**
    * Indicates that vertical scroll is presented for table
@@ -132,6 +133,7 @@ export class GuxTable {
           this.checkHorizontalScroll();
           this.checkVerticalScroll();
           this.updateScrollState();
+          this.scaleColumnWidths();
         });
       });
     }
@@ -407,13 +409,53 @@ export class GuxTable {
     document.querySelector('head').appendChild(styleElement);
 
     const columnWidths = this.calculateColumnWidths(this.tableColumns);
+    this.tableWidth = this.getElementComputedWidth(this.slottedTable);
 
-    this.calculateColumnPercentWidth(columnWidths)
+    columnWidths
       // Exclude the last column to allow it to fill the remaining space naturally
       .slice(0, -1)
       .forEach(c => (this.columnsWidths[c.name] = c.width));
 
     this.setResizableColumnsStyles();
+  }
+
+  /** Scale column pixel widths equal when a resize is observed */
+  private scaleColumnWidths(): void {
+    if (!this.columnResizeState && this.resizableColumns) {
+      const oldColumnWidths = this.calculateColumnWidths(this.tableColumns);
+      const oldTableWidth = this.tableWidth;
+      const newTableWidth = this.getElementComputedWidth(this.slottedTable);
+
+      oldColumnWidths
+        .map(col => ({
+          ...col,
+          width: this.calcScaledColWidth(
+            col.width,
+            oldTableWidth,
+            newTableWidth
+          )
+        }))
+        // Exclude the last column to allow it to fill the remaining space naturally
+        .slice(0, -1)
+        .forEach(c => (this.columnsWidths[c.name] = c.width));
+
+      this.tableWidth = newTableWidth;
+
+      this.setResizableColumnsStyles();
+    }
+  }
+
+  private calcScaledColWidth(
+    colWidth: number,
+    oldTableWidth: number,
+    newTableWidth: number
+  ): number {
+    const proposedWidth = Math.round(
+      (colWidth / oldTableWidth) * newTableWidth
+    );
+    const minWidth = 1;
+
+    return Math.max(proposedWidth, minWidth);
   }
 
   private updateResizeState(event: MouseEvent): void {
@@ -426,8 +468,7 @@ export class GuxTable {
       const initialWidth = this.columnResizeState.resizableColumnInitialWidth;
       const proposedWidth = initialWidth + delta;
 
-      const columnWidth =
-        proposedWidth > minimumWidth ? proposedWidth : minimumWidth;
+      const columnWidth = Math.max(proposedWidth, minimumWidth);
       const columnWidths = this.calculateColumnWidths(this.tableColumns).map(
         c => {
           if (c.name === columnName) {
@@ -437,11 +478,12 @@ export class GuxTable {
         }
       );
 
-      this.columnsWidths[columnName] = this.calculateColumnPercentWidth(
-        columnWidths
-      ).find(c => c.name === columnName).width;
+      this.columnsWidths[columnName] = columnWidths.find(
+        c => c.name === columnName
+      ).width;
 
       this.setResizableColumnsStyles();
+      this.tableWidth = this.getElementComputedWidth(this.slottedTable);
     } else {
       this.columnResizeHover = false;
       whenEventIsFrom('th', event, (th: HTMLTableCellElement) => {
@@ -498,23 +540,6 @@ export class GuxTable {
     return columns.map(c => ({
       name: c.dataset.columnName,
       width: this.getElementComputedWidth(c)
-    }));
-  }
-
-  /** Convert column pixel width to css string for percentage width */
-  private pixelsToCSSPercent(columnWidth: number, tableWidth: number): string {
-    return ((columnWidth / tableWidth) * 100).toFixed(2) + '%';
-  }
-
-  /** Converts pixel columns widths to percentage widths */
-  private calculateColumnPercentWidth(
-    columns: { name: string; width: number }[]
-  ): { name: string; width: string }[] {
-    const tablePxWidth = columns.reduce((prev, curr) => prev + curr.width, 0);
-
-    return columns.map(c => ({
-      ...c,
-      width: this.pixelsToCSSPercent(c.width, tablePxWidth)
     }));
   }
 
