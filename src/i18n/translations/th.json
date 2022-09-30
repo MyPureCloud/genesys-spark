@@ -10,20 +10,20 @@
     "red-bold": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: แดงหนา"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "คลิกเพื่อคัดลอก",
+    "copyToClipboard": "คัดลอกไปยังคลิปบอร์ด",
+    "enterToCopy": "กด Enter เพื่อคัดลอก",
+    "copySuccess": "คัดลอกไปที่คลิปบอร์ดแล้ว",
+    "copyFailure": "มีข้อผิดพลาด โปรดลองอีกครั้ง"
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "ล้าง {numberSelected} รายการที่เลือกไว้"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "พิมพ์เพื่อกรองผลลัพธ์ในดรอปดาวน์",
+    "noSelection": "เลือก...",
+    "dropdown": "ดรอปดาวน์",
+    "numberSelected": "เลือกแล้ว {numberSelected} รายการ"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "รายการต่อหน้า"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "การนำทางข้ามลิงค์"
   },
   "gux-table": {
     "emptyMessage": "ไม่มีข้อมูลที่พร้อมใช้งาน",

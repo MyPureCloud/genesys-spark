@@ -10,20 +10,20 @@
     "red-bold": "merke med etikett: {label}, farge: rød fet"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "Klikk for å kopiere",
+    "copyToClipboard": "Kopier til utklippstavle",
+    "enterToCopy": "Trykk på Enter for å kopiere",
+    "copySuccess": "Kopiert til utklippstavlen",
+    "copyFailure": "Feil. Prøv på nytt."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "Fjern {numberSelected} valgte elementer"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "Skriv for å filtrere resultater fra nedtrekkslisten",
+    "noSelection": "Velg ...",
+    "dropdown": "Rullegardinliste",
+    "numberSelected": "{numberSelected} valgt"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "Elementer per side"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "Hopp over lenkenavigering"
   },
   "gux-table": {
     "emptyMessage": "Ingen data tilgjengelig",

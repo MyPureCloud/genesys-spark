@@ -29,7 +29,21 @@ export class GuxPopup {
     }
   }
 
+  connectedCallback(): void {
+    if (this.targetElementContainer && this.popupElementContainer) {
+      this.setPopperInstance();
+    }
+  }
+
   componentDidLoad(): void {
+    this.setPopperInstance();
+  }
+
+  disconnectedCallback(): void {
+    this.popperInstance?.destroy();
+  }
+
+  private setPopperInstance(): void {
     this.popperInstance = createPopper(
       this.targetElementContainer,
       this.popupElementContainer,
@@ -68,10 +82,6 @@ export class GuxPopup {
         placement: 'bottom-start'
       }
     );
-  }
-
-  disconnectedCallback(): void {
-    this.popperInstance.destroy();
   }
 
   render(): JSX.Element {

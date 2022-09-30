@@ -10,20 +10,20 @@
     "red-bold": "תג עם תווית: {label}, צבע: אדום מודגש"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "לחץ כדי להעתיק",
+    "copyToClipboard": "העתק ללוח",
+    "enterToCopy": "הקש Enter כדי להעתיק",
+    "copySuccess": "הועתק ללוח",
+    "copyFailure": "שגיאה. נסה שוב."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "נקה {numberSelected} פריטים שנבחרו"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "הקלד כדי לסנן תוצאות ברשימה נפתחת",
+    "noSelection": "בחר...",
+    "dropdown": "רשימה נפתחת",
+    "numberSelected": "{numberSelected} נבחרו"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -35,24 +35,24 @@
     "unset": "Unset"
   },
   "gux-pagination-buttons-beta": {
-    "page": "Page",
-    "totalPages": " of {totalPages, number}",
-    "first": "First",
-    "previous": "Previous",
-    "next": "Next",
-    "last": "Last",
-    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
+    "page": "עמוד",
+    "totalPages": "מתוך {totalPages, number}",
+    "first": "ראשון",
+    "previous": "הקודם",
+    "next": "הבא",
+    "last": "אחרון",
+    "pageInputLabel": "עמוד {currentPage, number} מתוך {totalPages, number}"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
     "totalItems": " of {totalItems, number}"
   },
   "gux-pagination-items-per-page-beta": {
-    "perPage": "per page",
-    "itemsPerPage": "Items per page"
+    "perPage": "בעמוד",
+    "itemsPerPage": "פריטים בעמוד"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "דלג על ניווט לקישורים"
   },
   "gux-table": {
     "emptyMessage": "אין נתונים זמינים",
@@ -154,7 +154,7 @@
     "clear": "נקה"
   },
   "gux-listbox-multi": {
-    "noMatches": "No matches"
+    "noMatches": "אין התאמות"
   },
   "gux-listbox": {
     "noMatches": "אין התאמות"

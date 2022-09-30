@@ -10,20 +10,20 @@
     "red-bold": "شارة مع التسمية: {label}، اللون: أحمر سميك"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "انقر للنسخ ",
+    "copyToClipboard": "نسخ إلى الحافظة",
+    "enterToCopy": "اضغط على Enter للنسخ",
+    "copySuccess": "تم النسخ إلى الحافظة",
+    "copyFailure": "خطأ. حاول مرة أخرى."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "مسح {numberSelected} من العناصر المحددة"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "اكتب لتصفية نتائج القائمة المنسدلة",
+    "noSelection": "تحديد...",
+    "dropdown": "قائمة منسدلة",
+    "numberSelected": "تم تحديد {numberSelected}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -40,17 +40,19 @@
     "first": "الأول",
     "previous": "السابق",
     "next": "التالي",
-    "last": "الأخير"
+    "last": "الأخير",
+    "pageInputLabel": "صفحة {currentPage, number} من {totalPages, number}"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
     "totalItems": " من {totalItems, number}"
   },
   "gux-pagination-items-per-page-beta": {
-    "perPage": "لكل صفحة"
+    "perPage": "لكل صفحة",
+    "itemsPerPage": "عناصر لكل صفحة"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "تخطي التنقل بين الروابط"
   },
   "gux-table": {
     "emptyMessage": "لا توجد بيانات متاحة",
@@ -152,7 +154,7 @@
     "clear": "مسح"
   },
   "gux-listbox-multi": {
-    "noMatches": "No matches"
+    "noMatches": "لا توجد تطابقات"
   },
   "gux-listbox": {
     "noMatches": "لا توجد تطابقات"

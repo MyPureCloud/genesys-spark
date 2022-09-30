@@ -10,20 +10,20 @@
     "red-bold": "badge met label: {label}, kleur: rood vet"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "Klikken om te kopiëren",
+    "copyToClipboard": "Kopiëren naar Klembord",
+    "enterToCopy": "Op Enter drukken om te kopiëren",
+    "copySuccess": "Gekopieerd naar Klembord",
+    "copyFailure": "Fout. Probeer het opnieuw."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "{numberSelected} geselecteerde items wissen"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "Voer tekst in om resultaten in de vervolgkeuzelijst te filteren",
+    "noSelection": "Selecteren...",
+    "dropdown": "Vervolgkeuzelijst",
+    "numberSelected": "{numberSelected} geselecteerd"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "Items per pagina"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "Navigatie naar koppelingen overslaan"
   },
   "gux-table": {
     "emptyMessage": "Geen gegevens beschikbaar",

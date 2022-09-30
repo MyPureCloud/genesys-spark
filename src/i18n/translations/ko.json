@@ -10,20 +10,20 @@
     "red-bold": "레이블 있는 배지: {label}, 색상: 빨간색 굵게"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "클릭하여 복사",
+    "copyToClipboard": "클립보드로 복사",
+    "enterToCopy": "Enter 키를 눌러 복사",
+    "copySuccess": "클립보드에 복사됨",
+    "copyFailure": "오류. 다시 시도하십시오."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "선택한 {numberSelected}개 항목 해제하기"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "드롭다운 결과를 필터링하려면 입력하십시오.",
+    "noSelection": "선택...",
+    "dropdown": "드롭다운",
+    "numberSelected": "{numberSelected}개 선택함"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "페이지당 항목"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "링크 탐색 건너뛰기"
   },
   "gux-table": {
     "emptyMessage": "사용할 수 있는 데이터 없음",

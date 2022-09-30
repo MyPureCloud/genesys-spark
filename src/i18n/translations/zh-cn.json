@@ -10,20 +10,20 @@
     "red-bold": "标签为 {label}，颜色为亮红色的徽章"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "单击以复制",
+    "copyToClipboard": "复制到剪贴板",
+    "enterToCopy": "按 Enter 键复制",
+    "copySuccess": "复制到剪贴板",
+    "copyFailure": "错误。请重试。"
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "清除 {numberSelected} 个已选项目"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "输入以过滤下拉结果",
+    "noSelection": "选择...",
+    "dropdown": "下拉菜单",
+    "numberSelected": "已选择 {numberSelected} 个"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "每页项目数"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "跳过链接导航"
   },
   "gux-table": {
     "emptyMessage": "无可用数据",

@@ -10,20 +10,20 @@
     "red-bold": "значок с меткой: {label}, цвет: красный, полужирный"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "Нажмите для копирования",
+    "copyToClipboard": "Скопировать в буфер обмена",
+    "enterToCopy": "Нажмите клавишу ВВОД для копирования",
+    "copySuccess": "Скопировано в буфер обмена",
+    "copyFailure": "Ошибка. Повторите попытку."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "Очистить выбранные элементы: {numberSelected}"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "Начните ввод для фильтрации результатов раскрывающегося списка",
+    "noSelection": "Выбрать...",
+    "dropdown": "Раскрывающийся список",
+    "numberSelected": "Выбрано {numberSelected}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "Элементов на странице"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "Пропустить навигацию по ссылкам"
   },
   "gux-table": {
     "emptyMessage": "Данные недоступны",
