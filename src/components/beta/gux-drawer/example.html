@@ -6,10 +6,25 @@
 (function(){
     const toggleDrawerBtn = document.getElementById('toggleDrawerBtn');
     const drawer = document.getElementById('drawer');
-    drawer.show();
+    drawer.showModal();
 })()
 "
 >
   Click
 </button>
-<gux-drawer-beta id="drawer"></gux-drawer-beta>
+<gux-drawer-beta id="drawer">
+  <div slot="header">
+    <h1>Title copy</h1>
+    <p>
+      Guide - Subtitle goes here and over two lines at a maximum to prevent
+      cognitive overload.
+    </p>
+  </div>
+  <div slot="footer">
+    <gux-button accent="primary" onclick="notify(event)">Primary</gux-button>
+    <gux-button accent="secondary" onclick="notify(event)"
+      >Secondary</gux-button
+    >
+    <gux-button accent="tertiary" onclick="notify(event)">Tertiary</gux-button>
+  </div>
+</gux-drawer-beta>

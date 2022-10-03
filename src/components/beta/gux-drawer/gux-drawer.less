@@ -1,7 +1,26 @@
 .gux-drawer {
-  background-color: red;
+  & dialog {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 100%;
+    max-width: 532px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: none;
+  }
 
-  &::backdrop {
-    background: blue;
+  & .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 532px);
+    height: 100%;
+    content: '';
+    background-color: #202937;
+    opacity: 0.4;
   }
 }
