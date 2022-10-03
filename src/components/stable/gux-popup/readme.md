@@ -13,6 +13,14 @@
 | `expanded` | `expanded` |             | `boolean` | `false` |
 
 
+## Events
+
+| Event               | Description                                                          | Type                |
+| ------------------- | -------------------------------------------------------------------- | ------------------- |
+| `internalcollapsed` | This event will run when the popup transitions to a collapsed state. | `CustomEvent<void>` |
+| `internalexpanded`  | This event will run when the popup transitions to an expanded state. | `CustomEvent<void>` |
+
+
 ## Slots
 
 | Slot       | Description              |
