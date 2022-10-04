@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.34.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.33.2...v3.34.0) (2022-10-04)
+
+
+### Features
+
+* **button:** addition of danger accent ([1d8c979](https://github.com/MyPureCloud/genesys-webcomponents/commit/1d8c979a4eed44b448a899ecd9e6c3d16ccf6f40))
+
 ### [3.33.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.33.1...v3.33.2) (2022-09-30)
 
 
