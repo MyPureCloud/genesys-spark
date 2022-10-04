@@ -1,9 +1,13 @@
 import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
+
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import translationResources from './i18n/en.json';
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { trackComponent } from '../../../usage-tracking';
-import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+
+import translationResources from './i18n/en.json';
 
 import {
   GuxClockType,
@@ -35,7 +39,6 @@ export class GuxTimePickerBeta {
   private clockButton: HTMLButtonElement;
   private hourInputElement: HTMLInputElement;
   private minuteInputElement: HTMLInputElement;
-  private moveFocusDelay: number = 100;
   private i18n: GetI18nValue;
   private valueLastChange: GuxISOHourMinute;
 
@@ -115,9 +118,9 @@ export class GuxTimePickerBeta {
   }
 
   private focusFirstItemInPopupList(): void {
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       void this.listElement.guxFocusFirstItem();
-    }, this.moveFocusDelay);
+    });
   }
 
   private toggleDropdown() {

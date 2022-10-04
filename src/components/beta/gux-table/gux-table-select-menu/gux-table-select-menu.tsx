@@ -9,9 +9,12 @@ import {
   State
 } from '@stencil/core';
 
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+import { eventIsFrom } from '@utils/dom/event-is-from';
+import { randomHTMLId } from '@utils/dom/random-html-id';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
-import { eventIsFrom } from '../../../../utils/dom/event-is-from';
-import { randomHTMLId } from '../../../../utils/dom/random-html-id';
+
 import tableResources from '../i18n/en.json';
 
 /**
@@ -30,7 +33,6 @@ export class GuxTableSelectMenu {
   private dropdownOptionsButtonId: string = randomHTMLId(
     'gux-table-select-menu'
   );
-  private moveFocusDelay: number = 100;
   private hasSelectMenuOptions: boolean = false;
 
   @Element()
@@ -46,9 +48,9 @@ export class GuxTableSelectMenu {
 
   private focusFirstItemInPopupList(): void {
     const listElement: HTMLGuxListElement = this.root.querySelector('gux-list');
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       void listElement?.guxFocusFirstItem();
-    }, this.moveFocusDelay);
+    });
   }
 
   async componentWillLoad(): Promise<void> {
