@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`gux-button #render should render danger accent button 1`] = `
+<gux-button accent="danger">
+  <mock:shadow-root>
+    <button class="gux-danger" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Danger accent
+</gux-button>
+`;
+
 exports[`gux-button #render should render default button 1`] = `
 <gux-button>
   <mock:shadow-root>
@@ -8,6 +19,17 @@ exports[`gux-button #render should render default button 1`] = `
     </button>
   </mock:shadow-root>
   Button
+</gux-button>
+`;
+
+exports[`gux-button #render should render disabled danger accent button 1`] = `
+<gux-button accent="danger" disabled="">
+  <mock:shadow-root>
+    <button class="gux-danger" disabled="" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Danger accent
 </gux-button>
 `;
 

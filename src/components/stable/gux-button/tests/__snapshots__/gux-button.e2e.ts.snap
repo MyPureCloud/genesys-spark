@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`gux-button #render should render danger button 1`] = `"<gux-button accent=\\"danger\\" hydrated=\\"\\">Danger accent</gux-button>"`;
+
 exports[`gux-button #render should render default button 1`] = `"<gux-button hydrated=\\"\\">Button</gux-button>"`;
+
+exports[`gux-button #render should render disabled danger button 1`] = `"<gux-button accent=\\"danger\\" disabled=\\"\\" hydrated=\\"\\">Danger accent</gux-button>"`;
 
 exports[`gux-button #render should render disabled default button 1`] = `"<gux-button disabled=\\"\\" hydrated=\\"\\">Button</gux-button>"`;
 
