@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.34.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.1...v3.34.2) (2022-10-05)
+
+
+### Bug Fixes
+
+* **popover:** simplified positioning so nested popups work ([8d97daa](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d97daa16e09c6210711996b2ea6192a3fd6ab16))
+
 ### [3.34.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.0...v3.34.1) (2022-10-04)
 
 ## [3.34.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.33.2...v3.34.0) (2022-10-04)
