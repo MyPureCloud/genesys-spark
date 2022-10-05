@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.34.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.2...v3.34.3) (2022-10-05)
+
+
+### Bug Fixes
+
+* **gux-table:** revert resizable columns to pixel width and scale on container resize ([fa51ead](https://github.com/MyPureCloud/genesys-webcomponents/commit/fa51ead17bcd3db53e3cfd1a3eef8119ffe59cf3))
+* **gux-table:** use percentage widths for resizable columns to alter behavior when resizing viewport ([b6ff30e](https://github.com/MyPureCloud/genesys-webcomponents/commit/b6ff30e9a4d596bcc93d9c6a4c0f2d081d559089))
+
 ### [3.34.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.1...v3.34.2) (2022-10-05)
 
 
