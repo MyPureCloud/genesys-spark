@@ -45,6 +45,7 @@ export class GuxTable {
   private columnResizeState: GuxTableColumnResizeState | null;
   private tableId: string = randomHTMLId('gux-table');
   private columnsWidths: object = {};
+  private tableWidth: number = this.getElementComputedWidth(this.slottedTable);
 
   /**
    * Indicates that vertical scroll is presented for table
@@ -110,7 +111,7 @@ export class GuxTable {
   @Prop()
   resizableColumns: boolean;
 
-  /******************************* Lifcycle Hooks *******************************/
+  /******************************* Lifecycle Hooks *******************************/
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
@@ -132,6 +133,7 @@ export class GuxTable {
           this.checkHorizontalScroll();
           this.checkVerticalScroll();
           this.updateScrollState();
+          this.scaleColumnWidths();
         });
       });
     }
@@ -259,7 +261,7 @@ export class GuxTable {
     this.updateSelectAllBoxState();
   }
 
-  // Update the checked/interminate state of the select all checkbox
+  // Update the checked/indeterminate state of the select all checkbox
   private updateSelectAllBoxState(): void {
     const selectAllCheckbox = this.selectAllCheckbox;
 
@@ -399,35 +401,89 @@ export class GuxTable {
     return container ? container.offsetWidth - container.clientWidth : 0;
   }
 
-  /******************************* Resizeable Columns *******************************/
+  /******************************* Resizable Columns *******************************/
 
   private prepareResizableColumns(): void {
     const styleElement = document.createElement('style');
     styleElement.id = `${this.tableId}-resizable-styles`;
     document.querySelector('head').appendChild(styleElement);
 
-    const columns = this.tableColumns;
-    columns.pop();
+    const columnWidths = this.calculateColumnWidths(this.tableColumns);
+    this.tableWidth = this.getElementComputedWidth(this.slottedTable);
 
-    columns.forEach((column: HTMLElement) => {
-      this.columnsWidths[
-        column.dataset.columnName
-      ] = `${this.getElementComputedWidth(column)}px`;
-    });
+    columnWidths
+      // Exclude the last column to allow it to fill the remaining space naturally
+      .slice(0, -1)
+      .forEach(c => (this.columnsWidths[c.name] = c.width));
 
     this.setResizableColumnsStyles();
   }
 
+  /** Scale column pixel widths equal when a resize is observed */
+  private scaleColumnWidths(): void {
+    if (!this.columnResizeState && this.resizableColumns) {
+      const oldColumnWidths = this.calculateColumnWidths(this.tableColumns);
+      const oldTableWidth = this.tableWidth;
+      const newTableWidth = this.getElementComputedWidth(this.slottedTable);
+
+      oldColumnWidths
+        .map(col => ({
+          ...col,
+          width: this.calcScaledColWidth(
+            col.width,
+            oldTableWidth,
+            newTableWidth
+          )
+        }))
+        // Exclude the last column to allow it to fill the remaining space naturally
+        .slice(0, -1)
+        .forEach(c => (this.columnsWidths[c.name] = c.width));
+
+      this.tableWidth = newTableWidth;
+
+      this.setResizableColumnsStyles();
+    }
+  }
+
+  private calcScaledColWidth(
+    colWidth: number,
+    oldTableWidth: number,
+    newTableWidth: number
+  ): number {
+    const proposedWidth = Math.round(
+      (colWidth / oldTableWidth) * newTableWidth
+    );
+    const minWidth = 1;
+
+    return Math.max(proposedWidth, minWidth);
+  }
+
   private updateResizeState(event: MouseEvent): void {
     if (this.columnResizeState) {
+      const minimumWidth = 1;
       const columnName =
         this.columnResizeState.resizableColumn.dataset.columnName;
-      const columnWidth =
-        this.columnResizeState.resizableColumnInitialWidth +
-        (event.pageX - this.columnResizeState.columnResizeMouseStartX);
+      const delta =
+        event.pageX - this.columnResizeState.columnResizeMouseStartX;
+      const initialWidth = this.columnResizeState.resizableColumnInitialWidth;
+      const proposedWidth = initialWidth + delta;
 
-      this.columnsWidths[columnName] = `${columnWidth > 1 ? columnWidth : 1}px`;
+      const columnWidth = Math.max(proposedWidth, minimumWidth);
+      const columnWidths = this.calculateColumnWidths(this.tableColumns).map(
+        c => {
+          if (c.name === columnName) {
+            return { ...c, width: columnWidth };
+          }
+          return c;
+        }
+      );
+
+      this.columnsWidths[columnName] = columnWidths.find(
+        c => c.name === columnName
+      ).width;
+
       this.setResizableColumnsStyles();
+      this.tableWidth = this.getElementComputedWidth(this.slottedTable);
     } else {
       this.columnResizeHover = false;
       whenEventIsFrom('th', event, (th: HTMLTableCellElement) => {
@@ -470,10 +526,21 @@ export class GuxTable {
   }
 
   private getElementComputedWidth(element: HTMLElement): number {
-    return parseInt(
-      window.getComputedStyle(element).getPropertyValue('width').split('px')[0],
-      10
+    return (
+      element.clientWidth -
+      parseInt(window.getComputedStyle(element).paddingLeft) -
+      parseInt(window.getComputedStyle(element).paddingRight)
     );
+  }
+
+  /** Calculates column width minus padding in pixels */
+  private calculateColumnWidths(
+    columns: HTMLElement[]
+  ): { name: string; width: number }[] {
+    return columns.map(c => ({
+      name: c.dataset.columnName,
+      width: this.getElementComputedWidth(c)
+    }));
   }
 
   private setResizableColumnsStyles(): void {
