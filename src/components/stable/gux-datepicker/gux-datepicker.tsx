@@ -10,19 +10,21 @@ import {
   State,
   Watch
 } from '@stencil/core';
+import { createPopper, Instance } from '@popperjs/core';
 
-import { trackComponent } from '../../../usage-tracking';
-import { CalendarModes } from '../../../common-enums';
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-
+import { randomHTMLId } from '@utils/dom/random-html-id';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import {
   asIsoDateRange,
   asIsoDate,
   fromIsoDateRange,
   fromIsoDate
-} from '../../../utils/date/iso-dates';
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+} from '@utils/date/iso-dates';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
+
+import { trackComponent } from '../../../usage-tracking';
+import { CalendarModes } from '../../../common-enums';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import translationResources from './i18n/en.json';
 import {
@@ -43,8 +45,6 @@ import {
   getIntervalOrder,
   getIntervalRange
 } from './gux-datepicker.service';
-
-import { createPopper, Instance } from '@popperjs/core';
 
 @Component({
   styleUrl: 'gux-datepicker.less',
@@ -264,9 +264,9 @@ export class GuxDatepicker {
           const button: HTMLButtonElement = this.root.shadowRoot.querySelector(
             '.gux-calendar-toggle-button'
           );
-          setTimeout(() => {
+          afterNextRenderTimeout(() => {
             button.focus();
-          }, 100);
+          });
           break;
         }
         case 'Tab':
@@ -310,7 +310,7 @@ export class GuxDatepicker {
     this.focusedField = this.getInputFieldFromEvent(event);
     if (!this.isSelectingRangeWithMouse) {
       // When focusing the input the Safari browser will fight for control of the cursor unless it is done asynchronously
-      setTimeout(() => this.setRange());
+      afterNextRenderTimeout(() => this.setRange());
     }
   }
 
@@ -570,10 +570,9 @@ export class GuxDatepicker {
   toggleCalendar() {
     this.active = !this.active;
     if (this.active) {
-      // Wait for render before focusing preview date
-      setTimeout(() => {
+      afterNextRenderTimeout(() => {
         void this.calendarElement.focusPreviewDate();
-      }, 100);
+      });
     }
   }
 

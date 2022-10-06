@@ -1,4 +1,3 @@
-import { createPopper, Instance } from '@popperjs/core';
 import {
   Component,
   Element,
@@ -9,14 +8,13 @@ import {
   State,
   Watch
 } from '@stencil/core';
+import { createPopper, Instance } from '@popperjs/core';
+
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import { trackComponent } from '../../../usage-tracking';
 
-import {
-  HTMLGuxMenuItemElement,
-  hideDelay,
-  moveFocusDelay
-} from './gux-menu/gux-menu.common';
+import { HTMLGuxMenuItemElement, hideDelay } from './gux-menu/gux-menu.common';
 
 @Component({
   styleUrl: 'gux-flyout-menu.less',
@@ -24,7 +22,7 @@ import {
   shadow: true
 })
 export class GuxFlyoutMenu {
-  private hideDelayTimeout: NodeJS.Timer;
+  private hideDelayTimeout: ReturnType<typeof setTimeout>;
   private popperInstance: Instance;
   private targetElement: HTMLSpanElement;
   private menuContentElement: HTMLDivElement;
@@ -62,9 +60,9 @@ export class GuxFlyoutMenu {
           return;
 
         case 'Enter':
-          this.hideDelayTimeout = setTimeout(() => {
+          this.hideDelayTimeout = afterNextRenderTimeout(() => {
             this.focusOnMenu();
-          }, moveFocusDelay);
+          });
           return;
       }
     }
@@ -80,9 +78,9 @@ export class GuxFlyoutMenu {
         if (this.menuContentElement.contains(document.activeElement)) {
           this.root.focus();
         } else {
-          this.hideDelayTimeout = setTimeout(() => {
+          this.hideDelayTimeout = afterNextRenderTimeout(() => {
             this.focusOnMenu();
-          }, moveFocusDelay);
+          });
         }
         return;
     }

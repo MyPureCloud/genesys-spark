@@ -10,10 +10,13 @@ import {
   Watch
 } from '@stencil/core';
 
-import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
+import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
 import { trackComponent } from '../../../usage-tracking';
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
-import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
+
+import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
 
 /**
  * @slot title - slot for icon and button text
@@ -28,7 +31,6 @@ export class GuxButtonMulti {
   private root: HTMLElement;
   listElement: HTMLGuxListElement;
   dropdownButton: HTMLElement;
-  private moveFocusDelay: number = 100;
 
   /**
    * Triggered when the menu is open
@@ -138,15 +140,15 @@ export class GuxButtonMulti {
   }
 
   private focusPopupList(): void {
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       this.listElement.focus();
-    }, this.moveFocusDelay);
+    });
   }
 
   private focusFirstItemInPopupList(): void {
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       void this.listElement.guxFocusFirstItem();
-    }, this.moveFocusDelay);
+    });
   }
 
   private onListClick(event: MouseEvent): void {

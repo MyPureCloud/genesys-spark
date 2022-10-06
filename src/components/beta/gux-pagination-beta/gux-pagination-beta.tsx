@@ -11,11 +11,14 @@ import {
   State
 } from '@stencil/core';
 
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
+import { trackComponent } from '../../../usage-tracking';
+
 import {
   GuxItemsPerPage,
   GuxPaginationState
 } from '../../stable/gux-pagination/gux-pagination.types';
-import { trackComponent } from '../../../usage-tracking';
 
 import { GuxPaginationLayoutBeta } from './gux-pagination-beta.types';
 
@@ -179,7 +182,7 @@ export class GuxPaginationBeta implements ComponentInterface {
       );
     }
 
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       this.checkPaginationContainerWidthForLayout();
     }, 500);
   }

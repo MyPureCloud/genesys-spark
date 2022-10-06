@@ -14,9 +14,11 @@ import {
 } from '@stencil/core';
 import Sortable, { MoveEvent } from 'sortablejs';
 
-import { OnMutation } from '../../../../utils/decorator/on-mutation';
+import { OnMutation } from '@utils/decorator/on-mutation';
+import { eventIsFrom } from '@utils/dom/event-is-from';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
-import { eventIsFrom } from '../../../../utils/dom/event-is-from';
 
 import tabsResources from '../i18n/en.json';
 
@@ -27,7 +29,6 @@ import tabsResources from '../i18n/en.json';
 })
 export class GuxTabAdvancedList {
   private i18n: GetI18nValue;
-  private moveFocusDelay: number = 100;
   private triggerIds: string;
 
   @Element()
@@ -250,9 +251,9 @@ export class GuxTabAdvancedList {
           }
         });
         this.focusTab(this.initialSortIndex);
-        setTimeout(() => {
+        afterNextRenderTimeout(() => {
           this.focusTab(this.initialSortIndex);
-        }, this.moveFocusDelay);
+        });
 
         break;
       case 'Enter':
@@ -517,7 +518,7 @@ export class GuxTabAdvancedList {
       });
     }
 
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       this.checkForScrollbarHideOrShow();
     }, 500);
   }

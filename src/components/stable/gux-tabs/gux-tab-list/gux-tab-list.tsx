@@ -10,6 +10,8 @@ import {
   writeTask
 } from '@stencil/core';
 
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import { OnMutation } from '../../../../utils/decorator/on-mutation';
 
@@ -251,7 +253,7 @@ export class GuxTabList {
       });
     }
 
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       this.checkForScrollbarHideOrShow();
     }, 500);
   }

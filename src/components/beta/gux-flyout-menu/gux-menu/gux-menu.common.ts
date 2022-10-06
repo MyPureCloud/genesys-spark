@@ -3,7 +3,6 @@ export type HTMLGuxMenuItemElement =
   | HTMLGuxSubmenuElement;
 
 export const hideDelay = 250;
-export const moveFocusDelay = 100;
 
 export function menuNavigation(
   event: KeyboardEvent,
