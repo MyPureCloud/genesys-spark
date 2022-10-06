@@ -22,9 +22,9 @@ import {
 } from '@utils/date/iso-dates';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 
-import { trackComponent } from '../../../usage-tracking';
-import { CalendarModes } from '../../../common-enums';
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { trackComponent } from 'usage-tracking';
+import { CalendarModes } from 'common-enums';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
 
 import translationResources from './i18n/en.json';
 import {

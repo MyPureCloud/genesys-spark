@@ -1,8 +1,4 @@
-import {
-  trackComponent,
-  trackAction,
-  getVersionEvent
-} from '../usage-tracking';
+import { trackComponent, trackAction, getVersionEvent } from 'usage-tracking';
 import packageInfo from '../../package.json';
 
 const component = document.createElement('gux-button');

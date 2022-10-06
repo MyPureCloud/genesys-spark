@@ -13,7 +13,7 @@ import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { eventIsFrom } from '@utils/dom/event-is-from';
 import { randomHTMLId } from '@utils/dom/random-html-id';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
 
 import tableResources from '../i18n/en.json';
 

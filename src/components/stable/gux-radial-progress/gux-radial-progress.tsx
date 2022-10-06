@@ -1,8 +1,8 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
-import { logError } from '../../../utils/error/log-error';
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { trackComponent } from 'usage-tracking';
+import { logError } from 'utils/error/log-error';
+import { randomHTMLId } from 'utils/dom/random-html-id';
 
 import {
   GuxPercentageState,

@@ -14,8 +14,8 @@ import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
-import { trackComponent } from '../../../usage-tracking';
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { trackComponent } from 'usage-tracking';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
 
 import { GuxButtonAccent, GuxButtonType } from '../gux-button/gux-button.types';
 import defaultResources from './i18n/en.json';

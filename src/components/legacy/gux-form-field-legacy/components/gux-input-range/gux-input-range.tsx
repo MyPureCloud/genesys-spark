@@ -1,7 +1,7 @@
 import { Component, Element, h, JSX, Listen, State, Prop } from '@stencil/core';
 import { setInterval, clearInterval } from 'requestanimationframe-timer';
 
-import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
+import { onDisabledChange } from 'utils/dom/on-attribute-change';
 
 /**
  * @slot input - Required slot for input[type="range"]

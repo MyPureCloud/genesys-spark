@@ -1,8 +1,8 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from 'usage-tracking';
 
 import { GuxRadialLoadingContext } from './gux-radial-loading.types';
 

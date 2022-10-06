@@ -3,11 +3,11 @@
 import { Component, Element, h, JSX, Prop, Watch } from '@stencil/core';
 import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from 'usage-tracking';
 
-import { logError } from '../../../utils/error/log-error';
+import { logError } from 'utils/error/log-error';
 
-import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
+import { VISUALIZATION_COLORS } from 'utils/theme/color-palette';
 
 const DEFAULT_COLOR_FIELD_NAME = 'category';
 const DEFAULT_LABEL_FIELD_NAME = 'value';

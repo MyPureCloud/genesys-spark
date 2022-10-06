@@ -1,4 +1,4 @@
-import { getDesiredLocale } from '../../../i18n';
+import { getDesiredLocale } from 'i18n';
 
 import {
   GuxClockType,

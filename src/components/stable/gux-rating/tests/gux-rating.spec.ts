@@ -1,4 +1,4 @@
-jest.mock('../../../../utils/dom/random-html-id', () => ({
+jest.mock('utils/dom/random-html-id', () => ({
   randomHTMLId: () => 'random'
 }));
 

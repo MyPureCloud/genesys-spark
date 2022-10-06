@@ -1,9 +1,9 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
-import setInputValue from '../../../../../utils/dom/set-input-value';
-import simulateNativeEvent from '../../../../../utils/dom/simulate-native-event';
-import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import setInputValue from 'utils/dom/set-input-value';
+import simulateNativeEvent from 'utils/dom/simulate-native-event';
+import { onDisabledChange } from 'utils/dom/on-attribute-change';
 
 import componentResources from './i18n/en.json';
 

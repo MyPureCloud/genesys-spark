@@ -10,8 +10,8 @@ import {
   Method
 } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
-import { randomHTMLId } from '../../../../utils/dom/random-html-id';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { randomHTMLId } from 'utils/dom/random-html-id';
 import tableResources from '../i18n/en.json';
 
 @Component({

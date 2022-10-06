@@ -9,7 +9,7 @@ import {
   Prop
 } from '@stencil/core';
 
-import { GuxTextHighlightStrategy } from '../../../stable/gux-text-highlight/gux-text-highlight.types';
+import { GuxTextHighlightStrategy } from 'components/stable/gux-text-highlight/gux-text-highlight.types';
 
 @Component({
   styleUrl: 'gux-list-item.less',

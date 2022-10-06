@@ -1,6 +1,6 @@
 import { getAssetPath } from '@stencil/core';
 
-import { logError } from '../../../utils/error/log-error';
+import { logError } from 'utils/error/log-error';
 
 import { iconNameMap } from './icon-name-map';
 import { legacyIconNames } from './legacy-icon-names';

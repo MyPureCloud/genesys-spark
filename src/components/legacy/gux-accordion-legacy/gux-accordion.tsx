@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Method, Prop, State } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from 'usage-tracking';
 
 import {
   GuxAccordionLegacyArrowPosition,

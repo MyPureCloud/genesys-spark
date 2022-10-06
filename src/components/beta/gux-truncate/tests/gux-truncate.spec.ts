@@ -1,4 +1,4 @@
-jest.mock('../../../../utils/decorator/on-resize', () => ({
+jest.mock('utils/decorator/on-resize', () => ({
   __esModule: true,
   OnResize: jest.fn()
 }));
