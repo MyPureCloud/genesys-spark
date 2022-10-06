@@ -14,8 +14,7 @@ jobs:
     steps:
       - uses: mshick/add-pr-comment@v1
         with:
-          message: "🧐 This PR is ready for UX review.\n
-            UX Reviewers Assemble!\n
+          message: "🧐 UX Reviewers Assemble!\n
               - @conor-darcy\n
               - @joyshaffer\n
               - @kellysparker\n
@@ -26,8 +25,7 @@ jobs:
             Review Reminders\n
               1. Add a comment to let us know who is reviewing this change\n
               2. Check out the implementation @ https://apps.inindca.com/common-ui-docs/genesys-webcomponents/${{ github.head_ref }}\n
-              3. ????\n
-              4. Profit!💰
+              3. Be sure to note which issues are blockers and which are refinements
           "
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: 'github-actions[bot]'
