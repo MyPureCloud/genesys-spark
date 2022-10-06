@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.34.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.3...v3.34.4) (2022-10-06)
+
 ### [3.34.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.2...v3.34.3) (2022-10-05)
 
 
