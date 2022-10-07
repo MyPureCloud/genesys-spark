@@ -8,7 +8,9 @@ import {
   Method,
   Prop,
   State,
-  Watch
+  Watch,
+  Event,
+  EventEmitter
 } from '@stencil/core';
 
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
@@ -61,6 +63,36 @@ export class GuxDropdownMulti {
 
   @State()
   private filter: string = '';
+
+  /**
+   * This event will run when the dropdown-multi transitions to an expanded state.
+   */
+  @Event()
+  guxexpanded: EventEmitter<void>;
+
+  /**
+   * This event will run when the dropdown-multi transitions to a collapsed state.
+   */
+  @Event()
+  guxcollapsed: EventEmitter<void>;
+
+  /**
+   * Listens for expanded event emitted by gux-popup.
+   */
+  @Listen('internalexpanded')
+  onInternalExpanded(event: CustomEvent): void {
+    event.stopPropagation();
+    this.guxexpanded.emit();
+  }
+
+  /**
+   * Listens for collapsed event emitted by gux-popup.
+   */
+  @Listen('internalcollapsed')
+  onInternalCollapsed(event: CustomEvent): void {
+    event.stopPropagation();
+    this.guxcollapsed.emit();
+  }
 
   @Watch('expanded')
   focusSelectedItemAfterRender(expanded: boolean) {

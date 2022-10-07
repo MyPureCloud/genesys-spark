@@ -15,6 +15,14 @@
 | `value`       | `value`       |             | `string`  | `undefined` |
 
 
+## Events
+
+| Event          | Description                                                                   | Type                |
+| -------------- | ----------------------------------------------------------------------------- | ------------------- |
+| `guxcollapsed` | This event will run when the dropdown-multi transitions to a collapsed state. | `CustomEvent<void>` |
+| `guxexpanded`  | This event will run when the dropdown-multi transitions to an expanded state. | `CustomEvent<void>` |
+
+
 ## Methods
 
 ### `getSelectedValues() => Promise<string[]>`
