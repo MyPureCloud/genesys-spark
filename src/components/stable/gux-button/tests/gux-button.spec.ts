@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxButton } from '../../gux-button/gux-button';
+import { GuxButton } from 'components/stable/gux-button/gux-button';
 
 const components = [GuxButton];
 const language = 'en';

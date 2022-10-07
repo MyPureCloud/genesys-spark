@@ -1,5 +1,5 @@
 import { trackComponent, trackAction, getVersionEvent } from 'usage-tracking';
-import packageInfo from '../../package.json';
+import packageInfo from '../package.json';
 
 const component = document.createElement('gux-button');
 const addPageAction = jest.fn();

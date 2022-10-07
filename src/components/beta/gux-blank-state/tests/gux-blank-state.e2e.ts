@@ -1,5 +1,5 @@
 import { E2EElement, E2EPage } from '@stencil/core/testing';
-import { a11yCheck, newSparkE2EPage } from '../../../../../tests/e2eTestUtils';
+import { a11yCheck, newSparkE2EPage } from 'test/e2eTestUtils';
 
 describe('gux-blank-state-beta', () => {
   let page: E2EPage;

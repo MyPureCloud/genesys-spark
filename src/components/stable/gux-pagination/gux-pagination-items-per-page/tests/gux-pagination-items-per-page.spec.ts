@@ -2,9 +2,9 @@ import { newSpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
 import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page';
-import { GuxDropdown } from '../../../gux-dropdown/gux-dropdown';
-import { GuxListbox } from '../../../gux-listbox/gux-listbox';
-import { GuxOption } from '../../../gux-listbox/gux-option/gux-option';
+import { GuxDropdown } from 'components/stable/gux-dropdown/gux-dropdown';
+import { GuxListbox } from 'components/stable/gux-listbox/gux-listbox';
+import { GuxOption } from 'components/stable/gux-listbox/gux-option/gux-option';
 
 const components = [
   GuxPaginationItemsPerPage,

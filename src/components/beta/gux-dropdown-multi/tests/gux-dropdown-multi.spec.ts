@@ -2,8 +2,8 @@ import { newSpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
 import { GuxDropdownMulti } from '../gux-dropdown-multi';
-import { GuxListboxMulti } from '../../../stable/gux-listbox-multi/gux-listbox-multi';
-import { GuxOptionMulti } from '../../../stable/gux-listbox-multi/gux-option-multi/gux-option-multi';
+import { GuxListboxMulti } from 'components/stable/gux-listbox-multi/gux-listbox-multi';
+import { GuxOptionMulti } from 'components/stable/gux-listbox-multi/gux-option-multi/gux-option-multi';
 
 const components = [GuxDropdownMulti, GuxListboxMulti, GuxOptionMulti];
 const html = `

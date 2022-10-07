@@ -2,12 +2,12 @@ import { newSpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
 import { GuxFormFieldDropdown } from '../gux-form-field-dropdown';
-import { GuxDropdown } from '../../../../gux-dropdown/gux-dropdown';
-import { GuxDropdownMulti } from '../../../../../beta/gux-dropdown-multi/gux-dropdown-multi';
-import { GuxListbox } from '../../../../gux-listbox/gux-listbox';
-import { GuxListboxMulti } from '../../../../gux-listbox-multi/gux-listbox-multi';
-import { GuxOption } from '../../../../gux-listbox/gux-option/gux-option';
-import { GuxOptionMulti } from '../../../../gux-listbox-multi/gux-option-multi/gux-option-multi';
+import { GuxDropdown } from 'components/stable/gux-dropdown/gux-dropdown';
+import { GuxDropdownMulti } from 'components/beta/gux-dropdown-multi/gux-dropdown-multi';
+import { GuxListbox } from 'components/stable/gux-listbox/gux-listbox';
+import { GuxListboxMulti } from 'components/stable/gux-listbox-multi/gux-listbox-multi';
+import { GuxOption } from 'components/stable/gux-listbox/gux-option/gux-option';
+import { GuxOptionMulti } from 'components/stable/gux-listbox-multi/gux-option-multi/gux-option-multi';
 
 const components = [
   GuxFormFieldDropdown,
