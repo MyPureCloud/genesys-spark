@@ -1,6 +1,8 @@
 import {
   Component,
   Element,
+  Event,
+  EventEmitter,
   forceUpdate,
   h,
   Listen,
@@ -47,6 +49,9 @@ export class GuxDropdown {
 
   @Prop()
   required: boolean = false;
+
+  @Prop()
+  loading: boolean = false;
 
   @Prop()
   placeholder: string;
@@ -97,6 +102,11 @@ export class GuxDropdown {
     }
 
     this.value = undefined;
+  }
+
+  @Watch('filter')
+  handleFilter(filter: string) {
+    this.guxfilter.emit(filter);
   }
 
   @Listen('keydown')
@@ -161,6 +171,9 @@ export class GuxDropdown {
     this.collapseListbox('noFocusChange');
   }
 
+  @Event()
+  private guxfilter: EventEmitter<string>;
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
@@ -187,6 +200,7 @@ export class GuxDropdown {
   componentWillRender(): void {
     this.validateValue(this.value);
     this.listboxElement.filter = this.filter;
+    this.listboxElement.loading = this.loading;
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -369,6 +383,7 @@ export class GuxDropdown {
           aria-expanded={this.expanded.toString()}
         >
           {this.renderTargetContent()}
+          {this.renderRadialLoading()}
           <gux-icon
             class={{
               'gux-expand-icon': true
@@ -388,9 +403,20 @@ export class GuxDropdown {
     }
   }
 
+  private renderRadialLoading(): JSX.Element {
+    if (this.loading && !this.expanded) {
+      return (
+        <gux-radial-loading context="input"></gux-radial-loading>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return (
-      <gux-popup expanded={this.expanded} disabled={this.disabled}>
+      <gux-popup
+        expanded={this.expanded && (!this.loading || this.filterable)}
+        disabled={this.disabled}
+      >
         {this.renderTarget()}
         {this.renderPopup()}
       </gux-popup>

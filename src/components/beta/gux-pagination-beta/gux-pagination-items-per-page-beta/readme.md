@@ -39,7 +39,9 @@ graph TD;
   gux-pagination-items-per-page-beta --> gux-listbox
   gux-pagination-items-per-page-beta --> gux-option
   gux-dropdown --> gux-icon
+  gux-dropdown --> gux-radial-loading
   gux-dropdown --> gux-popup
+  gux-listbox --> gux-radial-loading
   gux-pagination-beta --> gux-pagination-items-per-page-beta
   style gux-pagination-items-per-page-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

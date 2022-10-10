@@ -54,6 +54,9 @@ export class GuxListboxMulti {
   value: string;
 
   @Prop()
+  loading: boolean = false;
+
+  @Prop()
   filter: string = '';
 
   @Prop()
@@ -276,12 +279,32 @@ export class GuxListboxMulti {
         .length === 0;
   }
 
+  // The slot must always be rendered so onSlotchange can be called
+  renderHiddenSlot(): JSX.Element {
+    return (
+      <div hidden>
+        <slot onSlotchange={() => this.setListboxOptions()} />
+      </div>
+    ) as JSX.Element;
+  }
+
+  renderLoading(): JSX.Element {
+    return [
+      <div class="gux-message-container">
+        <gux-radial-loading context="modal"></gux-radial-loading>
+        <span>{this.i18n('loading')}</span>
+      </div>,
+      this.renderHiddenSlot()
+    ] as JSX.Element;
+  }
+
   renderAllListboxOptionsFiltered(): JSX.Element {
-    if (this.allListboxOptionsFiltered) {
-      return (
+    return [
+      <div class="gux-message-container">
         <div class="gux-no-matches">{this.i18n('noMatches')}</div>
-      ) as JSX.Element;
-    }
+      </div>,
+      this.renderHiddenSlot()
+    ] as JSX.Element;
   }
 
   renderCreateOptionSlot(): JSX.Element {
@@ -289,10 +312,17 @@ export class GuxListboxMulti {
   }
 
   render(): JSX.Element {
+    if (this.loading) {
+      return this.renderLoading();
+    }
+
+    if (this.allListboxOptionsFiltered) {
+      return this.renderAllListboxOptionsFiltered();
+    }
+
     return (
       <Host role="listbox" aria-multiselectable="true" tabindex={0}>
         <slot onSlotchange={() => this.updateOnSlotChange()} />
-        {this.renderAllListboxOptionsFiltered()}
         {this.renderCreateOptionSlot()}
       </Host>
     ) as JSX.Element;

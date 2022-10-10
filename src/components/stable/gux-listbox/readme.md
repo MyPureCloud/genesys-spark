@@ -5,10 +5,11 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `filter` | `filter`  |             | `string` | `''`        |
-| `value`  | `value`   |             | `string` | `undefined` |
+| Property  | Attribute | Description | Type      | Default     |
+| --------- | --------- | ----------- | --------- | ----------- |
+| `filter`  | `filter`  |             | `string`  | `''`        |
+| `loading` | `loading` |             | `boolean` | `false`     |
+| `value`   | `value`   |             | `string`  | `undefined` |
 
 
 ## Events
@@ -45,9 +46,14 @@ Type: `Promise<void>`
  - [gux-pagination-items-per-page](../gux-pagination/gux-pagination-items-per-page)
  - [gux-pagination-items-per-page-beta](../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
 
+### Depends on
+
+- [gux-radial-loading](../gux-radial-loading)
+
 ### Graph
 ```mermaid
 graph TD;
+  gux-listbox --> gux-radial-loading
   gux-pagination-items-per-page --> gux-listbox
   gux-pagination-items-per-page-beta --> gux-listbox
   style gux-listbox fill:#f9f,stroke:#333,stroke-width:4px
