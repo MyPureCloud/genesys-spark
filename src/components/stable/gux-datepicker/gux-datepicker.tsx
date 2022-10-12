@@ -144,7 +144,6 @@ export class GuxDatepicker {
 
   @Watch('value')
   watchValue() {
-    console.log('Working');
     this.updateDate();
   }
 
