@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.35.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.5...v3.35.0) (2022-10-12)
+
+
+### Features
+
+* **dropdown-multi:** addition of collapsed and expanded events ([94f932e](https://github.com/MyPureCloud/genesys-webcomponents/commit/94f932ed5c50e497ccb789f255bca9d18ea0a9ef))
+* **wrapper:** export the CDN_URL defined at build time from the stencil wrapper file ([6a67c3b](https://github.com/MyPureCloud/genesys-webcomponents/commit/6a67c3b6803d3d7292d6b5493443409bebc55ded))
+
 ### [3.34.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.4...v3.34.5) (2022-10-06)
 
 ### [3.34.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.3...v3.34.4) (2022-10-06)
