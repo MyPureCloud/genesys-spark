@@ -10,7 +10,7 @@ import {
   Prop
 } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
 
 import paginationResources from './i18n/en.json';
 import { GuxItemsPerPage } from '../gux-pagination.types';

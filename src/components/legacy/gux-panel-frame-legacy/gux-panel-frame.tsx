@@ -1,7 +1,7 @@
 import { Component, Element, h, JSX } from '@stencil/core';
 
-import { hasSlot } from '../../../utils/dom/has-slot';
-import { trackComponent } from '../../../usage-tracking';
+import { hasSlot } from 'utils/dom/has-slot';
+import { trackComponent } from 'usage-tracking';
 
 /**
  * @slot header - slot for header content

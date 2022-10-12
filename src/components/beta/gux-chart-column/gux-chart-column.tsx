@@ -3,9 +3,9 @@
 import { Component, Element, h, JSX, Prop, Watch } from '@stencil/core';
 import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
-import { trackComponent } from '../../../usage-tracking';
-import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
-import { logError } from '../../../utils/error/log-error';
+import { trackComponent } from 'usage-tracking';
+import { VISUALIZATION_COLORS } from 'utils/theme/color-palette';
+import { logError } from 'utils/error/log-error';
 
 @Component({
   styleUrl: 'gux-chart-column.less',

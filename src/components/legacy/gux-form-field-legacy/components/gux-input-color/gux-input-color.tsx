@@ -1,8 +1,8 @@
 import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
-import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
-import { randomHTMLId } from '../../../../../utils/dom/random-html-id';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { randomHTMLId } from 'utils/dom/random-html-id';
 import colorInputResources from './i18n/en.json';
-import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
+import { onDisabledChange } from 'utils/dom/on-attribute-change';
 
 /**
  * @slot input - Required slot for input[type="color"]

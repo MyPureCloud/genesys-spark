@@ -2,10 +2,10 @@ import { newSpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
 import { GuxPagination } from '../gux-pagination';
-import { GuxButton } from '../../gux-button/gux-button';
-import { GuxDropdown } from '../../gux-dropdown/gux-dropdown';
-import { GuxListbox } from '../../gux-listbox/gux-listbox';
-import { GuxOption } from '../../gux-listbox/gux-option/gux-option';
+import { GuxButton } from 'components/stable/gux-button/gux-button';
+import { GuxDropdown } from 'components/stable/gux-dropdown/gux-dropdown';
+import { GuxListbox } from 'components/stable/gux-listbox/gux-listbox';
+import { GuxOption } from 'components/stable/gux-listbox/gux-option/gux-option';
 import { GuxPaginationButtons } from '../gux-pagination-buttons/gux-pagination-buttons';
 import { GuxPaginationItemCounts } from '../gux-pagination-item-counts/gux-pagination-item-counts';
 import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page/gux-pagination-items-per-page';

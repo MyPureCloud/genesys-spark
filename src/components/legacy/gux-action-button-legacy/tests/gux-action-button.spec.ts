@@ -1,6 +1,6 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxActionButtonLegacy } from '../gux-action-button';
-import { GuxActionItem } from '../../gux-action-list-legacy/gux-action-item/gux-action-item';
+import { GuxActionItem } from 'components/legacy/gux-action-list-legacy/gux-action-item/gux-action-item';
 
 const components = [GuxActionButtonLegacy, GuxActionItem];
 const html = `

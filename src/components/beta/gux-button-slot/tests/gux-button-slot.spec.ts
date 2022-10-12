@@ -1,4 +1,4 @@
-jest.mock('../../../../utils/error/log-error', () => ({
+jest.mock('utils/error/log-error', () => ({
   __esModule: true,
   logError: jest.fn()
 }));
@@ -7,7 +7,7 @@ import { newSpecPage } from '@stencil/core/testing';
 
 import { GuxButtonSlot } from '../gux-button-slot';
 
-import { logError } from '../../../../utils/error/log-error';
+import { logError } from 'utils/error/log-error';
 
 const components = [GuxButtonSlot];
 const language = 'en';

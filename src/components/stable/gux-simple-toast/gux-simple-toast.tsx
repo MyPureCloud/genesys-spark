@@ -9,7 +9,7 @@ import {
   Prop
 } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from 'usage-tracking';
 
 import { GuxSimpleToastAccent } from './gux-simple-toast.types';
 

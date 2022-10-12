@@ -1,4 +1,4 @@
-jest.mock('../../../../utils/error/log-error', () => ({
+jest.mock('utils/error/log-error', () => ({
   __esModule: true,
   logError: jest.fn()
 }));
@@ -6,7 +6,7 @@ jest.mock('../../../../utils/error/log-error', () => ({
 import { newSpecPage } from '@stencil/core/testing';
 import { GuxRadialProgress } from '../gux-radial-progress';
 
-import { logError } from '../../../../utils/error/log-error';
+import { logError } from 'utils/error/log-error';
 
 const components = [GuxRadialProgress];
 const language = 'en';

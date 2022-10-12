@@ -1,6 +1,6 @@
-import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { newSparkE2EPage, a11yCheck } from 'test/e2eTestUtils';
 
-import { asyncFilter } from '../../../../utils/array/async-filter';
+import { asyncFilter } from 'utils/array/async-filter';
 const html = `
   <div lang="en">
     <gux-advanced-dropdown lang="en" filter-debounce-timeout=0>

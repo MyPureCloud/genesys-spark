@@ -8,8 +8,8 @@ import {
   Prop
 } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { trackComponent } from 'usage-tracking';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
 
 import translationResources from './i18n/en.json';
 import { GuxPaginationCursorDetail } from './gux-pagination-cursor.types';

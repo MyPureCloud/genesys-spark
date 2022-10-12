@@ -1,4 +1,4 @@
-jest.mock('../../../../utils/error/log-error', () => ({
+jest.mock('utils/error/log-error', () => ({
   __esModule: true,
   logError: jest.fn()
 }));
@@ -8,7 +8,7 @@ import { newSpecPage } from '@stencil/core/testing';
 import { GuxBreadcrumbs } from '../gux-breadcrumbs';
 import { GuxBreadcrumbItem } from '../breadcrumb-item/gux-breadcrumb-item';
 
-import { logError } from '../../../../utils/error/log-error';
+import { logError } from 'utils/error/log-error';
 
 const components = [GuxBreadcrumbs, GuxBreadcrumbItem];
 const language = 'en';

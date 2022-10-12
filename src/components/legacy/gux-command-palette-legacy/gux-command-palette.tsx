@@ -1,8 +1,8 @@
 import { Component, Element, h, Method, State } from '@stencil/core';
-import { matchesFuzzy } from '../../../utils/string/search';
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { matchesFuzzy } from 'utils/string/search';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import paletteResources from './i18n/en.json';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from 'usage-tracking';
 
 const filterLimit = 50;
 const animationDuration = 300; // this 300ms duration must be kept in sync with the 300ms transition in the CSS and delay in the e2e tests
