@@ -9,7 +9,6 @@ This component is meant for use in other components as a dismiss button.
 
 ### Used by
 
- - [gux-drawer-beta](../../beta/gux-drawer)
  - [gux-modal](../gux-modal)
  - [gux-notification-toast](../gux-notification-toast)
  - [gux-popover](../gux-popover)
@@ -24,7 +23,6 @@ This component is meant for use in other components as a dismiss button.
 ```mermaid
 graph TD;
   gux-dismiss-button --> gux-icon
-  gux-drawer-beta --> gux-dismiss-button
   gux-modal --> gux-dismiss-button
   gux-notification-toast --> gux-dismiss-button
   gux-popover --> gux-dismiss-button

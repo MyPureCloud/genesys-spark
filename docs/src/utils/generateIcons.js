@@ -20,6 +20,7 @@ const icons = [
       'badge-amount',
       'badge-check',
       'badge-edit',
+      'badge-file',
       'badge-pause',
       'badge-x'
     ]
@@ -261,7 +262,8 @@ const icons = [
       'edit',
       'paste',
       'refresh',
-      'reset'
+      'reset',
+      'save'
     ]
   },
   {
@@ -280,7 +282,13 @@ const icons = [
   },
   {
     sectionName: 'Time',
-    iconNames: ['clock', 'clock-outline', 'timeline']
+    iconNames: [
+      'calendar-clock',
+      'clock',
+      'clock-outline',
+      'timeline',
+      'hourglass'
+    ]
   },
   {
     sectionName: 'Miscellaneous',
