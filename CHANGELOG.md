@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.36.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.1...v3.36.2) (2022-10-13)
+
+
+### Bug Fixes
+
+* **stencil-wrapper:** fix the stencil-wrapper build step to output to the old location ([b6d406a](https://github.com/MyPureCloud/genesys-webcomponents/commit/b6d406aee954eedaa5c8f4e464f79d3381ebd410))
+
 ### [3.36.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.0...v3.36.1) (2022-10-13)
 
 
