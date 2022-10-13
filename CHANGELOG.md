@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.36.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.35.0...v3.36.0) (2022-10-13)
+
+
+### Features
+
+* **drawer:** set up using dialog ([2a10717](https://github.com/MyPureCloud/genesys-webcomponents/commit/2a10717dfd339db1fa6deaa549f1cd38dabd8e80))
+* **icons:** added four new icons ([8d612f5](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d612f553a000eb911080ab56ee95e3da5ba70c3))
+* **icons:** added four new icons ([7c8d5b7](https://github.com/MyPureCloud/genesys-webcomponents/commit/7c8d5b7cdcb884a95889022c1df519d3a2e94ac2))
+* initial component commit ([596f4f5](https://github.com/MyPureCloud/genesys-webcomponents/commit/596f4f50b433a740050afb69b11dce61e380c73e))
+
 ## [3.35.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.5...v3.35.0) (2022-10-12)
 
 
