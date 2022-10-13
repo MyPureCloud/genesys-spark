@@ -1,4 +1,4 @@
-import { CalendarModes } from 'common-enums';
+import { CalendarModes } from '../../../../common-enums';
 import * as utils from 'utils/dom/manipulate-elements-classes';
 import { GuxCalendar } from '../gux-calendar';
 

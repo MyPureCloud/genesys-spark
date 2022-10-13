@@ -1,5 +1,8 @@
-import { E2EPage, newE2EPage } from '@stencil/core/testing';
-import { a11yCheck } from 'test/e2eTestUtils';
+import {
+  E2EPage,
+  newE2EPage
+} from '../../../../../node_modules/@stencil/core/testing';
+import { a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 const axeExclusions = [
   {

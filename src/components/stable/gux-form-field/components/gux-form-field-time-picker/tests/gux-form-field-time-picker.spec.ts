@@ -2,7 +2,7 @@ import { newSpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
 import { GuxFormFieldTimePicker } from '../gux-form-field-time-picker';
-import { GuxScreenReader } from 'components/beta/gux-screen-reader/gux-screen-reader';
+import { GuxScreenReader } from '../../../../../beta/gux-screen-reader/gux-screen-reader';
 
 const components = [GuxFormFieldTimePicker, GuxScreenReader];
 const language = 'en';

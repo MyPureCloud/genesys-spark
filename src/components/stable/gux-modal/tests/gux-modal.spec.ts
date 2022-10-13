@@ -1,7 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxButton } from 'components/stable/gux-button/gux-button';
+import { GuxButton } from '../../gux-button/gux-button';
 import { GuxModal } from '../gux-modal';
-import { GuxDismissButton } from 'components/stable/gux-dismiss-button/gux-dismiss-button';
+import { GuxDismissButton } from '../../../stable/gux-dismiss-button/gux-dismiss-button';
 
 const components = [GuxButton, GuxModal, GuxDismissButton];
 const language = 'en';
