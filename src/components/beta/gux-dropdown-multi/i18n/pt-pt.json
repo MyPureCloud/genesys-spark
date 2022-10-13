@@ -1,6 +1,6 @@
 {
-  "filterResults": "Type to filter dropdown results",
-  "noSelection": "Select...",
-  "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "filterResults": "Escreva para filtrar resultados da lista pendente",
+  "noSelection": "Selecione...",
+  "dropdown": "Lista pendente",
+  "numberSelected": "{numberSelected} selecionado(s)"
 }
