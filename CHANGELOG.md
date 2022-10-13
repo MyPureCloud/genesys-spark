@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.36.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.0...v3.36.1) (2022-10-13)
+
+
+### Bug Fixes
+
+* **tabs-advanced:** prevent error if no tabs avaliable onload ([e804e49](https://github.com/MyPureCloud/genesys-webcomponents/commit/e804e496dbe6a6e3e8beb8e6c5971ab142388420))
+
 ## [3.36.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.35.0...v3.36.0) (2022-10-13)
 
 
