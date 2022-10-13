@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Prop,
+  State,
+  Method,
+  forceUpdate
+} from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
@@ -71,6 +80,16 @@ export class GuxFormFieldSearch {
   onMutation(): void {
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async guxForceUpdate(): Promise<void> {
+    this.hasContent = hasContent(this.input);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
+
+    forceUpdate(this.root);
   }
 
   componentWillLoad(): void {
