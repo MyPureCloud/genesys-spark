@@ -12,7 +12,7 @@ import { createPopper, Instance } from '@popperjs/core';
 
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 
 import { HTMLGuxMenuItemElement, hideDelay } from './gux-menu/gux-menu.common';
 

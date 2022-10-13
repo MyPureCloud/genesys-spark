@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, State } from '@stencil/core';
 
-import { onDisabledChange } from 'utils/dom/on-attribute-change';
+import { onDisabledChange } from '../../../../../utils/dom/on-attribute-change';
 
 /**
  * @slot input - Required slot for select element

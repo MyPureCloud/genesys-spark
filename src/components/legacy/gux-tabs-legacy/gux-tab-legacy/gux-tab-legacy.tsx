@@ -10,8 +10,8 @@ import {
   writeTask
 } from '@stencil/core';
 
-import { eventIsFrom } from 'utils/dom/event-is-from';
-import { randomHTMLId } from 'utils/dom/random-html-id';
+import { eventIsFrom } from '../../../../utils/dom/event-is-from';
+import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
 @Component({
   styleUrl: 'gux-tab-legacy.less',

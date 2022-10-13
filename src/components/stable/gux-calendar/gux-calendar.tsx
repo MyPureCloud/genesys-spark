@@ -22,9 +22,9 @@ import {
   removeClassToElements
 } from '@utils/dom/manipulate-elements-classes';
 
-import { trackComponent } from 'usage-tracking';
-import { CalendarModes } from 'common-enums';
-import { getDesiredLocale, getStartOfWeek } from 'i18n';
+import { trackComponent } from '../../../usage-tracking';
+import { CalendarModes } from '../../../common-enums';
+import { getDesiredLocale, getStartOfWeek } from '../../../i18n';
 
 import { GuxCalendarMode, IDateElement } from './gux-calendar.types';
 

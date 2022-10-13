@@ -1,7 +1,7 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
-import { trackComponent } from 'usage-tracking';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { trackComponent } from '../../../usage-tracking';
 
 import breadcrumbsResources from './i18n/en.json';
 import { GuxBreadcrumbAccent } from './gux-breadcrumbs.types';

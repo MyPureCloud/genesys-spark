@@ -11,8 +11,8 @@ import {
   Watch
 } from '@stencil/core';
 
-import { OnClickOutside } from 'utils/decorator/on-click-outside';
-import { onHiddenChange } from 'utils/dom/on-attribute-change';
+import { OnClickOutside } from '../../../../../utils/decorator/on-click-outside';
+import { onHiddenChange } from '../../../../../utils/dom/on-attribute-change';
 
 @Component({
   styleUrl: 'gux-table-select-popover.less',

@@ -14,7 +14,7 @@ import {
   last,
   next,
   previous
-} from 'components/stable/gux-list/gux-list.service';
+} from '../../../../stable/gux-list/gux-list.service';
 
 const validFocusableItems = ['gux-month-list-item'];
 

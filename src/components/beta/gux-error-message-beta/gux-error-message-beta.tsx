@@ -1,5 +1,5 @@
 import { Component, Element, h, JSX } from '@stencil/core';
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 
 /**
  * @slot error(default) - Required slot for error

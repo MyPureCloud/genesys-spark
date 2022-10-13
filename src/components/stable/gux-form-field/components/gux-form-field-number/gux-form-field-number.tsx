@@ -9,8 +9,8 @@ import {
   State
 } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
-import { ILocalizedComponentResources } from 'i18n/fetchResources';
+import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
+import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
@@ -35,7 +35,7 @@ import {
   hasContent,
   validateFormIds
 } from '../../gux-form-field.service';
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../../../usage-tracking';
 import componentResources from './i18n/en.json';
 
 /**

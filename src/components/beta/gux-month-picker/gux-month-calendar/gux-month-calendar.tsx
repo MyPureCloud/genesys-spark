@@ -9,15 +9,19 @@ import {
   Watch
 } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue, getDesiredLocale } from 'i18n';
-import simulateNativeEvent from 'utils/dom/simulate-native-event';
-import { afterNextRender } from 'utils/dom/after-next-render';
+import {
+  buildI18nForComponent,
+  GetI18nValue,
+  getDesiredLocale
+} from '../../../../i18n';
+import simulateNativeEvent from '../../../../utils/dom/simulate-native-event';
+import { afterNextRender } from '../../../../utils/dom/after-next-render';
 import {
   GuxISOYearMonth,
   getISOYearMonth,
   getCurrentISOYearMonth,
   getYearMonthObject
-} from 'utils/date/year-month-values';
+} from '../../../../utils/date/year-month-values';
 
 import translationResources from './i18n/en.json';
 

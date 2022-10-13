@@ -11,8 +11,8 @@ import {
 } from '@stencil/core';
 
 import { GuxButtonAccent } from '../gux-action-button-legacy/gux-button.types';
-import { trackComponent } from 'usage-tracking';
-import { OnClickOutside } from 'utils/decorator/on-click-outside';
+import { trackComponent } from '../../../usage-tracking';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
 @Component({
   styleUrl: 'gux-button-multi.less',

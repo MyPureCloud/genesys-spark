@@ -31,7 +31,7 @@ import {
   validateFormIds,
   setSlotAriaDescribedby
 } from '../../gux-form-field.service';
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../../../usage-tracking';
 
 /**
  * @slot input - Required slot for input tag

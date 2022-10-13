@@ -11,9 +11,9 @@ import {
   Watch
 } from '@stencil/core';
 
-import { OnClickOutside } from 'utils/decorator/on-click-outside';
-import { onHiddenChange } from 'utils/dom/on-attribute-change';
-import { trackComponent } from 'usage-tracking';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { onHiddenChange } from '../../../utils/dom/on-attribute-change';
+import { trackComponent } from '../../../usage-tracking';
 
 import { PopperPosition } from './gux-popover.types';
 

@@ -7,8 +7,8 @@ import {
   Method,
   State
 } from '@stencil/core';
-import { logError } from 'utils/error/log-error';
-import { OnMutation } from 'utils/decorator/on-mutation';
+import { logError } from '../../../utils/error/log-error';
+import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({
   styleUrl: 'gux-tooltip-title.less',

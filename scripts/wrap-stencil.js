@@ -30,16 +30,7 @@ if (!fs.existsSync(sourceOutputFolder)) {
 fs.writeFileSync(sourceOutputFile, source);
 
 proc.execSync(
-  `${tscPath} \
-    --baseUrl ./src \
-    --target es2017 \
-    --resolveJsonModule \
-    --moduleResolution node \
-    --allowSyntheticDefaultImports \
-    --declaration \
-    --declarationDir ${typesDir} \
-    --outDir ${distDir}  \
-    ${sourceOutputFile}`,
+  `${tscPath} --target es2017 --moduleResolution node --allowSyntheticDefaultImports --declaration --declarationDir ${typesDir} --outDir ${distDir}  ${sourceOutputFile}`,
   { stdio: 'inherit' }
 );
 

@@ -10,7 +10,7 @@ import {
 
 import { first, last, next, previous } from './gux-list.service';
 
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 
 const validFocusableItems = ['gux-list-item'];
 

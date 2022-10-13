@@ -4,8 +4,8 @@ import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
-import { trackComponent } from 'usage-tracking';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
 

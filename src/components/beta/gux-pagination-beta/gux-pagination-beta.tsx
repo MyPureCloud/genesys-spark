@@ -13,12 +13,12 @@ import {
 
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 
 import {
   GuxItemsPerPage,
   GuxPaginationState
-} from 'components/stable/gux-pagination/gux-pagination.types';
+} from '../../stable/gux-pagination/gux-pagination.types';
 
 import { GuxPaginationLayoutBeta } from './gux-pagination-beta.types';
 

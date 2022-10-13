@@ -1,6 +1,6 @@
 import { Component, Element, h, Host, JSX, Listen, Prop } from '@stencil/core';
 
-import { randomHTMLId } from 'utils/dom/random-html-id';
+import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
 @Component({
   styleUrl: 'gux-option-multi.less',

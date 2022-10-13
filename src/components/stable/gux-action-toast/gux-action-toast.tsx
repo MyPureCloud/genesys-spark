@@ -1,5 +1,5 @@
 import { Component, h, Element, Host, JSX } from '@stencil/core';
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 
 /**
  * @slot icon - Required slot for gux-icon

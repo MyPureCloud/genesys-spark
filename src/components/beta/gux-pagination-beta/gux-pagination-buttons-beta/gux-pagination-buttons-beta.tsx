@@ -8,7 +8,7 @@ import {
   Prop
 } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import { GuxPaginationLayoutBeta } from '../gux-pagination-beta.types';
 
 import paginationResources from './i18n/en.json';

@@ -16,7 +16,7 @@ import { eventIsFrom } from '@utils/dom/event-is-from';
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 
 import tabsResources from '../i18n/en.json';
 
