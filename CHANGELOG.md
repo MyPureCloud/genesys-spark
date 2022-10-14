@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.36.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.3...v3.36.4) (2022-10-14)
+
+
+### Bug Fixes
+
+* **form-field-search:** addition of guxForceUpdate to form-field-search ([5a44e03](https://github.com/MyPureCloud/genesys-webcomponents/commit/5a44e03d9cacac728b8a6be33caebdc1d4155868))
+
 ### [3.36.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.2...v3.36.3) (2022-10-14)
 
 ### [3.36.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.1...v3.36.2) (2022-10-13)
