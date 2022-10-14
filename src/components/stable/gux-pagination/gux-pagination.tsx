@@ -10,7 +10,7 @@ import {
   State
 } from '@stencil/core';
 
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 
 import {
   GuxItemsPerPage,

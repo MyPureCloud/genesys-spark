@@ -11,8 +11,8 @@ import {
   State
 } from '@stencil/core';
 
-import { randomHTMLId } from 'utils/dom/random-html-id';
-import { trackComponent } from 'usage-tracking';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { trackComponent } from '../../../usage-tracking';
 import { GuxTooltipPlacements } from './gux-tooltip.types';
 
 /**

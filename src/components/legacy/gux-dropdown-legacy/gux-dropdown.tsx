@@ -11,10 +11,10 @@ import {
   State
 } from '@stencil/core';
 
-import { OnClickOutside } from 'utils/decorator/on-click-outside';
-import { whenEventIsFrom } from 'utils/dom/when-event-is-from';
-import { trackComponent } from 'usage-tracking';
-import { OnMutation } from 'utils/decorator/on-mutation';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
+import { trackComponent } from '../../../usage-tracking';
+import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({
   styleUrl: 'gux-dropdown.less',

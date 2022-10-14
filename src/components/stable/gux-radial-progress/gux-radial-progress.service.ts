@@ -1,4 +1,4 @@
-import clamp from 'utils/number/clamp';
+import clamp from '../../../utils/number/clamp';
 
 import { GuxRadialProgressScale } from './gux-radial-progress.types';
 

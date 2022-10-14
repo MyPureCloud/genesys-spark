@@ -1,5 +1,5 @@
 import { Component, h, JSX, Prop, Element } from '@stencil/core';
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 
 import { GuxCardAccent } from './gux-card.types';
 

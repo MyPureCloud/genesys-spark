@@ -1,11 +1,11 @@
 import { newSpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
-import { GuxInputCheckbox } from 'components/legacy/gux-form-field-legacy/components/gux-input-checkbox/gux-input-checkbox';
-import { GuxInputColor } from 'components/legacy/gux-form-field-legacy/components/gux-input-color/gux-input-color';
-import { GuxInputRadio } from 'components/legacy/gux-form-field-legacy/components/gux-input-radio/gux-input-radio';
-import { GuxInputRange } from 'components/legacy/gux-form-field-legacy/components/gux-input-range/gux-input-range';
-import { GuxInputTextLike } from 'components/legacy/gux-form-field-legacy/components/gux-input-text-like/gux-input-text-like';
+import { GuxInputCheckbox } from '../../gux-form-field-legacy/components/gux-input-checkbox/gux-input-checkbox';
+import { GuxInputColor } from '../../gux-form-field-legacy/components/gux-input-color/gux-input-color';
+import { GuxInputRadio } from '../../gux-form-field-legacy/components/gux-input-radio/gux-input-radio';
+import { GuxInputRange } from '../../gux-form-field-legacy/components/gux-input-range/gux-input-range';
+import { GuxInputTextLike } from '../../gux-form-field-legacy/components/gux-input-text-like/gux-input-text-like';
 
 import { GuxFormFieldLegacy } from '../gux-form-field';
 

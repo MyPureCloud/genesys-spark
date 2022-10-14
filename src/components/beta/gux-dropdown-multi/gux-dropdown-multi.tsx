@@ -13,15 +13,15 @@ import {
   EventEmitter
 } from '@stencil/core';
 
-import { OnClickOutside } from 'utils/decorator/on-click-outside';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
-import simulateNativeEvent from 'utils/dom/simulate-native-event';
-import { afterNextRender } from 'utils/dom/after-next-render';
-import { trackComponent } from 'usage-tracking';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import { afterNextRender } from '../../../utils/dom/after-next-render';
+import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
 
-import { getSearchOption } from 'components/stable/gux-listbox/gux-listbox.service';
+import { getSearchOption } from '../../stable/gux-listbox/gux-listbox.service';
 
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children

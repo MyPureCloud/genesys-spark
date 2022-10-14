@@ -1,4 +1,4 @@
-import { CalendarModes } from 'common-enums';
+import { CalendarModes } from '../../../common-enums';
 
 import { GuxDatepickerIntervalRange } from './gux-datepicker.types';
 

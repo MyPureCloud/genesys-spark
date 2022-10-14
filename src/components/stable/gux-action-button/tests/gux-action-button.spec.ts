@@ -1,8 +1,8 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxActionButton } from 'components/stable/gux-action-button/gux-action-button';
-import { GuxList } from 'components/stable/gux-list/gux-list';
-import { GuxListDivider } from 'components/stable/gux-list/gux-list-divider/gux-list-divider';
-import { GuxListItem } from 'components/stable/gux-list/gux-list-item/gux-list-item';
+import { GuxActionButton } from '../gux-action-button';
+import { GuxList } from '../../gux-list/gux-list';
+import { GuxListDivider } from '../../gux-list/gux-list-divider/gux-list-divider';
+import { GuxListItem } from '../../gux-list/gux-list-item/gux-list-item';
 
 const components = [GuxActionButton, GuxList, GuxListDivider, GuxListItem];
 const html = `

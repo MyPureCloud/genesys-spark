@@ -27,10 +27,10 @@ import {
   setPreviousOptionActive
 } from '../gux-listbox/gux-listbox.service';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
-import { whenEventIsFrom } from 'utils/dom/when-event-is-from';
-import simulateNativeEvent from 'utils/dom/simulate-native-event';
-import { trackComponent } from 'usage-tracking';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
+import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
 

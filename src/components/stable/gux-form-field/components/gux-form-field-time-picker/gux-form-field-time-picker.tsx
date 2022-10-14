@@ -1,7 +1,7 @@
 import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
-import { ILocalizedComponentResources } from 'i18n/fetchResources';
+import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
+import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
 import { OnMutation } from '@utils/decorator/on-mutation';
 import {
   onDisabledChange,
@@ -22,7 +22,7 @@ import {
   getComputedLabelPosition,
   validateFormIds
 } from '../../gux-form-field.service';
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../../../usage-tracking';
 import componentResources from './i18n/en.json';
 
 /**

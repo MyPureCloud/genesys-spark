@@ -14,9 +14,9 @@ import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 
-import { GuxButtonAccent } from 'components/stable/gux-button/gux-button.types';
+import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
 
 /**
  * @slot title - slot for icon and button text

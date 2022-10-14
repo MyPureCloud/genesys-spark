@@ -2,8 +2,8 @@ import { newSpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
 import { GuxPaginationButtons } from '../gux-pagination-buttons';
-import { GuxButton } from 'components/stable/gux-button/gux-button';
-import { GuxInputTextLike } from 'components/legacy/gux-form-field-legacy/components/gux-input-text-like/gux-input-text-like';
+import { GuxButton } from '../../../gux-button/gux-button';
+import { GuxInputTextLike } from '../../../../legacy/gux-form-field-legacy/components/gux-input-text-like/gux-input-text-like';
 
 const components = [GuxPaginationButtons, GuxButton, GuxInputTextLike];
 const language = 'en';

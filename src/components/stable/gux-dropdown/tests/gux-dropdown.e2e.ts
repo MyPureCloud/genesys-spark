@@ -1,4 +1,4 @@
-import { newSparkE2EPage, a11yCheck } from 'test/e2eTestUtils';
+import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 describe('gux-dropdown', () => {
   const html = `<gux-dropdown lang="en" value="j">

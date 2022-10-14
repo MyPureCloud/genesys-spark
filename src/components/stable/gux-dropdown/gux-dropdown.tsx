@@ -10,13 +10,13 @@ import {
   Watch
 } from '@stencil/core';
 
-import { OnClickOutside } from 'utils/decorator/on-click-outside';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
-import simulateNativeEvent from 'utils/dom/simulate-native-event';
-import { calculateInputDisabledState } from 'utils/dom/calculate-input-disabled-state';
-import { onInputDisabledStateChange } from 'utils/dom/on-input-disabled-state-change';
-import { afterNextRender } from 'utils/dom/after-next-render';
-import { trackComponent } from 'usage-tracking';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import { calculateInputDisabledState } from '../../../utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '../../../utils/dom/on-input-disabled-state-change';
+import { afterNextRender } from '../../../utils/dom/after-next-render';
+import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
 

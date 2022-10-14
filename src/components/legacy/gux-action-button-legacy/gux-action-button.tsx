@@ -10,10 +10,10 @@ import {
   Watch
 } from '@stencil/core';
 
-import { trackComponent } from 'usage-tracking';
-import { OnClickOutside } from 'utils/decorator/on-click-outside';
+import { trackComponent } from '../../../usage-tracking';
+import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { GuxButtonAccent, GuxButtonType } from './gux-button.types';
 
 import defaultResources from './i18n/en.json';

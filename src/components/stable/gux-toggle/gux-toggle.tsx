@@ -10,9 +10,9 @@ import {
   Prop
 } from '@stencil/core';
 
-import { trackComponent } from 'usage-tracking';
-import { randomHTMLId } from 'utils/dom/random-html-id';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import { trackComponent } from '../../../usage-tracking';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import translationResources from './i18n/en.json';
 

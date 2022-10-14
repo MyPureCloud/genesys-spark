@@ -1,4 +1,4 @@
-import { CalendarModes } from 'common-enums';
+import { CalendarModes } from '../../../common-enums';
 
 export type GuxCalendarMode = CalendarModes.Single | CalendarModes.Range;
 

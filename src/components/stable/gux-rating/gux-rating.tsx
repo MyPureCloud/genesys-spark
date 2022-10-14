@@ -1,9 +1,9 @@
 import { Component, Element, h, Host, Listen, JSX, Prop } from '@stencil/core';
 
-import simulateNativeEvent from 'utils/dom/simulate-native-event';
-import clamp from 'utils/number/clamp';
-import { trackComponent } from 'usage-tracking';
-import { logError } from 'utils/error/log-error';
+import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import clamp from '../../../utils/number/clamp';
+import { trackComponent } from '../../../usage-tracking';
+import { logError } from '../../../utils/error/log-error';
 
 @Component({
   styleUrl: 'gux-rating.less',

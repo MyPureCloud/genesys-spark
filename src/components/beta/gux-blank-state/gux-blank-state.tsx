@@ -1,7 +1,7 @@
 import { Component, Element, JSX, h, State, readTask } from '@stencil/core';
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 import { GuxBlankStateSizes } from './gux-blank-state.types';
-import { OnResize } from 'utils/decorator/on-resize';
+import { OnResize } from '../../../utils/decorator/on-resize';
 import * as blankStateWidth from './gux-blank-state-constants';
 
 /**

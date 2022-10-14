@@ -1,11 +1,11 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
-import { OnMutation } from 'utils/decorator/on-mutation';
-import { randomHTMLId } from 'utils/dom/random-html-id';
-import { logError } from 'utils/error/log-error';
-import { onRequiredChange } from 'utils/dom/on-attribute-change';
-import { preventBrowserValidationStyling } from 'utils/dom/prevent-browser-validation-styling';
-import { trackComponent } from 'usage-tracking';
+import { OnMutation } from '../../../utils/decorator/on-mutation';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { logError } from '../../../utils/error/log-error';
+import { onRequiredChange } from '../../../utils/dom/on-attribute-change';
+import { preventBrowserValidationStyling } from '../../../utils/dom/prevent-browser-validation-styling';
+import { trackComponent } from '../../../usage-tracking';
 import { GuxInputTextAreaResize } from './components/gux-input-textarea/gux-input-textarea.types';
 import {
   GuxFormFieldSlottedElementType,

@@ -13,7 +13,7 @@ import {
   Watch
 } from '@stencil/core';
 
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '../../../usage-tracking';
 @Component({
   styleUrl: 'gux-tabs-advanced.less',
   tag: 'gux-tabs-advanced',
