@@ -1,0 +1,58 @@
+@import (reference) '../../../style/color.less';
+@import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/color-palette.less';
+
+:host {
+  display: block;
+}
+
+.gux-inline-alert {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: @gux-spacing-xs;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 540px;
+  height: 28px;
+  padding: @gux-spacing-2xs @gux-spacing-xs;
+  border-radius: @spacing-2xs;
+  .body-font();
+
+  gux-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  gux-tooltip-title {
+    white-space: nowrap;
+    cursor: default;
+  }
+
+  .gux-sr-only {
+    .gux-sr-only-clip();
+  }
+
+  &.gux-info {
+    color: @gux-black-80;
+    background-color: @gux-grey-90;
+  }
+
+  &.gux-error {
+    color: @gux-alert-red-30;
+    background-color: @gux-alert-red-100;
+  }
+
+  &.gux-warning {
+    color: @gux-alert-yellow-30;
+    background-color: @gux-alert-yellow-100;
+  }
+
+  &.gux-success {
+    color: @gux-alert-green-30;
+    background-color: @gux-alert-green-100;
+  }
+}
