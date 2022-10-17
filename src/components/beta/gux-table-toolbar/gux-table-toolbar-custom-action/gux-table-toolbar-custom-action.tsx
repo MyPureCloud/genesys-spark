@@ -28,14 +28,14 @@ export class GuxTableToolbarCustomAction {
 
   render(): JSX.Element {
     return (
-      <gux-button accent={this.accent} type="button">
-        <div class="gux-action-title">
+      <gux-button-slot-beta accent={this.accent}>
+        <button type="button" class="gux-action-title">
           <slot name="icon" />
           <span class={{ 'gux-sr-only': this.iconOnly }}>
             <slot name="text" />
           </span>
-        </div>
-      </gux-button>
+        </button>
+      </gux-button-slot-beta>
     ) as JSX.Element;
   }
 }

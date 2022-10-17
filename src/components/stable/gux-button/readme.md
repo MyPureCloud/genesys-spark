@@ -16,19 +16,6 @@ You can choose between two type (secondary and primary).
 | `type`     | `type`      | The component button type                 | `"button" \| "reset" \| "submit"`                               | `'button'`    |
 
 
-## Dependencies
-
-### Used by
-
- - [gux-table-toolbar-custom-action](../../beta/gux-table-toolbar/gux-table-toolbar-custom-action)
-
-### Graph
-```mermaid
-graph TD;
-  gux-table-toolbar-custom-action --> gux-button
-  style gux-button fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

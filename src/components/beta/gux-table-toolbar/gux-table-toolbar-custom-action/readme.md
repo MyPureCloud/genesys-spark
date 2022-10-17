@@ -29,12 +29,12 @@
 
 ### Depends on
 
-- [gux-button](../../../stable/gux-button)
+- [gux-button-slot-beta](../../gux-button-slot)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-table-toolbar-custom-action --> gux-button
+  gux-table-toolbar-custom-action --> gux-button-slot-beta
   gux-table-toolbar-action --> gux-table-toolbar-custom-action
   style gux-table-toolbar-custom-action fill:#f9f,stroke:#333,stroke-width:4px
 ```
