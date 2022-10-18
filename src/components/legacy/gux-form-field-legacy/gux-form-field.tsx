@@ -2,7 +2,7 @@ import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
 import { OnMutation } from '../../../utils/decorator/on-mutation';
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
-import { logError } from '../../../utils/error/log-error';
+import { logWarn } from '../../../utils/error/log-error';
 import { onRequiredChange } from '../../../utils/dom/on-attribute-change';
 import { preventBrowserValidationStyling } from '../../../utils/dom/prevent-browser-validation-styling';
 import { trackComponent } from '../../../usage-tracking';
@@ -347,7 +347,7 @@ export class GuxFormFieldLegacy {
       const inputHasId = !!this.input.hasAttribute('id');
       const labelHasFor = !!this.label.hasAttribute('for');
       if (!inputHasId && labelHasFor) {
-        logError(
+        logWarn(
           'gux-form-field',
           'A "for" attribute has been provided on the label but there is no corresponding id on the input. Either provide an id on the input or omit the "for" attribute from the label. If there is no input id and no "for" attribute provided, the component will automatically generate an id and link it to the "for" attribute.'
         );
@@ -362,13 +362,13 @@ export class GuxFormFieldLegacy {
         labelHasFor &&
         this.input.getAttribute('id') !== this.label.getAttribute('for')
       ) {
-        logError(
+        logWarn(
           'gux-form-field',
           'The input id and label for attribute should match.'
         );
       }
     } else {
-      logError(
+      logWarn(
         'gux-form-field',
         'A label is required for this component. If a visual label is not needed for this use case, please add localized text for a screenreader and set the label-position attribute to "screenreader" to visually hide the label.'
       );

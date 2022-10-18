@@ -7,7 +7,7 @@ import {
   Method,
   State
 } from '@stencil/core';
-import { logError } from '../../../utils/error/log-error';
+import { logWarn } from '../../../utils/error/log-error';
 import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({
@@ -79,12 +79,12 @@ export class GuxTooltipTitle {
   }
 
   componentDidLoad() {
-    this.logErrorNoIconSrText();
+    this.logWarnNoIconSrText();
   }
 
-  private logErrorNoIconSrText(): void {
+  private logWarnNoIconSrText(): void {
     if (this.iconOnly && !this.titleName) {
-      logError(
+      logWarn(
         'gux-tooltip-title',
         'No screenreader-text provided. Provide a localized screenreader-text property for the gux-icon. The screenreader-text property is used for the icon screenreader text and the tooltip.'
       );
