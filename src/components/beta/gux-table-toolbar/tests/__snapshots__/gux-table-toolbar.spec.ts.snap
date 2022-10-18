@@ -33,7 +33,7 @@ exports[`gux-table-toolbar-beta #render should render table toolbar as expected 
   </mock:shadow-root>
   <div slot="search-and-filter">
     <gux-form-field-search label-position="screenreader">
-      <input name="a-3" placeholder="Enter search" slot="input" type="search" style="width: 145px; min-width: 145px; flex-basis: 260px;">
+      <input name="a-3" placeholder="Enter search" slot="input" type="search">
       <label slot="label">
         Toolbar Search
       </label>
