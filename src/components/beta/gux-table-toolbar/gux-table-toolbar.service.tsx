@@ -6,13 +6,13 @@ export function setAccent(
     | HTMLGuxTableToolbarCustomActionElement[]
     | HTMLGuxTableToolbarCustomActionElement,
   accent: GuxTableToolbarActionAccent
-): GuxTableToolbarActionAccent {
+): void {
   if (isArray(actions)) {
     actions.forEach(action => {
-      return (action.accent = accent);
+      action.accent = accent;
     });
   } else {
-    return (actions.accent = accent);
+    actions.accent = accent;
   }
 }
 
@@ -20,15 +20,15 @@ export function expandActions(
   actions:
     | HTMLGuxTableToolbarCustomActionElement[]
     | HTMLGuxTableToolbarCustomActionElement
-): boolean {
+): void {
   if (isArray(actions)) {
     Boolean(
       actions.forEach(action => {
-        return (action.iconOnly = false);
+        action.iconOnly = false;
       })
     );
   } else {
-    return (actions.iconOnly = false);
+    actions.iconOnly = false;
   }
 }
 
@@ -36,15 +36,15 @@ export function collapseActions(
   actions:
     | HTMLGuxTableToolbarCustomActionElement[]
     | HTMLGuxTableToolbarCustomActionElement
-): boolean {
+): void {
   if (isArray(actions)) {
     Boolean(
       actions.forEach(action => {
-        return (action.iconOnly = true);
+        action.iconOnly = true;
       })
     );
   } else {
-    return (actions.iconOnly = true);
+    actions.iconOnly = true;
   }
 }
 
@@ -52,12 +52,12 @@ export function collapseActionsAll(
   actionsFilterContextual: HTMLGuxTableToolbarCustomActionElement[],
   actionsPerm: HTMLGuxTableToolbarCustomActionElement[],
   actionPrimary: HTMLGuxTableToolbarCustomActionElement
-): boolean {
+): void {
   const arrayActions = actionsPerm.concat(
     actionsFilterContextual,
     actionPrimary
   );
-  return Boolean(
+  Boolean(
     arrayActions.forEach(action => {
       action.iconOnly = true;
     })
@@ -68,12 +68,12 @@ export function expandActionsAll(
   actionsFilterContextual: HTMLGuxTableToolbarCustomActionElement[],
   actionsPerm: HTMLGuxTableToolbarCustomActionElement[],
   actionPrimary: HTMLGuxTableToolbarCustomActionElement
-): boolean {
+): void {
   const arrayActions = actionsFilterContextual.concat(
     actionsPerm,
     actionPrimary
   );
-  return Boolean(
+  Boolean(
     arrayActions.forEach(action => {
       action.iconOnly = false;
     })

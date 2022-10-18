@@ -106,20 +106,6 @@ export class GuxTableToolbar {
     return this.filterActions.concat(this.contextualActions);
   }
 
-  private styleSearchField(): void {
-    const search = this.root?.querySelector('gux-form-field-search');
-    if (search) {
-      const input = search?.querySelector('input[type=search]');
-      return (
-        input &&
-        input.setAttribute(
-          'style',
-          'width:145px;min-width:145px;flex-basis:260px'
-        )
-      );
-    }
-  }
-
   private initialToolbarSize(
     filterWidth: number,
     controlWidth: number,
@@ -173,7 +159,6 @@ export class GuxTableToolbar {
 
   componentWillLoad() {
     trackComponent(this.root);
-    this.styleSearchField();
   }
 
   componentDidLoad(): void {
