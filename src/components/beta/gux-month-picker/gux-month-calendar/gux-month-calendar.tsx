@@ -85,7 +85,6 @@ export class GuxMonthCalendar {
       const target: HTMLButtonElement = this.root.shadowRoot.querySelector(
         `gux-month-list-item[value="${iSOYearMonth}"]`
       );
-      console.log({ target });
       if (target) {
         target.focus();
       }

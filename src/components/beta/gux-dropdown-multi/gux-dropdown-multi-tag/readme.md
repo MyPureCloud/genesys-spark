@@ -15,9 +15,9 @@
 
 ## Events
 
-| Event              | Description                           | Type                  |
-| ------------------ | ------------------------------------- | --------------------- |
-| `guxclearselected` | Triggered when click on remove button | `CustomEvent<string>` |
+| Event                   | Description                           | Type                  |
+| ----------------------- | ------------------------------------- | --------------------- |
+| `internalclearselected` | Triggered when click on remove button | `CustomEvent<string>` |
 
 
 ## Dependencies

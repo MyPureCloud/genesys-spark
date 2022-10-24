@@ -214,7 +214,6 @@ export class GuxMonthPicker {
   }
 
   private onSpinnerClick(): void {
-    console.log('onSpinnerClick');
     this.expanded = true;
   }
 

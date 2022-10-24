@@ -17,17 +17,18 @@
 
 ## Events
 
-| Event          | Description                                                                   | Type                |
-| -------------- | ----------------------------------------------------------------------------- | ------------------- |
-| `guxcollapsed` | This event will run when the dropdown-multi transitions to a collapsed state. | `CustomEvent<void>` |
-| `guxexpanded`  | This event will run when the dropdown-multi transitions to an expanded state. | `CustomEvent<void>` |
+| Event             | Description                                                                   | Type                |
+| ----------------- | ----------------------------------------------------------------------------- | ------------------- |
+| `guxcollapsed`    | This event will run when the dropdown-multi transitions to a collapsed state. | `CustomEvent<void>` |
+| `guxcreateoption` | This event is emitted to request creating a new option                        | `CustomEvent<any>`  |
+| `guxexpanded`     | This event will run when the dropdown-multi transitions to an expanded state. | `CustomEvent<void>` |
 
 
 ## Methods
 
 ### `getSelectedValues() => Promise<string[]>`
 
-Gets the currently selected values.
+Returns an array of the selected values
 
 #### Returns
 

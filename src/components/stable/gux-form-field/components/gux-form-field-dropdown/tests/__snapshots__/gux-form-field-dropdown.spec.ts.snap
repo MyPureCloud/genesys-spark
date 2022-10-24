@@ -48,8 +48,9 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
     <gux-listbox-multi aria-describedby="gux-form-field-help-i" aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -196,8 +197,9 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -271,8 +273,9 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -346,8 +349,9 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -421,8 +425,9 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -496,8 +501,9 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -571,8 +577,9 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -646,8 +653,9 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant

@@ -7,8 +7,9 @@ import {
   Host,
   JSX,
   Listen,
+  Method,
   Prop,
-  Watch
+  State
 } from '@stencil/core';
 
 import { randomHTMLId } from '../../../../utils/dom/random-html-id';
@@ -16,10 +17,11 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-option-multi.less',
-  tag: 'gux-option-multi'
+  styleUrl: 'gux-create-option.less',
+  tag: 'gux-create-option',
+  shadow: false
 })
-export class GuxOptionMulti {
+export class GuxCreateOption {
   private i18n: GetI18nValue;
 
   @Element()
@@ -31,20 +33,14 @@ export class GuxOptionMulti {
   @Prop()
   active: boolean = false;
 
-  @Prop({ mutable: true })
-  selected: boolean = false;
+  @Prop()
+  hidden: boolean = true;
 
   @Prop()
-  disabled: boolean = false;
+  filtered: boolean = true;
 
-  @Prop()
-  filtered: boolean = false;
-
-  @Prop({ mutable: true })
+  @State()
   hovered: boolean = false;
-
-  @Prop()
-  custom: boolean = false;
 
   @Listen('mouseenter')
   onmouseenter() {
@@ -57,54 +53,52 @@ export class GuxOptionMulti {
   }
 
   @Event()
-  guxremovecustomoption: EventEmitter<string>;
+  internalcreatenewoption: EventEmitter<string>;
 
-  @Event()
-  internalselectcustomoption: EventEmitter<string>;
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async guxEmitInternalCreateNewOption(): Promise<void> {
+    this.internalcreatenewoption.emit();
+  }
 
-  @Watch('selected')
-  emitRemoveCustomOption() {
-    if (!this.selected && this.custom) {
-      this.guxremovecustomoption.emit();
-    }
+  @Listen('click')
+  handleClick() {
+    this.internalcreatenewoption.emit(this.value);
   }
 
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.root.id = this.root.id || randomHTMLId('gux-option-multi');
-    if (this.custom) {
-      this.internalselectcustomoption.emit(this.value);
-    }
   }
 
   renderCustomOptionInstructions(): JSX.Element {
-    if (this.custom) {
-      return (
-        <span class="gux-screenreader">
-          {this.i18n('removeCustomElementInstructions')}
-        </span>
-      ) as JSX.Element;
-    }
+    return (
+      <span class="gux-screenreader">
+        {this.i18n('createCustomOptionInstructions')}
+      </span>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
     return (
       <Host
         role="option"
+        aria-selected={false}
         class={{
           'gux-active': this.active,
-          'gux-disabled': this.disabled,
-          'gux-filtered': this.filtered,
           'gux-hovered': this.hovered,
-          'gux-selected': this.selected
+          'gux-filtered': this.filtered
         }}
-        aria-selected={this.selected.toString()}
-        aria-disabled={this.disabled.toString()}
       >
         <div class="gux-option">
-          <slot />
+          <gux-icon decorative iconName="plus"></gux-icon>
+          <div class="gux-create-text">
+            {this.i18n('createOption', {
+              optionValue: this.value
+            })}
+          </div>
+          {this.renderCustomOptionInstructions()}
         </div>
-        {this.renderCustomOptionInstructions()}
       </Host>
     ) as JSX.Element;
   }

@@ -20,10 +20,11 @@
     "clearSelection": "Clear {numberSelected} selected items"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
+    "textInputResults": "Type to filter dropdown results",
     "noSelection": "Select...",
     "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "numberSelected": "{numberSelected} selected",
+    "pressEnterToCreate": "Press Enter to create new option, {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -155,7 +156,15 @@
   "gux-form-field-input-clear-button": {
     "clear": "Clear"
   },
+  "gux-create-option": {
+    "createCustomOptionInstructions": ", select to create a new custom option",
+    "createOption": "Add \"{optionValue}\""
+  },
+  "gux-option-multi": {
+    "removeCustomElementInstructions": ", unselecting this custom option will remove it from the list"
+  },
   "gux-listbox-multi": {
+    "add": "Add {name}",
     "noMatches": "No matches"
   },
   "gux-listbox": {

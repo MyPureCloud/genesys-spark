@@ -1,6 +1,8 @@
 import {
   Component,
   Element,
+  Event,
+  EventEmitter,
   forceUpdate,
   h,
   JSX,
@@ -8,9 +10,7 @@ import {
   Method,
   Prop,
   State,
-  Watch,
-  Event,
-  EventEmitter
+  Watch
 } from '@stencil/core';
 
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
@@ -34,7 +34,7 @@ import { getSearchOption } from '../../stable/gux-listbox/gux-listbox.service';
 export class GuxDropdownMulti {
   private i18n: GetI18nValue;
   private fieldButtonElement: HTMLElement;
-  private filterElement: HTMLInputElement;
+  private textInputElement: HTMLInputElement;
   private listboxElement: HTMLGuxListboxMultiElement;
 
   @Element()
@@ -59,10 +59,23 @@ export class GuxDropdownMulti {
   hasError: boolean = false;
 
   @State()
+  hasCreate: boolean = false;
+
+  @State()
   private expanded: boolean = false;
 
   @State()
-  private filter: string = '';
+  private textInput: string = '';
+
+  private hasTextInput(): boolean {
+    return this.filterable || this.hasCreate;
+  }
+
+  /**
+   * This event is emitted to request creating a new option
+   */
+  @Event()
+  guxcreateoption: EventEmitter;
 
   /**
    * This event will run when the dropdown-multi transitions to an expanded state.
@@ -98,16 +111,16 @@ export class GuxDropdownMulti {
   focusSelectedItemAfterRender(expanded: boolean) {
     if (expanded && this.listboxElement) {
       afterNextRender(() => {
-        this.listboxElement.focus();
-
-        if (this.filterable) {
-          this.filterElement.focus();
+        if (this.hasTextInput()) {
+          this.textInputElement.focus();
+        } else {
+          this.listboxElement.focus();
         }
       });
     }
 
     if (!expanded) {
-      this.filter = '';
+      this.textInput = '';
     }
   }
 
@@ -131,7 +144,7 @@ export class GuxDropdownMulti {
   }
 
   /**
-   * Gets the currently selected values.
+   * Returns an array of the selected values
    */
   @Method()
   getSelectedValues(): Promise<string[]> {
@@ -142,9 +155,9 @@ export class GuxDropdownMulti {
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Escape':
-        if (this.filterable) {
+        if (this.hasTextInput()) {
           if (document.activeElement === this.listboxElement) {
-            return this.filterElement.focus();
+            return this.textInputElement.focus();
           }
         }
         this.collapseListbox('focusFieldButton');
@@ -152,7 +165,7 @@ export class GuxDropdownMulti {
       case 'Tab':
         if (this.shiftTabFromFilterListbox(event)) {
           event.preventDefault();
-          return this.filterElement.focus();
+          return this.textInputElement.focus();
         } else if (this.shiftTabFromExpandedFilterInput(event)) {
           event.preventDefault();
           return this.collapseListbox('focusFieldButton');
@@ -166,17 +179,27 @@ export class GuxDropdownMulti {
           this.expanded = true;
         }
         return;
+      case 'Enter':
+        if (this.canCreateNewOption() && this.isActiveElement()) {
+          this.emitCreateOption();
+        }
     }
   }
 
+  /**
+   * force update when slotted gux-listbox-multi listbox options change
+   */
   @Listen('internallistboxoptionsupdated')
   onInternallistboxoptionsupdated(event: CustomEvent): void {
     event.stopPropagation();
     forceUpdate(this.root);
   }
 
-  @Listen('guxclearselected')
-  onGuxclearselected(event: CustomEvent): void {
+  /**
+   * clear selected options when gux-dropdown-multi-tag emits event
+   */
+  @Listen('internalclearselected')
+  onClearselected(event: CustomEvent): void {
     event.stopPropagation();
 
     this.updateValue('');
@@ -185,6 +208,15 @@ export class GuxDropdownMulti {
     }
     this.validateValue(this.value);
     this.fieldButtonElement.focus();
+  }
+
+  /**
+   * emit guxcreateoption event when gux-create-option emits create event
+   */
+  @Listen('internalcreatenewoption')
+  onCreatenewoption(event: CustomEvent): void {
+    event.stopPropagation();
+    this.emitCreateOption();
   }
 
   @Listen('blur')
@@ -217,6 +249,7 @@ export class GuxDropdownMulti {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
 
     this.listboxElement = this.root.querySelector('gux-listbox-multi');
+    this.hasCreate = !!this.root.querySelector('gux-create-option');
     this.validateValue(this.value);
   }
 
@@ -233,7 +266,7 @@ export class GuxDropdownMulti {
 
   componentWillRender(): void {
     this.validateValue(this.value);
-    this.listboxElement.filter = this.filter;
+    this.listboxElement.textInput = this.textInput;
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -267,13 +300,13 @@ export class GuxDropdownMulti {
 
   private filterInput(event: InputEvent): void {
     event.stopPropagation();
-    this.filter = this.filterElement.value;
+    this.textInput = this.textInputElement.value;
   }
 
   private shiftTabFromExpandedFilterInput(event: KeyboardEvent): boolean {
     return (
       event.shiftKey &&
-      this.filterable &&
+      this.hasTextInput() &&
       this.expanded &&
       !(document.activeElement === this.listboxElement)
     );
@@ -282,9 +315,28 @@ export class GuxDropdownMulti {
   private shiftTabFromFilterListbox(event: KeyboardEvent): boolean {
     return (
       event.shiftKey &&
-      this.filterable &&
+      this.hasTextInput() &&
       document.activeElement === this.listboxElement
     );
+  }
+
+  private emitCreateOption(): void {
+    this.guxcreateoption.emit(this.textInput);
+    this.textInput = '';
+    this.textInputElement.value = '';
+  }
+
+  /**
+   * check if able to create new option from text input value
+   */
+  private canCreateNewOption(): boolean {
+    return (
+      this.hasCreate && this.textInput && !this.listboxElement.hasExactMatch
+    );
+  }
+
+  private isActiveElement(): boolean {
+    return document.activeElement === this.root;
   }
 
   private activeElementNotListbox(): boolean {
@@ -296,10 +348,6 @@ export class GuxDropdownMulti {
       case 'ArrowDown':
         event.stopImmediatePropagation();
         this.listboxElement.focus();
-        return;
-      case 'Enter':
-        void this.listboxElement.guxSelectActive();
-        event.preventDefault();
         return;
     }
   }
@@ -332,13 +380,14 @@ export class GuxDropdownMulti {
     }
   }
 
-  private getSuggestionText(filter: string): string {
-    const filterLength = filter.length;
-    if (filterLength > 0) {
-      const option = getSearchOption(this.listboxElement, filter);
-
+  private getSuggestionText(textInput: string): string {
+    const textInputLength = textInput.length;
+    if (textInputLength > 0) {
+      const option = getSearchOption(this.listboxElement, textInput);
       if (option) {
-        return option.textContent.substring(filterLength);
+        return option
+          .querySelector('.gux-option')
+          .textContent.substring(textInputLength);
       }
     }
 
@@ -369,6 +418,12 @@ export class GuxDropdownMulti {
     }
   }
 
+  private getInputAriaLabel(): string {
+    return this.canCreateNewOption() && this.isActiveElement()
+      ? this.i18n('pressEnterToCreate', { textInputValue: this.textInput })
+      : this.i18n('textInputResults');
+  }
+
   private renderTag(): JSX.Element {
     const selectedListboxOptionElement = this.getOptionElementByValue(
       this.value
@@ -384,15 +439,15 @@ export class GuxDropdownMulti {
   }
 
   private renderFilterInputField(): JSX.Element {
-    if (this.expanded && this.filterable) {
+    if (this.expanded && this.hasTextInput()) {
       return (
         <div class="gux-field gux-input-field">
           <div class="gux-field-content">
             <div class="gux-filter">
               <div class="gux-filter-display">
-                <span class="gux-filter-text">{this.filter}</span>
+                <span class="gux-filter-text">{this.textInput}</span>
                 <span class="gux-filter-suggestion">
-                  {this.getSuggestionText(this.filter)}
+                  {this.getSuggestionText(this.textInput)}
                 </span>
               </div>
               <div class="input-and-dropdown-button">
@@ -401,8 +456,8 @@ export class GuxDropdownMulti {
                   placeholder={this.placeholder || this.i18n('noSelection')}
                   class="gux-filter-input"
                   type="text"
-                  aria-label={this.i18n('filterResults')}
-                  ref={el => (this.filterElement = el)}
+                  aria-label={this.getInputAriaLabel()}
+                  ref={el => (this.textInputElement = el)}
                   onInput={this.filterInput.bind(this)}
                   onKeyDown={this.filterKeydown.bind(this)}
                   onKeyUp={this.filterKeyup.bind(this)}
@@ -428,8 +483,10 @@ export class GuxDropdownMulti {
       <div
         class={{
           'gux-target-container': true,
-          'gux-target-container-expanded': this.expanded && this.filterable,
-          'gux-target-container-collapsed': !(this.expanded && this.filterable),
+          'gux-target-container-expanded': this.expanded && this.hasTextInput(),
+          'gux-target-container-collapsed': !(
+            this.expanded && this.hasTextInput()
+          ),
           'gux-error': this.hasError
         }}
         slot="target"
@@ -457,7 +514,7 @@ export class GuxDropdownMulti {
     ) as JSX.Element;
   }
   private renderTargetContent(): JSX.Element {
-    if (!(this.expanded && this.filterable)) {
+    if (!(this.expanded && this.hasTextInput())) {
       return (
         <div class="gux-field-content">{this.renderTargetDisplay()}</div>
       ) as JSX.Element;

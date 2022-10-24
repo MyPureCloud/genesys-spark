@@ -1,6 +1,7 @@
 {
-  "filterResults": "Type to filter dropdown results",
+  "textInputResults": "Type to filter dropdown results",
   "noSelection": "Select...",
   "dropdown": "Dropdown",
-  "numberSelected": "{numberSelected} selected"
+  "numberSelected": "{numberSelected} selected",
+  "pressEnterToCreate": "Press Enter to create new option, {textInputValue}"
 }

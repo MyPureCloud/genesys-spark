@@ -24,8 +24,9 @@ exports[`gux-dropdown #render should render as expected 1`] = `
   <gux-listbox-multi aria-label="Animals" aria-multiselectable="true" role="listbox" tabindex="0">
     <mock:shadow-root>
       <slot></slot>
+      <slot name="create"></slot>
     </mock:shadow-root>
-    <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+    <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
       <!---->
       <div class="gux-option">
         Ant

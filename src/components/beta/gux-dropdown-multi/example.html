@@ -1,6 +1,5 @@
 <h1>gux-dropdown-multi-beta</h1>
 <form onchange="notify(event)" oninput="notify(event)">
-  <h2>Filterable Long List</h2>
   <gux-dropdown-multi-beta filterable placeholder="Select a country">
     <gux-listbox-multi aria-label="Countries">
       <gux-option-multi value="AFG">Afghanistan</gux-option-multi>
@@ -431,9 +430,36 @@
       <gux-option-multi value="z">Zebra</gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
+  <h2>Enabling user creation of new items</h2>
+  <gux-dropdown-multi-beta
+    id="createDropdownMultiExample"
+    placeholder="Your favorite animal"
+  >
+    <gux-listbox-multi id="listboxContainer" aria-label="Animals">
+      <gux-create-option slot="create"></gux-create-option>
+      <gux-option-multi value="ant">Ant</gux-option-multi>
+      <gux-option-multi value="bat">Bat</gux-option-multi>
+      <gux-option-multi value="cat">Cat</gux-option-multi>
+    </gux-listbox-multi>
+  </gux-dropdown-multi-beta>
 </form>
 
-<style>
+<style
+  onload="(function () {
+    document.getElementById(`createDropdownMultiExample`).addEventListener('guxcreateoption', 
+    (event) => {
+      const element = document.createElement('gux-option-multi');
+      element.addEventListener('guxremovecustomoption', () => {
+        element.remove();
+      });
+      element.setAttribute('custom', true);
+      element.setAttribute('value', event.detail);
+      element.innerText = (event.detail);
+      document.getElementById('listboxContainer').prepend(element);
+    })
+  }
+  )()"
+>
   form {
     width: 200px;
   }

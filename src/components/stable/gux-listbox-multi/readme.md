@@ -5,10 +5,12 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `filter` | `filter`  |             | `string` | `''`        |
-| `value`  | `value`   |             | `string` | `undefined` |
+| Property        | Attribute         | Description | Type      | Default     |
+| --------------- | ----------------- | ----------- | --------- | ----------- |
+| `filter`        | `filter`          |             | `string`  | `''`        |
+| `hasExactMatch` | `has-exact-match` |             | `boolean` | `false`     |
+| `textInput`     | `text-input`      |             | `string`  | `''`        |
+| `value`         | `value`           |             | `string`  | `undefined` |
 
 
 ## Events

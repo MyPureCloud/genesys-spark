@@ -29,6 +29,7 @@
  - [gux-calendar](../gux-calendar)
  - [gux-content-search](../gux-content-search)
  - [gux-copy-to-clipboard-beta](../../beta/gux-copy-to-clipboard)
+ - [gux-create-option](../gux-listbox-multi/gux-create-option)
  - [gux-datepicker](../gux-datepicker)
  - [gux-disclosure-button](../gux-disclosure-button)
  - [gux-dismiss-button](../gux-dismiss-button)
@@ -89,6 +90,7 @@ graph TD;
   gux-calendar --> gux-icon
   gux-content-search --> gux-icon
   gux-copy-to-clipboard-beta --> gux-icon
+  gux-create-option --> gux-icon
   gux-datepicker --> gux-icon
   gux-disclosure-button --> gux-icon
   gux-dismiss-button --> gux-icon
