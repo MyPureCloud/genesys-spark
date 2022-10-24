@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.37.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.5...v3.37.0) (2022-10-24)
+
+
+### Features
+
+* **gux-dropdown-multi:** custom options ([#943](https://github.com/MyPureCloud/genesys-webcomponents/issues/943)) ([4c5327e](https://github.com/MyPureCloud/genesys-webcomponents/commit/4c5327e9ab7a252481ffd513c51098e09b0e7f57))
+
 ### [3.36.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.4...v3.36.5) (2022-10-18)
 
 ### [3.36.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.3...v3.36.4) (2022-10-14)
