@@ -6,10 +6,11 @@ export function setAccent(
     | HTMLGuxTableToolbarCustomActionElement,
   accent: GuxTableToolbarActionAccent
 ): void {
-  [].concat(actions).forEach(action => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    action.accent = accent;
-  });
+  ([].concat(actions) as HTMLGuxTableToolbarCustomActionElement[]).forEach(
+    action => {
+      action.accent = accent;
+    }
+  );
 }
 
 export function expandActions(
@@ -17,10 +18,11 @@ export function expandActions(
     | HTMLGuxTableToolbarCustomActionElement[]
     | HTMLGuxTableToolbarCustomActionElement
 ): void {
-  [].concat(actions).forEach(action => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    action.iconOnly = false;
-  });
+  ([].concat(actions) as HTMLGuxTableToolbarCustomActionElement[]).forEach(
+    action => {
+      action.iconOnly = false;
+    }
+  );
 }
 
 export function collapseActions(
@@ -28,10 +30,11 @@ export function collapseActions(
     | HTMLGuxTableToolbarCustomActionElement[]
     | HTMLGuxTableToolbarCustomActionElement
 ): void {
-  [].concat(actions).forEach(action => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    action.iconOnly = true;
-  });
+  ([].concat(actions) as HTMLGuxTableToolbarCustomActionElement[]).forEach(
+    action => {
+      action.iconOnly = true;
+    }
+  );
 }
 
 export function collapseActionsAll(
