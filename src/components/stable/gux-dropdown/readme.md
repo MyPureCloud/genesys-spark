@@ -18,9 +18,11 @@
 
 ## Events
 
-| Event       | Description | Type                  |
-| ----------- | ----------- | --------------------- |
-| `guxfilter` |             | `CustomEvent<string>` |
+| Event          | Description | Type                  |
+| -------------- | ----------- | --------------------- |
+| `guxcollapsed` |             | `CustomEvent<void>`   |
+| `guxexpanded`  |             | `CustomEvent<void>`   |
+| `guxfilter`    |             | `CustomEvent<string>` |
 
 
 ## Slots

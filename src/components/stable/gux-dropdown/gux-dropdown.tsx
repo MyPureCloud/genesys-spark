@@ -172,7 +172,25 @@ export class GuxDropdown {
   }
 
   @Event()
+  guxexpanded: EventEmitter<void>;
+
+  @Event()
+  guxcollapsed: EventEmitter<void>;
+
+  @Event()
   private guxfilter: EventEmitter<string>;
+
+  @Listen('internalexpanded')
+  onInternalExpanded(event: CustomEvent): void {
+    event.stopPropagation();
+    this.guxexpanded.emit();
+  }
+
+  @Listen('internalcollapsed')
+  onInternalCollapsed(event: CustomEvent): void {
+    event.stopPropagation();
+    this.guxcollapsed.emit();
+  }
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
