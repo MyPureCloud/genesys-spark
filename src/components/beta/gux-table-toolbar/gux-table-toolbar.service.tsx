@@ -1,4 +1,3 @@
-import { isArray } from 'vega';
 import { GuxTableToolbarActionAccent } from './gux-table-toolbar-action-accents.types';
 
 export function setAccent(
@@ -7,13 +6,10 @@ export function setAccent(
     | HTMLGuxTableToolbarCustomActionElement,
   accent: GuxTableToolbarActionAccent
 ): void {
-  if (isArray(actions)) {
-    actions.forEach(action => {
-      action.accent = accent;
-    });
-  } else {
-    actions.accent = accent;
-  }
+  [].concat(actions).forEach(action => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    action.accent = accent;
+  });
 }
 
 export function expandActions(
@@ -21,15 +17,10 @@ export function expandActions(
     | HTMLGuxTableToolbarCustomActionElement[]
     | HTMLGuxTableToolbarCustomActionElement
 ): void {
-  if (isArray(actions)) {
-    Boolean(
-      actions.forEach(action => {
-        action.iconOnly = false;
-      })
-    );
-  } else {
-    actions.iconOnly = false;
-  }
+  [].concat(actions).forEach(action => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    action.iconOnly = false;
+  });
 }
 
 export function collapseActions(
@@ -37,15 +28,10 @@ export function collapseActions(
     | HTMLGuxTableToolbarCustomActionElement[]
     | HTMLGuxTableToolbarCustomActionElement
 ): void {
-  if (isArray(actions)) {
-    Boolean(
-      actions.forEach(action => {
-        action.iconOnly = true;
-      })
-    );
-  } else {
-    actions.iconOnly = true;
-  }
+  [].concat(actions).forEach(action => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    action.iconOnly = true;
+  });
 }
 
 export function collapseActionsAll(
@@ -57,11 +43,9 @@ export function collapseActionsAll(
     actionsFilterContextual,
     actionPrimary
   );
-  Boolean(
-    arrayActions.forEach(action => {
-      action.iconOnly = true;
-    })
-  );
+  arrayActions.forEach(action => {
+    action.iconOnly = true;
+  });
 }
 
 export function expandActionsAll(
@@ -73,9 +57,7 @@ export function expandActionsAll(
     actionsPerm,
     actionPrimary
   );
-  Boolean(
-    arrayActions.forEach(action => {
-      action.iconOnly = false;
-    })
-  );
+  arrayActions.forEach(action => {
+    action.iconOnly = false;
+  });
 }

@@ -216,7 +216,9 @@ export class GuxTableToolbar {
   render(): JSX.Element {
     return (
       <Host role="toolbar" aria-orientation="horizontal">
-        <slot name="search-and-filter"></slot>
+        <div class="search-filter-container">
+          <slot name="search-and-filter"></slot>
+        </div>
         <div class="section-spacing" />
         <div class="gux-contextual-permanent-primary">
           <slot name="contextual-actions"></slot>

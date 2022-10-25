@@ -3,7 +3,9 @@
 exports[`gux-table-toolbar-beta #render should render table toolbar as expected 1`] = `
 <gux-table-toolbar-beta aria-orientation="horizontal" role="toolbar">
   <mock:shadow-root>
-    <slot name="search-and-filter"></slot>
+    <div class="search-filter-container">
+      <slot name="search-and-filter"></slot>
+    </div>
     <div class="section-spacing"></div>
     <div class="gux-contextual-permanent-primary">
       <slot name="contextual-actions"></slot>
