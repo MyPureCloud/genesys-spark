@@ -22,14 +22,6 @@ import {
 
 import { GuxPaginationLayoutBeta } from './gux-pagination-beta.types';
 
-/**
- * The minimum size in px at which the advanced layout will display.
- * Below this size we switch to the simple layout.
- * This was chosen based on the width required for 3-digit page numbers, so
- * page counts that go into 4 digits could overflow at small sizes.
- */
-const MIN_ADVANCED_SIZE = 810;
-
 @Component({
   styleUrl: 'gux-pagination-beta.less',
   tag: 'gux-pagination-beta',
@@ -40,6 +32,8 @@ export class GuxPaginationBeta implements ComponentInterface {
   private root: HTMLElement;
 
   private resizeObserver?: ResizeObserver;
+
+  private switchToOriginalLayoutWidth: number = 0;
 
   /**
    * The pagination component can have different layouts to suit the available space
@@ -134,13 +128,21 @@ export class GuxPaginationBeta implements ComponentInterface {
 
   private checkPaginationContainerWidthForLayout() {
     readTask(() => {
-      const el = this.root.shadowRoot.querySelector(
+      const container = this.root.shadowRoot.querySelector(
         '.gux-pagination-container'
       );
-      const paginationContainerWidth = el.clientWidth;
-      if (paginationContainerWidth < MIN_ADVANCED_SIZE) {
+
+      const spacer = this.root.shadowRoot.querySelector(
+        '.gux-pagination-spacer'
+      );
+      const containerWidth = container.clientWidth;
+      const spacerWidth = spacer.clientWidth;
+
+      if (spacerWidth < 24 && this.displayedLayout !== 'simple') {
+        this.switchToOriginalLayoutWidth = containerWidth;
         this.displayedLayout = 'simple';
-      } else {
+      } else if (containerWidth > this.switchToOriginalLayoutWidth) {
+        this.switchToOriginalLayoutWidth = 0;
         this.displayedLayout = this.layout;
       }
     });
@@ -205,6 +207,7 @@ export class GuxPaginationBeta implements ComponentInterface {
             />
           )}
         </div>
+        <div class="gux-pagination-spacer"></div>
         <div class="gux-pagination-change">
           <gux-pagination-buttons-beta
             layout={this.displayedLayout}
