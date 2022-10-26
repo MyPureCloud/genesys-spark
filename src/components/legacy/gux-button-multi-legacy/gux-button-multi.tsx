@@ -10,7 +10,7 @@ import {
   Watch
 } from '@stencil/core';
 
-import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
+import { GuxButtonAccent } from '../gux-action-button-legacy/gux-button.types';
 import { trackComponent } from '../../../usage-tracking';
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
@@ -50,9 +50,6 @@ export class GuxButtonMultiLegacy {
   @Prop()
   disabled: boolean = false;
 
-  /**
-   * The component accent (secondary or primary).
-   */
   @Prop()
   accent: GuxButtonAccent = 'secondary';
 

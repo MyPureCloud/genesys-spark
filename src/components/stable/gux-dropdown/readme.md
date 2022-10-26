@@ -10,9 +10,19 @@
 | `disabled`    | `disabled`    |             | `boolean` | `false`     |
 | `filterable`  | `filterable`  |             | `boolean` | `false`     |
 | `hasError`    | `has-error`   |             | `boolean` | `false`     |
+| `loading`     | `loading`     |             | `boolean` | `false`     |
 | `placeholder` | `placeholder` |             | `string`  | `undefined` |
 | `required`    | `required`    |             | `boolean` | `false`     |
 | `value`       | `value`       |             | `string`  | `undefined` |
+
+
+## Events
+
+| Event          | Description | Type                  |
+| -------------- | ----------- | --------------------- |
+| `guxcollapsed` |             | `CustomEvent<void>`   |
+| `guxexpanded`  |             | `CustomEvent<void>`   |
+| `guxfilter`    |             | `CustomEvent<string>` |
 
 
 ## Slots
@@ -32,12 +42,14 @@
 ### Depends on
 
 - [gux-icon](../gux-icon)
+- [gux-radial-loading](../gux-radial-loading)
 - [gux-popup](../gux-popup)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-dropdown --> gux-icon
+  gux-dropdown --> gux-radial-loading
   gux-dropdown --> gux-popup
   gux-pagination-items-per-page --> gux-dropdown
   gux-pagination-items-per-page-beta --> gux-dropdown

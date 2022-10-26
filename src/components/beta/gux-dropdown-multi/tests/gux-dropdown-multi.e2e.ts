@@ -1,3 +1,4 @@
+import { E2EElement, E2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 describe('gux-dropdown-multi-beta', () => {
@@ -230,5 +231,97 @@ describe('gux-dropdown-multi-beta', () => {
       expect(listboxItems.length).toBe(2);
       expect(listboxItems[0].textContent).toEqual('Bear');
     });
+
+    describe('with the create option set', () => {
+      it('provides the option to create items', async () => {
+        const { page, dropdown } = await setupPage(creatableDropdown);
+        await inputFilter(page, dropdown, 'bee');
+        const createAction = await getCreateAction(dropdown);
+        await a11yCheck(page);
+        expect(createAction).not.toBeNull();
+        expect(createAction).not.toHaveClass('gux-filtered');
+      });
+
+      it('does not provide a create option if there is an exact match', async () => {
+        const { page, dropdown } = await setupPage(creatableDropdown);
+        await inputFilter(page, dropdown, 'cat');
+        const createAction = await getCreateAction(dropdown);
+        expect(createAction).toHaveClass('gux-filtered');
+      });
+
+      it('updates dropdown multi and listbox value when slot changes', async () => {
+        const { page, dropdown, listbox } = await setupPage(creatableDropdown);
+        let dropdownValue = await dropdown.getProperty('value');
+        let listboxValue = await listbox.getProperty('value');
+        let selectedItems = await page.findAll('.gux-selected');
+        expect(selectedItems.length).toBe(0);
+        expect(dropdownValue).toEqual(undefined);
+        expect(listboxValue).toEqual(undefined);
+        await addNewCustomOption(page);
+        selectedItems = await page.findAll('.gux-selected');
+        expect(selectedItems.length).toBe(1);
+        dropdownValue = await dropdown.getProperty('value');
+        listboxValue = await listbox.getProperty('value');
+        expect(dropdownValue).toEqual('newoption');
+        expect(listboxValue).toEqual('newoption');
+      });
+    });
   });
 });
+
+// HELPER FUNCTIONS
+
+async function setupPage(html: string): Promise<{
+  page: E2EPage;
+  dropdown: E2EElement;
+  listbox: E2EElement;
+  listboxOptions: Array<E2EElement>;
+}> {
+  const page = await newSparkE2EPage({ html });
+  await page.waitForChanges();
+  const dropdown = await page.find('gux-dropdown-multi-beta');
+  const listbox = await page.find('gux-listbox-multi');
+  const listboxOptions = await page.findAll('gux-option-multi');
+  return { page, dropdown, listbox, listboxOptions };
+}
+
+async function inputFilter(
+  page: E2EPage,
+  dropdown: E2EElement,
+  text: string
+): Promise<void> {
+  const dropdownButton = await dropdown.find('pierce/.gux-field');
+  await dropdownButton.click();
+  await page.waitForChanges();
+  const input = await dropdown.find('pierce/.gux-filter-input');
+  for (const char of text.split('')) {
+    await input.press(char);
+  }
+}
+
+async function getCreateAction(dropdown: E2EElement): Promise<E2EElement> {
+  return await dropdown.find('gux-create-option');
+}
+
+async function addNewCustomOption(page: E2EPage): Promise<void> {
+  await page.evaluate(() => {
+    const listboxElement = document.querySelector('gux-listbox-multi');
+    const element = document.createElement('gux-option-multi');
+    element.setAttribute('custom', 'true');
+    element.setAttribute('value', 'newoption');
+    element.innerText = 'newoption';
+    listboxElement.appendChild(element);
+  });
+  await page.waitForChanges();
+}
+
+const creatableDropdown = `
+<gux-dropdown-multi-beta lang="en">
+  <gux-listbox-multi aria-label="Animals">
+    <gux-create-option slot="create"></gux-create-option>
+    <gux-option-multi value="ant">Ant</gux-option-multi>
+    <gux-option-multi value="bear">Bear</gux-option-multi>
+    <gux-option-multi value="cat">Cat</gux-option-multi>
+  </gux-listbox-multi>
+</gux-dropdown-multi-beta>
+`;

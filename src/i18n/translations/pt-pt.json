@@ -10,20 +10,20 @@
     "red-bold": "distintivo com etiqueta: {label}, cor: vermelho a negrito"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "Clique para copiar",
+    "copyToClipboard": "Copiar para a área de transferência",
+    "enterToCopy": "Prima Enter para copiar",
+    "copySuccess": "Copiado para a área de transferência",
+    "copyFailure": "Erro. Tente novamente."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "Apagar {numberSelected} itens selecionados"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "Escreva para filtrar resultados da lista pendente",
+    "noSelection": "Selecione...",
+    "dropdown": "Lista pendente",
+    "numberSelected": "{numberSelected} selecionado(s)"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "Itens por página"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "Ignorar navegação por ligações"
   },
   "gux-table": {
     "emptyMessage": "Nenhum dado disponível",
@@ -61,7 +61,12 @@
     "selectAllTableRows": "Selecionar todas as linhas da tabela",
     "selectTableRow": "Selecionar linha da tabela",
     "sortAsc": "Colocado por ordem ascendente",
-    "sortDesc": "Colocado por ordem descendente"
+    "sortDesc": "Colocado por ordem descendente",
+    "tableOptions": "Opções da tabela",
+    "noColumnSort": "{headerContent}. A tabela não está atualmente ordenada por esta coluna. Clique no cabeçalho da coluna para ordenar a tabela por esta coluna em ordem ascendente",
+    "ascendingColumnSort": "{headerContent}. A tabela está atualmente ordenada por esta coluna por ordem ascendente. Clique no cabeçalho da coluna para ordenar a tabela por esta coluna em ordem descendente",
+    "descendingColumnSort": "{headerContent}. A tabela está atualmente ordenada por esta coluna em ordem descendente. Clique no cabeçalho da coluna para ordenar a tabela por esta coluna em ordem ascendente",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. A coluna está atualmente ordenada por esta coluna em ordem decrescente. Clique no cabeçalho da coluna para não ordenar a tabela por esta coluna"
   },
   "gux-tag": {
     "tag": "marca com etiqueta: {label}",
@@ -145,7 +150,7 @@
     "clear": "Limpar"
   },
   "gux-listbox-multi": {
-    "noMatches": "No matches"
+    "noMatches": "Nenhuma correspondência"
   },
   "gux-listbox": {
     "noMatches": "Nenhuma correspondência"

@@ -1,28 +1,32 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
-import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
-import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
-import { OnMutation } from '../../../../../utils/decorator/on-mutation';
-import { onRequiredChange } from '../../../../../utils/dom/on-attribute-change';
-import { preventBrowserValidationStyling } from '../../../../../utils/dom/prevent-browser-validation-styling';
-import { trackComponent } from '../../../../../usage-tracking';
+import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
+import { OnMutation } from '@utils/decorator/on-mutation';
+import { onRequiredChange } from '@utils/dom/on-attribute-change';
+import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
+import { hasSlot } from '@utils/dom/has-slot';
 
-import { GuxFormFieldContainer } from '../../functional-components/gux-form-field-container/gux-form-field-container';
-import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';
-import { GuxFormFieldLabel } from '../../functional-components/gux-form-field-label/gux-form-field-label';
+import {
+  GuxFormFieldHelp,
+  GuxFormFieldError,
+  GuxFormFieldLabel,
+  GuxFormFieldContainer
+} from '../../functional-components/functional-components';
 
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
-  hasErrorSlot,
   getComputedLabelPosition,
   validateFormIds
 } from '../../gux-form-field.service';
-
 import { GuxFormFieldTextAreaResize } from './gux-form-field-textarea.types';
+import { trackComponent } from '../../../../../usage-tracking';
+
 /**
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
+ * @slot help - Optional slot for help message
  */
 @Component({
   styleUrl: 'gux-form-field-textarea.less',
@@ -57,16 +61,21 @@ export class GuxFormFieldTextarea {
   @State()
   private hasError: boolean = false;
 
+  @State()
+  private hasHelp: boolean = false;
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
   }
 
   componentWillLoad(): void {
     this.setInput();
     this.setLabel();
 
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
 
     trackComponent(this.root, { variant: this.variant });
   }
@@ -101,9 +110,12 @@ export class GuxFormFieldTextarea {
           >
             <slot name="input" />
           </div>
-          <GuxFormFieldError hasError={this.hasError}>
+          <GuxFormFieldError show={this.hasError}>
             <slot name="error" />
           </GuxFormFieldError>
+          <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+            <slot name="help" />
+          </GuxFormFieldHelp>
         </div>
       </GuxFormFieldContainer>
     ) as JSX.Element;

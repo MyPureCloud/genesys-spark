@@ -24,6 +24,38 @@ async function newNonrandomE2EPage({
 
 describe('gux-form-field-dropdown', () => {
   describe('#render', () => {
+    describe('help', () => {
+      const html = `
+      <gux-form-field-dropdown>
+      <gux-dropdown>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Default</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-dropdown>
+      `;
+
+      it('should render component as expected', async () => {
+        const page = await newNonrandomE2EPage({ html });
+        const element = await page.find('gux-form-field-dropdown');
+        const elementShadowDom = await element.find(
+          'pierce/.gux-form-field-container'
+        );
+
+        expect(element.outerHTML).toMatchSnapshot();
+        expect(elementShadowDom).toMatchSnapshot();
+      });
+
+      it('should be accessible', async () => {
+        const page = await newSparkE2EPage({ html });
+
+        await a11yCheck(page, axeExclusions);
+      });
+    });
     describe('single select dropdown', () => {
       describe('label-position', () => {
         [

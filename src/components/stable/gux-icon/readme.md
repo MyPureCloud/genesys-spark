@@ -29,6 +29,7 @@
  - [gux-calendar](../gux-calendar)
  - [gux-content-search](../gux-content-search)
  - [gux-copy-to-clipboard-beta](../../beta/gux-copy-to-clipboard)
+ - [gux-create-option](../gux-listbox-multi/gux-create-option)
  - [gux-datepicker](../gux-datepicker)
  - [gux-disclosure-button](../gux-disclosure-button)
  - [gux-dismiss-button](../gux-dismiss-button)
@@ -50,6 +51,7 @@
  - [gux-form-field-text-like](../gux-form-field/components/gux-form-field-text-like)
  - [gux-form-field-textarea](../gux-form-field/components/gux-form-field-textarea)
  - [gux-form-field-time-picker](../gux-form-field/components/gux-form-field-time-picker)
+ - [gux-inline-alert-beta](../../beta/gux-alert)
  - [gux-input-color](../../legacy/gux-form-field-legacy/components/gux-input-color)
  - [gux-input-number](../../legacy/gux-form-field-legacy/components/gux-input-number)
  - [gux-input-search](../../legacy/gux-form-field-legacy/components/gux-input-search)
@@ -91,6 +93,7 @@ graph TD;
   gux-calendar --> gux-icon
   gux-content-search --> gux-icon
   gux-copy-to-clipboard-beta --> gux-icon
+  gux-create-option --> gux-icon
   gux-datepicker --> gux-icon
   gux-disclosure-button --> gux-icon
   gux-dismiss-button --> gux-icon
@@ -112,6 +115,7 @@ graph TD;
   gux-form-field-text-like --> gux-icon
   gux-form-field-textarea --> gux-icon
   gux-form-field-time-picker --> gux-icon
+  gux-inline-alert-beta --> gux-icon
   gux-input-color --> gux-icon
   gux-input-number --> gux-icon
   gux-input-search --> gux-icon

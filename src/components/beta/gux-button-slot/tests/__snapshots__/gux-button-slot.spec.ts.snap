@@ -11,6 +11,35 @@ exports[`gux-button-slot-beta #render should render button with invalid accent 1
 </gux-button-slot-beta>
 `;
 
+exports[`gux-button-slot-beta #render should render danger button 1`] = `
+<gux-button-slot-beta accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot-beta>
+`;
+
+exports[`gux-button-slot-beta #render should render danger input[type=button] 1`] = `
+<gux-button-slot-beta accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot-beta>
+`;
+
+exports[`gux-button-slot-beta #render should render danger input[type=submit] 1`] = `
+<gux-button-slot-beta accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot-beta>
+`;
+
 exports[`gux-button-slot-beta #render should render default button 1`] = `
 <gux-button-slot-beta accent="secondary">
   <mock:shadow-root>
@@ -37,6 +66,35 @@ exports[`gux-button-slot-beta #render should render default input[type=submit] 1
     <slot></slot>
   </mock:shadow-root>
   <input accent="primary" type="submit" value="Button">
+</gux-button-slot-beta>
+`;
+
+exports[`gux-button-slot-beta #render should render disabled danger button 1`] = `
+<gux-button-slot-beta accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" disabled="" type="button">
+    Button
+  </button>
+</gux-button-slot-beta>
+`;
+
+exports[`gux-button-slot-beta #render should render disabled danger input[type=button] 1`] = `
+<gux-button-slot-beta accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="button" value="Button">
+</gux-button-slot-beta>
+`;
+
+exports[`gux-button-slot-beta #render should render disabled danger input[type=submit] 1`] = `
+<gux-button-slot-beta accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="submit" value="Button">
 </gux-button-slot-beta>
 `;
 

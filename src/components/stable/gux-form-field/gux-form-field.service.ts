@@ -1,19 +1,12 @@
-import { randomHTMLId } from '@utils/dom/random-html-id';
-import { logError } from '@utils/error/log-error';
-import setInputValue from '@utils/dom/set-input-value';
+import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { logError } from '../../../utils/error/log-error';
+import setInputValue from '../../../utils/dom/set-input-value';
+import { hasSlot } from '@utils/dom/has-slot';
 
 import { GuxFormFieldLabelPosition } from './gux-form-field.types';
 
 export function clearInput(input: HTMLInputElement): void {
   setInputValue(input, '', true);
-}
-
-export function hasErrorSlot(root: HTMLElement): boolean {
-  return Boolean(root.querySelector('[slot="error"]'));
-}
-
-export function getErrorSlotTextContent(root: HTMLElement): string {
-  return root.querySelector('[slot="error"]')?.textContent;
 }
 
 export function hasContent(
@@ -82,7 +75,7 @@ export function validateFormIds(
     );
   }
 
-  if (hasErrorSlot(root)) {
+  if (hasSlot(root, 'error')) {
     const error = root.querySelector('[slot="error"]');
     const errorId = randomHTMLId('gux-form-field-error');
     const describedByIds =
@@ -102,6 +95,29 @@ export function validateFormIds(
         .getAttribute('aria-describedby')
         ?.split(' ')
         .filter(id => !id.startsWith(`gux-form-field-error`)) || [];
+    input.setAttribute('aria-describedby', describedByIds.join(' '));
+  }
+
+  if (hasSlot(root, 'help')) {
+    const help = root.querySelector('[slot="help"]');
+    const helpId = randomHTMLId('gux-form-field-help');
+    const describedByIds =
+      input
+        .getAttribute('aria-describedby')
+        ?.split(' ')
+        .filter(id => !id.startsWith(`gux-form-field-help`)) || [];
+
+    help.setAttribute('id', helpId);
+    describedByIds.push(helpId);
+
+    describedByIds &&
+      input.setAttribute('aria-describedby', describedByIds.join(' '));
+  } else if (input.getAttribute('aria-describedby')) {
+    const describedByIds =
+      input
+        .getAttribute('aria-describedby')
+        ?.split(' ')
+        .filter(id => !id.startsWith(`gux-form-field-help`)) || [];
     input.setAttribute('aria-describedby', describedByIds.join(' '));
   }
 }

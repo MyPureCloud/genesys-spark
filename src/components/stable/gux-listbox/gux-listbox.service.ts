@@ -1,5 +1,11 @@
-function getListOptions(list: HTMLGuxListboxElement): HTMLGuxOptionElement[] {
+function getListItems(list: HTMLGuxListboxElement): HTMLGuxOptionElement[] {
   return Array.from(list.children) as HTMLGuxOptionElement[];
+}
+
+function getListOptions(list: HTMLGuxListboxElement): HTMLGuxOptionElement[] {
+  return getListItems(list).filter(item => {
+    return item.tagName === 'GUX-OPTION' || item.tagName === 'GUX-OPTION-MULTI';
+  });
 }
 
 function getHoveredOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
@@ -11,13 +17,13 @@ function getHoveredOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
 function getFirstSelectedOption(
   list: HTMLGuxListboxElement
 ): HTMLGuxOptionElement {
-  return getListOptions(list).find(
+  return getListItems(list).find(
     option => option.selected && !option.disabled && !option.filtered
   );
 }
 
 function getActiveOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
-  return getListOptions(list).find(option => option.active);
+  return getListItems(list).find(option => option.active);
 }
 
 function setActiveOption(
@@ -25,7 +31,7 @@ function setActiveOption(
   element: HTMLGuxOptionElement
 ): void {
   if (element) {
-    getListOptions(list).forEach(option => {
+    getListItems(list).forEach(option => {
       const active =
         (!option.disabled || !option.filtered) && option === element;
       option.active = active;
@@ -39,7 +45,7 @@ function setActiveOption(
 }
 
 function getFirstOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
-  let firstOption = getListOptions(list)[0];
+  let firstOption = getListItems(list)[0];
 
   while (firstOption && (firstOption.disabled || firstOption.filtered)) {
     firstOption = firstOption.nextElementSibling as HTMLGuxOptionElement;
@@ -83,7 +89,7 @@ function getPreviousOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
 }
 
 function getLastOption(list: HTMLGuxListboxElement): HTMLGuxOptionElement {
-  const options = getListOptions(list);
+  const options = getListItems(list);
 
   let lastOption = options[options.length - 1];
 
@@ -124,7 +130,7 @@ function setSearchOptionActive(
 }
 
 export function clearActiveOptions(list: HTMLGuxListboxElement): void {
-  getListOptions(list).forEach(option => {
+  getListItems(list).forEach(option => {
     option.active = false;
   });
 }

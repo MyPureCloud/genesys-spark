@@ -12,9 +12,11 @@ import {
   writeTask
 } from '@stencil/core';
 
+import { eventIsFrom } from '@utils/dom/event-is-from';
+import { randomHTMLId } from '@utils/dom/random-html-id';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
-import { eventIsFrom } from '../../../../utils/dom/event-is-from';
-import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
 import tabsResources from '../i18n/en.json';
 
@@ -32,7 +34,6 @@ export class GuxTabAdvanced {
   private tabOptionsButtonElement: HTMLButtonElement;
   private tooltipTitleElement: HTMLGuxTooltipTitleElement;
   private dropdownOptionsButtonId: string = randomHTMLId();
-  private moveFocusDelay: number = 100;
   private tabTitle: string = '';
   private focusinFromClick: boolean = false;
 
@@ -97,9 +98,9 @@ export class GuxTabAdvanced {
         if (eventIsFrom('gux-list[slot="dropdown-options"]', event)) {
           event.stopPropagation();
           this.popoverHidden = true;
-          setTimeout(() => {
+          afterNextRenderTimeout(() => {
             this.tabOptionsButtonElement?.focus();
-          }, this.moveFocusDelay);
+          });
         }
         break;
     }
@@ -161,9 +162,9 @@ export class GuxTabAdvanced {
     const listElement: HTMLGuxListElement = this.root.querySelector(
       'gux-list[slot="dropdown-options"]'
     );
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       void listElement?.guxFocusFirstItem();
-    }, this.moveFocusDelay);
+    });
   }
 
   private toggleOptions(): void {
@@ -173,9 +174,9 @@ export class GuxTabAdvanced {
   private onSelectDropdownOption(e: MouseEvent): void {
     this.popoverHidden = true;
     e.stopPropagation();
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       this.tabOptionsButtonElement.focus();
-    }, this.moveFocusDelay);
+    });
   }
 
   private i18n: GetI18nValue;

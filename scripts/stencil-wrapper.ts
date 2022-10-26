@@ -7,12 +7,12 @@
 import { defineCustomElements } from '../dist/loader';
 
 // Value templated out during build process (see scripts/wrap-stencil.js)
-const CDN_URL = '{{cdn_url}}';
+export const CDN_URL = '{{cdn_url}}';
 
-export function registerElements() {
+export async function registerElements() {
   if (CDN_URL) {
-    defineCustomElements(window, { resourcesUrl: CDN_URL });
+    await defineCustomElements(window, { resourcesUrl: CDN_URL });
   } else {
-    defineCustomElements();
+    await defineCustomElements();
   }
 }

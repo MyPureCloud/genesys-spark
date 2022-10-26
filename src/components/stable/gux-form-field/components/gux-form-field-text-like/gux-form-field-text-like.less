@@ -9,10 +9,13 @@
   '../../functional-components/gux-form-field-error/gux-form-field-error.less';
 @import (reference)
   '../../functional-components/gux-form-field-label/gux-form-field-label.less';
+@import (reference)
+  '../../functional-components/gux-form-field-help/gux-form-field-help.less';
 
 .GuxFormFieldContainerStyle();
 .GuxFormFieldErrorStyle();
 .GuxFormFieldLabelStyle();
+.GuxFormFieldHelpStyle();
 
 :host {
   display: block;
@@ -42,7 +45,8 @@
   }
 }
 
-::slotted(span) {
+slot[name='prefix'],
+slot[name='suffix'] {
   color: @gux-black-50;
   white-space: nowrap;
 }

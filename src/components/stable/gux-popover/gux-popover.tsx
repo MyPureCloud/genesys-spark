@@ -98,6 +98,12 @@ export class GuxPopover {
       this.popperInstance = createPopper(forElement, this.popupElement, {
         modifiers: [
           {
+            name: 'computeStyles',
+            options: {
+              gpuAcceleration: false
+            }
+          },
+          {
             name: 'offset',
             options: {
               offset: [0, 7]

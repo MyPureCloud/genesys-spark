@@ -1,5 +1,154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`gux-form-field-select multi select dropdown #render help multi select should render component as expected 1`] = `
+<gux-form-field-dropdown>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-dropdown-multi-beta>
+    <mock:shadow-root>
+      <div class="gux-dropdown-container">
+        <gux-popup>
+          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+            <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+              <div class="gux-field-content">
+                <div class="gux-placeholder">
+                  Select...
+                </div>
+              </div>
+              <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+            </button>
+          </div>
+          <div class="gux-listbox-container" slot="popup">
+            <slot></slot>
+          </div>
+        </gux-popup>
+      </div>
+    </mock:shadow-root>
+    <gux-listbox-multi aria-describedby="gux-form-field-help-i" aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
+      <mock:shadow-root>
+        <slot></slot>
+        <slot name="create"></slot>
+      </mock:shadow-root>
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+        <!---->
+        <div class="gux-option">
+          Ant
+        </div>
+      </gux-option-multi>
+      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
+        <!---->
+        <div class="gux-option">
+          Bat
+        </div>
+      </gux-option-multi>
+      <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
+        <!---->
+        <div class="gux-option">
+          Cat
+        </div>
+      </gux-option-multi>
+    </gux-listbox-multi>
+  </gux-dropdown-multi-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+  <span id="gux-form-field-help-i" slot="help">
+    This is a help message
+  </span>
+</gux-form-field-dropdown>
+`;
+
+exports[`gux-form-field-select multi select dropdown #render help should render component as expected 1`] = `
+<gux-form-field-dropdown>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-dropdown>
+    <mock:shadow-root>
+      <gux-popup>
+        <div class="gux-target-container-collapsed" slot="target">
+          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+            <div class="gux-field-content">
+              <div class="gux-placeholder">
+                Select...
+              </div>
+            </div>
+            <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+          </button>
+        </div>
+        <div class="gux-listbox-container" slot="popup">
+          <slot></slot>
+        </div>
+      </gux-popup>
+    </mock:shadow-root>
+    <gux-listbox aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" role="listbox" tabindex="0">
+      <mock:shadow-root>
+        <slot></slot>
+      </mock:shadow-root>
+      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
+        <!---->
+        Ant
+      </gux-option>
+      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+        <!---->
+        Bat
+      </gux-option>
+      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
+        <!---->
+        Cat
+      </gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+  <span id="gux-form-field-help-i" slot="help">
+    This is a help message
+  </span>
+</gux-form-field-dropdown>
+`;
+
 exports[`gux-form-field-select multi select dropdown #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
@@ -15,6 +164,11 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -43,8 +197,9 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -87,6 +242,11 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -113,8 +273,9 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -157,6 +318,11 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -183,8 +349,9 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -227,6 +394,11 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -253,8 +425,9 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -297,6 +470,11 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -323,8 +501,9 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -367,6 +546,11 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -393,8 +577,9 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -437,6 +622,11 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -463,8 +653,9 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
     <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
+        <slot name="create"></slot>
       </mock:shadow-root>
-      <gux-option-multi aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <div class="gux-option">
           Ant
@@ -505,6 +696,11 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -569,6 +765,11 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -629,6 +830,11 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -693,6 +899,11 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -753,6 +964,11 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -817,6 +1033,11 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -877,6 +1098,11 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>

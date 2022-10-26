@@ -28,7 +28,7 @@ export class GuxDropdownMultiTag {
    * Triggered when click on remove button
    */
   @Event()
-  guxclearselected: EventEmitter<string>;
+  internalclearselected: EventEmitter<string>;
 
   /**
    * Tag is removable.
@@ -55,7 +55,7 @@ export class GuxDropdownMultiTag {
     if (this.disabled) {
       return;
     }
-    this.guxclearselected.emit();
+    this.internalclearselected.emit();
   }
 
   private renderRemoveButton(): JSX.Element {

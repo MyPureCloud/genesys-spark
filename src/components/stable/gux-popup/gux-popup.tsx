@@ -1,4 +1,12 @@
-import { Component, h, JSX, Prop, Watch } from '@stencil/core';
+import {
+  Component,
+  h,
+  JSX,
+  Prop,
+  Watch,
+  Event,
+  EventEmitter
+} from '@stencil/core';
 
 import { createPopper, Instance } from '@popperjs/core';
 
@@ -22,14 +30,43 @@ export class GuxPopup {
   @Prop()
   disabled: boolean = false;
 
+  /**
+   * This event will run when the popup transitions to an expanded state.
+   */
+  @Event()
+  internalexpanded: EventEmitter<void>;
+
+  /**
+   * This event will run when the popup transitions to a collapsed state.
+   */
+  @Event()
+  internalcollapsed: EventEmitter<void>;
+
   @Watch('expanded')
   onExpandedChange(expanded: boolean) {
     if (expanded) {
       this.popperInstance.forceUpdate();
+      this.internalexpanded.emit();
+    } else {
+      this.internalcollapsed.emit();
+    }
+  }
+
+  connectedCallback(): void {
+    if (this.targetElementContainer && this.popupElementContainer) {
+      this.setPopperInstance();
     }
   }
 
   componentDidLoad(): void {
+    this.setPopperInstance();
+  }
+
+  disconnectedCallback(): void {
+    this.popperInstance?.destroy();
+  }
+
+  private setPopperInstance(): void {
     this.popperInstance = createPopper(
       this.targetElementContainer,
       this.popupElementContainer,
@@ -68,10 +105,6 @@ export class GuxPopup {
         placement: 'bottom-start'
       }
     );
-  }
-
-  disconnectedCallback(): void {
-    this.popperInstance.destroy();
   }
 
   render(): JSX.Element {

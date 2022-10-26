@@ -2,6 +2,105 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.37.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.5...v3.37.0) (2022-10-24)
+
+
+### Features
+
+* **gux-dropdown-multi:** custom options ([#943](https://github.com/MyPureCloud/genesys-webcomponents/issues/943)) ([4c5327e](https://github.com/MyPureCloud/genesys-webcomponents/commit/4c5327e9ab7a252481ffd513c51098e09b0e7f57))
+
+### [3.36.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.4...v3.36.5) (2022-10-18)
+
+### [3.36.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.3...v3.36.4) (2022-10-14)
+
+
+### Bug Fixes
+
+* **form-field-search:** addition of guxForceUpdate to form-field-search ([5a44e03](https://github.com/MyPureCloud/genesys-webcomponents/commit/5a44e03d9cacac728b8a6be33caebdc1d4155868))
+
+### [3.36.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.2...v3.36.3) (2022-10-14)
+
+### [3.36.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.1...v3.36.2) (2022-10-13)
+
+
+### Bug Fixes
+
+* **stencil-wrapper:** fix the stencil-wrapper build step to output to the old location ([b6d406a](https://github.com/MyPureCloud/genesys-webcomponents/commit/b6d406aee954eedaa5c8f4e464f79d3381ebd410))
+
+### [3.36.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.0...v3.36.1) (2022-10-13)
+
+
+### Bug Fixes
+
+* **tabs-advanced:** prevent error if no tabs avaliable onload ([e804e49](https://github.com/MyPureCloud/genesys-webcomponents/commit/e804e496dbe6a6e3e8beb8e6c5971ab142388420))
+
+## [3.36.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.35.0...v3.36.0) (2022-10-13)
+
+
+### Features
+
+* **drawer:** set up using dialog ([2a10717](https://github.com/MyPureCloud/genesys-webcomponents/commit/2a10717dfd339db1fa6deaa549f1cd38dabd8e80))
+* **icons:** added four new icons ([8d612f5](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d612f553a000eb911080ab56ee95e3da5ba70c3))
+* **icons:** added four new icons ([7c8d5b7](https://github.com/MyPureCloud/genesys-webcomponents/commit/7c8d5b7cdcb884a95889022c1df519d3a2e94ac2))
+* initial component commit ([596f4f5](https://github.com/MyPureCloud/genesys-webcomponents/commit/596f4f50b433a740050afb69b11dce61e380c73e))
+
+## [3.35.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.5...v3.35.0) (2022-10-12)
+
+
+### Features
+
+* **dropdown-multi:** addition of collapsed and expanded events ([94f932e](https://github.com/MyPureCloud/genesys-webcomponents/commit/94f932ed5c50e497ccb789f255bca9d18ea0a9ef))
+* **wrapper:** export the CDN_URL defined at build time from the stencil wrapper file ([6a67c3b](https://github.com/MyPureCloud/genesys-webcomponents/commit/6a67c3b6803d3d7292d6b5493443409bebc55ded))
+
+### [3.34.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.4...v3.34.5) (2022-10-06)
+
+### [3.34.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.3...v3.34.4) (2022-10-06)
+
+### [3.34.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.2...v3.34.3) (2022-10-05)
+
+
+### Bug Fixes
+
+* **gux-table:** revert resizable columns to pixel width and scale on container resize ([fa51ead](https://github.com/MyPureCloud/genesys-webcomponents/commit/fa51ead17bcd3db53e3cfd1a3eef8119ffe59cf3))
+* **gux-table:** use percentage widths for resizable columns to alter behavior when resizing viewport ([b6ff30e](https://github.com/MyPureCloud/genesys-webcomponents/commit/b6ff30e9a4d596bcc93d9c6a4c0f2d081d559089))
+
+### [3.34.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.1...v3.34.2) (2022-10-05)
+
+
+### Bug Fixes
+
+* **popover:** simplified positioning so nested popups work ([8d97daa](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d97daa16e09c6210711996b2ea6192a3fd6ab16))
+
+### [3.34.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.34.0...v3.34.1) (2022-10-04)
+
+## [3.34.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.33.2...v3.34.0) (2022-10-04)
+
+
+### Features
+
+* **button:** addition of danger accent ([1d8c979](https://github.com/MyPureCloud/genesys-webcomponents/commit/1d8c979a4eed44b448a899ecd9e6c3d16ccf6f40))
+
+### [3.33.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.33.1...v3.33.2) (2022-09-30)
+
+
+### Bug Fixes
+
+* **popup:** popup now sets up popper on connectedCallback ([051baef](https://github.com/MyPureCloud/genesys-webcomponents/commit/051baefc68600da63c2a4cfe9138ddaad504285b))
+
+### [3.33.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.33.0...v3.33.1) (2022-09-30)
+
+
+### Bug Fixes
+
+* **toggle:** fixed check event detail ([c2b7cdd](https://github.com/MyPureCloud/genesys-webcomponents/commit/c2b7cdd5aeabecabe05542b5e5e2b6b3e5c28779))
+
+## [3.33.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.3...v3.33.0) (2022-09-30)
+
+
+### Features
+
+* **form-field:** addition of help slot ([1e3d0ff](https://github.com/MyPureCloud/genesys-webcomponents/commit/1e3d0ff99b68a325c9039ada89c3652aef25b047))
+
 ### [3.32.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.32.2...v3.32.3) (2022-09-29)
 
 

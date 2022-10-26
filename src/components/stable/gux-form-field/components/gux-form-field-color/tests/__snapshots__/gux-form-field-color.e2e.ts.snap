@@ -1,5 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`gux-form-field-color #render help should render component as expected 1`] = `"<gux-form-field-color hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" name=\\"e-1\\" value=\\"#cc3ebe\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Default</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-color>"`;
+
+exports[`gux-form-field-color #render help should render component as expected 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <slot name="input"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help gux-show">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`gux-form-field-color #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-color hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render input attributes should render component as expected (1) 2`] = `
@@ -17,6 +45,11 @@ exports[`gux-form-field-color #render input attributes should render component a
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -42,6 +75,11 @@ exports[`gux-form-field-color #render input attributes should render component a
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -63,6 +101,11 @@ exports[`gux-form-field-color #render input attributes should render component a
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -88,6 +131,11 @@ exports[`gux-form-field-color #render label-position should render component as 
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -109,6 +157,11 @@ exports[`gux-form-field-color #render label-position should render component as 
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -134,6 +187,11 @@ exports[`gux-form-field-color #render label-position should render component as 
         <slot name="error"></slot>
       </div>
     </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -155,6 +213,11 @@ exports[`gux-form-field-color #render label-position should render component as 
       <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>

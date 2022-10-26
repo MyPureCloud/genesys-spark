@@ -83,5 +83,20 @@ describe('gux-form-field-textarea', () => {
         });
       });
     });
+
+    describe('help', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-textarea>
+        <textarea slot="input" name="textarea"></textarea>
+        <label slot="label">Default</label>
+        <span slot="help">This is a help message</span>
+      </gux-form-field-textarea>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });

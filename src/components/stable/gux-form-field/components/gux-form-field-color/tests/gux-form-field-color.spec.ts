@@ -65,5 +65,20 @@ describe('gux-form-field-color', () => {
         });
       });
     });
+
+    describe('help', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-color>
+        <input slot="input" type="color" name="e-1" value="#cc3ebe" />
+        <label slot="label">Default</label>
+        <span slot="help">This is a help message</span>
+      </gux-form-field-color>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });

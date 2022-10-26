@@ -11,34 +11,38 @@ import {
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
-import { calculateInputDisabledState } from '../../../../../utils/dom/calculate-input-disabled-state';
-import { onInputDisabledStateChange } from '../../../../../utils/dom/on-input-disabled-state-change';
-import { OnMutation } from '../../../../../utils/decorator/on-mutation';
-import { onRequiredChange } from '../../../../../utils/dom/on-attribute-change';
-import { preventBrowserValidationStyling } from '../../../../../utils/dom/prevent-browser-validation-styling';
-import { trackComponent } from '../../../../../usage-tracking';
-import setInputValue from '../../../../../utils/dom/set-input-value';
-import simulateNativeEvent from '../../../../../utils/dom/simulate-native-event';
 
-import { GuxFormFieldContainer } from '../../functional-components/gux-form-field-container/gux-form-field-container';
-import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';
-import { GuxFormFieldLabel } from '../../functional-components/gux-form-field-label/gux-form-field-label';
+import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
+import { OnMutation } from '@utils/decorator/on-mutation';
+import { onRequiredChange } from '@utils/dom/on-attribute-change';
+import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
+import setInputValue from '@utils/dom/set-input-value';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
+import { hasSlot } from '@utils/dom/has-slot';
+
+import {
+  GuxFormFieldHelp,
+  GuxFormFieldError,
+  GuxFormFieldLabel,
+  GuxFormFieldContainer
+} from '../../functional-components/functional-components';
 
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
   clearInput,
   getComputedLabelPosition,
   hasContent,
-  hasErrorSlot,
   validateFormIds
 } from '../../gux-form-field.service';
-
+import { trackComponent } from '../../../../../usage-tracking';
 import componentResources from './i18n/en.json';
 
 /**
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
+ * @slot help - Optional slot for help message
  * @part input-section - Style input container
  */
 @Component({
@@ -77,16 +81,21 @@ export class GuxFormFieldNumber {
   @State()
   private hasError: boolean = false;
 
+  @State()
+  private hasHelp: boolean = false;
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxForceUpdate(): Promise<void> {
     this.hasContent = hasContent(this.input);
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
 
     forceUpdate(this.root);
   }
@@ -100,7 +109,8 @@ export class GuxFormFieldNumber {
     this.setInput();
     this.setLabel();
 
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
 
     trackComponent(this.root, { variant: this.variant });
   }
@@ -149,9 +159,12 @@ export class GuxFormFieldNumber {
               this.disabled
             )}
           </div>
-          <GuxFormFieldError hasError={this.hasError}>
+          <GuxFormFieldError show={this.hasError}>
             <slot name="error" />
           </GuxFormFieldError>
+          <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+            <slot name="help" />
+          </GuxFormFieldHelp>
         </div>
       </GuxFormFieldContainer>
     ) as JSX.Element;

@@ -10,13 +10,14 @@ import {
   Watch
 } from '@stencil/core';
 
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
+import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
 import { trackComponent } from '../../../usage-tracking';
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
-import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
-
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { GuxButtonAccent, GuxButtonType } from '../gux-button/gux-button.types';
 
+import { GuxButtonAccent, GuxButtonType } from '../gux-button/gux-button.types';
 import defaultResources from './i18n/en.json';
 
 @Component({
@@ -26,7 +27,6 @@ import defaultResources from './i18n/en.json';
 })
 export class GuxActionButton {
   private dropdownButton: HTMLElement;
-  private moveFocusDelay: number = 100;
   private i18n: GetI18nValue;
 
   @Element()
@@ -69,9 +69,6 @@ export class GuxActionButton {
   @Prop()
   disabled: boolean = false;
 
-  /**
-   * The component accent (secondary or primary).
-   */
   @Prop()
   accent: GuxButtonAccent = 'secondary';
 
@@ -156,15 +153,15 @@ export class GuxActionButton {
   }
 
   private focusPopupList(): void {
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       this.listElement.focus && this.listElement.focus();
-    }, this.moveFocusDelay);
+    });
   }
 
   private focusFirstItemInPopupList(): void {
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       void this.listElement.guxFocusFirstItem();
-    }, this.moveFocusDelay);
+    });
   }
 
   private onActionClick(): void {

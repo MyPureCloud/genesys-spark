@@ -11,12 +11,14 @@ import {
   Watch
 } from '@stencil/core';
 
+import { onMutation } from '@utils/dom/on-mutation';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
 import { trackComponent } from '../../../usage-tracking';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import advancedDropDownResources from './i18n/en.json';
-import { onMutation } from '../../../utils/dom/on-mutation';
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
@@ -328,7 +330,7 @@ export class GuxAdvancedDropdown {
   }
 
   private changeFocusToSearch() {
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       this.searchInput.focus();
     });
   }

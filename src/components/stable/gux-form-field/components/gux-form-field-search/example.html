@@ -61,6 +61,55 @@
       <span slot="error">This is an error message</span>
     </gux-form-field-search>
   </fieldset>
+
+  <fieldset>
+    <legend>Help</legend>
+
+    <gux-form-field-search>
+      <input slot="input" type="search" name="e-1" />
+      <label slot="label">Default</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-search>
+  </fieldset>
+
+  <fieldset>
+    <legend>Programmatically set value</legend>
+
+    <gux-form-field-search id="a">
+      <input slot="input" type="search" name="a-5" placeholder="Enter search" />
+      <label slot="label">Random Number</label>
+    </gux-form-field-search>
+
+    <gux-button-slot-beta>
+      <button
+        type="button"
+        onclick="(function () {
+          const formField = document.getElementById('a');
+          const input = document.querySelector('[name=a-5]');
+          input.value = '';
+          formField.guxForceUpdate();
+        })()"
+      >
+        Clear field
+      </button>
+    </gux-button-slot-beta>
+
+    <gux-button-slot-beta>
+      <button
+        type="button"
+        onclick="(function () {
+          const randomNumber = Math.floor(Math.random() * 10000);
+          const formField = document.getElementById('a');
+          const input = document.querySelector('[name=a-5]');
+
+          input.value = randomNumber;
+          formField.guxForceUpdate();
+        })()"
+      >
+        Set field to random number
+      </button>
+    </gux-button-slot-beta>
+  </fieldset>
 </form>
 
 <h2>gux-form-field-legacy examples for comparison</h2>

@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`gux-form-field-search #render help should render component as expected 1`] = `
+<gux-form-field-search>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <gux-icon decorative="" icon-name="search"></gux-icon>
+            <slot name="input"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" name="e-1" slot="input" type="search">
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+  <span id="gux-form-field-help-i" slot="help">
+    This is a help message
+  </span>
+</gux-form-field-search>
+`;
+
 exports[`gux-form-field-search #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-search>
   <mock:shadow-root>
@@ -19,6 +57,11 @@ exports[`gux-form-field-search #render input attributes should render component 
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -49,6 +92,11 @@ exports[`gux-form-field-search #render input attributes should render component 
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -82,6 +130,11 @@ exports[`gux-form-field-search #render input attributes should render component 
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -111,6 +164,11 @@ exports[`gux-form-field-search #render label-position should render component as
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>
@@ -144,6 +202,11 @@ exports[`gux-form-field-search #render label-position should render component as
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -175,6 +238,11 @@ exports[`gux-form-field-search #render label-position should render component as
             <slot name="error"></slot>
           </div>
         </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -204,6 +272,11 @@ exports[`gux-form-field-search #render label-position should render component as
           <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
           </div>
         </div>
       </div>

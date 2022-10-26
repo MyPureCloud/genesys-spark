@@ -1,18 +1,18 @@
 import { FunctionalComponent, h, VNode } from '@stencil/core';
 
 interface GuxFormFieldErrorProps {
-  hasError: boolean;
+  show: boolean;
 }
 
 export const GuxFormFieldError: FunctionalComponent<GuxFormFieldErrorProps> = (
-  { hasError },
+  { show },
   children
 ): VNode => {
   return (
     <div
       class={{
         'gux-form-field-error': true,
-        'gux-show': hasError
+        'gux-show': show
       }}
     >
       <gux-icon icon-name="alert-warning-octogon" decorative></gux-icon>

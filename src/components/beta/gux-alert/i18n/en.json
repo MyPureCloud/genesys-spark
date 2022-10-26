@@ -1,0 +1,6 @@
+{
+  "info": "Information alert with message",
+  "success": "Success alert with message",
+  "warning": "Warning alert with message",
+  "error": "Error alert with message"
+}

@@ -10,16 +10,27 @@
 | `disabled`    | `disabled`    |             | `boolean` | `false`     |
 | `filterable`  | `filterable`  |             | `boolean` | `false`     |
 | `hasError`    | `has-error`   |             | `boolean` | `false`     |
+| `loading`     | `loading`     |             | `boolean` | `false`     |
 | `placeholder` | `placeholder` |             | `string`  | `undefined` |
 | `required`    | `required`    |             | `boolean` | `false`     |
 | `value`       | `value`       |             | `string`  | `undefined` |
+
+
+## Events
+
+| Event             | Description                                                                   | Type                  |
+| ----------------- | ----------------------------------------------------------------------------- | --------------------- |
+| `guxcollapsed`    | This event will run when the dropdown-multi transitions to a collapsed state. | `CustomEvent<void>`   |
+| `guxcreateoption` | This event is emitted to request creating a new option                        | `CustomEvent<any>`    |
+| `guxexpanded`     | This event will run when the dropdown-multi transitions to an expanded state. | `CustomEvent<void>`   |
+| `guxfilter`       |                                                                               | `CustomEvent<string>` |
 
 
 ## Methods
 
 ### `getSelectedValues() => Promise<string[]>`
 
-Gets the currently selected values.
+Returns an array of the selected values
 
 #### Returns
 
@@ -41,6 +52,7 @@ Type: `Promise<string[]>`
 
 - [gux-dropdown-multi-tag](gux-dropdown-multi-tag)
 - [gux-icon](../../stable/gux-icon)
+- [gux-radial-loading](../../stable/gux-radial-loading)
 - [gux-popup](../../stable/gux-popup)
 
 ### Graph
@@ -48,6 +60,7 @@ Type: `Promise<string[]>`
 graph TD;
   gux-dropdown-multi-beta --> gux-dropdown-multi-tag
   gux-dropdown-multi-beta --> gux-icon
+  gux-dropdown-multi-beta --> gux-radial-loading
   gux-dropdown-multi-beta --> gux-popup
   gux-dropdown-multi-tag --> gux-icon
   style gux-dropdown-multi-beta fill:#f9f,stroke:#333,stroke-width:4px

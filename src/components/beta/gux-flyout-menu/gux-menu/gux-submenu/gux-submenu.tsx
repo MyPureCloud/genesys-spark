@@ -1,4 +1,3 @@
-import { createPopper, Instance } from '@popperjs/core';
 import {
   Component,
   Element,
@@ -11,11 +10,13 @@ import {
   State,
   Watch
 } from '@stencil/core';
+import { createPopper, Instance } from '@popperjs/core';
+
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import {
   HTMLGuxMenuItemElement,
   hideDelay,
-  moveFocusDelay,
   menuNavigation
 } from '../gux-menu.common';
 
@@ -24,7 +25,7 @@ import {
   tag: 'gux-submenu'
 })
 export class GuxSubmenu {
-  private hideDelayTimeout: NodeJS.Timer;
+  private hideDelayTimeout: ReturnType<typeof setTimeout>;
   private popperInstance: Instance;
   private buttonElement: HTMLButtonElement;
   private submenuElement: HTMLDivElement;
@@ -62,9 +63,10 @@ export class GuxSubmenu {
     menuNavigation(event, this.root);
     switch (event.key) {
       case 'Enter':
-        this.hideDelayTimeout = setTimeout(() => {
+        event.stopPropagation();
+        this.hideDelayTimeout = afterNextRenderTimeout(() => {
           this.focusOnSubmenu();
-        }, moveFocusDelay);
+        });
 
         void this.guxFocus();
         break;
@@ -73,9 +75,9 @@ export class GuxSubmenu {
         event.stopPropagation();
 
         this.show();
-        this.hideDelayTimeout = setTimeout(() => {
+        this.hideDelayTimeout = afterNextRenderTimeout(() => {
           this.focusOnSubmenu();
-        }, moveFocusDelay);
+        });
         break;
 
       case 'ArrowLeft':
@@ -99,9 +101,9 @@ export class GuxSubmenu {
         if (this.submenuContentElement.contains(document.activeElement)) {
           this.root.focus();
         } else {
-          this.hideDelayTimeout = setTimeout(() => {
+          this.hideDelayTimeout = afterNextRenderTimeout(() => {
             this.focusOnSubmenu();
-          }, moveFocusDelay);
+          });
         }
         break;
     }

@@ -2,31 +2,34 @@ import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
-import { OnMutation } from '../../../../../utils/decorator/on-mutation';
+import { OnMutation } from '@utils/decorator/on-mutation';
 import {
   onDisabledChange,
   onRequiredChange
-} from '../../../../../utils/dom/on-attribute-change';
-import { trackComponent } from '../../../../../usage-tracking';
+} from '@utils/dom/on-attribute-change';
+import { hasSlot } from '@utils/dom/has-slot';
+import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 
-import { GuxFormFieldFieldsetContainer } from '../../functional-components/gux-form-field-fieldset-container/gux-form-field-fieldset-container';
-import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';
-import { GuxFormFieldLegendLabel } from '../../functional-components/gux-form-field-legend-label/gux-form-field-legend-label';
+import {
+  GuxFormFieldHelp,
+  GuxFormFieldError,
+  GuxFormFieldFieldsetContainer,
+  GuxFormFieldLegendLabel
+} from '../../functional-components/functional-components';
 
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
-  hasErrorSlot,
   getComputedLabelPosition,
-  getErrorSlotTextContent,
   validateFormIds
 } from '../../gux-form-field.service';
-
+import { trackComponent } from '../../../../../usage-tracking';
 import componentResources from './i18n/en.json';
 
 /**
- * @slot - Required slot for gux-time-picker-beta tag
+ * @slot Required slot for gux-time-picker-beta tag
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
+ * @slot help - Optional slot for help message
  */
 @Component({
   styleUrl: 'gux-form-field-time-picker.less',
@@ -58,6 +61,9 @@ export class GuxFormFieldTimePicker {
   @State()
   private hasError: boolean = false;
 
+  @State()
+  private hasHelp: boolean = false;
+
   @Watch('hasError')
   watchValue(hasError: boolean): void {
     const timePickerSlot = this.root.querySelector('gux-time-picker-beta');
@@ -68,7 +74,8 @@ export class GuxFormFieldTimePicker {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
   }
 
   async componentWillLoad(): Promise<void> {
@@ -80,7 +87,8 @@ export class GuxFormFieldTimePicker {
     this.setInput();
     this.setLabel();
 
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
 
     trackComponent(this.root, { variant: this.variant });
   }
@@ -103,7 +111,7 @@ export class GuxFormFieldTimePicker {
             this.required
           )}
           {this.renderScreenReaderText(
-            getErrorSlotTextContent(this.root),
+            getSlotTextContent(this.root, 'error'),
             this.hasError
           )}
         </GuxFormFieldLegendLabel>
@@ -123,9 +131,12 @@ export class GuxFormFieldTimePicker {
               <slot />
             </div>
           </div>
-          <GuxFormFieldError hasError={this.hasError}>
+          <GuxFormFieldError show={this.hasError}>
             <slot name="error" />
           </GuxFormFieldError>
+          <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+            <slot name="help" />
+          </GuxFormFieldHelp>
         </div>
       </GuxFormFieldFieldsetContainer>
     ) as JSX.Element;

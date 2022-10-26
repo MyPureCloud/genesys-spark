@@ -168,6 +168,48 @@ describe('gux-form-field-select', () => {
           });
         });
       });
+
+      describe('help', () => {
+        it('should render component as expected', async () => {
+          const html = `
+          <gux-form-field-dropdown>
+          <gux-dropdown>
+            <gux-listbox>
+              <gux-option value="a" disabled>Ant</gux-option>
+              <gux-option value="b">Bat</gux-option>
+              <gux-option value="c">Cat</gux-option>
+            </gux-listbox>
+          </gux-dropdown>
+          <label slot="label">Default</label>
+          <span slot="help">This is a help message</span>
+        </gux-form-field-dropdown>
+          `;
+          const page = await newSpecPage({ components, html, language });
+
+          expect(page.root).toMatchSnapshot();
+        });
+      });
+
+      describe('help multi select', () => {
+        it('should render component as expected', async () => {
+          const html = `
+          <gux-form-field-dropdown>
+          <gux-dropdown-multi-beta>
+            <gux-listbox-multi>
+              <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+              <gux-option-multi value="b">Bat</gux-option-multi>
+              <gux-option-multi value="c">Cat</gux-option-multi>
+            </gux-listbox-multi>
+          </gux-dropdown-multi-beta>
+          <label slot="label">Default</label>
+          <span slot="help">This is a help message</span>
+        </gux-form-field-dropdown>
+          `;
+          const page = await newSpecPage({ components, html, language });
+
+          expect(page.root).toMatchSnapshot();
+        });
+      });
     });
   });
 });

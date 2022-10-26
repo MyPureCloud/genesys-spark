@@ -1,5 +1,9 @@
 import { Component, Element, JSX, h, State, readTask } from '@stencil/core';
+
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
 import { trackComponent } from '../../../usage-tracking';
+
 import { GuxLoadingMessageSizes } from './gux-loading-message-size.types';
 import * as loadingMessageWidth from './gux-loading-message-constants';
 
@@ -58,7 +62,7 @@ export class GuxLoadingMessage {
       this.resizeObserver.observe(this.root);
     }
 
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       this.updateLoadingMessageSize();
     }, 500);
   }

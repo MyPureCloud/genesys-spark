@@ -408,9 +408,49 @@
       <gux-option value="z">Zebra</gux-option>
     </gux-listbox>
   </gux-dropdown>
+
+  <h2>Loading Examples</h2>
+
+  <h3>Loading a list</h3>
+  <gux-dropdown id="loading-1" loading>
+    <gux-listbox aria-label="Animals"> </gux-listbox>
+  </gux-dropdown>
+
+  <h3>Loading a filterable list</h3>
+  <gux-dropdown id="loading-2" filterable loading>
+    <gux-listbox aria-label="Animals"> </gux-listbox>
+  </gux-dropdown>
 </form>
 
-<style>
+<style
+  onload="(function() {
+    function loadingStaticList(id) {
+      const dropdown = document.getElementById(id);
+      const listbox = dropdown.querySelector('gux-listbox');
+
+      setTimeout((event) => {
+        const options = [
+            { value: 'a', name: 'Ant'},
+            { value: 'b', name: 'Bat'},
+            { value: 'c', name: 'Cat'},
+            { value: 'd', name: 'Dog'}
+          ].map(({value, name}) => {
+            const element = document.createElement('gux-option');
+            element.setAttribute('value', value)
+            element.innerText = name;
+            return element
+          });
+
+          listbox.replaceChildren(...options);
+          dropdown.value = 'c';
+          dropdown.loading = false;
+      }, 5000);
+    }
+
+    loadingStaticList('loading-1')
+    loadingStaticList('loading-2')
+})()"
+>
   form {
     width: 200px;
   }

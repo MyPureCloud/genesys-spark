@@ -14,10 +14,7 @@ import { trackComponent } from '../../../usage-tracking';
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import {
-  GuxButtonAccent,
-  GuxButtonType
-} from '../../stable/gux-button/gux-button.types';
+import { GuxButtonAccent, GuxButtonType } from './gux-button.types';
 
 import defaultResources from './i18n/en.json';
 
@@ -71,9 +68,6 @@ export class GuxActionButtonLegacy {
   @Prop()
   disabled: boolean = false;
 
-  /**
-   * The component accent (secondary or primary).
-   */
   @Prop()
   accent: GuxButtonAccent = 'secondary';
 

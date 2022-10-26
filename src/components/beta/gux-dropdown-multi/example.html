@@ -1,6 +1,5 @@
 <h1>gux-dropdown-multi-beta</h1>
 <form onchange="notify(event)" oninput="notify(event)">
-  <h2>Filterable Long List</h2>
   <gux-dropdown-multi-beta filterable placeholder="Select a country">
     <gux-listbox-multi aria-label="Countries">
       <gux-option-multi value="AFG">Afghanistan</gux-option-multi>
@@ -431,9 +430,75 @@
       <gux-option-multi value="z">Zebra</gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
+
+  <h2>Enabling user creation of new items</h2>
+
+  <gux-dropdown-multi-beta
+    id="createDropdownMultiExample"
+    placeholder="Your favorite animal"
+  >
+    <gux-listbox-multi id="listboxContainer" aria-label="Animals">
+      <gux-create-option slot="create"></gux-create-option>
+      <gux-option-multi value="ant">Ant</gux-option-multi>
+      <gux-option-multi value="bat">Bat</gux-option-multi>
+      <gux-option-multi value="cat">Cat</gux-option-multi>
+    </gux-listbox-multi>
+  </gux-dropdown-multi-beta>
+
+  <h2>Loading Examples</h2>
+
+  <h3>Loading a list</h3>
+  <gux-dropdown-multi-beta id="loading-1" loading>
+    <gux-listbox-multi aria-label="Animals"> </gux-listbox-multi>
+  </gux-dropdown-multi-beta>
+
+  <h3>Loading a filterable list</h3>
+  <gux-dropdown-multi-beta id="loading-2" filterable loading>
+    <gux-listbox-multi aria-label="Animals"> </gux-listbox-multi>
+  </gux-dropdown-multi-beta>
 </form>
 
-<style>
+<style
+  onload="(function () {
+    document.getElementById(`createDropdownMultiExample`).addEventListener('guxcreateoption',
+    (event) => {
+      const element = document.createElement('gux-option-multi');
+      element.addEventListener('guxremovecustomoption', () => {
+        element.remove();
+      });
+      element.setAttribute('custom', true);
+      element.setAttribute('value', event.detail);
+      element.innerText = (event.detail);
+      document.getElementById('listboxContainer').prepend(element);
+    });
+
+    function loadingStaticList(id) {
+      const dropdown = document.getElementById(id);
+      const listbox = dropdown.querySelector('gux-listbox-multi');
+
+      setTimeout((event) => {
+        const options = [
+            { value: 'a', name: 'Ant'},
+            { value: 'b', name: 'Bat'},
+            { value: 'c', name: 'Cat'},
+            { value: 'd', name: 'Dog'}
+          ].map(({value, name}) => {
+            const element = document.createElement('gux-option-multi');
+            element.setAttribute('value', value)
+            element.innerText = name;
+            return element
+          });
+
+          listbox.replaceChildren(...options);
+          dropdown.value = 'c';
+          dropdown.loading = false;
+      }, 5000);
+    }
+
+    loadingStaticList('loading-1')
+    loadingStaticList('loading-2')
+})()"
+>
   form {
     width: 200px;
   }

@@ -12,11 +12,25 @@
 | `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
 
 
+## Methods
+
+### `guxForceUpdate() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Slots
 
 | Slot      | Description                     |
 | --------- | ------------------------------- |
 | `"error"` | Optional slot for error message |
+| `"help"`  | Optional slot for help message  |
 | `"input"` | Required slot for input tag     |
 | `"label"` | Required slot for label tag     |
 

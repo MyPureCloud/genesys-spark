@@ -10,18 +10,20 @@ import {
   State
 } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
-import { CalendarModes } from '../../../common-enums';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import {
   asIsoDateRange,
   asIsoDate,
   fromIsoDateRange,
   fromIsoDate
-} from '../../../utils/date/iso-dates';
+} from '@utils/date/iso-dates';
 import {
   addClassToElements,
   removeClassToElements
-} from '../../../utils/dom/manipulate-elements-classes';
+} from '@utils/dom/manipulate-elements-classes';
+
+import { trackComponent } from '../../../usage-tracking';
+import { CalendarModes } from '../../../common-enums';
 import { getDesiredLocale, getStartOfWeek } from '../../../i18n';
 
 import { GuxCalendarMode, IDateElement } from './gux-calendar.types';
@@ -136,7 +138,7 @@ export class GuxCalendar {
       0
     );
     // Wait for render before focusing preview date
-    setTimeout(() => {
+    afterNextRenderTimeout(() => {
       void this.focusPreviewDate();
     });
   }
@@ -381,7 +383,7 @@ export class GuxCalendar {
           this.previewValue.setDate(this.previewValue.getDate() + 7)
         );
         this.onDateMouseEnter(this.previewValue);
-        setTimeout(() => {
+        afterNextRenderTimeout(() => {
           void this.focusPreviewDate();
         });
         break;
@@ -391,7 +393,7 @@ export class GuxCalendar {
           this.previewValue.setDate(this.previewValue.getDate() - 7)
         );
         this.onDateMouseEnter(this.previewValue);
-        setTimeout(() => {
+        afterNextRenderTimeout(() => {
           void this.focusPreviewDate();
         });
         break;
@@ -401,7 +403,7 @@ export class GuxCalendar {
           this.previewValue.setDate(this.previewValue.getDate() - 1)
         );
         this.onDateMouseEnter(this.previewValue);
-        setTimeout(() => {
+        afterNextRenderTimeout(() => {
           void this.focusPreviewDate();
         });
         break;
@@ -411,7 +413,7 @@ export class GuxCalendar {
           this.previewValue.setDate(this.previewValue.getDate() + 1)
         );
         this.onDateMouseEnter(this.previewValue);
-        setTimeout(() => {
+        afterNextRenderTimeout(() => {
           void this.focusPreviewDate();
         });
         break;

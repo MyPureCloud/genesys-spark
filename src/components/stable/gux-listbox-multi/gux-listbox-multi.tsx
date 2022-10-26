@@ -31,6 +31,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../usage-tracking';
+import { afterNextRender } from '../../../utils/dom/after-next-render';
 
 import translationResources from './i18n/en.json';
 
@@ -44,6 +45,7 @@ import translationResources from './i18n/en.json';
 })
 export class GuxListboxMulti {
   private i18n: GetI18nValue;
+  private optionCreateElement: HTMLGuxCreateOptionElement;
 
   @Element()
   root: HTMLGuxListboxElement;
@@ -52,19 +54,25 @@ export class GuxListboxMulti {
   value: string;
 
   @Prop()
+  loading: boolean = false;
+
+  @Prop()
   filter: string = '';
 
-  @State()
-  selectedValues: string[] = [];
+  @Prop()
+  textInput: string = '';
 
   @State()
-  listboxOptions: HTMLGuxOptionElement[] = [];
+  listboxOptions: HTMLGuxOptionMultiElement[] = [];
 
   @State()
   allListboxOptionsFiltered: boolean;
 
   @Event()
   internallistboxoptionsupdated: EventEmitter;
+
+  @Prop({ mutable: true })
+  hasExactMatch: boolean = false;
 
   @Listen('focus')
   onFocus(): void {
@@ -76,12 +84,24 @@ export class GuxListboxMulti {
     clearActiveOptions(this.root);
   }
 
+  @Listen('internalselectcustomoption')
+  selectNewCustomOption(event: CustomEvent<string>): void {
+    this.updateValue(event.detail);
+  }
+
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Enter':
         event.preventDefault();
-        actOnActiveOption(this.root, value => this.updateValue(value));
+        if (this.optionCreateElement?.active) {
+          void this.optionCreateElement.guxEmitInternalCreateNewOption();
+          afterNextRender(() => {
+            setInitialActiveOption(this.root);
+          });
+        } else {
+          actOnActiveOption(this.root, value => this.updateValue(value));
+        }
         return;
 
       case 'ArrowDown':
@@ -133,7 +153,14 @@ export class GuxListboxMulti {
   onKeyup(event: KeyboardEvent): void {
     switch (event.key) {
       case ' ':
-        actOnActiveOption(this.root, value => this.updateValue(value));
+        if (this.optionCreateElement?.active) {
+          void this.optionCreateElement.guxEmitInternalCreateNewOption();
+          afterNextRender(() => {
+            setInitialActiveOption(this.root);
+          });
+        } else {
+          actOnActiveOption(this.root, value => this.updateValue(value));
+        }
         return;
     }
   }
@@ -154,39 +181,83 @@ export class GuxListboxMulti {
     );
   }
 
-  @Watch('value')
-  validateValue() {
-    if (this.value) {
-      this.selectedValues = this.value.split(',');
-    } else {
-      this.selectedValues = [];
-    }
-  }
-
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async guxSelectActive(): Promise<void> {
     actOnActiveOption(this.root, value => this.updateValue(value));
   }
 
-  private setListboxOptions(): void {
-    if (this.value) {
-      this.selectedValues = this.value.split(',');
+  private getHasExactMatch(): boolean {
+    let hasExactMatch = false;
+    this.hasExactMatch = false;
+    this.listboxOptions.forEach(listboxOption => {
+      if (
+        listboxOption
+          .querySelector('.gux-option')
+          .textContent.toLowerCase()
+          .trim() == this.textInput.toLowerCase().trim()
+      ) {
+        hasExactMatch = true;
+        this.hasExactMatch = true;
+      }
+    });
+    return hasExactMatch;
+  }
+
+  @Watch('textInput')
+  updateOptionMultiCreateValue() {
+    if (this.optionCreateElement) {
+      this.optionCreateElement.value = this.textInput;
+      this.optionCreateElement.filtered =
+        !this.textInput || this.getHasExactMatch();
     }
-    this.listboxOptions = Array.from(
-      this.root.children
-    ) as HTMLGuxOptionElement[];
-    this.internallistboxoptionsupdated.emit();
+  }
+
+  // value as an array
+  private getSelectedValues() {
+    if (this.value) {
+      return this.value.split(',');
+    } else {
+      return [];
+    }
+  }
+
+  private updateOnSlotChange(): void {
+    this.setListboxOptions();
+    this.updateListboxOptions();
+    setInitialActiveOption(this.root);
+  }
+
+  private getOptionCreateElement(): void {
+    this.optionCreateElement = this.root.querySelector('gux-create-option');
+  }
+
+  // get list of listbox option elements
+  private setListboxOptions(): void {
+    this.listboxOptions = (
+      Array.from(this.root.children) as HTMLGuxOptionMultiElement[]
+    ).filter(element => element.tagName === 'GUX-OPTION-MULTI');
+  }
+
+  private updateListboxOptions(): void {
+    this.listboxOptions.forEach(listboxOption => {
+      listboxOption.selected = this.getSelectedValues().includes(
+        listboxOption.value
+      );
+      listboxOption.filtered = !listboxOption.textContent
+        .toLowerCase()
+        .startsWith(this.textInput.toLowerCase());
+    });
   }
 
   private updateValue(newValue: string): void {
-    if (!this.selectedValues.includes(newValue)) {
-      const newArray = [...this.selectedValues, newValue];
-      this.selectedValues = newArray;
-      this.value = this.selectedValues.join(',');
+    if (!this.getSelectedValues().includes(newValue)) {
+      const newArray = [...this.getSelectedValues(), newValue];
+      this.value = newArray.join(',');
     } else {
-      this.selectedValues = this.selectedValues.filter(e => e !== newValue);
-      this.value = this.selectedValues.join(',');
+      this.value = this.getSelectedValues()
+        .filter(e => e !== newValue)
+        .join(',');
     }
     simulateNativeEvent(this.root, 'input');
     simulateNativeEvent(this.root, 'change');
@@ -195,38 +266,64 @@ export class GuxListboxMulti {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-
     this.setListboxOptions();
+    this.getOptionCreateElement();
   }
 
   componentWillRender(): void {
-    this.listboxOptions.forEach(listboxOption => {
-      listboxOption.selected = this.selectedValues.includes(
-        listboxOption.value
-      );
-      listboxOption.filtered = !listboxOption.textContent
-        .toLowerCase()
-        .startsWith(this.filter.toLowerCase());
-    });
+    this.setListboxOptions();
 
+    this.updateListboxOptions();
     this.allListboxOptionsFiltered =
       this.listboxOptions.filter(listboxOption => !listboxOption.filtered)
         .length === 0;
   }
 
+  // The slot must always be rendered so onSlotchange can be called
+  renderHiddenSlot(): JSX.Element {
+    return (
+      <div hidden>
+        <slot onSlotchange={() => this.setListboxOptions()} />
+      </div>
+    ) as JSX.Element;
+  }
+
+  renderLoading(): JSX.Element {
+    return [
+      <div class="gux-message-container">
+        <gux-radial-loading context="modal"></gux-radial-loading>
+        <span>{this.i18n('loading')}</span>
+      </div>,
+      this.renderHiddenSlot()
+    ] as JSX.Element;
+  }
+
   renderAllListboxOptionsFiltered(): JSX.Element {
-    if (this.allListboxOptionsFiltered) {
-      return (
+    return [
+      <div class="gux-message-container">
         <div class="gux-no-matches">{this.i18n('noMatches')}</div>
-      ) as JSX.Element;
-    }
+      </div>,
+      this.renderHiddenSlot()
+    ] as JSX.Element;
+  }
+
+  renderCreateOptionSlot(): JSX.Element {
+    return (<slot name="create" />) as JSX.Element;
   }
 
   render(): JSX.Element {
+    if (this.loading) {
+      return this.renderLoading();
+    }
+
+    if (this.allListboxOptionsFiltered) {
+      return this.renderAllListboxOptionsFiltered();
+    }
+
     return (
       <Host role="listbox" aria-multiselectable="true" tabindex={0}>
-        <slot onSlotchange={() => this.setListboxOptions()} />
-        {this.renderAllListboxOptionsFiltered()}
+        <slot onSlotchange={() => this.updateOnSlotChange()} />
+        {this.renderCreateOptionSlot()}
       </Host>
     ) as JSX.Element;
   }
