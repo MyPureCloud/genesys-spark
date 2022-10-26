@@ -17,12 +17,12 @@
 
 ### Used by
 
- - [gux-country-select](../gux-country-select)
+ - [gux-phone-input-beta](../..)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-country-select --> gux-country-icon
+  gux-phone-input-beta --> gux-country-icon
   style gux-country-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

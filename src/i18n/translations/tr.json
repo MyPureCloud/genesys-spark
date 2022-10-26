@@ -10,20 +10,20 @@
     "red-bold": "rozet ile etiket: {label}, renk: kırmızı kalın"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "Kopyalamak İçin Tıklayın",
+    "copyToClipboard": "Panoya kopyala",
+    "enterToCopy": "Kopyalamak İçin Enter Tuşuna Basın",
+    "copySuccess": "Panoya Kopyalandı",
+    "copyFailure": "Hata. Lütfen Tekrar Deneyin."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "Seçili {numberSelected} öğeyi temizle"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "Açılır liste sonuçlarını filtrelemek için yazın",
+    "noSelection": "Seç...",
+    "dropdown": "Açılır liste",
+    "numberSelected": "{numberSelected} öğe seçildi"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "Sayfa başına öğeler"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "Bağlantı gezinmesini atla"
   },
   "gux-table": {
     "emptyMessage": "Kullanılabilir veri yok",

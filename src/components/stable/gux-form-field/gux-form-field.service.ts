@@ -1,6 +1,6 @@
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
-import { logError } from '../../../utils/error/log-error';
-import setInputValue from '../../../utils/dom/set-input-value';
+import { randomHTMLId } from '@utils/dom/random-html-id';
+import { logError } from '@utils/error/log-error';
+import setInputValue from '@utils/dom/set-input-value';
 
 import { GuxFormFieldLabelPosition } from './gux-form-field.types';
 
@@ -46,6 +46,7 @@ export function validateFormIds(
     | HTMLGuxListboxElement
     | HTMLGuxListboxMultiElement
     | HTMLGuxTimePickerBetaElement
+    | HTMLGuxPhoneInputBetaElement
 ): void {
   if (hasLabelSlot(root)) {
     const label: HTMLLabelElement = root.querySelector('label[slot="label"]');

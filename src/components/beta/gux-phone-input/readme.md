@@ -7,36 +7,44 @@ Input for international phone numbers
 
 ## Properties
 
-| Property        | Attribute        | Description | Type                                    | Default     |
-| --------------- | ---------------- | ----------- | --------------------------------------- | ----------- |
-| `defaultRegion` | `default-region` |             | `string`                                | `'US'`      |
-| `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
-| `value`         | `value`          |             | `string`                                | `undefined` |
+| Property        | Attribute        | Description | Type      | Default     |
+| --------------- | ---------------- | ----------- | --------- | ----------- |
+| `defaultRegion` | `default-region` |             | `string`  | `'US'`      |
+| `disabled`      | `disabled`       |             | `boolean` | `false`     |
+| `hasError`      | `has-error`      |             | `boolean` | `false`     |
+| `labelId`       | `label-id`       |             | `string`  | `undefined` |
+| `region`        | `region`         |             | `string`  | `undefined` |
+| `required`      | `required`       |             | `boolean` | `undefined` |
+| `value`         | `value`          |             | `string`  | `undefined` |
 
 
 ## Events
 
-| Event   | Description | Type                   |
-| ------- | ----------- | ---------------------- |
-| `error` |             | `CustomEvent<boolean>` |
-| `input` |             | `CustomEvent<string>`  |
+| Event                   | Description | Type                   |
+| ----------------------- | ----------- | ---------------------- |
+| `input`                 |             | `CustomEvent<string>`  |
+| `internalError`         |             | `CustomEvent<boolean>` |
+| `internalregionupdated` |             | `CustomEvent<any>`     |
 
 
 ## Dependencies
 
 ### Depends on
 
-- [gux-country-select](./components/gux-country-select)
+- [gux-icon](../../stable/gux-icon)
+- [gux-country-icon](./components/gux-country-icon)
+- [gux-option](../../stable/gux-listbox/gux-option)
+- [gux-listbox](../../stable/gux-listbox)
+- [gux-popup](../../stable/gux-popup)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-phone-input-beta --> gux-country-select
-  gux-country-select --> gux-icon
-  gux-country-select --> gux-country-icon
-  gux-country-select --> gux-option
-  gux-country-select --> gux-listbox
-  gux-country-select --> gux-popup
+  gux-phone-input-beta --> gux-icon
+  gux-phone-input-beta --> gux-country-icon
+  gux-phone-input-beta --> gux-option
+  gux-phone-input-beta --> gux-listbox
+  gux-phone-input-beta --> gux-popup
   style gux-phone-input-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

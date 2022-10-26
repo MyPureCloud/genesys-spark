@@ -30,10 +30,10 @@
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-button-multi](../gux-button-multi)
  - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
- - [gux-country-select](../../beta/gux-phone-input/components/gux-country-select)
  - [gux-dropdown](../gux-dropdown)
  - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
  - [gux-month-picker-beta](../../beta/gux-month-picker)
+ - [gux-phone-input-beta](../../beta/gux-phone-input)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
 
 ### Graph
@@ -44,10 +44,10 @@ graph TD;
   gux-advanced-dropdown --> gux-popup
   gux-button-multi --> gux-popup
   gux-button-multi-legacy --> gux-popup
-  gux-country-select --> gux-popup
   gux-dropdown --> gux-popup
   gux-dropdown-multi-beta --> gux-popup
   gux-month-picker-beta --> gux-popup
+  gux-phone-input-beta --> gux-popup
   gux-time-picker-beta --> gux-popup
   style gux-popup fill:#f9f,stroke:#333,stroke-width:4px
 ```

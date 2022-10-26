@@ -10,20 +10,20 @@
     "red-bold": "selo com etiqueta: {label}, cor: vermelho em negrito"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "Clique para copiar",
+    "copyToClipboard": "Copiar para a área de transferência",
+    "enterToCopy": "Pressione Enter para copiar",
+    "copySuccess": "Copiado para a área de transferência",
+    "copyFailure": "Erro. Tente novamente."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "Limpar {numberSelected} itens selecionados"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "Digite para filtrar resultados da lista suspensa",
+    "noSelection": "Selecione...",
+    "dropdown": "Lista suspensa",
+    "numberSelected": "{numberSelected} selecionado(s)"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "Itens por página"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "Ignorar navegação por links"
   },
   "gux-table": {
     "emptyMessage": "Nenhum dado disponível",

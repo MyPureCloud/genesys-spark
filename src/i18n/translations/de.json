@@ -10,20 +10,20 @@
     "red-bold": "Badge mit Bezeichnung: {label}, Farbe: rot fett"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "Zum Kopieren klicken",
+    "copyToClipboard": "In Zwischenablage kopieren",
+    "enterToCopy": "Zum Kopieren die Eingabetaste drücken",
+    "copySuccess": "In Zwischenablage kopiert",
+    "copyFailure": "Fehler. Bitte versuchen Sie es erneut."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "{numberSelected} ausgewählte Elemente löschen"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "Tippen Sie, um Listenfeldergebnisse zu filtern",
+    "noSelection": "Auswählen...",
+    "dropdown": "Listenfeld",
+    "numberSelected": "{numberSelected} ausgewählt"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "Elemente pro Seite"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "Skiplink-Navigation überspringen"
   },
   "gux-table": {
     "emptyMessage": "Keine Daten verfügbar",

@@ -1,0 +1,32 @@
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>No Default Region -> US</legend>
+    <gux-form-field-phone label-position="above">
+      <gux-phone-input-beta></gux-phone-input-beta>
+      <label slot="label">Phone Input</label>
+    </gux-form-field-phone>
+    <gux-form-field-phone label-position="above">
+      <gux-phone-input-beta required="true"></gux-phone-input-beta>
+      <label slot="label">Phone Input - required</label>
+    </gux-form-field-phone>
+    <gux-form-field-phone label-position="above">
+      <gux-phone-input-beta disabled="true"></gux-phone-input-beta>
+      <label slot="label">Phone Input - disabled</label>
+    </gux-form-field-phone>
+  </fieldset>
+  <fieldset>
+    <legend>Default Region Set</legend>
+    <gux-form-field-phone label-position="above">
+      <gux-phone-input-beta default-region="JP"></gux-phone-input-beta>
+      <label slot="label">Phone Input - Default Region = Japan</label>
+    </gux-form-field-phone>
+    <gux-form-field-phone label-position="above">
+      <gux-phone-input-beta default-region="DE"></gux-phone-input-beta>
+      <label slot="label">Phone Input - Default Region = Germany</label>
+    </gux-form-field-phone>
+    <gux-form-field-phone label-position="above">
+      <gux-phone-input-beta default-region="CH"></gux-phone-input-beta>
+      <label slot="label">Phone Input - Default Region = Switzerland</label>
+    </gux-form-field-phone>
+  </fieldset>
+</form>

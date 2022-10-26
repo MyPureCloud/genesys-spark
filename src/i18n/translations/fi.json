@@ -10,20 +10,20 @@
     "red-bold": "selitteellinen merkki: {label}, väri: voimakas punainen"
   },
   "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "copyToClipboard": "Copy to clipboard",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "clickToCopy": "Kopioi napsauttamalla tätä",
+    "copyToClipboard": "Kopioi leikepöydälle",
+    "enterToCopy": "Kopioi painamalla Enter",
+    "copySuccess": "Kopioitu leikepöydälle",
+    "copyFailure": "Virhe. Yritä uudelleen."
   },
   "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+    "clearSelection": "Tyhjennä {numberSelected} valittua kohdetta"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown",
-    "numberSelected": "{numberSelected} selected"
+    "filterResults": "Kirjoittamalla voit suodattaa avattavan valikon tulokset",
+    "noSelection": "Valitse...",
+    "dropdown": "Avattava valikko",
+    "numberSelected": "{numberSelected} valittu"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -52,7 +52,7 @@
     "itemsPerPage": "Nimikettä sivulla"
   },
   "gux-skip-navigation-list": {
-    "navigationName": "Skip links navigation"
+    "navigationName": "Ohita linkit navigointiin"
   },
   "gux-table": {
     "emptyMessage": "Tietoja ei ole saatavissa",
