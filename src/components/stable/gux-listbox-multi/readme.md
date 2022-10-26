@@ -9,6 +9,7 @@
 | --------------- | ----------------- | ----------- | --------- | ----------- |
 | `filter`        | `filter`          |             | `string`  | `''`        |
 | `hasExactMatch` | `has-exact-match` |             | `boolean` | `false`     |
+| `loading`       | `loading`         |             | `boolean` | `false`     |
 | `textInput`     | `text-input`      |             | `string`  | `''`        |
 | `value`         | `value`           |             | `string`  | `undefined` |
 
@@ -39,6 +40,19 @@ Type: `Promise<void>`
 | ---- | --------------------------------------- |
 |      | collection of gux-option-multi elements |
 
+
+## Dependencies
+
+### Depends on
+
+- [gux-radial-loading](../gux-radial-loading)
+
+### Graph
+```mermaid
+graph TD;
+  gux-listbox-multi --> gux-radial-loading
+  style gux-listbox-multi fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

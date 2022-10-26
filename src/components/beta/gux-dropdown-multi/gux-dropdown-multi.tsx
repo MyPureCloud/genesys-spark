@@ -50,6 +50,9 @@ export class GuxDropdownMulti {
   required: boolean = false;
 
   @Prop()
+  loading: boolean = false;
+
+  @Prop()
   placeholder: string;
 
   @Prop()
@@ -88,6 +91,9 @@ export class GuxDropdownMulti {
    */
   @Event()
   guxcollapsed: EventEmitter<void>;
+
+  @Event()
+  private guxfilter: EventEmitter<string>;
 
   /**
    * Listens for expanded event emitted by gux-popup.
@@ -141,6 +147,11 @@ export class GuxDropdownMulti {
     }
 
     this.value = undefined;
+  }
+
+  @Watch('textInput')
+  handleFilter(filter: string) {
+    this.guxfilter.emit(filter);
   }
 
   /**
@@ -267,6 +278,7 @@ export class GuxDropdownMulti {
   componentWillRender(): void {
     this.validateValue(this.value);
     this.listboxElement.textInput = this.textInput;
+    this.listboxElement.loading = this.loading;
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -502,6 +514,8 @@ export class GuxDropdownMulti {
           aria-expanded={this.expanded.toString()}
         >
           {this.renderTargetContent()}
+          {this.renderTag()}
+          {this.renderRadialLoading()}
           <gux-icon
             class={{
               'gux-expand-icon': true
@@ -521,14 +535,24 @@ export class GuxDropdownMulti {
     }
   }
 
+  private renderRadialLoading(): JSX.Element {
+    if (this.loading && !this.expanded) {
+      return (
+        <gux-radial-loading context="input"></gux-radial-loading>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return [
       <div class="gux-dropdown-container">
-        <gux-popup expanded={this.expanded} disabled={this.disabled}>
+        <gux-popup
+          expanded={this.expanded && (!this.loading || this.filterable)}
+          disabled={this.disabled}
+        >
           {this.renderTarget()}
           {this.renderPopup()}
         </gux-popup>
-        {this.renderTag()}
       </div>
     ] as JSX.Element;
   }

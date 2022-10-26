@@ -1,4 +1,5 @@
 {
   "add": "Add {name}",
-  "noMatches": "No matches"
+  "noMatches": "No matches",
+  "loading": "Loading..."
 }

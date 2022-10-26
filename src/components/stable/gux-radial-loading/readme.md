@@ -20,6 +20,10 @@ Otherwise, if the loading is unknown, and no percentage is provided, it instead 
 
 ### Used by
 
+ - [gux-dropdown](../gux-dropdown)
+ - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
+ - [gux-listbox](../gux-listbox)
+ - [gux-listbox-multi](../gux-listbox-multi)
  - [gux-page-loading-spinner](../gux-page-loading-spinner)
  - [gux-radial-progress](../gux-radial-progress)
  - [gux-toggle](../gux-toggle)
@@ -27,6 +31,10 @@ Otherwise, if the loading is unknown, and no percentage is provided, it instead 
 ### Graph
 ```mermaid
 graph TD;
+  gux-dropdown --> gux-radial-loading
+  gux-dropdown-multi-beta --> gux-radial-loading
+  gux-listbox --> gux-radial-loading
+  gux-listbox-multi --> gux-radial-loading
   gux-page-loading-spinner --> gux-radial-loading
   gux-radial-progress --> gux-radial-loading
   gux-toggle --> gux-radial-loading
