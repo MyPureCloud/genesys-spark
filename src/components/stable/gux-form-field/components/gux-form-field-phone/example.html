@@ -13,6 +13,13 @@
       <gux-phone-input-beta disabled="true"></gux-phone-input-beta>
       <label slot="label">Phone Input - disabled</label>
     </gux-form-field-phone>
+    <gux-form-field-phone label-position="above">
+      <gux-phone-input-beta hasError="true"></gux-phone-input-beta>
+      <label slot="label">Phone Input - Custom Error</label>
+      <span slot="error"
+        >Custom Error Message (different than internal validation)</span
+      >
+    </gux-form-field-phone>
   </fieldset>
   <fieldset>
     <legend>Default Region Set</legend>

@@ -1,6 +1,8 @@
 import {
   Component,
   Element,
+  Event,
+  EventEmitter,
   h,
   JSX,
   Listen,
@@ -23,14 +25,15 @@ import { GuxFormFieldError } from '../../functional-components/gux-form-field-er
 import { GuxFormFieldLegendLabel } from '../../functional-components/gux-form-field-legend-label/gux-form-field-legend-label';
 
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
+import { hasSlot } from '@utils/dom/has-slot';
+import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 import {
-  hasErrorSlot,
   getComputedLabelPosition,
-  getErrorSlotTextContent,
   validateFormIds
 } from '../../gux-form-field.service';
 
 import componentResources from './i18n/en.json';
+import { GuxFormFieldHelp } from '../../functional-components/gux-form-field-help/gux-form-field-help';
 
 /**
  * @slot - Required slot for gux-time-picker-beta tag
@@ -67,9 +70,20 @@ export class GuxFormFieldPhone {
   @State()
   private hasError: boolean = false;
 
+  @State()
+  private hasInternalError: boolean = false;
+
+  @State()
+  private hasHelp: boolean = false;
+
+  @Event()
+  phonevalidationerror: EventEmitter<boolean>;
+
   @Listen('internalError')
   listenForInternalError(event: CustomEvent) {
-    this.hasError = event.detail;
+    this.hasInternalError = event.detail;
+    this.watchValue(this.hasInternalError);
+    this.phonevalidationerror.emit(this.hasInternalError);
   }
 
   @Watch('hasError')
@@ -82,7 +96,8 @@ export class GuxFormFieldPhone {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
   }
 
   async componentWillLoad(): Promise<void> {
@@ -94,7 +109,8 @@ export class GuxFormFieldPhone {
     this.setInput();
     this.setLabel();
 
-    this.hasError = hasErrorSlot(this.root);
+    this.hasError = hasSlot(this.root, 'error');
+    this.hasHelp = hasSlot(this.root, 'help');
 
     trackComponent(this.root, { variant: this.variant });
   }
@@ -117,7 +133,7 @@ export class GuxFormFieldPhone {
             this.required
           )}
           {this.renderScreenReaderText(
-            getErrorSlotTextContent(this.root),
+            getSlotTextContent(this.root, 'error'),
             this.hasError
           )}
         </GuxFormFieldLegendLabel>
@@ -137,9 +153,15 @@ export class GuxFormFieldPhone {
               <slot />
             </div>
           </div>
-          <GuxFormFieldError hasError={this.hasError}>
+          <GuxFormFieldError show={this.hasError}>
             <slot name="error" />
           </GuxFormFieldError>
+          <GuxFormFieldError show={this.hasInternalError}>
+            <span>{this.getI18nValue('invalidPhoneNumber')}</span>
+          </GuxFormFieldError>
+          <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+            <slot name="help" />
+          </GuxFormFieldHelp>
         </div>
       </GuxFormFieldFieldsetContainer>
     ) as JSX.Element;

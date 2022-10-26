@@ -187,21 +187,21 @@ export class GuxPhoneInput {
           );
         this.internalError.emit(!isValid);
       } catch (e) {
-        if (this.required || this.numberText) {
+        if (this.numberText) {
           console.error('Number cannot be parsed');
           this.internalError.emit(true);
         }
       }
-    } else {
-      this.internalError.emit(this.required);
     }
   }
 
   private phoneNumberUpdated(): void {
-    this.value = `+${this.phoneUtil.getCountryCodeForRegion(
-      this.region
-    )}${this.numberText.replace(/\D/, '')}`;
-    this.input.emit(this.value);
+    if (this.numberText) {
+      this.value = `+${this.phoneUtil.getCountryCodeForRegion(
+        this.region
+      )}${this.numberText.replace(/\D/, '')}`;
+      this.input.emit(this.value);
+    }
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -239,9 +239,7 @@ export class GuxPhoneInput {
     if (this.region !== newValue) {
       this.collapseListbox('focusFieldButton');
       this.region = newValue;
-      if (this.numberText) {
-        this.phoneNumberUpdated();
-      }
+      this.phoneNumberUpdated();
     }
   }
 

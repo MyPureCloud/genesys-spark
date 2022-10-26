@@ -405,7 +405,8 @@
     "decrement": "Decrement"
   },
   "gux-form-field-phone": {
-    "required": "Required"
+    "required": "Required",
+    "invalidPhoneNumber": "Number is not valid"
   },
   "gux-form-field-time-picker": {
     "required": "Required"

@@ -45,6 +45,7 @@ graph TD;
   gux-phone-input-beta --> gux-option
   gux-phone-input-beta --> gux-listbox
   gux-phone-input-beta --> gux-popup
+  gux-listbox --> gux-radial-loading
   style gux-phone-input-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
