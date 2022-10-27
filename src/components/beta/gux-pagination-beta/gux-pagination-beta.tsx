@@ -22,6 +22,8 @@ import {
 
 import { GuxPaginationLayoutBeta } from './gux-pagination-beta.types';
 
+const minAdvancedSpacerWidth = 24;
+
 @Component({
   styleUrl: 'gux-pagination-beta.less',
   tag: 'gux-pagination-beta',
@@ -33,7 +35,7 @@ export class GuxPaginationBeta implements ComponentInterface {
 
   private resizeObserver?: ResizeObserver;
 
-  private switchToOriginalLayoutWidth: number = 0;
+  private reinstateLayoutBreakpoint: number = 0;
 
   /**
    * The pagination component can have different layouts to suit the available space
@@ -138,11 +140,14 @@ export class GuxPaginationBeta implements ComponentInterface {
       const containerWidth = container.clientWidth;
       const spacerWidth = spacer.clientWidth;
 
-      if (spacerWidth < 24 && this.displayedLayout !== 'simple') {
-        this.switchToOriginalLayoutWidth = containerWidth;
+      if (
+        spacerWidth < minAdvancedSpacerWidth &&
+        this.displayedLayout !== 'simple'
+      ) {
+        this.reinstateLayoutBreakpoint = containerWidth;
         this.displayedLayout = 'simple';
-      } else if (containerWidth > this.switchToOriginalLayoutWidth) {
-        this.switchToOriginalLayoutWidth = 0;
+      } else if (containerWidth > this.reinstateLayoutBreakpoint) {
+        this.reinstateLayoutBreakpoint = 0;
         this.displayedLayout = this.layout;
       }
     });
