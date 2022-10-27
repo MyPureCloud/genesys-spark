@@ -28,6 +28,10 @@ import {
 
 const COL_RESIZE_HANDLE_WIDTH = 3;
 
+/**
+ * @slot data - Slot for table element
+ */
+
 @Component({
   styleUrl: 'gux-table.less',
   tag: 'gux-table-beta',

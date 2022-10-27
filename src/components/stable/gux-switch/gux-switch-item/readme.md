@@ -14,6 +14,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | `value`    | `value`    |             | `string`  | `undefined` |
 
 
+## Slots
+
+| Slot | Description |
+| ---- | ----------- |
+|      | text        |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

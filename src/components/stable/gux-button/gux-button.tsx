@@ -3,6 +3,10 @@ import { Component, Element, h, JSX, Prop } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 import { GuxButtonAccent, GuxButtonType } from './gux-button.types';
 
+/**
+ * @slot - test
+ */
+
 @Component({
   styleUrl: 'gux-button.less',
   tag: 'gux-button',

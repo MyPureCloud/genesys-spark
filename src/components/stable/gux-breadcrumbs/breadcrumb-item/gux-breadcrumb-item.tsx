@@ -4,6 +4,10 @@ import { logError } from '../../../../utils/error/log-error';
 
 import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 
+/**
+ * @slot - content
+ */
+
 @Component({
   styleUrl: 'gux-breadcrumb-item.less',
   tag: 'gux-breadcrumb-item',

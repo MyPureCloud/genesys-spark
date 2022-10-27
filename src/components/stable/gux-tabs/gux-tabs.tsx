@@ -17,6 +17,11 @@ import { trackComponent } from '../../../usage-tracking';
 
 import { GuxTabsOrientation, GuxTabsAlignment } from './gux-tabs-types';
 
+/**
+ * @slot tab-list - Slot for gux-tab-list
+ * @slot - collection of gux-tab-panel elements
+ */
+
 @Component({
   styleUrl: 'gux-tabs.less',
   tag: 'gux-tabs',

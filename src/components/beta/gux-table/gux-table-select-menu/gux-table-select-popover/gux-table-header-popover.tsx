@@ -14,6 +14,10 @@ import {
 import { OnClickOutside } from '../../../../../utils/decorator/on-click-outside';
 import { onHiddenChange } from '../../../../../utils/dom/on-attribute-change';
 
+/**
+ * @slot - popover content
+ */
+
 @Component({
   styleUrl: 'gux-table-select-popover.less',
   tag: 'gux-table-select-popover',

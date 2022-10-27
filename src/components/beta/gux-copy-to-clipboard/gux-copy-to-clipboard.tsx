@@ -3,6 +3,10 @@ import { trackComponent } from '../../../usage-tracking';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 
+/**
+ * @slot content - Slot for content.
+ */
+
 @Component({
   styleUrl: 'gux-copy-to-clipboard.less',
   tag: 'gux-copy-to-clipboard-beta',

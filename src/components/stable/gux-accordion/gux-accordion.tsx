@@ -2,6 +2,10 @@ import { Component, Element, h, JSX, Listen, Prop } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
+/**
+ * @slot - collection of gux-accordion-section elements
+ */
+
 @Component({
   styleUrl: 'gux-accordion.less',
   tag: 'gux-accordion',

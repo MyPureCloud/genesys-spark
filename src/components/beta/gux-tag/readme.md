@@ -20,6 +20,13 @@
 | `guxdelete` | Triggered when click on remove button | `CustomEvent<string>` |
 
 
+## Slots
+
+| Slot | Description |
+| ---- | ----------- |
+|      | content     |
+
+
 ## Dependencies
 
 ### Depends on
