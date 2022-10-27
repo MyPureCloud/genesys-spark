@@ -17,6 +17,10 @@ import { trackComponent } from '../../../usage-tracking';
 
 import { PopperPosition } from './gux-popover.types';
 
+/**
+ * @slot popover content
+ */
+
 @Component({
   styleUrl: 'gux-popover.less',
   tag: 'gux-popover',

@@ -20,6 +20,10 @@ import {
   menuNavigation
 } from '../gux-menu.common';
 
+/**
+ * @slot collection of menu-option, submenu elements
+ */
+
 @Component({
   styleUrl: 'gux-submenu.less',
   tag: 'gux-submenu'

@@ -12,6 +12,13 @@
 | `disabled` | `disabled` |             | `boolean` | `false` |
 
 
+## Slots
+
+| Slot     | Description |
+| -------- | ----------- |
+| `"text"` |             |
+
+
 ## Dependencies
 
 ### Used by

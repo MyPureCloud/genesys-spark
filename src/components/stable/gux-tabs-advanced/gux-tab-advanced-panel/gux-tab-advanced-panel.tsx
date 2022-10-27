@@ -10,6 +10,10 @@ import {
   Watch
 } from '@stencil/core';
 
+/**
+ * @slot text
+ */
+
 @Component({
   styleUrl: 'gux-tab-advanced-panel.less',
   tag: 'gux-tab-advanced-panel',

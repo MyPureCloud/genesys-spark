@@ -12,6 +12,13 @@
 | `accent` | `accent`  |             | `"primary" \| "secondary"` | `'primary'` |
 
 
+## Slots
+
+| Slot                                           | Description |
+| ---------------------------------------------- | ----------- |
+| `"collection of gux-breadcrumb-item elements"` |             |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

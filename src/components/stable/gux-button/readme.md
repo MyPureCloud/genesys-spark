@@ -16,6 +16,13 @@ You can choose between two type (secondary and primary).
 | `type`     | `type`      | The component button type                 | `"button" \| "reset" \| "submit"`                               | `'button'`    |
 
 
+## Slots
+
+| Slot                     | Description |
+| ------------------------ | ----------- |
+| `"icon and button text"` |             |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

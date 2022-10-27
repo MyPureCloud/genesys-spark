@@ -18,6 +18,10 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
 
+/**
+ * @slot panel-content - Slot for content of panel
+ */
+
 @Component({
   styleUrl: 'gux-disclosure-button.less',
   tag: 'gux-disclosure-button',

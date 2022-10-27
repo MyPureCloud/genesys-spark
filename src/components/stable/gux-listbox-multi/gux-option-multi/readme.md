@@ -24,6 +24,13 @@
 | `internalselectcustomoption` |             | `CustomEvent<string>` |
 
 
+## Slots
+
+| Slot     | Description |
+| -------- | ----------- |
+| `"text"` |             |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

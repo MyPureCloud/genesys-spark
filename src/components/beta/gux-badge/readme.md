@@ -13,6 +13,13 @@
 | `color`  | `color`   | Badge background color. | `"green" \| "neutral" \| "red" \| "yellow"` | `'neutral'` |
 
 
+## Slots
+
+| Slot | Description             |
+| ---- | ----------------------- |
+|      | Required slot for label |
+
+
 ## Dependencies
 
 ### Depends on

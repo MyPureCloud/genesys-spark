@@ -34,6 +34,14 @@ Type: `Promise<void>`
 
 
 
+## Slots
+
+| Slot                                     | Description           |
+| ---------------------------------------- | --------------------- |
+| `"collection of gux-tab-panel elements"` |                       |
+| `"tab-list"`                             | Slot for gux-tab-list |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

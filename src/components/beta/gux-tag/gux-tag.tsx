@@ -16,6 +16,10 @@ import { trackComponent } from '../../../usage-tracking';
 import tagResources from './i18n/en.json';
 import { GuxTagColor } from './gux-tag.types';
 
+/**
+ * @slot label
+ */
+
 @Component({
   styleUrl: 'gux-tag.less',
   tag: 'gux-tag-beta',

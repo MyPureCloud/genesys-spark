@@ -10,6 +10,10 @@ import {
   State
 } from '@stencil/core';
 
+/**
+ * @slot text
+ */
+
 @Component({
   styleUrl: 'gux-tab.less',
   tag: 'gux-tab',

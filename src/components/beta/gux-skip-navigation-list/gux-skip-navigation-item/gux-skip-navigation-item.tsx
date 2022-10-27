@@ -1,5 +1,9 @@
 import { Component, Host, h, JSX } from '@stencil/core';
 
+/**
+ * @slot hyperlink
+ */
+
 @Component({
   styleUrl: 'gux-skip-navigation-item.less',
   tag: 'gux-skip-navigation-item',

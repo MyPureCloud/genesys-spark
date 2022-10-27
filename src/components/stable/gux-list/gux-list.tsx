@@ -12,6 +12,10 @@ import { first, last, next, previous } from './gux-list.service';
 
 import { trackComponent } from '../../../usage-tracking';
 
+/**
+ * @slot gux-list-item, gux-list-divider elements
+ */
+
 const validFocusableItems = ['gux-list-item'];
 
 @Component({

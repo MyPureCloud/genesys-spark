@@ -20,6 +20,10 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import advancedDropDownResources from './i18n/en.json';
 
+/**
+ * @slot collection of gux-dropdown-option elements
+ */
+
 @Component({
   styleUrl: 'gux-advanced-dropdown.less',
   tag: 'gux-advanced-dropdown',
