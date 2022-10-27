@@ -17,9 +17,9 @@
 
 ## Slots
 
-| Slot     | Description |
-| -------- | ----------- |
-| `"text"` |             |
+| Slot | Description |
+| ---- | ----------- |
+|      | text        |
 
 
 ## Dependencies

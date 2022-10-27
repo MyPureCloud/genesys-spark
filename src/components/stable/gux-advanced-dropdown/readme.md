@@ -49,9 +49,9 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot                                           | Description |
-| ---------------------------------------------- | ----------- |
-| `"collection of gux-dropdown-option elements"` |             |
+| Slot | Description                                |
+| ---- | ------------------------------------------ |
+|      | collection of gux-dropdown-option elements |
 
 
 ## Dependencies

@@ -14,9 +14,9 @@
 
 ## Slots
 
-| Slot                                             | Description |
-| ------------------------------------------------ | ----------- |
-| `"collection of gux-accordion-section elements"` |             |
+| Slot | Description                                  |
+| ---- | -------------------------------------------- |
+|      | collection of gux-accordion-section elements |
 
 
 ----------------------------------------------

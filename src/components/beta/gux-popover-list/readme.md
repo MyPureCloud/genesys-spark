@@ -22,9 +22,9 @@
 
 ## Slots
 
-| Slot                | Description |
-| ------------------- | ----------- |
-| `"popover content"` |             |
+| Slot | Description     |
+| ---- | --------------- |
+|      | popover content |
 
 
 ## Dependencies

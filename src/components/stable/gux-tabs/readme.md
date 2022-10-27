@@ -36,10 +36,10 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot                                     | Description           |
-| ---------------------------------------- | --------------------- |
-| `"collection of gux-tab-panel elements"` |                       |
-| `"tab-list"`                             | Slot for gux-tab-list |
+| Slot         | Description                          |
+| ------------ | ------------------------------------ |
+|              | collection of gux-tab-panel elements |
+| `"tab-list"` | Slot for gux-tab-list                |
 
 
 ----------------------------------------------

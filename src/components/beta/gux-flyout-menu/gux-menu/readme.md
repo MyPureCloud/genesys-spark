@@ -7,9 +7,9 @@
 
 ## Slots
 
-| Slot                                            | Description |
-| ----------------------------------------------- | ----------- |
-| `"collection of menu-option, submenu elements"` |             |
+| Slot | Description                                 |
+| ---- | ------------------------------------------- |
+|      | collection of menu-option, submenu elements |
 
 
 ----------------------------------------------

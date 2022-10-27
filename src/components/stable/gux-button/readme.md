@@ -18,9 +18,9 @@ You can choose between two type (secondary and primary).
 
 ## Slots
 
-| Slot                     | Description |
-| ------------------------ | ----------- |
-| `"icon and button text"` |             |
+| Slot | Description |
+| ---- | ----------- |
+|      | test        |
 
 
 ----------------------------------------------

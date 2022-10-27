@@ -22,9 +22,9 @@
 
 ## Slots
 
-| Slot      | Description |
-| --------- | ----------- |
-| `"label"` |             |
+| Slot | Description |
+| ---- | ----------- |
+|      | content     |
 
 
 ## Dependencies

@@ -27,9 +27,9 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot                                            | Description |
-| ----------------------------------------------- | ----------- |
-| `"collection of menu-option, submenu elements"` |             |
+| Slot | Description                                 |
+| ---- | ------------------------------------------- |
+|      | collection of menu-option, submenu elements |
 
 
 ## Dependencies

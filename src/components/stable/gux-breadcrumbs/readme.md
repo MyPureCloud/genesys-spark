@@ -14,9 +14,9 @@
 
 ## Slots
 
-| Slot                                           | Description |
-| ---------------------------------------------- | ----------- |
-| `"collection of gux-breadcrumb-item elements"` |             |
+| Slot | Description                                |
+| ---- | ------------------------------------------ |
+|      | collection of gux-breadcrumb-item elements |
 
 
 ----------------------------------------------

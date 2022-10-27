@@ -7,10 +7,10 @@
 
 ## Slots
 
-| Slot                           | Description             |
-| ------------------------------ | ----------------------- |
-| `"Required slot for message."` |                         |
-| `"error(default)"`             | Required slot for error |
+| Slot               | Description                |
+| ------------------ | -------------------------- |
+|                    | Required slot for message. |
+| `"error(default)"` | Required slot for error    |
 
 
 ## Dependencies

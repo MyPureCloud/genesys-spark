@@ -6,9 +6,9 @@
 
 ## Slots
 
-| Slot                                                | Description |
-| --------------------------------------------------- | ----------- |
-| `"collection of gux-navigation-list-item elements"` |             |
+| Slot | Description                                     |
+| ---- | ----------------------------------------------- |
+|      | collection of gux-navigation-list-item elements |
 
 
 ----------------------------------------------

@@ -18,9 +18,9 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot           | Description |
-| -------------- | ----------- |
-| `"month name"` |             |
+| Slot | Description |
+| ---- | ----------- |
+|      | month name  |
 
 
 ## Dependencies

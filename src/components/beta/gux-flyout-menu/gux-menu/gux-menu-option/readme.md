@@ -20,9 +20,9 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot     | Description |
-| -------- | ----------- |
-| `"text"` |             |
+| Slot | Description |
+| ---- | ----------- |
+|      | text        |
 
 
 ----------------------------------------------

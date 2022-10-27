@@ -4,7 +4,7 @@ import { trackComponent } from '../../../usage-tracking';
 import { GuxButtonAccent, GuxButtonType } from './gux-button.types';
 
 /**
- * @slot - content
+ * @slot - test
  */
 
 @Component({
