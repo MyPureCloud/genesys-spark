@@ -3,7 +3,7 @@ import { Component, Element, h, Host, JSX, Listen, Prop } from '@stencil/core';
 import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
 /**
- * @slot text
+ * @slot - text
  */
 
 @Component({

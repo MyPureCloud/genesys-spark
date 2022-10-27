@@ -18,7 +18,7 @@ import { trackComponent } from '../../../usage-tracking';
 import { PopperPosition } from './gux-popover-list.types';
 
 /**
- * @slot popover content
+ * @slot - popover content
  */
 
 @Component({

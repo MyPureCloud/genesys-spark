@@ -19,7 +19,7 @@ import {
 const validFocusableItems = ['gux-month-list-item'];
 
 /**
- * @slot month name
+ * @slot - month name
  */
 
 @Component({

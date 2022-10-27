@@ -3,7 +3,7 @@ import { Component, Element, h, JSX, Listen, Method } from '@stencil/core';
 import { menuNavigation } from '../gux-menu.common';
 
 /**
- * @slot text
+ * @slot - text
  */
 
 @Component({

@@ -6,7 +6,7 @@ import { trackComponent } from '../../../usage-tracking';
 import translationResources from './i18n/en.json';
 
 /**
- * @slot collection of gux-navigation-list-item elements
+ * @slot - collection of gux-navigation-list-item elements
  */
 
 @Component({

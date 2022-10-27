@@ -11,7 +11,7 @@ import {
 } from '@stencil/core';
 
 /**
- * @slot text
+ * @slot - content
  */
 
 @Component({

@@ -3,7 +3,7 @@ import { Component, Element, h, Host, JSX, Listen, Prop } from '@stencil/core';
 import { getClosestElement } from '../../../../utils/dom/get-closest-element';
 
 /**
- * @slot text
+ * @slot - text
  */
 
 @Component({

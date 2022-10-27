@@ -19,7 +19,7 @@ import { GuxTabsOrientation, GuxTabsAlignment } from './gux-tabs-types';
 
 /**
  * @slot tab-list - Slot for gux-tab-list
- * @slot collection of gux-tab-panel elements
+ * @slot - collection of gux-tab-panel elements
  */
 
 @Component({

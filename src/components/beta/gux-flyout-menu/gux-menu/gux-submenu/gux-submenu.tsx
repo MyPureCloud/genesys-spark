@@ -21,7 +21,7 @@ import {
 } from '../gux-menu.common';
 
 /**
- * @slot collection of menu-option, submenu elements
+ * @slot - collection of menu-option, submenu elements
  */
 
 @Component({

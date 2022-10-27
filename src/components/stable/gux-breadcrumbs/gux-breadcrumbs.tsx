@@ -7,7 +7,7 @@ import breadcrumbsResources from './i18n/en.json';
 import { GuxBreadcrumbAccent } from './gux-breadcrumbs.types';
 
 /**
- * @slot collection of gux-breadcrumb-item elements
+ * @slot - collection of gux-breadcrumb-item elements
  */
 
 @Component({

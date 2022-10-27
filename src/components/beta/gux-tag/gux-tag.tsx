@@ -17,7 +17,7 @@ import tagResources from './i18n/en.json';
 import { GuxTagColor } from './gux-tag.types';
 
 /**
- * @slot label
+ * @slot - content
  */
 
 @Component({

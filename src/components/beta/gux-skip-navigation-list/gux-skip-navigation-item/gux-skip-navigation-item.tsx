@@ -1,7 +1,7 @@
 import { Component, Host, h, JSX } from '@stencil/core';
 
 /**
- * @slot hyperlink
+ * @slot - hyperlink
  */
 
 @Component({

@@ -5,7 +5,7 @@ import { logError } from '../../../../utils/error/log-error';
 import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 
 /**
- * @slot content
+ * @slot - content
  */
 
 @Component({
