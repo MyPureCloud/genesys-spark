@@ -20,7 +20,7 @@ You can choose between two type (secondary and primary).
 
 | Slot | Description |
 | ---- | ----------- |
-|      | test        |
+|      | content     |
 
 
 ----------------------------------------------
