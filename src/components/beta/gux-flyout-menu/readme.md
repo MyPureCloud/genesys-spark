@@ -7,10 +7,10 @@
 
 ## Slots
 
-| Slot       | Description       |
-| ---------- | ----------------- |
-| `"menu"`   | gux-menu element. |
-| `"target"` | target element.   |
+| Slot       | Description      |
+| ---------- | ---------------- |
+| `"menu"`   | gux-menu element |
+| `"target"` | target element   |
 
 
 ----------------------------------------------

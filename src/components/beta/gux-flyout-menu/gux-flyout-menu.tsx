@@ -17,8 +17,8 @@ import { trackComponent } from '../../../usage-tracking';
 import { HTMLGuxMenuItemElement, hideDelay } from './gux-menu/gux-menu.common';
 
 /**
- * @slot target - target element.
- * @slot menu - gux-menu element.
+ * @slot target - target element
+ * @slot menu - gux-menu element
  */
 
 @Component({

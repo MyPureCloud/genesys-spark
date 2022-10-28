@@ -7,9 +7,9 @@
 
 ## Slots
 
-| Slot        | Description       |
-| ----------- | ----------------- |
-| `"content"` | Slot for content. |
+| Slot        | Description      |
+| ----------- | ---------------- |
+| `"content"` | Slot for content |
 
 
 ## Dependencies

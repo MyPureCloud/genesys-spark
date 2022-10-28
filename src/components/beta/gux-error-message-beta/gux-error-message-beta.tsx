@@ -2,7 +2,7 @@ import { Component, Element, h, JSX } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 
 /**
- * @slot - Required slot for message.
+ * @slot - Required slot for message
  * @slot error(default) - Required slot for error
  */
 @Component({

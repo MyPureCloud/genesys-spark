@@ -4,7 +4,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 
 /**
- * @slot content - Slot for content.
+ * @slot content - Slot for content
  */
 
 @Component({
