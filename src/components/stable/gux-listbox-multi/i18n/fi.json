@@ -1,3 +1,5 @@
 {
-  "noMatches": "Ei vastaavuuksia"
+  "add": "Lisää {name}",
+  "noMatches": "Ei vastaavuuksia",
+  "loading": "Ladataan..."
 }
