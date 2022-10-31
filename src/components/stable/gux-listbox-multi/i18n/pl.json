@@ -1,3 +1,5 @@
 {
-  "noMatches": "Brak wyników"
+  "add": "Dodaj {name}",
+  "noMatches": "Brak wyników",
+  "loading": "Wczytywanie..."
 }

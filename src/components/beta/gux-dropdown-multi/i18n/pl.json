@@ -1,6 +1,7 @@
 {
-  "filterResults": "Zacznij pisać, aby filtrować wyniki na liście",
+  "textInputResults": "Zacznij pisać, aby filtrować wyniki na liście",
   "noSelection": "Wybierz...",
   "dropdown": "Lista rozwijana",
-  "numberSelected": "Wybrane: {numberSelected}"
+  "numberSelected": "Wybrane: {numberSelected}",
+  "pressEnterToCreate": "Naciśnij klawisz Enter, aby utworzyć nową opcje, {textInputValue}"
 }
