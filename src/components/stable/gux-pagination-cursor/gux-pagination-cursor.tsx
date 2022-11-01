@@ -58,7 +58,7 @@ export class GuxPaginationCursor {
           disabled={!this.hasPrevious}
           onClick={() => this.onButtonClick('previous')}
         >
-          <gux-icon decorative iconName="ic-chevron-small-left"></gux-icon>
+          <gux-icon decorative iconName="chevron-small-left"></gux-icon>
         </button>
       </gux-button-slot-beta>,
       <gux-button-slot-beta accent="secondary">
@@ -68,7 +68,7 @@ export class GuxPaginationCursor {
           disabled={!this.hasNext}
           onClick={() => this.onButtonClick('next')}
         >
-          <gux-icon decorative iconName="ic-chevron-small-right"></gux-icon>
+          <gux-icon decorative iconName="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot-beta>
     ] as JSX.Element;

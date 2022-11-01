@@ -7,6 +7,7 @@ import {
   getRootIconName,
   validateProps
 } from './gux-icon.service';
+import { GuxIconIconName } from './gux-icon.types';
 
 @Component({
   assetsDirs: ['icons'],
@@ -24,7 +25,7 @@ export class GuxIcon {
    * Indicate which icon to display
    */
   @Prop()
-  iconName: string;
+  iconName: GuxIconIconName;
 
   /**
    * Indicate whether the icon should be ignored by accessibility tools or not

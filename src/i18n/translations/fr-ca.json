@@ -157,7 +157,8 @@
     "noMatches": "Aucun résultat"
   },
   "gux-listbox": {
-    "noMatches": "Aucune correspondance"
+    "noMatches": "Aucune correspondance",
+    "loading": "Chargement en cours..."
   },
   "gux-pagination-cursor": {
     "previous": "Précédent",

@@ -45,7 +45,7 @@ export class GuxInputSelect {
         }}
       >
         <slot name="input" />
-        <gux-icon decorative iconName="ic-dropdown-arrow"></gux-icon>
+        <gux-icon decorative iconName="chevron-small-down"></gux-icon>
       </div>
     ) as JSX.Element;
   }

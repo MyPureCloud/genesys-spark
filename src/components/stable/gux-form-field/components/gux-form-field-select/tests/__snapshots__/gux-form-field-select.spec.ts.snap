@@ -11,7 +11,7 @@ exports[`gux-form-field-select #render help should render component as expected 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
@@ -59,7 +59,7 @@ exports[`gux-form-field-select #render input attributes should render component 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
@@ -104,7 +104,7 @@ exports[`gux-form-field-select #render input attributes should render component 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
@@ -149,7 +149,7 @@ exports[`gux-form-field-select #render input attributes should render component 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
@@ -194,7 +194,7 @@ exports[`gux-form-field-select #render label-position should render component as
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
@@ -239,7 +239,7 @@ exports[`gux-form-field-select #render label-position should render component as
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
@@ -284,7 +284,7 @@ exports[`gux-form-field-select #render label-position should render component as
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
@@ -329,7 +329,7 @@ exports[`gux-form-field-select #render label-position should render component as
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="ic-dropdown-arrow"></gux-icon>
+            <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
