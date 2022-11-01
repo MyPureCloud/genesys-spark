@@ -300,12 +300,14 @@ export class GuxListboxMulti {
   }
 
   renderAllListboxOptionsFiltered(): JSX.Element {
-    return [
-      <div class="gux-message-container">
-        <div class="gux-no-matches">{this.i18n('noMatches')}</div>
-      </div>,
-      this.renderHiddenSlot()
-    ] as JSX.Element;
+    if (this.allListboxOptionsFiltered) {
+      return [
+        <div class="gux-message-container">
+          <div class="gux-no-matches">{this.i18n('noMatches')}</div>
+        </div>,
+        this.renderHiddenSlot()
+      ] as JSX.Element;
+    }
   }
 
   renderCreateOptionSlot(): JSX.Element {
@@ -317,13 +319,10 @@ export class GuxListboxMulti {
       return this.renderLoading();
     }
 
-    if (this.allListboxOptionsFiltered) {
-      return this.renderAllListboxOptionsFiltered();
-    }
-
     return (
       <Host role="listbox" aria-multiselectable="true" tabindex={0}>
         <slot onSlotchange={() => this.updateOnSlotChange()} />
+        {this.renderAllListboxOptionsFiltered()}
         {this.renderCreateOptionSlot()}
       </Host>
     ) as JSX.Element;
