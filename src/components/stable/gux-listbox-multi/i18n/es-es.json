@@ -1,3 +1,5 @@
 {
-  "noMatches": "No hay coincidencias"
+  "add": "Agregar {name}",
+  "noMatches": "No hay coincidencias",
+  "loading": "Cargando..."
 }
