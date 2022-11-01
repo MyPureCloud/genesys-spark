@@ -16,6 +16,7 @@ exports[`gux-pagination-beta #render should render as expected (1) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -93,6 +94,7 @@ exports[`gux-pagination-beta #render should render as expected (2) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="1" total-pages="20">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -170,6 +172,7 @@ exports[`gux-pagination-beta #render should render as expected (3) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="1" total-pages="14">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -247,6 +250,7 @@ exports[`gux-pagination-beta #render should render as expected (4) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="1" total-pages="10">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -330,6 +334,7 @@ exports[`gux-pagination-beta #render should render as expected (5) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -407,6 +412,7 @@ exports[`gux-pagination-beta #render should render as expected (6) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="10" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -487,6 +493,7 @@ exports[`gux-pagination-beta #render should render as expected (7) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="10" total-pages="20">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -567,6 +574,7 @@ exports[`gux-pagination-beta #render should render as expected (8) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="10" total-pages="14">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -644,6 +652,7 @@ exports[`gux-pagination-beta #render should render as expected (9) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="10" total-pages="10">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -727,6 +736,7 @@ exports[`gux-pagination-beta #render should render as expected (10) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -804,6 +814,7 @@ exports[`gux-pagination-beta #render should render as expected (11) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="1" total-pages="40">
           <div class="gux-advanced gux-pagination-buttons-container">
@@ -878,6 +889,7 @@ exports[`gux-pagination-beta #render should render as expected (12) 1`] = `
           </div>
         </gux-pagination-item-counts-beta>
       </div>
+      <div class="gux-pagination-spacer"></div>
       <div class="gux-pagination-change">
         <gux-pagination-buttons-beta current-page="0" total-pages="0">
           <div class="gux-advanced gux-pagination-buttons-container">

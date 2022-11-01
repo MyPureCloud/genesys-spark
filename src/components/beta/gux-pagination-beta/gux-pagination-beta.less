@@ -18,7 +18,7 @@
 
   .gux-pagination-info {
     display: flex;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
@@ -34,11 +34,16 @@
     }
   }
 
-  .gux-pagination-change {
+  .gux-pagination-spacer {
     flex: 1 1 auto;
     align-self: auto;
     order: 0;
-    margin-left: @spacing-large;
+  }
+
+  .gux-pagination-change {
+    flex: 0 1 auto;
+    align-self: auto;
+    order: 0;
   }
 
   .gux-pagination-change:first-child {
