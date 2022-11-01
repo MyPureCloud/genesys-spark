@@ -1,3 +1,5 @@
 {
-  "noMatches": "Žádné shody"
+  "add": "Přidat {name}",
+  "noMatches": "Žádné shody",
+  "loading": "Načítání…"
 }
