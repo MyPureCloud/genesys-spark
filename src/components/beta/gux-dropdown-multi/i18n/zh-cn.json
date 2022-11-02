@@ -1,6 +1,7 @@
 {
-  "filterResults": "输入以过滤下拉结果",
+  "textInputResults": "输入以过滤下拉结果",
   "noSelection": "选择...",
   "dropdown": "下拉菜单",
-  "numberSelected": "已选择 {numberSelected} 个"
+  "numberSelected": "已选择 {numberSelected} 个",
+  "pressEnterToCreate": "按 Enter 键创建新选项，{textInputValue}"
 }

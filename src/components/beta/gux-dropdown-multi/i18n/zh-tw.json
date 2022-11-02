@@ -1,6 +1,7 @@
 {
-  "filterResults": "輸入以篩選下拉式清單中的結果",
+  "textInputResults": "輸入以篩選下拉式清單中的結果",
   "noSelection": "選擇...",
   "dropdown": "下拉式清單",
-  "numberSelected": "已選 {numberSelected}"
+  "numberSelected": "已選 {numberSelected}",
+  "pressEnterToCreate": "按 Enter 鍵以建立新選項：{textInputValue}"
 }
