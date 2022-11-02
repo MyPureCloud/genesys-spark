@@ -348,7 +348,6 @@ export type GuxIconIconName =
   | 'user-contact-id'
   | 'user-directory'
   | 'user-group'
-  | 'user-interactions copy'
   | 'user-interactions'
   | 'user-interactions-disable'
   | 'viber'

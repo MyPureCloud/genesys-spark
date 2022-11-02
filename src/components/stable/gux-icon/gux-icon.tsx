@@ -25,7 +25,7 @@ export class GuxIcon {
    * Indicate which icon to display
    */
   @Prop()
-  iconName: GuxIconIconName;
+  iconName: string | GuxIconIconName;
 
   /**
    * Indicate whether the icon should be ignored by accessibility tools or not
