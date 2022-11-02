@@ -20,10 +20,11 @@
     "clearSelection": "清除 {numberSelected} 個已選項目"
   },
   "gux-dropdown-multi": {
-    "filterResults": "輸入以篩選下拉式清單中的結果",
+    "textInputResults": "輸入以篩選下拉式清單中的結果",
     "noSelection": "選擇...",
     "dropdown": "下拉式清單",
-    "numberSelected": "已選 {numberSelected}"
+    "numberSelected": "已選 {numberSelected}",
+    "pressEnterToCreate": "按 Enter 鍵以建立新選項：{textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "清除"
   },
   "gux-listbox-multi": {
-    "noMatches": "無相符項"
+    "add": "新增{name}",
+    "noMatches": "無相符項",
+    "loading": "載入中..."
   },
   "gux-listbox": {
-    "noMatches": "無相符"
+    "noMatches": "無相符",
+    "loading": "載入中..."
   },
   "gux-pagination-cursor": {
     "previous": "上一頁",

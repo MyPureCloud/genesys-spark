@@ -20,10 +20,11 @@
     "clearSelection": "Wyczyść wybrane elementy: {numberSelected}"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Zacznij pisać, aby filtrować wyniki na liście",
+    "textInputResults": "Zacznij pisać, aby filtrować wyniki na liście",
     "noSelection": "Wybierz...",
     "dropdown": "Lista rozwijana",
-    "numberSelected": "Wybrane: {numberSelected}"
+    "numberSelected": "Wybrane: {numberSelected}",
+    "pressEnterToCreate": "Naciśnij klawisz Enter, aby utworzyć nową opcje, {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "Wyczyść"
   },
   "gux-listbox-multi": {
-    "noMatches": "Brak wyników"
+    "add": "Dodaj {name}",
+    "noMatches": "Brak wyników",
+    "loading": "Wczytywanie..."
   },
   "gux-listbox": {
-    "noMatches": "Brak wyników"
+    "noMatches": "Brak wyników",
+    "loading": "Wczytywanie..."
   },
   "gux-pagination-cursor": {
     "previous": "Poprzednia",
