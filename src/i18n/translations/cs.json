@@ -20,10 +20,11 @@
     "clearSelection": "Vymazat vybrané položky ({numberSelected})"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Psaním můžete filtrovat výsledky rozevíracího seznamu",
+    "textInputResults": "Psaním můžete filtrovat výsledky rozevíracího seznamu",
     "noSelection": "Vybrat…",
     "dropdown": "Rozevírací seznam",
-    "numberSelected": "Vybráno {numberSelected}"
+    "numberSelected": "Vybráno {numberSelected}",
+    "pressEnterToCreate": "Stiskem klávesy Enter vytvoříte novou možnost, {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "Vymazat"
   },
   "gux-listbox-multi": {
-    "noMatches": "Žádné shody"
+    "add": "Přidat {name}",
+    "noMatches": "Žádné shody",
+    "loading": "Načítání…"
   },
   "gux-listbox": {
-    "noMatches": "Žádné shody"
+    "noMatches": "Žádné shody",
+    "loading": "Načítání…"
   },
   "gux-pagination-cursor": {
     "previous": "Předchozí",

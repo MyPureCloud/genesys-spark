@@ -20,10 +20,11 @@
     "clearSelection": "Tyhjennä {numberSelected} valittua kohdetta"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Kirjoittamalla voit suodattaa avattavan valikon tulokset",
+    "textInputResults": "Kirjoittamalla voit suodattaa avattavan valikon tulokset",
     "noSelection": "Valitse...",
     "dropdown": "Avattava valikko",
-    "numberSelected": "{numberSelected} valittu"
+    "numberSelected": "{numberSelected} valittu",
+    "pressEnterToCreate": "Painamalla Enter voit luoda uuden vaihtoehdon {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "Tyhjennä"
   },
   "gux-listbox-multi": {
-    "noMatches": "Ei vastaavuuksia"
+    "add": "Lisää {name}",
+    "noMatches": "Ei vastaavuuksia",
+    "loading": "Ladataan..."
   },
   "gux-listbox": {
-    "noMatches": "Ei vastaavuuksia"
+    "noMatches": "Ei vastaavuuksia",
+    "loading": "Ladataan..."
   },
   "gux-pagination-cursor": {
     "previous": "Edellinen",
