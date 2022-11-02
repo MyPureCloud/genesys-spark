@@ -77,13 +77,8 @@ export class GuxPaginationBeta implements ComponentInterface {
   private guxpaginationchange: EventEmitter<GuxPaginationState>;
 
   private setPage(page: number): void {
-    if (page < 0) {
-      if (this.totalPages > 0) {
-        this.setPage(1);
-      } else {
-        this.setPage(0);
-      }
-
+    if (page <= 0) {
+      this.setPage(1);
       return;
     }
 
@@ -116,7 +111,7 @@ export class GuxPaginationBeta implements ComponentInterface {
     totalItems: number,
     itemsPerPage: number
   ): number {
-    return Math.ceil(totalItems / itemsPerPage);
+    return Math.max(1, Math.ceil(totalItems / itemsPerPage));
   }
 
   private calculateCurrentPage(

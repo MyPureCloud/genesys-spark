@@ -44,7 +44,7 @@ describe('gux-pagination', () => {
       { currentPage: 10, totalItems: 1000, itemsPerPage: 100, layout: 'full' },
       { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'small' },
       { currentPage: -3, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
-      { currentPage: -3, totalItems: 0, itemsPerPage: 25, layout: 'full' }
+      { currentPage: -3, totalItems: 1, itemsPerPage: 25, layout: 'full' }
     ].forEach(({ currentPage, totalItems, itemsPerPage, layout }, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const html = `
@@ -61,6 +61,22 @@ describe('gux-pagination', () => {
 
         expect(page.root).toMatchSnapshot();
       });
+    });
+    it(`should render current page as 1 when total items is 0`, async () => {
+      const html = `
+      <gux-pagination
+      current-page="1"
+      total-items="0"
+      items-per-page="25"
+      layout="full"
+    ></gux-pagination>
+      `;
+
+      const page = await newSpecPage({ components, html, language });
+
+      expect(page.rootInstance).toBeInstanceOf(GuxPagination);
+
+      expect(page.root).toMatchSnapshot();
     });
   });
 });
