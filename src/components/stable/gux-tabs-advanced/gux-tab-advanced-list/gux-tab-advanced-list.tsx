@@ -551,9 +551,8 @@ export class GuxTabAdvancedList {
     const tabs: HTMLGuxTabAdvancedElement[] = Array.from(
       this.root.querySelectorAll('gux-tab-advanced')
     );
-    if (tabs.length >= this.tabLimit) {
-      this.disableAddTabButton = true;
-    }
+
+    this.disableAddTabButton = tabs.length >= this.tabLimit;
   }
 
   render(): JSX.Element {
