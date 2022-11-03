@@ -1,6 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/color-palette.less';
 
 // Style
 :host {
@@ -137,12 +138,12 @@
           }
 
           &.gux-disabled {
-            color: @gux-black-90;
+            color: fade(@gux-black-50, 50%);
             pointer-events: none;
           }
 
           &.gux-not-in-month {
-            color: @gux-black-90;
+            color: fade(@gux-black-100, 50%);
 
             &:hover {
               color: @gux-black-50;

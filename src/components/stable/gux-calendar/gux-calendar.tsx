@@ -204,16 +204,18 @@ export class GuxCalendar {
         0
       );
       const classes = [];
+
+      let disabled = false;
       let hidden = false;
       if (date.getMonth() !== month) {
         classes.push('gux-not-in-month');
+        disabled = true;
         if (this.mode === CalendarModes.Range) {
           classes.push('gux-hidden');
           hidden = true;
         }
       }
 
-      let disabled = false;
       if (this.outOfBounds(date)) {
         classes.push('gux-disabled');
         disabled = true;
@@ -499,6 +501,7 @@ export class GuxCalendar {
                         tabindex={day.selected ? '0' : '-1'}
                         class={day.class}
                         aria-hidden={day.hidden ? 'true' : 'false'}
+                        aria-disabled={day.disabled ? 'true' : 'false'}
                         data-date={day.date.getTime()}
                         onClick={() => void this.onDateClick(day.date)}
                         onMouseEnter={() => this.onDateMouseEnter(day.date)}
