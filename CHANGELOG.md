@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.58.1](https://inindca///compare/v2.58.0...v2.58.1) (2022-11-03)
+
+
+### Bug Fixes
+
+* **color-palette:** updated color palette to latest colors ([d68f319](https://inindca///commit/d68f3197d8ad971c32d2a85c9e1a1dd81e5b1c7e))
+
 ## [2.58.0](https://inindca///compare/v2.57.0...v2.58.0) (2022-09-23)
 
 
