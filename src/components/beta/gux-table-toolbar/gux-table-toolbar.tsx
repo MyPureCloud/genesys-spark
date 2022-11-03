@@ -40,7 +40,23 @@ export class GuxTableToolbar {
   @State()
   displayedLayout: GuxTableToolbarLayout = 'full';
 
-  expandAt: number;
+  minimumSizes: { full: number; iconOnly: number; condensed: number } = {
+    full: 0,
+    iconOnly: 0,
+    condensed: 0
+  };
+
+  /**
+   * Record the minimum size for the current layout.
+   */
+  private recordLayoutMinSize() {
+    readTask(() => {
+      const filterWidth = this.filterSlot?.clientWidth | 0;
+      const controlWidth = this.actionsContainer?.clientWidth | 0;
+      const minSize = filterWidth + controlWidth + MIN_CONTROL_SPACING;
+      this.minimumSizes[this.displayedLayout] = minSize;
+    });
+  }
 
   iconOnlySectionWidth: number;
 
@@ -106,14 +122,6 @@ export class GuxTableToolbar {
     return this.filterActions.concat(this.contextualActions);
   }
 
-  private initialToolbarSize(
-    filterWidth: number,
-    controlWidth: number,
-    minSpacing: number
-  ): number {
-    return filterWidth + controlWidth + minSpacing;
-  }
-
   private renderFullLayout(): void {
     this.displayedLayout = 'full';
     expandActionsAll(
@@ -162,52 +170,39 @@ export class GuxTableToolbar {
   }
 
   componentDidLoad(): void {
+    this.recordLayoutMinSize();
     this.checkResponsiveLayout();
     setAccent(this.menuActionsItems, 'ghost');
+  }
+
+  /**
+   * When the layout changes, also check one more time to see if further layout
+   * changes are needed. This is mostly important at component start when we
+   * may need to step down twice, full -> icon and icon -> condensed
+   */
+  componentDidUpdate() {
+    this.recordLayoutMinSize();
+    this.checkResponsiveLayout();
   }
 
   @OnResize()
   checkResponsiveLayout(): void {
     readTask(() => {
-      const filterWidth = this.filterSlot?.clientWidth | 0;
       const controlWidth = this.actionsContainer?.clientWidth | 0;
       const toolbarWidth = this.root.clientWidth;
-      const gapSize = toolbarWidth - (filterWidth + controlWidth);
-      const elRect = this.actionsContainer.getBoundingClientRect();
-      /* The initial displayed layout is full as we wont know the size in advance and will shrink if there is not enough space for it. */
-      if (this.displayedLayout === 'full') {
-        /* expandAt tracks the size at which the full layout should be displayed(or should be tested again) */
-        this.expandAt = this.initialToolbarSize(
-          filterWidth,
-          controlWidth,
-          MIN_CONTROL_SPACING
-        );
-      }
-      /* If the toolbarWidth is greater than the expandAt value then we can expand the actions ie (show label/icon). This would mean the gap between filter and controls is greater than 72. */
-      if (this.displayedLayout == 'full' && toolbarWidth > this.expandAt) {
-        this.displayedLayout = 'full';
-      }
-      /* If the gapSize between the filter and controls is less than 72px displayedLayout will be set to iconOnly. */
-      if (gapSize < MIN_CONTROL_SPACING) {
-        this.renderIconOnlyLayoutScaleDown(controlWidth);
-      }
-      /* If the element is only partially visible in the viewport then we will switch to the condensed layout. */
+
       if (
-        elRect.right >
-        (window.innerWidth || document.documentElement.clientWidth)
+        toolbarWidth <= this.minimumSizes.full &&
+        toolbarWidth >= this.minimumSizes.iconOnly
       ) {
+        if (this.displayedLayout == 'full') {
+          this.renderIconOnlyLayoutScaleDown(controlWidth);
+        } else if (this.displayedLayout == 'condensed') {
+          this.renderIconOnlyLayoutScaleUp();
+        }
+      } else if (toolbarWidth <= this.minimumSizes.iconOnly) {
         this.renderCondensedLayout();
-      }
-
-      if (
-        this.displayedLayout == 'condensed' &&
-        toolbarWidth >
-          this.iconOnlySectionWidth + filterWidth + MIN_CONTROL_SPACING
-      ) {
-        this.renderIconOnlyLayoutScaleUp();
-      }
-
-      if (this.displayedLayout == 'iconOnly' && toolbarWidth > this.expandAt) {
+      } else {
         this.renderFullLayout();
       }
     });
