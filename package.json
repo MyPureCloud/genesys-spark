@@ -10,7 +10,7 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run clean && npm run i18n && npm run stencil && npm run docs && npm run build-wrapper",
+    "build": "npm run clean && npm run i18n && npm run generate-gux-icon-types-file && npm run stencil && npm run docs && npm run build-wrapper",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "build-i18n": "./scripts/build-i18n.js",
     "build:react": "cd ./common-webcomponents-react && npm run build",
@@ -29,6 +29,7 @@
     "format.check": "npm run format -- --check",
     "format.fix": "npm run format -- --write",
     "generate-start-of-week-file": "./scripts/generate-start-of-week-file.js",
+    "generate-gux-icon-types-file": "./scripts/generate-gux-icon-types-file.js",
     "generate-versions-file": "./scripts/generate-versions-file.mjs",
     "i18n": "npm run update-en-i18n && npm run generate-start-of-week-file && npm run build-i18n",
     "lint": "npm run lint.commit && npm run lint.ts && npm run lint.css && npm run lint.svg",
@@ -41,7 +42,7 @@
     "list-component-tracking": "./scripts/list-component-tracking.js",
     "list-i18n-files": "./scripts/list-i18n-files.js",
     "list-shadow-explicitly-set": "./scripts/list-shadow-explicitly-set.js",
-    "predev": "npm run i18n",
+    "predev": "npm run i18n && npm run generate-gux-icon-types-file ",
     "predev.public": "npm run predev",
     "prepare": "./scripts/prepare-docs.sh && npm run i18n && husky install",
     "release": "standard-version",
