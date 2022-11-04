@@ -1,5 +1,8 @@
 const icons = [
-  { sectionName: 'Agent', iconNames: ['agent', 'agent-circle', 'agent-group'] },
+  {
+    sectionName: 'Agent',
+    iconNames: ['agent', 'agent-circle', 'person-running', 'agent-group']
+  },
   {
     sectionName: 'User',
     iconNames: [
@@ -41,6 +44,7 @@ const icons = [
   {
     sectionName: 'CJV',
     iconNames: [
+      'cjv-badge-file',
       'cjv-custom-default',
       'cjv-custom-session',
       'cjv-default-event',
@@ -260,6 +264,7 @@ const icons = [
       'cut',
       'delete',
       'edit',
+      'floppy-disk',
       'paste',
       'refresh',
       'reset',
@@ -284,6 +289,7 @@ const icons = [
     sectionName: 'Time',
     iconNames: [
       'calendar-clock',
+      'cjv-calendar-clock',
       'clock',
       'clock-outline',
       'timeline',
@@ -308,6 +314,7 @@ const icons = [
       'flag',
       'follow',
       'generic',
+      'lightbulb',
       'low-bandwidth',
       'lunch',
       'notes',
