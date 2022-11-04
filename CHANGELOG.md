@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.39.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.37.0...v3.39.0) (2022-11-04)
+
+
+### Features
+
+* **alert:** addition of alert component ([fc7bb2e](https://github.com/MyPureCloud/genesys-webcomponents/commit/fc7bb2ef9f2c2f5c93c8125d7950a293ba97966c))
+* **dropdown:** added loading state ([b050d6e](https://github.com/MyPureCloud/genesys-webcomponents/commit/b050d6ef71ade79776ad5ed14c361bcc043671df))
+* **icon:** added better type information to icon-name property ([fa089b4](https://github.com/MyPureCloud/genesys-webcomponents/commit/fa089b4020af429b6f8c1af39814005e555ef328))
+
+
+### Bug Fixes
+
+* **css:** increase step button icon size in gux-form-field-number ([e74fd9a](https://github.com/MyPureCloud/genesys-webcomponents/commit/e74fd9af198496523affdd81bee795492cd643aa))
+* **css:** specify width of slotted <select> in gux-form-field-select ([4f9b9dd](https://github.com/MyPureCloud/genesys-webcomponents/commit/4f9b9dd505340a1cd77996481d92e628335444d7))
+* **gux-listbox-multi:** fix regression that caused no matches container to hide create new option ([#971](https://github.com/MyPureCloud/genesys-webcomponents/issues/971)) ([34004f3](https://github.com/MyPureCloud/genesys-webcomponents/commit/34004f308c996c3d3e1b4204a837b8818f075efd))
+* **gux-listbox-multi:** fix tag render issue ([#970](https://github.com/MyPureCloud/genesys-webcomponents/issues/970)) ([606ea71](https://github.com/MyPureCloud/genesys-webcomponents/commit/606ea71cb9be0f0d69b2f26f4ad6c279ba2c285f))
+* **gux-tab-advanced-list:** turn off disable when tabs are less then the max number ([61f13c8](https://github.com/MyPureCloud/genesys-webcomponents/commit/61f13c8a4b2a2f3deacc5e9e74f776eb5d4c5dae))
+* **pagination-beta:** improved space dependent layout switching logic ([bff7149](https://github.com/MyPureCloud/genesys-webcomponents/commit/bff71494a5e70ebac1f12fb8a8a2f4cff4d78906))
+* **pr-comment:** addressed PR comment ([0c4aa4a](https://github.com/MyPureCloud/genesys-webcomponents/commit/0c4aa4a9f60531ebc2cffd28c7c1c6bf9671ec15))
+* **pr-comment:** addressed PR comment ([4956dd3](https://github.com/MyPureCloud/genesys-webcomponents/commit/4956dd3160f5f11880a536f923381d1159d43d2e))
+* **pr-comment:** addressed PR comments ([cadcbf1](https://github.com/MyPureCloud/genesys-webcomponents/commit/cadcbf142bdf3ee991d337143b6e5758b2d5f083))
+* **version:** bump version to fix Jenkins build ([3ae8b72](https://github.com/MyPureCloud/genesys-webcomponents/commit/3ae8b72c5f48eae63f252828cdd8c95b50d5db99))
+
 ## [3.37.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.5...v3.37.0) (2022-10-24)
 
 
