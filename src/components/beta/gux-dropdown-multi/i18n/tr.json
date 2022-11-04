@@ -1,6 +1,7 @@
 {
-  "filterResults": "Açılır liste sonuçlarını filtrelemek için yazın",
+  "textInputResults": "Açılır liste sonuçlarını filtrelemek için yazın",
   "noSelection": "Seç...",
   "dropdown": "Açılır liste",
-  "numberSelected": "{numberSelected} öğe seçildi"
+  "numberSelected": "{numberSelected} öğe seçildi",
+  "pressEnterToCreate": "Yeni seçenek oluşturmak için Enter tuşuna basın, {textInputValue}"
 }

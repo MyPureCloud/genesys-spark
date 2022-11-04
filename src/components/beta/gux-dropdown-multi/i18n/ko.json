@@ -1,6 +1,7 @@
 {
-  "filterResults": "드롭다운 결과를 필터링하려면 입력하십시오.",
+  "textInputResults": "드롭다운 결과를 필터링하려면 입력하십시오.",
   "noSelection": "선택...",
   "dropdown": "드롭다운",
-  "numberSelected": "{numberSelected}개 선택함"
+  "numberSelected": "{numberSelected}개 선택함",
+  "pressEnterToCreate": "새 옵션 {textInputValue}을 생성하려면 Enter를 누르십시오. "
 }

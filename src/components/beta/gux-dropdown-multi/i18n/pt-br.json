@@ -1,6 +1,7 @@
 {
-  "filterResults": "Digite para filtrar resultados da lista suspensa",
+  "textInputResults": "Digite para filtrar resultados da lista suspensa",
   "noSelection": "Selecione...",
   "dropdown": "Lista suspensa",
-  "numberSelected": "{numberSelected} selecionado(s)"
+  "numberSelected": "{numberSelected} selecionado(s)",
+  "pressEnterToCreate": "Pressione Enter para criar uma nova opção, {textInputValue}"
 }
