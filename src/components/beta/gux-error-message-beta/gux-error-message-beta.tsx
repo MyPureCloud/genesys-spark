@@ -2,7 +2,8 @@ import { Component, Element, h, JSX } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
 
 /**
- * @slot error(default) - Required slot for error
+ * @slot - Alternative slot for setting error message if named slot can not be used.
+ * @slot error - Slot for error massage
  */
 @Component({
   styleUrl: 'gux-error-message-beta.less',

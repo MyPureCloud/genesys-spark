@@ -89,6 +89,13 @@ Type: `Promise<GuxTableSelectedState>`
 
 
 
+## Slots
+
+| Slot     | Description            |
+| -------- | ---------------------- |
+| `"data"` | Slot for table element |
+
+
 ## Dependencies
 
 ### Depends on

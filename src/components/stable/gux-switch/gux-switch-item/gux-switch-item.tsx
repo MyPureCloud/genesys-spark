@@ -1,5 +1,9 @@
 import { Component, h, Host, Listen, JSX, Prop } from '@stencil/core';
 
+/**
+ * @slot - text
+ */
+
 @Component({
   styleUrl: 'gux-switch-item.less',
   tag: 'gux-switch-item'

@@ -20,6 +20,13 @@
 | `guxdismiss` | Fired when a user dismisses the popover | `CustomEvent<void>` |
 
 
+## Slots
+
+| Slot | Description     |
+| ---- | --------------- |
+|      | popover content |
+
+
 ## Dependencies
 
 ### Used by

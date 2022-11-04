@@ -15,6 +15,10 @@ import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
 
+/**
+ * @slot - text
+ */
+
 @Component({
   styleUrl: 'gux-option-multi.less',
   tag: 'gux-option-multi'

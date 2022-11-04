@@ -12,6 +12,13 @@
 | `href`   | `href`    |             | `string` | `undefined` |
 
 
+## Slots
+
+| Slot | Description |
+| ---- | ----------- |
+|      | content     |
+
+
 ## Dependencies
 
 ### Depends on
