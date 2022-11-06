@@ -1,3 +1,5 @@
 {
-  "noMatches": "אין התאמות"
+  "add": "הוסף את {name}",
+  "noMatches": "אין התאמות",
+  "loading": "טוען..."
 }
