@@ -20,10 +20,11 @@
     "clearSelection": "Seçili {numberSelected} öğeyi temizle"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Açılır liste sonuçlarını filtrelemek için yazın",
+    "textInputResults": "Açılır liste sonuçlarını filtrelemek için yazın",
     "noSelection": "Seç...",
     "dropdown": "Açılır liste",
-    "numberSelected": "{numberSelected} öğe seçildi"
+    "numberSelected": "{numberSelected} öğe seçildi",
+    "pressEnterToCreate": "Yeni seçenek oluşturmak için Enter tuşuna basın, {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "Temizle"
   },
   "gux-listbox-multi": {
-    "noMatches": "Eşleşme yok"
+    "add": "{name} ekle",
+    "noMatches": "Eşleşme yok",
+    "loading": "Yükleniyor..."
   },
   "gux-listbox": {
-    "noMatches": "Eşleşme yok"
+    "noMatches": "Eşleşme yok",
+    "loading": "Yükleniyor..."
   },
   "gux-pagination-cursor": {
     "previous": "Önceki",

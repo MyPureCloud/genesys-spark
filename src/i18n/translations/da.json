@@ -20,10 +20,11 @@
     "clearSelection": "Ryd {numberSelected} valgte elementer"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Indtast for at filtrere rullelisteresultater",
+    "textInputResults": "Indtast for at filtrere rullelisteresultater",
     "noSelection": "Vælg...",
     "dropdown": "Rullemenu",
-    "numberSelected": "{numberSelected} valgt"
+    "numberSelected": "{numberSelected} valgt",
+    "pressEnterToCreate": "Tryk på Enter for at oprette en ny valgmulighed, {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "Ryd"
   },
   "gux-listbox-multi": {
-    "noMatches": "Ingen matches"
+    "add": "Tilføj {name}",
+    "noMatches": "Ingen matches",
+    "loading": "Indlæser..."
   },
   "gux-listbox": {
-    "noMatches": "Ingen matches"
+    "noMatches": "Ingen matches",
+    "loading": "Indlæser..."
   },
   "gux-pagination-cursor": {
     "previous": "Forrige",
