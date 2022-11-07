@@ -124,8 +124,6 @@ function setSearchOptionActive(
 
   if (option) {
     setActiveOption(list, option);
-  } else {
-    clearActiveOptions(list);
   }
 }
 
@@ -212,14 +210,15 @@ export function onClickedOption(
 
 let timer: NodeJS.Timeout;
 let searchStringState: string = '';
-const searchDebounceInterval = 250;
+const searchDebounceInterval = 1000;
 
 export function goToOption(list: HTMLGuxListboxElement, letter: string): void {
   clearTimeout(timer);
   searchStringState += letter;
 
+  setSearchOptionActive(list, searchStringState);
+
   timer = setTimeout(() => {
-    setSearchOptionActive(list, searchStringState);
     searchStringState = '';
   }, searchDebounceInterval);
 }
