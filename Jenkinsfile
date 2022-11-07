@@ -64,7 +64,7 @@ webappPipeline {
     }
     buildStep = { assetPrefix ->
         String cdnUrl = assetPrefix
-        // This is a bit of a kludge, but the build pipeline is intended for apps, which 
+        // This is a bit of a kludge, but the build pipeline is intended for apps, which
         // can use relative URLs to load assets. Because the components are running inside
         // apps, they have to load their assets from a full URL on the new UI hosting stack.
         if (assetPrefix.startsWith('/')) {
@@ -92,6 +92,8 @@ webappPipeline {
 
             stage('Push Changes') {
                 sshagent(credentials: [constants.credentials.github.inin_dev_evangelists]) {
+                    // Make sure we have the latest version of the branch so we can push our changes
+                    sh "git pull"
                     sh "git push --follow-tags -u origin ${env.BRANCH_NAME}"
                 }
             }
@@ -105,7 +107,7 @@ webappPipeline {
                   wait: false
                 )
             }
-        } 
+        }
 
         stage('Run Docs Build') {
             if (isPublicBranch()) {

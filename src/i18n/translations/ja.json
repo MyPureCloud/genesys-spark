@@ -20,10 +20,11 @@
     "clearSelection": "{numberSelected} 件の選択済みアイテムをクリア"
   },
   "gux-dropdown-multi": {
-    "filterResults": "タイプしてドロップダウンの結果をフィルター",
+    "textInputResults": "タイプしてドロップダウンの結果をフィルター",
     "noSelection": "選択する ...",
     "dropdown": "ドロップダウン",
-    "numberSelected": "{numberSelected} 件選択"
+    "numberSelected": "{numberSelected} 件選択",
+    "pressEnterToCreate": "Enter キーを押して新しいオプションを作成、{textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "クリア"
   },
   "gux-listbox-multi": {
-    "noMatches": "一致するものがありません"
+    "add": "追加 {name}",
+    "noMatches": "一致するものがありません",
+    "loading": "読み込み中..."
   },
   "gux-listbox": {
-    "noMatches": "一致するものがありません"
+    "noMatches": "一致するものがありません",
+    "loading": "読み込み中..."
   },
   "gux-pagination-cursor": {
     "previous": "前へ",

@@ -20,10 +20,11 @@
     "clearSelection": "נקה {numberSelected} פריטים שנבחרו"
   },
   "gux-dropdown-multi": {
-    "filterResults": "הקלד כדי לסנן תוצאות ברשימה נפתחת",
+    "textInputResults": "הקלד כדי לסנן תוצאות ברשימה נפתחת",
     "noSelection": "בחר...",
     "dropdown": "רשימה נפתחת",
-    "numberSelected": "{numberSelected} נבחרו"
+    "numberSelected": "{numberSelected} נבחרו",
+    "pressEnterToCreate": "הקש Enter כדי ליצור אפשרות חדשה, {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "נקה"
   },
   "gux-listbox-multi": {
-    "noMatches": "אין התאמות"
+    "add": "הוסף את {name}",
+    "noMatches": "אין התאמות",
+    "loading": "טוען..."
   },
   "gux-listbox": {
-    "noMatches": "אין התאמות"
+    "noMatches": "אין התאמות",
+    "loading": "טוען..."
   },
   "gux-pagination-cursor": {
     "previous": "הקודם",
