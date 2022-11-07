@@ -1,3 +1,5 @@
 {
-  "noMatches": "Keine Übereinstimmungen"
+  "add": "{name} hinzufügen",
+  "noMatches": "Keine Übereinstimmungen",
+  "loading": "Wird geladen…"
 }

@@ -1,3 +1,5 @@
 {
-  "noMatches": "Ingen matches"
+  "add": "Tilføj {name}",
+  "noMatches": "Ingen matches",
+  "loading": "Indlæser..."
 }
