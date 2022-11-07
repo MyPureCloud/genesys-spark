@@ -20,10 +20,11 @@
     "clearSelection": "ล้าง {numberSelected} รายการที่เลือกไว้"
   },
   "gux-dropdown-multi": {
-    "filterResults": "พิมพ์เพื่อกรองผลลัพธ์ในดรอปดาวน์",
+    "textInputResults": "พิมพ์เพื่อกรองผลลัพธ์ในดรอปดาวน์",
     "noSelection": "เลือก...",
     "dropdown": "ดรอปดาวน์",
-    "numberSelected": "เลือกแล้ว {numberSelected} รายการ"
+    "numberSelected": "เลือกแล้ว {numberSelected} รายการ",
+    "pressEnterToCreate": "กดปุ่ม Enter เพื่อสร้างตัวเลือกใหม่ {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "ล้าง"
   },
   "gux-listbox-multi": {
-    "noMatches": "ไม่มีที่ตรงกัน"
+    "add": "เพิ่ม {name}",
+    "noMatches": "ไม่มีที่ตรงกัน",
+    "loading": "กำลังโหลด..."
   },
   "gux-listbox": {
-    "noMatches": "ไม่มีที่ตรงกัน"
+    "noMatches": "ไม่มีที่ตรงกัน",
+    "loading": "กำลังโหลด..."
   },
   "gux-pagination-cursor": {
     "previous": "ก่อนหน้า",

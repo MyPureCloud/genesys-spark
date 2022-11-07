@@ -20,10 +20,11 @@
     "clearSelection": "선택한 {numberSelected}개 항목 해제하기"
   },
   "gux-dropdown-multi": {
-    "filterResults": "드롭다운 결과를 필터링하려면 입력하십시오.",
+    "textInputResults": "드롭다운 결과를 필터링하려면 입력하십시오.",
     "noSelection": "선택...",
     "dropdown": "드롭다운",
-    "numberSelected": "{numberSelected}개 선택함"
+    "numberSelected": "{numberSelected}개 선택함",
+    "pressEnterToCreate": "새 옵션 {textInputValue}을 생성하려면 Enter를 누르십시오. "
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "투명"
   },
   "gux-listbox-multi": {
-    "noMatches": "일치 없음"
+    "add": "{name} 추가",
+    "noMatches": "일치 없음",
+    "loading": "로드 중..."
   },
   "gux-listbox": {
-    "noMatches": "일치 없음"
+    "noMatches": "일치 없음",
+    "loading": "로드 중..."
   },
   "gux-pagination-cursor": {
     "previous": "이전",
