@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.40.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.39.2...v3.40.0) (2022-11-08)
+
+
+### Features
+
+* **table-toolbar:** address PR comments ([9c0540d](https://github.com/MyPureCloud/genesys-webcomponents/commit/9c0540d800074dfee487345ca2f273f0aae4c05a))
+* **table-toolbar:** remove eslint comment ([7d9cb2d](https://github.com/MyPureCloud/genesys-webcomponents/commit/7d9cb2d465e876c0e190fc2179f0f4313ce01a50))
+* **table-toolbar:** return void ([cd68571](https://github.com/MyPureCloud/genesys-webcomponents/commit/cd685719307222a0338b7479a78d69a8abc9444f))
+* **table-toolbar:** utilize button-slot of button ([bbab4cf](https://github.com/MyPureCloud/genesys-webcomponents/commit/bbab4cf58f6d58127241129ac0a3204bc64c689f))
+* **toolbar:** skeleton commit ([e5d95f3](https://github.com/MyPureCloud/genesys-webcomponents/commit/e5d95f3cb01726c7f849bc73590188d4adc9a9f8))
+
 ### [3.39.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.39.1...v3.39.2) (2022-11-07)
 
 ### [3.39.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.39.0...v3.39.1) (2022-11-07)
