@@ -264,7 +264,6 @@ const icons = [
       'cut',
       'delete',
       'edit',
-      'floppy-disk',
       'paste',
       'refresh',
       'reset',
