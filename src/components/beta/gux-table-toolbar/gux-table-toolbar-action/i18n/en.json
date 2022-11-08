@@ -1,0 +1,8 @@
+{
+  "actionRefresh": "Refresh",
+  "actionDelete": "Delete",
+  "actionExport": "Export",
+  "actionImport": "Import",
+  "actionRevert": "Revert",
+  "actionAdd": "Add"
+}
