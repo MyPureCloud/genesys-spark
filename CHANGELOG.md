@@ -37,7 +37,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * **css:** increase step button icon size in gux-form-field-number ([e74fd9a](https://github.com/MyPureCloud/genesys-webcomponents/commit/e74fd9af198496523affdd81bee795492cd643aa))
-* **css:** specify width of slotted <select> in gux-form-field-select ([4f9b9dd](https://github.com/MyPureCloud/genesys-webcomponents/commit/4f9b9dd505340a1cd77996481d92e628335444d7))
+* **css:** specify width of slotted select in gux-form-field-select ([4f9b9dd](https://github.com/MyPureCloud/genesys-webcomponents/commit/4f9b9dd505340a1cd77996481d92e628335444d7))
 * **gux-listbox-multi:** fix regression that caused no matches container to hide create new option ([#971](https://github.com/MyPureCloud/genesys-webcomponents/issues/971)) ([34004f3](https://github.com/MyPureCloud/genesys-webcomponents/commit/34004f308c996c3d3e1b4204a837b8818f075efd))
 * **gux-listbox-multi:** fix tag render issue ([#970](https://github.com/MyPureCloud/genesys-webcomponents/issues/970)) ([606ea71](https://github.com/MyPureCloud/genesys-webcomponents/commit/606ea71cb9be0f0d69b2f26f4ad6c279ba2c285f))
 * **gux-tab-advanced-list:** turn off disable when tabs are less then the max number ([61f13c8](https://github.com/MyPureCloud/genesys-webcomponents/commit/61f13c8a4b2a2f3deacc5e9e74f776eb5d4c5dae))
