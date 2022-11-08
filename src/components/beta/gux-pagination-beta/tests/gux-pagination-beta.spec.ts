@@ -105,5 +105,21 @@ describe('gux-pagination-beta', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+    it(`should render current page as 1 when total items is 0`, async () => {
+      const html = `
+      <gux-pagination-beta
+      current-page="1"
+      total-items="0"
+      items-per-page="25"
+      layout="full"
+    ></gux-pagination-beta>
+      `;
+
+      const page = await newSpecPage({ components, html, language });
+
+      expect(page.rootInstance).toBeInstanceOf(GuxPaginationBeta);
+
+      expect(page.root).toMatchSnapshot();
+    });
   });
 });
