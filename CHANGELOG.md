@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.41.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.40.0...v3.41.0) (2022-11-08)
+
+
+### Features
+
+* **pagination:** default number of pages to 1 ([38d63ab](https://github.com/MyPureCloud/genesys-webcomponents/commit/38d63ab4af57cbf8285097a52bdd81d4f333e419))
+
 ## [3.40.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.39.2...v3.40.0) (2022-11-08)
 
 
