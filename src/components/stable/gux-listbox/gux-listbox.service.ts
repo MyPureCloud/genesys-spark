@@ -210,7 +210,10 @@ export function onClickedOption(
 
 let timer: NodeJS.Timeout;
 let searchStringState: string = '';
-const searchDebounceInterval = 1000;
+// While there is less than 1s between keypresses that will be considered one search operation.
+// After 1s the next keypress will be considered the start of a new search.
+// This is a mimic/approximation of the native select elements functionality.
+const continueSearchMaxInterval = 1000;
 
 export function goToOption(list: HTMLGuxListboxElement, letter: string): void {
   clearTimeout(timer);
@@ -220,7 +223,7 @@ export function goToOption(list: HTMLGuxListboxElement, letter: string): void {
 
   timer = setTimeout(() => {
     searchStringState = '';
-  }, searchDebounceInterval);
+  }, continueSearchMaxInterval);
 }
 
 export function matchOption(
