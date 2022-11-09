@@ -29,9 +29,10 @@
 
 ## Slots
 
-| Slot | Description     |
-| ---- | --------------- |
-|      | popover content |
+| Slot      | Description            |
+| --------- | ---------------------- |
+|           | popover content        |
+| `"title"` | Slot for popover title |
 
 
 ## Dependencies

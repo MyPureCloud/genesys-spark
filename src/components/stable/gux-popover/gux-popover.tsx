@@ -16,9 +16,11 @@ import { onHiddenChange } from '../../../utils/dom/on-attribute-change';
 import { trackComponent } from '@utils/tracking/usage';
 
 import { PopperPosition } from './gux-popover.types';
+import { getSlot } from '@utils/dom/get-slot';
 
 /**
  * @slot - popover content
+ * @slot title - Slot for popover title
  */
 
 @Component({
@@ -91,6 +93,10 @@ export class GuxPopover {
     }
   }
 
+  get titleSlot(): HTMLSlotElement | null {
+    return getSlot(this.root, 'title');
+  }
+
   private runPopper(): void {
     const forElement = document.getElementById(this.for);
 
@@ -160,6 +166,17 @@ export class GuxPopover {
     }
   }
 
+  private renderDismissButton(): JSX.Element {
+    if (this.displayDismissButton) {
+      return (
+        <gux-dismiss-button
+          onClick={this.dismiss.bind(this)}
+          position="inherit"
+        ></gux-dismiss-button>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return (
       <div
@@ -167,11 +184,10 @@ export class GuxPopover {
         class="gux-popover-wrapper"
       >
         <div class="gux-arrow" data-popper-arrow />
-        {this.displayDismissButton && (
-          <gux-dismiss-button
-            onClick={this.dismiss.bind(this)}
-          ></gux-dismiss-button>
-        )}
+        <div class={{ 'gux-popover-header': Boolean(this.titleSlot) }}>
+          <slot name="title"></slot>
+          {this.renderDismissButton()}
+        </div>
         <div class="gux-popover-content">
           <slot />
         </div>
