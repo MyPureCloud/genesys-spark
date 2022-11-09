@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.41.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.1...v3.41.2) (2022-11-09)
+
+
+### Bug Fixes
+
+* **listbox:** changed keypress search ([8d220c4](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d220c428d6e8656de3a55acfa0645bc7822ed20))
+
 ### [3.41.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.0...v3.41.1) (2022-11-09)
 
 
