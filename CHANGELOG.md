@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.41.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.0...v3.41.1) (2022-11-09)
+
+
+### Bug Fixes
+
+* **commitlint:** commitlint now only looks at relevant commits ([62192ab](https://github.com/MyPureCloud/genesys-webcomponents/commit/62192ab1cb6fa7d332ad6d41f264fc373094c832))
+
 ## [3.41.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.40.0...v3.41.0) (2022-11-08)
 
 
