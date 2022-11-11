@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.41.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.3...v3.41.4) (2022-11-11)
+
+
+### Bug Fixes
+
+* **table:** add px unit to columns when scaling ([1e6e2dd](https://github.com/MyPureCloud/genesys-webcomponents/commit/1e6e2ddb26236ef36ed496e808f7b8a6210d1650))
+
 ### [3.41.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.2...v3.41.3) (2022-11-09)
 
 ### [3.41.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.1...v3.41.2) (2022-11-09)
