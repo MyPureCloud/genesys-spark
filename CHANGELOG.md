@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.41.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.5...v3.41.6) (2022-11-14)
+
+
+### Bug Fixes
+
+* **datepicker:** addition of flip modifier to popper ([b557b7c](https://github.com/MyPureCloud/genesys-webcomponents/commit/b557b7cdf82f0f6cac162c850cedd4a511075386))
+
 ### [3.41.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.4...v3.41.5) (2022-11-14)
 
 ### [3.41.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.3...v3.41.4) (2022-11-11)
