@@ -59,6 +59,9 @@ export class GuxDropdownMulti {
   filterable: boolean = false;
 
   @Prop()
+  customFilter: boolean = false;
+
+  @Prop()
   hasError: boolean = false;
 
   @State()
@@ -277,8 +280,9 @@ export class GuxDropdownMulti {
 
   componentWillRender(): void {
     this.validateValue(this.value);
-    this.listboxElement.textInput = this.textInput;
     this.listboxElement.loading = this.loading;
+    this.listboxElement.customFilter = this.customFilter;
+    this.listboxElement.textInput = this.textInput;
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -392,18 +396,19 @@ export class GuxDropdownMulti {
     }
   }
 
-  private getSuggestionText(textInput: string): string {
+  private getTypeaheadText(textInput: string): string {
     const textInputLength = textInput.length;
-    if (textInputLength > 0) {
+    if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
       if (option) {
-        return option
-          .querySelector('.gux-option')
-          .textContent.substring(textInputLength);
+        const optionSlotTextContent = option.querySelector(
+          '[gux-slot-container]'
+        )?.textContent;
+        return optionSlotTextContent?.substring(textInputLength);
       }
-    }
 
-    return '';
+      return '';
+    }
   }
 
   private renderTargetDisplay(): JSX.Element {
@@ -459,7 +464,7 @@ export class GuxDropdownMulti {
               <div class="gux-filter-display">
                 <span class="gux-filter-text">{this.textInput}</span>
                 <span class="gux-filter-suggestion">
-                  {this.getSuggestionText(this.textInput)}
+                  {this.getTypeaheadText(this.textInput)}
                 </span>
               </div>
               <div class="input-and-dropdown-button">

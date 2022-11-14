@@ -28,19 +28,19 @@ exports[`gux-dropdown #render should render as expected 1`] = `
     </mock:shadow-root>
     <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
       <!---->
-      <div class="gux-option">
+      <div class="gux-option" gux-slot-container="">
         Ant
       </div>
     </gux-option-multi>
     <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
       <!---->
-      <div class="gux-option">
+      <div class="gux-option" gux-slot-container="">
         Bat
       </div>
     </gux-option-multi>
     <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
       <!---->
-      <div class="gux-option">
+      <div class="gux-option" gux-slot-container="">
         Cat
       </div>
     </gux-option-multi>

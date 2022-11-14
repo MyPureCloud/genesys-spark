@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-
 import { countryList } from '../data/country-list';
 import { petList } from '../data/pet-list';
 
@@ -23,11 +22,25 @@ export class AppComponent {
     email: new FormControl('daragh.king@example.com', [
       Validators.email,
       Validators.required
-    ])
+    ]),
+    countriesVisited: new FormControl(null, Validators.required)
   });
 
   countryList: SelectOption[] = countryList;
+  filteredCountryList: SelectOption[] = countryList;
   petList: SelectOption[] = petList;
+  isLoading: boolean = false;
+
+  onFilter(event: CustomEvent) {
+    this.isLoading = true;
+    this.filteredCountryList = this.countryList.filter(country =>
+      country.name.toLowerCase().includes(event.detail as string)
+    );
+
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 500);
+  }
 
   showRequiredErrorMessage(formControlName: string): boolean {
     const control = this.contactForm.get(formControlName);

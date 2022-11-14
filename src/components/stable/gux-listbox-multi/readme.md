@@ -7,6 +7,7 @@
 
 | Property        | Attribute         | Description | Type      | Default     |
 | --------------- | ----------------- | ----------- | --------- | ----------- |
+| `customFilter`  | `custom-filter`   |             | `boolean` | `false`     |
 | `filter`        | `filter`          |             | `string`  | `''`        |
 | `hasExactMatch` | `has-exact-match` |             | `boolean` | `false`     |
 | `loading`       | `loading`         |             | `boolean` | `false`     |

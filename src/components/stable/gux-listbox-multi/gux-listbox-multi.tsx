@@ -62,6 +62,9 @@ export class GuxListboxMulti {
   @Prop()
   textInput: string = '';
 
+  @Prop()
+  customFilter: boolean = false;
+
   @State()
   listboxOptions: HTMLGuxOptionMultiElement[] = [];
 
@@ -245,9 +248,11 @@ export class GuxListboxMulti {
       listboxOption.selected = this.getSelectedValues().includes(
         listboxOption.value
       );
-      listboxOption.filtered = !listboxOption.textContent
-        .toLowerCase()
-        .startsWith(this.textInput.toLowerCase());
+      if (!this.customFilter) {
+        listboxOption.filtered = !listboxOption.textContent
+          .toLowerCase()
+          .startsWith(this.textInput.toLowerCase());
+      }
     });
   }
 

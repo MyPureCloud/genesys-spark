@@ -105,7 +105,7 @@ export class GuxOptionMulti {
         aria-selected={this.selected.toString()}
         aria-disabled={this.disabled.toString()}
       >
-        <div class="gux-option">
+        <div gux-slot-container class="gux-option">
           <slot />
         </div>
         {this.renderCustomOptionInstructions()}
