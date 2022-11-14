@@ -5,11 +5,12 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type      | Default     |
-| --------- | --------- | ----------- | --------- | ----------- |
-| `filter`  | `filter`  |             | `string`  | `''`        |
-| `loading` | `loading` |             | `boolean` | `false`     |
-| `value`   | `value`   |             | `string`  | `undefined` |
+| Property       | Attribute       | Description | Type      | Default     |
+| -------------- | --------------- | ----------- | --------- | ----------- |
+| `customFilter` | `custom-filter` |             | `boolean` | `false`     |
+| `filter`       | `filter`        |             | `string`  | `''`        |
+| `loading`      | `loading`       |             | `boolean` | `false`     |
+| `value`        | `value`         |             | `string`  | `undefined` |
 
 
 ## Events

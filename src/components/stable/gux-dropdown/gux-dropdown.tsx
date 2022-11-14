@@ -59,6 +59,12 @@ export class GuxDropdown {
   @Prop()
   filterable: boolean = false;
 
+  /**
+   * Override default filtering behavior
+   */
+  @Prop()
+  customFilter: boolean = false;
+
   @Prop()
   hasError: boolean = false;
 
@@ -217,8 +223,9 @@ export class GuxDropdown {
 
   componentWillRender(): void {
     this.validateValue(this.value);
-    this.listboxElement.filter = this.filter;
     this.listboxElement.loading = this.loading;
+    this.listboxElement.customFilter = this.customFilter;
+    this.listboxElement.filter = this.filter;
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -309,7 +316,7 @@ export class GuxDropdown {
 
   private getSuggestionText(filter: string): string {
     const filterLength = filter.length;
-    if (filterLength > 0) {
+    if (filterLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, filter);
 
       if (option) {

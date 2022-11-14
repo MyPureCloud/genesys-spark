@@ -5,16 +5,16 @@
 
 ## Properties
 
-| Property       | Attribute       | Description | Type      | Default     |
-| -------------- | --------------- | ----------- | --------- | ----------- |
-| `customFilter` | `custom-filter` |             | `boolean` | `false`     |
-| `disabled`     | `disabled`      |             | `boolean` | `false`     |
-| `filterable`   | `filterable`    |             | `boolean` | `false`     |
-| `hasError`     | `has-error`     |             | `boolean` | `false`     |
-| `loading`      | `loading`       |             | `boolean` | `false`     |
-| `placeholder`  | `placeholder`   |             | `string`  | `undefined` |
-| `required`     | `required`      |             | `boolean` | `false`     |
-| `value`        | `value`         |             | `string`  | `undefined` |
+| Property       | Attribute       | Description                         | Type      | Default     |
+| -------------- | --------------- | ----------------------------------- | --------- | ----------- |
+| `customFilter` | `custom-filter` | Override default filtering behavior | `boolean` | `false`     |
+| `disabled`     | `disabled`      |                                     | `boolean` | `false`     |
+| `filterable`   | `filterable`    |                                     | `boolean` | `false`     |
+| `hasError`     | `has-error`     |                                     | `boolean` | `false`     |
+| `loading`      | `loading`       |                                     | `boolean` | `false`     |
+| `placeholder`  | `placeholder`   |                                     | `string`  | `undefined` |
+| `required`     | `required`      |                                     | `boolean` | `false`     |
+| `value`        | `value`         |                                     | `string`  | `undefined` |
 
 
 ## Events

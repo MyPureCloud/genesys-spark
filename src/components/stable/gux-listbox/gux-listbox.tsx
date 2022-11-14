@@ -55,6 +55,9 @@ export class GuxListbox {
   filter: string = '';
 
   @Prop()
+  customFilter: boolean = false;
+
+  @Prop()
   loading: boolean = false;
 
   @State()
@@ -188,9 +191,10 @@ export class GuxListbox {
   componentWillRender(): void {
     this.listboxOptions.forEach(listboxOption => {
       listboxOption.selected = listboxOption.value === this.value;
-      listboxOption.filtered = !matchOption(listboxOption, this.filter);
+      if (!this.customFilter) {
+        listboxOption.filtered = !matchOption(listboxOption, this.filter);
+      }
     });
-
     this.allListboxOptionsFiltered =
       this.listboxOptions.filter(listboxOption => !listboxOption.filtered)
         .length === 0;

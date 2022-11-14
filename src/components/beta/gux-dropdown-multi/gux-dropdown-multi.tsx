@@ -58,6 +58,9 @@ export class GuxDropdownMulti {
   @Prop()
   filterable: boolean = false;
 
+  /**
+   * Override default filtering behavior
+   */
   @Prop()
   customFilter: boolean = false;
 
@@ -396,7 +399,7 @@ export class GuxDropdownMulti {
     }
   }
 
-  private getTypeaheadText(textInput: string): string {
+  private getSuggestionText(textInput: string): string {
     const textInputLength = textInput.length;
     if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
@@ -464,7 +467,7 @@ export class GuxDropdownMulti {
               <div class="gux-filter-display">
                 <span class="gux-filter-text">{this.textInput}</span>
                 <span class="gux-filter-suggestion">
-                  {this.getTypeaheadText(this.textInput)}
+                  {this.getSuggestionText(this.textInput)}
                 </span>
               </div>
               <div class="input-and-dropdown-button">
