@@ -15,7 +15,7 @@ exports[`gux-datepicker #render should render component as expected (1) 1`] = `
               <gux-icon decorative="" icon-name="calendar"></gux-icon>
             </button>
           </div>
-          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15" style="position: absolute; left: 0; top: 0; margin: 0;"></gux-calendar>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15" style="position: fixed; left: 0; top: 0; margin: 0;"></gux-calendar>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@ exports[`gux-datepicker #render should render component as expected (2) 1`] = `
               <gux-icon decorative="" icon-name="calendar"></gux-icon>
             </button>
           </div>
-          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15" style="position: absolute; left: 0; top: 0; margin: 0;"></gux-calendar>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15" style="position: fixed; left: 0; top: 0; margin: 0;"></gux-calendar>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@ exports[`gux-datepicker #render should render component as expected (3) 1`] = `
               <gux-icon decorative="" icon-name="calendar"></gux-icon>
             </button>
           </div>
-          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15" style="position: absolute; left: 0; top: 0; margin: 0;"></gux-calendar>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15" style="position: fixed; left: 0; top: 0; margin: 0;"></gux-calendar>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
               <gux-icon decorative="" icon-name="calendar"></gux-icon>
             </button>
           </div>
-          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15" style="position: absolute; left: 0; top: 0; margin: 0;"></gux-calendar>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15" style="position: fixed; left: 0; top: 0; margin: 0;"></gux-calendar>
         </div>
       </div>
     </div>
@@ -107,7 +107,7 @@ exports[`gux-datepicker #render should render component as expected (5) 1`] = `
               <gux-icon decorative="" icon-name="calendar"></gux-icon>
             </button>
           </div>
-          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02" style="position: absolute; left: 0; top: 0; margin: 0;"></gux-calendar>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02" style="position: fixed; left: 0; top: 0; margin: 0;"></gux-calendar>
         </div>
       </div>
       <div class="gux-datepicker-field">
@@ -143,7 +143,7 @@ exports[`gux-datepicker #render should render component as expected (6) 1`] = `
               <gux-icon decorative="" icon-name="calendar"></gux-icon>
             </button>
           </div>
-          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02" style="position: absolute; left: 0; top: 0; margin: 0;"></gux-calendar>
+          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02" style="position: fixed; left: 0; top: 0; margin: 0;"></gux-calendar>
         </div>
       </div>
       <div class="gux-datepicker-field">
@@ -179,7 +179,7 @@ exports[`gux-datepicker #render should render component as expected (7) 1`] = `
               <gux-icon decorative="" icon-name="calendar"></gux-icon>
             </button>
           </div>
-          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02" style="position: absolute; left: 0; top: 0; margin: 0;"></gux-calendar>
+          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02" style="position: fixed; left: 0; top: 0; margin: 0;"></gux-calendar>
         </div>
       </div>
       <div class="gux-datepicker-field">
@@ -215,7 +215,7 @@ exports[`gux-datepicker #render should render component as expected (8) 1`] = `
               <gux-icon decorative="" icon-name="calendar"></gux-icon>
             </button>
           </div>
-          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02" style="position: absolute; left: 0; top: 0; margin: 0;"></gux-calendar>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02" style="position: fixed; left: 0; top: 0; margin: 0;"></gux-calendar>
         </div>
       </div>
       <div class="gux-datepicker-field">
