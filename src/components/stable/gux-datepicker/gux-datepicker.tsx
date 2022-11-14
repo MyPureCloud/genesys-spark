@@ -661,11 +661,18 @@ export class GuxDatepicker {
       this.datepickerElement,
       this.calendarElement,
       {
+        strategy: 'fixed',
         modifiers: [
           {
             name: 'offset',
             options: {
               offset: [0, -3]
+            }
+          },
+          {
+            name: 'flip',
+            options: {
+              boundary: []
             }
           }
         ],
