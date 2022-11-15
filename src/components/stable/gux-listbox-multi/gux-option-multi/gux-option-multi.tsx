@@ -105,6 +105,8 @@ export class GuxOptionMulti {
         aria-selected={this.selected.toString()}
         aria-disabled={this.disabled.toString()}
       >
+        {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text. 
+        This attribute is required because we need to get the slotted text and exclude the screen reader text. */}
         <div gux-slot-container class="gux-option">
           <slot />
         </div>
