@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.41.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.7...v3.41.8) (2022-11-15)
+
+
+### Bug Fixes
+
+* **gux-dropdown-multi:** get typeahead text by targeting an attribute instead of a class ([58bf324](https://github.com/MyPureCloud/genesys-webcomponents/commit/58bf324b010dbe901511e1af4cb0cdcda64e66a7))
+
 ### [3.41.7](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.6...v3.41.7) (2022-11-15)
 
 ### [3.41.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.5...v3.41.6) (2022-11-14)
