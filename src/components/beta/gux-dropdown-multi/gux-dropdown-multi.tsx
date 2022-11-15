@@ -392,14 +392,15 @@ export class GuxDropdownMulti {
     }
   }
 
-  private getSuggestionText(textInput: string): string {
+  private getTypeaheadText(textInput: string): string {
     const textInputLength = textInput.length;
     if (textInputLength > 0) {
       const option = getSearchOption(this.listboxElement, textInput);
       if (option) {
-        return option
-          .querySelector('.gux-option')
-          .textContent.substring(textInputLength);
+        const optionSlotTextContent = option.querySelector(
+          '[gux-slot-container]'
+        )?.textContent;
+        return optionSlotTextContent?.substring(textInputLength);
       }
     }
 
@@ -459,7 +460,7 @@ export class GuxDropdownMulti {
               <div class="gux-filter-display">
                 <span class="gux-filter-text">{this.textInput}</span>
                 <span class="gux-filter-suggestion">
-                  {this.getSuggestionText(this.textInput)}
+                  {this.getTypeaheadText(this.textInput)}
                 </span>
               </div>
               <div class="input-and-dropdown-button">
