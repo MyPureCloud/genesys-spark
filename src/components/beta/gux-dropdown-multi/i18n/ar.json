@@ -1,6 +1,7 @@
 {
-  "filterResults": "اكتب لتصفية نتائج القائمة المنسدلة",
+  "textInputResults": "اكتب لتصفية نتائج القائمة المنسدلة",
   "noSelection": "تحديد...",
   "dropdown": "قائمة منسدلة",
-  "numberSelected": "تم تحديد {numberSelected}"
+  "numberSelected": "تم تحديد {numberSelected}",
+  "pressEnterToCreate": "اضغط \"دخول\" لإنشاء خيار جديد، {textInputValue}"
 }
