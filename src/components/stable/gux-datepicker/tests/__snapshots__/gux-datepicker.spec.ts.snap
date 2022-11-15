@@ -235,3 +235,26 @@ exports[`gux-datepicker #render should render component as expected (8) 1`] = `
   </mock:shadow-root>
 </gux-datepicker>
 `;
+
+exports[`gux-datepicker #render should render component as expected (9) 1`] = `
+<gux-datepicker start-day-of-week="6" value="1997-08-15">
+  <mock:shadow-root>
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="08/15/1997">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" startdayofweek="6" tabindex="-1" value="1997-08-15" style="position: fixed; left: 0; top: 0; margin: 0;"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-datepicker>
+`;

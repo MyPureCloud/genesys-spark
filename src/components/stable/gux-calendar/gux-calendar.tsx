@@ -67,7 +67,10 @@ export class GuxCalendar {
   @Prop()
   numberOfMonths: number = 1;
 
-  @State()
+  /**
+   * The day of the week to start each calendar row. ISO weekday number ie 1 - Monday, 2 - Tuesday, ... 7 - Sunday
+   */
+  @Prop({ mutable: true })
   startDayOfWeek: number;
 
   @State()
@@ -451,7 +454,8 @@ export class GuxCalendar {
     trackComponent(this.root, { variant: this.mode });
     this.locale = getDesiredLocale(this.root);
 
-    this.startDayOfWeek = getStartOfWeek(this.locale);
+    this.startDayOfWeek =
+      (this.startDayOfWeek || getStartOfWeek(this.locale)) % 7;
 
     if (!this.value) {
       const now = new Date();
