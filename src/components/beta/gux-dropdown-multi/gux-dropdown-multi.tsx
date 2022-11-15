@@ -403,7 +403,7 @@ export class GuxDropdownMulti {
     const textInputLength = textInput.length;
     if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
-      if (option) {
+      if (option && !this.customFilter) {
         const optionSlotTextContent = option.querySelector(
           '[gux-slot-container]'
         )?.textContent;

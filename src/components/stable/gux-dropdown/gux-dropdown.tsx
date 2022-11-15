@@ -314,12 +314,11 @@ export class GuxDropdown {
     this.collapseListbox('focusFieldButton');
   }
 
-  private getSuggestionText(filter: string): string {
+  private getTypeaheadText(filter: string): string {
     const filterLength = filter.length;
     if (filterLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, filter);
-
-      if (option) {
+      if (option && !this.customFilter) {
         //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
         return option.textContent.trim().substring(filterLength);
       }
@@ -357,7 +356,7 @@ export class GuxDropdown {
               <div class="gux-filter-display">
                 <span class="gux-filter-text">{this.filter}</span>
                 <span class="gux-filter-suggestion">
-                  {this.getSuggestionText(this.filter)}
+                  {this.getTypeaheadText(this.filter)}
                 </span>
               </div>
               <div class="input-and-dropdown-button">
