@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.41.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.7...v3.41.8) (2022-11-15)
+
+
+### Bug Fixes
+
+* **gux-dropdown-multi:** get typeahead text by targeting an attribute instead of a class ([58bf324](https://github.com/MyPureCloud/genesys-webcomponents/commit/58bf324b010dbe901511e1af4cb0cdcda64e66a7))
+
+### [3.41.7](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.6...v3.41.7) (2022-11-15)
+
+### [3.41.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.5...v3.41.6) (2022-11-14)
+
+
+### Bug Fixes
+
+* **datepicker:** addition of flip modifier to popper ([b557b7c](https://github.com/MyPureCloud/genesys-webcomponents/commit/b557b7cdf82f0f6cac162c850cedd4a511075386))
+
+### [3.41.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.4...v3.41.5) (2022-11-14)
+
+### [3.41.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.3...v3.41.4) (2022-11-11)
+
+
+### Bug Fixes
+
+* **table:** add px unit to columns when scaling ([1e6e2dd](https://github.com/MyPureCloud/genesys-webcomponents/commit/1e6e2ddb26236ef36ed496e808f7b8a6210d1650))
+
+### [3.41.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.2...v3.41.3) (2022-11-09)
+
+### [3.41.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.1...v3.41.2) (2022-11-09)
+
+
+### Bug Fixes
+
+* **listbox:** changed keypress search ([8d220c4](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d220c428d6e8656de3a55acfa0645bc7822ed20))
+
+### [3.41.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.0...v3.41.1) (2022-11-09)
+
+
+### Bug Fixes
+
+* **commitlint:** commitlint now only looks at relevant commits ([62192ab](https://github.com/MyPureCloud/genesys-webcomponents/commit/62192ab1cb6fa7d332ad6d41f264fc373094c832))
+
 ## [3.41.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.40.0...v3.41.0) (2022-11-08)
 
 
@@ -37,7 +78,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * **css:** increase step button icon size in gux-form-field-number ([e74fd9a](https://github.com/MyPureCloud/genesys-webcomponents/commit/e74fd9af198496523affdd81bee795492cd643aa))
-* **css:** specify width of slotted <select> in gux-form-field-select ([4f9b9dd](https://github.com/MyPureCloud/genesys-webcomponents/commit/4f9b9dd505340a1cd77996481d92e628335444d7))
+* **css:** specify width of slotted select in gux-form-field-select ([4f9b9dd](https://github.com/MyPureCloud/genesys-webcomponents/commit/4f9b9dd505340a1cd77996481d92e628335444d7))
 * **gux-listbox-multi:** fix regression that caused no matches container to hide create new option ([#971](https://github.com/MyPureCloud/genesys-webcomponents/issues/971)) ([34004f3](https://github.com/MyPureCloud/genesys-webcomponents/commit/34004f308c996c3d3e1b4204a837b8818f075efd))
 * **gux-listbox-multi:** fix tag render issue ([#970](https://github.com/MyPureCloud/genesys-webcomponents/issues/970)) ([606ea71](https://github.com/MyPureCloud/genesys-webcomponents/commit/606ea71cb9be0f0d69b2f26f4ad6c279ba2c285f))
 * **gux-tab-advanced-list:** turn off disable when tabs are less then the max number ([61f13c8](https://github.com/MyPureCloud/genesys-webcomponents/commit/61f13c8a4b2a2f3deacc5e9e74f776eb5d4c5dae))

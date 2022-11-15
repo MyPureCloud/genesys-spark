@@ -50,7 +50,6 @@ export class GuxTable {
   private tableId: string = randomHTMLId('gux-table');
   private columnsWidths: object = {};
   private tableWidth: number = this.getElementComputedWidth(this.slottedTable);
-
   /**
    * Indicates that vertical scroll is presented for table
    */
@@ -557,8 +556,8 @@ export class GuxTable {
       columnsStyles += `[gs-table-id=${
         this.tableId
       }] th[data-column-name="${column}"]{
-        width:${String(this.columnsWidths[column])};
-        min-width:${String(this.columnsWidths[column])};
+        width:${String(this.columnsWidths[column])}px;
+        min-width:${String(this.columnsWidths[column])}px;
       }`;
     });
 

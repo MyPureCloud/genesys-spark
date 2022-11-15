@@ -196,9 +196,9 @@ export class GuxListboxMulti {
     this.listboxOptions.forEach(listboxOption => {
       if (
         listboxOption
-          .querySelector('.gux-option')
-          .textContent.toLowerCase()
-          .trim() == this.textInput.toLowerCase().trim()
+          .querySelector('[gux-slot-container]')
+          ?.textContent?.toLowerCase()
+          ?.trim() == this.textInput.toLowerCase().trim()
       ) {
         hasExactMatch = true;
         this.hasExactMatch = true;
