@@ -1,7 +1,7 @@
 const icons = [
   {
     sectionName: 'Agent',
-    iconNames: ['agent', 'agent-circle', 'person-running', 'agent-group']
+    iconNames: ['agent', 'agent-circle', 'agent-group']
   },
   {
     sectionName: 'User',
