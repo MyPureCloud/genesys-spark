@@ -45,6 +45,7 @@ const icons = [
     sectionName: 'CJV',
     iconNames: [
       'cjv-badge-file',
+      'cjv-calendar-clock',
       'cjv-custom-default',
       'cjv-custom-session',
       'cjv-default-event',
@@ -288,7 +289,6 @@ const icons = [
     sectionName: 'Time',
     iconNames: [
       'calendar-clock',
-      'cjv-calendar-clock',
       'clock',
       'clock-outline',
       'timeline',
