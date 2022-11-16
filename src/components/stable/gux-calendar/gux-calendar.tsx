@@ -27,7 +27,11 @@ import { CalendarModes } from '../../../common-enums';
 import { getDesiredLocale, getStartOfWeek } from '../../../i18n';
 
 import { firstDateInMonth, getWeekdays } from './gux-calendar.service';
-import { GuxCalendarMode, IDateElement } from './gux-calendar.types';
+import {
+  GuxCalendarDayOfWeek,
+  GuxCalendarMode,
+  IDateElement
+} from './gux-calendar.types';
 
 @Component({
   styleUrl: 'gux-calendar.less',
@@ -72,7 +76,7 @@ export class GuxCalendar {
    * The day of the week to start each calendar row. ISO weekday number ie 1 - Monday, 2 - Tuesday, ... 7 - Sunday
    */
   @Prop({ mutable: true })
-  startDayOfWeek: number;
+  startDayOfWeek: GuxCalendarDayOfWeek;
 
   @State()
   previewValue: Date = new Date();
