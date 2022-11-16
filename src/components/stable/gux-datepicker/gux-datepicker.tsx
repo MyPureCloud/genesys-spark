@@ -95,6 +95,12 @@ export class GuxDatepicker {
   numberOfMonths: number = 1;
 
   /**
+   * The day of the week to start each calendar row. 1 - Monday, 2 - Tuesday, ... 7 - Sunday
+   */
+  @Prop()
+  startDayOfWeek: number;
+
+  /**
    * The min date selectable
    */
   @Prop()
@@ -715,6 +721,7 @@ export class GuxDatepicker {
         minDate={this.minDate}
         maxDate={this.maxDate}
         numberOfMonths={this.numberOfMonths}
+        startDayOfWeek={this.startDayOfWeek}
       />
     ) as JSX.Element;
   }

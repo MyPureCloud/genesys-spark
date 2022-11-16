@@ -7,13 +7,14 @@ This is a simple calendar component, that allows the user to select a date.
 
 ## Properties
 
-| Property         | Attribute          | Description                                | Type                                          | Default                |
-| ---------------- | ------------------ | ------------------------------------------ | --------------------------------------------- | ---------------------- |
-| `maxDate`        | `max-date`         | The max date selectable                    | `string`                                      | `''`                   |
-| `minDate`        | `min-date`         | The min date selectable                    | `string`                                      | `''`                   |
-| `mode`           | `mode`             | The calendar mode (can be single or range) | `CalendarModes.Range \| CalendarModes.Single` | `CalendarModes.Single` |
-| `numberOfMonths` | `number-of-months` | The calendar number of months displayed    | `number`                                      | `1`                    |
-| `value`          | `value`            | The calendar current selected date         | `string`                                      | `''`                   |
+| Property         | Attribute           | Description                                                                                                   | Type                                          | Default                |
+| ---------------- | ------------------- | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ---------------------- |
+| `maxDate`        | `max-date`          | The max date selectable                                                                                       | `string`                                      | `''`                   |
+| `minDate`        | `min-date`          | The min date selectable                                                                                       | `string`                                      | `''`                   |
+| `mode`           | `mode`              | The calendar mode (can be single or range)                                                                    | `CalendarModes.Range \| CalendarModes.Single` | `CalendarModes.Single` |
+| `numberOfMonths` | `number-of-months`  | The calendar number of months displayed                                                                       | `number`                                      | `1`                    |
+| `startDayOfWeek` | `start-day-of-week` | The day of the week to start each calendar row. ISO weekday number ie 1 - Monday, 2 - Tuesday, ... 7 - Sunday | `number`                                      | `undefined`            |
+| `value`          | `value`             | The calendar current selected date                                                                            | `string`                                      | `''`                   |
 
 
 ## Events
