@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.42.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.9...v3.42.0) (2022-11-16)
+
+
+### Features
+
+* **calendar:** added start-day-of-week prop ([0945060](https://github.com/MyPureCloud/genesys-webcomponents/commit/09450606e72fbeac120e5bf886624c45cb596440))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([432e917](https://github.com/MyPureCloud/genesys-webcomponents/commit/432e91708dfbe01638f4401d1be7a24802d59768))
+
 ### [3.41.9](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.8...v3.41.9) (2022-11-16)
 
 ### [3.41.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.7...v3.41.8) (2022-11-15)
