@@ -155,10 +155,13 @@
     "clear": "مسح"
   },
   "gux-listbox-multi": {
-    "noMatches": "لا توجد تطابقات"
+    "add": "إضافة {name}",
+    "noMatches": "لا توجد تطابقات",
+    "loading": "جارٍ التحميل..."
   },
   "gux-listbox": {
-    "noMatches": "لا توجد تطابقات"
+    "noMatches": "لا توجد تطابقات",
+    "loading": "جارٍ التحميل..."
   },
   "gux-pagination-cursor": {
     "previous": "السابق",
