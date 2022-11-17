@@ -20,10 +20,11 @@
     "clearSelection": "{numberSelected} geselecteerde items wissen"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Voer tekst in om resultaten in de vervolgkeuzelijst te filteren",
+    "textInputResults": "Voer tekst in om resultaten in de vervolgkeuzelijst te filteren",
     "noSelection": "Selecteren...",
     "dropdown": "Vervolgkeuzelijst",
-    "numberSelected": "{numberSelected} geselecteerd"
+    "numberSelected": "{numberSelected} geselecteerd",
+    "pressEnterToCreate": "Druk op Enter om een nieuwe optie te maken, {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "Wissen"
   },
   "gux-listbox-multi": {
-    "noMatches": "Geen overeenkomsten"
+    "add": "{name} toevoegen",
+    "noMatches": "Geen overeenkomsten",
+    "loading": "Laden..."
   },
   "gux-listbox": {
-    "noMatches": "Geen overeenkomsten"
+    "noMatches": "Geen overeenkomsten",
+    "loading": "Laden..."
   },
   "gux-pagination-cursor": {
     "previous": "Vorige",

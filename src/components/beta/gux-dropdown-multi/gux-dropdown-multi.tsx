@@ -17,6 +17,7 @@ import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { afterNextRender } from '../../../utils/dom/after-next-render';
+import { onInputDisabledStateChange } from '../../../utils/dom/on-input-disabled-state-change';
 import { trackComponent } from '../../../usage-tracking';
 
 import translationResources from './i18n/en.json';
@@ -38,7 +39,7 @@ export class GuxDropdownMulti {
   private listboxElement: HTMLGuxListboxMultiElement;
 
   @Element()
-  private root: HTMLElement;
+  private root: HTMLGuxDropdownMultiBetaElement;
 
   @Prop({ mutable: true })
   value: string;
@@ -255,13 +256,19 @@ export class GuxDropdownMulti {
     this.collapseListbox('noFocusChange');
   }
 
+  connectedCallback(): void {
+    this.listboxElement = this.root.querySelector('gux-listbox-multi');
+    this.hasCreate = !!this.root.querySelector('gux-create-option');
+    this.validateValue(this.value);
+  }
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
 
-    this.listboxElement = this.root.querySelector('gux-listbox-multi');
-    this.hasCreate = !!this.root.querySelector('gux-create-option');
-    this.validateValue(this.value);
+    onInputDisabledStateChange(this.root, () => {
+      forceUpdate(this.root);
+    });
   }
 
   componentDidLoad(): void {
@@ -392,14 +399,15 @@ export class GuxDropdownMulti {
     }
   }
 
-  private getSuggestionText(textInput: string): string {
+  private getTypeaheadText(textInput: string): string {
     const textInputLength = textInput.length;
     if (textInputLength > 0) {
       const option = getSearchOption(this.listboxElement, textInput);
       if (option) {
-        return option
-          .querySelector('.gux-option')
-          .textContent.substring(textInputLength);
+        const optionSlotTextContent = option.querySelector(
+          '[gux-slot-container]'
+        )?.textContent;
+        return optionSlotTextContent?.substring(textInputLength);
       }
     }
 
@@ -459,7 +467,7 @@ export class GuxDropdownMulti {
               <div class="gux-filter-display">
                 <span class="gux-filter-text">{this.textInput}</span>
                 <span class="gux-filter-suggestion">
-                  {this.getSuggestionText(this.textInput)}
+                  {this.getTypeaheadText(this.textInput)}
                 </span>
               </div>
               <div class="input-and-dropdown-button">

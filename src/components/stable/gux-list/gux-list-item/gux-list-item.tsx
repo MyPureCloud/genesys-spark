@@ -2,6 +2,10 @@ import { Component, Element, h, Host, JSX, Listen, Prop } from '@stencil/core';
 
 import { getClosestElement } from '../../../../utils/dom/get-closest-element';
 
+/**
+ * @slot - text
+ */
+
 @Component({
   styleUrl: 'gux-list-item.less',
   tag: 'gux-list-item',

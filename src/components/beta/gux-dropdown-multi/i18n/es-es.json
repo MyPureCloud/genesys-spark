@@ -1,6 +1,7 @@
 {
-  "filterResults": "Escriba para filtrar los resultados del desplegable",
+  "textInputResults": "Escriba para filtrar los resultados del desplegable",
   "noSelection": "Seleccionar...",
   "dropdown": "Desplegable",
-  "numberSelected": "{numberSelected} seleccionado(s)"
+  "numberSelected": "{numberSelected} seleccionado(s)",
+  "pressEnterToCreate": "Pulse Intro para crear una nueva opción, {textInputValue}"
 }

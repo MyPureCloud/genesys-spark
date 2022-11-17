@@ -1,6 +1,7 @@
 {
-  "filterResults": "พิมพ์เพื่อกรองผลลัพธ์ในดรอปดาวน์",
+  "textInputResults": "พิมพ์เพื่อกรองผลลัพธ์ในดรอปดาวน์",
   "noSelection": "เลือก...",
   "dropdown": "ดรอปดาวน์",
-  "numberSelected": "เลือกแล้ว {numberSelected} รายการ"
+  "numberSelected": "เลือกแล้ว {numberSelected} รายการ",
+  "pressEnterToCreate": "กดปุ่ม Enter เพื่อสร้างตัวเลือกใหม่ {textInputValue}"
 }

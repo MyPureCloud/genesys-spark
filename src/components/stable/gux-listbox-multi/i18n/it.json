@@ -1,3 +1,5 @@
 {
-  "noMatches": "Nessuna corrispondenza"
+  "add": "Aggiungi {name}",
+  "noMatches": "Nessuna corrispondenza",
+  "loading": "Caricamento in corso..."
 }

@@ -1,6 +1,7 @@
 {
-  "filterResults": "Начните ввод для фильтрации результатов раскрывающегося списка",
+  "textInputResults": "Начните ввод для фильтрации результатов в раскрывающемся списке",
   "noSelection": "Выбрать...",
   "dropdown": "Раскрывающийся список",
-  "numberSelected": "Выбрано {numberSelected}"
+  "numberSelected": "Выбрано {numberSelected}",
+  "pressEnterToCreate": "Нажмите клавишу ВВОД, чтобы создать новый вариант, {textInputValue}"
 }

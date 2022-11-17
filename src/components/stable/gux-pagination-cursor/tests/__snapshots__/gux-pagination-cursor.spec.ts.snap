@@ -5,12 +5,12 @@ exports[`gux-pagination-cursor #render should render as expected (1) 1`] = `
   <mock:shadow-root>
     <gux-button-slot-beta accent="secondary">
       <button disabled="" title="Previous" type="button">
-        <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+        <gux-icon decorative="" iconname="chevron-small-left"></gux-icon>
       </button>
     </gux-button-slot-beta>
     <gux-button-slot-beta accent="secondary">
       <button disabled="" title="Next" type="button">
-        <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+        <gux-icon decorative="" iconname="chevron-small-right"></gux-icon>
       </button>
     </gux-button-slot-beta>
   </mock:shadow-root>
@@ -22,12 +22,12 @@ exports[`gux-pagination-cursor #render should render as expected (2) 1`] = `
   <mock:shadow-root>
     <gux-button-slot-beta accent="secondary">
       <button disabled="" title="Previous" type="button">
-        <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+        <gux-icon decorative="" iconname="chevron-small-left"></gux-icon>
       </button>
     </gux-button-slot-beta>
     <gux-button-slot-beta accent="secondary">
       <button title="Next" type="button">
-        <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+        <gux-icon decorative="" iconname="chevron-small-right"></gux-icon>
       </button>
     </gux-button-slot-beta>
   </mock:shadow-root>
@@ -39,12 +39,12 @@ exports[`gux-pagination-cursor #render should render as expected (3) 1`] = `
   <mock:shadow-root>
     <gux-button-slot-beta accent="secondary">
       <button title="Previous" type="button">
-        <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+        <gux-icon decorative="" iconname="chevron-small-left"></gux-icon>
       </button>
     </gux-button-slot-beta>
     <gux-button-slot-beta accent="secondary">
       <button title="Next" type="button">
-        <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+        <gux-icon decorative="" iconname="chevron-small-right"></gux-icon>
       </button>
     </gux-button-slot-beta>
   </mock:shadow-root>
@@ -56,12 +56,12 @@ exports[`gux-pagination-cursor #render should render as expected (4) 1`] = `
   <mock:shadow-root>
     <gux-button-slot-beta accent="secondary">
       <button title="Previous" type="button">
-        <gux-icon decorative="" iconname="ic-chevron-small-left"></gux-icon>
+        <gux-icon decorative="" iconname="chevron-small-left"></gux-icon>
       </button>
     </gux-button-slot-beta>
     <gux-button-slot-beta accent="secondary">
       <button disabled="" title="Next" type="button">
-        <gux-icon decorative="" iconname="ic-chevron-small-right"></gux-icon>
+        <gux-icon decorative="" iconname="chevron-small-right"></gux-icon>
       </button>
     </gux-button-slot-beta>
   </mock:shadow-root>

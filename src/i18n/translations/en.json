@@ -309,6 +309,17 @@
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
   },
+  "gux-table-toolbar-action": {
+    "actionRefresh": "Refresh",
+    "actionDelete": "Delete",
+    "actionExport": "Export",
+    "actionImport": "Import",
+    "actionRevert": "Revert",
+    "actionAdd": "Add"
+  },
+  "gux-table-toolbar-menu-button": {
+    "additionalActions": "Additional Actions"
+  },
   "gux-table": {
     "emptyMessage": "No data available",
     "scrollLeft": "Scroll Left",

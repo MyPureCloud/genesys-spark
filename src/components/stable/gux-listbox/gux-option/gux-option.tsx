@@ -2,6 +2,10 @@ import { Component, Element, h, Host, JSX, Listen, Prop } from '@stencil/core';
 
 import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 
+/**
+ * @slot - text
+ */
+
 @Component({
   styleUrl: 'gux-option.less',
   tag: 'gux-option',

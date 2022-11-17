@@ -2,6 +2,10 @@ import { Component, Element, h, JSX, Listen, Method } from '@stencil/core';
 
 import { menuNavigation } from '../gux-menu.common';
 
+/**
+ * @slot - text
+ */
+
 @Component({
   styleUrl: 'gux-menu-option.less',
   tag: 'gux-menu-option'

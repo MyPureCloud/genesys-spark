@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Slots
+
+| Slot        | Description      |
+| ----------- | ---------------- |
+| `"content"` | Slot for content |
+
+
 ## Dependencies
 
 ### Depends on

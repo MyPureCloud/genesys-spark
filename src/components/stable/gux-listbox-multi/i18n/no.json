@@ -1,3 +1,5 @@
 {
-  "noMatches": "Ingen treff"
+  "add": "Legg til {name}",
+  "noMatches": "Ingen treff",
+  "loading": "Laster inn …"
 }

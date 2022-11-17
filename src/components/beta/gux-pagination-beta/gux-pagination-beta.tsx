@@ -22,13 +22,7 @@ import {
 
 import { GuxPaginationLayoutBeta } from './gux-pagination-beta.types';
 
-/**
- * The minimum size in px at which the advanced layout will display.
- * Below this size we switch to the simple layout.
- * This was chosen based on the width required for 3-digit page numbers, so
- * page counts that go into 4 digits could overflow at small sizes.
- */
-const MIN_ADVANCED_SIZE = 810;
+const minAdvancedSpacerWidth = 24;
 
 @Component({
   styleUrl: 'gux-pagination-beta.less',
@@ -40,6 +34,8 @@ export class GuxPaginationBeta implements ComponentInterface {
   private root: HTMLElement;
 
   private resizeObserver?: ResizeObserver;
+
+  private reinstateLayoutBreakpoint: number = 0;
 
   /**
    * The pagination component can have different layouts to suit the available space
@@ -81,13 +77,8 @@ export class GuxPaginationBeta implements ComponentInterface {
   private guxpaginationchange: EventEmitter<GuxPaginationState>;
 
   private setPage(page: number): void {
-    if (page < 0) {
-      if (this.totalPages > 0) {
-        this.setPage(1);
-      } else {
-        this.setPage(0);
-      }
-
+    if (page <= 0) {
+      this.setPage(1);
       return;
     }
 
@@ -120,7 +111,7 @@ export class GuxPaginationBeta implements ComponentInterface {
     totalItems: number,
     itemsPerPage: number
   ): number {
-    return Math.ceil(totalItems / itemsPerPage);
+    return Math.max(1, Math.ceil(totalItems / itemsPerPage));
   }
 
   private calculateCurrentPage(
@@ -134,13 +125,24 @@ export class GuxPaginationBeta implements ComponentInterface {
 
   private checkPaginationContainerWidthForLayout() {
     readTask(() => {
-      const el = this.root.shadowRoot.querySelector(
+      const container = this.root.shadowRoot.querySelector(
         '.gux-pagination-container'
       );
-      const paginationContainerWidth = el.clientWidth;
-      if (paginationContainerWidth < MIN_ADVANCED_SIZE) {
+
+      const spacer = this.root.shadowRoot.querySelector(
+        '.gux-pagination-spacer'
+      );
+      const containerWidth = container.clientWidth;
+      const spacerWidth = spacer.clientWidth;
+
+      if (
+        spacerWidth < minAdvancedSpacerWidth &&
+        this.displayedLayout !== 'simple'
+      ) {
+        this.reinstateLayoutBreakpoint = containerWidth;
         this.displayedLayout = 'simple';
-      } else {
+      } else if (containerWidth > this.reinstateLayoutBreakpoint) {
+        this.reinstateLayoutBreakpoint = 0;
         this.displayedLayout = this.layout;
       }
     });
@@ -205,6 +207,7 @@ export class GuxPaginationBeta implements ComponentInterface {
             />
           )}
         </div>
+        <div class="gux-pagination-spacer"></div>
         <div class="gux-pagination-change">
           <gux-pagination-buttons-beta
             layout={this.displayedLayout}

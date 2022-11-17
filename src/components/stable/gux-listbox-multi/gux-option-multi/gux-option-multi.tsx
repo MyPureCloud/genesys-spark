@@ -15,6 +15,10 @@ import { randomHTMLId } from '../../../../utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
 
+/**
+ * @slot - text
+ */
+
 @Component({
   styleUrl: 'gux-option-multi.less',
   tag: 'gux-option-multi'
@@ -101,7 +105,9 @@ export class GuxOptionMulti {
         aria-selected={this.selected.toString()}
         aria-disabled={this.disabled.toString()}
       >
-        <div class="gux-option">
+        {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text. 
+        This attribute is required because we need to get the slotted text and exclude the screen reader text. */}
+        <div gux-slot-container class="gux-option">
           <slot />
         </div>
         {this.renderCustomOptionInstructions()}

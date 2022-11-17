@@ -1,6 +1,7 @@
 {
-  "filterResults": "Psaním můžete filtrovat výsledky rozevíracího seznamu",
+  "textInputResults": "Psaním můžete filtrovat výsledky rozevíracího seznamu",
   "noSelection": "Vybrat…",
   "dropdown": "Rozevírací seznam",
-  "numberSelected": "Vybráno {numberSelected}"
+  "numberSelected": "Vybráno {numberSelected}",
+  "pressEnterToCreate": "Stiskem klávesy Enter vytvoříte novou možnost, {textInputValue}"
 }

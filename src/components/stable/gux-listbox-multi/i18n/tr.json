@@ -1,3 +1,5 @@
 {
-  "noMatches": "Eşleşme yok"
+  "add": "{name} ekle",
+  "noMatches": "Eşleşme yok",
+  "loading": "Yükleniyor..."
 }

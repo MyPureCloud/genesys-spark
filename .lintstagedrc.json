@@ -1,0 +1,6 @@
+{
+  "*.{css,html,less}": ["stylelint --fix", "prettier --write"],
+  "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
+  "*.{js,jsx,json}": "prettier --write",
+  "*.svg": "svgo -i"
+}

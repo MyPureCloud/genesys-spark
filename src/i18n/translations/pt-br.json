@@ -20,10 +20,11 @@
     "clearSelection": "Limpar {numberSelected} itens selecionados"
   },
   "gux-dropdown-multi": {
-    "filterResults": "Digite para filtrar resultados da lista suspensa",
+    "textInputResults": "Digite para filtrar resultados da lista suspensa",
     "noSelection": "Selecione...",
     "dropdown": "Lista suspensa",
-    "numberSelected": "{numberSelected} selecionado(s)"
+    "numberSelected": "{numberSelected} selecionado(s)",
+    "pressEnterToCreate": "Pressione Enter para criar uma nova opção, {textInputValue}"
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -154,10 +155,13 @@
     "clear": "Limpar"
   },
   "gux-listbox-multi": {
-    "noMatches": "Nenhuma correspondência"
+    "add": "Adicionar {name}",
+    "noMatches": "Nenhuma correspondência",
+    "loading": "Carregando..."
   },
   "gux-listbox": {
-    "noMatches": "Nenhuma correspondência"
+    "noMatches": "Nenhuma correspondência",
+    "loading": "Carregando..."
   },
   "gux-pagination-cursor": {
     "previous": "Anterior",

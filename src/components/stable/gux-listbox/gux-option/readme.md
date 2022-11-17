@@ -15,6 +15,13 @@
 | `value`    | `value`    |             | `string`  | `undefined` |
 
 
+## Slots
+
+| Slot | Description |
+| ---- | ----------- |
+|      | text        |
+
+
 ## Dependencies
 
 ### Used by

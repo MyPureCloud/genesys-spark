@@ -1,3 +1,5 @@
 {
-  "noMatches": "無相符項"
+  "add": "新增{name}",
+  "noMatches": "無相符項",
+  "loading": "載入中..."
 }

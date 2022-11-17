@@ -1,6 +1,7 @@
 {
-  "filterResults": "Skriv för att filtrera resultatet i listrutan",
+  "textInputResults": "Skriv för att filtrera resultatet i listrutan",
   "noSelection": "Välj...",
   "dropdown": "Listruta",
-  "numberSelected": "{numberSelected} valda"
+  "numberSelected": "{numberSelected} valda",
+  "pressEnterToCreate": "Tryck på Retur för att skapa ett nytt alternativ, {textInputValue}"
 }

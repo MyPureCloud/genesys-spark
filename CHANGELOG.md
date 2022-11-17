@@ -2,6 +2,119 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.43.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.42.0...v3.43.0) (2022-11-17)
+
+
+### Features
+
+* **truncate:** enabled shadow dom ([7e6e6cb](https://github.com/MyPureCloud/genesys-webcomponents/commit/7e6e6cbb8eac1b308b99c828196b62e74c5d653e))
+
+
+### Bug Fixes
+
+* **calendar:** improved startDayOfWeek type ([42c3f3b](https://github.com/MyPureCloud/genesys-webcomponents/commit/42c3f3b1f5ecb4ac277a1cfdff2ea171764d63b2))
+* **dropdown:** changes lifecycle to fix vue-2 issue ([504a9eb](https://github.com/MyPureCloud/genesys-webcomponents/commit/504a9ebf1f83a3668fd4c51e25b18f08771c96c1))
+
+## [3.42.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.9...v3.42.0) (2022-11-16)
+
+
+### Features
+
+* **calendar:** added start-day-of-week prop ([0945060](https://github.com/MyPureCloud/genesys-webcomponents/commit/09450606e72fbeac120e5bf886624c45cb596440))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([432e917](https://github.com/MyPureCloud/genesys-webcomponents/commit/432e91708dfbe01638f4401d1be7a24802d59768))
+
+### [3.41.9](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.8...v3.41.9) (2022-11-16)
+
+### [3.41.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.7...v3.41.8) (2022-11-15)
+
+
+### Bug Fixes
+
+* **gux-dropdown-multi:** get typeahead text by targeting an attribute instead of a class ([58bf324](https://github.com/MyPureCloud/genesys-webcomponents/commit/58bf324b010dbe901511e1af4cb0cdcda64e66a7))
+
+### [3.41.7](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.6...v3.41.7) (2022-11-15)
+
+### [3.41.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.5...v3.41.6) (2022-11-14)
+
+
+### Bug Fixes
+
+* **datepicker:** addition of flip modifier to popper ([b557b7c](https://github.com/MyPureCloud/genesys-webcomponents/commit/b557b7cdf82f0f6cac162c850cedd4a511075386))
+
+### [3.41.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.4...v3.41.5) (2022-11-14)
+
+### [3.41.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.3...v3.41.4) (2022-11-11)
+
+
+### Bug Fixes
+
+* **table:** add px unit to columns when scaling ([1e6e2dd](https://github.com/MyPureCloud/genesys-webcomponents/commit/1e6e2ddb26236ef36ed496e808f7b8a6210d1650))
+
+### [3.41.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.2...v3.41.3) (2022-11-09)
+
+### [3.41.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.1...v3.41.2) (2022-11-09)
+
+
+### Bug Fixes
+
+* **listbox:** changed keypress search ([8d220c4](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d220c428d6e8656de3a55acfa0645bc7822ed20))
+
+### [3.41.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.0...v3.41.1) (2022-11-09)
+
+
+### Bug Fixes
+
+* **commitlint:** commitlint now only looks at relevant commits ([62192ab](https://github.com/MyPureCloud/genesys-webcomponents/commit/62192ab1cb6fa7d332ad6d41f264fc373094c832))
+
+## [3.41.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.40.0...v3.41.0) (2022-11-08)
+
+
+### Features
+
+* **pagination:** default number of pages to 1 ([38d63ab](https://github.com/MyPureCloud/genesys-webcomponents/commit/38d63ab4af57cbf8285097a52bdd81d4f333e419))
+
+## [3.40.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.39.2...v3.40.0) (2022-11-08)
+
+
+### Features
+
+* **table-toolbar:** address PR comments ([9c0540d](https://github.com/MyPureCloud/genesys-webcomponents/commit/9c0540d800074dfee487345ca2f273f0aae4c05a))
+* **table-toolbar:** remove eslint comment ([7d9cb2d](https://github.com/MyPureCloud/genesys-webcomponents/commit/7d9cb2d465e876c0e190fc2179f0f4313ce01a50))
+* **table-toolbar:** return void ([cd68571](https://github.com/MyPureCloud/genesys-webcomponents/commit/cd685719307222a0338b7479a78d69a8abc9444f))
+* **table-toolbar:** utilize button-slot of button ([bbab4cf](https://github.com/MyPureCloud/genesys-webcomponents/commit/bbab4cf58f6d58127241129ac0a3204bc64c689f))
+* **toolbar:** skeleton commit ([e5d95f3](https://github.com/MyPureCloud/genesys-webcomponents/commit/e5d95f3cb01726c7f849bc73590188d4adc9a9f8))
+
+### [3.39.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.39.1...v3.39.2) (2022-11-07)
+
+### [3.39.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.39.0...v3.39.1) (2022-11-07)
+
+## [3.39.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.37.0...v3.39.0) (2022-11-04)
+
+
+### Features
+
+* **alert:** addition of alert component ([fc7bb2e](https://github.com/MyPureCloud/genesys-webcomponents/commit/fc7bb2ef9f2c2f5c93c8125d7950a293ba97966c))
+* **dropdown:** added loading state ([b050d6e](https://github.com/MyPureCloud/genesys-webcomponents/commit/b050d6ef71ade79776ad5ed14c361bcc043671df))
+* **icon:** added better type information to icon-name property ([fa089b4](https://github.com/MyPureCloud/genesys-webcomponents/commit/fa089b4020af429b6f8c1af39814005e555ef328))
+
+
+### Bug Fixes
+
+* **css:** increase step button icon size in gux-form-field-number ([e74fd9a](https://github.com/MyPureCloud/genesys-webcomponents/commit/e74fd9af198496523affdd81bee795492cd643aa))
+* **css:** specify width of slotted select in gux-form-field-select ([4f9b9dd](https://github.com/MyPureCloud/genesys-webcomponents/commit/4f9b9dd505340a1cd77996481d92e628335444d7))
+* **gux-listbox-multi:** fix regression that caused no matches container to hide create new option ([#971](https://github.com/MyPureCloud/genesys-webcomponents/issues/971)) ([34004f3](https://github.com/MyPureCloud/genesys-webcomponents/commit/34004f308c996c3d3e1b4204a837b8818f075efd))
+* **gux-listbox-multi:** fix tag render issue ([#970](https://github.com/MyPureCloud/genesys-webcomponents/issues/970)) ([606ea71](https://github.com/MyPureCloud/genesys-webcomponents/commit/606ea71cb9be0f0d69b2f26f4ad6c279ba2c285f))
+* **gux-tab-advanced-list:** turn off disable when tabs are less then the max number ([61f13c8](https://github.com/MyPureCloud/genesys-webcomponents/commit/61f13c8a4b2a2f3deacc5e9e74f776eb5d4c5dae))
+* **pagination-beta:** improved space dependent layout switching logic ([bff7149](https://github.com/MyPureCloud/genesys-webcomponents/commit/bff71494a5e70ebac1f12fb8a8a2f4cff4d78906))
+* **pr-comment:** addressed PR comment ([0c4aa4a](https://github.com/MyPureCloud/genesys-webcomponents/commit/0c4aa4a9f60531ebc2cffd28c7c1c6bf9671ec15))
+* **pr-comment:** addressed PR comment ([4956dd3](https://github.com/MyPureCloud/genesys-webcomponents/commit/4956dd3160f5f11880a536f923381d1159d43d2e))
+* **pr-comment:** addressed PR comments ([cadcbf1](https://github.com/MyPureCloud/genesys-webcomponents/commit/cadcbf142bdf3ee991d337143b6e5758b2d5f083))
+* **version:** bump version to fix Jenkins build ([3ae8b72](https://github.com/MyPureCloud/genesys-webcomponents/commit/3ae8b72c5f48eae63f252828cdd8c95b50d5db99))
+
 ## [3.37.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.36.5...v3.37.0) (2022-10-24)
 
 

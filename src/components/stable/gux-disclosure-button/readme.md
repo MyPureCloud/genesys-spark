@@ -21,6 +21,13 @@ This is a UI button component that is used to open or dismiss an associated pane
 | `active` | Return the state of the components panel on state change | `CustomEvent<boolean>` |
 
 
+## Slots
+
+| Slot              | Description               |
+| ----------------- | ------------------------- |
+| `"panel-content"` | Slot for content of panel |
+
+
 ## Dependencies
 
 ### Depends on

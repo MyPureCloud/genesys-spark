@@ -61,17 +61,12 @@ export class GuxPagination implements ComponentInterface {
   private guxpaginationchange: EventEmitter<GuxPaginationState>;
 
   private setPage(page: number): void {
-    if (page < 0) {
-      if (this.totalPages > 0) {
-        this.setPage(1);
-      } else {
-        this.setPage(0);
-      }
-
+    if (page <= 0) {
+      this.setPage(1);
       return;
     }
 
-    const totalPages = this.calculatTotalPages();
+    const totalPages = this.calculateTotalPages();
     if (page > totalPages) {
       this.setPage(totalPages);
       return;
@@ -84,8 +79,8 @@ export class GuxPagination implements ComponentInterface {
     });
   }
 
-  private calculatTotalPages(): number {
-    return Math.ceil(this.totalItems / this.itemsPerPage);
+  private calculateTotalPages(): number {
+    return Math.max(1, Math.ceil(this.totalItems / this.itemsPerPage));
   }
 
   private calculateCurrentPage(): number {
@@ -138,7 +133,7 @@ export class GuxPagination implements ComponentInterface {
   }
 
   componentWillRender(): void {
-    this.totalPages = this.calculatTotalPages();
+    this.totalPages = this.calculateTotalPages();
     this.currentPage = this.calculateCurrentPage();
   }
 

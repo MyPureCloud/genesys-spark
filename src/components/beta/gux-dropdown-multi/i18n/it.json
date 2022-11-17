@@ -1,6 +1,7 @@
 {
-  "filterResults": "Digitare per filtrare i risultati dell'elenco a discesa",
+  "textInputResults": "Digitare per filtrare i risultati dell'elenco a discesa",
   "noSelection": "Selezionare...",
   "dropdown": "A discesa",
-  "numberSelected": "{numberSelected} selezionato/i"
+  "numberSelected": "{numberSelected} selezionato/i",
+  "pressEnterToCreate": "Premere Invio per creare una nuova opzione, {textInputValue}"
 }

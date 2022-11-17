@@ -26,7 +26,7 @@
 
 <h2>Example 2 - add tab button (with text)</h2>
 <gux-tabs-advanced>
-  <gux-tab-advanced-list slot="tab-list">
+  <gux-tab-advanced-list slot="tab-list" tab-limit="10">
     <gux-tab-advanced tab-id="2-1">Tab Header 1</gux-tab-advanced>
     <gux-tab-advanced tab-id="2-2">
       <span
@@ -86,11 +86,12 @@
 </div>
 
 <h2>Example 4 - dropdown options</h2>
-<gux-tabs-advanced tab-limit="10">
+<gux-tabs-advanced>
   <gux-tab-advanced-list
     slot="tab-list"
     allow-sort="true"
     show-new-tab-button="true"
+    tab-limit="5"
   >
     <gux-tab-advanced tab-id="4-1">
       Tab Header 1
@@ -240,11 +241,12 @@
 </gux-tabs-advanced>
 
 <h2>Example 5 - label with icon</h2>
-<gux-tabs-advanced tab-limit="10">
+<gux-tabs-advanced>
   <gux-tab-advanced-list
     slot="tab-list"
     allow-sort="false"
     show-new-tab-button="true"
+    tab-limit="10"
   >
     <gux-tab-advanced tab-id="5-1">
       <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
@@ -302,11 +304,12 @@
 </gux-tabs-advanced>
 
 <h2>Example 6 - dropdown options and no dropdown options</h2>
-<gux-tabs-advanced tab-limit="10">
+<gux-tabs-advanced>
   <gux-tab-advanced-list
     slot="tab-list"
     allow-sort="false"
     show-new-tab-button="true"
+    tab-limit="10"
   >
     <gux-tab-advanced tab-id="6-1"> Tab Header 1 long long </gux-tab-advanced>
     <gux-tab-advanced tab-id="6-2">

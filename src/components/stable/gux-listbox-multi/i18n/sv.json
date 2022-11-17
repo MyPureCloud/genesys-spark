@@ -1,3 +1,5 @@
 {
-  "noMatches": "Inga matchningar"
+  "add": "Lägg till {name}",
+  "noMatches": "Inga matchningar",
+  "loading": "Läser in..."
 }

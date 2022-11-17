@@ -1,6 +1,7 @@
 {
-  "filterResults": "הקלד כדי לסנן תוצאות ברשימה נפתחת",
+  "textInputResults": "הקלד כדי לסנן תוצאות ברשימה נפתחת",
   "noSelection": "בחר...",
   "dropdown": "רשימה נפתחת",
-  "numberSelected": "{numberSelected} נבחרו"
+  "numberSelected": "{numberSelected} נבחרו",
+  "pressEnterToCreate": "הקש Enter כדי ליצור אפשרות חדשה, {textInputValue}"
 }

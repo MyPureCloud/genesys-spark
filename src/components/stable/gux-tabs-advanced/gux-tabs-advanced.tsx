@@ -14,6 +14,12 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
+
+/**
+ * @slot tab-list - Slot for gux-tab-advanced-list element
+ * @slot - collection of gux-tab-advanced-panel elements
+ */
+
 @Component({
   styleUrl: 'gux-tabs-advanced.less',
   tag: 'gux-tabs-advanced',

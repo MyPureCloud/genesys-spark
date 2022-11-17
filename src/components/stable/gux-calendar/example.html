@@ -10,12 +10,31 @@
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
 </gux-calendar>
 
+<h2>Start Day of Week</h2>
+<div class="container">
+  <div class="item">
+    <h3>Monday</h3>
+    <gux-calendar start-day-of-week="1" mode="single"></gux-calendar>
+  </div>
+
+  <div class="item">
+    <h3>Saturday</h3>
+    <gux-calendar start-day-of-week="6" mode="single"></gux-calendar>
+  </div>
+
+  <div class="item">
+    <h3>Sunday</h3>
+    <gux-calendar start-day-of-week="7" mode="single"></gux-calendar>
+  </div>
+</div>
+
 <h2>Localised</h2>
 <div class="container">
   <div class="item">
     <h3>ar</h3>
     <gux-calendar lang="ar" mode="single"></gux-calendar>
   </div>
+
   <div class="item">
     <h3>de</h3>
     <gux-calendar lang="de" mode="single"></gux-calendar>
@@ -47,8 +66,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 10px;
     align-content: stretch;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .item {
