@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.43.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.42.0...v3.43.0) (2022-11-17)
+
+
+### Features
+
+* **truncate:** enabled shadow dom ([7e6e6cb](https://github.com/MyPureCloud/genesys-webcomponents/commit/7e6e6cbb8eac1b308b99c828196b62e74c5d653e))
+
+
+### Bug Fixes
+
+* **calendar:** improved startDayOfWeek type ([42c3f3b](https://github.com/MyPureCloud/genesys-webcomponents/commit/42c3f3b1f5ecb4ac277a1cfdff2ea171764d63b2))
+* **dropdown:** changes lifecycle to fix vue-2 issue ([504a9eb](https://github.com/MyPureCloud/genesys-webcomponents/commit/504a9ebf1f83a3668fd4c51e25b18f08771c96c1))
+
 ## [3.42.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.9...v3.42.0) (2022-11-16)
 
 
