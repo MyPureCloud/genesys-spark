@@ -1,12 +1,16 @@
 @import (reference) '../../../style/spacing.less';
 
-gux-truncate-beta {
+:host {
   display: inline-block;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: inherit;
+}
+
+::slotted(*) {
+  display: inline;
 }
 
 .gux-truncate-multi-line {
