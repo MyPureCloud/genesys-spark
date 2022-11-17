@@ -38,6 +38,26 @@ Type: `Promise<void>`
 
 
 
+### `guxFocusItemByClosestId(id: string) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `guxFocusItemById(id: string) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 
 ## Dependencies
 
