@@ -13,7 +13,7 @@ This is a simple calendar component, that allows the user to select a date.
 | `minDate`        | `min-date`          | The min date selectable                                                                                       | `string`                                      | `''`                   |
 | `mode`           | `mode`              | The calendar mode (can be single or range)                                                                    | `CalendarModes.Range \| CalendarModes.Single` | `CalendarModes.Single` |
 | `numberOfMonths` | `number-of-months`  | The calendar number of months displayed                                                                       | `number`                                      | `1`                    |
-| `startDayOfWeek` | `start-day-of-week` | The day of the week to start each calendar row. ISO weekday number ie 1 - Monday, 2 - Tuesday, ... 7 - Sunday | `number`                                      | `undefined`            |
+| `startDayOfWeek` | `start-day-of-week` | The day of the week to start each calendar row. ISO weekday number ie 1 - Monday, 2 - Tuesday, ... 7 - Sunday | `0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7`        | `undefined`            |
 | `value`          | `value`             | The calendar current selected date                                                                            | `string`                                      | `''`                   |
 
 
