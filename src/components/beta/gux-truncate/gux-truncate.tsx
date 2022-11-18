@@ -7,8 +7,10 @@ import {
   Method,
   Prop
 } from '@stencil/core';
+
 import { OnMutation } from '../../../utils/decorator/on-mutation';
 import { OnResize } from '../../../utils/decorator/on-resize';
+import { getTextContentFromNodes } from '../../../utils/dom/get-text-content-from-nodes';
 
 /**
  * @slot - text node or element containing text to truncate
@@ -53,7 +55,7 @@ export class GuxTruncate {
   }
 
   private getTooltipContent(): string {
-    return this.root.textContent.trim() || '';
+    return getTextContentFromNodes(Array.from(this.root.childNodes)) || '';
   }
 
   private needsTruncation(): boolean {
