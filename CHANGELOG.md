@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.43.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.0...v3.43.1) (2022-11-18)
+
+
+### Bug Fixes
+
+* **dropdown:** enter on a fully filtered list does not select an item ([5b70ea1](https://github.com/MyPureCloud/genesys-webcomponents/commit/5b70ea19c0a52acaab5b41c90230f0a4a79b6e53))
+
 ## [3.43.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.42.0...v3.43.0) (2022-11-17)
 
 
