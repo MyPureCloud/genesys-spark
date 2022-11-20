@@ -8,7 +8,9 @@ export function setAccent(
 ): void {
   ([].concat(actions) as HTMLGuxTableToolbarCustomActionElement[]).forEach(
     action => {
-      action.accent = accent;
+      if (action != null) {
+        action.accent = accent;
+      }
     }
   );
 }
@@ -20,7 +22,9 @@ export function expandActions(
 ): void {
   ([].concat(actions) as HTMLGuxTableToolbarCustomActionElement[]).forEach(
     action => {
-      action.iconOnly = false;
+      if (action != null) {
+        action.iconOnly = false;
+      }
     }
   );
 }
@@ -32,7 +36,9 @@ export function collapseActions(
 ): void {
   ([].concat(actions) as HTMLGuxTableToolbarCustomActionElement[]).forEach(
     action => {
-      action.iconOnly = true;
+      if (action != null) {
+        action.iconOnly = true;
+      }
     }
   );
 }
@@ -42,12 +48,16 @@ export function collapseActionsAll(
   actionsPerm: HTMLGuxTableToolbarCustomActionElement[],
   actionPrimary: HTMLGuxTableToolbarCustomActionElement
 ): void {
-  const arrayActions = actionsPerm.concat(
-    actionsFilterContextual,
-    actionPrimary
-  );
-  arrayActions.forEach(action => {
-    action.iconOnly = true;
+  (
+    [].concat(
+      actionsFilterContextual,
+      actionsPerm,
+      actionPrimary
+    ) as HTMLGuxTableToolbarCustomActionElement[]
+  ).forEach(action => {
+    if (action != null) {
+      action.iconOnly = true;
+    }
   });
 }
 
@@ -56,11 +66,15 @@ export function expandActionsAll(
   actionsPerm: HTMLGuxTableToolbarCustomActionElement[],
   actionPrimary: HTMLGuxTableToolbarCustomActionElement
 ): void {
-  const arrayActions = actionsFilterContextual.concat(
-    actionsPerm,
-    actionPrimary
-  );
-  arrayActions.forEach(action => {
-    action.iconOnly = false;
+  (
+    [].concat(
+      actionsPerm,
+      actionPrimary,
+      actionsFilterContextual
+    ) as HTMLGuxTableToolbarCustomActionElement[]
+  ).forEach(action => {
+    if (action != null) {
+      action.iconOnly = false;
+    }
   });
 }

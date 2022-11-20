@@ -10,6 +10,7 @@ import {
 import { GuxTableToolbarLayout } from './gux-table-toolbar.types';
 import { MIN_CONTROL_SPACING } from './gux-table-toolbar.constants';
 import { OnResize } from '@utils/decorator/on-resize';
+import { OnMutation } from '@utils/decorator/on-mutation';
 import { trackComponent } from '@utils/tracking/usage';
 import {
   setAccent,
@@ -40,11 +41,19 @@ export class GuxTableToolbar {
   @State()
   displayedLayout: GuxTableToolbarLayout = 'full';
 
+  @State()
+  hasContextDivider: boolean = false;
+
   minimumSizes: { full: number; iconOnly: number; condensed: number } = {
     full: 0,
     iconOnly: 0,
     condensed: 0
   };
+
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    this.hasContextDivider = this.needsContextDivider();
+  }
 
   /**
    * Record the minimum size for the current layout.
@@ -87,39 +96,60 @@ export class GuxTableToolbar {
   }
 
   get permanentActions(): HTMLGuxTableToolbarCustomActionElement[] | null {
-    return Array.from(
-      this.permanentSlot?.querySelectorAll(
-        'gux-table-toolbar-action, gux-table-toolbar-custom-action'
-      )
-    );
+    if (this.permanentSlot?.hasChildNodes) {
+      return Array.from(
+        this.permanentSlot?.querySelectorAll(
+          'gux-table-toolbar-action, gux-table-toolbar-custom-action'
+        )
+      );
+    }
   }
 
   get menuActionsItems(): HTMLGuxTableToolbarCustomActionElement[] | null {
-    return Array.from(
-      this.menuActionSlot?.querySelectorAll(
-        'gux-table-toolbar-action, gux-table-toolbar-custom-action'
-      )
-    );
+    if (this.menuActionSlot?.hasChildNodes) {
+      return Array.from(
+        this.menuActionSlot?.querySelectorAll(
+          'gux-table-toolbar-action, gux-table-toolbar-custom-action'
+        )
+      );
+    }
   }
 
   get contextualActions(): HTMLGuxTableToolbarCustomActionElement[] | null {
-    return Array.from(
-      this.contextualSlot?.querySelectorAll(
-        'gux-table-toolbar-action, gux-table-toolbar-custom-action'
-      )
-    );
+    if (this.contextualSlot?.hasChildNodes) {
+      return Array.from(
+        this.contextualSlot?.querySelectorAll(
+          'gux-table-toolbar-action, gux-table-toolbar-custom-action'
+        )
+      );
+    }
   }
 
   get filterActions(): HTMLGuxTableToolbarCustomActionElement[] | null {
-    return Array.from(
-      this.filterSlot?.querySelectorAll(
-        'gux-table-toolbar-action, gux-table-toolbar-custom-action'
-      )
-    );
+    if (this.filterSlot?.hasChildNodes) {
+      return Array.from(
+        this.filterSlot?.querySelectorAll(
+          'gux-table-toolbar-action, gux-table-toolbar-custom-action'
+        )
+      );
+    }
   }
 
   get allFilterContextual(): HTMLGuxTableToolbarCustomActionElement[] | null {
-    return this.filterActions.concat(this.contextualActions);
+    return this.filterActions?.concat(this.contextualActions);
+  }
+
+  private needsContextDivider(): boolean {
+    return (
+      this.contextualActions?.length &&
+      this.contextualSlot !== this.root.lastElementChild
+    );
+  }
+
+  private renderMenu(): boolean {
+    return Boolean(
+      this.menuActionsItems?.length || this.displayedLayout == 'condensed'
+    );
   }
 
   private renderFullLayout(): void {
@@ -151,14 +181,15 @@ export class GuxTableToolbar {
       this.permanentActions,
       this.primaryAction
     );
-    this.root?.appendChild(this.permanentSlot);
-    this.root?.appendChild(this.primaryAction);
+    this.permanentActions && this.root?.appendChild(this.permanentSlot);
+    this.primaryAction && this.root?.appendChild(this.primaryAction);
   }
 
   private renderCondensedLayout(): void {
     this.displayedLayout = 'condensed';
-    this.menuActionSlot?.appendChild(this.permanentSlot);
-    this.menuActionSlot?.appendChild(this.primaryAction);
+    this.permanentActions &&
+      this.menuActionSlot?.appendChild(this.permanentSlot);
+    this.primaryAction && this.menuActionSlot?.appendChild(this.primaryAction);
     collapseActions(this.allFilterContextual);
     expandActions(this.permanentActions);
     expandActions(this.primaryAction);
@@ -167,6 +198,7 @@ export class GuxTableToolbar {
 
   componentWillLoad() {
     trackComponent(this.root);
+    this.hasContextDivider = this.needsContextDivider();
   }
 
   componentDidLoad(): void {
@@ -216,13 +248,20 @@ export class GuxTableToolbar {
         </div>
         <div class="section-spacing" />
         <div class="gux-contextual-permanent-primary">
-          <slot name="contextual-actions"></slot>
-          <div class="separator" />
-          <slot name="permanent-actions"></slot>
-          <gux-table-toolbar-menu-button>
-            <slot name="menu-actions"></slot>
-          </gux-table-toolbar-menu-button>
-          <slot name="primary-action"></slot>
+          <div
+            class={{
+              'gux-contextual-wrapper': this.hasContextDivider
+            }}
+          >
+            <slot name="contextual-actions"></slot>
+          </div>
+          <div class="gux-permanent-menu-primary-wrapper">
+            <slot name="permanent-actions"></slot>
+            <gux-table-toolbar-menu-button show-menu={this.renderMenu()}>
+              <slot name="menu-actions"></slot>
+            </gux-table-toolbar-menu-button>
+            <slot name="primary-action"></slot>
+          </div>
         </div>
       </Host>
     ) as JSX.Element;

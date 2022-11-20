@@ -4,11 +4,14 @@
 @import (reference) '../../../../style/spacing.less';
 
 :host {
-  display: block;
-  margin: 0 @gux-spacing-2xs 0 @gux-spacing-2xs;
+  display: none;
   -webkit-user-select: none;
   user-select: none;
   .body-font();
+}
+
+:host(.gux-show-menu) {
+  display: block;
 }
 
 & > * {

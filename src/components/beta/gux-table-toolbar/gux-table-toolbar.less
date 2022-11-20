@@ -46,11 +46,17 @@
       align-items: center;
     }
 
-    .separator {
-      width: 1px;
-      margin-right: @gux-spacing-medium;
-      margin-left: @gux-spacing-medium;
-      background: @gux-grey-50;
+    .gux-contextual-wrapper {
+      padding-right: @spacing-xs;
+      border-right: 1px solid @gux-grey-50;
+    }
+
+    .gux-permanent-menu-primary-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: @spacing-2xs;
+      margin-left: @spacing-xs;
     }
   }
 }

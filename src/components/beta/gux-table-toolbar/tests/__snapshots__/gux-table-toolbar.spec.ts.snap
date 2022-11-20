@@ -8,29 +8,32 @@ exports[`gux-table-toolbar-beta #render should render table toolbar as expected 
     </div>
     <div class="section-spacing"></div>
     <div class="gux-contextual-permanent-primary">
-      <slot name="contextual-actions"></slot>
-      <div class="separator"></div>
-      <slot name="permanent-actions"></slot>
-      <gux-table-toolbar-menu-button>
-        <mock:shadow-root>
-          <gux-popup>
-            <div class="gux-toolbar-menu-container" slot="target">
-              <gux-button-slot-beta class="gux-menu-button">
-                <button aria-expanded="false" aria-haspopup="true" type="button">
-                  <gux-icon icon-name="menu-kebab-horizontal" screenreader-text="Additional Actions"></gux-icon>
-                </button>
-              </gux-button-slot-beta>
-            </div>
-            <div class="gux-list-container" slot="popup">
-              <gux-list>
-                <slot></slot>
-              </gux-list>
-            </div>
-          </gux-popup>
-        </mock:shadow-root>
-        <slot name="menu-actions"></slot>
-      </gux-table-toolbar-menu-button>
-      <slot name="primary-action"></slot>
+      <div class="gux-contextual-wrapper">
+        <slot name="contextual-actions"></slot>
+      </div>
+      <div class="gux-permanent-menu-primary-wrapper">
+        <slot name="permanent-actions"></slot>
+        <gux-table-toolbar-menu-button class="gux-show-menu" show-menu="">
+          <mock:shadow-root>
+            <gux-popup>
+              <div class="gux-toolbar-menu-container" slot="target">
+                <gux-button-slot-beta class="gux-menu-button">
+                  <button aria-expanded="false" aria-haspopup="true" type="button">
+                    <gux-icon icon-name="menu-kebab-horizontal" screenreader-text="Additional Actions"></gux-icon>
+                  </button>
+                </gux-button-slot-beta>
+              </div>
+              <div class="gux-list-container" slot="popup">
+                <gux-list>
+                  <slot></slot>
+                </gux-list>
+              </div>
+            </gux-popup>
+          </mock:shadow-root>
+          <slot name="menu-actions"></slot>
+        </gux-table-toolbar-menu-button>
+        <slot name="primary-action"></slot>
+      </div>
     </div>
   </mock:shadow-root>
   <div slot="search-and-filter">
