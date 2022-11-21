@@ -46,8 +46,7 @@
   <div class="form-element">
     <gux-form-field-dropdown label-position="above">
       <gux-dropdown
-        filterable
-        custom-filter
+        filter-type="prefix"
         id="pet"
         name="pet"
         formControlName="pet"
@@ -70,8 +69,7 @@
     <gux-form-field-dropdown label-position="above">
       <gux-dropdown-multi-beta
         #dropdownMulti
-        filterable
-        custom-filter
+        filter-type="custom"
         id="countriesVisited"
         name="countriesVisited"
         formControlName="countriesVisited"

@@ -55,6 +55,9 @@ export class GuxDropdownMulti {
   @Prop()
   placeholder: string;
 
+  /**
+   * deprecated will be removed in v4. Use filterType instead
+   */
   @Prop()
   filterable: boolean = false;
 
@@ -62,7 +65,7 @@ export class GuxDropdownMulti {
    * Override default filtering behavior
    */
   @Prop()
-  customFilter: boolean = false;
+  filterType: 'none' | 'prefix' | 'custom' = 'none';
 
   @Prop()
   hasError: boolean = false;
@@ -75,10 +78,6 @@ export class GuxDropdownMulti {
 
   @State()
   private textInput: string = '';
-
-  private hasTextInput(): boolean {
-    return this.filterable || this.hasCreate;
-  }
 
   /**
    * This event is emitted to request creating a new option
@@ -284,8 +283,20 @@ export class GuxDropdownMulti {
   componentWillRender(): void {
     this.validateValue(this.value);
     this.listboxElement.loading = this.loading;
-    this.listboxElement.customFilter = this.customFilter;
+    this.listboxElement.filterType = this.filterType;
     this.listboxElement.textInput = this.textInput;
+  }
+
+  private hasTextInput(): boolean {
+    return this.isFilterable() || this.hasCreate;
+  }
+
+  private isFilterable(): boolean {
+    return (
+      this.filterable ||
+      this.filterType === 'custom' ||
+      this.filterType === 'prefix'
+    );
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -403,7 +414,7 @@ export class GuxDropdownMulti {
     const textInputLength = textInput.length;
     if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
-      if (option && !this.customFilter) {
+      if (option && this.filterType == 'custom') {
         const optionSlotTextContent = option.querySelector(
           '[gux-slot-container]'
         )?.textContent;
@@ -555,7 +566,7 @@ export class GuxDropdownMulti {
     return [
       <div class="gux-dropdown-container">
         <gux-popup
-          expanded={this.expanded && (!this.loading || this.filterable)}
+          expanded={this.expanded && (!this.loading || this.isFilterable())}
           disabled={this.disabled}
         >
           {this.renderTarget()}

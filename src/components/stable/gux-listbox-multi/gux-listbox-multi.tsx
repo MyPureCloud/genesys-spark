@@ -63,7 +63,7 @@ export class GuxListboxMulti {
   textInput: string = '';
 
   @Prop()
-  customFilter: boolean = false;
+  filterType: 'none' | 'prefix' | 'custom' = 'none';
 
   @State()
   listboxOptions: HTMLGuxOptionMultiElement[] = [];
@@ -248,7 +248,7 @@ export class GuxListboxMulti {
       listboxOption.selected = this.getSelectedValues().includes(
         listboxOption.value
       );
-      if (!this.customFilter) {
+      if (this.filterType !== 'custom') {
         listboxOption.filtered = !listboxOption.textContent
           .toLowerCase()
           .startsWith(this.textInput.toLowerCase());
