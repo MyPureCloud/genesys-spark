@@ -18,7 +18,7 @@ import { OnResize } from '../../../utils/decorator/on-resize';
   styleUrl: 'gux-truncate.less',
   tag: 'gux-truncate-beta',
   // Popper tooltip cannot link to shadow dom element
-  shadow: false
+  shadow: true
 })
 export class GuxTruncate {
   private tooltipElement: HTMLGuxTooltipElement;
@@ -53,17 +53,12 @@ export class GuxTruncate {
   }
 
   private getTooltipContent(): string {
-    return (
-      this.root
-        .querySelector('.gux-truncate-slot-container')
-        ?.textContent.trim() || ''
-    );
+    return this.root.textContent.trim() || '';
   }
 
   private needsTruncation(): boolean {
-    const slotContainerElement: HTMLSpanElement = this.root.querySelector(
-      '.gux-truncate-slot-container'
-    );
+    const slotContainerElement: HTMLSpanElement =
+      this.root.shadowRoot.querySelector('.gux-truncate-slot-container');
     return (
       slotContainerElement?.scrollWidth > slotContainerElement?.offsetWidth ||
       slotContainerElement?.scrollHeight > slotContainerElement?.offsetHeight

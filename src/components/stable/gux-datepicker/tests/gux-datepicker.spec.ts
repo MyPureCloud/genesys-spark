@@ -24,7 +24,8 @@ describe('gux-datepicker', () => {
       `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" number-of-months="2" ></gux-datepicker>`,
       `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" min-date="2019-11-10" max-date="2019-12-31" number-of-months="2" ></gux-datepicker>`,
       `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" min-date="2019-11-10" max-date="2019-12-31" number-of-months="2" format="mm.dd.yyyy" ></gux-datepicker>`,
-      `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" number-of-months="2" disabled></gux-datepicker>`
+      `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" number-of-months="2" disabled></gux-datepicker>`,
+      `<gux-datepicker value="1997-08-15" start-day-of-week="6"></gux-datepicker>`
     ].forEach((input, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({

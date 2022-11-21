@@ -26,6 +26,8 @@ import { trackComponent } from '../../../usage-tracking';
 import { CalendarModes } from '../../../common-enums';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
+import { GuxCalendarDayOfWeek } from '../gux-calendar/gux-calendar.types';
+
 import translationResources from './i18n/en.json';
 import {
   GuxDatepickerMode,
@@ -93,6 +95,12 @@ export class GuxDatepicker {
    */
   @Prop({ mutable: true })
   numberOfMonths: number = 1;
+
+  /**
+   * The day of the week to start each calendar row. 1 - Monday, 2 - Tuesday, ... 7 - Sunday
+   */
+  @Prop()
+  startDayOfWeek: GuxCalendarDayOfWeek;
 
   /**
    * The min date selectable
@@ -715,6 +723,7 @@ export class GuxDatepicker {
         minDate={this.minDate}
         maxDate={this.maxDate}
         numberOfMonths={this.numberOfMonths}
+        startDayOfWeek={this.startDayOfWeek}
       />
     ) as JSX.Element;
   }

@@ -26,7 +26,12 @@ import { trackComponent } from '../../../usage-tracking';
 import { CalendarModes } from '../../../common-enums';
 import { getDesiredLocale, getStartOfWeek } from '../../../i18n';
 
-import { GuxCalendarMode, IDateElement } from './gux-calendar.types';
+import { firstDateInMonth, getWeekdays } from './gux-calendar.service';
+import {
+  GuxCalendarDayOfWeek,
+  GuxCalendarMode,
+  IDateElement
+} from './gux-calendar.types';
 
 @Component({
   styleUrl: 'gux-calendar.less',
@@ -67,8 +72,11 @@ export class GuxCalendar {
   @Prop()
   numberOfMonths: number = 1;
 
-  @State()
-  startDayOfWeek: number;
+  /**
+   * The day of the week to start each calendar row. ISO weekday number ie 1 - Monday, 2 - Tuesday, ... 7 - Sunday
+   */
+  @Prop({ mutable: true })
+  startDayOfWeek: GuxCalendarDayOfWeek;
 
   @State()
   previewValue: Date = new Date();
@@ -161,14 +169,6 @@ export class GuxCalendar {
     month.setMonth(month.getMonth() + index);
     const year = month.getFullYear();
     return year;
-  }
-
-  firstDateInMonth(month: number, year: number) {
-    const startDate = new Date(year, month, 1, 1, 0, 0, 0);
-    const firstDayOfMonth = startDate.getDay();
-    const firstDayOffset =
-      (-1 * (this.startDayOfWeek - firstDayOfMonth - 7)) % 7;
-    return new Date(startDate.getTime() - firstDayOffset * (86400 * 1000));
   }
 
   outOfBounds(date: Date): boolean {
@@ -278,7 +278,7 @@ export class GuxCalendar {
     month.setMonth(month.getMonth() + index);
     const monthIndex = month.getMonth();
     const year = month.getFullYear();
-    const startDate = this.firstDateInMonth(monthIndex, year);
+    const startDate = firstDateInMonth(monthIndex, year, this.startDayOfWeek);
     const datesArray = this.generateDatesFrom(monthIndex, startDate, 42);
     return this.create2DArray(datesArray, 7);
   }
@@ -430,28 +430,11 @@ export class GuxCalendar {
     }
   }
 
-  shiftArray(arr: string[], n: number): string[] {
-    const times = n > arr.length ? n % arr.length : n;
-    return arr.concat(arr.splice(0, times));
-  }
-
-  getWeekdays(): string[] {
-    const days: string[] = [];
-    // Sunday
-    const day = new Date(1970, 0, 4);
-    for (let i = 0; i < 7; i++) {
-      const weekday = day.toLocaleString(this.locale, { weekday: 'narrow' });
-      days.push(weekday);
-      day.setDate(day.getDate() + 1);
-    }
-    return this.shiftArray(days, this.startDayOfWeek);
-  }
-
   componentWillLoad() {
     trackComponent(this.root, { variant: this.mode });
     this.locale = getDesiredLocale(this.root);
 
-    this.startDayOfWeek = getStartOfWeek(this.locale);
+    this.startDayOfWeek = this.startDayOfWeek || getStartOfWeek(this.locale);
 
     if (!this.value) {
       const now = new Date();
@@ -488,7 +471,9 @@ export class GuxCalendar {
     return (
       <table>
         <tr>
-          {this.getWeekdays().map(day => (<th>{day}</th>) as JSX.Element)}
+          {getWeekdays(this.locale, this.startDayOfWeek).map(
+            day => (<th>{day}</th>) as JSX.Element
+          )}
         </tr>
         {this.getMonthDays(index).map(
           week =>

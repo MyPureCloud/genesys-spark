@@ -198,12 +198,14 @@ export class GuxDropdown {
     this.guxcollapsed.emit();
   }
 
+  connectedCallback(): void {
+    this.listboxElement = this.root.querySelector('gux-listbox');
+    this.validateValue(this.value);
+  }
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-
-    this.listboxElement = this.root.querySelector('gux-listbox');
-    this.validateValue(this.value);
 
     onInputDisabledStateChange(this.root, () => {
       forceUpdate(this.root);
@@ -400,7 +402,7 @@ export class GuxDropdown {
         class={{
           'gux-target-container-expanded': this.expanded && this.isFilterable(),
           'gux-target-container-collapsed': !(
-            this.expanded && this.isFilterable
+            this.expanded && this.isFilterable()
           ),
           'gux-error': this.hasError
         }}

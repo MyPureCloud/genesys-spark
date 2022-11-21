@@ -109,9 +109,15 @@ function findLocaleInDom(element: HTMLElement): string {
   }
 }
 
-export function getStartOfWeek(locale: string = DEFAULT_LOCALE): number {
+type WeekStartDayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+
+export function getStartOfWeek(
+  locale: string = DEFAULT_LOCALE
+): WeekStartDayOfWeek {
   const startOfWeekData: StartOfWeek = startOfWeekDataUntyped;
-  return startOfWeekData[locale]
-    ? startOfWeekData[locale]
-    : startOfWeekData[DEFAULT_LOCALE];
+  return (
+    startOfWeekData[locale]
+      ? startOfWeekData[locale]
+      : startOfWeekData[DEFAULT_LOCALE]
+  ) as WeekStartDayOfWeek;
 }

@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.43.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.1...v3.43.2) (2022-11-21)
+
+### [3.43.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.0...v3.43.1) (2022-11-18)
+
+
+### Bug Fixes
+
+* **dropdown:** enter on a fully filtered list does not select an item ([5b70ea1](https://github.com/MyPureCloud/genesys-webcomponents/commit/5b70ea19c0a52acaab5b41c90230f0a4a79b6e53))
+
+## [3.43.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.42.0...v3.43.0) (2022-11-17)
+
+
+### Features
+
+* **truncate:** enabled shadow dom ([7e6e6cb](https://github.com/MyPureCloud/genesys-webcomponents/commit/7e6e6cbb8eac1b308b99c828196b62e74c5d653e))
+
+
+### Bug Fixes
+
+* **calendar:** improved startDayOfWeek type ([42c3f3b](https://github.com/MyPureCloud/genesys-webcomponents/commit/42c3f3b1f5ecb4ac277a1cfdff2ea171764d63b2))
+* **dropdown:** changes lifecycle to fix vue-2 issue ([504a9eb](https://github.com/MyPureCloud/genesys-webcomponents/commit/504a9ebf1f83a3668fd4c51e25b18f08771c96c1))
+
+## [3.42.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.9...v3.42.0) (2022-11-16)
+
+
+### Features
+
+* **calendar:** added start-day-of-week prop ([0945060](https://github.com/MyPureCloud/genesys-webcomponents/commit/09450606e72fbeac120e5bf886624c45cb596440))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([432e917](https://github.com/MyPureCloud/genesys-webcomponents/commit/432e91708dfbe01638f4401d1be7a24802d59768))
+
+### [3.41.9](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.8...v3.41.9) (2022-11-16)
+
 ### [3.41.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.41.7...v3.41.8) (2022-11-15)
 
 
