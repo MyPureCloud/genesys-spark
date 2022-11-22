@@ -31,6 +31,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../usage-tracking';
+import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 
 import translationResources from './i18n/en.json';
 
@@ -55,7 +56,7 @@ export class GuxListbox {
   filter: string = '';
 
   @Prop()
-  filterType: 'none' | 'prefix' | 'custom' = 'none';
+  filterType: GuxFilterTypes = 'none';
 
   @Prop()
   loading: boolean = false;

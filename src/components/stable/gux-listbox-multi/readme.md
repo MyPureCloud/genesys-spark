@@ -5,14 +5,14 @@
 
 ## Properties
 
-| Property        | Attribute         | Description | Type                             | Default     |
-| --------------- | ----------------- | ----------- | -------------------------------- | ----------- |
-| `filter`        | `filter`          |             | `string`                         | `''`        |
-| `filterType`    | `filter-type`     |             | `"custom" \| "none" \| "prefix"` | `'none'`    |
-| `hasExactMatch` | `has-exact-match` |             | `boolean`                        | `false`     |
-| `loading`       | `loading`         |             | `boolean`                        | `false`     |
-| `textInput`     | `text-input`      |             | `string`                         | `''`        |
-| `value`         | `value`           |             | `string`                         | `undefined` |
+| Property        | Attribute         | Description | Type                                  | Default     |
+| --------------- | ----------------- | ----------- | ------------------------------------- | ----------- |
+| `filter`        | `filter`          |             | `string`                              | `''`        |
+| `filterType`    | `filter-type`     |             | `"custom" \| "none" \| "starts-with"` | `'none'`    |
+| `hasExactMatch` | `has-exact-match` |             | `boolean`                             | `false`     |
+| `loading`       | `loading`         |             | `boolean`                             | `false`     |
+| `textInput`     | `text-input`      |             | `string`                              | `''`        |
+| `value`         | `value`           |             | `string`                              | `undefined` |
 
 
 ## Events

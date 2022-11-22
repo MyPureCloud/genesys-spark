@@ -34,6 +34,7 @@ import { trackComponent } from '../../../usage-tracking';
 import { afterNextRender } from '../../../utils/dom/after-next-render';
 
 import translationResources from './i18n/en.json';
+import { GuxFilterTypes } from '../../stable/gux-dropdown/gux-dropdown.types';
 
 /**
  * @slot - collection of gux-option-multi elements
@@ -63,7 +64,7 @@ export class GuxListboxMulti {
   textInput: string = '';
 
   @Prop()
-  filterType: 'none' | 'prefix' | 'custom' = 'none';
+  filterType: GuxFilterTypes = 'none';
 
   @State()
   listboxOptions: HTMLGuxOptionMultiElement[] = [];

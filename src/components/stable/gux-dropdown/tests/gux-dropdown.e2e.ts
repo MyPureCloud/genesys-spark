@@ -15,7 +15,17 @@ describe('gux-dropdown', () => {
       </gux-listbox>
     </gux-dropdown>
   `;
-  const filterablePrefixDropdown = `<gux-dropdown filter-type="prefix" lang="en" value="j">
+  // remove in V4 (COMUI-1369)
+  const filterableDropdown = `<gux-dropdown filterable filter-type="starts-with" lang="en" value="j">
+  <gux-listbox aria-label="Favorite Animal">
+  <gux-option value="a">Ant</gux-option>
+  <gux-option value="b">Bear</gux-option>
+  <gux-option value="be">Bee</gux-option>
+  <gux-option value="c">Cat</gux-option>
+  </gux-listbox>
+</gux-dropdown>
+`;
+  const filterablePrefixDropdown = `<gux-dropdown filter-type="starts-with" lang="en" value="j">
   <gux-listbox aria-label="Favorite Animal">
   <gux-option value="a">Ant</gux-option>
   <gux-option value="b">Bear</gux-option>
@@ -99,6 +109,27 @@ describe('gux-dropdown', () => {
       );
       expect(listboxItems.length).toBe(4);
       expect(listboxItems[0].textContent).toEqual('Ant');
+    });
+    // remove in V4 (COMUI-1369)
+    it('is backwards compatible with filterable property', async () => {
+      const page = await newSparkE2EPage({ html: filterableDropdown });
+      await page.waitForChanges();
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
+
+      let listboxItems = await page.findAll(
+        'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+      );
+
+      expect(listboxItems.length).toBe(4);
+      await page.keyboard.press('b');
+      await page.waitForChanges();
+      listboxItems = await page.findAll(
+        'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+      );
+      expect(listboxItems.length).toBe(2);
+      expect(listboxItems[0].textContent).toEqual('Bear');
     });
   });
 

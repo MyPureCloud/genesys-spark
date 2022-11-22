@@ -199,6 +199,7 @@ describe('gux-dropdown-multi-beta', () => {
     });
   });
   describe('filter', () => {
+    // remove filterable example in V4 (COMUI-1369)
     it('filters dropdown contents (filterable)', async () => {
       const filterableDropdown = `
       <gux-dropdown-multi-beta filterable lang="en">
@@ -231,9 +232,9 @@ describe('gux-dropdown-multi-beta', () => {
       expect(listboxItems.length).toBe(2);
       expect(listboxItems[0].textContent).toEqual('Bear');
     });
-    it('filters dropdown contents (filter-type prefix)', async () => {
+    it('filters dropdown contents (filter-type starts-with)', async () => {
       const filterableDropdown = `
-      <gux-dropdown-multi-beta filter-type="prefix" lang="en">
+      <gux-dropdown-multi-beta filter-type="starts-with" lang="en">
         <gux-listbox-multi aria-label="Animals">
           <gux-option-multi value="ant">Ant</gux-option-multi>
           <gux-option-multi value="bear">Bear</gux-option-multi>

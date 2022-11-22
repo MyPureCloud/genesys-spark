@@ -23,7 +23,7 @@ import { trackComponent } from '../../../usage-tracking';
 import translationResources from './i18n/en.json';
 
 import { getSearchOption } from '../../stable/gux-listbox/gux-listbox.service';
-
+import { GuxFilterTypes } from '../../stable/gux-dropdown/gux-dropdown.types';
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children
  */
@@ -57,7 +57,7 @@ export class GuxDropdownMulti {
   placeholder: string;
 
   /**
-   * deprecated will be removed in v4. Use filterType instead
+   * deprecated will be removed in v4 (COMUI-1369). Use filterType instead
    */
   @Prop()
   filterable: boolean = false;
@@ -66,7 +66,7 @@ export class GuxDropdownMulti {
    * Override default filtering behavior
    */
   @Prop()
-  filterType: 'none' | 'prefix' | 'custom' = 'none';
+  filterType: GuxFilterTypes = 'none';
 
   @Prop()
   hasError: boolean = false;
@@ -302,7 +302,7 @@ export class GuxDropdownMulti {
     return (
       this.filterable ||
       this.filterType === 'custom' ||
-      this.filterType === 'prefix'
+      this.filterType === 'starts-with'
     );
   }
 
