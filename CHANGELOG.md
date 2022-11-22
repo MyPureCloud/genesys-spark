@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.43.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.3...v3.43.4) (2022-11-22)
+
+
+### Bug Fixes
+
+* **time-picker:** add focus ring ([1885637](https://github.com/MyPureCloud/genesys-webcomponents/commit/18856371cefb5da2034459fa7aaa15c666aba164))
+
 ### [3.43.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.2...v3.43.3) (2022-11-22)
 
 
