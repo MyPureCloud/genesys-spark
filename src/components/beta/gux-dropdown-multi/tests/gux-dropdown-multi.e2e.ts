@@ -199,7 +199,8 @@ describe('gux-dropdown-multi-beta', () => {
     });
   });
   describe('filter', () => {
-    it('filters dropdown contents', async () => {
+    // remove filterable example in V4 (COMUI-1369)
+    it('filters dropdown contents (filterable)', async () => {
       const filterableDropdown = `
       <gux-dropdown-multi-beta filterable lang="en">
         <gux-listbox-multi aria-label="Animals">
@@ -231,7 +232,70 @@ describe('gux-dropdown-multi-beta', () => {
       expect(listboxItems.length).toBe(2);
       expect(listboxItems[0].textContent).toEqual('Bear');
     });
+    it('filters dropdown contents (filter-type starts-with)', async () => {
+      const filterableDropdown = `
+      <gux-dropdown-multi-beta filter-type="starts-with" lang="en">
+        <gux-listbox-multi aria-label="Animals">
+          <gux-option-multi value="ant">Ant</gux-option-multi>
+          <gux-option-multi value="bear">Bear</gux-option-multi>
+          <gux-option-multi value="bat">Bat</gux-option-multi>
+          <gux-option-multi value="cat">Cat</gux-option-multi>
+          <gux-option-multi value="dog">Dog</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+    `;
+      const page = await newSparkE2EPage({ html: filterableDropdown });
+      await page.waitForChanges();
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
 
+      let listboxItems = await page.findAll(
+        'gux-dropdown-multi-beta gux-listbox-multi gux-option-multi:not(.gux-filtered)'
+      );
+
+      expect(listboxItems.length).toBe(5);
+      await page.keyboard.press('b');
+      await page.waitForChanges();
+
+      listboxItems = await page.findAll(
+        'gux-dropdown-multi-beta gux-listbox-multi gux-option-multi:not(.gux-filtered)'
+      );
+      expect(listboxItems.length).toBe(2);
+      expect(listboxItems[0].textContent).toEqual('Bear');
+    });
+    it('does not filter dropdown contents (filter-type custom)', async () => {
+      const filterableDropdown = `
+      <gux-dropdown-multi-beta filter-type="custom" lang="en">
+        <gux-listbox-multi aria-label="Animals">
+          <gux-option-multi value="ant">Ant</gux-option-multi>
+          <gux-option-multi value="bear">Bear</gux-option-multi>
+          <gux-option-multi value="bat">Bat</gux-option-multi>
+          <gux-option-multi value="cat">Cat</gux-option-multi>
+          <gux-option-multi value="dog">Dog</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+    `;
+      const page = await newSparkE2EPage({ html: filterableDropdown });
+      await page.waitForChanges();
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
+
+      let listboxItems = await page.findAll(
+        'gux-dropdown-multi-beta gux-listbox-multi gux-option-multi:not(.gux-filtered)'
+      );
+
+      expect(listboxItems.length).toBe(5);
+      await page.keyboard.press('b');
+      await page.waitForChanges();
+
+      listboxItems = await page.findAll(
+        'gux-dropdown-multi-beta gux-listbox-multi gux-option-multi:not(.gux-filtered)'
+      );
+      expect(listboxItems.length).toBe(5);
+      expect(listboxItems[0].textContent).toEqual('Ant');
+    });
     describe('adding option to dropdown', () => {
       it('renders tag when option is added to dropdown that value set', async () => {
         const { page } = await setupPage(valueSetDropdown);

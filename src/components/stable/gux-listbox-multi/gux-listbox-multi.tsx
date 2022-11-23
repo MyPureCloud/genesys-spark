@@ -34,6 +34,7 @@ import { trackComponent } from '../../../usage-tracking';
 import { afterNextRender } from '../../../utils/dom/after-next-render';
 
 import translationResources from './i18n/en.json';
+import { GuxFilterTypes } from '../../stable/gux-dropdown/gux-dropdown.types';
 
 /**
  * @slot - collection of gux-option-multi elements
@@ -61,6 +62,9 @@ export class GuxListboxMulti {
 
   @Prop()
   textInput: string = '';
+
+  @Prop()
+  filterType: GuxFilterTypes = 'none';
 
   @State()
   listboxOptions: HTMLGuxOptionMultiElement[] = [];
@@ -245,9 +249,11 @@ export class GuxListboxMulti {
       listboxOption.selected = this.getSelectedValues().includes(
         listboxOption.value
       );
-      listboxOption.filtered = !listboxOption.textContent
-        .toLowerCase()
-        .startsWith(this.textInput.toLowerCase());
+      if (this.filterType !== 'custom') {
+        listboxOption.filtered = !listboxOption.textContent
+          .toLowerCase()
+          .startsWith(this.textInput.toLowerCase());
+      }
     });
   }
 
