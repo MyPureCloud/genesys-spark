@@ -7,14 +7,15 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type                    | Default     |
-| ----------- | ------------ | ----------- | ----------------------- | ----------- |
-| `clockType` | `clock-type` |             | `"12h" \| "24h"`        | `undefined` |
-| `disabled`  | `disabled`   |             | `boolean`               | `false`     |
-| `hasError`  | `has-error`  |             | `boolean`               | `false`     |
-| `interval`  | `interval`   |             | `15 \| 30 \| 60`        | `60`        |
-| `required`  | `required`   |             | `boolean`               | `false`     |
-| `value`     | `value`      |             | ``${string}:${string}`` | `'00:00'`   |
+| Property    | Attribute    | Description | Type                                   | Default     |
+| ----------- | ------------ | ----------- | -------------------------------------- | ----------- |
+| `clockType` | `clock-type` |             | `"12h" \| "24h"`                       | `undefined` |
+| `disabled`  | `disabled`   |             | `boolean`                              | `false`     |
+| `hasError`  | `has-error`  |             | `boolean`                              | `false`     |
+| `interval`  | `interval`   |             | `15 \| 30 \| 60`                       | `60`        |
+| `required`  | `required`   |             | `boolean`                              | `false`     |
+| `step`      | `step`       |             | `1 \| 10 \| 15 \| 20 \| 30 \| 5 \| 60` | `1`         |
+| `value`     | `value`      |             | ``${string}:${string}``                | `'00:00'`   |
 
 
 ## Dependencies
