@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.45.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.44.0...v3.45.0) (2022-11-23)
+
+
+### Features
+
+* **gux-dropdown-multi:** add option to override default filter behavior ([16a9850](https://github.com/MyPureCloud/genesys-webcomponents/commit/16a9850d35fda11f7b69e4064b3806503029f05e))
+* **gux-dropdown:** add option to opt out of default filtering behavior ([98f0575](https://github.com/MyPureCloud/genesys-webcomponents/commit/98f0575869e3d83be5e7fc2f7d45cc3db8196e9e))
+
 ## [3.44.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.4...v3.44.0) (2022-11-23)
 
 
