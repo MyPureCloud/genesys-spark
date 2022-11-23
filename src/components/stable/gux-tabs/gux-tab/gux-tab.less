@@ -2,7 +2,7 @@
 @import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/mixins.less';
 
-gux-tabs[orientation='vertical'] {
+gux-tabs[orientation='vertical'] > gux-tab-list {
   .gux-tab {
     display: flex;
     justify-content: flex-end;
@@ -20,7 +20,7 @@ gux-tabs[orientation='vertical'] {
   }
 }
 
-gux-tabs:not([orientation='vertical']) {
+gux-tabs:not([orientation='vertical']) > gux-tab-list {
   .gux-tab {
     box-sizing: border-box;
     padding-bottom: 2px;
@@ -41,13 +41,13 @@ gux-tabs:not([orientation='vertical']) {
   }
 }
 
-gux-tabs[alignment='center'] {
+gux-tabs[alignment='center'] > gux-tab-list {
   .gux-scrollable-section {
     justify-content: center;
   }
 }
 
-gux-tabs[alignment='full-width'] {
+gux-tabs[alignment='full-width'] > gux-tab-list {
   .gux-scrollable-section {
     flex-grow: 1;
   }

@@ -208,9 +208,27 @@
   <gux-tab-panel tab-id="8-3">Tab content 3</gux-tab-panel>
 </gux-tabs>
 
+<h2>Example 9 -- tabs within tabs</h2>
+
+<gux-tabs orientation="vertical" class="example">
+  <gux-tab-list slot="tab-list">
+    <gux-tab tab-id="1">Tab Header 1</gux-tab>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="1">
+    <gux-tabs orientation="horizontal" class="example">
+      <gux-tab-list slot="tab-list">
+        <gux-tab tab-id="2">Tab Header 2</gux-tab>
+        <gux-tab tab-id="3">Tab Header 3</gux-tab>
+      </gux-tab-list>
+      <gux-tab-panel tab-id="2">Tab content 2</gux-tab-panel>
+      <gux-tab-panel tab-id="3">Tab content 3</gux-tab-panel>
+    </gux-tabs>
+  </gux-tab-panel>
+</gux-tabs>
+
 <style
   onload="(function () {
-    document.querySelector(`gux-tab-panel[tab-id='1-1']`).addEventListener('guxactivepanelchange', 
+    document.querySelector(`gux-tab-panel[tab-id='1-1']`).addEventListener('guxactivepanelchange',
     (event) => {
       const currentTime = new Date().toLocaleTimeString();
       document.querySelector('#currentTime').innerHTML = currentTime;

@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.45.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.44.0...v3.45.0) (2022-11-23)
+
+
+### Features
+
+* **gux-dropdown-multi:** add option to override default filter behavior ([16a9850](https://github.com/MyPureCloud/genesys-webcomponents/commit/16a9850d35fda11f7b69e4064b3806503029f05e))
+* **gux-dropdown:** add option to opt out of default filtering behavior ([98f0575](https://github.com/MyPureCloud/genesys-webcomponents/commit/98f0575869e3d83be5e7fc2f7d45cc3db8196e9e))
+
+## [3.44.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.4...v3.44.0) (2022-11-23)
+
+
+### Features
+
+* **css:** allow margin overrides on .gux-form-field-fieldset-container ([ee3fd04](https://github.com/MyPureCloud/genesys-webcomponents/commit/ee3fd046a9ff935088eab214fded9e470d73dc49))
+
+
+### Bug Fixes
+
+* **tabs:** putting tabs within a tab-panel breaks the UI styling ([ba2ae59](https://github.com/MyPureCloud/genesys-webcomponents/commit/ba2ae59859b05db1d3aa3518e8c41bed7ef75cb7))
+
+### [3.43.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.3...v3.43.4) (2022-11-22)
+
+
+### Bug Fixes
+
+* **time-picker:** add focus ring ([1885637](https://github.com/MyPureCloud/genesys-webcomponents/commit/18856371cefb5da2034459fa7aaa15c666aba164))
+
 ### [3.43.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.2...v3.43.3) (2022-11-22)
 
 

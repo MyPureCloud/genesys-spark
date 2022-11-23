@@ -1,7 +1,7 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
 
 describe('gux-dropdown', () => {
-  const html = `<gux-dropdown lang="en" value="j">
+  const nonFilterableDropdown = `<gux-dropdown lang="en" value="j">
       <gux-listbox aria-label="Favorite Animal">
         <gux-option value="a">Ant</gux-option>
         <gux-option value="b">Bat</gux-option>
@@ -15,17 +15,127 @@ describe('gux-dropdown', () => {
       </gux-listbox>
     </gux-dropdown>
   `;
+  // remove in V4 (COMUI-1369)
+  const filterableDropdown = `<gux-dropdown filterable filter-type="starts-with" lang="en" value="j">
+  <gux-listbox aria-label="Favorite Animal">
+  <gux-option value="a">Ant</gux-option>
+  <gux-option value="b">Bear</gux-option>
+  <gux-option value="be">Bee</gux-option>
+  <gux-option value="c">Cat</gux-option>
+  </gux-listbox>
+</gux-dropdown>
+`;
+  const filterablePrefixDropdown = `<gux-dropdown filter-type="starts-with" lang="en" value="j">
+  <gux-listbox aria-label="Favorite Animal">
+  <gux-option value="a">Ant</gux-option>
+  <gux-option value="b">Bear</gux-option>
+  <gux-option value="be">Bee</gux-option>
+  <gux-option value="c">Cat</gux-option>
+  </gux-listbox>
+</gux-dropdown>
+`;
+  const filterableCustomDropdown = `<gux-dropdown filter-type="custom" lang="en" value="j">
+<gux-listbox aria-label="Favorite Animal">
+  <gux-option value="a">Ant</gux-option>
+  <gux-option value="b">Bear</gux-option>
+  <gux-option value="be">Bee</gux-option>
+  <gux-option value="c">Cat</gux-option>
+</gux-listbox>
+</gux-dropdown>
+`;
   describe('#render', () => {
     it('renders', async () => {
-      const page = await newSparkE2EPage({ html });
+      const page = await newSparkE2EPage({ html: nonFilterableDropdown });
       const element = await page.find('gux-dropdown');
       expect(element).toHaveAttribute('hydrated');
     });
   });
 
+  describe('filterable', () => {
+    it('renders', async () => {
+      const page = await newSparkE2EPage({ html: filterablePrefixDropdown });
+      const element = await page.find('gux-dropdown');
+      expect(element).toHaveAttribute('hydrated');
+    });
+    it('opens dropdown on click', async () => {
+      const page = await newSparkE2EPage({ html: filterablePrefixDropdown });
+      await page.waitForChanges();
+      await a11yCheck(page, [], 'before opening dropdown with filter');
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
+      await a11yCheck(page, [], 'after opening dropdown with filter');
+
+      const dropMenu = await page.find('pierce/.gux-popup-container');
+
+      expect(dropMenu.className.split(' ')).toContain('gux-expanded');
+    });
+    it('filters items in the dropdown', async () => {
+      const page = await newSparkE2EPage({ html: filterablePrefixDropdown });
+      await page.waitForChanges();
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
+
+      let listboxItems = await page.findAll(
+        'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+      );
+
+      expect(listboxItems.length).toBe(4);
+      await page.keyboard.press('b');
+      await page.waitForChanges();
+      listboxItems = await page.findAll(
+        'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+      );
+      expect(listboxItems.length).toBe(2);
+      expect(listboxItems[0].textContent).toEqual('Bear');
+    });
+    it('does not filter items when filter type is custom', async () => {
+      const page = await newSparkE2EPage({ html: filterableCustomDropdown });
+      await page.waitForChanges();
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
+
+      let listboxItems = await page.findAll(
+        'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+      );
+
+      expect(listboxItems.length).toBe(4);
+      await page.keyboard.press('b');
+      await page.waitForChanges();
+      listboxItems = await page.findAll(
+        'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+      );
+      expect(listboxItems.length).toBe(4);
+      expect(listboxItems[0].textContent).toEqual('Ant');
+    });
+    // remove in V4 (COMUI-1369)
+    it('is backwards compatible with filterable property', async () => {
+      const page = await newSparkE2EPage({ html: filterableDropdown });
+      await page.waitForChanges();
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
+
+      let listboxItems = await page.findAll(
+        'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+      );
+
+      expect(listboxItems.length).toBe(4);
+      await page.keyboard.press('b');
+      await page.waitForChanges();
+      listboxItems = await page.findAll(
+        'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+      );
+      expect(listboxItems.length).toBe(2);
+      expect(listboxItems[0].textContent).toEqual('Bear');
+    });
+  });
+
   describe('click', () => {
     it('opens drop down on click', async () => {
-      const page = await newSparkE2EPage({ html });
+      const page = await newSparkE2EPage({ html: nonFilterableDropdown });
       await page.waitForChanges();
       await a11yCheck(page, [], 'before opening dropdown');
       const dropdownButtonElement = await page.find('pierce/.gux-field');
@@ -41,7 +151,7 @@ describe('gux-dropdown', () => {
 
   describe('press', () => {
     it('opens and closes dropdown on keypress', async () => {
-      const page = await newSparkE2EPage({ html });
+      const page = await newSparkE2EPage({ html: nonFilterableDropdown });
       await page.waitForChanges();
       const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.press('ArrowDown');
@@ -55,7 +165,7 @@ describe('gux-dropdown', () => {
     });
 
     it('focuses the listbox when down arrow is pressed', async () => {
-      const page = await newSparkE2EPage({ html });
+      const page = await newSparkE2EPage({ html: nonFilterableDropdown });
       await page.waitForChanges();
       const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.press('ArrowDown');
@@ -67,7 +177,7 @@ describe('gux-dropdown', () => {
     });
 
     it('moves between options when arrow keys are pressed', async () => {
-      const page = await newSparkE2EPage({ html });
+      const page = await newSparkE2EPage({ html: nonFilterableDropdown });
       await page.waitForChanges();
       const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.press('ArrowDown');
@@ -89,7 +199,7 @@ describe('gux-dropdown', () => {
     });
 
     it('selects listbox options on keypress', async () => {
-      const page = await newSparkE2EPage({ html });
+      const page = await newSparkE2EPage({ html: nonFilterableDropdown });
       await page.waitForChanges();
       const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.press('ArrowDown');

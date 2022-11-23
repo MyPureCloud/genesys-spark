@@ -31,6 +31,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { trackComponent } from '../../../usage-tracking';
+import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 
 import translationResources from './i18n/en.json';
 
@@ -53,6 +54,9 @@ export class GuxListbox {
 
   @Prop()
   filter: string = '';
+
+  @Prop()
+  filterType: GuxFilterTypes = 'none';
 
   @Prop()
   loading: boolean = false;
@@ -188,9 +192,10 @@ export class GuxListbox {
   componentWillRender(): void {
     this.listboxOptions.forEach(listboxOption => {
       listboxOption.selected = listboxOption.value === this.value;
-      listboxOption.filtered = !matchOption(listboxOption, this.filter);
+      if (this.filterType !== 'custom') {
+        listboxOption.filtered = !matchOption(listboxOption, this.filter);
+      }
     });
-
     this.allListboxOptionsFiltered =
       this.listboxOptions.filter(listboxOption => !listboxOption.filtered)
         .length === 0;
