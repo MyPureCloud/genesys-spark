@@ -43,7 +43,7 @@ export const config: Config = {
               'src/style/spacing.less',
               'src/style/typography.less',
               'src/style/shadows.less',
-              'src/style/focus-styles.less'
+              'src/style/focus.less'
             ],
             dest: 'dist/genesys-webcomponents/less'
           }
