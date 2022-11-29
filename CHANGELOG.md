@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.45.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.45.0...v3.45.1) (2022-11-29)
+
+
+### Bug Fixes
+
+* **tooltip-title:** removed cursor styling ([c655405](https://github.com/MyPureCloud/genesys-webcomponents/commit/c6554050b22baed241e23b74efdc317685373702))
+
 ## [3.45.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.44.0...v3.45.0) (2022-11-23)
 
 
