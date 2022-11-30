@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.46.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.45.1...v3.46.0) (2022-11-30)
+
+
+### Features
+
+* **dismiss-button:** addition of optional positioning ([f2ad739](https://github.com/MyPureCloud/genesys-webcomponents/commit/f2ad73965e3f6d1b1220ed66f3c5822b902c603e))
+
 ### [3.45.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.45.0...v3.45.1) (2022-11-29)
 
 
