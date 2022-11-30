@@ -13,7 +13,6 @@ Input for international phone numbers
 | `disabled`      | `disabled`       |             | `boolean` | `false`     |
 | `hasError`      | `has-error`      |             | `boolean` | `false`     |
 | `labelId`       | `label-id`       |             | `string`  | `undefined` |
-| `region`        | `region`         |             | `string`  | `undefined` |
 | `required`      | `required`       |             | `boolean` | `undefined` |
 | `value`         | `value`          |             | `string`  | `undefined` |
 

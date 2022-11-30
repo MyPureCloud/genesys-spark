@@ -45,9 +45,6 @@ export class GuxPhoneInput {
   value: string;
 
   @Prop()
-  region: string;
-
-  @Prop()
   defaultRegion: string = 'US';
 
   @Prop()
@@ -61,6 +58,9 @@ export class GuxPhoneInput {
 
   @Prop()
   required: boolean;
+
+  @State()
+  region: string;
 
   @State()
   private expanded: boolean = false;
