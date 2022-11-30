@@ -94,6 +94,13 @@ export class GuxPhoneInput {
     }
   }
 
+  @Listen('keydown')
+  onEscKeyPress(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      this.collapseListbox('noFocusChange');
+    }
+  }
+
   @Listen('internallistboxoptionsupdated')
   onInternallistboxoptionsupdated(event: CustomEvent): void {
     event.stopPropagation();
@@ -113,6 +120,7 @@ export class GuxPhoneInput {
   @Listen('focusout')
   onFocusout(event: FocusEvent): void {
     this.stopPropagationOfInternalFocusEvents(event);
+    this.collapseListbox('noFocusChange');
   }
 
   @Listen('focusin')

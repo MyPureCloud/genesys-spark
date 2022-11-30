@@ -47,6 +47,10 @@
   &.gux-error {
     border-color: @gux-alert;
   }
+
+  &:focus-within {
+    .focus-ring();
+  }
 }
 
 .country-select {
@@ -122,6 +126,10 @@
   background-color: #f6f7f9;
   border: none;
   outline: inherit;
+
+  &:focus {
+    .focus-ring();
+  }
 }
 
 .gux-listbox-container {
