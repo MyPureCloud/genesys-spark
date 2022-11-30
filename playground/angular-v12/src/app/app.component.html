@@ -44,25 +44,53 @@
   </div>
 
   <div class="form-element">
-    <label for="pet">Pet </label>
-    <gux-dropdown
-      id="pet"
-      name="pet"
-      formControlName="pet"
-      placeholder="Select an pet"
-      ngDefaultControl
-    >
-      <gux-listbox aria-label="Pets">
-        <gux-option [value]="p.id" *ngFor="let p of petList">
-          {{ p.name }}
-        </gux-option>
-      </gux-listbox>
-    </gux-dropdown>
-    <div>
-      <small *ngIf="showRequiredErrorMessage('pet')"
-        >This field is required.</small
+    <gux-form-field-dropdown label-position="above">
+      <gux-dropdown
+        filter-type="prefix"
+        id="pet"
+        name="pet"
+        formControlName="pet"
+        placeholder="Select a pet"
+        ngDefaultControl
       >
-    </div>
+        <gux-listbox aria-label="Pets">
+          <gux-option [value]="p.id" *ngFor="let p of petList">
+            {{ p.name }}
+          </gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Pets</label>
+      <span *ngIf="showRequiredErrorMessage('pet')" slot="error"
+        >This field is required.</span
+      >
+    </gux-form-field-dropdown>
+  </div>
+  <div class="form-element">
+    <gux-form-field-dropdown label-position="above">
+      <gux-dropdown-multi-beta
+        #dropdownMulti
+        filter-type="custom"
+        id="countriesVisited"
+        name="countriesVisited"
+        formControlName="countriesVisited"
+        placeholder="Select Countries"
+        (guxfilter)="onFilter($event)"
+        attr.loading="{{ isLoading }}"
+        ngDefaultControl
+      >
+        <gux-listbox-multi aria-label="Countries Visited">
+          <gux-option-multi
+            [value]="c.id"
+            *ngFor="let c of filteredCountryList"
+            >{{ c.name }}</gux-option-multi
+          >
+        </gux-listbox-multi>
+      </gux-dropdown-multi-beta>
+      <label slot="label">Countries Visited</label>
+      <span *ngIf="showRequiredErrorMessage('countriesVisited')" slot="error"
+        >This field is required</span
+      >
+    </gux-form-field-dropdown>
   </div>
 
   <div class="form-element">

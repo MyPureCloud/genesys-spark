@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-
 import { countryList } from '../data/country-list';
 import { petList } from '../data/pet-list';
 
@@ -23,11 +22,34 @@ export class AppComponent {
     email: new FormControl('daragh.king@example.com', [
       Validators.email,
       Validators.required
-    ])
+    ]),
+    countriesVisited: new FormControl(null, Validators.required)
   });
 
+  @ViewChild('dropdownMulti') dropdownMulti: any;
+
   countryList: SelectOption[] = countryList;
+  filteredCountryList: SelectOption[] = countryList;
   petList: SelectOption[] = petList;
+  isLoading: boolean = false;
+
+  // to do fix lint error
+  /* eslint-disable */
+  onFilter(event: any) {
+    this.isLoading = true;
+    const dropdownMultiValue =
+      this.dropdownMulti.nativeElement.value?.split(',') || [];
+    this.filteredCountryList = this.countryList.filter(
+      country =>
+        country.name.toLowerCase().includes(event.detail) ||
+        dropdownMultiValue.includes(country.id)
+    );
+
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 500);
+  }
+  /* eslint-disable */
 
   showRequiredErrorMessage(formControlName: string): boolean {
     const control = this.contactForm.get(formControlName);

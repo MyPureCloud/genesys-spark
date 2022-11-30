@@ -44,6 +44,11 @@ Type: `Promise<void>`
 
 ## Dependencies
 
+### Used by
+
+ - [gux-notification-toast](../../stable/gux-notification-toast)
+ - [gux-simple-toast](../../stable/gux-simple-toast)
+
 ### Depends on
 
 - [gux-tooltip](../../stable/gux-tooltip)
@@ -52,6 +57,8 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-truncate-beta --> gux-tooltip
+  gux-notification-toast --> gux-truncate-beta
+  gux-simple-toast --> gux-truncate-beta
   style gux-truncate-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

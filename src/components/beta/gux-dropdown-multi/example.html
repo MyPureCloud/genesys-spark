@@ -1,6 +1,9 @@
 <h1>gux-dropdown-multi-beta</h1>
 <form onchange="notify(event)" oninput="notify(event)">
-  <gux-dropdown-multi-beta filterable placeholder="Select a country">
+  <gux-dropdown-multi-beta
+    filter-type="starts-with"
+    placeholder="Select a country"
+  >
     <gux-listbox-multi aria-label="Countries">
       <gux-option-multi value="AFG">Afghanistan</gux-option-multi>
       <gux-option-multi value="ALA">Åland Islands</gux-option-multi>
@@ -453,7 +456,7 @@
   </gux-dropdown-multi-beta>
 
   <h3>Loading a filterable list</h3>
-  <gux-dropdown-multi-beta id="loading-2" filterable loading>
+  <gux-dropdown-multi-beta id="loading-2" filter-type="starts-with" loading>
     <gux-listbox-multi aria-label="Animals"> </gux-listbox-multi>
   </gux-dropdown-multi-beta>
 </form>

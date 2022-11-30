@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.45.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.45.0...v3.45.1) (2022-11-29)
+
+
+### Bug Fixes
+
+* **tooltip-title:** removed cursor styling ([c655405](https://github.com/MyPureCloud/genesys-webcomponents/commit/c6554050b22baed241e23b74efdc317685373702))
+
+## [3.45.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.44.0...v3.45.0) (2022-11-23)
+
+
+### Features
+
+* **gux-dropdown-multi:** add option to override default filter behavior ([16a9850](https://github.com/MyPureCloud/genesys-webcomponents/commit/16a9850d35fda11f7b69e4064b3806503029f05e))
+* **gux-dropdown:** add option to opt out of default filtering behavior ([98f0575](https://github.com/MyPureCloud/genesys-webcomponents/commit/98f0575869e3d83be5e7fc2f7d45cc3db8196e9e))
+
+## [3.44.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.4...v3.44.0) (2022-11-23)
+
+
+### Features
+
+* **css:** allow margin overrides on .gux-form-field-fieldset-container ([ee3fd04](https://github.com/MyPureCloud/genesys-webcomponents/commit/ee3fd046a9ff935088eab214fded9e470d73dc49))
+
+
+### Bug Fixes
+
+* **tabs:** putting tabs within a tab-panel breaks the UI styling ([ba2ae59](https://github.com/MyPureCloud/genesys-webcomponents/commit/ba2ae59859b05db1d3aa3518e8c41bed7ef75cb7))
+
+### [3.43.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.3...v3.43.4) (2022-11-22)
+
+
+### Bug Fixes
+
+* **time-picker:** add focus ring ([1885637](https://github.com/MyPureCloud/genesys-webcomponents/commit/18856371cefb5da2034459fa7aaa15c666aba164))
+
+### [3.43.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.2...v3.43.3) (2022-11-22)
+
+
+### Bug Fixes
+
+* **toast:** fixed toast message overflow ([ed41b29](https://github.com/MyPureCloud/genesys-webcomponents/commit/ed41b29c4ca9dba7c4fa497c786ba4f1ee10f132))
+
+### [3.43.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.1...v3.43.2) (2022-11-21)
+
+### [3.43.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.43.0...v3.43.1) (2022-11-18)
+
+
+### Bug Fixes
+
+* **dropdown:** enter on a fully filtered list does not select an item ([5b70ea1](https://github.com/MyPureCloud/genesys-webcomponents/commit/5b70ea19c0a52acaab5b41c90230f0a4a79b6e53))
+
 ## [3.43.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.42.0...v3.43.0) (2022-11-17)
 
 

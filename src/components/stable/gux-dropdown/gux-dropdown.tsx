@@ -23,6 +23,7 @@ import { trackComponent } from '../../../usage-tracking';
 import translationResources from './i18n/en.json';
 
 import { getSearchOption } from '../gux-listbox/gux-listbox.service';
+import { GuxFilterTypes } from './gux-dropdown.types';
 
 /**
  * @slot - for a gux-listbox containing gux-option children
@@ -56,8 +57,14 @@ export class GuxDropdown {
   @Prop()
   placeholder: string;
 
+  /**
+   * deprecated will be removed in v4 (COMUI-1369). Use filterType instead
+   */
   @Prop()
   filterable: boolean = false;
+
+  @Prop()
+  filterType: GuxFilterTypes = 'none';
 
   @Prop()
   hasError: boolean = false;
@@ -74,7 +81,7 @@ export class GuxDropdown {
       afterNextRender(() => {
         this.listboxElement.focus();
 
-        if (this.filterable) {
+        if (this.isFilterable()) {
           this.filterElement.focus();
         }
       });
@@ -113,7 +120,7 @@ export class GuxDropdown {
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Escape':
-        if (this.filterable) {
+        if (this.isFilterable()) {
           if (document.activeElement === this.listboxElement) {
             return this.filterElement.focus();
           }
@@ -219,14 +226,23 @@ export class GuxDropdown {
 
   componentWillRender(): void {
     this.validateValue(this.value);
-    this.listboxElement.filter = this.filter;
     this.listboxElement.loading = this.loading;
+    this.listboxElement.filterType = this.filterType;
+    this.listboxElement.filter = this.filter;
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
     if (this.root.contains(event.relatedTarget as Node)) {
       return event.stopImmediatePropagation();
     }
+  }
+
+  private isFilterable() {
+    return (
+      this.filterable ||
+      this.filterType === 'starts-with' ||
+      this.filterType === 'custom'
+    );
   }
 
   private getOptionElementByValue(value: string): HTMLGuxOptionElement {
@@ -249,7 +265,7 @@ export class GuxDropdown {
   private shiftTabFromExpandedFilterInput(event: KeyboardEvent): boolean {
     return (
       event.shiftKey &&
-      this.filterable &&
+      this.isFilterable() &&
       this.expanded &&
       !(document.activeElement === this.listboxElement)
     );
@@ -258,7 +274,7 @@ export class GuxDropdown {
   private shiftTabFromFilterListbox(event: KeyboardEvent): boolean {
     return (
       event.shiftKey &&
-      this.filterable &&
+      this.isFilterable() &&
       document.activeElement === this.listboxElement
     );
   }
@@ -309,12 +325,11 @@ export class GuxDropdown {
     this.collapseListbox('focusFieldButton');
   }
 
-  private getSuggestionText(filter: string): string {
+  private getTypeaheadText(filter: string): string {
     const filterLength = filter.length;
-    if (filterLength > 0) {
+    if (filterLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, filter);
-
-      if (option) {
+      if (option && this.filterType !== 'custom') {
         //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
         return option.textContent.trim().substring(filterLength);
       }
@@ -344,7 +359,7 @@ export class GuxDropdown {
   }
 
   private renderFilterInputField(): JSX.Element {
-    if (this.expanded && this.filterable) {
+    if (this.expanded && this.isFilterable()) {
       return (
         <div class="gux-field gux-input-field">
           <div class="gux-field-content">
@@ -352,7 +367,7 @@ export class GuxDropdown {
               <div class="gux-filter-display">
                 <span class="gux-filter-text">{this.filter}</span>
                 <span class="gux-filter-suggestion">
-                  {this.getSuggestionText(this.filter)}
+                  {this.getTypeaheadText(this.filter)}
                 </span>
               </div>
               <div class="input-and-dropdown-button">
@@ -386,8 +401,10 @@ export class GuxDropdown {
     return (
       <div
         class={{
-          'gux-target-container-expanded': this.expanded && this.filterable,
-          'gux-target-container-collapsed': !(this.expanded && this.filterable),
+          'gux-target-container-expanded': this.expanded && this.isFilterable(),
+          'gux-target-container-collapsed': !(
+            this.expanded && this.isFilterable()
+          ),
           'gux-error': this.hasError
         }}
         slot="target"
@@ -416,7 +433,7 @@ export class GuxDropdown {
     ) as JSX.Element;
   }
   private renderTargetContent(): JSX.Element {
-    if (!(this.expanded && this.filterable)) {
+    if (!(this.expanded && this.isFilterable())) {
       return (
         <div class="gux-field-content">{this.renderTargetDisplay()}</div>
       ) as JSX.Element;
@@ -434,7 +451,7 @@ export class GuxDropdown {
   render(): JSX.Element {
     return (
       <gux-popup
-        expanded={this.expanded && (!this.loading || this.filterable)}
+        expanded={this.expanded && (!this.loading || this.isFilterable())}
         disabled={this.disabled}
       >
         {this.renderTarget()}

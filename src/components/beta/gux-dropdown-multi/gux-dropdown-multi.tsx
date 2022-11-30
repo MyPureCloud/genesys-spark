@@ -23,7 +23,7 @@ import { trackComponent } from '../../../usage-tracking';
 import translationResources from './i18n/en.json';
 
 import { getSearchOption } from '../../stable/gux-listbox/gux-listbox.service';
-
+import { GuxFilterTypes } from '../../stable/gux-dropdown/gux-dropdown.types';
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children
  */
@@ -56,8 +56,17 @@ export class GuxDropdownMulti {
   @Prop()
   placeholder: string;
 
+  /**
+   * deprecated will be removed in v4 (COMUI-1369). Use filterType instead
+   */
   @Prop()
   filterable: boolean = false;
+
+  /**
+   * Override default filtering behavior
+   */
+  @Prop()
+  filterType: GuxFilterTypes = 'none';
 
   @Prop()
   hasError: boolean = false;
@@ -70,10 +79,6 @@ export class GuxDropdownMulti {
 
   @State()
   private textInput: string = '';
-
-  private hasTextInput(): boolean {
-    return this.filterable || this.hasCreate;
-  }
 
   /**
    * This event is emitted to request creating a new option
@@ -284,8 +289,21 @@ export class GuxDropdownMulti {
 
   componentWillRender(): void {
     this.validateValue(this.value);
-    this.listboxElement.textInput = this.textInput;
     this.listboxElement.loading = this.loading;
+    this.listboxElement.filterType = this.filterType;
+    this.listboxElement.textInput = this.textInput;
+  }
+
+  private hasTextInput(): boolean {
+    return this.isFilterable() || this.hasCreate;
+  }
+
+  private isFilterable(): boolean {
+    return (
+      this.filterable ||
+      this.filterType === 'custom' ||
+      this.filterType === 'starts-with'
+    );
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -401,17 +419,17 @@ export class GuxDropdownMulti {
 
   private getTypeaheadText(textInput: string): string {
     const textInputLength = textInput.length;
-    if (textInputLength > 0) {
+    if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
-      if (option) {
+      if (option && this.filterType !== 'custom') {
         const optionSlotTextContent = option.querySelector(
           '[gux-slot-container]'
         )?.textContent;
         return optionSlotTextContent?.substring(textInputLength);
       }
-    }
 
-    return '';
+      return '';
+    }
   }
 
   private renderTargetDisplay(): JSX.Element {
@@ -555,7 +573,7 @@ export class GuxDropdownMulti {
     return [
       <div class="gux-dropdown-container">
         <gux-popup
-          expanded={this.expanded && (!this.loading || this.filterable)}
+          expanded={this.expanded && (!this.loading || this.isFilterable())}
           disabled={this.disabled}
         >
           {this.renderTarget()}
