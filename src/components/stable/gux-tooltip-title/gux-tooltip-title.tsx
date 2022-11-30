@@ -68,7 +68,7 @@ export class GuxTooltipTitle {
     }
   }
 
-  @OnMutation({ childList: true, subtree: true })
+  @OnMutation({ childList: true, subtree: true, characterData: true })
   onMutation(): void {
     this.titleName = this.setTooltipTitleText();
     this.checkForTooltipHideOrShow();
