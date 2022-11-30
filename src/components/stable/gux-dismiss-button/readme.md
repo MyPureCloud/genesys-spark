@@ -5,6 +5,13 @@ This component is meant for use in other components as a dismiss button.
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property   | Attribute  | Description | Type                      | Default      |
+| ---------- | ---------- | ----------- | ------------------------- | ------------ |
+| `position` | `position` |             | `"absolute" \| "inherit"` | `'absolute'` |
+
+
 ## Dependencies
 
 ### Used by
