@@ -32,3 +32,15 @@ function shiftArray(arr: string[], n: number): string[] {
 
   return arr.concat(arr.splice(0, times));
 }
+
+export function getOffsetMonthDate(baseDate: Date, monthDelta: number) {
+  const date = new Date(baseDate);
+  date.setDate(1);
+  date.setMonth(date.getMonth() + monthDelta);
+
+  return date;
+}
+
+export function getDateMonthAndYearString(date: Date, locale: string) {
+  return date.toLocaleDateString(locale, { year: 'numeric', month: 'long' });
+}

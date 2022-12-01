@@ -28,38 +28,42 @@
   </div>
 </div>
 
-<h2>Localised</h2>
-<div class="container">
-  <div class="item">
-    <h3>ar</h3>
-    <gux-calendar lang="ar" mode="single"></gux-calendar>
-  </div>
-
-  <div class="item">
-    <h3>de</h3>
-    <gux-calendar lang="de" mode="single"></gux-calendar>
-  </div>
-
-  <div class="item">
-    <h3>en</h3>
-    <gux-calendar lang="en" mode="single"></gux-calendar>
-  </div>
-
-  <div class="item">
-    <h3>ko</h3>
-    <gux-calendar lang="ko" mode="single"></gux-calendar>
-  </div>
-
-  <div class="item">
-    <h3>pt-br</h3>
-    <gux-calendar lang="pt-br" mode="single"></gux-calendar>
-  </div>
-
-  <div class="item">
-    <h3>ru</h3>
-    <gux-calendar lang="ru" mode="single"></gux-calendar>
-  </div>
+<h2>Languages</h2>
+<div id="languages-container">
+  <div id="sample"></div>
 </div>
+
+<style
+  onload="(function () {
+  const languagesContainer = document.getElementById('languages-container');
+  [
+    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+    'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+    'pt-pt', 'ru', 'sv', 'th', 'tr', 'zh-cn', 'zh-tw'
+  ].forEach((lang) => {
+    const date = new Date('January 19, 1975 15:00:00 UTC+00:00')
+    const time = new Intl.DateTimeFormat(lang, { timeStyle: 'short', timeZone: 'UTC' }).format(date)
+
+    const html = window.toHTML([
+      '<div class=language lang=' + lang + '>',
+        '<h3>' + lang + '</h3>',
+        '<gux-calendar></gux-calendar>',
+      '</div>'
+    ].join(''));
+    languagesContainer.appendChild(html);
+  });
+})()"
+>
+  #languages-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .language {
+    padding: 10px 25px;
+  }
+</style>
 
 <style>
   .container {
