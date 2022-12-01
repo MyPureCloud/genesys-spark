@@ -2,7 +2,7 @@ import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
 
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
-import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+import { afterNextRender } from '@utils/dom/after-next-render';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '../../../usage-tracking';
@@ -117,9 +117,13 @@ export class GuxTimePickerBeta {
     }
   }
 
-  private focusFirstItemInPopupList(): void {
-    afterNextRenderTimeout(() => {
-      void this.listElement.guxFocusFirstItem();
+  private valueToId(value: string): string {
+    return `gux-id-${value.replace(':', '-')}`;
+  }
+
+  private focusRelevantItemInPopupList(): void {
+    afterNextRender(() => {
+      void this.listElement.guxFocusItemByClosestId(this.valueToId(this.value));
     });
   }
 
@@ -127,7 +131,7 @@ export class GuxTimePickerBeta {
     this.expanded = !this.expanded;
 
     if (this.expanded) {
-      this.focusFirstItemInPopupList();
+      this.focusRelevantItemInPopupList();
     }
   }
 
@@ -317,14 +321,18 @@ export class GuxTimePickerBeta {
 
   private renderTimeListItems(): JSX.Element[] {
     return getTimeDisplayValues(this.interval, this.clockType).map(
-      displayValue =>
-        (
+      displayValue => {
+        const value = getValue(displayValue, this.clockType, isAm(this.value));
+
+        return (
           <gux-list-item
+            id={this.valueToId(value)}
             onClick={() => this.handleClickDropdownValue(displayValue)}
           >
             {displayValue}
           </gux-list-item>
-        ) as JSX.Element
+        ) as JSX.Element;
+      }
     );
   }
 
