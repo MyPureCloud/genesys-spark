@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.46.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.1...v3.46.2) (2022-12-02)
+
+
+### Bug Fixes
+
+* **tooltip-title:** fixed angular update bug ([1fdf34d](https://github.com/MyPureCloud/genesys-webcomponents/commit/1fdf34d6d765d9a6880158a8dfaddb6bcf3c9221))
+
 ### [3.46.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.0...v3.46.1) (2022-12-01)
 
 
