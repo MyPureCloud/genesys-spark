@@ -21,40 +21,40 @@ exports[`gux-time-picker-beta #render should render as expected 1`] = `
       </div>
       <div class="gux-list-container" slot="popup">
         <gux-list>
-          <gux-list-item>
+          <gux-list-item id="gux-id-00-00">
             12:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-01-00">
             1:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-02-00">
             2:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-03-00">
             3:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-04-00">
             4:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-05-00">
             5:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-06-00">
             6:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-07-00">
             7:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-08-00">
             8:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-09-00">
             9:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-10-00">
             10:00
           </gux-list-item>
-          <gux-list-item>
+          <gux-list-item id="gux-id-11-00">
             11:00
           </gux-list-item>
         </gux-list>

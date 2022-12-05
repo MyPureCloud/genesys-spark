@@ -44,7 +44,7 @@ export class GuxTruncate {
     await this.tooltipElement?.hideTooltip();
   }
 
-  @OnMutation({ childList: true, subtree: true })
+  @OnMutation({ childList: true, subtree: true, characterData: true })
   onMutation(): void {
     forceUpdate(this.root);
   }
