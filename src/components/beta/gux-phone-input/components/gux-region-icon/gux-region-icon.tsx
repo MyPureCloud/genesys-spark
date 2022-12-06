@@ -1,26 +1,26 @@
 import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 import { trackComponent } from '../../../../../usage-tracking';
-import { getImgSource } from './gux-country-select.service';
+import { getImgSource } from './gux-region-select.service';
 
 @Component({
-  tag: 'gux-country-icon',
+  tag: 'gux-region-icon',
   assetsDirs: ['assets'],
   shadow: true
 })
-export class GuxCountryIcon {
+export class GuxRegionIcon {
   @Element()
   root: HTMLElement;
 
   @Prop()
-  countryCode: string;
+  region: string;
 
   @Prop()
-  countryName: string;
+  regionName: string;
 
   @State()
   private imgSrc: string;
 
-  @Watch('countryCode')
+  @Watch('region')
   async prepIcon(iconName: string): Promise<void> {
     if (iconName) {
       this.imgSrc = await getImgSource(iconName);
@@ -29,10 +29,10 @@ export class GuxCountryIcon {
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
-    await this.prepIcon(this.countryCode);
+    await this.prepIcon(this.region);
   }
 
   render(): JSX.Element {
-    return (<img src={this.imgSrc} alt={this.countryName} />) as JSX.Element;
+    return (<img src={this.imgSrc} alt={this.regionName} />) as JSX.Element;
   }
 }

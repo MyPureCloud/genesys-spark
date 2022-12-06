@@ -30,7 +30,7 @@ Input for international phone numbers
 ### Depends on
 
 - [gux-icon](../../stable/gux-icon)
-- [gux-country-icon](./components/gux-country-icon)
+- [gux-region-icon](./components/gux-region-icon)
 - [gux-option](../../stable/gux-listbox/gux-option)
 - [gux-listbox](../../stable/gux-listbox)
 - [gux-popup](../../stable/gux-popup)
@@ -39,7 +39,7 @@ Input for international phone numbers
 ```mermaid
 graph TD;
   gux-phone-input-beta --> gux-icon
-  gux-phone-input-beta --> gux-country-icon
+  gux-phone-input-beta --> gux-region-icon
   gux-phone-input-beta --> gux-option
   gux-phone-input-beta --> gux-listbox
   gux-phone-input-beta --> gux-popup

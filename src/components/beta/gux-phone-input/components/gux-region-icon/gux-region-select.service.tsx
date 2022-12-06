@@ -4,7 +4,7 @@ const imgSrcCache: Map<string, Promise<string>> = new Map();
 
 async function fetchImage(imgName: string): Promise<string> {
   const imgResponse = await fetch(
-    getAssetPath(`./assets/country-flags/${imgName}.png`)
+    getAssetPath(`./assets/region-flags/${imgName}.png`)
   );
 
   if (imgResponse.status === 200) {
@@ -12,7 +12,7 @@ async function fetchImage(imgName: string): Promise<string> {
   }
 
   throw new Error(
-    `[gux-country-select] fetching failed for icon "${imgName}" with status "${imgResponse.statusText} (${imgResponse.status})".`
+    `[gux-region-select] fetching failed for icon "${imgName}" with status "${imgResponse.statusText} (${imgResponse.status})".`
   );
 }
 

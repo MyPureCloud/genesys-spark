@@ -1,4 +1,4 @@
-export const countryCodeMap = {
+export const regionCountryCodeMap = {
   AD: '376',
   AE: '971',
   AF: '93',

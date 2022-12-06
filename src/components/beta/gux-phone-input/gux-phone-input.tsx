@@ -13,7 +13,7 @@ import {
 } from '@stencil/core';
 import libphonenumber, { PhoneNumberFormat } from 'google-libphonenumber';
 import { trackComponent } from '../../../usage-tracking';
-import { countryCodeMap } from './services/CountryCodeMap';
+import { regionCountryCodeMap } from './services/RegionCountryCodeMap';
 import {
   buildI18nForComponent,
   getDesiredLocale,
@@ -21,7 +21,7 @@ import {
 } from '../../../i18n';
 import countryResources from './i18n/en.json';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
-import { getCountryObjects } from './services/country-map.service';
+import { getRegionObjects } from './services/region-map.service';
 import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
 
 @Component({
@@ -44,6 +44,7 @@ export class GuxPhoneInput {
   @Prop({ mutable: true })
   value: string;
 
+  // ISO 3166-1 alpha-2 code
   @Prop()
   defaultRegion: string = 'US';
 
@@ -59,6 +60,7 @@ export class GuxPhoneInput {
   @Prop()
   required: boolean;
 
+  // ISO 3166-1 alpha-2 code
   @State()
   region: string;
 
@@ -290,7 +292,7 @@ export class GuxPhoneInput {
 
   private renderCountryButton(): JSX.Element {
     return (
-      <div class="country-select">
+      <div class="region-select">
         <button
           type="button"
           class="gux-field gux-field-button"
@@ -317,15 +319,12 @@ export class GuxPhoneInput {
     );
 
     const selectedRegion = selectedListboxOptionElement?.value;
-    const countryName = this.i18n(selectedRegion);
-    const countryCode: string = countryCodeMap[selectedRegion] || '';
+    const regionName = this.i18n(selectedRegion);
+    const countryCode: string = regionCountryCodeMap[selectedRegion] || '';
 
     return (
       <div class="gux-selected-option">
-        <gux-country-icon
-          countryCode={selectedRegion}
-          countryName={countryName}
-        />
+        <gux-region-icon region={selectedRegion} regionName={regionName} />
         <span>{`+${countryCode}`}</span>
       </div>
     ) as JSX.Element;
@@ -363,25 +362,40 @@ export class GuxPhoneInput {
   }
 
   private renderPopup(): JSX.Element {
-    const options = [];
-    for (const country of getCountryObjects(
+    const options: JSX.Element[] = getRegionObjects(
       getDesiredLocale(this.root),
       this.i18n,
       this.phoneUtil
-    )) {
-      options.push(
-        <gux-option value={country.key}>
-          <span class="option-content">
-            <gux-country-icon
-              countryCode={country.key}
-              countryName={country.name}
-            />
-            <span>{country.name}</span>
-            <span class="country-code">{`+${country.code}`}</span>
-          </span>
-        </gux-option>
-      );
-    }
+    ).map(
+      region =>
+        (
+          <gux-option value={region.code}>
+            <span class="option-content">
+              <gux-region-icon region={region.code} regionName={region.name} />
+              <span>{region.name}</span>
+              <span class="country-code">{`+${region.countryCode}`}</span>
+            </span>
+          </gux-option>
+        ) as JSX.Element
+    );
+    // for (const region of getRegionObjects(
+    //   getDesiredLocale(this.root),
+    //   this.i18n,
+    //   this.phoneUtil
+    // )) {
+    //   options.push(
+    //     <gux-option value={region.code}>
+    //       <span class="option-content">
+    //         <gux-region-icon
+    //           region={region.code}
+    //           regionName={region.name}
+    //         />
+    //         <span>{region.name}</span>
+    //         <span class="country-code">{`+${region.countryCode}`}</span>
+    //       </span>
+    //     </gux-option>
+    //   );
+    // }
 
     return (
       <div slot="popup" class="gux-listbox-container">
