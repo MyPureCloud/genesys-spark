@@ -10,7 +10,7 @@ import { GuxTableToolbarActionAccent } from '../gux-table-toolbar-action-accents
 @Component({
   styleUrl: 'gux-table-toolbar-custom-action.less',
   tag: 'gux-table-toolbar-custom-action',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxTableToolbarCustomAction {
   @Element()
