@@ -26,6 +26,36 @@ function getCurrentFocusIndex(
   );
 }
 
+function getIndexById(
+  root: HTMLElement,
+  validFocusableItems: string[],
+  id: string
+): number {
+  return getGuxListFocusableItems(root, validFocusableItems).findIndex(
+    cv => cv.id === id
+  );
+}
+
+function getClosestIndexById(
+  root: HTMLElement,
+  validFocusableItems: string[],
+  startOfIdString: string
+): number {
+  const index = getGuxListFocusableItems(root, validFocusableItems).findIndex(
+    cv => cv.id.startsWith(startOfIdString)
+  );
+
+  if (index >= 0) {
+    return index;
+  }
+
+  return getClosestIndexById(
+    root,
+    validFocusableItems,
+    startOfIdString.slice(0, -1)
+  );
+}
+
 export function focusMove(
   root: HTMLElement,
   validFocusableItems: string[],
@@ -79,4 +109,32 @@ export function previous(
   validFocusableItems: string[]
 ): void {
   focusMove(root, validFocusableItems, -1);
+}
+
+export function byId(
+  root: HTMLElement,
+  validFocusableItems: string[],
+  id: string
+): void {
+  const index = getIndexById(root, validFocusableItems, id);
+
+  if (index >= 0) {
+    focusIndex(root, validFocusableItems, index);
+  } else {
+    focusIndex(root, validFocusableItems, 0);
+  }
+}
+
+export function byClosestId(
+  root: HTMLElement,
+  validFocusableItems: string[],
+  id: string
+): void {
+  const index = getClosestIndexById(root, validFocusableItems, id);
+
+  if (index >= 0) {
+    focusIndex(root, validFocusableItems, index);
+  } else {
+    focusIndex(root, validFocusableItems, 0);
+  }
 }

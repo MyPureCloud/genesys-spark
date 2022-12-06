@@ -35,7 +35,9 @@ export class GuxListItem {
 
     if (parentList && parentList.shadowRoot.activeElement === null) {
       this.root.blur();
-      parentList.focus();
+      parentList.focus({
+        preventScroll: true
+      });
     }
   }
 

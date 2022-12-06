@@ -8,7 +8,14 @@ import {
   Method
 } from '@stencil/core';
 
-import { first, last, next, previous } from './gux-list.service';
+import {
+  byClosestId,
+  byId,
+  first,
+  last,
+  next,
+  previous
+} from './gux-list.service';
 
 import { trackComponent } from '../../../usage-tracking';
 
@@ -59,6 +66,18 @@ export class GuxList {
   @Method()
   async guxFocusFirstItem(): Promise<void> {
     first(this.root, validFocusableItems);
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async guxFocusItemById(id: string): Promise<void> {
+    byId(this.root, validFocusableItems, id);
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async guxFocusItemByClosestId(id: string): Promise<void> {
+    byClosestId(this.root, validFocusableItems, id);
   }
 
   private renderFocusTarget(): JSX.Element {

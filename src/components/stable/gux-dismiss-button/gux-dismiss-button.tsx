@@ -1,10 +1,11 @@
-import { Component, Element, h, JSX } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import translationResources from './i18n/en.json';
+import { GuxDismissButtonPosition } from './gux-dismiss-button.types';
 
 @Component({
   styleUrl: 'gux-dismiss-button.less',
@@ -17,14 +18,21 @@ export class GuxDismissButton {
   @Element()
   private root: HTMLElement;
 
+  @Prop()
+  position: GuxDismissButtonPosition = 'absolute';
+
   async componentWillLoad(): Promise<void> {
-    trackComponent(this.root);
+    trackComponent(this.root, { variant: this.position });
     this.i18n = await buildI18nForComponent(this.root, translationResources);
   }
 
   render(): JSX.Element {
     return (
-      <button type="button" title={this.i18n('dismiss')}>
+      <button
+        class={this.position == 'inherit' ? 'gux-inherit' : undefined}
+        type="button"
+        title={this.i18n('dismiss')}
+      >
         <gux-icon
           icon-name="close"
           screenreader-text={this.i18n('dismiss')}
