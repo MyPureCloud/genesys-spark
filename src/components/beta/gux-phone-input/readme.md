@@ -19,11 +19,10 @@ Input for international phone numbers
 
 ## Events
 
-| Event                   | Description | Type                   |
-| ----------------------- | ----------- | ---------------------- |
-| `input`                 |             | `CustomEvent<string>`  |
-| `internalError`         |             | `CustomEvent<boolean>` |
-| `internalregionupdated` |             | `CustomEvent<any>`     |
+| Event           | Description | Type                   |
+| --------------- | ----------- | ---------------------- |
+| `input`         |             | `CustomEvent<string>`  |
+| `internalError` |             | `CustomEvent<boolean>` |
 
 
 ## Dependencies

@@ -71,9 +71,6 @@ export class GuxPhoneInput {
   @Event()
   internalError: EventEmitter<boolean>;
 
-  @Event()
-  internalregionupdated: EventEmitter;
-
   @Watch('expanded')
   focusSelectedItemAfterRender(expanded: boolean) {
     if (expanded && this.listboxElement) {
@@ -91,13 +88,6 @@ export class GuxPhoneInput {
     if (selectedListboxOptionElement) {
       this.listboxElement.value = newValue;
       return;
-    }
-  }
-
-  @Listen('keydown')
-  onEscKeyPress(event: KeyboardEvent) {
-    if (event.key === 'Escape') {
-      this.collapseListbox('noFocusChange');
     }
   }
 
@@ -267,6 +257,10 @@ export class GuxPhoneInput {
       event.stopPropagation();
       this.onInputChange(this.inputElement.value);
     });
+    this.inputElement.addEventListener('focusin', (event: FocusEvent) => {
+      event.stopPropagation();
+      this.collapseListbox('noFocusChange');
+    });
   }
 
   private setListBox(): void {
@@ -277,6 +271,20 @@ export class GuxPhoneInput {
     });
     this.listboxElement.addEventListener('change', (event: InputEvent) => {
       event.stopPropagation();
+    });
+    this.listboxElement.addEventListener('focusout', (event: InputEvent) => {
+      event.stopPropagation();
+    });
+    this.listboxElement.addEventListener('keydown', (event: KeyboardEvent) => {
+      event.stopPropagation();
+      if (event.key === 'Tab') {
+        /* calling setTimeout is a workaround as calling focus without it does not work */
+        if (event.shiftKey) {
+          setTimeout(() => this.fieldButtonElement.focus(), 0);
+        } else {
+          setTimeout(() => this.inputElement.focus(), 0);
+        }
+      }
     });
   }
 
