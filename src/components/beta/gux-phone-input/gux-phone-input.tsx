@@ -286,6 +286,8 @@ export class GuxPhoneInput {
         } else {
           setTimeout(() => this.inputElement.focus(), 0);
         }
+      } else if (event.key === 'Escape') {
+        this.collapseListbox('noFocusChange');
       }
     });
   }
@@ -378,24 +380,6 @@ export class GuxPhoneInput {
           </gux-option>
         ) as JSX.Element
     );
-    // for (const region of getRegionObjects(
-    //   getDesiredLocale(this.root),
-    //   this.i18n,
-    //   this.phoneUtil
-    // )) {
-    //   options.push(
-    //     <gux-option value={region.code}>
-    //       <span class="option-content">
-    //         <gux-region-icon
-    //           region={region.code}
-    //           regionName={region.name}
-    //         />
-    //         <span>{region.name}</span>
-    //         <span class="country-code">{`+${region.countryCode}`}</span>
-    //       </span>
-    //     </gux-option>
-    //   );
-    // }
 
     return (
       <div slot="popup" class="gux-listbox-container">
