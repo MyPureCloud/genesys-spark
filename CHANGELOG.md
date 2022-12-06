@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.46.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.2...v3.46.3) (2022-12-06)
+
+
+### Bug Fixes
+
+* **table-toolbar:** ux updates to table-toolbar ([32877a4](https://github.com/MyPureCloud/genesys-webcomponents/commit/32877a4f970624a5ee67a7281d3f02e70e4da360))
+
 ### [3.46.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.1...v3.46.2) (2022-12-02)
 
 
