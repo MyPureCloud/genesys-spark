@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.47.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.4...v3.47.0) (2022-12-07)
+
+
+### Features
+
+* **gux-toggle:** show cursor pointer when hovering toggle component ([2f77e27](https://github.com/MyPureCloud/genesys-webcomponents/commit/2f77e27709916261aed63b949727b2b391e7912a))
+
 ### [3.46.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.3...v3.46.4) (2022-12-07)
 
 
