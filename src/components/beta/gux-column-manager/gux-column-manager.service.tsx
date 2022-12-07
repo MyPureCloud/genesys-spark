@@ -25,7 +25,6 @@ export function setKeyboardReorderPositionIndicator(
   { oldIndex, newIndex }: InternalOrderChange
 ): void {
   getColumnManagerItems(root).forEach((item, index) => {
-    console.log({ item, index });
     if (index !== newIndex) {
       item.removeAttribute('gs-reorder-indicator');
     } else {
@@ -67,20 +66,20 @@ export function setAllCheckboxInputs(
   );
 }
 
-export function setMasterCheckboxElementCheckedState(
+export function setMainCheckboxElementCheckedState(
   root: HTMLElement,
-  masterCheckboxElement: HTMLInputElement
+  mainCheckboxElement: HTMLInputElement
 ): void {
   const { count, total } = getSelectedColumnCount(root);
 
   if (count === 0) {
-    masterCheckboxElement.indeterminate = false;
-    masterCheckboxElement.checked = false;
+    mainCheckboxElement.indeterminate = false;
+    mainCheckboxElement.checked = false;
   } else if (count === total) {
-    masterCheckboxElement.indeterminate = false;
-    masterCheckboxElement.checked = true;
+    mainCheckboxElement.indeterminate = false;
+    mainCheckboxElement.checked = true;
   } else {
-    masterCheckboxElement.indeterminate = true;
+    mainCheckboxElement.indeterminate = true;
   }
 }
 

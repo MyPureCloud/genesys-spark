@@ -42,13 +42,13 @@ export class GuxColumnManagerItem {
   text: string;
 
   @State()
-  over: 'off' | 'up' | 'down' = 'off';
+  pendingReorder: 'none' | 'above' | 'below' = 'none';
 
   @State()
-  dragging: boolean = false;
+  isDragging: boolean = false;
 
   @State()
-  reordering: boolean = false;
+  isReordering: boolean = false;
 
   @Event()
   private internalorderchange: EventEmitter<InternalOrderChange>;
@@ -82,7 +82,7 @@ export class GuxColumnManagerItem {
 
   @Listen('dragstart')
   onDragStart(event: DragEvent) {
-    this.dragging = true;
+    this.isDragging = true;
     const oldIndex = getIndexInParent(this.root);
     event.dataTransfer.setData('oldIndex', String(oldIndex));
     event.dataTransfer.effectAllowed = 'move';
@@ -91,24 +91,24 @@ export class GuxColumnManagerItem {
   @Listen('dragenter')
   onDragEnter(event: DragEvent) {
     event.dataTransfer.dropEffect = 'move';
-    this.over = this.mouseOnTopHalf(event) ? 'up' : 'down';
+    this.pendingReorder = this.mouseOnTopHalf(event) ? 'above' : 'below';
   }
 
   @Listen('dragover', { passive: false })
   onDragOver(event: DragEvent) {
     event.preventDefault();
 
-    this.over = this.mouseOnTopHalf(event) ? 'up' : 'down';
+    this.pendingReorder = this.mouseOnTopHalf(event) ? 'above' : 'below';
   }
 
   @Listen('dragleave')
   onDragLeave() {
-    this.over = 'off';
+    this.pendingReorder = 'none';
   }
 
   @Listen('dragend')
   onDragEnd() {
-    this.dragging = false;
+    this.isDragging = false;
   }
 
   @Listen('drop')
@@ -118,7 +118,7 @@ export class GuxColumnManagerItem {
 
     event.stopPropagation(); // stops the browser from redirecting.
     event.stopImmediatePropagation();
-    this.over = 'off';
+    this.pendingReorder = 'none';
 
     const newIndex = getNewIndex(
       oldIndex,
@@ -144,13 +144,13 @@ export class GuxColumnManagerItem {
   }
 
   private setReorderMode(
-    reordering: boolean,
+    isReordering: boolean,
     doReorder: boolean = false
   ): void {
-    if (this.reordering !== reordering) {
-      this.reordering = reordering;
+    if (this.isReordering !== isReordering) {
+      this.isReordering = isReordering;
 
-      if (reordering) {
+      if (isReordering) {
         this.internalkeyboardreorderstart.emit();
       } else {
         if (doReorder) {
@@ -162,11 +162,11 @@ export class GuxColumnManagerItem {
   }
 
   private toggleReorderMode(): void {
-    this.setReorderMode(!this.reordering, true);
+    this.setReorderMode(!this.isReordering, true);
   }
 
   private keyboardReorder(event: KeyboardEvent): void {
-    if (this.reordering) {
+    if (this.isReordering) {
       switch (event.key) {
         case 'ArrowUp': {
           event.preventDefault();
@@ -188,14 +188,14 @@ export class GuxColumnManagerItem {
         <div
           class={{
             'gux-container': true,
-            [`gux-over-${this.over}`]: true,
-            'gux-dragging': this.dragging
+            [`gux-drop-${this.pendingReorder}`]: true,
+            'gux-dragging': this.isDragging
           }}
         >
           <button
             class={{
               'gux-reorder': true,
-              'gux-reordering': this.reordering
+              'gux-reordering': this.isReordering
             }}
             type="button"
             onClick={() => this.toggleReorderMode()}

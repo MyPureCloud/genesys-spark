@@ -29,7 +29,7 @@ import {
   setAllCheckboxInputs,
   setHighlights,
   setKeyboardReorderPositionIndicator,
-  setMasterCheckboxElementCheckedState
+  setMainCheckboxElementCheckedState
 } from './gux-column-manager.service';
 
 import translationResources from './i18n/en.json';
@@ -43,7 +43,7 @@ import translationResources from './i18n/en.json';
   shadow: true
 })
 export class GuxColumnManager {
-  private masterCheckboxElement: HTMLInputElement;
+  private mainCheckboxElement: HTMLInputElement;
   private searchElement: HTMLInputElement;
   private i18n: GetI18nValue;
 
@@ -73,7 +73,7 @@ export class GuxColumnManager {
   }
 
   componentDidLoad(): void {
-    setMasterCheckboxElementCheckedState(this.root, this.masterCheckboxElement);
+    setMainCheckboxElementCheckedState(this.root, this.mainCheckboxElement);
   }
 
   @Listen('internalorderchange')
@@ -146,13 +146,13 @@ export class GuxColumnManager {
     );
   }
 
-  private onMasterCheckboxChange(): void {
-    setAllCheckboxInputs(this.root, this.masterCheckboxElement.checked);
+  private onMainCheckboxChange(): void {
+    setAllCheckboxInputs(this.root, this.mainCheckboxElement.checked);
     forceUpdate(this.root);
   }
 
   private onListChange(): void {
-    setMasterCheckboxElementCheckedState(this.root, this.masterCheckboxElement);
+    setMainCheckboxElementCheckedState(this.root, this.mainCheckboxElement);
     forceUpdate(this.root);
   }
 
@@ -164,7 +164,22 @@ export class GuxColumnManager {
     const { count, total } = getSelectedColumnCount(this.root);
 
     return (
-      <div>{this.i18n('selectedColumnCount', { count, total })}</div>
+      <div>
+        <span aria-hidden="true">
+          {this.i18n('selectedColumnCount', { count, total })}
+        </span>
+        <span class="gux-sr-only">
+          {count === total ? (
+            <span>
+              : {this.i18n('unselectAllColumnsScreenReader', { count, total })}
+            </span>
+          ) : (
+            <span>
+              : {this.i18n('selectAllColumnsScreenReader', { count, total })}
+            </span>
+          )}
+        </span>
+      </div>
     ) as JSX.Element;
   }
 
@@ -192,8 +207,8 @@ export class GuxColumnManager {
             <input
               slot="input"
               type="checkbox"
-              ref={el => (this.masterCheckboxElement = el)}
-              onChange={() => this.onMasterCheckboxChange()}
+              ref={el => (this.mainCheckboxElement = el)}
+              onChange={() => this.onMainCheckboxChange()}
             />
             <label slot="label">{this.renderSelectedColumnCount()}</label>
           </gux-form-field-checkbox>

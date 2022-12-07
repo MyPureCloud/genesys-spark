@@ -1,5 +1,6 @@
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/color-palette.less';
+@import (reference) '../../../style/typography.less';
 
 .gux-container {
   width: 320px; // TODO Remove this when I add the modal part
@@ -18,4 +19,8 @@
     background-color: @gux-grey-90;
     border-radius: 4px;
   }
+}
+
+.gux-sr-only {
+  .gux-sr-only-clip();
 }
