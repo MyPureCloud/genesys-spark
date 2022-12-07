@@ -36,9 +36,10 @@ import componentResources from './i18n/en.json';
 import { GuxFormFieldHelp } from '../../functional-components/gux-form-field-help/gux-form-field-help';
 
 /**
- * @slot - Required slot for gux-time-picker-beta tag
+ * @slot - Required slot for gux-phone-input-beta tag
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
+ * @slot help - Optional slot for help message
  */
 @Component({
   styleUrl: 'gux-form-field-phone.less',
