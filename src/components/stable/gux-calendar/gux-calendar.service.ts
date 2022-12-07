@@ -1,3 +1,5 @@
+import { capitalizeFirstLetter } from '@utils/string/capitalize-first-letter';
+
 export function firstDateInMonth(
   month: number,
   year: number,
@@ -42,5 +44,7 @@ export function getOffsetMonthDate(baseDate: Date, monthDelta: number) {
 }
 
 export function getDateMonthAndYearString(date: Date, locale: string) {
-  return date.toLocaleDateString(locale, { year: 'numeric', month: 'long' });
+  return capitalizeFirstLetter(
+    date.toLocaleDateString(locale, { year: 'numeric', month: 'long' })
+  );
 }
