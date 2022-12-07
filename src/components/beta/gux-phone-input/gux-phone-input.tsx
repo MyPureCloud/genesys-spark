@@ -274,7 +274,7 @@ export class GuxPhoneInput {
     this.listboxElement.addEventListener('change', (event: InputEvent) => {
       event.stopPropagation();
     });
-    this.listboxElement.addEventListener('focusout', (event: InputEvent) => {
+    this.listboxElement.addEventListener('focusout', (event: FocusEvent) => {
       event.stopPropagation();
     });
     this.listboxElement.addEventListener('keydown', (event: KeyboardEvent) => {
