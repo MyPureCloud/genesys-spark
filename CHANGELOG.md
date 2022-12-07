@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.46.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.3...v3.46.4) (2022-12-07)
+
+
+### Bug Fixes
+
+* **calendar:** fixed month and year localisation ([5b0bfe9](https://github.com/MyPureCloud/genesys-webcomponents/commit/5b0bfe9c1eec573c861975d2f40f83a6668b5686))
+* **pr-comment:** addressed PR comment ([ae10944](https://github.com/MyPureCloud/genesys-webcomponents/commit/ae1094467034ab0e27d06d3c516075659f2007f9))
+
 ### [3.46.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.2...v3.46.3) (2022-12-06)
 
 
