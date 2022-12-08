@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.48.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.47.0...v3.48.0) (2022-12-08)
+
+
+### Features
+
+* **gux-tag:** support additional colors for tag component ([2fd9718](https://github.com/MyPureCloud/genesys-webcomponents/commit/2fd971857df03a68500866be5eb572a4395a87c0))
+
 ## [3.47.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.4...v3.47.0) (2022-12-07)
 
 
