@@ -5,5 +5,5 @@
   "previous": "Edellinen",
   "next": "Seuraava",
   "last": "Viimeinen",
-  "pageInputLabel": "Sivu {currentPage, number} / {lastPage, number})"
+  "pageInputLabel": "Sivu {currentPage, number} / {totalPages, number})"
 }
