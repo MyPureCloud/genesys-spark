@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.48.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.0...v3.48.1) (2022-12-09)
+
+
+### Bug Fixes
+
+* **truncate:** enabled pointer events ([f7a6511](https://github.com/MyPureCloud/genesys-webcomponents/commit/f7a65110f5ec24ec201d57fda0236f98f2685969))
+
 ## [3.48.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.47.0...v3.48.0) (2022-12-08)
 
 
