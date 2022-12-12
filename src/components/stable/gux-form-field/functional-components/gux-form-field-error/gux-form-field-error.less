@@ -1,4 +1,5 @@
 @import (reference) '../../../../../style/color-palette.less';
+@import (reference) '../../../../../style/spacing.less';
 
 /* stylelint-disable-next-line selector-class-pattern */
 .GuxFormFieldErrorStyle {
@@ -9,9 +10,9 @@
     align-content: stretch;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 4px 0;
-    font-size: 11px;
-    line-height: 16px;
+    margin: @gux-spacing-2xs 0;
+    font-size: 12px;
+    line-height: 20px;
     color: @gux-black-50;
 
     &.gux-show {
@@ -22,9 +23,9 @@
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
-      width: 16px;
-      height: 16px;
-      margin-right: 4px;
+      min-width: 16px;
+      min-height: 16px;
+      margin: @gux-spacing-3xs @gux-spacing-2xs 0 0;
       color: @gux-alert-red-60;
     }
 
