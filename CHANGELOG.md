@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.48.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.1...v3.48.2) (2022-12-12)
+
+
+### Bug Fixes
+
+* **gux-form-field-error:** adjust line height and margin to match design for error message and icon ([b79542c](https://github.com/MyPureCloud/genesys-webcomponents/commit/b79542cb673d58a84996858537283d14651ef37c))
+* **gux-form-field-error:** use spacing variables, stop icon shrinking, update font size to 12px ([ee5cef9](https://github.com/MyPureCloud/genesys-webcomponents/commit/ee5cef97cbe744113aaa2c5f6693ef1cbe86011f))
+
 ### [3.48.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.0...v3.48.1) (2022-12-09)
 
 
