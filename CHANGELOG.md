@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.48.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.2...v3.48.3) (2022-12-13)
+
+
+### Bug Fixes
+
+* **datepicker:** fixed pt-pt start of week day ([cdc3fa6](https://github.com/MyPureCloud/genesys-webcomponents/commit/cdc3fa6a561f85c616dc0d15f8ef7ec8a835d08d))
+
 ### [3.48.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.1...v3.48.2) (2022-12-12)
 
 
