@@ -1,0 +1,21 @@
+.gux-focus-ring-focused {
+  &:focus {
+    .gux-focus-ring();
+  }
+}
+
+.gux-focus-ring-focused-within {
+  &:focus-within {
+    .gux-focus-ring();
+  }
+}
+
+.gux-focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 1px @gux-grey-100, 0 0 0 4px @gux-blue-90;
+}
+
+.gux-focus-ring-small {
+  outline: none;
+  box-shadow: 0 0 0 1px transparent, 0 0 0 2px @gux-blue-90;
+}
