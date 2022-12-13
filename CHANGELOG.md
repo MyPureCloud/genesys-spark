@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.49.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.3...v3.49.0) (2022-12-13)
+
+
+### Features
+
+* **styles:** export focus style classes ([d6e0eb2](https://github.com/MyPureCloud/genesys-webcomponents/commit/d6e0eb2dfcb2712f281eca3b8a924b7a2767d1db))
+
 ### [3.48.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.2...v3.48.3) (2022-12-13)
 
 
