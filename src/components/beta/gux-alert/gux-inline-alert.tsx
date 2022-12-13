@@ -51,12 +51,10 @@ export class GuxAlert {
         }}
       >
         <gux-icon icon-name={this.getIcon(this.accent)} decorative></gux-icon>
-        <gux-tooltip-title>
-          <span>
-            <div class="gux-sr-only">{this.i18n(this.accent)}</div>
-            <slot />
-          </span>
-        </gux-tooltip-title>
+        <div class="gux-message-wrapper">
+          <div class="gux-sr-only">{this.i18n(this.accent)}</div>
+          <slot />
+        </div>
       </div>
     ) as JSX.Element;
   }

@@ -3,7 +3,9 @@
 <h2>Inline Alert Examples</h2>
 <div class="alerts">
   <gux-inline-alert-beta accent="info"
-    ><strong>Note:</strong> This is an information alert.</gux-inline-alert-beta
+    ><strong>Note:</strong> This is an information alert. This alert will
+    demonstrate how the alert will wrap if needed in certain
+    instances.</gux-inline-alert-beta
   >
   <gux-inline-alert-beta accent="success"
     ><strong>Note:</strong> This is a success alert.</gux-inline-alert-beta
@@ -15,6 +17,16 @@
     ><strong>Note:</strong> This is a warning alert.</gux-inline-alert-beta
   >
 </div>
+
+<h2>Truncated Inline Alert Examples</h2>
+
+<h2>1 line truncated inline alert example</h2>
+<gux-inline-alert-beta accent="info"
+  ><gux-truncate-beta max-lines="1">
+    This is an information message to demonstrate that this alert will truncate
+    after 1 line. You can also alter the max lines to be 2.</gux-truncate-beta
+  ></gux-inline-alert-beta
+>
 
 <style>
   .alerts {
