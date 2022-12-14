@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.50.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.49.0...v3.50.0) (2022-12-14)
+
+
+### Features
+
+* **inline-alert:** allow text to wrap instead of truncating ([dcc68ba](https://github.com/MyPureCloud/genesys-webcomponents/commit/dcc68baa440e0133fbcf4ebdd049b6345d43bd7b))
+
+
+### Bug Fixes
+
+* **gux-datepicker:** vertically center calendar button ([01601ec](https://github.com/MyPureCloud/genesys-webcomponents/commit/01601ecf85b6668d7e20644eb3fb5a25fa06883c))
+* **gux-time-picker:** vertically center clock button ([7b52599](https://github.com/MyPureCloud/genesys-webcomponents/commit/7b52599c5b88e17ae5220f4dd89fd4c32f5b7f16))
+
 ## [3.49.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.3...v3.49.0) (2022-12-13)
 
 
