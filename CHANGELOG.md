@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.52.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.51.0...v3.52.0) (2022-12-15)
+
+
+### Features
+
+* **time-picker:** added new step property ([89c3389](https://github.com/MyPureCloud/genesys-webcomponents/commit/89c33894411c9be3b5efab00cec2c47f6b8a09f5))
+
+
+### Bug Fixes
+
+* **advanced-tabs:** fixed safari dropdown-option click bug ([5016c45](https://github.com/MyPureCloud/genesys-webcomponents/commit/5016c45171a1dda67ead259ad3b58694a9742fbb))
+
 ## [3.51.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.50.0...v3.51.0) (2022-12-15)
 
 
