@@ -18,8 +18,8 @@
 | ------------------------------- | ----------- | ------------------------------------------------------ |
 | `internalkeyboarddoreorder`     |             | `CustomEvent<void>`                                    |
 | `internalkeyboardreorderfinish` |             | `CustomEvent<void>`                                    |
-| `internalkeyboardreordermove`   |             | `CustomEvent<-1 \| 1>`                                 |
-| `internalkeyboardreorderstart`  |             | `CustomEvent<void>`                                    |
+| `internalkeyboardreordermove`   |             | `CustomEvent<{ delta: 1 \| -1; column: string; }>`     |
+| `internalkeyboardreorderstart`  |             | `CustomEvent<string>`                                  |
 | `internalorderchange`           |             | `CustomEvent<{ oldIndex: number; newIndex: number; }>` |
 
 

@@ -18,7 +18,8 @@ import { trackComponent } from '../../../usage-tracking';
 import {
   InternalOrderChange,
   InternalHighlightResults,
-  GuxOrder
+  GuxOrder,
+  InternalKeyboardReorderMove
 } from './gux-column-manager.type';
 import {
   getEmptyKeyboardOrderChange,
@@ -45,6 +46,7 @@ import translationResources from './i18n/en.json';
 export class GuxColumnManager {
   private mainCheckboxElement: HTMLInputElement;
   private searchElement: HTMLInputElement;
+  private announceElement: HTMLGuxAnnounceBetaElement;
   private i18n: GetI18nValue;
 
   @Element()
@@ -97,24 +99,42 @@ export class GuxColumnManager {
   handleInternalkeyboardorderstart(event: CustomEvent): void {
     event.stopPropagation();
 
+    const columnName = event.detail as string;
+
     const oldIndex = getIndexInParent(event.target as HTMLElement);
 
     this.keyboardOrderChange = {
       oldIndex,
       newIndex: oldIndex
     };
+
+    void this.announceElement.guxAnnounce(
+      this.i18n('reorderingModeActive', { columnName })
+    );
   }
 
   @Listen('internalkeyboardreordermove')
   handleInternalkeyboardreordermove(event: CustomEvent): void {
     event.stopPropagation();
 
-    const delta = event.detail as 1 | -1;
+    const { delta, column } = event.detail as InternalKeyboardReorderMove;
 
     this.keyboardOrderChange = getNewKeyboardOrderChange(
       this.root,
       this.keyboardOrderChange,
       delta
+    );
+
+    const columnName = column;
+    const newPositionNumber = this.keyboardOrderChange.newIndex + 1;
+    const oldPositionNumber = this.keyboardOrderChange.oldIndex + 1;
+
+    void this.announceElement.guxAnnounce(
+      this.i18n('movePositionPrompt', {
+        columnName,
+        newPositionNumber,
+        oldPositionNumber
+      })
     );
   }
 
@@ -216,6 +236,9 @@ export class GuxColumnManager {
         <div class="gux-list" onChange={() => this.onListChange()}>
           <slot onSlotchange={() => this.onSlotChange()}></slot>
         </div>
+        <gux-announce-beta
+          ref={el => (this.announceElement = el)}
+        ></gux-announce-beta>
       </div>
     ) as JSX.Element;
   }

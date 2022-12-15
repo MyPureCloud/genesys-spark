@@ -9,3 +9,8 @@ export type InternalHighlightResults = {
 };
 
 export type GuxOrder = string[];
+
+export type InternalKeyboardReorderMove = {
+  delta: 1 | -1;
+  column: string;
+};

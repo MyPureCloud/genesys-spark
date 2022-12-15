@@ -12,10 +12,17 @@ import {
   Prop
 } from '@stencil/core';
 
+import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
+
 import { getIndexInParent } from '../gux-column-manager.service';
-import { InternalOrderChange } from '../gux-column-manager.type';
+import {
+  InternalOrderChange,
+  InternalKeyboardReorderMove
+} from '../gux-column-manager.type';
 
 import { getNewIndex } from './gux-column-manager-item.service';
+
+import translationResources from './i18n/en.json';
 
 /**
  * @slot - slot for gux-form-field-checkbox
@@ -26,6 +33,8 @@ import { getNewIndex } from './gux-column-manager-item.service';
   shadow: { delegatesFocus: true }
 })
 export class GuxColumnManagerItem {
+  private i18n: GetI18nValue;
+
   @Element()
   root: HTMLElement;
 
@@ -54,10 +63,10 @@ export class GuxColumnManagerItem {
   private internalorderchange: EventEmitter<InternalOrderChange>;
 
   @Event()
-  private internalkeyboardreorderstart: EventEmitter<void>;
+  private internalkeyboardreorderstart: EventEmitter<string>;
 
   @Event()
-  private internalkeyboardreordermove: EventEmitter<1 | -1>;
+  private internalkeyboardreordermove: EventEmitter<InternalKeyboardReorderMove>;
 
   @Event()
   private internalkeyboarddoreorder: EventEmitter<void>;
@@ -151,11 +160,12 @@ export class GuxColumnManagerItem {
       this.isReordering = isReordering;
 
       if (isReordering) {
-        this.internalkeyboardreorderstart.emit();
+        this.internalkeyboardreorderstart.emit(this.text);
       } else {
         if (doReorder) {
           this.internalkeyboarddoreorder.emit();
         }
+
         this.internalkeyboardreorderfinish.emit();
       }
     }
@@ -170,16 +180,26 @@ export class GuxColumnManagerItem {
       switch (event.key) {
         case 'ArrowUp': {
           event.preventDefault();
-          this.internalkeyboardreordermove.emit(-1);
+          this.internalkeyboardreordermove.emit({
+            delta: -1,
+            column: this.text
+          });
           break;
         }
         case 'ArrowDown': {
           event.preventDefault();
-          this.internalkeyboardreordermove.emit(1);
+          this.internalkeyboardreordermove.emit({
+            delta: 1,
+            column: this.text
+          });
           break;
         }
       }
     }
+  }
+
+  async componentWillLoad(): Promise<void> {
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
   }
 
   render(): JSX.Element {
@@ -202,6 +222,9 @@ export class GuxColumnManagerItem {
             onKeyDown={event => this.keyboardReorder(event)}
           >
             <gux-icon icon-name="grab-vertical" decorative></gux-icon>
+            <span class="gux-sr-only">
+              {this.i18n('activateReordering', { columnName: this.text })}
+            </span>
           </button>
           <div class="gux-select">
             <slot onSlotchange={() => this.onSlotChange()}></slot>

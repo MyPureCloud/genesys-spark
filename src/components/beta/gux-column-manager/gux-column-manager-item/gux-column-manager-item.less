@@ -1,6 +1,7 @@
 @import (reference) '../../../../style/color-palette.less';
 @import (reference) '../../../../style/mixins.less';
 @import (reference) '../../../../style/spacing.less';
+@import (reference) '../../../../style/typography.less';
 
 :host([gs-reorder-indicator='above']) {
   .gux-container {
@@ -91,4 +92,8 @@
       }
     }
   }
+}
+
+.gux-sr-only {
+  .gux-sr-only-clip();
 }
