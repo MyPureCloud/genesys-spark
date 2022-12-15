@@ -233,6 +233,7 @@ export class GuxTabAdvanced {
           closeOnClickOutside={true}
           onGuxdismiss={() => (this.popoverHidden = true)}
           onClick={(e: MouseEvent) => this.popoverOnClick(e)}
+          onFocusout={e => e.stopImmediatePropagation()}
         >
           <div
             class="gux-dropdown-option-container"
