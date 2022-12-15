@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.52.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.52.0...v3.52.1) (2022-12-15)
+
+
+### Bug Fixes
+
+* **dropdown:** fixed style of filter text ([357f2df](https://github.com/MyPureCloud/genesys-webcomponents/commit/357f2dfda8335055341984c01500aa63eba06ba7))
+
 ## [3.52.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.51.0...v3.52.0) (2022-12-15)
 
 
