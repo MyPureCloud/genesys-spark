@@ -12,7 +12,8 @@ import translationResources from './i18n/en.json';
 import {
   GuxClockType,
   GuxISOHourMinute,
-  GuxMinuteInterval
+  GuxMinuteInterval,
+  GuxMinuteStep
 } from './gux-time-picker.type';
 import {
   getHourDisplayValue,
@@ -50,6 +51,9 @@ export class GuxTimePickerBeta {
 
   @Prop()
   interval: GuxMinuteInterval = 60;
+
+  @Prop()
+  step: GuxMinuteStep = 1;
 
   @Prop()
   disabled: boolean = false;
@@ -195,12 +199,12 @@ export class GuxTimePickerBeta {
         break;
       case 'ArrowDown':
         event.preventDefault();
-        this.updateValue(incrementMinute(this.value, -1));
+        this.updateValue(incrementMinute(this.value, -1, this.step));
 
         break;
       case 'ArrowUp':
         event.preventDefault();
-        this.updateValue(incrementMinute(this.value, 1));
+        this.updateValue(incrementMinute(this.value, 1, this.step));
         break;
       case 'Backspace':
       case '0':

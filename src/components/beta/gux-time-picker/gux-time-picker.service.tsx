@@ -3,6 +3,7 @@ import { getDesiredLocale } from '../../../i18n';
 import {
   GuxClockType,
   GuxMinuteInterval,
+  GuxMinuteStep,
   GuxISOHourMinute
 } from './gux-time-picker.type';
 
@@ -52,12 +53,18 @@ export function incrementHour(
 
 export function incrementMinute(
   value: GuxISOHourMinute,
-  delta: 1 | -1
+  delta: 1 | -1,
+  step: GuxMinuteStep
 ): GuxISOHourMinute {
   const [hour, minute] = value.split(':');
-  const newMinute = ((parseInt(minute, 10) + delta + 60) % 60)
-    .toString()
-    .padStart(2, '0');
+  const minuteInt = parseInt(minute, 10);
+  let newMinuteInt = (minuteInt + delta + 60) % 60;
+
+  while (newMinuteInt % step !== 0) {
+    newMinuteInt = (newMinuteInt + delta + 60) % 60;
+  }
+
+  const newMinute = newMinuteInt.toString().padStart(2, '0');
 
   return `${hour}:${newMinute}`;
 }
