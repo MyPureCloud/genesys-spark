@@ -79,7 +79,9 @@ export class GuxSortControl {
   }
 
   disconnectedCallback() {
-    this.thObserver.disconnect();
+    if (this.thObserver) {
+      this.thObserver.disconnect();
+    }
   }
 
   private onClick(): void {

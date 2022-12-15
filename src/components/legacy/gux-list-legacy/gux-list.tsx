@@ -134,7 +134,9 @@ export class GuxListLegacy {
   }
 
   disconnectedCallback(): void {
-    this.observer.disconnect();
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 
   render(): JSX.Element {

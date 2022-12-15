@@ -33,7 +33,9 @@ export function OnResize(): OnResizeDecorator {
     };
 
     proto.disconnectedCallback = function () {
-      onMutationObserver.disconnect();
+      if (onMutationObserver) {
+        onMutationObserver.disconnect();
+      }
 
       return disconnectedCallback && disconnectedCallback.call(this);
     };

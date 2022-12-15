@@ -33,7 +33,9 @@ export function OnMutation(opt: MutationObserverInit): OnMutationDecorator {
     };
 
     proto.disconnectedCallback = function () {
-      onMutationObserver.disconnect();
+      if (onMutationObserver) {
+        onMutationObserver.disconnect();
+      }
 
       return disconnectedCallback && disconnectedCallback.call(this);
     };

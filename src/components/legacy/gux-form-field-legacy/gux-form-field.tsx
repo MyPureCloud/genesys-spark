@@ -110,7 +110,9 @@ export class GuxFormFieldLegacy {
   }
 
   disconnectedCallback(): void {
-    this.requiredObserver.disconnect();
+    if (this.requiredObserver) {
+      this.requiredObserver.disconnect();
+    }
   }
 
   private renderInputCheckbox(hasError: boolean): JSX.Element {
