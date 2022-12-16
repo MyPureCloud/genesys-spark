@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.53.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.52.1...v3.53.0) (2022-12-16)
+
+
+### Features
+
+* **column-manager:** added column manager component ([332bcbc](https://github.com/MyPureCloud/genesys-webcomponents/commit/332bcbcf9b073193d692d65a6a963db44d7f4e5f))
+
+
+### Bug Fixes
+
+* **ccessibility:** added some accessibility announcements ([7cb7bfe](https://github.com/MyPureCloud/genesys-webcomponents/commit/7cb7bfe446e4fd382bdb7a6838256fe771a4d747))
+* **pr-comment:** addressed PR comments ([7bc9711](https://github.com/MyPureCloud/genesys-webcomponents/commit/7bc97112072c1c98872dbb43e1c129b5eda8fc88))
+* **pr-comments:** addressed PR comments ([5a374c3](https://github.com/MyPureCloud/genesys-webcomponents/commit/5a374c36fa4e0686f7b9f6a7a6037f63c307914e))
+
 ### [3.52.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.52.0...v3.52.1) (2022-12-15)
 
 
