@@ -14,16 +14,26 @@
 
 ## Events
 
-| Event                           | Description | Type                                                   |
-| ------------------------------- | ----------- | ------------------------------------------------------ |
-| `internalkeyboarddoreorder`     |             | `CustomEvent<void>`                                    |
-| `internalkeyboardreorderfinish` |             | `CustomEvent<void>`                                    |
-| `internalkeyboardreordermove`   |             | `CustomEvent<{ delta: 1 \| -1; column: string; }>`     |
-| `internalkeyboardreorderstart`  |             | `CustomEvent<string>`                                  |
-| `internalorderchange`           |             | `CustomEvent<{ oldIndex: number; newIndex: number; }>` |
+| Event                              | Description | Type                                                   |
+| ---------------------------------- | ----------- | ------------------------------------------------------ |
+| `internal_keyboard_reorder_emit`   |             | `CustomEvent<void>`                                    |
+| `internal_keyboard_reorder_finish` |             | `CustomEvent<void>`                                    |
+| `internal_keyboard_reorder_move`   |             | `CustomEvent<{ delta: number; column: string; }>`      |
+| `internal_keyboard_reorder_start`  |             | `CustomEvent<string>`                                  |
+| `internal_order_change`            |             | `CustomEvent<{ oldIndex: number; newIndex: number; }>` |
 
 
 ## Methods
+
+### `guxFocus() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 ### `guxSetHighlight(highlight?: string, highlightActive?: boolean) => Promise<void>`
 

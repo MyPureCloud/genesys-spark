@@ -20,7 +20,7 @@ import {
   InternalHighlightResults,
   GuxOrder,
   InternalKeyboardReorderMove
-} from './gux-column-manager.type';
+} from './gux-column-manager.types';
 import {
   getEmptyKeyboardOrderChange,
   getIndexInParent,
@@ -78,7 +78,7 @@ export class GuxColumnManager {
     setMainCheckboxElementCheckedState(this.root, this.mainCheckboxElement);
   }
 
-  @Listen('internalorderchange')
+  @Listen('internal_order_change')
   handleInternalorderchange(event: CustomEvent): void {
     event.stopPropagation();
 
@@ -95,7 +95,7 @@ export class GuxColumnManager {
     }
   }
 
-  @Listen('internalkeyboardreorderstart')
+  @Listen('internal_keyboard_reorder_start')
   handleInternalkeyboardorderstart(event: CustomEvent): void {
     event.stopPropagation();
 
@@ -113,7 +113,7 @@ export class GuxColumnManager {
     );
   }
 
-  @Listen('internalkeyboardreordermove')
+  @Listen('internal_keyboard_reorder_move')
   handleInternalkeyboardreordermove(event: CustomEvent): void {
     event.stopPropagation();
 
@@ -138,16 +138,16 @@ export class GuxColumnManager {
     );
   }
 
-  @Listen('internalkeyboarddoreorder')
+  @Listen('internal_keyboard_reorder_emit')
   handleInternalkeyboarddoreorder(event: CustomEvent): void {
     event.stopPropagation();
 
     this.emitOrderChange(this.keyboardOrderChange);
 
-    (event.target as HTMLGuxColumnManagerItemElement).focus();
+    void (event.target as HTMLGuxColumnManagerItemElement).guxFocus();
   }
 
-  @Listen('internalkeyboardreorderfinish')
+  @Listen('internal_keyboard_reorder_finish')
   handleInternalkeyboardorderfinish(event: CustomEvent): void {
     event.stopPropagation();
 

@@ -4,7 +4,7 @@ import {
   InternalOrderChange,
   InternalHighlightResults,
   GuxOrder
-} from './gux-column-manager.type';
+} from './gux-column-manager.types';
 
 export function getNewOrder(
   root: HTMLElement,
@@ -38,7 +38,7 @@ export function setKeyboardReorderPositionIndicator(
 export function getNewKeyboardOrderChange(
   root: HTMLElement,
   currentKeyboardOrderChange: InternalOrderChange,
-  delta: 1 | -1
+  delta: number
 ): InternalOrderChange {
   const newIndex = clamp(
     currentKeyboardOrderChange.newIndex + delta,

@@ -18,7 +18,7 @@ import { getIndexInParent } from '../gux-column-manager.service';
 import {
   InternalOrderChange,
   InternalKeyboardReorderMove
-} from '../gux-column-manager.type';
+} from '../gux-column-manager.types';
 
 import { getNewIndex } from './gux-column-manager-item.service';
 
@@ -30,9 +30,10 @@ import translationResources from './i18n/en.json';
 @Component({
   styleUrl: 'gux-column-manager-item.less',
   tag: 'gux-column-manager-item',
-  shadow: { delegatesFocus: true }
+  shadow: { delegatesFocus: false }
 })
 export class GuxColumnManagerItem {
+  private reorderButtonElement: HTMLButtonElement;
   private i18n: GetI18nValue;
 
   @Element()
@@ -60,19 +61,19 @@ export class GuxColumnManagerItem {
   isReordering: boolean = false;
 
   @Event()
-  private internalorderchange: EventEmitter<InternalOrderChange>;
+  private internal_order_change: EventEmitter<InternalOrderChange>;
 
   @Event()
-  private internalkeyboardreorderstart: EventEmitter<string>;
+  private internal_keyboard_reorder_start: EventEmitter<string>;
 
   @Event()
-  private internalkeyboardreordermove: EventEmitter<InternalKeyboardReorderMove>;
+  private internal_keyboard_reorder_move: EventEmitter<InternalKeyboardReorderMove>;
 
   @Event()
-  private internalkeyboarddoreorder: EventEmitter<void>;
+  private internal_keyboard_reorder_emit: EventEmitter<void>;
 
   @Event()
-  private internalkeyboardreorderfinish: EventEmitter<void>;
+  private internal_keyboard_reorder_finish: EventEmitter<void>;
 
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method('guxSetHighlight')
@@ -82,6 +83,12 @@ export class GuxColumnManagerItem {
   ): Promise<void> {
     this.highlight = highlight;
     this.highlightActive = highlightActive;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method('guxFocus')
+  async guxFocus(): Promise<void> {
+    this.reorderButtonElement.focus();
   }
 
   @Listen('blur')
@@ -135,7 +142,7 @@ export class GuxColumnManagerItem {
       this.mouseOnTopHalf(event)
     );
 
-    this.internalorderchange.emit({ oldIndex, newIndex });
+    this.internal_order_change.emit({ oldIndex, newIndex });
 
     return false;
   }
@@ -160,13 +167,13 @@ export class GuxColumnManagerItem {
       this.isReordering = isReordering;
 
       if (isReordering) {
-        this.internalkeyboardreorderstart.emit(this.text);
+        this.internal_keyboard_reorder_start.emit(this.text);
       } else {
         if (doReorder) {
-          this.internalkeyboarddoreorder.emit();
+          this.internal_keyboard_reorder_emit.emit();
         }
 
-        this.internalkeyboardreorderfinish.emit();
+        this.internal_keyboard_reorder_finish.emit();
       }
     }
   }
@@ -180,7 +187,7 @@ export class GuxColumnManagerItem {
       switch (event.key) {
         case 'ArrowUp': {
           event.preventDefault();
-          this.internalkeyboardreordermove.emit({
+          this.internal_keyboard_reorder_move.emit({
             delta: -1,
             column: this.text
           });
@@ -188,11 +195,32 @@ export class GuxColumnManagerItem {
         }
         case 'ArrowDown': {
           event.preventDefault();
-          this.internalkeyboardreordermove.emit({
+          this.internal_keyboard_reorder_move.emit({
             delta: 1,
             column: this.text
           });
           break;
+        }
+        case 'Home': {
+          event.preventDefault();
+          this.internal_keyboard_reorder_move.emit({
+            delta: -Infinity,
+            column: this.text
+          });
+          break;
+        }
+        case 'End': {
+          event.preventDefault();
+          console.log('End');
+          this.internal_keyboard_reorder_move.emit({
+            delta: Infinity,
+            column: this.text
+          });
+          break;
+        }
+        case 'Escape': {
+          event.preventDefault();
+          this.setReorderMode(false);
         }
       }
     }
@@ -220,6 +248,7 @@ export class GuxColumnManagerItem {
             type="button"
             onClick={() => this.toggleReorderMode()}
             onKeyDown={event => this.keyboardReorder(event)}
+            ref={el => (this.reorderButtonElement = el)}
           >
             <gux-icon icon-name="grab-vertical" decorative></gux-icon>
             <span class="gux-sr-only">
