@@ -42,6 +42,10 @@ Type: `Promise<void>`
 
 ## Dependencies
 
+### Used by
+
+ - [gux-column-manager-beta](../../beta/gux-column-manager)
+
 ### Depends on
 
 - [gux-icon](../gux-icon)
@@ -50,6 +54,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-content-search --> gux-icon
+  gux-column-manager-beta --> gux-content-search
   style gux-content-search fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
