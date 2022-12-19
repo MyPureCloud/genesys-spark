@@ -48,7 +48,7 @@ spriteSmith.run({ src }, function (err, results) {
       {
         format: 'less',
         formatOpts: {
-          variableNameTransforms: ['camelize']
+          variableNameTransforms: ['toLowerCase']
         }
       }
     );
@@ -58,8 +58,8 @@ spriteSmith.run({ src }, function (err, results) {
     let compiledStyle = '';
     for (let sprite of sprites) {
       compiledStyle += `
-.flag-${sprite.name} {
-  .sprite(@${sprite.name})
+.flag-${sprite.name.toLowerCase()} {
+  .sprite(@${sprite.name.toLowerCase()})
 }
       `;
     }

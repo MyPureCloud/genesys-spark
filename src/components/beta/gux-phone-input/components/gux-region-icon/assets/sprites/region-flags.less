@@ -1,0 +1,4036 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/* stylelint-disable function-no-unknown */
+@ad-name: 'AD';
+@ad-x: 0px;
+@ad-y: 0px;
+@ad-offset-x: 0px;
+@ad-offset-y: 0px;
+@ad-width: 24px;
+@ad-height: 24px;
+@ad-total-width: 384px;
+@ad-total-height: 384px;
+@ad-image: 'assets/sprites/region-flags.png';
+@ad: 0px 0px 0px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'AD';
+@ae-name: 'AE';
+@ae-x: 24px;
+@ae-y: 0px;
+@ae-offset-x: -24px;
+@ae-offset-y: 0px;
+@ae-width: 24px;
+@ae-height: 24px;
+@ae-total-width: 384px;
+@ae-total-height: 384px;
+@ae-image: 'assets/sprites/region-flags.png';
+@ae: 24px 0px -24px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png' 'AE';
+@af-name: 'AF';
+@af-x: 0px;
+@af-y: 24px;
+@af-offset-x: 0px;
+@af-offset-y: -24px;
+@af-width: 24px;
+@af-height: 24px;
+@af-total-width: 384px;
+@af-total-height: 384px;
+@af-image: 'assets/sprites/region-flags.png';
+@af: 0px 24px 0px -24px 24px 24px 384px 384px 'assets/sprites/region-flags.png' 'AF';
+@ag-name: 'AG';
+@ag-x: 24px;
+@ag-y: 24px;
+@ag-offset-x: -24px;
+@ag-offset-y: -24px;
+@ag-width: 24px;
+@ag-height: 24px;
+@ag-total-width: 384px;
+@ag-total-height: 384px;
+@ag-image: 'assets/sprites/region-flags.png';
+@ag: 24px 24px -24px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'AG';
+@ai-name: 'AI';
+@ai-x: 48px;
+@ai-y: 0px;
+@ai-offset-x: -48px;
+@ai-offset-y: 0px;
+@ai-width: 24px;
+@ai-height: 24px;
+@ai-total-width: 384px;
+@ai-total-height: 384px;
+@ai-image: 'assets/sprites/region-flags.png';
+@ai: 48px 0px -48px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png' 'AI';
+@al-name: 'AL';
+@al-x: 48px;
+@al-y: 24px;
+@al-offset-x: -48px;
+@al-offset-y: -24px;
+@al-width: 24px;
+@al-height: 24px;
+@al-total-width: 384px;
+@al-total-height: 384px;
+@al-image: 'assets/sprites/region-flags.png';
+@al: 48px 24px -48px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'AL';
+@am-name: 'AM';
+@am-x: 0px;
+@am-y: 48px;
+@am-offset-x: 0px;
+@am-offset-y: -48px;
+@am-width: 24px;
+@am-height: 24px;
+@am-total-width: 384px;
+@am-total-height: 384px;
+@am-image: 'assets/sprites/region-flags.png';
+@am: 0px 48px 0px -48px 24px 24px 384px 384px 'assets/sprites/region-flags.png' 'AM';
+@ao-name: 'AO';
+@ao-x: 24px;
+@ao-y: 48px;
+@ao-offset-x: -24px;
+@ao-offset-y: -48px;
+@ao-width: 24px;
+@ao-height: 24px;
+@ao-total-width: 384px;
+@ao-total-height: 384px;
+@ao-image: 'assets/sprites/region-flags.png';
+@ao: 24px 48px -24px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'AO';
+@ar-name: 'AR';
+@ar-x: 48px;
+@ar-y: 48px;
+@ar-offset-x: -48px;
+@ar-offset-y: -48px;
+@ar-width: 24px;
+@ar-height: 24px;
+@ar-total-width: 384px;
+@ar-total-height: 384px;
+@ar-image: 'assets/sprites/region-flags.png';
+@ar: 48px 48px -48px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'AR';
+@as-name: 'AS';
+@as-x: 72px;
+@as-y: 0px;
+@as-offset-x: -72px;
+@as-offset-y: 0px;
+@as-width: 24px;
+@as-height: 24px;
+@as-total-width: 384px;
+@as-total-height: 384px;
+@as-image: 'assets/sprites/region-flags.png';
+@as: 72px 0px -72px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png' 'AS';
+@at-name: 'AT';
+@at-x: 72px;
+@at-y: 24px;
+@at-offset-x: -72px;
+@at-offset-y: -24px;
+@at-width: 24px;
+@at-height: 24px;
+@at-total-width: 384px;
+@at-total-height: 384px;
+@at-image: 'assets/sprites/region-flags.png';
+@at: 72px 24px -72px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'AT';
+@au-name: 'AU';
+@au-x: 72px;
+@au-y: 48px;
+@au-offset-x: -72px;
+@au-offset-y: -48px;
+@au-width: 24px;
+@au-height: 24px;
+@au-total-width: 384px;
+@au-total-height: 384px;
+@au-image: 'assets/sprites/region-flags.png';
+@au: 72px 48px -72px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'AU';
+@aw-name: 'AW';
+@aw-x: 0px;
+@aw-y: 72px;
+@aw-offset-x: 0px;
+@aw-offset-y: -72px;
+@aw-width: 24px;
+@aw-height: 24px;
+@aw-total-width: 384px;
+@aw-total-height: 384px;
+@aw-image: 'assets/sprites/region-flags.png';
+@aw: 0px 72px 0px -72px 24px 24px 384px 384px 'assets/sprites/region-flags.png' 'AW';
+@ax-name: 'AX';
+@ax-x: 24px;
+@ax-y: 72px;
+@ax-offset-x: -24px;
+@ax-offset-y: -72px;
+@ax-width: 24px;
+@ax-height: 24px;
+@ax-total-width: 384px;
+@ax-total-height: 384px;
+@ax-image: 'assets/sprites/region-flags.png';
+@ax: 24px 72px -24px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'AX';
+@az-name: 'AZ';
+@az-x: 48px;
+@az-y: 72px;
+@az-offset-x: -48px;
+@az-offset-y: -72px;
+@az-width: 24px;
+@az-height: 24px;
+@az-total-width: 384px;
+@az-total-height: 384px;
+@az-image: 'assets/sprites/region-flags.png';
+@az: 48px 72px -48px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'AZ';
+@ba-name: 'BA';
+@ba-x: 72px;
+@ba-y: 72px;
+@ba-offset-x: -72px;
+@ba-offset-y: -72px;
+@ba-width: 24px;
+@ba-height: 24px;
+@ba-total-width: 384px;
+@ba-total-height: 384px;
+@ba-image: 'assets/sprites/region-flags.png';
+@ba: 72px 72px -72px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BA';
+@bb-name: 'BB';
+@bb-x: 96px;
+@bb-y: 0px;
+@bb-offset-x: -96px;
+@bb-offset-y: 0px;
+@bb-width: 24px;
+@bb-height: 24px;
+@bb-total-width: 384px;
+@bb-total-height: 384px;
+@bb-image: 'assets/sprites/region-flags.png';
+@bb: 96px 0px -96px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png' 'BB';
+@bd-name: 'BD';
+@bd-x: 96px;
+@bd-y: 24px;
+@bd-offset-x: -96px;
+@bd-offset-y: -24px;
+@bd-width: 24px;
+@bd-height: 24px;
+@bd-total-width: 384px;
+@bd-total-height: 384px;
+@bd-image: 'assets/sprites/region-flags.png';
+@bd: 96px 24px -96px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BD';
+@be-name: 'BE';
+@be-x: 96px;
+@be-y: 48px;
+@be-offset-x: -96px;
+@be-offset-y: -48px;
+@be-width: 24px;
+@be-height: 24px;
+@be-total-width: 384px;
+@be-total-height: 384px;
+@be-image: 'assets/sprites/region-flags.png';
+@be: 96px 48px -96px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BE';
+@bf-name: 'BF';
+@bf-x: 96px;
+@bf-y: 72px;
+@bf-offset-x: -96px;
+@bf-offset-y: -72px;
+@bf-width: 24px;
+@bf-height: 24px;
+@bf-total-width: 384px;
+@bf-total-height: 384px;
+@bf-image: 'assets/sprites/region-flags.png';
+@bf: 96px 72px -96px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BF';
+@bg-name: 'BG';
+@bg-x: 0px;
+@bg-y: 96px;
+@bg-offset-x: 0px;
+@bg-offset-y: -96px;
+@bg-width: 24px;
+@bg-height: 24px;
+@bg-total-width: 384px;
+@bg-total-height: 384px;
+@bg-image: 'assets/sprites/region-flags.png';
+@bg: 0px 96px 0px -96px 24px 24px 384px 384px 'assets/sprites/region-flags.png' 'BG';
+@bh-name: 'BH';
+@bh-x: 24px;
+@bh-y: 96px;
+@bh-offset-x: -24px;
+@bh-offset-y: -96px;
+@bh-width: 24px;
+@bh-height: 24px;
+@bh-total-width: 384px;
+@bh-total-height: 384px;
+@bh-image: 'assets/sprites/region-flags.png';
+@bh: 24px 96px -24px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BH';
+@bi-name: 'BI';
+@bi-x: 48px;
+@bi-y: 96px;
+@bi-offset-x: -48px;
+@bi-offset-y: -96px;
+@bi-width: 24px;
+@bi-height: 24px;
+@bi-total-width: 384px;
+@bi-total-height: 384px;
+@bi-image: 'assets/sprites/region-flags.png';
+@bi: 48px 96px -48px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BI';
+@bj-name: 'BJ';
+@bj-x: 72px;
+@bj-y: 96px;
+@bj-offset-x: -72px;
+@bj-offset-y: -96px;
+@bj-width: 24px;
+@bj-height: 24px;
+@bj-total-width: 384px;
+@bj-total-height: 384px;
+@bj-image: 'assets/sprites/region-flags.png';
+@bj: 72px 96px -72px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BJ';
+@bl-name: 'BL';
+@bl-x: 96px;
+@bl-y: 96px;
+@bl-offset-x: -96px;
+@bl-offset-y: -96px;
+@bl-width: 24px;
+@bl-height: 24px;
+@bl-total-width: 384px;
+@bl-total-height: 384px;
+@bl-image: 'assets/sprites/region-flags.png';
+@bl: 96px 96px -96px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BL';
+@bm-name: 'BM';
+@bm-x: 120px;
+@bm-y: 0px;
+@bm-offset-x: -120px;
+@bm-offset-y: 0px;
+@bm-width: 24px;
+@bm-height: 24px;
+@bm-total-width: 384px;
+@bm-total-height: 384px;
+@bm-image: 'assets/sprites/region-flags.png';
+@bm: 120px 0px -120px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'BM';
+@bn-name: 'BN';
+@bn-x: 120px;
+@bn-y: 24px;
+@bn-offset-x: -120px;
+@bn-offset-y: -24px;
+@bn-width: 24px;
+@bn-height: 24px;
+@bn-total-width: 384px;
+@bn-total-height: 384px;
+@bn-image: 'assets/sprites/region-flags.png';
+@bn: 120px 24px -120px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BN';
+@bo-name: 'BO';
+@bo-x: 120px;
+@bo-y: 48px;
+@bo-offset-x: -120px;
+@bo-offset-y: -48px;
+@bo-width: 24px;
+@bo-height: 24px;
+@bo-total-width: 384px;
+@bo-total-height: 384px;
+@bo-image: 'assets/sprites/region-flags.png';
+@bo: 120px 48px -120px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BO';
+@bq-name: 'BQ';
+@bq-x: 120px;
+@bq-y: 72px;
+@bq-offset-x: -120px;
+@bq-offset-y: -72px;
+@bq-width: 24px;
+@bq-height: 24px;
+@bq-total-width: 384px;
+@bq-total-height: 384px;
+@bq-image: 'assets/sprites/region-flags.png';
+@bq: 120px 72px -120px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BQ';
+@br-name: 'BR';
+@br-x: 120px;
+@br-y: 96px;
+@br-offset-x: -120px;
+@br-offset-y: -96px;
+@br-width: 24px;
+@br-height: 24px;
+@br-total-width: 384px;
+@br-total-height: 384px;
+@br-image: 'assets/sprites/region-flags.png';
+@br: 120px 96px -120px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BR';
+@bs-name: 'BS';
+@bs-x: 0px;
+@bs-y: 120px;
+@bs-offset-x: 0px;
+@bs-offset-y: -120px;
+@bs-width: 24px;
+@bs-height: 24px;
+@bs-total-width: 384px;
+@bs-total-height: 384px;
+@bs-image: 'assets/sprites/region-flags.png';
+@bs: 0px 120px 0px -120px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'BS';
+@bt-name: 'BT';
+@bt-x: 24px;
+@bt-y: 120px;
+@bt-offset-x: -24px;
+@bt-offset-y: -120px;
+@bt-width: 24px;
+@bt-height: 24px;
+@bt-total-width: 384px;
+@bt-total-height: 384px;
+@bt-image: 'assets/sprites/region-flags.png';
+@bt: 24px 120px -24px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BT';
+@bv-name: 'BV';
+@bv-x: 48px;
+@bv-y: 120px;
+@bv-offset-x: -48px;
+@bv-offset-y: -120px;
+@bv-width: 24px;
+@bv-height: 24px;
+@bv-total-width: 384px;
+@bv-total-height: 384px;
+@bv-image: 'assets/sprites/region-flags.png';
+@bv: 48px 120px -48px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BV';
+@bw-name: 'BW';
+@bw-x: 72px;
+@bw-y: 120px;
+@bw-offset-x: -72px;
+@bw-offset-y: -120px;
+@bw-width: 24px;
+@bw-height: 24px;
+@bw-total-width: 384px;
+@bw-total-height: 384px;
+@bw-image: 'assets/sprites/region-flags.png';
+@bw: 72px 120px -72px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BW';
+@by-name: 'BY';
+@by-x: 96px;
+@by-y: 120px;
+@by-offset-x: -96px;
+@by-offset-y: -120px;
+@by-width: 24px;
+@by-height: 24px;
+@by-total-width: 384px;
+@by-total-height: 384px;
+@by-image: 'assets/sprites/region-flags.png';
+@by: 96px 120px -96px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BY';
+@bz-name: 'BZ';
+@bz-x: 120px;
+@bz-y: 120px;
+@bz-offset-x: -120px;
+@bz-offset-y: -120px;
+@bz-width: 24px;
+@bz-height: 24px;
+@bz-total-width: 384px;
+@bz-total-height: 384px;
+@bz-image: 'assets/sprites/region-flags.png';
+@bz: 120px 120px -120px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'BZ';
+@ca-name: 'CA';
+@ca-x: 144px;
+@ca-y: 0px;
+@ca-offset-x: -144px;
+@ca-offset-y: 0px;
+@ca-width: 24px;
+@ca-height: 24px;
+@ca-total-width: 384px;
+@ca-total-height: 384px;
+@ca-image: 'assets/sprites/region-flags.png';
+@ca: 144px 0px -144px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'CA';
+@cc-name: 'CC';
+@cc-x: 144px;
+@cc-y: 24px;
+@cc-offset-x: -144px;
+@cc-offset-y: -24px;
+@cc-width: 24px;
+@cc-height: 24px;
+@cc-total-width: 384px;
+@cc-total-height: 384px;
+@cc-image: 'assets/sprites/region-flags.png';
+@cc: 144px 24px -144px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CC';
+@cd-name: 'CD';
+@cd-x: 144px;
+@cd-y: 48px;
+@cd-offset-x: -144px;
+@cd-offset-y: -48px;
+@cd-width: 24px;
+@cd-height: 24px;
+@cd-total-width: 384px;
+@cd-total-height: 384px;
+@cd-image: 'assets/sprites/region-flags.png';
+@cd: 144px 48px -144px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CD';
+@cf-name: 'CF';
+@cf-x: 144px;
+@cf-y: 72px;
+@cf-offset-x: -144px;
+@cf-offset-y: -72px;
+@cf-width: 24px;
+@cf-height: 24px;
+@cf-total-width: 384px;
+@cf-total-height: 384px;
+@cf-image: 'assets/sprites/region-flags.png';
+@cf: 144px 72px -144px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CF';
+@cg-name: 'CG';
+@cg-x: 144px;
+@cg-y: 96px;
+@cg-offset-x: -144px;
+@cg-offset-y: -96px;
+@cg-width: 24px;
+@cg-height: 24px;
+@cg-total-width: 384px;
+@cg-total-height: 384px;
+@cg-image: 'assets/sprites/region-flags.png';
+@cg: 144px 96px -144px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CG';
+@ch-name: 'CH';
+@ch-x: 144px;
+@ch-y: 120px;
+@ch-offset-x: -144px;
+@ch-offset-y: -120px;
+@ch-width: 24px;
+@ch-height: 24px;
+@ch-total-width: 384px;
+@ch-total-height: 384px;
+@ch-image: 'assets/sprites/region-flags.png';
+@ch: 144px 120px -144px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CH';
+@ci-name: 'CI';
+@ci-x: 0px;
+@ci-y: 144px;
+@ci-offset-x: 0px;
+@ci-offset-y: -144px;
+@ci-width: 24px;
+@ci-height: 24px;
+@ci-total-width: 384px;
+@ci-total-height: 384px;
+@ci-image: 'assets/sprites/region-flags.png';
+@ci: 0px 144px 0px -144px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'CI';
+@ck-name: 'CK';
+@ck-x: 24px;
+@ck-y: 144px;
+@ck-offset-x: -24px;
+@ck-offset-y: -144px;
+@ck-width: 24px;
+@ck-height: 24px;
+@ck-total-width: 384px;
+@ck-total-height: 384px;
+@ck-image: 'assets/sprites/region-flags.png';
+@ck: 24px 144px -24px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CK';
+@cl-name: 'CL';
+@cl-x: 48px;
+@cl-y: 144px;
+@cl-offset-x: -48px;
+@cl-offset-y: -144px;
+@cl-width: 24px;
+@cl-height: 24px;
+@cl-total-width: 384px;
+@cl-total-height: 384px;
+@cl-image: 'assets/sprites/region-flags.png';
+@cl: 48px 144px -48px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CL';
+@cm-name: 'CM';
+@cm-x: 72px;
+@cm-y: 144px;
+@cm-offset-x: -72px;
+@cm-offset-y: -144px;
+@cm-width: 24px;
+@cm-height: 24px;
+@cm-total-width: 384px;
+@cm-total-height: 384px;
+@cm-image: 'assets/sprites/region-flags.png';
+@cm: 72px 144px -72px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CM';
+@cn-name: 'CN';
+@cn-x: 96px;
+@cn-y: 144px;
+@cn-offset-x: -96px;
+@cn-offset-y: -144px;
+@cn-width: 24px;
+@cn-height: 24px;
+@cn-total-width: 384px;
+@cn-total-height: 384px;
+@cn-image: 'assets/sprites/region-flags.png';
+@cn: 96px 144px -96px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CN';
+@co-name: 'CO';
+@co-x: 120px;
+@co-y: 144px;
+@co-offset-x: -120px;
+@co-offset-y: -144px;
+@co-width: 24px;
+@co-height: 24px;
+@co-total-width: 384px;
+@co-total-height: 384px;
+@co-image: 'assets/sprites/region-flags.png';
+@co: 120px 144px -120px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CO';
+@cr-name: 'CR';
+@cr-x: 144px;
+@cr-y: 144px;
+@cr-offset-x: -144px;
+@cr-offset-y: -144px;
+@cr-width: 24px;
+@cr-height: 24px;
+@cr-total-width: 384px;
+@cr-total-height: 384px;
+@cr-image: 'assets/sprites/region-flags.png';
+@cr: 144px 144px -144px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CR';
+@cu-name: 'CU';
+@cu-x: 168px;
+@cu-y: 0px;
+@cu-offset-x: -168px;
+@cu-offset-y: 0px;
+@cu-width: 24px;
+@cu-height: 24px;
+@cu-total-width: 384px;
+@cu-total-height: 384px;
+@cu-image: 'assets/sprites/region-flags.png';
+@cu: 168px 0px -168px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'CU';
+@cv-name: 'CV';
+@cv-x: 168px;
+@cv-y: 24px;
+@cv-offset-x: -168px;
+@cv-offset-y: -24px;
+@cv-width: 24px;
+@cv-height: 24px;
+@cv-total-width: 384px;
+@cv-total-height: 384px;
+@cv-image: 'assets/sprites/region-flags.png';
+@cv: 168px 24px -168px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CV';
+@cw-name: 'CW';
+@cw-x: 168px;
+@cw-y: 48px;
+@cw-offset-x: -168px;
+@cw-offset-y: -48px;
+@cw-width: 24px;
+@cw-height: 24px;
+@cw-total-width: 384px;
+@cw-total-height: 384px;
+@cw-image: 'assets/sprites/region-flags.png';
+@cw: 168px 48px -168px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CW';
+@cx-name: 'CX';
+@cx-x: 168px;
+@cx-y: 72px;
+@cx-offset-x: -168px;
+@cx-offset-y: -72px;
+@cx-width: 24px;
+@cx-height: 24px;
+@cx-total-width: 384px;
+@cx-total-height: 384px;
+@cx-image: 'assets/sprites/region-flags.png';
+@cx: 168px 72px -168px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CX';
+@cy-name: 'CY';
+@cy-x: 168px;
+@cy-y: 96px;
+@cy-offset-x: -168px;
+@cy-offset-y: -96px;
+@cy-width: 24px;
+@cy-height: 24px;
+@cy-total-width: 384px;
+@cy-total-height: 384px;
+@cy-image: 'assets/sprites/region-flags.png';
+@cy: 168px 96px -168px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CY';
+@cz-name: 'CZ';
+@cz-x: 168px;
+@cz-y: 120px;
+@cz-offset-x: -168px;
+@cz-offset-y: -120px;
+@cz-width: 24px;
+@cz-height: 24px;
+@cz-total-width: 384px;
+@cz-total-height: 384px;
+@cz-image: 'assets/sprites/region-flags.png';
+@cz: 168px 120px -168px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'CZ';
+@de-name: 'DE';
+@de-x: 168px;
+@de-y: 144px;
+@de-offset-x: -168px;
+@de-offset-y: -144px;
+@de-width: 24px;
+@de-height: 24px;
+@de-total-width: 384px;
+@de-total-height: 384px;
+@de-image: 'assets/sprites/region-flags.png';
+@de: 168px 144px -168px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'DE';
+@dj-name: 'DJ';
+@dj-x: 0px;
+@dj-y: 168px;
+@dj-offset-x: 0px;
+@dj-offset-y: -168px;
+@dj-width: 24px;
+@dj-height: 24px;
+@dj-total-width: 384px;
+@dj-total-height: 384px;
+@dj-image: 'assets/sprites/region-flags.png';
+@dj: 0px 168px 0px -168px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'DJ';
+@dk-name: 'DK';
+@dk-x: 24px;
+@dk-y: 168px;
+@dk-offset-x: -24px;
+@dk-offset-y: -168px;
+@dk-width: 24px;
+@dk-height: 24px;
+@dk-total-width: 384px;
+@dk-total-height: 384px;
+@dk-image: 'assets/sprites/region-flags.png';
+@dk: 24px 168px -24px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'DK';
+@dm-name: 'DM';
+@dm-x: 48px;
+@dm-y: 168px;
+@dm-offset-x: -48px;
+@dm-offset-y: -168px;
+@dm-width: 24px;
+@dm-height: 24px;
+@dm-total-width: 384px;
+@dm-total-height: 384px;
+@dm-image: 'assets/sprites/region-flags.png';
+@dm: 48px 168px -48px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'DM';
+@do-name: 'DO';
+@do-x: 72px;
+@do-y: 168px;
+@do-offset-x: -72px;
+@do-offset-y: -168px;
+@do-width: 24px;
+@do-height: 24px;
+@do-total-width: 384px;
+@do-total-height: 384px;
+@do-image: 'assets/sprites/region-flags.png';
+@do: 72px 168px -72px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'DO';
+@dz-name: 'DZ';
+@dz-x: 96px;
+@dz-y: 168px;
+@dz-offset-x: -96px;
+@dz-offset-y: -168px;
+@dz-width: 24px;
+@dz-height: 24px;
+@dz-total-width: 384px;
+@dz-total-height: 384px;
+@dz-image: 'assets/sprites/region-flags.png';
+@dz: 96px 168px -96px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'DZ';
+@ec-name: 'EC';
+@ec-x: 120px;
+@ec-y: 168px;
+@ec-offset-x: -120px;
+@ec-offset-y: -168px;
+@ec-width: 24px;
+@ec-height: 24px;
+@ec-total-width: 384px;
+@ec-total-height: 384px;
+@ec-image: 'assets/sprites/region-flags.png';
+@ec: 120px 168px -120px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'EC';
+@ee-name: 'EE';
+@ee-x: 144px;
+@ee-y: 168px;
+@ee-offset-x: -144px;
+@ee-offset-y: -168px;
+@ee-width: 24px;
+@ee-height: 24px;
+@ee-total-width: 384px;
+@ee-total-height: 384px;
+@ee-image: 'assets/sprites/region-flags.png';
+@ee: 144px 168px -144px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'EE';
+@eg-name: 'EG';
+@eg-x: 168px;
+@eg-y: 168px;
+@eg-offset-x: -168px;
+@eg-offset-y: -168px;
+@eg-width: 24px;
+@eg-height: 24px;
+@eg-total-width: 384px;
+@eg-total-height: 384px;
+@eg-image: 'assets/sprites/region-flags.png';
+@eg: 168px 168px -168px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'EG';
+@eh-name: 'EH';
+@eh-x: 192px;
+@eh-y: 0px;
+@eh-offset-x: -192px;
+@eh-offset-y: 0px;
+@eh-width: 24px;
+@eh-height: 24px;
+@eh-total-width: 384px;
+@eh-total-height: 384px;
+@eh-image: 'assets/sprites/region-flags.png';
+@eh: 192px 0px -192px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'EH';
+@er-name: 'ER';
+@er-x: 192px;
+@er-y: 24px;
+@er-offset-x: -192px;
+@er-offset-y: -24px;
+@er-width: 24px;
+@er-height: 24px;
+@er-total-width: 384px;
+@er-total-height: 384px;
+@er-image: 'assets/sprites/region-flags.png';
+@er: 192px 24px -192px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ER';
+@es-name: 'ES';
+@es-x: 192px;
+@es-y: 48px;
+@es-offset-x: -192px;
+@es-offset-y: -48px;
+@es-width: 24px;
+@es-height: 24px;
+@es-total-width: 384px;
+@es-total-height: 384px;
+@es-image: 'assets/sprites/region-flags.png';
+@es: 192px 48px -192px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ES';
+@et-name: 'ET';
+@et-x: 192px;
+@et-y: 72px;
+@et-offset-x: -192px;
+@et-offset-y: -72px;
+@et-width: 24px;
+@et-height: 24px;
+@et-total-width: 384px;
+@et-total-height: 384px;
+@et-image: 'assets/sprites/region-flags.png';
+@et: 192px 72px -192px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ET';
+@fi-name: 'FI';
+@fi-x: 192px;
+@fi-y: 96px;
+@fi-offset-x: -192px;
+@fi-offset-y: -96px;
+@fi-width: 24px;
+@fi-height: 24px;
+@fi-total-width: 384px;
+@fi-total-height: 384px;
+@fi-image: 'assets/sprites/region-flags.png';
+@fi: 192px 96px -192px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'FI';
+@fj-name: 'FJ';
+@fj-x: 192px;
+@fj-y: 120px;
+@fj-offset-x: -192px;
+@fj-offset-y: -120px;
+@fj-width: 24px;
+@fj-height: 24px;
+@fj-total-width: 384px;
+@fj-total-height: 384px;
+@fj-image: 'assets/sprites/region-flags.png';
+@fj: 192px 120px -192px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'FJ';
+@fk-name: 'FK';
+@fk-x: 192px;
+@fk-y: 144px;
+@fk-offset-x: -192px;
+@fk-offset-y: -144px;
+@fk-width: 24px;
+@fk-height: 24px;
+@fk-total-width: 384px;
+@fk-total-height: 384px;
+@fk-image: 'assets/sprites/region-flags.png';
+@fk: 192px 144px -192px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'FK';
+@fm-name: 'FM';
+@fm-x: 192px;
+@fm-y: 168px;
+@fm-offset-x: -192px;
+@fm-offset-y: -168px;
+@fm-width: 24px;
+@fm-height: 24px;
+@fm-total-width: 384px;
+@fm-total-height: 384px;
+@fm-image: 'assets/sprites/region-flags.png';
+@fm: 192px 168px -192px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'FM';
+@fo-name: 'FO';
+@fo-x: 0px;
+@fo-y: 192px;
+@fo-offset-x: 0px;
+@fo-offset-y: -192px;
+@fo-width: 24px;
+@fo-height: 24px;
+@fo-total-width: 384px;
+@fo-total-height: 384px;
+@fo-image: 'assets/sprites/region-flags.png';
+@fo: 0px 192px 0px -192px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'FO';
+@fr-name: 'FR';
+@fr-x: 24px;
+@fr-y: 192px;
+@fr-offset-x: -24px;
+@fr-offset-y: -192px;
+@fr-width: 24px;
+@fr-height: 24px;
+@fr-total-width: 384px;
+@fr-total-height: 384px;
+@fr-image: 'assets/sprites/region-flags.png';
+@fr: 24px 192px -24px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'FR';
+@ga-name: 'GA';
+@ga-x: 48px;
+@ga-y: 192px;
+@ga-offset-x: -48px;
+@ga-offset-y: -192px;
+@ga-width: 24px;
+@ga-height: 24px;
+@ga-total-width: 384px;
+@ga-total-height: 384px;
+@ga-image: 'assets/sprites/region-flags.png';
+@ga: 48px 192px -48px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GA';
+@gb-name: 'GB';
+@gb-x: 72px;
+@gb-y: 192px;
+@gb-offset-x: -72px;
+@gb-offset-y: -192px;
+@gb-width: 24px;
+@gb-height: 24px;
+@gb-total-width: 384px;
+@gb-total-height: 384px;
+@gb-image: 'assets/sprites/region-flags.png';
+@gb: 72px 192px -72px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GB';
+@gd-name: 'GD';
+@gd-x: 96px;
+@gd-y: 192px;
+@gd-offset-x: -96px;
+@gd-offset-y: -192px;
+@gd-width: 24px;
+@gd-height: 24px;
+@gd-total-width: 384px;
+@gd-total-height: 384px;
+@gd-image: 'assets/sprites/region-flags.png';
+@gd: 96px 192px -96px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GD';
+@ge-name: 'GE';
+@ge-x: 120px;
+@ge-y: 192px;
+@ge-offset-x: -120px;
+@ge-offset-y: -192px;
+@ge-width: 24px;
+@ge-height: 24px;
+@ge-total-width: 384px;
+@ge-total-height: 384px;
+@ge-image: 'assets/sprites/region-flags.png';
+@ge: 120px 192px -120px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GE';
+@gf-name: 'GF';
+@gf-x: 144px;
+@gf-y: 192px;
+@gf-offset-x: -144px;
+@gf-offset-y: -192px;
+@gf-width: 24px;
+@gf-height: 24px;
+@gf-total-width: 384px;
+@gf-total-height: 384px;
+@gf-image: 'assets/sprites/region-flags.png';
+@gf: 144px 192px -144px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GF';
+@gg-name: 'GG';
+@gg-x: 168px;
+@gg-y: 192px;
+@gg-offset-x: -168px;
+@gg-offset-y: -192px;
+@gg-width: 24px;
+@gg-height: 24px;
+@gg-total-width: 384px;
+@gg-total-height: 384px;
+@gg-image: 'assets/sprites/region-flags.png';
+@gg: 168px 192px -168px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GG';
+@gh-name: 'GH';
+@gh-x: 192px;
+@gh-y: 192px;
+@gh-offset-x: -192px;
+@gh-offset-y: -192px;
+@gh-width: 24px;
+@gh-height: 24px;
+@gh-total-width: 384px;
+@gh-total-height: 384px;
+@gh-image: 'assets/sprites/region-flags.png';
+@gh: 192px 192px -192px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GH';
+@gi-name: 'GI';
+@gi-x: 216px;
+@gi-y: 0px;
+@gi-offset-x: -216px;
+@gi-offset-y: 0px;
+@gi-width: 24px;
+@gi-height: 24px;
+@gi-total-width: 384px;
+@gi-total-height: 384px;
+@gi-image: 'assets/sprites/region-flags.png';
+@gi: 216px 0px -216px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'GI';
+@gl-name: 'GL';
+@gl-x: 216px;
+@gl-y: 24px;
+@gl-offset-x: -216px;
+@gl-offset-y: -24px;
+@gl-width: 24px;
+@gl-height: 24px;
+@gl-total-width: 384px;
+@gl-total-height: 384px;
+@gl-image: 'assets/sprites/region-flags.png';
+@gl: 216px 24px -216px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GL';
+@gm-name: 'GM';
+@gm-x: 216px;
+@gm-y: 48px;
+@gm-offset-x: -216px;
+@gm-offset-y: -48px;
+@gm-width: 24px;
+@gm-height: 24px;
+@gm-total-width: 384px;
+@gm-total-height: 384px;
+@gm-image: 'assets/sprites/region-flags.png';
+@gm: 216px 48px -216px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GM';
+@gn-name: 'GN';
+@gn-x: 216px;
+@gn-y: 72px;
+@gn-offset-x: -216px;
+@gn-offset-y: -72px;
+@gn-width: 24px;
+@gn-height: 24px;
+@gn-total-width: 384px;
+@gn-total-height: 384px;
+@gn-image: 'assets/sprites/region-flags.png';
+@gn: 216px 72px -216px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GN';
+@gp-name: 'GP';
+@gp-x: 216px;
+@gp-y: 96px;
+@gp-offset-x: -216px;
+@gp-offset-y: -96px;
+@gp-width: 24px;
+@gp-height: 24px;
+@gp-total-width: 384px;
+@gp-total-height: 384px;
+@gp-image: 'assets/sprites/region-flags.png';
+@gp: 216px 96px -216px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GP';
+@gq-name: 'GQ';
+@gq-x: 216px;
+@gq-y: 120px;
+@gq-offset-x: -216px;
+@gq-offset-y: -120px;
+@gq-width: 24px;
+@gq-height: 24px;
+@gq-total-width: 384px;
+@gq-total-height: 384px;
+@gq-image: 'assets/sprites/region-flags.png';
+@gq: 216px 120px -216px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GQ';
+@gr-name: 'GR';
+@gr-x: 216px;
+@gr-y: 144px;
+@gr-offset-x: -216px;
+@gr-offset-y: -144px;
+@gr-width: 24px;
+@gr-height: 24px;
+@gr-total-width: 384px;
+@gr-total-height: 384px;
+@gr-image: 'assets/sprites/region-flags.png';
+@gr: 216px 144px -216px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GR';
+@gs-name: 'GS';
+@gs-x: 216px;
+@gs-y: 168px;
+@gs-offset-x: -216px;
+@gs-offset-y: -168px;
+@gs-width: 24px;
+@gs-height: 24px;
+@gs-total-width: 384px;
+@gs-total-height: 384px;
+@gs-image: 'assets/sprites/region-flags.png';
+@gs: 216px 168px -216px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GS';
+@gt-name: 'GT';
+@gt-x: 216px;
+@gt-y: 192px;
+@gt-offset-x: -216px;
+@gt-offset-y: -192px;
+@gt-width: 24px;
+@gt-height: 24px;
+@gt-total-width: 384px;
+@gt-total-height: 384px;
+@gt-image: 'assets/sprites/region-flags.png';
+@gt: 216px 192px -216px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GT';
+@gu-name: 'GU';
+@gu-x: 0px;
+@gu-y: 216px;
+@gu-offset-x: 0px;
+@gu-offset-y: -216px;
+@gu-width: 24px;
+@gu-height: 24px;
+@gu-total-width: 384px;
+@gu-total-height: 384px;
+@gu-image: 'assets/sprites/region-flags.png';
+@gu: 0px 216px 0px -216px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'GU';
+@gw-name: 'GW';
+@gw-x: 24px;
+@gw-y: 216px;
+@gw-offset-x: -24px;
+@gw-offset-y: -216px;
+@gw-width: 24px;
+@gw-height: 24px;
+@gw-total-width: 384px;
+@gw-total-height: 384px;
+@gw-image: 'assets/sprites/region-flags.png';
+@gw: 24px 216px -24px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GW';
+@gy-name: 'GY';
+@gy-x: 48px;
+@gy-y: 216px;
+@gy-offset-x: -48px;
+@gy-offset-y: -216px;
+@gy-width: 24px;
+@gy-height: 24px;
+@gy-total-width: 384px;
+@gy-total-height: 384px;
+@gy-image: 'assets/sprites/region-flags.png';
+@gy: 48px 216px -48px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'GY';
+@hk-name: 'HK';
+@hk-x: 72px;
+@hk-y: 216px;
+@hk-offset-x: -72px;
+@hk-offset-y: -216px;
+@hk-width: 24px;
+@hk-height: 24px;
+@hk-total-width: 384px;
+@hk-total-height: 384px;
+@hk-image: 'assets/sprites/region-flags.png';
+@hk: 72px 216px -72px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'HK';
+@hn-name: 'HN';
+@hn-x: 96px;
+@hn-y: 216px;
+@hn-offset-x: -96px;
+@hn-offset-y: -216px;
+@hn-width: 24px;
+@hn-height: 24px;
+@hn-total-width: 384px;
+@hn-total-height: 384px;
+@hn-image: 'assets/sprites/region-flags.png';
+@hn: 96px 216px -96px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'HN';
+@hr-name: 'HR';
+@hr-x: 120px;
+@hr-y: 216px;
+@hr-offset-x: -120px;
+@hr-offset-y: -216px;
+@hr-width: 24px;
+@hr-height: 24px;
+@hr-total-width: 384px;
+@hr-total-height: 384px;
+@hr-image: 'assets/sprites/region-flags.png';
+@hr: 120px 216px -120px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'HR';
+@ht-name: 'HT';
+@ht-x: 144px;
+@ht-y: 216px;
+@ht-offset-x: -144px;
+@ht-offset-y: -216px;
+@ht-width: 24px;
+@ht-height: 24px;
+@ht-total-width: 384px;
+@ht-total-height: 384px;
+@ht-image: 'assets/sprites/region-flags.png';
+@ht: 144px 216px -144px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'HT';
+@hu-name: 'HU';
+@hu-x: 168px;
+@hu-y: 216px;
+@hu-offset-x: -168px;
+@hu-offset-y: -216px;
+@hu-width: 24px;
+@hu-height: 24px;
+@hu-total-width: 384px;
+@hu-total-height: 384px;
+@hu-image: 'assets/sprites/region-flags.png';
+@hu: 168px 216px -168px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'HU';
+@id-name: 'ID';
+@id-x: 192px;
+@id-y: 216px;
+@id-offset-x: -192px;
+@id-offset-y: -216px;
+@id-width: 24px;
+@id-height: 24px;
+@id-total-width: 384px;
+@id-total-height: 384px;
+@id-image: 'assets/sprites/region-flags.png';
+@id: 192px 216px -192px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ID';
+@ie-name: 'IE';
+@ie-x: 216px;
+@ie-y: 216px;
+@ie-offset-x: -216px;
+@ie-offset-y: -216px;
+@ie-width: 24px;
+@ie-height: 24px;
+@ie-total-width: 384px;
+@ie-total-height: 384px;
+@ie-image: 'assets/sprites/region-flags.png';
+@ie: 216px 216px -216px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'IE';
+@il-name: 'IL';
+@il-x: 240px;
+@il-y: 0px;
+@il-offset-x: -240px;
+@il-offset-y: 0px;
+@il-width: 24px;
+@il-height: 24px;
+@il-total-width: 384px;
+@il-total-height: 384px;
+@il-image: 'assets/sprites/region-flags.png';
+@il: 240px 0px -240px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'IL';
+@im-name: 'IM';
+@im-x: 240px;
+@im-y: 24px;
+@im-offset-x: -240px;
+@im-offset-y: -24px;
+@im-width: 24px;
+@im-height: 24px;
+@im-total-width: 384px;
+@im-total-height: 384px;
+@im-image: 'assets/sprites/region-flags.png';
+@im: 240px 24px -240px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'IM';
+@in-name: 'IN';
+@in-x: 240px;
+@in-y: 48px;
+@in-offset-x: -240px;
+@in-offset-y: -48px;
+@in-width: 24px;
+@in-height: 24px;
+@in-total-width: 384px;
+@in-total-height: 384px;
+@in-image: 'assets/sprites/region-flags.png';
+@in: 240px 48px -240px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'IN';
+@io-name: 'IO';
+@io-x: 240px;
+@io-y: 72px;
+@io-offset-x: -240px;
+@io-offset-y: -72px;
+@io-width: 24px;
+@io-height: 24px;
+@io-total-width: 384px;
+@io-total-height: 384px;
+@io-image: 'assets/sprites/region-flags.png';
+@io: 240px 72px -240px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'IO';
+@iq-name: 'IQ';
+@iq-x: 240px;
+@iq-y: 96px;
+@iq-offset-x: -240px;
+@iq-offset-y: -96px;
+@iq-width: 24px;
+@iq-height: 24px;
+@iq-total-width: 384px;
+@iq-total-height: 384px;
+@iq-image: 'assets/sprites/region-flags.png';
+@iq: 240px 96px -240px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'IQ';
+@ir-name: 'IR';
+@ir-x: 240px;
+@ir-y: 120px;
+@ir-offset-x: -240px;
+@ir-offset-y: -120px;
+@ir-width: 24px;
+@ir-height: 24px;
+@ir-total-width: 384px;
+@ir-total-height: 384px;
+@ir-image: 'assets/sprites/region-flags.png';
+@ir: 240px 120px -240px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'IR';
+@is-name: 'IS';
+@is-x: 240px;
+@is-y: 144px;
+@is-offset-x: -240px;
+@is-offset-y: -144px;
+@is-width: 24px;
+@is-height: 24px;
+@is-total-width: 384px;
+@is-total-height: 384px;
+@is-image: 'assets/sprites/region-flags.png';
+@is: 240px 144px -240px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'IS';
+@it-name: 'IT';
+@it-x: 240px;
+@it-y: 168px;
+@it-offset-x: -240px;
+@it-offset-y: -168px;
+@it-width: 24px;
+@it-height: 24px;
+@it-total-width: 384px;
+@it-total-height: 384px;
+@it-image: 'assets/sprites/region-flags.png';
+@it: 240px 168px -240px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'IT';
+@je-name: 'JE';
+@je-x: 240px;
+@je-y: 192px;
+@je-offset-x: -240px;
+@je-offset-y: -192px;
+@je-width: 24px;
+@je-height: 24px;
+@je-total-width: 384px;
+@je-total-height: 384px;
+@je-image: 'assets/sprites/region-flags.png';
+@je: 240px 192px -240px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'JE';
+@jm-name: 'JM';
+@jm-x: 240px;
+@jm-y: 216px;
+@jm-offset-x: -240px;
+@jm-offset-y: -216px;
+@jm-width: 24px;
+@jm-height: 24px;
+@jm-total-width: 384px;
+@jm-total-height: 384px;
+@jm-image: 'assets/sprites/region-flags.png';
+@jm: 240px 216px -240px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'JM';
+@jo-name: 'JO';
+@jo-x: 0px;
+@jo-y: 240px;
+@jo-offset-x: 0px;
+@jo-offset-y: -240px;
+@jo-width: 24px;
+@jo-height: 24px;
+@jo-total-width: 384px;
+@jo-total-height: 384px;
+@jo-image: 'assets/sprites/region-flags.png';
+@jo: 0px 240px 0px -240px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'JO';
+@jp-name: 'JP';
+@jp-x: 24px;
+@jp-y: 240px;
+@jp-offset-x: -24px;
+@jp-offset-y: -240px;
+@jp-width: 24px;
+@jp-height: 24px;
+@jp-total-width: 384px;
+@jp-total-height: 384px;
+@jp-image: 'assets/sprites/region-flags.png';
+@jp: 24px 240px -24px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'JP';
+@ke-name: 'KE';
+@ke-x: 48px;
+@ke-y: 240px;
+@ke-offset-x: -48px;
+@ke-offset-y: -240px;
+@ke-width: 24px;
+@ke-height: 24px;
+@ke-total-width: 384px;
+@ke-total-height: 384px;
+@ke-image: 'assets/sprites/region-flags.png';
+@ke: 48px 240px -48px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KE';
+@kg-name: 'KG';
+@kg-x: 72px;
+@kg-y: 240px;
+@kg-offset-x: -72px;
+@kg-offset-y: -240px;
+@kg-width: 24px;
+@kg-height: 24px;
+@kg-total-width: 384px;
+@kg-total-height: 384px;
+@kg-image: 'assets/sprites/region-flags.png';
+@kg: 72px 240px -72px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KG';
+@kh-name: 'KH';
+@kh-x: 96px;
+@kh-y: 240px;
+@kh-offset-x: -96px;
+@kh-offset-y: -240px;
+@kh-width: 24px;
+@kh-height: 24px;
+@kh-total-width: 384px;
+@kh-total-height: 384px;
+@kh-image: 'assets/sprites/region-flags.png';
+@kh: 96px 240px -96px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KH';
+@ki-name: 'KI';
+@ki-x: 120px;
+@ki-y: 240px;
+@ki-offset-x: -120px;
+@ki-offset-y: -240px;
+@ki-width: 24px;
+@ki-height: 24px;
+@ki-total-width: 384px;
+@ki-total-height: 384px;
+@ki-image: 'assets/sprites/region-flags.png';
+@ki: 120px 240px -120px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KI';
+@km-name: 'KM';
+@km-x: 144px;
+@km-y: 240px;
+@km-offset-x: -144px;
+@km-offset-y: -240px;
+@km-width: 24px;
+@km-height: 24px;
+@km-total-width: 384px;
+@km-total-height: 384px;
+@km-image: 'assets/sprites/region-flags.png';
+@km: 144px 240px -144px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KM';
+@kn-name: 'KN';
+@kn-x: 168px;
+@kn-y: 240px;
+@kn-offset-x: -168px;
+@kn-offset-y: -240px;
+@kn-width: 24px;
+@kn-height: 24px;
+@kn-total-width: 384px;
+@kn-total-height: 384px;
+@kn-image: 'assets/sprites/region-flags.png';
+@kn: 168px 240px -168px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KN';
+@kp-name: 'KP';
+@kp-x: 192px;
+@kp-y: 240px;
+@kp-offset-x: -192px;
+@kp-offset-y: -240px;
+@kp-width: 24px;
+@kp-height: 24px;
+@kp-total-width: 384px;
+@kp-total-height: 384px;
+@kp-image: 'assets/sprites/region-flags.png';
+@kp: 192px 240px -192px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KP';
+@kr-name: 'KR';
+@kr-x: 216px;
+@kr-y: 240px;
+@kr-offset-x: -216px;
+@kr-offset-y: -240px;
+@kr-width: 24px;
+@kr-height: 24px;
+@kr-total-width: 384px;
+@kr-total-height: 384px;
+@kr-image: 'assets/sprites/region-flags.png';
+@kr: 216px 240px -216px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KR';
+@kw-name: 'KW';
+@kw-x: 240px;
+@kw-y: 240px;
+@kw-offset-x: -240px;
+@kw-offset-y: -240px;
+@kw-width: 24px;
+@kw-height: 24px;
+@kw-total-width: 384px;
+@kw-total-height: 384px;
+@kw-image: 'assets/sprites/region-flags.png';
+@kw: 240px 240px -240px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KW';
+@ky-name: 'KY';
+@ky-x: 264px;
+@ky-y: 0px;
+@ky-offset-x: -264px;
+@ky-offset-y: 0px;
+@ky-width: 24px;
+@ky-height: 24px;
+@ky-total-width: 384px;
+@ky-total-height: 384px;
+@ky-image: 'assets/sprites/region-flags.png';
+@ky: 264px 0px -264px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'KY';
+@kz-name: 'KZ';
+@kz-x: 264px;
+@kz-y: 24px;
+@kz-offset-x: -264px;
+@kz-offset-y: -24px;
+@kz-width: 24px;
+@kz-height: 24px;
+@kz-total-width: 384px;
+@kz-total-height: 384px;
+@kz-image: 'assets/sprites/region-flags.png';
+@kz: 264px 24px -264px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'KZ';
+@la-name: 'LA';
+@la-x: 264px;
+@la-y: 48px;
+@la-offset-x: -264px;
+@la-offset-y: -48px;
+@la-width: 24px;
+@la-height: 24px;
+@la-total-width: 384px;
+@la-total-height: 384px;
+@la-image: 'assets/sprites/region-flags.png';
+@la: 264px 48px -264px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LA';
+@lb-name: 'LB';
+@lb-x: 264px;
+@lb-y: 72px;
+@lb-offset-x: -264px;
+@lb-offset-y: -72px;
+@lb-width: 24px;
+@lb-height: 24px;
+@lb-total-width: 384px;
+@lb-total-height: 384px;
+@lb-image: 'assets/sprites/region-flags.png';
+@lb: 264px 72px -264px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LB';
+@lc-name: 'LC';
+@lc-x: 264px;
+@lc-y: 96px;
+@lc-offset-x: -264px;
+@lc-offset-y: -96px;
+@lc-width: 24px;
+@lc-height: 24px;
+@lc-total-width: 384px;
+@lc-total-height: 384px;
+@lc-image: 'assets/sprites/region-flags.png';
+@lc: 264px 96px -264px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LC';
+@li-name: 'LI';
+@li-x: 264px;
+@li-y: 120px;
+@li-offset-x: -264px;
+@li-offset-y: -120px;
+@li-width: 24px;
+@li-height: 24px;
+@li-total-width: 384px;
+@li-total-height: 384px;
+@li-image: 'assets/sprites/region-flags.png';
+@li: 264px 120px -264px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LI';
+@lk-name: 'LK';
+@lk-x: 264px;
+@lk-y: 144px;
+@lk-offset-x: -264px;
+@lk-offset-y: -144px;
+@lk-width: 24px;
+@lk-height: 24px;
+@lk-total-width: 384px;
+@lk-total-height: 384px;
+@lk-image: 'assets/sprites/region-flags.png';
+@lk: 264px 144px -264px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LK';
+@lr-name: 'LR';
+@lr-x: 264px;
+@lr-y: 168px;
+@lr-offset-x: -264px;
+@lr-offset-y: -168px;
+@lr-width: 24px;
+@lr-height: 24px;
+@lr-total-width: 384px;
+@lr-total-height: 384px;
+@lr-image: 'assets/sprites/region-flags.png';
+@lr: 264px 168px -264px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LR';
+@ls-name: 'LS';
+@ls-x: 264px;
+@ls-y: 192px;
+@ls-offset-x: -264px;
+@ls-offset-y: -192px;
+@ls-width: 24px;
+@ls-height: 24px;
+@ls-total-width: 384px;
+@ls-total-height: 384px;
+@ls-image: 'assets/sprites/region-flags.png';
+@ls: 264px 192px -264px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LS';
+@lt-name: 'LT';
+@lt-x: 264px;
+@lt-y: 216px;
+@lt-offset-x: -264px;
+@lt-offset-y: -216px;
+@lt-width: 24px;
+@lt-height: 24px;
+@lt-total-width: 384px;
+@lt-total-height: 384px;
+@lt-image: 'assets/sprites/region-flags.png';
+@lt: 264px 216px -264px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LT';
+@lu-name: 'LU';
+@lu-x: 264px;
+@lu-y: 240px;
+@lu-offset-x: -264px;
+@lu-offset-y: -240px;
+@lu-width: 24px;
+@lu-height: 24px;
+@lu-total-width: 384px;
+@lu-total-height: 384px;
+@lu-image: 'assets/sprites/region-flags.png';
+@lu: 264px 240px -264px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LU';
+@lv-name: 'LV';
+@lv-x: 0px;
+@lv-y: 264px;
+@lv-offset-x: 0px;
+@lv-offset-y: -264px;
+@lv-width: 24px;
+@lv-height: 24px;
+@lv-total-width: 384px;
+@lv-total-height: 384px;
+@lv-image: 'assets/sprites/region-flags.png';
+@lv: 0px 264px 0px -264px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'LV';
+@ly-name: 'LY';
+@ly-x: 24px;
+@ly-y: 264px;
+@ly-offset-x: -24px;
+@ly-offset-y: -264px;
+@ly-width: 24px;
+@ly-height: 24px;
+@ly-total-width: 384px;
+@ly-total-height: 384px;
+@ly-image: 'assets/sprites/region-flags.png';
+@ly: 24px 264px -24px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'LY';
+@ma-name: 'MA';
+@ma-x: 48px;
+@ma-y: 264px;
+@ma-offset-x: -48px;
+@ma-offset-y: -264px;
+@ma-width: 24px;
+@ma-height: 24px;
+@ma-total-width: 384px;
+@ma-total-height: 384px;
+@ma-image: 'assets/sprites/region-flags.png';
+@ma: 48px 264px -48px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MA';
+@mc-name: 'MC';
+@mc-x: 72px;
+@mc-y: 264px;
+@mc-offset-x: -72px;
+@mc-offset-y: -264px;
+@mc-width: 24px;
+@mc-height: 24px;
+@mc-total-width: 384px;
+@mc-total-height: 384px;
+@mc-image: 'assets/sprites/region-flags.png';
+@mc: 72px 264px -72px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MC';
+@md-name: 'MD';
+@md-x: 96px;
+@md-y: 264px;
+@md-offset-x: -96px;
+@md-offset-y: -264px;
+@md-width: 24px;
+@md-height: 24px;
+@md-total-width: 384px;
+@md-total-height: 384px;
+@md-image: 'assets/sprites/region-flags.png';
+@md: 96px 264px -96px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MD';
+@me-name: 'ME';
+@me-x: 120px;
+@me-y: 264px;
+@me-offset-x: -120px;
+@me-offset-y: -264px;
+@me-width: 24px;
+@me-height: 24px;
+@me-total-width: 384px;
+@me-total-height: 384px;
+@me-image: 'assets/sprites/region-flags.png';
+@me: 120px 264px -120px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ME';
+@mf-name: 'MF';
+@mf-x: 144px;
+@mf-y: 264px;
+@mf-offset-x: -144px;
+@mf-offset-y: -264px;
+@mf-width: 24px;
+@mf-height: 24px;
+@mf-total-width: 384px;
+@mf-total-height: 384px;
+@mf-image: 'assets/sprites/region-flags.png';
+@mf: 144px 264px -144px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MF';
+@mg-name: 'MG';
+@mg-x: 168px;
+@mg-y: 264px;
+@mg-offset-x: -168px;
+@mg-offset-y: -264px;
+@mg-width: 24px;
+@mg-height: 24px;
+@mg-total-width: 384px;
+@mg-total-height: 384px;
+@mg-image: 'assets/sprites/region-flags.png';
+@mg: 168px 264px -168px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MG';
+@mh-name: 'MH';
+@mh-x: 192px;
+@mh-y: 264px;
+@mh-offset-x: -192px;
+@mh-offset-y: -264px;
+@mh-width: 24px;
+@mh-height: 24px;
+@mh-total-width: 384px;
+@mh-total-height: 384px;
+@mh-image: 'assets/sprites/region-flags.png';
+@mh: 192px 264px -192px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MH';
+@mk-name: 'MK';
+@mk-x: 216px;
+@mk-y: 264px;
+@mk-offset-x: -216px;
+@mk-offset-y: -264px;
+@mk-width: 24px;
+@mk-height: 24px;
+@mk-total-width: 384px;
+@mk-total-height: 384px;
+@mk-image: 'assets/sprites/region-flags.png';
+@mk: 216px 264px -216px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MK';
+@ml-name: 'ML';
+@ml-x: 240px;
+@ml-y: 264px;
+@ml-offset-x: -240px;
+@ml-offset-y: -264px;
+@ml-width: 24px;
+@ml-height: 24px;
+@ml-total-width: 384px;
+@ml-total-height: 384px;
+@ml-image: 'assets/sprites/region-flags.png';
+@ml: 240px 264px -240px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ML';
+@mm-name: 'MM';
+@mm-x: 264px;
+@mm-y: 264px;
+@mm-offset-x: -264px;
+@mm-offset-y: -264px;
+@mm-width: 24px;
+@mm-height: 24px;
+@mm-total-width: 384px;
+@mm-total-height: 384px;
+@mm-image: 'assets/sprites/region-flags.png';
+@mm: 264px 264px -264px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MM';
+@mn-name: 'MN';
+@mn-x: 288px;
+@mn-y: 0px;
+@mn-offset-x: -288px;
+@mn-offset-y: 0px;
+@mn-width: 24px;
+@mn-height: 24px;
+@mn-total-width: 384px;
+@mn-total-height: 384px;
+@mn-image: 'assets/sprites/region-flags.png';
+@mn: 288px 0px -288px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'MN';
+@mo-name: 'MO';
+@mo-x: 288px;
+@mo-y: 24px;
+@mo-offset-x: -288px;
+@mo-offset-y: -24px;
+@mo-width: 24px;
+@mo-height: 24px;
+@mo-total-width: 384px;
+@mo-total-height: 384px;
+@mo-image: 'assets/sprites/region-flags.png';
+@mo: 288px 24px -288px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MO';
+@mp-name: 'MP';
+@mp-x: 288px;
+@mp-y: 48px;
+@mp-offset-x: -288px;
+@mp-offset-y: -48px;
+@mp-width: 24px;
+@mp-height: 24px;
+@mp-total-width: 384px;
+@mp-total-height: 384px;
+@mp-image: 'assets/sprites/region-flags.png';
+@mp: 288px 48px -288px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MP';
+@mq-name: 'MQ';
+@mq-x: 288px;
+@mq-y: 72px;
+@mq-offset-x: -288px;
+@mq-offset-y: -72px;
+@mq-width: 24px;
+@mq-height: 24px;
+@mq-total-width: 384px;
+@mq-total-height: 384px;
+@mq-image: 'assets/sprites/region-flags.png';
+@mq: 288px 72px -288px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MQ';
+@mr-name: 'MR';
+@mr-x: 288px;
+@mr-y: 96px;
+@mr-offset-x: -288px;
+@mr-offset-y: -96px;
+@mr-width: 24px;
+@mr-height: 24px;
+@mr-total-width: 384px;
+@mr-total-height: 384px;
+@mr-image: 'assets/sprites/region-flags.png';
+@mr: 288px 96px -288px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MR';
+@ms-name: 'MS';
+@ms-x: 288px;
+@ms-y: 120px;
+@ms-offset-x: -288px;
+@ms-offset-y: -120px;
+@ms-width: 24px;
+@ms-height: 24px;
+@ms-total-width: 384px;
+@ms-total-height: 384px;
+@ms-image: 'assets/sprites/region-flags.png';
+@ms: 288px 120px -288px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MS';
+@mt-name: 'MT';
+@mt-x: 288px;
+@mt-y: 144px;
+@mt-offset-x: -288px;
+@mt-offset-y: -144px;
+@mt-width: 24px;
+@mt-height: 24px;
+@mt-total-width: 384px;
+@mt-total-height: 384px;
+@mt-image: 'assets/sprites/region-flags.png';
+@mt: 288px 144px -288px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MT';
+@mu-name: 'MU';
+@mu-x: 288px;
+@mu-y: 168px;
+@mu-offset-x: -288px;
+@mu-offset-y: -168px;
+@mu-width: 24px;
+@mu-height: 24px;
+@mu-total-width: 384px;
+@mu-total-height: 384px;
+@mu-image: 'assets/sprites/region-flags.png';
+@mu: 288px 168px -288px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MU';
+@mv-name: 'MV';
+@mv-x: 288px;
+@mv-y: 192px;
+@mv-offset-x: -288px;
+@mv-offset-y: -192px;
+@mv-width: 24px;
+@mv-height: 24px;
+@mv-total-width: 384px;
+@mv-total-height: 384px;
+@mv-image: 'assets/sprites/region-flags.png';
+@mv: 288px 192px -288px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MV';
+@mw-name: 'MW';
+@mw-x: 288px;
+@mw-y: 216px;
+@mw-offset-x: -288px;
+@mw-offset-y: -216px;
+@mw-width: 24px;
+@mw-height: 24px;
+@mw-total-width: 384px;
+@mw-total-height: 384px;
+@mw-image: 'assets/sprites/region-flags.png';
+@mw: 288px 216px -288px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MW';
+@mx-name: 'MX';
+@mx-x: 288px;
+@mx-y: 240px;
+@mx-offset-x: -288px;
+@mx-offset-y: -240px;
+@mx-width: 24px;
+@mx-height: 24px;
+@mx-total-width: 384px;
+@mx-total-height: 384px;
+@mx-image: 'assets/sprites/region-flags.png';
+@mx: 288px 240px -288px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MX';
+@my-name: 'MY';
+@my-x: 288px;
+@my-y: 264px;
+@my-offset-x: -288px;
+@my-offset-y: -264px;
+@my-width: 24px;
+@my-height: 24px;
+@my-total-width: 384px;
+@my-total-height: 384px;
+@my-image: 'assets/sprites/region-flags.png';
+@my: 288px 264px -288px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'MY';
+@mz-name: 'MZ';
+@mz-x: 0px;
+@mz-y: 288px;
+@mz-offset-x: 0px;
+@mz-offset-y: -288px;
+@mz-width: 24px;
+@mz-height: 24px;
+@mz-total-width: 384px;
+@mz-total-height: 384px;
+@mz-image: 'assets/sprites/region-flags.png';
+@mz: 0px 288px 0px -288px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'MZ';
+@na-name: 'NA';
+@na-x: 24px;
+@na-y: 288px;
+@na-offset-x: -24px;
+@na-offset-y: -288px;
+@na-width: 24px;
+@na-height: 24px;
+@na-total-width: 384px;
+@na-total-height: 384px;
+@na-image: 'assets/sprites/region-flags.png';
+@na: 24px 288px -24px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NA';
+@nc-name: 'NC';
+@nc-x: 48px;
+@nc-y: 288px;
+@nc-offset-x: -48px;
+@nc-offset-y: -288px;
+@nc-width: 24px;
+@nc-height: 24px;
+@nc-total-width: 384px;
+@nc-total-height: 384px;
+@nc-image: 'assets/sprites/region-flags.png';
+@nc: 48px 288px -48px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NC';
+@ne-name: 'NE';
+@ne-x: 72px;
+@ne-y: 288px;
+@ne-offset-x: -72px;
+@ne-offset-y: -288px;
+@ne-width: 24px;
+@ne-height: 24px;
+@ne-total-width: 384px;
+@ne-total-height: 384px;
+@ne-image: 'assets/sprites/region-flags.png';
+@ne: 72px 288px -72px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NE';
+@nf-name: 'NF';
+@nf-x: 96px;
+@nf-y: 288px;
+@nf-offset-x: -96px;
+@nf-offset-y: -288px;
+@nf-width: 24px;
+@nf-height: 24px;
+@nf-total-width: 384px;
+@nf-total-height: 384px;
+@nf-image: 'assets/sprites/region-flags.png';
+@nf: 96px 288px -96px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NF';
+@ng-name: 'NG';
+@ng-x: 120px;
+@ng-y: 288px;
+@ng-offset-x: -120px;
+@ng-offset-y: -288px;
+@ng-width: 24px;
+@ng-height: 24px;
+@ng-total-width: 384px;
+@ng-total-height: 384px;
+@ng-image: 'assets/sprites/region-flags.png';
+@ng: 120px 288px -120px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NG';
+@ni-name: 'NI';
+@ni-x: 144px;
+@ni-y: 288px;
+@ni-offset-x: -144px;
+@ni-offset-y: -288px;
+@ni-width: 24px;
+@ni-height: 24px;
+@ni-total-width: 384px;
+@ni-total-height: 384px;
+@ni-image: 'assets/sprites/region-flags.png';
+@ni: 144px 288px -144px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NI';
+@nl-name: 'NL';
+@nl-x: 168px;
+@nl-y: 288px;
+@nl-offset-x: -168px;
+@nl-offset-y: -288px;
+@nl-width: 24px;
+@nl-height: 24px;
+@nl-total-width: 384px;
+@nl-total-height: 384px;
+@nl-image: 'assets/sprites/region-flags.png';
+@nl: 168px 288px -168px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NL';
+@no-name: 'NO';
+@no-x: 192px;
+@no-y: 288px;
+@no-offset-x: -192px;
+@no-offset-y: -288px;
+@no-width: 24px;
+@no-height: 24px;
+@no-total-width: 384px;
+@no-total-height: 384px;
+@no-image: 'assets/sprites/region-flags.png';
+@no: 192px 288px -192px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NO';
+@np-name: 'NP';
+@np-x: 216px;
+@np-y: 288px;
+@np-offset-x: -216px;
+@np-offset-y: -288px;
+@np-width: 24px;
+@np-height: 24px;
+@np-total-width: 384px;
+@np-total-height: 384px;
+@np-image: 'assets/sprites/region-flags.png';
+@np: 216px 288px -216px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NP';
+@nr-name: 'NR';
+@nr-x: 240px;
+@nr-y: 288px;
+@nr-offset-x: -240px;
+@nr-offset-y: -288px;
+@nr-width: 24px;
+@nr-height: 24px;
+@nr-total-width: 384px;
+@nr-total-height: 384px;
+@nr-image: 'assets/sprites/region-flags.png';
+@nr: 240px 288px -240px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NR';
+@nu-name: 'NU';
+@nu-x: 264px;
+@nu-y: 288px;
+@nu-offset-x: -264px;
+@nu-offset-y: -288px;
+@nu-width: 24px;
+@nu-height: 24px;
+@nu-total-width: 384px;
+@nu-total-height: 384px;
+@nu-image: 'assets/sprites/region-flags.png';
+@nu: 264px 288px -264px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NU';
+@nz-name: 'NZ';
+@nz-x: 288px;
+@nz-y: 288px;
+@nz-offset-x: -288px;
+@nz-offset-y: -288px;
+@nz-width: 24px;
+@nz-height: 24px;
+@nz-total-width: 384px;
+@nz-total-height: 384px;
+@nz-image: 'assets/sprites/region-flags.png';
+@nz: 288px 288px -288px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'NZ';
+@om-name: 'OM';
+@om-x: 312px;
+@om-y: 0px;
+@om-offset-x: -312px;
+@om-offset-y: 0px;
+@om-width: 24px;
+@om-height: 24px;
+@om-total-width: 384px;
+@om-total-height: 384px;
+@om-image: 'assets/sprites/region-flags.png';
+@om: 312px 0px -312px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'OM';
+@pa-name: 'PA';
+@pa-x: 312px;
+@pa-y: 24px;
+@pa-offset-x: -312px;
+@pa-offset-y: -24px;
+@pa-width: 24px;
+@pa-height: 24px;
+@pa-total-width: 384px;
+@pa-total-height: 384px;
+@pa-image: 'assets/sprites/region-flags.png';
+@pa: 312px 24px -312px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PA';
+@pe-name: 'PE';
+@pe-x: 312px;
+@pe-y: 48px;
+@pe-offset-x: -312px;
+@pe-offset-y: -48px;
+@pe-width: 24px;
+@pe-height: 24px;
+@pe-total-width: 384px;
+@pe-total-height: 384px;
+@pe-image: 'assets/sprites/region-flags.png';
+@pe: 312px 48px -312px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PE';
+@pf-name: 'PF';
+@pf-x: 312px;
+@pf-y: 72px;
+@pf-offset-x: -312px;
+@pf-offset-y: -72px;
+@pf-width: 24px;
+@pf-height: 24px;
+@pf-total-width: 384px;
+@pf-total-height: 384px;
+@pf-image: 'assets/sprites/region-flags.png';
+@pf: 312px 72px -312px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PF';
+@pg-name: 'PG';
+@pg-x: 312px;
+@pg-y: 96px;
+@pg-offset-x: -312px;
+@pg-offset-y: -96px;
+@pg-width: 24px;
+@pg-height: 24px;
+@pg-total-width: 384px;
+@pg-total-height: 384px;
+@pg-image: 'assets/sprites/region-flags.png';
+@pg: 312px 96px -312px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PG';
+@ph-name: 'PH';
+@ph-x: 312px;
+@ph-y: 120px;
+@ph-offset-x: -312px;
+@ph-offset-y: -120px;
+@ph-width: 24px;
+@ph-height: 24px;
+@ph-total-width: 384px;
+@ph-total-height: 384px;
+@ph-image: 'assets/sprites/region-flags.png';
+@ph: 312px 120px -312px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PH';
+@pk-name: 'PK';
+@pk-x: 312px;
+@pk-y: 144px;
+@pk-offset-x: -312px;
+@pk-offset-y: -144px;
+@pk-width: 24px;
+@pk-height: 24px;
+@pk-total-width: 384px;
+@pk-total-height: 384px;
+@pk-image: 'assets/sprites/region-flags.png';
+@pk: 312px 144px -312px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PK';
+@pl-name: 'PL';
+@pl-x: 312px;
+@pl-y: 168px;
+@pl-offset-x: -312px;
+@pl-offset-y: -168px;
+@pl-width: 24px;
+@pl-height: 24px;
+@pl-total-width: 384px;
+@pl-total-height: 384px;
+@pl-image: 'assets/sprites/region-flags.png';
+@pl: 312px 168px -312px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PL';
+@pm-name: 'PM';
+@pm-x: 312px;
+@pm-y: 192px;
+@pm-offset-x: -312px;
+@pm-offset-y: -192px;
+@pm-width: 24px;
+@pm-height: 24px;
+@pm-total-width: 384px;
+@pm-total-height: 384px;
+@pm-image: 'assets/sprites/region-flags.png';
+@pm: 312px 192px -312px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PM';
+@pn-name: 'PN';
+@pn-x: 312px;
+@pn-y: 216px;
+@pn-offset-x: -312px;
+@pn-offset-y: -216px;
+@pn-width: 24px;
+@pn-height: 24px;
+@pn-total-width: 384px;
+@pn-total-height: 384px;
+@pn-image: 'assets/sprites/region-flags.png';
+@pn: 312px 216px -312px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PN';
+@pr-name: 'PR';
+@pr-x: 312px;
+@pr-y: 240px;
+@pr-offset-x: -312px;
+@pr-offset-y: -240px;
+@pr-width: 24px;
+@pr-height: 24px;
+@pr-total-width: 384px;
+@pr-total-height: 384px;
+@pr-image: 'assets/sprites/region-flags.png';
+@pr: 312px 240px -312px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PR';
+@ps-name: 'PS';
+@ps-x: 312px;
+@ps-y: 264px;
+@ps-offset-x: -312px;
+@ps-offset-y: -264px;
+@ps-width: 24px;
+@ps-height: 24px;
+@ps-total-width: 384px;
+@ps-total-height: 384px;
+@ps-image: 'assets/sprites/region-flags.png';
+@ps: 312px 264px -312px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PS';
+@pt-name: 'PT';
+@pt-x: 312px;
+@pt-y: 288px;
+@pt-offset-x: -312px;
+@pt-offset-y: -288px;
+@pt-width: 24px;
+@pt-height: 24px;
+@pt-total-width: 384px;
+@pt-total-height: 384px;
+@pt-image: 'assets/sprites/region-flags.png';
+@pt: 312px 288px -312px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PT';
+@pw-name: 'PW';
+@pw-x: 0px;
+@pw-y: 312px;
+@pw-offset-x: 0px;
+@pw-offset-y: -312px;
+@pw-width: 24px;
+@pw-height: 24px;
+@pw-total-width: 384px;
+@pw-total-height: 384px;
+@pw-image: 'assets/sprites/region-flags.png';
+@pw: 0px 312px 0px -312px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'PW';
+@py-name: 'PY';
+@py-x: 24px;
+@py-y: 312px;
+@py-offset-x: -24px;
+@py-offset-y: -312px;
+@py-width: 24px;
+@py-height: 24px;
+@py-total-width: 384px;
+@py-total-height: 384px;
+@py-image: 'assets/sprites/region-flags.png';
+@py: 24px 312px -24px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'PY';
+@qa-name: 'QA';
+@qa-x: 48px;
+@qa-y: 312px;
+@qa-offset-x: -48px;
+@qa-offset-y: -312px;
+@qa-width: 24px;
+@qa-height: 24px;
+@qa-total-width: 384px;
+@qa-total-height: 384px;
+@qa-image: 'assets/sprites/region-flags.png';
+@qa: 48px 312px -48px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'QA';
+@re-name: 'RE';
+@re-x: 72px;
+@re-y: 312px;
+@re-offset-x: -72px;
+@re-offset-y: -312px;
+@re-width: 24px;
+@re-height: 24px;
+@re-total-width: 384px;
+@re-total-height: 384px;
+@re-image: 'assets/sprites/region-flags.png';
+@re: 72px 312px -72px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'RE';
+@ro-name: 'RO';
+@ro-x: 96px;
+@ro-y: 312px;
+@ro-offset-x: -96px;
+@ro-offset-y: -312px;
+@ro-width: 24px;
+@ro-height: 24px;
+@ro-total-width: 384px;
+@ro-total-height: 384px;
+@ro-image: 'assets/sprites/region-flags.png';
+@ro: 96px 312px -96px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'RO';
+@rs-name: 'RS';
+@rs-x: 120px;
+@rs-y: 312px;
+@rs-offset-x: -120px;
+@rs-offset-y: -312px;
+@rs-width: 24px;
+@rs-height: 24px;
+@rs-total-width: 384px;
+@rs-total-height: 384px;
+@rs-image: 'assets/sprites/region-flags.png';
+@rs: 120px 312px -120px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'RS';
+@ru-name: 'RU';
+@ru-x: 144px;
+@ru-y: 312px;
+@ru-offset-x: -144px;
+@ru-offset-y: -312px;
+@ru-width: 24px;
+@ru-height: 24px;
+@ru-total-width: 384px;
+@ru-total-height: 384px;
+@ru-image: 'assets/sprites/region-flags.png';
+@ru: 144px 312px -144px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'RU';
+@rw-name: 'RW';
+@rw-x: 168px;
+@rw-y: 312px;
+@rw-offset-x: -168px;
+@rw-offset-y: -312px;
+@rw-width: 24px;
+@rw-height: 24px;
+@rw-total-width: 384px;
+@rw-total-height: 384px;
+@rw-image: 'assets/sprites/region-flags.png';
+@rw: 168px 312px -168px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'RW';
+@sa-name: 'SA';
+@sa-x: 192px;
+@sa-y: 312px;
+@sa-offset-x: -192px;
+@sa-offset-y: -312px;
+@sa-width: 24px;
+@sa-height: 24px;
+@sa-total-width: 384px;
+@sa-total-height: 384px;
+@sa-image: 'assets/sprites/region-flags.png';
+@sa: 192px 312px -192px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SA';
+@sb-name: 'SB';
+@sb-x: 216px;
+@sb-y: 312px;
+@sb-offset-x: -216px;
+@sb-offset-y: -312px;
+@sb-width: 24px;
+@sb-height: 24px;
+@sb-total-width: 384px;
+@sb-total-height: 384px;
+@sb-image: 'assets/sprites/region-flags.png';
+@sb: 216px 312px -216px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SB';
+@sc-name: 'SC';
+@sc-x: 240px;
+@sc-y: 312px;
+@sc-offset-x: -240px;
+@sc-offset-y: -312px;
+@sc-width: 24px;
+@sc-height: 24px;
+@sc-total-width: 384px;
+@sc-total-height: 384px;
+@sc-image: 'assets/sprites/region-flags.png';
+@sc: 240px 312px -240px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SC';
+@sd-name: 'SD';
+@sd-x: 264px;
+@sd-y: 312px;
+@sd-offset-x: -264px;
+@sd-offset-y: -312px;
+@sd-width: 24px;
+@sd-height: 24px;
+@sd-total-width: 384px;
+@sd-total-height: 384px;
+@sd-image: 'assets/sprites/region-flags.png';
+@sd: 264px 312px -264px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SD';
+@se-name: 'SE';
+@se-x: 288px;
+@se-y: 312px;
+@se-offset-x: -288px;
+@se-offset-y: -312px;
+@se-width: 24px;
+@se-height: 24px;
+@se-total-width: 384px;
+@se-total-height: 384px;
+@se-image: 'assets/sprites/region-flags.png';
+@se: 288px 312px -288px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SE';
+@sg-name: 'SG';
+@sg-x: 312px;
+@sg-y: 312px;
+@sg-offset-x: -312px;
+@sg-offset-y: -312px;
+@sg-width: 24px;
+@sg-height: 24px;
+@sg-total-width: 384px;
+@sg-total-height: 384px;
+@sg-image: 'assets/sprites/region-flags.png';
+@sg: 312px 312px -312px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SG';
+@sh-name: 'SH';
+@sh-x: 336px;
+@sh-y: 0px;
+@sh-offset-x: -336px;
+@sh-offset-y: 0px;
+@sh-width: 24px;
+@sh-height: 24px;
+@sh-total-width: 384px;
+@sh-total-height: 384px;
+@sh-image: 'assets/sprites/region-flags.png';
+@sh: 336px 0px -336px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'SH';
+@si-name: 'SI';
+@si-x: 336px;
+@si-y: 24px;
+@si-offset-x: -336px;
+@si-offset-y: -24px;
+@si-width: 24px;
+@si-height: 24px;
+@si-total-width: 384px;
+@si-total-height: 384px;
+@si-image: 'assets/sprites/region-flags.png';
+@si: 336px 24px -336px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SI';
+@sj-name: 'SJ';
+@sj-x: 336px;
+@sj-y: 48px;
+@sj-offset-x: -336px;
+@sj-offset-y: -48px;
+@sj-width: 24px;
+@sj-height: 24px;
+@sj-total-width: 384px;
+@sj-total-height: 384px;
+@sj-image: 'assets/sprites/region-flags.png';
+@sj: 336px 48px -336px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SJ';
+@sk-name: 'SK';
+@sk-x: 336px;
+@sk-y: 72px;
+@sk-offset-x: -336px;
+@sk-offset-y: -72px;
+@sk-width: 24px;
+@sk-height: 24px;
+@sk-total-width: 384px;
+@sk-total-height: 384px;
+@sk-image: 'assets/sprites/region-flags.png';
+@sk: 336px 72px -336px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SK';
+@sl-name: 'SL';
+@sl-x: 336px;
+@sl-y: 96px;
+@sl-offset-x: -336px;
+@sl-offset-y: -96px;
+@sl-width: 24px;
+@sl-height: 24px;
+@sl-total-width: 384px;
+@sl-total-height: 384px;
+@sl-image: 'assets/sprites/region-flags.png';
+@sl: 336px 96px -336px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SL';
+@sm-name: 'SM';
+@sm-x: 336px;
+@sm-y: 120px;
+@sm-offset-x: -336px;
+@sm-offset-y: -120px;
+@sm-width: 24px;
+@sm-height: 24px;
+@sm-total-width: 384px;
+@sm-total-height: 384px;
+@sm-image: 'assets/sprites/region-flags.png';
+@sm: 336px 120px -336px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SM';
+@sn-name: 'SN';
+@sn-x: 336px;
+@sn-y: 144px;
+@sn-offset-x: -336px;
+@sn-offset-y: -144px;
+@sn-width: 24px;
+@sn-height: 24px;
+@sn-total-width: 384px;
+@sn-total-height: 384px;
+@sn-image: 'assets/sprites/region-flags.png';
+@sn: 336px 144px -336px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SN';
+@so-name: 'SO';
+@so-x: 336px;
+@so-y: 168px;
+@so-offset-x: -336px;
+@so-offset-y: -168px;
+@so-width: 24px;
+@so-height: 24px;
+@so-total-width: 384px;
+@so-total-height: 384px;
+@so-image: 'assets/sprites/region-flags.png';
+@so: 336px 168px -336px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SO';
+@sr-name: 'SR';
+@sr-x: 336px;
+@sr-y: 192px;
+@sr-offset-x: -336px;
+@sr-offset-y: -192px;
+@sr-width: 24px;
+@sr-height: 24px;
+@sr-total-width: 384px;
+@sr-total-height: 384px;
+@sr-image: 'assets/sprites/region-flags.png';
+@sr: 336px 192px -336px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SR';
+@ss-name: 'SS';
+@ss-x: 336px;
+@ss-y: 216px;
+@ss-offset-x: -336px;
+@ss-offset-y: -216px;
+@ss-width: 24px;
+@ss-height: 24px;
+@ss-total-width: 384px;
+@ss-total-height: 384px;
+@ss-image: 'assets/sprites/region-flags.png';
+@ss: 336px 216px -336px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SS';
+@st-name: 'ST';
+@st-x: 336px;
+@st-y: 240px;
+@st-offset-x: -336px;
+@st-offset-y: -240px;
+@st-width: 24px;
+@st-height: 24px;
+@st-total-width: 384px;
+@st-total-height: 384px;
+@st-image: 'assets/sprites/region-flags.png';
+@st: 336px 240px -336px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ST';
+@sv-name: 'SV';
+@sv-x: 336px;
+@sv-y: 264px;
+@sv-offset-x: -336px;
+@sv-offset-y: -264px;
+@sv-width: 24px;
+@sv-height: 24px;
+@sv-total-width: 384px;
+@sv-total-height: 384px;
+@sv-image: 'assets/sprites/region-flags.png';
+@sv: 336px 264px -336px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SV';
+@sx-name: 'SX';
+@sx-x: 336px;
+@sx-y: 288px;
+@sx-offset-x: -336px;
+@sx-offset-y: -288px;
+@sx-width: 24px;
+@sx-height: 24px;
+@sx-total-width: 384px;
+@sx-total-height: 384px;
+@sx-image: 'assets/sprites/region-flags.png';
+@sx: 336px 288px -336px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SX';
+@sy-name: 'SY';
+@sy-x: 336px;
+@sy-y: 312px;
+@sy-offset-x: -336px;
+@sy-offset-y: -312px;
+@sy-width: 24px;
+@sy-height: 24px;
+@sy-total-width: 384px;
+@sy-total-height: 384px;
+@sy-image: 'assets/sprites/region-flags.png';
+@sy: 336px 312px -336px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'SY';
+@sz-name: 'SZ';
+@sz-x: 0px;
+@sz-y: 336px;
+@sz-offset-x: 0px;
+@sz-offset-y: -336px;
+@sz-width: 24px;
+@sz-height: 24px;
+@sz-total-width: 384px;
+@sz-total-height: 384px;
+@sz-image: 'assets/sprites/region-flags.png';
+@sz: 0px 336px 0px -336px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'SZ';
+@tc-name: 'TC';
+@tc-x: 24px;
+@tc-y: 336px;
+@tc-offset-x: -24px;
+@tc-offset-y: -336px;
+@tc-width: 24px;
+@tc-height: 24px;
+@tc-total-width: 384px;
+@tc-total-height: 384px;
+@tc-image: 'assets/sprites/region-flags.png';
+@tc: 24px 336px -24px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TC';
+@td-name: 'TD';
+@td-x: 48px;
+@td-y: 336px;
+@td-offset-x: -48px;
+@td-offset-y: -336px;
+@td-width: 24px;
+@td-height: 24px;
+@td-total-width: 384px;
+@td-total-height: 384px;
+@td-image: 'assets/sprites/region-flags.png';
+@td: 48px 336px -48px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TD';
+@tg-name: 'TG';
+@tg-x: 72px;
+@tg-y: 336px;
+@tg-offset-x: -72px;
+@tg-offset-y: -336px;
+@tg-width: 24px;
+@tg-height: 24px;
+@tg-total-width: 384px;
+@tg-total-height: 384px;
+@tg-image: 'assets/sprites/region-flags.png';
+@tg: 72px 336px -72px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TG';
+@th-name: 'TH';
+@th-x: 96px;
+@th-y: 336px;
+@th-offset-x: -96px;
+@th-offset-y: -336px;
+@th-width: 24px;
+@th-height: 24px;
+@th-total-width: 384px;
+@th-total-height: 384px;
+@th-image: 'assets/sprites/region-flags.png';
+@th: 96px 336px -96px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TH';
+@tj-name: 'TJ';
+@tj-x: 120px;
+@tj-y: 336px;
+@tj-offset-x: -120px;
+@tj-offset-y: -336px;
+@tj-width: 24px;
+@tj-height: 24px;
+@tj-total-width: 384px;
+@tj-total-height: 384px;
+@tj-image: 'assets/sprites/region-flags.png';
+@tj: 120px 336px -120px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TJ';
+@tk-name: 'TK';
+@tk-x: 144px;
+@tk-y: 336px;
+@tk-offset-x: -144px;
+@tk-offset-y: -336px;
+@tk-width: 24px;
+@tk-height: 24px;
+@tk-total-width: 384px;
+@tk-total-height: 384px;
+@tk-image: 'assets/sprites/region-flags.png';
+@tk: 144px 336px -144px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TK';
+@tl-name: 'TL';
+@tl-x: 168px;
+@tl-y: 336px;
+@tl-offset-x: -168px;
+@tl-offset-y: -336px;
+@tl-width: 24px;
+@tl-height: 24px;
+@tl-total-width: 384px;
+@tl-total-height: 384px;
+@tl-image: 'assets/sprites/region-flags.png';
+@tl: 168px 336px -168px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TL';
+@tm-name: 'TM';
+@tm-x: 192px;
+@tm-y: 336px;
+@tm-offset-x: -192px;
+@tm-offset-y: -336px;
+@tm-width: 24px;
+@tm-height: 24px;
+@tm-total-width: 384px;
+@tm-total-height: 384px;
+@tm-image: 'assets/sprites/region-flags.png';
+@tm: 192px 336px -192px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TM';
+@tn-name: 'TN';
+@tn-x: 216px;
+@tn-y: 336px;
+@tn-offset-x: -216px;
+@tn-offset-y: -336px;
+@tn-width: 24px;
+@tn-height: 24px;
+@tn-total-width: 384px;
+@tn-total-height: 384px;
+@tn-image: 'assets/sprites/region-flags.png';
+@tn: 216px 336px -216px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TN';
+@to-name: 'TO';
+@to-x: 240px;
+@to-y: 336px;
+@to-offset-x: -240px;
+@to-offset-y: -336px;
+@to-width: 24px;
+@to-height: 24px;
+@to-total-width: 384px;
+@to-total-height: 384px;
+@to-image: 'assets/sprites/region-flags.png';
+@to: 240px 336px -240px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TO';
+@tr-name: 'TR';
+@tr-x: 264px;
+@tr-y: 336px;
+@tr-offset-x: -264px;
+@tr-offset-y: -336px;
+@tr-width: 24px;
+@tr-height: 24px;
+@tr-total-width: 384px;
+@tr-total-height: 384px;
+@tr-image: 'assets/sprites/region-flags.png';
+@tr: 264px 336px -264px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TR';
+@tt-name: 'TT';
+@tt-x: 288px;
+@tt-y: 336px;
+@tt-offset-x: -288px;
+@tt-offset-y: -336px;
+@tt-width: 24px;
+@tt-height: 24px;
+@tt-total-width: 384px;
+@tt-total-height: 384px;
+@tt-image: 'assets/sprites/region-flags.png';
+@tt: 288px 336px -288px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TT';
+@tv-name: 'TV';
+@tv-x: 312px;
+@tv-y: 336px;
+@tv-offset-x: -312px;
+@tv-offset-y: -336px;
+@tv-width: 24px;
+@tv-height: 24px;
+@tv-total-width: 384px;
+@tv-total-height: 384px;
+@tv-image: 'assets/sprites/region-flags.png';
+@tv: 312px 336px -312px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TV';
+@tw-name: 'TW';
+@tw-x: 336px;
+@tw-y: 336px;
+@tw-offset-x: -336px;
+@tw-offset-y: -336px;
+@tw-width: 24px;
+@tw-height: 24px;
+@tw-total-width: 384px;
+@tw-total-height: 384px;
+@tw-image: 'assets/sprites/region-flags.png';
+@tw: 336px 336px -336px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'TW';
+@tz-name: 'TZ';
+@tz-x: 360px;
+@tz-y: 0px;
+@tz-offset-x: -360px;
+@tz-offset-y: 0px;
+@tz-width: 24px;
+@tz-height: 24px;
+@tz-total-width: 384px;
+@tz-total-height: 384px;
+@tz-image: 'assets/sprites/region-flags.png';
+@tz: 360px 0px -360px 0px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'TZ';
+@ua-name: 'UA';
+@ua-x: 360px;
+@ua-y: 24px;
+@ua-offset-x: -360px;
+@ua-offset-y: -24px;
+@ua-width: 24px;
+@ua-height: 24px;
+@ua-total-width: 384px;
+@ua-total-height: 384px;
+@ua-image: 'assets/sprites/region-flags.png';
+@ua: 360px 24px -360px -24px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'UA';
+@ug-name: 'UG';
+@ug-x: 360px;
+@ug-y: 48px;
+@ug-offset-x: -360px;
+@ug-offset-y: -48px;
+@ug-width: 24px;
+@ug-height: 24px;
+@ug-total-width: 384px;
+@ug-total-height: 384px;
+@ug-image: 'assets/sprites/region-flags.png';
+@ug: 360px 48px -360px -48px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'UG';
+@us-name: 'US';
+@us-x: 360px;
+@us-y: 72px;
+@us-offset-x: -360px;
+@us-offset-y: -72px;
+@us-width: 24px;
+@us-height: 24px;
+@us-total-width: 384px;
+@us-total-height: 384px;
+@us-image: 'assets/sprites/region-flags.png';
+@us: 360px 72px -360px -72px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'US';
+@uy-name: 'UY';
+@uy-x: 360px;
+@uy-y: 96px;
+@uy-offset-x: -360px;
+@uy-offset-y: -96px;
+@uy-width: 24px;
+@uy-height: 24px;
+@uy-total-width: 384px;
+@uy-total-height: 384px;
+@uy-image: 'assets/sprites/region-flags.png';
+@uy: 360px 96px -360px -96px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'UY';
+@uz-name: 'UZ';
+@uz-x: 360px;
+@uz-y: 120px;
+@uz-offset-x: -360px;
+@uz-offset-y: -120px;
+@uz-width: 24px;
+@uz-height: 24px;
+@uz-total-width: 384px;
+@uz-total-height: 384px;
+@uz-image: 'assets/sprites/region-flags.png';
+@uz: 360px 120px -360px -120px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'UZ';
+@va-name: 'VA';
+@va-x: 360px;
+@va-y: 144px;
+@va-offset-x: -360px;
+@va-offset-y: -144px;
+@va-width: 24px;
+@va-height: 24px;
+@va-total-width: 384px;
+@va-total-height: 384px;
+@va-image: 'assets/sprites/region-flags.png';
+@va: 360px 144px -360px -144px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'VA';
+@vc-name: 'VC';
+@vc-x: 360px;
+@vc-y: 168px;
+@vc-offset-x: -360px;
+@vc-offset-y: -168px;
+@vc-width: 24px;
+@vc-height: 24px;
+@vc-total-width: 384px;
+@vc-total-height: 384px;
+@vc-image: 'assets/sprites/region-flags.png';
+@vc: 360px 168px -360px -168px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'VC';
+@ve-name: 'VE';
+@ve-x: 360px;
+@ve-y: 192px;
+@ve-offset-x: -360px;
+@ve-offset-y: -192px;
+@ve-width: 24px;
+@ve-height: 24px;
+@ve-total-width: 384px;
+@ve-total-height: 384px;
+@ve-image: 'assets/sprites/region-flags.png';
+@ve: 360px 192px -360px -192px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'VE';
+@vg-name: 'VG';
+@vg-x: 360px;
+@vg-y: 216px;
+@vg-offset-x: -360px;
+@vg-offset-y: -216px;
+@vg-width: 24px;
+@vg-height: 24px;
+@vg-total-width: 384px;
+@vg-total-height: 384px;
+@vg-image: 'assets/sprites/region-flags.png';
+@vg: 360px 216px -360px -216px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'VG';
+@vi-name: 'VI';
+@vi-x: 360px;
+@vi-y: 240px;
+@vi-offset-x: -360px;
+@vi-offset-y: -240px;
+@vi-width: 24px;
+@vi-height: 24px;
+@vi-total-width: 384px;
+@vi-total-height: 384px;
+@vi-image: 'assets/sprites/region-flags.png';
+@vi: 360px 240px -360px -240px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'VI';
+@vn-name: 'VN';
+@vn-x: 360px;
+@vn-y: 264px;
+@vn-offset-x: -360px;
+@vn-offset-y: -264px;
+@vn-width: 24px;
+@vn-height: 24px;
+@vn-total-width: 384px;
+@vn-total-height: 384px;
+@vn-image: 'assets/sprites/region-flags.png';
+@vn: 360px 264px -360px -264px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'VN';
+@vu-name: 'VU';
+@vu-x: 360px;
+@vu-y: 288px;
+@vu-offset-x: -360px;
+@vu-offset-y: -288px;
+@vu-width: 24px;
+@vu-height: 24px;
+@vu-total-width: 384px;
+@vu-total-height: 384px;
+@vu-image: 'assets/sprites/region-flags.png';
+@vu: 360px 288px -360px -288px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'VU';
+@wf-name: 'WF';
+@wf-x: 360px;
+@wf-y: 312px;
+@wf-offset-x: -360px;
+@wf-offset-y: -312px;
+@wf-width: 24px;
+@wf-height: 24px;
+@wf-total-width: 384px;
+@wf-total-height: 384px;
+@wf-image: 'assets/sprites/region-flags.png';
+@wf: 360px 312px -360px -312px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'WF';
+@ws-name: 'WS';
+@ws-x: 360px;
+@ws-y: 336px;
+@ws-offset-x: -360px;
+@ws-offset-y: -336px;
+@ws-width: 24px;
+@ws-height: 24px;
+@ws-total-width: 384px;
+@ws-total-height: 384px;
+@ws-image: 'assets/sprites/region-flags.png';
+@ws: 360px 336px -360px -336px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'WS';
+@xk-name: 'XK';
+@xk-x: 0px;
+@xk-y: 360px;
+@xk-offset-x: 0px;
+@xk-offset-y: -360px;
+@xk-width: 24px;
+@xk-height: 24px;
+@xk-total-width: 384px;
+@xk-total-height: 384px;
+@xk-image: 'assets/sprites/region-flags.png';
+@xk: 0px 360px 0px -360px 24px 24px 384px 384px 'assets/sprites/region-flags.png'
+  'XK';
+@ye-name: 'YE';
+@ye-x: 24px;
+@ye-y: 360px;
+@ye-offset-x: -24px;
+@ye-offset-y: -360px;
+@ye-width: 24px;
+@ye-height: 24px;
+@ye-total-width: 384px;
+@ye-total-height: 384px;
+@ye-image: 'assets/sprites/region-flags.png';
+@ye: 24px 360px -24px -360px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'YE';
+@yt-name: 'YT';
+@yt-x: 48px;
+@yt-y: 360px;
+@yt-offset-x: -48px;
+@yt-offset-y: -360px;
+@yt-width: 24px;
+@yt-height: 24px;
+@yt-total-width: 384px;
+@yt-total-height: 384px;
+@yt-image: 'assets/sprites/region-flags.png';
+@yt: 48px 360px -48px -360px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'YT';
+@za-name: 'ZA';
+@za-x: 72px;
+@za-y: 360px;
+@za-offset-x: -72px;
+@za-offset-y: -360px;
+@za-width: 24px;
+@za-height: 24px;
+@za-total-width: 384px;
+@za-total-height: 384px;
+@za-image: 'assets/sprites/region-flags.png';
+@za: 72px 360px -72px -360px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ZA';
+@zm-name: 'ZM';
+@zm-x: 96px;
+@zm-y: 360px;
+@zm-offset-x: -96px;
+@zm-offset-y: -360px;
+@zm-width: 24px;
+@zm-height: 24px;
+@zm-total-width: 384px;
+@zm-total-height: 384px;
+@zm-image: 'assets/sprites/region-flags.png';
+@zm: 96px 360px -96px -360px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ZM';
+@zw-name: 'ZW';
+@zw-x: 120px;
+@zw-y: 360px;
+@zw-offset-x: -120px;
+@zw-offset-y: -360px;
+@zw-width: 24px;
+@zw-height: 24px;
+@zw-total-width: 384px;
+@zw-total-height: 384px;
+@zw-image: 'assets/sprites/region-flags.png';
+@zw: 120px 360px -120px -360px 24px 24px 384px 384px
+  'assets/sprites/region-flags.png' 'ZW';
+@spritesheet-width: 384px;
+@spritesheet-height: 384px;
+@spritesheet-image: 'assets/sprites/region-flags.png';
+@spritesheet-sprites: @ad @ae @af @ag @ai @al @am @ao @ar @as @at @au @aw @ax
+  @az @ba @bb @bd @be @bf @bg @bh @bi @bj @bl @bm @bn @bo @bq @br @bs @bt @bv
+  @bw @by @bz @ca @cc @cd @cf @cg @ch @ci @ck @cl @cm @cn @co @cr @cu @cv @cw
+  @cx @cy @cz @de @dj @dk @dm @do @dz @ec @ee @eg @eh @er @es @et @fi @fj @fk
+  @fm @fo @fr @ga @gb @gd @ge @gf @gg @gh @gi @gl @gm @gn @gp @gq @gr @gs @gt
+  @gu @gw @gy @hk @hn @hr @ht @hu @id @ie @il @im @in @io @iq @ir @is @it @je
+  @jm @jo @jp @ke @kg @kh @ki @km @kn @kp @kr @kw @ky @kz @la @lb @lc @li @lk
+  @lr @ls @lt @lu @lv @ly @ma @mc @md @me @mf @mg @mh @mk @ml @mm @mn @mo @mp
+  @mq @mr @ms @mt @mu @mv @mw @mx @my @mz @na @nc @ne @nf @ng @ni @nl @no @np
+  @nr @nu @nz @om @pa @pe @pf @pg @ph @pk @pl @pm @pn @pr @ps @pt @pw @py @qa
+  @re @ro @rs @ru @rw @sa @sb @sc @sd @se @sg @sh @si @sj @sk @sl @sm @sn @so
+  @sr @ss @st @sv @sx @sy @sz @tc @td @tg @th @tj @tk @tl @tm @tn @to @tr @tt
+  @tv @tw @tz @ua @ug @us @uy @uz @va @vc @ve @vg @vi @vn @vu @wf @ws @xk @ye
+  @yt @za @zm @zw;
+@spritesheet: 384px 384px 'assets/sprites/region-flags.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+
+  background-image: e(%('url(%a)', e(@sprite-image)));
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}
+
+.flag-ad {
+  .sprite(@ad);
+}
+
+.flag-ae {
+  .sprite(@ae);
+}
+
+.flag-af {
+  .sprite(@af);
+}
+
+.flag-ag {
+  .sprite(@ag);
+}
+
+.flag-ai {
+  .sprite(@ai);
+}
+
+.flag-al {
+  .sprite(@al);
+}
+
+.flag-am {
+  .sprite(@am);
+}
+
+.flag-ao {
+  .sprite(@ao);
+}
+
+.flag-ar {
+  .sprite(@ar);
+}
+
+.flag-as {
+  .sprite(@as);
+}
+
+.flag-at {
+  .sprite(@at);
+}
+
+.flag-au {
+  .sprite(@au);
+}
+
+.flag-aw {
+  .sprite(@aw);
+}
+
+.flag-ax {
+  .sprite(@ax);
+}
+
+.flag-az {
+  .sprite(@az);
+}
+
+.flag-ba {
+  .sprite(@ba);
+}
+
+.flag-bb {
+  .sprite(@bb);
+}
+
+.flag-bd {
+  .sprite(@bd);
+}
+
+.flag-be {
+  .sprite(@be);
+}
+
+.flag-bf {
+  .sprite(@bf);
+}
+
+.flag-bg {
+  .sprite(@bg);
+}
+
+.flag-bh {
+  .sprite(@bh);
+}
+
+.flag-bi {
+  .sprite(@bi);
+}
+
+.flag-bj {
+  .sprite(@bj);
+}
+
+.flag-bl {
+  .sprite(@bl);
+}
+
+.flag-bm {
+  .sprite(@bm);
+}
+
+.flag-bn {
+  .sprite(@bn);
+}
+
+.flag-bo {
+  .sprite(@bo);
+}
+
+.flag-bq {
+  .sprite(@bq);
+}
+
+.flag-br {
+  .sprite(@br);
+}
+
+.flag-bs {
+  .sprite(@bs);
+}
+
+.flag-bt {
+  .sprite(@bt);
+}
+
+.flag-bv {
+  .sprite(@bv);
+}
+
+.flag-bw {
+  .sprite(@bw);
+}
+
+.flag-by {
+  .sprite(@by);
+}
+
+.flag-bz {
+  .sprite(@bz);
+}
+
+.flag-ca {
+  .sprite(@ca);
+}
+
+.flag-cc {
+  .sprite(@cc);
+}
+
+.flag-cd {
+  .sprite(@cd);
+}
+
+.flag-cf {
+  .sprite(@cf);
+}
+
+.flag-cg {
+  .sprite(@cg);
+}
+
+.flag-ch {
+  .sprite(@ch);
+}
+
+.flag-ci {
+  .sprite(@ci);
+}
+
+.flag-ck {
+  .sprite(@ck);
+}
+
+.flag-cl {
+  .sprite(@cl);
+}
+
+.flag-cm {
+  .sprite(@cm);
+}
+
+.flag-cn {
+  .sprite(@cn);
+}
+
+.flag-co {
+  .sprite(@co);
+}
+
+.flag-cr {
+  .sprite(@cr);
+}
+
+.flag-cu {
+  .sprite(@cu);
+}
+
+.flag-cv {
+  .sprite(@cv);
+}
+
+.flag-cw {
+  .sprite(@cw);
+}
+
+.flag-cx {
+  .sprite(@cx);
+}
+
+.flag-cy {
+  .sprite(@cy);
+}
+
+.flag-cz {
+  .sprite(@cz);
+}
+
+.flag-de {
+  .sprite(@de);
+}
+
+.flag-dj {
+  .sprite(@dj);
+}
+
+.flag-dk {
+  .sprite(@dk);
+}
+
+.flag-dm {
+  .sprite(@dm);
+}
+
+.flag-do {
+  .sprite(@do);
+}
+
+.flag-dz {
+  .sprite(@dz);
+}
+
+.flag-ec {
+  .sprite(@ec);
+}
+
+.flag-ee {
+  .sprite(@ee);
+}
+
+.flag-eg {
+  .sprite(@eg);
+}
+
+.flag-eh {
+  .sprite(@eh);
+}
+
+.flag-er {
+  .sprite(@er);
+}
+
+.flag-es {
+  .sprite(@es);
+}
+
+.flag-et {
+  .sprite(@et);
+}
+
+.flag-fi {
+  .sprite(@fi);
+}
+
+.flag-fj {
+  .sprite(@fj);
+}
+
+.flag-fk {
+  .sprite(@fk);
+}
+
+.flag-fm {
+  .sprite(@fm);
+}
+
+.flag-fo {
+  .sprite(@fo);
+}
+
+.flag-fr {
+  .sprite(@fr);
+}
+
+.flag-ga {
+  .sprite(@ga);
+}
+
+.flag-gb {
+  .sprite(@gb);
+}
+
+.flag-gd {
+  .sprite(@gd);
+}
+
+.flag-ge {
+  .sprite(@ge);
+}
+
+.flag-gf {
+  .sprite(@gf);
+}
+
+.flag-gg {
+  .sprite(@gg);
+}
+
+.flag-gh {
+  .sprite(@gh);
+}
+
+.flag-gi {
+  .sprite(@gi);
+}
+
+.flag-gl {
+  .sprite(@gl);
+}
+
+.flag-gm {
+  .sprite(@gm);
+}
+
+.flag-gn {
+  .sprite(@gn);
+}
+
+.flag-gp {
+  .sprite(@gp);
+}
+
+.flag-gq {
+  .sprite(@gq);
+}
+
+.flag-gr {
+  .sprite(@gr);
+}
+
+.flag-gs {
+  .sprite(@gs);
+}
+
+.flag-gt {
+  .sprite(@gt);
+}
+
+.flag-gu {
+  .sprite(@gu);
+}
+
+.flag-gw {
+  .sprite(@gw);
+}
+
+.flag-gy {
+  .sprite(@gy);
+}
+
+.flag-hk {
+  .sprite(@hk);
+}
+
+.flag-hn {
+  .sprite(@hn);
+}
+
+.flag-hr {
+  .sprite(@hr);
+}
+
+.flag-ht {
+  .sprite(@ht);
+}
+
+.flag-hu {
+  .sprite(@hu);
+}
+
+.flag-id {
+  .sprite(@id);
+}
+
+.flag-ie {
+  .sprite(@ie);
+}
+
+.flag-il {
+  .sprite(@il);
+}
+
+.flag-im {
+  .sprite(@im);
+}
+
+.flag-in {
+  .sprite(@in);
+}
+
+.flag-io {
+  .sprite(@io);
+}
+
+.flag-iq {
+  .sprite(@iq);
+}
+
+.flag-ir {
+  .sprite(@ir);
+}
+
+.flag-is {
+  .sprite(@is);
+}
+
+.flag-it {
+  .sprite(@it);
+}
+
+.flag-je {
+  .sprite(@je);
+}
+
+.flag-jm {
+  .sprite(@jm);
+}
+
+.flag-jo {
+  .sprite(@jo);
+}
+
+.flag-jp {
+  .sprite(@jp);
+}
+
+.flag-ke {
+  .sprite(@ke);
+}
+
+.flag-kg {
+  .sprite(@kg);
+}
+
+.flag-kh {
+  .sprite(@kh);
+}
+
+.flag-ki {
+  .sprite(@ki);
+}
+
+.flag-km {
+  .sprite(@km);
+}
+
+.flag-kn {
+  .sprite(@kn);
+}
+
+.flag-kp {
+  .sprite(@kp);
+}
+
+.flag-kr {
+  .sprite(@kr);
+}
+
+.flag-kw {
+  .sprite(@kw);
+}
+
+.flag-ky {
+  .sprite(@ky);
+}
+
+.flag-kz {
+  .sprite(@kz);
+}
+
+.flag-la {
+  .sprite(@la);
+}
+
+.flag-lb {
+  .sprite(@lb);
+}
+
+.flag-lc {
+  .sprite(@lc);
+}
+
+.flag-li {
+  .sprite(@li);
+}
+
+.flag-lk {
+  .sprite(@lk);
+}
+
+.flag-lr {
+  .sprite(@lr);
+}
+
+.flag-ls {
+  .sprite(@ls);
+}
+
+.flag-lt {
+  .sprite(@lt);
+}
+
+.flag-lu {
+  .sprite(@lu);
+}
+
+.flag-lv {
+  .sprite(@lv);
+}
+
+.flag-ly {
+  .sprite(@ly);
+}
+
+.flag-ma {
+  .sprite(@ma);
+}
+
+.flag-mc {
+  .sprite(@mc);
+}
+
+.flag-md {
+  .sprite(@md);
+}
+
+.flag-me {
+  .sprite(@me);
+}
+
+.flag-mf {
+  .sprite(@mf);
+}
+
+.flag-mg {
+  .sprite(@mg);
+}
+
+.flag-mh {
+  .sprite(@mh);
+}
+
+.flag-mk {
+  .sprite(@mk);
+}
+
+.flag-ml {
+  .sprite(@ml);
+}
+
+.flag-mm {
+  .sprite(@mm);
+}
+
+.flag-mn {
+  .sprite(@mn);
+}
+
+.flag-mo {
+  .sprite(@mo);
+}
+
+.flag-mp {
+  .sprite(@mp);
+}
+
+.flag-mq {
+  .sprite(@mq);
+}
+
+.flag-mr {
+  .sprite(@mr);
+}
+
+.flag-ms {
+  .sprite(@ms);
+}
+
+.flag-mt {
+  .sprite(@mt);
+}
+
+.flag-mu {
+  .sprite(@mu);
+}
+
+.flag-mv {
+  .sprite(@mv);
+}
+
+.flag-mw {
+  .sprite(@mw);
+}
+
+.flag-mx {
+  .sprite(@mx);
+}
+
+.flag-my {
+  .sprite(@my);
+}
+
+.flag-mz {
+  .sprite(@mz);
+}
+
+.flag-na {
+  .sprite(@na);
+}
+
+.flag-nc {
+  .sprite(@nc);
+}
+
+.flag-ne {
+  .sprite(@ne);
+}
+
+.flag-nf {
+  .sprite(@nf);
+}
+
+.flag-ng {
+  .sprite(@ng);
+}
+
+.flag-ni {
+  .sprite(@ni);
+}
+
+.flag-nl {
+  .sprite(@nl);
+}
+
+.flag-no {
+  .sprite(@no);
+}
+
+.flag-np {
+  .sprite(@np);
+}
+
+.flag-nr {
+  .sprite(@nr);
+}
+
+.flag-nu {
+  .sprite(@nu);
+}
+
+.flag-nz {
+  .sprite(@nz);
+}
+
+.flag-om {
+  .sprite(@om);
+}
+
+.flag-pa {
+  .sprite(@pa);
+}
+
+.flag-pe {
+  .sprite(@pe);
+}
+
+.flag-pf {
+  .sprite(@pf);
+}
+
+.flag-pg {
+  .sprite(@pg);
+}
+
+.flag-ph {
+  .sprite(@ph);
+}
+
+.flag-pk {
+  .sprite(@pk);
+}
+
+.flag-pl {
+  .sprite(@pl);
+}
+
+.flag-pm {
+  .sprite(@pm);
+}
+
+.flag-pn {
+  .sprite(@pn);
+}
+
+.flag-pr {
+  .sprite(@pr);
+}
+
+.flag-ps {
+  .sprite(@ps);
+}
+
+.flag-pt {
+  .sprite(@pt);
+}
+
+.flag-pw {
+  .sprite(@pw);
+}
+
+.flag-py {
+  .sprite(@py);
+}
+
+.flag-qa {
+  .sprite(@qa);
+}
+
+.flag-re {
+  .sprite(@re);
+}
+
+.flag-ro {
+  .sprite(@ro);
+}
+
+.flag-rs {
+  .sprite(@rs);
+}
+
+.flag-ru {
+  .sprite(@ru);
+}
+
+.flag-rw {
+  .sprite(@rw);
+}
+
+.flag-sa {
+  .sprite(@sa);
+}
+
+.flag-sb {
+  .sprite(@sb);
+}
+
+.flag-sc {
+  .sprite(@sc);
+}
+
+.flag-sd {
+  .sprite(@sd);
+}
+
+.flag-se {
+  .sprite(@se);
+}
+
+.flag-sg {
+  .sprite(@sg);
+}
+
+.flag-sh {
+  .sprite(@sh);
+}
+
+.flag-si {
+  .sprite(@si);
+}
+
+.flag-sj {
+  .sprite(@sj);
+}
+
+.flag-sk {
+  .sprite(@sk);
+}
+
+.flag-sl {
+  .sprite(@sl);
+}
+
+.flag-sm {
+  .sprite(@sm);
+}
+
+.flag-sn {
+  .sprite(@sn);
+}
+
+.flag-so {
+  .sprite(@so);
+}
+
+.flag-sr {
+  .sprite(@sr);
+}
+
+.flag-ss {
+  .sprite(@ss);
+}
+
+.flag-st {
+  .sprite(@st);
+}
+
+.flag-sv {
+  .sprite(@sv);
+}
+
+.flag-sx {
+  .sprite(@sx);
+}
+
+.flag-sy {
+  .sprite(@sy);
+}
+
+.flag-sz {
+  .sprite(@sz);
+}
+
+.flag-tc {
+  .sprite(@tc);
+}
+
+.flag-td {
+  .sprite(@td);
+}
+
+.flag-tg {
+  .sprite(@tg);
+}
+
+.flag-th {
+  .sprite(@th);
+}
+
+.flag-tj {
+  .sprite(@tj);
+}
+
+.flag-tk {
+  .sprite(@tk);
+}
+
+.flag-tl {
+  .sprite(@tl);
+}
+
+.flag-tm {
+  .sprite(@tm);
+}
+
+.flag-tn {
+  .sprite(@tn);
+}
+
+.flag-to {
+  .sprite(@to);
+}
+
+.flag-tr {
+  .sprite(@tr);
+}
+
+.flag-tt {
+  .sprite(@tt);
+}
+
+.flag-tv {
+  .sprite(@tv);
+}
+
+.flag-tw {
+  .sprite(@tw);
+}
+
+.flag-tz {
+  .sprite(@tz);
+}
+
+.flag-ua {
+  .sprite(@ua);
+}
+
+.flag-ug {
+  .sprite(@ug);
+}
+
+.flag-us {
+  .sprite(@us);
+}
+
+.flag-uy {
+  .sprite(@uy);
+}
+
+.flag-uz {
+  .sprite(@uz);
+}
+
+.flag-va {
+  .sprite(@va);
+}
+
+.flag-vc {
+  .sprite(@vc);
+}
+
+.flag-ve {
+  .sprite(@ve);
+}
+
+.flag-vg {
+  .sprite(@vg);
+}
+
+.flag-vi {
+  .sprite(@vi);
+}
+
+.flag-vn {
+  .sprite(@vn);
+}
+
+.flag-vu {
+  .sprite(@vu);
+}
+
+.flag-wf {
+  .sprite(@wf);
+}
+
+.flag-ws {
+  .sprite(@ws);
+}
+
+.flag-xk {
+  .sprite(@xk);
+}
+
+.flag-ye {
+  .sprite(@ye);
+}
+
+.flag-yt {
+  .sprite(@yt);
+}
+
+.flag-za {
+  .sprite(@za);
+}
+
+.flag-zm {
+  .sprite(@zm);
+}
+
+.flag-zw {
+  .sprite(@zw);
+}
+
+.flag {
+  display: inline-block;
+}
+/* stylelint-enable function-no-unknown */

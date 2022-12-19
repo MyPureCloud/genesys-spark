@@ -22,6 +22,8 @@ export class GuxRegionIcon {
   }
 
   render(): JSX.Element {
-    return (<i class={'flag flag-' + this.region} />) as JSX.Element;
+    return (
+      <i class={'flag flag-' + this.region.toLowerCase()} />
+    ) as JSX.Element;
   }
 }
