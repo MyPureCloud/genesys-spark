@@ -7,10 +7,9 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type     | Default     |
-| ------------ | ------------- | ----------- | -------- | ----------- |
-| `region`     | `region`      |             | `string` | `undefined` |
-| `regionName` | `region-name` |             | `string` | `undefined` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `region` | `region`  |             | `string` | `undefined` |
 
 
 ## Dependencies

@@ -321,12 +321,11 @@ export class GuxPhoneInput {
     );
 
     const selectedRegion = selectedListboxOptionElement?.value;
-    const regionName = this.i18n(selectedRegion);
     const countryCode: string = regionCountryCodeMap[selectedRegion] || '';
 
     return (
       <div class="gux-selected-option">
-        <gux-region-icon region={selectedRegion} regionName={regionName} />
+        <gux-region-icon region={selectedRegion} />
         <span>{`+${countryCode}`}</span>
       </div>
     ) as JSX.Element;
@@ -373,7 +372,7 @@ export class GuxPhoneInput {
         (
           <gux-option value={region.code}>
             <span class="option-content">
-              <gux-region-icon region={region.code} regionName={region.name} />
+              <gux-region-icon region={region.code} />
               <span>{region.name}</span>
               <span class="country-code">{`+${region.countryCode}`}</span>
             </span>

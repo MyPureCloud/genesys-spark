@@ -23,8 +23,9 @@
 
 | Slot      | Description                                |
 | --------- | ------------------------------------------ |
-|           | Required slot for gux-time-picker-beta tag |
+|           | Required slot for gux-phone-input-beta tag |
 | `"error"` | Optional slot for error message            |
+| `"help"`  | Optional slot for help message             |
 | `"label"` | Required slot for label tag                |
 
 
