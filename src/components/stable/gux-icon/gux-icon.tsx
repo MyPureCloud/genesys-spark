@@ -54,14 +54,14 @@ export class GuxIcon {
 
   @Watch('decorative')
   watchDecorative(decorative: boolean): void {
-    validateProps(decorative, this.screenreaderText);
+    this.validateProps(decorative, this.screenreaderText);
 
     this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
   }
 
   @Watch('screenreaderText')
   watchScreenreaderText(screenreaderText: string): void {
-    validateProps(this.decorative, screenreaderText);
+    this.validateProps(this.decorative, screenreaderText);
 
     this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
   }
@@ -73,7 +73,15 @@ export class GuxIcon {
   }
 
   componentDidLoad(): void {
-    validateProps(this.decorative, this.screenreaderText);
+    this.validateProps(this.decorative, this.screenreaderText);
+  }
+
+  private validateProps(decorative: boolean, screenreaderText: string): void {
+    // skip validation if root is not attached to DOM
+    if (!this.root.isConnected) {
+      return;
+    }
+    validateProps(decorative, screenreaderText);
   }
 
   private getSvgWithAriaAttributes(svgText: string): string {
