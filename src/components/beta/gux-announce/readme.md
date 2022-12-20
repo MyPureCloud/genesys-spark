@@ -29,6 +29,19 @@ Type: `Promise<void>`
 |      | element     |
 
 
+## Dependencies
+
+### Used by
+
+ - [gux-column-manager-beta](../gux-column-manager)
+
+### Graph
+```mermaid
+graph TD;
+  gux-column-manager-beta --> gux-announce-beta
+  style gux-announce-beta fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

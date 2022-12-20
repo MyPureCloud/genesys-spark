@@ -56,23 +56,34 @@
 <gux-datepicker start-day-of-week="7"></gux-datepicker>
 
 <h2>Languages</h2>
+<div id="languages-container"></div>
 
-<h3>Polish</h3>
-<gux-datepicker
-  lang="pl"
-  mode="range"
-  value="2019-11-25/2019-12-02"
-  min-date="2019-11-10"
-  max-date="2019-12-31"
-  number-of-months="2"
-></gux-datepicker>
+<style
+  onload="(function () {
+  const languagesContainer = document.getElementById('languages-container');
 
-<h3>Korean</h3>
-<gux-datepicker
-  lang="ko"
-  mode="range"
-  value="2019-11-25/2019-12-02"
-  min-date="2019-11-10"
-  max-date="2019-12-31"
-  number-of-months="2"
-></gux-datepicker>
+  [
+    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+    'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+    'pt-pt', 'ru', 'sv', 'th', 'tr', 'zh-cn', 'zh-tw'
+  ].forEach((lang) => {
+    const html = window.toHTML([
+      '<div class=language lang=' + lang + '>',
+        '<h3>' + lang + '</h3>',
+          '<gux-datepicker value=2022-12-22></gux-datepicker>',
+      '</div>'
+    ].join(''));
+
+    languagesContainer.appendChild(html);
+  });
+})()"
+>
+  #languages-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .language {
+    padding: 10px 25px;
+  }
+</style>

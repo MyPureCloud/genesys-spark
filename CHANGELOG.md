@@ -2,6 +2,110 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.53.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.52.1...v3.53.0) (2022-12-16)
+
+
+### Features
+
+* **column-manager:** added column manager component ([332bcbc](https://github.com/MyPureCloud/genesys-webcomponents/commit/332bcbcf9b073193d692d65a6a963db44d7f4e5f))
+
+
+### Bug Fixes
+
+* **ccessibility:** added some accessibility announcements ([7cb7bfe](https://github.com/MyPureCloud/genesys-webcomponents/commit/7cb7bfe446e4fd382bdb7a6838256fe771a4d747))
+* **pr-comment:** addressed PR comments ([7bc9711](https://github.com/MyPureCloud/genesys-webcomponents/commit/7bc97112072c1c98872dbb43e1c129b5eda8fc88))
+* **pr-comments:** addressed PR comments ([5a374c3](https://github.com/MyPureCloud/genesys-webcomponents/commit/5a374c36fa4e0686f7b9f6a7a6037f63c307914e))
+
+### [3.52.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.52.0...v3.52.1) (2022-12-15)
+
+
+### Bug Fixes
+
+* **dropdown:** fixed style of filter text ([357f2df](https://github.com/MyPureCloud/genesys-webcomponents/commit/357f2dfda8335055341984c01500aa63eba06ba7))
+
+## [3.52.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.51.0...v3.52.0) (2022-12-15)
+
+
+### Features
+
+* **time-picker:** added new step property ([89c3389](https://github.com/MyPureCloud/genesys-webcomponents/commit/89c33894411c9be3b5efab00cec2c47f6b8a09f5))
+
+
+### Bug Fixes
+
+* **advanced-tabs:** fixed safari dropdown-option click bug ([5016c45](https://github.com/MyPureCloud/genesys-webcomponents/commit/5016c45171a1dda67ead259ad3b58694a9742fbb))
+
+## [3.51.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.50.0...v3.51.0) (2022-12-15)
+
+
+### Features
+
+* **context-menu:** add new webcomponent ([319205a](https://github.com/MyPureCloud/genesys-webcomponents/commit/319205a6048008baf76d2b9100199c0a8c9473b0))
+
+## [3.50.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.49.0...v3.50.0) (2022-12-14)
+
+
+### Features
+
+* **inline-alert:** allow text to wrap instead of truncating ([dcc68ba](https://github.com/MyPureCloud/genesys-webcomponents/commit/dcc68baa440e0133fbcf4ebdd049b6345d43bd7b))
+
+
+### Bug Fixes
+
+* **gux-datepicker:** vertically center calendar button ([01601ec](https://github.com/MyPureCloud/genesys-webcomponents/commit/01601ecf85b6668d7e20644eb3fb5a25fa06883c))
+* **gux-time-picker:** vertically center clock button ([7b52599](https://github.com/MyPureCloud/genesys-webcomponents/commit/7b52599c5b88e17ae5220f4dd89fd4c32f5b7f16))
+
+## [3.49.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.3...v3.49.0) (2022-12-13)
+
+
+### Features
+
+* **styles:** export focus style classes ([d6e0eb2](https://github.com/MyPureCloud/genesys-webcomponents/commit/d6e0eb2dfcb2712f281eca3b8a924b7a2767d1db))
+
+### [3.48.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.2...v3.48.3) (2022-12-13)
+
+
+### Bug Fixes
+
+* **datepicker:** fixed pt-pt start of week day ([cdc3fa6](https://github.com/MyPureCloud/genesys-webcomponents/commit/cdc3fa6a561f85c616dc0d15f8ef7ec8a835d08d))
+
+### [3.48.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.1...v3.48.2) (2022-12-12)
+
+
+### Bug Fixes
+
+* **gux-form-field-error:** adjust line height and margin to match design for error message and icon ([b79542c](https://github.com/MyPureCloud/genesys-webcomponents/commit/b79542cb673d58a84996858537283d14651ef37c))
+* **gux-form-field-error:** use spacing variables, stop icon shrinking, update font size to 12px ([ee5cef9](https://github.com/MyPureCloud/genesys-webcomponents/commit/ee5cef97cbe744113aaa2c5f6693ef1cbe86011f))
+
+### [3.48.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.48.0...v3.48.1) (2022-12-09)
+
+
+### Bug Fixes
+
+* **truncate:** enabled pointer events ([f7a6511](https://github.com/MyPureCloud/genesys-webcomponents/commit/f7a65110f5ec24ec201d57fda0236f98f2685969))
+
+## [3.48.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.47.0...v3.48.0) (2022-12-08)
+
+
+### Features
+
+* **gux-tag:** support additional colors for tag component ([2fd9718](https://github.com/MyPureCloud/genesys-webcomponents/commit/2fd971857df03a68500866be5eb572a4395a87c0))
+
+## [3.47.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.4...v3.47.0) (2022-12-07)
+
+
+### Features
+
+* **gux-toggle:** show cursor pointer when hovering toggle component ([2f77e27](https://github.com/MyPureCloud/genesys-webcomponents/commit/2f77e27709916261aed63b949727b2b391e7912a))
+
+### [3.46.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.3...v3.46.4) (2022-12-07)
+
+
+### Bug Fixes
+
+* **calendar:** fixed month and year localisation ([5b0bfe9](https://github.com/MyPureCloud/genesys-webcomponents/commit/5b0bfe9c1eec573c861975d2f40f83a6668b5686))
+* **pr-comment:** addressed PR comment ([ae10944](https://github.com/MyPureCloud/genesys-webcomponents/commit/ae1094467034ab0e27d06d3c516075659f2007f9))
+
 ### [3.46.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.46.2...v3.46.3) (2022-12-06)
 
 

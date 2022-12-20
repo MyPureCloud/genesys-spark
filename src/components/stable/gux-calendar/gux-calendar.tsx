@@ -26,7 +26,12 @@ import { trackComponent } from '../../../usage-tracking';
 import { CalendarModes } from '../../../common-enums';
 import { getDesiredLocale, getStartOfWeek } from '../../../i18n';
 
-import { firstDateInMonth, getWeekdays } from './gux-calendar.service';
+import {
+  firstDateInMonth,
+  getWeekdays,
+  getOffsetMonthDate,
+  getDateMonthAndYearString
+} from './gux-calendar.service';
 import {
   GuxCalendarDayOfWeek,
   GuxCalendarMode,
@@ -154,21 +159,6 @@ export class GuxCalendar {
   async setValueAndEmit(value: Date | [Date, Date]) {
     await this.setValue(value);
     this.emitInput();
-  }
-
-  getMonthLabel(index: number) {
-    const month = new Date(this.previewValue.getTime());
-    month.setDate(1);
-    month.setMonth(month.getMonth() + index);
-    const monthName = month.toLocaleString(this.locale, { month: 'long' });
-    return monthName.charAt(0).toUpperCase() + monthName.slice(1);
-  }
-
-  getYearLabel(index: number) {
-    const month = new Date(this.previewValue.getTime());
-    month.setMonth(month.getMonth() + index);
-    const year = month.getFullYear();
-    return year;
   }
 
   outOfBounds(date: Date): boolean {
@@ -455,14 +445,14 @@ export class GuxCalendar {
   renderMonthHeader() {
     return (
       <div class="gux-month-list">
-        {Array.from(Array(this.numberOfMonths).keys()).map(
-          index =>
-            (
-              <label>
-                {this.getMonthLabel(index)} {this.getYearLabel(index)}
-              </label>
-            ) as JSX.Element
-        )}
+        {Array.from(Array(this.numberOfMonths).keys()).map(index => {
+          const offsetMonthDate = getOffsetMonthDate(this.previewValue, index);
+          return (
+            <label>
+              {getDateMonthAndYearString(offsetMonthDate, this.locale)}
+            </label>
+          ) as JSX.Element;
+        })}
       </div>
     ) as JSX.Element;
   }
@@ -494,7 +484,7 @@ export class GuxCalendar {
                       >
                         {day.date.getDate()}
                         <span class="gux-sr-only">
-                          {this.getMonthLabel(index)} {day.date.getFullYear()}
+                          {getDateMonthAndYearString(day.date, this.locale)}
                         </span>
                       </td>
                     ) as JSX.Element

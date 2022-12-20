@@ -16,8 +16,9 @@ import {
 
 import {
   GuxClockType,
+  GuxISOHourMinute,
   GuxMinuteInterval,
-  GuxISOHourMinute
+  GuxMinuteStep
 } from '../gux-time-picker.type';
 
 describe('gux-time-picker.service', () => {
@@ -402,26 +403,64 @@ describe('gux-time-picker.service', () => {
 
   describe('#incrementMinute', () => {
     [
-      { input: '00:00', delta: 1, expectedOutput: '00:01' },
-      { input: '00:00', delta: -1, expectedOutput: '00:59' },
-      { input: '00:59', delta: 1, expectedOutput: '00:00' },
-      { input: '00:59', delta: -1, expectedOutput: '00:58' },
-      { input: '23:00', delta: 1, expectedOutput: '23:01' },
-      { input: '23:00', delta: -1, expectedOutput: '23:59' },
-      { input: '23:59', delta: 1, expectedOutput: '23:00' },
-      { input: '23:59', delta: -1, expectedOutput: '23:58' }
+      { input: '00:00', delta: 1, step: 1, expectedOutput: '00:01' },
+      { input: '00:00', delta: -1, step: 1, expectedOutput: '00:59' },
+      { input: '00:00', delta: 1, step: 5, expectedOutput: '00:05' },
+      { input: '00:00', delta: -1, step: 5, expectedOutput: '00:55' },
+      { input: '00:00', delta: 1, step: 10, expectedOutput: '00:10' },
+      { input: '00:00', delta: -1, step: 10, expectedOutput: '00:50' },
+      { input: '00:00', delta: 1, step: 15, expectedOutput: '00:15' },
+      { input: '00:00', delta: -1, step: 15, expectedOutput: '00:45' },
+      { input: '00:00', delta: 1, step: 20, expectedOutput: '00:20' },
+      { input: '00:00', delta: -1, step: 20, expectedOutput: '00:40' },
+      { input: '00:00', delta: 1, step: 30, expectedOutput: '00:30' },
+      { input: '00:00', delta: -1, step: 30, expectedOutput: '00:30' },
+      { input: '00:00', delta: 1, step: 60, expectedOutput: '00:00' },
+      { input: '00:00', delta: -1, step: 60, expectedOutput: '00:00' },
+
+      { input: '00:59', delta: 1, step: 1, expectedOutput: '00:00' },
+      { input: '00:59', delta: -1, step: 1, expectedOutput: '00:58' },
+      { input: '00:59', delta: 1, step: 5, expectedOutput: '00:00' },
+      { input: '00:59', delta: -1, step: 5, expectedOutput: '00:55' },
+      { input: '00:59', delta: 1, step: 10, expectedOutput: '00:00' },
+      { input: '00:59', delta: -1, step: 10, expectedOutput: '00:50' },
+      { input: '00:59', delta: 1, step: 15, expectedOutput: '00:00' },
+      { input: '00:59', delta: -1, step: 15, expectedOutput: '00:45' },
+      { input: '00:59', delta: 1, step: 20, expectedOutput: '00:00' },
+      { input: '00:59', delta: -1, step: 20, expectedOutput: '00:40' },
+      { input: '00:59', delta: 1, step: 30, expectedOutput: '00:00' },
+      { input: '00:59', delta: -1, step: 30, expectedOutput: '00:30' },
+      { input: '00:59', delta: 1, step: 60, expectedOutput: '00:00' },
+      { input: '00:59', delta: -1, step: 60, expectedOutput: '00:00' },
+
+      { input: '00:01', delta: 1, step: 1, expectedOutput: '00:02' },
+      { input: '00:01', delta: -1, step: 1, expectedOutput: '00:00' },
+      { input: '00:01', delta: 1, step: 5, expectedOutput: '00:05' },
+      { input: '00:01', delta: -1, step: 5, expectedOutput: '00:00' },
+      { input: '00:01', delta: 1, step: 10, expectedOutput: '00:10' },
+      { input: '00:01', delta: -1, step: 10, expectedOutput: '00:00' },
+      { input: '00:01', delta: 1, step: 15, expectedOutput: '00:15' },
+      { input: '00:01', delta: -1, step: 15, expectedOutput: '00:00' },
+      { input: '00:01', delta: 1, step: 20, expectedOutput: '00:20' },
+      { input: '00:01', delta: -1, step: 20, expectedOutput: '00:00' },
+      { input: '00:01', delta: 1, step: 30, expectedOutput: '00:30' },
+      { input: '00:01', delta: -1, step: 30, expectedOutput: '00:00' },
+      { input: '00:01', delta: 1, step: 60, expectedOutput: '00:00' },
+      { input: '00:01', delta: -1, step: 60, expectedOutput: '00:00' }
     ].forEach(
       ({
         input,
         delta,
+        step,
         expectedOutput
       }: {
         input: GuxISOHourMinute;
         delta: 1 | -1;
+        step: GuxMinuteStep;
         expectedOutput: GuxISOHourMinute;
       }) => {
-        it(`should work as expected for "${input}" and delta "${delta}"`, async () => {
-          expect(incrementMinute(input, delta)).toBe(expectedOutput);
+        it(`should work as expected for "${input}", step "${step}" and delta "${delta}"`, async () => {
+          expect(incrementMinute(input, delta, step)).toBe(expectedOutput);
         });
       }
     );

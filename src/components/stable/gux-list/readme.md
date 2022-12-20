@@ -58,6 +58,16 @@ Type: `Promise<void>`
 
 
 
+### `guxFocusLastItem() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 
 ## Dependencies
 
@@ -65,6 +75,7 @@ Type: `Promise<void>`
 
  - [gux-action-button](../gux-action-button)
  - [gux-button-multi](../gux-button-multi)
+ - [gux-context-menu-beta](../../beta/gux-context-menu)
  - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
 
@@ -73,6 +84,7 @@ Type: `Promise<void>`
 graph TD;
   gux-action-button --> gux-list
   gux-button-multi --> gux-list
+  gux-context-menu-beta --> gux-list
   gux-table-toolbar-menu-button --> gux-list
   gux-time-picker-beta --> gux-list
   style gux-list fill:#f9f,stroke:#333,stroke-width:4px

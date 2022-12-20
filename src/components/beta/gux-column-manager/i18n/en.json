@@ -1,0 +1,8 @@
+{
+  "search": "Search column",
+  "selectedColumnCount": "{count}/{total} Columns Selected",
+  "selectAllColumnsScreenReader": "{count} of {total} columns selected: check checkbox to select all {total} columns",
+  "unselectAllColumnsScreenReader": "{count} of {total} columns selected: uncheck checkbox to unselect all {total} columns",
+  "movePositionPrompt": "Press space or enter to move the {columnName} column to position {newPositionNumber} from position {oldPositionNumber}.",
+  "reorderingModeActive": "Reordering mode active. Reposition the {columnName} column using the up arrow key, the down arrow key, the home key and the end key. Press Escape to deactivate reordering mode."
+}

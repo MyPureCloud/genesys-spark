@@ -24,14 +24,11 @@
 ### Depends on
 
 - [gux-icon](../../stable/gux-icon)
-- [gux-tooltip-title](../../stable/gux-tooltip-title)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-inline-alert-beta --> gux-icon
-  gux-inline-alert-beta --> gux-tooltip-title
-  gux-tooltip-title --> gux-tooltip
   style gux-inline-alert-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

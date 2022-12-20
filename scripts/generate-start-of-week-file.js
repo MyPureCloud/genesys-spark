@@ -13,6 +13,7 @@ const startOfWeek = locals.reduce((acc, cv) => {
 
 // manual override
 // https://inindca.atlassian.net/browse/COMUI-447?focusedCommentId=1191073
+startOfWeek['pt-pt'] = 0;
 startOfWeek['zh-cn'] = 1;
 
 const stringData = `${JSON.stringify(startOfWeek, null, 2)}\n`;

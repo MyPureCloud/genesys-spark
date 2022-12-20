@@ -1,0 +1,59 @@
+<h1>Focus Styling</h1>
+
+<div>
+  Spark Components and anchor tag elements by default use an accessible focus
+  indicator style. Use the <strong>gux-focus-ring-focused</strong> and
+  <strong>gux-focus-ring-focused-within</strong> classes to add Spark accessible
+  focus indicator styles to elements that are not part of the Spark Component
+  Library.
+</div>
+
+<h2>gux-focus-ring-focused</h2>
+<div>
+  Add the `gux-focus-ring-focused` class to a focusable element to add the Spark
+  focus ring
+</div>
+<div class="example">
+  <button class="gux-focus-ring-focused">Button</button>
+</div>
+<div class="example">
+  <button style="border-radius: 2px" class="gux-focus-ring-focused">
+    Border Radius
+  </button>
+</div>
+<div class="example">
+  <input aria-label="gux-focus example" class="gux-focus-ring-focused" />
+</div>
+
+<h2>gux-focus-ring-focused-within</h2>
+<div>
+  In some cases, the focus indicator might need to be shown on a parent of a
+  focusable element. Use the `gux-focus-ring-focused-within` class on the
+  element that you want to show the focus indicator around.
+</div>
+
+<div class="example">
+  <div class="gux-focus-ring-focused-within focus-within-example">
+    <label for="search">Search</label>
+    <input id="search" type="text" class="input-example" />
+  </div>
+</div>
+
+<style>
+  .example {
+    margin: 20px;
+  }
+
+  .focus-within-example {
+    display: inline;
+    width: 100%;
+    padding: 5px;
+    border: 2px solid gray;
+    border-radius: 3px;
+  }
+
+  .input-example {
+    border: none;
+    outline: none;
+  }
+</style>
