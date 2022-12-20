@@ -40,7 +40,10 @@ spriteSmith.run({ src }, function (err, results) {
       ...results.properties
     };
 
-    const styleSheet = templater(
+    let styleSheet = `/* stylelint-disable function-no-unknown */
+`;
+
+    styleSheet += templater(
       {
         sprites,
         spritesheet
@@ -53,22 +56,22 @@ spriteSmith.run({ src }, function (err, results) {
       }
     );
 
-    fs.writeFileSync(styleSheetPath, styleSheet);
-
-    let compiledStyle = '';
     for (let sprite of sprites) {
-      compiledStyle += `
+      styleSheet += `
 .flag-${sprite.name.toLowerCase()} {
   .sprite(@${sprite.name.toLowerCase()})
 }
-      `;
+`;
     }
 
-    compiledStyle += `
+    styleSheet += `
 .flag {
   display: inline-block;
 }
-    `;
-    fs.appendFileSync(styleSheetPath, compiledStyle);
+
+/* stylelint-enable function-no-unknown */
+`;
+
+    fs.writeFileSync(styleSheetPath, styleSheet);
   }
 });
