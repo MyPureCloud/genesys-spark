@@ -35,8 +35,9 @@ spriteSmith.run({ src }, function (err, results) {
       })
     );
 
+    // path to image file needs to be set in the inline style of the icon instead of here due to asset path issues
     const spritesheet = {
-      image: 'assets/sprites/region-flags.png',
+      image: '',
       ...results.properties
     };
 

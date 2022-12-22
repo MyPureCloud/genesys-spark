@@ -4,10 +4,7 @@ import { trackComponent } from '../../../../../usage-tracking';
 @Component({
   tag: 'gux-region-icon',
   assetsDirs: ['assets'],
-  styleUrls: [
-    getAssetPath('assets/sprites/region-flags.less'),
-    'gux-region-icon.less'
-  ],
+  styleUrls: ['assets/sprites/region-flags.less'],
   shadow: true
 })
 export class GuxRegionIcon {
@@ -22,8 +19,12 @@ export class GuxRegionIcon {
   }
 
   render(): JSX.Element {
+    const regionFlagImgPath = getAssetPath('assets/sprites/region-flags.png');
     return (
-      <i class={'flag flag-' + this.region.toLowerCase()} />
+      <i
+        class={'flag flag-' + this.region?.toLowerCase()}
+        style={{ backgroundImage: `url(${regionFlagImgPath})` }}
+      />
     ) as JSX.Element;
   }
 }
