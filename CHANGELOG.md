@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.53.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.53.1...v3.53.2) (2023-01-03)
+
+
+### Bug Fixes
+
+* **gux-icon:** only validate screenreader-text if attached to a document ([a543256](https://github.com/MyPureCloud/genesys-webcomponents/commit/a543256096c5d62c8e24c364e88b974ac3bfe852))
+
 ### [3.53.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.53.0...v3.53.1) (2023-01-03)
 
 
