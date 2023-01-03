@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.53.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.53.2...v3.53.3) (2023-01-03)
+
+
+### Bug Fixes
+
+* check MutationObservers before calling disconnect ([c5448ed](https://github.com/MyPureCloud/genesys-webcomponents/commit/c5448ed14266e9827c97e0db707c54313c83480e))
+
 ### [3.53.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.53.1...v3.53.2) (2023-01-03)
 
 
