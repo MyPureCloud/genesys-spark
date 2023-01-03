@@ -119,7 +119,9 @@ export class GuxTableSelectPopover {
 
   disconnectedCallback(): void {
     this.destroyPopper();
-    this.hiddenObserver.disconnect();
+    if (this.hiddenObserver) {
+      this.hiddenObserver.disconnect();
+    }
   }
 
   render(): JSX.Element {

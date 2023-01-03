@@ -117,7 +117,9 @@ export class GuxInputRange {
   }
 
   disconnectedCallback(): void {
-    this.disabledObserver.disconnect();
+    if (this.disabledObserver) {
+      this.disabledObserver.disconnect();
+    }
     clearInterval(this.valueWatcherId);
   }
 
