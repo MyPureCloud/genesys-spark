@@ -21,7 +21,7 @@ export class GuxRegionIcon {
   render(): JSX.Element {
     const regionFlagImgPath = getAssetPath('assets/sprites/region-flags.png');
     return (
-      <i
+      <span
         class={'flag flag-' + this.region?.toLowerCase()}
         style={{ backgroundImage: `url(${regionFlagImgPath})` }}
       />
