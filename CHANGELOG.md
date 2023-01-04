@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.53.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.53.3...v3.53.4) (2023-01-04)
+
+
+### Bug Fixes
+
+* **tabs-advanced:** fix issue where "enter" key does not open dropdown ([b9b04db](https://github.com/MyPureCloud/genesys-webcomponents/commit/b9b04db087f194d55ab4027e1fa771ede999afb5))
+
 ### [3.53.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.53.2...v3.53.3) (2023-01-03)
 
 
