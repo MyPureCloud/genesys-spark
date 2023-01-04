@@ -24,6 +24,7 @@ import translationResources from './i18n/en.json';
 
 import { getSearchOption } from '../../stable/gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../../stable/gux-dropdown/gux-dropdown.types';
+import { OnMutation } from '@utils/decorator/on-mutation';
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children
  */
@@ -101,6 +102,16 @@ export class GuxDropdownMulti {
   @Event()
   private guxfilter: EventEmitter<string>;
 
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    if (this.listboxElement) {
+      return;
+    }
+
+    this.listboxElement = this.root?.querySelector('gux-listbox-multi');
+    this.applyListboxEventListeners();
+  }
+
   /**
    * Listens for expanded event emitted by gux-popup.
    */
@@ -137,22 +148,8 @@ export class GuxDropdownMulti {
   }
 
   @Watch('value')
-  validateValue(newValue: string) {
-    if (newValue === undefined) {
-      if (this.listboxElement) {
-        this.listboxElement.value = newValue;
-      }
-      return;
-    }
-
-    const selectedListboxOptionElement = this.getOptionElementByValue(newValue);
-
-    if (selectedListboxOptionElement) {
-      this.listboxElement.value = newValue;
-      return;
-    }
-
-    this.value = undefined;
+  watchValue(newValue: string) {
+    this.validateValue(newValue, this.listboxElement);
   }
 
   @Watch('textInput')
@@ -223,7 +220,7 @@ export class GuxDropdownMulti {
     if (this.listboxElement) {
       this.listboxElement.value = undefined;
     }
-    this.validateValue(this.value);
+    this.validateValue(this.value, this.listboxElement);
     this.fieldButtonElement.focus();
   }
 
@@ -262,9 +259,11 @@ export class GuxDropdownMulti {
   }
 
   connectedCallback(): void {
-    this.listboxElement = this.root.querySelector('gux-listbox-multi');
-    this.hasCreate = !!this.root.querySelector('gux-create-option');
-    this.validateValue(this.value);
+    this.listboxElement = this.root?.querySelector('gux-listbox-multi');
+    if (this.listboxElement) {
+      this.validateValue(this.value, this.listboxElement);
+      this.hasCreate = !!this.root.querySelector('gux-create-option');
+    }
   }
 
   async componentWillLoad(): Promise<void> {
@@ -277,25 +276,51 @@ export class GuxDropdownMulti {
   }
 
   componentDidLoad(): void {
-    this.listboxElement.addEventListener('input', (event: InputEvent) => {
-      event.stopPropagation();
-
-      this.updateValue((event.target as HTMLGuxListboxMultiElement).value);
-    });
-    this.listboxElement.addEventListener('change', (event: InputEvent) => {
-      event.stopPropagation();
-    });
+    this.applyListboxEventListeners();
   }
 
   componentWillRender(): void {
-    this.validateValue(this.value);
-    this.listboxElement.loading = this.loading;
-    this.listboxElement.filterType = this.filterType;
-    this.listboxElement.textInput = this.textInput;
+    if (this.listboxElement) {
+      this.validateValue(this.value, this.listboxElement);
+      this.listboxElement.loading = this.loading;
+      this.listboxElement.filterType = this.filterType;
+      this.listboxElement.textInput = this.textInput;
+    }
+  }
+
+  private validateValue(
+    newValue: string,
+    listboxElement: HTMLGuxListboxElement
+  ): void {
+    if (newValue === undefined) {
+      if (listboxElement) {
+        listboxElement.value = newValue;
+      }
+      return;
+    }
+
+    const selectedListboxOptionElement = this.getOptionElementByValue(newValue);
+
+    if (selectedListboxOptionElement) {
+      listboxElement.value = newValue;
+      return;
+    }
+
+    this.value = undefined;
   }
 
   private hasTextInput(): boolean {
     return this.isFilterable() || this.hasCreate;
+  }
+
+  private applyListboxEventListeners(): void {
+    this.listboxElement?.addEventListener('input', (event: InputEvent) => {
+      event.stopPropagation();
+      this.updateValue((event.target as HTMLGuxListboxMultiElement).value);
+    });
+    this.listboxElement?.addEventListener('change', (event: InputEvent) => {
+      event.stopPropagation();
+    });
   }
 
   private isFilterable(): boolean {
