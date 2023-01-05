@@ -66,7 +66,7 @@ export class GuxFormFieldPhone {
   private disabled: boolean;
 
   @State()
-  private required: boolean;
+  private required: boolean = false;
 
   @State()
   private hasError: boolean = false;
