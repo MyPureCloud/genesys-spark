@@ -1,4 +1,5 @@
 @import (reference) '../../../../style/color.less';
+@import (reference) '../../../../style/spacing.less';
 
 @gux-off-tab-fill: @gux-grey-40;
 
@@ -14,11 +15,11 @@ gux-tab-advanced {
     .gux-tab-button {
       border-right: 1px solid @gux-grey-50;
     }
+  }
 
+  &:not(:last-child) .gux-dropdown-options {
     .gux-tab-options-button {
-      gux-icon {
-        border-right: 1px solid @gux-grey-50;
-      }
+      border-right: 1px solid @gux-grey-50;
     }
   }
 
@@ -73,7 +74,7 @@ gux-tab-advanced {
       align-items: center;
       justify-content: center;
       width: 35px;
-      height: 100%;
+      height: 30px;
       padding: 0;
       cursor: pointer;
       background-color: @gux-grey-90;
@@ -92,9 +93,9 @@ gux-tab-advanced {
 
       gux-icon {
         width: 16px;
-        height: 30px;
-        padding-right: 10px;
-        padding-left: 8px;
+        height: 16px;
+        padding-right: @gux-spacing-medium;
+        padding-left: @gux-spacing-xs;
         transition: color 0.25s;
       }
     }
@@ -147,7 +148,6 @@ gux-tab-advanced {
     }
 
     gux-tooltip-title {
-      padding-top: 2px;
       font-size: 14px;
       white-space: nowrap;
     }
