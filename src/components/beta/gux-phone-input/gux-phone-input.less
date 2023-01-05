@@ -1,0 +1,152 @@
+@import (reference) '../../../style/color-palette.less';
+@import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/variables.less';
+
+:host {
+  display: block;
+  color: @gux-black-50;
+}
+
+.phone-input {
+  flex: 1 1 auto;
+  align-self: auto;
+  order: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  color: @gux-black-50;
+  text-overflow: ellipsis;
+  background-color: @gux-grey-90;
+  border: none;
+  outline: none;
+}
+
+.target-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 32px;
+  padding: @spacing-2xs @spacing-xs @spacing-2xs 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6667;
+  color: @gux-black-50;
+  background-color: @gux-grey-90;
+  background-image: none;
+  border: 1px solid @gux-black-100;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
+
+  &.gux-error {
+    border-color: @gux-alert;
+  }
+
+  &:focus-within {
+    .focus-ring();
+  }
+}
+
+.region-select {
+  min-width: 100px;
+  margin-right: 5px;
+}
+
+.gux-field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  padding: 6px 8px 6px 16px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6667;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.gux-field {
+  .gux-field-content {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 0;
+    height: 100%;
+
+    .gux-selected-option {
+      display: grid;
+      flex: 1 1 auto;
+      grid-template-columns: 1fr 2fr;
+      align-self: auto;
+      order: 0;
+      overflow: hidden;
+
+      gux-region-icon {
+        position: relative;
+        top: -3px;
+      }
+
+      span {
+        margin-left: 5px;
+        text-align: right;
+      }
+    }
+
+    .gux-placeholder {
+      color: @gux-black-90;
+    }
+  }
+
+  .gux-expand-icon {
+    flex: 0 0 auto;
+    align-self: auto;
+    order: 0;
+    width: 16px;
+    height: 16px;
+    padding-left: @spacing-xs;
+    color: @gux-black-90;
+  }
+}
+
+.gux-field-button {
+  background-color: #f6f7f9;
+  border: none;
+  outline: inherit;
+
+  &:focus {
+    .focus-ring();
+  }
+}
+
+.gux-listbox-container {
+  box-sizing: border-box;
+  width: 368px;
+  margin: 0;
+  color: @gux-black-50;
+}
+
+.option-content {
+  display: grid;
+  grid-template-columns: 36px 1fr 40px;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+
+  .country-code {
+    text-align: right;
+  }
+}

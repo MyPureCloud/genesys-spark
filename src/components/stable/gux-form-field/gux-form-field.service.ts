@@ -39,6 +39,7 @@ export function validateFormIds(
     | HTMLGuxListboxElement
     | HTMLGuxListboxMultiElement
     | HTMLGuxTimePickerBetaElement
+    | HTMLGuxPhoneInputBetaElement
 ): void {
   if (hasLabelSlot(root)) {
     const label: HTMLLabelElement = root.querySelector('label[slot="label"]');

@@ -90,6 +90,7 @@ export class GuxTabAdvanced {
       case 'ArrowDown':
       case 'Enter':
         if (eventIsFrom('.gux-tab-options-button', event)) {
+          event.preventDefault();
           this.popoverHidden = false;
           this.focusFirstItemInPopupList();
         }
