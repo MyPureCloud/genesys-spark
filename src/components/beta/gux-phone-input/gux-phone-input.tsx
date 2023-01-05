@@ -58,7 +58,7 @@ export class GuxPhoneInput {
   disabled: boolean = false;
 
   @Prop()
-  required: boolean;
+  required: boolean = false;
 
   // ISO 3166-1 alpha-2 code
   @State()
