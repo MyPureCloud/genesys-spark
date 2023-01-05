@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.54.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.53.4...v3.54.0) (2023-01-05)
+
+
+### Features
+
+* **phone-input:** adding beginnings of phone input ([603515f](https://github.com/MyPureCloud/genesys-webcomponents/commit/603515fab5f51b669704b1792fcf8b43b51328f6))
+
+
+### Bug Fixes
+
+* **phone-input:** reverting accidental change ([5683275](https://github.com/MyPureCloud/genesys-webcomponents/commit/5683275b8e53c3b1532e1ccde6fb87f5279f636a))
+
 ### [3.53.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.53.3...v3.53.4) (2023-01-04)
 
 
