@@ -22,7 +22,8 @@ export function onDisabledChange(
     | HTMLSelectElement
     | HTMLTextAreaElement
     | HTMLGuxDropdownElement
-    | HTMLGuxTimePickerBetaElement,
+    | HTMLGuxTimePickerBetaElement
+    | HTMLGuxPhoneInputBetaElement,
   callback: (disabled: boolean) => void
 ): MutationObserver {
   const observer = new MutationObserver(mutations => {
@@ -44,7 +45,8 @@ export function onRequiredChange(
     | HTMLSelectElement
     | HTMLTextAreaElement
     | HTMLGuxDropdownElement
-    | HTMLGuxTimePickerBetaElement,
+    | HTMLGuxTimePickerBetaElement
+    | HTMLGuxPhoneInputBetaElement,
   callback: (disabled: boolean) => void
 ): MutationObserver {
   const observer = new MutationObserver(mutations => {

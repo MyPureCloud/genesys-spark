@@ -45,6 +45,7 @@
  - [gux-form-field-dropdown](../gux-form-field/components/gux-form-field-dropdown)
  - [gux-form-field-input-clear-button](../gux-form-field/helper-components/gux-form-field-input-clear-button)
  - [gux-form-field-number](../gux-form-field/components/gux-form-field-number)
+ - [gux-form-field-phone](../gux-form-field/components/gux-form-field-phone)
  - [gux-form-field-radio](../gux-form-field/components/gux-form-field-radio)
  - [gux-form-field-range](../gux-form-field/components/gux-form-field-range)
  - [gux-form-field-search](../gux-form-field/components/gux-form-field-search)
@@ -63,6 +64,7 @@
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-beta](../../beta/gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-cursor](../gux-pagination-cursor)
+ - [gux-phone-input-beta](../../beta/gux-phone-input)
  - [gux-rating](../gux-rating)
  - [gux-side-panel-button](../../legacy/gux-side-panel-legacy/buttons)
  - [gux-sort-control](../../beta/gux-table/gux-sort-control)
@@ -111,6 +113,7 @@ graph TD;
   gux-form-field-dropdown --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
   gux-form-field-number --> gux-icon
+  gux-form-field-phone --> gux-icon
   gux-form-field-radio --> gux-icon
   gux-form-field-range --> gux-icon
   gux-form-field-search --> gux-icon
@@ -129,6 +132,7 @@ graph TD;
   gux-pagination-buttons --> gux-icon
   gux-pagination-buttons-beta --> gux-icon
   gux-pagination-cursor --> gux-icon
+  gux-phone-input-beta --> gux-icon
   gux-rating --> gux-icon
   gux-side-panel-button --> gux-icon
   gux-sort-control --> gux-icon

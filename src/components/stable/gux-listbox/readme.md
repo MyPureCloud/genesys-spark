@@ -46,6 +46,7 @@ Type: `Promise<void>`
 
  - [gux-pagination-items-per-page](../gux-pagination/gux-pagination-items-per-page)
  - [gux-pagination-items-per-page-beta](../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
+ - [gux-phone-input-beta](../../beta/gux-phone-input)
 
 ### Depends on
 
@@ -57,6 +58,7 @@ graph TD;
   gux-listbox --> gux-radial-loading
   gux-pagination-items-per-page --> gux-listbox
   gux-pagination-items-per-page-beta --> gux-listbox
+  gux-phone-input-beta --> gux-listbox
   style gux-listbox fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
