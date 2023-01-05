@@ -122,8 +122,12 @@ export class GuxFormFieldTextLike {
   }
 
   disconnectedCallback(): void {
-    this.disabledObserver.disconnect();
-    this.requiredObserver.disconnect();
+    if (this.disabledObserver) {
+      this.disabledObserver.disconnect();
+    }
+    if (this.requiredObserver) {
+      this.requiredObserver.disconnect();
+    }
   }
 
   render(): JSX.Element {

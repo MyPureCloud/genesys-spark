@@ -146,7 +146,9 @@ export class GuxAdvancedDropdown {
   }
 
   disconnectedCallback() {
-    this.slotObserver.disconnect();
+    if (this.slotObserver) {
+      this.slotObserver.disconnect();
+    }
   }
 
   render(): JSX.Element {

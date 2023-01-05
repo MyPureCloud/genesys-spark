@@ -33,7 +33,9 @@ export class GuxInputSelect {
   }
 
   disconnectedCallback(): void {
-    this.disabledObserver.disconnect();
+    if (this.disabledObserver) {
+      this.disabledObserver.disconnect();
+    }
   }
 
   render(): JSX.Element {
