@@ -107,8 +107,6 @@ export class GuxDropdown {
       this.listboxElement.value = newValue;
       return;
     }
-
-    this.value = undefined;
   }
 
   @Watch('filter')
