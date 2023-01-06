@@ -68,7 +68,7 @@ webappPipeline {
         // can use relative URLs to load assets. Because the components are running inside
         // apps, they have to load their assets from a full URL on the new UI hosting stack.
         if (assetPrefix.startsWith('/')) {
-            cdnUrl = "https://app.mypurecloud.com${assetPrefix}genesys-webcomponents/"
+            cdnUrl = "${assetPrefix}genesys-webcomponents/"
         }
 
         sh("""
