@@ -13,12 +13,14 @@
   <gux-toggle checked-label="On" unchecked-label="Off" disabled></gux-toggle>
 
   <gux-toggle
+    class="loading"
     checked-label="Active"
     unchecked-label="Inactive"
     loading
   ></gux-toggle>
 
   <gux-toggle
+    class="loading"
     checked-label="Active"
     unchecked-label="Inactive"
     checked
@@ -74,7 +76,16 @@
   </div>
 </div>
 
-<style>
+<style
+  onload="(function () {
+    Array.from(document.querySelectorAll('.loading'))
+      .forEach((element) => {
+        setInterval(() => {
+          element.loading = Math.random() < 0.8;
+        }, 3000)
+      });
+  })()"
+>
   .container {
     display: flex;
     flex-direction: column;

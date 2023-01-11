@@ -7,7 +7,8 @@ import {
   Host,
   JSX,
   Listen,
-  Prop
+  Prop,
+  Watch
 } from '@stencil/core';
 
 import { trackComponent } from '../../../usage-tracking';
@@ -25,12 +26,12 @@ import { GuxToggleLabelPosition } from './gux-toggle.types';
 })
 export class GuxToggle {
   private i18n: GetI18nValue;
+  private announceElement: HTMLGuxAnnounceBetaElement;
+  private labelId: string = randomHTMLId('gux-toggle-label');
+  private errorId: string = randomHTMLId('gux-toggle-error');
 
   @Element()
   private root: HTMLElement;
-
-  private labelId: string = randomHTMLId('gux-toggle-label');
-  private errorId: string = randomHTMLId('gux-toggle-error');
 
   @Prop({ mutable: true })
   checked: boolean = false;
@@ -55,6 +56,17 @@ export class GuxToggle {
 
   @Prop()
   displayInline: boolean = false;
+
+  @Watch('loading')
+  handleLoading(loading: boolean) {
+    if (loading) {
+      void this.announceElement.guxAnnounce(this.i18n('toggleIsLoading'));
+    } else {
+      void this.announceElement.guxAnnounce(
+        this.i18n('toggleIsFinishedLoading')
+      );
+    }
+  }
 
   @Event()
   check: EventEmitter<boolean>;
@@ -169,6 +181,9 @@ export class GuxToggle {
           </div>
           {this.renderError()}
         </div>
+        <gux-announce-beta
+          ref={el => (this.announceElement = el)}
+        ></gux-announce-beta>
       </Host>
     ) as JSX.Element;
   }

@@ -1,3 +1,5 @@
 {
-  "defaultAriaLabel": "Toggle Switch"
+  "defaultAriaLabel": "Toggle Switch",
+  "toggleIsLoading": "Toggle is loading",
+  "toggleIsFinishedLoading": "Toggle is finished loading"
 }

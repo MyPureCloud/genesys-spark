@@ -44,6 +44,7 @@ export class GuxToggleSlider {
         }}
         role="checkbox"
         aria-checked={this.checked.toString()}
+        aria-disabled={this.disabled.toString()}
         tabindex={this.disabled ? '' : '0'}
         ref={el => (this.checkboxElement = el)}
       >
