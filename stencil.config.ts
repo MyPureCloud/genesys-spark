@@ -4,8 +4,6 @@ import copy from 'rollup-plugin-copy';
 import generateMetadata from './scripts/generate-component-data';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
-const CDN_URL = process.env.CDN_URL || '';
-
 export const config: Config = {
   namespace: 'genesys-webcomponents',
   globalStyle: 'src/style/style.less',
