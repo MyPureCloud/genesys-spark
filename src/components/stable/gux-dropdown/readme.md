@@ -3,6 +3,13 @@
 <!-- Auto Generated Below -->
 
 
+## Overview
+
+Our Dropdown component. In the most basic case, it's used with `gux-option` to give users
+a list of text options to select from, but other types of options with different appearance
+can be created by creating a new component and adding it to `validOptionTags` list in
+gux-dropdown-types.ts, then following the resulting compiler errors.
+
 ## Properties
 
 | Property      | Attribute     | Description                                                           | Type                                  | Default     |
@@ -28,9 +35,9 @@
 
 ## Slots
 
-| Slot | Description                                      |
-| ---- | ------------------------------------------------ |
-|      | for a gux-listbox containing gux-option children |
+| Slot | Description                                               |
+| ---- | --------------------------------------------------------- |
+|      | for a gux-listbox containing ValidDropdownOption children |
 
 
 ## Dependencies

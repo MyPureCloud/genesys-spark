@@ -69,7 +69,9 @@ export class GuxOption {
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
       >
-        <slot />
+        <span data-selected-content>
+          <slot />
+        </span>
       </Host>
     ) as JSX.Element;
   }
