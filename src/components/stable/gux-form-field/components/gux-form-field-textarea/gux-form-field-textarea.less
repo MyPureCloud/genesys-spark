@@ -62,7 +62,7 @@
 
   .gux-input {
     position: relative;
-    display: block;
+    display: flex;
     border: 1px solid @gux-black-100;
     border-radius: 4px;
     outline: none;
@@ -132,8 +132,6 @@
 }
 
 .gux-textarea-sizing-properties() {
-  min-width: 100%;
-  max-width: 100%;
   min-height: (@body-font-line-height * 4) + 8 + 2; // 4 lines + padding + border
   padding: 4px 12px;
   margin: 0;
