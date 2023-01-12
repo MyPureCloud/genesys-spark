@@ -10,6 +10,18 @@
   }
 }
 
+.gux-focus-ring-small-focused {
+  &:focus {
+    .gux-focus-ring-small();
+  }
+}
+
+.gux-focus-ring-small-focused-within {
+  &:focus-within {
+    .gux-focus-ring-small();
+  }
+}
+
 .gux-focus-ring {
   outline: none;
   box-shadow: 0 0 0 1px @gux-grey-100, 0 0 0 4px @gux-blue-90;
