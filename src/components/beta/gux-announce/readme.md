@@ -34,11 +34,13 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-column-manager-beta](../gux-column-manager)
+ - [gux-toggle](../../stable/gux-toggle)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-column-manager-beta --> gux-announce-beta
+  gux-toggle --> gux-announce-beta
   style gux-announce-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
