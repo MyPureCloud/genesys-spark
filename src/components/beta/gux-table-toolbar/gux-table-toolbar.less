@@ -10,7 +10,7 @@
   max-height: 48px;
   padding: 0 @gux-spacing-xs @gux-spacing-medium @gux-spacing-xs;
   background-color: @gux-grey-100;
-  border-radius: @spacing-2xs;
+  border-radius: @gux-spacing-2xs;
 
   .search-filter-container {
     width: 260px;
@@ -20,7 +20,7 @@
   slot[name='search-and-filter']::slotted(*) {
     display: flex;
     flex-direction: row;
-    gap: @spacing-2xs;
+    gap: @gux-spacing-2xs;
     align-content: flex-start;
     align-items: center;
   }
@@ -41,15 +41,15 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: @spacing-2xs;
+      gap: @gux-spacing-2xs;
       align-content: flex-end;
       align-items: center;
     }
 
     .separator {
       width: 1px;
-      margin-right: @spacing-medium;
-      margin-left: @spacing-medium;
+      margin-right: @gux-spacing-medium;
+      margin-left: @gux-spacing-medium;
       background: @gux-grey-50;
     }
   }

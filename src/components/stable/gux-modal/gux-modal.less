@@ -34,22 +34,22 @@
 
       &.gux-small {
         width: 416px;
-        max-height: e(%('min(368px, 100vh - 2 * %s)', @spacing-large));
+        max-height: e(%('min(368px, 100vh - 2 * %s)', @gux-spacing-large));
       }
 
       &.gux-medium {
         width: 672px;
-        max-height: e(%('min(640px, 100vh - 2 * %s)', @spacing-large));
+        max-height: e(%('min(640px, 100vh - 2 * %s)', @gux-spacing-large));
       }
 
       &.gux-large {
         width: 940px;
-        max-height: e(%('min(640px, 100vh - 2 * %s)', @spacing-large));
+        max-height: e(%('min(640px, 100vh - 2 * %s)', @gux-spacing-large));
       }
 
       &.gux-dynamic {
-        max-width: calc(100vw - 2 * @spacing-large);
-        max-height: calc(100vh - 2 * @spacing-large);
+        max-width: calc(100vw - 2 * @gux-spacing-large);
+        max-height: calc(100vh - 2 * @gux-spacing-large);
 
         .gux-modal-content {
           max-height: none;

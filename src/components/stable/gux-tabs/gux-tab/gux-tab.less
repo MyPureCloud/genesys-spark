@@ -6,15 +6,15 @@ gux-tabs[orientation='vertical'] > gux-tab-list {
   .gux-tab {
     display: flex;
     justify-content: flex-end;
-    padding: @spacing-small @spacing-medium;
+    padding: @gux-spacing-small @gux-spacing-medium;
 
     &.gux-active {
-      padding-right: @spacing-medium - 2px;
+      padding-right: @gux-spacing-medium - 2px;
       border-right: 2px solid @gux-blue-60;
     }
 
     &:hover:not(.gux-active):not(.gux-disabled) {
-      padding-right: @spacing-medium - 2px;
+      padding-right: @gux-spacing-medium - 2px;
       border-right: 2px solid @gux-grey-10;
     }
   }
@@ -73,7 +73,7 @@ gux-tab {
     width: 100%;
     max-width: 160px;
     height: 40px;
-    padding: 0 @spacing-medium;
+    padding: 0 @gux-spacing-medium;
     font-size: 14px;
     color: @gux-black-50;
     cursor: pointer;

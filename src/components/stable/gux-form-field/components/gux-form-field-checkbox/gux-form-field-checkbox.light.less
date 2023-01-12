@@ -28,7 +28,9 @@ gux-form-field-checkbox {
     background-image: @gux-icon-checkbox-unchecked;
   }
 
-  input[type='checkbox']:not(:checked):not(:disabled):not(:indeterminate):hover::before {
+  input[type='checkbox']:not(:checked):not(:disabled):not(
+      :indeterminate
+    ):hover::before {
     background-image: @gux-icon-checkbox-unchecked-hover;
   }
 

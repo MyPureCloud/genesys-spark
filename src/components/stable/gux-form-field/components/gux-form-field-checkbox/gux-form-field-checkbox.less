@@ -50,7 +50,7 @@
   display: inline-grid;
   width: @gux-icon-size-default-global;
   height: @gux-icon-size-default-global;
-  margin: @spacing-2xs;
+  margin: @gux-spacing-2xs;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -75,7 +75,11 @@
   background-image: @gux-icon-checkbox-unchecked;
 }
 
-::slotted(input[type='checkbox']:not(:checked):not(:disabled):not(:indeterminate):hover)::before {
+::slotted(
+    input[type='checkbox']:not(:checked):not(:disabled):not(
+        :indeterminate
+      ):hover
+  )::before {
   background-image: @gux-icon-checkbox-unchecked-hover;
 }
 

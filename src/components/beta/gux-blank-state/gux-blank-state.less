@@ -36,17 +36,17 @@
   &.gux-small,
   &.gux-medium {
     .gux-message-container {
-      padding: @spacing-xs 0 @spacing-2xs;
+      padding: @gux-spacing-xs 0 @gux-spacing-2xs;
     }
 
     .gux-guidance-container {
-      padding-bottom: @spacing-xs;
+      padding-bottom: @gux-spacing-xs;
     }
   }
 
   &.gux-large {
     .gux-message-container {
-      padding: @spacing-medium 0 @spacing-2xs;
+      padding: @gux-spacing-medium 0 @gux-spacing-2xs;
 
       slot[name='primary-message'] {
         .h1();
@@ -54,7 +54,7 @@
     }
 
     .gux-guidance-container {
-      padding-bottom: @spacing-medium;
+      padding-bottom: @gux-spacing-medium;
 
       slot[name='additional-guidance'] {
         .gux-large-text();
