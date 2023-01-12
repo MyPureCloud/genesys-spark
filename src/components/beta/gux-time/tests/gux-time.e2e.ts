@@ -1,4 +1,4 @@
-import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
 const date = '2022-07-07T13:35:30.100Z';
 

@@ -67,8 +67,8 @@ export const config: Config = {
     coverageDirectory: 'build/test-reports/coverage',
     coverageReporters: ['json', 'lcov', 'clover'],
     setupFilesAfterEnv: [
-      '<rootDir>/tests/setupTests.js',
-      '<rootDir>/tests/setupAxeTests.js'
+      '<rootDir>/src/test/setupTests.js',
+      '<rootDir>/src/test/setupAxeTests.js'
     ],
     reporters: [
       ['jest-silent-reporter', { useDots: true }],

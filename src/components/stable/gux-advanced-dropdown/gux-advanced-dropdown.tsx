@@ -15,7 +15,7 @@ import { onMutation } from '@utils/dom/on-mutation';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import advancedDropDownResources from './i18n/en.json';

@@ -12,7 +12,7 @@ import {
 } from '../../functional-components/functional-components';
 
 import { validateFormIds } from '../../gux-form-field.service';
-import { trackComponent } from '../../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot input - Required slot for input tag

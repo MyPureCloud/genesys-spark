@@ -1,5 +1,5 @@
 import { E2EElement, E2EPage } from '@stencil/core/testing';
-import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
 describe('gux-dropdown-multi-beta', () => {
   const html = `

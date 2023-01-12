@@ -4,7 +4,7 @@ import {
   matchesFuzzy
 } from '../../../utils/string/search';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import { GuxTextHighlightStrategy } from './gux-text-highlight.types';
 

@@ -5,7 +5,7 @@ import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { afterNextRender } from '@utils/dom/after-next-render';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 

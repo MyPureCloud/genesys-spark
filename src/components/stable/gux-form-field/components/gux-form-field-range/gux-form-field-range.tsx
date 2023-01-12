@@ -28,7 +28,7 @@ import {
   getComputedLabelPosition,
   validateFormIds
 } from '../../gux-form-field.service';
-import { trackComponent } from '../../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot input - Required slot for input tag

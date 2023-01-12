@@ -35,7 +35,7 @@ import {
   hasContent,
   validateFormIds
 } from '../../gux-form-field.service';
-import { trackComponent } from '../../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import componentResources from './i18n/en.json';
 
 /**

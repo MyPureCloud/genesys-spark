@@ -12,7 +12,7 @@ import {
   Watch
 } from '@stencil/core';
 import libphonenumber, { PhoneNumberFormat } from 'google-libphonenumber';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { regionCountryCodeMap } from './services/RegionCountryCodeMap';
 import {
   buildI18nForComponent,

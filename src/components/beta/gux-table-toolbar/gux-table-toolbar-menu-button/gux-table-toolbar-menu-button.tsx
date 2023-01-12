@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
 
-import { trackComponent } from '../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { OnClickOutside } from '../../../../utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';

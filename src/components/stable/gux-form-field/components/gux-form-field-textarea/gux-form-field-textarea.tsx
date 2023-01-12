@@ -20,7 +20,7 @@ import {
   validateFormIds
 } from '../../gux-form-field.service';
 import { GuxFormFieldTextAreaResize } from './gux-form-field-textarea.types';
-import { trackComponent } from '../../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot input - Required slot for input tag

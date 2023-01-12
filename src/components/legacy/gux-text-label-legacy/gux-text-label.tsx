@@ -1,6 +1,6 @@
 import { Component, Element, h, Prop } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 let nextLabelId = 1;
 @Component({

@@ -11,7 +11,7 @@ import {
   GuxFormFieldHelp
 } from '../../functional-components/functional-components';
 
-import { trackComponent } from '../../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { validateFormIds } from '../../gux-form-field.service';
 
 /**

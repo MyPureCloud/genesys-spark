@@ -1,4 +1,4 @@
-import { a11yCheck, newSparkE2EPage } from '../../../../../tests/e2eTestUtils';
+import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
 
 describe('gux-table-toolbar-beta', () => {
   const html = `<gux-table-toolbar-beta>

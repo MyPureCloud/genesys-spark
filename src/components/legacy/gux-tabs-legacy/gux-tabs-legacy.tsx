@@ -13,7 +13,7 @@ import {
 } from '@stencil/core';
 import Sortable, { MoveEvent } from 'sortablejs';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 

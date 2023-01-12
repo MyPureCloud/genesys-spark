@@ -18,7 +18,7 @@ import {
   onDisabledChange,
   onRequiredChange
 } from '@utils/dom/on-attribute-change';
-import { trackComponent } from '../../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import { GuxFormFieldFieldsetContainer } from '../../functional-components/gux-form-field-fieldset-container/gux-form-field-fieldset-container';
 import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';

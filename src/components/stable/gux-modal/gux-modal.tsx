@@ -8,8 +8,9 @@ import {
   Listen,
   Prop
 } from '@stencil/core';
-import { trackComponent } from '../../../usage-tracking';
+
 import { randomHTMLId } from '@utils/dom/random-html-id';
+import { trackComponent } from '@utils/tracking/usage';
 
 import { GuxModalSize } from './gux-modal.types';
 

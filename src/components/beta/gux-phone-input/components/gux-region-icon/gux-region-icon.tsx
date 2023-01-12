@@ -1,5 +1,5 @@
 import { Component, Element, getAssetPath, h, JSX, Prop } from '@stencil/core';
-import { trackComponent } from '../../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 @Component({
   tag: 'gux-region-icon',

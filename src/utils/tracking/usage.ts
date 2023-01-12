@@ -1,5 +1,5 @@
 import NewRelicBrowser from 'new-relic-browser';
-import packageInfo from '../package.json';
+import packageInfo from '../../../package.json';
 
 // The number of actions to process every interval
 const ACTION_BATCH_SIZE = 20;

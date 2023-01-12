@@ -17,7 +17,7 @@ import {
   previous
 } from './gux-list.service';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot - collection of gux-list-item, gux-list-divider elements

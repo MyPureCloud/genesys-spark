@@ -1,5 +1,5 @@
 import { Component, Element, JSX, h, Prop } from '@stencil/core';
-import { trackComponent } from '../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { GuxTableToolbarActionAccent } from '../gux-table-toolbar-action-accents.types';
 
 /**

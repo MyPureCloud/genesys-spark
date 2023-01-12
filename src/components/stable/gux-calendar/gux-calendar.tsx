@@ -22,7 +22,7 @@ import {
   removeClassToElements
 } from '@utils/dom/manipulate-elements-classes';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { CalendarModes } from '../../../common-enums';
 import { getDesiredLocale, getStartOfWeek } from '../../../i18n';
 

@@ -10,7 +10,7 @@ import {
 import { GuxTableToolbarLayout } from './gux-table-toolbar.types';
 import { MIN_CONTROL_SPACING } from './gux-table-toolbar.constants';
 import { OnResize } from '@utils/decorator/on-resize';
-import { trackComponent } from 'usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import {
   setAccent,
   expandActions,

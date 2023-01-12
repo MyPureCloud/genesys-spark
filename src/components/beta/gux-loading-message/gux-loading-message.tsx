@@ -2,7 +2,7 @@ import { Component, Element, JSX, h, State, readTask } from '@stencil/core';
 
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import { GuxLoadingMessageSizes } from './gux-loading-message-size.types';
 import * as loadingMessageWidth from './gux-loading-message-constants';

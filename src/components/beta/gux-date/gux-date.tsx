@@ -1,5 +1,5 @@
 import { Component, JSX, h, Host, Prop, Element } from '@stencil/core';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import {
   DateTimeFormatter,
   GuxDateTimeFormat

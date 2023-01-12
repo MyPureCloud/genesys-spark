@@ -13,7 +13,7 @@ import {
   Watch
 } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot tab-list - Slot for gux-tab-advanced-list element

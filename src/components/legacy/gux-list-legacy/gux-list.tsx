@@ -12,7 +12,7 @@ import {
   Watch
 } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 const validChildren = [
   'gux-list-item-legacy:not([disabled])',

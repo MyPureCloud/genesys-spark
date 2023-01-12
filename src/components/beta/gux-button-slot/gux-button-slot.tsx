@@ -1,6 +1,6 @@
 import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { logError } from '../../../utils/error/log-error';
 import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
 
