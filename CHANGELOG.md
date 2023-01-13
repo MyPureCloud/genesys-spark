@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.56.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.56.0...v3.56.1) (2023-01-13)
+
+
+### Bug Fixes
+
+* **stencil-wrapper:** add protocol to cdn url ([da3206f](https://github.com/MyPureCloud/genesys-webcomponents/commit/da3206fa4cf098f533fae2dda9728b2809e7e2ad))
+
 ## [3.56.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.54.3...v3.56.0) (2023-01-13)
 
 
