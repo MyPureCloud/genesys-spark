@@ -139,7 +139,11 @@
   "gux-dismiss-button": {
     "dismiss": "Dispensar"
   },
-  "gux-dropdown": {},
+  "gux-dropdown": {
+    "filterResults": "Digite para filtrar os resultados da lista pendente",
+    "noSelection": "Selecione...",
+    "dropdown": "Lista pendente"
+  },
   "gux-form-field-number": {
     "increment": "Aumentar",
     "decrement": "Diminuir"

@@ -1,10 +1,4 @@
 {
-  "gux-alert": {
-    "info": "Alarm informacyjny z komunikatem",
-    "success": "Alarm dotyczący powodzenia z komunikatem",
-    "warning": "Alarm ostrzegawczy z komunikatem",
-    "error": "Alarm dotyczący błędu z komunikatem"
-  },
   "gux-badge": {
     "neutral": "odznaka z etykietą: {label}, kolor: neutralny",
     "neutral-bold": "odznaka z etykietą: {label}, kolor: neutralny pogrubiony",
@@ -14,20 +8,6 @@
     "yellow-bold": "odznaka z etykietą: {label}, kolor: żółty pogrubiony",
     "red": "odznaka z etykietą: {label}, kolor: czerwony",
     "red-bold": "odznaka z etykietą: {label}, kolor: czerwony pogrubiony"
-  },
-  "gux-column-manager-item": {
-    "activateReordering": "Aktywuj tryb zmiany kolejności dla kolumny {columnName}"
-  },
-  "gux-column-manager": {
-    "search": "Wyszukaj kolumnę",
-    "selectedColumnCount": "Wybrane kolumny: {count}/{total}",
-    "selectAllColumnsScreenReader": "Wybrano {count} z {total} kolumn: zaznacz pole wyboru, aby wybrać wszystkie kolumny ({total})",
-    "unselectAllColumnsScreenReader": "Wybrano {count} z {total} kolumn: usuń zaznaczenie pola wyboru, aby anulować wybór wszystkich kolumn ({total})",
-    "movePositionPrompt": "Naciśnij klawisz spacji lub Enter, aby przenieść kolumnę {columnName} z pozycji {oldPositionNumber} do pozycji {newPositionNumber}.",
-    "reorderingModeActive": "Tryb zmiany kolejności jest aktywny. Zmień pozycję kolumny {columnName} przy użyciu klawisza strzałki w górę, klawisza strzałki w dół, klawisza Home lub End. Aby dezaktywować tryb zmiany kolejności, naciśnij klawisz Escape."
-  },
-  "gux-context-menu": {
-    "contextMenuScreenreaderText": "Menu kontekstowe"
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "Kliknij, aby skopiować",
@@ -44,295 +24,36 @@
     "noSelection": "Wybierz...",
     "dropdown": "Lista rozwijana",
     "numberSelected": "Wybrane: {numberSelected}",
-    "pressEnterToCreate": "Naciśnij klawisz Enter, aby utworzyć nową opcję, {textInputValue}"
+    "pressEnterToCreate": "Naciśnij klawisz Enter, aby utworzyć nową opcje, {textInputValue}"
   },
   "gux-month-calendar": {
-    "changeYear": "Bieżący rok to {currentYear}. Kliknij, aby zmienić rok na {changeYear}"
+    "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
   },
   "gux-month-picker": {
-    "toggleCalendar": "Przełącz miesięczny widok kalendarza",
-    "month": "Miesiąc",
-    "year": "Rok",
-    "unset": "Anuluj ustawienie"
+    "toggleCalendar": "Toggle month calendar view",
+    "month": "Month",
+    "year": "Year",
+    "unset": "Unset"
   },
   "gux-pagination-buttons-beta": {
     "page": "Strona",
     "totalPages": " z {totalPages, number}",
     "first": "Pierwsza",
-    "previous": "Wstecz",
-    "next": "Dalej",
+    "previous": "Poprzednia",
+    "next": "Następna",
     "last": "Ostatnia",
-    "pageInputLabel": "Strona {currentPage, number} z {totalPages, number}"
+    "pageInputLabel": "Str. {currentPage, number} z {totalPages, number}"
   },
   "gux-pagination-item-counts-beta": {
-    "itemCountDisplay": "{firstItem, number}–{lastItem, number}",
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
     "totalItems": " z {totalItems, number}"
   },
   "gux-pagination-items-per-page-beta": {
-    "perPage": "na stronę",
-    "itemsPerPage": "Elementy na stronę"
-  },
-  "gux-phone-input": {
-    "AD": "Andora",
-    "AE": "Zjednoczone Emiraty Arabskie",
-    "AF": "Afganistan",
-    "AG": "Antigua i Barbuda",
-    "AI": "Anguilla",
-    "AL": "Albania",
-    "AM": "Armenia",
-    "AO": "Angola",
-    "AR": "Argentyna",
-    "AS": "Samoa Amerykańskie",
-    "AT": "Austria",
-    "AU": "Australia",
-    "AW": "Aruba",
-    "AX": "Wyspy Alandzkie",
-    "AZ": "Azerbejdżan",
-    "BA": "Bośnia i Hercegowina",
-    "BB": "Barbados",
-    "BD": "Bangladesz",
-    "BE": "Belgia",
-    "BF": "Burkina Faso",
-    "BG": "Bułgaria",
-    "BH": "Bahrajn",
-    "BI": "Burundi",
-    "BJ": "Benin",
-    "BL": "Saint Barthelemy",
-    "BM": "Bermudy",
-    "BN": "Brunei",
-    "BO": "Boliwia",
-    "BQ": "Holandia Karaibska",
-    "BR": "Brazylia",
-    "BS": "Bahamy",
-    "BT": "Butan",
-    "BV": "Wyspa Bouveta",
-    "BW": "Botswana",
-    "BY": "Białoruś",
-    "BZ": "Belize",
-    "CA": "Kanada",
-    "CC": "Wyspy Kokosowe",
-    "CD": "Demokratyczna Republika Konga",
-    "CF": "Republika Środkowoafrykańska",
-    "CG": "Republika Konga",
-    "CH": "Szwajcaria",
-    "CI": "Wybrzeże Kości Słoniowej",
-    "CK": "Wysypy Cooka",
-    "CL": "Chile",
-    "CM": "Kamerun",
-    "CN": "Chiny",
-    "CO": "Kolumbia",
-    "CR": "Kostaryka",
-    "CU": "Kuba",
-    "CV": "Republika Zielonego Przylądka",
-    "CW": "Curaçao",
-    "CX": "Wyspa Bożego Narodzenia",
-    "CY": "Cypr",
-    "CZ": "Czechy",
-    "DE": "Niemcy",
-    "DJ": "Dżibuti",
-    "DK": "Dania",
-    "DM": "Dominika",
-    "DO": "Dominikana",
-    "DZ": "Algieria",
-    "EC": "Ekwador",
-    "EE": "Estonia",
-    "EG": "Egipt",
-    "EH": "Sahara Zachodnia",
-    "ER": "Erytrea",
-    "ES": "Hiszpania",
-    "ET": "Etiopia",
-    "FI": "Finlandia",
-    "FJ": "Fidżi",
-    "FK": "Falklandy (Malwiny)",
-    "FM": "Mikronezja",
-    "FO": "Wyspy Owcze",
-    "FR": "Francja",
-    "GA": "Gabon",
-    "GB": "Wielka Brytania",
-    "GD": "Grenada",
-    "GE": "Gruzja",
-    "GF": "Gujana Francuska",
-    "GG": "Guernsey",
-    "GH": "Ghana",
-    "GI": "Gibraltar",
-    "GL": "Grenlandia",
-    "GM": "Gambia",
-    "GN": "Gwinea",
-    "GP": "Gwadelupa",
-    "GQ": "Gwinea Równikowa",
-    "GR": "Grecja",
-    "GS": "Georgia Południowa i Sandwich Południowy",
-    "GT": "Gwatemala",
-    "GU": "Guam",
-    "GW": "Gwinea-Bissau",
-    "GY": "Gujana",
-    "HK": "Hongkong",
-    "HN": "Honduras",
-    "HR": "Chorwacja",
-    "HT": "Haiti",
-    "HU": "Węgry",
-    "ID": "Indonezja",
-    "IE": "Irlandia",
-    "IL": "Izrael",
-    "IM": "Wyspa Man",
-    "IN": "Indie",
-    "IO": "Brytyjskie Terytorium Oceanu Indyjskiego",
-    "IQ": "Irak",
-    "IR": "Iran",
-    "IS": "Islandia",
-    "IT": "Włochy",
-    "JE": "Jersey",
-    "JM": "Jamajka",
-    "JO": "Jordania",
-    "JP": "Japonia",
-    "KE": "Kenia",
-    "KG": "Kirgistan",
-    "KH": "Kambodża",
-    "KI": "Kiribati",
-    "KM": "Komory",
-    "KN": "Saint Kitts i Nevis",
-    "KP": "Korea Północna",
-    "KR": "Korea Południowa",
-    "KW": "Kuwejt",
-    "KY": "Kajmany",
-    "KZ": "Kazachstan",
-    "LA": "Laos",
-    "LB": "Liban",
-    "LC": "Saint Lucia",
-    "LI": "Liechtenstein",
-    "LK": "Sri Lanka",
-    "LR": "Liberia",
-    "LS": "Lesotho",
-    "LT": "Litwa",
-    "LU": "Luksemburg",
-    "LV": "Łotwa",
-    "LY": "Libia",
-    "MA": "Maroko",
-    "MC": "Monako",
-    "MD": "Mołdawia",
-    "ME": "Czarnogóra",
-    "MF": "Sint Maarten",
-    "MG": "Madagaskar",
-    "MH": "Wyspy Marshalla",
-    "MK": "Macedonia",
-    "ML": "Mali",
-    "MM": "Mjanma",
-    "MN": "Mongolia",
-    "MO": "Macau",
-    "MP": "Mariany Północne",
-    "MQ": "Martynika",
-    "MR": "Mauretania",
-    "MS": "Montserrat",
-    "MT": "Malta",
-    "MU": "Mauritius",
-    "MV": "Malediwy",
-    "MW": "Malawi",
-    "MX": "Meksyk",
-    "MY": "Malezja",
-    "MZ": "Mozambik",
-    "NA": "Namibia",
-    "NC": "Nowa Kaledonia",
-    "NE": "Niger",
-    "NF": "Wyspa Norfolk",
-    "NG": "Nigeria",
-    "NI": "Nikaragua",
-    "NL": "Holandia",
-    "NO": "Norwegia",
-    "NP": "Nepal",
-    "NR": "Nauru",
-    "NU": "Niue",
-    "NZ": "Nowa Zelandia",
-    "OM": "Oman",
-    "PA": "Panama",
-    "PE": "Peru",
-    "PF": "Polinezja Francuska",
-    "PG": "Papua Nowa Gwinea",
-    "PH": "Filipiny",
-    "PK": "Pakistan",
-    "PL": "Polska",
-    "PM": "Saint-Pierre i Miquelon",
-    "PN": "Pitcairn",
-    "PR": "Portoryko",
-    "PS": "Palestyna",
-    "PT": "Portugalia",
-    "PW": "Palau",
-    "PY": "Paragwaj",
-    "QA": "Katar",
-    "RE": "Reunion",
-    "RO": "Rumunia",
-    "RS": "Serbia",
-    "RU": "Rosja",
-    "RW": "Rwanda",
-    "SA": "Arabia Saudyjska",
-    "SB": "Wyspy Salomona",
-    "SC": "Seszele",
-    "SD": "Sudan",
-    "SE": "Szwecja",
-    "SG": "Singapur",
-    "SH": "Wyspa Świętej Heleny",
-    "SI": "Słowenia",
-    "SJ": "Svalbard i Jan Mayen",
-    "SK": "Słowacja",
-    "SL": "Sierra Leone",
-    "SM": "San Marino",
-    "SN": "Senegal",
-    "SO": "Somalia",
-    "SR": "Surinam",
-    "SS": "Sudan Południowy",
-    "ST": "Sao Tome i Principe",
-    "SV": "Salwador",
-    "SX": "Sint Maarten",
-    "SY": "Syria",
-    "SZ": "Swaziland",
-    "TC": "Wyspy Turks i Caicos",
-    "TD": "Czad",
-    "TG": "Togo",
-    "TH": "Tajlandia",
-    "TJ": "Tadżykistan",
-    "TK": "Tokelau",
-    "TL": "Timor Wschodni",
-    "TM": "Turkmenistan",
-    "TN": "Tunezja",
-    "TO": "Tonga",
-    "TR": "Turcja",
-    "TT": "Trynidad i Tobago",
-    "TV": "Tuvalu",
-    "TW": "Tajwan",
-    "TZ": "Tanzania",
-    "UA": "Ukraina",
-    "UG": "Uganda",
-    "US": "Stany Zjednoczone",
-    "UY": "Urugwaj",
-    "UZ": "Uzbekistan",
-    "VA": "Watykan",
-    "VC": "Saint Vincent i Grenadyny",
-    "VE": "Wenezuela",
-    "VG": "Brytyjskie Wyspy Dziewicze",
-    "VI": "Wyspy Dziewicze Stanów Zjednoczonych",
-    "VN": "Wietnam",
-    "VU": "Vanuatu",
-    "WF": "Wallis i Futuna",
-    "WS": "Samoa",
-    "XK": "Kosowo",
-    "YE": "Jemen",
-    "YT": "Majotta",
-    "ZA": "Afryka Południowa",
-    "ZM": "Zambia",
-    "ZW": "Zimbabwe"
+    "perPage": "na str.",
+    "itemsPerPage": "Elementy na str."
   },
   "gux-skip-navigation-list": {
     "navigationName": "Pomiń nawigację łączy"
-  },
-  "gux-table-toolbar-action": {
-    "actionRefresh": "Odśwież",
-    "actionDelete": "Usuń",
-    "actionExport": "Eksportuj",
-    "actionImport": "Importuj",
-    "actionRevert": "Przywróć",
-    "actionAdd": "Dodaj"
-  },
-  "gux-table-toolbar-menu-button": {
-    "additionalActions": "Dodatkowe działania"
   },
   "gux-table": {
     "emptyMessage": "Brak dostępnych danych",
@@ -346,7 +67,7 @@
     "noColumnSort": "{headerContent}. Tabela nie jest aktualnie posortowania wg tej kolumny. Kliknij nagłówek kolumny, aby posortować tabelę rosnąco wg tej kolumny",
     "ascendingColumnSort": "{headerContent}. Tabela jest aktualnie posortowania rosnąco wg tej kolumny. Kliknij nagłówek kolumny, aby posortować tabelę malejąco wg tej kolumny",
     "descendingColumnSort": "{headerContent}. Tabela jest aktualnie posortowania malejąco wg tej kolumny. Kliknij nagłówek kolumny, aby posortować tabelę rosnąco wg tej kolumny",
-    "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabela jest aktualnie posortowania malejąco wg tej kolumny. Kliknij nagłówek kolumny, aby nie sortować tabeli wg tej kolumny"
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. Tabela jest aktualnie posortowania malejąco wg tej kolumny. Kliknij nagłówek kolumny, aby nie sortować tej tabeli wg tej kolumny"
   },
   "gux-tag": {
     "tag": "tag z etykietą: {label}",
@@ -354,14 +75,14 @@
     "remove-tag": "Usuń tag z etykietą: {label}"
   },
   "gux-time-picker": {
-    "am": "przed południem",
+    "am": "AM",
     "time-separator": ":",
-    "clockButton": "Przełącz sugerowany czas",
-    "hoursInput": "Wprowadź godziny",
-    "minutesInput": "Wprowadź minuty",
-    "pm": "po południu",
-    "timeOptionsState": "Otwarte opcje czasu: {state}",
-    "toggleAmPM": "Wybrano {amOrPm}, kliknij w celu przełączenia"
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
   },
   "gux-action-button-legacy": {
     "actionButtonDropdown": "Lista rozwijana dla: {buttonTitle}"
@@ -377,9 +98,9 @@
     "required": "Wymagane"
   },
   "gux-input-number": {
-    "clear": "Wyczyść",
-    "increment": "Zwiększ",
-    "decrement": "Zmniejsz"
+    "clear": "Przeźr.",
+    "increment": "Zwiększ przyrostowo",
+    "decrement": "Zmniejsz przyrostowo"
   },
   "gux-input-search": {
     "clear": "Wyczyść"
@@ -397,15 +118,15 @@
     "actionButtonDropdown": "Lista rozwijana dla: {buttonTitle}"
   },
   "gux-advanced-dropdown": {
-    "searchAria": "Szukaj"
+    "searchAria": "Wyszukaj"
   },
   "gux-breadcrumbs": {
-    "breadcrumbs": "Łącza do stron nadrzędnych"
+    "breadcrumbs": "Okruszki chleba"
   },
   "gux-content-search": {
     "eraseBtnAria": "Wyczyść",
-    "navigateNextBtn": "Dalej",
-    "navigatePreviousBtn": "Wstecz",
+    "navigateNextBtn": "Poprzedni",
+    "navigatePreviousBtn": "Następny",
     "totalMatches": "{currentMatch, number} z {matchCount, number}"
   },
   "gux-datepicker": {
@@ -414,9 +135,7 @@
     "date": "Data",
     "toggleCalendar": "Przełącz widok kalendarza"
   },
-  "gux-disclosure-button": {
-    "defaultLabel": "Przycisk ujawnienia"
-  },
+  "gux-disclosure-button": {},
   "gux-dismiss-button": {
     "dismiss": "Odrzuć"
   },
@@ -426,25 +145,14 @@
     "dropdown": "Lista rozwijana"
   },
   "gux-form-field-number": {
-    "increment": "Zwiększ",
-    "decrement": "Zmniejsz"
-  },
-  "gux-form-field-phone": {
-    "required": "Wymagane",
-    "invalidPhoneNumber": "Numer jest nieprawidłowy"
+    "increment": "Zwiększ przyrostowo",
+    "decrement": "Zmniejsz przyrostowo"
   },
   "gux-form-field-time-picker": {
-    "required": "Wymagane"
+    "required": "Required"
   },
   "gux-form-field-input-clear-button": {
     "clear": "Wyczyść"
-  },
-  "gux-create-option": {
-    "createCustomOptionInstructions": ", wybierz w celu utworzenia nowej opcji niestandardowej",
-    "createOption": "Dodaj \"{optionValue}\""
-  },
-  "gux-option-multi": {
-    "removeCustomElementInstructions": ", anulowanie wyboru tej opcji niestandardowej spowoduje jej usunięcie z listy"
   },
   "gux-listbox-multi": {
     "add": "Dodaj {name}",
@@ -456,25 +164,25 @@
     "loading": "Wczytywanie..."
   },
   "gux-pagination-cursor": {
-    "previous": "Wstecz",
-    "next": "Dalej"
+    "previous": "Poprzednia",
+    "next": "Następna"
   },
   "gux-pagination-buttons": {
     "page": "Strona",
     "totalPages": " z {totalPages, number}",
     "first": "Pierwsza",
-    "previous": "Wstecz",
-    "next": "Dalej",
+    "previous": "Poprzednia",
+    "next": "Następna",
     "last": "Ostatnia",
-    "pageInputLabel": "Strona {currentPage, number} z {totalPages, number}"
+    "pageInputLabel": "Str. {currentPage, number} z {totalPages, number}"
   },
   "gux-pagination-item-counts": {
-    "itemCountDisplay": "{firstItem, number}–{lastItem, number}",
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
     "totalItems": " z {totalItems, number}"
   },
   "gux-pagination-items-per-page": {
-    "perPage": "na stronę",
-    "itemsPerPage": "Elementy na stronę"
+    "perPage": "na str.",
+    "itemsPerPage": "Elementy na str."
   },
   "gux-radial-loading": {
     "loading": "Wczytywanie"
@@ -485,8 +193,8 @@
     "scrollRight": "Przewiń w prawo",
     "options": "Opcje karty dla {tabTitle}",
     "disableNewTab": "Utworzono maksymalną liczbę kart",
-    "toggleSort": "Przełącz tryb sortowania klawiszem spacji",
-    "sortModeOn": "Tryb sortowania włączony. Za pomocą klawiszy strzałek w lewo i w prawo można zmienić kolejność kart. Naciśnij klawisz spacji lub Enter, aby zakończyć sortowanie. Klawisz Escape pozwala anulować sortowanie.",
+    "toggleSort": "Przełącz tryb sortowania klawiszem Spacji",
+    "sortModeOn": "Tryb sortowania włączony. Za pomocą klawiszy strzałek w lewo i w prawo można zmienić kolejność kart. Naciśnij klawisz Spacji lub Enter, aby zakończyć sortowanie. Klawisz Escape pozwala anulować sortowanie.",
     "sortComplete": "Sortowanie zakończone",
     "sortCancelled": "Sortowanie anulowane"
   },
