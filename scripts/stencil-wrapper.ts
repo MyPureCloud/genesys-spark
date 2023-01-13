@@ -33,7 +33,9 @@ const DOMAIN_LIST = [
 
 export async function registerElements() {
   if (CDN_URL) {
-    await defineCustomElements(window, { resourcesUrl: getDomain() + CDN_URL });
+    await defineCustomElements(window, {
+      resourcesUrl: `${window.location.protocol}//${getDomain() + CDN_URL}`
+    });
   } else {
     await defineCustomElements();
   }
