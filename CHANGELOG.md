@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.56.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.54.3...v3.56.0) (2023-01-13)
+
+
+### Features
+
+* **css:** add -focused and -focused-within classes for small focus ring ([4840fb8](https://github.com/MyPureCloud/genesys-webcomponents/commit/4840fb8ffd49f6eb6ec3b343a18e0a8db07d18b5))
+* **stencil-wrapper:** load assets from region domain ([594ef39](https://github.com/MyPureCloud/genesys-webcomponents/commit/594ef3971cd2949e544b0e7d64e757bc0aed9afd))
+
+
+### Bug Fixes
+
+* **jenkins:** fixing failed push of version bump ([48a6bfe](https://github.com/MyPureCloud/genesys-webcomponents/commit/48a6bfefef40c01d7fd55a9393455c6061e547d6))
+* **textarea:** textarea width and height incorrect in some instances ([530d552](https://github.com/MyPureCloud/genesys-webcomponents/commit/530d5522be2289579e4efc94677bf165c7a9d79b))
+* **toggle:** fixed some accessibility issues ([9965e23](https://github.com/MyPureCloud/genesys-webcomponents/commit/9965e23b4126051becbc5cb825f0e2484c40f919))
+
 ### [3.54.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.54.2...v3.54.3) (2023-01-09)
 
 ### [3.54.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.54.1...v3.54.2) (2023-01-09)
