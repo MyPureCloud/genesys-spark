@@ -1,9 +1,0 @@
-{
-  "page": "Sida",
-  "totalPages": " av {totalPages, number}",
-  "first": "Första",
-  "previous": "Föregående",
-  "next": "Nästa",
-  "last": "Sista",
-  "pageInputLabel": "Sida {currentPage, number} av {totalPages, number}"
-}

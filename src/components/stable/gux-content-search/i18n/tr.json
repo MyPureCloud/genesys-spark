@@ -1,6 +1,0 @@
-{
-  "eraseBtnAria": "Temizle",
-  "navigateNextBtn": "Sonraki",
-  "navigatePreviousBtn": "Önceki",
-  "totalMatches": "{matchCount, number} içerisinde {currentMatch, number}"
-}

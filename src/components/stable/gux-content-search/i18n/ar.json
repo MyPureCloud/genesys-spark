@@ -1,6 +1,0 @@
-{
-  "eraseBtnAria": "مسح",
-  "navigateNextBtn": "التالي",
-  "navigatePreviousBtn": "السابق",
-  "totalMatches": "{currentMatch, number} من {matchCount, number}"
-}

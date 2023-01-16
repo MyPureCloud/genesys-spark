@@ -1,9 +1,0 @@
-{
-  "page": "頁面",
-  "totalPages": " / {totalPages, number}",
-  "first": "第一",
-  "previous": "上一步",
-  "next": "下一步",
-  "last": "最後",
-  "pageInputLabel": "第 {currentPage, number} 頁，共 {totalPages, number} 頁"
-}

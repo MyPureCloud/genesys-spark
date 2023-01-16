@@ -1,9 +1,0 @@
-{
-  "page": "صفحة",
-  "totalPages": " من {totalPages, number}",
-  "first": "الأول",
-  "previous": "السابق",
-  "next": "التالي",
-  "last": "الأخير",
-  "pageInputLabel": "صفحة {currentPage, number} من {totalPages, number}"
-}

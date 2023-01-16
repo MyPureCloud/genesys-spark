@@ -1,9 +1,0 @@
-{
-  "page": "ページ",
-  "totalPages": " / {totalPages, number}",
-  "first": "最初",
-  "previous": "前へ",
-  "next": "次へ",
-  "last": "最後",
-  "pageInputLabel": "ページ {currentPage, number} / {totalPages, number}"
-}

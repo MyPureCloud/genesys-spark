@@ -1,9 +1,0 @@
-{
-  "page": "Sayfa",
-  "totalPages": " / {totalPages, number}",
-  "first": "İlk",
-  "previous": "Önceki",
-  "next": "Sonraki",
-  "last": "Son",
-  "pageInputLabel": "Sayfa {currentPage, number}/{totalPages, number}"
-}
