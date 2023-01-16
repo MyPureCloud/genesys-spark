@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.57.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.56.2...v3.57.0) (2023-01-16)
+
+
+### Features
+
+* **localisation:** centralised en file is now getting localised by the translation team ([234e248](https://github.com/MyPureCloud/genesys-webcomponents/commit/234e2480fca50bfb263abee7f2f0f7a51429e961))
+
 ### [3.56.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.56.1...v3.56.2) (2023-01-16)
 
 ### [3.56.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.56.0...v3.56.1) (2023-01-13)
