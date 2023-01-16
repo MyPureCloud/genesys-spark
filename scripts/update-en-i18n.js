@@ -3,7 +3,6 @@
 const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
-const locales = require('../src/i18n/locales.json');
 
 const filePatternRegex = /[\/\\]([^\/\\]+)\/i18n\/[^.]+\.json$/;
 const translationsFolder = path.join(__dirname, '../src/i18n/translations');
@@ -12,7 +11,7 @@ if (!fs.existsSync(translationsFolder)) {
   fs.mkdirSync(translationsFolder, { recursive: true });
 }
 
-locales.forEach(composeI18nFileFromComponents);
+composeI18nFileFromComponents('en');
 
 function composeI18nFileFromComponents(locale) {
   glob(`src/components/**/i18n/${locale}.json`, (err, files) => {
