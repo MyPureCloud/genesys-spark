@@ -497,6 +497,8 @@
     "scrollDown": "Rolar para baixo"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Botão de alternância"
+    "defaultAriaLabel": "Botão de alternância",
+    "toggleIsLoading": "A alternância está carregando",
+    "toggleIsFinishedLoading": "A alternância terminou de carregar"
   }
 }

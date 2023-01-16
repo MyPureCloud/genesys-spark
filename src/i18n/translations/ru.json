@@ -497,6 +497,8 @@
     "scrollDown": "Прокрутить вниз"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Переключатель"
+    "defaultAriaLabel": "Переключатель",
+    "toggleIsLoading": "Переключатель загружается",
+    "toggleIsFinishedLoading": "Загрузка переключателя завершена"
   }
 }
