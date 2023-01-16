@@ -1,4 +1,0 @@
-{
-  "itemCountDisplay": "{firstItem, number} až {lastItem, number}",
-  "totalItems": "z {totalItems, number}"
-}

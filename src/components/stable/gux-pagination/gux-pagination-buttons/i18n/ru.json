@@ -1,9 +1,0 @@
-{
-  "page": "Страница",
-  "totalPages": " из {totalPages, number}",
-  "first": "Первая",
-  "previous": "Предыдущая",
-  "next": "Следующая",
-  "last": "Последняя",
-  "pageInputLabel": "Страница {currentPage, number} из {totalPages, number}"
-}

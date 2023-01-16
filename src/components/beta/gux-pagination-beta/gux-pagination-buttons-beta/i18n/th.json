@@ -1,9 +1,0 @@
-{
-  "page": "หน้า",
-  "totalPages": " จาก {totalPages, number}",
-  "first": "แรก",
-  "previous": "ก่อนหน้า",
-  "next": "ถัดไป",
-  "last": "สุดท้าย",
-  "pageInputLabel": "หน้า {currentPage, number} จาก {totalPages, number}"
-}
