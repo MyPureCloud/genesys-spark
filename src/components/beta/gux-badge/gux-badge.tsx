@@ -2,7 +2,7 @@ import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
 import { GuxBadgeColor } from './gux-badge.types';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 

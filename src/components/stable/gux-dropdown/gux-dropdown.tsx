@@ -18,7 +18,7 @@ import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { calculateInputDisabledState } from '../../../utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '../../../utils/dom/on-input-disabled-state-change';
 import { afterNextRender } from '../../../utils/dom/after-next-render';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 

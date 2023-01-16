@@ -13,7 +13,7 @@ import {
 
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import {
   GuxItemsPerPage,

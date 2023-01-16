@@ -1,7 +1,7 @@
 import {
   newSparkE2EPage,
   a11yCheck
-} from '../../../../../../../tests/e2eTestUtils';
+} from '../../../../../../test/e2eTestUtils';
 
 describe('gux-input-radio', () => {
   it('renders', async () => {

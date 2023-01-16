@@ -13,7 +13,7 @@ import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
 import { Spec as VgSpec } from 'vega';
 
 import { getDesiredLocale } from '../../../i18n';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import { timeFormatLocale } from './gux-visualization.locale';
 

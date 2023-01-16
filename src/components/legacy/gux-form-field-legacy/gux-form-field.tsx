@@ -5,7 +5,7 @@ import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { logWarn } from '../../../utils/error/log-error';
 import { onRequiredChange } from '../../../utils/dom/on-attribute-change';
 import { preventBrowserValidationStyling } from '../../../utils/dom/prevent-browser-validation-styling';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { GuxInputTextAreaResize } from './components/gux-input-textarea/gux-input-textarea.types';
 import {
   GuxFormFieldSlottedElementType,

@@ -13,7 +13,7 @@ import {
 
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({

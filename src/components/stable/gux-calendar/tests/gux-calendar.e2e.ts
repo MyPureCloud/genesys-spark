@@ -1,4 +1,4 @@
-import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
 describe('gux-calendar', () => {
   it('renders', async () => {

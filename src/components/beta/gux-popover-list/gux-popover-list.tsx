@@ -13,7 +13,7 @@ import {
 
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { onHiddenChange } from '../../../utils/dom/on-attribute-change';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import { PopperPosition } from './gux-popover-list.types';
 

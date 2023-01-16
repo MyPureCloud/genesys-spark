@@ -11,7 +11,7 @@ import {
   Watch
 } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 

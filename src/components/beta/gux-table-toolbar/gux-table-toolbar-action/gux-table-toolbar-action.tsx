@@ -1,6 +1,6 @@
 import { Component, Element, JSX, h, Prop } from '@stencil/core';
 import { capitalizeFirstLetter } from '@utils/string/capitalize-first-letter';
-import { trackComponent } from '../../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { GuxTableToolbarActionTypes } from './gux-table-toolbar-action.types';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';

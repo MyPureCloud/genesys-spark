@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '../../../utils/error/log-error';
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
 

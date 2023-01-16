@@ -1,5 +1,5 @@
 import { Component, Element, h, JSX } from '@stencil/core';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot - Alternative slot for setting error message if named slot can not be used.

@@ -1,5 +1,5 @@
 import { E2EElement } from '@stencil/core/testing';
-import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
 function getInternalProgressBar(radialLoadingElement: E2EElement): Element {
   return radialLoadingElement.shadowRoot.querySelector(

@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import {
   getBaseSvgHtml,

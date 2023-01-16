@@ -1,6 +1,6 @@
 import { Component, Element, Prop, h, JSX } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 @Component({
   styleUrl: 'gux-page-loading-spinner.less',

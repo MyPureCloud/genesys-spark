@@ -1,6 +1,6 @@
 import { E2EPage } from '@stencil/core/testing';
 
-import { newSparkE2EPage, a11yCheck } from '../../../../../tests/e2eTestUtils';
+import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
 async function clickActionButton(page: E2EPage): Promise<void> {
   return await page.evaluate(() => {

@@ -1,7 +1,7 @@
 import { Component, Element, h, JSX } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 

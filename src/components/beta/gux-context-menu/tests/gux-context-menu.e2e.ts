@@ -1,6 +1,6 @@
 import { E2EPage } from '@stencil/core/testing';
 
-import { a11yCheck, newSparkE2EPage } from '../../../../../tests/e2eTestUtils';
+import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
 
 const html = `
 <gux-context-menu-beta>

@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Listen, Prop } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot - collection of gux-accordion-section elements

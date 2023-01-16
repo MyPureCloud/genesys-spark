@@ -1,4 +1,4 @@
-import { newSparkE2EPage } from '../../../../../../tests/e2eTestUtils';
+import { newSparkE2EPage } from '../../../../../test/e2eTestUtils';
 
 describe('click', () => {
   it('should fire a click event when the toolbar action is clicked', async () => {

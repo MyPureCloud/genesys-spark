@@ -3,7 +3,7 @@
 import { Component, Element, h, JSX, Prop, Watch } from '@stencil/core';
 import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
 

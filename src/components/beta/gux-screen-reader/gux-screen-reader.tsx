@@ -1,6 +1,6 @@
 import { Component, JSX, h, Element } from '@stencil/core';
 
-import { trackComponent } from '../../../usage-tracking';
+import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot - text
