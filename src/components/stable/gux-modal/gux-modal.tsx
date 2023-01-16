@@ -9,6 +9,7 @@ import {
   Prop
 } from '@stencil/core';
 import { trackComponent } from '../../../usage-tracking';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 
 import { GuxModalSize } from './gux-modal.types';
 
@@ -83,21 +84,27 @@ export class GuxModal {
   render(): JSX.Element {
     const hasModalTitleSlot = this.hasModalTitleSlot();
     const hasFooterButtons = this.hasFooterButtons();
+    const titleID: string = randomHTMLId();
 
     return (
-      <div class="gux-modal">
+      <div
+        class="gux-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={hasModalTitleSlot ? titleID : null}
+      >
         <div class={`gux-modal-container gux-${this.size}`}>
           {this.renderModalTrapFocusEl()}
+
+          {hasModalTitleSlot && (
+            <h1 class="gux-modal-header" id={titleID}>
+              <slot name="title" />
+            </h1>
+          )}
           <gux-dismiss-button
             onClick={this.onDismissHandler.bind(this)}
             ref={el => (this.dismissButton = el)}
           ></gux-dismiss-button>
-          {hasModalTitleSlot && (
-            <h1 class="gux-modal-header">
-              <slot name="title" />
-            </h1>
-          )}
-
           <div
             class={{
               'gux-modal-content': true,
