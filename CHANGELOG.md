@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.58.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.57.2...v3.58.0) (2023-01-17)
+
+
+### Features
+
+* **gux-icon:** adjust icons ([65ec43f](https://github.com/MyPureCloud/genesys-webcomponents/commit/65ec43f9ab7d1b1bb30e552159b39087b1556f7f))
+* **gux-icon:** fix icons ([7b31dc3](https://github.com/MyPureCloud/genesys-webcomponents/commit/7b31dc3e3ad48f611eb73526e839f3149145ee5e))
+* **gux-icon:** icon files were updated ([e44dc98](https://github.com/MyPureCloud/genesys-webcomponents/commit/e44dc98e6c23211d8345ceac4ce6dd0bf6121672))
+* **gux-icon:** move cjv-calendar-clock to cjv group and add back toolbar-favorite icon ([978a681](https://github.com/MyPureCloud/genesys-webcomponents/commit/978a681c0a9a6ee2e2e049af8240bebae9626474))
+* **gux-icon:** remove person-running icon ([7a76041](https://github.com/MyPureCloud/genesys-webcomponents/commit/7a76041d05fff61782ed41cf2735bfe8b786a382))
+* **gux-icon:** update icons ([c145ea3](https://github.com/MyPureCloud/genesys-webcomponents/commit/c145ea3fff6a359ca6d9e0fcbf87eaa143532c78))
+* **gux-icon:** update icons to font awesome svgs ([e331739](https://github.com/MyPureCloud/genesys-webcomponents/commit/e3317391aafaef3a10efe5d170751b34140cfd82))
+
 ### [3.57.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.57.1...v3.57.2) (2023-01-17)
 
 ### [3.57.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.57.0...v3.57.1) (2023-01-16)
