@@ -497,6 +497,8 @@
     "scrollDown": "Nach unten blättern"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Umschalter"
+    "defaultAriaLabel": "Umschalter",
+    "toggleIsLoading": "Umschalten wird geladen",
+    "toggleIsFinishedLoading": "Umschalten wurde fertig geladen"
   }
 }

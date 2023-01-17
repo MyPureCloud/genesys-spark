@@ -497,6 +497,8 @@
     "scrollDown": "Naviga in basso"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Selettore"
+    "defaultAriaLabel": "Selettore",
+    "toggleIsLoading": "Caricamento selettore in corso",
+    "toggleIsFinishedLoading": "Caricamento selettore terminato"
   }
 }

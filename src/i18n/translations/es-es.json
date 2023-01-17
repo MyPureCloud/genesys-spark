@@ -497,6 +497,8 @@
     "scrollDown": "Desplazar abajo"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Alternar cambio"
+    "defaultAriaLabel": "Alternar cambio",
+    "toggleIsLoading": "El botón de alternancia se está cargando",
+    "toggleIsFinishedLoading": "El botón de alternancia terminó de cargarse"
   }
 }
