@@ -1,5 +1,8 @@
 const icons = [
-  { sectionName: 'Agent', iconNames: ['agent', 'agent-circle', 'agent-group'] },
+  {
+    sectionName: 'Agent',
+    iconNames: ['agent', 'agent-circle', 'agent-group']
+  },
   {
     sectionName: 'User',
     iconNames: [
@@ -41,6 +44,8 @@ const icons = [
   {
     sectionName: 'CJV',
     iconNames: [
+      'cjv-badge-file',
+      'cjv-calendar-clock',
       'cjv-custom-default',
       'cjv-custom-session',
       'cjv-default-event',
@@ -308,6 +313,7 @@ const icons = [
       'flag',
       'follow',
       'generic',
+      'lightbulb',
       'low-bandwidth',
       'lunch',
       'notes',
