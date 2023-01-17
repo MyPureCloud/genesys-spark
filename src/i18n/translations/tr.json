@@ -497,6 +497,8 @@
     "scrollDown": "Aşağı Kaydır"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Geçiş Anahtarı"
+    "defaultAriaLabel": "Geçiş Anahtarı",
+    "toggleIsLoading": "Geçiş yükleniyor",
+    "toggleIsFinishedLoading": "Geçişin yüklenmesi tamamlandı"
   }
 }

@@ -497,6 +497,8 @@
     "scrollDown": "Bla ned"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Veksleknapp"
+    "defaultAriaLabel": "Veksleknapp",
+    "toggleIsLoading": "Veksling lastes inn",
+    "toggleIsFinishedLoading": "Veksling er lastet inn"
   }
 }

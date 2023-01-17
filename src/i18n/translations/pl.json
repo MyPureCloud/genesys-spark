@@ -497,6 +497,8 @@
     "scrollDown": "Przewiń w dół"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Przełączanie"
+    "defaultAriaLabel": "Przełączanie",
+    "toggleIsLoading": "Wczytywanie przełączania",
+    "toggleIsFinishedLoading": "Wczytywanie przełączania zakończone"
   }
 }

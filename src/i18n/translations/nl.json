@@ -497,6 +497,8 @@
     "scrollDown": "Omlaag schuiven"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Schakelaar"
+    "defaultAriaLabel": "Schakelaar",
+    "toggleIsLoading": "Schakelaar wordt geladen",
+    "toggleIsFinishedLoading": "Laden van schakelaar is voltooid"
   }
 }
