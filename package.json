@@ -33,7 +33,7 @@
     "generate-versions-file": "./scripts/generate-versions-file.mjs",
     "i18n": "npm run update-en-i18n && npm run generate-start-of-week-file && npm run build-i18n",
     "lint": "npm run lint.commit && npm run lint.ts && npm run lint.css && npm run lint.svg",
-    "lint.commit": "commitlint --from $(git merge-base --fork-point origin/main)",
+    "lint.commit": "commitlint --from 30e62e0c73aa2f57776b8932e93750c04957b71f",
     "lint.css": "npx stylelint '**/*.{css,html,less}' --fix",
     "lint.fix": "npm run lint.commit && npm run lint.ts -- --fix && npm run lint.css -- --fix",
     "lint.svg": "svgo -f ./src/components/stable/gux-icon/icons",
