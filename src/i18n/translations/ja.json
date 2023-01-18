@@ -497,6 +497,8 @@
     "scrollDown": "下にスクロール"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "スイッチを切り替える"
+    "defaultAriaLabel": "スイッチを切り替える",
+    "toggleIsLoading": "トグルを読み込み中",
+    "toggleIsFinishedLoading": "トグルの読み込みが完了しました"
   }
 }

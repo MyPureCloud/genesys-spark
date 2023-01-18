@@ -497,6 +497,8 @@
     "scrollDown": "Faire défiler vers le bas"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Bouton bascule"
+    "defaultAriaLabel": "Bouton bascule",
+    "toggleIsLoading": "Le bouton bascule charge",
+    "toggleIsFinishedLoading": "Le bouton bascule est maintenant chargé"
   }
 }

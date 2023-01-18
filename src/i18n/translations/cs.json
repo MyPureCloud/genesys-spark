@@ -497,6 +497,8 @@
     "scrollDown": "Posunout dolů"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Přepínač"
+    "defaultAriaLabel": "Přepínač",
+    "toggleIsLoading": "Přepínač se načítá",
+    "toggleIsFinishedLoading": "Načítání přepínače bylo dokončeno"
   }
 }
