@@ -497,6 +497,8 @@
     "scrollDown": "Rul ned"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Til/fra-knap"
+    "defaultAriaLabel": "Til/fra-knap",
+    "toggleIsLoading": "Til/fra indlæses",
+    "toggleIsFinishedLoading": "Indlæsning af Til/fra er gennemført"
   }
 }

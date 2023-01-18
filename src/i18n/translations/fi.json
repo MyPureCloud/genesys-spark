@@ -497,6 +497,8 @@
     "scrollDown": "Vieritä alas"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Vaihtopainike"
+    "defaultAriaLabel": "Vaihtopainike",
+    "toggleIsLoading": "Vaihtopainike latautuu",
+    "toggleIsFinishedLoading": "Vaihtopainikkeen lataus on valmis"
   }
 }

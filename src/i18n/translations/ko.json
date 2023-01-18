@@ -497,6 +497,8 @@
     "scrollDown": "아래로 스크롤"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "스위치 전환"
+    "defaultAriaLabel": "스위치 전환",
+    "toggleIsLoading": "토글 로드 중",
+    "toggleIsFinishedLoading": "토글 로딩 완료"
   }
 }
