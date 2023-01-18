@@ -333,47 +333,42 @@ describe('gux-time-picker.service', () => {
 
   describe('#getLocaleClockType', () => {
     [
-      { locale: 'ar', expectedOutput: '12h' },
-      { locale: 'cs', expectedOutput: '24h' },
-      { locale: 'da', expectedOutput: '24h' },
-      { locale: 'de', expectedOutput: '24h' },
-      { locale: 'en', expectedOutput: '12h' },
-      { locale: 'es-es', expectedOutput: '24h' },
-      { locale: 'es', expectedOutput: '24h' },
-      { locale: 'fi', expectedOutput: '24h' },
-      { locale: 'fr-ca', expectedOutput: '24h' },
-      { locale: 'fr', expectedOutput: '24h' },
-      { locale: 'he', expectedOutput: '24h' },
-      { locale: 'it', expectedOutput: '24h' },
-      { locale: 'ja', expectedOutput: '24h' },
-      { locale: 'ko', expectedOutput: '12h' },
-      { locale: 'nl', expectedOutput: '24h' },
-      { locale: 'no', expectedOutput: '24h' },
-      { locale: 'pl', expectedOutput: '24h' },
-      { locale: 'pt-br', expectedOutput: '24h' },
-      { locale: 'pt-pt', expectedOutput: '24h' },
-      { locale: 'ru', expectedOutput: '24h' },
-      { locale: 'sv', expectedOutput: '24h' },
-      { locale: 'th', expectedOutput: '24h' },
-      { locale: 'tr', expectedOutput: '24h' },
-      { locale: 'zh-cn', expectedOutput: '24h' },
-      { locale: 'zh-tw', expectedOutput: '12h' }
-    ].forEach(
-      ({
-        locale,
-        expectedOutput
-      }: {
-        locale: string;
-        expectedOutput: GuxClockType;
-      }) => {
-        it(`should work as expected for "${locale}"`, async () => {
-          const element = document.createElement('div');
-          element.setAttribute('lang', locale);
+      { locale: 'ar' },
+      { locale: 'cs' },
+      { locale: 'da' },
+      { locale: 'de' },
+      { locale: 'en' },
+      { locale: 'es-es' },
+      { locale: 'es' },
+      { locale: 'fi' },
+      { locale: 'fr-ca' },
+      { locale: 'fr' },
+      { locale: 'he' },
+      { locale: 'it' },
+      { locale: 'ja' },
+      { locale: 'ko' },
+      { locale: 'nl' },
+      { locale: 'no' },
+      { locale: 'pl' },
+      { locale: 'pt-br' },
+      { locale: 'pt-pt' },
+      { locale: 'ru' },
+      { locale: 'sv' },
+      { locale: 'th' },
+      { locale: 'tr' },
+      { locale: 'zh-cn' },
+      { locale: 'zh-tw' }
+    ].forEach(({ locale }: { locale: string }) => {
+      it(`should work as expected for "${locale}"`, async () => {
+        const element = document.createElement('div');
+        element.setAttribute('lang', locale);
 
-          expect(getLocaleClockType(element)).toBe(expectedOutput);
-        });
-      }
-    );
+        // This test is purposefully not testing what clock type is returned because that is something that can change https://github.com/nodejs/node/issues/44454#issuecomment-1238246509
+        expect(getLocaleClockType(element)).toEqual(
+          expect.stringMatching(/^12h$|^24h$/)
+        );
+      });
+    });
   });
 
   describe('#incrementHour', () => {

@@ -19,7 +19,7 @@ node(nodelabels.getCombinedExecutorLabelForEnv('dev')) {
             // Compile react components to JS, match version to parent lib, publish
             sh """
                 # Set up node with the provided version
-                source ./npm-utils/scripts/install-node.sh 14.16.1
+                source ./npm-utils/scripts/install-node.sh 16.18.0
 
                 # install and build spark
                 npm ci
