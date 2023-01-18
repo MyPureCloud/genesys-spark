@@ -114,6 +114,12 @@
           color: @gux-black-90;
           background: transparent;
           border: none;
+          border-radius: 4px;
+          outline: none;
+
+          &:focus {
+            .focus-ring();
+          }
 
           &:not(:disabled):focus,
           &:not(:disabled):hover {
