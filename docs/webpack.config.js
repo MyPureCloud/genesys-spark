@@ -123,6 +123,12 @@ function generateComponentPage(exampleMarkup) {
     );
   }
 
+  if (withHtml.includes('${FA_ICON_EXAMPLE_LIST}')) {
+    const iconScript = require('./src/utils/generateFontAwesomeIcons');
+    const iconsExamplesHtml = iconScript.generateHTML();
+    withHtml = withHtml.replace('${FA_ICON_EXAMPLE_LIST}', iconsExamplesHtml);
+  }
+
   if (withHtml.includes('${LEGACY_ICON_EXAMPLE_LIST}')) {
     const iconScript = require('./src/utils/generateLegacyIcons');
     const iconsExamplesHtml = iconScript.generateHTML(
