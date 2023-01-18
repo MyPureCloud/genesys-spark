@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.58.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.58.0...v3.58.1) (2023-01-18)
+
+
+### Bug Fixes
+
+* **calendar:** removed shadow ([7b8b70f](https://github.com/MyPureCloud/genesys-webcomponents/commit/7b8b70f4d637ec4071cef997980cb18369c9e040))
+* **icon:** fixed errors on icons example page ([37d99fd](https://github.com/MyPureCloud/genesys-webcomponents/commit/37d99fdcc2849f6de04c94eb946fe1409a0f69da))
+
 ## [3.58.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.57.2...v3.58.0) (2023-01-17)
 
 
