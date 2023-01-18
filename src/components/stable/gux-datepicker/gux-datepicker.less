@@ -2,6 +2,7 @@
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/zindex.less';
 
 :host {
@@ -130,6 +131,7 @@
       gux-calendar {
         z-index: var(--gux-zindex-popup, @gux-zindex-popup);
         display: none;
+        .gux-shadow-20();
       }
     }
   }
