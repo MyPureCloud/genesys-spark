@@ -24,7 +24,7 @@ webappPipeline {
     projectName = 'spark-components'
     team = 'Core UI'
     mailer = 'CoreUI@genesys.com'
-    nodeVersion = '14.x'
+    nodeVersion = '16.x'
     testJob = 'no-tests'
     deployConfig = [:]
     manifest = customManifest('./dist') {

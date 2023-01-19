@@ -29,9 +29,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '14'
+          node-version: '16'
       # Can't use npm ci, because it fails on missing optional dependencies
-      - run: npm install
+      # Using --legacy-peer-deps because @stencil/less is unsupported and has an out of date peer dependency on @stencil/core@1
+      - run: npm install --legacy-peer-deps
 
       # This created the component specific types that are needed for eslint
       - name: Stencil

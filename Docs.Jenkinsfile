@@ -28,7 +28,7 @@ webappPipeline {
     projectName = 'common-ui-docs/genesys-webcomponents'
     team = 'Core UI'
     mailer = 'CoreUI@genesys.com'
-    nodeVersion = '14.x'
+    nodeVersion = '16.x'
     testJob = 'no-tests'
     deployConfig = [dev : 'always']
     manifest = customManifest('./docs/dist') {
