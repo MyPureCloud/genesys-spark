@@ -497,6 +497,8 @@
     "scrollDown": "向下捲動"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "切換開關"
+    "defaultAriaLabel": "切換開關",
+    "toggleIsLoading": "切換正載入中",
+    "toggleIsFinishedLoading": "切換已載入完成"
   }
 }
