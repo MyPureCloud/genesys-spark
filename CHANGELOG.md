@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.59.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.58.4...v3.59.0) (2023-01-20)
+
+
+### Features
+
+* **gux-form-field-color:** update design ([229f4f9](https://github.com/MyPureCloud/genesys-webcomponents/commit/229f4f9d9e1dbe682a122fbd83352a1bda58ae99))
+
+
+### Bug Fixes
+
+* **datepicker:** fixed calendar icon focus state ([91749e5](https://github.com/MyPureCloud/genesys-webcomponents/commit/91749e54e508a88f7042e606da8a4e40509852fe))
+
 ### [3.58.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.58.3...v3.58.4) (2023-01-19)
 
 ### [3.58.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.58.2...v3.58.3) (2023-01-19)
