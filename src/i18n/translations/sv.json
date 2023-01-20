@@ -497,6 +497,8 @@
     "scrollDown": "Rulla ner"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "Växlingskontroll "
+    "defaultAriaLabel": "Växlingskontroll ",
+    "toggleIsLoading": "Växla läses in",
+    "toggleIsFinishedLoading": "Växla har lästs in"
   }
 }
