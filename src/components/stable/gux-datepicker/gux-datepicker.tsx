@@ -10,7 +10,7 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import { createPopper, Instance } from '@popperjs/core';
+import { autoUpdate, computePosition, flip, offset } from '@floating-ui/dom';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
@@ -71,9 +71,8 @@ export class GuxDatepicker {
   lastYear: number = new Date().getFullYear();
   startInputId: string = randomHTMLId('gux-datepicker');
   endInputId: string = randomHTMLId('gux-datepicker');
+  private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
   i18n: GetI18nValue;
-
-  private popperInstance: Instance;
 
   @Element()
   root: HTMLElement;
@@ -664,37 +663,50 @@ export class GuxDatepicker {
     this.updateDate();
   }
 
-  componentDidLoad() {
-    this.popperInstance = createPopper(
+  private runUpdatePosition(): void {
+    this.cleanupUpdatePosition = autoUpdate(
       this.datepickerElement,
       this.calendarElement,
+      () => this.updatePosition(),
       {
-        strategy: 'fixed',
-        modifiers: [
-          {
-            name: 'offset',
-            options: {
-              offset: [0, -3]
-            }
-          },
-          {
-            name: 'flip',
-            options: {
-              boundary: []
-            }
-          }
-        ],
-        placement: 'bottom-start'
+        ancestorScroll: true,
+        elementResize: true,
+        animationFrame: true,
+        ancestorResize: true
       }
     );
   }
 
+  private updatePosition(): void {
+    void computePosition(this.datepickerElement, this.calendarElement, {
+      strategy: 'fixed',
+      placement: 'bottom-start',
+      middleware: [
+        offset({ crossAxis: -3 }),
+        flip({
+          fallbackStrategy: 'initialPlacement'
+        })
+      ]
+    }).then(({ x, y }) => {
+      Object.assign(this.calendarElement.style, {
+        left: `${x}px`,
+        top: `${y}px`
+      });
+    });
+  }
+
   componentDidUpdate() {
-    this.popperInstance?.forceUpdate();
+    if (this.active) {
+      this.runUpdatePosition();
+    } else if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
   }
 
   disconnectedCallback(): void {
-    this.popperInstance?.destroy();
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
   }
 
   renderCalendarToggleButton(): JSX.Element {

@@ -62,6 +62,7 @@
     "update-en-i18n": "./scripts/update-en-i18n.js"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.1.0",
     "@popperjs/core": "^2.11.6",
     "google-libphonenumber": "^3.2.31",
     "intl-messageformat": "^10.2.5",
