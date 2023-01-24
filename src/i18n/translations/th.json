@@ -497,6 +497,8 @@
     "scrollDown": "เลื่อนลง"
   },
   "gux-toggle": {
-    "defaultAriaLabel": "สลับสวิตช์"
+    "defaultAriaLabel": "สลับสวิตช์",
+    "toggleIsLoading": "กำลังโหลดปุ่มสลับ",
+    "toggleIsFinishedLoading": "โหลดปุ่มสลับเสร็จแล้ว"
   }
 }
