@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.60.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.59.1...v3.60.0) (2023-01-24)
+
+
+### Features
+
+* **gux-datepicker:** migrate to floating ui ([#1102](https://github.com/MyPureCloud/genesys-webcomponents/issues/1102)) ([d2e4da3](https://github.com/MyPureCloud/genesys-webcomponents/commit/d2e4da3a1f6e7c6a5f67dfcb152eb8f90207951a))
+
 ### [3.59.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.59.0...v3.59.1) (2023-01-24)
 
 ## [3.59.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.58.4...v3.59.0) (2023-01-20)
