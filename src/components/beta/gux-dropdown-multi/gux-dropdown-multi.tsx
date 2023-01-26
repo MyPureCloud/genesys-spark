@@ -30,7 +30,7 @@ import { GuxFilterTypes } from '../../stable/gux-dropdown/gux-dropdown.types';
 @Component({
   styleUrl: 'gux-dropdown-multi.less',
   tag: 'gux-dropdown-multi-beta',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxDropdownMulti {
   private i18n: GetI18nValue;

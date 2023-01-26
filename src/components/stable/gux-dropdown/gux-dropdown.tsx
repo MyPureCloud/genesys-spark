@@ -31,7 +31,7 @@ import { GuxFilterTypes } from './gux-dropdown.types';
 @Component({
   styleUrl: 'gux-dropdown.less',
   tag: 'gux-dropdown',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxDropdown {
   private i18n: GetI18nValue;
