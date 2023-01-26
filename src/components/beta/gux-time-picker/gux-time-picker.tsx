@@ -298,7 +298,22 @@ export class GuxTimePickerBeta {
           onClick={(e: MouseEvent) => this.toggleAmPm(e)}
           onKeyDown={(e: KeyboardEvent) => this.onAmPmButtonKeyDown(e)}
         >
-          {this.getAmPmString()}
+          <div
+            class={{
+              'gux-meridiem': true,
+              'gux-visible': isAm(this.value)
+            }}
+          >
+            {this.i18n('am')}
+          </div>
+          <div
+            class={{
+              'gux-meridiem': true,
+              'gux-visible': !isAm(this.value)
+            }}
+          >
+            {this.i18n('pm')}
+          </div>
         </button>
       ) as JSX.Element;
     }

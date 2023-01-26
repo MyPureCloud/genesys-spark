@@ -66,6 +66,9 @@
     }
 
     .gux-input-time-am-pm-selector {
+      display: grid;
+      grid-template: auto 1fr / auto 1fr auto;
+      place-items: flex-end;
       padding: 0;
       font-size: 12px;
       font-weight: bold;
@@ -81,6 +84,16 @@
 
       &:focus-visible {
         color: @gux-blue-60;
+      }
+
+      .gux-meridiem {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        visibility: hidden;
+
+        &.gux-visible {
+          visibility: visible;
+        }
       }
     }
 
