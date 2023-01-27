@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.60.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.1...v3.60.2) (2023-01-27)
+
+
+### Bug Fixes
+
+* **dropdown:** now delegating focus as expected ([815bb1c](https://github.com/MyPureCloud/genesys-webcomponents/commit/815bb1c7742af20566f86828b5292800812bc120))
+* **form-field:** added guard to hasContent check ([f6ed7f0](https://github.com/MyPureCloud/genesys-webcomponents/commit/f6ed7f0b6b904d999f1940d31dc074197ddd7c0c))
+* **time-picker:** fixed 12 hour picker alignment ([bd0af77](https://github.com/MyPureCloud/genesys-webcomponents/commit/bd0af772f85b4c604e1d46b3fce3dff047050c91))
+
 ### [3.60.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.0...v3.60.1) (2023-01-26)
 
 
