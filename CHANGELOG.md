@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.60.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.2...v3.60.3) (2023-01-27)
+
+
+### Bug Fixes
+
+* **stencil-wrapper:** exclude FedRAMP domain from asset loading logic ([fa337a8](https://github.com/MyPureCloud/genesys-webcomponents/commit/fa337a8038773d44869ab1953343a0e59820112b))
+
 ### [3.60.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.1...v3.60.2) (2023-01-27)
 
 
