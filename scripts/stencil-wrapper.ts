@@ -27,7 +27,7 @@ const DOMAIN_LIST = [
   'mypurecloud.jp',
   'sae1.pure.cloud',
   'use2.maximus-pure.cloud',
-  'use2.us-gov-pure.cloud',
+  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP and should fallback to the default domain
   'usw2.pure.cloud'
 ];
 
