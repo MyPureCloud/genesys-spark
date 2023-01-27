@@ -13,7 +13,12 @@ exports[`gux-time-picker-beta #render should render as expected 1`] = `
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-label="AM selected, click to toggle" class="gux-input-time-am-pm-selector" type="button">
-          AM
+          <div class="gux-meridiem gux-visible">
+            AM
+          </div>
+          <div class="gux-meridiem">
+            PM
+          </div>
         </button>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
           <gux-icon decorative="" icon-name="clock-outline"></gux-icon>
