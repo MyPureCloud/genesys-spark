@@ -12,7 +12,7 @@ export function clearInput(input: HTMLInputElement): void {
 export function hasContent(
   input: HTMLInputElement | HTMLTextAreaElement
 ): boolean {
-  return Boolean(input.value);
+  return Boolean(input?.value);
 }
 
 export function getComputedLabelPosition(
