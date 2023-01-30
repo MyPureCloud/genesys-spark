@@ -1,8 +1,8 @@
-<h1>gux-popover</h1>
+<h1>gux-popover-beta</h1>
 <div class="scroll-container">
   <div class="scroll-interior">
     <div id="popover-target">Example Element</div>
-    <gux-popover id="popover-example" position="top" for="popover-target">
+    <gux-popover-beta id="popover-example" position="top" for="popover-target">
       <div style="width: 200px">
         <div>popover content</div>
         <gux-dropdown filterable placeholder="Select a country">
@@ -13,7 +13,7 @@
           </gux-listbox>
         </gux-dropdown>
       </div>
-    </gux-popover>
+    </gux-popover-beta>
   </div>
 </div>
 
@@ -21,8 +21,9 @@
   onload="(function () {
   const popoverTarget = document.getElementById('popover-target');
   const popoverExample = document.getElementById('popover-example');
+
   popoverTarget.addEventListener('mouseover', () => {
-    popoverExample.hidden = false;
+    popoverExample.isOpen = true;
   });
 })()"
 >
