@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.60.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.3...v3.60.4) (2023-01-30)
+
+
+### Bug Fixes
+
+* **gux-popover-beta:** fix arrow placement ([#1112](https://github.com/MyPureCloud/genesys-webcomponents/issues/1112)) ([d6a29c9](https://github.com/MyPureCloud/genesys-webcomponents/commit/d6a29c983a792b829f9b65661a126dff3de5f379))
+
 ### [3.60.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.2...v3.60.3) (2023-01-27)
 
 
