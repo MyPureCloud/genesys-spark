@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.60.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.4...v3.60.5) (2023-01-31)
+
+
+### Bug Fixes
+
+* **simple-toast:** change icon size to 16x16 ([69cc297](https://github.com/MyPureCloud/genesys-webcomponents/commit/69cc297dca94560d117a2917c424382ad03d68ec))
+
 ### [3.60.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.3...v3.60.4) (2023-01-30)
 
 
