@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.60.7](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.6...v3.60.7) (2023-02-01)
+
+
+### Bug Fixes
+
+* **table-toolbar:** update vertical seperation bar, addition of prop for menu ([986ae2a](https://github.com/MyPureCloud/genesys-webcomponents/commit/986ae2a0019dbc086839aa25dbd3107cd190a2c1))
+
 ### [3.60.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.5...v3.60.6) (2023-02-01)
 
 ### [3.60.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.4...v3.60.5) (2023-01-31)
