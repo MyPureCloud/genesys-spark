@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Prop,
+  State,
+  Host
+} from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 import { OnClickOutside } from '../../../../utils/decorator/on-click-outside';
@@ -19,6 +28,9 @@ export class GuxTableToolbarMenuButton {
 
   @Element()
   private root: HTMLElement;
+
+  @Prop()
+  showMenu: boolean;
 
   @State()
   expanded: boolean = false;
@@ -98,29 +110,31 @@ export class GuxTableToolbarMenuButton {
 
   render(): JSX.Element {
     return (
-      <gux-popup expanded={this.expanded}>
-        <div slot="target" class="gux-toolbar-menu-container">
-          <gux-button-slot-beta class="gux-menu-button">
-            <button
-              type="button"
-              ref={el => (this.dropdownButton = el)}
-              onMouseUp={() => this.toggle()}
-              aria-haspopup="true"
-              aria-expanded={this.expanded.toString()}
-            >
-              <gux-icon
-                screenreader-text={this.i18n('additionalActions')}
-                icon-name="menu-kebab-horizontal"
-              ></gux-icon>
-            </button>
-          </gux-button-slot-beta>
-        </div>
-        <div class="gux-list-container" slot="popup">
-          <gux-list ref={el => (this.listElement = el)}>
-            <slot />
-          </gux-list>
-        </div>
-      </gux-popup>
+      <Host class={{ 'gux-show-menu': this.showMenu }}>
+        <gux-popup expanded={this.expanded}>
+          <div slot="target" class="gux-toolbar-menu-container">
+            <gux-button-slot-beta class="gux-menu-button">
+              <button
+                type="button"
+                ref={el => (this.dropdownButton = el)}
+                onMouseUp={() => this.toggle()}
+                aria-haspopup="true"
+                aria-expanded={this.expanded.toString()}
+              >
+                <gux-icon
+                  screenreader-text={this.i18n('additionalActions')}
+                  icon-name="menu-kebab-horizontal"
+                ></gux-icon>
+              </button>
+            </gux-button-slot-beta>
+          </div>
+          <div class="gux-list-container" slot="popup">
+            <gux-list ref={el => (this.listElement = el)}>
+              <slot />
+            </gux-list>
+          </div>
+        </gux-popup>
+      </Host>
     ) as JSX.Element;
   }
 }
