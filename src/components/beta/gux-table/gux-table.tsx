@@ -424,7 +424,11 @@ export class GuxTable {
 
   /** Scale column pixel widths equal when a resize is observed */
   private scaleColumnWidths(): void {
-    if (!this.columnResizeState && this.resizableColumns) {
+    if (
+      !this.columnResizeState &&
+      this.resizableColumns &&
+      !this.isHorizontalScroll
+    ) {
       const oldColumnWidths = this.calculateColumnWidths(this.tableColumns);
       const oldTableWidth = this.tableWidth;
       const newTableWidth = this.getElementComputedWidth(this.slottedTable);
