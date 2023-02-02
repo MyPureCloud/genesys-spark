@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.60.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.7...v3.60.8) (2023-02-02)
+
+
+### Bug Fixes
+
+* **table:** fix infinite scale issue ([1bd9bf2](https://github.com/MyPureCloud/genesys-webcomponents/commit/1bd9bf2cff02a1067d67bd17a49e5a06d0431432))
+
 ### [3.60.7](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.6...v3.60.7) (2023-02-01)
 
 
