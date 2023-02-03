@@ -8,9 +8,19 @@ describe('gux-popover', () => {
         <div id="popover-target">
           Example Element
         </div>
-        <gux-popover position="top" for="popover-target">
+        <gux-popover
+        id="popover-example"
+        position="top"
+        for="popover-target"
+        display-dismiss-button
+      >
+        <span slot="title">Title of popover</span>
+        <div slot="content">
           <div>popover content</div>
-        </gux-popover>
+        </div>
+        <gux-button slot="action-button" accent="ghost">Button 1</gux-button>
+        <gux-button slot="action-button" accent="primary">Button 2</gux-button>
+      </gux-popover>
       </div>
       `
     });
@@ -24,13 +34,13 @@ describe('gux-popover', () => {
     const page = await newSparkE2EPage({
       html: `
       <div lang="en">
-        <div id="popover-target">
-          Example Element
-        </div>
-        <gux-popover position="top" for="popover-target" display-dismiss-button>
-          <div>popover content</div>
-        </gux-popover>
+      <div id="popover-target">
+        Example Element
       </div>
+      <gux-popover position="top" for="popover-target" display-dismiss-button>
+        <div slot ="title">popover content</div>
+      </gux-popover>
+    </div>
       `
     });
 
@@ -48,17 +58,28 @@ describe('gux-popover', () => {
         <div id="popover-target">
           Example Element
         </div>
-        <gux-popover position="top" for="popover-target">
+        <gux-popover
+        id="popover-example"
+        position="top"
+        for="popover-target"
+      >
+        <span slot="title">Title of popover</span>
+        <div slot="content">
           <div>popover content</div>
-        </gux-popover>
+        </div>
+        <gux-button slot="action-button" accent="ghost">Button 1</gux-button>
+        <gux-button slot="action-button" accent="primary">Button 2</gux-button>
+      </gux-popover>
       </div>
       `
     });
 
     const component = await page.find('gux-popover');
-    component.setProperty('displayDismissDutton', false);
+    component.setProperty('displayDismissButton', false);
     await page.waitForChanges();
-    const button = await page.find('pierce/gux-dismiss-button');
+    const button = await page.find(
+      'pierce/.gux-popover-header .gux-popover-header gux-dismiss-button'
+    );
     await a11yCheck(page);
     expect(button).toBeNull();
   });

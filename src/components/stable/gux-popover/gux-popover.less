@@ -2,6 +2,7 @@
 @import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/zindex.less';
+@import (reference) '../../../style/typography.less';
 
 @gux-arrow-height: 5px;
 
@@ -14,9 +15,8 @@
   display: inline-block;
   padding: @gux-spacing-medium;
   background-color: @gux-grey-100;
-  border: 1px solid @gux-grey-30;
-  border-radius: @gux-spacing-2xs;
-  .gux-shadow-20();
+  border-radius: @spacing-2xs;
+  .gux-shadow-40();
 
   .gux-arrow,
   .gux-arrow::before {
@@ -42,11 +42,6 @@
     .gux-arrow {
       top: -1 * (@gux-arrow-height);
     }
-
-    .gux-arrow::before {
-      border-top: 1px solid @gux-grey-30;
-      border-left: 1px solid @gux-grey-30;
-    }
   }
 
   &[data-popper-placement='top'],
@@ -54,11 +49,6 @@
   &[data-popper-placement='top-end'] {
     .gux-arrow {
       bottom: -1 * (@gux-arrow-height);
-    }
-
-    .gux-arrow::before {
-      border-right: 1px solid @gux-grey-30;
-      border-bottom: 1px solid @gux-grey-30;
     }
   }
 
@@ -68,11 +58,6 @@
     .gux-arrow {
       right: -1 * (@gux-arrow-height);
     }
-
-    .gux-arrow::before {
-      border-top: 1px solid @gux-grey-30;
-      border-right: 1px solid @gux-grey-30;
-    }
   }
 
   &[data-popper-placement='right'],
@@ -81,10 +66,30 @@
     .gux-arrow {
       left: -1 * (@gux-arrow-height);
     }
+  }
 
-    .gux-arrow::before {
-      border-bottom: 1px solid @gux-grey-30;
-      border-left: 1px solid @gux-grey-30;
+  .gux-popover-header {
+    .body-font-bold();
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: @gux-spacing-medium;
+  }
+
+  gux-dismiss-button {
+    float: right;
+  }
+
+  .gux-popover-content {
+    ::slotted(*) {
+      display: flex;
+      flex-direction: column;
+      gap: @gux-spacing-medium;
+      justify-content: flex-start;
+      .body-font();
     }
   }
 }
