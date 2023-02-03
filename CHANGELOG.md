@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.61.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.8...v3.61.0) (2023-02-03)
+
+
+### Features
+
+* **popover:** update to popover design ([e2a9f09](https://github.com/MyPureCloud/genesys-webcomponents/commit/e2a9f091932eaaffd6db4815d742eab14508f7ad))
+
+
+### Bug Fixes
+
+* **dropdown-multi:** addition of MutationObserver ([3ccecfa](https://github.com/MyPureCloud/genesys-webcomponents/commit/3ccecfa5419336f0b37552501aa79f33df4e27a0))
+
 ### [3.60.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.7...v3.60.8) (2023-02-02)
 
 
