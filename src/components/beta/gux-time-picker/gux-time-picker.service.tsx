@@ -108,7 +108,6 @@ export function getHourDisplayValue(
   clockType: GuxClockType
 ): string {
   const [hour] = getDisplayValue(value, clockType).split(':');
-
   return hour;
 }
 
@@ -120,7 +119,6 @@ export function getMinuteDisplayValue(value: GuxISOHourMinute): string {
 
 export function isAm(value: GuxISOHourMinute): boolean {
   const [hour] = value.split(':');
-
   return parseInt(hour, 10) < 12;
 }
 
@@ -140,18 +138,26 @@ export function getValidValueHourChange(
   value: GuxISOHourMinute,
   clockType: GuxClockType,
   change: string,
-  selectionStart: number
+  selectionStart: number,
+  hourInputLength: number
 ): GuxISOHourMinute {
   const [displayValue, minute] = getDisplayValue(value, clockType).split(':');
 
   let wantedDisplayValue = displayValue;
 
   if (change === 'Backspace') {
-    wantedDisplayValue = wantedDisplayValue
-      .split('')
-      .filter((_, i) => i !== selectionStart - 1)
-      .join('')
-      .padStart(2, '0');
+    if (clockType == '12h' && hourInputLength == 1) {
+      wantedDisplayValue = wantedDisplayValue
+        .split('')
+        .filter((_, i) => i == selectionStart - 1)
+        .join('');
+    } else {
+      wantedDisplayValue = wantedDisplayValue
+        .split('')
+        .filter((_, i) => i !== selectionStart - 1)
+        .join('')
+        .padStart(2, '0');
+    }
   } else {
     wantedDisplayValue = parseInt(
       wantedDisplayValue.slice(0, selectionStart) +
@@ -171,7 +177,6 @@ export function getValidValueHourChange(
       wantedDisplayValue = change.padStart(2, '0');
     }
   }
-
   return getValue(`${wantedDisplayValue}:${minute}`, clockType, isAm(value));
 }
 

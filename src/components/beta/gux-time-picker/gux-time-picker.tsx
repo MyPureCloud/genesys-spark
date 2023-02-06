@@ -173,18 +173,21 @@ export class GuxTimePickerBeta {
       case '6':
       case '7':
       case '8':
-      case '9': {
-        event.preventDefault();
-        this.updateValue(
-          getValidValueHourChange(
-            this.value,
-            this.clockType,
-            event.key,
-            this.hourInputElement.selectionStart
-          )
-        );
+      case '9':
+        {
+          event.preventDefault();
+          this.hourInputElement.setSelectionRange(2, 2);
+          this.updateValue(
+            getValidValueHourChange(
+              this.value,
+              this.clockType,
+              event.key,
+              this.hourInputElement.selectionStart,
+              this.hourInputElement.value.length
+            )
+          );
+        }
         break;
-      }
       default:
         event.preventDefault();
     }
@@ -218,6 +221,7 @@ export class GuxTimePickerBeta {
       case '8':
       case '9': {
         event.preventDefault();
+        this.minuteInputElement.setSelectionRange(2, 2);
         this.updateValue(
           getValidValueMinuteChange(
             this.value,
