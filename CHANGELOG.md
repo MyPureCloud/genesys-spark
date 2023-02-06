@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.61.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.61.0...v3.61.1) (2023-02-06)
+
+
+### Bug Fixes
+
+* **stencil-wrapper:** load assets using https ([#1128](https://github.com/MyPureCloud/genesys-webcomponents/issues/1128)) ([92d789a](https://github.com/MyPureCloud/genesys-webcomponents/commit/92d789ae94fc1f1140d5ba6752bfef8c5fac6c61))
+
 ## [3.61.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.60.8...v3.61.0) (2023-02-03)
 
 
