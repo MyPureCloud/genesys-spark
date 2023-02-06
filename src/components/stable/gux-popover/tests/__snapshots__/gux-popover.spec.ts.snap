@@ -1,13 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-popover #render should render popover 1`] = `
-<gux-popover display-dismiss-button="" for="popover-target" id="popover-example" position="top">
+<gux-popover for="popover-target" id="popover-example" position="top">
   <mock:shadow-root>
     <div class="gux-popover-wrapper">
       <div class="gux-arrow" data-popper-arrow></div>
       <div class="gux-popover-header">
         <slot name="title"></slot>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
       </div>
       <div class="gux-popover-content">
         <slot></slot>
@@ -15,18 +14,10 @@ exports[`gux-popover #render should render popover 1`] = `
     </div>
   </mock:shadow-root>
   <span slot="title">
-    Title of popover
+    Title
   </span>
-  <div slot="content">
-    <div>
-      popover content
-    </div>
+  <div>
+    popover content
   </div>
-  <gux-button accent="ghost" slot="action-button">
-    Button 1
-  </gux-button>
-  <gux-button accent="primary" slot="action-button">
-    Button 2
-  </gux-button>
 </gux-popover>
 `;

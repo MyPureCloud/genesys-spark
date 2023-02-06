@@ -19,9 +19,11 @@ import {
 
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
+import { getSlot } from '@utils/dom/get-slot';
 
 /**
  * @slot - popover content
+ * @slot title - Slot for popover title
  */
 
 @Component({
@@ -83,6 +85,10 @@ export class GuxPopoverBeta {
     ) {
       this.dismiss();
     }
+  }
+
+  get titleSlot(): HTMLSlotElement | null {
+    return getSlot(this.root, 'title');
   }
 
   private runUpdatePosition(): void {
@@ -178,6 +184,17 @@ export class GuxPopoverBeta {
     }
   }
 
+  private renderDismissButton(): JSX.Element {
+    if (this.displayDismissButton) {
+      return (
+        <gux-dismiss-button
+          onClick={this.dismiss.bind(this)}
+          position="inherit"
+        ></gux-dismiss-button>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return (
       <div
@@ -192,11 +209,10 @@ export class GuxPopoverBeta {
           ref={(el: HTMLDivElement) => (this.arrowElement = el)}
           class="gux-arrow"
         ></div>
-        {this.displayDismissButton && (
-          <gux-dismiss-button
-            onClick={this.dismiss.bind(this)}
-          ></gux-dismiss-button>
-        )}
+        <div class={{ 'gux-popover-header': Boolean(this.titleSlot) }}>
+          <slot name="title"></slot>
+          {this.renderDismissButton()}
+        </div>
         <div class="gux-popover-content">
           <slot />
         </div>
