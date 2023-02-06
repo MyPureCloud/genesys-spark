@@ -19,6 +19,7 @@ import { calculateInputDisabledState } from '../../../utils/dom/calculate-input-
 import { onInputDisabledStateChange } from '../../../utils/dom/on-input-disabled-state-change';
 import { afterNextRender } from '../../../utils/dom/after-next-render';
 import { trackComponent } from '@utils/tracking/usage';
+import { OnMutation } from '@utils/decorator/on-mutation';
 
 import translationResources from './i18n/en.json';
 
@@ -93,20 +94,8 @@ export class GuxDropdown {
   }
 
   @Watch('value')
-  validateValue(newValue: string) {
-    if (newValue === undefined) {
-      if (this.listboxElement) {
-        this.listboxElement.value = newValue;
-      }
-      return;
-    }
-
-    const selectedListboxOptionElement = this.getOptionElementByValue(newValue);
-
-    if (selectedListboxOptionElement) {
-      this.listboxElement.value = newValue;
-      return;
-    }
+  watchValue(newValue: string) {
+    this.validateValue(newValue, this.listboxElement);
   }
 
   @Watch('filter')
@@ -185,6 +174,16 @@ export class GuxDropdown {
   @Event()
   private guxfilter: EventEmitter<string>;
 
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    if (this.listboxElement) {
+      return;
+    }
+
+    this.listboxElement = this.root?.querySelector('gux-listbox');
+    this.applyListboxEventListeners();
+  }
+
   @Listen('internalexpanded')
   onInternalExpanded(event: CustomEvent): void {
     event.stopPropagation();
@@ -198,8 +197,10 @@ export class GuxDropdown {
   }
 
   connectedCallback(): void {
-    this.listboxElement = this.root.querySelector('gux-listbox');
-    this.validateValue(this.value);
+    this.listboxElement = this.root?.querySelector('gux-listbox');
+    if (this.listboxElement) {
+      this.validateValue(this.value, this.listboxElement);
+    }
   }
 
   async componentWillLoad(): Promise<void> {
@@ -212,21 +213,46 @@ export class GuxDropdown {
   }
 
   componentDidLoad(): void {
-    this.listboxElement.addEventListener('input', (event: InputEvent) => {
+    this.applyListboxEventListeners();
+  }
+
+  componentWillRender(): void {
+    if (this.listboxElement) {
+      this.validateValue(this.value, this.listboxElement);
+      this.listboxElement.loading = this.loading;
+      this.listboxElement.filterType = this.filterType;
+      this.listboxElement.filter = this.filter;
+    }
+  }
+
+  private validateValue(
+    newValue: string,
+    listboxElement: HTMLGuxListboxElement
+  ): void {
+    if (newValue === undefined) {
+      if (listboxElement) {
+        listboxElement.value = newValue;
+      }
+      return;
+    }
+
+    const selectedListboxOptionElement = this.getOptionElementByValue(newValue);
+
+    if (selectedListboxOptionElement) {
+      listboxElement.value = newValue;
+      return;
+    }
+  }
+
+  private applyListboxEventListeners(): void {
+    this.listboxElement?.addEventListener('input', (event: InputEvent) => {
       event.stopPropagation();
 
       this.updateValue((event.target as HTMLGuxListboxElement).value);
     });
-    this.listboxElement.addEventListener('change', (event: InputEvent) => {
+    this.listboxElement?.addEventListener('change', (event: InputEvent) => {
       event.stopPropagation();
     });
-  }
-
-  componentWillRender(): void {
-    this.validateValue(this.value);
-    this.listboxElement.loading = this.loading;
-    this.listboxElement.filterType = this.filterType;
-    this.listboxElement.filter = this.filter;
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
