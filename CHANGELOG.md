@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.61.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.61.1...v3.61.2) (2023-02-07)
+
+
+### Bug Fixes
+
+* **dropdown:** addition of mutation observer to dropdown ([8d2acf2](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d2acf2a673204c708a6409efafe627fa9c76360))
+
 ### [3.61.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.61.0...v3.61.1) (2023-02-06)
 
 
