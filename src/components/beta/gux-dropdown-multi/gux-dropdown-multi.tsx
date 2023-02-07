@@ -290,7 +290,7 @@ export class GuxDropdownMulti {
 
   private validateValue(
     newValue: string,
-    listboxElement: HTMLGuxListboxElement
+    listboxElement: HTMLGuxListboxMultiElement
   ): void {
     if (newValue === undefined) {
       if (listboxElement) {
