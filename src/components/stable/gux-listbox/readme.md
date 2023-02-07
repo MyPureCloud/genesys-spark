@@ -3,6 +3,11 @@
 <!-- Auto Generated Below -->
 
 
+## Overview
+
+The listbox component provides keyboard bindings and a11y patterns for selecting
+from a list of options.
+
 ## Properties
 
 | Property     | Attribute     | Description | Type                                  | Default     |
@@ -35,9 +40,9 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot | Description                       |
-| ---- | --------------------------------- |
-|      | collection of gux-option elements |
+| Slot | Description                                                             |
+| ---- | ----------------------------------------------------------------------- |
+|      | collection of elements conforming to the ListboxOptionElement interface |
 
 
 ## Dependencies
