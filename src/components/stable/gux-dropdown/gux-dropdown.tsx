@@ -405,11 +405,13 @@ export class GuxDropdown {
    */
   private renderSelectedItem(item: HTMLElement): JSX.Element {
     const tag = item.tagName.toLowerCase() as ValidOptionTag;
-    if (tag === 'gux-option') {
-      return (<span>{item.textContent}</span>) as JSX.Element;
-    } else {
-      const _exhaustiveCheck: never = tag;
-      return _exhaustiveCheck;
+    switch (tag) {
+      case 'gux-option':
+        return (<span>{item.textContent}</span>) as JSX.Element;
+      default:
+        // eslint-disable-next-line no-case-declarations
+        const _exhaustiveCheck: never = tag;
+        return _exhaustiveCheck;
     }
   }
 

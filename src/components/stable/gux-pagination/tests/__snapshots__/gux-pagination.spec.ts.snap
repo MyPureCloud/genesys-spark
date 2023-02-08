@@ -25,7 +25,9 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            25
+                            <span>
+                              25
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -141,7 +143,9 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            50
+                            <span>
+                              50
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -257,7 +261,9 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            75
+                            <span>
+                              75
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -373,7 +379,9 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            100
+                            <span>
+                              100
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -489,7 +497,9 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            25
+                            <span>
+                              25
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -605,7 +615,9 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            25
+                            <span>
+                              25
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -721,7 +733,9 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            50
+                            <span>
+                              50
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -837,7 +851,9 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            75
+                            <span>
+                              75
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -953,7 +969,9 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            100
+                            <span>
+                              100
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -1121,7 +1139,9 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            25
+                            <span>
+                              25
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -1237,7 +1257,9 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            25
+                            <span>
+                              25
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -1353,7 +1375,9 @@ exports[`gux-pagination #render should render current page as 1 when total items
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            25
+                            <span>
+                              25
+                            </span>
                           </div>
                         </div>
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
