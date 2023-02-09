@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.62.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.61.2...v3.62.0) (2023-02-09)
+
+
+### Features
+
+* **popover-beta:** implement new design to popover-beta ([ebbe517](https://github.com/MyPureCloud/genesys-webcomponents/commit/ebbe517762c284c17102e72b3fc01d96a1c98985))
+
 ### [3.61.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.61.1...v3.61.2) (2023-02-07)
 
 
