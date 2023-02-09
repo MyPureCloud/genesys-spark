@@ -5,12 +5,12 @@ import { GuxPopoverBeta } from '../gux-popover-beta';
 
 const components = [GuxPopoverBeta];
 const language = 'en';
-const html = `          
+const html = `
   <div>
     <div id="popover-target">
       Example Element
     </div>
-    <gux-popover-beta id="popover-example" position="top" for="popover-target">
+    <gux-popover-beta id="popover-example" position="top" for="popover-target" is-open>
       <span slot="title">Title</span>
       <div>popover content</div>
     </gux-popover-beta>

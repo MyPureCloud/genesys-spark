@@ -28,7 +28,7 @@ describe('gux-popover-beta', () => {
         <div id="popover-target">
           Example Element
         </div>
-        <gux-popover-beta position="top" for="popover-target" display-dismiss-button>
+        <gux-popover-beta position="top" for="popover-target" display-dismiss-button is-open>
           <div>popover content</div>
         </gux-popover-beta>
       </div>

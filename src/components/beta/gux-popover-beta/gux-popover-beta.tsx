@@ -64,7 +64,7 @@ export class GuxPopoverBeta {
   closeOnClickOutside: boolean = false;
 
   @Prop({ mutable: true })
-  isOpen: boolean = true;
+  isOpen: boolean = false;
 
   /**
    * Fired when a user dismisses the popover
