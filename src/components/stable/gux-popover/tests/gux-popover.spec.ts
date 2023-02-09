@@ -24,24 +24,15 @@ describe('gux-popover', () => {
       {
         description: 'should render popover',
         html: `
-          <div>
-            <div id="popover-target">
-              Example Element
-            </div>
-            <gux-popover
-            id="popover-example"
-            position="top"
-            for="popover-target"
-            display-dismiss-button
-          >
-            <span slot="title">Title of popover</span>
-            <div slot="content">
-              <div>popover content</div>
-            </div>
-            <gux-button slot="action-button" accent="ghost">Button 1</gux-button>
-            <gux-button slot="action-button" accent="primary">Button 2</gux-button>
-          </gux-popover>
-          </div>
+        <div>
+        <div id="popover-target">
+          Example Element
+        </div>
+        <gux-popover id="popover-example" position="top" for="popover-target">
+          <span slot="title">Title</span>
+          <div>popover content</div>
+        </gux-popover>
+      </div>
         `
       }
     ].forEach(({ description, html }) => {

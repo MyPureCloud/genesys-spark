@@ -11,6 +11,7 @@ const html = `
       Example Element
     </div>
     <gux-popover-beta id="popover-example" position="top" for="popover-target">
+      <span slot="title">Title</span>
       <div>popover content</div>
     </gux-popover-beta>
   </div>`;

@@ -2,6 +2,7 @@
 @import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/zindex.less';
+@import (reference) '../../../style/typography.less';
 
 @gux-arrow-height: 5px;
 
@@ -15,9 +16,8 @@
   color: @gux-black-50;
   visibility: visible !important;
   background-color: @gux-grey-100;
-  border: 1px solid @gux-grey-30;
-  border-radius: @gux-spacing-2xs;
-  .gux-shadow-20();
+  border-radius: @spacing-2xs;
+  .gux-shadow-40();
 
   &.gux-hidden {
     visibility: hidden !important;
@@ -63,6 +63,31 @@
     .gux-arrow {
       border-bottom: 1px solid @gux-grey-30;
       border-left: 1px solid @gux-grey-30;
+    }
+  }
+
+  .gux-popover-header {
+    .body-font-bold();
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: @gux-spacing-medium;
+  }
+
+  gux-dismiss-button {
+    float: right;
+  }
+
+  .gux-popover-content {
+    ::slotted(*) {
+      display: flex;
+      flex-direction: column;
+      gap: @gux-spacing-medium;
+      justify-content: flex-start;
+      .body-font();
     }
   }
 }

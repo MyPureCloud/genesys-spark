@@ -3,6 +3,7 @@
   <div class="scroll-interior">
     <div id="popover-target">Example Element</div>
     <gux-popover-beta id="popover-example" position="top" for="popover-target">
+      <span slot="title">Title</span>
       <div style="width: 200px">
         <div>popover content</div>
         <gux-dropdown filterable placeholder="Select a country">
@@ -28,7 +29,7 @@
 })()"
 >
   .scroll-container {
-    width: 300px;
+    width: 900px;
     height: 300px;
     margin: auto;
     overflow: scroll;
