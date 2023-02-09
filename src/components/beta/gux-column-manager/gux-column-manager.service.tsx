@@ -1,4 +1,5 @@
 import clamp from '@utils/number/clamp';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
 
 import {
   InternalOrderChange,
@@ -61,9 +62,13 @@ export function setAllCheckboxInputs(
   root: HTMLElement,
   checked: boolean
 ): void {
-  getCheckboxInputs(root).forEach(
-    checkboxInput => (checkboxInput.checked = checked)
-  );
+  getCheckboxInputs(root).forEach(checkboxInput => {
+    if (checkboxInput.checked !== checked) {
+      checkboxInput.checked = checked;
+      simulateNativeEvent(checkboxInput, 'input');
+      simulateNativeEvent(checkboxInput, 'change');
+    }
+  });
 }
 
 export function setMainCheckboxElementCheckedState(

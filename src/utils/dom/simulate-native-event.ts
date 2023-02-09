@@ -5,14 +5,15 @@ export default function simulateNativeEvent(
   switch (nativeEventName) {
     case 'change':
       return targetElement.dispatchEvent(
-        new InputEvent('change', {
-          bubbles: true
+        new Event('change', {
+          bubbles: true,
+          composed: true
         })
       );
 
     case 'input':
       return targetElement.dispatchEvent(
-        new InputEvent('input', {
+        new Event('input', {
           bubbles: true
         })
       );
