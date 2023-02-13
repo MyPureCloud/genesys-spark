@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.62.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.62.0...v3.62.1) (2023-02-13)
+
+
+### Bug Fixes
+
+* **gux-popup-beta:** action-button and button-multi now use floating-ui popup ([#1132](https://github.com/MyPureCloud/genesys-webcomponents/issues/1132)) ([29da31a](https://github.com/MyPureCloud/genesys-webcomponents/commit/29da31a3837364181b5172b91c9cf6ed01abdd37))
+
 ## [3.62.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.61.2...v3.62.0) (2023-02-09)
 
 
