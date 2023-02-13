@@ -186,7 +186,7 @@ export class GuxActionButton {
   render(): JSX.Element {
     return (
       <div class="gux-action-button-container">
-        <gux-popup expanded={this.isOpen} disabled={this.disabled}>
+        <gux-popup-beta expanded={this.isOpen} disabled={this.disabled}>
           <div slot="target" class="gux-action-button-container">
             <gux-button-slot-beta
               class="gux-action-button"
@@ -229,7 +229,7 @@ export class GuxActionButton {
               <slot />
             </gux-list>
           </div>
-        </gux-popup>
+        </gux-popup-beta>
       </div>
     ) as JSX.Element;
   }
