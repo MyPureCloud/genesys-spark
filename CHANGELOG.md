@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.63.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.62.1...v3.63.0) (2023-02-14)
+
+
+### Features
+
+* **gux-icon:** add requested icons ([40f2957](https://github.com/MyPureCloud/genesys-webcomponents/commit/40f29570238c712b928b618f553f9b47cce4b803))
+
+
+### Bug Fixes
+
+* **column-manager:** checkbox events dispatched on (de)select all checkbox click ([50ff5b2](https://github.com/MyPureCloud/genesys-webcomponents/commit/50ff5b2cad2639bc17710f625f527ed739c79ae0))
+* **popover-beta:** change is-open property default to false ([ca7a518](https://github.com/MyPureCloud/genesys-webcomponents/commit/ca7a5183e408a1474aff14561cd299eb5a067711))
+* **pr-comment:** addressed PR comment ([3bf1812](https://github.com/MyPureCloud/genesys-webcomponents/commit/3bf181225df62f7c716beae10b8bbe342806f4a2))
+
 ### [3.62.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.62.0...v3.62.1) (2023-02-13)
 
 
