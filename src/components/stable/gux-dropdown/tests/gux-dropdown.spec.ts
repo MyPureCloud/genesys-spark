@@ -3,7 +3,7 @@ import MutationObserver from 'mutation-observer';
 
 import { GuxDropdown } from '../gux-dropdown';
 import { GuxListbox } from '../../gux-listbox/gux-listbox';
-import { GuxOption } from '../../gux-listbox/gux-option/gux-option';
+import { GuxOption } from '../../gux-listbox/options/gux-option/gux-option';
 
 const components = [GuxDropdown, GuxListbox, GuxOption];
 const html = `

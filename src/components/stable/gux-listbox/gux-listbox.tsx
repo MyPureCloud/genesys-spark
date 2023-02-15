@@ -13,7 +13,6 @@ import {
 } from '@stencil/core';
 
 import {
-  ListboxOptionElement,
   actOnActiveOption,
   clearActiveOptions,
   goToOption,
@@ -27,6 +26,7 @@ import {
   setPreviousOptionActive,
   matchOption
 } from './gux-listbox.service';
+import { ListboxOptionElement } from './options/option-types';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
@@ -156,7 +156,8 @@ export class GuxListbox {
 
   @Listen('click')
   onClick(event: MouseEvent): void {
-    whenEventIsFrom('gux-option', event, (option: ListboxOptionElement) => {
+    // If it's got a value attribute, that's good enough.
+    whenEventIsFrom('[value]', event, (option: ListboxOptionElement) => {
       onClickedOption(option, value => this.updateValue(value));
     });
   }

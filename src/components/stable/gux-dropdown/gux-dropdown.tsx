@@ -25,11 +25,10 @@ import translationResources from './i18n/en.json';
 
 import { getSearchOption } from '../gux-listbox/gux-listbox.service';
 import {
-  GuxFilterTypes,
-  OptionInterface,
-  ValidOptionTag,
-  validOptionTags
-} from './gux-dropdown.types';
+  ListboxOptionElement,
+  ValidOptionTag
+} from '../gux-listbox/options/option-types';
+import { GuxFilterTypes } from './gux-dropdown.types';
 
 /**
  * Our Dropdown component. In the most basic case, it's used with `gux-option` to give users
@@ -279,16 +278,14 @@ export class GuxDropdown {
     );
   }
 
-  get optionElements(): Array<OptionInterface> {
-    const optionSelector = validOptionTags.join(' ');
-    return Array.from(this.root.querySelectorAll(optionSelector));
+  get optionElements(): Array<ListboxOptionElement> {
+    return Array.from(this.root.querySelectorAll('gux-listbox > [value]'));
   }
 
   private getOptionElementByValue(value: string): HTMLElement {
+    console.log('options', this.optionElements);
     return this.optionElements.find(optionElement => {
-      if ('value' in optionElement) {
-        return optionElement.value === value;
-      }
+      return optionElement.value === value;
     });
   }
 
@@ -408,11 +405,30 @@ export class GuxDropdown {
     switch (tag) {
       case 'gux-option':
         return (<span>{item.textContent}</span>) as JSX.Element;
+      case 'gux-option-icon':
+        return this.renderIconOption(item as HTMLGuxOptionIconElement);
       default:
         // eslint-disable-next-line no-case-declarations
         const _exhaustiveCheck: never = tag;
         return _exhaustiveCheck;
     }
+  }
+
+  private renderIconOption(iconOption: HTMLGuxOptionIconElement): JSX.Element {
+    let iconStyle = null;
+    if (iconOption.iconColor !== null) {
+      iconStyle = { color: iconOption.iconColor };
+    }
+    return (
+      <span class="gux-selected-icon">
+        <gux-icon
+          iconName={iconOption.iconName}
+          style={iconStyle}
+          decorative
+        ></gux-icon>
+        {iconOption.textContent}
+      </span>
+    ) as JSX.Element;
   }
 
   private renderFilterInputField(): JSX.Element {

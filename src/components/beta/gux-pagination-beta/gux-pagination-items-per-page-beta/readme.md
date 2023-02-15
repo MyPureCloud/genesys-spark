@@ -30,7 +30,7 @@ An internal component used by the gux-pagination component.
 
 - [gux-dropdown](../../../stable/gux-dropdown)
 - [gux-listbox](../../../stable/gux-listbox)
-- [gux-option](../../../stable/gux-listbox/gux-option)
+- [gux-option](../../../stable/gux-listbox/options/gux-option)
 
 ### Graph
 ```mermaid

@@ -1,3 +1,5 @@
+import { ListboxOptionElement } from './options/option-types';
+
 function getListOptions(list: HTMLGuxListboxElement): ListboxOptionElement[] {
   return Array.from(list.children).filter(item => {
     return item.matches('[value]');
@@ -98,20 +100,6 @@ function getLastOption(list: HTMLGuxListboxElement): ListboxOptionElement {
 
 function hasActiveOption(list: HTMLGuxListboxElement): boolean {
   return Boolean(getActiveOption(list));
-}
-
-/**
- * This is the interface listbox items are required to adhere to. It's mostly a
- * collection of states for the individual elements that needs to be queried
- * or set by the listbox.
- */
-export interface ListboxOptionElement extends HTMLElement {
-  active: boolean;
-  disabled: boolean;
-  filtered: boolean;
-  hovered: boolean;
-  selected: boolean;
-  value: string;
 }
 
 export function getSearchOption(

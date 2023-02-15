@@ -4,7 +4,7 @@ import MutationObserver from 'mutation-observer';
 import { GuxPaginationItemsPerPageBeta } from '../gux-pagination-items-per-page-beta';
 import { GuxDropdown } from '../../../../stable/gux-dropdown/gux-dropdown';
 import { GuxListbox } from '../../../../stable/gux-listbox/gux-listbox';
-import { GuxOption } from '../../../../stable/gux-listbox/gux-option/gux-option';
+import { GuxOption } from '../../../../stable/gux-listbox/options/gux-option/gux-option';
 
 const components = [
   GuxPaginationItemsPerPageBeta,
