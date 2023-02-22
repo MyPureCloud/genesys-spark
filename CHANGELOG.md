@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.58.2](https://inindca///compare/v2.58.1...v2.58.2) (2023-02-22)
+
+
+### Bug Fixes
+
+* **icon-follow:** follow icon is updated from the latest 3.x version ([d164f02](https://inindca///commit/d164f021db54f170cfe14e69cb9aff4f82364246))
+
 ### [2.58.1](https://inindca///compare/v2.58.0...v2.58.1) (2022-11-03)
 
 
