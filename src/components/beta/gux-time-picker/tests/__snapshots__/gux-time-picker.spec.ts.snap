@@ -3,7 +3,7 @@
 exports[`gux-time-picker-beta #render should render as expected 1`] = `
 <gux-time-picker-beta value="09:00">
   <mock:shadow-root>
-    <gux-popup class="gux-time-picker">
+    <gux-popup-beta class="gux-time-picker">
       <div class="gux-input-time" slot="target">
         <div>
           <input aria-label="Input hours" class="gux-input-time-hours" pattern="^(0?[1-9]|1[012])$" type="text" value="9">
@@ -64,7 +64,7 @@ exports[`gux-time-picker-beta #render should render as expected 1`] = `
           </gux-list-item>
         </gux-list>
       </div>
-    </gux-popup>
+    </gux-popup-beta>
   </mock:shadow-root>
 </gux-time-picker-beta>
 `;

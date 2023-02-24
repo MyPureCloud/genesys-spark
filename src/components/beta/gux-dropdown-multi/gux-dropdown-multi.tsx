@@ -597,13 +597,13 @@ export class GuxDropdownMulti {
   render(): JSX.Element {
     return [
       <div class="gux-dropdown-container">
-        <gux-popup
+        <gux-popup-beta
           expanded={this.expanded && (!this.loading || this.isFilterable())}
           disabled={this.disabled}
         >
           {this.renderTarget()}
           {this.renderPopup()}
-        </gux-popup>
+        </gux-popup-beta>
       </div>
     ] as JSX.Element;
   }

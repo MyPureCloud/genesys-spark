@@ -44,14 +44,14 @@
 
 - [gux-icon](../gux-icon)
 - [gux-radial-loading](../gux-radial-loading)
-- [gux-popup](../gux-popup)
+- [gux-popup-beta](../../beta/gux-popup-beta)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-dropdown --> gux-icon
   gux-dropdown --> gux-radial-loading
-  gux-dropdown --> gux-popup
+  gux-dropdown --> gux-popup-beta
   gux-pagination-items-per-page --> gux-dropdown
   gux-pagination-items-per-page-beta --> gux-dropdown
   style gux-dropdown fill:#f9f,stroke:#333,stroke-width:4px

@@ -93,7 +93,9 @@ describe('gux-form-field-dropdown', () => {
             const page = await newNonrandomE2EPage({ html });
             const element = await page.find('gux-form-field-dropdown');
             const dropdownElement = await element.find('gux-dropdown');
-            const popupElement = await dropdownElement.find('pierce/gux-popup');
+            const popupElement = await dropdownElement.find(
+              'pierce/gux-popup-beta'
+            );
             const targetElement = await popupElement.find(
               '.gux-target-container-collapsed'
             );
@@ -138,7 +140,9 @@ describe('gux-form-field-dropdown', () => {
             const page = await newNonrandomE2EPage({ html });
             const element = await page.find('gux-form-field-dropdown');
             const dropdownElement = await element.find('gux-dropdown');
-            const popupElement = await dropdownElement.find('pierce/gux-popup');
+            const popupElement = await dropdownElement.find(
+              'pierce/gux-popup-beta'
+            );
             const targetElement = await popupElement.find(
               '.gux-target-container-collapsed'
             );
@@ -192,7 +196,9 @@ describe('gux-form-field-dropdown', () => {
             const dropdownElement = await element.find(
               'gux-dropdown-multi-beta'
             );
-            const popupElement = await dropdownElement.find('pierce/gux-popup');
+            const popupElement = await dropdownElement.find(
+              'pierce/gux-popup-beta'
+            );
             const targetElement = await popupElement.find(
               '.gux-target-container-collapsed'
             );
@@ -235,7 +241,9 @@ describe('gux-form-field-dropdown', () => {
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-form-field-dropdown');
           const dropdownElement = await element.find('gux-dropdown-multi-beta');
-          const popupElement = await dropdownElement.find('pierce/gux-popup');
+          const popupElement = await dropdownElement.find(
+            'pierce/gux-popup-beta'
+          );
           const targetElement = await popupElement.find(
             '.gux-target-container-collapsed'
           );

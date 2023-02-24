@@ -21,14 +21,14 @@
 
 - [gux-icon](../../stable/gux-icon)
 - [gux-month-calendar](gux-month-calendar)
-- [gux-popup](../../stable/gux-popup)
+- [gux-popup-beta](../gux-popup-beta)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-month-picker-beta --> gux-icon
   gux-month-picker-beta --> gux-month-calendar
-  gux-month-picker-beta --> gux-popup
+  gux-month-picker-beta --> gux-popup-beta
   gux-month-calendar --> gux-icon
   gux-month-calendar --> gux-month-list-item
   gux-month-calendar --> gux-month-list

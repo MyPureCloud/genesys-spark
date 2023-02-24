@@ -58,14 +58,14 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-popup](../gux-popup)
+- [gux-popup-beta](../../beta/gux-popup-beta)
 - [gux-icon](../gux-icon)
 - [gux-form-field-search](../gux-form-field/components/gux-form-field-search)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-advanced-dropdown --> gux-popup
+  gux-advanced-dropdown --> gux-popup-beta
   gux-advanced-dropdown --> gux-icon
   gux-advanced-dropdown --> gux-form-field-search
   gux-form-field-search --> gux-icon

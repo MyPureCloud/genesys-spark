@@ -212,6 +212,7 @@ describe('gux-dropdown', () => {
       expect(selectedItem.length).toBe(0);
 
       await page.keyboard.press('Enter');
+      await dropdownButtonElement.press('ArrowDown');
 
       selectedItem = await page.findAll('.gux-selected');
       listboxItems = await page.findAll('gux-dropdown gux-listbox gux-option');
