@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.65.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.64.0...v3.65.0) (2023-02-24)
+
+
+### Features
+
+* **gux-popup-beta:** replace gux-popup with gux-popup-beta in components ([#1145](https://github.com/MyPureCloud/genesys-webcomponents/issues/1145)) ([0ca477d](https://github.com/MyPureCloud/genesys-webcomponents/commit/0ca477d65716baa82b7af7b0cf84d3ea72394b66))
+
 ## [3.64.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.63.0...v3.64.0) (2023-02-24)
 
 
