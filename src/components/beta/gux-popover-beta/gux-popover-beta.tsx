@@ -20,6 +20,7 @@ import {
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
 import { getSlot } from '@utils/dom/get-slot';
+import { findElementById } from '@utils/dom/find-element-by-id';
 
 /**
  * @slot - popover content
@@ -75,7 +76,7 @@ export class GuxPopoverBeta {
   @OnClickOutside({ triggerEvents: 'mousedown' })
   checkForClickOutside(event: MouseEvent) {
     const clickPath = event.composedPath();
-    const forElement = document.getElementById(this.for);
+    const forElement = findElementById(this.root, this.for);
     const clickedForElement = clickPath.includes(forElement);
 
     if (
@@ -93,7 +94,7 @@ export class GuxPopoverBeta {
 
   private runUpdatePosition(): void {
     this.cleanupUpdatePosition = autoUpdate(
-      document.getElementById(this.for),
+      findElementById(this.root, this.for),
       this.popupElement,
       () => this.updatePosition(),
       {
@@ -106,7 +107,7 @@ export class GuxPopoverBeta {
   }
 
   private updatePosition(): void {
-    const forElement = document.getElementById(this.for);
+    const forElement = findElementById(this.root, this.for);
     // This is 13 because this makes the arrow look aligned
     const arrowLen = 13;
 
