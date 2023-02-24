@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.64.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.63.0...v3.64.0) (2023-02-24)
+
+
+### Features
+
+* **popover-beta:** update to "for" attribute to search shadowDOM ([9881e2f](https://github.com/MyPureCloud/genesys-webcomponents/commit/9881e2f998043721721430bba0cb17970bfa6759))
+
+
+### Bug Fixes
+
+* **popover-beta:** hiding now done with display not visibility ([36719bf](https://github.com/MyPureCloud/genesys-webcomponents/commit/36719bfbfce279e82209d6969a6cac18b7bc3a3f))
+
 ## [3.63.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.62.1...v3.63.0) (2023-02-14)
 
 
