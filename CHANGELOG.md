@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.66.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.65.0...v3.66.0) (2023-02-27)
+
+
+### Features
+
+* **focus:** update focus styles using outline property ([#1141](https://github.com/MyPureCloud/genesys-webcomponents/issues/1141)) ([f3919f2](https://github.com/MyPureCloud/genesys-webcomponents/commit/f3919f21c452ba7e2dc31f8b41973f0dd27a3d19))
+
 ## [3.65.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.64.0...v3.65.0) (2023-02-24)
 
 
