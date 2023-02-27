@@ -1,15 +1,14 @@
 @import (reference) 'color-palette.less';
+@import (reference) 'focus.less';
 
 // COMUI-1370 remove this class, will be replaced with gux-focus-ring from focus.less
 .focus-ring {
-  outline: none;
-  box-shadow: 0 0 0 1px @gux-grey-100, 0 0 0 4px @gux-blue-90;
+  .gux-focus-ring();
 }
 
 // COMUI-1370 remove this class, will be replaced with gux-focus-ring-small from focus.less
 .focus-ring-small {
-  outline: none;
-  box-shadow: 0 0 0 1px transparent, 0 0 0 2px @gux-blue-90;
+  .gux-focus-ring-small();
 }
 
 // COMUI-1370 remove this class, will be replaced with gux-form-field-border
