@@ -96,9 +96,11 @@ export class GuxTooltip {
   }
 
   private logForAttributeError(): void {
-    console.error(
-      `gux-tooltip: invalid element supplied to 'for': "${this.for}"`
-    );
+    if (this.root.isConnected) {
+      console.error(
+        `gux-tooltip: invalid element supplied to 'for': "${this.for}"`
+      );
+    }
   }
 
   connectedCallback(): void {
@@ -140,23 +142,23 @@ export class GuxTooltip {
   }
 
   disconnectedCallback(): void {
-    this.forElement.removeAttribute('aria-describedby');
+    this.forElement?.removeAttribute('aria-describedby');
 
     if (this.popperInstance) {
       this.popperInstance.destroy();
       this.popperInstance = null;
     }
 
-    this.forElement.removeEventListener(
+    this.forElement?.removeEventListener(
       'pointerenter',
       this.pointerenterHandler
     );
-    this.forElement.removeEventListener(
+    this.forElement?.removeEventListener(
       'pointerleave',
       this.pointerleaveHandler
     );
-    this.forElement.removeEventListener('focusin', this.focusinHandler);
-    this.forElement.removeEventListener('focusout', this.focusoutHandler);
+    this.forElement?.removeEventListener('focusin', this.focusinHandler);
+    this.forElement?.removeEventListener('focusout', this.focusoutHandler);
   }
 
   render(): JSX.Element {
