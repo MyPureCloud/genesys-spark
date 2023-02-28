@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.66.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.66.1...v3.66.2) (2023-02-28)
+
+
+### Bug Fixes
+
+* **breadcrumb:** changes to the slot now updates all children ([18c9ca1](https://github.com/MyPureCloud/genesys-webcomponents/commit/18c9ca173a629391b58fee6a7c0b600b4b341d53))
+
 ### [3.66.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.66.0...v3.66.1) (2023-02-28)
 
 
