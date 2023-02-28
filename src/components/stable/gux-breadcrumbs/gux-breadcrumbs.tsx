@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, Prop, forceUpdate } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '@utils/tracking/usage';
@@ -32,13 +32,17 @@ export class GuxBreadcrumbs {
     this.i18n = await buildI18nForComponent(this.root, breadcrumbsResources);
   }
 
+  private onSlotChange() {
+    Array.from(this.root.children).forEach(child => forceUpdate(child));
+  }
+
   render(): JSX.Element {
     return (
       <nav
         aria-label={this.i18n('breadcrumbs')}
         class="gux-breadcrumbs-container"
       >
-        <slot />
+        <slot onSlotchange={this.onSlotChange.bind(this)} />
       </nav>
     ) as JSX.Element;
   }

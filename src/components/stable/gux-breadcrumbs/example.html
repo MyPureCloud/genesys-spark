@@ -17,3 +17,42 @@
   <gux-breadcrumb-item href="#">Parent</gux-breadcrumb-item>
   <gux-breadcrumb-item>Current</gux-breadcrumb-item>
 </gux-breadcrumbs>
+
+<h2>Adding and removing</h2>
+
+<gux-button-slot-beta>
+  <button id="add" type="button">Add</button>
+</gux-button-slot-beta>
+
+<gux-button-slot-beta>
+  <button id="remove" type="button">Remove</button>
+</gux-button-slot-beta>
+
+<gux-breadcrumbs id="breadcrumbs" accent="primary"> </gux-breadcrumbs>
+
+<style
+  onload="(function() {
+  const breadcrumbs = document.getElementById('breadcrumbs');
+  const add = document.getElementById('add');
+  const remove = document.getElementById('remove');
+
+  add.addEventListener('click', (event) => {
+    const item = document.createElement('gux-breadcrumb-item');
+    item.setAttribute('href', 'text');
+    item.textContent = 'text';
+
+    breadcrumbs.appendChild(item)
+
+  })
+
+  remove.addEventListener('click', (event) => {
+    const lastChild = breadcrumbs.lastChild
+
+    if (lastChild) {
+      breadcrumbs.removeChild(lastChild);
+    }
+  })
+})()"
+>
+  --noop: none;
+</style>
