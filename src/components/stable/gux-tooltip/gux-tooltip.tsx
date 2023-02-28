@@ -14,6 +14,7 @@ import {
 import { randomHTMLId } from '../../../utils/dom/random-html-id';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxTooltipPlacements } from './gux-tooltip.types';
+import { findElementById } from '@utils/dom/find-element-by-id';
 
 /**
  * @slot - Content of the tooltip
@@ -89,7 +90,7 @@ export class GuxTooltip {
 
   private getForElement(): void {
     if (this.for) {
-      this.forElement = document.getElementById(this.for);
+      this.forElement = findElementById(this.root, this.for);
     } else {
       this.forElement = this.root.parentElement;
     }
