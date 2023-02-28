@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.67.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.66.2...v3.67.0) (2023-02-28)
+
+
+### Features
+
+* **tooltip:** addition of findElementByID util to tooltip ([c414a72](https://github.com/MyPureCloud/genesys-webcomponents/commit/c414a72150f3d66745c19bf56d808b629497a484))
+
 ### [3.66.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.66.1...v3.66.2) (2023-02-28)
 
 
