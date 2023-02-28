@@ -66,7 +66,7 @@ Type: `Promise<void>`
 ### Depends on
 
 - [gux-icon](../../gux-icon)
-- [gux-popover-list](../../../beta/gux-popover-list)
+- [gux-popover-list](../../gux-popover-list)
 - [gux-tooltip-title](../../gux-tooltip-title)
 
 ### Graph
