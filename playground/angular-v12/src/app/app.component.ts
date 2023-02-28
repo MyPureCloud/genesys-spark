@@ -32,6 +32,7 @@ export class AppComponent {
   filteredCountryList: SelectOption[] = countryList;
   petList: SelectOption[] = petList;
   isLoading: boolean = false;
+  showOptions: boolean = true;
 
   // to do fix lint error
   /* eslint-disable */
@@ -50,6 +51,10 @@ export class AppComponent {
     }, 500);
   }
   /* eslint-disable */
+
+  onToggleTabOptions() {
+    this.showOptions = !this.showOptions;
+  }
 
   showRequiredErrorMessage(formControlName: string): boolean {
     const control = this.contactForm.get(formControlName);

@@ -110,3 +110,24 @@
     <button type="submit" [disabled]="contactForm.invalid">Submit</button>
   </div>
 </form>
+<br />
+<!-- COMUI-1486 conditional slots -->
+<button (click)="onToggleTabOptions()">Toggle Tab Options</button>
+<gux-tabs-advanced>
+  <gux-tab-advanced-list slot="tab-list" show-new-tab-button="false">
+    <gux-tab-advanced tab-id="1-1">
+      <gux-list slot="dropdown-options" *ngIf="showOptions">
+        <gux-list-item>
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close {{ showOptions }}
+        </gux-list-item>
+      </gux-list>
+      <span id="tabTitle1">Tab Header 1 {{ showOptions }}</span>
+    </gux-tab-advanced>
+  </gux-tab-advanced-list>
+  <gux-tab-advanced-panel tab-id="1-1">
+    <span>Tab content 1</span>
+    <div>The current time is: <span id="currentTime"></span></div>
+    <div>The current selected panel tab-id</div>
+  </gux-tab-advanced-panel>
+</gux-tabs-advanced>
