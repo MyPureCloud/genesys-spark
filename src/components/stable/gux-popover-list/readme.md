@@ -31,12 +31,12 @@
 
 ### Used by
 
- - [gux-tab-advanced](../../stable/gux-tabs-advanced/gux-tab-advanced)
+ - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-legacy](../../legacy/gux-tabs-legacy/gux-tab-legacy)
 
 ### Depends on
 
-- [gux-dismiss-button](../../stable/gux-dismiss-button)
+- [gux-dismiss-button](../gux-dismiss-button)
 
 ### Graph
 ```mermaid

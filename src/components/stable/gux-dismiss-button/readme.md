@@ -20,7 +20,7 @@ This component is meant for use in other components as a dismiss button.
  - [gux-notification-toast](../gux-notification-toast)
  - [gux-popover](../gux-popover)
  - [gux-popover-beta](../../beta/gux-popover-beta)
- - [gux-popover-list](../../beta/gux-popover-list)
+ - [gux-popover-list](../gux-popover-list)
  - [gux-popover-list-beta](../../beta/gux-popover-list-beta)
  - [gux-simple-toast](../gux-simple-toast)
 

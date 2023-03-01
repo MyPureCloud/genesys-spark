@@ -26,7 +26,7 @@
 ### Depends on
 
 - [gux-icon](../../../stable/gux-icon)
-- [gux-popover-list](../../../beta/gux-popover-list)
+- [gux-popover-list](../../../stable/gux-popover-list)
 
 ### Graph
 ```mermaid
