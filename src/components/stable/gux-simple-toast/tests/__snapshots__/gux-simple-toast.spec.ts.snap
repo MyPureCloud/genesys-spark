@@ -9,7 +9,7 @@ exports[`gux-simple-toast #render should render alert simple toast 1`] = `
     <gux-truncate-beta class="gux-message" max-lines="2">
       <slot name="message"></slot>
     </gux-truncate-beta>
-    <gux-dismiss-button></gux-dismiss-button>
+    <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="message">
@@ -27,7 +27,7 @@ exports[`gux-simple-toast #render should render neutral simple toast 1`] = `
     <gux-truncate-beta class="gux-message" max-lines="2">
       <slot name="message"></slot>
     </gux-truncate-beta>
-    <gux-dismiss-button></gux-dismiss-button>
+    <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="message">
@@ -45,7 +45,7 @@ exports[`gux-simple-toast #render should render positive simple toast 1`] = `
     <gux-truncate-beta class="gux-message" max-lines="2">
       <slot name="message"></slot>
     </gux-truncate-beta>
-    <gux-dismiss-button></gux-dismiss-button>
+    <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="message">
@@ -63,7 +63,7 @@ exports[`gux-simple-toast #render should render warning simple toast 1`] = `
     <gux-truncate-beta class="gux-message" max-lines="2">
       <slot name="message"></slot>
     </gux-truncate-beta>
-    <gux-dismiss-button></gux-dismiss-button>
+    <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="message">
