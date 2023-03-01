@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#render should render a disabled toolbar-action 1`] = `
+<gux-table-toolbar-action action="export" disabled="">
+  <mock:shadow-root>
+    <gux-table-toolbar-custom-action accent="secondary" disabled="">
+      <span slot="text">
+        Export
+      </span>
+      <gux-icon decorative="" icon-name="export" slot="icon"></gux-icon>
+    </gux-table-toolbar-custom-action>
+  </mock:shadow-root>
+</gux-table-toolbar-action>
+`;
+
+exports[`#render should render a primary toolbar-action 1`] = `
+<gux-table-toolbar-action accent="primary" action="export" slot="primary-action">
+  <mock:shadow-root>
+    <gux-table-toolbar-custom-action accent="primary">
+      <span slot="text">
+        Export
+      </span>
+      <gux-icon decorative="" icon-name="export" slot="icon"></gux-icon>
+    </gux-table-toolbar-custom-action>
+  </mock:shadow-root>
+</gux-table-toolbar-action>
+`;
+
+exports[`#render should render delete toolbar-action 1`] = `
+<gux-table-toolbar-action action="delete">
+  <mock:shadow-root>
+    <gux-table-toolbar-custom-action accent="secondary">
+      <span slot="text">
+        Delete
+      </span>
+      <gux-icon decorative="" icon-name="delete" slot="icon"></gux-icon>
+    </gux-table-toolbar-custom-action>
+  </mock:shadow-root>
+</gux-table-toolbar-action>
+`;
+
+exports[`#render should render export toolbar-action 1`] = `
+<gux-table-toolbar-action action="export">
+  <mock:shadow-root>
+    <gux-table-toolbar-custom-action accent="secondary">
+      <span slot="text">
+        Export
+      </span>
+      <gux-icon decorative="" icon-name="export" slot="icon"></gux-icon>
+    </gux-table-toolbar-custom-action>
+  </mock:shadow-root>
+</gux-table-toolbar-action>
+`;
+
+exports[`#render should render import toolbar-action 1`] = `
+<gux-table-toolbar-action action="import">
+  <mock:shadow-root>
+    <gux-table-toolbar-custom-action accent="secondary">
+      <span slot="text">
+        Import
+      </span>
+      <gux-icon decorative="" icon-name="import" slot="icon"></gux-icon>
+    </gux-table-toolbar-custom-action>
+  </mock:shadow-root>
+</gux-table-toolbar-action>
+`;
+
+exports[`#render should render refresh toolbar-action 1`] = `
+<gux-table-toolbar-action action="refresh">
+  <mock:shadow-root>
+    <gux-table-toolbar-custom-action accent="secondary">
+      <span slot="text">
+        Refresh
+      </span>
+      <gux-icon decorative="" icon-name="refresh" slot="icon"></gux-icon>
+    </gux-table-toolbar-custom-action>
+  </mock:shadow-root>
+</gux-table-toolbar-action>
+`;
+
+exports[`#render should render revert toolbar-action 1`] = `
+<gux-table-toolbar-action action="revert">
+  <mock:shadow-root>
+    <gux-table-toolbar-custom-action accent="secondary">
+      <span slot="text">
+        Revert
+      </span>
+      <gux-icon decorative="" icon-name="reset" slot="icon"></gux-icon>
+    </gux-table-toolbar-custom-action>
+  </mock:shadow-root>
+</gux-table-toolbar-action>
+`;

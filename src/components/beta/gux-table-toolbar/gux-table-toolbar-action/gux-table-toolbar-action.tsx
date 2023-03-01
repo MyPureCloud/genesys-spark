@@ -26,6 +26,9 @@ export class GuxTableToolbarAction {
   @Prop()
   iconOnly: boolean = false;
 
+  @Prop()
+  disabled: boolean = false;
+
   private returnActionLocale(action: GuxTableToolbarActionTypes): string {
     return this.i18n(`action${capitalizeFirstLetter(action)}`);
   }
@@ -44,6 +47,7 @@ export class GuxTableToolbarAction {
       <gux-table-toolbar-custom-action
         icon-only={this.iconOnly}
         accent={this.accent}
+        disabled={this.disabled}
       >
         <span slot="text">{this.returnActionLocale(this.action)}</span>
         <gux-icon

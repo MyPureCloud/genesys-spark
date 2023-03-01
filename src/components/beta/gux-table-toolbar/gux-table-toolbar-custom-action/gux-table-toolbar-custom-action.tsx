@@ -22,6 +22,9 @@ export class GuxTableToolbarCustomAction {
   @Prop()
   accent: GuxTableToolbarActionAccent = 'secondary';
 
+  @Prop()
+  disabled: boolean = false;
+
   componentWillLoad() {
     trackComponent(this.root);
   }
@@ -29,7 +32,7 @@ export class GuxTableToolbarCustomAction {
   render(): JSX.Element {
     return (
       <gux-button-slot-beta accent={this.accent}>
-        <button type="button" class="gux-action-title">
+        <button disabled={this.disabled} type="button" class="gux-action-title">
           <slot name="icon" />
           <span class={{ 'gux-sr-only': this.iconOnly }}>
             <slot name="text" />

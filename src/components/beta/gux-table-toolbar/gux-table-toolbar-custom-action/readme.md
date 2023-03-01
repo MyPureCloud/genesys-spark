@@ -10,6 +10,7 @@
 | Property   | Attribute   | Description | Type                                  | Default       |
 | ---------- | ----------- | ----------- | ------------------------------------- | ------------- |
 | `accent`   | `accent`    |             | `"ghost" \| "primary" \| "secondary"` | `'secondary'` |
+| `disabled` | `disabled`  |             | `boolean`                             | `false`       |
 | `iconOnly` | `icon-only` |             | `boolean`                             | `false`       |
 
 
