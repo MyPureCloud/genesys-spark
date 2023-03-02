@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app" lang="en">
     <link
@@ -34,11 +32,11 @@
 </template>
 -->
 <script>
-import Parent from './components/Parent.vue'
+import Parent from './components/Parent.vue';
 export default {
   name: 'App',
   components: {
     Parent
   }
-}
+};
 </script>
