@@ -21,12 +21,12 @@
 <h2>Truncated Inline Alert Examples</h2>
 
 <h2>1 line truncated inline alert example</h2>
-<gux-inline-alert-beta accent="info"
-  ><gux-truncate-beta max-lines="1">
+<gux-inline-alert-beta accent="info" style="width: 400px">
+  <gux-truncate-beta max-lines="1">
     This is an information message to demonstrate that this alert will truncate
-    after 1 line. You can also alter the max lines to be 2.</gux-truncate-beta
-  ></gux-inline-alert-beta
->
+    after 1 line. You can also alter the max lines to be 2.
+  </gux-truncate-beta>
+</gux-inline-alert-beta>
 
 <style>
   .alerts {
@@ -34,8 +34,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 31px;
-    width: 560px;
     padding: 10px;
+    overflow: auto; /* something other than visible */
+    resize: both;
     border: 1px solid var(--gux-charcoal-grey);
   }
 </style>
