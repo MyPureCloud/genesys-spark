@@ -187,7 +187,7 @@ export class GuxFormFieldTextLike {
 
   private setInput(): void {
     this.input = this.root.querySelector(
-      'input[type="email"][slot="input"], input[type="password"][slot="input"], input[type="text"][slot="input"]'
+      'input[type="email"][slot="input"], input[type="number"][slot="input"], input[type="password"][slot="input"], input[type="text"][slot="input"]'
     );
 
     this.hasContent = hasContent(this.input);
