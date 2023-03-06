@@ -51,6 +51,8 @@ export class GuxSimpleToast {
         </gux-truncate-beta>
 
         <gux-dismiss-button
+          class="gux-dismiss"
+          position="inherit"
           onClick={this.onDismissClickHandler.bind(this)}
         ></gux-dismiss-button>
       </Host>
