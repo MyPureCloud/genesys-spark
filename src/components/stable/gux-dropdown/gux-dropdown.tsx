@@ -283,7 +283,6 @@ export class GuxDropdown {
   }
 
   private getOptionElementByValue(value: string): HTMLElement {
-    console.log('options', this.optionElements);
     return this.optionElements.find(optionElement => {
       return optionElement.value === value;
     });
