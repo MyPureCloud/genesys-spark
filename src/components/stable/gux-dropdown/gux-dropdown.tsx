@@ -23,7 +23,10 @@ import { OnMutation } from '@utils/decorator/on-mutation';
 
 import translationResources from './i18n/en.json';
 
-import { getSearchOption } from '../gux-listbox/gux-listbox.service';
+import {
+  getSearchOption,
+  getListOptions
+} from '../gux-listbox/gux-listbox.service';
 import {
   ListboxOptionElement,
   ValidOptionTag
@@ -279,7 +282,7 @@ export class GuxDropdown {
   }
 
   get optionElements(): Array<ListboxOptionElement> {
-    return Array.from(this.root.querySelectorAll('gux-listbox > [value]'));
+    return getListOptions(this.listboxElement);
   }
 
   private getOptionElementByValue(value: string): HTMLElement {

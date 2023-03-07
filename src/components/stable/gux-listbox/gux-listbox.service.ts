@@ -1,9 +1,11 @@
 import { ListboxOptionElement } from './options/option-types';
 
-function getListOptions(list: HTMLGuxListboxElement): ListboxOptionElement[] {
-  return Array.from(list.children).filter(item => {
-    return item.matches('[value]');
-  }) as ListboxOptionElement[];
+export function getListOptions(
+  list: HTMLGuxListboxElement
+): ListboxOptionElement[] {
+  return (Array.from(list.children) as ListboxOptionElement[]).filter(item => {
+    return item.value;
+  });
 }
 
 function getHoveredOption(list: HTMLGuxListboxElement): ListboxOptionElement {
