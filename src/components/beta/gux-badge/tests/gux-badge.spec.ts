@@ -22,7 +22,9 @@ describe('gux-badge-beta', () => {
       '<gux-badge-beta bold color="red"><gux-icon icon-name="subtract" decorative></gux-icon>danger bold icon</gux-badge-beta>',
       '<gux-badge-beta bold color="yellow"><gux-icon icon-name="subtract" decorative></gux-icon>warning bold icon</gux-badge-beta>',
       '<gux-badge-beta bold><gux-icon icon-name="subtract" decorative></gux-icon>default bold</gux-badge-beta>',
-      '<gux-badge-beta bold><gux-icon icon-name="subtract" decorative></gux-icon>default bold icon</gux-badge-beta>'
+      '<gux-badge-beta bold><gux-icon icon-name="subtract" decorative></gux-icon>default bold icon</gux-badge-beta>',
+      '<gux-badge-beta color="custom">custom</gux-badge-beta>',
+      '<gux-badge-beta color="custom"><gux-icon icon-name="subtract" decorative></gux-icon>custom with icon</gux-badge-beta>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });

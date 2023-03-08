@@ -31,3 +31,7 @@ exports[`gux-badge-beta #render should render component as expected (14) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (15) 1`] = `"<gux-badge-beta bold=\\"\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>default bold</gux-badge-beta>"`;
 
 exports[`gux-badge-beta #render should render component as expected (16) 1`] = `"<gux-badge-beta bold=\\"\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>default bold icon</gux-badge-beta>"`;
+
+exports[`gux-badge-beta #render should render component as expected (17) 1`] = `"<gux-badge-beta color=\\"custom\\" class=\\"custom\\" hydrated=\\"\\">custom</gux-badge-beta>"`;
+
+exports[`gux-badge-beta #render should render component as expected (18) 1`] = `"<gux-badge-beta color=\\"custom\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>custom with icon</gux-badge-beta>"`;

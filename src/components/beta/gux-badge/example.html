@@ -29,6 +29,29 @@
   </gux-badge-beta>
 </div>
 
+<h2>Custom colors</h2>
+<div class="badges">
+  <gux-badge-beta color="custom" class="custom">Custom</gux-badge-beta>
+  <gux-badge-beta color="custom" class="custom">
+    <gux-icon icon-name="subtract" decorative></gux-icon>No Impact
+  </gux-badge-beta>
+</div>
+<p>
+  Define the following custom properties in your CSS to apply custom colors to
+  the text & background.
+</p>
+<ul>
+  <li>--gux-badge-text-color</li>
+  <li>-gux-badge-background-color</li>
+</ul>
+<gux-inline-alert-beta accent="error" class="custom-color-warning">
+  <strong>Important:</strong>
+  Color contrast must be at least 4.5:1 to pass WCAG AA guidelines.
+  <a href="https://webaim.org/resources/contrastchecker/" target="_blank">
+    Check contrast
+  </a>
+</gux-inline-alert-beta>
+
 <style>
   .badges {
     display: flex;
@@ -40,5 +63,14 @@
   gux-badge-beta {
     max-width: 100px;
     margin: 4px;
+  }
+
+  .custom {
+    --gux-badge-background-color: rebeccapurple;
+    --gux-badge-text-color: white;
+  }
+
+  .custom-color-warning {
+    margin-top: 16px;
   }
 </style>
