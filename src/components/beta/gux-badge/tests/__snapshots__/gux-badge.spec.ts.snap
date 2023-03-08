@@ -297,7 +297,7 @@ exports[`gux-badge-beta #render should render component as expected (16) 1`] = `
 `;
 
 exports[`gux-badge-beta #render should render component as expected (17) 1`] = `
-<gux-badge-beta class="custom" color="custom">
+<gux-badge-beta color="custom">
   <mock:shadow-root>
     <div class="gux-badge gux-custom">
       <gux-tooltip-title>
@@ -305,7 +305,9 @@ exports[`gux-badge-beta #render should render component as expected (17) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only"></div>
+      <div class="gux-sr-only">
+        badge with label: , color: custom
+      </div>
     </div>
   </mock:shadow-root>
   custom
@@ -321,7 +323,9 @@ exports[`gux-badge-beta #render should render component as expected (18) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only"></div>
+      <div class="gux-sr-only">
+        badge with label: , color: custom
+      </div>
     </div>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="subtract"></gux-icon>
