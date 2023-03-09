@@ -7,5 +7,5 @@
   "yellow-bold": "badge with label: {label}, color: yellow bold",
   "red": "badge with label: {label}, color: red",
   "red-bold": "badge with label: {label}, color: red bold",
-  "custom": "badge with label: {label}, color: custom"
+  "inherit": "badge with label: {label}, color: inherited"
 }

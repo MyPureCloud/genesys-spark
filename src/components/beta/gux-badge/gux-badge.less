@@ -6,6 +6,7 @@
 // Style
 :host {
   display: inline-block;
+  border-radius: @gux-spacing-2xs;
 }
 
 .gux-badge {
@@ -75,8 +76,8 @@
     }
   }
 
-  &.gux-custom {
-    color: var(--gux-badge-text-color, @gux-black-50);
-    background-color: var(--gux-badge-background-color, @gux-grey-60);
+  &.gux-inherit {
+    color: inherit;
+    background-color: inherit;
   }
 }
