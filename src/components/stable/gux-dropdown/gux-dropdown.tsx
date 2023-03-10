@@ -424,7 +424,7 @@ export class GuxDropdown {
     return (
       <span class="gux-selected-icon">
         <gux-icon
-          iconName={iconOption.iconName}
+          icon-name={iconOption.iconName}
           style={iconStyle}
           decorative
         ></gux-icon>

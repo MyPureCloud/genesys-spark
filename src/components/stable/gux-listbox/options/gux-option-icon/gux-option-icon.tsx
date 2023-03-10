@@ -22,6 +22,9 @@ export class GuxOptionIcon {
   iconName: string;
 
   @Prop()
+  iconSrText: string;
+
+  @Prop()
   iconColor: string;
 
   @Prop()
@@ -83,7 +86,8 @@ export class GuxOptionIcon {
         aria-disabled={this.disabled.toString()}
       >
         <gux-icon
-          decorative
+          decorative={this.iconSrText == null}
+          screenreader-text={this.iconSrText}
           icon-name={this.iconName}
           style={iconStyle}
         ></gux-icon>
