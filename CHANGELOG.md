@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.68.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.67.2...v3.68.0) (2023-03-13)
+
+
+### Features
+
+* **table-toolbar:** addition of disabled prop ([7afde37](https://github.com/MyPureCloud/genesys-webcomponents/commit/7afde37ba24ec2cd0c68e48e8b1dd1871a999c5a))
+
+
+### Bug Fixes
+
+* **alert:** removed component max-width ([1fe0aa1](https://github.com/MyPureCloud/genesys-webcomponents/commit/1fe0aa176e2e011238a171913bac1d21bef9b34c))
+* **inline-alert:** apply border for cleaner contrast against bg ([ff3ebb6](https://github.com/MyPureCloud/genesys-webcomponents/commit/ff3ebb66432567199b62d3781452f82711a06529))
+* **popover:** remove styling of slotted components ([d9307c6](https://github.com/MyPureCloud/genesys-webcomponents/commit/d9307c623df79d58ee2d29a55b7de63f74f24ad3))
+* **simple-toast:** fixed dismiss button alignment ([31e2230](https://github.com/MyPureCloud/genesys-webcomponents/commit/31e22309eca1273a6616af9f44fc47e107ef9de1))
+
 ### [3.67.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.67.1...v3.67.2) (2023-03-01)
 
 ### [3.67.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.67.0...v3.67.1) (2023-02-28)
