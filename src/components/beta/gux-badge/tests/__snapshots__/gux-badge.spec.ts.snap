@@ -306,7 +306,7 @@ exports[`gux-badge-beta #render should render component as expected (17) 1`] = `
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
-        badge with label: , color: inherited
+        badge with label:
       </div>
     </div>
   </mock:shadow-root>
@@ -324,7 +324,7 @@ exports[`gux-badge-beta #render should render component as expected (18) 1`] = `
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
-        badge with label: , color: inherited
+        badge with label:
       </div>
     </div>
   </mock:shadow-root>

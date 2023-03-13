@@ -30,7 +30,7 @@
 </div>
 
 <h2>Custom colors</h2>
-<div class="badges">
+<div class="badges custom-badges">
   <style>
     .custom {
       color: white;
@@ -41,14 +41,14 @@
   <gux-badge-beta color="inherit" class="custom">
     <gux-icon icon-name="subtract" decorative></gux-icon>No Impact
   </gux-badge-beta>
+  <gux-inline-alert-beta accent="error" class="custom-color-warning">
+    <strong>Important:</strong>
+    Color contrast must be at least 4.5:1 to pass WCAG AA guidelines.
+    <a href="https://webaim.org/resources/contrastchecker/" target="_blank">
+      Check contrast
+    </a>
+  </gux-inline-alert-beta>
 </div>
-<gux-inline-alert-beta accent="error" class="custom-color-warning">
-  <strong>Important:</strong>
-  Color contrast must be at least 4.5:1 to pass WCAG AA guidelines.
-  <a href="https://webaim.org/resources/contrastchecker/" target="_blank">
-    Check contrast
-  </a>
-</gux-inline-alert-beta>
 
 <style>
   .badges {
@@ -61,9 +61,14 @@
   gux-badge-beta {
     max-width: 100px;
     margin: 4px;
+    background-color: black;
+  }
+
+  .custom-badges {
+    display: block;
   }
 
   .custom-color-warning {
-    margin-top: 16px;
+    margin-top: 8px;
   }
 </style>
