@@ -11,6 +11,7 @@
 | ---------- | ----------- | ----------- | -------------------------------------------------------------------- | ------------- |
 | `accent`   | `accent`    |             | `"ghost" \| "primary" \| "secondary"`                                | `'secondary'` |
 | `action`   | `action`    |             | `"add" \| "delete" \| "export" \| "import" \| "refresh" \| "revert"` | `undefined`   |
+| `disabled` | `disabled`  |             | `boolean`                                                            | `false`       |
 | `iconOnly` | `icon-only` |             | `boolean`                                                            | `false`       |
 
 
