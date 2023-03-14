@@ -25,7 +25,10 @@ export class GuxIcon {
    * Indicate which icon to display
    */
   @Prop()
-  iconName: string | GuxIconIconName;
+  // Using (string & {}) preserves autocomplete, otherwise TS collapses this type to just `string`
+  // See https://github.com/microsoft/TypeScript/issues/49220
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  iconName: (string & {}) | GuxIconIconName;
 
   /**
    * Indicate whether the icon should be ignored by accessibility tools or not
