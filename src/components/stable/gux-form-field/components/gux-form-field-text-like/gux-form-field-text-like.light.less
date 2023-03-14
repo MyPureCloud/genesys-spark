@@ -1,0 +1,13 @@
+gux-form-field-text-like {
+  // Suppress browser native numeric stepper arrow buttons for <input type="number">.
+  // Implementers who want stepper buttons should be using gux-form-field-number component.
+  input[type='number'] {
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+  }
+}
