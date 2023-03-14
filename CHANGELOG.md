@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.69.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.68.0...v3.69.0) (2023-03-14)
+
+
+### Features
+
+* **badge:** allow colors to be inherited from the host ([0a97e4a](https://github.com/MyPureCloud/genesys-webcomponents/commit/0a97e4a0931c5a3d6af4e974e01c61e9f6a5e64e))
+* **badge:** allow colors to be inherited from the host ([968ec7f](https://github.com/MyPureCloud/genesys-webcomponents/commit/968ec7faf80f425f51b31467e752c3e983d14d3d))
+* **badge:** allow custom colors ([b85b607](https://github.com/MyPureCloud/genesys-webcomponents/commit/b85b6071303a61794ad52ebb8536372a8cd022e1))
+* **form-field-text-like:** allow slotted number input ([f58ec11](https://github.com/MyPureCloud/genesys-webcomponents/commit/f58ec1150d1102116ea46ecc6e28dadf8286b080))
+
+
+### Bug Fixes
+
+* **dropdown-multi:** prevent text from overlapping ([bfc7e05](https://github.com/MyPureCloud/genesys-webcomponents/commit/bfc7e05a74c4efc7bd8bd6153dd0c99aab2f3844))
+
 ## [3.68.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.67.2...v3.68.0) (2023-03-13)
 
 
