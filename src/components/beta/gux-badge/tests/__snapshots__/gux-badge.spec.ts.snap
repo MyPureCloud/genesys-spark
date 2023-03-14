@@ -295,3 +295,40 @@ exports[`gux-badge-beta #render should render component as expected (16) 1`] = `
   default bold icon
 </gux-badge-beta>
 `;
+
+exports[`gux-badge-beta #render should render component as expected (17) 1`] = `
+<gux-badge-beta color="inherit">
+  <mock:shadow-root>
+    <div class="gux-badge gux-inherit">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label:
+      </div>
+    </div>
+  </mock:shadow-root>
+  inherit
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (18) 1`] = `
+<gux-badge-beta color="inherit">
+  <mock:shadow-root>
+    <div class="gux-badge gux-inherit">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label:
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  inherit with icon
+</gux-badge-beta>
+`;

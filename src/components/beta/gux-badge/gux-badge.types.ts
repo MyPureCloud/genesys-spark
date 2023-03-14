@@ -1,1 +1,1 @@
-export type GuxBadgeColor = 'neutral' | 'green' | 'yellow' | 'red';
+export type GuxBadgeColor = 'neutral' | 'green' | 'yellow' | 'red' | 'inherit';
