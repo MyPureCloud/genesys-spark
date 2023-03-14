@@ -14,7 +14,7 @@
     "yellow-bold": "badge with label: {label}, color: yellow bold",
     "red": "badge with label: {label}, color: red",
     "red-bold": "badge with label: {label}, color: red bold",
-    "inherit": "badge with label: {label}, color: inherited"
+    "inherit": "badge with label: {label}"
   },
   "gux-column-manager-item": {
     "activateReordering": "Activate reordering mode for {columnName} column"

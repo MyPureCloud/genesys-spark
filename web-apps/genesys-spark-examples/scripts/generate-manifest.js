@@ -6,7 +6,7 @@ const glob = require('glob');
 
 const versionHelper = require('./version-helper');
 
-const name = 'common-ui-docs/genesys-webcomponents-test';
+const name = 'common-ui-docs/genesys-webcomponents';
 const version = versionHelper.getDeployVersion();
 const build = `${process.env.BUILD_NUMBER}`;
 const buildDate = new Date().toISOString();

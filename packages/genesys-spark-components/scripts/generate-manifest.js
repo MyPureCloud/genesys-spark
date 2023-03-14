@@ -5,7 +5,7 @@ const path = require('path');
 
 const versionHelper = require('./version-helper');
 
-const name = 'genesys-webcomponents-test';
+const name = 'genesys-webcomponents';
 const sourceDir = path.join(__dirname, '../dist/genesys-webcomponents');
 const version = versionHelper.getDeployVersion();
 const build = `${process.env.BUILD_NUMBER}`;

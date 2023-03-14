@@ -14,7 +14,7 @@ window.webcomponentsDocsMain = (example = '', renderCallback = () => {}) =>
 
 function createLayout() {
   let template = toHTML(`
-    <div class="component-viewer content" role="main" title="Component viewer">
+    <div class="component-viewer content" role="main">
       <div class="left-column">
         <div class="tab" hidden>
           <button class="tablinks light active">Light Theme</button>

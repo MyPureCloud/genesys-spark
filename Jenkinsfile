@@ -11,7 +11,7 @@ Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch
 Boolean isPublicBranch = isReleaseBranch || isFeatureBranch
 
 webappPipeline {
-    projectName = 'spark-components-test'
+    projectName = 'spark-components'
     team = 'Core UI'
     mailer = 'CoreUI@genesys.com'
     nodeVersion = '16.x'
@@ -57,7 +57,7 @@ webappPipeline {
         // can use relative URLs to load assets. Because the components are running inside
         // apps, they have to load their assets from a full URL on the new UI hosting stack.
         if (assetPrefix.startsWith('/')) {
-            cdnUrl = "https://app.mypurecloud.com${assetPrefix}genesys-webcomponents/"
+            cdnUrl = "${assetPrefix}genesys-webcomponents/"
         }
 
         env.CDN_URL = cdnUrl

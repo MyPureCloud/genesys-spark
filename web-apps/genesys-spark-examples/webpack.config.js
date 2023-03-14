@@ -3,7 +3,7 @@ const fs = require('fs');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const CDN_URL = process.env.CDN_URL || '';
+const CDN_URL = process.env.DOCS_CDN_URL || '';
 
 module.exports = {
   entry: {
@@ -117,6 +117,12 @@ function generateComponentPage(exampleMarkup) {
       '${SPARK_ICON_EXAMPLE_LIST}',
       iconsExamplesHtml
     );
+  }
+
+  if (withHtml.includes('${FA_ICON_EXAMPLE_LIST}')) {
+    const iconScript = require('./src/utils/generateFontAwesomeIcons');
+    const iconsExamplesHtml = iconScript.generateHTML();
+    withHtml = withHtml.replace('${FA_ICON_EXAMPLE_LIST}', iconsExamplesHtml);
   }
 
   if (withHtml.includes('${LEGACY_ICON_EXAMPLE_LIST}')) {
