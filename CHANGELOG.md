@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.69.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.69.0...v3.69.1) (2023-03-15)
+
+
+### Bug Fixes
+
+* **time-picker:** changes to timepicker input functionality ([37b220a](https://github.com/MyPureCloud/genesys-webcomponents/commit/37b220a187a436e92bb4c4609fa044474dac5170))
+
 ## [3.69.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.68.0...v3.69.0) (2023-03-14)
 
 
