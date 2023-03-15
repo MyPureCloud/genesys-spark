@@ -1,12 +1,19 @@
 @import (reference) '../option-defaults.less';
 
 gux-option-icon {
+  @icon-size: 16px;
+  @line-height: 20px; // measured from browser
+
   .gux-option-defaults();
+
+  align-items: top;
 
   gux-icon {
     flex-shrink: 0;
-    width: 16px;
-    height: 16px;
+    width: @icon-size;
+    height: @icon-size;
     padding-right: @gux-spacing-xs;
+    // This & align-items: top; ensures the icon is centered on the first line of text
+    margin-top: calc((@line-height - @icon-size) / 2);
   }
 }
