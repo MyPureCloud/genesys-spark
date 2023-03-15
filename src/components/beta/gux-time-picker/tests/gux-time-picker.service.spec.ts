@@ -615,248 +615,126 @@ describe('gux-time-picker.service', () => {
   });
 
   describe('#getValidValueHourChange', () => {
+    const element = document.createElement('input');
+    element.type = 'text';
+    element.selectionStart = 2;
     [
       {
         input: '00:00',
         clockType: '24h',
         change: 'Backspace',
-        selectionStart: 2,
-        expectedOutput: '00:00'
-      },
-      {
-        input: '00:00',
-        clockType: '24h',
-        change: 'Backspace',
-        selectionStart: 1,
+        hourInputTime: '00',
         expectedOutput: '00:00'
       },
       {
         input: '00:00',
         clockType: '24h',
         change: '5',
-        selectionStart: 2,
+        hourInputTime: '00',
         expectedOutput: '05:00'
       },
       {
         input: '00:00',
         clockType: '24h',
         change: '9',
-        selectionStart: 2,
+        hourInputTime: '00',
         expectedOutput: '09:00'
       },
       {
         input: '00:00',
         clockType: '24h',
         change: '0',
-        selectionStart: 2,
+        hourInputTime: '00',
         expectedOutput: '00:00'
       },
       {
         input: '10:00',
         clockType: '24h',
         change: '5',
-        selectionStart: 2,
+        hourInputTime: '10',
         expectedOutput: '05:00'
       },
       {
         input: '11:00',
         clockType: '24h',
         change: '9',
-        selectionStart: 2,
+        hourInputTime: '11',
         expectedOutput: '19:00'
       },
       {
         input: '12:00',
         clockType: '24h',
         change: '0',
-        selectionStart: 2,
+        hourInputTime: '12',
         expectedOutput: '20:00'
       },
       {
         input: '15:00',
         clockType: '24h',
         change: '3',
-        selectionStart: 2,
+        hourInputTime: '15',
         expectedOutput: '03:00'
       },
       {
         input: '18:00',
         clockType: '24h',
         change: '9',
-        selectionStart: 2,
+        hourInputTime: '18',
         expectedOutput: '09:00'
       },
       {
         input: '21:00',
         clockType: '24h',
         change: '3',
-        selectionStart: 2,
+        hourInputTime: '21',
         expectedOutput: '13:00'
       },
-      {
-        input: '00:00',
-        clockType: '24h',
-        change: '0',
-        selectionStart: 1,
-        expectedOutput: '00:00'
-      },
-      {
-        input: '15:00',
-        clockType: '24h',
-        change: '3',
-        selectionStart: 1,
-        expectedOutput: '13:00'
-      },
-      {
-        input: '18:00',
-        clockType: '24h',
-        change: '9',
-        selectionStart: 1,
-        expectedOutput: '19:00'
-      },
-      {
-        input: '21:00',
-        clockType: '24h',
-        change: '3',
-        selectionStart: 1,
-        expectedOutput: '23:00'
-      },
-      {
-        input: '21:00',
-        clockType: '24h',
-        change: '9',
-        selectionStart: 1,
-        expectedOutput: '09:00'
-      },
-      {
-        input: '00:00',
-        clockType: '12h',
-        change: 'Backspace',
-        selectionStart: 2,
-        expectedOutput: '01:00'
-      },
-      {
-        input: '00:00',
-        clockType: '12h',
-        change: 'Backspace',
-        selectionStart: 1,
-        expectedOutput: '02:00'
-      },
-      {
-        input: '00:00',
-        clockType: '12h',
-        change: '5',
-        selectionStart: 2,
-        expectedOutput: '05:00'
-      },
-      {
-        input: '00:00',
-        clockType: '12h',
-        change: '9',
-        selectionStart: 2,
-        expectedOutput: '09:00'
-      },
-      {
-        input: '00:00',
-        clockType: '12h',
-        change: '0',
-        selectionStart: 2,
-        expectedOutput: '00:00'
-      },
+
       {
         input: '10:00',
         clockType: '12h',
         change: '5',
-        selectionStart: 2,
+        hourInputTime: '10',
         expectedOutput: '05:00'
       },
       {
         input: '11:00',
         clockType: '12h',
         change: '9',
-        selectionStart: 2,
+        hourInputTime: '11',
         expectedOutput: '09:00'
       },
       {
         input: '12:00',
         clockType: '12h',
         change: '0',
-        selectionStart: 2,
+        hourInputTime: '12',
         expectedOutput: '12:00'
-      },
-      {
-        input: '15:00',
-        clockType: '12h',
-        change: '3',
-        selectionStart: 2,
-        expectedOutput: '15:00'
-      },
-      {
-        input: '18:00',
-        clockType: '12h',
-        change: '9',
-        selectionStart: 2,
-        expectedOutput: '21:00'
-      },
-      {
-        input: '21:00',
-        clockType: '12h',
-        change: '3',
-        selectionStart: 2,
-        expectedOutput: '15:00'
-      },
-      {
-        input: '00:00',
-        clockType: '12h',
-        change: '0',
-        selectionStart: 1,
-        expectedOutput: '10:00'
-      },
-      {
-        input: '15:00',
-        clockType: '12h',
-        change: '3',
-        selectionStart: 1,
-        expectedOutput: '15:00'
-      },
-      {
-        input: '18:00',
-        clockType: '12h',
-        change: '9',
-        selectionStart: 1,
-        expectedOutput: '21:00'
-      },
-      {
-        input: '21:00',
-        clockType: '12h',
-        change: '3',
-        selectionStart: 1,
-        expectedOutput: '15:00'
-      },
-      {
-        input: '21:00',
-        clockType: '12h',
-        change: '9',
-        selectionStart: 1,
-        expectedOutput: '21:00'
       }
     ].forEach(
       ({
         input,
         clockType,
         change,
-        selectionStart,
+        hourInputTime,
         expectedOutput
       }: {
         input: GuxISOHourMinute;
         clockType: GuxClockType;
         change: string;
-        selectionStart: number;
+        hourInputTime: string;
         expectedOutput: GuxISOHourMinute;
       }) => {
-        it(`should work as expected for "${input}", change "${change}" and selectionStart "${selectionStart}"`, async () => {
+        it(`should work as expected for "${input}", change "${change}"`, async () => {
+          element.setAttribute('value', hourInputTime);
           expect(
-            getValidValueHourChange(input, clockType, change, selectionStart)
+            getValidValueHourChange(
+              input,
+              clockType,
+              change,
+              element.selectionStart,
+              element.value.length
+            )
           ).toBe(expectedOutput);
         });
       }
@@ -941,6 +819,67 @@ describe('gux-time-picker.service', () => {
           expect(getValidValueMinuteChange(input, change, selectionStart)).toBe(
             expectedOutput
           );
+        });
+      }
+    );
+  });
+  describe('#getValidHourChange, prevent backspace if there is a leading zero in 12hour clock', () => {
+    const element = document.createElement('input');
+    element.type = 'text';
+    [
+      {
+        input: '09:00',
+        change: 'Backspace',
+        clockType: '12h',
+        hourInputTime: '09',
+        expectedOutput: '09:00'
+      },
+      {
+        input: '02:00',
+        change: 'Backspace',
+        clockType: '12h',
+        hourInputTime: '02',
+        expectedOutput: '02:00'
+      },
+      {
+        input: '03:00',
+        change: 'Backspace',
+        clockType: '12h',
+        hourInputTime: '03',
+        expectedOutput: '03:00'
+      },
+      {
+        input: '04:00',
+        change: 'Backspace',
+        clockType: '12h',
+        hourInputTime: '04',
+        expectedOutput: '04:00'
+      }
+    ].forEach(
+      ({
+        input,
+        change,
+        clockType,
+        hourInputTime,
+        expectedOutput
+      }: {
+        input: GuxISOHourMinute;
+        change: string;
+        clockType: GuxClockType;
+        hourInputTime: string;
+        expectedOutput: GuxISOHourMinute;
+      }) => {
+        it(`should prevent a ${change} when there is a leading zero on a 12 hour input`, async () => {
+          element.setAttribute('value', hourInputTime);
+          expect(
+            getValidValueHourChange(
+              input,
+              clockType,
+              change,
+              element.selectionStart,
+              element.value.length
+            )
+          ).toBe(expectedOutput);
         });
       }
     );
