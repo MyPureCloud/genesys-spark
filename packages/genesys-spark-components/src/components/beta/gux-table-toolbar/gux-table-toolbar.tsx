@@ -12,13 +12,7 @@ import { MIN_CONTROL_SPACING } from './gux-table-toolbar.constants';
 import { OnResize } from '@utils/decorator/on-resize';
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { trackComponent } from '@utils/tracking/usage';
-import {
-  setAccent,
-  expandActions,
-  collapseActions,
-  collapseActionsAll,
-  expandActionsAll
-} from './gux-table-toolbar.service';
+import { setAccent, setActionsIconOnlyProp } from './gux-table-toolbar.service';
 import { getSlot } from '@utils/dom/get-slot';
 
 /**
@@ -154,19 +148,21 @@ export class GuxTableToolbar {
 
   private renderFullLayout(): void {
     this.displayedLayout = 'full';
-    expandActionsAll(
-      this.allFilterContextual,
-      this.permanentActions,
-      this.primaryAction
+    setActionsIconOnlyProp(
+      false,
+      this.primaryAction,
+      ...this.allFilterContextual,
+      ...this.permanentActions
     );
   }
 
   private renderIconOnlyLayoutScaleDown(controlWidth: number): void {
     this.displayedLayout = 'iconOnly';
-    collapseActionsAll(
-      this.allFilterContextual,
-      this.permanentActions,
-      this.primaryAction
+    setActionsIconOnlyProp(
+      true,
+      this.primaryAction,
+      ...this.allFilterContextual,
+      ...this.permanentActions
     );
     //Save the width of the iconOnly section so when resizing backup we have a reference point.
     this.iconOnlySectionWidth = controlWidth;
@@ -176,10 +172,11 @@ export class GuxTableToolbar {
     this.displayedLayout = 'iconOnly';
     setAccent(this.permanentActions, 'secondary');
     setAccent(this.primaryAction, 'primary');
-    collapseActionsAll(
-      this.allFilterContextual,
-      this.permanentActions,
-      this.primaryAction
+    setActionsIconOnlyProp(
+      true,
+      this.primaryAction,
+      ...this.allFilterContextual,
+      ...this.permanentActions
     );
     this.permanentActions && this.root?.appendChild(this.permanentSlot);
     this.primaryAction && this.root?.appendChild(this.primaryAction);
@@ -190,9 +187,9 @@ export class GuxTableToolbar {
     this.permanentActions &&
       this.menuActionSlot?.appendChild(this.permanentSlot);
     this.primaryAction && this.menuActionSlot?.appendChild(this.primaryAction);
-    collapseActions(this.allFilterContextual);
-    expandActions(this.permanentActions);
-    expandActions(this.primaryAction);
+    setActionsIconOnlyProp(true, ...this.allFilterContextual);
+    setActionsIconOnlyProp(false, ...this.permanentActions);
+    setActionsIconOnlyProp(false, this.primaryAction);
     setAccent(this.menuActionsItems, 'ghost');
   }
 
@@ -234,6 +231,8 @@ export class GuxTableToolbar {
         }
       } else if (toolbarWidth <= this.minimumSizes.iconOnly) {
         this.renderCondensedLayout();
+      } else if (this.minimumSizes.iconOnly > this.minimumSizes.full) {
+        this.renderIconOnlyLayoutScaleUp();
       } else {
         this.renderFullLayout();
       }
