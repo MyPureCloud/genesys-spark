@@ -6,6 +6,8 @@
 :host {
   z-index: var(--gux-zindex-tooltip, @gux-zindex-tooltip);
   display: none;
+  max-width: 250px;
+  overflow: hidden;
   opacity: 0;
 }
 
@@ -19,7 +21,6 @@
 
 .gux-container {
   box-sizing: border-box;
-  max-width: 250px;
   padding: 6px 12px;
   color: @gux-black-50;
   pointer-events: none;
