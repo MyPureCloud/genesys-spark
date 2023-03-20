@@ -1,1 +1,0 @@
-export declare function calculateInputDisabledState(element: HTMLButtonElement | HTMLFieldSetElement | HTMLInputElement | HTMLOptGroupElement | HTMLOptionElement | HTMLSelectElement | HTMLTextAreaElement | HTMLGuxDropdownElement): boolean;

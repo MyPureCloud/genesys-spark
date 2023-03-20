@@ -38,8 +38,9 @@ webappPipeline {
     }
     ciTests = {
         sh('npm ci')
-        sh('npm run lint-all')
-        sh('npm run test.ci')
+        sh('npm run test')
+        sh('npm run stencil --workspace=packages/genesys-spark-components')
+        sh('npm run lint')
 
         // Run in CI step so we only run once
         // (builds happen twice, legacy and FedRAMP)
