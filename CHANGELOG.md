@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.70.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.70.0...v3.70.1) (2023-03-20)
+
+
+### Bug Fixes
+
+* **dropdown:** fix filterable dropdown where text is invisible ([4a1c6a8](https://github.com/MyPureCloud/genesys-webcomponents/commit/4a1c6a8db6a839c1b94cd04b8cc02903b1d9fdfe))
+
 ## [3.70.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.69.1...v3.70.0) (2023-03-20)
 
 
