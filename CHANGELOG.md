@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.70.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.69.1...v3.70.0) (2023-03-20)
+
+
+### Features
+
+* **gux-dropdown:** add gux-option-icon component for dropdown options with icons ([53394b4](https://github.com/MyPureCloud/genesys-webcomponents/commit/53394b42debd3559f3871e6603cd6170a70ddd08))
+* **icon:** better intellisense for iconName ([ca16fb5](https://github.com/MyPureCloud/genesys-webcomponents/commit/ca16fb5f15b03206ed08b3d0afad6dd7811dfdf1))
+* **tooltip:** allow tooltip max-width to be overriden ([648c669](https://github.com/MyPureCloud/genesys-webcomponents/commit/648c669322be03a9155dee526920eb098fbe2028))
+
 ### [3.69.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.69.0...v3.69.1) (2023-03-15)
 
 
