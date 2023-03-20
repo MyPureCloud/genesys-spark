@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.70.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.70.1...v3.70.2) (2023-03-20)
+
+
+### Bug Fixes
+
+* **jenkins:** fixed release version change logic ([cbb4da3](https://github.com/MyPureCloud/genesys-webcomponents/commit/cbb4da3b61b4d96c22cf371b18c229a6a7be1be3))
+* **npm:** fixed .npmrc env variable injection ([7f940c9](https://github.com/MyPureCloud/genesys-webcomponents/commit/7f940c9de17817b7d7906b517c0b4111771678ea))
+* **pr-cmment:** addressed PR comments ([77e5834](https://github.com/MyPureCloud/genesys-webcomponents/commit/77e58341bd1c67f4945baf312b34190d08712f6c))
+
 ### [3.70.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.70.0...v3.70.1) (2023-03-20)
 
 
