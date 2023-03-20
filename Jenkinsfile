@@ -38,9 +38,6 @@ webappPipeline {
     }
     ciTests = {
         sh('npm ci')
-        sh('npm run test')
-        sh('npm run stencil --workspace=packages/genesys-spark-components')
-        sh('npm run lint')
 
         // Run in CI step so we only run once
         // (builds happen twice, legacy and FedRAMP)
@@ -49,8 +46,16 @@ webappPipeline {
                npm run release --workspace=packages/genesys-spark-components
                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
                npm run version-sync $RELEASE_VERSION
+               git add . && git commit --amend --no-edit --no-verify
             ''')
         }
+
+
+        sh('npm run test')
+        sh('npm run stencil --workspace=packages/genesys-spark-components')
+        sh('npm run lint')
+
+
     }
     buildStep = { assetPrefix ->
         String cdnUrl = assetPrefix

@@ -29,7 +29,7 @@
     "test": "npm run test.ci",
     "test.ci": "npm run test.ci --workspaces --if-present",
     "version-sync": "npm-run-all \"version-sync.* -- {@}\" --",
-    "version-sync.root": "npm version --allow-same-version",
+    "version-sync.root": "npm version --no-git-tag-version --allow-same-version",
     "version-sync.workspaces": "npm run version-sync --workspaces --if-present"
   },
   "config": {

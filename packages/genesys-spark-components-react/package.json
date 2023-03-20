@@ -16,7 +16,7 @@
     "lint-staged": "lint-staged",
     "prettier": "prettier --loglevel silent --ignore-path .gitignore --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json",
-    "version-sync": "npm version --allow-same-version"
+    "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "peerDependencies": {
     "@types/react": "16-18",
