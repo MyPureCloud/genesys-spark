@@ -31,7 +31,7 @@ Input for international phone numbers
 
 - [gux-icon](../../stable/gux-icon)
 - [gux-region-icon](./components/gux-region-icon)
-- [gux-option](../../stable/gux-listbox/gux-option)
+- [gux-option](../../stable/gux-listbox/options/gux-option)
 - [gux-listbox](../../stable/gux-listbox)
 - [gux-popup-beta](../gux-popup-beta)
 

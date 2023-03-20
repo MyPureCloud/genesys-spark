@@ -26,9 +26,9 @@
 
 ### Used by
 
- - [gux-pagination-items-per-page](../../gux-pagination/gux-pagination-items-per-page)
- - [gux-pagination-items-per-page-beta](../../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
- - [gux-phone-input-beta](../../../beta/gux-phone-input)
+ - [gux-pagination-items-per-page](../../../gux-pagination/gux-pagination-items-per-page)
+ - [gux-pagination-items-per-page-beta](../../../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
+ - [gux-phone-input-beta](../../../../beta/gux-phone-input)
 
 ### Graph
 ```mermaid

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-dropdown #render should render as expected 1`] = `
+exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
 <gux-dropdown lang="en" value="j">
   <mock:shadow-root>
     <gux-popup-beta>
@@ -59,6 +59,53 @@ exports[`gux-dropdown #render should render as expected 1`] = `
       <!---->
       Ibis
     </gux-option>
+  </gux-listbox>
+</gux-dropdown>
+`;
+
+exports[`gux-dropdown #render should render as expected with gux-option-icon 1`] = `
+<gux-dropdown lang="en" value="j">
+  <mock:shadow-root>
+    <gux-popup-beta>
+      <div class="gux-target-container-collapsed" slot="target">
+        <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+          <div class="gux-field-content">
+            <div class="gux-placeholder">
+              Select...
+            </div>
+          </div>
+          <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+        </button>
+      </div>
+      <div class="gux-listbox-container" slot="popup">
+        <slot></slot>
+      </div>
+    </gux-popup-beta>
+  </mock:shadow-root>
+  <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="var(--gux-blue-60)" icon-name="user" id="gux-option-icon-i" role="option" value="leonardo">
+      <!---->
+      <gux-icon decorative="" icon-name="user" style="color: var(--gux-blue-60);"></gux-icon>
+      Leonardo
+    </gux-option-icon>
+    <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#8452cf" icon-name="user" id="gux-option-icon-i" role="option" value="donatello">
+      <!---->
+      <gux-icon decorative="" icon-name="user" style="color: #8452cf;"></gux-icon>
+      Donatello
+    </gux-option-icon>
+    <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="rgb(234, 11, 11)" icon-name="user" id="gux-option-icon-i" role="option" value="raphael">
+      <!---->
+      <gux-icon decorative="" icon-name="user" style="color: rgb(234, 11, 11);"></gux-icon>
+      Raphael
+    </gux-option-icon>
+    <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#e08915" icon-name="user" icon-sr-text="Screenreader information about the icon goes here, if needed" id="gux-option-icon-i" role="option" value="michelangelo">
+      <!---->
+      <gux-icon icon-name="user" screenreader-text="Screenreader information about the icon goes here, if needed" style="color: #e08915;"></gux-icon>
+      Michelangelo
+    </gux-option-icon>
   </gux-listbox>
 </gux-dropdown>
 `;

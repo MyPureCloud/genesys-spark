@@ -26,6 +26,10 @@ import {
   setPreviousOptionActive,
   matchOption
 } from './gux-listbox.service';
+import {
+  ListboxOptionElement,
+  optionTagSelector
+} from './options/option-types';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
@@ -36,7 +40,10 @@ import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import translationResources from './i18n/en.json';
 
 /**
- * @slot - collection of gux-option elements
+ * The listbox component provides keyboard bindings and a11y patterns for selecting
+ * from a list of options.
+ *
+ * @slot - collection of elements conforming to the ListboxOptionElement interface
  */
 @Component({
   styleUrl: 'gux-listbox.less',
@@ -65,7 +72,7 @@ export class GuxListbox {
   selectedValues: string[] = [];
 
   @State()
-  listboxOptions: HTMLGuxOptionElement[] = [];
+  listboxOptions: ListboxOptionElement[] = [];
 
   @State()
   allListboxOptionsFiltered: boolean;
@@ -152,9 +159,14 @@ export class GuxListbox {
 
   @Listen('click')
   onClick(event: MouseEvent): void {
-    whenEventIsFrom('gux-option', event, (option: HTMLGuxOptionElement) => {
-      onClickedOption(option, value => this.updateValue(value));
-    });
+    // If it's got a value attribute, that's good enough.
+    whenEventIsFrom(
+      optionTagSelector,
+      event,
+      (option: ListboxOptionElement) => {
+        onClickedOption(option, value => this.updateValue(value));
+      }
+    );
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await
@@ -169,7 +181,7 @@ export class GuxListbox {
     }
     this.listboxOptions = Array.from(
       this.root.children
-    ) as HTMLGuxOptionElement[];
+    ) as ListboxOptionElement[];
     this.internallistboxoptionsupdated.emit();
   }
 

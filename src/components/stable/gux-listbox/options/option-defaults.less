@@ -1,10 +1,11 @@
 @import (reference) '../../../../style/color.less';
+@import (reference) '../../../../style/spacing.less';
 
-gux-option {
+.gux-option-defaults() {
   box-sizing: border-box;
   display: flex;
   min-height: 32px;
-  padding: 8px 16px;
+  padding: 6px @gux-spacing-xs;
   color: @gux-black-50;
   word-wrap: break-word;
   cursor: pointer;

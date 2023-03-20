@@ -4,7 +4,7 @@ import { GuxPaginationBeta } from '../gux-pagination-beta';
 import { GuxButton } from '../../../stable/gux-button/gux-button';
 import { GuxDropdown } from '../../../stable/gux-dropdown/gux-dropdown';
 import { GuxListbox } from '../../../stable/gux-listbox/gux-listbox';
-import { GuxOption } from '../../../stable/gux-listbox/gux-option/gux-option';
+import { GuxOption } from '../../../stable/gux-listbox/options/gux-option/gux-option';
 import { GuxPaginationButtonsBeta } from '../gux-pagination-buttons-beta/gux-pagination-buttons-beta';
 import { GuxPaginationItemCountsBeta } from '../gux-pagination-item-counts-beta/gux-pagination-item-counts-beta';
 import { GuxPaginationItemsPerPageBeta } from '../gux-pagination-items-per-page-beta/gux-pagination-items-per-page-beta';

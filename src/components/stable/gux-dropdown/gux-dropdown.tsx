@@ -23,11 +23,23 @@ import { OnMutation } from '@utils/decorator/on-mutation';
 
 import translationResources from './i18n/en.json';
 
-import { getSearchOption } from '../gux-listbox/gux-listbox.service';
+import {
+  getSearchOption,
+  getListOptions
+} from '../gux-listbox/gux-listbox.service';
+import {
+  ListboxOptionElement,
+  ValidOptionTag
+} from '../gux-listbox/options/option-types';
 import { GuxFilterTypes } from './gux-dropdown.types';
 
 /**
- * @slot - for a gux-listbox containing gux-option children
+ * Our Dropdown component. In the most basic case, it's used with `gux-option` to give users
+ * a list of text options to select from, but other types of options with different appearance
+ * can be created by creating a new component and adding it to `validOptionTags` list in
+ * gux-dropdown-types.ts, then following the resulting compiler errors.
+ *
+ * @slot - for a gux-listbox containing ValidDropdownOption children
  */
 @Component({
   styleUrl: 'gux-dropdown.less',
@@ -269,12 +281,14 @@ export class GuxDropdown {
     );
   }
 
-  private getOptionElementByValue(value: string): HTMLGuxOptionElement {
-    const listboxOptionElements = this.root.querySelectorAll('gux-option');
+  get optionElements(): Array<ListboxOptionElement> {
+    return getListOptions(this.listboxElement);
+  }
 
-    return Array.from(listboxOptionElements).find(
-      listboxOptionElement => listboxOptionElement.value === value
-    );
+  private getOptionElementByValue(value: string): HTMLElement {
+    return this.optionElements.find(optionElement => {
+      return optionElement.value === value;
+    });
   }
 
   private fieldButtonClick(): void {
@@ -366,11 +380,10 @@ export class GuxDropdown {
     const selectedListboxOptionElement = this.getOptionElementByValue(
       this.value
     );
-
     if (selectedListboxOptionElement) {
       return (
         <div class="gux-selected-option">
-          {selectedListboxOptionElement.textContent}
+          {this.renderSelectedItem(selectedListboxOptionElement)}
         </div>
       ) as JSX.Element;
     }
@@ -379,6 +392,44 @@ export class GuxDropdown {
       <div class="gux-placeholder">
         {this.placeholder || this.i18n('noSelection')}
       </div>
+    ) as JSX.Element;
+  }
+
+  /**
+   * Renders the selection display for the selected item. This function needs a branch to handle
+   * each type defined in GuxDropdownOptionType
+   *
+   * @param item The selected item. This can be any of the node types defined in GuxDropdownOptionType.
+   * @returns Rendered selection details.
+   */
+  private renderSelectedItem(item: HTMLElement): JSX.Element {
+    const tag = item.tagName.toLowerCase() as ValidOptionTag;
+    switch (tag) {
+      case 'gux-option':
+        return (<span>{item.textContent}</span>) as JSX.Element;
+      case 'gux-option-icon':
+        return this.renderIconOption(item as HTMLGuxOptionIconElement);
+      default:
+        // eslint-disable-next-line no-case-declarations
+        const _exhaustiveCheck: never = tag;
+        return _exhaustiveCheck;
+    }
+  }
+
+  private renderIconOption(iconOption: HTMLGuxOptionIconElement): JSX.Element {
+    let iconStyle = null;
+    if (iconOption.iconColor !== null) {
+      iconStyle = { color: iconOption.iconColor };
+    }
+    return (
+      <span class="gux-selected-icon">
+        <gux-icon
+          icon-name={iconOption.iconName}
+          style={iconStyle}
+          decorative
+        ></gux-icon>
+        {iconOption.textContent}
+      </span>
     ) as JSX.Element;
   }
 
