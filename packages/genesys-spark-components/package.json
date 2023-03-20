@@ -50,7 +50,7 @@
     "test.update-snapshot": "TZ=UTC stencil test --spec --e2e --updateSnapshot",
     "test.watch": "TZ=UTC stencil test --spec --e2e --watch",
     "update-en-i18n": "./scripts/update-en-i18n.js",
-    "version-sync": "npm version --allow-same-version"
+    "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "config": {
     "commitizen": {
