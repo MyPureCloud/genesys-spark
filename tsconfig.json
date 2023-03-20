@@ -1,25 +1,14 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "declaration": false,
-    "experimentalDecorators": true,
-    "lib": ["dom", "es2017", "ES2020.Intl"],
-    "skipLibCheck": true,
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es2017",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "jsx": "react",
-    "jsxFactory": "h",
-    "resolveJsonModule": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@utils/*": ["utils/*"]
-    }
+    "resolveJsonModule": true
   },
-  "include": ["src"],
   "exclude": ["node_modules"],
   "typedocOptions": {
     "ignoreCompilerErrors": true,

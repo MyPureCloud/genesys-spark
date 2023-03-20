@@ -1,0 +1,57 @@
+@Library('pipeline-library')
+
+Boolean isMainBranch = env.BRANCH_NAME == 'main'
+
+Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
+
+Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/')
+
+Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch
+
+webappPipeline {
+    projectName = 'common-ui-docs/genesys-webcomponents'
+    team = 'Core UI'
+    mailer = 'CoreUI@genesys.com'
+    nodeVersion = '16.x'
+    testJob = 'no-tests'
+    deployConfig = [dev : 'always']
+    manifest = customManifest('./web-apps/genesys-spark-examples/dist') {
+        sh('./web-apps/genesys-spark-examples/scripts/generate-manifest.js')
+        readJSON(file: './web-apps/genesys-spark-examples/manifest.json')
+    }
+    skipCommitsFrom = []
+    buildType = {
+        if (isReleaseBranch) {
+            return 'MAINLINE'
+        }
+
+        return isFeatureBranch ? 'FEATURE' : 'CI'
+    }
+    ciTests = {
+        sh('printenv')
+        sh('npm ci')
+    }
+    buildStep = { assetPrefix ->
+        if (isReleaseBranch) {
+            String version = sh(
+                script: 'node -e "console.log(require(\'./package.json\').version)"',
+                returnStdout: true
+            ).trim()
+            currentBuild.description = version
+        } else {
+            currentBuild.description = env.BRANCH_NAME
+        }
+
+        String cdnUrl = assetPrefix
+        // This is a bit of a kludge, but the build pipeline is intended for apps, which
+        // can use relative URLs to load assets. Because the components are running inside
+        // apps, they have to load their assets from a full URL on the new UI hosting stack.
+        if (assetPrefix.startsWith('/')) {
+            cdnUrl = "https://app.mypurecloud.com${assetPrefix}genesys-webcomponents/"
+        }
+
+        env.CDN_URL = cdnUrl
+
+        sh('npm run build')
+    }
+}

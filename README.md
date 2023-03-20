@@ -1,3 +1,5 @@
+# Genesys Spark Monorepo
+
 # Spark Web Components
 
 This repo contains the CSS and custom elements that make up Genesys' design system, [Spark](https://spark.genesys.com).
@@ -137,3 +139,6 @@ Add an `example.html` file to your component's implementation directory with som
 Currently this project is primarily use for internal Genesys projects, so most of our issue tracking and planning
 is done in internal tools. We do still look at GitHub isssues, but please understand that we're a small team and
 may not be able to address items right away, depending on internal priorities.
+
+cp -R ~/temp/genesys-webcomponents/src/ ./packages/genesys-spark-components/src
+cp -R ~/temp/genesys-webcomponents/docs/src/ ./web-apps/genesys-spark-examples/src

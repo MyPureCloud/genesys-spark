@@ -1,3 +1,6 @@
-src/components/legacy
-stencil.config.ts
-common-webcomponents-react
+node_modules/
+packages/
+playground/
+playgrounds/
+shared-configs/
+web-apps/
