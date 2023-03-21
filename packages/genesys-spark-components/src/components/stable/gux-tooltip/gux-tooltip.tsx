@@ -1,4 +1,3 @@
-import { createPopper, Instance } from '@popperjs/core';
 import {
   Component,
   Element,
@@ -10,11 +9,19 @@ import {
   Prop,
   State
 } from '@stencil/core';
+import {
+  autoUpdate,
+  computePosition,
+  flip,
+  offset,
+  shift,
+  Placement
+} from '@floating-ui/dom';
 
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 import { trackComponent } from '@utils/tracking/usage';
-import { GuxTooltipPlacements } from './gux-tooltip.types';
 import { findElementById } from '@utils/dom/find-element-by-id';
+import { afterNextRender } from '@utils/dom/after-next-render';
 
 /**
  * @slot - Content of the tooltip
@@ -30,8 +37,8 @@ export class GuxTooltip {
   private pointerleaveHandler: () => void = () => this.hide();
   private focusinHandler: () => void = () => this.show();
   private focusoutHandler: () => void = () => this.hide();
-  private popperInstance: Instance;
   private id: string = randomHTMLId('gux-tooltip');
+  private cleanupUpdatePosition: () => void;
 
   @Element()
   private root: HTMLElement;
@@ -46,7 +53,7 @@ export class GuxTooltip {
    * Placement of the tooltip. Default is bottom-start
    */
   @Prop({ mutable: true })
-  placement: GuxTooltipPlacements = 'bottom-start';
+  placement: Placement = 'bottom-start';
 
   /**
    * If tooltip is shown or not
@@ -79,12 +86,45 @@ export class GuxTooltip {
     this.hide();
   }
 
+  private runUpdatePosition(): void {
+    this.cleanupUpdatePosition = autoUpdate(
+      this.forElement,
+      this.root,
+      () => this.updatePosition(),
+      {
+        ancestorScroll: true,
+        elementResize: true,
+        animationFrame: false,
+        ancestorResize: true
+      }
+    );
+  }
+
+  private updatePosition(): void {
+    void computePosition(this.forElement, this.root, {
+      placement: this.placement,
+      strategy: 'fixed',
+      middleware: [offset(16), flip(), shift()]
+    }).then(({ x, y, placement }) => {
+      Object.assign(this.root.style, {
+        left: `${x}px`,
+        top: `${y}px`
+      });
+      // data-placement is currently only used for e2e tests
+      this.root.setAttribute('data-placement', placement);
+    });
+  }
   private show(): void {
-    this.popperInstance.forceUpdate();
     this.isShown = true;
+    afterNextRender(() => {
+      this.runUpdatePosition();
+    });
   }
 
   private hide(): void {
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
     this.isShown = false;
   }
 
@@ -110,19 +150,6 @@ export class GuxTooltip {
     if (this.forElement) {
       this.forElement.setAttribute('aria-describedby', this.id);
 
-      this.popperInstance = createPopper(this.forElement, this.root, {
-        modifiers: [
-          {
-            name: 'offset',
-            options: {
-              offset: [0, 16]
-            }
-          }
-        ],
-        placement: this.placement,
-        strategy: 'fixed'
-      });
-
       this.forElement.addEventListener(
         'pointerenter',
         this.pointerenterHandler
@@ -143,13 +170,10 @@ export class GuxTooltip {
   }
 
   disconnectedCallback(): void {
-    this.forElement?.removeAttribute('aria-describedby');
-
-    if (this.popperInstance) {
-      this.popperInstance.destroy();
-      this.popperInstance = null;
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
     }
-
+    this.forElement?.removeAttribute('aria-describedby');
     this.forElement?.removeEventListener(
       'pointerenter',
       this.pointerenterHandler

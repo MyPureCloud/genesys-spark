@@ -1,22 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import * as popperjs from '@popperjs/core';
 import { GuxTooltip } from '../gux-tooltip';
 
 const components = [GuxTooltip];
 const language = 'en';
 
 describe('gux-tooltip', () => {
-  beforeEach(() => {
-    // popperjs does not work with Stencils MockHTMLElements used in tests
-    jest.spyOn(popperjs, 'createPopper').mockReturnValue({
-      destroy: jest.fn()
-    } as unknown as popperjs.Instance);
-  });
-
-  afterEach(() => {
-    jest.spyOn(popperjs, 'createPopper').mockRestore();
-  });
-
   it('should build', async () => {
     const html = '<gux-tooltip></gux-tooltip>';
     const page = await newSpecPage({ components, html, language });
