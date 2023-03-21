@@ -1,4 +1,4 @@
-@Library('pipeline-library@comui-1552-env-npm-config')
+@Library('pipeline-library')
 
 Boolean isMainBranch = env.BRANCH_NAME == 'main'
 
