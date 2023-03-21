@@ -3,7 +3,7 @@ const fs = require('fs');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const CDN_URL = process.env.DOCS_CDN_URL || '';
+const CDN_URL = process.env.CDN_URL || '';
 
 module.exports = {
   entry: {

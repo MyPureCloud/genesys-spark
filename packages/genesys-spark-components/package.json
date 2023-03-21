@@ -133,6 +133,9 @@
     "weekstart": "^1.1.0",
     "xmldom": "^0.6.0"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "collection": "dist/collection/collection-manifest.json",
   "prettier": "prettier-config-genesys-spark-components",
   "volta": {
