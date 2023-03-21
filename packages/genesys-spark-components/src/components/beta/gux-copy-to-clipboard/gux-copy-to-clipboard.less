@@ -43,10 +43,15 @@ button {
     display: inline-flex;
     align-items: center;
 
+    &.tooltip-text {
+      vertical-align: middle;
+    }
+
     gux-icon {
       width: 16px;
       height: 16px;
       padding-right: @gux-spacing-xs;
+      vertical-align: middle;
 
       &[icon-name='badge-check'] {
         color: @gux-alert-green-60;

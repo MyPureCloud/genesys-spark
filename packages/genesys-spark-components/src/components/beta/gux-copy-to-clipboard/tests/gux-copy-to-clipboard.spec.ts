@@ -49,7 +49,7 @@ describe('gux-copy-to-clipboard-beta', () => {
       component.onCopyToClipboard();
       await page.waitForChanges();
 
-      expect(component.tooltipContent).toEqual('success');
+      expect(component.tooltipContent).toEqual('copySuccess');
       expect(window.navigator.clipboard.writeText).toHaveBeenCalled();
     });
 
@@ -66,7 +66,7 @@ describe('gux-copy-to-clipboard-beta', () => {
       component.onCopyToClipboard();
       await page.waitForChanges();
 
-      expect(component.tooltipContent).toEqual('error');
+      expect(component.tooltipContent).toEqual('copyFailure');
       expect(window.navigator.clipboard.writeText).toHaveBeenCalled();
     });
   });

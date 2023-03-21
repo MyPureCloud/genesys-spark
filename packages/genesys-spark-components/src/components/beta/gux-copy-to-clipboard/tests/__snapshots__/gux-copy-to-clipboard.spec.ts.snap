@@ -9,7 +9,11 @@ exports[`gux-copy-to-clipboard-beta #render should render copy to clipboard 1`] 
         <gux-icon decorative="" icon-name="copy"></gux-icon>
       </div>
       <gux-tooltip placement="bottom-end">
-        Click to Copy
+        <div class="gux-tooltip-markup">
+          <span class="tooltip-text">
+            Click to Copy
+          </span>
+        </div>
       </gux-tooltip>
     </button>
   </mock:shadow-root>
