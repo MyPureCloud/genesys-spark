@@ -2,7 +2,7 @@ import { Component, Element, h, JSX, State, Listen } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
-import { TooltipContentType } from './tooltip-content-type';
+import { CopyToClipboardContentType } from './copy-to-clipboard-content-type';
 
 /**
  * @slot content - Slot for content
@@ -20,7 +20,7 @@ export class GuxCopyToClipboard {
   private root: HTMLElement;
 
   @State()
-  tooltipContent: string = 'clickToCopy' as TooltipContentType;
+  tooltipContent: CopyToClipboardContentType = 'clickToCopy';
 
   @Listen('mouseleave')
   onMouseleave() {
@@ -55,26 +55,21 @@ export class GuxCopyToClipboard {
       });
   }
 
-  private renderTooltipIcon(): JSX.Element {
-    let iconName;
-
+  private getIconName(): string {
     switch (this.tooltipContent) {
       case 'copyFailure':
-        iconName = 'badge-x';
-        break;
+        return 'badge-x';
       case 'copySuccess':
-        iconName = 'badge-check';
-        break;
-      default:
-        iconName = null;
-        break;
+        return 'badge-check';
     }
+  }
 
-    if (!iconName) return null;
-
-    return (
-      <gux-icon icon-name={iconName} decorative></gux-icon>
-    ) as JSX.Element;
+  private renderTooltipIcon(): JSX.Element {
+    const iconName = this.getIconName();
+    if (iconName)
+      return (
+        <gux-icon icon-name={iconName} decorative></gux-icon>
+      ) as JSX.Element;
   }
 
   private renderTooltip(): JSX.Element {
