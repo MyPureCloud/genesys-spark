@@ -55,8 +55,8 @@ export class GuxCopyToClipboard {
       });
   }
 
-  private getIconName(): string {
-    switch (this.tooltipContent) {
+  getIconName(tooltipContent: CopyToClipboardContentType): string {
+    switch (tooltipContent) {
       case 'copyFailure':
         return 'badge-x';
       case 'copySuccess':
@@ -65,19 +65,20 @@ export class GuxCopyToClipboard {
   }
 
   private renderTooltipIcon(): JSX.Element {
-    const iconName = this.getIconName();
-    if (iconName)
+    const iconName = this.getIconName(this.tooltipContent);
+    if (iconName) {
       return (
         <gux-icon icon-name={iconName} decorative></gux-icon>
       ) as JSX.Element;
+    }
   }
 
   private renderTooltip(): JSX.Element {
     return (
       <gux-tooltip placement="bottom-end">
-        <div class="gux-tooltip-markup">
+        <div class="gux-tooltip-content">
           {this.renderTooltipIcon()}
-          <span class="tooltip-text">{this.i18n(this.tooltipContent)}</span>
+          <span class="gux-tooltip-text">{this.i18n(this.tooltipContent)}</span>
         </div>
       </gux-tooltip>
     ) as JSX.Element;
