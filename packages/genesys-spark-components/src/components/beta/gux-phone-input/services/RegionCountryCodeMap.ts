@@ -96,7 +96,7 @@ export const regionCountryCodeMap = {
   HN: '504',
   HR: '385',
   HT: '509',
-  HU: '39',
+  HU: '36',
   ID: '62',
   IE: '353',
   IL: '972',
