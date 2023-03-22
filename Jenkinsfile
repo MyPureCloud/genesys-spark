@@ -47,6 +47,7 @@ webappPipeline {
                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
                npm run version-sync $RELEASE_VERSION
                git add . && git commit --amend --no-edit --no-verify
+               git tag v$RELEASE_VERSION
             ''')
         }
 
