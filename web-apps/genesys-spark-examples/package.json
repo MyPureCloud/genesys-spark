@@ -5,9 +5,11 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "webpack --mode=production",
+    "postbuild": "npm run generate-versions-file",
     "clean": "rm -r ./dist || true",
     "dev": "webpack serve --mode=development",
     "eslint": "eslint . --ignore-path .gitignore --fix",
+    "generate-versions-file": "./scripts/generate-versions-file.mjs",
     "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\"",
     "lint-staged": "lint-staged",
     "prettier": "prettier --loglevel silent --ignore-path .gitignore --ignore-unknown --write .",
