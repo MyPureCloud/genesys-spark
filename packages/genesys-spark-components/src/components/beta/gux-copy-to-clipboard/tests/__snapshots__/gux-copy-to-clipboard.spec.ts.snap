@@ -10,7 +10,7 @@ exports[`gux-copy-to-clipboard-beta #render should render copy to clipboard 1`] 
       </div>
       <gux-tooltip placement="bottom-end">
         <div class="gux-tooltip-content">
-          <span class="gux-tooltip-text">
+          <span>
             Click to Copy
           </span>
         </div>

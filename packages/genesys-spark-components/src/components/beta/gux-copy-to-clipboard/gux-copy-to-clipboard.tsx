@@ -78,7 +78,7 @@ export class GuxCopyToClipboard {
       <gux-tooltip placement="bottom-end">
         <div class="gux-tooltip-content">
           {this.renderTooltipIcon()}
-          <span class="gux-tooltip-text">{this.i18n(this.tooltipContent)}</span>
+          <span>{this.i18n(this.tooltipContent)}</span>
         </div>
       </gux-tooltip>
     ) as JSX.Element;
