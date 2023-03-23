@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.71.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.70.1...v3.71.0) (2023-03-23)
+
+
+### Features
+
+* **gux-tooltip:** migrate from popper.js to floating-ui ([5dc135b](https://github.com/MyPureCloud/genesys-webcomponents/commit/5dc135b9f4ac801119e81fa17c225a3fea3c3af4))
+* **icon:** new question icon ([c8d06c6](https://github.com/MyPureCloud/genesys-webcomponents/commit/c8d06c61449c21ea12b39da592309d447acb0641))
+
+
+### Bug Fixes
+
+* **component:** aligning icon and text in copy to clipboard tooltip ([1b03504](https://github.com/MyPureCloud/genesys-webcomponents/commit/1b035045d8e7ff4e6df6b4941d5bc1ad590c96d1))
+* **component:** fixed snapshot test for copy to clipboard component ([3102887](https://github.com/MyPureCloud/genesys-webcomponents/commit/310288754909b90243f1591311ef58d4afde26a7))
+* **component:** pr feedback fixes for copy to clipboard component ([be421f0](https://github.com/MyPureCloud/genesys-webcomponents/commit/be421f01285593325388a371b9c3a1a7c906d145))
+* **component:** pr fixes for copy to clipboard component ([c751a5d](https://github.com/MyPureCloud/genesys-webcomponents/commit/c751a5df743fcf25b2bb753c509caff70d354354))
+* **component:** removed class on span for copy to clipboard component ([39ca750](https://github.com/MyPureCloud/genesys-webcomponents/commit/39ca750eff44c0d08921a877bfe4af599b046539))
+* **jenkins:** fixed CDN_URL env variable injection into examples app ([6107427](https://github.com/MyPureCloud/genesys-webcomponents/commit/61074275b690655284f97e222d2bfa25fd542528))
+* **jenkins:** fixed commit tagging ([0cdfb74](https://github.com/MyPureCloud/genesys-webcomponents/commit/0cdfb74e8b25a58c8419ba8b8201a0772861eb1b))
+* **jenkins:** fixed release version change logic ([cbb4da3](https://github.com/MyPureCloud/genesys-webcomponents/commit/cbb4da3b61b4d96c22cf371b18c229a6a7be1be3))
+* **jenkins:** fixing branch tagging ([f36ced8](https://github.com/MyPureCloud/genesys-webcomponents/commit/f36ced893d27bfad08c6f0d6508e532a55c76ba3))
+* **jenkins:** using main pipeline-library branch again ([8eb6c5f](https://github.com/MyPureCloud/genesys-webcomponents/commit/8eb6c5f4e6860fe710549d57ad03a744fdbb852a))
+* **monorepo:** added missing versions file generation ([6c1e009](https://github.com/MyPureCloud/genesys-webcomponents/commit/6c1e0093251a7da3d1876e61d62743b7b45f34ef))
+* **npm:** fixed .npmrc env variable injection ([7f940c9](https://github.com/MyPureCloud/genesys-webcomponents/commit/7f940c9de17817b7d7906b517c0b4111771678ea))
+* **phone-input:** fixing country phone code for HU - Hungary ([fb751ea](https://github.com/MyPureCloud/genesys-webcomponents/commit/fb751ea84c547fc65ba37a4e64c892667f92a2a1))
+* **pr-cmment:** addressed PR comments ([77e5834](https://github.com/MyPureCloud/genesys-webcomponents/commit/77e58341bd1c67f4945baf312b34190d08712f6c))
+
 ### [3.70.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.70.1...v3.70.5) (2023-03-22)
 
 
