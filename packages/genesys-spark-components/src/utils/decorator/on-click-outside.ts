@@ -98,7 +98,8 @@ function initOnClickOutside(
 
   if (
     !composedPath.includes(element) &&
-    !isExcluded(composedPath, excludedNodes)
+    !isExcluded(composedPath, excludedNodes) &&
+    element.isConnected
   ) {
     callback.call(component, event);
   }
