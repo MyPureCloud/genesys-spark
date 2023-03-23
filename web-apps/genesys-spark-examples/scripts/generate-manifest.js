@@ -13,7 +13,7 @@ const buildDate = new Date().toISOString();
 const indexFiles = glob
   .sync(path.join(__dirname, '../dist/*.html'))
   .map(file => ({ file: path.basename(file) }))
-  .push({ file: 'versions.json' });
+  .concat({ file: 'versions.json' });
 
 const manifest = {
   name,
