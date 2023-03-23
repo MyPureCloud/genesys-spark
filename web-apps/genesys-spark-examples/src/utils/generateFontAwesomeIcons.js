@@ -32,6 +32,7 @@ const icons = [
       'fa/memo-circle-check-regular',
       'fa/message-regular',
       'fa/money-bill-regular',
+      'fa/question-solid',
       'fa/rectangle-list-regular',
       'fa/right-to-bracket-regular',
       'fa/road-regular',
