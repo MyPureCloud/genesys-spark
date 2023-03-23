@@ -138,6 +138,11 @@
   },
   "collection": "dist/collection/collection-manifest.json",
   "prettier": "prettier-config-genesys-spark-components",
+  "standard-version": {
+    "skip": {
+      "tag": true
+    }
+  },
   "volta": {
     "node": "16.18.0"
   }
