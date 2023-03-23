@@ -12,7 +12,8 @@ const build = `${process.env.BUILD_NUMBER}`;
 const buildDate = new Date().toISOString();
 const indexFiles = glob
   .sync(path.join(__dirname, '../dist/*.html'))
-  .map(file => ({ file: path.basename(file) }));
+  .map(file => ({ file: path.basename(file) }))
+  .push({ file: 'versions.json' });
 
 const manifest = {
   name,
