@@ -13,7 +13,8 @@
     "yellow": "distintivo com etiqueta: {label}, cor: amarelo",
     "yellow-bold": "distintivo com etiqueta: {label}, cor: amarelo a negrito",
     "red": "distintivo com etiqueta: {label}, cor: vermelho",
-    "red-bold": "distintivo com etiqueta: {label}, cor: vermelho a negrito"
+    "red-bold": "distintivo com etiqueta: {label}, cor: vermelho a negrito",
+    "inherit": "distintivo com etiqueta: {label}, cor: herdada"
   },
   "gux-column-manager-item": {
     "activateReordering": "Ativar modo de reordenação para a coluna {columnName}"

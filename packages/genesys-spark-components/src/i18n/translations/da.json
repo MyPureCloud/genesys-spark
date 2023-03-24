@@ -13,7 +13,8 @@
     "yellow": "badge med etiket: {label}, farve: gul",
     "yellow-bold": "badge med etiket: {label}, farve: gul fed",
     "red": "badge med etiket: {label}, farve: rød",
-    "red-bold": "badge med etiket: {label}, farve: rød fed"
+    "red-bold": "badge med etiket: {label}, farve: rød fed",
+    "inherit": "badge med etiket: {label}, farve: nedarvet"
   },
   "gux-column-manager-item": {
     "activateReordering": "Aktivér omarrangeringstilstand for {columnName} kolonne"

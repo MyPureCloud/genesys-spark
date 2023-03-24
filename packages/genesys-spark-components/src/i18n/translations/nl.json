@@ -13,7 +13,8 @@
     "yellow": "badge met label: {label}, kleur: geel",
     "yellow-bold": "badge met label: {label}, kleur: geel vet",
     "red": "badge met label: {label}, kleur: rood",
-    "red-bold": "badge met label: {label}, kleur: rood vet"
+    "red-bold": "badge met label: {label}, kleur: rood vet",
+    "inherit": "badge met label: {label}, kleur: overgenomen"
   },
   "gux-column-manager-item": {
     "activateReordering": "Herschikkingsmodus activeren voor kolom {columnName}"

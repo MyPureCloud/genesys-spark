@@ -13,7 +13,8 @@
     "yellow": "badge con etichetta: {label}, colore: giallo",
     "yellow-bold": "badge con etichetta: {label}, colore: giallo accentuato",
     "red": "badge con etichetta: {label}, colore: rosso",
-    "red-bold": "badge con etichetta: {label}, colore: rosso accentuato"
+    "red-bold": "badge con etichetta: {label}, colore: rosso accentuato",
+    "inherit": "badge con etichetta: {label}, colore: ereditato"
   },
   "gux-column-manager-item": {
     "activateReordering": "Attiva modalità di riordino per la colonna {columnName}"

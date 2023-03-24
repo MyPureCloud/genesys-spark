@@ -13,7 +13,8 @@
     "yellow": "شارة مع التسمية: {label}، اللون: أصفر",
     "yellow-bold": "شارة مع التسمية: {label}، اللون: أصفر سميك",
     "red": "شارة مع التسمية: {label}، اللون: أحمر",
-    "red-bold": "شارة مع التسمية: {label}، اللون: أحمر سميك"
+    "red-bold": "شارة مع التسمية: {label}، اللون: أحمر سميك",
+    "inherit": "شارة مع التسمية: {label}، اللون: مكتسب"
   },
   "gux-column-manager-item": {
     "activateReordering": "تنشيط وضع إعادة الترتيب لعمود {columnName}"

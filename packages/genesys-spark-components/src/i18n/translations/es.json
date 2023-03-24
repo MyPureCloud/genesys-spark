@@ -13,7 +13,8 @@
     "yellow": "insignia con la etiqueta: {label}, color: amarillo",
     "yellow-bold": "insignia con la etiqueta: {label}, color: amarillo en negrita",
     "red": "insignia con la etiqueta: {label}, color: rojo",
-    "red-bold": "insignia con la etiqueta: {label}, color: rojo en negrita"
+    "red-bold": "insignia con la etiqueta: {label}, color: rojo en negrita",
+    "inherit": "insignia con la etiqueta: {label}, color: heredado"
   },
   "gux-column-manager-item": {
     "activateReordering": "Activar modo de reordenación para la columna {columnName}"
