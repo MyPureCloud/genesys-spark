@@ -189,7 +189,7 @@ New stable components have been added that provide major accessibility improveme
 - gux-form-field
 - gux-list
 
-We have added automated and manual testing processes to identify existing issues and prevent regressions. See the [Building and Testing Components with Accessibility in Mind](https://github.com/MyPureCloud/genesys-webcomponents/blob/main/A11Y_TESTING.md) documentation to read more about how we test accessibility in our components.
+We have added automated and manual testing processes to identify existing issues and prevent regressions. See the [Building and Testing Components with Accessibility in Mind](https://github.com/MyPureCloud/genesys-webcomponents/blob/main/packages/genesys-spark-components/documentation/A11Y_TESTING.md) documentation to read more about how we test accessibility in our components.
 
 ### Encapsulation
 

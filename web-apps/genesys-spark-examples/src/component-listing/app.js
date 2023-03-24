@@ -38,7 +38,7 @@ export function bootstrap() {
                   .join('')}
                   <div class="sticky-footer">
                   <h2>Resources</h2>
-                    <a class="resources-link" href="https://github.com/MyPureCloud/genesys-webcomponents/tree/main/docs/migrations/v3" target="_blank">V2 -> V3 Migration Guide</a>
+                    <a class="resources-link" href="https://github.com/MyPureCloud/genesys-webcomponents/tree/main/packages/genesys-spark-components/documentation/migrations/v3" target="_blank">V2 -> V3 Migration Guide</a>
                     <a class="resources-link" href="https://spark.genesys.com" target="_blank">Spark UX Documentation</a>
                     <a class="resources-link" href="https://github.com/MyPureCloud/genesys-webcomponents/blob/main/README.md#genesys-web-components" target="_blank">Web Components README</a>
                   </div>
