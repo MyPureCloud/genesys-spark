@@ -13,7 +13,8 @@
     "yellow": "selo com etiqueta: {label}, cor: amarelo",
     "yellow-bold": "selo com etiqueta: {label}, cor: amarelo em negrito",
     "red": "selo com etiqueta: {label}, cor: vermelho",
-    "red-bold": "selo com etiqueta: {label}, cor: vermelho em negrito"
+    "red-bold": "selo com etiqueta: {label}, cor: vermelho em negrito",
+    "inherit": "selo com etiqueta: {label}, cor: herdada"
   },
   "gux-column-manager-item": {
     "activateReordering": "Ativar modo de reorganização para a coluna {columnName}"

@@ -13,7 +13,8 @@
     "yellow": "selitteellinen merkki: {label}, väri: keltainen",
     "yellow-bold": "selitteellinen merkki: {label}, väri: voimakas keltainen",
     "red": "selitteellinen merkki: {label}, väri: punainen",
-    "red-bold": "selitteellinen merkki: {label}, väri: voimakas punainen"
+    "red-bold": "selitteellinen merkki: {label}, väri: voimakas punainen",
+    "inherit": "selitteellinen merkki: {label}, väri: peritty"
   },
   "gux-column-manager-item": {
     "activateReordering": "Aktivoi uudelleenjärjestämistila {columnName} sarakkeelle"

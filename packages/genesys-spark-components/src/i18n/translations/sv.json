@@ -13,7 +13,8 @@
     "yellow": "märke med etikett: {label}, färg: gul",
     "yellow-bold": "märke med etikett: {label}, färg: gul fet stil",
     "red": "märke med etikett: {label}, färg: röd",
-    "red-bold": "märke med etikett: {label}, färg: röd fet stil"
+    "red-bold": "märke med etikett: {label}, färg: röd fet stil",
+    "inherit": "märke med etikett: {label}, färg: ärvd"
   },
   "gux-column-manager-item": {
     "activateReordering": "Aktivera omsorteringsläge för {columnName} kolumn"

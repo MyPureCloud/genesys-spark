@@ -13,7 +13,8 @@
     "yellow": "Badge mit Bezeichnung: {label}, Farbe: gelb",
     "yellow-bold": "Badge mit Bezeichnung: {label}, Farbe: gelb fett",
     "red": "Badge mit Bezeichnung: {label}, Farbe: rot",
-    "red-bold": "Badge mit Bezeichnung: {label}, Farbe: rot fett"
+    "red-bold": "Badge mit Bezeichnung: {label}, Farbe: rot fett",
+    "inherit": "Badge mit Bezeichnung: {label}, Farbe: geerbt"
   },
   "gux-column-manager-item": {
     "activateReordering": "Neuanordnungsmodus für Spalte {columnName} aktivieren"

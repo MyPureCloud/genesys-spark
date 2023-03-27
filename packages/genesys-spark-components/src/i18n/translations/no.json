@@ -13,7 +13,8 @@
     "yellow": "merke med etikett: {label}, farge: gul",
     "yellow-bold": "merke med etikett: {label}, farge: gul fet",
     "red": "merke med etikett: {label}, farge: rød",
-    "red-bold": "merke med etikett: {label}, farge: rød fet"
+    "red-bold": "merke med etikett: {label}, farge: rød fet",
+    "inherit": "merke med etikett: {label}, farge: arvet"
   },
   "gux-column-manager-item": {
     "activateReordering": "Aktiver omsorteringsmodus for {columnName} kolonne"

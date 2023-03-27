@@ -13,7 +13,8 @@
     "yellow": "rozet ile etiket: {label}, renk: sarı",
     "yellow-bold": "rozet ile etiket: {label}, renk: sarı kalın",
     "red": "rozet ile etiket: {label}, renk: kırmızı",
-    "red-bold": "rozet ile etiket: {label}, renk: kırmızı kalın"
+    "red-bold": "rozet ile etiket: {label}, renk: kırmızı kalın",
+    "inherit": "rozet ile etiket: {label}, renk: devralınmış"
   },
   "gux-column-manager-item": {
     "activateReordering": "{columnName} sütunu için yeniden sıralama modunu etkinleştir"

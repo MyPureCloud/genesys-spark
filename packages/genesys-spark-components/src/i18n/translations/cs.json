@@ -13,7 +13,8 @@
     "yellow": "odznak s popiskem: {label}, barva: žlutá",
     "yellow-bold": "odznak s popiskem: {label}, barva: sytě žlutá",
     "red": "odznak s popiskem: {label}, barva: červená",
-    "red-bold": "odznak s popiskem: {label}, barva: sytě červená"
+    "red-bold": "odznak s popiskem: {label}, barva: sytě červená",
+    "inherit": "odznak s popiskem: {label}, barva: zděděná"
   },
   "gux-column-manager-item": {
     "activateReordering": "Aktivovat režim změny řazení pro sloupec {columnName}"
