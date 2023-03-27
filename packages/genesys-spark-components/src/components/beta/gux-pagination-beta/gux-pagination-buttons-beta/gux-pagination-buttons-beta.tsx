@@ -5,6 +5,7 @@ import {
   EventEmitter,
   h,
   JSX,
+  Listen,
   Prop
 } from '@stencil/core';
 
@@ -13,18 +14,22 @@ import { GuxPaginationLayoutBeta } from '../gux-pagination-beta.types';
 
 import paginationResources from './i18n/en.json';
 import { GuxPaginationButtonsService } from './gux-pagination-button-beta.service';
+import { afterNextRender } from '@utils/dom/after-next-render';
 
 @Component({
   styleUrl: 'gux-pagination-buttons-beta.less',
-  tag: 'gux-pagination-buttons-beta'
+  tag: 'gux-pagination-buttons-beta',
+  shadow: false
 })
 export class GuxPaginationButtonsBeta {
+  currentElement: HTMLElement;
+
   @Element()
   private root: HTMLElement;
 
   private i18n: GetI18nValue;
 
-  @Prop()
+  @Prop({ mutable: true })
   currentPage: number;
 
   @Prop()
@@ -35,6 +40,15 @@ export class GuxPaginationButtonsBeta {
 
   @Event({ bubbles: false })
   private internalcurrentpagechange: EventEmitter<number>;
+
+  @Listen('goToPage')
+  goToPageHandler(event: CustomEvent<number>) {
+    this.currentPage = event.detail;
+    this.handlePageChange(this.currentPage);
+    afterNextRender(() => {
+      this.currentElement.focus();
+    });
+  }
 
   private get onFirstPage(): boolean {
     return this.currentPage <= 1;
@@ -60,24 +74,37 @@ export class GuxPaginationButtonsBeta {
     this.internalcurrentpagechange.emit(this.totalPages);
   }
 
-  private handleClickPage(pageNumber: number): void {
+  private handlePageChange(pageNumber: number): void {
     this.internalcurrentpagechange.emit(pageNumber);
   }
 
   private getPageListEnteries(
     currentPage: number,
-    totalPages: number
+    totalPages: number,
+    layout: string
   ): JSX.Element[] {
-    return GuxPaginationButtonsService.getPageList(
+    return GuxPaginationButtonsService.displayAllPageButtons(
       currentPage,
-      totalPages
+      totalPages,
+      layout
     ).reduce((acc, cv) => {
       if (cv.current) {
         return acc.concat(
           (
-            <button class="gux-pagination-buttons-list-current">
+            <button
+              ref={el => (this.currentElement = el)}
+              class="gux-pagination-buttons-list-current"
+            >
               {cv.display}
             </button>
+          ) as JSX.Element
+        );
+      }
+
+      if (cv.display == '...') {
+        return acc.concat(
+          (
+            <gux-pagination-ellipsis-button totalPages={this.totalPages} />
           ) as JSX.Element
         );
       }
@@ -86,7 +113,7 @@ export class GuxPaginationButtonsBeta {
         (
           <button
             class="gux-pagination-buttons-list-target"
-            onClick={() => this.handleClickPage(cv.pageNumber)}
+            onClick={() => this.handlePageChange(cv.pageNumber)}
           >
             {cv.display}
           </button>
@@ -95,24 +122,16 @@ export class GuxPaginationButtonsBeta {
     }, [] as JSX.Element[]);
   }
 
-  private getSmallPagePicker(): JSX.Element {
-    return (<div class={'gux-pagination-buttons-spacer'}></div>) as JSX.Element;
-  }
-
-  private getFullPagePicker(): JSX.Element {
+  private getPageNavigation(): JSX.Element {
     return (
       <div class="gux-pagination-buttons-list-container">
-        {this.getPageListEnteries(this.currentPage, this.totalPages)}
+        {this.getPageListEnteries(
+          this.currentPage,
+          this.totalPages,
+          this.layout
+        )}
       </div>
     ) as JSX.Element;
-  }
-
-  private getPagePicker(layout: GuxPaginationLayoutBeta): JSX.Element {
-    if (layout === 'simple') {
-      return this.getSmallPagePicker();
-    }
-
-    return this.getFullPagePicker();
   }
 
   async componentWillLoad(): Promise<void> {
@@ -123,7 +142,7 @@ export class GuxPaginationButtonsBeta {
     return (
       <div class={`gux-pagination-buttons-container gux-${this.layout}`}>
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot-beta accent="secondary">
+          <gux-button-slot-beta accent="ghost">
             <button
               title={this.i18n('first')}
               disabled={this.onFirstPage}
@@ -132,7 +151,7 @@ export class GuxPaginationButtonsBeta {
               <gux-icon decorative icon-name="chevron-double-left"></gux-icon>
             </button>
           </gux-button-slot-beta>
-          <gux-button-slot-beta accent="secondary">
+          <gux-button-slot-beta accent="ghost">
             <button
               title={this.i18n('previous')}
               disabled={this.onFirstPage}
@@ -143,10 +162,10 @@ export class GuxPaginationButtonsBeta {
           </gux-button-slot-beta>
         </div>
 
-        {this.getPagePicker(this.layout)}
+        {this.getPageNavigation()}
 
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot-beta accent="secondary">
+          <gux-button-slot-beta accent="ghost">
             <button
               title={this.i18n('next')}
               disabled={this.onLastPage}
@@ -155,7 +174,7 @@ export class GuxPaginationButtonsBeta {
               <gux-icon decorative icon-name="chevron-small-right"></gux-icon>
             </button>
           </gux-button-slot-beta>
-          <gux-button-slot-beta accent="secondary">
+          <gux-button-slot-beta accent="ghost">
             <button
               title={this.i18n('last')}
               disabled={this.onLastPage}
