@@ -44,6 +44,10 @@ describe('gux-button-slot-beta', () => {
         html: '<gux-button-slot-beta accent="danger"><button type="button"accent="primary">Button</button></gux-button-slot-beta>'
       },
       {
+        description: 'should render inline button',
+        html: '<gux-button-slot-beta accent="inline"><button type="button"accent="primary">Button</button></gux-button-slot-beta>'
+      },
+      {
         description: 'should render invalid button',
         html: '<gux-button-slot-beta accent="invalid"><button type="button"accent="primary">Button</button></gux-button-slot-beta>'
       },
@@ -70,6 +74,10 @@ describe('gux-button-slot-beta', () => {
       {
         description: 'should render disabled danger button',
         html: '<gux-button-slot-beta accent="danger"><button type="button"accent="primary" disabled>Button</button></gux-button-slot-beta>'
+      },
+      {
+        description: 'should render disabled inline button',
+        html: '<gux-button-slot-beta accent="inline"><button type="button"accent="primary" disabled>Button</button></gux-button-slot-beta>'
       },
       {
         description: 'should render button with invalid accent',
@@ -100,6 +108,10 @@ describe('gux-button-slot-beta', () => {
         html: '<gux-button-slot-beta accent="danger"><input type="button"accent="primary" value="Button"/></gux-button-slot-beta>'
       },
       {
+        description: 'should render inline input[type=button]',
+        html: '<gux-button-slot-beta accent="inline"><input type="button"accent="primary" value="Button"/></gux-button-slot-beta>'
+      },
+      {
         description: 'should render invalid input[type=button]',
         html: '<gux-button-slot-beta accent="invalid"><input type="button"accent="primary" value="Button"/></gux-button-slot-beta>'
       },
@@ -126,6 +138,10 @@ describe('gux-button-slot-beta', () => {
       {
         description: 'should render disabled danger input[type=button]',
         html: '<gux-button-slot-beta accent="danger"><input type="button"accent="primary" disabled value="Button"/></gux-button-slot-beta>'
+      },
+      {
+        description: 'should render disabled inline input[type=button]',
+        html: '<gux-button-slot-beta accent="inline"><input type="button"accent="primary" disabled value="Button"/></gux-button-slot-beta>'
       },
       {
         description: 'should render input[type=button] with invalid accent',
@@ -156,6 +172,10 @@ describe('gux-button-slot-beta', () => {
         html: '<gux-button-slot-beta accent="danger"><input type="submit"accent="primary" value="Button"/></gux-button-slot-beta>'
       },
       {
+        description: 'should render inline input[type=submit]',
+        html: '<gux-button-slot-beta accent="inline"><input type="submit"accent="primary" value="Button"/></gux-button-slot-beta>'
+      },
+      {
         description: 'should render invalid input[type=submit]',
         html: '<gux-button-slot-beta accent="invalid"><input type="submit"accent="primary" value="Button"/></gux-button-slot-beta>'
       },
@@ -182,6 +202,10 @@ describe('gux-button-slot-beta', () => {
       {
         description: 'should render disabled danger input[type=submit]',
         html: '<gux-button-slot-beta accent="danger"><input type="submit"accent="primary" disabled value="Button"/></gux-button-slot-beta>'
+      },
+      {
+        description: 'should render disabled inline input[type=submit]',
+        html: '<gux-button-slot-beta accent="inline"><input type="submit"accent="primary" disabled value="Button"/></gux-button-slot-beta>'
       },
       {
         description: 'should render input[type=submit] with invalid accent',

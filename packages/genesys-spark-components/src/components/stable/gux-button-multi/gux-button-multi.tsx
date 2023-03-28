@@ -16,7 +16,7 @@ import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import { trackComponent } from '@utils/tracking/usage';
 
-import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
+import { GuxButtonMultiAccent } from './gux-button-multi.types';
 
 /**
  * @slot title - slot for icon and button text
@@ -57,7 +57,7 @@ export class GuxButtonMulti {
   disabled: boolean = false;
 
   @Prop()
-  accent: GuxButtonAccent = 'secondary';
+  accent: GuxButtonMultiAccent = 'secondary';
 
   /**
    * It is used to open or not the list.

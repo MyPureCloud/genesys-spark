@@ -17,7 +17,10 @@ import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
-import { GuxButtonAccent, GuxButtonType } from '../gux-button/gux-button.types';
+import {
+  GuxActionButtonAccent,
+  GuxActionButtonType
+} from './gux-action-button.types';
 import defaultResources from './i18n/en.json';
 
 @Component({
@@ -37,7 +40,7 @@ export class GuxActionButton {
    * The component button type
    */
   @Prop()
-  type: GuxButtonType = 'button';
+  type: GuxActionButtonType = 'button';
 
   /**
    * Triggered when the menu is open
@@ -70,7 +73,7 @@ export class GuxActionButton {
   disabled: boolean = false;
 
   @Prop()
-  accent: GuxButtonAccent = 'secondary';
+  accent: GuxActionButtonAccent = 'secondary';
 
   /**
    * It is used to open or not the list.

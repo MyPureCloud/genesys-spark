@@ -6,7 +6,6 @@
 
 :host {
   display: inline-block;
-  min-width: 32px;
   pointer-events: none;
   -webkit-user-select: none;
   user-select: none;
@@ -36,6 +35,7 @@
 
 button {
   width: 100%;
+  min-width: 32px;
   height: 32px;
   padding: 0 @gux-spacing-medium;
   overflow: hidden;
@@ -140,6 +140,31 @@ button {
 
     &:active:enabled {
       background-color: @gux-alert-red-40;
+    }
+  }
+
+  &.gux-inline {
+    min-width: initial;
+    height: initial;
+    padding: 0;
+    color: @gux-blue-60;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    .body-font();
+
+    &[disabled] {
+      color: fade(@gux-blue-60, 50%);
+    }
+
+    &:hover:enabled {
+      color: @gux-blue-50;
+      background-color: fade(@gux-blue-100, 33%);
+    }
+
+    &:active:enabled {
+      color: @gux-blue-50;
+      background-color: @gux-blue-100;
     }
   }
 }

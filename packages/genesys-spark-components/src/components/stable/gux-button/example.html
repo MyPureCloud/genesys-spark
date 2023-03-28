@@ -1,111 +1,97 @@
 <h1>gux-button</h1>
 
 <h2>Enabled</h2>
+
 <div class="container">
   <gux-button onclick="notify(event)">Default</gux-button>
+
   <gux-button accent="primary" onclick="notify(event)">Primary</gux-button>
+
   <gux-button accent="secondary" onclick="notify(event)">Secondary</gux-button>
+
   <gux-button accent="tertiary" onclick="notify(event)">Tertiary</gux-button>
+
   <gux-button accent="ghost" onclick="notify(event)">Ghost</gux-button>
+
   <gux-button accent="danger" onclick="notify(event)">Danger</gux-button>
-  <gux-button accent="invalid" onclick="notify(event)"
-    >Invalid accent</gux-button
-  >
-  <gux-button onclick="notify(event)">
-    <span>Text in a span element</span>
-  </gux-button>
+
+  <div>
+    This is an
+    <gux-button accent="inline" onclick="notify(event)"> Inline </gux-button>
+    button.
+  </div>
+
   <gux-button onclick="notify(event)">
     <gux-icon
       icon-name="trashcan"
       screenreader-text="This will be read by a screen reader"
     ></gux-icon>
   </gux-button>
-  <gux-button
-    gux-title="This will be read by a screen reader"
-    onclick="notify(event)"
-  >
-    <gux-icon icon-name="trashcan" decorative></gux-icon>
-  </gux-button>
+
   <gux-button onclick="notify(event)">
-    <gux-icon icon-name="trashcan" decorative></gux-icon>
-    <span>Text in a span element</span>
-  </gux-button>
-  <gux-button onclick="notify(event)">
-    <span>Text in a span element</span>
-    <span>More Text in a span element</span>
-  </gux-button>
-  <gux-button onclick="notify(event)">
-    <span>
+    <div class="align-content">
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
       <span>Text in a span element</span>
-      <span>More Text in a span element</span>
-    </span>
-  </gux-button>
-  <gux-button style="width: 100px" onclick="notify(event)">
-    <span>Text in a span element</span>
-    <span>More Text in a span element</span>
+    </div>
   </gux-button>
 
-  <gux-button style="width: 100px" onclick="notify(event)">
-    Text in a span element
+  <gux-button accent="inline" onclick="notify(event)">
+    <div class="align-content">
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
+      <span>Text in a span element</span>
+    </div>
   </gux-button>
 </div>
 
 <h2>Disabled</h2>
 <div class="container">
   <gux-button disabled onclick="notify(event)">Default</gux-button>
+
   <gux-button accent="primary" disabled onclick="notify(event)"
     >Primary</gux-button
   >
+
   <gux-button accent="secondary" disabled onclick="notify(event)"
     >Secondary</gux-button
   >
+
   <gux-button accent="tertiary" disabled onclick="notify(event)"
     >Tertiary</gux-button
   >
+
   <gux-button accent="ghost" disabled onclick="notify(event)">Ghost</gux-button>
+
   <gux-button accent="danger" disabled onclick="notify(event)"
     >Danger</gux-button
   >
-  <gux-button accent="invalid" disabled onclick="notify(event)"
-    >Invalid accent</gux-button
-  >
-  <gux-button disabled onclick="notify(event)">
-    <span>Text in a span element</span>
-  </gux-button>
+
+  <div>
+    This is an
+    <gux-button accent="inline" disabled onclick="notify(event)">
+      Inline
+    </gux-button>
+    button.
+  </div>
+
   <gux-button disabled onclick="notify(event)">
     <gux-icon
       icon-name="trashcan"
       screenreader-text="This will be read by a screen reader"
     ></gux-icon>
   </gux-button>
-  <gux-button
-    disabled
-    gux-title="This will be read by a screen reader"
-    onclick="notify(event)"
-  >
-    <gux-icon icon-name="trashcan" decorative></gux-icon>
-  </gux-button>
+
   <gux-button disabled onclick="notify(event)">
-    <gux-icon icon-name="trashcan" decorative></gux-icon>
-    <span>Text in a span element</span>
-  </gux-button>
-  <gux-button disabled onclick="notify(event)">
-    <span>Text in a span element</span>
-    <span>More Text in a span element</span>
-  </gux-button>
-  <gux-button disabled onclick="notify(event)">
-    <span>
+    <div class="align-content">
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
       <span>Text in a span element</span>
-      <span>More Text in a span element</span>
-    </span>
-  </gux-button>
-  <gux-button style="width: 100px" disabled onclick="notify(event)">
-    <span>Text in a span element</span>
-    <span>More Text in a span element</span>
+    </div>
   </gux-button>
 
-  <gux-button style="width: 100px" disabled onclick="notify(event)">
-    Text in a span element
+  <gux-button accent="inline" disabled onclick="notify(event)">
+    <div class="align-content">
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
+      <span>Text in a span element</span>
+    </div>
   </gux-button>
 </div>
 
@@ -114,11 +100,29 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 10px;
     align-content: stretch;
     justify-content: flex-start;
   }
 
-  gux-button {
-    margin: 5px;
+  .align-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .align-content > * {
+    flex: 0 1 auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  .align-content > gux-icon {
+    width: 16px;
+    height: 16px;
+    padding-right: 4px;
   }
 </style>

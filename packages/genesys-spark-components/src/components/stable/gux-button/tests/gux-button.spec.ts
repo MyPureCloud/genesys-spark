@@ -28,12 +28,16 @@ describe('gux-button', () => {
         html: '<gux-button accent="ghost">Button</gux-button>'
       },
       {
-        description: 'should render danger accent button',
-        html: '<gux-button accent="danger">Danger accent</gux-button>'
+        description: 'should render danger button',
+        html: '<gux-button accent="danger">Button</gux-button>'
       },
       {
-        description: 'should render invalid accent button',
-        html: '<gux-button accent="invalid">Invalid accent</gux-button>'
+        description: 'should render inline button',
+        html: '<gux-button accent="inline">Button</gux-button>'
+      },
+      {
+        description: 'should render invalid button',
+        html: '<gux-button accent="invalid">Button</gux-button>'
       },
       {
         description: 'should render disabled default button',
@@ -56,12 +60,16 @@ describe('gux-button', () => {
         html: '<gux-button accent="ghost" disabled>Button</gux-button>'
       },
       {
-        description: 'should render disabled danger accent button',
-        html: '<gux-button accent="danger" disabled>Danger accent</gux-button>'
+        description: 'should render disabled danger button',
+        html: '<gux-button accent="danger" disabled>Button</gux-button>'
       },
       {
-        description: 'should render disabled invalid accent button',
-        html: '<gux-button accent="invalid" disabled>Invalid accent</gux-button>'
+        description: 'should render disabled inline button',
+        html: '<gux-button accent="inline" disabled>Button</gux-button>'
+      },
+      {
+        description: 'should render disabled invalid button',
+        html: '<gux-button accent="invalid" disabled>Button</gux-button>'
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
