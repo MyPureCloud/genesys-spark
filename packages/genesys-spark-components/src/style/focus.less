@@ -10,6 +10,12 @@
   }
 }
 
+.gux-focus-ring-focused-visible {
+  &:focus-visible {
+    .gux-focus-ring();
+  }
+}
+
 .gux-focus-ring-small-focused {
   &:focus {
     .gux-focus-ring-small();
@@ -18,6 +24,12 @@
 
 .gux-focus-ring-small-focused-within {
   &:focus-within {
+    .gux-focus-ring-small();
+  }
+}
+
+.gux-focus-ring-small-focused-visible {
+  &:focus-visible {
     .gux-focus-ring-small();
   }
 }

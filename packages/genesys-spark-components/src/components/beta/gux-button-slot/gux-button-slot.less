@@ -42,9 +42,9 @@
   outline: none;
 }
 
-::slotted(input[type='button']:focus:enabled),
-::slotted(input[type='submit']:focus:enabled),
-::slotted(button:focus:enabled) {
+::slotted(input[type='button']:focus-visible:enabled),
+::slotted(input[type='submit']:focus-visible:enabled),
+::slotted(button:focus-visible:enabled) {
   .focus-ring();
 }
 

@@ -12,6 +12,10 @@
   background-color: @gux-grey-90;
   .form-field-border();
 
+  &:focus-within {
+    .focus-ring();
+  }
+
   .gux-display {
     display: inline-flex;
     min-width: 100px;
@@ -25,7 +29,7 @@
         margin-left: @gux-spacing-2xs;
       }
 
-      &:focus {
+      &:focus-visible {
         background: @gux-blue-100;
       }
 
@@ -43,7 +47,7 @@
     border: none;
     border-radius: 4px;
 
-    &:focus {
+    &:focus-visible {
       .focus-ring();
     }
 
@@ -61,7 +65,7 @@
     &.gux-expanded {
       color: @gux-blue-60;
 
-      &:not(:disabled):focus,
+      &:not(:disabled):focus-visible,
       &:not(:disabled):hover {
         color: @gux-blue-60;
       }

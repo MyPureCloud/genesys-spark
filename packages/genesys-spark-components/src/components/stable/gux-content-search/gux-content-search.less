@@ -51,7 +51,7 @@
     opacity: 0.5;
   }
 
-  &:focus,
+  &:focus-visible,
   &:focus-within {
     border: 1px solid @gux-blue-60;
     outline: none;
@@ -106,11 +106,11 @@
       }
 
       &:not(:disabled):hover,
-      &:not(:disabled):focus {
+      &:not(:disabled):focus-visible {
         color: @gux-black-50;
       }
 
-      &:focus:enabled {
+      &:focus-visible:enabled {
         .focus-ring();
       }
 

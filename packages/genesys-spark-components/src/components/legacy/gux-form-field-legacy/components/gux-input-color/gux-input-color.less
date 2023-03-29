@@ -32,7 +32,7 @@ gux-input-color {
     box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
     transition: box-shadow 0.2s;
 
-    &:focus,
+    &:focus-visible,
     &.gux-opened {
       border-color: @gux-blue-60;
       outline: none;
@@ -46,7 +46,7 @@ gux-input-color {
     }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       gux-icon {
         color: @gux-black-50;
       }

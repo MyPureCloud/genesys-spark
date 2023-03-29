@@ -16,7 +16,7 @@ button {
     position: inherit;
   }
 
-  &:not(:disabled):focus,
+  &:not(:disabled):focus-visible,
   &:not(:disabled):hover {
     color: @gux-black-50;
     cursor: pointer;
@@ -37,7 +37,7 @@ button {
     }
   }
 
-  &:focus:enabled {
+  &:focus-visible:enabled {
     gux-icon {
       .focus-ring();
     }

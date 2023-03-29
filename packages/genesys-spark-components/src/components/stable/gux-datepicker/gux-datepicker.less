@@ -117,11 +117,11 @@
           border-radius: 4px;
           outline: none;
 
-          &:focus {
+          &:focus-visible {
             .focus-ring();
           }
 
-          &:not(:disabled):focus,
+          &:not(:disabled):focus-visible,
           &:not(:disabled):hover {
             color: @gux-black-50;
             cursor: pointer;
@@ -150,7 +150,7 @@
           button {
             color: @gux-blue-60;
 
-            &:not(:disabled):focus,
+            &:not(:disabled):focus-visible,
             &:not(:disabled):hover {
               color: @gux-blue-60;
             }

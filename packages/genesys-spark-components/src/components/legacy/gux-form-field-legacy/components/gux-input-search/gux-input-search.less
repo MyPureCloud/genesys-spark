@@ -71,7 +71,7 @@ gux-input-search {
       background: transparent;
       border: none;
 
-      &:not(:disabled):focus,
+      &:not(:disabled):focus-visible,
       &:not(:disabled):hover {
         color: @gux-black-50;
         cursor: pointer;
@@ -87,7 +87,7 @@ gux-input-search {
         outline: none;
       }
 
-      &:focus:enabled {
+      &:focus-visible:enabled {
         gux-icon {
           .focus-ring();
         }

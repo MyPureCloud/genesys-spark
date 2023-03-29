@@ -265,7 +265,7 @@ export class GuxTimePickerBeta {
 
   private renderNumberInput(): JSX.Element {
     return (
-      <div>
+      <div class="gux-input-time-container">
         <input
           class="gux-input-time-hours"
           type="text"

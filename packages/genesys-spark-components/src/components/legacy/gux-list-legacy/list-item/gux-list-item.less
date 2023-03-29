@@ -3,7 +3,7 @@
 // Variables part
 
 :host {
-  &:focus,
+  &:focus-visible,
   &:active,
   &:hover:not([disabled]) {
     .gux-list-item {
@@ -13,7 +13,7 @@
   }
 }
 
-:host(:focus),
+:host(:focus-visible),
 :host(:active),
 :host(:hover:not([disabled])) {
   .gux-list-item {

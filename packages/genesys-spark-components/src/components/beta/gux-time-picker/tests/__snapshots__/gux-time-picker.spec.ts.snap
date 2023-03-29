@@ -5,7 +5,7 @@ exports[`gux-time-picker-beta #render should render as expected 1`] = `
   <mock:shadow-root>
     <gux-popup-beta class="gux-time-picker">
       <div class="gux-input-time" slot="target">
-        <div>
+        <div class="gux-input-time-container">
           <input aria-label="Input hours" class="gux-input-time-hours" pattern="^(0?[1-9]|1[012])$" type="text" value="9">
           <span class="gux-time-separator">
             :
