@@ -1,0 +1,39 @@
+{
+  "semantic": {
+    "info": {
+      "lightest": "#e2dff8",
+      "lighter": "#c5bef1",
+      "main": "#6e5ddb",
+      "darker": "#443989",
+      "darkest": "#2E275F"
+    },
+    "warning": {
+      "lightest": "#fef4d8",
+      "lighter": "#fce9b2",
+      "main": "#f8c73e",
+      "darker": "#6c5619",
+      "darkest": "#3d300c"
+    },
+    "error": {
+      "lightest": "#f9d3da",
+      "lighter": "#f3a7b5",
+      "main": "#e22245",
+      "darker": "#881429",
+      "darkest": "#440a15"
+    },
+    "success": {
+      "lightest": "#cef0e6",
+      "lighter": "#9de1cd",
+      "main": "#09b581",
+      "darker": "#056d4d",
+      "darkest": "#033627"
+    },
+    "primary": {
+      "lightest": "#CED2FC",
+      "lighter": "#9CA6F9",
+      "main": "#4856CB",
+      "darker": "#3742A2",
+      "darkest": "#252E78"
+    }
+  }
+}
