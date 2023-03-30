@@ -14,7 +14,7 @@
     "yellow-bold": "ラベル付きバッジ: {label}、色: イエロー ボールド",
     "red": "ラベル付きバッジ: {label}、色: レッド",
     "red-bold": "ラベル付きバッジ: {label}、色: レッド ボールド",
-    "inherit": "ラベル付きバッジ: {label}、色: 継承"
+    "inherit": "ラベル付きバッジ: {label}"
   },
   "gux-column-manager-item": {
     "activateReordering": "{columnName} 列の再配列モードをアクティブ化"

@@ -14,7 +14,7 @@
     "yellow-bold": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: เหลืองหนา",
     "red": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: แดง",
     "red-bold": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: แดงหนา",
-    "inherit": "แบดจ์พร้อมป้ายกำกับ: {label}, สี: เดิม"
+    "inherit": "แบดจ์พร้อมป้ายกำกับ: {label}"
   },
   "gux-column-manager-item": {
     "activateReordering": "เปิดใช้โหมดเรียงลำดับใหม่สำหรับ {columnName} คอลัมน์"
