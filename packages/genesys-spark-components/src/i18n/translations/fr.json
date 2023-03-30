@@ -14,7 +14,7 @@
     "yellow-bold": "badge avec étiquette : {label}, couleur : jaune vif",
     "red": "badge avec étiquette : {label}, couleur : rouge",
     "red-bold": "badge avec étiquette : {label}, couleur : rouge vif",
-    "inherit": "badge avec étiquette : {label}, couleur : hérité"
+    "inherit": "badge avec étiquette : {label}"
   },
   "gux-column-manager-item": {
     "activateReordering": "Activer le mode de réorganisation pour la colonne {columnName}"

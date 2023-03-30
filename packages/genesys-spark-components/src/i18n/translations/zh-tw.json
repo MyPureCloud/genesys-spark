@@ -14,7 +14,7 @@
     "yellow-bold": "徽章含標籤：{label}，色彩：大膽黃色",
     "red": "徽章含標籤：{label}，色彩：紅",
     "red-bold": "徽章含標籤：{label}，色彩：大膽紅色",
-    "inherit": "徽章含標籤：{label}，色彩：承襲"
+    "inherit": "徽章含標籤：{label}"
   },
   "gux-column-manager-item": {
     "activateReordering": "啟用{columnName}欄的重新排序模式"

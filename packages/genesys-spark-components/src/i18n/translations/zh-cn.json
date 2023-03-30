@@ -14,7 +14,7 @@
     "yellow-bold": "标签为 {label}，颜色为亮黄色的徽章",
     "red": "标签为 {label}，颜色为红色的徽章",
     "red-bold": "标签为 {label}，颜色为亮红色的徽章",
-    "inherit": "使用以下标签的徽章：{label}，颜色：继承"
+    "inherit": "使用以下标签的徽章：{label}"
   },
   "gux-column-manager-item": {
     "activateReordering": "激活 {columnName} 列的重新排序模式"

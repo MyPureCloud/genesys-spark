@@ -14,7 +14,7 @@
     "yellow-bold": "odznaka z etykietą: {label}, kolor: żółty pogrubiony",
     "red": "odznaka z etykietą: {label}, kolor: czerwony",
     "red-bold": "odznaka z etykietą: {label}, kolor: czerwony pogrubiony",
-    "inherit": "odznaka z etykietą: {label}, kolor: dziedziczony"
+    "inherit": "odznaka z etykietą: {label}"
   },
   "gux-column-manager-item": {
     "activateReordering": "Aktywuj tryb zmiany kolejności dla kolumny {columnName}"

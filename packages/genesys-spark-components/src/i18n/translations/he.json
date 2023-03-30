@@ -14,7 +14,7 @@
     "yellow-bold": "תג עם תווית: {label}, צבע: צהוב מודגש",
     "red": "תג עם תווית: {label}, צבע: אדום",
     "red-bold": "תג עם תווית: {label}, צבע: אדום מודגש",
-    "inherit": "תג עם תווית: {label}, צבע: בירושה"
+    "inherit": "תג עם תווית: {label}"
   },
   "gux-column-manager-item": {
     "activateReordering": "הפעל מצב סידור מחדש עבור העמודה {columnName}"
