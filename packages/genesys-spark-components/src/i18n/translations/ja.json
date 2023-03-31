@@ -341,8 +341,8 @@
     "scrollRight": "右にスクロール",
     "selectAllTableRows": "すべてのテーブル行を選択",
     "selectTableRow": "テーブル行を選択",
-    "sortAsc": "昇順にソート済み",
-    "sortDesc": "降順にソート済み",
+    "sortAsc": "昇順に並べ替え済み",
+    "sortDesc": "降順に並べ替え済み",
     "tableOptions": "テーブル オプション",
     "noColumnSort": "{headerContent}。テーブルは現在この列で並べ替えられていません。列ヘッダーをクリックして、この列で昇順にテーブルを並べ替えます",
     "ascendingColumnSort": "{headerContent}。テーブルは現在この列で昇順に並べ替えられています。列ヘッダーをクリックして、この列で降順にテーブルを並べ替えます",
@@ -486,10 +486,10 @@
     "scrollRight": "右にスクロール",
     "options": "{tabTitle} のタブ オプション",
     "disableNewTab": "生成されるタブの最大数に達しました",
-    "toggleSort": "スペース キーでソート モードを切り替え",
-    "sortModeOn": "ソート モード オンでは、左右の矢印キーを使用してタブの順序を並べ替えます。スペースキーまたは Enter キーを押してソートを完了します。Escape キーを押してソートをキャンセルします。",
-    "sortComplete": "ソート完了",
-    "sortCancelled": "ソートがキャンセルされました"
+    "toggleSort": "スペース キーで並べ替えモードを切り替え",
+    "sortModeOn": "並べ替えモード オンでは、左右の矢印キーを使用してタブの順序を並べ替えます。スペースキーまたは Enter キーを押して並べ替えを完了します。Escape キーを押して並べ替えをキャンセルします。",
+    "sortComplete": "並べ替え完了",
+    "sortCancelled": "並べ替えがキャンセルされました"
   },
   "gux-tabs": {
     "scrollLeft": "左にスクロール",
