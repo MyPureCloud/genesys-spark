@@ -14,7 +14,8 @@ import {
   flip,
   MiddlewareArguments,
   offset,
-  size
+  size,
+  shift
 } from '@floating-ui/dom';
 
 /**
@@ -66,6 +67,7 @@ export class GuxPopupBeta {
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
       const popupElementContainer = this.popupElementContainer;
+      const targetElementContainer = this.targetElementContainer;
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -74,14 +76,18 @@ export class GuxPopupBeta {
           placement: 'bottom-start',
           middleware: [
             offset(2),
+            flip(),
             size({
               apply({ rects }: MiddlewareArguments) {
                 Object.assign(popupElementContainer.style, {
+                  minWidth: `${rects.reference.width}px`
+                });
+                Object.assign(targetElementContainer.style, {
                   width: `${rects.reference.width}px`
                 });
               }
             }),
-            flip()
+            shift()
           ]
         }
       ).then(({ x, y }) => {
@@ -133,6 +139,7 @@ export class GuxPopupBeta {
       >
         <slot name="target"></slot>
         <div
+          part="gux-popup-container"
           class={{
             'gux-popup-container': true,
             'gux-expanded': this.expanded && !this.disabled

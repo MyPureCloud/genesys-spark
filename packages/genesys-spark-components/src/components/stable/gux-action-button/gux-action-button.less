@@ -1,6 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/typography.less';
+@import (reference) '../../../style/spacing.less';
 
 :host {
   display: block;
@@ -45,7 +46,8 @@
   }
 
   .gux-list-container {
-    padding: 8px 0;
+    max-width: 220px;
+    padding: @gux-spacing-xs 0;
     margin: 0;
     list-style: none;
     background-color: @gux-type-dark;
