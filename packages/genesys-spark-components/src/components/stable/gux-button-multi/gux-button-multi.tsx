@@ -16,7 +16,10 @@ import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import { trackComponent } from '@utils/tracking/usage';
 
-import { GuxButtonMultiAccent } from './gux-button-multi.types';
+import {
+  GuxButtonMultiAccent,
+  getGuxButtonMultiAccent
+} from './gux-button-multi.types';
 
 /**
  * @slot title - slot for icon and button text
@@ -168,7 +171,7 @@ export class GuxButtonMulti {
         <div slot="target" class="gux-button-multi-container">
           <gux-button-slot-beta
             class="gux-dropdown-button"
-            accent={this.accent}
+            accent={getGuxButtonMultiAccent(this.accent)}
           >
             <button
               type="button"

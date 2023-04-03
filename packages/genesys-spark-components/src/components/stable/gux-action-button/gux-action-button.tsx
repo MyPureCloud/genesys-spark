@@ -19,7 +19,8 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import {
   GuxActionButtonAccent,
-  GuxActionButtonType
+  GuxActionButtonType,
+  getGuxActionButtonAccent
 } from './gux-action-button.types';
 import defaultResources from './i18n/en.json';
 
@@ -193,7 +194,7 @@ export class GuxActionButton {
           <div slot="target" class="gux-action-button-container">
             <gux-button-slot-beta
               class="gux-action-button"
-              accent={this.accent}
+              accent={getGuxActionButtonAccent(this.accent)}
             >
               <button
                 type={this.type}
@@ -206,7 +207,7 @@ export class GuxActionButton {
 
             <gux-button-slot-beta
               class="gux-dropdown-button"
-              accent={this.accent}
+              accent={getGuxActionButtonAccent(this.accent)}
             >
               <button
                 type="button"
