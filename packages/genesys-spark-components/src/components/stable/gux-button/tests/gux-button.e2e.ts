@@ -31,12 +31,17 @@ describe('gux-button', () => {
       {
         clickable: true,
         description: 'should render danger button',
-        html: '<gux-button accent="danger">Danger accent</gux-button>'
+        html: '<gux-button accent="danger">Button</gux-button>'
+      },
+      {
+        clickable: true,
+        description: 'should render inline button',
+        html: '<gux-button accent="inline">Button</gux-button>'
       },
       {
         clickable: true,
         description: 'should render invalid button',
-        html: '<gux-button accent="invalid">Invalid accent</gux-button>'
+        html: '<gux-button accent="invalid">Button</gux-button>'
       },
       {
         clickable: false,
@@ -66,12 +71,17 @@ describe('gux-button', () => {
       {
         clickable: false,
         description: 'should render disabled danger button',
-        html: '<gux-button accent="danger" disabled>Danger accent</gux-button>'
+        html: '<gux-button accent="danger" disabled>Button</gux-button>'
+      },
+      {
+        clickable: false,
+        description: 'should render disabled inline button',
+        html: '<gux-button accent="inline" disabled>Button</gux-button>'
       },
       {
         clickable: false,
         description: 'should render disabled invalid button',
-        html: '<gux-button accent="invalid" disabled>Invalid accent</gux-button>'
+        html: '<gux-button accent="invalid" disabled>Button</gux-button>'
       }
     ].forEach(({ description, html, clickable }) => {
       it(description, async () => {

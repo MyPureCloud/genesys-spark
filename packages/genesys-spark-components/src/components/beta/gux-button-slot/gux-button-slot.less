@@ -184,3 +184,39 @@
     background-color: @gux-alert-red-40;
   }
 }
+
+:host([accent='inline']) {
+  min-width: initial;
+
+  ::slotted(input[type='button']),
+  ::slotted(input[type='submit']),
+  ::slotted(button) {
+    height: initial;
+    padding: 0;
+    color: @gux-blue-60;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    .body-font();
+  }
+
+  ::slotted(input[type='button'][disabled]),
+  ::slotted(input[type='submit'][disabled]),
+  ::slotted(button[disabled]) {
+    color: fade(@gux-blue-60, 50%);
+  }
+
+  ::slotted(input[type='button']:hover:enabled),
+  ::slotted(input[type='submit']:hover:enabled),
+  ::slotted(button:hover:enabled) {
+    color: @gux-blue-50;
+    background-color: fade(@gux-blue-100, 33%);
+  }
+
+  ::slotted(input[type='button']:active:enabled),
+  ::slotted(input[type='submit']:active:enabled),
+  ::slotted(button:active:enabled) {
+    color: @gux-blue-50;
+    background-color: @gux-blue-100;
+  }
+}

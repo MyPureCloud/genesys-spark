@@ -3,6 +3,7 @@ export type GuxButtonAccent =
   | 'secondary'
   | 'tertiary'
   | 'ghost'
-  | 'danger';
+  | 'danger'
+  | 'inline';
 
 export type GuxButtonType = 'button' | 'submit' | 'reset';

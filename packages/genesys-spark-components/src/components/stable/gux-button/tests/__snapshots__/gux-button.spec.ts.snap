@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-button #render should render danger accent button 1`] = `
+exports[`gux-button #render should render danger button 1`] = `
 <gux-button accent="danger">
   <mock:shadow-root>
     <button class="gux-danger" type="button">
       <slot></slot>
     </button>
   </mock:shadow-root>
-  Danger accent
+  Button
 </gux-button>
 `;
 
@@ -22,14 +22,14 @@ exports[`gux-button #render should render default button 1`] = `
 </gux-button>
 `;
 
-exports[`gux-button #render should render disabled danger accent button 1`] = `
+exports[`gux-button #render should render disabled danger button 1`] = `
 <gux-button accent="danger" disabled="">
   <mock:shadow-root>
     <button class="gux-danger" disabled="" type="button">
       <slot></slot>
     </button>
   </mock:shadow-root>
-  Danger accent
+  Button
 </gux-button>
 `;
 
@@ -55,14 +55,25 @@ exports[`gux-button #render should render disabled ghost button 1`] = `
 </gux-button>
 `;
 
-exports[`gux-button #render should render disabled invalid accent button 1`] = `
+exports[`gux-button #render should render disabled inline button 1`] = `
+<gux-button accent="inline" disabled="">
+  <mock:shadow-root>
+    <button class="gux-inline" disabled="" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
+</gux-button>
+`;
+
+exports[`gux-button #render should render disabled invalid button 1`] = `
 <gux-button accent="invalid" disabled="">
   <mock:shadow-root>
     <button class="gux-invalid" disabled="" type="button">
       <slot></slot>
     </button>
   </mock:shadow-root>
-  Invalid accent
+  Button
 </gux-button>
 `;
 
@@ -110,14 +121,25 @@ exports[`gux-button #render should render ghost button 1`] = `
 </gux-button>
 `;
 
-exports[`gux-button #render should render invalid accent button 1`] = `
+exports[`gux-button #render should render inline button 1`] = `
+<gux-button accent="inline">
+  <mock:shadow-root>
+    <button class="gux-inline" type="button">
+      <slot></slot>
+    </button>
+  </mock:shadow-root>
+  Button
+</gux-button>
+`;
+
+exports[`gux-button #render should render invalid button 1`] = `
 <gux-button accent="invalid">
   <mock:shadow-root>
     <button class="gux-invalid" type="button">
       <slot></slot>
     </button>
   </mock:shadow-root>
-  Invalid accent
+  Button
 </gux-button>
 `;
 
