@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.77.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.76.3...v3.77.0) (2023-04-04)
+
+
+### Features
+
+* **inline-button:** added inline button style ([4480c2e](https://github.com/MyPureCloud/genesys-webcomponents/commit/4480c2ea92c9994d1c60932ea1470a19ef4e7ba9))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([4354c91](https://github.com/MyPureCloud/genesys-webcomponents/commit/4354c91b166287d373fefa7f4d6bcac7770239bb))
+
 ### [3.76.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.76.2...v3.76.3) (2023-04-03)
 
 ### [3.76.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.76.1...v3.76.2) (2023-03-31)
