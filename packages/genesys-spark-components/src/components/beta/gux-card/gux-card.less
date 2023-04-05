@@ -4,7 +4,7 @@
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/shadows.less';
 
-:host {
+.gux-card {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -14,16 +14,16 @@
   background-color: @gux-grey-100;
   border: 1px solid @gux-grey-60;
   border-radius: @gux-spacing-2xs;
-}
 
-:host([accent='outline']) {
-  background-color: @gux-grey-100;
-}
+  &.gux-outline {
+    background-color: @gux-grey-100;
+  }
 
-:host([accent='filled']) {
-  background-color: @gux-grey-90;
-}
+  &.gux-filled {
+    background-color: @gux-grey-90;
+  }
 
-:host([accent='raised']) {
-  .gux-shadow-10();
+  &.gux-raised {
+    .gux-shadow-10();
+  }
 }

@@ -30,6 +30,15 @@ export class GuxCard {
   }
 
   render(): JSX.Element {
-    return (<slot />) as JSX.Element;
+    return (
+      <div
+        class={{
+          'gux-card': true,
+          [`gux-${this.accent}`]: true
+        }}
+      >
+        <slot />
+      </div>
+    ) as JSX.Element;
   }
 }
