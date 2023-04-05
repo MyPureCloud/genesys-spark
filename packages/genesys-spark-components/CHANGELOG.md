@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.77.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.77.0...v3.77.1) (2023-04-05)
+
+
+### Bug Fixes
+
+* **card:** moved accent styles into the shadow dom ([c2ce6e0](https://github.com/MyPureCloud/genesys-webcomponents/commit/c2ce6e0fa286bd89deafb01a52c0eef0e24d105e))
+* **copy-to-clipboard:** removed unnecessary button title attribute ([5509265](https://github.com/MyPureCloud/genesys-webcomponents/commit/5509265ffa64a980633b0c49a8489f1c125edfad))
+
 ## [3.77.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.76.3...v3.77.0) (2023-04-04)
 
 
