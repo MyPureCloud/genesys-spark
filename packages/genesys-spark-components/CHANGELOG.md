@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.78.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.77.1...v3.78.0) (2023-04-06)
+
+
+### Features
+
+* **tab-panel-beta:** add tab-panel-beta which uses shadow dom ([#1217](https://github.com/MyPureCloud/genesys-webcomponents/issues/1217)) ([50ebe5b](https://github.com/MyPureCloud/genesys-webcomponents/commit/50ebe5b12dfa5505d28c79a1f4ad078f5f5ca054))
+
 ### [3.77.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.77.0...v3.77.1) (2023-04-05)
 
 
