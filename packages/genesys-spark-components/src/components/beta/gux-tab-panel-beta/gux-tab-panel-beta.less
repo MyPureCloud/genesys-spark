@@ -1,0 +1,9 @@
+@import (reference) '../../../style/mixins.less';
+
+:host(:focus) {
+  outline: none;
+}
+
+:host(:focus-visible) {
+  .focus-ring();
+}

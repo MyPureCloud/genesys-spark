@@ -212,18 +212,39 @@
 
 <gux-tabs orientation="vertical" class="example">
   <gux-tab-list slot="tab-list">
-    <gux-tab tab-id="1">Tab Header 1</gux-tab>
+    <gux-tab tab-id="9-1">Tab Header 1</gux-tab>
   </gux-tab-list>
-  <gux-tab-panel tab-id="1">
+  <gux-tab-panel tab-id="9-1">
     <gux-tabs orientation="horizontal" class="example">
       <gux-tab-list slot="tab-list">
-        <gux-tab tab-id="2">Tab Header 2</gux-tab>
-        <gux-tab tab-id="3">Tab Header 3</gux-tab>
+        <gux-tab tab-id="9-2">Tab Header 2</gux-tab>
+        <gux-tab tab-id="9-3">Tab Header 3</gux-tab>
       </gux-tab-list>
-      <gux-tab-panel tab-id="2">Tab content 2</gux-tab-panel>
-      <gux-tab-panel tab-id="3">Tab content 3</gux-tab-panel>
+      <gux-tab-panel tab-id="9-2">Tab content 2</gux-tab-panel>
+      <gux-tab-panel tab-id="9-3">Tab content 3</gux-tab-panel>
     </gux-tabs>
   </gux-tab-panel>
+</gux-tabs>
+
+<h2>Example 10 -- Using gux-tab-panel-beta</h2>
+<span
+  >`gux-tab-panel-beta` uses the shadow dom, so try using it if you are having
+  issues rendering content within gux-tab-panel</span
+>
+
+<gux-tabs class="example">
+  <gux-tab-list slot="tab-list">
+    <gux-tab tab-id="10-1">Tab Header 1</gux-tab>
+    <gux-tab tab-id="10-2">Tab Header 2</gux-tab>
+    <gux-tab tab-id="10-3">Tab Header 3</gux-tab>
+    <gux-tab gux-disabled tab-id="10-4">Tab Header 4</gux-tab>
+    <gux-tab gux-disabled tab-id="10-5">Tab Header 5 long long long</gux-tab>
+  </gux-tab-list>
+  <gux-tab-panel-beta tab-id="10-1">Tab content 1</gux-tab-panel-beta>
+  <gux-tab-panel-beta tab-id="10-2">Tab content 2</gux-tab-panel-beta>
+  <gux-tab-panel-beta tab-id="10-3">Tab content 3</gux-tab-panel-beta>
+  <gux-tab-panel-beta tab-id="10-4">Tab content 4</gux-tab-panel-beta>
+  <gux-tab-panel-beta tab-id="10-5">Tab content 5</gux-tab-panel-beta>
 </gux-tabs>
 
 <style
