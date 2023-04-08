@@ -32,7 +32,6 @@
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "Kopioi napsauttamalla tätä",
-    "copyToClipboard": "Kopioi leikepöydälle",
     "enterToCopy": "Kopioi painamalla Enter",
     "copySuccess": "Kopioitu leikepöydälle",
     "copyFailure": "Virhe. Yritä uudelleen."

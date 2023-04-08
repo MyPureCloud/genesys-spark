@@ -32,7 +32,6 @@
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "Нажмите для копирования",
-    "copyToClipboard": "Скопировать в буфер обмена",
     "enterToCopy": "Нажмите клавишу ВВОД для копирования",
     "copySuccess": "Скопировано в буфер обмена",
     "copyFailure": "Ошибка. Повторите попытку."

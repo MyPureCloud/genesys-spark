@@ -32,7 +32,6 @@
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "クリックしてコピー",
-    "copyToClipboard": "クリップボードにコピー",
     "enterToCopy": "Enter キーを押してコピー",
     "copySuccess": "クリップボードにコピーされました",
     "copyFailure": "エラーです。もう一度試してください。"

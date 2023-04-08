@@ -32,7 +32,6 @@
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "Cliquer pour copier",
-    "copyToClipboard": "Copier dans le Presse-papiers",
     "enterToCopy": "Appuyer sur Entrée pour copier",
     "copySuccess": "Copiés dans le Presse-Papiers",
     "copyFailure": "Erreur. Réessayez."
