@@ -32,7 +32,6 @@
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "单击以复制",
-    "copyToClipboard": "复制到剪贴板",
     "enterToCopy": "按 Enter 键复制",
     "copySuccess": "复制到剪贴板",
     "copyFailure": "错误。请重试。"

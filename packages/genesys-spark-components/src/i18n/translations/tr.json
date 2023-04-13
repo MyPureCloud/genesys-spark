@@ -32,7 +32,6 @@
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "Kopyalamak İçin Tıklayın",
-    "copyToClipboard": "Panoya kopyala",
     "enterToCopy": "Kopyalamak İçin Enter Tuşuna Basın",
     "copySuccess": "Panoya Kopyalandı",
     "copyFailure": "Hata. Lütfen Tekrar Deneyin."

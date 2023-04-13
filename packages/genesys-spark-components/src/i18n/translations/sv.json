@@ -32,7 +32,6 @@
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "Klicka för att kopiera",
-    "copyToClipboard": "Kopiera till Urklipp",
     "enterToCopy": "Tryck på Retur för att kopiera",
     "copySuccess": "Kopierad till Urklipp",
     "copyFailure": "Fel. Försök igen."
