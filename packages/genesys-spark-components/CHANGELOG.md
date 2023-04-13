@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.80.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.78.0...v3.80.0) (2023-04-13)
+
+
+### Features
+
+* **icon:** adding binoculars icon and disabled version ([ac5afcc](https://github.com/MyPureCloud/genesys-webcomponents/commit/ac5afcc780fbda1511e85b4df9442677abbd7992))
+* **icon:** adding binoculars icon and disabled version ([cf2ea45](https://github.com/MyPureCloud/genesys-webcomponents/commit/cf2ea45559ca66be847b8faf32ab24fcf324747c))
+* **icon:** adding film solid icon ([9b6281f](https://github.com/MyPureCloud/genesys-webcomponents/commit/9b6281ff53c692d07190c2abb1d888c8dc2bfacf))
+* **icon:** moving slash icon to new folder ([b22b9ba](https://github.com/MyPureCloud/genesys-webcomponents/commit/b22b9ba7f0582fbdc4c0d8040e38adfaad6d25ed))
+* **icon:** renaming folder ([8d868cd](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d868cde9a84046fb2edff272c9c3c862d369245))
+* **toggle:** make gux-toggle-slider a flexbox ([57de40e](https://github.com/MyPureCloud/genesys-webcomponents/commit/57de40ef81e552e128d8402d0b356c7c5363b818))
+* **tokens:** added new tokens package ([7a4dd1c](https://github.com/MyPureCloud/genesys-webcomponents/commit/7a4dd1cb1cfe3107a3282230412a74682671196c))
+
+
+### Bug Fixes
+
+* **calendar:** align tables flush to start of container ([e933808](https://github.com/MyPureCloud/genesys-webcomponents/commit/e933808db5d8e067b2e6cc579800f834028e817d))
+* **dependencies:** updated to wanted ([e22b2d0](https://github.com/MyPureCloud/genesys-webcomponents/commit/e22b2d0aa08fced0ecd39933661595e698633355))
+* **truncate:** changed layout to block ([f0b44c6](https://github.com/MyPureCloud/genesys-webcomponents/commit/f0b44c6bf5180016bd12d5d55e281d1c821b04ea))
+* **vega:** rollback vega dependencies ([ff7e37a](https://github.com/MyPureCloud/genesys-webcomponents/commit/ff7e37a89e2e149fbb1cbf5fc25276503bf09ccf))
+
 ## [3.78.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.77.1...v3.78.0) (2023-04-06)
 
 
