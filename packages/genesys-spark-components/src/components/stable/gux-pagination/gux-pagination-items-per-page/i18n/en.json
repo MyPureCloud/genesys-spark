@@ -1,4 +1,5 @@
 {
   "perPage": "per page",
-  "itemsPerPage": "Items per page"
+  "itemsPerPage": "Items per page",
+  "rangeSelected": "Items per page dropdown, {range} selected"
 }
