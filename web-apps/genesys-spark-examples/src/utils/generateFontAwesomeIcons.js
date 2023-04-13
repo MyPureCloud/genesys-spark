@@ -6,7 +6,7 @@ const icons = [
       'fa/arrows-rotate-solid',
       'fa/ban-regular',
       'fa/binoculars-regular',
-      'fa-modified/binoculars-slash-regular',
+      'custom/binoculars-slash-regular',
       'fa/book-regular',
       'fa/briefcase-regular',
       'fa/bullseye-regular',
