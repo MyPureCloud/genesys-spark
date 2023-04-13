@@ -19,6 +19,7 @@ const icons = [
       'fa/diamond-regular',
       'fa/draw-circle-solid',
       'fa/file-chart-pie-regular',
+      'fa/film-solid',
       'fa/font-regular',
       'fa/gears-regular',
       'fa/gem-regular',
