@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.80.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.80.0...v3.80.1) (2023-04-14)
+
+
+### Bug Fixes
+
+* **table-toolbar:** allow for end user to set icon-only ([c0738d1](https://github.com/MyPureCloud/genesys-webcomponents/commit/c0738d18f3ab5f591b0305b8251e64db086c4de7))
+
 ## [3.80.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.78.0...v3.80.0) (2023-04-13)
 
 
