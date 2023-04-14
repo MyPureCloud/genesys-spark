@@ -1,7 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/focus.less';
 @import (reference) '../../../style/shadows.less';
 
 .gux-time-picker {
@@ -40,13 +40,13 @@
       border-radius: 2px;
 
       &:has(:focus-visible) {
-        .focus-ring();
+        .gux-focus-ring();
       }
 
       // We want to fallback to browsers that do not support the :has selector, such as Firefox
       @supports not selector(:has(:focus-visible)) {
         &:focus-within {
-          .focus-ring();
+          .gux-focus-ring();
         }
       }
     }
@@ -94,7 +94,7 @@
 
       &:focus-visible {
         color: @gux-blue-60;
-        .focus-ring-small();
+        .gux-focus-ring-small();
 
         border-radius: 2px;
       }
@@ -145,7 +145,7 @@
 
       &:focus-visible {
         gux-icon {
-          .focus-ring-small();
+          .gux-focus-ring-small();
 
           border-radius: 2px;
         }

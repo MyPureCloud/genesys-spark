@@ -1,5 +1,5 @@
 @import (reference) '../../../../style/color-palette.less';
-@import (reference) '../../../../style/mixins.less';
+@import (reference) '../../../../style/focus.less';
 @import (reference) '../../../../style/spacing.less';
 
 gux-pagination-buttons {
@@ -76,7 +76,7 @@ gux-pagination-buttons {
         border-radius: @gux-spacing-3xs;
 
         &:focus-visible {
-          .focus-ring();
+          .gux-focus-ring();
         }
 
         &.gux-current {

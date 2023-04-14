@@ -1,5 +1,5 @@
 @import (reference) '../../../../style/color.less';
-@import (reference) '../../../../style/mixins.less';
+@import (reference) '../../../../style/focus.less';
 
 @toggle-height: 16px;
 @toggle-width: 30px;
@@ -31,7 +31,7 @@ gux-toggle-slider {
 
     &:focus-visible {
       outline: none;
-      .focus-ring();
+      .gux-focus-ring();
     }
 
     .gux-slider {

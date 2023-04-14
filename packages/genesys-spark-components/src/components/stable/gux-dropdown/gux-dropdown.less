@@ -1,5 +1,6 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/focus.less';
 @import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/spacing.less';
 
@@ -108,11 +109,11 @@
 }
 
 .gux-target-container-expanded {
-  .form-field-border();
+  .gux-form-field-border();
 
   &:focus-visible,
   &:focus-within {
-    .focus-ring();
+    .gux-focus-ring();
   }
 
   .gux-filter-input {
@@ -142,11 +143,11 @@
 }
 
 .gux-target-container-collapsed .gux-field-button {
-  .form-field-border();
+  .gux-form-field-border();
 
   &:focus-visible,
   &:focus-within {
-    .focus-ring();
+    .gux-focus-ring();
   }
 }
 

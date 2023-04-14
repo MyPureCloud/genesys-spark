@@ -3,6 +3,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/focus.less';
 
 :host {
   display: inline-block;
@@ -43,7 +44,7 @@
   margin: 4px 0;
   background-color: @gux-grey-90;
   background-image: none;
-  .form-field-border();
+  .gux-form-field-border();
 
   &.gux-disabled {
     pointer-events: none;
@@ -111,7 +112,7 @@
       }
 
       &:focus-visible:enabled {
-        .focus-ring();
+        .gux-focus-ring();
       }
 
       gux-icon {

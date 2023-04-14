@@ -1,5 +1,5 @@
 @import (reference) '../../../../../../style/color.less';
-@import (reference) '../../../../../../style/mixins.less';
+@import (reference) '../../../../../../style/focus.less';
 @import (reference) '../../../../../../style/spacing.less';
 
 :host {
@@ -44,7 +44,7 @@
     }
 
     &:focus-visible:not(:disabled) {
-      .focus-ring();
+      .gux-focus-ring();
     }
 
     &:hover:not(:disabled) {

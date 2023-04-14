@@ -1,4 +1,6 @@
+@import (reference) '../../../style/color-palette.less';
 @import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/focus.less';
 @import (reference) '../../../style/spacing.less';
 
 :host {
@@ -10,10 +12,10 @@
   padding: @gux-spacing-2xs @gux-spacing-xs @gux-spacing-2xs @gux-spacing-small;
   cursor: pointer;
   background-color: @gux-grey-90;
-  .form-field-border();
+  .gux-form-field-border();
 
   &:focus-within {
-    .focus-ring();
+    .gux-focus-ring();
   }
 
   .gux-display {
@@ -48,7 +50,7 @@
     border-radius: 4px;
 
     &:focus-visible {
-      .focus-ring();
+      .gux-focus-ring();
     }
 
     &:not(:disabled):focus,

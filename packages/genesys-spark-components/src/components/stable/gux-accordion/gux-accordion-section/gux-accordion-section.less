@@ -1,5 +1,5 @@
 @import (reference) '../../../../style/color.less';
-@import (reference) '../../../../style/mixins.less';
+@import (reference) '../../../../style/focus.less';
 @import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/typography.less';
 
@@ -117,7 +117,7 @@ section.gux-disabled {
   }
 
   &:focus-visible {
-    .focus-ring();
+    .gux-focus-ring();
 
     .gux-header-icon {
       color: @gux-black-50;

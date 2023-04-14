@@ -1,5 +1,5 @@
 @import (reference) '../../../../../style/color-palette.less';
-@import (reference) '../../../../../style/mixins.less';
+@import (reference) '../../../../../style/focus.less';
 @import (reference) '../../../../../style/spacing.less';
 @import (reference) '../../../../../style/variables.less';
 @import (reference)
@@ -59,7 +59,7 @@
 }
 
 ::slotted(input[type='radio']:focus-visible)::before {
-  .focus-ring();
+  .gux-focus-ring();
 }
 
 ::slotted(input[type='radio']:not(:checked))::before {

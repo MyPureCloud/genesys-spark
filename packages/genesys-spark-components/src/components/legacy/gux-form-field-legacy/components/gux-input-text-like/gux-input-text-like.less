@@ -1,5 +1,6 @@
 @import (reference) '../../../../../style/color.less';
 @import (reference) '../../../../../style/mixins.less';
+@import (reference) '../../../../../style/focus.less';
 @import (reference) '../../../../../style/spacing.less';
 
 gux-input-text-like {
@@ -23,7 +24,7 @@ gux-input-text-like {
     color: @gux-black-50;
     background-color: @gux-grey-90;
     background-image: none;
-    .form-field-border();
+    .gux-form-field-border();
 
     &.gux-disabled {
       opacity: 0.5;
@@ -74,7 +75,7 @@ gux-input-text-like {
 
       &:focus-visible:enabled {
         gux-icon {
-          .focus-ring();
+          .gux-focus-ring();
         }
       }
     }

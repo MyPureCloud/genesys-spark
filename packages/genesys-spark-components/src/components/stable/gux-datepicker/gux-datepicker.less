@@ -1,7 +1,7 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/focus.less';
 @import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/zindex.less';
 
@@ -71,11 +71,11 @@
         color: @gux-black-50;
         background-color: @gux-grey-90;
         background-image: none;
-        .form-field-border();
+        .gux-form-field-border();
 
         &:focus-within {
           border-color: @gux-blue-60;
-          .focus-ring();
+          .gux-focus-ring();
         }
 
         input {
@@ -118,7 +118,7 @@
           outline: none;
 
           &:focus-visible {
-            .focus-ring();
+            .gux-focus-ring();
           }
 
           &:not(:disabled):focus-visible,

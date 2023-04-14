@@ -1,6 +1,6 @@
 @import (reference) '../../../../../style/color.less';
 @import (reference) '../../../../../style/spacing.less';
-@import (reference) '../../../../../style/mixins.less';
+@import (reference) '../../../../../style/focus.less';
 
 button {
   flex: 0 1 auto;
@@ -31,7 +31,7 @@ button {
 
   &:focus-visible:enabled {
     gux-icon {
-      .focus-ring();
+      .gux-focus-ring();
     }
   }
 }

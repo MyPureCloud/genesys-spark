@@ -1,7 +1,7 @@
 @import (reference) '../../../../style/color.less';
 @import (reference) '../../../../style/shadows.less';
 @import (reference) '../../../../style/typography.less';
-@import (reference) '../../../../style/mixins.less';
+@import (reference) '../../../../style/focus.less';
 @import (reference) '../../../../style/spacing.less';
 
 .gux-month-calendar {
@@ -32,7 +32,7 @@
 
       &:focus-visible {
         border-radius: 4px;
-        .focus-ring();
+        .gux-focus-ring();
       }
 
       &.gux-year-change {
@@ -71,7 +71,7 @@
       .body-font();
 
       &:focus-visible {
-        .focus-ring();
+        .gux-focus-ring();
       }
 
       &.gux-selected,

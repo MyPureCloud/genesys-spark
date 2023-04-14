@@ -1,5 +1,5 @@
 @import (reference) '../../../../style/color.less';
-@import (reference) '../../../../style/mixins.less';
+@import (reference) '../../../../style/focus.less';
 @import (reference) '../../../../style/shadows.less';
 @import (reference) '../../../../style/spacing.less';
 
@@ -27,7 +27,7 @@ gux-table-select-menu {
 
     &:focus-visible {
       gux-icon {
-        .focus-ring();
+        .gux-focus-ring();
 
         border-radius: 4px;
       }

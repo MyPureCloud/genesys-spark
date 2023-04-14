@@ -1,5 +1,5 @@
 @import (reference) '../../../../../style/color-palette.less';
-@import (reference) '../../../../../style/mixins.less';
+@import (reference) '../../../../../style/focus.less';
 @import (reference) '../../../../../style/typography.less';
 
 // Variables part
@@ -109,15 +109,15 @@ gux-form-field-range {
   &.gux-active {
     input[type='range'] {
       &::-webkit-slider-thumb {
-        .focus-ring();
+        .gux-focus-ring();
       }
 
       &::-moz-range-thumb {
-        .focus-ring();
+        .gux-focus-ring();
       }
 
       &::-ms-thumb {
-        .focus-ring();
+        .gux-focus-ring();
       }
     }
   }

@@ -1,5 +1,5 @@
 @import (reference) '../../../style/color-palette.less';
-@import (reference) '../../../style/mixins.less';
+@import (reference) '../../../style/focus.less';
 @import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/variables.less';
@@ -49,7 +49,7 @@
   }
 
   &:focus-within {
-    .focus-ring();
+    .gux-focus-ring();
   }
 }
 
@@ -128,7 +128,7 @@
   outline: inherit;
 
   &:focus-visible {
-    .focus-ring();
+    .gux-focus-ring();
   }
 }
 

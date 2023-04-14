@@ -1,5 +1,5 @@
 @import (reference) '../../../../../style/color-palette.less';
-@import (reference) '../../../../../style/mixins.less';
+@import (reference) '../../../../../style/focus.less';
 @import (reference) '../../../../../style/spacing.less';
 @import (reference) '../../../../../style/variables.less';
 @import (reference)
@@ -67,7 +67,7 @@
 }
 
 ::slotted(input[type='checkbox']:focus-visible)::before {
-  .focus-ring();
+  .gux-focus-ring();
   // TODO https://inindca.atlassian.net/browse/COMUI-946
 }
 
