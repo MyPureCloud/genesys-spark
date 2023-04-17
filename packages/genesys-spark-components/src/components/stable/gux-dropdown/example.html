@@ -446,6 +446,7 @@
   <gux-dropdown id="loading-1" loading>
     <gux-listbox aria-label="Animals"> </gux-listbox>
   </gux-dropdown>
+  <gux-button accent="secondary" id="loading-1-reset">Reload</gux-button>
 
   <h3>Loading a filterable list</h3>
   <gux-dropdown id="loading-2" filter-type="starts-with" loading>
@@ -458,6 +459,8 @@
     function loadingStaticList(id) {
       const dropdown = document.getElementById(id);
       const listbox = dropdown.querySelector('gux-listbox');
+
+      dropdown.loading = true;
 
       setTimeout((event) => {
         const options = [
@@ -478,11 +481,20 @@
       }, 5000);
     }
 
+    const loading1ResetButton = document.getElementById('loading-1-reset');
+    if (loading1ResetButton) {
+      loading1ResetButton.addEventListener('click', () => { loadingStaticList('loading-1'); });
+    }
+
     loadingStaticList('loading-1')
     loadingStaticList('loading-2')
 })()"
 >
   form {
     width: 200px;
+  }
+
+  gux-dropdown + gux-button {
+    margin-block-start: var(--gux-spacing-xs);
   }
 </style>

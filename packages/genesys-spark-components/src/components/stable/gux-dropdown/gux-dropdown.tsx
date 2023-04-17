@@ -89,17 +89,7 @@ export class GuxDropdown {
   private filter: string = '';
 
   @Watch('expanded')
-  focusSelectedItemAfterRender(expanded: boolean) {
-    if (expanded && this.listboxElement) {
-      afterNextRender(() => {
-        this.listboxElement.focus();
-
-        if (this.isFilterable()) {
-          this.filterElement.focus();
-        }
-      });
-    }
-
+  watchExpanded(expanded: boolean) {
     if (!expanded) {
       this.filter = '';
     }
@@ -200,6 +190,16 @@ export class GuxDropdown {
   onInternalExpanded(event: CustomEvent): void {
     event.stopPropagation();
     this.guxexpanded.emit();
+
+    if (this.listboxElement) {
+      afterNextRender(() => {
+        this.listboxElement.focus();
+
+        if (this.isFilterable() && this.filterElement) {
+          this.filterElement.focus();
+        }
+      });
+    }
   }
 
   @Listen('internalcollapsed')
