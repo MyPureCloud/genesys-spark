@@ -52,7 +52,7 @@ webappPipeline {
             ''')
         }
 
-        sh('npm run test')
+        sh('npm run test.ci')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
         sh('npm run lint')
     }
