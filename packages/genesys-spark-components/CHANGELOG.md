@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.80.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.80.2...v3.80.3) (2023-04-17)
+
+
+### Bug Fixes
+
+* **dropdown:** focus listbox on popup expanded ([#1229](https://github.com/MyPureCloud/genesys-webcomponents/issues/1229)) ([b6b7255](https://github.com/MyPureCloud/genesys-webcomponents/commit/b6b72556d35285e3e60be88ed441a461b231cea7))
+* **gux-tabs:** updating active-tab attribute activates tab ([#1231](https://github.com/MyPureCloud/genesys-webcomponents/issues/1231)) ([c90def3](https://github.com/MyPureCloud/genesys-webcomponents/commit/c90def361d278c03aee88e5b567ad412e14c14ce))
+
 ### [3.80.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.80.1...v3.80.2) (2023-04-14)
 
 ### [3.80.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.80.0...v3.80.1) (2023-04-14)
