@@ -49,6 +49,7 @@ export class GuxTabsAdvanced {
 
   @Watch('activeTab')
   watchActiveTab(newValue: string) {
+    this.activateTab(newValue, this.tabList, this.tabPanels);
     this.guxactivetabchange.emit(newValue);
   }
 
