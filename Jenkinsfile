@@ -46,17 +46,15 @@ webappPipeline {
                npm run release --workspace=packages/genesys-spark-components
                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
                npm run version-sync $RELEASE_VERSION
+               npm install
                git add . && git commit --amend --no-edit --no-verify
                git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
             ''')
         }
 
-
         sh('npm run test')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
         sh('npm run lint')
-
-
     }
     buildStep = { assetPrefix ->
         String cdnUrl = assetPrefix
