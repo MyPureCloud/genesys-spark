@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.81.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.0...v3.81.1) (2023-04-20)
+
+
+### Bug Fixes
+
+* **gux-time-picker:** restore :focus-within focus styling ([2bda0cb](https://github.com/MyPureCloud/genesys-webcomponents/commit/2bda0cb199f57d578d5fc972bea8360e3a075600))
+
 ## [3.81.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.80.4...v3.81.0) (2023-04-19)
 
 
