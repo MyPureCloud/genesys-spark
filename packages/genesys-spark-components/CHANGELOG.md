@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.81.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.2...v3.81.3) (2023-04-21)
+
+
+### Bug Fixes
+
+* **calendar:** make preview date and selected date(s) tabbable ([#1230](https://github.com/MyPureCloud/genesys-webcomponents/issues/1230)) ([3fc064d](https://github.com/MyPureCloud/genesys-webcomponents/commit/3fc064d80a2c997bcbc9f16a3e082e6832322007))
+
 ### [3.81.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.1...v3.81.2) (2023-04-21)
 
 
