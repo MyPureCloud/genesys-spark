@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.81.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.1...v3.81.2) (2023-04-21)
+
+
+### Bug Fixes
+
+* **card:** fixed card width styling ([987a49e](https://github.com/MyPureCloud/genesys-webcomponents/commit/987a49e2325dd258d33e6d1a2000e43bd0b985a8))
+* **copy-to-clipboard:** stopped keyboard focus messaging on mouse focus ([3b73aab](https://github.com/MyPureCloud/genesys-webcomponents/commit/3b73aaba463e6ba8ceef0058e0da99a48cd86918))
+
 ### [3.81.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.0...v3.81.1) (2023-04-20)
 
 
