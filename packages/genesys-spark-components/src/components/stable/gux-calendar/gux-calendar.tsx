@@ -255,6 +255,10 @@ export class GuxCalendar {
     return result;
   }
 
+  isFocusableDate(day: IDateElement): boolean {
+    return day.selected || this.previewValue.getTime() === day.date.getTime();
+  }
+
   weekShouldBeDisplayed(week: IDateElement[]): boolean {
     const hasNonHiddenDate = week.find(date => {
       return !date.hidden;
@@ -473,7 +477,7 @@ export class GuxCalendar {
                   day =>
                     (
                       <td
-                        tabindex={day.selected ? '0' : '-1'}
+                        tabindex={this.isFocusableDate(day) ? '0' : '-1'}
                         class={day.class}
                         aria-hidden={day.hidden ? 'true' : 'false'}
                         aria-disabled={day.disabled ? 'true' : 'false'}
