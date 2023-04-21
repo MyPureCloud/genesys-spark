@@ -14,7 +14,7 @@
     "yellow-bold": "badge med etiket: {label}, farve: gul fed",
     "red": "badge med etiket: {label}, farve: rød",
     "red-bold": "badge med etiket: {label}, farve: rød fed",
-    "inherit": "badge med etiket: {label}, farve: nedarvet"
+    "inherit": "badge med etiket: {label}"
   },
   "gux-column-manager-item": {
     "activateReordering": "Aktivér omarrangeringstilstand for {columnName} kolonne"
@@ -32,7 +32,6 @@
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "Klik for at kopiere",
-    "copyToClipboard": "Kopiér til udklipsholder",
     "enterToCopy": "Tryk på Enter for at kopiere",
     "copySuccess": "Kopieret til Udklipsholder",
     "copyFailure": "Fejl. Prøv igen."
