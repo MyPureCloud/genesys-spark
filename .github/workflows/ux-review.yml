@@ -16,9 +16,10 @@ jobs:
         with:
           message: >
             🧐 UX Reviewers Assemble!\n
+              - @cepedavanessa\n
               - @conor-darcy\n
-              - @Igaenssley\n
-              - @mattgaughran\n
+              - @JackieYada\n
+              - @MonseGarciaLimon\n
               - @stephenim\n
             \n
             Review Reminders\n
