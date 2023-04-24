@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "ต่อหน้า",
-    "itemsPerPage": "รายการต่อหน้า"
+    "itemsPerPage": "รายการต่อหน้า",
+    "rangeSelected": "ดรอปดาวน์สำหรับจำนวนรายการต่อหนึ่งหน้า, เลือกแล้ว {range} รายการ"
   },
   "gux-phone-input": {
     "AD": "อันดอร์รา",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "ต่อหน้า",
-    "itemsPerPage": "รายการต่อหน้า"
+    "itemsPerPage": "รายการต่อหน้า",
+    "rangeSelected": "ดรอปดาวน์สำหรับจำนวนรายการต่อหนึ่งหน้า, เลือกแล้ว {range} รายการ"
   },
   "gux-radial-loading": {
     "loading": "กำลังโหลด"
