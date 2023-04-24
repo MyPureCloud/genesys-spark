@@ -1,103 +1,116 @@
 <h1>gux-icon</h1>
-<h2 id="shadow-dom-header">Shadow DOM</h2>
-<div id="shadow-dom-host"></div>
-<p>
-  The `gux-icon` is expected to work even when used in the shadow dom (open)
-</p>
 
-<h2>Accessibility</h2>
-<gux-icon icon-name="cc-delivery" decorative></gux-icon>
-<p>
-  Set the <strong>decorative</strong> attrribute if the icon does not convey
-  information about the page and is only for decoration
-</p>
+<gux-tabs class="example">
+  <gux-tab-list slot="tab-list">
+    <gux-tab tab-id="1-1">Usage</gux-tab>
+    <gux-tab tab-id="1-2">Current icons</gux-tab>
+    <gux-tab tab-id="1-3">Legacy icons</gux-tab>
+  </gux-tab-list>
+  <gux-tab-panel tab-id="1-1">
+    <h2 id="shadow-dom-header">Shadow DOM</h2>
+    <div id="shadow-dom-host"></div>
+    <p>
+      The `gux-icon` is expected to work even when used in the shadow dom (open)
+    </p>
 
-<gux-icon
-  icon-name="add-user"
-  screenreader-text="add John Smith to contact list"
-></gux-icon>
-<p>
-  Set the <strong>screenreader-text</strong> attribute if the icon conveys
-  information to the user that would not otherwise be available
-</p>
+    <h2>Accessibility</h2>
+    <gux-icon icon-name="cc-delivery" decorative></gux-icon>
+    <p>
+      Set the <strong>decorative</strong> attrribute if the icon does not convey
+      information about the page and is only for decoration
+    </p>
 
-<gux-icon icon-name="cc-disconnected-system"></gux-icon>
-<p>
-  If neither <strong>decorative</strong> or <strong>screenreader-text</strong>
-  are set an error will be logged in the console
-</p>
+    <gux-icon
+      icon-name="add-user"
+      screenreader-text="add John Smith to contact list"
+    ></gux-icon>
+    <p>
+      Set the <strong>screenreader-text</strong> attribute if the icon conveys
+      information to the user that would not otherwise be available
+    </p>
 
-<h2>Styling</h2>
-<gux-icon id="styled" icon-name="add-user" decorative></gux-icon>
-<p>
-  You can use the <strong>color</strong>, <strong>height</strong> and
-  <strong>width</strong> css properties to style your icon
-</p>
+    <gux-icon icon-name="cc-disconnected-system"></gux-icon>
+    <p>
+      If neither <strong>decorative</strong> or
+      <strong>screenreader-text</strong>
+      are set an error will be logged in the console
+    </p>
 
-<h2>Caching</h2>
-<div>
-  <gux-icon icon-name="align-left" decorative></gux-icon>
-  <gux-icon icon-name="align-center" decorative></gux-icon>
-  <gux-icon icon-name="align-right" decorative></gux-icon>
-</div>
-<hr />
-<div>
-  <gux-icon icon-name="align-left" decorative></gux-icon>
-  <gux-icon icon-name="align-center" decorative></gux-icon>
-  <gux-icon icon-name="align-right" decorative></gux-icon>
-</div>
-<hr />
-<div>
-  <gux-icon icon-name="align-left" decorative></gux-icon>
-  <gux-icon icon-name="align-center" decorative></gux-icon>
-  <gux-icon icon-name="align-right" decorative></gux-icon>
-</div>
-<hr />
-<div>
-  <gux-icon icon-name="align-left" decorative></gux-icon>
-  <gux-icon icon-name="align-center" decorative></gux-icon>
-  <gux-icon icon-name="align-right" decorative></gux-icon>
-</div>
-<hr />
-<div>
-  <gux-icon icon-name="align-left" decorative></gux-icon>
-  <gux-icon icon-name="align-center" decorative></gux-icon>
-  <gux-icon icon-name="align-right" decorative></gux-icon>
-</div>
-<hr />
-<div>
-  <gux-icon icon-name="user" screenreader-text="user-01"></gux-icon>
-  <gux-icon icon-name="user" screenreader-text="user-02"></gux-icon>
-  <gux-icon icon-name="user" screenreader-text="user-03"></gux-icon>
-</div>
-<p>Duplicated icons should not require additional network calls</p>
+    <h2>Styling</h2>
+    <gux-icon id="styled" icon-name="add-user" decorative></gux-icon>
+    <p>
+      You can use the <strong>color</strong>, <strong>height</strong> and
+      <strong>width</strong> css properties to style your icon
+    </p>
 
-<h2>Spark Icons</h2>
-${SPARK_ICON_EXAMPLE_LIST}
+    <h2>Caching</h2>
+    <div>
+      <gux-icon icon-name="align-left" decorative></gux-icon>
+      <gux-icon icon-name="align-center" decorative></gux-icon>
+      <gux-icon icon-name="align-right" decorative></gux-icon>
+    </div>
+    <hr />
+    <div>
+      <gux-icon icon-name="align-left" decorative></gux-icon>
+      <gux-icon icon-name="align-center" decorative></gux-icon>
+      <gux-icon icon-name="align-right" decorative></gux-icon>
+    </div>
+    <hr />
+    <div>
+      <gux-icon icon-name="align-left" decorative></gux-icon>
+      <gux-icon icon-name="align-center" decorative></gux-icon>
+      <gux-icon icon-name="align-right" decorative></gux-icon>
+    </div>
+    <hr />
+    <div>
+      <gux-icon icon-name="align-left" decorative></gux-icon>
+      <gux-icon icon-name="align-center" decorative></gux-icon>
+      <gux-icon icon-name="align-right" decorative></gux-icon>
+    </div>
+    <hr />
+    <div>
+      <gux-icon icon-name="align-left" decorative></gux-icon>
+      <gux-icon icon-name="align-center" decorative></gux-icon>
+      <gux-icon icon-name="align-right" decorative></gux-icon>
+    </div>
+    <hr />
+    <div>
+      <gux-icon icon-name="user" screenreader-text="user-01"></gux-icon>
+      <gux-icon icon-name="user" screenreader-text="user-02"></gux-icon>
+      <gux-icon icon-name="user" screenreader-text="user-03"></gux-icon>
+    </div>
+    <p>Duplicated icons should not require additional network calls</p>
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="1-2">
+    <h2>Spark Icons</h2>
+    ${SPARK_ICON_EXAMPLE_LIST}
 
-<h2>Font Awesome Icons</h2>
-<p>
-  <a
-    href="https://form.asana.com/?k=wsglJ3RA89wMSdgRyoGdQg&d=12075379665713"
-    target="_blank"
-    >Request new FontAwesome icons</a
-  >
-</p>
-${FA_ICON_EXAMPLE_LIST}
+    <h2>Font Awesome Icons</h2>
+    <p>
+      <a
+        href="https://form.asana.com/?k=wsglJ3RA89wMSdgRyoGdQg&d=12075379665713"
+        target="_blank"
+        >Request new FontAwesome icons</a
+      >
+    </p>
+    ${FA_ICON_EXAMPLE_LIST}
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="1-3">
+    <h2>Legacy</h2>
+    <gux-icon icon-name="legacy/cc-delivery" decorative></gux-icon>
+    <p>
+      After a review of icons in this project many of them were removed as they
+      will not be part of the official Spark Design System. You should migrate
+      all usage of these icons where possible and if not possible contact the
+      Spark Design System team to get a suitable icon added to the system. For
+      convenience all legacy icons will be available via a "legacy/" prefix to
+      aid in the transition to officially supported icons.
+    </p>
 
-<h2>Legacy</h2>
-<gux-icon icon-name="legacy/cc-delivery" decorative></gux-icon>
-<p>
-  After a review of icons in this project many of them were removed as they will
-  not be part of the official Spark Design System. You should migrate all usage
-  of these icons where possible and if not possible contact the Spark Design
-  System team to get a suitable icon added to the system. For convenience all
-  legacy icons will be available via a "legacy/" prefix to aid in the transition
-  to officially supported icons.
-</p>
-
-<h2>Legacy Icons (Migrate away from these)</h2>
-${LEGACY_ICON_EXAMPLE_LIST}
+    <h2>Legacy Icons (Migrate away from these)</h2>
+    ${LEGACY_ICON_EXAMPLE_LIST}
+  </gux-tab-panel>
+</gux-tabs>
 
 <style
   onload="(function () {
