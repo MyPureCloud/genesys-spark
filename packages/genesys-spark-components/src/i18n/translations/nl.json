@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "per pagina",
-    "itemsPerPage": "Items per pagina"
+    "itemsPerPage": "Items per pagina",
+    "rangeSelected": "Items per vervolgkeuzelijst op pagina, {range} geselecteerd"
   },
   "gux-phone-input": {
     "AD": "Andorra",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "per pagina",
-    "itemsPerPage": "Items per pagina"
+    "itemsPerPage": "Items per pagina",
+    "rangeSelected": "Items per vervolgkeuzelijst op pagina, {range} geselecteerd"
   },
   "gux-radial-loading": {
     "loading": "Laden"
