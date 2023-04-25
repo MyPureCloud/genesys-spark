@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "每页",
-    "itemsPerPage": "每页项目数"
+    "itemsPerPage": "每页项目数",
+    "rangeSelected": "每页下拉列表的项目数，已选择{range}"
   },
   "gux-phone-input": {
     "AD": "安道尔",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "每页",
-    "itemsPerPage": "每页项目数"
+    "itemsPerPage": "每页项目数",
+    "rangeSelected": "每页下拉列表的项目数，已选择{range}"
   },
   "gux-radial-loading": {
     "loading": "正在加载"

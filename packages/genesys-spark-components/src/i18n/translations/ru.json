@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "на странице",
-    "itemsPerPage": "Элементов на странице"
+    "itemsPerPage": "Элементов на странице",
+    "rangeSelected": "Раскрывающийся список элементов на странице, выбрано: {range}"
   },
   "gux-phone-input": {
     "AD": "Андорра",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "на странице",
-    "itemsPerPage": "Элементов на странице"
+    "itemsPerPage": "Элементов на странице",
+    "rangeSelected": "Раскрывающийся список элементов на странице, выбрано: {range}"
   },
   "gux-radial-loading": {
     "loading": "Загрузка"

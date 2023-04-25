@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "per sida",
-    "itemsPerPage": "Objekt per sida"
+    "itemsPerPage": "Objekt per sida",
+    "rangeSelected": "Listruta med objekt per sida, {range} valda"
   },
   "gux-phone-input": {
     "AD": "Andorra",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "per sida",
-    "itemsPerPage": "Objekt per sida"
+    "itemsPerPage": "Objekt per sida",
+    "rangeSelected": "Listruta med objekt per sida, {range} valda"
   },
   "gux-radial-loading": {
     "loading": "Läser in"

@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "페이지당",
-    "itemsPerPage": "페이지당 항목"
+    "itemsPerPage": "페이지당 항목",
+    "rangeSelected": "페이지당 항목 드롭다운, {range} 선택됨"
   },
   "gux-phone-input": {
     "AD": "안도라",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "페이지당",
-    "itemsPerPage": "페이지당 항목"
+    "itemsPerPage": "페이지당 항목",
+    "rangeSelected": "페이지당 항목 드롭다운, {range} 선택됨"
   },
   "gux-radial-loading": {
     "loading": "로드 중"

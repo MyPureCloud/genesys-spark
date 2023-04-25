@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "每一頁",
-    "itemsPerPage": "每頁項目數"
+    "itemsPerPage": "每頁項目數",
+    "rangeSelected": "每個頁面下拉式清單的項目數，選取 {range}"
   },
   "gux-phone-input": {
     "AD": "安道爾",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "每一頁",
-    "itemsPerPage": "每頁項目數"
+    "itemsPerPage": "每頁項目數",
+    "rangeSelected": "每個頁面下拉式清單的項目數，選取 {range}"
   },
   "gux-radial-loading": {
     "loading": "正在載入"
