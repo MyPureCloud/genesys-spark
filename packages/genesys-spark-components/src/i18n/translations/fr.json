@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "par page",
-    "itemsPerPage": "éléments par page"
+    "itemsPerPage": "éléments par page",
+    "rangeSelected": "Liste déroulante Éléments par page, {range} sélectionnés"
   },
   "gux-phone-input": {
     "AD": "Andorre",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "par page",
-    "itemsPerPage": "éléments par page"
+    "itemsPerPage": "éléments par page",
+    "rangeSelected": "Liste déroulante Éléments par page, {range} sélectionnés"
   },
   "gux-radial-loading": {
     "loading": "Chargement en cours"

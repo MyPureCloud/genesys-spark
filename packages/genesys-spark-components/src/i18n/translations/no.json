@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "per side",
-    "itemsPerPage": "Elementer per side"
+    "itemsPerPage": "Elementer per side",
+    "rangeSelected": "Nedtrekksmeny for elementer per side, {range} valgt"
   },
   "gux-phone-input": {
     "AD": "Andorra",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "per side",
-    "itemsPerPage": "Elementer per side"
+    "itemsPerPage": "Elementer per side",
+    "rangeSelected": "Nedtrekksmeny for elementer per side, {range} valgt"
   },
   "gux-radial-loading": {
     "loading": "Laster"
