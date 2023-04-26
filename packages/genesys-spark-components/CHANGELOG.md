@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.81.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.4...v3.81.5) (2023-04-26)
+
+
+### Bug Fixes
+
+* **react:** saving exact components dependency during release ([a187e3d](https://github.com/MyPureCloud/genesys-webcomponents/commit/a187e3d349caf3b06c60544d6cb37400b54505a1))
+
 ### [3.81.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.3...v3.81.4) (2023-04-24)
 
 ### [3.81.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.2...v3.81.3) (2023-04-21)
