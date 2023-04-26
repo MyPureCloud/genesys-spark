@@ -46,9 +46,6 @@ webappPipeline {
                 npm run release --workspace=packages/genesys-spark-components
                 RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
                 npm run version-sync $RELEASE_VERSION
-                npm install --legacy-peer-deps --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
-                git add . && git commit --amend --no-edit --no-verify
-                git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
             ''')
         }
 
@@ -78,6 +75,12 @@ webappPipeline {
                     sh(script: 'npm publish --workspace=packages/genesys-spark-components',
                         label: 'Publish Components')
 
+                    sh(script: '''
+                            RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
+                            npm install --legacy-peer-deps --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
+                        ''',
+                        label: 'Set exact version dependency in React Components')
+
                     sh(script: 'npm publish --workspace=packages/genesys-spark-components-react',
                         label: 'Publish React Components')
                 }
@@ -86,8 +89,13 @@ webappPipeline {
             stage('Push Changes') {
                 sshagent(credentials: [constants.credentials.github.inin_dev_evangelists]) {
                     // Make sure we have the latest version of the branch so we can push our changes
-                    sh 'git pull'
-                    sh "git push --follow-tags -u origin ${env.BRANCH_NAME}"
+                    sh('''
+                        RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
+                        git add . && git commit --amend --no-edit --no-verify
+                        git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
+                        git pull
+                        git push --follow-tags -u origin ${env.BRANCH_NAME}
+                    ''')
                 }
             }
         }
