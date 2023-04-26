@@ -42,23 +42,14 @@ webappPipeline {
         // Run in CI step so we only run once
         // (builds happen twice, legacy and FedRAMP)
         if (isReleaseBranch) {
-            sh(label: 'Run component release',
-              script: 'npm run release --workspace=packages/genesys-spark-components')
-
-            sh(label: 'Get new release version',
-              script: 'env.RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"')
-
-            sh(label: 'Sync other packages release versions',
-              script: 'npm run version-sync $RELEASE_VERSION')
-
-            sh(label: 'Set genesys-spark-components-react\'s genesys-spark-components dependency version to exact new version',
-              script: 'npm install --legacy-peer-deps --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react')
-
-            sh(label: 'Amend release commit',
-              script: 'git add . && git commit --amend --no-edit --no-verify')
-
-            sh(label: 'Tag release commit',
-              script: 'git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"')
+            sh('''
+                npm run release --workspace=packages/genesys-spark-components
+                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
+                npm run version-sync $RELEASE_VERSION
+                npm install --legacy-peer-deps --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
+                git add . && git commit --amend --no-edit --no-verify
+                git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
+            ''')
         }
 
         sh('npm run test.ci')
