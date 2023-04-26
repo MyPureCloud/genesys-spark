@@ -46,7 +46,7 @@ webappPipeline {
               script: 'npm run release --workspace=packages/genesys-spark-components')
 
             sh(label: 'Get new release version',
-              script: 'RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"')
+              script: 'env.RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"')
 
             sh(label: 'Sync other packages release versions',
               script: 'npm run version-sync $RELEASE_VERSION')
