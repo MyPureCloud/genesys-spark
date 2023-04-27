@@ -10,6 +10,7 @@ const icons = [
       'fa/book-regular',
       'fa/briefcase-regular',
       'fa/bullseye-regular',
+      'fa/calculator-regular',
       'fa/calendar-days-regular',
       'fa/circle-check-regular',
       'fa/circle-xmark-regular',
