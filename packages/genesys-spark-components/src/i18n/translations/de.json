@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "pro Seite",
-    "itemsPerPage": "Elemente pro Seite"
+    "itemsPerPage": "Elemente pro Seite",
+    "rangeSelected": "Listenfeld Elemente pro Seite, {range} ausgewählt"
   },
   "gux-phone-input": {
     "AD": "Andorra",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "pro Seite",
-    "itemsPerPage": "Elemente pro Seite"
+    "itemsPerPage": "Elemente pro Seite",
+    "rangeSelected": "Listenfeld Elemente pro Seite, {range} ausgewählt"
   },
   "gux-radial-loading": {
     "loading": "Ladevorgang läuft"
