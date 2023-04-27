@@ -1,8 +1,0 @@
-gux-all-row-select .gux-label-text {
-  position: absolute;
-  top: auto;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}

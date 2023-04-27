@@ -1,8 +1,0 @@
-:host {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 12px 16px;
-  background-color: #fdfdfd;
-  border: 1px solid #b4bccb;
-}
