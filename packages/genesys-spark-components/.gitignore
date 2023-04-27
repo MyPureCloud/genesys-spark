@@ -3,4 +3,3 @@ build/
 dist/
 
 src/components.d.ts
-manifest.json

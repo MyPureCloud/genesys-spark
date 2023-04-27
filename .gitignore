@@ -4,13 +4,3 @@
 build_venv/
 node_modules/
 deploy/
-legacy-build-output/
-npm-utils/
-pipeline.d/
-static-asset-bundle/
-
-build.properties
-infra.zip
-test.properties
-ui-jobs-config.json
-manifest.json
