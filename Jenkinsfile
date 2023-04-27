@@ -41,6 +41,16 @@ webappPipeline {
 
         // Run in CI step so we only run once
         // (builds happen twice, legacy and FedRAMP)
+
+        sh("""
+            RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
+            git add . && git commit --amend --no-edit --no-verify
+            git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
+            git status
+            git checkout ${env.BRANCH_NAME}
+            """)
+
+
         if (isReleaseBranch) {
             sh('''
                 npm run release --workspace=packages/genesys-spark-components
@@ -107,6 +117,15 @@ webappPipeline {
                 propagate: false,
                      wait: false)
             }
+        }
+        stage('Run Docs Build') {
+            sh("""
+                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
+                git add . && git commit --amend --no-edit --no-verify
+                git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
+                git status
+                git checkout ${env.BRANCH_NAME}
+            """)
         }
     }
 }
