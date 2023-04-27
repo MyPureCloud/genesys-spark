@@ -44,8 +44,11 @@ webappPipeline {
         if (isReleaseBranch) {
             sh('''
                 npm run release --workspace=packages/genesys-spark-components
-                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
-                npm run version-sync $RELEASE_VERSION
+               RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
+               npm run version-sync $RELEASE_VERSION
+               npm install
+               git add . && git commit --amend --no-edit --no-verify
+               git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
             ''')
         }
 
@@ -90,9 +93,6 @@ webappPipeline {
                 sshagent(credentials: [constants.credentials.github.inin_dev_evangelists]) {
                     // Make sure we have the latest version of the branch so we can push our changes
                     sh("""
-                        RELEASE_VERSION="\$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
-                        git add . && git commit --amend --no-edit --no-verify
-                        git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
                         git pull
                         git push --follow-tags -u origin ${env.BRANCH_NAME}
                     """)
