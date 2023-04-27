@@ -1,0 +1,22 @@
+.gux-sr-only {
+  display: flex;
+}
+.gux-sr-only:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.gux-action-title {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.gux-action-title slot[name='icon']::slotted(gux-icon) {
+  width: 16px;
+  height: 16px;
+}

@@ -1,0 +1,1 @@
+export declare function onInputDisabledStateChange(element: HTMLButtonElement | HTMLFieldSetElement | HTMLInputElement | HTMLOptGroupElement | HTMLOptionElement | HTMLSelectElement | HTMLTextAreaElement | HTMLGuxDropdownElement | HTMLGuxDropdownMultiBetaElement, callback: (disabled: boolean) => void): MutationObserver;

@@ -1,0 +1,33 @@
+gux-tooltip-title {
+  overflow: hidden;
+}
+gux-tooltip {
+  font-weight: normal;
+  line-height: normal;
+  text-align: left;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+.gux-overflow-hidden .gux-title-container ::slotted(span) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gux-overflow-hidden .gux-title-container > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gux-title-container {
+  display: flex;
+  pointer-events: none;
+}
+.gux-tooltip-icon-decorative .gux-title-container {
+  position: relative;
+  margin-left: calc(16px + 4px);
+}
+.gux-tooltip-icon-decorative .gux-title-container gux-icon,
+.gux-tooltip-icon-decorative .gux-title-container ::slotted(gux-icon) {
+  position: absolute;
+  left: calc(-16px - 4px);
+  flex-shrink: 0;
+  width: 16px;
+}

@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components-react",
-  "version": "3.81.6",
+  "version": "3.81.7",
   "description": "",
   "license": "MIT",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "dependencies": {
-    "genesys-spark-components": "3.80.3"
+    "genesys-spark-components": "3.81.7"
   },
   "peerDependencies": {
     "@types/react": "16 - 18",

@@ -1,0 +1,30 @@
+gux-table-select-menu {
+  display: inline-flex;
+  font-weight: 400;
+}
+gux-table-select-menu .gux-select-menu-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  color: #6b7585;
+  background-color: inherit;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+gux-table-select-menu .gux-select-menu-button:disabled {
+  color: rgba(107, 117, 133, 0.5);
+}
+gux-table-select-menu .gux-select-menu-button:hover:not(gux-table-select-menu .gux-select-menu-button:disabled) {
+  color: #2e394c;
+}
+gux-table-select-menu .gux-select-menu-button:focus-visible gux-icon {
+  outline: 3px solid #aac9ff;
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px #fdfdfd;
+  border-radius: 4px;
+}
+gux-table-select-menu .gux-select-menu-button gux-icon {
+  width: 16px;
+  height: 16px;
+}

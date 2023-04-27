@@ -1,0 +1,48 @@
+@import (reference) 'color-palette.less';
+
+.gux-focus-ring-focused {
+  &:focus {
+    .gux-focus-ring();
+  }
+}
+
+.gux-focus-ring-focused-within {
+  &:focus-within {
+    .gux-focus-ring();
+  }
+}
+
+.gux-focus-ring-focused-visible {
+  &:focus-visible {
+    .gux-focus-ring();
+  }
+}
+
+.gux-focus-ring-small-focused {
+  &:focus {
+    .gux-focus-ring-small();
+  }
+}
+
+.gux-focus-ring-small-focused-within {
+  &:focus-within {
+    .gux-focus-ring-small();
+  }
+}
+
+.gux-focus-ring-small-focused-visible {
+  &:focus-visible {
+    .gux-focus-ring-small();
+  }
+}
+
+.gux-focus-ring {
+  outline: 3px solid @gux-blue-90;
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px @gux-grey-100;
+}
+
+.gux-focus-ring-small {
+  outline: 2px solid @gux-blue-90;
+  outline-offset: 0;
+}

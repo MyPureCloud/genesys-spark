@@ -1,0 +1,1 @@
+function n(n,o){let r,t=n.getRootNode();for(;t&&!r;)r=null==t?void 0:t.getElementById(o),t=t.getRootNode();return r}export{n as f}

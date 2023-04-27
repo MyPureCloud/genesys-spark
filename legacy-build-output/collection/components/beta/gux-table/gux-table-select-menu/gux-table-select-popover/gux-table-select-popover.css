@@ -1,0 +1,12 @@
+:host {
+  color: #2e394c;
+}
+.gux-popover-wrapper {
+  z-index: var(--gux-zindex-popover, 2);
+  display: inline-block;
+  padding: 8px 0;
+  background-color: #fdfdfd;
+  border: 1px solid #b4bccb;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(32, 41, 55, 0.24);
+}

@@ -1,0 +1,32 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  max-height: 20rem;
+  padding: 8px 0;
+  margin: 0;
+  overflow-y: auto;
+  color: #2e394c;
+  background: #fdfdfd;
+  border: 1px solid #b4bccb;
+  border-radius: 4px;
+  outline: none;
+}
+:host(:focus-visible) {
+  outline: 3px solid #aac9ff;
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px #fdfdfd;
+}
+.gux-message-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+}
+.gux-message-container .gux-no-matches {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 8px 16px;
+  color: #2e394c;
+}

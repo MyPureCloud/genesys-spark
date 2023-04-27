@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+.gux-inline-alert {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+.gux-inline-alert gux-icon {
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+.gux-inline-alert gux-tooltip-title {
+  white-space: nowrap;
+}
+.gux-inline-alert .gux-sr-only:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.gux-inline-alert.gux-info {
+  color: #4c5667;
+  background-color: #f6f7f9;
+  border: 1px solid #d7dce5;
+}
+.gux-inline-alert.gux-error {
+  color: #8f0707;
+  background-color: #fceaea;
+  border: 1px solid #f8b2b2;
+}
+.gux-inline-alert.gux-warning {
+  color: #976700;
+  background-color: #fdf8ec;
+  border: 1px solid #fce5b1;
+}
+.gux-inline-alert.gux-success {
+  color: #205a10;
+  background-color: #eefcea;
+  border: 1px solid #c2deb9;
+}

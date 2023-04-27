@@ -1,0 +1,265 @@
+gux-dropdown-legacy .gux-hidden {
+  display: none;
+}
+gux-dropdown-legacy div.gux-dropdown {
+  position: relative;
+  margin: 4px 0;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field {
+  position: relative;
+  width: 100%;
+  height: 32px;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field .gux-filter-suggestion {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 32px;
+  padding: 6px 25px 6px 14px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.6667;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field .gux-filter-suggestion .gux-filter-text {
+  color: #2e394c;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field .gux-filter-suggestion .gux-filter-typeahead {
+  color: #596373;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field gux-input-text-like > div {
+  margin: 0;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field gux-input-text-like input {
+  width: 100%;
+  padding-right: 25px;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  background-color: transparent;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field gux-input-text-like.gux-unclearable button {
+  display: none;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field button.gux-dropdown-indicator {
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  bottom: 0;
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field button.gux-dropdown-indicator gux-icon {
+  width: 16px;
+  height: 16px;
+  color: #596373;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field:hover button.gux-dropdown-indicator gux-icon,
+gux-dropdown-legacy div.gux-dropdown .gux-select-field:focus-within button.gux-dropdown-indicator gux-icon {
+  color: #2e394c;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-options {
+  position: absolute;
+  z-index: var(--gux-zindex-popup, 1);
+  display: none;
+  width: 100%;
+  padding: 8px 0;
+  margin-top: 2px;
+  overflow-y: auto;
+  color: #2e394c;
+  background: #fdfdfd;
+  border: 1px solid #b4bccb;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(32, 41, 55, 0.24);
+}
+gux-dropdown-legacy div.gux-dropdown .gux-options.gux-opened {
+  display: block;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-options > gux-option-legacy {
+  position: relative;
+  display: flex;
+  height: 32px;
+  padding: 0 16px;
+  line-height: 32px;
+  cursor: pointer;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-options > gux-option-legacy > div {
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-options > gux-option-legacy > div .gux-filter-suggestion {
+  position: absolute;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-options > gux-option-legacy[disabled] {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-options > gux-option-legacy.gux-filtered {
+  display: none;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-options > gux-option-legacy:not([disabled])[selected] {
+  color: #2e394c;
+  background: #deeaff;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-options > gux-option-legacy:not([disabled]):hover,
+gux-dropdown-legacy div.gux-dropdown .gux-options > gux-option-legacy:not([disabled]):focus-visible {
+  color: #fdfdfd;
+  background: #2a60c8;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-page .gux-select-field {
+  height: 48px;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-page .gux-select-field .gux-filter-suggestion {
+  height: 48px;
+  padding: 2px 25px 4px 11px;
+  overflow: hidden;
+  line-height: 1.6667;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-page .gux-select-field gux-input-text-like div.gux-input-container {
+  height: 48px;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-page .gux-select-field gux-input-text-like input {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  height: 48px;
+  line-height: 1.6667;
+  color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  caret-color: #2e394c;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-page .gux-select-field gux-input-text-like input:focus-visible {
+  border: none;
+  border-bottom: 2px solid rgba(117, 168, 255, 0.5);
+  box-shadow: none;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-page.gux-active .gux-select-field gux-input-text-like input:focus {
+  border-bottom: 1px solid #2a60c8;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-palette .gux-select-field {
+  height: 52px;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-palette .gux-select-field .gux-filter-suggestion {
+  height: 52px;
+  padding: 9px 25px 4px 11px;
+  overflow: hidden;
+  line-height: 1.6667;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-palette .gux-select-field gux-input-text-like div.gux-input-container {
+  height: 52px;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-palette .gux-select-field gux-input-text-like input {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  height: 52px;
+  line-height: 1.6667;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-palette .gux-select-field gux-input-text-like input:focus-visible {
+  border: none;
+  border-bottom: 2px solid rgba(117, 168, 255, 0.5);
+  box-shadow: none;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-palette.gux-active .gux-select-field gux-input-text-like input:focus {
+  border-bottom: 1px solid #2a60c8;
+}
+gux-dropdown-legacy:hover gux-icon,
+gux-dropdown-legacy:focus-visible gux-icon {
+  color: #2e394c;
+}
+.gux-dropdown-light-theme div.gux-dropdown .gux-select-field .gux-filter-suggestion {
+  color: #596373;
+}
+.gux-dropdown-light-theme div.gux-dropdown .gux-select-field gux-input-text-like input {
+  color: transparent;
+  caret-color: #2e394c;
+  border-color: #6b7585;
+}
+.gux-dropdown-light-theme div.gux-dropdown .gux-select-field button.gux-dropdown-indicator {
+  color: #596373;
+}
+.gux-dropdown-light-theme div.gux-dropdown.gux-page .gux-select-field .gux-filter-suggestion {
+  color: #8a97ad;
+  background-color: #fdfdfd;
+}
+.gux-dropdown-light-theme div.gux-dropdown.gux-page .gux-select-field gux-input-text-like input {
+  border-bottom: 1px solid #6b7585;
+}
+.gux-dropdown-light-theme div.gux-dropdown.gux-page.gux-active gux-input-text-like input {
+  border-bottom: 1px solid #75a8ff;
+}
+.gux-dropdown-light-theme div.gux-dropdown.gux-palette .gux-select-field .gux-filter-suggestion {
+  color: #8a97ad;
+  background-color: #fdfdfd;
+}
+.gux-dropdown-light-theme div.gux-dropdown.gux-palette .gux-select-field gux-input-text-like input {
+  border-bottom: 1px solid #6b7585;
+}
+.gux-dropdown-light-theme div.gux-dropdown.gux-palette.gux-active gux-input-text-like input {
+  border-bottom: 1px solid #75a8ff;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field .gux-filter-suggestion {
+  color: #596373;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field gux-input-text-like input {
+  color: transparent;
+  caret-color: #2e394c;
+  border-color: #6b7585;
+}
+gux-dropdown-legacy div.gux-dropdown .gux-select-field button.gux-dropdown-indicator {
+  color: #596373;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-page .gux-select-field .gux-filter-suggestion {
+  color: #8a97ad;
+  background-color: #fdfdfd;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-page .gux-select-field gux-input-text-like input {
+  border-bottom: 1px solid #6b7585;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-page.gux-active gux-input-text-like input {
+  border-bottom: 1px solid #75a8ff;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-palette .gux-select-field .gux-filter-suggestion {
+  color: #8a97ad;
+  background-color: #fdfdfd;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-palette .gux-select-field gux-input-text-like input {
+  border-bottom: 1px solid #6b7585;
+}
+gux-dropdown-legacy div.gux-dropdown.gux-palette.gux-active gux-input-text-like input {
+  border-bottom: 1px solid #75a8ff;
+}

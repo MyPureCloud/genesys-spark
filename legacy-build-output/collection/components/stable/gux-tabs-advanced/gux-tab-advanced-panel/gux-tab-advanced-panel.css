@@ -1,0 +1,8 @@
+gux-tab-advanced-panel div[role='tabpanel']:focus {
+  outline: none;
+}
+gux-tab-advanced-panel div[role='tabpanel']:focus-visible {
+  outline: 3px solid #aac9ff;
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px #fdfdfd;
+}

@@ -1,0 +1,12 @@
+.gux-target-container.gux-disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
+}
+.gux-popup-container {
+  z-index: var(--gux-zindex-popup, 1);
+  visibility: hidden;
+}
+.gux-popup-container.gux-expanded {
+  visibility: visible;
+}

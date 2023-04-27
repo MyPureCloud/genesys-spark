@@ -1,0 +1,1340 @@
+{
+  "gux-alert": {
+    "beta": true,
+    "attributes": {
+      "accent": [
+        "error",
+        "info",
+        "success",
+        "warning"
+      ]
+    },
+    "events": []
+  },
+  "gux-announce": {
+    "beta": true,
+    "attributes": {
+      "politeness": [
+        "assertive",
+        "off",
+        "polite"
+      ]
+    },
+    "events": []
+  },
+  "gux-badge": {
+    "beta": true,
+    "attributes": {
+      "bold": "checkbox",
+      "color": [
+        "green",
+        "inherit",
+        "neutral",
+        "red",
+        "yellow"
+      ]
+    },
+    "events": []
+  },
+  "gux-blank-state": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-button-slot": {
+    "beta": true,
+    "attributes": {
+      "accent": [
+        "danger",
+        "ghost",
+        "inline",
+        "primary",
+        "secondary",
+        "tertiary"
+      ]
+    },
+    "events": []
+  },
+  "gux-card": {
+    "beta": true,
+    "attributes": {
+      "accent": [
+        "filled",
+        "outline",
+        "raised"
+      ]
+    },
+    "events": []
+  },
+  "gux-chart-column": {
+    "beta": true,
+    "attributes": {
+      "--": [
+        "EmbedOptions&lt;string, Renderers&gt;"
+      ],
+      "include-legend": "checkbox",
+      "legend-position": [
+        "bottom",
+        "bottom-left",
+        "bottom-right",
+        "left",
+        "none",
+        "right",
+        "top",
+        "top-left",
+        "top-right"
+      ],
+      "legend-title": "text",
+      "x-axis-title": "text",
+      "x-field-name": "text",
+      "x-tick-label-slant": "checkbox",
+      "y-axis-title": "text",
+      "y-field-name": "text"
+    },
+    "events": []
+  },
+  "gux-chart-donut": {
+    "beta": true,
+    "attributes": {
+      "center-sub-text": "text",
+      "center-text": "text",
+      "--": [
+        "EmbedOptions&lt;string, Renderers&gt;"
+      ],
+      "color-field-name": "text",
+      "gauge": "checkbox",
+      "include-legend": "checkbox",
+      "inner-radius": "text",
+      "label-field": "text",
+      "label-radius": "text",
+      "legend-font-size": "text",
+      "legend-position": [
+        "bottom",
+        "bottom-left",
+        "bottom-right",
+        "left",
+        "none",
+        "right",
+        "top",
+        "top-left",
+        "top-right"
+      ],
+      "legend-symbol-size": "text",
+      "legend-title": "text",
+      "legend-x": "text",
+      "legend-y": "text",
+      "outer-radius": "text",
+      "show-tooltip": "checkbox"
+    },
+    "events": []
+  },
+  "gux-chart-line": {
+    "beta": true,
+    "attributes": {
+      "--": [
+        "EmbedOptions&lt;string, Renderers&gt;"
+      ],
+      "color-field-name": "text",
+      "include-data-point-markers": "checkbox",
+      "include-legend": "checkbox",
+      "interpolation": "text",
+      "legend-position": [
+        "bottom",
+        "bottom-left",
+        "bottom-right",
+        "left",
+        "none",
+        "right",
+        "top",
+        "top-left",
+        "top-right"
+      ],
+      "legend-title": "text",
+      "stroke-dash": "checkbox",
+      "x-axis-title": "text",
+      "x-field-name": "text",
+      "x-tick-label-slant": "checkbox",
+      "y-axis-title": "text",
+      "y-field-name": "text"
+    },
+    "events": []
+  },
+  "gux-chart-pie": {
+    "beta": true,
+    "attributes": {
+      "--": [
+        "EmbedOptions&lt;string, Renderers&gt;"
+      ],
+      "color-field-name": "text",
+      "include-legend": "checkbox",
+      "label-field": "text",
+      "label-radius": "text",
+      "legend-position": [
+        "bottom",
+        "bottom-left",
+        "bottom-right",
+        "left",
+        "none",
+        "right",
+        "top",
+        "top-left",
+        "top-right"
+      ],
+      "legend-title": "text",
+      "outer-radius": "text"
+    },
+    "events": []
+  },
+  "gux-chart-scatter-plot": {
+    "beta": true,
+    "attributes": {
+      "--": [
+        "EmbedOptions&lt;string, Renderers&gt;"
+      ],
+      "color-field-name": "text",
+      "include-legend": "checkbox",
+      "legend-position": [
+        "bottom",
+        "bottom-left",
+        "bottom-right",
+        "left",
+        "none",
+        "right",
+        "top",
+        "top-left",
+        "top-right"
+      ],
+      "legend-title": "text",
+      "use-shape": "text",
+      "x-axis-title": "text",
+      "x-field-name": "text",
+      "x-tick-label-slant": "checkbox",
+      "y-axis-title": "text",
+      "y-field-name": "text"
+    },
+    "events": []
+  },
+  "gux-column-manager": {
+    "beta": true,
+    "attributes": [],
+    "events": {
+      "guxorderchange": ""
+    }
+  },
+  "gux-context-menu": {
+    "beta": true,
+    "attributes": {
+      "screenreader-text": "text"
+    },
+    "events": []
+  },
+  "gux-copy-to-clipboard": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-date-time": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-date": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-dropdown-multi": {
+    "beta": true,
+    "attributes": {
+      "disabled": "checkbox",
+      "filter-type": [
+        "custom",
+        "none",
+        "starts-with"
+      ],
+      "filterable": "checkbox",
+      "has-error": "checkbox",
+      "loading": "checkbox",
+      "placeholder": "text",
+      "required": "checkbox",
+      "value": "text"
+    },
+    "events": {
+      "guxcollapsed": "This event will run when the dropdown-multi transitions to a collapsed state.",
+      "guxcreateoption": "This event is emitted to request creating a new option",
+      "guxexpanded": "This event will run when the dropdown-multi transitions to an expanded state.",
+      "guxfilter": ""
+    }
+  },
+  "gux-flyout-menu": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-loading-message": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-month-picker": {
+    "beta": true,
+    "attributes": {
+      "disabled": "checkbox",
+      "max": [
+        "${string}-${string}"
+      ],
+      "min": [
+        "${string}-${string}"
+      ],
+      "value": [
+        "${string}-${string}"
+      ]
+    },
+    "events": []
+  },
+  "gux-pagination-beta": {
+    "beta": true,
+    "attributes": {
+      "current-page": "text",
+      "items-per-page": [
+        "100",
+        "25",
+        "50",
+        "75"
+      ],
+      "layout": [
+        "advanced",
+        "simple"
+      ],
+      "total-items": "text"
+    },
+    "events": {
+      "guxpaginationchange": ""
+    }
+  },
+  "gux-phone-input": {
+    "beta": true,
+    "attributes": {
+      "default-region": "text",
+      "disabled": "checkbox",
+      "has-error": "checkbox",
+      "label-id": "text",
+      "required": "checkbox",
+      "value": "text"
+    },
+    "events": {
+      "input": "",
+      "internalError": ""
+    }
+  },
+  "gux-popover-beta": {
+    "beta": true,
+    "attributes": {
+      "close-on-click-outside": "checkbox",
+      "display-dismiss-button": "checkbox",
+      "for": "text",
+      "is-open": "checkbox",
+      "position": [
+        "bottom",
+        "bottom-end",
+        "bottom-start",
+        "left",
+        "left-end",
+        "left-start",
+        "right",
+        "right-end",
+        "right-start",
+        "top",
+        "top-end",
+        "top-start"
+      ]
+    },
+    "events": {
+      "guxdismiss": "Fired when a user dismisses the popover"
+    }
+  },
+  "gux-popover-list-beta": {
+    "beta": true,
+    "attributes": {
+      "close-on-click-outside": "checkbox",
+      "display-dismiss-button": "checkbox",
+      "for": "text",
+      "is-open": "checkbox",
+      "position": [
+        "bottom",
+        "bottom-end",
+        "bottom-start",
+        "left",
+        "left-end",
+        "left-start",
+        "right",
+        "right-end",
+        "right-start",
+        "top",
+        "top-end",
+        "top-start"
+      ]
+    },
+    "events": {
+      "guxdismiss": "Fired when a user dismisses the popover"
+    }
+  },
+  "gux-screen-reader": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-skip-navigation-list": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-table-toolbar": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-table": {
+    "beta": true,
+    "attributes": {
+      "compact": "checkbox",
+      "empty-message": "text",
+      "object-table": "checkbox",
+      "resizable-columns": "checkbox"
+    },
+    "events": {
+      "guxselectionchanged": "Triggers when table row was selected/unselected",
+      "guxsortchanged": "Triggers when the sorting of the table column is changed."
+    }
+  },
+  "gux-tag": {
+    "beta": true,
+    "attributes": {
+      "color": [
+        "default",
+        "default-subtle",
+        "navy",
+        "blue",
+        "electric-purple",
+        "aqua-green",
+        "fuscha",
+        "fuchsia",
+        "dark-purple",
+        "bubblegum-pink",
+        "olive-green",
+        "lilac",
+        "alert-yellow-green",
+        "blue-10",
+        "blue-20",
+        "blue-30",
+        "blue-40",
+        "blue-50",
+        "blue-60",
+        "blue-70",
+        "blue-80",
+        "blue-90",
+        "blue-100",
+        "alert-red-10",
+        "alert-red-20",
+        "alert-red-30",
+        "alert-red-40",
+        "alert-red-50",
+        "alert-red-60",
+        "alert-red-70",
+        "alert-red-80",
+        "alert-red-90",
+        "alert-red-100",
+        "alert-green-10",
+        "alert-green-20",
+        "alert-green-30",
+        "alert-green-40",
+        "alert-green-50",
+        "alert-green-60",
+        "alert-green-70",
+        "alert-green-80",
+        "alert-green-90",
+        "alert-green-100",
+        "alert-yellow-10",
+        "alert-yellow-20",
+        "alert-yellow-30",
+        "alert-yellow-40",
+        "alert-yellow-50",
+        "alert-yellow-60",
+        "alert-yellow-70",
+        "alert-yellow-80",
+        "alert-yellow-90",
+        "alert-yellow-100",
+        "brand-orange",
+        "brand-teal",
+        "brand-navy",
+        "brand-light-blue",
+        "brand-yellow"
+      ],
+      "disabled": "checkbox",
+      "removable": "checkbox",
+      "value": "text"
+    },
+    "events": {
+      "guxdelete": "Triggered when click on remove button"
+    }
+  },
+  "gux-time-picker": {
+    "beta": true,
+    "attributes": {
+      "clock-type": [
+        "12h",
+        "24h"
+      ],
+      "disabled": "checkbox",
+      "has-error": "checkbox",
+      "interval": [
+        "15",
+        "30",
+        "60"
+      ],
+      "required": "checkbox",
+      "step": [
+        "1",
+        "10",
+        "15",
+        "20",
+        "30",
+        "5",
+        "60"
+      ],
+      "value": [
+        "${string}:${string}"
+      ]
+    },
+    "events": []
+  },
+  "gux-time": {
+    "beta": true,
+    "attributes": [],
+    "events": []
+  },
+  "gux-truncate": {
+    "beta": true,
+    "attributes": {
+      "max-lines": "text"
+    },
+    "events": []
+  },
+  "gux-visualization": {
+    "beta": true,
+    "attributes": {
+      "--": [
+        "GenericConcatSpec&lt;NonNormalizedSpec&gt; &amp; TopLevelProperties&lt;ExprRef",
+        "SignalRef&gt; &amp; { $schema?: string; config?: Config&lt;ExprRef",
+        "SignalRef&gt;; datasets?: Datasets; usermeta?: Dict&lt;unknown&gt;; }",
+        "GenericFacetSpec&lt;UnitSpecWithFrame&lt;Field&gt;, LayerSpec&lt;Field&gt;, Field&gt; &amp; TopLevelProperties&lt;ExprRef",
+        "SignalRef&gt; &amp; { $schema?: string; config?: Config&lt;ExprRef",
+        "SignalRef&gt;; datasets?: Datasets; usermeta?: Dict&lt;unknown&gt;; } &amp; DataMixins",
+        "GenericHConcatSpec&lt;NonNormalizedSpec&gt; &amp; TopLevelProperties&lt;ExprRef",
+        "SignalRef&gt; &amp; { $schema?: string; config?: Config&lt;ExprRef",
+        "SignalRef&gt;; datasets?: Datasets; usermeta?: Dict&lt;unknown&gt;; }",
+        "GenericUnitSpec&lt;FacetedCompositeEncoding&lt;Field&gt;, AnyMark, TopLevelParameter&gt; &amp; ResolveMixins &amp; GenericCompositionLayout &amp; FrameMixins&lt;ExprRef",
+        "SignalRef&gt; &amp; TopLevelProperties&lt;ExprRef",
+        "SignalRef&gt; &amp; { $schema?: string; config?: Config&lt;ExprRef",
+        "SignalRef&gt;; datasets?: Datasets; usermeta?: Dict&lt;unknown&gt;; } &amp; DataMixins",
+        "GenericVConcatSpec&lt;NonNormalizedSpec&gt; &amp; TopLevelProperties&lt;ExprRef",
+        "SignalRef&gt; &amp; { $schema?: string; config?: Config&lt;ExprRef",
+        "SignalRef&gt;; datasets?: Datasets; usermeta?: Dict&lt;unknown&gt;; }",
+        "LayerRepeatSpec &amp; TopLevelProperties&lt;ExprRef",
+        "SignalRef&gt; &amp; { $schema?: string; config?: Config&lt;ExprRef",
+        "SignalRef&gt;; datasets?: Datasets; usermeta?: Dict&lt;unknown&gt;; }",
+        "LayerSpec&lt;Field&gt; &amp; TopLevelProperties&lt;ExprRef",
+        "SignalRef&gt; &amp; { $schema?: string; config?: Config&lt;ExprRef",
+        "SignalRef&gt;; datasets?: Datasets; usermeta?: Dict&lt;unknown&gt;; }",
+        "NonLayerRepeatSpec &amp; TopLevelProperties&lt;ExprRef",
+        "SignalRef&gt; &amp; { $schema?: string; config?: Config&lt;ExprRef",
+        "SignalRef&gt;; datasets?: Datasets; usermeta?: Dict&lt;unknown&gt;; }",
+        "Spec"
+      ]
+    },
+    "events": {
+      "chartClicked": "",
+      "chartComponentReady": ""
+    }
+  },
+  "gux-accordion-legacy": {
+    "beta": false,
+    "attributes": {
+      "arrow-position": [
+        "beside-text",
+        "default"
+      ],
+      "heading-level": "text"
+    },
+    "events": []
+  },
+  "gux-action-button-legacy": {
+    "beta": false,
+    "attributes": {
+      "accent": [
+        "primary",
+        "secondary",
+        "tertiary"
+      ],
+      "disabled": "checkbox",
+      "is-open": "checkbox",
+      "text": "text",
+      "type": [
+        "button",
+        "reset",
+        "submit"
+      ]
+    },
+    "events": {
+      "actionClick": "Triggered when the action button is clicked",
+      "close": "Triggered when the menu is close",
+      "open": "Triggered when the menu is open"
+    }
+  },
+  "gux-button-multi-legacy": {
+    "beta": false,
+    "attributes": {
+      "accent": [
+        "primary",
+        "secondary",
+        "tertiary"
+      ],
+      "disabled": "checkbox",
+      "is-open": "checkbox",
+      "text": "text"
+    },
+    "events": {
+      "close": "Triggered when the menu is close",
+      "open": "Triggered when the menu is open"
+    }
+  },
+  "gux-command-palette-legacy": {
+    "beta": false,
+    "attributes": [],
+    "events": []
+  },
+  "gux-dropdown-legacy": {
+    "beta": false,
+    "attributes": {
+      "disabled": "checkbox",
+      "filterable": "checkbox",
+      "mode": [
+        "default",
+        "page",
+        "palette"
+      ],
+      "placeholder": "text",
+      "value": "text"
+    },
+    "events": {
+      "change": "Emits when selection is changed."
+    }
+  },
+  "gux-form-field-legacy": {
+    "beta": false,
+    "attributes": {
+      "clearable": "checkbox",
+      "display-units": "text",
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ],
+      "resize": [
+        "auto",
+        "manual",
+        "none"
+      ],
+      "value-in-tooltip": "checkbox"
+    },
+    "events": []
+  },
+  "gux-list-legacy": {
+    "beta": false,
+    "attributes": {
+      "highlight": "text",
+      "--": [
+        "unknown"
+      ]
+    },
+    "events": {
+      "changed": "Triggered when the list&#39;s selection is changed."
+    }
+  },
+  "gux-panel-frame-legacy": {
+    "beta": false,
+    "attributes": [],
+    "events": []
+  },
+  "gux-side-panel-legacy": {
+    "beta": false,
+    "attributes": [],
+    "events": []
+  },
+  "gux-tabs-legacy": {
+    "beta": false,
+    "attributes": {
+      "allow-sort": "checkbox",
+      "show-new-tab-button": "checkbox",
+      "tab-limit": "text",
+      "value": "text"
+    },
+    "events": {
+      "input": "Triggers when a tab is selected.",
+      "newTab": "Triggers when the new tab button is selected.",
+      "sortChanged": "Triggers when the sorting of the tabs is changed."
+    }
+  },
+  "gux-text-label-legacy": {
+    "beta": false,
+    "attributes": [],
+    "events": []
+  },
+  "gux-accordion": {
+    "beta": false,
+    "attributes": {
+      "single-open-section": "checkbox"
+    },
+    "events": []
+  },
+  "gux-action-button": {
+    "beta": false,
+    "attributes": {
+      "accent": [
+        "danger",
+        "primary",
+        "secondary",
+        "tertiary"
+      ],
+      "disabled": "checkbox",
+      "is-open": "checkbox",
+      "text": "text",
+      "type": [
+        "button",
+        "reset",
+        "submit"
+      ]
+    },
+    "events": {
+      "actionClick": "Triggered when the action button is clicked",
+      "close": "Triggered when the menu is close",
+      "open": "Triggered when the menu is open"
+    }
+  },
+  "gux-action-toast": {
+    "beta": false,
+    "attributes": [],
+    "events": []
+  },
+  "gux-advanced-dropdown": {
+    "beta": false,
+    "attributes": {
+      "disabled": "checkbox",
+      "dropdown-height": "text",
+      "filter-debounce-timeout": "text",
+      "no-filter": "checkbox",
+      "placeholder": "text"
+    },
+    "events": {
+      "filter": "Fires when the filter of the advanced dropdown changes.",
+      "input": "Fires when the value of the advanced dropdown changes."
+    }
+  },
+  "gux-breadcrumbs": {
+    "beta": false,
+    "attributes": {
+      "accent": [
+        "primary",
+        "secondary"
+      ]
+    },
+    "events": []
+  },
+  "gux-button-multi": {
+    "beta": false,
+    "attributes": {
+      "accent": [
+        "primary",
+        "secondary",
+        "tertiary"
+      ],
+      "disabled": "checkbox",
+      "is-open": "checkbox",
+      "text": "text"
+    },
+    "events": {
+      "close": "Triggered when the menu is close",
+      "open": "Triggered when the menu is open"
+    }
+  },
+  "gux-button": {
+    "beta": false,
+    "attributes": {
+      "accent": [
+        "danger",
+        "ghost",
+        "inline",
+        "primary",
+        "secondary",
+        "tertiary"
+      ],
+      "disabled": "checkbox",
+      "gux-title": "text",
+      "type": [
+        "button",
+        "reset",
+        "submit"
+      ]
+    },
+    "events": []
+  },
+  "gux-calendar": {
+    "beta": false,
+    "attributes": {
+      "max-date": "text",
+      "min-date": "text",
+      "mode": [
+        "CalendarModes.Range",
+        "CalendarModes.Single"
+      ],
+      "number-of-months": "text",
+      "start-day-of-week": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "value": "text"
+    },
+    "events": {
+      "input": "Triggered when user selects a date"
+    }
+  },
+  "gux-content-search": {
+    "beta": false,
+    "attributes": {
+      "current-match": "text",
+      "match-count": "text"
+    },
+    "events": {
+      "guxcurrentmatchchanged": "Triggered when Current match value changes"
+    }
+  },
+  "gux-datepicker": {
+    "beta": false,
+    "attributes": {
+      "disabled": "checkbox",
+      "format": "text",
+      "label": "text",
+      "max-date": "text",
+      "min-date": "text",
+      "mode": [
+        "CalendarModes.Range",
+        "CalendarModes.Single"
+      ],
+      "number-of-months": "text",
+      "start-day-of-week": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "value": "text"
+    },
+    "events": {
+      "input": "Triggered when user selects a date"
+    }
+  },
+  "gux-disclosure-button": {
+    "beta": false,
+    "attributes": {
+      "is-open": "checkbox",
+      "label": "text",
+      "position": [
+        "left",
+        "right"
+      ]
+    },
+    "events": {
+      "active": "Return the state of the components panel on state change"
+    }
+  },
+  "gux-dismiss-button": {
+    "beta": false,
+    "attributes": {
+      "position": [
+        "absolute",
+        "inherit"
+      ]
+    },
+    "events": []
+  },
+  "gux-dropdown": {
+    "beta": false,
+    "attributes": {
+      "disabled": "checkbox",
+      "filter-type": [
+        "custom",
+        "none",
+        "starts-with"
+      ],
+      "filterable": "checkbox",
+      "has-error": "checkbox",
+      "loading": "checkbox",
+      "placeholder": "text",
+      "required": "checkbox",
+      "value": "text"
+    },
+    "events": {
+      "guxcollapsed": "",
+      "guxexpanded": "",
+      "guxfilter": ""
+    }
+  },
+  "gux-form-field-checkbox": {
+    "beta": false,
+    "attributes": [],
+    "events": []
+  },
+  "gux-form-field-color": {
+    "beta": false,
+    "attributes": {
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ]
+    },
+    "events": []
+  },
+  "gux-form-field-dropdown": {
+    "beta": false,
+    "attributes": {
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ]
+    },
+    "events": []
+  },
+  "gux-form-field-number": {
+    "beta": false,
+    "attributes": {
+      "clearable": "checkbox",
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ]
+    },
+    "events": []
+  },
+  "gux-form-field-phone": {
+    "beta": false,
+    "attributes": {
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ]
+    },
+    "events": {
+      "phonevalidationerror": ""
+    }
+  },
+  "gux-form-field-radio": {
+    "beta": false,
+    "attributes": [],
+    "events": []
+  },
+  "gux-form-field-range": {
+    "beta": false,
+    "attributes": {
+      "display-units": "text",
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ],
+      "value-in-tooltip": "checkbox"
+    },
+    "events": []
+  },
+  "gux-form-field-search": {
+    "beta": false,
+    "attributes": {
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ]
+    },
+    "events": []
+  },
+  "gux-form-field-select": {
+    "beta": false,
+    "attributes": {
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ]
+    },
+    "events": []
+  },
+  "gux-form-field-text-like": {
+    "beta": false,
+    "attributes": {
+      "clearable": "checkbox",
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ]
+    },
+    "events": []
+  },
+  "gux-form-field-textarea": {
+    "beta": false,
+    "attributes": {
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ],
+      "resize": [
+        "auto",
+        "manual",
+        "none"
+      ]
+    },
+    "events": []
+  },
+  "gux-form-field-time-picker": {
+    "beta": false,
+    "attributes": {
+      "label-position": [
+        "above",
+        "beside",
+        "screenreader"
+      ]
+    },
+    "events": []
+  },
+  "gux-icon": {
+    "beta": false,
+    "attributes": {
+      "decorative": "checkbox",
+      "icon-name": [
+        "GuxIconIconName",
+        "(string &amp; {})"
+      ],
+      "screenreader-text": "text"
+    },
+    "events": []
+  },
+  "gux-list": {
+    "beta": false,
+    "attributes": [],
+    "events": []
+  },
+  "gux-listbox": {
+    "beta": false,
+    "attributes": {
+      "filter": "text",
+      "filter-type": [
+        "custom",
+        "none",
+        "starts-with"
+      ],
+      "loading": "checkbox",
+      "value": "text"
+    },
+    "events": {
+      "internallistboxoptionsupdated": ""
+    }
+  },
+  "gux-modal": {
+    "beta": false,
+    "attributes": {
+      "initial-focus": "text",
+      "size": [
+        "dynamic",
+        "large",
+        "medium",
+        "small"
+      ],
+      "trap-focus": "checkbox"
+    },
+    "events": {
+      "guxdismiss": "Fired when a user dismisses the modal (The default behaviour is to remove the component from the DOM)"
+    }
+  },
+  "gux-notification-toast": {
+    "beta": false,
+    "attributes": {
+      "accent": [
+        "alert",
+        "neutral",
+        "positive",
+        "warning"
+      ]
+    },
+    "events": {
+      "guxdismiss": ""
+    }
+  },
+  "gux-page-loading-spinner": {
+    "beta": false,
+    "attributes": {
+      "screenreader-text": "text"
+    },
+    "events": []
+  },
+  "gux-pagination-cursor": {
+    "beta": false,
+    "attributes": {
+      "has-next": "checkbox",
+      "has-previous": "checkbox"
+    },
+    "events": {
+      "guxPaginationCursorchange": ""
+    }
+  },
+  "gux-pagination": {
+    "beta": false,
+    "attributes": {
+      "current-page": "text",
+      "items-per-page": [
+        "100",
+        "25",
+        "50",
+        "75"
+      ],
+      "layout": [
+        "expanded",
+        "full",
+        "small"
+      ],
+      "total-items": "text"
+    },
+    "events": {
+      "guxpaginationchange": ""
+    }
+  },
+  "gux-popover-list": {
+    "beta": false,
+    "attributes": {
+      "close-on-click-outside": "checkbox",
+      "display-dismiss-button": "checkbox",
+      "for": "text",
+      "position": [
+        "bottom",
+        "bottom-end",
+        "bottom-start",
+        "left",
+        "left-end",
+        "left-start",
+        "right",
+        "right-end",
+        "right-start",
+        "top",
+        "top-end",
+        "top-start"
+      ]
+    },
+    "events": {
+      "guxdismiss": "Fired when a user dismisses the popover"
+    }
+  },
+  "gux-popover": {
+    "beta": false,
+    "attributes": {
+      "close-on-click-outside": "checkbox",
+      "display-dismiss-button": "checkbox",
+      "for": "text",
+      "position": [
+        "bottom",
+        "bottom-end",
+        "bottom-start",
+        "left",
+        "left-end",
+        "left-start",
+        "right",
+        "right-end",
+        "right-start",
+        "top",
+        "top-end",
+        "top-start"
+      ]
+    },
+    "events": {
+      "guxdismiss": "Fired when a user dismisses the popover"
+    }
+  },
+  "gux-radial-loading": {
+    "beta": false,
+    "attributes": {
+      "context": [
+        "full-page",
+        "input",
+        "modal"
+      ],
+      "screenreader-text": "text"
+    },
+    "events": []
+  },
+  "gux-radial-progress": {
+    "beta": false,
+    "attributes": {
+      "max": "text",
+      "scale": [
+        "0",
+        "1",
+        "2"
+      ],
+      "screenreader-text": "text",
+      "value": "text"
+    },
+    "events": []
+  },
+  "gux-rating": {
+    "beta": false,
+    "attributes": {
+      "disabled": "checkbox",
+      "max-value": "text",
+      "readonly": "checkbox",
+      "value": "text"
+    },
+    "events": []
+  },
+  "gux-simple-toast": {
+    "beta": false,
+    "attributes": {
+      "accent": [
+        "alert",
+        "neutral",
+        "positive",
+        "warning"
+      ]
+    },
+    "events": {
+      "guxdismiss": ""
+    }
+  },
+  "gux-switch": {
+    "beta": false,
+    "attributes": {
+      "layout": [
+        "default",
+        "small"
+      ],
+      "value": "text"
+    },
+    "events": []
+  },
+  "gux-tabs-advanced": {
+    "beta": false,
+    "attributes": {
+      "active-tab": "text"
+    },
+    "events": {
+      "guxactivetabchange": "Triggers when the active tab changes."
+    }
+  },
+  "gux-tabs": {
+    "beta": false,
+    "attributes": {
+      "active-tab": "text",
+      "alignment": [
+        "center",
+        "fullWidth",
+        "left"
+      ],
+      "orientation": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "events": {
+      "guxactivetabchange": "Triggers when the active tab changes."
+    }
+  },
+  "gux-text-highlight": {
+    "beta": false,
+    "attributes": {
+      "highlight": "text",
+      "strategy": [
+        "contains",
+        "fuzzy",
+        "start"
+      ],
+      "text": "text"
+    },
+    "events": []
+  },
+  "gux-toggle": {
+    "beta": false,
+    "attributes": {
+      "checked": "checkbox",
+      "checked-label": "text",
+      "disabled": "checkbox",
+      "display-inline": "checkbox",
+      "error-message": "text",
+      "label-position": [
+        "left",
+        "right"
+      ],
+      "loading": "checkbox",
+      "unchecked-label": "text"
+    },
+    "events": {
+      "check": ""
+    }
+  },
+  "gux-tooltip": {
+    "beta": false,
+    "attributes": {
+      "for": "text",
+      "placement": [
+        "bottom",
+        "bottom-end",
+        "bottom-start",
+        "left",
+        "left-end",
+        "left-start",
+        "right",
+        "right-end",
+        "right-start",
+        "top",
+        "top-end",
+        "top-start"
+      ]
+    },
+    "events": []
+  },
+  "color": {
+    "styles": true
+  },
+  "focus": {
+    "styles": true
+  },
+  "shadows": {
+    "styles": true
+  },
+  "spacing": {
+    "styles": true
+  },
+  "typography": {
+    "styles": true
+  }
+}

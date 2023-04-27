@@ -1,0 +1,18 @@
+:host {
+  display: inline-flex;
+  user-select: none;
+}
+:host:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(117, 168, 255, 0.5);
+}
+.gux-rating-star-container {
+  color: #2e394c;
+}
+.gux-rating-star-container.gux-disabled {
+  opacity: 0.5;
+}
+.gux-rating-star-container gux-icon {
+  width: 24px;
+  height: 24px;
+}

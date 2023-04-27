@@ -1,0 +1,33 @@
+:host {
+  position: fixed;
+  z-index: var(--gux-zindex-tooltip, 1);
+  display: none;
+  width: max-content;
+  max-width: 250px;
+  overflow: hidden;
+  opacity: 0;
+}
+:host(.gux-show) {
+  display: block;
+  animation-name: fade-in;
+  animation-duration: 250ms;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.gux-container {
+  box-sizing: border-box;
+  padding: 6px 12px;
+  color: #2e394c;
+  pointer-events: none;
+  background-color: #fdfdfd;
+  border: 1px solid #b4bccb;
+  border-radius: 4px;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

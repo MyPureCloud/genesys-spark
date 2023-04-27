@@ -1,0 +1,182 @@
+.gux-form-field-container {
+  margin: var(--gux-form-field-container-margin-top, 16px) 0 var(--gux-form-field-container-margin-bottom, 16px) 0;
+}
+.gux-form-field-container.gux-beside {
+  display: flex;
+  flex-direction: row;
+}
+.gux-form-field-error {
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 4px 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: #2e394c;
+}
+.gux-form-field-error.gux-show {
+  display: flex;
+}
+.gux-form-field-error gux-icon {
+  flex: 0 1 auto;
+  align-self: auto;
+  order: 0;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 2px 4px 0 0;
+  color: #ea0b0b;
+}
+.gux-form-field-error .gux-message {
+  flex: 0 1 auto;
+  align-self: auto;
+  order: 0;
+}
+.gux-form-field-label.gux-required::after {
+  font-size: 12px;
+  color: #ea0b0b;
+  content: ' *';
+}
+.gux-form-field-label.gux-beside {
+  position: relative;
+  top: 8px;
+  width: fit-content;
+  min-width: 45px;
+  margin-right: 8px;
+}
+.gux-form-field-label.gux-above {
+  margin-bottom: 8px;
+}
+.gux-form-field-label.gux-screenreader {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.gux-form-field-help {
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 4px 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #6b7585;
+}
+.gux-form-field-help.gux-show {
+  display: flex;
+}
+.gux-form-field-help .gux-message {
+  flex: 0 1 auto;
+  align-self: none;
+  order: 0;
+}
+:host {
+  display: block;
+  color: #2e394c;
+}
+::slotted(label) {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+::slotted(textarea) {
+  flex: 1 1 auto;
+  align-self: auto;
+  order: 0;
+  font-family: inherit;
+  color: #2e394c;
+  resize: vertical;
+  background-color: #f6f7f9;
+  background-image: none;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: inset 0 0 4px rgba(32, 41, 55, 0.16);
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  min-height: 90px;
+  padding: 4px 12px;
+  margin: 0;
+}
+::slotted(textarea)::placeholder {
+  color: #596373;
+  opacity: 1;
+}
+::slotted(textarea)[disabled] {
+  opacity: 0.5;
+}
+::slotted(textarea)::placeholder {
+  color: #596373;
+  opacity: 1;
+}
+.gux-input-and-error-container {
+  flex-grow: 1;
+}
+.gux-input-and-error-container .gux-input {
+  position: relative;
+  display: flex;
+  border: 1px solid #6b7585;
+  border-radius: 4px;
+  outline: none;
+}
+.gux-input-and-error-container .gux-input:focus-within {
+  border-color: #2a60c8;
+  outline: 3px solid #aac9ff;
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px #fdfdfd;
+}
+.gux-input-and-error-container .gux-input.gux-input-error {
+  border-color: #ea0b0b;
+}
+.gux-input-and-error-container .gux-input.gux-disabled {
+  opacity: 0.5;
+}
+.gux-input-and-error-container .gux-input.gux-resize-none ::slotted(textarea) {
+  resize: none;
+}
+.gux-input-and-error-container .gux-input.gux-resize-auto {
+  /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+  display: grid;
+  overflow: hidden;
+  word-break: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+.gux-input-and-error-container .gux-input.gux-resize-auto::after {
+  /* Place on top of each other */
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  /* This is how textarea text behaves */
+  white-space: pre-wrap;
+  /* Hidden from view, clicks, and screen readers */
+  visibility: hidden;
+  /* Note the weird space! Needed to preventy jumpy behavior */
+  content: attr(data-replicated-value) ' ';
+  min-height: 90px;
+  padding: 4px 12px;
+  margin: 0;
+}
+.gux-input-and-error-container .gux-input.gux-resize-auto ::slotted(textarea) {
+  /* Place on top of each other */
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  overflow-x: hidden;
+  /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+  resize: none;
+}

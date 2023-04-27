@@ -1,0 +1,39 @@
+gux-dropdown-option {
+  position: relative;
+  display: flex;
+  height: var(--option-height);
+  padding: 0 16px;
+  line-height: 32px;
+  cursor: pointer;
+}
+gux-dropdown-option div.gux-dropdown-option {
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+gux-dropdown-option div.gux-dropdown-option .gux-ghost {
+  position: absolute;
+}
+gux-dropdown-option[filtered] {
+  display: none;
+}
+gux-dropdown-option[disabled] {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
+}
+gux-dropdown-option[disabled='false'] {
+  pointer-events: auto;
+  cursor: pointer;
+  opacity: 1;
+}
+gux-dropdown-option:not(:disabled)[selected] {
+  color: #2e394c;
+  background: #deeaff;
+}
+gux-dropdown-option:not(:disabled):hover,
+gux-dropdown-option:not(:disabled):focus-visible {
+  color: #fdfdfd;
+  background: #2a60c8;
+}

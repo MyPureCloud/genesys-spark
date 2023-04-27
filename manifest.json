@@ -1,0 +1,11 @@
+{
+    "name": "spark-components",
+    "version": "3.81.6",
+    "ecosystem": "pc",
+    "team": "Core UI",
+    "indexFiles": [
+        
+    ],
+    "build": "156",
+    "buildDate": "2023-04-27T17:21:28.217618Z"
+}

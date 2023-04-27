@@ -1,0 +1,40 @@
+:host {
+  display: inline-block;
+}
+/* stylelint-disable-next-line selector-class-pattern */
+div[role='progressbar'] .gux-svg-container {
+  display: block;
+}
+div[role='progressbar'] .gux-svg-container .gux-dynamic-circle {
+  fill: none;
+  stroke: #2a60c8;
+  stroke-width: 5;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+div[role='progressbar'] .gux-svg-container .gux-dynamic-circle-shadow {
+  fill: none;
+  stroke: #75a8ff;
+  stroke-width: 5;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+div[role='progressbar'] .gux-svg-container .gux-static-circle {
+  fill: none;
+  stroke: #deeaff;
+  stroke-width: 4;
+}
+div[role='progressbar'] .gux-svg-container .gux-percentage {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  text-anchor: middle;
+  fill: #2e394c;
+}
+div[role='progressbar'] .gux-svg-container .gux-percentage.gux-small {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+}

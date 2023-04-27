@@ -1,0 +1,35 @@
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px;
+  color: #596373;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+}
+button.gux-inherit {
+  position: inherit;
+}
+button:not(:disabled):focus-visible,
+button:not(:disabled):hover {
+  color: #2e394c;
+  cursor: pointer;
+}
+button gux-icon {
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+  border-radius: 4px;
+}
+button:focus {
+  outline: none;
+}
+button:focus gux-icon {
+  outline: none;
+}
+button:focus-visible:enabled gux-icon {
+  outline: 3px solid #aac9ff;
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px #fdfdfd;
+}
