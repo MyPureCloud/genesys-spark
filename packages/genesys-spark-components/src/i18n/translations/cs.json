@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "na stránku",
-    "itemsPerPage": "Položek na stránku"
+    "itemsPerPage": "Položek na stránku",
+    "rangeSelected": "Rozevírací seznam s počtem položek na stránku, vybráno {range}"
   },
   "gux-phone-input": {
     "AD": "Andorra",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "na stránku",
-    "itemsPerPage": "Položek na stránku"
+    "itemsPerPage": "Položek na stránku",
+    "rangeSelected": "Rozevírací seznam s počtem položek na stránku, vybráno {range}"
   },
   "gux-radial-loading": {
     "loading": "Načítání"

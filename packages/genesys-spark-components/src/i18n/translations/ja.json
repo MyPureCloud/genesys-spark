@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "/ページ",
-    "itemsPerPage": "件ずつ表示"
+    "itemsPerPage": "件ずつ表示",
+    "rangeSelected": "ページ ドロップダウンあたりのアイテム数、選択された {range}"
   },
   "gux-phone-input": {
     "AD": "アンドラ",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "/ページ",
-    "itemsPerPage": "件ずつ表示"
+    "itemsPerPage": "件ずつ表示",
+    "rangeSelected": "ページ ドロップダウンあたりのアイテム数、選択された {range}"
   },
   "gux-radial-loading": {
     "loading": "読み込み中"

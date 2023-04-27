@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "sayfa başına",
-    "itemsPerPage": "Sayfa başına öğeler"
+    "itemsPerPage": "Sayfa başına öğeler",
+    "rangeSelected": "Sayfa açılır listesi başına öğeler, {range} seçildi"
   },
   "gux-phone-input": {
     "AD": "Andorra",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "sayfa başına",
-    "itemsPerPage": "Sayfa başına öğeler"
+    "itemsPerPage": "Sayfa başına öğeler",
+    "rangeSelected": "Sayfa açılır listesi başına öğeler, {range} seçildi"
   },
   "gux-radial-loading": {
     "loading": "Yükleniyor"
