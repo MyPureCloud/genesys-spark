@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "sivulla",
-    "itemsPerPage": "Nimikettä sivulla"
+    "itemsPerPage": "Nimikettä sivulla",
+    "rangeSelected": "Kohteita per avattava valikko, {range} valittu"
   },
   "gux-phone-input": {
     "AD": "Andorra",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "sivulla",
-    "itemsPerPage": "Nimikettä sivulla"
+    "itemsPerPage": "Nimikettä sivulla",
+    "rangeSelected": "Kohteita per avattava valikko, {range} valittu"
   },
   "gux-radial-loading": {
     "loading": "Ladataan"

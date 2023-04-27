@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "pr. side",
-    "itemsPerPage": "Elementer pr. side"
+    "itemsPerPage": "Elementer pr. side",
+    "rangeSelected": "Elementer pr. siderulleliste, {range} valgt"
   },
   "gux-phone-input": {
     "AD": "Andorra",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "pr. side",
-    "itemsPerPage": "Elementer pr. side"
+    "itemsPerPage": "Elementer pr. side",
+    "rangeSelected": "Elementer pr. siderulleliste, {range} valgt"
   },
   "gux-radial-loading": {
     "loading": "Indlæser"

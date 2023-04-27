@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "na stronę",
-    "itemsPerPage": "Elementy na stronę"
+    "itemsPerPage": "Elementy na stronę",
+    "rangeSelected": "Menu rozwijane pozycji na stronie, wybrano: {range}"
   },
   "gux-phone-input": {
     "AD": "Andora",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "na stronę",
-    "itemsPerPage": "Elementy na stronę"
+    "itemsPerPage": "Elementy na stronę",
+    "rangeSelected": "Menu rozwijane pozycji na stronie, wybrano: {range}"
   },
   "gux-radial-loading": {
     "loading": "Wczytywanie"
