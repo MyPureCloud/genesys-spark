@@ -1,8 +1,0 @@
-{
-    "testJob": "no-tests",
-    "repoUrl": "git@github.com:MyPureCloud/genesys-webcomponents.git",
-    "repoBranch": "main",
-    "repoCommit": "20a134bc524a518a3eb938697fc683b4c8bf17f2",
-    "postDeployJob": null,
-    "deployOnFailure": true
-}

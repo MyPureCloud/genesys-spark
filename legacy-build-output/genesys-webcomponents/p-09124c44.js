@@ -1,1 +1,0 @@
-import{g as t}from"./p-9031eb6a.js";function n(n){return(e,s)=>{const{connectedCallback:c,disconnectedCallback:i}=e;let o;e.connectedCallback=function(){const e=t(this);return o=new MutationObserver(this[s].bind(this)),o.observe(e,n),c&&c.call(this)},e.disconnectedCallback=function(){return o&&o.disconnect(),i&&i.call(this)}}}export{n as O}
