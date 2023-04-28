@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "لكل صفحة",
-    "itemsPerPage": "عناصر لكل صفحة"
+    "itemsPerPage": "عناصر لكل صفحة",
+    "rangeSelected": "العناصر في القائمة المنسدلة لكل صفحة، تم تحديد  {range}"
   },
   "gux-phone-input": {
     "AD": "أندورا",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "لكل صفحة",
-    "itemsPerPage": "عناصر لكل صفحة"
+    "itemsPerPage": "عناصر لكل صفحة",
+    "rangeSelected": "العناصر في القائمة المنسدلة لكل صفحة، تم تحديد  {range}"
   },
   "gux-radial-loading": {
     "loading": "تحميل"
