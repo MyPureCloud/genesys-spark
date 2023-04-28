@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.82.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.4...v3.82.0) (2023-04-28)
+
+
+### Features
+
+* **icon:** added calculator icon ([5019ba9](https://github.com/MyPureCloud/genesys-webcomponents/commit/5019ba94839a6d7369a49c43715ae553291b61f7))
+
+
+### Bug Fixes
+
+* **build:** fix build ([3a80ea7](https://github.com/MyPureCloud/genesys-webcomponents/commit/3a80ea78475c64ac08788deb0acf5a015cd049fa))
+* **build:** fixed react components build ([7544b24](https://github.com/MyPureCloud/genesys-webcomponents/commit/7544b24af216e7e397cacedfb09a05144d1067d6))
+* **card:** fixed slot containers display type ([32bbacb](https://github.com/MyPureCloud/genesys-webcomponents/commit/32bbacb8a8a3fa9f19ce4eb8279b322b782f54f9))
+* **files:** remove files added by Jenkins by mistake ([fe4b165](https://github.com/MyPureCloud/genesys-webcomponents/commit/fe4b165353bf57c1a644f1e9ba968aed9107e887))
+* **gitignore:** add files to ignore ([ae2c89b](https://github.com/MyPureCloud/genesys-webcomponents/commit/ae2c89bab345dceb7afadb3d6f73c6f64f65d603))
+* **gitignore:** remove entries ([c69e8f0](https://github.com/MyPureCloud/genesys-webcomponents/commit/c69e8f094c5b668280ce5a3a3863fe9f42743392))
+* **jenkinsfile:** fixed bash script triple quotes bug ([f94e93c](https://github.com/MyPureCloud/genesys-webcomponents/commit/f94e93c57b70454ddfc0971eb3269d7009303251))
+* **jenkinsfile:** fixed bash script triple quotes bug ([3b79d30](https://github.com/MyPureCloud/genesys-webcomponents/commit/3b79d30851cdac1c4eea1b7049bd78086117fff4))
+* **jenkinsfile:** fixed git commit steps ([15f58f5](https://github.com/MyPureCloud/genesys-webcomponents/commit/15f58f585fb699300638001c84c6b0ab0fe0adc0))
+* **jenkins:** fix version sync ([813b26d](https://github.com/MyPureCloud/genesys-webcomponents/commit/813b26d02aa8f10639016e1672fe8f601e866268))
+* **react:** saving exact components dependency during release ([a187e3d](https://github.com/MyPureCloud/genesys-webcomponents/commit/a187e3d349caf3b06c60544d6cb37400b54505a1))
+* **version:** fixing broken version number ([e978b27](https://github.com/MyPureCloud/genesys-webcomponents/commit/e978b274f67e38f57015575a0034c7cb87dcd3e8))
+
 ### [3.81.7](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.4...v3.81.7) (2023-04-27)
 
 
