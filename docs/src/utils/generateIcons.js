@@ -482,7 +482,11 @@ const icons = [
     sectionName: 'Alerts',
     iconNames: ['alert-info', 'bell', 'bug', 'help', 'notification']
   },
-  { sectionName: 'Zoom', iconNames: ['zoom-in', 'zoom-out'] }
+  { sectionName: 'Zoom', iconNames: ['zoom-in', 'zoom-out'] },
+  {
+    sectionName: 'Font Awesome Icons',
+    iconNames: ['fa/binoculars-regular', 'custom/binoculars-slash-regular']
+  }
 ];
 
 function generateSection(sectionName, iconNames) {
