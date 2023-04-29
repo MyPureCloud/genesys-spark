@@ -70,7 +70,8 @@
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "בעמוד",
-    "itemsPerPage": "פריטים בעמוד"
+    "itemsPerPage": "פריטים בעמוד",
+    "rangeSelected": "רשימה נפתחת של פריטים בעמוד, {range} נבחר"
   },
   "gux-phone-input": {
     "AD": "אנדורה",
@@ -474,7 +475,8 @@
   },
   "gux-pagination-items-per-page": {
     "perPage": "בעמוד",
-    "itemsPerPage": "פריטים בעמוד"
+    "itemsPerPage": "פריטים בעמוד",
+    "rangeSelected": "רשימה נפתחת של פריטים בעמוד, {range} נבחר"
   },
   "gux-radial-loading": {
     "loading": "טוען"
