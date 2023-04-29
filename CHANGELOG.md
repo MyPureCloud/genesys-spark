@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.59.0](https://inindca///compare/v2.58.2...v2.59.0) (2023-04-29)
+
+
+### Features
+
+* **gux-icon:** adding binocular icons from v3 to v2 ([7b25b0f](https://inindca///commit/7b25b0f7e267d635d5cca22ad6b8180b12391ec2))
+
 ### [2.58.2](https://inindca///compare/v2.58.1...v2.58.2) (2023-02-22)
 
 
