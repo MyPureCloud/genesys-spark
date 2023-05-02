@@ -25,39 +25,57 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
     </mock:shadow-root>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="a">
       <!---->
-      Ant
+      <gux-truncate-beta>
+        Ant
+      </gux-truncate-beta>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
       <!---->
-      Bat
+      <gux-truncate-beta>
+        Bat
+      </gux-truncate-beta>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
       <!---->
-      Cat
+      <gux-truncate-beta>
+        Cat
+      </gux-truncate-beta>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="d">
       <!---->
-      Dog
+      <gux-truncate-beta>
+        Dog
+      </gux-truncate-beta>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="e">
       <!---->
-      Eel
+      <gux-truncate-beta>
+        Eel
+      </gux-truncate-beta>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="f">
       <!---->
-      Frog
+      <gux-truncate-beta>
+        Frog
+      </gux-truncate-beta>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="g">
       <!---->
-      Goat
+      <gux-truncate-beta>
+        Goat
+      </gux-truncate-beta>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="h">
       <!---->
-      Horse
+      <gux-truncate-beta>
+        Horse
+      </gux-truncate-beta>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="i">
       <!---->
-      Ibis
+      <gux-truncate-beta>
+        Ibis
+      </gux-truncate-beta>
     </gux-option>
   </gux-listbox>
 </gux-dropdown>
@@ -89,22 +107,30 @@ exports[`gux-dropdown #render should render as expected with gux-option-icon 1`]
     <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="var(--gux-blue-60)" icon-name="user" id="gux-option-icon-i" role="option" value="leonardo">
       <!---->
       <gux-icon decorative="" icon-name="user" style="color: var(--gux-blue-60);"></gux-icon>
-      Leonardo
+      <gux-truncate-beta>
+        Leonardo
+      </gux-truncate-beta>
     </gux-option-icon>
     <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#8452cf" icon-name="user" id="gux-option-icon-i" role="option" value="donatello">
       <!---->
       <gux-icon decorative="" icon-name="user" style="color: #8452cf;"></gux-icon>
-      Donatello
+      <gux-truncate-beta>
+        Donatello
+      </gux-truncate-beta>
     </gux-option-icon>
     <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="rgb(234, 11, 11)" icon-name="user" id="gux-option-icon-i" role="option" value="raphael">
       <!---->
       <gux-icon decorative="" icon-name="user" style="color: rgb(234, 11, 11);"></gux-icon>
-      Raphael
+      <gux-truncate-beta>
+        Raphael
+      </gux-truncate-beta>
     </gux-option-icon>
     <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#e08915" icon-name="user" icon-sr-text="Screenreader information about the icon goes here, if needed" id="gux-option-icon-i" role="option" value="michelangelo">
       <!---->
       <gux-icon icon-name="user" screenreader-text="Screenreader information about the icon goes here, if needed" style="color: #e08915;"></gux-icon>
-      Michelangelo
+      <gux-truncate-beta>
+        Michelangelo
+      </gux-truncate-beta>
     </gux-option-icon>
   </gux-listbox>
 </gux-dropdown>

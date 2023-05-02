@@ -11,9 +11,9 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
-                    <span>
+                    <gux-truncate-beta>
                       25
-                    </span>
+                    </gux-truncate-beta>
                   </div>
                 </div>
                 <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -30,19 +30,27 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
           </mock:shadow-root>
           <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
             <!---->
-            25
+            <gux-truncate-beta>
+              25
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            50
+            <gux-truncate-beta>
+              50
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            75
+            <gux-truncate-beta>
+              75
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            100
+            <gux-truncate-beta>
+              100
+            </gux-truncate-beta>
           </gux-option>
         </gux-listbox>
       </gux-dropdown>
@@ -65,9 +73,9 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
-                    <span>
+                    <gux-truncate-beta>
                       50
-                    </span>
+                    </gux-truncate-beta>
                   </div>
                 </div>
                 <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -84,19 +92,27 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
           </mock:shadow-root>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            25
+            <gux-truncate-beta>
+              25
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
             <!---->
-            50
+            <gux-truncate-beta>
+              50
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            75
+            <gux-truncate-beta>
+              75
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            100
+            <gux-truncate-beta>
+              100
+            </gux-truncate-beta>
           </gux-option>
         </gux-listbox>
       </gux-dropdown>
@@ -119,9 +135,9 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
-                    <span>
+                    <gux-truncate-beta>
                       75
-                    </span>
+                    </gux-truncate-beta>
                   </div>
                 </div>
                 <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -138,19 +154,27 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
           </mock:shadow-root>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            25
+            <gux-truncate-beta>
+              25
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            50
+            <gux-truncate-beta>
+              50
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
             <!---->
-            75
+            <gux-truncate-beta>
+              75
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            100
+            <gux-truncate-beta>
+              100
+            </gux-truncate-beta>
           </gux-option>
         </gux-listbox>
       </gux-dropdown>
@@ -173,9 +197,9 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
-                    <span>
+                    <gux-truncate-beta>
                       100
-                    </span>
+                    </gux-truncate-beta>
                   </div>
                 </div>
                 <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
@@ -192,19 +216,27 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
           </mock:shadow-root>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            25
+            <gux-truncate-beta>
+              25
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            50
+            <gux-truncate-beta>
+              50
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
             <!---->
-            75
+            <gux-truncate-beta>
+              75
+            </gux-truncate-beta>
           </gux-option>
           <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
             <!---->
-            100
+            <gux-truncate-beta>
+              100
+            </gux-truncate-beta>
           </gux-option>
         </gux-listbox>
       </gux-dropdown>

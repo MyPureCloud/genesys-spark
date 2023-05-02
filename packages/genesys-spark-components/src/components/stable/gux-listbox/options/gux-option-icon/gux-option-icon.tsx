@@ -1,4 +1,13 @@
-import { Component, Element, h, Host, JSX, Listen, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  JSX,
+  Listen,
+  Prop,
+  Watch
+} from '@stencil/core';
 
 import { randomHTMLId } from '../../../../../utils/dom/random-html-id';
 
@@ -12,6 +21,7 @@ import { randomHTMLId } from '../../../../../utils/dom/random-html-id';
   shadow: false
 })
 export class GuxOptionIcon {
+  private truncateElement: HTMLGuxTruncateBetaElement;
   @Element()
   root: HTMLElement;
 
@@ -50,6 +60,14 @@ export class GuxOptionIcon {
   @Listen('mouseleave')
   onMouseleave() {
     this.hovered = false;
+  }
+  @Watch('active')
+  handleActive(active: boolean) {
+    if (active) {
+      void this.truncateElement?.setShowTooltip();
+    } else {
+      void this.truncateElement?.setHideTooltip();
+    }
   }
 
   componentWillLoad(): void {
@@ -91,7 +109,9 @@ export class GuxOptionIcon {
           icon-name={this.iconName}
           style={iconStyle}
         ></gux-icon>
-        <slot />
+        <gux-truncate-beta ref={el => (this.truncateElement = el)}>
+          <slot />
+        </gux-truncate-beta>
       </Host>
     ) as JSX.Element;
   }

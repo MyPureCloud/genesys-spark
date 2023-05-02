@@ -31,6 +31,20 @@
 |      | text        |
 
 
+## Dependencies
+
+### Depends on
+
+- [gux-truncate-beta](../../../beta/gux-truncate)
+
+### Graph
+```mermaid
+graph TD;
+  gux-option-multi --> gux-truncate-beta
+  gux-truncate-beta --> gux-tooltip
+  style gux-option-multi fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

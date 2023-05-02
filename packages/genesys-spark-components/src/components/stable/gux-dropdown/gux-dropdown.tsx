@@ -51,6 +51,7 @@ export class GuxDropdown {
   private fieldButtonElement: HTMLElement;
   private filterElement: HTMLInputElement;
   private listboxElement: HTMLGuxListboxElement;
+  private truncateElement: HTMLGuxTruncateBetaElement;
 
   @Element()
   private root: HTMLGuxDropdownElement;
@@ -236,6 +237,13 @@ export class GuxDropdown {
       this.listboxElement.filter = this.filter;
     }
   }
+  private showTooltip(): void {
+    void this.truncateElement?.setShowTooltip();
+  }
+
+  private hideTooltip(): void {
+    void this.truncateElement?.setHideTooltip();
+  }
 
   private validateValue(
     newValue: string,
@@ -406,7 +414,11 @@ export class GuxDropdown {
     const tag = item.tagName.toLowerCase() as ValidOptionTag;
     switch (tag) {
       case 'gux-option':
-        return (<span>{item.textContent}</span>) as JSX.Element;
+        return (
+          <gux-truncate-beta ref={el => (this.truncateElement = el)}>
+            {item.textContent}
+          </gux-truncate-beta>
+        ) as JSX.Element;
       case 'gux-option-icon':
         return this.renderIconOption(item as HTMLGuxOptionIconElement);
       default:
@@ -428,7 +440,9 @@ export class GuxDropdown {
           style={iconStyle}
           decorative
         ></gux-icon>
-        {iconOption.textContent}
+        <gux-truncate-beta ref={el => (this.truncateElement = el)}>
+          {iconOption.textContent}
+        </gux-truncate-beta>
       </span>
     ) as JSX.Element;
   }
@@ -490,6 +504,8 @@ export class GuxDropdown {
           class="gux-field gux-field-button"
           disabled={calculateInputDisabledState(this.root)}
           onClick={this.fieldButtonClick.bind(this)}
+          onFocusin={this.showTooltip.bind(this)}
+          onFocusout={this.hideTooltip.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
           aria-haspopup="listbox"
           aria-expanded={this.expanded.toString()}

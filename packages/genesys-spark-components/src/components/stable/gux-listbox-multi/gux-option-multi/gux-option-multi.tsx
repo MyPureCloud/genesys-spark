@@ -24,6 +24,7 @@ import translationResources from './i18n/en.json';
   tag: 'gux-option-multi'
 })
 export class GuxOptionMulti {
+  private truncateElement: HTMLGuxTruncateBetaElement;
   private i18n: GetI18nValue;
 
   @Element()
@@ -72,7 +73,14 @@ export class GuxOptionMulti {
       this.guxremovecustomoption.emit();
     }
   }
-
+  @Watch('active')
+  handleActive(active: boolean) {
+    if (active) {
+      void this.truncateElement?.setShowTooltip();
+    } else {
+      void this.truncateElement?.setHideTooltip();
+    }
+  }
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.root.id = this.root.id || randomHTMLId('gux-option-multi');
@@ -105,11 +113,16 @@ export class GuxOptionMulti {
         aria-selected={this.selected.toString()}
         aria-disabled={this.disabled.toString()}
       >
+        <span class="gux-checkbox-container"></span>
         {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text. 
         This attribute is required because we need to get the slotted text and exclude the screen reader text. */}
-        <div gux-slot-container class="gux-option">
+        <gux-truncate-beta
+          gux-slot-container
+          ref={el => (this.truncateElement = el)}
+        >
           <slot />
-        </div>
+        </gux-truncate-beta>
+
         {this.renderCustomOptionInstructions()}
       </Host>
     ) as JSX.Element;

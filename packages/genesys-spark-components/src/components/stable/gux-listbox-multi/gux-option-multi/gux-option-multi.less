@@ -15,7 +15,7 @@ gux-option-multi {
   word-wrap: break-word;
   cursor: pointer;
 
-  .gux-option::before {
+  .gux-checkbox-container::before {
     position: relative;
     top: 2px;
     display: inline-block;
@@ -35,7 +35,7 @@ gux-option-multi {
   }
 
   &.gux-selected {
-    .gux-option::before {
+    .gux-checkbox-container::before {
       background-image: @gux-icon-checkbox-checked;
     }
   }
@@ -46,13 +46,13 @@ gux-option-multi {
     background: @gux-blue-60;
 
     &.gux-selected {
-      .gux-option::before {
+      .gux-checkbox-container::before {
         background-image: @gux-icon-checkbox-checked-hover;
       }
     }
 
     &:not(.gux-selected) {
-      .gux-option::before {
+      .gux-checkbox-container::before {
         background-image: @gux-icon-checkbox-unchecked-hover;
       }
     }

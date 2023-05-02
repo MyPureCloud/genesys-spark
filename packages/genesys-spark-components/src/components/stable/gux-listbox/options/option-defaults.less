@@ -4,7 +4,7 @@
 .gux-option-defaults() {
   box-sizing: border-box;
   display: flex;
-  min-height: 32px;
+  height: 32px;
   padding: 6px @gux-spacing-xs;
   color: @gux-black-50;
   word-wrap: break-word;
@@ -28,5 +28,11 @@
 
   &.gux-filtered {
     display: none;
+  }
+
+  .gux-slot-container {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

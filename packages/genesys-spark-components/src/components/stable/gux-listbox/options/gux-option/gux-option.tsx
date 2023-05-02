@@ -1,4 +1,13 @@
-import { Component, Element, h, Host, JSX, Listen, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  JSX,
+  Listen,
+  Prop,
+  Watch
+} from '@stencil/core';
 
 import { randomHTMLId } from '../../../../../utils/dom/random-html-id';
 
@@ -12,6 +21,7 @@ import { randomHTMLId } from '../../../../../utils/dom/random-html-id';
   shadow: false
 })
 export class GuxOption {
+  private truncateElement: HTMLGuxTruncateBetaElement;
   @Element()
   root: HTMLElement;
 
@@ -43,6 +53,15 @@ export class GuxOption {
     this.hovered = false;
   }
 
+  @Watch('active')
+  handleActive(active: boolean) {
+    if (active) {
+      void this.truncateElement?.setShowTooltip();
+    } else {
+      void this.truncateElement?.setHideTooltip();
+    }
+  }
+
   componentWillLoad(): void {
     this.root.id = this.root.id || randomHTMLId('gux-option');
   }
@@ -69,7 +88,9 @@ export class GuxOption {
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
       >
-        <slot />
+        <gux-truncate-beta ref={el => (this.truncateElement = el)}>
+          <slot />
+        </gux-truncate-beta>
       </Host>
     ) as JSX.Element;
   }

@@ -46,7 +46,11 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [gux-dropdown](../../stable/gux-dropdown)
  - [gux-notification-toast](../../stable/gux-notification-toast)
+ - [gux-option](../../stable/gux-listbox/options/gux-option)
+ - [gux-option-icon](../../stable/gux-listbox/options/gux-option-icon)
+ - [gux-option-multi](../../stable/gux-listbox-multi/gux-option-multi)
  - [gux-simple-toast](../../stable/gux-simple-toast)
 
 ### Depends on
@@ -57,7 +61,11 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-truncate-beta --> gux-tooltip
+  gux-dropdown --> gux-truncate-beta
   gux-notification-toast --> gux-truncate-beta
+  gux-option --> gux-truncate-beta
+  gux-option-icon --> gux-truncate-beta
+  gux-option-multi --> gux-truncate-beta
   gux-simple-toast --> gux-truncate-beta
   style gux-truncate-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -30,9 +30,15 @@
  - [gux-pagination-items-per-page-beta](../../../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
  - [gux-phone-input-beta](../../../../beta/gux-phone-input)
 
+### Depends on
+
+- [gux-truncate-beta](../../../../beta/gux-truncate)
+
 ### Graph
 ```mermaid
 graph TD;
+  gux-option --> gux-truncate-beta
+  gux-truncate-beta --> gux-tooltip
   gux-pagination-items-per-page --> gux-option
   gux-pagination-items-per-page-beta --> gux-option
   gux-phone-input-beta --> gux-option
