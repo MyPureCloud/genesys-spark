@@ -38,9 +38,18 @@ gux-table-beta {
 
     tr[data-row-id] th,
     tr[data-row-id] td {
-      width: 16px;
       padding-right: @gux-spacing-xs;
       padding-left: @gux-spacing-small;
+    }
+
+    // This is a fallback as the :has selector is currently not supported by firefox. To be removed once released: COMUI-1652
+    tr[data-row-id] th:first-child,
+    tr[data-row-id] td:first-child {
+      width: 16px;
+    }
+
+    th:has(gux-all-row-select) {
+      width: 16px;
     }
 
     th:last-child,
