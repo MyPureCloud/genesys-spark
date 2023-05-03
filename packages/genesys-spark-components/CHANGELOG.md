@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.83.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.82.1...v3.83.0) (2023-05-03)
+
+
+### Features
+
+* **button:** allow list to exceed width of button ([4b887b5](https://github.com/MyPureCloud/genesys-webcomponents/commit/4b887b5b959c41c27c033a7c22719968b27687f4))
+
+
+### Bug Fixes
+
+* **gux-dropdown:** truncate long text and show tooltip ([#1237](https://github.com/MyPureCloud/genesys-webcomponents/issues/1237)) ([4a6db34](https://github.com/MyPureCloud/genesys-webcomponents/commit/4a6db34174df89d8ab22906e3c3dfb90fced1ed3))
+* **table:** set fixed width on row selection column ([7850428](https://github.com/MyPureCloud/genesys-webcomponents/commit/7850428f170b0385fe64899d4a762ebd7ca0dbab))
+
 ### [3.82.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.82.0...v3.82.1) (2023-04-28)
 
 ## [3.82.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.81.4...v3.82.0) (2023-04-28)
