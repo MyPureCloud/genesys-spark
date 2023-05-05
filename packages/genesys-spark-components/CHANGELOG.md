@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.84.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.83.0...v3.84.0) (2023-05-05)
+
+
+### Features
+
+* **gux-form-field-dropdown:** improve label accessibility ([#1219](https://github.com/MyPureCloud/genesys-webcomponents/issues/1219)) ([bfa9131](https://github.com/MyPureCloud/genesys-webcomponents/commit/bfa9131fbec64737d596c90259a2dc29ccbef523))
+
 ## [3.83.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.82.1...v3.83.0) (2023-05-03)
 
 
