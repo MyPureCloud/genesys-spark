@@ -426,6 +426,9 @@
     "noSelection": "Select...",
     "dropdown": "Dropdown"
   },
+  "gux-form-field-dropdown": {
+    "required": "Required"
+  },
   "gux-form-field-number": {
     "increment": "Increment",
     "decrement": "Decrement"

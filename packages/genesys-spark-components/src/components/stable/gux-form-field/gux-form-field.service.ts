@@ -36,8 +36,6 @@ export function validateFormIds(
     | HTMLInputElement
     | HTMLSelectElement
     | HTMLTextAreaElement
-    | HTMLGuxListboxElement
-    | HTMLGuxListboxMultiElement
     | HTMLGuxTimePickerBetaElement
     | HTMLGuxPhoneInputBetaElement
 ): void {
@@ -122,23 +120,53 @@ export function validateFormIds(
   }
 }
 
-export function setSlotAriaDescribedby(
+export function setSlotAriaAttribute(
   root: HTMLElement,
-  input: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement,
+  attribute: 'aria-labelledby' | 'aria-describedby',
+  input:
+    | HTMLGuxListboxElement
+    | HTMLGuxListboxMultiElement
+    | HTMLInputElement
+    | HTMLSelectElement
+    | HTMLTextAreaElement
+    | HTMLGuxListboxElement
+    | HTMLGuxListboxMultiElement,
   slotName: string
 ) {
-  const slottedElement = root.querySelector(`[slot=${slotName}]`);
-  const randomId = randomHTMLId(`gux-${slotName}`);
-  const describedByIds =
-    input
-      .getAttribute('aria-describedby')
-      ?.split(' ')
-      .filter(id => !id.startsWith(`gux-${slotName}`)) || [];
-  slottedElement.setAttribute('id', randomId);
-  describedByIds?.push(randomId);
+  if (hasSlot(root, slotName)) {
+    const slottedElement = root.querySelector(`[slot=${slotName}]`);
+    const randomId = randomHTMLId(`gux-${slotName}`);
+    const ariaAttributeIds =
+      input
+        .getAttribute(attribute)
+        ?.split(' ')
+        .filter(id => !id.startsWith(`gux-${slotName}`)) || [];
+    slottedElement.setAttribute('id', randomId);
+    ariaAttributeIds?.push(randomId);
 
-  describedByIds &&
-    input.setAttribute('aria-describedby', describedByIds.join(' '));
+    ariaAttributeIds &&
+      input.setAttribute(attribute, ariaAttributeIds.join(' '));
+  }
+}
+export function setSlotAriaLabelledby(
+  root: HTMLElement,
+  input: HTMLGuxListboxElement | HTMLGuxListboxMultiElement,
+  slotName: string
+) {
+  setSlotAriaAttribute(root, 'aria-labelledby', input, slotName);
+}
+
+export function setSlotAriaDescribedby(
+  root: HTMLElement,
+  input:
+    | HTMLInputElement
+    | HTMLSelectElement
+    | HTMLTextAreaElement
+    | HTMLGuxListboxElement
+    | HTMLGuxListboxMultiElement,
+  slotName: string
+) {
+  setSlotAriaAttribute(root, 'aria-describedby', input, slotName);
 }
 
 function hasLabelSlot(root: HTMLElement): boolean {

@@ -3,10 +3,13 @@
 exports[`gux-form-field-select multi select dropdown #render help multi select should render component as expected 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+        <gux-screen-reader-beta>
+          This is a help message
+        </gux-screen-reader-beta>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -23,7 +26,7 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
@@ -45,7 +48,7 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
         </gux-popup-beta>
       </div>
     </mock:shadow-root>
-    <gux-listbox-multi aria-describedby="gux-form-field-help-i" aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-describedby="gux-help-i" aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
         <slot name="create"></slot>
@@ -73,10 +76,10 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
-  <span id="gux-form-field-help-i" slot="help">
+  <span id="gux-help-i" slot="help">
     This is a help message
   </span>
 </gux-form-field-dropdown>
@@ -85,10 +88,13 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
 exports[`gux-form-field-select multi select dropdown #render help should render component as expected 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+        <gux-screen-reader-beta>
+          This is a help message
+        </gux-screen-reader-beta>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -105,7 +111,7 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
@@ -125,7 +131,7 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
         </div>
       </gux-popup-beta>
     </mock:shadow-root>
-    <gux-listbox aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox aria-describedby="gux-help-i" aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
       </mock:shadow-root>
@@ -149,10 +155,10 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
-  <span id="gux-form-field-help-i" slot="help">
+  <span id="gux-help-i" slot="help">
     This is a help message
   </span>
 </gux-form-field-dropdown>
@@ -161,10 +167,10 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
 exports[`gux-form-field-select multi select dropdown #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -181,7 +187,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
@@ -203,7 +209,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
         </gux-popup-beta>
       </div>
     </mock:shadow-root>
-    <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
         <slot name="create"></slot>
@@ -231,7 +237,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -240,10 +246,10 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
 exports[`gux-form-field-select multi select dropdown #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-disabled gux-input">
           <slot></slot>
@@ -260,7 +266,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown-multi-beta disabled="">
     <mock:shadow-root>
@@ -282,7 +288,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
         </gux-popup-beta>
       </div>
     </mock:shadow-root>
-    <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
         <slot name="create"></slot>
@@ -310,7 +316,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -319,10 +325,13 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
 exports[`gux-form-field-select multi select dropdown #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label gux-required">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label gux-required">
         <slot name="label"></slot>
-      </div>
+        <gux-screen-reader-beta>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -339,7 +348,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown-multi-beta required="">
     <mock:shadow-root>
@@ -361,7 +370,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
         </gux-popup-beta>
       </div>
     </mock:shadow-root>
-    <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
         <slot name="create"></slot>
@@ -389,7 +398,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -398,10 +407,10 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
 exports[`gux-form-field-select multi select dropdown #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -418,7 +427,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
@@ -440,7 +449,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
         </gux-popup-beta>
       </div>
     </mock:shadow-root>
-    <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
         <slot name="create"></slot>
@@ -468,7 +477,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -477,10 +486,10 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 exports[`gux-form-field-select multi select dropdown #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-dropdown label-position="above">
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -497,7 +506,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
@@ -519,7 +528,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
         </gux-popup-beta>
       </div>
     </mock:shadow-root>
-    <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
         <slot name="create"></slot>
@@ -547,7 +556,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -556,10 +565,10 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 exports[`gux-form-field-select multi select dropdown #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-dropdown label-position="beside">
   <mock:shadow-root>
-    <div class="gux-beside gux-form-field-container">
-      <div class="gux-beside gux-form-field-label">
+    <fieldset class="gux-beside gux-form-field-fieldset-container">
+      <legend class="gux-beside gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -576,7 +585,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
@@ -598,7 +607,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
         </gux-popup-beta>
       </div>
     </mock:shadow-root>
-    <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
         <slot name="create"></slot>
@@ -626,7 +635,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -635,10 +644,10 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 exports[`gux-form-field-select multi select dropdown #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-dropdown label-position="screenreader">
   <mock:shadow-root>
-    <div class="gux-form-field-container gux-screenreader">
-      <div class="gux-form-field-label gux-screenreader">
+    <fieldset class="gux-form-field-fieldset-container gux-screenreader">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -655,7 +664,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
@@ -677,7 +686,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
         </gux-popup-beta>
       </div>
     </mock:shadow-root>
-    <gux-listbox-multi aria-multiselectable="true" id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
         <slot name="create"></slot>
@@ -705,7 +714,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -714,10 +723,10 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 exports[`gux-form-field-select single select dropdown #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -734,7 +743,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
@@ -754,7 +763,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         </div>
       </gux-popup-beta>
     </mock:shadow-root>
-    <gux-listbox id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
       </mock:shadow-root>
@@ -778,7 +787,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -787,10 +796,10 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
 exports[`gux-form-field-select single select dropdown #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-disabled gux-input">
           <slot></slot>
@@ -807,7 +816,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown disabled="">
     <mock:shadow-root>
@@ -827,7 +836,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         </div>
       </gux-popup-beta>
     </mock:shadow-root>
-    <gux-listbox id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
       </mock:shadow-root>
@@ -851,7 +860,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -860,10 +869,13 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
 exports[`gux-form-field-select single select dropdown #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label gux-required">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label gux-required">
         <slot name="label"></slot>
-      </div>
+        <gux-screen-reader-beta>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -880,7 +892,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown required="">
     <mock:shadow-root>
@@ -900,7 +912,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         </div>
       </gux-popup-beta>
     </mock:shadow-root>
-    <gux-listbox id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
       </mock:shadow-root>
@@ -924,7 +936,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -933,10 +945,10 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
 exports[`gux-form-field-select single select dropdown #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -953,7 +965,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
@@ -973,7 +985,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         </div>
       </gux-popup-beta>
     </mock:shadow-root>
-    <gux-listbox id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
       </mock:shadow-root>
@@ -997,7 +1009,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -1006,10 +1018,10 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 exports[`gux-form-field-select single select dropdown #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-dropdown label-position="above">
   <mock:shadow-root>
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-above gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -1026,7 +1038,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
@@ -1046,7 +1058,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         </div>
       </gux-popup-beta>
     </mock:shadow-root>
-    <gux-listbox id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
       </mock:shadow-root>
@@ -1070,7 +1082,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -1079,10 +1091,10 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 exports[`gux-form-field-select single select dropdown #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-dropdown label-position="beside">
   <mock:shadow-root>
-    <div class="gux-beside gux-form-field-container">
-      <div class="gux-beside gux-form-field-label">
+    <fieldset class="gux-beside gux-form-field-fieldset-container">
+      <legend class="gux-beside gux-form-field-legend-label">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -1099,7 +1111,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
@@ -1119,7 +1131,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         </div>
       </gux-popup-beta>
     </mock:shadow-root>
-    <gux-listbox id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
       </mock:shadow-root>
@@ -1143,7 +1155,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>
@@ -1152,10 +1164,10 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 exports[`gux-form-field-select single select dropdown #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-dropdown label-position="screenreader">
   <mock:shadow-root>
-    <div class="gux-form-field-container gux-screenreader">
-      <div class="gux-form-field-label gux-screenreader">
+    <fieldset class="gux-form-field-fieldset-container gux-screenreader">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
-      </div>
+      </legend>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -1172,7 +1184,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           </div>
         </div>
       </div>
-    </div>
+    </fieldset>
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
@@ -1192,7 +1204,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         </div>
       </gux-popup-beta>
     </mock:shadow-root>
-    <gux-listbox id="gux-form-field-input-i" role="listbox" tabindex="0">
+    <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
         <slot></slot>
       </mock:shadow-root>
@@ -1216,7 +1228,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
-  <label for="gux-form-field-input-i" slot="label">
+  <label id="gux-label-i" slot="label">
     Default
   </label>
 </gux-form-field-dropdown>

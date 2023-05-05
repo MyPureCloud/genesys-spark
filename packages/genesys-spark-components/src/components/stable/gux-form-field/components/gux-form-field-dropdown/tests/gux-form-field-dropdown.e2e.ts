@@ -43,7 +43,7 @@ describe('gux-form-field-dropdown', () => {
         const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-form-field-dropdown');
         const elementShadowDom = await element.find(
-          'pierce/.gux-form-field-container'
+          'pierce/.gux-form-field-fieldset-container'
         );
 
         expect(element.outerHTML).toMatchSnapshot();
@@ -82,7 +82,7 @@ describe('gux-form-field-dropdown', () => {
             const page = await newNonrandomE2EPage({ html });
             const element = await page.find('gux-form-field-dropdown');
             const elementShadowDom = await element.find(
-              'pierce/.gux-form-field-container'
+              'pierce/.gux-form-field-fieldset-container'
             );
 
             expect(element.outerHTML).toMatchSnapshot();
@@ -129,7 +129,7 @@ describe('gux-form-field-dropdown', () => {
             const page = await newNonrandomE2EPage({ html });
             const element = await page.find('gux-form-field-dropdown');
             const elementShadowDom = await element.find(
-              'pierce/.gux-form-field-container'
+              'pierce/.gux-form-field-fieldset-container'
             );
 
             expect(element.outerHTML).toMatchSnapshot();
@@ -183,7 +183,7 @@ describe('gux-form-field-dropdown', () => {
             const page = await newNonrandomE2EPage({ html });
             const element = await page.find('gux-form-field-dropdown');
             const elementShadowDom = await element.find(
-              'pierce/.gux-form-field-container'
+              'pierce/.gux-form-field-fieldset-container'
             );
 
             expect(element.outerHTML).toMatchSnapshot();
@@ -230,7 +230,7 @@ describe('gux-form-field-dropdown', () => {
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-form-field-dropdown');
           const elementShadowDom = await element.find(
-            'pierce/.gux-form-field-container'
+            'pierce/.gux-form-field-fieldset-container'
           );
 
           expect(element.outerHTML).toMatchSnapshot();

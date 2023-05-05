@@ -1,5 +1,7 @@
 import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
+import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
+import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
 import { OnMutation } from '@utils/decorator/on-mutation';
@@ -9,16 +11,19 @@ import { hasSlot } from '@utils/dom/has-slot';
 import {
   GuxFormFieldHelp,
   GuxFormFieldError,
-  GuxFormFieldLabel,
-  GuxFormFieldContainer
+  GuxFormFieldLegendLabel,
+  GuxFormFieldFieldsetContainer
 } from '../../functional-components/functional-components';
+import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
   getComputedLabelPosition,
-  validateFormIds
+  setSlotAriaLabelledby,
+  setSlotAriaDescribedby
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
+import componentResources from './i18n/en.json';
 
 /**
  * @slot input - Required slot for input tag
@@ -32,6 +37,7 @@ import { trackComponent } from '@utils/tracking/usage';
   shadow: true
 })
 export class GuxFormFieldDropdown {
+  private getI18nValue: GetI18nValue;
   private listboxElement: HTMLGuxListboxElement | HTMLGuxListboxMultiElement;
   private dropdownElement:
     | HTMLGuxDropdownElement
@@ -77,7 +83,12 @@ export class GuxFormFieldDropdown {
     this.hasHelp = hasSlot(this.root, 'help');
   }
 
-  componentWillLoad(): void {
+  async componentWillLoad(): Promise<void> {
+    this.getI18nValue = await buildI18nForComponent(
+      this.root,
+      componentResources as ILocalizedComponentResources
+    );
+
     this.setInput();
     this.setLabel();
 
@@ -95,16 +106,37 @@ export class GuxFormFieldDropdown {
       this.requiredObserver.disconnect();
     }
   }
-
+  private renderScreenReaderText(
+    text: string,
+    condition: boolean = false
+  ): JSX.Element {
+    if (condition) {
+      return (
+        <gux-screen-reader-beta>{text}</gux-screen-reader-beta>
+      ) as JSX.Element;
+    }
+  }
   render(): JSX.Element {
     return (
-      <GuxFormFieldContainer labelPosition={this.computedLabelPosition}>
-        <GuxFormFieldLabel
+      <GuxFormFieldFieldsetContainer labelPosition={this.computedLabelPosition}>
+        <GuxFormFieldLegendLabel
           position={this.computedLabelPosition}
           required={this.required}
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
-        </GuxFormFieldLabel>
+          {this.renderScreenReaderText(
+            this.getI18nValue('required'),
+            this.required
+          )}
+          {this.renderScreenReaderText(
+            getSlotTextContent(this.root, 'error'),
+            this.hasError
+          )}
+          {this.renderScreenReaderText(
+            getSlotTextContent(this.root, 'help'),
+            this.hasHelp
+          )}
+        </GuxFormFieldLegendLabel>
         <div class="gux-input-and-error-container">
           <div
             class={{
@@ -122,7 +154,7 @@ export class GuxFormFieldDropdown {
             <slot name="help" />
           </GuxFormFieldHelp>
         </div>
-      </GuxFormFieldContainer>
+      </GuxFormFieldFieldsetContainer>
     ) as JSX.Element;
   }
 
@@ -160,7 +192,9 @@ export class GuxFormFieldDropdown {
       }
     );
 
-    validateFormIds(this.root, this.listboxElement);
+    setSlotAriaLabelledby(this.root, this.listboxElement, 'label');
+    setSlotAriaDescribedby(this.root, this.listboxElement, 'error');
+    setSlotAriaDescribedby(this.root, this.listboxElement, 'help');
   }
 
   private setLabel(): void {
