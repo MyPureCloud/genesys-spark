@@ -4,7 +4,7 @@ export function getListOptions(
   list: HTMLGuxListboxElement
 ): ListboxOptionElement[] {
   return (Array.from(list.children) as ListboxOptionElement[]).filter(item => {
-    return item.value;
+    return item.value || item.value === '';
   });
 }
 

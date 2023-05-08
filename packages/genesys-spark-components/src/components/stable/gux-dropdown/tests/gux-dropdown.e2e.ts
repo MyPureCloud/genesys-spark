@@ -8,6 +8,8 @@ testWithOptionType(
 <gux-option value="b">Bear</gux-option>
 <gux-option value="be">Bee</gux-option>
 <gux-option value="c">Cat</gux-option>
+<gux-option value="">None</gux-option>
+
 `
 );
 
@@ -18,6 +20,7 @@ testWithOptionType(
 <gux-option-icon icon-name="user" value="b">Bear</gux-option-icon>
 <gux-option-icon icon-name="user" value="be">Bee</gux-option-icon>
 <gux-option-icon icon-name="user" value="c">Cat</gux-option-icon>
+<gux-option-icon icon-name="user" value="">None</gux-option-icon>
 `
 );
 
@@ -56,7 +59,7 @@ function testWithOptionType(optionType: string, listboxContent: string) {
         await openWithClick(page);
 
         let visibleItems = await unfilteredOptions(page, optionType);
-        expect(visibleItems.length).toBe(4);
+        expect(visibleItems.length).toBe(5);
 
         await page.keyboard.press('b');
         await page.waitForChanges();
@@ -71,13 +74,13 @@ function testWithOptionType(optionType: string, listboxContent: string) {
         await openWithClick(page);
 
         let visibleItems = await unfilteredOptions(page, optionType);
-        expect(visibleItems.length).toBe(4);
+        expect(visibleItems.length).toBe(5);
 
         await page.keyboard.press('b');
         await page.waitForChanges();
 
         visibleItems = await unfilteredOptions(page, optionType);
-        expect(visibleItems.length).toBe(4);
+        expect(visibleItems.length).toBe(5);
         expect(visibleItems[0].textContent).toEqual('Ant');
       });
       // remove in V4 (COMUI-1369)
@@ -86,7 +89,7 @@ function testWithOptionType(optionType: string, listboxContent: string) {
         await openWithClick(page);
 
         let visibleItems = await unfilteredOptions(page, optionType);
-        expect(visibleItems.length).toBe(4);
+        expect(visibleItems.length).toBe(5);
 
         await page.keyboard.press('b');
         await page.waitForChanges();
@@ -174,6 +177,34 @@ function testWithOptionType(optionType: string, listboxContent: string) {
 
         expect(selectedItem.length).toBe(1);
         expect(selectedItem[0].outerHTML).toContain(listboxItems[0].outerHTML);
+      });
+      it('selects a listbox item with a value of an empty string', async () => {
+        const { page } = await render(nonFilterableDropdown(listboxContent));
+        const dropdownSelectedText = await page.find(`pierce/.gux-field`);
+        expect(dropdownSelectedText.outerHTML).toContain('Select...');
+        await openWithKeyboard(page);
+
+        let listboxItems = await page.findAll(
+          `gux-dropdown gux-listbox ${optionType}`
+        );
+        let selectedItem = await page.findAll('.gux-selected');
+        expect(selectedItem.length).toBe(0);
+
+        await page.keyboard.press('ArrowDown');
+        await page.keyboard.press('ArrowDown');
+        await page.keyboard.press('ArrowDown');
+        await page.keyboard.press('ArrowDown');
+        await page.keyboard.press('Enter');
+        await expectDropdownToBeClosed(page);
+        await openWithKeyboard(page);
+
+        selectedItem = await page.findAll('.gux-selected');
+        listboxItems = await page.findAll(
+          `gux-dropdown gux-listbox ${optionType}`
+        );
+        expect(dropdownSelectedText.outerHTML).toContain('None');
+        expect(selectedItem.length).toBe(1);
+        expect(selectedItem[0].outerHTML).toContain(listboxItems[4].outerHTML);
       });
     });
   });
