@@ -22,6 +22,8 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 
 import tabsResources from '../i18n/en.json';
 
+const TAB_WIDTH = 160;
+
 @Component({
   styleUrl: 'gux-tab-advanced-list.less',
   tag: 'gux-tab-advanced-list',
@@ -423,42 +425,28 @@ export class GuxTabAdvancedList {
   }
 
   handleKeyboardScroll(direction: 'forward' | 'backward'): void {
-    const scrollableSection = this.root.querySelector(
-      '.gux-scrollable-section'
-    );
-    const currentTab =
-      this.root.querySelectorAll('gux-tab-advanced')[this.focused];
-
     if (direction === 'forward') {
       if (this.focused < this.tabTriggers.length - 1) {
-        writeTask(() => {
-          if (this.hasScrollbar) {
-            scrollableSection.scrollBy(currentTab.clientWidth, 0);
-          }
-        });
+        if (this.hasScrollbar) {
+          this.scrollRight();
+        }
         this.focusTab(this.focused + 1);
       } else {
-        writeTask(() => {
-          if (this.hasScrollbar) {
-            scrollableSection.scrollBy(-scrollableSection.scrollWidth, 0);
-          }
-        });
+        if (this.hasScrollbar) {
+          this.scrollToStart();
+        }
         this.focusTab(0);
       }
     } else if (direction === 'backward') {
       if (this.focused > 0) {
-        writeTask(() => {
-          if (this.hasScrollbar) {
-            scrollableSection.scrollBy(-currentTab.clientWidth, 0);
-          }
-        });
+        if (this.hasScrollbar) {
+          this.scrollLeft();
+        }
         this.focusTab(this.focused - 1);
       } else {
-        writeTask(() => {
-          if (this.hasScrollbar) {
-            scrollableSection.scrollBy(scrollableSection.scrollWidth, 0);
-          }
-        });
+        if (this.hasScrollbar) {
+          this.scrollToEnd();
+        }
         this.focusTab(this.tabTriggers.length - 1);
       }
     }
@@ -526,25 +514,33 @@ export class GuxTabAdvancedList {
 
   scrollLeft() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(-100, 0);
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(-TAB_WIDTH, 0);
     });
   }
 
   scrollRight() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(100, 0);
+      this.root.querySelector('.gux-scrollable-section').scrollBy(TAB_WIDTH, 0);
     });
   }
 
-  scrollUp() {
+  scrollToStart() {
+    const scrollableSection = this.root.querySelector(
+      '.gux-scrollable-section'
+    );
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(0, -100);
+      scrollableSection?.scrollBy(-scrollableSection?.scrollWidth, 0);
     });
   }
 
-  scrollDown() {
+  scrollToEnd() {
+    const scrollableSection = this.root.querySelector(
+      '.gux-scrollable-section'
+    );
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(0, 100);
+      scrollableSection.scrollBy(scrollableSection?.scrollWidth, 0);
     });
   }
 
@@ -583,9 +579,7 @@ export class GuxTabAdvancedList {
       </span>,
       <div class="gux-tab-container">
         <div class="action-button-container">
-          {this.hasScrollbar
-            ? this.renderScrollButton('scrollLeft')
-            : this.renderScrollButton('scrollUp')}
+          {this.renderScrollButton('scrollLeft')}
         </div>
 
         <div
@@ -599,9 +593,7 @@ export class GuxTabAdvancedList {
         </div>
 
         <div class="action-button-container">
-          {this.hasScrollbar
-            ? this.renderScrollButton('scrollRight')
-            : this.renderScrollButton('scrollDown')}
+          {this.renderScrollButton('scrollRight')}
 
           {this.showNewTabButton ? (
             <AddNewTabButton onClick={() => this.newTab.emit()} />
@@ -640,11 +632,6 @@ export class GuxTabAdvancedList {
       case 'scrollRight':
         this.scrollRight();
         break;
-      case 'scrollUp':
-        this.scrollUp();
-        break;
-      case 'scrollDown':
-        this.scrollDown();
     }
   }
 
@@ -654,10 +641,6 @@ export class GuxTabAdvancedList {
         return 'chevron-left';
       case 'scrollRight':
         return 'chevron-right';
-      case 'scrollUp':
-        return 'chevron-up';
-      case 'scrollDown':
-        return 'chevron-down';
     }
   }
 }

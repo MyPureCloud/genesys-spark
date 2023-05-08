@@ -17,6 +17,9 @@ import { OnMutation } from '../../../../utils/decorator/on-mutation';
 
 import tabsResources from '../i18n/en.json';
 
+const TAB_WIDTH = 160;
+const TAB_HEIGHT = 40;
+
 @Component({
   styleUrl: 'gux-tab-list.less',
   tag: 'gux-tab-list',
@@ -176,8 +179,8 @@ export class GuxTabList {
       if (this.focused < this.tabTriggers.length - 1) {
         writeTask(() => {
           this.hasHorizontalScrollbar
-            ? scrollableSection.scrollBy(currentTab.clientWidth, 0)
-            : scrollableSection.scrollBy(0, currentTab.clientHeight);
+            ? this.scrollRight(currentTab.clientWidth)
+            : this.scrollDown(currentTab.clientHeight);
         });
         this.focusTab(this.focused + 1);
       } else {
@@ -192,8 +195,8 @@ export class GuxTabList {
       if (this.focused > 0) {
         writeTask(() => {
           this.hasHorizontalScrollbar
-            ? scrollableSection.scrollBy(-currentTab.clientWidth, 0)
-            : scrollableSection.scrollBy(0, -currentTab.clientHeight);
+            ? this.scrollLeft(currentTab.clientWidth)
+            : this.scrollUp(currentTab.clientHeight);
         });
         this.focusTab(this.focused - 1);
       } else {
@@ -277,27 +280,29 @@ export class GuxTabList {
     }
   }
 
-  scrollLeft() {
+  scrollLeft(tabWidth: number) {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(-100, 0);
+      this.root.querySelector('.gux-scrollable-section').scrollBy(-tabWidth, 0);
     });
   }
 
-  scrollRight() {
+  scrollRight(tabWidth: number) {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(100, 0);
+      this.root.querySelector('.gux-scrollable-section').scrollBy(tabWidth, 0);
     });
   }
 
-  scrollUp() {
+  scrollUp(tabHeight: number) {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(0, -100);
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(0, -tabHeight);
     });
   }
 
-  scrollDown() {
+  scrollDown(tabHeight: number) {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(0, 100);
+      this.root.querySelector('.gux-scrollable-section').scrollBy(0, tabHeight);
     });
   }
 
@@ -359,16 +364,16 @@ export class GuxTabList {
   private getScrollDirection(direction: string): void {
     switch (direction) {
       case 'scrollLeft':
-        this.scrollLeft();
+        this.scrollLeft(TAB_WIDTH);
         break;
       case 'scrollRight':
-        this.scrollRight();
+        this.scrollRight(TAB_WIDTH);
         break;
       case 'scrollUp':
-        this.scrollUp();
+        this.scrollUp(TAB_HEIGHT);
         break;
       case 'scrollDown':
-        this.scrollDown();
+        this.scrollDown(TAB_HEIGHT);
     }
   }
 
