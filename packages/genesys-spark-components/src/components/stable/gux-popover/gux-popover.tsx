@@ -17,6 +17,7 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import { PopperPosition } from './gux-popover.types';
 import { getSlot } from '@utils/dom/get-slot';
+import { findElementById } from '@utils/dom/find-element-by-id';
 
 /**
  * @slot - popover content
@@ -81,7 +82,7 @@ export class GuxPopover {
   @OnClickOutside({ triggerEvents: 'mousedown' })
   checkForClickOutside(event: MouseEvent) {
     const clickPath = event.composedPath();
-    const forElement = document.getElementById(this.for);
+    const forElement = findElementById(this.root, this.for);
     const clickedForElement = clickPath.includes(forElement);
 
     if (
@@ -98,7 +99,7 @@ export class GuxPopover {
   }
 
   private runPopper(): void {
-    const forElement = document.getElementById(this.for);
+    const forElement = findElementById(this.root, this.for);
 
     if (!forElement) {
       console.error(
