@@ -426,6 +426,9 @@
     "noSelection": "Sélectionner...",
     "dropdown": "Liste déroulante"
   },
+  "gux-form-field-dropdown": {
+    "required": "Requis"
+  },
   "gux-form-field-number": {
     "increment": "Incrémenter",
     "decrement": "Décrémenter"

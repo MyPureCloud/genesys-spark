@@ -426,6 +426,9 @@
     "noSelection": "選擇...",
     "dropdown": "下拉式清單"
   },
+  "gux-form-field-dropdown": {
+    "required": "必需"
+  },
   "gux-form-field-number": {
     "increment": "增量",
     "decrement": "遞減"

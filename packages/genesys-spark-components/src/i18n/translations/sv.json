@@ -426,6 +426,9 @@
     "noSelection": "Välj...",
     "dropdown": "Listruta"
   },
+  "gux-form-field-dropdown": {
+    "required": "Obligatoriskt"
+  },
   "gux-form-field-number": {
     "increment": "Ökning",
     "decrement": "Minskning"
