@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.84.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.84.0...v3.84.1) (2023-05-09)
+
+
+### Bug Fixes
+
+* **gux-dropdown:** handle options with value set as empty string ([#1265](https://github.com/MyPureCloud/genesys-webcomponents/issues/1265)) ([d9b9557](https://github.com/MyPureCloud/genesys-webcomponents/commit/d9b95578c2db7a3a1803c5c5b43475a910106110))
+
 ## [3.84.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.83.0...v3.84.0) (2023-05-05)
 
 
