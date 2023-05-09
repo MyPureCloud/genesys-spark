@@ -426,6 +426,9 @@
     "noSelection": "선택...",
     "dropdown": "드롭다운"
   },
+  "gux-form-field-dropdown": {
+    "required": "필수"
+  },
   "gux-form-field-number": {
     "increment": "증가",
     "decrement": "감소"
