@@ -426,6 +426,9 @@
     "noSelection": "Valitse...",
     "dropdown": "Avattava valikko"
   },
+  "gux-form-field-dropdown": {
+    "required": "Pakollinen"
+  },
   "gux-form-field-number": {
     "increment": "Lisäys",
     "decrement": "Vähennys"
