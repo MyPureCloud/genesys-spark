@@ -33,7 +33,8 @@ import {
   clearInput,
   getComputedLabelPosition,
   hasContent,
-  validateFormIds
+  validateFormIds,
+  getSlottedInput
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 import componentResources from './i18n/en.json';
@@ -105,7 +106,6 @@ export class GuxFormFieldNumber {
       this.root,
       componentResources as ILocalizedComponentResources
     );
-
     this.setInput();
     this.setLabel();
 
@@ -184,7 +184,10 @@ export class GuxFormFieldNumber {
   }
 
   private setInput(): void {
-    this.input = this.root.querySelector('input[type="number"][slot="input"]');
+    this.input = getSlottedInput(
+      this.root,
+      'input[type="number"][slot="input"]'
+    );
 
     this.hasContent = hasContent(this.input);
 

@@ -17,7 +17,8 @@ import {
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
   getComputedLabelPosition,
-  validateFormIds
+  validateFormIds,
+  getSlottedInput
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 
@@ -125,7 +126,10 @@ export class GuxFormFieldColor {
   }
 
   private setInput(): void {
-    this.input = this.root.querySelector('input[type="color"][slot="input"]');
+    this.input = getSlottedInput(
+      this.root,
+      'input[type="color"][slot="input"]'
+    );
 
     preventBrowserValidationStyling(this.input);
 

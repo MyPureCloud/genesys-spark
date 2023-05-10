@@ -28,7 +28,8 @@ import {
   clearInput,
   hasContent,
   getComputedLabelPosition,
-  validateFormIds
+  validateFormIds,
+  getSlottedInput
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 
@@ -164,7 +165,10 @@ export class GuxFormFieldSearch {
   }
 
   private setInput(): void {
-    this.input = this.root.querySelector('input[type="search"][slot="input"]');
+    this.input = getSlottedInput(
+      this.root,
+      'input[type="search"][slot="input"]'
+    );
 
     this.hasContent = hasContent(this.input);
 
