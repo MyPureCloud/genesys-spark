@@ -426,6 +426,9 @@
     "noSelection": "選択する ...",
     "dropdown": "ドロップダウン"
   },
+  "gux-form-field-dropdown": {
+    "required": "必須"
+  },
   "gux-form-field-number": {
     "increment": "増加",
     "decrement": "減少"

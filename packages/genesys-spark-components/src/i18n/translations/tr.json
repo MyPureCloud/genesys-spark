@@ -426,6 +426,9 @@
     "noSelection": "Seç...",
     "dropdown": "Açılır liste"
   },
+  "gux-form-field-dropdown": {
+    "required": "Gerekli"
+  },
   "gux-form-field-number": {
     "increment": "Artım",
     "decrement": "Azalım"
