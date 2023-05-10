@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.84.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.84.1...v3.84.2) (2023-05-10)
+
+
+### Bug Fixes
+
+* **jenkins:** added deploy folder to gitignore ([a6f3db3](https://github.com/MyPureCloud/genesys-webcomponents/commit/a6f3db346cf66c4c865f0b3c10aab87df50c126e))
+
 ### [3.84.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.84.0...v3.84.1) (2023-05-09)
 
 
