@@ -93,17 +93,21 @@ export class GuxPopoverBeta {
   }
 
   private runUpdatePosition(): void {
-    this.cleanupUpdatePosition = autoUpdate(
-      findElementById(this.root, this.for),
-      this.popupElement,
-      () => this.updatePosition(),
-      {
-        ancestorScroll: true,
-        elementResize: true,
-        animationFrame: true,
-        ancestorResize: true
-      }
-    );
+    if (this.root.isConnected) {
+      this.cleanupUpdatePosition = autoUpdate(
+        findElementById(this.root, this.for),
+        this.popupElement,
+        () => this.updatePosition(),
+        {
+          ancestorScroll: true,
+          elementResize: true,
+          animationFrame: true,
+          ancestorResize: true
+        }
+      );
+    } else {
+      this.disconnectedCallback();
+    }
   }
 
   private updatePosition(): void {
