@@ -131,6 +131,9 @@ export class GuxDatepicker {
   @Prop()
   disabled: boolean = false;
 
+  @Prop()
+  labelPosition: 'above' | 'beside' = 'beside';
+
   /**
    * The datepicker current value
    */
@@ -742,7 +745,12 @@ export class GuxDatepicker {
 
   renderStartDateField(): JSX.Element {
     return (
-      <div class="gux-datepicker-field">
+      <div
+        class={{
+          'gux-datepicker-field': true,
+          'gux-above': this.labelPosition === 'above'
+        }}
+      >
         <label
           htmlFor={this.startInputId}
           class={{
@@ -778,7 +786,12 @@ export class GuxDatepicker {
     }
 
     return (
-      <div class="gux-datepicker-field">
+      <div
+        class={{
+          'gux-datepicker-field': true,
+          'gux-above': this.labelPosition === 'above'
+        }}
+      >
         <label htmlFor={this.endInputId} class="gux-datepicker-field-label">
           {this.getCalendarLabels()[1]}
         </label>
