@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.84.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.84.2...v3.84.3) (2023-05-11)
+
+
+### Bug Fixes
+
+* **date-picker:** add above label positioning ([4c93bda](https://github.com/MyPureCloud/genesys-webcomponents/commit/4c93bda96a498fbf52fae8b41e04b8004b09280b))
+
 ### [3.84.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.84.1...v3.84.2) (2023-05-10)
 
 
