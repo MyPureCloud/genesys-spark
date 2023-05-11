@@ -9,7 +9,7 @@ export async function processTokenFile(distFolder, tokenStudioFile) {
 
   const tokenStudioTokens = getTokenStudioTokens(tokenStudioFile);
 
-  for (const set of ['ui', 'semantic']) {
+  for (const set of ['global', 'ui', 'semantic']) {
     const outputFilename = set;
     const styleDictionaryReadableTokens =
       transformToStyleDictionaryReadableTokens(tokenStudioTokens, set);
