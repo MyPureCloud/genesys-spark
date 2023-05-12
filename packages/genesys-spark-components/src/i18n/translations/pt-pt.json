@@ -426,6 +426,9 @@
     "noSelection": "Selecione...",
     "dropdown": "Lista pendente"
   },
+  "gux-form-field-dropdown": {
+    "required": "Obrigatório"
+  },
   "gux-form-field-number": {
     "increment": "Aumentar",
     "decrement": "Diminuir"

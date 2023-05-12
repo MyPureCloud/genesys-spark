@@ -426,6 +426,9 @@
     "noSelection": "เลือก...",
     "dropdown": "ดรอปดาวน์"
   },
+  "gux-form-field-dropdown": {
+    "required": "จำเป็น"
+  },
   "gux-form-field-number": {
     "increment": "เพิ่ม",
     "decrement": "ลด"
