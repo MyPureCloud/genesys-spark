@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.85.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.84.3...v3.85.0) (2023-05-12)
+
+
+### Features
+
+* **icon:** new icons for architect ui ([5086b30](https://github.com/MyPureCloud/genesys-webcomponents/commit/5086b3068bffecaee273441d875e934c6650bc99))
+
+
+### Bug Fixes
+
+* **popover-beta:** fixed bug where popover updated when not connected to DOM ([eef2200](https://github.com/MyPureCloud/genesys-webcomponents/commit/eef2200b00831b5a86a6c8e855a7873e7ceba112))
+
 ### [3.84.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.84.2...v3.84.3) (2023-05-11)
 
 
