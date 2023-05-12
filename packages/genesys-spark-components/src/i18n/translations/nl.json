@@ -426,6 +426,9 @@
     "noSelection": "Selecteren...",
     "dropdown": "Vervolgkeuzelijst"
   },
+  "gux-form-field-dropdown": {
+    "required": "Vereist"
+  },
   "gux-form-field-number": {
     "increment": "Verhogen",
     "decrement": "Verlagen"

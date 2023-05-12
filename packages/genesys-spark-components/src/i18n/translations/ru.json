@@ -426,6 +426,9 @@
     "noSelection": "Выбрать...",
     "dropdown": "Раскрывающийся список"
   },
+  "gux-form-field-dropdown": {
+    "required": "Обязательно"
+  },
   "gux-form-field-number": {
     "increment": "Увеличить",
     "decrement": "Уменьшить"

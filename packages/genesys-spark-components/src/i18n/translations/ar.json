@@ -426,6 +426,9 @@
     "noSelection": "تحديد...",
     "dropdown": "قائمة منسدلة"
   },
+  "gux-form-field-dropdown": {
+    "required": "مطلوب"
+  },
   "gux-form-field-number": {
     "increment": "زيادة",
     "decrement": "تخفيض"

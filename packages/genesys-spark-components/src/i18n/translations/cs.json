@@ -426,6 +426,9 @@
     "noSelection": "Vybrat…",
     "dropdown": "Rozevírací seznam"
   },
+  "gux-form-field-dropdown": {
+    "required": "Povinné"
+  },
   "gux-form-field-number": {
     "increment": "Zvýšení",
     "decrement": "Snížení"

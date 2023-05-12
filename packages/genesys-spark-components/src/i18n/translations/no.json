@@ -426,6 +426,9 @@
     "noSelection": "Velg ...",
     "dropdown": "Rullegardinliste"
   },
+  "gux-form-field-dropdown": {
+    "required": "Obligatorisk"
+  },
   "gux-form-field-number": {
     "increment": "Økning",
     "decrement": "Reduksjon"
