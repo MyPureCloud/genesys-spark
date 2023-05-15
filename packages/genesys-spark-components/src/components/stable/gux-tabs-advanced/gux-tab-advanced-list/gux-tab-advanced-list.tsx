@@ -620,6 +620,7 @@ export class GuxTabAdvancedList {
             title={this.i18n(direction)}
             aria-label={this.i18n(direction)}
             class="gux-scroll-button"
+            onDragOver={() => this.getScrollDirection(direction)}
             onClick={() => this.getScrollDirection(direction)}
           >
             <gux-icon
