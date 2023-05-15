@@ -93,12 +93,12 @@ export class GuxCalendar {
    * Triggered when user selects a date
    */
   @Event()
-  input: EventEmitter<string>;
+  calendarSelect: EventEmitter<string>;
 
   private locale: string = 'en';
 
-  emitInput() {
-    this.input.emit(this.value);
+  emitCalendarSelect() {
+    this.calendarSelect.emit(this.value);
   }
 
   /**
@@ -158,7 +158,7 @@ export class GuxCalendar {
 
   async setValueAndEmit(value: Date | [Date, Date]) {
     await this.setValue(value);
-    this.emitInput();
+    this.emitCalendarSelect();
   }
 
   outOfBounds(date: Date): boolean {
