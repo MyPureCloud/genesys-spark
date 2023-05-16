@@ -426,6 +426,9 @@
     "noSelection": "בחר...",
     "dropdown": "רשימה נפתחת"
   },
+  "gux-form-field-dropdown": {
+    "required": "נדרש"
+  },
   "gux-form-field-number": {
     "increment": "העלה",
     "decrement": "הורד"
