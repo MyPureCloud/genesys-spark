@@ -53,7 +53,27 @@
   Maecenas ex elementum accumsan at nonr.
 </p>
 
-<h3>Nano Sans</h3>
+<h3>In Table</h3>
+<gux-table-beta>
+  <table slot="data">
+    <tbody>
+      <tr>
+        <td>
+          <a href="#">Example In Table Link</a>
+        </td>
+        <td>
+          <a href="#" class="gux-icon-anchor">
+            <gux-icon icon-name="external-link" decorative></gux-icon>Example
+            External In Table Link
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table-beta>
+
+<h2>Fonts</h2>
+<h3>Roboto</h3>
 <gux-table-beta compact>
   <table slot="data">
     <thead>
@@ -66,48 +86,108 @@
     <tbody>
       <tr>
         <td>100</td>
-        <td class="nano fw-100">The quick brown fox</td>
-        <td class="nano fw-100 italic">jumps over the lazy dog</td>
+        <td class="roboto fw-100">The quick brown fox</td>
+        <td class="roboto fw-100 italic">jumps over the lazy dog</td>
       </tr>
       <tr>
         <td>200</td>
-        <td class="nano fw-200">The quick brown fox</td>
-        <td class="nano fw-200 italic">jumps over the lazy dog</td>
+        <td class="roboto fw-200">The quick brown fox</td>
+        <td class="roboto fw-200 italic">jumps over the lazy dog</td>
       </tr>
       <tr>
         <td>300</td>
-        <td class="nano fw-300">The quick brown fox</td>
-        <td class="nano fw-300 italic">jumps over the lazy dog</td>
+        <td class="roboto fw-300">The quick brown fox</td>
+        <td class="roboto fw-300 italic">jumps over the lazy dog</td>
       </tr>
       <tr>
         <td>400</td>
-        <td class="nano fw-400">The quick brown fox</td>
-        <td class="nano fw-400 italic">jumps over the lazy dog</td>
+        <td class="roboto fw-400">The quick brown fox</td>
+        <td class="roboto fw-400 italic">jumps over the lazy dog</td>
       </tr>
       <tr>
         <td>500</td>
-        <td class="nano fw-500">The quick brown fox</td>
-        <td class="nano fw-500 italic">jumps over the lazy dog</td>
+        <td class="roboto fw-500">The quick brown fox</td>
+        <td class="roboto fw-500 italic">jumps over the lazy dog</td>
       </tr>
       <tr>
         <td>600</td>
-        <td class="nano fw-600">The quick brown fox</td>
-        <td class="nano fw-600 italic">jumps over the lazy dog</td>
+        <td class="roboto fw-600">The quick brown fox</td>
+        <td class="roboto fw-600 italic">jumps over the lazy dog</td>
       </tr>
       <tr>
         <td>700</td>
-        <td class="nano fw-700">The quick brown fox</td>
-        <td class="nano fw-700 italic">jumps over the lazy dog</td>
+        <td class="roboto fw-700">The quick brown fox</td>
+        <td class="roboto fw-700 italic">jumps over the lazy dog</td>
       </tr>
       <tr>
         <td>800</td>
-        <td class="nano fw-800">The quick brown fox</td>
-        <td class="nano fw-800 italic">jumps over the lazy dog</td>
+        <td class="roboto fw-800">The quick brown fox</td>
+        <td class="roboto fw-800 italic">jumps over the lazy dog</td>
       </tr>
       <tr>
         <td>900</td>
-        <td class="nano fw-900">The quick brown fox</td>
-        <td class="nano fw-900 italic">jumps over the lazy dog</td>
+        <td class="roboto fw-900">The quick brown fox</td>
+        <td class="roboto fw-900 italic">jumps over the lazy dog</td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table-beta>
+
+<h3>Noto Sans</h3>
+<gux-table-beta compact>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th>Font weight</th>
+        <th>Normal</th>
+        <th>Italic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>100</td>
+        <td class="noto fw-100">The quick brown fox</td>
+        <td class="noto fw-100 italic">jumps over the lazy dog</td>
+      </tr>
+      <tr>
+        <td>200</td>
+        <td class="noto fw-200">The quick brown fox</td>
+        <td class="noto fw-200 italic">jumps over the lazy dog</td>
+      </tr>
+      <tr>
+        <td>300</td>
+        <td class="noto fw-300">The quick brown fox</td>
+        <td class="noto fw-300 italic">jumps over the lazy dog</td>
+      </tr>
+      <tr>
+        <td>400</td>
+        <td class="noto fw-400">The quick brown fox</td>
+        <td class="noto fw-400 italic">jumps over the lazy dog</td>
+      </tr>
+      <tr>
+        <td>500</td>
+        <td class="noto fw-500">The quick brown fox</td>
+        <td class="noto fw-500 italic">jumps over the lazy dog</td>
+      </tr>
+      <tr>
+        <td>600</td>
+        <td class="noto fw-600">The quick brown fox</td>
+        <td class="noto fw-600 italic">jumps over the lazy dog</td>
+      </tr>
+      <tr>
+        <td>700</td>
+        <td class="noto fw-700">The quick brown fox</td>
+        <td class="noto fw-700 italic">jumps over the lazy dog</td>
+      </tr>
+      <tr>
+        <td>800</td>
+        <td class="noto fw-800">The quick brown fox</td>
+        <td class="noto fw-800 italic">jumps over the lazy dog</td>
+      </tr>
+      <tr>
+        <td>900</td>
+        <td class="noto fw-900">The quick brown fox</td>
+        <td class="noto fw-900 italic">jumps over the lazy dog</td>
       </tr>
     </tbody>
   </table>
@@ -121,7 +201,12 @@
     border: 1px solid black;
   }
 
-  .nano {
+  .roboto {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+  }
+
+  .noto {
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
   }
