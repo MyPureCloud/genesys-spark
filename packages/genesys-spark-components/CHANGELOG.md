@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.85.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.85.0...v3.85.1) (2023-05-16)
+
+
+### Bug Fixes
+
+* **tab-advanced-list:** allow drag/scrolling ([1f7cd61](https://github.com/MyPureCloud/genesys-webcomponents/commit/1f7cd61b2b35a1a0c594e9f1dd520592cf674278))
+
 ## [3.85.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.84.3...v3.85.0) (2023-05-12)
 
 
