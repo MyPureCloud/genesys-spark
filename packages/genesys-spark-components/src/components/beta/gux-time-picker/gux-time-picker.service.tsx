@@ -36,6 +36,11 @@ export function getLocaleClockType(root: HTMLElement): GuxClockType {
     timeZone: 'UTC'
   }).format(date);
 
+  // The localization team has requested that arabic uses the 24h clock.
+  if (locale.startsWith('ar')) {
+    return '24h';
+  }
+
   return new RegExp('.*15.*').test(time) ? '24h' : '12h';
 }
 
