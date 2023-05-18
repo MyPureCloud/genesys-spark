@@ -9,7 +9,7 @@ import translationResources from './i18n/en.json';
  */
 
 @Component({
-  styleUrl: 'gux-inline-alert.less',
+  styleUrl: 'gux-inline-alert.scss',
   tag: 'gux-inline-alert',
   shadow: true
 })
@@ -25,15 +25,15 @@ export class GuxAlert {
   private getIcon(accent: GuxAlertAccent): string {
     switch (accent) {
       case 'info':
-        return 'alert-info';
+        return 'fa/circle-info-solid';
       case 'success':
-        return 'alert-success';
+        return 'fa/circle-check-solid';
       case 'warning':
-        return 'alert-warning-triangle';
+        return 'fa/triangle-exclamation-solid';
       case 'error':
-        return 'alert-warning-octogon';
+        return 'fa/hexagon-exclamation-solid';
       default:
-        return 'alert-info';
+        return 'fa/circle-info-solid';
     }
   }
 
