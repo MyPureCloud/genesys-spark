@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import { less as stencilLess } from '@stencil/less';
+import { sass } from '@stencil/sass';
 import copy from 'rollup-plugin-copy';
 import generateMetadata from './scripts/generate-component-data';
 import { reactOutputTarget } from '@stencil/react-output-target';
@@ -27,7 +28,8 @@ export const config: Config = {
   plugins: [
     stencilLess({
       injectGlobalPaths: ['src/style/variables.less']
-    })
+    }),
+    sass()
   ],
   rollupPlugins: {
     after: [
