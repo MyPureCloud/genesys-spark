@@ -169,6 +169,21 @@ export function setSlotAriaDescribedby(
   setSlotAriaAttribute(root, 'aria-describedby', input, slotName);
 }
 
+export function getSlottedInput(
+  root: HTMLElement,
+  inputSelector: string
+): HTMLInputElement {
+  const inputElement: HTMLInputElement = root.querySelector(inputSelector);
+
+  if (!inputElement) {
+    logError(
+      root.tagName.toLowerCase(),
+      `This component requires an input element that matches the following selector: ${inputSelector}`
+    );
+  }
+  return inputElement;
+}
+
 function hasLabelSlot(root: HTMLElement): boolean {
   return Boolean(root.querySelector('label[slot="label"]'));
 }

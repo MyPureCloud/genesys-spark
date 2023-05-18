@@ -29,7 +29,8 @@ import {
   hasContent,
   getComputedLabelPosition,
   validateFormIds,
-  setSlotAriaDescribedby
+  setSlotAriaDescribedby,
+  getSlottedInput
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 
@@ -186,7 +187,8 @@ export class GuxFormFieldTextLike {
   }
 
   private setInput(): void {
-    this.input = this.root.querySelector(
+    this.input = getSlottedInput(
+      this.root,
       'input[type="email"][slot="input"], input[type="number"][slot="input"], input[type="password"][slot="input"], input[type="text"][slot="input"]'
     );
 
