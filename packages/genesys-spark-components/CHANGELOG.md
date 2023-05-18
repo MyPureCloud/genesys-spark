@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.86.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.85.1...v3.86.0) (2023-05-18)
+
+
+### Features
+
+* **font:** added Noto Sans font ([5f4d140](https://github.com/MyPureCloud/genesys-webcomponents/commit/5f4d14027f9d3d86524c6c360263188aac0db038))
+* **form-field:** improve error messaging ([9eecba0](https://github.com/MyPureCloud/genesys-webcomponents/commit/9eecba0cfdc5712794e425367b6aa3516c82afc5))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comments ([5464ae5](https://github.com/MyPureCloud/genesys-webcomponents/commit/5464ae5e43784330b8cf4d018a098c25a96b3721))
+* **time-picker:** arabic now uses 24h layout ([ae88b43](https://github.com/MyPureCloud/genesys-webcomponents/commit/ae88b43231ee74f124d851f3dccb32c9b22f39d4))
+
 ### [3.85.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.85.0...v3.85.1) (2023-05-16)
 
 
