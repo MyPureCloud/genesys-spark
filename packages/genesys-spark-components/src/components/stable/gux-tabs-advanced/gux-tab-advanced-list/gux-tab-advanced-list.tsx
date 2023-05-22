@@ -10,6 +10,7 @@ import {
   Prop,
   readTask,
   State,
+  Watch,
   writeTask
 } from '@stencil/core';
 import Sortable, { MoveEvent } from 'sortablejs';
@@ -140,6 +141,15 @@ export class GuxTabAdvancedList {
           }
         });
       });
+    }
+  }
+
+  @Watch('allowSort')
+  watchAllowSort(allowSort: boolean): void {
+    if (allowSort) {
+      this.validateSortableInstance();
+    } else {
+      this.destroySortable();
     }
   }
 
@@ -488,10 +498,14 @@ export class GuxTabAdvancedList {
     );
   }
 
-  componentDidLoad() {
+  private validateSortableInstance(): void {
     if (this.allowSort && !this.sortableInstance) {
       this.createSortable();
     }
+  }
+
+  componentDidLoad() {
+    this.validateSortableInstance();
 
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() =>
