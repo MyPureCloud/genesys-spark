@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.86.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.86.0...v3.86.1) (2023-05-22)
+
+
+### Bug Fixes
+
+* **tab-advanced-list:** watch for dynamic changes to allowSort prop ([7e50cf1](https://github.com/MyPureCloud/genesys-webcomponents/commit/7e50cf1de2761557137c55913f5a78813667ae0f))
+
 ## [3.86.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.85.1...v3.86.0) (2023-05-18)
 
 
