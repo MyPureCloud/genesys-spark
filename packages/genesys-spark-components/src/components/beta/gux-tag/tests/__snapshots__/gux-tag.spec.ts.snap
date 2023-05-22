@@ -3,7 +3,7 @@
 exports[`gux-tag-beta #render should render component as expected (1) 1`] = `
 <gux-tag-beta>
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-default gux-tag">
+    <div aria-disabled="false" class="gux-accent-default gux-default gux-tag">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -21,7 +21,7 @@ exports[`gux-tag-beta #render should render component as expected (1) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (2) 1`] = `
 <gux-tag-beta color="default">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-default gux-tag">
+    <div aria-disabled="false" class="gux-accent-default gux-default gux-tag">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -39,7 +39,7 @@ exports[`gux-tag-beta #render should render component as expected (2) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (3) 1`] = `
 <gux-tag-beta color="navy">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-navy gux-tag">
+    <div aria-disabled="false" class="gux-accent-default gux-navy gux-tag">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -57,7 +57,7 @@ exports[`gux-tag-beta #render should render component as expected (3) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (4) 1`] = `
 <gux-tag-beta color="navy">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-navy gux-tag">
+    <div aria-disabled="false" class="gux-accent-default gux-navy gux-tag">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -76,7 +76,7 @@ exports[`gux-tag-beta #render should render component as expected (4) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (5) 1`] = `
 <gux-tag-beta color="navy" removable="" value="3">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-navy gux-tag">
+    <div aria-disabled="false" class="gux-accent-default gux-navy gux-tag">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -98,7 +98,7 @@ exports[`gux-tag-beta #render should render component as expected (5) 1`] = `
 exports[`gux-tag-beta #render should render component as expected (6) 1`] = `
 <gux-tag-beta color="navy" disabled="" removable="" value="3">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-disabled gux-navy gux-tag">
+    <div aria-disabled="true" class="gux-accent-default gux-disabled gux-navy gux-tag">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
