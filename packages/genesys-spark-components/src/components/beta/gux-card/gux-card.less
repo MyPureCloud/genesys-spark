@@ -16,7 +16,8 @@
   border: 1px solid @gux-grey-60;
   border-radius: @gux-spacing-2xs;
 
-  &.gux-outline {
+  &.gux-outline,
+  &.gux-bordered {
     background-color: @gux-grey-100;
   }
 
@@ -26,5 +27,9 @@
 
   &.gux-raised {
     .gux-shadow-10();
+  }
+
+  &.gux-borderless {
+    border-color: transparent;
   }
 }

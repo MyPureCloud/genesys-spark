@@ -12,7 +12,7 @@
     "eslint": "eslint . --ignore-path .gitignore --no-error-on-unmatched-pattern --fix",
     "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\"",
     "lint-staged": "lint-staged",
-    "prettier": "prettier --loglevel silent --ignore-path .gitignore --ignore-unknown --write .",
+    "prettier": "prettier --loglevel silent --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json",
     "snapshot": "node build/index.mjs snapshot",
     "test": "node test/index.mjs"
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
+    "change-case": "^4.1.2",
     "dir-compare": "^4.0.0",
     "eslint": "^8.44.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",

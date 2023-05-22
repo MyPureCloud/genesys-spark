@@ -1,0 +1,155 @@
+{
+  "card": {
+    "background-color": "#ffffff",
+    "border_radius": "16px",
+    "default": {
+      "border": {
+        "color": "#C6C8CE",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "raised": {
+      "border": {
+        "color": "#C6C8CE",
+        "width": "1px",
+        "style": "solid"
+      },
+      "box_shadow": {
+        "x": 0,
+        "y": "4px",
+        "blur": "6px",
+        "spread": "1px",
+        "color": "#23395c1f",
+        "type": "dropShadow"
+      }
+    },
+    "padding": "24px",
+    "borderless": {
+      "border": {
+        "color": "transparent",
+        "width": "1px",
+        "style": "solid"
+      }
+    }
+  },
+  "tag": {
+    "border_radius": "100%",
+    "default": {
+      "background_color": "#23395d",
+      "foreground_color": "#ffffff"
+    },
+    "accent1": {
+      "background_color": "#e4e5e7",
+      "foreground_color": "#1b2c48"
+    },
+    "accent2": {
+      "background_color": "#90D3DD",
+      "foreground_color": "#1b2c48"
+    },
+    "accent3": {
+      "background_color": "#0D7482",
+      "foreground_color": "#ffffff"
+    },
+    "accent4": {
+      "background_color": "#547688",
+      "foreground_color": "#ffffff"
+    },
+    "accent5": {
+      "background_color": "#a5cae0",
+      "foreground_color": "#1b2c48"
+    },
+    "accent6": {
+      "background_color": "#b5bfe6",
+      "foreground_color": "#1b2c48"
+    },
+    "text": {
+      "fontFamily": "Noto Sans",
+      "lineHeight": "18px",
+      "fontSize": "12px"
+    },
+    "padding": "0 12px",
+    "removable": {
+      "padding": "0 8px 0 12px",
+      "gap": "4px"
+    },
+    "accent7": {
+      "background_color": "#A05195",
+      "foreground_color": "#ffffff"
+    },
+    "height": "20px",
+    "accent8": {
+      "background_color": "#F95D6A",
+      "foreground_color": "#1b2c48"
+    },
+    "accent9": {
+      "background_color": "#FE8F85",
+      "foreground_color": "#1b2c48"
+    },
+    "accent10": {
+      "background_color": "#FFC650",
+      "foreground_color": "#1b2c48"
+    },
+    "button": {
+      "size": "16px"
+    }
+  },
+  "badge": {
+    "border_radius": "10px",
+    "text": {
+      "fontFamily": "Noto Sans",
+      "lineHeight": "18px",
+      "fontSize": "12px"
+    },
+    "height": "20px",
+    "padding": "0 12px",
+    "gap": "4px",
+    "info": {
+      "bold": {
+        "background_color": "#6e5ddb",
+        "foreground_color": "#ffffff"
+      },
+      "regular": {
+        "background_color": "#c5bef1",
+        "foreground_color": "#1b2c48"
+      }
+    },
+    "success": {
+      "bold": {
+        "background_color": "#09b581",
+        "foreground_color": "#1b2c48"
+      },
+      "regular": {
+        "background_color": "#9de1cd",
+        "foreground_color": "#1b2c48"
+      }
+    },
+    "warning": {
+      "bold": {
+        "background_color": "#f8c73e",
+        "foreground_color": "#1b2c48"
+      },
+      "regular": {
+        "background_color": "#fce9b2",
+        "foreground_color": "#1b2c48"
+      }
+    },
+    "error": {
+      "bold": {
+        "background_color": "#e22245",
+        "foreground_color": "#ffffff"
+      },
+      "regular": {
+        "background_color": "#f3a7b5",
+        "foreground_color": "#1b2c48"
+      }
+    }
+  },
+  "icon": {
+    "size": {
+      "sm": "16px",
+      "md": "24px",
+      "lg": "32px"
+    }
+  }
+}
