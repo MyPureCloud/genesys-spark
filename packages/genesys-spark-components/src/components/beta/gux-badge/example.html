@@ -2,30 +2,53 @@
 
 <h2>Badges</h2>
 
-<h2>Subtle</h2>
+<h2>Accent Property</h2>
+
+<h3>Default</h3>
 <div class="badges">
-  <gux-badge-beta>No Impact</gux-badge-beta>
-  <gux-badge-beta color="neutral">No Impact (explicit)</gux-badge-beta>
-  <gux-badge-beta color="green">Resolved</gux-badge-beta>
-  <gux-badge-beta color="yellow">Medium Impact</gux-badge-beta>
-  <gux-badge-beta color="red">High Impact</gux-badge-beta>
+  <gux-badge-beta>Info</gux-badge-beta>
+  <gux-badge-beta accent="info">Info (explicit)</gux-badge-beta>
+  <gux-badge-beta accent="success">Success</gux-badge-beta>
+  <gux-badge-beta accent="warning">Warning</gux-badge-beta>
+  <gux-badge-beta accent="error">Error</gux-badge-beta>
 </div>
 
-<h2>Bold</h2>
+<h3>Bold</h3>
 <div class="badges">
-  <gux-badge-beta bold color="neutral">No Impact</gux-badge-beta>
-  <gux-badge-beta bold color="green">Resolved</gux-badge-beta>
-  <gux-badge-beta bold color="yellow">Medium Impact</gux-badge-beta>
-  <gux-badge-beta bold color="red">High Impact</gux-badge-beta>
+  <gux-badge-beta bold>Info</gux-badge-beta>
+  <gux-badge-beta bold accent="info">Info (explicit)</gux-badge-beta>
+  <gux-badge-beta bold accent="success">Success</gux-badge-beta>
+  <gux-badge-beta bold accent="warning">Warning</gux-badge-beta>
+  <gux-badge-beta bold accent="error">Error</gux-badge-beta>
+</div>
+
+<h2>Color Property</h2>
+
+<h3>Default</h3>
+<div class="badges">
+  <gux-badge-beta>Neutral</gux-badge-beta>
+  <gux-badge-beta color="neutral">Neutral (explicit)</gux-badge-beta>
+  <gux-badge-beta color="green">Green</gux-badge-beta>
+  <gux-badge-beta color="yellow">Yellow</gux-badge-beta>
+  <gux-badge-beta color="red">Red</gux-badge-beta>
+</div>
+
+<h3>Bold</h3>
+<div class="badges">
+  <gux-badge-beta bold>Neutral</gux-badge-beta>
+  <gux-badge-beta bold color="neutral">Neutral (explicit)</gux-badge-beta>
+  <gux-badge-beta bold color="green">Green</gux-badge-beta>
+  <gux-badge-beta bold color="yellow">Yellow</gux-badge-beta>
+  <gux-badge-beta bold color="red">Red</gux-badge-beta>
 </div>
 
 <h2>Icon + Label</h2>
 <div class="badges">
-  <gux-badge-beta color="neutral">
-    <gux-icon icon-name="subtract" decorative></gux-icon>No Impact
+  <gux-badge-beta>
+    <gux-icon icon-name="unknown" decorative></gux-icon> Label
   </gux-badge-beta>
-  <gux-badge-beta bold color="neutral">
-    <gux-icon icon-name="subtract" decorative></gux-icon>No Impact
+  <gux-badge-beta bold>
+    <gux-icon icon-name="unknown" decorative></gux-icon>Label
   </gux-badge-beta>
 </div>
 
@@ -39,7 +62,7 @@
   </style>
   <gux-badge-beta color="inherit" class="custom">Custom</gux-badge-beta>
   <gux-badge-beta color="inherit" class="custom">
-    <gux-icon icon-name="subtract" decorative></gux-icon>No Impact
+    <gux-icon icon-name="unknown" decorative></gux-icon>No Impact
   </gux-badge-beta>
   <gux-inline-alert-beta accent="error" class="custom-color-warning">
     <strong>Important:</strong>
@@ -61,7 +84,6 @@
   gux-badge-beta {
     max-width: 100px;
     margin: 4px;
-    background-color: black;
   }
 
   .custom-badges {

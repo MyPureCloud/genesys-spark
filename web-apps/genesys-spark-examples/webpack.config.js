@@ -76,6 +76,10 @@ module.exports = {
           to: 'icons'
         },
         {
+          from: './webfonts',
+          to: 'webfonts'
+        },
+        {
           from: '../../packages/genesys-spark-components/dist/genesys-webcomponents',
           to: 'genesys-webcomponents'
         }

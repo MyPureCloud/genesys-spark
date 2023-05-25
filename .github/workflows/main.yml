@@ -34,7 +34,11 @@ jobs:
       # Using --legacy-peer-deps because @stencil/less is unsupported and has an out of date peer dependency on @stencil/core@1
       - run: npm install --legacy-peer-deps
 
-      # This created the component specific types that are needed for eslint
+      # This creates the design token exports that are needed for the components
+      - name: Tokens
+        run: npm run build --workspace=packages/genesys-spark-tokens
+
+      # This creates the component specific types that are needed for eslint
       - name: Stencil
         run: npm run stencil --workspace=packages/genesys-spark-components
 
