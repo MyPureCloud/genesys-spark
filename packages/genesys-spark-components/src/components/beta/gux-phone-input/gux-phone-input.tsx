@@ -46,7 +46,7 @@ export class GuxPhoneInput {
 
   // ISO 3166-1 alpha-2 code
   @Prop()
-  defaultRegion: string = 'US';
+  defaultRegion: string;
 
   @Prop()
   labelId: string;
@@ -71,7 +71,7 @@ export class GuxPhoneInput {
   input: EventEmitter<string>;
 
   @Event()
-  internalError: EventEmitter<boolean>;
+  phoneValidationError: EventEmitter<boolean>;
 
   @Watch('expanded')
   focusSelectedItemAfterRender(expanded: boolean) {
@@ -153,26 +153,49 @@ export class GuxPhoneInput {
         const phone = this.phoneUtil.parse(this.value);
         this.numberText = this.phoneUtil.format(
           phone,
-          PhoneNumberFormat.NATIONAL
+          PhoneNumberFormat.INTERNATIONAL
         );
         this.region = this.phoneUtil.getRegionCodeForNumber(phone);
       } catch (e) {
         if (this.numberText === undefined) {
-          // only show error on initial render
-          console.error('Number cannot be parsed');
-          this.numberText = '';
-          this.region = this.defaultRegion.toUpperCase();
+          // only show warning on initial render
+          console.warn('Number cannot be parsed');
+          this.numberText = this.value;
+          this.region = '';
         }
       }
     } else {
+      this.region = this.defaultRegion?.toUpperCase() || '';
       this.numberText = '';
-      this.region = this.defaultRegion.toUpperCase();
     }
   }
 
   private onInputChange(number: string): void {
+    if (number.startsWith('+')) {
+      this.checkForRegion(number);
+    }
+    this.input.emit(number);
     this.numberText = number;
-    this.phoneNumberUpdated();
+  }
+
+  private checkForRegion(number: string): void {
+    let region = '';
+    try {
+      region = this.phoneUtil.getRegionCodeForNumber(
+        this.phoneUtil.parse(number)
+      );
+    } catch (e) {
+      // not full number so parse failed, so check if there is a matching region in the string
+      region =
+        getRegionObjects(
+          getDesiredLocale(this.root),
+          this.i18n,
+          this.phoneUtil
+        ).filter(region => number.startsWith(region.countryCode))[0]?.code ||
+        '';
+    } finally {
+      this.region = region;
+    }
   }
 
   private validatePhoneNumber(): void {
@@ -185,11 +208,11 @@ export class GuxPhoneInput {
             phone,
             this.phoneUtil.getRegionCodeForNumber(phone)
           );
-        this.internalError.emit(!isValid);
+        this.phoneValidationError.emit(!isValid);
       } catch (e) {
         if (this.numberText) {
-          console.error('Number cannot be parsed');
-          this.internalError.emit(true);
+          console.warn('Number cannot be parsed');
+          this.phoneValidationError.emit(true);
         }
       }
     }
@@ -239,6 +262,13 @@ export class GuxPhoneInput {
     if (this.region !== newValue) {
       this.collapseListbox('focusFieldButton');
       this.region = newValue;
+      if (this.numberText.startsWith('+')) {
+        this.numberText = regionCountryCodeMap[this.region] || '';
+      } else {
+        this.numberText = regionCountryCodeMap[this.region]
+          ? (regionCountryCodeMap[this.region] as string) + this.numberText
+          : '';
+      }
       this.phoneNumberUpdated();
     }
   }
@@ -316,17 +346,21 @@ export class GuxPhoneInput {
   }
 
   private renderButtonDisplay(): JSX.Element {
-    const selectedListboxOptionElement = this.getOptionElementByValue(
-      this.region
-    );
+    const selectedListboxOptionElement: HTMLGuxOptionElement =
+      this.getOptionElementByValue(this.region);
 
-    const selectedRegion = selectedListboxOptionElement?.value;
-    const countryCode: string = regionCountryCodeMap[selectedRegion] || '';
+    const selectedRegion: string = selectedListboxOptionElement?.value;
 
     return (
       <div class="gux-selected-option">
-        <gux-region-icon region={selectedRegion} />
-        <span>{`+${countryCode}`}</span>
+        {selectedRegion?.length ? (
+          <gux-region-icon region={selectedRegion} />
+        ) : (
+          <gux-icon
+            icon-name="globe"
+            screenreaderText={this.i18n('unknownRegion')}
+          ></gux-icon>
+        )}
       </div>
     ) as JSX.Element;
   }
@@ -338,8 +372,8 @@ export class GuxPhoneInput {
         class="phone-input"
         type="tel"
         placeholder={this.phoneUtil.format(
-          this.phoneUtil.getExampleNumber(this.region),
-          PhoneNumberFormat.NATIONAL
+          this.phoneUtil.getExampleNumber(this.region || 'US'),
+          PhoneNumberFormat.INTERNATIONAL
         )}
         value={this.numberText}
         disabled={this.disabled}
@@ -363,26 +397,44 @@ export class GuxPhoneInput {
   }
 
   private renderPopup(): JSX.Element {
-    const options: JSX.Element[] = getRegionObjects(
-      getDesiredLocale(this.root),
-      this.i18n,
-      this.phoneUtil
-    ).map(
-      region =>
-        (
-          <gux-option value={region.code}>
-            <span class="option-content">
-              <gux-region-icon region={region.code} />
-              <span>{region.name}</span>
-              <span class="country-code">{`+${region.countryCode}`}</span>
-            </span>
-          </gux-option>
-        ) as JSX.Element
+    const countryCode: string =
+      regionCountryCodeMap[this.region] ||
+      regionCountryCodeMap[this.defaultRegion] ||
+      '';
+    const options: JSX.Element[] = [
+      (
+        <gux-option value="">
+          <span class="option-content">
+            <gux-icon icon-name="globe" decorative></gux-icon>
+            <span>{this.i18n('unknownRegion')}</span>
+            <span class="country-code">+</span>
+          </span>
+        </gux-option>
+      ) as JSX.Element
+    ].concat(
+      getRegionObjects(
+        getDesiredLocale(this.root),
+        this.i18n,
+        this.phoneUtil
+      ).map(
+        region =>
+          (
+            <gux-option value={region.code}>
+              <span class="option-content">
+                <gux-region-icon region={region.code} />
+                <span>{region.name}</span>
+                <span class="country-code">{region.countryCode}</span>
+              </span>
+            </gux-option>
+          ) as JSX.Element
+      )
     );
 
     return (
       <div slot="popup" class="gux-listbox-container">
-        <gux-listbox aria-label="country dropdown">{options}</gux-listbox>
+        <gux-listbox aria-label="country dropdown" value={countryCode}>
+          {options}
+        </gux-listbox>
       </div>
     ) as JSX.Element;
   }

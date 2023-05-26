@@ -54,7 +54,7 @@
 }
 
 .region-select {
-  min-width: 100px;
+  min-width: 70px;
   margin-right: 5px;
 }
 
@@ -90,7 +90,6 @@
     .gux-selected-option {
       display: grid;
       flex: 1 1 auto;
-      grid-template-columns: 1fr 2fr;
       align-self: auto;
       order: 0;
       overflow: hidden;
@@ -100,9 +99,9 @@
         top: -3px;
       }
 
-      span {
-        margin-left: 5px;
-        text-align: right;
+      gux-icon {
+        position: relative;
+        font-size: 1.1rem;
       }
     }
 
@@ -148,5 +147,10 @@
 
   .country-code {
     text-align: right;
+  }
+
+  gux-icon {
+    position: relative;
+    font-size: 1.1rem;
   }
 }

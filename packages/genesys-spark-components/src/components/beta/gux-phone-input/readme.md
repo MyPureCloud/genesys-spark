@@ -9,7 +9,7 @@ Input for international phone numbers
 
 | Property        | Attribute        | Description | Type      | Default     |
 | --------------- | ---------------- | ----------- | --------- | ----------- |
-| `defaultRegion` | `default-region` |             | `string`  | `'US'`      |
+| `defaultRegion` | `default-region` |             | `string`  | `undefined` |
 | `disabled`      | `disabled`       |             | `boolean` | `false`     |
 | `hasError`      | `has-error`      |             | `boolean` | `false`     |
 | `labelId`       | `label-id`       |             | `string`  | `undefined` |
@@ -19,10 +19,10 @@ Input for international phone numbers
 
 ## Events
 
-| Event           | Description | Type                   |
-| --------------- | ----------- | ---------------------- |
-| `input`         |             | `CustomEvent<string>`  |
-| `internalError` |             | `CustomEvent<boolean>` |
+| Event                  | Description | Type                   |
+| ---------------------- | ----------- | ---------------------- |
+| `input`                |             | `CustomEvent<string>`  |
+| `phoneValidationError` |             | `CustomEvent<boolean>` |
 
 
 ## Dependencies
