@@ -280,6 +280,7 @@ export class GuxTabAdvancedList {
               this.focused = index;
             }
           });
+          this.emitSortChanged();
         }
         break;
       case 'Tab':
@@ -323,6 +324,7 @@ export class GuxTabAdvancedList {
               }
             });
             this.focusTab(this.focused);
+            this.emitSortChanged();
           } else {
             this.keyboardSort = true;
             this.sortTarget = (event.target as Element).parentNode.parentNode;
@@ -405,10 +407,7 @@ export class GuxTabAdvancedList {
           return !event.related.classList.contains('ignore-sort');
         },
         onUpdate: () => {
-          const tabIds = Array.from(
-            this.root.querySelectorAll('gux-tab-advanced')
-          ).map(tabElement => tabElement.tabId);
-          this.sortChanged.emit(tabIds);
+          this.emitSortChanged();
         }
       }
     );
@@ -419,6 +418,13 @@ export class GuxTabAdvancedList {
       this.sortableInstance.destroy();
       this.sortableInstance = null;
     }
+  }
+
+  emitSortChanged() {
+    const tabIds = Array.from(
+      this.root.querySelectorAll('gux-tab-advanced')
+    ).map(tabElement => tabElement.tabId);
+    this.sortChanged.emit(tabIds);
   }
 
   checkForScrollbarHideOrShow() {

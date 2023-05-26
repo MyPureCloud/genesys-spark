@@ -345,6 +345,11 @@
       document.querySelector('#currentTime').innerHTML = currentTime;
       document.querySelector('#currenttab-id').innerHTML = event.detail;
     })
+    document.querySelectorAll(`gux-tab-advanced-list`).forEach(el =>
+        el.addEventListener('sortChanged', event => {
+          notify(event);
+        })
+      );
     document.querySelector(`#changeTabTitle`).addEventListener('click',
     () => {
       const tabTitle1 = document.querySelector(`#tabTitle1`);
