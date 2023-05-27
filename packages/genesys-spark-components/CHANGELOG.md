@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.86.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.86.1...v3.86.2) (2023-05-27)
+
+
+### Bug Fixes
+
+* **gux-tabs-advanced:** sortChanged is triggered when tab order is changed using keyboard ([569dced](https://github.com/MyPureCloud/genesys-webcomponents/commit/569dcedfc1e21f49b9548b0f586225c235c1603a))
+
 ### [3.86.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.86.0...v3.86.1) (2023-05-22)
 
 
