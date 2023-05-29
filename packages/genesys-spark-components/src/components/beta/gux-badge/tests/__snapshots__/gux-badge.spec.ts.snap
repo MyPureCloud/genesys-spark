@@ -3,7 +3,7 @@
 exports[`gux-badge-beta #render should render component as expected (1) 1`] = `
 <gux-badge-beta>
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -21,7 +21,7 @@ exports[`gux-badge-beta #render should render component as expected (1) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (2) 1`] = `
 <gux-badge-beta accent="info">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -39,7 +39,7 @@ exports[`gux-badge-beta #render should render component as expected (2) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (3) 1`] = `
 <gux-badge-beta accent="success">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-neutral gux-success">
+    <div class="gux-badge gux-neutral gux-success">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -57,7 +57,7 @@ exports[`gux-badge-beta #render should render component as expected (3) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (4) 1`] = `
 <gux-badge-beta accent="warn">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-neutral gux-warn">
+    <div class="gux-badge gux-neutral gux-warn">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -75,7 +75,7 @@ exports[`gux-badge-beta #render should render component as expected (4) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (5) 1`] = `
 <gux-badge-beta accent="error">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-error gux-neutral">
+    <div class="gux-badge gux-error gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -93,7 +93,7 @@ exports[`gux-badge-beta #render should render component as expected (5) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (6) 1`] = `
 <gux-badge-beta accent="info" bold="">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-info gux-neutral">
+    <div class="gux-badge gux-bold gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -111,7 +111,7 @@ exports[`gux-badge-beta #render should render component as expected (6) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (7) 1`] = `
 <gux-badge-beta accent="success" bold="">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-neutral gux-success">
+    <div class="gux-badge gux-bold gux-neutral gux-success">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -129,7 +129,7 @@ exports[`gux-badge-beta #render should render component as expected (7) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (8) 1`] = `
 <gux-badge-beta accent="warn" bold="">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-neutral gux-warn">
+    <div class="gux-badge gux-bold gux-neutral gux-warn">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -147,7 +147,7 @@ exports[`gux-badge-beta #render should render component as expected (8) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (9) 1`] = `
 <gux-badge-beta accent="error" bold="">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-error gux-neutral">
+    <div class="gux-badge gux-bold gux-error gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -165,7 +165,7 @@ exports[`gux-badge-beta #render should render component as expected (9) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (10) 1`] = `
 <gux-badge-beta accent="info" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -183,7 +183,7 @@ exports[`gux-badge-beta #render should render component as expected (10) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (11) 1`] = `
 <gux-badge-beta accent="success" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-neutral gux-success">
+    <div class="gux-badge gux-neutral gux-success">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -201,7 +201,7 @@ exports[`gux-badge-beta #render should render component as expected (11) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (12) 1`] = `
 <gux-badge-beta accent="warn" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-neutral gux-warn">
+    <div class="gux-badge gux-neutral gux-warn">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -219,7 +219,7 @@ exports[`gux-badge-beta #render should render component as expected (12) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (13) 1`] = `
 <gux-badge-beta accent="error" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-error gux-neutral">
+    <div class="gux-badge gux-error gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -237,7 +237,7 @@ exports[`gux-badge-beta #render should render component as expected (13) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (14) 1`] = `
 <gux-badge-beta accent="info" bold="" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-info gux-neutral">
+    <div class="gux-badge gux-bold gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -255,7 +255,7 @@ exports[`gux-badge-beta #render should render component as expected (14) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (15) 1`] = `
 <gux-badge-beta accent="success" bold="" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-neutral gux-success">
+    <div class="gux-badge gux-bold gux-neutral gux-success">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -273,7 +273,7 @@ exports[`gux-badge-beta #render should render component as expected (15) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (16) 1`] = `
 <gux-badge-beta accent="warn" bold="" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-neutral gux-warn">
+    <div class="gux-badge gux-bold gux-neutral gux-warn">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -291,7 +291,7 @@ exports[`gux-badge-beta #render should render component as expected (16) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (17) 1`] = `
 <gux-badge-beta accent="error" bold="" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-error gux-neutral">
+    <div class="gux-badge gux-bold gux-error gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -309,7 +309,7 @@ exports[`gux-badge-beta #render should render component as expected (17) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (18) 1`] = `
 <gux-badge-beta accent="inherit">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-inherit gux-neutral">
+    <div class="gux-badge gux-inherit gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -327,7 +327,7 @@ exports[`gux-badge-beta #render should render component as expected (18) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (19) 1`] = `
 <gux-badge-beta accent="inherit" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-inherit gux-neutral">
+    <div class="gux-badge gux-inherit gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -345,7 +345,7 @@ exports[`gux-badge-beta #render should render component as expected (19) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (20) 1`] = `
 <gux-badge-beta>
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -364,7 +364,7 @@ exports[`gux-badge-beta #render should render component as expected (20) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (21) 1`] = `
 <gux-badge-beta accent="info">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -383,7 +383,7 @@ exports[`gux-badge-beta #render should render component as expected (21) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (22) 1`] = `
 <gux-badge-beta accent="success">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-neutral gux-success">
+    <div class="gux-badge gux-neutral gux-success">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -402,7 +402,7 @@ exports[`gux-badge-beta #render should render component as expected (22) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (23) 1`] = `
 <gux-badge-beta accent="warn">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-neutral gux-warn">
+    <div class="gux-badge gux-neutral gux-warn">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -421,7 +421,7 @@ exports[`gux-badge-beta #render should render component as expected (23) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (24) 1`] = `
 <gux-badge-beta accent="error">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-error gux-neutral">
+    <div class="gux-badge gux-error gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -440,7 +440,7 @@ exports[`gux-badge-beta #render should render component as expected (24) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (25) 1`] = `
 <gux-badge-beta accent="info" bold="">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-info gux-neutral">
+    <div class="gux-badge gux-bold gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -459,7 +459,7 @@ exports[`gux-badge-beta #render should render component as expected (25) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (26) 1`] = `
 <gux-badge-beta accent="success" bold="">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-neutral gux-success">
+    <div class="gux-badge gux-bold gux-neutral gux-success">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -478,7 +478,7 @@ exports[`gux-badge-beta #render should render component as expected (26) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (27) 1`] = `
 <gux-badge-beta accent="warn" bold="">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-neutral gux-warn">
+    <div class="gux-badge gux-bold gux-neutral gux-warn">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -497,7 +497,7 @@ exports[`gux-badge-beta #render should render component as expected (27) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (28) 1`] = `
 <gux-badge-beta accent="error" bold="">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-error gux-neutral">
+    <div class="gux-badge gux-bold gux-error gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -516,7 +516,7 @@ exports[`gux-badge-beta #render should render component as expected (28) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (29) 1`] = `
 <gux-badge-beta accent="info" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -535,7 +535,7 @@ exports[`gux-badge-beta #render should render component as expected (29) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (30) 1`] = `
 <gux-badge-beta accent="success" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-neutral gux-success">
+    <div class="gux-badge gux-neutral gux-success">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -554,7 +554,7 @@ exports[`gux-badge-beta #render should render component as expected (30) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (31) 1`] = `
 <gux-badge-beta accent="warn" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-neutral gux-warn">
+    <div class="gux-badge gux-neutral gux-warn">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -573,7 +573,7 @@ exports[`gux-badge-beta #render should render component as expected (31) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (32) 1`] = `
 <gux-badge-beta accent="error" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-error gux-neutral">
+    <div class="gux-badge gux-error gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -592,7 +592,7 @@ exports[`gux-badge-beta #render should render component as expected (32) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (33) 1`] = `
 <gux-badge-beta accent="info" bold="" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-info gux-neutral">
+    <div class="gux-badge gux-bold gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -611,7 +611,7 @@ exports[`gux-badge-beta #render should render component as expected (33) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (34) 1`] = `
 <gux-badge-beta accent="success" bold="" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-neutral gux-success">
+    <div class="gux-badge gux-bold gux-neutral gux-success">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -630,7 +630,7 @@ exports[`gux-badge-beta #render should render component as expected (34) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (35) 1`] = `
 <gux-badge-beta accent="warn" bold="" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-neutral gux-warn">
+    <div class="gux-badge gux-bold gux-neutral gux-warn">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -649,7 +649,7 @@ exports[`gux-badge-beta #render should render component as expected (35) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (36) 1`] = `
 <gux-badge-beta accent="error" bold="" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-error gux-neutral">
+    <div class="gux-badge gux-bold gux-error gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -668,7 +668,7 @@ exports[`gux-badge-beta #render should render component as expected (36) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (37) 1`] = `
 <gux-badge-beta accent="inherit">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-inherit gux-neutral">
+    <div class="gux-badge gux-inherit gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -687,7 +687,7 @@ exports[`gux-badge-beta #render should render component as expected (37) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (38) 1`] = `
 <gux-badge-beta accent="inherit" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-inherit gux-neutral">
+    <div class="gux-badge gux-inherit gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -706,7 +706,7 @@ exports[`gux-badge-beta #render should render component as expected (38) 1`] = `
 exports[`gux-badge-beta #render should render component as expected (deprecated) (1) 1`] = `
 <gux-badge-beta>
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -724,7 +724,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (2) 1`] = `
 <gux-badge-beta color="neutral">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -742,7 +742,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (3) 1`] = `
 <gux-badge-beta color="green">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-green gux-info">
+    <div class="gux-badge gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -760,7 +760,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (4) 1`] = `
 <gux-badge-beta color="yellow">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-yellow">
+    <div class="gux-badge gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -778,7 +778,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (5) 1`] = `
 <gux-badge-beta color="red">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-red">
+    <div class="gux-badge gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -796,7 +796,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (6) 1`] = `
 <gux-badge-beta bold="" color="neutral">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-info gux-neutral">
+    <div class="gux-badge gux-bold gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -814,7 +814,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (7) 1`] = `
 <gux-badge-beta bold="" color="green">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-green gux-info">
+    <div class="gux-badge gux-bold gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -832,7 +832,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (8) 1`] = `
 <gux-badge-beta bold="" color="yellow">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-info gux-yellow">
+    <div class="gux-badge gux-bold gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -850,7 +850,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (9) 1`] = `
 <gux-badge-beta bold="" color="red">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-info gux-red">
+    <div class="gux-badge gux-bold gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -868,7 +868,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (10) 1`] = `
 <gux-badge-beta color="neutral" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -886,7 +886,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (11) 1`] = `
 <gux-badge-beta color="green" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-green gux-info">
+    <div class="gux-badge gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -904,7 +904,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (12) 1`] = `
 <gux-badge-beta color="yellow" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-yellow">
+    <div class="gux-badge gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -922,7 +922,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (13) 1`] = `
 <gux-badge-beta color="red" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-red">
+    <div class="gux-badge gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -940,7 +940,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (14) 1`] = `
 <gux-badge-beta bold="" color="neutral" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-info gux-neutral">
+    <div class="gux-badge gux-bold gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -958,7 +958,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (15) 1`] = `
 <gux-badge-beta bold="" color="green" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-green gux-info">
+    <div class="gux-badge gux-bold gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -976,7 +976,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (16) 1`] = `
 <gux-badge-beta bold="" color="yellow" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-info gux-yellow">
+    <div class="gux-badge gux-bold gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -994,7 +994,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (17) 1`] = `
 <gux-badge-beta bold="" color="red" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-info gux-red">
+    <div class="gux-badge gux-bold gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1012,7 +1012,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (18) 1`] = `
 <gux-badge-beta color="inherit">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-inherit">
+    <div class="gux-badge gux-info gux-inherit">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1030,7 +1030,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (19) 1`] = `
 <gux-badge-beta color="inherit" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-inherit">
+    <div class="gux-badge gux-info gux-inherit">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1048,7 +1048,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (20) 1`] = `
 <gux-badge-beta>
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1067,7 +1067,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (21) 1`] = `
 <gux-badge-beta color="neutral">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1086,7 +1086,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (22) 1`] = `
 <gux-badge-beta color="green">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-green gux-info">
+    <div class="gux-badge gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1105,7 +1105,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (23) 1`] = `
 <gux-badge-beta color="yellow">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-yellow">
+    <div class="gux-badge gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1124,7 +1124,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (24) 1`] = `
 <gux-badge-beta color="red">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-red">
+    <div class="gux-badge gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1143,7 +1143,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (25) 1`] = `
 <gux-badge-beta bold="" color="neutral">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-info gux-neutral">
+    <div class="gux-badge gux-bold gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1162,7 +1162,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (26) 1`] = `
 <gux-badge-beta bold="" color="green">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-green gux-info">
+    <div class="gux-badge gux-bold gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1181,7 +1181,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (27) 1`] = `
 <gux-badge-beta bold="" color="yellow">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-info gux-yellow">
+    <div class="gux-badge gux-bold gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1200,7 +1200,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (28) 1`] = `
 <gux-badge-beta bold="" color="red">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-bold gux-info gux-red">
+    <div class="gux-badge gux-bold gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1219,7 +1219,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (29) 1`] = `
 <gux-badge-beta color="neutral" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1238,7 +1238,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (30) 1`] = `
 <gux-badge-beta color="green" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-green gux-info">
+    <div class="gux-badge gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1257,7 +1257,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (31) 1`] = `
 <gux-badge-beta color="yellow" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-yellow">
+    <div class="gux-badge gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1276,7 +1276,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (32) 1`] = `
 <gux-badge-beta color="red" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-red">
+    <div class="gux-badge gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1295,7 +1295,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (33) 1`] = `
 <gux-badge-beta bold="" color="neutral" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-info gux-neutral">
+    <div class="gux-badge gux-bold gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1314,7 +1314,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (34) 1`] = `
 <gux-badge-beta bold="" color="green" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-green gux-info">
+    <div class="gux-badge gux-bold gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1333,7 +1333,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (35) 1`] = `
 <gux-badge-beta bold="" color="yellow" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-info gux-yellow">
+    <div class="gux-badge gux-bold gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1352,7 +1352,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (36) 1`] = `
 <gux-badge-beta bold="" color="red" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-bold gux-info gux-red">
+    <div class="gux-badge gux-bold gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1371,7 +1371,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (37) 1`] = `
 <gux-badge-beta color="inherit">
   <mock:shadow-root>
-    <div aria-disabled="false" class="gux-badge gux-info gux-inherit">
+    <div class="gux-badge gux-info gux-inherit">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -1390,7 +1390,7 @@ exports[`gux-badge-beta #render should render component as expected (deprecated)
 exports[`gux-badge-beta #render should render component as expected (deprecated) (38) 1`] = `
 <gux-badge-beta color="inherit" dimmed="">
   <mock:shadow-root>
-    <div aria-disabled="true" class="gux-badge gux-info gux-inherit">
+    <div class="gux-badge gux-info gux-inherit">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>

@@ -11,7 +11,7 @@ import translationResources from './i18n/en.json';
  */
 
 @Component({
-  styleUrl: 'gux-badge.scss',
+  styleUrl: 'gux-badge.less',
   tag: 'gux-badge-beta',
   shadow: true
 })
