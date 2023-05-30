@@ -17,9 +17,6 @@ import { OnMutation } from '../../../../utils/decorator/on-mutation';
 
 import tabsResources from '../i18n/en.json';
 
-const TAB_WIDTH = 160;
-const TAB_HEIGHT = 40;
-
 @Component({
   styleUrl: 'gux-tab-list.less',
   tag: 'gux-tab-list',
@@ -28,6 +25,7 @@ const TAB_HEIGHT = 40;
 export class GuxTabList {
   private i18n: GetI18nValue;
   private triggerIds: string;
+  private currentScrollIndex: number = 0;
 
   @Element()
   root: HTMLElement;
@@ -173,14 +171,11 @@ export class GuxTabList {
     const scrollableSection = this.root.querySelector(
       '.gux-scrollable-section'
     );
-    const currentTab = this.root.querySelectorAll('gux-tab')[this.focused];
 
     if (direction === 'forward') {
       if (this.focused < this.tabTriggers.length - 1) {
         writeTask(() => {
-          this.hasHorizontalScrollbar
-            ? this.scrollRight(currentTab.clientWidth)
-            : this.scrollDown(currentTab.clientHeight);
+          this.hasHorizontalScrollbar ? this.scrollRight() : this.scrollDown();
         });
         this.focusTab(this.focused + 1);
       } else {
@@ -194,9 +189,7 @@ export class GuxTabList {
     } else if (direction === 'backward') {
       if (this.focused > 0) {
         writeTask(() => {
-          this.hasHorizontalScrollbar
-            ? this.scrollLeft(currentTab.clientWidth)
-            : this.scrollUp(currentTab.clientHeight);
+          this.hasHorizontalScrollbar ? this.scrollLeft() : this.scrollUp();
         });
         this.focusTab(this.focused - 1);
       } else {
@@ -280,29 +273,48 @@ export class GuxTabList {
     }
   }
 
-  scrollLeft(tabWidth: number) {
+  getTabLength(): number {
+    return this.tabTriggers[this.currentScrollIndex]?.scrollWidth;
+  }
+
+  scrollLeft() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(-tabWidth, 0);
+      if (this.isScrolledToEnd) {
+        this.currentScrollIndex = this.tabTriggers.length - 1;
+      } else {
+        this.currentScrollIndex = this.currentScrollIndex - 1;
+      }
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(-this.getTabLength(), 0);
     });
   }
 
-  scrollRight(tabWidth: number) {
+  scrollRight() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(tabWidth, 0);
+      if (this.isScrolledToBeginning) {
+        this.currentScrollIndex = 0;
+      }
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(this.getTabLength(), 0);
+      this.currentScrollIndex = this.currentScrollIndex + 1;
     });
   }
 
-  scrollUp(tabHeight: number) {
+  scrollUp() {
     writeTask(() => {
       this.root
         .querySelector('.gux-scrollable-section')
-        .scrollBy(0, -tabHeight);
+        .scrollBy(0, -this.tabTriggers[this.focused].clientHeight);
     });
   }
 
-  scrollDown(tabHeight: number) {
+  scrollDown() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(0, tabHeight);
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(0, this.tabTriggers[this.focused].clientHeight);
     });
   }
 
@@ -364,16 +376,16 @@ export class GuxTabList {
   private getScrollDirection(direction: string): void {
     switch (direction) {
       case 'scrollLeft':
-        this.scrollLeft(TAB_WIDTH);
+        this.scrollLeft();
         break;
       case 'scrollRight':
-        this.scrollRight(TAB_WIDTH);
+        this.scrollRight();
         break;
       case 'scrollUp':
-        this.scrollUp(TAB_HEIGHT);
+        this.scrollUp();
         break;
       case 'scrollDown':
-        this.scrollDown(TAB_HEIGHT);
+        this.scrollDown();
     }
   }
 

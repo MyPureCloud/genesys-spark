@@ -22,8 +22,6 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 
 import tabsResources from '../i18n/en.json';
 
-const TAB_WIDTH = 160;
-
 @Component({
   styleUrl: 'gux-tab-advanced-list.less',
   tag: 'gux-tab-advanced-list',
@@ -516,13 +514,15 @@ export class GuxTabAdvancedList {
     writeTask(() => {
       this.root
         .querySelector('.gux-scrollable-section')
-        .scrollBy(-TAB_WIDTH, 0);
+        .scrollBy(-this.root.querySelector('gux-tab-advanced')?.scrollWidth, 0);
     });
   }
 
   scrollRight() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(TAB_WIDTH, 0);
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(this.root.querySelector('gux-tab-advanced')?.scrollWidth, 0);
     });
   }
 
