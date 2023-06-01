@@ -22,7 +22,7 @@
     "generate-region-flags-sprite-file": "./scripts/generate-region-flags-sprite-file.js",
     "generate-start-of-week-file": "./scripts/generate-start-of-week-file.js",
     "generate-versions-file": "./scripts/generate-versions-file.mjs",
-    "i18n": "npm run update-en-i18n && npm run generate-start-of-week-file && npm run build-i18n",
+    "i18n": "npm run update-en-i18n && npm run build-i18n && npm run generate-start-of-week-file",
     "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\" \"svgo\"",
     "lint-staged": "lint-staged",
     "list-checked-a11y-components": "node scripts/list-checked-a11y-components.js",

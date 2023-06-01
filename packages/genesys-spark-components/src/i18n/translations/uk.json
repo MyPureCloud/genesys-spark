@@ -1,0 +1,509 @@
+{
+  "gux-alert": {
+    "info": "Information alert with message",
+    "success": "Success alert with message",
+    "warning": "Warning alert with message",
+    "error": "Error alert with message"
+  },
+  "gux-badge": {
+    "neutral": "badge with label: {label}, color: neutral",
+    "neutral-bold": "badge with label: {label}, color: neutral bold",
+    "green": "badge with label: {label}, color: green",
+    "green-bold": "badge with label: {label}, color: green bold",
+    "yellow": "badge with label: {label}, color: yellow",
+    "yellow-bold": "badge with label: {label}, color: yellow bold",
+    "red": "badge with label: {label}, color: red",
+    "red-bold": "badge with label: {label}, color: red bold",
+    "inherit": "badge with label: {label}"
+  },
+  "gux-column-manager-item": {
+    "activateReordering": "Activate reordering mode for {columnName} column"
+  },
+  "gux-column-manager": {
+    "search": "Search column",
+    "selectedColumnCount": "{count}/{total} Columns Selected",
+    "selectAllColumnsScreenReader": "{count} of {total} columns selected: check checkbox to select all {total} columns",
+    "unselectAllColumnsScreenReader": "{count} of {total} columns selected: uncheck checkbox to unselect all {total} columns",
+    "movePositionPrompt": "Press space or enter to move the {columnName} column to position {newPositionNumber} from position {oldPositionNumber}.",
+    "reorderingModeActive": "Reordering mode active. Reposition the {columnName} column using the up arrow key, the down arrow key, the home key and the end key. Press Escape to deactivate reordering mode."
+  },
+  "gux-context-menu": {
+    "contextMenuScreenreaderText": "Context menu"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-dropdown-multi": {
+    "textInputResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown",
+    "numberSelected": "{numberSelected} selected",
+    "pressEnterToCreate": "Press Enter to create new option, {textInputValue}"
+  },
+  "gux-month-calendar": {
+    "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
+  },
+  "gux-month-picker": {
+    "toggleCalendar": "Toggle month calendar view",
+    "month": "Month",
+    "year": "Year",
+    "unset": "Unset"
+  },
+  "gux-pagination-buttons-beta": {
+    "page": "Page",
+    "totalPages": " of {totalPages, number}",
+    "first": "First",
+    "previous": "Previous",
+    "next": "Next",
+    "last": "Last",
+    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
+  },
+  "gux-pagination-item-counts-beta": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " of {totalItems, number}"
+  },
+  "gux-pagination-items-per-page-beta": {
+    "perPage": "per page",
+    "itemsPerPage": "Items per page",
+    "rangeSelected": "Items per page dropdown, {range} selected"
+  },
+  "gux-phone-input": {
+    "AD": "Andorra",
+    "AE": "United Arab Emirates",
+    "AF": "Afghanistan",
+    "AG": "Antigua and Barbuda",
+    "AI": "Anguilla",
+    "AL": "Albania",
+    "AM": "Armenia",
+    "AO": "Angola",
+    "AR": "Argentina",
+    "AS": "American Samoa",
+    "AT": "Austria",
+    "AU": "Australia",
+    "AW": "Aruba",
+    "AX": "Åland Islands",
+    "AZ": "Azerbaijan",
+    "BA": "Bosnia and Herzegovina",
+    "BB": "Barbados",
+    "BD": "Bangladesh",
+    "BE": "Belgium",
+    "BF": "Burkina Faso",
+    "BG": "Bulgaria",
+    "BH": "Bahrain",
+    "BI": "Burundi",
+    "BJ": "Benin",
+    "BL": "Saint Barthelemy",
+    "BM": "Bermuda",
+    "BN": "Brunei",
+    "BO": "Bolivia",
+    "BQ": "Caribbean Netherlands",
+    "BR": "Brazil",
+    "BS": "Bahamas",
+    "BT": "Bhutan",
+    "BV": "Bouvet Island",
+    "BW": "Botswana",
+    "BY": "Belarus",
+    "BZ": "Belize",
+    "CA": "Canada",
+    "CC": "Cocos Islands",
+    "CD": "Democratic Republic of the Congo",
+    "CF": "Central African Republic",
+    "CG": "Republic of the Congo",
+    "CH": "Switzerland",
+    "CI": "Ivory Coast",
+    "CK": "Cook Islands",
+    "CL": "Chile",
+    "CM": "Cameroon",
+    "CN": "China",
+    "CO": "Colombia",
+    "CR": "Costa Rica",
+    "CU": "Cuba",
+    "CV": "Cape Verde",
+    "CW": "Curacao",
+    "CX": "Christmas Island",
+    "CY": "Cyprus",
+    "CZ": "Czech Republic",
+    "DE": "Germany",
+    "DJ": "Djibouti",
+    "DK": "Denmark",
+    "DM": "Dominica",
+    "DO": "Dominican Republic",
+    "DZ": "Algeria",
+    "EC": "Ecuador",
+    "EE": "Estonia",
+    "EG": "Egypt",
+    "EH": "Western Sahara",
+    "ER": "Eritrea",
+    "ES": "Spain",
+    "ET": "Ethiopia",
+    "FI": "Finland",
+    "FJ": "Fiji",
+    "FK": "Falkland Islands",
+    "FM": "Micronesia",
+    "FO": "Faroe Islands",
+    "FR": "France",
+    "GA": "Gabon",
+    "GB": "United Kingdom",
+    "GD": "Grenada",
+    "GE": "Georgia",
+    "GF": "French Guiana",
+    "GG": "Guernsey",
+    "GH": "Ghana",
+    "GI": "Gibraltar",
+    "GL": "Greenland",
+    "GM": "Gambia",
+    "GN": "Guinea",
+    "GP": "Guadeloupe",
+    "GQ": "Equatorial Guinea",
+    "GR": "Greece",
+    "GS": "South Georgia and the South Sandwich Islands",
+    "GT": "Guatemala",
+    "GU": "Guam",
+    "GW": "Guinea-Bissau",
+    "GY": "Guyana",
+    "HK": "Hong Kong",
+    "HN": "Honduras",
+    "HR": "Croatia",
+    "HT": "Haiti",
+    "HU": "Hungary",
+    "ID": "Indonesia",
+    "IE": "Ireland",
+    "IL": "Israel",
+    "IM": "Isle of Man",
+    "IN": "India",
+    "IO": "British Indian Ocean Territory",
+    "IQ": "Iraq",
+    "IR": "Iran",
+    "IS": "Iceland",
+    "IT": "Italy",
+    "JE": "Jersey",
+    "JM": "Jamaica",
+    "JO": "Jordan",
+    "JP": "Japan",
+    "KE": "Kenya",
+    "KG": "Kyrgyzstan",
+    "KH": "Cambodia",
+    "KI": "Kiribati",
+    "KM": "Comoros",
+    "KN": "Saint Kitts and Nevis",
+    "KP": "North Korea",
+    "KR": "South Korea",
+    "KW": "Kuwait",
+    "KY": "Cayman Islands",
+    "KZ": "Kazakhstan",
+    "LA": "Laos",
+    "LB": "Lebanon",
+    "LC": "Saint Lucia",
+    "LI": "Liechtenstein",
+    "LK": "Sri Lanka",
+    "LR": "Liberia",
+    "LS": "Lesotho",
+    "LT": "Lithuania",
+    "LU": "Luxembourg",
+    "LV": "Latvia",
+    "LY": "Libya",
+    "MA": "Morocco",
+    "MC": "Monaco",
+    "MD": "Moldova",
+    "ME": "Montenegro",
+    "MF": "Saint Martin",
+    "MG": "Madagascar",
+    "MH": "Marshall Islands",
+    "MK": "Macedonia",
+    "ML": "Mali",
+    "MM": "Myanmar",
+    "MN": "Mongolia",
+    "MO": "Macau",
+    "MP": "Northern Mariana Islands",
+    "MQ": "Martinique",
+    "MR": "Mauritania",
+    "MS": "Montserrat",
+    "MT": "Malta",
+    "MU": "Mauritius",
+    "MV": "Maldives",
+    "MW": "Malawi",
+    "MX": "Mexico",
+    "MY": "Malaysia",
+    "MZ": "Mozambique",
+    "NA": "Namibia",
+    "NC": "New Caledonia",
+    "NE": "Niger",
+    "NF": "Norfolk Island",
+    "NG": "Nigeria",
+    "NI": "Nicaragua",
+    "NL": "Netherlands",
+    "NO": "Norway",
+    "NP": "Nepal",
+    "NR": "Nauru",
+    "NU": "Niue",
+    "NZ": "New Zealand",
+    "OM": "Oman",
+    "PA": "Panama",
+    "PE": "Peru",
+    "PF": "French Polynesia",
+    "PG": "Papua New Guinea",
+    "PH": "Philippines",
+    "PK": "Pakistan",
+    "PL": "Poland",
+    "PM": "Saint Pierre and Miquelon",
+    "PN": "Pitcairn",
+    "PR": "Puerto Rico",
+    "PS": "Palestine",
+    "PT": "Portugal",
+    "PW": "Palau",
+    "PY": "Paraguay",
+    "QA": "Qatar",
+    "RE": "Reunion",
+    "RO": "Romania",
+    "RS": "Serbia",
+    "RU": "Russia",
+    "RW": "Rwanda",
+    "SA": "Saudi Arabia",
+    "SB": "Solomon Islands",
+    "SC": "Seychelles",
+    "SD": "Sudan",
+    "SE": "Sweden",
+    "SG": "Singapore",
+    "SH": "Saint Helena",
+    "SI": "Slovenia",
+    "SJ": "Svalbard and Jan Mayen",
+    "SK": "Slovakia",
+    "SL": "Sierra Leone",
+    "SM": "San Marino",
+    "SN": "Senegal",
+    "SO": "Somalia",
+    "SR": "Suriname",
+    "SS": "South Sudan",
+    "ST": "Sao Tome and Principe",
+    "SV": "El Salvador",
+    "SX": "Sint Maarten",
+    "SY": "Syria",
+    "SZ": "Swaziland",
+    "TC": "Turks and Caicos Islands",
+    "TD": "Chad",
+    "TG": "Togo",
+    "TH": "Thailand",
+    "TJ": "Tajikistan",
+    "TK": "Tokelau",
+    "TL": "East Timor",
+    "TM": "Turkmenistan",
+    "TN": "Tunisia",
+    "TO": "Tonga",
+    "TR": "Turkey",
+    "TT": "Trinidad and Tobago",
+    "TV": "Tuvalu",
+    "TW": "Taiwan",
+    "TZ": "Tanzania",
+    "UA": "Ukraine",
+    "UG": "Uganda",
+    "US": "United States",
+    "UY": "Uruguay",
+    "UZ": "Uzbekistan",
+    "VA": "Vatican",
+    "VC": "Saint Vincent and the Grenadines",
+    "VE": "Venezuela",
+    "VG": "British Virgin Islands",
+    "VI": "U.S. Virgin Islands",
+    "VN": "Vietnam",
+    "VU": "Vanuatu",
+    "WF": "Wallis and Futuna",
+    "WS": "Samoa",
+    "XK": "Kosovo",
+    "YE": "Yemen",
+    "YT": "Mayotte",
+    "ZA": "South Africa",
+    "ZM": "Zambia",
+    "ZW": "Zimbabwe"
+  },
+  "gux-skip-navigation-list": {
+    "navigationName": "Skip links navigation"
+  },
+  "gux-table-toolbar-action": {
+    "actionRefresh": "Refresh",
+    "actionDelete": "Delete",
+    "actionExport": "Export",
+    "actionImport": "Import",
+    "actionRevert": "Revert",
+    "actionAdd": "Add"
+  },
+  "gux-table-toolbar-menu-button": {
+    "additionalActions": "Additional Actions"
+  },
+  "gux-table": {
+    "emptyMessage": "No data available",
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "selectAllTableRows": "Select All Table Rows",
+    "selectTableRow": "Select Table Row",
+    "sortAsc": "Sorted Ascending",
+    "sortDesc": "Sorted Descending",
+    "tableOptions": "Table Options",
+    "noColumnSort": "{headerContent}. The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order",
+    "ascendingColumnSort": "{headerContent}. The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order",
+    "descendingColumnSort": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column"
+  },
+  "gux-tag": {
+    "tag": "tag with label: {label}",
+    "tag-disabled": "disabled tag with label: {label}",
+    "remove-tag": "Remove tag with label: {label}"
+  },
+  "gux-time-picker": {
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
+  },
+  "gux-action-button-legacy": {
+    "actionButtonDropdown": "Dropdown for {buttonTitle}"
+  },
+  "gux-command-palette-legacy": {
+    "recentSearch": "Recently Searched:",
+    "commonSearch": "Common Searches:",
+    "limited": "Results limited, refine your search for more commands.",
+    "search": "Search for commands.",
+    "title": "Command Palette"
+  },
+  "gux-input-color": {
+    "required": "Required"
+  },
+  "gux-input-number": {
+    "clear": "Clear",
+    "increment": "Increment",
+    "decrement": "Decrement"
+  },
+  "gux-input-search": {
+    "clear": "Clear"
+  },
+  "gux-input-text-like": {
+    "clear": "Clear"
+  },
+  "gux-tabs-legacy": {
+    "createNewTab": "Create New Tab",
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "disableNewTab": "Maximum number of tabs created has been reached"
+  },
+  "gux-action-button": {
+    "actionButtonDropdown": "Dropdown for {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Search"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Breadcrumbs"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Clear",
+    "navigateNextBtn": "Next",
+    "navigatePreviousBtn": "Previous",
+    "totalMatches": "{currentMatch, number} of {matchCount, number}"
+  },
+  "gux-datepicker": {
+    "start": "Start",
+    "end": "End",
+    "date": "Date",
+    "toggleCalendar": "Toggle calendar view"
+  },
+  "gux-disclosure-button": {
+    "defaultLabel": "Disclosure button"
+  },
+  "gux-dismiss-button": {
+    "dismiss": "Dismiss"
+  },
+  "gux-dropdown": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown"
+  },
+  "gux-form-field-dropdown": {
+    "required": "Required"
+  },
+  "gux-form-field-number": {
+    "increment": "Increment",
+    "decrement": "Decrement"
+  },
+  "gux-form-field-phone": {
+    "required": "Required",
+    "invalidPhoneNumber": "Number is not valid"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Clear"
+  },
+  "gux-create-option": {
+    "createCustomOptionInstructions": ", select to create a new custom option",
+    "createOption": "Add \"{optionValue}\""
+  },
+  "gux-option-multi": {
+    "removeCustomElementInstructions": ", unselecting this custom option will remove it from the list"
+  },
+  "gux-listbox-multi": {
+    "add": "Add {name}",
+    "noMatches": "No matches",
+    "loading": "Loading..."
+  },
+  "gux-listbox": {
+    "noMatches": "No matches",
+    "loading": "Loading..."
+  },
+  "gux-pagination-cursor": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "gux-pagination-buttons": {
+    "page": "Page",
+    "totalPages": " of {totalPages, number}",
+    "first": "First",
+    "previous": "Previous",
+    "next": "Next",
+    "last": "Last",
+    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " of {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "per page",
+    "itemsPerPage": "Items per page",
+    "rangeSelected": "Items per page dropdown, {range} selected"
+  },
+  "gux-radial-loading": {
+    "loading": "Loading"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Create New Tab",
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "options": "Tab Options for {tabTitle}",
+    "disableNewTab": "Maximum number of tabs created has been reached",
+    "toggleSort": "Toggle sort mode using space",
+    "sortModeOn": "Sort mode on, use the left and right arrow keys to reorder tabs. Press space or enter key to complete sort. Press escape key to cancel sort",
+    "sortComplete": "Sort complete",
+    "sortCancelled": "Sort cancelled"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "scrollUp": "Scroll Up",
+    "scrollDown": "Scroll Down"
+  },
+  "gux-toggle": {
+    "defaultAriaLabel": "Toggle Switch",
+    "toggleIsLoading": "Toggle is loading",
+    "toggleIsFinishedLoading": "Toggle is finished loading"
+  }
+}
