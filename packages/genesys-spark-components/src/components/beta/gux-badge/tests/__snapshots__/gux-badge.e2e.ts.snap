@@ -6,7 +6,7 @@ exports[`gux-badge-beta #render should render component as expected (2) 1`] = `"
 
 exports[`gux-badge-beta #render should render component as expected (3) 1`] = `"<gux-badge-beta accent=\\"success\\" hydrated=\\"\\">Badge</gux-badge-beta>"`;
 
-exports[`gux-badge-beta #render should render component as expected (4) 1`] = `"<gux-badge-beta accent=\\"warn\\" hydrated=\\"\\">Badge</gux-badge-beta>"`;
+exports[`gux-badge-beta #render should render component as expected (4) 1`] = `"<gux-badge-beta accent=\\"warning\\" hydrated=\\"\\">Badge</gux-badge-beta>"`;
 
 exports[`gux-badge-beta #render should render component as expected (5) 1`] = `"<gux-badge-beta accent=\\"error\\" hydrated=\\"\\">Badge</gux-badge-beta>"`;
 
@@ -18,7 +18,7 @@ exports[`gux-badge-beta #render should render component as expected (8) 1`] = `"
 
 exports[`gux-badge-beta #render should render component as expected (9) 1`] = `"<gux-badge-beta bold=\\"\\" accent=\\"success\\" hydrated=\\"\\">Badge</gux-badge-beta>"`;
 
-exports[`gux-badge-beta #render should render component as expected (10) 1`] = `"<gux-badge-beta bold=\\"\\" accent=\\"warn\\" hydrated=\\"\\">Badge</gux-badge-beta>"`;
+exports[`gux-badge-beta #render should render component as expected (10) 1`] = `"<gux-badge-beta bold=\\"\\" accent=\\"warning\\" hydrated=\\"\\">Badge</gux-badge-beta>"`;
 
 exports[`gux-badge-beta #render should render component as expected (11) 1`] = `"<gux-badge-beta bold=\\"\\" accent=\\"error\\" hydrated=\\"\\">Badge</gux-badge-beta>"`;
 
@@ -30,7 +30,7 @@ exports[`gux-badge-beta #render should render component as expected (14) 1`] = `
 
 exports[`gux-badge-beta #render should render component as expected (15) 1`] = `"<gux-badge-beta accent=\\"success\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>Badge</gux-badge-beta>"`;
 
-exports[`gux-badge-beta #render should render component as expected (16) 1`] = `"<gux-badge-beta accent=\\"warn\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>Badge</gux-badge-beta>"`;
+exports[`gux-badge-beta #render should render component as expected (16) 1`] = `"<gux-badge-beta accent=\\"warning\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>Badge</gux-badge-beta>"`;
 
 exports[`gux-badge-beta #render should render component as expected (17) 1`] = `"<gux-badge-beta accent=\\"error\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>Badge</gux-badge-beta>"`;
 
@@ -42,7 +42,7 @@ exports[`gux-badge-beta #render should render component as expected (20) 1`] = `
 
 exports[`gux-badge-beta #render should render component as expected (21) 1`] = `"<gux-badge-beta bold=\\"\\" accent=\\"success\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>Badge</gux-badge-beta>"`;
 
-exports[`gux-badge-beta #render should render component as expected (22) 1`] = `"<gux-badge-beta bold=\\"\\" accent=\\"warn\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>Badge</gux-badge-beta>"`;
+exports[`gux-badge-beta #render should render component as expected (22) 1`] = `"<gux-badge-beta bold=\\"\\" accent=\\"warning\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>Badge</gux-badge-beta>"`;
 
 exports[`gux-badge-beta #render should render component as expected (23) 1`] = `"<gux-badge-beta bold=\\"\\" accent=\\"error\\" hydrated=\\"\\"><gux-icon icon-name=\\"subtract\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon>Badge</gux-badge-beta>"`;
 
