@@ -28,8 +28,10 @@ graph TD;
   gux-table-toolbar-beta --> gux-table-toolbar-menu-button
   gux-table-toolbar-menu-button --> gux-popup-beta
   gux-table-toolbar-menu-button --> gux-button-slot-beta
+  gux-table-toolbar-menu-button --> gux-tooltip-title
   gux-table-toolbar-menu-button --> gux-icon
   gux-table-toolbar-menu-button --> gux-list
+  gux-tooltip-title --> gux-tooltip
   style gux-table-toolbar-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -19,7 +19,11 @@ exports[`gux-table-toolbar-beta #render should render table toolbar as expected 
               <div class="gux-toolbar-menu-container" slot="target">
                 <gux-button-slot-beta class="gux-menu-button">
                   <button aria-expanded="false" aria-haspopup="true" type="button">
-                    <gux-icon icon-name="menu-kebab-horizontal" screenreader-text="Additional Actions"></gux-icon>
+                    <gux-tooltip-title>
+                      <span>
+                        <gux-icon icon-name="menu-kebab-horizontal" screenreader-text="Additional Actions"></gux-icon>
+                      </span>
+                    </gux-tooltip-title>
                   </button>
                 </gux-button-slot-beta>
               </div>
