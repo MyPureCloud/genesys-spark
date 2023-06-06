@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description             | Type                                                     | Default     |
-| -------- | --------- | ----------------------- | -------------------------------------------------------- | ----------- |
-| `bold`   | `bold`    | Bold badge.             | `boolean`                                                | `false`     |
-| `color`  | `color`   | Badge background color. | `"green" \| "inherit" \| "neutral" \| "red" \| "yellow"` | `'neutral'` |
+| Property | Attribute | Description | Type                                                       | Default     |
+| -------- | --------- | ----------- | ---------------------------------------------------------- | ----------- |
+| `accent` | `accent`  |             | `"error" \| "info" \| "inherit" \| "success" \| "warning"` | `'info'`    |
+| `bold`   | `bold`    |             | `boolean`                                                  | `false`     |
+| `color`  | `color`   |             | `"green" \| "inherit" \| "neutral" \| "red" \| "yellow"`   | `'neutral'` |
 
 
 ## Slots

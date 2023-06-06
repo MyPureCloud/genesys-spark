@@ -1,0 +1,33 @@
+@mixin gux-hide-offscreen {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@mixin gux-unhide-offscreen {
+  position: inherit;
+  top: inherit;
+  left: inherit;
+  width: inherit;
+  height: inherit;
+  overflow: inherit;
+}
+
+@mixin gux-sr-only {
+  @include gux-hide-offscreen;
+}
+
+@mixin gux-sr-only-clip {
+  &:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

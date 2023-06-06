@@ -69,7 +69,7 @@
     "form": {
       "label": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
+        "fontWeight": 400,
         "lineHeight": "18px",
         "fontSize": "12px",
         "letterSpacing": "0%",
@@ -80,9 +80,9 @@
       },
       "button": {
         "fontFamily": "Urbanist",
-        "fontWeight": "SemiBold",
-        "lineHeight": 20,
-        "fontSize": 14,
+        "fontWeight": 600,
+        "lineHeight": "20px",
+        "fontSize": "14px",
         "letterSpacing": "0%",
         "paragraphSpacing": 0,
         "paragraphIndent": "0px",
@@ -91,7 +91,7 @@
       },
       "text-value": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
+        "fontWeight": 400,
         "lineHeight": "18px",
         "fontSize": "12px",
         "letterSpacing": "0%",
@@ -102,7 +102,7 @@
       },
       "counter": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
+        "fontWeight": 400,
         "lineHeight": "18px",
         "fontSize": "12px",
         "letterSpacing": "0%",
@@ -113,7 +113,7 @@
       },
       "placeholder": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
+        "fontWeight": 400,
         "lineHeight": "18px",
         "fontSize": "12px",
         "letterSpacing": "0%",
@@ -124,39 +124,39 @@
       },
       "match": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
-        "lineHeight": 18,
-        "fontSize": 12
+        "fontWeight": 400,
+        "lineHeight": "18px",
+        "fontSize": "12px"
       }
     },
     "badge": {
       "label": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "SemiBold",
-        "lineHeight": 16,
-        "fontSize": 12
+        "fontWeight": 600,
+        "lineHeight": "16px",
+        "fontSize": "12px"
       }
     },
     "toggle": {
       "label": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
-        "lineHeight": 16,
-        "fontSize": 12
+        "fontWeight": 400,
+        "lineHeight": "16px",
+        "fontSize": "12px"
       }
     },
     "tag": {
       "label": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "SemiBold",
+        "fontWeight": 600,
         "lineHeight": "15px",
-        "fontSize": 12
+        "fontSize": "12px"
       }
     },
     "link": {
       "default": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
+        "fontWeight": 400,
         "lineHeight": "18px",
         "fontSize": "12px",
         "letterSpacing": "0%",
@@ -169,9 +169,9 @@
         "medium": {
           "default": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "Bold",
-            "lineHeight": 20,
-            "fontSize": 14,
+            "fontWeight": 700,
+            "lineHeight": "20px",
+            "fontSize": "14px",
             "letterSpacing": "0%",
             "paragraphSpacing": 0,
             "paragraphIndent": "0px",
@@ -180,9 +180,9 @@
           },
           "underlined": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "Bold",
-            "lineHeight": 20,
-            "fontSize": 14,
+            "fontWeight": 700,
+            "lineHeight": "20px",
+            "fontSize": "14px",
             "letterSpacing": "0%",
             "paragraphSpacing": 0,
             "paragraphIndent": "0px",
@@ -193,7 +193,7 @@
         "small": {
           "default": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "Bold",
+            "fontWeight": 700,
             "lineHeight": "18px",
             "fontSize": "12px",
             "letterSpacing": "0%",
@@ -204,9 +204,9 @@
           },
           "underlined": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "Bold",
-            "lineHeight": 18,
-            "fontSize": 12,
+            "fontWeight": 700,
+            "lineHeight": "18px",
+            "fontSize": "12px",
             "letterSpacing": "0%",
             "paragraphSpacing": 0,
             "paragraphIndent": "0px",
@@ -219,9 +219,9 @@
         "medium": {
           "default": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "Bold",
-            "lineHeight": 20,
-            "fontSize": 14,
+            "fontWeight": 700,
+            "lineHeight": "20px",
+            "fontSize": "14px",
             "letterSpacing": "0%",
             "paragraphSpacing": 0,
             "paragraphIndent": "0px",
@@ -230,9 +230,9 @@
           },
           "underlined": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "Bold",
-            "lineHeight": 20,
-            "fontSize": 14,
+            "fontWeight": 700,
+            "lineHeight": "20px",
+            "fontSize": "14px",
             "letterSpacing": "0%",
             "paragraphSpacing": 0,
             "paragraphIndent": "0px",
@@ -245,9 +245,9 @@
         "medium": {
           "default": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "SemiBold",
-            "lineHeight": 20,
-            "fontSize": 14,
+            "fontWeight": 600,
+            "lineHeight": "20px",
+            "fontSize": "14px",
             "letterSpacing": "0%",
             "paragraphSpacing": 0,
             "paragraphIndent": "0px",
@@ -256,9 +256,9 @@
           },
           "underlined": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "SemiBold",
-            "lineHeight": 20,
-            "fontSize": 14,
+            "fontWeight": 600,
+            "lineHeight": "20px",
+            "fontSize": "14px",
             "letterSpacing": "0%",
             "paragraphSpacing": 0,
             "paragraphIndent": "0px",
@@ -269,7 +269,7 @@
         "small": {
           "default": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "SemiBold",
+            "fontWeight": 600,
             "lineHeight": "18px",
             "fontSize": "12px",
             "letterSpacing": "0%",
@@ -280,9 +280,9 @@
           },
           "underlined": {
             "fontFamily": "Noto Sans",
-            "fontWeight": "SemiBold",
-            "lineHeight": 18,
-            "fontSize": 12,
+            "fontWeight": 600,
+            "lineHeight": "18px",
+            "fontSize": "12px",
             "letterSpacing": "0%",
             "paragraphSpacing": 0,
             "paragraphIndent": "0px",
@@ -293,7 +293,7 @@
       },
       "underlined": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
+        "fontWeight": 400,
         "lineHeight": "18px",
         "fontSize": "12px",
         "letterSpacing": "0%",
@@ -306,9 +306,9 @@
     "copy-to-clipboard": {
       "default": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
-        "lineHeight": 20,
-        "fontSize": 14,
+        "fontWeight": 400,
+        "lineHeight": "20px",
+        "fontSize": "14px",
         "letterSpacing": "0%",
         "paragraphSpacing": 0,
         "paragraphIndent": "0px",
@@ -320,9 +320,9 @@
       "separator": {
         "medium": {
           "fontFamily": "Noto Sans",
-          "fontWeight": "Bold",
-          "lineHeight": 24,
-          "fontSize": 16,
+          "fontWeight": 700,
+          "lineHeight": "24px",
+          "fontSize": "16px",
           "letterSpacing": "0%",
           "paragraphSpacing": 0,
           "paragraphIndent": "0px",
@@ -331,9 +331,9 @@
         },
         "small": {
           "fontFamily": "Noto Sans",
-          "fontWeight": "Bold",
-          "lineHeight": 20,
-          "fontSize": 14,
+          "fontWeight": 700,
+          "lineHeight": "20px",
+          "fontSize": "14px",
           "letterSpacing": "0%",
           "paragraphSpacing": 0,
           "paragraphIndent": "0px",
@@ -345,140 +345,140 @@
     "in-line-alert": {
       "label": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Bold",
-        "lineHeight": 18,
-        "fontSize": 12
+        "fontWeight": 700,
+        "lineHeight": "18px",
+        "fontSize": "12px"
       },
       "body": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
-        "lineHeight": 18,
-        "fontSize": 12
+        "fontWeight": 400,
+        "lineHeight": "18px",
+        "fontSize": "12px"
       }
     },
     "slider": {
       "text": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "SemiBold",
-        "lineHeight": 20,
-        "fontSize": 14
+        "fontWeight": 600,
+        "lineHeight": "20px",
+        "fontSize": "14px"
       }
     },
     "popover": {
       "title": {
         "fontFamily": "Urbanist",
-        "fontWeight": "Bold",
-        "lineHeight": 24,
-        "fontSize": 16
+        "fontWeight": 700,
+        "lineHeight": "24px",
+        "fontSize": "16px"
       },
       "text": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
-        "lineHeight": 20,
-        "fontSize": 14
+        "fontWeight": 400,
+        "lineHeight": "20px",
+        "fontSize": "14px"
       }
     },
     "toast": {
       "title": {
         "fontFamily": "Urbanist",
-        "fontWeight": "Bold",
-        "lineHeight": 24,
-        "fontSize": 16
+        "fontWeight": 700,
+        "lineHeight": "24px",
+        "fontSize": "16px"
       },
       "text": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
-        "lineHeight": 20,
-        "fontSize": 14
+        "fontWeight": 400,
+        "lineHeight": "20px",
+        "fontSize": "14px"
       }
     },
     "buttons": {
       "default": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Bold",
-        "lineHeight": 16,
-        "fontSize": 12
+        "fontWeight": 700,
+        "lineHeight": "16px",
+        "fontSize": "12px"
       }
     },
     "tab": {
       "label": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
-        "lineHeight": 16,
-        "fontSize": 12
+        "fontWeight": 400,
+        "lineHeight": "16px",
+        "fontSize": "12px"
       }
     },
     "menu": {
       "default": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
-        "lineHeight": 18,
-        "fontSize": 12
+        "fontWeight": 400,
+        "lineHeight": "18px",
+        "fontSize": "12px"
       },
       "active": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Bold",
-        "lineHeight": 18,
-        "fontSize": 12
+        "fontWeight": 700,
+        "lineHeight": "18px",
+        "fontSize": "12px"
       }
     },
     "calendar": {
       "selectors": {
         "default": {
           "fontFamily": "Noto Sans",
-          "fontWeight": "Regular",
-          "lineHeight": 16,
-          "fontSize": 12
+          "fontWeight": 400,
+          "lineHeight": "16px",
+          "fontSize": "12px"
         },
         "current": {
           "fontFamily": "Noto Sans",
-          "fontWeight": "Bold",
-          "lineHeight": 16,
-          "fontSize": 12
+          "fontWeight": 700,
+          "lineHeight": "16px",
+          "fontSize": "12px"
         }
       },
       "header": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Bold",
-        "lineHeight": 24,
-        "fontSize": 16
+        "fontWeight": 700,
+        "lineHeight": "24px",
+        "fontSize": "16px"
       }
     },
     "table": {
       "header-label": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Bold",
-        "lineHeight": 16,
-        "fontSize": 12
+        "fontWeight": 700,
+        "lineHeight": "16px",
+        "fontSize": "12px"
       },
       "pagination": {
         "current": {
           "fontFamily": "Noto Sans",
-          "fontWeight": "Bold",
-          "lineHeight": 16,
-          "fontSize": 12
+          "fontWeight": 700,
+          "lineHeight": "16px",
+          "fontSize": "12px"
         },
         "default": {
           "fontFamily": "Noto Sans",
-          "fontWeight": "Regular",
-          "lineHeight": 16,
-          "fontSize": 12
+          "fontWeight": 400,
+          "lineHeight": "16px",
+          "fontSize": "12px"
         }
       },
       "cell-label": {
         "fontFamily": "Noto Sans",
-        "fontWeight": "Regular",
-        "lineHeight": 16,
-        "fontSize": 12
+        "fontWeight": 400,
+        "lineHeight": "16px",
+        "fontSize": "12px"
       }
     }
   },
   "heading": {
     "xl-semi": {
       "fontFamily": "Urbanist",
-      "fontWeight": "SemiBold",
-      "lineHeight": 44,
-      "fontSize": 36,
+      "fontWeight": 600,
+      "lineHeight": "44px",
+      "fontSize": "36px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -487,9 +487,9 @@
     },
     "xl-bold": {
       "fontFamily": "Urbanist",
-      "fontWeight": "Bold",
-      "lineHeight": 44,
-      "fontSize": 36,
+      "fontWeight": 700,
+      "lineHeight": "44px",
+      "fontSize": "36px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -498,9 +498,9 @@
     },
     "lg-semi": {
       "fontFamily": "Urbanist",
-      "fontWeight": "SemiBold",
-      "lineHeight": 32,
-      "fontSize": 24,
+      "fontWeight": 600,
+      "lineHeight": "32px",
+      "fontSize": "24px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -509,9 +509,9 @@
     },
     "lg-bold": {
       "fontFamily": "Urbanist",
-      "fontWeight": "Bold",
-      "lineHeight": 32,
-      "fontSize": 24,
+      "fontWeight": 700,
+      "lineHeight": "32px",
+      "fontSize": "24px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -520,9 +520,9 @@
     },
     "md-semi": {
       "fontFamily": "Urbanist",
-      "fontWeight": "SemiBold",
-      "lineHeight": 27,
-      "fontSize": 18,
+      "fontWeight": 600,
+      "lineHeight": "27px",
+      "fontSize": "18px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -531,9 +531,9 @@
     },
     "md-bold": {
       "fontFamily": "Urbanist",
-      "fontWeight": "Bold",
-      "lineHeight": 27,
-      "fontSize": 18,
+      "fontWeight": 700,
+      "lineHeight": "27px",
+      "fontSize": "18px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -542,9 +542,9 @@
     },
     "sm-semi": {
       "fontFamily": "Urbanist",
-      "fontWeight": "SemiBold",
-      "lineHeight": 24,
-      "fontSize": 16,
+      "fontWeight": 600,
+      "lineHeight": "24px",
+      "fontSize": "16px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -553,9 +553,9 @@
     },
     "sm-bold": {
       "fontFamily": "Urbanist",
-      "fontWeight": "Bold",
-      "lineHeight": 24,
-      "fontSize": 16,
+      "fontWeight": 700,
+      "lineHeight": "24px",
+      "fontSize": "16px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -564,9 +564,9 @@
     },
     "xs-semi": {
       "fontFamily": "Urbanist",
-      "fontWeight": "SemiBold",
-      "lineHeight": 21,
-      "fontSize": 14,
+      "fontWeight": 600,
+      "lineHeight": "21px",
+      "fontSize": "14px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -575,9 +575,9 @@
     },
     "xs-bold": {
       "fontFamily": "Urbanist",
-      "fontWeight": "Bold",
-      "lineHeight": 21,
-      "fontSize": 14,
+      "fontWeight": 700,
+      "lineHeight": "21px",
+      "fontSize": "14px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -586,19 +586,19 @@
     },
     "overline": {
       "fontFamily": "Urbanist",
-      "fontWeight": "SemiBold",
+      "fontWeight": 600,
       "letterSpacing": "1.5px",
-      "fontSize": 12,
-      "lineHeight": 16,
+      "fontSize": "12px",
+      "lineHeight": "16px",
       "textCase": "uppercase"
     }
   },
   "subheading": {
     "regular": {
       "fontFamily": "Urbanist",
-      "fontWeight": "Regular",
-      "lineHeight": 20,
-      "fontSize": 14,
+      "fontWeight": 400,
+      "lineHeight": "20px",
+      "fontSize": "14px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -607,9 +607,9 @@
     },
     "semi": {
       "fontFamily": "Urbanist",
-      "fontWeight": "SemiBold",
-      "lineHeight": 20,
-      "fontSize": 14,
+      "fontWeight": 600,
+      "lineHeight": "20px",
+      "fontSize": "14px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -618,9 +618,9 @@
     },
     "bold": {
       "fontFamily": "Urbanist",
-      "fontWeight": "Bold",
-      "lineHeight": 20,
-      "fontSize": 14,
+      "fontWeight": 700,
+      "lineHeight": "20px",
+      "fontSize": "14px",
       "letterSpacing": "2%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -631,9 +631,9 @@
   "body": {
     "lg-regular": {
       "fontFamily": "Noto Sans",
-      "fontWeight": "Regular",
-      "lineHeight": 24,
-      "fontSize": 16,
+      "fontWeight": 400,
+      "lineHeight": "24px",
+      "fontSize": "16px",
       "letterSpacing": "0%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -642,9 +642,9 @@
     },
     "lg-semi": {
       "fontFamily": "Noto Sans",
-      "fontWeight": "SemiBold",
-      "lineHeight": 24,
-      "fontSize": 16,
+      "fontWeight": 600,
+      "lineHeight": "24px",
+      "fontSize": "16px",
       "letterSpacing": "0%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -653,9 +653,9 @@
     },
     "lg-bold": {
       "fontFamily": "Noto Sans",
-      "fontWeight": "Bold",
-      "lineHeight": 24,
-      "fontSize": 16,
+      "fontWeight": 700,
+      "lineHeight": "24px",
+      "fontSize": "16px",
       "letterSpacing": "0%",
       "paragraphSpacing": 0,
       "paragraphIndent": "0px",
@@ -664,25 +664,25 @@
     },
     "md-regular": {
       "fontFamily": "Noto Sans",
-      "fontWeight": "Regular",
-      "lineHeight": 20,
-      "fontSize": 14
+      "fontWeight": 400,
+      "lineHeight": "20px",
+      "fontSize": "14px"
     },
     "md-semi": {
       "fontFamily": "Noto Sans",
-      "fontWeight": "SemiBold",
-      "lineHeight": 20,
-      "fontSize": 14
+      "fontWeight": 600,
+      "lineHeight": "20px",
+      "fontSize": "14px"
     },
     "md-bold": {
       "fontFamily": "Noto Sans",
-      "fontWeight": "Bold",
-      "lineHeight": 20,
-      "fontSize": 14
+      "fontWeight": 700,
+      "lineHeight": "20px",
+      "fontSize": "14px"
     },
     "sm-regular": {
       "fontFamily": "Noto Sans",
-      "fontWeight": "Regular",
+      "fontWeight": 400,
       "lineHeight": "18px",
       "fontSize": "12px",
       "letterSpacing": "0%",
@@ -693,7 +693,7 @@
     },
     "sm-semi": {
       "fontFamily": "Noto Sans",
-      "fontWeight": "SemiBold",
+      "fontWeight": 600,
       "lineHeight": "18px",
       "fontSize": "12px",
       "letterSpacing": "0%",
@@ -704,7 +704,7 @@
     },
     "sm-bold": {
       "fontFamily": "Noto Sans",
-      "fontWeight": "Bold",
+      "fontWeight": 700,
       "lineHeight": "18px",
       "fontSize": "12px",
       "letterSpacing": "0%",
@@ -827,45 +827,45 @@
     "noto-sans": "Noto Sans"
   },
   "lineHeights": {
-    "0": 16,
-    "1": 20,
-    "2": 32,
-    "3": 24,
-    "4": 80,
-    "5": 27,
-    "6": 48,
+    "0": "16px",
+    "1": "20px",
+    "2": "32px",
+    "3": "24px",
+    "4": "80px",
+    "5": "27px",
+    "6": "48px",
     "7": "AUTO",
-    "8": 42,
-    "9": 30,
-    "10": 21,
-    "11": 18,
-    "12": 44
+    "8": "42px",
+    "9": "30px",
+    "10": "21px",
+    "11": "18px",
+    "12": "44px"
   },
   "fontWeights": {
-    "urbanist-5": "ExtraBold",
-    "urbanist-6": "SemiBold",
-    "noto-sans-7": "Regular",
-    "urbanist-8": "Medium",
-    "noto-sans-9": "Medium",
-    "urbanist-10": "Bold",
-    "urbanist-11": "Regular",
-    "noto-sans-12": "SemiBold",
-    "noto-sans-13": "Bold"
+    "urbanist-5": 800,
+    "urbanist-6": 600,
+    "noto-sans-7": 400,
+    "urbanist-8": 500,
+    "noto-sans-9": 500,
+    "urbanist-10": 700,
+    "urbanist-11": 400,
+    "noto-sans-12": 600,
+    "noto-sans-13": 700
   },
   "fontSize": {
     "0": 11,
-    "1": 12,
-    "2": 14,
-    "3": 18,
-    "4": 24,
-    "5": 16,
-    "6": 18,
-    "7": 20,
-    "8": 24,
-    "9": 26,
-    "10": 36,
-    "11": 40,
-    "12": 64
+    "1": "12px",
+    "2": "14px",
+    "3": "18px",
+    "4": "24px",
+    "5": "16px",
+    "6": "18px",
+    "7": "20px",
+    "8": "24px",
+    "9": "26px",
+    "10": "36px",
+    "11": "40px",
+    "12": "64px"
   },
   "letterSpacing": {
     "0": "0%",
@@ -934,5 +934,6 @@
     }
   },
   "2xl": 48,
-  "3xl": 64
+  "3xl": 64,
+  "dummy": "100px"
 }

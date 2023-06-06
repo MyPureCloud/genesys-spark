@@ -1,0 +1,108 @@
+/**
+  * @prop --gse-ui-badge-error-bold-background
+  * @prop --gse-ui-badge-error-bold-foreground
+  * @prop --gse-ui-badge-error-default-background
+  * @prop --gse-ui-badge-error-default-foreground
+  * @prop --gse-ui-badge-info-bold-background
+  * @prop --gse-ui-badge-info-bold-foreground
+  * @prop --gse-ui-badge-info-default-background
+  * @prop --gse-ui-badge-info-default-foreground
+  * @prop --gse-ui-badge-label-font-family
+  * @prop --gse-ui-badge-label-font-size
+  * @prop --gse-ui-badge-label-font-weight
+  * @prop --gse-ui-badge-label-line-height
+  * @prop --gse-ui-badge-success-bold-background
+  * @prop --gse-ui-badge-success-bold-foreground
+  * @prop --gse-ui-badge-success-default-background
+  * @prop --gse-ui-badge-success-default-foreground
+  * @prop --gse-ui-badge-warning-bold-background
+  * @prop --gse-ui-badge-warning-bold-foreground
+  * @prop --gse-ui-badge-warning-default-background
+  * @prop --gse-ui-badge-warning-default-foreground
+  */
+
+@import '../../../style/mixins';
+
+// Style
+:host {
+  display: inline-block;
+  height: fit-content;
+  border-radius: 16px;
+}
+
+.gux-badge {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  padding: 0 12px;
+  border-radius: 16px;
+  gap: 4px;
+  font-family: var(--gse-ui-badge-label-font-family);
+  font-size: var(--gse-ui-badge-label-font-size);
+  font-weight: var(--gse-ui-badge-label-font-weight);
+  line-height: var(--gse-ui-badge-label-line-height);
+
+  gux-tooltip-title {
+    white-space: nowrap;
+
+    ::slotted(gux-icon) {
+      height: 16px;
+      font-size: 16px;
+    }
+  }
+
+  .gux-sr-only {
+    @include gux-sr-only-clip;
+  }
+
+  &.gux-info,
+  &.gux-neutral {
+    color: var(--gse-ui-badge-info-default-foreground);
+    background-color: var(--gse-ui-badge-info-default-background);
+
+    &.gux-bold {
+      color: var(--gse-ui-badge-info-bold-foreground);
+      background-color: var(--gse-ui-badge-info-bold-background);
+    }
+  }
+
+  &.gux-error,
+  &.gux-red {
+    color: var(--gse-ui-badge-error-default-foreground);
+    background-color: var(--gse-ui-badge-error-default-background);
+
+    &.gux-bold {
+      color: var(--gse-ui-badge-error-bold-foreground);
+      background-color: var(--gse-ui-badge-error-bold-background);
+    }
+  }
+
+  &.gux-warning,
+  &.gux-yellow {
+    color: var(--gse-ui-badge-warning-default-foreground);
+    background-color: var(--gse-ui-badge-warning-default-background);
+
+    &.gux-bold {
+      color: var(--gse-ui-badge-warning-bold-foreground);
+      background-color: var(--gse-ui-badge-warning-bold-background);
+    }
+  }
+
+  &.gux-success,
+  &.gux-green {
+    color: var(--gse-ui-badge-success-default-foreground);
+    background-color: var(--gse-ui-badge-success-default-background);
+
+    &.gux-bold {
+      color: var(--gse-ui-badge-success-bold-foreground);
+      background-color: var(--gse-ui-badge-success-bold-background);
+    }
+  }
+
+  &.gux-inherit {
+    color: inherit;
+    background-color: inherit;
+  }
+}

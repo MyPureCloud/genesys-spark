@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
-import { GuxBadgeColor } from './gux-badge.types';
+import { GuxBadgeAccent, GuxBadgeColor } from './gux-badge.types';
 
 import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
@@ -18,21 +18,15 @@ import translationResources from './i18n/en.json';
 export class GuxBadge {
   private i18n: GetI18nValue;
 
-  /**
-   * Reference to the host element.
-   */
   @Element()
   root: HTMLElement;
 
-  /**
-   * Badge background color.
-   */
   @Prop()
   color: GuxBadgeColor = 'neutral';
 
-  /**
-   * Bold badge.
-   */
+  @Prop()
+  accent: GuxBadgeAccent = 'info';
+
   @Prop()
   bold: boolean = false;
 
@@ -86,6 +80,7 @@ export class GuxBadge {
         class={{
           'gux-badge': true,
           [`gux-${this.color}`]: true,
+          [`gux-${this.accent}`]: true,
           'gux-bold': this.bold
         }}
       >

@@ -38,6 +38,7 @@
     }
   },
   "workspaces": [
+    "./packages/genesys-spark-tokens",
     "./packages/genesys-spark-components",
     "./packages/*",
     "./playgrounds/*",
