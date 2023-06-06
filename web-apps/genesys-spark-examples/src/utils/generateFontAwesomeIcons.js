@@ -23,6 +23,7 @@ const icons = [
       'fa/clock-rotate-left-regular',
       'fa/comments-regular',
       'fa/code-regular',
+      'fa/code-branch-regular',
       'fa/cube-regular',
       'fa/database-regular',
       'fa/diamond-regular',
@@ -52,11 +53,13 @@ const icons = [
       'fa/reply-regular',
       'fa/right-to-bracket-regular',
       'fa/road-regular',
+      'fa/route-regular',
       'fa/share-regular',
       'fa/shuffle-regular',
       'fa/sigma-regular',
       'fa/signs-post-regular',
       'fa/sitemap-regular',
+      'fa/sliders-solid',
       'fa/ticket-regular'
     ]
   }
