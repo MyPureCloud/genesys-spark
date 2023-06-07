@@ -28,9 +28,7 @@ const validFocusableItems = ['gux-list-item'];
 @Component({
   styleUrl: 'gux-list.less',
   tag: 'gux-list',
-  shadow: {
-    delegatesFocus: true
-  }
+  shadow: { delegatesFocus: true }
 })
 export class GuxList {
   @Element()
