@@ -122,10 +122,7 @@ export class GuxColumnChart {
   @Watch('chartData')
   parseData() {
     if (!this.xFieldName || !this.yFieldName) {
-      logError(
-        this.root,
-        '[gux-chart-column] requires x-field-name and y-field-name'
-      );
+      logError(this.root, 'requires x-field-name and y-field-name');
     }
 
     let chartData = {};

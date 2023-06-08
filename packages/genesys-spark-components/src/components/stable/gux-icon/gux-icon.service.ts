@@ -1,7 +1,5 @@
 import { getAssetPath } from '@stencil/core';
 
-import { logError } from '../../../utils/error/log-error';
-
 import { iconNameMap } from './icon-name-map';
 import { legacyIconNames } from './legacy-icon-names';
 
@@ -56,17 +54,4 @@ export async function getBaseSvgHtml(iconName: string): Promise<string> {
   svgHTMLCache.set(id, svgHtml);
 
   return svgHtml;
-}
-
-export function validateProps(
-  component: HTMLElement,
-  decorative: boolean,
-  screenreaderText: string
-): void {
-  if (!decorative && !screenreaderText) {
-    logError(
-      component,
-      'No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true.'
-    );
-  }
 }

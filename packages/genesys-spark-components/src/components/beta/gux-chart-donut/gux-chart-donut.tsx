@@ -132,7 +132,7 @@ export class GuxDonutChart {
     if (!this.outerRadius && !this.innerRadius) {
       logError(
         this.root,
-        '[gux-chart-donut] requires at least one of outer-radius or inner-radius'
+        'requires at least one of outer-radius or inner-radius'
       );
     }
 
