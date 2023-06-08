@@ -1,11 +1,11 @@
-export function logError(component: string, message: string): void {
+export function logError(component: HTMLElement, message: string): void {
   setTimeout(() => {
-    throw new Error(`[${component}] ${message}`);
+    throw new Error(`[${component.outerHTML}] ${message}`);
   }, 0);
 }
 
-export function logWarn(component: string, message: string): void {
+export function logWarn(component: HTMLElement, message: string): void {
   setTimeout(() => {
-    console.warn(`[${component}] ${message}`);
+    console.warn(`[${component.outerHTML}] ${message}`);
   }, 0);
 }

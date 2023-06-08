@@ -84,7 +84,7 @@ export class GuxIcon {
     if (!this.root.isConnected) {
       return;
     }
-    validateProps(decorative, screenreaderText);
+    validateProps(this.root, decorative, screenreaderText);
   }
 
   private getSvgWithAriaAttributes(svgText: string): string {

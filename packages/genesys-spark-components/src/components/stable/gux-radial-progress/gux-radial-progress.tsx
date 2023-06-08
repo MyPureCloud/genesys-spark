@@ -56,7 +56,7 @@ export class GuxRadialProgress {
       canShowPercentageState(this.value, this.max)
     ) {
       logWarn(
-        'gux-radial-progress',
+        this.root,
         'No screenreader-text provided. Provide a localized screenreader-text property for the component.'
       );
     }

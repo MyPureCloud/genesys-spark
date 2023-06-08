@@ -130,7 +130,7 @@ export class GuxRating {
       )
     ) {
       logWarn(
-        'gux-rating',
+        this.root,
         '`gux-rating` requires a label. Either provide a label and associate it with the gux-rating element using `aria-labelledby` or add an `aria-label` attribute to the gux-rating element.'
       );
     }

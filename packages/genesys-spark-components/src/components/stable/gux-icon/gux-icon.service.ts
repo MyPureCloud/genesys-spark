@@ -59,12 +59,13 @@ export async function getBaseSvgHtml(iconName: string): Promise<string> {
 }
 
 export function validateProps(
+  component: HTMLElement,
   decorative: boolean,
   screenreaderText: string
 ): void {
   if (!decorative && !screenreaderText) {
     logError(
-      'gux-icon',
+      component,
       'No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true.'
     );
   }

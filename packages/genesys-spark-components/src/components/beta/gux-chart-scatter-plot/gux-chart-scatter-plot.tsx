@@ -148,7 +148,7 @@ export class GuxScatterPlotChart {
   parseData() {
     if (!this.xFieldName || !this.yFieldName) {
       logError(
-        'gux-chart-scatter-plot',
+        this.root,
         '[gux-chart-scatter-plot] requires x-field-name and y-field-name'
       );
     }

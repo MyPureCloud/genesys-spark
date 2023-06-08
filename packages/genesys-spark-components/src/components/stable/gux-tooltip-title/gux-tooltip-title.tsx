@@ -85,7 +85,7 @@ export class GuxTooltipTitle {
   private logWarnNoIconSrText(): void {
     if (this.iconOnly && !this.titleName) {
       logWarn(
-        'gux-tooltip-title',
+        this.root,
         'No screenreader-text provided. Provide a localized screenreader-text property for the gux-icon. The screenreader-text property is used for the icon screenreader text and the tooltip.'
       );
     }

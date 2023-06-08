@@ -123,7 +123,7 @@ export class GuxColumnChart {
   parseData() {
     if (!this.xFieldName || !this.yFieldName) {
       logError(
-        'gux-chart-column',
+        this.root,
         '[gux-chart-column] requires x-field-name and y-field-name'
       );
     }

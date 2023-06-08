@@ -134,7 +134,7 @@ export class GuxLineChart {
   parseData() {
     if (!this.xFieldName || !this.yFieldName) {
       logError(
-        'gux-chart-line',
+        this.root,
         '[gux-chart-line] requires x-field-name and y-field-name'
       );
     }
