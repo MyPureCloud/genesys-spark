@@ -25,9 +25,7 @@ const validFocusableItems = ['gux-month-list-item'];
 @Component({
   styleUrl: 'gux-month-list.less',
   tag: 'gux-month-list',
-  shadow: {
-    delegatesFocus: true
-  }
+  shadow: { delegatesFocus: true }
 })
 export class GuxMonthList {
   @Element()

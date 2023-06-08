@@ -20,9 +20,7 @@ import tableResources from '../i18n/en.json';
 @Component({
   styleUrl: 'gux-sort-control.less',
   tag: 'gux-sort-control',
-  shadow: {
-    delegatesFocus: true
-  }
+  shadow: { delegatesFocus: true }
 })
 export class GuxSortControl {
   private tableHeader: HTMLTableCellElement;
