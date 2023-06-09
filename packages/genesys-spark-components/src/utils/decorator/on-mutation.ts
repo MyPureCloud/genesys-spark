@@ -12,7 +12,7 @@ declare type OnMutationDecorator = (
   propertyKey: string
 ) => void;
 
-export function OnMutation(opt: MutationObserverInit): OnMutationDecorator {
+export function OnMutation(options: MutationObserverInit): OnMutationDecorator {
   return (proto: ComponentInterface, methodName: string) => {
     // this is to resolve the 'compiler optimization issue':
     // lifecycle events not being called when not explicitly declared in at least one of components from bundle
@@ -20,24 +20,48 @@ export function OnMutation(opt: MutationObserverInit): OnMutationDecorator {
     (BUILD as any).disconnectedCallback = true;
 
     const { connectedCallback, disconnectedCallback } = proto;
-    let onMutationObserver: MutationObserver;
+
+    const store = new Map<unknown, MutationObserver>();
 
     proto.connectedCallback = function () {
-      const host = getElement(this);
       const method = this[methodName];
+      const observer = new MutationObserver(method.bind(this));
 
-      onMutationObserver = new MutationObserver(method.bind(this));
-      onMutationObserver.observe(host, opt);
+      registerObserver(store, this, observer, options);
 
       return connectedCallback && connectedCallback.call(this);
     };
 
     proto.disconnectedCallback = function () {
-      if (onMutationObserver) {
-        onMutationObserver.disconnect();
-      }
+      deregisterObserver(store, this);
 
       return disconnectedCallback && disconnectedCallback.call(this);
     };
   };
+}
+
+function registerObserver(
+  store: Map<unknown, MutationObserver>,
+  key: unknown,
+  observer: MutationObserver,
+  options: MutationObserverInit
+) {
+  if (store.has(key)) {
+    store.get(key).disconnect();
+  }
+
+  store.set(key, observer);
+
+  observer.observe(getElement(key), options);
+}
+
+function deregisterObserver(
+  store: Map<unknown, MutationObserver>,
+  key: unknown
+) {
+  if (store.has(key)) {
+    store.get(key).disconnect();
+  }
+
+  store.delete(key);
 }
