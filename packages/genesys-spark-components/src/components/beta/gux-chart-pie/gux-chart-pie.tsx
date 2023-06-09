@@ -98,7 +98,7 @@ export class GuxPieChart {
   @Watch('chartData')
   parseData() {
     if (!this.outerRadius) {
-      logError('gux-chart-pie', '[gux-chart-pie] requires outer-radius');
+      logError(this.root, 'requires outer-radius');
     }
 
     let chartData = {};

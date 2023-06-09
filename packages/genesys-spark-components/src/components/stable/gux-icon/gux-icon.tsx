@@ -2,12 +2,9 @@ import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 
-import {
-  getBaseSvgHtml,
-  getRootIconName,
-  validateProps
-} from './gux-icon.service';
+import { getBaseSvgHtml, getRootIconName } from './gux-icon.service';
 import { GuxIconIconName } from './gux-icon.types';
+import { logError } from '@utils/error/log-error';
 
 @Component({
   assetsDirs: ['icons'],
@@ -84,7 +81,13 @@ export class GuxIcon {
     if (!this.root.isConnected) {
       return;
     }
-    validateProps(decorative, screenreaderText);
+
+    if (!decorative && !screenreaderText) {
+      logError(
+        this.root,
+        'No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true.'
+      );
+    }
   }
 
   private getSvgWithAriaAttributes(svgText: string): string {

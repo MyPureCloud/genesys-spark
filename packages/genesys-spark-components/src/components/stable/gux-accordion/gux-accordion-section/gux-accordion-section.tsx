@@ -84,7 +84,7 @@ export class GuxAccordionSection {
 
     if (!slot || !/^H[1-6]$/.test(slot.nodeName)) {
       logError(
-        'gux-accordion-section',
+        this.root,
         `For accessibility reasons the ${slotname} slot should be filled with a HTML heading tag (h1 - h6).`
       );
     }

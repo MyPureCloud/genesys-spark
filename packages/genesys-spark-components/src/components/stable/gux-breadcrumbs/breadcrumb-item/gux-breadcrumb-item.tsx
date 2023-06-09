@@ -27,7 +27,7 @@ export class GuxBreadcrumbItem {
       return container.accent;
     } else {
       logError(
-        'gux-breadcrumb-item',
+        this.root,
         'This component must be a child of a gux-breadcrumbs component.'
       );
     }
