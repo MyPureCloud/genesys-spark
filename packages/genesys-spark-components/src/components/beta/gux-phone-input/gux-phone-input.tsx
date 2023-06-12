@@ -21,7 +21,7 @@ import {
 } from '../../../i18n';
 import countryResources from './i18n/en.json';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
-import { getRegionObjects } from './services/region-map.service';
+import { getRegionObjects, RegionObject } from './services/region-map.service';
 import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
 
 @Component({
@@ -37,6 +37,7 @@ export class GuxPhoneInput {
   private phoneUtil: libphonenumber.PhoneNumberUtil =
     libphonenumber.PhoneNumberUtil.getInstance();
   private numberText: string;
+  private regionObjects: RegionObject[] = [];
 
   @Element()
   root: HTMLElement;
@@ -127,6 +128,11 @@ export class GuxPhoneInput {
 
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, countryResources);
+    this.regionObjects = getRegionObjects(
+      getDesiredLocale(this.root),
+      this.i18n,
+      this.phoneUtil
+    );
     this.initialValueParse();
   }
 
@@ -172,29 +178,25 @@ export class GuxPhoneInput {
 
   private onInputChange(number: string): void {
     if (number.startsWith('+')) {
-      this.checkForRegion(number);
+      this.region = this.checkForRegion(number);
     }
     this.input.emit(number);
     this.numberText = number;
   }
 
-  private checkForRegion(number: string): void {
-    let region = '';
+  private checkForRegion(number: string): string {
     try {
-      region = this.phoneUtil.getRegionCodeForNumber(
+      return this.phoneUtil.getRegionCodeForNumber(
         this.phoneUtil.parse(number)
       );
     } catch (e) {
-      // not full number so parse failed, so check if there is a matching region in the string
-      region =
-        getRegionObjects(
-          getDesiredLocale(this.root),
-          this.i18n,
-          this.phoneUtil
-        ).filter(region => number.startsWith(region.countryCode))[0]?.code ||
-        '';
-    } finally {
-      this.region = region;
+      // parse failed, so check if there is a matching region in the string
+      return (
+        this.regionObjects
+          .filter(region => number.startsWith(region.countryCode))
+          .sort((a, b) => b.countryCode.length - a.countryCode.length)[0]
+          ?.code || ''
+      );
     }
   }
 
@@ -412,11 +414,7 @@ export class GuxPhoneInput {
         </gux-option>
       ) as JSX.Element
     ].concat(
-      getRegionObjects(
-        getDesiredLocale(this.root),
-        this.i18n,
-        this.phoneUtil
-      ).map(
+      this.regionObjects.map(
         region =>
           (
             <gux-option value={region.code}>
