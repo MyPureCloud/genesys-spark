@@ -20,9 +20,9 @@ const npmPackageFile = await fetch(npmPackageUrl);
 const npmPackageJson = await npmPackageFile.json();
 const npmVersionsJson = Object.keys(npmPackageJson.versions);
 
-const newVersionsJson = semverSort.desc(
-  [].concat(currentVersionsJson, npmVersionsJson, newVersion)
-);
+const newVersionsJson = semverSort.desc([
+  ...new Set([].concat(currentVersionsJson, npmVersionsJson, newVersion))
+]);
 const newVersionsString = JSON.stringify(newVersionsJson, null, 2);
 
 fs.writeFileSync(path.resolve('./dist/versions.json'), newVersionsString, {
