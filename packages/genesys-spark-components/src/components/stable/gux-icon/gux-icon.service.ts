@@ -1,7 +1,5 @@
 import { getAssetPath } from '@stencil/core';
 
-import { logError } from '../../../utils/error/log-error';
-
 import { iconNameMap } from './icon-name-map';
 import { legacyIconNames } from './legacy-icon-names';
 
@@ -37,10 +35,9 @@ export function getRootIconName(iconName: string): string {
 
 export async function getBaseSvgHtml(iconName: string): Promise<string> {
   const id = iconInfoToId(iconName);
-  const cachedSvgElement = await svgHTMLCache.get(id);
 
-  if (cachedSvgElement) {
-    return cachedSvgElement;
+  if (svgHTMLCache.has(id)) {
+    return svgHTMLCache.get(id);
   }
 
   const svgHtml = fetchIcon(iconName)
@@ -56,16 +53,4 @@ export async function getBaseSvgHtml(iconName: string): Promise<string> {
   svgHTMLCache.set(id, svgHtml);
 
   return svgHtml;
-}
-
-export function validateProps(
-  decorative: boolean,
-  screenreaderText: string
-): void {
-  if (!decorative && !screenreaderText) {
-    logError(
-      'gux-icon',
-      'No screenreader-text provided. Either provide a localized screenreader-text property or set `decorative` to true.'
-    );
-  }
 }

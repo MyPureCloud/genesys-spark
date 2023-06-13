@@ -161,6 +161,7 @@ describe('calendar.service', () => {
       { locale: 'sv', expectedOutput: 'December 2022' },
       { locale: 'th', expectedOutput: 'ธันวาคม 2565' },
       { locale: 'tr', expectedOutput: 'Aralık 2022' },
+      { locale: 'uk', expectedOutput: 'Грудень 2022 р.' },
       { locale: 'zh-cn', expectedOutput: '2022年12月' },
       { locale: 'zh-tw', expectedOutput: '2022年12月' }
     ].forEach(({ locale, expectedOutput }) => {

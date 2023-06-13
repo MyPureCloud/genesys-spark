@@ -45,21 +45,12 @@ const html = `
 const language = 'en';
 
 describe('gux-flyout-menu', () => {
-  beforeEach(() => {
-    // This is mocked because Popperjs logs an error as the node_env is
-    // set to "test" and // the newSpecPage fails an isHTMLElement check
-    jest.spyOn(console, 'error').mockImplementation();
-  });
-
   describe('#render', () => {
     it(`should render as expected`, async () => {
       const page = await newSpecPage({ components, html, language });
 
       expect(page.rootInstance).toBeInstanceOf(GuxFlyoutMenu);
       expect(page.root).toMatchSnapshot();
-      expect(console.error).toHaveBeenCalledWith(
-        'Popper: "arrow" element must be an HTMLElement (not an SVGElement). To use an SVG arrow, wrap it in an HTMLElement that will be used as the arrow.'
-      );
     });
   });
 });

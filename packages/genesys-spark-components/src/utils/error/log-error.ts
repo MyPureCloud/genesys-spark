@@ -1,11 +1,7 @@
-export function logError(component: string, message: string): void {
-  setTimeout(() => {
-    throw new Error(`[${component}] ${message}`);
-  }, 0);
+export function logError(component: HTMLElement, message: string): void {
+  console.error(`[${component.tagName.toLowerCase()}] ${message}`, component);
 }
 
-export function logWarn(component: string, message: string): void {
-  setTimeout(() => {
-    console.warn(`[${component}] ${message}`);
-  }, 0);
+export function logWarn(component: HTMLElement, message: string): void {
+  console.warn(`[${component.tagName.toLowerCase()}] ${message}`, component);
 }

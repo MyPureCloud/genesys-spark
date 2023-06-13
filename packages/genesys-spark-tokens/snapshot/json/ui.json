@@ -73,51 +73,43 @@
     },
     "Badge": {
       "info": {
-        "background": {
-          "bold": "#6e5ddb",
-          "default": "#c5bef1"
+        "bold": {
+          "background": "#6e5ddb",
+          "foreground": "#ffffff"
         },
-        "foreground": {
-          "default": "#ffffff",
-          "subtle": "#1b2c48"
+        "default": {
+          "background": "#c5bef1",
+          "foreground": "#1b2c48"
         }
       },
-      "red": {
-        "foreground": {
-          "subtle": "#1b2c48",
-          "default": "#ffffff"
+      "error": {
+        "default": {
+          "foreground": "#1b2c48",
+          "background": "#f3a7b5"
         },
-        "background": {
-          "bold": "#e22245",
-          "default": "#f3a7b5"
+        "bold": {
+          "foreground": "#ffffff",
+          "background": "#e22245"
         }
       },
       "success": {
-        "background": {
-          "bold": "#09b581",
-          "default": "#9de1cd"
+        "bold": {
+          "background": "#09b581",
+          "foreground": "#1b2c48"
         },
-        "foreground": {
-          "default": "#1b2c48"
+        "default": {
+          "background": "#9de1cd",
+          "foreground": "#1b2c48"
         }
       },
-      "yellow": {
-        "background": {
-          "bold": "#f8c73e",
-          "default": "#fce9b2"
+      "warning": {
+        "bold": {
+          "background": "#f8c73e",
+          "foreground": "#1b2c48"
         },
-        "foreground": {
-          "default": "#1b2c48"
-        }
-      },
-      "neutral": {
-        "background": {
-          "bold": "#1b2c48",
-          "default": "#c6c8ce"
-        },
-        "foreground": {
-          "bold": "#ffffff",
-          "default": "#1b2c48"
+        "default": {
+          "background": "#fce9b2",
+          "foreground": "#1b2c48"
         }
       }
     },

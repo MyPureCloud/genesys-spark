@@ -426,6 +426,9 @@
     "noSelection": "Vælg...",
     "dropdown": "Rullemenu"
   },
+  "gux-form-field-dropdown": {
+    "required": "Påkrævet"
+  },
   "gux-form-field-number": {
     "increment": "Stigning",
     "decrement": "Reduktion"

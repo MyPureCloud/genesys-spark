@@ -46,7 +46,7 @@ export function validateFormIds(
 
     if (!inputHasId && labelHasFor) {
       logError(
-        root.tagName.toLowerCase(),
+        root,
         'A "for" attribute has been provided on the label but there is no corresponding id on the input. Either provide an id on the input or omit the "for" attribute from the label. If there is no input id and no "for" attribute provided, the component will automatically generate an id and link it to the "for" attribute.'
       );
     } else if (!inputHasId) {
@@ -61,14 +61,11 @@ export function validateFormIds(
       labelHasFor &&
       input.getAttribute('id') !== label.getAttribute('for')
     ) {
-      logError(
-        root.tagName.toLowerCase(),
-        'The input id and label for attribute should match.'
-      );
+      logError(root, 'The input id and label for attribute should match.');
     }
   } else {
     logError(
-      root.tagName.toLowerCase(),
+      root,
       'A label is required for this component. If a visual label is not needed for this use case, please add localized text for a screenreader and set the label-position attribute to "screenreader" to visually hide the label.'
     );
   }
@@ -177,7 +174,7 @@ export function getSlottedInput(
 
   if (!inputElement) {
     logError(
-      root.tagName.toLowerCase(),
+      root,
       `This component requires an input element that matches the following selector: ${inputSelector}`
     );
   }
