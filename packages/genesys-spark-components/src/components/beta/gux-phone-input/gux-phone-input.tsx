@@ -13,7 +13,10 @@ import {
 } from '@stencil/core';
 import libphonenumber, { PhoneNumberFormat } from 'google-libphonenumber';
 import { trackComponent } from '@utils/tracking/usage';
-import { regionCountryCodeMap } from './services/RegionCountryCodeMap';
+import {
+  regionCountryCodeMap,
+  RegionCodes
+} from './services/RegionCountryCodeMap';
 import {
   buildI18nForComponent,
   getDesiredLocale,
@@ -48,7 +51,7 @@ export class GuxPhoneInput {
 
   // ISO 3166-1 alpha-2 code
   @Prop()
-  defaultRegion: string;
+  defaultRegion: RegionCodes;
 
   @Prop()
   labelId: string;
