@@ -23,6 +23,7 @@ import countryResources from './i18n/en.json';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { getRegionObjects, RegionObject } from './services/region-map.service';
 import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
+import { logWarn } from '@utils/error/log-error';
 
 @Component({
   styleUrl: 'gux-phone-input.less',
@@ -165,7 +166,7 @@ export class GuxPhoneInput {
       } catch (e) {
         if (this.numberText === undefined) {
           // only show warning on initial render
-          console.warn('Number cannot be parsed');
+          logWarn(this.root, 'Number cannot be parsed');
           this.numberText = this.value;
           this.region = '';
         }
@@ -213,7 +214,7 @@ export class GuxPhoneInput {
         this.phoneValidationError.emit(!isValid);
       } catch (e) {
         if (this.numberText) {
-          console.warn('Number cannot be parsed');
+          logWarn(this.root, 'Number cannot be parsed');
           this.phoneValidationError.emit(true);
         }
       }
