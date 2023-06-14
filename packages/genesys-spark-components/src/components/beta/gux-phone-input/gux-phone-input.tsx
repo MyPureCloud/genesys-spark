@@ -410,10 +410,10 @@ export class GuxPhoneInput {
     const options: JSX.Element[] = [
       (
         <gux-option value="">
-          <span class="option-content">
+          <span class="gux-option-content">
             <gux-icon icon-name="globe" decorative></gux-icon>
             <span>{this.i18n('unknownRegion')}</span>
-            <span class="country-code">+</span>
+            <span class="gux-country-code">+</span>
           </span>
         </gux-option>
       ) as JSX.Element
@@ -422,10 +422,10 @@ export class GuxPhoneInput {
         region =>
           (
             <gux-option value={region.code}>
-              <span class="option-content">
+              <span class="gux-option-content">
                 <gux-region-icon region={region.code} />
                 <span>{region.name}</span>
-                <span class="country-code">{region.countryCode}</span>
+                <span class="gux-country-code">{region.countryCode}</span>
               </span>
             </gux-option>
           ) as JSX.Element
@@ -434,7 +434,10 @@ export class GuxPhoneInput {
 
     return (
       <div slot="popup" class="gux-listbox-container">
-        <gux-listbox aria-label="country dropdown" value={countryCode}>
+        <gux-listbox
+          aria-label={this.i18n('regionDropdown')}
+          value={countryCode}
+        >
           {options}
         </gux-listbox>
       </div>
