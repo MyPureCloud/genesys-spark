@@ -15,16 +15,16 @@ jobs:
       - uses: mshick/add-pr-comment@v1
         with:
           message: >
-            🧐 UX Reviewers Assemble!\n
-              - @cepedavanessa\n
-              - @conor-darcy\n
-              - @JackieYada\n
-              - @MonseGarciaLimon\n
-              - @stephenim\n
-            \n
-            Review Reminders\n
-              1. Add a comment to let us know who is reviewing this change\n
-              2. Check out the implementation @ https://apps.inindca.com/common-ui-docs/genesys-webcomponents/${{ github.head_ref }}\n
+            🧐 UX Reviewers Assemble!
+              - @cepedavanessa
+              - @conor-darcy
+              - @JackieYada
+              - @MonseGarciaLimon
+              - @stephenim
+
+            **Review Reminders**
+              1. Add a comment to let us know who is reviewing this change
+              2. Check out the implementation @ https://apps.inindca.com/common-ui-docs/genesys-webcomponents/${{ github.head_ref }}
               3. Be sure to note which issues are blockers and which are refinements
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: 'github-actions[bot]'
