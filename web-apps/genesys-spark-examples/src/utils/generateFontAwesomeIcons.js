@@ -15,6 +15,8 @@ const icons = [
       'fa/calculator-regular',
       'fa/calendar-days-regular',
       'fa/circle-check-regular',
+      'fa/circle-check-solid',
+      'fa/circle-info-solid',
       'fa/circle-play-regular',
       'fa/circle-xmark-regular',
       'fa/clipboard-list-regular',
@@ -34,6 +36,7 @@ const icons = [
       'fa/gears-regular',
       'fa/gem-regular',
       'fa/hashtag-regular',
+      'fa/hexagon-exclamation-solid',
       'fa/hourglass-start-regular',
       'fa/infinity-regular',
       'fa/language-regular',
@@ -60,7 +63,8 @@ const icons = [
       'fa/signs-post-regular',
       'fa/sitemap-regular',
       'fa/sliders-solid',
-      'fa/ticket-regular'
+      'fa/ticket-regular',
+      'fa/triangle-exclamation-solid'
     ]
   }
 ];
