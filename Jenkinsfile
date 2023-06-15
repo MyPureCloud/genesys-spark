@@ -14,7 +14,7 @@ webappPipeline {
     projectName = 'spark-components'
     team = 'Core UI'
     mailer = 'CoreUI@genesys.com'
-    nodeVersion = '16.x'
+    nodeVersion = '16.18.0'
     testJob = 'no-tests'
     deployConfig = [:]
     manifest = customManifest('./packages/genesys-spark-components/dist') {
@@ -53,6 +53,7 @@ webappPipeline {
         }
 
         sh('npm run test.ci')
+        sh('npm run build --workspace=packages/genesys-spark-tokens')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
         sh('npm run lint')
     }
