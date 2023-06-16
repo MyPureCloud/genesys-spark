@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.88.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.87.0...v3.88.0) (2023-06-16)
+
+
+### Features
+
+* **icon:** add new icons ([ce61979](https://github.com/MyPureCloud/genesys-webcomponents/commit/ce619798922f7f351fb38ef545030bfc99b60c8b))
+* **icon:** additional requested icons ([c809184](https://github.com/MyPureCloud/genesys-webcomponents/commit/c8091840c0bab1ae144264d52100cb7215d72bf3))
+* **icon:** icons requested for agent workspace ([574b2d4](https://github.com/MyPureCloud/genesys-webcomponents/commit/574b2d496c307974a75cbe176b1d752fd5fe9a0f))
+* **language:** added Ukrainian language file ready for translation service ([64316c3](https://github.com/MyPureCloud/genesys-webcomponents/commit/64316c3249afc415cb42522b84152417962a209a))
+
+
+### Bug Fixes
+
+* **accordion:** addressed accessibility issues ([f327dde](https://github.com/MyPureCloud/genesys-webcomponents/commit/f327dde9e30612eff5aaad80ab008acebd101aec))
+* **calendar:** removed spurious failing test temporarily ([e213f85](https://github.com/MyPureCloud/genesys-webcomponents/commit/e213f85c89e77386f561ddfdb6e6ef46f6b20b98))
+* **css:** fixed tokens css import inot components ([d6e4566](https://github.com/MyPureCloud/genesys-webcomponents/commit/d6e4566e348aa6860e18f779e51ea614ba95c2d5))
+* **icon:** don't await cached icon fetch promises ([0eb49e2](https://github.com/MyPureCloud/genesys-webcomponents/commit/0eb49e24a23fd5757b2509a509c71f0f91baa856))
+* **pr-comment:** addressed PR comment ([cf3d334](https://github.com/MyPureCloud/genesys-webcomponents/commit/cf3d334acc1f16c5b1113702b7dfe2992098eeba))
+* **pr-comment:** addressed PR comments ([a20e5a3](https://github.com/MyPureCloud/genesys-webcomponents/commit/a20e5a3b903dd7b8550c7b49f488451648225d41))
+* **versions-file:** removed duplicates from generated version file ([184583a](https://github.com/MyPureCloud/genesys-webcomponents/commit/184583a3ffbd0fd12dd9697a469cf9b215e39a9b))
+
 ## [3.87.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.86.2...v3.87.0) (2023-05-30)
 
 
