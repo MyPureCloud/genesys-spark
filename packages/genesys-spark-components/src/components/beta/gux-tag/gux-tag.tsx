@@ -21,7 +21,7 @@ import { GuxTagAccent, GuxTagColor } from './gux-tag.types';
  */
 
 @Component({
-  styleUrl: 'gux-tag.scss',
+  styleUrl: 'gux-tag.less',
   tag: 'gux-tag-beta',
   shadow: true
 })
@@ -44,7 +44,7 @@ export class GuxTag {
   @Prop()
   color: GuxTagColor = 'default';
 
-  @Prop()
+  @State()
   accent: GuxTagAccent = 'default';
 
   /**
