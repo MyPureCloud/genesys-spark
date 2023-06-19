@@ -14,7 +14,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '@utils/tracking/usage';
 
 import tagResources from './i18n/en.json';
-import { GuxTagColor } from './gux-tag.types';
+import { GuxTagAccent, GuxTagColor } from './gux-tag.types';
 
 /**
  * @slot - content
@@ -37,11 +37,15 @@ export class GuxTag {
   @Event()
   guxdelete: EventEmitter<string>;
 
+  // TODO: V4 - https://inindca.atlassian.net/browse/COMUI-1725
   /**
-   * Tag background color.
+   * Tag background color
    */
   @Prop()
   color: GuxTagColor = 'default';
+
+  @State()
+  accent: GuxTagAccent = 'default';
 
   /**
    * Index for remove tag
@@ -150,6 +154,7 @@ export class GuxTag {
         class={{
           'gux-tag': true,
           [`gux-${this.color}`]: true,
+          [`gux-accent-${this.accent}`]: true,
           'gux-disabled': this.disabled
         }}
         aria-disabled={this.disabled.toString()}
