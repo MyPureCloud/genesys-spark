@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.88.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.88.0...v3.88.1) (2023-06-19)
+
+
+### Bug Fixes
+
+* **css:** import tokens from node_modules ([d8f8cb3](https://github.com/MyPureCloud/genesys-webcomponents/commit/d8f8cb36b01a4fb5ae8346d58db00f674d17c076))
+* **on-resize-observer:** isolate each components observer ([c24ec69](https://github.com/MyPureCloud/genesys-webcomponents/commit/c24ec6991ed8e52d0c36466aec9bea095d639dbc))
+* **pr-comment:** addressed PR comment ([33f0a55](https://github.com/MyPureCloud/genesys-webcomponents/commit/33f0a55ffd3b2f21fd6c0972cfe7478c2920613c))
+
 ## [3.88.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.87.0...v3.88.0) (2023-06-16)
 
 
