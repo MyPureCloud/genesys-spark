@@ -38,6 +38,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [gux-pagination-ellipsis-button](../gux-pagination-beta/gux-pagination-buttons-beta/gux-pagination-ellipsis-button)
+
 ### Depends on
 
 - [gux-dismiss-button](../../stable/gux-dismiss-button)
@@ -47,6 +51,7 @@
 graph TD;
   gux-popover-beta --> gux-dismiss-button
   gux-dismiss-button --> gux-icon
+  gux-pagination-ellipsis-button --> gux-popover-beta
   style gux-popover-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

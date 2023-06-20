@@ -1,5 +1,6 @@
 @import (reference) '../../../../style/color-palette.less';
 @import (reference) '../../../../style/spacing.less';
+@import (reference) '../../../../style/typography.less';
 
 gux-pagination-buttons-beta {
   color: @gux-black-50;
@@ -22,6 +23,7 @@ gux-pagination-buttons-beta {
       white-space: nowrap;
 
       gux-button-slot-beta:not(:first-of-type) {
+        margin-right: @gux-spacing-xs;
         margin-left: @gux-spacing-xs;
       }
     }
@@ -56,6 +58,7 @@ gux-pagination-buttons-beta {
     .gux-pagination-buttons-list-container {
       display: flex;
       flex-direction: row;
+      flex-shrink: 0;
       flex-wrap: nowrap;
       align-content: stretch;
       align-items: center;
@@ -63,31 +66,38 @@ gux-pagination-buttons-beta {
 
       .gux-pagination-buttons-list-current,
       .gux-pagination-buttons-list-target {
-        height: 32px;
-        padding: 0 @gux-spacing-xs;
+        min-width: 28px;
+        min-height: 24px;
+        padding: @gux-spacing-3xs @spacing-2xs;
         margin: 0;
         background: inherit;
         border: none;
 
         &:focus-visible {
           border: 3px solid @gux-blue-90;
-          border-radius: 5px;
+          border-radius: 4px;
           outline: none;
         }
       }
 
       .gux-pagination-buttons-list-current {
-        font-weight: 600;
+        background-color: @gux-grey-80;
+        border-radius: 4px;
+        .body-font-bold();
       }
 
       .gux-pagination-buttons-list-target {
-        color: @gux-blue-60;
-        cursor: pointer;
-      }
-    }
+        .body-font();
 
-    .gux-pagination-buttons-spacer {
-      width: 8px;
+        color: @gux-black-100;
+        cursor: pointer;
+
+        &:hover {
+          background-color: @gux-grey-50;
+          border-radius: 4px;
+          .body-font-bold();
+        }
+      }
     }
   }
 }

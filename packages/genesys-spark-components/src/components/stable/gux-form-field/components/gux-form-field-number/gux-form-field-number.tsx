@@ -49,7 +49,7 @@ import componentResources from './i18n/en.json';
 @Component({
   styleUrl: 'gux-form-field-number.less',
   tag: 'gux-form-field-number',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxFormFieldNumber {
   private getI18nValue: GetI18nValue;
