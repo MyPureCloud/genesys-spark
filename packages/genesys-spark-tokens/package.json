@@ -32,7 +32,7 @@
     "prettier-package-json": "^2.8.0",
     "style-dictionary": "^3.8.0",
     "tempy": "^3.0.0",
-    "token-transformer": "^0.0.32"
+    "token-transformer": "^0.0.33"
   },
   "prettier": "prettier-config-genesys-spark-components"
 }
