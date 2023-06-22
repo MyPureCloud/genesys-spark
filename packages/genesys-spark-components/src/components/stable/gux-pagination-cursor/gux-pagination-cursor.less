@@ -1,10 +1,60 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/spacing.less';
 
 :host {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 12px;
+  border-top: 1px solid @gux-grey-60;
+
+  .gux-pagination-button-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  button {
+    color: @gux-black-50;
+
+    &[disabled] {
+      color: fade(@gux-black-50, 50%);
+    }
+  }
+
+  .gux-button-align-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    > * {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+    }
+
+    > .gux-icon-previous {
+      padding-right: 4px;
+    }
+
+    > .gux-icon-next {
+      padding-left: 4px;
+    }
+  }
+
+  gux-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  gux-button-slot-beta {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
 }
