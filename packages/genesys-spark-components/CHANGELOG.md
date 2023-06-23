@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.89.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.1...v3.89.2) (2023-06-23)
+
+
+### Bug Fixes
+
+* **table-toolbar:** add pointer events none to disabled elements ([b6649f8](https://github.com/MyPureCloud/genesys-webcomponents/commit/b6649f8cabae710fc675927446e030bc1eabaf24))
+
 ### [3.89.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.0...v3.89.1) (2023-06-22)
 
 ## [3.89.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.88.1...v3.89.0) (2023-06-21)
