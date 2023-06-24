@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.89.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.2...v3.89.3) (2023-06-24)
+
+
+### Bug Fixes
+
+* **popover:** infinite loop in find-element-by-id ([f442139](https://github.com/MyPureCloud/genesys-webcomponents/commit/f442139caccf8f8e7d9f262d6516a69259509595))
+
 ### [3.89.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.1...v3.89.2) (2023-06-23)
 
 
