@@ -7,36 +7,35 @@
   "author": "",
   "scripts": {
     "eslint": "eslint . --no-error-on-unmatched-pattern --fix",
-    "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\"",
+    "lint-all": "npm-run-all \"stylelint\" \"eslint\" \"prettier\" \"prettier-package-json\"",
     "lint-staged": "lint-staged",
     "prettier": "prettier --loglevel silent --ignore-path .gitignore --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json",
-    "start": "http-server ./dist --port 8090",
+    "start": "http-server . --port 8090",
     "stylelint": "stylelint --fix \"**/*.{css,html,less}\""
   },
   "dependencies": {
-    "http-server": "^0.13.0"
+    "http-server": "^14.1.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.59.8",
-    "@typescript-eslint/parser": "^5.59.8",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
     "eslint": "^8.41.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "eslint-config-prettier": "^8.8.0",
-    "lint-staged": "^13.2.2",
+    "lint-staged": "^13.2.3",
     "npm-run-all": "^4.1.5",
     "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
     "prettier": "^2.8.8",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
-    "stylelint": "^14.16.1",
+    "stylelint": "^15.9.0",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-recess-order": "^3.1.0",
-    "stylelint-config-standard": "^25.0.0",
-    "stylelint-config-standard-scss": "^6.1.0"
+    "stylelint-config-recess-order": "^4.2.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-config-standard-scss": "^9.0.0"
   },
   "prettier": "prettier-config-genesys-spark-components"
 }

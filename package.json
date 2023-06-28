@@ -46,8 +46,8 @@
     "./web-apps/*"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^17.6.5",
-    "@commitlint/config-conventional": "^17.6.5",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "commitizen": "^4.3.0",
     "concurrently": "^7.6.0",
     "cz-conventional-changelog": "^3.3.0",
@@ -55,7 +55,7 @@
     "eslint-config-genesys-spark-components": "file:./shared-configs/eslint-config-genesys-spark-components",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
+    "lint-staged": "^13.2.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
     "prettier-config-genesys-spark-components": "file:./shared-configs/prettier-config-genesys-spark-components"

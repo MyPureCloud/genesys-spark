@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const fs = require('fs');
-const glob = require('glob');
+const { glob } = require('glob');
 const path = require('path');
 
 const translationsInputFolder = path.join(
