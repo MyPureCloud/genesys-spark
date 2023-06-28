@@ -246,5 +246,6 @@
   "ZM": "Zambia",
   "ZW": "Zimbabwe",
   "unknownRegion": "Unknown Region",
-  "regionDropdown": "Region Dropdown"
+  "regionDropdown": "Region Dropdown",
+  "regionDropdownButton": "Region Dropdown Button"
 }
