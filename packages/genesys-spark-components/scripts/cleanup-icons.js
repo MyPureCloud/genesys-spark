@@ -8,7 +8,7 @@
  */
 const path = require('path');
 const fs = require('fs');
-const glob = require('glob');
+const { glob } = require('glob');
 const { DOMParser, XMLSerializer } = require('xmldom');
 
 glob('src/components/stable/gux-icon/icons/**/*.svg', (err, files) => {

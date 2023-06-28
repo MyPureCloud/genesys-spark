@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const fs = require('fs').promises;
-const glob = require('glob');
+const { glob } = require('glob');
 
 async function listShadowExplicitlySet() {
   const files = glob.sync('src/components/@(beta|stable|legacy)/*/*.tsx', {

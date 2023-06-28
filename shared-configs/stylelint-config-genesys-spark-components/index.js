@@ -2,7 +2,6 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-recess-order',
-    'stylelint-config-prettier',
     'postcss-less',
     'postcss-html'
   ],
@@ -17,6 +16,8 @@ module.exports = {
     }
   ],
   rules: {
+    'media-feature-range-notation': 'prefix',
+    'selector-not-notation': null,
     'no-descending-specificity': null,
     'no-duplicate-selectors': null,
     'value-no-vendor-prefix': null,
