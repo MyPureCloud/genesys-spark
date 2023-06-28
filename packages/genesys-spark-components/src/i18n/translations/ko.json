@@ -62,7 +62,8 @@
     "previous": "이전",
     "next": "다음",
     "last": "마지막",
-    "pageInputLabel": "페이지 {totalPages, number} 중 {currentPage, number}"
+    "pageInputLabel": "페이지 {totalPages, number} 중 {currentPage, number}",
+    "goToPage": "페이지로 이동"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",

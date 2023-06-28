@@ -62,7 +62,8 @@
     "previous": "上一页",
     "next": "下一页",
     "last": "末页",
-    "pageInputLabel": "第 {currentPage, number} 页（共 {totalPages, number} 页）"
+    "pageInputLabel": "第 {currentPage, number} 页（共 {totalPages, number} 页）",
+    "goToPage": "转至页面"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
