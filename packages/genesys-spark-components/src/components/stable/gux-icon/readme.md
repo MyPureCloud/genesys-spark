@@ -83,6 +83,7 @@
  - [gux-tabs-legacy](../../legacy/gux-tabs-legacy)
  - [gux-tag-beta](../../beta/gux-tag)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
+ - [gux-toggle](../gux-toggle)
  - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
 
 ### Graph
@@ -153,6 +154,7 @@ graph TD;
   gux-tabs-legacy --> gux-icon
   gux-tag-beta --> gux-icon
   gux-time-picker-beta --> gux-icon
+  gux-toggle --> gux-icon
   gux-toggle-slider --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
