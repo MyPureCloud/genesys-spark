@@ -62,7 +62,8 @@
     "previous": "前へ",
     "next": "次へ",
     "last": "最後",
-    "pageInputLabel": "ページ {currentPage, number} / {totalPages, number}"
+    "pageInputLabel": "ページ {currentPage, number} / {totalPages, number}",
+    "goToPage": "ページに移動"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
