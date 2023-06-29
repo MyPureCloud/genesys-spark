@@ -1,5 +1,6 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/variables.less';
 
 :host {
   display: flex;
@@ -8,7 +9,7 @@
   align-content: stretch;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 12px;
+  padding: @gux-spacing-small;
   border-top: 1px solid @gux-grey-60;
 
   .gux-pagination-button-container {
@@ -40,21 +41,21 @@
     }
 
     > .gux-icon-previous {
-      padding-right: 4px;
+      padding-right: @gux-spacing-2xs;
     }
 
     > .gux-icon-next {
-      padding-left: 4px;
+      padding-left: @gux-spacing-2xs;
     }
   }
 
   gux-icon {
-    width: 16px;
-    height: 16px;
+    width: @gux-icon-size-default-global;
+    height: @gux-icon-size-default-global;
   }
 
   gux-button-slot-beta {
-    margin-right: 12px;
-    margin-left: 12px;
+    margin-right: @gux-spacing-small;
+    margin-left: @gux-spacing-small;
   }
 }

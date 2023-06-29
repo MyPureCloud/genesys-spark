@@ -70,21 +70,25 @@ export class GuxPaginationCursor {
         <gux-button-slot-beta accent="ghost">
           <button
             type="button"
-            title={this.i18n('previous')}
             disabled={!this.hasPrevious}
             onClick={() => this.onButtonClick('previous')}
           >
-            <gux-icon decorative iconName="chevron-small-left"></gux-icon>
+            <gux-icon
+              iconName="chevron-small-left"
+              screenreader-text={this.i18n('previous')}
+            ></gux-icon>
           </button>
         </gux-button-slot-beta>
         <gux-button-slot-beta accent="ghost">
           <button
             type="button"
-            title={this.i18n('next')}
             disabled={!this.hasNext}
             onClick={() => this.onButtonClick('next')}
           >
-            <gux-icon decorative iconName="chevron-small-right"></gux-icon>
+            <gux-icon
+              iconName="chevron-small-right"
+              screenreader-text={this.i18n('next')}
+            ></gux-icon>
           </button>
         </gux-button-slot-beta>
       </div>
@@ -113,7 +117,6 @@ export class GuxPaginationCursor {
         <gux-button-slot-beta accent="ghost">
           <button
             type="button"
-            title={this.i18n('next')}
             disabled={!this.hasNext}
             onClick={() => this.onButtonClick('next')}
           >
@@ -133,16 +136,17 @@ export class GuxPaginationCursor {
   }
 
   renderItemsPerPage(): JSX.Element {
-    return this.itemsPerPage
-      ? ((
-          <gux-pagination-items-per-page-beta
-            items-per-page={this.itemsPerPage}
-            onInternalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
-              this
-            )}
-          ></gux-pagination-items-per-page-beta>
-        ) as JSX.Element)
-      : '';
+    return (
+      this.itemsPerPage &&
+      ((
+        <gux-pagination-items-per-page-beta
+          items-per-page={this.itemsPerPage}
+          onInternalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
+            this
+          )}
+        ></gux-pagination-items-per-page-beta>
+      ) as JSX.Element)
+    );
   }
 
   render(): JSX.Element {

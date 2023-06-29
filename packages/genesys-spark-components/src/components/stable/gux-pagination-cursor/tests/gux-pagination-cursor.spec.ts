@@ -10,7 +10,8 @@ describe('gux-pagination-cursor', () => {
       '<gux-pagination-cursor></gux-pagination-cursor>',
       '<gux-pagination-cursor has-next></gux-pagination-cursor>',
       '<gux-pagination-cursor has-previous has-next></gux-pagination-cursor>',
-      '<gux-pagination-cursor has-previous></gux-pagination-cursor>'
+      '<gux-pagination-cursor has-previous></gux-pagination-cursor>',
+      '<gux-pagination-cursor layout="advanced"></gux-pagination-cursor>'
     ].forEach((html, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
