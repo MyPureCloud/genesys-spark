@@ -62,7 +62,8 @@
     "previous": "Předchozí",
     "next": "Další",
     "last": "Poslední",
-    "pageInputLabel": "Strana {currentPage, number}/{totalPages, number}"
+    "pageInputLabel": "Strana {currentPage, number}/{totalPages, number}",
+    "goToPage": "Přejít na stránku"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} až {lastItem, number}",

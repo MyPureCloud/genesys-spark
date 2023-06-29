@@ -62,7 +62,8 @@
     "previous": "Précédent",
     "next": "Suivant",
     "last": "Dernier",
-    "pageInputLabel": "Page {currentPage, number} sur {totalPages, number}"
+    "pageInputLabel": "Page {currentPage, number} sur {totalPages, number}",
+    "goToPage": "Aller à la page"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
