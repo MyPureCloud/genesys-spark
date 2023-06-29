@@ -14,8 +14,8 @@ import {
 import libphonenumber, { PhoneNumberFormat } from 'google-libphonenumber';
 import { trackComponent } from '@utils/tracking/usage';
 import {
-  regionCountryCodeMap,
-  RegionCodes
+  RegionCodes,
+  regionCountryCodeMap
 } from './services/RegionCountryCodeMap';
 import {
   buildI18nForComponent,
@@ -42,6 +42,7 @@ export class GuxPhoneInput {
     libphonenumber.PhoneNumberUtil.getInstance();
   private numberText: string;
   private regionObjects: RegionObject[] = [];
+  private displayFormat: PhoneNumberFormat;
 
   @Element()
   root: HTMLElement;
@@ -65,6 +66,10 @@ export class GuxPhoneInput {
   @Prop()
   required: boolean = false;
 
+  // Display only. This chooses how to format the number within the input.
+  @Prop()
+  phoneNumberFormat: 'E164' | 'INTERNATIONAL' = 'INTERNATIONAL';
+
   // ISO 3166-1 alpha-2 code
   @State()
   region: string;
@@ -72,6 +77,7 @@ export class GuxPhoneInput {
   @State()
   private expanded: boolean = false;
 
+  // Emits value in E164 format
   @Event()
   input: EventEmitter<string>;
 
@@ -115,8 +121,7 @@ export class GuxPhoneInput {
   }
 
   @Listen('focusout')
-  onFocusout(event: FocusEvent): void {
-    this.stopPropagationOfInternalFocusEvents(event);
+  onFocusout(): void {
     this.collapseListbox('noFocusChange');
   }
 
@@ -158,13 +163,11 @@ export class GuxPhoneInput {
   }
 
   private initialValueParse(): void {
+    this.setDisplayFormat();
     if (this.value) {
       try {
         const phone = this.phoneUtil.parse(this.value);
-        this.numberText = this.phoneUtil.format(
-          phone,
-          PhoneNumberFormat.INTERNATIONAL
-        );
+        this.numberText = this.phoneUtil.format(phone, this.displayFormat);
         this.region = this.phoneUtil.getRegionCodeForNumber(phone);
       } catch (e) {
         if (this.numberText === undefined) {
@@ -279,6 +282,17 @@ export class GuxPhoneInput {
     }
   }
 
+  private setDisplayFormat() {
+    switch (this.phoneNumberFormat) {
+      case 'INTERNATIONAL':
+        this.displayFormat = PhoneNumberFormat.INTERNATIONAL;
+        break;
+      case 'E164':
+        this.displayFormat = PhoneNumberFormat.E164;
+        break;
+    }
+  }
+
   private setValidation(): void {
     this.root.addEventListener('focusout', (event: FocusEvent) => {
       event.stopPropagation();
@@ -381,7 +395,7 @@ export class GuxPhoneInput {
         type="tel"
         placeholder={this.phoneUtil.format(
           this.phoneUtil.getExampleNumber(this.region || 'US'),
-          PhoneNumberFormat.INTERNATIONAL
+          this.displayFormat
         )}
         value={this.numberText}
         disabled={this.disabled}
