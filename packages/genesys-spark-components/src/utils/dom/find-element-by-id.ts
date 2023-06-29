@@ -8,7 +8,7 @@ export function findElementById(
 
   while (rootNode && rootNode !== priorRoot && !forElement) {
     const doc: Document =
-      rootNode.nodeType === Node.DOCUMENT_NODE
+      rootNode.nodeType === Node.DOCUMENT_NODE || Node.DOCUMENT_FRAGMENT_NODE
         ? (rootNode as Document)
         : rootNode.ownerDocument;
     forElement = doc?.getElementById(forElementId);
