@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.89.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.5...v3.89.6) (2023-06-30)
+
+
+### Bug Fixes
+
+* **pagination:** add fixed width to items per page dropdown ([93d7774](https://github.com/MyPureCloud/genesys-webcomponents/commit/93d77742d7f09e3b8f96af56875256a2d9113bee))
+* **util:** fix findElementById util bug ([f94f33e](https://github.com/MyPureCloud/genesys-webcomponents/commit/f94f33ee2b41f5af6451a1d5d1da6d96f4a510d7))
+
 ### [3.89.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.4...v3.89.5) (2023-06-29)
 
 ### [3.89.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.3...v3.89.4) (2023-06-28)
