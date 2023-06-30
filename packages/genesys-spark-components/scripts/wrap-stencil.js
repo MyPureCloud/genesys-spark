@@ -5,7 +5,9 @@ const path = require('path');
 const fs = require('fs');
 const proc = require('child_process');
 
-const CDN_URL = process.env.CDN_URL || '';
+const CDN_URL =
+  process.env.CDN_URL ||
+  `/spark-components/build-assets/3.64.0-48/genesys-webcomponents/`;
 console.log(`Wrapping stencil loader.`);
 if (CDN_URL.length > 0) {
   console.log(`  Embedded CDN URL will be: ${CDN_URL}`);

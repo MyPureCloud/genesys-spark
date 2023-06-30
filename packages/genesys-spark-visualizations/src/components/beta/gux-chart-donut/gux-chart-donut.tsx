@@ -36,15 +36,30 @@ export class GuxDonutChart {
     encoding: {
       theta: { field: 'value', type: 'quantitative', stack: true },
       color: {
-        field: DEFAULT_COLOR_FIELD_NAME,
-        type: 'nominal',
-        scale: { range: VISUALIZATION_COLORS },
+        // field: DEFAULT_COLOR_FIELD_NAME,
+        // type: 'nominal',
+        // scale: { range: VISUALIZATION_COLORS },
         legend: null
       }
     },
     layer: [
       {
-        mark: { type: 'arc', outerRadius: 80 }
+        mark: { type: 'arc', outerRadius: 80, innerRadius: 68 },
+        params: [
+          {
+            name: 'onHover',
+            select: { type: 'point', on: 'mouseover' }
+          }
+        ],
+        encoding: {
+          theta: { field: 'value', type: 'quantitative', stack: true },
+          color: {
+            field: DEFAULT_COLOR_FIELD_NAME,
+            type: 'nominal',
+            scale: { range: VISUALIZATION_COLORS },
+            condition: [{ param: 'onHover', empty: false, value: 'black' }]
+          }
+        }
       },
       {
         mark: { type: 'text', radius: 90 },
@@ -192,51 +207,67 @@ export class GuxDonutChart {
       innerRadius = outerRadius - DEFAULT_RING_WIDTH;
     }
 
-    let layerFiels = 1;
+    const layerFiels = 1;
 
     if (this.gauge) {
-      this.baseChartSpec.layer = [
-        {
-          data: { values: [{ progress: 'default', value: 100 }] },
-          mark: { type: 'arc', innerRadius },
-          encoding: {
-            theta: { field: 'value', type: 'quantitative' },
-            color: { value: '#E4E9F0' },
-            tooltip: null
-          }
-        },
-        {
-          mark: { type: 'arc', outerRadius, innerRadius, padAngle: 0.01 }
-        },
-        {
-          mark: { type: 'arc', innerRadius, padAngle: 0.01 }
-        }
-      ];
-      layerFiels = 2;
+      // this.baseChartSpec.layer = [
+      //   {
+      //     data: { values: [{ progress: 'default', value: 100 }] },
+      //     mark: { type: 'arc', innerRadius },
+      //     encoding: {
+      //       theta: { field: 'value', type: 'quantitative' },
+      //       color: { value: '#E4E9F0' },
+      //       tooltip: null
+      //     }
+      //   },
+      //   {
+      //     mark: { type: 'arc', outerRadius, innerRadius, padAngle: 0.01 }
+      //   },
+      //   {
+      //     mark: { type: 'arc', innerRadius, padAngle: 0.01 }
+      //   }
+      // ];
+      // layerFiels = 2;
     } else {
-      this.baseChartSpec.layer = [
-        {
-          mark: { type: 'arc', outerRadius, innerRadius }
-        },
-        {
-          mark: { type: 'arc', innerRadius, stroke: '#fff' }
-        }
-      ];
-    }
-
-    const centerText = this.centerText;
-    if (centerText) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      this.baseChartSpec.layer.push({
-        data: { values: [{ centerText: centerText, value: 0 }] },
-        mark: { align: 'center', type: 'text', baseline: 'middle' },
-        encoding: {
-          color: { value: '#4C5054' },
-          text: { field: 'centerText' },
-          size: { value: { expr: 'height * 0.09' } },
-          tooltip: null
-        }
-      });
+      //   this.baseChartSpec.layer[0].mark = { type: 'arc', outerRadius, innerRadius },
+      //   this.baseChartSpec.layer[1].mart
+      //   this.baseChartSpec.layer = [
+      //     {
+      //       mark: { type: 'arc', outerRadius, innerRadius },
+      //       params: [
+      //         {
+      //           name: 'onHover',
+      //           select: { type: 'point', on: 'mouseover' }
+      //         }
+      //       ],
+      //       encoding: {
+      //         theta: { field: 'value', type: 'quantitative', stack: true },
+      //         color: {
+      //           field: DEFAULT_COLOR_FIELD_NAME,
+      //           type: 'nominal',
+      //           // scale: { range: VISUALIZATION_COLORS },
+      //           condition: [{param: "onHover", empty: false, value: "black"}]
+      //         }
+      //       },
+      //     },
+      //     {
+      //       mark: { type: 'arc', innerRadius, stroke: '#fff' }
+      //     }
+      //   ];
+      // }
+      // const centerText = this.centerText;
+      // if (centerText) {
+      //   // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+      //   this.baseChartSpec.layer.push({
+      //     data: { values: [{ centerText: centerText, value: 0 }] },
+      //     mark: { align: 'center', type: 'text', baseline: 'middle' },
+      //     encoding: {
+      //       color: { value: '#4C5054' },
+      //       text: { field: 'centerText' },
+      //       size: { value: { expr: 'height * 0.09' } },
+      //       tooltip: null
+      //     }
+      //   });
     }
 
     const centerSubText = this.centerSubText;
