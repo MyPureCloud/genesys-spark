@@ -32,7 +32,9 @@ export class GuxPaginationCursor {
   @Prop()
   hasNext: boolean = false;
 
-  // Shows items per page dropdown when set. Only available with layout set to 'advanced'
+  /**
+   * Optional. Shows items per page dropdown when set. Only available with layout set to 'advanced'
+   */
   @Prop()
   itemsPerPage: GuxItemsPerPage;
 
