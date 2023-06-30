@@ -45,6 +45,9 @@
     "./shared-configs/*",
     "./web-apps/*"
   ],
+  "dependencies": {
+    "@vvo/tzdb": "^6.108.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",

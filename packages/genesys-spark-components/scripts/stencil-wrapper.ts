@@ -12,7 +12,7 @@ import { defineCustomElements } from '../dist/loader';
 export const CDN_URL = '{{cdn_url}}';
 
 // Default domain to load assets from
-const DEFAULT_DOMAIN = 'mypurecloud.com';
+const DEFAULT_DOMAIN = 'inindca.com';
 
 // List of Genesys UI domains
 const DOMAIN_LIST = [

@@ -3,7 +3,7 @@
 exports[`#render different time formats eg(short,medium,full,long) should render component as expected (1) 1`] = `
 <gux-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <mock:shadow-root>
-    1:35 PM
+    1:35 PM
   </mock:shadow-root>
 </gux-time-beta>
 `;
@@ -11,7 +11,7 @@ exports[`#render different time formats eg(short,medium,full,long) should render
 exports[`#render different time formats eg(short,medium,full,long) should render component as expected (2) 1`] = `
 <gux-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <mock:shadow-root>
-    1:35:30 PM
+    1:35:30 PM
   </mock:shadow-root>
 </gux-time-beta>
 `;
@@ -19,7 +19,7 @@ exports[`#render different time formats eg(short,medium,full,long) should render
 exports[`#render different time formats eg(short,medium,full,long) should render component as expected (3) 1`] = `
 <gux-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <mock:shadow-root>
-    1:35:30 PM Coordinated Universal Time
+    1:35:30 PM Coordinated Universal Time
   </mock:shadow-root>
 </gux-time-beta>
 `;
@@ -27,7 +27,7 @@ exports[`#render different time formats eg(short,medium,full,long) should render
 exports[`#render different time formats eg(short,medium,full,long) should render component as expected (4) 1`] = `
 <gux-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <mock:shadow-root>
-    1:35:30 PM UTC
+    1:35:30 PM UTC
   </mock:shadow-root>
 </gux-time-beta>
 `;
