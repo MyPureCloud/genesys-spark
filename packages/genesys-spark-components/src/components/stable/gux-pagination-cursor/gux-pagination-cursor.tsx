@@ -69,8 +69,9 @@ export class GuxPaginationCursor {
   renderSimpleLayout(): JSX.Element {
     return [
       <div role="navigation" class="gux-pagination-button-container">
-        <gux-button-slot-beta accent="ghost">
+        <gux-button-slot-beta accent="ghost" class="gux-previous">
           <button
+            class="gux-simple-button"
             type="button"
             disabled={!this.hasPrevious}
             onClick={() => this.onButtonClick('previous')}
@@ -81,8 +82,9 @@ export class GuxPaginationCursor {
             ></gux-icon>
           </button>
         </gux-button-slot-beta>
-        <gux-button-slot-beta accent="ghost">
+        <gux-button-slot-beta accent="ghost" class="gux-next">
           <button
+            class="gux-simple-button"
             type="button"
             disabled={!this.hasNext}
             onClick={() => this.onButtonClick('next')}
@@ -100,7 +102,7 @@ export class GuxPaginationCursor {
   renderAdvancedLayout(): JSX.Element {
     return [
       <div role="navigation" class="gux-pagination-button-container">
-        <gux-button-slot-beta accent="ghost">
+        <gux-button-slot-beta accent="ghost" class="gux-previous">
           <button
             type="button"
             disabled={!this.hasPrevious}
@@ -116,7 +118,7 @@ export class GuxPaginationCursor {
             </div>
           </button>
         </gux-button-slot-beta>
-        <gux-button-slot-beta accent="ghost">
+        <gux-button-slot-beta accent="ghost" class="gux-next">
           <button
             type="button"
             disabled={!this.hasNext}

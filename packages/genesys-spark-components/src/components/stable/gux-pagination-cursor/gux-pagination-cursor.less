@@ -55,7 +55,16 @@
   }
 
   gux-button-slot-beta {
-    margin-right: @gux-spacing-small;
-    margin-left: @gux-spacing-small;
+    &.gux-previous {
+      margin-right: @gux-spacing-small;
+    }
+
+    &.gux-next {
+      margin-left: @gux-spacing-small;
+    }
+  }
+
+  .gux-simple-button {
+    padding: 0;
   }
 }
