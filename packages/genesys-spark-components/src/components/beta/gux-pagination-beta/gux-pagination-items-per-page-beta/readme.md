@@ -25,6 +25,7 @@ An internal component used by the gux-pagination component.
 ### Used by
 
  - [gux-pagination-beta](..)
+ - [gux-pagination-cursor](../../../stable/gux-pagination-cursor)
 
 ### Depends on
 
@@ -46,6 +47,7 @@ graph TD;
   gux-listbox --> gux-radial-loading
   gux-option --> gux-truncate-beta
   gux-pagination-beta --> gux-pagination-items-per-page-beta
+  gux-pagination-cursor --> gux-pagination-items-per-page-beta
   style gux-pagination-items-per-page-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
