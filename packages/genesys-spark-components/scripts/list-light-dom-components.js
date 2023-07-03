@@ -1,10 +1,10 @@
 #! /usr/bin/env node
 
 const fs = require('fs').promises;
-const { glob } = require('glob');
+const { globSync } = require('glob');
 
 async function listLightDomComponents() {
-  const files = glob.sync('**/*.tsx', {
+  const files = globSync('**/*.tsx', {
     ignore: [
       'src/components/@(beta|stable|legacy)/*/*.functional.tsx',
       '**/*.service.tsx'

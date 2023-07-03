@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { glob } = require('glob');
+const { globSync } = require('glob');
 
 const versionHelper = require('./version-helper');
 
@@ -10,8 +10,7 @@ const name = 'common-ui-docs/genesys-webcomponents';
 const version = versionHelper.getDeployVersion();
 const build = `${process.env.BUILD_NUMBER}`;
 const buildDate = new Date().toISOString();
-const indexFiles = glob
-  .sync(path.join(__dirname, '../dist/*.html'))
+const indexFiles = globSync(path.join(__dirname, '../dist/*.html'))
   .map(file => ({ file: path.basename(file) }))
   .concat({ file: 'versions.json' });
 

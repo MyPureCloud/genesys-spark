@@ -8,18 +8,18 @@
  */
 const path = require('path');
 const fs = require('fs');
-const { glob } = require('glob');
+const { globSync } = require('glob');
 const { DOMParser, XMLSerializer } = require('xmldom');
 
-glob('src/components/stable/gux-icon/icons/**/*.svg', (err, files) => {
-  if (err) {
-    console.error('Error encountered while trying to find the svg files');
-    console.error(err);
-    process.exit(1);
-  }
+try {
+  const files = globSync('src/components/stable/gux-icon/icons/**/*.svg');
 
   files.forEach(fixSvg);
-});
+} catch (err) {
+  console.error('Error encountered while trying to find the svg files');
+  console.error(err);
+  process.exit(1);
+}
 
 function fixSvg(file) {
   const svgStr = fs.readFileSync(file, 'utf8');
