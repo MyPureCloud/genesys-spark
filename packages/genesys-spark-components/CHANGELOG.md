@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.90.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.6...v3.90.0) (2023-07-03)
+
+
+### Features
+
+* **pagination-cursor:** updating design with two layouts and optional items per page dropdown ([ecf60c0](https://github.com/MyPureCloud/genesys-webcomponents/commit/ecf60c08999a74bc7eb29097c3073fdcc521a859))
+
 ### [3.89.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.5...v3.89.6) (2023-06-30)
 
 
