@@ -1,14 +1,14 @@
 #! /usr/bin/env node
 
 const fs = require('fs').promises;
-const { glob } = require('glob');
+const { globSync } = require('glob');
 
 async function listCheckedA11yComponents() {
-  const components = glob.sync('src/components/@(beta|stable|legacy)/*');
+  const components = globSync('src/components/@(beta|stable|legacy)/*');
 
   const output = await Promise.all(
     components.map(async component => {
-      const a11yChecklistFiles = glob.sync(
+      const a11yChecklistFiles = globSync(
         `${component}/a11yManualChecklist.md`
       );
       const hasA11yChecklistFile = !!a11yChecklistFiles[0];

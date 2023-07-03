@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const fs = require('fs');
-const { glob } = require('glob');
+const { globSync } = require('glob');
 const path = require('path');
 
 const filePatternRegex = /[/\\]([^/\\]+)\/i18n\/[^.]+\.json$/;
@@ -14,14 +14,8 @@ if (!fs.existsSync(translationsFolder)) {
 composeI18nFileFromComponents('en');
 
 function composeI18nFileFromComponents(locale) {
-  glob(`src/components/**/i18n/${locale}.json`, (err, files) => {
-    if (err) {
-      console.error(
-        'Error encountered while trying to find the i18n json files'
-      );
-      console.error(err);
-      process.exit(1);
-    }
+  try {
+    const files = globSync(`src/components/**/i18n/${locale}.json`).sort();
 
     const translations = files.reduce((acc, file) => {
       const match = file.match(filePatternRegex);
@@ -43,5 +37,9 @@ function composeI18nFileFromComponents(locale) {
       path.join(translationsFolder, `${locale}.json`),
       JSON.stringify(translations, null, 2) + '\n'
     );
-  });
+  } catch (err) {
+    console.error('Error encountered while trying to find the i18n json files');
+    console.error(err);
+    process.exit(1);
+  }
 }

@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const fs = require('fs');
-const { glob } = require('glob');
+const { globSync } = require('glob');
 const path = require('path');
 
 const translationsInputFolder = path.join(
@@ -15,12 +15,8 @@ if (!fs.existsSync(translationsOutputFolder)) {
   fs.mkdirSync(translationsOutputFolder, { recursive: true });
 }
 
-glob(`${translationsInputFolder}/*.json`, (err, files) => {
-  if (err) {
-    console.error('Error encountered while trying to find the i18n json files');
-    console.error(err);
-    process.exit(1);
-  }
+try {
+  const files = globSync(`${translationsInputFolder}/*.json`).sort();
 
   const locales = new Set();
 
@@ -44,4 +40,8 @@ glob(`${translationsInputFolder}/*.json`, (err, files) => {
     localesFile,
     `${JSON.stringify(Array.from(locales), null, 2)}\n`
   );
-});
+} catch (err) {
+  console.error('Error encountered while trying to find the i18n json files');
+  console.error(err);
+  process.exit(1);
+}

@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-const { glob } = require('glob');
+const { globSync } = require('glob');
 const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
@@ -20,14 +20,14 @@ module.exports = function generateMetadata() {
 };
 
 function generateComponentSpec() {
-  let componentExamples = glob.sync(componentExampleGlob);
+  let componentExamples = globSync(componentExampleGlob);
   let componentsSpec = componentExamples.reduce((spec, examplePath) => {
     let componentPath = examplePath.replace('/example.html', '');
     spec[getComponentName(componentPath)] = getComponentMetadata(componentPath);
     return spec;
   }, {});
 
-  let styleExamples = glob.sync(styleExampleGlob);
+  let styleExamples = globSync(styleExampleGlob);
   let stylesSpec = styleExamples.reduce((spec, examplePath) => {
     const name = path.basename(examplePath, '.html');
     spec[name] = { styles: true };
