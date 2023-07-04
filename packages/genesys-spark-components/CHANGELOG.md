@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.90.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.90.0...v3.90.1) (2023-07-04)
+
+
+### Bug Fixes
+
+* **glob:** fixed calls to glob ([b02377b](https://github.com/MyPureCloud/genesys-webcomponents/commit/b02377b260858ce8e333f9b66fbf5de8ccf058aa))
+* **toggle:** removing dependency on gux-error-message-beta component ([91a5f18](https://github.com/MyPureCloud/genesys-webcomponents/commit/91a5f1800a5ffa6b19fdaed9cce74ef011b5f3cf))
+
 ## [3.90.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.89.6...v3.90.0) (2023-07-03)
 
 
