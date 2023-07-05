@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.92.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.90.1...v3.92.0) (2023-07-05)
+
+
+### Features
+
+* **icon:** new requested icons ([04e4836](https://github.com/MyPureCloud/genesys-webcomponents/commit/04e4836c23a76d7d1d73f75b092bb0246505fd34))
+* **phone-input:** modifying behavior to more closely match intl-tel-input ([4d0decf](https://github.com/MyPureCloud/genesys-webcomponents/commit/4d0decf06d9dba3b97095b7fd270f014236af894))
+
 ## [3.91.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.90.1...v3.91.0) (2023-07-05)
 
 
