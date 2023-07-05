@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-phone-input #render should render phone-input 1`] = `"<gux-phone-input-beta hydrated=\\"\\"></gux-phone-input-beta>"`;
+
+exports[`gux-phone-input #render should render with default region 1`] = `"<gux-phone-input-beta default-region=\\"US\\" hydrated=\\"\\"></gux-phone-input-beta>"`;
+
+exports[`gux-phone-input #render should render with format 1`] = `"<gux-phone-input-beta phone-number-format=\\"E164\\" hydrated=\\"\\"></gux-phone-input-beta>"`;
+
+exports[`gux-phone-input #render should render with value 1`] = `"<gux-phone-input-beta value=\\"+13175971660\\" hydrated=\\"\\"></gux-phone-input-beta>"`;
