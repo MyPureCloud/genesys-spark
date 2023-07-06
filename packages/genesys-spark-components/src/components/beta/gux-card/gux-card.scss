@@ -1,0 +1,65 @@
+// I think filled should stay and be given a new background color. If it is removed the migration to v4 will be unnecessarily complicated
+$cui-card-filled-color: var(--gse-ui-card-backgroundColor);
+
+/**
+  * @prop --gse-ui-card-backgroundColor
+  * @prop --gse-ui-card-borderRadius
+  * @prop --gse-ui-card-borderless-border-color
+  * @prop --gse-ui-card-borderless-border-style
+  * @prop --gse-ui-card-borderless-border-width
+  * @prop --gse-ui-card-default-border-color
+  * @prop --gse-ui-card-default-border-style
+  * @prop --gse-ui-card-default-border-width
+  * @prop --gse-ui-card-padding
+  * @prop --gse-ui-card-raised-border-color
+  * @prop --gse-ui-card-raised-border-style
+  * @prop --gse-ui-card-raised-border-width
+  * @prop --gse-ui-card-raised-boxShadow-blur
+  * @prop --gse-ui-card-raised-boxShadow-color
+  * @prop --gse-ui-card-raised-boxShadow-spread
+  * @prop --gse-ui-card-raised-boxShadow-x
+  * @prop --gse-ui-card-raised-boxShadow-y
+*/
+
+:host {
+  display: block;
+  width: fit-content;
+}
+
+.gux-card {
+  box-sizing: border-box;
+  padding: var(--gse-ui-card-padding);
+  background-color: var(--gse-ui-card-backgroundColor);
+  border: var(--gse-ui-card-default-border-width)
+    var(--gse-ui-card-default-border-style)
+    var(--gse-ui-card-default-border-color);
+  border-radius: var(--gse-ui-card-borderRadius);
+
+  &.gux-bordered,
+  &.gux-outline {
+    border: var(--gse-ui-card-default-border-width)
+      var(--gse-ui-card-default-border-style)
+      var(--gse-ui-card-default-border-color);
+  }
+
+  &.gux-raised {
+    border: var(--gse-ui-card-raised-border-width)
+      var(--gse-ui-card-raised-border-style)
+      var(--gse-ui-card-raised-border-color);
+    box-shadow: var(--gse-ui-card-raised-boxShadow-x)
+      var(--gse-ui-card-raised-boxShadow-y)
+      var(--gse-ui-card-raised-boxShadow-blur)
+      var(--gse-ui-card-raised-boxShadow-spread)
+      var(--gse-ui-card-raised-boxShadow-color);
+  }
+
+  &.gux-borderless {
+    border: var(--gse-ui-card-borderless-border-width)
+      var(--gse-ui-card-borderless-border-style)
+      var(--gse-ui-card-borderless-border-color);
+  }
+
+  &.gux-filled {
+    background-color: $cui-card-filled-color;
+  }
+}

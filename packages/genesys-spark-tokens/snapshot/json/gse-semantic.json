@@ -1,11 +1,11 @@
 {
-  "semantic": {
+  "color": {
     "info": {
       "lightest": "#e2dff8",
       "lighter": "#c5bef1",
       "main": "#6e5ddb",
       "darker": "#443989",
-      "darkest": "#2E275F"
+      "darkest": "#2e275f"
     },
     "warning": {
       "lightest": "#fef4d8",
@@ -29,11 +29,11 @@
       "darkest": "#033627"
     },
     "primary": {
-      "lightest": "#CED2FC",
-      "lighter": "#9CA6F9",
-      "main": "#4856CB",
-      "darker": "#3742A2",
-      "darkest": "#252E78"
+      "lightest": "#ced2fc",
+      "lighter": "#9ca6f9",
+      "main": "#4856cb",
+      "darker": "#3742a2",
+      "darkest": "#252e78"
     }
   }
 }

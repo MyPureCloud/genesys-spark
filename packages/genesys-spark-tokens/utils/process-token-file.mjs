@@ -8,16 +8,14 @@ export async function processTokenFile(distFolder, tokenStudioFile) {
   console.info(`Processing ${tokenStudioFile}`);
 
   const tokenStudioTokens = getTokenStudioTokens(tokenStudioFile);
+  const allSets = tokenStudioTokens.$metadata.tokenSetOrder;
 
-  for (const set of ['global', 'ui', 'semantic']) {
-    const outputFilename = set;
+  const sets = allSets.filter(set => !set.endsWith('_deprecated'));
+
+  for (const setName of sets) {
     const styleDictionaryReadableTokens =
-      transformToStyleDictionaryReadableTokens(tokenStudioTokens, set);
+      transformToStyleDictionaryReadableTokens(tokenStudioTokens, setName);
 
-    await outputStyles(
-      distFolder,
-      outputFilename,
-      styleDictionaryReadableTokens
-    );
+    await outputStyles(distFolder, setName, styleDictionaryReadableTokens);
   }
 }

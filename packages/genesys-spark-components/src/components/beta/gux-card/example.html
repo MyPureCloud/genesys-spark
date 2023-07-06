@@ -1,91 +1,57 @@
 <h1>gux-card-beta</h1>
 
-<h2>Outline Card</h2>
-<gux-card-beta>
-  <h2>Outcome Details</h2>
-  <gux-form-field-text-like label-position="above">
-    <input
-      slot="input"
-      type="text"
-      name="a-2"
-      placeholder="Please enter a name"
-      required
-    />
-    <label slot="label">Name</label>
-  </gux-form-field-text-like>
-  <gux-form-field-text-like label-position="above">
-    <input
-      slot="input"
-      type="text"
-      name="a-2"
-      placeholder="Please enter a description"
-    />
-    <label slot="label">Description</label>
-  </gux-form-field-text-like>
-  <gux-card-beta accent="filled">
-    <div class="card-content">
-      <label>Status</label>
-      <gux-toggle
-        checked-label="The outcome is active."
-        unchecked-label="The outcome is not active."
-      ></gux-toggle>
-    </div>
+<div class="container">
+  <gux-card-beta accent="outline">
+    <h2>Outline</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis
+      erat fringilla tristique condimentums.
+    </p>
   </gux-card-beta>
-</gux-card-beta>
 
-<h2>Outline Card (Explicity Set)</h2>
-<gux-card-beta accent="outline">
-  <h2>Define your outcome conditions</h2>
-  <gux-card-beta accent="filled">
-    <p>What activity type should be used to achieve this outcome?</p>
-    <gux-form-field-select label-position="beside">
-      <select slot="input" name="lp-1">
-        <option value="option1">Session 1</option>
-        <option value="option2">Session 2</option>
-        <option value="option3">Session 3</option>
-      </select>
-      <label slot="label">Session Type</label>
-    </gux-form-field-select>
+  <gux-card-beta accent="bordered">
+    <h2>Bordered</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis
+      erat fringilla tristique condimentums.
+    </p>
   </gux-card-beta>
-  <gux-button class="button-styling">Add Event</gux-button>
-</gux-card-beta>
 
-<h2>Filled Card</h2>
-<gux-card-beta accent="filled">
-  <p>What session type is required for this action to be performed?</p>
-  <gux-form-field-select label-position="beside">
-    <select slot="input" name="lp-1">
-      <option value="option1">Session 1</option>
-      <option value="option2">Session 2</option>
-      <option value="option3">Session 3</option>
-    </select>
-    <label slot="label">Session Type</label>
-  </gux-form-field-select>
-</gux-card-beta>
-
-<h2>Raised Card</h2>
-<gux-card-beta accent="raised">
-  <h2>Define your Visitor Characteristics</h2>
   <gux-card-beta accent="filled">
-    <p>All characteristics must be met for outcome to be achieved.</p>
-    <gux-button>Add Characteristic</gux-button>
+    <h2>Filled</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis
+      erat fringilla tristique condimentums.
+    </p>
   </gux-card-beta>
-</gux-card-beta>
+
+  <gux-card-beta accent="raised">
+    <h2>Raised</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis
+      erat fringilla tristique condimentums.
+    </p>
+  </gux-card-beta>
+
+  <gux-card-beta accent="borderless">
+    <h2>Borderless</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis
+      erat fringilla tristique condimentums.
+    </p>
+  </gux-card-beta>
+</div>
 
 <style>
-  gux-card-beta {
-    width: 100%;
-  }
-
-  .card-content {
+  .container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
-    align-items: center;
-    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f2f2f2;
   }
 
-  .button-styling {
-    margin-top: 8px;
+  gux-card-beta {
+    width: 200px;
   }
 </style>

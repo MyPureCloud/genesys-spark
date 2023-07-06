@@ -1,48 +1,50 @@
 @import '../../../style/mixins';
 
+$error-gse-ui-tag-borderRadius: var(--gse-ui-tag-height);
+
+$missing-gse-ui-tag-focusRing-color: #7b88f7;
+$missing-gse-ui-tag-focusRing-width: 2px;
+$missing-gse-ui-tag-focusRing-offset: 0;
+$missing-gse-ui-tag-focusRing-cornerRadius: 4px;
+
 /**
-  * @prop --gse-ui-tag-label-font-family
-  * @prop --gse-ui-tag-label-font-weight
-  * @prop --gse-ui-tag-label-line-height
-  * @prop --gse-ui-tag-label-font-size
-  * @prop --gse-ui-tag-background-default
-  * @prop --gse-ui-tag-background-accent1
-  * @prop --gse-ui-tag-background-accent2
-  * @prop --gse-ui-tag-background-accent3
-  * @prop --gse-ui-tag-background-accent4
-  * @prop --gse-ui-tag-background-accent5
-  * @prop --gse-ui-tag-background-accent6
-  * @prop --gse-ui-tag-background-accent7
-  * @prop --gse-ui-tag-background-accent8
-  * @prop --gse-ui-tag-background-accent9
-  * @prop --gse-ui-tag-background-accent10
-  * @prop --gse-ui-tag-foreground-default
-  * @prop --gse-ui-tag-foreground-accent1
-  * @prop --gse-ui-tag-foreground-accent2
-  * @prop --gse-ui-tag-foreground-accent3
-  * @prop --gse-ui-tag-foreground-accent4
-  * @prop --gse-ui-tag-foreground-accent5
-  * @prop --gse-ui-tag-foreground-accent6
-  * @prop --gse-ui-tag-foreground-accent7
-  * @prop --gse-ui-tag-foreground-accent8
-  * @prop --gse-ui-tag-foreground-accent9
-  * @prop --gse-ui-tag-foreground-accent10
+  * @prop --gse-ui-tag-default-backgroundColor
+  * @prop --gse-ui-tag-default-foregroundColor
+  * @prop --gse-ui-tag-accent1-backgroundColor
+  * @prop --gse-ui-tag-accent1-foregroundColor
+  * @prop --gse-ui-tag-accent2-backgroundColor
+  * @prop --gse-ui-tag-accent2-foregroundColor
+  * @prop --gse-ui-tag-accent3-backgroundColor
+  * @prop --gse-ui-tag-accent3-foregroundColor
+  * @prop --gse-ui-tag-accent4-backgroundColor
+  * @prop --gse-ui-tag-accent4-foregroundColor
+  * @prop --gse-ui-tag-accent5-backgroundColor
+  * @prop --gse-ui-tag-accent5-foregroundColor
+  * @prop --gse-ui-tag-accent6-backgroundColor
+  * @prop --gse-ui-tag-accent6-foregroundColor
+  * @prop --gse-ui-tag-accent7-backgroundColor
+  * @prop --gse-ui-tag-accent7-foregroundColor
+  * @prop --gse-ui-tag-accent8-backgroundColor
+  * @prop --gse-ui-tag-accent8-foregroundColor
+  * @prop --gse-ui-tag-accent9-backgroundColor
+  * @prop --gse-ui-tag-accent9-foregroundColor
+  * @prop --gse-ui-tag-accent10-backgroundColor
+  * @prop --gse-ui-tag-accent10-foregroundColor
+  * @prop --gse-ui-tag-borderRadius
+  * @prop --gse-ui-tag-button-size
+  * @prop --gse-ui-tag-height
+  * @prop --gse-ui-tag-padding
+  * @prop --gse-ui-tag-removable-gap
+  * @prop --gse-ui-tag-removable-padding
+  * @prop --gse-ui-tag-text-fontFamily
+  * @prop --gse-ui-tag-text-fontSize
+  * @prop --gse-ui-tag-text-fontWeight // missing
+  * @prop --gse-ui-tag-text-lineHeight
   */
-
-$cui-ui-tag-border-radius: var(--gse-ui-tag-label-line-height);
-$cui-ui-tag-gap: 4px;
-$cui-ui-tag-height: 20px;
-$cui-ui-tag-padding: 0 12px;
-$cui-ui-tag-icon-size: 16px;
-
-$cui-focus-ring-color: var(--gse-ui-shared-focus-ring);
-$cui-focus-ring-width: 2px;
-$cui-focus-ring-offset: 0;
-$cui-focus-ring-corner-radius: 4px;
 
 :host {
   display: inline-block;
-  border-radius: $cui-ui-tag-border-radius;
+  border-radius: $error-gse-ui-tag-borderRadius;
 }
 
 .gux-tag {
@@ -53,18 +55,18 @@ $cui-focus-ring-corner-radius: 4px;
   align-items: center;
   justify-content: flex-start;
 
-  font-family: var(--gse-ui-tag-label-font-family);
-  font-weight: var(--gse-ui-tag-label-font-weight);
-  line-height: var(--gse-ui-tag-label-line-height);
-  font-size: var(--gse-ui-tag-label-font-size);
+  font-family: var(--gse-ui-tag-text-fontFamily);
+  font-weight: var(--gse-ui-tag-text-fontWeight, 600);
+  line-height: var(--gse-ui-tag-text-lineHeight);
+  font-size: var(--gse-ui-tag-text-fontSize);
 
-  background-color: var(--gse-ui-tag-background-default);
-  color: var(--gse-ui-tag-foreground-default);
+  background-color: var(--gse-ui-tag-default-backgroundColor);
+  color: var(--gse-ui-tag-default-foregroundColor);
 
-  border-radius: $cui-ui-tag-border-radius;
-  gap: $cui-ui-tag-gap;
-  height: $cui-ui-tag-height;
-  padding: $cui-ui-tag-padding;
+  border-radius: $error-gse-ui-tag-borderRadius;
+  gap: var(--gse-ui-tag-removable-gap);
+  height: var(--gse-ui-tag-height);
+  padding: var(--gse-ui-tag-padding);
 
   &.gux-disabled {
     position: relative;
@@ -77,7 +79,7 @@ $cui-focus-ring-corner-radius: 4px;
       right: 0;
       opacity: 0.5;
       background-color: #ffffff;
-      border-radius: $cui-ui-tag-border-radius;
+      border-radius: $error-gse-ui-tag-borderRadius;
       content: '';
     }
   }
@@ -87,7 +89,7 @@ $cui-focus-ring-corner-radius: 4px;
     cursor: default;
 
     ::slotted(gux-icon) {
-      font-size: $cui-ui-tag-icon-size;
+      font-size: var(--gse-ui-tag-button-size);
     }
   }
 
@@ -107,73 +109,74 @@ $cui-focus-ring-corner-radius: 4px;
     }
 
     .gux-tag-remove-icon {
-      width: $cui-ui-tag-icon-size;
-      height: $cui-ui-tag-icon-size;
+      width: var(--gse-ui-tag-button-size);
+      height: var(--gse-ui-tag-button-size);
       margin-right: -4px;
     }
 
     &:focus-within {
       .gux-tag-remove-icon {
-        outline: $cui-focus-ring-width solid $cui-focus-ring-color;
-        outline-offset: $cui-focus-ring-offset;
-        border-radius: $cui-focus-ring-corner-radius;
+        outline: $missing-gse-ui-tag-focusRing-width solid
+          $missing-gse-ui-tag-focusRing-color;
+        outline-offset: $missing-gse-ui-tag-focusRing-offset;
+        border-radius: $missing-gse-ui-tag-focusRing-cornerRadius;
       }
     }
   }
 
   &.gux-accent-default {
-    background-color: var(--gse-ui-tag-background-default);
-    color: var(--gse-ui-tag-foreground-default);
+    background-color: var(--gse-ui-tag-default-backgroundColor);
+    color: var(--gse-ui-tag-default-foregroundColor);
   }
 
   &.gux-accent-1 {
-    background-color: var(--gse-ui-tag-background-accent1);
-    color: var(--gse-ui-tag-foreground-accent1);
+    background-color: var(--gse-ui-tag-accent1-backgroundColor);
+    color: var(--gse-ui-tag-accent1-foregroundColor);
   }
 
   &.gux-accent-2 {
-    background-color: var(--gse-ui-tag-background-accent2);
-    color: var(--gse-ui-tag-foreground-accent2);
+    background-color: var(--gse-ui-tag-accent2-backgroundColor);
+    color: var(--gse-ui-tag-accent2-foregroundColor);
   }
 
   &.gux-accent-3 {
-    background-color: var(--gse-ui-tag-background-accent3);
-    color: var(--gse-ui-tag-foreground-accent3);
+    background-color: var(--gse-ui-tag-accent3-backgroundColor);
+    color: var(--gse-ui-tag-accent3-foregroundColor);
   }
 
   &.gux-accent-4 {
-    background-color: var(--gse-ui-tag-background-accent4);
-    color: var(--gse-ui-tag-foreground-accent4);
+    background-color: var(--gse-ui-tag-accent4-backgroundColor);
+    color: var(--gse-ui-tag-accent4-foregroundColor);
   }
 
   &.gux-accent-5 {
-    background-color: var(--gse-ui-tag-background-accent5);
-    color: var(--gse-ui-tag-foreground-accent5);
+    background-color: var(--gse-ui-tag-accent5-backgroundColor);
+    color: var(--gse-ui-tag-accent5-foregroundColor);
   }
 
   &.gux-accent-6 {
-    background-color: var(--gse-ui-tag-background-accent6);
-    color: var(--gse-ui-tag-foreground-accent6);
+    background-color: var(--gse-ui-tag-accent6-backgroundColor);
+    color: var(--gse-ui-tag-accent6-foregroundColor);
   }
 
   &.gux-accent-7 {
-    background-color: var(--gse-ui-tag-background-accent7);
-    color: var(--gse-ui-tag-foreground-accent7);
+    background-color: var(--gse-ui-tag-accent7-backgroundColor);
+    color: var(--gse-ui-tag-accent7-foregroundColor);
   }
 
   &.gux-accent-8 {
-    background-color: var(--gse-ui-tag-background-accent8);
-    color: var(--gse-ui-tag-foreground-accent8);
+    background-color: var(--gse-ui-tag-accent8-backgroundColor);
+    color: var(--gse-ui-tag-accent8-foregroundColor);
   }
 
   &.gux-accent-9 {
-    background-color: var(--gse-ui-tag-background-accent9);
-    color: var(--gse-ui-tag-foreground-accent9);
+    background-color: var(--gse-ui-tag-accent9-backgroundColor);
+    color: var(--gse-ui-tag-accent9-foregroundColor);
   }
 
   &.gux-accent-10 {
-    background-color: var(--gse-ui-tag-background-accent10);
-    color: var(--gse-ui-tag-foreground-accent10);
+    background-color: var(--gse-ui-tag-accent10-backgroundColor);
+    color: var(--gse-ui-tag-accent10-foregroundColor);
   }
 
   &.gux-accent-inherit {
