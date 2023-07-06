@@ -62,7 +62,8 @@
     "previous": "السابق",
     "next": "التالي",
     "last": "الأخير",
-    "pageInputLabel": "صفحة {currentPage, number} من {totalPages, number}"
+    "pageInputLabel": "صفحة {currentPage, number} من {totalPages, number}",
+    "goToPage": "الانتقال إلى الصفحة"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
