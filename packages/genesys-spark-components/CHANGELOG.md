@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.93.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.92.0...v3.93.0) (2023-07-06)
+
+
+### Features
+
+* **icon:** GDS-1885_set_1_icons ([8aee6c5](https://github.com/MyPureCloud/genesys-webcomponents/commit/8aee6c529dd428de82cd09348d83c5dc52746f16))
+
 ## [3.92.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.90.1...v3.92.0) (2023-07-05)
 
 
