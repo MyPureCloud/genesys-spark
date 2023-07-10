@@ -6,15 +6,21 @@ Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
 
 Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/')
 
-Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch
+Boolean isBetaBranch = env.BRANCH_NAME.startsWith('beta/')
 
-Boolean isPublicBranch = isReleaseBranch || isFeatureBranch
+Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBranch
+
+Boolean isPublicBranch = isReleaseBranch || isFeatureBranch || isBetaBranch
+
+String releaseOptions = isBetaBranch ? '--prelease beta' : ''
+String publishOptions = isBetaBranch ? '--dry-run --tag beta' : ''
+String gitOptions = isBetaBranch ? '--dry-run' : ''
 
 webappPipeline {
     projectName = 'spark-components'
     team = 'Core UI'
     mailer = 'matthew.cheely@genesys.com, daragh.king@genesys.com, jordan.stith@genesys.com, thomas.dillon@genesys.com, katie.bobbe@genesys.com, gavin.everett@genesys.com, jason.evans@genesys.com'
-    chatGroupId='adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
+    chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
     nodeVersion = '16.18.0'
     testJob = 'no-tests'
     deployConfig = [:]
@@ -43,8 +49,8 @@ webappPipeline {
         // Run in CI step so we only run once
         // (builds happen twice, legacy and FedRAMP)
         if (isReleaseBranch) {
+            sh("npm run release --workspace=packages/genesys-spark-components -- ${releaseOptions}")
             sh('''
-                npm run release --workspace=packages/genesys-spark-components
                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
                npm run version-sync $RELEASE_VERSION
                npm install
@@ -77,7 +83,7 @@ webappPipeline {
                 withCredentials([
                   string(credentialsId: constants.credentials.npm,  variable: 'NPM_TOKEN')
                 ]) {
-                    sh(script: 'npm publish --workspace=packages/genesys-spark-components',
+                    sh(script: "npm publish --workspace=packages/genesys-spark-components ${publishOptions}",
                         label: 'Publish Components')
 
                     sh(script: '''
@@ -86,7 +92,7 @@ webappPipeline {
                         ''',
                         label: 'Set exact version dependency in React Components')
 
-                    sh(script: 'npm publish --workspace=packages/genesys-spark-components-react',
+                    sh(script: "npm publish --workspace=packages/genesys-spark-components-react ${publishOptions}",
                         label: 'Publish React Components')
                 }
             }
@@ -96,7 +102,7 @@ webappPipeline {
                     // Make sure we have the latest version of the branch so we can push our changes
                     sh("""
                         git pull
-                        git push --follow-tags -u origin ${env.BRANCH_NAME}
+                        git push ${gitOptions} --follow-tags -u origin ${env.BRANCH_NAME}
                     """)
                 }
             }
