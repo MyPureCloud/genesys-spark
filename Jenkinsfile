@@ -18,6 +18,21 @@ String gitOptions = isBetaBranch ? '--dry-run' : ''
 
 webappPipeline {
     projectName = 'spark-components'
+    versionClosure = {
+        // If this is a release branch, bump the version before reading.
+        if (isReleaseBranch) {
+            sh('npm ci')
+            sh("npm run release --workspace=packages/genesys-spark-components -- ${releaseOptions}")
+            sh('''
+                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
+                npm run version-sync $RELEASE_VERSION
+            ''')
+            sh('npm install --package-lock-only')
+            sh('git add . && git commit --amend --no-edit --no-verify')
+            sh('git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"')
+        }
+        return readJSON(file: 'package.json').version
+    }
     team = 'Core UI'
     mailer = 'matthew.cheely@genesys.com, daragh.king@genesys.com, jordan.stith@genesys.com, thomas.dillon@genesys.com, katie.bobbe@genesys.com, gavin.everett@genesys.com, jason.evans@genesys.com'
     chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
@@ -44,21 +59,10 @@ webappPipeline {
         }
     }
     ciTests = {
-        sh('npm ci')
-
-        // Run in CI step so we only run once
-        // (builds happen twice, legacy and FedRAMP)
-        if (isReleaseBranch) {
-            sh("npm run release --workspace=packages/genesys-spark-components -- ${releaseOptions}")
-            sh('''
-               RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
-               npm run version-sync $RELEASE_VERSION
-               npm install
-               git add . && git commit --amend --no-edit --no-verify
-               git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
-            ''')
+        // Skip module install if it ran during the version check
+        if (!fileExists('node_modules')) {
+            sh('npm ci')
         }
-
         sh('npm run test.ci')
         sh('npm run build --workspace=packages/genesys-spark-tokens')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
