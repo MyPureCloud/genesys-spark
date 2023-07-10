@@ -169,6 +169,11 @@ export class GuxPhoneInput {
         const phone = this.phoneUtil.parse(this.value);
         this.numberText = this.phoneUtil.format(phone, this.displayFormat);
         this.region = this.phoneUtil.getRegionCodeForNumber(phone);
+
+        // setting region to empty when either 001 (global satellite) or ZZ (unknown) are returned
+        if (this.region === '001' || this.region === 'ZZ') {
+          this.region = '';
+        }
       } catch (e) {
         if (this.numberText === undefined) {
           // only show warning on initial render
