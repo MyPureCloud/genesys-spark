@@ -12,14 +12,16 @@ Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBr
 
 Boolean isPublicBranch = isReleaseBranch || isFeatureBranch || isBetaBranch
 
-String releaseOptions = isBetaBranch ? '--prelease beta' : ''
+String releaseOptions = isBetaBranch ? '--prerelease beta' : ''
 String publishOptions = isBetaBranch ? '--dry-run --tag beta' : ''
 String gitOptions = isBetaBranch ? '--dry-run' : ''
 
 webappPipeline {
     projectName = 'spark-components'
     versionClosure = {
-        // If this is a release branch, bump the version before reading.
+        // If this is a release branch, bump the version before reading it. The conditional is not
+        // technically required, as the version closure is ignored for feature branches. However,
+        // it may protect against problems if the pipeline behavior changes in the future.
         if (isReleaseBranch) {
             sh('npm ci')
             sh("npm run release --workspace=packages/genesys-spark-components -- ${releaseOptions}")
