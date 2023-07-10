@@ -25,13 +25,14 @@ webappPipeline {
         if (isReleaseBranch) {
             sh('npm ci')
             sh("npm run release --workspace=packages/genesys-spark-components -- ${releaseOptions}")
-            sh('''
-                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
-                npm run version-sync $RELEASE_VERSION
-            ''')
+            String releaseVersion = sh(
+                script: 'npm run --silent current-version --workspace=packages/genesys-spark-components',
+                returnStdout: true
+            ).trim()
+            sh("npm run version-sync ${releaseVersion}")
             sh('npm install --package-lock-only')
             sh('git add . && git commit --amend --no-edit --no-verify')
-            sh('git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"')
+            sh("git tag -a \"v${releaseVersion}\" -m \"chore(release): ${releaseVersion}\"")
         }
         return readJSON(file: 'package.json').version
     }
