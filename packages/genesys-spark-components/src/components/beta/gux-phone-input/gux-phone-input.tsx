@@ -171,6 +171,7 @@ export class GuxPhoneInput {
         this.region = this.phoneUtil.getRegionCodeForNumber(phone);
 
         // setting region to empty when either 001 (global satellite) or ZZ (unknown) are returned
+        // phoneUtil doesn't always handle these cases in its other functions, so setting to an empty region (which is unknown with a globe as an icon) works best
         if (this.region === '001' || this.region === 'ZZ') {
           this.region = '';
         }
@@ -202,9 +203,14 @@ export class GuxPhoneInput {
 
   private checkForRegion(number: string): string {
     try {
-      return this.phoneUtil.getRegionCodeForNumber(
+      let region = this.phoneUtil.getRegionCodeForNumber(
         this.phoneUtil.parse(number)
       );
+      // setting region to empty when either 001 (global satellite) or ZZ (unknown) are returned
+      // phoneUtil doesn't always handle these cases in its other functions, so setting to an empty region (which is unknown with a globe as an icon) works best
+      if (region === '001' || region === 'ZZ') {
+        region = '';
+      }
     } catch (e) {
       // parse failed, so check if there is a matching region in the string
       return (
