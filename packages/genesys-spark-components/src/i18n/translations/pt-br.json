@@ -320,7 +320,10 @@
     "YT": "Mayotte",
     "ZA": "África do Sul",
     "ZM": "Zâmbia",
-    "ZW": "Zimbábue"
+    "ZW": "Zimbábue",
+    "unknownRegion": "Região desconhecida",
+    "regionDropdown": "Menu suspenso da região",
+    "regionDropdownButton": "Botão de menu suspenso da região"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Ignorar navegação por links"
@@ -435,8 +438,7 @@
     "decrement": "Decremento"
   },
   "gux-form-field-phone": {
-    "required": "Obrigatório",
-    "invalidPhoneNumber": "Número inválido"
+    "required": "Obrigatório"
   },
   "gux-form-field-time-picker": {
     "required": "Obrigatório"
