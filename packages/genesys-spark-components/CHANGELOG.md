@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.93.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.1...v3.93.2) (2023-07-11)
+
+
+### Bug Fixes
+
+* **phone-input:** fixing issue with unhandled global satellite number case ([ce7f46d](https://github.com/MyPureCloud/genesys-webcomponents/commit/ce7f46d0440b262ec4f2a2cd362b43886fcc0ef1))
+
 ### [3.93.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.0...v3.93.1) (2023-07-07)
 
 ## [3.93.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.92.0...v3.93.0) (2023-07-06)
