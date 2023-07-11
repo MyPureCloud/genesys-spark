@@ -44,6 +44,14 @@
   number-of-months="2"
 ></gux-datepicker>
 
+<h2>Label - Above</h2>
+<gux-datepicker
+  mode="range"
+  label-position="above"
+  value="2019-11-25/2019-12-02"
+  number-of-months="2"
+></gux-datepicker>
+
 <h2>Start Day of Week</h2>
 
 <h3>Monday</h3>
@@ -65,7 +73,7 @@
   [
     'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
     'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
-    'pt-pt', 'ru', 'sv', 'th', 'tr', 'zh-cn', 'zh-tw'
+    'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
   ].forEach((lang) => {
     const html = window.toHTML([
       '<div class=language lang=' + lang + '>',

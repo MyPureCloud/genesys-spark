@@ -62,7 +62,8 @@
     "previous": "Předchozí",
     "next": "Další",
     "last": "Poslední",
-    "pageInputLabel": "Strana {currentPage, number}/{totalPages, number}"
+    "pageInputLabel": "Strana {currentPage, number}/{totalPages, number}",
+    "goToPage": "Přejít na stránku"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} až {lastItem, number}",
@@ -425,6 +426,9 @@
     "filterResults": "Psaním můžete filtrovat výsledky rozevíracího seznamu",
     "noSelection": "Vybrat…",
     "dropdown": "Rozevírací seznam"
+  },
+  "gux-form-field-dropdown": {
+    "required": "Povinné"
   },
   "gux-form-field-number": {
     "increment": "Zvýšení",

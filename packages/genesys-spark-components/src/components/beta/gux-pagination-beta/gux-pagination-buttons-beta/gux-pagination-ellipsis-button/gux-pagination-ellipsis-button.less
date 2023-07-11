@@ -1,0 +1,38 @@
+@import (reference) '../../../../../style/color-palette.less';
+@import (reference) '../../../../../style/spacing.less';
+
+button {
+  padding: 0 @gux-spacing-3xs;
+  color: @gux-black-100;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  &:hover {
+    color: @gux-black-50;
+  }
+
+  &:focus-visible {
+    border: 3px solid @gux-blue-90;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  gux-icon {
+    width: 16px;
+    height: 16px;
+    padding-top: @gux-spacing-2xs;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+/* Works for Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

@@ -7,3 +7,5 @@ exports[`gux-pagination-cursor #render should render as expected (2) 1`] = `"<gu
 exports[`gux-pagination-cursor #render should render as expected (3) 1`] = `"<gux-pagination-cursor lang=\\"en\\" has-previous=\\"\\" has-next=\\"\\" hydrated=\\"\\"></gux-pagination-cursor>"`;
 
 exports[`gux-pagination-cursor #render should render as expected (4) 1`] = `"<gux-pagination-cursor lang=\\"en\\" has-previous=\\"\\" hydrated=\\"\\"></gux-pagination-cursor>"`;
+
+exports[`gux-pagination-cursor #render should render as expected (5) 1`] = `"<gux-pagination-cursor lang=\\"en\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination-cursor>"`;

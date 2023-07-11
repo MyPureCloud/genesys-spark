@@ -350,7 +350,7 @@ export class GuxFormFieldLegacy {
       const labelHasFor = !!this.label.hasAttribute('for');
       if (!inputHasId && labelHasFor) {
         logWarn(
-          'gux-form-field',
+          this.root,
           'A "for" attribute has been provided on the label but there is no corresponding id on the input. Either provide an id on the input or omit the "for" attribute from the label. If there is no input id and no "for" attribute provided, the component will automatically generate an id and link it to the "for" attribute.'
         );
       } else if (!inputHasId) {
@@ -365,13 +365,13 @@ export class GuxFormFieldLegacy {
         this.input.getAttribute('id') !== this.label.getAttribute('for')
       ) {
         logWarn(
-          'gux-form-field',
+          this.root,
           'The input id and label for attribute should match.'
         );
       }
     } else {
       logWarn(
-        'gux-form-field',
+        this.root,
         'A label is required for this component. If a visual label is not needed for this use case, please add localized text for a screenreader and set the label-position attribute to "screenreader" to visually hide the label.'
       );
     }

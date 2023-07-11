@@ -12,6 +12,9 @@
 <h2>Disabled</h2>
 <gux-phone-input-beta disabled="true"> </gux-phone-input-beta>
 
+<h2>Display Format - E164</h2>
+<gux-phone-input-beta phone-number-format="E164"> </gux-phone-input-beta>
+
 <h2>Languages</h2>
 <div id="languages-container"></div>
 
@@ -22,7 +25,7 @@
     [
       'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
       'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
-      'pt-pt', 'ru', 'sv', 'th', 'tr', 'zh-cn', 'zh-tw'
+      'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
     ].forEach((lang) => {
       const html = window.toHTML([
         '<div class=language lang=' + lang + '>',

@@ -62,7 +62,8 @@
     "previous": "Vorige",
     "next": "Volgende",
     "last": "Laatste",
-    "pageInputLabel": "Pagina {currentPage, number} van {totalPages, number}"
+    "pageInputLabel": "Pagina {currentPage, number} van {totalPages, number}",
+    "goToPage": "Naar pagina"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
@@ -425,6 +426,9 @@
     "filterResults": "Tekst invoeren om resultaten in de vervolgkeuzelijst te filteren",
     "noSelection": "Selecteren...",
     "dropdown": "Vervolgkeuzelijst"
+  },
+  "gux-form-field-dropdown": {
+    "required": "Vereist"
   },
   "gux-form-field-number": {
     "increment": "Verhogen",

@@ -27,8 +27,9 @@ def isPublicBranch = {
 webappPipeline {
     projectName = 'common-ui-docs/genesys-webcomponents'
     team = 'Core UI'
-    mailer = 'CoreUI@genesys.com'
-    nodeVersion = '16.x'
+    mailer = 'matthew.cheely@genesys.com, daragh.king@genesys.com, jordan.stith@genesys.com, thomas.dillon@genesys.com, katie.bobbe@genesys.com, gavin.everett@genesys.com, jason.evans@genesys.com'
+    chatGroupId='adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
+    nodeVersion = '16.18.0'
     testJob = 'no-tests'
     deployConfig = [dev : 'always']
     manifest = customManifest('./docs/dist') {

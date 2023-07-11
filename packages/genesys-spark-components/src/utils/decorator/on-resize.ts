@@ -20,24 +20,44 @@ export function OnResize(): OnResizeDecorator {
     (BUILD as any).disconnectedCallback = true;
 
     const { connectedCallback, disconnectedCallback } = proto;
-    let onMutationObserver: ResizeObserver;
+
+    const store = new Map<unknown, ResizeObserver>();
 
     proto.connectedCallback = function () {
-      const host = getElement(this);
       const method = this[methodName];
+      const observer = new ResizeObserver(method.bind(this));
 
-      onMutationObserver = new ResizeObserver(method.bind(this));
-      onMutationObserver.observe(host);
+      registerObserver(store, this, observer);
 
       return connectedCallback && connectedCallback.call(this);
     };
 
     proto.disconnectedCallback = function () {
-      if (onMutationObserver) {
-        onMutationObserver.disconnect();
-      }
+      deregisterObserver(store, this);
 
       return disconnectedCallback && disconnectedCallback.call(this);
     };
   };
+}
+
+function registerObserver(
+  store: Map<unknown, ResizeObserver>,
+  key: unknown,
+  observer: ResizeObserver
+) {
+  if (store.has(key)) {
+    store.get(key).disconnect();
+  }
+
+  store.set(key, observer);
+
+  observer.observe(getElement(key));
+}
+
+function deregisterObserver(store: Map<unknown, ResizeObserver>, key: unknown) {
+  if (store.has(key)) {
+    store.get(key).disconnect();
+  }
+
+  store.delete(key);
 }

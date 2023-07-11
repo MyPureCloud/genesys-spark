@@ -1,10 +1,70 @@
 @import (reference) '../../../style/color.less';
+@import (reference) '../../../style/spacing.less';
+@import (reference) '../../../style/variables.less';
 
 :host {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: flex-start;
   justify-content: space-between;
+  padding: @gux-spacing-small;
+  border-top: 1px solid @gux-grey-60;
+
+  .gux-pagination-button-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  button {
+    color: @gux-black-50;
+
+    &[disabled] {
+      color: fade(@gux-black-50, 50%);
+    }
+  }
+
+  .gux-button-align-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    > * {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+    }
+
+    > .gux-icon-previous {
+      padding-right: @gux-spacing-2xs;
+    }
+
+    > .gux-icon-next {
+      padding-left: @gux-spacing-2xs;
+    }
+  }
+
+  gux-icon {
+    width: @gux-icon-size-default-global;
+    height: @gux-icon-size-default-global;
+  }
+
+  gux-button-slot-beta {
+    &.gux-previous {
+      margin-right: @gux-spacing-small;
+    }
+
+    &.gux-next {
+      margin-left: @gux-spacing-small;
+    }
+  }
+
+  .gux-simple-button {
+    padding: 0;
+  }
 }

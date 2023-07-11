@@ -11,7 +11,7 @@ import {
   GuxFormFieldHelp
 } from '../../functional-components/functional-components';
 
-import { validateFormIds } from '../../gux-form-field.service';
+import { validateFormIds, getSlottedInput } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 
 /**
@@ -91,7 +91,10 @@ export class GuxFormFieldRadio {
   }
 
   private setInput(): void {
-    this.input = this.root.querySelector('input[type="radio"][slot="input"]');
+    this.input = getSlottedInput(
+      this.root,
+      'input[type="radio"][slot="input"]'
+    );
 
     preventBrowserValidationStyling(this.input);
 

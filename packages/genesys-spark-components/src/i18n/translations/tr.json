@@ -62,7 +62,8 @@
     "previous": "Önceki",
     "next": "Sonraki",
     "last": "Son",
-    "pageInputLabel": "Sayfa {currentPage, number}/{totalPages, number}"
+    "pageInputLabel": "Sayfa {currentPage, number}/{totalPages, number}",
+    "goToPage": "Sayfaya git"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
@@ -425,6 +426,9 @@
     "filterResults": "Açılır liste sonuçlarını filtrelemek için yazın",
     "noSelection": "Seç...",
     "dropdown": "Açılır liste"
+  },
+  "gux-form-field-dropdown": {
+    "required": "Gerekli"
   },
   "gux-form-field-number": {
     "increment": "Artım",

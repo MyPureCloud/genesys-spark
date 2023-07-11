@@ -13,8 +13,9 @@ Boolean isPublicBranch = isReleaseBranch || isFeatureBranch
 webappPipeline {
     projectName = 'spark-components'
     team = 'Core UI'
-    mailer = 'CoreUI@genesys.com'
-    nodeVersion = '16.x'
+    mailer = 'matthew.cheely@genesys.com, daragh.king@genesys.com, jordan.stith@genesys.com, thomas.dillon@genesys.com, katie.bobbe@genesys.com, gavin.everett@genesys.com, jason.evans@genesys.com'
+    chatGroupId='adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
+    nodeVersion = '16.18.0'
     testJob = 'no-tests'
     deployConfig = [:]
     manifest = customManifest('./packages/genesys-spark-components/dist') {
@@ -53,6 +54,7 @@ webappPipeline {
         }
 
         sh('npm run test.ci')
+        sh('npm run build --workspace=packages/genesys-spark-tokens')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
         sh('npm run lint')
     }

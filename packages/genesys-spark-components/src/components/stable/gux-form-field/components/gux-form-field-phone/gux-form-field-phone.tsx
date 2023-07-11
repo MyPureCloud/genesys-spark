@@ -1,15 +1,4 @@
-import {
-  Component,
-  Element,
-  Event,
-  EventEmitter,
-  h,
-  JSX,
-  Listen,
-  Prop,
-  State,
-  Watch
-} from '@stencil/core';
+import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
@@ -72,20 +61,7 @@ export class GuxFormFieldPhone {
   private hasError: boolean = false;
 
   @State()
-  private hasInternalError: boolean = false;
-
-  @State()
   private hasHelp: boolean = false;
-
-  @Event()
-  phonevalidationerror: EventEmitter<boolean>;
-
-  @Listen('internalError')
-  listenForInternalError(event: CustomEvent) {
-    this.hasInternalError = event.detail;
-    this.watchValue(this.hasInternalError);
-    this.phonevalidationerror.emit(this.hasInternalError);
-  }
 
   @Watch('hasError')
   watchValue(hasError: boolean): void {
@@ -156,9 +132,6 @@ export class GuxFormFieldPhone {
           </div>
           <GuxFormFieldError show={this.hasError}>
             <slot name="error" />
-          </GuxFormFieldError>
-          <GuxFormFieldError show={this.hasInternalError}>
-            <span>{this.getI18nValue('invalidPhoneNumber')}</span>
           </GuxFormFieldError>
           <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
             <slot name="help" />

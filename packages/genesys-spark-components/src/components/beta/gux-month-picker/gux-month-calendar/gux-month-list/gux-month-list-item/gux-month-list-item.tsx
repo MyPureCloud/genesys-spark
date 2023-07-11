@@ -6,9 +6,7 @@ import { getClosestElement } from '../../../../../../utils/dom/get-closest-eleme
 @Component({
   styleUrl: 'gux-month-list-item.less',
   tag: 'gux-month-list-item',
-  shadow: {
-    delegatesFocus: true
-  }
+  shadow: { delegatesFocus: true }
 })
 export class GuxMonthListItem {
   @Element()

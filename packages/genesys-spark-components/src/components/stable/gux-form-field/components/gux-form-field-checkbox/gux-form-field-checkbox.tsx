@@ -12,7 +12,7 @@ import {
 } from '../../functional-components/functional-components';
 
 import { trackComponent } from '@utils/tracking/usage';
-import { validateFormIds } from '../../gux-form-field.service';
+import { validateFormIds, getSlottedInput } from '../../gux-form-field.service';
 
 /**
  * @slot input - Required slot for input tag
@@ -91,7 +91,8 @@ export class GuxFormFieldCheckbox {
   }
 
   private setInput(): void {
-    this.input = this.root.querySelector(
+    this.input = getSlottedInput(
+      this.root,
       'input[type="checkbox"][slot="input"]'
     );
 

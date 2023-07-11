@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`#render different card variations eg(outline,outline(explicit),filled,raised) should render component as expected (1) 1`] = `
+exports[`#render different card accents should render component as expected (1) 1`] = `
 <gux-card-beta>
   <mock:shadow-root>
     <div class="gux-card gux-outline">
@@ -13,7 +13,7 @@ exports[`#render different card variations eg(outline,outline(explicit),filled,r
 </gux-card-beta>
 `;
 
-exports[`#render different card variations eg(outline,outline(explicit),filled,raised) should render component as expected (2) 1`] = `
+exports[`#render different card accents should render component as expected (2) 1`] = `
 <gux-card-beta accent="outline">
   <mock:shadow-root>
     <div class="gux-card gux-outline">
@@ -26,7 +26,20 @@ exports[`#render different card variations eg(outline,outline(explicit),filled,r
 </gux-card-beta>
 `;
 
-exports[`#render different card variations eg(outline,outline(explicit),filled,raised) should render component as expected (3) 1`] = `
+exports[`#render different card accents should render component as expected (3) 1`] = `
+<gux-card-beta accent="bordered">
+  <mock:shadow-root>
+    <div class="gux-bordered gux-card">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <span>
+    This is a content slot
+  </span>
+</gux-card-beta>
+`;
+
+exports[`#render different card accents should render component as expected (4) 1`] = `
 <gux-card-beta accent="raised">
   <mock:shadow-root>
     <div class="gux-card gux-raised">
@@ -39,10 +52,23 @@ exports[`#render different card variations eg(outline,outline(explicit),filled,r
 </gux-card-beta>
 `;
 
-exports[`#render different card variations eg(outline,outline(explicit),filled,raised) should render component as expected (4) 1`] = `
+exports[`#render different card accents should render component as expected (5) 1`] = `
 <gux-card-beta accent="filled">
   <mock:shadow-root>
     <div class="gux-card gux-filled">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <span>
+    This is a content slot
+  </span>
+</gux-card-beta>
+`;
+
+exports[`#render different card accents should render component as expected (6) 1`] = `
+<gux-card-beta accent="borderless">
+  <mock:shadow-root>
+    <div class="gux-borderless gux-card">
       <slot></slot>
     </div>
   </mock:shadow-root>

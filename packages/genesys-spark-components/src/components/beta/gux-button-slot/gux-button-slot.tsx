@@ -40,7 +40,7 @@ export class GuxButtonSlot {
     }
 
     logError(
-      'gux-button-slot',
+      this.root,
       'You must slot a button, input[type="button"] or input[type="submit"] element.'
     );
   }

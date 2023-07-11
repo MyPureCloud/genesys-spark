@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description  | Type                                | Default     |
-| -------- | --------- | ------------ | ----------------------------------- | ----------- |
-| `accent` | `accent`  | Card Accent. | `"filled" \| "outline" \| "raised"` | `'outline'` |
+| Property | Attribute | Description  | Type                                                              | Default     |
+| -------- | --------- | ------------ | ----------------------------------------------------------------- | ----------- |
+| `accent` | `accent`  | Card Accent. | `"bordered" \| "borderless" \| "filled" \| "outline" \| "raised"` | `'outline'` |
 
 
 ## Slots

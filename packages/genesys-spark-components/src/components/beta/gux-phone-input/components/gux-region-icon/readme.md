@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `region` | `region`  |             | `string` | `undefined` |
+| Property           | Attribute           | Description | Type     | Default     |
+| ------------------ | ------------------- | ----------- | -------- | ----------- |
+| `region`           | `region`            |             | `string` | `undefined` |
+| `screenreaderText` | `screenreader-text` |             | `string` | `undefined` |
 
 
 ## Dependencies

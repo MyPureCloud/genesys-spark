@@ -1,0 +1,27 @@
+:root {
+  --gse-semantic-color-info-lightest: #e2dff8;
+  --gse-semantic-color-info-lighter: #c5bef1;
+  --gse-semantic-color-info-main: #6e5ddb;
+  --gse-semantic-color-info-darker: #443989;
+  --gse-semantic-color-info-darkest: #2e275f;
+  --gse-semantic-color-warning-lightest: #fef4d8;
+  --gse-semantic-color-warning-lighter: #fce9b2;
+  --gse-semantic-color-warning-main: #f8c73e;
+  --gse-semantic-color-warning-darker: #6c5619;
+  --gse-semantic-color-warning-darkest: #3d300c;
+  --gse-semantic-color-error-lightest: #f9d3da;
+  --gse-semantic-color-error-lighter: #f3a7b5;
+  --gse-semantic-color-error-main: #e22245;
+  --gse-semantic-color-error-darker: #881429;
+  --gse-semantic-color-error-darkest: #440a15;
+  --gse-semantic-color-success-lightest: #cef0e6;
+  --gse-semantic-color-success-lighter: #9de1cd;
+  --gse-semantic-color-success-main: #09b581;
+  --gse-semantic-color-success-darker: #056d4d;
+  --gse-semantic-color-success-darkest: #033627;
+  --gse-semantic-color-primary-lightest: #ced2fc;
+  --gse-semantic-color-primary-lighter: #9ca6f9;
+  --gse-semantic-color-primary-main: #4856cb;
+  --gse-semantic-color-primary-darker: #3742a2;
+  --gse-semantic-color-primary-darkest: #252e78;
+}

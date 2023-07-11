@@ -62,7 +62,8 @@
     "previous": "Forrige",
     "next": "Neste",
     "last": "Siste",
-    "pageInputLabel": "Side {currentPage, number} av {totalPages, number}"
+    "pageInputLabel": "Side {currentPage, number} av {totalPages, number}",
+    "goToPage": "Gå til side"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
@@ -425,6 +426,9 @@
     "filterResults": "Skriv for å filtrere resultater fra nedtrekkslisten",
     "noSelection": "Velg ...",
     "dropdown": "Rullegardinliste"
+  },
+  "gux-form-field-dropdown": {
+    "required": "Obligatorisk"
   },
   "gux-form-field-number": {
     "increment": "Økning",

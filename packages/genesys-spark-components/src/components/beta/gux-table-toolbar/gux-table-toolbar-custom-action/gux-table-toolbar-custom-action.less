@@ -1,6 +1,11 @@
 @import (reference) '../../../../style/typography.less';
 @import (reference) '../../../../style/spacing.less';
 
+:host([disabled]),
+button[disabled] {
+  pointer-events: none;
+}
+
 .gux-sr-only {
   display: flex;
   .gux-sr-only-clip();

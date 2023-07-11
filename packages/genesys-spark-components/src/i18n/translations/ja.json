@@ -62,7 +62,8 @@
     "previous": "前へ",
     "next": "次へ",
     "last": "最後",
-    "pageInputLabel": "ページ {currentPage, number} / {totalPages, number}"
+    "pageInputLabel": "ページ {currentPage, number} / {totalPages, number}",
+    "goToPage": "ページに移動"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
@@ -425,6 +426,9 @@
     "filterResults": "タイプしてドロップダウンの結果をフィルター",
     "noSelection": "選択する ...",
     "dropdown": "ドロップダウン"
+  },
+  "gux-form-field-dropdown": {
+    "required": "必須"
   },
   "gux-form-field-number": {
     "increment": "増加",

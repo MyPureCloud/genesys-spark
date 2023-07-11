@@ -62,7 +62,8 @@
     "previous": "上一頁",
     "next": "下一頁",
     "last": "最後",
-    "pageInputLabel": "第 {currentPage, number} 頁，共 {totalPages, number} 頁"
+    "pageInputLabel": "第 {currentPage, number} 頁，共 {totalPages, number} 頁",
+    "goToPage": "前往頁面"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
@@ -425,6 +426,9 @@
     "filterResults": "輸入以篩選下拉式清單中的結果",
     "noSelection": "選擇...",
     "dropdown": "下拉式清單"
+  },
+  "gux-form-field-dropdown": {
+    "required": "必需"
   },
   "gux-form-field-number": {
     "increment": "增量",

@@ -3,7 +3,7 @@
 exports[`gux-badge-beta #render should render component as expected (1) 1`] = `
 <gux-badge-beta>
   <mock:shadow-root>
-    <div class="gux-badge gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -14,14 +14,14 @@ exports[`gux-badge-beta #render should render component as expected (1) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  default
+  Badge
 </gux-badge-beta>
 `;
 
 exports[`gux-badge-beta #render should render component as expected (2) 1`] = `
-<gux-badge-beta color="neutral">
+<gux-badge-beta accent="info">
   <mock:shadow-root>
-    <div class="gux-badge gux-neutral">
+    <div class="gux-badge gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -32,14 +32,458 @@ exports[`gux-badge-beta #render should render component as expected (2) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  default explicit
+  Badge
 </gux-badge-beta>
 `;
 
 exports[`gux-badge-beta #render should render component as expected (3) 1`] = `
+<gux-badge-beta accent="success">
+  <mock:shadow-root>
+    <div class="gux-badge gux-neutral gux-success">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (4) 1`] = `
+<gux-badge-beta accent="warning">
+  <mock:shadow-root>
+    <div class="gux-badge gux-neutral gux-warning">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (5) 1`] = `
+<gux-badge-beta accent="error">
+  <mock:shadow-root>
+    <div class="gux-badge gux-error gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (6) 1`] = `
+<gux-badge-beta accent="inherit">
+  <mock:shadow-root>
+    <div class="gux-badge gux-inherit gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (7) 1`] = `
+<gux-badge-beta bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (8) 1`] = `
+<gux-badge-beta accent="info" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (9) 1`] = `
+<gux-badge-beta accent="success" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-neutral gux-success">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (10) 1`] = `
+<gux-badge-beta accent="warning" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-neutral gux-warning">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (11) 1`] = `
+<gux-badge-beta accent="error" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-error gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (12) 1`] = `
+<gux-badge-beta accent="inherit" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-inherit gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (13) 1`] = `
+<gux-badge-beta>
+  <mock:shadow-root>
+    <div class="gux-badge gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (14) 1`] = `
+<gux-badge-beta accent="info">
+  <mock:shadow-root>
+    <div class="gux-badge gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (15) 1`] = `
+<gux-badge-beta accent="success">
+  <mock:shadow-root>
+    <div class="gux-badge gux-neutral gux-success">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (16) 1`] = `
+<gux-badge-beta accent="warning">
+  <mock:shadow-root>
+    <div class="gux-badge gux-neutral gux-warning">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (17) 1`] = `
+<gux-badge-beta accent="error">
+  <mock:shadow-root>
+    <div class="gux-badge gux-error gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (18) 1`] = `
+<gux-badge-beta accent="inherit">
+  <mock:shadow-root>
+    <div class="gux-badge gux-inherit gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (19) 1`] = `
+<gux-badge-beta bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (20) 1`] = `
+<gux-badge-beta accent="info" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (21) 1`] = `
+<gux-badge-beta accent="success" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-neutral gux-success">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (22) 1`] = `
+<gux-badge-beta accent="warning" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-neutral gux-warning">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (23) 1`] = `
+<gux-badge-beta accent="error" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-error gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (24) 1`] = `
+<gux-badge-beta accent="inherit" bold="">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-inherit gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (deprecated) (1) 1`] = `
+<gux-badge-beta>
+  <mock:shadow-root>
+    <div class="gux-badge gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (deprecated) (2) 1`] = `
+<gux-badge-beta color="neutral">
+  <mock:shadow-root>
+    <div class="gux-badge gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (deprecated) (3) 1`] = `
 <gux-badge-beta color="green">
   <mock:shadow-root>
-    <div class="gux-badge gux-green">
+    <div class="gux-badge gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -50,14 +494,14 @@ exports[`gux-badge-beta #render should render component as expected (3) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  sucess
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (4) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (4) 1`] = `
 <gux-badge-beta color="yellow">
   <mock:shadow-root>
-    <div class="gux-badge gux-yellow">
+    <div class="gux-badge gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -68,14 +512,14 @@ exports[`gux-badge-beta #render should render component as expected (4) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  warning
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (5) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (5) 1`] = `
 <gux-badge-beta color="red">
   <mock:shadow-root>
-    <div class="gux-badge gux-red">
+    <div class="gux-badge gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -86,14 +530,32 @@ exports[`gux-badge-beta #render should render component as expected (5) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  danger
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (6) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (6) 1`] = `
+<gux-badge-beta bold="" color="neutral">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (deprecated) (7) 1`] = `
 <gux-badge-beta bold="" color="green">
   <mock:shadow-root>
-    <div class="gux-badge gux-bold gux-green">
+    <div class="gux-badge gux-bold gux-green gux-info">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -104,14 +566,14 @@ exports[`gux-badge-beta #render should render component as expected (6) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  success bold
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (7) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (8) 1`] = `
 <gux-badge-beta bold="" color="yellow">
   <mock:shadow-root>
-    <div class="gux-badge gux-bold gux-yellow">
+    <div class="gux-badge gux-bold gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -122,14 +584,14 @@ exports[`gux-badge-beta #render should render component as expected (7) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  warning bold
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (8) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (9) 1`] = `
 <gux-badge-beta bold="" color="red">
   <mock:shadow-root>
-    <div class="gux-badge gux-bold gux-red">
+    <div class="gux-badge gux-bold gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -140,14 +602,89 @@ exports[`gux-badge-beta #render should render component as expected (8) 1`] = `
       </div>
     </div>
   </mock:shadow-root>
-  danger bold
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (9) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (10) 1`] = `
+<gux-badge-beta color="inherit">
+  <mock:shadow-root>
+    <div class="gux-badge gux-info gux-inherit">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label:
+      </div>
+    </div>
+  </mock:shadow-root>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (deprecated) (11) 1`] = `
+<gux-badge-beta>
+  <mock:shadow-root>
+    <div class="gux-badge gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (deprecated) (12) 1`] = `
+<gux-badge-beta color="neutral">
+  <mock:shadow-root>
+    <div class="gux-badge gux-info gux-neutral">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: neutral
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (deprecated) (13) 1`] = `
+<gux-badge-beta color="green">
+  <mock:shadow-root>
+    <div class="gux-badge gux-green gux-info">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: green
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (deprecated) (14) 1`] = `
 <gux-badge-beta color="yellow">
   <mock:shadow-root>
-    <div class="gux-badge gux-yellow">
+    <div class="gux-badge gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -159,14 +696,14 @@ exports[`gux-badge-beta #render should render component as expected (9) 1`] = `
     </div>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  warning icon
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (10) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (15) 1`] = `
 <gux-badge-beta color="red">
   <mock:shadow-root>
-    <div class="gux-badge gux-red">
+    <div class="gux-badge gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -178,33 +715,52 @@ exports[`gux-badge-beta #render should render component as expected (10) 1`] = `
     </div>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  danger icon
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (11) 1`] = `
-<gux-badge-beta color="yellow">
+exports[`gux-badge-beta #render should render component as expected (deprecated) (16) 1`] = `
+<gux-badge-beta bold="" color="neutral">
   <mock:shadow-root>
-    <div class="gux-badge gux-yellow">
+    <div class="gux-badge gux-bold gux-info gux-neutral">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
       <div class="gux-sr-only">
-        badge with label: , color: yellow
+        badge with label: , color: neutral bold
       </div>
     </div>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  warning icon
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (12) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (17) 1`] = `
+<gux-badge-beta bold="" color="green">
+  <mock:shadow-root>
+    <div class="gux-badge gux-bold gux-green gux-info">
+      <gux-tooltip-title>
+        <span>
+          <slot aria-hidden="true"></slot>
+        </span>
+      </gux-tooltip-title>
+      <div class="gux-sr-only">
+        badge with label: , color: green bold
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="subtract"></gux-icon>
+  Badge
+</gux-badge-beta>
+`;
+
+exports[`gux-badge-beta #render should render component as expected (deprecated) (18) 1`] = `
 <gux-badge-beta bold="" color="yellow">
   <mock:shadow-root>
-    <div class="gux-badge gux-bold gux-yellow">
+    <div class="gux-badge gux-bold gux-info gux-yellow">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -216,14 +772,14 @@ exports[`gux-badge-beta #render should render component as expected (12) 1`] = `
     </div>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  warning bold icon
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (13) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (19) 1`] = `
 <gux-badge-beta bold="" color="red">
   <mock:shadow-root>
-    <div class="gux-badge gux-bold gux-red">
+    <div class="gux-badge gux-bold gux-info gux-red">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -235,89 +791,14 @@ exports[`gux-badge-beta #render should render component as expected (13) 1`] = `
     </div>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  danger bold icon
+  Badge
 </gux-badge-beta>
 `;
 
-exports[`gux-badge-beta #render should render component as expected (14) 1`] = `
-<gux-badge-beta bold="" color="yellow">
-  <mock:shadow-root>
-    <div class="gux-badge gux-bold gux-yellow">
-      <gux-tooltip-title>
-        <span>
-          <slot aria-hidden="true"></slot>
-        </span>
-      </gux-tooltip-title>
-      <div class="gux-sr-only">
-        badge with label: , color: yellow bold
-      </div>
-    </div>
-  </mock:shadow-root>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  warning bold icon
-</gux-badge-beta>
-`;
-
-exports[`gux-badge-beta #render should render component as expected (15) 1`] = `
-<gux-badge-beta bold="">
-  <mock:shadow-root>
-    <div class="gux-badge gux-bold gux-neutral">
-      <gux-tooltip-title>
-        <span>
-          <slot aria-hidden="true"></slot>
-        </span>
-      </gux-tooltip-title>
-      <div class="gux-sr-only">
-        badge with label: , color: neutral bold
-      </div>
-    </div>
-  </mock:shadow-root>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  default bold
-</gux-badge-beta>
-`;
-
-exports[`gux-badge-beta #render should render component as expected (16) 1`] = `
-<gux-badge-beta bold="">
-  <mock:shadow-root>
-    <div class="gux-badge gux-bold gux-neutral">
-      <gux-tooltip-title>
-        <span>
-          <slot aria-hidden="true"></slot>
-        </span>
-      </gux-tooltip-title>
-      <div class="gux-sr-only">
-        badge with label: , color: neutral bold
-      </div>
-    </div>
-  </mock:shadow-root>
-  <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  default bold icon
-</gux-badge-beta>
-`;
-
-exports[`gux-badge-beta #render should render component as expected (17) 1`] = `
+exports[`gux-badge-beta #render should render component as expected (deprecated) (20) 1`] = `
 <gux-badge-beta color="inherit">
   <mock:shadow-root>
-    <div class="gux-badge gux-inherit">
-      <gux-tooltip-title>
-        <span>
-          <slot aria-hidden="true"></slot>
-        </span>
-      </gux-tooltip-title>
-      <div class="gux-sr-only">
-        badge with label:
-      </div>
-    </div>
-  </mock:shadow-root>
-  inherit
-</gux-badge-beta>
-`;
-
-exports[`gux-badge-beta #render should render component as expected (18) 1`] = `
-<gux-badge-beta color="inherit">
-  <mock:shadow-root>
-    <div class="gux-badge gux-inherit">
+    <div class="gux-badge gux-info gux-inherit">
       <gux-tooltip-title>
         <span>
           <slot aria-hidden="true"></slot>
@@ -329,6 +810,6 @@ exports[`gux-badge-beta #render should render component as expected (18) 1`] = `
     </div>
   </mock:shadow-root>
   <gux-icon decorative="" icon-name="subtract"></gux-icon>
-  inherit with icon
+  Badge
 </gux-badge-beta>
 `;

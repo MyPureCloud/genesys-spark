@@ -54,37 +54,38 @@
 
 <style
   onload="(function () {
-  const languagesContainer = document.getElementById('languages-container');
-  [
-    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
-    'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
-    'pt-pt', 'ru', 'sv', 'th', 'tr', 'zh-cn', 'zh-tw'
-  ].forEach((lang) => {
-    const date = new Date('January 19, 1975 15:00:00 UTC+00:00')
-    const time = new Intl.DateTimeFormat(lang, { timeStyle: 'short', timeZone: 'UTC' }).format(date)
+    const languagesContainer = document.getElementById('languages-container');
 
-    const html = window.toHTML([
-      '<div class=language lang=' + lang + '>',
-        '<h3>' + lang + '</h3>',
-        '<div class=group>',
-          '<div class=example>',
-            '<h4>Value Set</h4>',
-            '<gux-time-picker-beta value=15:00></gux-time-picker-beta>',
+    [
+      'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+      'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+      'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
+    ].forEach((lang) => {
+      const date = new Date('January 19, 1975 15:00:00 UTC+00:00')
+      const time = new Intl.DateTimeFormat(lang, { timeStyle: 'short', timeZone: 'UTC' }).format(date)
+
+      const html = window.toHTML([
+        '<div class=language lang=' + lang + '>',
+          '<h3>' + lang + '</h3>',
+          '<div class=group>',
+            '<div class=example>',
+              '<h4>Value Set</h4>',
+              '<gux-time-picker-beta value=15:00></gux-time-picker-beta>',
+            '</div>',
+            '<div class=example>',
+              '<h4>Blank</h4>',
+              '<gux-time-picker-beta></gux-time-picker-beta>',
+            '</div>',
+            '<div class=example>',
+              '<h4>Sample</h4>',
+              '<div>', time, '</div>',
+            '</div>',
           '</div>',
-          '<div class=example>',
-            '<h4>Blank</h4>',
-            '<gux-time-picker-beta></gux-time-picker-beta>',
-          '</div>',
-          '<div class=example>',
-            '<h4>Sample</h4>',
-            '<div>', time, '</div>',
-          '</div>',
-        '</div>',
-      '</div>'
-    ].join(''));
-    languagesContainer.appendChild(html);
-  });
-})()"
+        '</div>'
+      ].join(''));
+      languagesContainer.appendChild(html);
+    });
+  })()"
 >
   #languages-container {
     display: flex;

@@ -356,6 +356,7 @@ describe('gux-time-picker.service', () => {
       { locale: 'sv' },
       { locale: 'th' },
       { locale: 'tr' },
+      { locale: 'uk' },
       { locale: 'zh-cn' },
       { locale: 'zh-tw' }
     ].forEach(({ locale }: { locale: string }) => {

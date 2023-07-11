@@ -6,6 +6,7 @@ import {
   h,
   JSX,
   Prop,
+  State,
   Watch
 } from '@stencil/core';
 
@@ -30,6 +31,7 @@ import {
 })
 export class GuxAccordionSection {
   private sectionId: string = randomHTMLId('gux-accordion-section');
+  private headerId: string = randomHTMLId('gux-accordion-header');
   private hasIconSlot: boolean;
 
   @Element()
@@ -66,6 +68,9 @@ export class GuxAccordionSection {
     }
   }
 
+  @State()
+  headingLevel: number;
+
   private toggle() {
     this.open = !this.open;
   }
@@ -79,14 +84,18 @@ export class GuxAccordionSection {
     return this.arrowPosition === 'beside-text';
   }
 
-  private handleSlotChange(slotname: string): void {
+  private handleSlotChange(slotname: 'header' | 'subheader'): void {
     const slot = this.root.querySelector(`[slot="${slotname}"]`);
 
     if (!slot || !/^H[1-6]$/.test(slot.nodeName)) {
       logError(
-        'gux-accordion-section',
+        this.root,
         `For accessibility reasons the ${slotname} slot should be filled with a HTML heading tag (h1 - h6).`
       );
+    }
+
+    if (slotname == 'header') {
+      this.headingLevel = parseInt(slot.nodeName.replace('H', ''), 10);
     }
   }
 
@@ -97,45 +106,52 @@ export class GuxAccordionSection {
   render(): JSX.Element {
     return (
       <section class={{ 'gux-disabled': this.disabled }}>
-        <button
-          class={{
-            'gux-header': true,
-            'gux-reverse-headings': this.reverseHeadings
-          }}
-          aria-expanded={this.open.toString()}
-          aria-controls={this.sectionId}
-          disabled={this.disabled}
-          onClick={this.toggle.bind(this)}
-        >
-          {this.hasIconSlot && <slot name="icon"></slot>}
+        <div id={this.headerId} role="heading" aria-level={this.headingLevel}>
+          <button
+            class={{
+              'gux-header': true,
+              'gux-reverse-headings': this.reverseHeadings
+            }}
+            type="button"
+            aria-expanded={this.open.toString()}
+            aria-controls={this.sectionId}
+            disabled={this.disabled}
+            onClick={this.toggle.bind(this)}
+          >
+            {this.hasIconSlot && <slot name="icon"></slot>}
 
-          <div
-            class={{
-              'gux-header-text': true,
-              'gux-arrow-position-beside': this.isArrowPositionedBesideText()
-            }}
-          >
-            <slot
-              onSlotchange={() => this.handleSlotChange('header')}
-              name="header"
-            ></slot>
-            <slot
-              onSlotchange={() => this.handleSlotChange('subheader')}
-              name="subheader"
-            ></slot>
-          </div>
-          <div
-            class={{
-              'gux-header-icon': true,
-              'gux-expanded': this.open,
-              'gux-arrow-position-before-text': this.isArrowPositionBeforeText()
-            }}
-          >
-            <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
-          </div>
-        </button>
+            <div
+              class={{
+                'gux-header-text': true,
+                'gux-arrow-position-beside': this.isArrowPositionedBesideText()
+              }}
+            >
+              <slot
+                onSlotchange={() => this.handleSlotChange('header')}
+                name="header"
+              ></slot>
+              <slot
+                onSlotchange={() => this.handleSlotChange('subheader')}
+                name="subheader"
+              ></slot>
+            </div>
+            <div
+              class={{
+                'gux-header-icon': true,
+                'gux-expanded': this.open,
+                'gux-arrow-position-before-text':
+                  this.isArrowPositionBeforeText()
+              }}
+            >
+              <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
+            </div>
+          </button>
+        </div>
+
         <div
           id={this.sectionId}
+          role="region"
+          aria-labelledby={this.headerId}
           class={{
             'gux-content': true,
             'gux-expanded': this.open,

@@ -12,7 +12,7 @@ At any given time there are three types of components present in the library:
 - **beta**: New components where the API design is still being explored. Breaking changes _may_ happen without a major version change.
 - **legacy**: Old components that have been replaced by a new component, or a newer version of the component with an incompatible API. These will be removed in the next major release.
 
-For more details on the component evolution process see the full [documentation on the topic](./documentation/COMPONENT_EVOLUTION.md)
+For more details on the component evolution process see the full [documentation on the topic](./packages/genesys-spark-components/documentation/COMPONENT_EVOLUTION.md)
 
 ## Demo/Documentation
 
@@ -84,7 +84,7 @@ and the components will localize based on that. If no language is set, the compo
 
 ### Framework Integration Notes
 
-- [React](./documentation/REACT_INTEGRATION.md)
+- [React](./packages/genesys-spark-components/documentation/REACT_INTEGRATION.md)
 
 ## Development and Contribution
 
@@ -93,7 +93,7 @@ contribution from users is welcome. If you need a new feature, the best way to g
 with the team to implement it yourself. Please reach out to discuss your work _before_ opening a PR.
 An early conversation is the best way to avoid duplicated effort.
 
-Also, be sure to read the [Contributing Guidelines](./documentation/CONTRIBUTING.md) before starting development work.
+Also, be sure to read the [Contributing Guidelines](./packages/genesys-spark-components/documentation/CONTRIBUTING.md) before starting development work.
 
 ### Serving component and docs
 

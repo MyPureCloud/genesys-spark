@@ -62,7 +62,8 @@
     "previous": "Precedente",
     "next": "Successivo",
     "last": "Ultimo",
-    "pageInputLabel": "Pagina {currentPage, number} di {totalPages, number}"
+    "pageInputLabel": "Pagina {currentPage, number} di {totalPages, number}",
+    "goToPage": "Vai a pagina"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
@@ -425,6 +426,9 @@
     "filterResults": "Digitare per filtrare i risultati dell'elenco a discesa",
     "noSelection": "Selezionare...",
     "dropdown": "Elenco a discesa"
+  },
+  "gux-form-field-dropdown": {
+    "required": "Richiesto"
   },
   "gux-form-field-number": {
     "increment": "Incremento",

@@ -37,7 +37,8 @@ module.exports = {
       },
       {
         test: /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
-        loader: 'file-loader'
+        type: 'asset/resource',
+        dependency: { not: ['url'] }
       }
     ]
   },
@@ -76,6 +77,10 @@ module.exports = {
           to: 'icons'
         },
         {
+          from: './webfonts',
+          to: 'webfonts'
+        },
+        {
           from: '../../packages/genesys-spark-components/dist/genesys-webcomponents',
           to: 'genesys-webcomponents'
         }
@@ -95,7 +100,8 @@ module.exports = {
     static: {
       serveIndex: true
     }
-  }
+  },
+  devtool: 'source-map'
 };
 
 const componentPageTemplate = injectCdnUrl(

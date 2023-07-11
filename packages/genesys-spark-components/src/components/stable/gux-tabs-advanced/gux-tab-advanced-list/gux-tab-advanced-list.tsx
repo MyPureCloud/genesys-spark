@@ -10,6 +10,7 @@ import {
   Prop,
   readTask,
   State,
+  Watch,
   writeTask
 } from '@stencil/core';
 import Sortable, { MoveEvent } from 'sortablejs';
@@ -143,6 +144,15 @@ export class GuxTabAdvancedList {
     }
   }
 
+  @Watch('allowSort')
+  watchAllowSort(allowSort: boolean): void {
+    if (allowSort) {
+      this.validateSortableInstance();
+    } else {
+      this.destroySortable();
+    }
+  }
+
   private sortableInstance?: Sortable;
 
   private resizeObserver?: ResizeObserver;
@@ -270,6 +280,7 @@ export class GuxTabAdvancedList {
               this.focused = index;
             }
           });
+          this.emitSortChanged();
         }
         break;
       case 'Tab':
@@ -313,6 +324,7 @@ export class GuxTabAdvancedList {
               }
             });
             this.focusTab(this.focused);
+            this.emitSortChanged();
           } else {
             this.keyboardSort = true;
             this.sortTarget = (event.target as Element).parentNode.parentNode;
@@ -395,10 +407,7 @@ export class GuxTabAdvancedList {
           return !event.related.classList.contains('ignore-sort');
         },
         onUpdate: () => {
-          const tabIds = Array.from(
-            this.root.querySelectorAll('gux-tab-advanced')
-          ).map(tabElement => tabElement.tabId);
-          this.sortChanged.emit(tabIds);
+          this.emitSortChanged();
         }
       }
     );
@@ -409,6 +418,13 @@ export class GuxTabAdvancedList {
       this.sortableInstance.destroy();
       this.sortableInstance = null;
     }
+  }
+
+  emitSortChanged() {
+    const tabIds = Array.from(
+      this.root.querySelectorAll('gux-tab-advanced')
+    ).map(tabElement => tabElement.tabId);
+    this.sortChanged.emit(tabIds);
   }
 
   checkForScrollbarHideOrShow() {
@@ -474,10 +490,14 @@ export class GuxTabAdvancedList {
     );
   }
 
-  componentDidLoad() {
+  private validateSortableInstance(): void {
     if (this.allowSort && !this.sortableInstance) {
       this.createSortable();
     }
+  }
+
+  componentDidLoad() {
+    this.validateSortableInstance();
 
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() =>
@@ -612,6 +632,7 @@ export class GuxTabAdvancedList {
             title={this.i18n(direction)}
             aria-label={this.i18n(direction)}
             class="gux-scroll-button"
+            onDragOver={() => this.getScrollDirection(direction)}
             onClick={() => this.getScrollDirection(direction)}
           >
             <gux-icon
