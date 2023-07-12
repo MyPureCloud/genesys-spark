@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.59.1](https://inindca///compare/v2.59.0...v2.59.1) (2023-07-12)
+
+
+### Bug Fixes
+
+* **gux-pagination:** fix incorrect string interpolation variable in finnish localization ([76f621c](https://inindca///commit/76f621c6606bf305ab4740c3d3dae69b4f805aa0))
+
 ## [2.59.0](https://inindca///compare/v2.58.2...v2.59.0) (2023-04-29)
 
 
