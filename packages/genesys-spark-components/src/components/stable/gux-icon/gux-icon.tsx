@@ -56,14 +56,18 @@ export class GuxIcon {
   watchDecorative(decorative: boolean): void {
     this.validateProps(decorative, this.screenreaderText);
 
-    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    if (this.baseSvgHtml) {
+      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    }
   }
 
   @Watch('screenreaderText')
   watchScreenreaderText(screenreaderText: string): void {
     this.validateProps(this.decorative, screenreaderText);
 
-    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    if (this.baseSvgHtml) {
+      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    }
   }
 
   async componentWillLoad(): Promise<void> {
