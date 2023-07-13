@@ -13,11 +13,11 @@ export async function formatOutputFolder(folder) {
   for (const file of files) {
     const fileContent = fs.readFileSync(file, { encoding: 'utf8' });
     const prettierConfig = await prettier.resolveConfig(file);
+    const formattedFileContent = await prettier.format(fileContent, {
+      ...prettierConfig,
+      filepath: file
+    });
 
-    fs.writeFileSync(
-      file,
-      prettier.format(fileContent, { ...prettierConfig, filepath: file }),
-      { encoding: 'utf8' }
-    );
+    fs.writeFileSync(file, formattedFileContent, { encoding: 'utf8' });
   }
 }

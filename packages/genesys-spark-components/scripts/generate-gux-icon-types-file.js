@@ -35,12 +35,14 @@ const content = `export type GuxIconIconName = ${getAllVariants(
 const filePath =
   __dirname + '/../src/components/stable/gux-icon/gux-icon.types.ts';
 
-prettier.resolveConfig(filePath).then(options => {
-  fs.writeFileSync(
-    filePath,
-    prettier.format(content, {
+prettier
+  .resolveConfig(filePath)
+  .then(options => {
+    return prettier.format(content, {
       ...options,
-      parser: 'babel'
-    })
-  );
-});
+      parser: 'typescript'
+    });
+  })
+  .then(formattedFileContent => {
+    fs.writeFileSync(filePath, formattedFileContent, { encoding: 'utf8' });
+  });
