@@ -11,7 +11,7 @@ import { logWarn } from '../../../utils/error/log-error';
 import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({
-  styleUrl: 'gux-tooltip-title.less',
+  styleUrl: 'gux-tooltip-title.scss',
   tag: 'gux-tooltip-title',
   shadow: false
 })
