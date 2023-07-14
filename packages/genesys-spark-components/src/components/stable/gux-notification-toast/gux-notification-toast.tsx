@@ -19,7 +19,7 @@ import { GuxNotificationToastAccent } from './gux-notification-toast.types';
  * @slot message - Required slot for the notification toast message
  */
 @Component({
-  styleUrl: 'gux-notification-toast.less',
+  styleUrl: 'gux-notification-toast.scss',
   tag: 'gux-notification-toast',
   shadow: true
 })

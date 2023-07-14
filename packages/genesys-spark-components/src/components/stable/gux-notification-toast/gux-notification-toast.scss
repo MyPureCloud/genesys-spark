@@ -1,7 +1,7 @@
 // Variables part
-@import (reference) '../../../style/color.less';
-@import (reference) '../../../style/shadows.less';
-@import (reference) '../../../style/typography.less';
+@import '../../../style/color.scss';
+@import '../../../style/shadows.scss';
+@import '../../../style/typography.scss';
 
 :host {
   position: relative;
@@ -14,12 +14,12 @@
   width: 294px;
   padding: 16px 8px 16px 16px;
   margin-bottom: 4px;
-  color: @gux-type;
-  background: @gux-grey-90;
-  border: 1px solid @gux-grey-30;
-  border-color: @gux-grey-30;
+  color: $gux-type;
+  background: $gux-grey-90;
+  border: 1px solid $gux-grey-30;
+  border-color: $gux-grey-30;
   border-radius: 4px;
-  .gux-shadow-20();
+  @include gux-shadow-20;
 }
 
 .gux-icon {
@@ -34,19 +34,19 @@
   }
 
   &.gux-alert {
-    color: @gux-alert;
+    color: $gux-alert;
   }
 
   &.gux-warning {
-    color: @gux-warning;
+    color: $gux-warning;
   }
 
   &.gux-positive {
-    color: @gux-positive;
+    color: $gux-positive;
   }
 
   &.gux-neutral {
-    color: @gux-neutral;
+    color: $gux-neutral;
   }
 }
 
@@ -61,7 +61,7 @@
   justify-content: flex-start;
   order: 0;
   margin: 0 12px 0 8px;
-  color: @gux-type;
+  color: $gux-type;
 
   .gux-title,
   .gux-message {
@@ -71,6 +71,6 @@
   }
 
   .gux-title {
-    .h4();
+    @include h4;
   }
 }

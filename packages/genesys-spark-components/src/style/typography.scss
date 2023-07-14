@@ -1,0 +1,174 @@
+@import './color.scss';
+@import './_mixins.scss';
+@import './focus.scss';
+@import './spacing.scss';
+@import url('roboto.less');
+
+/*
+ * Typography styles and mixins.
+ */
+
+// Variables part
+$body-font-line-height: 20px;
+
+/* Base typography */
+
+body,
+@mixin body-font {
+  @include base-font;
+
+  font-size: 12px;
+  line-height: $body-font-line-height;
+}
+
+@mixin body-font-bold {
+  @include body-font;
+  @include bold-font;
+}
+
+/* Headings */
+
+h1,
+@mixin h1 {
+  @include light-font;
+
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h2,
+@mixin h2 {
+  @include light-font;
+
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h3,
+@mixin h3 {
+  @include bold-font;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h4,
+@mixin h4 {
+  @include base-font;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h5,
+@mixin h5 {
+  @include base-font;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h6,
+@mixin h6 {
+  @include base-font;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Anchor */
+a {
+  @include gux-anchor;
+}
+
+table a {
+  @include gux-anchor-table;
+}
+
+/* Custom Styles */
+
+@mixin gux-large-text {
+  @include base-font;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@mixin gux-small-text {
+  @include base-font;
+
+  font-size: 11px;
+  line-height: 16px;
+}
+
+@mixin gux-label {
+  @include bold-font;
+
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin gux-sr-only {
+  @include gux-hide-offscreen;
+}
+
+@mixin gux-sr-only-clip {
+  &:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+@mixin gux-anchor {
+  color: $gux-blue-60;
+  text-decoration: underline;
+  border-radius: 2px;
+
+  &:hover {
+    color: $gux-blue-50;
+  }
+
+  &:active {
+    color: $gux-blue-40;
+  }
+
+  &:focus-visible {
+    @include gux-focus-ring;
+  }
+}
+
+@mixin gux-anchor-table {
+  @include gux-anchor;
+
+  text-decoration: none;
+}
+
+.gux-icon-anchor {
+  gux-icon {
+    padding-right: $gux-spacing-xs;
+  }
+}
+
+/* Helpers */
+
+@mixin base-font {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+@mixin light-font {
+  @include base-font;
+
+  font-weight: 300;
+}
+
+@mixin bold-font {
+  @include base-font;
+
+  font-weight: 700;
+}
