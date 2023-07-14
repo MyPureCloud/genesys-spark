@@ -320,7 +320,10 @@
     "YT": "Mayotte",
     "ZA": "Sud Africa",
     "ZM": "Zambia",
-    "ZW": "Zimbabwe"
+    "ZW": "Zimbabwe",
+    "unknownRegion": "Regione sconosciuta",
+    "regionDropdown": "Elenco a discesa regioni",
+    "regionDropdownButton": "Pulsante elenco a discesa regioni"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Ignora navigazione collegamenti"
@@ -435,8 +438,7 @@
     "decrement": "Diminuzione"
   },
   "gux-form-field-phone": {
-    "required": "Richiesto",
-    "invalidPhoneNumber": "Numero non valido"
+    "required": "Richiesto"
   },
   "gux-form-field-time-picker": {
     "required": "Richiesto"

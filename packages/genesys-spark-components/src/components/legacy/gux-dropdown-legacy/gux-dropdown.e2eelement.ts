@@ -1,7 +1,10 @@
 import { E2EElement, E2EPage } from '@stencil/core/testing';
 
 export class E2EGuxDropdown {
-  constructor(private page: E2EPage, private selector: string) {}
+  constructor(
+    private page: E2EPage,
+    private selector: string
+  ) {}
 
   get element(): Promise<E2EElement> {
     return this.page.find(this.selector);

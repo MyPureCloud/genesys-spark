@@ -125,9 +125,8 @@ export function setSlotAriaAttribute(
     | HTMLGuxListboxMultiElement
     | HTMLInputElement
     | HTMLSelectElement
-    | HTMLTextAreaElement
-    | HTMLGuxListboxElement
-    | HTMLGuxListboxMultiElement,
+    | HTMLTextAreaElement,
+
   slotName: string
 ) {
   if (hasSlot(root, slotName)) {
