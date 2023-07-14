@@ -368,16 +368,6 @@
     "timeOptionsState": "Offene Zeitoptionen: {state}",
     "toggleAmPM": "{amOrPm} ausgewählt, zum Umschalten klicken"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Listenfeld für {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Kürzlich gesucht:",
-    "commonSearch": "Häufige Suchanfragen:",
-    "limited": "Ergebnisse eingeschränkt, verfeinern Sie Ihre Suche für weitere Befehle.",
-    "search": "Suchen Sie nach Befehlen.",
-    "title": "Befehlspalette"
-  },
   "gux-input-color": {
     "required": "Erforderlich"
   },
@@ -391,12 +381,6 @@
   },
   "gux-input-text-like": {
     "clear": "Löschen"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Neue Registerkarte erstellen",
-    "scrollLeft": "Nach links blättern",
-    "scrollRight": "Nach rechts blättern",
-    "disableNewTab": "Die maximale Anzahl an erstellten Registerkarten wurde erreicht."
   },
   "gux-action-button": {
     "actionButtonDropdown": "Listenfeld für {buttonTitle}"

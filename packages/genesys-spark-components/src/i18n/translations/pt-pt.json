@@ -365,16 +365,6 @@
     "timeOptionsState": "Opções de horário abertas: {state}",
     "toggleAmPM": "{amOrPm} selecionado, clique para alternar"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Lista pendente para {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Pesquisado recentemente:",
-    "commonSearch": "Pesquisas comuns:",
-    "limited": "Resultados limitados, refine a pesquisa para encontrar mais comandos.",
-    "search": "Pesquisar comandos.",
-    "title": "Paleta de comandos"
-  },
   "gux-input-color": {
     "required": "Obrigatório"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "Limpar"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Criar novo separador",
-    "scrollLeft": "Deslocar para a esquerda",
-    "scrollRight": "Deslocar para a direita",
-    "disableNewTab": "Número máximo de separadores criados alcançado"
   },
   "gux-action-button": {
     "actionButtonDropdown": "Lista pendente para {buttonTitle}"

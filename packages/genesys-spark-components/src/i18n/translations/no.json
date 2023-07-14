@@ -365,16 +365,6 @@
     "timeOptionsState": "Tidsalternativer åpen: {state}",
     "toggleAmPM": "{amOrPm} valgt, klikk for å vise/skjule"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Nedtrekksmeny for {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Nylige søk:",
-    "commonSearch": "Vanlige søk:",
-    "limited": "Begrenset med resultater. Juster søket for å finne flere kommandoer.",
-    "search": "Søk etter kommandoer.",
-    "title": "Kommandopalett"
-  },
   "gux-input-color": {
     "required": "Obligatorisk"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "Tøm"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Opprett ny fane",
-    "scrollLeft": "Rull til venstre",
-    "scrollRight": "Rull til høyre",
-    "disableNewTab": "Maksimalt antall faner som kan opprettes er nådd"
   },
   "gux-action-button": {
     "actionButtonDropdown": "Nedtrekksmeny for {buttonTitle}"

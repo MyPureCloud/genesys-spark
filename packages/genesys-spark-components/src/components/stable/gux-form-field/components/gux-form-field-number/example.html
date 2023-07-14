@@ -188,34 +188,6 @@
   </gux-form-field-number>
 </fieldset>
 
-<div>
-  <h2>gux-form-field-legacy examples for comparison</h2>
-  <form onchange="notify(event)" oninput="notify(event)">
-    <fieldset>
-      <gux-form-field-legacy label-position="beside">
-        <input slot="input" name="number" type="number" value="10" />
-        <label slot="label">Default</label>
-      </gux-form-field-legacy>
-
-      <gux-form-field-legacy label-position="above" clearable>
-        <input slot="input" name="number" type="number" value="10" />
-        <label slot="label">Clearable</label>
-      </gux-form-field-legacy>
-
-      <gux-form-field-legacy label-position="above">
-        <input slot="input" name="number" type="number" value="10" disabled />
-        <label slot="label">Disabled</label>
-      </gux-form-field-legacy>
-
-      <gux-form-field-legacy label-position="beside">
-        <input slot="input" name="number" type="number" value="10" required />
-        <label slot="label">Required</label>
-        <span slot="error">Field is required</span>
-      </gux-form-field-legacy>
-    </fieldset>
-  </form>
-</div>
-
 <style>
   .form-container {
     display: inline-flex;

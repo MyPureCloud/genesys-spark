@@ -18,14 +18,11 @@
 
 ### Used by
 
- - [gux-accordion-legacy](../../legacy/gux-accordion-legacy)
  - [gux-accordion-section](../gux-accordion/gux-accordion-section)
  - [gux-action-button](../gux-action-button)
- - [gux-action-button-legacy](../../legacy/gux-action-button-legacy)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-breadcrumb-item](../gux-breadcrumbs/breadcrumb-item)
  - [gux-button-multi](../gux-button-multi)
- - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
  - [gux-calendar](../gux-calendar)
  - [gux-column-manager-item](../../beta/gux-column-manager/gux-column-manager-item)
  - [gux-content-search](../gux-content-search)
@@ -36,7 +33,6 @@
  - [gux-disclosure-button](../gux-disclosure-button)
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-dropdown](../gux-dropdown)
- - [gux-dropdown-legacy](../../legacy/gux-dropdown-legacy)
  - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
  - [gux-dropdown-multi-tag](../../beta/gux-dropdown-multi/gux-dropdown-multi-tag)
  - [gux-error-message-beta](../../beta/gux-error-message-beta)
@@ -54,11 +50,6 @@
  - [gux-form-field-textarea](../gux-form-field/components/gux-form-field-textarea)
  - [gux-form-field-time-picker](../gux-form-field/components/gux-form-field-time-picker)
  - [gux-inline-alert-beta](../../beta/gux-alert)
- - [gux-input-color](../../legacy/gux-form-field-legacy/components/gux-input-color)
- - [gux-input-number](../../legacy/gux-form-field-legacy/components/gux-input-number)
- - [gux-input-search](../../legacy/gux-form-field-legacy/components/gux-input-search)
- - [gux-input-select](../../legacy/gux-form-field-legacy/components/gux-input-select)
- - [gux-input-text-like](../../legacy/gux-form-field-legacy/components/gux-input-text-like)
  - [gux-month-calendar](../../beta/gux-month-picker/gux-month-calendar)
  - [gux-month-picker-beta](../../beta/gux-month-picker)
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
@@ -68,19 +59,15 @@
  - [gux-pagination-ellipsis-button](../../beta/gux-pagination-beta/gux-pagination-buttons-beta/gux-pagination-ellipsis-button)
  - [gux-phone-input-beta](../../beta/gux-phone-input)
  - [gux-rating](../gux-rating)
- - [gux-side-panel-button](../../legacy/gux-side-panel-legacy/buttons)
  - [gux-sort-control](../../beta/gux-table/gux-sort-control)
  - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
- - [gux-tab-dropdown-option-legacy](../../legacy/gux-tabs-legacy/gux-tab-dropdown-option-legacy)
- - [gux-tab-legacy](../../legacy/gux-tabs-legacy/gux-tab-legacy)
  - [gux-tab-list](../gux-tabs/gux-tab-list)
  - [gux-table-beta](../../beta/gux-table)
  - [gux-table-select-menu](../../beta/gux-table/gux-table-select-menu)
  - [gux-table-toolbar-action](../../beta/gux-table-toolbar/gux-table-toolbar-action)
  - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
- - [gux-tabs-legacy](../../legacy/gux-tabs-legacy)
  - [gux-tag-beta](../../beta/gux-tag)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
  - [gux-toggle](../gux-toggle)
@@ -89,14 +76,11 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-accordion-legacy --> gux-icon
   gux-accordion-section --> gux-icon
   gux-action-button --> gux-icon
-  gux-action-button-legacy --> gux-icon
   gux-advanced-dropdown --> gux-icon
   gux-breadcrumb-item --> gux-icon
   gux-button-multi --> gux-icon
-  gux-button-multi-legacy --> gux-icon
   gux-calendar --> gux-icon
   gux-column-manager-item --> gux-icon
   gux-content-search --> gux-icon
@@ -107,7 +91,6 @@ graph TD;
   gux-disclosure-button --> gux-icon
   gux-dismiss-button --> gux-icon
   gux-dropdown --> gux-icon
-  gux-dropdown-legacy --> gux-icon
   gux-dropdown-multi-beta --> gux-icon
   gux-dropdown-multi-tag --> gux-icon
   gux-error-message-beta --> gux-icon
@@ -125,11 +108,6 @@ graph TD;
   gux-form-field-textarea --> gux-icon
   gux-form-field-time-picker --> gux-icon
   gux-inline-alert-beta --> gux-icon
-  gux-input-color --> gux-icon
-  gux-input-number --> gux-icon
-  gux-input-search --> gux-icon
-  gux-input-select --> gux-icon
-  gux-input-text-like --> gux-icon
   gux-month-calendar --> gux-icon
   gux-month-picker-beta --> gux-icon
   gux-option-icon --> gux-icon
@@ -139,19 +117,15 @@ graph TD;
   gux-pagination-ellipsis-button --> gux-icon
   gux-phone-input-beta --> gux-icon
   gux-rating --> gux-icon
-  gux-side-panel-button --> gux-icon
   gux-sort-control --> gux-icon
   gux-submenu --> gux-icon
   gux-tab-advanced --> gux-icon
   gux-tab-advanced-list --> gux-icon
-  gux-tab-dropdown-option-legacy --> gux-icon
-  gux-tab-legacy --> gux-icon
   gux-tab-list --> gux-icon
   gux-table-beta --> gux-icon
   gux-table-select-menu --> gux-icon
   gux-table-toolbar-action --> gux-icon
   gux-table-toolbar-menu-button --> gux-icon
-  gux-tabs-legacy --> gux-icon
   gux-tag-beta --> gux-icon
   gux-time-picker-beta --> gux-icon
   gux-toggle --> gux-icon

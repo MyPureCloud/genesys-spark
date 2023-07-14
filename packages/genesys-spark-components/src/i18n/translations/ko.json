@@ -365,16 +365,6 @@
     "timeOptionsState": "시간 옵션 열기: {state}",
     "toggleAmPM": "{amOrPm}이 선택되었습니다. 전환하려면 클릭하세요 "
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "{buttonTitle}에 드롭다운"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "최근 검색:",
-    "commonSearch": "공통 검색:",
-    "limited": "결과가 제한되었습니다. 더 많은 명령어로 검색 범위를 좁히십시오.",
-    "search": "명령어 검색",
-    "title": "명령 팔레트"
-  },
   "gux-input-color": {
     "required": "요구됨"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "지우기"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "새 탭 만들기",
-    "scrollLeft": "왼쪽으로 스크롤",
-    "scrollRight": "오른쪽으로 스크롤",
-    "disableNewTab": "생성된 최대 탭 수에 도달했습니다."
   },
   "gux-action-button": {
     "actionButtonDropdown": "{buttonTitle}에 드롭다운"

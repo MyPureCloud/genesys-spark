@@ -365,16 +365,6 @@
     "timeOptionsState": "Открытые варианты времени: {state}",
     "toggleAmPM": "Выбрано: {amOrPm}. Нажмите, чтобы переключить "
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Раскрывающийся список для {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Недавние запросы поиска:",
-    "commonSearch": "Частые запросы поиска:",
-    "limited": "Количество результатов ограничено. Уточните критерии поиска, чтобы найти больше команд.",
-    "search": "Поиск команд.",
-    "title": "Палитра команд"
-  },
   "gux-input-color": {
     "required": "Обязательно"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "Очистить"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Создать новую вкладку",
-    "scrollLeft": "Прокрутить влево",
-    "scrollRight": "Прокрутить вправо",
-    "disableNewTab": "Достигнуто максимальное количество созданных вкладок"
   },
   "gux-action-button": {
     "actionButtonDropdown": "Раскрывающийся список для {buttonTitle}"
