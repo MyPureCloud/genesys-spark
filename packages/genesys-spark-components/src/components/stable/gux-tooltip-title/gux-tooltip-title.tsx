@@ -11,7 +11,7 @@ import { logWarn } from '../../../utils/error/log-error';
 import { OnMutation } from '../../../utils/decorator/on-mutation';
 
 @Component({
-  styleUrl: 'gux-tooltip-title.less',
+  styleUrl: 'gux-tooltip-title.scss',
   tag: 'gux-tooltip-title',
   shadow: false
 })
@@ -97,9 +97,8 @@ export class GuxTooltipTitle {
 
   private getTitleElements(): Array<Element> {
     const slot = this.root.querySelector('slot');
-    const target = this.root.querySelector(
-      '.gux-title-container span'
-    )?.children;
+    const target = this.root.querySelector('.gux-title-container span')
+      ?.children;
     if (slot) {
       return slot.assignedElements();
     } else if (target) {

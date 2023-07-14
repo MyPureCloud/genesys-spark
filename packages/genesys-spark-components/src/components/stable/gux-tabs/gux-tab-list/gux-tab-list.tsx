@@ -25,6 +25,7 @@ import tabsResources from '../i18n/en.json';
 export class GuxTabList {
   private i18n: GetI18nValue;
   private triggerIds: string;
+  private currentScrollIndex: number = 0;
 
   @Element()
   root: HTMLElement;
@@ -170,14 +171,11 @@ export class GuxTabList {
     const scrollableSection = this.root.querySelector(
       '.gux-scrollable-section'
     );
-    const currentTab = this.root.querySelectorAll('gux-tab')[this.focused];
 
     if (direction === 'forward') {
       if (this.focused < this.tabTriggers.length - 1) {
         writeTask(() => {
-          this.hasHorizontalScrollbar
-            ? scrollableSection.scrollBy(currentTab.clientWidth, 0)
-            : scrollableSection.scrollBy(0, currentTab.clientHeight);
+          this.hasHorizontalScrollbar ? this.scrollRight() : this.scrollDown();
         });
         this.focusTab(this.focused + 1);
       } else {
@@ -191,9 +189,7 @@ export class GuxTabList {
     } else if (direction === 'backward') {
       if (this.focused > 0) {
         writeTask(() => {
-          this.hasHorizontalScrollbar
-            ? scrollableSection.scrollBy(-currentTab.clientWidth, 0)
-            : scrollableSection.scrollBy(0, -currentTab.clientHeight);
+          this.hasHorizontalScrollbar ? this.scrollLeft() : this.scrollUp();
         });
         this.focusTab(this.focused - 1);
       } else {
@@ -277,27 +273,48 @@ export class GuxTabList {
     }
   }
 
+  getTabLength(): number {
+    return this.tabTriggers[this.currentScrollIndex]?.scrollWidth;
+  }
+
   scrollLeft() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(-100, 0);
+      if (this.isScrolledToEnd) {
+        this.currentScrollIndex = this.tabTriggers.length - 1;
+      } else {
+        this.currentScrollIndex = this.currentScrollIndex - 1;
+      }
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(-this.getTabLength(), 0);
     });
   }
 
   scrollRight() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(100, 0);
+      if (this.isScrolledToBeginning) {
+        this.currentScrollIndex = 0;
+      }
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(this.getTabLength(), 0);
+      this.currentScrollIndex = this.currentScrollIndex + 1;
     });
   }
 
   scrollUp() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(0, -100);
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(0, -this.tabTriggers[this.focused].clientHeight);
     });
   }
 
   scrollDown() {
     writeTask(() => {
-      this.root.querySelector('.gux-scrollable-section').scrollBy(0, 100);
+      this.root
+        .querySelector('.gux-scrollable-section')
+        .scrollBy(0, this.tabTriggers[this.focused].clientHeight);
     });
   }
 

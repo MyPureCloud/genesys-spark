@@ -1,6 +1,6 @@
-const inquirer = require('inquirer');
-const path = require('path');
-const fs = require('fs');
+import inquirer from 'inquirer';
+import { join } from 'path';
+import { readdirSync, writeFileSync } from 'fs';
 
 // The description of each success criterion is copied directly from the WCAG Understanding Success Criteria pages
 const a11yRules = [
@@ -132,8 +132,8 @@ function getA11yRuleQuestions() {
 }
 
 function createComponentList(componentStability) {
-  let list = fs.readdirSync(
-    path.join(__dirname, `../src/components/${componentStability}`)
+  let list = readdirSync(
+    join(__dirname, `../src/components/${componentStability}`)
   );
   let componentList = [];
   list.forEach(result => {
@@ -157,11 +157,11 @@ function getMarkdown(componentName, a11yRuleAnswers) {
 }
 
 function outputFile(componentStability, componentName, markdownContent) {
-  const targetPath = path.join(
+  const targetPath = join(
     __dirname,
     `../src/components/${componentStability}/${componentName}/a11yManualChecklist.md`
   );
-  fs.writeFileSync(targetPath, markdownContent);
+  writeFileSync(targetPath, markdownContent);
   console.info(
     `A markdown file containing the manual testing results has been added to ../src/components/${componentStability}/${componentName}`
   );

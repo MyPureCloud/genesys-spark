@@ -320,7 +320,10 @@
     "YT": "马约特岛",
     "ZA": "南非",
     "ZM": "赞比亚",
-    "ZW": "津巴布韦"
+    "ZW": "津巴布韦",
+    "unknownRegion": "未知区域",
+    "regionDropdown": "区域下拉菜单",
+    "regionDropdownButton": "区域下拉菜单按钮"
   },
   "gux-skip-navigation-list": {
     "navigationName": "跳过链接导航"
@@ -435,8 +438,7 @@
     "decrement": "减量"
   },
   "gux-form-field-phone": {
-    "required": "必需",
-    "invalidPhoneNumber": "数字无效"
+    "required": "必需"
   },
   "gux-form-field-time-picker": {
     "required": "必需"

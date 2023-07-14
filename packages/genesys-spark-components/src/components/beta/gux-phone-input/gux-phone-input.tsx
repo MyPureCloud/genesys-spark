@@ -168,7 +168,7 @@ export class GuxPhoneInput {
       try {
         const phone = this.phoneUtil.parse(this.value);
         this.numberText = this.phoneUtil.format(phone, this.displayFormat);
-        this.region = this.phoneUtil.getRegionCodeForNumber(phone);
+        this.region = this.getRegionCode(phone);
       } catch (e) {
         if (this.numberText === undefined) {
           // only show warning on initial render
@@ -189,26 +189,36 @@ export class GuxPhoneInput {
 
   private onInputChange(number: string): void {
     if (number.startsWith('+')) {
-      this.region = this.checkForRegion(number);
+      try {
+        this.region = this.getRegionCode(this.phoneUtil.parse(number));
+      } catch (e) {
+        // parse failed, so check if there is a matching region in the string
+        this.region = this.getRegionCodeFromRegionObjects(number);
+      }
     }
     this.numberText = number;
     this.phoneNumberUpdated();
   }
 
-  private checkForRegion(number: string): string {
-    try {
-      return this.phoneUtil.getRegionCodeForNumber(
-        this.phoneUtil.parse(number)
-      );
-    } catch (e) {
-      // parse failed, so check if there is a matching region in the string
-      return (
-        this.regionObjects
-          .filter(region => number.startsWith(region.countryCode))
-          .sort((a, b) => b.countryCode.length - a.countryCode.length)[0]
-          ?.code || ''
-      );
+  private getRegionCode(number: libphonenumber.PhoneNumber): string {
+    let region = this.phoneUtil.getRegionCodeForNumber(number);
+
+    // setting region to empty when either 001 (global satellite) or ZZ (unknown) are returned
+    // phoneUtil doesn't always handle these cases in its other functions, so setting to an empty region (which is unknown with a globe as an icon) works best
+    if (region === '001' || region === 'ZZ') {
+      region = '';
     }
+
+    return region;
+  }
+
+  private getRegionCodeFromRegionObjects(number: string): string {
+    return (
+      this.regionObjects
+        .filter(region => number.startsWith(region.countryCode))
+        .sort((a, b) => b.countryCode.length - a.countryCode.length)[0]?.code ||
+      ''
+    );
   }
 
   private validatePhoneNumber(): void {
