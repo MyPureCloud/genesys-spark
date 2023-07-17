@@ -1,5 +1,6 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/zindex.less';
+@import (reference) '../../../style/typography.less';
 
 .gux-target-container {
   &.gux-disabled {
@@ -18,4 +19,8 @@
   &.gux-expanded {
     visibility: visible;
   }
+}
+
+.gux-sr-only-clip {
+  .gux-sr-only-clip();
 }
