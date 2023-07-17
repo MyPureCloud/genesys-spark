@@ -109,15 +109,52 @@
   },
   "typography": {
     "body": {
+      "sm": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "18px",
+        "fontSize": "12px"
+      },
       "md": {
         "fontFamily": "Noto Sans",
         "lineHeight": "20px",
         "fontSize": "14px"
       },
-      "sm": {
+      "lg": {
         "fontFamily": "Noto Sans",
-        "lineHeight": "18px",
-        "fontSize": "12px"
+        "lineHeight": "24px",
+        "fontSize": "16px"
+      }
+    },
+    "heading": {
+      "xs": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "24px",
+        "fontSize": "14px",
+        "fontWeight": 700
+      },
+      "sm": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "24px",
+        "fontSize": "16px",
+        "fontWeight": 700
+      },
+      "md": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "27px",
+        "fontSize": "18px",
+        "fontWeight": 700
+      },
+      "lg": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "32px",
+        "fontSize": "24px",
+        "fontWeight": 700
+      },
+      "xl": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "44px",
+        "fontSize": "36px",
+        "fontWeight": 700
       }
     }
   },
@@ -154,5 +191,8 @@
     "lg": "32rem",
     "xl": "40rem",
     "2xl": "48rem"
+  },
+  "text_decoration": {
+    "underline": "underline"
   }
 }

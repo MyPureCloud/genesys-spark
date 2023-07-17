@@ -34,6 +34,10 @@
       "main": "#4856cb",
       "darker": "#3742a2",
       "darkest": "#252e78"
-    }
+    },
+    "focus": "#7b88f7"
+  },
+  "focus_ring": {
+    "width": "3px"
   }
 }

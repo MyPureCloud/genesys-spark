@@ -1,0 +1,174 @@
+// I could not find anything about the focus ring but its color. I made temporary variables for now
+$temp-focus-ring-width: 3px;
+$temp-focus-ring-offset: 1px;
+$temp-focus-ring-corner-radius: 4px;
+$temp-focus-ring-color: #7b88f7;
+
+@mixin button-text {
+  font-family: var(--gse-ui-button-text-fontFamily);
+  font-weight: var(--gse-ui-button-text-fontWeight);
+  font-size: var(--gse-ui-button-text-fontSize);
+  line-height: var(--gse-ui-button-text-lineHeight);
+}
+
+// Style
+
+:host {
+  display: inline-block;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+:host(:focus) {
+  outline: none;
+
+  button {
+    outline: none;
+  }
+}
+
+::slotted(gux-icon) {
+  width: var(--gse-ui-button-icon-size);
+  height: var(--gse-ui-button-icon-size);
+}
+
+::slotted(*) {
+  // need token for this value
+  padding-left: 8px;
+  vertical-align: middle;
+}
+
+::slotted(*:first-child) {
+  padding: 0;
+}
+
+button {
+  @include button-text;
+  color: var(--gse-ui-button-secondary-default-foregroundColor);
+  background-color: var(--gse-ui-button-secondary-default-backgroundColor);
+  width: 100%;
+  min-width: var(--gse-ui-button-icon-only-width);
+  height: var(--gse-ui-button-height);
+  padding: var(--gse-ui-button-padding);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: auto;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--gse-ui-button-borderRadius);
+
+  &[disabled] {
+    opacity: var(--gse-ui-button-disabled-opacity);
+    cursor: default;
+  }
+
+  &:hover:enabled {
+    color: var(--gse-ui-button-secondary-hover-foregroundColor);
+    background-color: var(--gse-ui-button-secondary-hover-backgroundColor);
+  }
+
+  &:active:enabled {
+    color: var(--gse-ui-button-secondary-active-foregroundColor);
+    background-color: var(--gse-ui-button-secondary-active-backgroundColor)
+  }
+
+  &:focus-visible:enabled {
+    outline: $temp-focus-ring-width solid $temp-focus-ring-color;
+    outline-offset: $temp-focus-ring-offset;
+    border-radius: calc(
+      $temp-focus-ring-corner-radius - $temp-focus-ring-offset
+    );
+  }
+
+  &.gux-primary {
+    color: var(--gse-ui-button-primary-default-foregroundColor);
+    background-color: var(--gse-ui-button-primary-default-backgroundColor);
+
+    &:hover:enabled {
+      color: var(--gse-ui-button-primary-hover-foregroundColor);
+      background-color: var(--gse-ui-button-primary-hover-backgroundColor);
+    }
+
+    &:active:enabled {
+      color: var(--gse-ui-button-primary-active-foregroundColor);
+      background-color: var(--gse-ui-button-primary-active-backgroundColor);
+    }
+  }
+
+  &.gux-tertiary {
+    color: var(--gse-ui-button-tertiary-default-foregroundColor);
+    background-color: var(--gse-ui-button-tertiary-default-backgroundColor);
+    border-width: var(--gse-ui-button-tertiary-default-border-width);
+    border-style: var(--gse-ui-button-tertiary-default-border-style);
+    border-color: var(--gse-ui-button-tertiary-default-border-color);
+
+    &:hover:enabled {
+      color: var(--gse-ui-button-tertiary-hover-foregroundColor);
+      background-color: var(--gse-ui-button-tertiary-hover-backgroundColor);
+    }
+
+    &:active:enabled {
+      color: var(--gse-ui-button-tertiary-active-foregroundColor);
+      background-color: var(--gse-ui-button-tertiary-active-backgroundColor);
+    }
+  }
+
+  &.gux-ghost {
+    color: var(--gse-ui-button-ghost-default-foregroundColor);
+
+    background-color: var(--gse-ui-button-ghost-default-backgroundColor);
+
+    &:hover:enabled {
+      color: var(--gse-ui-button-ghost-hover-foregroundColor);
+      background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
+    }
+
+    &:active:enabled {
+      color: var(--gse-ui-button-ghost-active-foregroundColor);
+      background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+    }
+  }
+
+  &.gux-danger {
+    color: var(--gse-ui-button-danger-default-foregroundColor);
+    background-color: var(--gse-ui-button-danger-default-backgroundColor);
+
+    &:hover:enabled {
+      color: var(--gse-ui-button-danger-hover-foregroundColor);
+      background-color: var(--gse-ui-button-danger-hover-backgroundColor);
+    }
+
+    &:active:enabled {
+      color: var(--gse-ui-button-danger-active-foregroundColor);
+      background-color: var(--gse-ui-button-danger-active-backgroundColor);
+    }
+  }
+
+  &.gux-inline {
+    min-width: initial;
+    height: initial;
+    padding: 0;
+    color: var(--gse-ui-link-default-color);
+    background: none;
+
+    border: none;
+
+    &[disabled] {
+      color: var(--gse-ui-link-disabled-color);
+    }
+
+    &:hover:enabled {
+      text-decoration: underline;
+      color: var(--gse-ui-link-hover-color);
+      background: none;
+    }
+
+    &:active:enabled {
+      text-decoration: underline;
+      color: var(--gse-ui-link-active-color);
+      background: none;
+    }
+  }
+}
