@@ -31,8 +31,8 @@ export const selectAttribute = (
           ${options.map(
             o => `
               <option value="${o.value}" ${o.selected ? 'selected' : ''}>${
-              o.value
-            }</option>
+                o.value
+              }</option>
           `
           )}
       </select>

@@ -85,7 +85,7 @@ export class GuxTooltipTitle {
   private logWarnNoIconSrText(): void {
     if (this.iconOnly && !this.titleName) {
       logWarn(
-        'gux-tooltip-title',
+        this.root,
         'No screenreader-text provided. Provide a localized screenreader-text property for the gux-icon. The screenreader-text property is used for the icon screenreader text and the tooltip.'
       );
     }
@@ -97,9 +97,8 @@ export class GuxTooltipTitle {
 
   private getTitleElements(): Array<Element> {
     const slot = this.root.querySelector('slot');
-    const target = this.root.querySelector(
-      '.gux-title-container span'
-    )?.children;
+    const target = this.root.querySelector('.gux-title-container span')
+      ?.children;
     if (slot) {
       return slot.assignedElements();
     } else if (target) {

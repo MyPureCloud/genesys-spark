@@ -1,4 +1,4 @@
-import parse5 from 'parse5';
+import { parseFragment, serialize } from 'parse5';
 
 import AttributesPanel from './panels/attributes';
 import { createPreview } from './panels/preview';
@@ -160,8 +160,8 @@ export const bootstrap = (exampleCode, callback) => {
   sparkLinkElement.appendChild(sparkLinkAnchor);
 
   const updateCode = createEditor(editor, newCode => {
-    let ast = parse5.parseFragment(newCode);
-    let html = parse5.serialize(ast);
+    let ast = parseFragment(newCode);
+    let html = serialize(ast);
 
     updatePreview(html);
     attributesPanel.updateFromTree(ast);
@@ -175,7 +175,7 @@ export const bootstrap = (exampleCode, callback) => {
   });
 
   attributesPanel.onChange(ast => {
-    updateCode(parse5.serialize(ast));
+    updateCode(serialize(ast));
   });
 
   updateCode(exampleCode);

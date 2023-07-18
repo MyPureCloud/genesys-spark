@@ -74,16 +74,42 @@
 
       .gux-toggle-label-loading {
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        inset: 0;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-content: stretch;
         align-items: center;
         justify-content: center;
+      }
+    }
+  }
+
+  .gux-toggle-error {
+    .gux-toggle-error-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 11px;
+      color: @gux-black-50;
+
+      gux-icon {
+        flex: 0 1 auto;
+        align-self: auto;
+        order: 0;
+        width: 16px;
+        height: 16px;
+        margin: 0 4px;
+        color: @gux-alert;
+      }
+
+      .gux-toggle-error-message {
+        flex: 0 1 auto;
+        align-self: auto;
+        order: 0;
       }
     }
   }

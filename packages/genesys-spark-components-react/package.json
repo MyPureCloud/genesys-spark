@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components-react",
-  "version": "3.87.0",
+  "version": "3.93.6",
   "description": "",
   "license": "MIT",
   "main": "dist/index.js",
@@ -14,12 +14,12 @@
     "eslint": "eslint . --ignore-path .gitignore --no-error-on-unmatched-pattern --fix",
     "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\"",
     "lint-staged": "lint-staged",
-    "prettier": "prettier --loglevel silent --ignore-path .gitignore --ignore-unknown --write .",
+    "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "dependencies": {
-    "genesys-spark-components": "3.81.7"
+    "genesys-spark-components": "^3.93.1"
   },
   "peerDependencies": {
     "@types/react": "16 - 18",
@@ -27,16 +27,16 @@
     "react-dom": "16 - 18"
   },
   "devDependencies": {
-    "@types/react": "^17.0.60",
+    "@types/react": "^17.0.62",
     "@types/react-dom": "^17.0.20",
-    "@typescript-eslint/eslint-plugin": "^5.59.8",
-    "@typescript-eslint/parser": "^5.59.8",
-    "eslint": "^8.41.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "eslint-config-prettier": "^8.8.0",
-    "lint-staged": "^13.2.2",
+    "lint-staged": "^13.2.3",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
     "react": "^17.0.2",

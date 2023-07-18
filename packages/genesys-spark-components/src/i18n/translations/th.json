@@ -62,7 +62,8 @@
     "previous": "ก่อนหน้า",
     "next": "ถัดไป",
     "last": "นามสกุล",
-    "pageInputLabel": "หน้า {currentPage, number} จาก {totalPages, number}"
+    "pageInputLabel": "หน้า {currentPage, number} จาก {totalPages, number}",
+    "goToPage": "ไปที่หน้า"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",

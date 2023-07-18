@@ -151,7 +151,10 @@ export class GuxToggle {
     if (this.errorMessage) {
       return (
         <div id={this.errorId} class="gux-toggle-error">
-          <gux-error-message-beta>{this.errorMessage}</gux-error-message-beta>
+          <div class="gux-toggle-error-container">
+            <gux-icon icon-name="alert-warning-octogon" decorative></gux-icon>
+            <div class="gux-toggle-error-message">{this.errorMessage}</div>
+          </div>
         </div>
       ) as JSX.Element;
     }

@@ -62,7 +62,8 @@
     "previous": "Zurück",
     "next": "Weiter",
     "last": "Letzte",
-    "pageInputLabel": "Seite {currentPage, number} von {totalPages, number}"
+    "pageInputLabel": "Seite {currentPage, number} von {totalPages, number}",
+    "goToPage": "Wechseln Sie zu Seite"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
@@ -319,7 +320,10 @@
     "YT": "Mayotte",
     "ZA": "Südafrika",
     "ZM": "Sambia",
-    "ZW": "Simbabwe"
+    "ZW": "Simbabwe",
+    "unknownRegion": "Unbekannte Region",
+    "regionDropdown": "Region-Dropdown",
+    "regionDropdownButton": "Region-Dropdown-Schaltfläche"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skiplink-Navigation überspringen"
@@ -434,8 +438,7 @@
     "decrement": "Dekrement"
   },
   "gux-form-field-phone": {
-    "required": "Erforderlich",
-    "invalidPhoneNumber": "Zahl ist nicht gültig"
+    "required": "Erforderlich"
   },
   "gux-form-field-time-picker": {
     "required": "Erforderlich"

@@ -62,7 +62,8 @@
     "previous": "Предыдущая",
     "next": "Следующая",
     "last": "Последняя",
-    "pageInputLabel": "Страница {currentPage, number} из {totalPages, number}"
+    "pageInputLabel": "Страница {currentPage, number} из {totalPages, number}",
+    "goToPage": "Перейти на страницу"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} – {lastItem, number}",

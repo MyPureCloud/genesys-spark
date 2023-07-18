@@ -62,7 +62,8 @@
     "previous": "Wstecz",
     "next": "Dalej",
     "last": "Ostatnia",
-    "pageInputLabel": "Strona {currentPage, number} z {totalPages, number}"
+    "pageInputLabel": "Strona {currentPage, number} z {totalPages, number}",
+    "goToPage": "Idź do strony"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number}–{lastItem, number}",
@@ -319,7 +320,10 @@
     "YT": "Majotta",
     "ZA": "Afryka Południowa",
     "ZM": "Zambia",
-    "ZW": "Zimbabwe"
+    "ZW": "Zimbabwe",
+    "unknownRegion": "Nieznany region",
+    "regionDropdown": "Lista Regionów",
+    "regionDropdownButton": "Przycisk listy Regionów"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Pomiń nawigację łączy"
@@ -434,8 +438,7 @@
     "decrement": "Zmniejsz"
   },
   "gux-form-field-phone": {
-    "required": "Wymagane",
-    "invalidPhoneNumber": "Numer jest nieprawidłowy"
+    "required": "Wymagane"
   },
   "gux-form-field-time-picker": {
     "required": "Wymagane"

@@ -53,8 +53,18 @@ graph TD;
   gux-truncate-beta --> gux-tooltip
   gux-listbox --> gux-radial-loading
   gux-option --> gux-truncate-beta
+  gux-pagination-buttons-beta --> gux-pagination-ellipsis-button
   gux-pagination-buttons-beta --> gux-button-slot-beta
   gux-pagination-buttons-beta --> gux-icon
+  gux-pagination-ellipsis-button --> gux-icon
+  gux-pagination-ellipsis-button --> gux-tooltip
+  gux-pagination-ellipsis-button --> gux-popover-beta
+  gux-pagination-ellipsis-button --> gux-form-field-number
+  gux-popover-beta --> gux-dismiss-button
+  gux-dismiss-button --> gux-icon
+  gux-form-field-number --> gux-form-field-input-clear-button
+  gux-form-field-number --> gux-icon
+  gux-form-field-input-clear-button --> gux-icon
   style gux-pagination-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

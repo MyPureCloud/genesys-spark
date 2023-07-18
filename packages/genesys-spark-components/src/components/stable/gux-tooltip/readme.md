@@ -66,6 +66,7 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-copy-to-clipboard-beta](../../beta/gux-copy-to-clipboard)
+ - [gux-pagination-ellipsis-button](../../beta/gux-pagination-beta/gux-pagination-buttons-beta/gux-pagination-ellipsis-button)
  - [gux-tooltip-title](../gux-tooltip-title)
  - [gux-truncate-beta](../../beta/gux-truncate)
 
@@ -73,6 +74,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-copy-to-clipboard-beta --> gux-tooltip
+  gux-pagination-ellipsis-button --> gux-tooltip
   gux-tooltip-title --> gux-tooltip
   gux-truncate-beta --> gux-tooltip
   style gux-tooltip fill:#f9f,stroke:#333,stroke-width:4px

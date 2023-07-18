@@ -62,7 +62,8 @@
     "previous": "Forrige",
     "next": "Næste",
     "last": "Sidste",
-    "pageInputLabel": "Side {currentPage, number} af {totalPages, number}"
+    "pageInputLabel": "Side {currentPage, number} af {totalPages, number}",
+    "goToPage": "Gå til side"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",

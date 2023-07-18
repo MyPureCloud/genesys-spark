@@ -12,13 +12,6 @@
 | `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
 
 
-## Events
-
-| Event                  | Description | Type                   |
-| ---------------------- | ----------- | ---------------------- |
-| `phonevalidationerror` |             | `CustomEvent<boolean>` |
-
-
 ## Slots
 
 | Slot      | Description                                |

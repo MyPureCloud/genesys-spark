@@ -62,7 +62,8 @@
     "previous": "Edellinen",
     "next": "Seuraava",
     "last": "Viimeinen",
-    "pageInputLabel": "Sivu {currentPage, number} / {totalPages, number})"
+    "pageInputLabel": "Sivu {currentPage, number} / {totalPages, number})",
+    "goToPage": "Siirry sivulle"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",

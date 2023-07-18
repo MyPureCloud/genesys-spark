@@ -53,7 +53,10 @@ export class GuxTimeZonePickerBeta {
 
   componentDidLoad(): void {
     const dropdownElement = this.root?.shadowRoot.querySelector('gux-dropdown');
-    dropdownElement.addEventListener('change', () => {
+    dropdownElement.addEventListener('change', (event: Event) => {
+      const selectedElement = event.target as HTMLInputElement;
+      const selectedValue = selectedElement?.value;
+      this.value = selectedValue;
       simulateNativeEvent(this.root, 'change');
     });
   }

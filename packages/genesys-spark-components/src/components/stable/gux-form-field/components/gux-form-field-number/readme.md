@@ -45,6 +45,10 @@ Type: `Promise<void>`
 
 ## Dependencies
 
+### Used by
+
+ - [gux-pagination-ellipsis-button](../../../../beta/gux-pagination-beta/gux-pagination-buttons-beta/gux-pagination-ellipsis-button)
+
 ### Depends on
 
 - [gux-form-field-input-clear-button](../../helper-components/gux-form-field-input-clear-button)
@@ -56,6 +60,7 @@ graph TD;
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
+  gux-pagination-ellipsis-button --> gux-form-field-number
   style gux-form-field-number fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

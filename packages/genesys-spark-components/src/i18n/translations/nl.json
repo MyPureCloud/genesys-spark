@@ -62,7 +62,8 @@
     "previous": "Vorige",
     "next": "Volgende",
     "last": "Laatste",
-    "pageInputLabel": "Pagina {currentPage, number} van {totalPages, number}"
+    "pageInputLabel": "Pagina {currentPage, number} van {totalPages, number}",
+    "goToPage": "Naar pagina"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
@@ -319,7 +320,10 @@
     "YT": "Mayotte",
     "ZA": "Zuid-Afrika",
     "ZM": "Zambia",
-    "ZW": "Zimbabwe"
+    "ZW": "Zimbabwe",
+    "unknownRegion": "Onbekende regio",
+    "regionDropdown": "Vervolgkeuzelijst voor regio",
+    "regionDropdownButton": "Vervolgkeuzeknop voor regio"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Navigatie naar koppelingen overslaan"
@@ -434,8 +438,7 @@
     "decrement": "Verlagen"
   },
   "gux-form-field-phone": {
-    "required": "Vereist",
-    "invalidPhoneNumber": "Getal is niet geldig"
+    "required": "Vereist"
   },
   "gux-form-field-time-picker": {
     "required": "Vereist"

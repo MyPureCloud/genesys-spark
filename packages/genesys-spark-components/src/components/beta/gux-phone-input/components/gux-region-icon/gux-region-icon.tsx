@@ -14,6 +14,9 @@ export class GuxRegionIcon {
   @Prop()
   region: string;
 
+  @Prop()
+  screenreaderText: string;
+
   componentWillLoad(): void {
     trackComponent(this.root);
   }
@@ -22,8 +25,10 @@ export class GuxRegionIcon {
     const regionFlagImgPath = getAssetPath('assets/sprites/region-flags.png');
     return (
       <span
+        role={this.screenreaderText ? 'img' : ''}
         class={'flag flag-' + this.region?.toLowerCase()}
         style={{ backgroundImage: `url(${regionFlagImgPath})` }}
+        aria-label={this.screenreaderText}
       />
     ) as JSX.Element;
   }

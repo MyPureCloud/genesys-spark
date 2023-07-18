@@ -62,7 +62,8 @@
     "previous": "Anterior",
     "next": "Siguiente",
     "last": "Última",
-    "pageInputLabel": "Página {currentPage, number} de {totalPages, number}"
+    "pageInputLabel": "Página {currentPage, number} de {totalPages, number}",
+    "goToPage": "Ir a la página"
   },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
@@ -319,7 +320,10 @@
     "YT": "Mayotte",
     "ZA": "Sudáfrica",
     "ZM": "Zambia",
-    "ZW": "Zimbabue"
+    "ZW": "Zimbabue",
+    "unknownRegion": "Región desconocida",
+    "regionDropdown": "Menú desplegable de región",
+    "regionDropdownButton": "Botón del menú desplegable de región"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Omitir la navegación de enlaces"
@@ -434,8 +438,7 @@
     "decrement": "Decremento"
   },
   "gux-form-field-phone": {
-    "required": "Obligatorio",
-    "invalidPhoneNumber": "El número no es válido"
+    "required": "Obligatorio"
   },
   "gux-form-field-time-picker": {
     "required": "Obligatorio"

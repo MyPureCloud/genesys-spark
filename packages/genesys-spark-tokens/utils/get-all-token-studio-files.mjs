@@ -8,6 +8,7 @@ export function getAllTokenStudioFiles() {
 
   return fs
     .readdirSync(tokenStudioTokensFolder)
+    .filter(tokenStudioFile => tokenStudioFile.endsWith('.json'))
     .map(tokenStudioFile =>
       path.resolve(tokenStudioTokensFolder, tokenStudioFile)
     );

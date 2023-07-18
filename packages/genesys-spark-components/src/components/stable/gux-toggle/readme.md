@@ -36,7 +36,7 @@ A check event is triggered when the state of the component changed.
 ### Depends on
 
 - [gux-radial-loading](../gux-radial-loading)
-- [gux-error-message-beta](../../beta/gux-error-message-beta)
+- [gux-icon](../gux-icon)
 - [gux-toggle-slider](gux-toggle-slider)
 - [gux-announce-beta](../../beta/gux-announce)
 
@@ -44,10 +44,9 @@ A check event is triggered when the state of the component changed.
 ```mermaid
 graph TD;
   gux-toggle --> gux-radial-loading
-  gux-toggle --> gux-error-message-beta
+  gux-toggle --> gux-icon
   gux-toggle --> gux-toggle-slider
   gux-toggle --> gux-announce-beta
-  gux-error-message-beta --> gux-icon
   gux-toggle-slider --> gux-icon
   style gux-toggle fill:#f9f,stroke:#333,stroke-width:4px
 ```

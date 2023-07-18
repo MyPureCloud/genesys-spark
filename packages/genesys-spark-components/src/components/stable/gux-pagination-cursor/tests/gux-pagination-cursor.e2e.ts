@@ -22,7 +22,8 @@ describe('gux-pagination-cursor', () => {
       '<gux-pagination-cursor lang="en"></gux-pagination-cursor>',
       '<gux-pagination-cursor lang="en" has-next></gux-pagination-cursor>',
       '<gux-pagination-cursor lang="en" has-previous has-next></gux-pagination-cursor>',
-      '<gux-pagination-cursor lang="en" has-previous></gux-pagination-cursor>'
+      '<gux-pagination-cursor lang="en" has-previous></gux-pagination-cursor>',
+      '<gux-pagination-cursor lang="en" layout="advanced"></gux-pagination-cursor>'
     ].forEach((html, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
