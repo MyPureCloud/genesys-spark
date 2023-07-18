@@ -32,8 +32,15 @@ export class DateTimeFormatter {
    * @param {GuxDateTimeFormat} format An allowed format string
    * @returns {string} Formatted date string
    */
-  formatDate(datetime: Date, format: GuxDateTimeFormat): string {
-    return datetime.toLocaleDateString(this.locale, { dateStyle: format });
+  formatDate(
+    datetime: Date,
+    format: GuxDateTimeFormat,
+    options: Intl.DateTimeFormatOptions = {}
+  ): string {
+    return datetime.toLocaleDateString(
+      this.locale,
+      Object.assign({}, options, { dateStyle: format })
+    );
   }
 
   /**
@@ -42,8 +49,15 @@ export class DateTimeFormatter {
    * @param {GuxDateTimeFormat} format An allowed format string
    * @returns {string} Formatted time string
    */
-  formatTime(datetime: Date, format: GuxDateTimeFormat): string {
-    return datetime.toLocaleTimeString(this.locale, { timeStyle: format });
+  formatTime(
+    datetime: Date,
+    format: GuxDateTimeFormat,
+    options: Intl.DateTimeFormatOptions = {}
+  ): string {
+    return datetime.toLocaleTimeString(
+      this.locale,
+      Object.assign({}, options, { timeStyle: format })
+    );
   }
 
   /**
@@ -52,10 +66,14 @@ export class DateTimeFormatter {
    * @param {GuxDateTimeFormat} format An allowed format string
    * @returns {string} Formatted datetime string
    */
-  formatDateTime(datetime: Date, format: GuxDateTimeFormat): string {
-    return datetime.toLocaleString(this.locale, {
-      dateStyle: format,
-      timeStyle: format
-    });
+  formatDateTime(
+    datetime: Date,
+    format: GuxDateTimeFormat,
+    options: Intl.DateTimeFormatOptions = {}
+  ): string {
+    return datetime.toLocaleString(
+      this.locale,
+      Object.assign({}, options, { dateStyle: format, timeStyle: format })
+    );
   }
 }
