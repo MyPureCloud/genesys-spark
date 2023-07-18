@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.93.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.5...v3.93.6) (2023-07-18)
+
+
+### Bug Fixes
+
+* **gux-popup-beta:** hide popup when target element goes out of view ([011b683](https://github.com/MyPureCloud/genesys-webcomponents/commit/011b68354f4cfac9baba1c6a28c1875194a14545))
+
 ### [3.93.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.4...v3.93.5) (2023-07-14)
 
 
