@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.94.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.6...v3.94.0) (2023-07-19)
+
+
+### Features
+
+* **icons:** various requested icons ([f12b8e8](https://github.com/MyPureCloud/genesys-webcomponents/commit/f12b8e8c212c4007192911577fb2b43a60029802))
+* **icons:** various requested icons ([21faa1b](https://github.com/MyPureCloud/genesys-webcomponents/commit/21faa1bd81b7f48454a1580f4c6e3de6b51d0e77))
+
+
+### Bug Fixes
+
+* **popover:** find-element-by-id tries to call getElementById non-document node ([b4ad131](https://github.com/MyPureCloud/genesys-webcomponents/commit/b4ad1311c70f81d265cabcf7241e115a68222a79))
+
 ### [3.93.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.5...v3.93.6) (2023-07-18)
 
 
