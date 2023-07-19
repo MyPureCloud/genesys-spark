@@ -1,0 +1,38 @@
+@mixin button-text {
+  font-family: var(--gse-ui-button-text-fontFamily);
+  font-weight: var(--gse-ui-button-text-fontWeight);
+  font-size: var(--gse-ui-button-text-fontSize);
+  line-height: var(--gse-ui-button-text-lineHeight);
+}
+
+:host {
+  display: block;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.gux-button-multi-container {
+  .gux-dropdown-button {
+    button {
+      display: inline-flex;
+      align-items: center;
+
+      gux-icon {
+        width: 16px;
+        height: 16px;
+        margin-left: var(--gux-spacing-xs);
+      }
+    }
+  }
+}
+
+.gux-list-container {
+  max-width: 220px;
+  padding: var(--gux-spacing-xs) 0;
+  margin: 0;
+  list-style: none;
+  background-color: var(--gse-ui-menu-wrapper-backgroundColor);
+  border: 1px solid var(--gse-ui-menu-wrapper-border);
+  border-radius: 4px;
+  // .gux-shadow-20();
+}

@@ -71,7 +71,7 @@ button {
 
   &:active:enabled {
     color: var(--gse-ui-button-secondary-active-foregroundColor);
-    background-color: var(--gse-ui-button-secondary-active-backgroundColor)
+    background-color: var(--gse-ui-button-secondary-active-backgroundColor);
   }
 
   &:focus-visible:enabled {
@@ -117,7 +117,6 @@ button {
 
   &.gux-ghost {
     color: var(--gse-ui-button-ghost-default-foregroundColor);
-
     background-color: var(--gse-ui-button-ghost-default-backgroundColor);
 
     &:hover:enabled {
@@ -152,7 +151,6 @@ button {
     padding: 0;
     color: var(--gse-ui-link-default-color);
     background: none;
-
     border: none;
 
     &[disabled] {

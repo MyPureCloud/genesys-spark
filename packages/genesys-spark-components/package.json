@@ -11,7 +11,7 @@
     "build": "npm run clean && npm run i18n && npm run generate-gux-icon-types-file && npm run stencil && npm run build-wrapper",
     "build-i18n": "./scripts/build-i18n.js",
     "build-wrapper": "./scripts/wrap-stencil.js",
-    "check-a11y": "node ./scripts/check-a11y.js",
+    "check-a11y": "node ./scripts/check-a11y.mjs",
     "check-readmes": "./scripts/check-readmes.sh",
     "clean": "rm -r ./dist ./build || true",
     "current-version": "cross-var \"echo $npm_package_version\"",

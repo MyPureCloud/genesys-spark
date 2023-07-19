@@ -26,4 +26,5 @@
   --gse-semantic-color-primary-darkest: #252e78;
   --gse-semantic-color-focus: #7b88f7;
   --gse-semantic-focusRing-width: 3px;
+  --gse-semantic-focusRing-offset: 1px;
 }
