@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 
 import { logError } from '../../../../utils/error/log-error';
 
@@ -9,7 +9,7 @@ import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
  */
 
 @Component({
-  styleUrl: 'gux-breadcrumb-item.less',
+  styleUrl: 'gux-breadcrumb-item.scss',
   tag: 'gux-breadcrumb-item',
   shadow: true
 })
@@ -33,7 +33,7 @@ export class GuxBreadcrumbItem {
     }
   }
 
-  private isLastBreadcrumb(): boolean {
+  private isActiveBreadcrumb(): boolean {
     const parentNode = this.root.parentNode;
     const children = parentNode.children;
 
@@ -41,58 +41,51 @@ export class GuxBreadcrumbItem {
   }
 
   private getBreadcrumb(): JSX.Element {
-    if (!this.href || this.isLastBreadcrumb()) {
+    if (this.isActiveBreadcrumb()) {
       return (
-        <span class="gux-breadcrumb-content">
+        <span class="gux-breadcrumb-content gux-active" aria-current="page">
           <slot />
         </span>
       ) as JSX.Element;
     }
 
+    if (this.href) {
+      return (
+        <a class="gux-breadcrumb-content gux-link" href={this.href}>
+          <slot />
+        </a>
+      ) as JSX.Element;
+    }
+
     return (
-      <a class="gux-breadcrumb-content gux-link" href={this.href}>
+      <span class="gux-breadcrumb-content">
         <slot />
-      </a>
+      </span>
     ) as JSX.Element;
   }
 
-  private getSeparatorIcon(accent: GuxBreadcrumbAccent): JSX.Element {
-    if (this.isLastBreadcrumb()) {
+  private getSeparatorIcon(): JSX.Element {
+    if (this.isActiveBreadcrumb()) {
       return null;
     }
 
-    switch (accent) {
-      case 'primary':
-        return (
-          <span class="gux-breadcrumb-separator" aria-hidden="true">
-            /
-          </span>
-        ) as JSX.Element;
-      case 'secondary':
-        return (
-          <gux-icon
-            class="gux-breadcrumb-separator"
-            icon-name="chevron-small-right"
-            decorative
-          ></gux-icon>
-        ) as JSX.Element;
-      default:
-        return (
-          <span class="gux-breadcrumb-separator" aria-hidden="true">
-            /
-          </span>
-        ) as JSX.Element;
-    }
+    return (
+      <span class="gux-breadcrumb-separator" aria-hidden="true">
+        /
+      </span>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
     const accent: GuxBreadcrumbAccent = this.getAccent();
 
     return (
-      <span class={`gux-breadcrumb-generation gux-${accent}`}>
-        {this.getBreadcrumb()}
-        {this.getSeparatorIcon(accent)}
-      </span>
+      <Host role="listitem">
+        <span class={`gux-breadcrumb-generation gux-${accent}`}>
+          {this.getBreadcrumb()}
+          {this.getSeparatorIcon()}
+        </span>
+      </Host>
     ) as JSX.Element;
   }
 }
