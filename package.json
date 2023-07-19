@@ -21,6 +21,7 @@
     "lint-staged": "npm-run-all \"lint-staged.*\"",
     "lint-staged.root": "lint-staged",
     "lint-staged.workspaces": "npm run lint-staged --workspaces --if-present",
+    "new-tokens-data": "npm run snapshot --workspace=packages/genesys-spark-tokens",
     "prepare": "husky install",
     "prettier-package-json.root": "prettier-package-json --write ./package.json",
     "prettier-package-json.workspaces": "npm run prettier-package-json --workspaces --if-present",

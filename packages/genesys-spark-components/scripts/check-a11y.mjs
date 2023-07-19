@@ -1,6 +1,10 @@
 import inquirer from 'inquirer';
-import { join } from 'path';
 import { readdirSync, writeFileSync } from 'fs';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // The description of each success criterion is copied directly from the WCAG Understanding Success Criteria pages
 const a11yRules = [
@@ -145,7 +149,7 @@ function createComponentList(componentStability) {
 }
 
 function getMarkdown(componentName, a11yRuleAnswers) {
-  let markdown = `# ${componentName} manual accessibility testing status\n**Last Updated:** ${new Date().toString()}\n| Pass | WCAG Success Criterion | Notes |\n| --- | --- | --- |`;
+  let markdown = `# ${componentName} manual accessibility testing status\n**Last Updated:** ${new Date().toISOString()}\n| Pass | WCAG Success Criterion | Notes |\n| --- | --- | --- |`;
   a11yRules.forEach(rule => {
     const testSuccess = a11yRuleAnswers.a11yCheck[rule.id].success
       ? '✅'
