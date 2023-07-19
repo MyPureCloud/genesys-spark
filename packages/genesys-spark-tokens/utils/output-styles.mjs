@@ -9,6 +9,14 @@ export function outputStyles(
 ) {
   const formattedSetName = camelCase(setName);
 
+  let prefix = `gse-${formattedSetName}`;
+  let destinationFilename = `gse-${formattedSetName}`;
+
+  if (!['core', 'semantic', 'ui'].includes(formattedSetName)) {
+    prefix = `gse-ui`;
+    destinationFilename = `gse-ui-${formattedSetName}`;
+  }
+
   return temporaryWriteTask(
     JSON.stringify(styleDictionaryReadableTokens),
     tempPath => {
@@ -30,11 +38,11 @@ export function outputStyles(
           css: {
             transformGroup: 'css',
             transforms: ['name/gse'],
-            prefix: `gse-${formattedSetName}`,
+            prefix,
             buildPath: `${rootFolder}/css/`,
             files: [
               {
-                destination: `gse-${formattedSetName}.css`,
+                destination: `${destinationFilename}.css`,
                 format: 'css/variables'
               }
             ],
@@ -45,11 +53,11 @@ export function outputStyles(
           less: {
             transformGroup: 'less',
             transforms: ['name/gse'],
-            prefix: `gse-${formattedSetName}`,
+            prefix,
             buildPath: `${rootFolder}/less/`,
             files: [
               {
-                destination: `gse-${formattedSetName}.less`,
+                destination: `${destinationFilename}.less`,
                 format: 'less/variables'
               }
             ],
@@ -61,11 +69,11 @@ export function outputStyles(
           scss: {
             transformGroup: 'scss',
             transforms: ['name/gse'],
-            prefix: `gse-${formattedSetName}`,
+            prefix,
             buildPath: `${rootFolder}/scss/`,
             files: [
               {
-                destination: `_gse-${formattedSetName}.scss`,
+                destination: `_${destinationFilename}.scss`,
                 format: 'scss/variables'
               }
             ],
@@ -78,7 +86,7 @@ export function outputStyles(
             buildPath: `${rootFolder}/json/`,
             files: [
               {
-                destination: `gse-${formattedSetName}.json`,
+                destination: `${destinationFilename}.json`,
                 format: 'json/nested'
               }
             ],
