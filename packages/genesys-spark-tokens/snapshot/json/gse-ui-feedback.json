@@ -1,0 +1,57 @@
+{
+  "toast": {
+    "close_button_color": "#626e84",
+    "success": {
+      "background_color": "#ffffff",
+      "foreground_color": "#1b2c48",
+      "icon_color": "#09b581"
+    },
+    "warning": {
+      "background_color": "#ffffff",
+      "foreground_color": "#1b2c48",
+      "icon_color": "#f8c73e"
+    },
+    "info": {
+      "background_color": "#ffffff",
+      "foreground_color": "#1b2c48",
+      "icon_color": "#6e5ddb"
+    },
+    "action": {
+      "background_color": "#ffffff",
+      "foreground_color": "#1b2c48",
+      "icon_color": "#4856CB"
+    },
+    "error": {
+      "background_color": "#ffffff",
+      "foreground_color": "#1b2c48",
+      "icon_color": "#e22245"
+    },
+    "heading": {
+      "fontFamily": "Urbanist",
+      "lineHeight": "24px",
+      "fontSize": "16px",
+      "fontWeight": 700
+    },
+    "text": {
+      "fontFamily": "Noto Sans",
+      "lineHeight": "20px",
+      "fontSize": "14px"
+    },
+    "margin": "16px",
+    "gap": "12px",
+    "gap_text": "4px",
+    "gap_button": "16px",
+    "button_bar": {
+      "gap": "8px"
+    },
+    "border_radius": "8px",
+    "box_shadow": {
+      "x": 0,
+      "y": "2px",
+      "blur": "4px",
+      "spread": "1px",
+      "color": "#23395c1a",
+      "type": "dropShadow"
+    }
+  }
+}
