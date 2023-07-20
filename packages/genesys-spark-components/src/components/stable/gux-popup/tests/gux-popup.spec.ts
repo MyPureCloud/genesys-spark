@@ -1,5 +1,7 @@
 import { newSpecPage } from '@stencil/core/testing';
+import * as floatingUi from '@floating-ui/dom';
 import { GuxPopup } from '../gux-popup';
+import MutationObserver from 'mutation-observer';
 
 const components = [GuxPopup];
 const language = 'en';
@@ -18,6 +20,13 @@ function getGuxPopupHtml(expanded: boolean, disabled: boolean): string {
 }
 
 describe('gux-popup', () => {
+  beforeEach(async () => {
+    global.MutationObserver = MutationObserver;
+  });
+
+  afterEach(async () => {
+    jest.spyOn(floatingUi, 'autoUpdate').mockRestore();
+  });
   describe('#render', () => {
     [
       { expanded: false, disabled: false },
@@ -26,6 +35,8 @@ describe('gux-popup', () => {
       { expanded: true, disabled: true }
     ].forEach(({ expanded, disabled }, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
+        jest.spyOn(floatingUi, 'autoUpdate').mockReturnValue(jest.fn());
+
         const html = getGuxPopupHtml(expanded, disabled);
         const page = await newSpecPage({ components, html, language });
 

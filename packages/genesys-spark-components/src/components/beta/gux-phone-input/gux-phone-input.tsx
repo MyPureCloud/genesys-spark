@@ -465,10 +465,10 @@ export class GuxPhoneInput {
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta expanded={this.expanded} disabled={this.disabled}>
+      <gux-popup expanded={this.expanded} disabled={this.disabled}>
         {this.renderTarget()}
         {this.renderPopup()}
-      </gux-popup-beta>
+      </gux-popup>
     ) as JSX.Element;
   }
 }

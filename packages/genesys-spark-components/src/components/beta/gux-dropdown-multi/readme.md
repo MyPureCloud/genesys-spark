@@ -54,7 +54,7 @@ Type: `Promise<string[]>`
 - [gux-dropdown-multi-tag](gux-dropdown-multi-tag)
 - [gux-icon](../../stable/gux-icon)
 - [gux-radial-loading](../../stable/gux-radial-loading)
-- [gux-popup-beta](../gux-popup-beta)
+- [gux-popup](../../stable/gux-popup)
 
 ### Graph
 ```mermaid
@@ -62,7 +62,7 @@ graph TD;
   gux-dropdown-multi-beta --> gux-dropdown-multi-tag
   gux-dropdown-multi-beta --> gux-icon
   gux-dropdown-multi-beta --> gux-radial-loading
-  gux-dropdown-multi-beta --> gux-popup-beta
+  gux-dropdown-multi-beta --> gux-popup
   gux-dropdown-multi-tag --> gux-icon
   style gux-dropdown-multi-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
