@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.95.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.94.0...v3.95.0) (2023-07-20)
+
+
+### Features
+
+* **icon:** icons requested in sprint gds23-2 ([7692df4](https://github.com/MyPureCloud/genesys-webcomponents/commit/7692df43fdc1f765750cabe20b53615f99d461ac))
+
 ## [3.94.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.6...v3.94.0) (2023-07-19)
 
 
