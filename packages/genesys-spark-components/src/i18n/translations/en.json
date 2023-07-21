@@ -1,10 +1,4 @@
 {
-  "gux-alert": {
-    "info": "Information alert with message",
-    "success": "Success alert with message",
-    "warning": "Warning alert with message",
-    "error": "Error alert with message"
-  },
   "gux-badge": {
     "neutral": "badge with label: {label}, color: neutral",
     "neutral-bold": "badge with label: {label}, color: neutral bold",
@@ -373,6 +367,12 @@
   },
   "gux-advanced-dropdown": {
     "searchAria": "Search"
+  },
+  "gux-alert": {
+    "info": "Information alert with message",
+    "success": "Success alert with message",
+    "warning": "Warning alert with message",
+    "error": "Error alert with message"
   },
   "gux-breadcrumbs": {
     "breadcrumbs": "Breadcrumbs"

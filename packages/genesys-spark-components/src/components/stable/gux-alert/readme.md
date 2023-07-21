@@ -1,4 +1,4 @@
-# gux-alert-beta
+# gux-alert
 
 
 
@@ -23,13 +23,13 @@
 
 ### Depends on
 
-- [gux-icon](../../stable/gux-icon)
+- [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-inline-alert-beta --> gux-icon
-  style gux-inline-alert-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-inline-alert --> gux-icon
+  style gux-inline-alert fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
