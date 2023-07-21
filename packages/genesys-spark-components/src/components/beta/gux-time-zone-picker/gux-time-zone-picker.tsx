@@ -12,6 +12,7 @@ import {
 import { genericTimeZones } from './generic-zones';
 
 @Component({
+  styleUrl: 'gux-time-zone-picker.less',
   tag: 'gux-time-zone-picker-beta',
   shadow: true
 })
@@ -23,6 +24,12 @@ export class GuxTimeZonePickerBeta {
 
   @Prop()
   public value: string;
+
+  @Prop()
+  public workspaceDefault: string;
+
+  @Prop()
+  public localDefault: string;
 
   @State()
   private searchString: string = '';
@@ -40,7 +47,7 @@ export class GuxTimeZonePickerBeta {
   on(event: CustomEvent): void {
     this.searchString = event.detail;
     this.filteredZoneList = this.filterTimeZoneList(this.timeZoneList);
-    this.timeZoneOptionElements = this.renderTimeZones();
+    this.timeZoneOptionElements = this.renderTimeZones(this.filteredZoneList);
   }
 
   async componentWillLoad(): Promise<void> {
@@ -48,7 +55,7 @@ export class GuxTimeZonePickerBeta {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.timeZoneList = this.getTimeZoneList();
     this.filteredZoneList = this.timeZoneList;
-    this.timeZoneOptionElements = this.renderTimeZones();
+    this.timeZoneOptionElements = this.renderTimeZones(this.filteredZoneList);
   }
 
   componentDidLoad(): void {
@@ -104,12 +111,33 @@ export class GuxTimeZonePickerBeta {
   private filterTimeZoneList(timeZoneList: GuxTimeZoneOption[]) {
     const searchString = this.searchString;
     return timeZoneList.filter(tzOption => {
-      return tzOption.displayText
+      return tzOption.displayTextName
         .toLowerCase()
         .includes(searchString.toLowerCase());
     });
   }
 
+  private getTimeZoneOption(timeZone: GuxTimeZoneListing): GuxTimeZoneOption {
+    const localizedName = this.i18n(timeZone.name);
+    if (!localizedName) {
+      return;
+    }
+    const formattedOffset = this.formatOffset(
+      timeZone.currentTimeOffsetInMinutes
+    );
+    const localizedUTC = this.i18n('UTC');
+    const displayTextName = `${localizedName}`;
+    const displayTextOffset = ` (${localizedUTC}${formattedOffset})`;
+    const baseDisplayOffsetText = `${displayTextOffset}`;
+    return {
+      value: timeZone.name,
+      localizedName,
+      formattedOffset,
+      displayTextName,
+      displayTextOffset,
+      baseDisplayOffsetText
+    };
+  }
   private getTimeZoneList(): GuxTimeZoneOption[] {
     const moduleTimeZones = getTimeZones();
     const allTimeZones = [...genericTimeZones, ...moduleTimeZones];
@@ -117,47 +145,96 @@ export class GuxTimeZonePickerBeta {
 
     const timeZoneList: GuxTimeZoneOption[] = [];
     allTimeZones.forEach(timeZone => {
-      const localizedName = this.i18n(timeZone.name);
-
+      const zone = this.getTimeZoneOption(timeZone);
       //Filter out zones we don't have a translation for; helps filter out deprecated module zones we don't want to use.
-      if (!localizedName) {
+      if (!zone) {
         return;
       }
-
-      const formattedOffset = this.formatOffset(
-        timeZone.currentTimeOffsetInMinutes
-      );
-      const localizedUTC = this.i18n('UTC');
-      const displayText = `${localizedName} (${localizedUTC}${formattedOffset})`;
-      timeZoneList.push({
-        value: timeZone.name,
-        localizedName,
-        formattedOffset,
-        displayText
-      });
+      timeZoneList.push(zone);
     });
 
     return timeZoneList.sort((a, b) => {
-      return a.displayText?.localeCompare(b.displayText) || 0;
+      return a.displayTextName?.localeCompare(b.displayTextName) || 0;
     });
   }
 
-  private renderTimeZones(): JSX.Element[] {
-    return this.filteredZoneList.map(tzOption => {
+  private getDefaultZones(): string[] {
+    const defaultZones: string[] = [];
+    if (this.workspaceDefault) {
+      defaultZones.push(this.workspaceDefault);
+    }
+    if (this.localDefault) {
+      defaultZones.push(this.localDefault);
+    }
+    return defaultZones;
+  }
+
+  private getDefaultZoneList(): GuxTimeZoneOption[] {
+    const defaultZones = this.getDefaultZones();
+    const defaultZoneOptions = this.timeZoneList.filter(tz =>
+      defaultZones.includes(tz.value)
+    );
+
+    defaultZoneOptions.forEach(option => {
+      const baseDisplayOffsetText = option.baseDisplayOffsetText;
+      if (
+        defaultZoneOptions.length === 1 &&
+        this.workspaceDefault === this.localDefault
+      ) {
+        defaultZoneOptions[0].displayTextOffset = `${
+          defaultZoneOptions[0].displayTextOffset
+        } ${this.i18n('localAndWorkspaceDefault')}`;
+      } else if (option.value === this.workspaceDefault) {
+        option.displayTextOffset = `${baseDisplayOffsetText} ${this.i18n(
+          'workspaceDefault'
+        )}`;
+      } else if (option.value === this.localDefault) {
+        option.displayTextOffset = `${baseDisplayOffsetText} ${this.i18n(
+          'localDefault'
+        )}`;
+      }
+    });
+
+    return defaultZoneOptions;
+  }
+
+  private renderTimeZones(zoneList: GuxTimeZoneOption[]): JSX.Element[] {
+    return zoneList.map(tzOption => {
       return (
-        <gux-option value={tzOption.value}>{tzOption.displayText}</gux-option>
+        <gux-option value={tzOption.value}>
+          {tzOption.displayTextName}
+          <span class="tz-utc">{tzOption.displayTextOffset}</span>
+        </gux-option>
       ) as JSX.Element;
     });
+  }
+
+  private renderDefaultsList(): JSX.Element | undefined {
+    const defaults = this.renderTimeZones(this.getDefaultZoneList());
+    if (defaults.length) {
+      return (
+        <span>
+          <div class="zone-header">Default</div>
+          {defaults}
+          <gux-list-divider></gux-list-divider>
+          <div class="zone-header">All</div>
+        </span>
+      ) as JSX.Element;
+    }
   }
 
   render(): JSX.Element {
     return (
       <gux-dropdown
+        class={{
+          'has-defaults': !!this.workspaceDefault || !!this.localDefault
+        }}
         filter-type="custom"
         placeholder={this.i18n('selectZone')}
         value={this.value}
       >
         <gux-listbox aria-label={this.i18n('timeZones')}>
+          {this.renderDefaultsList()}
           {this.timeZoneOptionElements}
         </gux-listbox>
       </gux-dropdown>

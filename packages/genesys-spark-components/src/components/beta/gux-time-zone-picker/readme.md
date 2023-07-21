@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `value`  | `value`   |             | `string` | `undefined` |
+| Property           | Attribute           | Description | Type     | Default     |
+| ------------------ | ------------------- | ----------- | -------- | ----------- |
+| `localDefault`     | `local-default`     |             | `string` | `undefined` |
+| `value`            | `value`             |             | `string` | `undefined` |
+| `workspaceDefault` | `workspace-default` |             | `string` | `undefined` |
 
 
 ## Dependencies
@@ -17,6 +19,7 @@
 ### Depends on
 
 - [gux-option](../../stable/gux-listbox/options/gux-option)
+- [gux-list-divider](../../stable/gux-list/gux-list-divider)
 - [gux-dropdown](../../stable/gux-dropdown)
 - [gux-listbox](../../stable/gux-listbox)
 
@@ -24,6 +27,7 @@
 ```mermaid
 graph TD;
   gux-time-zone-picker-beta --> gux-option
+  gux-time-zone-picker-beta --> gux-list-divider
   gux-time-zone-picker-beta --> gux-dropdown
   gux-time-zone-picker-beta --> gux-listbox
   gux-option --> gux-truncate
