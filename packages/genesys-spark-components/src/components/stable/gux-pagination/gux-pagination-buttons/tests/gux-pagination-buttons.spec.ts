@@ -3,9 +3,9 @@ import MutationObserver from 'mutation-observer';
 
 import { GuxPaginationButtons } from '../gux-pagination-buttons';
 import { GuxButton } from '../../../gux-button/gux-button';
-import { GuxInputTextLike } from '../../../../legacy/gux-form-field-legacy/components/gux-input-text-like/gux-input-text-like';
+import { GuxFormFieldTextLike } from '../../../../stable/gux-form-field/components/gux-form-field-text-like/gux-form-field-text-like';
 
-const components = [GuxPaginationButtons, GuxButton, GuxInputTextLike];
+const components = [GuxPaginationButtons, GuxButton, GuxFormFieldTextLike];
 const language = 'en';
 
 describe('gux-pagination-item-counts', () => {

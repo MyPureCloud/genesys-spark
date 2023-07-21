@@ -368,16 +368,6 @@
     "timeOptionsState": "Otwarte opcje czasu: {state}",
     "toggleAmPM": "Wybrano {amOrPm}, kliknij w celu przełączenia"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Lista rozwijana dla: {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Niedawne wyszukiwania:",
-    "commonSearch": "Częste wyszukiwania:",
-    "limited": "Wyniki ograniczone, doprecyzuj wyszukiwanie, aby uzyskać więcej poleceń.",
-    "search": "Wyszukaj polecenia.",
-    "title": "Paleta poleceń"
-  },
   "gux-input-color": {
     "required": "Wymagane"
   },
@@ -391,12 +381,6 @@
   },
   "gux-input-text-like": {
     "clear": "Wyczyść"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Utwórz nową kartę",
-    "scrollLeft": "Przewiń w lewo",
-    "scrollRight": "Przewiń w prawo",
-    "disableNewTab": "Utworzono maksymalną liczbę kart"
   },
   "gux-action-button": {
     "actionButtonDropdown": "Lista rozwijana dla: {buttonTitle}"

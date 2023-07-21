@@ -364,16 +364,6 @@
     "timeOptionsState": "Time options open: {state}",
     "toggleAmPM": "{amOrPm} selected, click to toggle"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Dropdown for {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Recently Searched:",
-    "commonSearch": "Common Searches:",
-    "limited": "Results limited, refine your search for more commands.",
-    "search": "Search for commands.",
-    "title": "Command Palette"
-  },
   "gux-input-color": {
     "required": "Required"
   },
@@ -387,12 +377,6 @@
   },
   "gux-input-text-like": {
     "clear": "Clear"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Create New Tab",
-    "scrollLeft": "Scroll Left",
-    "scrollRight": "Scroll Right",
-    "disableNewTab": "Maximum number of tabs created has been reached"
   },
   "gux-action-button": {
     "actionButtonDropdown": "Dropdown for {buttonTitle}"

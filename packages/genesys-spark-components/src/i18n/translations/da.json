@@ -365,16 +365,6 @@
     "timeOptionsState": "Åbne tidsmuligheder: {state}",
     "toggleAmPM": "{amOrPm} valgt, klik for at skifte"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Rullemenu for {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Seneste søgninger:",
-    "commonSearch": "Almindelige søgninger:",
-    "limited": "Resultater begrænset. Præciser din søgning for at se flere kommandoer.",
-    "search": "Søg efter kommandoer.",
-    "title": "Kommandopalet"
-  },
   "gux-input-color": {
     "required": "Påkrævet"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "Ryd"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Opret ny fane",
-    "scrollLeft": "Rul til venstre",
-    "scrollRight": "Rul til højre",
-    "disableNewTab": "Det maksimale antal oprettede faner er nået"
   },
   "gux-action-button": {
     "actionButtonDropdown": "Rullemenu for {buttonTitle}"

@@ -365,16 +365,6 @@
     "timeOptionsState": "Zaman seçenekleri açık: {state}",
     "toggleAmPM": "{amOrPm} seçildi, değiştirmek için tıklayın"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "{buttonTitle} için açılır liste"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Son Dönemde Arananlar:",
-    "commonSearch": "Sık Yapılan Aramalar:",
-    "limited": "Sonuçlar sınırlanmıştır, daha fazla komut için aramanızı daraltın.",
-    "search": "Komut arayın.",
-    "title": "Komut Paleti"
-  },
   "gux-input-color": {
     "required": "Gerekli"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "Temizle"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Yeni Sekme Oluştur",
-    "scrollLeft": "Sola Kaydır",
-    "scrollRight": "Sağa Kaydır",
-    "disableNewTab": "Maksimum oluşturulan sekme sayısına ulaşıldı"
   },
   "gux-action-button": {
     "actionButtonDropdown": "{buttonTitle} için açılır liste"

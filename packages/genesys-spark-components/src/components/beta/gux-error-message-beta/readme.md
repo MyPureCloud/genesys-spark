@@ -15,10 +15,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [gux-form-field-legacy](../../legacy/gux-form-field-legacy)
-
 ### Depends on
 
 - [gux-icon](../../stable/gux-icon)
@@ -27,7 +23,6 @@
 ```mermaid
 graph TD;
   gux-error-message-beta --> gux-icon
-  gux-form-field-legacy --> gux-error-message-beta
   style gux-error-message-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -365,16 +365,6 @@
     "timeOptionsState": "ตัวเลือกเวลาเปิด: {state}",
     "toggleAmPM": "เลือก {amOrPm} แล้ว คลิกเพื่อสลับ"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "รายการเลือกแบบดึงลงสำหรับ {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "ค้นหาล่าสุด:",
-    "commonSearch": "การค้นหาทั่วไป:",
-    "limited": "ผลลัพธ์จำกัด ปรับปรุงการค้นหาเพื่อให้มีคำสั่งมากขึ้น",
-    "search": "ค้นหาคำสั่ง",
-    "title": "ชุดคำสั่ง"
-  },
   "gux-input-color": {
     "required": "จำเป็น"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "ล้าง"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "สร้างแท็บใหม่",
-    "scrollLeft": "เลื่อนไปทางซ้าย",
-    "scrollRight": "เลื่อนไปทางขวา",
-    "disableNewTab": "ถึงจำนวนแท็บสูงสุดที่สร้างได้แล้ว"
   },
   "gux-action-button": {
     "actionButtonDropdown": "รายการเลือกแบบดึงลงสำหรับ {buttonTitle}"

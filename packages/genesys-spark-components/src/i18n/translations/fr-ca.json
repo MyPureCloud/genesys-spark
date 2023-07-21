@@ -365,16 +365,6 @@
     "timeOptionsState": "Options d'horaires d'ouverture : {state}",
     "toggleAmPM": "{amOrPm} sélectionné. Cliquez pour activer/désactiver"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Liste déroulante pour {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Recherches récentes :",
-    "commonSearch": "Recherches courantes :",
-    "limited": "Résultats limités : affinez votre recherche pour trouver plus de commandes.",
-    "search": "Rechercher des commandes",
-    "title": "Palette de commandes"
-  },
   "gux-input-color": {
     "required": "Requis"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "Effacer"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Créer un onglet",
-    "scrollLeft": "Faire défiler à gauche",
-    "scrollRight": "Faire défiler à droite",
-    "disableNewTab": "Vous avez atteint le nombre maximal d'onglets."
   },
   "gux-action-button": {
     "actionButtonDropdown": "Liste déroulante pour {buttonTitle}"

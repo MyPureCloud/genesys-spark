@@ -365,16 +365,6 @@
     "timeOptionsState": "時間選項開放：{state}",
     "toggleAmPM": "已選取 {amOrPm}，按一下可切換"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "{buttonTitle}下拉式清單"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "最近搜尋：",
-    "commonSearch": "一般搜尋：",
-    "limited": "結果有限，請精緻化您的搜尋以取得更多命令。",
-    "search": "搜尋命令。",
-    "title": "命令面板"
-  },
   "gux-input-color": {
     "required": "必需"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "清除"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "建立新頁籤",
-    "scrollLeft": "向左捲動",
-    "scrollRight": "向右捲動",
-    "disableNewTab": "建立的頁籤已達到最大數量"
   },
   "gux-action-button": {
     "actionButtonDropdown": "{buttonTitle}下拉式清單"

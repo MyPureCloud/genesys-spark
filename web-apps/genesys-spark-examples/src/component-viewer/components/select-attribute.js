@@ -26,18 +26,18 @@ export const selectAttribute = (
   });
 
   let element = toHTML(`
-    <gux-form-field-legacy>
+    <gux-form-field-select>
       <select slot="input" name="select">
-          ${options.map(
-            o => `
-              <option value="${o.value}" ${o.selected ? 'selected' : ''}>${
-                o.value
-              }</option>
+        ${options.map(
+          o => `
+          <option value="${o.value}" ${o.selected ? 'selected' : ''}>${
+            o.value
+          }</option>
           `
-          )}
+        )}
       </select>
       <label slot="label">${name}:</label>
-    </gux-form-field-legacy>`);
+    </gux-form-field-select>`);
 
   element.addEventListener('change', function (event) {
     let selected = event.target.value;
