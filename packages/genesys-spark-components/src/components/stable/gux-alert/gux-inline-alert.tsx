@@ -10,7 +10,7 @@ import translationResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-inline-alert.less',
-  tag: 'gux-inline-alert-beta',
+  tag: 'gux-inline-alert',
   shadow: true
 })
 export class GuxAlert {

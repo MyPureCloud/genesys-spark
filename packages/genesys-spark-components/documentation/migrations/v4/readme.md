@@ -27,9 +27,9 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 There have been no API changes in these components.
 
-| V3 tag name      | V4 tag name |
-| ---------------- | ----------- |
-| gux-example-beta | gux-example |
+| V3 tag name           | V4 tag name      |
+| --------------------- | ---------------- |
+| gux-inline-alert-beta | gux-inline-alert |
 
 ## V3 Stable Components Archived to Legacy in V4
 

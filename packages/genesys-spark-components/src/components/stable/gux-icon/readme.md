@@ -49,7 +49,12 @@
  - [gux-form-field-text-like](../gux-form-field/components/gux-form-field-text-like)
  - [gux-form-field-textarea](../gux-form-field/components/gux-form-field-textarea)
  - [gux-form-field-time-picker](../gux-form-field/components/gux-form-field-time-picker)
- - [gux-inline-alert-beta](../../beta/gux-alert)
+ - [gux-inline-alert](../gux-alert)
+ - [gux-input-color](../../legacy/gux-form-field-legacy/components/gux-input-color)
+ - [gux-input-number](../../legacy/gux-form-field-legacy/components/gux-input-number)
+ - [gux-input-search](../../legacy/gux-form-field-legacy/components/gux-input-search)
+ - [gux-input-select](../../legacy/gux-form-field-legacy/components/gux-input-select)
+ - [gux-input-text-like](../../legacy/gux-form-field-legacy/components/gux-input-text-like)
  - [gux-month-calendar](../../beta/gux-month-picker/gux-month-calendar)
  - [gux-month-picker-beta](../../beta/gux-month-picker)
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
@@ -107,7 +112,12 @@ graph TD;
   gux-form-field-text-like --> gux-icon
   gux-form-field-textarea --> gux-icon
   gux-form-field-time-picker --> gux-icon
-  gux-inline-alert-beta --> gux-icon
+  gux-inline-alert --> gux-icon
+  gux-input-color --> gux-icon
+  gux-input-number --> gux-icon
+  gux-input-search --> gux-icon
+  gux-input-select --> gux-icon
+  gux-input-text-like --> gux-icon
   gux-month-calendar --> gux-icon
   gux-month-picker-beta --> gux-icon
   gux-option-icon --> gux-icon
