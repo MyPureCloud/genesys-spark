@@ -41,8 +41,7 @@
         "style": "solid"
       },
       "background_color": "#ffffff",
-      "foreground_color": "#1b2c48",
-      "icon_color": "#3e5374"
+      "foreground_color": "#1b2c48"
     },
     "dark": {
       "border": {
