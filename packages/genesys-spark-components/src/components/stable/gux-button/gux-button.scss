@@ -1,8 +1,9 @@
-// I could not find anything about the focus ring but its color. I made temporary variables for now
 $temp-focus-ring-width: 3px;
 $temp-focus-ring-offset: 1px;
 $temp-focus-ring-corner-radius: 4px;
 $temp-focus-ring-color: #7b88f7;
+$temp-slotted-padding-left: 8px;
+$temp-slotted-first-child-padding: 0;
 
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
@@ -34,13 +35,12 @@ $temp-focus-ring-color: #7b88f7;
 }
 
 ::slotted(*) {
-  // need token for this value
-  padding-left: 8px;
+  padding-left: $temp-slotted-padding-left;
   vertical-align: middle;
 }
 
 ::slotted(*:first-child) {
-  padding: 0;
+  padding: $temp-slotted-first-child-padding;
 }
 
 button {

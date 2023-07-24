@@ -1,3 +1,6 @@
+$temp-box-shadow: 0px 4px 6px 1px rgba(35, 57, 92, 0.12);
+$temp-menu-wrapper-borderRadius: 4px;
+
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
   font-weight: var(--gse-ui-button-text-fontWeight);
@@ -18,8 +21,8 @@
       align-items: center;
 
       gux-icon {
-        width: 16px;
-        height: 16px;
+        width: var(--gse-ui-button-icon-size);
+        height: var(--gse-ui-button-icon-size);
         margin-left: var(--gux-spacing-xs);
       }
     }
@@ -33,6 +36,6 @@
   list-style: none;
   background-color: var(--gse-ui-menu-wrapper-backgroundColor);
   border: 1px solid var(--gse-ui-menu-wrapper-border);
-  border-radius: 4px;
-  // .gux-shadow-20();
+  border-radius: $temp-menu-wrapper-borderRadius;
+  box-shadow: $temp-box-shadow;
 }
