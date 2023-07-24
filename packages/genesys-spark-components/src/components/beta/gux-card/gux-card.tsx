@@ -8,7 +8,7 @@ import { GuxCardAccent, GuxCardAccentV4 } from './gux-card.types';
  */
 
 @Component({
-  styleUrl: 'gux-card.less',
+  styleUrl: 'gux-card.scss',
   tag: 'gux-card-beta',
   shadow: true
 })

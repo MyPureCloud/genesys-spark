@@ -18,7 +18,7 @@ async function pressActionItemButton(
   page: E2EPage,
   keypress: string
 ): Promise<void> {
-  const element = await page.find('gux-action-item');
+  const element = await page.find('gux-list-item');
   const actionItemButton = await element.find('pierce/button');
   await actionItemButton.press(keypress);
 }
@@ -26,11 +26,11 @@ async function pressActionItemButton(
 describe('gux-button-multi', () => {
   const html = `
   <gux-button-multi lang="en" text="Primary" accent="primary">
-    <gux-action-item text="test"></gux-action-item>
-    <gux-action-item text="test2"></gux-action-item>
-    <gux-action-item text="test3"></gux-action-item>
+    <gux-list-item>Test 1</gux-list-item>
+    <gux-list-item>Test 2</gux-list-item>
+    <gux-list-item>Test 3</gux-list-item>
     <gux-list-divider></gux-list-divider>
-    <gux-action-item><span>I am a span</span></gux-action-item>
+    <gux-list-item>Test 4</gux-list-item>
   </gux-button-multi>
   `;
   it('renders', async () => {

@@ -365,16 +365,7 @@
     "timeOptionsState": "Avoimet aikavaihtoehdot: {state}",
     "toggleAmPM": "{amOrPm} valittu, kytke napsauttamalla"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Avattava valikko: {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Viimeaikaiset haut:",
-    "commonSearch": "Yleiset haut:",
-    "limited": "Tuloksia on rajattu. Saat lisää komentoja tarkentamalla hakua.",
-    "search": "Hae komentoja.",
-    "title": "Komentovalikoima"
-  },
+
   "gux-input-color": {
     "required": "Pakollinen"
   },
@@ -388,12 +379,6 @@
   },
   "gux-input-text-like": {
     "clear": "Tyhjennä"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Luo uusi välilehti",
-    "scrollLeft": "Vieritä vasemmalle",
-    "scrollRight": "Vieritä oikealle",
-    "disableNewTab": "Luotujen välilehtien enimmäismäärä on saavutettu"
   },
   "gux-action-button": {
     "actionButtonDropdown": "Avattava valikko: {buttonTitle}"

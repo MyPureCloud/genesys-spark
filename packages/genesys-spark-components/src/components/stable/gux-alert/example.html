@@ -1,0 +1,42 @@
+<h1>gux-inline-alert</h1>
+
+<h2>Inline Alert Examples</h2>
+<div class="alerts">
+  <gux-inline-alert accent="info"
+    ><strong>Note:</strong> This is an information alert. This alert will
+    demonstrate how the alert will wrap if needed in certain
+    instances.</gux-inline-alert
+  >
+  <gux-inline-alert accent="success"
+    ><strong>Note:</strong> This is a success alert.</gux-inline-alert
+  >
+  <gux-inline-alert accent="warning"
+    ><strong>Note:</strong> This is a warning alert.</gux-inline-alert
+  >
+  <gux-inline-alert accent="error"
+    ><strong>Note:</strong> This is a warning alert.</gux-inline-alert
+  >
+</div>
+
+<h2>Truncated Inline Alert Examples</h2>
+
+<h2>1 line truncated inline alert example</h2>
+<gux-inline-alert accent="info" style="width: 400px">
+  <gux-truncate-beta max-lines="1">
+    This is an information message to demonstrate that this alert will truncate
+    after 1 line. You can also alter the max lines to be 2.
+  </gux-truncate-beta>
+</gux-inline-alert>
+
+<style>
+  .alerts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 31px;
+    padding: 10px;
+    overflow: auto; /* something other than visible */
+    resize: both;
+    border: 1px solid var(--gux-charcoal-grey);
+  }
+</style>

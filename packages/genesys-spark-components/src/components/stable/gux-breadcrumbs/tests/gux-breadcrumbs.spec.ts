@@ -18,16 +18,6 @@ describe('gux-breadcrumbs', () => {
     jest.clearAllMocks();
   });
 
-  it('should build', async () => {
-    const page = await newSpecPage({
-      components,
-      html: `<gux-breadcrumbs></gux-breadcrumbs>`,
-      language
-    });
-
-    expect(page.rootInstance).toBeInstanceOf(GuxBreadcrumbs);
-  });
-
   describe('#render', () => {
     [
       `<gux-breadcrumbs></gux-breadcrumbs>`,
@@ -70,6 +60,7 @@ describe('gux-breadcrumbs', () => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
 
+        expect(page.rootInstance).toBeInstanceOf(GuxBreadcrumbs);
         expect(page.root).toMatchSnapshot();
       });
     });

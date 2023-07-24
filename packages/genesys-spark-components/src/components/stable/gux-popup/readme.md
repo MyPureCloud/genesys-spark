@@ -29,21 +29,6 @@
 | `"target"` | Required slot for target |
 
 
-## Dependencies
-
-### Used by
-
- - [gux-action-button-legacy](../../legacy/gux-action-button-legacy)
- - [gux-button-multi-legacy](../../legacy/gux-button-multi-legacy)
-
-### Graph
-```mermaid
-graph TD;
-  gux-action-button-legacy --> gux-popup
-  gux-button-multi-legacy --> gux-popup
-  style gux-popup fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

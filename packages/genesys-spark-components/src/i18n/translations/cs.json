@@ -365,16 +365,6 @@
     "timeOptionsState": "Časové možnosti otevírací doby: {state}",
     "toggleAmPM": "Vybráno {amOrPm}, kliknutím přepnete"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Rozevírací seznam pro tlačítko {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Nedávno hledané:",
-    "commonSearch": "Často hledané:",
-    "limited": "Výsledky jsou omezené. Upravte parametry hledání a zobrazí se více příkazů.",
-    "search": "Hledání příkazů.",
-    "title": "Paleta příkazů"
-  },
   "gux-input-color": {
     "required": "Povinné"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "Vymazat"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Vytvořit novou kartu",
-    "scrollLeft": "Posunout doleva",
-    "scrollRight": "Posunout doprava",
-    "disableNewTab": "Bylo dosaženo maximálního počtu vytvořených karet."
   },
   "gux-action-button": {
     "actionButtonDropdown": "Rozevírací seznam pro tlačítko {buttonTitle}"

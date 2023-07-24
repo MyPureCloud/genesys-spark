@@ -365,16 +365,6 @@
     "timeOptionsState": "時間オプション オープン: {state}",
     "toggleAmPM": "{amOrPm} を選択済みです。クリックして切り替えます。"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "{buttonTitle} のドロップダウン"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "最近検索した語句:",
-    "commonSearch": "一般的な検索:",
-    "limited": "結果が上限に達しました。さらにコマンドを検索するには範囲を絞ってください。",
-    "search": "コマンドを検索します。",
-    "title": "コマンド パレット"
-  },
   "gux-input-color": {
     "required": "必須"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "クリア"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "新規タブを作成",
-    "scrollLeft": "左にスクロール",
-    "scrollRight": "右にスクロール",
-    "disableNewTab": "生成されるタブの最大数に達しました"
   },
   "gux-action-button": {
     "actionButtonDropdown": "{buttonTitle} のドロップダウン"

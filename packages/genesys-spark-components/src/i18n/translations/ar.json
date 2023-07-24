@@ -365,16 +365,6 @@
     "timeOptionsState": "فتح خيارات الوقت: {state}",
     "toggleAmPM": "تم تحديد {amOrPm}، انقر للتبديل "
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "قائمة منسدلة لـ {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "عمليات البحث الأخيرة:",
-    "commonSearch": "عمليات بحث مشتركة:",
-    "limited": "محدودة بالنتائج، نقح بحثك لمزيد من الأوامر.",
-    "search": "بحث عن الأوامر.",
-    "title": "لوح ألون الأمر"
-  },
   "gux-input-color": {
     "required": "مطلوب"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "مسح"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "إنشاء تبويب جديد",
-    "scrollLeft": "تنقل لليسار",
-    "scrollRight": "تنقل لليمين",
-    "disableNewTab": "تم الوصول إلى الحد الأقصى لعدد علامات التبويب التي تم إنشاؤها"
   },
   "gux-action-button": {
     "actionButtonDropdown": "قائمة منسدلة لـ {buttonTitle}"

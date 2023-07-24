@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-input-search #render should render component as expected (1) 1`] = `"<!----><div class=\\"gux-input-container\\"><gux-icon class=\\"gux-search-icon\\" icon-name=\\"search\\" hydrated=\\"\\"></gux-icon> <input name=\\"search\\" type=\\"search\\" placeholder=\\"Enter a search\\"> </div>"`;
-
-exports[`gux-input-search #render should render component as expected (2) 1`] = `"<!----><div class=\\"gux-input-container\\"><gux-icon class=\\"gux-search-icon\\" icon-name=\\"search\\" hydrated=\\"\\"></gux-icon> <input name=\\"search\\" type=\\"search\\" placeholder=\\"Enter a search\\" value=\\"test\\"> <button class=\\"gux-clear-button\\" tabindex=\\"-1\\" type=\\"button\\" title=\\"Clear\\"><gux-icon icon-name=\\"close\\" hydrated=\\"\\"></gux-icon></button></div>"`;
-
-exports[`gux-input-search #render should render component as expected (3) 1`] = `"<!----><div class=\\"gux-input-container gux-disabled\\"><gux-icon class=\\"gux-search-icon\\" icon-name=\\"search\\" hydrated=\\"\\"></gux-icon> <input name=\\"search\\" type=\\"search\\" placeholder=\\"Enter a search\\" disabled=\\"\\"> </div>"`;

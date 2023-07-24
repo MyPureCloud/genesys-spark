@@ -368,16 +368,6 @@
     "timeOptionsState": "Tijdopties open: {state}",
     "toggleAmPM": "{amOrPm} geselecteerd, klik om te wisselen"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "Vervolgkeuzelijst voor {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "Recentelijk gezocht:",
-    "commonSearch": "Algemene zoekopdrachten:",
-    "limited": "Resultaten beperkt, verfijn de zoekopdracht voor meer opdrachten.",
-    "search": "Zoek naar opdrachten.",
-    "title": "Opdrachtenpalet"
-  },
   "gux-input-color": {
     "required": "Vereist"
   },
@@ -391,12 +381,6 @@
   },
   "gux-input-text-like": {
     "clear": "Wissen"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "Nieuw tabblad maken",
-    "scrollLeft": "Naar links schuiven",
-    "scrollRight": "Naar rechts schuiven",
-    "disableNewTab": "Maximum aantal gemaakte tabbladen is bereikt"
   },
   "gux-action-button": {
     "actionButtonDropdown": "Vervolgkeuzelijst voor {buttonTitle}"

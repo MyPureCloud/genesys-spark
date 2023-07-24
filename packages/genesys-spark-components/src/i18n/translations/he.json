@@ -365,16 +365,6 @@
     "timeOptionsState": "אפשרויות שעה פתוחות: {state}",
     "toggleAmPM": "{amOrPm} נבחר, לחץ כדי לשנות"
   },
-  "gux-action-button-legacy": {
-    "actionButtonDropdown": "רשימה נפתחת עבור {buttonTitle}"
-  },
-  "gux-command-palette-legacy": {
-    "recentSearch": "חיפושים אחרונים:",
-    "commonSearch": "חיפושים נפוצים:",
-    "limited": "תוצאות מוגבלות, צמצם את החיפוש לפקודות נוספות.",
-    "search": "חפש פקודות.",
-    "title": "לוח פקודות"
-  },
   "gux-input-color": {
     "required": "נדרש"
   },
@@ -388,12 +378,6 @@
   },
   "gux-input-text-like": {
     "clear": "נקה"
-  },
-  "gux-tabs-legacy": {
-    "createNewTab": "צור כרטיסייה חדשה",
-    "scrollLeft": "גלול שמאלה",
-    "scrollRight": "גלול ימינה",
-    "disableNewTab": "הגעת למספר הכרטיסיות המרבי"
   },
   "gux-action-button": {
     "actionButtonDropdown": "רשימה נפתחת עבור {buttonTitle}"
