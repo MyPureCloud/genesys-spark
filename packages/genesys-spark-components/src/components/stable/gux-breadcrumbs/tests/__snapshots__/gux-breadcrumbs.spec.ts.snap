@@ -3,8 +3,10 @@
 exports[`gux-breadcrumbs #render should render component as expected (1) 1`] = `
 <gux-breadcrumbs>
   <mock:shadow-root>
-    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-      <slot></slot>
+    <nav aria-label="Breadcrumbs">
+      <ol>
+        <slot></slot>
+      </ol>
     </nav>
   </mock:shadow-root>
 </gux-breadcrumbs>
@@ -13,11 +15,13 @@ exports[`gux-breadcrumbs #render should render component as expected (1) 1`] = `
 exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
 <gux-breadcrumbs>
   <mock:shadow-root>
-    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-      <slot></slot>
+    <nav aria-label="Breadcrumbs">
+      <ol>
+        <slot></slot>
+      </ol>
     </nav>
   </mock:shadow-root>
-  <gux-breadcrumb-item>
+  <gux-breadcrumb-item role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
@@ -30,7 +34,7 @@ exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
     </mock:shadow-root>
     Category
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item href="#">
+  <gux-breadcrumb-item href="#" role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <a class="gux-breadcrumb-content gux-link" href="#">
@@ -43,10 +47,10 @@ exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
     </mock:shadow-root>
     Parent
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item>
+  <gux-breadcrumb-item role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
-        <span class="gux-breadcrumb-content">
+        <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>
@@ -59,11 +63,13 @@ exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
 exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
 <gux-breadcrumbs>
   <mock:shadow-root>
-    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-      <slot></slot>
+    <nav aria-label="Breadcrumbs">
+      <ol>
+        <slot></slot>
+      </ol>
     </nav>
   </mock:shadow-root>
-  <gux-breadcrumb-item>
+  <gux-breadcrumb-item role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
@@ -76,7 +82,7 @@ exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
     </mock:shadow-root>
     Category
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item href="#">
+  <gux-breadcrumb-item href="#" role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <a class="gux-breadcrumb-content gux-link" href="#">
@@ -89,10 +95,10 @@ exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
     </mock:shadow-root>
     Parent
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item href="#">
+  <gux-breadcrumb-item href="#" role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
-        <span class="gux-breadcrumb-content">
+        <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>
@@ -105,11 +111,13 @@ exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
 exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
 <gux-breadcrumbs accent="primary">
   <mock:shadow-root>
-    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-      <slot></slot>
+    <nav aria-label="Breadcrumbs">
+      <ol>
+        <slot></slot>
+      </ol>
     </nav>
   </mock:shadow-root>
-  <gux-breadcrumb-item>
+  <gux-breadcrumb-item role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
@@ -122,7 +130,7 @@ exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
     </mock:shadow-root>
     Category
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item href="#">
+  <gux-breadcrumb-item href="#" role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
         <a class="gux-breadcrumb-content gux-link" href="#">
@@ -135,10 +143,10 @@ exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
     </mock:shadow-root>
     Parent
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item>
+  <gux-breadcrumb-item role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-primary">
-        <span class="gux-breadcrumb-content">
+        <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>
@@ -151,36 +159,42 @@ exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
 exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
 <gux-breadcrumbs accent="secondary">
   <mock:shadow-root>
-    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-      <slot></slot>
+    <nav aria-label="Breadcrumbs">
+      <ol>
+        <slot></slot>
+      </ol>
     </nav>
   </mock:shadow-root>
-  <gux-breadcrumb-item>
+  <gux-breadcrumb-item role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-secondary">
         <span class="gux-breadcrumb-content">
           <slot></slot>
         </span>
-        <gux-icon class="gux-breadcrumb-separator" decorative="" icon-name="chevron-small-right"></gux-icon>
+        <span aria-hidden="true" class="gux-breadcrumb-separator">
+          /
+        </span>
       </span>
     </mock:shadow-root>
     Category
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item href="#">
+  <gux-breadcrumb-item href="#" role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-secondary">
         <a class="gux-breadcrumb-content gux-link" href="#">
           <slot></slot>
         </a>
-        <gux-icon class="gux-breadcrumb-separator" decorative="" icon-name="chevron-small-right"></gux-icon>
+        <span aria-hidden="true" class="gux-breadcrumb-separator">
+          /
+        </span>
       </span>
     </mock:shadow-root>
     Parent
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item>
+  <gux-breadcrumb-item role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-secondary">
-        <span class="gux-breadcrumb-content">
+        <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>
@@ -193,11 +207,13 @@ exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
 exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
 <gux-breadcrumbs accent="invalid">
   <mock:shadow-root>
-    <nav aria-label="Breadcrumbs" class="gux-breadcrumbs-container">
-      <slot></slot>
+    <nav aria-label="Breadcrumbs">
+      <ol>
+        <slot></slot>
+      </ol>
     </nav>
   </mock:shadow-root>
-  <gux-breadcrumb-item>
+  <gux-breadcrumb-item role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-invalid">
         <span class="gux-breadcrumb-content">
@@ -210,7 +226,7 @@ exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
     </mock:shadow-root>
     Category
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item href="#">
+  <gux-breadcrumb-item href="#" role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-invalid">
         <a class="gux-breadcrumb-content gux-link" href="#">
@@ -223,10 +239,10 @@ exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
     </mock:shadow-root>
     Parent
   </gux-breadcrumb-item>
-  <gux-breadcrumb-item>
+  <gux-breadcrumb-item role="listitem">
     <mock:shadow-root>
       <span class="gux-breadcrumb-generation gux-invalid">
-        <span class="gux-breadcrumb-content">
+        <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>

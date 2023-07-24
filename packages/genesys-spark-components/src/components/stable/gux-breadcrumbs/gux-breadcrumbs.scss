@@ -1,7 +1,11 @@
-.gux-breadcrumbs-container {
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-content: flex-start;
   align-items: center;
   justify-content: flex-start;
