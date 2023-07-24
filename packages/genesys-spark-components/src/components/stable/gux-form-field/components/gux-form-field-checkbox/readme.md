@@ -15,6 +15,25 @@
 | `"label"` | Required slot for label tag     |
 
 
+## CSS Custom Properties
+
+| Name                                      | Description |
+| ----------------------------------------- | ----------- |
+| `--gse-ui-checkbox-disabled-opacity`      |             |
+| `--gse-ui-checkbox-focus-border-color`    |             |
+| `--gse-ui-checkbox-focus-border-style`    |             |
+| `--gse-ui-checkbox-focus-border-width`    |             |
+| `--gse-ui-checkbox-focus-borderRadius`    |             |
+| `--gse-ui-checkbox-focus-offset`          |             |
+| `--gse-ui-checkbox-gap`                   |             |
+| `--gse-ui-checkbox-icon-height`           |             |
+| `--gse-ui-checkbox-icon-width`            |             |
+| `--gse-ui-checkbox-label-foregroundColor` |             |
+| `--gse-ui-checkbox-label-text-fontFamily` |             |
+| `--gse-ui-checkbox-label-text-fontWeight` |             |
+| `--gse-ui-checkbox-label-text-lineHeight` |             |
+
+
 ## Dependencies
 
 ### Used by

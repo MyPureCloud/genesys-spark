@@ -21,7 +21,7 @@ import { validateFormIds, getSlottedInput } from '../../gux-form-field.service';
  * @slot help - Optional slot for help message
  */
 @Component({
-  styleUrl: 'gux-form-field-checkbox.less',
+  styleUrl: 'gux-form-field-checkbox.scss',
   tag: 'gux-form-field-checkbox',
   shadow: true
 })
