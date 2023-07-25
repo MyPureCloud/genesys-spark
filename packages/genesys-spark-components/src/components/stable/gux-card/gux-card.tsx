@@ -1,7 +1,7 @@
 import { Component, h, JSX, Prop, Element } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 
-import { GuxCardAccent, GuxCardAccentV4 } from './gux-card.types';
+import { GuxCardAccent } from './gux-card.types';
 
 /**
  * @slot - Content of card.
@@ -9,7 +9,7 @@ import { GuxCardAccent, GuxCardAccentV4 } from './gux-card.types';
 
 @Component({
   styleUrl: 'gux-card.scss',
-  tag: 'gux-card-beta',
+  tag: 'gux-card',
   shadow: true
 })
 export class GuxCard {
@@ -23,7 +23,7 @@ export class GuxCard {
    * Card Accent.
    */
   @Prop()
-  accent: GuxCardAccent | GuxCardAccentV4 = 'outline';
+  accent: GuxCardAccent = 'bordered';
 
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.accent });

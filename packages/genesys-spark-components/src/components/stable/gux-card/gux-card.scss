@@ -1,6 +1,3 @@
-// I think filled should stay and be given a new background color. If it is removed the migration to v4 will be unnecessarily complicated
-$cui-card-filled-color: var(--gse-ui-card-backgroundColor);
-
 /**
   * @prop --gse-ui-card-backgroundColor
   * @prop --gse-ui-card-borderRadius
@@ -35,8 +32,7 @@ $cui-card-filled-color: var(--gse-ui-card-backgroundColor);
     var(--gse-ui-card-default-border-color);
   border-radius: var(--gse-ui-card-borderRadius);
 
-  &.gux-bordered,
-  &.gux-outline {
+  &.gux-bordered {
     border: var(--gse-ui-card-default-border-width)
       var(--gse-ui-card-default-border-style)
       var(--gse-ui-card-default-border-color);
@@ -57,9 +53,5 @@ $cui-card-filled-color: var(--gse-ui-card-backgroundColor);
     border: var(--gse-ui-card-borderless-border-width)
       var(--gse-ui-card-borderless-border-style)
       var(--gse-ui-card-borderless-border-color);
-  }
-
-  &.gux-filled {
-    background-color: $cui-card-filled-color;
   }
 }

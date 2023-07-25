@@ -1,4 +1,4 @@
-# gux-card-beta
+# gux-card
 
 
 
@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description  | Type                                                              | Default     |
-| -------- | --------- | ------------ | ----------------------------------------------------------------- | ----------- |
-| `accent` | `accent`  | Card Accent. | `"bordered" \| "borderless" \| "filled" \| "outline" \| "raised"` | `'outline'` |
+| Property | Attribute | Description  | Type                                     | Default      |
+| -------- | --------- | ------------ | ---------------------------------------- | ------------ |
+| `accent` | `accent`  | Card Accent. | `"bordered" \| "borderless" \| "raised"` | `'bordered'` |
 
 
 ## Slots
