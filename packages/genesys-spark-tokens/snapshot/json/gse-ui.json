@@ -263,23 +263,8 @@
     },
     "border_radius": "4px"
   },
-  "rating": {
-    "default": {
-      "color": "#767c8d"
-    },
-    "active": {
-      "color": "#4856CB"
-    },
-    "hover": {
-      "color": "#3742A2"
-    },
-    "disabled": {
-      "color": "#767c8d",
-      "opacity": 0.5
-    },
-    "size": "16px"
-  },
   "button": {
+    "gap": "8px",
     "disabled": {
       "opacity": 0.5
     },
@@ -374,6 +359,22 @@
       }
     }
   },
+  "rating": {
+    "default": {
+      "color": "#767c8d"
+    },
+    "active": {
+      "color": "#4856CB"
+    },
+    "hover": {
+      "color": "#3742A2"
+    },
+    "disabled": {
+      "color": "#767c8d",
+      "opacity": 0.5
+    },
+    "size": "16px"
+  },
   "link": {
     "default": {
       "color": "#4856CB"
@@ -465,5 +466,8 @@
       "color": "#a3a7b0"
     },
     "border_radius": 0
+  },
+  "action_button": {
+    "border_radius": "4px"
   }
 }
