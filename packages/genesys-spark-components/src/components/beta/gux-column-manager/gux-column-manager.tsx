@@ -206,6 +206,9 @@ export class GuxColumnManager {
   render(): JSX.Element {
     return (
       <div class="gux-container">
+        <div class="gux-sr-only" aria-live="polite">
+          {`${this.highlightResults.matchCount} ${this.i18n('searchResults')}`}
+        </div>
         <div class="gux-search">
           <gux-content-search
             match-count={this.highlightResults.matchCount}
@@ -215,7 +218,7 @@ export class GuxColumnManager {
             }
           >
             <input
-              type="text"
+              type="search"
               placeholder={this.i18n('search')}
               onInput={() => this.onSearchInput()}
               ref={el => (this.searchElement = el)}

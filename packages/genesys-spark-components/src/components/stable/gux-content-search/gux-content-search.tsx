@@ -72,6 +72,7 @@ export class GuxContentSearch {
     this.value = '';
     this.resetInputSlottedElement();
     this.emitCurrentMatchChanged();
+    this.inputSlottedElement.focus();
   }
 
   async componentWillLoad() {
@@ -124,14 +125,12 @@ export class GuxContentSearch {
               'gux-navigation-panel': true,
               'gux-navigation-disabled': disableNavigationPanel
             }}
-            title={this.matchCountResult()}
           >
             <span
               class={{
                 'gux-navigation-result': true,
                 'gux-navigation-result-disabled': disableNavigationPanel
               }}
-              aria-label={this.matchCountResult()}
             >
               {this.matchCountResult()}
             </span>
@@ -157,14 +156,13 @@ export class GuxContentSearch {
             </button>
           </div>
           <button
-            type="button"
             class="gux-clear-button"
-            title={this.i18n('eraseBtnAria')}
-            aria-label={this.i18n('eraseBtnAria')}
+            tabIndex={-1}
+            type="button"
+            title={this.i18n('clear')}
             onClick={() => void this.clear()}
-            disabled={this.disabled}
           >
-            <gux-icon decorative icon-name="close"></gux-icon>
+            <gux-icon icon-name="close" decorative></gux-icon>
           </button>
         </div>
       ) as JSX.Element;
