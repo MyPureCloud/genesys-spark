@@ -30,6 +30,7 @@ There have been no API changes in these components.
 | V3 tag name           | V4 tag name      |
 | --------------------- | ---------------- |
 | gux-inline-alert-beta | gux-inline-alert |
+| gux-truncate-beta     | gux-truncate     |
 
 ## V3 Stable Components Archived to Legacy in V4
 

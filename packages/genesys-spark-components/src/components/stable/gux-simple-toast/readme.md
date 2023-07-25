@@ -1,6 +1,6 @@
 # gux-simple-toast
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <!-- Auto Generated Below -->
 
@@ -31,15 +31,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Depends on
 
-- [gux-truncate-beta](../../beta/gux-truncate)
+- [gux-truncate](../gux-truncate)
 - [gux-dismiss-button](../gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-simple-toast --> gux-truncate-beta
+  gux-simple-toast --> gux-truncate
   gux-simple-toast --> gux-dismiss-button
-  gux-truncate-beta --> gux-tooltip
+  gux-truncate --> gux-tooltip
   gux-dismiss-button --> gux-icon
   style gux-simple-toast fill:#f9f,stroke:#333,stroke-width:4px
 ```

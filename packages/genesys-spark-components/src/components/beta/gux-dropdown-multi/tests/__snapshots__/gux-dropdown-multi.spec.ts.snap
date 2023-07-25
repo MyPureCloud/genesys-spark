@@ -29,23 +29,23 @@ exports[`gux-dropdown #render should render as expected 1`] = `
     <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
       <!---->
       <span class="gux-checkbox-container"></span>
-      <gux-truncate-beta gux-slot-container="">
+      <gux-truncate gux-slot-container="">
         Ant
-      </gux-truncate-beta>
+      </gux-truncate>
     </gux-option-multi>
     <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
       <!---->
       <span class="gux-checkbox-container"></span>
-      <gux-truncate-beta gux-slot-container="">
+      <gux-truncate gux-slot-container="">
         Bat
-      </gux-truncate-beta>
+      </gux-truncate>
     </gux-option-multi>
     <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
       <!---->
       <span class="gux-checkbox-container"></span>
-      <gux-truncate-beta gux-slot-container="">
+      <gux-truncate gux-slot-container="">
         Cat
-      </gux-truncate-beta>
+      </gux-truncate>
     </gux-option-multi>
   </gux-listbox-multi>
 </gux-dropdown-multi-beta>

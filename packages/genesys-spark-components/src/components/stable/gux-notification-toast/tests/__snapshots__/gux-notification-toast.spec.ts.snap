@@ -7,12 +7,12 @@ exports[`gux-notification-toast #render should render alert notification toast 1
       <slot name="icon"></slot>
     </div>
     <div class="gux-content">
-      <gux-truncate-beta class="gux-title" max-lines="1">
+      <gux-truncate class="gux-title" max-lines="1">
         <slot name="title"></slot>
-      </gux-truncate-beta>
-      <gux-truncate-beta class="gux-message" max-lines="2">
+      </gux-truncate>
+      <gux-truncate class="gux-message" max-lines="2">
         <slot name="message"></slot>
-      </gux-truncate-beta>
+      </gux-truncate>
     </div>
     <gux-dismiss-button></gux-dismiss-button>
   </mock:shadow-root>
@@ -33,12 +33,12 @@ exports[`gux-notification-toast #render should render neutral notification toast
       <slot name="icon"></slot>
     </div>
     <div class="gux-content">
-      <gux-truncate-beta class="gux-title" max-lines="1">
+      <gux-truncate class="gux-title" max-lines="1">
         <slot name="title"></slot>
-      </gux-truncate-beta>
-      <gux-truncate-beta class="gux-message" max-lines="2">
+      </gux-truncate>
+      <gux-truncate class="gux-message" max-lines="2">
         <slot name="message"></slot>
-      </gux-truncate-beta>
+      </gux-truncate>
     </div>
     <gux-dismiss-button></gux-dismiss-button>
   </mock:shadow-root>
@@ -59,12 +59,12 @@ exports[`gux-notification-toast #render should render positive notification toas
       <slot name="icon"></slot>
     </div>
     <div class="gux-content">
-      <gux-truncate-beta class="gux-title" max-lines="1">
+      <gux-truncate class="gux-title" max-lines="1">
         <slot name="title"></slot>
-      </gux-truncate-beta>
-      <gux-truncate-beta class="gux-message" max-lines="2">
+      </gux-truncate>
+      <gux-truncate class="gux-message" max-lines="2">
         <slot name="message"></slot>
-      </gux-truncate-beta>
+      </gux-truncate>
     </div>
     <gux-dismiss-button></gux-dismiss-button>
   </mock:shadow-root>
@@ -85,12 +85,12 @@ exports[`gux-notification-toast #render should render warning notification toast
       <slot name="icon"></slot>
     </div>
     <div class="gux-content">
-      <gux-truncate-beta class="gux-title" max-lines="1">
+      <gux-truncate class="gux-title" max-lines="1">
         <slot name="title"></slot>
-      </gux-truncate-beta>
-      <gux-truncate-beta class="gux-message" max-lines="2">
+      </gux-truncate>
+      <gux-truncate class="gux-message" max-lines="2">
         <slot name="message"></slot>
-      </gux-truncate-beta>
+      </gux-truncate>
     </div>
     <gux-dismiss-button></gux-dismiss-button>
   </mock:shadow-root>

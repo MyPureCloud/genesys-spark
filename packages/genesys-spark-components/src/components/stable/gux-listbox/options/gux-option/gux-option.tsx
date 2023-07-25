@@ -21,7 +21,7 @@ import { randomHTMLId } from '../../../../../utils/dom/random-html-id';
   shadow: false
 })
 export class GuxOption {
-  private truncateElement: HTMLGuxTruncateBetaElement;
+  private truncateElement: HTMLGuxTruncateElement;
   @Element()
   root: HTMLElement;
 
@@ -88,9 +88,9 @@ export class GuxOption {
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
       >
-        <gux-truncate-beta ref={el => (this.truncateElement = el)}>
+        <gux-truncate ref={el => (this.truncateElement = el)}>
           <slot />
-        </gux-truncate-beta>
+        </gux-truncate>
       </Host>
     ) as JSX.Element;
   }

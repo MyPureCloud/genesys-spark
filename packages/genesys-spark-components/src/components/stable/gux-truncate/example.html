@@ -2,23 +2,21 @@
 <span>A tooltip with the full text shows on hover</span>
 <h2>Text node slot</h2>
 <div class="example">
-  <gux-truncate-beta style="width: 40px">
-    Some text to truncate
-  </gux-truncate-beta>
+  <gux-truncate style="width: 40px"> Some text to truncate </gux-truncate>
 </div>
 
 <h2>Span slot</h2>
 <div class="example">
-  <gux-truncate-beta style="width: 40px">
+  <gux-truncate style="width: 40px">
     <span>Some text to truncate in a span</span>
-  </gux-truncate-beta>
+  </gux-truncate>
 </div>
 
 <h2>Div slot</h2>
 <div class="example">
-  <gux-truncate-beta style="width: 40px">
+  <gux-truncate style="width: 40px">
     <div>Div <span>with a span</span> inside</div>
-  </gux-truncate-beta>
+  </gux-truncate>
 </div>
 
 <h2>Multi line truncation</h2>
@@ -26,30 +24,30 @@
   class="example"
   style="width: 100px; padding: 1px; border: 1px solid black"
 >
-  <gux-truncate-beta max-lines="3">
+  <gux-truncate max-lines="3">
     This is a long text that should be truncated after three lines of wrapped
     text
-  </gux-truncate-beta>
+  </gux-truncate>
 </div>
 
 <h2>Resizable examples</h2>
 
 <div class="example" style="width: 100px">
-  <gux-truncate-beta
+  <gux-truncate
     style="overflow: hidden; resize: horizontal; border: 1px dotted"
   >
     <span>Resize this long text within a span</span>
-  </gux-truncate-beta>
+  </gux-truncate>
 </div>
 
 <div class="example" style="width: 100px">
-  <gux-truncate-beta
+  <gux-truncate
     max-lines="3"
     style="overflow: hidden; resize: both; border: 1px dotted"
   >
     Resize this long text. This is a long text that should be truncated after
     three lines of wrapped text
-  </gux-truncate-beta>
+  </gux-truncate>
 </div>
 
 <h2>Within a Table</h2>
@@ -69,11 +67,11 @@
         <td>John</td>
         <td>Doe</td>
         <td>
-          <gux-truncate-beta
+          <gux-truncate
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.</gux-truncate-beta
+            aliquip ex ea commodo consequat.</gux-truncate
           >
         </td>
         <td data-cell-numeric>25</td>
@@ -83,11 +81,11 @@
         <td>Jane</td>
         <td>Doe</td>
         <td>
-          <gux-truncate-beta
+          <gux-truncate
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.</gux-truncate-beta
+            aliquip ex ea commodo consequat.</gux-truncate
           >
         </td>
         <td data-cell-numeric>23</td>
@@ -99,18 +97,18 @@
 
 <h2>Tooltip in sync with slotted content</h2>
 <div class="example">
-  <gux-truncate-beta style="width: 100px">
+  <gux-truncate style="width: 100px">
     <span id="changeContentExample">Change Me</span>
-  </gux-truncate-beta>
+  </gux-truncate>
 
   <gux-button id="changeContentExampleTarget">change content</gux-button>
 </div>
 
 <h2>Programmatically show tooltip</h2>
 <div class="example">
-  <gux-truncate-beta id="onFocusExampleTarget" style="width: 70px">
+  <gux-truncate id="onFocusExampleTarget" style="width: 70px">
     Programmatically show and hide tooltip
-  </gux-truncate-beta>
+  </gux-truncate>
   <gux-button id="showTooltipButton">Show Tooltip</gux-button>
   <gux-button id="hideTooltipButton">Hide Tooltip</gux-button>
 </div>
