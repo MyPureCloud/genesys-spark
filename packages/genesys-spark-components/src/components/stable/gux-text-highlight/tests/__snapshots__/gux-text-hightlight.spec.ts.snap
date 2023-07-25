@@ -2,154 +2,182 @@
 
 exports[`gux-text-highlight #render should handle no highlight property 1`] = `
 <gux-text-highlight text="Some text to highlight in the tests">
-  <span>
-    Some text to highlight in the tests
-  </span>
+  <mock:shadow-root>
+    <span>
+      Some text to highlight in the tests
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should handle no text property 1`] = `
 <gux-text-highlight highlight="Other text">
-  <span></span>
+  <mock:shadow-root>
+    <span></span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render contains strategy 1`] = `
 <gux-text-highlight highlight="te" strategy="contains" text="Some text to highlight in the tests">
-  <span>
-    Some
-    <mark>
-      te
-    </mark>
-    xt to highlight in the
-    <mark>
-      te
-    </mark>
-    sts
-  </span>
+  <mock:shadow-root>
+    <span>
+      Some
+      <mark>
+        te
+      </mark>
+      xt to highlight in the
+      <mark>
+        te
+      </mark>
+      sts
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render contains strategy case insensitively 1`] = `
 <gux-text-highlight highlight="TE" strategy="contains" text="Some text to highlight in the tests">
-  <span>
-    Some
-    <mark>
-      te
-    </mark>
-    xt to highlight in the
-    <mark>
-      te
-    </mark>
-    sts
-  </span>
+  <mock:shadow-root>
+    <span>
+      Some
+      <mark>
+        te
+      </mark>
+      xt to highlight in the
+      <mark>
+        te
+      </mark>
+      sts
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render contains strategy when no match found 1`] = `
 <gux-text-highlight highlight="Other text" strategy="contains" text="Some text to highlight in the tests">
-  <span>
-    Some text to highlight in the tests
-  </span>
+  <mock:shadow-root>
+    <span>
+      Some text to highlight in the tests
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render default strategy 1`] = `
 <gux-text-highlight highlight="Some text" text="Some text to highlight in the tests">
-  <span>
-    <mark>
-      Some text
-    </mark>
-    to highlight in the tests
-  </span>
+  <mock:shadow-root>
+    <span>
+      <mark>
+        Some text
+      </mark>
+      to highlight in the tests
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render default strategy case insensitively 1`] = `
 <gux-text-highlight highlight="some text" text="Some text to highlight in the tests">
-  <span>
-    <mark>
-      Some text
-    </mark>
-    to highlight in the tests
-  </span>
+  <mock:shadow-root>
+    <span>
+      <mark>
+        Some text
+      </mark>
+      to highlight in the tests
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render default strategy when no match found 1`] = `
 <gux-text-highlight highlight="Other text" text="Some text to highlight in the tests">
-  <span>
-    Some text to highlight in the tests
-  </span>
+  <mock:shadow-root>
+    <span>
+      Some text to highlight in the tests
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render fuzzy strategy 1`] = `
 <gux-text-highlight highlight="text test" strategy="fuzzy" text="Some text to highlight in the tests">
-  <span>
-    Some
-    <mark>
-      text
-    </mark>
-    to highlight in the
-    <mark>
-      test
-    </mark>
-    s
-  </span>
+  <mock:shadow-root>
+    <span>
+      Some
+      <mark>
+        text
+      </mark>
+      to highlight in the
+      <mark>
+        test
+      </mark>
+      s
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render fuzzy strategy case insensitively 1`] = `
 <gux-text-highlight highlight="TEXT TEST" strategy="fuzzy" text="Some text to highlight in the tests">
-  <span>
-    Some
-    <mark>
-      text
-    </mark>
-    to highlight in the
-    <mark>
-      test
-    </mark>
-    s
-  </span>
+  <mock:shadow-root>
+    <span>
+      Some
+      <mark>
+        text
+      </mark>
+      to highlight in the
+      <mark>
+        test
+      </mark>
+      s
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render fuzzy strategy when no match found 1`] = `
 <gux-text-highlight highlight="Other word" strategy="fuzzy" text="Some text to highlight in the tests">
-  <span>
-    Some text to highlight in the tests
-  </span>
+  <mock:shadow-root>
+    <span>
+      Some text to highlight in the tests
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render start strategy 1`] = `
 <gux-text-highlight highlight="Some text" strategy="start" text="Some text to highlight in the tests">
-  <span>
-    <mark>
-      Some text
-    </mark>
-    to highlight in the tests
-  </span>
+  <mock:shadow-root>
+    <span>
+      <mark>
+        Some text
+      </mark>
+      to highlight in the tests
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render start strategy case insensitively 1`] = `
 <gux-text-highlight highlight="some text" strategy="start" text="Some text to highlight in the tests">
-  <span>
-    <mark>
-      Some text
-    </mark>
-    to highlight in the tests
-  </span>
+  <mock:shadow-root>
+    <span>
+      <mark>
+        Some text
+      </mark>
+      to highlight in the tests
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
 
 exports[`gux-text-highlight #render should render start strategy when no match found 1`] = `
 <gux-text-highlight highlight="Other text" strategy="start" text="Some text to highlight in the tests">
-  <span>
-    Some text to highlight in the tests
-  </span>
+  <mock:shadow-root>
+    <span>
+      Some text to highlight in the tests
+    </span>
+  </mock:shadow-root>
 </gux-text-highlight>
 `;
