@@ -1,8 +1,12 @@
-// I could not find anything about the focus ring but its color. I made temporary variables for now
-$temp-focus-ring-width: 3px;
-$temp-focus-ring-offset: 1px;
-$temp-focus-ring-corner-radius: 4px;
-$temp-focus-ring-color: #7b88f7;
+// COMUI-2156 add missing button tokens
+$temp-box-shadow: 0px 4px 6px 1px rgba(35, 57, 92, 0.12);
+$temp-menu-wrapper-borderRadius: 4px;
+$temp-menu-wrapper-borderWidth: 1px;
+$temp-dropdown-button-width: 32px;
+$temp-dropdown-button-padding: 0;
+$temp-dropdown-button-border-top-left-radius: 0;
+$temp-dropdown-button-border-bottom-left-radius: 0;
+$temp-dropdown-button-border-bottom-icon-width: 16px;
 
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
@@ -39,27 +43,26 @@ $temp-focus-ring-color: #7b88f7;
 
   .gux-dropdown-button {
     button {
-      width: 32px;
-      min-width: 0;
-      padding: 0;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      width: $temp-dropdown-button-width;
+      padding: $temp-dropdown-button-padding;
+      border-top-left-radius: $temp-dropdown-button-border-top-left-radius;
+      border-bottom-left-radius: $temp-dropdown-button-border-bottom-left-radius;
 
       gux-icon {
-        width: 16px;
-        height: 16px;
+        width: $temp-dropdown-button-border-bottom-icon-width;
+        height: $temp-dropdown-button-border-bottom-icon-width;
       }
     }
   }
 
   .gux-list-container {
-    max-width: 220px;
     padding: var(--gux-spacing-xs) 0;
     margin: 0;
     list-style: none;
     background-color: var(--gse-ui-menu-wrapper-backgroundColor);
-    border: 1px solid var(--gse-ui-menu-wrapper-border);
-    border-radius: 4px;
-    // gux-shadow-20();
+    border: $temp-menu-wrapper-borderWidth solid
+      var(--gse-ui-menu-wrapper-border);
+    border-radius: $temp-menu-wrapper-borderRadius;
+    box-shadow: $temp-box-shadow;
   }
 }
