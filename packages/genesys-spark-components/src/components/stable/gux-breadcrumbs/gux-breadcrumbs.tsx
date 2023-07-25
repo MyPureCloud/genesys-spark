@@ -11,7 +11,7 @@ import { GuxBreadcrumbAccent } from './gux-breadcrumbs.types';
  */
 
 @Component({
-  styleUrl: 'gux-breadcrumbs.less',
+  styleUrl: 'gux-breadcrumbs.scss',
   tag: 'gux-breadcrumbs',
   shadow: true
 })
@@ -38,11 +38,10 @@ export class GuxBreadcrumbs {
 
   render(): JSX.Element {
     return (
-      <nav
-        aria-label={this.i18n('breadcrumbs')}
-        class="gux-breadcrumbs-container"
-      >
-        <slot onSlotchange={this.onSlotChange.bind(this)} />
+      <nav aria-label={this.i18n('breadcrumbs')}>
+        <ol>
+          <slot onSlotchange={this.onSlotChange.bind(this)} />
+        </ol>
       </nav>
     ) as JSX.Element;
   }
