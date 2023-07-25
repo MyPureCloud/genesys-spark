@@ -15,7 +15,7 @@
         "textDecoration": "underline"
       }
     },
-    "gap": "4px",
+    "gap": "16px",
     "content_container": {
       "gap": "2px"
     },

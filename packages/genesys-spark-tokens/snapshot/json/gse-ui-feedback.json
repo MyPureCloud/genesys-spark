@@ -52,6 +52,7 @@
       "spread": "1px",
       "color": "#23395c1a",
       "type": "dropShadow"
-    }
+    },
+    "icon": "24px"
   }
 }

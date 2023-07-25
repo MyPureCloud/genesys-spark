@@ -8,7 +8,7 @@
   --gse-ui-copyToClipboard-label-text-lineHeight: 20px;
   --gse-ui-copyToClipboard-label-text-fontSize: 14px;
   --gse-ui-copyToClipboard-label-text-textDecoration: underline;
-  --gse-ui-copyToClipboard-gap: 4px;
+  --gse-ui-copyToClipboard-gap: 16px;
   --gse-ui-copyToClipboard-contentContainer-gap: 2px;
   --gse-ui-copyToClipboard-iconContainer-padding: 4px;
   --gse-ui-copyToClipboard-tooltipIcon-success-foregroundColor: #09b581;
