@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "commit": "git-cz",
-    "commitlint": "commitlint --from 30e62e0c73aa2f57776b8932e93750c04957b71f",
+    "commitlint": "commitlint --from 9c38ccc67ebfd75270488c669c395f1b80e91ca4",
     "dev": "npx concurrently  \"npm run dev.gsc\" \"npm run dev.examples\"",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
     "dev.gsc": "npm run dev --workspace=packages/genesys-spark-components",
