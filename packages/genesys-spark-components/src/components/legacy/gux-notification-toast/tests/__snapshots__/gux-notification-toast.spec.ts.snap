@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-notification-toast #render should render alert notification toast 1`] = `
-<gux-notification-toast accent="alert">
+exports[`gux-notification-toast-legacy #render should render alert notification toast 1`] = `
+<gux-notification-toast-legacy accent="alert">
   <mock:shadow-root>
     <div class="gux-alert gux-icon">
       <slot name="icon"></slot>
@@ -23,11 +23,11 @@ exports[`gux-notification-toast #render should render alert notification toast 1
   <div slot="message">
     This is the message
   </div>
-</gux-notification-toast>
+</gux-notification-toast-legacy>
 `;
 
-exports[`gux-notification-toast #render should render neutral notification toast 1`] = `
-<gux-notification-toast accent="neutral">
+exports[`gux-notification-toast-legacy #render should render neutral notification toast 1`] = `
+<gux-notification-toast-legacy accent="neutral">
   <mock:shadow-root>
     <div class="gux-icon gux-neutral">
       <slot name="icon"></slot>
@@ -49,11 +49,11 @@ exports[`gux-notification-toast #render should render neutral notification toast
   <div slot="message">
     This is the message
   </div>
-</gux-notification-toast>
+</gux-notification-toast-legacy>
 `;
 
-exports[`gux-notification-toast #render should render positive notification toast 1`] = `
-<gux-notification-toast accent="positive">
+exports[`gux-notification-toast-legacy #render should render positive notification toast 1`] = `
+<gux-notification-toast-legacy accent="positive">
   <mock:shadow-root>
     <div class="gux-icon gux-positive">
       <slot name="icon"></slot>
@@ -75,11 +75,11 @@ exports[`gux-notification-toast #render should render positive notification toas
   <div slot="message">
     This is the message
   </div>
-</gux-notification-toast>
+</gux-notification-toast-legacy>
 `;
 
-exports[`gux-notification-toast #render should render warning notification toast 1`] = `
-<gux-notification-toast accent="warning">
+exports[`gux-notification-toast-legacy #render should render warning notification toast 1`] = `
+<gux-notification-toast-legacy accent="warning">
   <mock:shadow-root>
     <div class="gux-icon gux-warning">
       <slot name="icon"></slot>
@@ -101,5 +101,5 @@ exports[`gux-notification-toast #render should render warning notification toast
   <div slot="message">
     This is the message
   </div>
-</gux-notification-toast>
+</gux-notification-toast-legacy>
 `;

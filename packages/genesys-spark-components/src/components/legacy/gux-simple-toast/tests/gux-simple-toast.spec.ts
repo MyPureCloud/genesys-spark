@@ -4,43 +4,43 @@ import { GuxSimpleToast } from '../gux-simple-toast';
 const components = [GuxSimpleToast];
 const language = 'en';
 
-describe('gux-simple-toast', () => {
+describe('gux-simple-toast-legacy', () => {
   describe('#render', () => {
     [
       {
         description: 'should render neutral simple toast',
         html: `
-          <gux-simple-toast accent="neutral">
+          <gux-simple-toast-legacy accent="neutral">
             <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="message">This is the message</div>
-          </gux-simple-toast>
+          </gux-simple-toast-legacy>
         `
       },
       {
         description: 'should render positive simple toast',
         html: `
-          <gux-simple-toast accent="positive">
+          <gux-simple-toast-legacy accent="positive">
             <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="message">This is the message</div>
-          </gux-simple-toast>
+          </gux-simple-toast-legacy>
         `
       },
       {
         description: 'should render alert simple toast',
         html: `
-          <gux-simple-toast accent="alert">
+          <gux-simple-toast-legacy accent="alert">
             <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="message">This is the message</div>
-          </gux-simple-toast>
+          </gux-simple-toast-legacy>
         `
       },
       {
         description: 'should render warning simple toast',
         html: `
-          <gux-simple-toast accent="warning">
+          <gux-simple-toast-legacy accent="warning">
             <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="message">This is the message</div>
-          </gux-simple-toast>
+          </gux-simple-toast-legacy>
         `
       }
     ].forEach(({ description, html }) => {
@@ -57,10 +57,10 @@ describe('gux-simple-toast', () => {
   describe('dismiss', () => {
     it('click dismiss button', async () => {
       const html = `
-        <gux-simple-toast accent="neutral">
+        <gux-simple-toast-legacy accent="neutral">
           <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
           <div slot="message">This is the message</div>
-        </gux-simple-toast>
+        </gux-simple-toast-legacy>
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
@@ -83,10 +83,10 @@ describe('gux-simple-toast', () => {
 
     it('click dismiss button and prevent default', async () => {
       const html = `
-        <gux-simple-toast accent="neutral">
+        <gux-simple-toast-legacy accent="neutral">
           <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
           <div slot="message">This is the message</div>
-        </gux-simple-toast>
+        </gux-simple-toast-legacy>
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;

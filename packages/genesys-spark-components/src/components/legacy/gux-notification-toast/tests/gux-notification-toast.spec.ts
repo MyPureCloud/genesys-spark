@@ -4,47 +4,47 @@ import { GuxNotificationToast } from '../gux-notification-toast';
 const components = [GuxNotificationToast];
 const language = 'en';
 
-describe('gux-notification-toast', () => {
+describe('gux-notification-toast-legacy', () => {
   describe('#render', () => {
     [
       {
         description: 'should render neutral notification toast',
         html: `
-          <gux-notification-toast accent="neutral">
+          <gux-notification-toast-legacy accent="neutral">
             <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="title">Title</div>
             <div slot="message">This is the message</div>
-          </gux-notification-toast>
+          </gux-notification-toast-legacy>
         `
       },
       {
         description: 'should render positive notification toast',
         html: `
-          <gux-notification-toast accent="positive">
+          <gux-notification-toast-legacy accent="positive">
             <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="title">Title</div>
             <div slot="message">This is the message</div>
-          </gux-notification-toast>
+          </gux-notification-toast-legacy>
         `
       },
       {
         description: 'should render alert notification toast',
         html: `
-          <gux-notification-toast accent="alert">
+          <gux-notification-toast-legacy accent="alert">
             <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="title">Title</div>
             <div slot="message">This is the message</div>
-          </gux-notification-toast>
+          </gux-notification-toast-legacy>
         `
       },
       {
         description: 'should render warning notification toast',
         html: `
-          <gux-notification-toast accent="warning">
+          <gux-notification-toast-legacy accent="warning">
             <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
             <div slot="title">Title</div>
             <div slot="message">This is the message</div>
-          </gux-notification-toast>
+          </gux-notification-toast-legacy>
         `
       }
     ].forEach(({ description, html }) => {
@@ -61,11 +61,11 @@ describe('gux-notification-toast', () => {
   describe('dismiss', () => {
     it('click dismiss button', async () => {
       const html = `
-        <gux-notification-toast accent="neutral">
+        <gux-notification-toast-legacy accent="neutral">
           <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
           <div slot="title">Title</div>
           <div slot="message">This is the message</div>
-        </gux-notification-toast>
+        </gux-notification-toast-legacy>
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
@@ -88,11 +88,11 @@ describe('gux-notification-toast', () => {
 
     it('click dismiss button and prevent default', async () => {
       const html = `
-        <gux-notification-toast accent="neutral">
+        <gux-notification-toast-legacy accent="neutral">
           <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
           <div slot="title">Title</div>
           <div slot="message">This is the message</div>
-        </gux-notification-toast>
+        </gux-notification-toast-legacy>
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
