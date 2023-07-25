@@ -1,7 +1,7 @@
-@import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/color.less';
-@import (reference) '../../../style/mixins.less';
-@import (reference) '../../../style/shadows.less';
+@import '../../../style/typography.scss';
+@import '../../../style/color.scss';
+@import '../../../style/_mixins.scss';
+@import '../../../style/shadows.scss';
 
 :host {
   display: flex;
@@ -13,11 +13,12 @@
   width: 270px;
   padding: 20px 24px;
   margin-bottom: 4px;
-  color: @gux-type;
-  background: @gux-grey-90;
-  border: 1px solid @gux-grey-30;
+  color: $gux-type;
+  background: $gux-grey-90;
+  border: 1px solid $gux-grey-30;
   border-radius: 4px;
-  .gux-shadow-20();
+
+  @include gux-shadow-20;
 }
 
 .gux-header {
@@ -30,13 +31,14 @@
   align-self: auto;
   justify-content: flex-start;
   order: 0;
-  .h2();
+
+  @include h2;
 
   .gux-icon {
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
-    color: @gux-aqua-green-sec;
+    color: $gux-aqua-green-sec;
 
     ::slotted(gux-icon) {
       width: 32px !important;
@@ -57,7 +59,7 @@
   align-self: auto;
   order: 0;
   margin: 16px 0;
-  .body-font();
+  @include body-font;
 
   ::slotted(dl) {
     display: flex;

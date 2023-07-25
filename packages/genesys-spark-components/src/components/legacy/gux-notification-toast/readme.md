@@ -31,16 +31,16 @@
 ### Depends on
 
 - [gux-truncate-beta](../../beta/gux-truncate)
-- [gux-dismiss-button](../gux-dismiss-button)
+- [gux-dismiss-button](../../stable/gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-notification-toast --> gux-truncate-beta
-  gux-notification-toast --> gux-dismiss-button
+  gux-notification-toast-legacy --> gux-truncate-beta
+  gux-notification-toast-legacy --> gux-dismiss-button
   gux-truncate-beta --> gux-tooltip
   gux-dismiss-button --> gux-icon
-  style gux-notification-toast fill:#f9f,stroke:#333,stroke-width:4px
+  style gux-notification-toast-legacy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

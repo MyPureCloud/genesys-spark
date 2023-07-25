@@ -1,0 +1,79 @@
+<h1>Gux Toast</h1>
+
+<h2>Gux Success Toast</h2>
+
+<gux-toast toast-type="success">
+  <div slot="title">Success Example</div>
+  <div slot="message">This is an example message</div>
+</gux-toast>
+
+<gux-toast toast-type="success">
+  <div slot="message">Success toast without Title</div>
+</gux-toast>
+
+<h2>Gux Warning Toast</h2>
+
+<gux-toast toast-type="warning">
+  <div slot="title">Warning Example</div>
+  <div slot="message">This is an example message</div>
+</gux-toast>
+
+<gux-toast toast-type="warning">
+  <div slot="message">Warning toast without Title</div>
+</gux-toast>
+
+<h2>Gux Error Toast</h2>
+
+<gux-toast toast-type="error">
+  <div slot="title">Error Example</div>
+  <div slot="message">This is an example message</div>
+</gux-toast>
+
+<gux-toast toast-type="error">
+  <div slot="message">Error toast without Title</div>
+</gux-toast>
+
+<h2>Gux Info Toast</h2>
+
+<gux-toast toast-type="info">
+  <div slot="title">Info Example</div>
+  <div slot="message">This is an example message</div>
+</gux-toast>
+
+<gux-toast toast-type="info">
+  <div slot="message">Info toast without Title</div>
+</gux-toast>
+
+<h2>Gux Action Toast</h2>
+
+<gux-toast toast-type="action">
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
+  <div slot="title">1 Action</div>
+  <div slot="message">This is an example message</div>
+  <button slot="action-1" type="button" onclick="notify(event)">
+    Action 1
+  </button>
+</gux-toast>
+
+<gux-toast toast-type="action">
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
+  <div slot="title">2 Actions</div>
+  <div slot="message">This is an example message</div>
+  <button slot="action-1" type="button" onclick="notify(event)">
+    Action 1
+  </button>
+  <button slot="action-2" type="button" onclick="notify(event)">
+    Action 2
+  </button>
+</gux-toast>
+
+<gux-toast toast-type="action">
+  <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
+  <div slot="message">Action Toast with no Title</div>
+  <button slot="action-1" type="button" onclick="notify(event)">
+    Action 1
+  </button>
+  <button slot="action-2" type="button" onclick="notify(event)">
+    Action 2
+  </button>
+</gux-toast>

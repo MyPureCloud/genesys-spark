@@ -9,8 +9,8 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot positive-button - Required slot for the action toast positive button
  */
 @Component({
-  styleUrl: 'gux-action-toast.less',
-  tag: 'gux-action-toast',
+  styleUrl: 'gux-action-toast.scss',
+  tag: 'gux-action-toast-legacy',
   shadow: true
 })
 export class GuxActionToast {

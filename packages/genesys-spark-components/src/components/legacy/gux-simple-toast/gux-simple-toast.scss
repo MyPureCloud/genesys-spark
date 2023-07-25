@@ -1,6 +1,6 @@
-@import (reference) '../../../style/color.less';
-@import (reference) '../../../style/shadows.less';
-@import (reference) '../../../style/spacing.less';
+@import '../../../style/color.scss';
+@import '../../../style/shadows.scss';
+@import '../../../style/spacing.scss';
 
 :host {
   position: relative;
@@ -12,12 +12,11 @@
   justify-content: flex-start;
   width: 286px;
   margin-bottom: 4px;
-  color: @gux-type;
-  background: @gux-grey-90;
-  border: 1px solid;
-  border-color: @gux-grey-30;
+  color: $gux-type;
+  background: $gux-grey-90;
+  border: 1px solid $gux-grey-30;
   border-radius: 4px;
-  .gux-shadow-20();
+  @include gux-shadow-20;
 }
 
 .gux-icon {
@@ -25,22 +24,22 @@
   align-self: auto;
   order: 0;
   padding: 8px 12px 8px 16px;
-  margin: @gux-spacing-3xs 0;
+  margin: $gux-spacing-3xs 0;
 
   &.gux-alert {
-    color: @gux-alert;
+    color: $gux-alert;
   }
 
   &.gux-warning {
-    color: @gux-warning;
+    color: $gux-warning;
   }
 
   &.gux-positive {
-    color: @gux-positive;
+    color: $gux-positive;
   }
 
   &.gux-neutral {
-    color: @gux-neutral;
+    color: $gux-neutral;
   }
 
   ::slotted(gux-icon) {

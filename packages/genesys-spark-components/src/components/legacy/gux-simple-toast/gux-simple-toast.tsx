@@ -11,24 +11,23 @@ import {
 
 import { trackComponent } from '@utils/tracking/usage';
 
-import { GuxNotificationToastAccent } from './gux-notification-toast.types';
+import { GuxSimpleToastAccent } from './gux-simple-toast.types';
 
 /**
  * @slot icon - Required slot for gux-icon
- * @slot title - Required slot for the notification toast title
- * @slot message - Required slot for the notification toast message
+ * @slot message - Required slot for the simple toast message
  */
 @Component({
-  styleUrl: 'gux-notification-toast.scss',
-  tag: 'gux-notification-toast',
+  styleUrl: 'gux-simple-toast.scss',
+  tag: 'gux-simple-toast-legacy',
   shadow: true
 })
-export class GuxNotificationToast {
+export class GuxSimpleToast {
   /**
    * The component accent.
    */
   @Prop()
-  accent: GuxNotificationToastAccent = 'neutral';
+  accent: GuxSimpleToastAccent = 'neutral';
 
   @Event()
   guxdismiss: EventEmitter<void>;
@@ -47,17 +46,13 @@ export class GuxNotificationToast {
           <slot name="icon" />
         </div>
 
-        <div class="gux-content">
-          <gux-truncate-beta class="gux-title" max-lines={1}>
-            <slot name="title" />
-          </gux-truncate-beta>
-
-          <gux-truncate-beta class="gux-message" max-lines={2}>
-            <slot name="message" />
-          </gux-truncate-beta>
-        </div>
+        <gux-truncate-beta class="gux-message" max-lines={2}>
+          <slot name="message" />
+        </gux-truncate-beta>
 
         <gux-dismiss-button
+          class="gux-dismiss"
+          position="inherit"
           onClick={this.onDismissClickHandler.bind(this)}
         ></gux-dismiss-button>
       </Host>

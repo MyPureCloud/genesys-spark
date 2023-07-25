@@ -50,11 +50,6 @@
  - [gux-form-field-textarea](../gux-form-field/components/gux-form-field-textarea)
  - [gux-form-field-time-picker](../gux-form-field/components/gux-form-field-time-picker)
  - [gux-inline-alert](../gux-alert)
- - [gux-input-color](../../legacy/gux-form-field-legacy/components/gux-input-color)
- - [gux-input-number](../../legacy/gux-form-field-legacy/components/gux-input-number)
- - [gux-input-search](../../legacy/gux-form-field-legacy/components/gux-input-search)
- - [gux-input-select](../../legacy/gux-form-field-legacy/components/gux-input-select)
- - [gux-input-text-like](../../legacy/gux-form-field-legacy/components/gux-input-text-like)
  - [gux-month-calendar](../../beta/gux-month-picker/gux-month-calendar)
  - [gux-month-picker-beta](../../beta/gux-month-picker)
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
@@ -75,6 +70,7 @@
  - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-tag-beta](../../beta/gux-tag)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
+ - [gux-toast](../gux-toast)
  - [gux-toggle](../gux-toggle)
  - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
 
@@ -113,11 +109,6 @@ graph TD;
   gux-form-field-textarea --> gux-icon
   gux-form-field-time-picker --> gux-icon
   gux-inline-alert --> gux-icon
-  gux-input-color --> gux-icon
-  gux-input-number --> gux-icon
-  gux-input-search --> gux-icon
-  gux-input-select --> gux-icon
-  gux-input-text-like --> gux-icon
   gux-month-calendar --> gux-icon
   gux-month-picker-beta --> gux-icon
   gux-option-icon --> gux-icon
@@ -138,6 +129,7 @@ graph TD;
   gux-table-toolbar-menu-button --> gux-icon
   gux-tag-beta --> gux-icon
   gux-time-picker-beta --> gux-icon
+  gux-toast --> gux-icon
   gux-toggle --> gux-icon
   gux-toggle-slider --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px
