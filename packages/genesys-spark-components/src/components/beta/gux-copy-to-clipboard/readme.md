@@ -30,6 +30,7 @@
 | `--gse-ui-copyToClipboard-label-text-textDecoration`           |                                                 |
 | `--gse-ui-copyToClipboard-tooltipIcon-error-foregroundColor`   |                                                 |
 | `--gse-ui-copyToClipboard-tooltipIcon-success-foregroundColor` |                                                 |
+| `--gse-ui-icon-size-sm`                                        |                                                 |
 
 
 ## Dependencies

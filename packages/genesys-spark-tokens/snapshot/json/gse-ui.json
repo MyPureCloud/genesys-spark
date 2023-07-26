@@ -322,12 +322,12 @@
         }
       },
       "hover": {
-        "background_color": "#DEE1FD",
-        "foreground_color": "#4856CB"
+        "background_color": "#3742A2",
+        "foreground_color": "#ffffff"
       },
       "active": {
-        "background_color": "#CED2FC",
-        "foreground_color": "#4856CB"
+        "background_color": "#252E78",
+        "foreground_color": "#ffffff"
       }
     },
     "ghost": {
@@ -468,6 +468,50 @@
     "border_radius": 0
   },
   "action_button": {
-    "border_radius": "4px"
+    "border_radius": "4px",
+    "right_segment": {
+      "border_radius": "0 4px 4px 0",
+      "focus_border_radius": "0 8px 8px 0",
+      "size": "32px",
+      "padding": "0 8px"
+    },
+    "left_segment": {
+      "focus_border_radius": "8px 0 0 8px",
+      "border_radius": "4px 0 0 4px",
+      "gap": "8px",
+      "padding": "0 16px"
+    },
+    "tertiary": {
+      "divider": {
+        "color": "#4856CB",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "primary": {
+      "divider": {
+        "color": "#ffffff",
+        "width": "2px",
+        "style": "solid"
+      }
+    },
+    "secondary": {
+      "divider": {
+        "color": "#ffffff",
+        "width": "2px",
+        "style": "solid"
+      }
+    },
+    "danger": {
+      "divider": {
+        "color": "#ffffff",
+        "width": "2px",
+        "style": "solid"
+      }
+    },
+    "height": "32px",
+    "focus": {
+      "height": "40px"
+    }
   }
 }
