@@ -2,14 +2,14 @@ import { Component, Element, h, JSX, State, Listen } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
-import { CopyToClipboardContentType } from './copy-to-clipboard-content-type';
+import { GuxCopyToClipboardContent } from './gux-copy-to-clipboard.types';
 
 /**
  * @slot content - Slot for content
  */
 
 @Component({
-  styleUrl: 'gux-copy-to-clipboard.less',
+  styleUrl: 'gux-copy-to-clipboard.scss',
   tag: 'gux-copy-to-clipboard-beta',
   shadow: true
 })
@@ -21,7 +21,7 @@ export class GuxCopyToClipboard {
   private root: HTMLElement;
 
   @State()
-  tooltipContent: CopyToClipboardContentType = 'clickToCopy';
+  tooltipContent: GuxCopyToClipboardContent = 'clickToCopy';
 
   @Listen('mouseleave')
   onMouseleave() {
@@ -58,7 +58,7 @@ export class GuxCopyToClipboard {
       });
   }
 
-  getIconName(tooltipContent: CopyToClipboardContentType): string {
+  getIconName(tooltipContent: GuxCopyToClipboardContent): string {
     switch (tooltipContent) {
       case 'copyFailure':
         return 'badge-x';
