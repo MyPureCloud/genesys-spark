@@ -17,9 +17,8 @@ import { getTextContentFromNodes } from '../../../utils/dom/get-text-content-fro
  */
 
 @Component({
-  styleUrl: 'gux-truncate.less',
-  tag: 'gux-truncate-beta',
-  // Popper tooltip cannot link to shadow dom element
+  styleUrl: 'gux-truncate.scss',
+  tag: 'gux-truncate',
   shadow: true
 })
 export class GuxTruncate {

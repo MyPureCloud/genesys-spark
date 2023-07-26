@@ -9,7 +9,7 @@ import { GuxRadialLoadingContext } from './gux-radial-loading.types';
 import modalComponentResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-radial-loading.less',
+  styleUrl: 'gux-radial-loading.scss',
   tag: 'gux-radial-loading',
   shadow: true
 })

@@ -51,7 +51,7 @@ export class GuxDropdown {
   private fieldButtonElement: HTMLElement;
   private filterElement: HTMLInputElement;
   private listboxElement: HTMLGuxListboxElement;
-  private truncateElement: HTMLGuxTruncateBetaElement;
+  private truncateElement: HTMLGuxTruncateElement;
 
   @Element()
   private root: HTMLGuxDropdownElement;
@@ -415,9 +415,9 @@ export class GuxDropdown {
     switch (tag) {
       case 'gux-option':
         return (
-          <gux-truncate-beta ref={el => (this.truncateElement = el)}>
+          <gux-truncate ref={el => (this.truncateElement = el)}>
             {item.textContent}
-          </gux-truncate-beta>
+          </gux-truncate>
         ) as JSX.Element;
       case 'gux-option-icon':
         return this.renderIconOption(item as HTMLGuxOptionIconElement);
@@ -440,9 +440,9 @@ export class GuxDropdown {
           style={iconStyle}
           decorative
         ></gux-icon>
-        <gux-truncate-beta ref={el => (this.truncateElement = el)}>
+        <gux-truncate ref={el => (this.truncateElement = el)}>
           {iconOption.textContent}
-        </gux-truncate-beta>
+        </gux-truncate>
       </span>
     ) as JSX.Element;
   }

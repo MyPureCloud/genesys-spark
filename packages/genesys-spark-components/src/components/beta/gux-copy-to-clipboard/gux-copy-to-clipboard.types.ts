@@ -1,4 +1,4 @@
-export type CopyToClipboardContentType =
+export type GuxCopyToClipboardContent =
   | 'copySuccess'
   | 'clickToCopy'
   | 'enterToCopy'

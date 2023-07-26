@@ -46,30 +46,30 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-dropdown](../../stable/gux-dropdown)
+ - [gux-dropdown](../gux-dropdown)
  - [gux-notification-toast-legacy](../../legacy/gux-notification-toast)
- - [gux-option](../../stable/gux-listbox/options/gux-option)
- - [gux-option-icon](../../stable/gux-listbox/options/gux-option-icon)
- - [gux-option-multi](../../stable/gux-listbox-multi/gux-option-multi)
+ - [gux-option](../gux-listbox/options/gux-option)
+ - [gux-option-icon](../gux-listbox/options/gux-option-icon)
+ - [gux-option-multi](../gux-listbox-multi/gux-option-multi)
  - [gux-simple-toast-legacy](../../legacy/gux-simple-toast)
- - [gux-toast](../../stable/gux-toast)
+ - [gux-toast](../gux-toast)
 
 ### Depends on
 
-- [gux-tooltip](../../stable/gux-tooltip)
+- [gux-tooltip](../gux-tooltip)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-truncate-beta --> gux-tooltip
-  gux-dropdown --> gux-truncate-beta
-  gux-notification-toast-legacy --> gux-truncate-beta
-  gux-option --> gux-truncate-beta
-  gux-option-icon --> gux-truncate-beta
-  gux-option-multi --> gux-truncate-beta
-  gux-simple-toast-legacy --> gux-truncate-beta
-  gux-toast --> gux-truncate-beta
-  style gux-truncate-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-truncate --> gux-tooltip
+  gux-dropdown --> gux-truncate
+  gux-notification-toast-legacy --> gux-truncate
+  gux-option --> gux-truncate
+  gux-option-icon --> gux-truncate
+  gux-option-multi --> gux-truncate
+  gux-simple-toast-legacy --> gux-truncate
+  gux-toast --> gux-truncate
+  style gux-truncate fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -21,7 +21,7 @@ import { randomHTMLId } from '../../../../../utils/dom/random-html-id';
   shadow: false
 })
 export class GuxOptionIcon {
-  private truncateElement: HTMLGuxTruncateBetaElement;
+  private truncateElement: HTMLGuxTruncateElement;
   @Element()
   root: HTMLElement;
 
@@ -109,9 +109,9 @@ export class GuxOptionIcon {
           icon-name={this.iconName}
           style={iconStyle}
         ></gux-icon>
-        <gux-truncate-beta ref={el => (this.truncateElement = el)}>
+        <gux-truncate ref={el => (this.truncateElement = el)}>
           <slot />
-        </gux-truncate-beta>
+        </gux-truncate>
       </Host>
     ) as JSX.Element;
   }

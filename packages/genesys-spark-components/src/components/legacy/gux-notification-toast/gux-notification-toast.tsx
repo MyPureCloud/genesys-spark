@@ -48,13 +48,13 @@ export class GuxNotificationToast {
         </div>
 
         <div class="gux-content">
-          <gux-truncate-beta class="gux-title" max-lines={1}>
+          <gux-truncate class="gux-title" max-lines={1}>
             <slot name="title" />
-          </gux-truncate-beta>
+          </gux-truncate>
 
-          <gux-truncate-beta class="gux-message" max-lines={2}>
+          <gux-truncate class="gux-message" max-lines={2}>
             <slot name="message" />
-          </gux-truncate-beta>
+          </gux-truncate>
         </div>
 
         <gux-dismiss-button

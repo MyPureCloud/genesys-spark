@@ -122,13 +122,13 @@ export class GuxToast {
 
         <div class="gux-content">
           <div class="gux-message">
-            <gux-truncate-beta class="gux-message-title" max-lines={1}>
+            <gux-truncate class="gux-message-title" max-lines={1}>
               <slot name="title" />
-            </gux-truncate-beta>
+            </gux-truncate>
 
-            <gux-truncate-beta class="gux-message-body" max-lines={2}>
+            <gux-truncate class="gux-message-body" max-lines={2}>
               <slot name="message" />
-            </gux-truncate-beta>
+            </gux-truncate>
           </div>
 
           {this.toastType !== 'action' && this.hasLink && this.renderLink()}

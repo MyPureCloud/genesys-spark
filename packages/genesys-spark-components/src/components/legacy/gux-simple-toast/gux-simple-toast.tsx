@@ -46,9 +46,9 @@ export class GuxSimpleToast {
           <slot name="icon" />
         </div>
 
-        <gux-truncate-beta class="gux-message" max-lines={2}>
+        <gux-truncate class="gux-message" max-lines={2}>
           <slot name="message" />
-        </gux-truncate-beta>
+        </gux-truncate>
 
         <gux-dismiss-button
           class="gux-dismiss"

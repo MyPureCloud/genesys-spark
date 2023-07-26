@@ -31,15 +31,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Depends on
 
-- [gux-truncate-beta](../../beta/gux-truncate)
+- [gux-truncate](../../stable/gux-truncate)
 - [gux-dismiss-button](../../stable/gux-dismiss-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-simple-toast-legacy --> gux-truncate-beta
+  gux-simple-toast-legacy --> gux-truncate
   gux-simple-toast-legacy --> gux-dismiss-button
-  gux-truncate-beta --> gux-tooltip
+  gux-truncate --> gux-tooltip
   gux-dismiss-button --> gux-icon
   style gux-simple-toast-legacy fill:#f9f,stroke:#333,stroke-width:4px
 ```

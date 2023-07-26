@@ -25,11 +25,29 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 + </gux-example>
 ```
 
-There have been no API changes in these components.
+### There have been no API changes in these components.
 
 | V3 tag name           | V4 tag name      |
 | --------------------- | ---------------- |
 | gux-inline-alert-beta | gux-inline-alert |
+| gux-truncate-beta     | gux-truncate     |
+
+### There have been small API changes in these components
+
+| V3 tag name   | V4 tag name |
+| ------------- | ----------- |
+| gux-card-beta | gux-card    |
+
+#### gux-card
+
+The `accent` property now accepts: `'bordered'` | `'raised'` | `'borderless'`
+
+| V3 accent name | V4 accent name equivalent                                                            |
+| -------------- | ------------------------------------------------------------------------------------ |
+| 'outline'      | 'bordered'                                                                           |
+| 'raised'       | 'raised'                                                                             |
+| 'filled'       | <span style="color:orange; font-size:0.75em">_Contact UX Design System Team_ </span> |
+| ---            | 'borderless'                                                                         |
 
 ## V3 Stable Components Archived to Legacy in V4
 

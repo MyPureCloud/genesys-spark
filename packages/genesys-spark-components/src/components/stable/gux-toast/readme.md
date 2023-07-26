@@ -37,7 +37,7 @@
 
 - [gux-icon](../gux-icon)
 - [gux-button-slot-beta](../../beta/gux-button-slot)
-- [gux-truncate-beta](../../beta/gux-truncate)
+- [gux-truncate](../gux-truncate)
 - [gux-dismiss-button](../gux-dismiss-button)
 
 ### Graph
@@ -45,9 +45,9 @@
 graph TD;
   gux-toast --> gux-icon
   gux-toast --> gux-button-slot-beta
-  gux-toast --> gux-truncate-beta
+  gux-toast --> gux-truncate
   gux-toast --> gux-dismiss-button
-  gux-truncate-beta --> gux-tooltip
+  gux-truncate --> gux-tooltip
   gux-dismiss-button --> gux-icon
   style gux-toast fill:#f9f,stroke:#333,stroke-width:4px
 ```
