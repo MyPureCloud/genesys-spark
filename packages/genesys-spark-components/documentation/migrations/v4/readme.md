@@ -27,10 +27,11 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 ### There have been no API changes in these components.
 
-| V3 tag name           | V4 tag name      |
-| --------------------- | ---------------- |
-| gux-inline-alert-beta | gux-inline-alert |
-| gux-truncate-beta     | gux-truncate     |
+| V3 tag name                | V4 tag name           |
+| -------------------------- | --------------------- |
+| gux-inline-alert-beta      | gux-inline-alert      |
+| gux-truncate-beta          | gux-truncate          |
+| gux-copy-to-clipboard-beta | gux-copy-to-clipboard |
 
 ### There have been small API changes in these components
 

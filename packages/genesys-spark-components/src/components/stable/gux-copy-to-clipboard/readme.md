@@ -1,4 +1,4 @@
-# gux-copy-to-clipboard-beta
+# gux-copy-to-clipboard
 
 
 
@@ -37,15 +37,15 @@
 
 ### Depends on
 
-- [gux-icon](../../stable/gux-icon)
-- [gux-tooltip](../../stable/gux-tooltip)
+- [gux-icon](../gux-icon)
+- [gux-tooltip](../gux-tooltip)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-copy-to-clipboard-beta --> gux-icon
-  gux-copy-to-clipboard-beta --> gux-tooltip
-  style gux-copy-to-clipboard-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-copy-to-clipboard --> gux-icon
+  gux-copy-to-clipboard --> gux-tooltip
+  style gux-copy-to-clipboard fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

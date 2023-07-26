@@ -6,12 +6,12 @@ const components = [GuxCopyToClipboard];
 const language = 'en';
 
 const html = `
-  <gux-copy-to-clipboard-beta>
+  <gux-copy-to-clipboard>
     <div slot="content">Test</div>
-  </gux-copy-to-clipboard-beta>
+  </gux-copy-to-clipboard>
 `;
 
-describe('gux-copy-to-clipboard-beta', () => {
+describe('gux-copy-to-clipboard', () => {
   beforeEach(async () => {
     global.MutationObserver = MutationObserver;
   });

@@ -59,7 +59,7 @@ button {
     gux-icon[icon-name='copy'] {
       width: var(--gse-ui-icon-size-sm);
       height: var(--gse-ui-icon-size-sm);
-      padding: var(--gse-ui-copyToClipboard-gap);
+      padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
       margin-left: var(--gse-ui-copyToClipboard-contentContainer-gap);
       visibility: hidden;
       background-color: var(

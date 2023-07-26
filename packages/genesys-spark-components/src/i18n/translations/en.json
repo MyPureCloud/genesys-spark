@@ -24,12 +24,6 @@
   "gux-context-menu": {
     "contextMenuScreenreaderText": "Context menu"
   },
-  "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
-  },
   "gux-dropdown-multi-tag": {
     "clearSelection": "Clear {numberSelected} selected items"
   },
@@ -382,6 +376,12 @@
     "navigateNextBtn": "Next",
     "navigatePreviousBtn": "Previous",
     "totalMatches": "{currentMatch, number} of {matchCount, number}"
+  },
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
   },
   "gux-datepicker": {
     "start": "Start",
