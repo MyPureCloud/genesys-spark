@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property    | Attribute    | Description           | Type                                                      | Default     |
-| ----------- | ------------ | --------------------- | --------------------------------------------------------- | ----------- |
-| `toastType` | `toast-type` | The component accent. | `"action" \| "error" \| "info" \| "success" \| "warning"` | `'success'` |
+| Property    | Attribute    | Description | Type                                                      | Default     |
+| ----------- | ------------ | ----------- | --------------------------------------------------------- | ----------- |
+| `toastType` | `toast-type` |             | `"action" \| "error" \| "info" \| "success" \| "warning"` | `'success'` |
 
 
 ## Events
@@ -21,14 +21,14 @@
 
 ## Slots
 
-| Slot         | Description                                                       |
-| ------------ | ----------------------------------------------------------------- |
-| `"action-1"` | Optional slot for primary action button in the toast              |
-| `"action-2"` | Optional slot for secondary action button in the toast            |
-| `"icon"`     | Required slot for toast type of action                            |
-| `"link"`     | Optional slot for a link in any toast except toast type of action |
-| `"message"`  | Required slot for the toast message                               |
-| `"title"`    | Optional slot for the toast title                                 |
+| Slot         | Description                                                                  |
+| ------------ | ---------------------------------------------------------------------------- |
+| `"action-1"` | toastType is 'action' - Required slot for primary action button in the toast |
+| `"action-2"` | Optional slot for secondary action button in the toast                       |
+| `"icon"`     | Required slot for toast type of action                                       |
+| `"link"`     | Optional slot for a link in any toast except toast type of action            |
+| `"message"`  | Required slot for the toast message                                          |
+| `"title"`    | Optional slot for the toast title                                            |
 
 
 ## Dependencies

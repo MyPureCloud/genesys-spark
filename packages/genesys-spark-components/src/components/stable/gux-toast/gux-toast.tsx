@@ -20,7 +20,7 @@ import { hasSlot } from '@utils/dom/has-slot';
  * @slot title - Optional slot for the toast title
  * @slot message - Required slot for the toast message
  * @slot link - Optional slot for a link in any toast except toast type of action
- * @slot action-1 - Optional slot for primary action button in the toast
+ * @slot action-1 - toastType is 'action' - Required slot for primary action button in the toast
  * @slot action-2 - Optional slot for secondary action button in the toast
  */
 @Component({
