@@ -1,6 +1,6 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
-describe('gux-highlight', () => {
+describe('gux-text-highlight', () => {
   describe('#render', () => {
     [
       {
