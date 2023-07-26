@@ -27,14 +27,14 @@ async function newNonrandomE2EPage(
 describe('gux-truncate', () => {
   describe('#render', () => {
     [
-      '<gux-truncate-beta style="width: 40px">Some text to truncate</gux-truncate-beta>',
-      '<gux-truncate-beta style="width: 40px"><span>Some text to truncate in a span</span></gux-truncate-beta>',
-      '<gux-truncate-beta style="width: 40px"><div>Div <span>with a span</span> inside</div></gux-truncate-beta>',
-      '<gux-truncate-beta style="width: 40px" max-lines="3">This is a long text that should be truncated after three lines of wrapped text</gux-truncate-beta>'
+      '<gux-truncate style="width: 40px">Some text to truncate</gux-truncate>',
+      '<gux-truncate style="width: 40px"><span>Some text to truncate in a span</span></gux-truncate>',
+      '<gux-truncate style="width: 40px"><div>Div <span>with a span</span> inside</div></gux-truncate>',
+      '<gux-truncate style="width: 40px" max-lines="3">This is a long text that should be truncated after three lines of wrapped text</gux-truncate>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-truncate-beta');
+        const element = await page.find('gux-truncate');
 
         await a11yCheck(page);
 

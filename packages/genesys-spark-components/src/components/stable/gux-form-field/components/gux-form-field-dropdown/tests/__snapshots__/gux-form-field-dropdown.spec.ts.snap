@@ -56,23 +56,23 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
@@ -137,21 +137,21 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -217,23 +217,23 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
@@ -296,23 +296,23 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
@@ -378,23 +378,23 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
@@ -457,23 +457,23 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
@@ -536,23 +536,23 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
@@ -615,23 +615,23 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
@@ -694,23 +694,23 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="c">
         <!---->
         <span class="gux-checkbox-container"></span>
-        <gux-truncate-beta gux-slot-container="">
+        <gux-truncate gux-slot-container="">
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option-multi>
     </gux-listbox-multi>
   </gux-dropdown-multi-beta>
@@ -769,21 +769,21 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -842,21 +842,21 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -918,21 +918,21 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -991,21 +991,21 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -1064,21 +1064,21 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -1137,21 +1137,21 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -1210,21 +1210,21 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Ant
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Bat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
         <!---->
-        <gux-truncate-beta>
+        <gux-truncate>
           Cat
-        </gux-truncate-beta>
+        </gux-truncate>
       </gux-option>
     </gux-listbox>
   </gux-dropdown>

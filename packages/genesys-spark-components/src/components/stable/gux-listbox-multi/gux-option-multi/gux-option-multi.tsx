@@ -24,7 +24,7 @@ import translationResources from './i18n/en.json';
   tag: 'gux-option-multi'
 })
 export class GuxOptionMulti {
-  private truncateElement: HTMLGuxTruncateBetaElement;
+  private truncateElement: HTMLGuxTruncateElement;
   private i18n: GetI18nValue;
 
   @Element()
@@ -114,14 +114,14 @@ export class GuxOptionMulti {
         aria-disabled={this.disabled.toString()}
       >
         <span class="gux-checkbox-container"></span>
-        {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text. 
+        {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
         This attribute is required because we need to get the slotted text and exclude the screen reader text. */}
-        <gux-truncate-beta
+        <gux-truncate
           gux-slot-container
           ref={el => (this.truncateElement = el)}
         >
           <slot />
-        </gux-truncate-beta>
+        </gux-truncate>
 
         {this.renderCustomOptionInstructions()}
       </Host>

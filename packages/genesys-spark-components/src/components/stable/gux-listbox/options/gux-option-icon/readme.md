@@ -32,14 +32,14 @@
 ### Depends on
 
 - [gux-icon](../../../gux-icon)
-- [gux-truncate-beta](../../../../beta/gux-truncate)
+- [gux-truncate](../../../gux-truncate)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-option-icon --> gux-icon
-  gux-option-icon --> gux-truncate-beta
-  gux-truncate-beta --> gux-tooltip
+  gux-option-icon --> gux-truncate
+  gux-truncate --> gux-tooltip
   style gux-option-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
