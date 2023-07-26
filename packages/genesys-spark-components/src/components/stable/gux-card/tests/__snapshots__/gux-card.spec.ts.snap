@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#render different card accents should render component as expected (1) 1`] = `
+<gux-card>
+  <mock:shadow-root>
+    <div class="gux-bordered gux-card">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <span>
+    This is a content slot
+  </span>
+</gux-card>
+`;
+
+exports[`#render different card accents should render component as expected (2) 1`] = `
+<gux-card accent="bordered">
+  <mock:shadow-root>
+    <div class="gux-bordered gux-card">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <span>
+    This is a content slot
+  </span>
+</gux-card>
+`;
+
+exports[`#render different card accents should render component as expected (3) 1`] = `
+<gux-card accent="raised">
+  <mock:shadow-root>
+    <div class="gux-card gux-raised">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <span>
+    This is a content slot
+  </span>
+</gux-card>
+`;
+
+exports[`#render different card accents should render component as expected (4) 1`] = `
+<gux-card accent="borderless">
+  <mock:shadow-root>
+    <div class="gux-borderless gux-card">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <span>
+    This is a content slot
+  </span>
+</gux-card>
+`;
