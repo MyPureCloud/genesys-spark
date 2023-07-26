@@ -9,6 +9,7 @@ import {
 } from '@stencil/core';
 import { logWarn } from '../../../utils/error/log-error';
 import { OnMutation } from '../../../utils/decorator/on-mutation';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 @Component({
   styleUrl: 'gux-tooltip-title.scss',
@@ -71,7 +72,9 @@ export class GuxTooltipTitle {
   @OnMutation({ childList: true, subtree: true, characterData: true })
   onMutation(): void {
     this.titleName = this.setTooltipTitleText();
-    this.checkForTooltipHideOrShow();
+    afterNextRenderTimeout(() => {
+      this.checkForTooltipHideOrShow();
+    }, 500);
   }
 
   componentWillLoad() {
