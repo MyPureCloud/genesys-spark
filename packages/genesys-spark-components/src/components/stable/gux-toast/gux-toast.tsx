@@ -29,9 +29,6 @@ import { hasSlot } from '@utils/dom/has-slot';
   shadow: true
 })
 export class GuxToast {
-  /**
-   * The component accent.
-   */
   @Prop()
   toastType: GuxToastTypes = 'success';
 
