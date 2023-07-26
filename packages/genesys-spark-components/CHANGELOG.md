@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.96.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.95.0...v3.96.0) (2023-07-26)
+
+
+### Features
+
+* **date-time:** added ability to set time zone ([83e0049](https://github.com/MyPureCloud/genesys-webcomponents/commit/83e0049fea7cfe85bdfa86f94a47bf2d689e09c1))
+
+
+### Bug Fixes
+
+* **commitlint:** fixed broken build ([0777475](https://github.com/MyPureCloud/genesys-webcomponents/commit/07774756dee3cb5ba6f81248147acedb1619dc8d))
+
 ## [3.95.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.94.0...v3.95.0) (2023-07-20)
 
 
