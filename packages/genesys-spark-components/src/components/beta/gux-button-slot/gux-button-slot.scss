@@ -1,0 +1,202 @@
+// COMUI-2156 add missing button tokens
+$temp-focus-ring-width: 3px;
+$temp-focus-ring-offset: 1px;
+$temp-focus-ring-corner-radius: 4px;
+$temp-focus-ring-color: #7b88f7;
+
+@mixin button-text {
+  font-family: var(--gse-ui-button-text-fontFamily);
+  font-weight: var(--gse-ui-button-text-fontWeight);
+  font-size: var(--gse-ui-button-text-fontSize);
+  line-height: var(--gse-ui-button-text-lineHeight);
+}
+
+:host {
+  display: inline-block;
+  pointer-events: none;
+}
+
+::slotted(input[type='button']),
+::slotted(input[type='submit']),
+::slotted(button) {
+  @include button-text;
+  color: var(--gse-ui-button-secondary-default-foregroundColor);
+  background-color: var(--gse-ui-button-secondary-default-backgroundColor);
+  width: 100%;
+  min-width: var(--gse-ui-button-icon-only-width);
+  height: var(--gse-ui-button-height);
+  padding: var(--gse-ui-button-padding);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: auto;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--gse-ui-button-borderRadius);
+}
+
+::slotted(input[type='button'][disabled]),
+::slotted(input[type='submit'][disabled]),
+::slotted(button[disabled]) {
+  opacity: var(--gse-ui-button-disabled-opacity);
+  cursor: default;
+}
+
+::slotted(input[type='button']:focus),
+::slotted(input[type='submit']:focus),
+::slotted(button:focus) {
+  outline: none;
+}
+
+::slotted(input[type='button']:focus-visible:enabled),
+::slotted(input[type='submit']:focus-visible:enabled),
+::slotted(button:focus-visible:enabled) {
+  outline: $temp-focus-ring-width solid $temp-focus-ring-color;
+  outline-offset: $temp-focus-ring-offset;
+  border-radius: calc($temp-focus-ring-corner-radius - $temp-focus-ring-offset);
+}
+
+::slotted(input[type='button']:hover:enabled),
+::slotted(input[type='submit']:hover:enabled),
+::slotted(button:hover:enabled) {
+  color: var(--gse-ui-button-secondary-hover-foregroundColor);
+  background-color: var(--gse-ui-button-secondary-hover-backgroundColor);
+}
+
+::slotted(input[type='button']:active:enabled),
+::slotted(input[type='submit']:active:enabled),
+::slotted(button:active:enabled) {
+  color: var(--gse-ui-button-secondary-active-foregroundColor);
+  background-color: var(--gse-ui-button-secondary-active-backgroundColor);
+}
+
+:host([accent='primary']) {
+  ::slotted(input[type='button']),
+  ::slotted(input[type='submit']),
+  ::slotted(button) {
+    color: var(--gse-ui-button-primary-default-foregroundColor);
+    background-color: var(--gse-ui-button-primary-default-backgroundColor);
+  }
+
+  ::slotted(input[type='button']:hover:enabled),
+  ::slotted(input[type='submit']:hover:enabled),
+  ::slotted(button:hover:enabled) {
+    color: var(--gse-ui-button-primary-hover-foregroundColor);
+    background-color: var(--gse-ui-button-primary-hover-backgroundColor);
+  }
+
+  ::slotted(input[type='button']:active:enabled),
+  ::slotted(input[type='submit']:active:enabled),
+  ::slotted(button:active:enabled) {
+    color: var(--gse-ui-button-primary-active-foregroundColor);
+    background-color: var(--gse-ui-button-primary-active-backgroundColor);
+  }
+}
+
+:host([accent='tertiary']) {
+  ::slotted(input[type='button']),
+  ::slotted(input[type='submit']),
+  ::slotted(button) {
+    color: var(--gse-ui-button-tertiary-default-foregroundColor);
+    background-color: var(--gse-ui-button-tertiary-default-backgroundColor);
+    border-width: var(--gse-ui-button-tertiary-default-border-width);
+    border-style: var(--gse-ui-button-tertiary-default-border-style);
+    border-color: var(--gse-ui-button-tertiary-default-border-color);
+  }
+
+  ::slotted(input[type='button']:hover:enabled),
+  ::slotted(input[type='submit']:hover:enabled),
+  ::slotted(button:hover:enabled) {
+    color: var(--gse-ui-button-tertiary-hover-foregroundColor);
+    background-color: var(--gse-ui-button-tertiary-hover-backgroundColor);
+  }
+
+  ::slotted(input[type='button']:active:enabled),
+  ::slotted(input[type='submit']:active:enabled),
+  ::slotted(button:active:enabled) {
+    color: var(--gse-ui-button-tertiary-active-foregroundColor);
+    background-color: var(--gse-ui-button-tertiary-active-backgroundColor);
+  }
+}
+
+:host([accent='ghost']) {
+  ::slotted(input[type='button']),
+  ::slotted(input[type='submit']),
+  ::slotted(button) {
+    color: var(--gse-ui-button-ghost-default-foregroundColor);
+    background-color: var(--gse-ui-button-ghost-default-backgroundColor);
+  }
+
+  ::slotted(input[type='button']:hover:enabled),
+  ::slotted(input[type='submit']:hover:enabled),
+  ::slotted(button:hover:enabled) {
+    color: var(--gse-ui-button-ghost-hover-foregroundColor);
+    background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
+  }
+
+  ::slotted(input[type='button']:active:enabled),
+  ::slotted(input[type='submit']:active:enabled),
+  ::slotted(button:active:enabled) {
+    color: var(--gse-ui-button-ghost-active-foregroundColor);
+    background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+  }
+}
+
+:host([accent='danger']) {
+  ::slotted(input[type='button']),
+  ::slotted(input[type='submit']),
+  ::slotted(button) {
+    color: var(--gse-ui-button-danger-default-foregroundColor);
+    background-color: var(--gse-ui-button-danger-default-backgroundColor);
+  }
+
+  ::slotted(input[type='button']:hover:enabled),
+  ::slotted(input[type='submit']:hover:enabled),
+  ::slotted(button:hover:enabled) {
+    color: var(--gse-ui-button-danger-hover-foregroundColor);
+    background-color: var(--gse-ui-button-danger-hover-backgroundColor);
+  }
+
+  ::slotted(input[type='button']:active:enabled),
+  ::slotted(input[type='submit']:active:enabled),
+  ::slotted(button:active:enabled) {
+    color: var(--gse-ui-button-danger-active-foregroundColor);
+    background-color: var(--gse-ui-button-danger-active-backgroundColor);
+  }
+}
+
+:host([accent='inline']) {
+  min-width: initial;
+
+  ::slotted(input[type='button']),
+  ::slotted(input[type='submit']),
+  ::slotted(button) {
+    height: initial;
+    padding: 0;
+    color: var(--gse-ui-link-default-color);
+    background: none;
+    border: none;
+  }
+
+  ::slotted(input[type='button'][disabled]),
+  ::slotted(input[type='submit'][disabled]),
+  ::slotted(button[disabled]) {
+    color: var(--gse-ui-link-disabled-color);
+  }
+
+  ::slotted(input[type='button']:hover:enabled),
+  ::slotted(input[type='submit']:hover:enabled),
+  ::slotted(button:hover:enabled) {
+    text-decoration: underline;
+    color: var(--gse-ui-link-hover-color);
+    background: none;
+  }
+
+  ::slotted(input[type='button']:active:enabled),
+  ::slotted(input[type='submit']:active:enabled),
+  ::slotted(button:active:enabled) {
+    text-decoration: underline;
+    color: var(--gse-ui-link-active-color);
+    background: none;
+  }
+}

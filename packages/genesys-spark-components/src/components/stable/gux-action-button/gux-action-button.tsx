@@ -25,7 +25,7 @@ import {
 import defaultResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-action-button.less',
+  styleUrl: 'gux-action-button.scss',
   tag: 'gux-action-button',
   shadow: true
 })

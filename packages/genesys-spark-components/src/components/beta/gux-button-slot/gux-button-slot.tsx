@@ -8,7 +8,7 @@ import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
  * @slot - button, input[type="button"] or input[type="submit"] element
  */
 @Component({
-  styleUrl: 'gux-button-slot.less',
+  styleUrl: 'gux-button-slot.scss',
   tag: 'gux-button-slot-beta',
   shadow: true
 })
