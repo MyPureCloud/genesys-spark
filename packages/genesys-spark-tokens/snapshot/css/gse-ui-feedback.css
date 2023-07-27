@@ -35,4 +35,28 @@
   --gse-ui-toast-boxShadow-color: #23395c1a;
   --gse-ui-toast-boxShadow-type: dropShadow;
   --gse-ui-toast-icon: 24px;
+  --gse-ui-toast-wrappingWidth: 320 px;
+  --gse-ui-toast-stacking-gap: 4px;
+  --gse-ui-modal-closeButtonColor: #626e84;
+  --gse-ui-modal-headerColor: #1b2c48;
+  --gse-ui-modal-backgroundColor: #ffffff;
+  --gse-ui-modal-header-gap: 12px;
+  --gse-ui-modal-padding: 32px;
+  --gse-ui-modal-gap: 16px;
+  --gse-ui-modal-heading-fontFamily: Urbanist;
+  --gse-ui-modal-heading-lineHeight: 32px;
+  --gse-ui-modal-heading-fontSize: 24px;
+  --gse-ui-modal-heading-fontWeight: 700;
+  --gse-ui-modal-heading-letterSpacing: 2%;
+  --gse-ui-modal-icon: 32px;
+  --gse-ui-modal-small-width: 420 px;
+  --gse-ui-modal-medium-width: 680 px;
+  --gse-ui-modal-large-width: 800 px;
+  --gse-ui-modal-buttonBar-gap: 8px;
+  --gse-ui-modal-boxShadow-x: 0;
+  --gse-ui-modal-boxShadow-y: 6px;
+  --gse-ui-modal-boxShadow-blur: 8px;
+  --gse-ui-modal-boxShadow-spread: 1px;
+  --gse-ui-modal-boxShadow-color: #23395c26;
+  --gse-ui-modal-boxShadow-type: dropShadow;
 }
