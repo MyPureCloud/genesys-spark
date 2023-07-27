@@ -72,6 +72,9 @@ export class GuxTooltipTitle {
   @OnMutation({ childList: true, subtree: true, characterData: true })
   onMutation(): void {
     this.titleName = this.setTooltipTitleText();
+    this.checkForTooltipHideOrShow();
+
+    // Handle checking if the tooltip should hide/show for dynamic content
     afterNextRenderTimeout(() => {
       this.checkForTooltipHideOrShow();
     }, 500);
