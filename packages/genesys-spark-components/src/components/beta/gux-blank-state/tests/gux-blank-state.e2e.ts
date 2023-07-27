@@ -7,7 +7,7 @@ describe('gux-blank-state-beta', () => {
 
   const html = `
   <gux-blank-state-beta lang="en">
-  <gux-icon slot="image" icon-name="robot-circle" decorative="true"></gux-icon>
+  <gux-icon slot="image" icon-name="bot" decorative="true"></gux-icon>
   <div slot="primary-message">Sorry, something went wrong.</div>
   <div slot="additional-guidance">Please refresh this page to try again.</div>
   <button slot="call-to-action" type="button" onclick="notify(event)">
