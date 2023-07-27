@@ -54,10 +54,10 @@ describe('gux-simple-toast-legacy', () => {
             <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
             <div slot="title">2 Actions</div>
             <div slot="message">This is an example message</div>
-            <button slot="action-1" type="button" onclick="notify(event)">
+            <button slot="primary-button" type="button" onclick="notify(event)">
               Action 1
             </button>
-            <button slot="action-2" type="button" onclick="notify(event)">
+            <button slot="secondary-button" type="button" onclick="notify(event)">
               Action 2
             </button>
           </gux-toast>
