@@ -7,9 +7,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gse-ui-toast-gap);
-  width: fit-content;
+  width: var(--gse-ui-toast-wrappingWidth);
   padding: var(--gse-ui-toast-margin);
-  margin-bottom: 4px;
+  margin-bottom: var(--gse-ui-toast-stacking-gap);
   border-radius: var(--gse-ui-toast-borderRadius);
   box-shadow: var(--gse-ui-toast-boxShadow-x) var(--gse-ui-toast-boxShadow-y)
     var(--gse-ui-toast-boxShadow-blur) var(--gse-ui-toast-boxShadow-spread)

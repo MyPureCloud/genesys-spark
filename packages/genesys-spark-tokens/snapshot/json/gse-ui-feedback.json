@@ -53,6 +53,10 @@
       "color": "#23395c1a",
       "type": "dropShadow"
     },
-    "icon": "24px"
+    "icon": "24px",
+    "wrapping_width": "320px",
+    "stacking": {
+      "gap": "4px"
+    }
   }
 }

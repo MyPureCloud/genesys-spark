@@ -35,4 +35,6 @@
   --gse-ui-toast-boxShadow-color: #23395c1a;
   --gse-ui-toast-boxShadow-type: dropShadow;
   --gse-ui-toast-icon: 24px;
+  --gse-ui-toast-wrappingWidth: 320px;
+  --gse-ui-toast-stacking-gap: 4px;
 }
