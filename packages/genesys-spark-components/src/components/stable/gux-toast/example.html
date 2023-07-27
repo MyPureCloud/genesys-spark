@@ -2,62 +2,62 @@
 
 <h2>Gux Success Toast</h2>
 
-<gux-toast toast-type="success">
+<gux-toast toast-type="success" aria-live="polite">
   <div slot="title">Success Example</div>
   <div slot="message">This is an example message</div>
 </gux-toast>
 
-<gux-toast toast-type="success">
+<gux-toast toast-type="success" aria-live="polite">
   <div slot="title">Success Example with Link</div>
   <div slot="message">This is an example message</div>
   <a slot="link" href="#">Link</a>
 </gux-toast>
 
-<gux-toast toast-type="success">
+<gux-toast toast-type="success" aria-live="polite">
   <div slot="message">Success toast without Title</div>
 </gux-toast>
 
-<gux-toast toast-type="success">
+<gux-toast toast-type="success" aria-live="polite">
   <div slot="message">Success toast with Link without Title</div>
   <a slot="link" href="#">Link</a>
 </gux-toast>
 
 <h2>Gux Warning Toast</h2>
 
-<gux-toast toast-type="warning">
+<gux-toast toast-type="warning" aria-live="polite">
   <div slot="title">Warning Example</div>
   <div slot="message">This is an example message</div>
 </gux-toast>
 
-<gux-toast toast-type="warning">
+<gux-toast toast-type="warning" aria-live="polite">
   <div slot="title">Warning Example with Link</div>
   <div slot="message">This is an example message</div>
   <a slot="link" href="#">Link</a>
 </gux-toast>
 
-<gux-toast toast-type="warning">
+<gux-toast toast-type="warning" aria-live="polite">
   <div slot="message">Warning toast without Title</div>
 </gux-toast>
 
-<gux-toast toast-type="warning">
+<gux-toast toast-type="warning" aria-live="polite">
   <div slot="message">Warning toast with Link without Title</div>
   <a slot="link" href="#">Link</a>
 </gux-toast>
 
 <h2>Gux Error Toast</h2>
 
-<gux-toast toast-type="error">
+<gux-toast toast-type="error" aria-live="polite">
   <div slot="title">Error Example</div>
   <div slot="message">This is an example message</div>
 </gux-toast>
 
-<gux-toast toast-type="error">
+<gux-toast toast-type="error" aria-live="polite">
   <div slot="title">Error Example with Link</div>
   <div slot="message">This is an example message</div>
   <a slot="link" href="#">Link</a>
 </gux-toast>
 
-<gux-toast toast-type="error">
+<gux-toast toast-type="error" aria-live="polite">
   <div slot="message">Error toast without Title</div>
 </gux-toast>
 
@@ -68,56 +68,56 @@
 
 <h2>Gux Info Toast</h2>
 
-<gux-toast toast-type="info">
+<gux-toast toast-type="info" aria-live="polite">
   <div slot="title">Info Example</div>
   <div slot="message">This is an example message</div>
 </gux-toast>
 
-<gux-toast toast-type="info">
+<gux-toast toast-type="info" aria-live="polite">
   <div slot="title">Info Example with Link</div>
   <div slot="message">This is an example message</div>
   <a slot="link" href="#">Link</a>
 </gux-toast>
 
-<gux-toast toast-type="info">
+<gux-toast toast-type="info" aria-live="polite">
   <div slot="message">Info toast without Title</div>
 </gux-toast>
 
-<gux-toast toast-type="info">
+<gux-toast toast-type="info" aria-live="polite">
   <div slot="message">Info toast with Link without Title</div>
   <a slot="link" href="#">Link</a>
 </gux-toast>
 
 <h2>Gux Action Toast</h2>
 
-<gux-toast toast-type="action">
+<gux-toast toast-type="action" aria-live="polite">
   <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
   <div slot="title">1 Action</div>
   <div slot="message">This is an example message</div>
-  <button slot="action-1" type="button" onclick="notify(event)">
+  <button slot="primary-button" type="button" onclick="notify(event)">
     Action 1
   </button>
 </gux-toast>
 
-<gux-toast toast-type="action">
+<gux-toast toast-type="action" aria-live="polite">
   <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
   <div slot="title">2 Actions</div>
   <div slot="message">This is an example message</div>
-  <button slot="action-1" type="button" onclick="notify(event)">
+  <button slot="primary-button" type="button" onclick="notify(event)">
     Action 1
   </button>
-  <button slot="action-2" type="button" onclick="notify(event)">
+  <button slot="secondary-button" type="button" onclick="notify(event)">
     Action 2
   </button>
 </gux-toast>
 
-<gux-toast toast-type="action">
+<gux-toast toast-type="action" aria-live="polite">
   <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
   <div slot="message">Action Toast with no Title</div>
-  <button slot="action-1" type="button" onclick="notify(event)">
+  <button slot="primary-button" type="button" onclick="notify(event)">
     Action 1
   </button>
-  <button slot="action-2" type="button" onclick="notify(event)">
+  <button slot="secondary-button" type="button" onclick="notify(event)">
     Action 2
   </button>
 </gux-toast>

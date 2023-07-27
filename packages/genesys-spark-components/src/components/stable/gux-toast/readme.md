@@ -21,14 +21,14 @@
 
 ## Slots
 
-| Slot         | Description                                                                  |
-| ------------ | ---------------------------------------------------------------------------- |
-| `"action-1"` | toastType is 'action' - Required slot for primary action button in the toast |
-| `"action-2"` | Optional slot for secondary action button in the toast                       |
-| `"icon"`     | Required slot for toast type of action                                       |
-| `"link"`     | Optional slot for a link in any toast except toast type of action            |
-| `"message"`  | Required slot for the toast message                                          |
-| `"title"`    | Optional slot for the toast title                                            |
+| Slot                 | Description                                                       |
+| -------------------- | ----------------------------------------------------------------- |
+| `"icon"`             | Required slot for toast type of action                            |
+| `"link"`             | Optional slot for a link in any toast except toast type of action |
+| `"message"`          | Required slot for the toast message                               |
+| `"primary-button"`   | Required slot for primary action button in an action toast        |
+| `"secondary-button"` | Optional slot for secondary action button in an action toast      |
+| `"title"`            | Optional slot for the toast title                                 |
 
 
 ## Dependencies

@@ -1,4 +1,4 @@
-:host {
+.gux-toast {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -86,44 +86,44 @@
       gap: var(--gse-ui-toast-buttonBar-gap);
     }
   }
-}
 
-:host(.gux-toast-success) {
-  background-color: var(--gse-ui-toast-success-backgroundColor);
+  &.gux-toast-success {
+    background-color: var(--gse-ui-toast-success-backgroundColor);
 
-  .gux-message {
-    color: var(--gse-ui-toast-success-foregroundColor);
+    .gux-message {
+      color: var(--gse-ui-toast-success-foregroundColor);
+    }
   }
-}
 
-:host(.gux-toast-warning) {
-  background-color: var(--gse-ui-toast-warning-backgroundColor);
+  &.gux-toast-warning {
+    background-color: var(--gse-ui-toast-warning-backgroundColor);
 
-  .gux-message {
-    color: var(--gse-ui-toast-warning-foregroundColor);
+    .gux-message {
+      color: var(--gse-ui-toast-warning-foregroundColor);
+    }
   }
-}
 
-:host(.gux-toast-error) {
-  background-color: var(--gse-ui-toast-error-backgroundColor);
+  &.gux-toast-error {
+    background-color: var(--gse-ui-toast-error-backgroundColor);
 
-  .gux-message {
-    color: var(--gse-ui-toast-error-foregroundColor);
+    .gux-message {
+      color: var(--gse-ui-toast-error-foregroundColor);
+    }
   }
-}
 
-:host(.gux-toast-info) {
-  background-color: var(--gse-ui-toast-info-backgroundColor);
+  &.gux-toast-info {
+    background-color: var(--gse-ui-toast-info-backgroundColor);
 
-  .gux-message {
-    color: var(--gse-ui-toast-info-foregroundColor);
+    .gux-message {
+      color: var(--gse-ui-toast-info-foregroundColor);
+    }
   }
-}
 
-:host(.gux-toast-action) {
-  background-color: var(--gse-ui-toast-action-backgroundColor);
+  &.gux-toast-action {
+    background-color: var(--gse-ui-toast-action-backgroundColor);
 
-  .gux-message {
-    color: var(--gse-ui-toast-action-foregroundColor);
+    .gux-message {
+      color: var(--gse-ui-toast-action-foregroundColor);
+    }
   }
 }

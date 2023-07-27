@@ -4,7 +4,6 @@ import {
   Event,
   EventEmitter,
   h,
-  Host,
   JSX,
   Prop,
   State
@@ -20,8 +19,8 @@ import { hasSlot } from '@utils/dom/has-slot';
  * @slot title - Optional slot for the toast title
  * @slot message - Required slot for the toast message
  * @slot link - Optional slot for a link in any toast except toast type of action
- * @slot action-1 - toastType is 'action' - Required slot for primary action button in the toast
- * @slot action-2 - Optional slot for secondary action button in the toast
+ * @slot primary-button - Required slot for primary action button in an action toast
+ * @slot secondary-button - Optional slot for secondary action button in an action toast
  */
 @Component({
   styleUrl: 'gux-toast.scss',
@@ -42,16 +41,16 @@ export class GuxToast {
   hasLink: boolean = false;
 
   @State()
-  actionCount: number = 0;
+  hasPrimaryButton: boolean = false;
+
+  @State()
+  hasSecondaryButton: boolean = false;
 
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.toastType });
 
-    const actions = [
-      hasSlot(this.root, 'action-1'),
-      hasSlot(this.root, 'action-2')
-    ];
-    this.actionCount = actions.filter(x => x).length;
+    this.hasPrimaryButton = hasSlot(this.root, 'primary-button');
+    this.hasSecondaryButton = hasSlot(this.root, 'secondary-button');
 
     this.hasLink = hasSlot(this.root, 'link');
   }
@@ -88,31 +87,25 @@ export class GuxToast {
   }
 
   private renderActions(): JSX.Element {
-    if (this.actionCount === 2) {
-      return (
-        <div class="gux-buttons-bar">
+    return (
+      <div class="gux-buttons-bar">
+        {this.hasSecondaryButton && (
           <gux-button-slot-beta>
-            <slot name="action-2" />
+            <slot name="secondary-button" />
           </gux-button-slot-beta>
-          <gux-button-slot-beta accent="primary">
-            <slot name="action-1" />
-          </gux-button-slot-beta>
-        </div>
-      ) as JSX.Element;
-    } else {
-      return (
-        <div class="gux-buttons-bar">
-          <gux-button-slot-beta accent="tertiary">
-            <slot name="action-1"></slot>
-          </gux-button-slot-beta>
-        </div>
-      ) as JSX.Element;
-    }
+        )}
+        <gux-button-slot-beta
+          accent={this.hasSecondaryButton ? 'primary' : 'tertiary'}
+        >
+          <slot name="primary-button" />
+        </gux-button-slot-beta>
+      </div>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
     return (
-      <Host class={`gux-toast-${this.toastType}`}>
+      <div class={`gux-toast gux-toast-${this.toastType}`}>
         <div class={`gux-icon gux-icon-${this.toastType}`}>
           {this.renderToastIcon()}
         </div>
@@ -130,14 +123,16 @@ export class GuxToast {
 
           {this.toastType !== 'action' && this.hasLink && this.renderLink()}
 
-          {this.toastType === 'action' && this.renderActions()}
+          {this.toastType === 'action' &&
+            this.hasPrimaryButton &&
+            this.renderActions()}
         </div>
 
         <gux-dismiss-button
           position="inherit"
           onClick={this.onDismissClickHandler.bind(this)}
         ></gux-dismiss-button>
-      </Host>
+      </div>
     ) as JSX.Element;
   }
 
