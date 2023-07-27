@@ -1,0 +1,68 @@
+// COMUI-2156 add missing button tokens
+$temp-box-shadow: 0px 4px 6px 1px rgba(35, 57, 92, 0.12);
+$temp-menu-wrapper-borderRadius: 4px;
+$temp-menu-wrapper-borderWidth: 1px;
+$temp-dropdown-button-width: 32px;
+$temp-dropdown-button-padding: 0;
+$temp-dropdown-button-border-top-left-radius: 0;
+$temp-dropdown-button-border-bottom-left-radius: 0;
+$temp-dropdown-button-border-bottom-icon-width: 16px;
+
+@mixin button-text {
+  font-family: var(--gse-ui-button-text-fontFamily);
+  font-weight: var(--gse-ui-button-text-fontWeight);
+  font-size: var(--gse-ui-button-text-fontSize);
+  line-height: var(--gse-ui-button-text-lineHeight);
+}
+
+:host {
+  display: block;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.gux-action-button-container {
+  min-width: 128px;
+
+  & > * {
+    vertical-align: middle;
+  }
+
+  .gux-action-button {
+    width: calc(100% - 33px);
+    margin-right: 1px;
+
+    button {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .gux-dropdown-button {
+    button {
+      width: $temp-dropdown-button-width;
+      padding: $temp-dropdown-button-padding;
+      border-top-left-radius: $temp-dropdown-button-border-top-left-radius;
+      border-bottom-left-radius: $temp-dropdown-button-border-bottom-left-radius;
+
+      gux-icon {
+        width: $temp-dropdown-button-border-bottom-icon-width;
+        height: $temp-dropdown-button-border-bottom-icon-width;
+      }
+    }
+  }
+
+  .gux-list-container {
+    padding: var(--gux-spacing-xs) 0;
+    margin: 0;
+    list-style: none;
+    background-color: var(--gse-ui-menu-wrapper-backgroundColor);
+    border: $temp-menu-wrapper-borderWidth solid
+      var(--gse-ui-menu-wrapper-border);
+    border-radius: $temp-menu-wrapper-borderRadius;
+    box-shadow: $temp-box-shadow;
+  }
+}

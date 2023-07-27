@@ -8,7 +8,7 @@ import { GuxButtonAccent, GuxButtonType } from './gux-button.types';
  */
 
 @Component({
-  styleUrl: 'gux-button.less',
+  styleUrl: 'gux-button.scss',
   tag: 'gux-button',
   shadow: { delegatesFocus: true }
 })

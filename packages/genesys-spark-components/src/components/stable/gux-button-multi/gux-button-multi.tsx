@@ -25,7 +25,7 @@ import {
  * @slot title - slot for icon and button text
  */
 @Component({
-  styleUrl: 'gux-button-multi.less',
+  styleUrl: 'gux-button-multi.scss',
   tag: 'gux-button-multi',
   shadow: true
 })
