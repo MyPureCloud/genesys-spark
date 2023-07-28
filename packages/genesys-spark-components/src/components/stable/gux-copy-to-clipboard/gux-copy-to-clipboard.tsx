@@ -10,7 +10,7 @@ import { GuxCopyToClipboardContent } from './gux-copy-to-clipboard.types';
 
 @Component({
   styleUrl: 'gux-copy-to-clipboard.scss',
-  tag: 'gux-copy-to-clipboard-beta',
+  tag: 'gux-copy-to-clipboard',
   shadow: true
 })
 export class GuxCopyToClipboard {
@@ -100,6 +100,8 @@ export class GuxCopyToClipboard {
         onClick={this.onCopyToClipboard.bind(this)}
       >
         <div class="gux-copy-content">
+          {/* This is a named slot because we don't want it to be possible to slot a text node.
+          Slotted text nodes are not targeted by `::slotted(*)` so they are not styled as expected. */}
           <slot name="content" />
           <gux-icon icon-name="copy" decorative></gux-icon>
         </div>
