@@ -13,8 +13,7 @@ Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBr
 Boolean isPublicBranch = isReleaseBranch || isFeatureBranch || isBetaBranch
 
 String releaseOptions = isBetaBranch ? '--prerelease beta' : ''
-String publishOptions = isBetaBranch ? '--dry-run --tag beta' : ''
-String gitOptions = isBetaBranch ? '--dry-run' : ''
+String publishOptions = isBetaBranch ? '--tag beta' : ''
 
 webappPipeline {
     projectName = 'spark-components'
@@ -109,7 +108,7 @@ webappPipeline {
                     // Make sure we have the latest version of the branch so we can push our changes
                     sh("""
                         git pull
-                        git push ${gitOptions} --follow-tags -u origin ${env.BRANCH_NAME}
+                        git push --follow-tags -u origin ${env.BRANCH_NAME}
                     """)
                 }
             }
