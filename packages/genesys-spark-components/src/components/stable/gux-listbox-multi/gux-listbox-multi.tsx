@@ -66,6 +66,9 @@ export class GuxListboxMulti {
   @Prop()
   filterType: GuxFilterTypes = 'none';
 
+  @Prop()
+  emptyMessage: string;
+
   @State()
   listboxOptions: HTMLGuxOptionMultiElement[] = [];
 
@@ -309,7 +312,9 @@ export class GuxListboxMulti {
     if (this.allListboxOptionsFiltered) {
       return [
         <div class="gux-message-container">
-          <div class="gux-no-matches">{this.i18n('noMatches')}</div>
+          <div class="gux-no-matches">
+            {this.emptyMessage || this.i18n('noMatches')}
+          </div>
         </div>,
         this.renderHiddenSlot()
       ] as JSX.Element;
