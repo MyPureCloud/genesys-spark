@@ -8,8 +8,7 @@ _This migration guide is open to anyone to edit. If you have migrated a componen
 - remove `-beta` from components that have been [promoted to stable](#v3-beta-components-promoted-to-stable-in-v4)
 - add `-legacy` to components that have been [removed from stable](#v3-stable-components-archived-to-legacy-in-v4)
 - change `-beta` to `-legacy` for components that have been [removed from beta](#v3-beta-components-archived-to-legacy-in-v4)
-- implement a new solution for components[removed from v3](#v3-beta-components-removed-from-v4)
-- migrate away from usage of legacy components
+- migrate away from usage of legacy components [removed from v4](#v3-legacy-components-removed-from-v4)
 - [Stable component changes](#stable-component-changes):
   - TODO
 
@@ -30,24 +29,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | V3 tag name           | V4 tag name      |
 | --------------------- | ---------------- |
 | gux-inline-alert-beta | gux-inline-alert |
-| gux-truncate-beta     | gux-truncate     |
-
-### There have been small API changes in these components
-
-| V3 tag name   | V4 tag name |
-| ------------- | ----------- |
-| gux-card-beta | gux-card    |
-
-#### gux-card
-
-The `accent` property now accepts: `'bordered'` | `'raised'` | `'borderless'`
-
-| V3 accent name | V4 accent name equivalent                                                            |
-| -------------- | ------------------------------------------------------------------------------------ |
-| 'outline'      | 'bordered'                                                                           |
-| 'raised'       | 'raised'                                                                             |
-| 'filled'       | <span style="color:orange; font-size:0.75em">_Contact UX Design System Team_ </span> |
-| ---            | 'borderless'                                                                         |
+| gux-popup-beta        | gux-popup        |
 
 ## V3 Stable Components Archived to Legacy in V4
 
@@ -84,6 +66,23 @@ Action: _(required)_ remove the `-beta` tag and add `-legacy` to the tag name of
 ```
 
 If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of replacing the `-beta` suffix with `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released. Contact the Core UI team if you need help migrating away from these components.
+
+## V3 Legacy Components Components Removed from V4
+
+| V3 tag name                | V4 stable equivalent (requires API changes) | V3 Migration Guide                         |
+| -------------------------- | ------------------------------------------- | ------------------------------------------ |
+| gux-accordion-legacy       | gux-accordion                               | [link](../v3/gux-accordion-legacy.md)      |
+| gux-action-button-legacy   | gux-action-button                           | [link](-../v3/gux-action-button-legacy.md) |
+| gux-action-list-legacy     | gux-list                                    | [link](-../v3/gux-list-legacy.md)          |
+| gux-button-multi-legacy    | gux-button-multi                            | [link](-../v3/gux-button-multi-legacy.md)  |
+| gux-command-palette-legacy | N/A                                         | N/A                                        |
+| gux-dropdown-legacy        | gux-dropdown                                | [link](-../v3/gux-dropdown-legacy.md)      |
+| gux-form-field-legacy      | gux-form-field-{type}                       | [link](-../v3/gux-form-field-legacy.md)    |
+| gux-list-legacy            | gux-list                                    | [link](-../v3/gux-list-legacy.md)          |
+| gux-panel-frame-legacy     | N/A                                         | N/A                                        |
+| gux-side-panel-legacy      | N/A                                         | N/A                                        |
+| gux-tabs-advanced          | gux-tabs, gux-tabs-advanced                 | [link](-../v3/gux-tabs-legacy.md)          |
+| gux-text-label-legacy      | gux-form-field-{type}                       | [link](-../v3/gux-form-field-legacy.md)    |
 
 ## Stable Component Changes
 

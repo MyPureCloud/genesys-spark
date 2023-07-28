@@ -31,7 +31,7 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
-        <gux-popup-beta>
+        <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
@@ -45,7 +45,7 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
           <div class="gux-listbox-container" slot="popup">
             <slot></slot>
           </div>
-        </gux-popup-beta>
+        </gux-popup>
       </div>
     </mock:shadow-root>
     <gux-listbox-multi aria-describedby="gux-help-i" aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
@@ -115,7 +115,7 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
-      <gux-popup-beta>
+      <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
             <div class="gux-field-content">
@@ -129,7 +129,7 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
         <div class="gux-listbox-container" slot="popup">
           <slot></slot>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-describedby="gux-help-i" aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
@@ -192,7 +192,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
-        <gux-popup-beta>
+        <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
@@ -206,7 +206,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           <div class="gux-listbox-container" slot="popup">
             <slot></slot>
           </div>
-        </gux-popup-beta>
+        </gux-popup>
       </div>
     </mock:shadow-root>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
@@ -271,7 +271,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
   <gux-dropdown-multi-beta disabled="">
     <mock:shadow-root>
       <div class="gux-dropdown-container">
-        <gux-popup-beta disabled="">
+        <gux-popup disabled="">
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
               <div class="gux-field-content">
@@ -285,7 +285,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           <div class="gux-listbox-container" slot="popup">
             <slot></slot>
           </div>
-        </gux-popup-beta>
+        </gux-popup>
       </div>
     </mock:shadow-root>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
@@ -353,7 +353,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
   <gux-dropdown-multi-beta required="">
     <mock:shadow-root>
       <div class="gux-dropdown-container">
-        <gux-popup-beta>
+        <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
@@ -367,7 +367,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           <div class="gux-listbox-container" slot="popup">
             <slot></slot>
           </div>
-        </gux-popup-beta>
+        </gux-popup>
       </div>
     </mock:shadow-root>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
@@ -432,7 +432,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
-        <gux-popup-beta>
+        <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
@@ -446,7 +446,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           <div class="gux-listbox-container" slot="popup">
             <slot></slot>
           </div>
-        </gux-popup-beta>
+        </gux-popup>
       </div>
     </mock:shadow-root>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
@@ -511,7 +511,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
-        <gux-popup-beta>
+        <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
@@ -525,7 +525,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           <div class="gux-listbox-container" slot="popup">
             <slot></slot>
           </div>
-        </gux-popup-beta>
+        </gux-popup>
       </div>
     </mock:shadow-root>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
@@ -590,7 +590,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
-        <gux-popup-beta>
+        <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
@@ -604,7 +604,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           <div class="gux-listbox-container" slot="popup">
             <slot></slot>
           </div>
-        </gux-popup-beta>
+        </gux-popup>
       </div>
     </mock:shadow-root>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
@@ -669,7 +669,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
   <gux-dropdown-multi-beta>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
-        <gux-popup-beta>
+        <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
@@ -683,7 +683,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           <div class="gux-listbox-container" slot="popup">
             <slot></slot>
           </div>
-        </gux-popup-beta>
+        </gux-popup>
       </div>
     </mock:shadow-root>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
@@ -747,7 +747,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
-      <gux-popup-beta>
+      <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
             <div class="gux-field-content">
@@ -761,7 +761,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         <div class="gux-listbox-container" slot="popup">
           <slot></slot>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
@@ -820,7 +820,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
   </mock:shadow-root>
   <gux-dropdown disabled="">
     <mock:shadow-root>
-      <gux-popup-beta disabled="">
+      <gux-popup disabled="">
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
             <div class="gux-field-content">
@@ -834,7 +834,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         <div class="gux-listbox-container" slot="popup">
           <slot></slot>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
@@ -896,7 +896,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
   </mock:shadow-root>
   <gux-dropdown required="">
     <mock:shadow-root>
-      <gux-popup-beta>
+      <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
             <div class="gux-field-content">
@@ -910,7 +910,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         <div class="gux-listbox-container" slot="popup">
           <slot></slot>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
@@ -969,7 +969,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
-      <gux-popup-beta>
+      <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
             <div class="gux-field-content">
@@ -983,7 +983,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         <div class="gux-listbox-container" slot="popup">
           <slot></slot>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
@@ -1042,7 +1042,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
-      <gux-popup-beta>
+      <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
             <div class="gux-field-content">
@@ -1056,7 +1056,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         <div class="gux-listbox-container" slot="popup">
           <slot></slot>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
@@ -1115,7 +1115,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
-      <gux-popup-beta>
+      <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
             <div class="gux-field-content">
@@ -1129,7 +1129,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         <div class="gux-listbox-container" slot="popup">
           <slot></slot>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>
@@ -1188,7 +1188,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
   </mock:shadow-root>
   <gux-dropdown>
     <mock:shadow-root>
-      <gux-popup-beta>
+      <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
             <div class="gux-field-content">
@@ -1202,7 +1202,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         <div class="gux-listbox-container" slot="popup">
           <slot></slot>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
       <mock:shadow-root>

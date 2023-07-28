@@ -34,7 +34,7 @@ Input for international phone numbers
 - [gux-region-icon](./components/gux-region-icon)
 - [gux-option](../../stable/gux-listbox/options/gux-option)
 - [gux-listbox](../../stable/gux-listbox)
-- [gux-popup-beta](../gux-popup-beta)
+- [gux-popup](../../stable/gux-popup)
 
 ### Graph
 ```mermaid
@@ -43,7 +43,7 @@ graph TD;
   gux-phone-input-beta --> gux-region-icon
   gux-phone-input-beta --> gux-option
   gux-phone-input-beta --> gux-listbox
-  gux-phone-input-beta --> gux-popup-beta
+  gux-phone-input-beta --> gux-popup
   gux-option --> gux-truncate
   gux-truncate --> gux-tooltip
   gux-listbox --> gux-radial-loading

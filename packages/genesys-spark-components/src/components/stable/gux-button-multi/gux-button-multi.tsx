@@ -167,7 +167,7 @@ export class GuxButtonMulti {
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta expanded={this.isOpen}>
+      <gux-popup expanded={this.isOpen}>
         <div slot="target" class="gux-button-multi-container">
           <gux-button-slot-beta
             class="gux-dropdown-button"
@@ -195,7 +195,7 @@ export class GuxButtonMulti {
             <slot />
           </gux-list>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     ) as JSX.Element;
   }
 }
