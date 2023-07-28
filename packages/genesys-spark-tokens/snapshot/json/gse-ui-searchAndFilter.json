@@ -1,0 +1,38 @@
+{
+  "search": {
+    "counter": {
+      "default": {
+        "foreground_color": "#626e84"
+      },
+      "hover": {
+        "foreground_color": "#4856CB"
+      },
+      "divider": {
+        "border": {
+          "color": "#a3a7b0",
+          "width": 1,
+          "style": "solid"
+        }
+      },
+      "text": {
+        "fontFamily": "Noto Sans",
+        "fontWeight": 400,
+        "lineHeight": "18px",
+        "fontSize": "12px"
+      },
+      "gap": "4px",
+      "icon": {
+        "height": "16px",
+        "width": "16px"
+      }
+    },
+    "match": {
+      "first_level": {
+        "background_color": "#B5E2E8"
+      },
+      "subsequent_level": {
+        "background_color": "#DAF0F4"
+      }
+    }
+  }
+}

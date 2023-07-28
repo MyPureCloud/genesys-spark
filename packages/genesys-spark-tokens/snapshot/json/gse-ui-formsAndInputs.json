@@ -487,5 +487,49 @@
       "border_radius": "16px",
       "offset": "1px"
     }
+  },
+  "slider": {
+    "handle": {
+      "width": "20px",
+      "height": "20px",
+      "default": {
+        "background_color": "#4856CB"
+      },
+      "hover": {
+        "background_color": "#3742A2"
+      },
+      "active": {
+        "background_color": "#252E78"
+      },
+      "disabled": {
+        "background_color": "#4856CB"
+      },
+      "border_radius": "100%"
+    },
+    "disabled": {
+      "opacity": 0.5
+    },
+    "label": {
+      "text": {
+        "fontFamily": "Noto Sans",
+        "fontWeight": 600,
+        "lineHeight": "20px",
+        "fontSize": "14px"
+      },
+      "foreground_color": "#1b2c48"
+    },
+    "bar": {
+      "selected": {
+        "background_color": "#4856CB"
+      },
+      "default": {
+        "background_color": "#c6c8ce"
+      },
+      "height": "4px"
+    },
+    "gap": "16px",
+    "focus_ring": {
+      "border_radius": "100%"
+    }
   }
 }
