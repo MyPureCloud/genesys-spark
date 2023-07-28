@@ -541,13 +541,13 @@ export class GuxDropdown {
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta
+      <gux-popup
         expanded={this.expanded && (!this.loading || this.isFilterable())}
         disabled={this.disabled}
       >
         {this.renderTarget()}
         {this.renderPopup()}
-      </gux-popup-beta>
+      </gux-popup>
     ) as JSX.Element;
   }
 }
