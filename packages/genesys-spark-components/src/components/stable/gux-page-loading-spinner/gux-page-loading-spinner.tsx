@@ -3,7 +3,7 @@ import { Component, Element, Prop, h, JSX } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 
 @Component({
-  styleUrl: 'gux-page-loading-spinner.less',
+  styleUrl: 'gux-page-loading-spinner.scss',
   tag: 'gux-page-loading-spinner',
   shadow: true
 })
