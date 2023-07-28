@@ -60,7 +60,7 @@
   },
   "types": "dist/types/index.d.ts",
   "dependencies": {
-    "@floating-ui/dom": "^1.4.3",
+    "@floating-ui/dom": "1.4.3",
     "@popperjs/core": "^2.11.8",
     "google-libphonenumber": "^3.2.32",
     "intl-messageformat": "^10.3.5",
