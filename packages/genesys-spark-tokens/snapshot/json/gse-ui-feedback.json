@@ -53,6 +53,48 @@
       "color": "#23395c1a",
       "type": "dropShadow"
     },
-    "icon": "24px"
+    "icon": "24px",
+    "wrapping_width": "320 px",
+    "stacking": {
+      "gap": "4px"
+    }
+  },
+  "modal": {
+    "close_button_color": "#626e84",
+    "header_color": "#1b2c48",
+    "background_color": "#ffffff",
+    "header": {
+      "gap": "12px"
+    },
+    "padding": "32px",
+    "gap": "16px",
+    "heading": {
+      "fontFamily": "Urbanist",
+      "lineHeight": "32px",
+      "fontSize": "24px",
+      "fontWeight": 700,
+      "letterSpacing": "2%"
+    },
+    "icon": "32px",
+    "small": {
+      "width": "420 px"
+    },
+    "medium": {
+      "width": "680 px"
+    },
+    "large": {
+      "width": "800 px"
+    },
+    "button_bar": {
+      "gap": "8px"
+    },
+    "box_shadow": {
+      "x": 0,
+      "y": "6px",
+      "blur": "8px",
+      "spread": "1px",
+      "color": "#23395c26",
+      "type": "dropShadow"
+    }
   }
 }
