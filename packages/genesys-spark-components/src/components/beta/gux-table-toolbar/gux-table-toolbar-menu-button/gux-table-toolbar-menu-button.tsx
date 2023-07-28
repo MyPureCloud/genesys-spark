@@ -111,7 +111,7 @@ export class GuxTableToolbarMenuButton {
   render(): JSX.Element {
     return (
       <Host class={{ 'gux-show-menu': this.showMenu }}>
-        <gux-popup-beta expanded={this.expanded}>
+        <gux-popup expanded={this.expanded}>
           <div slot="target" class="gux-toolbar-menu-container">
             <gux-button-slot-beta class="gux-menu-button">
               <button
@@ -133,7 +133,7 @@ export class GuxTableToolbarMenuButton {
               <slot />
             </gux-list>
           </div>
-        </gux-popup-beta>
+        </gux-popup>
       </Host>
     ) as JSX.Element;
   }

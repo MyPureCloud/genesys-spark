@@ -65,11 +65,7 @@
     "google-libphonenumber": "^3.2.32",
     "intl-messageformat": "^10.3.5",
     "requestanimationframe-timer": "^3.0.3",
-    "sortablejs": "^1.15.0",
-    "stencil-click-outside": "^1.8.0",
-    "vega": "5.22.1",
-    "vega-embed": "6.21.2",
-    "vega-lite": "5.5.0"
+    "sortablejs": "^1.15.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.8",

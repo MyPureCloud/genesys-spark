@@ -49,7 +49,7 @@ graph TD;
   gux-dropdown --> gux-truncate
   gux-dropdown --> gux-icon
   gux-dropdown --> gux-radial-loading
-  gux-dropdown --> gux-popup-beta
+  gux-dropdown --> gux-popup
   gux-truncate --> gux-tooltip
   gux-listbox --> gux-radial-loading
   gux-option --> gux-truncate

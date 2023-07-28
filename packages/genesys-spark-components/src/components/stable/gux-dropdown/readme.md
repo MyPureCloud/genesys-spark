@@ -52,7 +52,7 @@ gux-dropdown-types.ts, then following the resulting compiler errors.
 - [gux-truncate](../gux-truncate)
 - [gux-icon](../gux-icon)
 - [gux-radial-loading](../gux-radial-loading)
-- [gux-popup-beta](../../beta/gux-popup-beta)
+- [gux-popup](../gux-popup)
 
 ### Graph
 ```mermaid
@@ -60,7 +60,7 @@ graph TD;
   gux-dropdown --> gux-truncate
   gux-dropdown --> gux-icon
   gux-dropdown --> gux-radial-loading
-  gux-dropdown --> gux-popup-beta
+  gux-dropdown --> gux-popup
   gux-truncate --> gux-tooltip
   gux-pagination-items-per-page --> gux-dropdown
   gux-pagination-items-per-page-beta --> gux-dropdown

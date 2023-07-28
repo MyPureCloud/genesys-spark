@@ -153,7 +153,7 @@ export class GuxAdvancedDropdown {
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta expanded={this.opened} disabled={this.disabled}>
+      <gux-popup expanded={this.opened} disabled={this.disabled}>
         <div
           slot="target"
           class="gux-select-field"
@@ -204,7 +204,7 @@ export class GuxAdvancedDropdown {
             </div>
           </div>
         </div>
-      </gux-popup-beta>
+      </gux-popup>
     ) as JSX.Element;
   }
 

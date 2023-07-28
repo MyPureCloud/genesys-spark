@@ -385,7 +385,7 @@ export class GuxTimePickerBeta {
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta
+      <gux-popup
         class={{
           'gux-time-picker': true,
           'gux-error': this.hasError
@@ -395,7 +395,7 @@ export class GuxTimePickerBeta {
       >
         {this.renderTarget()}
         {this.renderPopup()}
-      </gux-popup-beta>
+      </gux-popup>
     ) as JSX.Element;
   }
 }

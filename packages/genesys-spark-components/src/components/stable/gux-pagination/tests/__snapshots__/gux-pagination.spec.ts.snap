@@ -20,7 +20,7 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -36,7 +36,7 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -146,7 +146,7 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 50 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -162,7 +162,7 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -272,7 +272,7 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 75 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -288,7 +288,7 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -398,7 +398,7 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 100 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -414,7 +414,7 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -524,7 +524,7 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -540,7 +540,7 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -650,7 +650,7 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -666,7 +666,7 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -776,7 +776,7 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 50 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -792,7 +792,7 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -902,7 +902,7 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 75 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -918,7 +918,7 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -1028,7 +1028,7 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 100 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -1044,7 +1044,7 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -1206,7 +1206,7 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -1222,7 +1222,7 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -1332,7 +1332,7 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -1348,7 +1348,7 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
@@ -1458,7 +1458,7 @@ exports[`gux-pagination #render should render current page as 1 when total items
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <mock:shadow-root>
-                  <gux-popup-beta>
+                  <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
@@ -1474,7 +1474,7 @@ exports[`gux-pagination #render should render current page as 1 when total items
                     <div class="gux-listbox-container" slot="popup">
                       <slot></slot>
                     </div>
-                  </gux-popup-beta>
+                  </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
                   <mock:shadow-root>
