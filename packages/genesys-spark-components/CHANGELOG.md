@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.97.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.96.0...v3.97.0) (2023-07-29)
+
+
+### Features
+
+* **listbox:** made empty message configurable ([fdad865](https://github.com/MyPureCloud/genesys-webcomponents/commit/fdad8655938a551d7fe5e70141350c29eb09ff04))
+
 ## [3.96.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.95.0...v3.96.0) (2023-07-26)
 
 
