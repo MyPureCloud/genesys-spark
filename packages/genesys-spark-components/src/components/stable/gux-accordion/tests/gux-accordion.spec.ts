@@ -23,7 +23,7 @@ const html = `
     <h3 slot="subheader">This is the subheader</h3>
     <gux-icon
       slot="icon"
-      icon-name="add-user"
+      icon-name="user-add"
       screenreader-text="add John Smith to contact list"
     ></gux-icon>
     <div slot="content">Sample Content</div>
@@ -33,7 +33,7 @@ const html = `
     <h3 slot="subheader">This is the subheader</h3>
     <gux-icon
       slot="icon"
-      icon-name="add-user"
+      icon-name="user-add"
       screenreader-text="add John Smith to contact list"
     ></gux-icon>
     <div slot="content">Sample Content</div>

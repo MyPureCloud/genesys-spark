@@ -14,14 +14,14 @@
     </p>
 
     <h2>Accessibility</h2>
-    <gux-icon icon-name="cc-delivery" decorative></gux-icon>
+    <gux-icon icon-name="bus" decorative></gux-icon>
     <p>
       Set the <strong>decorative</strong> attrribute if the icon does not convey
       information about the page and is only for decoration
     </p>
 
     <gux-icon
-      icon-name="add-user"
+      icon-name="user-add"
       screenreader-text="add John Smith to contact list"
     ></gux-icon>
     <p>
@@ -29,7 +29,7 @@
       information to the user that would not otherwise be available
     </p>
 
-    <gux-icon icon-name="cc-disconnected-system"></gux-icon>
+    <gux-icon icon-name="fa/bullseye-regular"></gux-icon>
     <p>
       If neither <strong>decorative</strong> or
       <strong>screenreader-text</strong>
@@ -37,7 +37,7 @@
     </p>
 
     <h2>Styling</h2>
-    <gux-icon id="styled" icon-name="add-user" decorative></gux-icon>
+    <gux-icon id="styled" icon-name="user-add" decorative></gux-icon>
     <p>
       You can use the <strong>color</strong>, <strong>height</strong> and
       <strong>width</strong> css properties to style your icon
@@ -45,33 +45,33 @@
 
     <h2>Caching</h2>
     <div>
-      <gux-icon icon-name="align-left" decorative></gux-icon>
-      <gux-icon icon-name="align-center" decorative></gux-icon>
-      <gux-icon icon-name="align-right" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-left-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-center-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-right-regular" decorative></gux-icon>
     </div>
     <hr />
     <div>
-      <gux-icon icon-name="align-left" decorative></gux-icon>
-      <gux-icon icon-name="align-center" decorative></gux-icon>
-      <gux-icon icon-name="align-right" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-left-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-center-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-right-regular" decorative></gux-icon>
     </div>
     <hr />
     <div>
-      <gux-icon icon-name="align-left" decorative></gux-icon>
-      <gux-icon icon-name="align-center" decorative></gux-icon>
-      <gux-icon icon-name="align-right" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-left-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-center-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-right-regular" decorative></gux-icon>
     </div>
     <hr />
     <div>
-      <gux-icon icon-name="align-left" decorative></gux-icon>
-      <gux-icon icon-name="align-center" decorative></gux-icon>
-      <gux-icon icon-name="align-right" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-left-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-center-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-right-regular" decorative></gux-icon>
     </div>
     <hr />
     <div>
-      <gux-icon icon-name="align-left" decorative></gux-icon>
-      <gux-icon icon-name="align-center" decorative></gux-icon>
-      <gux-icon icon-name="align-right" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-left-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-center-regular" decorative></gux-icon>
+      <gux-icon icon-name="fa/align-right-regular" decorative></gux-icon>
     </div>
     <hr />
     <div>
@@ -119,7 +119,7 @@
   const shadowRoot = hostElement.attachShadow({ mode: 'open' });
   const guxIcon = document.createElement('gux-icon');
 
-  guxIcon.setAttribute('icon-name', 'add-user');
+  guxIcon.setAttribute('icon-name', 'user-add');
   guxIcon.setAttribute('screenreader-text', 'test');
   guxIcon.setAttribute('style', 'width: 50px; height: 50px;');
   shadowRoot.appendChild(guxIcon);
@@ -148,10 +148,5 @@
     height: 100px;
     margin: 5px;
     text-align: center;
-  }
-
-  .icon-example-group {
-    margin: 2px;
-    border: 2px solid #d7dce5;
   }
 </style>
