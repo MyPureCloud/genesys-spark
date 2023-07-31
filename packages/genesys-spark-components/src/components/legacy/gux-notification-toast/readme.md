@@ -1,4 +1,4 @@
-# gux-notification-toast
+# gux-notification-toast-legacy
 
 <!-- Auto Generated Below -->
 
