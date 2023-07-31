@@ -9,7 +9,7 @@ describe('gux-calendar', () => {
 
   beforeEach(async () => {
     component = new GuxCalendar();
-    component.input = {
+    component.calendarSelect = {
       emit: jest.fn()
     };
     componentRoot = component.root as any;
@@ -130,12 +130,12 @@ describe('gux-calendar', () => {
         spyOn(component, 'setValue').and.callFake(() => {
           return;
         });
-        spyOn(component, 'emitInput').and.callFake(() => {
+        spyOn(component, 'emitCalendarSelect').and.callFake(() => {
           return;
         });
         await component.onDateClick(testDate);
         expect(component.setValue).toHaveBeenCalledWith(testDate);
-        expect(component.emitInput).toHaveBeenCalled();
+        expect(component.emitCalendarSelect).toHaveBeenCalled();
       });
       it('onDateClick with range mode', async () => {
         component.mode = CalendarModes.Range;
@@ -145,7 +145,7 @@ describe('gux-calendar', () => {
         spyOn(utils, 'removeClassToElements').and.callFake(() => {
           return;
         });
-        spyOn(component, 'emitInput').and.callFake(() => {
+        spyOn(component, 'emitCalendarSelect').and.callFake(() => {
           return;
         });
         spyOn(component, 'updateRangeElements').and.callFake(() => {
@@ -153,7 +153,7 @@ describe('gux-calendar', () => {
         });
         await component.onDateClick(rangeStart);
         await component.onDateClick(rangeEnd);
-        expect(component.emitInput).toHaveBeenCalled();
+        expect(component.emitCalendarSelect).toHaveBeenCalled();
       });
       it('onDateMouseEnter', () => {
         spyOn(component, 'updateRangeElements').and.callFake(() => {
@@ -173,7 +173,7 @@ describe('gux-calendar', () => {
         spyOn(component, 'setValue').and.callFake(() => {
           return;
         });
-        spyOn(component, 'emitInput').and.callFake(() => {
+        spyOn(component, 'emitCalendarSelect').and.callFake(() => {
           return;
         });
         const initialPreviewValue = rangeEnd;
@@ -207,7 +207,7 @@ describe('gux-calendar', () => {
         await component.onKeyDown(event);
         jest.runAllTimers();
         expect(component.setValue).toHaveBeenCalledWith(initialPreviewValue);
-        expect(component.emitInput).toHaveBeenCalled();
+        expect(component.emitCalendarSelect).toHaveBeenCalled();
       });
     });
   });
@@ -217,8 +217,8 @@ describe('gux-calendar', () => {
     it('onInput', () => {
       const value = '2020-01-15';
       component.value = value;
-      component.emitInput();
-      expect(component.input.emit).toHaveBeenCalledWith(value);
+      component.emitCalendarSelect();
+      expect(component.calendarSelect.emit).toHaveBeenCalledWith(value);
     });
   });
 

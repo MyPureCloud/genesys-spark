@@ -31,6 +31,10 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-inline-alert-beta | gux-inline-alert |
 | gux-popup-beta        | gux-popup        |
 
+#### gux-calendar
+
+The `input` event has been renamed `calendarSelect`
+
 ## V3 Stable Components Archived to Legacy in V4
 
 | V3 tag name | V4 tag name        | V4 stable equivalent (requires API changes) | Migration Guide                 |

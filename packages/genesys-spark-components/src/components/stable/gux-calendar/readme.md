@@ -19,9 +19,9 @@ This is a simple calendar component, that allows the user to select a date.
 
 ## Events
 
-| Event   | Description                        | Type                  |
-| ------- | ---------------------------------- | --------------------- |
-| `input` | Triggered when user selects a date | `CustomEvent<string>` |
+| Event            | Description                        | Type                  |
+| ---------------- | ---------------------------------- | --------------------- |
+| `calendarSelect` | Triggered when user selects a date | `CustomEvent<string>` |
 
 
 ## Methods
