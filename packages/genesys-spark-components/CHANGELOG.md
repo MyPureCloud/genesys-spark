@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.98.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.97.0...v3.98.0) (2023-08-01)
+
+
+### Features
+
+* **gux-tag-beta truncation:** fixed gux-tooltip-text to truncate properly ([5b3ff47](https://github.com/MyPureCloud/genesys-webcomponents/commit/5b3ff47a36bbdea9e721de0aa6a2d3b9c231ac9f))
+* **tooltip ellipsis fix:** tooltip show/hide logic fix ([dfbd564](https://github.com/MyPureCloud/genesys-webcomponents/commit/dfbd56448b84987ee9b846ac89940682b3a7b7b2))
+
 ## [3.97.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.96.0...v3.97.0) (2023-07-29)
 
 
