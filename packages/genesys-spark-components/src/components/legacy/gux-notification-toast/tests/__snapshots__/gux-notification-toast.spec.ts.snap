@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-notification-toast-legacy #render should render alert notification toast 1`] = `
+<gux-notification-toast-legacy accent="alert">
+  <mock:shadow-root>
+    <div class="gux-alert gux-icon">
+      <slot name="icon"></slot>
+    </div>
+    <div class="gux-content">
+      <gux-truncate class="gux-title" max-lines="1">
+        <slot name="title"></slot>
+      </gux-truncate>
+      <gux-truncate class="gux-message" max-lines="2">
+        <slot name="message"></slot>
+      </gux-truncate>
+    </div>
+    <gux-dismiss-button></gux-dismiss-button>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <div slot="title">
+    Title
+  </div>
+  <div slot="message">
+    This is the message
+  </div>
+</gux-notification-toast-legacy>
+`;
+
+exports[`gux-notification-toast-legacy #render should render neutral notification toast 1`] = `
+<gux-notification-toast-legacy accent="neutral">
+  <mock:shadow-root>
+    <div class="gux-icon gux-neutral">
+      <slot name="icon"></slot>
+    </div>
+    <div class="gux-content">
+      <gux-truncate class="gux-title" max-lines="1">
+        <slot name="title"></slot>
+      </gux-truncate>
+      <gux-truncate class="gux-message" max-lines="2">
+        <slot name="message"></slot>
+      </gux-truncate>
+    </div>
+    <gux-dismiss-button></gux-dismiss-button>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <div slot="title">
+    Title
+  </div>
+  <div slot="message">
+    This is the message
+  </div>
+</gux-notification-toast-legacy>
+`;
+
+exports[`gux-notification-toast-legacy #render should render positive notification toast 1`] = `
+<gux-notification-toast-legacy accent="positive">
+  <mock:shadow-root>
+    <div class="gux-icon gux-positive">
+      <slot name="icon"></slot>
+    </div>
+    <div class="gux-content">
+      <gux-truncate class="gux-title" max-lines="1">
+        <slot name="title"></slot>
+      </gux-truncate>
+      <gux-truncate class="gux-message" max-lines="2">
+        <slot name="message"></slot>
+      </gux-truncate>
+    </div>
+    <gux-dismiss-button></gux-dismiss-button>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <div slot="title">
+    Title
+  </div>
+  <div slot="message">
+    This is the message
+  </div>
+</gux-notification-toast-legacy>
+`;
+
+exports[`gux-notification-toast-legacy #render should render warning notification toast 1`] = `
+<gux-notification-toast-legacy accent="warning">
+  <mock:shadow-root>
+    <div class="gux-icon gux-warning">
+      <slot name="icon"></slot>
+    </div>
+    <div class="gux-content">
+      <gux-truncate class="gux-title" max-lines="1">
+        <slot name="title"></slot>
+      </gux-truncate>
+      <gux-truncate class="gux-message" max-lines="2">
+        <slot name="message"></slot>
+      </gux-truncate>
+    </div>
+    <gux-dismiss-button></gux-dismiss-button>
+  </mock:shadow-root>
+  <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
+  <div slot="title">
+    Title
+  </div>
+  <div slot="message">
+    This is the message
+  </div>
+</gux-notification-toast-legacy>
+`;

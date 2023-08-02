@@ -47,11 +47,12 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-dropdown](../gux-dropdown)
- - [gux-notification-toast](../gux-notification-toast)
+ - [gux-notification-toast-legacy](../../legacy/gux-notification-toast)
  - [gux-option](../gux-listbox/options/gux-option)
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
  - [gux-option-multi](../gux-listbox-multi/gux-option-multi)
- - [gux-simple-toast](../gux-simple-toast)
+ - [gux-simple-toast-legacy](../../legacy/gux-simple-toast)
+ - [gux-toast](../gux-toast)
 
 ### Depends on
 
@@ -62,11 +63,12 @@ Type: `Promise<void>`
 graph TD;
   gux-truncate --> gux-tooltip
   gux-dropdown --> gux-truncate
-  gux-notification-toast --> gux-truncate
+  gux-notification-toast-legacy --> gux-truncate
   gux-option --> gux-truncate
   gux-option-icon --> gux-truncate
   gux-option-multi --> gux-truncate
-  gux-simple-toast --> gux-truncate
+  gux-simple-toast-legacy --> gux-truncate
+  gux-toast --> gux-truncate
   style gux-truncate fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

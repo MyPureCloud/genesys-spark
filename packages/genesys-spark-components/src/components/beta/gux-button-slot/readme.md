@@ -30,6 +30,7 @@
  - [gux-table-beta](../gux-table)
  - [gux-table-toolbar-custom-action](../gux-table-toolbar/gux-table-toolbar-custom-action)
  - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
+ - [gux-toast](../../stable/gux-toast)
 
 ### Graph
 ```mermaid
@@ -44,6 +45,7 @@ graph TD;
   gux-table-beta --> gux-button-slot-beta
   gux-table-toolbar-custom-action --> gux-button-slot-beta
   gux-table-toolbar-menu-button --> gux-button-slot-beta
+  gux-toast --> gux-button-slot-beta
   style gux-button-slot-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

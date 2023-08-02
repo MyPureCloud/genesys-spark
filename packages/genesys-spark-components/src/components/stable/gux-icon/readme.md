@@ -69,6 +69,7 @@
  - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-tag-beta](../../beta/gux-tag)
  - [gux-time-picker-beta](../../beta/gux-time-picker)
+ - [gux-toast](../gux-toast)
  - [gux-toggle](../gux-toggle)
  - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
 
@@ -126,6 +127,7 @@ graph TD;
   gux-table-toolbar-menu-button --> gux-icon
   gux-tag-beta --> gux-icon
   gux-time-picker-beta --> gux-icon
+  gux-toast --> gux-icon
   gux-toggle --> gux-icon
   gux-toggle-slider --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px

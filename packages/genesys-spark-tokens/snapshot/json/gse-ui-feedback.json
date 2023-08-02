@@ -54,7 +54,7 @@
       "type": "dropShadow"
     },
     "icon": "24px",
-    "wrapping_width": "320 px",
+    "wrapping_width": "320px",
     "stacking": {
       "gap": "4px"
     }
