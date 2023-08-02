@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.4...v4.0.0-beta.0) (2023-08-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* **jenkins:** V4 designs in this branch could break layouts
+
+### Features
+
+* **comui-1837:** removed legacy components for V4 release ([6ba92db](https://github.com/MyPureCloud/genesys-webcomponents/commit/6ba92db3716095a48b0f3095ab622d53c6f30b12))
+* **example-app:** added urbanist font to example app ([6a354f8](https://github.com/MyPureCloud/genesys-webcomponents/commit/6a354f87deab04851fee667cd0d36a52a8c36baa))
+* **gux-button:** add tokens ([229d69b](https://github.com/MyPureCloud/genesys-webcomponents/commit/229d69b2bf01d84f08f2fd008a627744489743c0))
+* **toast:** creating gux-toast and moving old toast components to legacy ([04826c9](https://github.com/MyPureCloud/genesys-webcomponents/commit/04826c9b23dbce759307ca1bfe51186a319c0fc7))
+* **visualizations:** removed all visualization components from component library ([7c660f2](https://github.com/MyPureCloud/genesys-webcomponents/commit/7c660f21b19e9f482d18eeba99f3de12ff58fdca))
+
+
+### Bug Fixes
+
+* **a11y:** fixed check-a11y script ([a088e87](https://github.com/MyPureCloud/genesys-webcomponents/commit/a088e870e8904647ff1a88104fb89834a3249ed2))
+* **pr-comment:** addressed PR comment ([5f4a660](https://github.com/MyPureCloud/genesys-webcomponents/commit/5f4a660b42965c58f13471b4eabb5f96d472a160))
+* **style-variables:** removed unprefixed spacing variables ([8cf14d8](https://github.com/MyPureCloud/genesys-webcomponents/commit/8cf14d87a57def5933cc0c3246e76cf417968b63))
+* **typo:** removed references to fuscha a typo of fuschia ([0155c27](https://github.com/MyPureCloud/genesys-webcomponents/commit/0155c27981aebe5c2832bf8b9540e52e4b156183))
+
+
+### ci
+
+* **jenkins:** setup for V4 release ([9c41371](https://github.com/MyPureCloud/genesys-webcomponents/commit/9c41371a8bc5478ac7951d3f0765fe46c3b4e4ac))
+
 ### [3.93.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.3...v3.93.4) (2023-07-12)
 
 ### [3.93.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.93.2...v3.93.3) (2023-07-12)
