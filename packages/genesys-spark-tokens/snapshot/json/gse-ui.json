@@ -2,6 +2,7 @@
   "card": {
     "background-color": "#ffffff",
     "border_radius": "16px",
+    "border_radius-copy": "16px",
     "default": {
       "border": {
         "color": "#c6c8ce",

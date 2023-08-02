@@ -85,6 +85,9 @@
       },
       "spinbutton_icon": {
         "size": "16px"
+      },
+      "focus_selection": {
+        "background_color": "#7B88F7"
       }
     },
     "label": {

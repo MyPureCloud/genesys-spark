@@ -2,13 +2,13 @@ import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 
-import { getBaseSvgHtml, getRootIconName } from './gux-icon.service';
+import { getBaseSvgHtml } from './gux-icon.service';
 import { GuxIconIconName } from './gux-icon.types';
 import { logError } from '@utils/error/log-error';
 
 @Component({
   assetsDirs: ['icons'],
-  styleUrl: 'gux-icon.less',
+  styleUrl: 'gux-icon.scss',
   tag: 'gux-icon',
   shadow: true
 })
@@ -22,10 +22,7 @@ export class GuxIcon {
    * Indicate which icon to display
    */
   @Prop()
-  // Using (string & {}) preserves autocomplete, otherwise TS collapses this type to just `string`
-  // See https://github.com/microsoft/TypeScript/issues/49220
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  iconName: (string & {}) | GuxIconIconName;
+  iconName: GuxIconIconName;
 
   /**
    * Indicate whether the icon should be ignored by accessibility tools or not
@@ -45,9 +42,7 @@ export class GuxIcon {
   @Watch('iconName')
   async prepIcon(iconName: string): Promise<void> {
     if (iconName) {
-      const rootIconName = getRootIconName(iconName);
-
-      this.baseSvgHtml = await getBaseSvgHtml(rootIconName);
+      this.baseSvgHtml = await getBaseSvgHtml(iconName);
       this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
     }
   }
@@ -67,7 +62,7 @@ export class GuxIcon {
   }
 
   async componentWillLoad(): Promise<void> {
-    trackComponent(this.root, { variant: getRootIconName(this.iconName) });
+    trackComponent(this.root, { variant: this.iconName });
 
     await this.prepIcon(this.iconName);
   }

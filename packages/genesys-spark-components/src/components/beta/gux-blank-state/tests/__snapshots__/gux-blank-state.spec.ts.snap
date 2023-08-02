@@ -16,7 +16,7 @@ exports[`gux-blank-state-beta #render should render the component as expected 1`
       </gux-button-slot-beta>
     </div>
   </mock:shadow-root>
-  <gux-icon decorative="true" icon-name="robot-circle" slot="image"></gux-icon>
+  <gux-icon decorative="true" icon-name="bot" slot="image"></gux-icon>
   <div slot="primary-message">
     Sorry, something went wrong.
   </div>

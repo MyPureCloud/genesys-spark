@@ -112,7 +112,7 @@ exports[`gux-accordion renders 1`] = `
     <h3 slot="subheader">
       This is the subheader
     </h3>
-    <gux-icon icon-name="add-user" screenreader-text="add John Smith to contact list" slot="icon"></gux-icon>
+    <gux-icon icon-name="user-add" screenreader-text="add John Smith to contact list" slot="icon"></gux-icon>
     <div slot="content">
       Sample Content
     </div>
@@ -143,7 +143,7 @@ exports[`gux-accordion renders 1`] = `
     <h3 slot="subheader">
       This is the subheader
     </h3>
-    <gux-icon icon-name="add-user" screenreader-text="add John Smith to contact list" slot="icon"></gux-icon>
+    <gux-icon icon-name="user-add" screenreader-text="add John Smith to contact list" slot="icon"></gux-icon>
     <div slot="content">
       Sample Content
     </div>

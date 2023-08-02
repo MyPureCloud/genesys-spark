@@ -95,6 +95,10 @@
       "spread": "1px",
       "color": "#23395c26",
       "type": "dropShadow"
-    }
+    },
+    "slot": {
+      "padding": "2px 3px"
+    },
+    "border_radius": "16px"
   }
 }
