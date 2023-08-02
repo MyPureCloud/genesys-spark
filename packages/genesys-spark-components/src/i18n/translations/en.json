@@ -10,6 +10,10 @@
     "red-bold": "badge with label: {label}, color: red bold",
     "inherit": "badge with label: {label}"
   },
+  "gux-calendar-beta": {
+    "previousMonth": "Previous month: {localizedPreviousMonthAndYear}",
+    "nextMonth": "Next month: {localizedNextMonthAndYear}"
+  },
   "gux-column-manager-item": {
     "activateReordering": "Activate reordering mode for {columnName} column"
   },
