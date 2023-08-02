@@ -23,6 +23,7 @@
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-button-multi](../gux-button-multi)
  - [gux-calendar](../gux-calendar)
+ - [gux-calendar-beta](../../beta/gux-calendar-beta/components/single)
  - [gux-column-manager-item](../../beta/gux-column-manager/gux-column-manager-item)
  - [gux-content-search](../gux-content-search)
  - [gux-context-menu-beta](../../beta/gux-context-menu)
@@ -81,6 +82,7 @@ graph TD;
   gux-advanced-dropdown --> gux-icon
   gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
+  gux-calendar-beta --> gux-icon
   gux-column-manager-item --> gux-icon
   gux-content-search --> gux-icon
   gux-context-menu-beta --> gux-icon
