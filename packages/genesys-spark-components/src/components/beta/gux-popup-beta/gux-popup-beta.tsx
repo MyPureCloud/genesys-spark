@@ -5,7 +5,8 @@ import {
   Prop,
   Watch,
   Event,
-  EventEmitter
+  EventEmitter,
+  Element
 } from '@stencil/core';
 
 import {
@@ -32,6 +33,9 @@ export class GuxPopupBeta {
   private targetElementContainer: HTMLElement;
   private popupElementContainer: HTMLElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
+
+  @Element()
+  private root: HTMLGuxPopupElement;
 
   @Prop()
   expanded: boolean = false;
@@ -68,7 +72,9 @@ export class GuxPopupBeta {
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
       const popupElementContainer = this.popupElementContainer;
-      const targetElementContainer = this.targetElementContainer;
+      const componentTagName = (
+        (this.root as Element)?.getRootNode() as ShadowRoot
+      ).host.nodeName;
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -80,12 +86,18 @@ export class GuxPopupBeta {
             flip(),
             size({
               apply({ rects }: MiddlewareArguments) {
-                Object.assign(popupElementContainer.style, {
-                  minWidth: `${rects.reference.width}px`
-                });
-                Object.assign(targetElementContainer.style, {
-                  width: `${rects.reference.width}px`
-                });
+                if (
+                  componentTagName == 'GUX-ACTION-BUTTON' ||
+                  componentTagName == 'GUX-BUTTON-MULTI'
+                ) {
+                  Object.assign(popupElementContainer.style, {
+                    minWidth: `${rects.reference.width}px`
+                  });
+                } else {
+                  Object.assign(popupElementContainer.style, {
+                    width: `${rects.reference.width}px`
+                  });
+                }
               }
             }),
             shift(),
@@ -146,7 +158,6 @@ export class GuxPopupBeta {
       >
         <slot name="target"></slot>
         <div
-          part="gux-popup-container"
           class={{
             'gux-popup-container': true,
             'gux-expanded': this.expanded && !this.disabled
