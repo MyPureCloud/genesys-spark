@@ -488,6 +488,32 @@
       "offset": "1px"
     }
   },
+  "color_picker": {
+    "label": {
+      "required_symbol_color": "#e22245",
+      "text_color": "#1b2c48",
+      "text": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "18px",
+        "fontSize": "12px"
+      }
+    },
+    "input_container": {
+      "background_color": "#ffffff",
+      "border": {
+        "default_color": "#a3a7b0",
+        "hover_color": "#3742A2",
+        "active_color": "#252E78",
+        "error_color": "#e22245"
+      }
+    },
+    "input": {
+      "container_sizing": "32px",
+      "swatch_sizing": "24px",
+      "swatch_border_radius": "2px"
+    },
+    "gap": "8px"
+  },
   "slider": {
     "handle": {
       "width": "20px",
@@ -531,5 +557,18 @@
     "focus_ring": {
       "border_radius": "100%"
     }
+  },
+  "flyout_menu": {
+    "anchor": {
+      "height": "8px",
+      "width": "76px"
+    },
+    "width": "207px",
+    "border_radius": "4px",
+    "padding": "8px 0",
+    "parenting": {
+      "gap": "4px"
+    },
+    "background_color": "#ffffff"
   }
 }

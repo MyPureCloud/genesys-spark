@@ -77,6 +77,11 @@
           "color": "#7B88F7",
           "width": "3px",
           "style": "solid"
+        },
+        "border-copy": {
+          "0": "4",
+          "1": "p",
+          "2": "x"
         }
       },
       "background_color": "#ffffff",
