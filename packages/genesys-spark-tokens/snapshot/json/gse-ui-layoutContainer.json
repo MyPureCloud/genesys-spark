@@ -1,0 +1,105 @@
+{
+  "accordion": {
+    "header": {
+      "height": "40px",
+      "padding": "0px 16px 0px 16px",
+      "chevron_icon": "16px",
+      "gap": "8px",
+      "default": {
+        "foreground": {
+          "label_color": "#1b2c48",
+          "chevron_icon": {
+            "closed": "#626e84",
+            "open": "#252E78"
+          }
+        }
+      },
+      "label": {
+        "default_text": {
+          "fontFamily": "Noto Sans",
+          "lineHeight": "20px",
+          "fontSize": "14px",
+          "fontWeight": 700
+        }
+      }
+    },
+    "menu_item": {
+      "height": "32px",
+      "padding": "0 12px 0 24px",
+      "start_icon": "16px",
+      "parent_icon": "16px",
+      "gap": "8px",
+      "default": {
+        "foreground": {
+          "start_icon_color": "#1b2c48",
+          "label_color": "#1b2c48",
+          "start_shortcut_color": "#626e84",
+          "parent_icon_color": "#626e84"
+        }
+      },
+      "hover": {
+        "foreground": {
+          "start_icon_color": "#1b2c48",
+          "label_color": "#1b2c48",
+          "start_shortcut_color": "#1b2c48",
+          "parent_icon_color": "#1b2c48"
+        },
+        "background_color": "#EFF0FE"
+      },
+      "selected": {
+        "foreground": {
+          "start_icon_color": "#1b2c48",
+          "label_color": "#1b2c48",
+          "start_shortcut_color": "#1b2c48",
+          "parent_icon_color": "#1b2c48"
+        },
+        "background_color": "#CED2FC"
+      },
+      "focus": {
+        "border_radius": "4px"
+      },
+      "label": {
+        "default_text": {
+          "fontFamily": "Noto Sans",
+          "lineHeight": "18px",
+          "fontSize": "12px",
+          "fontWeight": 400
+        },
+        "selected_text": {
+          "fontFamily": "Noto Sans",
+          "lineHeight": "18px",
+          "fontSize": "12px",
+          "fontWeight": 600
+        }
+      },
+      "shortcut": {
+        "text": {
+          "fontFamily": "Noto Sans",
+          "lineHeight": "20px",
+          "fontSize": "14px",
+          "fontWeight": 400
+        }
+      }
+    },
+    "focus_border": {
+      "color": "#7B88F7",
+      "style": "solid",
+      "width": "2px"
+    },
+    "wrapper": {
+      "divider_border": {
+        "color": "#c6c8ce",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "focus": {
+      "offset": {
+        "gap": "1px"
+      }
+    },
+    "content_panel": {
+      "padding_bottom": "4px"
+    }
+  }
+}

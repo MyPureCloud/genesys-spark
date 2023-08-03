@@ -34,5 +34,8 @@
         "background_color": "#DAF0F4"
       }
     }
+  },
+  "simple_filter": {
+    "gap": "16px"
   }
 }

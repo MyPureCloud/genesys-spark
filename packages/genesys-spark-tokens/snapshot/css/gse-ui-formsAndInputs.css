@@ -216,6 +216,20 @@
   --gse-ui-toggle-focus-border-style: solid;
   --gse-ui-toggle-focus-borderRadius: 16px;
   --gse-ui-toggle-focus-offset: 1px;
+  --gse-ui-colorPicker-label-requiredSymbolColor: #e22245;
+  --gse-ui-colorPicker-label-textColor: #1b2c48;
+  --gse-ui-colorPicker-label-text-fontFamily: Noto Sans;
+  --gse-ui-colorPicker-label-text-lineHeight: 18px;
+  --gse-ui-colorPicker-label-text-fontSize: 12px;
+  --gse-ui-colorPicker-inputContainer-backgroundColor: #ffffff;
+  --gse-ui-colorPicker-inputContainer-border-defaultColor: #a3a7b0;
+  --gse-ui-colorPicker-inputContainer-border-hoverColor: #3742a2;
+  --gse-ui-colorPicker-inputContainer-border-activeColor: #252e78;
+  --gse-ui-colorPicker-inputContainer-border-errorColor: #e22245;
+  --gse-ui-colorPicker-input-containerSizing: 32px;
+  --gse-ui-colorPicker-input-swatchSizing: 24px;
+  --gse-ui-colorPicker-input-swatchBorderRadius: 2px;
+  --gse-ui-colorPicker-gap: 8px;
   --gse-ui-slider-handle-width: 20px;
   --gse-ui-slider-handle-height: 20px;
   --gse-ui-slider-handle-default-backgroundColor: #4856cb;
@@ -234,4 +248,11 @@
   --gse-ui-slider-bar-height: 4px;
   --gse-ui-slider-gap: 16px;
   --gse-ui-slider-focusRing-borderRadius: 100%;
+  --gse-ui-flyoutMenu-anchor-height: 8px;
+  --gse-ui-flyoutMenu-anchor-width: 76px;
+  --gse-ui-flyoutMenu-width: 207px;
+  --gse-ui-flyoutMenu-borderRadius: 4px;
+  --gse-ui-flyoutMenu-padding: 8px 0;
+  --gse-ui-flyoutMenu-parenting-gap: 4px;
+  --gse-ui-flyoutMenu-backgroundColor: #ffffff;
 }
