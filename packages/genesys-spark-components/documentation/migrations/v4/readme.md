@@ -37,9 +37,11 @@ The `input` event has been renamed `calendarSelect`
 
 ## V3 Stable Components Archived to Legacy in V4
 
-| V3 tag name | V4 tag name        | V4 stable equivalent (requires API changes) | Migration Guide                 |
-| ----------- | ------------------ | ------------------------------------------- | ------------------------------- |
-| gux-example | gux-example-legacy | gux-example                                 | [link](./gux-example-legacy.md) |
+| V3 tag name            | V4 tag name                   | V4 stable equivalent (requires API changes) | Migration Guide                            |
+| ---------------------- | ----------------------------- | ------------------------------------------- | ------------------------------------------ |
+| gux-action-toast       | gux-action-toast-legacy       | gux-toast                                   | [link](./gux-action-toast-legacy.md)       |
+| gux-notification-toast | gux-notification-toast-legacy | gux-toast                                   | [link](./gux-notification-toast-legacy.md) |
+| gux-simple-toast       | gux-simple-toast-legacy       | gux-toast                                   | [link](./gux-simple-toast-legacy.md)       |
 
 Action: _(required)_ add `-legacy` to the tag name of the component.
 
@@ -71,22 +73,22 @@ Action: _(required)_ remove the `-beta` tag and add `-legacy` to the tag name of
 
 If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of replacing the `-beta` suffix with `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released. Contact the Core UI team if you need help migrating away from these components.
 
-## V3 Legacy Components Components Removed from V4
+## V3 Legacy Components Removed from V4
 
-| V3 tag name                | V4 stable equivalent (requires API changes) | V3 Migration Guide                         |
-| -------------------------- | ------------------------------------------- | ------------------------------------------ |
-| gux-accordion-legacy       | gux-accordion                               | [link](../v3/gux-accordion-legacy.md)      |
-| gux-action-button-legacy   | gux-action-button                           | [link](-../v3/gux-action-button-legacy.md) |
-| gux-action-list-legacy     | gux-list                                    | [link](-../v3/gux-list-legacy.md)          |
-| gux-button-multi-legacy    | gux-button-multi                            | [link](-../v3/gux-button-multi-legacy.md)  |
-| gux-command-palette-legacy | N/A                                         | N/A                                        |
-| gux-dropdown-legacy        | gux-dropdown                                | [link](-../v3/gux-dropdown-legacy.md)      |
-| gux-form-field-legacy      | gux-form-field-{type}                       | [link](-../v3/gux-form-field-legacy.md)    |
-| gux-list-legacy            | gux-list                                    | [link](-../v3/gux-list-legacy.md)          |
-| gux-panel-frame-legacy     | N/A                                         | N/A                                        |
-| gux-side-panel-legacy      | N/A                                         | N/A                                        |
-| gux-tabs-advanced          | gux-tabs, gux-tabs-advanced                 | [link](-../v3/gux-tabs-legacy.md)          |
-| gux-text-label-legacy      | gux-form-field-{type}                       | [link](-../v3/gux-form-field-legacy.md)    |
+| V3 tag name                | V4 stable equivalent (requires API changes) | V3 Migration Guide                        |
+| -------------------------- | ------------------------------------------- | ----------------------------------------- |
+| gux-accordion-legacy       | gux-accordion                               | [link](../v3/gux-accordion-legacy.md)     |
+| gux-action-button-legacy   | gux-action-button                           | [link](../v3/gux-action-button-legacy.md) |
+| gux-action-list-legacy     | gux-list                                    | [link](../v3/gux-list-legacy.md)          |
+| gux-button-multi-legacy    | gux-button-multi                            | [link](../v3/gux-button-multi-legacy.md)  |
+| gux-command-palette-legacy | N/A                                         | N/A                                       |
+| gux-dropdown-legacy        | gux-dropdown                                | [link](../v3/gux-dropdown-legacy.md)      |
+| gux-form-field-legacy      | gux-form-field-{type}                       | [link](../v3/gux-form-field-legacy.md)    |
+| gux-list-legacy            | gux-list                                    | [link](../v3/gux-list-legacy.md)          |
+| gux-panel-frame-legacy     | N/A                                         | N/A                                       |
+| gux-side-panel-legacy      | N/A                                         | N/A                                       |
+| gux-tabs-advanced          | gux-tabs, gux-tabs-advanced                 | [link](../v3/gux-tabs-legacy.md)          |
+| gux-text-label-legacy      | gux-form-field-{type}                       | [link](../v3/gux-form-field-legacy.md)    |
 
 ## Stable Component Changes
 
