@@ -39,6 +39,9 @@ export class GuxPopupBeta {
   @Prop()
   disabled: boolean = false;
 
+  /**
+   * set if parent component design allows for popup exceeding target width
+   */
   @Prop()
   exceedTargetWidth: boolean = false;
 
