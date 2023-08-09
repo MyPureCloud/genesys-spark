@@ -40,6 +40,12 @@ export class GuxPopupBeta {
   disabled: boolean = false;
 
   /**
+   * set if parent component design allows for popup exceeding target width
+   */
+  @Prop()
+  exceedTargetWidth: boolean = false;
+
+  /**
    * This event will run when the popup transitions to an expanded state.
    */
   @Event()
@@ -68,7 +74,7 @@ export class GuxPopupBeta {
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
       const popupElementContainer = this.popupElementContainer;
-      const targetElementContainer = this.targetElementContainer;
+      const assignMinWidth = this.exceedTargetWidth;
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -80,12 +86,15 @@ export class GuxPopupBeta {
             flip(),
             size({
               apply({ rects }: MiddlewareArguments) {
-                Object.assign(popupElementContainer.style, {
-                  minWidth: `${rects.reference.width}px`
-                });
-                Object.assign(targetElementContainer.style, {
-                  width: `${rects.reference.width}px`
-                });
+                if (assignMinWidth) {
+                  Object.assign(popupElementContainer.style, {
+                    minWidth: `${rects.reference.width}px`
+                  });
+                } else {
+                  Object.assign(popupElementContainer.style, {
+                    width: `${rects.reference.width}px`
+                  });
+                }
               }
             }),
             shift(),
@@ -146,7 +155,6 @@ export class GuxPopupBeta {
       >
         <slot name="target"></slot>
         <div
-          part="gux-popup-container"
           class={{
             'gux-popup-container': true,
             'gux-expanded': this.expanded && !this.disabled
