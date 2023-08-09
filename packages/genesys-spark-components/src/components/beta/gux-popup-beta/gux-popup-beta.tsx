@@ -5,8 +5,7 @@ import {
   Prop,
   Watch,
   Event,
-  EventEmitter,
-  Element
+  EventEmitter
 } from '@stencil/core';
 
 import {
@@ -34,14 +33,14 @@ export class GuxPopupBeta {
   private popupElementContainer: HTMLElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
 
-  @Element()
-  private root: HTMLGuxPopupElement;
-
   @Prop()
   expanded: boolean = false;
 
   @Prop()
   disabled: boolean = false;
+
+  @Prop()
+  exceedTargetWidth: boolean = false;
 
   /**
    * This event will run when the popup transitions to an expanded state.
@@ -72,9 +71,7 @@ export class GuxPopupBeta {
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
       const popupElementContainer = this.popupElementContainer;
-      const componentTagName = (
-        (this.root as Element)?.getRootNode() as ShadowRoot
-      ).host.nodeName;
+      const assignMinWidth = this.exceedTargetWidth;
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -86,10 +83,7 @@ export class GuxPopupBeta {
             flip(),
             size({
               apply({ rects }: MiddlewareArguments) {
-                if (
-                  componentTagName == 'GUX-ACTION-BUTTON' ||
-                  componentTagName == 'GUX-BUTTON-MULTI'
-                ) {
+                if (assignMinWidth) {
                   Object.assign(popupElementContainer.style, {
                     minWidth: `${rects.reference.width}px`
                   });
