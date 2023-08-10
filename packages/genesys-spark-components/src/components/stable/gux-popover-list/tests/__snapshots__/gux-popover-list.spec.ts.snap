@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-popover-list #render should render popover 1`] = `
-<gux-popover-list for="popover-target" id="popover-example" position="top">
+<gux-popover-list for="popover-target" id="popover-example" is-open="" position="top">
   <mock:shadow-root>
-    <div class="gux-popover-wrapper">
-      <div class="gux-arrow" data-popper-arrow></div>
+    <div class="gux-popover-wrapper" data-placement>
+      <div class="gux-arrow"></div>
       <div class="gux-popover-content">
         <slot></slot>
       </div>
