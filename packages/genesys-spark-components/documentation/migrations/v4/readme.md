@@ -30,10 +30,15 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | --------------------- | ---------------- |
 | gux-inline-alert-beta | gux-inline-alert |
 | gux-popup-beta        | gux-popup        |
+| gux-popover-beta      | gux-popover      |
 
 #### gux-calendar
 
 The `input` event has been renamed `calendarSelect`
+
+#### gux-popover
+
+The `is-open` prop has been added. Set the `is-open` prop on this component to instead of setting the `hidden` attribute.
 
 ## V3 Stable Components Archived to Legacy in V4
 

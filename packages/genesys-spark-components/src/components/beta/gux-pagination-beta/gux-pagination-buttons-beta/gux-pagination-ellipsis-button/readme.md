@@ -29,7 +29,7 @@
 
 - [gux-icon](../../../../stable/gux-icon)
 - [gux-tooltip](../../../../stable/gux-tooltip)
-- [gux-popover-beta](../../../gux-popover-beta)
+- [gux-popover](../../../../stable/gux-popover)
 - [gux-form-field-number](../../../../stable/gux-form-field/components/gux-form-field-number)
 
 ### Graph
@@ -37,9 +37,9 @@
 graph TD;
   gux-pagination-ellipsis-button --> gux-icon
   gux-pagination-ellipsis-button --> gux-tooltip
-  gux-pagination-ellipsis-button --> gux-popover-beta
+  gux-pagination-ellipsis-button --> gux-popover
   gux-pagination-ellipsis-button --> gux-form-field-number
-  gux-popover-beta --> gux-dismiss-button
+  gux-popover --> gux-dismiss-button
   gux-dismiss-button --> gux-icon
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-icon
