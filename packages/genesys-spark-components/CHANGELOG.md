@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.100.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.99.0...v3.100.0) (2023-08-10)
+
+
+### Features
+
+* **defaults for time zone picker:** allows consumers to set a list of defaults for time zone picker ([849a52d](https://github.com/MyPureCloud/genesys-webcomponents/commit/849a52d778d11c7dc9caf29b89bcc7e30d01eee1))
+* **gux-time-zone-picker-beta:** add a time zone picker component ([db5a837](https://github.com/MyPureCloud/genesys-webcomponents/commit/db5a83734415e9b26609942af5226db6e275d6d2))
+
+
+### Bug Fixes
+
+* **gux-icon:** prevent updates to svgHtml if baseSvgHtml is not set ([22f3567](https://github.com/MyPureCloud/genesys-webcomponents/commit/22f3567442f5c882ba075573fe88e7174757f52a))
+* **gux-tabs:** set height on tabs and tabpanel-beta should fill space ([0edaa23](https://github.com/MyPureCloud/genesys-webcomponents/commit/0edaa236074a4f8cfc16aab69002e55df2a49751))
+* **popup:** fix floating ui implementation ([57529f8](https://github.com/MyPureCloud/genesys-webcomponents/commit/57529f891daa30dabbfc9b048197dcb91af78b36))
+
 ## [3.99.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.98.0...v3.99.0) (2023-08-09)
 
 
