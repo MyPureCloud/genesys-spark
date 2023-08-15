@@ -32,7 +32,7 @@ async function newNonrandomE2EPage(
   return page;
 }
 
-describe('gux-table-beta', () => {
+describe('gux-table', () => {
   const tableContent = `
     <table slot="data">
       <thead>
@@ -77,7 +77,7 @@ describe('gux-table-beta', () => {
       {
         description: 'empty table',
         html: `
-        <gux-table-beta>
+        <gux-table>
           <table slot="data">
             <thead>
               <tr>
@@ -88,38 +88,38 @@ describe('gux-table-beta', () => {
               </tr>
             </thead>
           </table>
-        </gux-table-beta>
+        </gux-table>
         `
       },
       {
         description: 'should render data table',
-        html: `<gux-table-beta>${tableContent}</gux-table-beta>`
+        html: `<gux-table>${tableContent}</gux-table>`
       },
       {
         description: 'should render compact data table',
-        html: `<gux-table-beta compact>${tableContent}</gux-table-beta>`
+        html: `<gux-table compact>${tableContent}</gux-table>`
       },
       {
         description: 'should render object table',
-        html: `<gux-table-beta object-table>${tableContent}</gux-table-beta>`
+        html: `<gux-table object-table>${tableContent}</gux-table>`
       },
 
       {
         description: 'should render table with vertical scroll',
-        html: `<gux-table-beta style="height: 150px">${tableContent}</gux-table-beta>`
+        html: `<gux-table style="height: 150px">${tableContent}</gux-table>`
       },
       {
         description: 'should render table with horizontal scroll',
-        html: `<gux-table-beta style="width: 300px">${tableContent}</gux-table-beta>`
+        html: `<gux-table style="width: 300px">${tableContent}</gux-table>`
       },
       {
         description: 'should render table with rows selection',
-        html: `<gux-table-beta object-table selectable-rows>${tableContent}</gux-table-beta>`
+        html: `<gux-table object-table selectable-rows>${tableContent}</gux-table>`
       },
       {
         description: 'should render empty table with rows selection',
         html: `
-          <gux-table-beta object-table selectable-rows>
+          <gux-table object-table selectable-rows>
             <table slot="data">
               <thead>
                 <tr>
@@ -130,13 +130,13 @@ describe('gux-table-beta', () => {
                 </tr>
               </thead>
             </table>
-          </gux-table-beta>
+          </gux-table>
         `
       },
       {
         description: 'should render a gux-table-select menu',
         html: `
-          <gux-table-beta>
+          <gux-table>
             <table slot="data">
               <thead>
                 <tr data-row-id="head">
@@ -192,13 +192,13 @@ describe('gux-table-beta', () => {
                 </tr>
               </tbody>
             </table>
-          </gux-table-beta>
+          </gux-table>
         `
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
         const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-table-beta');
+        const element = await page.find('gux-table');
         await a11yCheck(page, axeExclusions);
 
         expect(element).toHaveAttribute('hydrated');
@@ -206,7 +206,7 @@ describe('gux-table-beta', () => {
       });
       it(`${description} with i18n strings`, async () => {
         const page = await newNonrandomE2EPage({ html }, 'ja');
-        const element = await page.find('gux-table-beta');
+        const element = await page.find('gux-table');
         await a11yCheck(page, axeExclusions);
 
         expect(element).toHaveAttribute('hydrated');
@@ -216,7 +216,7 @@ describe('gux-table-beta', () => {
   });
 
   it('should sort table if table header nested element is wrapped in a span tag', async () => {
-    const html = `<gux-table-beta>
+    const html = `<gux-table>
     <table slot="data">
       <thead>
         <tr>
@@ -256,7 +256,7 @@ describe('gux-table-beta', () => {
         </tr>
       </tbody>
     </table>
-  </gux-table-beta>`;
+  </gux-table>`;
 
     const page = await newE2EPage({ html });
 
@@ -272,7 +272,7 @@ describe('gux-table-beta', () => {
   });
 
   it('should sort table if table header nested element is not wrapped in a span tag', async () => {
-    const html = `<gux-table-beta>
+    const html = `<gux-table>
     <table slot="data">
       <thead>
         <tr>
@@ -312,7 +312,7 @@ describe('gux-table-beta', () => {
         </tr>
       </tbody>
     </table>
-  </gux-table-beta>`;
+  </gux-table>`;
 
     const page = await newE2EPage({ html });
 
@@ -329,7 +329,7 @@ describe('gux-table-beta', () => {
   });
 
   it('should return two elements as two of the rows are disabled.', async () => {
-    const html = `<gux-table-beta object-table selectable-rows>
+    const html = `<gux-table object-table selectable-rows>
     <table slot="data">
       <thead>
         <tr data-row-id="head">
@@ -371,7 +371,7 @@ describe('gux-table-beta', () => {
         </tr>
       </tbody>
     </table>
-  </gux-table-beta>`;
+  </gux-table>`;
 
     const page = await newE2EPage({ html });
     const selectAllEvent = await page.spyOnEvent('guxselectionchanged');
@@ -386,7 +386,7 @@ describe('gux-table-beta', () => {
   });
 
   it('should return the disabled selected element even if the select all input has been unselected.', async () => {
-    const html = `<gux-table-beta object-table selectable-rows>
+    const html = `<gux-table object-table selectable-rows>
     <table slot="data">
       <thead>
         <tr data-row-id="head">
@@ -428,7 +428,7 @@ describe('gux-table-beta', () => {
         </tr>
       </tbody>
     </table>
-  </gux-table-beta>`;
+  </gux-table>`;
 
     const page = await newE2EPage({ html });
     const selectAllEvent = await page.spyOnEvent('guxselectionchanged');
@@ -444,7 +444,7 @@ describe('gux-table-beta', () => {
   });
 
   it('should set the state of selectAll checkbox to true when all checkboxes that are not disabled are checked.', async () => {
-    const html = `<gux-table-beta object-table selectable-rows>
+    const html = `<gux-table object-table selectable-rows>
     <table slot="data">
       <thead>
         <tr data-row-id="head">
@@ -486,7 +486,7 @@ describe('gux-table-beta', () => {
         </tr>
       </tbody>
     </table>
-  </gux-table-beta>`;
+  </gux-table>`;
 
     const page = await newE2EPage({ html });
     const selectAllElement = await page.find('thead tr th gux-all-row-select');
@@ -508,7 +508,7 @@ describe('gux-table-beta', () => {
   });
   it('should open and close the table select menu', async () => {
     const html = `
-      <gux-table-beta>
+      <gux-table>
         <table slot="data">
           <thead>
             <tr data-row-id="head">
@@ -564,7 +564,7 @@ describe('gux-table-beta', () => {
             </tr>
           </tbody>
         </table>
-      </gux-table-beta>
+      </gux-table>
     `;
 
     const page = await newE2EPage({ html });

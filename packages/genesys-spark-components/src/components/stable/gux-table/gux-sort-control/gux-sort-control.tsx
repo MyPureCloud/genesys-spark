@@ -11,8 +11,8 @@ import {
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import { trackComponent } from '@utils/tracking/usage';
-import { getClosestElement } from '../../../../utils/dom/get-closest-element';
-import { onMutation } from '../../../../utils/dom/on-mutation';
+import { getClosestElement } from '@utils/dom/get-closest-element';
+import { onMutation } from '@utils/dom/on-mutation';
 
 import { GuxTableSortDirection, GuxTableSortState } from '../gux-table.types';
 import tableResources from '../i18n/en.json';

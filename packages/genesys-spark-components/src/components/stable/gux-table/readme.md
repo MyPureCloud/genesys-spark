@@ -1,4 +1,4 @@
-# gux-table-beta
+# gux-table
 
 ## Breaking Changes during the beta period
 
@@ -13,7 +13,7 @@ element.
 
 Before:
 ```
-<gux-table-beta>
+<gux-table>
   <table slot="data">
     <thead>
       <tr>
@@ -30,12 +30,12 @@ Before:
       </tr>
     </tbody>
   </table>
-</gux-table-beta>
+</gux-table>
 ```
 
 After:
 ```
-<gux-table-beta>
+<gux-table>
   <table slot="data">
     <thead>
       <tr>
@@ -52,7 +52,7 @@ After:
       </tr>
     </tbody>
   </table>
-</gux-table-beta>
+</gux-table>
 ```
 
 <!-- Auto Generated Below -->
@@ -100,15 +100,15 @@ Type: `Promise<GuxTableSelectedState>`
 
 ### Depends on
 
-- [gux-button-slot-beta](../gux-button-slot)
-- [gux-icon](../../stable/gux-icon)
+- [gux-button-slot-beta](../../beta/gux-button-slot)
+- [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-table-beta --> gux-button-slot-beta
-  gux-table-beta --> gux-icon
-  style gux-table-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-table --> gux-button-slot-beta
+  gux-table --> gux-icon
+  style gux-table fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
