@@ -16,7 +16,7 @@ import { GuxPaginationCursorDetail } from './gux-pagination-cursor.types';
 import { GuxItemsPerPage } from '../gux-pagination/gux-pagination.types';
 
 @Component({
-  styleUrl: 'gux-pagination-cursor.less',
+  styleUrl: 'gux-pagination-cursor.scss',
   tag: 'gux-pagination-cursor',
   shadow: true
 })
@@ -69,7 +69,7 @@ export class GuxPaginationCursor {
   renderSimpleLayout(): JSX.Element {
     return [
       <div role="navigation" class="gux-pagination-button-container">
-        <gux-button-slot-beta accent="ghost" class="gux-previous">
+        <gux-button-slot-beta accent="ghost">
           <button
             class="gux-simple-button"
             type="button"
@@ -82,7 +82,7 @@ export class GuxPaginationCursor {
             ></gux-icon>
           </button>
         </gux-button-slot-beta>
-        <gux-button-slot-beta accent="ghost" class="gux-next">
+        <gux-button-slot-beta accent="ghost">
           <button
             class="gux-simple-button"
             type="button"
@@ -102,23 +102,19 @@ export class GuxPaginationCursor {
   renderAdvancedLayout(): JSX.Element {
     return [
       <div role="navigation" class="gux-pagination-button-container">
-        <gux-button-slot-beta accent="ghost" class="gux-previous">
+        <gux-button-slot-beta accent="ghost">
           <button
             type="button"
             disabled={!this.hasPrevious}
             onClick={() => this.onButtonClick('previous')}
           >
             <div class="gux-button-align-content">
-              <gux-icon
-                class="gux-icon-previous"
-                decorative
-                iconName="chevron-small-left"
-              ></gux-icon>
+              <gux-icon decorative iconName="chevron-small-left"></gux-icon>
               <span>{this.i18n('previous')}</span>
             </div>
           </button>
         </gux-button-slot-beta>
-        <gux-button-slot-beta accent="ghost" class="gux-next">
+        <gux-button-slot-beta accent="ghost">
           <button
             type="button"
             disabled={!this.hasNext}
@@ -126,11 +122,7 @@ export class GuxPaginationCursor {
           >
             <div class="gux-button-align-content">
               <span>{this.i18n('next')}</span>
-              <gux-icon
-                class="gux-icon-next"
-                decorative
-                iconName="chevron-small-right"
-              ></gux-icon>
+              <gux-icon decorative iconName="chevron-small-right"></gux-icon>
             </div>
           </button>
         </gux-button-slot-beta>
