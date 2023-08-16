@@ -20,6 +20,18 @@
 | `value`    | `value`     |             | `number`  | `0`     |
 
 
+## CSS Custom Properties
+
+| Name                               | Description |
+| ---------------------------------- | ----------- |
+| `--gse-ui-rating-active-color`     |             |
+| `--gse-ui-rating-default-color`    |             |
+| `--gse-ui-rating-disabled-color`   |             |
+| `--gse-ui-rating-disabled-opacity` |             |
+| `--gse-ui-rating-hover-color`      |             |
+| `--gse-ui-rating-size`             |             |
+
+
 ## Dependencies
 
 ### Depends on
