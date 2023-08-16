@@ -92,6 +92,10 @@ If possible, avoid the usage of legacy components and do a full migration to a s
 
 ## Stable Component Changes
 
+### gux-form-field
+
+It will be necessary to add `margin: 16px 0 16px 0` to the component in order to have the component look the same as it did in v3
+
 ### gux-icon
 
 #### legacy icons
