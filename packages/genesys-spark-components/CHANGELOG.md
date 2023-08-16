@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.5...v4.0.0-beta.6) (2023-08-16)
+
 ## [4.0.0-beta.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.4...v4.0.0-beta.5) (2023-08-15)
 
 ## [4.0.0-beta.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2023-08-09)
