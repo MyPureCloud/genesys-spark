@@ -36,9 +36,9 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 The `input` event has been renamed `calendarSelect`
 
-#### gux-popover
+#### gux-popover, gux-popover-list
 
-The `is-open` prop has been added. Set the `is-open` prop on this component to instead of setting the `hidden` attribute.
+An `is-open` prop has been added to control showing and hiding the component. This property should now be used instead of the component's `hidden` global attribute. Note the different context of the new property and old attribute so `hidden="true"` will become `is-open="false"` and vice-versa.
 
 ## V3 Stable Components Archived to Legacy in V4
 
