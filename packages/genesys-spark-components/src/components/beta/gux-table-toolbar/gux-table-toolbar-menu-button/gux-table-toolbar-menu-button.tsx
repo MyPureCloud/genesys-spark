@@ -23,6 +23,7 @@ import { afterNextRender } from '../../../../utils/dom/after-next-render';
 export class GuxTableToolbarMenuButton {
   listElement: HTMLGuxListElement;
   dropdownButton: HTMLElement;
+  private tooltipTitleElement: HTMLGuxTooltipTitleElement;
 
   private i18n: GetI18nValue;
 
@@ -79,6 +80,16 @@ export class GuxTableToolbarMenuButton {
     }
   }
 
+  @Listen('focusin')
+  onFocusin() {
+    void this.tooltipTitleElement.setShowTooltip();
+  }
+
+  @Listen('focusout')
+  onFocusout() {
+    void this.tooltipTitleElement.setHideTooltip();
+  }
+
   private toggle(): void {
     this.expanded = !this.expanded;
     if (this.expanded) {
@@ -121,10 +132,14 @@ export class GuxTableToolbarMenuButton {
                 aria-haspopup="true"
                 aria-expanded={this.expanded.toString()}
               >
-                <gux-icon
-                  screenreader-text={this.i18n('additionalActions')}
-                  icon-name="menu-kebab-horizontal"
-                ></gux-icon>
+                <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
+                  <span>
+                    <gux-icon
+                      screenreader-text={this.i18n('additionalActions')}
+                      icon-name="menu-kebab-horizontal"
+                    ></gux-icon>
+                  </span>
+                </gux-tooltip-title>
               </button>
             </gux-button-slot-beta>
           </div>
