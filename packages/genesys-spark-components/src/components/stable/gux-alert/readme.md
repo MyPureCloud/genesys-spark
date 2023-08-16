@@ -46,6 +46,7 @@
 | `--gse-ui-alert-success-iconColor`       |             |
 | `--gse-ui-alert-text-fontFamily`         |             |
 | `--gse-ui-alert-text-fontSize`           |             |
+| `--gse-ui-alert-text-fontWeight`         |             |
 | `--gse-ui-alert-text-lineHeight`         |             |
 | `--gse-ui-alert-warning-backgroundColor` |             |
 | `--gse-ui-alert-warning-border-color`    |             |
