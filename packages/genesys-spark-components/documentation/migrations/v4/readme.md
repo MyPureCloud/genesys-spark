@@ -102,3 +102,19 @@ If possible, avoid the usage of legacy components and do a full migration to a s
 - These changes simplify the icon component as now all icon names are a one-to-one mapping to an svg file.
 - These changes should also make it clearer to application teams if the icons they are using are official Spark icons or not.
 - The process for adding Official Spark icons has been streamlined and you should contact the UX Design System Team if you require an official replacement for a legacy icon used in your application
+
+### gux-tooltip
+
+Two new properties have been added to `gux-tooltip` which are `accent` and `anchor` which are outlined below. The default component behavior remains unchanged. We suggest reading the spark design documentation or consulting with your UX contact before using the new properties.
+
+- Addition of `accent` property.
+  - The accents `light` and `dark` are currently available to use. The default `accent` is `light`.
+  ```diff
+  + <gux-tooltip accent="light">Tooltip</gux-tooltip>
+  + <gux-tooltip accent="dark">Tooltip</gux-tooltip>
+  ```
+- Addition of `anchor` property.
+  - The `anchor` property will display an anchor on the tooltip pointing towards the target element.
+  ```diff
+  + <gux-tooltip anchor>Tooltip</gux-tooltip>
+  ```
