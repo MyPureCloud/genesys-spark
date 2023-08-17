@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.100.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.100.0...v3.100.1) (2023-08-17)
+
+
+### Bug Fixes
+
+* **table-toolbar:** addition of tooltip when actions are is icon-only state ([83b12b6](https://github.com/MyPureCloud/genesys-webcomponents/commit/83b12b62bac63377220f88faebf505a6c3fc5a0b))
+
 ## [3.100.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.99.0...v3.100.0) (2023-08-10)
 
 
