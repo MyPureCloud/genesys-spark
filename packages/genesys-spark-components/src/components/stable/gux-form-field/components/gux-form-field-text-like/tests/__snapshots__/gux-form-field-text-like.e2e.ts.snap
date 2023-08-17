@@ -155,8 +155,8 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 exports[`gux-form-field-text-like #render help should render component as expected 1`] = `"<gux-form-field-text-like hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" name=\\"e-1\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Default</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render help should render component as expected 2`] = `
-<div class="gux-above gux-form-field-container">
-  <div class="gux-above gux-form-field-label">
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
   </div>
   <div class="gux-input-and-error-container">
