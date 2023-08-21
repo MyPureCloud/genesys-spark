@@ -102,7 +102,7 @@ In v4, developers who were using the custom properties to set the internal margi
 
 In v4, developers who want the component to have a margin similar to v3 can add `margin: 16px 0 16px 0` to the component in their application.
 
-Below are the components where the internal margins were removed for v4:
+Below are the components where the internal margins have been removed for v4:
 
 1. gux-form-field-color
 1. gux-form-field-number
