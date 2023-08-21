@@ -94,7 +94,23 @@ If possible, avoid the usage of legacy components and do a full migration to a s
 
 ### gux-form-field
 
-It will be necessary to add `margin: 16px 0 16px 0` to the component in order to have the component look the same as it did in v3
+Internal margins have been removed from the from field components as they were making it difficult for developers to incorporate the components into their existing layouts that already accounted for spacings between components.
+
+In v3, developers could workaround this issue with two CSS custom properties: --gux-form-field-container-margin-top and --gux-form-field-container-margin-bottom. Using these custom properties they could change the internal margins, usually to set them to 0.
+
+In v4, developers who were using the custom properties to set the internal margins to 0 can remove that workaround as it is no longer needed (or supported) and the component not having an internal margin is the default behaviour.
+
+In v4, developers who want the component to have a margin similar to v3 can add `margin: 16px 0 16px 0` to the component in their application.
+
+Below are the components where the internal margins were removed for v4:
+
+1. gux-form-field-color
+1. gux-form-field-number
+1. gux-form-field-range
+1. gux-form-field-search
+1. gux-form-field-select
+1. gux-form-field-text-like
+1. gux-form-field-textarea
 
 ### gux-icon
 
