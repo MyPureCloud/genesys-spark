@@ -6,7 +6,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '../../../utils/error/log-error';
 
 @Component({
-  styleUrl: 'gux-rating.less',
+  styleUrl: 'gux-rating.scss',
   tag: 'gux-rating',
   shadow: true
 })
@@ -105,7 +105,6 @@ export class GuxRating {
         } else if (cv + 1 <= this.value) {
           return acc.concat('rating-active');
         }
-
         return acc.concat('rating');
       }, [] as string[])
       .map(

@@ -20,7 +20,6 @@ This component is meant for use in other components as a dismiss button.
  - [gux-notification-toast-legacy](../../legacy/gux-notification-toast)
  - [gux-popover](../gux-popover)
  - [gux-popover-list](../gux-popover-list)
- - [gux-popover-list-beta](../../beta/gux-popover-list-beta)
  - [gux-simple-toast-legacy](../../legacy/gux-simple-toast)
  - [gux-toast](../gux-toast)
 
@@ -36,7 +35,6 @@ graph TD;
   gux-notification-toast-legacy --> gux-dismiss-button
   gux-popover --> gux-dismiss-button
   gux-popover-list --> gux-dismiss-button
-  gux-popover-list-beta --> gux-dismiss-button
   gux-simple-toast-legacy --> gux-dismiss-button
   gux-toast --> gux-dismiss-button
   style gux-dismiss-button fill:#f9f,stroke:#333,stroke-width:4px
