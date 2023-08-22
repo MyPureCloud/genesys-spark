@@ -4,6 +4,7 @@
 // Variables part
 @gux-table-scroll-thumb: fade(@gux-black-30, 24%);
 @gux-table-scroll-thumb-hover: fade(@gux-black-30, 48%);
+@gux-table-head-height: 40px;
 
 :host {
   display: block;
@@ -11,7 +12,6 @@
 
   .gux-table {
     position: relative;
-    height: inherit;
 
     .gux-table-scroll-left,
     .gux-table-scroll-right {
@@ -23,7 +23,7 @@
       justify-content: center;
       width: 24px;
       min-width: 0;
-      height: 40px;
+      height: @gux-table-head-height;
       padding: 0;
       color: @gux-black-50;
       cursor: pointer;
@@ -80,7 +80,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150px;
+    height: calc(100% - @gux-table-head-height);
+    min-height: 150px;
     color: @gux-black-90;
     background: @gux-grey-100;
     .h2();
