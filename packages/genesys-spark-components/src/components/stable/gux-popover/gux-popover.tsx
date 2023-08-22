@@ -64,6 +64,9 @@ export class GuxPopover {
   @Prop()
   closeOnClickOutside: boolean = false;
 
+  /**
+   * Controls hiding and showing the popover
+   */
   @Prop({ mutable: true })
   isOpen: boolean = false;
 
