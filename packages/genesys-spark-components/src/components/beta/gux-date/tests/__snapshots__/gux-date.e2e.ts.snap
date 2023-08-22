@@ -2,9 +2,27 @@
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Abidjan" 1`] = `"<gux-date-beta time-zone=\\"Africa/Abidjan\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Accra" 1`] = `"<gux-date-beta time-zone=\\"Africa/Accra\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Addis_Ababa" 1`] = `"<gux-date-beta time-zone=\\"Africa/Addis_Ababa\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Algiers" 1`] = `"<gux-date-beta time-zone=\\"Africa/Algiers\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Asmara" 1`] = `"<gux-date-beta time-zone=\\"Africa/Asmara\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Bamako" 1`] = `"<gux-date-beta time-zone=\\"Africa/Bamako\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Bangui" 1`] = `"<gux-date-beta time-zone=\\"Africa/Bangui\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Banjul" 1`] = `"<gux-date-beta time-zone=\\"Africa/Banjul\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Bissau" 1`] = `"<gux-date-beta time-zone=\\"Africa/Bissau\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Blantyre" 1`] = `"<gux-date-beta time-zone=\\"Africa/Blantyre\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Brazzaville" 1`] = `"<gux-date-beta time-zone=\\"Africa/Brazzaville\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Bujumbura" 1`] = `"<gux-date-beta time-zone=\\"Africa/Bujumbura\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Cairo" 1`] = `"<gux-date-beta time-zone=\\"Africa/Cairo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -12,23 +30,71 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Ceuta" 1`] = `"<gux-date-beta time-zone=\\"Africa/Ceuta\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Conakry" 1`] = `"<gux-date-beta time-zone=\\"Africa/Conakry\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Dakar" 1`] = `"<gux-date-beta time-zone=\\"Africa/Dakar\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Dar_es_Salaam" 1`] = `"<gux-date-beta time-zone=\\"Africa/Dar_es_Salaam\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Djibouti" 1`] = `"<gux-date-beta time-zone=\\"Africa/Djibouti\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Douala" 1`] = `"<gux-date-beta time-zone=\\"Africa/Douala\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/El_Aaiun" 1`] = `"<gux-date-beta time-zone=\\"Africa/El_Aaiun\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Freetown" 1`] = `"<gux-date-beta time-zone=\\"Africa/Freetown\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Gaborone" 1`] = `"<gux-date-beta time-zone=\\"Africa/Gaborone\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Harare" 1`] = `"<gux-date-beta time-zone=\\"Africa/Harare\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Johannesburg" 1`] = `"<gux-date-beta time-zone=\\"Africa/Johannesburg\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Juba" 1`] = `"<gux-date-beta time-zone=\\"Africa/Juba\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Kampala" 1`] = `"<gux-date-beta time-zone=\\"Africa/Kampala\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Khartoum" 1`] = `"<gux-date-beta time-zone=\\"Africa/Khartoum\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Kigali" 1`] = `"<gux-date-beta time-zone=\\"Africa/Kigali\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Kinshasa" 1`] = `"<gux-date-beta time-zone=\\"Africa/Kinshasa\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Lagos" 1`] = `"<gux-date-beta time-zone=\\"Africa/Lagos\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Libreville" 1`] = `"<gux-date-beta time-zone=\\"Africa/Libreville\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Lome" 1`] = `"<gux-date-beta time-zone=\\"Africa/Lome\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Luanda" 1`] = `"<gux-date-beta time-zone=\\"Africa/Luanda\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Lubumbashi" 1`] = `"<gux-date-beta time-zone=\\"Africa/Lubumbashi\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Lusaka" 1`] = `"<gux-date-beta time-zone=\\"Africa/Lusaka\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Malabo" 1`] = `"<gux-date-beta time-zone=\\"Africa/Malabo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Maputo" 1`] = `"<gux-date-beta time-zone=\\"Africa/Maputo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Maseru" 1`] = `"<gux-date-beta time-zone=\\"Africa/Maseru\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Mbabane" 1`] = `"<gux-date-beta time-zone=\\"Africa/Mbabane\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Mogadishu" 1`] = `"<gux-date-beta time-zone=\\"Africa/Mogadishu\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Monrovia" 1`] = `"<gux-date-beta time-zone=\\"Africa/Monrovia\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Nairobi" 1`] = `"<gux-date-beta time-zone=\\"Africa/Nairobi\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Ndjamena" 1`] = `"<gux-date-beta time-zone=\\"Africa/Ndjamena\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Niamey" 1`] = `"<gux-date-beta time-zone=\\"Africa/Niamey\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Nouakchott" 1`] = `"<gux-date-beta time-zone=\\"Africa/Nouakchott\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Ouagadougou" 1`] = `"<gux-date-beta time-zone=\\"Africa/Ouagadougou\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Africa/Porto-Novo" 1`] = `"<gux-date-beta time-zone=\\"Africa/Porto-Novo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Africa/Sao_Tome" 1`] = `"<gux-date-beta time-zone=\\"Africa/Sao_Tome\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -41,6 +107,10 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Adak" 1`] = `"<gux-date-beta time-zone=\\"America/Adak\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Anchorage" 1`] = `"<gux-date-beta time-zone=\\"America/Anchorage\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Anguilla" 1`] = `"<gux-date-beta time-zone=\\"America/Anguilla\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Antigua" 1`] = `"<gux-date-beta time-zone=\\"America/Antigua\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Araguaina" 1`] = `"<gux-date-beta time-zone=\\"America/Araguaina\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -68,7 +138,11 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Argentina/Ushuaia" 1`] = `"<gux-date-beta time-zone=\\"America/Argentina/Ushuaia\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "America/Aruba" 1`] = `"<gux-date-beta time-zone=\\"America/Aruba\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "America/Asuncion" 1`] = `"<gux-date-beta time-zone=\\"America/Asuncion\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Atikokan" 1`] = `"<gux-date-beta time-zone=\\"America/Atikokan\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Bahia" 1`] = `"<gux-date-beta time-zone=\\"America/Bahia\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -79,6 +153,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Belem" 1`] = `"<gux-date-beta time-zone=\\"America/Belem\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Belize" 1`] = `"<gux-date-beta time-zone=\\"America/Belize\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Blanc-Sablon" 1`] = `"<gux-date-beta time-zone=\\"America/Blanc-Sablon\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Boa_Vista" 1`] = `"<gux-date-beta time-zone=\\"America/Boa_Vista\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -96,13 +172,19 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Cayenne" 1`] = `"<gux-date-beta time-zone=\\"America/Cayenne\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "America/Cayman" 1`] = `"<gux-date-beta time-zone=\\"America/Cayman\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "America/Chicago" 1`] = `"<gux-date-beta time-zone=\\"America/Chicago\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Chihuahua" 1`] = `"<gux-date-beta time-zone=\\"America/Chihuahua\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Costa_Rica" 1`] = `"<gux-date-beta time-zone=\\"America/Costa_Rica\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "America/Creston" 1`] = `"<gux-date-beta time-zone=\\"America/Creston\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "America/Cuiaba" 1`] = `"<gux-date-beta time-zone=\\"America/Cuiaba\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Curacao" 1`] = `"<gux-date-beta time-zone=\\"America/Curacao\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Danmarkshavn" 1`] = `"<gux-date-beta time-zone=\\"America/Danmarkshavn\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -113,6 +195,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Denver" 1`] = `"<gux-date-beta time-zone=\\"America/Denver\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Detroit" 1`] = `"<gux-date-beta time-zone=\\"America/Detroit\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Dominica" 1`] = `"<gux-date-beta time-zone=\\"America/Dominica\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Edmonton" 1`] = `"<gux-date-beta time-zone=\\"America/Edmonton\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -129,6 +213,10 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Goose_Bay" 1`] = `"<gux-date-beta time-zone=\\"America/Goose_Bay\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Grand_Turk" 1`] = `"<gux-date-beta time-zone=\\"America/Grand_Turk\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Grenada" 1`] = `"<gux-date-beta time-zone=\\"America/Grenada\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Guadeloupe" 1`] = `"<gux-date-beta time-zone=\\"America/Guadeloupe\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Guatemala" 1`] = `"<gux-date-beta time-zone=\\"America/Guatemala\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -170,17 +258,23 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Kentucky/Monticello" 1`] = `"<gux-date-beta time-zone=\\"America/Kentucky/Monticello\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "America/Kralendijk" 1`] = `"<gux-date-beta time-zone=\\"America/Kralendijk\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "America/La_Paz" 1`] = `"<gux-date-beta time-zone=\\"America/La_Paz\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Lima" 1`] = `"<gux-date-beta time-zone=\\"America/Lima\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Los_Angeles" 1`] = `"<gux-date-beta time-zone=\\"America/Los_Angeles\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "America/Lower_Princes" 1`] = `"<gux-date-beta time-zone=\\"America/Lower_Princes\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "America/Maceio" 1`] = `"<gux-date-beta time-zone=\\"America/Maceio\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Managua" 1`] = `"<gux-date-beta time-zone=\\"America/Managua\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Manaus" 1`] = `"<gux-date-beta time-zone=\\"America/Manaus\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Marigot" 1`] = `"<gux-date-beta time-zone=\\"America/Marigot\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Martinique" 1`] = `"<gux-date-beta time-zone=\\"America/Martinique\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -204,6 +298,10 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Montevideo" 1`] = `"<gux-date-beta time-zone=\\"America/Montevideo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "America/Montserrat" 1`] = `"<gux-date-beta time-zone=\\"America/Montserrat\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Nassau" 1`] = `"<gux-date-beta time-zone=\\"America/Nassau\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "America/New_York" 1`] = `"<gux-date-beta time-zone=\\"America/New_York\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Nome" 1`] = `"<gux-date-beta time-zone=\\"America/Nome\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
@@ -225,6 +323,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Paramaribo" 1`] = `"<gux-date-beta time-zone=\\"America/Paramaribo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Phoenix" 1`] = `"<gux-date-beta time-zone=\\"America/Phoenix\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Port_of_Spain" 1`] = `"<gux-date-beta time-zone=\\"America/Port_of_Spain\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Port-au-Prince" 1`] = `"<gux-date-beta time-zone=\\"America/Port-au-Prince\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -256,7 +356,17 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Sitka" 1`] = `"<gux-date-beta time-zone=\\"America/Sitka\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "America/St_Barthelemy" 1`] = `"<gux-date-beta time-zone=\\"America/St_Barthelemy\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "America/St_Johns" 1`] = `"<gux-date-beta time-zone=\\"America/St_Johns\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/St_Kitts" 1`] = `"<gux-date-beta time-zone=\\"America/St_Kitts\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/St_Lucia" 1`] = `"<gux-date-beta time-zone=\\"America/St_Lucia\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/St_Thomas" 1`] = `"<gux-date-beta time-zone=\\"America/St_Thomas\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/St_Vincent" 1`] = `"<gux-date-beta time-zone=\\"America/St_Vincent\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Swift_Current" 1`] = `"<gux-date-beta time-zone=\\"America/Swift_Current\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -267,6 +377,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Tijuana" 1`] = `"<gux-date-beta time-zone=\\"America/Tijuana\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Toronto" 1`] = `"<gux-date-beta time-zone=\\"America/Toronto\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "America/Tortola" 1`] = `"<gux-date-beta time-zone=\\"America/Tortola\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "America/Vancouver" 1`] = `"<gux-date-beta time-zone=\\"America/Vancouver\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -280,15 +392,27 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/Davis" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/Davis\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/DumontDUrville" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/DumontDUrville\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/Macquarie" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/Macquarie\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/Mawson" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/Mawson\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/McMurdo" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/McMurdo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/Palmer" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/Palmer\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/Rothera" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/Rothera\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/Syowa" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/Syowa\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/Troll" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/Troll\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Antarctica/Vostok" 1`] = `"<gux-date-beta time-zone=\\"Antarctica/Vostok\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Arctic/Longyearbyen" 1`] = `"<gux-date-beta time-zone=\\"Arctic/Longyearbyen\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Asia/Aden" 1`] = `"<gux-date-beta time-zone=\\"Asia/Aden\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Almaty" 1`] = `"<gux-date-beta time-zone=\\"Asia/Almaty\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -306,6 +430,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Baghdad" 1`] = `"<gux-date-beta time-zone=\\"Asia/Baghdad\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Asia/Bahrain" 1`] = `"<gux-date-beta time-zone=\\"Asia/Bahrain\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Baku" 1`] = `"<gux-date-beta time-zone=\\"Asia/Baku\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Bangkok" 1`] = `"<gux-date-beta time-zone=\\"Asia/Bangkok\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
@@ -315,6 +441,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Beirut" 1`] = `"<gux-date-beta time-zone=\\"Asia/Beirut\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Bishkek" 1`] = `"<gux-date-beta time-zone=\\"Asia/Bishkek\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Asia/Brunei" 1`] = `"<gux-date-beta time-zone=\\"Asia/Brunei\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Chita" 1`] = `"<gux-date-beta time-zone=\\"Asia/Chita\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -366,7 +494,11 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Krasnoyarsk" 1`] = `"<gux-date-beta time-zone=\\"Asia/Krasnoyarsk\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Asia/Kuala_Lumpur" 1`] = `"<gux-date-beta time-zone=\\"Asia/Kuala_Lumpur\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Kuching" 1`] = `"<gux-date-beta time-zone=\\"Asia/Kuching\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Asia/Kuwait" 1`] = `"<gux-date-beta time-zone=\\"Asia/Kuwait\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Macau" 1`] = `"<gux-date-beta time-zone=\\"Asia/Macau\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -375,6 +507,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Makassar" 1`] = `"<gux-date-beta time-zone=\\"Asia/Makassar\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Manila" 1`] = `"<gux-date-beta time-zone=\\"Asia/Manila\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Asia/Muscat" 1`] = `"<gux-date-beta time-zone=\\"Asia/Muscat\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Nicosia" 1`] = `"<gux-date-beta time-zone=\\"Asia/Nicosia\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -385,6 +519,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Omsk" 1`] = `"<gux-date-beta time-zone=\\"Asia/Omsk\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Oral" 1`] = `"<gux-date-beta time-zone=\\"Asia/Oral\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Asia/Phnom_Penh" 1`] = `"<gux-date-beta time-zone=\\"Asia/Phnom_Penh\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Pontianak" 1`] = `"<gux-date-beta time-zone=\\"Asia/Pontianak\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -430,6 +566,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Ust-Nera" 1`] = `"<gux-date-beta time-zone=\\"Asia/Ust-Nera\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Asia/Vientiane" 1`] = `"<gux-date-beta time-zone=\\"Asia/Vientiane\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Vladivostok" 1`] = `"<gux-date-beta time-zone=\\"Asia/Vladivostok\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Asia/Yakutsk" 1`] = `"<gux-date-beta time-zone=\\"Asia/Yakutsk\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
@@ -452,7 +590,11 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Atlantic/Madeira" 1`] = `"<gux-date-beta time-zone=\\"Atlantic/Madeira\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Atlantic/Reykjavik" 1`] = `"<gux-date-beta time-zone=\\"Atlantic/Reykjavik\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Atlantic/South_Georgia" 1`] = `"<gux-date-beta time-zone=\\"Atlantic/South_Georgia\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Atlantic/St_Helena" 1`] = `"<gux-date-beta time-zone=\\"Atlantic/St_Helena\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Atlantic/Stanley" 1`] = `"<gux-date-beta time-zone=\\"Atlantic/Stanley\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -544,6 +686,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Etc/UTC" 1`] = `"<gux-date-beta time-zone=\\"Etc/UTC\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Amsterdam" 1`] = `"<gux-date-beta time-zone=\\"Europe/Amsterdam\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Andorra" 1`] = `"<gux-date-beta time-zone=\\"Europe/Andorra\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Astrakhan" 1`] = `"<gux-date-beta time-zone=\\"Europe/Astrakhan\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
@@ -554,21 +698,33 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Berlin" 1`] = `"<gux-date-beta time-zone=\\"Europe/Berlin\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Bratislava" 1`] = `"<gux-date-beta time-zone=\\"Europe/Bratislava\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Brussels" 1`] = `"<gux-date-beta time-zone=\\"Europe/Brussels\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Bucharest" 1`] = `"<gux-date-beta time-zone=\\"Europe/Bucharest\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Budapest" 1`] = `"<gux-date-beta time-zone=\\"Europe/Budapest\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Busingen" 1`] = `"<gux-date-beta time-zone=\\"Europe/Busingen\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Chisinau" 1`] = `"<gux-date-beta time-zone=\\"Europe/Chisinau\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Copenhagen" 1`] = `"<gux-date-beta time-zone=\\"Europe/Copenhagen\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Dublin" 1`] = `"<gux-date-beta time-zone=\\"Europe/Dublin\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Gibraltar" 1`] = `"<gux-date-beta time-zone=\\"Europe/Gibraltar\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Guernsey" 1`] = `"<gux-date-beta time-zone=\\"Europe/Guernsey\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Helsinki" 1`] = `"<gux-date-beta time-zone=\\"Europe/Helsinki\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Isle_of_Man" 1`] = `"<gux-date-beta time-zone=\\"Europe/Isle_of_Man\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Istanbul" 1`] = `"<gux-date-beta time-zone=\\"Europe/Istanbul\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Jersey" 1`] = `"<gux-date-beta time-zone=\\"Europe/Jersey\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Kaliningrad" 1`] = `"<gux-date-beta time-zone=\\"Europe/Kaliningrad\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -578,17 +734,29 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Lisbon" 1`] = `"<gux-date-beta time-zone=\\"Europe/Lisbon\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Ljubljana" 1`] = `"<gux-date-beta time-zone=\\"Europe/Ljubljana\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/London" 1`] = `"<gux-date-beta time-zone=\\"Europe/London\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Luxembourg" 1`] = `"<gux-date-beta time-zone=\\"Europe/Luxembourg\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Madrid" 1`] = `"<gux-date-beta time-zone=\\"Europe/Madrid\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Malta" 1`] = `"<gux-date-beta time-zone=\\"Europe/Malta\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Mariehamn" 1`] = `"<gux-date-beta time-zone=\\"Europe/Mariehamn\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Minsk" 1`] = `"<gux-date-beta time-zone=\\"Europe/Minsk\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Monaco" 1`] = `"<gux-date-beta time-zone=\\"Europe/Monaco\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Moscow" 1`] = `"<gux-date-beta time-zone=\\"Europe/Moscow\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Oslo" 1`] = `"<gux-date-beta time-zone=\\"Europe/Oslo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Paris" 1`] = `"<gux-date-beta time-zone=\\"Europe/Paris\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Podgorica" 1`] = `"<gux-date-beta time-zone=\\"Europe/Podgorica\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Prague" 1`] = `"<gux-date-beta time-zone=\\"Europe/Prague\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -598,17 +766,29 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Samara" 1`] = `"<gux-date-beta time-zone=\\"Europe/Samara\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/San_Marino" 1`] = `"<gux-date-beta time-zone=\\"Europe/San_Marino\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Sarajevo" 1`] = `"<gux-date-beta time-zone=\\"Europe/Sarajevo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Saratov" 1`] = `"<gux-date-beta time-zone=\\"Europe/Saratov\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Simferopol" 1`] = `"<gux-date-beta time-zone=\\"Europe/Simferopol\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Skopje" 1`] = `"<gux-date-beta time-zone=\\"Europe/Skopje\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Sofia" 1`] = `"<gux-date-beta time-zone=\\"Europe/Sofia\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Stockholm" 1`] = `"<gux-date-beta time-zone=\\"Europe/Stockholm\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Tallinn" 1`] = `"<gux-date-beta time-zone=\\"Europe/Tallinn\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Tirane" 1`] = `"<gux-date-beta time-zone=\\"Europe/Tirane\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Ulyanovsk" 1`] = `"<gux-date-beta time-zone=\\"Europe/Ulyanovsk\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Vaduz" 1`] = `"<gux-date-beta time-zone=\\"Europe/Vaduz\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Vatican" 1`] = `"<gux-date-beta time-zone=\\"Europe/Vatican\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Vienna" 1`] = `"<gux-date-beta time-zone=\\"Europe/Vienna\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -618,15 +798,33 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Warsaw" 1`] = `"<gux-date-beta time-zone=\\"Europe/Warsaw\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Europe/Zagreb" 1`] = `"<gux-date-beta time-zone=\\"Europe/Zagreb\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Europe/Zurich" 1`] = `"<gux-date-beta time-zone=\\"Europe/Zurich\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "HST" 1`] = `"<gux-date-beta time-zone=\\"HST\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Indian/Antananarivo" 1`] = `"<gux-date-beta time-zone=\\"Indian/Antananarivo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Indian/Chagos" 1`] = `"<gux-date-beta time-zone=\\"Indian/Chagos\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Indian/Christmas" 1`] = `"<gux-date-beta time-zone=\\"Indian/Christmas\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Indian/Cocos" 1`] = `"<gux-date-beta time-zone=\\"Indian/Cocos\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Indian/Comoro" 1`] = `"<gux-date-beta time-zone=\\"Indian/Comoro\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Indian/Kerguelen" 1`] = `"<gux-date-beta time-zone=\\"Indian/Kerguelen\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Indian/Mahe" 1`] = `"<gux-date-beta time-zone=\\"Indian/Mahe\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Indian/Maldives" 1`] = `"<gux-date-beta time-zone=\\"Indian/Maldives\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Indian/Mauritius" 1`] = `"<gux-date-beta time-zone=\\"Indian/Mauritius\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Indian/Mayotte" 1`] = `"<gux-date-beta time-zone=\\"Indian/Mayotte\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Indian/Reunion" 1`] = `"<gux-date-beta time-zone=\\"Indian/Reunion\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "MET" 1`] = `"<gux-date-beta time-zone=\\"MET\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -644,6 +842,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Chatham" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Chatham\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Chuuk" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Chuuk\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Easter" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Easter\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Efate" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Efate\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
@@ -651,6 +851,8 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Fakaofo" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Fakaofo\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Fiji" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Fiji\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Funafuti" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Funafuti\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Galapagos" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Galapagos\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -670,7 +872,11 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Kwajalein" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Kwajalein\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Majuro" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Majuro\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Marquesas" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Marquesas\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Midway" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Midway\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Nauru" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Nauru\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
@@ -686,15 +892,25 @@ exports[`gux-date-beta #render different time zones should work as expected for 
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Pitcairn" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Pitcairn\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
+exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Pohnpei" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Pohnpei\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Port_Moresby" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Port_Moresby\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Rarotonga" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Rarotonga\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Saipan" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Saipan\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Tahiti" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Tahiti\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Tarawa" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Tarawa\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Tongatapu" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Tongatapu\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Wake" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Wake\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "Pacific/Wallis" 1`] = `"<gux-date-beta time-zone=\\"Pacific/Wallis\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
+
+exports[`gux-date-beta #render different time zones should work as expected for "UTC" 1`] = `"<gux-date-beta time-zone=\\"UTC\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 
 exports[`gux-date-beta #render different time zones should work as expected for "WET" 1`] = `"<gux-date-beta time-zone=\\"WET\\" datetime=\\"2022-07-07T12:00:00.000Z\\" format=\\"full\\" hydrated=\\"\\"></gux-date-beta>"`;
 

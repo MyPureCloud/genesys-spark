@@ -40,6 +40,22 @@ exports[`gux-date #render different time zones should work as expected for "Afri
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Africa/Accra" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Accra">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Addis_Ababa" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Addis_Ababa">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Africa/Algiers" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Algiers">
   <mock:shadow-root>
@@ -48,8 +64,64 @@ exports[`gux-date #render different time zones should work as expected for "Afri
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Africa/Asmara" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Asmara">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Bamako" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Bamako">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Bangui" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Bangui">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Banjul" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Banjul">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Africa/Bissau" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Bissau">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Blantyre" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Blantyre">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Brazzaville" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Brazzaville">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Bujumbura" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Bujumbura">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -80,8 +152,72 @@ exports[`gux-date #render different time zones should work as expected for "Afri
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Africa/Conakry" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Conakry">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Dakar" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Dakar">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Dar_es_Salaam" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Dar_es_Salaam">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Djibouti" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Djibouti">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Douala" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Douala">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Africa/El_Aaiun" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/El_Aaiun">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Freetown" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Freetown">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Gaborone" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Gaborone">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Harare" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Harare">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -104,8 +240,32 @@ exports[`gux-date #render different time zones should work as expected for "Afri
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Africa/Kampala" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Kampala">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Africa/Khartoum" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Khartoum">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Kigali" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Kigali">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Kinshasa" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Kinshasa">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -120,8 +280,80 @@ exports[`gux-date #render different time zones should work as expected for "Afri
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Africa/Libreville" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Libreville">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Lome" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Lome">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Luanda" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Luanda">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Lubumbashi" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Lubumbashi">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Lusaka" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Lusaka">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Malabo" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Malabo">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Africa/Maputo" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Maputo">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Maseru" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Maseru">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Mbabane" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Mbabane">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Mogadishu" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Mogadishu">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -146,6 +378,38 @@ exports[`gux-date #render different time zones should work as expected for "Afri
 
 exports[`gux-date #render different time zones should work as expected for "Africa/Ndjamena" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Ndjamena">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Niamey" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Niamey">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Nouakchott" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Nouakchott">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Ouagadougou" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Ouagadougou">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Africa/Porto-Novo" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Porto-Novo">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -194,6 +458,22 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 
 exports[`gux-date #render different time zones should work as expected for "America/Anchorage" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Anchorage">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Anguilla" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Anguilla">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Antigua" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Antigua">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -304,8 +584,24 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "America/Aruba" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Aruba">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "America/Asuncion" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Asuncion">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Atikokan" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Atikokan">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -346,6 +642,14 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 
 exports[`gux-date #render different time zones should work as expected for "America/Belize" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Belize">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Blanc-Sablon" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Blanc-Sablon">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -416,6 +720,14 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "America/Cayman" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Cayman">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "America/Chicago" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Chicago">
   <mock:shadow-root>
@@ -440,8 +752,24 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "America/Creston" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Creston">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "America/Cuiaba" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Cuiaba">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Curacao" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Curacao">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -482,6 +810,14 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 
 exports[`gux-date #render different time zones should work as expected for "America/Detroit" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Detroit">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Dominica" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Dominica">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -546,6 +882,22 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 
 exports[`gux-date #render different time zones should work as expected for "America/Grand_Turk" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Grand_Turk">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Grenada" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Grenada">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Guadeloupe" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Guadeloupe">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -712,6 +1064,14 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "America/Kralendijk" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Kralendijk">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "America/La_Paz" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/La_Paz">
   <mock:shadow-root>
@@ -736,6 +1096,14 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "America/Lower_Princes" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Lower_Princes">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "America/Maceio" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Maceio">
   <mock:shadow-root>
@@ -754,6 +1122,14 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 
 exports[`gux-date #render different time zones should work as expected for "America/Manaus" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Manaus">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Marigot" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Marigot">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -848,6 +1224,22 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "America/Montserrat" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Montserrat">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Nassau" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Nassau">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "America/New_York" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/New_York">
   <mock:shadow-root>
@@ -930,6 +1322,14 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 
 exports[`gux-date #render different time zones should work as expected for "America/Phoenix" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Phoenix">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Port_of_Spain" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Port_of_Spain">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -1056,8 +1456,48 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "America/St_Barthelemy" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/St_Barthelemy">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "America/St_Johns" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/St_Johns">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/St_Kitts" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/St_Kitts">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/St_Lucia" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/St_Lucia">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/St_Thomas" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/St_Thomas">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/St_Vincent" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/St_Vincent">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -1098,6 +1538,14 @@ exports[`gux-date #render different time zones should work as expected for "Amer
 
 exports[`gux-date #render different time zones should work as expected for "America/Toronto" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Toronto">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "America/Tortola" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Tortola">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -1152,6 +1600,14 @@ exports[`gux-date #render different time zones should work as expected for "Anta
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Antarctica/DumontDUrville" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/DumontDUrville">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Antarctica/Macquarie" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Macquarie">
   <mock:shadow-root>
@@ -1164,6 +1620,14 @@ exports[`gux-date #render different time zones should work as expected for "Anta
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Mawson">
   <mock:shadow-root>
     Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Antarctica/McMurdo" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/McMurdo">
+  <mock:shadow-root>
+    Friday, July 8, 2022
   </mock:shadow-root>
 </gux-date-beta>
 `;
@@ -1184,8 +1648,40 @@ exports[`gux-date #render different time zones should work as expected for "Anta
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Antarctica/Syowa" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Syowa">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Antarctica/Troll" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Troll">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Antarctica/Vostok" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Vostok">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Arctic/Longyearbyen" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Arctic/Longyearbyen">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Asia/Aden" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Aden">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -1256,6 +1752,14 @@ exports[`gux-date #render different time zones should work as expected for "Asia
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Asia/Bahrain" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Bahrain">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Asia/Baku" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Baku">
   <mock:shadow-root>
@@ -1290,6 +1794,14 @@ exports[`gux-date #render different time zones should work as expected for "Asia
 
 exports[`gux-date #render different time zones should work as expected for "Asia/Bishkek" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Bishkek">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Asia/Brunei" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Brunei">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -1496,8 +2008,24 @@ exports[`gux-date #render different time zones should work as expected for "Asia
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Asia/Kuala_Lumpur" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kuala_Lumpur">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Asia/Kuching" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kuching">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Asia/Kuwait" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kuwait">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -1530,6 +2058,14 @@ exports[`gux-date #render different time zones should work as expected for "Asia
 
 exports[`gux-date #render different time zones should work as expected for "Asia/Manila" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Manila">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Asia/Muscat" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Muscat">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -1570,6 +2106,14 @@ exports[`gux-date #render different time zones should work as expected for "Asia
 
 exports[`gux-date #render different time zones should work as expected for "Asia/Oral" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Oral">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Asia/Phnom_Penh" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Phnom_Penh">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -1752,6 +2296,14 @@ exports[`gux-date #render different time zones should work as expected for "Asia
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Asia/Vientiane" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Vientiane">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Asia/Vladivostok" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Vladivostok">
   <mock:shadow-root>
@@ -1840,8 +2392,24 @@ exports[`gux-date #render different time zones should work as expected for "Atla
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Atlantic/Reykjavik" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/Reykjavik">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Atlantic/South_Georgia" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/South_Georgia">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Atlantic/St_Helena" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/St_Helena">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2208,6 +2776,14 @@ exports[`gux-date #render different time zones should work as expected for "Etc/
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Amsterdam" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Amsterdam">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Andorra" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Andorra">
   <mock:shadow-root>
@@ -2248,6 +2824,14 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Bratislava" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Bratislava">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Brussels" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Brussels">
   <mock:shadow-root>
@@ -2272,8 +2856,24 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Busingen" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Busingen">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Chisinau" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Chisinau">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Europe/Copenhagen" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Copenhagen">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2296,6 +2896,14 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Guernsey" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Guernsey">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Helsinki" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Helsinki">
   <mock:shadow-root>
@@ -2304,8 +2912,24 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Isle_of_Man" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Isle_of_Man">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Istanbul" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Istanbul">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Europe/Jersey" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Jersey">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2344,8 +2968,24 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Ljubljana" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Ljubljana">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/London" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/London">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Europe/Luxembourg" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Luxembourg">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2368,8 +3008,24 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Mariehamn" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Mariehamn">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Minsk" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Minsk">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Europe/Monaco" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Monaco">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2384,8 +3040,24 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Oslo" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Oslo">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Paris" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Paris">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Europe/Podgorica" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Podgorica">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2424,6 +3096,22 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/San_Marino" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/San_Marino">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Europe/Sarajevo" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Sarajevo">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Saratov" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Saratov">
   <mock:shadow-root>
@@ -2440,8 +3128,24 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Skopje" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Skopje">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Sofia" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Sofia">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Europe/Stockholm" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Stockholm">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2466,6 +3170,22 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 
 exports[`gux-date #render different time zones should work as expected for "Europe/Ulyanovsk" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Ulyanovsk">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Europe/Vaduz" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Vaduz">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Europe/Vatican" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Vatican">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2504,6 +3224,14 @@ exports[`gux-date #render different time zones should work as expected for "Euro
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Europe/Zagreb" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Zagreb">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Europe/Zurich" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Zurich">
   <mock:shadow-root>
@@ -2520,8 +3248,56 @@ exports[`gux-date #render different time zones should work as expected for "HST"
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Indian/Antananarivo" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Antananarivo">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Indian/Chagos" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Chagos">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Indian/Christmas" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Christmas">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Indian/Cocos" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Cocos">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Indian/Comoro" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Comoro">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Indian/Kerguelen" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Kerguelen">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Indian/Mahe" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Mahe">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2538,6 +3314,22 @@ exports[`gux-date #render different time zones should work as expected for "Indi
 
 exports[`gux-date #render different time zones should work as expected for "Indian/Mauritius" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Mauritius">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Indian/Mayotte" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Mayotte">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Indian/Reunion" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Reunion">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2608,6 +3400,14 @@ exports[`gux-date #render different time zones should work as expected for "Paci
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Pacific/Chuuk" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Chuuk">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Pacific/Easter" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Easter">
   <mock:shadow-root>
@@ -2634,6 +3434,14 @@ exports[`gux-date #render different time zones should work as expected for "Paci
 
 exports[`gux-date #render different time zones should work as expected for "Pacific/Fiji" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Fiji">
+  <mock:shadow-root>
+    Friday, July 8, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Pacific/Funafuti" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Funafuti">
   <mock:shadow-root>
     Friday, July 8, 2022
   </mock:shadow-root>
@@ -2712,8 +3520,24 @@ exports[`gux-date #render different time zones should work as expected for "Paci
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Pacific/Majuro" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Majuro">
+  <mock:shadow-root>
+    Friday, July 8, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Pacific/Marquesas" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Marquesas">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Pacific/Midway" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Midway">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2776,6 +3600,14 @@ exports[`gux-date #render different time zones should work as expected for "Paci
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different time zones should work as expected for "Pacific/Pohnpei" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Pohnpei">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Pacific/Port_Moresby" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Port_Moresby">
   <mock:shadow-root>
@@ -2786,6 +3618,14 @@ exports[`gux-date #render different time zones should work as expected for "Paci
 
 exports[`gux-date #render different time zones should work as expected for "Pacific/Rarotonga" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Rarotonga">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Pacific/Saipan" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Saipan">
   <mock:shadow-root>
     Thursday, July 7, 2022
   </mock:shadow-root>
@@ -2812,6 +3652,30 @@ exports[`gux-date #render different time zones should work as expected for "Paci
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Tongatapu">
   <mock:shadow-root>
     Friday, July 8, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Pacific/Wake" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Wake">
+  <mock:shadow-root>
+    Friday, July 8, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "Pacific/Wallis" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Wallis">
+  <mock:shadow-root>
+    Friday, July 8, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different time zones should work as expected for "UTC" 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="UTC">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
   </mock:shadow-root>
 </gux-date-beta>
 `;
