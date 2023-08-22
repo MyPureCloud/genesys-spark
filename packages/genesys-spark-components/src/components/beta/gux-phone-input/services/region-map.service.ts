@@ -1,4 +1,4 @@
-import { regionCountryCodeMap } from './RegionCountryCodeMap';
+import { RegionCode, regionCountryCodeMap } from './RegionCountryCodeMap';
 import { GetI18nValue } from '../../../../i18n';
 import libphonenumber from 'google-libphonenumber';
 
@@ -10,7 +10,7 @@ export function getRegionObjects(
   let regionObjects: RegionObject[] = [];
   for (const [key, val] of Object.entries(regionCountryCodeMap)) {
     regionObjects.push({
-      code: key,
+      code: key as RegionCode,
       name: i18n(key),
       countryCode: val
     });
@@ -24,7 +24,7 @@ export function getRegionObjects(
 }
 
 export interface RegionObject {
-  code: string;
+  code: RegionCode;
   name: string;
   countryCode: string;
 }
