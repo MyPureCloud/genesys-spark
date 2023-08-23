@@ -1,3 +1,13 @@
+function getContainingDocument(node: Node): Document | DocumentFragment | null {
+  if (node.nodeType === Node.DOCUMENT_NODE) {
+    return node as Document;
+  }
+  if (node.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+    return node as DocumentFragment;
+  }
+  return node.ownerDocument;
+}
+
 export function findElementById(
   root: HTMLElement,
   forElementId: string
@@ -7,10 +17,7 @@ export function findElementById(
   let forElement: HTMLElement;
 
   while (rootNode && rootNode !== priorRoot && !forElement) {
-    const doc: Document =
-      rootNode.nodeType === Node.DOCUMENT_NODE || Node.DOCUMENT_FRAGMENT_NODE
-        ? (rootNode as Document)
-        : rootNode.ownerDocument;
+    const doc = getContainingDocument(rootNode);
     forElement = doc?.getElementById(forElementId);
     // Keep track of the prior root to stop if a node returns itself as its root
     priorRoot = rootNode;
