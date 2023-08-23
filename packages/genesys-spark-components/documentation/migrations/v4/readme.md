@@ -107,6 +107,10 @@ If possible, avoid the usage of legacy components and do a full migration to a s
 - These changes should also make it clearer to application teams if the icons they are using are official Spark icons or not.
 - The process for adding Official Spark icons has been streamlined and you should contact the UX Design System Team if you require an official replacement for a legacy icon used in your application
 
+### gux-text-highlight
+
+A new `dimmed` property has been added to `gux-text-highlight`. This property changes the color used to highlight the text to a lighter one.
+
 ### gux-tooltip
 
 Two new properties have been added to `gux-tooltip` which are `accent` and `anchor` which are outlined below. The default component behavior remains unchanged. We suggest reading the spark design documentation or consulting with your UX contact before using the new properties.
