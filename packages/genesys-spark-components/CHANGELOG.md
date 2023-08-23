@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.11](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.10...v4.0.0-beta.11) (2023-08-23)
+
+
+### Features
+
+* **gux-popup-beta:** hide popup when target element goes out of view ([cde3004](https://github.com/MyPureCloud/genesys-webcomponents/commit/cde300490def4b52e1b1b6beb6bd8e79f690f66d))
+* **icon:** requested icons for sprint gds23-4 ([8518286](https://github.com/MyPureCloud/genesys-webcomponents/commit/8518286254bf62bd0e5b5b0bb4e5912cb328d1f6))
+
+
+### Bug Fixes
+
+* **popover:** find-element-by-id tries to call getElementById non-document node ([8d6385c](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d6385c517d36c36d0053d285b3c363447213aa2))
+
 ## [4.0.0-beta.10](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.9...v4.0.0-beta.10) (2023-08-23)
 
 
