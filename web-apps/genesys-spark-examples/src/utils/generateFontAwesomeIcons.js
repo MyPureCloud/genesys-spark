@@ -24,12 +24,14 @@ const icons = [
       'fa/circle-check-solid',
       'fa/circle-info-solid',
       'fa/circle-play-regular',
+      'fa/circle-plus-solid',
       'fa/circle-xmark-regular',
       'fa/clipboard-list-regular',
       'custom/clipboard-list-slash-regular',
       'fa/clock-nine-regular',
       'fa/clock-rotate-left-regular',
       'fa/comments-regular',
+      'fa/comment-dots-regular',
       'fa/code-regular',
       'fa/code-branch-regular',
       'fa/crop-simple-regular',
@@ -43,6 +45,7 @@ const icons = [
       'fa/film-solid',
       'fa/filter-solid',
       'fa/font-regular',
+      'fa/function-regular',
       'fa/gears-regular',
       'fa/gem-regular',
       'fa/hand-pointer-regular',
@@ -68,6 +71,7 @@ const icons = [
       'fa/microchip-solid',
       'fa/money-bill-regular',
       'fa/outdent-regular',
+      'custom/person-running',
       'fa/puzzle-piece-regular',
       'fa/question-solid',
       'fa/ranking-star-regular',
@@ -83,12 +87,14 @@ const icons = [
       'fa/signs-post-regular',
       'fa/sitemap-regular',
       'fa/sliders-solid',
+      'fa/square-dashed-regular',
       'fa/strikethrough-regular',
       'fa/text-size-regular',
       'fa/text-slash-regular',
       'fa/ticket-regular',
       'fa/triangle-exclamation-solid',
-      'fa/underline-regular'
+      'fa/underline-regular',
+      'fa/wand-magic-sparkles-regular'
     ]
   }
 ];
