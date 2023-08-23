@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.101.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.100.1...v3.101.0) (2023-08-23)
+
+
+### Features
+
+* **table:** alternative solution to allow for percentage heights ([14a7b65](https://github.com/MyPureCloud/genesys-webcomponents/commit/14a7b6586d589b8437cde787abdd8262e97e0197))
+* **table:** make empty table message fill available space ([8fc875f](https://github.com/MyPureCloud/genesys-webcomponents/commit/8fc875f8f310bb8f0dd86e946d089e0b186b6786))
+
+
+### Bug Fixes
+
+* **gux-tabs:** add option for flexbox positioning ([fc01ac1](https://github.com/MyPureCloud/genesys-webcomponents/commit/fc01ac12d9b30b4de9e7394e54973f01c324a5b2))
+
 ### [3.100.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.100.0...v3.100.1) (2023-08-17)
 
 
