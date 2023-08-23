@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.10](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.9...v4.0.0-beta.10) (2023-08-23)
+
+
+### Bug Fixes
+
+* **gux-icon:** prevent updates to svgHtml if baseSvgHtml is not set ([f808ab0](https://github.com/MyPureCloud/genesys-webcomponents/commit/f808ab092c664a7c38d87426d2368f0cda5339e4))
+
 ## [4.0.0-beta.9](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.8...v4.0.0-beta.9) (2023-08-22)
 
 ## [4.0.0-beta.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.7...v4.0.0-beta.8) (2023-08-21)
