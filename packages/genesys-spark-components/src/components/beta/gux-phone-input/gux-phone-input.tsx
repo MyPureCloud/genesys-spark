@@ -42,20 +42,13 @@ export class GuxPhoneInput {
   private regionObjects: RegionObject[] = [];
   private displayFormat: PhoneNumberFormat;
   private valueWhenFocused: string;
-  private regionAlphaCodeWhenFocused: string;
+  private regionAlphaCodeWhenFocused: RegionCode;
 
   @Element()
   root: HTMLElement;
 
   @Prop({ mutable: true })
-  value: string;
-
-  /**
-   * Currently selected ISO 3166-1 alpha-2 region code.
-   * This can be set by the application via this property or by the component when the value starts with '+'.
-   */
-  @Prop({ mutable: true })
-  regionCode: RegionCode;
+  value: string = '';
 
   /**
    * Default ISO 3166-1 alpha-2 region code.
@@ -81,31 +74,34 @@ export class GuxPhoneInput {
 
   @Event() guxregionselect: EventEmitter<InputEvent>;
 
-  private get region(): Region | null {
-    const currentRegionCode = this.regionCode?.toUpperCase();
-    const regionMatch = currentRegionCode
-      ? this.regionObjects.find(r => r.code === currentRegionCode)
-      : undefined;
-
-    return regionMatch
-      ? { alphaCode: regionMatch.code, dialCode: regionMatch.countryCode }
-      : null;
-  }
-
-  private get defaultRegionCode(): RegionCode | null {
-    const defaultRegion = this.defaultRegion?.toUpperCase();
-    const regionMatch = defaultRegion
-      ? this.regionObjects.find(r => r.code === defaultRegion)
-      : undefined;
-
-    return regionMatch?.code ?? null;
-  }
-
   @State()
   private regionOptions: JSX.Element[] = [];
 
   @State()
   private expanded: boolean = false;
+
+  @State()
+  private region: Region = null;
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async setRegionAlphaCode(regionCode: RegionCode): Promise<void> {
+    this._setRegionAlphaCode(regionCode);
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async setRegionDialCode(dialCode: string): Promise<void> {
+    const newRegion = this.getRegionFromDialCode(dialCode);
+
+    this.updateInputWithNewRegion(newRegion, this.region);
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async getRegion(): Promise<Region> {
+    return this.region;
+  }
 
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
@@ -140,6 +136,11 @@ export class GuxPhoneInput {
     const phone = this.parsePhoneNumber(this.value, this.region?.alphaCode);
 
     return phone ? this.phoneUtil.isValidNumber(phone) : false;
+  }
+
+  @Watch('value')
+  private updateValue(number: string): void {
+    this._setRegionAlphaCode(this.getRegionFromValue(number)?.alphaCode);
   }
 
   @Watch('expanded')
@@ -203,12 +204,6 @@ export class GuxPhoneInput {
     this.collapseListbox('noFocusChange');
   }
 
-  @Watch('value')
-  private onInputChange(number: string): void {
-    this.regionCode = this.getRegionCode(number);
-    this.value = number;
-  }
-
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, countryResources);
     this.regionObjects = getRegionObjects(
@@ -239,18 +234,16 @@ export class GuxPhoneInput {
     if (this.value) {
       try {
         const phone = this.phoneUtil.parse(this.value);
+        this._setRegionAlphaCode(
+          this.getRegionFromValue(this.value)?.alphaCode
+        );
         this.value = this.phoneUtil.format(phone, this.displayFormat);
-        this.regionCode = this.getRegionCode(this.value);
       } catch (e) {
         logWarn(this.root, 'Number cannot be parsed');
       }
     } else {
-      this.regionCode = this.defaultRegionCode;
+      this._setRegionAlphaCode(this.defaultRegionCode);
       this.value = '';
-    }
-
-    if (this.listboxElement) {
-      this.listboxElement.value = this.regionCode;
     }
   }
 
@@ -287,24 +280,70 @@ export class GuxPhoneInput {
     }
   }
 
-  private getRegionCode(number: string): RegionCode {
+  private onInputChange(number: string): void {
+    this.value = number;
+  }
+
+  private _setRegionAlphaCode(regionCode: RegionCode): void {
+    const newRegionCode = regionCode?.toUpperCase();
+
+    const regionMatch = newRegionCode
+      ? this.regionObjects.find(r => r.code === newRegionCode)
+      : undefined;
+
+    const newRegion = regionMatch
+      ? { alphaCode: regionMatch.code, dialCode: regionMatch.countryCode }
+      : null;
+
+    this.updateInputWithNewRegion(newRegion, this.region);
+  }
+
+  private updateInputWithNewRegion(region: Region, lastRegion: Region): void {
+    this.region = region;
+
+    if (
+      this.value.startsWith('+') &&
+      lastRegion?.dialCode !== region?.dialCode &&
+      lastRegion !== null
+    ) {
+      const newValue = this.value.replace(
+        lastRegion?.dialCode || '+',
+        region?.dialCode || ''
+      );
+
+      if (this.value !== newValue) {
+        this.value = newValue;
+      }
+    }
+  }
+
+  private get defaultRegionCode(): RegionCode | null {
+    const defaultRegion = this.defaultRegion?.toUpperCase();
+    const regionMatch = defaultRegion
+      ? this.regionObjects.find(r => r.code === defaultRegion)
+      : undefined;
+
+    return regionMatch?.code ?? null;
+  }
+
+  private getRegionFromValue(number: string): Region {
     return this.isNationalNumber(number)
-      ? this.region?.alphaCode
-      : this.getRegionCodeFromRegionObjects(number);
+      ? this.region || null
+      : this.getRegionFromDialCode(number);
   }
 
   private isNationalNumber(number: string): boolean {
     return !number.startsWith('+');
   }
 
-  private getRegionCodeFromRegionObjects(number: string): RegionCode | null {
+  private getRegionFromDialCode(number: string): Region | null {
     const matches = this.regionObjects
       .filter(region => number.startsWith(region.countryCode))
       .sort((a, b) => a.name.localeCompare(b.name))
-      .map(region => region.code);
+      .map<Region>(r => ({ alphaCode: r.code, dialCode: r.countryCode }));
 
     if (number === '+') {
-      return this.region?.alphaCode || null;
+      return this.region || null;
     }
 
     if (matches.length < 2) {
@@ -318,22 +357,23 @@ export class GuxPhoneInput {
         parsedNumber
       ) as RegionCode;
 
-      if (matches.includes(parsedRegionCode)) {
-        return parsedRegionCode;
+      const match = matches.find(r => r.alphaCode === parsedRegionCode);
+
+      if (match) {
+        return match;
       }
     } catch (e) {
       // Error thrown while parsing, continue processing without googlelib-phonenumber
     }
 
-    if (matches.includes(this.region?.alphaCode)) {
-      return this.region.alphaCode;
-    }
+    const currentRegionMatch = matches.find(
+      r => r.alphaCode === this.region?.alphaCode
+    );
+    const defaultRegionMatch = matches.find(
+      r => r.alphaCode === this.defaultRegionCode
+    );
 
-    if (matches.includes(this.defaultRegionCode)) {
-      return this.defaultRegionCode;
-    }
-
-    return matches[0];
+    return currentRegionMatch || defaultRegionMatch || matches[0];
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -358,21 +398,6 @@ export class GuxPhoneInput {
     }
   }
 
-  private updateRegion(newValue: string): void {
-    const currentRegion = this.region;
-    if (this.regionCode !== newValue) {
-      this.collapseListbox('focusFieldButton');
-      this.regionCode = newValue as RegionCode;
-
-      if (this.value.startsWith('+')) {
-        this.value = this.value.replace(
-          currentRegion?.dialCode || '+',
-          this.region?.dialCode || '+'
-        );
-      }
-    }
-  }
-
   private setInput(): void {
     this.inputElement = this.root.shadowRoot.querySelector('input[type="tel"]');
 
@@ -390,7 +415,10 @@ export class GuxPhoneInput {
   private setListBox(): void {
     this.listboxElement.addEventListener('input', (event: InputEvent) => {
       this.guxregionselect.emit(event);
-      this.updateRegion((event.target as HTMLGuxListboxElement).value);
+      this._setRegionAlphaCode(
+        (event.target as HTMLGuxListboxElement).value as RegionCode
+      );
+      this.collapseListbox('focusFieldButton');
     });
     this.listboxElement.addEventListener('focusout', (event: FocusEvent) => {
       event.stopPropagation();
@@ -439,8 +467,8 @@ export class GuxPhoneInput {
       <div class="gux-selected-option">
         {this.region ? (
           <gux-region-icon
-            region={this.region.alphaCode}
-            screenreader-text={this.i18n(this.region.alphaCode)}
+            region={this.region?.alphaCode}
+            screenreader-text={this.i18n(this.region?.alphaCode)}
           />
         ) : (
           <gux-icon
@@ -459,7 +487,7 @@ export class GuxPhoneInput {
         class="gux-phone-text-input"
         type="tel"
         placeholder={this.phoneUtil.format(
-          this.phoneUtil.getExampleNumber(this.regionCode || 'US'),
+          this.phoneUtil.getExampleNumber(this.region?.alphaCode || 'US'),
           this.displayFormat
         )}
         value={this.value}
