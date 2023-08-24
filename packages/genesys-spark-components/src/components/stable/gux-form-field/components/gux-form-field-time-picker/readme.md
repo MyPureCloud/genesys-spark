@@ -14,12 +14,12 @@
 
 ## Slots
 
-| Slot                                           | Description                     |
-| ---------------------------------------------- | ------------------------------- |
-| `"Required slot for gux-time-picker-beta tag"` |                                 |
-| `"error"`                                      | Optional slot for error message |
-| `"help"`                                       | Optional slot for help message  |
-| `"label"`                                      | Required slot for label tag     |
+| Slot                                      | Description                     |
+| ----------------------------------------- | ------------------------------- |
+| `"Required slot for gux-time-picker tag"` |                                 |
+| `"error"`                                 | Optional slot for error message |
+| `"help"`                                  | Optional slot for help message  |
+| `"label"`                                 | Required slot for label tag     |
 
 
 ## Dependencies

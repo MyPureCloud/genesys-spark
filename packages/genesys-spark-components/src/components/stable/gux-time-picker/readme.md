@@ -1,4 +1,4 @@
-# gux-time-picker-beta
+# gux-time-picker
 
 
 
@@ -22,19 +22,19 @@
 
 ### Depends on
 
-- [gux-icon](../../stable/gux-icon)
-- [gux-list-item](../../stable/gux-list/gux-list-item)
-- [gux-list](../../stable/gux-list)
-- [gux-popup](../../stable/gux-popup)
+- [gux-icon](../gux-icon)
+- [gux-list-item](../gux-list/gux-list-item)
+- [gux-list](../gux-list)
+- [gux-popup](../gux-popup)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-time-picker-beta --> gux-icon
-  gux-time-picker-beta --> gux-list-item
-  gux-time-picker-beta --> gux-list
-  gux-time-picker-beta --> gux-popup
-  style gux-time-picker-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-time-picker --> gux-icon
+  gux-time-picker --> gux-list-item
+  gux-time-picker --> gux-list
+  gux-time-picker --> gux-popup
+  style gux-time-picker fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

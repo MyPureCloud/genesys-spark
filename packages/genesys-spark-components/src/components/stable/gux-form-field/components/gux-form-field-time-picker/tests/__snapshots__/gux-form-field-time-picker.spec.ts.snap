@@ -35,7 +35,7 @@ exports[`gux-form-field-time-picker #render help should render component as expe
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-time-picker-beta aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" value="09:00"></gux-time-picker-beta>
+  <gux-time-picker aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" value="09:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Select Time
   </label>
@@ -80,7 +80,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-time-picker-beta id="gux-form-field-input-i" interval="15" value="07:00"></gux-time-picker-beta>
+  <gux-time-picker id="gux-form-field-input-i" interval="15" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -122,7 +122,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-time-picker-beta id="gux-form-field-input-i" interval="30" value="07:00"></gux-time-picker-beta>
+  <gux-time-picker id="gux-form-field-input-i" interval="30" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -164,7 +164,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-time-picker-beta id="gux-form-field-input-i" interval="60" value="07:00"></gux-time-picker-beta>
+  <gux-time-picker id="gux-form-field-input-i" interval="60" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -206,7 +206,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-time-picker-beta id="gux-form-field-input-i" value="07:00"></gux-time-picker-beta>
+  <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -248,7 +248,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-time-picker-beta id="gux-form-field-input-i" value="07:00"></gux-time-picker-beta>
+  <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -290,7 +290,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-time-picker-beta id="gux-form-field-input-i" value="07:00"></gux-time-picker-beta>
+  <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -332,7 +332,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-time-picker-beta id="gux-form-field-input-i" value="07:00"></gux-time-picker-beta>
+  <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>

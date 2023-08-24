@@ -26,7 +26,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import componentResources from './i18n/en.json';
 
 /**
- * @slot Required slot for gux-time-picker-beta tag
+ * @slot Required slot for gux-time-picker tag
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
  * @slot help - Optional slot for help message
@@ -38,7 +38,7 @@ import componentResources from './i18n/en.json';
 })
 export class GuxFormFieldTimePicker {
   private getI18nValue: GetI18nValue;
-  private timePickerElement: HTMLGuxTimePickerBetaElement;
+  private timePickerElement: HTMLGuxTimePickerElement;
   private label: HTMLLabelElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
@@ -66,7 +66,7 @@ export class GuxFormFieldTimePicker {
 
   @Watch('hasError')
   watchValue(hasError: boolean): void {
-    const timePickerSlot = this.root.querySelector('gux-time-picker-beta');
+    const timePickerSlot = this.root.querySelector('gux-time-picker');
     if (timePickerSlot) {
       timePickerSlot.hasError = hasError;
     }
@@ -168,7 +168,7 @@ export class GuxFormFieldTimePicker {
   }
 
   private setInput(): void {
-    this.timePickerElement = this.root.querySelector('gux-time-picker-beta');
+    this.timePickerElement = this.root.querySelector('gux-time-picker');
 
     this.disabled = this.timePickerElement.disabled;
     this.required = this.timePickerElement.required;

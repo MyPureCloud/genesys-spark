@@ -33,7 +33,7 @@ describe('gux-form-field-time-picker', () => {
       ].forEach((componentAttribute, index) => {
         const html = `
         <gux-form-field-time-picker ${componentAttribute}>
-          <gux-time-picker-beta value="07:00"></gux-time-picker-beta>
+          <gux-time-picker value="07:00"></gux-time-picker>
           <label slot="label">Label</label>
         </gux-form-field-time-picker>
         `;
@@ -62,7 +62,7 @@ describe('gux-form-field-time-picker', () => {
         (componentAttribute, index) => {
           const html = `
           <gux-form-field-time-picker>
-            <gux-time-picker-beta value="07:00" ${componentAttribute}></gux-time-picker-beta>
+            <gux-time-picker value="07:00" ${componentAttribute}></gux-time-picker>
             <label slot="label">Label</label>
           </gux-form-field-time-picker>
         `;
@@ -90,7 +90,7 @@ describe('gux-form-field-time-picker', () => {
     describe('help', () => {
       const html = `
       <gux-form-field-time-picker>
-      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <gux-time-picker value="09:00"></gux-time-picker>
       <label slot="label">Select Time</label>
       <span slot="help">This is a help message</span>
     </gux-form-field-time-picker>

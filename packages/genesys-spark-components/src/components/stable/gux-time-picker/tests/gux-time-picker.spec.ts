@@ -1,13 +1,13 @@
 import { newSpecPage } from '@stencil/core/testing';
 import MutationObserver from 'mutation-observer';
 
-import { GuxTimePickerBeta } from '../gux-time-picker';
+import { GuxTimePicker } from '../gux-time-picker';
 
-const components = [GuxTimePickerBeta];
-const html = `<gux-time-picker-beta value="09:00"></gux-time-picker-beta>`;
+const components = [GuxTimePicker];
+const html = `<gux-time-picker value="09:00"></gux-time-picker>`;
 const language = 'en';
 
-describe('gux-time-picker-beta', () => {
+describe('gux-time-picker', () => {
   beforeEach(() => {
     (
       global as NodeJS.Global & {
@@ -20,7 +20,7 @@ describe('gux-time-picker-beta', () => {
     it(`should render as expected`, async () => {
       const page = await newSpecPage({ components, html, language });
 
-      expect(page.rootInstance).toBeInstanceOf(GuxTimePickerBeta);
+      expect(page.rootInstance).toBeInstanceOf(GuxTimePicker);
       expect(page.root).toMatchSnapshot();
     });
   });

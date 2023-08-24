@@ -49,7 +49,7 @@
  - [gux-month-picker-beta](../../beta/gux-month-picker)
  - [gux-phone-input-beta](../../beta/gux-phone-input)
  - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
- - [gux-time-picker-beta](../../beta/gux-time-picker)
+ - [gux-time-picker](../gux-time-picker)
 
 ### Graph
 ```mermaid
@@ -63,7 +63,7 @@ graph TD;
   gux-month-picker-beta --> gux-popup
   gux-phone-input-beta --> gux-popup
   gux-table-toolbar-menu-button --> gux-popup
-  gux-time-picker-beta --> gux-popup
+  gux-time-picker --> gux-popup
   style gux-popup fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

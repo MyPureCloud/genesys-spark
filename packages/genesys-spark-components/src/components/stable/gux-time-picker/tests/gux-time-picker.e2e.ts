@@ -1,19 +1,19 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
-describe('gux-time-picker-beta', () => {
+describe('gux-time-picker', () => {
   describe('#render', () => {
     it('renders', async () => {
-      const html = `<gux-time-picker-beta value="15:00" lang="en"></gux-time-picker-beta>`;
+      const html = `<gux-time-picker value="15:00" lang="en"></gux-time-picker>`;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-time-picker-beta');
+      const element = await page.find('gux-time-picker');
       expect(element).toHaveAttribute('hydrated');
     });
   });
 
   it('updates the hours and minutes values', async () => {
-    const html = `<gux-time-picker-beta lang="en" value="09:00"></gux-time-picker-beta>`;
+    const html = `<gux-time-picker lang="en" value="09:00"></gux-time-picker>`;
     const page = await newSparkE2EPage({ html });
-    const timePicker = await page.find('gux-time-picker-beta');
+    const timePicker = await page.find('gux-time-picker');
 
     const inputHours = await timePicker.find('pierce/.gux-input-time-hours');
     const inputMinutes = await timePicker.find(
@@ -28,9 +28,9 @@ describe('gux-time-picker-beta', () => {
   });
 
   it('opens the suggested times when the clock button is clicked', async () => {
-    const html = `<gux-time-picker-beta value="15:00" lang="en"></gux-time-picker-beta>`;
+    const html = `<gux-time-picker value="15:00" lang="en"></gux-time-picker>`;
     const page = await newSparkE2EPage({ html });
-    const timePicker = await page.find('gux-time-picker-beta');
+    const timePicker = await page.find('gux-time-picker');
 
     const clockButton = await timePicker.find('pierce/.gux-clock-button');
     await clockButton.click();
@@ -39,9 +39,9 @@ describe('gux-time-picker-beta', () => {
   });
 
   it('should not open the suggested tims when the clock button is clicked when disabled', async () => {
-    const html = `<gux-time-picker-beta value="15:00" lang="en" disabled></gux-time-picker-beta>`;
+    const html = `<gux-time-picker value="15:00" lang="en" disabled></gux-time-picker>`;
     const page = await newSparkE2EPage({ html });
-    const timePicker = await page.find('gux-time-picker-beta');
+    const timePicker = await page.find('gux-time-picker');
 
     const clockButton = await timePicker.find('pierce/.gux-clock-button');
     await clockButton.click();
