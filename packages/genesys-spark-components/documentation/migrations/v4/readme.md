@@ -31,6 +31,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-inline-alert-beta | gux-inline-alert |
 | gux-popup-beta        | gux-popup        |
 | gux-popover-beta      | gux-popover      |
+| gux-time-picker-beta  | gux-time-picker  |
 
 #### gux-calendar
 
