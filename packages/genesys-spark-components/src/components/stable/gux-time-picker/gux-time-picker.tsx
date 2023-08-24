@@ -32,10 +32,10 @@ import {
 
 @Component({
   styleUrl: 'gux-time-picker.less',
-  tag: 'gux-time-picker-beta',
+  tag: 'gux-time-picker',
   shadow: true
 })
-export class GuxTimePickerBeta {
+export class GuxTimePicker {
   private listElement: HTMLGuxListElement;
   private clockButton: HTMLButtonElement;
   private hourInputElement: HTMLInputElement;

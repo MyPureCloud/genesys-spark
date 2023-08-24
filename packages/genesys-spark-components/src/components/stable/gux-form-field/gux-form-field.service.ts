@@ -36,7 +36,7 @@ export function validateFormIds(
     | HTMLInputElement
     | HTMLSelectElement
     | HTMLTextAreaElement
-    | HTMLGuxTimePickerBetaElement
+    | HTMLGuxTimePickerElement
     | HTMLGuxPhoneInputBetaElement
 ): void {
   if (hasLabelSlot(root)) {

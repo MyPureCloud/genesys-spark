@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-time-picker-beta #render should render as expected 1`] = `
-<gux-time-picker-beta value="09:00">
+exports[`gux-time-picker #render should render as expected 1`] = `
+<gux-time-picker value="09:00">
   <mock:shadow-root>
     <gux-popup class="gux-time-picker">
       <div class="gux-input-time" slot="target">
@@ -66,5 +66,5 @@ exports[`gux-time-picker-beta #render should render as expected 1`] = `
       </div>
     </gux-popup>
   </mock:shadow-root>
-</gux-time-picker-beta>
+</gux-time-picker>
 `;

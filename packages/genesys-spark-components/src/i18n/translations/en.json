@@ -350,16 +350,6 @@
     "tag-disabled": "disabled tag with label: {label}",
     "remove-tag": "Remove tag with label: {label}"
   },
-  "gux-time-picker": {
-    "am": "AM",
-    "time-separator": ":",
-    "clockButton": "Toggle suggested times",
-    "hoursInput": "Input hours",
-    "minutesInput": "Input minutes",
-    "pm": "PM",
-    "timeOptionsState": "Time options open: {state}",
-    "toggleAmPM": "{amOrPm} selected, click to toggle"
-  },
   "gux-action-button": {
     "actionButtonDropdown": "Dropdown for {buttonTitle}"
   },
@@ -477,6 +467,16 @@
     "scrollRight": "Scroll Right",
     "scrollUp": "Scroll Up",
     "scrollDown": "Scroll Down"
+  },
+  "gux-time-picker": {
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
   },
   "gux-toggle": {
     "defaultAriaLabel": "Toggle Switch",
