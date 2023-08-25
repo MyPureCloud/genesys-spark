@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.13](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.12...v4.0.0-beta.13) (2023-08-25)
+
+
+### Features
+
+* **icons:** various requested icons ([f7962ee](https://github.com/MyPureCloud/genesys-webcomponents/commit/f7962ee0484571ce2f5dc9cbb0f5983e9f5ce723))
+
 ## [4.0.0-beta.12](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.10...v4.0.0-beta.12) (2023-08-23)
 
 
