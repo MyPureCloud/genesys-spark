@@ -40,6 +40,7 @@ graph TD;
   gux-simple-toast-legacy --> gux-truncate
   gux-simple-toast-legacy --> gux-dismiss-button
   gux-truncate --> gux-tooltip
+  gux-dismiss-button --> gux-button-slot-beta
   gux-dismiss-button --> gux-icon
   style gux-simple-toast-legacy fill:#f9f,stroke:#333,stroke-width:4px
 ```

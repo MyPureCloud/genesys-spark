@@ -40,6 +40,7 @@ graph TD;
   gux-pagination-ellipsis-button --> gux-popover
   gux-pagination-ellipsis-button --> gux-form-field-number
   gux-popover --> gux-dismiss-button
+  gux-dismiss-button --> gux-button-slot-beta
   gux-dismiss-button --> gux-icon
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-icon
