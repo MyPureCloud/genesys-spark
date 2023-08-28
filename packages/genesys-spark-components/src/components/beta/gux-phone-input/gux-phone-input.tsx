@@ -139,7 +139,7 @@ export class GuxPhoneInput {
   }
 
   @Watch('value')
-  private updateValue(number: string): void {
+  updateValue(number: string): void {
     this._setRegionAlphaCode(this.getRegionFromValue(number)?.alphaCode);
   }
 
