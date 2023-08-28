@@ -2,7 +2,7 @@
   "accordion": {
     "header": {
       "height": "40px",
-      "padding": "0px 16px 0px 16px",
+      "padding": "10px 16px 10px 16px",
       "chevron_icon": "16px",
       "gap": "8px",
       "default": {
@@ -10,7 +10,8 @@
           "label_color": "#1b2c48",
           "chevron_icon": {
             "closed": "#626e84",
-            "open": "#252E78"
+            "open": "#252E78",
+            "hover": "#3742A2"
           }
         }
       },
@@ -85,6 +86,17 @@
       "color": "#7B88F7",
       "style": "solid",
       "width": "2px"
+    },
+    "content_item": {
+      "padding": "16px",
+      "foreground_color": "#1b2c48",
+      "background_color": "#ffffff",
+      "default_text": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "18px",
+        "fontSize": "12px",
+        "fontWeight": 400
+      }
     },
     "wrapper": {
       "divider_border": {

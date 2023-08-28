@@ -23,12 +23,12 @@
 
 ### Used by
 
- - [gux-time-picker-beta](../../../beta/gux-time-picker)
+ - [gux-time-picker](../../gux-time-picker)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-time-picker-beta --> gux-list-item
+  gux-time-picker --> gux-list-item
   style gux-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

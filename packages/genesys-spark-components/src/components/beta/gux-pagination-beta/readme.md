@@ -58,9 +58,9 @@ graph TD;
   gux-pagination-buttons-beta --> gux-icon
   gux-pagination-ellipsis-button --> gux-icon
   gux-pagination-ellipsis-button --> gux-tooltip
-  gux-pagination-ellipsis-button --> gux-popover-beta
+  gux-pagination-ellipsis-button --> gux-popover
   gux-pagination-ellipsis-button --> gux-form-field-number
-  gux-popover-beta --> gux-dismiss-button
+  gux-popover --> gux-dismiss-button
   gux-dismiss-button --> gux-icon
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-icon

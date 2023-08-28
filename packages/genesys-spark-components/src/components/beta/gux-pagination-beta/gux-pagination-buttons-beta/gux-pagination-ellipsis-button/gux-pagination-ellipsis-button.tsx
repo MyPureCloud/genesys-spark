@@ -132,7 +132,7 @@ export class GuxPaginationEllipsisButton {
           ></gux-icon>
         </button>
         <gux-tooltip for="popover-target">{this.i18n('goToPage')}</gux-tooltip>
-        <gux-popover-beta is-open={this.isOpen} for="popover-target">
+        <gux-popover is-open={this.isOpen} for="popover-target">
           <span slot="title">{this.i18n('goToPage')}</span>
           <gux-form-field-number>
             <input
@@ -145,7 +145,7 @@ export class GuxPaginationEllipsisButton {
             />
             <label slot="label"></label>
           </gux-form-field-number>
-        </gux-popover-beta>
+        </gux-popover>
       </Host>
     ) as JSX.Element;
   }

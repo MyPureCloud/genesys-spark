@@ -96,7 +96,8 @@
       "text": {
         "fontFamily": "Noto Sans",
         "lineHeight": "18px",
-        "fontSize": "12px"
+        "fontSize": "12px",
+        "fontWeight": 400
       },
       "label_color": "#1b2c48",
       "indicator": {
@@ -129,6 +130,12 @@
     "spinner": {
       "track": "#4856CB",
       "error_color": "#CED2FC"
+    },
+    "textarea": {
+      "padding": "8px 12px"
+    },
+    "focus_ring": {
+      "border_radius": "4px"
     }
   }
 }

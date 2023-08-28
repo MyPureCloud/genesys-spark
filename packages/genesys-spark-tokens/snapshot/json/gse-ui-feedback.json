@@ -235,6 +235,58 @@
     "small": {
       "gap": "12px",
       "gap_text": "4px"
+    },
+    "blank_state": {
+      "large": {
+        "header": {
+          "fontFamily": "Urbanist",
+          "fontWeight": 700,
+          "lineHeight": "27px",
+          "fontSize": "18px"
+        },
+        "subheader": {
+          "fontFamily": "Noto Sans",
+          "fontWeight": 600,
+          "lineHeight": "20px",
+          "fontSize": "14px"
+        }
+      },
+      "small": {
+        "header": {
+          "fontFamily": "Urbanist",
+          "fontWeight": 700,
+          "lineHeight": "24px",
+          "fontSize": "14px"
+        },
+        "subheader": {
+          "fontFamily": "Noto Sans",
+          "fontWeight": 600,
+          "lineHeight": "18px",
+          "fontSize": "12px"
+        }
+      }
     }
+  },
+  "blank_state": {
+    "small": {
+      "width": "250px"
+    },
+    "large": {
+      "width": "564px"
+    },
+    "icon": {
+      "size": {
+        "sm": "32px",
+        "lg": "42px"
+      }
+    },
+    "padding": "32px 16px",
+    "gap_message": "4px",
+    "gap_main": "12px",
+    "gap_content": "24px",
+    "icon_color": "#767c8d",
+    "foreground_color": "#1b2c48",
+    "background_color": "#fbfcfe",
+    "border_radius": "8px"
   }
 }

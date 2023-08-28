@@ -2,7 +2,12 @@
 <div class="scroll-container">
   <div class="scroll-interior">
     <div id="popover-target">Example Element</div>
-    <gux-popover id="popover-example" position="top" for="popover-target">
+    <gux-popover
+      id="popover-example"
+      position="top"
+      for="popover-target"
+      is-open
+    >
       <span slot="title">Title</span>
       <div style="width: 200px">
         <div>popover content</div>
@@ -22,8 +27,9 @@
   onload="(function () {
   const popoverTarget = document.getElementById('popover-target');
   const popoverExample = document.getElementById('popover-example');
+
   popoverTarget.addEventListener('mouseover', () => {
-    popoverExample.hidden = false;
+    popoverExample.isOpen = true;
   });
 })()"
 >

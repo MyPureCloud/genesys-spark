@@ -1,0 +1,398 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-calendar renders 1`] = `
+<gux-calendar-beta>
+  <mock:shadow-root>
+    <div class="gux-calendar-beta">
+      <slot></slot>
+      <div class="gux-header">
+        <button aria-label="Previous month: April 2023" class="gux-left" type="button">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+        <span class="gux-header-month-and-year">
+          May 2023
+        </span>
+        <button aria-label="Next month: June 2023" class="gux-right" type="button">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </div>
+      <div>
+        <div class="gux-week-days">
+          <div class="gux-week-day">
+            S
+          </div>
+          <div class="gux-week-day">
+            M
+          </div>
+          <div class="gux-week-day">
+            T
+          </div>
+          <div class="gux-week-day">
+            W
+          </div>
+          <div class="gux-week-day">
+            T
+          </div>
+          <div class="gux-week-day">
+            F
+          </div>
+          <div class="gux-week-day">
+            S
+          </div>
+        </div>
+        <div class="gux-content">
+          <div class="gux-content-week">
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1682812800000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                30
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-04-30T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1682899200000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                1
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-01T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1682985600000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                2
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-02T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683072000000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                3
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-03T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683158400000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                4
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-04T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683244800000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                5
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-05T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683331200000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                6
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-06T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+          </div>
+          <div class="gux-content-week">
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683417600000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                7
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-07T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683504000000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                8
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-08T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683590400000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                9
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-09T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683676800000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                10
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-10T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683763200000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                11
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-11T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683849600000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                12
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-12T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1683936000000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                13
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-13T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+          </div>
+          <div class="gux-content-week">
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684022400000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                14
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-14T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684108800000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                15
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-15T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684195200000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                16
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-16T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684281600000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                17
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-17T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684368000000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                18
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-18T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="true" aria-disabled="false" class="gux-content-date gux-current-month gux-selected" data-date="1684454400000" role="button" tabindex="0">
+              <span aria-hidden="true" class="gux-non-sr">
+                19
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-19T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684540800000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                20
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-20T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+          </div>
+          <div class="gux-content-week">
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684627200000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                21
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-21T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684713600000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                22
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-22T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684800000000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                23
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-23T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684886400000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                24
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-24T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1684972800000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                25
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-25T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1685059200000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                26
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-26T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1685145600000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                27
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-27T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+          </div>
+          <div class="gux-content-week">
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1685232000000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                28
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-28T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1685318400000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                29
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-29T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1685404800000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                30
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-30T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date gux-current-month" data-date="1685491200000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                31
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-05-31T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1685577600000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                1
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-01T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1685664000000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                2
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-02T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1685750400000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                3
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-03T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+          </div>
+          <div class="gux-content-week">
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1685836800000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                4
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-04T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1685923200000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                5
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-05T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1686009600000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                6
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-06T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1686096000000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                7
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-07T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1686182400000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                8
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-08T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1686268800000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                9
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-09T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+            <div aria-current="false" aria-disabled="false" class="gux-content-date" data-date="1686355200000" role="button" tabindex="-1">
+              <span aria-hidden="true" class="gux-non-sr">
+                10
+              </span>
+              <span class="gux-sr-only">
+                <gux-date-beta datetime="2023-06-10T00:00:00.000Z" format="long"></gux-date-beta>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input max="2023-06-18" min="2023-04-28" type="date" value="2023-05-19">
+</gux-calendar-beta>
+`;

@@ -41,10 +41,8 @@ export class GuxIcon {
 
   @Watch('iconName')
   async prepIcon(iconName: string): Promise<void> {
-    if (iconName) {
-      this.baseSvgHtml = await getBaseSvgHtml(iconName);
-      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
-    }
+    this.baseSvgHtml = await getBaseSvgHtml(iconName);
+    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
   }
 
   @Watch('decorative')

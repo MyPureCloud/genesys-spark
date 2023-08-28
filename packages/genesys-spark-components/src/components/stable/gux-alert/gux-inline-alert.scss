@@ -29,6 +29,7 @@
   * @prop --gse-ui-alert-text-lineHeight
   * @prop --gse-ui-alert-text-fontSize
   * @prop --gse-ui-alert-borderRadius
+  * @prop --gse-ui-alert-text-fontWeight
   */
 
 @import '../../../style/mixins';
@@ -67,7 +68,7 @@
     gap: var(--gse-ui-alert-gap);
     font-family: var(--gse-ui-alert-text-fontFamily);
     font-size: var(--gse-ui-alert-text-fontSize);
-    font-weight: 400;
+    font-weight: var(--gse-ui-alert-text-fontWeight);
     line-height: var(--gse-ui-alert-text-lineHeight);
   }
 

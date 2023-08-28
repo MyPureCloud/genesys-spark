@@ -1,4 +1,3 @@
-import { createPopper, Instance } from '@popperjs/core';
 import {
   Component,
   Element,
@@ -6,16 +5,21 @@ import {
   EventEmitter,
   h,
   JSX,
-  Prop,
-  State,
-  Watch
+  Prop
 } from '@stencil/core';
+import {
+  autoUpdate,
+  computePosition,
+  arrow,
+  flip,
+  offset,
+  Placement,
+  shift
+} from '@floating-ui/dom';
 
 import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
-import { onHiddenChange } from '../../../utils/dom/on-attribute-change';
 import { trackComponent } from '@utils/tracking/usage';
-
-import { PopperPosition } from './gux-popover-list.types';
+import { findElementById } from '@utils/dom/find-element-by-id';
 
 /**
  * @slot - popover content
@@ -27,9 +31,9 @@ import { PopperPosition } from './gux-popover-list.types';
   shadow: true
 })
 export class GuxPopoverList {
-  private popperInstance: Instance;
-  private hiddenObserver: MutationObserver;
   private popupElement: HTMLDivElement;
+  private arrowElement: HTMLDivElement;
+  private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
 
   @Element()
   private root: HTMLElement;
@@ -41,10 +45,10 @@ export class GuxPopoverList {
   for: string;
 
   /**
-   * Indicate position of popover element arrow (follow popper js position attribute api)
+   * Indicate position of popover element arrow (follow floating ui placement attribute api)
    */
   @Prop()
-  position: PopperPosition = 'bottom';
+  position: Placement = 'bottom';
 
   /**
    * Indicate if the dismiss button is displayed
@@ -59,98 +63,126 @@ export class GuxPopoverList {
   closeOnClickOutside: boolean = false;
 
   /**
+   * Controls hiding and showing the popover
+   */
+  @Prop({ mutable: true })
+  isOpen: boolean = false;
+
+  /**
    * Fired when a user dismisses the popover
    */
   @Event()
   guxdismiss: EventEmitter<void>;
 
-  @State()
-  hidden: boolean = true;
-
-  @Watch('hidden')
-  hiddenHandler(hidden: boolean) {
-    if (!hidden && !this.popperInstance) {
-      this.runPopper();
-    } else if (!hidden && this.popperInstance) {
-      this.popperInstance.forceUpdate();
-    }
-  }
-
   @OnClickOutside({ triggerEvents: 'mousedown' })
   checkForClickOutside(event: MouseEvent) {
     const clickPath = event.composedPath();
-    const forElement = document.getElementById(this.for);
+    const forElement = findElementById(this.root, this.for);
     const clickedForElement = clickPath.includes(forElement);
 
     if (
       (this.closeOnClickOutside || !this.displayDismissButton) &&
-      !this.hidden &&
+      this.isOpen &&
       !clickedForElement
     ) {
       this.dismiss();
     }
   }
 
-  private runPopper(): void {
-    const forElement = document.getElementById(this.for);
-
-    if (!forElement) {
-      console.error(
-        `gux-popover-list: invalid "for" attribute. No element in page with the id "${this.for}"`
+  private runUpdatePosition(): void {
+    if (this.root.isConnected) {
+      this.cleanupUpdatePosition = autoUpdate(
+        findElementById(this.root, this.for),
+        this.popupElement,
+        () => this.updatePosition(),
+        {
+          ancestorScroll: true,
+          elementResize: true,
+          animationFrame: true,
+          ancestorResize: true
+        }
       );
-    } else if (this.popupElement) {
-      this.popperInstance = createPopper(forElement, this.popupElement, {
-        modifiers: [
-          {
-            name: 'offset',
-            options: {
-              offset: [0, 7]
-            }
-          },
-          {
-            name: 'arrow',
-            options: {
-              padding: 16
-            }
-          }
-        ],
-        placement: this.position
-      });
+    } else {
+      this.disconnectedCallback();
     }
   }
 
-  private destroyPopper(): void {
-    if (this.popperInstance) {
-      this.popperInstance.destroy();
-      this.popperInstance = null;
+  private updatePosition(): void {
+    const forElement = findElementById(this.root, this.for);
+    // This is 13 because this makes the arrow look aligned
+    const arrowLen = 13;
+
+    if (this.popupElement) {
+      void computePosition(forElement, this.popupElement, {
+        placement: this.position,
+        middleware: [
+          offset(7),
+          flip(),
+          shift(),
+          arrow({
+            element: this.arrowElement,
+            padding: 16
+          })
+        ]
+      }).then(({ x, y, middlewareData, placement }) => {
+        Object.assign(this.popupElement.style, {
+          left: `${x}px`,
+          top: `${y}px`
+        });
+
+        const side = placement.split('-')[0];
+
+        const staticSide = {
+          top: 'bottom',
+          right: 'left',
+          bottom: 'top',
+          left: 'right'
+        }[side];
+
+        if (middlewareData.arrow) {
+          const { x, y } = middlewareData.arrow;
+          this.popupElement.setAttribute('data-placement', placement);
+          Object.assign(this.arrowElement.style, {
+            left: x != null ? `${x}px` : '',
+            top: y != null ? `${y}px` : '',
+            right: '',
+            bottom: '',
+            [staticSide]: `${-arrowLen / 2}px`,
+            transform: 'rotate(45deg)'
+          });
+        }
+      });
     }
   }
 
   private dismiss(): void {
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
-      this.root.setAttribute('hidden', '');
+      this.isOpen = false;
     }
   }
 
   connectedCallback(): void {
     trackComponent(this.root, { variant: this.position });
-
-    this.hiddenObserver = onHiddenChange(this.root, (hidden: boolean) => {
-      this.hidden = hidden;
-    });
-
-    this.hidden = this.root.hidden;
   }
 
   componentDidLoad(): void {
-    this.runPopper();
+    if (this.isOpen) {
+      this.runUpdatePosition();
+    }
+  }
+
+  componentDidUpdate(): void {
+    if (this.isOpen) {
+      this.runUpdatePosition();
+    } else if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
   }
 
   disconnectedCallback(): void {
-    this.destroyPopper();
-    if (this.hiddenObserver) {
-      this.hiddenObserver.disconnect();
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
     }
   }
 
@@ -158,9 +190,16 @@ export class GuxPopoverList {
     return (
       <div
         ref={(el: HTMLDivElement) => (this.popupElement = el)}
-        class="gux-popover-wrapper"
+        class={{
+          'gux-hidden': !this.isOpen,
+          'gux-popover-wrapper': true
+        }}
+        data-placement
       >
-        <div class="gux-arrow" data-popper-arrow />
+        <div
+          ref={(el: HTMLDivElement) => (this.arrowElement = el)}
+          class="gux-arrow"
+        ></div>
         {this.displayDismissButton && (
           <gux-dismiss-button
             onClick={this.dismiss.bind(this)}

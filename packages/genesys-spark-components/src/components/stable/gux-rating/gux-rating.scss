@@ -1,0 +1,40 @@
+/**
+ * @prop --gse-ui-rating-default-color
+ * @prop --gse-ui-rating-active-color
+ * @prop --gse-ui-rating-hover-color
+ * @prop --gse-ui-rating-disabled-color
+ * @prop --gse-ui-rating-disabled-opacity
+ * @prop --gse-ui-rating-size
+*/
+
+:host {
+  display: inline-flex;
+  user-select: none;
+}
+
+:host(:host:focus-visible) {
+  outline: var(--gse-ui-focus-width) var(--gse-ui-focus-style)
+    var(--gse-ui-focus-color);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 1px var(--gse-ui-focus-style);
+}
+
+.gux-rating-star-container {
+  color: var(--gse-ui-ui--rating-default-color);
+
+  &.gux-disabled {
+    pointer-events: none;
+    color: var(--gse-ui-rating-disabled-color);
+    opacity: var(--gse-ui-rating-disabled-opacity);
+  }
+
+  gux-icon {
+    width: var(--gse-ui-rating-size);
+    height: var(--gse-ui-rating-size);
+    color: var(--gse-ui-rating-default-color);
+
+    &:hover:not(.gux-disabled) {
+      color: var(--gse-ui-rating-hover-color);
+    }
+  }
+}

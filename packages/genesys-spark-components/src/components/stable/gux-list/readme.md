@@ -77,7 +77,7 @@ Type: `Promise<void>`
  - [gux-button-multi](../gux-button-multi)
  - [gux-context-menu-beta](../../beta/gux-context-menu)
  - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
- - [gux-time-picker-beta](../../beta/gux-time-picker)
+ - [gux-time-picker](../gux-time-picker)
 
 ### Graph
 ```mermaid
@@ -86,7 +86,7 @@ graph TD;
   gux-button-multi --> gux-list
   gux-context-menu-beta --> gux-list
   gux-table-toolbar-menu-button --> gux-list
-  gux-time-picker-beta --> gux-list
+  gux-time-picker --> gux-list
   style gux-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

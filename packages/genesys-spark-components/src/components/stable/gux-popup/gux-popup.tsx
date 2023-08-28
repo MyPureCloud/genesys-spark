@@ -15,7 +15,8 @@ import {
   MiddlewareArguments,
   offset,
   size,
-  shift
+  shift,
+  hide
 } from '@floating-ui/dom';
 
 /**
@@ -87,14 +88,20 @@ export class GuxPopup {
                 });
               }
             }),
-            shift()
+            shift(),
+            hide()
           ]
         }
-      ).then(({ x, y }) => {
+      ).then(({ x, y, middlewareData }) => {
+        const { referenceHidden } = middlewareData.hide;
+
         Object.assign(this.popupElementContainer.style, {
           left: `${x}px`,
           top: `${y}px`
         });
+        referenceHidden
+          ? this.popupElementContainer.classList.add('gux-sr-only-clip')
+          : this.popupElementContainer.classList.remove('gux-sr-only-clip');
       });
     }
   }

@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.13](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.12...v4.0.0-beta.13) (2023-08-25)
+
+
+### Features
+
+* **icons:** various requested icons ([f7962ee](https://github.com/MyPureCloud/genesys-webcomponents/commit/f7962ee0484571ce2f5dc9cbb0f5983e9f5ce723))
+
+## [4.0.0-beta.12](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.10...v4.0.0-beta.12) (2023-08-23)
+
+
+### Features
+
+* **gux-popup-beta:** hide popup when target element goes out of view ([cde3004](https://github.com/MyPureCloud/genesys-webcomponents/commit/cde300490def4b52e1b1b6beb6bd8e79f690f66d))
+* **icon:** requested icons for sprint gds23-4 ([8518286](https://github.com/MyPureCloud/genesys-webcomponents/commit/8518286254bf62bd0e5b5b0bb4e5912cb328d1f6))
+
+
+### Bug Fixes
+
+* **popover:** find-element-by-id tries to call getElementById non-document node ([8d6385c](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d6385c517d36c36d0053d285b3c363447213aa2))
+
+## [4.0.0-beta.11](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.10...v4.0.0-beta.11) (2023-08-23)
+
+
+### Features
+
+* **gux-popup-beta:** hide popup when target element goes out of view ([cde3004](https://github.com/MyPureCloud/genesys-webcomponents/commit/cde300490def4b52e1b1b6beb6bd8e79f690f66d))
+* **icon:** requested icons for sprint gds23-4 ([8518286](https://github.com/MyPureCloud/genesys-webcomponents/commit/8518286254bf62bd0e5b5b0bb4e5912cb328d1f6))
+
+
+### Bug Fixes
+
+* **popover:** find-element-by-id tries to call getElementById non-document node ([8d6385c](https://github.com/MyPureCloud/genesys-webcomponents/commit/8d6385c517d36c36d0053d285b3c363447213aa2))
+
+## [4.0.0-beta.10](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.9...v4.0.0-beta.10) (2023-08-23)
+
+
+### Bug Fixes
+
+* **gux-icon:** prevent updates to svgHtml if baseSvgHtml is not set ([f808ab0](https://github.com/MyPureCloud/genesys-webcomponents/commit/f808ab092c664a7c38d87426d2368f0cda5339e4))
+
+## [4.0.0-beta.9](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.8...v4.0.0-beta.9) (2023-08-22)
+
+## [4.0.0-beta.8](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.7...v4.0.0-beta.8) (2023-08-21)
+
+## [4.0.0-beta.7](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.6...v4.0.0-beta.7) (2023-08-16)
+
+## [4.0.0-beta.6](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.5...v4.0.0-beta.6) (2023-08-16)
+
+## [4.0.0-beta.5](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.4...v4.0.0-beta.5) (2023-08-15)
+
 ## [4.0.0-beta.4](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2023-08-09)
 
 ## [4.0.0-beta.3](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.2...v4.0.0-beta.3) (2023-08-03)

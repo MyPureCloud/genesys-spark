@@ -6,65 +6,62 @@
 
 @gux-arrow-height: 5px;
 
-:host {
-  color: @gux-black-50;
-}
-
 .gux-popover-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: var(--gux-zindex-popover, @gux-zindex-popover);
   display: inline-block;
   padding: @gux-spacing-medium;
+  color: @gux-black-50;
   background-color: @gux-grey-100;
   border-radius: @gux-spacing-2xs;
   .gux-shadow-40();
 
-  .gux-arrow,
-  .gux-arrow::before {
+  &.gux-hidden {
+    display: none;
+  }
+
+  .gux-arrow {
     position: absolute;
     width: @gux-arrow-height * 2;
     height: @gux-arrow-height * 2;
     background: inherit;
   }
 
-  .gux-arrow {
-    visibility: hidden;
-  }
-
-  .gux-arrow::before {
-    visibility: visible;
-    content: '';
-    transform: rotate(45deg);
-  }
-
-  &[data-popper-placement='bottom'],
-  &[data-popper-placement='bottom-start'],
-  &[data-popper-placement='bottom-end'] {
+  &[data-placement='bottom'],
+  &[data-placement='bottom-start'],
+  &[data-placement='bottom-end'] {
     .gux-arrow {
-      top: -1 * (@gux-arrow-height);
+      border-top: 1px solid @gux-grey-30;
+      border-left: 1px solid @gux-grey-30;
     }
   }
 
-  &[data-popper-placement='top'],
-  &[data-popper-placement='top-start'],
-  &[data-popper-placement='top-end'] {
+  &[data-placement='top'],
+  &[data-placement='top-start'],
+  &[data-placement='top-end'] {
     .gux-arrow {
-      bottom: -1 * (@gux-arrow-height);
+      border-right: 1px solid @gux-grey-30;
+      border-bottom: 1px solid @gux-grey-30;
     }
   }
 
-  &[data-popper-placement='left'],
-  &[data-popper-placement='left-start'],
-  &[data-popper-placement='left-end'] {
+  &[data-placement='left'],
+  &[data-placement='left-start'],
+  &[data-placement='left-end'] {
     .gux-arrow {
-      right: -1 * (@gux-arrow-height);
+      border-top: 1px solid @gux-grey-30;
+      border-right: 1px solid @gux-grey-30;
     }
   }
 
-  &[data-popper-placement='right'],
-  &[data-popper-placement='right-start'],
-  &[data-popper-placement='right-end'] {
+  &[data-placement='right'],
+  &[data-placement='right-start'],
+  &[data-placement='right-end'] {
     .gux-arrow {
-      left: -1 * (@gux-arrow-height);
+      border-bottom: 1px solid @gux-grey-30;
+      border-left: 1px solid @gux-grey-30;
     }
   }
 
