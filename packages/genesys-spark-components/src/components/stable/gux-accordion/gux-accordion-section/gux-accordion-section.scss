@@ -45,7 +45,6 @@ section.gux-disabled {
   .gux-header-text {
     flex: 1 1 auto;
     align-self: auto;
-    padding-right: var(--gux-spacing-xs);
     text-align: left;
     color: var(--gse-ui-accordion-header-default-foreground-labelColor);
     font-weight: (--gse-ui-accordion-header-label-defaultText-fontWeight);
@@ -84,7 +83,7 @@ section.gux-disabled {
     color: var(--gse-ui-accordion-contentItem-foregroundColor);
 
     .gux-reverse-headings {
-      margin: 0 0 var(--gux-spacing-3xs) 0;
+      margin: 0 0 var(--gux-spacing-3xs) 0; // missing token COMUI-1678
     }
   }
 
@@ -93,7 +92,7 @@ section.gux-disabled {
     align-self: flex-start;
     width: var(--gse-ui-icon-size-sm);
     height: var(--gse-ui-icon-size-sm);
-    margin-right: var(--gux-spacing-xs);
+    margin-right: var(--gse-ui-accordion-header-gap);
     color: var(--gse-ui-accordion-header-default-foreground-chevronIcon-closed);
 
     .gux-reverse-headings {
@@ -105,7 +104,7 @@ section.gux-disabled {
     flex: 0 1 auto;
     align-items: center;
     align-self: auto;
-    margin-left: var(--gux-spacing-xs);
+    margin-left: var(--gse-ui-accordion-header-gap);
     color: var(--gse-ui-accordion-header-default-foreground-chevronIcon-closed);
     transition: transform 0.5s ease;
     transform-origin: center;
@@ -117,7 +116,7 @@ section.gux-disabled {
 
     &.gux-arrow-position-left {
       order: -1;
-      margin: 0 var(--gux-spacing-xs) 0 0;
+      margin-right: var(--gse-ui-accordion-header-gap);
     }
 
     &.gux-expanded {
@@ -155,6 +154,6 @@ section.gux-disabled {
   }
 
   &.gux-text-content-layout {
-    padding: var(--gux-spacing-medium);
+    padding: var(--gse-ui-accordion-contentItem-padding);
   }
 }
