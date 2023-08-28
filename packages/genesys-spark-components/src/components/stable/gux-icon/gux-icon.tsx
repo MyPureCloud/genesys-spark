@@ -41,28 +41,22 @@ export class GuxIcon {
 
   @Watch('iconName')
   async prepIcon(iconName: string): Promise<void> {
-    if (iconName) {
-      this.baseSvgHtml = await getBaseSvgHtml(iconName);
-      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
-    }
+    this.baseSvgHtml = await getBaseSvgHtml(iconName);
+    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
   }
 
   @Watch('decorative')
   watchDecorative(decorative: boolean): void {
     this.validateProps(decorative, this.screenreaderText);
 
-    if (this.baseSvgHtml) {
-      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
-    }
+    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
   }
 
   @Watch('screenreaderText')
   watchScreenreaderText(screenreaderText: string): void {
     this.validateProps(this.decorative, screenreaderText);
 
-    if (this.baseSvgHtml) {
-      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
-    }
+    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
   }
 
   async componentWillLoad(): Promise<void> {
