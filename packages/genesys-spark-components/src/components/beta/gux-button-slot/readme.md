@@ -24,6 +24,7 @@
  - [gux-blank-state-beta](../gux-blank-state)
  - [gux-button-multi](../../stable/gux-button-multi)
  - [gux-context-menu-beta](../gux-context-menu)
+ - [gux-dismiss-button](../../stable/gux-dismiss-button)
  - [gux-pagination-buttons](../../stable/gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-beta](../gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-cursor](../../stable/gux-pagination-cursor)
@@ -39,6 +40,7 @@ graph TD;
   gux-blank-state-beta --> gux-button-slot-beta
   gux-button-multi --> gux-button-slot-beta
   gux-context-menu-beta --> gux-button-slot-beta
+  gux-dismiss-button --> gux-button-slot-beta
   gux-pagination-buttons --> gux-button-slot-beta
   gux-pagination-buttons-beta --> gux-button-slot-beta
   gux-pagination-cursor --> gux-button-slot-beta
