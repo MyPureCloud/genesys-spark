@@ -26,6 +26,7 @@ import { getRegionObjects, RegionObject } from './services/region-map.service';
 import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
 import { logWarn } from '@utils/error/log-error';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
+import { Region } from './gux-phone.types';
 
 @Component({
   styleUrl: 'gux-phone-input.less',
@@ -559,9 +560,4 @@ export class GuxPhoneInput {
       </gux-popup-beta>
     ) as JSX.Element;
   }
-}
-
-interface Region {
-  alphaCode: RegionCode;
-  dialCode: string;
 }
