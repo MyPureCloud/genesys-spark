@@ -351,11 +351,11 @@
     "tag-disabled": "disabled tag with label: {label}",
     "remove-tag": "Remove tag with label: {label}"
   },
+  "gux-advanced-dropdown-legacy": {
+    "searchAria": "Search"
+  },
   "gux-action-button": {
     "actionButtonDropdown": "Dropdown for {buttonTitle}"
-  },
-  "gux-advanced-dropdown": {
-    "searchAria": "Search"
   },
   "gux-alert": {
     "info": "Information alert with message",

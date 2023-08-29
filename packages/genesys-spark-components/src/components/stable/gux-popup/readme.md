@@ -41,7 +41,7 @@
 ### Used by
 
  - [gux-action-button](../gux-action-button)
- - [gux-advanced-dropdown](../gux-advanced-dropdown)
+ - [gux-advanced-dropdown-legacy](../../legacy/gux-advanced-dropdown-legacy)
  - [gux-button-multi](../gux-button-multi)
  - [gux-context-menu-beta](../../beta/gux-context-menu)
  - [gux-dropdown](../gux-dropdown)
@@ -55,7 +55,7 @@
 ```mermaid
 graph TD;
   gux-action-button --> gux-popup
-  gux-advanced-dropdown --> gux-popup
+  gux-advanced-dropdown-legacy --> gux-popup
   gux-button-multi --> gux-popup
   gux-context-menu-beta --> gux-popup
   gux-dropdown --> gux-popup

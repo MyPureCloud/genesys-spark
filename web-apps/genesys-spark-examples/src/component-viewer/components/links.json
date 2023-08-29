@@ -2,7 +2,7 @@
   "gux-accordion": "https://spark.genesys.com/7978beca0/p/821052-accordion",
   "gux-action-button": "https://spark.genesys.com/7978beca0/p/32be7b-button",
   "gux-action-toast": "https://spark.genesys.com/7978beca0/p/1830ab-toast",
-  "gux-advanced-dropdown": "",
+  "gux-advanced-dropdown-legacy": "",
   "gux-breadcrumbs": "https://spark.genesys.com/7978beca0/p/66af32-breadcrumbs",
   "gux-button": "https://spark.genesys.com/7978beca0/p/32be7b-button",
   "gux-button-slot": "",

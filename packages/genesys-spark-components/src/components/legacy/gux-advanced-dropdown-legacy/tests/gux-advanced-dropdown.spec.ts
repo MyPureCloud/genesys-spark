@@ -1,8 +1,8 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxAdvancedDropdown } from '../gux-advanced-dropdown';
+import { GuxAdvancedDropdownLegacy } from '../gux-advanced-dropdown';
 import MutationObserver from 'mutation-observer';
 
-describe('gux-advanced-dropdown', () => {
+describe('gux-advanced-dropdown-legacy', () => {
   beforeEach(async () => {
     (
       global as NodeJS.Global & {
@@ -13,12 +13,12 @@ describe('gux-advanced-dropdown', () => {
 
   it('should render', async () => {
     const page = await newSpecPage({
-      components: [GuxAdvancedDropdown],
+      components: [GuxAdvancedDropdownLegacy],
       html: `
-        <gux-advanced-dropdown>
+        <gux-advanced-dropdown-legacy>
           <gux-dropdown-option value="en" text="English"></gux-dropdown-option>
           <gux-dropdown-option value="nl" text="Dutch"></gux-dropdown-option>
-        </gux-advanced-dropdown>
+        </gux-advanced-dropdown-legacy>
       `,
       language: 'en'
     });
