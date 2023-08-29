@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.14](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.13...v4.0.0-beta.14) (2023-08-29)
+
+
+### Features
+
+* **content-search:** accessibility fixes ([c5393ff](https://github.com/MyPureCloud/genesys-webcomponents/commit/c5393ff23121016537b07b5dbc06e62c1c9eea35))
+* **gux-tag-beta truncation:** fixed gux-tooltip-text to truncate properly ([4b40994](https://github.com/MyPureCloud/genesys-webcomponents/commit/4b409945e82fb98bf9c57380465b8fe723dab2b3))
+* **icon:** unknown icon is now displayed when no icon-name is given ([25395da](https://github.com/MyPureCloud/genesys-webcomponents/commit/25395da71635fc73343156ac97a5c98d6438ca8c))
+* **tooltip ellipsis fix:** tooltip show/hide logic fix ([1be77a9](https://github.com/MyPureCloud/genesys-webcomponents/commit/1be77a96285a9f4ca2705216948f1542b741daed))
+
 ## [4.0.0-beta.13](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.12...v4.0.0-beta.13) (2023-08-25)
 
 
