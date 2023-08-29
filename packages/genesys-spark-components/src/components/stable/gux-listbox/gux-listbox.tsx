@@ -60,13 +60,16 @@ export class GuxListbox {
   value: string;
 
   @Prop()
+  loading: boolean = false;
+
+  @Prop()
   filter: string = '';
 
   @Prop()
   filterType: GuxFilterTypes = 'none';
 
   @Prop()
-  loading: boolean = false;
+  emptyMessage: string;
 
   @State()
   selectedValues: string[] = [];
@@ -241,7 +244,9 @@ export class GuxListbox {
   renderAllListboxOptionsFiltered(): JSX.Element {
     return [
       <div class="gux-message-container">
-        <div class="gux-no-matches">{this.i18n('noMatches')}</div>
+        <div class="gux-no-matches">
+          {this.emptyMessage || this.i18n('noMatches')}
+        </div>
       </div>,
       this.renderHiddenSlot()
     ] as JSX.Element;
