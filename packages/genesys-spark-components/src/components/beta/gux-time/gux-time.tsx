@@ -5,6 +5,7 @@ import {
   GuxDateTimeFormat
 } from '../../../i18n/DateTimeFormatter';
 import { getDesiredLocale } from '../../../i18n/index';
+import { GuxTimeZoneIdentifier } from '../../../i18n/time-zone/types';
 
 @Component({
   tag: 'gux-time-beta',
@@ -31,6 +32,15 @@ export class GuxTime {
   @Prop()
   format: GuxDateTimeFormat = 'short';
 
+  /**
+   * Format time zone
+   */
+  /**
+   * Time zone identifier
+   */
+  @Prop()
+  timeZone: GuxTimeZoneIdentifier;
+
   componentWillLoad(): void {
     trackComponent(this.root);
     this.formatter = new DateTimeFormatter(getDesiredLocale(this.root));
@@ -39,7 +49,9 @@ export class GuxTime {
   render() {
     return (
       <Host>
-        {this.formatter.formatTime(new Date(this.datetime), this.format)}
+        {this.formatter.formatTime(new Date(this.datetime), this.format, {
+          timeZone: this.timeZone
+        })}
       </Host>
     ) as JSX.Element;
   }
