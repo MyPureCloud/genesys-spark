@@ -23,7 +23,7 @@ import tableResources from '../i18n/en.json';
  */
 
 @Component({
-  styleUrl: 'gux-table-select-menu.less',
+  styleUrl: 'gux-table-select-menu.scss',
   tag: 'gux-table-select-menu',
   //cannot link Popper element with an element in the Shadow Dom
   shadow: false

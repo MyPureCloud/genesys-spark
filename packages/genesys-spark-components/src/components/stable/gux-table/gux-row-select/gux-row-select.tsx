@@ -14,7 +14,7 @@ import { randomHTMLId } from '@utils/dom/random-html-id';
 import tableResources from '../i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-row-select.less',
+  styleUrl: 'gux-row-select.scss',
   tag: 'gux-row-select'
 })
 export class GuxRowSelect {
