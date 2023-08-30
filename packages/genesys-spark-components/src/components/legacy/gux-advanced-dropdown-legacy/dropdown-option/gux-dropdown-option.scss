@@ -1,6 +1,6 @@
-@import (reference) '../../../../style/color.less';
+@import '../../../../style/color.scss';
 
-@text-color: @gux-type;
+$text-color: $gux-type;
 
 gux-dropdown-option {
   position: relative;
@@ -39,14 +39,14 @@ gux-dropdown-option {
 
   &:not(:disabled) {
     &[selected] {
-      color: @text-color;
-      background: @gux-blue-100;
+      color: $text-color;
+      background: $gux-blue-100;
     }
 
     &:hover,
     &:focus-visible {
-      color: @gux-type-dark;
-      background: @gux-blue-60;
+      color: $gux-type-dark;
+      background: $gux-blue-60;
     }
   }
 }

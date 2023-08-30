@@ -17,7 +17,7 @@ function escapeRegex(input: string) {
 }
 
 @Component({
-  styleUrl: 'gux-dropdown-option.less',
+  styleUrl: 'gux-dropdown-option.scss',
   tag: 'gux-dropdown-option'
 })
 export class GuxDropdownOption {
