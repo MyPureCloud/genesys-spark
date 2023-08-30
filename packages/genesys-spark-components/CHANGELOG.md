@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.101.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.101.0...v3.101.1) (2023-08-30)
+
+
+### Bug Fixes
+
+* **icon:** some icons commented out and not displaying ([610d1bb](https://github.com/MyPureCloud/genesys-webcomponents/commit/610d1bb5334ea5141a1a2ddfdc086c601c594aa9))
+* **timezones:** added missing timezones ([c1ac0f8](https://github.com/MyPureCloud/genesys-webcomponents/commit/c1ac0f81a93b200646aa28459562274f7a36d5fe))
+
 ## [3.101.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.100.1...v3.101.0) (2023-08-23)
 
 
