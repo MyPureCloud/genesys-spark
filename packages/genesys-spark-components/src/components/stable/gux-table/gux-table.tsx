@@ -15,8 +15,8 @@ import {
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 import { trackComponent } from '@utils/tracking/usage';
 
 import tableResources from './i18n/en.json';
@@ -34,7 +34,7 @@ const COL_RESIZE_HANDLE_WIDTH = 3;
 
 @Component({
   styleUrl: 'gux-table.less',
-  tag: 'gux-table-beta',
+  tag: 'gux-table',
   shadow: true
 })
 export class GuxTable {

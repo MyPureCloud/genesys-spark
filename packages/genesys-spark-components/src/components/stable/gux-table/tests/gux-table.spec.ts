@@ -5,13 +5,13 @@ import MutationObserver from 'mutation-observer';
 const components = [GuxTable];
 const language = 'en';
 
-describe('gux-table-beta', () => {
+describe('gux-table', () => {
   beforeEach(async () => {
     global.MutationObserver = MutationObserver;
   });
   it('should build', async () => {
     const html = `
-      <gux-table-beta>
+      <gux-table>
         <table slot="data">
           <thead>
             <tr>
@@ -26,7 +26,7 @@ describe('gux-table-beta', () => {
             </tr>
           </tbody>
         </table>
-      </gux-table-beta>
+      </gux-table>
     `;
     const page = await newSpecPage({ components, html, language });
 

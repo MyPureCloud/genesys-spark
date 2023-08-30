@@ -36,7 +36,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-form-field-checkbox](../../../stable/gux-form-field/components/gux-form-field-checkbox)
+- [gux-form-field-checkbox](../../gux-form-field/components/gux-form-field-checkbox)
 
 ### Graph
 ```mermaid

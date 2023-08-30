@@ -24,7 +24,7 @@
 
 ### Depends on
 
-- [gux-icon](../../../stable/gux-icon)
+- [gux-icon](../../gux-icon)
 - [gux-table-select-popover](gux-table-select-popover)
 
 ### Graph
