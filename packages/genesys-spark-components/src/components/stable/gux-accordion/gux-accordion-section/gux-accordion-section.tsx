@@ -25,7 +25,7 @@ import {
  */
 
 @Component({
-  styleUrl: 'gux-accordion-section.less',
+  styleUrl: 'gux-accordion-section.scss',
   tag: 'gux-accordion-section',
   shadow: true
 })
