@@ -110,7 +110,3 @@ gux-popup {
     box-shadow: none;
   }
 }
-
-gux-popup::part(gux-popup-container) {
-  width: inherit;
-}

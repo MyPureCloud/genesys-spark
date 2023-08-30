@@ -188,7 +188,11 @@ export class GuxActionButton {
   render(): JSX.Element {
     return (
       <div class="gux-action-button-container">
-        <gux-popup expanded={this.isOpen} disabled={this.disabled}>
+        <gux-popup
+          expanded={this.isOpen}
+          disabled={this.disabled}
+          exceed-target-width
+        >
           <div slot="target" class="gux-action-button-container">
             <gux-button-slot
               class="gux-action-button"
