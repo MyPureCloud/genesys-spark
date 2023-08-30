@@ -112,6 +112,11 @@
     },
     "content_panel": {
       "padding_bottom": "4px"
+    },
+    "label": {
+      "disabled": {
+        "opacity": 0.5
+      }
     }
   }
 }
