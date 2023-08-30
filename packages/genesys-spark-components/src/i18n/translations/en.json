@@ -19,6 +19,7 @@
   },
   "gux-column-manager": {
     "search": "Search column",
+    "searchResults": "search results",
     "selectedColumnCount": "{count}/{total} Columns Selected",
     "selectAllColumnsScreenReader": "{count} of {total} columns selected: check checkbox to select all {total} columns",
     "unselectAllColumnsScreenReader": "{count} of {total} columns selected: uncheck checkbox to unselect all {total} columns",
@@ -352,10 +353,11 @@
     "breadcrumbs": "Breadcrumbs"
   },
   "gux-content-search": {
-    "eraseBtnAria": "Clear",
-    "navigateNextBtn": "Next",
-    "navigatePreviousBtn": "Previous",
-    "totalMatches": "{currentMatch, number} of {matchCount, number}"
+    "eraseBtnAria": "Clear search text",
+    "navigateNextBtn": "Highlight next match",
+    "navigatePreviousBtn": "Highlight previous match",
+    "totalMatches": "{currentMatch, number} of {matchCount, number}",
+    "clear": "Clear"
   },
   "gux-copy-to-clipboard": {
     "clickToCopy": "Click to Copy",

@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.15](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.14...v4.0.0-beta.15) (2023-08-30)
+
+
+### Features
+
+* **date-time:** added ability to set time zone ([4ae364f](https://github.com/MyPureCloud/genesys-webcomponents/commit/4ae364f3d9fc0bcc7c0361fd030f5afdcb5cd333))
+* **form field margin removal:** removed hardcoded margin for form field components ([ea45e86](https://github.com/MyPureCloud/genesys-webcomponents/commit/ea45e86111d55176755d914ac0f1365c18b17866))
+* **gux-tag-beta truncation:** fixed gux-tooltip-text to truncate properly ([44f1cbd](https://github.com/MyPureCloud/genesys-webcomponents/commit/44f1cbd454655492554ce25c7f829d8cd1522078))
+* **icon:** icons requested in sprint gds23-2 ([d25054e](https://github.com/MyPureCloud/genesys-webcomponents/commit/d25054e7fe9e434ca7745a85ae4eadc1d5b1ddcf))
+* **listbox:** made empty message configurable ([8fd7bef](https://github.com/MyPureCloud/genesys-webcomponents/commit/8fd7bef477845ba4eac8e8256f82b76000fa49a7))
+* **text-highlight:** added dimmed property ([f02c758](https://github.com/MyPureCloud/genesys-webcomponents/commit/f02c758b11c00e0d08338a18676d790f38b39730))
+* **tokens:** updating latest tokens ([f62dc6e](https://github.com/MyPureCloud/genesys-webcomponents/commit/f62dc6ee91641f4a2e92944b1b2092052a8f0c0f))
+* **tooltip ellipsis fix:** tooltip show/hide logic fix ([cdde059](https://github.com/MyPureCloud/genesys-webcomponents/commit/cdde0596802e667be8f53a3ea2d0ad99830bf3cd))
+
+## [4.0.0-beta.14](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.13...v4.0.0-beta.14) (2023-08-29)
+
+
+### Features
+
+* **content-search:** accessibility fixes ([c5393ff](https://github.com/MyPureCloud/genesys-webcomponents/commit/c5393ff23121016537b07b5dbc06e62c1c9eea35))
+* **gux-tag-beta truncation:** fixed gux-tooltip-text to truncate properly ([4b40994](https://github.com/MyPureCloud/genesys-webcomponents/commit/4b409945e82fb98bf9c57380465b8fe723dab2b3))
+* **icon:** unknown icon is now displayed when no icon-name is given ([25395da](https://github.com/MyPureCloud/genesys-webcomponents/commit/25395da71635fc73343156ac97a5c98d6438ca8c))
+* **tooltip ellipsis fix:** tooltip show/hide logic fix ([1be77a9](https://github.com/MyPureCloud/genesys-webcomponents/commit/1be77a96285a9f4ca2705216948f1542b741daed))
+
 ## [4.0.0-beta.13](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.12...v4.0.0-beta.13) (2023-08-25)
 
 

@@ -1,6 +1,11 @@
-//TODO: https://inindca.atlassian.net/browse/COMUI-2105
-
 mark {
-  background-color: #ffff00;
-  color: #000000;
+  background-color: var(--gse-ui-search-match-firstLevel-backgroundColor);
+}
+
+.gux-dimmed {
+  mark {
+    background-color: var(
+      --gse-ui-search-match-subsequentLevel-backgroundColor
+    );
+  }
 }

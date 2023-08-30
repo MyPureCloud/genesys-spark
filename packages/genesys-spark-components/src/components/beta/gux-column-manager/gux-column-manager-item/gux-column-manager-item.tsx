@@ -258,10 +258,10 @@ export class GuxColumnManagerItem {
           <div class="gux-select">
             <slot onSlotchange={() => this.onSlotChange()}></slot>
             <gux-text-highlight
-              class={{ 'gux-active': this.highlightActive }}
               highlight={this.highlight}
               text={this.text}
               strategy="contains"
+              dimmed={!this.highlightActive}
             ></gux-text-highlight>
           </div>
         </div>

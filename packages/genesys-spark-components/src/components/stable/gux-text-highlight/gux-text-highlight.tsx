@@ -35,6 +35,12 @@ export class GuxTextHighlight {
   @Prop()
   strategy: GuxTextHighlightStrategy = 'start';
 
+  /**
+   * The highlight color should be dimmed
+   */
+  @Prop()
+  dimmed: boolean = false;
+
   componentWillLoad(): void {
     trackComponent(this.root);
   }
@@ -51,7 +57,9 @@ export class GuxTextHighlight {
       }
     }
 
-    return (<span>{this.text}</span>) as JSX.Element;
+    return (
+      <span class={{ 'gux-dimmed': this.dimmed }}>{this.text}</span>
+    ) as JSX.Element;
   }
 
   private renderStartsWith(): HTMLSpanElement {
@@ -60,14 +68,16 @@ export class GuxTextHighlight {
       const after = this.text.substring(this.highlight.length);
 
       return (
-        <span>
+        <span class={{ 'gux-dimmed': this.dimmed }}>
           <mark>{highlight}</mark>
           {after}
         </span>
       ) as HTMLSpanElement;
     }
 
-    return (<span>{this.text}</span>) as HTMLSpanElement;
+    return (
+      <span class={{ 'gux-dimmed': this.dimmed }}>{this.text}</span>
+    ) as HTMLSpanElement;
   }
 
   private renderContains(): HTMLSpanElement {
@@ -92,7 +102,10 @@ export class GuxTextHighlight {
     }
 
     return (
-      <span innerHTML={html.highlighted + html.remaining} />
+      <span
+        class={{ 'gux-dimmed': this.dimmed }}
+        innerHTML={html.highlighted + html.remaining}
+      />
     ) as HTMLSpanElement;
   }
 
@@ -117,10 +130,15 @@ export class GuxTextHighlight {
         );
 
       return (
-        <span innerHTML={html.highlighted + html.remaining} />
+        <span
+          class={{ 'gux-dimmed': this.dimmed }}
+          innerHTML={html.highlighted + html.remaining}
+        />
       ) as HTMLSpanElement;
     }
 
-    return (<span>{this.text}</span>) as HTMLSpanElement;
+    return (
+      <span class={{ 'gux-dimmed': this.dimmed }}>{this.text}</span>
+    ) as HTMLSpanElement;
   }
 }

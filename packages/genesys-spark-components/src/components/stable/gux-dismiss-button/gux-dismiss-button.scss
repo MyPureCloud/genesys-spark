@@ -1,0 +1,28 @@
+gux-button-slot-beta {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &.gux-inherit {
+    position: inherit;
+  }
+
+  .gux-icon-container {
+    width: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+
+    gux-icon {
+      width: 16px;
+      height: 16px;
+      order: 0;
+      flex: 0 0 auto;
+      align-self: auto;
+      color: var(--gse-ui-toast-closeButtonColor); // TODO: COMUI-2205
+    }
+  }
+}

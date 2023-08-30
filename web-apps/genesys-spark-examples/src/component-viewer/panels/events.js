@@ -92,7 +92,7 @@ export default class EventsPanel {
     }
 
     const notification = toHTML(`
-      <gux-action-toast accent="neutral">
+      <gux-action-toast-legacy accent="neutral">
         <gux-icon slot="icon" icon-name="alert-info" decorative></gux-icon>
         <div slot="title">${title}</div>
         <dl slot="message">
@@ -101,7 +101,7 @@ export default class EventsPanel {
           <dt>target</dt>
           <dd>${targetId}</dd>
         </dl>
-      </gux-action-toast>
+      </gux-action-toast-legacy>
     `);
 
     setTimeout(function () {

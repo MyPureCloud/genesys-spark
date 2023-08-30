@@ -41,6 +41,7 @@ This default behaviour of this componet assumes that `gux-modal` components will
 ```mermaid
 graph TD;
   gux-modal --> gux-dismiss-button
+  gux-dismiss-button --> gux-button-slot-beta
   gux-dismiss-button --> gux-icon
   style gux-modal fill:#f9f,stroke:#333,stroke-width:4px
 ```

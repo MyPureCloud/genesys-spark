@@ -89,6 +89,11 @@
     padding: 0;
     line-height: 1.6667;
 
+    gux-icon {
+      width: 16px;
+      height: 16px;
+    }
+
     button {
       display: block;
       align-items: center;
@@ -111,23 +116,23 @@
         color: @gux-black-50;
       }
 
-      &:focus-visible:enabled {
+      &:not(.gux-clear-button):focus-visible:enabled {
         .gux-focus-ring();
       }
 
-      gux-icon {
-        width: 16px;
-        height: 16px;
-      }
-    }
+      &.gux-clear-button {
+        flex-shrink: 0;
+        align-items: center;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 8px;
+        margin-left: 8px;
 
-    .gux-clear-button {
-      flex-shrink: 0;
-      align-items: center;
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: 8px;
-      margin-left: 8px;
+        gux-icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
     }
 
     .gux-navigation-disabled {
