@@ -9,7 +9,7 @@
 
 | Property    | Attribute   | Description                             | Type                               | Default     |
 | ----------- | ----------- | --------------------------------------- | ---------------------------------- | ----------- |
-| `dimmed`    | `dimmed`    | The way the text should be highlighted. | `boolean`                          | `false`     |
+| `dimmed`    | `dimmed`    | The highlight color should be dimmed    | `boolean`                          | `false`     |
 | `highlight` | `highlight` | The text to highlight.                  | `string`                           | `undefined` |
 | `strategy`  | `strategy`  | The way the text should be highlighted. | `"contains" \| "fuzzy" \| "start"` | `'start'`   |
 | `text`      | `text`      | The value to display.                   | `string`                           | `undefined` |
