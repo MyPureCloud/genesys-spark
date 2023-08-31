@@ -17,10 +17,10 @@ This component is meant for use in other components as a dismiss button.
 ### Used by
 
  - [gux-modal](../gux-modal)
- - [gux-notification-toast-legacy](../../legacy/gux-notification-toast)
+ - [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
  - [gux-popover](../gux-popover)
  - [gux-popover-list](../gux-popover-list)
- - [gux-simple-toast-legacy](../../legacy/gux-simple-toast)
+ - [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
  - [gux-toast](../gux-toast)
 
 ### Depends on
