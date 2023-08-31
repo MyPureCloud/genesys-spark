@@ -23,7 +23,7 @@
 }
 
 ::slotted(label) {
-  @include gux-label;
+  @include gse-ui-formControl-label;
 }
 
 ::slotted(textarea) {
