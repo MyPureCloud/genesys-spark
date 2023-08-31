@@ -1,7 +1,7 @@
 import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
 
-describe('gux-table-toolbar-beta', () => {
-  const html = `<gux-table-toolbar-beta>
+describe('gux-table-toolbar', () => {
+  const html = `<gux-table-toolbar>
   <div slot="search-and-filter">
     <gux-form-field-search label-position="screenreader">
       <input slot="input" type="search" name="a-3" placeholder="Enter search" />
@@ -33,13 +33,13 @@ describe('gux-table-toolbar-beta', () => {
     <span slot="text">Add</span>
     <gux-icon slot="icon" icon-name="add" decorative></gux-icon>
   </gux-table-toolbar-custom-action>
-</gux-table-toolbar-beta>
+</gux-table-toolbar>
 
     `;
   describe('#render', () => {
     it('renders', async () => {
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-table-toolbar-beta');
+      const element = await page.find('gux-table-toolbar');
 
       await a11yCheck(page);
 
