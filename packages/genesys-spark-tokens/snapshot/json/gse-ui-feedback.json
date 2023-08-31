@@ -97,9 +97,6 @@
       "color": "#23395c26",
       "type": "dropShadow"
     },
-    "slot": {
-      "padding": "2px 3px"
-    },
     "border_radius": "16px",
     "opacity": "80%"
   },
@@ -121,6 +118,9 @@
     "buttons_bar": {
       "gap": "8px"
     },
+    "header": {
+      "gap": "4px"
+    },
     "spacer": {
       "height": "16px"
     },
@@ -141,8 +141,8 @@
       }
     },
     "anchor": {
-      "width": "12px",
-      "height": "32px"
+      "width": "13px",
+      "height": "13px"
     }
   },
   "progress_and_loading": {

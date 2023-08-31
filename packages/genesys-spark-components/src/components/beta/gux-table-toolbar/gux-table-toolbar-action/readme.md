@@ -27,6 +27,7 @@
 graph TD;
   gux-table-toolbar-action --> gux-table-toolbar-custom-action
   gux-table-toolbar-action --> gux-icon
+  gux-table-toolbar-custom-action --> gux-tooltip
   gux-table-toolbar-custom-action --> gux-button-slot-beta
   style gux-table-toolbar-action fill:#f9f,stroke:#333,stroke-width:4px
 ```

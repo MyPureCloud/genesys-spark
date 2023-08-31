@@ -81,6 +81,22 @@
     <gux-button id="bottom-center">Bottom Center</gux-button>
     <gux-button id="bottom-right">Bottom Right</gux-button>
   </div>
+
+  <h2>Tooltip with an anchor</h2>
+  <div class="section">
+    <div>
+      <gux-button id="anchor-tooltip">Button with anchor tooltip</gux-button>
+    </div>
+  </div>
+
+  <h2>Tooltip with dark accent</h2>
+  <div class="section">
+    <div>
+      <gux-button id="anchor-tooltip-dark"
+        >Button with dark accent tooltip</gux-button
+      >
+    </div>
+  </div>
 </div>
 
 <gux-tooltip for="top-left">Top left button tooltip</gux-tooltip>
@@ -89,6 +105,12 @@
 <gux-tooltip for="bottom-left"> Bottom left button tooltip </gux-tooltip>
 <gux-tooltip for="bottom-center"> Bottom center button tooltip </gux-tooltip>
 <gux-tooltip for="bottom-right"> Bottom right button tooltip </gux-tooltip>
+<gux-tooltip anchor for="anchor-tooltip"
+  >Tooltip with anchor property</gux-tooltip
+>
+<gux-tooltip anchor accent="dark" for="anchor-tooltip-dark"
+  >Tooltip with dark accent and anchor property</gux-tooltip
+>
 
 <style>
   .container {

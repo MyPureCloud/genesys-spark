@@ -1,0 +1,115 @@
+@import '../../../../../style/color-palette.scss';
+@import '../../../../../style/mixins.scss';
+@import '../../../../../style/focus.scss';
+@import '../../../../../style/spacing.scss';
+@import '../../../../../style/typography.scss';
+@import '../../../../../style/variables.scss';
+@import '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
+@import '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@import '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
+@import '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+
+@include GuxFormFieldContainerStyle;
+@include GuxFormFieldErrorStyle;
+@include GuxFormFieldLabelStyle;
+@include GuxFormFieldHelpStyle;
+
+:host {
+  display: block;
+}
+
+::slotted(label) {
+  @include gse-ui-formControl-label;
+}
+
+::slotted(input) {
+  flex: 1 1 auto;
+  align-self: auto;
+  order: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  text-overflow: ellipsis;
+  background-color: var(--gse-ui-formControl-input-backgroundColor);
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: var(--gse-ui-formControl-input-placeholderColor);
+    opacity: 1; // missing token COMUI-2187
+  }
+}
+
+slot[name='prefix'],
+slot[name='suffix'] {
+  font-family: var(--gse-ui-formControl-input-prefixSufix-text-fontFamily);
+  font-size: var(--gse-ui-formControl-input-prefixSufix-text-fontSize);
+  color: var(--gse-ui-formControl-input-prefixSufix-defaultColor);
+  line-height: var(--gse-ui-formControl-input-prefixSufix-text-lineHeight);
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+}
+
+.gux-input-and-error-container {
+  flex-grow: 1;
+
+  .gux-input {
+    .gux-input-container {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: center;
+      justify-content: center;
+      gap: var(--gse-ui-formControl-input-gap);
+      width: 100%;
+      height: var(--gse-ui-formControl-input-textfield-height);
+      color: var(--gse-ui-formControl-input-populatedColor);
+      padding: var(--gse-ui-formControl-input-padding);
+      font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
+      line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
+      font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+      font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+      background-color: var(--gse-ui-formControl-input-backgroundColor);
+      background-image: none;
+      border: var(--gse-ui-formControl-input-default-border-width)
+        var(--gse-ui-formControl-input-default-border-style)
+        var(--gse-ui-formControl-input-default-border-color);
+      border-radius: var(--gse-ui-formControl-input-borderRadius);
+
+      &.gux-has-suffix:not(&.gux-has-prefix) {
+        ::slotted(input) {
+          text-align: right;
+        }
+      }
+
+      &.gux-disabled {
+        opacity: var(--gse-ui-formControl-input-disabled-opacity);
+      }
+
+      &:focus-within {
+        outline: var(--gse-ui-formControl-input-focus-border-width)
+          var(--gse-ui-formControl-input-focus-border-style)
+          var(--gse-ui-formControl-input-focus-border-color);
+        border: var(--gse-ui-formControl-input-active-border-width)
+          var(--gse-ui-formControl-input-active-border-style)
+          var(--gse-ui-formControl-input-active-border-color);
+        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+      }
+
+      &:hover:not(.gux-disabled) {
+        border: var(--gse-ui-formControl-input-hover-border-width)
+          var(--gse-ui-formControl-input-hover-border-style)
+          var(--gse-ui-formControl-input-hover-border-color);
+      }
+    }
+
+    &.gux-input-error {
+      .gux-input-container {
+        border-color: var(--gse-ui-formControl-input-error-border-color);
+      }
+    }
+  }
+}

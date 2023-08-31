@@ -7,7 +7,7 @@ import { trackComponent } from '@utils/tracking/usage';
  */
 
 @Component({
-  styleUrl: 'gux-accordion.less',
+  styleUrl: 'gux-accordion.scss',
   tag: 'gux-accordion',
   shadow: true
 })

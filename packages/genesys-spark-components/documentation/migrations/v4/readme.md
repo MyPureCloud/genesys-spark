@@ -155,3 +155,22 @@ Two new properties have been added to `gux-tooltip` which are `accent` and `anch
   ```diff
   + <gux-tooltip anchor>Tooltip</gux-tooltip>
   ```
+
+### gux-accordion
+
+#### gux-accordion-section
+
+The `arrow-position` property has had the following changes.
+
+- The `default` value is now `end`.
+
+- The `before-text` value is now `start`.
+  ```diff
+  - <gux-accordion><gux-accordion-section arrow-position="before-text"></gux-accordion-section></gux-accordion>
+  + <gux-accordion><gux-accordion-section arrow-position="start"></gux-accordion-section></gux-accordion>
+  ```
+- The `beside-text` value is no longer supported.
+  ```diff
+  - <gux-accordion><gux-accordion-section arrow-position="beside-text"></gux-accordion-section></gux-accordion>
+  + <gux-accordion><gux-accordion-section></gux-accordion-section></gux-accordion>
+  ```
