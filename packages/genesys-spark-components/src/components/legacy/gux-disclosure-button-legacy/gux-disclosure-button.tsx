@@ -23,11 +23,11 @@ import { GuxDisclosureButtonPosition } from './gux-disclosure-button.types';
  */
 
 @Component({
-  styleUrl: 'gux-disclosure-button.less',
-  tag: 'gux-disclosure-button',
+  styleUrl: 'gux-disclosure-button.scss',
+  tag: 'gux-disclosure-button-legacy',
   shadow: true
 })
-export class GuxDisclosureButton {
+export class GuxDisclosureButtonLegacy {
   private i18n: GetI18nValue;
   private panelId: string = randomHTMLId('gux-disclosure-button-panel');
 

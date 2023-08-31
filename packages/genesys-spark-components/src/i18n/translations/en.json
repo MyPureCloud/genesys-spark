@@ -337,6 +337,9 @@
     "tag-disabled": "disabled tag with label: {label}",
     "remove-tag": "Remove tag with label: {label}"
   },
+  "gux-disclosure-button-legacy": {
+    "defaultLabel": "Disclosure button"
+  },
   "gux-action-button": {
     "actionButtonDropdown": "Dropdown for {buttonTitle}"
   },
@@ -370,9 +373,6 @@
     "end": "End",
     "date": "Date",
     "toggleCalendar": "Toggle calendar view"
-  },
-  "gux-disclosure-button": {
-    "defaultLabel": "Disclosure button"
   },
   "gux-dismiss-button": {
     "dismiss": "Dismiss"

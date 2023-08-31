@@ -1,8 +1,6 @@
-@import (reference) '../../../style/color.less';
-
 :host {
   height: 100%;
-  color: @gux-black-50;
+  color: var(--gse-ui-tabs-item-icon-iconColor);
 }
 
 .gux-disclosure-button-container {
@@ -15,12 +13,12 @@
     width: 16px;
     padding: 0;
     margin: 0;
-    color: @gux-black-50;
+    color: var(--gse-ui-tabs-item-icon-iconColor);
     background: transparent;
     border-top: none;
-    border-right: 1px solid @gux-grey-60;
+    border-right: 1px solid var(--gse-ui-tabs-item-divider-dividerColor);
     border-bottom: none;
-    border-left: 1px solid @gux-grey-60;
+    border-left: 1px solid var(--gse-ui-tabs-item-divider-dividerColor);
 
     gux-icon {
       width: 12px;
