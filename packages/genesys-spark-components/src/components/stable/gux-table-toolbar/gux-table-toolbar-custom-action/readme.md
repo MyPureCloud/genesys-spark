@@ -30,8 +30,8 @@
 
 ### Depends on
 
-- [gux-tooltip](../../../stable/gux-tooltip)
-- [gux-button-slot-beta](../../gux-button-slot)
+- [gux-tooltip](../../gux-tooltip)
+- [gux-button-slot-beta](../../../beta/gux-button-slot)
 
 ### Graph
 ```mermaid

@@ -20,7 +20,7 @@
 ### Depends on
 
 - [gux-table-toolbar-custom-action](../gux-table-toolbar-custom-action)
-- [gux-icon](../../../stable/gux-icon)
+- [gux-icon](../../gux-icon)
 
 ### Graph
 ```mermaid

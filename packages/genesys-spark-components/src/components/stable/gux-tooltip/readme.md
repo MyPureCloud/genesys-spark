@@ -100,7 +100,7 @@ Type: `Promise<void>`
 
  - [gux-copy-to-clipboard](../gux-copy-to-clipboard)
  - [gux-pagination-ellipsis-button](../../beta/gux-pagination-beta/gux-pagination-buttons-beta/gux-pagination-ellipsis-button)
- - [gux-table-toolbar-custom-action](../../beta/gux-table-toolbar/gux-table-toolbar-custom-action)
+ - [gux-table-toolbar-custom-action](../gux-table-toolbar/gux-table-toolbar-custom-action)
  - [gux-tooltip-title](../gux-tooltip-title)
  - [gux-truncate](../gux-truncate)
 
