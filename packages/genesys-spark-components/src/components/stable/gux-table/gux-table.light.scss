@@ -110,10 +110,9 @@ gux-table {
   &[gs-compact] {
     th {
       height: var(--gse-ui-dataTableItems-header-compact-height);
-      width: var(--gse-ui-dataTableItems-header-compact-width);
     }
 
-    tr[data-row-id] td:first-child {
+    tr[data-row-id] th:first-child {
       width: var(--gse-ui-dataTableItems-header-multiselect-compact-width);
     }
 
@@ -123,12 +122,11 @@ gux-table {
 
     td {
       height: var(--gse-ui-dataTableItems-cell-compact-height);
-      width: var(--gse-ui-dataTableItems-cell-compact-width);
     }
 
     tr[data-row-id] td:first-child {
       width: var(
-        --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width
+        --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width
       );
     }
   }
@@ -149,11 +147,17 @@ gux-table {
   }
 }
 
-//th:not([data-cell-action]):not([data-cell-numeric]):has(> gux-sort-control) {
-//  padding-right: 35px !important;
-//}
-//
-//th[data-cell-numeric]:has(> gux-sort-control),
-//th[data-cell-action]:has(> gux-sort-control) {
-//  padding-left: 35px !important;
-//}
+// used to ensure gux-sort-control arrow doesn't overlap header text when columns are resized
+th:not([data-cell-action]):not([data-cell-numeric]):has(> gux-sort-control) {
+  padding-right: calc(
+    2 * var(--gse-ui-dataTableItems-header-gap) + var(--gse-ui-icon-size-sm)
+  ) !important;
+}
+
+th[data-cell-numeric]:has(> gux-sort-control),
+th[data-cell-action]:has(> gux-sort-control) {
+  padding-left: calc(
+    2 * var(--gse-ui-dataTableItems-header-gap) + var(--gse-ui-icon-size-sm) +
+      2px
+  ) !important;
+}

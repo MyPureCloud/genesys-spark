@@ -49,7 +49,6 @@ export class GuxTable {
   private columnResizeState: GuxTableColumnResizeState | null;
   private tableId: string = randomHTMLId('gux-table');
   private columnsWidths: object = {};
-  private tableWidth: number = this.slottedTable.clientWidth;
   /**
    * Indicates that vertical scroll is presented for table
    */
@@ -109,11 +108,12 @@ export class GuxTable {
     }
 
     this.prepareSelectableRows();
+    this.checkVerticalScroll();
 
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() => {
         readTask(() => {
-          this.scaleColumnWidths();
+          this.checkVerticalScroll();
         });
       });
     }
@@ -127,6 +127,12 @@ export class GuxTable {
       subtree: true,
       childList: true
     });
+  }
+
+  private checkVerticalScroll(): void {
+    const tableContainerElement = this.tableContainer;
+    this.isVerticalScroll =
+      tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
   }
 
   disconnectedCallback(): void {
@@ -302,7 +308,6 @@ export class GuxTable {
     document.querySelector('head').appendChild(styleElement);
 
     const columnWidths = this.calculateColumnWidths(this.tableColumns);
-    this.tableWidth = this.slottedTable.clientWidth;
 
     columnWidths
       // Exclude the last column to allow it to fill the remaining space naturally
@@ -310,45 +315,6 @@ export class GuxTable {
       .forEach(c => (this.columnsWidths[c.name] = c.width));
 
     this.setResizableColumnsStyles();
-  }
-
-  /** Scale column pixel widths equal when a resize is observed */
-  private scaleColumnWidths(): void {
-    if (!this.columnResizeState && this.resizableColumns) {
-      const oldColumnWidths = this.calculateColumnWidths(this.tableColumns);
-      const oldTableWidth = this.tableWidth;
-      const newTableWidth = this.slottedTable.clientWidth;
-
-      oldColumnWidths
-        .map(col => ({
-          ...col,
-          width: this.calcScaledColWidth(
-            col.width,
-            oldTableWidth,
-            newTableWidth
-          )
-        }))
-        // Exclude the last column to allow it to fill the remaining space naturally
-        .slice(0, -1)
-        .forEach(c => (this.columnsWidths[c.name] = c.width));
-
-      this.tableWidth = newTableWidth;
-
-      this.setResizableColumnsStyles();
-    }
-  }
-
-  private calcScaledColWidth(
-    colWidth: number,
-    oldTableWidth: number,
-    newTableWidth: number
-  ): number {
-    const proposedWidth = Math.round(
-      (colWidth / oldTableWidth) * newTableWidth
-    );
-    const minWidth = 1;
-
-    return Math.max(proposedWidth, minWidth);
   }
 
   private updateResizeState(event: MouseEvent): void {
@@ -376,7 +342,6 @@ export class GuxTable {
       ).width;
 
       this.setResizableColumnsStyles();
-      this.tableWidth = this.slottedTable.clientWidth;
     } else {
       this.columnResizeHover = false;
       whenEventIsFrom('th', event, (th: HTMLTableCellElement) => {
