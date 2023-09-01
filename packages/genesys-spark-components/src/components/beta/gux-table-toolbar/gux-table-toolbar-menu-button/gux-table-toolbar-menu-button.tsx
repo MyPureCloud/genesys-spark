@@ -124,7 +124,7 @@ export class GuxTableToolbarMenuButton {
       <Host class={{ 'gux-show-menu': this.showMenu }}>
         <gux-popup expanded={this.expanded}>
           <div slot="target" class="gux-toolbar-menu-container">
-            <gux-button-slot-beta class="gux-menu-button">
+            <gux-button-slot class="gux-menu-button">
               <button
                 type="button"
                 ref={el => (this.dropdownButton = el)}
@@ -141,7 +141,7 @@ export class GuxTableToolbarMenuButton {
                   </span>
                 </gux-tooltip-title>
               </button>
-            </gux-button-slot-beta>
+            </gux-button-slot>
           </div>
           <div class="gux-list-container" slot="popup">
             <gux-list ref={el => (this.listElement = el)}>

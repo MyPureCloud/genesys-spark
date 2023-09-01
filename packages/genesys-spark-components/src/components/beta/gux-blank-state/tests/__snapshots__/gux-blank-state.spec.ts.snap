@@ -11,9 +11,9 @@ exports[`gux-blank-state-beta #render should render the component as expected 1`
       <div class="gux-guidance-container">
         <slot name="additional-guidance"></slot>
       </div>
-      <gux-button-slot-beta accent="primary">
+      <gux-button-slot accent="primary">
         <slot name="call-to-action"></slot>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </mock:shadow-root>
   <gux-icon decorative="true" icon-name="bot" slot="image"></gux-icon>

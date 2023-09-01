@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-button-slot #render should render button with invalid accent 1`] = `
+<gux-button-slot accent="invalid">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render danger button 1`] = `
+<gux-button-slot accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render danger input[type=button] 1`] = `
+<gux-button-slot accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render danger input[type=submit] 1`] = `
+<gux-button-slot accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render default button 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render default input[type=button] 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render default input[type=submit] 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled danger button 1`] = `
+<gux-button-slot accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" disabled="" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled danger input[type=button] 1`] = `
+<gux-button-slot accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled danger input[type=submit] 1`] = `
+<gux-button-slot accent="danger">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled default button 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" disabled="" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled default input[type=button] 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled default input[type=submit] 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled ghost button 1`] = `
+<gux-button-slot accent="ghost">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" disabled="" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled ghost input[type=button] 1`] = `
+<gux-button-slot accent="ghost">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled ghost input[type=submit] 1`] = `
+<gux-button-slot accent="ghost">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled inline button 1`] = `
+<gux-button-slot accent="inline">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" disabled="" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled inline input[type=button] 1`] = `
+<gux-button-slot accent="inline">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled inline input[type=submit] 1`] = `
+<gux-button-slot accent="inline">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled primary button 1`] = `
+<gux-button-slot accent="primary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" disabled="" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled primary input[type=button] 1`] = `
+<gux-button-slot accent="primary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled primary input[type=submit] 1`] = `
+<gux-button-slot accent="primary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled secondary button 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" disabled="" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled secondary input[type=button] 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled secondary input[type=submit] 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled tertiary button 1`] = `
+<gux-button-slot accent="tertiary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" disabled="" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled tertiary input[type=button] 1`] = `
+<gux-button-slot accent="tertiary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render disabled tertiary input[type=submit] 1`] = `
+<gux-button-slot accent="tertiary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" disabled="" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render ghost button 1`] = `
+<gux-button-slot accent="ghost">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render ghost input[type=button] 1`] = `
+<gux-button-slot accent="ghost">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render ghost input[type=submit] 1`] = `
+<gux-button-slot accent="ghost">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render inline button 1`] = `
+<gux-button-slot accent="inline">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render inline input[type=button] 1`] = `
+<gux-button-slot accent="inline">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render inline input[type=submit] 1`] = `
+<gux-button-slot accent="inline">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render input[type=button] with invalid accent 1`] = `
+<gux-button-slot accent="invalid">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render input[type=submit] with invalid accent 1`] = `
+<gux-button-slot accent="invalid">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render invalid button 1`] = `
+<gux-button-slot accent="invalid">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render invalid input[type=button] 1`] = `
+<gux-button-slot accent="invalid">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render invalid input[type=submit] 1`] = `
+<gux-button-slot accent="invalid">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render primary button 1`] = `
+<gux-button-slot accent="primary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render primary input[type=button] 1`] = `
+<gux-button-slot accent="primary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render primary input[type=submit] 1`] = `
+<gux-button-slot accent="primary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render secondary button 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render secondary input[type=button] 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render secondary input[type=submit] 1`] = `
+<gux-button-slot accent="secondary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render tertiary button 1`] = `
+<gux-button-slot accent="tertiary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button accent="primary" type="button">
+    Button
+  </button>
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render tertiary input[type=button] 1`] = `
+<gux-button-slot accent="tertiary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="button" value="Button">
+</gux-button-slot>
+`;
+
+exports[`gux-button-slot #render should render tertiary input[type=submit] 1`] = `
+<gux-button-slot accent="tertiary">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <input accent="primary" type="submit" value="Button">
+</gux-button-slot>
+`;

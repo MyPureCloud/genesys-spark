@@ -21,7 +21,7 @@
 ### Depends on
 
 - [gux-popup](../../../stable/gux-popup)
-- [gux-button-slot-beta](../../gux-button-slot)
+- [gux-button-slot](../../../stable/gux-button-slot)
 - [gux-tooltip-title](../../../stable/gux-tooltip-title)
 - [gux-icon](../../../stable/gux-icon)
 - [gux-list](../../../stable/gux-list)
@@ -30,7 +30,7 @@
 ```mermaid
 graph TD;
   gux-table-toolbar-menu-button --> gux-popup
-  gux-table-toolbar-menu-button --> gux-button-slot-beta
+  gux-table-toolbar-menu-button --> gux-button-slot
   gux-table-toolbar-menu-button --> gux-tooltip-title
   gux-table-toolbar-menu-button --> gux-icon
   gux-table-toolbar-menu-button --> gux-list

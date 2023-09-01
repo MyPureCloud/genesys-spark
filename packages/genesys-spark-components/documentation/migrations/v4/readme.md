@@ -33,6 +33,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-table-beta        | gux-table        |
 | gux-popover-beta      | gux-popover      |
 | gux-time-picker-beta  | gux-time-picker  |
+| gux-button-slot-beta  | gux-button-slot  |
 
 #### gux-calendar
 

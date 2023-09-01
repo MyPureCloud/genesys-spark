@@ -27,14 +27,14 @@
 
 ### Depends on
 
-- [gux-button-slot-beta](../../beta/gux-button-slot)
+- [gux-button-slot](../gux-button-slot)
 - [gux-icon](../gux-icon)
 - [gux-pagination-items-per-page-beta](../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-pagination-cursor --> gux-button-slot-beta
+  gux-pagination-cursor --> gux-button-slot
   gux-pagination-cursor --> gux-icon
   gux-pagination-cursor --> gux-pagination-items-per-page-beta
   gux-pagination-items-per-page-beta --> gux-dropdown

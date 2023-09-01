@@ -28,7 +28,7 @@ export class GuxDismissButton {
 
   render(): JSX.Element {
     return (
-      <gux-button-slot-beta
+      <gux-button-slot
         accent="ghost"
         class={this.position == 'inherit' ? 'gux-inherit' : undefined}
       >
@@ -37,7 +37,7 @@ export class GuxDismissButton {
             <gux-icon icon-name="close" decorative></gux-icon>
           </div>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     ) as JSX.Element;
   }
 }

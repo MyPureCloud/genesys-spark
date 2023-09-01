@@ -45,7 +45,7 @@ Example usage
 ### Depends on
 
 - [gux-popup](../gux-popup)
-- [gux-button-slot-beta](../../beta/gux-button-slot)
+- [gux-button-slot](../gux-button-slot)
 - [gux-icon](../gux-icon)
 - [gux-list](../gux-list)
 
@@ -53,7 +53,7 @@ Example usage
 ```mermaid
 graph TD;
   gux-button-multi --> gux-popup
-  gux-button-multi --> gux-button-slot-beta
+  gux-button-multi --> gux-button-slot
   gux-button-multi --> gux-icon
   gux-button-multi --> gux-list
   style gux-button-multi fill:#f9f,stroke:#333,stroke-width:4px

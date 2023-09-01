@@ -600,7 +600,7 @@ export class GuxTable {
             <slot name="data" />
           </div>
           {this.isHorizontalScroll && (
-            <gux-button-slot-beta accent="secondary">
+            <gux-button-slot accent="secondary">
               <button
                 class="gux-table-scroll-left"
                 disabled={this.isScrolledToFirstCell}
@@ -613,10 +613,10 @@ export class GuxTable {
                   screenreader-text={this.i18n('scrollLeft')}
                 />
               </button>
-            </gux-button-slot-beta>
+            </gux-button-slot>
           )}
           {this.isHorizontalScroll && (
-            <gux-button-slot-beta
+            <gux-button-slot
               accent="secondary"
               style={{ marginRight: `${this.tableScrollbarConstant}px` }}
             >
@@ -633,7 +633,7 @@ export class GuxTable {
                   screenreader-text={this.i18n('scrollRight')}
                 />
               </button>
-            </gux-button-slot-beta>
+            </gux-button-slot>
           )}
           {this.isTableEmpty && (
             <div class="gux-empty-table">
