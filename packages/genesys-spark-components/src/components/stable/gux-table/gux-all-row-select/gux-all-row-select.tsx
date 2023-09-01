@@ -16,7 +16,8 @@ import tableResources from '../i18n/en.json';
 
 @Component({
   styleUrl: 'gux-all-row-select.scss',
-  tag: 'gux-all-row-select'
+  tag: 'gux-all-row-select',
+  shadow: true
 })
 export class GuxAllRowSelect {
   private inputElement: HTMLInputElement;
@@ -27,7 +28,7 @@ export class GuxAllRowSelect {
   private id: string = randomHTMLId('gux-all-row-select');
   private i18n: GetI18nValue;
 
-  @Prop({ mutable: true })
+  @Prop()
   selected: boolean = false;
 
   @Event()
@@ -36,11 +37,7 @@ export class GuxAllRowSelect {
   @Listen('input')
   onCheck(event: CustomEvent): void {
     event.stopPropagation();
-
-    const input = event.target as HTMLInputElement;
-
-    this.selected = input.checked;
-    this.internalallrowselectchange.emit();
+    this.internalallrowselectchange.emit(this.inputElement.checked);
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await

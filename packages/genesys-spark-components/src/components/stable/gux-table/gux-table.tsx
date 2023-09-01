@@ -151,13 +151,16 @@ export class GuxTable {
   @Listen('internalallrowselectchange')
   onInternalAllRowSelectChange(event: CustomEvent): void {
     event.stopPropagation();
-    this.handleSelectAllRows();
+    this.handleSelectAllRows(event.detail as boolean);
   }
 
   @Listen('internalrowselectchange')
   onInternalRowSelectChange(event: CustomEvent): void {
     event.stopPropagation();
-    this.handleRowSelection(event.target);
+    const rowCheckbox: HTMLGuxRowSelectElement =
+      event.target as HTMLGuxRowSelectElement;
+    rowCheckbox.selected = event.detail;
+    this.handleRowSelection(rowCheckbox);
   }
 
   @Listen('mousemove', { capture: true })
@@ -249,7 +252,7 @@ export class GuxTable {
     if (selectAllCheckbox) {
       const rowCheckboxes = this.rowCheckboxes;
       const filterDisabled = rowCheckboxes.filter(
-        rowBox => rowBox.hasAttribute('disabled') == false
+        rowBox => !rowBox.hasAttribute('disabled')
       );
       const selectedRows = filterDisabled.filter(box => box.selected);
       const hasRows = Boolean(rowCheckboxes.length);
@@ -265,13 +268,14 @@ export class GuxTable {
   }
 
   // Handle a change in state of the select all checkbox
-  private handleSelectAllRows(): void {
+  private handleSelectAllRows(selected: boolean): void {
     const selectAllCheckbox = this.selectAllCheckbox;
     const rowCheckboxes = this.rowCheckboxes;
 
     rowCheckboxes.forEach(rowBox => {
+      selectAllCheckbox.selected = selected;
       if (!rowBox.hasAttribute('disabled')) {
-        rowBox.selected = selectAllCheckbox.selected;
+        rowBox.selected = selected;
         this.updateRowSelection(rowBox);
       }
     });
@@ -280,8 +284,8 @@ export class GuxTable {
   }
 
   // Handle a change in state of an individual row selection checkbox
-  private handleRowSelection(rowCheckbox: EventTarget): void {
-    this.updateRowSelection(rowCheckbox as HTMLGuxRowSelectElement);
+  private handleRowSelection(rowCheckbox: HTMLGuxRowSelectElement): void {
+    this.updateRowSelection(rowCheckbox);
     this.updateSelectAllBoxState();
     this.emitSelectionEvent();
   }
