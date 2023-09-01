@@ -7,7 +7,7 @@ _This migration guide is open to anyone to edit. If you have migrated a componen
 - Typescript updated to v5
 - remove `-beta` from components that have been [promoted to stable](#v3-beta-components-promoted-to-stable-in-v4)
 - add `-legacy` to components that have been [removed from stable](#v3-stable-components-archived-to-legacy-in-v4)
-- change `-beta` to `-legacy` for components that have been [removed from beta](#v3-beta-components-archived-to-legacy-in-v4)
+- migrate away from usage of beta components [removed from v4](#v3-beta-components-removed-from-v4)
 - migrate away from usage of legacy components [removed from v4](#v3-legacy-components-removed-from-v4)
 - [Stable component changes](#stable-component-changes):
   - TODO
@@ -68,23 +68,11 @@ Action: _(required)_ add `-legacy` to the tag name of the component.
 
 If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of adding `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released.
 
-## V3 Beta Components Archived to Legacy in V4
+## V3 Beta Components Removed From V4
 
-| V3 tag name      | V4 tag name        |
-| ---------------- | ------------------ |
-| gux-example-beta | gux-example-legacy |
-
-Action: _(required)_ remove the `-beta` tag and add `-legacy` to the tag name of the component.
-
-```diff
-- <gux-example-beta>
-+ <gux-example-legacy>
-  ...
-- </gux-example-beta>
-+ </gux-example-legacy>
-```
-
-If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of replacing the `-beta` suffix with `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released. Contact the Core UI team if you need help migrating away from these components.
+| V3 tag name            | V4 equivalent | Migration Guide                     |
+| ---------------------- | ------------- | ----------------------------------- |
+| gux-error-message-beta | N/A           | [link](./gux-error-message-beta.md) |
 
 ## V3 Legacy Components Removed from V4
 
