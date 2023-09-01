@@ -12,7 +12,7 @@ import { canShowPercentageState } from './gux-radial-progress.service';
 import { GuxRadialProgressScale } from './gux-radial-progress.types';
 
 @Component({
-  styleUrl: 'gux-radial-progress.less',
+  styleUrl: 'gux-radial-progress.scss',
   tag: 'gux-radial-progress',
   shadow: true
 })
