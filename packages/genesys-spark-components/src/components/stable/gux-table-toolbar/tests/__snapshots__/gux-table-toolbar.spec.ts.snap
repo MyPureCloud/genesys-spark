@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-table-toolbar-beta #render should render table toolbar as expected 1`] = `
-<gux-table-toolbar-beta aria-orientation="horizontal" role="toolbar">
+exports[`gux-table-toolbar #render should render table toolbar as expected 1`] = `
+<gux-table-toolbar aria-orientation="horizontal" role="toolbar">
   <mock:shadow-root>
     <div class="search-filter-container">
       <slot name="search-and-filter"></slot>
@@ -226,5 +226,5 @@ exports[`gux-table-toolbar-beta #render should render table toolbar as expected 
     </span>
     <gux-icon decorative="" icon-name="add" slot="icon"></gux-icon>
   </gux-table-toolbar-custom-action>
-</gux-table-toolbar-beta>
+</gux-table-toolbar>
 `;

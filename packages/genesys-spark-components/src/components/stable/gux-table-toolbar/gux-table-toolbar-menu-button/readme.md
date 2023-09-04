@@ -16,15 +16,15 @@
 
 ### Used by
 
- - [gux-table-toolbar-beta](..)
+ - [gux-table-toolbar](..)
 
 ### Depends on
 
-- [gux-popup](../../../stable/gux-popup)
-- [gux-button-slot-beta](../../gux-button-slot)
-- [gux-tooltip-title](../../../stable/gux-tooltip-title)
-- [gux-icon](../../../stable/gux-icon)
-- [gux-list](../../../stable/gux-list)
+- [gux-popup](../../gux-popup)
+- [gux-button-slot-beta](../../../beta/gux-button-slot)
+- [gux-tooltip-title](../../gux-tooltip-title)
+- [gux-icon](../../gux-icon)
+- [gux-list](../../gux-list)
 
 ### Graph
 ```mermaid
@@ -35,7 +35,7 @@ graph TD;
   gux-table-toolbar-menu-button --> gux-icon
   gux-table-toolbar-menu-button --> gux-list
   gux-tooltip-title --> gux-tooltip
-  gux-table-toolbar-beta --> gux-table-toolbar-menu-button
+  gux-table-toolbar --> gux-table-toolbar-menu-button
   style gux-table-toolbar-menu-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

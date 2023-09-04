@@ -1,7 +1,8 @@
-import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
+<h1>gux-table-toolbar</h1>
 
-describe('gux-table-toolbar-beta', () => {
-  const html = `<gux-table-toolbar-beta>
+<h2>Table Toolbar Example</h2>
+
+<gux-table-toolbar>
   <div slot="search-and-filter">
     <gux-form-field-search label-position="screenreader">
       <input slot="input" type="search" name="a-3" placeholder="Enter search" />
@@ -29,21 +30,8 @@ describe('gux-table-toolbar-beta', () => {
     <gux-table-toolbar-action action="refresh"></gux-table-toolbar-action>
   </div>
 
-  <gux-table-toolbar-custom-action slot="primary" accent="primary">
+  <gux-table-toolbar-custom-action slot="primary-action" accent="primary">
     <span slot="text">Add</span>
     <gux-icon slot="icon" icon-name="add" decorative></gux-icon>
   </gux-table-toolbar-custom-action>
-</gux-table-toolbar-beta>
-
-    `;
-  describe('#render', () => {
-    it('renders', async () => {
-      const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-table-toolbar-beta');
-
-      await a11yCheck(page);
-
-      expect(element).toHaveAttribute('hydrated');
-    });
-  });
-});
+</gux-table-toolbar>

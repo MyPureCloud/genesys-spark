@@ -22,7 +22,7 @@ beforeEach(async () => {
   global.MutationObserver = MutationObserver;
 });
 
-const html = `<gux-table-toolbar-beta>
+const html = `<gux-table-toolbar>
 <div slot="search-and-filter">
   <gux-form-field-search label-position="screenreader">
     <input slot="input" type="search" name="a-3" placeholder="Enter search" />
@@ -54,10 +54,10 @@ const html = `<gux-table-toolbar-beta>
   <span slot="text">Add</span>
   <gux-icon slot="icon" icon-name="add" decorative></gux-icon>
 </gux-table-toolbar-custom-action>
-</gux-table-toolbar-beta>
+</gux-table-toolbar>
 `;
 
-describe('gux-table-toolbar-beta', () => {
+describe('gux-table-toolbar', () => {
   describe('#render', () => {
     it(`should render table toolbar as expected`, async () => {
       const page = await newSpecPage({ components, html, language });

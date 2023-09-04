@@ -321,17 +321,6 @@
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
   },
-  "gux-table-toolbar-action": {
-    "actionRefresh": "Refresh",
-    "actionDelete": "Delete",
-    "actionExport": "Export",
-    "actionImport": "Import",
-    "actionRevert": "Revert",
-    "actionAdd": "Add"
-  },
-  "gux-table-toolbar-menu-button": {
-    "additionalActions": "Additional Actions"
-  },
   "gux-tag": {
     "tag": "tag with label: {label}",
     "tag-disabled": "disabled tag with label: {label}",
@@ -438,6 +427,17 @@
   },
   "gux-radial-loading": {
     "loading": "Loading"
+  },
+  "gux-table-toolbar-action": {
+    "actionRefresh": "Refresh",
+    "actionDelete": "Delete",
+    "actionExport": "Export",
+    "actionImport": "Import",
+    "actionRevert": "Revert",
+    "actionAdd": "Add"
+  },
+  "gux-table-toolbar-menu-button": {
+    "additionalActions": "Additional Actions"
   },
   "gux-table": {
     "emptyMessage": "No data available",
