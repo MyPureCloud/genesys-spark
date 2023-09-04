@@ -12,18 +12,9 @@ exports[`gux-radial-progress #render should render component as expected (2) 1`]
 <gux-radial-progress screenreader-text="Uploading file" value="0">
   <mock:shadow-root>
     <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar">
-      <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
-        <filter id="gux-dropshadow-i">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.4"></feGaussianBlur>
-          <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-          <feMerge>
-            <feMergeNode></feMergeNode>
-            <feMergeNode in="SourceGraphic"></feMergeNode>
-          </feMerge>
-        </filter>
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="23.5"></circle>
-        <circle class="gux-dynamic-circle-shadow" cx="50%" cy="50%" filter="url(#gux-dropshadow-i)" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="147.6548547187203" stroke-linecap="round"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="147.6548547187203" stroke-linecap="round"></circle>
+      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
+        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
+        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="138.23007675795088" stroke-linecap="round"></circle>
         <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
           0%
         </text>
@@ -37,18 +28,9 @@ exports[`gux-radial-progress #render should render component as expected (3) 1`]
 <gux-radial-progress screenreader-text="Uploading file" value="10">
   <mock:shadow-root>
     <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
-      <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
-        <filter id="gux-dropshadow-i">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.4"></feGaussianBlur>
-          <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-          <feMerge>
-            <feMergeNode></feMergeNode>
-            <feMergeNode in="SourceGraphic"></feMergeNode>
-          </feMerge>
-        </filter>
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="23.5"></circle>
-        <circle class="gux-dynamic-circle-shadow" cx="50%" cy="50%" filter="url(#gux-dropshadow-i)" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="132.88936924684828" stroke-linecap="round"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="132.88936924684828" stroke-linecap="round"></circle>
+      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
+        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
+        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="124.4070690821558" stroke-linecap="round"></circle>
         <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
           10%
         </text>
@@ -62,18 +44,9 @@ exports[`gux-radial-progress #render should render component as expected (4) 1`]
 <gux-radial-progress screenreader-text="Uploading file" value="100">
   <mock:shadow-root>
     <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">
-      <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
-        <filter id="gux-dropshadow-i">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.4"></feGaussianBlur>
-          <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-          <feMerge>
-            <feMergeNode></feMergeNode>
-            <feMergeNode in="SourceGraphic"></feMergeNode>
-          </feMerge>
-        </filter>
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="23.5"></circle>
-        <circle class="gux-dynamic-circle-shadow" cx="50%" cy="50%" filter="url(#gux-dropshadow-i)" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="0" stroke-linecap="round"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="0" stroke-linecap="round"></circle>
+      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
+        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
+        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="0" stroke-linecap="round"></circle>
         <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
           100%
         </text>
@@ -103,18 +76,9 @@ exports[`gux-radial-progress #render should render component as expected (7) 1`]
 <gux-radial-progress max="100" screenreader-text="Uploading file" value="10">
   <mock:shadow-root>
     <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
-      <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
-        <filter id="gux-dropshadow-i">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.4"></feGaussianBlur>
-          <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-          <feMerge>
-            <feMergeNode></feMergeNode>
-            <feMergeNode in="SourceGraphic"></feMergeNode>
-          </feMerge>
-        </filter>
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="23.5"></circle>
-        <circle class="gux-dynamic-circle-shadow" cx="50%" cy="50%" filter="url(#gux-dropshadow-i)" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="132.88936924684828" stroke-linecap="round"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="132.88936924684828" stroke-linecap="round"></circle>
+      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
+        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
+        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="124.4070690821558" stroke-linecap="round"></circle>
         <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
           10%
         </text>
@@ -128,18 +92,9 @@ exports[`gux-radial-progress #render should render component as expected (8) 1`]
 <gux-radial-progress max="10" screenreader-text="Uploading file" value="10">
   <mock:shadow-root>
     <div aria-label="Uploading file" aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" role="progressbar">
-      <svg class="gux-svg-container" height="60px" role="presentation" viewBox="0 0 60 60" width="60px">
-        <filter id="gux-dropshadow-i">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.4"></feGaussianBlur>
-          <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-          <feMerge>
-            <feMergeNode></feMergeNode>
-            <feMergeNode in="SourceGraphic"></feMergeNode>
-          </feMerge>
-        </filter>
-        <circle class="gux-static-circle" cx="50%" cy="50%" r="23.5"></circle>
-        <circle class="gux-dynamic-circle-shadow" cx="50%" cy="50%" filter="url(#gux-dropshadow-i)" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="0" stroke-linecap="round"></circle>
-        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="23.5" stroke-dasharray="147.6548547187203" stroke-dashoffset="0" stroke-linecap="round"></circle>
+      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
+        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
+        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-dasharray="138.23007675795088" stroke-dashoffset="0" stroke-linecap="round"></circle>
         <text class="gux-percentage" dominant-baseline="central" x="50%" y="50%">
           100%
         </text>
