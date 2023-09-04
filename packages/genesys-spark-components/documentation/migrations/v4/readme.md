@@ -55,6 +55,7 @@ An `is-open` prop has been added to control showing and hiding the component. Th
 | gux-action-toast       | gux-action-toast-legacy       | gux-toast                                   | [link](./gux-action-toast-legacy.md)       |
 | gux-notification-toast | gux-notification-toast-legacy | gux-toast                                   | [link](./gux-notification-toast-legacy.md) |
 | gux-simple-toast       | gux-simple-toast-legacy       | gux-toast                                   | [link](./gux-simple-toast-legacy.md)       |
+| gux-disclosure-button  | gux-disclosure-button-legacy' | none                                        | Contact the Design System UX Team          |
 
 Action: _(required)_ add `-legacy` to the tag name of the component.
 
@@ -66,7 +67,7 @@ Action: _(required)_ add `-legacy` to the tag name of the component.
 + </gux-example-legacy>
 ```
 
-If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of adding `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released.
+If possible, avoid the usage of legacy components that have a migration path and do a full migration to a stable component. The basic migration of adding `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released. If you are using a legacy component that has no documented migration path please contact the Design System UX Team. They will guide you on the best approach to take to remove your dependency on that legacy component.
 
 ## V3 Beta Components Removed From V4
 

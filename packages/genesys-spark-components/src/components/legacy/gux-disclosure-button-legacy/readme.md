@@ -1,4 +1,4 @@
-# gux-disclosure-button
+# gux-disclosure-button-legacy
 
 This is a UI button component that is used to open or dismiss an associated panel.
 
@@ -32,13 +32,13 @@ This is a UI button component that is used to open or dismiss an associated pane
 
 ### Depends on
 
-- [gux-icon](../gux-icon)
+- [gux-icon](../../stable/gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-disclosure-button --> gux-icon
-  style gux-disclosure-button fill:#f9f,stroke:#333,stroke-width:4px
+  gux-disclosure-button-legacy --> gux-icon
+  style gux-disclosure-button-legacy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

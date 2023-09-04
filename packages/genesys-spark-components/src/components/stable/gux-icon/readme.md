@@ -30,7 +30,7 @@
  - [gux-copy-to-clipboard](../gux-copy-to-clipboard)
  - [gux-create-option](../gux-listbox-multi/gux-create-option)
  - [gux-datepicker](../gux-datepicker)
- - [gux-disclosure-button](../gux-disclosure-button)
+ - [gux-disclosure-button-legacy](../../legacy/gux-disclosure-button-legacy)
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-dropdown](../gux-dropdown)
  - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
@@ -88,7 +88,7 @@ graph TD;
   gux-copy-to-clipboard --> gux-icon
   gux-create-option --> gux-icon
   gux-datepicker --> gux-icon
-  gux-disclosure-button --> gux-icon
+  gux-disclosure-button-legacy --> gux-icon
   gux-dismiss-button --> gux-icon
   gux-dropdown --> gux-icon
   gux-dropdown-multi-beta --> gux-icon

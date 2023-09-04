@@ -1,4 +1,4 @@
-# gux-disclosure-button manual accessibility testing status
+# gux-disclosure-button-legacy manual accessibility testing status
 **Last Updated:** Fri Dec 17 2021 14:00:09 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

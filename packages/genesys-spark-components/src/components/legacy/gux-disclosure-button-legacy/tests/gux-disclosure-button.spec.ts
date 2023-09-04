@@ -1,28 +1,28 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { GuxDisclosureButton } from '../gux-disclosure-button';
+import { GuxDisclosureButtonLegacy } from '../gux-disclosure-button';
 
-const components = [GuxDisclosureButton];
+const components = [GuxDisclosureButtonLegacy];
 const language = 'en';
 
 describe('gux-disclosure-button', () => {
   it('should build', async () => {
     const page = await newSpecPage({
       components,
-      html: '<gux-disclosure-button></gux-disclosure-button>',
+      html: '<gux-disclosure-button-legacy></gux-disclosure-button-legacy>',
       language
     });
-    expect(page.rootInstance).toBeInstanceOf(GuxDisclosureButton);
+    expect(page.rootInstance).toBeInstanceOf(GuxDisclosureButtonLegacy);
   });
 
   describe('#render', () => {
     [
-      '<gux-disclosure-button></gux-disclosure-button>',
-      '<gux-disclosure-button is-open></gux-disclosure-button>',
-      '<gux-disclosure-button position="left"></gux-disclosure-button>',
-      '<gux-disclosure-button is-open position="left"></gux-disclosure-button>',
-      '<gux-disclosure-button position="right"></gux-disclosure-button>',
-      '<gux-disclosure-button is-open position="right"></gux-disclosure-button>',
-      '<gux-disclosure-button label="More Info"></gux-disclosure-button>'
+      '<gux-disclosure-button-legacy></gux-disclosure-button-legacy>',
+      '<gux-disclosure-button-legacy is-open></gux-disclosure-button-legacy>',
+      '<gux-disclosure-button-legacy position="left"></gux-disclosure-button-legacy>',
+      '<gux-disclosure-button-legacy is-open position="left"></gux-disclosure-button-legacy>',
+      '<gux-disclosure-button-legacy position="right"></gux-disclosure-button-legacy>',
+      '<gux-disclosure-button-legacy is-open position="right"></gux-disclosure-button-legacy>',
+      '<gux-disclosure-button-legacy label="More Info"></gux-disclosure-button-legacy>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
@@ -37,10 +37,10 @@ describe('gux-disclosure-button', () => {
       it('should open when clicked', async () => {
         const page = await newSpecPage({
           components,
-          html: '<gux-disclosure-button></gux-disclosure-button>',
+          html: '<gux-disclosure-button-legacy></gux-disclosure-button-legacy>',
           language
         });
-        const element = page.root as HTMLGuxDisclosureButtonElement;
+        const element = page.root as HTMLGuxDisclosureButtonLegacyElement;
         const button: HTMLButtonElement = element.shadowRoot.querySelector(
           '.gux-disclosure-button'
         );
@@ -71,10 +71,10 @@ describe('gux-disclosure-button', () => {
       it('should close when clicked', async () => {
         const page = await newSpecPage({
           components,
-          html: '<gux-disclosure-button is-open></gux-disclosure-button>',
+          html: '<gux-disclosure-button-legacy is-open></gux-disclosure-button-legacy>',
           language
         });
-        const element = page.root as HTMLGuxDisclosureButtonElement;
+        const element = page.root as HTMLGuxDisclosureButtonLegacyElement;
         const button: HTMLButtonElement = element.shadowRoot.querySelector(
           '.gux-disclosure-button'
         );
