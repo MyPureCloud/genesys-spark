@@ -5,7 +5,7 @@ exports[`gux-tabs #render should render as expected 1`] = `
   <mock:shadow-root>
     <div class="gux-horizontal gux-left gux-tabs">
       <slot name="tab-list"></slot>
-      <div class="gux-horizontal gux-left">
+      <div class="gux-horizontal gux-left gux-panel-container">
         <slot></slot>
       </div>
     </div>
@@ -107,7 +107,7 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
   <mock:shadow-root>
     <div class="gux-left gux-tabs gux-vertical">
       <slot name="tab-list"></slot>
-      <div class="gux-left gux-vertical">
+      <div class="gux-left gux-panel-container gux-vertical">
         <slot></slot>
       </div>
     </div>
