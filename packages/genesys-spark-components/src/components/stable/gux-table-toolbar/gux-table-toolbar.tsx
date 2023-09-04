@@ -24,7 +24,7 @@ import { getSlot } from '@utils/dom/get-slot';
  */
 
 @Component({
-  styleUrl: 'gux-table-toolbar.less',
+  styleUrl: 'gux-table-toolbar.scss',
   tag: 'gux-table-toolbar',
   shadow: true
 })
