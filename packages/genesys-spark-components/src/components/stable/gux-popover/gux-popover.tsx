@@ -28,7 +28,7 @@ import { findElementById } from '@utils/dom/find-element-by-id';
  */
 
 @Component({
-  styleUrl: 'gux-popover.less',
+  styleUrl: 'gux-popover.scss',
   tag: 'gux-popover',
   shadow: true
 })
