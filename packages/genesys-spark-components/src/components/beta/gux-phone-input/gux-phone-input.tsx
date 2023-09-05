@@ -73,7 +73,7 @@ export class GuxPhoneInput {
   @Prop()
   phoneNumberFormat: 'E164' | 'INTERNATIONAL' | 'NATIONAL' = 'NATIONAL';
 
-  @Event() guxregionselect: EventEmitter<InputEvent>;
+  @Event() guxregionselect: EventEmitter<string>;
 
   @State()
   private regionOptions: JSX.Element[] = [];
@@ -415,10 +415,10 @@ export class GuxPhoneInput {
 
   private setListBox(): void {
     this.listboxElement.addEventListener('input', (event: InputEvent) => {
-      this.guxregionselect.emit(event);
-      this._setRegionAlphaCode(
-        (event.target as HTMLGuxListboxElement).value as RegionCode
-      );
+      const regionCode = (event.target as HTMLGuxListboxElement)
+        .value as RegionCode;
+      this.guxregionselect.emit(regionCode);
+      this._setRegionAlphaCode(regionCode);
       this.collapseListbox('focusFieldButton');
     });
     this.listboxElement.addEventListener('focusout', (event: FocusEvent) => {
