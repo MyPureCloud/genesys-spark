@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.18](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.17...v4.0.0-beta.18) (2023-09-05)
+
+
+### Features
+
+* **error-message-beta:** removed gux-error-message-beta from library ([25240d6](https://github.com/MyPureCloud/genesys-webcomponents/commit/25240d6a48a45d9a4d7584dab6568a35affc1345))
+* **icon:** added icons requested in GDS-2038 ([e5d72df](https://github.com/MyPureCloud/genesys-webcomponents/commit/e5d72dfa1a4126fe7424b1eeaebb514bb73d85f0))
+
+
+### Bug Fixes
+
+* **gux-tabs:** add option for flexbox positioning ([9a870c9](https://github.com/MyPureCloud/genesys-webcomponents/commit/9a870c94551bdd4643c0eac2d9c8683094bf16ec))
+
 ## [4.0.0-beta.17](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.16...v4.0.0-beta.17) (2023-09-01)
 
 
