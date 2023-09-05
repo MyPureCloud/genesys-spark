@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-error-message-beta renders 1`] = `"This is an error message"`;

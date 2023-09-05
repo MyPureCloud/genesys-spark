@@ -3,11 +3,15 @@ const icons = [
     iconNames: [
       'custom/binoculars-slash-regular',
       'custom/clipboard-list-slash-regular',
-      'custom/file-pen-question ',
+      'custom/carousel',
+      'custom/file-pen-question',
       'custom/filter-notification',
       'custom/font-regular-highlight',
       'custom/list-alphabetical-regular',
       'custom/list-roman-regular',
+      'custom/one-button',
+      'custom/quick-reply',
+      'custom/three-button',
       'fa/00-solid',
       'fa/1-regular',
       'fa/alarm-clock-regular',
@@ -123,6 +127,7 @@ const icons = [
       'fa/triangle-exclamation-solid',
       'fa/underline-regular',
       'fa/wand-magic-sparkles-regular',
+      'fa/user-group-solid',
       'fa/volume-regular',
       'fa/volume-xmark-regular'
     ]

@@ -35,7 +35,7 @@ Type: `Promise<void>`
  - [gux-badge-beta](../../beta/gux-badge)
  - [gux-tab](../gux-tabs/gux-tab)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
- - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
+ - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-tag-beta](../../beta/gux-tag)
 
 ### Depends on
