@@ -48,7 +48,7 @@
  - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
  - [gux-month-picker-beta](../../beta/gux-month-picker)
  - [gux-phone-input-beta](../../beta/gux-phone-input)
- - [gux-table-toolbar-menu-button](../../beta/gux-table-toolbar/gux-table-toolbar-menu-button)
+ - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-time-picker](../gux-time-picker)
 
 ### Graph

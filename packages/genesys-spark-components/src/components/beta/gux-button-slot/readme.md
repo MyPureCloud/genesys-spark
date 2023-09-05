@@ -28,8 +28,8 @@
  - [gux-pagination-buttons](../../stable/gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-beta](../gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-cursor](../../stable/gux-pagination-cursor)
- - [gux-table-toolbar-custom-action](../gux-table-toolbar/gux-table-toolbar-custom-action)
- - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
+ - [gux-table-toolbar-custom-action](../../stable/gux-table-toolbar/gux-table-toolbar-custom-action)
+ - [gux-table-toolbar-menu-button](../../stable/gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-toast](../../stable/gux-toast)
 
 ### Graph

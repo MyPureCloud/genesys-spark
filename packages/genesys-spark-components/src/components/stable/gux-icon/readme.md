@@ -30,12 +30,11 @@
  - [gux-copy-to-clipboard](../gux-copy-to-clipboard)
  - [gux-create-option](../gux-listbox-multi/gux-create-option)
  - [gux-datepicker](../gux-datepicker)
- - [gux-disclosure-button](../gux-disclosure-button)
+ - [gux-disclosure-button-legacy](../../legacy/gux-disclosure-button-legacy)
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-dropdown](../gux-dropdown)
  - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
  - [gux-dropdown-multi-tag](../../beta/gux-dropdown-multi/gux-dropdown-multi-tag)
- - [gux-error-message-beta](../../beta/gux-error-message-beta)
  - [gux-form-field-checkbox](../gux-form-field/components/gux-form-field-checkbox)
  - [gux-form-field-color](../gux-form-field/components/gux-form-field-color)
  - [gux-form-field-dropdown](../gux-form-field/components/gux-form-field-dropdown)
@@ -88,12 +87,11 @@ graph TD;
   gux-copy-to-clipboard --> gux-icon
   gux-create-option --> gux-icon
   gux-datepicker --> gux-icon
-  gux-disclosure-button --> gux-icon
+  gux-disclosure-button-legacy --> gux-icon
   gux-dismiss-button --> gux-icon
   gux-dropdown --> gux-icon
   gux-dropdown-multi-beta --> gux-icon
   gux-dropdown-multi-tag --> gux-icon
-  gux-error-message-beta --> gux-icon
   gux-form-field-checkbox --> gux-icon
   gux-form-field-color --> gux-icon
   gux-form-field-dropdown --> gux-icon
