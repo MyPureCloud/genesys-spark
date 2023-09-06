@@ -28,9 +28,8 @@
  - [gux-pagination-buttons](../../stable/gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-beta](../gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-cursor](../../stable/gux-pagination-cursor)
- - [gux-table-beta](../gux-table)
- - [gux-table-toolbar-custom-action](../gux-table-toolbar/gux-table-toolbar-custom-action)
- - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
+ - [gux-table-toolbar-custom-action](../../stable/gux-table-toolbar/gux-table-toolbar-custom-action)
+ - [gux-table-toolbar-menu-button](../../stable/gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-toast](../../stable/gux-toast)
 
 ### Graph
@@ -44,7 +43,6 @@ graph TD;
   gux-pagination-buttons --> gux-button-slot-beta
   gux-pagination-buttons-beta --> gux-button-slot-beta
   gux-pagination-cursor --> gux-button-slot-beta
-  gux-table-beta --> gux-button-slot-beta
   gux-table-toolbar-custom-action --> gux-button-slot-beta
   gux-table-toolbar-menu-button --> gux-button-slot-beta
   gux-toast --> gux-button-slot-beta

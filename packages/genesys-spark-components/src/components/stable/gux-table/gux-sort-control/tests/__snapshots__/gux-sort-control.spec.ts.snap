@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-sort-control #render Not sorted 1`] = `
+<gux-sort-control>
+  <mock:shadow-root>
+    <div class="gux-container">
+      <button aria-label="Column Header 1 . The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order" class="gux-sort-button" type="button">
+        <gux-icon class="gux-sort-icon" decorative="" icon-name="arrow-solid-up"></gux-icon>
+      </button>
+      <div class="gux-resize-spacer"></div>
+    </div>
+  </mock:shadow-root>
+</gux-sort-control>
+`;
+
+exports[`gux-sort-control #render Sorted ascending 1`] = `
+<gux-sort-control>
+  <mock:shadow-root>
+    <div class="gux-container">
+      <button aria-label="Column Header 1 . The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order" class="gux-active gux-sort-button" type="button">
+        <gux-icon class="gux-sort-icon" decorative="" icon-name="arrow-solid-up"></gux-icon>
+      </button>
+      <div class="gux-resize-spacer"></div>
+    </div>
+  </mock:shadow-root>
+</gux-sort-control>
+`;
+
+exports[`gux-sort-control #render Sorted descending 1`] = `
+<gux-sort-control>
+  <mock:shadow-root>
+    <div class="gux-container">
+      <button aria-label="Column Header 1 . The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order" class="gux-active gux-sort-button" type="button">
+        <gux-icon class="gux-sort-icon" decorative="" icon-name="arrow-solid-down"></gux-icon>
+      </button>
+      <div class="gux-resize-spacer"></div>
+    </div>
+  </mock:shadow-root>
+</gux-sort-control>
+`;
+
+exports[`gux-sort-control #render Sorted descending, unsorted allowed 1`] = `
+<gux-sort-control include-unsorted="">
+  <mock:shadow-root>
+    <div class="gux-container">
+      <button aria-label="Column Header 1 . The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column" class="gux-active gux-sort-button" type="button">
+        <gux-icon class="gux-sort-icon" decorative="" icon-name="arrow-solid-down"></gux-icon>
+      </button>
+      <div class="gux-resize-spacer"></div>
+    </div>
+  </mock:shadow-root>
+</gux-sort-control>
+`;

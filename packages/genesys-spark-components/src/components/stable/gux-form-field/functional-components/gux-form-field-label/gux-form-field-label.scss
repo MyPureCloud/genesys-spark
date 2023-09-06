@@ -1,0 +1,31 @@
+@import '../../../../../style/color-palette.scss';
+@import '../../../../../style/typography.scss';
+@import '../../../../../style/spacing.scss';
+
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin GuxFormFieldLabelStyle {
+  .gux-form-field-label {
+    &.gux-required {
+      &::after {
+        color: var(--gse-ui-formControl-label-indicator-requiredColor);
+        content: ' *';
+      }
+    }
+
+    &.gux-beside {
+      position: relative;
+      top: 8px;
+      width: fit-content;
+      min-width: 45px;
+      margin-right: var(--gse-ui-formControl-label-gap);
+    }
+
+    &.gux-above {
+      padding: var(--gse-ui-formControl-label-padding);
+    }
+
+    &.gux-screenreader {
+      @include gux-sr-only;
+    }
+  }
+}

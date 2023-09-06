@@ -247,29 +247,82 @@
   <gux-tab-panel-beta tab-id="10-5">Tab content 5</gux-tab-panel-beta>
 </gux-tabs>
 
-<style
-  onload="(function () {
-    document.querySelector(`gux-tab-panel[tab-id='1-1']`).addEventListener('guxactivepanelchange',
-    (event) => {
-      const currentTime = new Date().toLocaleTimeString();
-      document.querySelector('#currentTime').innerHTML = currentTime;
-      document.querySelector('#currenttab-id').innerHTML = event.detail;
-    })
-    document.querySelector(`#changeTabTitle`).addEventListener('click',
-    () => {
-      const tabTitle1 = document.querySelector(`#tabTitle1`);
-      if (tabTitle1.innerText === 'Tab Header 1') {
-        tabTitle1.innerText = 'Long title long title long title long title'
-      } else if (tabTitle1.innerText === 'Long title long title long title long title') {
-        tabTitle1.innerText = 'Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1'
-      } else {
-        tabTitle1.innerText = 'Tab Header 1'
-      }
-    })
-  }
-  )()"
+<h2>
+  Example 11 -- set `gux-tabs` height and `gux-tab-list` and
+  `gux-tab-panel-beta` fill the available space
+</h2>
+<span
+  >`gux-tab-panel-beta` uses the shadow dom, so try using it if you are having
+  issues rendering content within gux-tab-panel</span
 >
-  .not-used {
-    -custom-noop: noop;
+
+<gux-tabs class="example" style="display: block; height: 400px">
+  <gux-tab-list slot="tab-list">
+    <gux-tab tab-id="10-1">Tab Header 1</gux-tab>
+    <gux-tab tab-id="10-2">Tab Header 2</gux-tab>
+    <gux-tab tab-id="10-3">Tab Header 3</gux-tab>
+    <gux-tab gux-disabled tab-id="10-4">Tab Header 4</gux-tab>
+    <gux-tab gux-disabled tab-id="10-5">Tab Header 5 long long long</gux-tab>
+  </gux-tab-list>
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-1"
+    >Tab content 1</gux-tab-panel-beta
+  >
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-2"
+    >Tab content 2</gux-tab-panel-beta
+  >
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-3"
+    >Tab content 3</gux-tab-panel-beta
+  >
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-4"
+    >Tab content 4</gux-tab-panel-beta
+  >
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-5"
+    >Tab content 5</gux-tab-panel-beta
+  >
+</gux-tabs>
+
+<h2>
+  Example 12 -- Set the `use-flexbox` attribute to enable flexbox positioning.
+</h2>
+<span
+  >`gux-tab-list` and `gux-tab-panel-beta` fill the available space within
+  `gux-tabs`. The `use-flexbox` attribute will be removed in v4, and flexbox
+  will be enabled by default.</span
+>
+
+<gux-tabs class="example flexbox-example" use-flexbox>
+  <gux-tab-list slot="tab-list">
+    <gux-tab tab-id="10-1">Tab Header 1</gux-tab>
+    <gux-tab tab-id="10-2">Tab Header 2</gux-tab>
+    <gux-tab tab-id="10-3">Tab Header 3</gux-tab>
+    <gux-tab gux-disabled tab-id="10-4">Tab Header 4</gux-tab>
+    <gux-tab gux-disabled tab-id="10-5">Tab Header 5 long long long</gux-tab>
+  </gux-tab-list>
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-1"
+    ><div>Tab content 1</div></gux-tab-panel-beta
+  >
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-2"
+    >Tab content 2</gux-tab-panel-beta
+  >
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-3"
+    >Tab content 3</gux-tab-panel-beta
+  >
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-4"
+    >Tab content 4</gux-tab-panel-beta
+  >
+  <gux-tab-panel-beta class="bg-color-example" tab-id="10-5"
+    >Tab content 5</gux-tab-panel-beta
+  >
+</gux-tabs>
+
+<style>
+  .flexbox-example {
+    height: 400px;
+    border: 2px solid black;
+  }
+
+  .bg-color-example {
+    background-color: lightcoral;
+    border: 3px solid blue;
   }
 </style>

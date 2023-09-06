@@ -25,7 +25,7 @@ import {
  */
 
 @Component({
-  styleUrl: 'gux-accordion-section.less',
+  styleUrl: 'gux-accordion-section.scss',
   tag: 'gux-accordion-section',
   shadow: true
 })
@@ -38,10 +38,10 @@ export class GuxAccordionSection {
   root: HTMLElement;
 
   /**
-   * Position of the arrow chevron icon. Position can be 'default' or 'before-text'.  'beside-text' is deprecated and will be removed in v4.
+   * Position of the arrow chevron icon. Position can be 'start' or 'end'.
    */
   @Prop()
-  arrowPosition: GuxAccordionSectionArrowPosition = 'default';
+  arrowPosition: GuxAccordionSectionArrowPosition = 'end';
 
   /**
    * The content layout used in the accordion section. 'text' layout provides default padding, 'custom' removes default padding.
@@ -76,12 +76,7 @@ export class GuxAccordionSection {
   }
 
   private isArrowPositionBeforeText(): boolean {
-    return this.arrowPosition === 'before-text';
-  }
-
-  // arrow position 'beside-text' will be removed in v4 (COMUI-1128)
-  private isArrowPositionedBesideText(): boolean {
-    return this.arrowPosition === 'beside-text';
+    return this.arrowPosition === 'start';
   }
 
   private handleSlotChange(slotname: 'header' | 'subheader'): void {
@@ -122,8 +117,7 @@ export class GuxAccordionSection {
 
             <div
               class={{
-                'gux-header-text': true,
-                'gux-arrow-position-beside': this.isArrowPositionedBesideText()
+                'gux-header-text': true
               }}
             >
               <slot
@@ -139,8 +133,7 @@ export class GuxAccordionSection {
               class={{
                 'gux-header-icon': true,
                 'gux-expanded': this.open,
-                'gux-arrow-position-before-text':
-                  this.isArrowPositionBeforeText()
+                'gux-arrow-position-start': this.isArrowPositionBeforeText()
               }}
             >
               <gux-icon decorative icon-name="chevron-small-down"></gux-icon>

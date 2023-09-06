@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.19](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.18...v4.0.0-beta.19) (2023-09-06)
+
+## [4.0.0-beta.18](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.17...v4.0.0-beta.18) (2023-09-05)
+
+
+### Features
+
+* **error-message-beta:** removed gux-error-message-beta from library ([25240d6](https://github.com/MyPureCloud/genesys-webcomponents/commit/25240d6a48a45d9a4d7584dab6568a35affc1345))
+* **icon:** added icons requested in GDS-2038 ([e5d72df](https://github.com/MyPureCloud/genesys-webcomponents/commit/e5d72dfa1a4126fe7424b1eeaebb514bb73d85f0))
+
+
+### Bug Fixes
+
+* **gux-tabs:** add option for flexbox positioning ([9a870c9](https://github.com/MyPureCloud/genesys-webcomponents/commit/9a870c94551bdd4643c0eac2d9c8683094bf16ec))
+
+## [4.0.0-beta.17](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.16...v4.0.0-beta.17) (2023-09-01)
+
+
+### Features
+
+* **table:** alternative solution to allow for percentage heights ([bf69c12](https://github.com/MyPureCloud/genesys-webcomponents/commit/bf69c1293720053ff8b4d55b3ec30b02c0c67e9e))
+* **table:** make empty table message fill available space ([b289a0f](https://github.com/MyPureCloud/genesys-webcomponents/commit/b289a0ff7cdbdcef74d8330cf5e195f478d5153e))
+
+
+### Bug Fixes
+
+* **gux-tabs:** set height on tabs and tabpanel-beta should fill space ([034de19](https://github.com/MyPureCloud/genesys-webcomponents/commit/034de1904c206e4f7b6e91c08b6e7fbb20d0abce))
+* **table-toolbar:** addition of tooltip when actions are is icon-only state ([8b3b549](https://github.com/MyPureCloud/genesys-webcomponents/commit/8b3b54937ce1bae5866263619126c2f69872e2d6))
+
+## [4.0.0-beta.16](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.15...v4.0.0-beta.16) (2023-08-31)
+
+
+### Features
+
+* **table:** moving gux-table-beta to stable ([c2ec4ae](https://github.com/MyPureCloud/genesys-webcomponents/commit/c2ec4aeff4ca8a2d6e098f1227a0d67455da62d8))
+
+## [4.0.0-beta.15](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.14...v4.0.0-beta.15) (2023-08-30)
+
+
+### Features
+
+* **date-time:** added ability to set time zone ([4ae364f](https://github.com/MyPureCloud/genesys-webcomponents/commit/4ae364f3d9fc0bcc7c0361fd030f5afdcb5cd333))
+* **form field margin removal:** removed hardcoded margin for form field components ([ea45e86](https://github.com/MyPureCloud/genesys-webcomponents/commit/ea45e86111d55176755d914ac0f1365c18b17866))
+* **gux-tag-beta truncation:** fixed gux-tooltip-text to truncate properly ([44f1cbd](https://github.com/MyPureCloud/genesys-webcomponents/commit/44f1cbd454655492554ce25c7f829d8cd1522078))
+* **icon:** icons requested in sprint gds23-2 ([d25054e](https://github.com/MyPureCloud/genesys-webcomponents/commit/d25054e7fe9e434ca7745a85ae4eadc1d5b1ddcf))
+* **listbox:** made empty message configurable ([8fd7bef](https://github.com/MyPureCloud/genesys-webcomponents/commit/8fd7bef477845ba4eac8e8256f82b76000fa49a7))
+* **text-highlight:** added dimmed property ([f02c758](https://github.com/MyPureCloud/genesys-webcomponents/commit/f02c758b11c00e0d08338a18676d790f38b39730))
+* **tokens:** updating latest tokens ([f62dc6e](https://github.com/MyPureCloud/genesys-webcomponents/commit/f62dc6ee91641f4a2e92944b1b2092052a8f0c0f))
+* **tooltip ellipsis fix:** tooltip show/hide logic fix ([cdde059](https://github.com/MyPureCloud/genesys-webcomponents/commit/cdde0596802e667be8f53a3ea2d0ad99830bf3cd))
+
 ## [4.0.0-beta.14](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.13...v4.0.0-beta.14) (2023-08-29)
 
 
@@ -3622,7 +3672,7 @@ COMUI-343
 - **breadcrumbs component:** small style fixes ([0136ab2](http://inindca///commit/0136ab2a002f7b1bd842dee602c425d2a6ce48dd)), closes [#43](http://inindca///issues/43)
 - **breadcrumbs component:** update primary breadcrumbs. use GuxBreadcrumbAccent type for accent" ([8c15fff](http://inindca///commit/8c15fff10fef755ea8bbe30c982ac50eb0527f1f)), closes [#43](http://inindca///issues/43)
 - **breadcrumbs component:** update test ([b8ac1f4](http://inindca///commit/b8ac1f491fc269e575185adc001d1936b921cc3e)), closes [#43](http://inindca///issues/43)
-- **table component:** fix tests to use gux-table-beta selector ([4348007](http://inindca///commit/4348007d342bf1748e4596111411958f5138f92e))
+- **table component:** fix tests to use gux-table selector ([4348007](http://inindca///commit/4348007d342bf1748e4596111411958f5138f92e))
 
 ## [1.8.0](http://inindca///compare/v1.7.1...v1.8.0) (2020-09-28)
 

@@ -321,31 +321,6 @@
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
   },
-  "gux-table-toolbar-action": {
-    "actionRefresh": "Refresh",
-    "actionDelete": "Delete",
-    "actionExport": "Export",
-    "actionImport": "Import",
-    "actionRevert": "Revert",
-    "actionAdd": "Add"
-  },
-  "gux-table-toolbar-menu-button": {
-    "additionalActions": "Additional Actions"
-  },
-  "gux-table": {
-    "emptyMessage": "No data available",
-    "scrollLeft": "Scroll Left",
-    "scrollRight": "Scroll Right",
-    "selectAllTableRows": "Select All Table Rows",
-    "selectTableRow": "Select Table Row",
-    "sortAsc": "Sorted Ascending",
-    "sortDesc": "Sorted Descending",
-    "tableOptions": "Table Options",
-    "noColumnSort": "{headerContent}. The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order",
-    "ascendingColumnSort": "{headerContent}. The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order",
-    "descendingColumnSort": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order",
-    "descendingColumnSortIncludeUnsorted": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column"
-  },
   "gux-tag": {
     "tag": "tag with label: {label}",
     "tag-disabled": "disabled tag with label: {label}",
@@ -353,6 +328,9 @@
   },
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Search"
+  },
+  "gux-disclosure-button-legacy": {
+    "defaultLabel": "Disclosure button"
   },
   "gux-action-button": {
     "actionButtonDropdown": "Dropdown for {buttonTitle}"
@@ -384,9 +362,6 @@
     "end": "End",
     "date": "Date",
     "toggleCalendar": "Toggle calendar view"
-  },
-  "gux-disclosure-button": {
-    "defaultLabel": "Disclosure button"
   },
   "gux-dismiss-button": {
     "dismiss": "Dismiss"
@@ -452,6 +427,31 @@
   },
   "gux-radial-loading": {
     "loading": "Loading"
+  },
+  "gux-table-toolbar-action": {
+    "actionRefresh": "Refresh",
+    "actionDelete": "Delete",
+    "actionExport": "Export",
+    "actionImport": "Import",
+    "actionRevert": "Revert",
+    "actionAdd": "Add"
+  },
+  "gux-table-toolbar-menu-button": {
+    "additionalActions": "Additional Actions"
+  },
+  "gux-table": {
+    "emptyMessage": "No data available",
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "selectAllTableRows": "Select All Table Rows",
+    "selectTableRow": "Select Table Row",
+    "sortAsc": "Sorted Ascending",
+    "sortDesc": "Sorted Descending",
+    "tableOptions": "Table Options",
+    "noColumnSort": "{headerContent}. The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order",
+    "ascendingColumnSort": "{headerContent}. The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order",
+    "descendingColumnSort": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column"
   },
   "gux-tabs-advanced": {
     "createNewTab": "Create New Tab",

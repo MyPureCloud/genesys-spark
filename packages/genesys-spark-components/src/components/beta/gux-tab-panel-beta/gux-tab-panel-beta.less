@@ -1,5 +1,20 @@
 @import (reference) '../../../style/focus.less';
 
+@tabListHeight: 40px;
+@tabListBorderBottomWidth: 1px;
+@tabListMarginBottom: 16px;
+@tabPanelHeightOffset: @tabListHeight + @tabListBorderBottomWidth +
+  @tabListMarginBottom;
+
+:host {
+  height: calc(100% - @tabPanelHeightOffset);
+}
+
+:host(:not([hidden])) {
+  display: flex;
+  flex-grow: 1;
+}
+
 :host(:focus) {
   outline: none;
 }

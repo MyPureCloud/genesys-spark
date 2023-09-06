@@ -19,9 +19,9 @@
 
 ### Used by
 
- - [gux-all-row-select](../../../../beta/gux-table/gux-all-row-select)
+ - [gux-all-row-select](../../../gux-table/gux-all-row-select)
  - [gux-column-manager-beta](../../../../beta/gux-column-manager)
- - [gux-row-select](../../../../beta/gux-table/gux-row-select)
+ - [gux-row-select](../../../gux-table/gux-row-select)
 
 ### Depends on
 

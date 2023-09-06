@@ -7,7 +7,7 @@ _This migration guide is open to anyone to edit. If you have migrated a componen
 - Typescript updated to v5
 - remove `-beta` from components that have been [promoted to stable](#v3-beta-components-promoted-to-stable-in-v4)
 - add `-legacy` to components that have been [removed from stable](#v3-stable-components-archived-to-legacy-in-v4)
-- change `-beta` to `-legacy` for components that have been [removed from beta](#v3-beta-components-archived-to-legacy-in-v4)
+- migrate away from usage of beta components [removed from v4](#v3-beta-components-removed-from-v4)
 - migrate away from usage of legacy components [removed from v4](#v3-legacy-components-removed-from-v4)
 - [Stable component changes](#stable-component-changes):
   - TODO
@@ -30,6 +30,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | --------------------- | ---------------- |
 | gux-inline-alert-beta | gux-inline-alert |
 | gux-popup-beta        | gux-popup        |
+| gux-table-beta        | gux-table        |
 | gux-popover-beta      | gux-popover      |
 | gux-time-picker-beta  | gux-time-picker  |
 
@@ -54,6 +55,7 @@ An `is-open` prop has been added to control showing and hiding the component. Th
 | gux-action-toast       | gux-action-toast-legacy       | gux-toast                                   | [link](./gux-action-toast-legacy.md)       |
 | gux-notification-toast | gux-notification-toast-legacy | gux-toast                                   | [link](./gux-notification-toast-legacy.md) |
 | gux-simple-toast       | gux-simple-toast-legacy       | gux-toast                                   | [link](./gux-simple-toast-legacy.md)       |
+| gux-disclosure-button  | gux-disclosure-button-legacy' | none                                        | Contact the Design System UX Team          |
 
 Action: _(required)_ add `-legacy` to the tag name of the component.
 
@@ -65,25 +67,13 @@ Action: _(required)_ add `-legacy` to the tag name of the component.
 + </gux-example-legacy>
 ```
 
-If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of adding `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released.
+If possible, avoid the usage of legacy components that have a migration path and do a full migration to a stable component. The basic migration of adding `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released. If you are using a legacy component that has no documented migration path please contact the Design System UX Team. They will guide you on the best approach to take to remove your dependency on that legacy component.
 
-## V3 Beta Components Archived to Legacy in V4
+## V3 Beta Components Removed From V4
 
-| V3 tag name      | V4 tag name        |
-| ---------------- | ------------------ |
-| gux-example-beta | gux-example-legacy |
-
-Action: _(required)_ remove the `-beta` tag and add `-legacy` to the tag name of the component.
-
-```diff
-- <gux-example-beta>
-+ <gux-example-legacy>
-  ...
-- </gux-example-beta>
-+ </gux-example-legacy>
-```
-
-If possible, avoid the usage of legacy components and do a full migration to a stable component. The basic migration of replacing the `-beta` suffix with `-legacy` will have to be followed up with a full migration to a stable component before the next major version is released. Contact the Core UI team if you need help migrating away from these components.
+| V3 tag name            | V4 equivalent | Migration Guide                     |
+| ---------------------- | ------------- | ----------------------------------- |
+| gux-error-message-beta | N/A           | [link](./gux-error-message-beta.md) |
 
 ## V3 Legacy Components Removed from V4
 
@@ -154,3 +144,31 @@ Two new properties have been added to `gux-tooltip` which are `accent` and `anch
   ```diff
   + <gux-tooltip anchor>Tooltip</gux-tooltip>
   ```
+
+### gux-accordion
+
+#### gux-accordion-section
+
+The `arrow-position` property has had the following changes.
+
+- The `default` value is now `end`.
+
+- The `before-text` value is now `start`.
+  ```diff
+  - <gux-accordion><gux-accordion-section arrow-position="before-text"></gux-accordion-section></gux-accordion>
+  + <gux-accordion><gux-accordion-section arrow-position="start"></gux-accordion-section></gux-accordion>
+  ```
+- The `beside-text` value is no longer supported.
+  ```diff
+  - <gux-accordion><gux-accordion-section arrow-position="beside-text"></gux-accordion-section></gux-accordion>
+  + <gux-accordion><gux-accordion-section></gux-accordion-section></gux-accordion>
+  ```
+
+### gux-radial-progress
+
+The `scale` property has been removed. The displayed percentage will now always be an integer value.
+
+```diff
+- <gux-radial-progress scale="2" screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
++ <gux-radial-progress screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
+```

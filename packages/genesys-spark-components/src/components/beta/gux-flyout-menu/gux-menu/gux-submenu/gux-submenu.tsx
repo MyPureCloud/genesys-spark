@@ -7,10 +7,9 @@ import {
   Listen,
   Method,
   Prop,
-  State,
-  Watch
+  State
 } from '@stencil/core';
-import { createPopper, Instance } from '@popperjs/core';
+import { autoUpdate, computePosition } from '@floating-ui/dom';
 
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
@@ -30,10 +29,10 @@ import {
 })
 export class GuxSubmenu {
   private hideDelayTimeout: ReturnType<typeof setTimeout>;
-  private popperInstance: Instance;
   private buttonElement: HTMLButtonElement;
   private submenuElement: HTMLDivElement;
   private submenuContentElement: HTMLDivElement;
+  private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
 
   @Element()
   private root: HTMLElement;
@@ -43,15 +42,6 @@ export class GuxSubmenu {
 
   @State()
   private isShown: boolean = false;
-
-  @Watch('isShown')
-  forceUpdate(isShown: boolean) {
-    if (isShown) {
-      if (this.popperInstance) {
-        void this.popperInstance.update();
-      }
-    }
-  }
 
   /**
    * Focus on the components button element
@@ -156,32 +146,35 @@ export class GuxSubmenu {
     }
   }
 
-  private runPopper(): void {
-    this.popperInstance = createPopper(
-      this.buttonElement,
-      this.submenuElement,
-      {
-        modifiers: [
-          {
-            name: 'offset',
-            options: {
-              offset: [-8, 0]
-            }
-          },
-          {
-            name: 'flip',
-            enabled: false
-          }
-        ],
-        placement: 'right-start'
-      }
-    );
+  private runUpdatePosition(): void {
+    if (this.root.isConnected) {
+      this.cleanupUpdatePosition = autoUpdate(
+        this.buttonElement,
+        this.submenuElement,
+        () => this.updatePosition(),
+        {
+          ancestorScroll: true,
+          elementResize: true,
+          animationFrame: true,
+          ancestorResize: true
+        }
+      );
+    } else {
+      this.disconnectedCallback();
+    }
   }
 
-  private destroyPopper(): void {
-    if (this.popperInstance) {
-      this.popperInstance.destroy();
-      this.popperInstance = null;
+  private updatePosition(): void {
+    if (this.submenuElement) {
+      void computePosition(this.buttonElement, this.submenuElement, {
+        placement: 'right-start',
+        middleware: []
+      }).then(({ x, y }) => {
+        Object.assign(this.submenuElement.style, {
+          left: `${x}px`,
+          top: `${y}px`
+        });
+      });
     }
   }
 
@@ -197,11 +190,23 @@ export class GuxSubmenu {
   }
 
   componentDidLoad(): void {
-    this.runPopper();
+    if (this.isShown) {
+      this.runUpdatePosition();
+    }
+  }
+
+  componentDidUpdate(): void {
+    if (this.isShown) {
+      this.runUpdatePosition();
+    } else if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
   }
 
   disconnectedCallback(): void {
-    this.destroyPopper();
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
   }
 
   render(): JSX.Element {

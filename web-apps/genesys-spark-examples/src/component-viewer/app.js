@@ -24,7 +24,7 @@ function createLayout() {
         <div class="preview gux-light-theme"></div>
         <div class="editor"></div>
       </div>
-      <gux-disclosure-button position="right">
+      <gux-disclosure-button-legacy position="right">
         <div slot="panel-content" class="controls-column">
           <gux-accordion id="accordion" heading-level="4">
             <gux-accordion-section>
@@ -38,7 +38,7 @@ function createLayout() {
           </gux-accordion>
           <div id="spark-link-container" class="spark-link"></div>
         </div>
-      </gux-disclosure-button>
+      </gux-disclosure-button-legacy>
       <div class="notification"></div>
     </div>
   `);

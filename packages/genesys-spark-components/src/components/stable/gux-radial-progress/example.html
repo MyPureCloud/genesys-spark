@@ -18,43 +18,20 @@
     max="10"
   ></gux-radial-progress>
 
-  <h3>Set to 10/10</h3>
+  <h3>Set to 7/7</h3>
   <gux-radial-progress
     screenreader-text="Uploading file"
-    value="10"
-    max="10"
+    value="7"
+    max="7"
   ></gux-radial-progress>
-</div>
 
-<div>
-  <h2>Dynamic</h2>
-  <h3>Scale set to 0</h3>
+  <h3>Dynamic</h3>
   <gux-radial-progress
     class="dynamic"
     screenreader-text="Uploading file"
     value="0"
     max="100"
   ></gux-radial-progress>
-
-  <h3>Scale set to 1</h3>
-  <gux-radial-progress
-    class="dynamic"
-    screenreader-text="Uploading file"
-    value="0"
-    max="100"
-    scale="1"
-  >
-  </gux-radial-progress>
-
-  <h3>Scale set to 2</h3>
-  <gux-radial-progress
-    class="dynamic"
-    screenreader-text="Uploading file"
-    value="0"
-    max="100"
-    scale="2"
-  >
-  </gux-radial-progress>
 </div>
 
 <style
@@ -65,14 +42,18 @@
       const intervalId = setInterval(() => {
         const currentValue = dynamicRadialProgressElement.value;
 
-        const change = Math.random();
-
-        if (currentValue + change > 100) {
+        if (currentValue == 100) {
           dynamicRadialProgressElement.value = 0;
+          return;
+        }
+
+        const change = Math.random() / Math.random();
+        if (currentValue + change > 100) {
+          dynamicRadialProgressElement.value = 100;
         } else {
           dynamicRadialProgressElement.value += change;
         }
-      }, 100)
+      }, 250)
     });
 
   }
