@@ -90,15 +90,15 @@ export class GuxToast {
     return (
       <div class="gux-buttons-bar">
         {this.hasSecondaryButton && (
-          <gux-button-slot-beta>
+          <gux-button-slot>
             <slot name="secondary-button" />
-          </gux-button-slot-beta>
+          </gux-button-slot>
         )}
-        <gux-button-slot-beta
+        <gux-button-slot
           accent={this.hasSecondaryButton ? 'primary' : 'tertiary'}
         >
           <slot name="primary-button" />
-        </gux-button-slot-beta>
+        </gux-button-slot>
       </div>
     ) as JSX.Element;
   }

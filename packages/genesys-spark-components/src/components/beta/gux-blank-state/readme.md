@@ -19,12 +19,12 @@
 
 ### Depends on
 
-- [gux-button-slot-beta](../gux-button-slot)
+- [gux-button-slot](../../stable/gux-button-slot)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-blank-state-beta --> gux-button-slot-beta
+  gux-blank-state-beta --> gux-button-slot
   style gux-blank-state-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
