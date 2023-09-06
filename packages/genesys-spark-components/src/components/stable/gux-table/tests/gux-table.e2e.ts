@@ -376,7 +376,7 @@ describe('gux-table', () => {
     const page = await newE2EPage({ html });
     const selectAllEvent = await page.spyOnEvent('guxselectionchanged');
     const selectAllElement = await page.find('thead tr th gux-all-row-select');
-    const inputElement = await selectAllElement.find('input');
+    const inputElement = await selectAllElement.find('pierce/input');
     await inputElement.click();
     await page.waitForChanges();
 
@@ -433,7 +433,7 @@ describe('gux-table', () => {
     const page = await newE2EPage({ html });
     const selectAllEvent = await page.spyOnEvent('guxselectionchanged');
     const selectAllElement = await page.find('thead tr th gux-all-row-select');
-    const inputElement = await selectAllElement.find('input');
+    const inputElement = await selectAllElement.find('pierce/input');
     await inputElement.click();
     await page.waitForChanges();
     await inputElement.click();
@@ -490,13 +490,13 @@ describe('gux-table', () => {
 
     const page = await newE2EPage({ html });
     const selectAllElement = await page.find('thead tr th gux-all-row-select');
-    const inputElement = await selectAllElement.find('input');
+    const inputElement = await selectAllElement.find('pierce/input');
 
     const secondRow = await page.find('.person2');
-    const secondRowInput = await secondRow.find('input');
+    const secondRowInput = await secondRow.find('pierce/input');
 
     const fourthRow = await page.find('.person4');
-    const fourthRowInput = await fourthRow.find('input');
+    const fourthRowInput = await fourthRow.find('pierce/input');
 
     await secondRowInput.click();
     await page.waitForChanges();

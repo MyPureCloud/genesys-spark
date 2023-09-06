@@ -33,7 +33,7 @@ const COL_RESIZE_HANDLE_WIDTH = 3;
  */
 
 @Component({
-  styleUrl: 'gux-table.less',
+  styleUrl: 'gux-table.scss',
   tag: 'gux-table',
   shadow: true
 })
@@ -49,30 +49,11 @@ export class GuxTable {
   private columnResizeState: GuxTableColumnResizeState | null;
   private tableId: string = randomHTMLId('gux-table');
   private columnsWidths: object = {};
-  private tableWidth: number = this.getElementComputedWidth(this.slottedTable);
   /**
    * Indicates that vertical scroll is presented for table
    */
   @State()
   private isVerticalScroll: boolean = false;
-
-  /**
-   * Indicates that horizontal scroll is presented for table
-   */
-  @State()
-  private isHorizontalScroll: boolean = false;
-
-  /**
-   * Indicates that table content scrolled to it's last column
-   */
-  @State()
-  private isScrolledToFirstCell: boolean = true;
-
-  /**
-   * Indicates that table content scrolled to it's first column
-   */
-  @State()
-  private isScrolledToLastCell: boolean = false;
 
   /**
    * Indicates if the mouse is in a position that supports starting resize
@@ -127,16 +108,12 @@ export class GuxTable {
     }
 
     this.prepareSelectableRows();
-    this.checkHorizontalScroll();
     this.checkVerticalScroll();
 
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() => {
         readTask(() => {
-          this.checkHorizontalScroll();
           this.checkVerticalScroll();
-          this.updateScrollState();
-          this.scaleColumnWidths();
         });
       });
     }
@@ -152,6 +129,12 @@ export class GuxTable {
     });
   }
 
+  private checkVerticalScroll(): void {
+    const tableContainerElement = this.tableContainer;
+    this.isVerticalScroll =
+      tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
+  }
+
   disconnectedCallback(): void {
     if (this.resizeObserver) {
       this.resizeObserver.unobserve(this.tableContainer);
@@ -165,21 +148,19 @@ export class GuxTable {
 
   /******************************* Event Listeners *******************************/
 
-  @Listen('scroll', { capture: true })
-  onScroll(): void {
-    this.updateScrollState();
-  }
-
   @Listen('internalallrowselectchange')
   onInternalAllRowSelectChange(event: CustomEvent): void {
     event.stopPropagation();
-    this.handleSelectAllRows();
+    this.handleSelectAllRows(event.detail as boolean);
   }
 
   @Listen('internalrowselectchange')
   onInternalRowSelectChange(event: CustomEvent): void {
     event.stopPropagation();
-    this.handleRowSelection(event.target);
+    const rowCheckbox: HTMLGuxRowSelectElement =
+      event.target as HTMLGuxRowSelectElement;
+    rowCheckbox.selected = event.detail;
+    this.handleRowSelection(rowCheckbox);
   }
 
   @Listen('mousemove', { capture: true })
@@ -271,7 +252,7 @@ export class GuxTable {
     if (selectAllCheckbox) {
       const rowCheckboxes = this.rowCheckboxes;
       const filterDisabled = rowCheckboxes.filter(
-        rowBox => rowBox.hasAttribute('disabled') == false
+        rowBox => !rowBox.hasAttribute('disabled')
       );
       const selectedRows = filterDisabled.filter(box => box.selected);
       const hasRows = Boolean(rowCheckboxes.length);
@@ -287,13 +268,14 @@ export class GuxTable {
   }
 
   // Handle a change in state of the select all checkbox
-  private handleSelectAllRows(): void {
+  private handleSelectAllRows(selected: boolean): void {
     const selectAllCheckbox = this.selectAllCheckbox;
     const rowCheckboxes = this.rowCheckboxes;
 
     rowCheckboxes.forEach(rowBox => {
+      selectAllCheckbox.selected = selected;
       if (!rowBox.hasAttribute('disabled')) {
-        rowBox.selected = selectAllCheckbox.selected;
+        rowBox.selected = selected;
         this.updateRowSelection(rowBox);
       }
     });
@@ -302,8 +284,8 @@ export class GuxTable {
   }
 
   // Handle a change in state of an individual row selection checkbox
-  private handleRowSelection(rowCheckbox: EventTarget): void {
-    this.updateRowSelection(rowCheckbox as HTMLGuxRowSelectElement);
+  private handleRowSelection(rowCheckbox: HTMLGuxRowSelectElement): void {
+    this.updateRowSelection(rowCheckbox);
     this.updateSelectAllBoxState();
     this.emitSelectionEvent();
   }
@@ -322,88 +304,6 @@ export class GuxTable {
     }
   }
 
-  /******************************* Scrolling *******************************/
-
-  private nextColumn(): void {
-    const columns = this.tableColumns;
-    const viewportBounds = this.tableContainer.getBoundingClientRect();
-
-    // The last column who's right side is out of the viewport
-    // or the last element if we can't find one.
-    const lastVisibleColumn =
-      columns.find(
-        col => col.getBoundingClientRect().right > viewportBounds.right
-      ) || columns[columns.length - 1];
-
-    const lastColumnBounds = lastVisibleColumn.getBoundingClientRect();
-    let distanceToScroll = lastColumnBounds.right - viewportBounds.right;
-
-    // Don't scroll the whole viewport away if there is a very long column
-    if (distanceToScroll > viewportBounds.width) {
-      distanceToScroll = viewportBounds.width * 0.9;
-    }
-
-    // Always try to scroll a little bit extra to make sure we aren't caught out by
-    // funny floating-point pixel math behavior.
-    this.tableContainer.scrollLeft += Math.ceil(distanceToScroll);
-    this.updateScrollState();
-  }
-
-  private previousColumn(): void {
-    const columns = this.tableColumns;
-    const viewportBounds = this.tableContainer.getBoundingClientRect();
-
-    // The first column who's left side is out of the viewport
-    // or the first element if we can't find one.
-    const firstVisibleColumn =
-      columns
-        .reverse()
-        .find(col => col.getBoundingClientRect().left < viewportBounds.left) ||
-      columns[0];
-
-    const firstColumnBounds = firstVisibleColumn.getBoundingClientRect();
-    let distanceToScroll = viewportBounds.left - firstColumnBounds.left;
-
-    // Don't scroll the whole viewport away if there is a very long column
-    if (distanceToScroll > viewportBounds.width) {
-      distanceToScroll = viewportBounds.width * 0.9;
-    }
-
-    // Always try to scroll a little bit extra to make sure we aren't caught out by
-    // funny floating-point pixel math behavior.
-    this.tableContainer.scrollLeft += -Math.ceil(distanceToScroll);
-    this.updateScrollState();
-  }
-
-  updateScrollState(): void {
-    const scrollLeft = this.tableContainer.scrollLeft;
-    const maxScrollLeft =
-      this.tableContainer.scrollWidth - this.tableContainer.clientWidth;
-
-    this.isScrolledToFirstCell = scrollLeft === 0;
-    this.isScrolledToLastCell =
-      // sometimes this can go less than zero due to the scrollbar constant
-      maxScrollLeft - scrollLeft - this.tableScrollbarConstant <= 0;
-  }
-
-  private checkHorizontalScroll(): void {
-    const tableWidth = this.slottedTable.getBoundingClientRect().width;
-    const containerWidth = this.root.getBoundingClientRect().width;
-
-    this.isHorizontalScroll = tableWidth > containerWidth;
-  }
-
-  private checkVerticalScroll(): void {
-    const tableContainerElement = this.tableContainer;
-    this.isVerticalScroll =
-      tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
-  }
-
-  private get tableScrollbarConstant(): number {
-    const container: HTMLElement = this.tableContainer;
-    return container ? container.offsetWidth - container.clientWidth : 0;
-  }
-
   /******************************* Resizable Columns *******************************/
 
   private prepareResizableColumns(): void {
@@ -412,7 +312,6 @@ export class GuxTable {
     document.querySelector('head').appendChild(styleElement);
 
     const columnWidths = this.calculateColumnWidths(this.tableColumns);
-    this.tableWidth = this.getElementComputedWidth(this.slottedTable);
 
     columnWidths
       // Exclude the last column to allow it to fill the remaining space naturally
@@ -420,49 +319,6 @@ export class GuxTable {
       .forEach(c => (this.columnsWidths[c.name] = c.width));
 
     this.setResizableColumnsStyles();
-  }
-
-  /** Scale column pixel widths equal when a resize is observed */
-  private scaleColumnWidths(): void {
-    if (
-      !this.columnResizeState &&
-      this.resizableColumns &&
-      !this.isHorizontalScroll
-    ) {
-      const oldColumnWidths = this.calculateColumnWidths(this.tableColumns);
-      const oldTableWidth = this.tableWidth;
-      const newTableWidth = this.getElementComputedWidth(this.slottedTable);
-
-      oldColumnWidths
-        .map(col => ({
-          ...col,
-          width: this.calcScaledColWidth(
-            col.width,
-            oldTableWidth,
-            newTableWidth
-          )
-        }))
-        // Exclude the last column to allow it to fill the remaining space naturally
-        .slice(0, -1)
-        .forEach(c => (this.columnsWidths[c.name] = c.width));
-
-      this.tableWidth = newTableWidth;
-
-      this.setResizableColumnsStyles();
-    }
-  }
-
-  private calcScaledColWidth(
-    colWidth: number,
-    oldTableWidth: number,
-    newTableWidth: number
-  ): number {
-    const proposedWidth = Math.round(
-      (colWidth / oldTableWidth) * newTableWidth
-    );
-    const minWidth = 1;
-
-    return Math.max(proposedWidth, minWidth);
   }
 
   private updateResizeState(event: MouseEvent): void {
@@ -490,7 +346,6 @@ export class GuxTable {
       ).width;
 
       this.setResizableColumnsStyles();
-      this.tableWidth = this.getElementComputedWidth(this.slottedTable);
     } else {
       this.columnResizeHover = false;
       whenEventIsFrom('th', event, (th: HTMLTableCellElement) => {
@@ -512,8 +367,7 @@ export class GuxTable {
         this.columnResizeState = {
           resizableColumn,
           columnResizeMouseStartX: event.pageX,
-          resizableColumnInitialWidth:
-            this.getElementComputedWidth(resizableColumn)
+          resizableColumnInitialWidth: resizableColumn.clientWidth
         };
       }
     });
@@ -532,21 +386,13 @@ export class GuxTable {
     );
   }
 
-  private getElementComputedWidth(element: HTMLElement): number {
-    return (
-      element.clientWidth -
-      parseInt(window.getComputedStyle(element).paddingLeft) -
-      parseInt(window.getComputedStyle(element).paddingRight)
-    );
-  }
-
   /** Calculates column width minus padding in pixels */
   private calculateColumnWidths(
     columns: HTMLElement[]
   ): { name: string; width: number }[] {
     return columns.map(c => ({
       name: c.dataset.columnName,
-      width: this.getElementComputedWidth(c)
+      width: c.clientWidth
     }));
   }
 
@@ -586,8 +432,6 @@ export class GuxTable {
     return (
       <Host
         gs-table-id={this.tableId}
-        gs-v-scroll={this.isVerticalScroll}
-        gs-h-scroll={this.isHorizontalScroll}
         gs-obj-table={this.objectTable}
         gs-compact={this.compact}
       >
@@ -599,42 +443,6 @@ export class GuxTable {
           >
             <slot name="data" />
           </div>
-          {this.isHorizontalScroll && (
-            <gux-button-slot accent="secondary">
-              <button
-                class="gux-table-scroll-left"
-                disabled={this.isScrolledToFirstCell}
-                onClick={
-                  !this.isScrolledToFirstCell && this.previousColumn.bind(this)
-                }
-              >
-                <gux-icon
-                  icon-name="chevron-left"
-                  screenreader-text={this.i18n('scrollLeft')}
-                />
-              </button>
-            </gux-button-slot>
-          )}
-          {this.isHorizontalScroll && (
-            <gux-button-slot
-              accent="secondary"
-              style={{ marginRight: `${this.tableScrollbarConstant}px` }}
-            >
-              <button
-                class="gux-table-scroll-right"
-                disabled={this.isScrolledToLastCell}
-                style={{ marginRight: `${this.tableScrollbarConstant}px` }}
-                onClick={
-                  !this.isScrolledToLastCell && this.nextColumn.bind(this)
-                }
-              >
-                <gux-icon
-                  icon-name="chevron-right"
-                  screenreader-text={this.i18n('scrollRight')}
-                />
-              </button>
-            </gux-button-slot>
-          )}
           {this.isTableEmpty && (
             <div class="gux-empty-table">
               {this.emptyMessage || this.i18n('emptyMessage')}

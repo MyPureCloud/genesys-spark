@@ -63,7 +63,6 @@
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
  - [gux-tab-list](../gux-tabs/gux-tab-list)
- - [gux-table](../gux-table)
  - [gux-table-select-menu](../gux-table/gux-table-select-menu)
  - [gux-table-toolbar-action](../gux-table-toolbar/gux-table-toolbar-action)
  - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
@@ -121,7 +120,6 @@ graph TD;
   gux-tab-advanced --> gux-icon
   gux-tab-advanced-list --> gux-icon
   gux-tab-list --> gux-icon
-  gux-table --> gux-icon
   gux-table-select-menu --> gux-icon
   gux-table-toolbar-action --> gux-icon
   gux-table-toolbar-menu-button --> gux-icon
