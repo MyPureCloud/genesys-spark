@@ -21,7 +21,7 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot help - Optional slot for help message
  */
 @Component({
-  styleUrl: 'gux-form-field-radio.less',
+  styleUrl: 'gux-form-field-radio.scss',
   tag: 'gux-form-field-radio',
   shadow: true
 })
