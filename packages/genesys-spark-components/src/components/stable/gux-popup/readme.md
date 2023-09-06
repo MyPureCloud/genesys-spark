@@ -29,13 +29,6 @@
 | `"target"` | Required slot for target |
 
 
-## Shadow Parts
-
-| Part                    | Description |
-| ----------------------- | ----------- |
-| `"gux-popup-container"` |             |
-
-
 ## Dependencies
 
 ### Used by
