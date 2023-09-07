@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.20](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.19...v4.0.0-beta.20) (2023-09-07)
+
+
+### Features
+
+* **form field radio reskin:** implemented form field radio button reskin for v4 ([034e1ea](https://github.com/MyPureCloud/genesys-webcomponents/commit/034e1ea4c2c296b98cd7f43961667d94d9031640))
+* **table:** token adoption ([e829703](https://github.com/MyPureCloud/genesys-webcomponents/commit/e8297039c957120c6f727efc4b5556b55ca9dc61))
+
 ## [4.0.0-beta.19](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.18...v4.0.0-beta.19) (2023-09-06)
 
 ## [4.0.0-beta.18](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.17...v4.0.0-beta.18) (2023-09-05)
