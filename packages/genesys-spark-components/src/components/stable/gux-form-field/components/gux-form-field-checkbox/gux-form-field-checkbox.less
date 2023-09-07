@@ -1,7 +1,6 @@
 @import (reference) '../../../../../style/color-palette.less';
 @import (reference) '../../../../../style/focus.less';
 @import (reference) '../../../../../style/spacing.less';
-@import (reference) '../../../../../style/variables.less';
 @import (reference)
   '../../functional-components/gux-form-field-error/gux-form-field-error.less';
 @import (reference)
@@ -48,8 +47,8 @@
 
 ::slotted(input[type='checkbox']) {
   display: inline-grid;
-  width: @gux-icon-size-default-global;
-  height: @gux-icon-size-default-global;
+  width: 16px;
+  height: 16px;
   margin: @gux-spacing-2xs;
   text-align: center;
   vertical-align: middle;
@@ -99,6 +98,6 @@
 ::slotted(label) {
   display: inline-block;
   font-size: 12px;
-  line-height: @gux-icon-size-default-global + 8px;
+  line-height: 16px + 8px;
   vertical-align: middle;
 }

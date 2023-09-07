@@ -1,6 +1,5 @@
 // Variables part
 @import '../../../style/color';
-@import '../../../style/shadows';
 @import '../../../style/typography';
 
 :host {
@@ -19,7 +18,8 @@
   border: 1px solid $gux-grey-30;
   border-color: $gux-grey-30;
   border-radius: 4px;
-  @include gux-shadow-20;
+  // need to replace with token
+  box-shadow: 0 2px 4px fade(#202937, 24%);
 }
 
 .gux-icon {

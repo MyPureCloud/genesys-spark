@@ -1,7 +1,6 @@
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/spacing.less';
-@import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/zindex.less';
 
 // Style
@@ -17,8 +16,6 @@
     background: fade(@gux-black-30, 80%);
 
     .gux-modal-container {
-      .gux-shadow-30();
-
       position: relative;
       box-sizing: border-box;
       display: flex;
@@ -28,6 +25,7 @@
       background: @gux-grey-100;
       border: 1px solid @gux-grey-30;
       border-radius: 4px;
+      box-shadow: 0 8px 24px fade(#202937, 40%);
 
       &.gux-small {
         width: 416px;

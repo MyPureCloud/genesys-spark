@@ -1,7 +1,6 @@
 @import '../../../style/typography.scss';
 @import '../../../style/color.scss';
 @import '../../../style/_mixins.scss';
-@import '../../../style/shadows.scss';
 
 :host {
   display: flex;
@@ -18,7 +17,8 @@
   border: 1px solid $gux-grey-30;
   border-radius: 4px;
 
-  @include gux-shadow-20;
+  // need to replace with token
+  box-shadow: 0 2px 4px fade(#202937, 24%);
 }
 
 .gux-header {

@@ -1,6 +1,6 @@
 @import (reference) '../../../../style/color.less';
 @import (reference) '../../../../style/mixins.less';
-@import (reference) '../../../../style/shadows.less';
+
 @gux-arrow-height: 5px;
 
 gux-menu {
@@ -10,7 +10,7 @@ gux-menu {
   background-color: @gux-type-dark;
   border: 1px solid @gux-grey-30;
   border-radius: 4px;
-  .gux-shadow-20();
+  box-shadow: 0 2px 4px fade(#202937, 24%);
 
   .gux-arrow,
   .gux-arrow::before {

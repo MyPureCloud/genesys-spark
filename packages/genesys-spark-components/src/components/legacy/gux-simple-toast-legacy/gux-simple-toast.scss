@@ -1,5 +1,4 @@
 @import '../../../style/color.scss';
-@import '../../../style/shadows.scss';
 @import '../../../style/spacing.scss';
 
 :host {
@@ -16,7 +15,8 @@
   background: $gux-grey-90;
   border: 1px solid $gux-grey-30;
   border-radius: 4px;
-  @include gux-shadow-20;
+  // need to replace with token
+  box-shadow: 0 2px 4px fade(#202937, 24%);
 }
 
 .gux-icon {

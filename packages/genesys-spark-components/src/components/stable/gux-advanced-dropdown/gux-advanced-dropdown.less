@@ -1,6 +1,5 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
-@import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/zindex.less';
 
@@ -86,7 +85,7 @@ gux-popup {
     border: 1px solid @gux-grey-30;
     border-radius: 4px;
     box-shadow: 0 0 2px 0 @menu-shadow;
-    .gux-shadow-20();
+    box-shadow: 0 2px 4px fade(#202937, 24%);
 
     .gux-dropdown-menu-container {
       gux-form-field-search {
