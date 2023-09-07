@@ -107,12 +107,12 @@ In v4, developers who want the component to have a margin similar to v3 can add 
 Below are the components where the internal margins have been removed for v4:
 
 1. gux-form-field-color
-1. gux-form-field-number
-1. gux-form-field-range
-1. gux-form-field-search
-1. gux-form-field-select
-1. gux-form-field-text-like
-1. gux-form-field-textarea
+2. gux-form-field-number
+3. gux-form-field-range
+4. gux-form-field-search
+5. gux-form-field-select
+6. gux-form-field-text-like
+7. gux-form-field-textarea
 
 ### gux-icon
 
@@ -163,3 +163,7 @@ The `arrow-position` property has had the following changes.
   - <gux-accordion><gux-accordion-section arrow-position="beside-text"></gux-accordion-section></gux-accordion>
   + <gux-accordion><gux-accordion-section></gux-accordion-section></gux-accordion>
   ```
+
+### gux-dropdown
+
+- The deprecated attribute `filterable` has now been completely removed in favor of `filter-type`.
