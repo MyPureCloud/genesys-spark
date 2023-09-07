@@ -2,23 +2,10 @@
 
 /* stylelint-disable-next-line selector-class-pattern */
 @mixin GuxFormFieldContainerStyle {
-  .GuxFormFieldContainerStyle {
-    .gux-form-field-container {
-      // Use CSS variable with fallback to allow apps to override these margins by setting the variable
-      // value as desired within their own selector scope. Apps should only override in order to provide
-      // design-spec spacing via some other means, such as `gap` in a CSS grid or Flexbox layout.
-      margin: var(
-          --gux-form-field-container-margin-top,
-          var(--gux-spacing-medium)
-        )
-        0
-        var(--gux-form-field-container-margin-bottom, var(--gux-spacing-medium))
-        0;
-
-      &.gux-beside {
-        display: flex;
-        flex-direction: row;
-      }
+  .gux-form-field-container {
+    &.gux-beside {
+      display: flex;
+      flex-direction: row;
     }
   }
 }

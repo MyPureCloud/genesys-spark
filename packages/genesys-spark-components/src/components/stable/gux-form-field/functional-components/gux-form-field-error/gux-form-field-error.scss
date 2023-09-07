@@ -10,11 +10,11 @@
     align-content: stretch;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: var(--gux-spacing-2xs) 0;
-    font-size: 12px;
-    line-height: 20px;
-    color: var(--gux-alert-red-60);
-    font-family: Noto Sans;
+    padding: var(--gse-ui-formControl-helper-errorPadding);
+    font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
+    font-size: var(--gse-ui-formControl-helper-helperText-fontSize);
+    line-height: var(--gse-ui-formControl-helper-helperText-lineHeight);
+    color: var(--gse-ui-formControl-helper-errorColor);
 
     &.gux-show {
       display: flex;
@@ -24,10 +24,10 @@
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
-      min-width: 16px;
-      min-height: 16px;
-      margin: var(--gux-spacing-3xs) var(--gux-spacing-2xs) 0 0;
-      color: var(--gux-alert-red-60);
+      min-width: var(--gse-ui-icon-size-sm);
+      min-height: var(--gse-ui-icon-size-sm);
+      margin-right: var(--gse-ui-formControl-helper-gap);
+      color: var(--gse-ui-formControl-helper-errorColor);
     }
 
     .gux-message {
