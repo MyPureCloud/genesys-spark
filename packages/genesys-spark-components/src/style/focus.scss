@@ -1,13 +1,13 @@
 @import 'color-palette.scss';
 
 @mixin gux-focus-ring {
-  outline: 3px solid $gux-blue-90;
+  outline: 3px solid #aac9ff;
   outline-offset: 1px;
   box-shadow: 0 0 0 1px $gux-grey-100;
 }
 
 @mixin gux-focus-ring-small {
-  outline: 2px solid $gux-blue-90;
+  outline: 2px solid #aac9ff;
   outline-offset: 0;
 }
 

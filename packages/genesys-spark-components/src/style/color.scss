@@ -2,7 +2,7 @@
 @import './color-palette.scss';
 
 // Type and Icons
-$gux-type: $gux-black-50;
+$gux-type: #2e394c;
 $gux-type-dark: $gux-grey-100;
 
 // Backgrounds
@@ -10,10 +10,10 @@ $gux-background: $gux-grey-100;
 
 // Borders
 $gux-border: $gux-grey-60;
-$gux-border-strong: $gux-black-100;
+$gux-border-strong: #6b7585;
 
 // Placeholder
-$gux-placeholder: $gux-black-90;
+$gux-placeholder: #596373;
 
 // Conditional Palette
 $gux-alert: $gux-alert-red-60;
@@ -23,7 +23,7 @@ $gux-neutral: $gux-navy-sec;
 $gux-alert-dark: $gux-alert-red-90;
 $gux-warning-dark: $gux-alert-yellow-60;
 $gux-positive-dark: $gux-alert-green-90;
-$gux-neutral-dark: $gux-blue-80;
+$gux-neutral-dark: #75a8ff;
 
 // Interactive
-$gux-text-selection: $gux-blue-100;
+$gux-text-selection: #deeaff;
