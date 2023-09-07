@@ -1,6 +1,5 @@
 @import (reference) '../../../../../../style/color.less';
 @import (reference) '../../../../../../style/focus.less';
-@import (reference) '../../../../../../style/spacing.less';
 
 :host {
   flex: 0 0 33.3%;
@@ -17,25 +16,25 @@
 ::slotted(gux-icon) {
   width: 16px;
   height: 16px;
-  margin-right: @gux-spacing-xs;
+  margin-right: 8px;
   vertical-align: middle;
 }
 
 .gux-container {
-  padding: @gux-spacing-2xs;
+  padding: 4px;
 
   button {
     all: unset;
     box-sizing: border-box;
     width: 100%;
     height: 49px;
-    padding: @gux-spacing-xs 0;
+    padding: 8px 0;
     color: @gux-black-50;
     text-align: center;
     word-wrap: break-word;
     cursor: pointer;
     border: none;
-    border-radius: @gux-spacing-2xs;
+    border-radius: 4px;
     outline: none;
 
     &.gux-selected {

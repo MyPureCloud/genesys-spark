@@ -1,5 +1,4 @@
 @import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/color-mixins.less';
 
 :host {
@@ -27,7 +26,7 @@
 
   &.gux-small,
   &.gux-medium {
-    padding: @gux-spacing-xs 0 @gux-spacing-2xs;
+    padding: 8px 0 4px;
 
     slot[name='primary-message'] {
       .h3();
@@ -39,7 +38,7 @@
   }
 
   &.gux-large {
-    padding: @gux-spacing-medium 0 @gux-spacing-2xs;
+    padding: 16px 0 4px;
 
     slot[name='primary-message'] {
       .h1();

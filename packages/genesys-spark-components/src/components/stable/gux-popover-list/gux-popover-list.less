@@ -1,5 +1,4 @@
 @import (reference) '../../../style/color.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/zindex.less';
 
 @gux-arrow-height: 5px;
@@ -10,11 +9,11 @@
   left: 0;
   z-index: var(--gux-zindex-popover, @gux-zindex-popover);
   display: inline-block;
-  padding: @gux-spacing-xs 0;
+  padding: 8px 0;
   color: @gux-black-50;
   background-color: @gux-grey-100;
   border: 1px solid @gux-grey-30;
-  border-radius: @gux-spacing-2xs;
+  border-radius: 4px;
   box-shadow: 0 2px 4px fade(#202937, 24%);
 
   &.gux-hidden {

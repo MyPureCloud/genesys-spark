@@ -1,20 +1,19 @@
 @import (reference) '../../../../style/color.less';
-@import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/mixins.less';
 
 gux-tabs[orientation='vertical'] > gux-tab-list {
   .gux-tab {
     display: flex;
     justify-content: flex-end;
-    padding: @gux-spacing-small @gux-spacing-medium;
+    padding: 12px 16px;
 
     &.gux-active {
-      padding-right: @gux-spacing-medium - 2px;
+      padding-right: 16px - 2px;
       border-right: 2px solid @gux-blue-60;
     }
 
     &:hover:not(.gux-active):not(.gux-disabled) {
-      padding-right: @gux-spacing-medium - 2px;
+      padding-right: 16px - 2px;
       border-right: 2px solid @gux-grey-10;
     }
   }
@@ -73,7 +72,7 @@ gux-tab {
     width: 100%;
     max-width: 160px;
     height: 40px;
-    padding: 0 @gux-spacing-medium;
+    padding: 0 16px;
     font-size: 14px;
     color: @gux-black-50;
     cursor: pointer;

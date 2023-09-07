@@ -1,6 +1,5 @@
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/color.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/zindex.less';
 
 // Style
@@ -29,22 +28,22 @@
 
       &.gux-small {
         width: 416px;
-        max-height: e(%('min(368px, 100vh - 2 * %s)', @gux-spacing-large));
+        max-height: e(%('min(368px, 100vh - 2 * %s)', 24px));
       }
 
       &.gux-medium {
         width: 672px;
-        max-height: e(%('min(640px, 100vh - 2 * %s)', @gux-spacing-large));
+        max-height: e(%('min(640px, 100vh - 2 * %s)', 24px));
       }
 
       &.gux-large {
         width: 940px;
-        max-height: e(%('min(640px, 100vh - 2 * %s)', @gux-spacing-large));
+        max-height: e(%('min(640px, 100vh - 2 * %s)', 24px));
       }
 
       &.gux-dynamic {
-        max-width: calc(100vw - 2 * @gux-spacing-large);
-        max-height: calc(100vh - 2 * @gux-spacing-large);
+        max-width: calc(100vw - 2 * 24px);
+        max-height: calc(100vh - 2 * 24px);
 
         .gux-modal-content {
           max-height: none;

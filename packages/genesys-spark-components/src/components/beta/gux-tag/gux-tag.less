@@ -1,7 +1,6 @@
 @import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/color-palette.less';
 
@@ -17,12 +16,12 @@
   align-content: stretch;
   align-items: center;
   justify-content: flex-start;
-  padding: @gux-spacing-3xs @gux-spacing-xs;
+  padding: 2px 8px;
   font-size: 12px;
   font-weight: bold;
   color: @gux-grey-100;
   background-color: @gux-black-50;
-  border-radius: @gux-spacing-2xs;
+  border-radius: 4px;
 
   gux-tooltip-title {
     white-space: nowrap;
@@ -44,7 +43,7 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin-left: @gux-spacing-xs;
+    margin-left: 8px;
 
     &:not(:disabled):hover {
       cursor: pointer;

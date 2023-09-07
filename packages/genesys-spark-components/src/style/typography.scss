@@ -1,7 +1,6 @@
 @import './color.scss';
 @import './_mixins.scss';
 @import './focus.scss';
-@import './spacing.scss';
 @import './roboto.scss';
 
 /*
@@ -123,7 +122,7 @@ h6 {
 
 .gux-icon-anchor {
   gux-icon {
-    padding-right: $gux-spacing-xs;
+    padding-right: 2px;
   }
 }
 

@@ -1,5 +1,4 @@
 @import (reference) '../../../../style/typography.less';
-@import (reference) '../../../../style/spacing.less';
 
 :host([disabled]),
 button[disabled] {
@@ -14,7 +13,7 @@ button[disabled] {
 .gux-action-title {
   display: flex;
   flex-direction: row;
-  gap: @gux-spacing-xs;
+  gap: 8px;
   align-items: center;
 
   slot[name='icon']::slotted(gux-icon) {

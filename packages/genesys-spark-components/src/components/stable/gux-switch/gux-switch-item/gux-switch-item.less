@@ -1,5 +1,4 @@
 @import (reference) '../../../../style/color.less';
-@import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/typography.less';
 
 @icon-off: @gux-grey-20;
@@ -40,13 +39,13 @@ gux-switch {
   // Default
   > gux-switch-item {
     .gux-switch-item {
-      padding: 0 @gux-spacing-xs @gux-spacing-2xs;
+      padding: 0 8px 4px;
       border-bottom: 1px solid @inactive-small;
 
       &:focus-visible,
       &:hover {
-        padding: 0 @gux-spacing-xs 1px;
-        border-bottom: @gux-spacing-2xs solid @gux-blue-60;
+        padding: 0 8px 1px;
+        border-bottom: 4px solid @gux-blue-60;
         outline: none;
 
         > gux-icon {
@@ -64,8 +63,8 @@ gux-switch {
 
     &.gux-selected {
       .gux-switch-item {
-        padding: 0 @gux-spacing-xs 1px;
-        border-bottom: @gux-spacing-2xs solid @gux-blue-60;
+        padding: 0 8px 1px;
+        border-bottom: 4px solid @gux-blue-60;
 
         > gux-icon {
           svg {
@@ -81,7 +80,7 @@ gux-switch {
       .gux-switch-item {
         .gux-small-text();
 
-        padding: 0 @gux-spacing-2xs;
+        padding: 0 4px;
         border-bottom: 1px solid @inactive-small;
 
         &:focus-visible,

@@ -1,4 +1,3 @@
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/color-palette.less';
 
 :host {
@@ -8,9 +7,9 @@
   justify-content: space-between;
   width: 100%;
   max-height: 48px;
-  padding: 0 @gux-spacing-xs @gux-spacing-medium @gux-spacing-xs;
+  padding: 0 8px 16px;
   background-color: @gux-grey-100;
-  border-radius: @gux-spacing-2xs;
+  border-radius: 4px;
 
   .search-filter-container {
     width: 260px;
@@ -20,7 +19,7 @@
   slot[name='search-and-filter']::slotted(*) {
     display: flex;
     flex-direction: row;
-    gap: @gux-spacing-2xs;
+    gap: 4px;
     align-content: flex-start;
     align-items: center;
   }
@@ -41,13 +40,13 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: @gux-spacing-2xs;
+      gap: 4px;
       align-content: flex-end;
       align-items: center;
     }
 
     .gux-contextual-wrapper {
-      padding-right: @gux-spacing-xs;
+      padding-right: 8px;
       border-right: 1px solid @gux-grey-50;
     }
 
@@ -55,8 +54,8 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: @gux-spacing-2xs;
-      margin-left: @gux-spacing-xs;
+      gap: 4px;
+      margin-left: 8px;
     }
   }
 }

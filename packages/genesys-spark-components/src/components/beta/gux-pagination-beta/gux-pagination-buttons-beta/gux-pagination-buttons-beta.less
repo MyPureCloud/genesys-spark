@@ -1,5 +1,4 @@
 @import (reference) '../../../../style/color-palette.less';
-@import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/typography.less';
 
 gux-pagination-buttons-beta {
@@ -23,8 +22,8 @@ gux-pagination-buttons-beta {
       white-space: nowrap;
 
       gux-button-slot:not(:first-of-type) {
-        margin-right: @gux-spacing-xs;
-        margin-left: @gux-spacing-xs;
+        margin-right: 8px;
+        margin-left: 8px;
       }
     }
 
@@ -35,7 +34,7 @@ gux-pagination-buttons-beta {
       align-content: stretch;
       align-items: center;
       justify-content: center;
-      margin: 0 @gux-spacing-medium;
+      margin: 0 16px;
 
       & > div {
         flex: 0 1 auto;
@@ -46,7 +45,7 @@ gux-pagination-buttons-beta {
 
       .gux-pagination-buttons-input {
         width: 60px;
-        margin: 0 @gux-spacing-xs;
+        margin: 0 8px;
 
         input {
           width: inherit;
@@ -68,7 +67,7 @@ gux-pagination-buttons-beta {
       .gux-pagination-buttons-list-target {
         min-width: 28px;
         min-height: 24px;
-        padding: @gux-spacing-3xs @gux-spacing-2xs;
+        padding: 2px 4px;
         margin: 0;
         background: inherit;
         border: none;

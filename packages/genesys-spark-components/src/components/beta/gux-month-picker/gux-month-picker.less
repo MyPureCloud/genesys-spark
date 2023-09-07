@@ -1,7 +1,6 @@
 @import (reference) '../../../style/color-palette.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/spacing.less';
 
 :host {
   display: inline-block;
@@ -9,7 +8,7 @@
 
 .gux-target {
   display: inline-flex;
-  padding: @gux-spacing-2xs @gux-spacing-xs @gux-spacing-2xs @gux-spacing-small;
+  padding: 4px 8px 4px 12px;
   cursor: pointer;
   background-color: @gux-grey-90;
   .gux-form-field-border();
@@ -21,14 +20,14 @@
   .gux-display {
     display: inline-flex;
     min-width: 100px;
-    padding-right: @gux-spacing-xs;
+    padding-right: 8px;
     color: @gux-black-50;
 
     .gux-spinner {
       outline: none;
 
       &:not(:first-child) {
-        margin-left: @gux-spacing-2xs;
+        margin-left: 4px;
       }
 
       &:focus-visible {

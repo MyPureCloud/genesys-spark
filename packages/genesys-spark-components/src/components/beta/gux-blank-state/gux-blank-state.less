@@ -1,5 +1,4 @@
 @import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/color-mixins.less';
 
 :host {
@@ -36,17 +35,17 @@
   &.gux-small,
   &.gux-medium {
     .gux-message-container {
-      padding: @gux-spacing-xs 0 @gux-spacing-2xs;
+      padding: 8px 0 4px;
     }
 
     .gux-guidance-container {
-      padding-bottom: @gux-spacing-xs;
+      padding-bottom: 8px;
     }
   }
 
   &.gux-large {
     .gux-message-container {
-      padding: @gux-spacing-medium 0 @gux-spacing-2xs;
+      padding: 16px 0 4px;
 
       slot[name='primary-message'] {
         .h1();
@@ -54,7 +53,7 @@
     }
 
     .gux-guidance-container {
-      padding-bottom: @gux-spacing-medium;
+      padding-bottom: 16px;
 
       slot[name='additional-guidance'] {
         .gux-large-text();
