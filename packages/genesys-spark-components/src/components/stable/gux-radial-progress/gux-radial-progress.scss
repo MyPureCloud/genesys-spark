@@ -1,0 +1,7 @@
+@import './gux-radial-progress.functional.scss';
+
+:host {
+  display: inline-block;
+}
+
+@include gux-percentage-state-style;

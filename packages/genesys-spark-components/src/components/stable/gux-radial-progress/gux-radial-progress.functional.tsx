@@ -2,10 +2,10 @@ import { FunctionalComponent, h, VNode } from '@stencil/core';
 
 import {
   getPercentageString,
+  STROKE_DASH,
   RADIUS,
-  STROKE_DASH
+  OVERALL_SIZE
 } from './gux-radial-progress.service';
-import { GuxRadialProgressScale } from './gux-radial-progress.types';
 
 interface GuxSpinnerStateProps {
   screenreaderText: string;
@@ -14,8 +14,6 @@ interface GuxSpinnerStateProps {
 interface GuxPercentageStateProps {
   value: number;
   max: number;
-  dropshadowId: string;
-  scale: GuxRadialProgressScale;
   screenreaderText: string;
 }
 
@@ -25,7 +23,7 @@ interface GuxSpinnerStateProps {
 
 export const GuxPercentageState: FunctionalComponent<
   GuxPercentageStateProps
-> = ({ value, max, scale, dropshadowId, screenreaderText }): VNode => {
+> = ({ value, max, screenreaderText }): VNode => {
   return (
     <div
       role="progressbar"
@@ -36,30 +34,10 @@ export const GuxPercentageState: FunctionalComponent<
     >
       <svg
         class="gux-svg-container"
-        width="60px"
-        height="60px"
-        viewBox="0 0 60 60"
+        viewBox={`0 0 ${OVERALL_SIZE} ${OVERALL_SIZE}`}
         role="presentation"
       >
-        <filter id={dropshadowId}>
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.4" />
-          <feOffset dx="0" dy="0" result="offsetblur" />
-          <feMerge>
-            <feMergeNode />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
         <circle cx="50%" cy="50%" r={RADIUS} class="gux-static-circle" />
-        <circle
-          cx="50%"
-          cy="50%"
-          r={RADIUS}
-          class="gux-dynamic-circle-shadow"
-          stroke-dashoffset={STROKE_DASH * (1 - value / max)}
-          stroke-dasharray={STROKE_DASH}
-          stroke-linecap="round"
-          filter={'url(#' + dropshadowId + ')'}
-        />
         <circle
           cx="50%"
           cy="50%"
@@ -74,12 +52,9 @@ export const GuxPercentageState: FunctionalComponent<
           x="50%"
           y="50%"
           dominant-baseline="central"
-          class={{
-            'gux-percentage': true,
-            'gux-small': ![0, 1].includes(scale)
-          }}
+          class="gux-percentage"
         >
-          {getPercentageString(value, max, scale)}
+          {getPercentageString(value, max)}
         </text>
       </svg>
     </div>

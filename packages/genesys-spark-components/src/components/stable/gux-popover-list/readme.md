@@ -42,7 +42,7 @@
 ```mermaid
 graph TD;
   gux-popover-list --> gux-dismiss-button
-  gux-dismiss-button --> gux-button-slot-beta
+  gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
   gux-tab-advanced --> gux-popover-list
   style gux-popover-list fill:#f9f,stroke:#333,stroke-width:4px

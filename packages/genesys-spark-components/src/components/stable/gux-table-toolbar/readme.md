@@ -27,7 +27,7 @@
 graph TD;
   gux-table-toolbar --> gux-table-toolbar-menu-button
   gux-table-toolbar-menu-button --> gux-popup
-  gux-table-toolbar-menu-button --> gux-button-slot-beta
+  gux-table-toolbar-menu-button --> gux-button-slot
   gux-table-toolbar-menu-button --> gux-tooltip-title
   gux-table-toolbar-menu-button --> gux-icon
   gux-table-toolbar-menu-button --> gux-list

@@ -19,7 +19,7 @@ import { onHiddenChange } from '@utils/dom/on-attribute-change';
  */
 
 @Component({
-  styleUrl: 'gux-table-select-popover.less',
+  styleUrl: 'gux-table-select-popover.scss',
   tag: 'gux-table-select-popover',
   shadow: true
 })

@@ -33,6 +33,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-table-beta        | gux-table        |
 | gux-popover-beta      | gux-popover      |
 | gux-time-picker-beta  | gux-time-picker  |
+| gux-button-slot-beta  | gux-button-slot  |
 
 #### gux-calendar
 
@@ -163,6 +164,15 @@ The `arrow-position` property has had the following changes.
   - <gux-accordion><gux-accordion-section arrow-position="beside-text"></gux-accordion-section></gux-accordion>
   + <gux-accordion><gux-accordion-section></gux-accordion-section></gux-accordion>
   ```
+
+### gux-radial-progress
+
+The `scale` property has been removed. The displayed percentage will now always be an integer value.
+
+```diff
+- <gux-radial-progress scale="2" screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
++ <gux-radial-progress screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
+```
 
 ### gux-dropdown
 

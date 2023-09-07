@@ -3,13 +3,13 @@
 exports[`gux-dismiss-button #render should render component as expected (1) 1`] = `
 <gux-dismiss-button>
   <mock:shadow-root>
-    <gux-button-slot-beta accent="ghost">
+    <gux-button-slot accent="ghost">
       <button title="Dismiss" type="button">
         <div class="gux-icon-container">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </div>
       </button>
-    </gux-button-slot-beta>
+    </gux-button-slot>
   </mock:shadow-root>
 </gux-dismiss-button>
 `;

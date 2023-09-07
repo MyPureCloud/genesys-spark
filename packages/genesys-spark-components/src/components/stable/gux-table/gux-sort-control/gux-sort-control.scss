@@ -1,0 +1,49 @@
+.gux-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: var(--gse-ui-dataTableItems-header-selectedBar-height) solid
+    transparent;
+  border-bottom: var(--gse-ui-dataTableItems-header-selectedBar-height) solid
+    transparent;
+
+  &:focus-within {
+    border-bottom-color: var(
+      --gse-ui-dataTableItems-header-selectedIndicatorColor
+    );
+  }
+
+  .gux-sort-button {
+    all: unset;
+    flex: 1 1 auto;
+    align-self: stretch;
+    order: 0;
+    cursor: pointer;
+
+    .gux-sort-icon {
+      float: right;
+      width: var(--gse-ui-icon-size-sm);
+      height: var(--gse-ui-icon-size-sm);
+      color: var(--gse-ui-dataTableItems-header-sort-foregroundColor);
+      margin: 0 var(--gse-ui-dataTableItems-header-gap);
+
+      &.gux-left {
+        float: left;
+        // left side doesn't have the resize spacer, so compensating for that
+        margin-left: calc(2px + var(--gse-ui-dataTableItems-header-gap));
+      }
+    }
+  }
+
+  .gux-resize-spacer {
+    flex: 0 1 auto;
+    align-self: stretch;
+    order: 0;
+    width: 2px;
+  }
+}

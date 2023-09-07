@@ -1,0 +1,47 @@
+/**
+  * @prop --gse-ui-progressAndLoading-largeBorder : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-largeBorder-0 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-largeBorder-1 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-largeBorder-2 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-spinner-base
+  * @prop --gse-ui-progressAndLoading-spinner-foreground
+  * @prop --gse-ui-progressAndLoading-spinner-large : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-spinner-text-fontFamily
+  * @prop --gse-ui-progressAndLoading-spinner-text-fontSize
+  * @prop --gse-ui-progressAndLoading-spinner-text-fontWeight
+  * @prop --gse-ui-progressAndLoading-spinner-text-lineHeight
+  * @prop --gse-ui-progressAndLoading-textColor
+*/
+
+@mixin gux-percentage-state-style {
+  div[role='progressbar'] {
+    .gux-svg-container {
+      display: block;
+      height: var(--gse-ui-progressAndLoading-spinner-large);
+      width: var(--gse-ui-progressAndLoading-spinner-large);
+
+      .gux-dynamic-circle {
+        fill: none;
+        stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
+        stroke-width: 4; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+      }
+
+      .gux-static-circle {
+        fill: none;
+        stroke: var(--gse-ui-progressAndLoading-spinner-base);
+        stroke-width: 4; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+      }
+
+      .gux-percentage {
+        font-family: var(--gse-ui-progressAndLoading-spinner-text-fontFamily);
+        font-weight: var(--gse-ui-progressAndLoading-spinner-text-fontWeight);
+        line-height: var(--gse-ui-progressAndLoading-spinner-text-lineHeight);
+        font-size: var(--gse-ui-progressAndLoading-spinner-text-fontSize);
+        fill: var(--gse-ui-progressAndLoading-textColor);
+        text-anchor: middle;
+      }
+    }
+  }
+}

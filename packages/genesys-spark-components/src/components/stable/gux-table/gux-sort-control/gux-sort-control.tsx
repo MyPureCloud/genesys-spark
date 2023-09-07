@@ -18,7 +18,7 @@ import { GuxTableSortDirection, GuxTableSortState } from '../gux-table.types';
 import tableResources from '../i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-sort-control.less',
+  styleUrl: 'gux-sort-control.scss',
   tag: 'gux-sort-control',
   shadow: { delegatesFocus: true }
 })
@@ -113,10 +113,10 @@ export class GuxSortControl {
   private getIconName(colSortDirection: GuxTableSortDirection): string {
     switch (colSortDirection) {
       case 'descending':
-        return 'arrow-solid-up';
+        return 'arrow-solid-down';
       case 'ascending':
       default:
-        return 'arrow-solid-down';
+        return 'arrow-solid-up';
     }
   }
 
@@ -172,8 +172,8 @@ export class GuxSortControl {
           }}
           type="button"
           onClick={() => this.onClick()}
+          aria-label={this.getSRText(this.sort)}
         >
-          <span class="gux-sr-only">{this.getSRText(this.sort)}</span>
           <gux-icon
             class={{
               'gux-sort-icon': true,

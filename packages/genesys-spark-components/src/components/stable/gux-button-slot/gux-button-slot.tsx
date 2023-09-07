@@ -2,14 +2,14 @@ import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 import { logError } from '../../../utils/error/log-error';
-import { GuxButtonAccent } from '../../stable/gux-button/gux-button.types';
+import { GuxButtonAccent } from '../gux-button/gux-button.types';
 
 /**
  * @slot - button, input[type="button"] or input[type="submit"] element
  */
 @Component({
   styleUrl: 'gux-button-slot.scss',
-  tag: 'gux-button-slot-beta',
+  tag: 'gux-button-slot',
   shadow: true
 })
 export class GuxButtonSlot {

@@ -1,0 +1,14 @@
+:host {
+  color: var(--gse-ui-popover-headerColor);
+}
+
+.gux-popover-wrapper {
+  z-index: 2;
+  display: inline-block;
+  padding: var(--gse-ui-popover-gap) 0;
+  background-color: var(--gse-ui-popover-backgroundColor);
+  border-radius: var(--gse-ui-popover-borderRadius);
+  box-shadow: var(--gse-ui-popover-boxShadow-x)
+    var(--gse-ui-popover-boxShadow-y) var(--gse-ui-popover-boxShadow-blur)
+    var(--gse-ui-popover-boxShadow-spread) var(--gse-ui-popover-boxShadow-color);
+}

@@ -192,7 +192,7 @@ export class GuxActionButton {
       <div class="gux-action-button-container">
         <gux-popup expanded={this.isOpen} disabled={this.disabled}>
           <div slot="target" class="gux-action-button-container">
-            <gux-button-slot-beta
+            <gux-button-slot
               class="gux-action-button"
               accent={getGuxActionButtonAccent(this.accent)}
             >
@@ -203,9 +203,9 @@ export class GuxActionButton {
               >
                 {this.text}
               </button>
-            </gux-button-slot-beta>
+            </gux-button-slot>
 
-            <gux-button-slot-beta
+            <gux-button-slot
               class="gux-dropdown-button"
               accent={getGuxActionButtonAccent(this.accent)}
             >
@@ -222,7 +222,7 @@ export class GuxActionButton {
               >
                 <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
               </button>
-            </gux-button-slot-beta>
+            </gux-button-slot>
           </div>
 
           <div class="gux-list-container" slot="popup">

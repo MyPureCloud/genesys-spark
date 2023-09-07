@@ -39,7 +39,7 @@ export class GuxTableToolbarCustomAction {
 
   render(): JSX.Element {
     return (
-      <gux-button-slot-beta accent={this.accent}>
+      <gux-button-slot accent={this.accent}>
         <button disabled={this.disabled} type="button" class="gux-action-title">
           <slot name="icon" />
           <span class={{ 'gux-sr-only': this.iconOnly }}>
@@ -47,7 +47,7 @@ export class GuxTableToolbarCustomAction {
           </span>
         </button>
         {this.renderTooltip()}
-      </gux-button-slot-beta>
+      </gux-button-slot>
     ) as JSX.Element;
   }
 }

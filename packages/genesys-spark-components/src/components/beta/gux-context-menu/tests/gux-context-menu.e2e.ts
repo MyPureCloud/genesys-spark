@@ -11,7 +11,7 @@ const html = `
 `;
 
 const guxListSelector = 'pierce/gux-list';
-const buttonSelector = 'pierce/gux-button-slot-beta button';
+const buttonSelector = 'pierce/gux-button-slot button';
 
 describe('gux-context-menu-beta', () => {
   let page: E2EPage;

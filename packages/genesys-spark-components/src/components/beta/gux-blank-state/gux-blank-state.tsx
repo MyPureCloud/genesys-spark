@@ -68,9 +68,9 @@ export class GuxBlankState {
         <div class="gux-guidance-container">
           <slot name="additional-guidance"></slot>
         </div>
-        <gux-button-slot-beta accent="primary">
+        <gux-button-slot accent="primary">
           <slot name="call-to-action"></slot>
-        </gux-button-slot-beta>
+        </gux-button-slot>
       </div>
     ) as JSX.Element;
   }

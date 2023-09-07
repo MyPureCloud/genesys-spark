@@ -14,8 +14,9 @@ import { randomHTMLId } from '@utils/dom/random-html-id';
 import tableResources from '../i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-row-select.less',
-  tag: 'gux-row-select'
+  styleUrl: 'gux-row-select.scss',
+  tag: 'gux-row-select',
+  shadow: true
 })
 export class GuxRowSelect {
   @Element()
@@ -23,8 +24,9 @@ export class GuxRowSelect {
 
   private id: string = randomHTMLId('gux-row-select');
   private i18n: GetI18nValue;
+  private inputElement: HTMLInputElement;
 
-  @Prop({ mutable: true })
+  @Prop()
   selected: boolean = false;
 
   @Prop()
@@ -36,11 +38,7 @@ export class GuxRowSelect {
   @Listen('input')
   onCheck(event: CustomEvent): void {
     event.stopPropagation();
-
-    const input = event.target as HTMLInputElement;
-
-    this.selected = input.checked;
-    this.internalrowselectchange.emit();
+    this.internalrowselectchange.emit(this.inputElement.checked);
   }
 
   async componentWillLoad(): Promise<void> {
@@ -55,6 +53,7 @@ export class GuxRowSelect {
     return (
       <gux-form-field-checkbox>
         <input
+          ref={el => (this.inputElement = el)}
           slot="input"
           id={this.id}
           type="checkbox"
