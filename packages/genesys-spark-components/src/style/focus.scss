@@ -3,7 +3,7 @@
 @mixin gux-focus-ring {
   outline: 3px solid #aac9ff;
   outline-offset: 1px;
-  box-shadow: 0 0 0 1px $gux-grey-100;
+  box-shadow: 0 0 0 1px #fdfdfd;
 }
 
 @mixin gux-focus-ring-small {

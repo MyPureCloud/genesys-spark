@@ -28,7 +28,7 @@
     justify-content: center;
     height: calc(100% - var(--gse-ui-dataTableItems-header-default-height));
     color: #596373;
-    background: $gux-grey-100;
+    background: #fdfdfd;
     @include h2;
   }
 }

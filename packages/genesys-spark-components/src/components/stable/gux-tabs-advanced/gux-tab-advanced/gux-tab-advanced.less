@@ -1,6 +1,6 @@
 @import (reference) '../../../../style/color.less';
 
-@gux-off-tab-fill: @gux-grey-40;
+@gux-off-tab-fill: #c8cfda;
 
 // Style
 .gux-tab-sorting {
@@ -12,13 +12,13 @@
 gux-tab-advanced {
   &:not(:last-child) .gux-tab:not(.gux-dropdown-options) {
     .gux-tab-button {
-      border-right: 1px solid @gux-grey-50;
+      border-right: 1px solid #d7dce5;
     }
   }
 
   &:not(:last-child) .gux-dropdown-options {
     .gux-tab-options-button {
-      border-right: 1px solid @gux-grey-50;
+      border-right: 1px solid #d7dce5;
     }
   }
 
@@ -41,7 +41,7 @@ gux-tab-advanced {
       padding-right: 0;
       padding-left: 16px;
       color: #000;
-      background-color: @gux-grey-90;
+      background-color: #f6f7f9;
       border: none;
 
       &:focus-visible {
@@ -76,7 +76,7 @@ gux-tab-advanced {
       height: 30px;
       padding: 0;
       cursor: pointer;
-      background-color: @gux-grey-90;
+      background-color: #f6f7f9;
       border: none;
 
       &:focus-visible {
@@ -129,21 +129,21 @@ gux-tab-advanced {
 
     &.gux-selected {
       padding-bottom: 0;
-      background-color: @gux-grey-100;
+      background-color: #fdfdfd;
       border-bottom: 2px solid #2a60c8;
 
       .gux-tab-button {
-        background-color: @gux-grey-100;
+        background-color: #fdfdfd;
       }
 
       .gux-tab-options-button {
-        background-color: @gux-grey-100;
+        background-color: #fdfdfd;
       }
     }
 
     &:hover:not(.gux-selected):not(.gux-disabled) {
       padding-bottom: 0;
-      border-bottom: 2px solid @gux-grey-10;
+      border-bottom: 2px solid #8a97ad;
     }
 
     gux-tooltip-title {
