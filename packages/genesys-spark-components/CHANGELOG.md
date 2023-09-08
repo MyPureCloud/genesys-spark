@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.21](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.20...v4.0.0-beta.21) (2023-09-08)
+
+
+### Features
+
+* **form field range v4 upgrade:** upgraded form field range component to v4 ([31b6e2f](https://github.com/MyPureCloud/genesys-webcomponents/commit/31b6e2f00fcf68b2922f953990a15b1d8536c1a9))
+
 ## [4.0.0-beta.20](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.19...v4.0.0-beta.20) (2023-09-07)
 
 
