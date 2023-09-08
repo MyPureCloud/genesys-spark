@@ -76,11 +76,11 @@
         "checkbox_cell": {
           "default": {
             "height": "40px",
-            "width": "49px"
+            "width": "41px"
           },
           "compact": {
             "height": "32px",
-            "width": "49px"
+            "width": "41px"
           }
         }
       },
@@ -120,7 +120,13 @@
       "table_toolbar_group": {
         "gap": "4px"
       },
-      "gap": "4px"
+      "gap": "4px",
+      "divider_color": "#c6ceec",
+      "divider": {
+        "width": "1px",
+        "height": "32px"
+      },
+      "height": "32px"
     },
     "table_pagination": {
       "recordset_controls": {

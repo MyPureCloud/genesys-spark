@@ -64,6 +64,7 @@
     "header_color": "#1b2c48",
     "background_color": "#ffffff",
     "shroud_color": "#23395d",
+    "shroud_color_test": "#23395dcc",
     "header": {
       "gap": "12px"
     },
@@ -98,7 +99,9 @@
       "type": "dropShadow"
     },
     "border_radius": "16px",
-    "opacity": "80%"
+    "shroud": {
+      "opacity": 0.8
+    }
   },
   "popover": {
     "border_radius": "8px",
