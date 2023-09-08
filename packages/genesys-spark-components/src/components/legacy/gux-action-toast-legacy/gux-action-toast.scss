@@ -12,7 +12,7 @@
   width: 270px;
   padding: 20px 24px;
   margin-bottom: 4px;
-  color: $gux-type;
+  color: #2e394c;
   background: #f6f7f9;
   border: 1px solid #b4bccb;
   border-radius: 4px;
@@ -38,7 +38,7 @@
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
-    color: $gux-aqua-green-sec;
+    color: #1da8b3;
 
     ::slotted(gux-icon) {
       width: 32px !important;

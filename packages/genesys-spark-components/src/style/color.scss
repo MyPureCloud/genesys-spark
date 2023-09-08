@@ -1,5 +1,4 @@
 // Genesys Colors from https://intranet.genesys.com/display/GDS/Colors+3.0
-@import './color-palette.scss';
 
 // Type and Icons
 $gux-type: #2e394c;
@@ -16,13 +15,13 @@ $gux-border-strong: #6b7585;
 $gux-placeholder: #596373;
 
 // Conditional Palette
-$gux-alert: $gux-alert-red-60;
-$gux-warning: $gux-alert-yellow-60;
-$gux-positive: $gux-alert-green-60;
-$gux-neutral: $gux-navy-sec;
-$gux-alert-dark: $gux-alert-red-90;
-$gux-warning-dark: $gux-alert-yellow-60;
-$gux-positive-dark: $gux-alert-green-90;
+$gux-alert: #ea0b0b;
+$gux-warning: #ffae00;
+$gux-positive: #3c8527;
+$gux-neutral: #203b73;
+$gux-alert-dark: #f8b2b2;
+$gux-warning-dark: #ffae00;
+$gux-positive-dark: #c2deb9;
 $gux-neutral-dark: #75a8ff;
 
 // Interactive

@@ -90,32 +90,34 @@ Alert Green
 | gux-alert-green-100 | #eefcea |
 
 Secondary Palette
-| variable | value |
-|----------------------------|-------------|
-| gux-navy-sec | #203b73 |
-| gux-blue-sec | #75a8ff |
-| gux-electric-purple-sec | #8452cf |
-| gux-plum-sec | #5e5782 |
-| gux-lilac-sec | #b5b5eb |
-| gux-fuscha-sec | #cc3ebe |
-| gux-fuchsia-sec | #cc3ebe |
-| gux-bubblegum-pink-sec | #ff8fdd |
-| gux-aqua-green-sec | #1da8b3 |
-| gux-olive-green-sec | #868c1e |
+
+| variable                   | value   |
+| -------------------------- | ------- |
+| gux-navy-sec               | #203b73 |
+| gux-blue-sec               | #75a8ff |
+| gux-electric-purple-sec    | #8452cf |
+| gux-plum-sec               | #5e5782 |
+| gux-lilac-sec              | #b5b5eb |
+| gux-fuscha-sec             | #cc3ebe |
+| gux-fuchsia-sec            | #cc3ebe |
+| gux-bubblegum-pink-sec     | #ff8fdd |
+| gux-aqua-green-sec         | #1da8b3 |
+| gux-olive-green-sec        | #868c1e |
 | gux-alert-yellow-green-sec | #ddd933 |
-| gux-dark-purple-sec | #5e5782 |
+| gux-dark-purple-sec        | #5e5782 |
 
 Brand Colors
-| variable | value |
-|----------------------------|--------------|
+
+| variable                  | value   |
+| ------------------------- | ------- |
 | gux-genesys-charcoal-grey | #33383d |
-| gux-genesys-off-white | #fdfdfd |
-| gux-genesys-plum | #5d3d5e |
-| gux-genesys-warm-red | #ff4f1f |
-| gux-genesys-teal | #00ae9e |
-| gux-genesys-navy | #23395d |
-| gux-genesys-light-blue | #3b90aa |
-| gux-genesys-yellow | #ff8f14 |
+| gux-genesys-off-white     | #fdfdfd |
+| gux-genesys-plum          | #5d3d5e |
+| gux-genesys-warm-red      | #ff4f1f |
+| gux-genesys-teal          | #00ae9e |
+| gux-genesys-navy          | #23395d |
+| gux-genesys-light-blue    | #3b90aa |
+| gux-genesys-yellow        | #ff8f14 |
 
 V1 Legacy
 

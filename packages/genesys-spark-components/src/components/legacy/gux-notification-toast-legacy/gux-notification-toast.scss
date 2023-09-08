@@ -13,7 +13,7 @@
   width: 294px;
   padding: 16px 8px 16px 16px;
   margin-bottom: 4px;
-  color: $gux-type;
+  color: #2e394c;
   background: #f6f7f9;
   border: 1px solid #b4bccb;
   border-color: #b4bccb;
@@ -34,19 +34,19 @@
   }
 
   &.gux-alert {
-    color: $gux-alert;
+    color: #ea0b0b;
   }
 
   &.gux-warning {
-    color: $gux-warning;
+    color: #ffae00;
   }
 
   &.gux-positive {
-    color: $gux-positive;
+    color: #3c8527;
   }
 
   &.gux-neutral {
-    color: $gux-neutral;
+    color: #203b73;
   }
 }
 
@@ -61,7 +61,7 @@
   justify-content: flex-start;
   order: 0;
   margin: 0 12px 0 8px;
-  color: $gux-type;
+  color: #2e394c;
 
   .gux-title,
   .gux-message {

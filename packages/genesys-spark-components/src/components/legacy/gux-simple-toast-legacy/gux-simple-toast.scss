@@ -10,7 +10,7 @@
   justify-content: flex-start;
   width: 286px;
   margin-bottom: 4px;
-  color: $gux-type;
+  color: #2e394c;
   background: #f6f7f9;
   border: 1px solid #b4bccb;
   border-radius: 4px;
@@ -26,19 +26,19 @@
   margin: 2px 0;
 
   &.gux-alert {
-    color: $gux-alert;
+    color: #ea0b0b;
   }
 
   &.gux-warning {
-    color: $gux-warning;
+    color: #ffae00;
   }
 
   &.gux-positive {
-    color: $gux-positive;
+    color: #3c8527;
   }
 
   &.gux-neutral {
-    color: $gux-neutral;
+    color: #203b73;
   }
 
   ::slotted(gux-icon) {
