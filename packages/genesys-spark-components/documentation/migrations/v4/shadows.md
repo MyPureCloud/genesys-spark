@@ -1,3 +1,7 @@
+# Deprecated Shadow Classes
+
+In V4, we are using Spark tokens and will no longer be exporting the following classes. Replace instances of the following classes with the corresponding box-shadow styling.
+
 | class name     | value                                      |
 | -------------- | ------------------------------------------ |
 | .gux-shadow-10 | box-shadow: 0 0 2px fade(#202937, 16%);    |

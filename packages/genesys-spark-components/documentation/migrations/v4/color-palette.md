@@ -1,4 +1,8 @@
-Blue
+# Deprecated Color Variables
+
+In V4, we are using Spark tokens for colors and will no longer be exporting the following color palette variables. Below is a list of color variables and their hex equivalents.
+
+## Blue
 
 | variable     | value   |
 | ------------ | ------- |
@@ -13,7 +17,7 @@ Blue
 | gux-blue-90  | #aac9ff |
 | gux-blue-100 | #deeaff |
 
-Black
+## Black
 
 | variable      | value   |
 | ------------- | ------- |
@@ -28,7 +32,7 @@ Black
 | gux-black-90  | #596373 |
 | gux-black-100 | #6b7585 |
 
-Grey
+## Grey
 
 | variable     | value   |
 | ------------ | ------- |
@@ -43,8 +47,7 @@ Grey
 | gux-grey-90  | #f6f7f9 |
 | gux-grey-100 | #fdfdfd |
 
-Conditional Palettes
-Alert Red
+## Alert Red
 
 | variable          | value   |
 | ----------------- | ------- |
@@ -59,7 +62,7 @@ Alert Red
 | gux-alert-red-90  | #f8b2b2 |
 | gux-alert-red-100 | #fceaea |
 
-Alert Yellow
+## Alert Yellow
 
 | variable             | value   |
 | -------------------- | ------- |
@@ -74,7 +77,7 @@ Alert Yellow
 | gux-alert-yellow-90  | #fce5b1 |
 | gux-alert-yellow-100 | #fdf8ec |
 
-Alert Green
+## Alert Green
 
 | variable            | value   |
 | ------------------- | ------- |
@@ -89,7 +92,7 @@ Alert Green
 | gux-alert-green-90  | #c2deb9 |
 | gux-alert-green-100 | #eefcea |
 
-Secondary Palette
+## Secondary Palette
 
 | variable                   | value   |
 | -------------------------- | ------- |
@@ -106,7 +109,7 @@ Secondary Palette
 | gux-alert-yellow-green-sec | #ddd933 |
 | gux-dark-purple-sec        | #5e5782 |
 
-Brand Colors
+## Brand Colors
 
 | variable                  | value   |
 | ------------------------- | ------- |
@@ -119,7 +122,7 @@ Brand Colors
 | gux-genesys-light-blue    | #3b90aa |
 | gux-genesys-yellow        | #ff8f14 |
 
-V1 Legacy
+## V1 Legacy
 
 | variable          | value   |
 | ----------------- | ------- |
