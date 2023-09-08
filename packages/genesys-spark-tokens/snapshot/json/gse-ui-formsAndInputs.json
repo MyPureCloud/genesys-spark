@@ -181,6 +181,9 @@
           "width": "2px",
           "style": "solid"
         }
+      },
+      "default": {
+        "background_color": "#ffffff"
       }
     },
     "border_radius": "4px",
@@ -571,5 +574,40 @@
       "gap": "4px"
     },
     "background_color": "#ffffff"
+  },
+  "phone_input": {
+    "dropdown": {
+      "hover": {
+        "background_color": "#EFF0FE"
+      },
+      "active": {
+        "background_color": "#CED2FC"
+      },
+      "foreground_color": "#626E84",
+      "flag": {
+        "height": "12px",
+        "width": "16px"
+      },
+      "height": "32px",
+      "menu": {
+        "min_width": "230px"
+      },
+      "icon": {
+        "width": "16px",
+        "height": "16px"
+      }
+    },
+    "country_code": {
+      "foreground_color": "#626E84"
+    },
+    "min_width": "230px"
+  },
+  "time_picker": {
+    "clock_states": {
+      "default_color": "#626e84",
+      "hover_color": "#3742A2",
+      "active_color": "#4856CB",
+      "disabled_color": "#626e8480"
+    }
   }
 }

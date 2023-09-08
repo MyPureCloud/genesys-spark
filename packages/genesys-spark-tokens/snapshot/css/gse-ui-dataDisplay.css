@@ -39,9 +39,9 @@
   --gse-ui-dataTableItems-cell-multiselect-padding: 0 16px;
   --gse-ui-dataTableItems-cell-multiselect-gap: 8px;
   --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-height: 40px;
-  --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width: 49px;
+  --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width: 41px;
   --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-height: 32px;
-  --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width: 49px;
+  --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width: 41px;
   --gse-ui-dataTableItems-cell-default-height: 40px;
   --gse-ui-dataTableItems-cell-default-width: 229px;
   --gse-ui-dataTableItems-cell-compact-height: 32px;
@@ -59,6 +59,10 @@
   --gse-ui-dataTableItems-editColumn-editColumnContent-padding: 8px 0;
   --gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap: 4px;
   --gse-ui-dataTableItems-tableToolbar-gap: 4px;
+  --gse-ui-dataTableItems-tableToolbar-dividerColor: #c6ceec;
+  --gse-ui-dataTableItems-tableToolbar-divider-width: 1px;
+  --gse-ui-dataTableItems-tableToolbar-divider-height: 32px;
+  --gse-ui-dataTableItems-tableToolbar-height: 32px;
   --gse-ui-dataTableItems-tablePagination-recordsetControls-gap: 10px;
   --gse-ui-dataTableItems-tablePagination-padding: 12px;
   --gse-ui-dataTableItems-tablePagination-divider-color: #c6c8ce;
