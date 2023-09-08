@@ -174,8 +174,15 @@ export class GuxTimeZonePickerBeta {
 
   private getDefaultZoneList(): GuxTimeZoneOption[] {
     const defaultZones = this.getDefaultZones();
-    const defaultZoneOptions = this.timeZoneList.filter(tz =>
-      defaultZones.includes(tz.value)
+    const defaultZoneOptions: GuxTimeZoneOption[] = this.timeZoneList.reduce(
+      (defaults: GuxTimeZoneOption[], tz) => {
+        if (defaultZones.includes(tz.value)) {
+          return defaults.concat([Object.assign({}, tz)]);
+        }
+
+        return defaults;
+      },
+      []
     );
 
     defaultZoneOptions.forEach(option => {
