@@ -1,0 +1,33 @@
+@import (reference) '../../../style/color.less';
+
+.has-defaults {
+  gux-option {
+    padding-left: 20px;
+  }
+}
+
+gux-dropdown {
+  .zone-header {
+    padding: 6px 12px;
+    color: @gux-black-100;
+    text-transform: uppercase;
+  }
+
+  .tz-utc {
+    color: @gux-black-90;
+  }
+
+  gux-list-divider {
+    width: 97%;
+    margin-left: 15px;
+  }
+
+  gux-option {
+    &.gux-active,
+    &.gux-hovered:not(:disabled) {
+      .tz-utc {
+        color: @gux-grey-60;
+      }
+    }
+  }
+}
