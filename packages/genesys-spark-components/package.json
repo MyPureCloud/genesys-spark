@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.0.0-beta.20",
+  "version": "4.0.0-beta.21",
   "description": "Common webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",
@@ -62,6 +62,7 @@
   "dependencies": {
     "@floating-ui/dom": "1.4.3",
     "@popperjs/core": "^2.11.8",
+    "@vvo/tzdb": "^6.108.0",
     "google-libphonenumber": "^3.2.32",
     "intl-messageformat": "^10.3.5",
     "requestanimationframe-timer": "^3.0.3",

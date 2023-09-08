@@ -1,0 +1,23 @@
+<h1>gux-time-zone-picker-beta</h1>
+
+<form onchange="notify(event)" oninput="notify(event)">
+  <h2>Examples</h2>
+  <h3>Basic</h3>
+  <gux-time-zone-picker-beta value="Etc/GMT+1"> </gux-time-zone-picker-beta>
+  <h3>Default Zones</h3>
+  <gux-time-zone-picker-beta
+    value="Etc/GMT+1"
+    workspace-default="Etc/GMT"
+    ,
+    local-default="America/Detroit"
+  >
+  </gux-time-zone-picker-beta>
+  <h3>Same Local and Workspace Default Zones</h3>
+  <gux-time-zone-picker-beta
+    value="Etc/GMT+1"
+    workspace-default="America/Detroit"
+    ,
+    local-default="America/Detroit"
+  >
+  </gux-time-zone-picker-beta>
+</form>

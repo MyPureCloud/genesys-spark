@@ -38,7 +38,7 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot help - Optional slot for help message
  */
 @Component({
-  styleUrl: 'gux-form-field-range.less',
+  styleUrl: 'gux-form-field-range.scss',
   tag: 'gux-form-field-range',
   shadow: true
 })
