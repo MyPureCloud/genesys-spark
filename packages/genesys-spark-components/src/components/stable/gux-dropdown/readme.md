@@ -12,16 +12,15 @@ gux-dropdown-types.ts, then following the resulting compiler errors.
 
 ## Properties
 
-| Property      | Attribute     | Description                                                           | Type                                  | Default     |
-| ------------- | ------------- | --------------------------------------------------------------------- | ------------------------------------- | ----------- |
-| `disabled`    | `disabled`    |                                                                       | `boolean`                             | `false`     |
-| `filterType`  | `filter-type` |                                                                       | `"custom" \| "none" \| "starts-with"` | `'none'`    |
-| `filterable`  | `filterable`  | deprecated will be removed in v4 (COMUI-1369). Use filterType instead | `boolean`                             | `false`     |
-| `hasError`    | `has-error`   |                                                                       | `boolean`                             | `false`     |
-| `loading`     | `loading`     |                                                                       | `boolean`                             | `false`     |
-| `placeholder` | `placeholder` |                                                                       | `string`                              | `undefined` |
-| `required`    | `required`    |                                                                       | `boolean`                             | `false`     |
-| `value`       | `value`       |                                                                       | `string`                              | `undefined` |
+| Property      | Attribute     | Description | Type                                  | Default     |
+| ------------- | ------------- | ----------- | ------------------------------------- | ----------- |
+| `disabled`    | `disabled`    |             | `boolean`                             | `false`     |
+| `filterType`  | `filter-type` |             | `"custom" \| "none" \| "starts-with"` | `'none'`    |
+| `hasError`    | `has-error`   |             | `boolean`                             | `false`     |
+| `loading`     | `loading`     |             | `boolean`                             | `false`     |
+| `placeholder` | `placeholder` |             | `string`                              | `undefined` |
+| `required`    | `required`    |             | `boolean`                             | `false`     |
+| `value`       | `value`       |             | `string`                              | `undefined` |
 
 
 ## Events
