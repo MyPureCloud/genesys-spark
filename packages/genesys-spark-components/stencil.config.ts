@@ -7,7 +7,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'genesys-webcomponents',
-  globalStyle: 'src/style/style.scss',
+  globalStyle: 'src/style/style.less',
   hydratedFlag: {
     selector: 'attribute'
   },
@@ -32,7 +32,11 @@ export const config: Config = {
       copy({
         targets: [
           { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
-          { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' }
+          { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' },
+          {
+            src: ['src/style/typography.less', 'src/style/focus.less'],
+            dest: 'dist/genesys-webcomponents/less'
+          }
         ],
         verbose: true
       }),
