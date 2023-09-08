@@ -7,10 +7,6 @@ import {
   OVERALL_SIZE
 } from './gux-radial-progress.service';
 
-interface GuxSpinnerStateProps {
-  screenreaderText: string;
-}
-
 interface GuxPercentageStateProps {
   value: number;
   max: number;

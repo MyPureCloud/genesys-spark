@@ -1,0 +1,164 @@
+/**
+  * @prop --gse-ui-progressAndLoading-largeBorder : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-largeBorder-0 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-largeBorder-1 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-largeBorder-2 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-smallBorder : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-smallBorder-0 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-smallBorder-1 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-smallBorder-2 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-thinBorder : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-thinBorder-0 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-thinBorder-1 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-thinBorder-2 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-spinner-base
+  * @prop --gse-ui-progressAndLoading-spinner-foreground
+  * @prop --gse-ui-progressAndLoading-spinner-large : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-spinner-small : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+*/
+
+$pi: 3.14159265358979;
+
+$largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
+$largeSpinnerBorder: 4; // Linked to --gse-ui-progressAndLoading-largeBorder
+
+$smallSpinnerSize: 16; // Linked to --gse-ui-progressAndLoading-spinner-small
+$smallSpinnerBorder: 2; // Linked to --gse-ui-progressAndLoading-smallBorder
+
+$thinSpinnerBorder: 1; // Linked to --gse-ui-progressAndLoading-smallBorder
+
+$largeCircumference: ($pi * ($largeSpinnerSize - $largeSpinnerBorder));
+$smallCircumference: ($pi * ($smallSpinnerSize - $smallSpinnerBorder));
+$largeThinCircumference: ($pi * ($largeSpinnerSize - $thinSpinnerBorder));
+
+@mixin spin($name, $circumference) {
+  @keyframes #{$name}Spin {
+    0% {
+      transform: rotate(0deg);
+      stroke-dasharray: 1 ($circumference / 2) - 1;
+    }
+
+    7.5% {
+      transform: rotate(0deg);
+      stroke-dasharray: 1 ($circumference / 2) - 1;
+    }
+
+    20% {
+      transform: rotate(90deg);
+      stroke-dasharray: 1 ($circumference / 2) - 1;
+    }
+
+    30% {
+      transform: rotate(180deg);
+      stroke-dasharray: $circumference / 4;
+    }
+
+    40% {
+      stroke-dasharray: $circumference / 4;
+    }
+
+    50% {
+      transform: rotate(450deg);
+      stroke-dasharray: 1 ($circumference / 2) - 1;
+    }
+
+    57.5% {
+      transform: rotate(450deg);
+      stroke-dasharray: 1 ($circumference / 2) - 1;
+    }
+
+    70% {
+      transform: rotate(540deg);
+      stroke-dasharray: $circumference / 4;
+    }
+
+    80% {
+      transform: rotate(630deg);
+      stroke-dasharray: $circumference / 4;
+    }
+
+    90% {
+      stroke-dasharray: $circumference / 4;
+    }
+
+    100% {
+      transform: rotate(900deg);
+      stroke-dasharray: 1 ($circumference / 2) - 1;
+    }
+  }
+}
+
+@include spin('large', $largeCircumference);
+@include spin('small', $smallCircumference);
+@include spin('largeThin', $largeThinCircumference);
+
+@mixin gux-spinner-state-style {
+  div[role='progressbar'] {
+    .gux-svg-container {
+      display: block;
+      height: var(--gse-ui-progressAndLoading-spinner-large);
+      width: var(--gse-ui-progressAndLoading-spinner-large);
+
+      .gux-dynamic-circle,
+      .gux-dynamic-circle-mask {
+        fill: none;
+        stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
+        stroke-width: $largeSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+        transform-origin: 50% 50%;
+
+        animation-name: largeSpin;
+        animation-duration: 2s;
+        animation-iteration-count: infinite, infinite;
+        animation-timing-function: linear;
+      }
+
+      .gux-dynamic-circle-mask {
+        display: none;
+        stroke: white;
+        stroke-width: $largeSpinnerBorder - $thinSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+      }
+
+      .gux-static-circle {
+        fill: none;
+        stroke: var(--gse-ui-progressAndLoading-spinner-base);
+        stroke-width: $largeSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+      }
+    }
+
+    &.gux-full-page {
+      .gux-svg-container {
+        .gux-dynamic-circle-mask {
+          display: initial;
+        }
+
+        .gux-static-circle {
+          display: none;
+        }
+      }
+    }
+
+    &.gux-input {
+      .gux-svg-container {
+        height: var(--gse-ui-progressAndLoading-spinner-small);
+        width: var(--gse-ui-progressAndLoading-spinner-small);
+
+        .gux-dynamic-circle {
+          fill: none;
+          stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
+          stroke-width: $smallSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+          transform-origin: 50% 50%;
+
+          animation-name: smallSpin;
+          animation-duration: 2s;
+          animation-iteration-count: infinite, infinite;
+          animation-timing-function: linear;
+        }
+
+        .gux-static-circle {
+          stroke: var(--gse-ui-progressAndLoading-spinner-base);
+          stroke-width: $smallSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+        }
+      }
+    }
+  }
+}
