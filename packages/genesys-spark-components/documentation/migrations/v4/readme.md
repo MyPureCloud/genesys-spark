@@ -35,6 +35,37 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-time-picker-beta  | gux-time-picker  |
 | gux-button-slot-beta  | gux-button-slot  |
 
+### There have been API changes in these components.
+
+| V3 tag name    | V4 tag name |
+| -------------- | ----------- |
+| gux-badge-beta | gux-badge   |
+
+#### gux-badge
+
+The `color` property has been removed. All uses of the `color` property can be migrated to the `accent` property.
+
+| Color   | Equivalent accent |
+| ------- | ----------------- |
+| green   | success           |
+| inherit | inherit           |
+| neutral | info              |
+| red     | error             |
+| yellow  | warning           |
+
+```diff
+- <gux-badge-beta color="green">Text</gux-badge-beta>
+- <gux-badge-beta color="inherit">Text</gux-badge-beta>
+- <gux-badge-beta color="neutral">Text</gux-badge-beta>
+- <gux-badge-beta color="red">Text</gux-badge-beta>
+- <gux-badge-beta color="yellow">Text</gux-badge-beta>
++ <gux-badge accent="success">Text</gux-badge>
++ <gux-badge accent="inherit">Text</gux-badge>
++ <gux-badge accent="info">Text</gux-badge>
++ <gux-badge accent="error">Text</gux-badge>
++ <gux-badge accent="warning">Text</gux-badge>
+```
+
 #### gux-calendar
 
 The `input` event has been renamed `calendarSelect`
