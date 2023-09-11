@@ -1,19 +1,17 @@
-@import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
-@import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/zindex.less';
 
-@background-color: @gux-grey-90;
-@border-color: @gux-border;
-@active-border: @gux-blue-60;
-@menu-shadow: fade(@gux-black-30, 24%);
-@menu-background-color: @gux-type-dark;
-@menu-border-color: @gux-border;
-@divider-color: @gux-grey-40;
+@background-color: #f6f7f9;
+@border-color: #e2e6ee;
+@active-border: #2a60c8;
+@menu-shadow: fade(#202937, 24%);
+@menu-background-color: #fdfdfd;
+@menu-border-color: #e2e6ee;
+@divider-color: #c8cfda;
 
 :host {
-  color: @gux-black-50;
+  color: #2e394c;
 }
 
 // Style
@@ -31,11 +29,11 @@ gux-popup {
       inset: 0;
       padding: 6px 24px 6px 12px;
       overflow: hidden;
-      color: @gux-black-50;
+      color: #2e394c;
       text-overflow: ellipsis;
       white-space: nowrap;
       cursor: pointer;
-      background-color: @gux-grey-90;
+      background-color: #f6f7f9;
       background-image: none;
       .gux-form-field-border();
 
@@ -45,12 +43,12 @@ gux-popup {
       }
 
       .gux-select-placeholder {
-        color: @gux-black-90;
+        color: #596373;
       }
 
       &:focus-visible {
         outline: none;
-        box-shadow: 0 0 0 3px fade(@gux-blue-80, 50%);
+        box-shadow: 0 0 0 3px fade(#75a8ff, 50%);
       }
     }
 
@@ -58,7 +56,7 @@ gux-popup {
       gux-icon {
         width: 16px;
         height: 16px;
-        color: @gux-black-90;
+        color: #596373;
       }
 
       position: absolute;
@@ -74,7 +72,7 @@ gux-popup {
     &:hover {
       .gux-icon-wrapper {
         gux-icon {
-          color: @gux-black-50;
+          color: #2e394c;
         }
       }
     }
@@ -82,11 +80,11 @@ gux-popup {
 
   .gux-advanced-dropdown-menu {
     width: 100%;
-    background: @gux-background;
-    border: 1px solid @gux-grey-30;
+    background: #fdfdfd;
+    border: 1px solid #b4bccb;
     border-radius: 4px;
     box-shadow: 0 0 2px 0 @menu-shadow;
-    .gux-shadow-20();
+    box-shadow: 0 2px 4px fade(#202937, 24%);
 
     .gux-dropdown-menu-container {
       gux-form-field-search {
@@ -108,7 +106,7 @@ gux-popup {
     padding: 8px 0;
     margin: 0;
     overflow-y: auto;
-    color: @gux-black-50;
+    color: #2e394c;
     background: @menu-background-color;
     border-radius: 4px;
     box-shadow: none;

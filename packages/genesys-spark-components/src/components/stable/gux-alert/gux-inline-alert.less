@@ -1,8 +1,5 @@
-@import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/color-palette.less';
 
 :host {
   display: block;
@@ -12,11 +9,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: @gux-spacing-xs;
+  gap: 8px;
   align-items: center;
   justify-content: flex-start;
-  padding: @gux-spacing-2xs @gux-spacing-xs;
-  border-radius: @gux-spacing-2xs;
+  padding: 4px 8px;
+  border-radius: 4px;
   .body-font();
 
   gux-icon {
@@ -24,7 +21,7 @@
     align-self: flex-start;
     width: 16px;
     height: 16px;
-    margin-top: @gux-spacing-3xs;
+    margin-top: 2px;
   }
 
   gux-tooltip-title {
@@ -36,26 +33,26 @@
   }
 
   &.gux-info {
-    color: @gux-black-80;
-    background-color: @gux-grey-90;
-    border: 1px solid @gux-grey-50;
+    color: #4c5667;
+    background-color: #f6f7f9;
+    border: 1px solid #d7dce5;
   }
 
   &.gux-error {
-    color: @gux-alert-red-30;
-    background-color: @gux-alert-red-100;
-    border: 1px solid @gux-alert-red-90;
+    color: #8f0707;
+    background-color: #fceaea;
+    border: 1px solid #f8b2b2;
   }
 
   &.gux-warning {
-    color: @gux-alert-yellow-30;
-    background-color: @gux-alert-yellow-100;
-    border: 1px solid @gux-alert-yellow-90;
+    color: #976700;
+    background-color: #fdf8ec;
+    border: 1px solid #fce5b1;
   }
 
   &.gux-success {
-    color: @gux-alert-green-30;
-    background-color: @gux-alert-green-100;
-    border: 1px solid @gux-alert-green-90;
+    color: #205a10;
+    background-color: #eefcea;
+    border: 1px solid #c2deb9;
   }
 }

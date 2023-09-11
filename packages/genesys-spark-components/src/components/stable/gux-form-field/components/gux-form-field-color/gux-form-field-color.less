@@ -1,9 +1,6 @@
-@import (reference) '../../../../../style/color-palette.less';
 @import (reference) '../../../../../style/mixins.less';
 @import (reference) '../../../../../style/focus.less';
-@import (reference) '../../../../../style/spacing.less';
 @import (reference) '../../../../../style/typography.less';
-@import (reference) '../../../../../style/variables.less';
 @import (reference)
   '../../functional-components/gux-form-field-container/gux-form-field-container.less';
 @import (reference)
@@ -20,7 +17,7 @@
 
 :host {
   display: block;
-  color: @gux-black-50;
+  color: #2e394c;
 }
 
 ::slotted(label) {
@@ -35,16 +32,16 @@
   height: 32px;
   overflow: hidden;
   font-size: 12px;
-  color: @gux-black-50;
+  color: #2e394c;
   text-align: right;
   text-overflow: ellipsis;
-  background-color: @gux-grey-90;
+  background-color: #f6f7f9;
   border: none;
   border-radius: 4px;
   outline: none;
 
   &::placeholder {
-    color: @gux-black-90;
+    color: #596373;
     opacity: 1;
   }
 }
@@ -73,8 +70,8 @@
       font-family: inherit;
       font-size: 12px;
       line-height: 1.6667;
-      color: @gux-black-50;
-      background-color: @gux-grey-90;
+      color: #2e394c;
+      background-color: #f6f7f9;
       background-image: none;
       border-radius: 4px;
 
@@ -83,13 +80,13 @@
       }
 
       &:focus-within {
-        border-color: @gux-blue-60;
+        border-color: #2a60c8;
         .gux-focus-ring();
       }
 
       &.gux-input-error {
         .gux-input-container {
-          border-color: @gux-alert-red-60;
+          border-color: #ea0b0b;
         }
       }
     }

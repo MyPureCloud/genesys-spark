@@ -26,12 +26,7 @@ export const config: Config = {
         '../genesys-spark-components-react/stencil-generated/index.ts'
     })
   ],
-  plugins: [
-    stencilLess({
-      injectGlobalPaths: ['src/style/variables.less']
-    }),
-    sass()
-  ],
+  plugins: [stencilLess(), sass()],
   rollupPlugins: {
     after: [
       copy({
@@ -39,13 +34,7 @@ export const config: Config = {
           { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
           { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' },
           {
-            src: [
-              'src/style/color-palette.less',
-              'src/style/spacing.less',
-              'src/style/typography.less',
-              'src/style/shadows.less',
-              'src/style/focus.less'
-            ],
+            src: ['src/style/typography.less', 'src/style/focus.less'],
             dest: 'dist/genesys-webcomponents/less'
           }
         ],

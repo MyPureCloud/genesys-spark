@@ -1,15 +1,12 @@
-@import (reference) '../../../../style/color.less';
-@import (reference) '../../../../style/shadows.less';
 @import (reference) '../../../../style/typography.less';
 @import (reference) '../../../../style/focus.less';
-@import (reference) '../../../../style/spacing.less';
 
 .gux-month-calendar {
   flex-wrap: wrap;
   width: 255px;
-  border: 1px solid @gux-grey-30;
+  border: 1px solid #b4bccb;
   border-radius: 4px;
-  .gux-shadow-20();
+  box-shadow: 0 2px 4px fade(#202937, 24%);
 
   .gux-year-header {
     position: relative;
@@ -17,14 +14,14 @@
     align-items: center;
     justify-content: space-between;
     height: 16px;
-    padding: @gux-spacing-medium;
-    color: @gux-grey-100;
-    background-color: @gux-blue-60;
+    padding: 16px;
+    color: #fdfdfd;
+    background-color: #2a60c8;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
     button {
-      color: @gux-grey-100;
+      color: #fdfdfd;
       cursor: pointer;
       background: none;
       border: none;
@@ -55,13 +52,13 @@
   }
 
   .gux-months {
-    padding: @gux-spacing-large;
-    background-color: @gux-grey-100;
+    padding: 24px;
+    background-color: #fdfdfd;
 
     button {
       width: 65px;
       height: 50px;
-      margin: @gux-spacing-3xs;
+      margin: 2px;
       text-align: center;
       cursor: pointer;
       background: none;
@@ -76,14 +73,14 @@
 
       &.gux-selected,
       &:hover {
-        color: @gux-grey-100;
-        background-color: @gux-blue-60;
+        color: #fdfdfd;
+        background-color: #2a60c8;
       }
 
       &:disabled {
-        color: @gux-black-90;
+        color: #596373;
         pointer-events: none;
-        background-color: @gux-grey-100;
+        background-color: #fdfdfd;
       }
     }
   }

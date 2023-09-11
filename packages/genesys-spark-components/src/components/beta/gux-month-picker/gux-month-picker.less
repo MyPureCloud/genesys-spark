@@ -1,7 +1,5 @@
-@import (reference) '../../../style/color-palette.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/spacing.less';
 
 :host {
   display: inline-block;
@@ -9,9 +7,9 @@
 
 .gux-target {
   display: inline-flex;
-  padding: @gux-spacing-2xs @gux-spacing-xs @gux-spacing-2xs @gux-spacing-small;
+  padding: 4px 8px 4px 12px;
   cursor: pointer;
-  background-color: @gux-grey-90;
+  background-color: #f6f7f9;
   .gux-form-field-border();
 
   &:focus-within {
@@ -21,22 +19,22 @@
   .gux-display {
     display: inline-flex;
     min-width: 100px;
-    padding-right: @gux-spacing-xs;
-    color: @gux-black-50;
+    padding-right: 8px;
+    color: #2e394c;
 
     .gux-spinner {
       outline: none;
 
       &:not(:first-child) {
-        margin-left: @gux-spacing-2xs;
+        margin-left: 4px;
       }
 
       &:focus-visible {
-        background: @gux-blue-100;
+        background: #deeaff;
       }
 
       &.gux-empty {
-        color: @gux-black-90;
+        color: #596373;
       }
     }
   }
@@ -44,7 +42,7 @@
   .gux-popup-toggle {
     justify-content: right;
     padding: 2px;
-    color: @gux-black-90;
+    color: #596373;
     background: transparent;
     border: none;
     border-radius: 4px;
@@ -55,7 +53,7 @@
 
     &:not(:disabled):focus,
     &:not(:disabled):hover {
-      color: @gux-black-50;
+      color: #2e394c;
       cursor: pointer;
     }
 
@@ -65,11 +63,11 @@
     }
 
     &.gux-expanded {
-      color: @gux-blue-60;
+      color: #2a60c8;
 
       &:not(:disabled):focus-visible,
       &:not(:disabled):hover {
-        color: @gux-blue-60;
+        color: #2a60c8;
       }
     }
   }

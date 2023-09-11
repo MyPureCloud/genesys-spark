@@ -1,6 +1,4 @@
 @import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/spacing.less';
-@import (reference) '../../../style/color-mixins.less';
 
 :host {
   display: flex;
@@ -16,18 +14,18 @@
   justify-content: center;
 
   slot[name='primary-message'] {
-    color: @gux-black-60;
+    color: #364154;
     text-align: center;
   }
 
   slot[name='additional-guidance'] {
-    color: @gux-black-90;
+    color: #596373;
     text-align: center;
   }
 
   &.gux-small,
   &.gux-medium {
-    padding: @gux-spacing-xs 0 @gux-spacing-2xs;
+    padding: 8px 0 4px;
 
     slot[name='primary-message'] {
       .h3();
@@ -39,7 +37,7 @@
   }
 
   &.gux-large {
-    padding: @gux-spacing-medium 0 @gux-spacing-2xs;
+    padding: 16px 0 4px;
 
     slot[name='primary-message'] {
       .h1();

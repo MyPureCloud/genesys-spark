@@ -1,4 +1,3 @@
-@import '../../../style/color.scss';
 @import '../../../style/typography.scss';
 
 :host {
@@ -27,8 +26,8 @@
     align-items: center;
     justify-content: center;
     height: calc(100% - var(--gse-ui-dataTableItems-header-default-height));
-    color: $gux-black-90;
-    background: $gux-grey-100;
+    color: #596373;
+    background: #fdfdfd;
     @include h2;
   }
 }

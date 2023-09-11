@@ -1,12 +1,9 @@
-@import (reference) '../../../../style/color.less';
-@import (reference) '../../../../style/spacing.less';
-
 .gux-option-defaults() {
   box-sizing: border-box;
   display: flex;
   height: 32px;
-  padding: 6px @gux-spacing-xs;
-  color: @gux-black-50;
+  padding: 6px 8px;
+  color: #2e394c;
   word-wrap: break-word;
   cursor: pointer;
 
@@ -17,13 +14,13 @@
   }
 
   &.gux-selected {
-    background: @gux-blue-100;
+    background: #deeaff;
   }
 
   &.gux-active,
   &.gux-hovered:not(:disabled) {
-    color: @gux-grey-100;
-    background: @gux-blue-60;
+    color: #fdfdfd;
+    background: #2a60c8;
   }
 
   &.gux-filtered {
