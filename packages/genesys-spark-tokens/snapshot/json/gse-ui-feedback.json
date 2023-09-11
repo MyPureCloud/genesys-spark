@@ -63,8 +63,7 @@
     "close_button_color": "#626e84",
     "header_color": "#1b2c48",
     "background_color": "#ffffff",
-    "shroud_color": "#23395d",
-    "shroud_color_test": "#23395dcc",
+    "shroud_color": "#23395dcc",
     "header": {
       "gap": "12px"
     },

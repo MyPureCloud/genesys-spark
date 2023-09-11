@@ -8,7 +8,7 @@ import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
  */
 
 @Component({
-  styleUrl: 'gux-table-toolbar-custom-action.less',
+  styleUrl: 'gux-table-toolbar-custom-action.scss',
   tag: 'gux-table-toolbar-custom-action',
   shadow: { delegatesFocus: true }
 })

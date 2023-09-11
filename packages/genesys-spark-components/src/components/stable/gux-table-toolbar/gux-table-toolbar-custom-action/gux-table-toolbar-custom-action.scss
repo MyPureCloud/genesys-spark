@@ -1,4 +1,4 @@
-@import (reference) '../../../../style/typography.less';
+@import '../../../../style/typography.scss';
 
 :host([disabled]),
 button[disabled] {
@@ -7,17 +7,17 @@ button[disabled] {
 
 .gux-sr-only {
   display: flex;
-  .gux-sr-only-clip();
+  @include gux-sr-only-clip;
 }
 
 .gux-action-title {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: var(--gse-ui-button-gap);
   align-items: center;
 
   slot[name='icon']::slotted(gux-icon) {
-    width: 16px;
-    height: 16px;
+    width: var(--gse-ui-icon-size-sm);
+    height: var(--gse-ui-icon-size-sm);
   }
 }

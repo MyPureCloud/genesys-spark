@@ -1,11 +1,10 @@
 gux-pagination-items-per-page-beta {
-  color: #2e394c;
-
   .gux-pagination-items-per-page-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
+    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
     align-items: center;
     justify-content: center;
 
@@ -17,8 +16,6 @@ gux-pagination-items-per-page-beta {
     }
 
     .gux-pagination-items-per-page-picker {
-      margin-right: 8px;
-
       gux-dropdown {
         display: inline-block;
         width: 64px;
@@ -31,6 +28,22 @@ gux-pagination-items-per-page-beta {
         display: flex;
         flex-direction: column-reverse;
       }
+    }
+
+    .gux-pagination-per-page {
+      font-family: var(
+        --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
+      );
+      color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
+      font-size: var(
+        --gse-ui-dataTableItems-tablePagination-defaultText-fontSize
+      );
+      line-height: var(
+        --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+      );
+      font-weight: var(
+        --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
+      );
     }
   }
 }

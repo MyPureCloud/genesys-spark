@@ -55,7 +55,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
         </gux-listbox>
       </gux-dropdown>
     </div>
-    <div>
+    <div class="gux-pagination-per-page">
       per page
     </div>
   </div>
@@ -117,7 +117,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
         </gux-listbox>
       </gux-dropdown>
     </div>
-    <div>
+    <div class="gux-pagination-per-page">
       per page
     </div>
   </div>
@@ -179,7 +179,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
         </gux-listbox>
       </gux-dropdown>
     </div>
-    <div>
+    <div class="gux-pagination-per-page">
       per page
     </div>
   </div>
@@ -241,7 +241,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
         </gux-listbox>
       </gux-dropdown>
     </div>
-    <div>
+    <div class="gux-pagination-per-page">
       per page
     </div>
   </div>
