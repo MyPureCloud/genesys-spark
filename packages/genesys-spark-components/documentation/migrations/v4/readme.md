@@ -26,14 +26,15 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 ### There have been no API changes in these components.
 
-| V3 tag name           | V4 tag name      |
-| --------------------- | ---------------- |
-| gux-inline-alert-beta | gux-inline-alert |
-| gux-popup-beta        | gux-popup        |
-| gux-table-beta        | gux-table        |
-| gux-popover-beta      | gux-popover      |
-| gux-time-picker-beta  | gux-time-picker  |
-| gux-button-slot-beta  | gux-button-slot  |
+| V3 tag name            | V4 tag name       |
+| ---------------------- | ----------------- |
+| gux-inline-alert-beta  | gux-inline-alert  |
+| gux-popup-beta         | gux-popup         |
+| gux-table-beta         | gux-table         |
+| gux-popover-beta       | gux-popover       |
+| gux-time-picker-beta   | gux-time-picker   |
+| gux-button-slot-beta   | gux-button-slot   |
+| gux-table-toolbar-beta | gux-table-toolbar |
 
 #### gux-calendar
 
