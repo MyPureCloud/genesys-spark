@@ -21,7 +21,7 @@
 ### Used by
 
  - [gux-action-button](../gux-action-button)
- - [gux-blank-state-beta](../../beta/gux-blank-state)
+ - [gux-blank-state](../gux-blank-state)
  - [gux-button-multi](../gux-button-multi)
  - [gux-context-menu-beta](../../beta/gux-context-menu)
  - [gux-dismiss-button](../gux-dismiss-button)
@@ -36,7 +36,7 @@
 ```mermaid
 graph TD;
   gux-action-button --> gux-button-slot
-  gux-blank-state-beta --> gux-button-slot
+  gux-blank-state --> gux-button-slot
   gux-button-multi --> gux-button-slot
   gux-context-menu-beta --> gux-button-slot
   gux-dismiss-button --> gux-button-slot
