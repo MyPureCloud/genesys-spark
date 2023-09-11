@@ -193,12 +193,12 @@
       "style": "solid"
     },
     "box_shadow": {
+      "x": "0px",
+      "y": "2px",
+      "blur": "4px",
+      "spread": "1px",
       "color": "#23395c1a",
-      "type": "dropShadow",
-      "x": 0,
-      "y": 2,
-      "blur": 4,
-      "spread": 1
+      "type": "dropShadow"
     },
     "padding": "8px 1px",
     "background_color": "#ffffff",
@@ -609,5 +609,32 @@
       "active_color": "#4856CB",
       "disabled_color": "#626e8480"
     }
+  },
+  "context_menu": {
+    "button": {
+      "default": "32px",
+      "compact": "24px"
+    },
+    "border_radius": "4px",
+    "states": {
+      "default": {
+        "foreground_color": "#767c8d"
+      },
+      "hover": {
+        "foreground_color": "#3742A2",
+        "background_color": "#DEE1FD"
+      },
+      "active": {
+        "foreground_color": "#252E78",
+        "background_color": "#CED2FC"
+      },
+      "disabled": {
+        "foreground_color": "#767c8d"
+      }
+    },
+    "disabled": {
+      "opacity": 0.5
+    },
+    "gap": "4px"
   }
 }
