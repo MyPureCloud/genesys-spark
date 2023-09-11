@@ -2,6 +2,63 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.102.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.101.1...v3.102.0) (2023-09-01)
+
+
+### Features
+
+* **icon:** new icons from GDS23-5 ([1b1e940](https://github.com/MyPureCloud/genesys-webcomponents/commit/1b1e940cb5815410218edd683ccb763faf4082a6))
+
+### [3.101.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.101.0...v3.101.1) (2023-08-30)
+
+
+### Bug Fixes
+
+* **icon:** some icons commented out and not displaying ([610d1bb](https://github.com/MyPureCloud/genesys-webcomponents/commit/610d1bb5334ea5141a1a2ddfdc086c601c594aa9))
+* **timezones:** added missing timezones ([c1ac0f8](https://github.com/MyPureCloud/genesys-webcomponents/commit/c1ac0f81a93b200646aa28459562274f7a36d5fe))
+
+## [3.101.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.100.1...v3.101.0) (2023-08-23)
+
+
+### Features
+
+* **table:** alternative solution to allow for percentage heights ([14a7b65](https://github.com/MyPureCloud/genesys-webcomponents/commit/14a7b6586d589b8437cde787abdd8262e97e0197))
+* **table:** make empty table message fill available space ([8fc875f](https://github.com/MyPureCloud/genesys-webcomponents/commit/8fc875f8f310bb8f0dd86e946d089e0b186b6786))
+
+
+### Bug Fixes
+
+* **gux-tabs:** add option for flexbox positioning ([fc01ac1](https://github.com/MyPureCloud/genesys-webcomponents/commit/fc01ac12d9b30b4de9e7394e54973f01c324a5b2))
+
+### [3.100.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.100.0...v3.100.1) (2023-08-17)
+
+
+### Bug Fixes
+
+* **table-toolbar:** addition of tooltip when actions are is icon-only state ([83b12b6](https://github.com/MyPureCloud/genesys-webcomponents/commit/83b12b62bac63377220f88faebf505a6c3fc5a0b))
+
+## [3.100.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.99.0...v3.100.0) (2023-08-10)
+
+
+### Features
+
+* **defaults for time zone picker:** allows consumers to set a list of defaults for time zone picker ([849a52d](https://github.com/MyPureCloud/genesys-webcomponents/commit/849a52d778d11c7dc9caf29b89bcc7e30d01eee1))
+* **gux-time-zone-picker-beta:** add a time zone picker component ([db5a837](https://github.com/MyPureCloud/genesys-webcomponents/commit/db5a83734415e9b26609942af5226db6e275d6d2))
+
+
+### Bug Fixes
+
+* **gux-icon:** prevent updates to svgHtml if baseSvgHtml is not set ([22f3567](https://github.com/MyPureCloud/genesys-webcomponents/commit/22f3567442f5c882ba075573fe88e7174757f52a))
+* **gux-tabs:** set height on tabs and tabpanel-beta should fill space ([0edaa23](https://github.com/MyPureCloud/genesys-webcomponents/commit/0edaa236074a4f8cfc16aab69002e55df2a49751))
+* **popup:** fix floating ui implementation ([57529f8](https://github.com/MyPureCloud/genesys-webcomponents/commit/57529f891daa30dabbfc9b048197dcb91af78b36))
+
+## [3.99.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.98.0...v3.99.0) (2023-08-09)
+
+
+### Features
+
+* **icon:** added icons requested in GDS-2038 ([8b534af](https://github.com/MyPureCloud/genesys-webcomponents/commit/8b534aff4a33f4cfd6d4341d1de98362d0b7095f))
+
 ## [3.98.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.97.0...v3.98.0) (2023-08-01)
 
 

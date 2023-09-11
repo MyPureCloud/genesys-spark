@@ -167,7 +167,7 @@ export class GuxButtonMulti {
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta expanded={this.isOpen}>
+      <gux-popup-beta expanded={this.isOpen} exceedTargetWidth>
         <div slot="target" class="gux-button-multi-container">
           <gux-button-slot-beta
             class="gux-dropdown-button"

@@ -1,7 +1,7 @@
 import { Component, Element, JSX, h, Prop } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxTableToolbarActionAccent } from '../gux-table-toolbar-action-accents.types';
-
+import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 /**
  * @slot text - Slot for action text.
  * @slot icon - Slot for icon.
@@ -25,6 +25,14 @@ export class GuxTableToolbarCustomAction {
   @Prop()
   disabled: boolean = false;
 
+  private renderTooltip(): JSX.Element {
+    if (this.iconOnly) {
+      return (
+        <gux-tooltip>{getSlotTextContent(this.root, 'text')}</gux-tooltip>
+      ) as JSX.Element;
+    }
+  }
+
   componentWillLoad() {
     trackComponent(this.root);
   }
@@ -38,6 +46,7 @@ export class GuxTableToolbarCustomAction {
             <slot name="text" />
           </span>
         </button>
+        {this.renderTooltip()}
       </gux-button-slot-beta>
     ) as JSX.Element;
   }
