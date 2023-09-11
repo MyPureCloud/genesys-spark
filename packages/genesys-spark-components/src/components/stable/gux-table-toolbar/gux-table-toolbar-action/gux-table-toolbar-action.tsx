@@ -8,7 +8,7 @@ import translationResources from './i18n/en.json';
 import { GuxTableToolbarActionAccent } from '../gux-table-toolbar-action-accents.types';
 
 @Component({
-  styleUrl: 'gux-table-toolbar-action.less',
+  styleUrl: 'gux-table-toolbar-action.scss',
   tag: 'gux-table-toolbar-action',
   shadow: true
 })
