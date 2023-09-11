@@ -217,7 +217,6 @@ describe('gux-content-search', () => {
       expect(value).toBe('TEST');
       expect(currentMatch).toBe(1);
       expect(matchCount).toBe(20);
-      expect(clearButton).toHaveAttribute('disabled');
 
       await clearButton.click();
       await page.waitForChanges();
@@ -539,7 +538,6 @@ describe('gux-content-search', () => {
       expect(resultSpan.innerText).toEqual('1 of 1');
       expect(matchCount).toBe(1);
       expect(currentMatch).toBe(1);
-      expect(clearButton).toHaveAttribute('disabled');
       expect(nextButton).toHaveAttribute('disabled');
       expect(previousButton).toHaveAttribute('disabled');
 
@@ -563,7 +561,6 @@ describe('gux-content-search', () => {
       expect(resultSpan.innerText).toEqual('1 of 1');
       expect(matchCount).toBe(1);
       expect(currentMatch).toBe(1);
-      expect(clearButton).toHaveAttribute('disabled');
       expect(nextButton).toHaveAttribute('disabled');
       expect(previousButton).toHaveAttribute('disabled');
 
@@ -587,7 +584,6 @@ describe('gux-content-search', () => {
       expect(resultSpan.innerText).toEqual('1 of 1');
       expect(matchCount).toBe(1);
       expect(currentMatch).toBe(1);
-      expect(clearButton).toHaveAttribute('disabled');
       expect(nextButton).toHaveAttribute('disabled');
       expect(previousButton).toHaveAttribute('disabled');
     });

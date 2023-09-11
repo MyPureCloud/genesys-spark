@@ -1,17 +1,15 @@
-@import (reference) '../../../../style/color-palette.less';
 @import (reference) '../../../../style/mixins.less';
-@import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/typography.less';
 
 :host([gs-reorder-indicator='above']) {
   .gux-container {
-    border-top-color: @gux-blue-90;
+    border-top-color: #aac9ff;
   }
 }
 
 :host([gs-reorder-indicator='below']) {
   .gux-container {
-    border-bottom-color: @gux-blue-90;
+    border-bottom-color: #aac9ff;
   }
 }
 
@@ -27,11 +25,11 @@
   border-bottom: 2px solid transparent;
 
   &.gux-drop-above {
-    border-top-color: @gux-blue-90;
+    border-top-color: #aac9ff;
   }
 
   &.gux-drop-below {
-    border-bottom-color: @gux-blue-90;
+    border-bottom-color: #aac9ff;
   }
 
   &.gux-dragging {
@@ -45,15 +43,15 @@
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
-    margin-right: @gux-spacing-2xs;
-    color: @gux-black-90;
+    margin-right: 4px;
+    color: #596373;
     cursor: grab;
     border-radius: 4px;
 
     &.gux-reordering {
       &:focus-visible {
         gux-icon {
-          color: @gux-blue-60; //TODO
+          color: #2a60c8; //TODO
         }
       }
     }
@@ -68,7 +66,7 @@
       .gux-focus-ring-small();
 
       gux-icon {
-        color: @gux-blue-60;
+        color: #2a60c8;
       }
     }
   }
@@ -83,13 +81,7 @@
       position: absolute;
       top: 2px;
       left: 24px;
-      color: transparent;
       pointer-events: none;
-      opacity: 0.25;
-
-      &.gux-active {
-        opacity: 1;
-      }
     }
   }
 }

@@ -1,7 +1,5 @@
 // Variables part
 @import (reference) '../../../style/shared/text-input.less';
-@import (reference) '../../../style/color.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/focus.less';
 
@@ -9,7 +7,7 @@
   display: inline-block;
   width: 300px;
   min-width: 300px;
-  color: @gux-black-90;
+  color: #596373;
 }
 
 ::slotted(input) {
@@ -20,8 +18,8 @@
   min-width: 0;
   height: 22px;
   padding: 0;
-  color: @gux-black-50;
-  background-color: @gux-grey-90;
+  color: #2e394c;
+  background-color: #f6f7f9;
   border: 0;
   border-radius: 0;
   outline: none;
@@ -40,9 +38,9 @@
   flex-direction: row;
   width: 100%;
   height: 32px;
-  padding: @gux-spacing-2xs 0 @gux-spacing-2xs 0;
+  padding: 4px 0;
   margin: 4px 0;
-  background-color: @gux-grey-90;
+  background-color: #f6f7f9;
   background-image: none;
   .gux-form-field-border();
 
@@ -54,9 +52,9 @@
 
   &:focus-visible,
   &:focus-within {
-    border: 1px solid @gux-blue-60;
+    border: 1px solid #2a60c8;
     outline: none;
-    box-shadow: 0 0 4px @gux-blue-80;
+    box-shadow: 0 0 4px #75a8ff;
   }
 
   .gux-search-icon {
@@ -89,11 +87,16 @@
     padding: 0;
     line-height: 1.6667;
 
+    gux-icon {
+      width: 16px;
+      height: 16px;
+    }
+
     button {
       display: block;
       align-items: center;
       overflow: hidden;
-      color: @gux-black-90;
+      color: #596373;
       cursor: pointer;
       background: none;
       border: none;
@@ -108,26 +111,26 @@
 
       &:not(:disabled):hover,
       &:not(:disabled):focus-visible {
-        color: @gux-black-50;
+        color: #2e394c;
       }
 
-      &:focus-visible:enabled {
+      &:not(.gux-clear-button):focus-visible:enabled {
         .gux-focus-ring();
       }
 
-      gux-icon {
-        width: 16px;
-        height: 16px;
-      }
-    }
+      &.gux-clear-button {
+        flex-shrink: 0;
+        align-items: center;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 8px;
+        margin-left: 8px;
 
-    .gux-clear-button {
-      flex-shrink: 0;
-      align-items: center;
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: 8px;
-      margin-left: 8px;
+        gux-icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
     }
 
     .gux-navigation-disabled {
@@ -141,7 +144,7 @@
       align-content: center;
       align-items: center;
       justify-content: flex-end;
-      border-right: 1px solid @gux-black-90;
+      border-right: 1px solid #596373;
 
       .gux-navigation-result {
         align-items: center;

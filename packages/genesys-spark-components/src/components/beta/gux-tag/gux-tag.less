@@ -1,9 +1,6 @@
-@import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/color-palette.less';
 
 // Style
 :host {
@@ -17,12 +14,12 @@
   align-content: stretch;
   align-items: center;
   justify-content: flex-start;
-  padding: @gux-spacing-3xs @gux-spacing-xs;
+  padding: 2px 8px;
   font-size: 12px;
   font-weight: bold;
-  color: @gux-grey-100;
-  background-color: @gux-black-50;
-  border-radius: @gux-spacing-2xs;
+  color: #fdfdfd;
+  background-color: #2e394c;
+  border-radius: 4px;
 
   gux-tooltip-title {
     white-space: nowrap;
@@ -44,7 +41,7 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin-left: @gux-spacing-xs;
+    margin-left: 8px;
 
     &:not(:disabled):hover {
       cursor: pointer;
@@ -64,530 +61,530 @@
   }
 
   &.gux-disabled {
-    background-color: fade(@gux-black-50, 50%);
+    background-color: fade(#2e394c, 50%);
   }
 
   &.gux-default {
-    background-color: @gux-black-50;
+    background-color: #2e394c;
 
     &.gux-disabled {
-      background-color: fade(@gux-black-50, 50%);
+      background-color: fade(#2e394c, 50%);
     }
   }
 
   &.gux-default-subtle {
-    color: @gux-black-50;
-    background-color: @gux-grey-60;
+    color: #2e394c;
+    background-color: #e2e6ee;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-grey-60, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#e2e6ee, 50%);
     }
   }
 
   // Secondary Colors
   &.gux-navy {
-    background-color: @gux-navy-sec;
+    background-color: #203b73;
 
     &.gux-disabled {
-      background-color: fade(@gux-navy-sec, 50%);
+      background-color: fade(#203b73, 50%);
     }
   }
 
   &.gux-blue {
-    color: @gux-black-50;
-    background-color: @gux-blue-sec;
+    color: #2e394c;
+    background-color: #75a8ff;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-blue-sec, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#75a8ff, 50%);
     }
   }
 
   &.gux-electric-purple {
-    background-color: @gux-electric-purple-sec;
+    background-color: #8452cf;
 
     &.gux-disabled {
-      background-color: fade(@gux-electric-purple-sec, 50%);
+      background-color: fade(#8452cf, 50%);
     }
   }
 
   &.gux-aqua-green {
-    color: @gux-black-30;
-    background-color: @gux-aqua-green-sec;
+    color: #202937;
+    background-color: #1da8b3;
 
     &.gux-disabled {
-      color: fade(@gux-black-30, 50%);
-      background-color: fade(@gux-aqua-green-sec, 50%);
+      color: fade(#202937, 50%);
+      background-color: fade(#1da8b3, 50%);
     }
   }
 
   &.gux-fuchsia {
-    color: @gux-black-10;
-    background-color: @gux-fuchsia-sec;
+    color: #000;
+    background-color: #cc3ebe;
 
     &.gux-disabled {
-      color: fade(@gux-black-10, 50%);
-      background-color: fade(@gux-fuchsia-sec, 50%);
+      color: fade(#000, 50%);
+      background-color: fade(#cc3ebe, 50%);
     }
   }
 
   &.gux-dark-purple {
-    background-color: @gux-dark-purple-sec;
+    background-color: #5e5782;
 
     &.gux-disabled {
-      background-color: fade(@gux-dark-purple-sec, 50%);
+      background-color: fade(#5e5782, 50%);
     }
   }
 
   &.gux-bubblegum-pink {
-    color: @gux-black-50;
-    background-color: @gux-bubblegum-pink-sec;
+    color: #2e394c;
+    background-color: #ff8fdd;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-bubblegum-pink-sec, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#ff8fdd, 50%);
     }
   }
 
   &.gux-olive-green {
-    color: @gux-black-20;
-    background-color: @gux-olive-green-sec;
+    color: #151d28;
+    background-color: #868c1e;
 
     &.gux-disabled {
-      color: fade(@gux-black-20, 50%);
-      background-color: fade(@gux-olive-green-sec, 50%);
+      color: fade(#151d28, 50%);
+      background-color: fade(#868c1e, 50%);
     }
   }
 
   &.gux-lilac {
-    color: @gux-black-50;
-    background-color: @gux-lilac-sec;
+    color: #2e394c;
+    background-color: #b5b5eb;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-lilac-sec, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#b5b5eb, 50%);
     }
   }
 
   &.gux-alert-yellow-green {
-    color: @gux-black-50;
-    background-color: @gux-alert-yellow-green-sec;
+    color: #2e394c;
+    background-color: #ddd933;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-yellow-green-sec, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#ddd933, 50%);
     }
   }
 
   // Blue
   &.gux-blue-10 {
-    background-color: @gux-blue-10;
+    background-color: #172b52;
 
     &.gux-disabled {
-      background-color: fade(@gux-blue-10, 50%);
+      background-color: fade(#172b52, 50%);
     }
   }
 
   &.gux-blue-20 {
-    background-color: @gux-blue-20;
+    background-color: #1c3363;
 
     &.gux-disabled {
-      background-color: fade(@gux-blue-20, 50%);
+      background-color: fade(#1c3363, 50%);
     }
   }
 
   &.gux-blue-30 {
-    background-color: @gux-blue-30;
+    background-color: #203b73;
 
     &.gux-disabled {
-      background-color: fade(@gux-blue-30, 50%);
+      background-color: fade(#203b73, 50%);
     }
   }
 
   &.gux-blue-40 {
-    background-color: @gux-blue-40;
+    background-color: #23478f;
 
     &.gux-disabled {
-      background-color: fade(@gux-blue-40, 50%);
+      background-color: fade(#23478f, 50%);
     }
   }
 
   &.gux-blue-50 {
-    background-color: @gux-blue-50;
+    background-color: #2754ac;
 
     &.gux-disabled {
-      background-color: fade(@gux-blue-50, 50%);
+      background-color: fade(#2754ac, 50%);
     }
   }
 
   &.gux-blue-60 {
-    background-color: @gux-blue-60;
+    background-color: #2a60c8;
 
     &.gux-disabled {
-      background-color: fade(@gux-blue-60, 50%);
+      background-color: fade(#2a60c8, 50%);
     }
   }
 
   &.gux-blue-70 {
-    color: @gux-black-20;
-    background-color: @gux-blue-70;
+    color: #151d28;
+    background-color: #5084e3;
 
     &.gux-disabled {
-      color: fade(@gux-black-20, 50%);
-      background-color: fade(@gux-blue-70, 50%);
+      color: fade(#151d28, 50%);
+      background-color: fade(#5084e3, 50%);
     }
   }
 
   &.gux-blue-80 {
-    color: @gux-black-50;
-    background-color: @gux-blue-80;
+    color: #2e394c;
+    background-color: #75a8ff;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-blue-80, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#75a8ff, 50%);
     }
   }
 
   &.gux-blue-90 {
-    color: @gux-black-50;
-    background-color: @gux-blue-90;
+    color: #2e394c;
+    background-color: #aac9ff;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-blue-90, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#aac9ff, 50%);
     }
   }
 
   &.gux-blue-100 {
-    color: @gux-black-50;
-    background-color: @gux-blue-100;
+    color: #2e394c;
+    background-color: #deeaff;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-blue-100, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#deeaff, 50%);
     }
   }
 
   // Red
   &.gux-alert-red-10 {
-    background-color: @gux-alert-red-10;
+    background-color: #520404;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-red-10, 50%);
+      background-color: fade(#520404, 50%);
     }
   }
 
   &.gux-alert-red-20 {
-    background-color: @gux-alert-red-20;
+    background-color: #700505;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-red-20, 50%);
+      background-color: fade(#700505, 50%);
     }
   }
 
   &.gux-alert-red-30 {
-    background-color: @gux-alert-red-30;
+    background-color: #8f0707;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-red-30, 50%);
+      background-color: fade(#8f0707, 50%);
     }
   }
 
   &.gux-alert-red-40 {
-    background-color: @gux-alert-red-40;
+    background-color: #ad0808;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-red-40, 50%);
+      background-color: fade(#ad0808, 50%);
     }
   }
 
   &.gux-alert-red-50 {
-    background-color: @gux-alert-red-50;
+    background-color: #cc0a0a;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-red-50, 50%);
+      background-color: fade(#cc0a0a, 50%);
     }
   }
 
   &.gux-alert-red-60 {
-    background-color: @gux-alert-red-60;
+    background-color: #ea0b0b;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-red-60, 50%);
+      background-color: fade(#ea0b0b, 50%);
     }
   }
 
   &.gux-alert-red-70 {
-    color: @gux-black-10;
-    background-color: @gux-alert-red-70;
+    color: #000;
+    background-color: #ef4343;
 
     &.gux-disabled {
-      color: fade(@gux-black-10, 50%);
-      background-color: fade(@gux-alert-red-70, 50%);
+      color: fade(#000, 50%);
+      background-color: fade(#ef4343, 50%);
     }
   }
 
   &.gux-alert-red-80 {
-    color: @gux-black-40;
-    background-color: @gux-alert-red-80;
+    color: #283243;
+    background-color: #f37a7a;
 
     &.gux-disabled {
-      color: fade(@gux-black-40, 50%);
-      background-color: fade(@gux-alert-red-80, 50%);
+      color: fade(#283243, 50%);
+      background-color: fade(#f37a7a, 50%);
     }
   }
 
   &.gux-alert-red-90 {
-    color: @gux-black-50;
-    background-color: @gux-alert-red-90;
+    color: #2e394c;
+    background-color: #f8b2b2;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-red-90, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#f8b2b2, 50%);
     }
   }
 
   &.gux-alert-red-100 {
-    color: @gux-black-50;
-    background-color: @gux-alert-red-100;
+    color: #2e394c;
+    background-color: #fceaea;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-red-100, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#fceaea, 50%);
     }
   }
 
   // Green
   &.gux-alert-green-10 {
-    background-color: @gux-alert-green-10;
+    background-color: #0d3d00;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-green-10, 50%);
+      background-color: fade(#0d3d00, 50%);
     }
   }
 
   &.gux-alert-green-20 {
-    background-color: @gux-alert-green-20;
+    background-color: #164b08;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-green-20, 50%);
+      background-color: fade(#164b08, 50%);
     }
   }
 
   &.gux-alert-green-30 {
-    background-color: @gux-alert-green-30;
+    background-color: #205a10;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-green-30, 50%);
+      background-color: fade(#205a10, 50%);
     }
   }
 
   &.gux-alert-green-40 {
-    background-color: @gux-alert-green-40;
+    background-color: #296817;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-green-40, 50%);
+      background-color: fade(#296817, 50%);
     }
   }
 
   &.gux-alert-green-50 {
-    background-color: @gux-alert-green-50;
+    background-color: #33771f;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-green-50, 50%);
+      background-color: fade(#33771f, 50%);
     }
   }
 
   &.gux-alert-green-60 {
-    background-color: @gux-alert-green-60;
+    background-color: #3c8527;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-green-60, 50%);
+      background-color: fade(#3c8527, 50%);
     }
   }
 
   &.gux-alert-green-70 {
-    color: @gux-black-30;
-    background-color: @gux-alert-green-70;
+    color: #202937;
+    background-color: #69a358;
 
     &.gux-disabled {
-      color: fade(@gux-black-30, 50%);
-      background-color: fade(@gux-alert-green-70, 50%);
+      color: fade(#202937, 50%);
+      background-color: fade(#69a358, 50%);
     }
   }
 
   &.gux-alert-green-80 {
-    color: @gux-black-50;
-    background-color: @gux-alert-green-80;
+    color: #2e394c;
+    background-color: #95c189;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-green-80, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#95c189, 50%);
     }
   }
 
   &.gux-alert-green-90 {
-    color: @gux-black-50;
-    background-color: @gux-alert-green-90;
+    color: #2e394c;
+    background-color: #c2deb9;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-green-90, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#c2deb9, 50%);
     }
   }
 
   &.gux-alert-green-100 {
-    color: @gux-black-50;
-    background-color: @gux-alert-green-100;
+    color: #2e394c;
+    background-color: #eefcea;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-green-100, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#eefcea, 50%);
     }
   }
 
   // Yellow
   &.gux-alert-yellow-10 {
-    background-color: @gux-alert-yellow-10;
+    background-color: #523800;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-yellow-10, 50%);
+      background-color: fade(#523800, 50%);
     }
   }
 
   &.gux-alert-yellow-20 {
-    background-color: @gux-alert-yellow-20;
+    background-color: #755000;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-yellow-20, 50%);
+      background-color: fade(#755000, 50%);
     }
   }
 
   &.gux-alert-yellow-30 {
-    background-color: @gux-alert-yellow-30;
+    background-color: #976700;
 
     &.gux-disabled {
-      background-color: fade(@gux-alert-yellow-30, 50%);
+      background-color: fade(#976700, 50%);
     }
   }
 
   &.gux-alert-yellow-40 {
-    color: @gux-black-20;
-    background-color: @gux-alert-yellow-40;
+    color: #151d28;
+    background-color: #ba7f00;
 
     &.gux-disabled {
-      color: fade(@gux-black-20, 50%);
-      background-color: fade(@gux-alert-yellow-40, 50%);
+      color: fade(#151d28, 50%);
+      background-color: fade(#ba7f00, 50%);
     }
   }
 
   &.gux-alert-yellow-50 {
-    color: @gux-black-50;
-    background-color: @gux-alert-yellow-50;
+    color: #2e394c;
+    background-color: #dc9600;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-yellow-50, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#dc9600, 50%);
     }
   }
 
   &.gux-alert-yellow-60 {
-    color: @gux-black-50;
-    background-color: @gux-alert-yellow-60;
+    color: #2e394c;
+    background-color: #ffae00;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-yellow-60, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#ffae00, 50%);
     }
   }
 
   &.gux-alert-yellow-70 {
-    color: @gux-black-50;
-    background-color: @gux-alert-yellow-70;
+    color: #2e394c;
+    background-color: #fbbe3b;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-yellow-70, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#fbbe3b, 50%);
     }
   }
 
   &.gux-alert-yellow-80 {
-    color: @gux-black-50;
-    background-color: @gux-alert-yellow-80;
+    color: #2e394c;
+    background-color: #fcd276;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-yellow-80, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#fcd276, 50%);
     }
   }
 
   &.gux-alert-yellow-90 {
-    color: @gux-black-50;
-    background-color: @gux-alert-yellow-90;
+    color: #2e394c;
+    background-color: #fce5b1;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-yellow-90, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#fce5b1, 50%);
     }
   }
 
   &.gux-alert-yellow-100 {
-    color: @gux-black-50;
-    background-color: @gux-alert-yellow-100;
+    color: #2e394c;
+    background-color: #fdf8ec;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-alert-yellow-100, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#fdf8ec, 50%);
     }
   }
 
   // Brand Colors
   &.gux-brand-orange {
-    color: @gux-black-20;
-    background-color: @gux-genesys-warm-red;
+    color: #151d28;
+    background-color: #ff4f1f;
 
     &.gux-disabled {
-      color: fade(@gux-black-20, 50%);
-      background-color: fade(@gux-genesys-warm-red, 50%);
+      color: fade(#151d28, 50%);
+      background-color: fade(#ff4f1f, 50%);
     }
   }
 
   &.gux-brand-teal {
-    color: @gux-black-40;
-    background-color: @gux-genesys-teal;
+    color: #283243;
+    background-color: #00ae9e;
 
     &.gux-disabled {
-      color: fade(@gux-black-40, 50%);
-      background-color: fade(@gux-genesys-teal, 50%);
+      color: fade(#283243, 50%);
+      background-color: fade(#00ae9e, 50%);
     }
   }
 
   &.gux-brand-navy {
-    background-color: @gux-genesys-navy;
+    background-color: #23395d;
 
     &.gux-disabled {
-      background-color: fade(@gux-genesys-navy, 50%);
+      background-color: fade(#23395d, 50%);
     }
   }
 
   &.gux-brand-light-blue {
-    color: @gux-black-20;
-    background-color: @gux-genesys-light-blue;
+    color: #151d28;
+    background-color: #3b90aa;
 
     &.gux-disabled {
-      color: fade(@gux-black-20, 50%);
-      background-color: fade(@gux-genesys-light-blue, 50%);
+      color: fade(#151d28, 50%);
+      background-color: fade(#3b90aa, 50%);
     }
   }
 
   &.gux-brand-yellow {
-    color: @gux-black-50;
-    background-color: @gux-genesys-yellow;
+    color: #2e394c;
+    background-color: #ff8f14;
 
     &.gux-disabled {
-      color: fade(@gux-black-50, 50%);
-      background-color: fade(@gux-genesys-yellow, 50%);
+      color: fade(#2e394c, 50%);
+      background-color: fade(#ff8f14, 50%);
     }
   }
 }

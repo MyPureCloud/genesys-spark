@@ -1,7 +1,3 @@
-//  'beside-text' is deprecated and will be removed in v4.
-export type GuxAccordionSectionArrowPosition =
-  | 'default'
-  | 'before-text'
-  | 'beside-text';
+export type GuxAccordionSectionArrowPosition = 'start' | 'end';
 
 export type GuxAccordionSectionContentLayout = 'text' | 'custom';

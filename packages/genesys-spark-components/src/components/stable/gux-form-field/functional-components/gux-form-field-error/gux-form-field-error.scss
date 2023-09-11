@@ -1,0 +1,36 @@
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin GuxFormFieldErrorStyle {
+  .gux-form-field-error {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--gse-ui-formControl-helper-errorPadding);
+    font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
+    font-size: var(--gse-ui-formControl-helper-helperText-fontSize);
+    line-height: var(--gse-ui-formControl-helper-helperText-lineHeight);
+    color: var(--gse-ui-formControl-helper-errorColor);
+
+    &.gux-show {
+      display: flex;
+    }
+
+    gux-icon {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+      min-width: var(--gse-ui-icon-size-sm);
+      min-height: var(--gse-ui-icon-size-sm);
+      margin-right: var(--gse-ui-formControl-helper-gap);
+      color: var(--gse-ui-formControl-helper-errorColor);
+    }
+
+    .gux-message {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+    }
+  }
+}

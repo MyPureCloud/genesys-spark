@@ -1,0 +1,33 @@
+@import '../../../style/typography.scss';
+
+:host {
+  display: block;
+  isolation: isolate;
+
+  .gux-table {
+    position: relative;
+    height: inherit;
+
+    .gux-table-container {
+      max-height: 100%;
+      overflow: auto;
+      scrollbar-color: var(--gse-ui-dataTableItems-scrollbar-foregroundColor);
+      scrollbar-width: thin;
+
+      &.gux-column-resizing-hover,
+      &.gux-column-resizing {
+        cursor: col-resize;
+      }
+    }
+  }
+
+  .gux-empty-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - var(--gse-ui-dataTableItems-header-default-height));
+    color: #596373;
+    background: #fdfdfd;
+    @include h2;
+  }
+}

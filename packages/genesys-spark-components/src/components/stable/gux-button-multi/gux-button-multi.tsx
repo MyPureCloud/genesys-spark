@@ -169,7 +169,7 @@ export class GuxButtonMulti {
     return (
       <gux-popup expanded={this.isOpen}>
         <div slot="target" class="gux-button-multi-container">
-          <gux-button-slot-beta
+          <gux-button-slot
             class="gux-dropdown-button"
             accent={getGuxButtonMultiAccent(this.accent)}
           >
@@ -184,7 +184,7 @@ export class GuxButtonMulti {
               <slot name="title">{this.text}</slot>
               <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
             </button>
-          </gux-button-slot-beta>
+          </gux-button-slot>
         </div>
 
         <div class="gux-list-container" slot="popup">

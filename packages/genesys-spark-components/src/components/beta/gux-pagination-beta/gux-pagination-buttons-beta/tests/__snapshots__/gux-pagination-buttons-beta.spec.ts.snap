@@ -4,29 +4,29 @@ exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = 
 <gux-pagination-buttons-beta current-page="0" layout="advanced" total-pages="0">
   <div class="gux-advanced gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
     <div class="gux-pagination-buttons-list-container"></div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </div>
 </gux-pagination-buttons-beta>
@@ -36,16 +36,16 @@ exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = 
 <gux-pagination-buttons-beta current-page="1" layout="advanced" total-pages="10">
   <div class="gux-advanced gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
     <div class="gux-pagination-buttons-list-container">
       <button class="gux-pagination-buttons-list-current">
@@ -69,16 +69,16 @@ exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = 
       </button>
     </div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </div>
 </gux-pagination-buttons-beta>
@@ -88,16 +88,16 @@ exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = 
 <gux-pagination-buttons-beta current-page="5" layout="advanced" total-pages="10">
   <div class="gux-advanced gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
     <div class="gux-pagination-buttons-list-container">
       <button class="gux-pagination-buttons-list-target">
@@ -119,16 +119,16 @@ exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = 
       </button>
     </div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </div>
 </gux-pagination-buttons-beta>
@@ -138,29 +138,29 @@ exports[`gux-pagination-item-counts #render should render as expected (4) 1`] = 
 <gux-pagination-buttons-beta current-page="0" layout="simple" total-pages="0">
   <div class="gux-pagination-buttons-container gux-simple">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
     <div class="gux-pagination-buttons-list-container"></div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </div>
 </gux-pagination-buttons-beta>
@@ -170,16 +170,16 @@ exports[`gux-pagination-item-counts #render should render as expected (5) 1`] = 
 <gux-pagination-buttons-beta current-page="1" layout="simple" total-pages="10">
   <div class="gux-pagination-buttons-container gux-simple">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
     <div class="gux-pagination-buttons-list-container">
       <button class="gux-pagination-buttons-list-current">
@@ -191,16 +191,16 @@ exports[`gux-pagination-item-counts #render should render as expected (5) 1`] = 
       </button>
     </div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </div>
 </gux-pagination-buttons-beta>
@@ -210,16 +210,16 @@ exports[`gux-pagination-item-counts #render should render as expected (6) 1`] = 
 <gux-pagination-buttons-beta current-page="5" layout="simple" total-pages="10">
   <div class="gux-pagination-buttons-container gux-simple">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
     <div class="gux-pagination-buttons-list-container">
       <button class="gux-pagination-buttons-list-current">
@@ -231,16 +231,16 @@ exports[`gux-pagination-item-counts #render should render as expected (6) 1`] = 
       </button>
     </div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </div>
 </gux-pagination-buttons-beta>

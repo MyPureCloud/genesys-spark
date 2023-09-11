@@ -9,15 +9,17 @@
       is-open
     >
       <span slot="title">Title</span>
-      <div style="width: 200px">
-        <div>popover content</div>
-        <gux-dropdown filterable placeholder="Select a country">
-          <gux-listbox aria-label="Countries">
-            <gux-option value="AFG">Afghanistan</gux-option>
-            <gux-option value="BHR">Bahrain</gux-option>
-            <gux-option value="ZWE">Zimbabwe</gux-option>
-          </gux-listbox>
-        </gux-dropdown>
+      <div>Popover Content</div>
+      <div class="popover-content">
+        <gux-button accent="ghost" onclick="notify(event)">
+          Action 3
+        </gux-button>
+        <gux-button accent="secondary" onclick="notify(event)">
+          Action 2
+        </gux-button>
+        <gux-button accent="primary" onclick="notify(event)">
+          Action 1
+        </gux-button>
       </div>
     </gux-popover>
   </div>
@@ -48,6 +50,14 @@
     background-color: #fff;
   }
 
+  .popover-content {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 280px;
+    padding-top: 4px;
+  }
+
   #popover-target {
     position: absolute;
     top: 250px;
@@ -56,6 +66,6 @@
     padding: 10px 15px;
     background-color: #fdfdfd;
     border: 1px #e4e9f0;
-    box-shadow: 0 0 2px fade(@gux-black-30, 24%);
+    box-shadow: 0 0 2px fade(#202937, 24%);
   }
 </style>

@@ -47,11 +47,11 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-dropdown](../gux-dropdown)
- - [gux-notification-toast-legacy](../../legacy/gux-notification-toast)
+ - [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
  - [gux-option](../gux-listbox/options/gux-option)
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
  - [gux-option-multi](../gux-listbox-multi/gux-option-multi)
- - [gux-simple-toast-legacy](../../legacy/gux-simple-toast)
+ - [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
  - [gux-toast](../gux-toast)
 
 ### Depends on

@@ -1,7 +1,5 @@
-@import './color.scss';
 @import './_mixins.scss';
 @import './focus.scss';
-@import './spacing.scss';
 @import './roboto.scss';
 
 /*
@@ -155,11 +153,12 @@ table a {
   line-height: 16px;
 }
 
-@mixin gux-label {
-  @include bold-font;
-
-  font-size: 12px;
-  line-height: 16px;
+@mixin gse-ui-formControl-label {
+  font-family: var(--gse-ui-formControl-label-text-fontFamily);
+  line-height: var(--gse-ui-formControl-label-text-lineHeight);
+  font-size: var(--gse-ui-formControl-label-text-fontSize);
+  color: var(--gse-ui-formControl-label-labelColor);
+  font-weight: var(--gse-ui-formControl-label-text-fontWeight);
 }
 
 @mixin gux-sr-only {

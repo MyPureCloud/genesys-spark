@@ -36,7 +36,7 @@ exports[`gux-accordion renders 1`] = `
       <section>
         <div id="gux-accordion-header-i" role="heading">
           <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" type="button">
-            <div class="gux-arrow-position-beside gux-header-text">
+            <div class="gux-header-text">
               <slot name="header"></slot>
               <slot name="subheader"></slot>
             </div>

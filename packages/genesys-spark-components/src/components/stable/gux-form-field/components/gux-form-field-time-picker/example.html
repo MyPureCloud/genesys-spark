@@ -1,15 +1,13 @@
 <h1>gux-form-field-time-picker</h1>
 
-<p>
-  slot a gux-time-picker-beta element into a gux-form-field-time-picker element
-</p>
+<p>slot a gux-time-picker element into a gux-form-field-time-picker element</p>
 
 <h2>Examples</h2>
 <form onchange="notify(event)" oninput="notify(event)">
   <fieldset>
     <legend>12 Hour</legend>
     <gux-form-field-time-picker label-position="above">
-      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <gux-time-picker value="09:00"></gux-time-picker>
       <label slot="label">Select Time</label>
     </gux-form-field-time-picker>
   </fieldset>
@@ -17,10 +15,7 @@
   <fieldset>
     <legend>24 Hour</legend>
     <gux-form-field-time-picker label-position="above">
-      <gux-time-picker-beta
-        value="09:00"
-        clock-type="24h"
-      ></gux-time-picker-beta>
+      <gux-time-picker value="09:00" clock-type="24h"></gux-time-picker>
       <label slot="label">Select Time</label>
     </gux-form-field-time-picker>
   </fieldset>
@@ -28,7 +23,7 @@
   <fieldset>
     <legend>24 Hour (calculated from locale)</legend>
     <gux-form-field-time-picker lang="ja" label-position="above">
-      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <gux-time-picker value="09:00"></gux-time-picker>
       <label slot="label">Select Time</label>
     </gux-form-field-time-picker>
   </fieldset>
@@ -36,7 +31,7 @@
   <fieldset>
     <legend>Interval=15</legend>
     <gux-form-field-time-picker>
-      <gux-time-picker-beta value="13:00" interval="15"></gux-time-picker-beta>
+      <gux-time-picker value="13:00" interval="15"></gux-time-picker>
       <label slot="label">Select Time</label>
     </gux-form-field-time-picker>
   </fieldset>
@@ -44,7 +39,7 @@
   <fieldset>
     <legend>Interval=30</legend>
     <gux-form-field-time-picker>
-      <gux-time-picker-beta value="07:00" interval="30"></gux-time-picker-beta>
+      <gux-time-picker value="07:00" interval="30"></gux-time-picker>
       <label slot="label">Select Time</label>
     </gux-form-field-time-picker>
   </fieldset>
@@ -52,7 +47,7 @@
   <fieldset>
     <legend>Screen reader only label</legend>
     <gux-form-field-time-picker label-position="screenreader">
-      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <gux-time-picker value="09:00"></gux-time-picker>
       <label slot="label">Select Time</label>
     </gux-form-field-time-picker>
   </fieldset>
@@ -60,7 +55,7 @@
   <fieldset>
     <legend>Disabled</legend>
     <gux-form-field-time-picker>
-      <gux-time-picker-beta value="09:00" disabled></gux-time-picker-beta>
+      <gux-time-picker value="09:00" disabled></gux-time-picker>
       <label slot="label">Select Time</label>
     </gux-form-field-time-picker>
   </fieldset>
@@ -68,7 +63,7 @@
   <fieldset>
     <legend>Error</legend>
     <gux-form-field-time-picker>
-      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <gux-time-picker value="09:00"></gux-time-picker>
       <label slot="label">Select Time</label>
       <span slot="error">This is an error message</span>
     </gux-form-field-time-picker>
@@ -77,7 +72,7 @@
   <fieldset>
     <legend>Help</legend>
     <gux-form-field-time-picker>
-      <gux-time-picker-beta value="09:00"></gux-time-picker-beta>
+      <gux-time-picker value="09:00"></gux-time-picker>
       <label slot="label">Select Time</label>
       <span slot="help">This is a help message</span>
     </gux-form-field-time-picker>
@@ -105,7 +100,7 @@
             '<div class=example>',
               '<h4>Value Set</h4>',
               '<gux-form-field-time-picker>',
-                '<gux-time-picker-beta></gux-time-picker-beta>',
+                '<gux-time-picker></gux-time-picker>',
                   '<label slot=label>Select Time</label>',
                 '</gux-form-field-time-picker>',
               '</gux-form-field-time-picker>',

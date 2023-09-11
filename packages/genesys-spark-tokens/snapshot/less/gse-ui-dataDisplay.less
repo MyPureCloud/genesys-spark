@@ -23,6 +23,10 @@
 @gse-ui-dataTableItems-header-gap: 8px;
 @gse-ui-dataTableItems-header-selectedBar-height: 3px;
 @gse-ui-dataTableItems-header-selectedBar-width: 229px;
+@gse-ui-dataTableItems-header-contextMenu-default-height: 40px;
+@gse-ui-dataTableItems-header-contextMenu-default-width: 41px;
+@gse-ui-dataTableItems-header-contextMenu-compact-height: 32px;
+@gse-ui-dataTableItems-header-contextMenu-compact-width: 41px;
 @gse-ui-dataTableItems-divider-color: #e8ebf7;
 @gse-ui-dataTableItems-divider-width: 1px;
 @gse-ui-dataTableItems-divider-style: solid;
@@ -38,9 +42,9 @@
 @gse-ui-dataTableItems-cell-multiselect-padding: 0 16px;
 @gse-ui-dataTableItems-cell-multiselect-gap: 8px;
 @gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-height: 40px;
-@gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width: 49px;
+@gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width: 41px;
 @gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-height: 32px;
-@gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width: 49px;
+@gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width: 41px;
 @gse-ui-dataTableItems-cell-default-height: 40px;
 @gse-ui-dataTableItems-cell-default-width: 229px;
 @gse-ui-dataTableItems-cell-compact-height: 32px;
@@ -53,11 +57,20 @@
 @gse-ui-dataTableItems-cell-text-fontSize: 12px;
 @gse-ui-dataTableItems-cell-text-fontWeight: 400;
 @gse-ui-dataTableItems-cell-tablePagination-width: 727px;
+@gse-ui-dataTableItems-cell-tablePagination-height: 56px;
+@gse-ui-dataTableItems-cell-contextMenu-default-height: 40px;
+@gse-ui-dataTableItems-cell-contextMenu-default-width: 41px;
+@gse-ui-dataTableItems-cell-contextMenu-compact-height: 32px;
+@gse-ui-dataTableItems-cell-contextMenu-compact-width: 41px;
 @gse-ui-dataTableItems-editColumn-editColumnItem-gap: 8px;
 @gse-ui-dataTableItems-editColumn-editColumnContent-gap: 10px;
 @gse-ui-dataTableItems-editColumn-editColumnContent-padding: 8px 0;
 @gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap: 4px;
 @gse-ui-dataTableItems-tableToolbar-gap: 4px;
+@gse-ui-dataTableItems-tableToolbar-dividerColor: #c6ceec;
+@gse-ui-dataTableItems-tableToolbar-divider-width: 1px;
+@gse-ui-dataTableItems-tableToolbar-divider-height: 32px;
+@gse-ui-dataTableItems-tableToolbar-height: 32px;
 @gse-ui-dataTableItems-tablePagination-recordsetControls-gap: 10px;
 @gse-ui-dataTableItems-tablePagination-padding: 12px;
 @gse-ui-dataTableItems-tablePagination-divider-color: #c6c8ce;
@@ -73,6 +86,7 @@
 @gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight: 700;
 @gse-ui-dataTableItems-tablePagination-defaultBackgroundColor: #ffffff;
 @gse-ui-dataTableItems-tablePagination-foregroundColor: #1b2c48;
+@gse-ui-dataTableItems-tablePagination-countDisplay-gap: 4px;
 @gse-ui-avatar-groupShapes-gap: -4px;
 @gse-ui-avatar-large-size: 96px;
 @gse-ui-avatar-large-badge-size: 24px;
@@ -82,6 +96,7 @@
 @gse-ui-avatar-large-initials-lineHeight: 44px;
 @gse-ui-avatar-large-initials-fontSize: 36px;
 @gse-ui-avatar-large-initials-fontWeight: 600;
+@gse-ui-avatar-large-statusRing-width: 4px;
 @gse-ui-avatar-statusRing-available: linear-gradient(
   135deg,
   #09b581 0%,
@@ -117,18 +132,6 @@
   #fe624d 0%,
   #4856cb 100%
 );
-@gse-ui-avatar-statusRing-large-border-0: 4;
-@gse-ui-avatar-statusRing-large-border-1: p;
-@gse-ui-avatar-statusRing-large-border-2: x;
-@gse-ui-avatar-statusRing-medium-border-0: 3;
-@gse-ui-avatar-statusRing-medium-border-1: p;
-@gse-ui-avatar-statusRing-medium-border-2: x;
-@gse-ui-avatar-statusRing-small-border-0: 2;
-@gse-ui-avatar-statusRing-small-border-1: p;
-@gse-ui-avatar-statusRing-small-border-2: x;
-@gse-ui-avatar-statusRing-xmall-border-0: 2;
-@gse-ui-avatar-statusRing-xmall-border-1: p;
-@gse-ui-avatar-statusRing-xmall-border-2: x;
 @gse-ui-avatar-medium-size: 48px;
 @gse-ui-avatar-medium-badge-size: 16px;
 @gse-ui-avatar-medium-focusRing-size: 50px;
@@ -137,6 +140,7 @@
 @gse-ui-avatar-medium-initials-lineHeight: 27px;
 @gse-ui-avatar-medium-initials-fontSize: 18px;
 @gse-ui-avatar-medium-initials-fontWeight: 600;
+@gse-ui-avatar-medium-statusRing-width: 3px;
 @gse-ui-avatar-small-size: 32px;
 @gse-ui-avatar-small-badge-size: 8px;
 @gse-ui-avatar-small-focusRing-size: 34px;
@@ -146,6 +150,7 @@
 @gse-ui-avatar-small-initials-fontSize: 12px;
 @gse-ui-avatar-small-initials-fontWeight: 600;
 @gse-ui-avatar-small-substract-size: 30px;
+@gse-ui-avatar-small-statusRing-width: 2px;
 @gse-ui-avatar-xsmall-size: 24px;
 @gse-ui-avatar-xsmall-focusRing-size: 26px;
 @gse-ui-avatar-xsmall-content-size: 18px;
@@ -153,6 +158,7 @@
 @gse-ui-avatar-xsmall-initials-lineHeight: 16px;
 @gse-ui-avatar-xsmall-initials-fontSize: 8px;
 @gse-ui-avatar-xsmall-initials-fontWeight: 600;
+@gse-ui-avatar-xsmall-statusRing-width: 2px;
 @gse-ui-avatar-badge-available: #09b581;
 @gse-ui-avatar-badge-busy: #e22245;
 @gse-ui-avatar-badge-break: #f8c73e;
@@ -182,21 +188,27 @@
 @gse-ui-avatar-media-initialsForeground-add: #4856cb;
 @gse-ui-avatar-hoverModal: #0f1929;
 @gse-ui-avatar-content-borderRadius: 256px;
+@gse-ui-avatar-content-default-border-color: #ffffff;
+@gse-ui-avatar-content-default-border-width: 1px;
+@gse-ui-avatar-content-default-border-style: solid;
+@gse-ui-avatar-content-large-border-color: #ffffff;
+@gse-ui-avatar-content-large-border-width: 2px;
+@gse-ui-avatar-content-large-border-style: solid;
 @gse-ui-avatar-groupSet-gap: -2px;
-@gse-ui-avatar-focusRing-large-border-0: 3;
-@gse-ui-avatar-focusRing-large-border-1: p;
-@gse-ui-avatar-focusRing-large-border-2: x;
 @gse-ui-avatar-focusRing-large-borderRadius: 96px;
-@gse-ui-avatar-focusRing-medium-border-0: 3;
-@gse-ui-avatar-focusRing-medium-border-1: p;
-@gse-ui-avatar-focusRing-medium-border-2: x;
-@gse-ui-avatar-focusRing-small-border-0: 2;
-@gse-ui-avatar-focusRing-small-border-1: p;
-@gse-ui-avatar-focusRing-small-border-2: x;
-@gse-ui-avatar-focusRing-xmall-border-0: 2;
-@gse-ui-avatar-focusRing-xmall-border-1: p;
-@gse-ui-avatar-focusRing-xmall-border-2: x;
+@gse-ui-avatar-focusRing-large-border-color: #7b88f7;
+@gse-ui-avatar-focusRing-large-border-width: 3px;
+@gse-ui-avatar-focusRing-large-border-style: solid;
 @gse-ui-avatar-focusRing-mediumSmall-borderRadius: 100px;
+@gse-ui-avatar-focusRing-medium-border-color: #7b88f7;
+@gse-ui-avatar-focusRing-medium-border-width: 3px;
+@gse-ui-avatar-focusRing-medium-border-style: solid;
+@gse-ui-avatar-focusRing-small-border-color: #7b88f7;
+@gse-ui-avatar-focusRing-small-border-width: 2px;
+@gse-ui-avatar-focusRing-small-border-style: solid;
+@gse-ui-avatar-focusRing-xsmall-border-color: #7b88f7;
+@gse-ui-avatar-focusRing-xsmall-border-width: 2px;
+@gse-ui-avatar-focusRing-xsmall-border-style: solid;
 @gse-ui-avatar-focus: #7b88f7;
 @gse-ui-dataTableComposed-boxShadow-x: 0;
 @gse-ui-dataTableComposed-boxShadow-y: 2px;

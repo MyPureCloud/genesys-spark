@@ -1,6 +1,7 @@
 {
-  "eraseBtnAria": "Clear",
-  "navigateNextBtn": "Next",
-  "navigatePreviousBtn": "Previous",
-  "totalMatches": "{currentMatch, number} of {matchCount, number}"
+  "eraseBtnAria": "Clear search text",
+  "navigateNextBtn": "Highlight next match",
+  "navigatePreviousBtn": "Highlight previous match",
+  "totalMatches": "{currentMatch, number} of {matchCount, number}",
+  "clear": "Clear"
 }

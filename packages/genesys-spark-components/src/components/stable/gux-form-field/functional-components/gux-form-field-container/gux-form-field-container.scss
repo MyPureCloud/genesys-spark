@@ -1,0 +1,9 @@
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin GuxFormFieldContainerStyle {
+  .gux-form-field-container {
+    &.gux-beside {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

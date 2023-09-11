@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-table-toolbar #render should render table toolbar as expected 1`] = `
+<gux-table-toolbar aria-orientation="horizontal" role="toolbar">
+  <mock:shadow-root>
+    <div class="search-filter-container">
+      <slot name="search-and-filter"></slot>
+    </div>
+    <div class="section-spacing"></div>
+    <div class="gux-contextual-permanent-primary">
+      <div class="gux-contextual-wrapper">
+        <slot name="contextual-actions"></slot>
+      </div>
+      <div class="gux-permanent-menu-primary-wrapper">
+        <slot name="permanent-actions"></slot>
+        <gux-table-toolbar-menu-button class="gux-show-menu" show-menu="">
+          <mock:shadow-root>
+            <gux-popup>
+              <div class="gux-toolbar-menu-container" slot="target">
+                <gux-button-slot class="gux-menu-button">
+                  <button aria-expanded="false" aria-haspopup="true" type="button">
+                    <gux-tooltip-title>
+                      <span>
+                        <gux-icon icon-name="menu-kebab-horizontal" screenreader-text="Additional Actions"></gux-icon>
+                      </span>
+                    </gux-tooltip-title>
+                  </button>
+                </gux-button-slot>
+              </div>
+              <div class="gux-list-container" slot="popup">
+                <gux-list>
+                  <slot></slot>
+                </gux-list>
+              </div>
+            </gux-popup>
+          </mock:shadow-root>
+          <slot name="menu-actions"></slot>
+        </gux-table-toolbar-menu-button>
+        <slot name="primary-action"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="search-and-filter">
+    <gux-form-field-search label-position="screenreader">
+      <input name="a-3" placeholder="Enter search" slot="input" type="search">
+      <label slot="label">
+        Toolbar Search
+      </label>
+    </gux-form-field-search>
+    <gux-table-toolbar-custom-action>
+      <mock:shadow-root>
+        <gux-button-slot accent="secondary">
+          <button class="gux-action-title" type="button">
+            <slot name="icon"></slot>
+            <span>
+              <slot name="text"></slot>
+            </span>
+          </button>
+        </gux-button-slot>
+      </mock:shadow-root>
+      <span slot="text">
+        Filter
+      </span>
+      <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+    </gux-table-toolbar-custom-action>
+  </div>
+  <div slot="contextual-actions">
+    <gux-table-toolbar-action action="delete">
+      <mock:shadow-root>
+        <gux-table-toolbar-custom-action>
+          <mock:shadow-root>
+            <gux-button-slot accent="secondary">
+              <button class="gux-action-title" type="button">
+                <slot name="icon"></slot>
+                <span>
+                  <slot name="text"></slot>
+                </span>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+          <span slot="text">
+            Delete
+          </span>
+          <gux-icon decorative="" icon-name="delete" slot="icon"></gux-icon>
+        </gux-table-toolbar-custom-action>
+      </mock:shadow-root>
+    </gux-table-toolbar-action>
+  </div>
+  <div slot="permanent-actions">
+    <gux-table-toolbar-action action="export">
+      <mock:shadow-root>
+        <gux-table-toolbar-custom-action>
+          <mock:shadow-root>
+            <gux-button-slot accent="secondary">
+              <button class="gux-action-title" type="button">
+                <slot name="icon"></slot>
+                <span>
+                  <slot name="text"></slot>
+                </span>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+          <span slot="text">
+            Export
+          </span>
+          <gux-icon decorative="" icon-name="export" slot="icon"></gux-icon>
+        </gux-table-toolbar-custom-action>
+      </mock:shadow-root>
+    </gux-table-toolbar-action>
+    <gux-table-toolbar-action action="refresh">
+      <mock:shadow-root>
+        <gux-table-toolbar-custom-action>
+          <mock:shadow-root>
+            <gux-button-slot accent="secondary">
+              <button class="gux-action-title" type="button">
+                <slot name="icon"></slot>
+                <span>
+                  <slot name="text"></slot>
+                </span>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+          <span slot="text">
+            Refresh
+          </span>
+          <gux-icon decorative="" icon-name="refresh" slot="icon"></gux-icon>
+        </gux-table-toolbar-custom-action>
+      </mock:shadow-root>
+    </gux-table-toolbar-action>
+    <gux-table-toolbar-action action="revert">
+      <mock:shadow-root>
+        <gux-table-toolbar-custom-action>
+          <mock:shadow-root>
+            <gux-button-slot accent="secondary">
+              <button class="gux-action-title" type="button">
+                <slot name="icon"></slot>
+                <span>
+                  <slot name="text"></slot>
+                </span>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+          <span slot="text">
+            Revert
+          </span>
+          <gux-icon decorative="" icon-name="reset" slot="icon"></gux-icon>
+        </gux-table-toolbar-custom-action>
+      </mock:shadow-root>
+    </gux-table-toolbar-action>
+    <gux-table-toolbar-action action="import">
+      <mock:shadow-root>
+        <gux-table-toolbar-custom-action>
+          <mock:shadow-root>
+            <gux-button-slot accent="secondary">
+              <button class="gux-action-title" type="button">
+                <slot name="icon"></slot>
+                <span>
+                  <slot name="text"></slot>
+                </span>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+          <span slot="text">
+            Import
+          </span>
+          <gux-icon decorative="" icon-name="import" slot="icon"></gux-icon>
+        </gux-table-toolbar-custom-action>
+      </mock:shadow-root>
+    </gux-table-toolbar-action>
+  </div>
+  <div slot="menu-actions">
+    <gux-table-toolbar-action action="export">
+      <mock:shadow-root>
+        <gux-table-toolbar-custom-action>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button class="gux-action-title" type="button">
+                <slot name="icon"></slot>
+                <span>
+                  <slot name="text"></slot>
+                </span>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+          <span slot="text">
+            Export
+          </span>
+          <gux-icon decorative="" icon-name="export" slot="icon"></gux-icon>
+        </gux-table-toolbar-custom-action>
+      </mock:shadow-root>
+    </gux-table-toolbar-action>
+    <gux-table-toolbar-action action="refresh">
+      <mock:shadow-root>
+        <gux-table-toolbar-custom-action>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button class="gux-action-title" type="button">
+                <slot name="icon"></slot>
+                <span>
+                  <slot name="text"></slot>
+                </span>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+          <span slot="text">
+            Refresh
+          </span>
+          <gux-icon decorative="" icon-name="refresh" slot="icon"></gux-icon>
+        </gux-table-toolbar-custom-action>
+      </mock:shadow-root>
+    </gux-table-toolbar-action>
+  </div>
+  <gux-table-toolbar-custom-action accent="primary" slot="primary">
+    <mock:shadow-root>
+      <gux-button-slot accent="primary">
+        <button class="gux-action-title" type="button">
+          <slot name="icon"></slot>
+          <span>
+            <slot name="text"></slot>
+          </span>
+        </button>
+      </gux-button-slot>
+    </mock:shadow-root>
+    <span slot="text">
+      Add
+    </span>
+    <gux-icon decorative="" icon-name="add" slot="icon"></gux-icon>
+  </gux-table-toolbar-custom-action>
+</gux-table-toolbar>
+`;

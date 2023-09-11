@@ -5,13 +5,13 @@
 
 ## Properties
 
-| Property          | Attribute          | Description                                                                                                                             | Type                                          | Default     |
-| ----------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ----------- |
-| `arrowPosition`   | `arrow-position`   | Position of the arrow chevron icon. Position can be 'default' or 'before-text'.  'beside-text' is deprecated and will be removed in v4. | `"before-text" \| "beside-text" \| "default"` | `'default'` |
-| `contentLayout`   | `content-layout`   | The content layout used in the accordion section. 'text' layout provides default padding, 'custom' removes default padding.             | `"custom" \| "text"`                          | `'text'`    |
-| `disabled`        | `disabled`         |                                                                                                                                         | `boolean`                                     | `false`     |
-| `open`            | `open`             |                                                                                                                                         | `boolean`                                     | `false`     |
-| `reverseHeadings` | `reverse-headings` |                                                                                                                                         | `boolean`                                     | `false`     |
+| Property          | Attribute          | Description                                                                                                                 | Type                 | Default  |
+| ----------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------- |
+| `arrowPosition`   | `arrow-position`   | Position of the arrow chevron icon. Position can be 'start' or 'end'.                                                       | `"end" \| "start"`   | `'end'`  |
+| `contentLayout`   | `content-layout`   | The content layout used in the accordion section. 'text' layout provides default padding, 'custom' removes default padding. | `"custom" \| "text"` | `'text'` |
+| `disabled`        | `disabled`         |                                                                                                                             | `boolean`            | `false`  |
+| `open`            | `open`             |                                                                                                                             | `boolean`            | `false`  |
+| `reverseHeadings` | `reverse-headings` |                                                                                                                             | `boolean`            | `false`  |
 
 
 ## Events

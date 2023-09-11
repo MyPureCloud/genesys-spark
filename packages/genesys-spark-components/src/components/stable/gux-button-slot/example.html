@@ -1,0 +1,282 @@
+<h1>gux-button-slot</h1>
+
+<h2>Gux Button</h2>
+
+<div class="container">
+  <gux-button onclick="notify(event)">Default</gux-button>
+
+  <gux-button accent="primary" onclick="notify(event)">Primary</gux-button>
+
+  <gux-button accent="secondary" onclick="notify(event)">Secondary</gux-button>
+
+  <gux-button accent="tertiary" onclick="notify(event)">Tertiary</gux-button>
+
+  <gux-button accent="ghost" onclick="notify(event)">Ghost</gux-button>
+
+  <gux-button accent="danger" onclick="notify(event)">Danger</gux-button>
+
+  <div>
+    This is an
+    <gux-button accent="inline" onclick="notify(event)"> Inline </gux-button>
+    button.
+  </div>
+
+  <gux-button onclick="notify(event)">
+    <gux-icon
+      icon-name="trashcan"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+  </gux-button>
+
+  <gux-button onclick="notify(event)">
+    <div class="align-content">
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
+      <span>Text in a span element</span>
+    </div>
+  </gux-button>
+
+  <gux-button accent="inline" onclick="notify(event)">
+    <div class="align-content">
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
+      <span>Text in a span element</span>
+    </div>
+  </gux-button>
+</div>
+
+<h2>Slotted Button Tag</h2>
+
+<h3>Enabled</h3>
+
+<div class="container">
+  <gux-button-slot>
+    <button type="button" onclick="notify(event)">Default</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="primary">
+    <button type="button" onclick="notify(event)">Primary</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="secondary">
+    <button type="button" onclick="notify(event)">Secondary</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="tertiary">
+    <button type="button" onclick="notify(event)">Tertiary</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="ghost">
+    <button type="button" onclick="notify(event)">Ghost</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="danger">
+    <button type="button" onclick="notify(event)">Danger</button>
+  </gux-button-slot>
+
+  <div>
+    This is an
+    <gux-button-slot accent="inline">
+      <button type="button" onclick="notify(event)">Inline</button>
+    </gux-button-slot>
+    button.
+  </div>
+
+  <gux-button-slot>
+    <button
+      type="button"
+      title="This will be read by a screen reader"
+      onclick="notify(event)"
+    >
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
+    </button>
+  </gux-button-slot>
+
+  <gux-button-slot>
+    <button type="button" onclick="notify(event)">
+      <div class="align-content">
+        <gux-icon icon-name="trashcan" decorative></gux-icon>
+        <span>Text in a span element</span>
+      </div>
+    </button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="inline">
+    <button type="button" onclick="notify(event)">
+      <div class="align-content">
+        <gux-icon icon-name="trashcan" decorative></gux-icon>
+        <span>Text in a span element</span>
+      </div>
+    </button>
+  </gux-button-slot>
+</div>
+
+<h3>Disabled</h3>
+
+<div class="container">
+  <gux-button-slot>
+    <button type="button" disabled onclick="notify(event)">Default</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="primary">
+    <button type="button" disabled onclick="notify(event)">Primary</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="secondary">
+    <button type="button" disabled onclick="notify(event)">Secondary</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="tertiary">
+    <button type="button" disabled onclick="notify(event)">Tertiary</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="ghost">
+    <button type="button" disabled onclick="notify(event)">Ghost</button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="danger">
+    <button type="button" disabled onclick="notify(event)">Danger</button>
+  </gux-button-slot>
+
+  <div>
+    This is an
+    <gux-button-slot accent="inline">
+      <button type="button" disabled onclick="notify(event)">Inline</button>
+    </gux-button-slot>
+    button.
+  </div>
+
+  <gux-button-slot>
+    <button
+      type="button"
+      disabled
+      title="This will be read by a screen reader"
+      onclick="notify(event)"
+    >
+      <gux-icon icon-name="trashcan" decorative></gux-icon>
+    </button>
+  </gux-button-slot>
+
+  <gux-button-slot>
+    <button type="button" disabled onclick="notify(event)">
+      <div class="align-content">
+        <gux-icon icon-name="trashcan" decorative></gux-icon>
+        <span>Text in a span element</span>
+      </div>
+    </button>
+  </gux-button-slot>
+
+  <gux-button-slot accent="inline">
+    <button type="button" disabled onclick="notify(event)">
+      <div class="align-content">
+        <gux-icon icon-name="trashcan" decorative></gux-icon>
+        <span>Text in a span element</span>
+      </div>
+    </button>
+  </gux-button-slot>
+</div>
+
+<h2>Slotted Input Tag (button)</h2>
+
+<div class="container">
+  <gux-button-slot>
+    <input type="button" onclick="notify(event)" value="Default" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="primary">
+    <input type="button" onclick="notify(event)" value="Primary" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="secondary">
+    <input type="button" onclick="notify(event)" value="Secondary" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="tertiary">
+    <input type="button" onclick="notify(event)" value="Tertiary" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="ghost">
+    <input type="button" onclick="notify(event)" value="Ghost" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="danger">
+    <input type="button" onclick="notify(event)" value="Danger" />
+  </gux-button-slot>
+
+  <div>
+    This is an
+    <gux-button-slot accent="inline">
+      <input type="button" onclick="notify(event)" value="Inline" />
+    </gux-button-slot>
+    button.
+  </div>
+</div>
+
+<h2>Slotted Input Tag (submit)</h2>
+
+<div class="container">
+  <gux-button-slot>
+    <input type="submit" onclick="notify(event)" value="Default" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="primary">
+    <input type="submit" onclick="notify(event)" value="Primary" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="secondary">
+    <input type="submit" onclick="notify(event)" value="Secondary" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="tertiary">
+    <input type="submit" onclick="notify(event)" value="Tertiary" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="ghost">
+    <input type="submit" onclick="notify(event)" value="Ghost" />
+  </gux-button-slot>
+
+  <gux-button-slot accent="danger">
+    <input type="submit" onclick="notify(event)" value="Danger" />
+  </gux-button-slot>
+
+  <div>
+    This is an
+    <gux-button-slot accent="inline">
+      <input type="submit" onclick="notify(event)" value="Inline" />
+    </gux-button-slot>
+    button.
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: stretch;
+    justify-content: flex-start;
+  }
+
+  .align-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .align-content > * {
+    flex: 0 1 auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  gux-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .align-content > gux-icon {
+    padding-right: 4px;
+  }
+</style>

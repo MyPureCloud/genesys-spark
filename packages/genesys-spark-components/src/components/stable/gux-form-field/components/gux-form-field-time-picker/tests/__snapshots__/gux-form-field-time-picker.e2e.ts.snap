@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-time-picker #render help should render component as expected 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker-beta value=\\"09:00\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\" hydrated=\\"\\"></gux-time-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Select Time</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-time-picker>"`;
+exports[`gux-form-field-time-picker #render help should render component as expected 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker value=\\"09:00\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\" hydrated=\\"\\"></gux-time-picker> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Select Time</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-time-picker>"`;
 
 exports[`gux-form-field-time-picker #render help should render component as expected 2`] = `null`;
 
-exports[`gux-form-field-time-picker #render interval should render component as expected (1) 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker-beta value=\\"07:00\\" interval=\\"15\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
+exports[`gux-form-field-time-picker #render interval should render component as expected (1) 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker value=\\"07:00\\" interval=\\"15\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
 
 exports[`gux-form-field-time-picker #render interval should render component as expected (1) 2`] = `null`;
 
-exports[`gux-form-field-time-picker #render interval should render component as expected (2) 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker-beta value=\\"07:00\\" interval=\\"30\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
+exports[`gux-form-field-time-picker #render interval should render component as expected (2) 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker value=\\"07:00\\" interval=\\"30\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
 
 exports[`gux-form-field-time-picker #render interval should render component as expected (2) 2`] = `null`;
 
-exports[`gux-form-field-time-picker #render interval should render component as expected (3) 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker-beta value=\\"07:00\\" interval=\\"60\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
+exports[`gux-form-field-time-picker #render interval should render component as expected (3) 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker value=\\"07:00\\" interval=\\"60\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
 
 exports[`gux-form-field-time-picker #render interval should render component as expected (3) 2`] = `null`;
 
-exports[`gux-form-field-time-picker #render label-position should render component as expected (1) 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker-beta value=\\"07:00\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
+exports[`gux-form-field-time-picker #render label-position should render component as expected (1) 1`] = `"<gux-form-field-time-picker hydrated=\\"\\"> <gux-time-picker value=\\"07:00\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
 
 exports[`gux-form-field-time-picker #render label-position should render component as expected (1) 2`] = `null`;
 
-exports[`gux-form-field-time-picker #render label-position should render component as expected (2) 1`] = `"<gux-form-field-time-picker label-position=\\"above\\" hydrated=\\"\\"> <gux-time-picker-beta value=\\"07:00\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
+exports[`gux-form-field-time-picker #render label-position should render component as expected (2) 1`] = `"<gux-form-field-time-picker label-position=\\"above\\" hydrated=\\"\\"> <gux-time-picker value=\\"07:00\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
 
 exports[`gux-form-field-time-picker #render label-position should render component as expected (2) 2`] = `null`;
 
-exports[`gux-form-field-time-picker #render label-position should render component as expected (3) 1`] = `"<gux-form-field-time-picker label-position=\\"beside\\" hydrated=\\"\\"> <gux-time-picker-beta value=\\"07:00\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
+exports[`gux-form-field-time-picker #render label-position should render component as expected (3) 1`] = `"<gux-form-field-time-picker label-position=\\"beside\\" hydrated=\\"\\"> <gux-time-picker value=\\"07:00\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
 
 exports[`gux-form-field-time-picker #render label-position should render component as expected (3) 2`] = `null`;
 
-exports[`gux-form-field-time-picker #render label-position should render component as expected (4) 1`] = `"<gux-form-field-time-picker label-position=\\"screenreader\\" hydrated=\\"\\"> <gux-time-picker-beta value=\\"07:00\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
+exports[`gux-form-field-time-picker #render label-position should render component as expected (4) 1`] = `"<gux-form-field-time-picker label-position=\\"screenreader\\" hydrated=\\"\\"> <gux-time-picker value=\\"07:00\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-picker> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-time-picker>"`;
 
 exports[`gux-form-field-time-picker #render label-position should render component as expected (4) 2`] = `null`;

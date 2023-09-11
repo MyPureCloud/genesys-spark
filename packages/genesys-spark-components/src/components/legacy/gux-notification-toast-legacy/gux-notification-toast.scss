@@ -1,0 +1,75 @@
+// Variables part
+@import '../../../style/typography';
+
+:host {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 294px;
+  padding: 16px 8px 16px 16px;
+  margin-bottom: 4px;
+  color: #2e394c;
+  background: #f6f7f9;
+  border: 1px solid #b4bccb;
+  border-color: #b4bccb;
+  border-radius: 4px;
+  // need to replace with token
+  box-shadow: 0 2px 4px rgba(#202937, 24%);
+}
+
+.gux-icon {
+  flex: 0 1 auto;
+  align-self: auto;
+  order: 0;
+  margin: 4px;
+
+  ::slotted(gux-icon) {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  &.gux-alert {
+    color: #ea0b0b;
+  }
+
+  &.gux-warning {
+    color: #ffae00;
+  }
+
+  &.gux-positive {
+    color: #3c8527;
+  }
+
+  &.gux-neutral {
+    color: #203b73;
+  }
+}
+
+.gux-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-start;
+  align-self: auto;
+  justify-content: flex-start;
+  order: 0;
+  margin: 0 12px 0 8px;
+  color: #2e394c;
+
+  .gux-title,
+  .gux-message {
+    flex: 1 1 auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  .gux-title {
+    @include h4-6;
+  }
+}

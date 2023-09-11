@@ -10,12 +10,13 @@ from a list of options.
 
 ## Properties
 
-| Property     | Attribute     | Description | Type                                  | Default     |
-| ------------ | ------------- | ----------- | ------------------------------------- | ----------- |
-| `filter`     | `filter`      |             | `string`                              | `''`        |
-| `filterType` | `filter-type` |             | `"custom" \| "none" \| "starts-with"` | `'none'`    |
-| `loading`    | `loading`     |             | `boolean`                             | `false`     |
-| `value`      | `value`       |             | `string`                              | `undefined` |
+| Property       | Attribute       | Description | Type                                  | Default     |
+| -------------- | --------------- | ----------- | ------------------------------------- | ----------- |
+| `emptyMessage` | `empty-message` |             | `string`                              | `undefined` |
+| `filter`       | `filter`        |             | `string`                              | `''`        |
+| `filterType`   | `filter-type`   |             | `"custom" \| "none" \| "starts-with"` | `'none'`    |
+| `loading`      | `loading`       |             | `boolean`                             | `false`     |
+| `value`        | `value`         |             | `string`                              | `undefined` |
 
 
 ## Events
@@ -52,6 +53,7 @@ Type: `Promise<void>`
  - [gux-pagination-items-per-page](../gux-pagination/gux-pagination-items-per-page)
  - [gux-pagination-items-per-page-beta](../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
  - [gux-phone-input-beta](../../beta/gux-phone-input)
+ - [gux-time-zone-picker-beta](../../beta/gux-time-zone-picker)
 
 ### Depends on
 
@@ -64,6 +66,7 @@ graph TD;
   gux-pagination-items-per-page --> gux-listbox
   gux-pagination-items-per-page-beta --> gux-listbox
   gux-phone-input-beta --> gux-listbox
+  gux-time-zone-picker-beta --> gux-listbox
   style gux-listbox fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

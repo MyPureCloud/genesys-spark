@@ -5,11 +5,11 @@ exports[`gux-context-menu-beta renders 1`] = `
   <mock:shadow-root>
     <gux-popup>
       <div class="gux-button-container" slot="target">
-        <gux-button-slot-beta accent="ghost">
+        <gux-button-slot accent="ghost">
           <button aria-expanded="false" aria-haspopup="true" id="gux-i" type="button">
             <gux-icon icon-name="menu-kebab-vertical" screenreader-text="Context menu"></gux-icon>
           </button>
-        </gux-button-slot-beta>
+        </gux-button-slot>
       </div>
       <div class="gux-list-container" slot="popup">
         <gux-list role="list">

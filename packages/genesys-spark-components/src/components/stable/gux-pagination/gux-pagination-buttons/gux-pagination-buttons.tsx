@@ -165,7 +165,7 @@ export class GuxPaginationButtons {
     return (
       <div class={`gux-pagination-buttons-container gux-${this.layout}`}>
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot-beta accent="secondary">
+          <gux-button-slot accent="secondary">
             <button
               title={this.i18n('first')}
               disabled={this.onFirstPage}
@@ -173,8 +173,8 @@ export class GuxPaginationButtons {
             >
               <gux-icon decorative icon-name="chevron-double-left"></gux-icon>
             </button>
-          </gux-button-slot-beta>
-          <gux-button-slot-beta accent="secondary">
+          </gux-button-slot>
+          <gux-button-slot accent="secondary">
             <button
               title={this.i18n('previous')}
               disabled={this.onFirstPage}
@@ -182,13 +182,13 @@ export class GuxPaginationButtons {
             >
               <gux-icon decorative icon-name="chevron-small-left"></gux-icon>
             </button>
-          </gux-button-slot-beta>
+          </gux-button-slot>
         </div>
 
         {this.getPagePicker(this.layout)}
 
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot-beta accent="secondary">
+          <gux-button-slot accent="secondary">
             <button
               title={this.i18n('next')}
               disabled={this.onLastPage}
@@ -196,8 +196,8 @@ export class GuxPaginationButtons {
             >
               <gux-icon decorative icon-name="chevron-small-right"></gux-icon>
             </button>
-          </gux-button-slot-beta>
-          <gux-button-slot-beta accent="secondary">
+          </gux-button-slot>
+          <gux-button-slot accent="secondary">
             <button
               title={this.i18n('last')}
               disabled={this.onLastPage}
@@ -205,7 +205,7 @@ export class GuxPaginationButtons {
             >
               <gux-icon decorative icon-name="chevron-double-right"></gux-icon>
             </button>
-          </gux-button-slot-beta>
+          </gux-button-slot>
         </div>
       </div>
     ) as JSX.Element;

@@ -18,7 +18,9 @@ function iconInfoToId(iconName: string): string {
   return iconName.replace('/', '-');
 }
 
-export async function getBaseSvgHtml(iconName: string): Promise<string> {
+export async function getBaseSvgHtml(
+  iconName: string = 'unknown'
+): Promise<string> {
   const id = iconInfoToId(iconName);
 
   if (svgHTMLCache.has(id)) {

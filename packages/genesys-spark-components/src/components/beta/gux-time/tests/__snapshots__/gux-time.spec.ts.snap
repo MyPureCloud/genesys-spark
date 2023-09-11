@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`#render different time formats eg(short,medium,full,long) should render component as expected (1) 1`] = `
+exports[`gux-time #render different time formats eg(short,medium,full,long) should render component as expected (1) 1`] = `
 <gux-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <mock:shadow-root>
     1:35 PM
@@ -8,7 +8,7 @@ exports[`#render different time formats eg(short,medium,full,long) should render
 </gux-time-beta>
 `;
 
-exports[`#render different time formats eg(short,medium,full,long) should render component as expected (2) 1`] = `
+exports[`gux-time #render different time formats eg(short,medium,full,long) should render component as expected (2) 1`] = `
 <gux-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <mock:shadow-root>
     1:35:30 PM
@@ -16,7 +16,7 @@ exports[`#render different time formats eg(short,medium,full,long) should render
 </gux-time-beta>
 `;
 
-exports[`#render different time formats eg(short,medium,full,long) should render component as expected (3) 1`] = `
+exports[`gux-time #render different time formats eg(short,medium,full,long) should render component as expected (3) 1`] = `
 <gux-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <mock:shadow-root>
     1:35:30 PM Coordinated Universal Time
@@ -24,10 +24,2802 @@ exports[`#render different time formats eg(short,medium,full,long) should render
 </gux-time-beta>
 `;
 
-exports[`#render different time formats eg(short,medium,full,long) should render component as expected (4) 1`] = `
+exports[`gux-time #render different time formats eg(short,medium,full,long) should render component as expected (4) 1`] = `
 <gux-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <mock:shadow-root>
     1:35:30 PM UTC
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Abidjan" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Abidjan">
+  <mock:shadow-root>
+    12:00:00 PM Greenwich Mean Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Algiers" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Algiers">
+  <mock:shadow-root>
+    1:00:00 PM Central European Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Bissau" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Bissau">
+  <mock:shadow-root>
+    12:00:00 PM Greenwich Mean Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Cairo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Cairo">
+  <mock:shadow-root>
+    2:00:00 PM Eastern European Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Casablanca" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Casablanca">
+  <mock:shadow-root>
+    1:00:00 PM GMT+01:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Ceuta" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Ceuta">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/El_Aaiun" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/El_Aaiun">
+  <mock:shadow-root>
+    1:00:00 PM GMT+01:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Johannesburg" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Johannesburg">
+  <mock:shadow-root>
+    2:00:00 PM South Africa Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Juba" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Juba">
+  <mock:shadow-root>
+    2:00:00 PM Central Africa Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Khartoum" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Khartoum">
+  <mock:shadow-root>
+    2:00:00 PM Central Africa Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Lagos" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Lagos">
+  <mock:shadow-root>
+    1:00:00 PM West Africa Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Maputo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Maputo">
+  <mock:shadow-root>
+    2:00:00 PM Central Africa Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Monrovia" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Monrovia">
+  <mock:shadow-root>
+    12:00:00 PM Greenwich Mean Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Nairobi" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Nairobi">
+  <mock:shadow-root>
+    3:00:00 PM East Africa Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Ndjamena" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Ndjamena">
+  <mock:shadow-root>
+    1:00:00 PM West Africa Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Sao_Tome" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Sao_Tome">
+  <mock:shadow-root>
+    12:00:00 PM Greenwich Mean Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Tripoli" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Tripoli">
+  <mock:shadow-root>
+    2:00:00 PM Eastern European Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Tunis" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Tunis">
+  <mock:shadow-root>
+    1:00:00 PM Central European Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Africa/Windhoek" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Windhoek">
+  <mock:shadow-root>
+    2:00:00 PM Central Africa Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Adak" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Adak">
+  <mock:shadow-root>
+    3:00:00 AM Hawaii-Aleutian Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Anchorage" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Anchorage">
+  <mock:shadow-root>
+    4:00:00 AM Alaska Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Araguaina" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Araguaina">
+  <mock:shadow-root>
+    9:00:00 AM Brasilia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/Buenos_Aires" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/Buenos_Aires">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/Catamarca" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/Catamarca">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/Cordoba" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/Cordoba">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/Jujuy" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/Jujuy">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/La_Rioja" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/La_Rioja">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/Mendoza" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/Mendoza">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/Rio_Gallegos" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/Rio_Gallegos">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/Salta" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/Salta">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/San_Juan" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/San_Juan">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/San_Luis" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/San_Luis">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/Tucuman" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/Tucuman">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Argentina/Ushuaia" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Argentina/Ushuaia">
+  <mock:shadow-root>
+    9:00:00 AM Argentina Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Asuncion" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Asuncion">
+  <mock:shadow-root>
+    8:00:00 AM Paraguay Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Bahia" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Bahia">
+  <mock:shadow-root>
+    9:00:00 AM Brasilia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Bahia_Banderas" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Bahia_Banderas">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Barbados" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Barbados">
+  <mock:shadow-root>
+    8:00:00 AM Atlantic Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Belem" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Belem">
+  <mock:shadow-root>
+    9:00:00 AM Brasilia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Belize" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Belize">
+  <mock:shadow-root>
+    6:00:00 AM Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Boa_Vista" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Boa_Vista">
+  <mock:shadow-root>
+    8:00:00 AM Amazon Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Bogota" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Bogota">
+  <mock:shadow-root>
+    7:00:00 AM Colombia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Boise" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Boise">
+  <mock:shadow-root>
+    6:00:00 AM Mountain Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Cambridge_Bay" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Cambridge_Bay">
+  <mock:shadow-root>
+    6:00:00 AM Mountain Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Campo_Grande" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Campo_Grande">
+  <mock:shadow-root>
+    8:00:00 AM Amazon Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Cancun" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Cancun">
+  <mock:shadow-root>
+    7:00:00 AM Eastern Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Caracas" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Caracas">
+  <mock:shadow-root>
+    8:00:00 AM Venezuela Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Cayenne" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Cayenne">
+  <mock:shadow-root>
+    9:00:00 AM French Guiana Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Chicago" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Chicago">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Chihuahua" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Chihuahua">
+  <mock:shadow-root>
+    6:00:00 AM Mexican Pacific Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Costa_Rica" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Costa_Rica">
+  <mock:shadow-root>
+    6:00:00 AM Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Cuiaba" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Cuiaba">
+  <mock:shadow-root>
+    8:00:00 AM Amazon Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Danmarkshavn" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Danmarkshavn">
+  <mock:shadow-root>
+    12:00:00 PM Greenwich Mean Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Dawson" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Dawson">
+  <mock:shadow-root>
+    5:00:00 AM Yukon Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Dawson_Creek" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Dawson_Creek">
+  <mock:shadow-root>
+    5:00:00 AM Mountain Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Denver" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Denver">
+  <mock:shadow-root>
+    6:00:00 AM Mountain Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Detroit" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Detroit">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Edmonton" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Edmonton">
+  <mock:shadow-root>
+    6:00:00 AM Mountain Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Eirunepe" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Eirunepe">
+  <mock:shadow-root>
+    7:00:00 AM Acre Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/El_Salvador" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/El_Salvador">
+  <mock:shadow-root>
+    6:00:00 AM Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Fort_Nelson" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Fort_Nelson">
+  <mock:shadow-root>
+    5:00:00 AM Mountain Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Fortaleza" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Fortaleza">
+  <mock:shadow-root>
+    9:00:00 AM Brasilia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Glace_Bay" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Glace_Bay">
+  <mock:shadow-root>
+    9:00:00 AM Atlantic Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Goose_Bay" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Goose_Bay">
+  <mock:shadow-root>
+    9:00:00 AM Atlantic Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Grand_Turk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Grand_Turk">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Guatemala" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Guatemala">
+  <mock:shadow-root>
+    6:00:00 AM Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Guayaquil" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Guayaquil">
+  <mock:shadow-root>
+    7:00:00 AM Ecuador Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Guyana" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Guyana">
+  <mock:shadow-root>
+    8:00:00 AM Guyana Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Halifax" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Halifax">
+  <mock:shadow-root>
+    9:00:00 AM Atlantic Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Havana" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Havana">
+  <mock:shadow-root>
+    8:00:00 AM Cuba Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Hermosillo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Hermosillo">
+  <mock:shadow-root>
+    5:00:00 AM Mexican Pacific Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Indiana/Indianapolis" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Indiana/Indianapolis">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Indiana/Knox" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Indiana/Knox">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Indiana/Marengo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Indiana/Marengo">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Indiana/Petersburg" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Indiana/Petersburg">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Indiana/Tell_City" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Indiana/Tell_City">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Indiana/Vevay" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Indiana/Vevay">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Indiana/Vincennes" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Indiana/Vincennes">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Indiana/Winamac" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Indiana/Winamac">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Inuvik" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Inuvik">
+  <mock:shadow-root>
+    6:00:00 AM Mountain Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Iqaluit" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Iqaluit">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Jamaica" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Jamaica">
+  <mock:shadow-root>
+    7:00:00 AM Eastern Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Juneau" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Juneau">
+  <mock:shadow-root>
+    4:00:00 AM Alaska Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Kentucky/Louisville" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Kentucky/Louisville">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Kentucky/Monticello" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Kentucky/Monticello">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/La_Paz" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/La_Paz">
+  <mock:shadow-root>
+    8:00:00 AM Bolivia Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Lima" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Lima">
+  <mock:shadow-root>
+    7:00:00 AM Peru Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Los_Angeles" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Los_Angeles">
+  <mock:shadow-root>
+    5:00:00 AM Pacific Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Maceio" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Maceio">
+  <mock:shadow-root>
+    9:00:00 AM Brasilia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Managua" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Managua">
+  <mock:shadow-root>
+    6:00:00 AM Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Manaus" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Manaus">
+  <mock:shadow-root>
+    8:00:00 AM Amazon Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Martinique" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Martinique">
+  <mock:shadow-root>
+    8:00:00 AM Atlantic Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Matamoros" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Matamoros">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Mazatlan" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Mazatlan">
+  <mock:shadow-root>
+    6:00:00 AM Mexican Pacific Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Menominee" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Menominee">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Merida" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Merida">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Metlakatla" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Metlakatla">
+  <mock:shadow-root>
+    4:00:00 AM Alaska Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Mexico_City" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Mexico_City">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Miquelon" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Miquelon">
+  <mock:shadow-root>
+    10:00:00 AM St. Pierre &amp; Miquelon Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Moncton" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Moncton">
+  <mock:shadow-root>
+    9:00:00 AM Atlantic Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Monterrey" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Monterrey">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Montevideo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Montevideo">
+  <mock:shadow-root>
+    9:00:00 AM Uruguay Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/New_York" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/New_York">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Nome" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Nome">
+  <mock:shadow-root>
+    4:00:00 AM Alaska Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Noronha" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Noronha">
+  <mock:shadow-root>
+    10:00:00 AM Fernando de Noronha Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/North_Dakota/Beulah" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/North_Dakota/Beulah">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/North_Dakota/Center" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/North_Dakota/Center">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/North_Dakota/New_Salem" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/North_Dakota/New_Salem">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Nuuk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Nuuk">
+  <mock:shadow-root>
+    10:00:00 AM West Greenland Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Ojinaga" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Ojinaga">
+  <mock:shadow-root>
+    6:00:00 AM Mountain Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Panama" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Panama">
+  <mock:shadow-root>
+    7:00:00 AM Eastern Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Paramaribo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Paramaribo">
+  <mock:shadow-root>
+    9:00:00 AM Suriname Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Phoenix" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Phoenix">
+  <mock:shadow-root>
+    5:00:00 AM Mountain Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Port-au-Prince" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Port-au-Prince">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Porto_Velho" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Porto_Velho">
+  <mock:shadow-root>
+    8:00:00 AM Amazon Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Puerto_Rico" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Puerto_Rico">
+  <mock:shadow-root>
+    8:00:00 AM Atlantic Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Punta_Arenas" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Punta_Arenas">
+  <mock:shadow-root>
+    9:00:00 AM GMT-03:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Rankin_Inlet" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Rankin_Inlet">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Recife" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Recife">
+  <mock:shadow-root>
+    9:00:00 AM Brasilia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Regina" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Regina">
+  <mock:shadow-root>
+    6:00:00 AM Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Resolute" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Resolute">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Rio_Branco" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Rio_Branco">
+  <mock:shadow-root>
+    7:00:00 AM Acre Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Santarem" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Santarem">
+  <mock:shadow-root>
+    9:00:00 AM Brasilia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Santiago" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Santiago">
+  <mock:shadow-root>
+    8:00:00 AM Chile Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Santo_Domingo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Santo_Domingo">
+  <mock:shadow-root>
+    8:00:00 AM Atlantic Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Sao_Paulo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Sao_Paulo">
+  <mock:shadow-root>
+    9:00:00 AM Brasilia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Scoresbysund" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Scoresbysund">
+  <mock:shadow-root>
+    12:00:00 PM East Greenland Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Sitka" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Sitka">
+  <mock:shadow-root>
+    4:00:00 AM Alaska Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/St_Johns" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/St_Johns">
+  <mock:shadow-root>
+    9:30:00 AM Newfoundland Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Swift_Current" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Swift_Current">
+  <mock:shadow-root>
+    6:00:00 AM Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Tegucigalpa" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Tegucigalpa">
+  <mock:shadow-root>
+    6:00:00 AM Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Thule" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Thule">
+  <mock:shadow-root>
+    9:00:00 AM Atlantic Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Tijuana" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Tijuana">
+  <mock:shadow-root>
+    5:00:00 AM Pacific Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Toronto" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Toronto">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Vancouver" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Vancouver">
+  <mock:shadow-root>
+    5:00:00 AM Pacific Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Whitehorse" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Whitehorse">
+  <mock:shadow-root>
+    5:00:00 AM Yukon Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Winnipeg" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Winnipeg">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "America/Yakutat" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="America/Yakutat">
+  <mock:shadow-root>
+    4:00:00 AM Alaska Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Antarctica/Casey" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Casey">
+  <mock:shadow-root>
+    11:00:00 PM Casey Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Antarctica/Davis" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Davis">
+  <mock:shadow-root>
+    7:00:00 PM Davis Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Antarctica/Macquarie" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Macquarie">
+  <mock:shadow-root>
+    10:00:00 PM Australian Eastern Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Antarctica/Mawson" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Mawson">
+  <mock:shadow-root>
+    5:00:00 PM Mawson Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Antarctica/Palmer" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Palmer">
+  <mock:shadow-root>
+    9:00:00 AM GMT-03:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Antarctica/Rothera" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Rothera">
+  <mock:shadow-root>
+    9:00:00 AM Rothera Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Antarctica/Troll" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Troll">
+  <mock:shadow-root>
+    2:00:00 PM GMT+02:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Almaty" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Almaty">
+  <mock:shadow-root>
+    6:00:00 PM East Kazakhstan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Amman" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Amman">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Anadyr" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Anadyr">
+  <mock:shadow-root>
+    12:00:00 AM Anadyr Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Aqtau" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Aqtau">
+  <mock:shadow-root>
+    5:00:00 PM West Kazakhstan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Aqtobe" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Aqtobe">
+  <mock:shadow-root>
+    5:00:00 PM West Kazakhstan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Ashgabat" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Ashgabat">
+  <mock:shadow-root>
+    5:00:00 PM Turkmenistan Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Atyrau" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Atyrau">
+  <mock:shadow-root>
+    5:00:00 PM West Kazakhstan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Baghdad" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Baghdad">
+  <mock:shadow-root>
+    3:00:00 PM Arabian Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Baku" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Baku">
+  <mock:shadow-root>
+    4:00:00 PM Azerbaijan Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Bangkok" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Bangkok">
+  <mock:shadow-root>
+    7:00:00 PM Indochina Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Barnaul" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Barnaul">
+  <mock:shadow-root>
+    7:00:00 PM GMT+07:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Beirut" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Beirut">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Bishkek" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Bishkek">
+  <mock:shadow-root>
+    6:00:00 PM Kyrgyzstan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Chita" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Chita">
+  <mock:shadow-root>
+    9:00:00 PM Yakutsk Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Choibalsan" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Choibalsan">
+  <mock:shadow-root>
+    8:00:00 PM Ulaanbaatar Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Colombo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Colombo">
+  <mock:shadow-root>
+    5:30:00 PM India Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Damascus" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Damascus">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Dhaka" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Dhaka">
+  <mock:shadow-root>
+    6:00:00 PM Bangladesh Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Dili" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Dili">
+  <mock:shadow-root>
+    9:00:00 PM East Timor Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Dubai" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Dubai">
+  <mock:shadow-root>
+    4:00:00 PM Gulf Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Dushanbe" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Dushanbe">
+  <mock:shadow-root>
+    5:00:00 PM Tajikistan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Famagusta" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Famagusta">
+  <mock:shadow-root>
+    3:00:00 PM GMT+03:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Gaza" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Gaza">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Hebron" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Hebron">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Ho_Chi_Minh" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Ho_Chi_Minh">
+  <mock:shadow-root>
+    7:00:00 PM Indochina Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Hong_Kong" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Hong_Kong">
+  <mock:shadow-root>
+    8:00:00 PM Hong Kong Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Hovd" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Hovd">
+  <mock:shadow-root>
+    7:00:00 PM Hovd Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Irkutsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Irkutsk">
+  <mock:shadow-root>
+    8:00:00 PM Irkutsk Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Jakarta" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Jakarta">
+  <mock:shadow-root>
+    7:00:00 PM Western Indonesia Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Jayapura" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Jayapura">
+  <mock:shadow-root>
+    9:00:00 PM Eastern Indonesia Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Jerusalem" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Jerusalem">
+  <mock:shadow-root>
+    3:00:00 PM Israel Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Kabul" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kabul">
+  <mock:shadow-root>
+    4:30:00 PM Afghanistan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Kamchatka" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kamchatka">
+  <mock:shadow-root>
+    12:00:00 AM Petropavlovsk-Kamchatski Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Karachi" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Karachi">
+  <mock:shadow-root>
+    5:00:00 PM Pakistan Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Kathmandu" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kathmandu">
+  <mock:shadow-root>
+    5:45:00 PM Nepal Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Khandyga" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Khandyga">
+  <mock:shadow-root>
+    9:00:00 PM Yakutsk Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Kolkata" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kolkata">
+  <mock:shadow-root>
+    5:30:00 PM India Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Krasnoyarsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Krasnoyarsk">
+  <mock:shadow-root>
+    7:00:00 PM Krasnoyarsk Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Kuching" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kuching">
+  <mock:shadow-root>
+    8:00:00 PM Malaysia Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Macau" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Macau">
+  <mock:shadow-root>
+    8:00:00 PM China Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Magadan" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Magadan">
+  <mock:shadow-root>
+    11:00:00 PM Magadan Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Makassar" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Makassar">
+  <mock:shadow-root>
+    8:00:00 PM Central Indonesia Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Manila" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Manila">
+  <mock:shadow-root>
+    8:00:00 PM Philippine Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Nicosia" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Nicosia">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Novokuznetsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Novokuznetsk">
+  <mock:shadow-root>
+    7:00:00 PM Krasnoyarsk Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Novosibirsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Novosibirsk">
+  <mock:shadow-root>
+    7:00:00 PM Novosibirsk Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Omsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Omsk">
+  <mock:shadow-root>
+    6:00:00 PM Omsk Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Oral" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Oral">
+  <mock:shadow-root>
+    5:00:00 PM West Kazakhstan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Pontianak" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Pontianak">
+  <mock:shadow-root>
+    7:00:00 PM Western Indonesia Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Pyongyang" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Pyongyang">
+  <mock:shadow-root>
+    9:00:00 PM Korean Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Qatar" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Qatar">
+  <mock:shadow-root>
+    3:00:00 PM Arabian Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Qostanay" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Qostanay">
+  <mock:shadow-root>
+    6:00:00 PM East Kazakhstan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Qyzylorda" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Qyzylorda">
+  <mock:shadow-root>
+    5:00:00 PM West Kazakhstan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Riyadh" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Riyadh">
+  <mock:shadow-root>
+    3:00:00 PM Arabian Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Sakhalin" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Sakhalin">
+  <mock:shadow-root>
+    11:00:00 PM Sakhalin Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Samarkand" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Samarkand">
+  <mock:shadow-root>
+    5:00:00 PM Uzbekistan Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Seoul" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Seoul">
+  <mock:shadow-root>
+    9:00:00 PM Korean Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Shanghai" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Shanghai">
+  <mock:shadow-root>
+    8:00:00 PM China Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Singapore" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Singapore">
+  <mock:shadow-root>
+    8:00:00 PM Singapore Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Srednekolymsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Srednekolymsk">
+  <mock:shadow-root>
+    11:00:00 PM GMT+11:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Taipei" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Taipei">
+  <mock:shadow-root>
+    8:00:00 PM Taipei Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Tashkent" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Tashkent">
+  <mock:shadow-root>
+    5:00:00 PM Uzbekistan Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Tbilisi" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Tbilisi">
+  <mock:shadow-root>
+    4:00:00 PM Georgia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Tehran" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Tehran">
+  <mock:shadow-root>
+    4:30:00 PM Iran Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Thimphu" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Thimphu">
+  <mock:shadow-root>
+    6:00:00 PM Bhutan Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Tokyo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Tokyo">
+  <mock:shadow-root>
+    9:00:00 PM Japan Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Tomsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Tomsk">
+  <mock:shadow-root>
+    7:00:00 PM GMT+07:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Ulaanbaatar" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Ulaanbaatar">
+  <mock:shadow-root>
+    8:00:00 PM Ulaanbaatar Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Urumqi" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Urumqi">
+  <mock:shadow-root>
+    6:00:00 PM GMT+06:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Ust-Nera" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Ust-Nera">
+  <mock:shadow-root>
+    10:00:00 PM Vladivostok Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Vladivostok" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Vladivostok">
+  <mock:shadow-root>
+    10:00:00 PM Vladivostok Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Yakutsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Yakutsk">
+  <mock:shadow-root>
+    9:00:00 PM Yakutsk Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Yangon" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Yangon">
+  <mock:shadow-root>
+    6:30:00 PM Myanmar Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Yekaterinburg" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Yekaterinburg">
+  <mock:shadow-root>
+    5:00:00 PM Yekaterinburg Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Asia/Yerevan" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Yerevan">
+  <mock:shadow-root>
+    4:00:00 PM Armenia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Atlantic/Azores" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/Azores">
+  <mock:shadow-root>
+    12:00:00 PM Azores Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Atlantic/Bermuda" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/Bermuda">
+  <mock:shadow-root>
+    9:00:00 AM Atlantic Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Atlantic/Canary" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/Canary">
+  <mock:shadow-root>
+    1:00:00 PM Western European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Atlantic/Cape_Verde" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/Cape_Verde">
+  <mock:shadow-root>
+    11:00:00 AM Cape Verde Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Atlantic/Faroe" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/Faroe">
+  <mock:shadow-root>
+    1:00:00 PM Western European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Atlantic/Madeira" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/Madeira">
+  <mock:shadow-root>
+    1:00:00 PM Western European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Atlantic/South_Georgia" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/South_Georgia">
+  <mock:shadow-root>
+    10:00:00 AM South Georgia Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Atlantic/Stanley" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Atlantic/Stanley">
+  <mock:shadow-root>
+    9:00:00 AM Falkland Islands Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Adelaide" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Adelaide">
+  <mock:shadow-root>
+    9:30:00 PM Australian Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Brisbane" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Brisbane">
+  <mock:shadow-root>
+    10:00:00 PM Australian Eastern Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Broken_Hill" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Broken_Hill">
+  <mock:shadow-root>
+    9:30:00 PM Australian Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Darwin" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Darwin">
+  <mock:shadow-root>
+    9:30:00 PM Australian Central Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Eucla" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Eucla">
+  <mock:shadow-root>
+    8:45:00 PM Australian Central Western Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Hobart" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Hobart">
+  <mock:shadow-root>
+    10:00:00 PM Australian Eastern Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Lindeman" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Lindeman">
+  <mock:shadow-root>
+    10:00:00 PM Australian Eastern Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Lord_Howe" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Lord_Howe">
+  <mock:shadow-root>
+    10:30:00 PM Lord Howe Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Melbourne" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Melbourne">
+  <mock:shadow-root>
+    10:00:00 PM Australian Eastern Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Perth" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Perth">
+  <mock:shadow-root>
+    8:00:00 PM Australian Western Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Australia/Sydney" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Australia/Sydney">
+  <mock:shadow-root>
+    10:00:00 PM Australian Eastern Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "CET" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="CET">
+  <mock:shadow-root>
+    2:00:00 PM GMT+02:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "CST6CDT" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="CST6CDT">
+  <mock:shadow-root>
+    7:00:00 AM Central Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "EET" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="EET">
+  <mock:shadow-root>
+    3:00:00 PM GMT+03:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "EST" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="EST">
+  <mock:shadow-root>
+    7:00:00 AM GMT-05:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "EST5EDT" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="EST5EDT">
+  <mock:shadow-root>
+    8:00:00 AM Eastern Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT">
+  <mock:shadow-root>
+    12:00:00 PM Coordinated Universal Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+1" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+1">
+  <mock:shadow-root>
+    11:00:00 AM GMT-01:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+2" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+2">
+  <mock:shadow-root>
+    10:00:00 AM GMT-02:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+3" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+3">
+  <mock:shadow-root>
+    9:00:00 AM GMT-03:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+4" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+4">
+  <mock:shadow-root>
+    8:00:00 AM GMT-04:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+5" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+5">
+  <mock:shadow-root>
+    7:00:00 AM GMT-05:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+6" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+6">
+  <mock:shadow-root>
+    6:00:00 AM GMT-06:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+7" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+7">
+  <mock:shadow-root>
+    5:00:00 AM GMT-07:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+8" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+8">
+  <mock:shadow-root>
+    4:00:00 AM GMT-08:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+9" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+9">
+  <mock:shadow-root>
+    3:00:00 AM GMT-09:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+10" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+10">
+  <mock:shadow-root>
+    2:00:00 AM GMT-10:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+11" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+11">
+  <mock:shadow-root>
+    1:00:00 AM GMT-11:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT+12" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT+12">
+  <mock:shadow-root>
+    12:00:00 AM GMT-12:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-1" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-1">
+  <mock:shadow-root>
+    1:00:00 PM GMT+01:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-2" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-2">
+  <mock:shadow-root>
+    2:00:00 PM GMT+02:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-3" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-3">
+  <mock:shadow-root>
+    3:00:00 PM GMT+03:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-4" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-4">
+  <mock:shadow-root>
+    4:00:00 PM GMT+04:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-5" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-5">
+  <mock:shadow-root>
+    5:00:00 PM GMT+05:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-6" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-6">
+  <mock:shadow-root>
+    6:00:00 PM GMT+06:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-7" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-7">
+  <mock:shadow-root>
+    7:00:00 PM GMT+07:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-8" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-8">
+  <mock:shadow-root>
+    8:00:00 PM GMT+08:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-9" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-9">
+  <mock:shadow-root>
+    9:00:00 PM GMT+09:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-10" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-10">
+  <mock:shadow-root>
+    10:00:00 PM GMT+10:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-11" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-11">
+  <mock:shadow-root>
+    11:00:00 PM GMT+11:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-12" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-12">
+  <mock:shadow-root>
+    12:00:00 AM GMT+12:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-13" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-13">
+  <mock:shadow-root>
+    1:00:00 AM GMT+13:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/GMT-14" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/GMT-14">
+  <mock:shadow-root>
+    2:00:00 AM GMT+14:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Etc/UTC" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Etc/UTC">
+  <mock:shadow-root>
+    12:00:00 PM Coordinated Universal Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Andorra" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Andorra">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Astrakhan" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Astrakhan">
+  <mock:shadow-root>
+    4:00:00 PM GMT+04:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Athens" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Athens">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Belgrade" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Belgrade">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Berlin" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Berlin">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Brussels" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Brussels">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Bucharest" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Bucharest">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Budapest" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Budapest">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Chisinau" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Chisinau">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Dublin" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Dublin">
+  <mock:shadow-root>
+    1:00:00 PM Irish Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Gibraltar" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Gibraltar">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Helsinki" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Helsinki">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Istanbul" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Istanbul">
+  <mock:shadow-root>
+    3:00:00 PM GMT+03:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Kaliningrad" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Kaliningrad">
+  <mock:shadow-root>
+    2:00:00 PM Eastern European Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Kirov" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Kirov">
+  <mock:shadow-root>
+    3:00:00 PM GMT+03:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Kyiv" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Kyiv">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Lisbon" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Lisbon">
+  <mock:shadow-root>
+    1:00:00 PM Western European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/London" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/London">
+  <mock:shadow-root>
+    1:00:00 PM British Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Madrid" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Madrid">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Malta" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Malta">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Minsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Minsk">
+  <mock:shadow-root>
+    3:00:00 PM Moscow Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Moscow" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Moscow">
+  <mock:shadow-root>
+    3:00:00 PM Moscow Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Paris" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Paris">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Prague" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Prague">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Riga" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Riga">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Rome" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Rome">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Samara" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Samara">
+  <mock:shadow-root>
+    4:00:00 PM Samara Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Saratov" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Saratov">
+  <mock:shadow-root>
+    4:00:00 PM GMT+04:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Simferopol" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Simferopol">
+  <mock:shadow-root>
+    3:00:00 PM Moscow Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Sofia" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Sofia">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Tallinn" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Tallinn">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Tirane" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Tirane">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Ulyanovsk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Ulyanovsk">
+  <mock:shadow-root>
+    4:00:00 PM GMT+04:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Vienna" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Vienna">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Vilnius" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Vilnius">
+  <mock:shadow-root>
+    3:00:00 PM Eastern European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Volgograd" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Volgograd">
+  <mock:shadow-root>
+    3:00:00 PM Volgograd Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Warsaw" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Warsaw">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Europe/Zurich" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Europe/Zurich">
+  <mock:shadow-root>
+    2:00:00 PM Central European Summer Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "HST" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="HST">
+  <mock:shadow-root>
+    2:00:00 AM GMT-10:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Indian/Chagos" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Chagos">
+  <mock:shadow-root>
+    6:00:00 PM Indian Ocean Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Indian/Maldives" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Maldives">
+  <mock:shadow-root>
+    5:00:00 PM Maldives Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Indian/Mauritius" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Indian/Mauritius">
+  <mock:shadow-root>
+    4:00:00 PM Mauritius Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "MET" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="MET">
+  <mock:shadow-root>
+    2:00:00 PM GMT+02:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "MST" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="MST">
+  <mock:shadow-root>
+    5:00:00 AM GMT-07:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "MST7MDT" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="MST7MDT">
+  <mock:shadow-root>
+    6:00:00 AM Mountain Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "PST8PDT" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="PST8PDT">
+  <mock:shadow-root>
+    5:00:00 AM Pacific Daylight Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Apia" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Apia">
+  <mock:shadow-root>
+    1:00:00 AM Apia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Auckland" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Auckland">
+  <mock:shadow-root>
+    12:00:00 AM New Zealand Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Bougainville" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Bougainville">
+  <mock:shadow-root>
+    11:00:00 PM GMT+11:00
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Chatham" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Chatham">
+  <mock:shadow-root>
+    12:45:00 AM Chatham Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Easter" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Easter">
+  <mock:shadow-root>
+    6:00:00 AM Easter Island Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Efate" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Efate">
+  <mock:shadow-root>
+    11:00:00 PM Vanuatu Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Fakaofo" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Fakaofo">
+  <mock:shadow-root>
+    1:00:00 AM Tokelau Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Fiji" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Fiji">
+  <mock:shadow-root>
+    12:00:00 AM Fiji Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Galapagos" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Galapagos">
+  <mock:shadow-root>
+    6:00:00 AM Galapagos Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Gambier" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Gambier">
+  <mock:shadow-root>
+    3:00:00 AM Gambier Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Guadalcanal" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Guadalcanal">
+  <mock:shadow-root>
+    11:00:00 PM Solomon Islands Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Guam" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Guam">
+  <mock:shadow-root>
+    10:00:00 PM Chamorro Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Honolulu" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Honolulu">
+  <mock:shadow-root>
+    2:00:00 AM Hawaii-Aleutian Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Kanton" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Kanton">
+  <mock:shadow-root>
+    1:00:00 AM Phoenix Islands Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Kiritimati" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Kiritimati">
+  <mock:shadow-root>
+    2:00:00 AM Line Islands Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Kosrae" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Kosrae">
+  <mock:shadow-root>
+    11:00:00 PM Kosrae Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Kwajalein" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Kwajalein">
+  <mock:shadow-root>
+    12:00:00 AM Marshall Islands Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Marquesas" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Marquesas">
+  <mock:shadow-root>
+    2:30:00 AM Marquesas Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Nauru" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Nauru">
+  <mock:shadow-root>
+    12:00:00 AM Nauru Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Niue" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Niue">
+  <mock:shadow-root>
+    1:00:00 AM Niue Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Norfolk" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Norfolk">
+  <mock:shadow-root>
+    11:00:00 PM Norfolk Island Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Noumea" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Noumea">
+  <mock:shadow-root>
+    11:00:00 PM New Caledonia Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Pago_Pago" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Pago_Pago">
+  <mock:shadow-root>
+    1:00:00 AM Samoa Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Palau" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Palau">
+  <mock:shadow-root>
+    9:00:00 PM Palau Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Pitcairn" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Pitcairn">
+  <mock:shadow-root>
+    4:00:00 AM Pitcairn Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Port_Moresby" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Port_Moresby">
+  <mock:shadow-root>
+    10:00:00 PM Papua New Guinea Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Rarotonga" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Rarotonga">
+  <mock:shadow-root>
+    2:00:00 AM Cook Islands Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Tahiti" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Tahiti">
+  <mock:shadow-root>
+    2:00:00 AM Tahiti Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Tarawa" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Tarawa">
+  <mock:shadow-root>
+    12:00:00 AM Gilbert Islands Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "Pacific/Tongatapu" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Tongatapu">
+  <mock:shadow-root>
+    1:00:00 AM Tonga Standard Time
+  </mock:shadow-root>
+</gux-time-beta>
+`;
+
+exports[`gux-time #render different time zones should work as expected for "WET" 1`] = `
+<gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="WET">
+  <mock:shadow-root>
+    1:00:00 PM GMT+01:00
   </mock:shadow-root>
 </gux-time-beta>
 `;

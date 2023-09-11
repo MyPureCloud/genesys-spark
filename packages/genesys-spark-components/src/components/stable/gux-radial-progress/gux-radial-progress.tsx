@@ -2,23 +2,19 @@ import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '../../../utils/error/log-error';
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
 
 import {
   GuxPercentageState,
   GuxSpinnerState
 } from './gux-radial-progress.functional';
 import { canShowPercentageState } from './gux-radial-progress.service';
-import { GuxRadialProgressScale } from './gux-radial-progress.types';
 
 @Component({
-  styleUrl: 'gux-radial-progress.less',
+  styleUrl: 'gux-radial-progress.scss',
   tag: 'gux-radial-progress',
   shadow: true
 })
 export class GuxRadialProgress {
-  private dropshadowId: string = randomHTMLId('gux-dropshadow');
-
   @Element()
   private root: HTMLElement;
 
@@ -33,12 +29,6 @@ export class GuxRadialProgress {
    */
   @Prop()
   max: number = 100;
-
-  /**
-   * The max number of decimal places that will be displayed
-   */
-  @Prop()
-  scale: GuxRadialProgressScale = 0;
 
   /**
    * Required localized text to provide an accessible label for the component
@@ -68,8 +58,6 @@ export class GuxRadialProgress {
           <GuxPercentageState
             value={this.value}
             max={this.max}
-            scale={this.scale}
-            dropshadowId={this.dropshadowId}
             screenreaderText={this.screenreaderText}
           />
         ) as JSX.Element)

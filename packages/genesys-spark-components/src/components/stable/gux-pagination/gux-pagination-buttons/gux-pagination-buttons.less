@@ -1,9 +1,7 @@
-@import (reference) '../../../../style/color-palette.less';
 @import (reference) '../../../../style/focus.less';
-@import (reference) '../../../../style/spacing.less';
 
 gux-pagination-buttons {
-  color: @gux-black-50;
+  color: #2e394c;
 
   .gux-pagination-buttons-container {
     display: flex;
@@ -26,8 +24,8 @@ gux-pagination-buttons {
     .gux-pagination-buttons-group {
       white-space: nowrap;
 
-      gux-button-slot-beta:not(:first-of-type) {
-        margin-left: @gux-spacing-2xs;
+      gux-button-slot:not(:first-of-type) {
+        margin-left: 4px;
       }
     }
 
@@ -38,7 +36,7 @@ gux-pagination-buttons {
       align-content: stretch;
       align-items: center;
       justify-content: center;
-      margin: 0 @gux-spacing-medium;
+      margin: 0 16px;
 
       & > div {
         flex: 0 1 auto;
@@ -49,7 +47,7 @@ gux-pagination-buttons {
 
       .gux-pagination-buttons-input {
         width: 60px;
-        margin: 0 @gux-spacing-xs;
+        margin: 0 8px;
 
         input {
           width: inherit;
@@ -65,15 +63,15 @@ gux-pagination-buttons {
       align-content: stretch;
       align-items: center;
       justify-content: center;
-      margin: 0 @gux-spacing-medium;
+      margin: 0 16px;
 
       .gux-pagination-buttons-list-button {
         height: 32px;
-        padding: 0 @gux-spacing-2xs;
-        margin: 0 @gux-spacing-2xs;
+        padding: 0 4px;
+        margin: 0 4px;
         background: inherit;
         border: none;
-        border-radius: @gux-spacing-3xs;
+        border-radius: 2px;
 
         &:focus-visible {
           .gux-focus-ring();
@@ -84,14 +82,14 @@ gux-pagination-buttons {
         }
 
         &.gux-target {
-          color: @gux-blue-60;
+          color: #2a60c8;
           cursor: pointer;
         }
       }
     }
 
     .gux-pagination-buttons-spacer {
-      width: @gux-spacing-small;
+      width: 12px;
     }
   }
 }

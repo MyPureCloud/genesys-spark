@@ -1,0 +1,26 @@
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin GuxFormFieldHelpStyle {
+  .gux-form-field-help {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--gse-ui-formControl-helper-padding);
+    font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
+    font-size: var(--gse-ui-formControl-helper-helperText-fontSize);
+    line-height: var(--gse-ui-formControl-helper-helperText-lineHeight);
+    color: var(--gse-ui-formControl-helper-defaultColor);
+
+    &.gux-show {
+      display: flex;
+    }
+
+    .gux-message {
+      flex: 0 1 auto;
+      align-self: none;
+      order: 0;
+    }
+  }
+}

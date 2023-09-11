@@ -63,7 +63,7 @@
     "close_button_color": "#626e84",
     "header_color": "#1b2c48",
     "background_color": "#ffffff",
-    "shroud_color": "#23395d",
+    "shroud_color": "#23395dcc",
     "header": {
       "gap": "12px"
     },
@@ -97,11 +97,10 @@
       "color": "#23395c26",
       "type": "dropShadow"
     },
-    "slot": {
-      "padding": "2px 3px"
-    },
     "border_radius": "16px",
-    "opacity": "80%"
+    "shroud": {
+      "opacity": 0.8
+    }
   },
   "popover": {
     "border_radius": "8px",
@@ -120,6 +119,9 @@
     "padding": "24px",
     "buttons_bar": {
       "gap": "8px"
+    },
+    "header": {
+      "gap": "4px"
     },
     "spacer": {
       "height": "16px"
@@ -141,8 +143,8 @@
       }
     },
     "anchor": {
-      "width": "12px",
-      "height": "32px"
+      "width": "13px",
+      "height": "13px"
     }
   },
   "progress_and_loading": {

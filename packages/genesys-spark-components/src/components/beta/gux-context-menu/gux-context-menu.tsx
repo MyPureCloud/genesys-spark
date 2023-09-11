@@ -143,7 +143,7 @@ export class GuxContextMenu {
       <Host>
         <gux-popup expanded={this.isOpen}>
           <div slot="target" class="gux-button-container">
-            <gux-button-slot-beta accent="ghost">
+            <gux-button-slot accent="ghost">
               <button
                 type="button"
                 onClick={() => this.onButtonClick()}
@@ -160,7 +160,7 @@ export class GuxContextMenu {
                   }
                 ></gux-icon>
               </button>
-            </gux-button-slot-beta>
+            </gux-button-slot>
           </div>
           <div slot="popup" class="gux-list-container">
             <gux-list

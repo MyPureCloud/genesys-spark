@@ -1,11 +1,8 @@
-@import (reference) '../../../style/color.less';
 @import (reference) '../../../style/mixins.less';
 @import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/shadows.less';
-@import (reference) '../../../style/spacing.less';
 
 :host {
-  color: @gux-black-50;
+  color: #2e394c;
 }
 
 .gux-field,
@@ -25,13 +22,13 @@
   font-size: 12px;
   line-height: 1.6667;
   cursor: pointer;
-  background-color: @gux-grey-90;
+  background-color: #f6f7f9;
 }
 
 .gux-error {
   &.gux-target-container-collapsed .gux-field-button,
   &.gux-target-container-expanded {
-    border-color: @gux-alert-red-60;
+    border-color: #ea0b0b;
   }
 }
 
@@ -75,18 +72,18 @@
         all: unset;
         width: 100%;
         color: transparent;
-        caret-color: @gux-black-50;
+        caret-color: #2e394c;
       }
 
       .gux-filter-display {
         white-space: pre;
 
         .gux-filter-text {
-          color: @gux-black-50;
+          color: #2e394c;
         }
 
         .gux-filter-suggestion {
-          color: @gux-black-90;
+          color: #596373;
         }
       }
 
@@ -97,7 +94,7 @@
     }
 
     .gux-placeholder {
-      color: @gux-black-90;
+      color: #596373;
     }
   }
 
@@ -107,8 +104,8 @@
     order: 0;
     width: 16px;
     height: 16px;
-    padding-left: @gux-spacing-xs;
-    color: @gux-black-90;
+    padding-left: 8px;
+    color: #596373;
   }
 }
 
@@ -133,7 +130,7 @@
   .gux-field-button {
     width: auto;
     height: 30px;
-    padding: 0 0 0 @gux-spacing-xs;
+    padding: 0 0 0 8px;
     margin: 0;
     background: inherit;
     border: none;
@@ -158,7 +155,7 @@
 .gux-listbox-container {
   box-sizing: border-box;
   margin: 0;
-  color: @gux-black-50;
+  color: #2e394c;
 }
 
 gux-popup::part(gux-popup-container) {
@@ -174,6 +171,6 @@ gux-popup::part(gux-popup-container) {
   gux-icon {
     width: 16px;
     height: 16px;
-    padding-right: @gux-spacing-xs;
+    padding-right: 8px;
   }
 }

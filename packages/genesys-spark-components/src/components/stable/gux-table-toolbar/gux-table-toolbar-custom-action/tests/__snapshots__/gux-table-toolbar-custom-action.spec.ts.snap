@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#render should render a toolbar-custom-action 1`] = `
+<gux-table-toolbar-custom-action>
+  <mock:shadow-root>
+    <gux-button-slot accent="secondary">
+      <button class="gux-action-title" type="button">
+        <slot name="icon"></slot>
+        <span>
+          <slot name="text"></slot>
+        </span>
+      </button>
+    </gux-button-slot>
+  </mock:shadow-root>
+  <span slot="text">
+    Filter
+  </span>
+  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+</gux-table-toolbar-custom-action>
+`;
+
+exports[`#render should render disabled toolbar-custom-action 1`] = `
+<gux-table-toolbar-custom-action disabled="">
+  <mock:shadow-root>
+    <gux-button-slot accent="secondary">
+      <button class="gux-action-title" disabled="" type="button">
+        <slot name="icon"></slot>
+        <span>
+          <slot name="text"></slot>
+        </span>
+      </button>
+    </gux-button-slot>
+  </mock:shadow-root>
+  <span slot="text">
+    Filter
+  </span>
+  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+</gux-table-toolbar-custom-action>
+`;

@@ -8,7 +8,7 @@ import translationResources from './i18n/en.json';
 import { GuxDismissButtonPosition } from './gux-dismiss-button.types';
 
 @Component({
-  styleUrl: 'gux-dismiss-button.less',
+  styleUrl: 'gux-dismiss-button.scss',
   tag: 'gux-dismiss-button',
   shadow: { delegatesFocus: true }
 })
@@ -28,16 +28,16 @@ export class GuxDismissButton {
 
   render(): JSX.Element {
     return (
-      <button
+      <gux-button-slot
+        accent="ghost"
         class={this.position == 'inherit' ? 'gux-inherit' : undefined}
-        type="button"
-        title={this.i18n('dismiss')}
       >
-        <gux-icon
-          icon-name="close"
-          screenreader-text={this.i18n('dismiss')}
-        ></gux-icon>
-      </button>
+        <button type="button" title={this.i18n('dismiss')}>
+          <div class="gux-icon-container">
+            <gux-icon icon-name="close" decorative></gux-icon>
+          </div>
+        </button>
+      </gux-button-slot>
     ) as JSX.Element;
   }
 }

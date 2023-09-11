@@ -1,0 +1,59 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-height: var(--gse-ui-dataTableItems-tableToolbar-height);
+
+  .search-filter-container {
+    width: 260px;
+    min-width: 260px;
+    padding-right: var(--gse-ui-dataTableItems-tableToolbar-gap);
+  }
+
+  slot[name='search-and-filter']::slotted(*) {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap);
+    align-content: flex-start;
+    align-items: center;
+  }
+
+  .section-spacing {
+    display: flex;
+    flex-direction: row;
+    min-width: 72px;
+  }
+
+  .gux-contextual-permanent-primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: var(--gse-ui-dataTableItems-tableToolbar-gap);
+
+    slot[name='permanent-actions']::slotted(*),
+    slot[name='contextual-actions']::slotted(*) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: var(--gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap);
+      align-content: flex-end;
+      align-items: center;
+    }
+
+    .gux-contextual-wrapper {
+      padding-right: var(--gse-ui-dataTableItems-tableToolbar-gap);
+      border-right: var(--gse-ui-dataTableItems-tableToolbar-divider-width)
+        solid var(--gse-ui-dataTableItems-tableToolbar-dividerColor);
+    }
+
+    .gux-permanent-menu-primary-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: var(--gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap);
+      margin-left: var(--gse-ui-dataTableItems-tableToolbar-gap);
+    }
+  }
+}

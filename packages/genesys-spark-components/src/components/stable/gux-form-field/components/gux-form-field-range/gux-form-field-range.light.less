@@ -1,15 +1,39 @@
-@import (reference) '../../../../../style/color-palette.less';
 @import (reference) '../../../../../style/focus.less';
 @import (reference) '../../../../../style/typography.less';
 
+/* Tokens
+@prop $gse-ui-slider-handle-width
+@prop $gse-ui-slider-handle-height
+@prop $gse-ui-slider-handle-default-backgroundColor
+@prop $gse-ui-slider-handle-hover-backgroundColor
+@prop $gse-ui-slider-handle-active-backgroundColor
+@prop $gse-ui-slider-handle-disabled-backgroundColor
+@prop $gse-ui-slider-handle-borderRadius
+@prop $gse-ui-slider-disabled-opacity
+@prop $gse-ui-slider-label-text-fontFamily
+@prop $gse-ui-slider-label-text-fontWeight
+@prop $gse-ui-slider-label-text-lineHeight
+@prop $gse-ui-slider-label-text-fontSize
+@prop $gse-ui-slider-label-foregroundColor
+@prop $gse-ui-slider-bar-selected-backgroundColor
+@prop $gse-ui-slider-bar-default-backgroundColor
+@prop $gse-ui-slider-bar-height
+@prop $gse-ui-slider-gap
+@prop $gse-ui-slider-focusRing-borderRadius
+**/
+
 // Variables part
-@range-active: @gux-blue-60;
-@thumb-diameter: 12px;
+@range-active: var(--gse-ui-slider-bar-selected-backgroundColor);
+@thumb-diameter: var(--gse-ui-slider-handle-width);
 @track-width: 100%;
-@track-height: 2px;
+@track-height: var(--gse-ui-slider-bar-height);
 @track-radius: 0;
+@handle-enabled-background: var(--gse-ui-slider-handle-default-backgroundColor);
+@handle-hover-background: var(--gse-ui-slider-handle-hover-backgroundColor);
+@handle-active-background: var(--gse-ui-slider-handle-active-backgroundColor);
+@handle-border-radius: 100%;
 @contrast: 5%;
-@slider-border: @gux-grey-30;
+@slider-border: #b4bccb;
 
 .gux-track() {
   width: @track-width;
@@ -22,7 +46,8 @@
   width: @thumb-diameter;
   height: @thumb-diameter;
   cursor: pointer;
-  border-radius: 100%;
+  background: @handle-enabled-background;
+  border-radius: @handle-border-radius;
 }
 
 gux-form-field-range {
@@ -31,8 +56,8 @@ gux-form-field-range {
     width: 100%;
     width: @track-width;
     height: @track-height;
-    margin: @thumb-diameter / 2 0;
-    margin-top: calc(-1 * (@thumb-diameter / 2 + @track-height));
+    margin: calc(@thumb-diameter / 2) 0;
+    margin-top: calc(-1 * calc(@thumb-diameter / 2));
     -webkit-appearance: none;
     background: transparent;
 
@@ -49,9 +74,8 @@ gux-form-field-range {
     &::-webkit-slider-thumb {
       .gux-thumb();
 
-      margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
+      margin-top: calc(calc(@track-height / 2) - calc(@thumb-diameter / 2));
       -webkit-appearance: none;
-      background: @range-active;
       border: 0 solid @range-active; // For firefox
     }
 
@@ -68,8 +92,7 @@ gux-form-field-range {
     &::-moz-range-thumb {
       .gux-thumb();
 
-      margin-top: ((@track-height) / 2) - (@thumb-diameter / 2);
-      background: @range-active;
+      margin-top: calc(calc(@track-height / 2) - calc(@thumb-diameter / 2));
       border: 0 solid @range-active; // For firefox
     }
 
@@ -93,7 +116,6 @@ gux-form-field-range {
     &::-ms-thumb {
       .gux-thumb();
 
-      background: @range-active;
       border: 0 solid @range-active; // For firefox
     }
 
@@ -107,17 +129,24 @@ gux-form-field-range {
   }
 
   &.gux-active {
-    input[type='range'] {
+    input[type='range'],
+    input[type='range']:hover {
       &::-webkit-slider-thumb {
         .gux-focus-ring();
+
+        background-color: @handle-active-background;
       }
 
       &::-moz-range-thumb {
         .gux-focus-ring();
+
+        background-color: @handle-active-background;
       }
 
       &::-ms-thumb {
         .gux-focus-ring();
+
+        background-color: @handle-active-background;
       }
     }
   }
@@ -128,6 +157,20 @@ gux-form-field-range {
 
     .gux-range-tooltip {
       visibility: visible;
+    }
+  }
+
+  input[type='range']:hover {
+    &::-webkit-slider-thumb {
+      background-color: @handle-hover-background;
+    }
+
+    &::-moz-range-thumb {
+      background-color: @handle-hover-background;
+    }
+
+    &::-ms-thumb {
+      background-color: @handle-hover-background;
     }
   }
 }

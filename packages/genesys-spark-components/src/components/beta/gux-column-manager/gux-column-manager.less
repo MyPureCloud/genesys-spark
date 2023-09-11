@@ -1,5 +1,3 @@
-@import (reference) '../../../style/spacing.less';
-@import (reference) '../../../style/color-palette.less';
 @import (reference) '../../../style/typography.less';
 
 .gux-container {
@@ -9,14 +7,23 @@
   .gux-search {
     gux-content-search {
       width: 100%;
+
+      // Hide native input search clear button
+      input[type='search']::-webkit-search-decoration,
+      input[type='search']::-webkit-search-cancel-button,
+      input[type='search']::-webkit-search-results-button,
+      input[type='search']::-webkit-search-results-decoration {
+        display: none;
+        -webkit-appearance: none;
+      }
     }
   }
 
   .gux-select {
-    padding: @gux-spacing-xs 0 @gux-spacing-xs @gux-spacing-medium;
-    margin: @gux-spacing-2xs 0;
-    color: @gux-black-90;
-    background-color: @gux-grey-90;
+    padding: 8px 0 8px 16px;
+    margin: 4px 0;
+    color: #596373;
+    background-color: #f6f7f9;
     border-radius: 4px;
   }
 }

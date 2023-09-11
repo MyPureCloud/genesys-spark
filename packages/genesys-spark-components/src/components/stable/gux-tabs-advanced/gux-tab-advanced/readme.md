@@ -76,6 +76,7 @@ graph TD;
   gux-tab-advanced --> gux-popover-list
   gux-tab-advanced --> gux-tooltip-title
   gux-popover-list --> gux-dismiss-button
+  gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
   gux-tooltip-title --> gux-tooltip
   style gux-tab-advanced fill:#f9f,stroke:#333,stroke-width:4px

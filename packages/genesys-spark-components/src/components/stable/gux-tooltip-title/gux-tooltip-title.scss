@@ -1,6 +1,3 @@
-@import '../../../style/spacing.scss';
-@import '../../../style/variables.scss';
-
 gux-tooltip-title {
   overflow: hidden;
 }
@@ -31,14 +28,14 @@ gux-tooltip {
 .gux-tooltip-icon-decorative {
   .gux-title-container {
     position: relative;
-    margin-left: calc($gux-icon-size-default-global + $gux-spacing-2xs);
+    margin-left: 20px;
 
     gux-icon,
     ::slotted(gux-icon) {
       position: absolute;
-      left: calc(0px - $gux-icon-size-default-global - $gux-spacing-2xs);
+      left: -20px;
       flex-shrink: 0;
-      width: $gux-icon-size-default-global;
+      width: 16px;
     }
   }
 }
