@@ -1,9 +1,8 @@
-@import (reference) '../../../style/color-palette.less';
-@import (reference) '../../../style/spacing.less';
-
 :host {
   display: block;
-  border-top: 1px solid @gux-grey-60;
+  border-top: var(--gse-ui-dataTableItems-tablePagination-divider-width)
+    var(--gse-ui-dataTableItems-tablePagination-divider-style)
+    var(--gse-ui-dataTableItems-tablePagination-divider-color);
 }
 
 .gux-pagination-container {
@@ -13,8 +12,11 @@
   align-content: stretch;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
-  margin: @gux-spacing-small @gux-spacing-small 0 @gux-spacing-small;
+  height: var(--gse-ui-dataTableItems-cell-tablePagination-height);
+  padding: var(--gse-ui-dataTableItems-tablePagination-padding);
+  background-color: var(
+    --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
+  );
 
   .gux-pagination-info {
     display: flex;
@@ -24,6 +26,7 @@
     align-content: stretch;
     align-items: center;
     align-self: auto;
+    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
     justify-content: flex-start;
     order: 0;
 

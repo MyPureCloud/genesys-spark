@@ -11,7 +11,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import paginationResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-pagination-item-counts-beta.less',
+  styleUrl: 'gux-pagination-item-counts-beta.scss',
   tag: 'gux-pagination-item-counts-beta'
 })
 export class GuxPaginationItemCountsBeta implements ComponentInterface {

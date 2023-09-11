@@ -1,0 +1,38 @@
+button {
+  color: var(--gse-ui-button-ghost-default-foregroundColor);
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  &:hover {
+    color: var(--gse-ui-button-ghost-hover-foregroundColor);
+  }
+
+  &:focus-visible {
+    outline: var(--gse-semantic-focusRing-width) solid
+      var(--gse-semantic-color-focus);
+    outline-offset: var(--gse-semantic-focusRing-offset);
+    border-radius: calc(
+      var(--gse-semantic-focusRing-cornerRadius) -
+        var(--gse-semantic-focusRing-offset)
+    );
+  }
+
+  gux-icon {
+    width: var(--gse-ui-icon-size-sm);
+    height: var(--gse-ui-icon-size-sm);
+    padding-top: 4px;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+/* Works for Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

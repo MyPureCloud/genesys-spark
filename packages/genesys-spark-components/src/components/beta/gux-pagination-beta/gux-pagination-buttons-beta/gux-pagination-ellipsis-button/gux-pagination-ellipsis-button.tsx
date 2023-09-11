@@ -18,7 +18,7 @@ import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { afterNextRender } from '@utils/dom/after-next-render';
 
 @Component({
-  styleUrl: 'gux-pagination-ellipsis-button.less',
+  styleUrl: 'gux-pagination-ellipsis-button.scss',
   tag: 'gux-pagination-ellipsis-button',
   shadow: true
 })

@@ -25,7 +25,7 @@ import { GuxPaginationLayoutBeta } from './gux-pagination-beta.types';
 const minAdvancedSpacerWidth = 24;
 
 @Component({
-  styleUrl: 'gux-pagination-beta.less',
+  styleUrl: 'gux-pagination-beta.scss',
   tag: 'gux-pagination-beta',
   shadow: true
 })
