@@ -1,11 +1,11 @@
-@import (reference) '../../../style/mixins.less';
+@use '../../../style/_mixins';
 
 :host {
-  .gux-hide-offscreen();
+  @include mixins.gux-hide-offscreen;
 }
 
 :host(:focus-within) {
-  .gux-unhide-offscreen();
+  @include mixins.gux-unhide-offscreen;
 
   position: absolute;
   inset: 0;
