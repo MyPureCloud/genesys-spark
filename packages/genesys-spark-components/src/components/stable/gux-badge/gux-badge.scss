@@ -60,8 +60,7 @@
     @include gux-sr-only-clip;
   }
 
-  &.gux-info,
-  &.gux-neutral {
+  &.gux-info {
     color: var(--gse-ui-badge-info-regular-foregroundColor);
     background-color: var(--gse-ui-badge-info-regular-backgroundColor);
 
@@ -71,8 +70,7 @@
     }
   }
 
-  &.gux-error,
-  &.gux-red {
+  &.gux-error {
     color: var(--gse-ui-badge-error-regular-foregroundColor);
     background-color: var(--gse-ui-badge-error-regular-backgroundColor);
 
@@ -82,8 +80,7 @@
     }
   }
 
-  &.gux-warning,
-  &.gux-yellow {
+  &.gux-warning {
     color: var(--gse-ui-badge-warning-regular-foregroundColor);
     background-color: var(--gse-ui-badge-warning-regular-backgroundColor);
 
@@ -93,8 +90,7 @@
     }
   }
 
-  &.gux-success,
-  &.gux-green {
+  &.gux-success {
     color: var(--gse-ui-badge-success-regular-foregroundColor);
     background-color: var(--gse-ui-badge-success-regular-backgroundColor);
 
