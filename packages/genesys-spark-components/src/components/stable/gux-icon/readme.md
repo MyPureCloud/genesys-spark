@@ -52,8 +52,8 @@
  - [gux-month-calendar](../../beta/gux-month-picker/gux-month-calendar)
  - [gux-month-picker-beta](../../beta/gux-month-picker)
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
- - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-beta](../../beta/gux-pagination-beta/gux-pagination-buttons-beta)
+ - [gux-pagination-buttons-legacy](../../legacy/gux-pagination-legacy/gux-pagination-buttons)
  - [gux-pagination-cursor](../gux-pagination-cursor)
  - [gux-pagination-ellipsis-button](../../beta/gux-pagination-beta/gux-pagination-buttons-beta/gux-pagination-ellipsis-button)
  - [gux-phone-input-beta](../../beta/gux-phone-input)
@@ -109,8 +109,8 @@ graph TD;
   gux-month-calendar --> gux-icon
   gux-month-picker-beta --> gux-icon
   gux-option-icon --> gux-icon
-  gux-pagination-buttons --> gux-icon
   gux-pagination-buttons-beta --> gux-icon
+  gux-pagination-buttons-legacy --> gux-icon
   gux-pagination-cursor --> gux-icon
   gux-pagination-ellipsis-button --> gux-icon
   gux-phone-input-beta --> gux-icon

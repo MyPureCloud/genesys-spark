@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"25\\" layout=\\"full\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"50\\" layout=\\"full\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"75\\" layout=\\"full\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"100\\" layout=\\"full\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"25\\" layout=\\"full\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"10\\" total-items=\\"1000\\" items-per-page=\\"25\\" layout=\\"full\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"10\\" total-items=\\"1000\\" items-per-page=\\"50\\" layout=\\"full\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"10\\" total-items=\\"1000\\" items-per-page=\\"75\\" layout=\\"full\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"10\\" total-items=\\"1000\\" items-per-page=\\"100\\" layout=\\"full\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (10) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"25\\" layout=\\"small\\" hydrated=\\"\\"></gux-pagination-legacy>"`;
+
+exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `"<gux-pagination-legacy lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"25\\" layout=\\"expanded\\" hydrated=\\"\\"></gux-pagination-legacy>"`;

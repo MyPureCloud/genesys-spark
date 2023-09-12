@@ -18,7 +18,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import {
   GuxItemsPerPage,
   GuxPaginationState
-} from '../../stable/gux-pagination/gux-pagination.types';
+} from '../../legacy/gux-pagination-legacy/gux-pagination.types';
 
 import { GuxPaginationLayoutBeta } from './gux-pagination-beta.types';
 

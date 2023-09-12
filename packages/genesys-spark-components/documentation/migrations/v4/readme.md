@@ -88,7 +88,8 @@ An `is-open` prop has been added to control showing and hiding the component. Th
 | gux-action-toast       | gux-action-toast-legacy       | gux-toast                                   | [link](./gux-action-toast-legacy.md)       |
 | gux-notification-toast | gux-notification-toast-legacy | gux-toast                                   | [link](./gux-notification-toast-legacy.md) |
 | gux-simple-toast       | gux-simple-toast-legacy       | gux-toast                                   | [link](./gux-simple-toast-legacy.md)       |
-| gux-disclosure-button  | gux-disclosure-button-legacy' | none                                        | Contact the Design System UX Team          |
+| gux-pagination         | gux-pagination-legacy         | gux-pagination                              | [link](./gux-pagination-legacy.md)         |
+| gux-disclosure-button  | gux-disclosure-button-legacy  | none                                        | Contact the Design System UX Team          |
 
 Action: _(required)_ add `-legacy` to the tag name of the component.
 
