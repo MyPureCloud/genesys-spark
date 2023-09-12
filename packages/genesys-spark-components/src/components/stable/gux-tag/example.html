@@ -1,0 +1,126 @@
+<h1>gux-tag</h1>
+
+<h2>Active</h2>
+
+<div class="tags">
+  <gux-tag>Default</gux-tag>
+  <gux-tag accent="default">Default</gux-tag>
+  <gux-tag accent="1">Accent 1</gux-tag>
+  <gux-tag accent="2">Accent 2</gux-tag>
+  <gux-tag accent="3">Accent 3</gux-tag>
+  <gux-tag accent="4">Accent 4</gux-tag>
+  <gux-tag accent="5">Accent 5</gux-tag>
+  <gux-tag accent="6">Accent 6</gux-tag>
+  <gux-tag accent="7">Accent 7</gux-tag>
+  <gux-tag accent="8">Accent 8</gux-tag>
+  <gux-tag accent="9">Accent 9</gux-tag>
+  <gux-tag accent="10">Accent 10</gux-tag>
+  <gux-tag accent="invalid">Invalid</gux-tag>
+</div>
+
+<h2>Disabled</h2>
+
+<div class="tags">
+  <gux-tag disabled>Default</gux-tag>
+  <gux-tag disabled accent="default">Default</gux-tag>
+  <gux-tag disabled accent="1">Accent 1</gux-tag>
+  <gux-tag disabled accent="2">Accent 2</gux-tag>
+  <gux-tag disabled accent="3">Accent 3</gux-tag>
+  <gux-tag disabled accent="4">Accent 4</gux-tag>
+  <gux-tag disabled accent="5">Accent 5</gux-tag>
+  <gux-tag disabled accent="6">Accent 6</gux-tag>
+  <gux-tag disabled accent="7">Accent 7</gux-tag>
+  <gux-tag disabled accent="8">Accent 8</gux-tag>
+  <gux-tag disabled accent="9">Accent 9</gux-tag>
+  <gux-tag disabled accent="10">Accent 10</gux-tag>
+  <gux-tag disabled accent="invalid">Invalid</gux-tag>
+</div>
+
+<h2>Active Removable</h2>
+
+<div class="tags">
+  <gux-tag removable>Default</gux-tag>
+  <gux-tag removable accent="default">Default</gux-tag>
+  <gux-tag removable accent="1">Accent 1</gux-tag>
+  <gux-tag removable accent="2">Accent 2</gux-tag>
+  <gux-tag removable accent="3">Accent 3</gux-tag>
+  <gux-tag removable accent="4">Accent 4</gux-tag>
+  <gux-tag removable accent="5">Accent 5</gux-tag>
+  <gux-tag removable accent="6">Accent 6</gux-tag>
+  <gux-tag removable accent="7">Accent 7</gux-tag>
+  <gux-tag removable accent="8">Accent 8</gux-tag>
+  <gux-tag removable accent="9">Accent 9</gux-tag>
+  <gux-tag removable accent="10">Accent 10</gux-tag>
+  <gux-tag removable accent="invalid">Invalid</gux-tag>
+</div>
+
+<h2>Disabled Removable</h2>
+
+<div class="tags">
+  <gux-tag removable disabled>Default</gux-tag>
+  <gux-tag removable disabled accent="default">Default</gux-tag>
+  <gux-tag removable disabled accent="1">Accent 1</gux-tag>
+  <gux-tag removable disabled accent="2">Accent 2</gux-tag>
+  <gux-tag removable disabled accent="3">Accent 3</gux-tag>
+  <gux-tag removable disabled accent="4">Accent 4</gux-tag>
+  <gux-tag removable disabled accent="5">Accent 5</gux-tag>
+  <gux-tag removable disabled accent="6">Accent 6</gux-tag>
+  <gux-tag removable disabled accent="7">Accent 7</gux-tag>
+  <gux-tag removable disabled accent="8">Accent 8</gux-tag>
+  <gux-tag removable disabled accent="9">Accent 9</gux-tag>
+  <gux-tag removable disabled accent="10">Accent 10</gux-tag>
+  <gux-tag removable disabled accent="invalid">Invalid</gux-tag>
+</div>
+
+<h2>Custom accent colors</h2>
+<div>
+  <style>
+    .custom {
+      color: black;
+      background-color: hotpink;
+    }
+  </style>
+  <gux-tag class="custom" accent="inherit">Inherit</gux-tag>
+  <gux-tag class="custom" disabled accent="inherit">Inherit</gux-tag>
+  <gux-tag class="custom" removable accent="inherit">Inherit</gux-tag>
+  <gux-tag class="custom" removable disabled accent="inherit">Inherit</gux-tag>
+  <gux-inline-alert accent="error" class="custom-color-warning">
+    <strong>Important:</strong>
+    Color contrast must be at least 4.5:1 to pass WCAG AA guidelines.
+    <a href="https://webaim.org/resources/contrastchecker/" target="_blank">
+      Check contrast
+    </a>
+  </gux-inline-alert>
+</div>
+
+<style
+  onload="(function() {
+const removeTagElements = document.getElementsByClassName('remove-tag');
+
+Array.from(removeTagElements).forEach(function(removeTagElement) {
+  removeTagElement.addEventListener('guxdelete', (event) => {
+    const valueToRemove = event.detail;
+
+    Array.from(
+      removeTagElement.querySelectorAll('gux-tag')
+    ).forEach((tag) => {
+      if (tag.value === valueToRemove) {
+        tag.remove();
+      }
+    });
+  })
+});
+})()"
+>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 1px solid grey;
+  }
+
+  gux-tag {
+    max-width: 100px;
+    margin: 4px;
+  }
+</style>

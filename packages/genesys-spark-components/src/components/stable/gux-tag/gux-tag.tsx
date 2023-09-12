@@ -14,15 +14,15 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '@utils/tracking/usage';
 
 import tagResources from './i18n/en.json';
-import { GuxTagAccent, GuxTagColor } from './gux-tag.types';
+import { GuxTagAccent } from './gux-tag.types';
 
 /**
  * @slot - content
  */
 
 @Component({
-  styleUrl: 'gux-tag.less',
-  tag: 'gux-tag-beta',
+  styleUrl: 'gux-tag.scss',
+  tag: 'gux-tag',
   shadow: true
 })
 export class GuxTag {
@@ -32,41 +32,25 @@ export class GuxTag {
   root: HTMLElement;
 
   /**
-   * Triggered when click on remove button
-   */
-  @Event()
-  guxdelete: EventEmitter<string>;
-
-  // TODO: V4 - https://inindca.atlassian.net/browse/COMUI-1725
-  /**
-   * Tag background color
-   */
-  @Prop()
-  color: GuxTagColor = 'default';
-
-  @State()
-  accent: GuxTagAccent = 'default';
-
-  /**
    * Index for remove tag
    */
   @Prop()
   value: string;
 
-  /**
-   * Tag is removable.
-   */
+  @Prop()
+  accent: GuxTagAccent = 'default';
+
   @Prop()
   disabled: boolean = false;
 
-  /**
-   * Tag is removable.
-   */
   @Prop()
   removable: boolean = false;
 
   @State()
   label: string;
+
+  @Event()
+  guxdelete: EventEmitter<string>;
 
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
@@ -129,9 +113,7 @@ export class GuxTag {
           <gux-icon
             class="gux-tag-remove-icon"
             icon-name="close"
-            screenreader-text={this.i18n('remove-tag', {
-              label: this.label
-            })}
+            screenreader-text={this.i18n('remove-tag', { label: this.label })}
           />
         </button>
       ) as JSX.Element;
@@ -153,7 +135,6 @@ export class GuxTag {
       <div
         class={{
           'gux-tag': true,
-          [`gux-${this.color}`]: true,
           [`gux-accent-${this.accent}`]: true,
           'gux-disabled': this.disabled
         }}

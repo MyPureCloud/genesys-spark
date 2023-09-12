@@ -4,15 +4,15 @@ import { GuxTag } from '../gux-tag';
 const components = [GuxTag];
 const language = 'en';
 
-describe('gux-tag-beta', () => {
+describe('gux-tag', () => {
   describe('#render', () => {
     [
-      '<gux-tag-beta>default</gux-tag-beta>',
-      '<gux-tag-beta color="default">default (explicit)</gux-tag-beta>',
-      '<gux-tag-beta color="navy">navy</gux-tag-beta>',
-      '<gux-tag-beta color="navy"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>',
-      '<gux-tag-beta color="navy" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>',
-      '<gux-tag-beta color="navy" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag-beta>'
+      '<gux-tag>default</gux-tag>',
+      '<gux-tag accent="default">default (explicit)</gux-tag>',
+      '<gux-tag accent="1">navy</gux-tag>',
+      '<gux-tag accent="1"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
+      '<gux-tag accent="1" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
+      '<gux-tag accent="1" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
@@ -26,10 +26,10 @@ describe('gux-tag-beta', () => {
     describe('click', () => {
       it('should not have a delete button if tag is not removable', async () => {
         const html = `
-          <gux-tag-beta color="navy" value="3">
+          <gux-tag accent="1" value="3">
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
-          </gux-tag-beta>
+          </gux-tag>
         `;
         const page = await newSpecPage({ components, html, language });
         const element = page.root as HTMLElement;
@@ -41,10 +41,10 @@ describe('gux-tag-beta', () => {
 
       it('should emit guxdelete if tag is removable and not disabled', async () => {
         const html = `
-          <gux-tag-beta color="navy" value="3" removable>
+          <gux-tag accent="1" value="3" removable>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
-          </gux-tag-beta>
+          </gux-tag>
         `;
         const page = await newSpecPage({ components, html, language });
         const element = page.root as HTMLElement;
@@ -64,10 +64,10 @@ describe('gux-tag-beta', () => {
 
       it('should not emit guxdelete if tag is removable and disabled', async () => {
         const html = `
-          <gux-tag-beta color="navy" value="3" removable disabled>
+          <gux-tag accent="1" value="3" removable disabled>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
-          </gux-tag-beta>
+          </gux-tag>
         `;
         const page = await newSpecPage({ components, html, language });
         const element = page.root as HTMLElement;
@@ -87,10 +87,10 @@ describe('gux-tag-beta', () => {
     describe('keypress', () => {
       it('should emit guxdelete if tag is focused and removable and "Delete" is pressed', async () => {
         const html = `
-          <gux-tag-beta color="navy" value="3" removable>
+          <gux-tag accent="1" value="3" removable>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
-          </gux-tag-beta>
+          </gux-tag>
         `;
         const page = await newSpecPage({ components, html, language });
         const element = page.root as HTMLElement;
@@ -108,10 +108,10 @@ describe('gux-tag-beta', () => {
 
       it('should emit guxdelete if tag is focused and removable and "Backspace" is pressed', async () => {
         const html = `
-          <gux-tag-beta color="navy" value="3" removable>
+          <gux-tag accent="1" value="3" removable>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
-          </gux-tag-beta>`;
+          </gux-tag>`;
         const page = await newSpecPage({ components, html, language });
         const element = page.root as HTMLElement;
         const guxdeleteSpy = jest.fn();
@@ -130,10 +130,10 @@ describe('gux-tag-beta', () => {
 
       it('should not emit guxdelete if tag is focused and not removable and "Delete" is pressed', async () => {
         const html = `
-          <gux-tag-beta color="navy" value="3">
+          <gux-tag accent="1" value="3">
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
-          </gux-tag-beta>
+          </gux-tag>
         `;
         const page = await newSpecPage({ components, html, language });
         const element = page.root as HTMLElement;
@@ -149,10 +149,10 @@ describe('gux-tag-beta', () => {
 
       it('should not emit guxdelete if tag is focused and not removable and "Backspace" is pressed', async () => {
         const html = `
-          <gux-tag-beta color="navy" value="3">
+          <gux-tag accent="1" value="3">
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
-          </gux-tag-beta>
+          </gux-tag>
         `;
         const page = await newSpecPage({ components, html, language });
         const element = page.root as HTMLElement;

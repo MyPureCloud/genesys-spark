@@ -36,7 +36,7 @@
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown](../gux-advanced-dropdown)
  - [gux-button-multi](../gux-button-multi)
- - [gux-context-menu](../../beta/gux-context-menu)
+ - [gux-context-menu](../gux-context-menu)
  - [gux-dropdown](../gux-dropdown)
  - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
  - [gux-month-picker-beta](../../beta/gux-month-picker)

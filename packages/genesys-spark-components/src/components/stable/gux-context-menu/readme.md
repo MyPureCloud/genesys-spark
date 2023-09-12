@@ -14,10 +14,10 @@
 
 ### Depends on
 
-- [gux-popup](../../stable/gux-popup)
-- [gux-button-slot](../../stable/gux-button-slot)
-- [gux-icon](../../stable/gux-icon)
-- [gux-list](../../stable/gux-list)
+- [gux-popup](../gux-popup)
+- [gux-button-slot](../gux-button-slot)
+- [gux-icon](../gux-icon)
+- [gux-list](../gux-list)
 
 ### Graph
 ```mermaid

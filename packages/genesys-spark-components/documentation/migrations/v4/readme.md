@@ -43,9 +43,10 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 ### There have been API changes in these components.
 
-| V3 tag name    | V4 tag name |
-| -------------- | ----------- |
-| gux-badge-beta | gux-badge   |
+| V3 tag name      | V4 tag name | Migration Guide    |
+| ---------------- | ----------- | ------------------ |
+| `gux-badge-beta` | `gux-badge` | [link](#gux-badge) |
+| `gux-tag-beta`   | `gux-tag`   | [link](#gux-tag)   |
 
 #### gux-badge
 
@@ -70,6 +71,18 @@ The `color` property has been removed. All uses of the `color` property can be m
 + <gux-badge accent="info">Text</gux-badge>
 + <gux-badge accent="error">Text</gux-badge>
 + <gux-badge accent="warning">Text</gux-badge>
+```
+
+#### gux-tag
+
+- The `color` property has been removed.
+  - All uses of the `color` property must be migrated to the `accent` property.
+  - There is no guidance for mapping a specific color to an accent as the number of available accents in less than the number of colors that were previously available.
+  - If this change effects your use case please reach out to the Design System Team for guidance/assistance.
+
+```diff
+- <gux-tag-beta color="navy">Text</gux-tag-beta>
++ <gux-tag accent="1">Text</gux-tag>
 ```
 
 #### gux-calendar

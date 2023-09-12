@@ -105,7 +105,8 @@
     "required": "Required"
   },
   "gux-listbox": {
-    "noMatches": "No matches",
+    "noMatchesHeader": "Sorry, this menu is empty right now.",
+    "noMatchesMessage": "Please try again later.",
     "loading": "Loading..."
   },
   "gux-listbox-multi": {
