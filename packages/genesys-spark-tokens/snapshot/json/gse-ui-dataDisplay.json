@@ -104,7 +104,8 @@
         "fontWeight": 400
       },
       "table_pagination": {
-        "width": "727px"
+        "width": "727px",
+        "height": "56px"
       }
     },
     "edit_column": {
@@ -151,7 +152,10 @@
         "fontWeight": 700
       },
       "default_background_color": "#ffffff",
-      "foreground_color": "#1b2c48"
+      "foreground_color": "#1b2c48",
+      "count-display": {
+        "gap": "4px"
+      }
     }
   },
   "avatar": {
