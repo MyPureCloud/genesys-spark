@@ -1,0 +1,144 @@
+@use '../../../../../genesys-spark-tokens/dist/scss/_gse-ui-feedback'; // TODO: https://inindca.atlassian.net/browse/COMUI-2242
+
+/**
+  * @prop --gse-ui-badge-height
+  * @prop --gse-ui-badge-height
+  * @prop --gse-ui-blankState-backgroundColor
+  * @prop --gse-ui-blankState-borderRadius
+  * @prop --gse-ui-blankState-gapContent
+  * @prop --gse-ui-blankState-gapMain
+  * @prop --gse-ui-blankState-gapMessage
+  * @prop --gse-ui-blankState-icon-size-lg
+  * @prop --gse-ui-blankState-icon-size-sm
+  * @prop --gse-ui-blankState-iconColor
+  * @prop --gse-ui-blankState-large-width : // TODO https://inindca.atlassian.net/browse/COMUI-2242
+  * @prop --gse-ui-blankState-padding
+  * @prop --gse-ui-blankState-small-width : // TODO https://inindca.atlassian.net/browse/COMUI-2242
+  * @prop --gse-ui-progressAndLoading-blankState-large-header-fontFamily
+  * @prop --gse-ui-progressAndLoading-blankState-large-header-fontSize
+  * @prop --gse-ui-progressAndLoading-blankState-large-header-fontWeight
+  * @prop --gse-ui-progressAndLoading-blankState-large-header-lineHeight
+  * @prop --gse-ui-progressAndLoading-blankState-large-subheader-fontFamily
+  * @prop --gse-ui-progressAndLoading-blankState-large-subheader-fontSize
+  * @prop --gse-ui-progressAndLoading-blankState-large-subheader-fontWeight
+  * @prop --gse-ui-progressAndLoading-blankState-large-subheader-lineHeight
+  * @prop --gse-ui-progressAndLoading-blankState-small-header-fontFamily
+  * @prop --gse-ui-progressAndLoading-blankState-small-header-fontSize
+  * @prop --gse-ui-progressAndLoading-blankState-small-header-fontWeight
+  * @prop --gse-ui-progressAndLoading-blankState-small-header-lineHeight
+  * @prop --gse-ui-progressAndLoading-blankState-small-subheader-fontFamily
+  * @prop --gse-ui-progressAndLoading-blankState-small-subheader-fontSize
+  * @prop --gse-ui-progressAndLoading-blankState-small-subheader-fontWeight
+  * @prop --gse-ui-progressAndLoading-blankState-small-subheader-lineHeight
+  */
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  container-type: inline-size;
+}
+
+.gux-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gse-ui-blankState-padding);
+  border-radius: var(--gse-ui-blankState-borderRadius);
+  color: var(--gse-ui-blankState-foregroundColor);
+  background-color: var(--gse-ui-blankState-backgroundColor);
+
+  .gux-image {
+    padding-bottom: var(--gse-ui-blankState-gapMain);
+  }
+
+  .gux-message {
+    padding-bottom: var(--gse-ui-blankState-gapMessage);
+  }
+
+  .gux-guidance {
+    padding-bottom: var(--gse-ui-blankState-gapContent);
+  }
+
+  ::slotted(gux-icon) {
+    width: var(--gse-ui-blankState-icon-size-lg);
+    height: var(--gse-ui-blankState-icon-size-lg);
+    color: var(--gse-ui-blankState-iconColor);
+  }
+
+  slot[name='primary-message'] {
+    color: var(--gse-ui-blankState-foregroundColor);
+    text-align: center;
+    font-family: var(
+      --gse-ui-progressAndLoading-blankState-large-header-fontFamily
+    );
+    font-weight: var(
+      --gse-ui-progressAndLoading-blankState-large-header-fontWeight
+    );
+    line-height: var(
+      --gse-ui-progressAndLoading-blankState-large-header-lineHeight
+    );
+    font-size: var(
+      --gse-ui-progressAndLoading-blankState-large-header-fontSize
+    );
+  }
+
+  slot[name='additional-guidance'] {
+    color: var(--gse-ui-blankState-foregroundColor);
+    text-align: center;
+    font-family: var(
+      --gse-ui-progressAndLoading-blankState-large-subheader-fontFamily
+    );
+    font-weight: var(
+      --gse-ui-progressAndLoading-blankState-large-subheader-fontWeight
+    );
+    line-height: var(
+      --gse-ui-progressAndLoading-blankState-large-subheader-lineHeight
+    );
+    font-size: var(
+      --gse-ui-progressAndLoading-blankState-large-subheader-fontSize
+    );
+  }
+}
+
+// https://bholmes.dev/blog/alternative-to-css-variable-media-queries/
+@container (width <= #{gse-ui-feedback.$gse-ui-blankState-small-width}) {
+  .gux-container {
+    ::slotted(gux-icon) {
+      width: var(--gse-ui-blankState-icon-size-sm);
+      height: var(--gse-ui-blankState-icon-size-sm);
+    }
+
+    slot[name='primary-message'] {
+      font-family: var(
+        --gse-ui-progressAndLoading-blankState-small-header-fontFamily
+      );
+      font-weight: var(
+        --gse-ui-progressAndLoading-blankState-small-header-fontWeight
+      );
+      line-height: var(
+        --gse-ui-progressAndLoading-blankState-small-header-lineHeight
+      );
+      font-size: var(
+        --gse-ui-progressAndLoading-blankState-small-header-fontSize
+      );
+    }
+
+    slot[name='additional-guidance'] {
+      font-family: var(
+        --gse-ui-progressAndLoading-blankState-small-subheader-fontFamily
+      );
+      font-weight: var(
+        --gse-ui-progressAndLoading-blankState-small-subheader-fontWeight
+      );
+      line-height: var(
+        --gse-ui-progressAndLoading-blankState-small-subheader-lineHeight
+      );
+      font-size: var(
+        --gse-ui-progressAndLoading-blankState-small-subheader-fontSize
+      );
+    }
+  }
+}

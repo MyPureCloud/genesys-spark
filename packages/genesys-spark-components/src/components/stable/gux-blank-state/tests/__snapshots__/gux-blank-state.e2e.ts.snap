@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-blank-state renders 1`] = `"<gux-blank-state lang=\\"en\\" hydrated=\\"\\"> <gux-icon slot=\\"image\\" icon-name=\\"bot\\" decorative=\\"true\\" hydrated=\\"\\"></gux-icon> <div slot=\\"primary-message\\">Sorry, something went wrong.</div> <div slot=\\"additional-guidance\\">Please refresh this page to try again.</div> <button slot=\\"call-to-action\\" type=\\"button\\" onclick=\\"notify(event)\\"> Call to action </button> </gux-blank-state>"`;

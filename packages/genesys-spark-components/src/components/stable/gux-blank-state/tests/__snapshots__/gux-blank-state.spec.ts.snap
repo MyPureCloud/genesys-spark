@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-blank-state-beta #render should render the component as expected 1`] = `
-<gux-blank-state-beta>
+exports[`gux-blank-state should render the component as expected 1`] = `
+<gux-blank-state>
   <mock:shadow-root>
-    <div class="gux-container gux-large">
-      <slot name="image"></slot>
-      <div class="gux-message-container">
+    <div class="gux-container">
+      <div class="gux-image">
+        <slot name="image"></slot>
+      </div>
+      <div class="gux-message">
         <slot name="primary-message"></slot>
       </div>
-      <div class="gux-guidance-container">
+      <div class="gux-guidance">
         <slot name="additional-guidance"></slot>
       </div>
       <gux-button-slot accent="primary">
@@ -26,5 +28,5 @@ exports[`gux-blank-state-beta #render should render the component as expected 1`
   <button onclick="notify(event)" slot="call-to-action" type="button">
     Call to action
   </button>
-</gux-blank-state-beta>
+</gux-blank-state>
 `;
