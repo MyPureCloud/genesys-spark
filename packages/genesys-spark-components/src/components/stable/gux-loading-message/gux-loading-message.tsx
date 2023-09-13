@@ -14,8 +14,8 @@ import * as loadingMessageWidth from './gux-loading-message-constants';
  */
 
 @Component({
-  styleUrl: 'gux-loading-message.less',
-  tag: 'gux-loading-message-beta',
+  styleUrl: 'gux-loading-message.scss',
+  tag: 'gux-loading-message',
   shadow: true
 })
 export class GuxLoadingMessage {

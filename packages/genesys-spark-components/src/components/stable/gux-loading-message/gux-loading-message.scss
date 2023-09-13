@@ -1,4 +1,4 @@
-@import (reference) '../../../style/typography.less';
+@use '../../../style/typography';
 
 :host {
   display: flex;
@@ -28,11 +28,11 @@
     padding: 8px 0 4px;
 
     slot[name='primary-message'] {
-      .h3();
+      @include typography.h3;
     }
 
     slot[name='additional-guidance'] {
-      .gux-small-text();
+      @include typography.gux-small-text;
     }
   }
 
@@ -40,11 +40,11 @@
     padding: 16px 0 4px;
 
     slot[name='primary-message'] {
-      .h1();
+      @include typography.h1;
     }
 
     slot[name='additional-guidance'] {
-      .gux-large-text();
+      @include typography.gux-large-text;
     }
   }
 }

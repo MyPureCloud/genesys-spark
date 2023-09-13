@@ -1,4 +1,4 @@
-# gux-loading-message-beta
+# gux-loading-message
 
 
 
