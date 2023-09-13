@@ -6,14 +6,14 @@ import { GuxContextMenu } from '../gux-context-menu';
 
 const components = [GuxContextMenu, GuxButton, GuxList, GuxListItem];
 const html = `
-<gux-context-menu-beta>
+<gux-context-menu>
   <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
   <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
   <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
-</gux-context-menu-beta>
+</gux-context-menu>
 `;
 
-describe('gux-context-menu-beta', () => {
+describe('gux-context-menu', () => {
   let page: SpecPage;
   let component: GuxContextMenu;
 
