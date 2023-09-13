@@ -14,7 +14,7 @@ const DEFAULT_LABEL_FIELD_NAME = 'value';
 const DEFAULT_RING_WIDTH = 32;
 
 @Component({
-  styleUrl: 'gux-chart-donut.less',
+  styleUrl: 'gux-chart-donut.scss',
   tag: 'gux-chart-donut-beta',
   shadow: true
 })
