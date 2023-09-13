@@ -5,7 +5,8 @@ import {
   Prop,
   Watch,
   Event,
-  EventEmitter
+  EventEmitter,
+  Element
 } from '@stencil/core';
 
 import {
@@ -18,6 +19,8 @@ import {
   shift,
   hide
 } from '@floating-ui/dom';
+
+import { hasParentElement } from '@utils/dom/has-parent-element';
 
 /**
  * @slot target - Required slot for target
@@ -32,6 +35,9 @@ export class GuxPopup {
   private targetElementContainer: HTMLElement;
   private popupElementContainer: HTMLElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
+
+  @Element()
+  private root: HTMLGuxPopupElement;
 
   @Prop()
   expanded: boolean = false;
@@ -68,7 +74,8 @@ export class GuxPopup {
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
       const popupElementContainer = this.popupElementContainer;
-      const targetElementContainer = this.targetElementContainer;
+      const root = this.root;
+
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -80,12 +87,17 @@ export class GuxPopup {
             flip(),
             size({
               apply({ rects }: MiddlewareArguments) {
-                Object.assign(popupElementContainer.style, {
-                  minWidth: `${rects.reference.width}px`
-                });
-                Object.assign(targetElementContainer.style, {
-                  width: `${rects.reference.width}px`
-                });
+                if (
+                  hasParentElement('gux-action-button, gux-button-multi', root)
+                ) {
+                  Object.assign(popupElementContainer.style, {
+                    minWidth: `${rects.reference.width}px`
+                  });
+                } else {
+                  Object.assign(popupElementContainer.style, {
+                    width: `${rects.reference.width}px`
+                  });
+                }
               }
             }),
             shift(),
@@ -146,7 +158,6 @@ export class GuxPopup {
       >
         <slot name="target"></slot>
         <div
-          part="gux-popup-container"
           class={{
             'gux-popup-container': true,
             'gux-expanded': this.expanded && !this.disabled

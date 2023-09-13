@@ -35,7 +35,11 @@ function composeI18nFileFromComponents(locale) {
 
     fs.writeFileSync(
       path.join(translationsFolder, `${locale}.json`),
-      JSON.stringify(translations, null, 2) + '\n'
+      JSON.stringify(
+        Object.fromEntries(Object.entries(translations).sort()),
+        null,
+        2
+      ) + '\n'
     );
   } catch (err) {
     console.error('Error encountered while trying to find the i18n json files');

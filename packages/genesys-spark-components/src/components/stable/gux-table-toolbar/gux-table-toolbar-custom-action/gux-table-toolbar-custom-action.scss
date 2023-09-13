@@ -1,0 +1,23 @@
+@import '../../../../style/typography.scss';
+
+:host([disabled]),
+button[disabled] {
+  pointer-events: none;
+}
+
+.gux-sr-only {
+  display: flex;
+  @include gux-sr-only-clip;
+}
+
+.gux-action-title {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gse-ui-button-gap);
+  align-items: center;
+
+  slot[name='icon']::slotted(gux-icon) {
+    width: var(--gse-ui-icon-size-sm);
+    height: var(--gse-ui-icon-size-sm);
+  }
+}

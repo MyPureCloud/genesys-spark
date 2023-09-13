@@ -45,6 +45,16 @@
       "selected_bar": {
         "height": "3px",
         "width": "229px"
+      },
+      "context_menu": {
+        "default": {
+          "height": "40px",
+          "width": "41px"
+        },
+        "compact": {
+          "height": "32px",
+          "width": "41px"
+        }
       }
     },
     "divider": {
@@ -106,6 +116,16 @@
       "table_pagination": {
         "width": "727px",
         "height": "56px"
+      },
+      "context_menu": {
+        "default": {
+          "height": "40px",
+          "width": "41px"
+        },
+        "compact": {
+          "height": "32px",
+          "width": "41px"
+        }
       }
     },
     "edit_column": {

@@ -1,8 +1,5 @@
-@import (reference) '../../../style/color.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/zindex.less';
 
 :host {
@@ -52,7 +49,7 @@
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
-      margin-right: @gux-spacing-xs;
+      margin-right: 8px;
       font-size: 12px;
       font-weight: bold;
       line-height: 20px;
@@ -76,18 +73,17 @@
         justify-content: center;
         width: 100%;
         height: 32px;
-        padding: @gux-spacing-2xs @gux-spacing-xs @gux-spacing-2xs
-          @gux-spacing-xs;
+        padding: 4px 8px;
         font-family: inherit;
         font-size: 12px;
         line-height: 1.6667;
-        color: @gux-black-50;
-        background-color: @gux-grey-90;
+        color: #2e394c;
+        background-color: #f6f7f9;
         background-image: none;
         .gux-form-field-border();
 
         &:focus-within {
-          border-color: @gux-blue-60;
+          border-color: #2a60c8;
           .gux-focus-ring();
         }
 
@@ -97,13 +93,13 @@
           order: 0;
           width: 100px;
           overflow: hidden;
-          color: @gux-black-50;
-          background-color: @gux-grey-90;
+          color: #2e394c;
+          background-color: #f6f7f9;
           border: none;
           outline: none;
 
           &::placeholder {
-            color: @gux-black-90;
+            color: #596373;
             opacity: 1;
           }
 
@@ -124,7 +120,7 @@
           justify-content: center;
           order: 0;
           padding: 2px;
-          color: @gux-black-90;
+          color: #596373;
           background: transparent;
           border: none;
           border-radius: 4px;
@@ -136,7 +132,7 @@
 
           &:not(:disabled):focus-visible,
           &:not(:disabled):hover {
-            color: @gux-black-50;
+            color: #2e394c;
             cursor: pointer;
           }
 
@@ -151,7 +147,7 @@
         position: fixed;
         z-index: var(--gux-zindex-popup, @gux-zindex-popup);
         display: none;
-        .gux-shadow-20();
+        box-shadow: 0 2px 4px fade(#202937, 24%);
       }
     }
   }
@@ -161,11 +157,11 @@
       .gux-datepicker-field-input {
         .gux-datepicker-field-text-input {
           button {
-            color: @gux-blue-60;
+            color: #2a60c8;
 
             &:not(:disabled):focus-visible,
             &:not(:disabled):hover {
-              color: @gux-blue-60;
+              color: #2a60c8;
             }
           }
         }

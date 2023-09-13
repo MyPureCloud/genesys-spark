@@ -1,12 +1,9 @@
-@import (reference) '../../../style/color-palette.less';
 @import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/variables.less';
 
 :host {
   display: block;
-  color: @gux-black-50;
+  color: #2e394c;
 }
 
 .gux-phone-text-input {
@@ -16,9 +13,9 @@
   width: 100%;
   overflow: hidden;
   font-size: 12px;
-  color: @gux-black-50;
+  color: #2e394c;
   text-overflow: ellipsis;
-  background-color: @gux-grey-90;
+  background-color: #f6f7f9;
   border: none;
   outline: none;
 }
@@ -33,19 +30,19 @@
   justify-content: center;
   width: 100%;
   height: 32px;
-  padding: @gux-spacing-2xs @gux-spacing-xs @gux-spacing-2xs 0;
+  padding: 4px 8px 4px 0;
   font-family: inherit;
   font-size: 12px;
   line-height: 1.6667;
-  color: @gux-black-50;
-  background-color: @gux-grey-90;
+  color: #2e394c;
+  background-color: #f6f7f9;
   background-image: none;
-  border: 1px solid @gux-black-100;
+  border: 1px solid #6b7585;
   border-radius: 4px;
-  box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
+  box-shadow: inset 0 0 4px fade(#202937, 16%);
 
   &.gux-error {
-    border-color: @gux-alert;
+    border-color: #ea0b0b;
   }
 
   &:focus-within {
@@ -106,7 +103,7 @@
     }
 
     .gux-placeholder {
-      color: @gux-black-90;
+      color: #596373;
     }
   }
 
@@ -116,8 +113,8 @@
     order: 0;
     width: 16px;
     height: 16px;
-    padding-left: @gux-spacing-xs;
-    color: @gux-black-90;
+    padding-left: 8px;
+    color: #596373;
   }
 }
 
@@ -135,7 +132,7 @@
   box-sizing: border-box;
   width: 368px;
   margin: 0;
-  color: @gux-black-50;
+  color: #2e394c;
 }
 
 .gux-option-content {

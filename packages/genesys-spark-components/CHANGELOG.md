@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.25](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.24...v4.0.0-beta.25) (2023-09-13)
+
+## [4.0.0-beta.24](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.23...v4.0.0-beta.24) (2023-09-13)
+
+
+### Bug Fixes
+
+* **pop-up:** fix floating ui implementation ([488b4da](https://github.com/MyPureCloud/genesys-webcomponents/commit/488b4daeb52bc6a5967cd22a193f59be5c9142fa))
+
+## [4.0.0-beta.23](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.22...v4.0.0-beta.23) (2023-09-12)
+
+## [4.0.0-beta.22](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.21...v4.0.0-beta.22) (2023-09-09)
+
+
+### Features
+
+* **defaults for time zone picker:** allows consumers to set a list of defaults for time zone picker ([ce5bf82](https://github.com/MyPureCloud/genesys-webcomponents/commit/ce5bf82abd0af85cacba71f69ad90af179e56b64))
+* **gux-time-zone-picker-beta:** add a time zone picker component ([505e299](https://github.com/MyPureCloud/genesys-webcomponents/commit/505e29997b2cbdcbd52d5e6eae60d1d00a6fb7d1))
+* **icon:** new icons from GDS23-5 ([af6475d](https://github.com/MyPureCloud/genesys-webcomponents/commit/af6475d4ca27f81bc95893a326b81051a8c2842d))
+
+
+### Bug Fixes
+
+* **icon:** some icons commented out and not displaying ([18aaa1c](https://github.com/MyPureCloud/genesys-webcomponents/commit/18aaa1c140d30f4696a5bbed9f661488fbf75967))
+
 ## [4.0.0-beta.21](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.20...v4.0.0-beta.21) (2023-09-08)
 
 

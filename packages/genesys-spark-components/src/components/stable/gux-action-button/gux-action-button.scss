@@ -56,6 +56,7 @@ $temp-dropdown-button-border-bottom-icon-width: 16px;
   }
 
   .gux-list-container {
+    max-width: 220px;
     padding: var(--gux-spacing-xs) 0;
     margin: 0;
     list-style: none;

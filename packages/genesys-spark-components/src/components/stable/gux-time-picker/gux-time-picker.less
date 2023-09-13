@@ -1,8 +1,5 @@
-@import (reference) '../../../style/color.less';
-@import (reference) '../../../style/spacing.less';
 @import (reference) '../../../style/typography.less';
 @import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/shadows.less';
 
 .gux-time-picker {
   position: relative;
@@ -10,7 +7,7 @@
 
   &.gux-error {
     .gux-input-time {
-      border-color: @gux-alert-red-60;
+      border-color: #ea0b0b;
     }
   }
 
@@ -19,25 +16,25 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: @gux-spacing-xs;
+    gap: 8px;
     align-content: stretch;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 32px;
-    padding: @gux-spacing-2xs @gux-spacing-xs @gux-spacing-2xs @gux-spacing-xs;
+    padding: 4px 8px;
     font-family: inherit;
     font-size: 12px;
     line-height: 1.6667;
-    color: @gux-black-50;
-    background-color: @gux-grey-90;
+    color: #2e394c;
+    background-color: #f6f7f9;
     background-image: none;
-    border: 1px solid @gux-black-100;
+    border: 1px solid #6b7585;
     border-radius: 4px;
-    box-shadow: inset 0 0 4px fade(@gux-black-30, 16%);
+    box-shadow: inset 0 0 4px fade(#202937, 16%);
 
     &:focus-within {
-      border-color: @gux-blue-60;
+      border-color: #2a60c8;
       .gux-focus-ring();
     }
 
@@ -48,10 +45,10 @@
       width: 20px;
       padding: 0;
       font-size: 12px;
-      color: @gux-black-50;
+      color: #2e394c;
       text-align: center;
       text-align: left;
-      background-color: @gux-grey-90;
+      background-color: #f6f7f9;
       border: none;
       outline: none;
 
@@ -60,7 +57,7 @@
       }
 
       &::placeholder {
-        color: @gux-black-90;
+        color: #596373;
         opacity: 1;
       }
     }
@@ -72,18 +69,18 @@
       padding: 0;
       font-size: 12px;
       font-weight: bold;
-      color: @gux-black-50;
+      color: #2e394c;
       background: transparent;
       border: none;
       outline: none;
 
       &:not(:disabled):hover {
-        color: @gux-blue-60;
+        color: #2a60c8;
         cursor: pointer;
       }
 
       &:focus-visible {
-        color: @gux-blue-60;
+        color: #2a60c8;
         .gux-focus-ring-small();
 
         border-radius: 2px;
@@ -109,22 +106,22 @@
       justify-content: center;
       order: 0;
       padding: 0;
-      color: @gux-black-90;
+      color: #596373;
       background: transparent;
       border: none;
 
       &.gux-active:not(:disabled) {
-        color: @gux-blue-60;
+        color: #2a60c8;
         cursor: pointer;
 
         &:hover {
-          color: @gux-blue-60 !important;
+          color: #2a60c8 !important;
           cursor: pointer;
         }
       }
 
       &:not(:disabled):hover {
-        color: @gux-black-50;
+        color: #2e394c;
         cursor: pointer;
       }
 
@@ -154,9 +151,9 @@
     margin: 0;
     overflow-y: scroll;
     list-style: none;
-    background-color: @gux-type-dark;
-    border: 1px solid @gux-grey-30;
+    background-color: #fdfdfd;
+    border: 1px solid #b4bccb;
     border-radius: 4px;
-    .gux-shadow-20();
+    box-shadow: 0 2px 4px fade(#202937, 24%);
   }
 }

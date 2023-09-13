@@ -1,21 +1,33 @@
 {
+  "gux-action-button": {
+    "actionButtonDropdown": "Dropdown for {buttonTitle}"
+  },
+  "gux-advanced-dropdown": {
+    "searchAria": "Search"
+  },
+  "gux-alert": {
+    "info": "Information alert with message",
+    "success": "Success alert with message",
+    "warning": "Warning alert with message",
+    "error": "Error alert with message"
+  },
   "gux-badge": {
-    "neutral": "badge with label: {label}, color: neutral",
-    "neutral-bold": "badge with label: {label}, color: neutral bold",
-    "green": "badge with label: {label}, color: green",
-    "green-bold": "badge with label: {label}, color: green bold",
-    "yellow": "badge with label: {label}, color: yellow",
-    "yellow-bold": "badge with label: {label}, color: yellow bold",
-    "red": "badge with label: {label}, color: red",
-    "red-bold": "badge with label: {label}, color: red bold",
+    "info": "badge with label: {label}, accent: info",
+    "info-bold": "badge with label: {label}, accent: info bold",
+    "success": "badge with label: {label}, accent: success",
+    "success-bold": "badge with label: {label}, accent: success bold",
+    "warning": "badge with label: {label}, accent: warning",
+    "warning-bold": "badge with label: {label}, accent: warning bold",
+    "error": "badge with label: {label}, accent: error",
+    "error-bold": "badge with label: {label}, accent: error error",
     "inherit": "badge with label: {label}"
+  },
+  "gux-breadcrumbs": {
+    "breadcrumbs": "Breadcrumbs"
   },
   "gux-calendar-beta": {
     "previousMonth": "Previous month: {localizedPreviousMonthAndYear}",
     "nextMonth": "Next month: {localizedNextMonthAndYear}"
-  },
-  "gux-column-manager-item": {
-    "activateReordering": "Activate reordering mode for {columnName} column"
   },
   "gux-column-manager": {
     "search": "Search column",
@@ -26,11 +38,45 @@
     "movePositionPrompt": "Press space or enter to move the {columnName} column to position {newPositionNumber} from position {oldPositionNumber}.",
     "reorderingModeActive": "Reordering mode active. Reposition the {columnName} column using the up arrow key, the down arrow key, the home key and the end key. Press Escape to deactivate reordering mode."
   },
+  "gux-column-manager-item": {
+    "activateReordering": "Activate reordering mode for {columnName} column"
+  },
+  "gux-content-search": {
+    "eraseBtnAria": "Clear search text",
+    "navigateNextBtn": "Highlight next match",
+    "navigatePreviousBtn": "Highlight previous match",
+    "totalMatches": "{currentMatch, number} of {matchCount, number}",
+    "clear": "Clear"
+  },
   "gux-context-menu": {
     "contextMenuScreenreaderText": "Context menu"
   },
-  "gux-dropdown-multi-tag": {
-    "clearSelection": "Clear {numberSelected} selected items"
+  "gux-copy-to-clipboard": {
+    "clickToCopy": "Click to Copy",
+    "enterToCopy": "Press Enter to Copy",
+    "copySuccess": "Copied to Clipboard",
+    "copyFailure": "Error. Please Try Again."
+  },
+  "gux-create-option": {
+    "createCustomOptionInstructions": ", select to create a new custom option",
+    "createOption": "Add \"{optionValue}\""
+  },
+  "gux-datepicker": {
+    "start": "Start",
+    "end": "End",
+    "date": "Date",
+    "toggleCalendar": "Toggle calendar view"
+  },
+  "gux-disclosure-button-legacy": {
+    "defaultLabel": "Disclosure button"
+  },
+  "gux-dismiss-button": {
+    "dismiss": "Dismiss"
+  },
+  "gux-dropdown": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown"
   },
   "gux-dropdown-multi": {
     "textInputResults": "Type to filter dropdown results",
@@ -38,6 +84,34 @@
     "dropdown": "Dropdown",
     "numberSelected": "{numberSelected} selected",
     "pressEnterToCreate": "Press Enter to create new option, {textInputValue}"
+  },
+  "gux-dropdown-multi-tag": {
+    "clearSelection": "Clear {numberSelected} selected items"
+  },
+  "gux-form-field-dropdown": {
+    "required": "Required"
+  },
+  "gux-form-field-input-clear-button": {
+    "clear": "Clear"
+  },
+  "gux-form-field-number": {
+    "increment": "Increment",
+    "decrement": "Decrement"
+  },
+  "gux-form-field-phone": {
+    "required": "Required"
+  },
+  "gux-form-field-time-picker": {
+    "required": "Required"
+  },
+  "gux-listbox": {
+    "noMatches": "No matches",
+    "loading": "Loading..."
+  },
+  "gux-listbox-multi": {
+    "add": "Add {name}",
+    "noMatches": "No matches",
+    "loading": "Loading..."
   },
   "gux-month-calendar": {
     "changeYear": "Current year is {currentYear}, Click to change year to {changeYear}"
@@ -47,6 +121,18 @@
     "month": "Month",
     "year": "Year",
     "unset": "Unset"
+  },
+  "gux-option-multi": {
+    "removeCustomElementInstructions": ", unselecting this custom option will remove it from the list"
+  },
+  "gux-pagination-buttons": {
+    "page": "Page",
+    "totalPages": " of {totalPages, number}",
+    "first": "First",
+    "previous": "Previous",
+    "next": "Next",
+    "last": "Last",
+    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
   },
   "gux-pagination-buttons-beta": {
     "page": "Page",
@@ -58,9 +144,22 @@
     "pageInputLabel": "Page {currentPage, number} of {totalPages, number}",
     "goToPage": "Go to page"
   },
+  "gux-pagination-cursor": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "gux-pagination-item-counts": {
+    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
+    "totalItems": " of {totalItems, number}"
+  },
   "gux-pagination-item-counts-beta": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
     "totalItems": " of {totalItems, number}"
+  },
+  "gux-pagination-items-per-page": {
+    "perPage": "per page",
+    "itemsPerPage": "Items per page",
+    "rangeSelected": "Items per page dropdown, {range} selected"
   },
   "gux-pagination-items-per-page-beta": {
     "perPage": "per page",
@@ -318,13 +417,68 @@
     "regionDropdown": "Region Dropdown",
     "regionDropdownButton": "Region Dropdown Button"
   },
+  "gux-radial-loading": {
+    "loading": "Loading"
+  },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
+  },
+  "gux-table": {
+    "emptyMessage": "No data available",
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "selectAllTableRows": "Select All Table Rows",
+    "selectTableRow": "Select Table Row",
+    "sortAsc": "Sorted Ascending",
+    "sortDesc": "Sorted Descending",
+    "tableOptions": "Table Options",
+    "noColumnSort": "{headerContent}. The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order",
+    "ascendingColumnSort": "{headerContent}. The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order",
+    "descendingColumnSort": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order",
+    "descendingColumnSortIncludeUnsorted": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column"
+  },
+  "gux-table-toolbar-action": {
+    "actionRefresh": "Refresh",
+    "actionDelete": "Delete",
+    "actionExport": "Export",
+    "actionImport": "Import",
+    "actionRevert": "Revert",
+    "actionAdd": "Add"
+  },
+  "gux-table-toolbar-menu-button": {
+    "additionalActions": "Additional Actions"
+  },
+  "gux-tabs": {
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "scrollUp": "Scroll Up",
+    "scrollDown": "Scroll Down"
+  },
+  "gux-tabs-advanced": {
+    "createNewTab": "Create New Tab",
+    "scrollLeft": "Scroll Left",
+    "scrollRight": "Scroll Right",
+    "options": "Tab Options for {tabTitle}",
+    "disableNewTab": "Maximum number of tabs created has been reached",
+    "toggleSort": "Toggle sort mode using space",
+    "sortModeOn": "Sort mode on, use the left and right arrow keys to reorder tabs. Press space or enter key to complete sort. Press escape key to cancel sort",
+    "sortComplete": "Sort complete",
+    "sortCancelled": "Sort cancelled"
   },
   "gux-tag": {
     "tag": "tag with label: {label}",
     "tag-disabled": "disabled tag with label: {label}",
     "remove-tag": "Remove tag with label: {label}"
+  },
+  "gux-time-picker": {
+    "am": "AM",
+    "time-separator": ":",
+    "clockButton": "Toggle suggested times",
+    "hoursInput": "Input hours",
+    "minutesInput": "Input minutes",
+    "pm": "PM",
+    "timeOptionsState": "Time options open: {state}",
+    "toggleAmPM": "{amOrPm} selected, click to toggle"
   },
   "gux-time-zone-picker": {
     "selectZone": "Search by region, country, or city",
@@ -813,161 +967,6 @@
     "PST8PDT": "PST8PDT",
     "UTC": "UTC",
     "WET": "WET"
-  },
-  "gux-disclosure-button-legacy": {
-    "defaultLabel": "Disclosure button"
-  },
-  "gux-action-button": {
-    "actionButtonDropdown": "Dropdown for {buttonTitle}"
-  },
-  "gux-advanced-dropdown": {
-    "searchAria": "Search"
-  },
-  "gux-alert": {
-    "info": "Information alert with message",
-    "success": "Success alert with message",
-    "warning": "Warning alert with message",
-    "error": "Error alert with message"
-  },
-  "gux-breadcrumbs": {
-    "breadcrumbs": "Breadcrumbs"
-  },
-  "gux-content-search": {
-    "eraseBtnAria": "Clear search text",
-    "navigateNextBtn": "Highlight next match",
-    "navigatePreviousBtn": "Highlight previous match",
-    "totalMatches": "{currentMatch, number} of {matchCount, number}",
-    "clear": "Clear"
-  },
-  "gux-copy-to-clipboard": {
-    "clickToCopy": "Click to Copy",
-    "enterToCopy": "Press Enter to Copy",
-    "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
-  },
-  "gux-datepicker": {
-    "start": "Start",
-    "end": "End",
-    "date": "Date",
-    "toggleCalendar": "Toggle calendar view"
-  },
-  "gux-dismiss-button": {
-    "dismiss": "Dismiss"
-  },
-  "gux-dropdown": {
-    "filterResults": "Type to filter dropdown results",
-    "noSelection": "Select...",
-    "dropdown": "Dropdown"
-  },
-  "gux-form-field-dropdown": {
-    "required": "Required"
-  },
-  "gux-form-field-number": {
-    "increment": "Increment",
-    "decrement": "Decrement"
-  },
-  "gux-form-field-phone": {
-    "required": "Required"
-  },
-  "gux-form-field-time-picker": {
-    "required": "Required"
-  },
-  "gux-form-field-input-clear-button": {
-    "clear": "Clear"
-  },
-  "gux-create-option": {
-    "createCustomOptionInstructions": ", select to create a new custom option",
-    "createOption": "Add \"{optionValue}\""
-  },
-  "gux-option-multi": {
-    "removeCustomElementInstructions": ", unselecting this custom option will remove it from the list"
-  },
-  "gux-listbox-multi": {
-    "add": "Add {name}",
-    "noMatches": "No matches",
-    "loading": "Loading..."
-  },
-  "gux-listbox": {
-    "noMatchesHeader": "Sorry, this menu is empty right now.",
-    "noMatchesMessage": "Please try again later.",
-    "loading": "Loading..."
-  },
-  "gux-pagination-cursor": {
-    "previous": "Previous",
-    "next": "Next"
-  },
-  "gux-pagination-buttons": {
-    "page": "Page",
-    "totalPages": " of {totalPages, number}",
-    "first": "First",
-    "previous": "Previous",
-    "next": "Next",
-    "last": "Last",
-    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
-  },
-  "gux-pagination-item-counts": {
-    "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
-    "totalItems": " of {totalItems, number}"
-  },
-  "gux-pagination-items-per-page": {
-    "perPage": "per page",
-    "itemsPerPage": "Items per page",
-    "rangeSelected": "Items per page dropdown, {range} selected"
-  },
-  "gux-radial-loading": {
-    "loading": "Loading"
-  },
-  "gux-table-toolbar-action": {
-    "actionRefresh": "Refresh",
-    "actionDelete": "Delete",
-    "actionExport": "Export",
-    "actionImport": "Import",
-    "actionRevert": "Revert",
-    "actionAdd": "Add"
-  },
-  "gux-table-toolbar-menu-button": {
-    "additionalActions": "Additional Actions"
-  },
-  "gux-table": {
-    "emptyMessage": "No data available",
-    "scrollLeft": "Scroll Left",
-    "scrollRight": "Scroll Right",
-    "selectAllTableRows": "Select All Table Rows",
-    "selectTableRow": "Select Table Row",
-    "sortAsc": "Sorted Ascending",
-    "sortDesc": "Sorted Descending",
-    "tableOptions": "Table Options",
-    "noColumnSort": "{headerContent}. The table is not currently sorted by this column. Click the column header to sort the table by this column in ascending order",
-    "ascendingColumnSort": "{headerContent}. The table is currently sorted by this column in ascending order. Click the column header to sort the table by this column in descending order",
-    "descendingColumnSort": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to sort the table by this column in ascending order",
-    "descendingColumnSortIncludeUnsorted": "{headerContent}. The table is currently sorted by this column in descending order. Click the column header to not sort the table by this column"
-  },
-  "gux-tabs-advanced": {
-    "createNewTab": "Create New Tab",
-    "scrollLeft": "Scroll Left",
-    "scrollRight": "Scroll Right",
-    "options": "Tab Options for {tabTitle}",
-    "disableNewTab": "Maximum number of tabs created has been reached",
-    "toggleSort": "Toggle sort mode using space",
-    "sortModeOn": "Sort mode on, use the left and right arrow keys to reorder tabs. Press space or enter key to complete sort. Press escape key to cancel sort",
-    "sortComplete": "Sort complete",
-    "sortCancelled": "Sort cancelled"
-  },
-  "gux-tabs": {
-    "scrollLeft": "Scroll Left",
-    "scrollRight": "Scroll Right",
-    "scrollUp": "Scroll Up",
-    "scrollDown": "Scroll Down"
-  },
-  "gux-time-picker": {
-    "am": "AM",
-    "time-separator": ":",
-    "clockButton": "Toggle suggested times",
-    "hoursInput": "Input hours",
-    "minutesInput": "Input minutes",
-    "pm": "PM",
-    "timeOptionsState": "Time options open: {state}",
-    "toggleAmPM": "{amOrPm} selected, click to toggle"
   },
   "gux-toggle": {
     "defaultAriaLabel": "Toggle Switch",

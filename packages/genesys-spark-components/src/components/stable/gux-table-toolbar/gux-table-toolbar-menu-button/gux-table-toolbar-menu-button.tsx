@@ -16,7 +16,7 @@ import translationResources from './i18n/en.json';
 import { afterNextRender } from '../../../../utils/dom/after-next-render';
 
 @Component({
-  styleUrl: 'gux-table-toolbar-menu-button.less',
+  styleUrl: 'gux-table-toolbar-menu-button.scss',
   tag: 'gux-table-toolbar-menu-button',
   shadow: { delegatesFocus: true }
 })

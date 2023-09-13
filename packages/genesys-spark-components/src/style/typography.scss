@@ -1,7 +1,5 @@
-@import './color.scss';
 @import './_mixins.scss';
 @import './focus.scss';
-@import './spacing.scss';
 @import './roboto.scss';
 
 /*
@@ -98,16 +96,16 @@ h6 {
 
 /* Anchor */
 @mixin gux-anchor {
-  color: $gux-blue-60;
+  color: #2a60c8;
   text-decoration: underline;
   border-radius: 2px;
 
   &:hover {
-    color: $gux-blue-50;
+    color: #2754ac;
   }
 
   &:active {
-    color: $gux-blue-40;
+    color: #23478f;
   }
 
   &:focus-visible {
@@ -123,7 +121,7 @@ h6 {
 
 .gux-icon-anchor {
   gux-icon {
-    padding-right: $gux-spacing-xs;
+    padding-right: 2px;
   }
 }
 

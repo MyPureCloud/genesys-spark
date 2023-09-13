@@ -1,0 +1,39 @@
+/*
+ * This file combines all the exported library styles into a single stylesheet for consumption by applications.
+ */
+
+@import '~genesys-spark-tokens/dist/css/gse-semantic.css';
+@import '~genesys-spark-tokens/dist/css/gse-ui-actions.css';
+@import '~genesys-spark-tokens/dist/css/gse-ui-dataDisplay.css';
+@import '~genesys-spark-tokens/dist/css/gse-ui-feedback.css';
+@import '~genesys-spark-tokens/dist/css/gse-ui-formControl.css';
+@import '~genesys-spark-tokens/dist/css/gse-ui-formsAndInputs.css';
+@import '~genesys-spark-tokens/dist/css/gse-ui-navigation.css';
+@import '~genesys-spark-tokens/dist/css/gse-ui.css';
+@import 'typography.scss';
+@import 'focus.scss';
+// @import url('css-custom-properties.less');
+// @import url('../components/stable/gux-form-field/gux-form-field.light.less');
+@import url('../components/stable/gux-table/gux-table.light.scss');
+// @import url('../components/stable/gux-button-multi/gux-button-multi.light.less');
+@import '../components/beta/gux-calendar-beta/gux-calendar.light.scss';
+
+gux-action-toast-legacy {
+  dl {
+    dt {
+      flex: 0 1 20%;
+      align-self: auto;
+      order: 0;
+      margin: 0;
+      color: #2e394c;
+      @include bold-font;
+    }
+
+    dd {
+      flex: 0 1 80%;
+      align-self: auto;
+      order: 0;
+      margin: 0;
+    }
+  }
+}

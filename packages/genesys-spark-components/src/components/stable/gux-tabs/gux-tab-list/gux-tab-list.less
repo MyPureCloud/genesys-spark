@@ -1,10 +1,8 @@
-@import (reference) '../../../../style/color.less';
 @import (reference) '../../../../style/mixins.less';
-@import (reference) '../../../../style/spacing.less';
 
 // Variables part
-@gux-tabs-background: @gux-grey-60;
-@gux-off-tab-fill: @gux-grey-40;
+@gux-tabs-background: #e2e6ee;
+@gux-off-tab-fill: #c8cfda;
 
 gux-tabs {
   &[orientation='vertical'] {
@@ -17,8 +15,8 @@ gux-tabs {
         width: 160px;
         max-width: 160px;
         height: 100%;
-        margin-right: @gux-spacing-medium;
-        border-right: 1px solid @gux-grey-50;
+        margin-right: 16px;
+        border-right: 1px solid #d7dce5;
 
         .gux-scroll-button-container {
           width: 100%;
@@ -50,8 +48,8 @@ gux-tabs {
     > gux-tab-list {
       .gux-tab-container {
         height: 40px;
-        margin-bottom: @gux-spacing-medium;
-        border-bottom: 1px solid @gux-grey-50;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #d7dce5;
       }
 
       .gux-scrollable-section {
@@ -90,7 +88,7 @@ gux-tabs {
       justify-content: center;
       width: 28px;
       height: 40px;
-      color: @gux-black-30;
+      color: #202937;
       cursor: pointer;
       background-color: @gux-off-tab-fill;
       background-color: @gux-tabs-background;
@@ -103,7 +101,7 @@ gux-tabs {
       }
 
       &:hover:not(:disabled) {
-        background-color: @gux-grey-50;
+        background-color: #d7dce5;
       }
 
       &:active:not(:disabled) {

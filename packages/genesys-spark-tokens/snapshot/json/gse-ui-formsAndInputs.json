@@ -609,5 +609,32 @@
       "active_color": "#4856CB",
       "disabled_color": "#626e8480"
     }
+  },
+  "context_menu": {
+    "button": {
+      "default": "32px",
+      "compact": "24px"
+    },
+    "border_radius": "4px",
+    "states": {
+      "default": {
+        "foreground_color": "#767c8d"
+      },
+      "hover": {
+        "foreground_color": "#3742A2",
+        "background_color": "#DEE1FD"
+      },
+      "active": {
+        "foreground_color": "#252E78",
+        "background_color": "#CED2FC"
+      },
+      "disabled": {
+        "foreground_color": "#767c8d"
+      }
+    },
+    "disabled": {
+      "opacity": 0.5
+    },
+    "gap": "4px"
   }
 }

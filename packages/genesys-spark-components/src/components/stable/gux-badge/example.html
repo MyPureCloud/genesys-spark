@@ -1,0 +1,76 @@
+<h1>gux-badge</h1>
+
+<h2>Badges</h2>
+
+<h2>Accent Property</h2>
+
+<h3>Default</h3>
+<div class="badges">
+  <gux-badge>Info</gux-badge>
+  <gux-badge accent="info">Info (explicit)</gux-badge>
+  <gux-badge accent="success">Success</gux-badge>
+  <gux-badge accent="warning">Warning</gux-badge>
+  <gux-badge accent="error">Error</gux-badge>
+</div>
+
+<h3>Bold</h3>
+<div class="badges">
+  <gux-badge bold>Info</gux-badge>
+  <gux-badge bold accent="info">Info (explicit)</gux-badge>
+  <gux-badge bold accent="success">Success</gux-badge>
+  <gux-badge bold accent="warning">Warning</gux-badge>
+  <gux-badge bold accent="error">Error</gux-badge>
+</div>
+
+<h2>Icon + Label</h2>
+<div class="badges">
+  <gux-badge>
+    <gux-icon icon-name="unknown" decorative></gux-icon> Label
+  </gux-badge>
+  <gux-badge bold>
+    <gux-icon icon-name="unknown" decorative></gux-icon>Label
+  </gux-badge>
+</div>
+
+<h2>Custom colors</h2>
+<div class="badges custom-badges">
+  <style>
+    .custom {
+      color: white;
+      background-color: rebeccapurple;
+    }
+  </style>
+  <gux-badge accent="inherit" class="custom">Custom</gux-badge>
+  <gux-badge accent="inherit" class="custom">
+    <gux-icon icon-name="unknown" decorative></gux-icon>No Impact
+  </gux-badge>
+  <gux-inline-alert accent="error" class="custom-color-warning">
+    <strong>Important:</strong>
+    Color contrast must be at least 4.5:1 to pass WCAG AA guidelines.
+    <a href="https://webaim.org/resources/contrastchecker/" target="_blank">
+      Check contrast
+    </a>
+  </gux-inline-alert>
+</div>
+
+<style>
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 1px solid var(--gux-charcoal-grey);
+  }
+
+  gux-badge {
+    max-width: 100px;
+    margin: 4px;
+  }
+
+  .custom-badges {
+    display: block;
+  }
+
+  .custom-color-warning {
+    margin-top: 8px;
+  }
+</style>

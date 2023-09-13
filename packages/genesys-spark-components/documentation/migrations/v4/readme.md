@@ -26,14 +26,47 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 ### There have been no API changes in these components.
 
-| V3 tag name           | V4 tag name      |
-| --------------------- | ---------------- |
-| gux-inline-alert-beta | gux-inline-alert |
-| gux-popup-beta        | gux-popup        |
-| gux-table-beta        | gux-table        |
-| gux-popover-beta      | gux-popover      |
-| gux-time-picker-beta  | gux-time-picker  |
-| gux-button-slot-beta  | gux-button-slot  |
+| V3 tag name            | V4 tag name       |
+| ---------------------- | ----------------- |
+| gux-blank-state-beta   | gux-blank-state   |
+| gux-button-slot-beta   | gux-button-slot   |
+| gux-inline-alert-beta  | gux-inline-alert  |
+| gux-popover-beta       | gux-popover       |
+| gux-popup-beta         | gux-popup         |
+| gux-table-beta         | gux-table         |
+| gux-table-toolbar-beta | gux-table-toolbar |
+| gux-time-picker-beta   | gux-time-picker   |
+
+### There have been API changes in these components.
+
+| V3 tag name    | V4 tag name |
+| -------------- | ----------- |
+| gux-badge-beta | gux-badge   |
+
+#### gux-badge
+
+The `color` property has been removed. All uses of the `color` property can be migrated to the `accent` property.
+
+| Color   | Equivalent accent |
+| ------- | ----------------- |
+| green   | success           |
+| inherit | inherit           |
+| neutral | info              |
+| red     | error             |
+| yellow  | warning           |
+
+```diff
+- <gux-badge-beta color="green">Text</gux-badge-beta>
+- <gux-badge-beta color="inherit">Text</gux-badge-beta>
+- <gux-badge-beta color="neutral">Text</gux-badge-beta>
+- <gux-badge-beta color="red">Text</gux-badge-beta>
+- <gux-badge-beta color="yellow">Text</gux-badge-beta>
++ <gux-badge accent="success">Text</gux-badge>
++ <gux-badge accent="inherit">Text</gux-badge>
++ <gux-badge accent="info">Text</gux-badge>
++ <gux-badge accent="error">Text</gux-badge>
++ <gux-badge accent="warning">Text</gux-badge>
+```
 
 #### gux-calendar
 
@@ -56,7 +89,8 @@ An `is-open` prop has been added to control showing and hiding the component. Th
 | gux-action-toast       | gux-action-toast-legacy       | gux-toast                                   | [link](./gux-action-toast-legacy.md)       |
 | gux-notification-toast | gux-notification-toast-legacy | gux-toast                                   | [link](./gux-notification-toast-legacy.md) |
 | gux-simple-toast       | gux-simple-toast-legacy       | gux-toast                                   | [link](./gux-simple-toast-legacy.md)       |
-| gux-disclosure-button  | gux-disclosure-button-legacy' | none                                        | Contact the Design System UX Team          |
+| gux-pagination         | gux-pagination-legacy         | gux-pagination                              | [link](./gux-pagination-legacy.md)         |
+| gux-disclosure-button  | gux-disclosure-button-legacy  | none                                        | Contact the Design System UX Team          |
 
 Action: _(required)_ add `-legacy` to the tag name of the component.
 
