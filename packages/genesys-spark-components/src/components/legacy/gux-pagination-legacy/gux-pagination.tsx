@@ -19,7 +19,7 @@ import {
 } from './gux-pagination.types';
 
 @Component({
-  styleUrl: 'gux-pagination.less',
+  styleUrl: 'gux-pagination-legacy.scss',
   tag: 'gux-pagination-legacy',
   shadow: true
 })

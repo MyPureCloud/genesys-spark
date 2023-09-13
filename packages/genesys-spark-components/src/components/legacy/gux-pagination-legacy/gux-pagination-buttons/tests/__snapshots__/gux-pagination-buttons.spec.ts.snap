@@ -4,12 +4,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
 <gux-pagination-buttons-legacy current-page="0" layout="full" total-pages="0">
   <div class="gux-full gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
@@ -59,12 +59,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
       </div>
     </div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
@@ -78,12 +78,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
 <gux-pagination-buttons-legacy current-page="1" layout="full" total-pages="10">
   <div class="gux-full gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
@@ -133,12 +133,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
       </div>
     </div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
@@ -152,12 +152,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
 <gux-pagination-buttons-legacy current-page="5" layout="full" total-pages="10">
   <div class="gux-full gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
@@ -207,12 +207,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
       </div>
     </div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
@@ -226,12 +226,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (4)
 <gux-pagination-buttons-legacy current-page="0" layout="small" total-pages="0">
   <div class="gux-pagination-buttons-container gux-small">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
@@ -239,12 +239,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (4)
     </div>
     <div class="gux-pagination-buttons-spacer"></div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
@@ -258,12 +258,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (5)
 <gux-pagination-buttons-legacy current-page="1" layout="small" total-pages="10">
   <div class="gux-pagination-buttons-container gux-small">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
@@ -271,12 +271,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (5)
     </div>
     <div class="gux-pagination-buttons-spacer"></div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
@@ -290,12 +290,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (6)
 <gux-pagination-buttons-legacy current-page="5" layout="small" total-pages="10">
   <div class="gux-pagination-buttons-container gux-small">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
@@ -303,12 +303,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (6)
     </div>
     <div class="gux-pagination-buttons-spacer"></div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
@@ -322,12 +322,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (7)
 <gux-pagination-buttons-legacy current-page="0" layout="expanded" total-pages="0">
   <div class="gux-expanded gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
@@ -335,12 +335,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (7)
     </div>
     <div class="gux-pagination-buttons-list-container"></div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
@@ -354,12 +354,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (8)
 <gux-pagination-buttons-legacy current-page="1" layout="expanded" total-pages="10">
   <div class="gux-expanded gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button disabled="" title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
@@ -398,12 +398,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (8)
       </button>
     </div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
@@ -417,12 +417,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (9)
 <gux-pagination-buttons-legacy current-page="5" layout="expanded" total-pages="10">
   <div class="gux-expanded gux-pagination-buttons-container">
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="First">
           <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Previous">
           <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
         </button>
@@ -461,12 +461,12 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (9)
       </button>
     </div>
     <div class="gux-pagination-buttons-group">
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Next">
           <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
         </button>
       </gux-button-slot>
-      <gux-button-slot accent="secondary">
+      <gux-button-slot accent="ghost">
         <button title="Last">
           <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
         </button>
