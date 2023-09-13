@@ -1,4 +1,3 @@
-@import './_mixins.scss';
 @import './focus.scss';
 @import './roboto.scss';
 
@@ -155,20 +154,4 @@ table a {
   font-size: var(--gse-ui-formControl-label-text-fontSize);
   color: var(--gse-ui-formControl-label-labelColor);
   font-weight: var(--gse-ui-formControl-label-text-fontWeight);
-}
-
-@mixin gux-sr-only {
-  @include gux-hide-offscreen;
-}
-
-@mixin gux-sr-only-clip {
-  &:not(:focus):not(:active) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
 }
