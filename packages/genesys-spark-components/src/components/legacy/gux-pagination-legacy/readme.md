@@ -33,9 +33,9 @@ the pagination state.
 
 ### Depends on
 
-- [gux-pagination-item-counts-legacy](gux-pagination-item-counts)
-- [gux-pagination-items-per-page-legacy](gux-pagination-items-per-page)
-- [gux-pagination-buttons-legacy](gux-pagination-buttons)
+- [gux-pagination-item-counts-legacy](gux-pagination-item-counts-legacy)
+- [gux-pagination-items-per-page-legacy](gux-pagination-items-per-page-legacy)
+- [gux-pagination-buttons-legacy](gux-pagination-buttons-legacy)
 
 ### Graph
 ```mermaid
