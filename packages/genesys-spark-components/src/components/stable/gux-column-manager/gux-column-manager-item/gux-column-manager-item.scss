@@ -1,5 +1,5 @@
-@import (reference) '../../../../style/mixins.less';
-@import (reference) '../../../../style/typography.less';
+@use '../../../../style/mixins';
+@use '../../../../style/typography';
 
 :host([gs-reorder-indicator='above']) {
   .gux-container {
@@ -63,7 +63,7 @@
 
     &:hover,
     &:focus-visible {
-      .gux-focus-ring-small();
+      @include typography.gux-focus-ring-small;
 
       gux-icon {
         color: #2a60c8;
@@ -87,5 +87,5 @@
 }
 
 .gux-sr-only {
-  .gux-sr-only-clip();
+  @include mixins.gux-sr-only-clip;
 }

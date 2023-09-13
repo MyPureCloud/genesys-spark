@@ -57,8 +57,8 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-icon](../../../stable/gux-icon)
-- [gux-text-highlight](../../../stable/gux-text-highlight)
+- [gux-icon](../../gux-icon)
+- [gux-text-highlight](../../gux-text-highlight)
 
 ### Graph
 ```mermaid
