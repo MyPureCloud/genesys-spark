@@ -42,7 +42,7 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-pagination-buttons](../../../gux-pagination/gux-pagination-buttons)
+ - [gux-pagination-buttons-legacy](../../../../legacy/gux-pagination-legacy/gux-pagination-buttons)
 
 ### Depends on
 
@@ -55,7 +55,7 @@ graph TD;
   gux-form-field-text-like --> gux-form-field-input-clear-button
   gux-form-field-text-like --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
-  gux-pagination-buttons --> gux-form-field-text-like
+  gux-pagination-buttons-legacy --> gux-form-field-text-like
   style gux-form-field-text-like fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

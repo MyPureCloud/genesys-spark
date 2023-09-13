@@ -50,8 +50,8 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-pagination-items-per-page](../gux-pagination/gux-pagination-items-per-page)
  - [gux-pagination-items-per-page-beta](../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
+ - [gux-pagination-items-per-page-legacy](../../legacy/gux-pagination-legacy/gux-pagination-items-per-page)
  - [gux-phone-input-beta](../../beta/gux-phone-input)
  - [gux-time-zone-picker-beta](../../beta/gux-time-zone-picker)
 
@@ -63,8 +63,8 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-listbox --> gux-radial-loading
-  gux-pagination-items-per-page --> gux-listbox
   gux-pagination-items-per-page-beta --> gux-listbox
+  gux-pagination-items-per-page-legacy --> gux-listbox
   gux-phone-input-beta --> gux-listbox
   gux-time-zone-picker-beta --> gux-listbox
   style gux-listbox fill:#f9f,stroke:#333,stroke-width:4px

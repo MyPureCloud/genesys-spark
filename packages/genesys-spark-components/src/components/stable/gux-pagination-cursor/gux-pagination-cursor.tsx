@@ -13,7 +13,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import translationResources from './i18n/en.json';
 import { GuxPaginationCursorDetail } from './gux-pagination-cursor.types';
-import { GuxItemsPerPage } from '../gux-pagination/gux-pagination.types';
+import { GuxItemsPerPage } from '../../legacy/gux-pagination-legacy/gux-pagination.types';
 
 @Component({
   styleUrl: 'gux-pagination-cursor.scss',

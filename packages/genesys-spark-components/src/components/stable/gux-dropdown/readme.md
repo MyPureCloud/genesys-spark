@@ -44,8 +44,8 @@ gux-dropdown-types.ts, then following the resulting compiler errors.
 
 ### Used by
 
- - [gux-pagination-items-per-page](../gux-pagination/gux-pagination-items-per-page)
  - [gux-pagination-items-per-page-beta](../../beta/gux-pagination-beta/gux-pagination-items-per-page-beta)
+ - [gux-pagination-items-per-page-legacy](../../legacy/gux-pagination-legacy/gux-pagination-items-per-page)
  - [gux-time-zone-picker-beta](../../beta/gux-time-zone-picker)
 
 ### Depends on
@@ -63,8 +63,8 @@ graph TD;
   gux-dropdown --> gux-radial-loading
   gux-dropdown --> gux-popup
   gux-truncate --> gux-tooltip
-  gux-pagination-items-per-page --> gux-dropdown
   gux-pagination-items-per-page-beta --> gux-dropdown
+  gux-pagination-items-per-page-legacy --> gux-dropdown
   gux-time-zone-picker-beta --> gux-dropdown
   style gux-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
