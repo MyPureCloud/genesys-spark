@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.24](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.23...v4.0.0-beta.24) (2023-09-13)
+
+
+### Bug Fixes
+
+* **pop-up:** fix floating ui implementation ([488b4da](https://github.com/MyPureCloud/genesys-webcomponents/commit/488b4daeb52bc6a5967cd22a193f59be5c9142fa))
+
 ## [4.0.0-beta.23](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.22...v4.0.0-beta.23) (2023-09-12)
 
 ## [4.0.0-beta.22](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.21...v4.0.0-beta.22) (2023-09-09)
