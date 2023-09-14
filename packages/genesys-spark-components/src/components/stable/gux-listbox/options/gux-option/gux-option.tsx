@@ -9,16 +9,16 @@ import {
   Watch
 } from '@stencil/core';
 
-import { randomHTMLId } from '../../../../../utils/dom/random-html-id';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 
 /**
  * @slot - text
  */
 
 @Component({
-  styleUrl: 'gux-option.less',
+  styleUrl: 'gux-option.scss',
   tag: 'gux-option',
-  shadow: false
+  shadow: true
 })
 export class GuxOption {
   private truncateElement: HTMLGuxTruncateElement;

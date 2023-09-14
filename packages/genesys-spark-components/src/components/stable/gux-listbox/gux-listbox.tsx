@@ -32,8 +32,8 @@ import {
 } from './options/option-types';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
-import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 
@@ -46,7 +46,7 @@ import translationResources from './i18n/en.json';
  * @slot - collection of elements conforming to the ListboxOptionElement interface
  */
 @Component({
-  styleUrl: 'gux-listbox.less',
+  styleUrl: 'gux-listbox.scss',
   tag: 'gux-listbox',
   shadow: true
 })
@@ -245,7 +245,12 @@ export class GuxListbox {
     return [
       <div class="gux-message-container">
         <div class="gux-no-matches">
-          {this.emptyMessage || this.i18n('noMatches')}
+          {this.emptyMessage || [
+            <div class="gux-no-matches-header">
+              {this.i18n('noMatchesHeader')}
+            </div>,
+            <div>{this.i18n('noMatchesMessage')}</div>
+          ]}
         </div>
       </div>,
       this.renderHiddenSlot()
