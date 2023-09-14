@@ -11,7 +11,7 @@ import { logError } from '../../../utils/error/log-error';
 
 const DEFAULT_COLOR_FIELD_NAME = 'category';
 @Component({
-  styleUrl: 'gux-chart-scatter-plot.less',
+  styleUrl: 'gux-chart-scatter-plot.scss',
   tag: 'gux-chart-scatter-plot-beta',
   shadow: true
 })

@@ -8,7 +8,7 @@ import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
 import { logError } from '../../../utils/error/log-error';
 
 @Component({
-  styleUrl: 'gux-chart-column.less',
+  styleUrl: 'gux-chart-column.scss',
   tag: 'gux-chart-column-beta',
   shadow: true
 })
