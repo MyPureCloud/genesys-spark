@@ -31,6 +31,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-blank-state-beta          | gux-blank-state          |
 | gux-button-slot-beta          | gux-button-slot          |
 | gux-column-manager-beta       | gux-column-manager       |
+| gux-context-menu-beta         | gux-context-menu         |
 | gux-inline-alert-beta         | gux-inline-alert         |
 | gux-popover-beta              | gux-popover              |
 | gux-popup-beta                | gux-popup                |

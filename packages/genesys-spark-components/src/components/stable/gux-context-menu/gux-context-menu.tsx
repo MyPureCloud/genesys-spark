@@ -18,8 +18,8 @@ import { afterNextRender } from '../../../utils/dom/after-next-render';
 import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
 
 @Component({
-  styleUrl: 'gux-context-menu.less',
-  tag: 'gux-context-menu-beta',
+  styleUrl: 'gux-context-menu.scss',
+  tag: 'gux-context-menu',
   shadow: { delegatesFocus: true }
 })
 export class GuxContextMenu {

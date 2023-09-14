@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-context-menu-beta renders 1`] = `
-<gux-context-menu-beta>
+exports[`gux-context-menu renders 1`] = `
+<gux-context-menu>
   <mock:shadow-root>
     <gux-popup>
       <div class="gux-button-container" slot="target">
@@ -46,5 +46,5 @@ exports[`gux-context-menu-beta renders 1`] = `
     </mock:shadow-root>
     Test 3
   </gux-list-item>
-</gux-context-menu-beta>
+</gux-context-menu>
 `;

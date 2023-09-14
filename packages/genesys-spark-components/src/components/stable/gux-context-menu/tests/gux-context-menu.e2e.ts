@@ -3,17 +3,17 @@ import { E2EPage } from '@stencil/core/testing';
 import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
 
 const html = `
-<gux-context-menu-beta>
+<gux-context-menu>
   <gux-list-item id="list-item-1" onclick="notify(event)">Test 1</gux-list-item>
   <gux-list-item id="list-item-2" onclick="notify(event)">Test 2</gux-list-item>
   <gux-list-item id="list-item-3" onclick="notify(event)">Test 3</gux-list-item>
-</gux-context-menu-beta>
+</gux-context-menu>
 `;
 
 const guxListSelector = 'pierce/gux-list';
 const buttonSelector = 'pierce/gux-button-slot button';
 
-describe('gux-context-menu-beta', () => {
+describe('gux-context-menu', () => {
   let page: E2EPage;
 
   beforeEach(async () => {
@@ -21,13 +21,13 @@ describe('gux-context-menu-beta', () => {
   });
 
   it('renders', async () => {
-    const element = await page.find('gux-context-menu-beta');
+    const element = await page.find('gux-context-menu');
 
     expect(element).toHaveAttribute('hydrated');
   });
 
   it('should be a11y compliant', async () => {
-    const element = await page.find('gux-context-menu-beta');
+    const element = await page.find('gux-context-menu');
 
     await a11yCheck(page, [], 'before opening context menu');
     await element.click();
@@ -37,7 +37,7 @@ describe('gux-context-menu-beta', () => {
   });
 
   it('should focus first item in list on click', async () => {
-    const element = await page.find('gux-context-menu-beta');
+    const element = await page.find('gux-context-menu');
     const expectedElementWithFocus = await page.find(
       'gux-list-item:first-of-type'
     );
@@ -89,7 +89,7 @@ describe('gux-context-menu-beta', () => {
   });
 
   it('should close menu and move focus to button on Escape', async () => {
-    await (await page.find('gux-context-menu-beta')).click();
+    await (await page.find('gux-context-menu')).click();
 
     const list = await page.find(guxListSelector);
 
@@ -101,11 +101,11 @@ describe('gux-context-menu-beta', () => {
     const actualElementWithFocus = await page.find(':focus');
 
     expect(await list.isVisible()).toBe(false);
-    expect(actualElementWithFocus.nodeName).toEqual('GUX-CONTEXT-MENU-BETA');
+    expect(actualElementWithFocus.nodeName).toEqual('GUX-CONTEXT-MENU');
   });
 
   it('should close menu on Tab keypress', async () => {
-    const element = await page.find('gux-context-menu-beta');
+    const element = await page.find('gux-context-menu');
     const list = await element.find(guxListSelector);
 
     await element.click();

@@ -22,11 +22,11 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-context-menu-beta --> gux-popup
-  gux-context-menu-beta --> gux-button-slot
-  gux-context-menu-beta --> gux-icon
-  gux-context-menu-beta --> gux-list
-  style gux-context-menu-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-context-menu --> gux-popup
+  gux-context-menu --> gux-button-slot
+  gux-context-menu --> gux-icon
+  gux-context-menu --> gux-list
+  style gux-context-menu fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
