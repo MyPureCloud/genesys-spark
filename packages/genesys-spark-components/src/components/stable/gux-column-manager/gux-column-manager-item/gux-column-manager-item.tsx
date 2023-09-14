@@ -28,7 +28,7 @@ import translationResources from './i18n/en.json';
  * @slot - slot for gux-form-field-checkbox
  */
 @Component({
-  styleUrl: 'gux-column-manager-item.less',
+  styleUrl: 'gux-column-manager-item.scss',
   tag: 'gux-column-manager-item',
   shadow: { delegatesFocus: false }
 })

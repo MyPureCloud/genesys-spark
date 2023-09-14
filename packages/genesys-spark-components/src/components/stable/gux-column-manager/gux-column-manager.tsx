@@ -39,8 +39,8 @@ import translationResources from './i18n/en.json';
  * @slot - slot for gux-column-manager-item's
  */
 @Component({
-  styleUrl: 'gux-column-manager.less',
-  tag: 'gux-column-manager-beta',
+  styleUrl: 'gux-column-manager.scss',
+  tag: 'gux-column-manager',
   shadow: true
 })
 export class GuxColumnManager {

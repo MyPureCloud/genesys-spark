@@ -1,4 +1,4 @@
-@import (reference) '../../../style/typography.less';
+@use '../../../style/mixins';
 
 .gux-container {
   width: 320px;
@@ -29,5 +29,5 @@
 }
 
 .gux-sr-only {
-  .gux-sr-only-clip();
+  @include mixins.gux-sr-only-clip;
 }
