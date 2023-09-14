@@ -9,7 +9,7 @@ describe('gux-skip-navigation-list', () => {
   describe('#render', () => {
     it(`should render the component as expected`, async () => {
       const html = `
-        <gux-skip-navigation-list-beta>
+        <gux-skip-navigation-list>
           <gux-skip-navigation-item>
             <a href="#" onclick="notify(event)">Navigation Link 1</a>
           </gux-skip-navigation-item>
@@ -22,7 +22,7 @@ describe('gux-skip-navigation-list', () => {
           <gux-skip-navigation-item>
             <a href="#" onclick="notify(event)">Link 4</a>
           </gux-skip-navigation-item>
-        </gux-skip-navigation-list-beta>
+        </gux-skip-navigation-list>
       `;
       const page = await newSpecPage({ components, language, html });
 

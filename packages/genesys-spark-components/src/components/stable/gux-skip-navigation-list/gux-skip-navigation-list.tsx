@@ -10,8 +10,8 @@ import translationResources from './i18n/en.json';
  */
 
 @Component({
-  styleUrl: 'gux-skip-navigation-list.less',
-  tag: 'gux-skip-navigation-list-beta',
+  styleUrl: 'gux-skip-navigation-list.scss',
+  tag: 'gux-skip-navigation-list',
   shadow: { delegatesFocus: true }
 })
 export class GuxSkipNavigationList {

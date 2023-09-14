@@ -1,4 +1,4 @@
-# gux-skip-navigation-list-beta
+# gux-skip-navigation-list
 
 
 <!-- Auto Generated Below -->
