@@ -17,7 +17,7 @@ import { GuxPaginationButtonsService } from './gux-pagination-button-beta.servic
 import { afterNextRender } from '@utils/dom/after-next-render';
 
 @Component({
-  styleUrl: 'gux-pagination-buttons-beta.less',
+  styleUrl: 'gux-pagination-buttons-beta.scss',
   tag: 'gux-pagination-buttons-beta',
   shadow: false
 })

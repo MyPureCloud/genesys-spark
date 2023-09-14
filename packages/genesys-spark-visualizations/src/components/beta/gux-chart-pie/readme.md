@@ -1,4 +1,4 @@
-# gux-chart-donut-beta
+# gux-chart-pie-beta
 
 
 

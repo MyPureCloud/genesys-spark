@@ -6,6 +6,7 @@ const fs = require('fs');
 const proc = require('child_process');
 
 const CDN_URL = process.env.CDN_URL || '';
+
 console.log(`Wrapping stencil loader.`);
 if (CDN_URL.length > 0) {
   console.log(`  Embedded CDN URL will be: ${CDN_URL}`);

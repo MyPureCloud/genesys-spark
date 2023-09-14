@@ -1,4 +1,3 @@
-@import (reference) '../../../../style/color.less';
 @import (reference) '../../../../style/focus.less';
 
 @toggle-height: 16px;
@@ -37,7 +36,7 @@ gux-toggle-slider {
     .gux-slider {
       position: absolute;
       inset: 0;
-      background-color: @gux-black-100;
+      background-color: #6b7585;
       border-radius: @toggle-height / 2;
       transition: background-color @slider-transition-duration ease;
 
@@ -48,7 +47,7 @@ gux-toggle-slider {
         width: @slider-diameter;
         height: @slider-diameter;
         content: '';
-        background-color: @gux-grey-100;
+        background-color: #fdfdfd;
         border-radius: 50%;
         transition: @slider-transition-duration;
 
@@ -58,7 +57,7 @@ gux-toggle-slider {
           width: @slider-diameter - 2;
           height: @slider-diameter - 2;
           padding: 1px;
-          color: @gux-grey-100;
+          color: #fdfdfd;
           opacity: 0;
           transition: color @slider-transition-duration linear;
         }
@@ -67,13 +66,13 @@ gux-toggle-slider {
 
     &.gux-checked {
       .gux-slider {
-        background-color: @gux-blue-60;
+        background-color: #2a60c8;
 
         .gux-switch {
           transform: translateX(@slider-transition);
 
           gux-icon {
-            color: @gux-blue-60;
+            color: #2a60c8;
             opacity: 1;
             transition: opacity @slider-transition-duration / 2 linear;
             transition-delay: @slider-transition-duration / 2;

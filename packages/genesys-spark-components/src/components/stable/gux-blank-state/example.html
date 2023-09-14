@@ -1,0 +1,25 @@
+<h1>gux-blank-state</h1>
+
+<h4>
+  The blank state will transition from large to medium or small when the view
+  becomes smaller. Use the the drag icon to see the difference.
+</h4>
+
+<gux-blank-state class="blank-state-styling">
+  <gux-icon slot="image" icon-name="bot" decorative="true"></gux-icon>
+  <div slot="primary-message">Sorry, something went wrong.</div>
+  <div slot="additional-guidance">Please refresh this page to try again.</div>
+  <button slot="call-to-action" type="button" onclick="notify(event)">
+    Call to action
+  </button>
+</gux-blank-state>
+
+<style>
+  .blank-state-styling {
+    width: 300px;
+    height: 250px;
+    overflow: auto;
+    resize: horizontal;
+    border: 1px dashed gainsboro;
+  }
+</style>

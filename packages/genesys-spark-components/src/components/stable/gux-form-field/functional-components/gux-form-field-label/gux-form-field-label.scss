@@ -1,6 +1,4 @@
-@import '../../../../../style/color-palette.scss';
-@import '../../../../../style/typography.scss';
-@import '../../../../../style/spacing.scss';
+@use '../../../../../style/mixins';
 
 /* stylelint-disable-next-line selector-class-pattern */
 @mixin GuxFormFieldLabelStyle {
@@ -25,7 +23,7 @@
     }
 
     &.gux-screenreader {
-      @include gux-sr-only;
+      @include mixins.gux-sr-only;
     }
   }
 }

@@ -1,11 +1,4 @@
-# gux-switch
-
-## Native Events
-
-| Event    | Description | Type               |
-| -------- | ----------- | ------------------ |
-| `change` |             | `InputEvent`       |
-| `input`  |             | `InputEvent`       |
+# gux-chart-column-beta
 
 <!-- Auto Generated Below -->
 
