@@ -9,7 +9,7 @@ import { GuxAnnouncePoliteness } from './gux-announce.types';
  * @slot - element
  */
 @Component({
-  styleUrl: 'gux-announce.less',
+  styleUrl: 'gux-announce.scss',
   tag: 'gux-announce-beta',
   shadow: true
 })

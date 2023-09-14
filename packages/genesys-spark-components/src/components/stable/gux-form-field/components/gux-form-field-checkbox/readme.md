@@ -20,7 +20,7 @@
 ### Used by
 
  - [gux-all-row-select](../../../gux-table/gux-all-row-select)
- - [gux-column-manager-beta](../../../../beta/gux-column-manager)
+ - [gux-column-manager](../../../gux-column-manager)
  - [gux-row-select](../../../gux-table/gux-row-select)
 
 ### Depends on
@@ -32,7 +32,7 @@
 graph TD;
   gux-form-field-checkbox --> gux-icon
   gux-all-row-select --> gux-form-field-checkbox
-  gux-column-manager-beta --> gux-form-field-checkbox
+  gux-column-manager --> gux-form-field-checkbox
   gux-row-select --> gux-form-field-checkbox
   style gux-form-field-checkbox fill:#f9f,stroke:#333,stroke-width:4px
 ```

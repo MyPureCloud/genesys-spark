@@ -1,0 +1,24 @@
+@use '../../../style/_mixins';
+
+:host {
+  @include mixins.gux-hide-offscreen;
+}
+
+:host(:focus-within) {
+  @include mixins.gux-unhide-offscreen;
+
+  position: absolute;
+  inset: 0;
+}
+
+.gux-container {
+  nav {
+    width: fit-content;
+    margin: 40px auto;
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

@@ -19,7 +19,7 @@
 
 ### Used by
 
- - [gux-column-manager-item](../../beta/gux-column-manager/gux-column-manager-item)
+ - [gux-column-manager-item](../gux-column-manager/gux-column-manager-item)
 
 ### Graph
 ```mermaid

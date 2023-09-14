@@ -24,9 +24,9 @@
  - [gux-button-multi](../gux-button-multi)
  - [gux-calendar](../gux-calendar)
  - [gux-calendar-beta](../../beta/gux-calendar-beta/components/single)
- - [gux-column-manager-item](../../beta/gux-column-manager/gux-column-manager-item)
+ - [gux-column-manager-item](../gux-column-manager/gux-column-manager-item)
  - [gux-content-search](../gux-content-search)
- - [gux-context-menu-beta](../../beta/gux-context-menu)
+ - [gux-context-menu](../../beta/gux-context-menu)
  - [gux-copy-to-clipboard](../gux-copy-to-clipboard)
  - [gux-create-option](../gux-listbox-multi/gux-create-option)
  - [gux-datepicker](../gux-datepicker)
@@ -83,7 +83,7 @@ graph TD;
   gux-calendar-beta --> gux-icon
   gux-column-manager-item --> gux-icon
   gux-content-search --> gux-icon
-  gux-context-menu-beta --> gux-icon
+  gux-context-menu --> gux-icon
   gux-copy-to-clipboard --> gux-icon
   gux-create-option --> gux-icon
   gux-datepicker --> gux-icon

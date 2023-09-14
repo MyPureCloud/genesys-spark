@@ -1,4 +1,4 @@
-@import '../../../../style/typography.scss';
+@use '../../../../style/mixins';
 
 :host([disabled]),
 button[disabled] {
@@ -7,7 +7,7 @@ button[disabled] {
 
 .gux-sr-only {
   display: flex;
-  @include gux-sr-only-clip;
+  @include mixins.gux-sr-only-clip;
 }
 
 .gux-action-title {
