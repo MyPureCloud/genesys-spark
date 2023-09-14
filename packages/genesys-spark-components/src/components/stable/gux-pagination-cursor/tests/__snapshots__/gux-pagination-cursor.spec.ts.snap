@@ -4,16 +4,16 @@ exports[`gux-pagination-cursor #render should render as expected (1) 1`] = `
 <gux-pagination-cursor>
   <mock:shadow-root>
     <div class="gux-pagination-button-container" role="navigation">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button class="gux-simple-button" disabled="" type="button">
           <gux-icon iconname="chevron-small-left" screenreader-text="Previous"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button class="gux-simple-button" disabled="" type="button">
           <gux-icon iconname="chevron-small-right" screenreader-text="Next"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </mock:shadow-root>
 </gux-pagination-cursor>
@@ -23,16 +23,16 @@ exports[`gux-pagination-cursor #render should render as expected (2) 1`] = `
 <gux-pagination-cursor has-next="">
   <mock:shadow-root>
     <div class="gux-pagination-button-container" role="navigation">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button class="gux-simple-button" disabled="" type="button">
           <gux-icon iconname="chevron-small-left" screenreader-text="Previous"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
           <gux-icon iconname="chevron-small-right" screenreader-text="Next"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </mock:shadow-root>
 </gux-pagination-cursor>
@@ -42,16 +42,16 @@ exports[`gux-pagination-cursor #render should render as expected (3) 1`] = `
 <gux-pagination-cursor has-next="" has-previous="">
   <mock:shadow-root>
     <div class="gux-pagination-button-container" role="navigation">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
           <gux-icon iconname="chevron-small-left" screenreader-text="Previous"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
           <gux-icon iconname="chevron-small-right" screenreader-text="Next"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </mock:shadow-root>
 </gux-pagination-cursor>
@@ -61,16 +61,16 @@ exports[`gux-pagination-cursor #render should render as expected (4) 1`] = `
 <gux-pagination-cursor has-previous="">
   <mock:shadow-root>
     <div class="gux-pagination-button-container" role="navigation">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
           <gux-icon iconname="chevron-small-left" screenreader-text="Previous"></gux-icon>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button class="gux-simple-button" disabled="" type="button">
           <gux-icon iconname="chevron-small-right" screenreader-text="Next"></gux-icon>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </mock:shadow-root>
 </gux-pagination-cursor>
@@ -80,7 +80,7 @@ exports[`gux-pagination-cursor #render should render as expected (5) 1`] = `
 <gux-pagination-cursor layout="advanced">
   <mock:shadow-root>
     <div class="gux-pagination-button-container" role="navigation">
-      <gux-button-slot-beta accent="ghost">
+      <gux-button-slot accent="ghost">
         <button disabled="" type="button">
           <div class="gux-button-align-content">
             <gux-icon decorative="" iconname="chevron-small-left"></gux-icon>
@@ -89,8 +89,8 @@ exports[`gux-pagination-cursor #render should render as expected (5) 1`] = `
             </span>
           </div>
         </button>
-      </gux-button-slot-beta>
-      <gux-button-slot-beta accent="ghost">
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
         <button disabled="" type="button">
           <div class="gux-button-align-content">
             <span>
@@ -99,7 +99,7 @@ exports[`gux-pagination-cursor #render should render as expected (5) 1`] = `
             <gux-icon decorative="" iconname="chevron-small-right"></gux-icon>
           </div>
         </button>
-      </gux-button-slot-beta>
+      </gux-button-slot>
     </div>
   </mock:shadow-root>
 </gux-pagination-cursor>

@@ -1,0 +1,88 @@
+gux-pagination-buttons-beta {
+  .gux-pagination-buttons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+    justify-content: flex-end;
+    margin-left: var(
+      --gse-ui-dataTableItems-tablePagination-recordsetControls-gap
+    );
+
+    & > div {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+    }
+
+    .gux-pagination-buttons-group {
+      display: flex;
+      flex-direction: row;
+      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+      white-space: nowrap;
+    }
+
+    .gux-pagination-buttons-list-container {
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+      align-items: center;
+      justify-content: center;
+
+      .gux-pagination-buttons-list-current,
+      .gux-pagination-buttons-list-target {
+        min-width: 28px;
+        min-height: 24px;
+        padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
+        padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
+        margin: 0;
+        background: inherit;
+        border: none;
+        font-family: var(
+          --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
+        );
+        color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
+        font-size: var(
+          --gse-ui-dataTableItems-tablePagination-defaultText-fontSize
+        );
+        line-height: var(
+          --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+        );
+        font-weight: var(
+          --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
+        );
+
+        &:focus-visible {
+          outline: var(--gse-semantic-focusRing-width) solid
+            var(--gse-semantic-color-focus);
+          outline-offset: var(--gse-semantic-focusRing-offset);
+          border-radius: calc(
+            var(--gse-semantic-focusRing-cornerRadius) -
+              var(--gse-semantic-focusRing-offset)
+          );
+        }
+      }
+
+      .gux-pagination-buttons-list-current {
+        background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+        border-radius: var(--gse-ui-button-borderRadius);
+      }
+
+      .gux-pagination-buttons-list-target {
+        color: var(--gse-ui-button-ghost-default-foregroundColor);
+        cursor: pointer;
+
+        &:hover {
+          color: var(--gse-ui-button-ghost-hover-foregroundColor);
+          background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
+          border-radius: var(--gse-ui-button-borderRadius);
+        }
+      }
+    }
+  }
+}

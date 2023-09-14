@@ -13,7 +13,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import translationResources from './i18n/en.json';
 import { GuxPaginationCursorDetail } from './gux-pagination-cursor.types';
-import { GuxItemsPerPage } from '../gux-pagination/gux-pagination.types';
+import { GuxItemsPerPage } from '../../legacy/gux-pagination-legacy/gux-pagination.types';
 
 @Component({
   styleUrl: 'gux-pagination-cursor.scss',
@@ -69,7 +69,7 @@ export class GuxPaginationCursor {
   renderSimpleLayout(): JSX.Element {
     return [
       <div role="navigation" class="gux-pagination-button-container">
-        <gux-button-slot-beta accent="ghost">
+        <gux-button-slot accent="ghost">
           <button
             class="gux-simple-button"
             type="button"
@@ -81,8 +81,8 @@ export class GuxPaginationCursor {
               screenreader-text={this.i18n('previous')}
             ></gux-icon>
           </button>
-        </gux-button-slot-beta>
-        <gux-button-slot-beta accent="ghost">
+        </gux-button-slot>
+        <gux-button-slot accent="ghost">
           <button
             class="gux-simple-button"
             type="button"
@@ -94,7 +94,7 @@ export class GuxPaginationCursor {
               screenreader-text={this.i18n('next')}
             ></gux-icon>
           </button>
-        </gux-button-slot-beta>
+        </gux-button-slot>
       </div>
     ] as JSX.Element;
   }
@@ -102,7 +102,7 @@ export class GuxPaginationCursor {
   renderAdvancedLayout(): JSX.Element {
     return [
       <div role="navigation" class="gux-pagination-button-container">
-        <gux-button-slot-beta accent="ghost">
+        <gux-button-slot accent="ghost">
           <button
             type="button"
             disabled={!this.hasPrevious}
@@ -113,8 +113,8 @@ export class GuxPaginationCursor {
               <span>{this.i18n('previous')}</span>
             </div>
           </button>
-        </gux-button-slot-beta>
-        <gux-button-slot-beta accent="ghost">
+        </gux-button-slot>
+        <gux-button-slot accent="ghost">
           <button
             type="button"
             disabled={!this.hasNext}
@@ -125,7 +125,7 @@ export class GuxPaginationCursor {
               <gux-icon decorative iconName="chevron-small-right"></gux-icon>
             </div>
           </button>
-        </gux-button-slot-beta>
+        </gux-button-slot>
       </div>,
       this.renderItemsPerPage()
     ] as JSX.Element;

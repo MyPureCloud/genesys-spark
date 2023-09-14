@@ -1,0 +1,5 @@
+@use '../../../style/mixins';
+
+:host {
+  @include mixins.gux-hide-offscreen;
+}

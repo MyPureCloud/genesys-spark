@@ -1,0 +1,477 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-pagination-item-counts-legacy #render should render as expected (1) 1`] = `
+<gux-pagination-buttons-legacy current-page="0" layout="full" total-pages="0">
+  <div class="gux-full gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="First">
+          <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Previous">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+    <div class="gux-pagination-buttons-input-container">
+      <div>
+        Page
+      </div>
+      <div class="gux-pagination-buttons-input">
+        <gux-form-field-text-like label-position="screenreader">
+          <mock:shadow-root>
+            <div class="gux-form-field-container gux-screenreader">
+              <div class="gux-form-field-label gux-screenreader">
+                <slot name="label"></slot>
+              </div>
+              <div class="gux-input-and-error-container">
+                <div class="gux-input">
+                  <div class="gux-input-container">
+                    <slot name="prefix"></slot>
+                    <slot name="input"></slot>
+                    <slot name="suffix"></slot>
+                  </div>
+                </div>
+                <div class="gux-form-field-error">
+                  <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+                  <div class="gux-message">
+                    <slot name="error"></slot>
+                  </div>
+                </div>
+                <div class="gux-form-field-help">
+                  <div class="gux-message">
+                    <slot name="help"></slot>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mock:shadow-root>
+          <label for="gux-form-field-input-i" slot="label">
+            Page 0 of 0
+          </label>
+          <input id="gux-form-field-input-i" slot="input" type="text" value="0">
+        </gux-form-field-text-like>
+      </div>
+      <div>
+        of 0
+      </div>
+    </div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Next">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Last">
+          <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+  </div>
+</gux-pagination-buttons-legacy>
+`;
+
+exports[`gux-pagination-item-counts-legacy #render should render as expected (2) 1`] = `
+<gux-pagination-buttons-legacy current-page="1" layout="full" total-pages="10">
+  <div class="gux-full gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="First">
+          <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Previous">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+    <div class="gux-pagination-buttons-input-container">
+      <div>
+        Page
+      </div>
+      <div class="gux-pagination-buttons-input">
+        <gux-form-field-text-like label-position="screenreader">
+          <mock:shadow-root>
+            <div class="gux-form-field-container gux-screenreader">
+              <div class="gux-form-field-label gux-screenreader">
+                <slot name="label"></slot>
+              </div>
+              <div class="gux-input-and-error-container">
+                <div class="gux-input">
+                  <div class="gux-input-container">
+                    <slot name="prefix"></slot>
+                    <slot name="input"></slot>
+                    <slot name="suffix"></slot>
+                  </div>
+                </div>
+                <div class="gux-form-field-error">
+                  <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+                  <div class="gux-message">
+                    <slot name="error"></slot>
+                  </div>
+                </div>
+                <div class="gux-form-field-help">
+                  <div class="gux-message">
+                    <slot name="help"></slot>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mock:shadow-root>
+          <label for="gux-form-field-input-i" slot="label">
+            Page 1 of 10
+          </label>
+          <input id="gux-form-field-input-i" slot="input" type="text" value="1">
+        </gux-form-field-text-like>
+      </div>
+      <div>
+        of 10
+      </div>
+    </div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button title="Next">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button title="Last">
+          <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+  </div>
+</gux-pagination-buttons-legacy>
+`;
+
+exports[`gux-pagination-item-counts-legacy #render should render as expected (3) 1`] = `
+<gux-pagination-buttons-legacy current-page="5" layout="full" total-pages="10">
+  <div class="gux-full gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button title="First">
+          <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button title="Previous">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+    <div class="gux-pagination-buttons-input-container">
+      <div>
+        Page
+      </div>
+      <div class="gux-pagination-buttons-input">
+        <gux-form-field-text-like label-position="screenreader">
+          <mock:shadow-root>
+            <div class="gux-form-field-container gux-screenreader">
+              <div class="gux-form-field-label gux-screenreader">
+                <slot name="label"></slot>
+              </div>
+              <div class="gux-input-and-error-container">
+                <div class="gux-input">
+                  <div class="gux-input-container">
+                    <slot name="prefix"></slot>
+                    <slot name="input"></slot>
+                    <slot name="suffix"></slot>
+                  </div>
+                </div>
+                <div class="gux-form-field-error">
+                  <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+                  <div class="gux-message">
+                    <slot name="error"></slot>
+                  </div>
+                </div>
+                <div class="gux-form-field-help">
+                  <div class="gux-message">
+                    <slot name="help"></slot>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mock:shadow-root>
+          <label for="gux-form-field-input-i" slot="label">
+            Page 5 of 10
+          </label>
+          <input id="gux-form-field-input-i" slot="input" type="text" value="5">
+        </gux-form-field-text-like>
+      </div>
+      <div>
+        of 10
+      </div>
+    </div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button title="Next">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button title="Last">
+          <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+  </div>
+</gux-pagination-buttons-legacy>
+`;
+
+exports[`gux-pagination-item-counts-legacy #render should render as expected (4) 1`] = `
+<gux-pagination-buttons-legacy current-page="0" layout="small" total-pages="0">
+  <div class="gux-pagination-buttons-container gux-small">
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="First">
+          <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Previous">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+    <div class="gux-pagination-buttons-spacer"></div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Next">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Last">
+          <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+  </div>
+</gux-pagination-buttons-legacy>
+`;
+
+exports[`gux-pagination-item-counts-legacy #render should render as expected (5) 1`] = `
+<gux-pagination-buttons-legacy current-page="1" layout="small" total-pages="10">
+  <div class="gux-pagination-buttons-container gux-small">
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="First">
+          <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Previous">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+    <div class="gux-pagination-buttons-spacer"></div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button title="Next">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button title="Last">
+          <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+  </div>
+</gux-pagination-buttons-legacy>
+`;
+
+exports[`gux-pagination-item-counts-legacy #render should render as expected (6) 1`] = `
+<gux-pagination-buttons-legacy current-page="5" layout="small" total-pages="10">
+  <div class="gux-pagination-buttons-container gux-small">
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button title="First">
+          <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button title="Previous">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+    <div class="gux-pagination-buttons-spacer"></div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button title="Next">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button title="Last">
+          <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+  </div>
+</gux-pagination-buttons-legacy>
+`;
+
+exports[`gux-pagination-item-counts-legacy #render should render as expected (7) 1`] = `
+<gux-pagination-buttons-legacy current-page="0" layout="expanded" total-pages="0">
+  <div class="gux-expanded gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="First">
+          <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Previous">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+    <div class="gux-pagination-buttons-list-container"></div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Next">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Last">
+          <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+  </div>
+</gux-pagination-buttons-legacy>
+`;
+
+exports[`gux-pagination-item-counts-legacy #render should render as expected (8) 1`] = `
+<gux-pagination-buttons-legacy current-page="1" layout="expanded" total-pages="10">
+  <div class="gux-expanded gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="First">
+          <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button disabled="" title="Previous">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+    <div class="gux-pagination-buttons-list-container">
+      <button class="gux-current gux-pagination-buttons-list-button">
+        1
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        2
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        3
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        4
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        5
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        6
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        7
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        8
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        9
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        10
+      </button>
+    </div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button title="Next">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button title="Last">
+          <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+  </div>
+</gux-pagination-buttons-legacy>
+`;
+
+exports[`gux-pagination-item-counts-legacy #render should render as expected (9) 1`] = `
+<gux-pagination-buttons-legacy current-page="5" layout="expanded" total-pages="10">
+  <div class="gux-expanded gux-pagination-buttons-container">
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button title="First">
+          <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button title="Previous">
+          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+    <div class="gux-pagination-buttons-list-container">
+      <button class="gux-pagination-buttons-list-button gux-target">
+        1
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        2
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        3
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        4
+      </button>
+      <button class="gux-current gux-pagination-buttons-list-button">
+        5
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        6
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        7
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        8
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        9
+      </button>
+      <button class="gux-pagination-buttons-list-button gux-target">
+        10
+      </button>
+    </div>
+    <div class="gux-pagination-buttons-group">
+      <gux-button-slot accent="ghost">
+        <button title="Next">
+          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+      <gux-button-slot accent="ghost">
+        <button title="Last">
+          <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
+        </button>
+      </gux-button-slot>
+    </div>
+  </div>
+</gux-pagination-buttons-legacy>
+`;

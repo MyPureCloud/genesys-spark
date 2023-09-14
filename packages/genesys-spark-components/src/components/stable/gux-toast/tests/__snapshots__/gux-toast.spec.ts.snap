@@ -17,12 +17,12 @@ exports[`gux-simple-toast-legacy #render should render action toast 1`] = `
           </gux-truncate>
         </div>
         <div class="gux-buttons-bar">
-          <gux-button-slot-beta>
+          <gux-button-slot>
             <slot name="secondary-button"></slot>
-          </gux-button-slot-beta>
-          <gux-button-slot-beta accent="primary">
+          </gux-button-slot>
+          <gux-button-slot accent="primary">
             <slot name="primary-button"></slot>
-          </gux-button-slot-beta>
+          </gux-button-slot>
         </div>
       </div>
       <gux-dismiss-button position="inherit"></gux-dismiss-button>

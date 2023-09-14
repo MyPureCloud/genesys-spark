@@ -1,6 +1,4 @@
-@import (reference) '../../../../style/color.less';
 @import (reference) '../../../../style/focus.less';
-@import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/typography.less';
 
 // Style
@@ -15,12 +13,12 @@
   align-content: stretch;
   align-items: center;
   justify-content: flex-start;
-  padding: @gux-spacing-3xs @gux-spacing-2xs @gux-spacing-3xs @gux-spacing-xs;
+  padding: 2px 4px 2px 8px;
   font-size: 12px;
   font-weight: bold;
-  color: @gux-black-50;
-  background-color: @gux-grey-60;
-  border-radius: @gux-spacing-2xs;
+  color: #2e394c;
+  background-color: #e2e6ee;
+  border-radius: 4px;
 
   .gux-sr-only {
     .gux-sr-only-clip();
@@ -52,7 +50,7 @@
   }
 
   &.gux-disabled {
-    color: fade(@gux-black-50, 50%);
-    background-color: fade(@gux-grey-60, 50%);
+    color: fade(#2e394c, 50%);
+    background-color: fade(#e2e6ee, 50%);
   }
 }

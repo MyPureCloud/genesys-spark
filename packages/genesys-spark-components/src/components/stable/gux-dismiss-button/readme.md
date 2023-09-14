@@ -25,13 +25,13 @@ This component is meant for use in other components as a dismiss button.
 
 ### Depends on
 
-- [gux-button-slot-beta](../../beta/gux-button-slot)
+- [gux-button-slot](../gux-button-slot)
 - [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-dismiss-button --> gux-button-slot-beta
+  gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
   gux-modal --> gux-dismiss-button
   gux-notification-toast-legacy --> gux-dismiss-button

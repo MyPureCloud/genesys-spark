@@ -24,6 +24,9 @@
         }
       }
     },
+    "reversed_header": {
+      "padding": "2px"
+    },
     "menu_item": {
       "height": "32px",
       "padding": "0 12px 0 24px",

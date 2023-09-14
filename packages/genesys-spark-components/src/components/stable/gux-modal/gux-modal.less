@@ -1,7 +1,4 @@
 @import (reference) '../../../style/typography.less';
-@import (reference) '../../../style/color.less';
-@import (reference) '../../../style/spacing.less';
-@import (reference) '../../../style/shadows.less';
 @import (reference) '../../../style/zindex.less';
 
 // Style
@@ -13,40 +10,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: @gux-black-50;
-    background: fade(@gux-black-30, 80%);
+    color: #2e394c;
+    background: fade(#202937, 80%);
 
     .gux-modal-container {
-      .gux-shadow-30();
-
       position: relative;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 40px;
-      background: @gux-grey-100;
-      border: 1px solid @gux-grey-30;
+      background: #fdfdfd;
+      border: 1px solid #b4bccb;
       border-radius: 4px;
+      box-shadow: 0 8px 24px fade(#202937, 40%);
 
       &.gux-small {
         width: 416px;
-        max-height: e(%('min(368px, 100vh - 2 * %s)', @gux-spacing-large));
+        max-height: e(%('min(368px, 100vh - 2 * %s)', 24px));
       }
 
       &.gux-medium {
         width: 672px;
-        max-height: e(%('min(640px, 100vh - 2 * %s)', @gux-spacing-large));
+        max-height: e(%('min(640px, 100vh - 2 * %s)', 24px));
       }
 
       &.gux-large {
         width: 940px;
-        max-height: e(%('min(640px, 100vh - 2 * %s)', @gux-spacing-large));
+        max-height: e(%('min(640px, 100vh - 2 * %s)', 24px));
       }
 
       &.gux-dynamic {
-        max-width: calc(100vw - 2 * @gux-spacing-large);
-        max-height: calc(100vh - 2 * @gux-spacing-large);
+        max-width: calc(100vw - 2 * 24px);
+        max-height: calc(100vh - 2 * 24px);
 
         .gux-modal-content {
           max-height: none;

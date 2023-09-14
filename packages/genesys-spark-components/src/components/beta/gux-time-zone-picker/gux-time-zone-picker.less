@@ -1,0 +1,31 @@
+.has-defaults {
+  gux-option {
+    padding-left: 20px;
+  }
+}
+
+gux-dropdown {
+  .zone-header {
+    padding: 6px 12px;
+    color: #6b7585;
+    text-transform: uppercase;
+  }
+
+  .tz-utc {
+    color: #596373;
+  }
+
+  gux-list-divider {
+    width: 97%;
+    margin-left: 15px;
+  }
+
+  gux-option {
+    &.gux-active,
+    &.gux-hovered:not(:disabled) {
+      .tz-utc {
+        color: #e2e6ee;
+      }
+    }
+  }
+}

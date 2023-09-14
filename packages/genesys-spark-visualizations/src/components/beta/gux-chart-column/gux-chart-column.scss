@@ -1,0 +1,18 @@
+
+// Style
+gux-visualization-beta {
+  height: fit-content;
+  color: #2e394c;
+
+  // layered bars
+  /* stylelint-disable-next-line selector-class-pattern */
+  .mark-rect.layer_0_marks path {
+    /* stylelint-disable-next-line function-url-quotes */
+    fill: url(#diagonalHatch0);
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .mark-rect.layer_1_marks path {
+    fill: #1da8b3;
+  }
+}

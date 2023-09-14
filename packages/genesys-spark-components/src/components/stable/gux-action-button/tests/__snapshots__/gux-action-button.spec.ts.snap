@@ -6,16 +6,16 @@ exports[`gux-action-button renders 1`] = `
     <div class="gux-action-button-container">
       <gux-popup>
         <div class="gux-action-button-container" slot="target">
-          <gux-button-slot-beta accent="primary" class="gux-action-button">
+          <gux-button-slot accent="primary" class="gux-action-button">
             <button type="button">
               Primary
             </button>
-          </gux-button-slot-beta>
-          <gux-button-slot-beta accent="primary" class="gux-dropdown-button">
+          </gux-button-slot>
+          <gux-button-slot accent="primary" class="gux-dropdown-button">
             <button aria-expanded="false" aria-haspopup="true" aria-label="Dropdown for Primary" type="button">
               <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
             </button>
-          </gux-button-slot-beta>
+          </gux-button-slot>
         </div>
         <div class="gux-list-container" slot="popup">
           <gux-list role="list">

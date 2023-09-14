@@ -32,7 +32,7 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-badge-beta](../../beta/gux-badge)
+ - [gux-badge](../gux-badge)
  - [gux-tab](../gux-tabs/gux-tab)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
@@ -46,7 +46,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-tooltip-title --> gux-tooltip
-  gux-badge-beta --> gux-tooltip-title
+  gux-badge --> gux-tooltip-title
   gux-tab --> gux-tooltip-title
   gux-tab-advanced --> gux-tooltip-title
   gux-table-toolbar-menu-button --> gux-tooltip-title

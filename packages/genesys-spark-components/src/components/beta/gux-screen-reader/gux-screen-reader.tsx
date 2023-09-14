@@ -6,7 +6,7 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot - text
  */
 @Component({
-  styleUrl: 'gux-screen-reader.less',
+  styleUrl: 'gux-screen-reader.scss',
   tag: 'gux-screen-reader-beta',
   shadow: true
 })

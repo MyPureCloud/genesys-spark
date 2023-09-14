@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-skip-navigation-list #render should render the component as expected 1`] = `
+<gux-skip-navigation-list>
+  <mock:shadow-root>
+    <div class="gux-container">
+      <nav aria-label="Skip links navigation">
+        <ul role="list">
+          <slot></slot>
+        </ul>
+      </nav>
+    </div>
+  </mock:shadow-root>
+  <gux-skip-navigation-item role="listitem">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <a href="#" onclick="notify(event)">
+      Navigation Link 1
+    </a>
+  </gux-skip-navigation-item>
+  <gux-skip-navigation-item role="listitem">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <a href="#" onclick="notify(event)">
+      Navigation Link 2 that is long
+    </a>
+  </gux-skip-navigation-item>
+  <gux-skip-navigation-item role="listitem">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <a href="#" onclick="notify(event)">
+      Navigation Link 3
+    </a>
+  </gux-skip-navigation-item>
+  <gux-skip-navigation-item role="listitem">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <a href="#" onclick="notify(event)">
+      Link 4
+    </a>
+  </gux-skip-navigation-item>
+</gux-skip-navigation-list>
+`;

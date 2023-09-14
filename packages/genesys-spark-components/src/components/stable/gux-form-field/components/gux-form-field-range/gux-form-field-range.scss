@@ -1,0 +1,194 @@
+/* Tokens
+@prop $gse-ui-slider-handle-width
+@prop $gse-ui-slider-handle-height
+@prop $gse-ui-slider-handle-default-backgroundColor
+@prop $gse-ui-slider-handle-hover-backgroundColor
+@prop $gse-ui-slider-handle-active-backgroundColor
+@prop $gse-ui-slider-handle-disabled-backgroundColor
+@prop $gse-ui-slider-handle-borderRadius
+@prop $gse-ui-slider-disabled-opacity
+@prop $gse-ui-slider-label-text-fontFamily
+@prop $gse-ui-slider-label-text-fontWeight
+@prop $gse-ui-slider-label-text-lineHeight
+@prop $gse-ui-slider-label-text-fontSize
+@prop $gse-ui-slider-label-foregroundColor
+@prop $gse-ui-slider-bar-selected-backgroundColor
+@prop $gse-ui-slider-bar-default-backgroundColor
+@prop $gse-ui-slider-bar-height
+@prop $gse-ui-slider-gap
+@prop $gse-ui-slider-focusRing-borderRadius
+**/
+
+@import '../../../../../style/zindex.scss';
+@import '../../../../../style/typography.scss';
+@import '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
+@import '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@import '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
+@import '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+
+@include GuxFormFieldContainerStyle;
+@include GuxFormFieldErrorStyle;
+@include GuxFormFieldLabelStyle;
+@include GuxFormFieldHelpStyle;
+
+// Variables part
+$range-active: var(--gse-ui-slider-bar-selected-backgroundColor);
+$track-width: 100%;
+$track-height: var(--gse-ui-slider-bar-height);
+$thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
+// TODO: (COMUI-2234) Use token here once tooltip component reskin is implemented
+$slider-border: var(--gux-grey-30);
+
+@mixin gux-track {
+  width: $track-width;
+  height: $track-height;
+  cursor: pointer;
+}
+
+@mixin gux-thumb {
+  display: block;
+  width: var($gse-ui-slider-handle-width);
+  height: var($gse-ui-slider-handle-height);
+  cursor: pointer;
+  border-radius: var(--$gse-ui-slider-handle-borderRadius);
+}
+
+:host {
+  display: block;
+}
+
+::slotted(label) {
+  @include gse-ui-formControl-label;
+}
+
+::slotted(input[type='range']) {
+  position: absolute;
+  width: 100%;
+  width: $track-width;
+  height: $track-height;
+  margin: $thumb-diameter 0;
+  margin-top: calc(-1 * calc($thumb-diameter + $track-height));
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.gux-input-and-error-container {
+  flex-grow: 1;
+
+  .gux-range-input-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    justify-content: flex-start;
+    // We will not use a token for this height style below
+    height: 32px;
+    font-size: var(--gse-ui-slider-label-text-fontSize);
+
+    &.gux-disabled {
+      opacity: var(--gse-ui-slider-disabled-opacity);
+    }
+
+    .gux-range {
+      position: relative;
+      flex: 1 1 auto;
+      align-self: center;
+      order: 0;
+
+      &:hover,
+      &:focus-within {
+        .gux-range-tooltip {
+          visibility: visible;
+        }
+      }
+
+      .gux-track {
+        width: 100%;
+        height: $track-height;
+        // We are not using a token for this margin below since it this 6px margin is used to center position the head on the track
+        margin: 6px 0;
+        background: var(--gse-ui-slider-bar-default-backgroundColor);
+
+        .gux-progress {
+          height: $track-height;
+          background-color: $range-active;
+        }
+      }
+    }
+
+    .gux-display {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+      margin: 0 0 0 var(--gux-spacing-medium);
+      line-height: var(--gse-ui-slider-label-text-lineHeight);
+      font-weight: var(--gse-ui-slider-label-text-fontWeight);
+      text-align: right;
+      font-family: var(--gse-ui-slider-label-text-fontFamily);
+      font-size: var(--gse-ui-slider-label-text-fontSize);
+
+      &.gux-hidden {
+        display: none;
+      }
+    }
+  }
+
+  // TODO: (COMUI-2234) Will circle back to update tooltip styles with tokens after the tooltip component is reskined
+  .gux-range-tooltip-container {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    height: 32px;
+    pointer-events: none;
+
+    &.gux-hidden {
+      display: none;
+    }
+
+    .gux-range-tooltip {
+      @include gux-small-text;
+
+      position: absolute;
+      z-index: var(--gux-zindex-tooltip, $gux-zindex-tooltip);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 32px;
+      margin-left: -20px;
+      visibility: hidden;
+      background-color: #fdfdfd;
+      border: 1px solid $slider-border;
+      border-radius: 4px;
+      box-shadow: rgba(32, 41, 55, 0.24) 0px 2px 4px;
+      // TODO: doesn't look like the gux-shadow-20 mixin produces correct css? Perhaps we want a token for box-shadow
+      //       once we circle back to use tokens for the tooltip element in this component
+      // @include gux-shadow-20;
+
+      &::after,
+      &::before {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        content: ' ';
+        border: solid transparent;
+      }
+
+      &::after {
+        margin-left: -4px;
+        border-width: 4px;
+        border-top-color: #fdfdfd;
+      }
+
+      &::before {
+        margin-left: -6px;
+        border-width: 6px;
+        border-top-color: $slider-border;
+      }
+    }
+  }
+}

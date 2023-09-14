@@ -31,13 +31,13 @@
 ### Depends on
 
 - [gux-tooltip](../../gux-tooltip)
-- [gux-button-slot-beta](../../../beta/gux-button-slot)
+- [gux-button-slot](../../gux-button-slot)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-table-toolbar-custom-action --> gux-tooltip
-  gux-table-toolbar-custom-action --> gux-button-slot-beta
+  gux-table-toolbar-custom-action --> gux-button-slot
   gux-table-toolbar-action --> gux-table-toolbar-custom-action
   style gux-table-toolbar-custom-action fill:#f9f,stroke:#333,stroke-width:4px
 ```

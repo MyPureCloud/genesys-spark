@@ -1,5 +1,5 @@
-@import '../../../style/zindex.scss';
 @import '../../../style/mixins';
+@import '../../../style/zindex.scss';
 
 .gux-target-container {
   &.gux-disabled {
@@ -11,6 +11,7 @@
 
 .gux-popup-container {
   position: fixed;
+  background-color: white; //TODO: https://inindca.atlassian.net/browse/COMUI-2233
   z-index: var(--gux-zindex-popup, $gux-zindex-popup);
   width: max-content;
   visibility: hidden;

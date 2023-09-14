@@ -1,0 +1,75 @@
+<div style="margin: 10px">
+  <h2>Example 1: Default</h2>
+  <gux-context-menu
+    id="default-test
+  -id-1"
+    onclick="notify(event)"
+  >
+    <gux-list-item onclick="notify(event, 'option-1')">Option 1</gux-list-item>
+    <gux-list-item onclick="notify(event, 'option-2')">Option 2</gux-list-item>
+    <gux-list-item onclick="notify(event, 'option-3')">Option 3</gux-list-item>
+  </gux-context-menu>
+</div>
+
+<div style="width: 70%">
+  <h2>Example 2: Inside a table</h2>
+  <gux-table>
+    <table slot="data">
+      <thead>
+        <tr>
+          <th>First name</th>
+          <th data-cell-numeric>Age</th>
+          <th data-cell-action>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td data-cell-numeric>25</td>
+          <td data-cell-action>
+            <div>
+              <gux-context-menu id="table-test-id-1" onclick="notify(event)">
+                <gux-list-item onclick="notify(event, 'option-4')"
+                  >Option 4</gux-list-item
+                >
+                <gux-list-item onclick="notify(event, 'option-5')"
+                  >Option 5</gux-list-item
+                >
+                <gux-list-item onclick="notify(event, 'option-6')"
+                  >Option 6</gux-list-item
+                >
+              </gux-context-menu>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td data-cell-numeric>23</td>
+          <td data-cell-action>
+            <div>
+              <gux-context-menu id="table-test-id-2" onclick="notify(event)">
+                <gux-list-item onclick="notify(event, 'option-7')"
+                  >Option 7</gux-list-item
+                >
+                <gux-list-item onclick="notify(event, 'option-8')"
+                  >Option 8</gux-list-item
+                >
+                <gux-list-item onclick="notify(event, 'option-9')"
+                  >Option 9</gux-list-item
+                >
+              </gux-context-menu>
+            </div>
+          </td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+          <td>No-action row</td>
+          <td data-cell-numeric>22</td>
+          <td data-cell-action></td>
+        </tr>
+      </tbody>
+    </table>
+  </gux-table>
+  <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
+</div>

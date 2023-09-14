@@ -5,7 +5,7 @@ exports[`gux-popup #render should render component as expected (1) 1`] = `
   <mock:shadow-root>
     <div class="gux-target-container">
       <slot name="target"></slot>
-      <div class="gux-popup-container" part="gux-popup-container">
+      <div class="gux-popup-container">
         <slot name="popup"></slot>
       </div>
     </div>
@@ -32,7 +32,7 @@ exports[`gux-popup #render should render component as expected (2) 1`] = `
   <mock:shadow-root>
     <div class="gux-target-container">
       <slot name="target"></slot>
-      <div class="gux-expanded gux-popup-container" part="gux-popup-container">
+      <div class="gux-expanded gux-popup-container">
         <slot name="popup"></slot>
       </div>
     </div>
@@ -59,7 +59,7 @@ exports[`gux-popup #render should render component as expected (3) 1`] = `
   <mock:shadow-root>
     <div class="gux-disabled gux-target-container">
       <slot name="target"></slot>
-      <div class="gux-popup-container" part="gux-popup-container">
+      <div class="gux-popup-container">
         <slot name="popup"></slot>
       </div>
     </div>
@@ -86,7 +86,7 @@ exports[`gux-popup #render should render component as expected (4) 1`] = `
   <mock:shadow-root>
     <div class="gux-disabled gux-target-container">
       <slot name="target"></slot>
-      <div class="gux-popup-container" part="gux-popup-container">
+      <div class="gux-popup-container">
         <slot name="popup"></slot>
       </div>
     </div>

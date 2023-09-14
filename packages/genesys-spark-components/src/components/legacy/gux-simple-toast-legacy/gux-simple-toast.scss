@@ -1,7 +1,3 @@
-@import '../../../style/color.scss';
-@import '../../../style/shadows.scss';
-@import '../../../style/spacing.scss';
-
 :host {
   position: relative;
   display: flex;
@@ -12,11 +8,12 @@
   justify-content: flex-start;
   width: 286px;
   margin-bottom: 4px;
-  color: $gux-type;
-  background: $gux-grey-90;
-  border: 1px solid $gux-grey-30;
+  color: #2e394c;
+  background: #f6f7f9;
+  border: 1px solid #b4bccb;
   border-radius: 4px;
-  @include gux-shadow-20;
+  // need to replace with token
+  box-shadow: 0 2px 4px rgba(#202937, 24%);
 }
 
 .gux-icon {
@@ -24,22 +21,22 @@
   align-self: auto;
   order: 0;
   padding: 8px 12px 8px 16px;
-  margin: $gux-spacing-3xs 0;
+  margin: 2px 0;
 
   &.gux-alert {
-    color: $gux-alert;
+    color: #ea0b0b;
   }
 
   &.gux-warning {
-    color: $gux-warning;
+    color: #ffae00;
   }
 
   &.gux-positive {
-    color: $gux-positive;
+    color: #3c8527;
   }
 
   &.gux-neutral {
-    color: $gux-neutral;
+    color: #203b73;
   }
 
   ::slotted(gux-icon) {

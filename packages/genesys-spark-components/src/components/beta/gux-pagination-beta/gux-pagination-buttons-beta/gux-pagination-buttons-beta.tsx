@@ -17,7 +17,7 @@ import { GuxPaginationButtonsService } from './gux-pagination-button-beta.servic
 import { afterNextRender } from '@utils/dom/after-next-render';
 
 @Component({
-  styleUrl: 'gux-pagination-buttons-beta.less',
+  styleUrl: 'gux-pagination-buttons-beta.scss',
   tag: 'gux-pagination-buttons-beta',
   shadow: false
 })
@@ -142,7 +142,7 @@ export class GuxPaginationButtonsBeta {
     return (
       <div class={`gux-pagination-buttons-container gux-${this.layout}`}>
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot-beta accent="ghost">
+          <gux-button-slot accent="ghost">
             <button
               title={this.i18n('first')}
               disabled={this.onFirstPage}
@@ -150,8 +150,8 @@ export class GuxPaginationButtonsBeta {
             >
               <gux-icon decorative icon-name="chevron-double-left"></gux-icon>
             </button>
-          </gux-button-slot-beta>
-          <gux-button-slot-beta accent="ghost">
+          </gux-button-slot>
+          <gux-button-slot accent="ghost">
             <button
               title={this.i18n('previous')}
               disabled={this.onFirstPage}
@@ -159,13 +159,13 @@ export class GuxPaginationButtonsBeta {
             >
               <gux-icon decorative icon-name="chevron-small-left"></gux-icon>
             </button>
-          </gux-button-slot-beta>
+          </gux-button-slot>
         </div>
 
         {this.getPageNavigation()}
 
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot-beta accent="ghost">
+          <gux-button-slot accent="ghost">
             <button
               title={this.i18n('next')}
               disabled={this.onLastPage}
@@ -173,8 +173,8 @@ export class GuxPaginationButtonsBeta {
             >
               <gux-icon decorative icon-name="chevron-small-right"></gux-icon>
             </button>
-          </gux-button-slot-beta>
-          <gux-button-slot-beta accent="ghost">
+          </gux-button-slot>
+          <gux-button-slot accent="ghost">
             <button
               title={this.i18n('last')}
               disabled={this.onLastPage}
@@ -182,7 +182,7 @@ export class GuxPaginationButtonsBeta {
             >
               <gux-icon decorative icon-name="chevron-double-right"></gux-icon>
             </button>
-          </gux-button-slot-beta>
+          </gux-button-slot>
         </div>
       </div>
     ) as JSX.Element;
