@@ -1,0 +1,5 @@
+@use '../../../style/_mixins';
+
+.gux-sr-only {
+  @include mixins.gux-sr-only-clip;
+}
