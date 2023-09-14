@@ -37,6 +37,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-popover-beta              | gux-popover              |
 | gux-popup-beta                | gux-popup                |
 | gux-skip-navigation-list-beta | gux-skip-navigation-list |
+| gux-tab-panel                 | gux-tab-panel            |
 | gux-table-beta                | gux-table                |
 | gux-table-toolbar-beta        | gux-table-toolbar        |
 | gux-time-picker-beta          | gux-time-picker          |
@@ -224,3 +225,7 @@ The `scale` property has been removed. The displayed percentage will now always 
 - <gux-radial-progress scale="2" screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
 + <gux-radial-progress screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
 ```
+
+### gux-tab-panel
+
+This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
