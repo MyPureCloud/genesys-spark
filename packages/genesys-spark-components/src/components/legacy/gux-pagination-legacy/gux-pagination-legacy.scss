@@ -1,6 +1,8 @@
 :host {
   display: block;
-  border-top: 1px solid #e2e6ee;
+  border-top: var(--gse-ui-dataTableItems-tablePagination-divider-width)
+    var(--gse-ui-dataTableItems-tablePagination-divider-style)
+    var(--gse-ui-dataTableItems-tablePagination-divider-color);
 }
 
 .gux-pagination-container {
@@ -10,8 +12,11 @@
   align-content: stretch;
   align-items: center;
   justify-content: space-between;
-  height: 32px;
-  margin-top: 12px;
+  height: var(--gse-ui-dataTableItems-cell-tablePagination-height);
+  padding: var(--gse-ui-dataTableItems-tablePagination-padding);
+  background-color: var(
+    --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
+  );
 
   .gux-pagination-info {
     display: flex;
@@ -23,6 +28,7 @@
     align-self: auto;
     justify-content: flex-start;
     order: 0;
+    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
 
     & > * {
       flex: 0 1 auto;
@@ -35,7 +41,6 @@
     flex: 1 1 auto;
     align-self: auto;
     order: 0;
-    margin-left: 16px;
   }
 
   .gux-pagination-change:first-child {
