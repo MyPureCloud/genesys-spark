@@ -1,0 +1,59 @@
+.gux-month-calendar {
+  flex-wrap: wrap;
+  width: var(--gse-ui-calendarMenu-width);
+  height: var(--gse-ui-calendarMenu-height);
+  box-shadow: var(--gse-ui-calendarMenu-boxShadow-x)
+    var(--gse-ui-calendarMenu-boxShadow-y)
+    var(--gse-ui-calendarMenu-boxShadow-blur)
+    var(--gse-ui-calendarMenu-boxShadow-spread)
+    var(--gse-ui-calendarMenu-boxShadow-color);
+
+  .gux-year-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--gse-ui-calendarMenu-day-headerText-fontFamily);
+    font-size: var(--gse-ui-calendarMenu-day-headerText-fontSize);
+    line-height: var(--gse-ui-calendarMenu-day-headerText-lineHeight);
+    font-weight: var(--gse-ui-calendarMenu-day-headerText-fontWeight);
+    height: var(--gse-ui-calendarMenu-month-single-header-height);
+    padding: var(--gse-ui-calendarMenu-header-padding);
+    color: var(--gse-ui-calendarMenu-header-foregroundColor);
+    background-color: var(--gse-ui-calendarMenu-header-backgroundColor);
+    border-radius: var(--gse-ui-calendarMenu-single-header-borderRadius);
+
+    button {
+      color: inherit;
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 8px; //TODO: COMUI-2256 should I use button padding token ?
+
+      &:focus-visible {
+        outline: var(--gse-semantic-focusRing-width)
+          var(--gse-semantic-focusRing-default-border-style)
+          var(--gse-semantic-color-focus);
+        outline-offset: var(--gse-semantic-focusRing-offset);
+        border-radius: calc(
+          var(--gse-semantic-focusRing-cornerRadius) -
+            var(--gse-semantic-focusRing-offset)
+        );
+      }
+
+      &.gux-year-change {
+        &:disabled {
+          cursor: default;
+          opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+        }
+      }
+
+      gux-icon {
+        width: var(--gse-ui-icon-size-sm);
+        height: var(--gse-ui-icon-size-sm);
+        pointer-events: none;
+      }
+    }
+  }
+}
