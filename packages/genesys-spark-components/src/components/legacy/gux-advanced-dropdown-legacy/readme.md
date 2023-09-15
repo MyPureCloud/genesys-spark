@@ -1,4 +1,4 @@
-# gux-advanced-dropdown
+# gux-advanced-dropdown-legacy
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -58,20 +58,20 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-popup](../gux-popup)
-- [gux-icon](../gux-icon)
-- [gux-form-field-search](../gux-form-field/components/gux-form-field-search)
+- [gux-popup](../../stable/gux-popup)
+- [gux-icon](../../stable/gux-icon)
+- [gux-form-field-search](../../stable/gux-form-field/components/gux-form-field-search)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-advanced-dropdown --> gux-popup
-  gux-advanced-dropdown --> gux-icon
-  gux-advanced-dropdown --> gux-form-field-search
+  gux-advanced-dropdown-legacy --> gux-popup
+  gux-advanced-dropdown-legacy --> gux-icon
+  gux-advanced-dropdown-legacy --> gux-form-field-search
   gux-form-field-search --> gux-icon
   gux-form-field-search --> gux-form-field-input-clear-button
   gux-form-field-input-clear-button --> gux-icon
-  style gux-advanced-dropdown fill:#f9f,stroke:#333,stroke-width:4px
+  style gux-advanced-dropdown-legacy fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

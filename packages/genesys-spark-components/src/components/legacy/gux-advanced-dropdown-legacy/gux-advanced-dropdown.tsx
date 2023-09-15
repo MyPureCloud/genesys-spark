@@ -25,11 +25,11 @@ import advancedDropDownResources from './i18n/en.json';
  */
 
 @Component({
-  styleUrl: 'gux-advanced-dropdown.less',
-  tag: 'gux-advanced-dropdown',
+  styleUrl: 'gux-advanced-dropdown.scss',
+  tag: 'gux-advanced-dropdown-legacy',
   shadow: true
 })
-export class GuxAdvancedDropdown {
+export class GuxAdvancedDropdownLegacy {
   @Element()
   root: HTMLElement;
 

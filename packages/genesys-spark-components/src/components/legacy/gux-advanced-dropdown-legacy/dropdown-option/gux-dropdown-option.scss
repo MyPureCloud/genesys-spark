@@ -1,9 +1,9 @@
-@text-color: #2e394c;
+$text-color: #2e394c;
 
 gux-dropdown-option {
   position: relative;
   display: flex;
-  height: var(--option-height); // Set in gux-advanced-dropdown
+  height: var(--option-height); // Set in gux-advanced-dropdown-legacy
   padding: 0 16px;
   line-height: 32px;
   cursor: pointer;
@@ -37,7 +37,7 @@ gux-dropdown-option {
 
   &:not(:disabled) {
     &[selected] {
-      color: @text-color;
+      color: $text-color;
       background: #deeaff;
     }
 

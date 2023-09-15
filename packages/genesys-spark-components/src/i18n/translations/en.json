@@ -2,7 +2,7 @@
   "gux-action-button": {
     "actionButtonDropdown": "Dropdown for {buttonTitle}"
   },
-  "gux-advanced-dropdown": {
+  "gux-advanced-dropdown-legacy": {
     "searchAria": "Search"
   },
   "gux-alert": {
