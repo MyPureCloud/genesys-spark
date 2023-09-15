@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.104.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.103.0...v3.104.0) (2023-09-15)
+
+
+### Features
+
+* **tabs:** match font size with designs ([a79c1a9](https://github.com/MyPureCloud/genesys-webcomponents/commit/a79c1a98dd9ecd3aee29489c5c4833365da0618e))
+
 ## [3.103.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.102.0...v3.103.0) (2023-09-08)
 
 
