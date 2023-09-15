@@ -18,7 +18,7 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot - list of gux-switch-item elements
  */
 @Component({
-  styleUrl: 'gux-switch.less',
+  styleUrl: 'gux-switch.scss',
   tag: 'gux-switch',
   shadow: true
 })
