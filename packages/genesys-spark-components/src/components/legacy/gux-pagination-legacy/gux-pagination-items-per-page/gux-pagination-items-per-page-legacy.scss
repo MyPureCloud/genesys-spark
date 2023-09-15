@@ -1,0 +1,41 @@
+gux-pagination-items-per-page-legacy {
+  .gux-pagination-items-per-page-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+
+    & > div {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+      white-space: nowrap;
+    }
+
+    .gux-pagination-items-per-page-picker {
+      gux-dropdown {
+        display: inline-block;
+        width: 64px;
+      }
+    }
+
+    .gux-pagination-per-page {
+      font-family: var(
+        --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
+      );
+      color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
+      font-size: var(
+        --gse-ui-dataTableItems-tablePagination-defaultText-fontSize
+      );
+      line-height: var(
+        --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+      );
+      font-weight: var(
+        --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
+      );
+    }
+  }
+}

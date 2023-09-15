@@ -1,4 +1,4 @@
-# gux-tabs-beta
+# gux-tabs
 
 
 

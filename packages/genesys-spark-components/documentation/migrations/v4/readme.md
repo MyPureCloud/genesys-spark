@@ -26,29 +26,35 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 ### There have been no API changes in these components.
 
-| V3 tag name            | V4 tag name       |
-|------------------------|-------------------|
-| gux-blank-state-beta   | gux-blank-state   |
-| gux-button-slot-beta   | gux-button-slot   |
-| gux-inline-alert-beta  | gux-inline-alert  |
-| gux-popover-beta       | gux-popover       |
-| gux-popup-beta         | gux-popup         |
-| gux-table-beta         | gux-table         |
-| gux-table-toolbar-beta | gux-table-toolbar |
-| gux-time-picker-beta   | gux-time-picker   |
+| V3 tag name                   | V4 tag name              |
+| ----------------------------- | ------------------------ |
+| gux-blank-state-beta          | gux-blank-state          |
+| gux-button-slot-beta          | gux-button-slot          |
+| gux-column-manager-beta       | gux-column-manager       |
+| gux-context-menu-beta         | gux-context-menu         |
+| gux-inline-alert-beta         | gux-inline-alert         |
+| gux-loading-message-beta      | gux-loading-message      |
+| gux-popover-beta              | gux-popover              |
+| gux-popup-beta                | gux-popup                |
+| gux-skip-navigation-list-beta | gux-skip-navigation-list |
+| gux-tab-panel                 | gux-tab-panel            |
+| gux-table-beta                | gux-table                |
+| gux-table-toolbar-beta        | gux-table-toolbar        |
+| gux-time-picker-beta          | gux-time-picker          |
 
 ### There have been API changes in these components.
 
-| V3 tag name    | V4 tag name |
-|----------------|-------------|
-| gux-badge-beta | gux-badge   |
+| V3 tag name      | V4 tag name | Migration Guide    |
+| ---------------- | ----------- | ------------------ |
+| `gux-badge-beta` | `gux-badge` | [link](#gux-badge) |
+| `gux-tag-beta`   | `gux-tag`   | [link](#gux-tag)   |
 
 #### gux-badge
 
 The `color` property has been removed. All uses of the `color` property can be migrated to the `accent` property.
 
 | Color   | Equivalent accent |
-|---------|-------------------|
+| ------- | ----------------- |
 | green   | success           |
 | inherit | inherit           |
 | neutral | info              |
@@ -68,6 +74,18 @@ The `color` property has been removed. All uses of the `color` property can be m
 + <gux-badge accent="warning">Text</gux-badge>
 ```
 
+#### gux-tag
+
+- The `color` property has been removed.
+  - All uses of the `color` property must be migrated to the `accent` property.
+  - There is no guidance for mapping a specific color to an accent as the number of available accents in less than the number of colors that were previously available.
+  - If this change effects your use case please reach out to the Design System Team for guidance/assistance.
+
+```diff
+- <gux-tag-beta color="navy">Text</gux-tag-beta>
++ <gux-tag accent="1">Text</gux-tag>
+```
+
 #### gux-calendar
 
 The `input` event has been renamed `calendarSelect`
@@ -85,7 +103,7 @@ An `is-open` prop has been added to control showing and hiding the component. Th
 ## V3 Stable Components Archived to Legacy in V4
 
 | V3 tag name            | V4 tag name                   | V4 stable equivalent (requires API changes) | Migration Guide                            |
-|------------------------|-------------------------------|---------------------------------------------|--------------------------------------------|
+| ---------------------- | ----------------------------- | ------------------------------------------- | ------------------------------------------ |
 | gux-action-toast       | gux-action-toast-legacy       | gux-toast                                   | [link](./gux-action-toast-legacy.md)       |
 | gux-notification-toast | gux-notification-toast-legacy | gux-toast                                   | [link](./gux-notification-toast-legacy.md) |
 | gux-simple-toast       | gux-simple-toast-legacy       | gux-toast                                   | [link](./gux-simple-toast-legacy.md)       |
@@ -107,13 +125,13 @@ If possible, avoid the usage of legacy components that have a migration path and
 ## V3 Beta Components Removed From V4
 
 | V3 tag name            | V4 equivalent | Migration Guide                     |
-|------------------------|---------------|-------------------------------------|
+| ---------------------- | ------------- | ----------------------------------- |
 | gux-error-message-beta | N/A           | [link](./gux-error-message-beta.md) |
 
 ## V3 Legacy Components Removed from V4
 
 | V3 tag name                | V4 stable equivalent (requires API changes) | V3 Migration Guide                        |
-|----------------------------|---------------------------------------------|-------------------------------------------|
+| -------------------------- | ------------------------------------------- | ----------------------------------------- |
 | gux-accordion-legacy       | gux-accordion                               | [link](../v3/gux-accordion-legacy.md)     |
 | gux-action-button-legacy   | gux-action-button                           | [link](../v3/gux-action-button-legacy.md) |
 | gux-action-list-legacy     | gux-list                                    | [link](../v3/gux-list-legacy.md)          |
@@ -207,3 +225,7 @@ The `scale` property has been removed. The displayed percentage will now always 
 - <gux-radial-progress scale="2" screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
 + <gux-radial-progress screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
 ```
+
+### gux-tab-panel
+
+This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.

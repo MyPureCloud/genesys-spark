@@ -43,33 +43,41 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -79,12 +87,12 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
         <gux-pagination-buttons-legacy current-page="1" total-pages="40">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -107,12 +115,12 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -169,33 +177,41 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -205,12 +221,12 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
         <gux-pagination-buttons-legacy current-page="1" total-pages="20">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -233,12 +249,12 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -295,33 +311,41 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -331,12 +355,12 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
         <gux-pagination-buttons-legacy current-page="1" total-pages="14">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -359,12 +383,12 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -421,33 +445,41 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -457,12 +489,12 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
         <gux-pagination-buttons-legacy current-page="1" total-pages="10">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -485,12 +517,12 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -547,33 +579,41 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -583,12 +623,12 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
         <gux-pagination-buttons-legacy current-page="1" total-pages="40">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -611,12 +651,12 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -673,33 +713,41 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -709,12 +757,12 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
         <gux-pagination-buttons-legacy current-page="10" total-pages="40">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -737,12 +785,12 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -799,33 +847,41 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -835,12 +891,12 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
         <gux-pagination-buttons-legacy current-page="10" total-pages="20">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -863,12 +919,12 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -925,33 +981,41 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -961,12 +1025,12 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
         <gux-pagination-buttons-legacy current-page="10" total-pages="14">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -989,12 +1053,12 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -1051,33 +1115,41 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -1087,12 +1159,12 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
         <gux-pagination-buttons-legacy current-page="10" total-pages="10">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -1115,12 +1187,12 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -1154,12 +1226,12 @@ exports[`gux-pagination-legacy #render should render as expected (10) 1`] = `
         <gux-pagination-buttons-legacy current-page="1" total-pages="40">
           <div class="gux-pagination-buttons-container gux-small">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -1167,12 +1239,12 @@ exports[`gux-pagination-legacy #render should render as expected (10) 1`] = `
             </div>
             <div class="gux-pagination-buttons-spacer"></div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -1229,33 +1301,41 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -1265,12 +1345,12 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
         <gux-pagination-buttons-legacy current-page="1" total-pages="40">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -1293,12 +1373,12 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -1355,33 +1435,41 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -1391,12 +1479,12 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
         <gux-pagination-buttons-legacy current-page="1" total-pages="1">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -1419,12 +1507,12 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>
@@ -1481,33 +1569,41 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
                     <slot></slot>
                   </mock:shadow-root>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      25
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      50
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      75
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <!---->
-                    <gux-truncate>
-                      100
-                    </gux-truncate>
+                    <mock:shadow-root>
+                      <gux-truncate>
+                        <slot></slot>
+                      </gux-truncate>
+                    </mock:shadow-root>
+                    100
                   </gux-option>
                 </gux-listbox>
               </gux-dropdown>
             </div>
-            <div>
+            <div class="gux-pagination-per-page">
               per page
             </div>
           </div>
@@ -1517,12 +1613,12 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
         <gux-pagination-buttons-legacy current-page="1" total-pages="1">
           <div class="gux-full gux-pagination-buttons-container">
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="First">
                   <gux-icon decorative="" icon-name="chevron-double-left"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Previous">
                   <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
                 </button>
@@ -1545,12 +1641,12 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
               </div>
             </div>
             <div class="gux-pagination-buttons-group">
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Next">
                   <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
                 </button>
               </gux-button-slot>
-              <gux-button-slot accent="secondary">
+              <gux-button-slot accent="ghost">
                 <button disabled="" title="Last">
                   <gux-icon decorative="" icon-name="chevron-double-right"></gux-icon>
                 </button>

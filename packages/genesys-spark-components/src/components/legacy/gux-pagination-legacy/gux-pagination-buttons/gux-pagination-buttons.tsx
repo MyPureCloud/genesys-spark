@@ -15,7 +15,7 @@ import paginationResources from './i18n/en.json';
 import { GuxPaginationButtonsService } from './gux-pagination-button.service';
 
 @Component({
-  styleUrl: 'gux-pagination-buttons.less',
+  styleUrl: 'gux-pagination-buttons-legacy.scss',
   tag: 'gux-pagination-buttons-legacy'
 })
 export class GuxPaginationButtonsLegacy {
@@ -165,7 +165,7 @@ export class GuxPaginationButtonsLegacy {
     return (
       <div class={`gux-pagination-buttons-container gux-${this.layout}`}>
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot accent="secondary">
+          <gux-button-slot accent="ghost">
             <button
               title={this.i18n('first')}
               disabled={this.onFirstPage}
@@ -174,7 +174,7 @@ export class GuxPaginationButtonsLegacy {
               <gux-icon decorative icon-name="chevron-double-left"></gux-icon>
             </button>
           </gux-button-slot>
-          <gux-button-slot accent="secondary">
+          <gux-button-slot accent="ghost">
             <button
               title={this.i18n('previous')}
               disabled={this.onFirstPage}
@@ -188,7 +188,7 @@ export class GuxPaginationButtonsLegacy {
         {this.getPagePicker(this.layout)}
 
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot accent="secondary">
+          <gux-button-slot accent="ghost">
             <button
               title={this.i18n('next')}
               disabled={this.onLastPage}
@@ -197,7 +197,7 @@ export class GuxPaginationButtonsLegacy {
               <gux-icon decorative icon-name="chevron-small-right"></gux-icon>
             </button>
           </gux-button-slot>
-          <gux-button-slot accent="secondary">
+          <gux-button-slot accent="ghost">
             <button
               title={this.i18n('last')}
               disabled={this.onLastPage}

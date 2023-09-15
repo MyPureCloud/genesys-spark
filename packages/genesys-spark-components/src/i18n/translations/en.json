@@ -2,7 +2,7 @@
   "gux-action-button": {
     "actionButtonDropdown": "Dropdown for {buttonTitle}"
   },
-  "gux-advanced-dropdown": {
+  "gux-advanced-dropdown-legacy": {
     "searchAria": "Search"
   },
   "gux-alert": {
@@ -105,7 +105,8 @@
     "required": "Required"
   },
   "gux-listbox": {
-    "noMatches": "No matches",
+    "noMatchesHeader": "Sorry, this menu is empty right now.",
+    "noMatchesMessage": "Please try again later.",
     "loading": "Loading..."
   },
   "gux-listbox-multi": {

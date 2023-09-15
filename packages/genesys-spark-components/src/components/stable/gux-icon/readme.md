@@ -20,13 +20,13 @@
 
  - [gux-accordion-section](../gux-accordion/gux-accordion-section)
  - [gux-action-button](../gux-action-button)
- - [gux-advanced-dropdown](../gux-advanced-dropdown)
+ - [gux-advanced-dropdown-legacy](../../legacy/gux-advanced-dropdown-legacy)
  - [gux-button-multi](../gux-button-multi)
  - [gux-calendar](../gux-calendar)
  - [gux-calendar-beta](../../beta/gux-calendar-beta/components/single)
- - [gux-column-manager-item](../../beta/gux-column-manager/gux-column-manager-item)
+ - [gux-column-manager-item](../gux-column-manager/gux-column-manager-item)
  - [gux-content-search](../gux-content-search)
- - [gux-context-menu-beta](../../beta/gux-context-menu)
+ - [gux-context-menu](../gux-context-menu)
  - [gux-copy-to-clipboard](../gux-copy-to-clipboard)
  - [gux-create-option](../gux-listbox-multi/gux-create-option)
  - [gux-datepicker](../gux-datepicker)
@@ -66,7 +66,7 @@
  - [gux-table-select-menu](../gux-table/gux-table-select-menu)
  - [gux-table-toolbar-action](../gux-table-toolbar/gux-table-toolbar-action)
  - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
- - [gux-tag-beta](../../beta/gux-tag)
+ - [gux-tag](../gux-tag)
  - [gux-time-picker](../gux-time-picker)
  - [gux-toast](../gux-toast)
  - [gux-toggle](../gux-toggle)
@@ -77,13 +77,13 @@
 graph TD;
   gux-accordion-section --> gux-icon
   gux-action-button --> gux-icon
-  gux-advanced-dropdown --> gux-icon
+  gux-advanced-dropdown-legacy --> gux-icon
   gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
   gux-calendar-beta --> gux-icon
   gux-column-manager-item --> gux-icon
   gux-content-search --> gux-icon
-  gux-context-menu-beta --> gux-icon
+  gux-context-menu --> gux-icon
   gux-copy-to-clipboard --> gux-icon
   gux-create-option --> gux-icon
   gux-datepicker --> gux-icon
@@ -123,7 +123,7 @@ graph TD;
   gux-table-select-menu --> gux-icon
   gux-table-toolbar-action --> gux-icon
   gux-table-toolbar-menu-button --> gux-icon
-  gux-tag-beta --> gux-icon
+  gux-tag --> gux-icon
   gux-time-picker --> gux-icon
   gux-toast --> gux-icon
   gux-toggle --> gux-icon
