@@ -23,7 +23,7 @@
  - [gux-action-button](../gux-action-button)
  - [gux-blank-state](../gux-blank-state)
  - [gux-button-multi](../gux-button-multi)
- - [gux-context-menu](../../beta/gux-context-menu)
+ - [gux-context-menu](../gux-context-menu)
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-pagination-buttons-beta](../../beta/gux-pagination-beta/gux-pagination-buttons-beta)
  - [gux-pagination-buttons-legacy](../../legacy/gux-pagination-legacy/gux-pagination-buttons)
