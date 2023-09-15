@@ -5,7 +5,7 @@ import { Component, Host, h, JSX } from '@stencil/core';
  */
 
 @Component({
-  styleUrl: 'gux-skip-navigation-item.less',
+  styleUrl: 'gux-skip-navigation-item.scss',
   tag: 'gux-skip-navigation-item',
   shadow: { delegatesFocus: true }
 })
