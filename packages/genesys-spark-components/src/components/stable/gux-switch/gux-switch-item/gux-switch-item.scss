@@ -1,14 +1,14 @@
-@import (reference) '../../../../style/typography.less';
+@use '../../../../style/typography';
 
-@icon-off: #99a4b8;
-@icon-on: #2e394c;
-@hover-on: #2a60c8;
-@inactive-small: #e2e6ee;
-@active-tab: #75a8ff;
+$icon-off: #99a4b8;
+$icon-on: #2e394c;
+$hover-on: #2a60c8;
+$inactive-small: #e2e6ee;
+$active-tab: #75a8ff;
 
 gux-switch-item {
   > .gux-switch-item {
-    .body-font();
+    @include typography.body-font;
 
     font: unset;
     color: #2e394c;
@@ -19,7 +19,7 @@ gux-switch-item {
 
     > gux-icon {
       svg {
-        fill: @icon-off;
+        fill: $icon-off;
       }
     }
   }
@@ -30,7 +30,7 @@ gux-switch-item {
   }
 
   &.gux-selected {
-    .bold-font();
+    @include typography.bold-font;
   }
 }
 
@@ -39,7 +39,7 @@ gux-switch {
   > gux-switch-item {
     .gux-switch-item {
       padding: 0 8px 4px;
-      border-bottom: 1px solid @inactive-small;
+      border-bottom: 1px solid $inactive-small;
 
       &:focus-visible,
       &:hover {
@@ -49,7 +49,7 @@ gux-switch {
 
         > gux-icon {
           svg {
-            fill: @icon-on;
+            fill: $icon-on;
           }
         }
       }
@@ -67,7 +67,7 @@ gux-switch {
 
         > gux-icon {
           svg {
-            fill: @icon-on;
+            fill: $icon-on;
           }
         }
       }
@@ -77,14 +77,14 @@ gux-switch {
   &.gux-small {
     > gux-switch-item {
       .gux-switch-item {
-        .gux-small-text();
+        @include typography.gux-small-text;
 
         padding: 0 4px;
-        border-bottom: 1px solid @inactive-small;
+        border-bottom: 1px solid $inactive-small;
 
         &:focus-visible,
         &:hover {
-          border-bottom-color: @icon-on;
+          border-bottom-color: $icon-on;
         }
 
         > gux-icon {
@@ -95,7 +95,7 @@ gux-switch {
 
       &.gux-selected {
         .gux-switch-item {
-          border-bottom-color: @icon-on;
+          border-bottom-color: $icon-on;
         }
       }
     }
