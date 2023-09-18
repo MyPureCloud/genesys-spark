@@ -20,7 +20,7 @@ import translationResources from './i18n/en.json';
 import { GuxToggleLabelPosition } from './gux-toggle.types';
 
 @Component({
-  styleUrl: 'gux-toggle.less',
+  styleUrl: 'gux-toggle.scss',
   tag: 'gux-toggle',
   shadow: { delegatesFocus: true }
 })

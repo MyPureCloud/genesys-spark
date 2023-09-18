@@ -1,7 +1,7 @@
 import { Component, h, JSX, Prop } from '@stencil/core';
 
 @Component({
-  styleUrl: 'gux-toggle-slider.less',
+  styleUrl: 'gux-toggle-slider.scss',
   tag: 'gux-toggle-slider',
   shadow: false
 })
