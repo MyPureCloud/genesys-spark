@@ -4,7 +4,8 @@
   <div class="row">
     <div class="overlap">
       <h2>Primary</h2>
-      <gux-button-multi text="Primary" accent="primary" is-open="true">
+      <gux-button-multi accent="primary" is-open="true">
+        <span slot="title">Primary</span>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -14,7 +15,8 @@
     </div>
     <div>
       <h2>Secondary</h2>
-      <gux-button-multi text="Secondary" accent="secondary">
+      <gux-button-multi accent="secondary">
+        <span slot="title">Secondary</span>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -24,7 +26,8 @@
     </div>
     <div>
       <h2>Tertiary</h2>
-      <gux-button-multi text="Tertiary" accent="tertiary">
+      <gux-button-multi accent="tertiary">
+        <span slot="title">Tertiary</span>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -34,7 +37,8 @@
     </div>
     <div>
       <h2>Invalid</h2>
-      <gux-button-multi text="Invalid" accent="inline">
+      <gux-button-multi accent="inline">
+        <span slot="title">Invalid</span>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -44,7 +48,8 @@
     </div>
     <div>
       <h2>Disabled</h2>
-      <gux-button-multi class="disable-toggle" text="Disabled" disabled>
+      <gux-button-multi class="disable-toggle" disabled>
+        <span slot="title">Disabled</span>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>

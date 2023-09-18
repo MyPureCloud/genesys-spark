@@ -48,12 +48,6 @@ export class GuxButtonMulti {
   close: EventEmitter;
 
   /**
-   * The component text.
-   */
-  @Prop()
-  text: string;
-
-  /**
    * Disables the action button.
    */
   @Prop()
@@ -181,7 +175,7 @@ export class GuxButtonMulti {
               aria-haspopup="true"
               aria-expanded={this.isOpen.toString()}
             >
-              <slot name="title">{this.text}</slot>
+              <slot name="title" />
               <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
             </button>
           </gux-button-slot>
