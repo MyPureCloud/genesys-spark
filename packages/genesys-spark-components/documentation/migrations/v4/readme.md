@@ -41,6 +41,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-table-beta                | gux-table                |
 | gux-table-toolbar-beta        | gux-table-toolbar        |
 | gux-time-picker-beta          | gux-time-picker          |
+| gux-pagination-beta           | gux-pagination           |
 
 ### There have been API changes in these components.
 

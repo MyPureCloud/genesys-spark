@@ -42,7 +42,7 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-pagination-buttons-legacy](../../../../legacy/gux-pagination-legacy/gux-pagination-buttons)
+ - [gux-pagination-buttons-legacy](../../../../legacy/gux-pagination-legacy/gux-pagination-buttons-legacy)
 
 ### Depends on
 

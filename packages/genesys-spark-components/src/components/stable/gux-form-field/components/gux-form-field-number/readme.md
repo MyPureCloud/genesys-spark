@@ -47,7 +47,7 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-pagination-ellipsis-button](../../../../beta/gux-pagination-beta/gux-pagination-buttons-beta/gux-pagination-ellipsis-button)
+ - [gux-pagination-ellipsis-button](../../../gux-pagination/gux-pagination-buttons/gux-pagination-ellipsis-button)
 
 ### Depends on
 
