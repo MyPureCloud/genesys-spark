@@ -6,25 +6,15 @@
  * Typography styles and mixins.
  */
 
-// Variables part
-$body-font-line-height: 20px;
-
 /* Helpers */
 
 @mixin base-font {
-  font-family: Roboto, sans-serif;
+  font-family: var(--gse-core-fontFamily-body), sans-serif;
   font-weight: 400;
 }
 
-@mixin light-font {
-  @include base-font;
-
-  font-weight: 300;
-}
-
 @mixin bold-font {
-  @include base-font;
-
+  font-family: var(--gse-core-fontFamily-body), sans-serif;
   font-weight: 700;
 }
 
@@ -33,65 +23,51 @@ $body-font-line-height: 20px;
 @mixin body-font {
   @include base-font;
 
-  font-size: 12px;
-  line-height: $body-font-line-height;
+  // font-size: 12px;
+  font-size: var(--gse-core-fontSize-xs);
+  line-height: var(--gse-core-lineHeight-xs);
 }
 
 @mixin body-font-bold {
-  @include body-font;
-  @include bold-font;
-}
-
-body {
-  @include body-font;
+  font-family: var(--gse-core-fontFamily-body), sans-serif;
+  font-weight: 700;
 }
 
 /* Headings */
 
 @mixin h1 {
-  @include light-font;
-
-  font-size: 24px;
-  line-height: 32px;
-}
-
-h1 {
-  @include h1;
+  font-family: var(--gse-core-fontFamily-heading), sans-serif;
+  font-weight: var(--gse-core-fontWeight-bold);
+  //24px
+  font-size: var(--gse-core-fontSize-xl);
+  //32px
+  line-height: var(--gse-core-lineHeight-xl);
 }
 
 @mixin h2 {
-  @include light-font;
-
-  font-size: 18px;
-  line-height: 24px;
+  font-family: var(--gse-core-fontFamily-heading), sans-serif;
+  font-weight: var(--gse-core-fontWeight-semiBold);
+  // font-size: 18px;
+  font-size: var(--gse-core-fontSize-lg);
+  // line-height: 24px;
+  line-height: var(--gse-lineHeight-md);
 }
-
-h2 {
-  @include h2;
-}
-
 @mixin h3 {
-  @include bold-font;
-
-  font-size: 14px;
-  line-height: 20px;
-}
-
-h3 {
-  @include h3;
+  font-family: var(--gse-core-fontFamily-heading), sans-serif;
+  font-weight: var(--gse-core-fontWeight-semiBold);
+  // 16px
+  font-size: var(--gse-core-fontSize-md);
+  // line-height: 20px;
+  line-height: var(--gse-core-lineHeight-md);
 }
 
 @mixin h4-6 {
-  @include base-font;
-
-  font-size: 14px;
+  font-family: var(--gse-core-fontFamily-heading), sans-serif;
+  font-weight: var(--gse-core-fontWeight-semiBold);
+  // font-size: 14px;
+  font-size: var(--gse-core-fontSize-sm);
   line-height: 20px;
-}
-
-h4,
-h5,
-h6 {
-  @include h4-6;
+  line-height: var(--gse-core-lineHeight-sm);
 }
 
 /* Anchor */
@@ -123,14 +99,6 @@ h6 {
   gux-icon {
     padding-right: 2px;
   }
-}
-
-a {
-  @include gux-anchor;
-}
-
-table a {
-  @include gux-anchor-table;
 }
 
 /* Custom Styles */
