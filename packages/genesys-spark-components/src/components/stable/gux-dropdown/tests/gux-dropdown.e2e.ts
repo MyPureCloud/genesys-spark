@@ -83,21 +83,6 @@ function testWithOptionType(optionType: string, listboxContent: string) {
         expect(visibleItems.length).toBe(5);
         expect(visibleItems[0].textContent).toEqual('Ant');
       });
-      // remove in V4 (COMUI-1369)
-      it('is backwards compatible with filterable property', async () => {
-        const { page } = await render(filterableDropdown(listboxContent));
-        await openWithClick(page);
-
-        let visibleItems = await unfilteredOptions(page, optionType);
-        expect(visibleItems.length).toBe(5);
-
-        await page.keyboard.press('b');
-        await page.waitForChanges();
-
-        visibleItems = await unfilteredOptions(page, optionType);
-        expect(visibleItems.length).toBe(2);
-        expect(visibleItems[0].textContent).toEqual('Bear');
-      });
     });
 
     describe('click', () => {
@@ -253,17 +238,6 @@ function nonFilterableDropdown(listboxContent: string) {
     ${listboxContent}
   </gux-listbox>
   </gux-dropdown>
-`;
-}
-
-// remove in V4 (COMUI-1369)
-function filterableDropdown(listboxContent: string) {
-  return `
-<gux-dropdown filterable filter-type="starts-with" lang="en" value="j">
-  <gux-listbox aria-label="Favorite Animal">
-  ${listboxContent}
-  </gux-listbox>
-</gux-dropdown>
 `;
 }
 
