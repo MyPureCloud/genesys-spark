@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.26](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.25...v4.0.0-beta.26) (2023-09-15)
+
+
+### Bug Fixes
+
+* **timezones:** added missing timezones ([d128e31](https://github.com/MyPureCloud/genesys-webcomponents/commit/d128e31788b6f22ca174bd72e0dbd779484e2e2c))
+* **tokens:** updated snapshots ([c4a0bc6](https://github.com/MyPureCloud/genesys-webcomponents/commit/c4a0bc6f3a87b1ef0104bb9e764578cf638eef19))
+
 ## [4.0.0-beta.25](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.24...v4.0.0-beta.25) (2023-09-13)
 
 ## [4.0.0-beta.24](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.23...v4.0.0-beta.24) (2023-09-13)

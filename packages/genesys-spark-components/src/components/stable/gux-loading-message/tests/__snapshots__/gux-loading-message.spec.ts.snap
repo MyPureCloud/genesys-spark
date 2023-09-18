@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-loading-message #render should render the component as expected 1`] = `
+<gux-loading-message>
+  <mock:shadow-root>
+    <div aria-live="assertive" class="gux-container gux-undefined" role="alert">
+      <slot name="progress"></slot>
+      <slot name="primary-message"></slot>
+      <slot name="additional-guidance"></slot>
+    </div>
+  </mock:shadow-root>
+  <span slot="primary-message">
+    The content is loading...
+  </span>
+  <span slot="additional-guidance">
+    Thank you for waiting.
+  </span>
+  <gux-radial-progress slot="progress"></gux-radial-progress>
+</gux-loading-message>
+`;

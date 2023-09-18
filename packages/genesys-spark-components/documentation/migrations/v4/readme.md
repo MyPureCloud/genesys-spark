@@ -33,18 +33,21 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-column-manager-beta       | gux-column-manager       |
 | gux-context-menu-beta         | gux-context-menu         |
 | gux-inline-alert-beta         | gux-inline-alert         |
+| gux-loading-message-beta      | gux-loading-message      |
 | gux-popover-beta              | gux-popover              |
 | gux-popup-beta                | gux-popup                |
 | gux-skip-navigation-list-beta | gux-skip-navigation-list |
+| gux-tab-panel                 | gux-tab-panel            |
 | gux-table-beta                | gux-table                |
 | gux-table-toolbar-beta        | gux-table-toolbar        |
 | gux-time-picker-beta          | gux-time-picker          |
 
 ### There have been API changes in these components.
 
-| V3 tag name    | V4 tag name |
-| -------------- | ----------- |
-| gux-badge-beta | gux-badge   |
+| V3 tag name      | V4 tag name | Migration Guide    |
+| ---------------- | ----------- | ------------------ |
+| `gux-badge-beta` | `gux-badge` | [link](#gux-badge) |
+| `gux-tag-beta`   | `gux-tag`   | [link](#gux-tag)   |
 
 #### gux-badge
 
@@ -69,6 +72,18 @@ The `color` property has been removed. All uses of the `color` property can be m
 + <gux-badge accent="info">Text</gux-badge>
 + <gux-badge accent="error">Text</gux-badge>
 + <gux-badge accent="warning">Text</gux-badge>
+```
+
+#### gux-tag
+
+- The `color` property has been removed.
+  - All uses of the `color` property must be migrated to the `accent` property.
+  - There is no guidance for mapping a specific color to an accent as the number of available accents in less than the number of colors that were previously available.
+  - If this change effects your use case please reach out to the Design System Team for guidance/assistance.
+
+```diff
+- <gux-tag-beta color="navy">Text</gux-tag-beta>
++ <gux-tag accent="1">Text</gux-tag>
 ```
 
 #### gux-calendar
@@ -214,3 +229,7 @@ The `scale` property has been removed. The displayed percentage will now always 
 ### gux-dropdown
 
 - The deprecated attribute `filterable` has now been completely removed in favor of `filter-type`.
+
+### gux-tab-panel
+
+This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.

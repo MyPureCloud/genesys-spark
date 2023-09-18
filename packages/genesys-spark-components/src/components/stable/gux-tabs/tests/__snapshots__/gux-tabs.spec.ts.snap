@@ -69,35 +69,35 @@ exports[`gux-tabs #render should render as expected 1`] = `
       <div class="gux-scroll-button-container"></div>
     </div>
   </gux-tab-list>
-  <gux-tab-panel tab-id="2-1">
-    <!---->
-    <div aria-labelledby="gux-2-1-tab" hidden="" id="gux-2-1-panel" role="tabpanel" tabindex="0">
-      Tab content 1
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-1-tab" hidden="" id="gux-2-1-panel" role="tabpanel" tab-id="2-1" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 1
   </gux-tab-panel>
-  <gux-tab-panel tab-id="2-2">
-    <!---->
-    <div aria-labelledby="gux-2-2-tab" hidden="" id="gux-2-2-panel" role="tabpanel" tabindex="0">
-      Tab content 2
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-2-tab" hidden="" id="gux-2-2-panel" role="tabpanel" tab-id="2-2" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 2
   </gux-tab-panel>
-  <gux-tab-panel tab-id="2-3">
-    <!---->
-    <div aria-labelledby="gux-2-3-tab" hidden="" id="gux-2-3-panel" role="tabpanel" tabindex="0">
-      Tab content 3
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-3-tab" hidden="" id="gux-2-3-panel" role="tabpanel" tab-id="2-3" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 3
   </gux-tab-panel>
-  <gux-tab-panel tab-id="2-4">
-    <!---->
-    <div aria-labelledby="gux-2-4-tab" hidden="" id="gux-2-4-panel" role="tabpanel" tabindex="0">
-      Tab content 4
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-4-tab" hidden="" id="gux-2-4-panel" role="tabpanel" tab-id="2-4" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 4
   </gux-tab-panel>
-  <gux-tab-panel tab-id="2-5">
-    <!---->
-    <div aria-labelledby="gux-2-5-tab" hidden="" id="gux-2-5-panel" role="tabpanel" tabindex="0">
-      Tab content 5
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-5-tab" hidden="" id="gux-2-5-panel" role="tabpanel" tab-id="2-5" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 5
   </gux-tab-panel>
 </gux-tabs>
 `;
@@ -171,35 +171,35 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
       <div class="gux-scroll-button-container"></div>
     </div>
   </gux-tab-list>
-  <gux-tab-panel tab-id="2-1">
-    <!---->
-    <div aria-labelledby="gux-2-1-tab" hidden="" id="gux-2-1-panel" role="tabpanel" tabindex="0">
-      Tab content 1
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-1-tab" hidden="" id="gux-2-1-panel" role="tabpanel" tab-id="2-1" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 1
   </gux-tab-panel>
-  <gux-tab-panel tab-id="2-2">
-    <!---->
-    <div aria-labelledby="gux-2-2-tab" hidden="" id="gux-2-2-panel" role="tabpanel" tabindex="0">
-      Tab content 2
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-2-tab" hidden="" id="gux-2-2-panel" role="tabpanel" tab-id="2-2" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 2
   </gux-tab-panel>
-  <gux-tab-panel tab-id="2-3">
-    <!---->
-    <div aria-labelledby="gux-2-3-tab" hidden="" id="gux-2-3-panel" role="tabpanel" tabindex="0">
-      Tab content 3
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-3-tab" hidden="" id="gux-2-3-panel" role="tabpanel" tab-id="2-3" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 3
   </gux-tab-panel>
-  <gux-tab-panel tab-id="2-4">
-    <!---->
-    <div aria-labelledby="gux-2-4-tab" hidden="" id="gux-2-4-panel" role="tabpanel" tabindex="0">
-      Tab content 4
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-4-tab" hidden="" id="gux-2-4-panel" role="tabpanel" tab-id="2-4" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 4
   </gux-tab-panel>
-  <gux-tab-panel tab-id="2-5">
-    <!---->
-    <div aria-labelledby="gux-2-5-tab" hidden="" id="gux-2-5-panel" role="tabpanel" tabindex="0">
-      Tab content 5
-    </div>
+  <gux-tab-panel aria-labelledby="gux-2-5-tab" hidden="" id="gux-2-5-panel" role="tabpanel" tab-id="2-5" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    Tab content 5
   </gux-tab-panel>
 </gux-tabs>
 `;

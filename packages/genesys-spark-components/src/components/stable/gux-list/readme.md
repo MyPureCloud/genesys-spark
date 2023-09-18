@@ -75,7 +75,7 @@ Type: `Promise<void>`
 
  - [gux-action-button](../gux-action-button)
  - [gux-button-multi](../gux-button-multi)
- - [gux-context-menu](../../beta/gux-context-menu)
+ - [gux-context-menu](../gux-context-menu)
  - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-time-picker](../gux-time-picker)
 

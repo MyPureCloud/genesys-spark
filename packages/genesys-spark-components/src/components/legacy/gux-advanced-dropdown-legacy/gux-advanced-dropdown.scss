@@ -1,0 +1,116 @@
+@import '../../../style/_mixins.scss';
+@import '../../../style/typography.scss';
+@import '../../../style/zindex.scss';
+
+$background-color: #f6f7f9;
+$menu-shadow: rgba(#202937, 0.24);
+$menu-background-color: #fdfdfd;
+
+:host {
+  color: #2e394c;
+}
+
+// Style
+gux-popup {
+  display: block;
+  margin: 4px 0;
+
+  .gux-select-field {
+    position: relative;
+    width: 100%;
+    height: 32px;
+
+    a.gux-select-input {
+      position: absolute;
+      inset: 0;
+      padding: 6px 24px 6px 12px;
+      overflow: hidden;
+      color: #2e394c;
+      text-overflow: ellipsis;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      background-color: #f6f7f9;
+      background-image: none;
+      border: 1px solid #6b7585;
+      border-radius: 4px;
+      box-shadow: inset 0 0 4px rgba(#202937, 0.16);
+
+      .gux-select-placeholder,
+      .gux-select-value {
+        line-height: 20px;
+      }
+
+      .gux-select-placeholder {
+        color: #596373;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(#75a8ff, 0.5);
+      }
+    }
+
+    .gux-icon-wrapper {
+      gux-icon {
+        width: 16px;
+        height: 16px;
+        color: #596373;
+      }
+
+      position: absolute;
+      top: 1px;
+      right: 8px;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    &:hover {
+      .gux-icon-wrapper {
+        gux-icon {
+          color: #2e394c;
+        }
+      }
+    }
+  }
+
+  .gux-advanced-dropdown-menu {
+    width: 100%;
+    background: #fdfdfd;
+    border: 1px solid #b4bccb;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0 $menu-shadow;
+
+    .gux-dropdown-menu-container {
+      gux-form-field-search {
+        margin: 8px 16px;
+
+        input {
+          &::-webkit-search-cancel-button,
+          &::-webkit-search-results-button,
+          &::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+          }
+        }
+      }
+    }
+  }
+
+  .gux-dropdown-options {
+    padding: 8px 0;
+    margin: 0;
+    overflow-y: auto;
+    color: #2e394c;
+    background: $menu-background-color;
+    border-radius: 4px;
+    box-shadow: none;
+  }
+}
+
+gux-popup::part(gux-popup-container) {
+  width: inherit;
+}

@@ -26,7 +26,7 @@ import { trackComponent } from '@utils/tracking/usage';
 const validFocusableItems = ['gux-list-item'];
 
 @Component({
-  styleUrl: 'gux-list.less',
+  styleUrl: 'gux-list.scss',
   tag: 'gux-list',
   shadow: { delegatesFocus: true }
 })

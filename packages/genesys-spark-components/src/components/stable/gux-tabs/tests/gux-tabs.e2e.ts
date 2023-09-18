@@ -48,7 +48,7 @@ describe('gux-tabs', () => {
     </gux-tabs>`
     },
     {
-      description: 'using gux-tab-panel-beta',
+      description: 'using gux-tab-panel',
       html: `<gux-tabs>
       <gux-tab-list slot="tab-list">
           <gux-tab tab-id="2-1">Tab Header 1</gux-tab>
@@ -61,11 +61,11 @@ describe('gux-tabs', () => {
             >Tab Header 5</gux-tab
           >
       </gux-tab-list>
-      <gux-tab-panel-beta tab-id="2-1">Tab content 1</gux-tab-panel-beta>
-      <gux-tab-panel-beta tab-id="2-2">Tab content 2</gux-tab-panel-beta>
-      <gux-tab-panel-beta tab-id="2-3">Tab content 3</gux-tab-panel-beta>
-      <gux-tab-panel-beta tab-id="2-4">Tab content 4</gux-tab-panel-beta>
-      <gux-tab-panel-beta tab-id="2-5">Tab content 5</gux-tab-panel-beta>
+      <gux-tab-panel tab-id="2-1">Tab content 1</gux-tab-panel>
+      <gux-tab-panel tab-id="2-2">Tab content 2</gux-tab-panel>
+      <gux-tab-panel tab-id="2-3">Tab content 3</gux-tab-panel>
+      <gux-tab-panel tab-id="2-4">Tab content 4</gux-tab-panel>
+      <gux-tab-panel tab-id="2-5">Tab content 5</gux-tab-panel>
     </gux-tabs>`
     }
   ].forEach(({ description, html }) => {
@@ -157,7 +157,7 @@ describe('gux-tabs', () => {
         const tabTarget = await page.find('gux-tab[tab-id="2-2"]');
         const tabPanel =
           (await page.find('gux-tab-panel[tab-id="2-2"]')) ||
-          (await page.find('gux-tab-panel-beta[tab-id="2-2"]'));
+          (await page.find('gux-tab-panel[tab-id="2-2"]'));
         const spyOnActivePanelChangeEvent = await tabPanel.spyOnEvent(
           'guxactivepanelchange'
         );
@@ -173,7 +173,7 @@ describe('gux-tabs', () => {
         const tabTarget = await page.find('gux-tab[tab-id="2-4"]');
         const tabPanel =
           (await page.find('gux-tab-panel[tab-id="2-4"]')) ||
-          (await page.find('gux-tab-panel-beta[tab-id="2-4"]'));
+          (await page.find('gux-tab-panel[tab-id="2-4"]'));
         const spyOnActivePanelChangeEvent = await tabPanel.spyOnEvent(
           'guxactivepanelchange'
         );

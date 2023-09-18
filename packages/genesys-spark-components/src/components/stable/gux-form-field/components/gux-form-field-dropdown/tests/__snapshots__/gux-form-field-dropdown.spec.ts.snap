@@ -136,22 +136,28 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
         <slot></slot>
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <!---->
-        <gux-truncate>
-          Ant
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <!---->
-        <gux-truncate>
-          Bat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
-        <!---->
-        <gux-truncate>
-          Cat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -768,22 +774,28 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         <slot></slot>
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <!---->
-        <gux-truncate>
-          Ant
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <!---->
-        <gux-truncate>
-          Bat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
-        <!---->
-        <gux-truncate>
-          Cat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -841,22 +853,28 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         <slot></slot>
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <!---->
-        <gux-truncate>
-          Ant
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <!---->
-        <gux-truncate>
-          Bat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
-        <!---->
-        <gux-truncate>
-          Cat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -917,22 +935,28 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
         <slot></slot>
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <!---->
-        <gux-truncate>
-          Ant
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <!---->
-        <gux-truncate>
-          Bat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
-        <!---->
-        <gux-truncate>
-          Cat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -990,22 +1014,28 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         <slot></slot>
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <!---->
-        <gux-truncate>
-          Ant
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <!---->
-        <gux-truncate>
-          Bat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
-        <!---->
-        <gux-truncate>
-          Cat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -1063,22 +1093,28 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         <slot></slot>
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <!---->
-        <gux-truncate>
-          Ant
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <!---->
-        <gux-truncate>
-          Bat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
-        <!---->
-        <gux-truncate>
-          Cat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -1136,22 +1172,28 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         <slot></slot>
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <!---->
-        <gux-truncate>
-          Ant
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <!---->
-        <gux-truncate>
-          Bat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
-        <!---->
-        <gux-truncate>
-          Cat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -1209,22 +1251,28 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
         <slot></slot>
       </mock:shadow-root>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <!---->
-        <gux-truncate>
-          Ant
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <!---->
-        <gux-truncate>
-          Bat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="c">
-        <!---->
-        <gux-truncate>
-          Cat
-        </gux-truncate>
+        <mock:shadow-root>
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+        </mock:shadow-root>
+        Cat
       </gux-option>
     </gux-listbox>
   </gux-dropdown>
