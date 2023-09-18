@@ -1,10 +1,65 @@
-@use '../../../style/typography';
+@use '../../../../../genesys-spark-tokens/dist/scss/_gse-ui-feedback'; // TODO: https://inindca.atlassian.net/browse/COMUI-2242
+
+/**
+  * @prop --gse-progressAndLoading-loadingState-large-header-fontFamily
+  * @prop --gse-progressAndLoading-loadingState-large-header-fontWeight
+  * @prop --gse-progressAndLoading-loadingState-large-header-lineHeight
+  * @prop --gse-progressAndLoading-loadingState-large-header-fontSize
+  * @prop --gse-progressAndLoading-loadingState-large-subheader-fontFamily
+  * @prop --gse-progressAndLoading-loadingState-large-subheader-fontWeight
+  * @prop --gse-progressAndLoading-loadingState-large-subheader-lineHeight
+  * @prop --gse-progressAndLoading-loadingState-large-subheader-fontSize
+  * @prop --gse-progressAndLoading-loadingState-large-width : TODO https://inindca.atlassian.net/browse/COMUI-2264
+  * @prop --gse-progressAndLoading-loadingState-medium-header-fontFamily
+  * @prop --gse-progressAndLoading-loadingState-medium-header-fontWeight
+  * @prop --gse-progressAndLoading-loadingState-medium-header-lineHeight
+  * @prop --gse-progressAndLoading-loadingState-medium-header-fontSize
+  * @prop --gse-progressAndLoading-loadingState-medium-subheader-fontFamily
+  * @prop --gse-progressAndLoading-loadingState-medium-subheader-fontWeight
+  * @prop --gse-progressAndLoading-loadingState-medium-subheader-lineHeight
+  * @prop --gse-progressAndLoading-loadingState-medium-subheader-fontSize
+  * @prop --gse-progressAndLoading-loadingState-medium-width
+  * @prop --gse-progressAndLoading-loadingState-small-header-fontFamily
+  * @prop --gse-progressAndLoading-loadingState-small-header-fontWeight
+  * @prop --gse-progressAndLoading-loadingState-small-header-lineHeight
+  * @prop --gse-progressAndLoading-loadingState-small-header-fontSize
+  * @prop --gse-progressAndLoading-loadingState-small-subheader-fontFamily
+  * @prop --gse-progressAndLoading-loadingState-small-subheader-fontWeight
+  * @prop --gse-progressAndLoading-loadingState-small-subheader-lineHeight
+  * @prop --gse-progressAndLoading-loadingState-small-subheader-fontSize
+  * @prop --gse-progressAndLoading-loadingState-small-width
+  * @prop --gse-progressAndLoading-large-gap
+  * @prop --gse-progressAndLoading-large-gapText
+  * @prop --gse-progressAndLoading-pageLoading-gap
+  * @prop --gse-progressAndLoading-medium-gap
+  * @prop --gse-progressAndLoading-medium-gapText
+  * @prop --gse-progressAndLoading-small-gap
+  * @prop --gse-progressAndLoading-small-gapText
+  * @prop --gse-ui-progressAndLoading-textColor
+  */
+
+$small-breakpoint: gse-ui-feedback.$gse-ui-progressAndLoading-loadingState-small-width;
+$medium-breakpoint: gse-ui-feedback.$gse-ui-progressAndLoading-loadingState-medium-width;
+
+@mixin loadingStateFont($type) {
+  font-family: var(
+    --gse-ui-progressAndLoading-loadingState-#{$type}-fontFamily
+  );
+  font-weight: var(
+    --gse-ui-progressAndLoading-loadingState-#{$type}-fontWeight
+  );
+  line-height: var(
+    --gse-ui-progressAndLoading-loadingState-#{$type}-lineHeight
+  );
+  font-size: var(--gse-ui-progressAndLoading-loadingState-#{$type}-fontSize);
+}
 
 :host {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  container-type: inline-size;
 }
 
 .gux-container {
@@ -12,39 +67,57 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--gse-ui-progressAndLoading-textColor);
+  text-align: center;
+}
 
-  slot[name='primary-message'] {
-    color: #364154;
-    text-align: center;
-  }
+// https://bholmes.dev/blog/alternative-to-css-variable-media-queries/
+@container (width > #{$medium-breakpoint}) {
+  .gux-container {
+    .gux-primary-message {
+      margin-top: var(--gse-ui-progressAndLoading-large-gap);
 
-  slot[name='additional-guidance'] {
-    color: #596373;
-    text-align: center;
-  }
-
-  &.gux-small,
-  &.gux-medium {
-    padding: 8px 0 4px;
-
-    slot[name='primary-message'] {
-      @include typography.h3;
+      @include loadingStateFont('large-header');
     }
 
-    slot[name='additional-guidance'] {
-      @include typography.gux-small-text;
+    .gux-additional-guidance {
+      margin-top: var(--gse-ui-progressAndLoading-large-gapText);
+
+      @include loadingStateFont('large-subheader');
     }
   }
+}
 
-  &.gux-large {
-    padding: 16px 0 4px;
+// https://bholmes.dev/blog/alternative-to-css-variable-media-queries/
+@container (width > #{$small-breakpoint}) and (width <=#{$medium-breakpoint}) {
+  .gux-container {
+    .gux-primary-message {
+      margin-top: var(--gse-ui-progressAndLoading-medium-gap);
 
-    slot[name='primary-message'] {
-      @include typography.h1;
+      @include loadingStateFont('medium-header');
     }
 
-    slot[name='additional-guidance'] {
-      @include typography.gux-large-text;
+    .gux-additional-guidance {
+      margin-top: var(--gse-ui-progressAndLoading-medium-gapText);
+
+      @include loadingStateFont('medium-subheader');
+    }
+  }
+}
+
+// https://bholmes.dev/blog/alternative-to-css-variable-media-queries/
+@container (width <=#{$small-breakpoint}) {
+  .gux-container {
+    .gux-primary-message {
+      margin-top: var(--gse-ui-progressAndLoading-small-gap);
+
+      @include loadingStateFont('small-header');
+    }
+
+    .gux-additional-guidance {
+      margin-top: var(--gse-ui-progressAndLoading-small-gapText);
+
+      @include loadingStateFont('small-subheader');
     }
   }
 }
