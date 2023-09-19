@@ -1,5 +1,4 @@
 @import './focus.scss';
-@import './roboto.scss';
 
 /*
  * Typography styles and mixins.
@@ -9,63 +8,62 @@
 
 @mixin base-font {
   font-family: var(--gse-core-fontFamily-body), sans-serif;
-  font-weight: 400;
+  font-weight: var(--gse-core-fontWeight-regular);
+}
+
+@mixin semi-bold-font {
+  font-family: var(--gse-core-fontFamily-body), sans-serif;
+  font-weight: var(--gse-core-fontWeight-semiBold);
 }
 
 @mixin bold-font {
   font-family: var(--gse-core-fontFamily-body), sans-serif;
-  font-weight: 700;
+  font-weight: var(--gse-core-fontWeight-bold);
 }
 
 /* Base typography */
 
 @mixin body-font {
   @include base-font;
-
-  // font-size: 12px;
   font-size: var(--gse-core-fontSize-xs);
   line-height: var(--gse-core-lineHeight-xs);
 }
 
 @mixin body-font-bold {
   font-family: var(--gse-core-fontFamily-body), sans-serif;
-  font-weight: 700;
+  font-weight: var(--gse-core-fontWeight-bold);
 }
 
 /* Headings */
 
 @mixin h1 {
-  font-family: var(--gse-core-fontFamily-heading), sans-serif;
+  font-family: var(--gse-core-fontFamily-heading),
+    var(--gse-core-fontFamily-body), sans-serif;
   font-weight: var(--gse-core-fontWeight-bold);
-  //24px
   font-size: var(--gse-core-fontSize-xl);
-  //32px
   line-height: var(--gse-core-lineHeight-xl);
 }
 
 @mixin h2 {
-  font-family: var(--gse-core-fontFamily-heading), sans-serif;
+  font-family: var(--gse-core-fontFamily-heading),
+    var(--gse-core-fontFamily-body), sans-serif;
   font-weight: var(--gse-core-fontWeight-semiBold);
-  // font-size: 18px;
   font-size: var(--gse-core-fontSize-lg);
-  // line-height: 24px;
   line-height: var(--gse-lineHeight-md);
 }
 @mixin h3 {
-  font-family: var(--gse-core-fontFamily-heading), sans-serif;
+  font-family: var(--gse-core-fontFamily-heading),
+    var(--gse-core-fontFamily-body), sans-serif;
   font-weight: var(--gse-core-fontWeight-semiBold);
-  // 16px
   font-size: var(--gse-core-fontSize-md);
-  // line-height: 20px;
   line-height: var(--gse-core-lineHeight-md);
 }
 
 @mixin h4-6 {
-  font-family: var(--gse-core-fontFamily-heading), sans-serif;
+  font-family: var(--gse-core-fontFamily-heading),
+    var(--gse-core-fontFamily-body), sans-serif;
   font-weight: var(--gse-core-fontWeight-semiBold);
-  // font-size: 14px;
   font-size: var(--gse-core-fontSize-sm);
-  line-height: 20px;
   line-height: var(--gse-core-lineHeight-sm);
 }
 
@@ -105,19 +103,19 @@
 }
 
 /* Custom Styles */
-
+// COMUI-2274 review typography mixins
 @mixin gux-large-text {
   @include base-font;
 
-  font-size: 14px;
-  line-height: 24px;
+  font-size: var(--gse-core-fontSize-md);
+  line-height: var(--gse-core-lineHeight-md);
 }
 
 @mixin gux-small-text {
   @include base-font;
 
-  font-size: 11px;
-  line-height: 16px;
+  font-size: var(--gse-core-fontSize-xs);
+  line-height: var(--gse-core-lineHeight-xs);
 }
 
 @mixin gse-ui-formControl-label {

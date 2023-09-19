@@ -37,7 +37,9 @@ export const config: Config = {
             src: [
               'src/style/global.scss',
               'src/style/typography.scss',
-              'src/style/focus.scss'
+              'src/style/focus.scss',
+              'src/style/style-reset-typography.scss',
+              'src/style/style-reset-focusable.scss'
             ],
             dest: 'dist/genesys-webcomponents/scss'
           }
