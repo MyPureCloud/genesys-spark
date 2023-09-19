@@ -7,7 +7,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'genesys-webcomponents',
-  globalStyle: 'src/style/style.less',
+  globalStyle: 'src/style/style.scss',
   hydratedFlag: {
     selector: 'attribute'
   },
