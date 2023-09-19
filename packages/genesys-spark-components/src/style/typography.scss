@@ -95,16 +95,20 @@ h6 {
 
 /* Anchor */
 @mixin gux-anchor {
-  color: #2a60c8;
+  color: var(--gse-ui-link-default-color);
   text-decoration: underline;
-  border-radius: 2px;
+  border-radius: var(--gse-ui-links-borderRadius);
 
   &:hover {
-    color: #2754ac;
+    color: var(--gse-ui-link-hover-color);
   }
 
   &:active {
-    color: #23478f;
+    color: var(--gse-ui-link-active-color);
+  }
+
+  &:visited {
+    color: var(--gse-ui-link-visited-color);
   }
 
   &:focus-visible {
@@ -120,7 +124,7 @@ h6 {
 
 .gux-icon-anchor {
   gux-icon {
-    padding-right: 2px;
+    padding-right: var(--gse-ui-links-inLine-padding);
   }
 }
 
