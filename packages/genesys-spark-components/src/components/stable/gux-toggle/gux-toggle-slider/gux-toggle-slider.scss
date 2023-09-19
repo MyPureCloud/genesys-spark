@@ -37,13 +37,13 @@ gux-toggle-slider {
       position: absolute;
       inset: 0;
       background-color: #6b7585;
-      border-radius: $toggle-height / 2;
+      border-radius: calc($toggle-height / 2);
       transition: background-color $slider-transition-duration ease;
 
       .gux-switch {
         position: absolute;
-        bottom: ($toggle-height - $slider-diameter) / 2;
-        left: ($toggle-height - $slider-diameter) / 2;
+        bottom: calc(($toggle-height - $slider-diameter) / 2);
+        left: calc(($toggle-height - $slider-diameter) / 2);
         width: $slider-diameter;
         height: $slider-diameter;
         content: '';

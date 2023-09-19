@@ -34,6 +34,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  outline-offset: calc(var(--gse-ui-menu-option-focus-border-width) * -1);
 
   &:focus-visible:not(:disabled) {
     outline: var(--gse-ui-menu-option-focus-border-width)
