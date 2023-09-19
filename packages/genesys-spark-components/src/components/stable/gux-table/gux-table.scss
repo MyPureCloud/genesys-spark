@@ -6,7 +6,7 @@
 
   .gux-table {
     position: relative;
-    height: inherit;
+    height: inherit; // Required for correct behavior in Firefox. Removing this property allows the table to overflow outside of the height of the parent; preventing vertical scroll.
 
     .gux-table-container {
       max-height: 100%;
