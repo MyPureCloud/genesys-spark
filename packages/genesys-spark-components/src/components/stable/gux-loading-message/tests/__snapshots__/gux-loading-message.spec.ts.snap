@@ -3,10 +3,16 @@
 exports[`gux-loading-message #render should render the component as expected 1`] = `
 <gux-loading-message>
   <mock:shadow-root>
-    <div aria-live="assertive" class="gux-container gux-undefined" role="alert">
-      <slot name="progress"></slot>
-      <slot name="primary-message"></slot>
-      <slot name="additional-guidance"></slot>
+    <div aria-live="assertive" class="gux-container" role="alert">
+      <div class="gux-progress">
+        <slot name="progress"></slot>
+      </div>
+      <div class="gux-primary-message">
+        <slot name="primary-message"></slot>
+      </div>
+      <div class="gux-additional-guidance">
+        <slot name="additional-guidance"></slot>
+      </div>
     </div>
   </mock:shadow-root>
   <span slot="primary-message">

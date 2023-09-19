@@ -1,33 +1,10 @@
 <h1>gux-loading-message</h1>
 
-<h2>Indeterminate</h2>
-
-<gux-loading-message style="height: 400px; border: 1px dashed gainsboro">
-  <div slot="primary-message">The content is loading...</div>
-  <div slot="additional-guidance">Thank you for waiting.</div>
-  <gux-radial-progress
-    slot="progress"
-    screenreader-text="loading"
-  ></gux-radial-progress>
-</gux-loading-message>
-
-<h2>Determinate</h2>
-<gux-loading-message style="height: 400px; border: 1px dashed gainsboro">
-  <div slot="primary-message">The content is loading...</div>
-  <div slot="additional-guidance">Thank you for waiting.</div>
-  <gux-radial-progress
-    slot="progress"
-    value="1"
-    max="10"
-    screenreader-text="loading"
-  ></gux-radial-progress>
-</gux-loading-message>
-
 <h2>Resizing</h2>
-<h4>
+<h3>
   The loading message will transition from large to medium or small when the
   view becomes smaller. Use the the drag icon to see the difference.
-</h4>
+</h3>
 <div class="resizing">
   <gux-loading-message>
     <div slot="primary-message">The content is loading...</div>
@@ -40,6 +17,39 @@
     ></gux-radial-progress>
   </gux-loading-message>
 </div>
+
+<h2>Small</h2>
+
+<gux-loading-message style="width: 200px; border: 1px dashed gainsboro">
+  <div slot="primary-message">The content is loading...</div>
+  <div slot="additional-guidance">Thank you for waiting.</div>
+  <gux-radial-progress
+    slot="progress"
+    screenreader-text="loading"
+  ></gux-radial-progress>
+</gux-loading-message>
+
+<h2>Medium</h2>
+
+<gux-loading-message style="width: 400px; border: 1px dashed gainsboro">
+  <div slot="primary-message">The content is loading...</div>
+  <div slot="additional-guidance">Thank you for waiting.</div>
+  <gux-radial-progress
+    slot="progress"
+    screenreader-text="loading"
+  ></gux-radial-progress>
+</gux-loading-message>
+
+<h2>Large</h2>
+
+<gux-loading-message style="width: 600px; border: 1px dashed gainsboro">
+  <div slot="primary-message">The content is loading...</div>
+  <div slot="additional-guidance">Thank you for waiting.</div>
+  <gux-radial-progress
+    slot="progress"
+    screenreader-text="loading"
+  ></gux-radial-progress>
+</gux-loading-message>
 
 <style>
   .resizing {
