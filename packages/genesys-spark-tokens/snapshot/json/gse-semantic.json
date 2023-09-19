@@ -40,6 +40,20 @@
   "focus_ring": {
     "width": "3px",
     "offset": "1px",
-    "corner_radius": "4px"
+    "corner_radius": "4px",
+    "default": {
+      "border": {
+        "color": "#7B88F7",
+        "width": "3px",
+        "style": "solid"
+      }
+    },
+    "small": {
+      "border": {
+        "color": "#7B88F7",
+        "width": "3px",
+        "style": "solid"
+      }
+    }
   }
 }
