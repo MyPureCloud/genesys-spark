@@ -16,6 +16,11 @@
   overflow: inherit;
 }
 
+@mixin gux-disabled-pointer {
+  pointer-events: none;
+  cursor: default;
+}
+
 @mixin gux-sr-only {
   @include gux-hide-offscreen;
 }

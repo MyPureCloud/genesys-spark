@@ -33,9 +33,9 @@
   }
 
   &:host(.gux-disabled) {
-    pointer-events: none;
-    cursor: default;
     opacity: var(--gse-ui-menu-option-disabled-opacity);
+
+    @include mixins.gux-disabled-pointer;
   }
 
   &:host(.gux-selected) {
