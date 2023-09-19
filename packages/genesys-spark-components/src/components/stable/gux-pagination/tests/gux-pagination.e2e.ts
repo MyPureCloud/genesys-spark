@@ -32,17 +32,61 @@ async function newNonrandomE2EPage({
 describe('gux-pagination', () => {
   describe('#render', () => {
     [
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 50, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 75, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 100, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
-      { currentPage: 10, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
-      { currentPage: 10, totalItems: 1000, itemsPerPage: 50, layout: 'full' },
-      { currentPage: 10, totalItems: 1000, itemsPerPage: 75, layout: 'full' },
-      { currentPage: 10, totalItems: 1000, itemsPerPage: 100, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'small' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'expanded' }
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 50,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 75,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 100,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 50,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 75,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 100,
+        layout: 'advanced'
+      },
+      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'simple' }
     ].forEach(({ currentPage, totalItems, itemsPerPage, layout }, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const html = `

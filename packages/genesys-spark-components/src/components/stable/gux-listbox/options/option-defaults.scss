@@ -1,0 +1,56 @@
+@mixin gux-option-default {
+  :host {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+    height: var(--gse-ui-menu-option-height);
+    padding: var(--gse-ui-menu-option-padding);
+    color: var(--gse-ui-menu-option-label-foregroundColor);
+    word-wrap: break-word;
+    cursor: pointer;
+    font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
+    font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
+    line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
+    font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
+    gap: var(--gse-ui-menu-option-gap);
+
+    .gux-slot-container {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  :host(.gux-disabled) {
+    pointer-events: none;
+    cursor: default;
+    opacity: var(--gse-ui-menu-option-disabled-opacity);
+  }
+
+  :host(.gux-selected) {
+    font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
+    font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
+    line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
+    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
+    background: var(--gse-ui-menu-option-selected-backgroundColor);
+  }
+
+  :host(.gux-active) {
+    outline: var(--gse-ui-menu-option-focus-border-width)
+      var(--gse-ui-menu-option-focus-border-style)
+      var(--gse-ui-menu-option-focus-border-color);
+    border-radius: var(--gse-semantic-focusRing-cornerRadius);
+  }
+
+  :host(.gux-hovered:not(:disabled)) {
+    background: var(--gse-ui-menu-option-hover-backgroundColor);
+  }
+
+  :host(.gux-filtered) {
+    display: none;
+  }
+}

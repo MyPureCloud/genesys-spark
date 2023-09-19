@@ -14,12 +14,12 @@ the pagination state.
 
 ## Properties
 
-| Property       | Attribute        | Description                                                                     | Type                              | Default  |
-| -------------- | ---------------- | ------------------------------------------------------------------------------- | --------------------------------- | -------- |
-| `currentPage`  | `current-page`   | The currently select page. Changes are watched by the component.                | `number`                          | `1`      |
-| `itemsPerPage` | `items-per-page` | The max number of items on a page. Used to calculate total page count           | `100 \| 25 \| 50 \| 75`           | `25`     |
-| `layout`       | `layout`         | The pagination component can have different layouts to suit the available space | `"expanded" \| "full" \| "small"` | `'full'` |
-| `totalItems`   | `total-items`    | The total number of items in the data set. Used to calculate total page count   | `number`                          | `0`      |
+| Property       | Attribute        | Description                                                                     | Type                     | Default      |
+| -------------- | ---------------- | ------------------------------------------------------------------------------- | ------------------------ | ------------ |
+| `currentPage`  | `current-page`   | The currently select page. Changes are watched by the component.                | `number`                 | `1`          |
+| `itemsPerPage` | `items-per-page` | The max number of items on a page. Used to calculate total page count           | `100 \| 25 \| 50 \| 75`  | `25`         |
+| `layout`       | `layout`         | The pagination component can have different layouts to suit the available space | `"advanced" \| "simple"` | `'advanced'` |
+| `totalItems`   | `total-items`    | The total number of items in the data set. Used to calculate total page count   | `number`                 | `0`          |
 
 
 ## Events
@@ -53,11 +53,18 @@ graph TD;
   gux-truncate --> gux-tooltip
   gux-listbox --> gux-radial-loading
   gux-option --> gux-truncate
-  gux-pagination-buttons --> gux-form-field-text-like
+  gux-pagination-buttons --> gux-pagination-ellipsis-button
   gux-pagination-buttons --> gux-button-slot
   gux-pagination-buttons --> gux-icon
-  gux-form-field-text-like --> gux-form-field-input-clear-button
-  gux-form-field-text-like --> gux-icon
+  gux-pagination-ellipsis-button --> gux-icon
+  gux-pagination-ellipsis-button --> gux-tooltip
+  gux-pagination-ellipsis-button --> gux-popover
+  gux-pagination-ellipsis-button --> gux-form-field-number
+  gux-popover --> gux-dismiss-button
+  gux-dismiss-button --> gux-button-slot
+  gux-dismiss-button --> gux-icon
+  gux-form-field-number --> gux-form-field-input-clear-button
+  gux-form-field-number --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
   style gux-pagination fill:#f9f,stroke:#333,stroke-width:4px
 ```

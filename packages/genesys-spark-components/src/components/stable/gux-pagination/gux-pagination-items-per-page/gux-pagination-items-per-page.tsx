@@ -16,7 +16,7 @@ import paginationResources from './i18n/en.json';
 import { GuxItemsPerPage } from '../gux-pagination.types';
 
 @Component({
-  styleUrl: 'gux-pagination-items-per-page.less',
+  styleUrl: 'gux-pagination-items-per-page.scss',
   tag: 'gux-pagination-items-per-page'
 })
 export class GuxPaginationItemsPerPage implements ComponentInterface {
@@ -69,7 +69,7 @@ export class GuxPaginationItemsPerPage implements ComponentInterface {
         <div class="gux-pagination-items-per-page-picker">
           {this.getDropdown()}
         </div>
-        <div>{this.i18n('perPage')}</div>
+        <div class="gux-pagination-per-page">{this.i18n('perPage')}</div>
       </div>
     ) as JSX.Element;
   }

@@ -1,5 +1,5 @@
 # gux-tab-panel
-
+Unlike gux-tab-panel, gux-tab-panel uses the shadow dom
 
 
 <!-- Auto Generated Below -->

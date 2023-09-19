@@ -1,0 +1,57 @@
+// This file is needed because of a safari
+//  - https://bugs.webkit.org/show_bug.cgi?id=223814
+//  - https://bugs.webkit.org/show_bug.cgi?id=178237#attach_442680
+
+$gux-icon-radio-unchecked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40937 1.5 1.5 4.40937 1.5 8C1.5 11.5906 4.40937 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40937 11.5906 1.5 8 1.5Z' fill-rule='evenodd' clip-rule='evenodd' fill='%23767C8D'/%3E%3C/svg%3E";
+$gux-icon-radio-unchecked-hover: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40937 1.5 1.5 4.40937 1.5 8C1.5 11.5906 4.40937 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40937 11.5906 1.5 8 1.5Z' fill-rule='evenodd' clip-rule='evenodd' fill='%233742A2'/%3E%3C/svg%3E";
+$gux-icon-radio-checked-hover: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8C5 6.31563 6.31563 5 8 5C9.65625 5 11 6.31563 11 8C11 9.65625 9.65625 11 8 11C6.31563 11 5 9.65625 5 8ZM16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40938 1.5 1.5 4.40938 1.5 8C1.5 11.5906 4.40938 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40938 11.5906 1.5 8 1.5Z' fill='%233742A2'/%3E%3C/svg%3E";
+$gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8C5 6.31563 6.31563 5 8 5C9.65625 5 11 6.31563 11 8C11 9.65625 9.65625 11 8 11C6.31563 11 5 9.65625 5 8ZM16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40938 1.5 1.5 4.40938 1.5 8C1.5 11.5906 4.40938 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40938 11.5906 1.5 8 1.5Z' fill='%234856CB'/%3E%3C/svg%3E";
+$gux-icon-radio-unchecked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40937 1.5 1.5 4.40937 1.5 8C1.5 11.5906 4.40937 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40937 11.5906 1.5 8 1.5Z' fill='%23E22245'/%3E%3C/svg%3E";
+$gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8C5 6.31563 6.31563 5 8 5C9.65625 5 11 6.31563 11 8C11 9.65625 9.65625 11 8 11C6.31563 11 5 9.65625 5 8ZM16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40938 1.5 1.5 4.40938 1.5 8C1.5 11.5906 4.40938 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40938 11.5906 1.5 8 1.5Z' fill='%23E22245'/%3E%3C/svg%3E";
+
+gux-form-field-radio {
+  input[type='radio']::before {
+    grid-area: 1/1;
+    content: '';
+    border-radius: 50%;
+  }
+
+  input[type='radio']:focus-visible::before {
+    border-radius: var(--gse-ui-radioButton-focus-borderRadius);
+    outline: var(--gse-ui-radioButton-focus-border-width)
+      var(--gse-ui-radioButton-focus-border-style)
+      var(--gse-ui-radioButton-focus-border-color);
+    outline-offset: 1px;
+  }
+
+  input[type='radio']:not(:checked)::before {
+    background-image: url($gux-icon-radio-unchecked);
+  }
+
+  input[type='radio']:not(:checked):not(:disabled):hover::before {
+    background-image: url($gux-icon-radio-unchecked-hover);
+  }
+
+  input[type='radio']:checked:not(:disabled):hover::before {
+    background-image: url($gux-icon-radio-checked-hover);
+  }
+
+  input[type='radio']:checked::before {
+    background-image: url($gux-icon-radio-checked);
+  }
+
+  input[type='radio']:disabled::before {
+    cursor: not-allowed;
+    opacity: var(--gse-ui-radioButton-disabled-opacity);
+  }
+
+  &.gux-input-error {
+    input[type='radio']:not(:checked)::before {
+      background-image: url($gux-icon-radio-unchecked-error);
+    }
+
+    input[type='radio']:checked::before {
+      background-image: url($gux-icon-radio-checked-error);
+    }
+  }
+}

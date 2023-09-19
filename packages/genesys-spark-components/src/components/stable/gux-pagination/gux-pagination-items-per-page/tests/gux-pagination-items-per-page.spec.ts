@@ -15,13 +15,10 @@ const components = [
 const language = 'en';
 
 describe('gux-pagination-items-per-page', () => {
-  beforeEach(() => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
+  beforeEach(async () => {
+    global.MutationObserver = MutationObserver;
   });
+
   describe('#render', () => {
     [
       { itemsPerPage: 25 },

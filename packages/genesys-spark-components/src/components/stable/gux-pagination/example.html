@@ -1,30 +1,36 @@
 <div>
   <h1>gux-pagination</h1>
   <h2>English</h2>
-  <h3>Full</h3>
+  <h3>Advanced</h3>
   <div lang="en">
     <div class="table-placeholder"></div>
-    <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
+    <gux-pagination total-items="10000" items-per-page="25"></gux-pagination>
   </div>
 
-  <h3>Expanded</h3>
-  <div lang="en">
-    <div class="table-placeholder"></div>
-    <gux-pagination
-      total-items="421"
-      items-per-page="25"
-      layout="expanded"
-    ></gux-pagination>
-  </div>
-
-  <h3>Small</h3>
+  <h3>Simple</h3>
   <div lang="en">
     <div class="table-placeholder"></div>
     <gux-pagination
       total-items="123"
       items-per-page="25"
-      layout="small"
+      layout="simple"
     ></gux-pagination>
+  </div>
+
+  <h3>Resize</h3>
+  <h4>Advanced resizes to Simple when view becomes too small</h4>
+  <div
+    style="
+      width: 1000px;
+      overflow: auto;
+      resize: both;
+      border: 1px dotted black;
+    "
+  >
+    <div lang="en">
+      <div class="table-placeholder"></div>
+      <gux-pagination total-items="10000" items-per-page="25"></gux-pagination>
+    </div>
   </div>
 
   <h2>German</h2>
@@ -41,12 +47,6 @@
       total-items="123"
       items-per-page="25"
     ></gux-pagination>
-  </div>
-
-  <h2>No Options</h2>
-  <div>
-    <div class="table-placeholder"></div>
-    <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
   </div>
 </div>
 

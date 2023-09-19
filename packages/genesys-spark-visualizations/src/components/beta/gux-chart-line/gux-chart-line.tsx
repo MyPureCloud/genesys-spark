@@ -11,7 +11,7 @@ import { logError } from '../../../utils/error/log-error';
 
 const DEFAULT_COLOR_FIELD_NAME = 'category';
 @Component({
-  styleUrl: 'gux-chart-line.less',
+  styleUrl: 'gux-chart-line.scss',
   tag: 'gux-chart-line-beta',
   shadow: true
 })

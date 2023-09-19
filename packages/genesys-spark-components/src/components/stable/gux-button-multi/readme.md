@@ -22,7 +22,6 @@ Example usage
 | `accent`   | `accent`   |                                     | `"primary" \| "secondary" \| "tertiary"` | `'secondary'` |
 | `disabled` | `disabled` | Disables the action button.         | `boolean`                                | `false`       |
 | `isOpen`   | `is-open`  | It is used to open or not the list. | `boolean`                                | `false`       |
-| `text`     | `text`     | The component text.                 | `string`                                 | `undefined`   |
 
 
 ## Events

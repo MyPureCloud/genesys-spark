@@ -1,7 +1,7 @@
 import { Component, h, Host, JSX } from '@stencil/core';
 
 @Component({
-  styleUrl: 'gux-list-divider.less',
+  styleUrl: 'gux-list-divider.scss',
   tag: 'gux-list-divider',
   shadow: true
 })

@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-skip-navigation-list-beta renders 1`] = `" <gux-skip-navigation-item role=\\"listitem\\" hydrated=\\"\\"> <a href=\\"#\\" onclick=\\"notify(event)\\">Navigation Link 1</a> </gux-skip-navigation-item> <gux-skip-navigation-item role=\\"listitem\\" hydrated=\\"\\"> <a href=\\"#\\" onclick=\\"notify(event)\\">Navigation Link 2 that is long</a> </gux-skip-navigation-item> <gux-skip-navigation-item role=\\"listitem\\" hydrated=\\"\\"> <a href=\\"#\\" onclick=\\"notify(event)\\">Navigation Link 3</a> </gux-skip-navigation-item> <gux-skip-navigation-item role=\\"listitem\\" hydrated=\\"\\"> <a href=\\"#\\" onclick=\\"notify(event)\\">Link 4</a> </gux-skip-navigation-item> "`;

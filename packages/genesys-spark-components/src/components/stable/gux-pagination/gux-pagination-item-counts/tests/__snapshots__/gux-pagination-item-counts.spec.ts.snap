@@ -6,9 +6,6 @@ exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = 
     <span class="gux-pagination-item-counts-range">
       0 - 0
     </span>
-    <span>
-      of 0
-    </span>
   </div>
 </gux-pagination-item-counts>
 `;
@@ -57,9 +54,6 @@ exports[`gux-pagination-item-counts #render should render as expected (5) 1`] = 
   <div class="gux-pagination-item-counts-container">
     <span class="gux-pagination-item-counts-range">
       0 - 0
-    </span>
-    <span>
-      of 0
     </span>
   </div>
 </gux-pagination-item-counts>

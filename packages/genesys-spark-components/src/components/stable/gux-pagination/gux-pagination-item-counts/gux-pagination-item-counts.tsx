@@ -11,7 +11,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import paginationResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-pagination-item-counts.less',
+  styleUrl: 'gux-pagination-item-counts.scss',
   tag: 'gux-pagination-item-counts'
 })
 export class GuxPaginationItemCounts implements ComponentInterface {
@@ -49,6 +49,14 @@ export class GuxPaginationItemCounts implements ComponentInterface {
     this.i18n = await buildI18nForComponent(this.root, paginationResources);
   }
 
+  private getPaginationItemCountsRange(): JSX.Element {
+    if (this.totalItems) {
+      return (
+        <span>{this.i18n('totalItems', { totalItems: this.totalItems })}</span>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return (
       <div class="gux-pagination-item-counts-container">
@@ -58,7 +66,7 @@ export class GuxPaginationItemCounts implements ComponentInterface {
             lastItem: this.lastItem
           })}
         </span>
-        <span>{this.i18n('totalItems', { totalItems: this.totalItems })}</span>
+        {this.getPaginationItemCountsRange()}
       </div>
     ) as JSX.Element;
   }

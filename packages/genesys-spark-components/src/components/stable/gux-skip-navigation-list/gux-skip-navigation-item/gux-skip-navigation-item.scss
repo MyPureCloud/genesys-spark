@@ -1,0 +1,19 @@
+@use '../../../../style/mixins';
+
+:host {
+  @include mixins.gux-hide-offscreen;
+}
+
+:host(:focus-within) {
+  @include mixins.gux-unhide-offscreen;
+}
+
+::slotted(a) {
+  padding: 12px;
+  font-size: 2rem;
+  background-color: #fdfdfd;
+  box-shadow:
+    0 8px 24px fade(#202937, 40%),
+    0 0 0 1px #fdfdfd,
+    0 0 0 4px #aac9ff !important;
+}

@@ -5,8 +5,9 @@ import { Component, h, Host, Listen, JSX, Prop } from '@stencil/core';
  */
 
 @Component({
-  styleUrl: 'gux-switch-item.less',
-  tag: 'gux-switch-item'
+  styleUrl: 'gux-switch-item.scss',
+  tag: 'gux-switch-item',
+  shadow: false
 })
 export class GuxSwitchItem {
   @Prop()

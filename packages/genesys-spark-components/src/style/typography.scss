@@ -1,4 +1,3 @@
-@import './_mixins.scss';
 @import './focus.scss';
 @import './roboto.scss';
 
@@ -72,16 +71,20 @@
 
 /* Anchor */
 @mixin gux-anchor {
-  color: #2a60c8;
+  color: var(--gse-ui-link-default-color);
   text-decoration: underline;
-  border-radius: 2px;
+  border-radius: var(--gse-ui-links-borderRadius);
 
   &:hover {
-    color: #2754ac;
+    color: var(--gse-ui-link-hover-color);
   }
 
   &:active {
-    color: #23478f;
+    color: var(--gse-ui-link-active-color);
+  }
+
+  &:visited {
+    color: var(--gse-ui-link-visited-color);
   }
 
   &:focus-visible {
@@ -97,7 +100,7 @@
 
 .gux-icon-anchor {
   gux-icon {
-    padding-right: 2px;
+    padding-right: var(--gse-ui-links-inLine-padding);
   }
 }
 
@@ -123,20 +126,4 @@
   font-size: var(--gse-ui-formControl-label-text-fontSize);
   color: var(--gse-ui-formControl-label-labelColor);
   font-weight: var(--gse-ui-formControl-label-text-fontWeight);
-}
-
-@mixin gux-sr-only {
-  @include gux-hide-offscreen;
-}
-
-@mixin gux-sr-only-clip {
-  &:not(:focus):not(:active) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
 }

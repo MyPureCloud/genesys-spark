@@ -1,0 +1,131 @@
+@mixin gse-ui-dataTableItems-tablePagination-typography {
+  font-family: var(
+    --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
+  );
+  color: var(--gse-ui-button-ghost-default-foregroundColor);
+  font-size: var(--gse-ui-dataTableItems-tablePagination-defaultText-fontSize);
+  line-height: var(
+    --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+  );
+  font-weight: var(
+    --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
+  );
+}
+
+gux-pagination-buttons-legacy {
+  .gux-pagination-buttons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: var(
+      --gse-ui-dataTableItems-tablePagination-recordsetControls-gap
+    );
+
+    &.gux-expanded {
+      justify-content: center;
+    }
+
+    & > div {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+    }
+
+    .gux-pagination-buttons-group {
+      white-space: nowrap;
+    }
+
+    .gux-pagination-buttons-input-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: center;
+      justify-content: center;
+      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+
+      & > div {
+        flex: 0 1 auto;
+        align-self: auto;
+        order: 0;
+        white-space: nowrap;
+      }
+
+      .gux-pagination-buttons-input {
+        width: 60px;
+
+        input {
+          width: inherit;
+          text-align: center;
+        }
+      }
+    }
+
+    .gux-pagination-buttons-list-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: center;
+      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+      justify-content: center;
+
+      .gux-pagination-buttons-list-button {
+        height: 32px;
+        padding-left: var(
+          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
+        );
+        padding-right: var(
+          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
+        );
+        margin-left: var(
+          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
+        );
+        margin-right: var(
+          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
+        );
+        background: inherit;
+        border: none;
+
+        &:focus-visible {
+          outline: var(--gse-semantic-focusRing-width) solid
+            var(--gse-semantic-color-focus);
+          outline-offset: var(--gse-semantic-focusRing-offset);
+          border-radius: calc(
+            var(--gse-semantic-focusRing-cornerRadius) -
+              var(--gse-semantic-focusRing-offset)
+          );
+        }
+
+        &.gux-current {
+          background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+          border-radius: var(--gse-ui-button-borderRadius);
+          padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
+          padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
+          @include gse-ui-dataTableItems-tablePagination-typography();
+        }
+
+        &.gux-target {
+          padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
+          padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
+          @include gse-ui-dataTableItems-tablePagination-typography();
+          cursor: pointer;
+
+          &:hover {
+            color: var(--gse-ui-button-ghost-hover-foregroundColor);
+            background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
+            border-radius: var(--gse-ui-button-borderRadius);
+          }
+        }
+      }
+    }
+
+    .gux-pagination-buttons-spacer {
+      width: var(--gse-ui-dataTableItems-tablePagination-padding);
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import { newSpecPage } from '@stencil/core/testing';
-import MutationObserver from 'mutation-observer';
-
 import { GuxPagination } from '../gux-pagination';
+
 import { GuxButton } from '../../gux-button/gux-button';
 import { GuxDropdown } from '../../gux-dropdown/gux-dropdown';
 import { GuxListbox } from '../../gux-listbox/gux-listbox';
@@ -15,6 +14,7 @@ const components = [
   GuxDropdown,
   GuxListbox,
   GuxOption,
+  GuxOption,
   GuxPagination,
   GuxPaginationButtons,
   GuxPaginationItemCounts,
@@ -24,27 +24,70 @@ const components = [
 const language = 'en';
 
 describe('gux-pagination', () => {
-  beforeEach(() => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
-  });
   describe('#render', () => {
     [
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 50, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 75, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 100, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
-      { currentPage: 10, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
-      { currentPage: 10, totalItems: 1000, itemsPerPage: 50, layout: 'full' },
-      { currentPage: 10, totalItems: 1000, itemsPerPage: 75, layout: 'full' },
-      { currentPage: 10, totalItems: 1000, itemsPerPage: 100, layout: 'full' },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'small' },
-      { currentPage: -3, totalItems: 1000, itemsPerPage: 25, layout: 'full' },
-      { currentPage: -3, totalItems: 1, itemsPerPage: 25, layout: 'full' }
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 50,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 75,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 100,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 50,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 75,
+        layout: 'advanced'
+      },
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 100,
+        layout: 'advanced'
+      },
+      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'simple' },
+      {
+        currentPage: -3,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'advanced'
+      },
+      { currentPage: -3, totalItems: 0, itemsPerPage: 25, layout: 'advanced' }
     ].forEach(({ currentPage, totalItems, itemsPerPage, layout }, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const html = `

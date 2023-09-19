@@ -31,7 +31,7 @@ import {
 } from './gux-time-picker.service';
 
 @Component({
-  styleUrl: 'gux-time-picker.less',
+  styleUrl: 'gux-time-picker.scss',
   tag: 'gux-time-picker',
   shadow: true
 })

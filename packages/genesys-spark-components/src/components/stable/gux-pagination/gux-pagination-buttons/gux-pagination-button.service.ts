@@ -5,76 +5,65 @@ interface GuxPaginationButtonsExpandedPageListItem {
 }
 
 export class GuxPaginationButtonsService {
-  static getPageList(
+  static displayAllPageButtons(
     currentPage: number,
-    totalPages: number
+    totalPages: number,
+    layout: string
   ): GuxPaginationButtonsExpandedPageListItem[] {
-    if (totalPages <= 10) {
-      return [...Array(totalPages).keys()].map(index => {
-        const pageNumber = index + 1;
-
-        return {
-          pageNumber,
-          display: String(pageNumber),
-          current: pageNumber === currentPage
-        };
-      });
+    switch (layout) {
+      case 'advanced':
+        return getAdvancedList(currentPage, totalPages);
+      case 'simple':
+        return getSimpleList(currentPage, totalPages);
     }
+  }
+}
 
-    if (currentPage <= 5) {
-      const startPageList = [...Array(6).keys()].map(index => {
-        const pageNumber = index + 1;
+function getAdvancedList(
+  currentPage: number,
+  totalPages: number
+): GuxPaginationButtonsExpandedPageListItem[] {
+  if (totalPages <= 7) {
+    return [...Array(totalPages).keys()].map(index => {
+      const pageNumber = index + 1;
 
-        return {
-          pageNumber,
-          display: String(pageNumber),
-          current: pageNumber === currentPage
-        };
-      });
+      return {
+        pageNumber,
+        display: String(pageNumber),
+        current: pageNumber === currentPage
+      };
+    });
+  }
 
-      return [
-        ...startPageList,
-        {
-          pageNumber: 7,
-          display: '...',
-          current: false
-        },
-        {
-          pageNumber: totalPages,
-          display: String(totalPages),
-          current: false
-        }
-      ];
-    }
+  if (currentPage <= 3) {
+    const startPageList = [...Array(5).keys()].map(index => {
+      const pageNumber = index + 1;
 
-    if (currentPage > totalPages - 5) {
-      const endPageList = [...Array(6).keys()].map(index => {
-        const pageNumber = index + totalPages - 5;
+      return {
+        pageNumber,
+        display: String(pageNumber),
+        current: pageNumber === currentPage
+      };
+    });
 
-        return {
-          pageNumber,
-          display: String(pageNumber),
-          current: pageNumber === currentPage
-        };
-      });
+    return [
+      ...startPageList,
+      {
+        pageNumber: 6,
+        display: '...',
+        current: false
+      },
+      {
+        pageNumber: totalPages,
+        display: String(totalPages),
+        current: false
+      }
+    ];
+  }
 
-      return [
-        {
-          pageNumber: 1,
-          display: '1',
-          current: false
-        },
-        {
-          pageNumber: totalPages - 6,
-          display: '...',
-          current: false
-        },
-        ...endPageList
-      ];
-    }
-
-    const middlePageList = [...Array(5).keys()].map(index => {
-      const pageNumber = index + currentPage - 2;
+  if (currentPage > totalPages - 3) {
+    const endPageList = [...Array(5).keys()].map(index => {
+      const pageNumber = index + totalPages - 4;
 
       return {
         pageNumber,
@@ -90,20 +79,85 @@ export class GuxPaginationButtonsService {
         current: false
       },
       {
-        pageNumber: currentPage - 3,
+        pageNumber: totalPages - 6,
         display: '...',
         current: false
       },
-      ...middlePageList,
+      ...endPageList
+    ];
+  }
+
+  const middlePageList = [...Array(3).keys()].map(index => {
+    const pageNumber = index + currentPage - 1;
+
+    return {
+      pageNumber,
+      display: String(pageNumber),
+      current: pageNumber === currentPage
+    };
+  });
+
+  return [
+    {
+      pageNumber: 1,
+      display: '1',
+      current: false
+    },
+    {
+      pageNumber: currentPage - 3,
+      display: '...',
+      current: false
+    },
+    ...middlePageList,
+    {
+      pageNumber: currentPage + 3,
+      display: '...',
+      current: false
+    },
+    {
+      pageNumber: totalPages,
+      display: String(totalPages),
+      current: false
+    }
+  ];
+}
+
+function getSimpleList(
+  currentPage: number,
+  totalPages: number
+): GuxPaginationButtonsExpandedPageListItem[] {
+  if (totalPages <= 3) {
+    return [...Array(totalPages).keys()].map(index => {
+      const pageNumber = index + 1;
+
+      return {
+        pageNumber,
+        display: String(pageNumber),
+        current: pageNumber === currentPage
+      };
+    });
+  }
+  if (totalPages >= 4) {
+    const startPageList = [...Array(1).keys()].map(index => {
+      const pageNumber = index + currentPage;
+
+      return {
+        pageNumber,
+        display: String(pageNumber),
+        current: pageNumber !== totalPages
+      };
+    });
+    return [
+      ...startPageList,
       {
-        pageNumber: currentPage + 3,
+        pageNumber: currentPage,
         display: '...',
         current: false
       },
       {
         pageNumber: totalPages,
         display: String(totalPages),
-        current: false
+        current: totalPages == currentPage
       }
     ];
   }

@@ -3,7 +3,7 @@ import MutationObserver from 'mutation-observer';
 
 import { GuxPaginationButtons } from '../gux-pagination-buttons';
 import { GuxButton } from '../../../gux-button/gux-button';
-import { GuxFormFieldTextLike } from '../../../../stable/gux-form-field/components/gux-form-field-text-like/gux-form-field-text-like';
+import { GuxFormFieldTextLike } from '../../../gux-form-field/components/gux-form-field-text-like/gux-form-field-text-like';
 
 const components = [GuxPaginationButtons, GuxButton, GuxFormFieldTextLike];
 const language = 'en';
@@ -19,15 +19,12 @@ describe('gux-pagination-item-counts', () => {
 
   describe('#render', () => {
     [
-      { totalPages: 0, currentPage: 0, layout: 'full' },
-      { totalPages: 10, currentPage: 1, layout: 'full' },
-      { totalPages: 10, currentPage: 5, layout: 'full' },
-      { totalPages: 0, currentPage: 0, layout: 'small' },
-      { totalPages: 10, currentPage: 1, layout: 'small' },
-      { totalPages: 10, currentPage: 5, layout: 'small' },
-      { totalPages: 0, currentPage: 0, layout: 'expanded' },
-      { totalPages: 10, currentPage: 1, layout: 'expanded' },
-      { totalPages: 10, currentPage: 5, layout: 'expanded' }
+      { totalPages: 0, currentPage: 0, layout: 'advanced' },
+      { totalPages: 10, currentPage: 1, layout: 'advanced' },
+      { totalPages: 10, currentPage: 5, layout: 'advanced' },
+      { totalPages: 0, currentPage: 0, layout: 'simple' },
+      { totalPages: 10, currentPage: 1, layout: 'simple' },
+      { totalPages: 10, currentPage: 5, layout: 'simple' }
     ].forEach(({ totalPages, currentPage, layout }, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const html = `

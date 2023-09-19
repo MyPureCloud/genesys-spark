@@ -18,7 +18,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import { timeFormatLocale } from './gux-visualization.locale';
 
 @Component({
-  styleUrl: 'gux-visualization.less',
+  styleUrl: 'gux-visualization.scss',
   tag: 'gux-visualization-beta',
   shadow: true
 })

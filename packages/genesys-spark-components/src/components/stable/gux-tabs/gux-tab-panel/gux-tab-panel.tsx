@@ -3,6 +3,7 @@ import {
   Event,
   EventEmitter,
   h,
+  Host,
   JSX,
   Method,
   Prop,
@@ -15,9 +16,9 @@ import {
  */
 
 @Component({
-  styleUrl: 'gux-tab-panel.less',
+  styleUrl: 'gux-tab-panel.scss',
   tag: 'gux-tab-panel',
-  shadow: false
+  shadow: true
 })
 export class GuxTabPanel {
   /**
@@ -50,7 +51,7 @@ export class GuxTabPanel {
 
   render(): JSX.Element {
     return (
-      <div
+      <Host
         id={`gux-${this.tabId}-panel`}
         role="tabpanel"
         aria-labelledby={`gux-${this.tabId}-tab`}
@@ -58,7 +59,7 @@ export class GuxTabPanel {
         hidden={!this.active}
       >
         <slot></slot>
-      </div>
+      </Host>
     ) as JSX.Element;
   }
 }

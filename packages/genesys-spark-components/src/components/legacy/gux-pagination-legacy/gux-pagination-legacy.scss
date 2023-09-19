@@ -1,0 +1,49 @@
+:host {
+  display: block;
+  border-top: var(--gse-ui-dataTableItems-tablePagination-divider-width)
+    var(--gse-ui-dataTableItems-tablePagination-divider-style)
+    var(--gse-ui-dataTableItems-tablePagination-divider-color);
+}
+
+.gux-pagination-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--gse-ui-dataTableItems-cell-tablePagination-height);
+  padding: var(--gse-ui-dataTableItems-tablePagination-padding);
+  background-color: var(
+    --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
+  );
+
+  .gux-pagination-info {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    align-self: auto;
+    justify-content: flex-start;
+    order: 0;
+    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+
+    & > * {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+    }
+  }
+
+  .gux-pagination-change {
+    flex: 1 1 auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  .gux-pagination-change:first-child {
+    margin-left: 0;
+  }
+}

@@ -5,27 +5,43 @@ import {
   Event,
   EventEmitter,
   h,
+  readTask,
   JSX,
   Prop,
   State
 } from '@stencil/core';
 
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+
 import { trackComponent } from '@utils/tracking/usage';
 
 import {
   GuxItemsPerPage,
-  GuxPaginationLayout,
   GuxPaginationState
-} from './gux-pagination.types';
+} from '../../legacy/gux-pagination-legacy/gux-pagination.types';
+
+import { GuxPaginationLayout } from './gux-pagination.types';
+
+const minAdvancedSpacerWidth = 24;
 
 @Component({
-  styleUrl: 'gux-pagination.less',
+  styleUrl: 'gux-pagination.scss',
   tag: 'gux-pagination',
   shadow: true
 })
 export class GuxPagination implements ComponentInterface {
   @Element()
   private root: HTMLElement;
+
+  private resizeObserver?: ResizeObserver;
+
+  private reinstateLayoutBreakpoint: number = 0;
+
+  /**
+   * The pagination component can have different layouts to suit the available space
+   */
+  @Prop()
+  layout: GuxPaginationLayout = 'advanced';
 
   /**
    * The currently select page. Changes are watched by the component.
@@ -46,16 +62,16 @@ export class GuxPagination implements ComponentInterface {
   itemsPerPage: GuxItemsPerPage = 25;
 
   /**
-   * The pagination component can have different layouts to suit the available space
-   */
-  @Prop()
-  layout: GuxPaginationLayout = 'full';
-
-  /**
    * The total number of pages needed for the the data set.
    */
   @State()
   private totalPages: number;
+
+  /**
+   * Pagination layout to display based on resize observer
+   */
+  @State()
+  displayedLayout: GuxPaginationLayout;
 
   @Event()
   private guxpaginationchange: EventEmitter<GuxPaginationState>;
@@ -66,7 +82,10 @@ export class GuxPagination implements ComponentInterface {
       return;
     }
 
-    const totalPages = this.calculateTotalPages();
+    const totalPages = this.calculateTotalPages(
+      this.totalItems,
+      this.itemsPerPage
+    );
     if (page > totalPages) {
       this.setPage(totalPages);
       return;
@@ -79,19 +98,6 @@ export class GuxPagination implements ComponentInterface {
     });
   }
 
-  private calculateTotalPages(): number {
-    return Math.max(1, Math.ceil(this.totalItems / this.itemsPerPage));
-  }
-
-  private calculateCurrentPage(): number {
-    const minCurrentPage = this.totalPages > 0 ? 1 : 0;
-
-    return Math.max(
-      minCurrentPage,
-      Math.min(this.currentPage, this.totalPages)
-    );
-  }
-
   private handleInternalitemsperpagechange(event: CustomEvent): void {
     this.itemsPerPage = event.detail as GuxItemsPerPage;
     this.setPage(1);
@@ -101,31 +107,45 @@ export class GuxPagination implements ComponentInterface {
     this.setPage(event.detail as number);
   }
 
-  private getPaginationInfoElement(layout: GuxPaginationLayout): JSX.Element {
-    if (layout === 'expanded') {
-      return null;
-    }
+  private calculateTotalPages(
+    totalItems: number,
+    itemsPerPage: number
+  ): number {
+    return Math.max(1, Math.ceil(totalItems / itemsPerPage));
+  }
 
-    const content = [
-      <gux-pagination-item-counts
-        total-items={this.totalItems}
-        current-page={this.currentPage}
-        items-per-page={this.itemsPerPage}
-      />
-    ];
+  private calculateCurrentPage(
+    totalPages: number,
+    currentPage: number
+  ): number {
+    const minCurrentPage = totalPages > 0 ? 1 : 0;
 
-    if (layout === 'full') {
-      content.push(
-        <gux-pagination-items-per-page
-          items-per-page={this.itemsPerPage}
-          onInternalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
-            this
-          )}
-        ></gux-pagination-items-per-page>
+    return Math.max(minCurrentPage, Math.min(currentPage, totalPages));
+  }
+
+  private checkPaginationContainerWidthForLayout() {
+    readTask(() => {
+      const container = this.root.shadowRoot.querySelector(
+        '.gux-pagination-container'
       );
-    }
 
-    return (<div class="gux-pagination-info">{content}</div>) as JSX.Element;
+      const spacer = this.root.shadowRoot.querySelector(
+        '.gux-pagination-spacer'
+      );
+      const containerWidth = container.clientWidth;
+      const spacerWidth = spacer.clientWidth;
+
+      if (
+        spacerWidth < minAdvancedSpacerWidth &&
+        this.displayedLayout !== 'simple'
+      ) {
+        this.reinstateLayoutBreakpoint = containerWidth;
+        this.displayedLayout = 'simple';
+      } else if (containerWidth > this.reinstateLayoutBreakpoint) {
+        this.reinstateLayoutBreakpoint = 0;
+        this.displayedLayout = this.layout;
+      }
+    });
   }
 
   componentWillLoad(): void {
@@ -133,17 +153,64 @@ export class GuxPagination implements ComponentInterface {
   }
 
   componentWillRender(): void {
-    this.totalPages = this.calculateTotalPages();
-    this.currentPage = this.calculateCurrentPage();
+    this.totalPages = this.calculateTotalPages(
+      this.totalItems,
+      this.itemsPerPage
+    );
+    this.currentPage = this.calculateCurrentPage(
+      this.totalPages,
+      this.currentPage
+    );
+  }
+
+  disconnectedCallback() {
+    if (this.resizeObserver) {
+      this.resizeObserver.unobserve(
+        this.root.shadowRoot.querySelector('.gux-pagination-container')
+      );
+    }
+  }
+
+  componentDidLoad() {
+    if (!this.resizeObserver && window.ResizeObserver) {
+      this.resizeObserver = new ResizeObserver(() =>
+        this.checkPaginationContainerWidthForLayout()
+      );
+    }
+
+    if (this.resizeObserver) {
+      this.resizeObserver.observe(
+        this.root.shadowRoot.querySelector('.gux-pagination-container')
+      );
+    }
+
+    afterNextRenderTimeout(() => {
+      this.checkPaginationContainerWidthForLayout();
+    }, 500);
   }
 
   render(): JSX.Element {
     return (
       <div class="gux-pagination-container">
-        {this.getPaginationInfoElement(this.layout)}
+        <div class="gux-pagination-info">
+          <gux-pagination-item-counts
+            total-items={this.totalItems}
+            current-page={this.currentPage}
+            items-per-page={this.itemsPerPage}
+          />
+          {this.displayedLayout === 'advanced' && (
+            <gux-pagination-items-per-page
+              items-per-page={this.itemsPerPage}
+              onInternalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
+                this
+              )}
+            />
+          )}
+        </div>
+        <div class="gux-pagination-spacer"></div>
         <div class="gux-pagination-change">
           <gux-pagination-buttons
-            layout={this.layout}
+            layout={this.displayedLayout}
             current-page={this.currentPage}
             total-pages={this.totalPages}
             onInternalcurrentpagechange={this.handleInternalcurrentpagechange.bind(
