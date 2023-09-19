@@ -17,9 +17,9 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-create-option.less',
+  styleUrl: 'gux-create-option.scss',
   tag: 'gux-create-option',
-  shadow: false
+  shadow: true
 })
 export class GuxCreateOption {
   private i18n: GetI18nValue;

@@ -28,19 +28,19 @@ import {
 } from '../gux-listbox/gux-listbox.service';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
-import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { trackComponent } from '@utils/tracking/usage';
-import { afterNextRender } from '../../../utils/dom/after-next-render';
+import { afterNextRender } from '@utils/dom/after-next-render';
 
 import translationResources from './i18n/en.json';
-import { GuxFilterTypes } from '../../stable/gux-dropdown/gux-dropdown.types';
+import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 
 /**
  * @slot - collection of gux-option-multi elements
  */
 @Component({
-  styleUrl: 'gux-listbox-multi.less',
+  styleUrl: 'gux-listbox-multi.scss',
   tag: 'gux-listbox-multi',
   shadow: true
 })
