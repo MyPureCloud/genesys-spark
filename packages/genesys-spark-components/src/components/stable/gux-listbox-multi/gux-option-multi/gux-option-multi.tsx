@@ -82,6 +82,7 @@ export class GuxOptionMulti {
       void this.truncateElement?.setHideTooltip();
     }
   }
+
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.root.id = this.root.id || randomHTMLId('gux-option-multi');
