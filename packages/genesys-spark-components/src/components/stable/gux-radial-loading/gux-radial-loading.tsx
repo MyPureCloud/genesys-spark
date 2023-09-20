@@ -5,6 +5,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '@utils/tracking/usage';
 
 import { GuxRadialLoadingContext } from './gux-radial-loading.types';
+import { GuxSpinnerState } from './gux-radial-loading.functional';
 
 import modalComponentResources from './i18n/en.json';
 
@@ -43,13 +44,10 @@ export class GuxRadialLoading {
 
   render(): JSX.Element {
     return (
-      <div
-        role="progressbar"
-        aria-label={this.screenreaderText || this.getI18nValue('loading')}
-        class={`gux-spinner-container gux-${this.context}`}
-      >
-        <div role="presentation" class="gux-spin-circle" />
-      </div>
+      <GuxSpinnerState
+        context={this.context}
+        screenreaderText={this.screenreaderText || this.getI18nValue('loading')}
+      />
     ) as JSX.Element;
   }
 }

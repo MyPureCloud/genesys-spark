@@ -41,6 +41,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | gux-table-beta                | gux-table                |
 | gux-table-toolbar-beta        | gux-table-toolbar        |
 | gux-time-picker-beta          | gux-time-picker          |
+| gux-pagination-beta           | gux-pagination           |
 
 ### There have been API changes in these components.
 
@@ -240,3 +241,16 @@ The `scale` property has been removed. The displayed percentage will now always 
 ### gux-tab-panel
 
 This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
+
+### gux-button-multi
+
+The `title` prop has been removed. Instead, slot in a `span` or `div` with a slot name of `title`.
+
+```diff
+- <gux-button-multi title="Primary" accent="primary" is-open="true">
++ <gux-button-multi accent="primary" is-open="true">
++   <span slot="title">Primary</span>
+    <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+  </gux-button-multi>
+```

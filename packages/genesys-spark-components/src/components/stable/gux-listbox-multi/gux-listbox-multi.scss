@@ -1,0 +1,47 @@
+:host {
+  box-sizing: border-box;
+  display: block;
+  max-height: 20rem; // missing token ticket COMUI-2269
+  padding: var(--gse-ui-menu-padding);
+  overflow-y: auto;
+  background: var(--gse-ui-menu-backgroundColor);
+  border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
+    var(--gse-ui-menu-border-color);
+  border-radius: var(--gse-ui-menu-borderRadius);
+  outline: none;
+  box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+    var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
+    var(--gse-ui-menu-boxShadow-color);
+  scrollbar-color: var(--gse-ui-menu-scrollbar-foregroundColor);
+}
+
+:host(:focus-visible) {
+  outline: var(--gse-semantic-focusRing-width) solid
+    var(--gse-semantic-color-focus);
+  outline-offset: var(--gse-semantic-focusRing-offset);
+}
+
+.gux-message-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+
+  .gux-no-matches {
+    box-sizing: border-box;
+    height: var(--gse-ui-menu-option-height);
+    font-family: var(
+      --gse-ui-dropdown-menu-emptyState-subheader-text-fontFamily
+    );
+    font-weight: var(
+      --gse-ui-dropdown-menu-emptyState-subheader-text-fontWeight
+    );
+    line-height: var(
+      --gse-ui-dropdown-menu-emptyState-subheader-text-lineHeight
+    );
+    font-size: var(--gse-ui-dropdown-menu-emptyState-subheader-text-fontSize);
+    color: var(--gse-ui-dropdown-menu-emptyState-subheader-foregroundColor);
+  }
+}

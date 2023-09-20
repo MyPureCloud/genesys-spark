@@ -1,8 +1,4 @@
-// COMUI-2156 add missing button tokens
-$temp-focus-ring-width: 3px;
-$temp-focus-ring-offset: 1px;
-$temp-focus-ring-corner-radius: 4px;
-$temp-focus-ring-color: #7b88f7;
+@import '../../../style/focus.scss';
 
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
@@ -51,9 +47,7 @@ $temp-focus-ring-color: #7b88f7;
 ::slotted(input[type='button']:focus-visible:enabled),
 ::slotted(input[type='submit']:focus-visible:enabled),
 ::slotted(button:focus-visible:enabled) {
-  outline: $temp-focus-ring-width solid $temp-focus-ring-color;
-  outline-offset: $temp-focus-ring-offset;
-  border-radius: calc($temp-focus-ring-corner-radius - $temp-focus-ring-offset);
+  @include gux-focus-ring;
 }
 
 ::slotted(input[type='button']:hover:enabled),

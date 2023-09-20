@@ -32,7 +32,7 @@
 
   .gux-no-matches {
     box-sizing: border-box;
-    height: 32px;
+    height: var(--gse-ui-menu-option-height);
     font-family: var(
       --gse-ui-dropdown-menu-emptyState-subheader-text-fontFamily
     );
@@ -44,19 +44,5 @@
     );
     font-size: var(--gse-ui-dropdown-menu-emptyState-subheader-text-fontSize);
     color: var(--gse-ui-dropdown-menu-emptyState-subheader-foregroundColor);
-
-    .gux-no-matches-header {
-      font-family: var(
-        --gse-ui-dropdown-menu-emptyState-header-text-fontFamily
-      );
-      font-weight: var(
-        --gse-ui-dropdown-menu-emptyState-header-text-fontWeight
-      );
-      line-height: var(
-        --gse-ui-dropdown-menu-emptyState-header-text-lineHeight
-      );
-      font-size: var(--gse-ui-dropdown-menu-emptyState-header-text-fontSize);
-      color: var(--gse-ui-dropdown-menu-emptyState-header-foregroundColor);
-    }
   }
 }

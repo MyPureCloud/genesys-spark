@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.28](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.27...v4.0.0-beta.28) (2023-09-20)
+
+
+### Bug Fixes
+
+* **gux-list-item:** add outline-offset to prevent focus outline cutoff ([a8198a2](https://github.com/MyPureCloud/genesys-webcomponents/commit/a8198a23a35dcbe6e4612077f87dda051fe43798))
+
+## [4.0.0-beta.27](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.26...v4.0.0-beta.27) (2023-09-19)
+
+
+### Features
+
+* **gux-advanced-dropdown:** migrate gux-advanced-dropdown option to sass from less ([a0713a5](https://github.com/MyPureCloud/genesys-webcomponents/commit/a0713a5bd9b039a716de589f4a2ad6fb73357391))
+* **gux-advanced-dropdown:** move gux-advanced-dropdown to legacy ([583367b](https://github.com/MyPureCloud/genesys-webcomponents/commit/583367b56f133fde58b0dfa36739d2e9ab5e4200))
+* **gux-popover-list reskin:** gux-popover-list tokens ([4ab10bd](https://github.com/MyPureCloud/genesys-webcomponents/commit/4ab10bd2edb1b142973bf07d1f9dbcb59a3374ca))
+
 ## [4.0.0-beta.26](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.25...v4.0.0-beta.26) (2023-09-15)
 
 

@@ -105,8 +105,7 @@
     "required": "Required"
   },
   "gux-listbox": {
-    "noMatchesHeader": "Sorry, this menu is empty right now.",
-    "noMatchesMessage": "Please try again later.",
+    "noMatches": "No matches",
     "loading": "Loading..."
   },
   "gux-listbox-multi": {
@@ -133,17 +132,17 @@
     "previous": "Previous",
     "next": "Next",
     "last": "Last",
-    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
+    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}",
+    "goToPage": "Go to page"
   },
-  "gux-pagination-buttons-beta": {
+  "gux-pagination-buttons-legacy": {
     "page": "Page",
     "totalPages": " of {totalPages, number}",
     "first": "First",
     "previous": "Previous",
     "next": "Next",
     "last": "Last",
-    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}",
-    "goToPage": "Go to page"
+    "pageInputLabel": "Page {currentPage, number} of {totalPages, number}"
   },
   "gux-pagination-cursor": {
     "previous": "Previous",
@@ -153,7 +152,7 @@
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
     "totalItems": " of {totalItems, number}"
   },
-  "gux-pagination-item-counts-beta": {
+  "gux-pagination-item-counts-legacy": {
     "itemCountDisplay": "{firstItem, number} - {lastItem, number}",
     "totalItems": " of {totalItems, number}"
   },
@@ -162,7 +161,7 @@
     "itemsPerPage": "Items per page",
     "rangeSelected": "Items per page dropdown, {range} selected"
   },
-  "gux-pagination-items-per-page-beta": {
+  "gux-pagination-items-per-page-legacy": {
     "perPage": "per page",
     "itemsPerPage": "Items per page",
     "rangeSelected": "Items per page dropdown, {range} selected"

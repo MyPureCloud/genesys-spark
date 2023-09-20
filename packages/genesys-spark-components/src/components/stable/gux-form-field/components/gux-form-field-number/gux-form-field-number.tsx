@@ -47,7 +47,7 @@ import componentResources from './i18n/en.json';
  * @part input-section - Style input container
  */
 @Component({
-  styleUrl: 'gux-form-field-number.less',
+  styleUrl: 'gux-form-field-number.scss',
   tag: 'gux-form-field-number',
   shadow: { delegatesFocus: true }
 })

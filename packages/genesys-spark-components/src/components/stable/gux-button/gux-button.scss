@@ -1,8 +1,6 @@
+@import '../../../style/focus.scss';
+
 // COMUI-2156 add missing button tokens
-$temp-focus-ring-width: 3px;
-$temp-focus-ring-offset: 1px;
-$temp-focus-ring-corner-radius: 4px;
-$temp-focus-ring-color: #7b88f7;
 $temp-slotted-padding-left: 8px;
 $temp-slotted-first-child-padding: 0;
 
@@ -76,11 +74,7 @@ button {
   }
 
   &:focus-visible:enabled {
-    outline: $temp-focus-ring-width solid $temp-focus-ring-color;
-    outline-offset: $temp-focus-ring-offset;
-    border-radius: calc(
-      $temp-focus-ring-corner-radius - $temp-focus-ring-offset
-    );
+    @include gux-focus-ring;
   }
 
   &.gux-primary {
