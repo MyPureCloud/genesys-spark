@@ -1,21 +1,21 @@
 :host {
   box-sizing: border-box;
   display: block;
-  max-height: 20rem;
+  max-height: 20rem; // missing token ticket COMUI-2269
   padding: var(--gse-ui-menu-padding);
-  margin: 0;
   overflow-y: auto;
   background: var(--gse-ui-menu-backgroundColor);
   border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
     var(--gse-ui-menu-border-color);
   border-radius: var(--gse-ui-menu-borderRadius);
+  outline: none;
   box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
     var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
     var(--gse-ui-menu-boxShadow-color);
-  outline: none;
+  scrollbar-color: var(--gse-ui-menu-scrollbar-foregroundColor);
 }
 
-:host(:focus) {
+:host(:focus-visible) {
   outline: var(--gse-semantic-focusRing-width) solid
     var(--gse-semantic-color-focus);
   outline-offset: var(--gse-semantic-focusRing-offset);
@@ -28,7 +28,6 @@
   align-content: stretch;
   align-items: center;
   justify-content: center;
-  text-align: center;
 
   .gux-no-matches {
     box-sizing: border-box;
