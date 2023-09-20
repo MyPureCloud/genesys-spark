@@ -1,0 +1,139 @@
+@import '../../../../../style/focus.scss';
+@import '../../../../../style/typography.scss';
+@import '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
+@import '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@import '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
+@import '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+
+$gux-form-field-number-step-button-size: 14px;
+
+@include GuxFormFieldContainerStyle;
+@include GuxFormFieldErrorStyle;
+@include GuxFormFieldLabelStyle;
+@include GuxFormFieldHelpStyle;
+
+:host {
+  display: block;
+}
+
+::slotted(label) {
+  @include gse-ui-formControl-label;
+}
+
+::slotted(input) {
+  flex: 1 1 auto;
+  align-self: auto;
+  order: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  text-align: right;
+  text-overflow: ellipsis;
+  background-color: var(--gse-ui-formControl-input-backgroundColor);
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: var(--gse-ui-formControl-input-placeholderColor);
+    opacity: 1; //TODO : COMUI-2187
+  }
+}
+
+.gux-input-and-error-container {
+  flex-grow: 1;
+
+  .gux-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    width: 100%;
+
+    .gux-input-container {
+      box-sizing: border-box;
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: center;
+      align-self: auto;
+      justify-content: center;
+      gap: var(--gse-ui-formControl-input-gap);
+      order: 0;
+      width: 100%;
+      height: var(--gse-ui-formControl-input-textfield-height);
+      padding: var(--gse-ui-formControl-input-padding);
+      font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
+      font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+      line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
+      color: var(--gse-ui-formControl-input-populatedColor);
+      background-color: var(--gse-ui-formControl-input-backgroundColor);
+      background-image: none;
+      border: var(--gse-ui-formControl-input-default-border-width)
+        var(--gse-ui-formControl-input-default-border-style)
+        var(--gse-ui-formControl-input-default-border-color);
+      border-radius: var(--gse-ui-formControl-input-borderRadius);
+
+      &.gux-disabled {
+        opacity: var(--gse-ui-formControl-input-disabled-opacity);
+      }
+
+      &.gux-clear {
+        padding-right: 0;
+      }
+
+      &:focus-within {
+        outline: var(--gse-ui-formControl-input-focus-border-width)
+          var(--gse-ui-formControl-input-focus-border-style)
+          var(--gse-ui-formControl-input-focus-border-color);
+        border: var(--gse-ui-formControl-input-active-border-width)
+          var(--gse-ui-formControl-input-active-border-style)
+          var(--gse-ui-formControl-input-active-border-color);
+        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+      }
+    }
+
+    &.gux-input-error {
+      .gux-input-container {
+        border-color: var(--gse-ui-formControl-input-error-border-color);
+      }
+    }
+  }
+}
+
+.gux-step-buttons-container {
+  flex: 0 1 $gux-form-field-number-step-button-size;
+  align-self: auto;
+  order: 0;
+  margin-left: var(--gse-ui-formControl-spinButton-gap);
+
+  .gux-step-button {
+    // Flex the <gux-icon> child to ensure it doesn't have extra descender height from being inline
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    align-self: auto;
+    justify-content: center;
+    order: 0;
+    padding: 0;
+    color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
+    background: transparent;
+    border: none;
+
+    &:not(:disabled):focus-visible,
+    &:not(:disabled):hover {
+      border: var(--gse-ui-formControl-input-hover-border-width)
+        var(--gse-ui-formControl-input-hover-border-style)
+        var(--gse-ui-formControl-input-hover-border-color);
+      cursor: pointer;
+    }
+
+    gux-icon {
+      flex: 0 0 auto;
+      width: $gux-form-field-number-step-button-size;
+      height: $gux-form-field-number-step-button-size;
+    }
+  }
+}
