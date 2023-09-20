@@ -152,7 +152,7 @@ If possible, avoid the usage of legacy components that have a migration path and
 
 Internal margins have been removed from the from field components as they were making it difficult for developers to incorporate the components into their existing layouts that already accounted for spacings between components.
 
-In v3, developers could workaround this issue with two CSS custom properties: --gux-form-field-container-margin-top and --gux-form-field-container-margin-bottom. Using these custom properties they could change the internal margins, usually to set them to 0.
+In v3, developers could workaround this issue with four CSS custom properties: --gux-form-field-container-margin-top, --gux-form-field-container-margin-bottom, --gux-form-field-fieldset-container-margin-top and --gux-form-field-fieldset-container-margin-bottom. Using these custom properties they could change the internal margins, usually to set them to 0.
 
 In v4, developers who were using the custom properties to set the internal margins to 0 can remove that workaround as it is no longer needed (or supported) and the component not having an internal margin is the default behaviour.
 
