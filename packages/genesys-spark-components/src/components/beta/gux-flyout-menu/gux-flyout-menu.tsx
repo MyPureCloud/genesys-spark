@@ -22,7 +22,7 @@ import { HTMLGuxMenuItemElement, hideDelay } from './gux-menu/gux-menu.common';
  */
 
 @Component({
-  styleUrl: 'gux-flyout-menu.less',
+  styleUrl: 'gux-flyout-menu.scss',
   tag: 'gux-flyout-menu-beta',
   shadow: true
 })

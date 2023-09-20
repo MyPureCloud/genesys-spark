@@ -1,11 +1,9 @@
-@import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/zindex.less';
-
-@gux-arrow-height: 5px;
+@import '../../../style/focus.scss';
+@import '../../../style/zindex.scss';
 
 // Style
 :host {
-  z-index: var(--gux-zindex-popover, @gux-zindex-popover);
+  z-index: var(--gux-zindex-popover);
   color: #2e394c;
   cursor: default;
 }
@@ -15,7 +13,7 @@
 }
 
 :host(:focus-visible) {
-  .gux-focus-ring();
+  @include gux-focus-ring;
 }
 
 .gux-flyout-menu-content {
@@ -31,8 +29,8 @@
 .gux-arrow::before {
   position: absolute;
   top: -3px;
-  width: @gux-arrow-height * 2;
-  height: @gux-arrow-height * 2;
+  width: 5px * 2;
+  height: 5px * 2;
   background: inherit;
 }
 
