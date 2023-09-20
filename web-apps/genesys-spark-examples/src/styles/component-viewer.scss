@@ -1,5 +1,5 @@
-@border: 1px solid #c3cad4;
-@soft-border: 1px solid #dae1e8;
+$border: 1px solid #c3cad4;
+$soft-border: 1px solid #dae1e8;
 
 html,
 body {
@@ -55,7 +55,7 @@ body {
 .component-viewer > .left-column {
   flex-grow: 1;
   min-width: 600px;
-  border-right: @border;
+  border-right: $border;
 
   > .preview {
     position: relative;
@@ -64,7 +64,7 @@ body {
     overflow-y: auto;
     color: #ff4f1f;
     background-color: #fff793;
-    border-bottom: @border;
+    border-bottom: $border;
 
     &.gux-light-theme {
       color: #33383d;
@@ -96,7 +96,7 @@ body {
     &.heading {
       padding: 5px 0;
       font-size: 20px;
-      border-bottom: @soft-border;
+      border-bottom: $soft-border;
     }
   }
 
@@ -104,13 +104,13 @@ body {
     padding: 5px 0;
     margin: 0 0 10px -7px;
     font-size: 14px;
-    border-bottom: @soft-border;
+    border-bottom: $soft-border;
   }
 
   .attributes {
     flex-grow: 0;
     padding: 7px 10px 7px 17px;
-    border-bottom: @border;
+    border-bottom: $border;
 
     .attribute-group {
       padding-bottom: 5px;
@@ -149,7 +149,7 @@ body {
     input:not([type='checkbox']) {
       flex-grow: 1;
       padding: 7px 10px;
-      border: @border;
+      border: $border;
       border-radius: 5px;
     }
 

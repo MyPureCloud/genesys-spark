@@ -1,6 +1,6 @@
 import { toHTML } from '../utils/to-html.js';
 import { componentSpecs, getComponentSpec } from '../component-specs.js';
-import '../styles/component-listing.less';
+import '../styles/component-listing.scss';
 
 export function bootstrap() {
   let components = Object.keys(componentSpecs)
