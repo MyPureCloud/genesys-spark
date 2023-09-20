@@ -107,8 +107,8 @@ An `is-open` prop has been added to control showing and hiding the component. Th
 - The deprecated attribute `filterable` has now been completely removed in favor of `filter-type`.
 
 ```diff
-- <gux-dropdown-multi-beta filterable placeholder="Select an animal">
-+ <gux-dropdown-multi filter-type="starts-with" placeholder="Select an animal">
+- <gux-dropdown-multi-beta filterable>
++ <gux-dropdown-multi filter-type="starts-with">
     ...
   </gux-dropdown-multi>
 ```
