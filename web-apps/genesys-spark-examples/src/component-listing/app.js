@@ -1,8 +1,10 @@
 import { toHTML } from '../utils/to-html.js';
 import { componentSpecs, getComponentSpec } from '../component-specs.js';
 import '../styles/component-listing.scss';
+import { registerCustomElements } from 'genesys-spark';
 
 export function bootstrap() {
+  registerCustomElements();
   let components = Object.keys(componentSpecs)
     .filter(component => !componentSpecs[component].hidePage)
     .sort((a, b) => {

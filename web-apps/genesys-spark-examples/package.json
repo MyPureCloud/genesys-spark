@@ -18,7 +18,7 @@
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "dependencies": {
-    "genesys-spark-components": "file:../../packages/genesys-spark-components",
+    "genesys-spark": "file:../../packages/genesys-spark",
     "iframe-coordinator": "^4.6.1",
     "monaco-editor": "^0.40.0",
     "parse5": "^7.1.2"

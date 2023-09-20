@@ -1,5 +1,6 @@
 import { parseFragment, serialize } from 'parse5';
 
+import { registerCustomElements } from 'genesys-spark';
 import AttributesPanel from './panels/attributes';
 import { createPreview } from './panels/preview';
 import { createEditor } from './panels/editor';
@@ -7,6 +8,8 @@ import EventsPanel from './panels/events';
 import { toHTML } from '../utils/to-html';
 import '../styles/component-viewer.scss';
 import * as SparkLinks from './components/links.json';
+
+registerCustomElements();
 
 window.toHTML = toHTML;
 window.webcomponentsDocsMain = (example = '', renderCallback = () => {}) =>
