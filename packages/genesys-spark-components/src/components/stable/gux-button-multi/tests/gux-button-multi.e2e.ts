@@ -25,7 +25,8 @@ async function pressActionItemButton(
 
 describe('gux-button-multi', () => {
   const html = `
-  <gux-button-multi lang="en" text="Primary" accent="primary">
+  <gux-button-multi lang="en" accent="primary">
+    <span slot="title">Primary</span>
     <gux-list-item>Test 1</gux-list-item>
     <gux-list-item>Test 2</gux-list-item>
     <gux-list-item>Test 3</gux-list-item>
