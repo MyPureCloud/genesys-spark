@@ -36,8 +36,6 @@ $range-active: var(--gse-ui-slider-bar-selected-backgroundColor);
 $track-width: 100%;
 $track-height: var(--gse-ui-slider-bar-height);
 $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
-// TODO: (COMUI-2234) Use token here once tooltip component reskin is implemented
-$slider-border: var(--gux-grey-30);
 
 @mixin gux-track {
   width: $track-width;
@@ -158,13 +156,15 @@ $slider-border: var(--gux-grey-30);
       height: 32px;
       margin-left: -20px;
       visibility: hidden;
-      background-color: #fdfdfd;
-      border: 1px solid $slider-border;
-      border-radius: 4px;
-      box-shadow: rgba(32, 41, 55, 0.24) 0px 2px 4px;
-      // TODO: doesn't look like the gux-shadow-20 mixin produces correct css? Perhaps we want a token for box-shadow
-      //       once we circle back to use tokens for the tooltip element in this component
-      // @include gux-shadow-20;
+      background-color: var(--gse-ui-tooltip-light-backgroundColor);
+      border: var(--gse-ui-tooltip-light-border-width)
+        var(--gse-ui-tooltip-light-border-style)
+        var(--gse-ui-tooltip-light-border-color);
+      border-radius: var(--gse-ui-tooltip-borderRadius);
+      box-shadow: var(--gse-ui-tooltip-boxShadow-x)
+        var(--gse-ui-tooltip-boxShadow-y) var(--gse-ui-tooltip-boxShadow-blur)
+        var(--gse-ui-tooltip-boxShadow-spread)
+        var(--gse-ui-tooltip-boxShadow-color);
 
       &::after,
       &::before {
@@ -181,13 +181,13 @@ $slider-border: var(--gux-grey-30);
       &::after {
         margin-left: -4px;
         border-width: 4px;
-        border-top-color: #fdfdfd;
+        border-top-color: var(--gse-ui-tooltip-light-backgroundColor);
       }
 
       &::before {
         margin-left: -6px;
         border-width: 6px;
-        border-top-color: $slider-border;
+        border-top-color: var(--gse-ui-tooltip-light-backgroundColor);
       }
     }
   }
