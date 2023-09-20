@@ -1,5 +1,4 @@
 {
-  "noMatchesHeader": "Sorry, this menu is empty right now.",
-  "noMatchesMessage": "Please try again later.",
+  "noMatches": "No matches",
   "loading": "Loading..."
 }

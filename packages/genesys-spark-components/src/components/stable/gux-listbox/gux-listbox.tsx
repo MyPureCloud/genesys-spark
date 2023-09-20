@@ -245,12 +245,7 @@ export class GuxListbox {
     return [
       <div class="gux-message-container">
         <div class="gux-no-matches">
-          {this.emptyMessage || [
-            <div class="gux-no-matches-header">
-              {this.i18n('noMatchesHeader')}
-            </div>,
-            <div>{this.i18n('noMatchesMessage')}</div>
-          ]}
+          {this.emptyMessage || this.i18n('noMatches')}
         </div>
       </div>,
       this.renderHiddenSlot()

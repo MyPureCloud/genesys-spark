@@ -1,0 +1,85 @@
+@use '../../../../style/_mixins.scss';
+
+:host {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  min-height: var(--gse-ui-menu-option-height);
+  padding: var(--gse-ui-menu-option-padding);
+  font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
+  font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
+  line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
+  font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
+  color: var(--gse-ui-menu-option-label-foregroundColor);
+  gap: var(--gse-ui-menu-option-gap);
+  word-wrap: break-word;
+  cursor: pointer;
+
+  .gux-checkbox-container {
+    position: relative;
+    display: inline-block;
+    width: var(--gse-ui-menu-option-startIcon-width);
+    height: var(--gse-ui-menu-option-startIcon-height);
+    content: '';
+
+    > path {
+      fill: var(
+        --gse-ui-menu-option-checkbox-unchecked-default-foregroundColor
+      );
+    }
+  }
+
+  &:host(.gux-disabled) {
+    opacity: var(--gse-ui-menu-option-disabled-opacity);
+
+    @include mixins.gux-disabled-pointer;
+  }
+
+  &:host(.gux-selected) {
+    font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
+    font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
+    line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
+    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
+    background-color: var(--gse-ui-menu-option-selected-backgroundColor);
+
+    .gux-checkbox-container > path {
+      fill: var(--gse-ui-menu-option-checkbox-checked-default-foregroundColor);
+    }
+  }
+
+  &:host(.gux-active) {
+    outline: var(--gse-ui-menu-option-focus-border-width)
+      var(--gse-ui-menu-option-focus-border-style)
+      var(--gse-ui-menu-option-focus-border-color);
+    border-radius: var(--gse-semantic-focusRing-cornerRadius);
+  }
+
+  &:host(.gux-hovered:not([disabled])) {
+    background-color: var(--gse-ui-menu-option-hover-backgroundColor);
+
+    &:host(.gux-selected) {
+      .gux-checkbox-container > path {
+        fill: var(--gse-ui-menu-option-checkbox-checked-hover-foregroundColor);
+      }
+    }
+
+    &:host(:not(.gux-selected)) {
+      .gux-checkbox-container > path {
+        fill: var(
+          --gse-ui-menu-option-checkbox-unchecked-hover-foregroundColor
+        );
+      }
+    }
+  }
+
+  &:host(.gux-filtered) {
+    display: none;
+  }
+
+  .gux-screenreader {
+    @include mixins.gux-sr-only;
+  }
+}

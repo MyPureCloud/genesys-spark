@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.28](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.27...v4.0.0-beta.28) (2023-09-20)
+
+
+### Bug Fixes
+
+* **gux-list-item:** add outline-offset to prevent focus outline cutoff ([a8198a2](https://github.com/MyPureCloud/genesys-webcomponents/commit/a8198a23a35dcbe6e4612077f87dda051fe43798))
+
 ## [4.0.0-beta.27](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.26...v4.0.0-beta.27) (2023-09-19)
 
 
