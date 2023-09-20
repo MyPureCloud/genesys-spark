@@ -32,7 +32,7 @@ import componentResources from './i18n/en.json';
  * @slot help - Optional slot for help message
  */
 @Component({
-  styleUrl: 'gux-form-field-time-picker.less',
+  styleUrl: 'gux-form-field-time-picker.scss',
   tag: 'gux-form-field-time-picker',
   shadow: true
 })
