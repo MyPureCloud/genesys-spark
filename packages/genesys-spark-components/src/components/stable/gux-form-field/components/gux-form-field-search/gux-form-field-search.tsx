@@ -40,7 +40,7 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot help - Optional slot for help message
  */
 @Component({
-  styleUrl: 'gux-form-field-search.less',
+  styleUrl: 'gux-form-field-search.scss',
   tag: 'gux-form-field-search',
   shadow: true
 })
