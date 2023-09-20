@@ -12,8 +12,11 @@
 @import '~genesys-spark-tokens/dist/css/gse-ui-navigation.css';
 @import '~genesys-spark-tokens/dist/css/gse-ui-searchAndFilter.css';
 @import '~genesys-spark-tokens/dist/css/gse-ui.css';
+@import '~genesys-spark-tokens/dist/css/gse-core.css';
 @import 'typography.scss';
 @import 'focus.scss';
+@import 'style-reset-typography.scss';
+@import 'style-reset-focusable.scss';
 @import '../components/stable/gux-button-multi/gux-button-multi.light.scss';
 @import '../components/stable/gux-form-field/gux-form-field.light.scss';
 @import '../components/stable/gux-table/gux-table.light.scss';

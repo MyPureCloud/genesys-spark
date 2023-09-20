@@ -1,6 +1,5 @@
 @import (reference) './mixins.less';
 @import (reference) './focus.less';
-@import url('roboto.less');
 
 /*
  * Typography styles and mixins.
@@ -11,7 +10,6 @@
 
 /* Base typography */
 
-body,
 .body-font {
   .base-font();
 
@@ -26,7 +24,6 @@ body,
 
 /* Headings */
 
-h1,
 .h1 {
   .light-font();
 
@@ -34,7 +31,6 @@ h1,
   line-height: 32px;
 }
 
-h2,
 .h2 {
   .light-font();
 
@@ -42,7 +38,6 @@ h2,
   line-height: 24px;
 }
 
-h3,
 .h3 {
   .bold-font();
 
@@ -50,25 +45,13 @@ h3,
   line-height: 20px;
 }
 
-h4,
 .h4,
-h5,
 .h5,
-h6,
 .h6 {
   .base-font();
 
   font-size: 14px;
   line-height: 20px;
-}
-
-/* Anchor */
-a {
-  .gux-anchor();
-}
-
-table a {
-  .gux-anchor-table();
 }
 
 /* Custom Styles */
@@ -143,7 +126,7 @@ table a {
 /* Helpers */
 
 .base-font() {
-  font-family: Roboto, sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
 }
 

@@ -106,7 +106,7 @@ var sparkLogo = `
       .cls-1{fill:#f0522a;}
       .cls-2,
       .cls-3{fill:#444a52;}
-      .cls-3{font-size:6.5px;font-family:Roboto-Regular, Roboto;}
+      .cls-3{font-size:6.5px;font-family:'Noto Sans', sans-serif;}
       .cls-4{letter-spacing:-0.02em;}
     </style>
 
@@ -119,7 +119,7 @@ var sparkLogo = `
       <path d="M55.77,11H52.35l-.6,1.93H49.08l3.8-10.35h2.35l3.82,10.35H56.37ZM52.94,9h2.23L54.05,5.44Z" class="cls-2"></path>
       <path d="M69.47,9.23H68.12v3.66H65.63V2.54H69.7a4.57,4.57,0,0,1,2.88.81,2.79,2.79,0,0,1,1,2.31,3.37,3.37,0,0,1-.44,1.79A3,3,0,0,1,71.81,8.6L74,12.78v.11H71.3ZM68.12,7.31H69.7a1.41,1.41,0,0,0,1.07-.38,1.43,1.43,0,0,0,.36-1,1.45,1.45,0,0,0-.36-1,1.39,1.39,0,0,0-1.07-.38H68.12Z" class="cls-2"></path>
       <path d="M84.47,9l-1,1.12v2.73H81V2.54h2.5V7.1l.86-1.31,2.24-3.25h3.08l-3.5,4.58,3.5,5.77h-3Z" class="cls-2"></path>
-      <text style="font-family: 'Roboto';" transform="translate(20.58 22.22)" class="cls-3">Web Component Lib<tspan y="0" x="58.53" class="cls-4">r</tspan><tspan y="0" x="60.6">ary</tspan></text>
+      <text style="font-family: sans-serif;" transform="translate(20.58 22.22)" class="cls-3">Web Component Lib<tspan y="0" x="58.53" class="cls-4">r</tspan><tspan y="0" x="60.6">ary</tspan></text>
     </g>
   </g>
 </svg>`;

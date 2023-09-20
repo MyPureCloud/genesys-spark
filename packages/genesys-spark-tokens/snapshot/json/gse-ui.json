@@ -74,7 +74,7 @@
     }
   },
   "tag": {
-    "border_radius": "100%",
+    "border_radius": "16px",
     "default": {
       "background_color": "#23395d",
       "foreground_color": "#ffffff"
@@ -106,7 +106,8 @@
     "text": {
       "fontFamily": "Noto Sans",
       "lineHeight": "18px",
-      "fontSize": "12px"
+      "fontSize": "12px",
+      "fontWeight": 600
     },
     "padding": "0 12px",
     "removable": {

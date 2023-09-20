@@ -34,8 +34,14 @@ export const config: Config = {
           { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
           { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' },
           {
-            src: ['src/style/typography.less', 'src/style/focus.less'],
-            dest: 'dist/genesys-webcomponents/less'
+            src: [
+              'src/style/global.scss',
+              'src/style/typography.scss',
+              'src/style/focus.scss',
+              'src/style/style-reset-typography.scss',
+              'src/style/style-reset-focusable.scss'
+            ],
+            dest: 'dist/genesys-webcomponents/scss'
           }
         ],
         verbose: true

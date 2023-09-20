@@ -1,0 +1,23 @@
+/* Anchor */
+
+a {
+  @include gux-anchor;
+}
+
+table a {
+  @include gux-anchor-table;
+}
+
+/* Button */
+button {
+  &:focus-visible {
+    @include gux-focus-ring;
+  }
+}
+
+/* Input */
+input {
+  &:focus-visible {
+    @include gux-focus-ring;
+  }
+}
