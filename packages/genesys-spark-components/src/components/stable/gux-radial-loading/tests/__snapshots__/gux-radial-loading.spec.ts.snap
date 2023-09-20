@@ -3,8 +3,12 @@
 exports[`gux-radial-loading #render should render component as expected (1) 1`] = `
 <gux-radial-loading screenreader-text="Loading">
   <mock:shadow-root>
-    <div aria-label="Loading" class="gux-modal gux-spinner-container" role="progressbar">
-      <div class="gux-spin-circle" role="presentation"></div>
+    <div aria-label="Loading" class="gux-modal" role="progressbar">
+      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
+        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
+        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
+        <circle class="gux-dynamic-circle-mask" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
+      </svg>
     </div>
   </mock:shadow-root>
 </gux-radial-loading>
@@ -13,8 +17,12 @@ exports[`gux-radial-loading #render should render component as expected (1) 1`] 
 exports[`gux-radial-loading #render should render component as expected (2) 1`] = `
 <gux-radial-loading context="modal" screenreader-text="Loading">
   <mock:shadow-root>
-    <div aria-label="Loading" class="gux-modal gux-spinner-container" role="progressbar">
-      <div class="gux-spin-circle" role="presentation"></div>
+    <div aria-label="Loading" class="gux-modal" role="progressbar">
+      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
+        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
+        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
+        <circle class="gux-dynamic-circle-mask" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
+      </svg>
     </div>
   </mock:shadow-root>
 </gux-radial-loading>
@@ -23,8 +31,12 @@ exports[`gux-radial-loading #render should render component as expected (2) 1`] 
 exports[`gux-radial-loading #render should render component as expected (3) 1`] = `
 <gux-radial-loading context="full-page" screenreader-text="Loading">
   <mock:shadow-root>
-    <div aria-label="Loading" class="gux-full-page gux-spinner-container" role="progressbar">
-      <div class="gux-spin-circle" role="presentation"></div>
+    <div aria-label="Loading" class="gux-full-page" role="progressbar">
+      <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
+        <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
+        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
+        <circle class="gux-dynamic-circle-mask" cx="50%" cy="50%" r="22" stroke-linecap="round"></circle>
+      </svg>
     </div>
   </mock:shadow-root>
 </gux-radial-loading>
@@ -33,8 +45,12 @@ exports[`gux-radial-loading #render should render component as expected (3) 1`] 
 exports[`gux-radial-loading #render should render component as expected (4) 1`] = `
 <gux-radial-loading context="input" screenreader-text="Loading">
   <mock:shadow-root>
-    <div aria-label="Loading" class="gux-input gux-spinner-container" role="progressbar">
-      <div class="gux-spin-circle" role="presentation"></div>
+    <div aria-label="Loading" class="gux-input" role="progressbar">
+      <svg class="gux-svg-container" role="presentation" viewBox="0 0 16 16">
+        <circle class="gux-static-circle" cx="50%" cy="50%" r="7"></circle>
+        <circle class="gux-dynamic-circle" cx="50%" cy="50%" r="7" stroke-linecap="round"></circle>
+        <circle class="gux-dynamic-circle-mask" cx="50%" cy="50%" r="7" stroke-linecap="round"></circle>
+      </svg>
     </div>
   </mock:shadow-root>
 </gux-radial-loading>

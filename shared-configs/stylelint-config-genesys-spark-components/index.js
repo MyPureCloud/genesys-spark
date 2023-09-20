@@ -3,9 +3,14 @@ module.exports = {
     'stylelint-config-standard',
     'stylelint-config-recess-order',
     'postcss-less',
+    'postcss-scss',
     'postcss-html'
   ],
   overrides: [
+    {
+      files: ['**/*.scss'],
+      customSyntax: 'postcss-scss'
+    },
     {
       files: ['**/*.less'],
       customSyntax: 'postcss-less'
