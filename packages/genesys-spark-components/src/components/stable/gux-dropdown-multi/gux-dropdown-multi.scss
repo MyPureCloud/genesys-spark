@@ -79,6 +79,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     min-width: 0;
+    height: 60%; // keeps input centered while still visible
 
     .gux-filter,
     .gux-selected-option,
