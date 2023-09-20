@@ -230,6 +230,13 @@ The `scale` property has been removed. The displayed percentage will now always 
 
 - The deprecated attribute `filterable` has now been completely removed in favor of `filter-type`.
 
+```diff
+- <gux-dropdown filterable>
++ <gux-dropdown filter-type="starts-with">
+    ...
+  </gux-dropdown>
+```
+
 ### gux-tab-panel
 
 This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
