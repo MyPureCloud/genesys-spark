@@ -78,13 +78,13 @@
     },
     "icon": "32px",
     "small": {
-      "width": "420 px"
+      "width": "420px"
     },
     "medium": {
-      "width": "680 px"
+      "width": "680px"
     },
     "large": {
-      "width": "800 px"
+      "width": "800px"
     },
     "button_bar": {
       "gap": "8px"

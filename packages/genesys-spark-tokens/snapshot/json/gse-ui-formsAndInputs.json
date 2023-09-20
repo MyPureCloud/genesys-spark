@@ -310,7 +310,10 @@
       "background_color": "#4856CB",
       "foreground_color": "#ffffff",
       "gap": "8px",
-      "padding": "10px 16px"
+      "padding": "10px 16px",
+      "arrow": {
+        "padding": "8px"
+      }
     },
     "background_color": "#ffffff",
     "date": {
@@ -636,5 +639,20 @@
       "opacity": 0.5
     },
     "gap": "4px"
+  },
+  "month_picker": {
+    "calendar_states": {
+      "default_color": "#626e84",
+      "hover_color": "#3742A2",
+      "active_color": "#4856CB",
+      "disabled_color": "#626e8480",
+      "focus": {
+        "border": {
+          "color": "#7B88F7",
+          "width": "2px",
+          "style": "solid"
+        }
+      }
+    }
   }
 }
