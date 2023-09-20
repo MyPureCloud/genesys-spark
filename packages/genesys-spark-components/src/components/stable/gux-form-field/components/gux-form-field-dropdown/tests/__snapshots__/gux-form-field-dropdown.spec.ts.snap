@@ -28,7 +28,7 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-dropdown-multi-beta>
+  <gux-dropdown-multi>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -87,7 +87,7 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
         Cat
       </gux-option-multi>
     </gux-listbox-multi>
-  </gux-dropdown-multi-beta>
+  </gux-dropdown-multi>
   <label id="gux-label-i" slot="label">
     Default
   </label>
@@ -207,7 +207,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-dropdown-multi-beta>
+  <gux-dropdown-multi>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -266,7 +266,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
         Cat
       </gux-option-multi>
     </gux-listbox-multi>
-  </gux-dropdown-multi-beta>
+  </gux-dropdown-multi>
   <label id="gux-label-i" slot="label">
     Default
   </label>
@@ -298,11 +298,11 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-dropdown-multi-beta disabled="">
+  <gux-dropdown-multi disabled="">
     <mock:shadow-root>
       <div class="gux-dropdown-container">
         <gux-popup disabled="">
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-disabled gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
               <div class="gux-field-content">
                 <div class="gux-placeholder">
@@ -357,7 +357,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
         Cat
       </gux-option-multi>
     </gux-listbox-multi>
-  </gux-dropdown-multi-beta>
+  </gux-dropdown-multi>
   <label id="gux-label-i" slot="label">
     Default
   </label>
@@ -392,7 +392,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-dropdown-multi-beta required="">
+  <gux-dropdown-multi required="">
     <mock:shadow-root>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -451,7 +451,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
         Cat
       </gux-option-multi>
     </gux-listbox-multi>
-  </gux-dropdown-multi-beta>
+  </gux-dropdown-multi>
   <label id="gux-label-i" slot="label">
     Default
   </label>
@@ -483,7 +483,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-dropdown-multi-beta>
+  <gux-dropdown-multi>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -542,7 +542,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
         Cat
       </gux-option-multi>
     </gux-listbox-multi>
-  </gux-dropdown-multi-beta>
+  </gux-dropdown-multi>
   <label id="gux-label-i" slot="label">
     Default
   </label>
@@ -574,7 +574,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-dropdown-multi-beta>
+  <gux-dropdown-multi>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -633,7 +633,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
         Cat
       </gux-option-multi>
     </gux-listbox-multi>
-  </gux-dropdown-multi-beta>
+  </gux-dropdown-multi>
   <label id="gux-label-i" slot="label">
     Default
   </label>
@@ -665,7 +665,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-dropdown-multi-beta>
+  <gux-dropdown-multi>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -724,7 +724,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
         Cat
       </gux-option-multi>
     </gux-listbox-multi>
-  </gux-dropdown-multi-beta>
+  </gux-dropdown-multi>
   <label id="gux-label-i" slot="label">
     Default
   </label>
@@ -756,7 +756,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
       </div>
     </fieldset>
   </mock:shadow-root>
-  <gux-dropdown-multi-beta>
+  <gux-dropdown-multi>
     <mock:shadow-root>
       <div class="gux-dropdown-container">
         <gux-popup>
@@ -815,7 +815,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
         Cat
       </gux-option-multi>
     </gux-listbox-multi>
-  </gux-dropdown-multi-beta>
+  </gux-dropdown-multi>
   <label id="gux-label-i" slot="label">
     Default
   </label>

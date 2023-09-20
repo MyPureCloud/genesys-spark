@@ -39,9 +39,7 @@ import componentResources from './i18n/en.json';
 export class GuxFormFieldDropdown {
   private getI18nValue: GetI18nValue;
   private listboxElement: HTMLGuxListboxElement | HTMLGuxListboxMultiElement;
-  private dropdownElement:
-    | HTMLGuxDropdownElement
-    | HTMLGuxDropdownMultiBetaElement;
+  private dropdownElement: HTMLGuxDropdownElement | HTMLGuxDropdownMultiElement;
   private label: HTMLLabelElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
@@ -71,7 +69,7 @@ export class GuxFormFieldDropdown {
   watchValue(hasError: boolean): void {
     const dropdownSlot =
       this.root.querySelector('gux-dropdown') ||
-      this.root.querySelector('gux-dropdown-multi-beta');
+      this.root.querySelector('gux-dropdown-multi');
     if (dropdownSlot) {
       dropdownSlot.hasError = hasError;
     }
@@ -171,7 +169,7 @@ export class GuxFormFieldDropdown {
   private setInput(): void {
     this.dropdownElement =
       this.root.querySelector('gux-dropdown') ||
-      this.root.querySelector('gux-dropdown-multi-beta');
+      this.root.querySelector('gux-dropdown-multi');
     this.listboxElement =
       this.root.querySelector('gux-listbox') ||
       this.root.querySelector('gux-listbox-multi');

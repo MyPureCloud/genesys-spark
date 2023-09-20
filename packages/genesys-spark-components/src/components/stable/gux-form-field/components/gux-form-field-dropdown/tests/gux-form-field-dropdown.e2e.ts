@@ -163,13 +163,13 @@ describe('gux-form-field-dropdown', () => {
         ].forEach((componentAttribute, index) => {
           const html = `
             <gux-form-field-dropdown ${componentAttribute}>
-              <gux-dropdown-multi-beta>
+              <gux-dropdown-multi>
                 <gux-listbox-multi>
                   <gux-option-multi value="a" disabled>Ant</gux-option-multi>
                   <gux-option-multi value="b">Bat</gux-option-multi>
                   <gux-option-multi value="c">Cat</gux-option-multi>
                 </gux-listbox-multi>
-              </gux-dropdown-multi-beta>
+              </gux-dropdown-multi>
               <label slot="label">Default</label>
               <span slot="error">This is an error message</span>
             </gux-form-field-dropdown>
@@ -189,9 +189,7 @@ describe('gux-form-field-dropdown', () => {
           it(`should show error style`, async () => {
             const page = await newNonrandomE2EPage({ html });
             const element = await page.find('gux-form-field-dropdown');
-            const dropdownElement = await element.find(
-              'gux-dropdown-multi-beta'
-            );
+            const dropdownElement = await element.find('gux-dropdown-multi');
             const popupElement = await dropdownElement.find('pierce/gux-popup');
             const targetElement = await popupElement.find(
               '.gux-target-container-collapsed'
@@ -209,13 +207,13 @@ describe('gux-form-field-dropdown', () => {
       ['', 'disabled', 'required'].forEach((inputAttribute, index) => {
         const html = `
           <gux-form-field-dropdown>
-            <gux-dropdown-multi-beta ${inputAttribute}>
+            <gux-dropdown-multi ${inputAttribute}>
               <gux-listbox-multi>
                 <gux-option-multi value="a" disabled>Ant</gux-option-multi>
                 <gux-option-multi value="b">Bat</gux-option-multi>
                 <gux-option-multi value="c">Cat</gux-option-multi>
               </gux-listbox-multi>
-            </gux-dropdown-multi-beta>
+            </gux-dropdown-multi>
             <label slot="label">Default</label>
           </gux-form-field-dropdown>
         `;
@@ -234,7 +232,7 @@ describe('gux-form-field-dropdown', () => {
         it(`should not show error style`, async () => {
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-form-field-dropdown');
-          const dropdownElement = await element.find('gux-dropdown-multi-beta');
+          const dropdownElement = await element.find('gux-dropdown-multi');
           const popupElement = await dropdownElement.find('pierce/gux-popup');
           const targetElement = await popupElement.find(
             '.gux-target-container-collapsed'

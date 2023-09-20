@@ -10,7 +10,7 @@ export function onInputDisabledStateChange(
     | HTMLSelectElement
     | HTMLTextAreaElement
     | HTMLGuxDropdownElement
-    | HTMLGuxDropdownMultiBetaElement,
+    | HTMLGuxDropdownMultiElement,
   callback: (disabled: boolean) => void
 ): MutationObserver {
   const fieldSet = element.closest('fieldset');

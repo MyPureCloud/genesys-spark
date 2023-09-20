@@ -8,6 +8,7 @@ export function calculateInputDisabledState(
     | HTMLSelectElement
     | HTMLTextAreaElement
     | HTMLGuxDropdownElement
+    | HTMLGuxDropdownMultiElement
 ): boolean {
   const fieldSet = element.closest('fieldset');
 
