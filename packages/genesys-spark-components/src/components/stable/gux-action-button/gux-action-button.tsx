@@ -15,15 +15,19 @@ import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import { trackComponent } from '@utils/tracking/usage';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import defaultResources from './i18n/en.json';
 
 import {
   GuxActionButtonAccent,
   GuxActionButtonType,
   getGuxActionButtonAccent
 } from './gux-action-button.types';
-import defaultResources from './i18n/en.json';
 
+/**
+ * @slot title - slot for icon and button text
+ */
 @Component({
   styleUrl: 'gux-action-button.scss',
   tag: 'gux-action-button',
@@ -60,12 +64,6 @@ export class GuxActionButton {
    */
   @Event()
   actionClick: EventEmitter;
-
-  /**
-   * The component text.
-   */
-  @Prop()
-  text: string;
 
   /**
    * Disables the action button.
@@ -201,7 +199,7 @@ export class GuxActionButton {
                 disabled={this.disabled}
                 onClick={() => this.onActionClick()}
               >
-                {this.text}
+                <slot name="title" />
               </button>
             </gux-button-slot>
 
@@ -216,9 +214,7 @@ export class GuxActionButton {
                 onMouseUp={() => this.toggle()}
                 aria-haspopup="true"
                 aria-expanded={this.isOpen.toString()}
-                aria-label={this.i18n('actionButtonDropdown', {
-                  buttonTitle: this.text
-                })}
+                aria-label={this.i18n('moreOptions')}
               >
                 <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
               </button>

@@ -1,16 +1,4 @@
 # gux-buttom-multi
-An action button. In order to use this element toggle children must be slotted in.
-
-Example usage
-```html
-  <gux-button-multi text="Primary" accent="primary" is-open="true">
-    <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
-    <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
-    <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
-    <gux-list-divider></gux-list-divider>
-    <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
-  </gux-button-multi>
-```
 
 <!-- Auto Generated Below -->
 

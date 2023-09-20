@@ -1,6 +1,6 @@
 {
   "gux-action-button": {
-    "actionButtonDropdown": "Dropdown for {buttonTitle}"
+    "moreOptions": "More options"
   },
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Search"

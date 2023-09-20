@@ -254,6 +254,19 @@ The `scale` property has been removed. The displayed percentage will now always 
 
 This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
 
+### gux-action-button
+
+The `title` prop has been removed. Instead, slot in a `span` or `div` with a slot name of `title`.
+
+```diff
+- <gux-action-button title="Primary" accent="primary" is-open="true">
++ <gux-action-button accent="primary" is-open="true">
++   <span slot="title">Primary</span>
+    <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+  </gux-action-button>
+```
+
 ### gux-button-multi
 
 The `title` prop has been removed. Instead, slot in a `span` or `div` with a slot name of `title`.

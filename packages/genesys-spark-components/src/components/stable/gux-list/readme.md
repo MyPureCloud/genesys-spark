@@ -1,28 +1,5 @@
 # gux-list
 
-A list element. In order to use this element list contents must be slotted in.
-
-Example usage
-
-```html
-<gux-action-list>
-  <gux-action-list-item value="test" text="test1" />
-  <gux-action-list-divider />
-  <gux-action-list-item value="test" text="test2" />
-  <gux-action-list-item value="test" text="test3" />
-</gux-action-list>
-```
-
-Example with slotting
-
-```html
-<gux-action-list>
-  <gux-action-list-item
-    ><span>⌘</span><gux-text-highlight text="test"
-  /></gux-action-list-item>
-</gux-action-list>
-```
-
 <!-- Auto Generated Below -->
 
 
