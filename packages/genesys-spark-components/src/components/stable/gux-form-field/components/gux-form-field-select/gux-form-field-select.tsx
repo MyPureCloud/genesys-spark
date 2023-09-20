@@ -28,7 +28,7 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot help - Optional slot for help message
  */
 @Component({
-  styleUrl: 'gux-form-field-select.less',
+  styleUrl: 'gux-form-field-select.scss',
   tag: 'gux-form-field-select',
   shadow: true
 })
