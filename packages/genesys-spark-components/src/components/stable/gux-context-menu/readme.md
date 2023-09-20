@@ -5,9 +5,10 @@
 
 ## Properties
 
-| Property           | Attribute           | Description                                                          | Type     | Default |
-| ------------------ | ------------------- | -------------------------------------------------------------------- | -------- | ------- |
-| `screenreaderText` | `screenreader-text` | Screenreader text for context menu button defaults to "context menu" | `string` | `''`    |
+| Property           | Attribute           | Description                                                          | Type      | Default |
+| ------------------ | ------------------- | -------------------------------------------------------------------- | --------- | ------- |
+| `disabled`         | `disabled`          | Controls the disabled state of the internal button                   | `boolean` | `false` |
+| `screenreaderText` | `screenreader-text` | Screenreader text for context menu button defaults to "context menu" | `string`  | `''`    |
 
 
 ## Dependencies
