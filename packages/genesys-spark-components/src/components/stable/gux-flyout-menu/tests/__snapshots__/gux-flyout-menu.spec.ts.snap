@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-flyout-menu #render should render as expected 1`] = `
-<gux-flyout-menu-beta aria-haspopup="true" tabindex="0">
+<gux-flyout-menu aria-haspopup="true" tabindex="0">
   <mock:shadow-root>
     <span>
       <slot name="target"></slot>
@@ -231,5 +231,5 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
     </gux-submenu>
     <div class="gux-arrow" data-popper-arrow style="position: absolute;"></div>
   </gux-menu>
-</gux-flyout-menu-beta>
+</gux-flyout-menu>
 `;
