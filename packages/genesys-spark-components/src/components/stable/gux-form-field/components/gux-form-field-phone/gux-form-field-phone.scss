@@ -1,0 +1,16 @@
+@import '../../../../../style/typography.scss';
+@import '../../functional-components/gux-form-field-fieldset-container/gux-form-field-fieldset-container.scss';
+@import '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@import '../../functional-components/gux-form-field-legend-label/gux-form-field-legend-label.scss';
+
+@include GuxFormFieldFieldsetContainerStyle;
+@include GuxFormFieldErrorStyle;
+@include GuxFormFieldLegendLabelStyle;
+
+::slotted(label) {
+  @include gse-ui-formControl-label;
+}
+
+.gux-input-and-error-container {
+  flex-grow: 1;
+}

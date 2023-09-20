@@ -31,7 +31,7 @@ import { GuxFormFieldHelp } from '../../functional-components/gux-form-field-hel
  * @slot help - Optional slot for help message
  */
 @Component({
-  styleUrl: 'gux-form-field-phone.less',
+  styleUrl: 'gux-form-field-phone.scss',
   tag: 'gux-form-field-phone',
   shadow: true
 })

@@ -1,0 +1,14 @@
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin GuxFormFieldFieldsetContainerStyle {
+  .gux-form-field-fieldset-container {
+    display: flex;
+    min-width: 0;
+    padding: 0;
+    // Use CSS variable with fallback to allow apps to override these margins by setting the variable
+    // value as desired within their own selector scope. Apps should only override in order to provide
+    // design-spec spacing via some other means, such as `gap` in a CSS grid or Flexbox layout.
+    margin: var(--gux-form-field-fieldset-container-margin-top, 16px) 0
+      var(--gux-form-field-fieldset-container-margin-bottom, 16px) 0;
+    border: none;
+  }
+}
