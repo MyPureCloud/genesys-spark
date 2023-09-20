@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.104.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.104.0...v3.104.1) (2023-09-20)
+
+
+### Bug Fixes
+
+* **gux-table:** fix gux-table overflow issue in firefox ([2c0e641](https://github.com/MyPureCloud/genesys-webcomponents/commit/2c0e6417b7a948683abd6058dbdc30ded17e55a6))
+
 ## [3.104.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.103.0...v3.104.0) (2023-09-15)
 
 
