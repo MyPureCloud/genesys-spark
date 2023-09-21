@@ -39,6 +39,12 @@ export class GuxContextMenu {
   screenreaderText: string = '';
 
   /**
+   * Controls the disabled state of the internal button
+   */
+  @Prop()
+  disabled: boolean = false;
+
+  /**
    * Controls the visibility of the popover list
    */
   @State()
@@ -151,6 +157,7 @@ export class GuxContextMenu {
                 ref={el => (this.button = el)}
                 aria-haspopup="true"
                 aria-expanded={this.isOpen.toString()}
+                disabled={this.disabled}
               >
                 <gux-icon
                   icon-name="menu-kebab-vertical"
