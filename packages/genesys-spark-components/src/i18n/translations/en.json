@@ -888,7 +888,7 @@
     "disableNewTab": "Maximum number of tabs created has been reached"
   },
   "gux-action-button": {
-    "actionButtonDropdown": "Dropdown for {buttonTitle}"
+    "moreOptions": "More options"
   },
   "gux-advanced-dropdown": {
     "searchAria": "Search"
