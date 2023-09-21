@@ -11,24 +11,23 @@ gux-submenu {
     align-content: stretch;
     align-items: center;
     justify-content: flex-start;
-    width: (125px + 4px);
-    height: 32px;
-    padding: 0 12px 0 16px;
-    line-height: 32px;
-    color: #2e394c;
+    width: var(--gse-ui-flyoutMenu-width);
+    height: var(--gse-ui-menu-option-height);
+    padding: var(--gse-ui-menu-option-padding);
+    line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
+    color: var(--gse-ui-menu-option-label-foregroundColor);
     background-color: #fdfdfd;
 
     &:focus-within,
     &:hover {
-      color: #fdfdfd;
-      background-color: #2a60c8;
+      background-color: var(--gse-ui-menu-option-hover-backgroundColor);
     }
 
     .gux-submenu-button-text {
       flex: 1 1 auto;
       align-self: auto;
       order: 0;
-      margin-right: 12px;
+      margin-right: var(--gse-ui-menu-option-gap);
       overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -38,8 +37,8 @@ gux-submenu {
       flex: 0 0 auto;
       align-self: auto;
       order: 0;
-      width: 16px;
-      height: 16px;
+      width: var(--gse-ui-menu-option-startIcon-width);
+      height: var(--gse-ui-menu-option-startIcon-height);
     }
   }
 
@@ -48,13 +47,16 @@ gux-submenu {
     top: 0;
     left: 0;
     flex-direction: column;
-    padding: 8px 0;
+    padding: var(--gse-ui-menu-padding);
     margin: 0;
     visibility: hidden;
-    background-color: #fdfdfd;
-    border: 1px solid #b4bccb;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px fade(#202937, 24%);
+    background-color: var(--gse-ui-menu-backgroundColor);
+    border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
+      var(--gse-ui-menu-border-color);
+    border-radius: var(--gse-ui-menu-borderRadius);
+    box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+      var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
+      var(--gse-ui-menu-boxShadow-color);
 
     &.gux-shown {
       visibility: visible;

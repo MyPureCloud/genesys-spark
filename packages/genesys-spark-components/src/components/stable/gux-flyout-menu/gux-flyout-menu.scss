@@ -4,7 +4,7 @@
 // Style
 :host {
   z-index: var(--gux-zindex-popover);
-  color: #2e394c;
+  color: var(--gse-ui-menu-option-label-foregroundColor);
   cursor: default;
 }
 
@@ -18,7 +18,6 @@
 
 .gux-flyout-menu-content {
   display: none;
-  margin: 0;
 
   &.gux-shown {
     display: flex;

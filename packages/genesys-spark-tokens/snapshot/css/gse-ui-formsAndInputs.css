@@ -143,7 +143,6 @@
   --gse-ui-calendarMenu-header-foregroundColor: #ffffff;
   --gse-ui-calendarMenu-header-gap: 8px;
   --gse-ui-calendarMenu-header-padding: 10px 16px;
-  --gse-ui-calendarMenu-header-arrow-padding: 8px;
   --gse-ui-calendarMenu-backgroundColor: #ffffff;
   --gse-ui-calendarMenu-date-defaultText-fontFamily: Noto Sans;
   --gse-ui-calendarMenu-date-defaultText-lineHeight: 16px;
@@ -284,11 +283,4 @@
   --gse-ui-contextMenu-states-disabled-foregroundColor: #767c8d;
   --gse-ui-contextMenu-disabled-opacity: 0.5;
   --gse-ui-contextMenu-gap: 4px;
-  --gse-ui-monthPicker-calendarStates-defaultColor: #626e84;
-  --gse-ui-monthPicker-calendarStates-hoverColor: #3742a2;
-  --gse-ui-monthPicker-calendarStates-activeColor: #4856cb;
-  --gse-ui-monthPicker-calendarStates-disabledColor: #626e8480;
-  --gse-ui-monthPicker-calendarStates-focus-border-color: #7b88f7;
-  --gse-ui-monthPicker-calendarStates-focus-border-width: 2px;
-  --gse-ui-monthPicker-calendarStates-focus-border-style: solid;
 }

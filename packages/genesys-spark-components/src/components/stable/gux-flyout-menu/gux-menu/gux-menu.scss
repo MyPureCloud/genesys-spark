@@ -3,8 +3,12 @@ gux-menu {
   width: fit-content;
   padding: var(--gse-ui-flyoutMenu-padding);
   background-color: var(--gse-ui-flyoutMenu-backgroundColor);
-  border-radius: var(--gse-ui-flyoutMenu-borderRadius_);
-  box-shadow: 0 2px 4px rba(#202937, 24%);
+  border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
+    var(--gse-ui-menu-border-color);
+  border-radius: var(--gse-ui-menu-borderRadius);
+  box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+    var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
+    var(--gse-ui-menu-boxShadow-color);
 
   .gux-arrow,
   .gux-arrow::before {
