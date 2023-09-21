@@ -17,6 +17,13 @@ button {
   padding: 0 8px; // TODO: [COMUI-2290] missing token
 }
 
+button.gux-compact {
+  height: var(
+    --gse-ui-contextMenu-button-compact
+  ); // TODO: [COMUI-2290] name should be more specific
+  padding: 0 4px; // TODO: [COMUI-2290] missing token
+}
+
 button:hover:enabled {
   background-color: var(--gse-ui-contextMenu-states-hover-backgroundColor);
 
