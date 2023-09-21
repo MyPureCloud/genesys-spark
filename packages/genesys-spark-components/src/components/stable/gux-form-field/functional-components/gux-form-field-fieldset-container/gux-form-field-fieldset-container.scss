@@ -1,0 +1,10 @@
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin GuxFormFieldFieldsetContainerStyle {
+  .gux-form-field-fieldset-container {
+    display: flex;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
