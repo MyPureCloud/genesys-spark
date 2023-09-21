@@ -4,8 +4,8 @@
 }
 
 gux-icon {
-  width: 16px; // TODO: [COMUI-2290] missing token
-  height: 16px; // TODO: [COMUI-2290] missing token
+  width: var(--gse-ui-icon-size-sm); // TODO: [COMUI-2290] missing token
+  height: var(--gse-ui-icon-size-sm); // TODO: [COMUI-2290] missing token
   color: var(--gse-ui-contextMenu-states-default-foregroundColor);
 }
 
