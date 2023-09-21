@@ -71,18 +71,6 @@ module.exports = {
             return path.basename(absoluteFilename);
           },
           transform: generateComponentPage
-        },
-        {
-          from: '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons',
-          to: 'icons'
-        },
-        {
-          from: './webfonts',
-          to: 'webfonts'
-        },
-        {
-          from: '../../packages/genesys-spark-components/dist/genesys-webcomponents',
-          to: 'genesys-webcomponents'
         }
       ]
     })
