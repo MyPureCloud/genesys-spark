@@ -67,7 +67,7 @@
   </div>
   <div class="form-element">
     <gux-form-field-dropdown label-position="above">
-      <gux-dropdown-multi-beta
+      <gux-dropdown-multi
         #dropdownMulti
         filter-type="custom"
         id="countriesVisited"
@@ -85,7 +85,7 @@
             >{{ c.name }}</gux-option-multi
           >
         </gux-listbox-multi>
-      </gux-dropdown-multi-beta>
+      </gux-dropdown-multi>
       <label slot="label">Countries Visited</label>
       <span *ngIf="showRequiredErrorMessage('countriesVisited')" slot="error"
         >This field is required</span

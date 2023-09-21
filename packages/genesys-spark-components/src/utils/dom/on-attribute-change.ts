@@ -45,6 +45,7 @@ export function onRequiredChange(
     | HTMLSelectElement
     | HTMLTextAreaElement
     | HTMLGuxDropdownElement
+    | HTMLGuxDropdownMultiElement
     | HTMLGuxTimePickerElement
     | HTMLGuxPhoneInputBetaElement,
   callback: (disabled: boolean) => void

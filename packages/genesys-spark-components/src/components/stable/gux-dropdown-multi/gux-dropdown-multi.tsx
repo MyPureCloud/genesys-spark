@@ -13,24 +13,24 @@ import {
   Watch
 } from '@stencil/core';
 
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
-import { afterNextRender } from '../../../utils/dom/after-next-render';
-import { onInputDisabledStateChange } from '../../../utils/dom/on-input-disabled-state-change';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
+import { afterNextRender } from '@utils/dom/after-next-render';
+import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
 import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 
-import { getSearchOption } from '../../stable/gux-listbox/gux-listbox.service';
-import { GuxFilterTypes } from '../../stable/gux-dropdown/gux-dropdown.types';
+import { getSearchOption } from '../gux-listbox/gux-listbox.service';
+import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children
  */
 @Component({
-  styleUrl: 'gux-dropdown-multi.less',
-  tag: 'gux-dropdown-multi-beta',
+  styleUrl: 'gux-dropdown-multi.scss',
+  tag: 'gux-dropdown-multi',
   shadow: { delegatesFocus: true }
 })
 export class GuxDropdownMulti {
@@ -40,7 +40,7 @@ export class GuxDropdownMulti {
   private listboxElement: HTMLGuxListboxMultiElement;
 
   @Element()
-  private root: HTMLGuxDropdownMultiBetaElement;
+  private root: HTMLGuxDropdownMultiElement;
 
   @Prop({ mutable: true })
   value: string;
@@ -56,12 +56,6 @@ export class GuxDropdownMulti {
 
   @Prop()
   placeholder: string;
-
-  /**
-   * deprecated will be removed in v4 (COMUI-1369). Use filterType instead
-   */
-  @Prop()
-  filterable: boolean = false;
 
   /**
    * Override default filtering behavior
@@ -324,11 +318,7 @@ export class GuxDropdownMulti {
   }
 
   private isFilterable(): boolean {
-    return (
-      this.filterable ||
-      this.filterType === 'custom' ||
-      this.filterType === 'starts-with'
-    );
+    return this.filterType === 'custom' || this.filterType === 'starts-with';
   }
 
   private stopPropagationOfInternalFocusEvents(event: FocusEvent): void {
@@ -550,7 +540,8 @@ export class GuxDropdownMulti {
           'gux-target-container-collapsed': !(
             this.expanded && this.hasTextInput()
           ),
-          'gux-error': this.hasError
+          'gux-error': this.hasError,
+          'gux-disabled': this.disabled
         }}
         slot="target"
       >

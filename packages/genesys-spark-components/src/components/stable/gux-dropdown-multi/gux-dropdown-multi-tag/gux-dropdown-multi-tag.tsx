@@ -14,7 +14,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-dropdown-multi-tag.less',
+  styleUrl: 'gux-dropdown-multi-tag.scss',
   tag: 'gux-dropdown-multi-tag',
   shadow: true
 })

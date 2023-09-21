@@ -45,10 +45,11 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 ### There have been API changes in these components.
 
-| V3 tag name      | V4 tag name | Migration Guide    |
-| ---------------- | ----------- | ------------------ |
-| `gux-badge-beta` | `gux-badge` | [link](#gux-badge) |
-| `gux-tag-beta`   | `gux-tag`   | [link](#gux-tag)   |
+| V3 tag name               | V4 tag name          | Migration Guide             |
+| ------------------------- | -------------------- | --------------------------- |
+| `gux-badge-beta`          | `gux-badge`          | [link](#gux-badge)          |
+| `gux-tag-beta`            | `gux-tag`            | [link](#gux-tag)            |
+| `gux-dropdown-multi-beta` | `gux-dropdown-multi` | [link](#gux-dropdown-multi) |
 
 #### gux-badge
 
@@ -100,6 +101,17 @@ A `min-width` of 280px has been applied to the component.
 #### gux-popover-list
 
 An `is-open` prop has been added to control showing and hiding the component. This property should now be used instead of the component's `hidden` global attribute. Note the different context of the new property and old attribute so `hidden="true"` will become `is-open="false"` and vice-versa.
+
+#### gux-dropdown-multi
+
+- The deprecated attribute `filterable` has now been completely removed in favor of `filter-type`.
+
+```diff
+- <gux-dropdown-multi-beta filterable>
++ <gux-dropdown-multi filter-type="starts-with">
+    ...
+  </gux-dropdown-multi>
+```
 
 ## V3 Stable Components Archived to Legacy in V4
 
