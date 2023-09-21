@@ -1,4 +1,4 @@
-# gux-switch
+# gux-switch-legacy
 
 ## Native Events
 

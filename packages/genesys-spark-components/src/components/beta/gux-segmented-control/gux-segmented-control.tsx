@@ -9,37 +9,34 @@ import {
   State
 } from '@stencil/core';
 
-import { GuxSwitchAllowedLayouts } from './gux-switch.types';
-
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
 import { trackComponent } from '@utils/tracking/usage';
 
 /**
- * @slot - list of gux-switch-item elements
+ * @slot - list of gux-segmented-control-item elements
  */
 @Component({
-  styleUrl: 'gux-switch.scss',
-  tag: 'gux-switch',
+  styleUrl: 'gux-segmented-control.scss',
+  tag: 'gux-segmented-control-beta',
   shadow: true
 })
-export class GuxSwitch {
+export class GuxSegmentedControl {
   @Element()
   root: HTMLElement;
 
   @Prop({ mutable: true })
   value: string;
 
-  @Prop()
-  layout: GuxSwitchAllowedLayouts = 'default';
-
   @State()
-  switchItems: HTMLGuxSwitchItemElement[] = [];
+  items: HTMLGuxSegmentedControlItemElement[] = [];
 
   @Listen('click')
   onClick(e: MouseEvent): void {
     e.stopPropagation();
 
-    const switchItem = (e.target as HTMLElement).closest('gux-switch-item');
+    const switchItem = (e.target as HTMLElement).closest(
+      'gux-segmented-control-item'
+    );
 
     if (switchItem && this.value !== switchItem.value) {
       this.value = switchItem.value;
@@ -50,24 +47,24 @@ export class GuxSwitch {
   }
 
   private slotChanged(): void {
-    this.switchItems = Array.from(
+    this.items = Array.from(
       this.root.children
-    ) as HTMLGuxSwitchItemElement[];
+    ) as HTMLGuxSegmentedControlItemElement[];
   }
 
   componentWillLoad(): void {
-    trackComponent(this.root, { variant: this.layout });
+    trackComponent(this.root);
   }
 
   componentWillRender(): void {
-    this.switchItems.forEach(switchItem => {
+    this.items.forEach(switchItem => {
       switchItem.selected = switchItem.value === this.value;
     });
   }
 
   render(): JSX.Element {
     return (
-      <Host role="group" class={`gux-${this.layout}`}>
+      <Host role="group">
         <slot onSlotchange={this.slotChanged.bind(this)} />
       </Host>
     ) as JSX.Element;
