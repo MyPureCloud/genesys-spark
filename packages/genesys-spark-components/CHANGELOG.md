@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.104.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.104.1...v3.104.2) (2023-09-21)
+
+
+### Bug Fixes
+
+* **gux-timezone-picker:** don't duplicate explanatory text for time zone defaults ([50e36b7](https://github.com/MyPureCloud/genesys-webcomponents/commit/50e36b7e4336549af4cf6321aed034a0ed1a6ceb))
+
 ### [3.104.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.104.0...v3.104.1) (2023-09-20)
 
 
