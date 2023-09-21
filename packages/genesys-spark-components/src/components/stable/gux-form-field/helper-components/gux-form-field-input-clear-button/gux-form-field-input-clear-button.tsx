@@ -7,7 +7,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import translationResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-form-field-input-clear-button.less',
+  styleUrl: 'gux-form-field-input-clear-button.scss',
   tag: 'gux-form-field-input-clear-button',
   shadow: { delegatesFocus: true }
 })
