@@ -173,12 +173,12 @@ In v4, developers who want the component to have a margin similar to v3 can add 
 Below are the components where the internal margins have been removed for v4:
 
 1. gux-form-field-color
-1. gux-form-field-number
-1. gux-form-field-range
-1. gux-form-field-search
-1. gux-form-field-select
-1. gux-form-field-text-like
-1. gux-form-field-textarea
+2. gux-form-field-number
+3. gux-form-field-range
+4. gux-form-field-search
+5. gux-form-field-select
+6. gux-form-field-text-like
+7. gux-form-field-textarea
 
 ### gux-icon
 
@@ -237,6 +237,17 @@ The `scale` property has been removed. The displayed percentage will now always 
 ```diff
 - <gux-radial-progress scale="2" screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
 + <gux-radial-progress screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
+```
+
+### gux-dropdown
+
+- The deprecated attribute `filterable` has now been completely removed in favor of `filter-type`.
+
+```diff
+- <gux-dropdown filterable>
++ <gux-dropdown filter-type="starts-with">
+    ...
+  </gux-dropdown>
 ```
 
 ### gux-tab-panel

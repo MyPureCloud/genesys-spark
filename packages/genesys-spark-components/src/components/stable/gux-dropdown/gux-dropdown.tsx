@@ -12,12 +12,12 @@ import {
   Watch
 } from '@stencil/core';
 
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
-import { calculateInputDisabledState } from '../../../utils/dom/calculate-input-disabled-state';
-import { onInputDisabledStateChange } from '../../../utils/dom/on-input-disabled-state-change';
-import { afterNextRender } from '../../../utils/dom/after-next-render';
+import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
+import { afterNextRender } from '@utils/dom/after-next-render';
 import { trackComponent } from '@utils/tracking/usage';
 import { OnMutation } from '@utils/decorator/on-mutation';
 
@@ -42,7 +42,7 @@ import { GuxFilterTypes } from './gux-dropdown.types';
  * @slot - for a gux-listbox containing ValidDropdownOption children
  */
 @Component({
-  styleUrl: 'gux-dropdown.less',
+  styleUrl: 'gux-dropdown.scss',
   tag: 'gux-dropdown',
   shadow: { delegatesFocus: true }
 })
@@ -70,12 +70,6 @@ export class GuxDropdown {
 
   @Prop()
   placeholder: string;
-
-  /**
-   * deprecated will be removed in v4 (COMUI-1369). Use filterType instead
-   */
-  @Prop()
-  filterable: boolean = false;
 
   @Prop()
   filterType: GuxFilterTypes = 'none';
@@ -282,11 +276,7 @@ export class GuxDropdown {
   }
 
   private isFilterable() {
-    return (
-      this.filterable ||
-      this.filterType === 'starts-with' ||
-      this.filterType === 'custom'
-    );
+    return this.filterType === 'starts-with' || this.filterType === 'custom';
   }
 
   get optionElements(): Array<ListboxOptionElement> {
@@ -494,7 +484,8 @@ export class GuxDropdown {
           'gux-target-container-collapsed': !(
             this.expanded && this.isFilterable()
           ),
-          'gux-error': this.hasError
+          'gux-error': this.hasError,
+          'gux-disabled': this.disabled
         }}
         slot="target"
       >
@@ -517,7 +508,7 @@ export class GuxDropdown {
               'gux-expand-icon': true
             }}
             screenreader-text={this.i18n('dropdown')}
-            iconName="chevron-small-down"
+            iconName={this.expanded ? 'chevron-small-up' : 'chevron-small-down'}
           ></gux-icon>
         </button>
       </div>
