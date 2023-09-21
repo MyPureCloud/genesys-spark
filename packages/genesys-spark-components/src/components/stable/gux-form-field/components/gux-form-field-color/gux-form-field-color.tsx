@@ -29,7 +29,7 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot help - Optional slot for help message
  */
 @Component({
-  styleUrl: 'gux-form-field-color.less',
+  styleUrl: 'gux-form-field-color.scss',
   tag: 'gux-form-field-color',
   shadow: true
 })
