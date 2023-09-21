@@ -32,7 +32,7 @@ import componentResources from './i18n/en.json';
  * @slot help - Optional slot for help message
  */
 @Component({
-  styleUrl: 'gux-form-field-dropdown.less',
+  styleUrl: 'gux-form-field-dropdown.scss',
   tag: 'gux-form-field-dropdown',
   shadow: true
 })
