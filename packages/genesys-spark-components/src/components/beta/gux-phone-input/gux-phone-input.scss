@@ -1,5 +1,4 @@
-@import (reference) '../../../style/focus.less';
-@import (reference) '../../../style/typography.less';
+@use '../../../style/focus';
 
 :host {
   display: block;
@@ -46,7 +45,7 @@
   }
 
   &:focus-within {
-    .gux-focus-ring();
+    @include focus.gux-focus-ring;
   }
 }
 
@@ -124,7 +123,7 @@
   outline: inherit;
 
   &:focus-visible {
-    .gux-focus-ring();
+    @include focus.gux-focus-ring;
   }
 }
 

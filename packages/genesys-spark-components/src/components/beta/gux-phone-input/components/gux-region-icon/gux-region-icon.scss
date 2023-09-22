@@ -1,0 +1,19 @@
+@use 'sass:string';
+@use './sprite-utils/generate-sprites.scss';
+
+@mixin gux-sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    $sprite-name-lower-case: string.to-lower-case(#{$sprite-name});
+
+    .gux-flag-#{$sprite-name-lower-case} {
+      display: inline-block;
+      @include generate-sprites.sprite-position($sprite);
+      @include generate-sprites.sprite-width($sprite);
+      @include generate-sprites.sprite-height($sprite);
+      // @include generate-sprites.sprite-image($sprite);
+    }
+  }
+}
+
+@include gux-sprites(generate-sprites.$spritesheet-sprites);
