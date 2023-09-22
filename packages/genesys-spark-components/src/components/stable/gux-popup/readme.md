@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      | Default |
-| ---------- | ---------- | ----------- | --------- | ------- |
-| `disabled` | `disabled` |             | `boolean` | `false` |
-| `expanded` | `expanded` |             | `boolean` | `false` |
+| Property             | Attribute              | Description | Type                   | Default   |
+| -------------------- | ---------------------- | ----------- | ---------------------- | --------- |
+| `disabled`           | `disabled`             |             | `boolean`              | `false`   |
+| `expanded`           | `expanded`             |             | `boolean`              | `false`   |
+| `popupWidthStrategy` | `popup-width-strategy` |             | `"match" \| "minimum"` | `'match'` |
 
 
 ## Events

@@ -3,7 +3,7 @@
 exports[`gux-context-menu renders 1`] = `
 <gux-context-menu>
   <mock:shadow-root>
-    <gux-popup>
+    <gux-popup popupwidthstrategy="minimum">
       <div class="gux-button-container" slot="target">
         <gux-button-slot accent="ghost">
           <button aria-expanded="false" aria-haspopup="true" id="gux-i" type="button">

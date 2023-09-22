@@ -15,7 +15,7 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
         <slot name="permanent-actions"></slot>
         <gux-table-toolbar-menu-button class="gux-show-menu" show-menu="">
           <mock:shadow-root>
-            <gux-popup>
+            <gux-popup popupwidthstrategy="minimum">
               <div class="gux-toolbar-menu-container" slot="target">
                 <gux-button-slot class="gux-menu-button">
                   <button aria-expanded="false" aria-haspopup="true" type="button">

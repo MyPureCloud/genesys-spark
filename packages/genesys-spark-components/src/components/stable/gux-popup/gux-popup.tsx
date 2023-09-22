@@ -5,22 +5,19 @@ import {
   Prop,
   Watch,
   Event,
-  EventEmitter,
-  Element
+  EventEmitter
 } from '@stencil/core';
 
 import {
   autoUpdate,
   computePosition,
   flip,
-  MiddlewareArguments,
+  MiddlewareState,
   offset,
   size,
   shift,
   hide
 } from '@floating-ui/dom';
-
-import { hasParentElement } from '@utils/dom/has-parent-element';
 
 /**
  * @slot target - Required slot for target
@@ -36,14 +33,14 @@ export class GuxPopup {
   private popupElementContainer: HTMLElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
 
-  @Element()
-  private root: HTMLGuxPopupElement;
-
   @Prop()
   expanded: boolean = false;
 
   @Prop()
   disabled: boolean = false;
+
+  @Prop()
+  popupWidthStrategy: 'match' | 'minimum' = 'match';
 
   /**
    * This event will run when the popup transitions to an expanded state.
@@ -73,9 +70,7 @@ export class GuxPopup {
 
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
-      const popupElementContainer = this.popupElementContainer;
-      const root = this.root;
-
+      const widthStrategy = this.popupWidthStrategy;
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -86,16 +81,24 @@ export class GuxPopup {
             offset(2),
             flip(),
             size({
-              apply({ rects }: MiddlewareArguments) {
-                if (
-                  hasParentElement('gux-action-button, gux-button-multi', root)
-                ) {
-                  Object.assign(popupElementContainer.style, {
+              apply({
+                rects,
+                elements
+              }: MiddlewareState & {
+                availableWidth: number;
+                availableHeight: number;
+              }) {
+                if (widthStrategy === 'minimum') {
+                  // These elements should be at least as wide the target but can expand beyond
+                  Object.assign(elements.floating.style, {
                     minWidth: `${rects.reference.width}px`
                   });
                 } else {
-                  Object.assign(popupElementContainer.style, {
-                    width: `${rects.reference.width}px`
+                  // Everything else is constrained to the width of the target.
+                  // Note: if the contents overflow the flip and shift middleware will not detect it
+                  Object.assign(elements.floating.style, {
+                    width: `${rects.reference.width}px`,
+                    overflow: 'hidden'
                   });
                 }
               }
