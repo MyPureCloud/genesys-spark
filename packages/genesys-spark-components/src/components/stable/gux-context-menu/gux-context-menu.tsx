@@ -32,17 +32,23 @@ export class GuxContextMenu {
   private root: HTMLElement;
 
   /**
-   * Screenreader text for context menu button
-   * defaults to "context menu"
+   * Indicates button density style. Intended to be paired with gux-table property.
    */
   @Prop()
-  screenreaderText: string = '';
+  compact: boolean = false;
 
   /**
    * Controls the disabled state of the internal button
    */
   @Prop()
   disabled: boolean = false;
+
+  /**
+   * Screenreader text for context menu button
+   * defaults to "context menu"
+   */
+  @Prop()
+  screenreaderText: string = '';
 
   /**
    * Controls the visibility of the popover list
@@ -154,6 +160,7 @@ export class GuxContextMenu {
                 type="button"
                 onClick={() => this.onButtonClick()}
                 id={this.buttonId}
+                class={{ 'gux-compact': this.compact }}
                 ref={el => (this.button = el)}
                 aria-haspopup="true"
                 aria-expanded={this.isOpen.toString()}
