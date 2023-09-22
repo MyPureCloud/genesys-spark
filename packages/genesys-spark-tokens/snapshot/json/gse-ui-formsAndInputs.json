@@ -368,6 +368,14 @@
         "second_month": {
           "border_radius": "0 0 8px 0"
         }
+      },
+      "date": {
+        "end_date": {
+          "border_radius": "0 16px 16px 0"
+        },
+        "start_date": {
+          "border_radius": "16px  0 0 16px"
+        }
       }
     },
     "disabled": {
@@ -611,6 +619,13 @@
       "hover_color": "#3742A2",
       "active_color": "#4856CB",
       "disabled_color": "#626e8480"
+    },
+    "focus_clock": {
+      "border": {
+        "color": "#7B88F7",
+        "width": "2px",
+        "style": "solid"
+      }
     }
   },
   "context_menu": {
