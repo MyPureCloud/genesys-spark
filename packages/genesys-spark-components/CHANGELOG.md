@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.105.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.104.2...v3.105.0) (2023-09-22)
+
+
+### Features
+
+* **action-button:** added title slot ([fc4759b](https://github.com/MyPureCloud/genesys-webcomponents/commit/fc4759b5fc5f99b000cf1dc2d5ec8fa004bf1172))
+
 ### [3.104.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.104.1...v3.104.2) (2023-09-21)
 
 
