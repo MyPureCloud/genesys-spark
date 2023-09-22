@@ -1,0 +1,40 @@
+@import '../../../../../style/focus.scss';
+
+button {
+  flex: 0 1 auto;
+  align-self: auto;
+  order: 0;
+  color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
+  background: transparent;
+  border: none;
+  border-radius: var(--gse-ui-formControl-input-borderRadius);
+
+  &:not(:disabled):focus-visible,
+  &:not(:disabled):hover {
+    color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
+    cursor: pointer;
+  }
+
+  gux-icon {
+    width: var(--gse-ui-icon-size-sm);
+    height: var(--gse-ui-icon-size-sm);
+    margin-right: var(--gse-ui-formControl-input-gap);
+    border-radius: var(--gse-ui-formControl-input-borderRadius);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible:enabled {
+    gux-icon {
+      outline: var(--gse-ui-formControl-input-focus-border-width)
+        var(--gse-ui-formControl-input-focus-border-style)
+        var(--gse-ui-formControl-input-focus-border-color);
+      border: var(--gse-ui-formControl-input-active-border-width)
+        var(--gse-ui-formControl-input-active-border-style)
+        var(--gse-ui-formControl-input-active-border-color);
+      border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+    }
+  }
+}
