@@ -1,75 +1,242 @@
-<div style="margin: 10px">
-  <h2>Example 1: Default</h2>
+<h1>gux-context-menu</h1>
+<h2>Summary</h2>
+<p>
+  Button with dropdown action list. Typically used to perform actions on an item
+  within a table.
+</p>
+
+<section>
+  <h3>Default Behavior</h3>
+  <gux-context-menu id="default-test-id-1" onclick="notify(event)">
+    <gux-list-item onclick="notify(event, 'option-1')">Option 1</gux-list-item>
+    <gux-list-item onclick="notify(event, 'option-2')">Option 2</gux-list-item>
+    <gux-list-item onclick="notify(event, 'option-3')">Option 3</gux-list-item>
+  </gux-context-menu>
+
+  <h3>Table Example</h3>
+  <div style="width: 70%">
+    <gux-table>
+      <table slot="data">
+        <thead>
+          <tr>
+            <th>First name</th>
+            <th data-cell-numeric>Age</th>
+            <th data-cell-action>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td data-cell-numeric>25</td>
+            <td data-cell-action>
+              <div>
+                <gux-context-menu id="table-test-id-2" onclick="notify(event)">
+                  <gux-list-item onclick="notify(event, 'option-4')"
+                    >Option 4</gux-list-item
+                  >
+                  <gux-list-item onclick="notify(event, 'option-5')"
+                    >Option 5</gux-list-item
+                  >
+                  <gux-list-item onclick="notify(event, 'option-6')"
+                    >Option 6</gux-list-item
+                  >
+                </gux-context-menu>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Jane</td>
+            <td data-cell-numeric>23</td>
+            <td data-cell-action>
+              <div>
+                <gux-context-menu id="table-test-id-3" onclick="notify(event)">
+                  <gux-list-item onclick="notify(event, 'option-7')"
+                    >Option 7</gux-list-item
+                  >
+                  <gux-list-item onclick="notify(event, 'option-8')"
+                    >Option 8</gux-list-item
+                  >
+                  <gux-list-item onclick="notify(event, 'option-9')"
+                    >Option 9</gux-list-item
+                  >
+                </gux-context-menu>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>No-action row</td>
+            <td data-cell-numeric>22</td>
+            <td data-cell-action></td>
+          </tr>
+        </tbody>
+      </table>
+    </gux-table>
+    <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
+  </div>
+</section>
+
+<h2>Properties</h2>
+
+<section>
+  <h3>compact</h3>
+  <p>
+    Reduces button dimensions. Intended to be used with
+    <strong>gux-table</strong> compact property.
+  </p>
+  <div style="width: 70%">
+    <gux-table compact>
+      <table slot="data">
+        <thead>
+          <tr>
+            <th>First name</th>
+            <th data-cell-numeric>Age</th>
+            <th data-cell-action>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td data-cell-numeric>25</td>
+            <td data-cell-action>
+              <div>
+                <gux-context-menu
+                  id="table-test-id-4"
+                  onclick="notify(event)"
+                  compact
+                >
+                  <gux-list-item onclick="notify(event, 'option-4')"
+                    >Option 4</gux-list-item
+                  >
+                  <gux-list-item onclick="notify(event, 'option-5')"
+                    >Option 5</gux-list-item
+                  >
+                  <gux-list-item onclick="notify(event, 'option-6')"
+                    >Option 6</gux-list-item
+                  >
+                </gux-context-menu>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Jane</td>
+            <td data-cell-numeric>23</td>
+            <td data-cell-action>
+              <div>
+                <gux-context-menu
+                  id="table-test-id-5"
+                  onclick="notify(event)"
+                  compact
+                >
+                  <gux-list-item onclick="notify(event, 'option-7')"
+                    >Option 7</gux-list-item
+                  >
+                  <gux-list-item onclick="notify(event, 'option-8')"
+                    >Option 8</gux-list-item
+                  >
+                  <gux-list-item onclick="notify(event, 'option-9')"
+                    >Option 9</gux-list-item
+                  >
+                </gux-context-menu>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>No-action row</td>
+            <td data-cell-numeric>22</td>
+            <td data-cell-action></td>
+          </tr>
+        </tbody>
+      </table>
+    </gux-table>
+    <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
+  </div>
+</section>
+
+<section>
+  <h3>disabled</h3>
+  <p>
+    Applies styling to indicate the component is disabled. Also prevents the
+    user from interacting with the component.
+  </p>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">true</h4>
+      <gux-context-menu
+        id="default-test-id-6"
+        onclick="notify(event)"
+        class="flex-content"
+        disabled
+      >
+        <gux-list-item onclick="notify(event, 'option-1')"
+          >Option 1</gux-list-item
+        >
+        <gux-list-item onclick="notify(event, 'option-2')"
+          >Option 2</gux-list-item
+        >
+        <gux-list-item onclick="notify(event, 'option-3')"
+          >Option 3</gux-list-item
+        >
+      </gux-context-menu>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">false</h4>
+      <gux-context-menu
+        id="default-test-id-7"
+        onclick="notify(event)"
+        class="flex-content"
+      >
+        <gux-list-item onclick="notify(event, 'option-1')"
+          >Option 1</gux-list-item
+        >
+        <gux-list-item onclick="notify(event, 'option-2')"
+          >Option 2</gux-list-item
+        >
+        <gux-list-item onclick="notify(event, 'option-3')"
+          >Option 3</gux-list-item
+        >
+      </gux-context-menu>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>screenreader-text</h3>
+  <p>
+    Localized text describing the intent of the control and is applied to the
+    icon. If omitted, will default to "Context menu".
+  </p>
   <gux-context-menu
-    id="default-test
-  -id-1"
+    id="default-test-id-8"
     onclick="notify(event)"
+    screenreader-text="You description here"
   >
     <gux-list-item onclick="notify(event, 'option-1')">Option 1</gux-list-item>
     <gux-list-item onclick="notify(event, 'option-2')">Option 2</gux-list-item>
     <gux-list-item onclick="notify(event, 'option-3')">Option 3</gux-list-item>
   </gux-context-menu>
-</div>
+</section>
 
-<div style="width: 70%">
-  <h2>Example 2: Inside a table</h2>
-  <gux-table>
-    <table slot="data">
-      <thead>
-        <tr>
-          <th>First name</th>
-          <th data-cell-numeric>Age</th>
-          <th data-cell-action>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>John</td>
-          <td data-cell-numeric>25</td>
-          <td data-cell-action>
-            <div>
-              <gux-context-menu id="table-test-id-1" onclick="notify(event)">
-                <gux-list-item onclick="notify(event, 'option-4')"
-                  >Option 4</gux-list-item
-                >
-                <gux-list-item onclick="notify(event, 'option-5')"
-                  >Option 5</gux-list-item
-                >
-                <gux-list-item onclick="notify(event, 'option-6')"
-                  >Option 6</gux-list-item
-                >
-              </gux-context-menu>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Jane</td>
-          <td data-cell-numeric>23</td>
-          <td data-cell-action>
-            <div>
-              <gux-context-menu id="table-test-id-2" onclick="notify(event)">
-                <gux-list-item onclick="notify(event, 'option-7')"
-                  >Option 7</gux-list-item
-                >
-                <gux-list-item onclick="notify(event, 'option-8')"
-                  >Option 8</gux-list-item
-                >
-                <gux-list-item onclick="notify(event, 'option-9')"
-                  >Option 9</gux-list-item
-                >
-              </gux-context-menu>
-            </div>
-          </td>
-        </tr>
+<style>
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-        <tr></tr>
-        <tr>
-          <td>No-action row</td>
-          <td data-cell-numeric>22</td>
-          <td data-cell-action></td>
-        </tr>
-      </tbody>
-    </table>
-  </gux-table>
-  <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
-</div>
+  .flex-example {
+    width: 250px;
+    min-width: 250px;
+  }
+
+  .flex-content {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .flex-header {
+    width: fit-content;
+    margin: auto;
+    font-weight: 400;
+  }
+</style>

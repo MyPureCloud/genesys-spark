@@ -33,8 +33,8 @@
  - [gux-disclosure-button-legacy](../../legacy/gux-disclosure-button-legacy)
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-dropdown](../gux-dropdown)
- - [gux-dropdown-multi-beta](../../beta/gux-dropdown-multi)
- - [gux-dropdown-multi-tag](../../beta/gux-dropdown-multi/gux-dropdown-multi-tag)
+ - [gux-dropdown-multi](../gux-dropdown-multi)
+ - [gux-dropdown-multi-tag](../gux-dropdown-multi/gux-dropdown-multi-tag)
  - [gux-form-field-checkbox](../gux-form-field/components/gux-form-field-checkbox)
  - [gux-form-field-color](../gux-form-field/components/gux-form-field-color)
  - [gux-form-field-dropdown](../gux-form-field/components/gux-form-field-dropdown)
@@ -90,7 +90,7 @@ graph TD;
   gux-disclosure-button-legacy --> gux-icon
   gux-dismiss-button --> gux-icon
   gux-dropdown --> gux-icon
-  gux-dropdown-multi-beta --> gux-icon
+  gux-dropdown-multi --> gux-icon
   gux-dropdown-multi-tag --> gux-icon
   gux-form-field-checkbox --> gux-icon
   gux-form-field-color --> gux-icon

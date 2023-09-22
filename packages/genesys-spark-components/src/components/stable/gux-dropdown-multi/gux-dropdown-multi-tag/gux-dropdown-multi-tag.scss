@@ -1,0 +1,56 @@
+@import '../../../../style/focus.scss';
+@import '../../../../style/_mixins.scss';
+
+// Style
+:host {
+  display: inline-block;
+}
+
+.gux-tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: flex-start;
+  height: var(--gse-ui-tag-height);
+  padding: var(--gse-ui-tag-removable-padding);
+  font-family: var(--gse-ui-tag-text-fontFamily);
+  font-size: var(--gse-ui-tag-text-fontSize);
+  line-height: var(--gse-ui-tag-text-lineHeight);
+  color: var(--gse-ui-tag-accent1-foregroundColor);
+  background-color: var(--gse-ui-tag-accent1-backgroundColor);
+  border-radius: var(--gse-ui-tag-borderRadius);
+
+  .gux-sr-only {
+    @include gux-sr-only-clip;
+  }
+
+  .gux-tag-remove-button {
+    all: unset;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: var(--gse-ui-tag-removable-gap);
+
+    &:not(:disabled):hover {
+      cursor: pointer;
+    }
+
+    .gux-tag-remove-icon {
+      width: var(--gse-ui-tag-button-size);
+      height: var(--gse-ui-tag-button-size);
+    }
+
+    &:focus-within {
+      .gux-tag-remove-icon {
+        @include gux-focus-ring-small;
+      }
+    }
+  }
+
+  &.gux-disabled {
+    opacity: 0.5; // missing token ticket: COMUI-2287
+  }
+}

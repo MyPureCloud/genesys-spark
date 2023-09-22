@@ -45,10 +45,11 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 ### There have been API changes in these components.
 
-| V3 tag name      | V4 tag name | Migration Guide    |
-| ---------------- | ----------- | ------------------ |
-| `gux-badge-beta` | `gux-badge` | [link](#gux-badge) |
-| `gux-tag-beta`   | `gux-tag`   | [link](#gux-tag)   |
+| V3 tag name               | V4 tag name          | Migration Guide             |
+| ------------------------- | -------------------- | --------------------------- |
+| `gux-badge-beta`          | `gux-badge`          | [link](#gux-badge)          |
+| `gux-tag-beta`            | `gux-tag`            | [link](#gux-tag)            |
+| `gux-dropdown-multi-beta` | `gux-dropdown-multi` | [link](#gux-dropdown-multi) |
 
 #### gux-badge
 
@@ -101,6 +102,17 @@ A `min-width` of 280px has been applied to the component.
 
 An `is-open` prop has been added to control showing and hiding the component. This property should now be used instead of the component's `hidden` global attribute. Note the different context of the new property and old attribute so `hidden="true"` will become `is-open="false"` and vice-versa.
 
+#### gux-dropdown-multi
+
+- The deprecated attribute `filterable` has now been completely removed in favor of `filter-type`.
+
+```diff
+- <gux-dropdown-multi-beta filterable>
++ <gux-dropdown-multi filter-type="starts-with">
+    ...
+  </gux-dropdown-multi>
+```
+
 ## V3 Stable Components Archived to Legacy in V4
 
 | V3 tag name            | V4 tag name                   | V4 stable equivalent (requires API changes) | Migration Guide                            |
@@ -152,7 +164,7 @@ If possible, avoid the usage of legacy components that have a migration path and
 
 Internal margins have been removed from the from field components as they were making it difficult for developers to incorporate the components into their existing layouts that already accounted for spacings between components.
 
-In v3, developers could workaround this issue with two CSS custom properties: --gux-form-field-container-margin-top and --gux-form-field-container-margin-bottom. Using these custom properties they could change the internal margins, usually to set them to 0.
+In v3, developers could workaround this issue with four CSS custom properties: --gux-form-field-container-margin-top, --gux-form-field-container-margin-bottom, --gux-form-field-fieldset-container-margin-top and --gux-form-field-fieldset-container-margin-bottom. Using these custom properties they could change the internal margins, usually to set them to 0.
 
 In v4, developers who were using the custom properties to set the internal margins to 0 can remove that workaround as it is no longer needed (or supported) and the component not having an internal margin is the default behaviour.
 
@@ -161,12 +173,12 @@ In v4, developers who want the component to have a margin similar to v3 can add 
 Below are the components where the internal margins have been removed for v4:
 
 1. gux-form-field-color
-1. gux-form-field-number
-1. gux-form-field-range
-1. gux-form-field-search
-1. gux-form-field-select
-1. gux-form-field-text-like
-1. gux-form-field-textarea
+2. gux-form-field-number
+3. gux-form-field-range
+4. gux-form-field-search
+5. gux-form-field-select
+6. gux-form-field-text-like
+7. gux-form-field-textarea
 
 ### gux-icon
 
@@ -225,6 +237,17 @@ The `scale` property has been removed. The displayed percentage will now always 
 ```diff
 - <gux-radial-progress scale="2" screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
 + <gux-radial-progress screenreader-text="Uploading file" value="0" max="100"></gux-radial-progress>
+```
+
+### gux-dropdown
+
+- The deprecated attribute `filterable` has now been completely removed in favor of `filter-type`.
+
+```diff
+- <gux-dropdown filterable>
++ <gux-dropdown filter-type="starts-with">
+    ...
+  </gux-dropdown>
 ```
 
 ### gux-tab-panel

@@ -24,17 +24,17 @@
 
 ### Used by
 
- - [gux-dropdown-multi-beta](..)
+ - [gux-dropdown-multi](..)
 
 ### Depends on
 
-- [gux-icon](../../../stable/gux-icon)
+- [gux-icon](../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-dropdown-multi-tag --> gux-icon
-  gux-dropdown-multi-beta --> gux-dropdown-multi-tag
+  gux-dropdown-multi --> gux-dropdown-multi-tag
   style gux-dropdown-multi-tag fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

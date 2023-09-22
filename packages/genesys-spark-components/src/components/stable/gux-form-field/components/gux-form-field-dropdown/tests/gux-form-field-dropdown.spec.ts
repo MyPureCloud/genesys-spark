@@ -3,7 +3,7 @@ import MutationObserver from 'mutation-observer';
 
 import { GuxFormFieldDropdown } from '../gux-form-field-dropdown';
 import { GuxDropdown } from '../../../../gux-dropdown/gux-dropdown';
-import { GuxDropdownMulti } from '../../../../../beta/gux-dropdown-multi/gux-dropdown-multi';
+import { GuxDropdownMulti } from '../../../../gux-dropdown-multi/gux-dropdown-multi';
 import { GuxListbox } from '../../../../gux-listbox/gux-listbox';
 import { GuxListboxMulti } from '../../../../gux-listbox-multi/gux-listbox-multi';
 import { GuxOption } from '../../../../gux-listbox/options/gux-option/gux-option';
@@ -104,13 +104,13 @@ describe('gux-form-field-select', () => {
     it('should build', async () => {
       const html = `
       <gux-form-field-dropdown>
-        <gux-dropdown-multi-beta>
+        <gux-dropdown-multi>
           <gux-listbox-multi>
             <gux-option-multi value="a" disabled>Ant</gux-option-multi>
             <gux-option-multi value="b">Bat</gux-option-multi>
             <gux-option-multi value="c">Cat</gux-option-multi>
           </gux-listbox-multi>
-        </gux-dropdown-multi-beta>
+        </gux-dropdown-multi>
         <label slot="label">Default</label>
       </gux-form-field-dropdown>
       `;
@@ -130,13 +130,13 @@ describe('gux-form-field-select', () => {
           it(`should render component as expected (${index + 1})`, async () => {
             const html = `
               <gux-form-field-dropdown ${componentAttribute}>
-                <gux-dropdown-multi-beta>
+                <gux-dropdown-multi>
                   <gux-listbox-multi>
                     <gux-option-multi value="a" disabled>Ant</gux-option-multi>
                     <gux-option-multi value="b">Bat</gux-option-multi>
                     <gux-option-multi value="c">Cat</gux-option-multi>
                   </gux-listbox-multi>
-                </gux-dropdown-multi-beta>
+                </gux-dropdown-multi>
                 <label slot="label">Default</label>
               </gux-form-field-dropdown>
             `;
@@ -152,13 +152,13 @@ describe('gux-form-field-select', () => {
           it(`should render component as expected (${index + 1})`, async () => {
             const html = `
             <gux-form-field-dropdown>
-              <gux-dropdown-multi-beta ${inputAttribute}>
+              <gux-dropdown-multi ${inputAttribute}>
                 <gux-listbox-multi>
                   <gux-option-multi value="a" disabled>Ant</gux-option-multi>
                   <gux-option-multi value="b">Bat</gux-option-multi>
                   <gux-option-multi value="c">Cat</gux-option-multi>
                 </gux-listbox-multi>
-              </gux-dropdown-multi-beta>
+              </gux-dropdown-multi>
               <label slot="label">Default</label>
             </gux-form-field-dropdown>
             `;
@@ -194,13 +194,13 @@ describe('gux-form-field-select', () => {
         it('should render component as expected', async () => {
           const html = `
           <gux-form-field-dropdown>
-          <gux-dropdown-multi-beta>
+          <gux-dropdown-multi>
             <gux-listbox-multi>
               <gux-option-multi value="a" disabled>Ant</gux-option-multi>
               <gux-option-multi value="b">Bat</gux-option-multi>
               <gux-option-multi value="c">Cat</gux-option-multi>
             </gux-listbox-multi>
-          </gux-dropdown-multi-beta>
+          </gux-dropdown-multi>
           <label slot="label">Default</label>
           <span slot="help">This is a help message</span>
         </gux-form-field-dropdown>

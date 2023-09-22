@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.30](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.29...v4.0.0-beta.30) (2023-09-22)
+
+
+### Features
+
+* **dropdown-multi:** moved from beta to stable, v4 token updates ([8cd4003](https://github.com/MyPureCloud/genesys-webcomponents/commit/8cd4003ebdd4bb2f315e2208c100b7400a2a448d))
+* **dropdown:** v4 updates ([1c8357e](https://github.com/MyPureCloud/genesys-webcomponents/commit/1c8357e046e501b6ce8f5be8278796d1624fbdba))
+* **gux-context-menu:** adopt tokens and add disabled property ([e8f527e](https://github.com/MyPureCloud/genesys-webcomponents/commit/e8f527e070f56a17761655fa71d82f1ca6a6f953))
+
+## [4.0.0-beta.29](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.28...v4.0.0-beta.29) (2023-09-21)
+
 ## [4.0.0-beta.28](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.27...v4.0.0-beta.28) (2023-09-20)
 
 

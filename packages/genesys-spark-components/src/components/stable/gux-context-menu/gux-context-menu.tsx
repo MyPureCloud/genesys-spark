@@ -32,6 +32,18 @@ export class GuxContextMenu {
   private root: HTMLElement;
 
   /**
+   * Indicates button density style. Intended to be paired with gux-table property.
+   */
+  @Prop()
+  compact: boolean = false;
+
+  /**
+   * Controls the disabled state of the internal button
+   */
+  @Prop()
+  disabled: boolean = false;
+
+  /**
    * Screenreader text for context menu button
    * defaults to "context menu"
    */
@@ -148,9 +160,11 @@ export class GuxContextMenu {
                 type="button"
                 onClick={() => this.onButtonClick()}
                 id={this.buttonId}
+                class={{ 'gux-compact': this.compact }}
                 ref={el => (this.button = el)}
                 aria-haspopup="true"
                 aria-expanded={this.isOpen.toString()}
+                disabled={this.disabled}
               >
                 <gux-icon
                   icon-name="menu-kebab-vertical"
