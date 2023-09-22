@@ -12,7 +12,7 @@ import {
 import { genericTimeZones } from './generic-zones';
 
 @Component({
-  styleUrl: 'gux-time-zone-picker.less',
+  styleUrl: 'gux-time-zone-picker.scss',
   tag: 'gux-time-zone-picker-beta',
   shadow: true
 })
