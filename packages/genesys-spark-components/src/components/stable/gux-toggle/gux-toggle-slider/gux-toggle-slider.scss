@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use '../../../../style/focus';
 
 $toggle-height: 16px;
@@ -20,7 +21,7 @@ gux-toggle-slider {
     order: 0;
     width: $toggle-width;
     height: $toggle-height;
-    border-radius: $toggle-height / 2;
+    border-radius: math.div($toggle-height, 2);
 
     &.gux-disabled {
       pointer-events: none;
@@ -37,7 +38,7 @@ gux-toggle-slider {
       position: absolute;
       inset: 0;
       background-color: #6b7585;
-      border-radius: calc($toggle-height / 2);
+      border-radius: math.div($toggle-height, 2);
       transition: background-color $slider-transition-duration ease;
 
       .gux-switch {
@@ -74,8 +75,8 @@ gux-toggle-slider {
           gux-icon {
             color: #2a60c8;
             opacity: 1;
-            transition: opacity $slider-transition-duration / 2 linear;
-            transition-delay: $slider-transition-duration / 2;
+            transition: opacity math.div($slider-transition-duration, 2) linear;
+            transition-delay: math.div($slider-transition-duration, 2);
           }
         }
       }
