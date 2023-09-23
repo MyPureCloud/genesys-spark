@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.31](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.30...v4.0.0-beta.31) (2023-09-23)
+
+
+### Features
+
+* **action-button:** removed title property from action button ([8b6015a](https://github.com/MyPureCloud/genesys-webcomponents/commit/8b6015ae8771794f37eea79e523d069bead7008e))
+* **gux-context-menu:** add compact property for use with compact gux-tables ([df0a726](https://github.com/MyPureCloud/genesys-webcomponents/commit/df0a726b8b24af8d59e05a759f0072b364b9ca79))
+
+
+### Bug Fixes
+
+* **versions:** removed prerelease versions from generated versions file ([876f72c](https://github.com/MyPureCloud/genesys-webcomponents/commit/876f72c91813d7a8db0a02379522456ec515b2a0))
+
 ## [4.0.0-beta.30](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.29...v4.0.0-beta.30) (2023-09-22)
 
 
