@@ -29,7 +29,7 @@ import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-vali
 import { logWarn } from '@utils/error/log-error';
 
 @Component({
-  styleUrl: 'gux-phone-input.less',
+  styleUrl: 'gux-phone-input.scss',
   tag: 'gux-phone-input-beta',
   shadow: true
 })

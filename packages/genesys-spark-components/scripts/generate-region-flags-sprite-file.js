@@ -5,20 +5,16 @@ const templater = require('spritesheet-templates');
 const fs = require('fs');
 const path = require('path');
 
-const flagDir =
-  '../src/components/beta/gux-phone-input/components/gux-region-icon/assets/region-flags';
-const spritePath = path.resolve(
+const basePath = path.resolve(
   __dirname,
-  '../src/components/beta/gux-phone-input/components/gux-region-icon/assets/sprites/region-flags.png'
-);
-const styleSheetPath = path.resolve(
-  __dirname,
-  '../src/components/beta/gux-phone-input/components/gux-region-icon/assets/sprites/region-flags.less'
+  '../src/components/beta/gux-phone-input/components/gux-region-icon/sprite-utils'
 );
 
-const src = fs
-  .readdirSync(path.resolve(__dirname, flagDir))
-  .map(file => path.resolve(__dirname, `${flagDir}/${file}`));
+const flagDir = `${basePath}/region-flags`;
+const constantPath = `${basePath}/generate-sprites.ts`;
+const styleSheetPath = `${basePath}/generate-sprites.scss`;
+
+const src = fs.readdirSync(flagDir).map(file => `${flagDir}/${file}`);
 
 spriteSmith.run({ src }, function (err, results) {
   if (err) {
@@ -26,7 +22,12 @@ spriteSmith.run({ src }, function (err, results) {
   } else {
     console.log('SpriteSmith succeeded with results: ', results);
 
-    fs.writeFileSync(spritePath, results.image);
+    fs.writeFileSync(
+      constantPath,
+      `export const spritesheetDataUrl = 'data:image/png;base64,${results.image.toString(
+        'base64'
+      )}';\n`
+    );
 
     const sprites = Object.entries(results.coordinates).map(
       ([path, coords]) => ({
@@ -35,43 +36,20 @@ spriteSmith.run({ src }, function (err, results) {
       })
     );
 
-    // path to image file needs to be set in the inline style of the icon instead of here due to asset path issues
     const spritesheet = {
-      image: '',
+      image: '', // path to image file needs to be set in the inline style of the icon instead of here due to asset path issues
       ...results.properties
     };
 
-    let styleSheet = `/* stylelint-disable function-no-unknown */
-`;
-
-    styleSheet += templater(
+    const styleSheet = templater(
+      { sprites, spritesheet },
       {
-        sprites,
-        spritesheet
-      },
-      {
-        format: 'less',
+        format: 'scss',
         formatOpts: {
           variableNameTransforms: ['toLowerCase']
         }
       }
     );
-
-    for (let sprite of sprites) {
-      styleSheet += `
-.flag-${sprite.name.toLowerCase()} {
-  .sprite(@${sprite.name.toLowerCase()})
-}
-`;
-    }
-
-    styleSheet += `
-.flag {
-  display: inline-block;
-}
-
-/* stylelint-enable function-no-unknown */
-`;
 
     fs.writeFileSync(styleSheetPath, styleSheet);
   }
