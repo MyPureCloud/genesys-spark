@@ -1,21 +1,31 @@
 import { newSpecPage } from '@stencil/core/testing';
 
-import { GuxSwitch } from '../gux-switch';
-import { GuxSwitchItem } from '../gux-switch-item/gux-switch-item';
+import { GuxSegmentedControl } from '../gux-segmented-control';
+import { GuxSegmentedControlItem } from '../gux-segmented-control-item/gux-segmented-control-item';
 
-const components = [GuxSwitch, GuxSwitchItem];
+const components = [GuxSegmentedControl, GuxSegmentedControlItem];
 const html = `
-  <gux-switch layout="small" value="day">
-    <gux-switch-item value="month">Month</gux-switch-item>
-    <gux-switch-item value="week">Week</gux-switch-item>
-    <gux-switch-item value="day">Day</gux-switch-item>
-    <gux-switch-item value="hour" disabled>Hour</gux-switch-item>
-    <gux-switch-item value="minute">Minute</gux-switch-item>
-  </gux-switch>
+  <gux-segmented-control-beta value="day">
+    <gux-segmented-control-item value="month">
+      <div slot="text">Month</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="week">
+      <div slot="text">Week</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="day">
+      <div slot="text">Day</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="hour" disabled>
+      <div slot="text">Hour</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="minute">
+      <div slot="text">Minute</div>
+    </gux-segmented-control-item>
+  </gux-segmented-control-beta>
 `;
 const language = 'en';
 
-describe('gux-switch', () => {
+describe('gux-segmented-control-beta', () => {
   beforeAll(async () => {
     (
       global as NodeJS.Global & {
@@ -28,36 +38,36 @@ describe('gux-switch', () => {
     it(`should render as expected`, async () => {
       const page = await newSpecPage({ components, html, language });
 
-      expect(page.rootInstance).toBeInstanceOf(GuxSwitch);
+      expect(page.rootInstance).toBeInstanceOf(GuxSegmentedControl);
       expect(page.root).toMatchSnapshot();
     });
   });
 
   describe('#interactions', () => {
-    it(`should change value on gux-switch-item click`, async () => {
+    it(`should change value on gux-segmented-control-item click`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
-      const guxSwitchItemMinute: HTMLGuxSwitchItemElement =
-        page.root.querySelector('gux-switch-item[value=minute]');
+      const element = page.root as HTMLGuxSegmentedControlBetaElement;
+      const guxSegmentedControlItemMinute: HTMLGuxSegmentedControlItemElement =
+        page.root.querySelector('gux-segmented-control-item[value=minute]');
 
       expect(element.value).toBe('day');
 
-      guxSwitchItemMinute.click();
+      guxSegmentedControlItemMinute.click();
       await page.waitForChanges();
 
-      expect(element.value).toBe(guxSwitchItemMinute.value);
+      expect(element.value).toBe(guxSegmentedControlItemMinute.value);
     });
 
-    it(`should not change value on gux-switch-item click if it is disabled`, async () => {
+    it(`should not change value on gux-segmented-control-item click if it is disabled`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
-      const guxSwitchItemHour: HTMLGuxSwitchItemElement =
-        page.root.querySelector('gux-switch-item[value=hour]');
+      const element = page.root as HTMLGuxSegmentedControlBetaElement;
+      const guxSegmentedControlItemHour: HTMLGuxSegmentedControlItemElement =
+        page.root.querySelector('gux-segmented-control-item[value=hour]');
       const currentValue = element.value;
 
       expect(currentValue).toBe('day');
 
-      guxSwitchItemHour.click();
+      guxSegmentedControlItemHour.click();
       await page.waitForChanges();
 
       expect(element.value).toBe(currentValue);
@@ -65,9 +75,9 @@ describe('gux-switch', () => {
 
     it(`should emit a 'change' and 'input' event when a new item is selected`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
-      const guxSwitchItemMinute: HTMLGuxSwitchItemElement =
-        page.root.querySelector('gux-switch-item[value=minute]');
+      const element = page.root as HTMLGuxSegmentedControlBetaElement;
+      const guxSegmentedControlItemMinute: HTMLGuxSegmentedControlItemElement =
+        page.root.querySelector('gux-segmented-control-item[value=minute]');
       const changeEventSpy = jest.fn();
       const inputEventSpy = jest.fn();
 
@@ -78,7 +88,7 @@ describe('gux-switch', () => {
         inputEventSpy();
       });
 
-      guxSwitchItemMinute.click();
+      guxSegmentedControlItemMinute.click();
       await page.waitForChanges();
 
       expect(changeEventSpy).toHaveBeenCalledWith();
@@ -87,9 +97,9 @@ describe('gux-switch', () => {
 
     it(`should not emit a 'change' and 'input' event when the selected item is reselected`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
-      const guxSwitchItemDay: HTMLGuxSwitchItemElement =
-        page.root.querySelector('gux-switch-item[value=day]');
+      const element = page.root as HTMLGuxSegmentedControlBetaElement;
+      const guxSegmentedControlItemDay: HTMLGuxSegmentedControlItemElement =
+        page.root.querySelector('gux-segmented-control-item[value=day]');
       const changeEventSpy = jest.fn();
       const inputEventSpy = jest.fn();
 
@@ -100,7 +110,7 @@ describe('gux-switch', () => {
         inputEventSpy();
       });
 
-      guxSwitchItemDay.click();
+      guxSegmentedControlItemDay.click();
       await page.waitForChanges();
 
       expect(changeEventSpy).not.toHaveBeenCalled();
@@ -109,9 +119,9 @@ describe('gux-switch', () => {
 
     it(`should not emit a 'change' or 'input' event when a disabled item is selected`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
-      const guxSwitchItemHour: HTMLGuxSwitchItemElement =
-        page.root.querySelector('gux-switch-item[value=hour]');
+      const element = page.root as HTMLGuxSegmentedControlBetaElement;
+      const guxSegmentedControlItemHour: HTMLGuxSegmentedControlItemElement =
+        page.root.querySelector('gux-segmented-control-item[value=hour]');
       const changeEventSpy = jest.fn();
       const inputEventSpy = jest.fn();
 
@@ -122,7 +132,7 @@ describe('gux-switch', () => {
         inputEventSpy();
       });
 
-      guxSwitchItemHour.click();
+      guxSegmentedControlItemHour.click();
       await page.waitForChanges();
 
       expect(changeEventSpy).not.toHaveBeenCalled();
@@ -133,9 +143,9 @@ describe('gux-switch', () => {
   describe('onSlotchange', () => {
     it(`should set selected items as expected`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = document.querySelector('gux-switch');
+      const element = document.querySelector('gux-segmented-control-beta');
 
-      const newItem = document.createElement('gux-switch-item');
+      const newItem = document.createElement('gux-segmented-control-item');
       newItem.appendChild(document.createTextNode('Second'));
       newItem.setAttribute('value', 'second');
       element.appendChild(newItem);
@@ -148,14 +158,14 @@ describe('gux-switch', () => {
     // onSlotchange is not getting called as expected in the unit tests so it tested manually below
     it('manually call onSlotchange methods', async () => {
       const page = await newSpecPage({ components, html, language });
-      const elementController: GuxSwitch = page.rootInstance;
+      const elementController: GuxSegmentedControl = page.rootInstance;
 
-      expect(elementController.switchItems).toHaveLength(0);
+      expect(elementController.items).toHaveLength(0);
 
       (elementController as any).slotChanged();
       elementController.componentWillRender();
 
-      expect(elementController.switchItems).toHaveLength(5);
+      expect(elementController.items).toHaveLength(5);
     });
   });
 });

@@ -115,13 +115,14 @@ An `is-open` prop has been added to control showing and hiding the component. Th
 
 ## V3 Stable Components Archived to Legacy in V4
 
-| V3 tag name            | V4 tag name                   | V4 stable equivalent (requires API changes) | Migration Guide                            |
-| ---------------------- | ----------------------------- | ------------------------------------------- | ------------------------------------------ |
-| gux-action-toast       | gux-action-toast-legacy       | gux-toast                                   | [link](./gux-action-toast-legacy.md)       |
-| gux-notification-toast | gux-notification-toast-legacy | gux-toast                                   | [link](./gux-notification-toast-legacy.md) |
-| gux-simple-toast       | gux-simple-toast-legacy       | gux-toast                                   | [link](./gux-simple-toast-legacy.md)       |
-| gux-pagination         | gux-pagination-legacy         | gux-pagination                              | [link](./gux-pagination-legacy.md)         |
-| gux-disclosure-button  | gux-disclosure-button-legacy  | none                                        | Contact the Design System UX Team          |
+| V3 tag name              | V4 tag name                     | V4 stable equivalent (requires API changes)    | Migration Guide                            |
+| ------------------------ | ------------------------------- | ---------------------------------------------- | ------------------------------------------ |
+| `gux-action-toast`       | `gux-action-toast-legacy`       | `gux-toast`                                    | [link](./gux-action-toast-legacy.md)       |
+| `gux-disclosure-button`  | `gux-disclosure-button-legacy`  | none                                           | Contact the Design System UX Team          |
+| `gux-notification-toast` | `gux-notification-toast-legacy` | `gux-toast`                                    | [link](./gux-notification-toast-legacy.md) |
+| `gux-pagination`         | `gux-pagination-legacy`         | `gux-pagination` (`gux-pagination-beta` in v3) | [link](./gux-pagination-legacy.md)         |
+| `gux-simple-toast`       | `gux-simple-toast-legacy`       | `gux-toast`                                    | [link](./gux-simple-toast-legacy.md)       |
+| `gux-switch`             | `gux-switch-legacy`             | `gux-segmented-control-beta` (or `gux-tabs`)   | [link](./gux-switch-legacy.md)             |
 
 Action: _(required)_ add `-legacy` to the tag name of the component.
 
