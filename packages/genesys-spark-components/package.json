@@ -36,7 +36,7 @@
     "prettier-package-json": "prettier-package-json --write ./package.json",
     "release": "standard-version",
     "stencil": "stencil build --prod",
-    "stencil.dev": "stencil build --dev --watch --serve --docs",
+    "stencil.dev": "stencil build --dev --watch --serve --no-open --docs",
     "stylelint": "stylelint --fix \"**/*.{css,html,scss}\"",
     "svgo": "svgo -f ./src/components/stable/gux-icon/icons",
     "test": "TZ=UTC stencil test --spec --e2e",

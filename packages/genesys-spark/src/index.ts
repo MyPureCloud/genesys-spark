@@ -1,18 +1,22 @@
-// TODO: We'll need some domain wrangling here to ensure same-domain loading when
-// possible. See stencil-wrapper.ts in the components for an example.
-const CDN_URL = '';
-const componentDeployPath = CDN_URL || 'http://localhost:3333/dist';
+import { getAssetsHost } from "./hosts";
+
+const ASSET_PREFIX = "__ASSET_PREFIX__";
+const SCRIPT_PATH = "genesys-webcomponents.esm.js";
+const STYLE_PATH = "/genesys-webcomponents.css";
+
+const scriptSrc = `${getAssetsHost()}${ASSET_PREFIX}${SCRIPT_PATH}`;
+const styleHref = `${getAssetsHost()}${ASSET_PREFIX}${STYLE_PATH}`;
+
 
 /**
  * Loads the spark webcomponents from a shared CDN
  * @returns a promise that succeeds if the component script loads successfully.
  */
 export function registerSparkComponents() : Promise<void> {
-    const scriptSrc = `${componentDeployPath}/genesys-webcomponents/genesys-webcomponents.esm.js`
     const existingTag = document.head.querySelector(`[src="${scriptSrc}"]`);
     if(!existingTag) {
         const styleTag = document.createElement('link');
-        styleTag.setAttribute("href", `${componentDeployPath}/genesys-webcomponents/genesys-webcomponents.css`);
+        styleTag.setAttribute("href", styleHref);
         styleTag.setAttribute("rel", "stylesheet");
 
         const scriptTag = document.createElement('script');
@@ -23,7 +27,7 @@ export function registerSparkComponents() : Promise<void> {
                 resolve();
             })
             scriptTag.addEventListener('error', () => {
-                reject();
+                reject(`Spark script failed to load: ${scriptSrc}`);
             })
         });
 
