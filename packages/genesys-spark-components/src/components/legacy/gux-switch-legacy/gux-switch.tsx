@@ -11,7 +11,7 @@ import {
 
 import { GuxSwitchAllowedLayouts } from './gux-switch.types';
 
-import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { trackComponent } from '@utils/tracking/usage';
 
 /**

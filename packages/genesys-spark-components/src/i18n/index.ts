@@ -3,7 +3,7 @@ import { fetchResources, ILocalizedComponentResources } from './fetchResources';
 // If this import is failing, you should run the i18n script to generate the list of locales
 import locales from './locales.json';
 import startOfWeekDataUntyped from './start-of-week.json';
-import { getClosestElement } from '../utils/dom/get-closest-element';
+import { getClosestElement } from '@utils/dom/get-closest-element';
 
 type StartOfWeek = { [key: string]: number };
 type I18nValueContext = { [key: string]: string | number };

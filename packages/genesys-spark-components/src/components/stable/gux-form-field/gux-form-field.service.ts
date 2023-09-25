@@ -1,6 +1,6 @@
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
-import { logError } from '../../../utils/error/log-error';
-import setInputValue from '../../../utils/dom/set-input-value';
+import { randomHTMLId } from '@utils/dom/random-html-id';
+import { logError } from '@utils/error/log-error';
+import setInputValue from '@utils/dom/set-input-value';
 import { hasSlot } from '@utils/dom/has-slot';
 
 import { GuxFormFieldLabelPosition } from './gux-form-field.types';

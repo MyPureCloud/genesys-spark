@@ -13,7 +13,7 @@ import {
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
-import { OnMutation } from '../../../../utils/decorator/on-mutation';
+import { OnMutation } from '@utils/decorator/on-mutation';
 
 import tabsResources from '../i18n/en.json';
 

@@ -10,10 +10,10 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
-import { OnClickOutside } from '../../../../utils/decorator/on-click-outside';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
-import { afterNextRender } from '../../../../utils/dom/after-next-render';
+import { afterNextRender } from '@utils/dom/after-next-render';
 
 @Component({
   styleUrl: 'gux-table-toolbar-menu-button.scss',

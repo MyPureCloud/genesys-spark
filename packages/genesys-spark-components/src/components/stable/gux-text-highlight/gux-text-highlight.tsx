@@ -1,8 +1,5 @@
 import { Component, Element, h, JSX, Prop } from '@stencil/core';
-import {
-  getFuzzyReplacements,
-  matchesFuzzy
-} from '../../../utils/string/search';
+import { getFuzzyReplacements, matchesFuzzy } from '@utils/string/search';
 
 import { trackComponent } from '@utils/tracking/usage';
 

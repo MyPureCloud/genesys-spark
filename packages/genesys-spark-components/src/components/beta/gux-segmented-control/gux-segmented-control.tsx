@@ -9,7 +9,7 @@ import {
   State
 } from '@stencil/core';
 
-import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { trackComponent } from '@utils/tracking/usage';
 
 /**

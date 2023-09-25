@@ -9,13 +9,13 @@ import {
   Host
 } from '@stencil/core';
 
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import translationResources from './i18n/en.json';
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
-import { afterNextRender } from '../../../utils/dom/after-next-render';
-import { whenEventIsFrom } from '../../../utils/dom/when-event-is-from';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
+import { afterNextRender } from '@utils/dom/after-next-render';
+import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
 
 @Component({
   styleUrl: 'gux-context-menu.scss',
