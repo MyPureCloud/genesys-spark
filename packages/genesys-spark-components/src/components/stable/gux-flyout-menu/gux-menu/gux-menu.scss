@@ -1,0 +1,27 @@
+gux-menu {
+  flex-direction: column;
+  width: fit-content;
+  padding: var(--gse-ui-flyoutMenu-padding);
+  background-color: var(--gse-ui-flyoutMenu-backgroundColor);
+  border-radius: var(--gse-ui-menu-borderRadius);
+  box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+    var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
+    var(--gse-ui-menu-boxShadow-color);
+
+  .gux-arrow,
+  .gux-arrow::before {
+    position: absolute;
+    top: -3px;
+    width: 5px * 2;
+    height: 5px * 2;
+    background: inherit;
+  }
+
+  .gux-arrow::before {
+    visibility: visible;
+    content: '';
+    border-top: 1px solid #b4bccb;
+    border-left: 1px solid #b4bccb;
+    transform: rotate(45deg);
+  }
+}

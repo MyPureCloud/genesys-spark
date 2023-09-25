@@ -7,7 +7,7 @@ import { menuNavigation } from '../gux-menu.common';
  */
 
 @Component({
-  styleUrl: 'gux-menu-option.less',
+  styleUrl: 'gux-menu-option.scss',
   tag: 'gux-menu-option'
 })
 export class GuxMenuOption {

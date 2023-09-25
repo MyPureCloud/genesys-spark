@@ -7,7 +7,7 @@ import { GuxMenuOption } from '../gux-menu/gux-menu-option/gux-menu-option';
 
 const components = [GuxFlyoutMenu, GuxMenu, GuxSubmenu, GuxMenuOption];
 const html = `
-  <gux-flyout-menu-beta>
+  <gux-flyout-menu>
     <span slot="target">Example Target Element</span>
     <gux-menu slot="menu">
       <gux-menu-option>Option One</gux-menu-option>
@@ -40,7 +40,7 @@ const html = `
         </gux-submenu>
       </gux-submenu>
     </gux-menu>
-  </gux-flyout-menu-beta>
+  </gux-flyout-menu>
 `;
 const language = 'en';
 

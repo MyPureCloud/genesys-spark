@@ -24,7 +24,7 @@ import {
  */
 
 @Component({
-  styleUrl: 'gux-submenu.less',
+  styleUrl: 'gux-submenu.scss',
   tag: 'gux-submenu'
 })
 export class GuxSubmenu {
