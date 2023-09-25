@@ -7,7 +7,7 @@ gux-menu-option {
     all: unset;
     width: var(--gse-ui-flyoutMenu-width);
     height: var(--gse-ui-menu-option-height);
-    padding: var(--gse-ui-menu-option-padding);
+    padding: 4px 12px; //TODO COMUI-2304
     line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
     color: var(--gse-ui-menu-option-label-foregroundColor);
     background-color: var(--gse-ui-menu-option-default-backgroundColor);
