@@ -26,7 +26,7 @@ import {
 import translationResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-month-calendar.less',
+  styleUrl: 'gux-month-calendar.scss',
   tag: 'gux-month-calendar',
   shadow: { delegatesFocus: true }
 })
@@ -209,7 +209,7 @@ export class GuxMonthCalendar {
             })}
           ></gux-icon>
         </button>
-        <div class="gux-year">{this.getYearLabel(this.year)}</div>
+        <div>{this.getYearLabel(this.year)}</div>
         <button
           type="button"
           class="gux-year-change"

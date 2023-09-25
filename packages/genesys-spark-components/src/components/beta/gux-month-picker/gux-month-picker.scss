@@ -1,0 +1,86 @@
+:host {
+  display: inline-block;
+}
+
+.gux-target {
+  display: inline-flex;
+  cursor: pointer;
+  padding: var(--gse-ui-formControl-textarea-padding);
+  gap: var(--gse-ui-formControl-input-gap);
+  background-color: var(--gse-ui-calendarMenu-backgroundColor);
+  border: var(--gse-ui-formControl-input-default-border-width)
+    var(--gse-ui-formControl-input-default-border-style)
+    var(--gse-ui-formControl-input-default-border-color);
+  border-radius: var(--gse-ui-formControl-input-borderRadius);
+
+  &:focus-within {
+    outline: var(--gse-ui-formControl-input-focus-border-width)
+      var(--gse-ui-formControl-input-focus-border-style)
+      var(--gse-ui-formControl-input-focus-border-color);
+    border: var(--gse-ui-formControl-input-active-border-width)
+      var(--gse-ui-formControl-input-active-border-style)
+      var(--gse-ui-formControl-input-active-border-color);
+    border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+  }
+
+  .gux-display {
+    display: inline-flex;
+    min-width: 100px;
+    padding-right: var(--gse-ui-formControl-input-gap);
+    font-family: var(--gse-ui-formControl-label-text-fontFamily);
+    font-size: var(--gse-ui-formControl-label-text-fontSize);
+    line-height: var(--gse-ui-formControl-label-text-lineHeight);
+    font-weight: var(--gse-ui-formControl-label-text-fontWeight);
+    color: var(--gse-ui-formControl-label-labelColor);
+
+    .gux-spinner {
+      outline: none;
+
+      &:not(:first-child) {
+        margin-left: 4px;
+      }
+
+      &:focus-visible {
+        background: var(--gse-ui-calendarMenu-month-hover-backgroundColor);
+      }
+    }
+  }
+
+  .gux-popup-toggle {
+    justify-content: right;
+    color: var(--gse-ui-monthPicker-calendarStates-defaultColor);
+    background: transparent;
+    border: none;
+
+    &:focus-visible {
+      outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
+        var(--gse-ui-monthPicker-calendarStates-focus-border-style)
+        var(--gse-ui-monthPicker-calendarStates-focus-border-color);
+      outline-offset: var(--gse-semantic-focusRing-offset);
+      border-radius: 2px; // TODO : COMUI-2256 missing 2px border-radius focus token.
+    }
+
+    &:not(:disabled):hover {
+      color: var(--gse-ui-monthPicker-calendarStates-hoverColor);
+      cursor: pointer;
+    }
+
+    &:not(:disabled):focus {
+      color: var(--gse-ui-monthPicker-calendarStates-activeColor);
+      cursor: pointer;
+    }
+
+    &:disabled {
+      color: var(--gse-ui-monthPicker-calendarStates-disabledColor);
+    }
+
+    gux-icon {
+      width: var(--gse-ui-icon-size-sm);
+      height: var(--gse-ui-icon-size-sm);
+    }
+
+    &.gux-expanded {
+      color: var(--gse-ui-monthPicker-calendarStates-activeColor);
+    }
+  }
+}
