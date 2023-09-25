@@ -9,7 +9,7 @@
 import { defineCustomElements } from '../dist/loader';
 
 // Value templated out during build process (see scripts/wrap-stencil.js)
-export const CDN_URL = '{{cdn_url}}';
+export const COMPONENT_ASSETS_PATH = '{{component_assets_path}}';
 
 // Default domain to load assets from
 const DEFAULT_DOMAIN = 'mypurecloud.com';
@@ -34,9 +34,9 @@ const DOMAIN_LIST = [
 ];
 
 export function registerElements() {
-  if (CDN_URL) {
+  if (COMPONENT_ASSETS_PATH) {
     defineCustomElements(window, {
-      resourcesUrl: `https://${getDomain() + CDN_URL}`
+      resourcesUrl: `https://${getDomain() + COMPONENT_ASSETS_PATH}`
     });
   } else {
     defineCustomElements();

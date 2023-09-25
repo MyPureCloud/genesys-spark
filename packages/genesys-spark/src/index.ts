@@ -2,10 +2,10 @@ import { getAssetsHost } from "./hosts";
 
 const ASSET_PREFIX = "__ASSET_PREFIX__";
 const SCRIPT_PATH = "genesys-webcomponents.esm.js";
-const STYLE_PATH = "/genesys-webcomponents.css";
+const STYLE_PATH = "genesys-webcomponents.css";
 
-const scriptSrc = `${getAssetsHost()}${ASSET_PREFIX}${SCRIPT_PATH}`;
-const styleHref = `${getAssetsHost()}${ASSET_PREFIX}${STYLE_PATH}`;
+const scriptSrc = `https://${getAssetsHost()}${ASSET_PREFIX}${SCRIPT_PATH}`;
+const styleHref = `https://${getAssetsHost()}${ASSET_PREFIX}${STYLE_PATH}`;
 
 
 /**

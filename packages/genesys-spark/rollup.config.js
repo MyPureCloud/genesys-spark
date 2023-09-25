@@ -12,7 +12,7 @@ export default {
 		replace({
 			values: { 
 				'IS_DEV_MODE': IS_DEV_MODE,
-				'__ASSET_PREFIX__': IS_DEV_MODE ? '/dist/genesys-webcomponents/' : process.env.CDN_URL
+				'__ASSET_PREFIX__': IS_DEV_MODE ? '/dist/genesys-webcomponents/' : process.env.COMPONENT_ASSETS_PATH
 			},
 			preventAssignment: true
 		}),
