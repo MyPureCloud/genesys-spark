@@ -49,7 +49,7 @@ import {
 } from './gux-datepicker.service';
 
 @Component({
-  styleUrl: 'gux-datepicker.less',
+  styleUrl: 'gux-datepicker.scss',
   tag: 'gux-datepicker',
   shadow: true
 })
