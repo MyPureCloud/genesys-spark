@@ -15,7 +15,7 @@ import {
  */
 
 @Component({
-  styleUrl: 'gux-tab-advanced-panel.less',
+  styleUrl: 'gux-tab-advanced-panel.scss',
   tag: 'gux-tab-advanced-panel',
   shadow: false
 })

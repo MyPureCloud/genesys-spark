@@ -1,9 +1,6 @@
-@import (reference) '../../../../style/focus.less';
-@import (reference) '../../../../style/typography.less';
-
-// Variables part
-@gux-tabs-background: #e2e6ee;
-@gux-off-tab-fill: #c8cfda;
+@use '../../../../style/focus';
+@use '../../../../style/typography';
+@use '../../../../style/mixins';
 
 gux-tab-advanced-list {
   .gux-tab-container {
@@ -38,7 +35,7 @@ gux-tab-advanced-list {
           align-items: center;
           padding: 0 12px;
           white-space: nowrap;
-          .body-font-bold();
+          @include typography.body-font-bold;
 
           gux-icon {
             padding-right: 8px;
@@ -116,7 +113,7 @@ gux-tab-advanced-list {
           }
 
           &:focus-visible {
-            .gux-focus-ring();
+            @include focus.gux-focus-ring;
           }
         }
       }
@@ -137,6 +134,6 @@ gux-tab-advanced-list {
   }
 
   .gux-sr-only {
-    .gux-sr-only();
+    @include mixins.gux-sr-only;
   }
 }

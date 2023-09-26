@@ -15,7 +15,7 @@ import {
  */
 
 @Component({
-  styleUrl: 'gux-tab.less',
+  styleUrl: 'gux-tab.scss',
   tag: 'gux-tab',
   shadow: false
 })
