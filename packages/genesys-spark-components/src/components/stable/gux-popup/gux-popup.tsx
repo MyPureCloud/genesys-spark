@@ -12,7 +12,7 @@ import {
   autoUpdate,
   computePosition,
   flip,
-  MiddlewareArguments,
+  MiddlewareState,
   offset,
   size,
   shift,
@@ -73,9 +73,7 @@ export class GuxPopup {
 
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
-      const popupElementContainer = this.popupElementContainer;
       const exceedTargetWidth = this.exceedTargetWidth;
-
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -86,14 +84,24 @@ export class GuxPopup {
             offset(2),
             flip(),
             size({
-              apply({ rects }: MiddlewareArguments) {
+              apply({
+                rects,
+                elements
+              }: MiddlewareState & {
+                availableWidth: number;
+                availableHeight: number;
+              }) {
                 if (exceedTargetWidth) {
-                  Object.assign(popupElementContainer.style, {
+                  // These elements should be at least as wide the target but can expand beyond
+                  Object.assign(elements.floating.style, {
                     minWidth: `${rects.reference.width}px`
                   });
                 } else {
-                  Object.assign(popupElementContainer.style, {
-                    width: `${rects.reference.width}px`
+                  // Everything else is constrained to the width of the target.
+                  // Note: if the contents overflow the flip and shift middleware will not detect it
+                  Object.assign(elements.floating.style, {
+                    width: `${rects.reference.width}px`,
+                    overflow: 'hidden'
                   });
                 }
               }
