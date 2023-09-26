@@ -21,7 +21,7 @@ import { GuxModalSize } from './gux-modal.types';
  * @slot title - Optional slot to set the modal title
  */
 @Component({
-  styleUrl: 'gux-modal.less',
+  styleUrl: 'gux-modal.scss',
   tag: 'gux-modal',
   shadow: true
 })
