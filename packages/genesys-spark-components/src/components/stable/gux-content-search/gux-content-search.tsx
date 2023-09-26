@@ -20,7 +20,7 @@ import { onDisabledChange } from '../../../utils/dom/on-attribute-change';
  */
 
 @Component({
-  styleUrl: 'gux-content-search.less',
+  styleUrl: 'gux-content-search.scss',
   tag: 'gux-content-search',
   shadow: true
 })
