@@ -1,9 +1,3 @@
-@import (reference) '../../../../style/mixins.less';
-
-// Variables part
-@gux-tabs-background: #e2e6ee;
-@gux-off-tab-fill: #c8cfda;
-
 gux-tabs {
   &[orientation='vertical'] {
     height: 100%;
@@ -90,8 +84,8 @@ gux-tabs {
       height: 40px;
       color: #202937;
       cursor: pointer;
-      background-color: @gux-off-tab-fill;
-      background-color: @gux-tabs-background;
+      background-color: #c8cfda;
+      background-color: #e2e6ee;
       border: none;
       border-radius: 4px;
 
@@ -105,7 +99,7 @@ gux-tabs {
       }
 
       &:active:not(:disabled) {
-        background-color: darken(@gux-tabs-background, 5%);
+        background-color: darken(#e2e6ee, 5%);
       }
 
       &:disabled {

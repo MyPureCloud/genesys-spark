@@ -24,7 +24,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import tabsResources from '../i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-tab-advanced-list.less',
+  styleUrl: 'gux-tab-advanced-list.scss',
   tag: 'gux-tab-advanced-list',
   shadow: false
 })

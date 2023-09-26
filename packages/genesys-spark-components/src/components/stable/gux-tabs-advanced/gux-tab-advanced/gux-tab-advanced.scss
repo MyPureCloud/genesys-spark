@@ -1,6 +1,3 @@
-@gux-off-tab-fill: #c8cfda;
-
-// Style
 .gux-tab-sorting {
   :focus-within {
     margin-bottom: 4px;
@@ -55,11 +52,11 @@ gux-tab-advanced {
 
       &.gux-disabled {
         .gux-tab-button {
-          color: fade(#000, 50%);
+          color: rgba(#000, 50%);
         }
 
         .gux-tab-options-button {
-          color: fade(#2e394c, 50%);
+          color: rgba(#2e394c, 50%);
           pointer-events: none;
           cursor: default;
         }
