@@ -141,7 +141,7 @@ export class GuxContextMenu {
   render(): JSX.Element {
     return (
       <Host>
-        <gux-popup-beta expanded={this.isOpen}>
+        <gux-popup-beta expanded={this.isOpen} exceedTargetWidth>
           <div slot="target" class="gux-button-container">
             <gux-button-slot-beta accent="ghost">
               <button
