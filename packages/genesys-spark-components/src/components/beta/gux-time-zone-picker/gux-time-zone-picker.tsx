@@ -219,17 +219,10 @@ export class GuxTimeZonePickerBeta {
     });
   }
 
-  private renderDefaultsList(): JSX.Element | undefined {
+  private renderDefaultsList(): JSX.Element[] | undefined {
     const defaults = this.renderTimeZones(this.getDefaultZoneList());
     if (defaults.length) {
-      return (
-        <span>
-          <div class="zone-header">Default</div>
-          {defaults}
-          <gux-list-divider></gux-list-divider>
-          <div class="zone-header">All</div>
-        </span>
-      ) as JSX.Element;
+      return defaults;
     }
   }
 
@@ -244,7 +237,10 @@ export class GuxTimeZonePickerBeta {
         value={this.value}
       >
         <gux-listbox aria-label={this.i18n('timeZones')}>
+          <div class="zone-header">{this.i18n('default')}</div>
           {this.renderDefaultsList()}
+          <gux-list-divider></gux-list-divider>
+          <div class="zone-header">{this.i18n('all')}</div>
           {this.timeZoneOptionElements}
         </gux-listbox>
       </gux-dropdown>
