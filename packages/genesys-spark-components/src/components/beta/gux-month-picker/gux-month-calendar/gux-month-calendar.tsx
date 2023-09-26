@@ -121,6 +121,13 @@ export class GuxMonthCalendar {
     this.updateValue(value);
   }
 
+  private isCurrentMonth(month: string): boolean {
+    return (
+      getYearMonthObject(getCurrentISOYearMonth()).year == this.year &&
+      getYearMonthObject(getCurrentISOYearMonth()).month == month
+    );
+  }
+
   private getMonthAriaLabel(value: GuxISOYearMonth): string {
     const { year, month } = getYearMonthObject(value);
 
@@ -234,9 +241,10 @@ export class GuxMonthCalendar {
       String(i + 1).padStart(2, '0')
     ).map(month => {
       const value = getISOYearMonth(this.year, month);
-
+      console.log(value);
       return (
         <gux-month-list-item
+          class={{ 'gux-current-month': this.isCurrentMonth(month) }}
           value={value}
           selected={this.isSelectedMonth(value)}
           aria-selected={this.isAriaSelectedMonth(value)}

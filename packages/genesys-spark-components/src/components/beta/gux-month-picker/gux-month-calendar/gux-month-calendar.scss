@@ -8,6 +8,14 @@
     var(--gse-ui-calendarMenu-boxShadow-spread)
     var(--gse-ui-calendarMenu-boxShadow-color);
 
+  .gux-current-month {
+    color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
+    font-family: var(--gse-ui-calendarMenu-month-currentText-fontFamily);
+    font-size: var(--gse-ui-calendarMenu-month-currentText-fontSize);
+    line-height: var(--gse-ui-calendarMenu-month-currentText-lineHeight);
+    font-weight: var(--gse-ui-calendarMenu-month-currentText-fontWeight);
+  }
+
   .gux-year-header {
     position: relative;
     display: flex;
