@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.32](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.31...v4.0.0-beta.32) (2023-09-26)
+
+
+### Features
+
+* **gux-datepicker:** token adoption ([8876094](https://github.com/MyPureCloud/genesys-webcomponents/commit/88760940a83d2a10a913b00ce261882fc4175138))
+* **segment-control:** added segment control component ([39a0c29](https://github.com/MyPureCloud/genesys-webcomponents/commit/39a0c297ebfc1667d00aaa402c8775c1fea1a753))
+
+
+### Bug Fixes
+
+* **sass:** fixed sass build warnings ([d757b11](https://github.com/MyPureCloud/genesys-webcomponents/commit/d757b11a7404435d95c13d1ab97606aa8bb4c346))
+
 ## [4.0.0-beta.31](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.30...v4.0.0-beta.31) (2023-09-23)
 
 
