@@ -1,0 +1,152 @@
+@use '../../../style/focus';
+
+:host {
+  display: block;
+  color: #2e394c;
+}
+
+.gux-phone-text-input {
+  flex: 1 1 auto;
+  align-self: auto;
+  order: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  color: #2e394c;
+  text-overflow: ellipsis;
+  background-color: #f6f7f9;
+  border: none;
+  outline: none;
+}
+
+.target-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 32px;
+  padding: 4px 8px 4px 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6667;
+  color: #2e394c;
+  background-color: #f6f7f9;
+  background-image: none;
+  border: 1px solid #6b7585;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px fade(#202937, 16%);
+
+  &.gux-error {
+    border-color: #ea0b0b;
+  }
+
+  &:focus-within {
+    @include focus.gux-focus-ring;
+  }
+}
+
+.gux-region-select {
+  min-width: 70px;
+  margin-right: 5px;
+}
+
+.gux-field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  padding: 6px 8px 6px 16px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6667;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.gux-field {
+  .gux-field-content {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 0;
+    height: 100%;
+
+    .gux-selected-option {
+      display: grid;
+      flex: 1 1 auto;
+      align-self: auto;
+      order: 0;
+      overflow: hidden;
+
+      gux-region-icon {
+        position: relative;
+        top: -3px;
+      }
+
+      gux-icon {
+        position: relative;
+        font-size: 18px;
+      }
+    }
+
+    .gux-placeholder {
+      color: #596373;
+    }
+  }
+
+  .gux-expand-icon {
+    flex: 0 0 auto;
+    align-self: auto;
+    order: 0;
+    width: 16px;
+    height: 16px;
+    padding-left: 8px;
+    color: #596373;
+  }
+}
+
+.gux-field-button {
+  background-color: #f6f7f9;
+  border: none;
+  outline: inherit;
+
+  &:focus-visible {
+    @include focus.gux-focus-ring;
+  }
+}
+
+.gux-listbox-container {
+  box-sizing: border-box;
+  width: 368px;
+  margin: 0;
+  color: #2e394c;
+}
+
+.gux-option-content {
+  display: grid;
+  grid-template-columns: 36px 1fr 40px;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+
+  .gux-country-code {
+    text-align: right;
+  }
+
+  gux-icon {
+    position: relative;
+    font-size: 18px;
+  }
+}

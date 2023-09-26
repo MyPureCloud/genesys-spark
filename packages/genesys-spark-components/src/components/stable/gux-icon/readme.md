@@ -59,7 +59,7 @@
  - [gux-phone-input-beta](../../beta/gux-phone-input)
  - [gux-rating](../gux-rating)
  - [gux-sort-control](../gux-table/gux-sort-control)
- - [gux-submenu](../../beta/gux-flyout-menu/gux-menu/gux-submenu)
+ - [gux-submenu](../gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
  - [gux-tab-list](../gux-tabs/gux-tab-list)

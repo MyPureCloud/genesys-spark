@@ -1,0 +1,42 @@
+@import '../../../style/focus.scss';
+@import '../../../style/zindex.scss';
+
+// Style
+:host {
+  z-index: var(--gux-zindex-popover);
+  color: var(--gse-ui-menu-option-label-foregroundColor);
+  cursor: default;
+}
+
+:host(:focus) {
+  outline: none;
+}
+
+:host(:focus-visible) {
+  @include gux-focus-ring;
+}
+
+.gux-flyout-menu-content {
+  display: none;
+
+  &.gux-shown {
+    display: flex;
+  }
+}
+
+.gux-arrow,
+.gux-arrow::before {
+  position: absolute;
+  top: -3px;
+  width: 5px * 2;
+  height: 5px * 2;
+  background: inherit;
+}
+
+.gux-arrow::before {
+  visibility: visible;
+  content: '';
+  border-top: 1px solid #b4bccb;
+  border-left: 1px solid #b4bccb;
+  transform: rotate(45deg);
+}

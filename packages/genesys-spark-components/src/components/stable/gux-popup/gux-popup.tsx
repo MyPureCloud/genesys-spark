@@ -39,8 +39,11 @@ export class GuxPopup {
   @Prop()
   disabled: boolean = false;
 
+  /**
+   * set if parent component design allows for popup exceeding target width
+   */
   @Prop()
-  popupWidthStrategy: 'match' | 'minimum' = 'match';
+  exceedTargetWidth: boolean = false;
 
   /**
    * This event will run when the popup transitions to an expanded state.
@@ -70,7 +73,7 @@ export class GuxPopup {
 
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
-      const widthStrategy = this.popupWidthStrategy;
+      const exceedTargetWidth = this.exceedTargetWidth;
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -88,7 +91,7 @@ export class GuxPopup {
                 availableWidth: number;
                 availableHeight: number;
               }) {
-                if (widthStrategy === 'minimum') {
+                if (exceedTargetWidth) {
                   // These elements should be at least as wide the target but can expand beyond
                   Object.assign(elements.floating.style, {
                     minWidth: `${rects.reference.width}px`

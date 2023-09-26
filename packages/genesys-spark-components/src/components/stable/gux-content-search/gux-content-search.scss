@@ -1,0 +1,184 @@
+// Variables part
+@use '../../../style/focus.scss';
+
+:host {
+  display: inline-block;
+  width: 300px;
+  min-width: 300px;
+  color: #596373;
+}
+
+::slotted(input) {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.6667;
+  background-image: none;
+
+  &::placeholder {
+    color: #596373;
+  }
+
+  flex-basis: 100%;
+  flex-shrink: 1;
+  min-width: 0;
+  height: 22px;
+  padding: 0;
+  color: #2e394c;
+  background-color: #f6f7f9;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+
+  &.gux-focused,
+  &:focus,
+  &:focus-visible {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.gux-content-search {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 32px;
+  padding: 4px 0;
+  margin: 4px 0;
+  background-color: #f6f7f9;
+  background-image: none;
+  border: 1px solid #6b7585;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px rgba(#202937, 16%);
+
+  &.gux-disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:focus-visible,
+  &:focus-within {
+    border: 1px solid #2a60c8;
+    outline: none;
+    box-shadow: 0 0 4px #75a8ff;
+  }
+
+  .gux-search-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 0 4px 0 8px;
+
+    &:disabled {
+      pointer-events: none;
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    gux-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .gux-content-control-panel {
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    height: 22px;
+    padding: 0;
+    line-height: 1.6667;
+
+    gux-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    button {
+      display: block;
+      align-items: center;
+      overflow: hidden;
+      color: #596373;
+      cursor: pointer;
+      background: none;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+
+      &:disabled {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.5;
+      }
+
+      &:not(:disabled):hover,
+      &:not(:disabled):focus-visible {
+        color: #2e394c;
+      }
+
+      &:not(.gux-clear-button):focus-visible:enabled {
+        @include focus.gux-focus-ring;
+      }
+
+      &.gux-clear-button {
+        flex-shrink: 0;
+        align-items: center;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 8px;
+        margin-left: 8px;
+
+        gux-icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .gux-navigation-disabled {
+      pointer-events: auto;
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    .gux-navigation-panel {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: flex-end;
+      border-right: 1px solid #596373;
+
+      .gux-navigation-result {
+        align-items: center;
+        padding-left: 8px;
+        font-family: inherit;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .gux-previous-button {
+        flex-shrink: 0;
+        align-items: center;
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: 4px;
+      }
+
+      .gux-next-button {
+        flex-shrink: 0;
+        align-items: center;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 4px;
+      }
+    }
+  }
+}

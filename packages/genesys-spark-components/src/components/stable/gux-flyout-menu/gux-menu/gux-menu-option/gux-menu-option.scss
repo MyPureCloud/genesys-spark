@@ -1,0 +1,31 @@
+gux-menu-option {
+  display: block;
+  flex: 1 1 auto;
+  align-self: auto;
+
+  .gux-menu-option-button {
+    all: unset;
+    width: var(--gse-ui-flyoutMenu-width);
+    height: var(--gse-ui-menu-option-height);
+    padding: 4px 12px; //TODO COMUI-2304
+    line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
+    color: var(--gse-ui-menu-option-label-foregroundColor);
+    background-color: var(--gse-ui-menu-option-default-backgroundColor);
+
+    &:focus-within,
+    &:hover {
+      background-color: var(--gse-ui-menu-option-hover-backgroundColor);
+    }
+
+    &:enabled {
+      cursor: pointer;
+    }
+
+    .gux-menu-option-button-text {
+      display: block;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

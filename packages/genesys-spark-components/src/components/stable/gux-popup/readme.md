@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property             | Attribute              | Description | Type                   | Default   |
-| -------------------- | ---------------------- | ----------- | ---------------------- | --------- |
-| `disabled`           | `disabled`             |             | `boolean`              | `false`   |
-| `expanded`           | `expanded`             |             | `boolean`              | `false`   |
-| `popupWidthStrategy` | `popup-width-strategy` |             | `"match" \| "minimum"` | `'match'` |
+| Property            | Attribute             | Description                                                            | Type      | Default |
+| ------------------- | --------------------- | ---------------------------------------------------------------------- | --------- | ------- |
+| `disabled`          | `disabled`            |                                                                        | `boolean` | `false` |
+| `exceedTargetWidth` | `exceed-target-width` | set if parent component design allows for popup exceeding target width | `boolean` | `false` |
+| `expanded`          | `expanded`            |                                                                        | `boolean` | `false` |
 
 
 ## Events

@@ -39,7 +39,7 @@ import {
 } from './gux-calendar.types';
 
 @Component({
-  styleUrl: 'gux-calendar.less',
+  styleUrl: 'gux-calendar.scss',
   tag: 'gux-calendar',
   shadow: true
 })
@@ -195,6 +195,12 @@ export class GuxCalendar {
       );
       const classes = [];
 
+      const today = new Date();
+      const isToday =
+        currentDate.getFullYear() === today.getFullYear() &&
+        currentDate.getMonth() === today.getMonth() &&
+        currentDate.getDate() === today.getDate();
+
       let disabled = false;
       let hidden = false;
       if (date.getMonth() !== month) {
@@ -212,6 +218,9 @@ export class GuxCalendar {
       }
 
       let isSelected = false;
+      if (isToday) {
+        classes.push('gux-current-date');
+      }
       if (this.mode === CalendarModes.Range) {
         const [start, end] = fromIsoDateRange(this.value);
         const fromTimeStamp = start.getTime();
@@ -237,7 +246,8 @@ export class GuxCalendar {
         date,
         hidden,
         disabled,
-        selected: isSelected
+        selected: isSelected,
+        isToday
       });
       currentDate.setDate(currentDate.getDate() + 1);
     }
@@ -486,10 +496,12 @@ export class GuxCalendar {
                         onMouseEnter={() => this.onDateMouseEnter(day.date)}
                         onKeyDown={e => void this.onKeyDown(e)}
                       >
-                        {day.date.getDate()}
-                        <span class="gux-sr-only">
-                          {getDateMonthAndYearString(day.date, this.locale)}
-                        </span>
+                        <div class="gux-date">
+                          {day.date.getDate()}
+                          <span class="gux-sr-only">
+                            {getDateMonthAndYearString(day.date, this.locale)}
+                          </span>
+                        </div>
                       </td>
                     ) as JSX.Element
                 )}

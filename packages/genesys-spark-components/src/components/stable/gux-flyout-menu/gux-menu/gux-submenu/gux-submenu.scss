@@ -1,0 +1,65 @@
+gux-submenu {
+  display: block;
+  flex: 1 1 auto;
+  align-self: auto;
+
+  .gux-submenu-button {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: center;
+    justify-content: flex-start;
+    width: var(--gse-ui-flyoutMenu-width);
+    height: var(--gse-ui-menu-option-height);
+    padding: var(--gse-ui-menu-option-padding);
+    line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
+    color: var(--gse-ui-menu-option-label-foregroundColor);
+    background-color: #fdfdfd; //TODO COMUI-2307
+
+    &:focus-within,
+    &:hover {
+      background-color: var(--gse-ui-menu-option-hover-backgroundColor);
+    }
+
+    .gux-submenu-button-text {
+      flex: 1 1 auto;
+      align-self: auto;
+      order: 0;
+      margin-right: var(--gse-ui-menu-option-gap);
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .gux-submenu-open-icon {
+      flex: 0 0 auto;
+      align-self: auto;
+      order: 0;
+      width: var(--gse-ui-menu-option-startIcon-width);
+      height: var(--gse-ui-menu-option-startIcon-height);
+    }
+  }
+
+  .gux-submenu-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    padding: var(--gse-ui-menu-padding);
+    margin: 0;
+    visibility: hidden;
+    background-color: var(--gse-ui-menu-backgroundColor);
+    border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
+      var(--gse-ui-menu-border-color);
+    border-radius: var(--gse-ui-menu-borderRadius);
+    box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+      var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
+      var(--gse-ui-menu-boxShadow-color);
+
+    &.gux-shown {
+      visibility: visible;
+    }
+  }
+}

@@ -6,7 +6,8 @@ import { GuxListItem } from '../../gux-list/gux-list-item/gux-list-item';
 
 const components = [GuxActionButton, GuxList, GuxListDivider, GuxListItem];
 const html = `
-<gux-action-button lang="en" text="Primary" accent="primary">
+<gux-action-button lang="en" accent="primary">
+  <div slot="title">Primary</div>
   <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
   <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
   <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -47,7 +48,8 @@ describe('gux-action-button', () => {
 
   it('should not fire actionClick event if disabled', async () => {
     const disableHtml = `
-    <gux-action-button lang="en" text="Primary" accent="primary" disabled>
+    <gux-action-button lang="en" accent="primary" disabled>
+      <div slot="title">Primary</div>
       <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
       <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
       <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -106,7 +108,8 @@ describe('gux-action-button', () => {
 
   it('should not fire open event if disabled', async () => {
     const disableHtml = `
-    <gux-action-button lang="en" text="Primary" accent="primary" disabled>
+    <gux-action-button lang="en" accent="primary" disabled>
+      <div slot="title">Primary</div>
       <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
       <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
       <gux-list-item onclick="notify(event)">Test 3</gux-list-item>

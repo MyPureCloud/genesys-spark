@@ -122,7 +122,7 @@ export class GuxTableToolbarMenuButton {
   render(): JSX.Element {
     return (
       <Host class={{ 'gux-show-menu': this.showMenu }}>
-        <gux-popup expanded={this.expanded} popupWidthStrategy="minimum">
+        <gux-popup expanded={this.expanded} exceed-target-width>
           <div slot="target" class="gux-toolbar-menu-container">
             <gux-button-slot class="gux-menu-button">
               <button

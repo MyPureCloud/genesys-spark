@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: var(--gse-ui-calendarMenu-monthBody-padding);
+  background-color: var(--gse-ui-calendarMenu-backgroundColor);
+  border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
+  box-shadow: var(--gse-ui-calendarMenu-boxShadow-x)
+    var(--gse-ui-calendarMenu-boxShadow-y)
+    var(--gse-ui-calendarMenu-boxShadow-blur)
+    var(--gse-ui-calendarMenu-boxShadow-spread)
+    var(--gse-ui-calendarMenu-boxShadow-color);
+}

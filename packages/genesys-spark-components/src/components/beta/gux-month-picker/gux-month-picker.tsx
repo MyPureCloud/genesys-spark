@@ -33,7 +33,7 @@ const DateTimeFormats = { year: 'numeric', month: 'long' };
 const YearFirstLocales = ['ar', 'he', 'ja', 'ko', 'zh-cn', 'zh-tw'];
 
 @Component({
-  styleUrl: 'gux-month-picker.less',
+  styleUrl: 'gux-month-picker.scss',
   tag: 'gux-month-picker-beta',
   shadow: { delegatesFocus: false }
 })
@@ -251,10 +251,7 @@ export class GuxMonthPicker {
     return (
       <div
         role="spinbutton"
-        class={{
-          'gux-spinner': true,
-          'gux-empty': Boolean(!this.value)
-        }}
+        class="gux-spinner"
         tabIndex={this.disabled ? -1 : 0}
         onKeyDown={(e: KeyboardEvent) =>
           this.onSpinnerKeyDown(
@@ -281,10 +278,7 @@ export class GuxMonthPicker {
     return (
       <div
         role="spinbutton"
-        class={{
-          'gux-spinner': true,
-          'gux-empty': Boolean(!this.value)
-        }}
+        class="gux-spinner"
         tabIndex={this.disabled ? -1 : 0}
         onKeyDown={(e: KeyboardEvent) =>
           this.onSpinnerKeyDown(
@@ -373,7 +367,7 @@ export class GuxMonthPicker {
       <gux-popup
         expanded={this.expanded}
         disabled={this.disabled}
-        popupWidthStrategy="minimum"
+        exceed-target-width
       >
         {this.renderTarget()}
         {this.renderPopup()}

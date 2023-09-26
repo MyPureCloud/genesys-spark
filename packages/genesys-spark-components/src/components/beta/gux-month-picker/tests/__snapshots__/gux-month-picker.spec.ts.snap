@@ -3,7 +3,7 @@
 exports[`gux-month-picker-beta #render should render the component as expected 1`] = `
 <gux-month-picker-beta value="2022-01">
   <mock:shadow-root>
-    <gux-popup popupwidthstrategy="minimum">
+    <gux-popup exceed-target-width="">
       <div class="gux-target" slot="target">
         <span class="gux-display">
           <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="January 2022" class="gux-spinner" role="spinbutton" tabindex="0">
@@ -24,7 +24,7 @@ exports[`gux-month-picker-beta #render should render the component as expected 1
               <button class="gux-year-change" type="button">
                 <gux-icon icon-name="chevron-small-left" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
               </button>
-              <div class="gux-year">
+              <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">

@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-examples",
-  "version": "4.0.0-beta.29",
+  "version": "4.0.0-beta.32",
   "license": "MIT",
   "scripts": {
     "prebuild": "npm run clean",
@@ -49,6 +49,7 @@
     "prettier-package-json": "^2.8.0",
     "sass": "^1.67.0",
     "sass-loader": "^13.3.2",
+    "semver": "^7.5.4",
     "style-loader": "^3.3.3",
     "stylelint": "^15.10.1",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",

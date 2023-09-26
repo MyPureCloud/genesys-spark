@@ -23,7 +23,7 @@ const validFocusableItems = ['gux-month-list-item'];
  */
 
 @Component({
-  styleUrl: 'gux-month-list.less',
+  styleUrl: 'gux-month-list.scss',
   tag: 'gux-month-list',
   shadow: { delegatesFocus: true }
 })
