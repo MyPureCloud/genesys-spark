@@ -45,16 +45,6 @@
       "selected_bar": {
         "height": "3px",
         "width": "229px"
-      },
-      "context_menu": {
-        "default": {
-          "height": "40px",
-          "width": "41px"
-        },
-        "compact": {
-          "height": "32px",
-          "width": "41px"
-        }
       }
     },
     "divider": {
@@ -86,11 +76,11 @@
         "checkbox_cell": {
           "default": {
             "height": "40px",
-            "width": "41px"
+            "width": "49px"
           },
           "compact": {
             "height": "32px",
-            "width": "41px"
+            "width": "49px"
           }
         }
       },
@@ -114,18 +104,7 @@
         "fontWeight": 400
       },
       "table_pagination": {
-        "width": "727px",
-        "height": "56px"
-      },
-      "context_menu": {
-        "default": {
-          "height": "40px",
-          "width": "41px"
-        },
-        "compact": {
-          "height": "32px",
-          "width": "41px"
-        }
+        "width": "727px"
       }
     },
     "edit_column": {
@@ -141,13 +120,7 @@
       "table_toolbar_group": {
         "gap": "4px"
       },
-      "gap": "4px",
-      "divider_color": "#c6ceec",
-      "divider": {
-        "width": "1px",
-        "height": "32px"
-      },
-      "height": "32px"
+      "gap": "4px"
     },
     "table_pagination": {
       "recordset_controls": {

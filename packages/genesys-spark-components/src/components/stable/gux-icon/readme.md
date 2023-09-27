@@ -61,7 +61,9 @@
  - [gux-sort-control](../gux-table/gux-sort-control)
  - [gux-submenu](../gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
+ - [gux-tab-advanced-legacy](../../legacy/gux-tabs-advanced-legacy/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
+ - [gux-tab-advanced-list-legacy](../../legacy/gux-tabs-advanced-legacy/gux-tab-advanced-list)
  - [gux-tab-list](../gux-tabs/gux-tab-list)
  - [gux-table-select-menu](../gux-table/gux-table-select-menu)
  - [gux-table-toolbar-action](../gux-table-toolbar/gux-table-toolbar-action)
@@ -118,7 +120,9 @@ graph TD;
   gux-sort-control --> gux-icon
   gux-submenu --> gux-icon
   gux-tab-advanced --> gux-icon
+  gux-tab-advanced-legacy --> gux-icon
   gux-tab-advanced-list --> gux-icon
+  gux-tab-advanced-list-legacy --> gux-icon
   gux-tab-list --> gux-icon
   gux-table-select-menu --> gux-icon
   gux-table-toolbar-action --> gux-icon

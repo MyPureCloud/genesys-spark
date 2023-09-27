@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-tabs-advanced-legacy #render should render as expected 1`] = `
+<gux-tabs-advanced-legacy id="interactive" lang="en">
+  <mock:shadow-root>
+    <div class="gux-tabs">
+      <slot name="tab-list"></slot>
+      <div>
+        <slot></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <gux-tab-advanced-list-legacy show-new-tab-button="true" slot="tab-list">
+    <!---->
+    <span aria-live="polite" class="gux-aria-live-region gux-sr-only"></span>
+    <div class="gux-tab-container">
+      <div class="action-button-container">
+        <div class="gux-scroll-button-container"></div>
+      </div>
+      <div aria-owns="gux-1-1-tab gux-1-2-tab gux-1-3-tab" class="gux-scrollable-section" role="tablist">
+        <gux-tab-advanced-legacy tab-id="1-1">
+          <!---->
+          <div class="gux-dropdown-options gux-show gux-tab">
+            <button aria-controls="gux-1-1-panel" aria-disabled="false" aria-selected="false" class="gux-tab-button" id="gux-1-1-tab" role="tab" tabindex="-1" type="button">
+              <gux-tooltip-title>
+                <span>
+                  <gux-icon decorative="true" icon-name="lock"></gux-icon>
+                  Hello World
+                </span>
+              </gux-tooltip-title>
+            </button>
+            <button aria-expanded="false" class="gux-tab-options-button" id="gux-i" tabindex="-1" type="button">
+              <gux-icon icon-name="menu-kebab-vertical" screenreader-text="Tab Options for Hello World"></gux-icon>
+            </button>
+            <gux-popover-list closeonclickoutside="" for="gux-i" hidden="" position="top-end">
+              <div class="gux-dropdown-option-container">
+                <gux-list slot="dropdown-options">
+                  <gux-list-item>
+                    <gux-icon decorative="true" icon-name="edit"></gux-icon>
+                    Edit
+                  </gux-list-item>
+                  <gux-list-item>
+                    <gux-icon decorative="true" icon-name="clone"></gux-icon>
+                    Clone
+                  </gux-list-item>
+                  <gux-list-item>
+                    <gux-icon decorative="true" icon-name="share"></gux-icon>
+                    Share
+                  </gux-list-item>
+                  <gux-list-item>
+                    <gux-icon decorative="true" icon-name="download"></gux-icon>
+                    Download
+                  </gux-list-item>
+                </gux-list>
+              </div>
+            </gux-popover-list>
+          </div>
+        </gux-tab-advanced-legacy>
+        <gux-tab-advanced-legacy tab-id="1-2">
+          <!---->
+          <div class="gux-show gux-tab">
+            <button aria-controls="gux-1-2-panel" aria-disabled="false" aria-selected="false" class="gux-tab-button" id="gux-1-2-tab" role="tab" tabindex="-1" type="button">
+              <gux-tooltip-title>
+                <span>
+                  <gux-icon decorative="true" icon-name="user-directory"></gux-icon>
+                  Hello World 2 long long long long long
+                </span>
+              </gux-tooltip-title>
+            </button>
+          </div>
+        </gux-tab-advanced-legacy>
+        <gux-tab-advanced-legacy gux-disabled="" tab-id="1-3">
+          <!---->
+          <div class="gux-disabled gux-show gux-tab">
+            <button aria-controls="gux-1-3-panel" aria-disabled="true" aria-selected="false" class="gux-tab-button" id="gux-1-3-tab" role="tab" tabindex="-1" type="button">
+              <gux-tooltip-title>
+                <span>
+                  Hello World 3
+                </span>
+              </gux-tooltip-title>
+            </button>
+          </div>
+        </gux-tab-advanced-legacy>
+      </div>
+      <div class="action-button-container">
+        <div class="gux-scroll-button-container"></div>
+        <button class="add-tab-button" title="Add View">
+          <div slot="add-tab">
+            <gux-icon decorative="" icon-name="file-preview"></gux-icon>
+            Add View
+          </div>
+          <slot-fb hidden="" name="add-tab">
+            <gux-icon decorative="" icon-name="add"></gux-icon>
+          </slot-fb>
+        </button>
+      </div>
+    </div>
+  </gux-tab-advanced-list-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="1-1">
+    <!---->
+    <div aria-labelledby="gux-1-1-tab" aria-live="assertive" hidden="" id="gux-1-1-panel" role="tabpanel" tabindex="0">
+      <span>
+        Tab content 1
+      </span>
+    </div>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="1-2">
+    <!---->
+    <div aria-labelledby="gux-1-2-tab" aria-live="assertive" hidden="" id="gux-1-2-panel" role="tabpanel" tabindex="0">
+      <span>
+        Tab content 2
+      </span>
+    </div>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="1-3">
+    <!---->
+    <div aria-labelledby="gux-1-3-tab" aria-live="assertive" hidden="" id="gux-1-3-panel" role="tabpanel" tabindex="0">
+      <span>
+        Tab content 3
+      </span>
+    </div>
+  </gux-tab-advanced-panel-legacy>
+</gux-tabs-advanced-legacy>
+`;
