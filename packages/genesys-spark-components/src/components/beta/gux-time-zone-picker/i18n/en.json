@@ -1,5 +1,7 @@
 {
   "selectZone": "Search by region, country, or city",
+  "default": "Default",
+  "all": "All",
   "timeZones": "Time zones",
   "workspaceDefault": "(Workspace default)",
   "localDefault": "(Local)",

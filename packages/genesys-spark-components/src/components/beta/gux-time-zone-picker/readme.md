@@ -19,17 +19,17 @@
 ### Depends on
 
 - [gux-option](../../stable/gux-listbox/options/gux-option)
-- [gux-list-divider](../../stable/gux-list/gux-list-divider)
 - [gux-dropdown](../../stable/gux-dropdown)
 - [gux-listbox](../../stable/gux-listbox)
+- [gux-list-divider](../../stable/gux-list/gux-list-divider)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-time-zone-picker-beta --> gux-option
-  gux-time-zone-picker-beta --> gux-list-divider
   gux-time-zone-picker-beta --> gux-dropdown
   gux-time-zone-picker-beta --> gux-listbox
+  gux-time-zone-picker-beta --> gux-list-divider
   gux-option --> gux-truncate-beta
   gux-truncate-beta --> gux-tooltip
   gux-dropdown --> gux-truncate-beta
