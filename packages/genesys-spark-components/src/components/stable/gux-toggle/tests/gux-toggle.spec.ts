@@ -1,8 +1,6 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxToggle } from '../gux-toggle';
 import { GuxToggleSlider } from '../gux-toggle-slider/gux-toggle-slider';
-
-global.InputEvent = Event;
 
 const components = [GuxToggle, GuxToggleSlider];
 const language = 'en';

@@ -3,7 +3,7 @@ jest.mock('../../../../utils/error/log-error', () => ({
   logError: jest.fn()
 }));
 
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxBreadcrumbs } from '../gux-breadcrumbs';
 import { GuxBreadcrumbItem } from '../breadcrumb-item/gux-breadcrumb-item';

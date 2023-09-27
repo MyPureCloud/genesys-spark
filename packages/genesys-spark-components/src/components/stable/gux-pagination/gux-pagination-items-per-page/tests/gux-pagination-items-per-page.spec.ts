@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import MutationObserver from 'mutation-observer';
 
 import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page';

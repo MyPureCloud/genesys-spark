@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxLineChart } from '../gux-chart-line';
 
 const components = [GuxLineChart];

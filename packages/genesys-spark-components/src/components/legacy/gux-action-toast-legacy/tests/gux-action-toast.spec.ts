@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxActionToast } from '../gux-action-toast';
 
 const components = [GuxActionToast];

@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTime } from '../gux-time';
 import { timeZoneIdentifiers } from '../../../../i18n/time-zone/identifiers';
 

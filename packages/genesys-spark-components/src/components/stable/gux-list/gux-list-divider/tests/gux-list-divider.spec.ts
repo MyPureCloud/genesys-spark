@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxListDivider } from '../gux-list-divider';
 
 const components = [GuxListDivider];

@@ -1,5 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
-import MutationObserver from 'mutation-observer';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxFormFieldDropdown } from '../gux-form-field-dropdown';
 import { GuxDropdown } from '../../../../gux-dropdown/gux-dropdown';
@@ -21,14 +20,6 @@ const components = [
 const language = 'en';
 
 describe('gux-form-field-select', () => {
-  beforeEach(async () => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
-  });
-
   describe('single select dropdown', () => {
     it('should build', async () => {
       const html = `

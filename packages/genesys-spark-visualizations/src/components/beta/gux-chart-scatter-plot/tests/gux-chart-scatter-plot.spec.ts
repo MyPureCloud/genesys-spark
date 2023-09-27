@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxScatterPlotChart } from '../gux-chart-scatter-plot';
 
 const components = [GuxScatterPlotChart];

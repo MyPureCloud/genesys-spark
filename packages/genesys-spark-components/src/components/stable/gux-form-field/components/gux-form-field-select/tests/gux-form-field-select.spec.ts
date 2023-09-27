@@ -1,5 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
-import MutationObserver from 'mutation-observer';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxFormFieldSelect } from '../gux-form-field-select';
 
@@ -7,14 +6,6 @@ const components = [GuxFormFieldSelect];
 const language = 'en';
 
 describe('gux-form-field-select', () => {
-  beforeEach(async () => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
-  });
-
   it('should build', async () => {
     const html = `
       <gux-form-field-select>

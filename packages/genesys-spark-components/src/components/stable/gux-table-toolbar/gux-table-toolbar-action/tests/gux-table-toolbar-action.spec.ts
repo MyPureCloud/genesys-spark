@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTableToolbarAction } from '../gux-table-toolbar-action';
 
 const components = [GuxTableToolbarAction];

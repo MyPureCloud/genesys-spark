@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxCalendar } from '../components/single/gux-calendar';
 
 const components = [GuxCalendar];

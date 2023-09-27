@@ -45,10 +45,10 @@ export class GuxCopyToClipboard {
     this.tooltipContent = 'clickToCopy';
   }
 
-  private onCopyToClipboard() {
+  private async onCopyToClipboard(): Promise<void> {
     const copyText = this.root.innerText;
 
-    navigator.clipboard
+    return navigator.clipboard
       .writeText(copyText)
       .then(() => {
         this.tooltipContent = 'copySuccess';

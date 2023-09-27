@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxColumnChart } from '../gux-chart-column';
 
 const components = [GuxColumnChart];

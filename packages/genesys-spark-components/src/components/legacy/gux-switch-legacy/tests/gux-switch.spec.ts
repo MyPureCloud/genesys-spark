@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxSwitch } from '../gux-switch';
 import { GuxSwitchItem } from '../gux-switch-item/gux-switch-item';
@@ -16,14 +16,6 @@ const html = `
 const language = 'en';
 
 describe('gux-switch-legacy', () => {
-  beforeAll(async () => {
-    (
-      global as NodeJS.Global & {
-        InputEvent: typeof Event;
-      }
-    ).InputEvent = Event;
-  });
-
   describe('#render', () => {
     it(`should render as expected`, async () => {
       const page = await newSpecPage({ components, html, language });
@@ -36,7 +28,7 @@ describe('gux-switch-legacy', () => {
   describe('#interactions', () => {
     it(`should change value on gux-switch-item click`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
+      const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemMinute: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=minute]');
 
@@ -50,7 +42,7 @@ describe('gux-switch-legacy', () => {
 
     it(`should not change value on gux-switch-item click if it is disabled`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
+      const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemHour: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=hour]');
       const currentValue = element.value;
@@ -65,7 +57,7 @@ describe('gux-switch-legacy', () => {
 
     it(`should emit a 'change' and 'input' event when a new item is selected`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
+      const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemMinute: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=minute]');
       const changeEventSpy = jest.fn();
@@ -87,7 +79,7 @@ describe('gux-switch-legacy', () => {
 
     it(`should not emit a 'change' and 'input' event when the selected item is reselected`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
+      const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemDay: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=day]');
       const changeEventSpy = jest.fn();
@@ -109,7 +101,7 @@ describe('gux-switch-legacy', () => {
 
     it(`should not emit a 'change' or 'input' event when a disabled item is selected`, async () => {
       const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLGuxSwitchElement;
+      const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemHour: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=hour]');
       const changeEventSpy = jest.fn();

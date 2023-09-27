@@ -1,5 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
-import MutationObserver from 'mutation-observer';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxPaginationButtons } from '../gux-pagination-buttons';
 import { GuxButton } from '../../../gux-button/gux-button';
@@ -9,14 +8,6 @@ const components = [GuxPaginationButtons, GuxButton, GuxFormFieldTextLike];
 const language = 'en';
 
 describe('gux-pagination-item-counts', () => {
-  beforeEach(() => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
-  });
-
   describe('#render', () => {
     [
       { totalPages: 0, currentPage: 0, layout: 'advanced' },

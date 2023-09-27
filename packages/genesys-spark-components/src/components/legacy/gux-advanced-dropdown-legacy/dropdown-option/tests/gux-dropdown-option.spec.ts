@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxDropdownOption } from '../gux-dropdown-option';
 
 const components = [GuxDropdownOption];

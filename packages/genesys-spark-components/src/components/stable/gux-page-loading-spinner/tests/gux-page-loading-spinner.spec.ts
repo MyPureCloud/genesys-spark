@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxPageLoadingSpinner } from '../gux-page-loading-spinner';
 
 describe('gux-page-loading-spinner', () => {

@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxVisualization } from '../gux-visualization';
 
 const components = [GuxVisualization];

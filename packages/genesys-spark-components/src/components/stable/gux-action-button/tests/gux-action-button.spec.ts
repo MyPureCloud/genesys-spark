@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxActionButton } from '../gux-action-button';
 import { GuxList } from '../../gux-list/gux-list';
 import { GuxListDivider } from '../../gux-list/gux-list-divider/gux-list-divider';
@@ -37,7 +37,7 @@ describe('gux-action-button', () => {
     page.win.addEventListener('actionClick', actionClickSpy);
 
     const element = document.querySelector('gux-action-button');
-    const actionButton = element.shadowRoot.querySelector(
+    const actionButton = element.shadowRoot.querySelector<HTMLElement>(
       '.gux-action-button > button'
     );
 
@@ -63,7 +63,7 @@ describe('gux-action-button', () => {
     page.win.addEventListener('actionClick', actionClickSpy);
 
     const element = document.querySelector('gux-action-button');
-    const actionButton = element.shadowRoot.querySelector(
+    const actionButton = element.shadowRoot.querySelector<HTMLElement>(
       '.gux-action-button > button'
     );
 
@@ -123,7 +123,7 @@ describe('gux-action-button', () => {
     page.win.addEventListener('open', openSpy);
 
     const element = document.querySelector('gux-action-button');
-    const dropdownButton = element.shadowRoot.querySelector(
+    const dropdownButton = element.shadowRoot.querySelector<HTMLElement>(
       '.gux-dropdown-button > button'
     );
 
